@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import vm from 'node:vm';
-import { HOUSE_INDEX_KEY, HOUSE_LISTS, ID_PREFIXES, KEYS, LINE_CAPS, DISH_PARTS, MARK_FIELDS, PROSE_MAX, WINE_PARTS, COCKTAIL_PARTS, isMark } from './house-schema';
+import { HOUSE_INDEX_KEY, HOUSE_LISTS, ID_PREFIXES, KEYS, LINE_CAPS, DISH_PARTS, MARK_FIELDS, PROSE_MAX, WINE_PARTS, COCKTAIL_PARTS, houseRows, isMark } from './house-schema';
 import type { House, HouseDish, Mark } from './house-schema';
 import { lastTouch, mergeHouse } from './house-merge';
 import { MAP_HOUSE_PREFIX, mapStorage } from './house-store';
@@ -889,7 +889,7 @@ function asEdition(h: House, builtAt: number, itemTs = builtAt, markTs = builtAt
 	out.pack = { id: 'house-min', builtBy: 'the fixture', builtAt: new Date(builtAt).toISOString(), version: 1 };
 	if (out.history) out.history.ts = markTs;
 	for (const list of HOUSE_LISTS) {
-		for (const rec of out[list] as unknown as Array<Record<string, unknown>>) {
+		for (const rec of houseRows(out, list) as Array<Record<string, unknown>>) {
 			rec.ts = itemTs;
 			for (const f of MARK_FIELDS[list] as readonly string[]) {
 				const m = rec[f];

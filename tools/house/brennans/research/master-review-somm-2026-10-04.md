@@ -1,0 +1,41 @@
+# master-review-somm, 4 October 2026
+
+The master sommelier's review of My Menu, the day before the owner's first shift. Each line is tagged (search) with the search result it rests on, or (expert) where it is a sommelier's working knowledge that a guest may ask about and no house page prints. Nothing here is a Brennan's fact unless it says so; blends vary by bottling, so every blend below is said on the card as the producer's usual blend, with the bottle confirmed at lineup.
+
+## Pronunciation
+
+- (search) Piper-Heidsieck: the house's own people say PEE-pair HIDE-seek; PIE-per HIDE-seek is what most English speakers say and is accepted. Wine Spectator, "How do you pronounce Piper-Heidsieck?" (winespectator.com/articles/how-do-you-pronounce-piper-heidsieck-45177); Forvo; Wikipedia.
+- (search) Moët is said moh-WET: the t is sounded because the founding family's name is Dutch in origin, not French. VinePair, "How Do You Pronounce Moët & Chandon? It's Complicated."; Lucire, "How to pronounce Moët"; The Bubbles Review.
+- (expert) Billecart-Salmon is said bee-yeh-KAR sal-MOHN; the double l after i is a y sound in French. The pack's large format card already says it so; the magnum card said beel-KAR and is brought into line.
+- (expert) Italian: La Miraja is lah mee-RAH-yah (the j of Piedmontese names is a y) and Le Masche is leh MAHS-keh (sch before e is sk in Italian).
+- (expert) Famille Durand is fah-MEE doo-RAHN; Albariño is al-bah-REEN-yo; Inglenook is ING-gul-nook and Rubicon ROO-bih-kon.
+
+## The Birthday Bubbles, the Bubbles rosés and the Argyle: what is in the bottle
+
+- (search) Drappier Carte d'Or Brut: launched 1952, about 75 percent Pinot Noir, 15 Chardonnay, 10 Meunier, almost a Blanc de Noirs in style. The house is at Urville, in the Aube (the Côte des Bar). General Charles de Gaulle, who lived at Colombey-les-Deux-Églises a few miles away, was the house's most famous customer, and a Drappier cuvée is named for him. Millesima USA, "Champagne Drappier: A Legendary Champagne House in Urville"; wine.com, Drappier Carte d'Or Brut and Drappier Charles de Gaulle Brut.
+- (search) Paul Bara Grand Rosé, Bouzy Grand Cru: about 80 percent Pinot Noir and 20 Chardonnay, colored with red wine from Bouzy; the family founded the house in Bouzy in 1833, on the Montagne de Reims. Premium Grands Crus, Paul Bara Grand Rosé de Bouzy; Kermit Lynch, NV Rosé Brut Grand Cru Paul Bara.
+- (search) Krug Grande Cuvée: a blend of more than a hundred wines (Krug says around 120) from ten or more different years, Pinot Noir, Chardonnay and Meunier, some reserve wines up to twenty years old, then at least six more years in Krug's cellars. Each release carries an edition number. Sotheby's, "Krug Champagne: The Complete Guide"; Pépites en Champagne, Krug Grande Cuvée 170th Edition.
+- (search) Bollinger Special Cuvée: about 60 percent Pinot Noir, 25 Chardonnay, 15 Meunier; part fermented in old oak barrels; built largely on reserve wines, some aged in magnum for years. Bollinger has been the Champagne of the James Bond films for over four decades and calls itself the official Champagne of James Bond. champagne-bollinger.com, "James Bond: No Time to Die"; The Whisky Exchange, Bollinger Special Cuvée 007 Edition; Vintus, "The Bubbly Side of Bond".
+- (search) Billecart-Salmon Brut Sous Bois: usually about a third each Chardonnay, Pinot Noir and Meunier (the share moves by release), every base wine fermented and aged in oak barrels, then years on its lees in bottle. K&L Wines, Billecart-Salmon Sous Bois Brut; Flatiron Wines; Millesima USA.
+- (search) Taittinger Brut La Française: about 40 percent Chardonnay, 35 Pinot Noir, 25 Meunier, a high Chardonnay share for a house Brut, which gives its elegant style. Taittinger Prestige Rosé: Pinot Noir, Chardonnay and Meunier, colored with still red Pinot Noir. Wine Transit; Wine Library; K&L Wines, Taittinger Prestige Brut Rosé.
+- (search) Moët & Chandon Rosé Impérial: Pinot Noir leads (around 40 to 50 percent), then Meunier, with a little Chardonnay; colored by red wine in the blend. Decanter, Moët & Chandon Rosé Impérial NV; Champagne Club.
+- (search) Mirabelle Brut Rosé, Schramsberg: Pinot Noir and Chardonnay from cool North Coast vineyards (Carneros, Sonoma Coast, Anderson Valley, Marin), traditional method, two years on its lees. Schramsberg Vineyards shop, Mirabelle Brut Rosé, 34th bottling; wine.com.
+- (search) Louis Pommery California Brut Rosé: traditional method, second fermentation in bottle, Chardonnay and Pinot Noir from California vineyards, owned by Vranken-Pommery Monopole, the group that owns the Reims house of Pommery. wine.com, Louis Pommery Rosé Brut California; Vivino; Syrah Queen, "Louis Pommery California Brut Rosé".
+- (search) Argyle Vintage Brut, Willamette Valley: traditional method; recent vintages are Chardonnay and Pinot Noir with a little Meunier (2019: 63 Chardonnay, 30 Pinot Noir, 7 Meunier; 2018: 52, 43, 5). The 2022 is described as shortbread and apple with citrus zest and a saline finish. CellarTracker, 2019 Argyle Vintage Brut; Wine Enthusiast, Argyle 2018 Vintage Brut; The Wine Stop, 2022 Argyle Willamette Valley Brut.
+- (expert) Rosé Champagne is usually made by blending a little still red wine into white before the second fermentation; few other wine regions allow that for rosé. A few houses make rosé by saignée, bleeding juice off the skins instead.
+- (expert) The sweetness words on a sparkling label, driest first: Brut Nature, Extra Brut, Brut, Extra Dry, Sec, Demi-Sec, Doux. Extra Dry is sweeter than Brut, which surprises guests.
+
+## The glass list
+
+- (search) Inglenook was founded in 1879 in Rutherford by Gustave Niebaum, a Finnish sea captain, as one of Napa's first great estates. Rubicon is its Bordeaux blend, Cabernet Sauvignon with Merlot, Cabernet Franc and Petit Verdot in varying shares (2019: 81, 11, 5, 3). Wikipedia, Inglenook (winery) and Gustave Niebaum; K&L Wines, 2019 Inglenook Rubicon; wine.com, Inglenook Rubicon 2019.
+- (search) La Miraja: a family estate in the old castle of Castagnole Monferrato, whose armory became a cellar in the 1400s. Le Masche is 100 percent Barbera from the Majole vineyard; the producer's sheet describes native fermentation in steel tanks and at least twelve months in neutral oak. The name recalls the local spirits believed to protect the vineyard. That sheet is for the Barbera d'Asti Superiore; the menu prints Barbera d'Asti, so the aging is confirmed with the sommelier. Coeur Wine Co., La Miraja producer profile; The Piedmont Guy, La Miraja Barbera tech sheet.
+- (expert) Jean-Philippe Fichet is a grower in Meursault, a different estate from Domaine Fichet of Igé in the Mâconnais, whose Château London is the dinner tasting white. The pack's Fichet card already says the tasting white is not the Meursault Fichet; the bottle list's Jean-Philippe Fichet Bourgogne Blanc is the Meursault one. Whether the families are related stays a lineup question, as the register asks.
+
+## Service
+
+- (expert) Sabrage: the saber slides along the bottle's seam to the lip, and the pressure and the glass's weak point at the collar take the top off cleanly. A new server never sabers without training; the house names who does it.
+- (expert) Decanting serves two purposes: air for a young, firm red, and leaving sediment behind in an old one. A server who is not trained hands both to the sommelier.
+- (expert) Corked wine: TCA, a mold-borne taint that makes wine smell of wet cardboard or a damp cellar and mutes its fruit. It is no one's fault and is never debated with a guest.
+- (expert) A dessert wine should be at least as sweet as the dessert, or the wine tastes thin and sour; the pack's dessert pairings already rest on this.
+- (expert) A floor confusion worth naming: a guest who says "a glass of Champagne" may mean any bubbles. Our glass list pours true Champagne at $30 (the house) and $75 (Rare), and an Oregon sparkling wine at $15 and an Alsace crémant rosé at $18; the server names the wine and its price before pouring.
+- (expert) A tasting's five 4 oz pours come to 20 oz, a little less than a 750 ml bottle (about 25 oz), spread over five courses: the arithmetic of the printed pours, said only when a guest asks how much wine it is.

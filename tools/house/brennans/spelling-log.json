@@ -1,6 +1,6 @@
 {
 	"about": "Every string the spelling map changed while building the Brennan's house: the research writes British English and the house is American, so each British form became its American spelling.",
-	"count": 15,
+	"count": 16,
 	"changes": [
 		{
 			"path": "model.wines[0].kept[0].a",
@@ -122,6 +122,15 @@
 			"after": "Is the house Champagne $28 or $30 a glass today, and is the bottle a Brennan's labeled Piper-Heidsieck Essentiel or a bespoke blend? What is the dosage and disgorgement date?",
 			"words": [
 				"labelled"
+			]
+		},
+		{
+			"path": "house.videos[4].why",
+			"before": "The colour ladder from white to brown: a gumbo roux goes far darker, trading thickening power for toasted flavour.",
+			"after": "The color ladder from white to brown: a gumbo roux goes far darker, trading thickening power for toasted flavor.",
+			"words": [
+				"colour",
+				"flavour"
 			]
 		}
 	]

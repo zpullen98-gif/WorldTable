@@ -33,8 +33,9 @@ function tree(extra: Entry[]): string {
 	cpSync(join(ROOT, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json'), join(dir, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json'));
 	const file = join(dir, 'tools', 'house', 'brennans', 'overrides.json');
 	const o = JSON.parse(readFileSync(file, 'utf8'));
-	/* The edition's own tiers are taken out, so a test tiers Eggs Hussarde from nothing; its bottles stay. */
-	o.entries = o.entries.filter((e: Entry) => e.op !== 'bottles');
+	/* The edition's own tiers are taken out, so a test tiers Eggs Hussarde from nothing; its bottles stay.
+	   An entry that edits one tier's field (bottles.value.sayIt) leaves with the tiers it edits. */
+	o.entries = o.entries.filter((e: Entry) => e.op !== 'bottles' && !String(e.field ?? '').startsWith('bottles.'));
 	o.entries.push(...extra);
 	writeFileSync(file, JSON.stringify(o, null, '\t'));
 	return dir;

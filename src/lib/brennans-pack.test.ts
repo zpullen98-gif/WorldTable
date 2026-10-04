@@ -68,7 +68,7 @@ describe("the Brennan's pack", () => {
 		expect(r.stdout).toContain('62 dishes, 32 cocktails (6 spirit-free, 9 pairings on a coffee)');
 		expect(r.stdout).toContain(`${h.wines.length} wines (${timed} with timed lines)`);
 		expect(timed).toBe(h.wines.length);
-		expect(r.stdout).toContain('125 terms, 33 scenarios');
+		expect(r.stdout).toContain(`${h.lexicon.length} terms, ${h.scenarios.length} scenarios, ${h.mixUps.length} mix-ups, ${h.mustKnows.length} must-knows`);
 		expect(r.stdout).toContain(`${h.askAtLineup.length} to ask`);
 		expect(r.stdout).toContain(`edition ${EDITION}`);
 		expect(r.stdout).toContain('0 fatal');

@@ -1,0 +1,741 @@
+{
+  "note": "Videos for the bar and the cellar at Brennan's, found 2026-10-04. YouTube oEmbed and noembed are blocked by this environment's egress proxy (403 on CONNECT, also through WebFetch), so each entry is verified by a WebSearch result showing its id with this exact title and a channel; titles are as the search showed them. Run an oEmbed check (as the Ledger's tools/check-films.mjs does) from a machine that can reach YouTube before shipping any of them. Brandy Milk Punch, the Bloody Bull build, Peychaud's at the Sazerac House, Madeira, Sauternes, Banyuls, Napa Cabernet and Chartreuse have no verified video yet: candidates are in unverified, or none was found within the search budget.",
+  "videos": [
+    {
+      "id": "saveur-real-bananas-foster",
+      "url": "https://www.youtube.com/watch?v=0Wf3nTRUbz4",
+      "title": "The Real Bananas Foster with Ralph Brennan",
+      "channel": "SAVEUR Magazine",
+      "minutes": null,
+      "topic": "Brennan’s house",
+      "why": "The house dessert as the owning family tells it: the flambé order, the story and the words to use at the guéridon.",
+      "attach": {
+        "dishes": [
+          "World Famous Bananas Foster"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Guéridon",
+          "Blangé"
+        ],
+        "house": true
+      },
+      "verifiedBy": "WebSearch \"\"The Real Bananas Foster with Ralph Brennan\" uploaded by which channel\": result listed www.youtube.com/watch?v=0Wf3nTRUbz4 with that title; the result summary named the uploader SAVEUR Magazine.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "eater-meat-show-eggs-hussarde",
+      "url": "https://www.youtube.com/watch?v=Cbn-Uqa4ssA",
+      "title": "How Brennan’s Invented A Perfect Egg Dish For Meat Lovers \u2014 The Meat Show",
+      "channel": "Eater",
+      "minutes": null,
+      "topic": "Brennan’s house",
+      "why": "A press feature inside Brennan’s on Eggs Hussarde: the muffin, the Canadian bacon and why it carries two sauces.",
+      "attach": {
+        "dishes": [
+          "Eggs Hussarde"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Hussarde",
+          "Marchand de vin",
+          "Hollandaise"
+        ],
+        "house": true
+      },
+      "verifiedBy": "WebSearch \"\"How Brennan's Invented A Perfect Egg Dish For Meat Lovers\" Cbn-Uqa4ssA uploaded by Eater\": result listed www.youtube.com/watch?v=Cbn-Uqa4ssA with that title; the summary placed it in Eater's The Meat Show series.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "anders-sazerac",
+      "url": "https://www.youtube.com/watch?v=dJ-sAEzw9Jc",
+      "title": "The Sazerac Cocktail",
+      "channel": "Anders Erickson",
+      "minutes": null,
+      "topic": "The Sazerac",
+      "why": "A working bartender’s Sazerac: chilled glass, the absinthe rinse, Peychaud’s, the stir and the expressed peel discarded or kept.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [
+          "Classic Sazerac"
+        ],
+        "wines": [],
+        "terms": [
+          "Sazerac",
+          "Peychaud's",
+          "Herbsaint"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"The Sazerac Cocktail\" dJ-sAEzw9Jc uploaded by which youtube channel\": result listed www.youtube.com/watch?v=dJ-sAEzw9Jc with that title; the summary named the uploader Anders Erickson.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "educated-barfly-sazerac",
+      "url": "https://www.youtube.com/watch?v=RuZzOcjJUYw",
+      "title": "Master The Classics: Sazerac",
+      "channel": "The Educated Barfly",
+      "minutes": null,
+      "topic": "The Sazerac",
+      "why": "The Sazerac’s history from Peychaud’s apothecary to rye, and the build step by step, from a classic cocktail series.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [
+          "Classic Sazerac"
+        ],
+        "wines": [],
+        "terms": [
+          "Sazerac",
+          "Peychaud's"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Historic New Orleans Collection youtube Sazerac Peychaud cocktail history lecture video\" listed www.youtube.com/watch?v=RuZzOcjJUYw as \"Master The Classics: Sazerac\"; WebSearch \"\"Master The Classics\" series \"The Educated Barfly\" Sazerac Absinthe Frappé New York Sour\" placed the Master The Classics series with The Educated Barfly.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "how-to-drink-sazerac",
+      "url": "https://www.youtube.com/watch?v=5cgcMHSO1Z8",
+      "title": "The Sazerac",
+      "channel": "How To Drink",
+      "minutes": null,
+      "topic": "The Sazerac",
+      "why": "A second view of the same drink with its contested history told plainly, useful for the guest who asks where it began.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [
+          "Classic Sazerac"
+        ],
+        "wines": [],
+        "terms": [
+          "Sazerac"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"The Sazerac\" 5cgcMHSO1Z8 uploaded by which youtube channel\": result listed www.youtube.com/watch?v=5cgcMHSO1Z8 as \"The Sazerac\"; the summary named the channel How To Drink from an episode listing (aired 3 March 2017). Weaker than a direct page read: recheck by oEmbed.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "educated-barfly-absinthe-frappe",
+      "url": "https://www.youtube.com/watch?v=gKX3udyGa5Y",
+      "title": "Master The Classics: Absinthe Frappé",
+      "channel": "The Educated Barfly",
+      "minutes": null,
+      "topic": "Herbsaint and absinthe",
+      "why": "How anise spirits behave with water and ice, which is why a rinse is a coat and not a pour.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [
+          "Classic Sazerac",
+          "Thompson’s Dream",
+          "Origin Story"
+        ],
+        "wines": [],
+        "terms": [
+          "Herbsaint",
+          "Jade Nouvelle-Orléans"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"The Educated Barfly\" Herbsaint OR absinthe OR Chartreuse OR \"Espresso Martini\" OR \"Whiskey Sour\" egg white video\" listed www.youtube.com/watch?v=gKX3udyGa5Y as \"Master The Classics: Absinthe Frappé\"; the series search above placed Master The Classics with The Educated Barfly.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "anders-irish-coffee",
+      "url": "https://www.youtube.com/watch?v=sJsY1LokABA",
+      "title": "Irish Coffee - hot AND cold 🔥🧊",
+      "channel": "Anders Erickson",
+      "minutes": null,
+      "topic": "Irish coffee",
+      "why": "The cream float done right: lightly whipped, poured over a spoon, never stirred in, plus the cold version.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [
+          "Brennan’s Irish Coffee"
+        ],
+        "wines": [],
+        "terms": [
+          "Tullamore D.E.W."
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Anders Erickson Irish Coffee video youtube \"Anders Erickson\"\": result listed www.youtube.com/watch?v=sJsY1LokABA with that title; the summary said Anders discusses Irish Coffee in it.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "anders-espresso-martini-3-ways",
+      "url": "https://www.youtube.com/watch?v=Rq2257amkAo",
+      "title": "Espresso Martini 3 Ways: Home/Standard/Pro",
+      "channel": "Anders Erickson",
+      "minutes": null,
+      "topic": "Espresso martini",
+      "why": "Why fresh espresso, a hard shake and dilution make the foam crema, and what separates a good one from a sweet one.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [
+          "Espresso Martini"
+        ],
+        "wines": [],
+        "terms": [
+          "Congregation Coffee"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Anders Erickson Espresso Martini video youtube \"Anders Erickson\"\": result listed www.youtube.com/watch?v=Rq2257amkAo with that title; the summary listed it among videos from his channel.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "anders-why-people-hate-espresso-martini",
+      "url": "https://www.youtube.com/watch?v=v_mEp1Ie-3g",
+      "title": "Why people hate the Espresso Martini",
+      "channel": "Anders Erickson",
+      "minutes": null,
+      "topic": "Espresso martini",
+      "why": "The common faults guests have met elsewhere, so you can say what the house version does differently.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [
+          "Espresso Martini"
+        ],
+        "wines": [],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Anders Erickson Espresso Martini video youtube \"Anders Erickson\"\": result listed www.youtube.com/watch?v=v_mEp1Ie-3g with that title; the summary called it the most recent Espresso Martini video from his channel.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "anders-bloody-mary-from-scratch",
+      "url": "https://www.youtube.com/watch?v=V_LkOGZGDyo",
+      "title": "How to make a Bloody Mary (from scratch)",
+      "channel": "Anders Erickson",
+      "minutes": null,
+      "topic": "Bloody Mary and Bloody Bull",
+      "why": "The balance of tomato, acid, heat and salt behind a house mix, which is what the Bloody Bull adds beef broth to.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [
+          "Brennan’s Bloody Mary",
+          "Bloody Bull"
+        ],
+        "wines": [],
+        "terms": [
+          "Bloody Bull"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Anders Erickson Chartreuse OR Calvados OR \"Bloody Mary\" video youtube \"Anders Erickson\"\": result listed www.youtube.com/watch?v=V_LkOGZGDyo with that title; the summary named it a video by Anders Erickson.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "wset-what-is-calvados",
+      "url": "https://www.youtube.com/watch?v=u6UtBEkBmt4",
+      "title": "WSET Bitesize - What is Calvados?",
+      "channel": "Wine & Spirit Education Trust (WSET)",
+      "minutes": null,
+      "topic": "Calvados",
+      "why": "What Calvados is: apple and pear brandy from Normandy, its appellations and ageing, in a few minutes.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [
+          "Riviera",
+          "To Each His Own"
+        ],
+        "wines": [],
+        "terms": [
+          "Calvados"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Calvados explained apple brandy Normandy video youtube channel ...\" listed www.youtube.com/watch?v=u6UtBEkBmt4 as \"WSET Bitesize - What is Calvados?\"; WebSearch \"\"WSET Bitesize\" youtube ... channel name Wine & Spirit Education Trust\" showed the WSET Bitesize series on the channel Wine & Spirit Education Trust (WSET).",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "wset-why-fortify-wine",
+      "url": "https://www.youtube.com/watch?v=8Xn9dP12o8I",
+      "title": "WSET Bitesize - Why do you fortify wine?",
+      "channel": "Wine & Spirit Education Trust (WSET)",
+      "minutes": null,
+      "topic": "Port and Madeira",
+      "why": "Why spirit is added and when: the one idea behind Port, Madeira and Banyuls on the dessert list.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Domaine La Tour Vieille Banyuls Reserva NV",
+          "Broadbent ‘Single Cask’ Malvasia Madeira 500 ml 2009",
+          "Henriques & Henriques ‘Founder’s Solera’ Madeira 1894",
+          "Graham’s Vintage Port 1983"
+        ],
+        "terms": [
+          "Banyuls"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"WSET Bitesize\" youtube ... channel name Wine & Spirit Education Trust\": result listed www.youtube.com/watch?v=8Xn9dP12o8I with that title; the summary placed it on the WSET channel, presented by a DipWSET educator.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "wset-study-bites-port",
+      "url": "https://www.youtube.com/watch?v=haaqRaJjA9o",
+      "title": "Study bites: Port (WSET Level 3 wine)",
+      "channel": "Wine & Spirit Education Trust (WSET)",
+      "minutes": null,
+      "topic": "Port and Madeira",
+      "why": "Port styles in order: ruby, tawny, colheita, LBV and vintage, so the list’s Ports stop looking alike.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Dow’s Vintage Port 1985",
+          "Graham’s Vintage Port 2000",
+          "Taylor Fladgate Vintage Port 1977",
+          "Niepoort Colheita Port 1997 (375 ml)",
+          "Sandeman Late Bottled Vintage Port 1999",
+          "Feist Late Bottled Vintage Port 2006"
+        ],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"WSET Bitesize\" youtube ... channel name Wine & Spirit Education Trust\": result listed www.youtube.com/watch?v=haaqRaJjA9o with that title; the summary said it is presented by WSET educators on the WSET channel.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "cms-open-serve-sparkling",
+      "url": "https://www.youtube.com/watch?v=XFiWNb9GMNE",
+      "title": "How to Open & Serve Sparkling Wine: Court of Master Sommeliers, Americas",
+      "channel": "Court of Master Sommeliers, Americas",
+      "minutes": null,
+      "topic": "Champagne service",
+      "why": "The exam standard for sparkling: cage loosened under the thumb, the cork eased with a sigh, the pour in two motions.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+          "Charles Lafitte Brut Champagne NV",
+          "Krug ‘Grande Cuvée 170th Edition’ Brut NV",
+          "Louis Roederer ‘Cristal’ Brut 2015",
+          "Dom Pérignon ‘P2’ Brut 2006",
+          "Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+          "Taittinger ‘La Francaise’ Brut NV (3 L double magnum)"
+        ],
+        "terms": [
+          "Extra Brut"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Court of Master Sommeliers youtube sparkling wine service video channel\": result listed www.youtube.com/watch?v=XFiWNb9GMNE with that title; the summary named the channel Court of Master Sommeliers, Americas.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "cms-open-a-bottle",
+      "url": "https://www.youtube.com/watch?v=9R3JBuXcNjQ",
+      "title": "How to Open A Bottle of Wine: Court of Master Sommeliers, Americas",
+      "channel": "Court of Master Sommeliers, Americas",
+      "minutes": null,
+      "topic": "Tableside bottle service",
+      "why": "Presenting the label, cutting the foil below the lip, pulling the cork clean and pouring the host’s taste.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Damien Martin Bourgogne Pinot Noir 2023",
+          "Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+          "Moulin d’Issan Bordeaux Supérieur 2021"
+        ],
+        "terms": [
+          "Guéridon"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Court of Master Sommeliers youtube sparkling wine service video channel\": result listed www.youtube.com/watch?v=9R3JBuXcNjQ with that title (channel name in the title); the summary named the channel Court of Master Sommeliers, Americas.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "cms-decant-wine",
+      "url": "https://www.youtube.com/watch?v=uOhVibnoThs",
+      "title": "How to Decant Wine: Court of Master Sommeliers, Americas",
+      "channel": "Court of Master Sommeliers, Americas",
+      "minutes": null,
+      "topic": "Decanting",
+      "why": "The three reasons to decant, and the candle and shoulder technique that keeps sediment in an old bottle.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Inglenook ‘Rubicon’ 2010",
+          "Château Latour Pauillac Premier Cru Classé 1946",
+          "Pétrus Pomerol 1980",
+          "Château Mouton-Rothschild Pauillac 1er Cru Classé 2005",
+          "Taylor Fladgate Vintage Port 1977"
+        ],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"Court of Master Sommeliers, Americas\" youtube \"How to\" OR \"Port\" OR \"Madeira\" OR \"Riesling\" OR pairing video\": result listed www.youtube.com/watch?v=uOhVibnoThs with that title; the summary said Sabato Sagaria, MS explains the three reasons for decanting.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "cms-hospitality-service",
+      "url": "https://www.youtube.com/watch?v=SRB5dITG63s",
+      "title": "Hospitality & Service: Court of Master Sommeliers, Americas",
+      "channel": "Court of Master Sommeliers, Americas",
+      "minutes": null,
+      "topic": "Fine-dining service",
+      "why": "Master Sommeliers' advice for the service part of their exam: for a new server, the standard the floor is held to, not a Brennan's procedure.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"Court of Master Sommeliers, Americas\" youtube \"How to\" OR ...\": result listed www.youtube.com/watch?v=SRB5dITG63s with that title; the summary placed it on the Court of Master Sommeliers, Americas channel.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "cms-riesling-expert-guide",
+      "url": "https://www.youtube.com/watch?v=sE8TYt0CN2c",
+      "title": "An Expert Somm's Guide to What Makes Riesling DELICIOUS",
+      "channel": "Court of Master Sommeliers, Americas",
+      "minutes": null,
+      "topic": "German Riesling",
+      "why": "Riesling dry to sweet around the world, with food pairings, so Kabinett and Auslese become guest language.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "C.H. Berres ‘Old Vines’ Riesling 2022",
+          "Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)",
+          "J.J. Prüm ‘Wehlener Sonnenuhr’ Riesling Kabinett 2020",
+          "Egon Müller ‘Scharzhofberger’ Riesling Kabinett 2020",
+          "Trimbach Riesling Réserve 2020"
+        ],
+        "terms": [
+          "Auslese",
+          "Erdener Prälat"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"Court of Master Sommeliers, Americas\" youtube \"How to\" OR \"Port\" OR \"Madeira\" OR \"Riesling\" OR pairing video\": result listed www.youtube.com/watch?v=sE8TYt0CN2c with that title; the summary listed it among the Court of Master Sommeliers, Americas channel videos, with Matthew Kaner presenting. Recheck channel by oEmbed.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "guildsomm-champagne",
+      "url": "https://www.youtube.com/watch?v=um10vnGXxw4",
+      "title": "The Wines of Champagne",
+      "channel": "GuildSomm International",
+      "minutes": null,
+      "topic": "Champagne",
+      "why": "Champagne’s villages, grapes, dosage and house styles, which is the frame for every bubble on the list.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+          "Charles Lafitte Brut Champagne NV",
+          "Rare Brut 2012 (Coravin)",
+          "Krug ‘Grande Cuvée 170th Edition’ Brut NV",
+          "Louis Roederer ‘Cristal’ Brut 2015",
+          "Dom Pérignon ‘P2’ Brut 2006",
+          "Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+          "Taittinger ‘La Francaise’ Brut NV (3 L double magnum)"
+        ],
+        "terms": [
+          "Extra Brut",
+          "Piper-Heidsieck",
+          "Taittinger"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"GuildSomm \"The Wines of\" Rhône Port Madeira Sauternes Napa youtube\": result listed www.youtube.com/watch?v=um10vnGXxw4 with that title; the summary listed it as by GuildSomm. Channel name from the channel page result \"GuildSomm International\".",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "guildsomm-burgundy",
+      "url": "https://www.youtube.com/watch?v=CNQsaRL5v1g",
+      "title": "The Wines of Burgundy",
+      "channel": "GuildSomm International",
+      "minutes": null,
+      "topic": "Burgundy",
+      "why": "Village, premier cru and grand cru from Chablis to the Mâconnais, the ladder behind every Burgundy on the list.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Damien Martin Bourgogne Pinot Noir 2023",
+          "Louis Jadot Beaune 1er Cru 2023",
+          "Domaine Leflaive Mâcon-Verzé 2022 (Coravin)",
+          "Fichet ‘Château London’ Mâcon-Igé 2024",
+          "Domaine Leflaive Chevalier-Montrachet Grand Cru 2015",
+          "Domaine René et Vincent Dauvissat ‘Les Preuses’ Chablis Grand Cru 2015"
+        ],
+        "terms": [
+          "Beaune",
+          "Mâcon-Verzé",
+          "Leflaive"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"GuildSomm International \"The Wines of Burgundy\" \"The Wines of Bordeaux\" youtube\": result listed www.youtube.com/watch?v=CNQsaRL5v1g with that title; the summary said it is by GuildSomm.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "guildsomm-bordeaux-right-bank",
+      "url": "https://www.youtube.com/watch?v=jmd_VI1Y7v8",
+      "title": "The Wines of Bordeaux's Right Bank",
+      "channel": "GuildSomm International",
+      "minutes": null,
+      "topic": "Bordeaux",
+      "why": "Merlot country: Pomerol and Saint-Émilion, the side of Bordeaux behind the 1946 Canon, Figeac and Trotanoy.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Château Trotanoy Pomerol 1946",
+          "Château-Figeac Saint-Émilion Premier Grand Cru Classé 1946",
+          "Château Canon Saint-Émilion Premier Grand Cru Classé 1946",
+          "Château Cheval Blanc Saint-Émilion 1er Grand Cru Classé A 2008",
+          "Pétrus Pomerol 1980",
+          "Château Bellegrave Pomerol 2019"
+        ],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"GuildSomm International \"The Wines of Burgundy\" \"The Wines of Bordeaux\" youtube\": result listed www.youtube.com/watch?v=jmd_VI1Y7v8 with that title; the summary said it is by GuildSomm.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "guildsomm-northern-rhone",
+      "url": "https://www.youtube.com/watch?v=6fVFKfa3ejE",
+      "title": "The Wines of Northern Rhône",
+      "channel": "GuildSomm International",
+      "minutes": null,
+      "topic": "The Rhône",
+      "why": "Syrah on granite slopes: Hermitage and Crozes-Hermitage, so the Chave and Graillot read as one family.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Domaine Jean-Louis Chave Hermitage 2013",
+          "Alain Graillot Crozes-Hermitage 2015"
+        ],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"GuildSomm \"The Wines of\" Rhône Port Madeira Sauternes Napa youtube\": result listed www.youtube.com/watch?v=6fVFKfa3ejE with that title; the summary listed it as by GuildSomm.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "guildsomm-germany",
+      "url": "https://www.youtube.com/watch?v=m6C4cMppZFo",
+      "title": "The Wines of Germany",
+      "channel": "GuildSomm International",
+      "minutes": null,
+      "topic": "German Riesling",
+      "why": "The Mosel’s slate and the Prädikat ladder from Kabinett to Auslese and beyond, read as ripeness, not sweetness alone.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "C.H. Berres ‘Old Vines’ Riesling 2022",
+          "Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)",
+          "Egon Müller ‘Scharzhofberger’ Riesling Kabinett 2020",
+          "Dönnhoff ‘Oberhäuser Brücke’ Riesling Auslese Goldkapsel 2023 (375 ml)",
+          "Hexamer ‘Meddersheimer Rheingrafenberg’ Riesling Spätlese 2010"
+        ],
+        "terms": [
+          "Auslese",
+          "Dr. Hermann"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"GuildSomm \"The Wines of\" Rhône Port Madeira Sauternes Napa youtube\": result listed www.youtube.com/watch?v=m6C4cMppZFo with that title; the summary listed it among GuildSomm's series (published 2016, updated 2021).",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "guildsomm-alsace",
+      "url": "https://www.youtube.com/watch?v=aD5zLAN8X9s",
+      "title": "The Wines of Alsace",
+      "channel": "GuildSomm International",
+      "minutes": null,
+      "topic": "Alsace",
+      "why": "Alsace’s grapes, grand crus and Crémant, the home of the Pierre Sparr rosé and the Trimbach Rieslings.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Pierre Sparr Brut Rosé Crémant d’Alsace NV",
+          "Trimbach Riesling Réserve 2020",
+          "F.E. Trimbach ‘Clos Sainte Hune’ Riesling 2007"
+        ],
+        "terms": [
+          "Pierre Sparr"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"GuildSomm \"The Wines of\" Rhône Port Madeira Sauternes Napa youtube\": result listed www.youtube.com/watch?v=aD5zLAN8X9s with that title; the summary listed it as by GuildSomm.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "wine-folly-riesling",
+      "url": "https://www.youtube.com/watch?v=ZLXhBKJb01o",
+      "title": "Riesling (Everything you need to know)",
+      "channel": "Wine Folly",
+      "minutes": null,
+      "topic": "German Riesling",
+      "why": "A Master of Wine shows how to tell dry from sweet Riesling on a label, the question guests ask most.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Stein ‘Weihwasser’ Riesling Feinherb 2023",
+          "Stein ‘Palmberg-Terrassen’ Riesling Spätlese-Feinherb 2014",
+          "J.J. Prüm ‘Wehlener Sonnenuhr’ Riesling Kabinett 2020",
+          "C.H. Berres ‘Old Vines’ Riesling 2022"
+        ],
+        "terms": [
+          "Auslese"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Wine Folly Madeline Puckette youtube video Port wine explained OR Madeira OR Sauternes OR Riesling sweetness\": result listed www.youtube.com/watch?v=ZLXhBKJb01o with that title; the summary said Wine Folly's Head Wine Educator, Christine Marsiglio MW, presents it.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "wine-folly-open-champagne",
+      "url": "https://www.youtube.com/watch?v=Q6ULyip3otQ",
+      "title": "How to Open Champagne (Without it Exploding!)",
+      "channel": "Wine Folly",
+      "minutes": null,
+      "topic": "Champagne service",
+      "why": "The safe open: towel, thumb on the cork, turn the bottle not the cork, a whisper and not a pop.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+          "Charles Lafitte Brut Champagne NV",
+          "Rare Brut 2012 (Coravin)",
+          "Krug ‘Grande Cuvée 170th Edition’ Brut NV",
+          "Louis Roederer ‘Cristal’ Brut 2015",
+          "Dom Pérignon ‘P2’ Brut 2006",
+          "Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+          "Taittinger ‘La Francaise’ Brut NV (3 L double magnum)"
+        ],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"How to Open Champagne (Without it Exploding!)\" Q6ULyip3otQ uploaded by which youtube channel\": result listed www.youtube.com/watch?v=Q6ULyip3otQ with that title; the summary named Wine Folly from the page snippet citing winefolly.com. Recheck channel by oEmbed.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "bon-appetit-every-wine-glass",
+      "url": "https://www.youtube.com/watch?v=cks86rDRMmQ",
+      "title": "Every Wine Glass Explained By A Sommelier",
+      "channel": "Bon Appétit",
+      "minutes": null,
+      "topic": "Glassware",
+      "why": "Which glass for which wine and why the bowl matters, so the right stem lands with the right bottle.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Louis Jadot Beaune 1er Cru 2023",
+          "Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+          "Charles Lafitte Brut Champagne NV"
+        ],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Bon Appétit \"Every Wine Glass Explained By A Sommelier\" \"Every Wine Tool a Sommelier Uses\" André Mack\": result listed www.youtube.com/watch?v=cks86rDRMmQ with that title; the summary placed it in Bon Appétit's World of Wine with André Mack.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "bon-appetit-order-wine-like-a-pro",
+      "url": "https://www.youtube.com/watch?v=9l8TJwfHbdE",
+      "title": "Sommelier Breaks Down How to Order Wine Like a Pro",
+      "channel": "Bon Appétit",
+      "minutes": null,
+      "topic": "Selling wine",
+      "why": "The guest’s side of the list: how people choose, so you can ask the two questions that find their bottle.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"| Bon Appétit\" sommelier wine youtube \"World of Wine\" Champagne Bordeaux Burgundy\": result listed www.youtube.com/watch?v=9l8TJwfHbdE with that title; the summary listed an episode teaching how to order wine like a pro in Bon Appétit's World of Wine.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "bon-appetit-champagne-ages",
+      "url": "https://www.youtube.com/watch?v=Ur_nvNZbn6Y",
+      "title": "Sommelier Tastes the Same Champagne at Different Ages (1973-2023)",
+      "channel": "Bon Appétit",
+      "minutes": null,
+      "topic": "Champagne",
+      "why": "How Champagne changes with age, the honest answer when a guest weighs a 2006 or 2015 against a non-vintage.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Dom Pérignon ‘P2’ Brut 2006",
+          "Louis Roederer ‘Cristal’ Brut 2015",
+          "Rare Brut 2012 (Coravin)",
+          "Brennan’s Essential by Piper-Heidsieck Extra Brut NV"
+        ],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"| Bon Appétit\" sommelier wine youtube \"World of Wine\" Champagne Bordeaux Burgundy\": result listed www.youtube.com/watch?v=Ur_nvNZbn6Y with that title; the summary described the Veuve Clicquot tasting across fifty years as a Bon Appétit World of Wine episode.",
+      "checkedOn": "2026-10-04"
+    }
+  ],
+  "unverified": [
+    {
+      "url": "https://www.youtube.com/watch?v=rsKgEUab4BM",
+      "title": "Bananas Foster at Brennan's in New Orleans",
+      "reason": "title and id shown by WebSearch; channel never shown"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ZvZuX8rjo8g",
+      "title": "How Bananas Foster Was Born: Brennan’s Legendary Tableside Dessert",
+      "reason": "title and id shown; channel never shown"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=OMu35Ko97yQ",
+      "title": "Alfredo from Brennan's Restaurant Brings Bananas Foster to Life with a Fiery Tableside Story!",
+      "reason": "title and id shown; summary tied it to a marketing firm's site, channel not shown"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=CG32SuNky54",
+      "title": "NOLA Eats: Brandy Milk Punch",
+      "reason": "title and id shown; channel guessed by the summary from the description, not shown"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Go05fzbbrw0",
+      "title": "Coravin Timeless for Trade",
+      "reason": "two different titles shown for this id (\"Tips & Tricks - Coravin Timeless Professional - Trade\"); channel not named exactly"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=8uyscIeV2ic",
+      "title": "Make a Brandy Milk Punch in a Minute #shorts",
+      "reason": "a Short; summary attributed it to Difford's Guide only by generalising"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=NwuL50Y5g4U",
+      "title": "Dessert Wines 101: From Port to Sauternes and Everything in Between",
+      "reason": "title shown; channel not shown"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=rhLoJpo8w6s",
+      "title": "Drinking Tutorials: the Brandy Milk Punch",
+      "reason": "title shown; channel only guessed"
+    }
+  ]
+}

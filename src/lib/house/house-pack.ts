@@ -35,7 +35,7 @@
  * act, the second of the two that may create an index (mintHouse in
  * house-store.ts is the first).
  */
-import { BUILD_STEPS, HOUSE_LISTS, ID_PREFIXES, MARK_FIELDS, isMark, isNote, mintId } from './house-schema';
+import { BUILD_STEPS, HOUSE_LISTS, ID_PREFIXES, MARK_FIELDS, houseRows, isMark, isNote, mintId, optionalList } from './house-schema';
 import type { BuildStep, House, HouseIndex, HouseStub, Mark } from './house-schema';
 import { normaliseHouse } from './house-normalise';
 import type { NormaliseReport } from './house-normalise';
@@ -168,20 +168,11 @@ export function restampHouse(house: House, id: string): House {
 	};
 }
 
-/** How many records the ten lists hold between them. */
+/** How many records the eleven lists hold between them; an absent list counts none. */
 export function countItems(house: House): number {
-	return (
-		house.tastings.length +
-		house.dishes.length +
-		house.wines.length +
-		house.cocktails.length +
-		house.lexicon.length +
-		house.scenarios.length +
-		house.mixUps.length +
-		house.mustKnows.length +
-		house.askAtLineup.length +
-		house.disputes.length
-	);
+	let n = 0;
+	for (const list of HOUSE_LISTS) n += houseRows(house, list).length;
+	return n;
 }
 
 /**
@@ -302,10 +293,10 @@ function modeStamp(stamps: readonly number[]): number | null {
 	return best;
 }
 
-/** Every record of the ten lists, flat. */
+/** Every record of the eleven lists, flat. */
 function editionRecords(house: House): Rec[] {
 	const out: Rec[] = [];
-	for (const list of HOUSE_LISTS) for (const r of house[list] as unknown as Rec[]) out.push(r);
+	for (const list of HOUSE_LISTS) for (const r of houseRows(house, list) as Rec[]) out.push(r);
 	return out;
 }
 
@@ -315,7 +306,7 @@ export function editionStamp(house: House): number | null {
 	if (isMark(house.history)) stamps.push(house.history.ts);
 	for (const list of HOUSE_LISTS) {
 		const fields = MARK_FIELDS[list] as readonly string[];
-		for (const r of house[list] as unknown as Rec[]) {
+		for (const r of houseRows(house, list) as Rec[]) {
 			for (const f of fields) {
 				const m = r[f];
 				if (isMark(m)) stamps.push(m.ts);
@@ -325,7 +316,7 @@ export function editionStamp(house: House): number | null {
 	return modeStamp(stamps);
 }
 
-/** The edition's item stamp on a house: the most frequent ts over every record of the ten lists. */
+/** The edition's item stamp on a house: the most frequent ts over every record of the eleven lists. */
 export function editionItemStamp(house: House): number | null {
 	return modeStamp(editionRecords(house).map((r) => r.ts));
 }
@@ -463,15 +454,16 @@ export function refreshEdition(device: House, shipped: House): { house: House; c
 	const out: Record<string, unknown> = { ...device };
 	for (const list of HOUSE_LISTS) {
 		const marks = MARK_FIELDS[list] as readonly string[];
-		const mine = device[list] as unknown as Rec[];
+		const mine = houseRows(device, list) as Rec[];
 		const mineById = new Map<string, Rec>();
 		for (const r of mine) if (!mineById.has(r.id)) mineById.set(r.id, r);
 		const next: Rec[] = [];
 		const seen = new Set<string>();
-		for (const raw of shipped[list] as unknown as Rec[]) {
+		for (const raw of houseRows(shipped, list) as Rec[]) {
 			if (seen.has(raw.id)) continue;
 			seen.add(raw.id);
-			const t: Rec = 'house' in raw ? ({ ...raw, house: device.id } as Rec) : raw;
+			/* Only an item's house id is re-stamped; a video's `house` is a flag. */
+			const t: Rec = typeof raw.house === 'string' ? ({ ...raw, house: device.id } as Rec) : raw;
 			const m = mineById.get(t.id);
 			if (!m) {
 				const tomb = device.removed[t.id];
@@ -496,7 +488,9 @@ export function refreshEdition(device: House, shipped: House): { house: House; c
 			}
 			next.push(m);
 		}
-		out[list] = next;
+		/* An optional list (the videos) is written only when it holds something. */
+		if (next.length || !optionalList(list)) out[list] = next;
+		else delete out[list];
 	}
 	for (const f of ['address', 'phone', 'site', 'meals', 'dressCode'] as const) out[f] = shipped[f];
 	out.menusReadOn = shipped.menusReadOn > device.menusReadOn ? shipped.menusReadOn : device.menusReadOn;

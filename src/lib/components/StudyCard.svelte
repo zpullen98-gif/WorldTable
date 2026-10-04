@@ -5,7 +5,8 @@
   say it, the ten second line and the one-line answer to what the guest asks
   next (so the first screen at 390 by 844 holds what a server needs at the
   table), then the longer lines, the story, the pairing, the parts, the
-  coaching, the service note, the links, the drills and the quiet Edit.
+  coaching, the service note, the videos to watch, the links, the drills and
+  the quiet Edit.
 
   KEPT ONLY. Every value drawn here comes through study.ts's readers, which
   return a mark only when a person kept it. A mark of hers that nobody kept
@@ -32,11 +33,13 @@
 		readOnWords,
 		say,
 		bottlesFor,
+		cardVideos,
 		type StudyRow
 	} from '$lib/study';
 	import { roomHref, ROOM_NAMES, type Room } from '$lib/wing-links';
 	import { sharedOrigin } from '$lib/desk/desk-share';
 	import StudyLinks from './StudyLinks.svelte';
+	import VideoList from './VideoList.svelte';
 
 	let {
 		current,
@@ -99,6 +102,8 @@
 	const zero = $derived(pairing ? findItem(current, pairing.zeroProofId) : undefined);
 	/* By the bottle: the dish's bottle tiers, drawn only when the kept pairing carries some. */
 	const bottles = $derived(bottlesFor(current, dish));
+	/* Watch: the house's videos for this dish, each a link out in a new tab, never a player. */
+	const videos = $derived(cardVideos(current, dish));
 
 	/** A link into another room, or '' when one may not be drawn. */
 	const hrefIn = (room: Room, id: string) =>
@@ -362,6 +367,14 @@
 		<p class="eyebrow" id="note-h">{say('eyebrow')}</p>
 		<p class="para">{dish.serviceNote?.trim() ? dish.serviceNote.trim() : say('noteNone')}</p>
 	</section>
+
+	{#if videos.length}
+		<section class="block" aria-labelledby="watch-h">
+			<h3 class="blockhead" id="watch-h">{say('watch')}</h3>
+			<p class="soft small">{say('videoNote')}</p>
+			<VideoList rows={videos} />
+		</section>
+	{/if}
 
 	{#key dish.id}
 		<StudyLinks {current} {dish} {recipeSlug} housePour={wine?.name ?? ''} />

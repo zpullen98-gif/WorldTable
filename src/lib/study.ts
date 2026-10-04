@@ -20,7 +20,7 @@
  * NO ALLERGEN IS READ, INFERRED OR SHOWN HERE. The service note is a
  * person's own words and the card prints it verbatim under the fixed eyebrow.
  */
-import { isMark, DISH_PARTS, COCKTAIL_PARTS, WINE_PARTS, KEYS, BOTTLE_TIERS, foldSize, wineListOf } from './house/house-schema';
+import { isMark, DISH_PARTS, COCKTAIL_PARTS, WINE_PARTS, KEYS, BOTTLE_TIERS, foldSize, wineListOf, videoGroups, videoMeta, videosFor } from './house/house-schema';
 import type {
 	AskAtLineup,
 	BottleTier,
@@ -30,6 +30,7 @@ import type {
 	HouseCocktail,
 	HouseDish,
 	HouseItem,
+	HouseVideo,
 	HouseWine,
 	ItemKind,
 	LexiconTerm,
@@ -136,7 +137,13 @@ export const STUDY_WORDS = {
 	close: 'Close the deck',
 	front: 'Say the ten second line aloud, then flip.',
 	flip: 'Flip',
-	opening: 'Opening the house…'
+	opening: 'Opening the house…',
+	watch: 'Watch',
+	videos: 'Videos',
+	videosCount: 'Videos ({n})',
+	videoNote: 'Each video opens on YouTube or Vimeo in a new tab, and needs a connection.',
+	newTab: '(opens in a new tab)',
+	videoFor: 'For {names}'
 } as const;
 export type StudyWordKey = keyof typeof STUDY_WORDS;
 
@@ -748,4 +755,34 @@ export function readOnWords(iso: string): string {
 	} catch {
 		return iso;
 	}
+}
+
+/* -------------------------------------------------------------------------
+ * The videos: a link out, never a player
+ * ---------------------------------------------------------------------- */
+
+/** One video as a card or the study view draws it: the record, the small line, and the items it teaches by name. */
+export interface VideoRow {
+	video: HouseVideo;
+	meta: string;
+	items: Array<{ id: string; name: string; kind: ItemKind }>;
+}
+
+function videoRow(house: House, v: HouseVideo): VideoRow {
+	const items: VideoRow['items'] = [];
+	for (const id of v.itemIds) {
+		const it = findItem(house, id);
+		if (it && plain(it.name)) items.push({ id, name: plain(it.name), kind: it.kind });
+	}
+	return { video: v, meta: videoMeta(v), items };
+}
+
+/** The Watch block on an item's card: the videos naming the item, then those naming a term that reaches it. */
+export function cardVideos(house: House, item: { id: string }): VideoRow[] {
+	return videosFor(house, item.id).map((v) => videoRow(house, v));
+}
+
+/** The Videos entry in the study view: every video by topic, the house's own first. */
+export function studyVideos(house: House): Array<{ topic: string; rows: VideoRow[] }> {
+	return videoGroups(house).map((g) => ({ topic: g.topic, rows: g.videos.map((v) => videoRow(house, v)) }));
 }

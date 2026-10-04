@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { COCKTAIL_MARKS, DISH_MARKS, HOUSE_LISTS, KEYS, MARK_FIELDS, OPTIONAL_KEYS, WINE_MARKS, emptyHouse } from './house-schema';
+import { COCKTAIL_MARKS, DISH_MARKS, HOUSE_LISTS, KEYS, MARK_FIELDS, OPTIONAL_KEYS, WINE_MARKS, emptyHouse, houseRows } from './house-schema';
 import type { House, HouseCocktail, HouseDish, HouseItem, HouseWine, ItemKind, Mark, Note } from './house-schema';
 import { lastTouch, mergeHouse, sameJson } from './house-merge';
 import {
@@ -746,7 +746,7 @@ for (const w of WINGS) {
 			expect((first(lost).kept as Note[]).map((n) => n.q)).toEqual(['asked before']);
 			expect(first(lost)[w.houseOnly]).toEqual(first(B)[w.houseOnly]);
 			expect(block(lost)[w.shared]).toEqual(mark('kept before the slot was lost', 'person', T0 + 10));
-			for (const l of HOUSE_LISTS) expect(lost.house[l]).toHaveLength(B.house[l].length);
+			for (const l of HOUSE_LISTS) expect(houseRows(lost.house, l)).toHaveLength(houseRows(B.house, l).length);
 		});
 	});
 }

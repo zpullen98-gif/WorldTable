@@ -19,9 +19,12 @@
  * 'allergen-talk' a line of hers that speaks of allergens; and 'tier' a
  * bottle tier that breaks its rule (a wine not on the bottle list, a price
  * outside the tier's band, a half bottle that is not HALF_SIZE, a tier with
- * no why or no line to say). Those eight are FATAL_CODES, the default list,
- * and a pack builder passes exactly that. A tier's why and line over
- * BOTTLE_WORDS are 'word-cap', and a tier naming no house wine is 'ref'.
+ * no why or no line to say); and 'video' a video whose link is not a video
+ * link by videoUrlOk, or that has no title or no why. Those nine are
+ * FATAL_CODES, the default list, and a pack builder passes exactly that. A
+ * tier's why and line over BOTTLE_WORDS are 'word-cap', and so is a video's
+ * why over VIDEO_WHY_WORDS; a tier naming no house wine is 'ref', and so is
+ * a video's item or term that is not in the house.
  * Three more are advisory and NEVER fatal, whatever list a caller hands in:
  * 'service-note', a person's note that names an allergen without the word
  * confirm (the note is theirs and stands; the flag reminds them to confirm
@@ -36,7 +39,7 @@
  * sweep (forbiddenKeys, in house-normalise.ts), the dash (house-lines.ts)
  * and onPage, the rule that 12 is not on a page that prints only 12.50.
  */
-import { BOTTLE_TIERS, BOTTLE_WORDS, HALF_SIZE, HOUSE_LISTS, MARK_FIELDS, PRINCIPLES, foldSize, inBottleBand, isMark, printedDollars, wineListOf } from './house-schema';
+import { BOTTLE_TIERS, BOTTLE_WORDS, HALF_SIZE, HOUSE_LISTS, MARK_FIELDS, PRINCIPLES, VIDEO_WHY_WORDS, foldSize, inBottleBand, isMark, printedDollars, videoUrlOk, wineListOf } from './house-schema';
 import type { House, HouseList, Lines, Mark } from './house-schema';
 import { forbiddenKeys } from './house-normalise';
 import { hasDash, lineProblems, wordCount } from './house-lines';
@@ -54,6 +57,7 @@ export type ProblemCode =
 	| 'price'
 	| 'allergen-talk'
 	| 'tier'
+	| 'video'
 	| 'service-note'
 	| 'proper-noun'
 	| 'quote';
@@ -66,7 +70,7 @@ export interface Problem {
 }
 
 /** The codes that stop a pack, and the default `fatal` list. */
-export const FATAL_CODES: readonly ProblemCode[] = ['forbidden', 'dash', 'word-cap', 'ref', 'principles', 'price', 'allergen-talk', 'tier'];
+export const FATAL_CODES: readonly ProblemCode[] = ['forbidden', 'dash', 'word-cap', 'ref', 'principles', 'price', 'allergen-talk', 'tier', 'video'];
 
 /** The codes that are advice and never fatal, whatever list a caller hands in. */
 export const NEVER_FATAL: readonly ProblemCode[] = ['service-note', 'proper-noun', 'quote'];
@@ -282,6 +286,32 @@ function checkRefs(house: House, add: Add): void {
 	const disputes = listOf(house, 'disputes');
 	for (let i = 0; i < disputes.length; i++) {
 		if (disputes[i].itemId !== undefined) ref('house.disputes[' + i + '].itemId', disputes[i].itemId, items, 'a house item', true);
+	}
+	const terms = idSet(listOf(house, 'lexicon'));
+	const videos = listOf(house, 'videos');
+	for (let i = 0; i < videos.length; i++) {
+		refs('house.videos[' + i + '].itemIds', videos[i].itemIds, items, 'a house item');
+		refs('house.videos[' + i + '].termIds', videos[i].termIds, terms, 'a house term');
+	}
+}
+
+/**
+ * Every video: its link a video link (videoUrlOk, the normaliser's rule,
+ * asked again because a validator may be handed a house nobody normalised),
+ * a title, and a why within VIDEO_WHY_WORDS. Where each video points is
+ * checkRefs' to name.
+ */
+function checkVideos(house: House, add: Add): void {
+	const videos = listOf(house, 'videos');
+	for (let i = 0; i < videos.length; i++) {
+		const v = videos[i];
+		const at = 'house.videos[' + i + ']';
+		if (!videoUrlOk(v.url)) add(at + '.url', 'video', 'the link is not a secure link on YouTube or Vimeo');
+		const title = typeof v.title === 'string' ? v.title : '';
+		if (!title.trim()) add(at + '.title', 'video', 'the video has no title');
+		const why = typeof v.why === 'string' ? v.why : '';
+		if (!why.trim()) add(at + '.why', 'video', 'the video has no line saying why it helps');
+		else if (wordCount(why) > VIDEO_WHY_WORDS) add(at + '.why', 'word-cap', wordCount(why) + ' words; the cap on why a video helps is ' + VIDEO_WHY_WORDS);
 	}
 }
 
@@ -505,6 +535,7 @@ export function validateHouse(house: House, opts: ValidateOptions = {}): { probl
 	checkRefs(house, add);
 	checkPrinciples(house, add);
 	checkBottles(house, add);
+	checkVideos(house, add);
 	if (typeof opts.sourceText === 'string') checkPrices(house, opts.sourceText, add);
 	checkMarks(house, add);
 	checkServiceNotes(house, add);

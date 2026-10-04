@@ -35,7 +35,7 @@ import {
 	GRADE_CLOSE
 } from './house-drills';
 import type { DrillKind, DrillQuestion, Flashcard, Rand } from './house-drills';
-import { HOUSE_LISTS, ID_PREFIXES, KEYS } from './house-schema';
+import { HOUSE_LISTS, ID_PREFIXES, KEYS, houseRows } from './house-schema';
 import type { FormulaParts, House, HouseCocktail, HouseDish, HouseWine, LexiconTerm, Lines, Mark, MixUp, Pairing, Principle } from './house-schema';
 
 /**
@@ -168,7 +168,7 @@ function widened(): House {
 /** Every id on the house, by list, so an itemId can be checked against the list its kind reads. */
 function idsOf(house: House): Map<string, string> {
 	const out = new Map<string, string>();
-	for (const list of HOUSE_LISTS) for (const row of house[list] as Array<{ id: string }>) out.set(row.id, list);
+	for (const list of HOUSE_LISTS) for (const row of houseRows(house, list) as Array<{ id: string }>) out.set(row.id, list);
 	return out;
 }
 

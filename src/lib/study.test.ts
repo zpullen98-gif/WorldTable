@@ -9,6 +9,7 @@ import {
 	STUDY_WORDS,
 	WATCH_Q,
 	bottlesFor,
+	cardVideos,
 	fold,
 	inMeal,
 	itemCards,
@@ -26,7 +27,8 @@ import {
 	shortLine,
 	studyProgress,
 	studyRows,
-	studySections
+	studySections,
+	studyVideos
 } from './study';
 import { DASH } from './house/house-lines';
 
@@ -248,5 +250,39 @@ describe('by the bottle', () => {
 	it('names the tiers in the words, dash free', () => {
 		expect(say('bin', { bin: '31122' })).toBe('Bin 31122');
 		expect(say('byBottle')).toBe('By the bottle');
+	});
+});
+
+describe('the videos', () => {
+	it('a card lists the dish its video names, with the small line and the item by name', () => {
+		const rows = cardVideos(MIN, { id: 'd-chicken1' });
+		expect(rows.map((r) => r.video.id)).toEqual(['v-saltbak1']);
+		expect(rows[0].meta).toBe('The Lantern Kitchen, 6 min');
+		expect(rows[0].items).toEqual([{ id: 'd-chicken1', name: 'Lantern Roast Chicken', kind: 'dish' }]);
+		/* The beetroot is salt baked too: the video names the term, and the term reaches the dish. */
+		expect(cardVideos(MIN, { id: 'd-beetrt01' }).map((r) => r.video.id)).toEqual(['v-saltbak1']);
+		expect(cardVideos(MIN, { id: 'w-lantern1' })).toEqual([]);
+	});
+
+	it('the study view lists every video by topic, and a house with none lists nothing', () => {
+		expect(studyVideos(MIN).map((g) => [g.topic, g.rows.map((r) => r.video.id)])).toEqual([['The kitchen', ['v-saltbak1']]]);
+		const bare = JSON.parse(JSON.stringify(MIN));
+		delete bare.videos;
+		expect(studyVideos(bare)).toEqual([]);
+		expect(cardVideos(bare, { id: 'd-chicken1' })).toEqual([]);
+	});
+
+	it('the words say a video opens in a new tab and needs a connection', () => {
+		expect(STUDY_WORDS.watch).toBe('Watch');
+		expect(STUDY_WORDS.videoNote).toBe('Each video opens on YouTube or Vimeo in a new tab, and needs a connection.');
+		expect(say('videosCount', { n: 3 })).toBe('Videos (3)');
+	});
+
+	it('the components link out and never embed: no iframe, no autoplay, every link a new tab with rel noopener', () => {
+		const list = readFileSync('src/lib/components/VideoList.svelte', 'utf8');
+		for (const src of [list, readFileSync('src/lib/components/StudyCard.svelte', 'utf8'), readFileSync('src/lib/components/StudyMenu.svelte', 'utf8')]) {
+			expect(src).not.toMatch(/<iframe|<video[\s>]|autoplay|youtube-nocookie|player\.vimeo/i);
+		}
+		expect(list).toMatch(/href=\{r\.video\.url\} target="_blank" rel="noopener"/);
 	});
 });

@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { HOUSE_LISTS, HOUSE_FORMAT, HOUSE_SCHEMA_VERSION, ID_PREFIXES, KEYS, LIST_MAX, OPTIONAL_KEYS, MARK_FIELDS, PROSE_MAX, isMark } from './house-schema';
+import { houseRows, optionalList, HOUSE_LISTS, HOUSE_FORMAT, HOUSE_SCHEMA_VERSION, ID_PREFIXES, KEYS, LIST_MAX, OPTIONAL_KEYS, MARK_FIELDS, PROSE_MAX, isMark } from './house-schema';
 import type { House, HouseList, Mark } from './house-schema';
 import { FORBIDDEN_KEY, KEPT_CAP, MARK_KINDS, forbiddenKeys, markKind, normaliseHouse, normaliseMark } from './house-normalise';
 
@@ -199,14 +199,17 @@ describe('the empty and the broken', () => {
 			expect(house.createdAt).toBe('');
 			expect(house.lastWrite).toBe(0);
 			expect(house.began).toBe('hand');
-			for (const l of HOUSE_LISTS) expect(house[l]).toEqual([]);
+			for (const l of HOUSE_LISTS) {
+				if (optionalList(l)) expect(l in house, l + ' is optional and absent when empty').toBe(false);
+				else expect(house[l]).toEqual([]);
+			}
 			expect(house.meals).toEqual([]);
 			expect(house.sources).toEqual([]);
 			expect(house.removed).toEqual({});
 			expect(house.build).toEqual({});
 			expect(house.history).toBeUndefined();
 			expect(house.pack).toBeUndefined();
-			expect(Object.keys(house).sort()).toEqual(KEYS.House.filter((k) => k !== 'history' && k !== 'pack').sort());
+			expect(Object.keys(house).sort()).toEqual(KEYS.House.filter((k) => k !== 'history' && k !== 'pack' && k !== 'videos').sort());
 			expect(report).toEqual([{ path: 'house.id', code: 'id', said: 'no id; minted ' + house.id }]);
 		}
 	});
@@ -484,13 +487,13 @@ describe('ids', () => {
 		expect(house.lexicon[0].itemIds).toEqual([house.cocktails[1].id]);
 		expect(house.dishes[0].pairing?.value.zeroProofId).toBe(house.cocktails[1].id);
 		expect(house.cocktails[0].upsells?.value).toEqual([house.cocktails[1].id]);
-		const all = [house.id, ...HOUSE_LISTS.flatMap((l: HouseList) => (house[l] as Array<{ id: string }>).map((i) => i.id))];
+		const all = [house.id, ...HOUSE_LISTS.flatMap((l: HouseList) => (houseRows(house, l) as Array<{ id: string }>).map((i) => i.id))];
 		expect(new Set(all).size).toBe(all.length);
 		for (const id of all) {
 			expect(id).toMatch(ID_SHAPE);
 			expect(id.includes('|') || id.includes(':')).toBe(false);
 		}
-		for (const l of HOUSE_LISTS) for (const i of house[l] as Array<{ id: string }>) expect(i.id.startsWith(ID_PREFIXES[l])).toBe(true);
+		for (const l of HOUSE_LISTS) for (const i of houseRows(house, l) as Array<{ id: string }>) expect(i.id.startsWith(ID_PREFIXES[l])).toBe(true);
 	});
 
 	it('re-mints a house id with the wrong prefix and stamps every item with the house it sits in', () => {

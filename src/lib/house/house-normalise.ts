@@ -34,7 +34,7 @@
  * pipe or a colon, with the wrong prefix or already taken in this house is
  * minted afresh and the report says so, and every reference to the old id
  * inside the house (a pairing and its bottle tiers, a course, a mix-up, a first pick, an upsell,
- * a term's items) follows it, so a pack whose dishes came in under the
+ * a term's items, a video's items and terms) follows it, so a pack whose dishes came in under the
  * desk's 'k-' mint keeps its pairings. An id that would match the client's
  * FORBIDDEN_KEY is minted afresh as well, and a fresh id is drawn again
  * while it would, because a tombstone in `removed` is a KEY and the client
@@ -42,8 +42,14 @@
  * record one the client refuses and the pack one no device imports. For
  * the same reason a tombstone already under such a key is dropped and
  * named in the report; no item in the shape can carry that id.
+ *
+ * VIDEOS. A video whose link is not a video link by videoUrlOk (the one
+ * scheme, the three hosts) is dropped whole and named in the report under
+ * 'video', before it claims an id: a card must never carry a link out to
+ * anywhere else. The list is written only when a video survives, so a house
+ * from before the list comes back with the keys it went in with.
  */
-import { BOTTLE_TIERS, BUILD_STEPS, HOUSE_FORMAT, HOUSE_SCHEMA_VERSION, ID_PREFIXES, KEYS, LIST_MAX, MARK_FIELDS, PROSE_MAX, mintId } from './house-schema';
+import { BOTTLE_TIERS, BUILD_STEPS, HOUSE_FORMAT, HOUSE_SCHEMA_VERSION, ID_PREFIXES, KEYS, LIST_MAX, MARK_FIELDS, PROSE_MAX, mintId, videoUrlOk } from './house-schema';
 import type {
 	AskAtLineup,
 	BottlePick,
@@ -58,6 +64,7 @@ import type {
 	HouseDish,
 	HouseMeal,
 	HouseSource,
+	HouseVideo,
 	HouseWine,
 	ItemBase,
 	LexiconTerm,
@@ -108,8 +115,8 @@ export function forbiddenKeys(value: unknown, path: string, out: string[]): stri
  * The report
  * ---------------------------------------------------------------------- */
 
-/** What the normaliser had to change or could not: an id minted afresh, or a key the client would refuse. */
-export type NormaliseCode = 'id' | 'forbidden';
+/** What the normaliser had to change or could not: an id minted afresh, a key the client would refuse, or a video dropped for its link. */
+export type NormaliseCode = 'id' | 'forbidden' | 'video';
 
 export interface NormaliseReport {
 	path: string;
@@ -574,6 +581,40 @@ function normaliseDispute(raw: unknown, i: number, ctx: Ctx): Dispute {
 	return u;
 }
 
+/** A video's length in minutes: a finite number at or above zero, else 0 (not measured). */
+function asMinutes(v: unknown): number {
+	return typeof v === 'number' && Number.isFinite(v) && v > 0 ? v : 0;
+}
+
+/**
+ * One video, or null when its link is not a video link: dropped whole, named
+ * in the report, and never given an id, so a later video keeps the id it
+ * came with.
+ */
+function normaliseVideo(raw: unknown, i: number, ctx: Ctx): HouseVideo | null {
+	const r = asRecord(raw);
+	const path = 'house.videos[' + i + ']';
+	if (!videoUrlOk(r.url)) {
+		const shown = typeof r.url === 'string' ? r.url.slice(0, 80) : 'nothing';
+		ctx.report.push({ path: path + '.url', code: 'video', said: 'the link ' + shown + ' is not a secure link on YouTube or Vimeo; the video was dropped' });
+		return null;
+	}
+	return {
+		id: claimId(r.id, ID_PREFIXES.videos, path, ctx),
+		url: r.url as string,
+		title: asText(r.title),
+		channel: asText(r.channel),
+		mins: asMinutes(r.mins),
+		topic: asText(r.topic),
+		why: asText(r.why),
+		itemIds: asTextList(r.itemIds),
+		termIds: asTextList(r.termIds),
+		house: asFlag(r.house),
+		checkedOn: asText(r.checkedOn),
+		ts: asStamp(r.ts)
+	};
+}
+
 function normaliseMeal(v: unknown): HouseMeal {
 	const r = asRecord(v);
 	return { name: asText(r.name), days: asText(r.days), hours: asText(r.hours) };
@@ -663,6 +704,12 @@ function applyRenames(house: House, ctx: Ctx): void {
 	}
 	for (const a of house.askAtLineup) a.itemIds = many(a.itemIds);
 	for (const u of house.disputes) if (u.itemId) u.itemId = one(u.itemId);
+	if (house.videos) {
+		for (const v of house.videos) {
+			v.itemIds = many(v.itemIds);
+			v.termIds = many(v.termIds);
+		}
+	}
 }
 
 /* -------------------------------------------------------------------------
@@ -719,6 +766,13 @@ export function normaliseHouse(raw: unknown, opts: { rand?: () => number } = {})
 	if (history) house.history = history as Mark;
 	const pack = normalisePack(r.pack);
 	if (pack) house.pack = pack;
+	const videos: HouseVideo[] = [];
+	const rawVideos = asList(r.videos);
+	for (let i = 0; i < rawVideos.length; i++) {
+		const v = normaliseVideo(rawVideos[i], i, ctx);
+		if (v) videos.push(v);
+	}
+	if (videos.length) house.videos = videos;
 	applyRenames(house, ctx);
 	for (const p of forbiddenKeys(house, 'house', [])) {
 		report.push({ path: p, code: 'forbidden', said: 'a key the client refuses is still on the record after normalising' });

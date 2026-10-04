@@ -21,6 +21,9 @@ import {
 	LIST_MAX,
 	MARK_FIELDS,
 	OPTIONAL_KEYS,
+	OPTIONAL_LISTS,
+	optionalList,
+	houseRows,
 	PRINCIPLES,
 	PROSE_MAX,
 	WINE_MARKS,
@@ -131,8 +134,10 @@ describe('the constants', () => {
 		});
 	});
 
-	it('list the ten lists, the marks per kind with parts and lines on wines too, and one prefix per list', () => {
-		expect(HOUSE_LISTS).toEqual(['tastings', 'dishes', 'wines', 'cocktails', 'lexicon', 'scenarios', 'mixUps', 'mustKnows', 'askAtLineup', 'disputes']);
+	it('list the eleven lists, the marks per kind with parts and lines on wines too, and one prefix per list', () => {
+		expect(HOUSE_LISTS).toEqual(['tastings', 'dishes', 'wines', 'cocktails', 'lexicon', 'scenarios', 'mixUps', 'mustKnows', 'askAtLineup', 'disputes', 'videos']);
+		expect(OPTIONAL_LISTS).toEqual(['videos']);
+		expect(MARK_FIELDS.videos).toEqual([]);
 		for (const marks of [DISH_MARKS, WINE_MARKS, COCKTAIL_MARKS]) {
 			for (const m of ['say', 'guest', 'why', 'pairs', 'origin', 'parts', 'lines']) expect(marks).toContain(m);
 		}
@@ -144,7 +149,7 @@ describe('the constants', () => {
 		const prefixes = Object.values(ID_PREFIXES);
 		expect(new Set(prefixes).size).toBe(prefixes.length);
 		for (const p of prefixes) expect(p).toMatch(/^[a-z]-$/);
-		expect(ID_PREFIXES).toMatchObject({ house: 'h-', dishes: 'd-', wines: 'w-', cocktails: 'b-', tastings: 't-', lexicon: 'x-', scenarios: 's-', mixUps: 'm-', mustKnows: 'k-' });
+		expect(ID_PREFIXES).toMatchObject({ house: 'h-', dishes: 'd-', wines: 'w-', cocktails: 'b-', tastings: 't-', lexicon: 'x-', scenarios: 's-', mixUps: 'm-', mustKnows: 'k-', videos: 'v-' });
 	});
 });
 
@@ -163,7 +168,7 @@ describe('KEYS against the client', () => {
 			[
 				'Mark', 'Note', 'FormulaParts', 'Lines', 'Pairing', 'MealPrice', 'ItemBase', 'HouseDish', 'HouseWine', 'HouseCocktail',
 				'PairingBottles', 'BottlePick', 'TastingCourse', 'Tasting', 'LexiconTerm', 'Scenario', 'MixUp', 'MustKnow', 'AskAtLineup', 'DisputeSide', 'Dispute',
-				'HouseMeal', 'HouseSource', 'PackStamp', 'House', 'HouseIndex', 'HouseStub'
+				'HouseMeal', 'HouseSource', 'HouseVideo', 'PackStamp', 'House', 'HouseIndex', 'HouseStub'
 			].sort()
 		);
 		let walked = 0;
@@ -370,7 +375,7 @@ describe('the fixture', () => {
 				expect(item.id.startsWith(ID_PREFIXES[list]), `${list}: ${item.id}`).toBe(true);
 			}
 		}
-		expect(all.size).toBe(1 + HOUSE_LISTS.reduce((n, l) => n + fixture[l].length, 0));
+		expect(all.size).toBe(1 + HOUSE_LISTS.reduce((n, l) => n + houseRows(fixture, l).length, 0));
 	});
 
 	it('refers only to its own items', () => {
@@ -419,14 +424,17 @@ describe('emptyHouse', () => {
 		expect(h.began).toBe('hand');
 		expect(h.createdAt).toBe('2026-10-03T09:00:00.000Z');
 		expect(h.lastWrite).toBe(now);
-		for (const l of HOUSE_LISTS) expect(h[l]).toEqual([]);
+		for (const l of HOUSE_LISTS) {
+			if (optionalList(l)) expect(l in h, l).toBe(false);
+			else expect(h[l]).toEqual([]);
+		}
 		expect(h.removed).toEqual({});
 		expect(h.build).toEqual({});
 		expect(h.meals).toEqual([]);
 		expect(h.sources).toEqual([]);
 		expect(h.history).toBeUndefined();
 		expect(h.pack).toBeUndefined();
-		const optional = ['history', 'pack'];
+		const optional = ['history', 'pack', ...OPTIONAL_KEYS.House];
 		expect(Object.keys(h).sort()).toEqual(KEYS.House.filter((k) => !optional.includes(k)).sort());
 		for (const k of keysDeep(h)) expect(k).not.toMatch(FORBIDDEN_KEY);
 	});

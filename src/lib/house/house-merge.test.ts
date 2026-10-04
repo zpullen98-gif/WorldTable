@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { HOUSE_LISTS, MARK_FIELDS, emptyHouse } from './house-schema';
+import { HOUSE_LISTS, MARK_FIELDS, emptyHouse, houseRows } from './house-schema';
 import type { House, HouseDish, Mark, Note } from './house-schema';
 import { KEPT_CAP } from './house-normalise';
 import { lastTouch, listOfKind, mergeHouse, mergeItem, mergeKept, pickMark, sameJson } from './house-merge';
@@ -39,7 +39,7 @@ const chicken = () => clone(fixture.dishes[0]);
 function sorted(h: House): House {
 	const out = clone(h) as unknown as Record<string, unknown>;
 	for (const l of HOUSE_LISTS) {
-		out[l] = [...(h[l] as Array<{ id: string }>)].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
+		out[l] = [...(houseRows(h, l) as Array<{ id: string }>)].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
 	}
 	return out as unknown as House;
 }
@@ -313,7 +313,7 @@ describe('mergeHouse', () => {
 		const theirs = clone(fixture);
 		const { house, counts } = mergeHouse(mine, theirs);
 		expect(house.id).toBe('h-myhouse1');
-		expect(counts.added).toBe(HOUSE_LISTS.reduce((n, l) => n + fixture[l].length, 0));
+		expect(counts.added).toBe(HOUSE_LISTS.reduce((n, l) => n + houseRows(fixture, l).length, 0));
 		for (const l of ['dishes', 'wines', 'cocktails'] as const) for (const item of house[l]) expect(item.house).toBe('h-myhouse1');
 		expect(house.name).toBe(fixture.name);
 	});

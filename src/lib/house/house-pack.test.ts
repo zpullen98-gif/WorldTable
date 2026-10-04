@@ -251,8 +251,11 @@ describe('importPack: the current rule', () => {
 		expect(await packBecomesCurrent(storage, readIndex(storage))).toBe(true);
 	});
 
-	it('countItems counts all ten lists', () => {
-		expect(countItems(fixture)).toBe(1 + 2 + 1 + 2 + 2 + 1 + 1 + 1 + 1 + 1);
+	it('countItems counts all eleven lists, an absent optional one as none', () => {
+		expect(countItems(fixture)).toBe(1 + 2 + 1 + 2 + 2 + 1 + 1 + 1 + 1 + 1 + 1);
+		const bare = { ...fixture } as Record<string, unknown>;
+		delete bare.videos;
+		expect(countItems(bare as unknown as typeof fixture)).toBe(13);
 	});
 });
 

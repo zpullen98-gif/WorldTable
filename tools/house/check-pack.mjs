@@ -13,7 +13,7 @@
    record (engine.mjs stemProblems) and every upsell to a drink poured where the guest sits
    (upsellRoomProblems),
    asserts that no string anywhere in the file carries a dash of any spelling, that every id wears
-   its list's prefix (h- d- w- b- t- x- s- m- k- a- u-) and is unique, that every mark is by 'person'
+   its list's prefix (h- d- w- b- t- x- s- m- k- a- u- v-) and is unique, that every mark is by 'person'
    (the pack is the reviewed one), that the pack's format and version are the engine's, and that the
    house readPack returns round-trips through normaliseHouse unchanged, and that no house string
    carries a British spelling (the house is American English; the research is not), and that every
@@ -72,9 +72,12 @@ eachString(raw, 'pack', (where, s) => { if (lib.hasDash(s)) { dashes++; if (dash
 if (dashes > 5) F(`${dashes} strings carry a dash in all`);
 if (new RegExp([0x2014, 0x2013].map((c) => String.fromCharCode(c)).join('|') + '| ' + '--' + ' ').test(text)) F('the file text carries a dash');
 
-/* No British spelling in any house string: the house is American English. */
+/* No British spelling in any house string: the house is American English. A video's title and channel
+   are quoted as published (a British channel spells as it spells) and are the one exception. */
 let british = 0;
+const QUOTED = /^house\.videos\[\d+\]\.(title|channel)$/;
 eachString(raw.house, 'house', (where, s) => {
+	if (QUOTED.test(where)) return;
 	const found = britishWords(s);
 	if (found.length) { british++; if (british <= 5) F(`${where} carries a British spelling: ${found.join(', ')}`); }
 });
@@ -90,14 +93,14 @@ const idOk = (id, prefix, where) => {
 	seen.add(id);
 };
 idOk(house.id, C.ID_PREFIXES.house, 'house');
-for (const list of C.HOUSE_LISTS) house[list].forEach((row, i) => idOk(row.id, C.ID_PREFIXES[list], `${list}[${i}]`));
+for (const list of C.HOUSE_LISTS) (house[list] || []).forEach((row, i) => idOk(row.id, C.ID_PREFIXES[list], `${list}[${i}]`));
 for (const list of ['dishes', 'wines', 'cocktails']) for (const row of house[list]) if (row.house !== house.id) F(`${list} ${row.name}: house is ${row.house}, not ${house.id}`);
 
 /* Every mark by person; every item carries the formula where the guide printed it. */
 let marks = 0;
 let unkept = 0;
 for (const field of C.MARK_FIELDS.house) if (lib.isMark(house[field])) { marks++; if (house[field].by !== 'person') unkept++; }
-for (const list of C.HOUSE_LISTS) for (const row of house[list]) for (const field of C.MARK_FIELDS[list]) {
+for (const list of C.HOUSE_LISTS) for (const row of house[list] || []) for (const field of C.MARK_FIELDS[list]) {
 	if (!lib.isMark(row[field])) continue;
 	marks++;
 	if (row[field].by !== 'person') { unkept++; if (unkept <= 5) F(`${list} ${row.name || row.term || row.title || row.id}.${field} is by ${row[field].by}, not person`); }
@@ -141,7 +144,7 @@ if (editionInFuture(EDITION)) F(editionInFuture(EDITION));
 let offStamp = 0;
 const stampOk = (ts, where) => { if (ts !== EDITION) { offStamp++; if (offStamp <= 5) F(`${where} carries ${ts}, not the edition stamp ${EDITION}`); } };
 for (const field of C.MARK_FIELDS.house) if (lib.isMark(house[field])) stampOk(house[field].ts, 'house.' + field);
-for (const list of C.HOUSE_LISTS) house[list].forEach((row, i) => {
+for (const list of C.HOUSE_LISTS) (house[list] || []).forEach((row, i) => {
 	stampOk(row.ts, `${list}[${i}].ts`);
 	for (const field of C.MARK_FIELDS[list]) if (lib.isMark(row[field])) stampOk(row[field].ts, `${list}[${i}].${field}`);
 	if (Array.isArray(row.kept)) row.kept.forEach((k, j) => stampOk(k.ts, `${list}[${i}].kept[${j}]`));

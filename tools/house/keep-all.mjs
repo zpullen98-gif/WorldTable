@@ -92,7 +92,7 @@ for (const list of C.HOUSE_LISTS) {
 /* Every record's ts and every kept note's ts carry the edition stamp too, and so do the build
    steps and lastWrite: one stamp across the whole edition. */
 let records = 0;
-for (const list of C.HOUSE_LISTS) for (const row of house[list]) {
+for (const list of C.HOUSE_LISTS) for (const row of house[list] || []) {
 	row.ts = KEEP_TS;
 	records++;
 	if (Array.isArray(row.kept)) {

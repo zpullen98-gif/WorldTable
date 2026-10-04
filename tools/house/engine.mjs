@@ -39,8 +39,10 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    holds every later edition to the same rule. The 04:00 edition of 4 October 2026 adds the floor's
    bottles from the Binwise list the owner pasted on 3 October, each a full study card, and the
    bottles offered with each dish in three price tiers and a half; it is stamped at the half hour
-   before its build, never ahead of the clock. */
-export const EDITION_BUILT_AT = '2026-10-04T04:00:00.000Z';
+   before its build, never ahead of the clock. The 06:30 edition of 4 October 2026 carries the
+   master review of My Menu (the chef's, the bartender's and the sommelier's overrides, recorded in
+   research/master-review-2026-10-04.md) and the first videos, each filed by a video:+ override. */
+export const EDITION_BUILT_AT = '2026-10-04T06:30:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a

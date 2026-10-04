@@ -29,9 +29,11 @@
 		studyRows,
 		studySections,
 		findItem,
+		studyVideos,
 		type StudyRow,
 		type Verdict
 	} from '$lib/study';
+	import VideoList from './VideoList.svelte';
 	import { roomHref, roomListHref, ROOM_NAMES } from '$lib/wing-links';
 
 	let {
@@ -139,6 +141,11 @@
 	const ledgerList = $derived(canLink ? roomListHref('ledger', base) : '');
 	const codexList = $derived(canLink ? roomListHref('codex', base) : '');
 	const roomOf = (kind: string) => (kind === 'wine' ? 'codex' : 'ledger') as 'codex' | 'ledger';
+	/* The Videos entry: every video the house names, by topic, the house's own first. A disclosure at
+	   the foot of the list, so the first screen stays the menu's. */
+	const videoGroups = $derived(studyVideos(current));
+	const videoCount = $derived(videoGroups.reduce((n, g) => n + g.rows.length, 0));
+	const openDish = (id: string) => onOpen(id, allRows);
 </script>
 
 <section class="study" aria-labelledby="study-h">
@@ -234,6 +241,19 @@
 		</section>
 	{/if}
 
+	{#if videoCount}
+		<details class="videos" id="study-videos">
+			<summary>{say('videosCount', { n: videoCount })}</summary>
+			<p class="vnote">{say('videoNote')}</p>
+			{#each videoGroups as g, gi (g.topic)}
+				<section class="vgroup" aria-labelledby="vg-{gi}">
+					<h3 class="eyebrow" id="vg-{gi}">{g.topic} · {g.rows.length}</h3>
+					<VideoList rows={g.rows} showFor onOpen={openDish} />
+				</section>
+			{/each}
+		</details>
+	{/if}
+
 	{#if drinks || wines}
 		<p class="also">
 			Also in the house:
@@ -324,6 +344,15 @@
 	.elsewhere ul { list-style: none; margin: 4px 0 0; padding: 0; }
 	.elsewhere li { min-height: 44px; display: flex; align-items: center; font-size: 1rem; border-bottom: 1px dotted var(--line); }
 	.elsewhere a { color: var(--ink); }
+	.videos { margin: 16px 0 4px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+	.videos summary {
+		min-height: 44px; display: flex; align-items: center; cursor: pointer;
+		font-family: var(--display); font-size: 1.2rem;
+	}
+	.videos summary:focus-visible { outline: 2px solid var(--turmeric-deep); outline-offset: 2px; }
+	.vnote { margin: 0 0 6px; font-size: 1rem; color: var(--ink-soft); }
+	.vgroup { margin: 8px 0 10px; }
+	.vgroup .eyebrow { margin: 0; color: var(--muted); font-weight: 500; border-bottom: 1px solid var(--line); padding-bottom: 2px; }
 	.also { margin: 16px 0 4px; font-size: 1rem; color: var(--ink-soft); }
 	.also a { color: var(--ink); }
 	.foot { margin: 12px 0 0; }

@@ -1,0 +1,868 @@
+{
+  "file": "videos-kitchen-2026-10-04.json",
+  "about": "Videos that teach the Brennan's server the house, its kitchen techniques and fine dining service. Verified by WebSearch only: oEmbed is blocked by this environment's proxy for curl and for WebFetch. A channel is recorded only where an oEmbed record or the title itself names it; otherwise it is null and channelEvidence says what was seen. Titles with an em dash are stored as the escape \\u2014 so the file carries no dash byte. Nothing here ships until tools/check-films.mjs or an oEmbed run confirms title and channel.",
+  "checkedOn": "2026-10-04",
+  "videos": [
+    {
+      "id": "brennans-bananas-foster",
+      "url": "https://www.youtube.com/watch?v=QiGTSlzPh2E",
+      "title": "Brennan’s Bananas Foster",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships (a search summary called it a recipe video with information from Brennan's itself)",
+      "minutes": null,
+      "topic": "brennans",
+      "why": "The house dessert as Brennan's shows it: the order of butter, sugar, cinnamon, banana, rum and the flame you will narrate.",
+      "attach": {
+        "dishes": [
+          "World Famous Bananas Foster"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Guéridon",
+          "Blangé"
+        ],
+        "house": true
+      },
+      "verifiedBy": "WebSearch \"Brennan's New Orleans Bananas Foster\" (youtube.com) on 2026-10-04 returned this URL titled \"Brennan’s Bananas Foster - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "bananas-foster-born",
+      "url": "https://www.youtube.com/watch?v=ZvZuX8rjo8g",
+      "title": "How Bananas Foster Was Born: Brennan’s Legendary Tableside Dessert",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships",
+      "minutes": null,
+      "topic": "brennans",
+      "why": "The 1951 story in the room it happened: the tale a guest expects you to tell while the pan heats.",
+      "attach": {
+        "dishes": [
+          "World Famous Bananas Foster"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Blangé",
+          "Guéridon"
+        ],
+        "house": true
+      },
+      "verifiedBy": "WebSearch \"Brennan's New Orleans Bananas Foster\" (youtube.com) on 2026-10-04 returned this URL titled \"How Bananas Foster Was Born: Brennan’s Legendary Tableside Dessert - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "real-bananas-foster-ralph-brennan",
+      "url": "https://www.youtube.com/watch?v=0Wf3nTRUbz4",
+      "title": "The Real Bananas Foster with Ralph Brennan",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships",
+      "minutes": null,
+      "topic": "brennans",
+      "why": "The owner making the dessert himself: hear which details the family insists on and borrow his words.",
+      "attach": {
+        "dishes": [
+          "World Famous Bananas Foster"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [],
+        "house": true
+      },
+      "verifiedBy": "WebSearch \"\"Brennan's Bananas Foster\" youtube Brennan's New Orleans channel video\" (youtube.com) on 2026-10-04 returned this URL titled \"The Real Bananas Foster with Ralph Brennan - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "bananas-foster-tableside-story",
+      "url": "https://www.youtube.com/watch?v=OMu35Ko97yQ",
+      "title": "Alfredo from Brennan's Restaurant Brings Bananas Foster to Life with a Fiery Tableside Story!",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships",
+      "minutes": null,
+      "topic": "brennans",
+      "why": "A Brennan's server performing the flambé at the table: pacing, patter and where the guests' eyes go.",
+      "attach": {
+        "dishes": [
+          "World Famous Bananas Foster"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Guéridon"
+        ],
+        "house": true
+      },
+      "verifiedBy": "WebSearch \"Brennan's New Orleans Bananas Foster\" (youtube.com) on 2026-10-04 returned this URL titled \"Alfredo from Brennan's Restaurant Brings Bananas Foster to Life with a Fiery Tableside Story! - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "bananas-foster-at-brennans",
+      "url": "https://www.youtube.com/watch?v=rsKgEUab4BM",
+      "title": "Bananas Foster at Brennan's in New Orleans",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships",
+      "minutes": null,
+      "topic": "brennans",
+      "why": "A guest's view of the tableside Foster, so you know what the moment looks like from the chair.",
+      "attach": {
+        "dishes": [
+          "World Famous Bananas Foster"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Guéridon"
+        ],
+        "house": true
+      },
+      "verifiedBy": "WebSearch \"Brennan's New Orleans Bananas Foster\" (youtube.com) on 2026-10-04 returned this URL titled \"Bananas Foster at Brennan's in New Orleans - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "brennans-turtle-soup-to-foster",
+      "url": "https://www.youtube.com/watch?v=kfAWGkY_rNk",
+      "title": "Brennan's in New Orleans: From Turtle Soup to Bananas Foster",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships",
+      "minutes": null,
+      "topic": "brennans",
+      "why": "The kitchen talking through the 2014 revival of the classics: why the old dishes stayed and how they were refreshed.",
+      "attach": {
+        "dishes": [
+          "Turtle Soup",
+          "World Famous Bananas Foster"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [],
+        "house": true
+      },
+      "verifiedBy": "WebSearch \"Brennan's New Orleans turtle soup recipe chef video\" (youtube.com) on 2026-10-04 returned this URL titled \"Brennan's in New Orleans: From Turtle Soup to Bananas Foster - YouTube\"; the summary said a chef discusses the revamp",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "brennans-turtle-soup-short",
+      "url": "https://www.youtube.com/watch?v=nW8qCk5q1EE",
+      "title": "TURTLE SOUP in New Orleans at Brennan's",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships",
+      "minutes": null,
+      "topic": "brennans",
+      "why": "A short look at the bowl and the sherry at the table, the finish you offer when it lands.",
+      "attach": {
+        "dishes": [
+          "Turtle Soup"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [],
+        "house": true
+      },
+      "verifiedBy": "WebSearch \"Brennan's New Orleans turtle soup recipe chef video\" (youtube.com) on 2026-10-04 returned this URL titled \"TURTLE SOUP in New Orleans at Brennan's - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "meat-show-eggs-hussarde",
+      "url": "https://www.youtube.com/watch?v=Cbn-Uqa4ssA",
+      "title": "How Brennan’s Invented A Perfect Egg Dish For Meat Lovers \u2014 The Meat Show",
+      "channel": null,
+      "channelEvidence": "not shown by search; The Meat Show is an Eater series (a search result confirmed Nick Solares hosted it for Eater), so the channel is probably Eater, unconfirmed",
+      "minutes": null,
+      "topic": "brennans",
+      "why": "Eggs Hussarde taken apart layer by layer: muffin, bacon, hollandaise, egg, marchand de vin, the order you describe it in.",
+      "attach": {
+        "dishes": [
+          "Eggs Hussarde",
+          "Eggs Owen"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Hussarde",
+          "Marchand de vin",
+          "Hollandaise"
+        ],
+        "house": true
+      },
+      "verifiedBy": "WebSearch \"Eggs Hussarde Eggs Sardou Brennan's breakfast video\" (youtube.com) on 2026-10-04 returned this URL titled \"How Brennan’s Invented A Perfect Egg Dish For Meat Lovers \u2014 The Meat Show - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "brennans-to-commanders-history",
+      "url": "https://www.youtube.com/watch?v=m3pUTGseo6w",
+      "title": "From Brennan's to Commander's Palace: A Brief History",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships",
+      "minutes": null,
+      "topic": "brennans",
+      "why": "Ella Brennan and family recalling how Brennan's began and how the family split: context for a guest who asks.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [],
+        "terms": [],
+        "house": true
+      },
+      "verifiedBy": "WebSearch \"Brennan's Royal Street history pink building courtyard 1946 Owen Brennan documentary\" (youtube.com) on 2026-10-04 returned this URL titled \"From Brennan's to Commander's Palace: A Brief History - YouTube\"; the summary said Ella Brennan and her family reminisce. A second upload, HAIG3658KiM, carries the same title and is not used",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "ella-brennan-commanding-the-table-trailer",
+      "url": "https://www.youtube.com/watch?v=bUCEOVYV3Zk",
+      "title": "Ella Brennan: Commanding the Table Exclusive Trailer",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships",
+      "minutes": null,
+      "topic": "brennans",
+      "why": "The documentary trailer on the woman who shaped Brennan's hospitality: the standard the dining room still aims at.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [],
+        "terms": [],
+        "house": true
+      },
+      "verifiedBy": "WebSearch \"\"Ella Brennan: Commanding the Table\" documentary trailer\" (youtube.com) on 2026-10-04 returned this URL titled \"Ella Brennan: Commanding the Table Exclusive Trailer - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "brennans-reopening-staff-address",
+      "url": "https://www.youtube.com/watch?v=3nnw8h9iafk",
+      "title": "Brennan's reopening: owners Ralph Brennan and Terry White address staff",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships",
+      "minutes": null,
+      "topic": "brennans",
+      "why": "The owners speaking to the floor before the 2014 reopening: what they ask of the people who serve.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [],
+        "terms": [],
+        "house": true
+      },
+      "verifiedBy": "WebSearch \"Brennan's New Orleans 2014 reopening restoration Ralph Brennan Terry White Slade Rushing\" (youtube.com) on 2026-10-04 returned this URL titled \"Brennan's reopening: owners Ralph Brennan and Terry White address staff - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "ella-brennan-welcome-conference",
+      "url": "https://www.youtube.com/watch?v=uzOYunR70Kk",
+      "title": "Ella Brennan & Commanders Palace - The Welcome Conference",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships",
+      "minutes": null,
+      "topic": "service",
+      "why": "The family's hospitality told at a conference for service professionals: the welcome that Brennan's training grew from.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [],
+        "terms": [],
+        "house": true
+      },
+      "verifiedBy": "WebSearch \"\"Ella Brennan: Commanding the Table\" documentary trailer\" (youtube.com) on 2026-10-04 returned this URL titled \"Ella Brennan & Commanders Palace - The Welcome Conference - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "royal-street-walk",
+      "url": "https://www.youtube.com/watch?v=9PUsEoU33Fk",
+      "title": "Walk on Royal Street in the French Quarter New Orleans (Free Tours by Foot)",
+      "channel": null,
+      "channelEvidence": "not shown by search; the title names Free Tours by Foot",
+      "minutes": null,
+      "topic": "french-quarter",
+      "why": "Royal Street on foot: the galleries and antique shops guests pass on the way to 417, ready for small talk.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Historic New Orleans Collection French Quarter history Royal Street video\" (youtube.com) on 2026-10-04 returned this URL titled \"Walk on Royal Street in the French Quarter New Orleans (Free Tours by Foot) - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "hollandaise-le-cordon-bleu",
+      "url": "https://www.youtube.com/watch?v=PS2avsY5G0M",
+      "title": "How to Make Hollandaise",
+      "channel": "LeCordon Bleu",
+      "channelEvidence": "oEmbed record in tools/derive/technique-films.mjs in WorldTable (title and channel recorded from YouTube oEmbed, held by tools/check-films.mjs)",
+      "minutes": null,
+      "topic": "sauces",
+      "why": "The school method: warm yolks, butter in a stream, the moment it turns opaque. The mother of Choron and béarnaise.",
+      "attach": {
+        "dishes": [
+          "Eggs Hussarde",
+          "Eggs Owen"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Hollandaise"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"How to Make Hollandaise\" Le Cordon Bleu\" (youtube.com) on 2026-10-04 returned this URL titled \"How to Make Hollandaise - YouTube\"; title and channel from tools/derive/technique-films.mjs in WorldTable (title and channel recorded from YouTube oEmbed, held by tools/check-films.mjs)",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "bearnaise-julia-child",
+      "url": "https://www.youtube.com/watch?v=g-GrNAGL6-0",
+      "title": "Bearnaise Sauce with Julia Child ⎢Martha Stewart",
+      "channel": "Martha Stewart",
+      "channelEvidence": "not shown as a channel; the title names Martha Stewart, and the summary dated it to a 1999 Martha Stewart Living clip with Jacques Pépin",
+      "minutes": null,
+      "topic": "sauces",
+      "why": "Tarragon, shallot and vinegar reduction whisked into a hollandaise: béarnaise, and with meat glaze added, the Foyot on the Chateaubriand.",
+      "attach": {
+        "dishes": [
+          "Creole-Spiced Hanger Steak",
+          "Roasted Chateaubriand"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Béarnaise",
+          "Foyot"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"bearnaise sauce how to make Jacques Pepin OR \"Bon Appétit\" OR \"Chef Jean-Pierre\" OR \"Food Wishes\"\" (youtube.com) on 2026-10-04 returned this URL titled \"Bearnaise Sauce with Julia Child ⎢Martha Stewart - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "choron-sauce",
+      "url": "https://www.youtube.com/watch?v=EU6wrzkF904",
+      "title": "How to make a choron sauce",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships (the summary named the chef as Hayden Groves)",
+      "minutes": null,
+      "topic": "sauces",
+      "why": "Choron built in front of you: béarnaise loosened with tomato, the pink sauce that crowns Eggs Sardou.",
+      "attach": {
+        "dishes": [
+          "Eggs Sardou"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Choron"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"sauce choron tomato bearnaise Le Cordon Bleu OR chef how to make\" (youtube.com) on 2026-10-04 returned this URL titled \"How to make a choron sauce - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "beurre-blanc-chef-jean-pierre",
+      "url": "https://www.youtube.com/watch?v=JFF9SdLUI4g",
+      "title": "How to Make a Beurre Blanc (Butter Sauce) | Chef Jean-Pierre",
+      "channel": "Chef Jean-Pierre",
+      "channelEvidence": "oEmbed record in tools/derive/technique-films.mjs in WorldTable (title and channel recorded from YouTube oEmbed, held by tools/check-films.mjs)",
+      "minutes": null,
+      "topic": "sauces",
+      "why": "Wine and shallot reduced, cold butter mounted in: the base of the preserved lemon beurre blanc under the redfish.",
+      "attach": {
+        "dishes": [
+          "Redfish Véronique"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Beurre blanc",
+          "Véronique"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"How to Make a Beurre Blanc (Butter Sauce)\" Chef Jean-Pierre\" (youtube.com) on 2026-10-04 returned this id titled \"How to Make a Beurre Blanc (Butter Sauce)\", the summary saying it is on Chef Jean-Pierre's channel; full title and channel from tools/derive/technique-films.mjs in WorldTable (title and channel recorded from YouTube oEmbed, held by tools/check-films.mjs)",
+      "searchTitle": "How to Make a Beurre Blanc (Butter Sauce)",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "emulsion-mayonnaise-pepin",
+      "url": "https://www.youtube.com/watch?v=c82pUCXjY2w",
+      "title": "Make Homemade Mayonnaise with Master Chef Jacques Pépin",
+      "channel": "Jacques Pépin Foundation",
+      "channelEvidence": "oEmbed record in tools/derive/technique-films.mjs in WorldTable (title and channel recorded from YouTube oEmbed, held by tools/check-films.mjs); the search summary also named the Jacques Pépin Foundation",
+      "minutes": null,
+      "topic": "sauces",
+      "why": "How oil and yolk hold together: the same emulsion that makes hollandaise and rémoulade, and why one breaks.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Rémoulade",
+          "Hollandaise"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"Make Homemade Mayonnaise with Master Chef Jacques Pépin\"\" (youtube.com) on 2026-10-04 returned this URL titled \"Make Homemade Mayonnaise with Master Chef Jacques Pépin - YouTube\"; channel from tools/derive/technique-films.mjs in WorldTable (title and channel recorded from YouTube oEmbed, held by tools/check-films.mjs)",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "pan-sauce-atk",
+      "url": "https://www.youtube.com/watch?v=nZxW4n5RyfI",
+      "title": "Science: How to Make a Better Pan Sauce (Step #1: Break All the Rules)",
+      "channel": "America's Test Kitchen",
+      "channelEvidence": "oEmbed record in tools/derive/technique-films.mjs in WorldTable (title and channel recorded from YouTube oEmbed, held by tools/check-films.mjs); the search summary also named America's Test Kitchen",
+      "minutes": null,
+      "topic": "sauces",
+      "why": "Why fond, wine and reduction make a sauce: the logic behind marchand de vin and the mustard cream on the poussin.",
+      "attach": {
+        "dishes": [
+          "Poussin à la Moutarde",
+          "Eggs Hussarde"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Marchand de vin"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"How to Make a Better Pan Sauce\" America's Test Kitchen Break All the Rules\" (youtube.com) on 2026-10-04 returned this URL titled \"Science: How to Make a Better Pan Sauce (Step #1: Break All the Rules) - YouTube\"; channel from tools/derive/technique-films.mjs in WorldTable (title and channel recorded from YouTube oEmbed, held by tools/check-films.mjs)",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "roux-food-network",
+      "url": "https://www.youtube.com/watch?v=eTf0n1HoC1w",
+      "title": "How to Make a Roux Like a Pro | Food Network",
+      "channel": "Food Network",
+      "channelEvidence": "oEmbed record in tools/derive/technique-films.mjs in WorldTable (title and channel recorded from YouTube oEmbed, held by tools/check-films.mjs); the search summary said it is on Food Network's channel",
+      "minutes": null,
+      "topic": "soups-and-roux",
+      "why": "The colour ladder from white to brown: a gumbo roux goes far darker, trading thickening power for toasted flavour.",
+      "attach": {
+        "dishes": [
+          "Seafood Gumbo",
+          "Turtle Soup"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Gumbo"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"How to Make a Roux Like a Pro\" Food Network\" (youtube.com) on 2026-10-04 returned this URL titled \"How to Make a Roux Like a Pro\"; full title from tools/derive/technique-films.mjs in WorldTable (title and channel recorded from YouTube oEmbed, held by tools/check-films.mjs)",
+      "searchTitle": "How to Make a Roux Like a Pro",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "commanders-seafood-gumbo",
+      "url": "https://www.youtube.com/watch?v=urH4TETNj84",
+      "title": "Seafood Gumbo Commanders Palace",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships (the summary named the chef as Meg Bickford of Commander's Palace)",
+      "minutes": null,
+      "topic": "soups-and-roux",
+      "why": "A sister kitchen's seafood gumbo from dark roux to the seafood going in last, so you can describe ours with confidence.",
+      "attach": {
+        "dishes": [
+          "Seafood Gumbo"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Gumbo",
+          "Andouille",
+          "Popcorn rice"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"seafood gumbo dark roux New Orleans chef video Food Wishes OR \"Commander's Palace\" OR \"Dooky Chase\"\" (youtube.com) on 2026-10-04 returned this URL titled \"Seafood Gumbo Commanders Palace - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "dooky-chase-gumbo",
+      "url": "https://www.youtube.com/watch?v=pl-34KHskwQ",
+      "title": "Gumbo Episode - Dooky Chase Restaurant",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships",
+      "minutes": null,
+      "topic": "soups-and-roux",
+      "why": "Creole gumbo from the Tremé institution: the city tradition our gumbo belongs to, worth knowing when guests compare.",
+      "attach": {
+        "dishes": [
+          "Seafood Gumbo"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Gumbo",
+          "Creole and Cajun"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"seafood gumbo dark roux New Orleans chef video Food Wishes OR \"Commander's Palace\" OR \"Dooky Chase\"\" (youtube.com) on 2026-10-04 returned this URL titled \"Gumbo Episode - Dooky Chase Restaurant - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "commanders-turtle-soup",
+      "url": "https://www.youtube.com/watch?v=7dA9QvR3t6k",
+      "title": "Commander's Palace shows us how to make turtle soup",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships (the summary called it a WDSU video)",
+      "minutes": null,
+      "topic": "soups-and-roux",
+      "why": "How a New Orleans turtle soup is built: roux, meat, tomato and the sherry finish, the steps behind our bowl.",
+      "attach": {
+        "dishes": [
+          "Turtle Soup"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Commander's Palace turtle soup recipe video chef demonstration\" (youtube.com) on 2026-10-04 returned this URL titled \"Commander's Palace shows us how to make turtle soup - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "en-papillote-bon-appetit",
+      "url": "https://www.youtube.com/watch?v=NDqNHYCLdyU",
+      "title": "How to Cook En Papillote - BA's Kitchen Techniques",
+      "channel": "Bon Appétit",
+      "channelEvidence": "not shown as a channel; BA's Kitchen Techniques is a Bon Appétit series, so the channel is inferred from the title",
+      "minutes": null,
+      "topic": "fish-and-shellfish",
+      "why": "Fish steamed in its own sealed parcel: why ours arrives wrapped and what the guest smells when it opens.",
+      "attach": {
+        "dishes": [
+          "Gulf Fish en Papillote"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "En papillote"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"How to Cook en Papillote (in a parchment package)\" youtube channel\" (youtube.com) on 2026-10-04 returned this URL titled \"How to Cook En Papillote - BA's Kitchen Techniques - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "shuck-oyster-hog-island",
+      "url": "https://www.youtube.com/watch?v=LVBfkXiuEJM",
+      "title": "HOW TO SHUCK AN OYSTER // Hog Island Oyster Co.",
+      "channel": "Hog Island Oyster Co.",
+      "channelEvidence": "oEmbed record in tools/derive/technique-films.mjs in WorldTable (title and channel recorded from YouTube oEmbed, held by tools/check-films.mjs)",
+      "minutes": null,
+      "topic": "fish-and-shellfish",
+      "why": "Hinge, twist, cut the muscle, keep the liquor: what a cleanly opened raw oyster looks like when it reaches the table.",
+      "attach": {
+        "dishes": [
+          "Grand Isle Jewel Oysters"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Mignonette"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"HOW TO SHUCK AN OYSTER\" Hog Island Oyster Co.\" (youtube.com) on 2026-10-04 returned this URL titled \"HOW TO SHUCK AN OYSTER // Hog Island Oyster Co. - YouTube\". The pinned oEmbed title in tools/derive/technique-films.mjs in WorldTable (title and channel recorded from YouTube oEmbed, held by tools/check-films.mjs) reads \"HOW TO SHUCK AN OYSTER | Hog Island Oyster Co.\": the title may have changed, so check-films decides",
+      "searchTitle": "HOW TO SHUCK AN OYSTER // Hog Island Oyster Co.",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "new-orleans-oysters-how-we-eat",
+      "url": "https://www.youtube.com/watch?v=AUJNCudwvUc",
+      "title": "The Best Oysters Are Found in New Orleans \u2014 How We Eat",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships",
+      "minutes": null,
+      "topic": "fish-and-shellfish",
+      "why": "The history of Gulf oysters and the city's oyster bars: the story behind both oyster dishes on our menu.",
+      "attach": {
+        "dishes": [
+          "Louisiana Oysters",
+          "Grand Isle Jewel Oysters"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Grand Isle Jewel"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Louisiana Gulf oysters P&J Oyster Company history video\" (youtube.com) on 2026-10-04 returned this URL titled \"The Best Oysters Are Found in New Orleans \u2014 How We Eat - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "shrimp-and-grits-louisiana",
+      "url": "https://www.youtube.com/watch?v=sqWuB59XtW8",
+      "title": "Shrimp and Grits, Louisiana Style",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships (the summary named the cook as Tory McPhail of Commander's Palace)",
+      "minutes": null,
+      "topic": "fish-and-shellfish",
+      "why": "A Louisiana take on shrimp and grits with tasso: the flavours our version builds on before the grit cake and okra.",
+      "attach": {
+        "dishes": [
+          "New Orleans Shrimp & Grits",
+          "Cheddar Grits"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Tasso"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"New Orleans barbecue shrimp OR shrimp and grits chef demonstration Brennan's OR \"Commander's Palace\" OR \"America's Test Kitchen\"\" (youtube.com) on 2026-10-04 returned this URL titled \"Shrimp and Grits, Louisiana Style - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "new-orleans-bbq-shrimp-chef-john",
+      "url": "https://www.youtube.com/watch?v=EtjMtuL3AD4",
+      "title": "How to Make Chef John's New Orleans Style Barbecue Shrimp",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships",
+      "minutes": null,
+      "topic": "fish-and-shellfish",
+      "why": "New Orleans barbecue is butter, pepper and Worcestershire, not smoke: what the BBQ sauce on our oysters means.",
+      "attach": {
+        "dishes": [
+          "Louisiana Oysters"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"New Orleans barbecue shrimp OR shrimp and grits chef demonstration Brennan's OR \"Commander's Palace\" OR \"America's Test Kitchen\"\" (youtube.com) on 2026-10-04 returned this URL titled \"How to Make Chef John's New Orleans Style Barbecue Shrimp - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "duck-leg-confit-chef-vivien",
+      "url": "https://www.youtube.com/watch?v=QKcd6Kzhxfg",
+      "title": "How to make duck leg confit I Classic French recipe by Chef Vivien",
+      "channel": null,
+      "channelEvidence": "not shown by search; the title names Chef Vivien and a search found a channel of that name, but nothing tied this id to it",
+      "minutes": null,
+      "topic": "meat-and-poultry",
+      "why": "Cure, then slow poach in duck fat: why the leg on the waffle is meltingly tender with crisp skin.",
+      "attach": {
+        "dishes": [
+          "Duck Confit Waffle"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Confit"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"How To Make Duck Leg Confit at Home\" French Cooking Academy\" (youtube.com) on 2026-10-04 returned this URL titled \"How to make duck leg confit I Classic French recipe by Chef Vivien - YouTube\". The pinned confit film UhwKM3DzT_Q did not appear and is not used",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "poached-eggs-kenji",
+      "url": "https://www.youtube.com/watch?v=S60GxA9JpLk",
+      "title": "Truly Foolproof Poached Eggs",
+      "channel": "J. Kenji López-Alt",
+      "channelEvidence": "oEmbed record in tools/derive/technique-films.mjs in WorldTable (title and channel recorded from YouTube oEmbed, held by tools/check-films.mjs)",
+      "minutes": null,
+      "topic": "eggs",
+      "why": "Straining the loose white before poaching: why the eggs on Hussarde and Sardou hold a neat shape.",
+      "attach": {
+        "dishes": [
+          "Eggs Hussarde",
+          "Eggs Sardou",
+          "Egg Any Style"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Sardou"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"Truly Foolproof Poached Eggs\" Kenji\" (youtube.com) on 2026-10-04 returned this URL titled \"Truly Foolproof Poached Eggs - YouTube\"; channel from tools/derive/technique-films.mjs in WorldTable (title and channel recorded from YouTube oEmbed, held by tools/check-films.mjs)",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "flambe-safely",
+      "url": "https://www.youtube.com/watch?v=DyKhvsAPO9I",
+      "title": "How To Flambe Safely | 1 Minute Tips | French Guy Cooking",
+      "channel": "Jamie Oliver",
+      "channelEvidence": "oEmbed record in tools/derive/technique-films.mjs in WorldTable (title and channel recorded from YouTube oEmbed, held by tools/check-films.mjs)",
+      "minutes": null,
+      "topic": "tableside-and-flambe",
+      "why": "Pan off the flame, warm the spirit, light it away from you: the safety habits behind every tableside flambé.",
+      "attach": {
+        "dishes": [
+          "World Famous Bananas Foster",
+          "Cherries Jubilee"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Guéridon"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"How To Flambe Safely\" French Guy Cooking 1 Minute Tips\" (youtube.com) on 2026-10-04 returned this URL titled \"How To Flambe Safely\", the summary calling it French Guy Cooking's 1 Minute Tips; full title and channel from tools/derive/technique-films.mjs in WorldTable (title and channel recorded from YouTube oEmbed, held by tools/check-films.mjs)",
+      "searchTitle": "How To Flambe Safely",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "cherries-jubilee-gueridon",
+      "url": "https://www.youtube.com/watch?v=LAi09i-errU",
+      "title": "Cherries Jubilee by Martin Caldwell (Restaurant Professional, University Tutor/Training Consultant).",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships",
+      "minutes": null,
+      "topic": "tableside-and-flambe",
+      "why": "A restaurant trainer working Cherries Jubilee on a guéridon: the setup, the moves and the talk for our second flambé.",
+      "attach": {
+        "dishes": [
+          "Cherries Jubilee"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Guéridon",
+          "Escoffier"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"cherries jubilee tableside flambe restaurant gueridon\" (youtube.com) on 2026-10-04 returned this URL titled \"Cherries Jubilee by Martin Caldwell (Restaurant Professional, University Tutor/Training Consultant). - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "cherries-jubilee-saffitz",
+      "url": "https://www.youtube.com/watch?v=Mboq8IRzkkg",
+      "title": "Cherries Jubilee Recipe by Claire Saffitz",
+      "channel": null,
+      "channelEvidence": "not shown by search; the summary placed it in her Dessert Person series",
+      "minutes": null,
+      "topic": "tableside-and-flambe",
+      "why": "The dessert explained by a pastry chef: cherries, syrup and spirit, so you can describe ours with its Luxardo sauce.",
+      "attach": {
+        "dishes": [
+          "Cherries Jubilee"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Luxardo"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"cherries jubilee tableside flambe restaurant gueridon\" (youtube.com) on 2026-10-04 returned this URL titled \"Cherries Jubilee Recipe by Claire Saffitz\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "tarte-tatin-pepin",
+      "url": "https://www.youtube.com/watch?v=BwP-xuzqDK4",
+      "title": "A Sweet Autumn Ending by Jacques Pépin",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships (the summary placed it in Essential Pépin, with a Tarte Tatin segment)",
+      "minutes": null,
+      "topic": "desserts",
+      "why": "Pépin's tarte Tatin: fruit caramelised under pastry and turned out, the method our pineapple version borrows.",
+      "attach": {
+        "dishes": [
+          "Pineapple Tarte Tatin"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Tarte Tatin"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Jacques Pepin tarte tatin apple video\" (youtube.com) on 2026-10-04 returned this URL titled \"A Sweet Autumn Ending by Jacques Pépin\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "creole-cajun-gonola",
+      "url": "https://www.youtube.com/watch?v=7kEAzUUxY7M",
+      "title": "GoNOLA Eats: Cajun & Creole Cooking",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships (the title names GoNOLA)",
+      "minutes": null,
+      "topic": "creole-and-cajun",
+      "why": "City Creole against country Cajun in plain words: the question tourists ask most, and Brennan's is Creole.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Creole and Cajun"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"difference between Creole and Cajun food explained video\" (youtube.com) on 2026-10-04 returned this URL titled \"GoNOLA Eats: Cajun & Creole Cooking - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "creole-cajun-folse",
+      "url": "https://www.youtube.com/watch?v=t_8M7Kjum70",
+      "title": "An Introduction to Cajun & Creole Cuisine",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships (the summary called it a 1990 Chef John Folse classic)",
+      "minutes": null,
+      "topic": "creole-and-cajun",
+      "why": "A Louisiana master chef on the two cuisines with a gumbo on the stove: depth for when a guest wants more.",
+      "attach": {
+        "dishes": [
+          "Seafood Gumbo"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Creole and Cajun",
+          "Gumbo"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"difference between Creole and Cajun food explained video\" (youtube.com) on 2026-10-04 returned this URL titled \"An Introduction to Cajun & Creole Cuisine\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "inside-commanders-kitchen",
+      "url": "https://www.youtube.com/watch?v=Gyw3Ri7nxpk",
+      "title": "Inside Commander's Palace kitchen! - Big Kitchens - Food Documentary",
+      "channel": null,
+      "channelEvidence": "not shown by any search result; oEmbed is blocked here, so check-films must fill it before this ships",
+      "minutes": null,
+      "topic": "creole-and-cajun",
+      "why": "A grand Creole kitchen at full volume during Mardi Gras: how the line, the pass and the floor work together.",
+      "attach": {
+        "dishes": [
+          "Turtle Soup"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Commander's Palace turtle soup recipe video chef demonstration\" (youtube.com) on 2026-10-04 returned this URL titled \"Inside Commander's Palace kitchen! - Big Kitchens - Food Documentary - YouTube\"",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "guidara-secret-ingredients-hospitality",
+      "url": "https://www.youtube.com/watch?v=bwcyXcOpWVs",
+      "title": "The Secret Ingredients of Great Hospitality",
+      "channel": null,
+      "channelEvidence": "not shown by search; the summary called it a TED talk by Will Guidara",
+      "minutes": null,
+      "topic": "service",
+      "why": "Reading a table and giving more than expected: the Eleven Madison Park hot dog story and three steps you can use.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"The secret ingredients of great hospitality\" Will Guidara TED\" (youtube.com) on 2026-10-04 returned this URL titled \"The Secret Ingredients of Great Hospitality\"",
+      "checkedOn": "2026-10-04"
+    }
+  ]
+}

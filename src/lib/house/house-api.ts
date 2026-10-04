@@ -74,7 +74,9 @@ import {
 	MARK_FIELDS,
 	PRINCIPLES,
 	WINE_PARTS,
-	isMark
+	houseRows,
+	isMark,
+	optionalList
 } from './house-schema';
 import type { Began, House, HouseList, HouseStub, ItemKind, Mark } from './house-schema';
 import { FORBIDDEN_KEY, markKind, normaliseHouse, normaliseMark } from './house-normalise';
@@ -372,7 +374,7 @@ export function createHouseApi(storage: HouseStorage, opts: HouseApiOpts = {}): 
 		}
 		return readying;
 	};
-	const itemsOf = (h: House, list: HouseList): Listed[] => h[list] as unknown as Listed[];
+	const itemsOf = (h: House, list: HouseList): Listed[] => houseRows(h, list) as Listed[];
 
 	return {
 		ready,
@@ -636,7 +638,11 @@ export function createHouseApi(storage: HouseStorage, opts: HouseApiOpts = {}): 
 				const stamp = item ? Math.max(now(), lastTouch(item, MARK_FIELDS[list]) + 1) : now();
 				const removed = FORBIDDEN_KEY.test(id) ? base.removed : { ...base.removed, [id]: stamp };
 				if (!item && removed === base.removed) return base;
-				return { ...base, [list]: items.filter((i) => i.id !== id), removed } as House;
+				const rest = items.filter((i) => i.id !== id);
+				const next = { ...base, [list]: rest, removed } as Record<string, unknown>;
+				/* An optional list (the videos) emptied goes, the normaliser's rule. */
+				if (!rest.length && optionalList(list)) delete next[list];
+				return next as unknown as House;
 			}, 'remove-item');
 		},
 

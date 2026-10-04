@@ -428,6 +428,22 @@
 			"ts": 1790589600000
 		}
 	],
+	"videos": [
+		{
+			"id": "v-saltbak1",
+			"url": "https://www.youtube.com/watch?v=aaaaaaaaaaa",
+			"title": "Salt Baking a Whole Chicken",
+			"channel": "The Lantern Kitchen",
+			"mins": 6,
+			"topic": "The kitchen",
+			"why": "See the salt crust go on and come off, so you can tell a guest what the cracking at the table means.",
+			"itemIds": ["d-chicken1"],
+			"termIds": ["x-saltbak1"],
+			"house": false,
+			"checkedOn": "2026-09-28",
+			"ts": 1790589600000
+		}
+	],
 	"removed": {},
 	"build": {
 		"card": 1790589600000,

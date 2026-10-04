@@ -42,6 +42,28 @@ import { ROOT, unitsIn, portModules, assertClean, writePorts, runMain } from './
 /* The engine's pieces check-port-house.mjs reads through this file. */
 export { DASH, assertClean } from './port-core.mjs';
 
+/**
+ * The one place the shipped engine may spell the secure scheme: the video
+ * allowlist's constant in house-schema.ts (VIDEO_SCHEME), which a link is
+ * compared against and never fetched. Everything else stays the rule it
+ * was: the file names no address, so outside that one declaration the
+ * letters of the scheme appear nowhere, and the declaration appears exactly
+ * once. check-port-house.mjs asks the same question through this function.
+ */
+export const SCHEME_ALLOWANCE = "VIDEO_SCHEME = 'https'";
+
+/**
+ * Why the text names an address, or '' when it does not.
+ * @param {string} text
+ * @returns {string}
+ */
+export function namesAddress(text) {
+	const pieces = text.split(SCHEME_ALLOWANCE);
+	if (pieces.length - 1 > 1) return 'oot-house.js declares the video scheme ' + (pieces.length - 1) + ' times; it may declare it once';
+	if (pieces.join('').includes('http')) return 'oot-house.js names an address: it carries "http" outside the video scheme\'s one declaration, and a shipped file may name no host';
+	return '';
+}
+
 const HOUSE = path.join(ROOT, 'src', 'lib', 'house');
 
 /**
@@ -140,6 +162,13 @@ export const LIB = {
 	emptyHouse: 'emptyHouse',
 	isMark: 'isMark',
 	isNote: 'isNote',
+	/* the videos: the link rule, the rows an optional list holds, what a card and the study view list */
+	videoUrlOk: 'videoUrlOk',
+	videosFor: 'videosFor',
+	videoGroups: 'videoGroups',
+	videoMeta: 'videoMeta',
+	houseRows: 'houseRows',
+	optionalList: 'optionalList',
 	/* the bottle list and the tiers */
 	wineListOf: 'wineListOf',
 	printedDollars: 'printedDollars',
@@ -173,6 +202,7 @@ export const CONSTANTS = [
 	'BUILD_STEPS', 'ITEM_KINDS', 'HOUSE_LISTS', 'DISH_MARKS', 'WINE_MARKS', 'COCKTAIL_MARKS', 'MARK_FIELDS',
 	'ID_PREFIXES', 'KEYS', 'KEPT_CAP', 'MARK_KINDS', 'FORBIDDEN_KEY', 'DASH', 'DASH_SOURCE',
 	'OPTIONAL_KEYS', 'WINE_LISTS', 'BOTTLE_TIERS', 'BOTTLE_BANDS', 'HALF_SIZE', 'BOTTLE_WORDS',
+	'OPTIONAL_LISTS', 'VIDEO_SCHEME', 'VIDEO_HOSTS', 'VIDEO_WHY_WORDS', 'VIDEO_URL_MAX', 'VIDEO_TOPIC_NONE',
 	'FATAL_CODES', 'NEVER_FATAL', 'ALLERGEN_TALK', 'ALLERGEN_WORD', 'QUOTE_WORDS',
 	'PACK_FORMAT', 'PACK_VERSION', 'MY_HOUSE', 'MAP_HOUSE_PREFIX', 'NO_HOUSE_SAID', 'HOUSE_PARTS', 'CARD_KEYS', 'ITEM_FIELDS', 'PUT_LISTS'
 ];
@@ -217,8 +247,10 @@ export function header(date) {
 		'',
 		'   THE RULES TRAVEL WITH THE CODE. No allergen field exists on any shape and',
 		'   the normaliser drops any key the client would refuse, at every depth. A',
-		'   price is a string as printed, never a number. A mark is { value, by, ts,',
-		"   model? } and kept means by is 'person': a person's mark beats hers whatever",
+		'   price is a string as printed, never a number. A video is a link out to',
+		'   YouTube or Vimeo on the secure scheme (VIDEO_HOSTS), checked and never',
+		'   fetched: the engine plays nothing and names no other address. A mark',
+		"   is { value, by, ts, model? } and kept means by is 'person': a person's mark beats hers whatever",
 		'   the stamps, and an unkept mark reaches no drill. No prose carries a dash.',
 		'   WorldTable/tools/check-port-house.mjs runs the fixture through this file',
 		'   and through the TypeScript and exits 1 on any difference. A fix belongs',
@@ -321,7 +353,8 @@ export function generate(now = new Date()) {
 		door: door()
 	});
 	assertClean(text, 'oot-house.js');
-	if (text.includes('http')) throw new Error('oot-house.js: the shipped file would name an address (it carries "http"), and it may name no host');
+	const address = namesAddress(text);
+	if (address) throw new Error(address);
 	return text;
 }
 

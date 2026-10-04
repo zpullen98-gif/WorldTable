@@ -21,7 +21,8 @@
       entry builds any more; both put the id in house.removed, and every id the shipped pack holds
       must be in the new house or carry a tombstone, or the build fails;
       a dispute an add files may carry a resolution (the side a newer printed menu bears out), and a
-      mix-up is targeted by its two sides, mixup:<a> vs <b>;
+      mix-up is targeted by its two sides, mixup:<a> vs <b>. An add on video:+ files one video in the
+      shape of a research/videos-*.json record, copied in whole (see VIDEOS below);
    5. runs every string through the spelling map (the research's British forms become the house's
       American ones, logged to house/brennans/spelling-log.json) and then the dash pass: an en dash
       a line wrap left before a space is rejoined as a hyphen (New Orleans-style), an en dash
@@ -45,6 +46,25 @@
    The one stamp is the edition's (engine.mjs EDITION_TS, Date.parse of the pack's builtAt) on
    every mark and every record, so keep-all and a device can tell the edition's own words from a
    person's edit.
+
+   VIDEOS. A video reaches the pack only through an overrides.json entry { target: 'video:+',
+   op: 'add', value, reason, source }, whose value is one record of a research/videos-*.json file
+   as it stands: { id, url, title, channel, minutes, topic, why, attach: { dishes, cocktails,
+   wines, terms, house }, checkedOn }, any other key (verifiedBy, channelEvidence, searchTitle)
+   carried for the reader and left out of the house. Overrides and not a reader of the research
+   files, on purpose: the research lists candidates, several still unverified, and an entry here is
+   the one act that says this video ships, with its reason and its source beside every other
+   departure from the guide; the integrator copies a verified record in whole, for instance
+     jq -c '.videos[] | select(.id == "brennans-bananas-foster")' research/videos-kitchen-*.json
+   and wraps it. The build refuses a video whose link is not a secure YouTube or Vimeo link, whose
+   channel is still null (check-house-videos or an oEmbed run names it first), whose title or why
+   is blank or whose why runs past 25 words, whose checkedOn is not a date, an id used twice, and
+   any attach name that is not a dish, a drink, a wine or a term of this house, each by its own
+   list. The research id is the ledger key (videos:<id>), so the pack id is a v- mint, held stable
+   like every other. The title and the channel are quoted, not written: they skip the spelling
+   map and take only the dash pass (logged), and the minutes become mins (the client sweep refuses
+   a key holding the letters of nut), 0 when null. A slug-shaped topic (brennans, soups-and-roux)
+   becomes its heading by VIDEO_TOPICS, else it is written out; a written topic stands.
 
    Usage: node house/build-brennans.mjs [--mint] [--stamp <ms>]
    Runs from any directory. Exits 1 with the file and the rule on failure. */
@@ -412,7 +432,7 @@ for (const k of parsed.mustKnows) model.mustKnows.push({ title: k.title, body: k
 for (const list of ['dishes', 'wines', 'cocktails']) for (const r of model[list]) r.idName = r.name;
 
 /* ---------- the overrides ---------- */
-const LISTS = { dish: 'dishes', wine: 'wines', cocktail: 'cocktails', tasting: 'tastings', term: 'terms', scenario: 'scenarios', mixup: 'mixUps', mustknow: 'mustKnows', ask: 'asks', dispute: 'disputes' };
+const LISTS = { dish: 'dishes', wine: 'wines', cocktail: 'cocktails', tasting: 'tastings', term: 'terms', scenario: 'scenarios', mixup: 'mixUps', mustknow: 'mustKnows', ask: 'asks', dispute: 'disputes', video: 'videos' };
 const KEY = { dishes: 'name', wines: 'name', cocktails: 'name', tastings: 'name', terms: 'term', scenarios: 'title', mustKnows: 'title' };
 function findTarget(target, n) {
 	if (target === 'house') return { rec: model.card, list: 'house' };
@@ -422,6 +442,7 @@ function findTarget(target, n) {
 	const name = target.slice(at + 1);
 	if (!list) fail(`${REL(OVERRIDES)} entry ${n}: unknown list in ${target}`);
 	if (name === '+') return { rec: null, list };
+	if (list === 'videos') fail(`${REL(OVERRIDES)} entry ${n}: a video is filed whole with video:+; there is no video to change by name`);
 	/* A mix-up has no single name: it is named by its two sides, mixup:<a> vs <b>. */
 	if (list === 'mixUps') {
 		const m = model.mixUps.find((r) => slug(r.a + ' vs ' + r.b) === slug(name));
@@ -441,6 +462,15 @@ function getPath(rec, field) {
 }
 const applied = [];
 const overrideAt = new Map();
+/* The videos the overrides file, kept apart from the model so the dash walk does not respell a quoted title. */
+const videoAdds = [];
+/* A research topic written as a slug, as its heading. A slug this table lacks is written out
+   (hyphens as spaces, the first letter capital); a topic already written as words stands. */
+const VIDEO_TOPICS = {
+	brennans: 'Brennan’s house', service: 'Fine-dining service', 'french-quarter': 'The French Quarter', sauces: 'Sauces',
+	'soups-and-roux': 'Soups and roux', 'fish-and-shellfish': 'Fish and shellfish', 'meat-and-poultry': 'Meat and poultry', eggs: 'Eggs',
+	'tableside-and-flambe': 'Tableside and flambé', desserts: 'Desserts', 'creole-and-cajun': 'Creole and Cajun'
+};
 /* A dash anywhere in an override's value is refused with the entry and the field named: the file is hand
    written and dash free, and a slip there would otherwise be stripped and logged as if the guide had
    carried it. (A replace's fromRe is a regex source and ASCII, so an escape there is not a dash.) */
@@ -462,7 +492,11 @@ const retired = [];
 const buried = [];
 overrides.entries.forEach((e, n) => {
 	const op = e.op || 'set';
-	noDash(e.value, n, 'value');
+	/* A video's title and channel are quoted from the page as published and its bookkeeping (verifiedBy,
+	   channelEvidence) quotes search results, so only the words this file writes (why, topic) are held
+	   dash free here; the quoted ones take the dash pass at assembly, logged. */
+	if (e.target === 'video:+' && e.value && typeof e.value === 'object') { noDash(e.value.why, n, 'value.why'); noDash(e.value.topic, n, 'value.topic'); }
+	else noDash(e.value, n, 'value');
 	const { rec, list } = findTarget(e.target, n);
 	/* A retire takes a dish, wine or drink off the menu: the record is left out of the house and its id
 	   goes into house.removed under the stamp the entry names, so a device refreshed by this edition
@@ -533,6 +567,10 @@ overrides.entries.forEach((e, n) => {
 			model[list].push(newItem(list, v, n));
 		} else if (list === 'wines' && !rec) {
 			model.wines.push(newWine(v, n));
+		} else if (list === 'videos') {
+			videoAdds.push(newVideo(v, n));
+			applied.push({ n, op, target: e.target });
+			return;
 		} else if (e.field === 'kept' && rec) {
 			rec.kept.push({ q: v.q, a: v.a });
 		} else if (list === 'house' && e.field === 'sources') {
@@ -648,6 +686,41 @@ function newWine(v, n) {
 		profile: v.profile, sayIt: v.guest, goesWith: v.goesWith, serve: v.serve, firstPickFor: Array.isArray(v.firstPickFor) ? [...v.firstPickFor] : [],
 		lines: Object.assign({}, v.lines), serviceNote: v.serviceNote || '', say: v.say, why: v.why, pairs: v.pairs || '', origin: v.origin || '',
 		kept: Array.isArray(v.kept) ? v.kept.map((k) => ({ q: k.q, a: k.a })) : [], parts: Object.assign({}, v.parts), idName: v.name
+	};
+}
+
+function videoTopic(t) {
+	const s = String(t || '').trim();
+	if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(s)) return s;
+	return VIDEO_TOPICS[s] || cap(s.replace(/-/g, ' '));
+}
+/* A video filed by an override, in the research files' shape, checked before anything resolves; the
+   attach names resolve at assembly, once every id is known. */
+function newVideo(v, n) {
+	const at = `${REL(OVERRIDES)} entry ${n}`;
+	const str = (x) => typeof x === 'string' && x.trim() !== '';
+	if (!v || typeof v !== 'object' || Array.isArray(v)) fail(`${at}: video:+ needs a value, one research video record`);
+	const need = (ok, what) => { if (!ok) fail(`${at}: the video ${str(v.id) ? v.id : '(no id)'} ${what}`); };
+	need(str(v.id) && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(v.id), 'needs an id, the research record\'s slug');
+	need(!videoAdds.some((x) => x.key === v.id), 'is filed twice');
+	need(lib.videoUrlOk(v.url), 'needs a secure YouTube or Vimeo link, ' + JSON.stringify(v.url) + ' is not one');
+	need(str(v.title), 'needs its title as published');
+	need(str(v.channel), 'has no channel yet: check-house-videos or an oEmbed run must name it before it ships');
+	need(v.minutes === undefined || v.minutes === null || (typeof v.minutes === 'number' && Number.isFinite(v.minutes) && v.minutes > 0), 'needs minutes as a number above 0, or null when nobody measured it');
+	need(str(v.why), 'needs a why');
+	need(lib.wordCount(v.why) <= C.VIDEO_WHY_WORDS, `has a why of ${lib.wordCount(v.why)} words; the cap is ${C.VIDEO_WHY_WORDS}`);
+	need(typeof v.checkedOn === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v.checkedOn), 'needs checkedOn, the date the link was checked');
+	const a = v.attach && typeof v.attach === 'object' && !Array.isArray(v.attach) ? v.attach : {};
+	const names = (k) => {
+		const l = a[k] === undefined ? [] : a[k];
+		need(Array.isArray(l) && l.every(str), `needs attach.${k} as a list of names`);
+		return [...l];
+	};
+	const house = typeof a.house === 'boolean' ? a.house : v.house === true;
+	return {
+		key: v.id, n, url: v.url, title: v.title, channel: v.channel, mins: typeof v.minutes === 'number' ? v.minutes : 0,
+		topic: videoTopic(v.topic), why: v.why, checkedOn: v.checkedOn, house,
+		dishes: names('dishes'), cocktails: names('cocktails'), wines: names('wines'), terms: names('terms')
 	};
 }
 
@@ -940,11 +1013,41 @@ for (const u of clean.disputes) {
 	if (u.resolution) r.resolution = u.resolution;
 	house.disputes.push(r);
 }
+/* The videos, after every list they point into: each attach name resolved within its own list (a dish
+   among the dishes, a wine by the wine key, a term among the terms), an unknown name failing the build.
+   The quoted title and channel take the dash pass alone; why and topic take the spelling map too. */
+if (videoAdds.length) house.videos = [];
+for (const v of videoAdds) {
+	const where = `${REL(OVERRIDES)} entry ${v.n} (video ${v.key})`;
+	const path = 'house.videos[' + house.videos.length + ']';
+	const inList = (list, name) => {
+		const r = clean[list].find((x) => slug(x.name) === slug(name) || (x.idName && slug(x.idName) === slug(name)));
+		if (!r) fail(`${where}: ${name} is not a ${list === 'dishes' ? 'dish' : 'drink'} in the house`);
+		return r.id;
+	};
+	const itemIds = [];
+	const push = (id) => { if (!itemIds.includes(id)) itemIds.push(id); };
+	for (const d of v.dishes) push(inList('dishes', d));
+	for (const c of v.cocktails) push(inList('cocktails', c));
+	for (const w of v.wines) push(wineId(w, where));
+	const termIds = [];
+	for (const t of v.terms) {
+		const x = house.lexicon.find((r) => slug(r.term) === slug(t));
+		if (!x) fail(`${where}: ${t} is not a term in the house lexicon`);
+		if (!termIds.includes(x.id)) termIds.push(x.id);
+	}
+	overrideAt.set(path, v.n);
+	house.videos.push({
+		id: idFor('videos', v.key), url: v.url, title: dashFree(v.title, path + '.title'), channel: dashFree(v.channel, path + '.channel'), mins: v.mins,
+		topic: dashFree(spelled(v.topic, path + '.topic'), path + '.topic'), why: dashFree(spelled(v.why, path + '.why'), path + '.why'),
+		itemIds, termIds, house: v.house, checkedOn: v.checkedOn, ts: BUILD_TS
+	});
+}
 /* The tombstones by id, then the guard: every id the shipped pack holds is in this house or carries a
    tombstone, so no record leaves a device by accident or lingers on one unannounced (a device keeps a
    record a newer edition simply drops; house-pack.ts refreshEdition drops only a tombstoned one). */
 const builtIds = new Set();
-for (const list of C.HOUSE_LISTS) for (const r of house[list]) builtIds.add(r.id);
+for (const list of C.HOUSE_LISTS) for (const r of house[list] || []) builtIds.add(r.id);
 for (const b of buried) {
 	if (builtIds.has(b.id)) fail(`${REL(OVERRIDES)} entry ${b.n}: the tombstone for ${b.was} names ${b.id}, which this house still holds`);
 	house.removed[b.id] = b.at;
@@ -985,5 +1088,5 @@ const floorBottles = house.wines.filter((w) => w.list === 'bottle').length;
 const tiered = house.dishes.filter((d) => d.pairing && d.pairing.value.bottles).length;
 console.log(`build-brennans: ${floorBottles} of ${house.wines.length} wines are on the bottle list; ${tiered} dishes carry bottle tiers`);
 console.log(`build-brennans: ${coffeeLinks} pairings take a coffee as their zero-proof pick; ${house.wines.filter((w) => w.lines).length} of ${house.wines.length} wines carry the timed lines`);
-console.log(`build-brennans: ${REL(OUT)}: ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free), ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask at lineup, ${house.disputes.length} disputes; ${overrides.entries.length} overrides applied (${applied.filter((a) => a.skipped).length} skipped), ${principleChanges.length} principles mapped, ${dashLog.length} strings dash-stripped (${dashLog.filter((d) => d.override !== undefined).length} set by an override), ${spellLog.length} strings respelled American, ${minted.length} ids minted`);
+console.log(`build-brennans: ${REL(OUT)}: ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free), ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask at lineup, ${house.disputes.length} disputes, ${(house.videos || []).length} videos; ${overrides.entries.length} overrides applied (${applied.filter((a) => a.skipped).length} skipped), ${principleChanges.length} principles mapped, ${dashLog.length} strings dash-stripped (${dashLog.filter((d) => d.override !== undefined).length} set by an override), ${spellLog.length} strings respelled American, ${minted.length} ids minted`);
 if (principleChanges.length && args.includes('--verbose')) for (const p of principleChanges) console.log('  principle ' + p.dish + ': ' + p.from + ' to ' + p.to);

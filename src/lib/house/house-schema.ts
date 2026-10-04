@@ -164,6 +164,43 @@ export const HALF_SIZE = '375ml';
 /** The word cap on a tier's why and its line to say at the table. */
 export const BOTTLE_WORDS = 25;
 
+/**
+ * The videos a house points a server to. A video is a link out and never a
+ * player: a wing opens it in a new tab, plays nothing on its own and says a
+ * video needs a connection. The link is held to one scheme and three hosts,
+ * so a pack, a hand edit or a file cannot plant any other address on a card.
+ * VIDEO_SCHEME is written once, here, and it is the one place the shipped
+ * engine spells the secure scheme: tools/port-house.mjs and
+ * tools/check-port-house.mjs allow exactly this one occurrence and still
+ * refuse any other. The hosts are names a link is compared against; the
+ * engine never fetches one.
+ */
+export const VIDEO_SCHEME = 'https';
+export const VIDEO_HOSTS = ['youtube.com', 'youtu.be', 'vimeo.com'] as const;
+
+/** The word cap on why a video helps, the bottle tiers' cap. */
+export const VIDEO_WHY_WORDS = 25;
+
+/** The longest link a video may carry. */
+export const VIDEO_URL_MAX = 500;
+
+const VIDEO_URL = new RegExp('^' + VIDEO_SCHEME + ':\\/\\/([A-Za-z0-9.-]+)(?:[\\/?#][^\\s]*)?$');
+
+/**
+ * Whether a link may stand on a video: the secure scheme, no user name, no
+ * port, no space, and a host that is one of VIDEO_HOSTS or a name under one
+ * (www.youtube.com, m.youtube.com, player.vimeo.com). Anything else is not a
+ * video link here, however it reads.
+ */
+export function videoUrlOk(url: unknown): boolean {
+	if (typeof url !== 'string' || !url || url.length > VIDEO_URL_MAX) return false;
+	const m = VIDEO_URL.exec(url);
+	if (!m) return false;
+	const host = m[1].toLowerCase();
+	for (const h of VIDEO_HOSTS) if (host === h || host.slice(-(h.length + 1)) === '.' + h) return true;
+	return false;
+}
+
 /* -------------------------------------------------------------------------
  * The marks and the formula
  * ---------------------------------------------------------------------- */
@@ -456,6 +493,35 @@ export interface HouseSource {
 	readOn: string;
 }
 
+/**
+ * A video that helps a server learn the house: a dish's technique, a drink's
+ * history, the room itself, service. Plain fields, no marks: a video is a
+ * pointer a person chose, checked against the address on `checkedOn`, and
+ * the wings show it as it stands. `itemIds` are the dishes, wines and
+ * cocktails it teaches and `termIds` the lexicon terms; `house` is true for
+ * a video about the house itself (its story, its room, its signature), which
+ * a wing lists first. Here `house` is a flag, not a house id: this list
+ * carries no house id, and the merge and the edition refresh re-stamp only a
+ * `house` that is a string. `mins` is the length in minutes, 0 when nobody
+ * measured it (the key is not spelled out in full because the client sweep
+ * refuses any key holding the letters of nut, and that word holds them);
+ * `topic` is the heading a wing groups the list under.
+ */
+export interface HouseVideo {
+	id: string;
+	url: string;
+	title: string;
+	channel: string;
+	mins: number;
+	topic: string;
+	why: string;
+	itemIds: string[];
+	termIds: string[];
+	house: boolean;
+	checkedOn: string;
+	ts: number;
+}
+
 /** The stamp a pack leaves on the house it became. */
 export interface PackStamp {
 	id: string;
@@ -466,8 +532,8 @@ export interface PackStamp {
 
 /**
  * The House. The card first (name, address, phone, site, meals, history,
- * dress code, the date the menus were read, the sources), then the ten
- * lists, then the tombstones (`removed`, id to stamp), the build stamps, how
+ * dress code, the date the menus were read, the sources), then the
+ * eleven lists (the last, the videos, only when it holds one), then the tombstones (`removed`, id to stamp), the build stamps, how
  * it began and when. `createdAt` is an ISO date; `lastWrite` is a stamp.
  */
 export interface House {
@@ -493,6 +559,8 @@ export interface House {
 	mustKnows: MustKnow[];
 	askAtLineup: AskAtLineup[];
 	disputes: Dispute[];
+	/** The videos: absent when the house holds none, so a house from before the list reads unchanged. */
+	videos?: HouseVideo[];
 	removed: Record<string, number>;
 	build: Partial<Record<BuildStep, number>>;
 	began: Began;
@@ -521,10 +589,12 @@ export interface HouseStub {
  * ---------------------------------------------------------------------- */
 
 /**
- * The ten lists on a House, in the order the record carries them: the eight a
- * pack builds for Lizzy and the drills, then the two working lists a person
- * keeps for lineup. Every list holds records with an id, so the merge runs
- * per list by id over all ten.
+ * The eleven lists on a House, in the order the record carries them: the
+ * eight a pack builds for Lizzy and the drills, the two working lists a
+ * person keeps for lineup, then the videos. Every list holds records with an
+ * id, so the merge runs per list by id over all eleven. The videos are
+ * OPTIONAL_LISTS: written only when they hold something, so every loop over
+ * this list reads a house's rows through houseRows, never house[list].
  */
 export const HOUSE_LISTS = [
 	'tastings',
@@ -536,9 +606,24 @@ export const HOUSE_LISTS = [
 	'mixUps',
 	'mustKnows',
 	'askAtLineup',
-	'disputes'
+	'disputes',
+	'videos'
 ] as const;
 export type HouseList = (typeof HOUSE_LISTS)[number];
+
+/** The lists a House carries only when they hold something; absent reads as empty. */
+export const OPTIONAL_LISTS = ['videos'] as const satisfies readonly HouseList[];
+
+/** A house's rows on one list, or none when the list is absent (an optional list, or a record from an older edition). */
+export function houseRows(house: House, list: HouseList): unknown[] {
+	const v = (house as unknown as Record<string, unknown>)[list];
+	return Array.isArray(v) ? v : [];
+}
+
+/** Whether a list is one a House carries only when it holds something. */
+export function optionalList(list: string): boolean {
+	return (OPTIONAL_LISTS as readonly string[]).indexOf(list) >= 0;
+}
 
 /** The mark fields per kind: everything Lizzy may write and a person may keep. Wines carry parts and lines too. */
 export const DISH_MARKS = ['say', 'guest', 'why', 'pairs', 'origin', 'ingredientsNamed', 'parts', 'lines', 'pairing'] as const satisfies readonly (keyof HouseDish)[];
@@ -561,7 +646,8 @@ export const MARK_FIELDS = {
 	mixUps: ['difference', 'ask'] as const satisfies readonly (keyof MixUp)[],
 	mustKnows: ['body'] as const satisfies readonly (keyof MustKnow)[],
 	askAtLineup: [] as const,
-	disputes: [] as const
+	disputes: [] as const,
+	videos: [] as const
 } satisfies Record<HouseList | 'house', readonly string[]>;
 
 /**
@@ -581,7 +667,8 @@ export const ID_PREFIXES = {
 	mixUps: 'm-',
 	mustKnows: 'k-',
 	askAtLineup: 'a-',
-	disputes: 'u-'
+	disputes: 'u-',
+	videos: 'v-'
 } as const satisfies Record<HouseList | 'house', string>;
 
 /* -------------------------------------------------------------------------
@@ -639,10 +726,11 @@ export const KEYS = {
 	Dispute: ['id', 'itemId', 'field', 'a', 'b', 'resolution', 'ts'] as const satisfies KeysOf<Dispute>,
 	HouseMeal: ['name', 'days', 'hours'] as const satisfies KeysOf<HouseMeal>,
 	HouseSource: ['title', 'url', 'readOn'] as const satisfies KeysOf<HouseSource>,
+	HouseVideo: ['id', 'url', 'title', 'channel', 'mins', 'topic', 'why', 'itemIds', 'termIds', 'house', 'checkedOn', 'ts'] as const satisfies KeysOf<HouseVideo>,
 	PackStamp: ['id', 'builtBy', 'builtAt', 'version'] as const satisfies KeysOf<PackStamp>,
 	House: [
 		'format', 'version', 'id', 'name', 'address', 'phone', 'site', 'meals', 'history', 'dressCode', 'menusReadOn', 'sources',
-		'tastings', 'dishes', 'wines', 'cocktails', 'lexicon', 'scenarios', 'mixUps', 'mustKnows', 'askAtLineup', 'disputes',
+		'tastings', 'dishes', 'wines', 'cocktails', 'lexicon', 'scenarios', 'mixUps', 'mustKnows', 'askAtLineup', 'disputes', 'videos',
 		'removed', 'build', 'began', 'createdAt', 'lastWrite', 'pack'
 	] as const satisfies KeysOf<House>,
 	HouseIndex: ['v', 'current', 'list'] as const satisfies KeysOf<HouseIndex>,
@@ -657,7 +745,8 @@ export const KEYS = {
  */
 export const OPTIONAL_KEYS = {
 	Pairing: ['bottles'],
-	HouseWine: ['list', 'bin', 'size']
+	HouseWine: ['list', 'bin', 'size'],
+	House: ['videos']
 } as const;
 
 /* The other direction: a key the interface has and the list forgot is a type
@@ -688,6 +777,7 @@ type KeysComplete = [
 	Assert<Complete<Dispute, typeof KEYS.Dispute>>,
 	Assert<Complete<HouseMeal, typeof KEYS.HouseMeal>>,
 	Assert<Complete<HouseSource, typeof KEYS.HouseSource>>,
+	Assert<Complete<HouseVideo, typeof KEYS.HouseVideo>>,
 	Assert<Complete<PackStamp, typeof KEYS.PackStamp>>,
 	Assert<Complete<House, typeof KEYS.House>>,
 	Assert<Complete<HouseIndex, typeof KEYS.HouseIndex>>,
@@ -742,6 +832,59 @@ export function emptyHouse(id: string, name: string, began: Began, now: number):
  * character. A thousand collisions in a row means the source is broken, and
  * that is said rather than spun on.
  */
+/**
+ * The videos for one item, for the Watch block on its card: those that name
+ * the item first, then those that name a lexicon term reaching the item, each
+ * once, in the house's order within each half. An absent list reads as none.
+ */
+export function videosFor(house: House, itemId: string): HouseVideo[] {
+	const videos = house.videos || [];
+	const direct: HouseVideo[] = [];
+	const viaTerm: HouseVideo[] = [];
+	const terms = new Set<string>();
+	for (const t of house.lexicon || []) if (t.itemIds.indexOf(itemId) >= 0) terms.add(t.id);
+	for (const v of videos) {
+		if (v.itemIds.indexOf(itemId) >= 0) direct.push(v);
+		else if (v.termIds.some((id) => terms.has(id))) viaTerm.push(v);
+	}
+	return direct.concat(viaTerm);
+}
+
+/** The heading a video with no topic is listed under. */
+export const VIDEO_TOPIC_NONE = 'More to watch';
+
+/**
+ * Every video by topic, for the Videos entry in a study view: the videos
+ * about the house itself first, so their topics lead, then the rest in the
+ * house's order; a topic is a group in the order it is first met, and a
+ * video with no topic sits under VIDEO_TOPIC_NONE.
+ */
+export function videoGroups(house: House): Array<{ topic: string; videos: HouseVideo[] }> {
+	const videos = house.videos || [];
+	const ordered = videos.filter((v) => v.house).concat(videos.filter((v) => !v.house));
+	const groups: Array<{ topic: string; videos: HouseVideo[] }> = [];
+	const at = new Map<string, number>();
+	for (const v of ordered) {
+		const topic = v.topic.trim() || VIDEO_TOPIC_NONE;
+		let i = at.get(topic);
+		if (i === undefined) {
+			i = groups.length;
+			at.set(topic, i);
+			groups.push({ topic, videos: [] });
+		}
+		groups[i].videos.push(v);
+	}
+	return groups;
+}
+
+/** The small line under a video's title: its channel and its length, either left out when unknown ("Brennan's, 6 min"). */
+export function videoMeta(v: { channel: string; mins: number }): string {
+	const parts: string[] = [];
+	if (v.channel && v.channel.trim()) parts.push(v.channel.trim());
+	if (v.mins > 0) parts.push(Math.max(1, Math.round(v.mins)) + ' min');
+	return parts.join(', ');
+}
+
 export function mintId(prefix: string, taken: ReadonlySet<string>, rand: () => number = Math.random): string {
 	for (let tries = 0; tries < 1000; tries++) {
 		let s = prefix;

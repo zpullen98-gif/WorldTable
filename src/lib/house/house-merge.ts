@@ -29,7 +29,7 @@ import type {
 	Mark,
 	Note
 } from './house-schema';
-import { BUILD_STEPS, HOUSE_LISTS, ITEM_KINDS, MARK_FIELDS, isMark, isNote } from './house-schema';
+import { BUILD_STEPS, HOUSE_LISTS, ITEM_KINDS, MARK_FIELDS, houseRows, isMark, isNote, optionalList } from './house-schema';
 import { KEPT_CAP } from './house-normalise';
 
 /** Any record a House list holds: an id, a stamp, and whatever else its shape names. */
@@ -260,7 +260,8 @@ const CARD_FIELDS = ['name', 'address', 'phone', 'site', 'meals', 'dressCode', '
 /**
  * Two copies of one house as one: mine, with theirs merged in.
  *
- * Per list by id: a twin settles by mergeItem with the list's own mark
+ * Per list by id, over all eleven (an absent optional list reads as
+ * empty and is written back only when it holds something): a twin settles by mergeItem with the list's own mark
  * fields; an item on one side only is carried. A tombstone in either
  * `removed` newer than the item's last touch drops the item from both sides,
  * and the tombstones themselves union on the newer stamp, so a delete
@@ -308,8 +309,8 @@ export function mergeHouse(mine: House, theirs: House): { house: House; counts: 
 	const dropped = new Set<string>();
 	for (const list of HOUSE_LISTS) {
 		const marks: readonly string[] = MARK_FIELDS[list];
-		const mineList = mine[list] as unknown as Listed[];
-		const theirsList = (theirs[list] as unknown as Listed[]).map((item) => adopt(item, mine.id));
+		const mineList = houseRows(mine, list) as Listed[];
+		const theirsList = (houseRows(theirs, list) as Listed[]).map((item) => adopt(item, mine.id));
 		const theirsById = new Map<string, Listed>();
 		for (const item of theirsList) if (!theirsById.has(item.id)) theirsById.set(item.id, item);
 		const merged: Listed[] = [];
@@ -338,7 +339,9 @@ export function mergeHouse(mine: House, theirs: House): { house: House; counts: 
 			merged.push(t);
 			counts.added++;
 		}
-		out[list] = merged;
+		/* An optional list (the videos) is written only when it holds something, the normaliser's rule. */
+		if (merged.length || !optionalList(list)) out[list] = merged;
+		else delete out[list];
 	}
 	counts.removed = dropped.size;
 	out.removed = removed;
@@ -346,10 +349,14 @@ export function mergeHouse(mine: House, theirs: House): { house: House; counts: 
 	return { house: out as unknown as House, counts };
 }
 
-/** Their item under my house id, when it carries one; a tasting or a term carries none and passes through. */
+/**
+ * Their item under my house id, when it carries one; a tasting or a term
+ * carries none and passes through, and so does a video, whose `house` is a
+ * flag and never an id: only a string is re-stamped.
+ */
 function adopt(item: Listed, houseId: string): Listed {
 	const rec = item as unknown as Fields;
-	if (!('house' in rec) || rec.house === houseId) return item;
+	if (typeof rec.house !== 'string' || rec.house === houseId) return item;
 	return { ...rec, house: houseId } as unknown as Listed;
 }
 

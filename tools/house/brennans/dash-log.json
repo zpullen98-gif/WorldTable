@@ -1,6 +1,6 @@
 {
 	"about": "Every string the dash pass changed while building the Brennan's house, before and after, for a person to read for a changed meaning; an entry with an override number is a string an overrides.json entry set, not the guide's.",
-	"count": 371,
+	"count": 365,
 	"changes": [
 		{
 			"path": "model.card.sources[0].title",
@@ -147,11 +147,6 @@
 			"path": "model.dishes[1].pairing.serve",
 			"before": "Included 4 oz pour on the Traditional Breakfast; pour as the course fires. Slightly cool, 58–60°F, standard red glass. Take filet temperatures with the tasting order.",
 			"after": "Included 4 oz pour on the Traditional Breakfast; pour as the course fires. Slightly cool, 58 to 60°F, standard red glass. Take filet temperatures with the tasting order."
-		},
-		{
-			"path": "model.dishes[2].parts.sauce",
-			"before": "’nduja — spicy, spreadable Calabrian pork sausage",
-			"after": "’nduja, spicy, spreadable Calabrian pork sausage"
 		},
 		{
 			"path": "model.dishes[2].lines.s20",
@@ -413,8 +408,9 @@
 		},
 		{
 			"path": "model.dishes[10].lines.s20",
-			"before": "Our Grand Isle Jewel oysters come from the Louisiana coast and are served raw, with a mignonette — the classic shallot-and-vinegar oyster sauce — made with preserved Fresno chili for a little warmth.",
-			"after": "Our Grand Isle Jewel oysters come from the Louisiana coast and are served raw, with a mignonette, the classic shallot-and-vinegar oyster sauce, made with preserved Fresno chili for a little warmth."
+			"before": "Our Grand Isle Jewel oysters come from the Louisiana coast and are served raw, with a mignonette — the classic raw bar sauce of shallot, cracked pepper and vinegar — made with preserved Fresno chili for a little warmth.",
+			"after": "Our Grand Isle Jewel oysters come from the Louisiana coast and are served raw, with a mignonette, the classic raw bar sauce of shallot, cracked pepper and vinegar, made with preserved Fresno chili for a little warmth.",
+			"override": 3170
 		},
 		{
 			"path": "model.dishes[10].lines.s45",
@@ -651,12 +647,6 @@
 			"after": "Eggs Sardou is a New Orleans classic: poached eggs with crispy artichokes and Parmesan creamed spinach, finished with Choron: a béarnaise, the tarragon butter sauce, brightened with tomato."
 		},
 		{
-			"path": "model.dishes[16].lines.s45",
-			"before": "Eggs Sardou is one of the classic New Orleans egg dishes — it was created at Antoine's for the French playwright Victorien Sardou, and ours is the creamed spinach version. Ours pairs poached eggs with crispy artichokes and creamed spinach made with Parmesan. Instead of hollandaise, it’s finished with Choron sauce: a béarnaise — butter, egg yolk, shallot and tarragon — with tomato folded in, so it’s tangy and herbal. It’s rich, but the artichokes and tomato keep it bright. It’s also our meatless egg dish.",
-			"after": "Eggs Sardou is one of the classic New Orleans egg dishes, it was created at Antoine's for the French playwright Victorien Sardou, and ours is the creamed spinach version. Ours pairs poached eggs with crispy artichokes and creamed spinach made with Parmesan. Instead of hollandaise, it’s finished with Choron sauce: a béarnaise, butter, egg yolk, shallot and tarragon, with tomato folded in, so it’s tangy and herbal. It’s rich, but the artichokes and tomato keep it bright. It’s also our meatless egg dish.",
-			"override": 8
-		},
-		{
 			"path": "model.dishes[16].serviceNote",
 			"before": "No meat listed — confirm the creamed spinach and sauce with the kitchen for strict vegetarians. Eggs, dairy (Parmesan, cream, butter). Crispy artichokes are likely breaded or fried — ask about gluten. Sardou is sar-DOO.",
 			"after": "No meat listed, confirm the creamed spinach and sauce with the kitchen for strict vegetarians. Eggs, dairy (Parmesan, cream, butter). Crispy artichokes are likely breaded or fried, ask about gluten. Sardou is sar-DOO."
@@ -744,8 +734,9 @@
 		},
 		{
 			"path": "model.dishes[19].lines.s45",
-			"before": "Our take on shrimp and grits has a twist: instead of a bowl of grits, the grits are made with pimento cheese, set into a cake and fried, so they’re crisp outside and creamy inside. Louisiana shrimp go on top in Creole sauce — a tomato-based sauce with the holy trinity of onion, celery and bell pepper — with tasso, a smoky, spiced Cajun ham, for depth. Fried okra chips add crunch. It’s one of the best values on the menu.",
-			"after": "Our take on shrimp and grits has a twist: instead of a bowl of grits, the grits are made with pimento cheese, set into a cake and fried, so they’re crisp outside and creamy inside. Louisiana shrimp go on top in Creole sauce, a tomato-based sauce with the holy trinity of onion, celery and bell pepper, with tasso, a smoky, spiced Cajun ham, for depth. Fried okra chips add crunch. It’s one of the best values on the menu."
+			"before": "Our take on shrimp and grits has a twist: instead of a bowl of grits, the grits are made with pimento cheese, set into a cake and fried, so they’re crisp outside and creamy inside. Louisiana shrimp go on top in Creole sauce — a tomato-based sauce with the holy trinity of onion, celery and bell pepper — with tasso, a smoky, spiced Cajun ham, for depth. Fried okra chips add crunch. Shrimp and grits began as a Charleston breakfast; ours is Creole, a tomato sauce rather than a bacon gravy.",
+			"after": "Our take on shrimp and grits has a twist: instead of a bowl of grits, the grits are made with pimento cheese, set into a cake and fried, so they’re crisp outside and creamy inside. Louisiana shrimp go on top in Creole sauce, a tomato-based sauce with the holy trinity of onion, celery and bell pepper, with tasso, a smoky, spiced Cajun ham, for depth. Fried okra chips add crunch. Shrimp and grits began as a Charleston breakfast; ours is Creole, a tomato sauce rather than a bacon gravy.",
+			"override": 3171
 		},
 		{
 			"path": "model.dishes[19].pairing.sayIt",
@@ -1005,8 +996,9 @@
 		},
 		{
 			"path": "model.dishes[26].lines.s45",
-			"before": "It’s where a French bistro meets a Southern kitchen. Poussin — poo-SAN — is a young, small chicken, and we use a Cornish hen. It’s brined in sweet tea, which seasons it and keeps it juicy, then fried until crisp. The classic French pairing is mustard, so there’s a mustard cream sauce — tangy and rich — with turnips and shallots for a gentle sweetness. It’s comforting and one of the best values on the dinner menu.",
-			"after": "It’s where a French bistro meets a Southern kitchen. Poussin, poo-SAN, is a young, small chicken, and we use a Cornish hen. It’s brined in sweet tea, which seasons it and keeps it juicy, then fried until crisp. The classic French pairing is mustard, so there’s a mustard cream sauce, tangy and rich, with turnips and shallots for a gentle sweetness. It’s comforting and one of the best values on the dinner menu."
+			"before": "It’s where a French bistro meets a Southern kitchen. Poussin — poo-SAN — is a young, small chicken, and we use a Cornish hen. It’s brined in sweet tea, which seasons it and keeps it juicy, then fried until crisp. The classic French pairing is mustard, so there’s a mustard cream sauce — tangy and rich — with turnips and shallots for a gentle sweetness. Crisp and comforting, it's the bistro classic chicken with mustard, made the Southern way.",
+			"after": "It’s where a French bistro meets a Southern kitchen. Poussin, poo-SAN, is a young, small chicken, and we use a Cornish hen. It’s brined in sweet tea, which seasons it and keeps it juicy, then fried until crisp. The classic French pairing is mustard, so there’s a mustard cream sauce, tangy and rich, with turnips and shallots for a gentle sweetness. Crisp and comforting, it's the bistro classic chicken with mustard, made the Southern way.",
+			"override": 3174
 		},
 		{
 			"path": "model.dishes[26].serviceNote",
@@ -1282,8 +1274,9 @@
 		},
 		{
 			"path": "model.dishes[43].lines.s45",
-			"before": "Bread pudding is New Orleans’ comfort dessert — bread soaked in a sweet custard and baked until soft inside and golden on top. Ours gets a whiskey caramel, rich and a little boozy, and buttermilk ice cream, which has a gentle tang that keeps it from being too sweet. Pralines — PRAW-leens — are the New Orleans candy of pecans, butter and brown sugar, and they add crunch. Warm and cold, sweet and tangy.",
-			"after": "Bread pudding is New Orleans’ comfort dessert, bread soaked in a sweet custard and baked until soft inside and golden on top. Ours gets a whiskey caramel, rich and a little boozy, and buttermilk ice cream, which has a gentle tang that keeps it from being too sweet. Pralines, PRAW-leens, are the New Orleans candy of pecans, butter and brown sugar, and they add crunch. Warm and cold, sweet and tangy."
+			"before": "Bread pudding is New Orleans’ comfort dessert — bread soaked in a sweet custard and baked until soft inside and golden on top. Ours gets a whiskey caramel, rich and a little boozy, and buttermilk ice cream, which has a gentle tang that keeps it from being too sweet. Pralines — PRAH-leens — are the New Orleans candy of pecans, butter and brown sugar, and they add crunch. Warm and cold, sweet and tangy.",
+			"after": "Bread pudding is New Orleans’ comfort dessert, bread soaked in a sweet custard and baked until soft inside and golden on top. Ours gets a whiskey caramel, rich and a little boozy, and buttermilk ice cream, which has a gentle tang that keeps it from being too sweet. Pralines, PRAH-leens, are the New Orleans candy of pecans, butter and brown sugar, and they add crunch. Warm and cold, sweet and tangy.",
+			"override": 3169
 		},
 		{
 			"path": "model.dishes[43].pairing.sayIt",
@@ -1433,12 +1426,6 @@
 			"path": "model.wines[2].serve",
 			"before": "Serve 46–50°F — a touch warmer than the house bubbles, to show vintage complexity — in a tulip or white-wine glass. Coravin-preserved: reseal right after each pour and present the bottle to the guest.",
 			"after": "Serve 46 to 50°F, a touch warmer than the house bubbles, to show vintage complexity, in a tulip or white-wine glass. Coravin-preserved: reseal right after each pour and present the bottle to the guest."
-		},
-		{
-			"path": "model.wines[3].profile",
-			"before": "The pairing Champagne on both tasting menus (4 oz pours): with the Eggs Hussarde at breakfast and the Grand Isle Jewel oysters at dinner. Dry, fresh citrus and apple with a light toasty note. Not on the by-the-glass list — ask whether it can be poured à la carte. A house with roots to 1834, now part of the Vranken-Pommery group; the blend is led by Pinot Noir and Meunier with Chardonnay.",
-			"after": "The pairing Champagne on both tasting menus (4 oz pours): with the Eggs Hussarde at breakfast and the Grand Isle Jewel oysters at dinner. Dry, fresh citrus and apple with a light toasty note. Not on the by-the-glass list, ask whether it can be poured à la carte. A house with roots to 1834, now part of the Vranken-Pommery group; the blend is led by Pinot Noir and Meunier with Chardonnay.",
-			"override": 102
 		},
 		{
 			"path": "model.wines[3].sayIt",
@@ -1658,11 +1645,6 @@
 			"after": "The Bloody Bull, our Bloody Mary made with beef bouillon. A Brennan’s breakfast classic."
 		},
 		{
-			"path": "model.cocktails[1].lines.s20",
-			"before": "A Bloody Bull is a Bloody Mary with beef bouillon added — vodka, our housemade Bloody Mary mix and bouillon — so it’s savory, rich and extra satisfying.",
-			"after": "A Bloody Bull is a Bloody Mary with beef bouillon added, vodka, our housemade Bloody Mary mix and bouillon, so it’s savory, rich and extra satisfying."
-		},
-		{
 			"path": "model.cocktails[1].lines.s45",
 			"before": "The Bloody Bull is a Brennan’s breakfast classic: our housemade Bloody Mary mix and vodka, with beef bouillon — a clear, savory beef broth — stirred in. The bouillon gives it a rich, meaty depth, almost like a spicy, chilled consommé. It’s the drink we pour with the soup course on our Traditional Breakfast, and it’s wonderful with the turtle soup. If you prefer it classic, our Brennan’s Bloody Mary comes with pickled okra and spicy beans.",
 			"after": "The Bloody Bull is a Brennan’s breakfast classic: our housemade Bloody Mary mix and vodka, with beef bouillon, a clear, savory beef broth, stirred in. The bouillon gives it a rich, meaty depth, almost like a spicy, chilled consommé. It’s the drink we pour with the soup course on our Traditional Breakfast, and it’s wonderful with the turtle soup. If you prefer it classic, our Brennan’s Bloody Mary comes with pickled okra and spicy beans."
@@ -1699,11 +1681,6 @@
 			"path": "model.cocktails[3].lines.s10",
 			"before": "Brennan’s Irish Coffee — chicory coffee, brown sugar and Tullamore Dew under whipped cream.",
 			"after": "Brennan’s Irish Coffee, chicory coffee, brown sugar and Tullamore Dew under whipped cream."
-		},
-		{
-			"path": "model.cocktails[3].lines.s20",
-			"before": "Our Irish Coffee uses our dark roast coffee with chicory, sweetened with brown sugar, with Tullamore Dew Irish whiskey and a cap of whipped cream — warm, sweet and smooth.",
-			"after": "Our Irish Coffee uses our dark roast coffee with chicory, sweetened with brown sugar, with Tullamore Dew Irish whiskey and a cap of whipped cream, warm, sweet and smooth."
 		},
 		{
 			"path": "model.cocktails[3].lines.s45",
@@ -1760,11 +1737,6 @@
 			"path": "model.terms[15].toGuest",
 			"before": "The egg yolk is cured and grated over the top, like bottarga — it adds a rich, salty finish.",
 			"after": "The egg yolk is cured and grated over the top, like bottarga, it adds a rich, salty finish."
-		},
-		{
-			"path": "model.terms[17].toGuest",
-			"before": "Milk punch is our classic breakfast cocktail — brandy, cream, vanilla and nutmeg.",
-			"after": "Milk punch is our classic breakfast cocktail: brandy, cream, vanilla and nutmeg."
 		},
 		{
 			"path": "model.terms[18].toGuest",
@@ -1884,9 +1856,9 @@
 		},
 		{
 			"path": "model.mustKnows[7].body",
-			"before": "Classic eye openers: Bloody Bull $13, Brandy Milk Punch $12, Brennan’s Bloody Mary $11 (pickled okra, spicy beans), Brennan’s Irish Coffee $12. Coffee $11: New Orleans– style with chicory, a single-origin Papua New Guinea from Congregation Coffee, and Café Glacé de la Maison (chicory cold brew, cardamom-clove syrup, orange flower foam). Revive cold-pressed juice $10. Congregation roasts in Algiers; read the single origin from the coffee card on shift rather than naming Papua New Guinea from memory.",
-			"after": "Classic eye openers: Bloody Bull $13, Brandy Milk Punch $12, Brennan’s Bloody Mary $11 (pickled okra, spicy beans), Brennan’s Irish Coffee $12. Coffee $11: New Orleans-style with chicory, a single-origin Papua New Guinea from Congregation Coffee, and Café Glacé de la Maison (chicory cold brew, cardamom-clove syrup, orange flower foam). Revive cold-pressed juice $10. Congregation roasts in Algiers; read the single origin from the coffee card on shift rather than naming Papua New Guinea from memory.",
-			"override": 255
+			"before": "Classic eye openers: Bloody Bull $13, Brandy Milk Punch $12, Brennan’s Bloody Mary $11 (pickled okra, spicy beans), Brennan’s Irish Coffee $12. Coffee $11: New Orleans– style with chicory, a single origin from Congregation Coffee (the guide printed a Papua New Guinea), and Café Glacé de la Maison (chicory cold brew, cardamom-clove syrup, orange flower foam). Revive cold-pressed juice $10. Congregation roasts in Algiers; read the single origin from the coffee card on shift rather than naming Papua New Guinea from memory.",
+			"after": "Classic eye openers: Bloody Bull $13, Brandy Milk Punch $12, Brennan’s Bloody Mary $11 (pickled okra, spicy beans), Brennan’s Irish Coffee $12. Coffee $11: New Orleans-style with chicory, a single origin from Congregation Coffee (the guide printed a Papua New Guinea), and Café Glacé de la Maison (chicory cold brew, cardamom-clove syrup, orange flower foam). Revive cold-pressed juice $10. Congregation roasts in Algiers; read the single origin from the coffee card on shift rather than naming Papua New Guinea from memory.",
+			"override": 3240
 		},
 		{
 			"path": "model.mustKnows[8].body",
