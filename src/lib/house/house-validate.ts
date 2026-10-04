@@ -16,8 +16,12 @@
  * its cap; 'ref' an id that points at nothing in this house; 'principles' a
  * pairing principle outside the nine; 'price' a printed price that does not
  * stand on the page it was read from, by the client's own rule; and
- * 'allergen-talk' a line of hers that speaks of allergens. Those seven are
- * FATAL_CODES, the default list, and a pack builder passes exactly that.
+ * 'allergen-talk' a line of hers that speaks of allergens; and 'tier' a
+ * bottle tier that breaks its rule (a wine not on the bottle list, a price
+ * outside the tier's band, a half bottle that is not HALF_SIZE, a tier with
+ * no why or no line to say). Those eight are FATAL_CODES, the default list,
+ * and a pack builder passes exactly that. A tier's why and line over
+ * BOTTLE_WORDS are 'word-cap', and a tier naming no house wine is 'ref'.
  * Three more are advisory and NEVER fatal, whatever list a caller hands in:
  * 'service-note', a person's note that names an allergen without the word
  * confirm (the note is theirs and stands; the flag reminds them to confirm
@@ -32,7 +36,7 @@
  * sweep (forbiddenKeys, in house-normalise.ts), the dash (house-lines.ts)
  * and onPage, the rule that 12 is not on a page that prints only 12.50.
  */
-import { HOUSE_LISTS, MARK_FIELDS, PRINCIPLES, isMark } from './house-schema';
+import { BOTTLE_TIERS, BOTTLE_WORDS, HALF_SIZE, HOUSE_LISTS, MARK_FIELDS, PRINCIPLES, foldSize, inBottleBand, isMark, printedDollars, wineListOf } from './house-schema';
 import type { House, HouseList, Lines, Mark } from './house-schema';
 import { forbiddenKeys } from './house-normalise';
 import { hasDash, lineProblems, wordCount } from './house-lines';
@@ -49,6 +53,7 @@ export type ProblemCode =
 	| 'principles'
 	| 'price'
 	| 'allergen-talk'
+	| 'tier'
 	| 'service-note'
 	| 'proper-noun'
 	| 'quote';
@@ -61,7 +66,7 @@ export interface Problem {
 }
 
 /** The codes that stop a pack, and the default `fatal` list. */
-export const FATAL_CODES: readonly ProblemCode[] = ['forbidden', 'dash', 'word-cap', 'ref', 'principles', 'price', 'allergen-talk'];
+export const FATAL_CODES: readonly ProblemCode[] = ['forbidden', 'dash', 'word-cap', 'ref', 'principles', 'price', 'allergen-talk', 'tier'];
 
 /** The codes that are advice and never fatal, whatever list a caller hands in. */
 export const NEVER_FATAL: readonly ProblemCode[] = ['service-note', 'proper-noun', 'quote'];
@@ -240,6 +245,13 @@ function checkRefs(house: House, add: Add): void {
 			ref(at + 'wineId', p.wineId, wines, 'a house wine', false);
 			ref(at + 'secondId', p.secondId, wines, 'a house wine', true);
 			ref(at + 'zeroProofId', p.zeroProofId, zero, 'a zero-proof house cocktail', true);
+			const bottles = p.bottles;
+			if (bottles && typeof bottles === 'object') {
+				for (const tier of BOTTLE_TIERS) {
+					const pick = (bottles as Raw)[tier];
+					if (pick && typeof pick === 'object') ref(at + 'bottles.' + tier + '.wineId', (pick as Raw).wineId, wines, 'a house wine', false);
+				}
+			}
 		}
 		if (list === 'wines' && isMark(item.firstPickIds)) refs(path + '.firstPickIds.value', item.firstPickIds.value, dishes, 'a house dish');
 		if (list === 'cocktails' && isMark(item.upsells)) refs(path + '.upsells.value', item.upsells.value, cocktails, 'a house cocktail');
@@ -270,6 +282,50 @@ function checkRefs(house: House, add: Add): void {
 	const disputes = listOf(house, 'disputes');
 	for (let i = 0; i < disputes.length; i++) {
 		if (disputes[i].itemId !== undefined) ref('house.disputes[' + i + '].itemId', disputes[i].itemId, items, 'a house item', true);
+	}
+}
+
+/**
+ * Every bottle tier on every pairing: the wine is a house wine with list
+ * 'bottle' (a wine that is not in the house at all is checkRefs' to name),
+ * its printed bottle price sits in the tier's band, a half bottle is
+ * HALF_SIZE, and the why and the line to say are there and within
+ * BOTTLE_WORDS.
+ */
+function checkBottles(house: House, add: Add): void {
+	const wines = new Map<string, Raw>();
+	for (const w of listOf(house, 'wines')) if (typeof w.id === 'string') wines.set(w.id, w);
+	const dishes = listOf(house, 'dishes');
+	for (let i = 0; i < dishes.length; i++) {
+		const pairing = dishes[i].pairing;
+		if (!isMark(pairing) || !pairing.value || typeof pairing.value !== 'object') continue;
+		const bottles = (pairing.value as Raw).bottles;
+		if (!bottles || typeof bottles !== 'object') continue;
+		for (const tier of BOTTLE_TIERS) {
+			const pick = (bottles as Raw)[tier];
+			if (!pick || typeof pick !== 'object') continue;
+			const at = 'house.dishes[' + i + '].pairing.value.bottles.' + tier;
+			const p = pick as Raw;
+			for (const k of ['why', 'sayIt']) {
+				const text = typeof p[k] === 'string' ? (p[k] as string) : '';
+				if (!text.trim()) add(at + '.' + k, 'tier', 'the ' + tier + ' bottle has no ' + (k === 'why' ? 'why' : 'line to say'));
+				else if (wordCount(text) > BOTTLE_WORDS) add(at + '.' + k, 'word-cap', wordCount(text) + ' words; the cap on a bottle tier is ' + BOTTLE_WORDS);
+			}
+			const w = typeof p.wineId === 'string' ? wines.get(p.wineId) : undefined;
+			if (!w) continue;
+			const name = typeof w.name === 'string' ? w.name : String(p.wineId);
+			if (wineListOf(w) !== 'bottle') {
+				add(at + '.wineId', 'tier', name + ' is not on the bottle list');
+				continue;
+			}
+			if (tier === 'half') {
+				if (foldSize(typeof w.size === 'string' ? w.size : '') !== HALF_SIZE) add(at + '.wineId', 'tier', name + ' is not a ' + HALF_SIZE + ' half bottle');
+				continue;
+			}
+			const dollars = printedDollars(typeof w.bottle === 'string' ? w.bottle : '');
+			if (!Number.isFinite(dollars)) add(at + '.wineId', 'tier', name + ' prints no bottle price');
+			else if (!inBottleBand(tier, dollars)) add(at + '.wineId', 'tier', name + ' at ' + dollars + ' dollars is outside the ' + tier + ' band');
+		}
 	}
 }
 
@@ -448,6 +504,7 @@ export function validateHouse(house: House, opts: ValidateOptions = {}): { probl
 	checkWordCaps(house, add);
 	checkRefs(house, add);
 	checkPrinciples(house, add);
+	checkBottles(house, add);
 	if (typeof opts.sourceText === 'string') checkPrices(house, opts.sourceText, add);
 	checkMarks(house, add);
 	checkServiceNotes(house, add);

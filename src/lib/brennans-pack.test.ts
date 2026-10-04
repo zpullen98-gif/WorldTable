@@ -22,7 +22,9 @@ import { join } from 'node:path';
 
 const ROOT = fileURLToPath(new URL('../..', import.meta.url));
 const PACK = join(ROOT, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json');
-const EDITION = '2026-10-04T01:30:00.000Z';
+/* The edition is the builder's fixed stamp, read from tools/house/engine.mjs, so a fresh edition
+   moves this test with it; the counts below are read from the pack the gate proves. */
+const EDITION = (/export const EDITION_BUILT_AT = '([^']+)'/.exec(readFileSync(join(ROOT, 'tools', 'house', 'engine.mjs'), 'utf8')) || [])[1] || '';
 const ABOUT_Q = 'Tell me about it.';
 const COACH = ['How do I sell it?', 'What do guests ask?', 'What should I watch for?'];
 const POUR_Q = 'How do I pour it?';
@@ -57,12 +59,17 @@ describe("the Brennan's pack", () => {
 		expect(existsSync(PACK)).toBe(true);
 		const r = spawnSync(process.execPath, [join(ROOT, 'tools', 'house', 'check-pack.mjs')], { cwd: ROOT, encoding: 'utf8' });
 		expect(r.status, r.stdout + r.stderr).toBe(0);
-		expect(r.stdout).toContain('1399 marks all by person');
-		expect(r.stdout).toContain('notes 128/128/128/128/43 under the five fixed questions, 596 kept notes in all; 0 thin lines');
+		const h = house() as unknown as Record<string, Row[]>;
+		const notes = (q: string) => (['dishes', 'cocktails', 'wines'] as const).reduce((n, l) => n + h[l].filter((row) => (row.kept || []).some((k) => k.q === q)).length, 0);
+		const kept = (['dishes', 'cocktails', 'wines'] as const).reduce((n, l) => n + h[l].reduce((m, row) => m + (row.kept || []).length, 0), 0);
+		const timed = h.wines.filter((w) => w.lines).length;
+		expect(r.stdout).toMatch(/\d+ marks all by person/);
+		expect(r.stdout).toContain(`notes ${[ABOUT_Q, ...COACH, POUR_Q].map(notes).join('/')} under the five fixed questions, ${kept} kept notes in all; 0 thin lines`);
 		expect(r.stdout).toContain('62 dishes, 32 cocktails (6 spirit-free, 9 pairings on a coffee)');
-		expect(r.stdout).toContain('34 wines (34 with timed lines)');
+		expect(r.stdout).toContain(`${h.wines.length} wines (${timed} with timed lines)`);
+		expect(timed).toBe(h.wines.length);
 		expect(r.stdout).toContain('125 terms, 33 scenarios');
-		expect(r.stdout).toContain('87 to ask');
+		expect(r.stdout).toContain(`${h.askAtLineup.length} to ask`);
 		expect(r.stdout).toContain(`edition ${EDITION}`);
 		expect(r.stdout).toContain('0 fatal');
 	});

@@ -479,6 +479,31 @@ overrides.entries.forEach((e, n) => {
 	}
 	/* A tombstone, on the house, for a record the shipped pack held that this edition no longer builds:
 	   value { id, was, tombstone }, 'was' naming it for a reader. The id must not be in the new house. */
+	/* The bottles offered with a dish, by tier: value { value?, classic?, splurge?, half? }, each tier
+	   { wine, why, sayIt } with the wine named as the house names it (a wine:+ entry's name). The names
+	   resolve through wineId at assembly, where the dish must carry a pairing and every wine must be
+	   on the bottle list; the validator then holds each tier to its price band (the half to 375ml) and
+	   the why and the line to 25 words. Several entries may tier one dish, but no tier twice. */
+	if (op === 'bottles') {
+		if (!rec || list !== 'dishes') fail(`${REL(OVERRIDES)} entry ${n}: bottles goes on a dish (dish:<name>)`);
+		const v = e.value;
+		if (!v || typeof v !== 'object' || Array.isArray(v)) fail(`${REL(OVERRIDES)} entry ${n}: bottles needs value { value?, classic?, splurge?, half? }`);
+		const tiers = Object.keys(v);
+		if (!tiers.length) fail(`${REL(OVERRIDES)} entry ${n}: bottles names no tier`);
+		rec.bottles = rec.bottles || {};
+		for (const tier of tiers) {
+			if (!C.BOTTLE_TIERS.includes(tier)) fail(`${REL(OVERRIDES)} entry ${n}: ${tier} is not a tier; the tiers are ${C.BOTTLE_TIERS.join(', ')}`);
+			const t = v[tier];
+			const str = (x) => typeof x === 'string' && x.trim() !== '';
+			if (!t || !str(t.wine) || !str(t.why) || !str(t.sayIt)) fail(`${REL(OVERRIDES)} entry ${n}: the ${tier} tier needs { wine, why, sayIt }, each a string`);
+			for (const k of Object.keys(t)) if (!['wine', 'why', 'sayIt'].includes(k)) fail(`${REL(OVERRIDES)} entry ${n}: the ${tier} tier carries ${k}; a tier is { wine, why, sayIt }`);
+			if (rec.bottles[tier]) fail(`${REL(OVERRIDES)} entry ${n}: ${e.target} already has a ${tier} tier (entry ${rec.bottles[tier].n})`);
+			rec.bottles[tier] = { wine: t.wine, why: t.why, sayIt: t.sayIt, n };
+		}
+		overrideAt.set(pathOf(list, rec, 'bottles'), n);
+		applied.push({ n, op, target: e.target });
+		return;
+	}
 	if (op === 'tombstone') {
 		const v = e.value || {};
 		const at = typeof v.tombstone === 'string' ? Date.parse(v.tombstone) : NaN;
@@ -603,7 +628,20 @@ function newWine(v, n) {
 	need(v.parts && ['main', 'technique', 'sauce', 'sides', 'taste'].every((k) => str(v.parts[k])), 'all five parts');
 	need(v.lines && ['s10', 's20', 's45'].every((k) => str(v.lines[k])), 'all three timed lines');
 	need(v.firstPickFor === undefined || (Array.isArray(v.firstPickFor) && v.firstPickFor.every(str)), 'first picks named as dishes');
+	/* The list it is sold from: 'glass' (the default, the menus' own wines) or 'bottle' (the full bottle
+	   list, with a whole card for the floor). A bottle carries its bin and size as the list prints them
+	   and its bottle price, which the validator's band check and the price rule read. */
+	need(v.list === undefined || C.WINE_LISTS.includes(v.list), `list, one of ${C.WINE_LISTS.join(' or ')}`);
+	need(v.bin === undefined || typeof v.bin === 'string', 'a bin as a string');
+	need(v.size === undefined || typeof v.size === 'string', 'a size as a string');
+	/* The bin must be named, but may be blank where the list prints none (the house Champagne, Brennan's
+	   Essential, has no bin on the Binwise list of 3 October 2026): bin "" says so, and a missing key fails. */
+	if (v.list === 'bottle') {
+		need(typeof v.bin === 'string', 'bin (a bottle on the list carries its bin, "" only where the list prints none)');
+		for (const f of ['size', 'bottle']) need(str(v[f]), f + ' (a bottle on the list carries its size and bottle price)');
+	}
 	return {
+		list: v.list === 'bottle' ? 'bottle' : '', bin: v.bin || '', size: v.size || '',
 		name: v.name, section: v.section, group: v.group || v.section, meals: [...v.meals], price: v.price, prices: v.prices.map((p) => ({ meal: p.meal, printed: p.printed })),
 		producer: v.producer, wine: v.wine, vintage: v.vintage, region: v.region, grapes: [...v.grapes], style: v.style, made: v.parts.technique, taste: v.parts.taste,
 		glass: v.glass || '', bottle: v.bottle || '', pours: Array.isArray(v.pours) ? [...v.pours] : [],
@@ -760,9 +798,10 @@ for (const r of clean.dishes) {
 		put(d, 'pairing', mark({
 			wineId: wineId(p.wine, r.name), why: p.why || '', sayIt: p.sayIt || '', whyThisWine: p.whyThisWine || '', palate: p.palate || '',
 			principles: p.principles, secondId: p.second ? wineId(p.second, r.name) : '', secondWhy: p.secondWhy || '', stepUp: p.stepUp || '',
-			serve: p.serve || '', avoid: p.avoid || '', zeroProofId: zp, zeroProofWhy: zpWhy.trim()
+			serve: p.serve || '', avoid: p.avoid || '', zeroProofId: zp, zeroProofWhy: zpWhy.trim(),
+			...bottleTiers(r)
 		}));
-	}
+	} else if (r.bottles) fail(`${r.name}: the bottles override (entry ${Object.values(r.bottles)[0].n}) needs a dish with a pairing`);
 	put(d, 'kept', keptNotes(r.kept));
 	d.serviceNote = r.serviceNote || '';
 	d.ts = BUILD_TS;
@@ -771,6 +810,10 @@ for (const r of clean.dishes) {
 for (const r of clean.wines) {
 	const w = itemBase(r, 'wines');
 	Object.assign(w, { producer: r.producer, wine: r.wine, vintage: r.vintage, region: r.region, grapes: r.grapes, style: r.style, glass: r.glass, bottle: r.bottle, pours: r.pours });
+	/* The bottle list's fields, written only when they say something, the normaliser's rule. */
+	put(w, 'list', r.list === 'bottle' ? 'bottle' : undefined);
+	put(w, 'bin', r.bin || undefined);
+	put(w, 'size', r.size || undefined);
 	put(w, 'say', mark(r.say || sayLine(r.name.replace(/\s*\(Coravin\)/, ''))));
 	put(w, 'guest', mark(r.sayIt));
 	const firstIds = r.firstPickFor.map((n) => itemId(n, r.name));
@@ -819,6 +862,22 @@ for (const t of clean.tastings) {
 		})),
 		note: t.note, ts: BUILD_TS
 	});
+}
+/* A dish's bottle tiers, named in overrides, as { bottles } with each wine resolved to its id, in
+   the engine's tier order; nothing when the dish has none. A wine not on the bottle list fails here,
+   before the validator would. */
+function bottleTiers(r) {
+	if (!r.bottles) return {};
+	const out = {};
+	for (const tier of C.BOTTLE_TIERS) {
+		const t = r.bottles[tier];
+		if (!t) continue;
+		const id = wineId(t.wine, `${r.name} ${tier} bottle (overrides entry ${t.n})`);
+		const w = clean.wines.find((x) => x.id === id);
+		if (!w || w.list !== 'bottle') fail(`${r.name} ${tier} bottle (overrides entry ${t.n}): ${t.wine} is not on the bottle list (its wine:+ entry needs list "bottle")`);
+		out[tier] = { wineId: id, why: t.why, sayIt: t.sayIt };
+	}
+	return { bottles: out };
 }
 /* A drink's upsells, named in overrides, as the ids of other house drinks: two or three, none the
    drink itself, none twice, every one a drink in this house. */
@@ -922,6 +981,9 @@ if (JSON.stringify(ledger) !== ledgerBefore) {
 }
 const zero = house.cocktails.filter((c) => c.zeroProof).length;
 const coffeeLinks = house.dishes.filter((d) => d.pairing && d.pairing.value.zeroProofId && /coffee/i.test((house.cocktails.find((c) => c.id === d.pairing.value.zeroProofId) || {}).family || '')).length;
+const floorBottles = house.wines.filter((w) => w.list === 'bottle').length;
+const tiered = house.dishes.filter((d) => d.pairing && d.pairing.value.bottles).length;
+console.log(`build-brennans: ${floorBottles} of ${house.wines.length} wines are on the bottle list; ${tiered} dishes carry bottle tiers`);
 console.log(`build-brennans: ${coffeeLinks} pairings take a coffee as their zero-proof pick; ${house.wines.filter((w) => w.lines).length} of ${house.wines.length} wines carry the timed lines`);
 console.log(`build-brennans: ${REL(OUT)}: ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free), ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask at lineup, ${house.disputes.length} disputes; ${overrides.entries.length} overrides applied (${applied.filter((a) => a.skipped).length} skipped), ${principleChanges.length} principles mapped, ${dashLog.length} strings dash-stripped (${dashLog.filter((d) => d.override !== undefined).length} set by an override), ${spellLog.length} strings respelled American, ${minted.length} ids minted`);
 if (principleChanges.length && args.includes('--verbose')) for (const p of principleChanges) console.log('  principle ' + p.dish + ': ' + p.from + ' to ' + p.to);

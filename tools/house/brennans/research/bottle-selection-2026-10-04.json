@@ -1,0 +1,4593 @@
+{
+ "readOn": "2026-10-03",
+ "source": "research/winelist-2026-10-03.json (Binwise list pasted 3 October 2026); prices as printed, per bottle",
+ "selectedOn": "2026-10-04",
+ "bands": {
+  "value": "under $100",
+  "classic": "$100 to $250",
+  "splurge": "over $250",
+  "half": "375ml"
+ },
+ "bottles": [
+  {
+   "key": "cesarini-sforza-rose-brut-trento-nv",
+   "n": 15,
+   "bin": "5123",
+   "name": "Cesarini Sforza Rosé Brut Trento",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 55,
+   "catalogueSection": "Selections Under $100 > Sparkling",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "jansz-premier-cuvee-brut-tasmania-2022",
+   "n": 594,
+   "bin": "31551",
+   "name": "Jansz \"Premier Cuvée Brut Tasmania",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 65,
+   "catalogueSection": "International ~ Sparkling > Australia",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "chapel-down-rose-brut-kent-nv",
+   "n": 16,
+   "bin": "1628",
+   "name": "Chapel Down Rosé Brut Kent",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 75,
+   "catalogueSection": "Selections Under $100 > Sparkling",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "ridgeview-bloomsbury-brut-sussex-nv",
+   "n": 598,
+   "bin": "31471",
+   "name": "Ridgeview \"Bloomsbury\" Brut Sussex",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 75,
+   "catalogueSection": "International ~ Sparkling > England",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "domaine-huet-petillant-vouvray-fr-2019",
+   "n": 17,
+   "bin": "32641",
+   "name": "Domaine Huet Pétillant Vouvray FR",
+   "vintage": "2019",
+   "size": "750ml",
+   "price": 90,
+   "catalogueSection": "Selections Under $100 > Sparkling",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "ferrari-rose-brut-nv",
+   "n": 608,
+   "bin": "31232",
+   "name": "Ferrari Rosé Brut",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 95,
+   "catalogueSection": "International ~ Sparkling > Italy",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "jm-seleque-solessence-extra-brut-nv",
+   "n": 376,
+   "bin": "32252",
+   "name": "JM Sélèque \"Solessence\" Extra Brut",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 100,
+   "catalogueSection": "Champagne > Grower Producers ~ Vallée de la Marne",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "billecart-salmon-reserve-brut-nv",
+   "n": 438,
+   "bin": "6020",
+   "name": "Billecart-Salmon \"Réserve\" Brut",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 115,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "classic",
+    "anchor"
+   ]
+  },
+  {
+   "key": "pierre-paillard-grand-cru-les-parcelles-xviii-nv",
+   "n": 386,
+   "bin": "3161",
+   "name": "Pierre Paillard Grand Cru \"Les Parcelles XVIII\" Extra Brut",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 120,
+   "catalogueSection": "Champagne > Grower Producers ~ Vallée de la Marne",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "louis-roederer-collection-244-brut-nv",
+   "n": 535,
+   "bin": "32621",
+   "name": "Louis Roederer \"Collection 244\" Brut",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 120,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "chartogne-taillet-rose-brut-nv",
+   "n": 342,
+   "bin": "31718",
+   "name": "Chartogne-Taillet Rosé Brut",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 125,
+   "catalogueSection": "Champagne > Grower Producers ~ Montagne de Reims",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "larmandier-bernier-premier-cru-longitude-extra-brut-nv",
+   "n": 408,
+   "bin": "31911",
+   "name": "Larmandier-Bernier Premier Cru \"Longitude\" Extra Brut",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 135,
+   "catalogueSection": "Champagne > Grower Producers ~ Côtes de Blancs",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "brennan-s-essential-by-piper-heidsieck-extra-nv",
+   "n": 557,
+   "bin": "",
+   "name": "Brennan's Essential by Piper-Heidsieck Extra Brut",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 140,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "classic",
+    "anchor"
+   ]
+  },
+  {
+   "key": "veuve-clicquot-yellow-label-brut-nv",
+   "n": 589,
+   "bin": "3226",
+   "name": "Veuve Clicquot \"Yellow Label\" Brut",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 155,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "anchor",
+    "famous"
+   ]
+  },
+  {
+   "key": "moet-chandon-nectar-imperial-rose-demi-sec-nv",
+   "n": 542,
+   "bin": "32453",
+   "name": "Moet & Chandon Nectar Imperial Rosé Demi Sec",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 180,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "charles-heidsieck-reserve-brut-nv",
+   "n": 473,
+   "bin": "32362",
+   "name": "Charles Heidsieck \"Réserve\" Brut",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 210,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "bollinger-special-cuvee-brut-nv",
+   "n": 457,
+   "bin": "32331",
+   "name": "Bollinger \"Special Cuvée\" Brut",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 250,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "classic",
+    "anchor"
+   ]
+  },
+  {
+   "key": "armand-de-brignac-gold-brut-nv",
+   "n": 436,
+   "bin": "32573",
+   "name": "Armand de Brignac \"Gold\" Brut",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 325,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "pol-roger-blanc-de-blancs-brut-2015",
+   "n": 572,
+   "bin": "34202",
+   "name": "Pol Roger \"Blanc de Blancs\" Brut",
+   "vintage": "2015",
+   "size": "750ml",
+   "price": 335,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "bollinger-pntx20-brut-nv",
+   "n": 467,
+   "bin": "32222",
+   "name": "Bollinger \"PNTX20\" Brut",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 345,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "billecart-salmon-cuvee-elisabeth-salmon-rose-brut-2009",
+   "n": 448,
+   "bin": "3223",
+   "name": "Billecart-Salmon \"Cuvée Elisabeth Salmon\" Rosé Brut",
+   "vintage": "2009",
+   "size": "750ml",
+   "price": 450,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "bollinger-la-grande-annee-brut-2015",
+   "n": 465,
+   "bin": "29566",
+   "name": "Bollinger \"La Grande Année\" Brut",
+   "vintage": "2015",
+   "size": "750ml",
+   "price": 495,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "jacques-selosse-initial-blanc-de-blancs-10-nv",
+   "n": 405,
+   "bin": "31713",
+   "name": "Jacques Selosse \"Initial\" Blanc de Blancs (10.16.23) Brut",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 560,
+   "catalogueSection": "Champagne > Grower Producers ~ Côtes de Blancs",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "krug-grande-cuvee-170th-edition-brut-nv",
+   "n": 528,
+   "bin": "31251",
+   "name": "Krug \"Grande Cuvée 170th Edition\" Brut",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 615,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "splurge",
+    "famous"
+   ]
+  },
+  {
+   "key": "rare-brut-2013",
+   "n": 568,
+   "bin": "32471",
+   "name": "Rare Brut",
+   "vintage": "2013",
+   "size": "750ml",
+   "price": 650,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "louis-roederer-cristal-brut-2015",
+   "n": 538,
+   "bin": "31943",
+   "name": "Louis Roederer \"Cristal\" Brut",
+   "vintage": "2015",
+   "size": "750ml",
+   "price": 775,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "splurge",
+    "famous"
+   ]
+  },
+  {
+   "key": "krug-rose-brut-nv",
+   "n": 529,
+   "bin": "31481",
+   "name": "Krug Rosé Brut",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 865,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "dom-perignon-p2-brut-2006",
+   "n": 495,
+   "bin": "34108",
+   "name": "Dom Pérignon \" P2\" Brut",
+   "vintage": "2006",
+   "size": "750ml",
+   "price": 1260,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "salon-le-mesnil-blanc-de-blancs-brut-2013",
+   "n": 580,
+   "bin": "32684",
+   "name": "Salon \"Le Mesnil\" Blanc de Blancs Brut",
+   "vintage": "2013",
+   "size": "750ml",
+   "price": 2080,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Champagne bottles",
+   "group": "cards-a",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "louis-jadot-villages-2021-375ml",
+   "n": 2193,
+   "bin": "32721",
+   "name": "Louis Jadot Villages • 375 ml Half-bottle",
+   "vintage": "2021",
+   "size": "375ml",
+   "price": 25,
+   "catalogueSection": "France ~ Burgundy ~ Red > Beaujolais",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "chalk-hill-2021-375ml",
+   "n": 1315,
+   "bin": "14872",
+   "name": "Chalk Hill • 375 ml Half-bottle",
+   "vintage": "2021",
+   "size": "375ml",
+   "price": 30,
+   "catalogueSection": "United States ~ Chardonnay > California > Sonoma County",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "duckhorn-north-coast-2023-375ml",
+   "n": 1380,
+   "bin": "15263",
+   "name": "Duckhorn North Coast • 375ml Half-bottle",
+   "vintage": "2023",
+   "size": "375ml",
+   "price": 35,
+   "catalogueSection": "United States ~ Sauvignon Blanc > California",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "thierry-pascale-matrot-2022-375ml",
+   "n": 708,
+   "bin": "32852",
+   "name": "Thierry & Pascale Matrot • 375ml Half-bottle",
+   "vintage": "2022",
+   "size": "375ml",
+   "price": 45,
+   "catalogueSection": "France ~ Burgundy ~ White > Bourgogne",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "tribaut-schloesser-origine-brut-nv-375ml",
+   "n": 390,
+   "bin": "32361",
+   "name": "Tribaut-Schloesser \"Origine\" Brut • 375ml Half-bottle",
+   "vintage": "NV",
+   "size": "375ml",
+   "price": 50,
+   "catalogueSection": "Champagne > Grower Producers ~ Vallée de la Marne",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "domaine-huet-le-haut-lieu-vouvray-sec-2019-375ml",
+   "n": 643,
+   "bin": "32962",
+   "name": "Domaine Huet \"Le Haut Lieu\" Vouvray Sec • 375ml Half-bottle",
+   "vintage": "2019",
+   "size": "375ml",
+   "price": 50,
+   "catalogueSection": "France ~ Loire ~ White > Vouvray & Touraine",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "brundlmayer-terrassen-classic-gruner-veltliner-2023-375ml",
+   "n": 1187,
+   "bin": "32931",
+   "name": "Bründlmayer \"Terrassen\" Classic Grüner Veltliner• 375ml Half-bottle",
+   "vintage": "2023",
+   "size": "375ml",
+   "price": 50,
+   "catalogueSection": "Austria & Hungary > Kamptal",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "domaine-raspail-ay-gigondas-2021-375ml",
+   "n": 2609,
+   "bin": "32733",
+   "name": "Domaine Raspail-Ay Gigondas • 375 ml Half-bottle",
+   "vintage": "2021",
+   "size": "375ml",
+   "price": 55,
+   "catalogueSection": "France ~ Rhone ~ Red > Other Côte Du Rhône",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "ferrari-brut-trento-nv-375ml",
+   "n": 606,
+   "bin": "32833",
+   "name": "Ferrari Brut Trento • 375ml Half-bottle",
+   "vintage": "NV",
+   "size": "375ml",
+   "price": 60,
+   "catalogueSection": "International ~ Sparkling > Italy",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "domaine-huet-le-mont-vouvray-demi-sec-2023-375ml",
+   "n": 645,
+   "bin": "32952",
+   "name": "Domaine Huet \"Le Mont\" Vouvray Demi-Sec • 375ml Half-bottle",
+   "vintage": "2023",
+   "size": "375ml",
+   "price": 60,
+   "catalogueSection": "France ~ Loire ~ White > Vouvray & Touraine",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "duckhorn-napa-valley-2020-375ml",
+   "n": 3066,
+   "bin": "14072",
+   "name": "Duckhorn Napa Valley • 375ml Half-bottle",
+   "vintage": "2020",
+   "size": "375ml",
+   "price": 60,
+   "catalogueSection": "United States ~ Other ~ Red > Merlot",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "nicolas-feuillatte-reserve-brut-nv-375ml",
+   "n": 545,
+   "bin": "32753",
+   "name": "Nicolas Feuillatte \"Reserve\" Brut • 375ml Half-bottle",
+   "vintage": "NV",
+   "size": "375ml",
+   "price": 65,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "domaine-louis-michel-montmains-2023-375ml",
+   "n": 750,
+   "bin": "32852",
+   "name": "Domaine Louis Michel \"Montmains\" • 375ml Half-bottle",
+   "vintage": "2023",
+   "size": "375ml",
+   "price": 65,
+   "catalogueSection": "France ~ Burgundy ~ White > Chablis Premier Cru",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "bergstrom-reserve-willamette-valley-2022-375ml",
+   "n": 2708,
+   "bin": "32863",
+   "name": "Bergstrom \"Reserve\" Willamette Valley • 375 ml Half-bottle",
+   "vintage": "2022",
+   "size": "375ml",
+   "price": 65,
+   "catalogueSection": "United States ~ Pinot Noir > Oregon",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "schramsberg-blanc-de-blancs-north-coast-2021-375ml",
+   "n": 616,
+   "bin": "3274",
+   "name": "Schramsberg \"Blanc de Blancs\" North Coast • 375ml Half-bottle",
+   "vintage": "2021",
+   "size": "375ml",
+   "price": 70,
+   "catalogueSection": "International ~ Sparkling > United States",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "ridge-vineyards-lytton-springs-dry-creek-valley-2021-375ml",
+   "n": 3091,
+   "bin": "32922",
+   "name": "Ridge Vineyards \"Lytton Springs\" Dry Creek Valley • 375 ml Half-bottle",
+   "vintage": "2021",
+   "size": "375ml",
+   "price": 70,
+   "catalogueSection": "United States ~ Other ~ Red > Zinfandel",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "brundlmayer-heiligenstein-riesling-2022-375ml",
+   "n": 1186,
+   "bin": "32841",
+   "name": "Bründlmayer \"Heiligenstein\" Riesling • 375ml Half-bottle",
+   "vintage": "2022",
+   "size": "375ml",
+   "price": 80,
+   "catalogueSection": "Austria & Hungary > Kamptal",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "dr-hermann-erdener-pralat-auslese-2014-375ml",
+   "n": 1215,
+   "bin": "31122",
+   "name": "Dr. Hermann \"Erdener Prälat\" Auslese • 375ml Half-bottle",
+   "vintage": "2014",
+   "size": "375ml",
+   "price": 80,
+   "catalogueSection": "Germany ~ White > Riesling > Mosel",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half",
+    "anchor"
+   ]
+  },
+  {
+   "key": "laurent-perrier-harmony-demi-sec-nv-375ml",
+   "n": 533,
+   "bin": "32732",
+   "name": "Laurent Perrier \"Harmony\" Demi Sec • 375ml Half-bottle",
+   "vintage": "NV",
+   "size": "375ml",
+   "price": 85,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "ridge-vineyards-essence-zinfandel-sonoma-2014-375ml",
+   "n": 3535,
+   "bin": "19242",
+   "name": "Ridge Vineyards \"Essence\" Zinfandel Sonoma • 375ml",
+   "vintage": "2014",
+   "size": "375ml",
+   "price": 105,
+   "catalogueSection": "Dessert Wines > United States",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "bouchard-pere-fils-clos-de-la-mousse-2022-375ml",
+   "n": 1992,
+   "bin": "32712",
+   "name": "Bouchard Père & Fils \"Clos de la Mousse\" • 375 ml Half-bottle",
+   "vintage": "2022",
+   "size": "375ml",
+   "price": 110,
+   "catalogueSection": "France ~ Burgundy ~ Red > Beaune Premier Cru",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "ridge-vineyards-estate-santa-cruz-mountains-2020-375ml",
+   "n": 3024,
+   "bin": "32942",
+   "name": "Ridge Vineyards \"Estate\" Santa Cruz Mountains • 375ml Half-bottle",
+   "vintage": "2020",
+   "size": "375ml",
+   "price": 110,
+   "catalogueSection": "United States ~ Cabernet Sauvignon > Central Coast - Cabernet Sauvignon",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "louis-jadot-2022-375ml",
+   "n": 864,
+   "bin": "32752",
+   "name": "Louis Jadot • 375ml Half-bottle",
+   "vintage": "2022",
+   "size": "375ml",
+   "price": 115,
+   "catalogueSection": "France ~ Burgundy ~ White > Meursault",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "veuve-fourny-et-fils-premier-cru-blanc-nv-375ml",
+   "n": 426,
+   "bin": "32921",
+   "name": "Veuve Fourny et Fils Premier Cru Blanc de Blancs Extra Brut • 375ml Half-bottle",
+   "vintage": "NV",
+   "size": "375ml",
+   "price": 120,
+   "catalogueSection": "Champagne > Grower Producers ~ Côtes de Blancs",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "la-cigarerra-manzanilla-sanlucar-de-barrameda-nv-375ml",
+   "n": 3551,
+   "bin": "14861",
+   "name": "La Cigarerra Manzanilla Sanlúcar de Barrameda • 375ml",
+   "vintage": "NV",
+   "size": "375ml",
+   "price": 120,
+   "catalogueSection": "Fortified Wines > Spain",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "dow-s-2000-375ml",
+   "n": 3558,
+   "bin": "192843",
+   "name": "Dow's • 375ml",
+   "vintage": "2000",
+   "size": "375ml",
+   "price": 120,
+   "catalogueSection": "Fortified Wines > Portugal",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "niepoort-colheita-1997-375ml",
+   "n": 3565,
+   "bin": "192423",
+   "name": "Niepoort Colheita • 375ml Half-bottle",
+   "vintage": "1997",
+   "size": "375ml",
+   "price": 120,
+   "catalogueSection": "Fortified Wines > Portugal",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "veuve-fourny-et-fils-premier-cru-rose-nv-375ml",
+   "n": 425,
+   "bin": "32924",
+   "name": "Veuve Fourny et Fils Premier Cru Rosé Brut • 375ml Half-bottle",
+   "vintage": "NV",
+   "size": "375ml",
+   "price": 125,
+   "catalogueSection": "Champagne > Grower Producers ~ Côtes de Blancs",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "domaine-henri-gouges-2021-375ml",
+   "n": 1944,
+   "bin": "32844",
+   "name": "Domaine Henri Gouges • 375 ml Half-bottle",
+   "vintage": "2021",
+   "size": "375ml",
+   "price": 130,
+   "catalogueSection": "France ~ Burgundy ~ Red > Nuits-Saint-Georges",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "donhoff-oberhauser-brucke-goldkapsel-auslese-2023-375ml",
+   "n": 1267,
+   "bin": "32821",
+   "name": "Dönhoff \"Oberhäuser Brücke\" Goldkapsel Auslese • 375ml Half-bottle",
+   "vintage": "2023",
+   "size": "375ml",
+   "price": 135,
+   "catalogueSection": "Germany ~ White > Riesling > Nahe",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "chateau-suduirant-sauternes-2016-375ml",
+   "n": 3521,
+   "bin": "192321",
+   "name": "Château Suduirant Sauternes • 375ml Half-bottle",
+   "vintage": "2016",
+   "size": "375ml",
+   "price": 135,
+   "catalogueSection": "Dessert Wines > France",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "donhoff-niederhauser-hermannshohle-goldkapsel-auslese-2023-375ml",
+   "n": 1265,
+   "bin": "32843",
+   "name": "Dönhoff \"Niederhäuser Hermannshöhle\" Goldkapsel Auslese • 375ml Half-bottle",
+   "vintage": "2023",
+   "size": "375ml",
+   "price": 145,
+   "catalogueSection": "Germany ~ White > Riesling > Nahe",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "grgich-hills-violetta-late-harvest-napa-valley-2012-375ml",
+   "n": 3533,
+   "bin": "19291",
+   "name": "Grgich Hills \"Violetta\" Late Harvest Napa Valley • 375ml",
+   "vintage": "2012",
+   "size": "375ml",
+   "price": 145,
+   "catalogueSection": "Dessert Wines > United States",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "chateau-troplong-mondot-1er-grand-cru-classe-2020-375ml",
+   "n": 2429,
+   "bin": "32933",
+   "name": "Château Troplong-Mondot 1er Grand Cru Classé B • 375ml Half-bottle",
+   "vintage": "2020",
+   "size": "375ml",
+   "price": 175,
+   "catalogueSection": "France ~ Bordeaux ~ Red > Saint-Émilion",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "joseph-phelps-insignia-napa-valley-2011-375ml",
+   "n": 2899,
+   "bin": "1568",
+   "name": "Joseph Phelps \"Insignia\" Napa Valley • 375ml Half-bottle",
+   "vintage": "2011",
+   "size": "375ml",
+   "price": 240,
+   "catalogueSection": "United States ~ Cabernet Sauvignon > Napa Valley - Cabernet Sauvignon",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "keller-pius-auslese-2022-375ml",
+   "n": 1259,
+   "bin": "32951",
+   "name": "Keller \"PIUS\" Auslese • 375ml Half-bottle",
+   "vintage": "2022",
+   "size": "375ml",
+   "price": 245,
+   "catalogueSection": "Germany ~ White > Riesling > Rheinhessen",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "half"
+   ]
+  },
+  {
+   "key": "opus-one-napa-valley-2015-375ml",
+   "n": 2935,
+   "bin": "32762",
+   "name": "Opus One Napa Valley • 375ml Half-bottle",
+   "vintage": "2015",
+   "size": "375ml",
+   "price": 275,
+   "catalogueSection": "United States ~ Cabernet Sauvignon > Napa Valley - Cabernet Sauvignon",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "anchor",
+    "famous"
+   ]
+  },
+  {
+   "key": "chateau-d-yquem-sauternes-2015-375ml",
+   "n": 3525,
+   "bin": "1926",
+   "name": "Château d'Yquem Sauternes • 375ml Half-bottle",
+   "vintage": "2015",
+   "size": "375ml",
+   "price": 450,
+   "catalogueSection": "Dessert Wines > France",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "chateau-d-yquem-sauternes-2016-375ml",
+   "n": 3526,
+   "bin": "19271",
+   "name": "Château d'Yquem Sauternes • 375ml Half-bottle",
+   "vintage": "2016",
+   "size": "375ml",
+   "price": 450,
+   "catalogueSection": "Dessert Wines > France",
+   "floorSection": "Half-bottles",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "mas-de-valeriole-ve-mediterranee-fr-2025-1-5l",
+   "n": 197,
+   "bin": "1569",
+   "name": "Mas de Valeriole \"Vé\" Méditerranée FR • 1.5L Magnum",
+   "vintage": "2025",
+   "size": "1.5L",
+   "price": 85,
+   "catalogueSection": "Large Formats > Rosé • Large Format",
+   "floorSection": "Large formats",
+   "group": "cards-a",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "pierre-peters-cuvee-de-reserve-brut-nv-1-5l",
+   "n": 147,
+   "bin": "12494",
+   "name": "Pierre Péters \"Cuvée de Réserve\" Brut • 1.5L Magnum",
+   "vintage": "NV",
+   "size": "1.5L",
+   "price": 190,
+   "catalogueSection": "Large Formats > Champagne • Large Format",
+   "floorSection": "Large formats",
+   "group": "cards-a",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "jean-foillard-cote-du-py-morgon-beaujolais-2023-1-5l",
+   "n": 230,
+   "bin": "11371",
+   "name": "Jean Foillard \"Côte du Py\" Morgon Beaujolais • 1.5L Magnum",
+   "vintage": "2023",
+   "size": "1.5L",
+   "price": 250,
+   "catalogueSection": "Large Formats > Red • Large Format > France",
+   "floorSection": "Large formats",
+   "group": "cards-a",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "duckhorn-cabernet-sauvignon-napa-valley-2022-1-5l",
+   "n": 287,
+   "bin": "108222",
+   "name": "Duckhorn Cabernet Sauvignon Napa Valley • 1.5L Magnum",
+   "vintage": "2022",
+   "size": "1.5L",
+   "price": 255,
+   "catalogueSection": "Large Formats > Red • Large Format > United States",
+   "floorSection": "Large formats",
+   "group": "cards-a",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "billecart-salmon-brennan-s-80th-anniversary-sous-nv-1-5l",
+   "n": 119,
+   "bin": "117342",
+   "name": "Billecart-Salmon \"Brennan's 80th Anniversary Sous Bois\" Brut • 1.5L Magnum",
+   "vintage": "NV",
+   "size": "1.5L",
+   "price": 350,
+   "catalogueSection": "Large Formats > Champagne • Large Format",
+   "floorSection": "Large formats",
+   "group": "cards-a",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "chateau-cos-d-estournel-2eme-cru-classe-2015-1-5l",
+   "n": 200,
+   "bin": "33553",
+   "name": "Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux • 1.5L Magnum",
+   "vintage": "2015",
+   "size": "1.5L",
+   "price": 600,
+   "catalogueSection": "Large Formats > Red • Large Format > France",
+   "floorSection": "Large formats",
+   "group": "cards-a",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "j-j-prum-wehlener-sonnenuhr-riesling-gka-2015-1-5l",
+   "n": 173,
+   "bin": "12135",
+   "name": "J.J. Prum \"Wehlener Sonnenuhr\" Riesling GKA Mosel • 1.5L Magnum",
+   "vintage": "2015",
+   "size": "1.5L",
+   "price": 615,
+   "catalogueSection": "Large Formats > White • Large Format > Germany",
+   "floorSection": "Large formats",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "billecart-salmon-reserve-brut-nv-15l",
+   "n": 441,
+   "bin": "29001",
+   "name": "Billecart-Salmon \"Réserve\" Brut • 15L Nebuchadnezzar",
+   "vintage": "NV",
+   "size": "15L",
+   "price": 4900,
+   "catalogueSection": "Champagne > Grande Marques",
+   "floorSection": "Large formats",
+   "group": "cards-a",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "louis-michel-2022",
+   "n": 780,
+   "bin": "22411",
+   "name": "Louis Michel",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 80,
+   "catalogueSection": "France ~ Burgundy ~ White > Chablis",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "domaine-du-roc-des-boutires-en-bertilionne-2020",
+   "n": 1047,
+   "bin": "22762",
+   "name": "Domaine du Roc des Boutires \"En Bertilionne\" Pouilly-Fuissé",
+   "vintage": "2020",
+   "size": "750ml",
+   "price": 90,
+   "catalogueSection": "France ~ Burgundy ~ White > Mâconnais",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "jean-philippe-fichet-2023",
+   "n": 698,
+   "bin": "24742",
+   "name": "Jean-Philippe Fichet",
+   "vintage": "2023",
+   "size": "750ml",
+   "price": 95,
+   "catalogueSection": "France ~ Burgundy ~ White > Bourgogne",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "value",
+    "anchor"
+   ]
+  },
+  {
+   "key": "les-heritiers-du-comte-lafon-macon-milly-2023",
+   "n": 1051,
+   "bin": "25761",
+   "name": "Les Héritiers du Comte Lafon Mâcon Milly-Lamartine",
+   "vintage": "2023",
+   "size": "750ml",
+   "price": 100,
+   "catalogueSection": "France ~ Burgundy ~ White > Mâconnais",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "domaine-leflaive-macon-verze-2021",
+   "n": 1046,
+   "bin": "23211",
+   "name": "Domaine Leflaive Mâcon Verzé",
+   "vintage": "2021",
+   "size": "750ml",
+   "price": 160,
+   "catalogueSection": "France ~ Burgundy ~ White > Mâconnais",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "jean-paul-benoit-droin-vaillons-2023",
+   "n": 756,
+   "bin": "27663",
+   "name": "Jean-Paul & Benoît Droin \"Vaillons\"",
+   "vintage": "2023",
+   "size": "750ml",
+   "price": 175,
+   "catalogueSection": "France ~ Burgundy ~ White > Chablis Premier Cru",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "raymond-dupont-fahn-les-tillets-2022",
+   "n": 867,
+   "bin": "22143",
+   "name": "Raymond Dupont-Fahn \"Les Tillets\"",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 175,
+   "catalogueSection": "France ~ Burgundy ~ White > Meursault",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "bitouzet-prieur-les-corbins-2020",
+   "n": 847,
+   "bin": "26337",
+   "name": "Bitouzet-Prieur \"Les Corbins\"",
+   "vintage": "2020",
+   "size": "750ml",
+   "price": 210,
+   "catalogueSection": "France ~ Burgundy ~ White > Meursault",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "domaine-paul-pillot-le-charmois-2022",
+   "n": 875,
+   "bin": "2174",
+   "name": "Domaine Paul Pillot \"Le Charmois\"",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 215,
+   "catalogueSection": "France ~ Burgundy ~ White > Saint-Aubin Premier Cru",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "francois-carillon-2022",
+   "n": 926,
+   "bin": "34233",
+   "name": "François Carillon",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 275,
+   "catalogueSection": "France ~ Burgundy ~ White > Puligny-Montrachet",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "domaine-leflaive-2016",
+   "n": 920,
+   "bin": "21371",
+   "name": "Domaine Leflaive",
+   "vintage": "2016",
+   "size": "750ml",
+   "price": 340,
+   "catalogueSection": "France ~ Burgundy ~ White > Puligny-Montrachet",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "domaine-rene-et-vincent-dauvissat-les-preuses-2015",
+   "n": 714,
+   "bin": "211310",
+   "name": "Domaine René et Vincent Dauvissat \"Les Preuses\"",
+   "vintage": "2015",
+   "size": "750ml",
+   "price": 350,
+   "catalogueSection": "France ~ Burgundy ~ White > Chablis Grand Cru",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "domaine-des-comtes-lafon-clos-de-la-2022",
+   "n": 848,
+   "bin": "22123",
+   "name": "Domaine des Comtes Lafon \"Clos de la Baronne\"",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 425,
+   "catalogueSection": "France ~ Burgundy ~ White > Meursault",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "domaine-leflaive-sous-le-dos-d-ane-2017",
+   "n": 824,
+   "bin": "22252",
+   "name": "Domaine Leflaive \"Sous le Dos d'Ane\"",
+   "vintage": "2017",
+   "size": "750ml",
+   "price": 435,
+   "catalogueSection": "France ~ Burgundy ~ White > Meursault Premier Cru",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "domaine-roulot-2022",
+   "n": 857,
+   "bin": "271114",
+   "name": "Domaine Roulot",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 500,
+   "catalogueSection": "France ~ Burgundy ~ White > Meursault",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "domaine-coche-dury-2022",
+   "n": 675,
+   "bin": "34216",
+   "name": "Domaine Coche-Dury",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 690,
+   "catalogueSection": "France ~ Burgundy ~ White > Bourgogne",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "domaine-francois-raveneau-montee-de-tonnerre-2022",
+   "n": 745,
+   "bin": "223321",
+   "name": "Domaine François Raveneau \"Montée de Tonnerre\"",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 920,
+   "catalogueSection": "France ~ Burgundy ~ White > Chablis Premier Cru",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "domaine-leflaive-2015",
+   "n": 940,
+   "bin": "21139",
+   "name": "Domaine Leflaive",
+   "vintage": "2015",
+   "size": "750ml",
+   "price": 1850,
+   "catalogueSection": "France ~ Burgundy ~ White > Chevalier-Montrachet Grand Cru",
+   "floorSection": "White Burgundy",
+   "group": "cards-a",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "chateau-d-esclans-whispering-angel-cotes-de-2024",
+   "n": 1436,
+   "bin": "10421",
+   "name": "Château d'Esclans \"Whispering Angel\" Côtes de Provence",
+   "vintage": "2024",
+   "size": "750ml",
+   "price": 50,
+   "catalogueSection": "Rosé > France",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "loimer-lois-gruner-veltliner-2022",
+   "n": 1192,
+   "bin": "10312",
+   "name": "Loimer \"Lois\" Grüner Veltliner",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 55,
+   "catalogueSection": "Austria & Hungary > Kamptal",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "stein-weihwasser-feinherb-2023",
+   "n": 1238,
+   "bin": "22111",
+   "name": "Stein \"Weihwasser\" Feinherb",
+   "vintage": "2023",
+   "size": "750ml",
+   "price": 55,
+   "catalogueSection": "Germany ~ White > Riesling > Mosel",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "stein-palmberg-terrassen-spatlese-feinherb-2014",
+   "n": 1239,
+   "bin": "29362",
+   "name": "Stein \"Palmberg-Terrassen\" Spätlese-Feinherb",
+   "vintage": "2014",
+   "size": "750ml",
+   "price": 62,
+   "catalogueSection": "Germany ~ White > Riesling > Mosel",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "domaine-l-ecu-orthogneiss-2022",
+   "n": 624,
+   "bin": "34321",
+   "name": "Domaine L'Ecu \"Orthogneiss\"",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 70,
+   "catalogueSection": "France ~ Loire ~ White > Muscadet Sèvre-et-Maine",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "raul-perez-ultreia-godello-bierzo-2021",
+   "n": 1311,
+   "bin": "1319",
+   "name": "Rául Pérez \"Ultreia\" Godello Bierzo",
+   "vintage": "2021",
+   "size": "750ml",
+   "price": 70,
+   "catalogueSection": "Spain ~ White",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "domaine-de-la-pepiere-monnieres-st-fiacre-2020",
+   "n": 621,
+   "bin": "22341",
+   "name": "Domaine de la Pépière \"Monnières-St. Fiacre\"",
+   "vintage": "2020",
+   "size": "750ml",
+   "price": 75,
+   "catalogueSection": "France ~ Loire ~ White > Muscadet Sèvre-et-Maine",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "damien-laureau-l-alliance-savennieres-2022",
+   "n": 631,
+   "bin": "23221",
+   "name": "Damien Laureau \"L'Alliance\" Savennières",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 75,
+   "catalogueSection": "France ~ Loire ~ White > Anjou-Saumur",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "sandhi-sta-rita-hills-2021",
+   "n": 1357,
+   "bin": "13382",
+   "name": "Sandhi Sta. Rita Hills",
+   "vintage": "2021",
+   "size": "750ml",
+   "price": 75,
+   "catalogueSection": "United States ~ Chardonnay > California > Central Coast",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "trimbach-riesling-reserve-2020",
+   "n": 1107,
+   "bin": "25312",
+   "name": "Trimbach Riesling Reserve",
+   "vintage": "2020",
+   "size": "750ml",
+   "price": 85,
+   "catalogueSection": "France ~ Alsace ~ White > Riesling",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "domaine-huet-le-haut-lieu-vouvray-sec-2024",
+   "n": 644,
+   "bin": "31114",
+   "name": "Domaine Huet \"Le Haut Lieu\" Vouvray Sec",
+   "vintage": "2024",
+   "size": "750ml",
+   "price": 90,
+   "catalogueSection": "France ~ Loire ~ White > Vouvray & Touraine",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "au-bon-climat-sanford-benedict-sta-rita-2021",
+   "n": 1347,
+   "bin": "143431",
+   "name": "Au Bon Climat \"Sanford & Benedict\" Sta. Rita Hills",
+   "vintage": "2021",
+   "size": "750ml",
+   "price": 95,
+   "catalogueSection": "United States ~ Chardonnay > California > Central Coast",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "kumeu-river-estate-chardonnay-auckland-2022",
+   "n": 1423,
+   "bin": "12123",
+   "name": "Kumeu River \"Estate\" Chardonnay Auckland",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 95,
+   "catalogueSection": "International ~ White > New Zealand",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "cakebread-napa-valley-2023",
+   "n": 1328,
+   "bin": "134331",
+   "name": "Cakebread Napa Valley",
+   "vintage": "2023",
+   "size": "750ml",
+   "price": 100,
+   "catalogueSection": "United States ~ Chardonnay > California > Napa Valley",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "albert-boxler-2020",
+   "n": 1063,
+   "bin": "2173",
+   "name": "Albert Boxler",
+   "vintage": "2020",
+   "size": "750ml",
+   "price": 110,
+   "catalogueSection": "France ~ Alsace ~ White > Pinot Gris",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "gai-a-wild-ferment-assyrtiko-santorini-2023",
+   "n": 1289,
+   "bin": "1423",
+   "name": "Gai'a \"Wild Ferment\" Assyrtiko Santorini",
+   "vintage": "2023",
+   "size": "750ml",
+   "price": 110,
+   "catalogueSection": "Italy & Greece ~ White > Greece",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "classic",
+    "anchor"
+   ]
+  },
+  {
+   "key": "domaine-tempier-bandol-2024",
+   "n": 1440,
+   "bin": "23152",
+   "name": "Domaine Tempier Bandol",
+   "vintage": "2024",
+   "size": "750ml",
+   "price": 120,
+   "catalogueSection": "Rosé > France",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "jj-prum-wehlener-sonnenuhr-kabinett-2020",
+   "n": 1220,
+   "bin": "29361",
+   "name": "JJ Prum \"Wehlener Sonnenuhr\" Kabinett",
+   "vintage": "2020",
+   "size": "750ml",
+   "price": 135,
+   "catalogueSection": "Germany ~ White > Riesling > Mosel",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "domaine-huet-clos-du-bourg-vouvray-demi-2015",
+   "n": 640,
+   "bin": "25423",
+   "name": "Domaine Huet \"Clos du Bourg\" Vouvray Demi-Sec",
+   "vintage": "2015",
+   "size": "750ml",
+   "price": 145,
+   "catalogueSection": "France ~ Loire ~ White > Vouvray & Touraine",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "brundlmayer-alte-reben-gruner-veltliner-2023",
+   "n": 1182,
+   "bin": "23222",
+   "name": "Bründlmayer \"Alte Reben\" Grüner Veltliner",
+   "vintage": "2023",
+   "size": "750ml",
+   "price": 150,
+   "catalogueSection": "Austria & Hungary > Kamptal",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "chateau-carbonnieux-pessac-leognan-2016",
+   "n": 1151,
+   "bin": "236512",
+   "name": "Château Carbonnieux Pessac-Léognan",
+   "vintage": "2016",
+   "size": "750ml",
+   "price": 160,
+   "catalogueSection": "France ~ Other ~ White > Bordeaux",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "do-ferreiro-albarino-cepas-vellas-rias-baixas-2018",
+   "n": 1303,
+   "bin": "132342",
+   "name": "Do Ferreiro Albariño \"Cepas Vellas\" Rías Baixas",
+   "vintage": "2018",
+   "size": "750ml",
+   "price": 170,
+   "catalogueSection": "Spain ~ White",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "chateau-montelena-napa-valley-2023",
+   "n": 1331,
+   "bin": "13692",
+   "name": "Chateau Montelena Napa Valley",
+   "vintage": "2023",
+   "size": "750ml",
+   "price": 175,
+   "catalogueSection": "United States ~ Chardonnay > California > Napa Valley",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "domaine-de-trevallon-alpilles-2016",
+   "n": 1174,
+   "bin": "21132",
+   "name": "Domaine de Trévallon Alpilles",
+   "vintage": "2016",
+   "size": "750ml",
+   "price": 265,
+   "catalogueSection": "France ~ Other ~ White > Provence",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "pascal-cotat-lot-2024-chavignol-2024",
+   "n": 1447,
+   "bin": "28431",
+   "name": "Pascal Cotat \"Lot 2024\" Chavignol",
+   "vintage": "2024",
+   "size": "750ml",
+   "price": 270,
+   "catalogueSection": "Rosé > France",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "kongsgaard-napa-valley-2016",
+   "n": 1337,
+   "bin": "123232",
+   "name": "Kongsgaard Napa Valley",
+   "vintage": "2016",
+   "size": "750ml",
+   "price": 280,
+   "catalogueSection": "United States ~ Chardonnay > California > Napa Valley",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "franz-hirtzberger-honivogl-smaragd-gruner-veltliner-2022",
+   "n": 1201,
+   "bin": "287232",
+   "name": "Franz Hirtzberger \"Honivogl\" Smaragd Grüner Veltliner",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 320,
+   "catalogueSection": "Austria & Hungary > Wachau",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "pascal-cotat-les-monts-damnes-sancerre-2022",
+   "n": 660,
+   "bin": "28224",
+   "name": "Pascal Cotat \"Les Monts Damnés\" Sancerre",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 350,
+   "catalogueSection": "France ~ Loire ~ White > Pouilly-Fumé & Sancerre",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "f-e-trimbach-reserve-personnelle-2007",
+   "n": 1076,
+   "bin": "22755",
+   "name": "F.E. Trimbach \"Reserve Personnelle\"",
+   "vintage": "2007",
+   "size": "750ml",
+   "price": 360,
+   "catalogueSection": "France ~ Alsace ~ White > Pinot Gris",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "f-e-trimbach-clos-ste-hune-2007",
+   "n": 1093,
+   "bin": "22754",
+   "name": "F.E. Trimbach \"Clos Ste Hune\"",
+   "vintage": "2007",
+   "size": "750ml",
+   "price": 390,
+   "catalogueSection": "France ~ Alsace ~ White > Riesling",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "egon-muller-scharzhofberger-kabinett-2020",
+   "n": 1217,
+   "bin": "21964",
+   "name": "Egon Müller \"Scharzhofberger\" Kabinett",
+   "vintage": "2020",
+   "size": "750ml",
+   "price": 395,
+   "catalogueSection": "Germany ~ White > Riesling > Mosel",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "domaine-du-pelican-vin-jaune-arbois-2016",
+   "n": 1167,
+   "bin": "32816",
+   "name": "Domaine du Pélican Vin Jaune Arbois",
+   "vintage": "2016",
+   "size": "750ml",
+   "price": 655,
+   "catalogueSection": "France ~ Other ~ White > Savoie & Jura",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "chateau-haut-brion-pessac-leognan-2019",
+   "n": 1155,
+   "bin": "29921",
+   "name": "Château Haut-Brion Pessac-Léognan",
+   "vintage": "2019",
+   "size": "750ml",
+   "price": 2500,
+   "catalogueSection": "France ~ Other ~ White > Bordeaux",
+   "floorSection": "Other whites",
+   "group": "cards-a",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "domaine-coudert-clos-de-la-roilette-fleurie-2023",
+   "n": 2176,
+   "bin": "34574",
+   "name": "Domaine Coudert \"Clos de la Roilette\" Fleurie",
+   "vintage": "2023",
+   "size": "750ml",
+   "price": 65,
+   "catalogueSection": "France ~ Burgundy ~ Red > Beaujolais",
+   "floorSection": "Red Burgundy",
+   "group": "cards-b",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "domaine-faiveley-2022",
+   "n": 1501,
+   "bin": "22651",
+   "name": "Domaine Faiveley",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 90,
+   "catalogueSection": "France ~ Burgundy ~ Red > Bourgogne",
+   "floorSection": "Red Burgundy",
+   "group": "cards-b",
+   "roles": [
+    "value",
+    "anchor"
+   ]
+  },
+  {
+   "key": "marcel-lapierre-morgon-2023",
+   "n": 2197,
+   "bin": "289213",
+   "name": "Marcel Lapierre Morgon",
+   "vintage": "2023",
+   "size": "750ml",
+   "price": 95,
+   "catalogueSection": "France ~ Burgundy ~ Red > Beaujolais",
+   "floorSection": "Red Burgundy",
+   "group": "cards-b",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "jean-foillard-cote-du-py-morgon-2022",
+   "n": 2181,
+   "bin": "28362",
+   "name": "Jean Foillard \"Côte du Py\" Morgon",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 115,
+   "catalogueSection": "France ~ Burgundy ~ Red > Beaujolais",
+   "floorSection": "Red Burgundy",
+   "group": "cards-b",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "domaine-jean-grivot-les-charmois-2013",
+   "n": 1947,
+   "bin": "23374",
+   "name": "Domaine Jean Grivot \"Les Charmois\"",
+   "vintage": "2013",
+   "size": "750ml",
+   "price": 138,
+   "catalogueSection": "France ~ Burgundy ~ Red > Nuits-Saint-Georges",
+   "floorSection": "Red Burgundy",
+   "group": "cards-b",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "domaine-tollot-beaut-les-lavieres-2019",
+   "n": 1987,
+   "bin": "24761",
+   "name": "Domaine Tollot-Beaut \"Les Lavières\"",
+   "vintage": "2019",
+   "size": "750ml",
+   "price": 175,
+   "catalogueSection": "France ~ Burgundy ~ Red > Savigny-lès-Beaune Premier Cru",
+   "floorSection": "Red Burgundy",
+   "group": "cards-b",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "domaine-henri-gouges-les-pruliers-2016",
+   "n": 1922,
+   "bin": "25571",
+   "name": "Domaine Henri Gouges \"Les Pruliers\"",
+   "vintage": "2016",
+   "size": "750ml",
+   "price": 245,
+   "catalogueSection": "France ~ Burgundy ~ Red > Nuits-Saint-Georges Premier Cru",
+   "floorSection": "Red Burgundy",
+   "group": "cards-b",
+   "roles": [
+    "classic",
+    "anchor"
+   ]
+  },
+  {
+   "key": "domaine-joseph-drouhin-clos-des-mouches-2015",
+   "n": 1999,
+   "bin": "27151",
+   "name": "Domaine Joseph Drouhin \"Clos des Mouches\"",
+   "vintage": "2015",
+   "size": "750ml",
+   "price": 245,
+   "catalogueSection": "France ~ Burgundy ~ Red > Beaune Premier Cru",
+   "floorSection": "Red Burgundy",
+   "group": "cards-b",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "domaine-georges-roumier-clos-de-la-bussiere-2014",
+   "n": 1673,
+   "bin": "287142",
+   "name": "Domaine Georges Roumier \"Clos de la Bussière\"",
+   "vintage": "2014",
+   "size": "750ml",
+   "price": 320,
+   "catalogueSection": "France ~ Burgundy ~ Red > Morey-Saint-Denis Premier Cru",
+   "floorSection": "Red Burgundy",
+   "group": "cards-b",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "marquis-d-angerville-clos-des-ducs-2014",
+   "n": 2085,
+   "bin": "34351",
+   "name": "Marquis d'Angerville \"Clos des Ducs\"",
+   "vintage": "2014",
+   "size": "750ml",
+   "price": 380,
+   "catalogueSection": "France ~ Burgundy ~ Red > Volnay Premier Cru",
+   "floorSection": "Red Burgundy",
+   "group": "cards-b",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "domaine-jean-grivot-2011",
+   "n": 1792,
+   "bin": "26764",
+   "name": "Domaine Jean Grivot",
+   "vintage": "2011",
+   "size": "750ml",
+   "price": 450,
+   "catalogueSection": "France ~ Burgundy ~ Red > Echézeaux Grand Cru",
+   "floorSection": "Red Burgundy",
+   "group": "cards-b",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "domaine-comte-georges-de-vogue-vieilles-vignes-2012",
+   "n": 1702,
+   "bin": "22537",
+   "name": "Domaine Comte Georges de Vogüé Vieilles Vignes",
+   "vintage": "2012",
+   "size": "750ml",
+   "price": 1560,
+   "catalogueSection": "France ~ Burgundy ~ Red > Musigny Grand Cru",
+   "floorSection": "Red Burgundy",
+   "group": "cards-b",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "domaine-de-la-romanee-conti-2015",
+   "n": 1800,
+   "bin": "26733",
+   "name": "Domaine de la Romanée-Conti",
+   "vintage": "2015",
+   "size": "750ml",
+   "price": 1650,
+   "catalogueSection": "France ~ Burgundy ~ Red > Echézeaux Grand Cru",
+   "floorSection": "Red Burgundy",
+   "group": "cards-b",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "domaine-armand-rousseau-clos-saint-jacques-2019",
+   "n": 1573,
+   "bin": "23651",
+   "name": "Domaine Armand Rousseau \"Clos Saint Jacques\"",
+   "vintage": "2019",
+   "size": "750ml",
+   "price": 2300,
+   "catalogueSection": "France ~ Burgundy ~ Red > Gevrey-Chambertin Premier Cru",
+   "floorSection": "Red Burgundy",
+   "group": "cards-b",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "domaine-de-la-romanee-conti-2012",
+   "n": 1864,
+   "bin": "28426",
+   "name": "Domaine de la Romanée-Conti",
+   "vintage": "2012",
+   "size": "750ml",
+   "price": 3800,
+   "catalogueSection": "France ~ Burgundy ~ Red > La Tâche Grand Cru",
+   "floorSection": "Red Burgundy",
+   "group": "cards-b",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "domaine-de-la-romanee-conti-2014",
+   "n": 1856,
+   "bin": "28538",
+   "name": "Domaine de la Romanée-Conti",
+   "vintage": "2014",
+   "size": "750ml",
+   "price": 12500,
+   "catalogueSection": "France ~ Burgundy ~ Red > Romanée-Conti Grand Cru",
+   "floorSection": "Red Burgundy",
+   "group": "cards-b",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "les-cadrans-de-lassegue-grand-cru-classe-2021",
+   "n": 2432,
+   "bin": "28352",
+   "name": "Les Cadrans de Lassegue Grand Cru Classé",
+   "vintage": "2021",
+   "size": "750ml",
+   "price": 60,
+   "catalogueSection": "France ~ Bordeaux ~ Red > Saint-Émilion",
+   "floorSection": "Bordeaux",
+   "group": "cards-b",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "la-chapelle-de-meyney-2018",
+   "n": 2224,
+   "bin": "26311",
+   "name": "La Chapelle de Meyney",
+   "vintage": "2018",
+   "size": "750ml",
+   "price": 80,
+   "catalogueSection": "France ~ Bordeaux ~ Red > Saint-Estèphe",
+   "floorSection": "Bordeaux",
+   "group": "cards-b",
+   "roles": [
+    "value",
+    "anchor"
+   ]
+  },
+  {
+   "key": "chateau-haut-bages-liberal-5eme-cru-classe-2018",
+   "n": 2231,
+   "bin": "26723",
+   "name": "Château Haut Bages Liberal 5ème Cru Classé",
+   "vintage": "2018",
+   "size": "750ml",
+   "price": 135,
+   "catalogueSection": "France ~ Bordeaux ~ Red > Pauillac",
+   "floorSection": "Bordeaux",
+   "group": "cards-b",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "chateau-bellegrave-2019",
+   "n": 2374,
+   "bin": "26111",
+   "name": "Château Bellegrave",
+   "vintage": "2019",
+   "size": "750ml",
+   "price": 190,
+   "catalogueSection": "France ~ Bordeaux ~ Red > Pomerol",
+   "floorSection": "Bordeaux",
+   "group": "cards-b",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "chateau-talbot-4eme-cru-classe-2019",
+   "n": 2316,
+   "bin": "33111",
+   "name": "Château Talbot 4ème Cru Classé",
+   "vintage": "2019",
+   "size": "750ml",
+   "price": 245,
+   "catalogueSection": "France ~ Bordeaux ~ Red > Saint-Julien",
+   "floorSection": "Bordeaux",
+   "group": "cards-b",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "chateau-grand-puy-lacoste-5eme-cru-classe-2008",
+   "n": 2227,
+   "bin": "26123",
+   "name": "Château Grand-Puy-Lacoste 5ème Cru Classé",
+   "vintage": "2008",
+   "size": "750ml",
+   "price": 295,
+   "catalogueSection": "France ~ Bordeaux ~ Red > Pauillac",
+   "floorSection": "Bordeaux",
+   "group": "cards-b",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "chateau-pichon-longueville-comtesse-de-lalande-2eme-2004",
+   "n": 2278,
+   "bin": "26411",
+   "name": "Château Pichon-Longueville Comtesse de Lalande 2ème Cru Classé",
+   "vintage": "2004",
+   "size": "750ml",
+   "price": 325,
+   "catalogueSection": "France ~ Bordeaux ~ Red > Pauillac",
+   "floorSection": "Bordeaux",
+   "group": "cards-b",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "clos-l-eglise-2019",
+   "n": 2401,
+   "bin": "25623",
+   "name": "Clos L'Église",
+   "vintage": "2019",
+   "size": "750ml",
+   "price": 325,
+   "catalogueSection": "France ~ Bordeaux ~ Red > Pomerol",
+   "floorSection": "Bordeaux",
+   "group": "cards-b",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "chateau-haut-brion-1er-cru-classe-2002",
+   "n": 2359,
+   "bin": "26732",
+   "name": "Château Haut-Brion 1er Cru Classé",
+   "vintage": "2002",
+   "size": "750ml",
+   "price": 700,
+   "catalogueSection": "France ~ Bordeaux ~ Red > Graves",
+   "floorSection": "Bordeaux",
+   "group": "cards-b",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "chateau-mouton-rothschild-1er-cru-classe-2005",
+   "n": 2263,
+   "bin": "27232",
+   "name": "Château Mouton-Rothschild 1er Cru Classé",
+   "vintage": "2005",
+   "size": "750ml",
+   "price": 1400,
+   "catalogueSection": "France ~ Bordeaux ~ Red > Pauillac",
+   "floorSection": "Bordeaux",
+   "group": "cards-b",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "chateau-margaux-1er-cru-classe-2007",
+   "n": 2332,
+   "bin": "34334",
+   "name": "Château Margaux 1er Cru Classé",
+   "vintage": "2007",
+   "size": "750ml",
+   "price": 1425,
+   "catalogueSection": "France ~ Bordeaux ~ Red > Margaux",
+   "floorSection": "Bordeaux",
+   "group": "cards-b",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "chateau-cheval-blanc-1er-grand-cru-classe-2008",
+   "n": 2416,
+   "bin": "288242",
+   "name": "Château Cheval Blanc 1er Grand Cru Classé A",
+   "vintage": "2008",
+   "size": "750ml",
+   "price": 1450,
+   "catalogueSection": "France ~ Bordeaux ~ Red > Saint-Émilion",
+   "floorSection": "Bordeaux",
+   "group": "cards-b",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "chateau-lafite-rothschild-1er-cru-classe-2004",
+   "n": 2239,
+   "bin": "22274",
+   "name": "Château Lafite-Rothschild 1er Cru Classé",
+   "vintage": "2004",
+   "size": "750ml",
+   "price": 2100,
+   "catalogueSection": "France ~ Bordeaux ~ Red > Pauillac",
+   "floorSection": "Bordeaux",
+   "group": "cards-b",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "chateau-latour-1er-cru-classe-2005",
+   "n": 2253,
+   "bin": "261510",
+   "name": "Château Latour 1er Cru Classé",
+   "vintage": "2005",
+   "size": "750ml",
+   "price": 2130,
+   "catalogueSection": "France ~ Bordeaux ~ Red > Pauillac",
+   "floorSection": "Bordeaux",
+   "group": "cards-b",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "chateau-canon-saint-emilion-1er-grand-cru-1946",
+   "n": 3516,
+   "bin": "27346",
+   "name": "Château Canon Saint-Émilion 1er Grand Cru Classé B",
+   "vintage": "1946",
+   "size": "750ml",
+   "price": 3100,
+   "catalogueSection": "Selections from our Birth Year > Wine",
+   "floorSection": "Bordeaux",
+   "group": "cards-c",
+   "roles": [
+    "birth-year-1946"
+   ]
+  },
+  {
+   "key": "chateau-figeac-saint-emilion-1er-grand-cru-1946",
+   "n": 3517,
+   "bin": "27362",
+   "name": "Château-Figeac Saint-Émilion 1er Grand Cru Classé B",
+   "vintage": "1946",
+   "size": "750ml",
+   "price": 3200,
+   "catalogueSection": "Selections from our Birth Year > Wine",
+   "floorSection": "Bordeaux",
+   "group": "cards-c",
+   "roles": [
+    "birth-year-1946"
+   ]
+  },
+  {
+   "key": "chateau-trotanoy-pomerol-1946",
+   "n": 3515,
+   "bin": "27345",
+   "name": "Château Trotanoy Pomerol",
+   "vintage": "1946",
+   "size": "750ml",
+   "price": 3700,
+   "catalogueSection": "Selections from our Birth Year > Wine",
+   "floorSection": "Bordeaux",
+   "group": "cards-c",
+   "roles": [
+    "birth-year-1946"
+   ]
+  },
+  {
+   "key": "chateau-latour-pauillac-1er-cru-classe-1946",
+   "n": 3514,
+   "bin": "27340",
+   "name": "Château Latour Pauillac 1er Cru Classé",
+   "vintage": "1946",
+   "size": "750ml",
+   "price": 4100,
+   "catalogueSection": "Selections from our Birth Year > Wine",
+   "floorSection": "Bordeaux",
+   "group": "cards-c",
+   "roles": [
+    "birth-year-1946",
+    "famous"
+   ]
+  },
+  {
+   "key": "petrus-1980",
+   "n": 2402,
+   "bin": "21131",
+   "name": "Pétrus",
+   "vintage": "1980",
+   "size": "750ml",
+   "price": 7700,
+   "catalogueSection": "France ~ Bordeaux ~ Red > Pomerol",
+   "floorSection": "Bordeaux",
+   "group": "cards-b",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "alain-graillot-2015",
+   "n": 2532,
+   "bin": "223316",
+   "name": "Alain Graillot",
+   "vintage": "2015",
+   "size": "750ml",
+   "price": 90,
+   "catalogueSection": "France ~ Rhone ~ Red > Crozes-Hermitage",
+   "floorSection": "Rhône",
+   "group": "cards-b",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "domaine-saint-damien-la-louisianne-gigondas-2023",
+   "n": 2615,
+   "bin": "27732",
+   "name": "Domaine Saint Damien \"La Louisianne\" Gigondas",
+   "vintage": "2023",
+   "size": "750ml",
+   "price": 95,
+   "catalogueSection": "France ~ Rhone ~ Red > Other Côte Du Rhône",
+   "floorSection": "Rhône",
+   "group": "cards-b",
+   "roles": [
+    "value",
+    "anchor"
+   ]
+  },
+  {
+   "key": "andre-perret-2019",
+   "n": 1119,
+   "bin": "22331",
+   "name": "André Perret",
+   "vintage": "2019",
+   "size": "750ml",
+   "price": 165,
+   "catalogueSection": "France ~ Rhône~ White > Condrieu",
+   "floorSection": "Rhône",
+   "group": "cards-b",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "rene-rostaing-ampodium-2012",
+   "n": 2502,
+   "bin": "24753",
+   "name": "René Rostaing \"Ampodium\"",
+   "vintage": "2012",
+   "size": "750ml",
+   "price": 170,
+   "catalogueSection": "France ~ Rhone ~ Red > Côte-Rôtie",
+   "floorSection": "Rhône",
+   "group": "cards-b",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "domaine-du-pegau-cuvee-reservee-2020",
+   "n": 2584,
+   "bin": "24751",
+   "name": "Domaine du Pegau \"Cuvée Reservee\"",
+   "vintage": "2020",
+   "size": "750ml",
+   "price": 195,
+   "catalogueSection": "France ~ Rhone ~ Red > Châteauneuf-du-Pape",
+   "floorSection": "Rhône",
+   "group": "cards-b",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "chateau-de-beaucastel-oenotheque-2007",
+   "n": 2560,
+   "bin": "25252",
+   "name": "Château de Beaucastel {Oenotheque}",
+   "vintage": "2007",
+   "size": "750ml",
+   "price": 275,
+   "catalogueSection": "France ~ Rhone ~ Red > Châteauneuf-du-Pape",
+   "floorSection": "Rhône",
+   "group": "cards-b",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "domaine-du-vieux-telegraphe-la-crau-2014",
+   "n": 2590,
+   "bin": "284217",
+   "name": "Domaine du Vieux Télégraphe \"La Crau\"",
+   "vintage": "2014",
+   "size": "750ml",
+   "price": 295,
+   "catalogueSection": "France ~ Rhone ~ Red > Châteauneuf-du-Pape",
+   "floorSection": "Rhône",
+   "group": "cards-b",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "auguste-clape-2016",
+   "n": 2538,
+   "bin": "34534",
+   "name": "Auguste Clape",
+   "vintage": "2016",
+   "size": "750ml",
+   "price": 318,
+   "catalogueSection": "France ~ Rhone ~ Red > Cornas",
+   "floorSection": "Rhône",
+   "group": "cards-b",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "domaine-jean-louis-chave-2013",
+   "n": 2527,
+   "bin": "24442",
+   "name": "Domaine Jean-Louis Chave",
+   "vintage": "2013",
+   "size": "750ml",
+   "price": 490,
+   "catalogueSection": "France ~ Rhone ~ Red > Hermitage",
+   "floorSection": "Rhône",
+   "group": "cards-b",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "e-guigal-la-mouline-2012",
+   "n": 2492,
+   "bin": "27243",
+   "name": "E. Guigal \"La Mouline\"",
+   "vintage": "2012",
+   "size": "750ml",
+   "price": 1100,
+   "catalogueSection": "France ~ Rhone ~ Red > Côte-Rôtie",
+   "floorSection": "Rhône",
+   "group": "cards-b",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "chateau-rayas-2011",
+   "n": 2574,
+   "bin": "22458",
+   "name": "Château Rayas",
+   "vintage": "2011",
+   "size": "750ml",
+   "price": 1200,
+   "catalogueSection": "France ~ Rhone ~ Red > Châteauneuf-du-Pape",
+   "floorSection": "Rhône",
+   "group": "cards-b",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "lopez-de-heredia-cubillo-crianza-2016",
+   "n": 3414,
+   "bin": "1379",
+   "name": "Lopez de Heredia \"Cubillo\" Crianza",
+   "vintage": "2016",
+   "size": "750ml",
+   "price": 70,
+   "catalogueSection": "Spain ~ Red > Rioja",
+   "floorSection": "Italy and Spain",
+   "group": "cards-c",
+   "roles": [
+    "value",
+    "anchor"
+   ]
+  },
+  {
+   "key": "fattoria-di-felsina-chianti-classico-2022",
+   "n": 3273,
+   "bin": "14062",
+   "name": "Fattoria di Fèlsina Chianti Classico",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 90,
+   "catalogueSection": "Italy ~ Red > Tuscany ~ Chianti",
+   "floorSection": "Italy and Spain",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "cantina-produttori-barbaresco-2020",
+   "n": 3121,
+   "bin": "16122",
+   "name": "Cantina Produttori Barbaresco",
+   "vintage": "2020",
+   "size": "750ml",
+   "price": 95,
+   "catalogueSection": "Italy ~ Red > Piedmont ~ Barbaresco",
+   "floorSection": "Italy and Spain",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "bodegas-cvne-imperial-reserva-2018",
+   "n": 3406,
+   "bin": "10422",
+   "name": "Bodegas CVNE \"Imperial\" Reserva",
+   "vintage": "2018",
+   "size": "750ml",
+   "price": 110,
+   "catalogueSection": "Spain ~ Red > Rioja",
+   "floorSection": "Italy and Spain",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "tenuta-san-guido-guidalberto-toscana-rosso-2022",
+   "n": 3345,
+   "bin": "17743",
+   "name": "Tenuta San Guido \"Guidalberto\" Toscana Rosso",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 150,
+   "catalogueSection": "Italy ~ Red > Tuscany ~ IGT & Super Tuscans",
+   "floorSection": "Italy and Spain",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "fattoria-di-felsina-rancia-chianti-classico-riserva-2019",
+   "n": 3274,
+   "bin": "16433",
+   "name": "Fattoria di Fèlsina \"Rancia\" Chianti Classico Riserva",
+   "vintage": "2019",
+   "size": "750ml",
+   "price": 165,
+   "catalogueSection": "Italy ~ Red > Tuscany ~ Chianti",
+   "floorSection": "Italy and Spain",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "produttori-del-barbaresco-asili-2019",
+   "n": 3139,
+   "bin": "21742",
+   "name": "Produttori del Barbaresco \"Asili\"",
+   "vintage": "2019",
+   "size": "750ml",
+   "price": 185,
+   "catalogueSection": "Italy ~ Red > Piedmont ~ Barbaresco",
+   "floorSection": "Italy and Spain",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "il-poggione-brunello-di-montalcino-2018",
+   "n": 3295,
+   "bin": "17832",
+   "name": "Il Poggione Brunello di Montalcino",
+   "vintage": "2018",
+   "size": "750ml",
+   "price": 198,
+   "catalogueSection": "Italy ~ Red > Tuscany ~ Brunello & Rosso di Montalcino",
+   "floorSection": "Italy and Spain",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "dominio-de-pingus-flor-de-pingus-ribera-2022",
+   "n": 3437,
+   "bin": "16161",
+   "name": "Dominio de Pingus \"Flor de Pingus\" Ribera del Duero",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 215,
+   "catalogueSection": "Spain ~ Red > Castilla y Leon",
+   "floorSection": "Italy and Spain",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "la-rioja-alta-904-gran-reserva-2015",
+   "n": 3413,
+   "bin": "179221",
+   "name": "La Rioja Alta \"904\" Gran Reserva",
+   "vintage": "2015",
+   "size": "750ml",
+   "price": 250,
+   "catalogueSection": "Spain ~ Red > Rioja",
+   "floorSection": "Italy and Spain",
+   "group": "cards-c",
+   "roles": [
+    "classic",
+    "anchor"
+   ]
+  },
+  {
+   "key": "bartolo-mascarello-barolo-la-morra-2017",
+   "n": 3151,
+   "bin": "184221",
+   "name": "Bartolo Mascarello Barolo/La Morra",
+   "vintage": "2017",
+   "size": "750ml",
+   "price": 340,
+   "catalogueSection": "Italy ~ Red > Piedmont ~ Barolo",
+   "floorSection": "Italy and Spain",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "gaja-2012",
+   "n": 3125,
+   "bin": "16332",
+   "name": "Gaja",
+   "vintage": "2012",
+   "size": "750ml",
+   "price": 380,
+   "catalogueSection": "Italy ~ Red > Piedmont ~ Barbaresco",
+   "floorSection": "Italy and Spain",
+   "group": "cards-c",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "tenuta-greppo-biondi-santi-annata-brunello-di-2012",
+   "n": 3309,
+   "bin": "18542",
+   "name": "Tenuta Greppo \"Biondi Santi\" Annata Brunello di Montalcino",
+   "vintage": "2012",
+   "size": "750ml",
+   "price": 425,
+   "catalogueSection": "Italy ~ Red > Tuscany ~ Brunello & Rosso di Montalcino",
+   "floorSection": "Italy and Spain",
+   "group": "cards-c",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "tenuta-san-guido-sassicaia-bolgheri-sassicaia-doc-2018",
+   "n": 3346,
+   "bin": "32686",
+   "name": "Tenuta San Guido \"Sassicaia\" Bolgheri Sassicaia DOC",
+   "vintage": "2018",
+   "size": "750ml",
+   "price": 515,
+   "catalogueSection": "Italy ~ Red > Tuscany ~ IGT & Super Tuscans",
+   "floorSection": "Italy and Spain",
+   "group": "cards-c",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "marchesi-antinori-tignanello-toscana-rosso-2010",
+   "n": 3329,
+   "bin": "17913",
+   "name": "Marchesi Antinori \"Tignanello\" Toscana Rosso",
+   "vintage": "2010",
+   "size": "750ml",
+   "price": 720,
+   "catalogueSection": "Italy ~ Red > Tuscany ~ IGT & Super Tuscans",
+   "floorSection": "Italy and Spain",
+   "group": "cards-c",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "vega-sicilia-unico-ribera-del-duero-2009",
+   "n": 3441,
+   "bin": "287122",
+   "name": "Vega Sicilia \"Unico\" Ribera del Duero",
+   "vintage": "2009",
+   "size": "750ml",
+   "price": 850,
+   "catalogueSection": "Spain ~ Red > Castilla y Leon",
+   "floorSection": "Italy and Spain",
+   "group": "cards-c",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "tenuta-dell-ornellaia-masseto-toscana-rosso-2011",
+   "n": 3330,
+   "bin": "27143",
+   "name": "Tenuta Dell'Ornellaia \"Masseto\" Toscana Rosso",
+   "vintage": "2011",
+   "size": "750ml",
+   "price": 1080,
+   "catalogueSection": "Italy ~ Red > Tuscany ~ IGT & Super Tuscans",
+   "floorSection": "Italy and Spain",
+   "group": "cards-c",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "chappellet-mountain-cuvee-napa-valley-2024",
+   "n": 39,
+   "bin": "14342",
+   "name": "Chappellet \"Mountain Cuvée\" Napa Valley",
+   "vintage": "2024",
+   "size": "750ml",
+   "price": 90,
+   "catalogueSection": "Selections Under $100 > Cabernet Sauvignon",
+   "floorSection": "California Cabernet and Napa",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "duckhorn-napa-valley-2022",
+   "n": 2835,
+   "bin": "1876",
+   "name": "Duckhorn Napa Valley",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 90,
+   "catalogueSection": "United States ~ Cabernet Sauvignon > Napa Valley - Cabernet Sauvignon",
+   "floorSection": "California Cabernet and Napa",
+   "group": "cards-c",
+   "roles": [
+    "value",
+    "anchor"
+   ]
+  },
+  {
+   "key": "frog-s-leap-estate-rutherford-2021",
+   "n": 2850,
+   "bin": "109222",
+   "name": "Frog's Leap Estate Rutherford",
+   "vintage": "2021",
+   "size": "750ml",
+   "price": 165,
+   "catalogueSection": "United States ~ Cabernet Sauvignon > Napa Valley - Cabernet Sauvignon",
+   "floorSection": "California Cabernet and Napa",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "caymus-napa-valley-2023",
+   "n": 2776,
+   "bin": "1726",
+   "name": "Caymus Napa Valley",
+   "vintage": "2023",
+   "size": "750ml",
+   "price": 180,
+   "catalogueSection": "United States ~ Cabernet Sauvignon > Napa Valley - Cabernet Sauvignon",
+   "floorSection": "California Cabernet and Napa",
+   "group": "cards-c",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "shafer-vineyards-one-point-five-napa-valley-2023",
+   "n": 2972,
+   "bin": "183221",
+   "name": "Shafer Vineyards \"One Point Five\" Napa Valley",
+   "vintage": "2023",
+   "size": "750ml",
+   "price": 250,
+   "catalogueSection": "United States ~ Cabernet Sauvignon > Napa Valley - Cabernet Sauvignon",
+   "floorSection": "California Cabernet and Napa",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "inglenook-rubicon-rutherford-2010",
+   "n": 2894,
+   "bin": "18231",
+   "name": "Inglenook \"Rubicon\" Rutherford",
+   "vintage": "2010",
+   "size": "750ml",
+   "price": 360,
+   "catalogueSection": "United States ~ Cabernet Sauvignon > Napa Valley - Cabernet Sauvignon",
+   "floorSection": "California Cabernet and Napa",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "silver-oak-napa-valley-2020",
+   "n": 2973,
+   "bin": "1588",
+   "name": "Silver Oak Napa Valley",
+   "vintage": "2020",
+   "size": "750ml",
+   "price": 360,
+   "catalogueSection": "United States ~ Cabernet Sauvignon > Napa Valley - Cabernet Sauvignon",
+   "floorSection": "California Cabernet and Napa",
+   "group": "cards-c",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "ridge-vineyards-monte-bello-santa-cruz-mountains-2012",
+   "n": 3034,
+   "bin": "16131",
+   "name": "Ridge Vineyards \"Monte Bello\" Santa Cruz Mountains",
+   "vintage": "2012",
+   "size": "750ml",
+   "price": 410,
+   "catalogueSection": "United States ~ Cabernet Sauvignon > Central Coast - Cabernet Sauvignon",
+   "floorSection": "California Cabernet and Napa",
+   "group": "cards-c",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "joseph-phelps-insignia-napa-valley-2013",
+   "n": 2900,
+   "bin": "18727",
+   "name": "Joseph Phelps \"Insignia\" Napa Valley",
+   "vintage": "2013",
+   "size": "750ml",
+   "price": 440,
+   "catalogueSection": "United States ~ Cabernet Sauvignon > Napa Valley - Cabernet Sauvignon",
+   "floorSection": "California Cabernet and Napa",
+   "group": "cards-c",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "caymus-special-selection-napa-valley-2018",
+   "n": 2778,
+   "bin": "16171",
+   "name": "Caymus Special Selection Napa Valley",
+   "vintage": "2018",
+   "size": "750ml",
+   "price": 480,
+   "catalogueSection": "United States ~ Cabernet Sauvignon > Napa Valley - Cabernet Sauvignon",
+   "floorSection": "California Cabernet and Napa",
+   "group": "cards-c",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "dominus-estate-napa-valley-2014",
+   "n": 2834,
+   "bin": "17733",
+   "name": "Dominus Estate Napa Valley",
+   "vintage": "2014",
+   "size": "750ml",
+   "price": 495,
+   "catalogueSection": "United States ~ Cabernet Sauvignon > Napa Valley - Cabernet Sauvignon",
+   "floorSection": "California Cabernet and Napa",
+   "group": "cards-c",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "heitz-cellar-martha-s-vineyard-napa-valley-2009",
+   "n": 2876,
+   "bin": "17761",
+   "name": "Heitz Cellar \"Martha's Vineyard\" Napa Valley",
+   "vintage": "2009",
+   "size": "750ml",
+   "price": 540,
+   "catalogueSection": "United States ~ Cabernet Sauvignon > Napa Valley - Cabernet Sauvignon",
+   "floorSection": "California Cabernet and Napa",
+   "group": "cards-c",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "opus-one-napa-valley-2010",
+   "n": 2929,
+   "bin": "145112",
+   "name": "Opus One Napa Valley",
+   "vintage": "2010",
+   "size": "750ml",
+   "price": 775,
+   "catalogueSection": "United States ~ Cabernet Sauvignon > Napa Valley - Cabernet Sauvignon",
+   "floorSection": "California Cabernet and Napa",
+   "group": "cards-c",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "harlan-estate-oakville-2006",
+   "n": 2854,
+   "bin": "16665",
+   "name": "Harlan Estate Oakville",
+   "vintage": "2006",
+   "size": "750ml",
+   "price": 1250,
+   "catalogueSection": "United States ~ Cabernet Sauvignon > Napa Valley - Cabernet Sauvignon",
+   "floorSection": "California Cabernet and Napa",
+   "group": "cards-c",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "screaming-eagle-second-flight-bordeaux-blend-napa-2012",
+   "n": 3114,
+   "bin": "181131",
+   "name": "Screaming Eagle \"Second Flight\" Bordeaux Blend Napa Valley CA",
+   "vintage": "2012",
+   "size": "750ml",
+   "price": 1400,
+   "catalogueSection": "United States ~ Other ~ Red > Unique Red & Blends",
+   "floorSection": "California Cabernet and Napa",
+   "group": "cards-c",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "ridge-vineyards-three-valleys-sonoma-2023",
+   "n": 3094,
+   "bin": "15142",
+   "name": "Ridge Vineyards \"Three Valleys\" Sonoma",
+   "vintage": "2023",
+   "size": "750ml",
+   "price": 60,
+   "catalogueSection": "United States ~ Other ~ Red > Zinfandel",
+   "floorSection": "Other reds",
+   "group": "cards-c",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "ken-wright-cellars-willamette-valley-2024",
+   "n": 2714,
+   "bin": "148412",
+   "name": "Ken Wright Cellars Willamette Valley",
+   "vintage": "2024",
+   "size": "750ml",
+   "price": 72,
+   "catalogueSection": "United States ~ Pinot Noir > Oregon",
+   "floorSection": "Other reds",
+   "group": "cards-c",
+   "roles": [
+    "value",
+    "anchor"
+   ]
+  },
+  {
+   "key": "piedrasassi-bien-nacido-santa-maria-valley-ca-2021",
+   "n": 3055,
+   "bin": "13362",
+   "name": "Piedrasassi \"Bien Nacido\" Santa Maria Valley CA",
+   "vintage": "2021",
+   "size": "750ml",
+   "price": 80,
+   "catalogueSection": "United States ~ Other ~ Red > Syrah",
+   "floorSection": "Other reds",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "ridge-vineyards-lytton-springs-dry-creek-valley-2022",
+   "n": 3092,
+   "bin": "16719",
+   "name": "Ridge Vineyards \"Lytton Springs\" Dry Creek Valley",
+   "vintage": "2022",
+   "size": "750ml",
+   "price": 120,
+   "catalogueSection": "United States ~ Other ~ Red > Zinfandel",
+   "floorSection": "Other reds",
+   "group": "cards-c",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "penfolds-bin-389-cabernet-shiraz-barossa-valley-2019",
+   "n": 3499,
+   "bin": "121322",
+   "name": "Penfolds “Bin 389” Cabernet Shiraz Barossa Valley",
+   "vintage": "2019",
+   "size": "750ml",
+   "price": 145,
+   "catalogueSection": "International - Red > Australia",
+   "floorSection": "Other reds",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "kosta-browne-sonoma-coast-2021",
+   "n": 2675,
+   "bin": "14612",
+   "name": "Kosta Browne Sonoma Coast",
+   "vintage": "2021",
+   "size": "750ml",
+   "price": 230,
+   "catalogueSection": "United States ~ Pinot Noir > Sonoma Coast & County",
+   "floorSection": "Other reds",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "duckhorn-three-palms-napa-valley-2020",
+   "n": 3069,
+   "bin": "141234",
+   "name": "Duckhorn \"Three Palms\" Napa Valley",
+   "vintage": "2020",
+   "size": "750ml",
+   "price": 240,
+   "catalogueSection": "United States ~ Other ~ Red > Merlot",
+   "floorSection": "Other reds",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "chateau-musar-bekaa-valley-2003",
+   "n": 2471,
+   "bin": "33512",
+   "name": "Chateau Musar Bekaa Valley",
+   "vintage": "2003",
+   "size": "750ml",
+   "price": 285,
+   "catalogueSection": "Austria, Germany & Lebanon ~ Red > Lebanon",
+   "floorSection": "Other reds",
+   "group": "cards-c",
+   "roles": [
+    "anchor"
+   ]
+  },
+  {
+   "key": "penfolds-grange-shiraz-barossa-valley-2004",
+   "n": 3500,
+   "bin": "11723",
+   "name": "Penfolds \"Grange\" Shiraz Barossa Valley",
+   "vintage": "2004",
+   "size": "750ml",
+   "price": 650,
+   "catalogueSection": "International - Red > Australia",
+   "floorSection": "Other reds",
+   "group": "cards-c",
+   "roles": [
+    "famous"
+   ]
+  },
+  {
+   "key": "bodega-barbadillo-pale-cream-nv",
+   "n": 3549,
+   "bin": "29801",
+   "name": "Bodega Barbadillo \"Pale Cream\"",
+   "vintage": "NV",
+   "size": "750ml",
+   "price": 50,
+   "catalogueSection": "Fortified Wines > Spain",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "castello-banfi-florus-moscadello-di-montalcino-2011",
+   "n": 3537,
+   "bin": "192345",
+   "name": "Castello Banfi \"Florus\" Moscadello di Montalcino",
+   "vintage": "2011",
+   "size": "750ml",
+   "price": 60,
+   "catalogueSection": "Dessert Wines > Italy",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "feist-late-bottled-vintage-2006",
+   "n": 3559,
+   "bin": "193212",
+   "name": "Feist Late Bottled Vintage",
+   "vintage": "2006",
+   "size": "750ml",
+   "price": 60,
+   "catalogueSection": "Fortified Wines > Portugal",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "sandeman-late-bottled-vintage-1999",
+   "n": 3572,
+   "bin": "19243",
+   "name": "Sandeman \"Late-Bottled\" Vintage",
+   "vintage": "1999",
+   "size": "750ml",
+   "price": 75,
+   "catalogueSection": "Fortified Wines > Portugal",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "value",
+    "anchor"
+   ]
+  },
+  {
+   "key": "hexamer-meddersheimer-rheingrafenberg-spatlese-2010",
+   "n": 1272,
+   "bin": "27501",
+   "name": "Hexamer \"Meddersheimer Rheingrafenberg\" Spätlese",
+   "vintage": "2010",
+   "size": "750ml",
+   "price": 85,
+   "catalogueSection": "Germany ~ White > Riesling > Nahe",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "domaine-des-baumard-clos-sainte-catherine-coteaux-2006",
+   "n": 3528,
+   "bin": "19341",
+   "name": "Domaine des Baumard \"Clos Sainte Catherine\" Coteaux du Layon",
+   "vintage": "2006",
+   "size": "750ml",
+   "price": 90,
+   "catalogueSection": "Dessert Wines > France",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "dr-hermann-urziger-wurtzgarten-in-der-kranklei-2018",
+   "n": 1216,
+   "bin": "28461",
+   "name": "Dr. Hermann \"Urziger Wurtzgarten in der Kranklei\" Goldkapsel Spätlese",
+   "vintage": "2018",
+   "size": "750ml",
+   "price": 95,
+   "catalogueSection": "Germany ~ White > Riesling > Mosel",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "value"
+   ]
+  },
+  {
+   "key": "domaine-huet-le-mont-moelleux-vouvray-2009",
+   "n": 3529,
+   "bin": "33431",
+   "name": "Domaine Huet \"Le Mont\" Moelleux Vouvray",
+   "vintage": "2009",
+   "size": "750ml",
+   "price": 135,
+   "catalogueSection": "Dessert Wines > France",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "taylor-fladgate-quinta-de-vargellas-1987",
+   "n": 3576,
+   "bin": "19321",
+   "name": "Taylor Fladgate \"Quinta de Vargellas\"",
+   "vintage": "1987",
+   "size": "750ml",
+   "price": 185,
+   "catalogueSection": "Fortified Wines > Portugal",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "alois-kracher-auslese-burgenland-2017",
+   "n": 3544,
+   "bin": "19234",
+   "name": "Alois Kracher Auslese Burgenland",
+   "vintage": "2017",
+   "size": "750ml",
+   "price": 190,
+   "catalogueSection": "Dessert Wines > Austria & Hungary",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "riveyrac-rivesaltes-languedoc-roussillon-1975",
+   "n": 3545,
+   "bin": "193312",
+   "name": "Riveyrac Rivesaltes Languedoc-Roussillon",
+   "vintage": "1975",
+   "size": "750ml",
+   "price": 190,
+   "catalogueSection": "Fortified Wines > France",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "chateau-climens-premier-cru-classe-barsac-2010",
+   "n": 3518,
+   "bin": "192821",
+   "name": "Château Climens Premier Cru Classé Barsac",
+   "vintage": "2010",
+   "size": "750ml",
+   "price": 200,
+   "catalogueSection": "Dessert Wines > France",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "graham-s-2000",
+   "n": 3563,
+   "bin": "19111",
+   "name": "Graham's",
+   "vintage": "2000",
+   "size": "750ml",
+   "price": 200,
+   "catalogueSection": "Fortified Wines > Portugal",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "inniskillin-cabernet-franc-ice-wine-niagara-penninsula-2015",
+   "n": 3531,
+   "bin": "192231",
+   "name": "Inniskillin Cabernet Franc Ice Wine Niagara Penninsula VQA",
+   "vintage": "2015",
+   "size": "750ml",
+   "price": 225,
+   "catalogueSection": "Dessert Wines > Canada",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "chateau-suduirant-sauternes-2010",
+   "n": 3520,
+   "bin": "19142",
+   "name": "Château Suduirant Sauternes",
+   "vintage": "2010",
+   "size": "750ml",
+   "price": 230,
+   "catalogueSection": "Dessert Wines > France",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "classic",
+    "anchor"
+   ]
+  },
+  {
+   "key": "broadbent-single-cask-malvasia-2009-500ml",
+   "n": 3546,
+   "bin": "192331",
+   "name": "Broadbent \"Single Cask\" Malvasia • 500ml",
+   "vintage": "2009",
+   "size": "500ml",
+   "price": 240,
+   "catalogueSection": "Fortified Wines > Madeira",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "classic"
+   ]
+  },
+  {
+   "key": "dow-s-1985",
+   "n": 3555,
+   "bin": "19221",
+   "name": "Dow's",
+   "vintage": "1985",
+   "size": "750ml",
+   "price": 260,
+   "catalogueSection": "Fortified Wines > Portugal",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "graham-s-1983",
+   "n": 3562,
+   "bin": "191212",
+   "name": "Graham's",
+   "vintage": "1983",
+   "size": "750ml",
+   "price": 265,
+   "catalogueSection": "Fortified Wines > Portugal",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "f-e-trimbach-vendages-tardives-2007",
+   "n": 1059,
+   "bin": "29958",
+   "name": "F.E. Trimbach \"Vendages Tardives\"",
+   "vintage": "2007",
+   "size": "750ml",
+   "price": 295,
+   "catalogueSection": "France ~ Alsace ~ White > Gewürztraminer",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "niepoort-vintage-1987",
+   "n": 3569,
+   "bin": "192913",
+   "name": "Niepoort Vintage",
+   "vintage": "1987",
+   "size": "750ml",
+   "price": 305,
+   "catalogueSection": "Fortified Wines > Portugal",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "giuseppe-quintarelli-recioto-della-valpolicella-1997",
+   "n": 3543,
+   "bin": "19321",
+   "name": "Giuseppe Quintarelli Recioto della Valpolicella",
+   "vintage": "1997",
+   "size": "750ml",
+   "price": 500,
+   "catalogueSection": "Dessert Wines > Italy",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "chateau-gilette-creme-de-tete-sauternes-1989",
+   "n": 3519,
+   "bin": "19112",
+   "name": "Château Gilette \"Crème de Tête\" Sauternes",
+   "vintage": "1989",
+   "size": "750ml",
+   "price": 515,
+   "catalogueSection": "Dessert Wines > France",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "taylor-fladgate-1977",
+   "n": 3574,
+   "bin": "19222",
+   "name": "Taylor Fladgate",
+   "vintage": "1977",
+   "size": "750ml",
+   "price": 580,
+   "catalogueSection": "Fortified Wines > Portugal",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "splurge"
+   ]
+  },
+  {
+   "key": "chateau-d-yquem-sauternes-2007",
+   "n": 3524,
+   "bin": "192842",
+   "name": "Château d'Yquem Sauternes",
+   "vintage": "2007",
+   "size": "750ml",
+   "price": 850,
+   "catalogueSection": "Dessert Wines > France",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "splurge",
+    "famous"
+   ]
+  },
+  {
+   "key": "henriques-henriques-founder-s-solera-verdelho-1894",
+   "n": 3548,
+   "bin": "29088",
+   "name": "Henriques & Henriques \"Founder's Solera\" Verdelho",
+   "vintage": "1894",
+   "size": "750ml",
+   "price": 3200,
+   "catalogueSection": "Fortified Wines > Madeira",
+   "floorSection": "Dessert and fortified",
+   "group": "cards-c",
+   "roles": [
+    "famous"
+   ]
+  }
+ ],
+ "dishes": [
+  {
+   "dishId": "d-fq5ylujb",
+   "dishName": "Baked Apple",
+   "value": {
+    "key": "domaine-des-baumard-clos-sainte-catherine-coteaux-2006",
+    "why": "Sweet and bridge: sweet Layon Chenin tastes of quince and baked apple, and its acidity keeps the brown sugar glaze fresh.",
+    "sayIt": "With the baked apple, a sweet Chenin from the Loire: quince, honey and baked apple, with a bright finish."
+   },
+   "classic": {
+    "key": "domaine-huet-le-mont-moelleux-vouvray-2009",
+    "why": "Sweet and acid: a moelleux Vouvray is as sweet as the glaze, and Chenin acidity lifts the crème fraîche.",
+    "sayIt": "For something special, the Huet Moelleux from Vouvray: honeyed, golden Chenin that tastes like the apple itself."
+   },
+   "splurge": {
+    "key": "f-e-trimbach-vendages-tardives-2007",
+    "why": "Bridge and sweet: late harvest Gewürztraminer carries cinnamon spice and ripe fruit that echo the crumble and glaze.",
+    "sayIt": "For a celebration, a Trimbach late harvest Gewürztraminer from Alsace: rich, spiced, and perfect with warm apple and cinnamon."
+   },
+   "half": {
+    "key": "domaine-huet-le-mont-vouvray-demi-sec-2023-375ml",
+    "why": "Sweet and bridge: a demi-sec Chenin half is just sweet enough for the glaze and tastes of apple and honey.",
+    "sayIt": "A half-bottle of Huet Le Mont demi-sec: gently sweet Vouvray, apple and honey, just right for breakfast."
+   }
+  },
+  {
+   "dishId": "d-w718yap8",
+   "dishName": "Petite Filet Mignon",
+   "value": {
+    "key": "domaine-saint-damien-la-louisianne-gigondas-2023",
+    "why": "Weight and tannin: Grenache-led Gigondas has ripe fruit for the filet and soft tannins that suit a morning course.",
+    "sayIt": "With the filet, a Gigondas from the Southern Rhône: ripe red fruit, a little spice, and soft enough for breakfast."
+   },
+   "classic": {
+    "key": "domaine-du-pegau-cuvee-reservee-2020",
+    "why": "Weight and fat: Châteauneuf has the body for beef and garlic spinach, with spice that flatters the crisp rösti.",
+    "sayIt": "If you would like a bottle, the Pegau Châteauneuf-du-Pape: generous, spicy and warm, beautiful with the filet."
+   },
+   "splurge": {
+    "key": "chateau-de-beaucastel-oenotheque-2007",
+    "why": "Tannin and weight: an older Beaucastel has softened tannins and savory depth that meet tender beef without overpowering it.",
+    "sayIt": "For a celebration, a mature Château de Beaucastel: savory, silky Châteauneuf with years of age, lovely with the filet."
+   },
+   "half": {
+    "key": "domaine-raspail-ay-gigondas-2021-375ml",
+    "why": "Weight: a half of Gigondas gives Grenache fruit and body for the filet without committing to a full bottle.",
+    "sayIt": "A half-bottle of Raspail-Ay Gigondas: ripe and spicy, just enough for two with the filet."
+   }
+  },
+  {
+   "dishId": "d-5e4ptrq8",
+   "dishName": "Louisiana BBQ Lobster",
+   "value": {
+    "key": "jean-philippe-fichet-2023",
+    "why": "Fat and acid: Bourgogne Chardonnay has the texture for lobster and buttery sauce, and fresh acidity after the nduja.",
+    "sayIt": "With the lobster, a white Burgundy from Fichet: creamy and bright, lovely with the butter and a little spice."
+   },
+   "classic": {
+    "key": "raymond-dupont-fahn-les-tillets-2022",
+    "why": "Fat and weight: Meursault richness matches lobster and barbecue butter, and its freshness keeps the white bean stew lively.",
+    "sayIt": "The Dupont-Fahn Meursault is rich and nutty, exactly what lobster and that peppery butter sauce want."
+   },
+   "splurge": {
+    "key": "domaine-leflaive-sous-le-dos-d-ane-2017",
+    "why": "Fat and bridge: a Leflaive Meursault Premier Cru brings nutty, toasty depth that meets roasted lobster and smoky nduja.",
+    "sayIt": "For a celebration, Leflaive Meursault Premier Cru: layered, toasty white Burgundy, a real match for lobster."
+   },
+   "half": {
+    "key": "louis-jadot-2022-375ml",
+    "why": "Fat: a half of village Meursault gives the same buttery richness for lobster in a smaller pour.",
+    "sayIt": "A half-bottle of Jadot Meursault: rich, round white Burgundy, perfect for the lobster course."
+   }
+  },
+  {
+   "dishId": "d-jxnlnzdi",
+   "dishName": "Roasted Rohan Duck Breast",
+   "value": {
+    "key": "domaine-faiveley-2022",
+    "why": "Fat and acid: Bourgogne Pinot Noir has bright acidity for rich duck and red fruit for the glazed peaches.",
+    "sayIt": "With the duck, a red Burgundy from Faiveley: bright cherry fruit and fresh acidity, classic with duck."
+   },
+   "classic": {
+    "key": "domaine-henri-gouges-les-pruliers-2016",
+    "why": "Fat and bridge: a mature Nuits-Saint-Georges Premier Cru brings earthy depth for duck and fruit for the cane syrup peaches.",
+    "sayIt": "The Gouges Nuits-Saint-Georges Les Pruliers has some age now: earthy, dark cherry, and gorgeous with duck."
+   },
+   "splurge": {
+    "key": "domaine-jean-grivot-2011",
+    "why": "Fat and tannin: a fifteen year old Echézeaux has silky tannin and layered fruit that rise to the richest duck.",
+    "sayIt": "For a celebration, Grivot Echézeaux, a Grand Cru red Burgundy with age: silky, perfumed and wonderful with duck."
+   },
+   "half": {
+    "key": "domaine-henri-gouges-2021-375ml",
+    "why": "Fat and acid: a half of Gouges Nuits-Saint-Georges gives Pinot acidity for duck in a two glass pour.",
+    "sayIt": "A half-bottle of Henri Gouges Nuits-Saint-Georges: savory red Burgundy, just right with the duck."
+   }
+  },
+  {
+   "dishId": "d-rb7t1xzq",
+   "dishName": "Blackberry Trifle",
+   "value": {
+    "key": "castello-banfi-florus-moscadello-di-montalcino-2011",
+    "why": "Sweet and acid: late harvest Moscadello is sweeter than the curds, with orange blossom freshness for lemon and coconut.",
+    "sayIt": "With the trifle, a late harvest Moscadello from Montalcino: honeyed, floral, and bright enough for the lemon curd."
+   },
+   "classic": {
+    "key": "inniskillin-cabernet-franc-ice-wine-niagara-penninsula-2015",
+    "why": "Bridge and acid: Cabernet Franc ice wine has red berry fruit for the blackberry and the acidity to stay fresh.",
+    "sayIt": "For something unusual, an Inniskillin red ice wine from Niagara: sweet berries and bright acidity, made for this trifle."
+   },
+   "splurge": {
+    "key": "giuseppe-quintarelli-recioto-della-valpolicella-1997",
+    "why": "Bridge and sweet: Quintarelli Recioto is sweet red wine from dried grapes, its dark berry fruit echoing the blackberry curd.",
+    "sayIt": "For a celebration, Quintarelli Recioto: a sweet red from the Veneto, dark berries and spice, stunning with blackberry."
+   },
+   "half": {
+    "key": "donhoff-niederhauser-hermannshohle-goldkapsel-auslese-2023-375ml",
+    "why": "Sweet and acid: a Goldkapsel Auslese half has the sweetness and piercing acidity a lemon and blackberry dessert needs.",
+    "sayIt": "A half-bottle of Dönhoff Auslese from the Nahe: honeyed, racy Riesling that loves the lemon curd."
+   }
+  },
+  {
+   "dishId": "d-1qto9uk9",
+   "dishName": "Framboise French Toast",
+   "value": {
+    "key": "dr-hermann-urziger-wurtzgarten-in-der-kranklei-2018",
+    "why": "Sweet and acid: a Goldkapsel Spätlese is sweet enough for the coulis, and its acidity cuts mascarpone and brioche.",
+    "sayIt": "With the French toast, a Mosel Riesling Spätlese from Dr. Hermann: sweet, bright and juicy with the raspberries."
+   },
+   "classic": {
+    "key": "moet-chandon-nectar-imperial-rose-demi-sec-nv",
+    "why": "Bridge and fat: demi-sec rosé Champagne has red berry fruit for the raspberries and bubbles to lift the mascarpone mousse.",
+    "sayIt": "For a festive brunch, Moët Nectar Impérial Rosé: a gently sweet pink Champagne, raspberries and cream in a glass."
+   },
+   "splurge": {
+    "key": "chateau-d-yquem-sauternes-2015-375ml",
+    "why": "Sweet and fat: Yquem has the richness and sweetness for mascarpone and coulis, with acidity to keep brioche light.",
+    "sayIt": "For a celebration, a half-bottle of Château d’Yquem: the most famous sweet wine in the world, honeyed and luminous."
+   },
+   "half": {
+    "key": "laurent-perrier-harmony-demi-sec-nv-375ml",
+    "why": "Sweet and fat: a demi-sec Champagne half matches the sweetness, and its bubbles scrub the mascarpone from the palate.",
+    "sayIt": "A half-bottle of Laurent-Perrier Harmony demi-sec: lightly sweet Champagne, perfect with brioche and berries."
+   }
+  },
+  {
+   "dishId": "d-husneh7o",
+   "dishName": "Café Brûlot Coffee Cake",
+   "value": {
+    "key": "feist-late-bottled-vintage-2006",
+    "why": "Bridge and sweet: a Late Bottled Vintage Port brings dark fruit and cocoa notes for chocolate and chicory coffee.",
+    "sayIt": "With the coffee cake, a Late Bottled Vintage Port from Feist: dark fruit and chocolate notes, lovely with the chicory."
+   },
+   "classic": {
+    "key": "broadbent-single-cask-malvasia-2009-500ml",
+    "why": "Bridge and acid: Malvasia Madeira tastes of coffee, caramel and orange peel, and its acidity matches the spiced citrus glaze.",
+    "sayIt": "For something special, a single cask Malvasia Madeira: coffee, caramel and orange, just like a café brûlot."
+   },
+   "splurge": {
+    "key": "niepoort-vintage-1987",
+    "why": "Sweet and tannin: a mature vintage Port has softened tannin and dried fruit depth for bittersweet chocolate and pecans.",
+    "sayIt": "For a celebration, a Niepoort vintage Port with real age: mellow, dried fruit and spice, gorgeous with chocolate."
+   },
+   "half": {
+    "key": "niepoort-colheita-1997-375ml",
+    "why": "Bridge and sweet: a Colheita half is single vintage tawny Port, its nutty caramel meeting pecans and coffee.",
+    "sayIt": "A half-bottle of Niepoort Colheita: an aged tawny Port, nutty and caramel, wonderful with the pecans."
+   }
+  },
+  {
+   "dishId": "d-wckf36s5",
+   "dishName": "Louisiana Oysters",
+   "value": {
+    "key": "domaine-huet-le-haut-lieu-vouvray-sec-2024",
+    "why": "Acid and fat: dry Vouvray has the texture for buttery barbecue sauce and the acidity for pickled collards.",
+    "sayIt": "With the barbecue oysters, a dry Chenin from Huet: textured, bright and great with the butter and pepper."
+   },
+   "classic": {
+    "key": "pierre-paillard-grand-cru-les-parcelles-xviii-nv",
+    "why": "Fat and salt: Grand Cru grower Champagne cuts the buttery sauce and the fried saltine crumble, and loves the oyster brine.",
+    "sayIt": "For a bottle of bubbles, the Pierre Paillard Grand Cru Extra Brut: very dry, crisp and perfect with fried and buttery."
+   },
+   "splurge": {
+    "key": "bollinger-pntx20-brut-nv",
+    "why": "Weight and fat: all Pinot Noir Bollinger has the body to stand up to barbecue butter and peppery sauce.",
+    "sayIt": "For a celebration, Bollinger PN: all Pinot Noir Champagne, full and powerful enough for barbecue oysters."
+   },
+   "half": {
+    "key": "domaine-huet-le-haut-lieu-vouvray-sec-2019-375ml",
+    "why": "Acid: a half of dry Vouvray brings Chenin acidity for the pickled greens and enough body for the sauce.",
+    "sayIt": "A half-bottle of Huet Le Haut Lieu Sec: dry, crisp Chenin, made for these oysters."
+   }
+  },
+  {
+   "dishId": "d-1gj8ji36",
+   "dishName": "Creole Tomato Tostada",
+   "value": {
+    "key": "chateau-d-esclans-whispering-angel-cotes-de-2024",
+    "why": "Acid and bridge: dry Provence rosé has the acidity for raw tomato and the delicacy for creamy burrata.",
+    "sayIt": "With the tomatoes, Whispering Angel from Provence: pale, dry and refreshing, exactly right for a summer tomato."
+   },
+   "classic": {
+    "key": "domaine-tempier-bandol-2024",
+    "why": "Acid and weight: Bandol rosé has more body and savory depth, standing up to smoked tomato water and okra.",
+    "sayIt": "For a step up, the Tempier Bandol rosé: dry, savory and serious, one of the great rosés of France."
+   },
+   "splurge": {
+    "key": "pascal-cotat-lot-2024-chavignol-2024",
+    "why": "Acid and bridge: Cotat Pinot Noir rosé from Chavignol brings chalky acidity and red fruit for heirloom tomatoes.",
+    "sayIt": "For a celebration, Pascal Cotat rosé from Sancerre country: rare, mineral and beautiful with the tomatoes."
+   }
+  },
+  {
+   "dishId": "d-5p5b1hjn",
+   "dishName": "Louisiana Crab Claws",
+   "value": {
+    "key": "domaine-du-roc-des-boutires-en-bertilionne-2020",
+    "why": "Fat and acid: Pouilly-Fuissé has round Chardonnay richness for brown butter and acidity for the vinaigrette.",
+    "sayIt": "With the crab claws, a Pouilly-Fuissé from Roc des Boutires: round, fresh Chardonnay that loves brown butter."
+   },
+   "classic": {
+    "key": "domaine-paul-pillot-le-charmois-2022",
+    "why": "Fat and acid: Saint-Aubin Premier Cru brings nutty richness for brown butter and a chalky snap for sweet crab.",
+    "sayIt": "The Paul Pillot Saint-Aubin Le Charmois is nutty and bright, made for brown butter and crab."
+   },
+   "splurge": {
+    "key": "francois-carillon-2022",
+    "why": "Fat and bridge: Puligny-Montrachet has toasty, nutty depth that mirrors brown butter and lifts fines herbes.",
+    "sayIt": "For a celebration, Carillon Puligny-Montrachet: elegant white Burgundy, toasty and fresh, beautiful with the claws."
+   },
+   "half": {
+    "key": "thierry-pascale-matrot-2022-375ml",
+    "why": "Fat and acid: a half of Bourgogne Blanc gives Chardonnay texture for brown butter in a lighter pour.",
+    "sayIt": "A half-bottle of Matrot Bourgogne Blanc: fresh white Burgundy, just right with crab claws."
+   }
+  },
+  {
+   "dishId": "d-nd0d2czb",
+   "dishName": "Grand Isle Jewel Oysters",
+   "value": {
+    "key": "domaine-de-la-pepiere-monnieres-st-fiacre-2020",
+    "why": "Salt and acid: Muscadet is bone dry with saline acidity that mirrors oyster brine and the mignonette vinegar.",
+    "sayIt": "With raw oysters, a Muscadet from Pépière: bone dry, salty and crisp, the classic oyster wine."
+   },
+   "classic": {
+    "key": "larmandier-bernier-premier-cru-longitude-extra-brut-nv",
+    "why": "Acid and salt: chalky Blanc de Blancs Extra Brut matches brine and vinegar, and its bubbles calm the chili.",
+    "sayIt": "For bubbles with oysters, the Larmandier-Bernier Longitude: all Chardonnay, very dry and chalky, perfect with brine."
+   },
+   "splurge": {
+    "key": "domaine-rene-et-vincent-dauvissat-les-preuses-2015",
+    "why": "Acid and salt: Grand Cru Chablis has steely acidity and a shell-like minerality that sings with raw oysters.",
+    "sayIt": "For a celebration, Dauvissat Chablis Les Preuses: Grand Cru Chablis with age, mineral and precise with oysters."
+   },
+   "half": {
+    "key": "veuve-fourny-et-fils-premier-cru-blanc-nv-375ml",
+    "why": "Acid and salt: a half of Blanc de Blancs Extra Brut gives dry, chalky bubbles for a dozen oysters.",
+    "sayIt": "A half-bottle of Veuve Fourny Blanc de Blancs: bone dry Champagne, ideal with a plate of oysters."
+   }
+  },
+  {
+   "dishId": "d-0w2k5cdm",
+   "dishName": "Steak Tartare Cannoli",
+   "value": {
+    "key": "chapel-down-rose-brut-kent-nv",
+    "why": "Bridge and fat: English sparkling rosé has red fruit for raw beef and bubbles that cut crème fraîche and crisp potato.",
+    "sayIt": "With the tartare, a sparkling rosé from Chapel Down in England: red berries and fine bubbles, lovely with raw beef."
+   },
+   "classic": {
+    "key": "chartogne-taillet-rose-brut-nv",
+    "why": "Bridge and fat: Pinot-led rosé Champagne has the red fruit for beef and the freshness for yolk and bottarga.",
+    "sayIt": "The Chartogne-Taillet rosé is a grower Champagne with real red fruit, beautiful with the tartare."
+   },
+   "splurge": {
+    "key": "billecart-salmon-cuvee-elisabeth-salmon-rose-brut-2009",
+    "why": "Weight and bridge: vintage rosé Champagne with age has the depth for raw beef and savory bottarga.",
+    "sayIt": "For a celebration, Billecart-Salmon Cuvée Elisabeth Salmon Rosé: elegant vintage pink Champagne, superb with tartare."
+   },
+   "half": {
+    "key": "veuve-fourny-et-fils-premier-cru-rose-nv-375ml",
+    "why": "Bridge: a half of rosé Champagne brings red fruit and bubbles for a starter portion of tartare.",
+    "sayIt": "A half-bottle of Veuve Fourny rosé Champagne: bright and dry, a lovely start with the tartare."
+   }
+  },
+  {
+   "dishId": "d-ecy8tdsb",
+   "dishName": "Turtle Soup",
+   "value": {
+    "key": "damien-laureau-l-alliance-savennieres-2022",
+    "why": "Bridge and weight: Savennières Chenin is dry, waxy and nutty, with the body for turtle soup and a note that meets sherry.",
+    "sayIt": "With the turtle soup, a dry Savennières from the Loire: rich, nutty Chenin that picks up the sherry."
+   },
+   "classic": {
+    "key": "bollinger-special-cuvee-brut-nv",
+    "why": "Bridge and salt: Bollinger has a rich, nutty, toasty style that echoes the aged sherry and lifts the soup.",
+    "sayIt": "For a bottle of Champagne, Bollinger Special Cuvée: rich and toasty, a beautiful match for turtle soup and sherry."
+   },
+   "splurge": {
+    "key": "domaine-du-pelican-vin-jaune-arbois-2016",
+    "why": "Bridge: Vin Jaune ages under a veil of yeast like sherry, so its nutty, savory character mirrors the aged sherry exactly.",
+    "sayIt": "For something truly special, Pélican Vin Jaune from the Jura: nutty and savory like fine sherry, made for turtle soup."
+   },
+   "half": {
+    "key": "la-cigarerra-manzanilla-sanlucar-de-barrameda-nv-375ml",
+    "why": "Bridge and salt: Manzanilla is bone dry sherry, so it repeats the sherry in the soup and cuts its richness.",
+    "sayIt": "A half-bottle of La Cigarrera Manzanilla: bone dry sherry, a natural partner for a soup finished with sherry."
+   }
+  },
+  {
+   "dishId": "d-r3h9vj7a",
+   "dishName": "Seafood Gumbo",
+   "value": {
+    "key": "stein-weihwasser-feinherb-2023",
+    "why": "Heat and sweet: a feinherb Riesling has a touch of sweetness that cools andouille spice, with acidity for the roux.",
+    "sayIt": "With gumbo, a Mosel Riesling from Stein: just off dry, bright, and it calms the spice beautifully."
+   },
+   "classic": {
+    "key": "jj-prum-wehlener-sonnenuhr-kabinett-2020",
+    "why": "Heat and acid: JJ Prüm Kabinett is light, lightly sweet and racy, so it soothes spice and refreshes after the roux.",
+    "sayIt": "For a step up, JJ Prüm Wehlener Sonnenuhr Kabinett: a classic Mosel Riesling, delicate and bright with the gumbo."
+   },
+   "splurge": {
+    "key": "egon-muller-scharzhofberger-kabinett-2020",
+    "why": "Heat and acid: Scharzhofberger Kabinett has electric acidity and gentle sweetness that tame spice and lift seafood.",
+    "sayIt": "For a celebration, Egon Müller Scharzhofberger Kabinett: one of the most sought after Rieslings in the world."
+   },
+   "half": {
+    "key": "brundlmayer-heiligenstein-riesling-2022-375ml",
+    "why": "Acid: a half of dry Kamptal Riesling has the acidity for a dark roux and shellfish.",
+    "sayIt": "A half-bottle of Bründlmayer Heiligenstein Riesling from Austria: dry, bright and great with gumbo."
+   }
+  },
+  {
+   "dishId": "d-tdqej73i",
+   "dishName": "Creole Caesar",
+   "value": {
+    "key": "domaine-l-ecu-orthogneiss-2022",
+    "why": "Salt and acid: mineral Muscadet matches the smoked oyster dressing and cuts the Grana Padano.",
+    "sayIt": "With the Caesar, a Muscadet from Domaine L’Ecu: crisp, mineral and salty, lovely with the oyster dressing."
+   },
+   "classic": {
+    "key": "do-ferreiro-albarino-cepas-vellas-rias-baixas-2018",
+    "why": "Salt and acid: old vine Albariño has saline citrus that meets smoked oyster and cheese.",
+    "sayIt": "For a bottle, Do Ferreiro Cepas Vellas Albariño from Rías Baixas: citrus, sea spray and depth."
+   },
+   "splurge": {
+    "key": "pascal-cotat-les-monts-damnes-sancerre-2022",
+    "why": "Acid and salt: Cotat Sancerre has the acidity and chalky grip to stand up to a bold, savory dressing.",
+    "sayIt": "For a celebration, Pascal Cotat Sancerre Les Monts Damnés: a rare, mineral Sauvignon Blanc, superb with the Caesar."
+   },
+   "half": {
+    "key": "duckhorn-north-coast-2023-375ml",
+    "why": "Acid: a half of Sauvignon Blanc gives crisp citrus for the dressing in a light lunch pour.",
+    "sayIt": "A half-bottle of Duckhorn Sauvignon Blanc: crisp and citrusy, a nice partner for the Caesar."
+   }
+  },
+  {
+   "dishId": "d-1q0xk7jv",
+   "dishName": "Eggs Hussarde",
+   "value": {
+    "key": "ridgeview-bloomsbury-brut-sussex-nv",
+    "why": "Fat and acid: English sparkling has bright acidity and bubbles that slice through hollandaise and yolk.",
+    "sayIt": "With the Hussarde, Ridgeview Bloomsbury from Sussex: English sparkling wine, crisp and toasty, great with hollandaise."
+   },
+   "classic": {
+    "key": "brennan-s-essential-by-piper-heidsieck-extra-nv",
+    "why": "Fat and acid: our very dry house Champagne cuts hollandaise and yolk, and its toastiness suits the coffee-cured bacon.",
+    "sayIt": "Eggs and Champagne: a bottle of our own Brennan’s Essential by Piper-Heidsieck, very dry, so the hollandaise stays light."
+   },
+   "splurge": {
+    "key": "rare-brut-2013",
+    "why": "Fat and bridge: Rare is a prestige vintage Champagne whose depth meets bacon and the marchand de vin.",
+    "sayIt": "For a celebration, a bottle of Rare: Piper-Heidsieck’s prestige vintage Champagne, rich and elegant with eggs."
+   },
+   "half": {
+    "key": "nicolas-feuillatte-reserve-brut-nv-375ml",
+    "why": "Fat and acid: a half of Brut Champagne gives two glasses of bubbles to clear rich hollandaise.",
+    "sayIt": "A half-bottle of Nicolas Feuillatte Brut: crisp Champagne for two, perfect with brunch."
+   }
+  },
+  {
+   "dishId": "d-fs311zha",
+   "dishName": "Eggs Sardou",
+   "value": {
+    "key": "loimer-lois-gruner-veltliner-2022",
+    "why": "Bridge and acid: Grüner Veltliner handles artichokes, which upset most wines, and its peppery freshness cuts creamed spinach.",
+    "sayIt": "Artichokes are tricky with wine, but Grüner Veltliner loves them: the Loimer Lois is crisp and peppery."
+   },
+   "classic": {
+    "key": "brundlmayer-alte-reben-gruner-veltliner-2023",
+    "why": "Bridge and weight: old vine Grüner has more texture for Choron sauce and stays friendly with artichoke.",
+    "sayIt": "For a bottle, Bründlmayer Alte Reben Grüner Veltliner: textured, peppery and lovely with the Sardou."
+   },
+   "splurge": {
+    "key": "franz-hirtzberger-honivogl-smaragd-gruner-veltliner-2022",
+    "why": "Weight and bridge: a Smaragd Grüner Veltliner has the richness for creamed spinach and Choron, and still loves artichoke.",
+    "sayIt": "For a celebration, Hirtzberger Honivogl Smaragd from the Wachau: a grand, rich Grüner Veltliner."
+   },
+   "half": {
+    "key": "brundlmayer-terrassen-classic-gruner-veltliner-2023-375ml",
+    "why": "Bridge: a half of classic Grüner gives the artichoke-friendly match in a lighter pour.",
+    "sayIt": "A half-bottle of Bründlmayer Grüner Veltliner: fresh and peppery, a smart match with artichokes."
+   }
+  },
+  {
+   "dishId": "d-44jfmkdb",
+   "dishName": "Eggs Owen",
+   "value": {
+    "key": "marcel-lapierre-morgon-2023",
+    "why": "Tannin and bridge: Morgon Gamay has low tannin that will not clash with egg, and juicy fruit for braised short rib.",
+    "sayIt": "With the Eggs Owen, a Morgon from Lapierre: juicy, silky Gamay that loves the short rib and the egg."
+   },
+   "classic": {
+    "key": "domaine-tollot-beaut-les-lavieres-2019",
+    "why": "Bridge and fat: Savigny Premier Cru Pinot Noir echoes the red wine braise and stays light enough for hollandaise.",
+    "sayIt": "The Tollot-Beaut Savigny-lès-Beaune Les Lavières is a red Burgundy that matches the red wine braise."
+   },
+   "splurge": {
+    "key": "marquis-d-angerville-clos-des-ducs-2014",
+    "why": "Weight and bridge: an aged Volnay Premier Cru has silky depth that meets braised short rib and marchand de vin.",
+    "sayIt": "For a celebration, Marquis d’Angerville Volnay Clos des Ducs: silky, perfumed red Burgundy with age."
+   },
+   "half": {
+    "key": "bouchard-pere-fils-clos-de-la-mousse-2022-375ml",
+    "why": "Bridge: a half of Beaune Premier Cru gives red Burgundy for the braise without too much at brunch.",
+    "sayIt": "A half-bottle of Bouchard Beaune Clos de la Mousse: gentle red Burgundy, lovely with the short rib."
+   }
+  },
+  {
+   "dishId": "d-vbtv3rru",
+   "dishName": "Duck Confit Waffle",
+   "value": {
+    "key": "stein-palmberg-terrassen-spatlese-feinherb-2014",
+    "why": "Sweet and acid: a Spätlese-feinherb Riesling has a touch of sweetness for maple and acidity for duck fat.",
+    "sayIt": "With the duck and maple, an off dry Mosel Riesling from Stein: bright, juicy and perfect with the syrup."
+   },
+   "classic": {
+    "key": "albert-boxler-2020",
+    "why": "Fat and weight: Alsace Pinot Gris is a classic with foie gras, rich enough for confit and gently spicy.",
+    "sayIt": "For a bottle, Albert Boxler Pinot Gris from Alsace: rich and spicy, the classic wine for foie gras."
+   },
+   "splurge": {
+    "key": "f-e-trimbach-reserve-personnelle-2007",
+    "why": "Fat and weight: a Trimbach Reserve Personnelle Pinot Gris has the opulence for foie gras butter and the depth for confit.",
+    "sayIt": "For a celebration, Trimbach Pinot Gris Réserve Personnelle: deep, rich Alsace white, made for foie gras."
+   },
+   "half": {
+    "key": "domaine-huet-le-mont-vouvray-demi-sec-2023-375ml",
+    "why": "Sweet and acid: a demi-sec Chenin half is sweet enough for the mustard maple syrup and bright enough for the duck fat.",
+    "sayIt": "A half-bottle of Huet Le Mont demi-sec: gently sweet Vouvray, apple and honey, lovely with duck and maple.",
+    "note": "Re-chosen by the repairer, 4 October 2026: the Dr. Hermann Auslese half is the menu wine with its own card, so the bottle list card that repeated it was dropped."
+   }
+  },
+  {
+   "dishId": "d-bqznncn6",
+   "dishName": "New Orleans Shrimp & Grits",
+   "value": {
+    "key": "domaine-coudert-clos-de-la-roilette-fleurie-2023",
+    "why": "Heat and acid: chilled Fleurie has juicy fruit and low tannin for Creole sauce and tasso spice.",
+    "sayIt": "With shrimp and grits, a lightly chilled Fleurie, Clos de la Roilette: juicy Gamay, great with tomato and spice."
+   },
+   "classic": {
+    "key": "jean-foillard-cote-du-py-morgon-2022",
+    "why": "Heat and bridge: Morgon Côte du Py has more depth for smoky tasso and pimento cheese, with tannin soft enough for spice.",
+    "sayIt": "For a bottle, Jean Foillard Morgon Côte du Py: savory, juicy Gamay that loves the tasso and Creole sauce."
+   },
+   "splurge": {
+    "key": "krug-rose-brut-nv",
+    "why": "Bridge and fat: Krug Rosé has red fruit and power for shrimp, smoky tasso and fried grit cake.",
+    "sayIt": "For a celebration, Krug Rosé: rich, rare pink Champagne, glorious with shrimp and grits."
+   },
+   "half": {
+    "key": "louis-jadot-villages-2021-375ml",
+    "why": "Heat: a half of Beaujolais-Villages gives light, fruity red that stays calm with Creole spice.",
+    "sayIt": "A half-bottle of Jadot Beaujolais-Villages: light and fruity, easy with shrimp and grits."
+   }
+  },
+  {
+   "dishId": "d-1bvercoh",
+   "dishName": "Pecan Gulf Fish",
+   "value": {
+    "key": "sandhi-sta-rita-hills-2021",
+    "why": "Fat and weight: Santa Rita Hills Chardonnay has texture for crab and cauliflower purée and acidity for the fish.",
+    "sayIt": "With the pecan fish, Sandhi Chardonnay from Santa Rita Hills: fresh but creamy, lovely with crab and pecans."
+   },
+   "classic": {
+    "key": "chateau-montelena-napa-valley-2023",
+    "why": "Fat and bridge: Napa Chardonnay brings richness for pecan bordelaise and crab, with balance for flaky fish.",
+    "sayIt": "The Chateau Montelena Chardonnay from Napa is rich and balanced, beautiful with pecans and crab."
+   },
+   "splurge": {
+    "key": "kongsgaard-napa-valley-2016",
+    "why": "Weight and fat: a Kongsgaard Chardonnay with age has the power for pecan bordelaise and lump crab.",
+    "sayIt": "For a celebration, Kongsgaard Chardonnay from Napa: rich, layered, and a cult favorite, superb with the pecan fish."
+   },
+   "half": {
+    "key": "chalk-hill-2021-375ml",
+    "why": "Fat: a half of Sonoma Chardonnay gives creamy texture for crab and purée in a light pour.",
+    "sayIt": "A half-bottle of Chalk Hill Chardonnay: creamy and round, a nice match for the pecan fish."
+   }
+  },
+  {
+   "dishId": "d-k84u864v",
+   "dishName": "Crab & Corn Omelette",
+   "value": {
+    "key": "kumeu-river-estate-chardonnay-auckland-2022",
+    "why": "Fat and acid: Kumeu River Chardonnay has gentle richness for crab and miso butter and citrus for the lemon.",
+    "sayIt": "With the omelette, Kumeu River Chardonnay from New Zealand: fresh, creamy and bright with lemon and crab."
+   },
+   "classic": {
+    "key": "les-heritiers-du-comte-lafon-macon-milly-2023",
+    "why": "Fat and bridge: Mâcon Milly-Lamartine has round fruit that meets sweet corn and a chalky freshness for lemon.",
+    "sayIt": "For a bottle, the Lafon Mâcon Milly-Lamartine: round, bright white Burgundy, lovely with corn and crab."
+   },
+   "splurge": {
+    "key": "domaine-des-comtes-lafon-clos-de-la-2022",
+    "why": "Fat and weight: Lafon Meursault Clos de la Baronne has richness for miso butter and the freshness for basil and lemon.",
+    "sayIt": "For a celebration, Comtes Lafon Meursault Clos de la Baronne: rich, precise white Burgundy from a great name."
+   },
+   "half": {
+    "key": "domaine-louis-michel-montmains-2023-375ml",
+    "why": "Acid: a half of Chablis Premier Cru gives citrus and chalk for lemon and crab at brunch.",
+    "sayIt": "A half-bottle of Louis Michel Chablis Montmains: crisp and mineral, great with crab."
+   }
+  },
+  {
+   "dishId": "d-4jee8o34",
+   "dishName": "Creole-Spiced Hanger Steak",
+   "value": {
+    "key": "la-chapelle-de-meyney-2018",
+    "why": "Tannin and fat: Saint-Estèphe Cabernet has structure for hanger steak and cuts through béarnaise and yolk.",
+    "sayIt": "With the hanger steak, La Chapelle de Meyney from Saint-Estèphe: classic Bordeaux, firm and savory with béarnaise."
+   },
+   "classic": {
+    "key": "la-rioja-alta-904-gran-reserva-2015",
+    "why": "Tannin and bridge: Rioja Gran Reserva has mellow tannin and savory spice that suit Creole seasoning and smoked potato.",
+    "sayIt": "For a bottle, La Rioja Alta 904 Gran Reserva: aged Rioja, savory and mellow, lovely with the smoked potato."
+   },
+   "splurge": {
+    "key": "chateau-grand-puy-lacoste-5eme-cru-classe-2008",
+    "why": "Tannin and weight: Grand-Puy-Lacoste with age has firm, resolved Pauillac tannin for beef and béarnaise.",
+    "sayIt": "For a celebration, Château Grand-Puy-Lacoste from Pauillac: classic, aged Bordeaux with steak and béarnaise."
+   },
+   "half": {
+    "key": "chateau-troplong-mondot-1er-grand-cru-classe-2020-375ml",
+    "why": "Tannin: a half of Saint-Émilion gives Merlot-led structure for steak at lunch.",
+    "sayIt": "A half-bottle of Troplong-Mondot from Saint-Émilion: plush Bordeaux, a lovely lunch pour with steak."
+   }
+  },
+  {
+   "dishId": "d-5wcuejdy",
+   "dishName": "Roasted Chateaubriand",
+   "value": {
+    "key": "duckhorn-napa-valley-2022",
+    "why": "Tannin and fat: Napa Cabernet has ripe fruit and structure for tenderloin and buttery sauce Foyot.",
+    "sayIt": "With the Chateaubriand, Duckhorn Napa Cabernet: ripe, polished and structured, a sure thing with beef."
+   },
+   "classic": {
+    "key": "chateau-talbot-4eme-cru-classe-2019",
+    "why": "Tannin and weight: Saint-Julien Cabernet has the structure and cedar for a classic French beef course.",
+    "sayIt": "For a bottle, Château Talbot from Saint-Julien: classic Bordeaux, cedar and blackcurrant, made for Chateaubriand."
+   },
+   "splurge": {
+    "key": "chateau-pichon-longueville-comtesse-de-lalande-2eme-2004",
+    "why": "Tannin and fat: a mature Pichon Lalande has silky Pauillac tannin and depth for tenderloin and sauce Foyot.",
+    "sayIt": "For a celebration, Pichon-Longueville Comtesse de Lalande with age: elegant Pauillac, perfect for a dish for two."
+   },
+   "half": {
+    "key": "ridge-vineyards-estate-santa-cruz-mountains-2020-375ml",
+    "why": "Tannin: a half of Ridge Estate Cabernet gives structure for beef in a two glass pour.",
+    "sayIt": "A half-bottle of Ridge Estate Cabernet: structured and savory, just right for two with beef."
+   }
+  },
+  {
+   "dishId": "d-s1bqzuks",
+   "dishName": "Redfish Véronique",
+   "value": {
+    "key": "louis-michel-2022",
+    "why": "Acid and fat: Chablis has the acidity for preserved lemon and pickled grapes and enough texture for beurre blanc.",
+    "sayIt": "With the redfish, Louis Michel Chablis: crisp, mineral Chardonnay, lovely with the lemon beurre blanc."
+   },
+   "classic": {
+    "key": "domaine-leflaive-macon-verze-2021",
+    "why": "Fat and acid: Leflaive Mâcon-Verzé has the texture for beurre blanc and citrus for preserved lemon.",
+    "sayIt": "For a bottle, Domaine Leflaive Mâcon-Verzé: elegant white Burgundy from a great name, made for beurre blanc."
+   },
+   "splurge": {
+    "key": "domaine-leflaive-2016",
+    "why": "Fat and bridge: Leflaive Puligny-Montrachet has silky richness and citrus that meet beurre blanc and braised leeks.",
+    "sayIt": "For a celebration, Domaine Leflaive Puligny-Montrachet: one of the great white Burgundies, silky with the redfish."
+   },
+   "half": {
+    "key": "domaine-louis-michel-montmains-2023-375ml",
+    "why": "Acid: a half of Chablis Premier Cru gives crisp acidity for lemon beurre blanc.",
+    "sayIt": "A half-bottle of Louis Michel Chablis Montmains: crisp and chalky with the redfish."
+   }
+  },
+  {
+   "dishId": "d-szzugxzi",
+   "dishName": "Gulf Fish en Papillote",
+   "value": {
+    "key": "raul-perez-ultreia-godello-bierzo-2021",
+    "why": "Salt and bridge: Godello has saline, almond-like texture that meets Castelvetrano olives and Marcona almonds.",
+    "sayIt": "With the papillote, Raúl Pérez Ultreia Godello from Bierzo: textured and saline, great with olives and almonds."
+   },
+   "classic": {
+    "key": "gai-a-wild-ferment-assyrtiko-santorini-2023",
+    "why": "Salt and acid: Santorini Assyrtiko has salty, lemony acidity for olives and tomato and steamed fish.",
+    "sayIt": "For a bottle, Gai’a Assyrtiko from Santorini: bone dry, salty and lemony, perfect with the fish and olives."
+   },
+   "splurge": {
+    "key": "domaine-de-trevallon-alpilles-2016",
+    "why": "Bridge and weight: Trévallon blanc has Provençal herbs and texture that echo olives, tomato and banana leaf.",
+    "sayIt": "For a celebration, Domaine de Trévallon white from Provence: rare, herbal and rich, lovely with the papillote."
+   }
+  },
+  {
+   "dishId": "d-l5877hs6",
+   "dishName": "Poussin à la Moutarde",
+   "value": {
+    "key": "au-bon-climat-sanford-benedict-sta-rita-2021",
+    "why": "Fat and acid: Sanford and Benedict Chardonnay has richness for mustard cream and acidity for the fried crust.",
+    "sayIt": "With the hen, Au Bon Climat Sanford and Benedict Chardonnay: rich and fresh, lovely with mustard cream."
+   },
+   "classic": {
+    "key": "bitouzet-prieur-les-corbins-2020",
+    "why": "Fat and weight: Meursault has the creamy richness that mirrors mustard cream, with acidity for the fried skin.",
+    "sayIt": "For a bottle, Bitouzet-Prieur Meursault Les Corbins: creamy white Burgundy, classic with a mustard cream sauce."
+   },
+   "splurge": {
+    "key": "pol-roger-blanc-de-blancs-brut-2015",
+    "why": "Fat and salt: vintage Blanc de Blancs Champagne cuts the fried crust and mustard cream, and its chalky freshness keeps each bite light.",
+    "sayIt": "For a celebration, Pol Roger Blanc de Blancs: vintage Champagne with a fried hen, rich, crisp and celebratory."
+   },
+   "half": {
+    "key": "schramsberg-blanc-de-blancs-north-coast-2021-375ml",
+    "why": "Fat and salt: a half of Blanc de Blancs sparkling cuts fried skin and cream sauce.",
+    "sayIt": "A half-bottle of Schramsberg Blanc de Blancs: crisp California bubbles, great with the fried hen."
+   }
+  },
+  {
+   "dishId": "d-377dkkse",
+   "dishName": "Blackened Tofu",
+   "value": {
+    "key": "ken-wright-cellars-willamette-valley-2024",
+    "why": "Bridge and heat: Willamette Pinot Noir has earthy fruit for shiitakes and low tannin that stays calm with blackening spice.",
+    "sayIt": "With the blackened tofu, Ken Wright Willamette Valley Pinot Noir: earthy and silky, lovely with the mushrooms."
+   },
+   "classic": {
+    "key": "domaine-jean-grivot-les-charmois-2013",
+    "why": "Bridge and salt: a Nuits-Saint-Georges with age shows savory, mushroom notes that echo preserved shiitake.",
+    "sayIt": "For a bottle, Grivot Nuits-Saint-Georges Les Charmois: savory red Burgundy with age, beautiful with shiitakes."
+   },
+   "splurge": {
+    "key": "domaine-georges-roumier-clos-de-la-bussiere-2014",
+    "why": "Bridge and weight: Roumier Morey-Saint-Denis Premier Cru has earthy depth and silk for umami mushrooms and rice grits.",
+    "sayIt": "For a celebration, Georges Roumier Clos de la Bussière: a red Burgundy from a legendary grower, earthy and silky."
+   },
+   "half": {
+    "key": "bergstrom-reserve-willamette-valley-2022-375ml",
+    "why": "Bridge: a half of Oregon Pinot Noir gives earthy red fruit for mushrooms in a lighter pour.",
+    "sayIt": "A half-bottle of Bergstrom Reserve Pinot Noir: earthy and bright, a nice match for the tofu."
+   }
+  },
+  {
+   "dishId": "d-ono6zqmz",
+   "dishName": "Creole Hanger Steak",
+   "value": {
+    "key": "ridge-vineyards-three-valleys-sonoma-2023",
+    "why": "Heat and weight: Zinfandel has ripe fruit and soft tannin that handle chili crisp and Creole spice.",
+    "sayIt": "With the Creole hanger steak, Ridge Three Valleys Zinfandel: ripe, spicy and juicy, great with chili crisp."
+   },
+   "classic": {
+    "key": "ridge-vineyards-lytton-springs-dry-creek-valley-2022",
+    "why": "Heat and bridge: Lytton Springs has brambly fruit and spice that meet Creole seasoning and Madeira glaze.",
+    "sayIt": "For a bottle, Ridge Lytton Springs: a Zinfandel blend, spicy and generous, made for this steak."
+   },
+   "splurge": {
+    "key": "domaine-du-vieux-telegraphe-la-crau-2014",
+    "why": "Weight and heat: Vieux Télégraphe with age has Grenache warmth and soft tannin for spicy beef and persillade.",
+    "sayIt": "For a celebration, Vieux Télégraphe Châteauneuf-du-Pape with age: savory, spicy and silky with the steak."
+   },
+   "half": {
+    "key": "ridge-vineyards-lytton-springs-dry-creek-valley-2021-375ml",
+    "why": "Heat: a half of Lytton Springs gives ripe fruit for spice in a two glass pour.",
+    "sayIt": "A half-bottle of Ridge Lytton Springs: spicy, ripe Zinfandel, perfect with the steak."
+   }
+  },
+  {
+   "dishId": "d-w6h1p19m",
+   "dishName": "World Famous Bananas Foster",
+   "value": {
+    "key": "hexamer-meddersheimer-rheingrafenberg-spatlese-2010",
+    "why": "Sweet and acid: a mature Nahe Spätlese has honeyed fruit for banana and caramel and acidity to cut the butter.",
+    "sayIt": "With Bananas Foster, a Hexamer Riesling Spätlese with age: honeyed and bright, lovely with caramelized banana."
+   },
+   "classic": {
+    "key": "riveyrac-rivesaltes-languedoc-roussillon-1975",
+    "why": "Bridge and sweet: an old Rivesaltes is sweet fortified wine with caramel and nut notes that echo the flambéed sauce.",
+    "sayIt": "For something special, a 1975 Rivesaltes from Roussillon: an old sweet wine, caramel and nuts, made for Foster."
+   },
+   "splurge": {
+    "key": "chateau-gilette-creme-de-tete-sauternes-1989",
+    "why": "Sweet and bridge: an old Sauternes has crème brûlée and caramel depth for the butter, brown sugar and rum.",
+    "sayIt": "For a celebration, Château Gilette Crème de Tête: a rare, long aged Sauternes, caramel and apricot with the bananas."
+   },
+   "half": {
+    "key": "grgich-hills-violetta-late-harvest-napa-valley-2012-375ml",
+    "why": "Sweet: a late harvest half is honeyed enough for caramel sauce and vanilla ice cream.",
+    "sayIt": "A half-bottle of Grgich Hills Violetta, a late harvest Napa dessert wine: honeyed and lovely with Foster."
+   }
+  },
+  {
+   "dishId": "d-izx790wz",
+   "dishName": "Cherries Jubilee",
+   "value": {
+    "key": "sandeman-late-bottled-vintage-1999",
+    "why": "Bridge and sweet: Late Bottled Vintage Port has dark cherry fruit and sweetness for black cherries and Luxardo sauce.",
+    "sayIt": "With Cherries Jubilee, a Sandeman Late Bottled Vintage Port: dark cherry and spice, perfect with the sauce."
+   },
+   "classic": {
+    "key": "taylor-fladgate-quinta-de-vargellas-1987",
+    "why": "Bridge and tannin: a mature single quinta vintage Port has cherry and spice with softened tannin for the ice cream.",
+    "sayIt": "For something special, Taylor Fladgate Quinta de Vargellas with age: mellow vintage Port, cherries and spice."
+   },
+   "splurge": {
+    "key": "taylor-fladgate-1977",
+    "why": "Bridge and sweet: a 1977 Taylor Fladgate vintage Port has dried cherry and spice that match the flambéed fruit.",
+    "sayIt": "For a celebration, Taylor Fladgate 1977 vintage Port: almost fifty years old, silky and spiced, glorious with cherries."
+   },
+   "half": {
+    "key": "ridge-vineyards-essence-zinfandel-sonoma-2014-375ml",
+    "why": "Bridge: a half of sweet Zinfandel tastes of ripe dark cherry, echoing the dessert.",
+    "sayIt": "A half-bottle of Ridge Essence, a sweet Zinfandel: ripe cherry and spice, fun with the jubilee."
+   }
+  },
+  {
+   "dishId": "d-un9zb9af",
+   "dishName": "New Orleans Bread Pudding",
+   "value": {
+    "key": "domaine-des-baumard-clos-sainte-catherine-coteaux-2006",
+    "why": "Sweet and bridge: twenty-year-old sweet Chenin is as sweet as the whiskey caramel, with honey and quince for the pralines and acidity for the custard.",
+    "sayIt": "With the bread pudding, Baumard’s sweet Loire Chenin: honey, quince and baked apple, sweet enough for the caramel and bright to finish.",
+    "note": "Re-chosen by the repairer, 4 October 2026: Barbadillo Pale Cream is a lightly sweetened fino and tastes thin beside whiskey caramel."
+   },
+   "classic": {
+    "key": "chateau-suduirant-sauternes-2010",
+    "why": "Sweet and acid: Sauternes has honeyed apricot for the caramel and acidity to lift the custard.",
+    "sayIt": "For a bottle, Château Suduiraut Sauternes: honey and apricot, classic with bread pudding."
+   },
+   "splurge": {
+    "key": "chateau-d-yquem-sauternes-2007",
+    "why": "Sweet and fat: Yquem has the sweetness and richness for custard and whiskey caramel, with acidity to keep it lively.",
+    "sayIt": "For a celebration, Château d’Yquem: the world’s most famous Sauternes, honeyed and luminous with bread pudding."
+   },
+   "half": {
+    "key": "chateau-suduirant-sauternes-2016-375ml",
+    "why": "Sweet: a half of Sauternes gives honey and apricot for caramel in a two glass pour.",
+    "sayIt": "A half-bottle of Château Suduiraut Sauternes: honeyed and golden, made for bread pudding."
+   }
+  },
+  {
+   "dishId": "d-8oncjhit",
+   "dishName": "The Snickers",
+   "value": {
+    "key": "feist-late-bottled-vintage-2006",
+    "why": "Sweet and bridge: Late Bottled Vintage Port has dark fruit and cocoa notes that match milk chocolate and caramel.",
+    "sayIt": "With the Snickers, a Late Bottled Vintage Port from Feist: chocolatey and rich, great with caramel and peanuts."
+   },
+   "classic": {
+    "key": "graham-s-2000",
+    "why": "Sweet and tannin: vintage Port has ripe fruit and grip for milk chocolate, caramel custard and roasted peanuts.",
+    "sayIt": "For something special, Graham’s 2000 vintage Port: rich, ripe and chocolatey, made for this dessert."
+   },
+   "splurge": {
+    "key": "graham-s-1983",
+    "why": "Sweet and bridge: a 1983 Graham’s vintage Port has mellowed into nutty, dried fruit depth for nougat and peanuts.",
+    "sayIt": "For a celebration, Graham’s 1983 vintage Port: over forty years old, mellow and nutty with chocolate."
+   },
+   "half": {
+    "key": "dow-s-2000-375ml",
+    "why": "Sweet: a half of vintage Port gives rich fruit for chocolate in a smaller pour.",
+    "sayIt": "A half-bottle of Dow’s 2000 vintage Port: rich and dark, perfect with chocolate."
+   }
+  },
+  {
+   "dishId": "d-lfwbmoys",
+   "dishName": "Lemon Tart",
+   "value": {
+    "key": "dr-hermann-urziger-wurtzgarten-in-der-kranklei-2018",
+    "why": "Sweet and acid: a Goldkapsel Spätlese is sweet with piercing acidity, one of the few wines that survives lemon.",
+    "sayIt": "With the lemon tart, a sweet Mosel Riesling from Dr. Hermann: bright and honeyed, it keeps up with the lemon."
+   },
+   "classic": {
+    "key": "chateau-climens-premier-cru-classe-barsac-2010",
+    "why": "Sweet and acid: Barsac is known for freshness among sweet Bordeaux, with citrus notes for yuzu and meringue.",
+    "sayIt": "For a bottle, Château Climens from Barsac: sweet but fresh, with citrus notes, lovely with lemon and yuzu."
+   },
+   "splurge": {
+    "key": "chateau-d-yquem-sauternes-2016-375ml",
+    "why": "Sweet and acid: Yquem has the sweetness to stay above lemon jelly and the acidity to stay fresh.",
+    "sayIt": "For a celebration, a half-bottle of Château d’Yquem: honeyed and bright, extraordinary with the lemon tart."
+   },
+   "half": {
+    "key": "donhoff-oberhauser-brucke-goldkapsel-auslese-2023-375ml",
+    "why": "Sweet and acid: a Goldkapsel Auslese half has the sweetness and acidity to match lemon and yuzu.",
+    "sayIt": "A half-bottle of Dönhoff Oberhäuser Brücke Auslese: sweet, racy Riesling, made for lemon desserts."
+   }
+  },
+  {
+   "dishId": "d-t96e4urn",
+   "dishName": "Pineapple Tarte Tatin",
+   "value": {
+    "key": "castello-banfi-florus-moscadello-di-montalcino-2011",
+    "why": "Sweet and bridge: late harvest Moscadello has honeyed, tropical fruit for charred pineapple and caramel.",
+    "sayIt": "With the tarte Tatin, Banfi Florus, a late harvest Moscadello: honeyed and fruity, lovely with pineapple."
+   },
+   "classic": {
+    "key": "alois-kracher-auslese-burgenland-2017",
+    "why": "Sweet and bridge: a Kracher Auslese has honeyed, tropical richness for charred pineapple and sweet anglaise.",
+    "sayIt": "For a bottle, Alois Kracher Auslese from Austria: rich, honeyed and tropical, made for pineapple and caramel."
+   },
+   "splurge": {
+    "key": "j-j-prum-wehlener-sonnenuhr-riesling-gka-2015-1-5l",
+    "why": "Sweet and acid: a magnum of JJ Prüm Goldkapsel Auslese brings tropical honey and racy acidity for a table sharing dessert.",
+    "sayIt": "For a table celebrating, a magnum of JJ Prüm Auslese: sweet, racy Mosel Riesling, gorgeous with pineapple."
+   },
+   "half": {
+    "key": "keller-pius-auslese-2022-375ml",
+    "why": "Sweet and acid: Keller PIUS Auslese half has honeyed fruit and acidity for caramel and pineapple.",
+    "sayIt": "A half-bottle of Keller PIUS Auslese: sweet, pure Riesling from a great grower, lovely with the tatin."
+   }
+  },
+  {
+   "dishId": "d-kg4fxuxx",
+   "dishName": "Creole Spiced Nuts",
+   "value": {
+    "key": "jansz-premier-cuvee-brut-tasmania-2022",
+    "why": "Salt and heat: Tasmanian sparkling has bright bubbles that refresh after salt and Creole spice.",
+    "sayIt": "With the spiced nuts, Jansz from Tasmania: crisp sparkling wine, perfect for snacking."
+   },
+   "classic": {
+    "key": "charles-heidsieck-reserve-brut-nv",
+    "why": "Salt and bridge: Charles Heidsieck Réserve has toasty, nutty richness that echoes roasted nuts and tames spice.",
+    "sayIt": "For a bottle of Champagne, Charles Heidsieck Réserve: rich and toasty, lovely with spiced nuts."
+   },
+   "splurge": {
+    "key": "krug-grande-cuvee-170th-edition-brut-nv",
+    "why": "Salt and bridge: Krug Grande Cuvée has toasted nut and brioche depth that meets roasted spiced nuts.",
+    "sayIt": "For a celebration, Krug Grande Cuvée: the great multi vintage Champagne, rich, nutty and layered."
+   },
+   "half": {
+    "key": "tribaut-schloesser-origine-brut-nv-375ml",
+    "why": "Salt: a half of grower Brut gives two glasses of bubbles for a salty snack.",
+    "sayIt": "A half-bottle of Tribaut-Schloesser Brut: easy, crisp Champagne for two with the nuts."
+   }
+  },
+  {
+   "dishId": "d-vovhoagi",
+   "dishName": "Crawfish Meat Pies",
+   "value": {
+    "key": "ferrari-rose-brut-nv",
+    "why": "Fat and acid: Trento rosé sparkling cuts fried pastry and rémoulade, with red fruit for crawfish.",
+    "sayIt": "With the meat pies, Ferrari rosé from Trento: crisp Italian sparkling, lovely with fried pastry."
+   },
+   "classic": {
+    "key": "billecart-salmon-reserve-brut-nv",
+    "why": "Fat and salt: Billecart-Salmon Réserve is bright and fine, made to cut fried pastry and creamy rémoulade.",
+    "sayIt": "For a bottle of Champagne, Billecart-Salmon Réserve: elegant and fresh, perfect with crawfish pies."
+   },
+   "splurge": {
+    "key": "bollinger-la-grande-annee-brut-2015",
+    "why": "Weight and fat: Bollinger La Grande Année has the depth for crawfish and the acidity for rich pastry.",
+    "sayIt": "For a celebration, Bollinger La Grande Année: rich vintage Champagne, superb with crawfish pies."
+   },
+   "half": {
+    "key": "ferrari-brut-trento-nv-375ml",
+    "why": "Fat: a half of Trento Brut gives bubbles for fried pastry in a two glass pour.",
+    "sayIt": "A half-bottle of Ferrari Brut: crisp Italian sparkling, great with the pies."
+   }
+  },
+  {
+   "dishId": "d-fswku8o2",
+   "dishName": "Fried Pickles",
+   "value": {
+    "key": "domaine-huet-petillant-vouvray-fr-2019",
+    "why": "Acid and fat: pétillant Vouvray has the acidity for pickles and gentle bubbles for frying and chive cream.",
+    "sayIt": "With fried pickles, Huet Pétillant from Vouvray: lightly sparkling Chenin, bright and fun with the pickles."
+   },
+   "classic": {
+    "key": "jm-seleque-solessence-extra-brut-nv",
+    "why": "Acid and fat: Extra Brut grower Champagne is dry enough for vinegar and fresh enough for fried batter.",
+    "sayIt": "For a bottle, JM Sélèque Solessence Extra Brut: a grower Champagne, crisp and dry, great with fried pickles."
+   },
+   "splurge": {
+    "key": "jacques-selosse-initial-blanc-de-blancs-10-nv",
+    "why": "Acid and salt: Selosse Initial has vivid acidity and depth that turn a fried snack into an occasion.",
+    "sayIt": "For a celebration, Jacques Selosse Initial: a cult grower Champagne, intense and unforgettable."
+   },
+   "half": {
+    "key": "veuve-fourny-et-fils-premier-cru-blanc-nv-375ml",
+    "why": "Acid: a half of Blanc de Blancs Extra Brut gives crisp acidity for pickles and batter.",
+    "sayIt": "A half-bottle of Veuve Fourny Blanc de Blancs: bone dry Champagne for the pickles."
+   }
+  },
+  {
+   "dishId": "d-5f1lj940",
+   "dishName": "Popcorn Shrimp",
+   "value": {
+    "key": "cesarini-sforza-rose-brut-trento-nv",
+    "why": "Heat and fat: Trento rosé sparkling cools Crystal gastrique and cuts fried shrimp.",
+    "sayIt": "With popcorn shrimp, Cesarini Sforza rosé from Trento: crisp, fruity bubbles, great with hot sauce."
+   },
+   "classic": {
+    "key": "louis-roederer-collection-244-brut-nv",
+    "why": "Fat and heat: Roederer Collection 244 is fresh and fine, cutting fried shrimp and soothing hot sauce.",
+    "sayIt": "For a bottle of Champagne, Louis Roederer Collection 244: fresh, fine and lovely with fried shrimp."
+   },
+   "splurge": {
+    "key": "louis-roederer-cristal-brut-2015",
+    "why": "Fat and acid: Cristal has precision and depth that cut fried batter and make a snack a celebration.",
+    "sayIt": "For a celebration, Louis Roederer Cristal: one of the most famous Champagnes in the world, precise and elegant."
+   }
+  },
+  {
+   "dishId": "d-uvb0pz6a",
+   "dishName": "Cheese Board",
+   "value": {
+    "key": "sandeman-late-bottled-vintage-1999",
+    "why": "Sweet and salt: Late Bottled Vintage Port has sweet fruit that meets salty cheese and chutney.",
+    "sayIt": "With the cheese board, Sandeman Late Bottled Vintage Port: sweet, dark fruit, classic with cheese."
+   },
+   "classic": {
+    "key": "domaine-huet-clos-du-bourg-vouvray-demi-2015",
+    "why": "Sweet and acid: an aged demi-sec Vouvray has honeyed sweetness for cheese and honey, with acidity to cut richness.",
+    "sayIt": "For a bottle, Huet Clos du Bourg demi-sec with age: honeyed Chenin, wonderful with cheese and honey."
+   },
+   "splurge": {
+    "key": "dow-s-1985",
+    "why": "Sweet and salt: a 1985 Dow’s vintage Port has mellow sweetness for salty cheese and fruit and nut bread.",
+    "sayIt": "For a celebration, Dow’s 1985 vintage Port: over forty years old, mellow and complex, perfect with cheese."
+   },
+   "half": {
+    "key": "donhoff-niederhauser-hermannshohle-goldkapsel-auslese-2023-375ml",
+    "why": "Sweet and salt: an Auslese half has honeyed sweetness and acidity for salty cheese and honey.",
+    "sayIt": "A half-bottle of Dönhoff Auslese: honeyed Riesling, lovely with cheese and Brennan’s honey."
+   }
+  },
+  {
+   "dishId": "d-wammm1fe",
+   "dishName": "Roost Burger",
+   "value": {
+    "key": "lopez-de-heredia-cubillo-crianza-2016",
+    "why": "Tannin and fat: Rioja Crianza has soft tannin and savory fruit for short rib patties, bacon and cheese.",
+    "sayIt": "With the burger, López de Heredia Cubillo Rioja: savory, mellow Tempranillo, great with beef and bacon."
+   },
+   "classic": {
+    "key": "caymus-napa-valley-2023",
+    "why": "Tannin and fat: ripe Napa Cabernet has plush fruit and structure for beef, cheese and tomato jam.",
+    "sayIt": "For a bottle, Caymus Napa Valley Cabernet: rich and plush, a favorite with a great burger."
+   },
+   "splurge": {
+    "key": "silver-oak-napa-valley-2020",
+    "why": "Tannin and weight: Silver Oak Napa Cabernet has ripe structure for double short rib patties and bacon.",
+    "sayIt": "For a celebration, Silver Oak Napa Valley Cabernet: a guest favorite, polished and generous with beef."
+   },
+   "half": {
+    "key": "duckhorn-napa-valley-2020-375ml",
+    "why": "Fat: a half of Napa Merlot gives soft, plush fruit for beef and cheese.",
+    "sayIt": "A half-bottle of Duckhorn Merlot: soft and plush, an easy match for the burger."
+   }
+  }
+ ]
+}

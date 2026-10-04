@@ -245,6 +245,45 @@ function damaged(fixture) {
 }
 
 /**
+ * The fixture with the bottle list in it: four wines on the list 'bottle'
+ * (a value, a sweet spot, a celebration and a half bottle, each with a bin
+ * and a size), the chicken's pairing carrying all four tiers, one more tier
+ * that breaks every rule it can (a glass wine, a bottle out of its band, a
+ * why over the cap, a half that is not a half, no line to say), and a
+ * stray key inside a tier for the normaliser to drop.
+ * @param {any} fixture
+ */
+function bottled(fixture) {
+	const h = clone(fixture);
+	const base = h.wines[0];
+	const bottle = (/** @type {string} */ id, /** @type {string} */ name, /** @type {string} */ price, /** @type {string} */ bin, /** @type {string} */ size) =>
+		Object.assign(clone(base), { id, name, wine: name, glass: '', bottle: price, price, list: 'bottle', bin, size, ts: NOW });
+	h.wines.push(
+		bottle('w-bvalue01', 'Quay Lane Value Red', '$68', '1101', '750ml'),
+		bottle('w-bclass01', 'Quay Lane Reserve', '$140', '1102', '750ml'),
+		bottle('w-bsplur01', 'Quay Lane Grand Vin', '$1,250', '1103', '750ml'),
+		bottle('w-bhalf001', 'Quay Lane Half', '$54', '1104', '375 ml')
+	);
+	const pick = (/** @type {string} */ wineId) => ({ wineId, why: 'It meets the roast with the same weight.', sayIt: 'This one sits right beside the chicken.' });
+	const p = h.dishes[0].pairing.value;
+	p.bottles = { value: pick('w-bvalue01'), classic: pick('w-bclass01'), splurge: Object.assign(pick('w-bsplur01'), { allergens: 'x' }), half: pick('w-bhalf001'), magnum: pick('w-bvalue01') };
+	return h;
+}
+
+/** The bottled fixture with every tier wrong in its own way. @param {any} h */
+function badTiers(h) {
+	const b = clone(h);
+	const p = b.dishes[0].pairing.value;
+	p.bottles.value.wineId = b.wines[0].id;
+	p.bottles.classic.wineId = 'w-bsplur01';
+	p.bottles.splurge.why = Array.from({ length: 30 }, (_, i) => 'word' + i).join(' ');
+	p.bottles.half.wineId = 'w-bvalue01';
+	p.bottles.half.sayIt = '';
+	b.dishes[1].pairing = { value: Object.assign(clone(p), { bottles: { value: { wineId: 'w-nowhere1', why: 'a', sayIt: 'b' } } }), by: 'maitre', ts: NOW };
+	return b;
+}
+
+/**
  * The fixture widened so the drills deal: every item of the five drilled
  * lists copied twice more under a fresh id and a suffixed name, every
  * reference kept, so the pools pass their floors.
@@ -428,6 +467,32 @@ function checkParity(T, P) {
 	dashed.dishes[0].guest = { value: 'Ask about allergens before you order.', by: 'maitre', ts: NOW };
 	dashed.tastings[0].courses[0].dishIds.push('d-nowhere1');
 	same('validateHouse(dashed)', T.validateHouse(T.normaliseHouse(dashed, { rand: seeded() }).house), P.validateHouse(P.normaliseHouse(dashed, { rand: seeded() }).house));
+	/* The bottle list and the tiers: read, normalised, validated, merged, renamed. */
+	const bot = bottled(fixture);
+	same('readPack(bottled)', T.readPack(packOf(clone(bot)), { rand: seeded() }), P.readPack(packOf(clone(bot)), { rand: seeded() }));
+	const botT = T.normaliseHouse(clone(bot), { rand: seeded() });
+	same('normaliseHouse(bottled)', botT, P.normaliseHouse(clone(bot), { rand: seeded() }));
+	if (!botT.house.wines[1] || botT.house.wines[1].list !== 'bottle' || botT.house.wines[1].bin !== '1101') fail.push('normaliseHouse(bottled) did not keep a bottle wine\'s list and bin');
+	if (!botT.house.dishes[0].pairing.value.bottles || botT.house.dishes[0].pairing.value.bottles.magnum) fail.push('normaliseHouse(bottled) did not keep the four tiers and drop the stray one');
+	same('validateHouse(bottled)', T.validateHouse(botT.house), P.validateHouse(P.normaliseHouse(clone(bot), { rand: seeded() }).house));
+	const badT = T.validateHouse(T.normaliseHouse(badTiers(bot), { rand: seeded() }).house);
+	same('validateHouse(bad tiers)', badT, P.validateHouse(P.normaliseHouse(badTiers(bot), { rand: seeded() }).house));
+	if (!badT.problems.some((/** @type {any} */ x) => x.code === 'tier')) fail.push('validateHouse(bad tiers) found no tier problem');
+	const botMoved = clone(bot);
+	botMoved.dishes[0].pairing = { value: Object.assign(clone(bot.dishes[0].pairing.value), { bottles: { value: bot.dishes[0].pairing.value.bottles.value } }), by: 'person', ts: NOW + 9 };
+	same('mergeHouse(bottled, moved)', T.mergeHouse(clone(bot), clone(botMoved)), P.mergeHouse(clone(bot), clone(botMoved)));
+	const renamed = clone(bot);
+	renamed.wines[1].id = 'bad id:bottle';
+	renamed.dishes[0].pairing.value.bottles.value.wineId = 'bad id:bottle';
+	same('normaliseHouse(renamed bottle)', T.normaliseHouse(clone(renamed), { rand: seeded(9) }), P.normaliseHouse(clone(renamed), { rand: seeded(9) }));
+	const SIZES = ['375ml', '375 ML', '1.5L', '', '750 ml'];
+	same('foldSize', SIZES.map(T.foldSize), SIZES.map(P.foldSize));
+	const PRICES = ['$80 half-bottle', '$1,250', '68', 'MP', '', '9 / 38'];
+	same('printedDollars', PRICES.map(T.printedDollars), PRICES.map(P.printedDollars));
+	const BANDS = [[99, 'value'], [100, 'value'], [100, 'classic'], [250, 'classic'], [251, 'classic'], [251, 'splurge'], [250, 'splurge'], [40, 'half'], [0, 'value']];
+	same('inBottleBand', BANDS.map(([n, t]) => T.inBottleBand(t, n)), BANDS.map(([n, t]) => P.inBottleBand(t, n)));
+	same('wineListOf', [{}, { list: 'bottle' }, { list: 'glass' }, { list: 'x' }].map(T.wineListOf), [{}, { list: 'bottle' }, { list: 'glass' }, { list: 'x' }].map(P.wineListOf));
+
 	const PAGES = [['abc 24 def', '24'], ['glass 9', ' 9 '], ['a  b', 'a b'], ['x', ''], ['', 'y']];
 	same('onPage', PAGES.map(([h, n]) => T.onPage(h, n)), PAGES.map(([h, n]) => P.onPage(h, n)));
 

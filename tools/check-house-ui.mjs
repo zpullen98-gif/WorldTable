@@ -700,15 +700,33 @@ function fieldsDrawn(r, id) {
 	const ed = one(r, '[data-editor="pairing"]');
 	const boxes = all(ed, 'input').concat(all(ed, 'textarea'));
 	const labels = all(ed, 'label').map((l) => one(l, '.oot-h-label').textContent);
-	check('the pairing editor is thirteen labelled boxes, one per key of the schema\'s Pairing',
-		boxes.length === 13 && same(all(ed, '[data-e]').map((b) => b.getAttribute('data-e')), schema.KEYS.Pairing) && labels.length === 13 && ed.textContent.includes('Separated by commas, from: ' + schema.PRINCIPLES.join(', ')));
+	/* the bottle tiers are optional and have no box: they ride over from the mark Save replaces */
+	const pairingBoxes = schema.KEYS.Pairing.filter((/** @type {string} */ k) => !schema.OPTIONAL_KEYS.Pairing.includes(k));
+	check('the pairing editor is thirteen labelled boxes, one per key of the schema\'s Pairing but the optional bottle tiers',
+		boxes.length === 13 && same(all(ed, '[data-e]').map((b) => b.getAttribute('data-e')), pairingBoxes) && labels.length === 13 && ed.textContent.includes('Separated by commas, from: ' + schema.PRINCIPLES.join(', ')));
 	one(ed, '[data-e="principles"]').value = 'Acid, salt, nonsense, acid, tannin';
 	one(ed, '[data-e="secondId"]').value = 'b-collins1';
 	one(ed, '[data-h="save"]').click();
 	drawn.push(r.textContent);
 	const v = calls.setMark.length ? calls.setMark[0].mark.value : null;
 	check('Save on the pairing keeps the principles within PRINCIPLES, once each, lower case, and the rest as typed',
-		!!v && same(v.principles, ['acid', 'salt', 'tannin']) && v.secondId === 'b-collins1' && v.wineId === 'w-lantern1' && v.sayIt === house.dishes[0].pairing.value.sayIt && same(Object.keys(v), schema.KEYS.Pairing));
+		!!v && same(v.principles, ['acid', 'salt', 'tannin']) && v.secondId === 'b-collins1' && v.wineId === 'w-lantern1' && v.sayIt === house.dishes[0].pairing.value.sayIt && same(Object.keys(v), pairingBoxes));
+}
+
+{
+	/* a pairing carrying bottle tiers keeps them through an edit, though no box shows them */
+	const house = fixture();
+	flip(house, () => true);
+	const tiers = { classic: { wineId: 'w-lantern1', why: 'Why it works.', sayIt: 'The line to say.' } };
+	house.dishes[0].pairing.value.bottles = tiers;
+	const { calls, hooks } = recorder();
+	const r = review(root(), house, 'pairings', hooks);
+	pressOn(r, 'd-chicken1', 'pairing', 'edit');
+	const ed = one(r, '[data-editor="pairing"]');
+	one(ed, '[data-e="why"]').value = 'A new why.';
+	one(ed, '[data-h="save"]').click();
+	const v = calls.setMark.length ? calls.setMark[0].mark.value : null;
+	check('Save on a pairing with bottle tiers keeps the tiers as they were', !!v && v.why === 'A new why.' && JSON.stringify(v.bottles) === JSON.stringify(tiers));
 }
 
 {

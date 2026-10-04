@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { HOUSE_LISTS, HOUSE_FORMAT, HOUSE_SCHEMA_VERSION, ID_PREFIXES, KEYS, LIST_MAX, MARK_FIELDS, PROSE_MAX, isMark } from './house-schema';
+import { HOUSE_LISTS, HOUSE_FORMAT, HOUSE_SCHEMA_VERSION, ID_PREFIXES, KEYS, LIST_MAX, OPTIONAL_KEYS, MARK_FIELDS, PROSE_MAX, isMark } from './house-schema';
 import type { House, HouseList, Mark } from './house-schema';
 import { FORBIDDEN_KEY, KEPT_CAP, MARK_KINDS, forbiddenKeys, markKind, normaliseHouse, normaliseMark } from './house-normalise';
 
@@ -424,7 +424,7 @@ describe('normaliseMark', () => {
 			by: 'person',
 			ts: 1
 		});
-		expect(Object.keys((pairing as Mark<object>).value).sort()).toEqual([...KEYS.Pairing].sort());
+		expect(Object.keys((pairing as Mark<object>).value).sort()).toEqual(KEYS.Pairing.filter((k) => !(OPTIONAL_KEYS.Pairing as readonly string[]).includes(k)).sort());
 	});
 
 	it('is the door every mark on the house passes', () => {

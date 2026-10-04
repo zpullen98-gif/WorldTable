@@ -82,7 +82,7 @@
 	const PAIRING_KEYS = [
 		'wineId', 'why', 'sayIt', 'whyThisWine', 'palate', 'principles', 'secondId', 'secondWhy', 'stepUp', 'serve', 'avoid', 'zeroProofId', 'zeroProofWhy'
 	] as const;
-	const PAIRING_LABELS: Record<keyof Pairing, string> = {
+	const PAIRING_LABELS: Record<Exclude<keyof Pairing, 'bottles'>, string> = {
 		wineId: 'The wine',
 		why: 'Why',
 		sayIt: 'Say it',

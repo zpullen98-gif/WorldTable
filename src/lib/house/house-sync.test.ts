@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { COCKTAIL_MARKS, DISH_MARKS, HOUSE_LISTS, KEYS, MARK_FIELDS, WINE_MARKS, emptyHouse } from './house-schema';
+import { COCKTAIL_MARKS, DISH_MARKS, HOUSE_LISTS, KEYS, MARK_FIELDS, OPTIONAL_KEYS, WINE_MARKS, emptyHouse } from './house-schema';
 import type { House, HouseCocktail, HouseDish, HouseItem, HouseWine, ItemKind, Mark, Note } from './house-schema';
 import { lastTouch, mergeHouse, sameJson } from './house-merge';
 import {
@@ -100,7 +100,8 @@ const WINGS: Wing[] = [
 	}
 ];
 
-const required = (w: Wing) => w.shape.filter((k) => !(w.marks as readonly string[]).includes(k) && k !== 'kept');
+const OPTIONAL: readonly string[] = [...OPTIONAL_KEYS.HouseWine];
+const required = (w: Wing) => w.shape.filter((k) => !(w.marks as readonly string[]).includes(k) && k !== 'kept' && !OPTIONAL.includes(k));
 const items = (house: House, w: Wing) => house[w.list] as unknown as Array<HouseItem & Fields>;
 const rowsOf = (house: House, w: Wing) => syncOut(w.kind, house, w.adapter);
 const strip = (rows: Row[], key: string) => rows.map((r) => { const o = { ...r }; delete o[key]; return o; });

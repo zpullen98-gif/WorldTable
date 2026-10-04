@@ -31,6 +31,7 @@
 		priceLine,
 		readOnWords,
 		say,
+		bottlesFor,
 		type StudyRow
 	} from '$lib/study';
 	import { roomHref, ROOM_NAMES, type Room } from '$lib/wing-links';
@@ -96,6 +97,8 @@
 	const winePrice = $derived(wine ? priceLine(wine, current) : '');
 	const second = $derived(pairing ? findItem(current, pairing.secondId) : undefined);
 	const zero = $derived(pairing ? findItem(current, pairing.zeroProofId) : undefined);
+	/* By the bottle: the dish's bottle tiers, drawn only when the kept pairing carries some. */
+	const bottles = $derived(bottlesFor(current, dish));
 
 	/** A link into another room, or '' when one may not be drawn. */
 	const hrefIn = (room: Room, id: string) =>
@@ -203,7 +206,7 @@
 		</section>
 	{/if}
 
-	{#if pairing && (wine || second || zero || pairing.stepUp)}
+	{#if pairing && (wine || second || zero || pairing.stepUp || bottles.length)}
 		<section class="block" aria-labelledby="pour-h">
 			<h3 class="blockhead" id="pour-h">{say('pour')}</h3>
 			<dl class="pairs">
@@ -241,6 +244,23 @@
 					</div>
 				{/if}
 			</dl>
+			{#if bottles.length}
+				<h4 class="bottlehead" id="bottle-h">{say('byBottle')}</h4>
+				<dl class="pairs bottles">
+					{#each bottles as b (b.tier)}
+						<div data-tier={b.tier}>
+							<dt>{b.label}</dt>
+							<dd>
+								{#if b.bin}<span class="bin">{say('bin', { bin: b.bin })}</span>{/if}
+								{#if hrefIn('codex', b.wineId)}<a href={hrefIn('codex', b.wineId)}>{b.name}</a>{:else}{b.name}{/if}{#if b.vintage}{' '}{b.vintage}{/if}{#if b.price}, {b.price}{/if}{#if b.size}, {b.size}{/if}
+								{#if offNote('codex', b.wineId)}<span class="soft"> {offNote('codex', b.wineId)}</span>{/if}
+								{#if b.why}<span class="sub">Why: {b.why}</span>{/if}
+								{#if b.sayIt}<span class="sub">Say: “{b.sayIt}”</span>{/if}
+							</dd>
+						</div>
+					{/each}
+				</dl>
+			{/if}
 			{#if pairing.whyThisWine || pairing.palate || pairing.serve || pairing.avoid || pairing.principles?.length}
 				<details class="more">
 					<summary>{say('pairMore')}</summary>
@@ -429,6 +449,8 @@
 	.pairs dt { font-family: var(--text); font-size: var(--t-micro); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--muted); }
 	.pairs dd { margin: 2px 0 0; line-height: 1.5; }
 	.sub { display: block; margin-top: 3px; color: var(--ink-soft); line-height: 1.5; }
+	.bottlehead { font-family: var(--display); font-size: var(--t-h5, 1.05rem); margin: 14px 0 2px; }
+	.bottles .bin { display: inline-block; margin-right: 6px; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
 	.more, .coach { margin: 8px 0; border-bottom: 1px dotted var(--line); }
 	.more summary, .coach summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-size: 1.05rem; }
 	.tasting { margin: 8px 0 0; }

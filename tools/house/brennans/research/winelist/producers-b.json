@@ -1,0 +1,3537 @@
+{
+ "producers": {
+  "domaine-de-villaine": {
+   "name": "A. et P. de Villaine",
+   "region": "Burgundy, Côte Chalonnaise",
+   "country": "France",
+   "line": "The Bouzeron estate founded by Aubert de Villaine of the Domaine de la Romanée-Conti and his wife Pamela, making pure, unshowy Côte Chalonnaise wines.",
+   "tell": "This is the family estate of Aubert de Villaine, long the co-director of Romanée-Conti, down in the quieter Côte Chalonnaise. The reds are fresh, red fruited Pinot Noir with real finesse for the price. A smart pick for a guest who loves Burgundy but not grand cru prices."
+  },
+  "albert-bichot": {
+   "name": "Albert Bichot",
+   "region": "Burgundy, Beaune",
+   "country": "France",
+   "line": "A large family négociant in Beaune that also owns domaines, among them Clos Frantin in Nuits and Domaine du Pavillon in Pommard.",
+   "tell": "Bichot is a big Beaune house that owns its own vineyards as well as buying grapes; bottles marked Clos Frantin or Domaine du Pavillon come from those estates. The style is polished and dependable. A good way to give a guest a named village or premier cru from a trusted house."
+  },
+  "albert-ponnelle": {
+   "name": "Albert Ponnelle",
+   "region": "Burgundy, Beaune",
+   "country": "France",
+   "line": "A Beaune négociant house bottling village and premier cru wines across the Côte d'Or in a classic, traditional style.",
+   "tell": "Ponnelle is a long established Beaune house. Its Volnay is the gentle, perfumed side of the Côte de Beaune: red cherry, soft tannin, made to go with food. Ask the sommelier how this vintage is drinking."
+  },
+  "antoine-jobard": {
+   "name": "Antoine Jobard",
+   "region": "Burgundy, Meursault",
+   "country": "France",
+   "line": "A Meursault family domaine famous for long lived, tightly wound white wines, which also makes small amounts of red from the Côte de Beaune.",
+   "tell": "Jobard is a name white Burgundy lovers know well, so a red from this cellar is something of a curiosity. Expect a precise, firm Pinot Noir that rewards a little air. A good talking point for a guest who already drinks the whites."
+  },
+  "antonin-guyon": {
+   "name": "Antonin Guyon",
+   "region": "Burgundy, Savigny-lès-Beaune",
+   "country": "France",
+   "line": "A family domaine based in Savigny-lès-Beaune with vineyards from the Hautes-Côtes to Corton and Volnay, making traditional, well structured reds.",
+   "tell": "Guyon farms a wide spread of vineyards across both Côtes. Their Volnay Clos des Chênes comes from one of the village's best known premier crus, a slope that gives a bit more grip than most Volnay. Recommend it with roast meats and game birds."
+  },
+  "antonin-rodet": {
+   "name": "Antonin Rodet",
+   "region": "Burgundy, Mercurey",
+   "country": "France",
+   "line": "A Mercurey based négociant house bottling wines from across Burgundy, here a Nuits-Saint-Georges premier cru.",
+   "tell": "Rodet is a long standing house from the Côte Chalonnaise. Clos de Thorey is a premier cru in Nuits-Saint-Georges, so expect darker fruit and firmer tannin than the villages to the north. A sturdy partner for beef or duck."
+  },
+  "arnaud-mortet": {
+   "name": "Arnaud Mortet",
+   "region": "Burgundy, Gevrey-Chambertin",
+   "country": "France",
+   "line": "The son of the late Denis Mortet, who now runs the family domaine and also bottles wines under his own name in Gevrey-Chambertin.",
+   "tell": "Arnaud took over the Mortet domaine and added a small range under his own label. The wines are deep coloured, ripe and carefully made Gevrey. A good choice for a guest who wants a powerful red Burgundy."
+  },
+  "aurelien-verdet": {
+   "name": "Aurélien Verdet",
+   "region": "Burgundy, Hautes-Côtes de Nuits",
+   "country": "France",
+   "line": "A small family domaine from the Hautes-Côtes de Nuits, organic for decades, making fresh, honest village wines including Morey-Saint-Denis.",
+   "tell": "Verdet is a small grower from the hills above the Côte de Nuits, working organically. His Morey-Saint-Denis is a straightforward, fresh village red at a fair price. A good pour for a table that wants real Burgundy without a big spend."
+  },
+  "dugat-py": {
+   "name": "Domaine Bernard Dugat-Py",
+   "region": "Burgundy, Gevrey-Chambertin",
+   "country": "France",
+   "line": "A cult Gevrey-Chambertin domaine, now run by Loïc Dugat-Py, known for very old vines, tiny yields and dense, concentrated, long lived reds.",
+   "tell": "Dugat-Py is one of the most sought after names in Gevrey. Old vines and very low yields give deep, dark, powerful wines that need time and air. These are rare bottles: suggest decanting, and let the guest know they are holding something collectors chase."
+  },
+  "bitouzet-prieur": {
+   "name": "Bitouzet-Prieur",
+   "region": "Burgundy, Volnay",
+   "country": "France",
+   "line": "A family domaine straddling Volnay and Meursault, making traditional, quietly classic Volnay and white Meursault.",
+   "tell": "A traditional family estate. Their Volnay is the elegant, perfumed style the village is known for: red fruit, silky tannin, nothing forced. With some age now, it is a lovely partner for poultry and veal."
+  },
+  "bouchard-pere-et-fils": {
+   "name": "Bouchard Père & Fils",
+   "region": "Burgundy, Beaune",
+   "country": "France",
+   "line": "One of the largest landholders on the Côte d'Or, a historic Beaune house whose own premier and grand cru vineyards anchor a broad range.",
+   "tell": "Bouchard owns a large spread of top vineyards, especially in Beaune. Vigne de l'Enfant Jésus is their famous parcel in the Beaune Grèves premier cru. The half bottles here are a handy way to give a couple a proper premier cru Burgundy."
+  },
+  "bruno-clavelier": {
+   "name": "Bruno Clavelier",
+   "region": "Burgundy, Vosne-Romanée",
+   "country": "France",
+   "line": "A Vosne-Romanée grower farming biodynamically, known for old vines and a terroir focused, transparent style across Vosne, Chambolle and Gevrey.",
+   "tell": "Clavelier farms old vines biodynamically and makes wines that show where they grow rather than how they were made. Expect fragrant, fine Pinot Noir with a savoury edge. A strong recommendation for a guest who likes Burgundy with detail and finesse."
+  },
+  "bruno-colin": {
+   "name": "Bruno Colin",
+   "region": "Burgundy, Chassagne-Montrachet",
+   "country": "France",
+   "line": "A Chassagne-Montrachet grower, part of the large Colin family, best known for whites but also making reds from the southern Côte de Beaune.",
+   "tell": "Bruno Colin comes from one of Chassagne's best known families. His Santenay red is a bright, fresh Pinot Noir from old vines, a good value step into the Côte de Beaune. Easy with lighter meats and mushrooms."
+  },
+  "camille-giroud": {
+   "name": "Camille Giroud",
+   "region": "Burgundy, Beaune",
+   "country": "France",
+   "line": "A small Beaune négociant known for a traditional, unhurried style, with wines that are built to age rather than to impress young.",
+   "tell": "Giroud is a small Beaune house with a reputation for classic, age worthy reds. The Chambertin here has had time in bottle, and the Marsannay is a lighter, fresher village wine. Ask the sommelier how the older bottle is showing before you promise anything."
+  },
+  "charles-audoin": {
+   "name": "Charles Audoin",
+   "region": "Burgundy, Marsannay",
+   "country": "France",
+   "line": "A family domaine in Marsannay, the northernmost village of the Côte de Nuits, making crisp, red fruited Pinot Noir from named sites.",
+   "tell": "Marsannay sits at the top of the Côte de Nuits and gives lighter, brighter reds. Audoin is a local family grower, and Les Favières is one of their named vineyards. A good value Burgundy for a guest who likes freshness."
+  },
+  "claude-dugat": {
+   "name": "Domaine Claude Dugat",
+   "region": "Burgundy, Gevrey-Chambertin",
+   "country": "France",
+   "line": "A small, highly prized Gevrey-Chambertin domaine, cousin to Dugat-Py, making deep, rich wines in tiny quantities.",
+   "tell": "Claude Dugat's wines are scarce and much sought after. They are dark, generous and polished Gevrey with real depth. These are collector bottles: decant and serve with red meat or game."
+  },
+  "coche-dury": {
+   "name": "Domaine Coche-Dury",
+   "region": "Burgundy, Meursault",
+   "country": "France",
+   "line": "The Meursault domaine whose white wines are among the most coveted in the world; its small production of reds is just as hard to find.",
+   "tell": "Coche-Dury is a legendary Meursault name, famous for white wine. The reds, from Volnay, Monthélie, Auxey-Duresses and Pommard, are made in tiny amounts and rarely seen. For a guest who knows the name, this is the treat; the price reflects the scarcity, not the appellation."
+  },
+  "comtesse-de-cherisey": {
+   "name": "Comtesse Bernard de Chérisey",
+   "region": "Burgundy, Blagny",
+   "country": "France",
+   "line": "A family estate in the hamlet of Blagny above Meursault and Puligny, owner of the La Genelotte premier cru.",
+   "tell": "Blagny is a tiny hamlet high on the slope where reds carry the Blagny name. This is a rarely seen premier cru red with a fresh, mineral feel. A good choice for a curious guest who wants something off the beaten track."
+  },
+  "david-duband": {
+   "name": "David Duband",
+   "region": "Burgundy, Hautes-Côtes de Nuits",
+   "country": "France",
+   "line": "A grower based in the Hautes-Côtes de Nuits making fragrant, whole cluster influenced reds across the Côte de Nuits.",
+   "tell": "Duband is known for perfumed, lifted Pinot Noir with plenty of energy. His Nuits-Saint-Georges is a village wine with good structure. A nice match for duck or mushrooms."
+  },
+  "denis-mortet": {
+   "name": "Domaine Denis Mortet",
+   "region": "Burgundy, Gevrey-Chambertin",
+   "country": "France",
+   "line": "A leading Gevrey-Chambertin domaine founded by the late Denis Mortet and now run by his son Arnaud, known for deep coloured, intense reds.",
+   "tell": "Mortet is one of the benchmark names in Gevrey. The wines are dark, concentrated and long, from the village wine Mes Cinq Terroirs up to the premier crus. A safe recommendation for a guest who wants a full bodied red Burgundy."
+  },
+  "didier-fornerol": {
+   "name": "Didier Fornerol",
+   "region": "Burgundy, Côte de Nuits-Villages",
+   "country": "France",
+   "line": "A small grower in the southern Côte de Nuits making Côte de Nuits-Villages and other modest appellations with care.",
+   "tell": "A small family grower from the villages at the southern end of the Côte de Nuits. Côte de Nuits-Villages gives honest, red fruited Pinot Noir at a gentle price. Good for a table that wants an easy, food friendly Burgundy."
+  },
+  "domaine-af-gros": {
+   "name": "Domaine A.F. Gros",
+   "region": "Burgundy, Pommard",
+   "country": "France",
+   "line": "The Pommard based domaine of Anne-Françoise Gros, of the Gros family of Vosne-Romanée, making supple, ripe reds across the Côte d'Or.",
+   "tell": "A.F. Gros belongs to the wide Gros family of Vosne-Romanée. Their Chambolle-Musigny is the fragrant, silky side of the Côte de Nuits. A gentle, crowd pleasing red Burgundy."
+  },
+  "alex-moreau": {
+   "name": "Domaine Alex Moreau",
+   "region": "Burgundy, Chassagne-Montrachet",
+   "country": "France",
+   "line": "The newer label of Alex Moreau, of the Bernard Moreau family in Chassagne-Montrachet, focused on precise wines from family vineyards.",
+   "tell": "Alex Moreau comes from a well regarded Chassagne family and now bottles under his own name. The red Chassagne from old vines is a fresh, firm Pinot Noir, and the Passe-Tout-Grains is a light, easy blend of Pinot and Gamay. Both suit lighter meat dishes."
+  },
+  "anne-gros": {
+   "name": "Domaine Anne Gros",
+   "region": "Burgundy, Vosne-Romanée",
+   "country": "France",
+   "line": "One of Vosne-Romanée's most admired domaines, run by Anne Gros, known for silky, pure, elegant reds from Bourgogne up to Richebourg.",
+   "tell": "Anne Gros makes some of the most graceful wines in Vosne-Romanée. Even the regional wines show polish, and the grand crus are rare and refined. A strong recommendation for a guest who prizes elegance over power."
+  },
+  "domaine-arlaud": {
+   "name": "Domaine Arlaud",
+   "region": "Burgundy, Morey-Saint-Denis",
+   "country": "France",
+   "line": "A Morey-Saint-Denis family domaine farming biodynamically, making bright, fresh, finely tuned reds from regional wine to grand cru.",
+   "tell": "Arlaud is a Morey family estate known for clean, energetic Pinot Noir. The Roncevie is their excellent Bourgogne, and the grand cru Clos Saint-Denis is a serious, fragrant wine. Good value at every level."
+  },
+  "armand-rousseau": {
+   "name": "Domaine Armand Rousseau",
+   "region": "Burgundy, Gevrey-Chambertin",
+   "country": "France",
+   "line": "Perhaps the most famous name in Gevrey-Chambertin, revered for elegant, perfumed reds from Chambertin and the Clos Saint-Jacques premier cru.",
+   "tell": "Rousseau is a reference point for all of Burgundy. Clos Saint-Jacques is a premier cru often spoken of in the same breath as the grand crus. A trophy bottle: handle it with ceremony and suggest a gentle decant."
+  },
+  "bernard-moreau": {
+   "name": "Domaine Bernard Moreau et Fils",
+   "region": "Burgundy, Chassagne-Montrachet",
+   "country": "France",
+   "line": "A well regarded Chassagne-Montrachet family domaine, better known for white wine, also making fresh, firm red Chassagne.",
+   "tell": "Moreau is a respected Chassagne family. Red Chassagne is less known than the whites but can be very good value, and this old vine bottling has depth. A good match for pork or roast chicken."
+  },
+  "berthelemot": {
+   "name": "Domaine Berthelemot",
+   "region": "Burgundy, Meursault",
+   "country": "France",
+   "line": "A Côte de Beaune domaine making wines across several villages, here a Monthélie red with some bottle age.",
+   "tell": "Monthélie sits next to Volnay and gives similar charm for less money. This bottle has a few years on it, so expect softer fruit and savoury notes. An easy value pick for a guest who likes mature red."
+  },
+  "billard-gonnet": {
+   "name": "Domaine Billard-Gonnet",
+   "region": "Burgundy, Pommard",
+   "country": "France",
+   "line": "A traditional Pommard family domaine with holdings in the village's top premier crus, including Les Rugiens.",
+   "tell": "Billard-Gonnet is a Pommard family estate. Les Rugiens is Pommard's most famous premier cru, giving a firm, deep red that softens with age. A good pick with beef or lamb."
+  },
+  "blain-gagnard": {
+   "name": "Domaine Blain-Gagnard",
+   "region": "Burgundy, Chassagne-Montrachet",
+   "country": "France",
+   "line": "A Chassagne-Montrachet family domaine with fine white holdings that also makes red Chassagne in a supple, fresh style.",
+   "tell": "Blain-Gagnard is a respected Chassagne name. Their red Chassagne is a bright, medium bodied Pinot Noir, an under the radar value on a list this deep. Good with chicken, pork or fish in a red wine sauce."
+  },
+  "bruno-clair": {
+   "name": "Domaine Bruno Clair",
+   "region": "Burgundy, Marsannay",
+   "country": "France",
+   "line": "A leading Marsannay domaine with vineyards from Marsannay to Gevrey and Savigny, making clean, precise, classically built reds.",
+   "tell": "Bruno Clair is one of the top growers in the northern Côte de Nuits. La Dominode is an old vine premier cru in Savigny-lès-Beaune, and gives a structured, fragrant wine for a fair price. A good value premier cru recommendation."
+  },
+  "camille-thiriet": {
+   "name": "Domaine Camille Thiriet",
+   "region": "Burgundy, Côte de Nuits-Villages",
+   "country": "France",
+   "line": "A young domaine in the southern Côte de Nuits making lively reds from Côte de Nuits-Villages vineyards.",
+   "tell": "Camille Thiriet is a newer name making fresh, vibrant Pinot Noir from small named sites in the Côte de Nuits-Villages. These are bright and juicy rather than heavy. A fun pick for a guest who likes natural leaning wines."
+  },
+  "domaine-collotte": {
+   "name": "Domaine Collotte",
+   "region": "Burgundy, Marsannay",
+   "country": "France",
+   "line": "A family grower in Marsannay, making village wines from named sites; this bottle has considerable age.",
+   "tell": "Marsannay gives light, red fruited Pinot Noir. This is an older bottle, so expect gentle, savoury flavours rather than fresh fruit. Ask the sommelier to check it before recommending it as a showpiece."
+  },
+  "comte-georges-de-vogue": {
+   "name": "Domaine Comte Georges de Vogüé",
+   "region": "Burgundy, Chambolle-Musigny",
+   "country": "France",
+   "line": "The historic Chambolle-Musigny domaine and the largest owner of the Musigny grand cru, making powerful, slow developing wines.",
+   "tell": "De Vogüé owns most of the Musigny grand cru and is one of Burgundy's great names. The wines are deep and structured when young and need years to open. Recommend decanting, and treat any bottle here as a special occasion wine."
+  },
+  "domaine-d-eugenie": {
+   "name": "Domaine d'Eugénie",
+   "region": "Burgundy, Vosne-Romanée",
+   "country": "France",
+   "line": "The Vosne-Romanée domaine owned by the Pinault family, also owners of Château Latour, built on the former Engel vineyards.",
+   "tell": "Eugénie is owned by the same family as Château Latour, so a Bordeaux lover may like the connection. Aux Brûlées is a respected Vosne premier cru giving rich, spicy Pinot Noir. A good bridge for a guest moving from Bordeaux to Burgundy."
+  },
+  "daniel-rion": {
+   "name": "Domaine Daniel Rion & Fils",
+   "region": "Burgundy, Nuits-Saint-Georges",
+   "country": "France",
+   "line": "A family domaine in Prémeaux, at the southern end of Nuits-Saint-Georges, making firm, classic reds across the Côte de Nuits.",
+   "tell": "Rion is a family estate in the Nuits-Saint-Georges area. Their village Nuits from Les Lavières is a sturdy, dark fruited red. A good partner for steak or game."
+  },
+  "dubreuil-fontaine": {
+   "name": "Domaine Dubreuil-Fontaine",
+   "region": "Burgundy, Pernand-Vergelesses",
+   "country": "France",
+   "line": "A family domaine in Pernand-Vergelesses with holdings on the hill of Corton, making traditional, firm reds that age well.",
+   "tell": "Dubreuil-Fontaine is rooted on the hill of Corton. Their Corton grand crus, Bressandes, Clos du Roi and Perrières, are firm, structured reds, and several here have some age. Good value grand cru for red meat."
+  },
+  "domaine-dujac": {
+   "name": "Domaine Dujac",
+   "region": "Burgundy, Morey-Saint-Denis",
+   "country": "France",
+   "line": "The Morey-Saint-Denis domaine founded by Jacques Seysses and run by his family, known for whole cluster fermentation and silky, perfumed reds.",
+   "tell": "Dujac is one of Burgundy's most loved names. They ferment with whole bunches, which gives a spicy, floral lift and silky texture; Dujac Fils et Père is the family's négociant label from bought grapes. From village wine to Clos de la Roche, these are elegant, fragrant bottles."
+  },
+  "faiveley": {
+   "name": "Domaine Faiveley",
+   "region": "Burgundy, Nuits-Saint-Georges",
+   "country": "France",
+   "line": "A historic Nuits-Saint-Georges house and one of Burgundy's biggest vineyard owners, making structured, modern, well made reds from Mercurey to Chambertin.",
+   "tell": "Faiveley owns a remarkable spread of vineyards, many in the Côte de Nuits and the Côte Chalonnaise. The reds are dark, firm and reliable, from Mercurey up to the Chambertin grand crus. A safe, quality recommendation at almost any price."
+  },
+  "fourrier": {
+   "name": "Domaine Fourrier",
+   "region": "Burgundy, Gevrey-Chambertin",
+   "country": "France",
+   "line": "A Gevrey-Chambertin domaine run by Jean-Marie Fourrier, prized for old vines and pure, transparent, fragrant reds.",
+   "tell": "Fourrier is one of the most sought after growers in Gevrey. The wines are fresh, fragrant and precise rather than heavy, with old vines throughout. Clos Saint-Jacques is the star; the village Vieilles Vignes is a lovely entry point."
+  },
+  "francois-lumpp": {
+   "name": "Domaine François Lumpp",
+   "region": "Burgundy, Givry",
+   "country": "France",
+   "line": "A Givry grower in the Côte Chalonnaise, known as one of the village's leading names for red Pinot Noir.",
+   "tell": "Lumpp is a leading name in Givry, south of the Côte d'Or. His wines are bright, red fruited and well made, good value next to the big villages. A friendly, food ready red Burgundy."
+  },
+  "geantet-pansiot": {
+   "name": "Domaine Geantet-Pansiot",
+   "region": "Burgundy, Gevrey-Chambertin",
+   "country": "France",
+   "line": "A Gevrey-Chambertin family domaine making generous, ripe and approachable reds from village and premier cru sites.",
+   "tell": "Geantet-Pansiot makes a rich, rounded style of Gevrey that is easy to enjoy young. The old vine bottlings are a good step up. A safe recommendation for a guest who wants fruit and body."
+  },
+  "mugneret-gibourg": {
+   "name": "Domaine Georges Mugneret-Gibourg",
+   "region": "Burgundy, Vosne-Romanée",
+   "country": "France",
+   "line": "A small, much admired Vosne-Romanée domaine run by the Mugneret sisters, celebrated for silky, perfumed, beautifully balanced reds.",
+   "tell": "Mugneret-Gibourg is a quiet star of Vosne-Romanée. The wines have finesse, fragrance and a silky texture at every level, from Bourgogne to Échezeaux. These bottles are scarce; any of them is a lovely choice for a guest who knows Burgundy."
+  },
+  "georges-roumier": {
+   "name": "Domaine Georges Roumier",
+   "region": "Burgundy, Chambolle-Musigny",
+   "country": "France",
+   "line": "The Chambolle-Musigny domaine of Christophe Roumier, one of the most celebrated names in Burgundy, known for intense, precise reds.",
+   "tell": "Roumier is among the most sought after names in all of Burgundy. Bonnes-Mares and the Clos de la Bussière monopole in Morey are both here. These wines are rare and highly prized; suggest decanting and treat them as the occasion."
+  },
+  "gros-frere-et-soeur": {
+   "name": "Domaine Gros Frère et Soeur",
+   "region": "Burgundy, Vosne-Romanée",
+   "country": "France",
+   "line": "A Vosne-Romanée domaine of the Gros family, making ripe, plush reds including a Clos Vougeot from the Musigni parcel.",
+   "tell": "Another branch of the Gros family in Vosne-Romanée, with a generous, ripe style. Their Clos Vougeot comes from the top of the vineyard near Musigny. A good bet for a guest who likes a fuller Burgundy."
+  },
+  "genot-boulanger": {
+   "name": "Domaine Génot-Boulanger",
+   "region": "Burgundy, Meursault",
+   "country": "France",
+   "line": "A Côte de Beaune domaine with vineyards spread from Mercurey to Clos Vougeot, making clean, precise reds and whites.",
+   "tell": "Génot-Boulanger farms across the Côte de Beaune and beyond. Their reds here range from Aloxe-Corton and Pommard to Corton and Clos Vougeot grand cru. A reliable choice with balanced, modern Pinot Noir."
+  },
+  "gerard-raphet": {
+   "name": "Domaine Gérard Raphet",
+   "region": "Burgundy, Morey-Saint-Denis",
+   "country": "France",
+   "line": "A Morey-Saint-Denis family domaine with a range across Gevrey, Morey, Chambolle and Clos Vougeot, in a traditional style.",
+   "tell": "Raphet is a quiet family estate in Morey-Saint-Denis. The wines are traditional, firm and fruity, from village wines up to Clos Vougeot. A good value name on a list of famous ones."
+  },
+  "henri-gouges": {
+   "name": "Domaine Henri Gouges",
+   "region": "Burgundy, Nuits-Saint-Georges",
+   "country": "France",
+   "line": "The reference domaine of Nuits-Saint-Georges, making firm, dark, long lived reds from the village's best premier crus.",
+   "tell": "Gouges is the name most people think of in Nuits-Saint-Georges. The wines are sturdy and structured, with dark fruit and an earthy edge, and they age very well. The half bottles are a great option for two guests with red meat."
+  },
+  "henri-prudhon": {
+   "name": "Domaine Henri Prudhon",
+   "region": "Burgundy, Saint-Aubin",
+   "country": "France",
+   "line": "A Saint-Aubin family domaine, best known for white wine, also making red Saint-Aubin premier cru.",
+   "tell": "Saint-Aubin sits in a side valley behind Puligny and Chassagne. Its reds are light and fresh, and these bottles have some age. A modest price for a premier cru red."
+  },
+  "hubert-lamy": {
+   "name": "Domaine Hubert Lamy",
+   "region": "Burgundy, Saint-Aubin",
+   "country": "France",
+   "line": "A Saint-Aubin domaine famous for precise white wines from densely planted vines, also making small amounts of red.",
+   "tell": "Lamy is one of the stars of Saint-Aubin, mainly for whites. This red Santenay is a rarer bottling, fresh and finely made. A good conversation bottle for a guest who knows the name."
+  },
+  "jacques-girardin": {
+   "name": "Domaine Jacques Girardin",
+   "region": "Burgundy, Santenay",
+   "country": "France",
+   "line": "A Santenay family domaine making reds from Santenay and neighbouring villages including Pommard.",
+   "tell": "A family grower from Santenay at the southern end of the Côte de Beaune. The Santenay Clos Rousseau premier cru and the Pommard are honest, firm reds. Good value with roasts."
+  },
+  "justin-girardin": {
+   "name": "Domaine Justin Girardin",
+   "region": "Burgundy, Santenay",
+   "country": "France",
+   "line": "A Santenay family domaine making Côte de Beaune reds and whites, here a village Pommard.",
+   "tell": "A family grower from Santenay. Village Pommard gives a firm, dark fruited red. A sensible value choice for steak."
+  },
+  "jean-grivot": {
+   "name": "Domaine Jean Grivot",
+   "region": "Burgundy, Vosne-Romanée",
+   "country": "France",
+   "line": "A leading Vosne-Romanée domaine run by Étienne Grivot and family, making fine, expressive reds from village wine to Richebourg.",
+   "tell": "Grivot is one of the great Vosne-Romanée names, with a range from village Vosne up to Richebourg. The wines are refined and long, with a lovely spicy fruit. A safe, distinguished choice at many price points."
+  },
+  "jean-marie-bouzereau": {
+   "name": "Domaine Jean-Marie Bouzereau",
+   "region": "Burgundy, Meursault",
+   "country": "France",
+   "line": "A Meursault family domaine, part of the large Bouzereau clan, also making red from the Santenots vineyard.",
+   "tell": "Santenots lies in Meursault but its red wine is sold as Volnay premier cru. Expect a firmer, slightly darker Volnay. A good match for duck or pork."
+  },
+  "jean-marc-pavelot": {
+   "name": "Domaine Jean-Marc Pavelot",
+   "region": "Burgundy, Savigny-lès-Beaune",
+   "country": "France",
+   "line": "A family domaine in Savigny-lès-Beaune making fresh, well priced reds, including Beaune premier cru.",
+   "tell": "Pavelot is a respected Savigny family. Their Beaune Bressandes premier cru is a balanced, red fruited wine at a fair price. A friendly pick for most red meats."
+  },
+  "jean-michel-gaunoux": {
+   "name": "Domaine Jean-Michel Gaunoux",
+   "region": "Burgundy, Meursault",
+   "country": "France",
+   "line": "A Meursault domaine of the Gaunoux family, making traditional Côte de Beaune wines, including red Pommard.",
+   "tell": "Gaunoux makes traditional Burgundy that rewards patience. This Pommard premier cru has had time to soften. A good value mature red for game or beef."
+  },
+  "joseph-drouhin": {
+   "name": "Joseph Drouhin",
+   "region": "Burgundy, Beaune",
+   "country": "France",
+   "line": "A family owned Beaune house with large organic and biodynamic holdings, known for graceful, elegant wines and its Beaune Clos des Mouches.",
+   "tell": "Drouhin is one of Beaune's great family houses, with a style built on elegance. Clos des Mouches is their signature Beaune premier cru, and they also own parcels in Musigny and Les Amoureuses. A trusted name for any guest."
+  },
+  "joseph-voillot": {
+   "name": "Domaine Joseph Voillot",
+   "region": "Burgundy, Volnay",
+   "country": "France",
+   "line": "A Volnay family domaine making traditional, fragrant reds from Volnay and Pommard.",
+   "tell": "Voillot is a classic Volnay grower. The old vine Volnay and Bourgogne are charming, red fruited and soft. Easy recommendations with poultry and pork."
+  },
+  "domaine-larue": {
+   "name": "Domaine Larue",
+   "region": "Burgundy, Saint-Aubin",
+   "country": "France",
+   "line": "A family domaine based in Saint-Aubin making wines from Saint-Aubin, Chassagne-Montrachet and Blagny.",
+   "tell": "Larue is a family grower from Saint-Aubin. Their red Chassagne La Boudriotte and Blagny premier cru are firm and fresh. Good value premier cru reds."
+  },
+  "louis-jadot": {
+   "name": "Louis Jadot",
+   "region": "Burgundy, Beaune",
+   "country": "France",
+   "line": "One of the great Beaune houses, owning large holdings across the Côte d'Or and Beaujolais and bottling an enormous range of reds.",
+   "tell": "Jadot is one of Burgundy's most recognised names, owning vineyards from Beaujolais up to Chambertin. The quality is very consistent, and bottles marked Domaine come from their own vineyards. The half bottle is a handy option for a couple."
+  },
+  "lucien-boillot": {
+   "name": "Domaine Lucien Boillot et Fils",
+   "region": "Burgundy, Gevrey-Chambertin",
+   "country": "France",
+   "line": "A Gevrey-Chambertin based family domaine, run by Pierre Boillot, with vineyards in Gevrey, Nuits, Pommard and Volnay.",
+   "tell": "Boillot is a family estate with roots in both the Côte de Nuits and the Côte de Beaune. The wines are deep and well structured. Their Pommard and Volnay premier crus are good value for the quality."
+  },
+  "domaine-matrot": {
+   "name": "Domaine Matrot",
+   "region": "Burgundy, Meursault",
+   "country": "France",
+   "line": "A Meursault family domaine, run by Thierry and Pascale Matrot, known mostly for whites, also making reds from the southern Côte de Beaune.",
+   "tell": "Matrot is a well known Meursault family. Their reds from Saint-Aubin and Maranges are light, fresh and modestly priced. Good choices for a lighter meal."
+  },
+  "michel-magnien": {
+   "name": "Domaine Michel Magnien",
+   "region": "Burgundy, Morey-Saint-Denis",
+   "country": "France",
+   "line": "A Morey-Saint-Denis family domaine, run by Frédéric Magnien, farming organically and making fresh, transparent reds.",
+   "tell": "The Magnien family domaine in Morey-Saint-Denis. The wines are fresh and focused, with a light touch. The Chambolle premier cru Les Sentiers is fragrant and fine."
+  },
+  "frederic-magnien": {
+   "name": "Frédéric Magnien",
+   "region": "Burgundy, Morey-Saint-Denis",
+   "country": "France",
+   "line": "The négociant label of Frédéric Magnien in Morey-Saint-Denis, bottling wines from bought grapes across the Côte de Nuits.",
+   "tell": "Frédéric Magnien buys grapes from growers across the Côte de Nuits and makes them in Morey. The wines are fresh and clear. A good value route into Clos Vougeot and Morey."
+  },
+  "mongeard-mugneret": {
+   "name": "Domaine Mongeard-Mugneret",
+   "region": "Burgundy, Vosne-Romanée",
+   "country": "France",
+   "line": "A Vosne-Romanée family domaine with a broad range, including Échezeaux and Richebourg, in a ripe, generous style.",
+   "tell": "Mongeard-Mugneret is a large Vosne family estate. The wines are generous and approachable, from Hautes-Côtes up to Richebourg. A good way to give a guest a grand cru at a gentler price."
+  },
+  "monthelie-douhairet-porcheret": {
+   "name": "Domaine Monthelie-Douhairet-Porcheret",
+   "region": "Burgundy, Monthélie",
+   "country": "France",
+   "line": "A historic Monthélie domaine making traditional, long lived reds from Monthélie, Volnay and Pommard.",
+   "tell": "This Monthélie estate makes traditional wines that need time. The Volnay Champans and Pommard premier crus are firm and serious. Good value for a guest who likes classic Burgundy."
+  },
+  "meo-camuzet": {
+   "name": "Domaine Méo-Camuzet",
+   "region": "Burgundy, Vosne-Romanée",
+   "country": "France",
+   "line": "A leading Vosne-Romanée domaine run by Jean-Nicolas Méo, linked to the legendary Henri Jayer, making rich, polished reds.",
+   "tell": "Méo-Camuzet is one of Vosne's top names; Henri Jayer once farmed some of its vines. The wines are ripe, deep and polished. Bottles marked Frère et Soeurs are the négociant range from bought grapes, a gentler price for the same hand."
+  },
+  "domaine-newman": {
+   "name": "Domaine Newman",
+   "region": "Burgundy, Côte de Nuits",
+   "country": "France",
+   "line": "A small domaine with grand cru holdings in the Côte de Nuits, here a Bonnes-Mares.",
+   "tell": "Domaine Newman is a small estate with parcels in some famous grand crus. Bonnes-Mares gives a deep, structured wine. Comparatively modest in price for a grand cru; ask the sommelier how this bottle is drinking."
+  },
+  "paul-garaudet": {
+   "name": "Domaine Paul Garaudet",
+   "region": "Burgundy, Monthélie",
+   "country": "France",
+   "line": "A Monthélie family domaine making honest, fruity reds from Monthélie and neighbouring Volnay.",
+   "tell": "A small family grower in Monthélie, a village that offers Volnay like charm for less. Cuvée Paul is fresh and red fruited. A friendly, value red."
+  },
+  "paul-pillot": {
+   "name": "Domaine Paul Pillot",
+   "region": "Burgundy, Chassagne-Montrachet",
+   "country": "France",
+   "line": "A Chassagne-Montrachet family domaine known for very fine whites and fresh, bright reds from Chassagne and Santenay.",
+   "tell": "Pillot is a top Chassagne family. Red Chassagne and Santenay are under the radar values, light and fresh. Clos Saint-Jean is a premier cru that gives a bit more depth."
+  },
+  "pierre-andre": {
+   "name": "Domaine Pierre André",
+   "region": "Burgundy, Corton",
+   "country": "France",
+   "line": "A Côte de Beaune house bottling wines from across the Côte, here Pommard Clos de la Commaraine.",
+   "tell": "Clos de la Commaraine is a walled premier cru in Pommard. Expect a firm, dark fruited red with a few years of age. A good match for beef."
+  },
+  "pierre-gelin": {
+   "name": "Domaine Pierre Gelin",
+   "region": "Burgundy, Fixin",
+   "country": "France",
+   "line": "A Fixin family domaine and owner of the Clos Napoléon premier cru, making firm, rustic reds and a Chambertin Clos de Bèze.",
+   "tell": "Gelin is Fixin's best known name, a village next to Gevrey that gives sturdy reds at good prices. Clos Napoléon is their own walled vineyard. The Clos de Bèze is the grand cru treat."
+  },
+  "pierre-morey": {
+   "name": "Domaine Pierre Morey",
+   "region": "Burgundy, Meursault",
+   "country": "France",
+   "line": "A Meursault domaine farmed biodynamically, best known for whites, also making red Pommard.",
+   "tell": "Pierre Morey is a famous name in Meursault whites. This Pommard Grands Épenots has some age, giving a softened, savoury red. A good pick for game birds or beef."
+  },
+  "domaine-ponsot": {
+   "name": "Domaine Ponsot",
+   "region": "Burgundy, Morey-Saint-Denis",
+   "country": "France",
+   "line": "A famous Morey-Saint-Denis domaine, a great name in Clos de la Roche, known for a traditional style without new oak and cuvées named after birds and insects.",
+   "tell": "Ponsot is one of the great Morey names, with grand crus from Clos de la Roche to Chambertin. Cuvée names like Grives, Pinson and Abeille mean thrush, finch and bee. The wines are fragrant and long; suggest decanting the grand crus."
+  },
+  "laurent-ponsot": {
+   "name": "Laurent Ponsot",
+   "region": "Burgundy, Gevrey-Chambertin",
+   "country": "France",
+   "line": "The house Laurent Ponsot founded after leaving his family domaine, with cuvées named after trees.",
+   "tell": "Laurent Ponsot ran his family's Morey domaine for decades before starting his own house. Cuvée de l'Aulne, named for the alder tree, is a village Gevrey. A good talking point for a guest who knows the Ponsot name."
+  },
+  "ramonet": {
+   "name": "Domaine Ramonet",
+   "region": "Burgundy, Chassagne-Montrachet",
+   "country": "France",
+   "line": "A legendary Chassagne-Montrachet domaine, famous for white wine, also making serious red Chassagne.",
+   "tell": "Ramonet is one of the most revered names in white Burgundy. Their red Chassagne is firm, fresh and long lived, and Clos Saint-Jean is a classic premier cru. A clever choice for a red drinker who wants a great name."
+  },
+  "regnaudot": {
+   "name": "Domaine Regnaudot",
+   "region": "Burgundy, Maranges",
+   "country": "France",
+   "line": "A family grower in Maranges, the southernmost village of the Côte de Beaune, making sturdy, good value reds.",
+   "tell": "Maranges is the last village at the south of the Côte de Beaune, and it gives firm, fruity reds at fair prices. Regnaudot is a local family. These are some of the best value premier crus on the list."
+  },
+  "robert-chevillon": {
+   "name": "Domaine Robert Chevillon",
+   "region": "Burgundy, Nuits-Saint-Georges",
+   "country": "France",
+   "line": "A benchmark Nuits-Saint-Georges domaine with old vines across the village's top premier crus, making classic, structured reds.",
+   "tell": "Chevillon is one of the great names of Nuits. The premier crus, from Les Saints-Georges to Les Vaucrains, show the village's deep fruit and firm tannin. Excellent with beef or game."
+  },
+  "roblet-monnot": {
+   "name": "Domaine Roblet-Monnot",
+   "region": "Burgundy, Volnay",
+   "country": "France",
+   "line": "A small Volnay domaine making fragrant, finely textured reds from old vines.",
+   "tell": "Roblet-Monnot is a small Volnay grower. Their Saint-François is fragrant and silky, the charming side of the Côte de Beaune. A lovely pick with chicken or duck."
+  },
+  "domaine-roulot": {
+   "name": "Domaine Roulot",
+   "region": "Burgundy, Meursault",
+   "country": "France",
+   "line": "A celebrated Meursault domaine run by Jean-Marc Roulot, famous for pure white wines, which also makes a little red Monthélie.",
+   "tell": "Roulot is one of the most sought after names in Meursault whites. The red Monthélie is a rare, fresh, finely made Pinot Noir. A treat for a guest who knows the name."
+  },
+  "domaine-saint-martin": {
+   "name": "Domaine Saint-Martin",
+   "region": "Burgundy, Côte de Nuits",
+   "country": "France",
+   "line": "A little seen Burgundy name, here a Bonnes-Mares grand cru with some bottle age.",
+   "tell": "A rarely seen bottling of Bonnes-Mares, the grand cru shared by Chambolle and Morey. This bottle has had years to soften. Ask the sommelier about the producer and how it is drinking."
+  },
+  "serafin": {
+   "name": "Domaine Serafin",
+   "region": "Burgundy, Gevrey-Chambertin",
+   "country": "France",
+   "line": "A Gevrey-Chambertin family domaine known for deep, ripe reds with generous oak and old vines.",
+   "tell": "Serafin makes rich, dark and polished Gevrey, with old vines and generous oak. The premier crus Cazetiers and Corbeaux are powerful. A good match for steak."
+  },
+  "domaine-serrigny": {
+   "name": "Domaine Serrigny",
+   "region": "Burgundy, Côte de Beaune",
+   "country": "France",
+   "line": "A small Côte de Beaune grower, here a village Savigny-lès-Beaune.",
+   "tell": "Savigny-lès-Beaune gives fresh, red fruited Pinot Noir at friendly prices. A good value choice for a lighter red with chicken or pork."
+  },
+  "sylvie-esmonin": {
+   "name": "Domaine Sylvie Esmonin",
+   "region": "Burgundy, Gevrey-Chambertin",
+   "country": "France",
+   "line": "A Gevrey-Chambertin domaine with a parcel of the famous Clos Saint-Jacques, making traditional, whole cluster influenced reds.",
+   "tell": "Sylvie Esmonin makes classic, savoury Gevrey with plenty of character. Her Clos Saint-Jacques is from one of Gevrey's most famous premier crus. A good pick for a guest who likes traditional Burgundy."
+  },
+  "taupenot-merme": {
+   "name": "Domaine Taupenot-Merme",
+   "region": "Burgundy, Morey-Saint-Denis",
+   "country": "France",
+   "line": "A Morey-Saint-Denis family domaine with grand cru holdings, here Mazoyères-Chambertin.",
+   "tell": "Taupenot-Merme is a family estate in Morey. Mazoyères-Chambertin is a grand cru next to Charmes, giving a rich, ripe red. Good value for a grand cru."
+  },
+  "marchand-tawse": {
+   "name": "Marchand-Tawse and Domaine Tawse",
+   "region": "Burgundy, Nuits-Saint-Georges",
+   "country": "France",
+   "line": "The Nuits-Saint-Georges house of winemaker Pascal Marchand and Canadian owner Moray Tawse: a négociant range plus the Domaine Tawse estate wines.",
+   "tell": "Pascal Marchand is a well known winemaker in Burgundy. Marchand-Tawse bottles from bought grapes, while Domaine Tawse wines come from their own vines. Their Savigny Lavières and Volnay Frémiets are fragrant, well priced premier crus."
+  },
+  "tollot-beaut": {
+   "name": "Domaine Tollot-Beaut",
+   "region": "Burgundy, Chorey-lès-Beaune",
+   "country": "France",
+   "line": "A Chorey-lès-Beaune family domaine making ripe, generous reds from Chorey, Savigny, Beaune, Aloxe-Corton and Corton.",
+   "tell": "Tollot-Beaut is a reliable family estate known for ripe, fruity, crowd pleasing reds. Chorey-lès-Beaune is one of the best values on the list, and the Corton Bressandes is a step up. Safe recommendations."
+  },
+  "domaine-trapet": {
+   "name": "Domaine Trapet",
+   "region": "Burgundy, Gevrey-Chambertin",
+   "country": "France",
+   "line": "A historic Gevrey-Chambertin domaine run biodynamically by Jean-Louis Trapet, with Chambertin, Latricières and Chapelle-Chambertin.",
+   "tell": "Trapet is a long established Gevrey family with excellent grand crus. The wines are pure and fragrant. Capita is listed among the Gevrey premier crus; ask the sommelier about it."
+  },
+  "vincent-girardin": {
+   "name": "Domaine Vincent Girardin",
+   "region": "Burgundy, Meursault",
+   "country": "France",
+   "line": "A Meursault based house making wines across the Côte de Beaune, here a village Beaune.",
+   "tell": "Village Beaune gives a round, red fruited Pinot Noir. Girardin is a known Côte de Beaune name. A good value, easy red."
+  },
+  "domaine-de-courcel": {
+   "name": "Domaine de Courcel",
+   "region": "Burgundy, Pommard",
+   "country": "France",
+   "line": "A historic Pommard family domaine, owner of a large share of the Grand Clos des Épenots, making whole cluster, long lived reds.",
+   "tell": "Courcel is one of Pommard's best domaines. Its Grand Clos des Épenots is the flagship, a firm, fragrant wine that ages for years. A strong pick for a guest who wants a serious Côte de Beaune red."
+  },
+  "de-montille": {
+   "name": "Domaine de Montille",
+   "region": "Burgundy, Volnay",
+   "country": "France",
+   "line": "A Volnay family domaine, run by Étienne de Montille, known for elegant, whole cluster reds; Maison de Montille is its négociant label.",
+   "tell": "De Montille is a leading Volnay family making fragrant, fresh, finely structured wines. Pommard Rugiens and Beaune Sizies are classic premier crus. A trusted choice."
+  },
+  "pousse-d-or": {
+   "name": "Domaine de la Pousse d'Or",
+   "region": "Burgundy, Volnay",
+   "country": "France",
+   "line": "A historic Volnay domaine with several walled monopole vineyards, including Clos de la Bousse d'Or and Clos des 60 Ouvrées.",
+   "tell": "Pousse d'Or owns walled vineyards in Volnay and Pommard. The style is ripe and polished, and Clos de la Bousse d'Or is their signature. A safe premier cru Volnay recommendation."
+  },
+  "domaine-de-la-romanee-conti": {
+   "name": "Domaine de la Romanée-Conti",
+   "region": "Burgundy, Vosne-Romanée",
+   "country": "France",
+   "line": "The most famous estate in Burgundy, sole owner of Romanée-Conti and La Tâche, with holdings in Richebourg, Romanée-Saint-Vivant, Échezeaux and Grands-Échezeaux.",
+   "tell": "DRC is the most celebrated wine estate in the world for many collectors. Romanée-Conti and La Tâche are wholly owned grand crus. These bottles are extremely rare; involve the sommelier for service, decanting and any questions about the vintage."
+  },
+  "domaine-de-la-vougeraie": {
+   "name": "Domaine de la Vougeraie",
+   "region": "Burgundy, Côte de Nuits",
+   "country": "France",
+   "line": "The Boisset family's Côte d'Or estate, farmed biodynamically, making polished reds from many villages.",
+   "tell": "Vougeraie is the Boisset family's estate, farmed biodynamically. Aux Thorey is a Nuits-Saint-Georges premier cru with depth and spice. A good modern Burgundy pick."
+  },
+  "comtes-lafon": {
+   "name": "Domaine des Comtes Lafon",
+   "region": "Burgundy, Meursault",
+   "country": "France",
+   "line": "A great Meursault name, famous for whites, whose red Volnay Santenots-du-Milieu is a long lived, serious wine.",
+   "tell": "Lafon is one of the greatest names in white Burgundy. Their red Volnay Santenots-du-Milieu is firm and deep for Volnay. A fine choice for a guest who knows the name."
+  },
+  "clos-des-lambrays": {
+   "name": "Domaine des Lambrays",
+   "region": "Burgundy, Morey-Saint-Denis",
+   "country": "France",
+   "line": "Owner of nearly all of the Clos des Lambrays grand cru in Morey-Saint-Denis, now owned by the LVMH group.",
+   "tell": "Clos des Lambrays is a grand cru that this domaine owns almost entirely. The wine is fragrant, fine and often made with whole bunches. A special occasion Burgundy."
+  },
+  "domaine-dubois": {
+   "name": "Domaine Dubois",
+   "region": "Burgundy, Chorey-lès-Beaune",
+   "country": "France",
+   "line": "A Côte de Beaune family grower, here a Chorey-lès-Beaune with real bottle age.",
+   "tell": "Chorey-lès-Beaune is a modest village giving soft, fruity reds. This bottle is mature, so expect savoury, gentle flavours. One of the cheapest reds in the section."
+  },
+  "dureuil-janthial": {
+   "name": "Domaine Dureuil-Janthial",
+   "region": "Burgundy, Rully",
+   "country": "France",
+   "line": "A leading Rully domaine in the Côte Chalonnaise, making fresh, precise reds and whites.",
+   "tell": "Dureuil-Janthial is one of the best names in Rully. Their red is bright and crisp, an excellent value Burgundy. Good with lighter meats."
+  },
+  "francois-bertheau": {
+   "name": "Domaine François Bertheau",
+   "region": "Burgundy, Chambolle-Musigny",
+   "country": "France",
+   "line": "A small Chambolle-Musigny family domaine, here a bottle of the famous Les Amoureuses premier cru.",
+   "tell": "Les Amoureuses is Chambolle's most famous premier cru, often priced like a grand cru. Bertheau is a small local family. A fragrant, silky red for a special evening."
+  },
+  "francois-mikulski": {
+   "name": "François Mikulski",
+   "region": "Burgundy, Meursault",
+   "country": "France",
+   "line": "A Meursault grower known mainly for whites, also making red Pommard.",
+   "tell": "Mikulski is a respected Meursault name. This village Pommard is a firm, dark fruited red. A good match for steak."
+  },
+  "hubert-lignier": {
+   "name": "Domaine Hubert Lignier",
+   "region": "Burgundy, Morey-Saint-Denis",
+   "country": "France",
+   "line": "A Morey-Saint-Denis family domaine making deep, traditional reds from village wine up to Clos de la Roche.",
+   "tell": "Lignier is a respected Morey family. The wines are deep and classic, with a long life. Clos de la Roche is their grand cru; the Morey premier crus are good value."
+  },
+  "hudelot-baillet": {
+   "name": "Domaine Hudelot-Baillet",
+   "region": "Burgundy, Chambolle-Musigny",
+   "country": "France",
+   "line": "A Chambolle-Musigny family domaine making fresh, fragrant reds.",
+   "tell": "Hudelot-Baillet is a Chambolle family grower. Their reds are fragrant and fresh. The old vine Chambolle is a lovely silky red with chicken or duck."
+  },
+  "jacques-frederic-mugnier": {
+   "name": "Domaine Jacques-Frédéric Mugnier",
+   "region": "Burgundy, Chambolle-Musigny",
+   "country": "France",
+   "line": "A celebrated Chambolle-Musigny domaine, run by Frédéric Mugnier, known for weightless, ethereal reds from Musigny and Bonnes-Mares.",
+   "tell": "Mugnier is one of the most admired names in Chambolle. The wines are delicate, fragrant and long. Bonnes-Mares here is a rare treat; recommend it to a guest who loves finesse."
+  },
+  "jean-chauvenet": {
+   "name": "Domaine Jean Chauvenet",
+   "region": "Burgundy, Nuits-Saint-Georges",
+   "country": "France",
+   "line": "A Nuits-Saint-Georges family domaine making classic, firm village and premier cru wines.",
+   "tell": "Chauvenet is a traditional Nuits family. The village Nuits is a sturdy, dark red. A good value match for steak."
+  },
+  "jerome-galeyrand": {
+   "name": "Jérôme Galeyrand",
+   "region": "Burgundy, Gevrey-Chambertin",
+   "country": "France",
+   "line": "A small grower and négociant based near Gevrey-Chambertin making fresh, lively reds.",
+   "tell": "Galeyrand is a small producer making bright, fresh Pinot Noir. En Billard is a village Gevrey site. A good value pick for a lighter red."
+  },
+  "julien-cruchandeau": {
+   "name": "Julien Cruchandeau",
+   "region": "Burgundy, Hautes-Côtes de Nuits",
+   "country": "France",
+   "line": "A small grower making wines from the Hautes-Côtes and lesser known villages, here Ladoix.",
+   "tell": "Ladoix sits beside Corton and gives sturdy, good value reds. Les Ranches is a named site there. A gentle priced, older red."
+  },
+  "kalin-cellars": {
+   "name": "Kalin Cellars",
+   "region": "California, with vines in Beaune",
+   "country": "United States and France",
+   "line": "A small California winery that also bottles wine from Burgundy vineyards, here Beaune reds from 2001.",
+   "tell": "Kalin Cellars is a California winery known for holding wines before release. These Beaune reds from 2001 are rare. Ask the sommelier about the story and how they are drinking before you recommend them."
+  },
+  "lequin-colin": {
+   "name": "Domaine Lequin-Colin",
+   "region": "Burgundy, Santenay",
+   "country": "France",
+   "line": "A Santenay family domaine making wines across the southern Côte de Beaune.",
+   "tell": "Lequin-Colin is a family grower from Santenay. Their village Pommard Les Noizons is a firm, fruity red. A sound choice with beef."
+  },
+  "maison-leroy": {
+   "name": "Maison Leroy",
+   "region": "Burgundy, Auxey-Duresses",
+   "country": "France",
+   "line": "The négociant house of Lalou Bize-Leroy, one of Burgundy's most legendary figures, known for holding wines until ready.",
+   "tell": "Leroy is one of the most legendary names in Burgundy. Their négociant wines are bought and held until they are ready. A rare, prized Beaune premier cru for a guest who knows."
+  },
+  "maison-champy": {
+   "name": "Maison Champy",
+   "region": "Burgundy, Beaune",
+   "country": "France",
+   "line": "A historic Beaune négociant house making wines from across the Côte d'Or.",
+   "tell": "Champy is an old Beaune house. These bottles range from a young Volnay to grand crus with some age. A dependable name."
+  },
+  "marquis-d-angerville": {
+   "name": "Marquis d'Angerville",
+   "region": "Burgundy, Volnay",
+   "country": "France",
+   "line": "The great Volnay domaine, owner of the Clos des Ducs monopole, making pure, fragrant reds, farmed biodynamically.",
+   "tell": "D'Angerville is perhaps the most famous name in Volnay. Clos des Ducs is their walled vineyard; Champans, Taillepieds and Caillerets are top premier crus. Elegant, fragrant and long lived."
+  },
+  "michel-lafarge": {
+   "name": "Domaine Michel Lafarge",
+   "region": "Burgundy, Volnay",
+   "country": "France",
+   "line": "A leading Volnay family domaine, farmed biodynamically, making traditional, long lived reds including the Clos du Château des Ducs monopole.",
+   "tell": "Lafarge is one of the great Volnay families. Clos des Chênes and their own Clos du Château des Ducs are classic premier crus. Pure, fragrant and long lived."
+  },
+  "moillard-grivot": {
+   "name": "Moillard-Grivot",
+   "region": "Burgundy, Nuits-Saint-Georges",
+   "country": "France",
+   "line": "A Nuits-Saint-Georges négociant house, here a Mercurey red with some age.",
+   "tell": "Mercurey in the Côte Chalonnaise gives sturdy, red fruited reds. This one is from 2013, so it has softened. One of the gentlest prices among the reds."
+  },
+  "nicolas-potel": {
+   "name": "Nicolas Potel",
+   "region": "Burgundy, Nuits-Saint-Georges",
+   "country": "France",
+   "line": "A Nuits-Saint-Georges négociant house bearing the name of its founder, winemaker Nicolas Potel.",
+   "tell": "The house bottles wines from bought grapes across the Côte d'Or. The Romanée-Saint-Vivant here is a grand cru at a gentler price than most. Ask the sommelier how these older bottles are showing."
+  },
+  "olivier-bernstein": {
+   "name": "Olivier Bernstein",
+   "region": "Burgundy, Côte de Nuits",
+   "country": "France",
+   "line": "A small, high end négociant specialising in grand and premier cru Côte de Nuits wines, with a polished, concentrated style.",
+   "tell": "Bernstein makes a small range of top Côte de Nuits wines from bought grapes. The style is polished, deep and generous. Gevrey Cazetiers and Champeaux are fine premier crus."
+  },
+  "remoissenet": {
+   "name": "Remoissenet Père et Fils",
+   "region": "Burgundy, Beaune",
+   "country": "France",
+   "line": "A Beaune négociant famous for a deep cellar of old vintages, here Richebourg, Clos Vougeot and Volnay going back to the 1950s.",
+   "tell": "Remoissenet is known for its deep stocks of old Burgundy. These bottles go back decades; their state can vary from bottle to bottle. Involve the sommelier before recommending any of them."
+  },
+  "thibault-liger-belair": {
+   "name": "Domaine Thibault Liger-Belair",
+   "region": "Burgundy, Nuits-Saint-Georges",
+   "country": "France",
+   "line": "A Nuits-Saint-Georges domaine farmed biodynamically, making fresh, precise reds; Les Saints-Georges is its flagship premier cru.",
+   "tell": "Thibault Liger-Belair makes vibrant, fragrant wines. Les Saints-Georges is Nuits' most famous premier cru. A strong recommendation with beef or game."
+  },
+  "vincent-et-sophie-morey": {
+   "name": "Vincent & Sophie Morey",
+   "region": "Burgundy, Chassagne-Montrachet",
+   "country": "France",
+   "line": "A Chassagne-Montrachet family domaine making wines from Chassagne, Santenay and Maranges.",
+   "tell": "The Morey family of Chassagne makes clean, fresh wines. Maranges La Fussière is a fresh, fruity premier cru. Good value."
+  },
+  "chateau-de-la-maltroye": {
+   "name": "Château de la Maltroye",
+   "region": "Burgundy, Chassagne-Montrachet",
+   "country": "France",
+   "line": "A Chassagne-Montrachet estate making reds and whites from Chassagne and neighbouring villages.",
+   "tell": "Maltroye is a Chassagne estate with a château. Red Chassagne is a bright, fresh Pinot Noir. A smart value pick."
+  },
+  "domaine-labet-beaune": {
+   "name": "Domaine Labet (Beaune)",
+   "region": "Burgundy, Beaune",
+   "country": "France",
+   "line": "A Beaune premier cru bottled under the Labet name, here Aux Coucherias.",
+   "tell": "Aux Coucherias is a Beaune premier cru giving a balanced, red fruited wine. Ask the sommelier about this producer."
+  },
+  "alex-foillard": {
+   "name": "Alex Foillard",
+   "region": "Beaujolais",
+   "country": "France",
+   "line": "The son of Jean Foillard, making his own natural leaning cru Beaujolais, here Brouilly.",
+   "tell": "Alex Foillard is the son of Jean Foillard, one of the great Morgon names. His Brouilly is juicy, bright and fresh. Great with lighter dishes, and serve it slightly cool."
+  },
+  "jean-foillard": {
+   "name": "Jean Foillard",
+   "region": "Beaujolais, Morgon",
+   "country": "France",
+   "line": "One of the original natural wine growers of Morgon, famous for the Côte du Py, making deep, fine, age worthy Gamay.",
+   "tell": "Foillard is one of the original Beaujolais growers who changed how the region is seen. Côte du Py is a famous hill in Morgon. The wines have depth and freshness; serve them slightly cool."
+  },
+  "chateau-des-jacques": {
+   "name": "Château des Jacques",
+   "region": "Beaujolais, Moulin-à-Vent",
+   "country": "France",
+   "line": "The Moulin-à-Vent estate owned by Louis Jadot, making structured, Burgundy minded cru Beaujolais.",
+   "tell": "Château des Jacques is Jadot's Beaujolais estate. Moulin-à-Vent gives a firmer, deeper Gamay that can age. Clos du Grand Carquelin is one of their walled sites."
+  },
+  "daniel-bouland": {
+   "name": "Daniel Bouland",
+   "region": "Beaujolais",
+   "country": "France",
+   "line": "A small Beaujolais grower making traditional, old vine cru wines, here Côte de Brouilly.",
+   "tell": "Bouland is a small traditional grower. Côte de Brouilly comes from the slopes of Mont Brouilly. Fresh and fruity, a good value red."
+  },
+  "domaine-coudert": {
+   "name": "Domaine Coudert",
+   "region": "Beaujolais, Fleurie",
+   "country": "France",
+   "line": "The Fleurie family domaine behind Clos de la Roilette, making firm, deep, age worthy Fleurie and Moulin-à-Vent.",
+   "tell": "Coudert's Clos de la Roilette is a famous Fleurie site that gives a firmer, darker wine than most Fleurie. A great value red with poultry or pork."
+  },
+  "jean-paul-thevenet": {
+   "name": "Domaine Jean-Paul Thévenet",
+   "region": "Beaujolais, Morgon",
+   "country": "France",
+   "line": "One of the founding natural wine growers of Morgon, making old vine, fresh, deep Gamay.",
+   "tell": "Thévenet was one of the original natural growers of Morgon. The old vine Morgon in magnum is a fun pick for a big table."
+  },
+  "guy-breton": {
+   "name": "Guy Breton",
+   "region": "Beaujolais, Morgon",
+   "country": "France",
+   "line": "One of the original natural wine growers of Morgon, making fresh, joyful Gamay.",
+   "tell": "Guy Breton was one of the founding natural growers in Beaujolais. P'tit Max is his Morgon. Fresh, juicy and delicious slightly cool."
+  },
+  "jean-claude-lapalu": {
+   "name": "Jean-Claude Lapalu",
+   "region": "Beaujolais, Brouilly",
+   "country": "France",
+   "line": "A Brouilly grower making natural leaning, characterful cru Beaujolais.",
+   "tell": "Lapalu makes characterful Brouilly with plenty of energy. A fun, fresh red for a curious guest."
+  },
+  "jules-desjourneys": {
+   "name": "Jules Desjourneys",
+   "region": "Beaujolais",
+   "country": "France",
+   "line": "A Beaujolais grower making serious, structured cru wines, here Fleurie.",
+   "tell": "Desjourneys makes deep, structured Beaujolais that is priced more like Burgundy. Les Moriers is a Fleurie site. Ask the sommelier how it is drinking."
+  },
+  "la-soeur-cadette": {
+   "name": "La Soeur Cadette",
+   "region": "Beaujolais and Burgundy",
+   "country": "France",
+   "line": "A small négociant run by Valentin Montaney, buying grapes from Burgundy and Beaujolais, here Juliénas.",
+   "tell": "La Soeur Cadette is a small négociant. Their Juliénas is bright and juicy, textbook cru Beaujolais. Great value and slightly cool."
+  },
+  "marcel-lapierre": {
+   "name": "Marcel Lapierre",
+   "region": "Beaujolais, Morgon",
+   "country": "France",
+   "line": "The Morgon domaine of the late Marcel Lapierre, pioneer of natural Beaujolais, now run by his children.",
+   "tell": "Lapierre is the name most associated with natural Beaujolais. The Morgon is fresh, silky and delicious. Serve it slightly cool."
+  },
+  "paul-janin": {
+   "name": "Paul Janin",
+   "region": "Beaujolais, Moulin-à-Vent",
+   "country": "France",
+   "line": "A Moulin-à-Vent family domaine making deep, structured Gamay from the Clos du Tremblay.",
+   "tell": "Janin is a family grower in Moulin-à-Vent, the cru that gives the deepest Beaujolais. A great value red with meats."
+  },
+  "marc-delienne": {
+   "name": "Marc Delienne",
+   "region": "Beaujolais, Fleurie",
+   "country": "France",
+   "line": "A Fleurie grower making fresh, natural leaning Gamay.",
+   "tell": "Delienne makes lively, fresh Fleurie. Abbaye Road is his named cuvée. Fresh and fun, slightly cool."
+  },
+  "chateau-de-breze": {
+   "name": "Château de Brezé",
+   "region": "Loire, Saumur",
+   "country": "France",
+   "line": "A historic château estate in Saumur, making Cabernet Franc and Chenin Blanc from limestone slopes.",
+   "tell": "Brezé is a château in Saumur with deep limestone cellars, known for Chenin Blanc and Cabernet Franc. This Clos de l'Étoile is from 2014, so it has some age. Ask the sommelier how it is showing before recommending it."
+  },
+  "catherine-et-pierre-breton": {
+   "name": "Catherine & Pierre Breton",
+   "region": "Loire, Bourgueil",
+   "country": "France",
+   "line": "A Bourgueil couple farming biodynamically, among the best known natural leaning names in the Loire, making fresh, savoury Cabernet Franc.",
+   "tell": "The Bretons are leading growers in Bourgueil, and their Cabernet Franc is fresh, red fruited and a little herbal. Les Perrières is their serious, age worthy bottling; Franc de Pied comes from ungrafted vines. A great choice for a guest who likes lighter, savoury reds."
+  },
+  "charles-joguet": {
+   "name": "Charles Joguet",
+   "region": "Loire, Chinon",
+   "country": "France",
+   "line": "A leading Chinon domaine, making single vineyard Cabernet Franc in a structured, age worthy style.",
+   "tell": "Joguet is one of the most respected names in Chinon. The single vineyard wines, like Clos du Chêne Vert and Les Varennes du Grand Clos, have depth and structure. Cuvée Terroir is the fresher, younger one."
+  },
+  "clos-rougeard": {
+   "name": "Clos Rougeard",
+   "region": "Loire, Saumur-Champigny",
+   "country": "France",
+   "line": "The cult Saumur-Champigny estate built by the Foucault brothers, making some of the most sought after Cabernet Franc in the world; now owned by Martin Bouygues.",
+   "tell": "Clos Rougeard is a legend among Loire lovers. Le Clos, Les Poyeaux and Le Bourg are long lived, fine Cabernet Franc that collectors chase. These are rare bottles; decant and treat them like great Burgundy."
+  },
+  "roches-neuves": {
+   "name": "Domaine des Roches Neuves",
+   "region": "Loire, Saumur",
+   "country": "France",
+   "line": "The Saumur domaine of Thierry Germain, farmed biodynamically, known for fresh, pure, lively Cabernet Franc.",
+   "tell": "Thierry Germain makes bright, pure Cabernet Franc in Saumur-Champigny. Terres Chaudes is a step up from the Domaine bottling. A great value red for poultry, pork or vegetables."
+  },
+  "domaine-de-la-noblaie": {
+   "name": "Domaine de la Noblaie",
+   "region": "Loire, Chinon",
+   "country": "France",
+   "line": "A Chinon family domaine making fresh and structured Cabernet Franc from tuffeau limestone.",
+   "tell": "Noblaie is a Chinon family estate. Le Temps des Cerises is a bright, cherry fruited Cabernet Franc meant to be enjoyed young. Lovely slightly cool."
+  },
+  "yannick-amirault": {
+   "name": "Yannick Amirault",
+   "region": "Loire, Bourgueil",
+   "country": "France",
+   "line": "A leading Bourgueil grower farming organically, making deep, fine Cabernet Franc from named sites.",
+   "tell": "Amirault is one of the top names in Bourgueil. His Cabernet Franc is deep and fine. A smart pick for a guest who likes Bordeaux but wants something lighter."
+  },
+  "domaine-grosbois": {
+   "name": "Domaine Grosbois",
+   "region": "Loire, Chinon",
+   "country": "France",
+   "line": "A Chinon family domaine farming organically and biodynamically, making fresh, characterful Cabernet Franc.",
+   "tell": "Grosbois is a Chinon family estate. La Cuisine de Ma Mère is the easy, fresh one; Gabare is deeper. Both are friendly with food and great value."
+  },
+  "domaine-de-l-ecu": {
+   "name": "Domaine de l'Écu",
+   "region": "Loire, Muscadet",
+   "country": "France",
+   "line": "A biodynamic estate in the Muscadet country, best known for white, also making red such as this Pinot Noir sold as Vin de France.",
+   "tell": "Domaine de l'Écu is known for its Muscadet. Ange is a Pinot Noir from the estate, bottled as Vin de France. Light and fresh; ask the sommelier how it is tasting."
+  },
+  "david-sautereau": {
+   "name": "Domaine David Sautereau",
+   "region": "Loire, Sancerre",
+   "country": "France",
+   "line": "A Sancerre family domaine making white and red; red Sancerre is light, fresh Pinot Noir.",
+   "tell": "Red Sancerre is Pinot Noir from the Loire: light, fresh and red fruited. A good choice for fish or chicken when a guest wants red."
+  },
+  "alain-graillot": {
+   "name": "Alain Graillot",
+   "region": "Rhône, Crozes-Hermitage",
+   "country": "France",
+   "line": "The domaine that set the standard for Crozes-Hermitage, making fresh, whole cluster Syrah; now run by his son Maxime.",
+   "tell": "Graillot made Crozes-Hermitage famous for quality. The Syrah is fresh, peppery and dark fruited. A great value choice with lamb or steak."
+  },
+  "andre-perret": {
+   "name": "André Perret",
+   "region": "Rhône, Saint-Joseph and Condrieu",
+   "country": "France",
+   "line": "A northern Rhône grower known for Condrieu and fine, fresh Saint-Joseph Syrah.",
+   "tell": "Perret is well known for white Condrieu, and his red Saint-Joseph is fresh and peppery. Les Grisières is an old vine bottling. Good with lamb."
+  },
+  "auguste-clape": {
+   "name": "Auguste Clape",
+   "region": "Rhône, Cornas",
+   "country": "France",
+   "line": "The reference domaine of Cornas, making traditional, unfiltered Syrah of great depth that ages for decades.",
+   "tell": "Clape is the most respected name in Cornas. The wines are dark, savoury and powerful, made in a traditional way; Renaissance is the younger vines cuvée; Le Vin des Amis is their simple, friendly red, so decant the Cornas."
+  },
+  "barruol-lynch": {
+   "name": "Barruol and Lynch",
+   "region": "Rhône, Côte-Rôtie",
+   "country": "France",
+   "line": "A partnership between Louis Barruol of Château de Saint Cosme and importer Kermit Lynch, making a Côte-Rôtie called Les Roses.",
+   "tell": "Louis Barruol, who runs Saint Cosme in Gigondas, makes this Côte-Rôtie with the American importer Kermit Lynch. Expect perfumed, peppery Syrah. A good value Côte-Rôtie."
+  },
+  "domaine-duclaux": {
+   "name": "Domaine Benjamin & David Duclaux",
+   "region": "Rhône, Côte-Rôtie",
+   "country": "France",
+   "line": "A Côte-Rôtie family domaine run by brothers Benjamin and David Duclaux, making fragrant, traditional Syrah.",
+   "tell": "The Duclaux brothers make fragrant, fresh Côte-Rôtie. La Germine is their main cuvée. A good recommendation with lamb or duck."
+  },
+  "bernard-faurie": {
+   "name": "Bernard Faurie",
+   "region": "Rhône, Hermitage",
+   "country": "France",
+   "line": "A small, traditional grower on the hill of Hermitage, making tiny amounts of classic Syrah.",
+   "tell": "Faurie is a small traditional grower whose Hermitage is rare. The wine blends the Gréffieux and Bessards parcels on the hill. Powerful and savoury; decant it."
+  },
+  "clusel-roch": {
+   "name": "Domaine Clusel-Roch",
+   "region": "Rhône, Côte-Rôtie",
+   "country": "France",
+   "line": "A Côte-Rôtie family domaine farming organically, making fragrant, traditional Syrah from steep schist slopes.",
+   "tell": "Clusel-Roch is a Côte-Rôtie family estate. Classique is the entry wine, and Les Grandes Places is their famous old vine site. Peppery, floral Syrah."
+  },
+  "georges-vernay": {
+   "name": "Domaine Georges Vernay",
+   "region": "Rhône, Condrieu",
+   "country": "France",
+   "line": "The family domaine credited with saving Condrieu, now run by Christine Vernay, also making fine Côte-Rôtie and Saint-Joseph.",
+   "tell": "Vernay is famous for white Condrieu, and its reds are elegant. Maison Rouge and Blonde du Seigneur are Côte-Rôtie; Terre d'Encre is Saint-Joseph. Fragrant, fine Syrah."
+  },
+  "jean-michel-stephan": {
+   "name": "Domaine Jean-Michel Stephan",
+   "region": "Rhône, Côte-Rôtie",
+   "country": "France",
+   "line": "A small Côte-Rôtie grower making natural leaning Syrah from named hillside sites.",
+   "tell": "Stephan is a small Côte-Rôtie grower. Côteaux de Bassenon and Côteaux du Tupin are named slopes. Fragrant Syrah; ask the sommelier how these bottles are tasting."
+  },
+  "guigal": {
+   "name": "E. Guigal",
+   "region": "Rhône, Côte-Rôtie",
+   "country": "France",
+   "line": "The most famous house of the northern Rhône, based in Ampuis, known for its single vineyard Côte-Rôtie La Mouline, La Landonne and La Turque.",
+   "tell": "Guigal is the big name of the Rhône, and the single vineyard Côte-Rôties, La Mouline, La Landonne and La Turque, are among the most collected Rhône wines. Château d'Ampuis is a blend; Vignes de l'Hospice is their Saint-Joseph. Decant the big ones."
+  },
+  "domaine-jamet": {
+   "name": "Domaine Jamet",
+   "region": "Rhône, Côte-Rôtie",
+   "country": "France",
+   "line": "A much admired Côte-Rôtie family domaine making traditional, whole cluster, savoury Syrah.",
+   "tell": "Jamet is one of the great Côte-Rôtie names. Their Syrah is peppery, floral and savoury. The Côtes du Rhône is a lovely value way into their style."
+  },
+  "lionel-faury": {
+   "name": "Lionel Faury",
+   "region": "Rhône, Saint-Joseph and Côte-Rôtie",
+   "country": "France",
+   "line": "A northern Rhône family domaine making fresh Saint-Joseph and Côte-Rôtie.",
+   "tell": "Faury is a northern Rhône family grower. Les 3 Brunes is a Côte-Rôtie. Fresh, peppery Syrah."
+  },
+  "rene-rostaing": {
+   "name": "René Rostaing",
+   "region": "Rhône, Côte-Rôtie",
+   "country": "France",
+   "line": "A top Côte-Rôtie domaine, now run by Pierre Rostaing, making fine, elegant Syrah including Côte Blonde and La Landonne.",
+   "tell": "Rostaing is a leading Côte-Rôtie name, and Côte Blonde is the softer, more perfumed side of the appellation; La Landonne is the darker, firmer side. Ampodium is their blend; decant."
+  },
+  "delas-freres": {
+   "name": "Delas Frères",
+   "region": "Rhône, Tain-l'Hermitage",
+   "country": "France",
+   "line": "A Rhône négociant and grower based near Hermitage, making wines across the northern and southern Rhône.",
+   "tell": "Delas is a well known Rhône house. Sainte-Épine is a Saint-Joseph, and Haute Pierre is a Châteauneuf-du-Pape. Reliable, good value."
+  },
+  "les-alexandrins": {
+   "name": "Domaine Les Alexandrins",
+   "region": "Rhône, northern Rhône",
+   "country": "France",
+   "line": "A northern Rhône producer making Saint-Joseph and other northern appellations.",
+   "tell": "Saint-Joseph gives fresh, peppery Syrah at fair prices. A good value Syrah for steak."
+  },
+  "pierre-gonon": {
+   "name": "Pierre Gonon",
+   "region": "Rhône, Saint-Joseph",
+   "country": "France",
+   "line": "A Saint-Joseph family domaine, much admired for traditional, fragrant Syrah.",
+   "tell": "Gonon is one of the most admired names in Saint-Joseph. Their Syrah is fragrant, peppery and fresh. Note the list spells it Gonan."
+  },
+  "domaine-de-la-chapelle": {
+   "name": "Domaine de la Chapelle",
+   "region": "Rhône, Hermitage",
+   "country": "France",
+   "line": "The estate created by the Frey family, owners of Paul Jaboulet Aîné, to make the famous Hermitage La Chapelle from the 2021 vintage on.",
+   "tell": "Hermitage La Chapelle was Jaboulet's famous wine; from 2021 it is made under the Domaine de la Chapelle name. Deep, powerful Syrah from the hill of Hermitage. Decant."
+  },
+  "jean-louis-chave": {
+   "name": "Domaine Jean-Louis Chave",
+   "region": "Rhône, Hermitage",
+   "country": "France",
+   "line": "The great family domaine of Hermitage, whose blended Hermitage is one of the most revered wines of the Rhône.",
+   "tell": "Chave is the most respected name on the hill of Hermitage. Their Hermitage blends several parcels into a deep, long lived Syrah. A trophy bottle; decant."
+  },
+  "paul-jaboulet-aine": {
+   "name": "Paul Jaboulet Aîné",
+   "region": "Rhône, Hermitage",
+   "country": "France",
+   "line": "The historic northern Rhône house, owned by the Frey family since 2006, whose Hermitage La Chapelle is one of the great Rhône names.",
+   "tell": "La Chapelle is Jaboulet's famous Hermitage. These bottles predate the move to the Domaine de la Chapelle label. Deep, savoury Syrah; ask the sommelier about the vintage."
+  },
+  "dard-et-ribo": {
+   "name": "Dard & Ribo",
+   "region": "Rhône, Crozes-Hermitage",
+   "country": "France",
+   "line": "A cult natural leaning domaine in Crozes-Hermitage, making fresh, juicy Syrah with little intervention.",
+   "tell": "Dard & Ribo makes fresh, lively Syrah in Crozes-Hermitage. C'est le Printemps is their bright, spring-like red. Fun and food friendly."
+  },
+  "etienne-becheras": {
+   "name": "Étienne Bécheras",
+   "region": "Rhône, Crozes-Hermitage",
+   "country": "France",
+   "line": "A small Crozes-Hermitage grower making natural leaning Syrah.",
+   "tell": "Bécheras is a small Crozes grower. Le Prieuré d'Arras is a fresh, peppery Syrah. A good value pick."
+  },
+  "laurent-combier": {
+   "name": "Laurent Combier",
+   "region": "Rhône, Crozes-Hermitage",
+   "country": "France",
+   "line": "A leading Crozes-Hermitage family domaine farming organically, making ripe, fresh Syrah.",
+   "tell": "Combier is one of the best known names in Crozes-Hermitage. Expect ripe, dark fruited Syrah. A good value choice with steak."
+  },
+  "domaine-du-coulet": {
+   "name": "Domaine du Coulet",
+   "region": "Rhône, Cornas",
+   "country": "France",
+   "line": "A Cornas domaine run by Matthieu Barret, farming biodynamically, making fresh, vibrant Syrah.",
+   "tell": "Coulet makes a fresher, brighter style of Cornas. Brise Cailloux is their main Cornas. Good with lamb."
+  },
+  "ferraton": {
+   "name": "Ferraton Père & Fils",
+   "region": "Rhône, Tain-l'Hermitage",
+   "country": "France",
+   "line": "A northern Rhône house, linked to Chapoutier, farming biodynamically and making wines across the northern appellations.",
+   "tell": "Ferraton is a northern Rhône house. Les Grands Mûriers is a Cornas. Dark, powerful Syrah."
+  },
+  "guillaume-gilles": {
+   "name": "Guillaume Gilles",
+   "region": "Rhône, Cornas",
+   "country": "France",
+   "line": "A small Cornas grower making traditional, deep Syrah.",
+   "tell": "Gilles is a small Cornas grower who makes classic, dark, savoury Syrah. A good pick for lamb or game."
+  },
+  "thierry-allemand": {
+   "name": "Thierry Allemand",
+   "region": "Rhône, Cornas",
+   "country": "France",
+   "line": "A cult Cornas grower making tiny amounts of pure, deep Syrah from Chaillot and Reynard.",
+   "tell": "Allemand is a cult name in Cornas. Les Chaillot is the fresher one; Reynard is deeper. Rare bottles; decant."
+  },
+  "chapelle-st-theodoric": {
+   "name": "Chapelle St. Théodoric",
+   "region": "Rhône, Châteauneuf-du-Pape",
+   "country": "France",
+   "line": "A small Châteauneuf-du-Pape producer making Grenache led wines from sandy sites.",
+   "tell": "A small Châteauneuf producer. Le Grand Pin is a Grenache led wine. Ask the sommelier for the story."
+  },
+  "chateau-de-beaucastel": {
+   "name": "Château de Beaucastel",
+   "region": "Rhône, Châteauneuf-du-Pape",
+   "country": "France",
+   "line": "The Perrin family's famous Châteauneuf-du-Pape estate, known for using all permitted grapes and a high share of Mourvèdre; Coudoulet is its Côtes du Rhône.",
+   "tell": "Beaucastel is one of Châteauneuf's great names, and Hommage à Jacques Perrin is their rare, Mourvèdre rich top wine. Coudoulet is the Côtes du Rhône from vines next door, and Oenothèque bottles are older releases from the estate's cellar."
+  },
+  "famille-perrin": {
+   "name": "Famille Perrin",
+   "region": "Rhône",
+   "country": "France",
+   "line": "The Perrin family's négociant range, from the owners of Château de Beaucastel.",
+   "tell": "The Perrin family, of Beaucastel, make this Côtes du Rhône-Villages. The half bottle is a handy, easy red."
+  },
+  "chateau-la-nerthe": {
+   "name": "Château La Nerthe",
+   "region": "Rhône, Châteauneuf-du-Pape",
+   "country": "France",
+   "line": "A historic Châteauneuf-du-Pape estate making classic Grenache led wines.",
+   "tell": "La Nerthe is one of Châteauneuf's historic estates. Expect a rich, warm red with dark fruit and spice. Good with lamb."
+  },
+  "chateau-rayas": {
+   "name": "Château Rayas",
+   "region": "Rhône, Châteauneuf-du-Pape",
+   "country": "France",
+   "line": "The cult Châteauneuf-du-Pape estate of the Reynaud family, famous for pure, fragrant Grenache from sandy soils; also Pignan, Fonsalette and La Pialade.",
+   "tell": "Rayas is the most cult name in Châteauneuf, and the Grenache is fine and fragrant, more Burgundy than Rhône. Pignan comes from the same family; Fonsalette and La Pialade are their Côtes du Rhône, all of them rare."
+  },
+  "chateau-saint-cosme": {
+   "name": "Château de Saint Cosme",
+   "region": "Rhône, Gigondas",
+   "country": "France",
+   "line": "The historic Gigondas estate of Louis Barruol, making fine, spicy Gigondas and also a Châteauneuf-du-Pape.",
+   "tell": "Saint Cosme is the leading name in Gigondas. Their Gigondas is spicy and deep. The magnum is great for a big table."
+  },
+  "domaine-de-beaurenard": {
+   "name": "Domaine de Beaurenard",
+   "region": "Rhône, Châteauneuf-du-Pape",
+   "country": "France",
+   "line": "A Châteauneuf-du-Pape family domaine farming biodynamically, making balanced, fresh Grenache led wines.",
+   "tell": "Beaurenard is a family estate in Châteauneuf. Their wine is balanced and spicy. A good value Châteauneuf."
+  },
+  "domaine-charvin": {
+   "name": "Domaine Charvin",
+   "region": "Rhône, Châteauneuf-du-Pape",
+   "country": "France",
+   "line": "A traditional Châteauneuf-du-Pape family domaine making pure, unoaked Grenache led wine.",
+   "tell": "Charvin is a traditional Châteauneuf family. The wine is pure, fresh and fragrant, made without new oak. A great choice for lamb."
+  },
+  "clos-du-caillou": {
+   "name": "Domaine du Clos du Caillou",
+   "region": "Rhône, Châteauneuf-du-Pape",
+   "country": "France",
+   "line": "A Châteauneuf-du-Pape domaine at Courthézon making rich Grenache led wines; the Réserve is its top bottling.",
+   "tell": "Clos du Caillou makes rich, deep Châteauneuf. The Réserve is their top cuvée, and this bottle has some age. Ask the sommelier how it is drinking."
+  },
+  "domaine-de-la-charbonniere": {
+   "name": "Domaine de la Charbonnière",
+   "region": "Rhône, Châteauneuf-du-Pape",
+   "country": "France",
+   "line": "A Châteauneuf-du-Pape family domaine also making Vacqueyras, in a ripe, generous style.",
+   "tell": "Charbonnière is a family estate. Their Châteauneuf is ripe and warm, and the Vacqueyras Cuvée Spéciale is a good value alternative. Good with lamb."
+  },
+  "domaine-de-marcoux": {
+   "name": "Domaine de Marcoux",
+   "region": "Rhône, Châteauneuf-du-Pape",
+   "country": "France",
+   "line": "A Châteauneuf-du-Pape family domaine farming biodynamically, known for fragrant old vine Grenache.",
+   "tell": "Marcoux is a family estate known for its old vine Châteauneuf. The Vieilles Vignes is fragrant and deep. A special Rhône bottle."
+  },
+  "clos-saint-jean": {
+   "name": "Clos Saint Jean",
+   "region": "Rhône, Châteauneuf-du-Pape",
+   "country": "France",
+   "line": "A Châteauneuf-du-Pape domaine known for rich, ripe, powerful top cuvées.",
+   "tell": "Clos Saint Jean makes rich, powerful Châteauneuf. La Combe des Fous and Sanctus Sanctorum are their top cuvées. Big wines for big meats."
+  },
+  "domaine-de-ferrand": {
+   "name": "Domaine de Ferrand",
+   "region": "Rhône, Châteauneuf-du-Pape",
+   "country": "France",
+   "line": "A small Châteauneuf-du-Pape domaine making Grenache led wine.",
+   "tell": "A small Châteauneuf estate. Expect a warm, spicy Grenache led red. A good value Châteauneuf."
+  },
+  "vieille-julienne": {
+   "name": "Domaine de la Vieille Julienne",
+   "region": "Rhône, Châteauneuf-du-Pape",
+   "country": "France",
+   "line": "A Châteauneuf-du-Pape domaine farming biodynamically, making fine, fragrant Grenache.",
+   "tell": "Vieille Julienne makes fine, fragrant Châteauneuf. Les Trois Sources and the Réservé are their bottlings. A strong pick for lamb."
+  },
+  "domaine-du-pegau": {
+   "name": "Domaine du Pegau",
+   "region": "Rhône, Châteauneuf-du-Pape",
+   "country": "France",
+   "line": "The Féraud family's traditional Châteauneuf-du-Pape domaine, known for powerful, savoury, old school Grenache; Château Pégau is a related family estate.",
+   "tell": "Pégau is one of the most traditional names in Châteauneuf. Cuvée Réservée is the main wine; Cuvée Laurence spends longer in barrel. Big, savoury reds; large formats here are great for a big table."
+  },
+  "vieux-telegraphe": {
+   "name": "Domaine du Vieux Télégraphe",
+   "region": "Rhône, Châteauneuf-du-Pape",
+   "country": "France",
+   "line": "The Brunier family's Châteauneuf-du-Pape domaine on the stony La Crau plateau, making powerful, long lived reds.",
+   "tell": "Vieux Télégraphe is one of Châteauneuf's best known names. La Crau is their stony plateau vineyard. Deep, spicy and long lived."
+  },
+  "raymond-usseglio": {
+   "name": "Domaine Raymond Usseglio & Fils",
+   "region": "Rhône, Châteauneuf-du-Pape",
+   "country": "France",
+   "line": "A Châteauneuf-du-Pape family domaine making Grenache led wines; Cuvée Impériale is its old vine top wine.",
+   "tell": "Usseglio is a family estate in Châteauneuf. Cuvée Girard and Cuvée Impériale are old vine Grenache led wines. Rich, spicy and generous."
+  },
+  "isabel-ferrando": {
+   "name": "Famille Isabel Ferrando",
+   "region": "Rhône, Châteauneuf-du-Pape",
+   "country": "France",
+   "line": "The family label of Isabel Ferrando, known for Domaine Saint-Préfert in Châteauneuf-du-Pape.",
+   "tell": "Isabel Ferrando is a respected Châteauneuf grower. Expect a fragrant, fine Grenache led red. A good pick for lamb."
+  },
+  "chateau-des-tours": {
+   "name": "Château des Tours",
+   "region": "Rhône, Vacqueyras",
+   "country": "France",
+   "line": "The Vacqueyras estate of Emmanuel Reynaud of Château Rayas, making fragrant Grenache in a similar spirit.",
+   "tell": "Château des Tours is run by the same hand as Rayas. The Vacqueyras and Côtes du Rhône are fragrant, pure Grenache. A great value way into the Rayas style."
+  },
+  "domaine-de-durban": {
+   "name": "Domaine de Durban",
+   "region": "Rhône, Beaumes-de-Venise",
+   "country": "France",
+   "line": "A Beaumes-de-Venise family domaine, known for sweet Muscat, also making red.",
+   "tell": "Durban is known for its sweet Muscat. Their red Beaumes-de-Venise is warm and spicy. Good value."
+  },
+  "raspail-ay": {
+   "name": "Domaine Raspail-Ay",
+   "region": "Rhône, Gigondas",
+   "country": "France",
+   "line": "A traditional Gigondas family domaine.",
+   "tell": "Raspail-Ay is a traditional Gigondas family. Expect a warm, spicy red. The half bottle is handy for a couple."
+  },
+  "domaine-saint-damien": {
+   "name": "Domaine Saint Damien",
+   "region": "Rhône, Gigondas",
+   "country": "France",
+   "line": "A Gigondas family domaine making old vine, Grenache led wines.",
+   "tell": "Saint Damien makes old vine Gigondas, rich, spicy and good value. Ask the sommelier where the name of La Louisianne comes from; a Louisiana link would be a good story to tell, if it is true."
+  },
+  "domaine-viret": {
+   "name": "Domaine Viret",
+   "region": "Rhône, Saint-Maurice",
+   "country": "France",
+   "line": "A southern Rhône family domaine practising its own form of biodynamic farming, here a Vin de France.",
+   "tell": "Viret is an unusual southern Rhône estate with its own farming philosophy. Renaissance is a deep, spicy red. Ask the sommelier about how it is made."
+  },
+  "gourt-de-mautens": {
+   "name": "Gourt de Mautens",
+   "region": "Rhône, Rasteau",
+   "country": "France",
+   "line": "A small Rasteau domaine, run by Jérôme Bressy, making deep, fine Grenache led wine sold under a regional name.",
+   "tell": "Gourt de Mautens is a much admired small estate near Rasteau. Expect a deep, fragrant Grenache led wine. The magnum is great for a big table."
+  },
+  "rolly-gassmann": {
+   "name": "Rolly Gassmann",
+   "region": "Alsace",
+   "country": "France",
+   "line": "An Alsace family domaine famous for whites, also making Pinot Noir.",
+   "tell": "Alsace Pinot Noir is light and fresh. Rolly Gassmann is a well known family. A good lighter red."
+  },
+  "domaine-du-pelican": {
+   "name": "Domaine du Pélican",
+   "region": "Jura, Arbois",
+   "country": "France",
+   "line": "The Jura estate of the Marquis d'Angerville family from Volnay, making fresh, fine Jura reds.",
+   "tell": "Pélican is owned by the d'Angerville family of Volnay. Their Jura Pinot Noir and blends are light and fresh. A great choice for a Burgundy lover."
+  },
+  "domaine-labet": {
+   "name": "Domaine Labet",
+   "region": "Jura",
+   "country": "France",
+   "line": "A Jura family domaine known for natural leaning, fresh wines.",
+   "tell": "Labet is a Jura family estate. Les Varrons Massale is a Pinot Noir from the Côtes du Jura. Light and fresh."
+  },
+  "rousset-martin": {
+   "name": "François Rousset-Martin",
+   "region": "Jura",
+   "country": "France",
+   "line": "A small Jura grower making natural leaning, characterful wines.",
+   "tell": "Rousset-Martin is a small Jura grower. Voyage au bout de Nuits is a Pinot Noir. Light, fresh and curious."
+  },
+  "ganevat": {
+   "name": "Jean-François Ganevat",
+   "region": "Jura",
+   "country": "France",
+   "line": "A cult Jura grower making natural leaning wines, many sold as Vin de France.",
+   "tell": "Ganevat is a cult name in the Jura. De Toute Beauté is a Vin de France red. Light, fresh and fragrant."
+  },
+  "chateau-pradeaux": {
+   "name": "Château Pradeaux",
+   "region": "Provence, Bandol",
+   "country": "France",
+   "line": "A traditional Bandol estate making powerful, long lived Mourvèdre.",
+   "tell": "Pradeaux is a traditional Bandol estate. The Mourvèdre is powerful and savoury and needs age. This bottle has some."
+  },
+  "bastide-blanche": {
+   "name": "Domaine de la Bastide Blanche",
+   "region": "Provence, Bandol",
+   "country": "France",
+   "line": "A Bandol family domaine making Mourvèdre led reds from named cuvées.",
+   "tell": "Bastide Blanche is a Bandol family estate. Estagnol and Fontanéou are their cuvées. Dark, savoury Mourvèdre."
+  },
+  "domaine-de-trevallon": {
+   "name": "Domaine de Trévallon",
+   "region": "Provence, Alpilles",
+   "country": "France",
+   "line": "The cult Provence estate founded by Éloi Dürrbach, blending Cabernet Sauvignon and Syrah in the Alpilles.",
+   "tell": "Trévallon is a famous Provence estate blending Cabernet and Syrah. Deep, savoury and long lived. A good value choice for a Bordeaux drinker."
+  },
+  "domaine-tempier": {
+   "name": "Domaine Tempier",
+   "region": "Provence, Bandol",
+   "country": "France",
+   "line": "The famous Bandol domaine of the Peyraud family, making Mourvèdre led reds from named sites.",
+   "tell": "Tempier is the most famous name in Bandol. La Migoua and La Tourtine are single site wines; Lulu et Lucien is a special cuvée. Big, savoury reds for lamb."
+  },
+  "tour-du-bon": {
+   "name": "Domaine de la Tour du Bon",
+   "region": "Provence, Bandol",
+   "country": "France",
+   "line": "A Bandol domaine making Mourvèdre led reds.",
+   "tell": "Tour du Bon is a Bandol estate. Saint Ferréol is a Mourvèdre led red. Savoury and dark."
+  },
+  "domaine-d-aupilhac": {
+   "name": "Domaine d'Aupilhac",
+   "region": "Languedoc, Montpeyroux",
+   "country": "France",
+   "line": "A Montpeyroux domaine run by Sylvain Fadat, farming organically and making deep southern French reds.",
+   "tell": "Aupilhac is a respected Languedoc estate. Expect a deep, spicy southern red. A great value choice."
+  },
+  "grange-des-peres": {
+   "name": "Domaine de la Grange des Pères",
+   "region": "Languedoc, Hérault",
+   "country": "France",
+   "line": "The cult Languedoc estate of Laurent Vaillé, blending Syrah, Mourvèdre and Cabernet Sauvignon.",
+   "tell": "Grange des Pères is the cult wine of the Languedoc. Deep, fine and long lived. Rare bottles; decant."
+  },
+  "domaine-ledogar": {
+   "name": "Domaine Ledogar",
+   "region": "Languedoc, Corbières",
+   "country": "France",
+   "line": "A Corbières family domaine making natural leaning southern reds.",
+   "tell": "Ledogar is a Corbières family estate. Le Mariole is Carignan. Fresh, juicy and fun."
+  },
+  "benoit-lahaye": {
+   "name": "Benoît Lahaye",
+   "region": "Champagne, Bouzy",
+   "country": "France",
+   "line": "A Bouzy grower in Champagne, also making a still red Coteaux Champenois.",
+   "tell": "Lahaye is a Champagne grower in Bouzy. Bouzy Rouge is a still red Pinot Noir from Champagne. Rare and fresh."
+  },
+  "bollinger": {
+   "name": "Bollinger",
+   "region": "Champagne, Aÿ",
+   "country": "France",
+   "line": "The great Aÿ Champagne house, also making a still red Coteaux Champenois from La Côte aux Enfants.",
+   "tell": "Bollinger is a great Champagne house. La Côte aux Enfants is a still red Pinot Noir from Aÿ. A rare treat."
+  },
+  "egly-ouriet": {
+   "name": "Egly-Ouriet",
+   "region": "Champagne, Ambonnay",
+   "country": "France",
+   "line": "A top Ambonnay grower, also making still red Coteaux Champenois.",
+   "tell": "Egly-Ouriet is a top Champagne grower. Their still red Pinot Noir is rare and fine."
+  },
+  "chateau-du-cedre": {
+   "name": "Château du Cèdre",
+   "region": "Southwest France, Cahors",
+   "country": "France",
+   "line": "A leading Cahors estate making deep Malbec.",
+   "tell": "Du Cèdre is a leading Cahors estate. Cahors is Malbec from France: dark, firm and savoury. Good with steak."
+  },
+  "crocus": {
+   "name": "Crocus",
+   "region": "Southwest France, Cahors",
+   "country": "France",
+   "line": "A Cahors project of Paul Hobbs with Bertrand-Gabriel Vigouroux, making Malbec.",
+   "tell": "Crocus is a Cahors Malbec from the American winemaker Paul Hobbs and a local partner. L'Atelier is the entry wine. Dark and juicy."
+  },
+  "comte-abbatucci": {
+   "name": "Domaine Comte Abbatucci",
+   "region": "Corsica, Ajaccio",
+   "country": "France",
+   "line": "A biodynamic Corsican estate known for reviving native grapes.",
+   "tell": "Abbatucci is a famous Corsican estate. Ministre Impérial is a blend of native grapes. Fragrant and fine."
+  },
+  "louis-magnin": {
+   "name": "Domaine Louis Magnin",
+   "region": "Savoie",
+   "country": "France",
+   "line": "A Savoie family domaine making mountain reds.",
+   "tell": "Magnin is a Savoie family estate. Expect a light, fresh mountain red. A curious pick."
+  },
+  "chateau-calon-segur": {
+   "name": "Château Calon-Ségur",
+   "region": "Bordeaux, Saint-Estèphe",
+   "country": "France",
+   "line": "A Saint-Estèphe third growth famous for the heart on its label, making firm, long lived Cabernet led wines.",
+   "tell": "Calon-Ségur is the château with the heart on the label, a lovely story for a celebration. Saint-Estèphe gives firm, structured Cabernet that ages for decades. A great anniversary bottle."
+  },
+  "chateau-cos-labory": {
+   "name": "Château Cos Labory",
+   "region": "Bordeaux, Saint-Estèphe",
+   "country": "France",
+   "line": "A Saint-Estèphe fifth growth neighbouring Cos d'Estournel, making classic, firm claret at fair prices.",
+   "tell": "Cos Labory sits next door to Cos d'Estournel and gives classic Saint-Estèphe at a gentler price. The magnum is a fine pick for a table of four or more."
+  },
+  "chateau-cos-d-estournel": {
+   "name": "Château Cos d'Estournel",
+   "region": "Bordeaux, Saint-Estèphe",
+   "country": "France",
+   "line": "A Saint-Estèphe second growth, known for its pagoda towered chai, making rich, exotic, polished Cabernet and Merlot blends.",
+   "tell": "Cos d'Estournel is the leading name in Saint-Estèphe, famous for its oriental style towers. The wine is rich and polished, more opulent than most of its neighbours. Decant younger vintages; the magnums are perfect for big celebrations."
+  },
+  "chateau-montrose": {
+   "name": "Château Montrose",
+   "region": "Bordeaux, Saint-Estèphe",
+   "country": "France",
+   "line": "A Saint-Estèphe second growth on gravel near the Gironde estuary, known for powerful, long lived Cabernet led wines.",
+   "tell": "Montrose overlooks the Gironde and makes one of the most powerful wines of the Médoc. It needs time and rewards it. Decant, and pair with beef or lamb."
+  },
+  "chateau-meyney": {
+   "name": "Château Meyney",
+   "region": "Bordeaux, Saint-Estèphe",
+   "country": "France",
+   "line": "A Saint-Estèphe estate near the Gironde; La Chapelle de Meyney is its second wine.",
+   "tell": "La Chapelle de Meyney is the second wine of Château Meyney in Saint-Estèphe. It is a softer, earlier drinking claret at a friendly price."
+  },
+  "chateau-grand-puy-lacoste": {
+   "name": "Château Grand-Puy-Lacoste",
+   "region": "Bordeaux, Pauillac",
+   "country": "France",
+   "line": "A Pauillac fifth growth owned by the Borie family, admired for classic, cassis scented, honest Pauillac at a fair price.",
+   "tell": "Grand-Puy-Lacoste is classic Pauillac, Cabernet with cassis and cedar, owned by the same family as Ducru-Beaucaillou. Many think it drinks above its classification. A strong value for steak."
+  },
+  "chateau-haut-bages-liberal": {
+   "name": "Château Haut-Bages Libéral",
+   "region": "Bordeaux, Pauillac",
+   "country": "France",
+   "line": "A Pauillac fifth growth with vines near Latour, making firm, fresh Cabernet led wine.",
+   "tell": "Haut-Bages Libéral is a fifth growth with some vines near Château Latour. It gives classic, firm Pauillac at a sensible price. Good with red meat."
+  },
+  "chateau-lafite-rothschild": {
+   "name": "Château Lafite Rothschild",
+   "region": "Bordeaux, Pauillac",
+   "country": "France",
+   "line": "The first growth of Pauillac owned by the Rothschild family since 1868, famous for its elegance and perfume.",
+   "tell": "Lafite is perhaps the most famous name in Bordeaux. It is a first growth known for elegance and fragrance rather than raw power. These are trophy bottles: involve the sommelier, decant, and let the moment breathe."
+  },
+  "domaines-barons-de-rothschild": {
+   "name": "Domaines Barons de Rothschild (Lafite), Légende range",
+   "region": "Bordeaux, Pauillac",
+   "country": "France",
+   "line": "The Légende wines from the Lafite Rothschild family company, appellation blends made to show each Bordeaux appellation's character.",
+   "tell": "Légende Pauillac comes from the family that owns Château Lafite. It is a friendly, Cabernet led Pauillac at an approachable price. A good way to give a guest the Lafite connection without the first growth price."
+  },
+  "chateau-latour": {
+   "name": "Château Latour",
+   "region": "Bordeaux, Pauillac",
+   "country": "France",
+   "line": "The Pauillac first growth beside the Gironde, owned by the Pinault family, famous for powerful, long lived Cabernet.",
+   "tell": "Latour is the most powerful of the first growths, famed for consistency and longevity. The estate releases its wines only when it judges them ready. Decant, and serve with beef or lamb."
+  },
+  "chateau-lynch-bages": {
+   "name": "Château Lynch-Bages",
+   "region": "Bordeaux, Pauillac",
+   "country": "France",
+   "line": "A Pauillac fifth growth owned by the Cazes family, much loved for rich, generous, cassis rich wine that drinks above its rank.",
+   "tell": "Lynch-Bages is one of the most loved names in Bordeaux, often compared with second growths. Rich, generous Cabernet with cassis and cedar. The magnum is a great pick for a celebration."
+  },
+  "chateau-duhart-milon": {
+   "name": "Château Duhart-Milon",
+   "region": "Bordeaux, Pauillac",
+   "country": "France",
+   "line": "A Pauillac fourth growth owned by the Lafite Rothschild family; Moulin de Duhart is its second wine.",
+   "tell": "Duhart-Milon is Lafite's sister estate in Pauillac, and Moulin de Duhart is its second wine. It is an easy, fair priced way into the Lafite family."
+  },
+  "chateau-mouton-rothschild": {
+   "name": "Château Mouton Rothschild",
+   "region": "Bordeaux, Pauillac",
+   "country": "France",
+   "line": "The Pauillac first growth, promoted in 1973, famous for its rich, opulent wine and labels painted by a different artist each year.",
+   "tell": "Mouton is the first growth with an artist's label every year, a great story at the table. The wine is rich and opulent. Ask the sommelier who painted this vintage's label, and decant."
+  },
+  "chateau-pichon-lalande": {
+   "name": "Château Pichon Longueville Comtesse de Lalande",
+   "region": "Bordeaux, Pauillac",
+   "country": "France",
+   "line": "A Pauillac second growth facing Latour, owned by the Roederer Champagne family, known for silky, perfumed, Merlot rich Pauillac.",
+   "tell": "Pichon Lalande is one of the most elegant Pauillacs, with more Merlot than most, which gives a silky texture. The half bottle is a beautiful option for two."
+  },
+  "chateau-pedesclaux": {
+   "name": "Château Pedesclaux",
+   "region": "Bordeaux, Pauillac",
+   "country": "France",
+   "line": "A Pauillac fifth growth that has been extensively renewed in recent years, making modern, polished Cabernet.",
+   "tell": "Pedesclaux is a fifth growth in Pauillac that has invested heavily recently. Expect a modern, polished Cabernet at a fair price."
+  },
+  "chateau-pontet-canet": {
+   "name": "Château Pontet-Canet",
+   "region": "Bordeaux, Pauillac",
+   "country": "France",
+   "line": "A Pauillac fifth growth owned by the Tesseron family, farmed biodynamically, making deep, pure, highly regarded Cabernet.",
+   "tell": "Pontet-Canet is famous for biodynamic farming and wines many rate alongside second growths. Deep, pure Cabernet. Decant younger vintages."
+  },
+  "chateau-ducru-beaucaillou": {
+   "name": "Château Ducru-Beaucaillou",
+   "region": "Bordeaux, Saint-Julien",
+   "country": "France",
+   "line": "A Saint-Julien second growth on the Gironde owned by the Borie family, known for refined, long lived Cabernet.",
+   "tell": "Ducru-Beaucaillou is one of Saint-Julien's great estates. The wine is refined, balanced and long lived. A classic choice for beef or lamb."
+  },
+  "chateau-gruaud-larose": {
+   "name": "Château Gruaud-Larose",
+   "region": "Bordeaux, Saint-Julien",
+   "country": "France",
+   "line": "A Saint-Julien second growth making rich, firm, generous Cabernet led wine.",
+   "tell": "Gruaud-Larose is a generous, full style of Saint-Julien. A great value second growth with steak."
+  },
+  "chateau-lalande": {
+   "name": "Château Lalande",
+   "region": "Bordeaux, Saint-Julien",
+   "country": "France",
+   "line": "A Saint-Julien estate owned by the Meffre family since 1964, once part of Château Lagrange.",
+   "tell": "Lalande is a family run Saint-Julien that was once part of Château Lagrange. It is classic, approachable claret at a friendly price."
+  },
+  "chateau-lalande-borie": {
+   "name": "Château Lalande-Borie",
+   "region": "Bordeaux, Saint-Julien",
+   "country": "France",
+   "line": "A Saint-Julien estate of the Borie family, owners of Ducru-Beaucaillou.",
+   "tell": "Lalande-Borie comes from the family that owns Ducru-Beaucaillou. It is a softer, earlier drinking Saint-Julien at a friendly price."
+  },
+  "chateau-leoville-las-cases": {
+   "name": "Château Léoville Las Cases",
+   "region": "Bordeaux, Saint-Julien",
+   "country": "France",
+   "line": "A Saint-Julien second growth run by the Delon family, beside Latour, often ranked with the first growths for power and longevity.",
+   "tell": "Las Cases is one of the most prestigious second growths, its Grand Enclos running right up to Latour. The wine is serious and long lived. Decant, and give it time in the glass."
+  },
+  "chateau-leoville-poyferre": {
+   "name": "Château Léoville Poyferré",
+   "region": "Bordeaux, Saint-Julien",
+   "country": "France",
+   "line": "A Saint-Julien second growth owned by the Cuvelier family, known for rich, plush, modern Cabernet.",
+   "tell": "Poyferré is the plushest of the three Léovilles. Rich, ripe and generous. A crowd pleasing second growth."
+  },
+  "chateau-talbot": {
+   "name": "Château Talbot",
+   "region": "Bordeaux, Saint-Julien",
+   "country": "France",
+   "line": "A Saint-Julien fourth growth making round, generous, approachable claret.",
+   "tell": "Talbot is a well known Saint-Julien with a round, friendly style. A good value classified growth."
+  },
+  "chateau-cantenac-brown": {
+   "name": "Château Cantenac Brown",
+   "region": "Bordeaux, Margaux",
+   "country": "France",
+   "line": "A Margaux third growth with a striking Tudor style château, making firm, structured Margaux.",
+   "tell": "Cantenac Brown is a third growth in Margaux with a famously English looking château. Structured, fragrant claret."
+  },
+  "chateau-des-eyrins": {
+   "name": "Château des Eyrins",
+   "region": "Bordeaux, Margaux",
+   "country": "France",
+   "line": "A small Margaux estate owned by Xavier and Julie Gonet-Médeville, with a prized parcel beside Château Margaux; La Closerie des Eyrins is its second wine.",
+   "tell": "Eyrins is a tiny Margaux estate with vines next to Château Margaux and Palmer. La Closerie des Eyrins is the second wine. Fragrant, fine Margaux at a fair price."
+  },
+  "chateau-giscours": {
+   "name": "Château Giscours",
+   "region": "Bordeaux, Margaux",
+   "country": "France",
+   "line": "A large Margaux third growth making generous, fragrant claret.",
+   "tell": "Giscours is a big Margaux third growth, generous and fragrant. A good value classified growth."
+  },
+  "chateau-cordet": {
+   "name": "Château Cordet",
+   "region": "Bordeaux, Margaux",
+   "country": "France",
+   "line": "A small Margaux estate making approachable claret.",
+   "tell": "Cordet is a small Margaux producer. A fragrant, approachable Margaux at a friendly price."
+  },
+  "chateau-margaux": {
+   "name": "Château Margaux",
+   "region": "Bordeaux, Margaux",
+   "country": "France",
+   "line": "The first growth of the Margaux appellation, famous for perfume and silk; Pavillon Rouge is its second wine.",
+   "tell": "Château Margaux is the first growth of its appellation, famed for fragrance and silky elegance. Pavillon Rouge is the second wine, a gentler price for the same estate. Decant."
+  },
+  "chateau-marquis-d-alesme": {
+   "name": "Château Marquis d'Alesme",
+   "region": "Bordeaux, Margaux",
+   "country": "France",
+   "line": "A Margaux third growth, renewed in recent years, making fragrant, polished wine.",
+   "tell": "Marquis d'Alesme is a third growth in Margaux. Fragrant, polished claret at a fair price."
+  },
+  "chateau-palmer": {
+   "name": "Château Palmer",
+   "region": "Bordeaux, Margaux",
+   "country": "France",
+   "line": "A Margaux third growth, farmed biodynamically, often priced beside the first growths, known for Merlot rich, perfumed, silky wine.",
+   "tell": "Palmer is a third growth that often sells for close to first growth prices. Rich in Merlot, perfumed and silky. Historical XIX Century Wine is a special blend recalling an older Bordeaux custom; ask the sommelier about it."
+  },
+  "chateau-rauzan-segla": {
+   "name": "Château Rauzan-Ségla",
+   "region": "Bordeaux, Margaux",
+   "country": "France",
+   "line": "A Margaux second growth owned by the owners of Chanel, making fragrant, refined Margaux; Ségla is its second wine.",
+   "tell": "Rauzan-Ségla is a second growth in Margaux, owned by the family behind Chanel. Fragrant and refined. Ségla is the second wine, a friendly price."
+  },
+  "chateau-haut-brion": {
+   "name": "Château Haut-Brion",
+   "region": "Bordeaux, Pessac-Léognan",
+   "country": "France",
+   "line": "The only first growth outside the Médoc, in Pessac-Léognan, owned by Domaine Clarence Dillon; Bahans Haut-Brion was its second wine's name.",
+   "tell": "Haut-Brion is the only first growth from Graves, with a smoky, earthy, silky style. Bahans Haut-Brion is the older name of the second wine. Decant."
+  },
+  "chateau-la-mission-haut-brion": {
+   "name": "Château La Mission Haut-Brion",
+   "region": "Bordeaux, Pessac-Léognan",
+   "country": "France",
+   "line": "The great Pessac-Léognan estate across the road from Haut-Brion, under the same ownership, making rich, deep wines.",
+   "tell": "La Mission is Haut-Brion's neighbour, under the same owners, and in many years just as admired. Rich, deep and smoky. A trophy bottle."
+  },
+  "chateau-la-tour-haut-brion": {
+   "name": "Château La Tour Haut-Brion",
+   "region": "Bordeaux, Pessac-Léognan",
+   "country": "France",
+   "line": "A former classified Graves estate under the same ownership as La Mission Haut-Brion, now absorbed into La Mission's vineyard.",
+   "tell": "La Tour Haut-Brion was a sister estate of La Mission and no longer exists as a separate wine. This 1982 is a rare, mature bottle; ask the sommelier how it is showing."
+  },
+  "chateau-pape-clement": {
+   "name": "Château Pape Clément",
+   "region": "Bordeaux, Pessac-Léognan",
+   "country": "France",
+   "line": "A historic Pessac-Léognan estate named after Pope Clement V, owned by Bernard Magrez, making rich, modern Graves.",
+   "tell": "Pape Clément is named after a medieval pope who once owned the vineyard. Rich, smoky Graves. Good with beef."
+  },
+  "chateau-belle-brise": {
+   "name": "Château Belle-Brise",
+   "region": "Bordeaux, Pomerol",
+   "country": "France",
+   "line": "A tiny Pomerol estate of about two hectares, owned by Henri-Bruno de Coincy, making fine, elegant Merlot.",
+   "tell": "Belle-Brise is a tiny Pomerol estate near Le Pin, made in very small amounts. Elegant, fine Merlot. A rare find for a Pomerol lover."
+  },
+  "chateau-bellegrave": {
+   "name": "Château Bellegrave",
+   "region": "Bordeaux, Pomerol",
+   "country": "France",
+   "line": "A small Pomerol estate making supple Merlot led wine.",
+   "tell": "Bellegrave is a Pomerol, so expect soft, plummy Merlot. A gentle price for the appellation."
+  },
+  "chateau-clinet": {
+   "name": "Château Clinet",
+   "region": "Bordeaux, Pomerol",
+   "country": "France",
+   "line": "A Pomerol estate on the high plateau, making rich, modern Merlot led wine.",
+   "tell": "Clinet is a leading Pomerol, rich and plush. A great choice with duck or beef."
+  },
+  "chateau-gombaude-guillot": {
+   "name": "Château Gombaude-Guillot",
+   "region": "Bordeaux, Pomerol",
+   "country": "France",
+   "line": "A small family estate in Pomerol making Merlot led wine.",
+   "tell": "Gombaude-Guillot is a small family Pomerol. Soft, plummy Merlot. The several vintages here make for a good comparison."
+  },
+  "chateau-lafleur": {
+   "name": "Château Lafleur",
+   "region": "Bordeaux, Pomerol",
+   "country": "France",
+   "line": "A tiny, revered Pomerol estate of the Guinaudeau family, rich in Cabernet Franc, among the most sought after wines of Bordeaux.",
+   "tell": "Lafleur is a tiny Pomerol estate that collectors prize as highly as Pétrus. It has more Cabernet Franc than most Pomerol. Rare bottles; decant."
+  },
+  "chateau-la-fleur-petrus": {
+   "name": "Château La Fleur-Pétrus",
+   "region": "Bordeaux, Pomerol",
+   "country": "France",
+   "line": "A Pomerol estate of the Moueix family, near Pétrus, making silky, fine Merlot.",
+   "tell": "La Fleur-Pétrus belongs to the Moueix family and sits near Pétrus. Silky, fine Pomerol. A lovely choice for duck or beef."
+  },
+  "chateau-l-eglise-clinet": {
+   "name": "Château L'Église-Clinet",
+   "region": "Bordeaux, Pomerol",
+   "country": "France",
+   "line": "A small Pomerol estate on the plateau, long run by the late Denis Durantou, making deep, fine wines.",
+   "tell": "L'Église-Clinet is a small, much admired Pomerol. Deep, fine and long lived. A special bottle."
+  },
+  "chateau-l-evangile": {
+   "name": "Château L'Évangile",
+   "region": "Bordeaux, Pomerol",
+   "country": "France",
+   "line": "A Pomerol estate owned by the Lafite Rothschild family, between Pétrus and Cheval Blanc, making rich, deep Merlot.",
+   "tell": "L'Évangile is owned by the Lafite Rothschild family and sits between Pétrus and Cheval Blanc. Rich, deep Pomerol. Decant."
+  },
+  "chateau-trotanoy": {
+   "name": "Château Trotanoy",
+   "region": "Bordeaux, Pomerol",
+   "country": "France",
+   "line": "A Pomerol estate of the Moueix family, making powerful, deep Merlot.",
+   "tell": "Trotanoy is a Moueix Pomerol, powerful and deep. A great choice for a Pomerol lover."
+  },
+  "vieux-chateau-certan": {
+   "name": "Vieux Château Certan",
+   "region": "Bordeaux, Pomerol",
+   "country": "France",
+   "line": "A Pomerol estate run by the Thienpont family, with more Cabernet Franc than most, making fine, fragrant wine.",
+   "tell": "Vieux Château Certan, run by the Thienpont family, is one of Pomerol's great names. The half bottle is a lovely treat for two."
+  },
+  "clos-l-eglise": {
+   "name": "Clos l'Église",
+   "region": "Bordeaux, Pomerol",
+   "country": "France",
+   "line": "A small Pomerol estate on the plateau making rich Merlot led wine.",
+   "tell": "Clos l'Église is a small Pomerol estate. Rich, plummy Merlot. A good choice for duck."
+  },
+  "petrus": {
+   "name": "Pétrus",
+   "region": "Bordeaux, Pomerol",
+   "country": "France",
+   "line": "The most famous wine of Pomerol, almost entirely Merlot from blue clay, among the most prized wines in the world.",
+   "tell": "Pétrus is the most famous Pomerol, almost all Merlot from a blue clay plateau. A trophy bottle; involve the sommelier."
+  },
+  "chateau-armens": {
+   "name": "Château Armens",
+   "region": "Bordeaux, Saint-Émilion",
+   "country": "France",
+   "line": "A Saint-Émilion estate in Saint-Pey-d'Armens owned by the Malet Roquefort family of Château La Gaffelière.",
+   "tell": "Armens is owned by the family behind La Gaffelière. A friendly, good value Saint-Émilion."
+  },
+  "chateau-l-arrosee": {
+   "name": "Château L'Arrosée",
+   "region": "Bordeaux, Saint-Émilion",
+   "country": "France",
+   "line": "A Saint-Émilion Grand Cru Classé on the slopes below the town, making fresh, fine wine.",
+   "tell": "L'Arrosée is a classified Saint-Émilion. Fresh, fine Merlot and Cabernet Franc."
+  },
+  "chateau-beau-sejour-becot": {
+   "name": "Château Beau-Séjour Bécot",
+   "region": "Bordeaux, Saint-Émilion",
+   "country": "France",
+   "line": "A Saint-Émilion premier grand cru classé on the limestone plateau, owned by the Bécot family.",
+   "tell": "Beau-Séjour Bécot is a premier grand cru on Saint-Émilion's limestone plateau. Fine, fresh Merlot and Cabernet Franc."
+  },
+  "chateau-canon": {
+   "name": "Château Canon",
+   "region": "Bordeaux, Saint-Émilion",
+   "country": "France",
+   "line": "A Saint-Émilion premier grand cru classé on the limestone plateau, owned by the family behind Chanel, making fine, fresh wine.",
+   "tell": "Canon is a premier grand cru on the limestone plateau, owned by the family behind Chanel. Fine, fragrant and fresh."
+  },
+  "chateau-cheval-blanc": {
+   "name": "Château Cheval Blanc",
+   "region": "Bordeaux, Saint-Émilion",
+   "country": "France",
+   "line": "The great Saint-Émilion estate, rich in Cabernet Franc, which stood at the top of the classification until it withdrew in 2022; Le Petit Cheval is its second wine.",
+   "tell": "Cheval Blanc is one of the world's great wines, unusual for its high share of Cabernet Franc. Le Petit Cheval is the second wine. Decant."
+  },
+  "chateau-figeac": {
+   "name": "Château Figeac",
+   "region": "Bordeaux, Saint-Émilion",
+   "country": "France",
+   "line": "A Saint-Émilion estate on gravel, unusually rich in Cabernet, promoted to premier grand cru classé A in 2022.",
+   "tell": "Figeac is unusual in Saint-Émilion for its high share of Cabernet. It was promoted to the top rank in 2022. Fine and long lived."
+  },
+  "chateau-pavie": {
+   "name": "Château Pavie",
+   "region": "Bordeaux, Saint-Émilion",
+   "country": "France",
+   "line": "A Saint-Émilion premier grand cru classé A owned by the Perse family, making rich, powerful wine.",
+   "tell": "Pavie is one of Saint-Émilion's top estates. Rich and powerful. Decant."
+  },
+  "chateau-troplong-mondot": {
+   "name": "Château Troplong-Mondot",
+   "region": "Bordeaux, Saint-Émilion",
+   "country": "France",
+   "line": "A Saint-Émilion premier grand cru classé on a high point of the appellation.",
+   "tell": "Troplong-Mondot sits on one of the highest points in Saint-Émilion. The half bottle is a lovely treat for two."
+  },
+  "chateau-tertre-de-la-mouleyre": {
+   "name": "Château Tertre de la Mouleyre",
+   "region": "Bordeaux, Saint-Émilion",
+   "country": "France",
+   "line": "A small Saint-Émilion family estate run by Éric Jeanneteau.",
+   "tell": "Tertre de la Mouleyre is a small family estate in Saint-Émilion. Fine, fresh Merlot."
+  },
+  "chateau-lassegue": {
+   "name": "Château Lassègue",
+   "region": "Bordeaux, Saint-Émilion",
+   "country": "France",
+   "line": "A Saint-Émilion Grand Cru Classé; Les Cadrans de Lassègue is its second wine.",
+   "tell": "Les Cadrans de Lassègue is the second wine of Château Lassègue. Soft, friendly Saint-Émilion at a gentle price."
+  },
+  "chateau-vieux-taillefer": {
+   "name": "Château Vieux Taillefer",
+   "region": "Bordeaux, Saint-Émilion",
+   "country": "France",
+   "line": "A small Saint-Émilion estate farmed organically, whose Pavillon de Taillefer is a Merlot Grand Cru.",
+   "tell": "Pavillon de Taillefer is the main wine of Château Vieux Taillefer, a small organic estate in Saint-Émilion. All Merlot, soft and plummy."
+  },
+  "tertre-roteboeuf": {
+   "name": "Tertre Rôtebœuf",
+   "region": "Bordeaux, Saint-Émilion",
+   "country": "France",
+   "line": "A small, cult Saint-Émilion estate of François Mitjavile, making rich, exotic, much admired wine.",
+   "tell": "Tertre Rôtebœuf is a cult Saint-Émilion from François Mitjavile. Rich, exotic and fine. A special bottle."
+  },
+  "chateau-bernon-becot": {
+   "name": "Château Bernon Bécot",
+   "region": "Bordeaux, Puisseguin-Saint-Émilion",
+   "country": "France",
+   "line": "A Puisseguin-Saint-Émilion estate bought in 2015 by the Bécot family of Beau-Séjour Bécot.",
+   "tell": "Bernon Bécot is owned by the family behind Beau-Séjour Bécot. Soft, friendly Merlot at a gentle price."
+  },
+  "chateau-chasse-spleen": {
+   "name": "Château Chasse-Spleen",
+   "region": "Bordeaux, Moulis-en-Médoc",
+   "country": "France",
+   "line": "A well known Moulis estate making classic, firm claret.",
+   "tell": "Chasse-Spleen is one of the best known names in Moulis. Classic, firm claret at a fair price."
+  },
+  "chateau-clarke": {
+   "name": "Château Clarke",
+   "region": "Bordeaux, Listrac-Médoc",
+   "country": "France",
+   "line": "A Listrac estate owned by the Edmond de Rothschild family, making Merlot rich claret.",
+   "tell": "Clarke is a Listrac estate owned by a branch of the Rothschild family. The magnum is good for a table."
+  },
+  "chateau-de-camensac": {
+   "name": "Château de Camensac",
+   "region": "Bordeaux, Haut-Médoc",
+   "country": "France",
+   "line": "A Haut-Médoc fifth growth making classic claret.",
+   "tell": "Camensac is a fifth growth in the Haut-Médoc. Classic claret at a fair price."
+  },
+  "chateau-la-lagune": {
+   "name": "Château La Lagune",
+   "region": "Bordeaux, Haut-Médoc",
+   "country": "France",
+   "line": "A Haut-Médoc third growth near Bordeaux city, making fragrant, fine claret.",
+   "tell": "La Lagune is a third growth in the southern Médoc. Fragrant and fine. The magnum is good for a table."
+  },
+  "chateau-la-tour-carnet": {
+   "name": "Château La Tour Carnet",
+   "region": "Bordeaux, Haut-Médoc",
+   "country": "France",
+   "line": "A Haut-Médoc fourth growth owned by Bernard Magrez, making rich, modern claret.",
+   "tell": "La Tour Carnet is a classified Haut-Médoc. Rich, modern claret at a fair price."
+  },
+  "chateau-la-vieille-forge": {
+   "name": "Château La Vieille Forge",
+   "region": "Bordeaux, Lalande-de-Pomerol",
+   "country": "France",
+   "line": "A Lalande-de-Pomerol estate making Merlot led wine.",
+   "tell": "Lalande-de-Pomerol sits next to Pomerol and gives soft Merlot at a gentler price. A good value choice."
+  },
+  "chateau-les-grands-chenes": {
+   "name": "Château Les Grands Chênes",
+   "region": "Bordeaux, Médoc",
+   "country": "France",
+   "line": "A Médoc cru bourgeois making classic, approachable claret.",
+   "tell": "Les Grands Chênes is a Médoc cru bourgeois. Classic, approachable claret at a friendly price."
+  },
+  "chateau-sociando-mallet": {
+   "name": "Château Sociando-Mallet",
+   "region": "Bordeaux, Haut-Médoc",
+   "country": "France",
+   "line": "An unclassified Haut-Médoc estate built up by Jean Gautreau, often compared with classified growths.",
+   "tell": "Sociando-Mallet is often rated alongside the classified growths. Cuvée Jean Gautreau honours the man who built the estate. Firm, long lived claret."
+  },
+  "clos-manou": {
+   "name": "Clos Manou",
+   "region": "Bordeaux, Médoc",
+   "country": "France",
+   "line": "A small family estate in the northern Médoc making carefully made claret.",
+   "tell": "Clos Manou is a small Médoc estate. Petit Manou is the second wine. Good value claret."
+  },
+  "clos-sainte-anne": {
+   "name": "Clos Sainte-Anne",
+   "region": "Bordeaux, Cadillac Côtes de Bordeaux",
+   "country": "France",
+   "line": "A small Côtes de Bordeaux property of the Courselle family, making Merlot led red.",
+   "tell": "Clos Sainte-Anne is a small family property in the Côtes de Bordeaux. Soft, Merlot led red, one of the best values on the list."
+  },
+  "domaine-de-l-aurage": {
+   "name": "Domaine de l'Aurage",
+   "region": "Bordeaux, Castillon",
+   "country": "France",
+   "line": "A Castillon estate run by Louis Mitjavile, son of François of Tertre Rôtebœuf, making rich Merlot led wine.",
+   "tell": "L'Aurage is run by Louis Mitjavile, whose family makes Tertre Rôtebœuf. Rich, ripe Castillon. Good value."
+  }
+ },
+ "entries": {
+  "1451": "chateau-de-breze",
+  "1452": "clos-rougeard",
+  "1453": "clos-rougeard",
+  "1454": "clos-rougeard",
+  "1455": "clos-rougeard",
+  "1456": "clos-rougeard",
+  "1457": "clos-rougeard",
+  "1458": "clos-rougeard",
+  "1459": "clos-rougeard",
+  "1460": "clos-rougeard",
+  "1461": "clos-rougeard",
+  "1462": "clos-rougeard",
+  "1463": "roches-neuves",
+  "1464": "roches-neuves",
+  "1465": "catherine-et-pierre-breton",
+  "1466": "catherine-et-pierre-breton",
+  "1467": "catherine-et-pierre-breton",
+  "1468": "catherine-et-pierre-breton",
+  "1469": "catherine-et-pierre-breton",
+  "1470": "catherine-et-pierre-breton",
+  "1471": "catherine-et-pierre-breton",
+  "1472": "catherine-et-pierre-breton",
+  "1473": "catherine-et-pierre-breton",
+  "1474": "yannick-amirault",
+  "1475": "charles-joguet",
+  "1476": "charles-joguet",
+  "1477": "charles-joguet",
+  "1478": "charles-joguet",
+  "1479": "domaine-grosbois",
+  "1480": "domaine-grosbois",
+  "1481": "domaine-de-la-noblaie",
+  "1482": "david-sautereau",
+  "1483": "domaine-de-l-ecu",
+  "1484": "bruno-clavelier",
+  "1485": "claude-dugat",
+  "1486": "claude-dugat",
+  "1487": "claude-dugat",
+  "1488": "didier-fornerol",
+  "1489": "alex-moreau",
+  "1490": "domaine-arlaud",
+  "1491": "camille-thiriet",
+  "1492": "camille-thiriet",
+  "1493": "camille-thiriet",
+  "1494": "camille-thiriet",
+  "1495": "camille-thiriet",
+  "1496": "camille-thiriet",
+  "1497": "coche-dury",
+  "1498": "domaine-de-villaine",
+  "1499": "dugat-py",
+  "1500": "faiveley",
+  "1501": "faiveley",
+  "1502": "fourrier",
+  "1503": "fourrier",
+  "1504": "mugneret-gibourg",
+  "1505": "joseph-voillot",
+  "1506": "lucien-boillot",
+  "1507": "lucien-boillot",
+  "1508": "domaine-matrot",
+  "1509": "meo-camuzet",
+  "1510": "meo-camuzet",
+  "1511": "paul-pillot",
+  "1512": "domaine-ponsot",
+  "1513": "robert-chevillon",
+  "1514": "sylvie-esmonin",
+  "1515": "francois-lumpp",
+  "1516": "henri-gouges",
+  "1517": "hudelot-baillet",
+  "1518": "joseph-drouhin",
+  "1519": "de-montille",
+  "1520": "meo-camuzet",
+  "1521": "pierre-gelin",
+  "1522": "camille-giroud",
+  "1523": "charles-audoin",
+  "1524": "domaine-collotte",
+  "1525": "meo-camuzet",
+  "1526": "pierre-gelin",
+  "1527": "pierre-gelin",
+  "1528": "denis-mortet",
+  "1529": "meo-camuzet",
+  "1530": "meo-camuzet",
+  "1531": "pierre-gelin",
+  "1532": "mugneret-gibourg",
+  "1533": "faiveley",
+  "1534": "dugat-py",
+  "1535": "domaine-ponsot",
+  "1536": "faiveley",
+  "1537": "pierre-gelin",
+  "1538": "louis-jadot",
+  "1539": "dugat-py",
+  "1540": "dugat-py",
+  "1541": "dugat-py",
+  "1542": "dugat-py",
+  "1543": "dugat-py",
+  "1544": "claude-dugat",
+  "1545": "claude-dugat",
+  "1546": "domaine-dujac",
+  "1547": "faiveley",
+  "1548": "louis-jadot",
+  "1549": "maison-champy",
+  "1550": "camille-giroud",
+  "1551": "domaine-ponsot",
+  "1552": "domaine-trapet",
+  "1553": "domaine-trapet",
+  "1554": "domaine-trapet",
+  "1555": "louis-jadot",
+  "1556": "louis-jadot",
+  "1557": "taupenot-merme",
+  "1558": "dugat-py",
+  "1559": "dugat-py",
+  "1560": "dugat-py",
+  "1561": "domaine-ponsot",
+  "1562": "domaine-trapet",
+  "1563": "domaine-trapet",
+  "1564": "arnaud-mortet",
+  "1565": "bruno-clavelier",
+  "1566": "dugat-py",
+  "1567": "dugat-py",
+  "1568": "dugat-py",
+  "1569": "claude-dugat",
+  "1570": "claude-dugat",
+  "1571": "claude-dugat",
+  "1572": "claude-dugat",
+  "1573": "armand-rousseau",
+  "1574": "denis-mortet",
+  "1575": "denis-mortet",
+  "1576": "denis-mortet",
+  "1577": "denis-mortet",
+  "1578": "denis-mortet",
+  "1579": "denis-mortet",
+  "1580": "denis-mortet",
+  "1581": "denis-mortet",
+  "1582": "denis-mortet",
+  "1583": "denis-mortet",
+  "1584": "domaine-dujac",
+  "1585": "domaine-dujac",
+  "1586": "faiveley",
+  "1587": "faiveley",
+  "1588": "fourrier",
+  "1589": "fourrier",
+  "1590": "geantet-pansiot",
+  "1591": "domaine-trapet",
+  "1592": "gerard-raphet",
+  "1593": "gerard-raphet",
+  "1594": "louis-jadot",
+  "1595": "louis-jadot",
+  "1596": "louis-jadot",
+  "1597": "louis-jadot",
+  "1598": "olivier-bernstein",
+  "1599": "olivier-bernstein",
+  "1600": "serafin",
+  "1601": "serafin",
+  "1602": "sylvie-esmonin",
+  "1603": "sylvie-esmonin",
+  "1604": "albert-bichot",
+  "1605": "arnaud-mortet",
+  "1606": "dugat-py",
+  "1607": "dugat-py",
+  "1608": "dugat-py",
+  "1609": "dugat-py",
+  "1610": "dugat-py",
+  "1611": "dugat-py",
+  "1612": "dugat-py",
+  "1613": "dugat-py",
+  "1614": "dugat-py",
+  "1615": "dugat-py",
+  "1616": "dugat-py",
+  "1617": "claude-dugat",
+  "1618": "claude-dugat",
+  "1619": "claude-dugat",
+  "1620": "domaine-arlaud",
+  "1621": "denis-mortet",
+  "1622": "denis-mortet",
+  "1623": "denis-mortet",
+  "1624": "denis-mortet",
+  "1625": "denis-mortet",
+  "1626": "denis-mortet",
+  "1627": "denis-mortet",
+  "1628": "denis-mortet",
+  "1629": "dugat-py",
+  "1630": "dugat-py",
+  "1631": "dugat-py",
+  "1632": "fourrier",
+  "1633": "fourrier",
+  "1634": "geantet-pansiot",
+  "1635": "meo-camuzet",
+  "1636": "domaine-ponsot",
+  "1637": "serafin",
+  "1638": "serafin",
+  "1639": "gerard-raphet",
+  "1640": "hubert-lignier",
+  "1641": "jerome-galeyrand",
+  "1642": "laurent-ponsot",
+  "1643": "olivier-bernstein",
+  "1644": "sylvie-esmonin",
+  "1645": "domaine-dujac",
+  "1646": "domaine-dujac",
+  "1647": "domaine-dujac",
+  "1648": "domaine-dujac",
+  "1649": "domaine-dujac",
+  "1650": "domaine-ponsot",
+  "1651": "domaine-ponsot",
+  "1652": "hubert-lignier",
+  "1653": "hubert-lignier",
+  "1654": "domaine-arlaud",
+  "1655": "domaine-dujac",
+  "1656": "domaine-dujac",
+  "1657": "domaine-dujac",
+  "1658": "domaine-dujac",
+  "1659": "domaine-ponsot",
+  "1660": "louis-jadot",
+  "1661": "louis-jadot",
+  "1662": "louis-jadot",
+  "1663": "louis-jadot",
+  "1664": "louis-jadot",
+  "1665": "clos-des-lambrays",
+  "1666": "clos-des-lambrays",
+  "1667": "clos-des-lambrays",
+  "1668": "clos-des-lambrays",
+  "1669": "domaine-dujac",
+  "1670": "domaine-dujac",
+  "1671": "fourrier",
+  "1672": "georges-roumier",
+  "1673": "georges-roumier",
+  "1674": "georges-roumier",
+  "1675": "georges-roumier",
+  "1676": "domaine-dujac",
+  "1677": "hubert-lignier",
+  "1678": "hubert-lignier",
+  "1679": "serafin",
+  "1680": "aurelien-verdet",
+  "1681": "domaine-dujac",
+  "1682": "domaine-ponsot",
+  "1683": "domaine-dujac",
+  "1684": "frederic-magnien",
+  "1685": "gerard-raphet",
+  "1686": "hubert-lignier",
+  "1687": "louis-jadot",
+  "1688": "comte-georges-de-vogue",
+  "1689": "comte-georges-de-vogue",
+  "1690": "denis-mortet",
+  "1691": "denis-mortet",
+  "1692": "domaine-dujac",
+  "1693": "domaine-dujac",
+  "1694": "domaine-dujac",
+  "1695": "georges-roumier",
+  "1696": "georges-roumier",
+  "1697": "domaine-newman",
+  "1698": "domaine-saint-martin",
+  "1699": "jacques-frederic-mugnier",
+  "1700": "louis-jadot",
+  "1701": "louis-jadot",
+  "1702": "comte-georges-de-vogue",
+  "1703": "joseph-drouhin",
+  "1704": "louis-jadot",
+  "1705": "louis-jadot",
+  "1706": "bruno-clavelier",
+  "1707": "bruno-clavelier",
+  "1708": "bruno-clavelier",
+  "1709": "bruno-clavelier",
+  "1710": "denis-mortet",
+  "1711": "anne-gros",
+  "1712": "anne-gros",
+  "1713": "anne-gros",
+  "1714": "comte-georges-de-vogue",
+  "1715": "comte-georges-de-vogue",
+  "1716": "domaine-dujac",
+  "1717": "domaine-dujac",
+  "1718": "domaine-dujac",
+  "1719": "domaine-dujac",
+  "1720": "mugneret-gibourg",
+  "1721": "mugneret-gibourg",
+  "1722": "mugneret-gibourg",
+  "1723": "joseph-drouhin",
+  "1724": "michel-magnien",
+  "1725": "serafin",
+  "1726": "francois-bertheau",
+  "1727": "hubert-lignier",
+  "1728": "hubert-lignier",
+  "1729": "hubert-lignier",
+  "1730": "louis-jadot",
+  "1731": "louis-jadot",
+  "1732": "louis-jadot",
+  "1733": "domaine-af-gros",
+  "1734": "domaine-dujac",
+  "1735": "faiveley",
+  "1736": "faiveley",
+  "1737": "georges-roumier",
+  "1738": "georges-roumier",
+  "1739": "louis-jadot",
+  "1740": "meo-camuzet",
+  "1741": "domaine-dujac",
+  "1742": "geantet-pansiot",
+  "1743": "gerard-raphet",
+  "1744": "hudelot-baillet",
+  "1745": "remoissenet",
+  "1746": "fourrier",
+  "1747": "anne-gros",
+  "1748": "anne-gros",
+  "1749": "anne-gros",
+  "1750": "anne-gros",
+  "1751": "anne-gros",
+  "1752": "denis-mortet",
+  "1753": "denis-mortet",
+  "1754": "denis-mortet",
+  "1755": "denis-mortet",
+  "1756": "denis-mortet",
+  "1757": "denis-mortet",
+  "1758": "denis-mortet",
+  "1759": "genot-boulanger",
+  "1760": "gerard-raphet",
+  "1761": "gerard-raphet",
+  "1762": "gerard-raphet",
+  "1763": "gerard-raphet",
+  "1764": "jean-grivot",
+  "1765": "jean-grivot",
+  "1766": "jean-grivot",
+  "1767": "jean-grivot",
+  "1768": "jean-grivot",
+  "1769": "meo-camuzet",
+  "1770": "meo-camuzet",
+  "1771": "meo-camuzet",
+  "1772": "meo-camuzet",
+  "1773": "mugneret-gibourg",
+  "1774": "mugneret-gibourg",
+  "1775": "domaine-ponsot",
+  "1776": "frederic-magnien",
+  "1777": "gros-frere-et-soeur",
+  "1778": "louis-jadot",
+  "1779": "louis-jadot",
+  "1780": "remoissenet",
+  "1781": "remoissenet",
+  "1782": "remoissenet",
+  "1783": "remoissenet",
+  "1784": "remoissenet",
+  "1785": "remoissenet",
+  "1786": "remoissenet",
+  "1787": "remoissenet",
+  "1788": "anne-gros",
+  "1789": "anne-gros",
+  "1790": "anne-gros",
+  "1791": "domaine-dujac",
+  "1792": "jean-grivot",
+  "1793": "jean-grivot",
+  "1794": "mongeard-mugneret",
+  "1795": "mugneret-gibourg",
+  "1796": "domaine-de-la-romanee-conti",
+  "1797": "domaine-de-la-romanee-conti",
+  "1798": "domaine-de-la-romanee-conti",
+  "1799": "domaine-de-la-romanee-conti",
+  "1800": "domaine-de-la-romanee-conti",
+  "1801": "domaine-de-la-romanee-conti",
+  "1802": "domaine-de-la-romanee-conti",
+  "1803": "domaine-de-la-romanee-conti",
+  "1804": "maison-champy",
+  "1805": "domaine-de-la-romanee-conti",
+  "1806": "domaine-de-la-romanee-conti",
+  "1807": "domaine-de-la-romanee-conti",
+  "1808": "domaine-de-la-romanee-conti",
+  "1809": "domaine-de-la-romanee-conti",
+  "1810": "domaine-de-la-romanee-conti",
+  "1811": "domaine-de-la-romanee-conti",
+  "1812": "domaine-de-la-romanee-conti",
+  "1813": "domaine-de-la-romanee-conti",
+  "1814": "louis-jadot",
+  "1815": "louis-jadot",
+  "1816": "anne-gros",
+  "1817": "anne-gros",
+  "1818": "anne-gros",
+  "1819": "jean-grivot",
+  "1820": "jean-grivot",
+  "1821": "jean-grivot",
+  "1822": "mongeard-mugneret",
+  "1823": "domaine-de-la-romanee-conti",
+  "1824": "domaine-de-la-romanee-conti",
+  "1825": "domaine-de-la-romanee-conti",
+  "1826": "domaine-de-la-romanee-conti",
+  "1827": "domaine-de-la-romanee-conti",
+  "1828": "domaine-de-la-romanee-conti",
+  "1829": "domaine-de-la-romanee-conti",
+  "1830": "domaine-de-la-romanee-conti",
+  "1831": "domaine-de-la-romanee-conti",
+  "1832": "domaine-de-la-romanee-conti",
+  "1833": "remoissenet",
+  "1834": "remoissenet",
+  "1835": "remoissenet",
+  "1836": "remoissenet",
+  "1837": "remoissenet",
+  "1838": "nicolas-potel",
+  "1839": "domaine-de-la-romanee-conti",
+  "1840": "domaine-de-la-romanee-conti",
+  "1841": "domaine-de-la-romanee-conti",
+  "1842": "domaine-de-la-romanee-conti",
+  "1843": "domaine-de-la-romanee-conti",
+  "1844": "domaine-de-la-romanee-conti",
+  "1845": "domaine-de-la-romanee-conti",
+  "1846": "domaine-de-la-romanee-conti",
+  "1847": "domaine-de-la-romanee-conti",
+  "1848": "domaine-de-la-romanee-conti",
+  "1849": "domaine-de-la-romanee-conti",
+  "1850": "domaine-de-la-romanee-conti",
+  "1851": "domaine-de-la-romanee-conti",
+  "1852": "domaine-de-la-romanee-conti",
+  "1853": "domaine-de-la-romanee-conti",
+  "1854": "domaine-de-la-romanee-conti",
+  "1855": "domaine-de-la-romanee-conti",
+  "1856": "domaine-de-la-romanee-conti",
+  "1857": "domaine-de-la-romanee-conti",
+  "1858": "domaine-de-la-romanee-conti",
+  "1859": "domaine-de-la-romanee-conti",
+  "1860": "domaine-de-la-romanee-conti",
+  "1861": "domaine-de-la-romanee-conti",
+  "1862": "domaine-de-la-romanee-conti",
+  "1863": "domaine-de-la-romanee-conti",
+  "1864": "domaine-de-la-romanee-conti",
+  "1865": "domaine-de-la-romanee-conti",
+  "1866": "domaine-de-la-romanee-conti",
+  "1867": "domaine-de-la-romanee-conti",
+  "1868": "domaine-de-la-romanee-conti",
+  "1869": "domaine-de-la-romanee-conti",
+  "1870": "bruno-clavelier",
+  "1871": "bruno-clavelier",
+  "1872": "bruno-clavelier",
+  "1873": "bruno-clavelier",
+  "1874": "domaine-dujac",
+  "1875": "domaine-dujac",
+  "1876": "domaine-dujac",
+  "1877": "domaine-dujac",
+  "1878": "domaine-dujac",
+  "1879": "domaine-dujac",
+  "1880": "domaine-dujac",
+  "1881": "domaine-d-eugenie",
+  "1882": "jean-grivot",
+  "1883": "jean-grivot",
+  "1884": "meo-camuzet",
+  "1885": "meo-camuzet",
+  "1886": "meo-camuzet",
+  "1887": "meo-camuzet",
+  "1888": "mongeard-mugneret",
+  "1889": "mongeard-mugneret",
+  "1890": "louis-jadot",
+  "1891": "albert-bichot",
+  "1892": "dugat-py",
+  "1893": "dugat-py",
+  "1894": "dugat-py",
+  "1895": "bouchard-pere-et-fils",
+  "1896": "bruno-clavelier",
+  "1897": "bruno-clavelier",
+  "1898": "bruno-clavelier",
+  "1899": "bruno-clavelier",
+  "1900": "bruno-clavelier",
+  "1901": "bruno-clavelier",
+  "1902": "dugat-py",
+  "1903": "faiveley",
+  "1904": "gros-frere-et-soeur",
+  "1905": "jean-grivot",
+  "1906": "jean-grivot",
+  "1907": "jean-grivot",
+  "1908": "jean-grivot",
+  "1909": "michel-magnien",
+  "1910": "mugneret-gibourg",
+  "1911": "mugneret-gibourg",
+  "1912": "mugneret-gibourg",
+  "1913": "mugneret-gibourg",
+  "1914": "joseph-drouhin",
+  "1915": "louis-jadot",
+  "1916": "albert-bichot",
+  "1917": "antonin-rodet",
+  "1918": "henri-gouges",
+  "1919": "henri-gouges",
+  "1920": "henri-gouges",
+  "1921": "henri-gouges",
+  "1922": "henri-gouges",
+  "1923": "henri-gouges",
+  "1924": "henri-gouges",
+  "1925": "jean-grivot",
+  "1926": "jean-grivot",
+  "1927": "jean-grivot",
+  "1928": "jean-grivot",
+  "1929": "mugneret-gibourg",
+  "1930": "mugneret-gibourg",
+  "1931": "robert-chevillon",
+  "1932": "robert-chevillon",
+  "1933": "robert-chevillon",
+  "1934": "robert-chevillon",
+  "1935": "robert-chevillon",
+  "1936": "robert-chevillon",
+  "1937": "robert-chevillon",
+  "1938": "domaine-de-la-vougeraie",
+  "1939": "lucien-boillot",
+  "1940": "thibault-liger-belair",
+  "1941": "david-duband",
+  "1942": "daniel-rion",
+  "1943": "faiveley",
+  "1944": "henri-gouges",
+  "1945": "henri-gouges",
+  "1946": "jean-grivot",
+  "1947": "jean-grivot",
+  "1948": "jean-grivot",
+  "1949": "jean-grivot",
+  "1950": "jean-grivot",
+  "1951": "jean-grivot",
+  "1952": "meo-camuzet",
+  "1953": "mongeard-mugneret",
+  "1954": "robert-chevillon",
+  "1955": "robert-chevillon",
+  "1956": "jean-chauvenet",
+  "1957": "marchand-tawse",
+  "1958": "louis-jadot",
+  "1959": "dubreuil-fontaine",
+  "1960": "ramonet",
+  "1961": "dugat-py",
+  "1962": "faiveley",
+  "1963": "genot-boulanger",
+  "1964": "meo-camuzet",
+  "1965": "meo-camuzet",
+  "1966": "domaine-ponsot",
+  "1967": "domaine-ponsot",
+  "1968": "tollot-beaut",
+  "1969": "tollot-beaut",
+  "1970": "tollot-beaut",
+  "1971": "dubreuil-fontaine",
+  "1972": "dubreuil-fontaine",
+  "1973": "dubreuil-fontaine",
+  "1974": "dubreuil-fontaine",
+  "1975": "louis-jadot",
+  "1976": "louis-jadot",
+  "1977": "louis-jadot",
+  "1978": "louis-jadot",
+  "1979": "louis-jadot",
+  "1980": "louis-jadot",
+  "1981": "bouchard-pere-et-fils",
+  "1982": "bruno-clair",
+  "1983": "louis-jadot",
+  "1984": "mongeard-mugneret",
+  "1985": "marchand-tawse",
+  "1986": "marchand-tawse",
+  "1987": "tollot-beaut",
+  "1988": "geantet-pansiot",
+  "1989": "albert-bichot",
+  "1990": "domaine-serrigny",
+  "1991": "albert-bichot",
+  "1992": "bouchard-pere-et-fils",
+  "1993": "bouchard-pere-et-fils",
+  "1994": "faiveley",
+  "1995": "jean-marc-pavelot",
+  "1996": "joseph-drouhin",
+  "1997": "joseph-drouhin",
+  "1998": "joseph-drouhin",
+  "1999": "joseph-drouhin",
+  "2000": "domaine-labet-beaune",
+  "2001": "de-montille",
+  "2002": "tollot-beaut",
+  "2003": "joseph-drouhin",
+  "2004": "kalin-cellars",
+  "2005": "louis-jadot",
+  "2006": "maison-leroy",
+  "2007": "nicolas-potel",
+  "2008": "tollot-beaut",
+  "2009": "albert-bichot",
+  "2010": "vincent-girardin",
+  "2011": "kalin-cellars",
+  "2012": "albert-bichot",
+  "2013": "billard-gonnet",
+  "2014": "coche-dury",
+  "2015": "domaine-de-courcel",
+  "2016": "domaine-de-courcel",
+  "2017": "domaine-de-courcel",
+  "2018": "domaine-de-courcel",
+  "2019": "domaine-de-courcel",
+  "2020": "domaine-de-courcel",
+  "2021": "domaine-de-courcel",
+  "2022": "domaine-de-courcel",
+  "2023": "domaine-de-courcel",
+  "2024": "dubreuil-fontaine",
+  "2025": "genot-boulanger",
+  "2026": "jean-michel-gaunoux",
+  "2027": "lucien-boillot",
+  "2028": "lucien-boillot",
+  "2029": "monthelie-douhairet-porcheret",
+  "2030": "monthelie-douhairet-porcheret",
+  "2031": "monthelie-douhairet-porcheret",
+  "2032": "monthelie-douhairet-porcheret",
+  "2033": "de-montille",
+  "2034": "pierre-andre",
+  "2035": "pierre-morey",
+  "2036": "pousse-d-or",
+  "2037": "louis-jadot",
+  "2038": "louis-jadot",
+  "2039": "louis-jadot",
+  "2040": "louis-jadot",
+  "2041": "antoine-jobard",
+  "2042": "domaine-de-courcel",
+  "2043": "jacques-girardin",
+  "2044": "justin-girardin",
+  "2045": "louis-jadot",
+  "2046": "lucien-boillot",
+  "2047": "dugat-py",
+  "2048": "dugat-py",
+  "2049": "dugat-py",
+  "2050": "dugat-py",
+  "2051": "francois-mikulski",
+  "2052": "lequin-colin",
+  "2053": "meo-camuzet",
+  "2054": "albert-bichot",
+  "2055": "antonin-guyon",
+  "2056": "bitouzet-prieur",
+  "2057": "coche-dury",
+  "2058": "coche-dury",
+  "2059": "comtes-lafon",
+  "2060": "faiveley",
+  "2061": "faiveley",
+  "2062": "jean-marie-bouzereau",
+  "2063": "louis-jadot",
+  "2064": "monthelie-douhairet-porcheret",
+  "2065": "monthelie-douhairet-porcheret",
+  "2066": "lucien-boillot",
+  "2067": "pousse-d-or",
+  "2068": "pousse-d-or",
+  "2069": "pousse-d-or",
+  "2070": "pousse-d-or",
+  "2071": "pousse-d-or",
+  "2072": "pousse-d-or",
+  "2073": "pousse-d-or",
+  "2074": "pousse-d-or",
+  "2075": "marchand-tawse",
+  "2076": "marchand-tawse",
+  "2077": "marquis-d-angerville",
+  "2078": "marquis-d-angerville",
+  "2079": "marquis-d-angerville",
+  "2080": "marquis-d-angerville",
+  "2081": "marquis-d-angerville",
+  "2082": "marquis-d-angerville",
+  "2083": "marquis-d-angerville",
+  "2084": "marquis-d-angerville",
+  "2085": "marquis-d-angerville",
+  "2086": "marquis-d-angerville",
+  "2087": "marquis-d-angerville",
+  "2088": "marquis-d-angerville",
+  "2089": "marquis-d-angerville",
+  "2090": "marquis-d-angerville",
+  "2091": "marquis-d-angerville",
+  "2092": "marquis-d-angerville",
+  "2093": "michel-lafarge",
+  "2094": "michel-lafarge",
+  "2095": "remoissenet",
+  "2096": "remoissenet",
+  "2097": "albert-ponnelle",
+  "2098": "antoine-jobard",
+  "2099": "joseph-voillot",
+  "2100": "lucien-boillot",
+  "2101": "roblet-monnot",
+  "2102": "roblet-monnot",
+  "2103": "roblet-monnot",
+  "2104": "maison-champy",
+  "2105": "bouchard-pere-et-fils",
+  "2106": "coche-dury",
+  "2107": "berthelemot",
+  "2108": "domaine-roulot",
+  "2109": "domaine-roulot",
+  "2110": "louis-jadot",
+  "2111": "louis-jadot",
+  "2112": "paul-garaudet",
+  "2113": "henri-prudhon",
+  "2114": "henri-prudhon",
+  "2115": "domaine-matrot",
+  "2116": "blain-gagnard",
+  "2117": "domaine-larue",
+  "2118": "domaine-larue",
+  "2119": "paul-pillot",
+  "2120": "paul-pillot",
+  "2121": "paul-pillot",
+  "2122": "ramonet",
+  "2123": "ramonet",
+  "2124": "ramonet",
+  "2125": "albert-bichot",
+  "2126": "albert-bichot",
+  "2127": "chateau-de-la-maltroye",
+  "2128": "alex-moreau",
+  "2129": "bernard-moreau",
+  "2130": "blain-gagnard",
+  "2131": "paul-pillot",
+  "2132": "paul-pillot",
+  "2133": "paul-pillot",
+  "2134": "ramonet",
+  "2135": "ramonet",
+  "2136": "bruno-colin",
+  "2137": "hubert-lamy",
+  "2138": "jacques-girardin",
+  "2139": "louis-jadot",
+  "2140": "paul-pillot",
+  "2141": "paul-pillot",
+  "2142": "paul-pillot",
+  "2143": "regnaudot",
+  "2144": "regnaudot",
+  "2145": "domaine-matrot",
+  "2146": "vincent-et-sophie-morey",
+  "2147": "regnaudot",
+  "2148": "albert-bichot",
+  "2149": "coche-dury",
+  "2150": "comtesse-de-cherisey",
+  "2151": "genot-boulanger",
+  "2152": "domaine-larue",
+  "2153": "mongeard-mugneret",
+  "2154": "tollot-beaut",
+  "2155": "tollot-beaut",
+  "2156": "tollot-beaut",
+  "2157": "tollot-beaut",
+  "2158": "tollot-beaut",
+  "2159": "tollot-beaut",
+  "2160": "domaine-dubois",
+  "2161": "dureuil-janthial",
+  "2162": "julien-cruchandeau",
+  "2163": "julien-cruchandeau",
+  "2164": "domaine-de-villaine",
+  "2165": "domaine-de-villaine",
+  "2166": "domaine-de-villaine",
+  "2167": "albert-bichot",
+  "2168": "faiveley",
+  "2169": "faiveley",
+  "2170": "faiveley",
+  "2171": "moillard-grivot",
+  "2172": "alex-foillard",
+  "2173": "chateau-des-jacques",
+  "2174": "chateau-des-jacques",
+  "2175": "daniel-bouland",
+  "2176": "domaine-coudert",
+  "2177": "domaine-coudert",
+  "2178": "jean-paul-thevenet",
+  "2179": "guy-breton",
+  "2180": "guy-breton",
+  "2181": "jean-foillard",
+  "2182": "jean-foillard",
+  "2183": "jean-foillard",
+  "2184": "jean-foillard",
+  "2185": "jean-foillard",
+  "2186": "jean-foillard",
+  "2187": "jean-foillard",
+  "2188": "jean-foillard",
+  "2189": "jean-foillard",
+  "2190": "jean-claude-lapalu",
+  "2191": "jules-desjourneys",
+  "2192": "la-soeur-cadette",
+  "2193": "louis-jadot",
+  "2194": "louis-jadot",
+  "2195": "marc-delienne",
+  "2196": "marcel-lapierre",
+  "2197": "marcel-lapierre",
+  "2198": "marcel-lapierre",
+  "2199": "paul-janin",
+  "2200": "chateau-calon-segur",
+  "2201": "chateau-calon-segur",
+  "2202": "chateau-calon-segur",
+  "2203": "chateau-calon-segur",
+  "2204": "chateau-calon-segur",
+  "2205": "chateau-calon-segur",
+  "2206": "chateau-calon-segur",
+  "2207": "chateau-cos-labory",
+  "2208": "chateau-cos-d-estournel",
+  "2209": "chateau-cos-d-estournel",
+  "2210": "chateau-cos-d-estournel",
+  "2211": "chateau-cos-d-estournel",
+  "2212": "chateau-cos-d-estournel",
+  "2213": "chateau-cos-d-estournel",
+  "2214": "chateau-cos-d-estournel",
+  "2215": "chateau-cos-d-estournel",
+  "2216": "chateau-cos-d-estournel",
+  "2217": "chateau-cos-d-estournel",
+  "2218": "chateau-cos-d-estournel",
+  "2219": "chateau-cos-d-estournel",
+  "2220": "chateau-cos-d-estournel",
+  "2221": "chateau-montrose",
+  "2222": "chateau-montrose",
+  "2223": "chateau-montrose",
+  "2224": "chateau-meyney",
+  "2225": "chateau-grand-puy-lacoste",
+  "2226": "chateau-grand-puy-lacoste",
+  "2227": "chateau-grand-puy-lacoste",
+  "2228": "chateau-grand-puy-lacoste",
+  "2229": "chateau-grand-puy-lacoste",
+  "2230": "chateau-grand-puy-lacoste",
+  "2231": "chateau-haut-bages-liberal",
+  "2232": "chateau-lafite-rothschild",
+  "2233": "chateau-lafite-rothschild",
+  "2234": "chateau-lafite-rothschild",
+  "2235": "chateau-lafite-rothschild",
+  "2236": "chateau-lafite-rothschild",
+  "2237": "chateau-lafite-rothschild",
+  "2238": "chateau-lafite-rothschild",
+  "2239": "chateau-lafite-rothschild",
+  "2240": "chateau-lafite-rothschild",
+  "2241": "chateau-lafite-rothschild",
+  "2242": "chateau-lafite-rothschild",
+  "2243": "chateau-lafite-rothschild",
+  "2244": "chateau-lafite-rothschild",
+  "2245": "chateau-lafite-rothschild",
+  "2246": "chateau-lafite-rothschild",
+  "2247": "chateau-lafite-rothschild",
+  "2248": "chateau-lafite-rothschild",
+  "2249": "chateau-latour",
+  "2250": "chateau-latour",
+  "2251": "chateau-latour",
+  "2252": "chateau-latour",
+  "2253": "chateau-latour",
+  "2254": "chateau-latour",
+  "2255": "chateau-latour",
+  "2256": "chateau-lynch-bages",
+  "2257": "chateau-lynch-bages",
+  "2258": "chateau-duhart-milon",
+  "2259": "chateau-mouton-rothschild",
+  "2260": "chateau-mouton-rothschild",
+  "2261": "chateau-mouton-rothschild",
+  "2262": "chateau-mouton-rothschild",
+  "2263": "chateau-mouton-rothschild",
+  "2264": "chateau-mouton-rothschild",
+  "2265": "chateau-mouton-rothschild",
+  "2266": "chateau-mouton-rothschild",
+  "2267": "chateau-mouton-rothschild",
+  "2268": "chateau-mouton-rothschild",
+  "2269": "chateau-mouton-rothschild",
+  "2270": "chateau-mouton-rothschild",
+  "2271": "chateau-mouton-rothschild",
+  "2272": "chateau-mouton-rothschild",
+  "2273": "chateau-mouton-rothschild",
+  "2274": "chateau-mouton-rothschild",
+  "2275": "chateau-mouton-rothschild",
+  "2276": "chateau-mouton-rothschild",
+  "2277": "chateau-pichon-lalande",
+  "2278": "chateau-pichon-lalande",
+  "2279": "chateau-pichon-lalande",
+  "2280": "chateau-pichon-lalande",
+  "2281": "chateau-pichon-lalande",
+  "2282": "chateau-pichon-lalande",
+  "2283": "chateau-pichon-lalande",
+  "2284": "chateau-pedesclaux",
+  "2285": "chateau-pontet-canet",
+  "2286": "chateau-pontet-canet",
+  "2287": "chateau-pontet-canet",
+  "2288": "chateau-pontet-canet",
+  "2289": "chateau-pontet-canet",
+  "2290": "chateau-pontet-canet",
+  "2291": "chateau-pontet-canet",
+  "2292": "chateau-pontet-canet",
+  "2293": "chateau-pontet-canet",
+  "2294": "domaines-barons-de-rothschild",
+  "2295": "chateau-ducru-beaucaillou",
+  "2296": "chateau-ducru-beaucaillou",
+  "2297": "chateau-ducru-beaucaillou",
+  "2298": "chateau-gruaud-larose",
+  "2299": "chateau-lalande",
+  "2300": "chateau-lalande-borie",
+  "2301": "chateau-leoville-las-cases",
+  "2302": "chateau-leoville-las-cases",
+  "2303": "chateau-leoville-las-cases",
+  "2304": "chateau-leoville-las-cases",
+  "2305": "chateau-leoville-las-cases",
+  "2306": "chateau-leoville-las-cases",
+  "2307": "chateau-leoville-las-cases",
+  "2308": "chateau-leoville-las-cases",
+  "2309": "chateau-leoville-las-cases",
+  "2310": "chateau-leoville-poyferre",
+  "2311": "chateau-leoville-poyferre",
+  "2312": "chateau-leoville-poyferre",
+  "2313": "chateau-leoville-poyferre",
+  "2314": "chateau-leoville-poyferre",
+  "2315": "chateau-talbot",
+  "2316": "chateau-talbot",
+  "2317": "chateau-cantenac-brown",
+  "2318": "chateau-cantenac-brown",
+  "2319": "chateau-cantenac-brown",
+  "2320": "chateau-des-eyrins",
+  "2321": "chateau-giscours",
+  "2322": "chateau-giscours",
+  "2323": "chateau-giscours",
+  "2324": "chateau-cordet",
+  "2325": "chateau-margaux",
+  "2326": "chateau-margaux",
+  "2327": "chateau-margaux",
+  "2328": "chateau-margaux",
+  "2329": "chateau-margaux",
+  "2330": "chateau-margaux",
+  "2331": "chateau-margaux",
+  "2332": "chateau-margaux",
+  "2333": "chateau-margaux",
+  "2334": "chateau-margaux",
+  "2335": "chateau-margaux",
+  "2336": "chateau-margaux",
+  "2337": "chateau-margaux",
+  "2338": "chateau-marquis-d-alesme",
+  "2339": "chateau-palmer",
+  "2340": "chateau-palmer",
+  "2341": "chateau-palmer",
+  "2342": "chateau-palmer",
+  "2343": "chateau-palmer",
+  "2344": "chateau-palmer",
+  "2345": "chateau-palmer",
+  "2346": "chateau-palmer",
+  "2347": "chateau-palmer",
+  "2348": "chateau-palmer",
+  "2349": "chateau-palmer",
+  "2350": "chateau-palmer",
+  "2351": "chateau-palmer",
+  "2352": "chateau-rauzan-segla",
+  "2353": "chateau-des-eyrins",
+  "2354": "chateau-margaux",
+  "2355": "chateau-rauzan-segla",
+  "2356": "chateau-haut-brion",
+  "2357": "chateau-haut-brion",
+  "2358": "chateau-haut-brion",
+  "2359": "chateau-haut-brion",
+  "2360": "chateau-haut-brion",
+  "2361": "chateau-haut-brion",
+  "2362": "chateau-haut-brion",
+  "2363": "chateau-haut-brion",
+  "2364": "chateau-haut-brion",
+  "2365": "chateau-haut-brion",
+  "2366": "chateau-haut-brion",
+  "2367": "chateau-la-mission-haut-brion",
+  "2368": "chateau-la-mission-haut-brion",
+  "2369": "chateau-la-mission-haut-brion",
+  "2370": "chateau-la-mission-haut-brion",
+  "2371": "chateau-pape-clement",
+  "2372": "chateau-la-tour-haut-brion",
+  "2373": "chateau-belle-brise",
+  "2374": "chateau-bellegrave",
+  "2375": "chateau-clinet",
+  "2376": "chateau-clinet",
+  "2377": "chateau-gombaude-guillot",
+  "2378": "chateau-gombaude-guillot",
+  "2379": "chateau-gombaude-guillot",
+  "2380": "chateau-gombaude-guillot",
+  "2381": "chateau-gombaude-guillot",
+  "2382": "chateau-gombaude-guillot",
+  "2383": "chateau-lafleur",
+  "2384": "chateau-lafleur",
+  "2385": "chateau-lafleur",
+  "2386": "chateau-lafleur",
+  "2387": "chateau-la-fleur-petrus",
+  "2388": "chateau-la-fleur-petrus",
+  "2389": "chateau-la-fleur-petrus",
+  "2390": "chateau-l-eglise-clinet",
+  "2391": "chateau-l-eglise-clinet",
+  "2392": "chateau-l-evangile",
+  "2393": "chateau-l-evangile",
+  "2394": "chateau-l-evangile",
+  "2395": "chateau-l-evangile",
+  "2396": "chateau-l-evangile",
+  "2397": "chateau-l-evangile",
+  "2398": "chateau-trotanoy",
+  "2399": "vieux-chateau-certan",
+  "2400": "clos-l-eglise",
+  "2401": "clos-l-eglise",
+  "2402": "petrus",
+  "2403": "petrus",
+  "2404": "chateau-armens",
+  "2405": "chateau-l-arrosee",
+  "2406": "chateau-beau-sejour-becot",
+  "2407": "chateau-beau-sejour-becot",
+  "2408": "chateau-canon",
+  "2409": "chateau-canon",
+  "2410": "chateau-canon",
+  "2411": "chateau-cheval-blanc",
+  "2412": "chateau-cheval-blanc",
+  "2413": "chateau-cheval-blanc",
+  "2414": "chateau-cheval-blanc",
+  "2415": "chateau-cheval-blanc",
+  "2416": "chateau-cheval-blanc",
+  "2417": "chateau-cheval-blanc",
+  "2418": "chateau-cheval-blanc",
+  "2419": "chateau-cheval-blanc",
+  "2420": "chateau-cheval-blanc",
+  "2421": "chateau-figeac",
+  "2422": "chateau-figeac",
+  "2423": "chateau-figeac",
+  "2424": "chateau-figeac",
+  "2425": "chateau-figeac",
+  "2426": "chateau-figeac",
+  "2427": "chateau-pavie",
+  "2428": "chateau-tertre-de-la-mouleyre",
+  "2429": "chateau-troplong-mondot",
+  "2430": "chateau-troplong-mondot",
+  "2431": "chateau-cheval-blanc",
+  "2432": "chateau-lassegue",
+  "2433": "chateau-vieux-taillefer",
+  "2434": "tertre-roteboeuf",
+  "2435": "chateau-bernon-becot",
+  "2436": "chateau-chasse-spleen",
+  "2437": "chateau-chasse-spleen",
+  "2438": "chateau-clarke",
+  "2439": "chateau-de-camensac",
+  "2440": "chateau-la-lagune",
+  "2441": "chateau-la-tour-carnet",
+  "2442": "chateau-la-vieille-forge",
+  "2443": "chateau-les-grands-chenes",
+  "2444": "chateau-sociando-mallet",
+  "2445": "chateau-sociando-mallet",
+  "2446": "chateau-sociando-mallet",
+  "2447": "chateau-sociando-mallet",
+  "2448": "chateau-sociando-mallet",
+  "2449": "chateau-sociando-mallet",
+  "2450": "chateau-sociando-mallet",
+  "2451": "chateau-sociando-mallet",
+  "2452": "chateau-sociando-mallet",
+  "2453": "chateau-sociando-mallet",
+  "2454": "chateau-sociando-mallet",
+  "2455": "clos-manou",
+  "2456": "clos-manou",
+  "2457": "clos-sainte-anne",
+  "2458": "domaine-de-l-aurage",
+  "2459": "domaine-de-l-aurage",
+  "2460": "domaine-de-l-aurage",
+  "2473": "barruol-lynch",
+  "2474": "domaine-duclaux",
+  "2475": "clusel-roch",
+  "2476": "clusel-roch",
+  "2477": "clusel-roch",
+  "2478": "clusel-roch",
+  "2479": "georges-vernay",
+  "2480": "georges-vernay",
+  "2481": "jean-michel-stephan",
+  "2482": "jean-michel-stephan",
+  "2483": "guigal",
+  "2484": "guigal",
+  "2485": "guigal",
+  "2486": "guigal",
+  "2487": "guigal",
+  "2488": "guigal",
+  "2489": "guigal",
+  "2490": "guigal",
+  "2491": "guigal",
+  "2492": "guigal",
+  "2493": "guigal",
+  "2494": "guigal",
+  "2495": "guigal",
+  "2496": "guigal",
+  "2497": "guigal",
+  "2498": "domaine-jamet",
+  "2499": "domaine-jamet",
+  "2500": "domaine-jamet",
+  "2501": "lionel-faury",
+  "2502": "rene-rostaing",
+  "2503": "rene-rostaing",
+  "2504": "rene-rostaing",
+  "2505": "rene-rostaing",
+  "2506": "rene-rostaing",
+  "2507": "rene-rostaing",
+  "2508": "rene-rostaing",
+  "2509": "rene-rostaing",
+  "2510": "rene-rostaing",
+  "2511": "rene-rostaing",
+  "2512": "rene-rostaing",
+  "2513": "rene-rostaing",
+  "2514": "rene-rostaing",
+  "2515": "rene-rostaing",
+  "2516": "rene-rostaing",
+  "2517": "andre-perret",
+  "2518": "andre-perret",
+  "2519": "delas-freres",
+  "2520": "georges-vernay",
+  "2521": "les-alexandrins",
+  "2522": "guigal",
+  "2523": "pierre-gonon",
+  "2524": "bernard-faurie",
+  "2525": "domaine-de-la-chapelle",
+  "2526": "jean-louis-chave",
+  "2527": "jean-louis-chave",
+  "2528": "guigal",
+  "2529": "guigal",
+  "2530": "paul-jaboulet-aine",
+  "2531": "paul-jaboulet-aine",
+  "2532": "alain-graillot",
+  "2533": "dard-et-ribo",
+  "2534": "dard-et-ribo",
+  "2535": "etienne-becheras",
+  "2536": "guigal",
+  "2537": "laurent-combier",
+  "2538": "auguste-clape",
+  "2539": "auguste-clape",
+  "2540": "auguste-clape",
+  "2541": "auguste-clape",
+  "2542": "auguste-clape",
+  "2543": "auguste-clape",
+  "2544": "domaine-du-coulet",
+  "2545": "ferraton",
+  "2546": "guillaume-gilles",
+  "2547": "thierry-allemand",
+  "2548": "thierry-allemand",
+  "2549": "thierry-allemand",
+  "2550": "thierry-allemand",
+  "2551": "thierry-allemand",
+  "2552": "thierry-allemand",
+  "2553": "thierry-allemand",
+  "2554": "thierry-allemand",
+  "2555": "thierry-allemand",
+  "2556": "chapelle-st-theodoric",
+  "2557": "chateau-de-beaucastel",
+  "2558": "chateau-de-beaucastel",
+  "2559": "chateau-de-beaucastel",
+  "2560": "chateau-de-beaucastel",
+  "2561": "chateau-de-beaucastel",
+  "2562": "chateau-la-nerthe",
+  "2563": "chateau-rayas",
+  "2564": "chateau-saint-cosme",
+  "2565": "delas-freres",
+  "2566": "domaine-de-beaurenard",
+  "2567": "domaine-de-beaurenard",
+  "2568": "domaine-de-beaurenard",
+  "2569": "domaine-charvin",
+  "2570": "clos-du-caillou",
+  "2571": "domaine-de-la-charbonniere",
+  "2572": "domaine-de-marcoux",
+  "2573": "chateau-rayas",
+  "2574": "chateau-rayas",
+  "2575": "chateau-rayas",
+  "2576": "clos-saint-jean",
+  "2577": "clos-saint-jean",
+  "2578": "domaine-de-ferrand",
+  "2579": "vieille-julienne",
+  "2580": "vieille-julienne",
+  "2581": "domaine-du-pegau",
+  "2582": "domaine-du-pegau",
+  "2583": "domaine-du-pegau",
+  "2584": "domaine-du-pegau",
+  "2585": "domaine-du-pegau",
+  "2586": "domaine-du-pegau",
+  "2587": "vieux-telegraphe",
+  "2588": "vieux-telegraphe",
+  "2589": "vieux-telegraphe",
+  "2590": "vieux-telegraphe",
+  "2591": "vieux-telegraphe",
+  "2592": "raymond-usseglio",
+  "2593": "raymond-usseglio",
+  "2594": "isabel-ferrando",
+  "2595": "auguste-clape",
+  "2596": "auguste-clape",
+  "2597": "auguste-clape",
+  "2598": "chateau-des-tours",
+  "2599": "chateau-des-tours",
+  "2600": "chateau-rayas",
+  "2601": "domaine-du-pegau",
+  "2602": "chateau-rayas",
+  "2603": "chateau-rayas",
+  "2604": "chateau-saint-cosme",
+  "2605": "chateau-de-beaucastel",
+  "2606": "domaine-de-la-charbonniere",
+  "2607": "domaine-de-durban",
+  "2608": "domaine-jamet",
+  "2609": "raspail-ay",
+  "2610": "raspail-ay",
+  "2611": "chateau-des-tours",
+  "2612": "chateau-des-tours",
+  "2613": "domaine-saint-damien",
+  "2614": "domaine-saint-damien",
+  "2615": "domaine-saint-damien",
+  "2616": "domaine-saint-damien",
+  "2617": "domaine-saint-damien",
+  "2618": "domaine-saint-damien",
+  "2619": "domaine-viret",
+  "2620": "gourt-de-mautens",
+  "2621": "gourt-de-mautens",
+  "2622": "famille-perrin",
+  "2623": "rolly-gassmann",
+  "2624": "domaine-labet",
+  "2625": "domaine-du-pelican",
+  "2626": "domaine-du-pelican",
+  "2627": "rousset-martin",
+  "2628": "rousset-martin",
+  "2629": "chateau-pradeaux",
+  "2630": "bastide-blanche",
+  "2631": "bastide-blanche",
+  "2632": "domaine-de-trevallon",
+  "2633": "domaine-de-trevallon",
+  "2634": "domaine-de-trevallon",
+  "2635": "domaine-de-trevallon",
+  "2636": "domaine-de-trevallon",
+  "2637": "domaine-de-trevallon",
+  "2638": "domaine-de-trevallon",
+  "2639": "domaine-tempier",
+  "2640": "domaine-tempier",
+  "2641": "domaine-tempier",
+  "2642": "domaine-tempier",
+  "2643": "domaine-tempier",
+  "2644": "domaine-tempier",
+  "2645": "tour-du-bon",
+  "2646": "domaine-d-aupilhac",
+  "2647": "grange-des-peres",
+  "2648": "grange-des-peres",
+  "2649": "grange-des-peres",
+  "2650": "grange-des-peres",
+  "2651": "domaine-ledogar",
+  "2652": "benoit-lahaye",
+  "2653": "bollinger",
+  "2654": "chateau-du-cedre",
+  "2655": "crocus",
+  "2656": "comte-abbatucci",
+  "2657": "egly-ouriet",
+  "2658": "ganevat",
+  "2659": "louis-magnin"
+ },
+ "places": {
+  "France ~ Burgundy ~ Red": {
+   "title": "Red Burgundy",
+   "line": "Pinot Noir from the Côte d'Or and its neighbours, with Gamay from Beaujolais at the end. Ask whether the guest wants light and fragrant or deep and firm, and the budget, before you name a village."
+  },
+  "France ~ Loire ~ Red": {
+   "title": "Loire reds",
+   "line": "Mostly Cabernet Franc from Saumur, Chinon and Bourgueil: fresh, red fruited and a little herbal, lighter than Bordeaux. Good value, good with poultry and pork, and lovely slightly cool. Clos Rougeard is the rare treasure."
+  },
+  "France ~ Rhone ~ Red": {
+   "title": "Rhône reds",
+   "line": "North: peppery Syrah from Côte-Rôtie, Hermitage, Cornas and Saint-Joseph. South: warm, spicy Grenache blends from Châteauneuf-du-Pape and Gigondas. Ask whether the guest likes savoury and firm or ripe and generous."
+  },
+  "France ~ Other ~ Red": {
+   "title": "Other French reds",
+   "line": "The rest of France: Provence Bandol and Trévallon, the Languedoc, light Jura and Savoie reds, Cahors Malbec, Corsica and rare still reds from Champagne. Ask what the guest usually drinks and steer by weight."
+  },
+  "France ~ Bordeaux ~ Red": {
+   "title": "Red Bordeaux",
+   "line": "Left Bank Cabernet from Saint-Estèphe, Pauillac, Saint-Julien, Margaux and Graves; Right Bank Merlot from Pomerol and Saint-Émilion. Ask the budget and whether the guest wants firm and classic or soft and plush."
+  },
+  "France ~ Loire ~ Red ~ Saumur-Champigny": {
+   "title": "Saumur-Champigny",
+   "line": "Cabernet Franc from the limestone around Saumur, fresh and red fruited, from good value to the cult Clos Rougeard. Steer lighter eaters here."
+  },
+  "France ~ Loire ~ Red ~ Bourgueil": {
+   "title": "Bourgueil",
+   "line": "Firmer, darker Cabernet Franc from the Touraine. Breton and Amirault are the names; a smart swap for a Bordeaux drinker who wants something lighter."
+  },
+  "France ~ Loire ~ Red ~ Chinon": {
+   "title": "Chinon",
+   "line": "Cabernet Franc from the Vienne valley: red cherry, pencil shavings and a fresh finish. Great value; Joguet is the classic name."
+  },
+  "France ~ Loire ~ Red ~ Muscadet & Sancerre": {
+   "title": "Muscadet and Sancerre reds",
+   "line": "Light Pinot Noir from the Loire's white wine country. Suggest for fish or chicken when a guest wants red."
+  },
+  "France ~ Burgundy ~ Red ~ Bourgogne": {
+   "title": "Bourgogne and regional reds",
+   "line": "Regional Pinot Noir, Passe-Tout-Grains and Côte de Nuits-Villages from top growers: the cheapest route to a famous name. Good for guests who want Burgundy under a modest budget."
+  },
+  "France ~ Burgundy ~ Red ~ Marsannay": {
+   "title": "Marsannay",
+   "line": "The northernmost village of the Côte de Nuits: light, crisp, red fruited Pinot Noir at fair prices."
+  },
+  "France ~ Burgundy ~ Red ~ Fixin Premier Cru": {
+   "title": "Fixin premier cru",
+   "line": "Sturdy, earthy reds from Gevrey's northern neighbour, including Gelin's Clos Napoléon. Good value for a guest who likes firm red."
+  },
+  "France ~ Burgundy ~ Red ~ Fixin": {
+   "title": "Fixin",
+   "line": "Village Fixin: sturdy, rustic Pinot Noir next to Gevrey at friendlier prices."
+  },
+  "France ~ Burgundy ~ Red ~ Ruchottes-Chambertin": {
+   "title": "Ruchottes-Chambertin grand cru",
+   "line": "A small Gevrey grand cru on thin, rocky soil, giving fine, mineral wine. Rare; a collector's pick."
+  },
+  "France ~ Burgundy ~ Red ~ Mazis-Chambertin Grand Cru": {
+   "title": "Mazis-Chambertin grand cru",
+   "line": "A Gevrey grand cru next to Clos de Bèze, dark and powerful. For guests who want depth."
+  },
+  "France ~ Burgundy ~ Red ~ Griotte-Chambertin Grand Cru": {
+   "title": "Griotte-Chambertin grand cru",
+   "line": "The smallest Gevrey grand cru, often described as cherry scented and silky. Very rare."
+  },
+  "France ~ Burgundy ~ Red ~ Chambertin - Clos de Bèze Grand Cru": {
+   "title": "Chambertin-Clos de Bèze grand cru",
+   "line": "One of Burgundy's two most famous Gevrey grand crus, majestic and long lived. Celebration price; decant."
+  },
+  "France ~ Burgundy ~ Red ~ Charmes-Chambertin Grand Cru": {
+   "title": "Charmes-Chambertin grand cru",
+   "line": "The largest and most approachable Gevrey grand cru: generous, rounded fruit. The gentlest grand cru step for a Gevrey lover."
+  },
+  "France ~ Burgundy ~ Red ~ Chambertin Grand Cru": {
+   "title": "Chambertin grand cru",
+   "line": "The king of Gevrey: powerful, deep and long lived. A celebration bottle; involve the sommelier."
+  },
+  "France ~ Burgundy ~ Red ~ Latricières-Chambertin Grand Cru": {
+   "title": "Latricières-Chambertin grand cru",
+   "line": "A Gevrey grand cru next to Chambertin, firm and spicy. Good for game and beef."
+  },
+  "France ~ Burgundy ~ Red ~ Mazoyères-Chambertin Grand Cru": {
+   "title": "Mazoyères-Chambertin grand cru",
+   "line": "A Gevrey grand cru that may also be sold as Charmes; rich and ripe. A relative value among grand crus."
+  },
+  "France ~ Burgundy ~ Red ~ Chapelle-Chambertin Grand Cru": {
+   "title": "Chapelle-Chambertin grand cru",
+   "line": "A Gevrey grand cru below Clos de Bèze, finer and more fragrant than most. Rare."
+  },
+  "France ~ Burgundy ~ Red ~ Gevrey-Chambertin Premier Cru": {
+   "title": "Gevrey-Chambertin premier cru",
+   "line": "Dark, firm Pinot Noir with structure; Clos Saint-Jacques, Cazetiers and Lavaux Saint-Jacques are the famous names. Ask the budget; this page runs from moderate to grand cru prices."
+  },
+  "France ~ Burgundy ~ Red ~ Gevrey-Chambertin": {
+   "title": "Gevrey-Chambertin",
+   "line": "Village Gevrey: the deepest, most structured Pinot Noir of the Côte de Nuits. A steady choice for steak."
+  },
+  "France ~ Burgundy ~ Red ~ Clos de la Roche Grand Cru": {
+   "title": "Clos de la Roche grand cru",
+   "line": "Morey-Saint-Denis's greatest grand cru, deep and mineral. Dujac and Ponsot are the names."
+  },
+  "France ~ Burgundy ~ Red ~ Clos Saint-Denis Grand Cru": {
+   "title": "Clos Saint-Denis grand cru",
+   "line": "A Morey grand cru, finer and more fragrant than Clos de la Roche. For guests who love perfume."
+  },
+  "France ~ Burgundy ~ Red ~ Clos des Lambrays Grand Cru": {
+   "title": "Clos des Lambrays grand cru",
+   "line": "A Morey grand cru almost wholly owned by one estate, fragrant and fine."
+  },
+  "France ~ Burgundy ~ Red ~ Morey-Saint-Denis Premier Cru": {
+   "title": "Morey-Saint-Denis premier cru",
+   "line": "Between Gevrey and Chambolle in style: fragrant fruit with structure. Good value premier crus."
+  },
+  "France ~ Burgundy ~ Red ~ Morey-Saint-Denis": {
+   "title": "Morey-Saint-Denis",
+   "line": "Village Morey: fragrant, balanced Pinot Noir, often a better buy than its famous neighbours."
+  },
+  "France ~ Burgundy ~ Red ~ Bonnes Mares Grand Cru": {
+   "title": "Bonnes-Mares grand cru",
+   "line": "A grand cru shared by Chambolle and Morey, firmer and darker than Musigny. Celebration price."
+  },
+  "France ~ Burgundy ~ Red ~ Musigny Grand Cru": {
+   "title": "Musigny grand cru",
+   "line": "Chambolle's greatest grand cru, silk and perfume. Among the most prized wines on the list."
+  },
+  "France ~ Burgundy ~ Red ~ Chambolle-Musigny Premier Cru": {
+   "title": "Chambolle-Musigny premier cru",
+   "line": "The most fragrant, silky Pinot Noir of the Côte de Nuits; Les Amoureuses is the famous name. For guests who love elegance."
+  },
+  "France ~ Burgundy ~ Red ~ Chambolle-Musigny": {
+   "title": "Chambolle-Musigny",
+   "line": "Village Chambolle: perfumed, silky and light on its feet. Lovely with duck or chicken."
+  },
+  "France ~ Burgundy ~ Red ~ Vougeot Premier Cru": {
+   "title": "Vougeot premier cru",
+   "line": "Premier cru from the village of Vougeot outside the great Clos, fragrant and fine."
+  },
+  "France ~ Burgundy ~ Red ~ Clos Vougeot Grand Cru": {
+   "title": "Clos de Vougeot grand cru",
+   "line": "A large walled grand cru shared by many owners, so the producer matters most. Rich, firm wine; ask the budget and steer by name."
+  },
+  "France ~ Burgundy ~ Red ~ Echézeaux Grand Cru": {
+   "title": "Échezeaux grand cru",
+   "line": "A Vosne grand cru, spicy and fragrant, often the gentlest priced grand cru from a great producer."
+  },
+  "France ~ Burgundy ~ Red ~ Grands-Echézeaux Grand Cru": {
+   "title": "Grands-Échezeaux grand cru",
+   "line": "A smaller, deeper grand cru next to Clos de Vougeot. Celebration price."
+  },
+  "France ~ Burgundy ~ Red ~ Richebourg Grand Cru": {
+   "title": "Richebourg grand cru",
+   "line": "A Vosne grand cru of great richness and spice. Very high prices; involve the sommelier."
+  },
+  "France ~ Burgundy ~ Red ~ Romanée-Saint-Vivant Grand Cru": {
+   "title": "Romanée-Saint-Vivant grand cru",
+   "line": "A Vosne grand cru of great finesse and perfume, below Romanée-Conti. Celebration only."
+  },
+  "France ~ Burgundy ~ Red ~ Romanée-Conti Grand Cru": {
+   "title": "Romanée-Conti grand cru",
+   "line": "The most famous vineyard in Burgundy, wholly owned by the Domaine de la Romanée-Conti. Only with the sommelier."
+  },
+  "France ~ Burgundy ~ Red ~ La Tâche Grand Cru": {
+   "title": "La Tâche grand cru",
+   "line": "A Vosne grand cru wholly owned by the Domaine de la Romanée-Conti, spicy and profound. Only with the sommelier."
+  },
+  "France ~ Burgundy ~ Red ~ Vosne-Romanée Premier Cru": {
+   "title": "Vosne-Romanée premier cru",
+   "line": "Velvety, spicy, refined Pinot Noir from Burgundy's most famous village. Beaux Monts, Brûlées and Suchots are names to know."
+  },
+  "France ~ Burgundy ~ Red ~ Vosne-Romanée": {
+   "title": "Vosne-Romanée",
+   "line": "Village Vosne: silky, spicy Pinot Noir from the home of the grandest grand crus."
+  },
+  "France ~ Burgundy ~ Red ~ Nuits-Saint-Georges Premier Cru": {
+   "title": "Nuits-Saint-Georges premier cru",
+   "line": "Dark, firm, earthy Pinot Noir with structure; Les Saints-Georges and Vaucrains are famous. Good with beef and game."
+  },
+  "France ~ Burgundy ~ Red ~ Nuits-Saint-Georges": {
+   "title": "Nuits-Saint-Georges",
+   "line": "Village Nuits: sturdy, dark fruited Pinot Noir. A steady choice for red meat."
+  },
+  "France ~ Burgundy ~ Red ~ Pernand-Vergelesses Premier Cru": {
+   "title": "Pernand-Vergelesses premier cru",
+   "line": "Fresh, fine reds from the village behind Corton. Good value."
+  },
+  "France ~ Burgundy ~ Red ~ Pernand-Vergelesses": {
+   "title": "Pernand-Vergelesses",
+   "line": "Light, fresh reds from the village behind the hill of Corton. Good value."
+  },
+  "France ~ Burgundy ~ Red ~ Corton Grand Cru": {
+   "title": "Corton grand cru",
+   "line": "The only red grand cru of the Côte de Beaune, firm and earthy. Bressandes and Clos du Roi are the names; often the best value grand cru."
+  },
+  "France ~ Burgundy ~ Red ~ Savigny-lès-Beaune Premier Cru": {
+   "title": "Savigny-lès-Beaune premier cru",
+   "line": "Fresh, red fruited premier crus at gentle prices. Lavières is a name to know."
+  },
+  "France ~ Burgundy ~ Red ~ Savigny-lès-Beaune": {
+   "title": "Savigny-lès-Beaune",
+   "line": "Village Savigny: light, fresh Pinot Noir and a reliable value."
+  },
+  "France ~ Burgundy ~ Red ~ Beaune Premier Cru": {
+   "title": "Beaune premier cru",
+   "line": "Round, red fruited Pinot Noir from the wine capital; the big houses own much of it. Good with poultry and pork."
+  },
+  "France ~ Burgundy ~ Red ~ Beaune": {
+   "title": "Beaune",
+   "line": "Village Beaune: soft, red fruited and approachable."
+  },
+  "France ~ Burgundy ~ Red ~ Pommard Premier Cru": {
+   "title": "Pommard premier cru",
+   "line": "The firmest, darkest reds of the Côte de Beaune; Rugiens and Épenots are the famous names. Good with beef."
+  },
+  "France ~ Burgundy ~ Red ~ Pommard": {
+   "title": "Pommard",
+   "line": "Village Pommard: sturdy, dark fruited Pinot Noir. For guests who want body."
+  },
+  "France ~ Burgundy ~ Red ~ Volnay Premier Cru": {
+   "title": "Volnay premier cru",
+   "line": "The most fragrant, silky reds of the Côte de Beaune; Clos des Chênes, Caillerets and Santenots are names to know. Lovely with poultry."
+  },
+  "France ~ Burgundy ~ Red ~ Volnay": {
+   "title": "Volnay",
+   "line": "Village Volnay: fragrant, silky and charming."
+  },
+  "France ~ Burgundy ~ Red ~ Monthélie": {
+   "title": "Monthélie",
+   "line": "Volnay's neighbour, with similar charm at lower prices; rare Coche-Dury and Roulot bottlings sit here too."
+  },
+  "France ~ Burgundy ~ Red ~ Saint Aubin Premier Cru": {
+   "title": "Saint-Aubin premier cru",
+   "line": "Light, fresh reds from a side valley behind Puligny. Good value."
+  },
+  "France ~ Burgundy ~ Red ~ Chassagne-Montrachet Premier Cru": {
+   "title": "Chassagne-Montrachet premier cru",
+   "line": "Red Chassagne, firm and fresh, from a village better known for white. An insider's value."
+  },
+  "France ~ Burgundy ~ Red ~ Chassagne-Montrachet": {
+   "title": "Chassagne-Montrachet",
+   "line": "Village red Chassagne: bright, firm Pinot Noir from great white wine families."
+  },
+  "France ~ Burgundy ~ Red ~ Santenay": {
+   "title": "Santenay",
+   "line": "Sturdy, fruity reds from the southern Côte de Beaune at fair prices."
+  },
+  "France ~ Burgundy ~ Red ~ Maranges Premier Cru": {
+   "title": "Maranges premier cru",
+   "line": "The southernmost Côte de Beaune premier crus: sturdy, fruity and among the best values on the list."
+  },
+  "France ~ Burgundy ~ Red ~ Maranges": {
+   "title": "Maranges",
+   "line": "Village Maranges: firm, fruity and good value."
+  },
+  "France ~ Burgundy ~ Red ~ Other Côte d'Or": {
+   "title": "Other Côte d'Or villages",
+   "line": "Smaller villages and Côte Chalonnaise reds: Ladoix, Aloxe-Corton, Blagny, Chorey, Auxey-Duresses and Rully. A place for value and a few rarities."
+  },
+  "France ~ Burgundy ~ Red ~ Mercurey": {
+   "title": "Mercurey",
+   "line": "Côte Chalonnaise Pinot Noir: sturdy, red fruited and modestly priced."
+  },
+  "France ~ Burgundy ~ Red ~ Beaujolais": {
+   "title": "Beaujolais",
+   "line": "Gamay from the granite crus: Morgon, Fleurie, Moulin-à-Vent, Brouilly and more. Juicy, fresh and great value; serve slightly cool."
+  },
+  "France ~ Rhone ~ Red ~ Côte-Rôtie": {
+   "title": "Côte-Rôtie",
+   "line": "Fragrant, peppery Syrah from steep slopes, often with a little Viognier. Guigal's single vineyards are the trophies. Ask the budget; decant older bottles."
+  },
+  "France ~ Rhone ~ Red ~ St.-Joseph": {
+   "title": "Saint-Joseph",
+   "line": "Fresh, peppery Syrah from the west bank of the northern Rhône. Good value with lamb."
+  },
+  "France ~ Rhone ~ Red ~ Hermitage": {
+   "title": "Hermitage",
+   "line": "Powerful, long lived Syrah from a single hill; Chave and La Chapelle are the great names. Celebration price."
+  },
+  "France ~ Rhone ~ Red ~ Crozes-Hermitage": {
+   "title": "Crozes-Hermitage",
+   "line": "Fresh, dark fruited Syrah around the hill of Hermitage. Good value."
+  },
+  "France ~ Rhone ~ Red ~ Cornas": {
+   "title": "Cornas",
+   "line": "The darkest, most powerful Syrah of the northern Rhône. Clape and Allemand are the names; decant."
+  },
+  "France ~ Rhone ~ Red ~ Châteauneuf-du-Pape": {
+   "title": "Châteauneuf-du-Pape",
+   "line": "Warm, spicy Grenache led blends from the southern Rhône. Rayas is the rarity; Beaucastel and Pégau the classics. Ask whether the guest wants fresh or rich."
+  },
+  "France ~ Rhone ~ Red ~ Other Côte Du Rhône": {
+   "title": "Other southern Rhône",
+   "line": "Gigondas, Vacqueyras, Côtes du Rhône and Vin de France: warm, spicy reds, many from great Châteauneuf names. Great value."
+  },
+  "France ~ Other ~ Red ~ Alsace & Lorraine": {
+   "title": "Alsace",
+   "line": "Light, fresh Pinot Noir from a white wine region."
+  },
+  "France ~ Other ~ Red ~ Jura": {
+   "title": "Jura",
+   "line": "Light, fresh Pinot Noir and blends from the Jura hills. For Burgundy lovers who like something different."
+  },
+  "France ~ Other ~ Red ~ Provence": {
+   "title": "Provence",
+   "line": "Bandol Mourvèdre, firm and savoury, and Trévallon's Cabernet and Syrah. Good with lamb."
+  },
+  "France ~ Other ~ Red ~ Languedoc-Roussillon": {
+   "title": "Languedoc",
+   "line": "Deep, spicy southern reds, including the cult Grange des Pères. Good value."
+  },
+  "France ~ Other ~ Red ~ Other French ~ Red": {
+   "title": "Other French reds",
+   "line": "Cahors Malbec, Corsican, Savoie, Jura Vin de France and rare still reds from Champagne. Ask about the guest's taste and steer by weight."
+  },
+  "France ~ Bordeaux ~ Red ~ Saint-Estèphe": {
+   "title": "Saint-Estèphe",
+   "line": "The firmest Left Bank Cabernet. Cos d'Estournel, Montrose and Calon-Ségur are the names. Good with beef."
+  },
+  "France ~ Bordeaux ~ Red ~ Pauillac": {
+   "title": "Pauillac",
+   "line": "Home of three first growths, Lafite, Latour and Mouton: cassis, cedar and power. Ask the budget; from Légende to first growths."
+  },
+  "France ~ Bordeaux ~ Red ~ Saint-Julien": {
+   "title": "Saint-Julien",
+   "line": "Balanced, refined Cabernet; Léoville Las Cases and Ducru-Beaucaillou are the names."
+  },
+  "France ~ Bordeaux ~ Red ~ Margaux": {
+   "title": "Margaux",
+   "line": "The most fragrant, silky Left Bank wines; Château Margaux and Palmer lead. For guests who love perfume."
+  },
+  "France ~ Bordeaux ~ Red ~ Graves": {
+   "title": "Graves and Pessac-Léognan",
+   "line": "Smoky, earthy, silky claret; Haut-Brion and La Mission are the names."
+  },
+  "France ~ Bordeaux ~ Red ~ Pomerol": {
+   "title": "Pomerol",
+   "line": "Soft, plummy Merlot from a small plateau; Pétrus, Lafleur and VCC are the trophies. Ask the budget."
+  },
+  "France ~ Bordeaux ~ Red ~ Saint-Émilion": {
+   "title": "Saint-Émilion",
+   "line": "Merlot and Cabernet Franc on limestone and clay; Cheval Blanc, Figeac and Pavie lead. From friendly to celebration."
+  },
+  "France ~ Bordeaux ~ Red ~ Other Bordeaux": {
+   "title": "Other Bordeaux",
+   "line": "Haut-Médoc, Moulis, Listrac, Castillon and the satellites: classic claret at friendly prices. A great place for value."
+  }
+ }
+}

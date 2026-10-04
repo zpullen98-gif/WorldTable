@@ -27,6 +27,12 @@ describe('roomHref', () => {
 		expect(roomHref('codex', PERSONALITY, '/table', PACK)).toBe('');
 		expect(roomHref('codex', CHAMPAGNE, '/table', null)).toBe('');
 	});
+	it('opens a bottle from the bottle list in the Codex the same way, so a By the bottle row links its card', () => {
+		const h = JSON.parse(JSON.stringify(PACK)) as House;
+		h.wines.push({ ...h.wines[0], id: 'w-tbclass1', list: 'bottle', bin: '20102', size: '750ml' });
+		expect(roomHref('codex', 'w-tbclass1', '/table', h)).toBe('/codex/#wine=w-tbclass1');
+		expect(roomHref('codex', 'w-tbclass1', '', h)).toBe('');
+	});
 	it('reads no room as installed where there are no caches', async () => {
 		expect(await wingInstalled('codex')).toBe(false);
 	});

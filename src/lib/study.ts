@@ -20,9 +20,10 @@
  * NO ALLERGEN IS READ, INFERRED OR SHOWN HERE. The service note is a
  * person's own words and the card prints it verbatim under the fixed eyebrow.
  */
-import { isMark, DISH_PARTS, COCKTAIL_PARTS, WINE_PARTS, KEYS } from './house/house-schema';
+import { isMark, DISH_PARTS, COCKTAIL_PARTS, WINE_PARTS, KEYS, BOTTLE_TIERS, foldSize, wineListOf } from './house/house-schema';
 import type {
 	AskAtLineup,
+	BottleTier,
 	Dispute,
 	FormulaParts,
 	House,
@@ -102,6 +103,12 @@ export const STUDY_WORDS = {
 	partsShow: 'Show the five parts',
 	partsHide: 'Hide the five parts',
 	pour: 'Pour with it',
+	byBottle: 'By the bottle',
+	tierValue: 'Value, under $100',
+	tierClassic: 'Sweet spot, $100 to $250',
+	tierSplurge: 'Celebration, over $250',
+	tierHalf: 'Half-bottle',
+	bin: 'Bin {bin}',
 	pairMore: 'More on the pairing',
 	floor: 'On the floor',
 	confirm: 'To confirm at lineup',
@@ -585,6 +592,72 @@ export function pairsFor(house: House, item: HouseItem): Array<[string, string]>
 		const ids = kept<string[]>((item as HouseWine).firstPickIds) ?? [];
 		const names = ids.map((id) => nameById(house, id)).filter(Boolean);
 		if (names.length) out.push(['First picks', names.join(', ')]);
+	}
+	return out;
+}
+
+/* -------------------------------------------------------------------------
+ * By the bottle: a dish's bottle tiers
+ * ---------------------------------------------------------------------- */
+
+/** The word over each tier, in the order a server offers them. */
+export const TIER_WORDS: Readonly<Record<BottleTier, StudyWordKey>> = {
+	value: 'tierValue',
+	classic: 'tierClassic',
+	splurge: 'tierSplurge',
+	half: 'tierHalf'
+};
+
+/** One bottle offered with a dish, ready to draw: the tier, the wine and everything the row prints. */
+export interface BottleRow {
+	tier: BottleTier;
+	label: string;
+	wineId: string;
+	bin: string;
+	name: string;
+	vintage: string;
+	price: string;
+	/** The size as printed, only when it is not the standard 750ml. */
+	size: string;
+	why: string;
+	sayIt: string;
+}
+
+/**
+ * The bottles offered with a dish, one row per tier in BOTTLE_TIERS order,
+ * from the KEPT pairing only. A tier whose wine is not a house wine on the
+ * bottle list is left out, so a row always opens a real card. The name is
+ * the producer and the wine when both are there (the vintage is its own
+ * field), else the house's name for it; the price is the printed bottle
+ * price, else the item's price line.
+ */
+export function bottlesFor(house: House, dish: HouseItem): BottleRow[] {
+	if (dish.kind !== 'dish') return [];
+	const p = kept<Pairing>((dish as HouseDish).pairing);
+	const tiers = p && p.bottles;
+	if (!tiers) return [];
+	const out: BottleRow[] = [];
+	for (const tier of BOTTLE_TIERS) {
+		const pick = tiers[tier];
+		if (!pick) continue;
+		const w = findItem(house, pick.wineId);
+		if (!w || w.kind !== 'wine' || wineListOf(w) !== 'bottle') continue;
+		const wine = w as HouseWine;
+		const both = plain(wine.producer) && plain(wine.wine);
+		const size = plain(wine.size);
+		out.push({
+			tier,
+			label: say(TIER_WORDS[tier]),
+			wineId: wine.id,
+			bin: plain(wine.bin),
+			/* The producer once: a wine named for its estate (Opus One, Château Latour Pauillac) is not doubled. */
+			name: both ? (plain(wine.wine).toLowerCase().startsWith(plain(wine.producer).toLowerCase()) ? plain(wine.wine) : plain(wine.producer) + ' ' + plain(wine.wine)) : plain(wine.name),
+			vintage: both ? plain(wine.vintage) : '',
+			price: plain(wine.bottle) || priceLine(wine, house),
+			size: size && foldSize(size) !== '750ml' ? size : '',
+			why: plain(pick.why),
+			sayIt: plain(pick.sayIt)
+		});
 	}
 	return out;
 }

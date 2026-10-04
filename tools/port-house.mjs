@@ -140,6 +140,11 @@ export const LIB = {
 	emptyHouse: 'emptyHouse',
 	isMark: 'isMark',
 	isNote: 'isNote',
+	/* the bottle list and the tiers */
+	wineListOf: 'wineListOf',
+	printedDollars: 'printedDollars',
+	inBottleBand: 'inBottleBand',
+	foldSize: 'foldSize',
 	/* the store and the api */
 	mapStorage: 'mapStorage',
 	idbStorage: 'idbStorage',
@@ -167,6 +172,7 @@ export const CONSTANTS = [
 	'PROSE_MAX', 'LIST_MAX', 'LINE_CAPS', 'PRINCIPLES', 'DISH_PARTS', 'COCKTAIL_PARTS', 'WINE_PARTS',
 	'BUILD_STEPS', 'ITEM_KINDS', 'HOUSE_LISTS', 'DISH_MARKS', 'WINE_MARKS', 'COCKTAIL_MARKS', 'MARK_FIELDS',
 	'ID_PREFIXES', 'KEYS', 'KEPT_CAP', 'MARK_KINDS', 'FORBIDDEN_KEY', 'DASH', 'DASH_SOURCE',
+	'OPTIONAL_KEYS', 'WINE_LISTS', 'BOTTLE_TIERS', 'BOTTLE_BANDS', 'HALF_SIZE', 'BOTTLE_WORDS',
 	'FATAL_CODES', 'NEVER_FATAL', 'ALLERGEN_TALK', 'ALLERGEN_WORD', 'QUOTE_WORDS',
 	'PACK_FORMAT', 'PACK_VERSION', 'MY_HOUSE', 'MAP_HOUSE_PREFIX', 'NO_HOUSE_SAID', 'HOUSE_PARTS', 'CARD_KEYS', 'ITEM_FIELDS', 'PUT_LISTS'
 ];

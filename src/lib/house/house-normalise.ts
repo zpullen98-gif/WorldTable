@@ -33,7 +33,7 @@
  * IDS. Each list has its prefix (ID_PREFIXES); an id missing, carrying a
  * pipe or a colon, with the wrong prefix or already taken in this house is
  * minted afresh and the report says so, and every reference to the old id
- * inside the house (a pairing, a course, a mix-up, a first pick, an upsell,
+ * inside the house (a pairing and its bottle tiers, a course, a mix-up, a first pick, an upsell,
  * a term's items) follows it, so a pack whose dishes came in under the
  * desk's 'k-' mint keeps its pairings. An id that would match the client's
  * FORBIDDEN_KEY is minted afresh as well, and a fresh id is drawn again
@@ -43,9 +43,10 @@
  * the same reason a tombstone already under such a key is dropped and
  * named in the report; no item in the shape can carry that id.
  */
-import { BUILD_STEPS, HOUSE_FORMAT, HOUSE_SCHEMA_VERSION, ID_PREFIXES, KEYS, LIST_MAX, MARK_FIELDS, PROSE_MAX, mintId } from './house-schema';
+import { BOTTLE_TIERS, BUILD_STEPS, HOUSE_FORMAT, HOUSE_SCHEMA_VERSION, ID_PREFIXES, KEYS, LIST_MAX, MARK_FIELDS, PROSE_MAX, mintId } from './house-schema';
 import type {
 	AskAtLineup,
+	BottlePick,
 	AskWhom,
 	Began,
 	BuildStep,
@@ -68,6 +69,7 @@ import type {
 	Note,
 	PackStamp,
 	Pairing,
+	PairingBottles,
 	Principle,
 	Scenario,
 	Tasting,
@@ -249,7 +251,14 @@ function markValue(v: unknown, kind: MarkKind): unknown {
 	}
 	const p = { principles: [] } as unknown as Pairing;
 	for (const k of KEYS.Pairing) {
-		if (k === 'principles') {
+		if (k === 'bottles') {
+			/* Optional: set only when some tier holds something, so a pairing without tiers keeps its old shape. */
+			const bottles = normaliseBottles(v.bottles);
+			if (bottles) {
+				p.bottles = bottles;
+				any = true;
+			}
+		} else if (k === 'principles') {
 			/* Carried as they came, even one outside PRINCIPLES, so the validator can name it. */
 			p.principles = asTextList(v.principles) as Principle[];
 			if (p.principles.length) any = true;
@@ -259,6 +268,31 @@ function markValue(v: unknown, kind: MarkKind): unknown {
 		}
 	}
 	return any ? p : undefined;
+}
+
+/**
+ * A pairing's bottle tiers: each tier rebuilt from KEYS.BottlePick and kept
+ * only when something is in it; undefined when no tier survives. A key
+ * outside the four tiers or the three fields is dropped here as everywhere.
+ */
+function normaliseBottles(v: unknown): PairingBottles | undefined {
+	if (!isRaw(v)) return undefined;
+	const out: PairingBottles = {};
+	let any = false;
+	for (const tier of BOTTLE_TIERS) {
+		const raw = v[tier];
+		if (!isRaw(raw)) continue;
+		const pick = {} as BottlePick;
+		let some = false;
+		for (const k of KEYS.BottlePick) {
+			pick[k] = asText(raw[k]);
+			if (!blank(pick[k])) some = true;
+		}
+		if (!some) continue;
+		out[tier] = pick;
+		any = true;
+	}
+	return any ? out : undefined;
 }
 
 /**
@@ -404,6 +438,14 @@ function normaliseWine(raw: unknown, i: number, ctx: Ctx): HouseWine {
 	w.bottle = asPrinted(r.bottle);
 	w.pours = asTextList(r.pours);
 	marksOnto(w, r, MARK_FIELDS.wines);
+	/* The bottle list's three fields, each written only when it says something: list only as
+	   'bottle' (absent is 'glass'), the bin and the size only when not blank, so a wine from an
+	   edition that never had them comes back with the same keys it went in with. */
+	if (r.list === 'bottle') w.list = 'bottle';
+	const bin = asPrinted(r.bin);
+	if (!blank(bin)) w.bin = bin;
+	const size = asText(r.size);
+	if (!blank(size)) w.size = size;
 	return w;
 }
 
@@ -600,6 +642,10 @@ function applyRenames(house: House, ctx: Ctx): void {
 		p.wineId = one(p.wineId);
 		p.secondId = one(p.secondId);
 		p.zeroProofId = one(p.zeroProofId);
+		if (p.bottles) for (const tier of BOTTLE_TIERS) {
+			const pick = p.bottles[tier];
+			if (pick) pick.wineId = one(pick.wineId);
+		}
 	}
 	for (const w of house.wines) if (w.firstPickIds) w.firstPickIds.value = many(w.firstPickIds.value);
 	for (const c of house.cocktails) if (c.upsells) c.upsells.value = many(c.upsells.value);

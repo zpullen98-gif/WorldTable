@@ -1,0 +1,1930 @@
+{
+  "about": "Facts behind the cards-a floor bottle cards (Champagne bottles, half-bottles, large formats, white Burgundy, other whites) written on 4 October 2026 for the wine deep dive. Each entry is keyed by the bottle's catalogue number n in research/winelist-2026-10-03.json, repeats the figures the Binwise paste prints for it (bin, vintage, size, and the price as printed, written with a dollar sign), and lists every fact a card states beyond the list, each with how it is known: \"list\" (the Binwise paste itself), \"pack\" (the house or the server guide), \"knowledge\" (standard wine knowledge a master sommelier holds with certainty: a producer's village, an appellation's rules, a classification), or \"search\" (confirmed by a web search on 4 October 2026, the page named). Nothing here is a score, a vintage report or a quote; a fact the author was not sure of was left out of the cards and sent to the sommelier as a lineup question instead.",
+  "readOn": "2026-10-04",
+  "source": "research/winelist-2026-10-03.json (page:binwise-wine-list-2026-10-03.txt, pasted 3 October 2026); research/bottle-selection-2026-10-04.json",
+  "bottles": {
+    "n15": {
+      "bottle": "Cesarini Sforza Rosé Brut Trento, NV",
+      "bin": "5123",
+      "size": "750ml",
+      "printed": "$55",
+      "catalogueLine": 84,
+      "facts": [
+        {
+          "fact": "Cesarini Sforza is a Trento DOC (Trentodoc) sparkling wine house in the hills around the city of Trento, Trentino, in the Italian Alps; the wine is made by the traditional method, second fermentation in bottle.",
+          "how": "knowledge; search 4 October 2026, cesarinisforza.it (Brut Rosé page) and trentodoc.com"
+        },
+        {
+          "fact": "The Cesarini Sforza Brut Rosé is mostly Chardonnay with a little Pinot Noir (the producer gives 85 and 15).",
+          "how": "search 4 October 2026, cesarinisforza.it; proportions left out of the card"
+        },
+        {
+          "fact": "Crystal gastrique is the sauce on the popcorn shrimp; Champagne is only from Champagne in France.",
+          "how": "pack; knowledge"
+        }
+      ]
+    },
+    "n594": {
+      "bottle": "Jansz \"Premier Cuvée Brut Tasmania, 2022",
+      "bin": "31551",
+      "size": "750ml",
+      "printed": "$65",
+      "catalogueLine": 3062,
+      "facts": [
+        {
+          "fact": "Jansz is a sparkling wine producer on Tasmania, the island south of mainland Australia and its coolest wine region; Premier Cuvée is made by the traditional method.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Binwise paste prints the name as Jansz \"Premier Cuvée Brut Tasmania, with one quote mark, filed under International Sparkling, Australia.",
+          "how": "list"
+        }
+      ]
+    },
+    "n16": {
+      "bottle": "Chapel Down Rosé Brut Kent, NV",
+      "bin": "1628",
+      "size": "750ml",
+      "printed": "$75",
+      "catalogueLine": 89,
+      "facts": [
+        {
+          "fact": "Chapel Down is a sparkling wine producer in Kent, in southeast England, one of the best known English houses; southern England has chalk soils like those of Champagne and a cool climate.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "English sparkling wine from Kent and Sussex is made chiefly by the traditional method.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n598": {
+      "bottle": "Ridgeview \"Bloomsbury\" Brut Sussex, NV",
+      "bin": "31471",
+      "size": "750ml",
+      "printed": "$75",
+      "catalogueLine": 3086,
+      "facts": [
+        {
+          "fact": "Ridgeview is a family sparkling wine estate at Ditchling, Sussex, on the chalk of the South Downs, a leading Sussex producer since 1995; Bloomsbury is its signature blend of Chardonnay (the largest part), Pinot Noir and Meunier, made by the traditional method.",
+          "how": "knowledge; search 4 October 2026, delectable.com and majestic.co.uk (Bloomsbury pages)"
+        },
+        {
+          "fact": "Eggs Hussarde carries Canadian bacon and hollandaise.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n17": {
+      "bottle": "Domaine Huet Pétillant Vouvray FR, 2019",
+      "bin": "32641",
+      "size": "750ml",
+      "printed": "$90",
+      "catalogueLine": 94,
+      "facts": [
+        {
+          "fact": "Domaine Huet is a Vouvray estate on the Loire near Tours that grows only Chenin Blanc in three vineyards, Le Haut-Lieu, Le Mont and the Clos du Bourg, and makes a pétillant (lightly sparkling, traditional method at lower pressure than Champagne).",
+          "how": "knowledge"
+        },
+        {
+          "fact": "Our list carries Huet Le Haut Lieu Vouvray Sec in a bottle and a half-bottle, Le Mont Vouvray Demi-Sec in a half-bottle and Clos du Bourg Vouvray Demi-Sec in a bottle.",
+          "how": "list"
+        }
+      ]
+    },
+    "n608": {
+      "bottle": "Ferrari Rosé Brut, NV",
+      "bin": "31232",
+      "size": "750ml",
+      "printed": "$95",
+      "catalogueLine": 3142,
+      "facts": [
+        {
+          "fact": "Ferrari is the best known Trento DOC sparkling wine house, in Trento in the Italian Alps, run by the Lunelli family, making only traditional method wines; no relation to the car maker. Its rosé is Pinot Noir-led with Chardonnay.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "Prosecco is usually made by the tank method.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n376": {
+      "bottle": "JM Sélèque \"Solessence\" Extra Brut, NV",
+      "bin": "32252",
+      "size": "750ml",
+      "printed": "$100",
+      "catalogueLine": 1963,
+      "facts": [
+        {
+          "fact": "JM Sélèque is a grower (the family grows the grapes and makes the wine) in Pierry, south of Épernay; Solessence blends Chardonnay, Meunier and a little Pinot Noir from seven villages (Pierry, Moussy, Épernay, Mardeuil, Dizy, Boursault and Vertus), part vinified in oak barrels.",
+          "how": "search 4 October 2026, champagne-characters.com and leonandsonwine.com (Solessence pages); knowledge"
+        },
+        {
+          "fact": "Extra Brut is drier than Brut: very little sugar is added at disgorgement.",
+          "how": "knowledge; guide.txt (the house Champagne profile)"
+        }
+      ]
+    },
+    "n438": {
+      "bottle": "Billecart-Salmon \"Réserve\" Brut, NV",
+      "bin": "6020",
+      "size": "750ml",
+      "printed": "$115",
+      "catalogueLine": 2279,
+      "facts": [
+        {
+          "fact": "Billecart-Salmon is a family Champagne house in Mareuil-sur-Aÿ (Vallée de la Marne), founded in 1818 and still family run; its Réserve Brut blends Meunier, Chardonnay and Pinot Noir with reserve wines, in a fresh, delicate house style.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "Our list carries the Billecart-Salmon Réserve Brut in 750 ml (bin 6020, $115), 1.5L magnum, 6L Methuselah and 15L Nebuchadnezzar (bin 29001, $4900), and the Brennan’s 80th Anniversary Sous Bois magnum (bin 117342, $350).",
+          "how": "list"
+        }
+      ]
+    },
+    "n386": {
+      "bottle": "Pierre Paillard Grand Cru \"Les Parcelles XVIII\" Extra Brut, NV",
+      "bin": "3161",
+      "size": "750ml",
+      "printed": "$120",
+      "catalogueLine": 2013,
+      "facts": [
+        {
+          "fact": "Pierre Paillard is a family grower in Bouzy, a Grand Cru village on the Montagne de Reims known for Pinot Noir; Les Parcelles blends Pinot Noir and Chardonnay from the family’s parcels in Bouzy.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Binwise paste files it under Grower Producers, Vallée de la Marne.",
+          "how": "list"
+        }
+      ]
+    },
+    "n535": {
+      "bottle": "Louis Roederer \"Collection 244\" Brut, NV",
+      "bin": "32621",
+      "size": "750ml",
+      "printed": "$120",
+      "catalogueLine": 2764,
+      "facts": [
+        {
+          "fact": "Louis Roederer is a family Champagne house in Reims, the house of Cristal; its non-vintage Brut is named Collection and numbered by blend. Collection 244 is based on the 2019 harvest (54 per cent), with 36 per cent from the perpetual reserve and 10 per cent oak-aged reserve wines.",
+          "how": "search 4 October 2026, quillandpad.com (Collection 244 and History) and mmdusa.net (Collection 244 sheet); knowledge"
+        }
+      ]
+    },
+    "n342": {
+      "bottle": "Chartogne-Taillet Rosé Brut, NV",
+      "bin": "31718",
+      "size": "750ml",
+      "printed": "$125",
+      "catalogueLine": 1791,
+      "facts": [
+        {
+          "fact": "Chartogne-Taillet is a family grower (récoltant-manipulant) in Merfy, northwest of Reims; its rosé takes a little red wine from Pinot Noir grown in Merfy. Published blends differ, so the card leaves the blend to the sommelier.",
+          "how": "search 4 October 2026, lambierwines.com and grandcruselections.com (Chartogne-Taillet pages)"
+        }
+      ]
+    },
+    "n408": {
+      "bottle": "Larmandier-Bernier Premier Cru \"Longitude\" Extra Brut, NV",
+      "bin": "31911",
+      "size": "750ml",
+      "printed": "$135",
+      "catalogueLine": 2125,
+      "facts": [
+        {
+          "fact": "Larmandier-Bernier is a family grower in Vertus, at the southern end of the Côte des Blancs; Longitude is a Premier Cru Blanc de Blancs (all Chardonnay) named for villages along one line of longitude.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "Blanc de Blancs means white from whites, a Champagne of Chardonnay alone. The Grand Isle Jewel oysters carry a preserved Fresno chili mignonette.",
+          "how": "knowledge; pack"
+        }
+      ]
+    },
+    "n557": {
+      "bottle": "Brennan's Essential by Piper-Heidsieck Extra Brut, NV",
+      "bin": "",
+      "size": "750ml",
+      "printed": "$140",
+      "catalogueLine": 2874,
+      "facts": [
+        {
+          "fact": "Brennan’s Essential by Piper-Heidsieck is the house Champagne: Pinot Noir, Meunier and Chardonnay, Extra Brut; Piper-Heidsieck is a Champagne house in Reims. The glass price is disputed, $28 on Binwise and $30 on the menus.",
+          "how": "pack; guide.txt (the house Champagne entry); knowledge (Reims)"
+        },
+        {
+          "fact": "A 750 ml bottle pours about five or six glasses of Champagne.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n589": {
+      "bottle": "Veuve Clicquot \"Yellow Label\" Brut, NV",
+      "bin": "3226",
+      "size": "750ml",
+      "printed": "$155",
+      "catalogueLine": 3034,
+      "facts": [
+        {
+          "fact": "Veuve Clicquot is a Champagne house in Reims; veuve means widow, and Barbe-Nicole Clicquot ran the house as a widow in the early nineteenth century and is credited with the riddling table (pupitre). Yellow Label is its Pinot Noir-led non-vintage Brut with Meunier and Chardonnay; the label is an orange yellow. La Grande Dame is its prestige cuvée.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n542": {
+      "bottle": "Moet & Chandon Nectar Imperial Rosé Demi Sec, NV",
+      "bin": "32453",
+      "size": "750ml",
+      "printed": "$180",
+      "catalogueLine": 2799,
+      "facts": [
+        {
+          "fact": "Moët & Chandon is the largest Champagne house, based in Épernay; Nectar Imperial Rosé is its demi-sec (gently sweet) rosé, Pinot Noir-led with Meunier and Chardonnay.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "Binwise lists the Nectar Imperial Rosé Demi Sec (bin 32453, $180); the Bubbles page prints the Imperial Rosé Brut.",
+          "how": "list; pack"
+        }
+      ]
+    },
+    "n473": {
+      "bottle": "Charles Heidsieck \"Réserve\" Brut, NV",
+      "bin": "32362",
+      "size": "750ml",
+      "printed": "$210",
+      "catalogueLine": 2454,
+      "facts": [
+        {
+          "fact": "Charles Heidsieck is a Champagne house in Reims that ages its wines in chalk cellars (crayères) beneath the city; its Réserve Brut is known for a high share of reserve wines and long lees aging; Pinot Noir, Chardonnay and Meunier. It is a separate house from Piper-Heidsieck, with a shared family history.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n457": {
+      "bottle": "Bollinger \"Special Cuvée\" Brut, NV",
+      "bin": "32331",
+      "size": "750ml",
+      "printed": "$250",
+      "catalogueLine": 2374,
+      "facts": [
+        {
+          "fact": "Bollinger is a family-owned Champagne house in Aÿ, a Grand Cru village known for Pinot Noir; Special Cuvée is Pinot Noir-led with Chardonnay and some Meunier, partly fermented in oak, with reserve wines aged in magnums.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Birthday Bubbles page prints Bollinger Special Cuvée Brut NV in a 1.5 L magnum at $450.00.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n436": {
+      "bottle": "Armand de Brignac \"Gold\" Brut, NV",
+      "bin": "32573",
+      "size": "750ml",
+      "printed": "$325",
+      "catalogueLine": 2269,
+      "facts": [
+        {
+          "fact": "Armand de Brignac (called Ace of Spades for the pewter emblem on its opaque metallic gold bottle) is made by the Cattier family in Chigny-les-Roses on the Montagne de Reims; it is owned in partnership by Shawn Carter (Jay-Z) and Moët Hennessy. Brut Gold blends Pinot Noir, Chardonnay and Meunier.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n572": {
+      "bottle": "Pol Roger \"Blanc de Blancs\" Brut, 2015",
+      "bin": "34202",
+      "size": "750ml",
+      "printed": "$335",
+      "catalogueLine": 2949,
+      "facts": [
+        {
+          "fact": "Pol Roger is a family Champagne house in Épernay; Winston Churchill was its most famous admirer and its prestige cuvée is named Sir Winston Churchill. Its vintage Blanc de Blancs is Chardonnay from Grand Cru villages of the Côte des Blancs.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n467": {
+      "bottle": "Bollinger \"PNTX20\" Brut, NV",
+      "bin": "32222",
+      "size": "750ml",
+      "printed": "$345",
+      "catalogueLine": 2424,
+      "facts": [
+        {
+          "fact": "Bollinger PN TX20 is a Blanc de Noirs, 100 per cent Pinot Noir, led by Tauxières on the southwest slopes of the Montagne de Reims, with the 2020 harvest as its base (48 per cent) and reserve wines including 2008 and 2012.",
+          "how": "search 4 October 2026, champagne-bollinger.com (PN TX20 page) and thewinesociety.com"
+        },
+        {
+          "fact": "Pinot Noir has white juice, so gently pressed it makes white wine: Blanc de Noirs.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n448": {
+      "bottle": "Billecart-Salmon \"Cuvée Elisabeth Salmon\" Rosé Brut, 2009",
+      "bin": "3223",
+      "size": "750ml",
+      "printed": "$450",
+      "catalogueLine": 2329,
+      "facts": [
+        {
+          "fact": "Billecart-Salmon (Mareuil-sur-Aÿ, founded 1818) takes its name from the marriage of Nicolas François Billecart and Elisabeth Salmon; Cuvée Elisabeth Salmon is its prestige vintage rosé, Pinot Noir and Chardonnay.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n465": {
+      "bottle": "Bollinger \"La Grande Année\" Brut, 2015",
+      "bin": "29566",
+      "size": "750ml",
+      "printed": "$495",
+      "catalogueLine": 2414,
+      "facts": [
+        {
+          "fact": "La Grande Année (the great year) is Bollinger’s vintage Champagne, made only in years the house judges worthy, Pinot Noir-led with Chardonnay and fermented entirely in oak barrels.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n405": {
+      "bottle": "Jacques Selosse \"Initial\" Blanc de Blancs (10.16.23) Brut, NV",
+      "bin": "31713",
+      "size": "750ml",
+      "printed": "$560",
+      "catalogueLine": 2110,
+      "facts": [
+        {
+          "fact": "Jacques Selosse is a grower in Avize, a Grand Cru village of the Côte des Blancs; Anselme Selosse, who succeeded his father Jacques, ferments and ages in oak barrels in the manner of white Burgundy and inspired a generation of growers. Initial is a Blanc de Blancs blended from several harvests.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Binwise paste prints the Initial as Jacques Selosse \"Initial\" Blanc de Blancs (10.16.23) Brut, the date being its disgorgement.",
+          "how": "list"
+        }
+      ]
+    },
+    "n528": {
+      "bottle": "Krug \"Grande Cuvée 170th Edition\" Brut, NV",
+      "bin": "31251",
+      "size": "750ml",
+      "printed": "$615",
+      "catalogueLine": 2729,
+      "facts": [
+        {
+          "fact": "Krug is a Champagne house in Reims, founded in 1843, making only prestige Champagne; Grande Cuvée blends wines of many years and plots (often more than a hundred), first fermented in small oak casks, and each blend is numbered by edition.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "Our list carries Krug Grande Cuvée 169th and 170th Editions (bins 31466 and 31251) and a Grande Cuvée half-bottle (bin 32711, $305).",
+          "how": "list; pack (Krug half-bottle card)"
+        }
+      ]
+    },
+    "n568": {
+      "bottle": "Rare Brut, 2013",
+      "bin": "32471",
+      "size": "750ml",
+      "printed": "$650",
+      "catalogueLine": 2929,
+      "facts": [
+        {
+          "fact": "Rare began as the prestige cuvée of Piper-Heidsieck, Chardonnay-led with Pinot Noir; it is now presented as its own name. The glass is poured by Coravin and its vintage is disputed (2012 on Binwise, 2013 Rare Millésime on the current menu).",
+          "how": "pack; guide.txt (Rare Brut 2012 entry); knowledge (now its own name)"
+        }
+      ]
+    },
+    "n538": {
+      "bottle": "Louis Roederer \"Cristal\" Brut, 2015",
+      "bin": "31943",
+      "size": "750ml",
+      "printed": "$775",
+      "catalogueLine": 2779,
+      "facts": [
+        {
+          "fact": "Cristal, the prestige vintage of Louis Roederer (Reims), was first made in 1876 for Tsar Alexander II of Russia, who wanted a clear bottle; it is still bottled in clear glass and wrapped against light, made only in good years from Pinot Noir and Chardonnay.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "Light can spoil Champagne in clear glass (light strike).",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n529": {
+      "bottle": "Krug Rosé Brut, NV",
+      "bin": "31481",
+      "size": "750ml",
+      "printed": "$865",
+      "catalogueLine": 2734,
+      "facts": [
+        {
+          "fact": "Krug Rosé is a multi-vintage prestige rosé of Pinot Noir, Chardonnay and Meunier, its wines first fermented in small oak casks, colored with red wine from Pinot Noir, and numbered by edition.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The New Orleans Shrimp & Grits carries Louisiana shrimp, a fried pimento cheese grit cake, tasso and Creole sauce.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n495": {
+      "bottle": "Dom Pérignon \" P2\" Brut, 2006",
+      "bin": "34108",
+      "size": "750ml",
+      "printed": "$1260",
+      "catalogueLine": 2564,
+      "facts": [
+        {
+          "fact": "Dom Pérignon is the prestige vintage Champagne of Moët & Chandon (Épernay), Chardonnay and Pinot Noir, named for the Benedictine monk Dom Pierre Pérignon of the abbey of Hautvillers; P2, the second plénitude, is the same vintage released after much longer aging on the lees.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Binwise paste prints it as Dom Pérignon \" P2\" Brut, 2006, 1260.",
+          "how": "list"
+        }
+      ]
+    },
+    "n580": {
+      "bottle": "Salon \"Le Mesnil\" Blanc de Blancs Brut, 2013",
+      "bin": "32684",
+      "size": "750ml",
+      "printed": "$2080",
+      "catalogueLine": 2989,
+      "facts": [
+        {
+          "fact": "Salon makes a single wine, a Blanc de Blancs from Chardonnay grown in Le Mesnil-sur-Oger (Grand Cru, Côte des Blancs), from a single vintage, only in years it judges exceptional; in other years the grapes go to its sister house Delamotte. Vintages are released after about a decade.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "Bin 32684 is printed for Salon \"Le Mesnil\" Blanc de Blancs Brut 2013 $2080 (entry 580) and for Pétrus 1989 $14000 (entry 2403), on the Bordeaux pages; recorded by the repairer, 4 October 2026.",
+          "how": "page: binwise-wine-list-2026-10-03.txt, the catalogue entries named"
+        }
+      ]
+    },
+    "n2193": {
+      "bottle": "Louis Jadot Villages • 375 ml Half-bottle, 2021",
+      "bin": "32721",
+      "size": "375ml",
+      "printed": "$25",
+      "catalogueLine": 11367,
+      "facts": [
+        {
+          "fact": "Louis Jadot is a Burgundy house based in Beaune; Beaujolais-Villages is the appellation of the villages in the granite hills of northern Beaujolais, at the southern end of Burgundy, and its grape is Gamay.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Binwise paste prints this half-bottle as Louis Jadot Villages • 375 ml Half-bottle, under France, Burgundy, Red, Beaujolais.",
+          "how": "list"
+        }
+      ]
+    },
+    "n1315": {
+      "bottle": "Chalk Hill • 375 ml Half-bottle, 2021",
+      "bin": "14872",
+      "size": "375ml",
+      "printed": "$30",
+      "catalogueLine": 6821,
+      "facts": [
+        {
+          "fact": "Chalk Hill is an estate in Sonoma County, California, named for the Chalk Hill area in the hills east of Windsor, southeast of Healdsburg, on the eastern edge of the Russian River Valley (corrected by the repairer, 4 October 2026: the card first placed it northeast of Healdsburg); its Chardonnay is made in a full California style.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1380": {
+      "bottle": "Duckhorn North Coast • 375ml Half-bottle, 2023",
+      "bin": "15263",
+      "size": "375ml",
+      "printed": "$35",
+      "catalogueLine": 7155,
+      "facts": [
+        {
+          "fact": "Duckhorn Vineyards is a Napa Valley winery best known for Merlot; its Sauvignon Blanc carries the North Coast appellation, from vineyards across California’s North Coast.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "Our list carries Duckhorn North Coast Sauvignon Blanc half (bin 15263), Duckhorn Napa Valley Merlot half (bin 14072) and a Duckhorn Cabernet Sauvignon magnum (bin 108222).",
+          "how": "list"
+        }
+      ]
+    },
+    "n708": {
+      "bottle": "Thierry & Pascale Matrot • 375ml Half-bottle, 2022",
+      "bin": "32852",
+      "size": "375ml",
+      "printed": "$45",
+      "catalogueLine": 3660,
+      "facts": [
+        {
+          "fact": "Thierry and Pascale Matrot run a family domaine in Meursault (Côte de Beaune); Bourgogne Blanc is the regional appellation for white Burgundy, Chardonnay.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Binwise paste prints bin 32852 for both Thierry & Pascale Matrot • 375ml Half-bottle 2022 (45) and Domaine Louis Michel \"Montmains\" • 375ml Half-bottle 2023 (65).",
+          "how": "list"
+        },
+        {
+          "fact": "The dinner tasting dispute names Domaine Matrot Meursault 2023 from an indexed copy; the printed menu pairs the lobster with Fichet Château London Mâcon-Igé 2024.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n390": {
+      "bottle": "Tribaut-Schloesser \"Origine\" Brut • 375ml Half-bottle, NV",
+      "bin": "32361",
+      "size": "375ml",
+      "printed": "$50",
+      "catalogueLine": 2033,
+      "facts": [
+        {
+          "fact": "Tribaut-Schloesser is a family Champagne house in Romery, north of Épernay in the Vallée de la Marne, founded in 1929; Origine Brut is Meunier-led (about half) with Chardonnay and Pinot Noir from eight Marne Valley and Montagne de Reims terroirs, with some oak-aged reserve wine.",
+          "how": "search 4 October 2026, champagne.tribaut.wine (Origine page) and wine.com"
+        },
+        {
+          "fact": "Meunier is one of the three main Champagne grapes, related to Pinot Noir.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n643": {
+      "bottle": "Domaine Huet \"Le Haut Lieu\" Vouvray Sec • 375ml Half-bottle, 2019",
+      "bin": "32962",
+      "size": "375ml",
+      "printed": "$50",
+      "catalogueLine": 3326,
+      "facts": [
+        {
+          "fact": "Le Haut-Lieu is the vineyard where Domaine Huet began in Vouvray; Sec means dry; Chenin Blanc ages well, gaining honey and beeswax while keeping its acidity.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1187": {
+      "bottle": "Bründlmayer \"Terrassen\" Classic Grüner Veltliner• 375ml Half-bottle, 2023",
+      "bin": "32931",
+      "size": "375ml",
+      "printed": "$50",
+      "catalogueLine": 6141,
+      "facts": [
+        {
+          "fact": "Bründlmayer is a family estate in Langenlois, in the Kamptal region of Austria northwest of Vienna; Grüner Veltliner is Austria’s own white grape, known for a white pepper note; Terrassen comes from terraced vineyards.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "Artichokes contain cynarin, which makes many wines taste sweet or metallic; Grüner Veltliner is a classic match.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n2609": {
+      "bottle": "Domaine Raspail-Ay Gigondas • 375 ml Half-bottle, 2021",
+      "bin": "32733",
+      "size": "375ml",
+      "printed": "$55",
+      "catalogueLine": 13486,
+      "facts": [
+        {
+          "fact": "Domaine Raspail-Ay is a family estate in Gigondas, a Southern Rhône village beneath the limestone ridge of the Dentelles de Montmirail; Gigondas reds are Grenache-led with Syrah and often Mourvèdre.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The breakfast tasting pairs the Petite Filet Mignon with a 4 oz pour of Domaine de Châteaumar Cuvée Vincent Côtes du Rhône.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n606": {
+      "bottle": "Ferrari Brut Trento • 375ml Half-bottle, NV",
+      "bin": "32833",
+      "size": "375ml",
+      "printed": "$60",
+      "catalogueLine": 3132,
+      "facts": [
+        {
+          "fact": "Ferrari Brut (Trento DOC) is all Chardonnay from mountain vineyards around Trento, made by the traditional method.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n645": {
+      "bottle": "Domaine Huet \"Le Mont\" Vouvray Demi-Sec • 375ml Half-bottle, 2023",
+      "bin": "32952",
+      "size": "375ml",
+      "printed": "$60",
+      "catalogueLine": 3336,
+      "facts": [
+        {
+          "fact": "Le Mont is one of Domaine Huet’s three Vouvray vineyards (with Le Haut-Lieu and the Clos du Bourg); demi-sec means half dry, gently sweet.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The selection’s value bottle for the Baked Apple is Baumard Clos Sainte Catherine and its sweet spot is Huet Le Mont Moelleux Vouvray 2009.",
+          "how": "research/bottle-selection-2026-10-04.json"
+        }
+      ]
+    },
+    "n3066": {
+      "bottle": "Duckhorn Napa Valley • 375ml Half-bottle, 2020",
+      "bin": "14072",
+      "size": "375ml",
+      "printed": "$60",
+      "catalogueLine": 15807,
+      "facts": [
+        {
+          "fact": "Duckhorn Vineyards (Napa Valley) made its name with Merlot and is still best known for it; its Napa Valley Merlot is aged in oak.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Binwise paste prints this half as Duckhorn Napa Valley • 375ml Half-bottle 2020, under United States, Other, Red, Merlot.",
+          "how": "list"
+        }
+      ]
+    },
+    "n545": {
+      "bottle": "Nicolas Feuillatte \"Reserve\" Brut • 375ml Half-bottle, NV",
+      "bin": "32753",
+      "size": "375ml",
+      "printed": "$65",
+      "catalogueLine": 2814,
+      "facts": [
+        {
+          "fact": "Nicolas Feuillatte is a Champagne brand made by a large growers’ cooperative based in Chouilly, near Épernay; its Réserve Brut blends Pinot Noir and Meunier with Chardonnay.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n750": {
+      "bottle": "Domaine Louis Michel \"Montmains\" • 375ml Half-bottle, 2023",
+      "bin": "32852",
+      "size": "375ml",
+      "printed": "$65",
+      "catalogueLine": 3874,
+      "facts": [
+        {
+          "fact": "Domaine Louis Michel is a family estate in Chablis that makes all its wines in steel tanks without oak; Montmains is a Chablis Premier Cru; all Chablis is Chardonnay, from the northern tip of Burgundy.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n2708": {
+      "bottle": "Bergstrom \"Reserve\" Willamette Valley • 375 ml Half-bottle, 2022",
+      "bin": "32863",
+      "size": "375ml",
+      "printed": "$65",
+      "catalogueLine": 14003,
+      "facts": [
+        {
+          "fact": "Bergstrom is a family winery near Newberg in Oregon’s Willamette Valley, known for Pinot Noir and Chardonnay; Willamette is said wil-AM-it. The Willamette Valley is the best known home of American Pinot Noir.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Blackened Tofu carries New Orleans Tien Dat tofu, Two Brooks Farm rice grits and preserved shiitake mushrooms.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n616": {
+      "bottle": "Schramsberg \"Blanc de Blancs\" North Coast • 375ml Half-bottle, 2021",
+      "bin": "3274",
+      "size": "375ml",
+      "printed": "$70",
+      "catalogueLine": 3184,
+      "facts": [
+        {
+          "fact": "Schramsberg Vineyards in Calistoga (north Napa Valley) makes only traditional method sparkling wine, aged in hillside caves; its Blanc de Blancs is all Chardonnay. In 1972 President Richard Nixon toasted Premier Zhou Enlai in Beijing with Schramsberg Blanc de Blancs, the Toast to Peace.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n3091": {
+      "bottle": "Ridge Vineyards \"Lytton Springs\" Dry Creek Valley • 375 ml Half-bottle, 2021",
+      "bin": "32922",
+      "size": "375ml",
+      "printed": "$70",
+      "catalogueLine": 15934,
+      "facts": [
+        {
+          "fact": "Ridge Vineyards is famous for Monte Bello (Cabernet, Santa Cruz Mountains) and old vine Zinfandel; Lytton Springs is its old vine vineyard in Dry Creek Valley, Sonoma, Zinfandel interplanted with Petite Sirah and Carignane; Ridge prints ingredients on its back labels. White Zinfandel is a sweet pink style.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1186": {
+      "bottle": "Bründlmayer \"Heiligenstein\" Riesling • 375ml Half-bottle, 2022",
+      "bin": "32841",
+      "size": "375ml",
+      "printed": "$80",
+      "catalogueLine": 6136,
+      "facts": [
+        {
+          "fact": "The Heiligenstein (Zöbinger Heiligenstein) is a steep hill above Zöbing in Austria’s Kamptal, one of the country’s great Riesling vineyards; Bründlmayer of Langenlois is its best known grower. Austrian Riesling is usually dry.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1215": {
+      "bottle": "Dr. Hermann \"Erdener Prälat\" Auslese • 375ml Half-bottle, 2014",
+      "bin": "31122",
+      "size": "375ml",
+      "printed": "$80",
+      "catalogueLine": 6293,
+      "facts": [
+        {
+          "fact": "Dr. Hermann is a family estate in Erden on the Mosel; the Erdener Prälat is a small, steep vineyard of red slate on the river, one of the warmest sites in the Mosel valley. Auslese (selected harvest) is riper and sweeter than Spätlese.",
+          "how": "knowledge; pack (the existing Dr. Hermann card)"
+        }
+      ]
+    },
+    "n533": {
+      "bottle": "Laurent Perrier \"Harmony\" Demi Sec • 375ml Half-bottle, NV",
+      "bin": "32732",
+      "size": "375ml",
+      "printed": "$85",
+      "catalogueLine": 2754,
+      "facts": [
+        {
+          "fact": "Laurent-Perrier is a Champagne house in Tours-sur-Marne, in the Vallée de la Marne; Harmony is its demi-sec (gently sweet) Champagne.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n3535": {
+      "bottle": "Ridge Vineyards \"Essence\" Zinfandel Sonoma • 375ml, 2014",
+      "bin": "19242",
+      "size": "375ml",
+      "printed": "$105",
+      "catalogueLine": 18237,
+      "facts": [
+        {
+          "fact": "Essence is Ridge Vineyards’ rare late harvest Zinfandel, first made from Geyserville grapes in 1966 and produced only in exceptional years, from grapes left to dehydrate on the vine; fermentation stops with substantial residual sugar. It is not fortified.",
+          "how": "search 4 October 2026, ridgewine.com (The Essence of Essence); knowledge"
+        },
+        {
+          "fact": "Cherries Jubilee is flambéed tableside with fresh tart black cherries, housemade vanilla ice cream and Luxardo sauce.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n1992": {
+      "bottle": "Bouchard Père & Fils \"Clos de la Mousse\" • 375 ml Half-bottle, 2022",
+      "bin": "32712",
+      "size": "375ml",
+      "printed": "$110",
+      "catalogueLine": 10332,
+      "facts": [
+        {
+          "fact": "Bouchard Père & Fils is a great house of Beaune; the Clos de la Mousse is a small walled Beaune Premier Cru that Bouchard owns entirely (a monopole). A clos is a vineyard enclosed by a wall.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Eggs Owen carries red wine-braised short rib débris and marchand de vin sauce.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n3024": {
+      "bottle": "Ridge Vineyards \"Estate\" Santa Cruz Mountains • 375ml Half-bottle, 2020",
+      "bin": "32942",
+      "size": "375ml",
+      "printed": "$110",
+      "catalogueLine": 15590,
+      "facts": [
+        {
+          "fact": "Ridge Vineyards’ Estate Cabernet comes from its vineyards around Monte Bello, high on a ridge in the Santa Cruz Mountains south of San Francisco; Monte Bello is its top Cabernet.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Roasted Chateaubriand is Creekstone Farms beef tenderloin with sauce Foyot, for two.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n864": {
+      "bottle": "Louis Jadot • 375ml Half-bottle, 2022",
+      "bin": "32752",
+      "size": "375ml",
+      "printed": "$115",
+      "catalogueLine": 4466,
+      "facts": [
+        {
+          "fact": "Louis Jadot is a Burgundy house in Beaune; Meursault is the Côte de Beaune village best known for rich, nutty white Burgundy; village Meursault is Chardonnay, usually barrel aged.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The printed dinner tasting pairs the Louisiana BBQ Lobster with Fichet Château London Mâcon-Igé 2024; the lobster carries ’nduja and a white bean stew.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n426": {
+      "bottle": "Veuve Fourny et Fils Premier Cru Blanc de Blancs Extra Brut • 375ml Half-bottle, NV",
+      "bin": "32921",
+      "size": "375ml",
+      "printed": "$120",
+      "catalogueLine": 2215,
+      "facts": [
+        {
+          "fact": "Veuve Fourny et Fils is a family grower in Vertus, a Premier Cru village at the southern end of the Côte des Blancs.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "Our list carries Veuve Fourny et Fils Premier Cru Blanc de Blancs Extra Brut and Premier Cru Rosé Brut half-bottles (bins 32921 and 32924).",
+          "how": "list"
+        }
+      ]
+    },
+    "n3551": {
+      "bottle": "La Cigarerra Manzanilla Sanlúcar de Barrameda • 375ml, NV",
+      "bin": "14861",
+      "size": "375ml",
+      "printed": "$120",
+      "catalogueLine": 18328,
+      "facts": [
+        {
+          "fact": "Manzanilla is the sherry of Sanlúcar de Barrameda, at the mouth of the Guadalquivir in southern Spain, made from Palomino and aged under flor (a layer of yeast); it is bone dry and fortified. La Cigarrera is a family bodega in Sanlúcar. Opened Manzanilla fades within days.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Binwise paste spells it La Cigarerra Manzanilla Sanlúcar de Barrameda • 375ml. The Turtle Soup is finished with aged Sherry.",
+          "how": "list; pack"
+        }
+      ]
+    },
+    "n3558": {
+      "bottle": "Dow's • 375ml, 2000",
+      "bin": "192843",
+      "size": "375ml",
+      "printed": "$120",
+      "catalogueLine": 18365,
+      "facts": [
+        {
+          "fact": "Dow’s is a Port house of the Douro valley in northern Portugal, run by the Symington family, known for a drier style of Port; vintage Port is made only in declared years (2000 was widely declared) and ages mostly in bottle, throwing sediment.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Binwise paste prints this as Dow’s • 375ml, 2000, 120, under Fortified Wines, Portugal.",
+          "how": "list"
+        }
+      ]
+    },
+    "n3565": {
+      "bottle": "Niepoort Colheita • 375ml Half-bottle, 1997",
+      "bin": "192423",
+      "size": "375ml",
+      "printed": "$120",
+      "catalogueLine": 18400,
+      "facts": [
+        {
+          "fact": "Niepoort is a family Port house of Dutch origin in Porto and the Douro valley, known for aged tawnies; a Colheita is a tawny Port from a single harvest aged for years in cask, with the harvest and bottling dates on the label; a tawny throws no sediment.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Café Brûlot Coffee Cake is chicory coffee and bittersweet chocolate cake with pecans, spiced citrus glaze and whipped crème fraîche.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n425": {
+      "bottle": "Veuve Fourny et Fils Premier Cru Rosé Brut • 375ml Half-bottle, NV",
+      "bin": "32924",
+      "size": "375ml",
+      "printed": "$125",
+      "catalogueLine": 2210,
+      "facts": [
+        {
+          "fact": "Veuve Fourny et Fils is a family grower in Vertus, a Premier Cru village of the Côte des Blancs; its rosé carries the Premier Cru rating.",
+          "how": "knowledge; list"
+        }
+      ]
+    },
+    "n1944": {
+      "bottle": "Domaine Henri Gouges • 375 ml Half-bottle, 2021",
+      "bin": "32844",
+      "size": "375ml",
+      "printed": "$130",
+      "catalogueLine": 10080,
+      "facts": [
+        {
+          "fact": "Domaine Henri Gouges is a family domaine in Nuits-Saint-Georges (Côte de Nuits), one of the reference names of the village; village Nuits-Saint-Georges is sturdier and more savory than Beaune.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The printed dinner tasting describes Roasted Rohan Duck Breast with cane syrup-glazed peaches and candied hazelnuts.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n1267": {
+      "bottle": "Dönhoff \"Oberhäuser Brücke\" Goldkapsel Auslese • 375ml Half-bottle, 2023",
+      "bin": "32821",
+      "size": "375ml",
+      "printed": "$135",
+      "catalogueLine": 6559,
+      "facts": [
+        {
+          "fact": "Dönnhoff is a family estate in Oberhausen on the Nahe (a valley west of the Rhine); the Oberhäuser Brücke is a tiny vineyard by the old bridge over the Nahe, owned solely by Dönnhoff. The list spells the estate Dönhoff; its name is Dönnhoff, with two n’s. On a German Auslese a gold capsule (Goldkapsel) marks a richer, more selected wine.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Lemon Tart carries yuzu mousse, lemon jelly, sweet pastry crumb and toasted meringue.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n3521": {
+      "bottle": "Château Suduirant Sauternes • 375ml Half-bottle, 2016",
+      "bin": "192321",
+      "size": "375ml",
+      "printed": "$135",
+      "catalogueLine": 18163,
+      "facts": [
+        {
+          "fact": "Château Suduiraut is in Preignac, next to Château d’Yquem, ranked Premier Cru Classé in the 1855 Sauternes classification; Sauternes is made from Sémillon and Sauvignon Blanc affected by noble rot (botrytis), hand picked in several passes.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Binwise paste spells it Château Suduirant Sauternes • 375ml Half-bottle, 2016, 135.",
+          "how": "list"
+        }
+      ]
+    },
+    "n1265": {
+      "bottle": "Dönhoff \"Niederhäuser Hermannshöhle\" Goldkapsel Auslese • 375ml Half-bottle, 2023",
+      "bin": "32843",
+      "size": "375ml",
+      "printed": "$145",
+      "catalogueLine": 6549,
+      "facts": [
+        {
+          "fact": "The Niederhäuser Hermannshöhle in Niederhausen is the most famous vineyard of the Nahe, with mixed volcanic and slate soils; Dönnhoff of neighboring Oberhausen (the list spells it Dönhoff) is its best known grower. Sweet wine with salty cheese is a classic contrast.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Cheese Board carries three cheeses, seasonal chutney, Brennan’s honey and fruit and nut bread; the Blackberry Trifle carries blackberry curd and lemon curd.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n3533": {
+      "bottle": "Grgich Hills \"Violetta\" Late Harvest Napa Valley • 375ml, 2012",
+      "bin": "19291",
+      "size": "375ml",
+      "printed": "$145",
+      "catalogueLine": 18227,
+      "facts": [
+        {
+          "fact": "Grgich Hills Estate in Rutherford, Napa Valley, was founded by Mike Grgich, who made the 1973 Chateau Montelena Chardonnay that won the Paris tasting of 1976. Violetta is its late harvest wine of Sauvignon Blanc, Riesling and Gewürztraminer affected by botrytis in its low-lying American Canyon vineyard, made only several times in twenty years.",
+          "how": "knowledge; search 4 October 2026, grapex.com and napawineproject.com (Violetta and Grgich Hills pages)"
+        },
+        {
+          "fact": "World Famous Bananas Foster is flambéed tableside, minimum 2 people per order.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n2429": {
+      "bottle": "Château Troplong-Mondot 1er Grand Cru Classé B • 375ml Half-bottle, 2020",
+      "bin": "32933",
+      "size": "375ml",
+      "printed": "$175",
+      "catalogueLine": 12562,
+      "facts": [
+        {
+          "fact": "Château Troplong Mondot sits on one of the highest points of the Saint-Émilion limestone plateau (Right Bank, Bordeaux), a Premier Grand Cru Classé of Saint-Émilion, Merlot-led with Cabernet Franc and Cabernet Sauvignon.",
+          "how": "knowledge; list (printed 1er Grand Cru Classé B)"
+        },
+        {
+          "fact": "The Creole-Spiced Hanger Steak carries a smoked potato pavé, a sunny side up egg and French béarnaise.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n2899": {
+      "bottle": "Joseph Phelps \"Insignia\" Napa Valley • 375ml Half-bottle, 2011",
+      "bin": "1568",
+      "size": "375ml",
+      "printed": "$240",
+      "catalogueLine": 14961,
+      "facts": [
+        {
+          "fact": "Joseph Phelps Vineyards is in St. Helena, Napa Valley; Insignia, first made in 1974, was one of California’s first proprietary Bordeaux-style blends and is the winery’s flagship, Cabernet Sauvignon-led.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1259": {
+      "bottle": "Keller \"PIUS\" Auslese • 375ml Half-bottle, 2022",
+      "bin": "32951",
+      "size": "375ml",
+      "printed": "$245",
+      "catalogueLine": 6517,
+      "facts": [
+        {
+          "fact": "Weingut Keller is a family estate in Flörsheim-Dalsheim, Rheinhessen, among the most admired growers in Germany (Klaus Peter Keller). PIUS is an Auslese blended from late harvest and botrytis grapes whose varieties change by vintage (often including Rieslaner, Scheurebe, Silvaner and Pinot Gris).",
+          "how": "search 4 October 2026, wallywine.com and moorebrothers.com (PIUS Auslese pages); knowledge"
+        }
+      ]
+    },
+    "n2935": {
+      "bottle": "Opus One Napa Valley • 375ml Half-bottle, 2015",
+      "bin": "32762",
+      "size": "375ml",
+      "printed": "$275",
+      "catalogueLine": 15141,
+      "facts": [
+        {
+          "fact": "Opus One (Oakville, Napa Valley) was founded by Robert Mondavi and Baron Philippe de Rothschild of Château Mouton Rothschild; its first vintage was 1979; a single Cabernet Sauvignon-led Bordeaux-style blend.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n3525": {
+      "bottle": "Château d'Yquem Sauternes • 375ml Half-bottle, 2015",
+      "bin": "1926",
+      "size": "375ml",
+      "printed": "$450",
+      "catalogueLine": 18183,
+      "facts": [
+        {
+          "fact": "Château d’Yquem is the only Sauternes ranked Premier Cru Supérieur in the 1855 classification; its pickers make many passes taking only botrytized berries; in poor years no Yquem is made; Sémillon-led with Sauvignon Blanc.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n3526": {
+      "bottle": "Château d'Yquem Sauternes • 375ml Half-bottle, 2016",
+      "bin": "19271",
+      "size": "375ml",
+      "printed": "$450",
+      "catalogueLine": 18188,
+      "facts": [
+        {
+          "fact": "Château d’Yquem is ranked Premier Cru Supérieur, alone above all other Sauternes, in the 1855 classification; Sémillon-led with Sauvignon Blanc, picked berry by berry over many passes; opened Sauternes keeps well recorked and chilled.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n197": {
+      "bottle": "Mas de Valeriole \"Vé\" Méditerranée FR • 1.5L Magnum, 2025",
+      "bin": "1569",
+      "size": "1.5L",
+      "printed": "$85",
+      "catalogueLine": 1048,
+      "facts": [
+        {
+          "fact": "Mas de Valériole is a family (Michel family) estate in the Camargue, about ten miles south of Arles, cooled by Mediterranean wind; Vé is a Provençal expression meaning look at that; the Vé rosé (IGP Méditerranée) blends Caladoc (Grenache crossed with Malbec), Merlot and Marselan, direct pressed and kept in stainless steel.",
+          "how": "search 4 October 2026, 67wine.com, serendipitywines.com and the importer fact sheet (vvg.wine)"
+        },
+        {
+          "fact": "A magnum holds 1.5 liters, two standard bottles, about ten to twelve glasses.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n147": {
+      "bottle": "Pierre Péters \"Cuvée de Réserve\" Brut • 1.5L Magnum, NV",
+      "bin": "12494",
+      "size": "1.5L",
+      "printed": "$190",
+      "catalogueLine": 784,
+      "facts": [
+        {
+          "fact": "Pierre Péters is a family grower in Le Mesnil-sur-Oger, a Grand Cru village of the Côte des Blancs; Cuvée de Réserve is a Grand Cru Blanc de Blancs whose reserve wine comes from a perpetual reserve. Salon is also from Le Mesnil.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "Champagne ages more slowly in a magnum, with less air for the volume of wine.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n230": {
+      "bottle": "Jean Foillard \"Côte du Py\" Morgon Beaujolais • 1.5L Magnum, 2023",
+      "bin": "11371",
+      "size": "1.5L",
+      "printed": "$250",
+      "catalogueLine": 1217,
+      "facts": [
+        {
+          "fact": "Jean Foillard is a grower in Morgon, one of the ten Beaujolais crus; with Marcel Lapierre, Guy Breton and Jean-Paul Thévenet he was one of the four growers who led Beaujolais back to traditional low intervention methods (whole bunches, native yeast, little added). The Côte du Py is Morgon’s hill of old volcanic schist; the grape is Gamay.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n287": {
+      "bottle": "Duckhorn Cabernet Sauvignon Napa Valley • 1.5L Magnum, 2022",
+      "bin": "108222",
+      "size": "1.5L",
+      "printed": "$255",
+      "catalogueLine": 1508,
+      "facts": [
+        {
+          "fact": "Duckhorn Vineyards (Napa Valley) is best known for Merlot; its Napa Valley Cabernet Sauvignon is blended from vineyards across the valley and aged in oak.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n119": {
+      "bottle": "Billecart-Salmon \"Brennan's 80th Anniversary Sous Bois\" Brut • 1.5L Magnum, NV",
+      "bin": "117342",
+      "size": "1.5L",
+      "printed": "$350",
+      "catalogueLine": 644,
+      "facts": [
+        {
+          "fact": "Billecart-Salmon made the Brennan’s 80th Anniversary Sous Bois Brut for the 80th year; Sous Bois means under wood, the base wines fermented in oak barrels. The Binwise list prints the magnum as bin 117342 at 350; the Birthday Bubbles page prints it at $350.00.",
+          "how": "list; pack (the existing anniversary magnum card); knowledge (Sous Bois)"
+        }
+      ]
+    },
+    "n200": {
+      "bottle": "Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux • 1.5L Magnum, 2015",
+      "bin": "33553",
+      "size": "1.5L",
+      "printed": "$600",
+      "catalogueLine": 1067,
+      "facts": [
+        {
+          "fact": "Château Cos d’Estournel (Saint-Estèphe, Médoc) was ranked Second Growth in the 1855 classification; its founder, Louis-Gaspard d’Estournel, traded with India and built pagoda towers on the château; Cabernet Sauvignon with Merlot. Château Cos Labory is a different Saint-Estèphe estate.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "Bin 33553 is printed for this magnum under Large Formats at $600 (entry 200) and again on the Saint-Estèphe page as Château Cos d’Estournel 2015 at $600 with no size (entry 2215); whether that is the same magnum is a question for the sommelier; recorded by the repairer, 4 October 2026.",
+          "how": "page: binwise-wine-list-2026-10-03.txt, the catalogue entries named"
+        }
+      ]
+    },
+    "n173": {
+      "bottle": "J.J. Prum \"Wehlener Sonnenuhr\" Riesling GKA Mosel • 1.5L Magnum, 2015",
+      "bin": "12135",
+      "size": "1.5L",
+      "printed": "$615",
+      "catalogueLine": 924,
+      "facts": [
+        {
+          "fact": "Joh. Jos. Prüm (J.J. Prüm) is the most famous estate of Wehlen on the Mosel, run by the Prüm family; the Wehlener Sonnenuhr is a steep blue slate vineyard named for the sundial built into it; GKA means Goldkapsel Auslese; Prüm Rieslings are known for aging for decades.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n441": {
+      "bottle": "Billecart-Salmon \"Réserve\" Brut • 15L Nebuchadnezzar, NV",
+      "bin": "29001",
+      "size": "15L",
+      "printed": "$4900",
+      "catalogueLine": 2294,
+      "facts": [
+        {
+          "fact": "A Nebuchadnezzar holds 15 liters, the same as twenty standard 750 ml bottles, about a hundred glasses or more; a bottle this size is poured from a cradle or by two people.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Binwise paste prints Billecart-Salmon \"Réserve\" Brut • 15L Nebuchadnezzar, NV, 4900, bin 29001, under Champagne, Grande Marques.",
+          "how": "list"
+        }
+      ]
+    },
+    "n780": {
+      "bottle": "Louis Michel, 2022",
+      "bin": "22411",
+      "size": "750ml",
+      "printed": "$80",
+      "catalogueLine": 4026,
+      "facts": [
+        {
+          "fact": "Domaine Louis Michel is a family estate in Chablis that makes all its wines in steel tanks without oak; Chablis is the northernmost part of Burgundy, with a cool climate and chalky clay soils, and all Chablis is Chardonnay.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Redfish Véronique carries hibiscus-pickled grapes, braised leeks, fingerling potatoes and a preserved lemon beurre blanc.",
+          "how": "pack"
+        },
+        {
+          "fact": "Bin 22411 is printed for Louis Michel Chablis 2022 $80 (entry 780) and for Domaine Justin Boxler \"Sommerberg\" 2017 $125 (entry 1085), an Alsace Riesling; recorded by the repairer, 4 October 2026.",
+          "how": "page: binwise-wine-list-2026-10-03.txt, the catalogue entries named"
+        }
+      ]
+    },
+    "n1047": {
+      "bottle": "Domaine du Roc des Boutires \"En Bertilionne\" Pouilly-Fuissé, 2020",
+      "bin": "22762",
+      "size": "750ml",
+      "printed": "$90",
+      "catalogueLine": 5407,
+      "facts": [
+        {
+          "fact": "Domaine du Roc des Boutires (Pouilly-Fuissé, Mâconnais) has been owned since 2016 by the Parinet family of Château du Moulin-à-Vent; En Bertilionne is a 0.57 hectare east-facing parcel in the heart of Pouilly, facing the Roche de Solutré, Chardonnay on limestone.",
+          "how": "search 4 October 2026, wineanorak.com (Roc des Boutires) and b-21.com"
+        },
+        {
+          "fact": "Pouilly-Fuissé is Chardonnay from the Mâconnais; Pouilly-Fumé is Sauvignon Blanc from the Loire.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n698": {
+      "bottle": "Jean-Philippe Fichet, 2023",
+      "bin": "24742",
+      "size": "750ml",
+      "printed": "$95",
+      "catalogueLine": 3610,
+      "facts": [
+        {
+          "fact": "Jean-Philippe Fichet is a grower in Meursault (Côte de Beaune); Bourgogne Blanc is the regional white Burgundy appellation, Chardonnay.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The printed dinner tasting pairs the lobster with Fichet Château London Mâcon-Igé 2024.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n1051": {
+      "bottle": "Les Héritiers du Comte Lafon Mâcon Milly-Lamartine, 2023",
+      "bin": "25761",
+      "size": "750ml",
+      "printed": "$100",
+      "catalogueLine": 5427,
+      "facts": [
+        {
+          "fact": "Les Héritiers du Comte Lafon is the Mâconnais estate of the Lafon family of Domaine des Comtes Lafon (Meursault), with vines around Milly-Lamartine; the Mâconnais is southern Burgundy, south of the Côte d’Or.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Crab & Corn Omelette carries Louisiana lump crab, roasted sweet corn, house-made miso butter, lemon, basil and Marcona almond gremolata.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n1046": {
+      "bottle": "Domaine Leflaive Mâcon Verzé, 2021",
+      "bin": "23211",
+      "size": "750ml",
+      "printed": "$160",
+      "catalogueLine": 5402,
+      "facts": [
+        {
+          "fact": "Domaine Leflaive is the great estate of Puligny-Montrachet and farms vines in Verzé in the Mâconnais, where it makes its Mâcon-Verzé.",
+          "how": "knowledge; pack (the Coravin glass)"
+        },
+        {
+          "fact": "The glass is Domaine Leflaive Mâcon-Verzé 2022 (Coravin) at $40; our list carries Leflaive Puligny-Montrachet 2016, Meursault Premier Cru Sous le Dos d’Ane 2017 and Chevalier-Montrachet 2015.",
+          "how": "pack; list"
+        }
+      ]
+    },
+    "n756": {
+      "bottle": "Jean-Paul & Benoît Droin \"Vaillons\", 2023",
+      "bin": "27663",
+      "size": "750ml",
+      "printed": "$175",
+      "catalogueLine": 3904,
+      "facts": [
+        {
+          "fact": "Jean-Paul and Benoît Droin are a father and son family estate in Chablis; Vaillons is a Chablis Premier Cru on the left bank of the Serein river; Chablis has seven Grand Crus.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n867": {
+      "bottle": "Raymond Dupont-Fahn \"Les Tillets\", 2022",
+      "bin": "22143",
+      "size": "750ml",
+      "printed": "$175",
+      "catalogueLine": 4481,
+      "facts": [
+        {
+          "fact": "Domaine Dupont-Fahn is a family estate in Tailly, just south of Meursault, now run by Raymond Dupont-Fahn (fifth generation); Les Tillets is a limestone, gravelly lieu-dit near 300 meters, one of the highest sites in Meursault, not classified Premier Cru, named for linden trees (tilleuls).",
+          "how": "search 4 October 2026, mwcwine.com (Raymond Dupont-Fahn) and idealwine.com"
+        },
+        {
+          "fact": "Bin 22143 is printed for Raymond Dupont-Fahn \"Les Tillets\" 2022 $175 (entry 867) and for Domaine de Trévallon Alpilles 2015 $165 (entry 2634), a Provence red; recorded by the repairer, 4 October 2026.",
+          "how": "page: binwise-wine-list-2026-10-03.txt, the catalogue entries named"
+        }
+      ]
+    },
+    "n847": {
+      "bottle": "Bitouzet-Prieur \"Les Corbins\", 2020",
+      "bin": "26337",
+      "size": "750ml",
+      "printed": "$210",
+      "catalogueLine": 4381,
+      "facts": [
+        {
+          "fact": "Bitouzet-Prieur is a family domaine of the Côte de Beaune (based in Volnay) with vines in Meursault; Les Corbins is a named vineyard classed as village Meursault. Dijon mustard and Meursault are both of Burgundy.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Poussin à la Moutarde is a sweet tea-brined and fried Cornish hen with turnips, shallots and a mustard cream sauce.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n875": {
+      "bottle": "Domaine Paul Pillot \"Le Charmois\", 2022",
+      "bin": "2174",
+      "size": "750ml",
+      "printed": "$215",
+      "catalogueLine": 4523,
+      "facts": [
+        {
+          "fact": "Domaine Paul Pillot is a family estate in Chassagne-Montrachet; Saint-Aubin is a hillside village behind Puligny and Chassagne, and Le Charmois is a Saint-Aubin Premier Cru near the Puligny boundary.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n926": {
+      "bottle": "François Carillon, 2022",
+      "bin": "34233",
+      "size": "750ml",
+      "printed": "$275",
+      "catalogueLine": 4784,
+      "facts": [
+        {
+          "fact": "The Carillon family has farmed in Puligny-Montrachet for centuries; in 2010 Domaine Louis Carillon was divided between the brothers Jacques and François, and François Carillon set up his own domaine. Puligny-Montrachet is home to Le Montrachet and Chevalier-Montrachet.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n920": {
+      "bottle": "Domaine Leflaive, 2016",
+      "bin": "21371",
+      "size": "750ml",
+      "printed": "$340",
+      "catalogueLine": 4754,
+      "facts": [
+        {
+          "fact": "Domaine Leflaive is a family estate in Puligny-Montrachet, the village’s most famous domaine, with holdings up to Chevalier-Montrachet Grand Cru; it also makes the Mâcon-Verzé.",
+          "how": "knowledge; pack"
+        }
+      ]
+    },
+    "n714": {
+      "bottle": "Domaine René et Vincent Dauvissat \"Les Preuses\", 2015",
+      "bin": "211310",
+      "size": "750ml",
+      "printed": "$350",
+      "catalogueLine": 3692,
+      "facts": [
+        {
+          "fact": "Domaine René et Vincent Dauvissat is a family domaine in Chablis and, with Raveneau, one of the two reference estates of the region; Les Preuses is one of the seven Chablis Grand Crus; Dauvissat ages its wines partly in old oak barrels.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n848": {
+      "bottle": "Domaine des Comtes Lafon \"Clos de la Baronne\", 2022",
+      "bin": "22123",
+      "size": "750ml",
+      "printed": "$425",
+      "catalogueLine": 4386,
+      "facts": [
+        {
+          "fact": "Domaine des Comtes Lafon is one of the great Meursault estates, run by the Lafon family; the Clos de la Baronne is a walled vineyard it owns entirely, classed as village Meursault; the family’s Mâconnais estate is Les Héritiers du Comte Lafon.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n824": {
+      "bottle": "Domaine Leflaive \"Sous le Dos d'Ane\", 2017",
+      "bin": "22252",
+      "size": "750ml",
+      "printed": "$435",
+      "catalogueLine": 4264,
+      "facts": [
+        {
+          "fact": "Sous le Dos d’Ane (under the donkey’s back, for the shape of the hill) is a Meursault Premier Cru on the boundary with Puligny-Montrachet, farmed by Domaine Leflaive of Puligny.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n857": {
+      "bottle": "Domaine Roulot, 2022",
+      "bin": "271114",
+      "size": "750ml",
+      "printed": "$500",
+      "catalogueLine": 4431,
+      "facts": [
+        {
+          "fact": "Domaine Roulot is a family estate in Meursault run by Jean-Marc Roulot, known for a taut, precise style; its wines are allocated and scarce.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n675": {
+      "bottle": "Domaine Coche-Dury, 2022",
+      "bin": "34216",
+      "size": "750ml",
+      "printed": "$690",
+      "catalogueLine": 3495,
+      "facts": [
+        {
+          "fact": "Domaine Coche-Dury in Meursault, run by Raphaël Coche after his father Jean-François Coche-Dury, is among the most sought after and scarce white Burgundy estates; its wines often show a flinty, reductive (struck-match) character.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n745": {
+      "bottle": "Domaine François Raveneau \"Montée de Tonnerre\", 2022",
+      "bin": "223321",
+      "size": "750ml",
+      "printed": "$920",
+      "catalogueLine": 3849,
+      "facts": [
+        {
+          "fact": "Domaine François Raveneau is a family domaine in Chablis and, with Dauvissat, one of the two reference estates; its wines are allocated and scarce, aged in old barrels; Montée de Tonnerre is a Premier Cru on the right bank of the Serein beside the Grand Crus.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n940": {
+      "bottle": "Domaine Leflaive, 2015",
+      "bin": "21139",
+      "size": "750ml",
+      "printed": "$1850",
+      "catalogueLine": 4858,
+      "facts": [
+        {
+          "fact": "Chevalier-Montrachet is a Grand Cru in Puligny-Montrachet on the steep, stony slope just above Le Montrachet; Domaine Leflaive is one of its most famous owners. Great white Burgundy shows best barely chilled.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1436": {
+      "bottle": "Château d'Esclans \"Whispering Angel\" Côtes de Provence, 2024",
+      "bin": "10421",
+      "size": "750ml",
+      "printed": "$50",
+      "catalogueLine": 7454,
+      "facts": [
+        {
+          "fact": "Whispering Angel is made by Château d’Esclans in the hills of Provence, inland from the Riviera; a Côtes de Provence rosé, Grenache-led with Cinsault and Rolle (Vermentino); it popularized pale Provence rosé in America.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "Tomatoes are high in acid; a dry rosé suits them.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1192": {
+      "bottle": "Loimer \"Lois\" Grüner Veltliner, 2022",
+      "bin": "10312",
+      "size": "750ml",
+      "printed": "$55",
+      "catalogueLine": 6166,
+      "facts": [
+        {
+          "fact": "Loimer is an estate in Langenlois, Kamptal, Austria, run by Fred Loimer; Lois is its fresh, everyday Grüner Veltliner.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1238": {
+      "bottle": "Stein \"Weihwasser\" Feinherb, 2023",
+      "bin": "22111",
+      "size": "750ml",
+      "printed": "$55",
+      "catalogueLine": 6408,
+      "facts": [
+        {
+          "fact": "Weingut Stein is a small estate in Alf on the Mosel, run by Dr. Ulrich Stein, who has reclaimed steep slate vineyards; Weihwasser (holy water) comes from 60-year-old vines in the St. Aldegunder Klosterkammer near the old church in Alf, fermented in old 1000 liter casks; feinherb means off dry.",
+          "how": "search 4 October 2026, astorwines.com and chambersstwines.com (Ulli Stein); knowledge"
+        }
+      ]
+    },
+    "n1239": {
+      "bottle": "Stein \"Palmberg-Terrassen\" Spätlese-Feinherb, 2014",
+      "bin": "29362",
+      "size": "750ml",
+      "printed": "$62",
+      "catalogueLine": 6413,
+      "facts": [
+        {
+          "fact": "Spätlese means late picked (riper than Kabinett); feinherb means off dry; aged Riesling develops a petrol note and Mosel Riesling ages for decades. The Palmberg-Terrassen is a terraced vineyard bottled by Weingut Stein.",
+          "how": "knowledge; list"
+        }
+      ]
+    },
+    "n624": {
+      "bottle": "Domaine L'Ecu \"Orthogneiss\", 2022",
+      "bin": "34321",
+      "size": "750ml",
+      "printed": "$70",
+      "catalogueLine": 3227,
+      "facts": [
+        {
+          "fact": "Domaine de l’Écu is a Muscadet estate in Le Landreau near Nantes that bottles its wines by soil type (Orthogneiss, Granite, Gneiss); orthogneiss is a hard metamorphic rock; Muscadet is Melon de Bourgogne, often aged on its lees.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Creole Caesar carries gem lettuce, smoked oyster dressing, Grana Padano cheese and Leidenheimer crisps.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n1311": {
+      "bottle": "Rául Pérez \"Ultreia\" Godello Bierzo, 2021",
+      "bin": "1319",
+      "size": "750ml",
+      "printed": "$70",
+      "catalogueLine": 6797,
+      "facts": [
+        {
+          "fact": "Raúl Pérez is a celebrated Spanish winemaker based in Bierzo, a mountain region of northwest Spain beside Galicia; Godello is the white grape of the region; Ultreia is one of his ranges.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Gulf Fish en Papillote is banana leaf-wrapped Gulf fish with Louisiana crab, sorghum, Marcona almonds, Castelvetrano olives and tomato.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n621": {
+      "bottle": "Domaine de la Pépière \"Monnières-St. Fiacre\", 2020",
+      "bin": "22341",
+      "size": "750ml",
+      "printed": "$75",
+      "catalogueLine": 3212,
+      "facts": [
+        {
+          "fact": "Domaine de la Pépière, founded by Marc Ollivier, is a reference Muscadet estate near Nantes; Monnières-Saint Fiacre is one of the Muscadet crus communaux, whose wines age long on their lees; Muscadet is Melon de Bourgogne, the classic oyster wine.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n631": {
+      "bottle": "Damien Laureau \"L'Alliance\" Savennières, 2022",
+      "bin": "23221",
+      "size": "750ml",
+      "printed": "$75",
+      "catalogueLine": 3264,
+      "facts": [
+        {
+          "fact": "Savennières is a small appellation on the north bank of the Loire in Anjou, known for dry, full, long-lived Chenin Blanc; Damien Laureau is a grower there; young Savennières opens with air.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1357": {
+      "bottle": "Sandhi Sta. Rita Hills, 2021",
+      "bin": "13382",
+      "size": "750ml",
+      "printed": "$75",
+      "catalogueLine": 7035,
+      "facts": [
+        {
+          "fact": "Sandhi is a Santa Barbara County winery founded by the sommelier Rajat Parr with the winemaker Sashi Moorman; the Sta. Rita Hills is a cool appellation near the Pacific.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Pecan Gulf Fish carries Louisiana lump crab, pecan bordelaise, cauliflower purée and wilted collard greens.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n1107": {
+      "bottle": "Trimbach Riesling Reserve, 2020",
+      "bin": "25312",
+      "size": "750ml",
+      "printed": "$85",
+      "catalogueLine": 5714,
+      "facts": [
+        {
+          "fact": "F.E. Trimbach is a family house in Ribeauvillé, Alsace, run by the same family since 1626, famous for bone dry, long-lived Riesling; its Clos Sainte Hune is among the great white wines of France. Alsace lies along the Rhine facing Germany and labels its wines by grape.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n644": {
+      "bottle": "Domaine Huet \"Le Haut Lieu\" Vouvray Sec, 2024",
+      "bin": "31114",
+      "size": "750ml",
+      "printed": "$90",
+      "catalogueLine": 3331,
+      "facts": [
+        {
+          "fact": "Le Haut-Lieu is the founding vineyard of Domaine Huet in Vouvray; Sec means dry.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Louisiana Oysters carry New Orleans BBQ sauce, pickled collard greens, shallots and a fried saltine crumble.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n1347": {
+      "bottle": "Au Bon Climat \"Sanford & Benedict\" Sta. Rita Hills, 2021",
+      "bin": "143431",
+      "size": "750ml",
+      "printed": "$95",
+      "catalogueLine": 6985,
+      "facts": [
+        {
+          "fact": "Au Bon Climat was founded in Santa Barbara County by Jim Clendenen (died 2021), a pioneer of Burgundian style California Chardonnay and Pinot Noir; Sanford & Benedict, planted in 1971, is one of the oldest vineyards of the Sta. Rita Hills.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1423": {
+      "bottle": "Kumeu River \"Estate\" Chardonnay Auckland, 2022",
+      "bin": "12123",
+      "size": "750ml",
+      "printed": "$95",
+      "catalogueLine": 7384,
+      "facts": [
+        {
+          "fact": "Kumeu River is a family winery near Auckland on New Zealand’s North Island, run by the Brajkovich family and famous for Chardonnay often compared with white Burgundy; the Estate Chardonnay is blended from the family’s vineyards around Kumeu.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1328": {
+      "bottle": "Cakebread Napa Valley, 2023",
+      "bin": "134331",
+      "size": "750ml",
+      "printed": "$100",
+      "catalogueLine": 6888,
+      "facts": [
+        {
+          "fact": "Cakebread Cellars is a family winery in Rutherford, Napa Valley, founded in 1973 by Jack and Dolores Cakebread; its Chardonnay is made with some oak.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1063": {
+      "bottle": "Albert Boxler, 2020",
+      "bin": "2173",
+      "size": "750ml",
+      "printed": "$110",
+      "catalogueLine": 5492,
+      "facts": [
+        {
+          "fact": "Albert Boxler is a small family domaine in Niedermorschwihr, in the hills above Colmar, Alsace, known for intense, precise wines; Alsace Pinot Gris is richer and more aromatic than Italian Pinot Grigio, and Pinot Gris with foie gras is a classic Alsace pairing.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Duck Confit Waffle carries a Rohan duck leg, cornbread and chive waffle, foie gras butter, mustard maple syrup and a sunny-side-up egg.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n1289": {
+      "bottle": "Gai'a \"Wild Ferment\" Assyrtiko Santorini, 2023",
+      "bin": "1423",
+      "size": "750ml",
+      "printed": "$110",
+      "catalogueLine": 6683,
+      "facts": [
+        {
+          "fact": "Gaia Wines makes Assyrtiko on Santorini, a volcanic Aegean island where vines are trained low in basket shapes (kouloura) against the wind, in ash and pumice soils; Assyrtiko keeps high acidity in heat; Wild Ferment is fermented with native yeasts.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1440": {
+      "bottle": "Domaine Tempier Bandol, 2024",
+      "bin": "23152",
+      "size": "750ml",
+      "printed": "$120",
+      "catalogueLine": 7474,
+      "facts": [
+        {
+          "fact": "Domaine Tempier is the reference estate of Bandol, on the Provençal coast between Marseille and Toulon, run for generations by the Peyraud family; Bandol is the home of Mourvèdre; Tempier’s rosé is Mourvèdre-led with Grenache and Cinsault and can age.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Creole Tomato Tostada carries Louisiana heirloom and Creole tomatoes, creamy burrata, a housemade okra tostada and smoked tomato water.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n1220": {
+      "bottle": "JJ Prum \"Wehlener Sonnenuhr\" Kabinett, 2020",
+      "bin": "29361",
+      "size": "750ml",
+      "printed": "$135",
+      "catalogueLine": 6318,
+      "facts": [
+        {
+          "fact": "Kabinett is the lightest German Prädikat level; J.J. Prüm Kabinett is lightly sweet and low in alcohol; young Prüm Rieslings often show a light spritz and a reductive (struck match) note that clears with air.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n640": {
+      "bottle": "Domaine Huet \"Clos du Bourg\" Vouvray Demi-Sec, 2015",
+      "bin": "25423",
+      "size": "750ml",
+      "printed": "$145",
+      "catalogueLine": 3311,
+      "facts": [
+        {
+          "fact": "The Clos du Bourg is a walled vineyard in the heart of Vouvray, one of Domaine Huet’s three vineyards; demi-sec means half dry; Chenin Blanc ages for decades.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1182": {
+      "bottle": "Bründlmayer \"Alte Reben\" Grüner Veltliner, 2023",
+      "bin": "23222",
+      "size": "750ml",
+      "printed": "$150",
+      "catalogueLine": 6116,
+      "facts": [
+        {
+          "fact": "Bründlmayer is the leading family estate of Langenlois, Kamptal; Alte Reben means old vines, which give smaller crops and more concentrated wine.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Eggs Sardou carries crispy artichokes, poached eggs, Parmesan creamed spinach and Choron sauce.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n1151": {
+      "bottle": "Château Carbonnieux Pessac-Léognan, 2016",
+      "bin": "236512",
+      "size": "750ml",
+      "printed": "$160",
+      "catalogueLine": 5950,
+      "facts": [
+        {
+          "fact": "Château Carbonnieux is in Pessac-Léognan, the northern Graves just south of Bordeaux, classified in the Graves for both red and white and best known for its white; white Bordeaux blends Sauvignon Blanc and Sémillon, and Carbonnieux ages its white in barrel.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1303": {
+      "bottle": "Do Ferreiro Albariño \"Cepas Vellas\" Rías Baixas, 2018",
+      "bin": "132342",
+      "size": "750ml",
+      "printed": "$170",
+      "catalogueLine": 6757,
+      "facts": [
+        {
+          "fact": "Do Ferreiro is a family estate in the Salnés valley of Rías Baixas (Atlantic Galicia, northwest Spain); Cepas Vellas means old vines and comes from very old Albariño vines; old vine Albariño ages well.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1331": {
+      "bottle": "Chateau Montelena Napa Valley, 2023",
+      "bin": "13692",
+      "size": "750ml",
+      "printed": "$175",
+      "catalogueLine": 6903,
+      "facts": [
+        {
+          "fact": "Chateau Montelena is in Calistoga, at the north end of the Napa Valley; at the Paris tasting of 1976 French judges tasting blind ranked its 1973 Chardonnay, made by Mike Grgich, first among the white wines, above great white Burgundies. Montelena is known for a balanced, restrained Chardonnay, traditionally without malolactic fermentation.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1174": {
+      "bottle": "Domaine de Trévallon Alpilles, 2016",
+      "bin": "21132",
+      "size": "750ml",
+      "printed": "$265",
+      "catalogueLine": 6071,
+      "facts": [
+        {
+          "fact": "Domaine de Trévallon (founded by Eloi Dürrbach) is a family estate in the Alpilles near Les Baux, Provence, whose blends fall outside the local appellation rules, so it is labeled IGP Alpilles; its white is Marsanne-led with Roussanne, Chardonnay, Grenache Blanc and Clairette, the mix varying by vintage, made in small amounts.",
+          "how": "search 4 October 2026, wineanorak.com (Trévallon) and comptoirdesmillesimes.com; knowledge"
+        }
+      ]
+    },
+    "n1447": {
+      "bottle": "Pascal Cotat \"Lot 2024\" Chavignol, 2024",
+      "bin": "28431",
+      "size": "750ml",
+      "printed": "$270",
+      "catalogueLine": 7509,
+      "facts": [
+        {
+          "fact": "Pascal Cotat is a family grower in Chavignol (Sancerre); his rosé is Pinot Noir from a tiny parcel (about 0.1 hectare, vines planted in the 1930s), declassified from the Sancerre appellation after a local dispute and so labeled as a non-vintage lot (Vin de France), fermented with native yeasts and aged in old casks.",
+          "how": "search 4 October 2026, astorwines.com and northberkeleyimports.com (Cotat Chavignol rosé); vinous.com (Rosé Lot 2018)"
+        },
+        {
+          "fact": "Bin 28431 is printed for Pascal Cotat \"Lot 2024\" Chavignol $270 (entry 1447) and for Domaine Dubreuil-Fontaine \"Clos Berthet\" 2015 $120 (entry 1959), a red Burgundy; recorded by the repairer, 4 October 2026.",
+          "how": "page: binwise-wine-list-2026-10-03.txt, the catalogue entries named"
+        }
+      ]
+    },
+    "n1337": {
+      "bottle": "Kongsgaard Napa Valley, 2016",
+      "bin": "123232",
+      "size": "750ml",
+      "printed": "$280",
+      "catalogueLine": 6933,
+      "facts": [
+        {
+          "fact": "Kongsgaard is the family winery of John Kongsgaard in the Napa Valley; its Chardonnays are among the most sought after in California, made in small amounts in a rich, long-aging style; its top Chardonnay is The Judge.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1201": {
+      "bottle": "Franz Hirtzberger \"Honivogl\" Smaragd Grüner Veltliner, 2022",
+      "bin": "287232",
+      "size": "750ml",
+      "printed": "$320",
+      "catalogueLine": 6215,
+      "facts": [
+        {
+          "fact": "Franz Hirtzberger is a family estate in Spitz, at the western end of the Wachau (terraced Danube valley west of Vienna); Honivogl is its most famous Grüner Veltliner vineyard; Smaragd, named for the emerald lizards of the terraces, is the Wachau’s ripest dry category (Vinea Wachau).",
+          "how": "knowledge"
+        },
+        {
+          "fact": "Bin 287232 is printed for Franz Hirtzberger \"Honivogl\" Smaragd 2022 $320 (entry 1201) and for Dujac Fils et Père 2019 $234 (entry 1741), a red Burgundy; recorded by the repairer, 4 October 2026.",
+          "how": "page: binwise-wine-list-2026-10-03.txt, the catalogue entries named"
+        }
+      ]
+    },
+    "n660": {
+      "bottle": "Pascal Cotat \"Les Monts Damnés\" Sancerre, 2022",
+      "bin": "28224",
+      "size": "750ml",
+      "printed": "$350",
+      "catalogueLine": 3417,
+      "facts": [
+        {
+          "fact": "Les Monts Damnés (the damned mountains) is a very steep chalk slope above Chavignol in Sancerre, worked largely by hand; Pascal Cotat is one of its most famous growers, picks Sauvignon Blanc ripe and makes wines built to age. Sancerre is in the eastern Loire.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1076": {
+      "bottle": "F.E. Trimbach \"Reserve Personnelle\", 2007",
+      "bin": "22755",
+      "size": "750ml",
+      "printed": "$360",
+      "catalogueLine": 5557,
+      "facts": [
+        {
+          "fact": "Réserve Personnelle is F.E. Trimbach’s top range, here its top Pinot Gris, from the family house in Ribeauvillé, Alsace; Alsace Pinot Gris with foie gras is a classic pairing; top Alsace Pinot Gris ages for decades.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1093": {
+      "bottle": "F.E. Trimbach \"Clos Ste Hune\", 2007",
+      "bin": "22754",
+      "size": "750ml",
+      "printed": "$390",
+      "catalogueLine": 5644,
+      "facts": [
+        {
+          "fact": "Clos Sainte Hune is a tiny walled vineyard (within the Rosacker Grand Cru) in Hunawihr, Alsace, owned by the Trimbach family for over two centuries; its dry Riesling is counted among the great white wines of France and ages for decades.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1217": {
+      "bottle": "Egon Müller \"Scharzhofberger\" Kabinett, 2020",
+      "bin": "21964",
+      "size": "750ml",
+      "printed": "$395",
+      "catalogueLine": 6303,
+      "facts": [
+        {
+          "fact": "Egon Müller’s estate, the Scharzhof, is in Wiltingen on the Saar, a cold tributary of the Mosel; it is the most sought after Riesling estate in Germany, and the Scharzhofberger is its great steep slate vineyard; even its Kabinett is collected.",
+          "how": "knowledge"
+        }
+      ]
+    },
+    "n1167": {
+      "bottle": "Domaine du Pélican Vin Jaune Arbois, 2016",
+      "bin": "32816",
+      "size": "750ml",
+      "printed": "$655",
+      "catalogueLine": 6034,
+      "facts": [
+        {
+          "fact": "Domaine du Pélican is an estate in Arbois, Jura, founded by the d’Angerville family (Marquis d’Angerville) of Volnay; Vin Jaune is Savagnin aged at least six years and three months in barrel without topping up, under a veil of yeast (voile), traditionally bottled in a 62 cl clavelin; opened Vin Jaune keeps for days.",
+          "how": "knowledge"
+        },
+        {
+          "fact": "The Turtle Soup is finished with aged Sherry.",
+          "how": "pack"
+        }
+      ]
+    },
+    "n1155": {
+      "bottle": "Château Haut-Brion Pessac-Léognan, 2019",
+      "bin": "29921",
+      "size": "750ml",
+      "printed": "$2500",
+      "catalogueLine": 5970,
+      "facts": [
+        {
+          "fact": "Château Haut-Brion is in Pessac (Pessac-Léognan), on the edge of the city of Bordeaux; in the 1855 classification it was the only estate outside the Médoc ranked a First Growth (for its red); its white, Sémillon and Sauvignon Blanc, is made in tiny amounts and ages for decades.",
+          "how": "knowledge"
+        }
+      ]
+    }
+  }
+}

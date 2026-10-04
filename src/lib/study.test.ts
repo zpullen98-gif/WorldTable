@@ -8,6 +8,7 @@ import {
 	SELL_Q,
 	STUDY_WORDS,
 	WATCH_Q,
+	bottlesFor,
 	fold,
 	inMeal,
 	itemCards,
@@ -115,7 +116,10 @@ describe('the rows on the Brennan’s pack', () => {
 		expect(pinot.length).toBeGreaterThan(0);
 		for (const n of pinot) expect(PACK.wines.find((w) => w.name === n)!.grapes.join(' ')).toMatch(/Pinot/);
 		expect(searchElsewhere(PACK, 'dish', 'sazerac').map((x) => x.name)).toEqual(['Classic Sazerac', 'Thompson’s Dream', 'Origin Story']);
-		expect(searchElsewhere(PACK, 'cocktail', 'hussarde').map((x) => x.name)).toEqual(['Eggs Hussarde']);
+		/* The dish first; after it, any floor bottle whose card offers it with the Hussarde. */
+		const hussarde = searchElsewhere(PACK, 'cocktail', 'hussarde').map((x) => x.name);
+		expect(hussarde[0]).toBe('Eggs Hussarde');
+		for (const n of hussarde.slice(1)) expect(PACK.wines.find((w) => w.name === n)!.list, n).toBe('bottle');
 		expect(searchElsewhere(PACK, 'dish', '')).toEqual([]);
 	});
 	it('narrows to a meal and keeps an item nobody tagged', () => {
@@ -201,5 +205,48 @@ describe('the cards and the progress', () => {
 		expect(readOnWords('2026-09-26')).toBe('26 September 2026');
 		expect(readOnWords('')).toBe('');
 		expect(readOnWords('not a date')).toBe('not a date');
+	});
+});
+
+describe('by the bottle', () => {
+	/** The small fixture with four bottles and the chicken's pairing tiered over them, kept. */
+	function bottled(): House {
+		const h = JSON.parse(JSON.stringify(MIN)) as House;
+		const base = h.wines[0];
+		const bottle = (id: string, wine: string, price: string, bin: string, size: string) =>
+			({ ...JSON.parse(JSON.stringify(base)), id, wine, name: 'Quay Lane ' + wine, bottle: price, glass: '', prices: [], price, list: 'bottle', bin, size });
+		h.wines.push(bottle('w-bvalue01', 'Value Red', '$68', '1101', '750ml'), bottle('w-bclass01', 'Reserve', '$140', '1102', '750 ml'), bottle('w-bsplur01', 'Grand Vin', '$1,250', '1103', '1.5L'), bottle('w-bhalf001', 'Half', '$54', '1104', '375ml'));
+		const pick = (wineId: string) => ({ wineId, why: 'Why ' + wineId, sayIt: 'Say ' + wineId });
+		(h.dishes[0] as HouseDish).pairing!.value.bottles = { half: pick('w-bhalf001'), splurge: pick('w-bsplur01'), value: pick('w-bvalue01'), classic: pick('w-bclass01') };
+		return h;
+	}
+
+	it('gives one row per tier in the order a server offers them, with the standard size left unsaid', () => {
+		const h = bottled();
+		const rows = bottlesFor(h, h.dishes[0]);
+		expect(rows.map((r) => r.tier)).toEqual(['value', 'classic', 'splurge', 'half']);
+		expect(rows.map((r) => r.label)).toEqual(['Value, under $100', 'Sweet spot, $100 to $250', 'Celebration, over $250', 'Half-bottle']);
+		expect(rows[0]).toEqual({ tier: 'value', label: 'Value, under $100', wineId: 'w-bvalue01', bin: '1101', name: h.wines[0].producer + ' Value Red', vintage: h.wines[0].vintage, price: '$68', size: '', why: 'Why w-bvalue01', sayIt: 'Say w-bvalue01' });
+		expect(rows[1].size).toBe('');
+		expect(rows[2].size).toBe('1.5L');
+		expect(rows[3].size).toBe('375ml');
+	});
+
+	it('draws nothing for a dish with no tiers, an unkept pairing, or a tier on a glass wine or a missing one', () => {
+		const h = bottled();
+		expect(bottlesFor(h, h.dishes[1])).toEqual([]);
+		expect(bottlesFor(MIN, MIN.dishes[0])).toEqual([]);
+		expect(bottlesFor(h, h.wines[0])).toEqual([]);
+		const b = (h.dishes[0] as HouseDish).pairing!.value.bottles!;
+		b.value!.wineId = h.wines[0].id;
+		b.classic!.wineId = 'w-nowhere1';
+		expect(bottlesFor(h, h.dishes[0]).map((r) => r.tier)).toEqual(['splurge', 'half']);
+		(h.dishes[0] as HouseDish).pairing!.by = 'maitre';
+		expect(bottlesFor(h, h.dishes[0])).toEqual([]);
+	});
+
+	it('names the tiers in the words, dash free', () => {
+		expect(say('bin', { bin: '31122' })).toBe('Bin 31122');
+		expect(say('byBottle')).toBe('By the bottle');
 	});
 });

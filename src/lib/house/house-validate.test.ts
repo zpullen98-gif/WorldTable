@@ -185,7 +185,7 @@ describe('the fixture', () => {
 	});
 
 	it('names the fatal codes the plan names, and the three that never are', () => {
-		expect(FATAL_CODES).toEqual(['forbidden', 'dash', 'word-cap', 'ref', 'principles', 'price', 'allergen-talk']);
+		expect(FATAL_CODES).toEqual(['forbidden', 'dash', 'word-cap', 'ref', 'principles', 'price', 'allergen-talk', 'tier']);
 		expect(NEVER_FATAL).toEqual(['service-note', 'proper-noun', 'quote']);
 		expect(ALLERGEN_TALK.source).toBe('allerg|intoleran');
 		expect(ALLERGEN_TALK.flags).toBe('i');

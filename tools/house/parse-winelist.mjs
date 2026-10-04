@@ -44,6 +44,7 @@ const FORMATS = [
 	[/\b500\s?ml\b/i, '500ml', ''],
 	[/\b375\s?ml\b/i, '375ml', 'Half-bottle']
 ];
+const HALF_SECTION = 'Half-bottles';
 const FARMING = ['Biodynamic', 'Organic', 'Natural', 'Sustainable'];
 const COUNTRY = { FR: 'France', US: 'United States', CA: 'California', DE: 'Germany', ES: 'Spain', IT: 'Italy', AT: 'Austria', AU: 'Australia', OR: 'Oregon', PT: 'Portugal', NZ: 'New Zealand' };
 
@@ -96,6 +97,9 @@ for (; i < lines.length; i++) {
 			continue;
 		}
 		const p = parseName(name);
+		/* The Half-bottles section prints no size line on most of its rows (the paste gives the
+		   format only on the region pages), so every entry there is a half bottle by its section. */
+		if (section === HALF_SECTION && p.size === '750ml') { p.size = '375ml'; p.sizeName = 'Half-bottle'; }
 		entries.push({
 			n: entries.length + 1,
 			line: i + 1,

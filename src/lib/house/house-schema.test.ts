@@ -20,6 +20,7 @@ import {
 	LINE_CAPS,
 	LIST_MAX,
 	MARK_FIELDS,
+	OPTIONAL_KEYS,
 	PRINCIPLES,
 	PROSE_MAX,
 	WINE_MARKS,
@@ -161,7 +162,7 @@ describe('KEYS against the client', () => {
 		expect(Object.keys(KEYS).sort()).toEqual(
 			[
 				'Mark', 'Note', 'FormulaParts', 'Lines', 'Pairing', 'MealPrice', 'ItemBase', 'HouseDish', 'HouseWine', 'HouseCocktail',
-				'TastingCourse', 'Tasting', 'LexiconTerm', 'Scenario', 'MixUp', 'MustKnow', 'AskAtLineup', 'DisputeSide', 'Dispute',
+				'PairingBottles', 'BottlePick', 'TastingCourse', 'Tasting', 'LexiconTerm', 'Scenario', 'MixUp', 'MustKnow', 'AskAtLineup', 'DisputeSide', 'Dispute',
 				'HouseMeal', 'HouseSource', 'PackStamp', 'House', 'HouseIndex', 'HouseStub'
 			].sort()
 		);
@@ -256,7 +257,7 @@ describe('the fixture', () => {
 			for (const c of t.courses) expectKeys(c, KEYS.TastingCourse, KEYS.TastingCourse, `${t.id} course ${c.n}`);
 		}
 		for (const d of fixture.dishes) expectKeys(d, KEYS.HouseDish, notMarks(KEYS.HouseDish, DISH_MARKS), d.id);
-		for (const w of fixture.wines) expectKeys(w, KEYS.HouseWine, notMarks(KEYS.HouseWine, WINE_MARKS), w.id);
+		for (const w of fixture.wines) expectKeys(w, KEYS.HouseWine, notMarks(KEYS.HouseWine, [...WINE_MARKS, ...OPTIONAL_KEYS.HouseWine]), w.id);
 		for (const c of fixture.cocktails) expectKeys(c, KEYS.HouseCocktail, notMarks(KEYS.HouseCocktail, COCKTAIL_MARKS), c.id);
 		for (const x of fixture.lexicon) expectKeys(x, KEYS.LexiconTerm, notMarks(KEYS.LexiconTerm, MARK_FIELDS.lexicon), x.id);
 		for (const s of fixture.scenarios) expectKeys(s, KEYS.Scenario, notMarks(KEYS.Scenario, MARK_FIELDS.scenarios), s.id);
@@ -321,7 +322,7 @@ describe('the fixture', () => {
 			if (field === 'lines') expect(Object.keys((v as Mark<object>).value).sort()).toEqual([...KEYS.Lines].sort());
 			if (field === 'pairing') {
 				const p = (v as Mark<Record<string, unknown>>).value;
-				expect(Object.keys(p).sort()).toEqual([...KEYS.Pairing].sort());
+				expect(Object.keys(p).sort()).toEqual(KEYS.Pairing.filter((k) => !(OPTIONAL_KEYS.Pairing as readonly string[]).includes(k)).sort());
 				for (const pr of p.principles as string[]) expect(PRINCIPLES).toContain(pr);
 			}
 		};

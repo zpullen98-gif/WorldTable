@@ -105,6 +105,65 @@ export type Began = 'pack' | 'desk' | 'hand';
 export const ITEM_KINDS = ['dish', 'wine', 'cocktail'] as const;
 export type ItemKind = (typeof ITEM_KINDS)[number];
 
+/**
+ * Which list a wine is sold from: 'glass' is the menus' own wines (the
+ * glasses and the bottles a menu prints), 'bottle' is a bottle from the
+ * house's full bottle list that has a whole card for the floor. A wine
+ * without the field is a glass wine, so every edition written before the
+ * field existed reads as it always did.
+ */
+export const WINE_LISTS = ['glass', 'bottle'] as const;
+export type WineList = (typeof WINE_LISTS)[number];
+
+/**
+ * The bottle tiers a dish's pairing may carry, in the order a server offers
+ * them: value, the sweet spot (classic), the celebration (splurge), and a
+ * half bottle where one fits.
+ */
+export const BOTTLE_TIERS = ['value', 'classic', 'splurge', 'half'] as const;
+export type BottleTier = (typeof BOTTLE_TIERS)[number];
+
+/**
+ * The price band each priced tier holds, in dollars of the printed bottle
+ * price: value under 100, classic from 100 to 250 (both ends in), splurge
+ * over 250. The half bottle has no band; it is held to HALF_SIZE instead.
+ */
+export const BOTTLE_BANDS = { value: 100, classicTop: 250 } as const;
+
+/** Whether a bottle price sits in a tier's band; the half bottle takes any price. */
+export function inBottleBand(tier: BottleTier, price: number): boolean {
+	if (!Number.isFinite(price) || price <= 0) return false;
+	if (tier === 'value') return price < BOTTLE_BANDS.value;
+	if (tier === 'classic') return price >= BOTTLE_BANDS.value && price <= BOTTLE_BANDS.classicTop;
+	if (tier === 'splurge') return price > BOTTLE_BANDS.classicTop;
+	return true;
+}
+
+/**
+ * The first figure in a printed price, as dollars: '$1,250' is 1250 and
+ * '$80 half-bottle' is 80. NaN when the price prints no figure.
+ */
+export function printedDollars(printed: string): number {
+	const m = String(printed == null ? '' : printed).match(/\d[\d,]*(?:\.\d+)?/);
+	return m ? Number(m[0].replace(/,/g, '')) : NaN;
+}
+
+/** A size folded for comparison: lower case, no spaces, so '375 ml' and '375ml' are one size. */
+export function foldSize(size: string): string {
+	return String(size == null ? '' : size).toLowerCase().replace(/\s+/g, '');
+}
+
+/** The list a wine is sold from, reading an absent field as 'glass'. */
+export function wineListOf(wine: { list?: unknown }): WineList {
+	return wine.list === 'bottle' ? 'bottle' : 'glass';
+}
+
+/** The size a half bottle carries, folded: lower case, no spaces. */
+export const HALF_SIZE = '375ml';
+
+/** The word cap on a tier's why and its line to say at the table. */
+export const BOTTLE_WORDS = 25;
+
 /* -------------------------------------------------------------------------
  * The marks and the formula
  * ---------------------------------------------------------------------- */
@@ -147,11 +206,31 @@ export interface Lines {
 	s45: string;
 }
 
+/** One bottle offered with a dish: a house wine from the bottle list, why it works, and the line to say at the table. */
+export interface BottlePick {
+	wineId: string;
+	why: string;
+	sayIt: string;
+}
+
+/**
+ * The bottles offered with a dish, by tier. Every tier is optional; the
+ * validator holds each to a house wine with list 'bottle', the tier's price
+ * band (BOTTLE_BANDS) and, for the half, HALF_SIZE.
+ */
+export interface PairingBottles {
+	value?: BottlePick;
+	classic?: BottlePick;
+	splurge?: BottlePick;
+	half?: BottlePick;
+}
+
 /**
  * The pairing block on a dish, from the house's OWN list: every id here is a
  * house wine or a house cocktail, and the validator refuses one that is not.
  * `secondId` and `zeroProofId` may be empty when the list has no second pick
- * or no zero-proof drink.
+ * or no zero-proof drink. `bottles` is absent when the dish has no bottle
+ * tiers, so an older edition reads unchanged.
  */
 export interface Pairing {
 	wineId: string;
@@ -167,6 +246,7 @@ export interface Pairing {
 	avoid: string;
 	zeroProofId: string;
 	zeroProofWhy: string;
+	bottles?: PairingBottles;
 }
 
 /* -------------------------------------------------------------------------
@@ -236,6 +316,12 @@ export interface HouseWine extends ItemBase {
 	/** The dishes this wine is the first pick for, by id. */
 	firstPickIds?: Mark<string[]>;
 	serve?: Mark;
+	/** The list it is sold from; absent means 'glass'. Only 'bottle' is ever written. */
+	list?: WineList;
+	/** The bin on the bottle list, as printed, because servers call bottles by bin. Absent when none. */
+	bin?: string;
+	/** The bottle size as printed ('750ml', '375ml', '1.5L'). Absent when none. */
+	size?: string;
 }
 
 export interface HouseCocktail extends ItemBase {
@@ -525,8 +611,10 @@ export const KEYS = {
 	Lines: ['s10', 's20', 's45'] as const satisfies KeysOf<Lines>,
 	Pairing: [
 		'wineId', 'why', 'sayIt', 'whyThisWine', 'palate', 'principles',
-		'secondId', 'secondWhy', 'stepUp', 'serve', 'avoid', 'zeroProofId', 'zeroProofWhy'
+		'secondId', 'secondWhy', 'stepUp', 'serve', 'avoid', 'zeroProofId', 'zeroProofWhy', 'bottles'
 	] as const satisfies KeysOf<Pairing>,
+	PairingBottles: ['value', 'classic', 'splurge', 'half'] as const satisfies KeysOf<PairingBottles>,
+	BottlePick: ['wineId', 'why', 'sayIt'] as const satisfies KeysOf<BottlePick>,
 	MealPrice: ['meal', 'printed'] as const satisfies KeysOf<MealPrice>,
 	ItemBase: ITEM_BASE_KEYS,
 	HouseDish: [
@@ -534,7 +622,7 @@ export const KEYS = {
 	] as const satisfies KeysOf<HouseDish>,
 	HouseWine: [
 		...ITEM_BASE_KEYS, 'kind', 'producer', 'wine', 'vintage', 'region', 'grapes', 'style', 'glass', 'bottle', 'pours',
-		'profile', 'goesWith', 'firstPickIds', 'serve'
+		'profile', 'goesWith', 'firstPickIds', 'serve', 'list', 'bin', 'size'
 	] as const satisfies KeysOf<HouseWine>,
 	HouseCocktail: [
 		...ITEM_BASE_KEYS, 'kind', 'spec', 'method', 'glass', 'garnish', 'note', 'family', 'spirit', 'zeroProof',
@@ -561,6 +649,17 @@ export const KEYS = {
 	HouseStub: ['id', 'name', 'ts', 'bytes', 'began'] as const satisfies KeysOf<HouseStub>
 };
 
+/**
+ * The plain keys a record may leave out, by shape: written only when they
+ * say something, so a record from an edition that never had them reads
+ * unchanged. A test that holds a record to its whole key list takes these
+ * out of the required half.
+ */
+export const OPTIONAL_KEYS = {
+	Pairing: ['bottles'],
+	HouseWine: ['list', 'bin', 'size']
+} as const;
+
 /* The other direction: a key the interface has and the list forgot is a type
    error here. Types only; nothing of this reaches the port. */
 type Complete<T, K extends readonly PropertyKey[]> = [Exclude<keyof T, K[number]>] extends [never] ? true : false;
@@ -571,6 +670,8 @@ type KeysComplete = [
 	Assert<Complete<FormulaParts, typeof KEYS.FormulaParts>>,
 	Assert<Complete<Lines, typeof KEYS.Lines>>,
 	Assert<Complete<Pairing, typeof KEYS.Pairing>>,
+	Assert<Complete<PairingBottles, typeof KEYS.PairingBottles>>,
+	Assert<Complete<BottlePick, typeof KEYS.BottlePick>>,
 	Assert<Complete<MealPrice, typeof KEYS.MealPrice>>,
 	Assert<Complete<ItemBase, typeof KEYS.ItemBase>>,
 	Assert<Complete<HouseDish, typeof KEYS.HouseDish>>,

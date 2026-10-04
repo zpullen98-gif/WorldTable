@@ -36,8 +36,11 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    first stamped 06:00, hours ahead of the clock: keep-all makes every mark a person's at the stamp, so
    any edit a person made between the publish and 06:00 would have lost to the pack. The stamp is
    01:30 instead, after the 22:00:00.001 tombstones and before any publish, and editionInFuture below
-   holds every later edition to the same rule. */
-export const EDITION_BUILT_AT = '2026-10-04T01:30:00.000Z';
+   holds every later edition to the same rule. The 04:00 edition of 4 October 2026 adds the floor's
+   bottles from the Binwise list the owner pasted on 3 October, each a full study card, and the
+   bottles offered with each dish in three price tiers and a half; it is stamped at the half hour
+   before its build, never ahead of the clock. */
+export const EDITION_BUILT_AT = '2026-10-04T04:00:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a
@@ -62,9 +65,20 @@ export function sourceText(fail) {
 		const text = fs.readFileSync(f, 'utf8');
 		const first = text.split('\n')[0];
 		if (!/^Source: \S/.test(first)) fail(`${REL(f)}: the first line must name the source ("Source: ..."), read ${JSON.stringify(first.slice(0, 60))}`);
-		parts.push(text);
+		parts.push(DOLLAR_PAGE.test(first) ? dollarReading(text) : text);
 	}
 	return parts.join('\n');
+}
+/* A page whose source line says its prices are "the bottle price in dollars" (the Binwise paste) prints
+   each entry as a bin line, the wine, the vintage and the price, a bare figure on the line before the
+   blank line that closes the entry (3,577 such lines, one per catalogue entry). Each price line is read
+   also in dollars, on the same line ("190 $190"), so a bottle printed "$190" stands on the very figure
+   the list prints: a bin or a vintage, which never closes an entry, is never read as a price. */
+export const DOLLAR_PAGE = /the bottle price in dollars/;
+export function dollarReading(text) {
+	const lines = text.split('\n');
+	const figure = /^(?:\d{1,3}(?:,\d{3})+|\d+)$/;
+	return lines.map((l, i) => (i > 0 && figure.test(l.trim()) && (i + 1 >= lines.length || lines[i + 1].trim() === '') ? l + ' $' + l.trim() : l)).join('\n');
 }
 
 export const REL = (p) => (typeof p === 'string' && p ? path.relative(process.cwd(), p) || p : '(none)');
@@ -111,10 +125,31 @@ export const SNACK_SECTION = 'Roost Bar & Bubbles snacks';
    Billboard Songs from 1946 and the 2 of Temperance, 1946, the 3 dessert and 2 coffee cocktails and the
    4 Bubbles cocktails (6 of them zero-proof; the summer list's 8 are retired); 94 items with a formula
    in all; 34 wines (the guide's 20, the Barbera and the Argyle Brut by the glass, the 7 Birthday Bubbles
-   bottles and the 5 Bubbles rosés); 2 tastings; 14 sources; at least 115 terms; at least 33 scenarios; 4 or more mix-ups; the
+   bottles and the 5 Bubbles rosés), the menus' wines, with the floor's bottles and the dishes they
+   tier counted from the overrides (overrideCounts); 2 tastings; 14 sources; at least 115 terms; at least 33 scenarios; 4 or more mix-ups; the
    must-knows; a lineup register of at least 60 questions; the 35 pairings; and the five disputes the
    plan names. */
-export function countProblems(house) {
+/* THE FLOOR'S BOTTLES. The menus' wines stay fixed at 34 (list 'glass', the default), and the bottle
+   list's wines and the dishes with bottle tiers are counted from what the overrides file asks for,
+   so a new bottle or a new tier moves the expected figure with it rather than a number here: every
+   wine:+ add whose value says list "bottle", and every dish a 'bottles' entry names. A count passed
+   in `expect` stands instead (a test, or an integrator holding the edition to a figure it states). */
+export const OVERRIDES = path.join(DIR, 'overrides.json');
+export const MENU_WINES = 34;
+export function overrideCounts(file = OVERRIDES) {
+	const out = { bottles: 0, tiered: 0 };
+	if (!fs.existsSync(file)) return out;
+	const entries = (JSON.parse(fs.readFileSync(file, 'utf8')).entries || []);
+	const dishes = new Set();
+	for (const e of entries) {
+		if (e.target === 'wine:+' && (e.op || 'set') === 'add' && e.value && e.value.list === 'bottle') out.bottles++;
+		if (e.op === 'bottles' && typeof e.target === 'string') dishes.add(e.target.toLowerCase());
+	}
+	out.tiered = dishes.size;
+	return out;
+}
+
+export function countProblems(house, expect = overrideCounts()) {
 	const out = [];
 	const n = (list) => (Array.isArray(house[list]) ? house[list].length : 0);
 	const zero = (house.cocktails || []).filter((c) => c.zeroProof === true).length;
@@ -127,7 +162,13 @@ export function countProblems(house) {
 	eq('cocktails', n('cocktails'), 32);
 	eq('spirit-free cocktails', zero, 6);
 	eq('dishes and cocktails in all', n('dishes') + n('cocktails'), 94);
-	eq('wines', n('wines'), 34);
+	const bottles = (house.wines || []).filter((w) => w.list === 'bottle');
+	eq('wines on the menus (list glass)', n('wines') - bottles.length, MENU_WINES);
+	eq("the floor's bottles (list bottle, from the overrides' wine:+ adds)", bottles.length, expect.bottles);
+	/* The bin is not held here: the builder requires it named, blank only where the list prints none. */
+	for (const w of bottles) if (!w.size || !w.bottle) out.push(`bottle ${w.name}: a bottle on the list carries its size and bottle price`);
+	const tiered = (house.dishes || []).filter((d) => d.pairing && d.pairing.value && d.pairing.value.bottles).length;
+	eq("dishes with bottle tiers (from the overrides' bottles entries)", tiered, expect.tiered);
 	eq('tastings', n('tastings'), 2);
 	eq('sources', (house.sources || []).length, 14);
 	ge('terms', n('lexicon'), 115);

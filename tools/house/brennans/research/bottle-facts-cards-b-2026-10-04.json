@@ -1,0 +1,862 @@
+{
+	"about": "Facts behind the cards-b study cards (Red Burgundy, Bordeaux, Rhône) of the wine deep dive: each bottle as the Binwise list prints it (catalogue entry n, bin, vintage, size and printed price, the price written with its dollar sign as the cards cite it), and each fact a card states that the guide and the paste do not, with how it is known. Trade knowledge marked certain is general, settled knowledge of the producer or appellation; a fact found by search names where. Nothing here is a score, a vintage report or a quotation.",
+	"readOn": "2026-10-04",
+	"bottles": [
+		{
+			"n": 2176,
+			"bin": "34574",
+			"name": "Domaine Coudert \"Clos de la Roilette\" Fleurie",
+			"card": "Domaine Coudert ‘Clos de la Roilette’ Fleurie 2023",
+			"vintage": "2023",
+			"size": "750ml",
+			"printed": "$65",
+			"line": 11282,
+			"facts": [
+				{
+					"fact": "Domaine Coudert, the Coudert family, farm the walled Clos de la Roilette in Fleurie, Beaujolais, on its border with Moulin-à-Vent; the grape is Gamay.",
+					"how": "trade knowledge of the producer, certain; the catalogue files it under France ~ Burgundy ~ Red > Beaujolais (entry 2176, paste line 11282)"
+				},
+				{
+					"fact": "Fleurie is one of the ten Beaujolais crus; Beaujolais Nouveau is the young wine released each November and is a different thing.",
+					"how": "appellation law, certain"
+				},
+				{
+					"fact": "Printed price: $65 for the 750ml bottle, bin 34574 (Binwise prints 65).",
+					"how": "catalogue entry 2176"
+				}
+			]
+		},
+		{
+			"n": 1501,
+			"bin": "22651",
+			"name": "Domaine Faiveley",
+			"card": "Domaine Faiveley Bourgogne Rouge 2022",
+			"vintage": "2022",
+			"size": "750ml",
+			"printed": "$90",
+			"line": 7795,
+			"facts": [
+				{
+					"fact": "Faiveley is a family wine house based in Nuits-Saint-Georges in the Côte de Nuits, with vineyards across the Côte d'Or and the Côte Chalonnaise.",
+					"how": "trade knowledge of the producer, certain; the catalogue lists Faiveley wines from Côte Chalonnaise and the Côte d'Or"
+				},
+				{
+					"fact": "Bin 22651, Domaine Faiveley Bourgogne 2022 at $90, is printed twice: Selections Under $100 > Pinot Noir (entry 36, paste line 199) and France ~ Burgundy ~ Red > Bourgogne (entry 1501, paste line 7795). The list also prints a Faiveley Bourgogne 2021 at $100 (bin 25726, entry 1500) and a Faiveley Bourgogne 2022 at $85 (bin 26338, entry 676, filed under France ~ Burgundy ~ White, so the white).",
+					"how": "catalogue entries 36, 676, 1500 and 1501"
+				}
+			]
+		},
+		{
+			"n": 2197,
+			"bin": "289213",
+			"name": "Marcel Lapierre Morgon",
+			"card": "Marcel Lapierre Morgon 2023",
+			"vintage": "2023",
+			"size": "750ml",
+			"printed": "$95",
+			"line": 11387,
+			"facts": [
+				{
+					"fact": "Marcel Lapierre was one of the Villié-Morgon growers, with Jean Foillard among them, who led Beaujolais back to whole-bunch fermentation, native yeasts and little or no added sulfur; his children run the estate now.",
+					"how": "wine trade history, certain"
+				},
+				{
+					"fact": "The list prints Marcel Lapierre Le Beaujolais 2024 at $80 (bin 24642), Marcel Lapierre Morgon 2023 at $95 (bin 289213) and Marcel Lapierre Morgon 2024 at $100 (bin 25661).",
+					"how": "catalogue entries 2196, 2197, 2198"
+				}
+			]
+		},
+		{
+			"n": 2181,
+			"bin": "28362",
+			"name": "Jean Foillard \"Côte du Py\" Morgon",
+			"card": "Jean Foillard ‘Côte du Py’ Morgon 2022",
+			"vintage": "2022",
+			"size": "750ml",
+			"printed": "$115",
+			"line": 11307,
+			"facts": [
+				{
+					"fact": "Jean Foillard farms in Villié-Morgon and is counted with Marcel Lapierre among the growers who brought natural, whole-bunch Gamay back to Beaujolais. The Côte du Py is the hill at the center of the Morgon cru, its best known slope.",
+					"how": "wine trade knowledge, certain"
+				},
+				{
+					"fact": "The list prints twelve Jean Foillard entries, among them Côte du Py 2022 at $115 (bin 28362), Cuvée Corcelette 2022 at $115 (bin 34151) and magnums at $250 and $270.",
+					"how": "catalogue entries 2172 to 2189 and 230, 231"
+				}
+			]
+		},
+		{
+			"n": 1947,
+			"bin": "23374",
+			"name": "Domaine Jean Grivot \"Les Charmois\"",
+			"card": "Domaine Jean Grivot ‘Les Charmois’ Nuits-Saint-Georges 2013",
+			"vintage": "2013",
+			"size": "750ml",
+			"printed": "$138",
+			"line": 10095,
+			"facts": [
+				{
+					"fact": "Domaine Jean Grivot is a family domaine in Vosne-Romanée, run since 2017 by Mathilde Grivot. Les Charmois is a village-level Nuits-Saint-Georges vineyard south of the town; the wine is Pinot Noir aged about eighteen months in French oak.",
+					"how": "search: insideburgundy.com and timelesswines.com notes on Grivot Les Charmois, with trade knowledge of the domaine"
+				},
+				{
+					"fact": "The list prints Grivot Echézeaux Grand Cru 2011 at $450 (bin 26764) and 2015 at $590, Clos Vougeot and Richebourg, and Les Charmois 2013 at $138 (bin 23374).",
+					"how": "catalogue entries 1764 to 1821 and 1947"
+				}
+			]
+		},
+		{
+			"n": 1987,
+			"bin": "24761",
+			"name": "Domaine Tollot-Beaut \"Les Lavières\"",
+			"card": "Domaine Tollot-Beaut ‘Les Lavières’ Savigny-lès-Beaune Premier Cru 2019",
+			"vintage": "2019",
+			"size": "750ml",
+			"printed": "$175",
+			"line": 10303,
+			"facts": [
+				{
+					"fact": "Tollot-Beaut is a family domaine in Chorey-lès-Beaune with vineyards across the Côte de Beaune, known for ripe reds with some new oak; Les Lavières is a Premier Cru of Savigny-lès-Beaune, the village just north of Beaune.",
+					"how": "trade knowledge of the producer and appellation, certain"
+				},
+				{
+					"fact": "The list prints fifteen Tollot-Beaut entries, among them Les Lavières 2019 at $175 (bin 24761).",
+					"how": "catalogue entries 85 to 2158"
+				}
+			]
+		},
+		{
+			"n": 1922,
+			"bin": "25571",
+			"name": "Domaine Henri Gouges \"Les Pruliers\"",
+			"card": "Domaine Henri Gouges ‘Les Pruliers’ Nuits-Saint-Georges Premier Cru 2016",
+			"vintage": "2016",
+			"size": "750ml",
+			"printed": "$245",
+			"line": 9968,
+			"facts": [
+				{
+					"fact": "Domaine Henri Gouges is a family domaine in Nuits-Saint-Georges, run by the fourth generation (Grégory and Antoine Gouges), farmed organically, with about 14.5 hectares mostly of Premier Cru; Les Pruliers is a Premier Cru on the south side of the town, 1.8 hectares, vines about fifty years old.",
+					"how": "search: gouges.com, the estate page, and an importer sheet (ahdvintners.com)"
+				},
+				{
+					"fact": "The list prints twelve Gouges entries, among them Les Pruliers 2016 at $245 (bin 25571).",
+					"how": "catalogue entries 79 to 1945"
+				}
+			]
+		},
+		{
+			"n": 1999,
+			"bin": "27151",
+			"name": "Domaine Joseph Drouhin \"Clos des Mouches\"",
+			"card": "Domaine Joseph Drouhin ‘Clos des Mouches’ Beaune Premier Cru 2015",
+			"vintage": "2015",
+			"size": "750ml",
+			"printed": "$245",
+			"line": 10367,
+			"facts": [
+				{
+					"fact": "Maison Joseph Drouhin is a family house in Beaune with its own domaine vineyards; it owns the largest share of the Clos des Mouches, a Beaune Premier Cru, and makes it in red and white.",
+					"how": "trade knowledge of the producer, certain"
+				},
+				{
+					"fact": "Bin 27151 is printed twice at $245: Domaine Joseph Drouhin \"Clos des Mouches\" 2015 (entry 1999, paste line 10367) and Joseph Drouhin \"Le Clos des Mouches\" 2015 (entry 2003, paste line 10387). The list also prints the 2005 at $215, 2011 at $230 and 2014 at $235.",
+					"how": "catalogue entries 1996 to 2003"
+				}
+			]
+		},
+		{
+			"n": 1673,
+			"bin": "287142",
+			"name": "Domaine Georges Roumier \"Clos de la Bussière\"",
+			"card": "Domaine Georges Roumier ‘Clos de la Bussière’ Morey-Saint-Denis Premier Cru 2014",
+			"vintage": "2014",
+			"size": "750ml",
+			"printed": "$320",
+			"line": 8691,
+			"facts": [
+				{
+					"fact": "Domaine Georges Roumier is a family domaine in Chambolle-Musigny, among the most sought-after growers in Burgundy; the Clos de la Bussière is a walled Premier Cru in Morey-Saint-Denis that Roumier owns alone (a monopole).",
+					"how": "trade knowledge of the producer, certain"
+				},
+				{
+					"fact": "The list prints eight Roumier entries: Clos de la Bussière 2013 at $385, 2014 at $320 (bin 287142), 2022 at $550 and 2023 at $585, Bonnes Mares 2012 and 2023, and Chambolle-Musigny 2022 and 2023.",
+					"how": "catalogue entries 1672 to 1738"
+				}
+			]
+		},
+		{
+			"n": 2085,
+			"bin": "34351",
+			"name": "Marquis d'Angerville \"Clos des Ducs\"",
+			"card": "Marquis d’Angerville ‘Clos des Ducs’ Volnay Premier Cru 2014",
+			"vintage": "2014",
+			"size": "750ml",
+			"printed": "$380",
+			"line": 10805,
+			"facts": [
+				{
+					"fact": "Domaine Marquis d'Angerville is a family domaine in Volnay, farmed biodynamically; the Clos des Ducs is the walled Volnay Premier Cru beside the house, a monopole of the domaine.",
+					"how": "trade knowledge of the producer, certain"
+				},
+				{
+					"fact": "The list prints twenty Marquis d'Angerville entries, Volnay Premier Crus from $220 to $520 and Meursault Premier Cru among them; Clos des Ducs 2014 is $380 (bin 34351).",
+					"how": "catalogue entries 219 to 2085"
+				}
+			]
+		},
+		{
+			"n": 1792,
+			"bin": "26764",
+			"name": "Domaine Jean Grivot",
+			"card": "Domaine Jean Grivot Echézeaux Grand Cru 2011",
+			"vintage": "2011",
+			"size": "750ml",
+			"printed": "$450",
+			"line": 9302,
+			"facts": [
+				{
+					"fact": "Echézeaux is a Grand Cru of the Côte de Nuits beside Vosne-Romanée, on the slope above the Clos de Vougeot; it is sold under the Vosne-Romanée name although it lies in Flagey-Echézeaux. Grivot owns a parcel.",
+					"how": "appellation and producer knowledge, certain"
+				},
+				{
+					"fact": "The list prints Grivot Echézeaux 2011 at $450 (bin 26764) and 2015 at $590 (bin 25733), and Domaine de la Romanée-Conti Echézeaux from $1650 to $2500 by vintage.",
+					"how": "catalogue entries 1792, 1793, 1796 to 1803"
+				}
+			]
+		},
+		{
+			"n": 1702,
+			"bin": "22537",
+			"name": "Domaine Comte Georges de Vogüé Vieilles Vignes",
+			"card": "Domaine Comte Georges de Vogüé Musigny Grand Cru Vieilles Vignes 2012",
+			"vintage": "2012",
+			"size": "750ml",
+			"printed": "$1560",
+			"line": 8842,
+			"facts": [
+				{
+					"fact": "Domaine Comte Georges de Vogüé is a family domaine in Chambolle-Musigny and the largest owner of the Musigny Grand Cru; only its oldest vines go into the Musigny Vieilles Vignes, and wine from younger Musigny vines is sold as Chambolle-Musigny Premier Cru.",
+					"how": "trade knowledge of the producer, certain"
+				},
+				{
+					"fact": "The list prints de Vogüé Musigny Vieilles Vignes 2012 at $1560 (bin 22537), Bonnes Mares 2011 and 2012 and Chambolle-Musigny Premier Cru 2011 and 2012.",
+					"how": "catalogue entries 1688 to 1715"
+				}
+			]
+		},
+		{
+			"n": 1800,
+			"bin": "26733",
+			"name": "Domaine de la Romanée-Conti",
+			"card": "Domaine de la Romanée-Conti Echézeaux Grand Cru 2015",
+			"vintage": "2015",
+			"size": "750ml",
+			"printed": "$1650",
+			"line": 9342,
+			"facts": [
+				{
+					"fact": "The Domaine de la Romanée-Conti (DRC), in Vosne-Romanée, owns the whole of the Romanée-Conti and La Tâche Grand Crus (both monopoles) and parcels in Richebourg, Romanée-Saint-Vivant, Grands-Échezeaux, Echézeaux and Corton, with a white Montrachet; it is widely known for using whole bunches in its reds.",
+					"how": "trade knowledge of the domaine, certain"
+				},
+				{
+					"fact": "The list prints DRC Echézeaux 2000 at $2200, 2005 at $2150, 2009 at $2500, 2012 at $1880, 2015 at $1650 (bin 26733), 2020 at $2085 and 2022 at $2185, plus a 2016 magnum at $4250; La Tâche from $3000 to $5500; Romanée-Conti from $12500 to $16000; Romanée-Saint-Vivant from $4250 to $5100.",
+					"how": "catalogue entries 1796 to 1866"
+				}
+			]
+		},
+		{
+			"n": 1573,
+			"bin": "23651",
+			"name": "Domaine Armand Rousseau \"Clos Saint Jacques\"",
+			"card": "Domaine Armand Rousseau ‘Clos Saint Jacques’ Gevrey-Chambertin Premier Cru 2019",
+			"vintage": "2019",
+			"size": "750ml",
+			"printed": "$2300",
+			"line": 8181,
+			"facts": [
+				{
+					"fact": "Domaine Armand Rousseau is the family domaine of Gevrey-Chambertin, holding Chambertin and other Grand Crus; its Clos Saint-Jacques is a walled Premier Cru above the village that many critics and the market rank beside the Grand Crus.",
+					"how": "trade knowledge of the producer, certain"
+				},
+				{
+					"fact": "The list prints Domaine Armand Rousseau \"Clos Saint Jacques\" 2019 at $2300 (bin 23651) and a Rousseau Santenay 2022 at $150 (entry 2138), whose producer is not confirmed.",
+					"how": "catalogue entries 1573 and 2138"
+				}
+			]
+		},
+		{
+			"n": 1864,
+			"bin": "28426",
+			"name": "Domaine de la Romanée-Conti",
+			"card": "Domaine de la Romanée-Conti La Tâche Grand Cru 2012",
+			"vintage": "2012",
+			"size": "750ml",
+			"printed": "$3800",
+			"line": 9672,
+			"facts": [
+				{
+					"fact": "La Tâche is a Grand Cru in Vosne-Romanée owned entire by the Domaine de la Romanée-Conti (a monopole), beside the Romanée-Conti vineyard.",
+					"how": "trade knowledge, certain"
+				},
+				{
+					"fact": "The list prints DRC La Tâche 2004 at $3000, 2005 and 2009 at $5500, 2012 at $3800 (bin 28426), 2013 at $4000 and 2014 at $4100.",
+					"how": "catalogue entries 1861 to 1866"
+				}
+			]
+		},
+		{
+			"n": 1856,
+			"bin": "28538",
+			"name": "Domaine de la Romanée-Conti",
+			"card": "Domaine de la Romanée-Conti Romanée-Conti Grand Cru 2014",
+			"vintage": "2014",
+			"size": "750ml",
+			"printed": "$12500",
+			"line": 9630,
+			"facts": [
+				{
+					"fact": "Romanée-Conti is a Grand Cru in Vosne-Romanée of about 1.8 hectares, owned entire by the Domaine de la Romanée-Conti, which takes its name from it; production is very small and sold in allocations.",
+					"how": "trade knowledge, certain"
+				},
+				{
+					"fact": "The list prints Romanée-Conti 2007 at $16000, 2010 at $15000, 2014 at $12500 (bin 28538), 2015 at $13500, 2016 at $14000, 2021 at $15000 and 2022 at $14600.",
+					"how": "catalogue entries 1854 to 1860"
+				}
+			]
+		},
+		{
+			"n": 2432,
+			"bin": "28352",
+			"name": "Les Cadrans de Lassegue Grand Cru Classé",
+			"card": "Les Cadrans de Lassègue Saint-Émilion Grand Cru 2021",
+			"vintage": "2021",
+			"size": "750ml",
+			"printed": "$60",
+			"line": 12577,
+			"facts": [
+				{
+					"fact": "Les Cadrans de Lassègue is the second wine of Château Lassègue in Saint-Émilion, owned by Jackson Family Wines, first made in 2008; the name comes from the sundials on the château's front. It is mainly Merlot and Cabernet Franc, from younger vines and the foothill blocks, aged six to eight months in 30 to 40 percent new French oak.",
+					"how": "search: thewinecellarinsider.com Lassègue profile, wineanorak.com on the 2020, wine.com product notes"
+				},
+				{
+					"fact": "Bin 28352 is printed twice: Les Cadrans de Lassegue Grand Cru Classé 2021 at $60 (entry 2432, paste line 12577) and Château L'Évangile 2015 at $800 (entry 2394, paste line 12385).",
+					"how": "catalogue entries 2394 and 2432"
+				}
+			]
+		},
+		{
+			"n": 2224,
+			"bin": "26311",
+			"name": "La Chapelle de Meyney",
+			"card": "La Chapelle de Meyney Saint-Estèphe 2018",
+			"vintage": "2018",
+			"size": "750ml",
+			"printed": "$80",
+			"line": 11525,
+			"facts": [
+				{
+					"fact": "La Chapelle de Meyney is the second wine of Château Meyney in Saint-Estèphe, from younger vines; recent vintages have been about two thirds Cabernet Sauvignon with Merlot and a little Petit Verdot, aged about twelve months in part new French oak.",
+					"how": "search: wine.com, Wine Enthusiast review of the 2018 and merchant notes on La Chapelle de Meyney"
+				},
+				{
+					"fact": "Saint-Estèphe is the northernmost of the four great Médoc communes (Saint-Estèphe, Pauillac, Saint-Julien, Margaux), known for firm, structured reds.",
+					"how": "appellation knowledge, certain"
+				}
+			]
+		},
+		{
+			"n": 2231,
+			"bin": "26723",
+			"name": "Château Haut Bages Liberal 5ème Cru Classé",
+			"card": "Château Haut-Bages Libéral Pauillac 5ème Cru Classé 2018",
+			"vintage": "2018",
+			"size": "750ml",
+			"printed": "$135",
+			"line": 11562,
+			"facts": [
+				{
+					"fact": "Château Haut-Bages Libéral is one of the eighteen fifth growths of the 1855 classification of the Médoc and Graves; its largest parcel lies beside Château Latour; it is certified organic and biodynamic (2019), about three quarters Cabernet Sauvignon and a quarter Merlot, aged fourteen to eighteen months with about 40 percent new oak. It is run by Claire Villars-Lurton.",
+					"how": "search: wine-searcher.com estate profile, thewinecellarinsider.com Haut-Bages Libéral guide, gc-lurton-estates.com"
+				},
+				{
+					"fact": "Pauillac holds three of the five first growths: Lafite-Rothschild, Latour and Mouton-Rothschild.",
+					"how": "the 1855 classification, certain"
+				}
+			]
+		},
+		{
+			"n": 2374,
+			"bin": "26111",
+			"name": "Château Bellegrave",
+			"card": "Château Bellegrave Pomerol 2019",
+			"vintage": "2019",
+			"size": "750ml",
+			"printed": "$190",
+			"line": 12285,
+			"facts": [
+				{
+					"fact": "Château Bellegrave in Pomerol was bought by Jean Bouldy in 1951 and is run by the third generation, Jean-Marie Bouldy and family; about 8.5 hectares in the southwest of the appellation on clay and gravel, converted to organic farming with ECOCERT certification in 2009; about 75 percent Merlot and 25 percent Cabernet Franc.",
+					"how": "search: millesima.com and the importer page at weygandtmetzler.com"
+				},
+				{
+					"fact": "Pomerol has never had a classification of its châteaux.",
+					"how": "appellation knowledge, certain"
+				}
+			]
+		},
+		{
+			"n": 2316,
+			"bin": "33111",
+			"name": "Château Talbot 4ème Cru Classé",
+			"card": "Château Talbot Saint-Julien 4ème Cru Classé 2019",
+			"vintage": "2019",
+			"size": "750ml",
+			"printed": "$245",
+			"line": 11989,
+			"facts": [
+				{
+					"fact": "Château Talbot is a fourth growth of the 1855 classification in Saint-Julien, the Médoc commune between Pauillac and Margaux; it is Cabernet Sauvignon-led with Merlot.",
+					"how": "the 1855 classification and producer knowledge, certain"
+				},
+				{
+					"fact": "The list prints Château Talbot 1996 at $332 (bin 26143) and 2019 at $245 (bin 33111).",
+					"how": "catalogue entries 2315, 2316"
+				}
+			]
+		},
+		{
+			"n": 2227,
+			"bin": "26123",
+			"name": "Château Grand-Puy-Lacoste 5ème Cru Classé",
+			"card": "Château Grand-Puy-Lacoste Pauillac 5ème Cru Classé 2008",
+			"vintage": "2008",
+			"size": "750ml",
+			"printed": "$295",
+			"line": 11542,
+			"facts": [
+				{
+					"fact": "Château Grand-Puy-Lacoste is a fifth growth of the 1855 classification in Pauillac, owned by the Borie family, Cabernet Sauvignon-led, widely regarded as one of the best values among the classed growths.",
+					"how": "producer knowledge, certain"
+				},
+				{
+					"fact": "The list prints Grand-Puy-Lacoste 2003 at $325, 2006 at $235, 2008 at $295 (bin 26123), 2011 at $245, 2014 at $285 and 2015 at $315.",
+					"how": "catalogue entries 2225 to 2230"
+				}
+			]
+		},
+		{
+			"n": 2278,
+			"bin": "26411",
+			"name": "Château Pichon-Longueville Comtesse de Lalande 2ème Cru Classé",
+			"card": "Château Pichon-Longueville Comtesse de Lalande Pauillac 2ème Cru Classé 2004",
+			"vintage": "2004",
+			"size": "750ml",
+			"printed": "$325",
+			"line": 11797,
+			"facts": [
+				{
+					"fact": "Château Pichon-Longueville Comtesse de Lalande (Pichon Lalande) is a second growth of the 1855 classification in Pauillac, across the road from Château Latour, owned since 2007 by the Champagne house Louis Roederer; it carries a higher share of Merlot than most Pauillac. Its neighbor Château Pichon-Longueville Baron (Pichon Baron) is a separate second growth.",
+					"how": "producer knowledge, certain"
+				},
+				{
+					"fact": "The list prints Pichon Lalande 1982 at $1200, 2004 at $325 (bin 26411), 2014 at $600, 2015 at $740, 2019 at $600 and 2020 at $700, with a 2020 half-bottle.",
+					"how": "catalogue entries 2277 to 2283"
+				}
+			]
+		},
+		{
+			"n": 2401,
+			"bin": "25623",
+			"name": "Clos L'Église",
+			"card": "Clos L’Église Pomerol 2019",
+			"vintage": "2019",
+			"size": "750ml",
+			"printed": "$325",
+			"line": 12420,
+			"facts": [
+				{
+					"fact": "Clos L'Église is a small Pomerol estate (about 5.8 hectares) bought in 1997 by Sylviane Garcin-Cathiard and run by her family; farmed organically, Merlot with Cabernet Franc, aged sixteen to twenty-four months in new French oak.",
+					"how": "search: thewinecellarinsider.com Clos L'Église guide and millesima.com"
+				},
+				{
+					"fact": "The list prints Clos L'Église 2006 at $420 (bin 21363) and 2019 at $325 (bin 25623). Château L'Église-Clinet is a separate Pomerol estate.",
+					"how": "catalogue entries 2400, 2401; producer knowledge"
+				}
+			]
+		},
+		{
+			"n": 2359,
+			"bin": "26732",
+			"name": "Château Haut-Brion 1er Cru Classé",
+			"card": "Château Haut-Brion Pessac-Léognan 1er Cru Classé 2002",
+			"vintage": "2002",
+			"size": "750ml",
+			"printed": "$700",
+			"line": 12208,
+			"facts": [
+				{
+					"fact": "Château Haut-Brion, in Pessac on the edge of the city of Bordeaux (Pessac-Léognan, in the Graves), is the only first growth of the 1855 classification outside the Médoc. The five first growths are Lafite-Rothschild, Latour, Margaux, Haut-Brion and, since its promotion in 1973, Mouton-Rothschild. Haut-Brion blends Merlot, Cabernet Sauvignon and Cabernet Franc.",
+					"how": "the 1855 classification and producer knowledge, certain"
+				},
+				{
+					"fact": "The list prints Château Haut-Brion 2002 at $700 (bin 26732) among vintages from $255 to $2800, and Château La Mission Haut-Brion 2002 at $375 (bin 26221); Château Bahans Haut-Brion 2006, the second wine under its former name, at $255.",
+					"how": "catalogue entries 2356 to 2372; producer knowledge"
+				}
+			]
+		},
+		{
+			"n": 2263,
+			"bin": "27232",
+			"name": "Château Mouton-Rothschild 1er Cru Classé",
+			"card": "Château Mouton-Rothschild Pauillac 1er Cru Classé 2005",
+			"vintage": "2005",
+			"size": "750ml",
+			"printed": "$1400",
+			"line": 11722,
+			"facts": [
+				{
+					"fact": "Château Mouton-Rothschild in Pauillac was promoted from second to first growth in 1973, the only change made to the 1855 classification; since 1945 each vintage carries a label by a different artist. It is Cabernet Sauvignon-led with Merlot and Cabernet Franc.",
+					"how": "producer history, certain"
+				},
+				{
+					"fact": "The list prints Mouton-Rothschild vintages from 1989 to 2017 between $1400 and $2325, the 2005 at $1400 (bin 27232), and a 2004 375ml at $995.",
+					"how": "catalogue entries 2259 to 2273"
+				}
+			]
+		},
+		{
+			"n": 2332,
+			"bin": "34334",
+			"name": "Château Margaux 1er Cru Classé",
+			"card": "Château Margaux 1er Cru Classé 2007",
+			"vintage": "2007",
+			"size": "750ml",
+			"printed": "$1425",
+			"line": 12071,
+			"facts": [
+				{
+					"fact": "Château Margaux is the first growth of the Margaux appellation in the southern Médoc, Cabernet Sauvignon-led with Merlot, Cabernet Franc and Petit Verdot; Margaux is known for perfumed, silky Cabernet.",
+					"how": "producer and appellation knowledge, certain"
+				},
+				{
+					"fact": "The list prints Château Margaux 1990 at $3500, 1994 at $1920, 1995 at $4100, 1997 at $1675 and later vintages to 2018, the 2007 at $1425 (bin 34334); entry 2354 is Pavillon Rouge du Château Margaux 2010 at $550 (bin 26162), the second wine.",
+					"how": "catalogue entries 2325 to 2354"
+				}
+			]
+		},
+		{
+			"n": 2416,
+			"bin": "288242",
+			"name": "Château Cheval Blanc 1er Grand Cru Classé A",
+			"card": "Château Cheval Blanc Saint-Émilion 1er Grand Cru Classé A 2008",
+			"vintage": "2008",
+			"size": "750ml",
+			"printed": "$1450",
+			"line": 12497,
+			"facts": [
+				{
+					"fact": "Château Cheval Blanc is in Saint-Émilion on the border with Pomerol, Cabernet Franc-led with Merlot; it was ranked Premier Grand Cru Classé A in the Saint-Émilion classification that applied to the 2008 vintage, and withdrew from the classification before its 2022 revision.",
+					"how": "producer knowledge, certain"
+				},
+				{
+					"fact": "The list prints Cheval Blanc vintages from 1990 at $4000 to 2020 at $1975, the 2008 at $1450 (bin 288242).",
+					"how": "catalogue entries 2411 to 2420"
+				}
+			]
+		},
+		{
+			"n": 2239,
+			"bin": "22274",
+			"name": "Château Lafite-Rothschild 1er Cru Classé",
+			"card": "Château Lafite-Rothschild Pauillac 1er Cru Classé 2004",
+			"vintage": "2004",
+			"size": "750ml",
+			"printed": "$2100",
+			"line": 11602,
+			"facts": [
+				{
+					"fact": "Château Lafite-Rothschild in northern Pauillac by Saint-Estèphe was listed first among the first growths in 1855 and is owned by the Rothschild family (Domaines Barons de Rothschild); Cabernet Sauvignon-led with Merlot; its second wine is Carruades de Lafite.",
+					"how": "producer knowledge, certain"
+				},
+				{
+					"fact": "The list prints Lafite-Rothschild vintages from 1989 to 2016 between $1400 and $3000, the 2004 at $2100 (bin 22274), and a 2007 magnum at $6450.",
+					"how": "catalogue entries 203, 2232 to 2246"
+				}
+			]
+		},
+		{
+			"n": 2253,
+			"bin": "261510",
+			"name": "Château Latour 1er Cru Classé",
+			"card": "Château Latour Pauillac 1er Cru Classé 2005",
+			"vintage": "2005",
+			"size": "750ml",
+			"printed": "$2130",
+			"line": 11672,
+			"facts": [
+				{
+					"fact": "Château Latour is a first growth of 1855 in southern Pauillac by the Gironde estuary, beside Pichon Lalande, named for the tower in its vineyard; Cabernet Sauvignon-led, known as the most powerful and long-lived first growth.",
+					"how": "producer knowledge, certain"
+				},
+				{
+					"fact": "The list prints Latour 1946 at $4100 (bin 27340) both on the Pauillac page (entry 2249) and under Selections from our Birth Year (entry 3514), with Latour 1985 to 2014 from $1450 to $2500, the 2005 at $2130 (bin 261510); entry 2738, Beaulieu Vineyard \"Georges de Latour Private Reserve\" 2017 at $320, is a Napa Cabernet and not the château.",
+					"how": "catalogue entries 2249 to 2255, 2738, 3514; guide.txt line 2736 (Brennan's opened in 1946)"
+				}
+			]
+		},
+		{
+			"n": 2402,
+			"bin": "21131",
+			"name": "Pétrus",
+			"card": "Pétrus Pomerol 1980",
+			"vintage": "1980",
+			"size": "750ml",
+			"printed": "$7700",
+			"line": 12425,
+			"facts": [
+				{
+					"fact": "Pétrus is a small estate on a plateau of clay in Pomerol, almost entirely Merlot, made in small quantities; Pomerol has never had a classification. Very old bottles vary with cork and storage and are opened with care, often with a two-pronged cork puller.",
+					"how": "producer knowledge and service practice, certain"
+				},
+				{
+					"fact": "The list prints Pétrus 1980 at $7700 (bin 21131) and 1989 at $14000 (bin 32684); Château La Fleur-Pétrus 2006, 2007 and 2011 (entries 2387 to 2389, $400 to $630) is a separate Pomerol estate.",
+					"how": "catalogue entries 2387 to 2403"
+				}
+			]
+		},
+		{
+			"n": 2532,
+			"bin": "223316",
+			"name": "Alain Graillot",
+			"card": "Alain Graillot Crozes-Hermitage 2015",
+			"vintage": "2015",
+			"size": "750ml",
+			"printed": "$90",
+			"line": 13095,
+			"facts": [
+				{
+					"fact": "Alain Graillot founded his estate in Crozes-Hermitage in the Northern Rhône in the 1980s and is widely credited with raising the reputation of the appellation; his reds are Syrah, made with whole bunches. Crozes-Hermitage is the larger appellation around the hill of Hermitage.",
+					"how": "producer and appellation knowledge, certain"
+				},
+				{
+					"fact": "The list prints Alain Graillot Crozes-Hermitage 2015 at $90 (bin 223316) on the red pages and Alain Graillot Crozes-Hermitage 2017 at $85 (bin 289311) under France ~ Rhône ~ White, so the white; Antoine Graillot & Raul Perez Encinas Bierzo 2020 at $75 is a Spanish wine.",
+					"how": "catalogue entries 1140, 2532, 3433"
+				}
+			]
+		},
+		{
+			"n": 2615,
+			"bin": "27732",
+			"name": "Domaine Saint Damien \"La Louisianne\" Gigondas",
+			"card": "Domaine Saint Damien ‘La Louisianne’ Gigondas 2023",
+			"vintage": "2023",
+			"size": "750ml",
+			"printed": "$95",
+			"line": 13516,
+			"facts": [
+				{
+					"fact": "Domaine Saint-Damien is a family estate in Gigondas farmed by the Saurel family since the early nineteenth century, now led by Romain Saurel, certified organic since 2012. La Louisiane (printed La Louisianne on the list) is about 80 percent Grenache, 15 percent Mourvèdre and 5 percent Cinsault and Syrah, from old vines on the middle terraces, co-fermented with a long maceration in concrete, aged about twelve months in oak and bottled unfined and unfiltered.",
+					"how": "search: klwines.com, wine.com and vintageandvine.com notes on Saint Damien La Louisiane"
+				},
+				{
+					"fact": "Gigondas lies under the Dentelles de Montmirail in the Southern Rhône.",
+					"how": "appellation knowledge, certain"
+				},
+				{
+					"fact": "The list prints seven Saint Damien lines from $95 to $110, among them La Louisianne 2023 at $95 (bin 27732) and Souteyrades 2023 at $95 (bin 27741).",
+					"how": "catalogue entries 1149, 2613 to 2618"
+				}
+			]
+		},
+		{
+			"n": 1119,
+			"bin": "22331",
+			"name": "André Perret",
+			"card": "André Perret Condrieu 2019",
+			"vintage": "2019",
+			"size": "750ml",
+			"printed": "$165",
+			"line": 5781,
+			"facts": [
+				{
+					"fact": "André Perret farms in Chavanay at the southern end of Condrieu, where his family grew orchards; he took over from his father in 1982 and is considered one of the masters of Condrieu and Viognier. His Condrieus include a classic bottling and the Coteau de Chéry, from a 2.8 hectare parcel of sandy granite.",
+					"how": "search: Kermit Lynch, Justerini & Brooks and Vine Trail notes on André Perret"
+				},
+				{
+					"fact": "Condrieu is a small Northern Rhône appellation on steep granite slopes, the home of the Viognier grape; its wine is white.",
+					"how": "appellation knowledge, certain"
+				},
+				{
+					"fact": "The list prints six André Perret Condrieus (2017 to 2020, $165 to $250) under France ~ Rhône ~ White, among them the 2019 at $165 (bin 22331), and two St.-Joseph at $140 and $165.",
+					"how": "catalogue entries 1119 to 1124, 2517, 2518"
+				}
+			]
+		},
+		{
+			"n": 2502,
+			"bin": "24753",
+			"name": "René Rostaing \"Ampodium\"",
+			"card": "René Rostaing ‘Ampodium’ Côte-Rôtie 2012",
+			"vintage": "2012",
+			"size": "750ml",
+			"printed": "$170",
+			"line": 12939,
+			"facts": [
+				{
+					"fact": "René Rostaing is a grower in Ampuis in Côte-Rôtie. Ampodium, formerly called Classique, blends his parcels across fifteen or so lieux-dits, fermented with about 90 percent whole clusters and aged in large demi-muid casks, at most a tenth new.",
+					"how": "search: Justerini & Brooks, Berry Bros and K&L notes on Rostaing Ampodium"
+				},
+				{
+					"fact": "Côte-Rôtie means the roasted slope, steep terraces above the Rhône at Ampuis, at the northern end of the Rhône valley; the red is Syrah, sometimes with a little Viognier.",
+					"how": "appellation knowledge, certain"
+				},
+				{
+					"fact": "The list prints sixteen Rostaing entries, among them Ampodium 2012 at $170 (bin 24753), Côte Blonde 2012 at $360 and La Landonne 2012 at $320.",
+					"how": "catalogue entries 1128, 2502 to 2516"
+				}
+			]
+		},
+		{
+			"n": 2584,
+			"bin": "24751",
+			"name": "Domaine du Pegau \"Cuvée Reservee\"",
+			"card": "Domaine du Pegau ‘Cuvée Réservée’ Châteauneuf-du-Pape 2020",
+			"vintage": "2020",
+			"size": "750ml",
+			"printed": "$195",
+			"line": 13359,
+			"facts": [
+				{
+					"fact": "Domaine du Pegau is the Féraud family's estate in Châteauneuf-du-Pape. The Cuvée Réservée, its flagship, is about 80 percent Grenache with Syrah, Mourvèdre and other permitted varieties, not destemmed, fermented in cement and aged about two years in large oak casks.",
+					"how": "search: pegau.com Cuvée Réservée pages and thewinecellarinsider.com Pegau guide"
+				},
+				{
+					"fact": "The list prints ten Pegau lines, among them Cuvée Réservée 2020 at $195 (bin 24751), 2021 at $195, 2019 at $270 and a 2020 magnum at $510.",
+					"how": "catalogue entries 216 to 2601"
+				}
+			]
+		},
+		{
+			"n": 2560,
+			"bin": "25252",
+			"name": "Château de Beaucastel {Oenotheque}",
+			"card": "Château de Beaucastel Châteauneuf-du-Pape Oenothèque 2007",
+			"vintage": "2007",
+			"size": "750ml",
+			"printed": "$275",
+			"line": 13239,
+			"facts": [
+				{
+					"fact": "Château de Beaucastel is the Perrin family's estate in Châteauneuf-du-Pape, known for planting and using all the permitted varieties and a high share of Mourvèdre. From the late 1980s it kept thousands of bottles of each vintage in its cellar and releases back vintages as Beaucastel Oenothèque, labeled with the vintage and the date the wine left the cellar, largely for restaurants.",
+					"how": "search: thewinecellarinsider.com Beaucastel guide and asi.info on the Oenothèque case; producer knowledge"
+				},
+				{
+					"fact": "The list prints Château de Beaucastel {Oenotheque} 1998 at $420, 2000 at $350, 2006 at $300 and 2007 at $275 (bin 25252), and a Beaucastel 2021 at $630.",
+					"how": "catalogue entries 2557 to 2561"
+				}
+			]
+		},
+		{
+			"n": 2590,
+			"bin": "284217",
+			"name": "Domaine du Vieux Télégraphe \"La Crau\"",
+			"card": "Domaine du Vieux Télégraphe ‘La Crau’ Châteauneuf-du-Pape 2014",
+			"vintage": "2014",
+			"size": "750ml",
+			"printed": "$295",
+			"line": 13389,
+			"facts": [
+				{
+					"fact": "Domaine du Vieux Télégraphe is the Brunier family's estate on the La Crau plateau of Châteauneuf-du-Pape, named for the optical signal telegraph tower that stood there; the plateau is covered in large round stones (galets roulés). La Crau is its main red, Grenache-led with Mourvèdre and Syrah.",
+					"how": "producer knowledge, certain"
+				},
+				{
+					"fact": "The list prints Vieux Télégraphe 1999 at $420, 2001 at $410, 2013 at $325, 2014 at $295 (bin 284217) and 2015 at $340.",
+					"how": "catalogue entries 2587 to 2591"
+				}
+			]
+		},
+		{
+			"n": 2538,
+			"bin": "34534",
+			"name": "Auguste Clape",
+			"card": "Auguste Clape Cornas 2016",
+			"vintage": "2016",
+			"size": "750ml",
+			"printed": "$318",
+			"line": 13127,
+			"facts": [
+				{
+					"fact": "The Clape family estate in Cornas (founded by Auguste Clape, run by his son and grandson) is the reference producer of the appellation, making Syrah traditionally with whole bunches and aging in old casks. Cornas is a small, steep granite appellation at the south of the Northern Rhône, all Syrah.",
+					"how": "producer and appellation knowledge, certain"
+				},
+				{
+					"fact": "The list prints twelve Clape lines: Cornas 2016 at $318 (bin 34534), 2017 at $410, 2020 at $450, 2021 at $530 and $390, 2022 at $510, Saint-Péray (filed under France ~ Rhône ~ White) at $160 to $225, Le Vin des Amis Vin de France at $135 and $150 and a Côtes du Rhône 2023 at $175.",
+					"how": "catalogue entries 1142 to 2597"
+				}
+			]
+		},
+		{
+			"n": 2527,
+			"bin": "24442",
+			"name": "Domaine Jean-Louis Chave",
+			"card": "Domaine Jean-Louis Chave Hermitage 2013",
+			"vintage": "2013",
+			"size": "750ml",
+			"printed": "$490",
+			"line": 13068,
+			"facts": [
+				{
+					"fact": "The Chave family domaine is based in Mauves, across the Rhône from the hill of Hermitage at Tain-l'Hermitage, and is the grower most associated with Hermitage; its red Hermitage is Syrah blended from several plots (lieux-dits) on the hill. Hermitage is a single granite hill.",
+					"how": "producer and appellation knowledge, certain"
+				},
+				{
+					"fact": "The list prints Domaine Jean-Louis Chave Hermitage 2008 at $450 (bin 22662, filed under France ~ Rhône ~ White), 2008 at $365 (bin 22432) and 2013 at $490 (bin 24442).",
+					"how": "catalogue entries 1134, 2526, 2527"
+				}
+			]
+		},
+		{
+			"n": 2492,
+			"bin": "27243",
+			"name": "E. Guigal \"La Mouline\"",
+			"card": "E. Guigal ‘La Mouline’ Côte-Rôtie 2012",
+			"vintage": "2012",
+			"size": "750ml",
+			"printed": "$1100",
+			"line": 12889,
+			"facts": [
+				{
+					"fact": "E. Guigal is the family house in Ampuis whose three single-vineyard Côte-Rôties, La Mouline, La Landonne and La Turque, are known to collectors as the La La's. La Mouline is a terraced amphitheater on the Côte Blonde; it is Syrah co-fermented with a little Viognier and aged a long time in new oak, the most perfumed of the three.",
+					"how": "producer knowledge, certain"
+				},
+				{
+					"fact": "The list prints La Landonne, La Mouline and La Turque in 2010 to 2013 between $980 and $1300, La Mouline 2012 at $1100 (bin 27243).",
+					"how": "catalogue entries 2483 to 2496"
+				}
+			]
+		},
+		{
+			"n": 2574,
+			"bin": "22458",
+			"name": "Château Rayas",
+			"card": "Château Rayas Châteauneuf-du-Pape 2011",
+			"vintage": "2011",
+			"size": "750ml",
+			"printed": "$1200",
+			"line": 13309,
+			"facts": [
+				{
+					"fact": "Château Rayas is the Reynaud family's estate in Châteauneuf-du-Pape; its sandy parcels sit among woods, cooler than most of the appellation, and its Châteauneuf is made from Grenache alone in an old-fashioned way; it is pale and perfumed for the appellation and widely called its cult wine.",
+					"how": "producer knowledge, certain"
+				},
+				{
+					"fact": "The list prints Château Rayas 2009 at $1060, 2011 at $1200 (bin 22458) and 2012 at $1300; entries 2602 and 2603 (Other Côte du Rhône, 2014 at $270 and 2019 at $210) are Château Rayas La Pialade Côtes du Rhône.",
+					"how": "catalogue entries 2573 to 2575, 2602, 2603"
+				}
+			]
+		}
+	]
+}
