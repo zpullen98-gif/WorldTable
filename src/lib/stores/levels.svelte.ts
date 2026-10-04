@@ -66,6 +66,61 @@ class LevelsStore {
 		const rows = this.progress;
 		return rows.length ? firstUnmetLevel(rows) : 1;
 	}
+
+	/* ---- the chosen level (docs/consolidation-design.md, 2.4 and 3.4) ------
+	 * What the reader is studying: the last level they opened or chose, else
+	 * the lowest not yet met. One slot per device, `oot-level-table-v1`, the
+	 * integer key 1 to 4; not in oot-profiles.js BASES, never exported, and
+	 * read nowhere before the browser has mounted (no localStorage in the
+	 * prerender pass), so it is read lazily on the first ask in the browser. */
+	/* The stored value is a PLAIN field, read lazily: `chosen` is read inside
+	   $derived values (the Flashcards pill, the home's cards), and writing
+	   $state there is an unsafe mutation Svelte refuses, which once left the
+	   slot unread and the parent of My restaurant on the wrong level. A $state
+	   tick, moved only by choose(), is what makes a choice re-derive. */
+	#chosen: DeckLevel | null = null;
+	#chosenRead = false;
+	#chosenTick = $state(0);
+
+	#readChosen() {
+		if (this.#chosenRead || typeof window === 'undefined') return;
+		this.#chosenRead = true;
+		try {
+			const n = Number(localStorage.getItem(CHOSEN_KEY));
+			if (n >= 1 && n <= 4) this.#chosen = n as DeckLevel;
+		} catch {
+			/* a convenience: the lowest unmet level stands in */
+		}
+	}
+
+	/** True once a level has been chosen on this device. */
+	get hasChosen(): boolean {
+		void this.#chosenTick;
+		this.#readChosen();
+		return this.#chosen !== null;
+	}
+
+	/** The chosen level, else the lowest not yet met. */
+	get chosen(): DeckLevel {
+		void this.#chosenTick;
+		this.#readChosen();
+		return this.#chosen ?? this.current;
+	}
+
+	/** Choose a level: opening any level page does, and so does the scope chip. */
+	choose(n: DeckLevel) {
+		this.#chosenRead = true;
+		this.#chosen = n;
+		this.#chosenTick += 1;
+		try {
+			localStorage.setItem(CHOSEN_KEY, String(n));
+		} catch {
+			/* kept for this visit only */
+		}
+	}
 }
+
+/** The chosen level's per-device slot. */
+export const CHOSEN_KEY = 'oot-level-table-v1';
 
 export const levels = new LevelsStore();

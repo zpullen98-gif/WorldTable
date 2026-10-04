@@ -1,9 +1,8 @@
 <!--
-  The Levels tab lands here and leaves at once, for the level the record says
-  the reader is on (the lowest not yet met: lib/levels.ts firstUnmetLevel,
-  derived on every visit and never stored). A literal href in the bar, so the
-  build verifier can resolve the tab to a page; a forward, so the tab means
-  "the level you are on" rather than a list of four the home already is.
+  An old address (the retired Levels tab's) that lands here and leaves at
+  once, for the chosen level: the one last opened or chosen on this device,
+  else the lowest not yet met (lib/levels.ts firstUnmetLevel, derived on every
+  visit and never stored).
 
   Prerendered as its heading and one line, under a kilobyte; the line names
   the first level (named, never numbered), the one name the load bakes in.
@@ -16,6 +15,7 @@
 	import { onMount } from 'svelte';
 	import { levels } from '$lib/stores/levels.svelte';
 	import { levelHref } from '$lib/levels';
+	import { nav } from '$lib/stores/nav.svelte';
 
 	let { data } = $props();
 
@@ -25,7 +25,10 @@
 
 	$effect(() => {
 		if (!levels.ready) return;
-		void goto(`${base}${levelHref(levels.current)}`, { replaceState: true });
+		/* The chosen level (the last one opened or chosen), else the lowest
+		   not yet met. A replace, so the depth Back reads does not move. */
+		nav.navReplace();
+		void goto(`${base}${levelHref(levels.chosen)}`, { replaceState: true });
 	});
 </script>
 

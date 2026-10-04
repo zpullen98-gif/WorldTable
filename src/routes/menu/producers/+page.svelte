@@ -105,7 +105,6 @@
 
 <div class="shell view">
 	<header class="head">
-		<p class="crumbs"><a href="{base}/menu">◂ My Menu</a></p>
 		<h1>Producers</h1>
 		<p class="lede">
 			Who the house buys from: the creamery, the farm, the boat, the mill. Write down where they are,
@@ -113,7 +112,6 @@
 			on.
 		</p>
 		<nav class="tools" data-print="hide" aria-label="Menu sheets">
-			<a class="chip" href="{base}/menu">← The worksheet</a>
 			<a class="chip" href="{base}/menu/preps">Preps</a>
 			<a class="chip" href="{base}/menu/costing">The costing sheet</a>
 		</nav>
@@ -263,17 +261,6 @@
 	.view {
 		padding-block: 26px 80px;
 		max-width: 760px;
-	}
-	.crumbs {
-		font-size: var(--t-micro);
-		margin-bottom: 14px;
-	}
-	.crumbs a {
-		color: var(--muted);
-		text-decoration: none;
-	}
-	.crumbs a:hover {
-		color: inherit;
 	}
 	.lede {
 		max-width: var(--measure);

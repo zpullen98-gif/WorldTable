@@ -16,6 +16,10 @@
 	import { loadPlates } from '$lib/data';
 	import { plateHref, plateIndexes } from '$lib/plates';
 	import type { DeckLevel } from '$lib/types';
+	import { goto } from '$app/navigation';
+	import { nav } from '$lib/stores/nav.svelte';
+	import { levels as levelStore } from '$lib/stores/levels.svelte';
+	import { lexiconCardsTarget } from '$lib/nav';
 
 	let { data } = $props();
 
@@ -40,19 +44,35 @@
 		}
 	});
 
+	/** slug -> the level it is placed at, by name, for "At other levels" */
+	let levelOfSlug = $state<Map<string, string>>(new Map());
+
 	afterNavigate(async () => {
 		const wanted = levelFromSearch(page.url.search);
 		const start = new URLSearchParams(page.url.search).get('start');
+		/* ONE CARD STYLE (docs/consolidation-design.md 3.7): the Lexicon's flash
+		   cards are the Flashcards tab's now; ?start=flash forwards there with a
+		   replace, on the level's terms when ?level= names one. */
+		if (start === 'flash') {
+			if (wanted) levelStore.choose(wanted);
+			nav.navReplace();
+			void goto(`${base}${lexiconCardsTarget(wanted)}`, { replaceState: true });
+			return;
+		}
 		level = wanted;
 		if (!wanted) {
 			levelSlugs = null;
+			// Quizzes' Lexicon row under show all: the whole Lexicon's quiz.
+			if (start === 'quiz') startQuiz();
 			return;
 		}
 		const levels = await loadLevels();
 		levelName = levels.levels.find((l) => l.level === wanted)?.name ?? '';
 		levelSlugs = new Set(levels.items.lexicon[String(wanted)] ?? []);
-		if (start === 'flash') shuffle();
-		else if (start === 'quiz') startQuiz();
+		const of = new Map<string, string>();
+		for (const l of levels.levels) for (const slug of levels.items.lexicon[String(l.level)] ?? []) of.set(slug, l.name);
+		levelOfSlug = of;
+		if (start === 'quiz') startQuiz();
 	});
 
 	/* localeCompare, not a bare .sort(). The project pins collation everywhere it
@@ -133,6 +153,15 @@
 		});
 	});
 
+	/* A filter never hides what was searched for (design 2.4): narrowed to a
+	   level, a search that finds nothing there lists the matches at the other
+	   levels, each naming its level in words. */
+	const elsewhere = $derived.by(() => {
+		const needle = fold(q).trim();
+		if (!levelSlugs || !needle || shown.length) return [] as Entry[];
+		return data.lexicon.filter((e) => !levelSlugs!.has(e.slug) && (!category || e.category === category) && haystack(e).includes(needle)).slice(0, 30);
+	});
+
 	/**
 	 * GROUPING, which is what makes 779 cards navigable.
 	 *
@@ -189,27 +218,10 @@
 	const showDirectory = $derived(!q.trim() && !category);
 
 	/* ---- flashcards ----
-	 * The deck snapshots the ENTRIES, not indices into `shown`. `shown` is a
-	 * live derivation over the search box: with indices, shuffling and then
-	 * typing a character makes every index dangle or point at the wrong term.
-	 * A snapshot also matches how study decks behave physically: narrowing the
-	 * search mid-drill shouldn't reshuffle the cards in your hand.
+	 * The Lexicon's flash cards moved to the Flashcards tab, the one card
+	 * screen (docs/consolidation-design.md 3.7): the button above opens the
+	 * level's terms there, or every term, and ?start=flash forwards there.
 	 */
-	let deck = $state<typeof data.lexicon>([]);
-	let pos = $state(0);
-	let revealed = $state(false);
-
-	function shuffle() {
-		const cards = [...shown];
-		for (let i = cards.length - 1; i > 0; i--) {
-			const j = Math.floor(Math.random() * (i + 1));
-			[cards[i], cards[j]] = [cards[j], cards[i]];
-		}
-		deck = cards;
-		pos = 0;
-		revealed = false;
-	}
-	const card = $derived(deck.length ? deck[pos % deck.length] : null);
 
 	/* ---- quiz ----
 	 * Ported from qzAsk (L3082): ten questions a round, distractors drawn from
@@ -273,7 +285,6 @@
 	let asked = new Set<string>();
 
 	function startQuiz() {
-		deck = [];
 		qNum = 0;
 		right = 0;
 		verdict = '';
@@ -314,7 +325,7 @@
 						? 'Solid line cook: a few more services and it’s muscle memory.'
 						: right >= 5
 							? 'Stage complete: hit the flashcards on what you missed.'
-							: 'Back to prep, chef: filter the category and study before the next round.';
+							: 'Filter the category and study before the next round, chef: it is back to prep.';
 			// Contract with the OOT monorepo's shared/oot-log.js (hookTable).
 			if (typeof window !== 'undefined')
 				window.dispatchEvent(
@@ -356,13 +367,13 @@
 			<option value={null}>All categories</option>
 			{#each categories as c (c)}<option value={c}>{c}</option>{/each}
 		</select>
-		<button class="chip" onclick={shuffle}>Study mode ▸ flashcards</button>
+		<a class="chip" href={level ? `${base}/flashcards?deck=lexicon` : `${base}/flashcards?deck=lexicon-all`}>Flashcards</a>
 		<button class="chip" onclick={startQuiz}>Quiz me ▸ multiple choice</button>
 		<span class="count">{shown.length} of {data.lexicon.length} terms</span>
 		{#if level && levelName}
 			<span class="count levelnote"
 				>{levelName}
-				· <a href="{base}/lexicon">Every term</a> · <a href="{base}/level/{level}">Back to {levelName}</a></span
+				· <a href="{base}/lexicon">Every term</a></span
 			>
 		{/if}
 		<!--
@@ -417,22 +428,6 @@
 		</div>
 	{/if}
 
-	{#if card}
-		<div class="flash">
-			<p class="eyebrow">{card.category}</p>
-			<p class="term">{card.term}</p>
-			{#if revealed}<p class="def">{card.definition}</p>{/if}
-			<div class="flashtools">
-				<button class="chip" onclick={() => (revealed = !revealed)}>
-					{revealed ? 'Hide' : 'Reveal'}
-				</button>
-				<button class="chip" onclick={() => { pos++; revealed = false; }}>Next card ↦</button>
-				<button class="chip" onclick={shuffle}>Reshuffle</button>
-				<button class="chip" onclick={() => (deck = [])}>Close</button>
-				<span class="count">{(pos % deck.length) + 1} / {deck.length}</span>
-			</div>
-		</div>
-	{/if}
 
 	<!--
 		The directory. 779 cards is a reference only if you can see what is in it
@@ -595,7 +590,17 @@
 		</section>
 	{/each}
 
-	{#if !shown.length}
+	{#if !shown.length && elsewhere.length}
+		<p class="empty">Nothing at {levelName} for "{q.trim()}".</p>
+		<section class="elsewhere" aria-labelledby="elsewhere-h">
+			<h2 class="grouphead" id="elsewhere-h"><span class="gname">At other levels</span></h2>
+			<ul class="elsewherelist">
+				{#each elsewhere as e (e.slug)}
+					<li><a href="{base}/lexicon#{e.slug}">{e.term}</a> <span class="gn">{levelOfSlug.get(e.slug) ?? 'Every level'} · {e.category}</span></li>
+				{/each}
+			</ul>
+		</section>
+	{:else if !shown.length}
 		{#if floor.hits.length}
 			<p class="empty">The Lexicon has no entry by that name. The Floor Deck does: see above.</p>
 		{:else}
@@ -719,8 +724,22 @@
 	 * scroll-padding: this heading only exists on this page, so every other
 	 * route's anchors must not move.
 	 */
+	.elsewherelist {
+		list-style: none;
+		margin: 6px 0 20px;
+		padding: 0;
+	}
+	.elsewherelist li {
+		font-size: 1.0625rem;
+		line-height: 1.4;
+	}
+	.elsewherelist a {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+	}
 	.grouphead {
-		position: sticky; top: var(--modebar-h); z-index: 20;
+		position: sticky; top: calc(var(--modebar-h) + var(--backrow-h, 0px)); z-index: 20;
 		display: flex; align-items: baseline; gap: 12px;
 		margin: 0 0 16px; padding: 10px 0 8px; border-bottom: 1px solid var(--line);
 		background: var(--paper); font-size: var(--t-h4); letter-spacing: 0.02em;

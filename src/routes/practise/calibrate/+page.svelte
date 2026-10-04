@@ -83,10 +83,8 @@
 			do for yourself standing at a bench alone.
 		</p>
 		<nav class="tools" data-print="hide">
-			<!-- The Practise hub is gone (the four levels, 2026-09-26); the bench
-			     is a door on every level's Palate subsection, so the way back is
-			     the level you are on. -->
-			<a class="chip" href="{base}/level">← Your level</a>
+			<!-- The way back is the layout's Back (docs/consolidation-design.md
+			     2.2): the bench is a Quizzes row, Hands on. -->
 			<a class="chip" href="{base}/palate">The palate</a>
 		</nav>
 	</header>

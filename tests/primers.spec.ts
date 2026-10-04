@@ -65,17 +65,17 @@ test('a cite is a link to the item the level page would open', async ({ page }) 
 	await expect(page.locator('h1')).toBeVisible();
 });
 
-test('the level page opens each primed subsection with a Read first door, and none where nothing is written', async ({ page }) => {
+test('the level page\'s Next reading opens the first primed subsection not yet met, and the Library lists the readers', async ({ page }) => {
 	test.skip(!first, 'no primer is written yet');
 	const n = first!.level;
-	const primed = new Set(at(n).map((p) => p.subsection));
+	// The primers' doors moved with the consolidation: Next reading on the level
+	// page (the first primed subsection, in the level page's order, not yet met)
+	// and What {Level} asks on the Library.
+	const firstKey = LEVELS.subsections.map((s) => s.key).find((k) => at(n).some((p) => p.subsection === k));
 	await goto(page, `/level/${n}`);
-	await expect(page.locator('a.readfirst')).toHaveAttribute('href', new RegExp(`/level/${n}/read$`));
-	for (const s of LEVELS.subsections) {
-		const door = page.locator(`ol.subsections .subsection#${s.key} .doors a.train`, { hasText: 'Read first' });
-		await expect(door).toHaveCount(primed.has(s.key) ? 1 : 0);
-		if (primed.has(s.key)) await expect(door).toHaveAttribute('href', new RegExp(`/level/${n}/read#${s.key}$`));
-	}
+	await expect(page.locator('[data-door="next"]')).toHaveAttribute('href', new RegExp(`/level/${n}/read#${firstKey}$`));
+	await goto(page, '/library');
+	await expect(page.locator('a.door', { hasText: /What .+ asks/ }).first()).toHaveAttribute('href', /\/level\/\d\/read$/);
 });
 
 test('reading records nothing', async ({ page }) => {

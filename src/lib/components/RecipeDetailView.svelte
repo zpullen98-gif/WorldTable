@@ -139,14 +139,11 @@
 </svelte:head>
 
 <article class="shell sheet">
-	<nav class="crumbs" data-print="hide">
-		<a href="{base}/recipes">All chapters</a>
-		<span aria-hidden="true">›</span>
-		<a href="{base}/chapter/{r.chapterSlug}">{r.chapter}</a>
-	</nav>
-
+	<!-- The crumbs went with the consolidation (docs/consolidation-design.md
+	     2.2): the layout's Back is the one way back, and the chapter is a link
+	     in the eyebrow that already named it. -->
 	<header class="head">
-		<p class="eyebrow">{r.chapter} · {r.course}</p>
+		<p class="eyebrow"><a class="chapterlink" href="{base}/chapter/{r.chapterSlug}">{r.chapter}</a> · {r.course}</p>
 		<h1>{r.name}</h1>
 
 		<ul class="stats">
@@ -495,19 +492,11 @@
 		padding-bottom: 80px;
 	}
 
-	.crumbs {
-		display: flex;
-		gap: 8px;
-		font-size: var(--t-small);
-		color: var(--muted);
-		margin-bottom: 18px;
-	}
-	.crumbs a {
-		color: var(--muted);
-		text-decoration: none;
-	}
-	.crumbs a:hover {
-		color: var(--turmeric-deep);
+	.chapterlink {
+		color: inherit;
+		text-underline-offset: 4px;
+		display: inline-block;
+		padding-block: 12px;
 	}
 
 	.head h1 {
@@ -990,8 +979,6 @@
 			border: 1px solid var(--house-frame, var(--line-strong));
 			box-shadow: var(--house-inset, none), var(--shadow-card);
 		}
-		.crumbs { flex-wrap: wrap; row-gap: 0; margin-bottom: 18px; }
-		.crumbs a { padding-block: 8px; text-underline-offset: 4px; }
 		.head h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); line-height: 1.12; margin-block: 9px 18px; text-wrap: balance; }
 		.head > .eyebrow,
 		.sec {

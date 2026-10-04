@@ -118,7 +118,6 @@
 <svelte:head><title>Say it back · The Floor Deck · The World Table</title></svelte:head>
 
 <div class="shell view">
-	<nav class="crumbs"><a href="{base}/service">Service</a> · <a href="{base}/service/deck">The Floor Deck</a></nav>
 	<h1>Say it back</h1>
 
 	<article class="sheet">
@@ -221,9 +220,6 @@
 
 <style>
 	.view { padding-block: 26px 80px; max-width: 760px; }
-	.crumbs { font-size: var(--t-micro); margin-bottom: 14px; color: var(--muted); }
-	.crumbs a { color: var(--muted); text-decoration: none; }
-	.crumbs a:hover { color: inherit; }
 	h1 { font-size: var(--t-h2); margin-bottom: 6px; }
 	.lede { color: var(--ink-soft); max-width: var(--measure); margin-bottom: 16px; }
 	.note { color: var(--ink-soft); max-width: var(--measure); margin-bottom: 8px; }

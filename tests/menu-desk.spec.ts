@@ -217,8 +217,9 @@ test('a drinks list has nothing for the kitchen, and the desk says so and hands 
 test('a share another room left opens the desk, puts one line on Today, and is never offered twice', async ({ page }) => {
 	await seedDesk(page, cannedDeskFile());
 
-	// Home: one line, with the door to the desk's own anchor.
-	await goto(page, '/');
+	// A level page's My restaurant: one line, with the door to the desk's own
+	// anchor (moved there from the home with the consolidation).
+	await goto(page, '/level/1');
 	const line = page.locator('.deskline');
 	await expect(line).toContainText('2 dishes from the Menu Desk are waiting.');
 	await expect(line).toContainText('Read in the Codex, today at');
@@ -322,11 +323,11 @@ test('the bulk send moves the ticked rows to the cellar, the bar, or out', async
 });
 
 test('the desk has its own anchor on My Menu, and the engine row names both engines in order', async ({ page }) => {
-	// The Service hub's tile to the desk went with the hub (the four levels,
-	// 2026-09-26): the desk is Mine's, and the home's Mine door and the Today
-	// line's "Look them over" both land on its own anchor, #desk.
-	await goto(page, '/');
-	await expect(page.locator('nav.quiet .door').nth(3)).toHaveAttribute('href', /\/menu$/);
+	// Since the consolidation the desk is My restaurant's: every level page's
+	// quiet link "The Menu Desk" and the waiting line's "Look them over" both
+	// land on its own anchor, #desk.
+	await goto(page, '/level/1');
+	await expect(page.locator('.quietlinks a', { hasText: 'The Menu Desk' }).first()).toHaveAttribute('href', /\/menu#desk$/);
 
 	await goto(page, '/menu');
 	await expect(page.locator('#desk')).toHaveCount(1);

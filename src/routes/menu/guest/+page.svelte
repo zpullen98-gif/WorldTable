@@ -90,7 +90,6 @@
 
 <div class="page">
 	<nav class="tools" data-print="hide">
-		<a class="chip" href="{base}/menu">← Back to the worksheet</a>
 		{#if houseDishes.length}
 			<button class="chip" class:on={showing === 'house'} onclick={() => (mode = 'house')}>
 				The kitchen's menu

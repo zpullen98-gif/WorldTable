@@ -150,7 +150,6 @@
 <svelte:head><title>Drill the track · The World Table</title></svelte:head>
 
 <div class="shell view">
-	<nav class="crumbs"><a href="{base}/service">Service</a></nav>
 	<h1>Drill the track</h1>
 
 	<article class="sheet">
@@ -159,7 +158,6 @@
 				{#if level && levelName}
 					Ten questions over the {pool.length} terms at {levelName},
 					with the whole track as the field. The definition appears with its own term taken out; you name it.
-					<a href="{base}/level/{level}">Back to {levelName}</a>
 				{:else}
 					Ten questions over the {data.cards.length} terms of the service track. The definition
 					appears with its own term taken out; you name it.
@@ -184,7 +182,7 @@
 			</p>
 			<div class="ends">
 				<button class="chip go" onclick={start}>Another round</button>
-				<a class="chip" href="{base}/service">Back to the track</a>
+				<a class="chip" href="{base}/service">The service track</a>
 			</div>
 		{:else if q}
 			<p class="progress" aria-live="polite">Question {at + 1} of {round.length}</p>
@@ -218,13 +216,6 @@
 </div>
 
 <style>
-	.crumbs {
-		font-size: var(--t-small);
-		margin-bottom: 10px;
-	}
-	.crumbs a {
-		color: var(--ink-soft);
-	}
 	h1 {
 		font-size: var(--t-h1);
 		margin-bottom: 16px;

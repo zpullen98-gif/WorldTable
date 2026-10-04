@@ -22,6 +22,7 @@
 @import './lib/styles/tokens.css';
 @import './lib/styles/print.css';
 @import './lib/styles/house-surfaces.css';
+@import './lib/styles/hub.css';
 
 *,
 *::before,
@@ -286,7 +287,7 @@ a.chip {
 }
 
 @media screen {
-    html { scroll-padding-top: calc(var(--modebar-h) + 14px); }
+    html { scroll-padding-top: calc(var(--modebar-h) + var(--backrow-h, 0px) + 14px); }
     body { background: radial-gradient(ellipse at 50% 0, color-mix(in srgb, var(--turmeric) 6%, transparent), transparent 900px), var(--paper); }
     a { text-underline-offset: 4px; }
     button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
@@ -297,6 +298,6 @@ a.chip {
     .house-main :is(input:not([type='checkbox']):not([type='radio']):not([type='range']), select, textarea) { border-color: var(--field-line); }
     .house-main :is(button.chip, a.chip, .train, .tool-link) { min-height: 44px; }
     .house-main :is(.chip.go, .chip.on) { font-weight: 600; }
-    :root .house-main .toolbar { top: var(--modebar-h); }
+    :root .house-main .toolbar { top: calc(var(--modebar-h) + var(--backrow-h, 0px)); }
     :root .house-main .rail > ul { top: calc(var(--modebar-h) + 20px); max-height: calc(100dvh - var(--modebar-h) - 40px); }
 }

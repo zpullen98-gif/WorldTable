@@ -142,12 +142,8 @@
 			Your own menu, back-timed by The Pass, and {SECONDS_PER_QUESTION} seconds to say what fires
 			first. Reading the plan cold is the skill; the clock is the load.
 		</p>
-		<nav class="tools" data-print="hide">
-			<!-- The Practise hub is gone (the four levels, 2026-09-26). The drill
-			     reads the house's own pass plan, so it is Mine's: My Menu carries
-			     its door and is the way back. -->
-			<a class="chip" href="{base}/menu">← My Menu</a>
-		</nav>
+		<!-- The way back is the layout's Back (docs/consolidation-design.md 2.2):
+		     the drill is a Quizzes row, Hands on. -->
 	</header>
 
 	<article class="sheet">

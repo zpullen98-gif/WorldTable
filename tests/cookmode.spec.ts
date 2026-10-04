@@ -59,7 +59,10 @@ test.describe('on a phone in landscape', () => {
 		// longest today.
 		for (;;) {
 			for (const label of [/Back/, /Next step|Done/]) {
-				const box = await page.getByRole('button', { name: label }).boundingBox();
+				// Inside the dialog: the page's own Back control (the layout's,
+				// since the consolidation) sits under the modal and is not the
+				// step's.
+				const box = await page.locator('dialog.cook').getByRole('button', { name: label }).boundingBox();
 				expect(box, `no box for ${label} on this step`).not.toBeNull();
 				expect(box!.y + box!.height, `${label} is off the bottom`).toBeLessThanOrEqual(390);
 			}

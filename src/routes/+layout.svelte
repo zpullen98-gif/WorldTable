@@ -3,15 +3,18 @@
 	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	import { TOTALS } from '$lib/data';
-	import { prefs } from '$lib/stores/prefs.svelte';
 	import { session } from '$lib/stores/session.svelte';
 	import { house } from '$lib/stores/house.svelte';
 	import * as profiles from '$lib/profiles';
-	import { repertoire, dueList } from '$lib/repertoire';
+	import { browser } from '$app/environment';
+	import { nav } from '$lib/stores/nav.svelte';
+	import { today } from '$lib/stores/today.svelte';
+	import BackButton from '$lib/components/BackButton.svelte';
 	import UpdatePrompt from '$lib/components/UpdatePrompt.svelte';
 	import { swStatus } from '$lib/stores/sw-status.svelte';
 	import TimerBar from '$lib/components/TimerBar.svelte';
 	import { bareHtmlPath } from '$lib/htmlPath';
+	import { MORE_DRAWERS } from '$lib/nav';
 	import { onMount } from 'svelte';
 
 	let { children } = $props();
@@ -91,7 +94,7 @@
 	// change because somebody else tapped their name. See stores/house.svelte.ts.
 	$effect(() => {
 		void session.hydrate();
-		void house.hydrate();
+		void house.boot();
 	});
 
 	/**
@@ -160,37 +163,45 @@
 		return () => ro.disconnect();
 	});
 
-	/* The one nav the three apps share, the same four words in the same order
-	   (the owner's decision, 2026-09-26): Home is the four levels, Levels is
-	   the level you are on, Library is the reference, Mine is your menu with
-	   your record and tools behind it. Every Learn and Practise door moved
-	   inside the levels or behind those four. `/level` is a literal href so the
-	   build verifier can resolve it to a page: it forwards to the level the
-	   record says you are on. */
+	/* The one nav the three apps share (docs/consolidation-design.md 2.1 and
+	   3.2): the four tab words Home, Flashcards, Quizzes, Library, in that
+	   order, then More, drawn as the bar's quiet control at its right end
+	   where the service toggle's moon was, and lit only while a More screen
+	   shows. Every href is a literal, so verify-build's scanner resolves each
+	   to a page; navigation.test.ts pins the words, the order and More last
+	   and quiet. Home is the four levels; a level page opens on Today's study
+	   and My restaurant; every deck is under Flashcards, every round under
+	   Quizzes, all reading under Library, the record and the tools under More. */
 	const MODES = [
 		{ href: '', label: 'Home' },
-		{ href: '/level', label: 'Levels' },
-		{ href: '/recipes', label: 'Library' },
-		{ href: '/menu', label: 'Mine' }
+		{ href: '/flashcards', label: 'Flashcards' },
+		{ href: '/quizzes', label: 'Quizzes' },
+		{ href: '/library', label: 'Library' },
+		{ href: '/more', label: 'More', quiet: true }
 	];
 
 	/**
-	 * Which tab owns which path. A SEPARATE const, deliberately: anything shaped
+	 * Which tab owns which path, decided once and in this order; the first
+	 * match wins (design 3.2). A SEPARATE const, deliberately: anything shaped
 	 * like `href: '...'` inside the MODES literal is picked up by
 	 * verify-build.mjs's scanner and resolved to a page file, so a nested list
 	 * there would assert on files that can never exist.
 	 *
-	 * Order is longest-prefix-first where two tabs share a stem: /menu/quiz is
-	 * Mine (the house's own menu, drilled) and so is everything under /menu, so
-	 * Mine is tested first; the study and practice routes are the Levels tab's,
-	 * because that is where their doors are now.
+	 * The level test and the level's reading are matched by pattern first,
+	 * because their stem (/level) is Home's. /menu/quiz is Quizzes' although
+	 * /menu is Home's, so the More and Quizzes prefixes are tested before
+	 * Home's. Every screen reached from More lights More.
 	 */
+	const OWN_PATTERNS: Array<[RegExp, string]> = [
+		[/^\/level\/[1-4]\/test$/, '/quizzes'],
+		[/^\/level\/[1-4]\/read$/, '/library']
+	];
 	const OWNS: Array<[string, string[]]> = [
-		// the firing drill reads the house's own pass plan, so it is Mine's and
-		// is tested before /practise, which the calibration bench keeps for Levels
-		['/menu', ['/menu', '/repertoire', '/coverage', '/practise/firing']],
-		['/level', ['/level', '/study', '/technique', '/palate', '/safety', '/service', '/practise', '/plates']],
-		['/recipes', ['/recipes', '/recipe/', '/chapter/', '/family', '/lexicon', '/pantry']]
+		['/more', ['/more', '/repertoire', '/coverage', '/menu/costing', '/menu/preps', '/menu/prep-board', '/menu/waste', '/menu/producers', '/menu/guest']],
+		['/quizzes', ['/quizzes', '/menu/quiz', '/service/deck/test', '/service/deck/say', '/service/deck/lineup', '/service/drill', '/practise']],
+		['/flashcards', ['/flashcards', '/service/deck/study', '/service/deck']],
+		['/library', ['/library', '/recipes', '/recipe/', '/chapter/', '/family', '/lexicon', '/pantry', '/technique', '/plates', '/service', '/safety', '/palate', '/study']],
+		['', ['/level', '/menu']]
 	];
 
 	// bareHtmlPath: page.url keeps the .html spelling a reader may have arrived
@@ -226,13 +237,23 @@
 		page.status < 400 && (path.startsWith('/recipe/') || path.startsWith('/family/'))
 	);
 
-	/* The one number worth carrying in the chrome: how many dishes are past
-	   their re-cook. Same treatment as the menu's count: a pill, not a badge
-	   that nags, and absent entirely at zero. */
-	const dueCount = $derived.by(() => {
-		const now = Date.now();
-		return dueList(repertoire(session.cookedLog, now), now).length;
+	/* The one number worth carrying in the chrome: the cards due today at the
+	   chosen level and the house, new ones included (lib/today.ts), the same
+	   number the level page's Due today row and the Flashcards root show. A
+	   pill with a hidden word, absent at zero. The house's dish count moved to
+	   My restaurant's count line, the re-cook count to More's Record row. */
+	const dueToday = $derived(today.at()?.total ?? 0);
+	/* After the page has drawn: the pill waits on the levels file, the deck's
+	   index and the house's boot, and on a page as heavy as the recipe grid
+	   that work must not race the page's own hydration. The pages that show
+	   the count themselves (a level page, Flashcards) load it at once. */
+	$effect(() => {
+		const t = setTimeout(() => today.load(), 1500);
+		return () => clearTimeout(t);
 	});
+
+	/* The in-app depth Back reads (stores/nav.svelte.ts). */
+	nav.install();
 
 	/**
 	 * The one tab that owns the current path.
@@ -244,6 +265,15 @@
 	 */
 	const owner = $derived.by(() => {
 		if (path === '/') return '';
+		for (const [re, tab] of OWN_PATTERNS) if (re.test(path)) return tab;
+		/* The flash cards' old address lights Flashcards in the browser only:
+		   the prerendered page cannot read the query (the first Convention). */
+		if (browser && path === '/menu/quiz' && page.url.searchParams.get('mode') === 'cards') return '/flashcards';
+		/* The same rule for two more: the Lexicon quiz is a Quizzes row, and a
+		   /menu drawer More opened (#plan, #tools, #maitre, remembered in the
+		   entry's state once the hash is cleared) is a More screen. */
+		if (browser && path === '/lexicon' && page.url.searchParams.get('start') === 'quiz') return '/quizzes';
+		if (browser && path === '/menu' && (MORE_DRAWERS.includes(page.url.hash.slice(1)) || (page.state as App.PageState).via === 'more')) return '/more';
 		for (const [tab, prefixes] of OWNS) {
 			for (const prefix of prefixes) {
 				const stem = prefix.endsWith('/') ? prefix : prefix + '/';
@@ -255,6 +285,21 @@
 
 	function isActive(href: string) {
 		return owner === href;
+	}
+
+	/**
+	 * A tap on the lit tab while already on its root scrolls to the top and
+	 * adds no history entry (design 2.1): the same address is a replace in the
+	 * router, and a thumb tapping the lit word to get back to the top must not
+	 * cost a Back press. A root is the tab's own path with no screen of its
+	 * own open over it (a deck, a run, the quick quiz).
+	 */
+	function onTab(e: MouseEvent, href: string) {
+		if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+		const st = (page.state ?? {}) as App.PageState;
+		if (owner !== href || path !== (href || '/') || st.fc || st.qq) return;
+		e.preventDefault();
+		window.scrollTo(0, 0);
 	}
 
 	/**
@@ -347,30 +392,24 @@
 		{#each MODES as m (m.href)}
 			{@const here = isActive(m.href)}
 			<!--
-				aria-current, which the bar has never had: the lit tab was marked by a
-				colour and a 2px underline and nothing else, so a screen reader was
-				told five links and not which one you were standing on.
+				aria-current, and never the colour alone: the lit tab carries the
+				underline too. More is the quiet control at the right end: a ruled
+				box in the bar's muted ink, lit like any tab while a More screen
+				shows.
 			-->
 			<a
 				class="modetab"
+				class:quiet={m.quiet}
 				class:on={here}
 				aria-current={here ? 'page' : undefined}
 				href="{base}{m.href || '/'}"
+				onclick={(e) => onTab(e, m.href)}
 			>
-				{m.label}{#if m.href === '/menu' && session.menuCount}<span class="pill"
-						>{session.menuCount}</span
-					>{:else if m.href === '/level' && dueCount}<span class="pill">{dueCount}</span>{/if}
+				{m.label}{#if m.href === '/flashcards' && dueToday}<span class="pill"
+						>{dueToday}<span class="vh"> due</span></span
+					>{/if}
 			</a>
 		{/each}
-		<button
-			class="service"
-			onclick={() => prefs.toggleService()}
-			aria-label="Switch between day and night service"
-		>
-			<span class="svcglyph" aria-hidden="true"
-				>{prefs.resolvedService === 'night' ? '☀' : '☾'}</span
-			><span class="svcword">{prefs.resolvedService === 'night' ? 'Day service' : 'Night service'}</span>
-		</button>
 	</div>
 </nav>
 
@@ -413,6 +452,7 @@
 {/if}
 
 <main id="main" class="house-main" tabindex="-1">
+	{#if path !== '/'}<BackButton />{/if}
 	{@render children()}
 </main>
 
@@ -623,53 +663,39 @@
 		font-variant-numeric: lining-nums;
 	}
 
-	.service {
+	/*
+	 * More: the bar's quiet control (design 2.1), in the place the service
+	 * toggle's moon held, which moved to More's Settings. A ruled box in the
+	 * muted ink, so it reads as the drawer of everything else and not as a
+	 * fifth tab; lit like any tab (the turmeric ink and underline, and
+	 * aria-current) while a More screen shows.
+	 */
+	.modetab.quiet {
 		margin-left: auto;
-		background: none;
-		border: 1px solid transparent;
-		cursor: pointer;
-		font-size: var(--t-micro);
-		letter-spacing: var(--tracking-tab);
-		text-transform: uppercase;
-		color: var(--muted);
-		padding: 7px 10px;
+		border: 1px solid var(--line);
+		border-bottom-width: 2px;
 		border-radius: var(--radius);
-		white-space: nowrap;
-		/* It sits in the primary nav beside 46px tabs and measured 33px tall at
-		   every width above the phone breakpoint, so the floor is not phone-only. */
-		min-height: 44px;
+		text-align: center;
 	}
-	.svcword {
-		margin-left: 0.45em;
+	.modetab.quiet.on {
+		border-bottom-color: var(--turmeric-deep);
+	}
+	/* The pill's word for a screen reader: " due". */
+	.vh {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
 	}
 	/*
-	 * On a phone the toggle keeps its glyph and drops its words, which is what
-	 * lets the wrapped bar settle at exactly two rows instead of three: with the
-	 * full 112px label it took a row of its own at 320 and 375, the two commonest
-	 * widths, and a 147px sticky bar is its own defect.
-	 *
-	 * The words are the only thing removed. The accessible name is the
-	 * aria-label, not the text, so nothing is lost to a screen reader and
-	 * tests/regressions.spec.ts still finds it by /day and night service/.
-	 *
-	 * Deleting the control outright was the other candidate and is survivable —
-	 * the app follows prefers-color-scheme when nothing is stored — but it is the
-	 * ONLY service control in the app, so on a phone it would mean the OS decided
-	 * day or night and a cook could never say otherwise.
+	 * The service toggle that sat here moved to More's Settings (design 3.2),
+	 * the same prefs.toggleService() and the same words, Day service and Night
+	 * service: the bar's right end is More's now, so the five words seat one
+	 * row at 390 and 375.
 	 */
 	@media (max-width: 599px) {
-		.svcword {
-			position: absolute;
-			width: 1px;
-			height: 1px;
-			overflow: hidden;
-			clip-path: inset(50%);
-			white-space: nowrap;
-		}
-		.service {
-			min-width: 44px;
-			font-size: 15px;
-		}
 		/*
 		 * 16 to 10 horizontally. This buys a whole extra tab on the first row and
 		 * still leaves the narrowest target 61px wide, well over the floor.
@@ -685,10 +711,6 @@
 			padding-left: 10px;
 			padding-right: 10px;
 		}
-	}
-	.service:hover {
-		color: var(--turmeric-deep);
-		border-color: var(--line);
 	}
 
 	/* The house record's .blocked, in the layout. */
@@ -800,7 +822,7 @@
         .modebar { background: var(--paper); border-bottom-color: var(--house-frame); box-shadow: 0 8px 24px #0001; }
         .modetab { font-family: var(--house-display); font-size: .72rem; color: var(--ink-soft); }
         .modetab.on { color: var(--turmeric-deep); border-bottom-color: var(--turmeric-deep); }
-        .service { color: var(--ink-soft); }
+        .modetab.quiet { color: var(--ink-soft); }
         footer { margin-top: 26px; border-top-color: var(--house-frame); }
     }
     @media screen and (max-width: 599px) {
@@ -813,7 +835,15 @@
         .house-home .brandline { font-size: clamp(2rem, 8.5vw, 3rem); }
         .house-home .head-inner { min-height: 440px; padding-top: 36px; }
         .house-home .house-art img { object-position: 49% 62%; }
-        .modetab { padding-inline: 8px; font-size: .66rem; letter-spacing: .04em; }
+        /* Five words in one row at 390 and 375 (design 3.2), each word whole
+           and centred in a box at least 44 px wide. The design's arithmetic
+           (4 px padding, 4 px gaps) did not count the Flashcards tab's due pill,
+           which measured 26 px, so the padding is 3 px, the gaps 2 px, the
+           tracking .02em and the right gutter 12 px: measured, the bar then ends
+           inside the line at 375. */
+        .modetab { padding-inline: 3px; min-width: 44px; text-align: center; font-size: .66rem; letter-spacing: .02em; }
+        .modebar-inner { gap: 2px; padding-right: 12px; }
+        .pill { margin-left: 3px; padding: 0 5px; }
     }
     @media screen and (forced-colors: active) {
         .house-masthead { background: Canvas; border-color: CanvasText; min-height: auto; }

@@ -71,7 +71,8 @@ test('a word the Lexicon files under another name still lands on the floor card'
 	expect(await page.locator('.deckhits .lexcard, .deckhits .def, .deckhits .flash').count()).toBe(0);
 
 	await hit.click();
-	await expect(page).toHaveURL(new RegExp(`/service/deck/study\\?card=${card.id}$`));
+	// The look-up lands on the one card screen, opened on the card (the consolidation).
+	await expect(page).toHaveURL(new RegExp(`/flashcards\\?deck=deck%3A[a-z-]+&card=${card.id}&run=1$`));
 	await expect(page.locator('.flash .term').first()).toHaveText(card.term);
 });
 

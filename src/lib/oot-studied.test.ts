@@ -59,7 +59,10 @@ describe('every round-complete site goes through the helper', () => {
 		'src/routes/menu/quiz/+page.svelte',
 		'src/routes/practise/firing/+page.svelte',
 		'src/routes/service/drill/+page.svelte',
-		'src/routes/service/deck/study/+page.svelte',
+		// The flip cards moved to the Flashcards tab's one card screen
+		// (docs/consolidation-design.md 3.7); /service/deck/study forwards there.
+		'src/routes/flashcards/+page.svelte',
+		'src/routes/quizzes/+page.svelte',
 		'src/routes/service/deck/test/+page.svelte',
 		'src/routes/service/deck/say/+page.svelte',
 		'src/lib/stores/session.svelte.ts'

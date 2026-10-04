@@ -1,10 +1,9 @@
 <!--
-  The front door: four levels and four doors (lib/components/Home.svelte).
+  The front door: the four levels and nothing else (lib/components/Home.svelte).
 
-  The grid moved to /recipes long ago; the bands that replaced it are gone
-  too (2026-09-26): the home is the four level cards with their word and
-  figure, and one quiet row of doors that are not study. Everything that used
-  to be a band or a tile lives inside the levels or behind those four doors.
+  The grid moved to /recipes long ago, the bands after it (2026-09-26), and the
+  quiet row of doors under the cards went with the consolidation (4 Oct 2026):
+  everything they opened is under a tab or on a level page now.
 
   The legacy-query redirect below is not decoration. Links to /?q=... exist in
   the wild (the regression suite shipped one), and a prerendered page may not
@@ -46,4 +45,4 @@
 	});
 </script>
 
-<Home curriculum={data.curriculum} levelInfo={data.levelInfo} />
+<Home levelInfo={data.levelInfo} />

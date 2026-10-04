@@ -33,6 +33,16 @@ const countAt = (section: string, level: number) => {
 	return n ? `${n} cards` : 'None at this level';
 };
 
+/**
+ * The one card screen (the consolidation, docs/consolidation-design.md 3.7):
+ * /service/deck/study forwards to the Flashcards tab, where a card shows Flip
+ * and then Got it (recorded `close`, what Had it and Shaky both recorded) or
+ * Again (`missed`, and the card comes round once more).
+ */
+const flip = (page: Page) => page.getByRole('button', { name: 'Flip', exact: true }).click();
+const gotIt = (page: Page) => page.getByRole('button', { name: 'Got it', exact: true }).click();
+const againBtn = (page: Page) => page.getByRole('button', { name: 'Again', exact: true }).click();
+
 /** Every drillLog entry on disk, whichever record holds it. */
 async function drillLog(page: Page) {
 	return page.evaluate(
@@ -104,10 +114,13 @@ test('a sitting starts on the first card in teaching order, with its level named
 	const seen = new Set<string>();
 	for (let guard = 0; guard < 25 && seen.size < 20; guard++) {
 		const term = (await page.locator('.flash .term').textContent()) ?? '';
-		if (seen.has(term)) break; // Later came back round: the sitting is shorter than twenty
+		if (seen.has(term)) break; // a card came back round: the sitting is shorter than twenty
 		seen.add(term);
 		expect(commis.has(term), `${term} is not a ${LEVEL_NAME.get(1)} card`).toBe(true);
-		await page.getByRole('button', { name: /Later/ }).click();
+		if (await page.locator('.deckframe').count() === 0) break; // the run is done
+		await flip(page);
+		await gotIt(page);
+		if (await page.locator('.deckframe').count() === 0) break;
 		await expect(page.locator('.flash .term')).not.toHaveText(term);
 	}
 	expect(seen.size).toBeGreaterThan(1);
@@ -120,7 +133,9 @@ test('a level in the URL narrows the sitting to that level', async ({ page }) =>
 		const term = (await page.locator('.flash .term').textContent()) ?? '';
 		expect(chef.has(term), `${term} is not a ${LEVEL_NAME.get(4)} card`).toBe(true);
 		await expect(page.locator('.flash .eyebrow')).toContainText(`${LEVEL_NAME.get(4)} · `);
-		await page.getByRole('button', { name: /Later/ }).click();
+		await flip(page);
+		await gotIt(page);
+		if (await page.locator('.deckframe').count() === 0) break;
 	}
 });
 
@@ -129,13 +144,13 @@ test('a judgment is written once per card per day, and survives a reload', async
 	await expect(page.locator('.flash .term')).toHaveText(FIRST.term);
 
 	// nothing is written by turning a card
-	await page.getByRole('button', { name: 'Show the card' }).click();
+	await flip(page);
 	await expect(page.locator('.flash .def').first()).toHaveText(FIRST.guest);
 	expect(await drillLog(page)).toHaveLength(0);
 
-	// "Didn't have it" records a miss and sends the card round again
+	// Again records a miss and sends the card round again
 	const before = await page.locator('.where').textContent();
-	await page.getByRole('button', { name: /Didn't have it/ }).click();
+	await againBtn(page);
 	await expect(page.locator('.flash .term')).not.toHaveText(FIRST.term);
 	const total = (s: string | null) => Number(/of (\d+)/.exec(s ?? '')?.[1]);
 	expect(total(await page.locator('.where').textContent())).toBe(total(before) + 1);
@@ -148,12 +163,13 @@ test('a judgment is written once per card per day, and survives a reload', async
 	for (let guard = 0; guard < 60; guard++) {
 		const term = await page.locator('.flash .term').textContent();
 		if (term === FIRST.term) break;
-		await page.getByRole('button', { name: /Later/ }).click();
+		await flip(page);
+		await gotIt(page);
 	}
 	await expect(page.locator('.flash .term')).toHaveText(FIRST.term);
-	await page.getByRole('button', { name: 'Show the card' }).click();
-	// already judged this sitting: the page offers Next, not a second verdict
-	await expect(page.getByRole('button', { name: /Had it/ })).toHaveCount(0);
+	// graded again the same day: the second judgment is not written
+	await flip(page);
+	await gotIt(page);
 
 	await page.waitForTimeout(700);
 	await page.reload();
@@ -166,14 +182,14 @@ test('a judgment is written once per card per day, and survives a reload', async
 
 test('what was missed leads the next visit, and is all "only what I missed" shows', async ({ page }) => {
 	await goto(page, '/service/deck/study');
-	await page.getByRole('button', { name: 'Show the card' }).click();
-	await page.getByRole('button', { name: /Didn't have it/ }).click();
+	await flip(page);
+	await againBtn(page);
 	await page.waitForTimeout(700);
 
 	await goto(page, '/service/deck');
 	await expect(page.locator('.note')).toContainText('owed today');
 	await page.getByRole('link', { name: /Only what I missed/ }).click();
-	await expect(page.locator('h1')).toHaveText('What you missed');
+	await expect(page.locator('.deckframe')).toBeVisible();
 	await expect(page.locator('.flash .term')).toHaveText(FIRST.term);
 	await expect(page.locator('.where')).toHaveText(/Card 1 of 1/);
 });
@@ -234,7 +250,7 @@ test('the keyboard turns a card and judges it', async ({ page }) => {
 test('reduced motion means no motion: the turn does not animate', async ({ page }) => {
 	await page.emulateMedia({ reducedMotion: 'reduce' });
 	await goto(page, '/service/deck/study');
-	await page.getByRole('button', { name: 'Show the card' }).click();
+	await flip(page);
 	await expect(page.locator('.flash .back')).toBeVisible();
 	const running = await page.evaluate(() => document.querySelector('.flash .back')?.getAnimations().length ?? -1);
 	expect(running, 'a Svelte transition would run through WAAPI and ignore the reduced-motion rule').toBe(0);
@@ -279,7 +295,7 @@ test('the deck opens cold with the network gone', async ({ page, context }) => {
 	// never visited online: the shell fallback, then the deck from the precache
 	await goto(page, '/service/deck/study');
 	await expect(page.locator('.flash .term')).toHaveText(FIRST.term);
-	await page.getByRole('button', { name: 'Show the card' }).click();
+	await flip(page);
 	await expect(page.locator('.flash .def').first()).toHaveText(FIRST.guest);
 	await context.setOffline(false);
 });
@@ -354,7 +370,7 @@ test('a bad written test ends on what was missed, each with the card, and no num
 	expect(own).not.toMatch(/\d/);
 	// and the misses are what "study these now" opens
 	await page.getByRole('link', { name: 'Study these now' }).click();
-	await expect(page.locator('h1')).toHaveText('What you missed');
+	await expect(page.locator('.deckframe')).toBeVisible();
 	await expect(page.locator('.where')).toContainText(`of ${Math.min(20, log.length)}`);
 });
 
@@ -461,8 +477,8 @@ test('say it back asks before it shows, hides the term it asks for, and ends on 
 test('a lineup keeps a tally for the room and writes nothing about the person holding the tablet', async ({ page }) => {
 	// a person's own record first, so "unchanged" means something
 	await goto(page, '/service/deck/study');
-	await page.getByRole('button', { name: 'Show the card' }).click();
-	await page.getByRole('button', { name: /Had it/ }).click();
+	await flip(page);
+	await gotIt(page);
 	await page.waitForTimeout(700);
 	const before = await records(page);
 	expect(before.drill).toHaveLength(1);

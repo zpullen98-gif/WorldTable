@@ -64,20 +64,16 @@ test('a chapter page has its own h1, and the home dashboard does not skip h2', a
 	await expect(page.getByRole('heading', { level: 1, name: 'The Library' })).toBeVisible();
 	await expect(page.getByRole('heading', { level: 2, name: 'All chapters' })).toBeVisible();
 
-	// The home is the four level cards and one quiet row of four doors, under
-	// the masthead's h1 and nothing else (the owner's decision, 2026-09-26):
-	// no h2, no h3, no band. The cards and the doors are links, not headings.
+	// The home is the four level cards under the masthead's h1 and nothing
+	// else (the consolidation, 4 Oct 2026): no h2, no h3, no band, no doors.
+	// The cards are links, not headings.
 	await goto(page, '/');
 	const h1 = page.getByRole('heading', { level: 1 });
 	await expect(h1).toHaveCount(1);
 	await expect(page.getByRole('heading', { level: 2 })).toHaveCount(0);
 	await expect(page.getByRole('heading', { level: 3 })).toHaveCount(0);
 	await expect(page.locator('section.levels .level')).toHaveCount(4);
-	const doors = page.locator('nav.quiet .door');
-	await expect(doors).toHaveCount(4);
-	for (const [i, name] of ['Today', 'Library', 'Record', 'Mine'].entries()) {
-		await expect(doors.nth(i).locator('.door-name')).toHaveText(new RegExp(`^${name}`));
-	}
+	await expect(page.locator('nav.quiet .door')).toHaveCount(0);
 });
 
 test('L2506 — typing in the Lexicon search keeps recipe cross-links', async ({ page }) => {
@@ -153,11 +149,15 @@ test('persistence — pin, note, service and units survive a reload', async ({ p
 	await page.getByRole('button', { name: /Add to menu/ }).click();
 	await page.getByLabel('Family notes').fill('Toast the pepper dry.');
 	await page.getByRole('button', { name: 'US' }).click();
+	// Outlive the 400ms debounce before leaving the page.
+	await page.waitForTimeout(700);
+	// The service toggle lives under More's Settings since the consolidation.
+	await goto(page, '/more');
 	await page.getByRole('button', { name: /day and night service/ }).click();
 
 	// Outlive the 400ms debounce, then start a genuinely fresh document.
 	await page.waitForTimeout(700);
-	await page.reload();
+	await goto(page, '/recipe/cacio-e-pepe');
 
 	await expect(page.getByRole('button', { name: /On the menu/ })).toBeVisible();
 	await expect(page.getByLabel('Family notes')).toHaveValue('Toast the pepper dry.');

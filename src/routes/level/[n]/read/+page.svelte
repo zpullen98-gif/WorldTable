@@ -27,7 +27,6 @@
 <svelte:head><title>Read first · {data.info.name} · The World Table</title></svelte:head>
 
 <div class="shell view">
-	<nav class="crumbs"><a href="{base}/">Home</a> · <a href="{base}/level/{n}">{data.info.name}</a></nav>
 	<p class="eyebrow">Read first</p>
 	<h1>{data.info.name}</h1>
 	<p class="lede">
@@ -74,15 +73,6 @@
 </div>
 
 <style>
-	.crumbs {
-		font-size: var(--t-small);
-		margin-bottom: 8px;
-	}
-	.crumbs a {
-		display: inline-block;
-		padding-block: 10px;
-		color: var(--muted);
-	}
 	.eyebrow {
 		font-size: var(--t-micro);
 		letter-spacing: var(--tracking-eyebrow);

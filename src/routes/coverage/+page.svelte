@@ -317,11 +317,10 @@
 		</div>
 	{/if}
 
-	<!-- Mine, since the four levels: the layout's OWNS map files /coverage
-	     under the Mine tab (the house's own menu and record) and My Menu
-	     carries the entrance, so the way in, the way out and the lit tab all
-	     agree. It was Service before, for the same reason. -->
-	<p class="back"><a href="{base}/menu">Back to My Menu</a></p>
+	<!-- More's, since the consolidation: the layout's OWNS map files /coverage
+	     under More (Record and progress), More carries the entrance and the
+	     layout's Back is the way out, so the way in, the way out and the lit
+	     tab agree. -->
 </div>
 
 <style>
@@ -448,9 +447,5 @@
 		font-size: var(--t-small);
 		line-height: 1.6;
 		color: var(--ink);
-	}
-	.back {
-		margin-top: 24px;
-		font-size: var(--t-small);
 	}
 </style>

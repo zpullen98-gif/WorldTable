@@ -178,8 +178,8 @@ test('the Eggs Hussarde card: the first screen answers the table, the rest teach
 	await page.locator('.studyslot').evaluate((el) => el.scrollIntoView({ block: 'start' }));
 	await page.screenshot({ path: SHOTS + 'new-t2.png' });
 
-	// Back: the list, with the focus on the row that opened the card.
-	await c.getByRole('button', { name: 'Back to the menu' }).click();
+	// Back (the layout's, the one way back): the list, with the focus on the row that opened the card.
+	await page.locator('.backline button.back').click();
 	await expect(card(page)).toHaveCount(0);
 	await expect(row(page, 'Eggs Hussarde')).toBeFocused();
 	await expect(page.getByRole('button', { name: 'Entrées 14' })).toHaveAttribute('aria-pressed', 'true');
@@ -198,7 +198,8 @@ test('a cold /menu#d-... opens that card, and the back gesture closes a card ope
 	await servePack(page);
 	await goto(page, '/menu#' + HUSSARDE);
 	await expect(card(page).locator('h2')).toHaveText('Eggs Hussarde', { timeout: 15_000 });
-	await card(page).getByRole('button', { name: 'Back to the menu' }).click();
+	// A card opened cold is held outside the history: Back closes it here.
+	await page.locator('.backline button.back').click();
 	await expect(card(page)).toHaveCount(0);
 
 	await page.getByRole('button', { name: 'Entrées 14' }).click();
@@ -217,12 +218,14 @@ test('a cold /menu#d-... opens that card, and the back gesture closes a card ope
 test('Edit the menu shows today’s editing page, and a card’s Edit opens that dish’s form', async ({ page }) => {
 	await openStudy(page);
 	await page.getByRole('button', { name: 'Edit the menu', exact: true }).click();
-	await expect(page.getByRole('button', { name: 'Edit the menu: on' })).toBeVisible();
+	// The editing page is a screen (the consolidation): pushed, so Back returns
+	// to the study view and the page's own switch back is not drawn.
+	await expect(page.getByRole('button', { name: 'Edit the menu: on' })).toHaveCount(0);
 	await expect(page.locator('.dishes li').first()).toBeVisible();
 	await expect(page.locator('.dishtools').first().getByRole('button', { name: '86 it' })).toBeVisible();
 	await expect(page.locator('.dishtools').first().getByRole('button', { name: 'Edit' })).toBeVisible();
 	await expect(page.locator('.dishtools').first().getByRole('button', { name: 'Remove' })).toBeVisible();
-	await page.getByRole('button', { name: 'Edit the menu: on' }).click();
+	await page.locator('.backline button.back').click();
 	await expect(rows(page).first()).toBeVisible();
 
 	await row(page, 'Eggs Hussarde').click();
@@ -235,18 +238,21 @@ test('flash cards for a section deal only that section, turn before they grade, 
 	await openStudy(page);
 	await page.getByRole('button', { name: 'Entrées 14' }).click();
 	await page.locator('.study .grouphead').getByRole('button', { name: /^Flash cards/ }).click();
-	await expect(page).toHaveURL(/\/menu\/quiz\?mode=cards&section=Entr/);
-	const deck = page.locator('.itemdeck');
-	await expect(deck.locator('.eyebrow').first()).toHaveText(/^Card 1 of 14 · Entrées · hidden$/);
+	// The one card screen, the Flashcards tab's (the consolidation): a push, so Back comes back.
+	await expect(page).toHaveURL(/\/flashcards\?deck=menu%3AEntr.*&run=1$/);
+	const deck = page.locator('.deckframe');
+	await expect(deck.locator('.where')).toHaveText(/^Card 1 of 14 · Entrées$/);
+	await expect(deck.locator('.side')).toHaveText('Front');
 	const entrees = new Set(PACK.dishes.filter((d: any) => d.section === 'Entrées').map((d: any) => d.name));
 
 	// Got it and Again are not there until the card is turned; then both are on screen.
 	await expect(page.getByRole('button', { name: 'Got it', exact: true })).toHaveCount(0);
 	await expect(page.getByRole('button', { name: 'Again', exact: true })).toHaveCount(0);
-	const face = deck.locator('button.face');
+	const face = deck.locator('button.hface');
 	expect((await face.boundingBox())!.height).toBeGreaterThanOrEqual(240);
 	expect(entrees.has((await deck.locator('.facename').textContent())!.trim())).toBe(true);
 	await face.click();
+	await expect(deck.locator('.side')).toHaveText('Answer');
 	for (const name of ['Again', 'Got it']) {
 		const b = (await page.getByRole('button', { name, exact: true }).boundingBox())!;
 		expect(b.y + b.height).toBeLessThanOrEqual(844);
@@ -258,28 +264,28 @@ test('flash cards for a section deal only that section, turn before they grade, 
 
 	// Every card of the deck is an entrée.
 	for (let i = 2; i <= 14; i++) {
-		await expect(deck.locator('.eyebrow').first()).toHaveText(new RegExp(`^Card ${i} of 14 · Entrées · hidden$`));
+		await expect(deck.locator('.where')).toHaveText(new RegExp(`^Card ${i} of 14 · Entrées$`));
 		expect(entrees.has((await deck.locator('.facename').textContent())!.trim())).toBe(true);
-		await deck.locator('button.face').click();
+		await deck.locator('button.hface').click();
 		await page.getByRole('button', { name: 'Got it', exact: true }).click();
 	}
-	await expect(page.locator('.flash[role="status"] .eyebrow')).toHaveText('Deck complete');
-	await expect(page.locator('.flash[role="status"] .term')).toHaveText('Got it 13 · Again 1');
+	await expect(page.locator('main h1')).toHaveText('Deck done');
+	await expect(page.locator('.summaryline')).toHaveText('13 got it, 1 to see again.');
 
 	// The answer is the house drill slot's, as a card-item.
 	const slot = await page.evaluate(() => JSON.parse(localStorage.getItem('oot-house-drilled-v1') || '[]'));
 	const firstId = PACK.dishes.find((d: any) => d.name === first).id;
 	expect(slot.find((e: any) => e.v === 'missed').k).toBe(`house:${PACK.id}:${firstId}:card-item`);
 
-	// Close the deck: back to the study view on Entrées, with the progress read back.
-	await page.getByRole('button', { name: 'Close the deck' }).click();
+	// Back: to the study view on Entrées, with the progress read back.
+	await page.locator('.backline button.back').click();
 	await expect(page).toHaveURL(/\/menu$/);
 	await expect(page.getByRole('button', { name: 'Entrées 14' })).toHaveAttribute('aria-pressed', 'true');
 	await expect(page.locator('.study .progress')).toContainText('14 of 62 studied');
 	await expect(page.locator('.study .progress')).toContainText('1 again');
 	await page.getByRole('button', { name: 'My weak ones (1)' }).click();
-	await expect(page.locator('.itemdeck .eyebrow').first()).toHaveText(/^Card 1 of 1 · Entrées · hidden$/);
-	await expect(page.locator('.itemdeck .facename')).toHaveText(first);
+	await expect(page.locator('.deckframe .where')).toHaveText(/^Card 1 of 1 · My weak ones$/);
+	await expect(page.locator('.deckframe .facename')).toHaveText(first);
 });
 
 test('offline with the worker installed, the study view, a card and its links all still work', async ({ page, context }) => {
@@ -326,7 +332,7 @@ test('offline with the worker installed, the study view, a card and its links al
 test('verifier: Got it on a turned flash card is readable, its text not the colour of its own background', async ({ page }) => {
 	await openStudy(page);
 	await page.locator('.study .studyhead').getByRole('button', { name: 'Flash cards' }).click();
-	await page.locator('.itemdeck button.face').click();
+	await page.locator('.deckframe button.hface').click();
 	const got = page.getByRole('button', { name: 'Got it', exact: true });
 	await expect(got).toBeVisible();
 	const c = await got.evaluate((el) => {
@@ -342,13 +348,13 @@ test('verifier: the shift filter narrows the decks the header deals, not only th
 	const n = await rows(page).count();
 	expect(n).toBeLessThan(PACK.dishes.length);
 	await page.locator('.study .studyhead').getByRole('button', { name: 'Flash cards' }).click();
-	await expect(page.locator('.itemdeck .eyebrow').first()).toHaveText(new RegExp(`^Card 1 of ${n} · `));
+	await expect(page.locator('.deckframe .where')).toHaveText(new RegExp(`^Card 1 of ${n} · `));
 });
 
 test('verifier: the five parts on a flash card’s back say they open, and read at arm’s length', async ({ page }) => {
 	await openStudy(page);
 	await page.locator('.study .studyhead').getByRole('button', { name: 'Flash cards' }).click();
-	await page.locator('.itemdeck button.face').click();
+	await page.locator('.deckframe button.hface').click();
 	const summary = page.locator('.backparts summary');
 	await expect(summary).toHaveText('Show the five parts');
 	await summary.click();
@@ -358,6 +364,6 @@ test('verifier: the five parts on a flash card’s back say they open, and read 
 	await page.screenshot({ path: SHOTS + 'new-t3-flash-back.png', fullPage: false });
 	// The next card starts closed again.
 	await page.getByRole('button', { name: 'Got it', exact: true }).click();
-	await page.locator('.itemdeck button.face').click();
+	await page.locator('.deckframe button.hface').click();
 	await expect(page.locator('.backparts summary')).toHaveText('Show the five parts');
 });

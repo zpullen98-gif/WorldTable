@@ -181,6 +181,8 @@ class House {
 	#heldPack = $state('');
 	/** Settles when the boot's auto-load is done, whatever it came to; for the page and the tests, never awaited by the boot. */
 	#autoLoaded: Promise<void> = Promise.resolve();
+	/** The boot (hydrate, then the pack's auto-load), started once: see boot(). */
+	#booting: Promise<void> | null = null;
 
 	get ready() {
 		return this.#ready;
@@ -254,6 +256,14 @@ class House {
 	/** Settles once the boot's auto-load has finished or given up. */
 	get autoLoaded(): Promise<void> {
 		return this.#autoLoaded;
+	}
+	/**
+	 * Settles once the whole boot is over, the pack's auto-load included, so a
+	 * count read after it already holds the shipped house on a fresh device
+	 * (stores/today.svelte.ts). Never rejects; never awaited by the boot.
+	 */
+	get booted(): Promise<void> {
+		return this.boot();
 	}
 
 	/**
@@ -368,6 +378,25 @@ class House {
 		/* The shipped pack, after the wake and never awaited: the boot is done
 		   whatever the network does. */
 		this.#autoLoaded = this.#autoLoad();
+	}
+
+	/**
+	 * The layout's one call: hydrate, then the pack's auto-load settled. The
+	 * first caller starts it and every later one shares the promise, so it is
+	 * the hydrate that reads `#autoLoaded` after it was assigned. Never
+	 * rejects; a boot with no IndexedDB settles at once with no house.
+	 */
+	boot(): Promise<void> {
+		if (!this.#booting) {
+			this.#booting = this.hydrate().then(
+				() => this.#autoLoaded.then(
+					() => undefined,
+					() => undefined
+				),
+				() => undefined
+			);
+		}
+		return this.#booting;
 	}
 
 	/**

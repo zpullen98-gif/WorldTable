@@ -689,27 +689,26 @@ is locked**: a level guides, it never bars.
   hide the dishes. Never a score, never a streak, on the home. Which level
   you are on is `firstUnmetLevel`, derived on every read and never stored
   (`stores/levels.svelte.ts`, ready only once the session is).
-- **The home** (`lib/components/Home.svelte`) is the shared contract and
-  nothing else: `section.levels` with four `a.level` (`lv-name`, `lv-stat`;
-  the current one `on`, `aria-current`, and the words "Your level" in
-  `lv-here`), then `nav.quiet` with four `a.door`: Today (one item from the
-  lowest unmet level, `todayFromLevel`, with "Today deals from Commis.", the
-  level's name, under it), Library, Record, Mine · My Menu. No h2 or h3 on
-  the home; the regression suite pins it. The Menu Desk's `.deskline` keeps
-  its class, copy and link.
-- **The nav** is `Home · Levels · Library · Mine`, in that order, in all three
-  apps (`navigation.test.ts` pins the words and the order). `/level` is a
-  literal href (so `verify-build`'s scanner resolves it) that forwards to the
-  reader's level; `/level/[n]` is the level page (h1 the level's name, the
-  blurb, `ol.subsections` with "N at this level", the word and figure, the
-  items and the `a.train` doors, then `a.leveltest`); `/level/[n]/test` is
-  the level test (the deck's written test at the level with its traps, six
-  service questions with all 186 cards as the field, eight Lexicon questions
-  with the whole lexicon as the field; untimed; it ends on what you missed
-  with the right answers and no score; the second route allowed to name
-  `loadDeckTraps`). `OWNS`: Mine holds `/menu`, `/repertoire`, `/coverage`
-  and the firing drill; Levels holds the study, technique, palate, safety,
-  service and calibration routes.
+- **The home** (`lib/components/Home.svelte`) is the four level cards and
+  nothing else since the consolidation (4 Oct 2026): `section.levels` with
+  four `a.level` (`lv-name`, `lv-stat`; the chosen one `on`, `aria-current`,
+  and the words "Your level" in `lv-here`). The quiet row of doors went; no
+  h2 or h3 on the home, and the regression suite pins it. The chosen level
+  is `levels.chosen` (`stores/levels.svelte.ts`, the per-device slot
+  `oot-level-table-v1`, read lazily in the browser and never exported),
+  falling back to `firstUnmetLevel`; opening a level page chooses it.
+- **The nav** is the four tab words `Home · Flashcards · Quizzes · Library`,
+  then More, last and quiet (a ruled box at the bar's right end, lit only on
+  a More screen), in all three apps; `navigation.test.ts` pins the words,
+  the order, More last and quiet, and the owner order. The rest is the
+  section "The consolidation" below. `/level` is an old address that
+  forwards to the chosen level; `/level/[n]` is the level page (Today's
+  study, My restaurant, Search, then a closed What {Level} holds);
+  `/level/[n]/test` is the level test (the deck's written test at the level
+  with its traps, six service questions with all 186 cards as the field,
+  eight Lexicon questions with the whole lexicon as the field; untimed; it
+  ends on what you missed with the right answers and no score; the second
+  route allowed to name `loadDeckTraps`).
 - **`?level=N`** (exact integers, `levelFromSearch`) narrows `/lexicon` (and
   `&start=flash|quiz` opens a mode on the level's terms), `/technique` and
   `/service/drill` (the level's modules as the pool, the whole track as the
@@ -719,6 +718,80 @@ is locked**: a level guides, it never bars.
   `practise/calibrate` stay), `HomeBands.svelte`, the Service hub's house
   tiles and deck block (`/service` is the track's own page). A stale install
   landing on a retired route meets the error page, which names the situation.
+
+## The consolidation: four tabs, Back everywhere, cards and quizzes at the centre
+
+The owner's answers of 4 October 2026 (the plan's "Step 2"), built to
+`docs/consolidation-design.md`, which holds the screen map, every old
+screen's new home and the copy. What a maintainer needs:
+
+- **Five screens of their own, all prerendered:** `/flashcards` (Due today,
+  then the house's decks, the level's Floor Deck sections, Words, Reference
+  cards), `/quizzes` (the quick quiz, the house rounds, the level's quizzes,
+  Hands on, the level test last), `/library` (reading only), `/more` (the
+  record, the tools, backup, the Maître d', the service toggle, About), and
+  the level page. Each loads in `onMount` from files already precached; the
+  styles they share are `src/lib/styles/hub.css` (the home's old door, moved).
+- **Back is `BackButton.svelte`**, drawn by the layout on every path but `/`,
+  sticky under the modebar and moved to x 64 once stuck (one
+  IntersectionObserver), clear of the Outside Of Time badge. Depth above 0:
+  `history.back()`; at 0: the logical parent with a replace
+  (`src/lib/nav.ts parentOf`, pure and tested over every route). The depth
+  lives in `stores/nav.svelte.ts`: sessionStorage `oot-nav-table-v1` for full
+  entries (SvelteKit owns `history.state`), `page.state.ootd`/`ootb` for
+  shallow ones. **Every `goto(..., { replaceState: true })` calls
+  `nav.navReplace()` first**, or the depth counts a replace as a push; a
+  forwarder may ask for it during the 'enter' because SvelteKit runs a page's
+  afterNavigate before the layout's. No `nav.crumbs` and no "Back to" chip
+  anywhere: `navigation.test.ts` fails on either. The row publishes its
+  height as `--backrow-h`: **anything else sticky under the bar sticks at
+  `calc(var(--modebar-h) + var(--backrow-h, 0px))`** (the study view's search
+  bar, the Lexicon's group heads, the recipe toolbar, html's
+  scroll-padding-top), or it slides under the Back row or over it.
+- **The depth counts only what the history holds.** A cold start takes the
+  stored depth back only on a reload or a return through the history
+  (`restoresDepth`, by `PerformanceNavigationTiming.type`); a fresh arrival
+  at the address recorded last is depth 0. A link to the address already on
+  show is a replace in the router, so it adds nothing (`historyGrew`), and a
+  tap on the lit tab while on its root scrolls to the top and navigates
+  nowhere. A run or round with nothing to draw on a reload falls with
+  `nav.fallTo`: one step back when the entry beneath is its parent (the
+  record keeps that entry's address as `below`), else a replace.
+- **Two screens light the tab that opened them**, in the browser only:
+  `/lexicon?start=quiz` lights Quizzes, and a `/menu` drawer More opened
+  (`#plan`, `#tools`, `#maitre`) lights More, remembered as `via: 'more'` in
+  the entry's state once the hash is cleared; `parentOf` gives both the same
+  parent.
+- **A screen inside a page is a shallow entry:** the deck screen and the run
+  on `/flashcards`, the quick quiz on `/quizzes`, the study card and the
+  editing page on `/menu`. Push with `nav.pushShallow` (it stores the leaving
+  entry's scroll as `ooty` first), change within a screen with
+  `nav.replaceShallow`. The whole run or round rides in its entry's page
+  state, results included, so a pop back to it from another page draws it as
+  it was; a cold load or a reload of a run with no state falls to its parent.
+- **One card style.** `DeckFrame.svelte` is the card screen (position line,
+  Front or Answer, Flip, then Got it and Again). `/service/deck/study`,
+  `/menu/quiz?mode=cards` and `/lexicon?start=flash` forward to it with a
+  replace; `/menu/quiz` has no mode chips, each mode is its own address from
+  its Quizzes row. Grades are unchanged: a house card writes `card-item` in
+  the house drill slot, a Floor Deck card `close` (Got it) or `missed`
+  (Again) once per card per local day, a Lexicon term nothing.
+- **Due today is one function**, `src/lib/today.ts dueToday` (pure, tested):
+  due cards (the house's Again, the deck's owed at the level, the level's due
+  terms) then new ones (the house first in menu order, then the level's
+  unseen cards), 20 a run, 10 new at most. The pill, the level page's row and
+  the Flashcards root all read it through `stores/today.svelte.ts`, which
+  waits for `house.booted` so a fresh device counts Brennan's.
+- **The quick quiz** deals five dish questions from `dealRound` and five from
+  the level (Floor Deck cards by `mcFor` with no traps, Lexicon terms by
+  `optionsForTerm`), graded as each engine grades; its results list every
+  miss with `Study this card` or `Read about it`, and `Study the misses`
+  deals them all on the card screen (`?deck=misses&h=&c=&t=`).
+- **`tests/consolidation.spec.ts`** walks the back chains (by the button and
+  the gesture), the old addresses, the one row of tab words, one Back on
+  every screen at scroll 0 and 2000, the owner's morning, one count and the
+  first morning. Tabs are tapped there with a dispatched click: Playwright's
+  own click scrolls a sticky target into view first, which no phone does.
 
 ## The Plates: twenty illustrated reference plates, read and never graded
 
@@ -946,7 +1019,7 @@ Every card sits at one of four brigade levels: **1 Commis, 2 Chef de Partie,
 
 | Mode | Route | Writes |
 |---|---|---|
-| Flip cards | `/service/deck/study` | `close` or `missed`, once per card per local day; self-judged, so it never promotes |
+| Flip cards | `/flashcards` (the one card screen; `/service/deck/study` forwards there) | `close` (Got it) or `missed` (Again), once per card per local day; self-judged, so it never promotes |
 | Written test | `/service/deck/test` | `met` or `missed`; a level or a section; ends on the misses and **no number**, by the owner's decision |
 | Say it back | `/service/deck/say` | `met` or `missed`; the ONE deck mode that sends `oot:round-complete` |
 | Lineup | `/service/deck/lineup` | ONLY `house.lineupLog`; nothing about a person |
@@ -1162,9 +1235,8 @@ house a person is building by hand stays on the editing page as dishes go in.
   row scrolls sideways by `scrollLeft`, never `scrollIntoView`, which moved the
   page and undid the restore.
 - **The round trip to the flash cards keeps the place**: the page exports a
-  `snapshot` (query, section, meal, scroll) and the quiz's "Close the deck"
-  goes `history.back()` when it was opened from the study view
-  (`page.state.fromStudy`).
+  `snapshot` (query, section, meal, scroll), and the cards are a push to the
+  Flashcards tab, so Back returns to the study view where it was.
 - **Links in this app are matched, never mapped** (`src/lib/study-links.ts`):
   whole-word hits of the deck's terms and aliases, the Lexicon's terms and the
   techniques in the dish's own text, overlaps to the longest, and a one-word
@@ -1180,16 +1252,15 @@ house a person is building by hand stays on the editing page as dishes go in.
   is up or the room's own entry point is in the caches. The standalone build
   the e2e suite runs draws none, by rule; the address shapes are proved in
   wing-links.test.ts.
-- **Flash cards**: `/menu/quiz?mode=cards` deals one card per dish
-  (`itemCards`) by default, scoped by `section=`, `item=` or `deck=weak`; "Part
-  by part" is the deck the page always had. Got it and Again appear only after
-  Flip, and record `card-item` in the house drill slot, which the study
-  header's progress reads back. `mode=drill&section=` deals `dealSection`.
-  The study view's meal rides along as `meal=` on every deck and round it
-  deals (design 1.1), and the quiz filters its cards and `dealSection` by
-  `inMeal`, so Dinner never deals a breakfast dish. The quiz page's scoped
-  `.chip` sets its own colour and gives `.chip.go` the filled art: with only
-  a background it once drew Got it cream on cream.
+- **Flash cards** are the Flashcards tab's (the consolidation, above): the
+  study view's card buttons open `/flashcards?deck=menu`, `menu:{section}`,
+  `menu-weak`, `menu-parts` or `item:{id}`, one card per dish (`itemCards`),
+  and `/menu/quiz?mode=cards` with its scope forwards to the same decks. Got
+  it and Again appear only after Flip and record `card-item` in the house
+  drill slot, which the study header's progress reads back.
+  `mode=drill&section=` deals `dealSection`. The study view's meal rides
+  along as `meal=` on every round it deals (design 1.1), and the quiz filters
+  `dealSection` by `inMeal`, so Dinner never deals a breakfast dish.
 - **The first screen at 390 by 844 holds two whole rows**: no lede on the
   study view, the switch on the h1's line, the progress on the facts line,
   the export line at the foot of the list. study.spec asserts it.

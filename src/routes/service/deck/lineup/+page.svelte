@@ -196,7 +196,6 @@
 <svelte:head><title>Lineup · The Floor Deck · The World Table</title></svelte:head>
 
 <div class="shell view">
-	<nav class="crumbs"><a href="{base}/service">Service</a> · <a href="{base}/service/deck">The Floor Deck</a></nav>
 	<h1>Lineup</h1>
 
 	<article class="sheet">
@@ -336,9 +335,6 @@
 
 <style>
 	.view { padding-block: 26px 80px; max-width: 900px; }
-	.crumbs { font-size: var(--t-micro); margin-bottom: 14px; color: var(--muted); }
-	.crumbs a { color: var(--muted); text-decoration: none; }
-	.crumbs a:hover { color: inherit; }
 	h1 { font-size: var(--t-h2); margin-bottom: 6px; }
 	.lede { color: var(--ink-soft); max-width: var(--measure); margin-bottom: 10px; }
 	.note { color: var(--ink-soft); max-width: var(--measure); margin-bottom: 14px; font-size: var(--t-small); }
@@ -366,7 +362,7 @@
 	   so a ringing timer keeps its Stop button. */
 	.stage {
 		min-height: calc(100dvh - var(--modebar-h) - var(--dock-h, 44px) - env(safe-area-inset-bottom) - 24px);
-		scroll-margin-top: var(--modebar-h);
+		scroll-margin-top: calc(var(--modebar-h) + var(--backrow-h, 0px));
 		display: flex; flex-direction: column; justify-content: center;
 	}
 	.where { font-size: var(--t-micro); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--muted); }

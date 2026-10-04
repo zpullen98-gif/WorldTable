@@ -205,7 +205,19 @@ test('a producer, its story and its link to a dish survive the export', async ({
 	await expect(page.getByRole('heading', { name: 'Sweet Grass Dairy' })).toBeVisible();
 
 	// In-app navigation on purpose: no unload between the write and the export.
-	await page.getByRole('link', { name: '◂ My Menu' }).click();
+	// The page's own link to My Menu went with the consolidation (its way back
+	// is the layout's Back, to More), so a link the router handles stands in.
+	await page.evaluate(() => {
+		const a = document.createElement('a');
+		a.href = '/menu';
+		a.id = 'to-menu';
+		a.textContent = 'My Menu';
+		document.querySelector('main')!.prepend(a);
+		// Clicked in place: scrolled to the top of a long page it would sit
+		// under the sticky bar and the Back row, and a pointer would land on those.
+		a.click();
+	});
+	await expect(page).toHaveURL(/\/menu$/);
 	const credit = page.getByText('From Sweet Grass Dairy, Thomasville, Georgia');
 	await expect(credit).toBeVisible();
 

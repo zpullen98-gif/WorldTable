@@ -197,7 +197,6 @@
 			kitchen's craft pride, not a surveillance state.
 		</p>
 		<nav class="tools" data-print="hide">
-			<a class="chip" href="{base}/menu">← The worksheet</a>
 			<a class="chip" href="{base}/menu/costing">The costing sheet</a>
 			<a class="chip" href="{base}/menu/preps">Preps</a>
 		</nav>

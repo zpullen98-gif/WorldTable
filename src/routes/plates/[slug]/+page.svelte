@@ -71,7 +71,6 @@
 <svelte:head><title>{teaching.title} · The Plates · The World Table</title></svelte:head>
 
 <div class="shell view plate-folio">
-	<nav class="crumbs"><a href="{base}/">Home</a> · <a href="{base}/plates">The Plates</a></nav>
 	<header class="folio-intro">
 		<p class="eyebrow">{[plate.kindTitle, data.levelName].filter(Boolean).join(' · ')}</p>
 		<h1>{teaching.title}</h1>
@@ -165,7 +164,6 @@
 <style>
 	.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 	.view { padding-block: 26px 80px; max-width: 1180px; }
-	.crumbs { font-size: var(--t-small); margin-bottom: 8px; }.crumbs a { display: inline-block; min-height: 44px; padding-block: 10px; color: var(--muted); }
 	.folio-intro { max-width: 800px; }
 	.eyebrow { font-size: var(--t-micro); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--turmeric-deep); }
 	h1 { font-family: var(--house-display); font-size: clamp(30px, 4vw, 48px); font-weight: 500; line-height: 1.2; margin: 8px 0 16px; }
@@ -183,7 +181,7 @@
 	h2 { font-family: var(--house-display); font-weight: 500; font-size: clamp(23px, 2.4vw, 29px); line-height: 1.35; margin: 7px 0 12px; }
 	.scope-note { color: var(--ink-soft); font-size: 17px; line-height: 1.6; }
 	.subjects { list-style: none; padding: 0; margin: 22px 0 0; }
-	.subject { padding: 22px 0; border-top: 1px solid var(--house-frame); scroll-margin-top: calc(var(--modebar-h) + 28px); }
+	.subject { padding: 22px 0; border-top: 1px solid var(--house-frame); scroll-margin-top: calc(var(--modebar-h) + var(--backrow-h, 0px) + 28px); }
 	.subject-heading { display: flex; align-items: baseline; gap: 12px; }
 	.subject-number { font-family: var(--house-display); color: var(--turmeric-deep); font-size: 19px; width: 26px; flex-shrink: 0; }
 	h3 { margin: 0; font-family: var(--house-display); font-size: 21px; font-weight: 500; line-height: 1.4; }

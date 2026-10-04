@@ -18,11 +18,7 @@
 <svelte:head><title>{m.title} · Service · The World Table</title></svelte:head>
 
 <div class="shell view">
-	<nav class="crumbs">
-		<a href="{base}/service">Service</a>
-		<span aria-hidden="true">›</span>
-		<span>Module {m.n} of {data.count}</span>
-	</nav>
+	<p class="modulepos">Module {m.n} of {data.count}</p>
 
 	<header class="head">
 		<h1>{m.title}</h1>
@@ -50,22 +46,16 @@
 		{#if data.next}
 			<a class="chip" href="{base}/service/{data.next.key}">{data.next.title} ▶</a>
 		{:else}
-			<a class="chip" href="{base}/service">Back to the track</a>
+			<span></span>
 		{/if}
 	</nav>
 </div>
 
 <style>
-	.crumbs {
+	.modulepos {
 		font-size: var(--t-small);
 		color: var(--muted);
 		margin-bottom: 12px;
-	}
-	.crumbs a {
-		color: var(--ink-soft);
-	}
-	.crumbs span {
-		margin-left: 6px;
 	}
 	.head {
 		margin-bottom: 22px;

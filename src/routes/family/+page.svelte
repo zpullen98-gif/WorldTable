@@ -85,9 +85,6 @@
 	     been used. A cook who arrived and added nothing could leave only by the
 	     mode bar, whose lit tab is Library, a page that until now did not link
 	     back here either. -->
-	<nav class="crumbs" data-print="hide">
-		<a href="{base}/recipes">The Library</a> · <span>The Family Chapter</span>
-	</nav>
 	<header class="head">
 		<h1>The Family Chapter</h1>
 		<p class="lede">
@@ -225,11 +222,6 @@
 
 <style>
 	/* Same as the crumb rows on /technique/[slug] and /service/[topic]. */
-	.crumbs {
-		font-size: var(--t-micro);
-		color: var(--muted);
-		margin-bottom: 12px;
-	}
 
 	.tech {
 		border: 0;

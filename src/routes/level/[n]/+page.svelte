@@ -1,69 +1,186 @@
 <!--
-  One level: its seven subsections at this level's difficulty, what each
-  holds, how much of it is met, and the doors into training. The same shape
-  in all three apps (the owner's decision, 2026-09-26): h1 with the level's
-  name and never a numeral (the owner, 27 Sep 2026), the blurb, the level's
-  word and figure, then an ordered list of subsections, each with "N at
-  this level", its own word and figure, its items, and its `train` doors;
-  last, the level test.
+  One level (docs/consolidation-design.md 2.6 and 3.6): what to do today, the
+  house, a search, and a closed summary of what the level holds.
 
-  Headings are h1 then h2 and nothing deeper: the item lists sit in a
-  <details> whose summary is not a heading.
+    the Back control (the layout's), h1 the level's name (named, never
+    numbered), the blurb, the word and figure with "Your level"
+    Today's study     Due today, Quick quiz, Next reading: three doors, each
+                      a name, a line computed from the engines, the row the
+                      button. Due today and Quick quiz start at once.
+    My restaurant     the house line, the Menu Desk's waiting line, the count
+                      line, three study doors, the sections as chips, then
+                      the quiet links The Menu Desk and The house
+    Search            one box over the house and the app, results inline
+    What {Level} holds  a closed details: every subsection with N at this
+                      level and its word and figure, each a link to its
+                      Library shelf at the level
+
+  The training doors that used to hang off each subsection have new homes:
+  Read under Library, every deck under Flashcards, every quiz, test and hands
+  on drill under Quizzes (the screen map, design 3.11).
+
+  Opening a level chooses it (whatever you are looking at is what you are
+  studying): the Flashcards, Quizzes and Library tabs filter to it, and Home
+  marks it Your level.
 
   The counts are baked in (the load); the items and the figures wait for the
   record (the levels store), the same rule the home follows. Names for the
-  Lexicon, the deck and the modules come from three small precached files
-  read in onMount; the dishes' from the eager index; the techniques' from
-  the store, which already holds techniques.json for the join.
+  Lexicon, the deck and the modules come from small precached files read in
+  onMount, for the item lists and for the search.
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { onMount } from 'svelte';
-	import { bySlug, loadDeckIndex, loadLexicon, loadPalate, loadPlates, loadServiceTrack, loadStudy } from '$lib/data';
+	import { bySlug, loadDeckIndex, loadLexicon, loadPalate, loadPlates, loadServiceTrack } from '$lib/data';
 	import { levels } from '$lib/stores/levels.svelte';
+	import { house } from '$lib/stores/house.svelte';
+	import { today } from '$lib/stores/today.svelte';
+	import { restoreScroll } from '$lib/stores/nav.svelte';
 	import { plateTitle } from '$lib/plates';
-	import { NEVER_GRADED, type SubsectionProgress } from '$lib/levels';
+	import { NEVER_GRADED, MET, type SubsectionProgress } from '$lib/levels';
+	import { latestVerdicts, searchElsewhere, searchRows, studyProgress, studyRows, studySections } from '$lib/study';
+	import { roomHref } from '$lib/wing-links';
+	import { deskShare, readDeskInbox } from '$lib/desk/desk-inbox';
+	import { readInName, whenRead } from '$lib/desk/desk-share';
+	import HouseBar from '$lib/components/HouseBar.svelte';
 	import type { DeckLevel, SubsectionKey } from '$lib/types';
+	import type { Snapshot } from './$types';
 
 	let { data } = $props();
 	const n = $derived(data.level as DeckLevel);
+	const levelName = $derived(data.info.name);
 
 	/** slug -> display name, for the subsections the eager index cannot name */
 	let names = $state<Record<string, string>>({});
-	/** dish slug -> the semester that teaches it, for the Read door */
-	let semesterOf = $state<Record<string, number>>({});
+	/** what the search looks through besides the house */
+	type Found = { name: string; href: string; what: string };
+	let index = $state<Found[]>([]);
+	let deskWaiting = $state<{ dishes: number; readIn: string; when: string } | null>(null);
+	let mounted = $state(false);
 
 	onMount(async () => {
+		mounted = true;
+		levels.choose(data.level as DeckLevel);
 		void levels.load();
+		today.load();
+		/* The Menu Desk's waiting line, moved here from the home: the inbox is
+		   localStorage, read in onMount and nowhere earlier. Its class, copy and
+		   link are kept (tests/menu-desk.spec.ts reads them). */
+		const inbox = readDeskInbox();
+		if (inbox) {
+			const share = deskShare(inbox, 'dish');
+			if (share.length) deskWaiting = { dishes: share.length, readIn: readInName(inbox.source.readIn), when: whenRead(inbox.source.at) };
+		}
 		try {
-			const [lexicon, deck, track, palate, study, plates] = await Promise.all([
+			const [lexicon, deck, track, palate, plates] = await Promise.all([
 				loadLexicon(),
 				loadDeckIndex(),
 				loadServiceTrack(),
 				loadPalate(),
-				loadStudy(),
 				loadPlates()
 			]);
 			const map: Record<string, string> = {};
-			for (const e of lexicon) map[e.slug] = e.term;
-			for (const c of deck.cards) map[c.id] = c.term;
-			for (const m of track.modules) map[m.key] = m.title;
+			const found: Found[] = [];
+			for (const e of lexicon) {
+				map[e.slug] = e.term;
+				found.push({ name: e.term, href: `${base}/lexicon#${e.slug}`, what: 'the Lexicon' });
+			}
+			for (const c of deck.cards) {
+				map[c.id] = c.term;
+				found.push({ name: c.term, href: `${base}/flashcards?deck=${encodeURIComponent('deck:' + c.section)}&card=${c.id}&run=1`, what: 'a Floor Deck card' });
+			}
+			for (const m of track.modules) {
+				map[m.key] = m.title;
+				found.push({ name: m.title, href: `${base}/service/${m.key}`, what: 'a service module' });
+			}
 			for (const f of palate.faults) map[f.slug] = f.label;
-			for (const p of plates.plates) map[p.slug] = plateTitle(p);
+			for (const p of plates.plates) {
+				map[p.slug] = plateTitle(p);
+				found.push({ name: plateTitle(p), href: `${base}/plates/${p.slug}`, what: 'a plate' });
+			}
 			names = map;
-			const sem: Record<string, number> = {};
-			for (const s of study) for (const slug of s.recipes) sem[slug] = s.n;
-			semesterOf = sem;
+			await levels.load();
+			for (const [slug, label] of techniqueLabels()) found.push({ name: label, href: `${base}/technique/${slug}`, what: 'a technique' });
+			index = found;
 		} catch {
-			/* the page still lists the doors and the counts; names fall back to slugs */
+			/* the page still holds Today's study and the house; names fall back to slugs */
 		}
 	});
 
+	function techniqueLabels(): Array<[string, string]> {
+		const out: Array<[string, string]> = [];
+		const all = levels.data?.items.techniques ?? {};
+		for (const list of Object.values(all)) for (const slug of list) out.push([slug, levels.techniqueLabel(slug)]);
+		return out;
+	}
+
 	const row = $derived(levels.progress.find((r) => r.level === n) ?? null);
-	const on = $derived(levels.ready && levels.current === n);
+	const chosenHere = $derived(mounted && levels.chosen === n);
+
+	/* ---- Today's study ---- */
+	const due = $derived(today.at(n));
+	const dueHref = $derived(due && due.total === 0 ? `${base}/quizzes?quick=1` : `${base}/flashcards?deck=due&run=1`);
+	const current = $derived(house.current);
+	const rows = $derived(current ? studyRows(current, 'dish') : []);
+	const quickLine = $derived(current && rows.length ? `Ten questions: five from the menu, five from ${levelName}.` : `Ten questions from ${levelName}.`);
 
 	const SAFETY_ID: Record<string, string> = { clause: 'disciplines', fact: 'entries', numeric: 'numbers', gap: 'gaps' };
 	const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+
+	/** The next thing to read: the first primed subsection not yet met, else the first unmet technique, else the Library. */
+	const nextReading = $derived.by(() => {
+		if (!row) return null;
+		for (const s of data.subsections) {
+			const p = row.subsections.find((x) => x.key === s.key);
+			if (data.primed.includes(s.key) && p && p.label !== MET) {
+				return { title: `${s.title} · ${levelName}`, href: `${base}/level/${n}/read#${s.key}` };
+			}
+		}
+		const t = row.subsections.find((x) => x.key === 'techniques');
+		const slug = t?.items.find((s) => !t.metSet.has(s));
+		if (slug) return { title: `${levels.techniqueLabel(slug)} · ${levelName}`, href: `${base}/technique/${slug}` };
+		return { title: `Everything at ${levelName} is read. The Library holds the rest.`, href: `${base}/library` };
+	});
+
+	/* ---- My restaurant ---- */
+	const sections = $derived(studySections(rows));
+	const progress = $derived(current ? studyProgress(rows.map((r) => r.id), latestVerdicts(current.id, today.drilled)) : null);
+	const countLine = $derived.by(() => {
+		if (!current || !progress) return '';
+		const head = `${current.name}: ${rows.length} ${rows.length === 1 ? 'dish' : 'dishes'} in ${sections.length} ${sections.length === 1 ? 'section' : 'sections'}.`;
+		if (!progress.studied) return `${head} Nothing studied yet.`;
+		return progress.again ? `${head} ${progress.studied} studied, ${progress.again} to see again.` : `${head} ${progress.studied} studied.`;
+	});
+
+	/* ---- Search ---- */
+	let q = $state('');
+	const fromMenu = $derived(current && q.trim() ? searchRows(current, rows, q).slice(0, 8) : []);
+	const elsewhere = $derived.by(() => {
+		if (!current || !q.trim()) return [] as Found[];
+		return searchElsewhere(current, 'dish', q)
+			.map((x) => {
+				const room = x.kind === 'wine' ? 'codex' : 'ledger';
+				const href = roomHref(room, x.id, base, current);
+				return href ? { name: x.name, href, what: x.kind === 'wine' ? 'on the wine list' : 'on the bar' } : null;
+			})
+			.filter((x): x is Found => !!x);
+	});
+	const inApp = $derived.by(() => {
+		const t = q.trim().toLowerCase();
+		if (t.length < 2) return [] as Found[];
+		const starts: Found[] = [];
+		const has: Found[] = [];
+		for (const f of index) {
+			const nm = f.name.toLowerCase();
+			if (nm.startsWith(t)) starts.push(f);
+			else if (nm.includes(t)) has.push(f);
+			if (starts.length >= 8) break;
+		}
+		return [...starts, ...has].slice(0, 8);
+	});
+
+	/* ---- What the level holds ---- */
+	let holdsOpen = $state(false);
 
 	function nameOf(key: SubsectionKey, slug: string): string {
 		switch (key) {
@@ -91,7 +208,7 @@
 			case 'lexicon':
 				return `${base}/lexicon#${slug}`;
 			case 'deck':
-				return `${base}/service/deck/study?card=${slug}`;
+				return `${base}/flashcards?deck=${encodeURIComponent('deck:' + (slugSection(slug) || ''))}&card=${slug}&run=1`;
 			case 'plates':
 				return `${base}/plates/${slug}`;
 			case 'palate':
@@ -103,9 +220,41 @@
 		}
 	}
 
-	/** The rows a subsection lists: its items, or for the palate its faults
-	 *  and tastes together (the units), and for service its modules with the
-	 *  count of their terms met. */
+	/* The deck card's section, from the search index once it is in. */
+	let sectionOf = $state<Record<string, string>>({});
+	onMount(async () => {
+		try {
+			const deck = await loadDeckIndex();
+			sectionOf = Object.fromEntries(deck.cards.map((c) => [c.id, c.section]));
+		} catch {
+			/* the link opens the whole deck at that card */
+		}
+	});
+	const slugSection = (id: string) => sectionOf[id] ?? '';
+
+	/** Each subsection's shelf in the Library, at this level. */
+	const difficulty = $derived(n === 1 ? 1 : n === 2 ? 2 : 3);
+	function shelfOf(key: SubsectionKey): string {
+		switch (key) {
+			case 'dishes':
+				return `${base}/recipes?diff=${difficulty}`;
+			case 'techniques':
+				return `${base}/technique?level=${n}`;
+			case 'lexicon':
+				return `${base}/lexicon?level=${n}`;
+			case 'deck':
+				return `${base}/service/deck`;
+			case 'plates':
+				return `${base}/plates`;
+			case 'palate':
+				return `${base}/palate`;
+			case 'safety':
+				return `${base}/safety`;
+			case 'service':
+				return `${base}/service`;
+		}
+	}
+
 	function rowsOf(p: SubsectionProgress): Array<{ slug: string; met: boolean; note?: string }> {
 		if (p.key === 'palate') return p.units.map((u) => ({ slug: u, met: p.metSet.has(u) }));
 		if (p.key === 'service') {
@@ -118,193 +267,273 @@
 		return p.items.map((s) => ({ slug: s, met: p.metSet.has(s) }));
 	}
 
-	const firstUnmet = (p: SubsectionProgress | null) => p?.items.find((s) => !p.metSet.has(s)) ?? p?.items[0] ?? null;
-	/** The library's difficulty gate as a proxy for the level: Easy, Intermediate, then Advanced. */
-	const difficulty = $derived(n === 1 ? 1 : n === 2 ? 2 : 3);
-	const semesterDoor = (p: SubsectionProgress | null) => {
-		const first = firstUnmet(p);
-		const sem = first ? semesterOf[first] : undefined;
-		return sem ? `${base}/study#semester-${sem}` : `${base}/study`;
-	};
-	const safetyDoor = (p: SubsectionProgress | null) => {
-		const first = p?.items[0];
-		const kind = first ? levels.data?.safety[first]?.kind : undefined;
-		return kind ? `${base}/safety#${SAFETY_ID[kind]}` : `${base}/safety`;
+	/* Back to this page lands where it was left, once the record has drawn it. */
+	export const snapshot: Snapshot<{ y: number; q: string; open: boolean }> = {
+		capture: () => ({ y: typeof window === 'undefined' ? 0 : window.scrollY, q, open: holdsOpen }),
+		restore: (v) => {
+			q = v.q ?? '';
+			holdsOpen = !!v.open;
+			restoreScroll(v.y ?? 0, () => levels.ready && today.ready);
+		}
 	};
 </script>
 
 <svelte:head><title>{data.info.name} · The World Table</title></svelte:head>
 
-<div class="shell view">
-	<nav class="crumbs"><a href="{base}/">Home</a></nav>
-	<h1>{data.info.name}</h1>
+<div class="shell hub levelpage">
+	<h1 tabindex="-1">{data.info.name}</h1>
 	<p class="lede">{data.info.blurb}</p>
+	<!-- One expression for the word and the figure: Svelte trims the space at
+	     a block's edge, which once printed "Untouched· Your level". -->
 	<p class="stat" aria-live="polite">
-		{#if row}{row.label}{:else}Reading your record…{/if}{#if on}
-			· <span class="lv-here">Your level</span>{/if}
+		{row ? row.label : 'Reading your record…'}{chosenHere ? ' · ' : ''}{#if chosenHere}<span class="lv-here">Your level</span>{/if}
 	</p>
 
-	{#if data.primed.length}
-		<a class="readfirst" href="{base}/level/{n}/read">Read what this level asks</a>
+	<h2 class="group" id="today">Today's study</h2>
+	<nav class="quiet" aria-labelledby="today">
+		<a class="door lead" href={dueHref} data-door="due">
+			<span class="door-name">Due today</span>
+			<span class="door-line">{due ? due.line : 'Reading your record…'}</span>
+		</a>
+		<a class="door" href="{base}/quizzes?quick=1" data-door="quick">
+			<span class="door-name">Quick quiz</span>
+			<span class="door-line">{quickLine}</span>
+		</a>
+		<a class="door" href={nextReading?.href ?? `${base}/level/${n}/read`} data-door="next">
+			<span class="door-name">Next reading</span>
+			<span class="door-line">{nextReading ? nextReading.title : 'Reading your record…'}</span>
+		</a>
+	</nav>
+
+	<h2 class="group" id="restaurant">My restaurant</h2>
+	<div class="house">
+		<HouseBar />
+	</div>
+	{#if deskWaiting}
+		<p class="deskline">
+			<b
+				>{deskWaiting.dishes}
+				{deskWaiting.dishes === 1 ? 'dish' : 'dishes'} from the Menu Desk
+				{deskWaiting.dishes === 1 ? 'is' : 'are'} waiting.</b
+			>
+			Read {deskWaiting.readIn}, {deskWaiting.when}.
+			<a class="chip" href="{base}/menu#desk">Look them over</a>
+		</p>
+	{/if}
+	{#if current && rows.length}
+		<p class="note countline">{countLine}</p>
+		<nav class="quiet" aria-labelledby="restaurant">
+			<a class="door" href="{base}/menu" data-door="study">
+				<span class="door-name">Study the whole menu</span>
+				<span class="door-line">Every dish, its lines, its pairing and its parts, section by section.</span>
+			</a>
+			<a class="door" href="{base}/flashcards?deck=menu" data-door="menu-cards">
+				<span class="door-name">Flashcards for the menu</span>
+				<span class="door-line">One card per dish: the name on the front, the ten second line on the back.</span>
+			</a>
+			<a class="door" href="{base}/menu/quiz?mode=drill" data-door="menu-drill">
+				<span class="door-name">Drill the menu</span>
+				<span class="door-line">Mixed questions from every section, ten at a time.</span>
+			</a>
+		</nav>
+		<nav class="chips sections" aria-label="The menu's sections">
+			{#each sections as s (s.section)}
+				<a class="chip" href="{base}/menu?section={encodeURIComponent(s.section)}">{s.section} {s.count}</a>
+			{/each}
+		</nav>
+		<p class="quietlinks">
+			<a href="{base}/menu#desk">The Menu Desk</a>
+			<a href="{base}/menu#house">The house</a>
+		</p>
+	{:else}
+		<p class="note">No restaurant on this device yet. Start one or import a pack with the house doors above, or read a menu in on the Menu Desk.</p>
+		<p class="quietlinks">
+			<a href="{base}/menu#desk">The Menu Desk</a>
+		</p>
 	{/if}
 
-	<ol class="subsections">
-		{#each data.subsections as s (s.key)}
-			{@const p = row?.subsections.find((x) => x.key === s.key) ?? null}
-			{@const total = data.counts[s.key]}
-			<li class="subsection" id={s.key}>
-				<h2>{s.title}</h2>
-				<p class="line">
-					{total} at this level
-					{#if !s.counted}
-						· {NEVER_GRADED}
-					{:else if p}
-						· {p.label}
-					{/if}
-					{#if s.key === 'plates' && total === 0}
-						· every plate is read at the levels below; read them again for the menu
-					{/if}
-				</p>
-
-				{#if p && p.items.length}
-					<details class="items">
-						<summary>{s.key === 'service' ? 'The modules' : s.key === 'palate' ? 'The faults and the tastes' : s.key === 'plates' ? 'The plates' : 'The items'}</summary>
-						<ul>
-							{#each rowsOf(p) as r (r.slug)}
-								<li>
-									<a href={hrefOf(s.key, r.slug)}>{nameOf(s.key, r.slug)}</a>
-									{#if r.note}<span class="note">{r.note}</span>{/if}
-									{#if r.met}<span class="met">met</span>{/if}
-								</li>
-							{/each}
-						</ul>
-					</details>
+	<h2 class="group" id="search-h">Search</h2>
+	<div class="search">
+		<label class="searchlabel" for="lv-q">Search the menu and the app</label>
+		<input id="lv-q" type="search" placeholder="A dish, a word, a technique" autocomplete="off" bind:value={q} />
+		{#if q.trim()}
+			<div class="results" aria-live="polite">
+				{#if fromMenu.length || elsewhere.length}
+					<h3 class="rhead">From the menu</h3>
+					<ul class="found">
+						{#each fromMenu as r (r.id)}<li><a href="{base}/menu#{r.id}">{r.name}</a> <span class="what">{r.section}</span></li>{/each}
+						{#each elsewhere as f (f.href)}<li><a href={f.href}>{f.name}</a> <span class="what">{f.what}</span></li>{/each}
+					</ul>
 				{/if}
+				{#if inApp.length}
+					<h3 class="rhead">In the app</h3>
+					<ul class="found">
+						{#each inApp as f (f.href)}<li><a href={f.href}>{f.name}</a> <span class="what">{f.what}</span></li>{/each}
+					</ul>
+				{/if}
+				{#if !fromMenu.length && !elsewhere.length && !inApp.length}
+					<p class="note">Nothing found for "{q.trim()}".</p>
+				{/if}
+				<p class="quietlinks"><a href="{base}/recipes?q={encodeURIComponent(q.trim())}">Search all recipes for "{q.trim()}"</a></p>
+			</div>
+		{/if}
+	</div>
 
-				<div class="doors">
-					{#if data.primed.includes(s.key)}
-						<a class="train" href="{base}/level/{n}/read#{s.key}">Read first</a>
+	<details class="holds" bind:open={holdsOpen}>
+		<summary>{holdsOpen ? 'Hide' : 'Show'} what {data.info.name} holds</summary>
+		<ol class="subsections">
+			{#each data.subsections as s (s.key)}
+				{@const p = row?.subsections.find((x) => x.key === s.key) ?? null}
+				{@const total = data.counts[s.key]}
+				<li class="subsection" id={s.key}>
+					<h3><a href={shelfOf(s.key)}>{s.title}</a></h3>
+					<p class="line">
+						{total} at this level
+						{#if !s.counted}
+							· {NEVER_GRADED}
+						{:else if p}
+							· {p.label}
+						{/if}
+						{#if s.key === 'plates' && total === 0}
+							· every plate is read at the levels below; read them again for the menu
+						{/if}
+					</p>
+					{#if p && p.items.length}
+						<details class="items">
+							<summary>{s.key === 'service' ? 'The modules' : s.key === 'palate' ? 'The faults and the tastes' : s.key === 'plates' ? 'The plates' : 'The items'}</summary>
+							<ul>
+								{#each rowsOf(p) as r (r.slug)}
+									<li>
+										<a href={hrefOf(s.key, r.slug)}>{nameOf(s.key, r.slug)}</a>
+										{#if r.note}<span class="itemnote">{r.note}</span>{/if}
+										{#if r.met}<span class="met">met</span>{/if}
+									</li>
+								{/each}
+							</ul>
+						</details>
 					{/if}
-					{#if s.key === 'dishes'}
-						<a class="train" href={semesterDoor(p)}>Read the semester</a>
-						{#if firstUnmet(p)}<a class="train" href="{base}/recipe/{firstUnmet(p)}">Cook the next dish</a>{/if}
-						<a class="train" href="{base}/recipes?diff={difficulty}">The library at this level</a>
-					{:else if s.key === 'techniques'}
-						<a class="train" href="{base}/technique?level={n}">Read the techniques</a>
-						{#if firstUnmet(p)}<a class="train" href="{base}/technique/{firstUnmet(p)}">The next technique</a>{/if}
-					{:else if s.key === 'lexicon'}
-						<a class="train" href="{base}/lexicon?level={n}">Read the terms</a>
-						<a class="train" href="{base}/lexicon?level={n}&start=flash">Flashcards</a>
-						<a class="train" href="{base}/lexicon?level={n}&start=quiz">Quiz</a>
-					{:else if s.key === 'deck'}
-						<a class="train" href="{base}/service/deck/study?level={n}">Flip cards</a>
-						<a class="train" href="{base}/service/deck/test?level={n}">The written test</a>
-						<a class="train" href="{base}/service/deck/say?level={n}">Say it back</a>
-						<a class="train" href="{base}/service/deck">The deck</a>
-					{:else if s.key === 'plates'}
-						{#if p?.items[0]}<a class="train" href="{base}/plates/{p.items[0]}">Read the first plate</a>{/if}
-						<a class="train" href="{base}/plates">The wall</a>
-					{:else if s.key === 'palate'}
-						<a class="train" href="{base}/palate">The repair table</a>
-						<a class="train" href="{base}/practise/calibrate">Calibrate</a>
-					{:else if s.key === 'safety'}
-						<a class="train" href={safetyDoor(p)}>Read</a>
-						<a class="train" href="{base}/safety">The whole page</a>
-					{:else if s.key === 'service'}
-						{#if p?.items[0]}<a class="train" href="{base}/service/{p.items[0]}">The first module</a>{/if}
-						<a class="train" href="{base}/service">The track</a>
-						<a class="train" href="{base}/service/drill?level={n}">Drill</a>
-					{/if}
-				</div>
-			</li>
-		{/each}
-	</ol>
-
-	<a class="leveltest" href="{base}/level/{n}/test">The {data.info.name} test</a>
+				</li>
+			{/each}
+		</ol>
+	</details>
 </div>
 
 <style>
-	h1 {
-		font-size: var(--t-h1);
-		margin-bottom: 8px;
-	}
-	.crumbs {
-		font-size: var(--t-small);
-		margin-bottom: 8px;
-	}
-	.crumbs a {
-		display: inline-block;
-		padding-block: 10px;
-		color: var(--muted);
-	}
-	.lede {
-		font-size: var(--t-lede);
-		color: var(--ink-soft);
-		max-width: var(--measure);
-	}
 	.stat {
 		margin-top: 8px;
-		font-size: var(--t-small);
-		color: var(--muted);
+		font-size: 1rem;
+		color: var(--ink-soft);
 		font-variant-numeric: tabular-nums;
 	}
 	.lv-here {
 		letter-spacing: var(--tracking-eyebrow);
 		text-transform: uppercase;
-		font-size: var(--t-micro);
+		font-size: 0.9375rem;
 		color: var(--turmeric-deep);
 	}
-
-	.readfirst {
+	.house :global(.housebar) {
+		margin: 0;
+	}
+	.deskline {
+		margin: 10px 0 0;
+		font-size: 1rem;
+		color: var(--ink-soft);
+	}
+	.deskline a {
+		text-decoration: none;
 		display: inline-flex;
 		align-items: center;
 		min-height: 44px;
+		margin-left: 4px;
+	}
+	.countline {
 		margin-top: 12px;
-		padding: 0 14px;
-		border: var(--rule) solid var(--line);
+	}
+	.sections {
+		margin-top: 14px;
+	}
+	.search {
+		max-width: var(--measure);
+	}
+	.searchlabel {
+		display: block;
+		font-size: 1rem;
+		color: var(--ink-soft);
+		margin-bottom: 6px;
+	}
+	.search input {
+		width: 100%;
+		min-height: 48px;
+		padding: 8px 12px;
+		font: inherit;
+		font-size: 1.0625rem;
+		border: 1px solid var(--line);
 		border-radius: var(--radius);
 		background: var(--card);
 		color: var(--ink);
-		font-size: var(--t-small);
-		text-decoration: none;
+		box-sizing: border-box;
 	}
-	.readfirst:hover {
-		border-color: var(--turmeric-deep);
+	.rhead {
+		font-family: var(--display);
+		font-size: 1.125rem;
+		margin: 16px 0 4px;
 	}
-	.readfirst:focus-visible {
-		outline: 2px solid var(--turmeric-deep);
-		outline-offset: 2px;
+	.found {
+		list-style: none;
+		margin: 0;
+		padding: 0;
 	}
-
+	.found li {
+		font-size: 1.0625rem;
+		line-height: 1.4;
+	}
+	.found a {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+		color: var(--ink);
+	}
+	.what {
+		color: var(--ink-soft);
+		font-size: 1rem;
+		margin-left: 6px;
+	}
+	details.holds {
+		margin-top: 30px;
+		border-top: 1px solid var(--line);
+		padding-top: 6px;
+	}
 	.subsections {
 		list-style: none;
-		margin: 24px 0 0;
+		margin: 6px 0 0;
 		padding: 0;
 	}
 	.subsection {
-		padding: 18px 0;
+		padding: 12px 0;
 		border-top: 1px solid var(--line);
 	}
-	.subsection h2 {
+	.subsection h3 {
 		font-family: var(--display);
-		font-size: var(--t-h3);
-		margin-bottom: 4px;
+		font-size: var(--t-h4);
+		margin: 0 0 2px;
+	}
+	.subsection h3 a {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+		color: var(--ink);
 	}
 	.line {
-		font-size: var(--t-small);
-		color: var(--muted);
+		font-size: 1rem;
+		color: var(--ink-soft);
 		font-variant-numeric: tabular-nums;
-	}
-	.items {
-		margin-top: 8px;
-		max-width: var(--measure);
 	}
 	.items summary {
 		cursor: pointer;
 		min-height: 44px;
 		display: flex;
 		align-items: center;
-		font-size: var(--t-small);
+		font-size: 1rem;
 		color: var(--ink-soft);
 	}
 	.items ul {
@@ -316,67 +545,24 @@
 	}
 	.items li {
 		break-inside: avoid;
-		font-size: var(--t-small);
+		font-size: 1rem;
 		line-height: 1.4;
 	}
 	.items li a {
 		display: inline-block;
-		padding-block: 8px;
+		padding-block: 10px;
 		color: var(--ink);
-		text-decoration-color: var(--line-strong);
-		text-underline-offset: 3px;
 	}
-	.items .note {
-		color: var(--muted);
+	.itemnote {
+		color: var(--ink-soft);
 		margin-left: 6px;
 	}
 	.met {
 		margin-left: 6px;
-		font-size: var(--t-micro);
+		font-size: 0.9375rem;
 		letter-spacing: var(--tracking-eyebrow);
 		text-transform: uppercase;
 		color: var(--leaf);
-	}
-	.doors {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 8px;
-		margin-top: 10px;
-	}
-	.train {
-		display: inline-flex;
-		align-items: center;
-		min-height: 44px;
-		padding: 0 14px;
-		border: var(--rule) solid var(--line);
-		border-radius: var(--radius);
-		background: var(--card);
-		color: var(--ink);
-		text-decoration: none;
-		font-size: var(--t-small);
-	}
-	.train:hover {
-		border-color: var(--turmeric-deep);
-	}
-	.train:focus-visible,
-	.leveltest:focus-visible {
-		outline: 2px solid var(--turmeric-deep);
-		outline-offset: 2px;
-	}
-	.leveltest {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		min-height: 48px;
-		margin-top: 20px;
-		padding: 0 16px;
-		border: var(--rule) solid var(--turmeric-deep);
-		border-radius: var(--radius);
-		background: var(--accent-solid);
-		color: var(--on-accent);
-		text-decoration: none;
-		font-family: var(--display);
-		font-size: var(--t-h4);
 	}
 	@media (max-width: 639px) {
 		.items ul {

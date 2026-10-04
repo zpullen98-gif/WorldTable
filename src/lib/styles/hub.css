@@ -1,0 +1,210 @@
+/*
+ * The new screens' shared pieces (docs/consolidation-design.md 2.6 to 2.9):
+ * the level page, Flashcards, Quizzes, Library and More are all drawn from
+ * the components the art already had. The door is the home's old quiet row
+ * door, its markup and its CSS moved here when the row left the home; the
+ * chips are the app's own. Nothing here adds a colour, a font or a picture.
+ *
+ * Readable at arm's length (2.9): a row's name and its line never compute
+ * below 15 px, no line is clamped, and the whole row is one target.
+ */
+.hub {
+	padding-block: 10px 60px;
+}
+.hub h1 {
+	font-size: var(--t-h1);
+	margin-bottom: 8px;
+}
+.hub h1:focus {
+	outline: none;
+}
+.hub .lede {
+	font-size: var(--t-lede);
+	color: var(--ink-soft);
+	max-width: var(--measure);
+}
+.hub h2.group {
+	font-family: var(--house-display, var(--display));
+	font-size: 1.05rem;
+	font-weight: 500;
+	letter-spacing: 0.06em;
+	color: var(--turmeric-deep);
+	margin: 28px 0 10px;
+	padding-top: 14px;
+	border-top: 1px solid var(--line);
+}
+.hub h2.group:first-of-type {
+	border-top: 0;
+	padding-top: 0;
+}
+.hub .note,
+.hub .empty {
+	font-size: 1rem;
+	color: var(--ink-soft);
+	max-width: var(--measure);
+	margin: 6px 0;
+	line-height: 1.5;
+}
+
+/* ---- the door: one row, one target --------------------------------------- */
+.hub nav.quiet,
+.hub .doors {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 12px;
+	margin-top: 10px;
+}
+.hub .door {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	min-height: 44px;
+	width: 100%;
+	padding: 16px 18px;
+	border: var(--rule) solid var(--house-frame, var(--line));
+	border-radius: var(--radius);
+	background: var(--house-panel, var(--card));
+	color: var(--ink);
+	text-decoration: none;
+	text-align: left;
+	font: inherit;
+	cursor: pointer;
+}
+.hub .door:hover {
+	border-color: var(--turmeric-deep);
+	background: color-mix(in srgb, var(--turmeric) 10%, var(--card));
+}
+.hub .door:focus-visible {
+	outline: 2px solid var(--turmeric-deep);
+	outline-offset: 2px;
+}
+.hub .door-name {
+	font-family: var(--house-display, var(--text));
+	font-size: 0.9375rem;
+	letter-spacing: 0.06em;
+	color: var(--turmeric-deep);
+	line-height: 1.35;
+}
+.hub .door-line {
+	font-size: var(--t-body);
+	line-height: 1.45;
+	color: var(--ink);
+}
+.hub .door-sub {
+	font-size: 1rem;
+	color: var(--ink-soft);
+	line-height: 1.4;
+}
+.hub .door.lead {
+	border-color: var(--turmeric-deep);
+	box-shadow: var(--house-inset, none);
+}
+
+/* ---- the chips: the app's own, sized for a thumb and the eye -------------- */
+.hub .chip {
+	font-size: 1rem;
+	min-height: 44px;
+	color: var(--ink);
+}
+.hub .chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 10px 0;
+}
+.hub .quietlinks {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 18px;
+	margin: 10px 0 0;
+}
+.hub .quietlinks a,
+.hub .quietlinks button {
+	display: inline-flex;
+	align-items: center;
+	min-height: 44px;
+	font-size: 1rem;
+	color: var(--ink-soft);
+	background: none;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	text-decoration: underline;
+	text-underline-offset: 4px;
+	text-decoration-color: var(--line-strong);
+}
+.hub .quietlinks a:hover,
+.hub .quietlinks button:hover {
+	color: var(--ink);
+}
+
+/* ---- the level scope (2.4) ----------------------------------------------- */
+.hub .scope {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px 10px;
+	margin: 6px 0 4px;
+	font-size: 1rem;
+	color: var(--ink-soft);
+}
+.hub .scope .chip.name {
+	font-family: var(--house-display, var(--display));
+	color: var(--turmeric-deep);
+	letter-spacing: 0.04em;
+}
+.hub .scope .linkish {
+	background: none;
+	border: 0;
+	padding: 0 4px;
+	min-height: 44px;
+	font: inherit;
+	color: var(--ink);
+	text-decoration: underline;
+	text-underline-offset: 4px;
+	cursor: pointer;
+}
+.hub .scopelist {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 6px 0 10px;
+}
+.hub .scopelist .chip[aria-pressed='true'] {
+	border-color: var(--turmeric-deep);
+	color: var(--turmeric-deep);
+	font-weight: 600;
+}
+
+/* ---- details, said in words ---------------------------------------------- */
+.hub details.holds > summary,
+.hub details.fold > summary {
+	display: flex;
+	align-items: center;
+	min-height: 44px;
+	cursor: pointer;
+	font-size: 1rem;
+	color: var(--ink);
+}
+
+@media screen and (max-width: 599px) {
+	.hub nav.quiet,
+	.hub .doors {
+		grid-template-columns: 1fr;
+	}
+	.hub .door {
+		padding: 14px 16px;
+	}
+}
+@media print {
+	.hub .scope,
+	.hub .scopelist {
+		display: none;
+	}
+}
+
+/* A Floor Deck card on the card screen: the eyebrow and the small lines read
+   at arm's length too (2.9), without touching the card's own art elsewhere. */
+.hub .flash :is(.eyebrow, .say, .aka, .layer, .linklabel, .caution, summary) {
+	font-size: 0.9375rem;
+}

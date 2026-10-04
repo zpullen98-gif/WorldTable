@@ -61,7 +61,7 @@
 			<!-- the live region stands at once; its words wait for the level's name -->
 			<p class="levelnote" aria-live="polite">
 				{#if levelName}{levelName}: {foundations.length + particulars.length} of the
-					skills. <a href="{base}/technique">Every technique</a> · <a href="{base}/level/{level}">Back to {levelName}</a>{/if}
+					skills. <a href="{base}/technique">Every technique</a>{/if}
 			</p>
 		{/if}
 	</header>

@@ -127,7 +127,6 @@
 <svelte:head><title>The Floor Deck · The World Table</title></svelte:head>
 
 <div class="shell view">
-	<nav class="crumbs"><a href="{base}/service">Service</a></nav>
 	<h1>The Floor Deck</h1>
 
 	<article class="sheet">
@@ -325,9 +324,6 @@
 	/* padding-BLOCK, deliberately: the shorthand zeroes padding-inline and
 	   out-specifies the global .shell gutter. See /menu/quiz. */
 	.view { padding-block: 26px 80px; max-width: 820px; }
-	.crumbs { font-size: var(--t-micro); margin-bottom: 14px; }
-	.crumbs a { color: var(--muted); text-decoration: none; }
-	.crumbs a:hover { color: inherit; }
 	h1 { font-size: var(--t-h1); margin-bottom: 8px; }
 	.lede { font-size: var(--t-lede); color: var(--ink-soft); max-width: var(--measure); margin-bottom: 14px; }
 	.note { color: var(--ink-soft); max-width: var(--measure); }

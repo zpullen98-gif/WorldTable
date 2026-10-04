@@ -31,9 +31,6 @@
 <svelte:head><title>{t.label} · The World Table</title></svelte:head>
 
 <div class="shell view">
-	<nav class="crumbs" data-print="hide">
-		<a href="{base}/technique">The Techniques</a> · <span>{t.label}</span>
-	</nav>
 
 	<header class="head">
 		<p class="eyebrow">Technique</p>
@@ -143,11 +140,6 @@
 </div>
 
 <style>
-	.crumbs {
-		font-size: var(--t-micro);
-		color: var(--muted);
-		margin-bottom: 12px;
-	}
 	.head {
 		margin-bottom: 20px;
 	}

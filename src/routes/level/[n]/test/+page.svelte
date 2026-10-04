@@ -72,6 +72,8 @@
 		term: string;
 		chose: string;
 		because: string;
+		/** Where to read about it, for a miss with no card of its own. */
+		href?: string;
 	}
 	let misses = $state<Miss[]>([]);
 
@@ -130,7 +132,7 @@
 		record('service', target.slug, correct);
 		if (!correct) {
 			const chose = q.q.options.find((o) => o.slug === slug)?.term ?? '';
-			misses = [...misses, { kind: 'service', term: target.term, chose, because: `That definition is ${target.term}, in the ${target.category}.` }];
+			misses = [...misses, { kind: 'service', term: target.term, chose, because: `That definition is ${target.term}, in the ${target.category}.`, href: `${base}/service/${target.moduleId}` }];
 		}
 		next();
 	}
@@ -142,7 +144,7 @@
 		record('lexicon', target.slug, correct);
 		if (!correct) {
 			const chose = q.q.options.find((o) => o.slug === slug)?.term ?? '';
-			misses = [...misses, { kind: 'lexicon', term: target.term, chose, because: `That definition is ${target.term}, in ${target.category}.` }];
+			misses = [...misses, { kind: 'lexicon', term: target.term, chose, because: `That definition is ${target.term}, in ${target.category}.`, href: `${base}/lexicon#${target.slug}` }];
 		}
 		next();
 	}
@@ -173,7 +175,6 @@
 <svelte:head><title>The {data.info.name} test · The World Table</title></svelte:head>
 
 <div class="shell view">
-	<nav class="crumbs"><a href="{base}/">Home</a> · <a href="{base}/level/{n}">{data.info.name}</a></nav>
 	<h1>The {data.info.name} test</h1>
 
 	<article class="sheet">
@@ -190,11 +191,10 @@
 			</p>
 			<p class="tools">
 				<button class="chip go" onclick={start}>Begin</button>
-				<a class="chip" href="{base}/level/{n}">Back to {data.info.name}</a>
 			</p>
 		{:else if !test.questions.length}
 			<p class="empty">This level cannot field a test yet.</p>
-			<p class="tools"><a class="chip" href="{base}/level/{n}">Back to {data.info.name}</a></p>
+			<p class="tools"><a class="chip" href="{base}/level/{n}">Open {data.info.name}</a></p>
 		{:else if done}
 			<div class="result" role="status">
 				{#if misses.length}
@@ -220,6 +220,8 @@
 									<p class="because">{m.because}</p>
 								{/snippet}
 							</FloorCard>
+							<!-- Each miss leads to its card on the one card screen (design 2.7). -->
+							<p class="studyline"><a class="chip" href="{base}/flashcards?deck={encodeURIComponent('deck:' + m.card.section)}&card={m.card.id}&run=1">Study this card</a></p>
 						{/if}
 					{/each}
 					{#if otherMisses.length}
@@ -229,6 +231,7 @@
 									<span class="term">{m.term}</span>
 									<span class="chose"><span class="chlabel">You chose</span> {m.chose}</span>
 									<span class="because">{m.because}</span>
+									{#if m.href}<a class="chip readit" href={m.href}>Read about it</a>{/if}
 								</li>
 							{/each}
 						</ul>
@@ -238,7 +241,7 @@
 					<p class="note">Every term in this test moves up its ladder and comes back later, further apart.</p>
 				{/if}
 				<p class="tools">
-					<a class="chip go" href="{base}/level/{n}">Back to {data.info.name}</a>
+					<a class="chip go" href="{base}/level/{n}">Open {data.info.name}</a>
 					<button class="chip" onclick={again}>Sit it again</button>
 					<a class="chip" href="{base}/">Home</a>
 				</p>
@@ -309,16 +312,6 @@
 	h1 {
 		font-size: var(--t-h1);
 		margin-bottom: 12px;
-	}
-	.crumbs {
-		font-size: var(--t-small);
-		margin-bottom: 8px;
-		color: var(--muted);
-	}
-	.crumbs a {
-		display: inline-block;
-		padding-block: 10px;
-		color: var(--muted);
 	}
 	.sheet {
 		max-width: var(--measure);
@@ -452,5 +445,12 @@
 	.because {
 		font-size: var(--t-small);
 		color: var(--ink);
+	}
+	.studyline {
+		margin: 6px 0 18px;
+	}
+	.readit {
+		display: inline-flex;
+		margin-top: 6px;
 	}
 </style>

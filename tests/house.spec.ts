@@ -523,7 +523,8 @@ const drilledSlot = (page: Page) =>
 test('?mode=drill deals from the kept house: an answer shows the score and the explanation, and records to the slot', async ({ page }) => {
 	await seedHouses(page, [drillFixture()]);
 	await goto(page, '/menu/quiz?mode=drill');
-	await expect(page.getByRole('button', { name: 'Drill the house' })).toHaveAttribute('aria-pressed', 'true');
+	// The heading names the mode (its own address since the consolidation; no mode chips).
+	await expect(page.locator('h1')).toHaveText('Drill the menu');
 	await expect(page.locator('.count').first()).toContainText('The Lantern Room · 12 of 12 kinds deal');
 	// Every kind deals over the fixture, so no still-needed line.
 	await expect(page.locator('.needs')).toHaveCount(0);
@@ -573,20 +574,22 @@ test('the kinds row narrows the round, the answer carries its explanation, and e
 	await expect(card.locator('.score')).toHaveText(/^[01] right of 1 answered$/);
 });
 
-test('?mode=cards flips a card and Got it moves the count on', async ({ page }) => {
+test('?mode=cards lands on the one card screen: a card flips and Got it moves the count on', async ({ page }) => {
 	await seedHouses(page, [drillFixture()]);
-	await goto(page, '/menu/quiz?mode=cards');
-	await expect(page.getByRole('button', { name: 'Flip cards' })).toHaveAttribute('aria-pressed', 'true');
-	// The dish cards are the default where kept lines exist; the part by part deck is a chip away.
-	await page.getByRole('button', { name: 'Part by part' }).click();
-	const card = page.locator('.flash.card');
-	await expect(card).toHaveAttribute('data-flipped', 'no');
-	await expect(card.locator('.eyebrow')).toContainText(/^Card 1 of \d+ · .+ · hidden$/);
-	await page.getByRole('button', { name: 'Flip ↦' }).click();
-	await expect(card).toHaveAttribute('data-flipped', 'yes');
-	await expect(card.locator('.def.back')).not.toBeEmpty();
-	await page.getByRole('button', { name: 'Got it' }).click();
-	await expect(card.locator('.eyebrow')).toContainText(/^Card 2 of \d+ · .+ · hidden$/);
+	// The flip cards are the Flashcards tab's since the consolidation: the old
+	// address, with its scope, forwards to the matching deck's run.
+	await goto(page, '/menu/quiz?mode=cards&deck=parts');
+	await expect(page).toHaveURL(/\/flashcards\?deck=menu-parts&run=1$/);
+	const frame = page.locator('.deckframe');
+	await expect(frame).toHaveAttribute('data-flipped', 'no');
+	await expect(frame.locator('.where')).toHaveText(/^Card 1 of \d+ · Part by part$/);
+	await expect(frame.locator('.side')).toHaveText('Front');
+	await page.getByRole('button', { name: 'Flip', exact: true }).click();
+	await expect(frame).toHaveAttribute('data-flipped', 'yes');
+	await expect(frame.locator('.side')).toHaveText('Answer');
+	await expect(frame.locator('.def.back')).not.toBeEmpty();
+	await page.getByRole('button', { name: 'Got it', exact: true }).click();
+	await expect(frame.locator('.where')).toHaveText(/^Card 2 of \d+ · Part by part$/);
 	const slot = await drilledSlot(page);
 	expect(slot).toHaveLength(1);
 	expect(slot[0].v).toBe('met');
@@ -666,7 +669,7 @@ test('?mode=say grades a typed line on the device and records only on Record it'
 	const h = drillFixture();
 	await seedHouses(page, [h]);
 	await goto(page, '/menu/quiz?mode=say');
-	await expect(page.getByRole('button', { name: /^Say it back/ })).toHaveAttribute('aria-pressed', 'true');
+	await expect(page.locator('h1')).toHaveText('Say it back');
 	await expect(page.locator('.count').first()).toContainText('The Lantern Room · Say it back, on this device with no key');
 	// The list holds kept lines only: her unkept Smoked Eel Toast is not on it.
 	const options = (await page.locator('#say-item option').allTextContents()).map((t) => t.trim());
@@ -754,7 +757,7 @@ test('?mode=guest deals a kept guest, grades the answer, shows the kept answer a
 	const h = drillFixture();
 	await seedHouses(page, [h]);
 	await goto(page, '/menu/quiz?mode=guest');
-	await expect(page.getByRole('button', { name: /^Guest at the table/ })).toHaveAttribute('aria-pressed', 'true');
+	await expect(page.locator('h1')).toHaveText('Guest at the table');
 	await page.getByRole('button', { name: 'Seat a guest ▸' }).click();
 	const card = page.locator('.flash.guest');
 	const eyebrow = (await card.locator('.eyebrow').textContent())!;
@@ -789,7 +792,11 @@ const PACK_FILE = join(HERE, '../static/shared/packs/brennans-new-orleans.v1.oot
 async function servePack(page: Page): Promise<{ hits: number }> {
 	const seen = { hits: 0 };
 	const body = readFileSync(PACK_FILE, 'utf8');
-	await page.route('**/shared/packs/brennans-new-orleans.v1.oothouse.json', (route) => {
+	/* On the context, not the page: once the worker controls the page its
+	   NetworkFirst route fetches the pack itself, and only a context route sees
+	   a request a service worker makes (Chromium). The second boot's count was
+	   a race with the worker's install. */
+	await page.context().route('**/shared/packs/brennans-new-orleans.v1.oothouse.json', (route) => {
 		seen.hits += 1;
 		return route.fulfill({ status: 200, contentType: 'application/json', body });
 	});
@@ -910,20 +917,21 @@ test('the drill deals with the worker on and the network off: nothing it needs i
 	const card = page.locator('.flash.drill');
 	await card.locator('.opt').first().click();
 	await expect(card.locator('.answer')).toContainText('The answer:');
-	await page.getByRole('button', { name: 'Flip cards' }).click();
-	await page.getByRole('button', { name: 'Part by part' }).click();
-	await page.getByRole('button', { name: 'Flip ↦' }).click();
-	await expect(page.locator('.flash.card')).toHaveAttribute('data-flipped', 'yes');
+	// The cards, offline, on the one card screen (each mode is its own address now).
+	await goto(page, '/flashcards?deck=menu-parts');
+	await page.getByRole('button', { name: 'Start', exact: true }).click();
+	await page.getByRole('button', { name: 'Flip', exact: true }).click();
+	await expect(page.locator('.deckframe')).toHaveAttribute('data-flipped', 'yes');
 
 	// Say it back, offline: typed, checked and graded on the device.
-	await page.getByRole('button', { name: /^Say it back/ }).click();
+	await goto(page, '/menu/quiz?mode=say');
 	await page.locator('#say-item').selectOption({ label: 'Lantern Roast Chicken' });
 	await page.getByRole('button', { name: /^10 seconds/ }).click();
 	await page.getByLabel('What you would say at the table').fill(keptLine(drillFixture(), 'Lantern Roast Chicken', 's10'));
 	await page.getByRole('button', { name: 'Check', exact: true }).click();
 	await expect(page.locator('.say-grade .verdict')).toHaveText('Met');
 	// And Guest at the table deals and grades with the network off too.
-	await page.getByRole('button', { name: /^Guest at the table/ }).click();
+	await goto(page, '/menu/quiz?mode=guest');
 	await page.getByRole('button', { name: 'Seat a guest ▸' }).click();
 	await page.getByLabel('What you would say back').fill('Let me check with the kitchen.');
 	await page.locator('.flash.guest').getByRole('button', { name: 'Check', exact: true }).click();
@@ -947,8 +955,9 @@ test('adversarial: every state on the drill page is a word, the round length and
 	expect(wholeText, 'the unchosen length carries no word for its state').toMatch(/off|not chosen/);
 	await whole.click();
 	expect((await ten.textContent())!.trim(), 'the chosen length reads the same as the unchosen').not.toBe(tenText);
-	const dishes = page.getByRole('button', { name: /^The dishes/ });
-	expect((await dishes.textContent())!.trim(), 'an unchosen mode carries no word for its state').toMatch(/off|not chosen/);
+	// The mode is the page's heading, in words; there are no mode chips to read.
+	await expect(page.locator('h1')).toHaveText('Drill the menu');
+	await expect(page.getByRole('button', { name: /^The dishes/ })).toHaveCount(0);
 });
 
 test('adversarial: an empty house and a device with no IndexedDB both open the drill without an error', async ({ page }) => {
@@ -958,7 +967,7 @@ test('adversarial: an empty house and a device with no IndexedDB both open the d
 	await goto(page, '/menu/quiz?mode=drill');
 	await expect(page.locator('.needs li').first()).toBeVisible();
 	await expect(page.getByRole('button', { name: 'Nothing deals yet' })).toBeDisabled();
-	await page.getByRole('button', { name: 'Pairings' }).click();
+	await goto(page, '/menu/quiz?mode=pair');
 	await expect(page.getByRole('button', { name: 'Nothing deals yet' })).toBeDisabled();
 
 	const bare = await page.context().newPage();
@@ -967,6 +976,7 @@ test('adversarial: an empty house and a device with no IndexedDB both open the d
 		Object.defineProperty(window, 'indexedDB', { value: undefined, configurable: true });
 	});
 	await goto(bare, '/menu/quiz?mode=cards');
-	await expect(bare.locator('.empty').first()).toContainText('No house on this device yet');
+	// The old address forwards to the one card screen, which says so in words.
+	await expect(bare.locator('main')).toContainText('No cards in this deck yet.', { timeout: 15_000 });
 	expect(errors).toEqual([]);
 });

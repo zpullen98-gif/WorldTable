@@ -3,6 +3,7 @@
 	import { afterNavigate, goto } from '$app/navigation';
 	import { tick } from 'svelte';
 	import { findItem, inMeal, itemCards, latestVerdicts, say, studyProgress, type ItemCard } from '$lib/study';
+	import { cardsTarget } from '$lib/nav';
 	import { page } from '$app/state';
 	import { session } from '$lib/stores/session.svelte';
 	import { house } from '$lib/stores/house.svelte';
@@ -33,7 +34,6 @@
 		KIND_CHIPS,
 		MODE_LABELS,
 		PAIR_KINDS,
-		QUIZ_MODES,
 		ROUND_LENGTH,
 		dealRound,
 		explainAnswer,
@@ -71,6 +71,7 @@
 	import type { SaidGrade, SayLength, ScenarioGrade } from '$lib/house/house-drills';
 	import { LINE_CAPS, type ItemKind } from '$lib/house/house-schema';
 	import { wordCount } from '$lib/house/house-lines';
+	import { nav } from '$lib/stores/nav.svelte';
 
 	/* Drills over The Kitchen's Menu: the dishes entered on /menu. The quiz
 	 * engine is the lexicon page's, ported: ten a round, distractors from the
@@ -167,7 +168,7 @@
 						? 'Solid line cook: a few more services and it’s muscle memory.'
 						: right >= 5
 							? 'Stage complete: hit the flashcards on what you missed.'
-							: 'Back to prep, chef; read the menu again before the next round.';
+							: 'Read the menu again before the next round, chef: it is back to prep.';
 			// Contract with the OOT monorepo's shared/oot-log.js (hookTable).
 			if (typeof window !== 'undefined')
 				window.dispatchEvent(
@@ -194,6 +195,10 @@
 	/* ---- the house drills ------------------------------------------------ */
 
 	let mode = $state<QuizMode>('dish');
+	/* What each mode is called on every Table screen: ?mode=drill is "Drill the
+	   menu", the words of the level page's door and the Quizzes row.
+	   MODE_LABELS keeps its values for the record's history. */
+	const PAGE_TITLES: Readonly<Record<QuizMode, string>> = { ...MODE_LABELS, drill: 'Drill the menu', cards: 'Flashcards' };
 	/* The House, re-derived with the store's tick: null before the api is
 	   ready and on a device with no house. */
 	const current = $derived(house.current);
@@ -665,6 +670,15 @@
 	   page may not read the query at load time. Only the mode is read; the
 	   round itself waits for a chip. */
 	afterNavigate(() => {
+		/* ONE CARD STYLE (docs/consolidation-design.md 3.7): the flip cards
+		   are the Flashcards tab's now. ?mode=cards, with its scope, forwards
+		   there with a replace, so every old link lands on the one card
+		   screen and this page never draws a card of its own. */
+		if (modeFromSearch(location.search) === 'cards') {
+			nav.navReplace();
+			void goto(`${base}${cardsTarget(location.search)}`, { replaceState: true });
+			return;
+		}
 		speechOk = !!speechCtor();
 		setMode(modeFromSearch(page.url.search));
 		studyAsk = studyScopeFromSearch(page.url.search);
@@ -675,25 +689,21 @@
 	});
 </script>
 
-<svelte:head><title>Drill the Menu · The World Table</title></svelte:head>
+<svelte:head><title>{PAGE_TITLES[mode]} · The World Table</title></svelte:head>
 
 <div class="shell view">
 	<article class="sheet">
-		<h1>Drill the Menu</h1>
-		<p class="crumbs"><a href="{base}/menu">◂ My Menu</a></p>
+		<!-- The heading names the mode. Each mode is its own address (?mode=),
+		     reached from its row on Quizzes; a change of mode is a new screen,
+		     never an in-page chip (design 3.8). -->
+		<h1>{PAGE_TITLES[mode]}</h1>
 
-		<p class="lede">
-			The Kitchen’s Menu, drilled the way the lexicon is: descriptions, ingredients, prices and
-			allergens, asked the way a guest asks.
-		</p>
-
-		<nav class="modes" aria-label="What to drill">
-			{#each QUIZ_MODES as m (m)}
-				<button class="chip mode" class:on={mode === m} aria-pressed={mode === m} onclick={() => setMode(m)}>
-					{MODE_LABELS[m]}{mode === m ? ', chosen' : ', off'}
-				</button>
-			{/each}
-		</nav>
+		{#if mode === 'dish'}
+			<p class="lede">
+				The Kitchen’s Menu, drilled the way the lexicon is: descriptions, ingredients, prices and
+				allergens, asked the way a guest asks.
+			</p>
+		{/if}
 
 		{#if mode !== 'dish'}
 			{#if !current}
@@ -919,136 +929,6 @@
 						</div>
 					{/if}
 				{/if}
-			{:else if mode === 'cards' && allItems.length && scope.kind !== 'parts'}
-				<p class="count">
-					{current.name}{drillMeal ? ' · ' + drillMeal : ''} · {allItems.length} dishes with kept lines · {keptHere} {keptHere === 1 ? 'answer' : 'answers'} kept on this device
-				</p>
-				<div class="scopes" role="group" aria-label="Which cards">
-					<button class="chip" aria-pressed={scope.kind === 'all'} onclick={() => dealItems({ kind: 'all' })}>Whole menu ({allItems.length})</button>
-					{#each itemSections as sec (sec.section)}
-						<button class="chip" aria-pressed={scope.kind === 'section' && scope.section === sec.section} onclick={() => dealItems({ kind: 'section', section: sec.section })}>{sec.section} ({sec.count})</button>
-					{/each}
-					{#if weakIds.length}
-						<button class="chip" aria-pressed={scope.kind === 'weak'} onclick={() => dealItems({ kind: 'weak' })}>{say('weak', { n: weakIds.length })}</button>
-					{:else}
-						<button class="chip" disabled>{say('weakNone')}</button>
-					{/if}
-					<button class="chip" aria-pressed={false} onclick={() => dealItems({ kind: 'parts' })}>Part by part</button>
-				</div>
-				{#if !deckOf.length}
-					<div class="tools">
-						<button class="chip go" onclick={() => dealItems(scope)}>Deal the cards</button>
-					</div>
-				{:else if dDone}
-					<div class="flash" role="status" bind:this={deckEl}>
-						<p class="eyebrow">{say('done')}</p>
-						<p class="term">{say('count', { g: dGot, a: dAgain })}</p>
-						<p class="def">{deckOf.length} {deckOf.length === 1 ? 'card' : 'cards'} turned: {scopeLabel}.</p>
-						<div class="flashtools">
-							{#if dMissed.length}
-								<button class="chip go" onclick={() => dealItems(scope, dMissed.slice())}>{say('againDeck', { n: dMissed.length })}</button>
-							{/if}
-							<button class="chip" onclick={() => dealItems(scope)}>{say('shuffle')}</button>
-							<button class="chip" onclick={closeDeck}>{say('close')}</button>
-						</div>
-					</div>
-				{:else}
-					{@const e = deckOf[dIdx]}
-					<div class="itemdeck" bind:this={deckEl}>
-						<p class="eyebrow">
-							Card {dIdx + 1} of {deckOf.length} · {e.item ? e.item.section : e.part.kind === 'mixUp' ? 'mix-up' : e.part.kind} · {dFlipped ? 'shown' : 'hidden'}
-						</p>
-						{#if !dFlipped}
-							<button class="face" onclick={flipItem}>
-								<span class="facename">{e.item ? e.item.name : e.part.front}</span>
-								<span class="facesay">{e.item ? say('front') : 'Say it out loud, then flip.'}</span>
-								<span class="faceflip">{say('flip')}</span>
-							</button>
-						{:else}
-							<div class="back" aria-live="polite">
-								<p class="backname">{e.item ? e.item.name : e.part.front}</p>
-								{#if e.item}
-									{#if e.item.back.s10}
-										<p class="eyebrow">{say('ten')}</p>
-										<p class="backten">{e.item.back.s10}</p>
-									{/if}
-									{#if e.item.back.price}<p class="backline">{e.item.back.price}</p>{/if}
-									{#each e.item.back.pairs as [label, text] (label)}
-										<p class="backline"><b>{label}:</b> {text}</p>
-									{/each}
-									{#if e.item.back.parts.length}
-										<details class="backparts" bind:open={partsOpen}>
-											<summary>{partsOpen ? say('partsHide') : say('partsShow')}</summary>
-											<dl>
-												{#each e.item.back.parts as [label, text] (label)}<dt>{label}</dt><dd>{text}</dd>{/each}
-											</dl>
-										</details>
-									{/if}
-									{#if e.item.back.say}
-										<p class="eyebrow">{say('say')}</p>
-										<p class="backline">{e.item.back.say}</p>
-									{/if}
-								{:else}
-									<p class="backten">{e.part.back}</p>
-								{/if}
-							</div>
-							<div class="judge">
-								<button class="chip again" onclick={() => judgeItem(false)}>{say('again')}</button>
-								<button class="chip go got" onclick={() => judgeItem(true)}>{say('got')}</button>
-							</div>
-						{/if}
-						<p class="runcount" aria-live="polite">{say('count', { g: dGot, a: dAgain })}</p>
-						<div class="flashtools">
-							<button class="chip" onclick={closeDeck}>{say('close')}</button>
-						</div>
-					</div>
-				{/if}
-			{:else if mode === 'cards'}
-				<p class="count">
-					{current.name} · {cardCount} cards from what is kept · {keptHere} {keptHere === 1 ? 'answer' : 'answers'} kept on this device
-				</p>
-				{#if allItems.length}
-					<div class="tools">
-						<button class="chip" onclick={() => dealItems({ kind: 'all' })}>Back to the dish cards</button>
-					</div>
-				{/if}
-				{#if !cards.length}
-					<div class="tools">
-						<button class="chip go" disabled={!cardCount} onclick={startCards}>
-							{cardCount ? 'Shuffle the cards ▸' : 'No cards yet: keep a part, a line or a term first'}
-						</button>
-					</div>
-				{:else if cDone}
-					<div class="flash" role="status">
-						<p class="eyebrow">Deck complete</p>
-						<p class="term">Got it {cGot} · Again {cAgain}</p>
-						<p class="def">{cards.length} cards turned. Shuffle again to go round the deck once more.</p>
-						<div class="flashtools">
-							<button class="chip" onclick={startCards}>Shuffle again ↦</button>
-							<button class="chip" onclick={() => (cards = [])}>Close the deck</button>
-						</div>
-					</div>
-				{:else}
-					{@const c = cards[cIdx]}
-					<div class="flash card" data-flipped={cFlipped ? 'yes' : 'no'}>
-						<p class="eyebrow">Card {cIdx + 1} of {cards.length} · {c.kind === 'mixUp' ? 'mix-up' : c.kind} · {cFlipped ? 'shown' : 'hidden'}</p>
-						<p class="term">{c.front}</p>
-						{#if cFlipped}
-							<p class="def back">{c.back}</p>
-						{:else}
-							<p class="def">Say it out loud, then flip.</p>
-						{/if}
-						<div class="flashtools">
-							{#if cFlipped}
-								<button class="chip go" onclick={() => judgeCard(true)}>Got it</button>
-								<button class="chip" onclick={() => judgeCard(false)}>Again</button>
-							{:else}
-								<button class="chip go" onclick={() => (cFlipped = true)}>Flip ↦</button>
-							{/if}
-							<button class="chip" onclick={() => (cards = [])}>Close the deck</button>
-						</div>
-					</div>
-				{/if}
 			{/if}
 
 			{#if current && (mode === 'drill' || mode === 'pair') && round.length}
@@ -1118,7 +998,14 @@
 			{#if !quiz && !verdict && !deck}
 				<div class="tools">
 					<button class="chip" onclick={startQuiz}>Quiz me ▸ multiple choice</button>
-					<button class="chip" onclick={startDeck}>Study mode ▸ flashcards</button>
+					<!-- One card style: with the house's dish cards on the device, the
+					     flash cards are the Flashcards tab's; the in-page deck stays only
+					     for a menu typed in by hand with no house behind it. -->
+					{#if allItems.length}
+						<a class="chip" href="{base}/flashcards?deck=menu">Flashcards for the menu</a>
+					{:else}
+						<button class="chip" onclick={startDeck}>Study mode ▸ flashcards</button>
+					{/if}
 					<span class="count">{dishes.length} dishes · {drillable.length} drillable</span>
 				</div>
 			{/if}
@@ -1238,11 +1125,8 @@
 	 */
 	.view { padding-block: 26px 80px; max-width: 760px; }
 	.sheet h1 { font-size: var(--t-h2); margin-bottom: 6px; }
-	.crumbs { font-size: var(--t-micro); margin-bottom: 14px; }
-	.crumbs a { color: var(--muted); text-decoration: none; }
-	.crumbs a:hover { color: inherit; }
 	.lede { color: var(--ink-soft); max-width: var(--measure); margin-bottom: 18px; }
-	.tools, .modes, .kinds { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 14px 0; }
+	.tools, .kinds { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 14px 0; }
 	/* Every control on the page is at least 44px tall: a thumb on a phone in a
 	   dark corridor between courses. */
 	.chip {
@@ -1272,7 +1156,6 @@
 	.term { font-family: var(--display); font-size: 26px; margin-bottom: 6px; }
 	.def { max-width: var(--measure); margin-bottom: 6px; }
 	.def.small { font-size: var(--t-small); color: var(--muted); }
-	.def.back { font-size: 18px; }
 	.quizdef { font-style: italic; }
 	.score { font-size: var(--t-small); color: var(--muted); margin-bottom: 6px; }
 	.answer { max-width: var(--measure); margin: 6px 0; }
@@ -1289,36 +1172,7 @@
 	.opt:disabled { opacity: 0.55; cursor: default; }
 	.flashtools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 
-	/* The item deck: the whole front one button, the back cut for arm's
-	   length, Got it and Again side by side once the card is turned. */
-	.scopes { display: flex; gap: 8px; overflow-x: auto; overscroll-behavior-x: contain; padding-bottom: 4px; margin: 10px 0; }
-	.scopes .chip { flex: none; white-space: nowrap; font-size: 1rem; }
 	.chip[aria-pressed='true'] { background: var(--accent-solid); border-color: var(--accent-solid); color: var(--on-accent); }
-	.itemdeck { scroll-margin-top: calc(var(--modebar-h, 0px) + 8px); margin-top: 6px; }
-	.face {
-		display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px;
-		width: 100%; min-height: 240px; padding: 20px 22px; text-align: left; cursor: pointer;
-		border: 1px solid var(--line); background: var(--card); color: var(--ink);
-		border-radius: var(--radius); box-shadow: var(--shadow-card); font: inherit;
-	}
-	.face:hover { border-color: var(--turmeric); }
-	.facename { font-family: var(--display); font-size: 1.75rem; line-height: 1.2; }
-	.facesay { font-size: 1rem; color: var(--ink-soft); }
-	.faceflip { margin-top: 6px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
-	.back {
-		border: 1px solid var(--line); background: var(--card); border-radius: var(--radius);
-		box-shadow: var(--shadow-card); padding: 16px 18px;
-	}
-	.backname { font-family: var(--display); font-size: 1.4rem; margin: 0 0 6px; }
-	.backten { font-family: var(--display); font-size: 1.25rem; line-height: 1.4; margin: 0 0 8px; border-left: 2px solid var(--turmeric-deep); padding-left: 12px; }
-	.backline { font-size: 1.125rem; line-height: 1.5; margin: 0 0 6px; }
-	.backparts summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-size: 1rem; }
-	.backparts dl { display: grid; grid-template-columns: 8.5em 1fr; gap: 4px 12px; margin: 0 0 8px; }
-	.backparts dt { font-size: var(--t-micro); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--muted); padding-top: 3px; }
-	.backparts dd { margin: 0; font-size: 1.125rem; line-height: 1.5; }
-	.judge { display: flex; gap: 8px; margin-top: 10px; }
-	.judge .chip { flex: 1 1 50%; min-height: 56px; font-size: 1.1rem; }
-	.runcount { font-size: 1rem; color: var(--ink-soft); margin: 8px 0 0; }
 
 	/* Say it back and Guest at the table. Every state is a word on the page:
 	   the verdict, each part's Hit or Missed, the word count against the cap. */

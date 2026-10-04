@@ -191,7 +191,6 @@
 			number instead of a guess retyped nine times.
 		</p>
 		<nav class="tools" data-print="hide">
-			<a class="chip" href="{base}/menu">← The worksheet</a>
 			<a class="chip" href="{base}/menu/costing">The costing sheet</a>
 			<a class="chip" href="{base}/menu/prep-board">The prep board</a>
 			<a class="chip" href="{base}/menu/waste">The waste log</a>

@@ -1440,7 +1440,7 @@
 		margin: 12px 0 20px;
 		background: var(--paper-raised);
 		/* The #desk anchor lands below the sticky bar rather than under it. */
-		scroll-margin-top: 90px;
+		scroll-margin-top: calc(90px + var(--backrow-h, 0px));
 	}
 	.collapsed {
 		display: flex;

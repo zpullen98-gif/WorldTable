@@ -294,7 +294,8 @@
 	.chip.small { padding: 6px 12px; }
 
 	.bar {
-		position: sticky; top: var(--modebar-h, 0px); z-index: 30;
+		/* Under the layout's sticky Back row (--backrow-h), never over it. */
+		position: sticky; top: calc(var(--modebar-h, 0px) + var(--backrow-h, 0px)); z-index: 29;
 		background: var(--paper); border-bottom: 1px solid var(--line);
 		padding: 6px 0; margin: 4px 0 0;
 	}

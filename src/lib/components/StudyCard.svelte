@@ -49,7 +49,6 @@
 		is86 = () => false,
 		linkable = { codex: false, ledger: false },
 		recipeSlug = '',
-		onBack,
 		onOpen,
 		onStep,
 		onEdit,
@@ -64,7 +63,8 @@
 		/** Per room: the network is up or the room is installed here (wing-links.ts, rule 3). */
 		linkable?: { codex: boolean; ledger: boolean };
 		recipeSlug?: string;
-		onBack: () => void;
+		/** Kept for the page's own use; the layout's Back closes the card now. */
+		onBack?: () => void;
 		/** Open another dish's card from a link on this one (a mix-up). */
 		onOpen: (id: string) => void;
 		/** Step to the previous or next card in the list, in place. */
@@ -149,8 +149,10 @@
 </script>
 
 <article class="card" aria-labelledby="card-h">
+	<!-- The way back is the layout's Back (docs/consolidation-design.md 2.2):
+	     the card is a pushed entry, so it closes the card and the list comes
+	     back where it was. The position and Next stay. -->
 	<div class="backline">
-		<button class="chip" onclick={onBack}>{say('back')}</button>
 		{#if position}<span class="pos">{position}</span>{/if}
 		{#if next}<button class="chip nextbtn" onclick={() => onStep(next.id)}>{say('nextOnly')}<span class="vh">: {next.name}</span></button>{/if}
 	</div>

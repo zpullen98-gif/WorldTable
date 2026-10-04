@@ -409,6 +409,28 @@ export function dueCount(deck: { cards: ReadonlyArray<{ id: string }> }, log: re
 	return owed.size;
 }
 
+/**
+ * The owed cards themselves, misses first and then the ladder's due, most
+ * overdue first: the lead a sitting at these levels takes, by the same rule
+ * (what is owed reaches DOWN to every level at or below the highest chosen).
+ * Takes the deck or its index; its length is owedCount's for the same levels.
+ * Today's study (lib/today.ts) deals from it.
+ */
+export function owedIds(
+	deck: { cards: ReadonlyArray<{ id: string; level: DeckLevel }> },
+	log: readonly CookEntry[],
+	now: number,
+	levels: ReadonlySet<DeckLevel> | null = null
+): string[] {
+	const top = levels?.size ? Math.max(...levels) : Infinity;
+	const cards = deck.cards.filter((c) => c.level <= top);
+	const ids = new Set(cards.map((c) => c.id));
+	const own = deckLog(log, cards);
+	const misses = outstandingMisses(own).filter((id) => ids.has(id));
+	const owed = new Set(misses);
+	return [...misses, ...dueIds(deckRepertoire(own, now), now).filter((id) => !owed.has(id))];
+}
+
 /** What is owed that a sitting in this scope would lead with, counted by the
  *  same rule pickSession draws it by. The landing says how many lead the next
  *  sitting; a deck-wide count would promise cards above the chosen level that

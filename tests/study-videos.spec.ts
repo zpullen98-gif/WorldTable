@@ -100,7 +100,8 @@ test('a dish card carries a Watch block whose link opens a new tab, and nothing 
 	await popup.close();
 
 	// A dish no video names has no Watch block at all.
-	await page.getByRole('button', { name: 'Back to the menu' }).click();
+	// The layout's Back closes the card (the consolidation): one way back.
+	await page.locator('.backline button.back').click();
 	await page.locator('.study .row', { has: page.locator('.nm', { hasText: 'Beetroot' }) }).click();
 	await expect(card(page).locator('#card-h')).toContainText('Beetroot');
 	// The beetroot is salt baked: the video names the term, and the term reaches the dish.

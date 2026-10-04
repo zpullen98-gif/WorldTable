@@ -193,11 +193,14 @@ test('the quiz asks from the plate, ends on how it went, and records nothing', a
 
 test('a level page lists its plates, read and never graded, with a door to the first and to the wall', async ({ page }) => {
 	await goto(page, '/level/1');
+	// Inside the level page's closed What it holds since the consolidation; the
+	// subsection's title is the door to its shelf, the wall.
+	await page.locator('details.holds > summary').click();
 	const sub = page.locator('ol.subsections .subsection#plates');
-	await expect(sub.locator('h2')).toHaveText('The Plates');
+	await expect(sub.locator('h3')).toHaveText('The Plates');
 	await expect(sub.locator('.line')).toHaveText(new RegExp(`${LEVELS.counts['1'].plates} at this level`));
 	await expect(sub.locator('.line')).toContainText('Read, never graded');
-	await expect(sub.locator('a.train', { hasText: 'The wall' })).toHaveAttribute('href', /\/plates$/);
+	await expect(sub.locator('h3 a')).toHaveAttribute('href', /\/plates$/);
 	await sub.locator('details summary').click();
 	await expect(sub.locator('details li a').first()).toHaveAttribute('href', new RegExp(`/plates/${LEVELS.items.plates['1'][0]}$`));
 	await expect(sub.locator('details li a').first()).not.toHaveText(/-/);
@@ -205,9 +208,10 @@ test('a level page lists its plates, read and never graded, with a door to the f
 
 test('Chef says plainly that every plate is read at the levels below', async ({ page }) => {
 	await goto(page, '/level/4');
+	await page.locator('details.holds > summary').click();
 	const sub = page.locator('ol.subsections .subsection#plates');
 	await expect(sub.locator('.line')).toContainText('every plate is read at the levels below');
-	await expect(sub.locator('a.train', { hasText: 'The wall' })).toBeVisible();
+	await expect(sub.locator('h3 a')).toHaveAttribute('href', /\/plates$/);
 });
 
 test('the deck landing and a card link to the plates that draw them', async ({ page }) => {

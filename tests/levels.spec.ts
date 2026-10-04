@@ -75,22 +75,16 @@ test('a new reader sees four Untouched cards, named and never numbered, and Comm
 	await expect(on.locator('.lv-here')).toHaveText('Your level');
 	await expect(on).toHaveAttribute('aria-current', 'step');
 
-	const doors = page.locator('nav.quiet .door');
-	await expect(doors).toHaveCount(4);
-	await expect(doors.nth(0).locator('.door-line')).toContainText(`the next dish at ${NAMES[0]}`);
-	await expect(doors.nth(0).locator('.door-sub')).toHaveText(`Today deals from ${NAMES[0]}.`);
-	await expect(doors.nth(3).locator('.door-name')).toHaveText('Mine · My Menu');
+	// the home is the four cards and nothing else since the consolidation
+	await expect(page.locator('nav.quiet .door')).toHaveCount(0);
 });
 
-test('a partial record shows a figure, never a score, and Today leads with what has gone cold', async ({ page }) => {
+test('a partial record shows a figure, never a score', async ({ page }) => {
 	await seedSession(page);
 	await goto(page, '/');
 	await page.locator('.level.on').waitFor();
 	await expect(page.locator('.level[data-level="1"] .lv-stat')).toHaveText(/^\d+% met$/);
 	await expect(page.locator('.level.on')).toHaveAttribute('data-level', '1');
-	// cacio e pepe, cooked forty days ago on the first rung, is past its re-cook
-	await expect(page.locator('nav.quiet .door').first().locator('.door-line')).toContainText('again');
-	await expect(page.locator('nav.quiet .door').first().locator('.door-sub')).toContainText('owed across everything touched');
 });
 
 test('a full Commis record reads Met and moves the reader to Chef de Partie', async ({ page }) => {
@@ -99,30 +93,32 @@ test('a full Commis record reads Met and moves the reader to Chef de Partie', as
 	await page.locator('.level.on').waitFor();
 	await expect(page.locator('.level[data-level="1"] .lv-stat')).toHaveText('Met');
 	await expect(page.locator('.level.on')).toHaveAttribute('data-level', '2');
-	const today = page.locator('nav.quiet .door').first();
-	// The seed cooks one recipe per Commis technique, and a recipe can carry
-	// a Chef de Partie technique or be a Chef de Partie dish, so Chef de
-	// Partie is not always untouched: the milestone line ("Commis is met. Chef
-	// de Partie begins with") is the engine's to prove (levels.test.ts); the
-	// page's part is that Today now deals from Chef de Partie.
-	await expect(today.locator('.door-line')).toContainText(NAMES[1]);
-	await expect(today.locator('.door-sub')).toHaveText(`Today deals from ${NAMES[1]}.`);
-
-	// and the Levels tab now forwards there
+	// and the old Levels address now forwards there (nothing chosen yet, so
+	// the lowest not yet met)
 	await goto(page, '/level');
 	await expect(page).toHaveURL(/\/level\/2$/);
 });
 
-test('a level page lists its eight subsections, each with a count and a door, and ends on the test', async ({ page }) => {
+test('a level page opens on Today\'s study and My restaurant, and keeps its eight subsections closed below', async ({ page }) => {
 	await goto(page, '/level/1');
 	await expect(page.locator('h1')).toHaveText(NAMES[0]);
 	await expect(page).toHaveTitle(`${NAMES[0]} · The World Table`);
 	await expect(page.locator('.stat')).toHaveText(/Untouched/);
+	// Today's study: three doors, each a name and a line
+	const today = page.locator('nav.quiet[aria-labelledby="today"] .door');
+	await expect(today.locator('.door-name')).toHaveText(['Due today', 'Quick quiz', 'Next reading']);
+	await expect(page.getByRole('heading', { level: 2, name: 'My restaurant' })).toBeVisible();
+	await expect(page.getByRole('heading', { level: 2, name: 'Search' })).toBeVisible();
+	// What the level holds: a closed disclosure, every subsection inside it
+	const holds = page.locator('details.holds');
+	await expect(holds.locator('> summary')).toHaveText(`Show what ${NAMES[0]} holds`);
+	await holds.locator('> summary').click();
+	await expect(holds.locator('> summary')).toHaveText(`Hide what ${NAMES[0]} holds`);
 	const subs = page.locator('ol.subsections .subsection');
 	await expect(subs).toHaveCount(8);
 	for (let i = 0; i < 8; i++) {
 		await expect(subs.nth(i).locator('.line')).toHaveText(/\d+ at this level/);
-		expect(await subs.nth(i).locator('a.train').count()).toBeGreaterThan(0);
+		await expect(subs.nth(i).locator('h3 a')).toHaveAttribute('href', /.+/);
 	}
 	// the two read-only subsections: The Plates (fifth) and Food Safety (seventh)
 	await expect(subs.nth(4).locator('.line')).toContainText('Read, never graded');
@@ -130,11 +126,9 @@ test('a level page lists its eight subsections, each with a count and a door, an
 	// every subsection's rows are named, not slugs: the first dish is a dish
 	await subs.nth(0).locator('details summary').click();
 	await expect(subs.nth(0).locator('details li a').first()).not.toHaveText(/-/);
-	const test1 = page.locator('a.leveltest');
-	await expect(test1).toHaveText(`The ${NAMES[0]} test`);
-	await expect(test1).toHaveAttribute('href', /\/level\/1\/test$/);
-	// no heading deeper than h2
-	await expect(page.getByRole('heading', { level: 3 })).toHaveCount(0);
+	// the training doors and the test moved: Read to Library, decks to
+	// Flashcards, quizzes and the test to Quizzes
+	await expect(page.locator('a.train, a.leveltest')).toHaveCount(0);
 });
 
 /* ---- the level test ------------------------------------------------------- */
@@ -211,7 +205,6 @@ test('the Commis test, sat wrong, logs only Commis slugs and ends without a numb
 	test.setTimeout(180_000);
 	await goto(page, '/level/1/test');
 	await expect(page.locator('h1')).toHaveText(`The ${NAMES[0]} test`);
-	await expect(page.locator('.crumbs a').last()).toHaveText(NAMES[0]);
 	await sit(page, false);
 
 	const result = page.locator('.result');

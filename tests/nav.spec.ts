@@ -16,15 +16,16 @@ import { goto, seedSession } from './helpers';
  * at a route whose component throws, or at SvelteKit's error page. So each tab
  * is asserted to render its own H1 here.
  *
- * Home, Levels, Library, Mine: the one nav the three apps share, in that order
- * (the owner's decision, 2026-09-26). The Levels tab is a literal href that
- * forwards to the level the record says you are on.
+ * Home, Flashcards, Quizzes, Library, then a quiet More: the one nav the
+ * three apps share, in that order (the consolidation, 4 Oct 2026,
+ * docs/consolidation-design.md 2.1).
  */
 const TABS = [
 	{ href: '/', label: 'Home', h1: /The World/i },
-	{ href: '/level', label: 'Levels', h1: /Commis|Your level/ },
-	{ href: '/recipes', label: 'Library', h1: /^The Library$/ },
-	{ href: '/menu', label: 'Mine', h1: /^My Menu$/ }
+	{ href: '/flashcards', label: 'Flashcards', h1: /^Flashcards$/ },
+	{ href: '/quizzes', label: 'Quizzes', h1: /^Quizzes$/ },
+	{ href: '/library', label: 'Library', h1: /^Library$/ },
+	{ href: '/more', label: 'More', h1: /^More$/ }
 ];
 
 for (const tab of TABS) {
@@ -38,21 +39,22 @@ for (const tab of TABS) {
 	});
 }
 
-test('the bar shows exactly four tabs, in the shared order', async ({ page }) => {
+test('the bar shows the four tab words and then More, in the shared order', async ({ page }) => {
 	await goto(page, '/');
 	const tabs = page.locator('.modetab');
-	await expect(tabs).toHaveCount(4);
-	for (const [i, label] of ['Home', 'Levels', 'Library', 'Mine'].entries()) {
+	await expect(tabs).toHaveCount(5);
+	for (const [i, label] of ['Home', 'Flashcards', 'Quizzes', 'Library', 'More'].entries()) {
 		await expect(tabs.nth(i)).toHaveText(new RegExp(`^${label}`));
 	}
+	await expect(tabs.nth(4)).toHaveClass(/quiet/);
 });
 
 /**
- * The Levels tab means "the level you are on": a fresh record lands on Commis,
- * a record that has met Commis lands on Chef de Partie. Never a list of four
- * (the home is that) and never a stored choice.
+ * /level is an old address now (the retired Levels tab's): it forwards to the
+ * chosen level, and a fresh device has chosen none, so to the lowest not yet
+ * met.
  */
-test('the Levels tab forwards to the lowest level not yet met', async ({ page }) => {
+test('the old Levels address forwards to the lowest level not yet met', async ({ page }) => {
 	await goto(page, '/level');
 	await expect(page).toHaveURL(/\/level\/1$/);
 	await expect(page.locator('h1')).toHaveText(/Commis/);
@@ -61,48 +63,49 @@ test('the Levels tab forwards to the lowest level not yet met', async ({ page })
 /**
  * Exactly ONE tab may be lit. The old isActive tested `startsWith`, so
  * '/recipes' matched the '/recipe' tab and a recipe page lit two at once.
+ * The owners are the design's (3.2): the level test is Quizzes', the level's
+ * reading Library's, everything reached from More lights More.
  */
 test.describe('exactly one tab owns each route', () => {
 	const ROUTES = [
 		['/', 'Home'],
-		['/level/1', 'Levels'],
-		['/level/1/test', 'Levels'],
-		['/level/1/read', 'Levels'],
-		['/study', 'Levels'],
-		['/plates', 'Levels'],
-		['/plates/beef-cuts', 'Levels'],
-		['/technique', 'Levels'],
-		['/palate', 'Levels'],
-		['/safety', 'Levels'],
-		['/service', 'Levels'],
-		['/service/deck', 'Levels'],
-		['/service/deck/study', 'Levels'],
-		['/service/deck/test', 'Levels'],
-		['/service/deck/say', 'Levels'],
-		['/service/deck/lineup', 'Levels'],
-		['/service/drill', 'Levels'],
-		['/practise/calibrate', 'Levels'],
-		// the firing drill reads the house's own pass plan: Mine's, from My Menu
-		['/practise/firing', 'Mine'],
-		['/menu', 'Mine'],
-		['/menu/costing', 'Mine'],
-		// Every sheet under /menu belongs to Mine, which is the point of the
-		// tab: the house's own menu, its costs, its preps, its waste, its drill,
-		// and the two boards that read the record, in one place.
-		['/menu/quiz', 'Mine'],
-		['/menu/preps', 'Mine'],
-		['/menu/producers', 'Mine'],
-		['/menu/prep-board', 'Mine'],
-		['/menu/waste', 'Mine'],
-		['/menu/guest', 'Mine'],
-		['/repertoire', 'Mine'],
-		['/coverage', 'Mine'],
+		['/level/1', 'Home'],
+		['/menu', 'Home'],
+		['/level/1/test', 'Quizzes'],
+		['/level/1/read', 'Library'],
+		['/flashcards', 'Flashcards'],
+		['/service/deck', 'Flashcards'],
+		['/quizzes', 'Quizzes'],
+		['/service/deck/test', 'Quizzes'],
+		['/service/deck/say', 'Quizzes'],
+		['/service/deck/lineup', 'Quizzes'],
+		['/service/drill', 'Quizzes'],
+		['/practise/calibrate', 'Quizzes'],
+		['/practise/firing', 'Quizzes'],
+		['/menu/quiz', 'Quizzes'],
+		['/library', 'Library'],
+		['/study', 'Library'],
+		['/plates', 'Library'],
+		['/plates/beef-cuts', 'Library'],
+		['/technique', 'Library'],
+		['/palate', 'Library'],
+		['/safety', 'Library'],
+		['/service', 'Library'],
 		['/recipes', 'Library'],
 		['/recipe/cacio-e-pepe', 'Library'],
 		['/chapter/italian', 'Library'],
 		['/lexicon', 'Library'],
 		['/pantry', 'Library'],
-		['/family', 'Library']
+		['/family', 'Library'],
+		['/more', 'More'],
+		['/menu/costing', 'More'],
+		['/menu/preps', 'More'],
+		['/menu/producers', 'More'],
+		['/menu/prep-board', 'More'],
+		['/menu/waste', 'More'],
+		['/menu/guest', 'More'],
+		['/repertoire', 'More'],
+		['/coverage', 'More']
 	] as const;
 
 	for (const [path, owner] of ROUTES) {
@@ -144,19 +147,14 @@ test('the Library links to the pages its tab claims', async ({ page }) => {
 	}
 });
 
-for (const [route, title] of [
-	['/family', 'The Family Chapter'],
-	['/pantry', 'Pantry Match']
-] as const) {
+for (const route of ['/family', '/pantry'] as const) {
 	test(`${route} has a way back to the Library`, async ({ page }) => {
 		await goto(page, route);
-		const crumb = page.locator('nav.crumbs');
-		await expect(crumb).toBeVisible();
-		await expect(crumb.locator('a')).toHaveAttribute('href', /\/recipes$/);
-		await expect(crumb).toContainText(title);
-		// And it goes where it says.
-		await crumb.locator('a').click();
-		await expect(page.locator('h1')).toHaveText('The Library');
+		// One way back, the layout's (the consolidation): no crumbs. At depth 0
+		// its parent is the Library tab.
+		await expect(page.locator('nav.crumbs')).toHaveCount(0);
+		await page.locator('.backline button.back').click();
+		await expect(page.locator('h1')).toHaveText('Library');
 	});
 }
 
@@ -164,28 +162,22 @@ for (const [route, title] of [
  * The coverage board, which nothing linked to at all.
  *
  * Measured over all 2179 built pages it once had ZERO inbound links, the only
- * route in the app with none. The Service hub carried the entrance for a
- * while; since the four levels the board is Mine's (it reads this device's
- * record) and My Menu carries the door, so the way in, the way out and the
- * lit tab all agree.
+ * route in the app with none. Since the consolidation it is More's (Record and
+ * progress): More carries the door, More lights, and Back returns there.
  */
-test('the coverage board can be reached from My Menu and left', async ({ page }) => {
+test('the coverage board can be reached from More and left', async ({ page }) => {
 	await seedSession(page);
-	await goto(page, '/menu');
-	const link = page.locator('a[href$="/coverage"]');
-	await expect(link, 'My Menu must offer the coverage board').toHaveCount(1);
+	await goto(page, '/more');
+	const link = page.locator('main a[href$="/coverage"]');
+	await expect(link, 'More must offer the coverage board').toHaveCount(1);
 
 	await link.click();
 	await expect(page.locator('h1')).toHaveText(/Coverage/i);
-	// One record per device, so no line about whose device this is and no
-	// apology: just the board. The station list is what proves it rendered.
 	await expect(page.locator('.people li').first()).toBeVisible();
+	await expect(page.locator('.modetab.on')).toHaveText('More');
 
-	// Way out, and it agrees with the tab that is lit.
-	const back = page.locator('.back a');
-	await expect(back).toHaveText('Back to My Menu');
-	await back.click();
-	await expect(page.locator('h1')).toHaveText('My Menu');
+	await page.locator('.backline button.back').click();
+	await expect(page.locator('h1')).toHaveText('More');
 });
 
 /**
@@ -212,7 +204,7 @@ test.describe('the mode bar fits on a phone', () => {
 	 * identical on every route. The one case that needs a Library-lit page uses
 	 * /family, a page that tab owns and which is nearly empty.
 	 */
-	test('all four tabs and the toggle stay reachable from 320 to 600', async ({ page }) => {
+	test('the four tabs and More stay reachable from 320 to 600', async ({ page }) => {
 		await goto(page, '/level/1');
 
 		for (const width of [320, 375, 390, 414, 430, 600]) {

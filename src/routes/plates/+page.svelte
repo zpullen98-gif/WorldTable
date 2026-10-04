@@ -13,7 +13,6 @@
 <svelte:head><title>The Plates · The World Table</title></svelte:head>
 
 <div class="shell view">
-	<nav class="crumbs"><a href="{base}/">Home</a></nav>
 	<p class="eyebrow">The illustrated field library</p>
 	<h1>The Plates</h1>
 	<p class="lede">Look closely at the cuts, the fish case, the regional larder, the pantry and the board. Each plate pairs six illustrated subjects with a readable teaching guide and a quiet self-check.</p>
@@ -47,7 +46,6 @@
 
 <style>
 	.view { padding-block: 26px 80px; max-width: 1180px; }
-	.crumbs { font-size: var(--t-small); margin-bottom: 8px; }.crumbs a { display: inline-block; min-height: 44px; padding-block: 10px; color: var(--muted); }
 	.eyebrow { font-size: var(--t-micro); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--turmeric-deep); }
 	h1 { font-family: var(--house-display); font-size: clamp(32px, 5vw, 52px); font-weight: 500; line-height: 1.25; margin: 8px 0 16px; }
 	.lede { font-size: var(--t-lede); color: var(--ink-soft); max-width: var(--measure); line-height: 1.6; }

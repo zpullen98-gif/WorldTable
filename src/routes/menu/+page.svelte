@@ -34,7 +34,9 @@
 	} from '$lib/maitre';
 	import { adoptLines, LINE_FIELDS, type LineField } from '$lib/maitre-adopt';
 	import { onMount, tick } from 'svelte';
-	import { goto, pushState, replaceState } from '$app/navigation';
+	import { goto, replaceState } from '$app/navigation';
+	import { nav } from '$lib/stores/nav.svelte';
+	import { cardsTarget } from '$lib/nav';
 	import { page } from '$app/state';
 	import type { Snapshot } from './$types';
 	import StudyMenu from '$lib/components/StudyMenu.svelte';
@@ -283,6 +285,47 @@
 		if ((id.startsWith('dish-') && !studyOn) || id === 'desk') {
 			document.getElementById(id)?.scrollIntoView({ block: 'start' });
 		}
+		// More's and My restaurant's doors (docs/consolidation-design.md 3.10):
+		// #tools opens Session and tools and focuses Export, #plan opens the
+		// planner, #maitre her settings, #house the house doors. Each is read
+		// once, then cleared with a replace so the address does not keep
+		// reopening it.
+		if (id === 'tools' || id === 'plan' || id === 'maitre' || id === 'house') {
+			/* A drawer More opened keeps More lit and Back going to More once the
+			   hash is gone: the entry remembers the tab that opened it. */
+			const via = id === 'house' ? {} : { via: 'more' };
+			const clear = () => replaceState(location.pathname + location.search, { ...((page.state ?? {}) as App.PageState), ...via });
+			void tick().then(async () => {
+				/* After the router's own scroll (two frames, the study view's
+				   pattern): it scrolls to the top for an anchor that is not on
+				   the page, and arriving from More it ran after this and left the
+				   opened drawer below the first screen. */
+				await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+				if (id === 'tools') {
+					if (toolsEl) await openTools();
+					else {
+						document.querySelector('.tools')?.scrollIntoView({ block: 'start' });
+						document.querySelector<HTMLElement>('[data-export]')?.focus();
+					}
+				} else if (id === 'plan') {
+					if (planEl) {
+						planEl.open = true;
+						await tick();
+						planEl.scrollIntoView({ block: 'start' });
+					} else document.getElementById('plan')?.scrollIntoView({ block: 'start' });
+				} else if (id === 'house') {
+					if (toolsEl) {
+						toolsEl.open = true;
+						await tick();
+					}
+					document.getElementById('house')?.scrollIntoView({ block: 'start' });
+				} else {
+					void herSettings();
+				}
+				clear();
+			});
+			return;
+		}
 		// #ask is the chat door: the tools row scrolls into view and her dialog
 		// opens over it, on the family line when there is no key here.
 		if (id === 'ask') {
@@ -319,6 +362,7 @@
 	let drilled = $state<DrilledEntry[]>([]);
 	let roomsOpen = $state({ codex: false, ledger: false });
 	let toolsEl: HTMLDetailsElement | undefined = $state();
+	let planEl: HTMLDetailsElement | undefined = $state();
 	let slotEl: HTMLElement | undefined = $state();
 
 	const current = $derived(house.current);
@@ -367,6 +411,11 @@
 		} catch {
 			/* a convenience: all day when it cannot be read */
 		}
+		/* A section chip on a level page opens the study list scoped to it
+		   (docs/consolidation-design.md 2.6): ?section= is the scope, read here
+		   and never in load (the prerender rule), so Back and a reload keep it. */
+		const wantSection = new URLSearchParams(location.search).get('section');
+		if (wantSection) studySection = wantSection;
 		if (sharedOrigin(base)) {
 			const up = typeof navigator === 'undefined' || navigator.onLine !== false;
 			if (up) roomsOpen = { codex: true, ledger: true };
@@ -421,14 +470,18 @@
 		listY = window.scrollY;
 		lastRow = id;
 		openList = [...list];
-		pushState('#' + id, { study: id });
+		nav.pushShallow('#' + id, { study: id });
 		void toCardTop();
 	}
 
 	function stepCard(id: string) {
 		if (!cardList.some((r) => r.id === id)) openList = current ? studyRows(current, 'dish') : [];
-		lastRow = id;
-		if (stateId) replaceState('#' + id, { study: id });
+		/* lastRow stays the row that OPENED the card: Back returns the focus
+		   there, never to the row of the card Next last stepped to (design
+		   7.1, test 2). A card opened by a cold hash has no opener, so it takes
+		   the card it is showing. */
+		if (!lastRow) lastRow = id;
+		if (stateId) nav.replaceShallow('#' + id, { study: id });
 		else coldId = id;
 		void toCardTop();
 	}
@@ -458,12 +511,41 @@
 		document.querySelector('.dishform')?.scrollIntoView({ block: 'start' });
 	}
 
+	/* The editing page is a screen (design 3.3): Edit the menu pushes a shallow
+	   entry, so Back, and the phone's gesture, return to the study view. */
 	async function editAll() {
 		dropCard();
 		editMode = true;
+		nav.pushShallow(location.pathname + location.search, { edit: true });
 		await tick();
 		window.scrollTo(0, 0);
 	}
+	const editPushed = $derived(!!((page.state ?? {}) as App.PageState).edit);
+	let wasEditPushed = false;
+	$effect(() => {
+		const now = editPushed;
+		if (wasEditPushed && !now && editMode) {
+			editMode = false;
+			dishForm = null;
+		}
+		wasEditPushed = now;
+	});
+
+	/* A card opened by a cold hash is held outside the history: at depth 0 the
+	   layout's Back closes it here rather than leave the page. */
+	onMount(() => {
+		nav.override = () => {
+			if (coldId) {
+				coldId = '';
+				replaceState(location.pathname + location.search, {});
+				return true;
+			}
+			return false;
+		};
+		return () => {
+			nav.override = null;
+		};
+	});
 
 	async function studyAgain() {
 		editMode = false;
@@ -472,9 +554,10 @@
 		window.scrollTo(0, 0);
 	}
 
-	/** To the flash cards or a drill, marked so their way out comes back here. */
+	/** To the flash cards (the Flashcards tab, the one card screen) or a drill. A push, so Back comes back here. */
 	function toQuiz(search: string) {
-		void goto(`${base}/menu/quiz?${search}`, { state: { fromStudy: true } });
+		if (new URLSearchParams(search).get('mode') === 'cards') void goto(`${base}${cardsTarget(search)}`);
+		else void goto(`${base}/menu/quiz?${search}`);
 	}
 
 	async function openTools() {
@@ -1055,9 +1138,11 @@
 	<!-- The house this menu belongs to, and the doors into the list of houses
 	     on the device. Prerendered as the no-house line; it reads the device
 	     in onMount only (HouseBar.svelte). -->
-	<HouseBar />
-	<!-- The house card: nothing until a house is current (HouseCard.svelte). -->
-	<HouseCard />
+	<div id="house">
+		<HouseBar />
+		<!-- The house card: nothing until a house is current (HouseCard.svelte). -->
+		<HouseCard />
+	</div>
 {/snippet}
 
 {#snippet kitchenLinks()}
@@ -1318,6 +1403,11 @@
 	</header>
 
 	{#if !opened}
+		<!-- The doors More and My restaurant link to (#tools, #plan, #maitre, #desk,
+		     #house) are opened by the hash handler once the house is read; these
+		     empty anchors stand for them in the prerendered page, whose link
+		     checker fails the build on an id it cannot find. -->
+		<span id="tools" class="anchor"></span><span id="plan" class="anchor"></span><span id="maitre" class="anchor"></span><span id="house" class="anchor"></span><span id="desk" class="anchor"></span>
 		<p class="opening" role="status">{say('opening')}</p>
 	{:else if studyOn && current}
 		{#if house.houseRefusal}
@@ -1365,13 +1455,13 @@
 				{@render toolsRow()}
 				<p class="hint drawerlinks">{@render kitchenLinks()}</p>
 			</details>
-			<details class="drawer" data-print="hide">
+			<details class="drawer" data-print="hide" bind:this={planEl}>
 				<summary>Plan a menu from the Library{#if session.menu.length} ({session.menu.length} pinned){/if}</summary>
 				{@render planner()}
 			</details>
 		{/if}
 	{:else}
-		{#if current && current.dishes.length && editMode}
+		{#if current && current.dishes.length && editMode && !editPushed}
 			<p class="switchline" data-print="hide">
 				<button class="chip switch" onclick={studyAgain}>{say('editOn')}</button>
 				<span class="hint">Press it to go back to studying the menu.</span>
@@ -1381,7 +1471,7 @@
 		{@render toolsRow()}
 		<ExportNudge />
 
-		{@render planner()}
+		<div id="plan">{@render planner()}</div>
 
 	{#if house.blocked}
 		<!--
@@ -1657,11 +1747,14 @@
 	 * touching the glass on phones. Six routes had the same line; measured at
 	 * 320 and 375, h1 and lede sat at x=0 while every healthy route sat at 20.
 	 */
-	.view { padding-block: 26px 80px; max-width: 900px; }
+	/* No top padding of its own: the layout's Back row above it is the gap now,
+	   and the study view's two whole rows still fit the first 844px (the
+	   rule study.spec holds it to). */
+	.view { padding-block: 0 80px; max-width: 900px; }
 	/* The study view. The card replaces the list in place and the page
 	   scrolls its top under the modebar, never behind it. */
 	.opening { color: var(--ink-soft); font-size: 1rem; margin: 18px 0; }
-	.studyslot { scroll-margin-top: calc(var(--modebar-h, 0px) + 8px); }
+	.studyslot { scroll-margin-top: calc(var(--modebar-h, 0px) + var(--backrow-h, 0px) + 8px); }
 	.drawer { border-top: 1px solid var(--line); margin: 6px 0 0; }
 	.drawer:last-of-type { border-bottom: 1px solid var(--line); }
 	.drawer > summary {
@@ -1677,7 +1770,7 @@
 	.head h1 { font-size: var(--t-h2); margin-bottom: 8px; }
 	/* With no lede under it, the study view's h1 needs no gap of its own, and the
 	   frame's rule sits closer: the phone's first screen is for the menu. */
-	:global(.house-main) .view > .head.studying { padding-bottom: 10px; }
+	:global(.house-main) .view > .head.studying { padding-bottom: 4px; }
 	.head.studying h1 { margin-bottom: 0; }
 	.headrow { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 	.quiet.studyedit {
