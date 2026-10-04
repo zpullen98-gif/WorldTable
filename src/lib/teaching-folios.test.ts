@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
-import { BRENNANS_HOUSE_ID, TEACHING_FOLIOS, foliosForCard, foliosForDish, foliosForLexicon, foliosForTechnique, teachingFolioAlt } from './teaching-folios';
+import { BRENNANS_HOUSE_ID, TEACHING_FOLIOS, TEACHING_FOLIO_GROUPS, foliosForCard, foliosForDish, foliosForLexicon, foliosForTechnique, teachingFolioAlt } from './teaching-folios';
 import { plateArtworkUrl } from './plate-artwork';
 
 const read = (path: string) => JSON.parse(readFileSync(join(__dirname, path), 'utf8'));
@@ -12,11 +12,20 @@ const recipes = new Set(read('data/recipes.index.json').map((recipe: { slug: str
 const lexicon = new Set(read('data/lexicon.json').map((term: { slug: string }) => term.slug));
 
 describe('kitchen companion teaching manifest', () => {
-	it('keeps five independently identified studies separate from the twenty reference plates', () => {
-		expect(TEACHING_FOLIOS).toHaveLength(5);
-		expect(new Set(TEACHING_FOLIOS.map(folio => folio.id)).size).toBe(5);
+	it('keeps nine independently identified studies separate from the twenty reference plates', () => {
+		expect(TEACHING_FOLIOS).toHaveLength(9);
+		expect(new Set(TEACHING_FOLIOS.map(folio => folio.id)).size).toBe(9);
 		expect(read('data/plates.json').plates).toHaveLength(20);
-		expect(TEACHING_FOLIOS.map(folio => folio.subjects.length)).toEqual([6, 2, 6, 6, 6]);
+		expect(TEACHING_FOLIOS.map(folio => folio.subjects.length)).toEqual([6, 2, 6, 6, 6, 6, 2, 2, 6]);
+	});
+	it('puts every study in exactly one non-empty learning group', () => {
+		const grouped = TEACHING_FOLIO_GROUPS.flatMap(group => {
+			const studies = TEACHING_FOLIOS.filter(folio => folio.group === group.id);
+			expect(studies.length, group.id).toBeGreaterThan(0);
+			return studies.map(folio => folio.id);
+		});
+		expect(grouped.sort()).toEqual(TEACHING_FOLIOS.map(folio => folio.id).sort());
+		expect(new Set(grouped).size).toBe(TEACHING_FOLIOS.length);
 	});
 	it('publishes complete versioned image pairs within the allowed offline roots', () => {
 		for (const folio of TEACHING_FOLIOS) {
@@ -65,10 +74,44 @@ describe('kitchen companion teaching manifest', () => {
 	it('links only the intended existing Floor Deck cards and pantry terms', () => {
 		const deck = read('data/floor-deck.json').cards as Array<{ id: string; term: string }>;
 		const linked = deck.filter(card => foliosForCard(card.id).length).map(card => card.term).sort();
-		expect(linked).toEqual(['Andouille', 'Beurre Blanc', 'Béarnaise', 'Hollandaise', 'Poached', 'Tasso'].sort());
+		expect(linked).toEqual(['Andouille', 'Beurre Blanc', 'Béarnaise', 'Hollandaise', 'Poached', 'Seared', 'Tasso'].sort());
 		expect(foliosForCard('fd_0369')).toEqual([]); // French andouillette is not Cajun andouille.
 		expect(foliosForLexicon('tasso-and-cajun-andouille').map(folio => folio.id)).toEqual(['louisiana-larder']);
 		expect(foliosForLexicon('unrelated')).toEqual([]);
+	});
+	it('connects the new studies to the exact knife, searing, slicing and herb lessons', () => {
+		expect(foliosForTechnique('knife-cuts-dice-julienne-bias').map(f => f.id)).toEqual(['knife-cuts']);
+		expect(foliosForTechnique('searing-the-hard-crust').map(f => f.id)).toEqual(['searing-standard']);
+		expect(foliosForTechnique('resting-meat-and-slicing-against-the-grain').map(f => f.id)).toEqual(['resting-slicing-standard']);
+		expect(foliosForTechnique('resting-dough-the-pause-that-does-the-work')).toEqual([]);
+		for (const slug of ['flat-leaf-parsley', 'chervil', 'chives', 'tarragon', 'thyme', 'rosemary']) {
+			expect(foliosForLexicon(slug).map(f => f.id), slug).toEqual(['french-herbs']);
+		}
+		expect(foliosForCard('fd_0039').map(f => f.id)).toEqual(['searing-standard']);
+	});
+	it('uses current named ingredients and actual hanger steaks for house context', () => {
+		const herbs = TEACHING_FOLIOS.find(folio => folio.id === 'french-herbs')!;
+		for (const id of herbs.dishes) {
+			const dish = house.dishes.find((dish: { id: string }) => dish.id === id);
+			expect(dish.description, dish.name).toMatch(/fines herbes|parsley|béarnaise|Choron|Foyot/i);
+		}
+		const slicing = TEACHING_FOLIOS.find(folio => folio.id === 'resting-slicing-standard')!;
+		for (const id of slicing.dishes) {
+			const dish = house.dishes.find((dish: { id: string }) => dish.id === id);
+			expect(dish.name).toMatch(/hanger steak/i);
+		}
+		expect(TEACHING_FOLIOS.find(folio => folio.id === 'searing-standard')!.dishes).toEqual([]);
+		expect(TEACHING_FOLIOS.find(folio => folio.id === 'knife-cuts')!.dishes).toEqual([]);
+	});
+	it('keeps traceable primary reading sources alongside the new comparison keys', () => {
+		for (const id of ['french-herbs', 'searing-standard', 'resting-slicing-standard', 'knife-cuts']) {
+			const folio = TEACHING_FOLIOS.find(folio => folio.id === id)!;
+			expect(folio.sources?.length, id).toBeGreaterThan(0);
+			for (const source of folio.sources!) {
+				expect(new URL(source.url).protocol).toBe('https:');
+				expect(source.title.length).toBeGreaterThan(10);
+			}
+		}
 	});
 	it('distinguishes soft-boiled Eggs Owen and the two different hanger steak preparations', () => {
 		const owen = house.dishes.find((dish: { id: string }) => dish.id === 'd-44jfmkdb');

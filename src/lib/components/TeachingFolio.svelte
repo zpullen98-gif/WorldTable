@@ -32,6 +32,12 @@
 		<div class="folio-reading" role="group" aria-label="Continue learning about {folio.title}">
 			{#each folio.links as link (link.href)}<a href="{base}{link.href}">{link.label}</a>{/each}
 		</div>
+		{#if folio.sources?.length}
+			<details class="folio-sources">
+				<summary>Sources and further reading</summary>
+				<ul>{#each folio.sources as source (source.url)}<li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}<span class="source-window"> (opens in a new tab)</span></a></li>{/each}</ul>
+			</details>
+		{/if}
 	</div>
 </details>
 
@@ -54,6 +60,11 @@
 	.folio-key p { margin: 4px 0 0; color: var(--ink-soft); line-height: 1.55; font-size: var(--t-small); }
 	.folio-reading { display: flex; flex-wrap: wrap; gap: 6px 18px; padding-top: 16px; }
 	.folio-reading a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); font-size: var(--t-small); }
+	.folio-sources { margin-top: 12px; border-top: 1px solid var(--line); font-size: var(--t-small); }
+	.folio-sources summary { padding: 12px 0; }
+	.folio-sources ul { margin: 0; padding-left: 20px; }
+	.folio-sources a { display: inline-block; min-height: 44px; padding-block: 10px; color: var(--ink-soft); }
+	.source-window { font-size: var(--t-micro); }
 	@media (min-width: 900px) { .folio-layout:not(.landscape) { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }.landscape .folio-key { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 	@media (max-width: 420px) { summary { padding-inline: 12px; }.folio-body { padding-inline: 12px; }.folio-title { font-size: 19px; } }
 </style>

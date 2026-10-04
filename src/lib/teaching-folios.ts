@@ -4,6 +4,7 @@
  */
 export interface TeachingFolio {
 	id: string;
+	group: 'ingredients' | 'knife-and-heat' | 'sauces-and-eggs';
 	title: string;
 	intro: string;
 	scope: string;
@@ -12,13 +13,20 @@ export interface TeachingFolio {
 	links: Array<{ label: string; href: string }>;
 	techniques: string[];
 	dishes: string[];
+	sources?: Array<{ title: string; url: string }>;
 }
 
 export const BRENNANS_HOUSE_ID = 'h-g02pdomw';
 
+export const TEACHING_FOLIO_GROUPS = [
+	{ id: 'ingredients', title: 'Ingredients at a glance', intro: 'Compare the shapes and flavours of herbs and the Louisiana larder.' },
+	{ id: 'knife-and-heat', title: 'Knife work, searing and slicing', intro: 'Look for even cuts, a developed crust and the direction of the grain.' },
+	{ id: 'sauces-and-eggs', title: 'Sauces and eggs', intro: 'Follow colour, texture and emulsions from the pan to the spoon.' }
+] as const;
+
 export const TEACHING_FOLIOS: readonly TeachingFolio[] = [
 	{
-		id: 'brennans-sauces', title: 'Six sauces, seen side by side',
+		id: 'brennans-sauces', group: 'sauces-and-eggs', title: 'Six sauces, seen side by side',
 		intro: 'Compare colour, body and the ingredients that distinguish six sauces named in the Brennan’s study pack.',
 		scope: 'These are classic sauce studies, not photographs of the restaurant’s current service. Recipes and colour vary; the plain beurre blanc shown here does not specify the house’s preserved-lemon version.',
 		image: { src: 'house/brennans/brennans-sauces-v1.webp', thumb: 'house/brennans/brennans-sauces-v1.thumb.webp', width: 1024, height: 1536 },
@@ -35,7 +43,7 @@ export const TEACHING_FOLIOS: readonly TeachingFolio[] = [
 		dishes: ['d-1q0xk7jv', 'd-fs311zha', 'd-44jfmkdb', 'd-4jee8o34', 'd-5wcuejdy', 'd-s1bqzuks']
 	},
 	{
-		id: 'poached-egg-standard', title: 'A poached egg: the result and the faults',
+		id: 'poached-egg-standard', group: 'sauces-and-eggs', title: 'A poached egg: the result and the faults',
 		intro: 'Read the water’s surface, then compare the shape of the white and the texture of the cut yolk.',
 		scope: 'The fault panel brings two different problems together. Violent bubbles can disrupt the white; a firm yolk reflects cooking time and heat, not a rolling boil alone. Use the technique lesson alongside the picture.',
 		image: { src: 'standards/poached-egg-standard-v1.webp', thumb: 'standards/poached-egg-standard-v1.thumb.webp', width: 1536, height: 1024 },
@@ -47,7 +55,7 @@ export const TEACHING_FOLIOS: readonly TeachingFolio[] = [
 		techniques: ['poaching-eggs'], dishes: ['d-1q0xk7jv', 'd-fs311zha']
 	},
 	{
-		id: 'louisiana-larder', title: 'The Louisiana larder',
+		id: 'louisiana-larder', group: 'ingredients', title: 'The Louisiana larder',
 		intro: 'Recognise the trinity, two smokehouse ingredients and the shape of okra.',
 		scope: 'The first three subjects form the Louisiana trinity: onion, celery and green bell pepper. This is an ingredient study; it does not establish every ingredient in a restaurant dish.',
 		image: { src: 'plates/louisiana-larder-v1.webp', thumb: 'plates/louisiana-larder-v1.thumb.webp', width: 1024, height: 1536 },
@@ -63,7 +71,7 @@ export const TEACHING_FOLIOS: readonly TeachingFolio[] = [
 		techniques: [], dishes: ['d-r3h9vj7a', 'd-bqznncn6', 'd-1gj8ji36']
 	},
 	{
-		id: 'roux-colour-ladder', title: 'Roux: from pale to dark',
+		id: 'roux-colour-ladder', group: 'sauces-and-eggs', title: 'Roux: from pale to dark',
 		intro: 'Compare an evenly cooked roux at five colour stages with a scorched batch.',
 		scope: 'Stop at the stage the recipe calls for. Darker roux develops a deeper toasted flavour and has less thickening power. The numbered stages are a visual comparison, not a cooking timer.',
 		image: { src: 'standards/roux-colour-ladder-v1.webp', thumb: 'standards/roux-colour-ladder-v1.thumb.webp', width: 1024, height: 1536 },
@@ -79,7 +87,7 @@ export const TEACHING_FOLIOS: readonly TeachingFolio[] = [
 		techniques: ['making-a-roux'], dishes: ['d-r3h9vj7a']
 	},
 	{
-		id: 'hollandaise-standard', title: 'Hollandaise: build, recognise, recover',
+		id: 'hollandaise-standard', group: 'sauces-and-eggs', title: 'Hollandaise: build, recognise, recover',
 		intro: 'Follow the yolk foam into an emulsion, then distinguish a smooth sauce from curdling and separation.',
 		scope: 'Use the linked recipe for the method. The last panel illustrates the fresh-base rescue for a separated sauce; it does not show cooked egg curds turning back into uncooked yolk.',
 		image: { src: 'standards/hollandaise-standard-v1.webp', thumb: 'standards/hollandaise-standard-v1.thumb.webp', width: 1024, height: 1536 },
@@ -93,6 +101,77 @@ export const TEACHING_FOLIOS: readonly TeachingFolio[] = [
 		],
 		links: [ { label: 'Hollandaise and the two ways it splits', href: '/recipe/hollandaise-and-the-two-ways-it-splits' }, { label: 'Building an emulsion', href: '/technique/building-an-emulsion' } ],
 		techniques: ['hollandaise', 'building-an-emulsion'], dishes: ['d-1q0xk7jv', 'd-44jfmkdb']
+	},
+	{
+		id: 'french-herbs', group: 'ingredients', title: 'The French herbs',
+		intro: 'Compare the tender fines herbes quartet with the smaller, tougher leaves of thyme and rosemary.',
+		scope: 'Parsley, chervil, chives and tarragon form the classic fines herbes quartet. Thyme and rosemary are shown for contrast, not as part of that blend. This is a kitchen comparison of known culinary herbs, not a wild-plant identification guide; confirm the house’s current herb mix at lineup.',
+		image: { src: 'plates/french-herbs-v1.webp', thumb: 'plates/french-herbs-v1.thumb.webp', width: 1024, height: 1536 },
+		subjects: [
+			{ name: 'Flat-leaf parsley', description: 'Look for broad, flat, toothed leaflets. Its fresh green flavour is the familiar starting point for the tender-herb comparison.', image: 'Bright green, broad, toothed leaflets on slender stems.' },
+			{ name: 'Chervil', description: 'The softer, finely divided leaves look lacy beside parsley. Its delicate anise note is best appreciated in fresh finishing herbs.', image: 'Fine, feathery, pale green leaves on delicate branching stems.' },
+			{ name: 'Chives', description: 'The narrow leaves are round and hollow, with a mild onion flavour. These are common chives, rather than the flat leaves of garlic chives.', image: 'Slender tubular green leaves beside pale purple, rounded flower heads.' },
+			{ name: 'French tarragon', description: 'Long, narrow, smooth leaves accompany a pronounced anise-like aroma. Tarragon is the distinctive herb in the béarnaise family of sauces.', image: 'Long, narrow, pointed leaves along upright green stems.' },
+			{ name: 'Thyme', description: 'Tiny leaves cluster on short woody sprigs. Compare this compact, sturdier structure with the four tender herbs above.', image: 'Short woody sprigs bearing many tiny oval grey-green leaves.' },
+			{ name: 'Rosemary', description: 'Firm, needle-like leaves grow along woody stems. Its resinous aroma is stronger than the soft green character of parsley.', image: 'Woody sprigs with narrow dark green leaves and paler undersides.' }
+		],
+		links: [
+			{ label: 'Flat-leaf parsley', href: '/lexicon#flat-leaf-parsley' }, { label: 'Chervil', href: '/lexicon#chervil' },
+			{ label: 'Chives', href: '/lexicon#chives' }, { label: 'Tarragon', href: '/lexicon#tarragon' },
+			{ label: 'Thyme', href: '/lexicon#thyme' }, { label: 'Rosemary', href: '/lexicon#rosemary' },
+			{ label: 'Bright and resinous herb profiles', href: '/lexicon#herb-profiles-bright-vs-resinous' }
+		],
+		techniques: [], dishes: ['d-5p5b1hjn', 'd-nd0d2czb', 'd-fs311zha', 'd-4jee8o34', 'd-5wcuejdy'],
+		sources: [
+			{ title: 'Royal Horticultural Society: culinary herbs', url: 'https://www.rhs.org.uk/herbs/growing' },
+			{ title: 'RHS: common and garlic chives', url: 'https://www.rhs.org.uk/herbs/chives/grow-your-own' },
+			{ title: 'University of Nevada, Reno: culinary herbs and blends', url: 'https://extension.unr.edu/publication.aspx?PubID=2755' }
+		]
+	},
+	{
+		id: 'searing-standard', group: 'knife-and-heat', title: 'Searing: crust and interior',
+		intro: 'Read two separate things: the browning on the surface and the band of cooked meat beneath it.',
+		scope: 'The wet pan and grey band illustrate different observations, not a single proven cause. Surface moisture, crowding, heat, time and steak thickness all matter. The pink interior is an illustration, not a temperature reading or a house doneness specification.',
+		image: { src: 'standards/searing-standard-v1.webp', thumb: 'standards/searing-standard-v1.thumb.webp', width: 1536, height: 1024 },
+		subjects: [
+			{ name: 'Developed crust', description: 'Compare the even brown surface with the narrow cooked band in the cut view. Browning builds flavour; it does not seal juices inside the meat.', image: 'A steak with an even mahogany-brown face in a pan, above a cut view with a thin brown edge and pink centre.' },
+			{ name: 'Wet surface and a wider grey band', description: 'Liquid surrounds the patchily browned steak. Below it, a broader grey band shows a less even interior. Check the cooking method; the picture alone cannot tell you which factor caused it.', image: 'A wet, patchily browned steak in a crowded pan, above a cut view with a broad grey band around a smaller pink centre.' }
+		],
+		links: [ { label: 'Searing: the hard crust', href: '/technique/searing-the-hard-crust' }, { label: 'Searing and pan technique', href: '/lexicon#searing-and-pan-technique' }, { label: 'Reverse sear and the grey band', href: '/lexicon#reverse-sear-and-the-gray-band' } ],
+		techniques: ['searing-the-hard-crust'], dishes: [],
+		sources: [
+			{ title: 'Rouxbe: searing and the seal-in-juices myth', url: 'https://shop.rouxbe.com/cooking-school/searing' }
+		]
+	},
+	{
+		id: 'resting-slicing-standard', group: 'knife-and-heat', title: 'Resting and slicing across the grain',
+		intro: 'Find the direction of the muscle fibres, then compare a cross-cut slice with a strip cut along them.',
+		scope: 'Resting and slicing direction are separate decisions. Resting can reduce liquid lost when meat is cut, but a pool on the board alone cannot establish how long it rested. The hanger steak is a general technique example, not Brennan’s plating or doneness standard.',
+		image: { src: 'standards/resting-slicing-standard-v1.webp', thumb: 'standards/resting-slicing-standard-v1.thumb.webp', width: 1536, height: 1024 },
+		subjects: [
+			{ name: 'Across the grain', description: 'Locate the long, parallel fibres before slicing across them. Shortening those fibres makes a coarse-grained cut easier to chew. The small amount of board liquid is illustrative, not a pass-or-fail test.', image: 'A cooked hanger steak cut across its grain into short slices on a board with a faint sheen of liquid.' },
+			{ name: 'Along the grain', description: 'These strips keep long fibres running along their length. The larger pool is a prompt to review resting and cooking, rather than proof that the steak was sliced too soon.', image: 'Long strips with visible parallel muscle fibres beside a larger pool of meat juices.' }
+		],
+		links: [ { label: 'Resting meat and slicing against the grain', href: '/technique/resting-meat-and-slicing-against-the-grain' }, { label: 'Resting, carryover and the thermometer', href: '/lexicon#resting-carryover-and-the-thermometer' }, { label: 'Flank, skirt and hanger', href: '/lexicon#flank-skirt-and-hanger' } ],
+		techniques: ['resting-meat-and-slicing-against-the-grain'], dishes: ['d-4jee8o34', 'd-ono6zqmz'],
+		sources: [ { title: 'Institute of Culinary Education: finding the grain', url: 'https://www.ice.edu/blog/how-find-grain-and-slice-steak-chef' } ]
+	},
+	{
+		id: 'knife-cuts', group: 'knife-and-heat', title: 'The classical knife cuts',
+		intro: 'Compare cubes, square-sided sticks and leaf ribbons. Even pieces within a cut are the useful habit to practise.',
+		scope: 'Dimensions below follow the Table’s existing lesson; conventions and stick lengths vary between schools and kitchens. The illustration compares shapes and relative sizes, not actual millimetres on your screen. Use a ruler for practice and follow the recipe’s required cut.',
+		image: { src: 'plates/knife-cuts-v1.webp', thumb: 'plates/knife-cuts-v1.thumb.webp', width: 1024, height: 1536 },
+		subjects: [
+			{ name: 'Brunoise', description: 'Small, even cubes: about 3 × 3 × 3 mm in this lesson. Cut julienne crosswise to make matching dice.', image: 'A neat pile of tiny carrot cubes, the smallest cubes in the study.' },
+			{ name: 'Small dice', description: 'About 6 × 6 × 6 mm. Each edge is roughly twice the brunoise edge; compare the pieces within the pile for consistency.', image: 'Even carrot cubes with edges about twice those of the brunoise.' },
+			{ name: 'Medium dice', description: 'About 12 × 12 × 12 mm. These larger cubes still need straight, even faces and closely matching dimensions.', image: 'Larger carrot cubes, with edges about twice those of the small dice.' },
+			{ name: 'Julienne', description: 'Slender square-sided sticks, about 3 × 3 mm and 5 cm long here. Aim for the same width and thickness throughout.', image: 'A bundle of thin, evenly cut carrot matchsticks.' },
+			{ name: 'Batonnet', description: 'Thicker square-sided sticks, about 6 × 6 mm and 6 cm long here. Cutting them crosswise at the same interval produces small dice.', image: 'A stack of thicker carrot sticks, slightly longer than the julienne.' },
+			{ name: 'Chiffonade', description: 'Stack and roll tender leaves, then slice across the roll into ribbons. Keep the cut clean rather than crushing the leaves.', image: 'Fine green basil ribbons beside a rolled bundle of basil leaves.' }
+		],
+		links: [ { label: 'Knife cuts: dice, julienne, bias', href: '/technique/knife-cuts-dice-julienne-bias' }, { label: 'The classical knife-cut ladder', href: '/lexicon#knife-cuts-the-classical-ladder' } ],
+		techniques: ['knife-cuts-dice-julienne-bias'], dishes: [],
+		sources: [ { title: 'Rouxbe: knife-cut shapes and dimensions', url: 'https://rouxbe.com/tips-techniques/495-types-of-knife-cuts' } ]
 	}
 ];
 
@@ -111,6 +190,7 @@ export function teachingFolioAlt(folio: TeachingFolio): string {
 /** Exact authored doors from existing cards, never fuzzy culinary-name matches. */
 const CARD_FOLIOS: Readonly<Record<string, readonly string[]>> = {
 	fd_0034: ['poached-egg-standard'],
+	fd_0039: ['searing-standard'],
 	fd_0064: ['louisiana-larder'],
 	fd_0077: ['louisiana-larder'],
 	fd_0196: ['brennans-sauces'],

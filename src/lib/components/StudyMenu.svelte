@@ -18,8 +18,8 @@
 	import { base } from '$app/paths';
 	import type { Snippet } from 'svelte';
 	import type { House } from '$lib/house/house-schema';
-	import TeachingFolio from './TeachingFolio.svelte';
-	import { BRENNANS_HOUSE_ID, TEACHING_FOLIOS } from '$lib/teaching-folios';
+	import TeachingFolioCollection from './TeachingFolioCollection.svelte';
+	import { BRENNANS_HOUSE_ID } from '$lib/teaching-folios';
 	import {
 		inMeal,
 		mealsOf,
@@ -245,7 +245,8 @@
 
 	{#if current.id === BRENNANS_HOUSE_ID}
 		<section class="teaching-library" aria-label="Illustrated kitchen studies">
-			{#each TEACHING_FOLIOS as folio (folio.id)}<TeachingFolio {folio} />{/each}
+			<h2>Illustrated kitchen studies</h2>
+			<TeachingFolioCollection />
 		</section>
 	{/if}
 
@@ -367,6 +368,8 @@
 	.elsewhere ul { list-style: none; margin: 4px 0 0; padding: 0; }
 	.elsewhere li { min-height: 44px; display: flex; align-items: center; font-size: 1rem; border-bottom: 1px dotted var(--line); }
 	.elsewhere a { color: var(--ink); }
+	.teaching-library { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--house-frame); }
+	.teaching-library > h2 { font-family: var(--house-display); font-size: 27px; font-weight: 500; line-height: 1.3; color: var(--ink); margin: 0; }
 	.videos { margin: 16px 0 4px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 	.videos summary {
 		min-height: 44px; display: flex; align-items: center; cursor: pointer;
