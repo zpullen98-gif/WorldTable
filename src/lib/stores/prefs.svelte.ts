@@ -23,17 +23,23 @@ const KEY = 'wt.prefs.v1';
  */
 function read(): Prefs {
 	if (!browser) return { ...DEFAULTS };
+	let saved: Prefs = { ...DEFAULTS };
 	try {
 		const raw = localStorage.getItem(KEY);
-		if (!raw) return { ...DEFAULTS };
-		return sanitizePrefs(JSON.parse(raw));
+		if (raw) saved = sanitizePrefs(JSON.parse(raw));
 	} catch {
-		return { ...DEFAULTS };
+		// A blocked store does not prevent this visit's appearance choice.
 	}
+	const shared = window.OOT?.service?.get();
+	if (shared === 'day' || shared === 'night') saved.service = shared;
+	return saved;
 }
 
 class PrefsStore {
 	#state = $state<Prefs>(read());
+	constructor() {
+		if (browser) window.OOT?.service?.subscribe((s) => { this.#state.service = s; });
+	}
 
 	get service() {
 		return this.#state.service;
@@ -54,7 +60,10 @@ class PrefsStore {
 
 	setService(s: Service) {
 		this.#state.service = s;
-		if (browser) document.documentElement.dataset.service = s;
+		if (browser) {
+			if (window.OOT?.service) window.OOT.service.set(s);
+			else document.documentElement.dataset.service = s;
+		}
 		this.#persist();
 	}
 

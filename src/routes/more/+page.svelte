@@ -92,7 +92,7 @@
 			onclick={() => prefs.toggleService()}
 		>
 			<span class="door-name">{night ? 'Day service' : 'Night service'}</span>
-			<span class="door-line">Switch the colours for the room you are in.</span>
+			<span class="door-line">Switch the colours across Outside Of Time on this browser.</span>
 		</button>
 	</nav>
 

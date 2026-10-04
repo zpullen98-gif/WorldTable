@@ -350,6 +350,8 @@
 
 <a class="skip" href="#main">Skip to content</a>
 
+<div id="oot-service-slot" data-print="hide"></div>
+
 <header class="house-masthead" class:house-home={path === '/'}>
     <picture class="house-art" aria-hidden="true" data-print="hide">
         <img src="{base}/house/world-table-library-v1.webp" width="1536" height="1024" alt="" fetchpriority="high" decoding="async" />

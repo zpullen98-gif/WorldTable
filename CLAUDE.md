@@ -1,5 +1,17 @@
 # The World Table
 
+## Shared service controls, October 2026
+
+`static/service/oot-service.js` is the canonical day/night preference and collection
+navigation controller. The Table loads it before paint and its preference store
+subscribes to it. The four plain apps carry identical `js/oot-service.js` copies;
+the public hub carries `service/oot-service.js`. Its storage key is `oot.service.v1`,
+its document attribute is `data-service`, and its event is `oot:servicechange`.
+Copy changes to every installation and bump their offline workers together.
+The public site's `check-suite-service` gate proves the deployed copies match.
+`src/lib/suite-service.test.ts` covers persistence, migrations and cross-tab updates.
+The normal-flow toolbar mounts in `#oot-service-slot` after Svelte hydration.
+
 A SvelteKit rewrite of a 1.5MB single-file culinary field guide, grown since:
 1,844 recipes across 171 chapters, a 779-term chef's lexicon, 112 techniques,
 pantry matching, a ten-semester path of study, a menu-planning worksheet, and
