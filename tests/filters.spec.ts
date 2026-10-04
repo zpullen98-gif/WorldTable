@@ -113,6 +113,11 @@ test("Chef's pick draws from the library when the chapter is empty, and disables
 test('filters follow the cook across the rail, so a row delivers the count it promised', async ({
 	page
 }) => {
+	// Three large-grid visits took 23.8s in CI, already close to the default
+	// 30s whole-test budget. On the next runner, unchanged grid scans were 41%
+	// slower and this test exhausted that budget on both attempts. Allow the
+	// full journey time; keep every assertion and its own timeout unchanged.
+	test.setTimeout(60_000);
 	await goto(page, '/recipes?veg=1');
 	const europe = page.locator('.rghead', { hasText: 'Europe' });
 	const italian = page.locator('.rail li a').filter({ has: page.locator('.nm', { hasText: /^Italian$/ }) });

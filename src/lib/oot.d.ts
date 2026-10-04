@@ -84,6 +84,12 @@ interface OotPass {
 
 interface Window {
 	OOT?: {
+		service?: {
+			get(): 'day' | 'night';
+			set(mode: 'day' | 'night'): boolean;
+			subscribe(fn: (mode: 'day' | 'night') => void): () => void;
+			mount(): void;
+		};
 		profiles?: OotProfiles;
 		home?: OotHome;
 		log?: unknown;

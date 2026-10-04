@@ -95,6 +95,11 @@ test('the whole app works with the network gone', async ({ page, context }) => {
 });
 
 test('no request ever leaves the origin', async ({ page, context }) => {
+	// Five hydrated pages plus an offline menu import took 25.3s in CI. The
+	// next runner's unchanged grid scans were 41% slower, exhausting the 30s
+	// whole-test budget on both attempts. This budget covers the whole tour;
+	// the no-external-request assertion and expectation timeouts stay intact.
+	test.setTimeout(60_000);
 	const external: string[] = [];
 	page.on('request', (req) => {
 		const url = new URL(req.url());

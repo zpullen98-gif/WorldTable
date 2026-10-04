@@ -324,6 +324,20 @@
 		display: block; width: 100%; min-height: 56px; text-align: left; cursor: pointer;
 		background: none; border: 0; padding: 8px 0; font: inherit; color: var(--ink);
 	}
+	/* The shared appearance bar adds a row on phones. Recover spare space
+	   between the study controls, including when the facts wrap to two lines;
+	   keep every control at 44px and each dish row at least 56px. */
+	@media screen and (max-width: 599px) {
+		.study { margin-top: 0; }
+		.titlerow { margin-top: 2px; }
+		.facts { margin-bottom: 2px; }
+		.actions { margin-top: 4px; }
+		.bar { padding-block: 2px; margin-top: 2px; }
+		.chiprow { margin-top: 4px; }
+		.group { margin-block: 2px; }
+		.grouphead { padding-bottom: 0; }
+		.row { padding-block: 6px; }
+	}
 	.row:hover .nm { color: var(--turmeric-deep); }
 	.row:focus-visible { outline: 2px solid var(--turmeric-deep); outline-offset: 2px; }
 	.top { display: flex; gap: 12px; align-items: baseline; }

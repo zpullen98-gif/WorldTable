@@ -10,7 +10,7 @@ import { spawnSync } from 'node:child_process';
 import { mkdtempSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const ROOT = fileURLToPath(new URL('../..', import.meta.url));
 const TOOL = join(ROOT, 'tools', 'check-house-videos.mjs');
@@ -46,7 +46,7 @@ const TWO = pack([
 ]);
 
 function run(mode: string, file: string, extra: string[] = []) {
-	const r = spawnSync(process.execPath, ['--import', STUB, TOOL, '--file', file, ...extra], { encoding: 'utf8', env: { ...process.env, STUB_MODE: mode } });
+	const r = spawnSync(process.execPath, ['--import', pathToFileURL(STUB).href, TOOL, '--file', file, ...extra], { encoding: 'utf8', env: { ...process.env, STUB_MODE: mode } });
 	return { code: r.status, out: r.stdout + r.stderr, stdout: r.stdout };
 }
 

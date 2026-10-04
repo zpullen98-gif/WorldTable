@@ -31,6 +31,10 @@ function tree(extra: Entry[]): string {
 	mkdirSync(join(dir, 'static', 'shared', 'packs'), { recursive: true });
 	cpSync(join(ROOT, 'static', 'shared', 'oot-house.js'), join(dir, 'static', 'shared', 'oot-house.js'));
 	cpSync(join(ROOT, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json'), join(dir, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json'));
+	// parsed.json is generated and ignored. Build this prerequisite in the
+	// scratch tree so a fresh checkout exercises the same builder as an old one.
+	const parsed = spawnSync(process.execPath, [join(dir, 'tools', 'house', 'parse-guide.mjs'), '--quiet'], { cwd: dir, encoding: 'utf8' });
+	expect(parsed.status, parsed.stderr || parsed.stdout).toBe(0);
 	const file = join(dir, 'tools', 'house', 'brennans', 'overrides.json');
 	const o = JSON.parse(readFileSync(file, 'utf8'));
 	/* The edition's own tiers are taken out, so a test tiers Eggs Hussarde from nothing; its bottles stay.

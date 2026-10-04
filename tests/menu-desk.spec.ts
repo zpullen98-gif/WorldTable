@@ -52,7 +52,7 @@ test("Commander's dinner menu reads into the desk on a phone, sorted, with the u
 	// The counts line is the plan's sentence, and the live region carries it.
 	const counts = page.locator('.counts');
 	await expect(counts).toHaveText('Read 36 lines: 34 dishes for the kitchen, 2 I could not place.');
-	await expect(page.locator('[role="status"].sr')).toHaveText(/Read 36 lines/);
+	await expect(page.locator('.import [role="status"].sr')).toHaveText(/Read 36 lines/);
 
 	// Cards, not a sideways table: nothing scrolls at 320 and every cell names itself.
 	const m = await page.evaluate(() => {

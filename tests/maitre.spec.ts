@@ -167,7 +167,7 @@ test('with a key her read lands on the desk: four headers, the menu after the ca
 	await door.click();
 	await expect(page.locator('.counts')).toHaveText('Read 4 lines: 3 dishes for the kitchen, 1 wine for the cellar.');
 	await expect(page.locator('.import .hint', { hasText: "Read by the Maître d'. Every row still shows the line it came from." })).toBeVisible();
-	await expect(page.locator('[role="status"].sr')).toHaveText(/Read 4 lines/);
+	await expect(page.locator('.import [role="status"].sr')).toHaveText(/Read 4 lines/);
 
 	// ---- the request, as her host saw it -------------------------------------
 	const read = seen.find((r) => r.url.endsWith('/v1/messages'));
