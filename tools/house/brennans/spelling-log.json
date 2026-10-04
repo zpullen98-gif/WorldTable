@@ -1,11 +1,11 @@
 {
 	"about": "Every string the spelling map changed while building the Brennan's house: the research writes British English and the house is American, so each British form became its American spelling.",
-	"count": 17,
+	"count": 15,
 	"changes": [
 		{
 			"path": "model.wines[0].kept[0].a",
-			"before": "Our house Champagne is a Piper-Heidsieck Extra Brut bottled under the Brennan's name, so it is drier than a standard Brut; a blend of all three Champagne grapes from the Piper-Heidsieck house. Piper-Heidsieck spells its own cuvee Essentiel. Say 'labelled for us', not 'made for us', until a bottle is checked, and do not quote a dosage or a lees age until the sommelier confirms which cuvee is in the bottle. The Bubbles page lists a bottle at $125, $75 during Bubbles.",
-			"after": "Our house Champagne is a Piper-Heidsieck Extra Brut bottled under the Brennan's name, so it is drier than a standard Brut; a blend of all three Champagne grapes from the Piper-Heidsieck house. Piper-Heidsieck spells its own cuvee Essentiel. Say 'labeled for us', not 'made for us', until a bottle is checked, and do not quote a dosage or a lees age until the sommelier confirms which cuvee is in the bottle. The Bubbles page lists a bottle at $125, $75 during Bubbles.",
+			"before": "Our house Champagne is a Piper-Heidsieck Extra Brut bottled under the Brennan's name, so it is drier than a standard Brut; a blend of all three Champagne grapes from the Piper-Heidsieck house. Piper-Heidsieck spells its own cuvee Essentiel. Say 'labelled for us', not 'made for us', until a bottle is checked, and do not quote a dosage or a lees age until the sommelier confirms which cuvee is in the bottle. The Binwise list of 3 October prices the bottle at $140; the current Bubbles at Brennan's page lists no bottle of it.",
+			"after": "Our house Champagne is a Piper-Heidsieck Extra Brut bottled under the Brennan's name, so it is drier than a standard Brut; a blend of all three Champagne grapes from the Piper-Heidsieck house. Piper-Heidsieck spells its own cuvee Essentiel. Say 'labeled for us', not 'made for us', until a bottle is checked, and do not quote a dosage or a lees age until the sommelier confirms which cuvee is in the bottle. The Binwise list of 3 October prices the bottle at $140; the current Bubbles at Brennan's page lists no bottle of it.",
 			"words": [
 				"labelled"
 			]
@@ -45,8 +45,8 @@
 		},
 		{
 			"path": "model.tastings[1].note",
-			"before": "Five courses. Wine pairing supplement $120, five 4 oz pours: Charles Lafitte Brut, Fichet Mâcon-Igé 2024, Louis Jadot Beaune 1er Cru 2023, Paul Hobbs Coombsville Cabernet 2021, La Tour Vieille Banyuls Reserva. Open the Jadot 20 to 30 minutes ahead, the Hobbs 30 to 60; pour the Banyuls before the Snickers lands. Three of the five pours are variables between the guide and the house page: the lobster pour (Fichet Mâcon-Igé 2024 or Domaine Matrot Meursault 2023), the redfish pour (Jadot Beaune 1er Cru 2023 or Jadot Beaune Bressandes 1er Cru 2022) and the dessert pour (La Tour Vieille Banyuls Reserva or M. Chapoutier Banyuls); the Lafitte and the Paul Hobbs are the pours both sources share. The duck course is printed two ways. Read the printed card on shift. The pairing costs more than the food; do not apologise for it.",
-			"after": "Five courses. Wine pairing supplement $120, five 4 oz pours: Charles Lafitte Brut, Fichet Mâcon-Igé 2024, Louis Jadot Beaune 1er Cru 2023, Paul Hobbs Coombsville Cabernet 2021, La Tour Vieille Banyuls Reserva. Open the Jadot 20 to 30 minutes ahead, the Hobbs 30 to 60; pour the Banyuls before the Snickers lands. Three of the five pours are variables between the guide and the house page: the lobster pour (Fichet Mâcon-Igé 2024 or Domaine Matrot Meursault 2023), the redfish pour (Jadot Beaune 1er Cru 2023 or Jadot Beaune Bressandes 1er Cru 2022) and the dessert pour (La Tour Vieille Banyuls Reserva or M. Chapoutier Banyuls); the Lafitte and the Paul Hobbs are the pours both sources share. The duck course is printed two ways. Read the printed card on shift. The pairing costs more than the food; do not apologize for it.",
+			"before": "Five courses. Wine pairing supplement $120, five 4 oz pours: Charles Lafitte Brut, Fichet Mâcon-Igé 2024, Louis Jadot Beaune 1er Cru 2023, Paul Hobbs Coombsville Cabernet 2021, La Tour Vieille Banyuls Reserva. Open the Jadot 20 to 30 minutes ahead, the Hobbs 30 to 60; pour the Banyuls before the Snickers lands. The current menu, pasted by the owner on 3 October 2026, prints these five pours and the duck with cane syrup-glazed peaches and candied hazelnuts, as the guide does. Read the printed card on shift. The pairing costs more than the food; do not apologise for it.",
+			"after": "Five courses. Wine pairing supplement $120, five 4 oz pours: Charles Lafitte Brut, Fichet Mâcon-Igé 2024, Louis Jadot Beaune 1er Cru 2023, Paul Hobbs Coombsville Cabernet 2021, La Tour Vieille Banyuls Reserva. Open the Jadot 20 to 30 minutes ahead, the Hobbs 30 to 60; pour the Banyuls before the Snickers lands. The current menu, pasted by the owner on 3 October 2026, prints these five pours and the duck with cane syrup-glazed peaches and candied hazelnuts, as the guide does. Read the printed card on shift. The pairing costs more than the food; do not apologize for it.",
 			"words": [
 				"apologise"
 			]
@@ -76,17 +76,9 @@
 			]
 		},
 		{
-			"path": "model.terms[96].toGuest",
-			"before": "Seedlip is a British non-alcoholic spirit; Grove 42 is its citrus one, at 0.0 per cent, in the Catalina Island.",
-			"after": "Seedlip is a British non-alcoholic spirit; Grove 42 is its citrus one, at 0.0 percent, in the Catalina Island.",
-			"words": [
-				"per cent"
-			]
-		},
-		{
-			"path": "model.terms[97].toGuest",
-			"before": "Lyre's is an Australian non-alcoholic spirit, labelled under 0.5 per cent alcohol; its agave is in the Black Hills.",
-			"after": "Lyre's is an Australian non-alcoholic spirit, labeled under 0.5 percent alcohol; its agave is in the Black Hills.",
+			"path": "model.terms[95].toGuest",
+			"before": "Lyre's is an Australian non-alcoholic spirit, labelled under 0.5 per cent alcohol; its agave is in the Oh! What It Seemed to Be.",
+			"after": "Lyre's is an Australian non-alcoholic spirit, labeled under 0.5 percent alcohol; its agave is in the Oh! What It Seemed to Be.",
 			"words": [
 				"labelled",
 				"per cent"
@@ -102,20 +94,10 @@
 		},
 		{
 			"path": "model.scenarios[14].principle",
-			"before": "The reason, the same theatre, check before promising, a small consolation.",
-			"after": "The reason, the same theater, check before promising, a small consolation.",
+			"before": "The reason, the same theatre, check before promising, a small consolation. Cherries Jubilee is off the current dessert menu: check with a manager before you mention it.",
+			"after": "The reason, the same theater, check before promising, a small consolation. Cherries Jubilee is off the current dessert menu: check with a manager before you mention it.",
 			"words": [
 				"theatre"
-			]
-		},
-		{
-			"path": "model.mustKnows[9].body",
-			"before": "Catalina Island (Seedlip Grove 42, local watermelon, tonic) $15 and Black Hills (Lyre’s N/A agave, basil purée, lime) $14. Offer them to guests who skip the flambé or the milk punch. Seedlip Grove 42 is 0.0 per cent alcohol; Lyre's is labelled under 0.5 per cent, so call the Black Hills non-alcoholic, not zero.",
-			"after": "Catalina Island (Seedlip Grove 42, local watermelon, tonic) $15 and Black Hills (Lyre’s N/A agave, basil purée, lime) $14. Offer them to guests who skip the flambé or the milk punch. Seedlip Grove 42 is 0.0 percent alcohol; Lyre's is labeled under 0.5 percent, so call the Black Hills non-alcoholic, not zero.",
-			"words": [
-				"per cent",
-				"labelled",
-				"per cent"
 			]
 		},
 		{

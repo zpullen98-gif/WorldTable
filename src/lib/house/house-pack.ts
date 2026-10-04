@@ -35,13 +35,13 @@
  * act, the second of the two that may create an index (mintHouse in
  * house-store.ts is the first).
  */
-import { BUILD_STEPS, HOUSE_LISTS, ID_PREFIXES, MARK_FIELDS, isMark, mintId } from './house-schema';
+import { BUILD_STEPS, HOUSE_LISTS, ID_PREFIXES, MARK_FIELDS, isMark, isNote, mintId } from './house-schema';
 import type { BuildStep, House, HouseIndex, HouseStub, Mark } from './house-schema';
 import { normaliseHouse } from './house-normalise';
 import type { NormaliseReport } from './house-normalise';
 import { validateHouse } from './house-validate';
 import type { Problem } from './house-validate';
-import { mergeHouse, mergeKept, mergeSources, pickMark, sameJson } from './house-merge';
+import { EDITION_NOTE_SPREAD, lastTouch, mergeHouse, mergeKept, mergeSources, pickMark, sameJson } from './house-merge';
 import type { MergeCounts } from './house-merge';
 import { deviceIds, loadHouse, putHouse, readIndex, saveHouse, storeSaid, writeIndex } from './house-store';
 import type { HouseStorage } from './house-store';
@@ -336,11 +336,46 @@ export function editionBuiltAt(house: House): number {
 	return Number.isFinite(t) ? t : 0;
 }
 
-/** What a refresh did: items the edition added, items it brought up to date, items where a person's touch stood. */
+/**
+ * The stamps a device's kept notes carry that are an edition's own: the
+ * mark and item stamps, and any stamp shared by the notes of at least
+ * EDITION_NOTE_SPREAD records (an older edition's, left by an earlier
+ * refresh). A note under any other stamp is a person's.
+ */
+export function editionNoteStamps(house: House, markStamp: number | null, itemStamp: number | null): Set<number> {
+	const out = new Set<number>();
+	if (markStamp !== null) out.add(markStamp);
+	if (itemStamp !== null) out.add(itemStamp);
+	const spread = new Map<number, number>();
+	for (const r of editionRecords(house)) {
+		const kept = r.kept;
+		if (!Array.isArray(kept)) continue;
+		const seen = new Set<number>();
+		for (const n of kept) if (isNote(n)) seen.add(n.ts);
+		for (const t of seen) spread.set(t, (spread.get(t) || 0) + 1);
+	}
+	for (const [t, n] of spread) if (n >= EDITION_NOTE_SPREAD) out.add(t);
+	return out;
+}
+
+/** A device record nobody touched since its edition: its own stamp the edition's, every person's mark and every note the edition's. */
+function untouchedSinceEdition(m: Rec, marks: readonly string[], markStamp: number | null, itemStamp: number | null, noteStamps: Set<number>): boolean {
+	if (itemStamp === null || m.ts !== itemStamp) return false;
+	for (const f of marks) {
+		const mk = m[f];
+		if (isMark(mk) && mk.by === 'person' && (markStamp === null || mk.ts !== markStamp)) return false;
+	}
+	const kept = m.kept;
+	if (Array.isArray(kept)) for (const n of kept) if (isNote(n) && !noteStamps.has(n.ts)) return false;
+	return true;
+}
+
+/** What a refresh did: items the edition added, items it brought up to date, items where a person's touch stood, items it retired. */
 export interface RefreshCounts {
 	added: number;
 	updated: number;
 	kept: number;
+	removed: number;
 }
 
 /**
@@ -350,11 +385,13 @@ export interface RefreshCounts {
  * Each mark: a device mark carrying any other stamp than the edition's was
  * touched and stands (a mark of hers made on the device yields to a kept
  * shipped one, by pickMark); otherwise the shipped mark takes the field, or
- * the field goes when the new edition carries none. Kept notes union.
+ * the field goes when the new edition carries none. Kept notes: the
+ * device's notes under an edition's stamp (editionNoteStamps) give way to
+ * the shipped notes, and a person's notes union with them.
  * Returns the record and whether a person's touch stood against a
  * shipped value that differed.
  */
-function refreshRecord(mine: Rec, theirs: Rec, marks: readonly string[], markStamp: number | null, itemStamp: number | null): { rec: Rec; kept: boolean } {
+function refreshRecord(mine: Rec, theirs: Rec, marks: readonly string[], markStamp: number | null, itemStamp: number | null, noteStamps: Set<number>): { rec: Rec; kept: boolean } {
 	const plainTouched = itemStamp === null || mine.ts !== itemStamp;
 	const out: Record<string, unknown> = plainTouched ? { ...mine } : { ...theirs, id: mine.id };
 	let kept = false;
@@ -375,7 +412,12 @@ function refreshRecord(mine: Rec, theirs: Rec, marks: readonly string[], markSta
 		if (pick) out[f] = pick;
 		else delete out[f];
 	}
-	const notes = mergeKept(mine.kept as unknown[] | undefined, theirs.kept as unknown[] | undefined);
+	/* The device's notes under an edition's stamp are that edition's words, superseded by the shipped
+	   ones; only a note a person kept survives beside them. With none, the shipped notes stand as
+	   shipped, so an untouched record is the fresh import's twin. */
+	const own = Array.isArray(mine.kept) ? (mine.kept as unknown[]).filter((n) => isNote(n) && !noteStamps.has(n.ts)) : [];
+	const shippedNotes = Array.isArray(theirs.kept) ? (theirs.kept as unknown[]).filter(isNote) : [];
+	const notes = own.length ? mergeKept(own, shippedNotes) : shippedNotes;
 	if (notes.length) out.kept = notes;
 	else delete out.kept;
 	return { rec: out as Rec, kept };
@@ -390,7 +432,14 @@ function refreshRecord(mine: Rec, theirs: Rec, marks: readonly string[], markSta
  *   person removed it; an older tombstone is lifted with the add);
  *   a twin is refreshed by refreshRecord;
  *   a record only the device holds stays (a person's own, or one the new
- *   edition dropped, which a person may still be learning);
+ *   edition dropped, which a person may still be learning), unless the
+ *   shipped edition carries a tombstone for its id newer than its last
+ *   touch and nobody touched it since the device's own edition (its ts,
+ *   every person's mark and every note still the edition's): the edition
+ *   retired it, so it goes. One a person touched stays, whenever the touch
+ *   was, even before the tombstone's stamp: an edition can reach a device
+ *   before the stamp its retirements carry (the 21:00 edition of 3 October
+ *   2026 was on the site from 20:47);
  *   the card's history settles as a mark; the card's plain fields follow
  *   the shipped edition, except the name, which a rename made the
  *   person's and which the device keeps; sources union; each build step
@@ -401,10 +450,11 @@ function refreshRecord(mine: Rec, theirs: Rec, marks: readonly string[], markSta
  * Pure: the clock is the caller's, through the save.
  */
 export function refreshEdition(device: House, shipped: House): { house: House; counts: RefreshCounts } {
-	const counts: RefreshCounts = { added: 0, updated: 0, kept: 0 };
+	const counts: RefreshCounts = { added: 0, updated: 0, kept: 0, removed: 0 };
 	const markStamp = editionStamp(device);
 	const itemStamp = editionItemStamp(device);
 	const edition = Math.max(markStamp === null ? 0 : markStamp, itemStamp === null ? 0 : itemStamp, editionBuiltAt(device));
+	const noteStamps = editionNoteStamps(device, markStamp, itemStamp);
 	const removed: Record<string, number> = { ...device.removed };
 	for (const id of Object.keys(shipped.removed)) {
 		const t = shipped.removed[id];
@@ -431,7 +481,7 @@ export function refreshEdition(device: House, shipped: House): { house: House; c
 				counts.added++;
 				continue;
 			}
-			const { rec, kept } = refreshRecord(m, t, marks, markStamp, itemStamp);
+			const { rec, kept } = refreshRecord(m, t, marks, markStamp, itemStamp, noteStamps);
 			next.push(rec);
 			if (kept) counts.kept++;
 			if (!sameJson(rec, m)) counts.updated++;
@@ -439,6 +489,11 @@ export function refreshEdition(device: House, shipped: House): { house: House; c
 		for (const m of mine) {
 			if (seen.has(m.id)) continue;
 			seen.add(m.id);
+			const tomb = shipped.removed[m.id];
+			if (typeof tomb === 'number' && tomb > lastTouch(m, marks) && untouchedSinceEdition(m, marks, markStamp, itemStamp, noteStamps)) {
+				counts.removed++;
+				continue;
+			}
 			next.push(m);
 		}
 		out[list] = next;

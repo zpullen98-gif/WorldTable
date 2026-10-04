@@ -15,7 +15,13 @@
       fails the build. An add on dish:+ or cocktail:+ files a whole item the guide prints only as
       a price line or a must-know (the bar list, the children's menu, the Bubbles snacks, the
       coffees), refused unless it carries the five parts, the three lines, say, guest and why,
-      and for a drink its spec and two or three upsells by name;
+      and for a drink its spec and two or three upsells by name; an add on wine:+ files a whole wine
+      the current menus print, held to the same bar. A retire takes a dish, wine or drink the
+      current menus no longer print out of the house and a tombstone on the house names an id no
+      entry builds any more; both put the id in house.removed, and every id the shipped pack holds
+      must be in the new house or carry a tombstone, or the build fails;
+      a dispute an add files may carry a resolution (the side a newer printed menu bears out), and a
+      mix-up is targeted by its two sides, mixup:<a> vs <b>;
    5. runs every string through the spelling map (the research's British forms become the house's
       American ones, logged to house/brennans/spelling-log.json) and then the dash pass: an en dash
       a line wrap left before a space is rejoined as a hyphen (New Orleans-style), an en dash
@@ -30,7 +36,9 @@
    7. normalises through the engine and refuses if the normaliser re-minted an id or dropped a key;
    8. writes house/brennans/house.json and the ledger, and prints one summary line.
 
-   Prices are never rewritten: an item's price is the guide's own string. Service notes are a
+   Prices are never rewritten except to the figure a newer printed menu carries (the owner's paste
+   of 3 October 2026), the older figure kept as a dispute: an item's price is otherwise the guide's
+   own string. Service notes are a
    person's words and go in verbatim (dash-stripped only). Nothing here writes an allergen into
    a mark; the lineup register carries those questions.
 
@@ -45,7 +53,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
-import { americanise, checkArgs, EDITION_TS } from './engine.mjs';
+import { americanise, checkArgs, EDITION_TS, editionInFuture, PACK } from './engine.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DIR = path.join(HERE, 'brennans');
@@ -77,6 +85,7 @@ const stampAt = args.indexOf('--stamp');
    site's copy to this one): --stamp sets another, --now takes the clock for a fresh edition. */
 const BUILD_TS = stampAt >= 0 ? Number(args[stampAt + 1]) : args.includes('--now') ? Date.now() : EDITION_TS;
 if (!Number.isFinite(BUILD_TS)) fail('--stamp must be a number of milliseconds');
+if (editionInFuture(BUILD_TS)) fail(editionInFuture(BUILD_TS));
 
 function fail(msg) {
 	console.error('build-brennans: ' + msg);
@@ -399,6 +408,9 @@ for (const s of parsed.scenarios) model.scenarios.push({ title: s.title, guest: 
 for (const m of parsed.mixUps) model.mixUps.push({ a: m.a, b: m.b, difference: m.difference, ask: m.ask });
 for (const k of parsed.mustKnows) model.mustKnows.push({ title: k.title, body: k.body });
 
+/* The name each record's id was minted under, kept before any override can rename it. */
+for (const list of ['dishes', 'wines', 'cocktails']) for (const r of model[list]) r.idName = r.name;
+
 /* ---------- the overrides ---------- */
 const LISTS = { dish: 'dishes', wine: 'wines', cocktail: 'cocktails', tasting: 'tastings', term: 'terms', scenario: 'scenarios', mixup: 'mixUps', mustknow: 'mustKnows', ask: 'asks', dispute: 'disputes' };
 const KEY = { dishes: 'name', wines: 'name', cocktails: 'name', tastings: 'name', terms: 'term', scenarios: 'title', mustKnows: 'title' };
@@ -410,9 +422,15 @@ function findTarget(target, n) {
 	const name = target.slice(at + 1);
 	if (!list) fail(`${REL(OVERRIDES)} entry ${n}: unknown list in ${target}`);
 	if (name === '+') return { rec: null, list };
+	/* A mix-up has no single name: it is named by its two sides, mixup:<a> vs <b>. */
+	if (list === 'mixUps') {
+		const m = model.mixUps.find((r) => slug(r.a + ' vs ' + r.b) === slug(name));
+		if (!m) fail(`${REL(OVERRIDES)} entry ${n}: ${target} names no mix-up in the model`);
+		return { rec: m, list };
+	}
 	const key = KEY[list];
-	const rec = model[list].find((r) => slug(r[key]) === slug(name));
-	if (!rec) fail(`${REL(OVERRIDES)} entry ${n}: ${target} names nothing in the model`);
+	const rec = model[list].find((r) => !r.retired && (slug(r[key]) === slug(name) || (r.idName && slug(r.idName) === slug(name))));
+	if (!rec) fail(`${REL(OVERRIDES)} entry ${n}: ${target} names nothing in the model${model[list].some((r) => r.retired && slug(r[key]) === slug(name)) ? ' (it is retired)' : ''}`);
 	return { rec, list };
 }
 function getPath(rec, field) {
@@ -436,10 +454,39 @@ function pathOf(list, rec, field) {
 	const i = model[list].indexOf(rec);
 	return 'model.' + list + '[' + i + ']' + (field ? '.' + field : '');
 }
+/* The dishes, wines and drinks the current menus no longer print, each with the tombstone stamp the
+   pack carries for its id (see 'retire' below). */
+const retired = [];
+/* Ids of records the shipped pack held that no override builds any more (an ask answered by a newer
+   menu, a note on a retired drink), each with its tombstone stamp: see 'tombstone' below. */
+const buried = [];
 overrides.entries.forEach((e, n) => {
 	const op = e.op || 'set';
 	noDash(e.value, n, 'value');
 	const { rec, list } = findTarget(e.target, n);
+	/* A retire takes a dish, wine or drink off the menu: the record is left out of the house and its id
+	   goes into house.removed under the stamp the entry names, so a device refreshed by this edition
+	   drops the copy nobody touched after that stamp and keeps one a person did. The stamp is the last
+	   edition that carried the item, plus a millisecond: every touch a person made since is newer. */
+	if (op === 'retire') {
+		if (!rec || !['dishes', 'wines', 'cocktails'].includes(list)) fail(`${REL(OVERRIDES)} entry ${n}: retire needs a dish, wine or cocktail`);
+		const at = e.value && typeof e.value.tombstone === 'string' ? Date.parse(e.value.tombstone) : NaN;
+		if (!Number.isFinite(at)) fail(`${REL(OVERRIDES)} entry ${n}: retire needs value.tombstone, an ISO time`);
+		rec.retired = true;
+		retired.push({ list, key: slug(rec.idName || rec.name), name: rec.name, at });
+		applied.push({ n, op, target: e.target });
+		return;
+	}
+	/* A tombstone, on the house, for a record the shipped pack held that this edition no longer builds:
+	   value { id, was, tombstone }, 'was' naming it for a reader. The id must not be in the new house. */
+	if (op === 'tombstone') {
+		const v = e.value || {};
+		const at = typeof v.tombstone === 'string' ? Date.parse(v.tombstone) : NaN;
+		if (list !== 'house' || typeof v.id !== 'string' || !v.id || typeof v.was !== 'string' || !v.was || !Number.isFinite(at)) fail(`${REL(OVERRIDES)} entry ${n}: a tombstone goes on the house with value { id, was, tombstone }`);
+		buried.push({ id: v.id, was: v.was, at, n });
+		applied.push({ n, op, target: e.target });
+		return;
+	}
 	if (op === 'add') {
 		const v = e.value;
 		if (list === 'terms') {
@@ -456,13 +503,19 @@ overrides.entries.forEach((e, n) => {
 		} else if (list === 'asks') {
 			model.asks.push({ question: v.question, askWhom: v.askWhom || 'manager', items: v.items || [], blocksField: v.blocksField || '' });
 		} else if (list === 'disputes') {
-			model.disputes.push({ item: v.item || '', field: v.field, a: v.a, b: v.b });
+			model.disputes.push({ item: v.item || '', field: v.field, a: v.a, b: v.b, resolution: typeof v.resolution === 'string' ? v.resolution : '' });
 		} else if ((list === 'dishes' || list === 'cocktails') && !rec) {
 			model[list].push(newItem(list, v, n));
+		} else if (list === 'wines' && !rec) {
+			model.wines.push(newWine(v, n));
 		} else if (e.field === 'kept' && rec) {
 			rec.kept.push({ q: v.q, a: v.a });
+		} else if (list === 'house' && e.field === 'sources') {
+			if (!v || typeof v.title !== 'string' || !v.title || typeof v.readOn !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(v.readOn)) fail(`${REL(OVERRIDES)} entry ${n}: a source needs a title and a readOn date`);
+			rec.sources.push({ title: v.title, url: v.url || '', readOn: v.readOn });
 		} else fail(`${REL(OVERRIDES)} entry ${n}: add on ${e.target} ${e.field || ''} is not a list this builder adds to`);
-		if (rec) overrideAt.set(pathOf(list, rec, e.field === 'kept' ? 'kept[' + (rec.kept.length - 1) + ']' : e.field), n);
+		if (rec && list === 'house') overrideAt.set(pathOf(list, rec, e.field + '[' + (rec[e.field].length - 1) + ']'), n);
+		else if (rec) overrideAt.set(pathOf(list, rec, e.field === 'kept' ? 'kept[' + (rec.kept.length - 1) + ']' : e.field), n);
 		else overrideAt.set('model.' + list + '[' + (model[list].length - 1) + ']', n);
 		applied.push({ n, op, target: e.target });
 		return;
@@ -534,6 +587,32 @@ function newItem(list, v, n) {
 	});
 }
 
+/* A whole wine filed by an override: a bottle or a glass the current menus print that the guide
+   does not. Everything the wine card, the Codex and a drill read must be there. */
+function newWine(v, n) {
+	const at = `${REL(OVERRIDES)} entry ${n}`;
+	const need = (ok, what) => { if (!ok) fail(`${at}: the new wine ${v && v.name} lacks ${what}`); };
+	const str = (x) => typeof x === 'string' && x.trim() !== '';
+	need(v && str(v.name), 'a name');
+	for (const l of ['dishes', 'wines', 'cocktails']) if (model[l].some((r) => slug(r.name) === slug(v.name))) fail(`${at}: ${v.name} is already in the house`);
+	for (const f of ['section', 'price', 'producer', 'wine', 'region', 'style', 'profile', 'goesWith', 'serve', 'say', 'guest', 'why']) need(str(v[f]), f);
+	need(typeof v.vintage === 'string', 'a vintage, NV or empty');
+	need(Array.isArray(v.meals) && v.meals.length, 'its meals');
+	need(Array.isArray(v.prices) && v.prices.length && v.prices.every((p) => str(p.meal) && str(p.printed)), 'its printed prices');
+	need(Array.isArray(v.grapes), 'its grapes, a list (empty when no source names them)');
+	need(v.parts && ['main', 'technique', 'sauce', 'sides', 'taste'].every((k) => str(v.parts[k])), 'all five parts');
+	need(v.lines && ['s10', 's20', 's45'].every((k) => str(v.lines[k])), 'all three timed lines');
+	need(v.firstPickFor === undefined || (Array.isArray(v.firstPickFor) && v.firstPickFor.every(str)), 'first picks named as dishes');
+	return {
+		name: v.name, section: v.section, group: v.group || v.section, meals: [...v.meals], price: v.price, prices: v.prices.map((p) => ({ meal: p.meal, printed: p.printed })),
+		producer: v.producer, wine: v.wine, vintage: v.vintage, region: v.region, grapes: [...v.grapes], style: v.style, made: v.parts.technique, taste: v.parts.taste,
+		glass: v.glass || '', bottle: v.bottle || '', pours: Array.isArray(v.pours) ? [...v.pours] : [],
+		profile: v.profile, sayIt: v.guest, goesWith: v.goesWith, serve: v.serve, firstPickFor: Array.isArray(v.firstPickFor) ? [...v.firstPickFor] : [],
+		lines: Object.assign({}, v.lines), serviceNote: v.serviceNote || '', say: v.say, why: v.why, pairs: v.pairs || '', origin: v.origin || '',
+		kept: Array.isArray(v.kept) ? v.kept.map((k) => ({ q: k.q, a: k.a })) : [], parts: Object.assign({}, v.parts), idName: v.name
+	};
+}
+
 /* The pairing principles outside the nine, mapped or dropped per overrides.principles. */
 const PMAP = overrides.principles.map;
 const principleChanges = [];
@@ -557,6 +636,16 @@ model.card.dressCode = dressKnow.body.split(/\s+(?=The kitchen)/)[0].trim();
 
 /* ---------- the dash pass over the whole model ---------- */
 const clean = dashWalk(model, 'model');
+/* Retired records leave only now, after the dash pass, so the paths the dash log names still count them. */
+for (const list of ['dishes', 'wines', 'cocktails']) clean[list] = clean[list].filter((r) => !r.retired);
+/* Each section's items together, in the order the sections first appear, the rest of the order kept: an
+   item an override files into a section the guide already printed (the Barbera, the Bubbles cocktails)
+   joins that section rather than trailing the list, which is the order every wing's study view reads. */
+for (const list of ['dishes', 'wines', 'cocktails']) {
+	const order = [];
+	for (const r of clean[list]) if (!order.includes(r.section)) order.push(r.section);
+	clean[list] = order.flatMap((sec) => clean[list].filter((r) => r.section === sec));
+}
 
 /* ---------- the house ---------- */
 const houseId = idFor('house', 'brennans');
@@ -570,15 +659,22 @@ house.menusReadOn = clean.card.menusReadOn;
 house.sources = clean.card.sources;
 if (clean.card.history) house.history = mark(clean.card.history);
 
+for (const r of retired) {
+	const id = ledger[r.list + ':' + r.key];
+	if (!id) fail(`${REL(LEDGER)}: the retired ${r.name} has no id, so no device can hold it and it needs no tombstone; drop the retire`);
+	house.removed[id] = r.at;
+}
+
 const byName = new Map();
 const nameOf = (list, rec) => rec[KEY[list]];
 for (const list of ['dishes', 'wines', 'cocktails']) for (const r of clean[list]) {
-	r.id = idFor(list, slug(r.name));
+	r.id = idFor(list, slug(r.idName || r.name));
 	byName.set(slug(r.name), r.id);
+	if (r.idName && slug(r.idName) !== slug(r.name)) byName.set(slug(r.idName), r.id);
 }
 const wineKey = (s) => slug(String(s).replace(/\s*\$\d+\s*(glass|half-bottle)\s*$/i, '').replace(/\s*\(coravin\)\s*/i, ' '));
 const wineIds = new Map();
-for (const w of clean.wines) wineIds.set(wineKey(w.name), w.id);
+for (const w of clean.wines) { wineIds.set(wineKey(w.name), w.id); if (w.idName) wineIds.set(wineKey(w.idName), w.id); }
 function wineId(name, where) {
 	if (!name) return '';
 	const id = wineIds.get(wineKey(name));
@@ -781,7 +877,25 @@ for (const a of clean.asks) {
 for (const u of clean.disputes) {
 	const r = { id: idFor('disputes', slug((u.item || 'house') + '-' + u.field).slice(0, 60)), field: u.field, a: u.a, b: u.b, ts: BUILD_TS };
 	if (u.item) r.itemId = itemId(u.item, 'dispute');
+	/* A dispute a newer printed menu settles keeps both sides and says which one the menu bears out. */
+	if (u.resolution) r.resolution = u.resolution;
 	house.disputes.push(r);
+}
+/* The tombstones by id, then the guard: every id the shipped pack holds is in this house or carries a
+   tombstone, so no record leaves a device by accident or lingers on one unannounced (a device keeps a
+   record a newer edition simply drops; house-pack.ts refreshEdition drops only a tombstoned one). */
+const builtIds = new Set();
+for (const list of C.HOUSE_LISTS) for (const r of house[list]) builtIds.add(r.id);
+for (const b of buried) {
+	if (builtIds.has(b.id)) fail(`${REL(OVERRIDES)} entry ${b.n}: the tombstone for ${b.was} names ${b.id}, which this house still holds`);
+	house.removed[b.id] = b.at;
+}
+if (fs.existsSync(PACK)) {
+	const shipped = JSON.parse(fs.readFileSync(PACK, 'utf8')).house || {};
+	for (const id of Object.keys(shipped.removed || {})) if (!builtIds.has(id) && !(id in house.removed)) house.removed[id] = shipped.removed[id];
+	const lost = [];
+	for (const list of C.HOUSE_LISTS) for (const r of shipped[list] || []) if (!builtIds.has(r.id) && !(r.id in house.removed)) lost.push(list + ' ' + r.id + ' ' + (r.name || r.term || r.title || r.question || '').slice(0, 70));
+	if (lost.length) fail(`${REL(PACK)} holds ${lost.length} record(s) this build drops without a tombstone (add a retire or a tombstone in ${REL(OVERRIDES)}):\n  ` + lost.join('\n  '));
 }
 for (const step of C.BUILD_STEPS) house.build[step] = BUILD_TS;
 house.began = 'pack';

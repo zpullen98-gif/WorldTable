@@ -41,8 +41,10 @@ export function packLine(result: EnsureResult, text: string): string {
 		return result.current ? `${c.name} is loaded: ${held}.` : `${c.name} is loaded beside your house: ${held}. Switch to open it.`;
 	}
 	if (result.action === 'refreshed') {
-		const { added, updated } = result.counts;
-		return `${c.name} updated: ${added} new` + (updated ? `, ${updated} changed` : '') + '.';
+		const { added, updated, removed, kept } = result.counts;
+		/* kept: items where a person's touch stood against a change the edition made (a note on a
+		   wine holds its printed price and vintage too), said so the person knows to look. */
+		return `${c.name} updated: ${added} new` + (updated ? `, ${updated} changed` : '') + (removed ? `, ${removed} retired` : '') + (kept ? `, ${kept} left as you had them` : '') + '.';
 	}
 	return '';
 }

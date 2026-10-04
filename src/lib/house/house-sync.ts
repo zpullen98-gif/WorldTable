@@ -16,7 +16,8 @@
  *
  * THE RULES (the plan's, in substance):
  *   1. Twin by id: the newer ts wins the shared plain fields per side (tie,
- *      nothing moves); every shared mark settles by pickMark; kept unions.
+ *      nothing moves); every shared mark settles by pickMark; kept unions,
+ *      but for a superseded edition's notes on the rows (staleEditionNotes).
  *      Written only when something changed.
  *   2. No twin by id: a twin by FOLDED NAME within the same house is re-keyed
  *      to the item's id through the adapter's rename and reported renamed,
@@ -69,7 +70,7 @@
 import type { House, HouseItem, ItemKind, Mark, Note } from './house-schema';
 import { ID_PREFIXES, isMark, isNote, mintId } from './house-schema';
 import { FORBIDDEN_KEY } from './house-normalise';
-import { listOfKind, mergeKept, pickMark, sameJson } from './house-merge';
+import { EDITION_NOTE_SPREAD, listOfKind, mergeKept, pickMark, sameJson } from './house-merge';
 
 /* -------------------------------------------------------------------------
  * The shapes
@@ -465,6 +466,38 @@ export const codexWine = adapterFrom(CODEX_WINE);
 /** Where a row stands to the current house. */
 type Scope = 'ours' | 'adoptable' | 'foreign';
 
+const NO_STAMPS: ReadonlySet<number> = new Set<number>();
+
+/**
+ * The note stamps a wing's rows carry that belong to an edition the house no
+ * longer holds: a stamp shared by the notes of at least EDITION_NOTE_SPREAD
+ * rows (an edition's, never a person's, who keeps one note at a time) that no
+ * note in the house carries. A refresh replaces an old edition's notes in the
+ * house; without this the rows, which still hold them, would union them
+ * straight back in at the next wake. A person's note on a row, under its own
+ * stamp, is never stale.
+ */
+function staleEditionNotes(rows: readonly SyncRow[], items: readonly HouseItem[]): Set<number> {
+	const spread = new Map<number, number>();
+	for (const row of rows) {
+		const block = row.maitre;
+		if (!block || typeof block !== 'object' || Array.isArray(block)) continue;
+		const kept = (block as Fields).kept;
+		if (!Array.isArray(kept)) continue;
+		const seen = new Set<number>();
+		for (const n of kept) if (isNote(n)) seen.add(n.ts);
+		for (const t of seen) spread.set(t, (spread.get(t) || 0) + 1);
+	}
+	const out = new Set<number>();
+	for (const [t, n] of spread) if (n >= EDITION_NOTE_SPREAD) out.add(t);
+	if (!out.size) return out;
+	for (const item of items) {
+		const kept = (item as unknown as Fields).kept;
+		if (Array.isArray(kept)) for (const n of kept) if (isNote(n)) out.delete(n.ts);
+	}
+	return out;
+}
+
 /**
  * A twin settled: the shared plain fields from the newer side, the marks by
  * pickMark on their own stamps, kept unioned, the house id the house's. On
@@ -472,9 +505,11 @@ type Scope = 'ours' | 'adoptable' | 'foreign';
  * toRow over the old row, so its own fields ride along. Through the wing's
  * own door (rule 8) a mark the row lacks is a discard and does not settle.
  */
-function settleTwin<R extends SyncRow>(item: HouseItem, row: R, houseId: string, adapter: SyncAdapter<R>, oneRow: boolean): { item: HouseItem; row: R } {
+function settleTwin<R extends SyncRow>(item: HouseItem, row: R, houseId: string, adapter: SyncAdapter<R>, oneRow: boolean, stale: ReadonlySet<number> = NO_STAMPS): { item: HouseItem; row: R } {
 	const mine = item as unknown as Fields;
 	const rowItem = adapter.fromRow(row, item) as unknown as Fields;
+	/* A superseded edition's notes on the row give way to the house's: see staleEditionNotes. */
+	if (stale.size && Array.isArray(rowItem.kept)) rowItem.kept = (rowItem.kept as unknown[]).filter((n) => !(isNote(n) && stale.has(n.ts)));
 	const settled: Fields = {};
 	for (const f of adapter.marks) {
 		const theirs = isMark(rowItem[f]) ? (rowItem[f] as Mark<unknown>) : undefined;
@@ -552,6 +587,7 @@ export function syncIn<R extends SyncRow>(
 		else byKey.set(key, [i]);
 	});
 	const itemIds = new Set(items.map((item) => item.id));
+	const stale = oneRow ? NO_STAMPS : staleEditionNotes(rows.filter((_, i) => scopes[i] !== 'foreign'), items);
 	/* Every id in play, so a fresh id (rule 7) clashes with no item and no row, this house's or another's. */
 	const taken = new Set<string>(itemIds);
 	rows.forEach((row) => taken.add(row.id));
@@ -617,7 +653,7 @@ export function syncIn<R extends SyncRow>(
 		claimed.add(at);
 		const row = rowsOut[at] as R;
 		if (scopes[at] === 'adoptable') changes.push({ id: item.id, what: 'adopted' });
-		const settled = settleTwin(item, row, house.id, adapter, oneRow);
+		const settled = settleTwin(item, row, house.id, adapter, oneRow, stale);
 		if (sameJson(settled.item, item)) itemsOut.push(item);
 		else {
 			itemsOut.push(settled.item);

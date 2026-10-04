@@ -29,7 +29,7 @@
    Runs from any directory. Exits 1 with the file and the rule on failure, one line on success. */
 
 import fs from 'node:fs';
-import { loadEngine, GUIDE, PACK, REL, countProblems, describe, eachString, answerNames, britishWords, checkArgs, sourceText as pageText, CHILD_SECTIONS, SNACK_SECTION, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, FIXED_QS } from './engine.mjs';
+import { loadEngine, GUIDE, PACK, REL, countProblems, describe, eachString, answerNames, britishWords, checkArgs, editionInFuture, sourceText as pageText, CHILD_SECTIONS, SNACK_SECTION, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, FIXED_QS } from './engine.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
@@ -111,8 +111,11 @@ for (const d of house.dishes) {
 	if (!d.say || !d.guest) F(`dish ${d.name} lacks say or guest`);
 	if (d.section !== 'Sides' && !d.why) F(`dish ${d.name} lacks a why line`);
 }
+/* A wine's grapes may be empty only where no source names them and a lineup ask sends the blend to the
+   sommelier (from the 01:30 edition of 4 October 2026: the Birthday Bubbles bottles and the Bubbles rosés). */
+const blendAsked = new Set(house.askAtLineup.filter((a) => a.askWhom === 'sommelier' && /\b(grapes?|blend)\b/i.test(a.question)).flatMap((a) => a.itemIds));
 for (const w of house.wines) {
-	if (!w.profile || !w.goesWith || !w.serve || !w.parts || !w.producer || !w.grapes.length) F(`wine ${w.name} lacks a profile, goesWith, serve, parts, producer or grapes`);
+	if (!w.profile || !w.goesWith || !w.serve || !w.parts || !w.producer || !(w.grapes.length || blendAsked.has(w.id))) F(`wine ${w.name} lacks a profile, goesWith, serve, parts, producer or grapes (or a sommelier ask for the blend)`);
 	if (!w.lines || !w.lines.value.s10 || !w.lines.value.s20 || !w.lines.value.s45) F(`wine ${w.name} lacks the three timed lines`);
 }
 const drinkIds = new Map(house.cocktails.map((c) => [c.id, c]));
@@ -134,6 +137,7 @@ if (coffees !== 9) F(`${coffees} pairings take a coffee as their zero-proof pick
 /* The edition rule: one stamp, Date.parse(house.pack.builtAt), on every mark, kept note and record. */
 const EDITION = house.pack ? Date.parse(house.pack.builtAt) : NaN;
 if (!Number.isFinite(EDITION)) F('house.pack.builtAt is not a date');
+if (editionInFuture(EDITION)) F(editionInFuture(EDITION));
 let offStamp = 0;
 const stampOk = (ts, where) => { if (ts !== EDITION) { offStamp++; if (offStamp <= 5) F(`${where} carries ${ts}, not the edition stamp ${EDITION}`); } };
 for (const field of C.MARK_FIELDS.house) if (lib.isMark(house[field])) stampOk(house[field].ts, 'house.' + field);

@@ -1,6 +1,6 @@
 {
 	"about": "Every string the dash pass changed while building the Brennan's house, before and after, for a person to read for a changed meaning; an entry with an override number is a string an overrides.json entry set, not the guide's.",
-	"count": 376,
+	"count": 371,
 	"changes": [
 		{
 			"path": "model.card.sources[0].title",
@@ -99,8 +99,9 @@
 		},
 		{
 			"path": "model.dishes[0].pairing.serve",
-			"before": "The Traditional Breakfast includes a Brandy Milk Punch here; offer wine only as an extra. The 375 ml half-bottle carries through to Bananas Foster — 2–3 oz pours in a small glass.",
-			"after": "The Traditional Breakfast includes a Brandy Milk Punch here; offer wine only as an extra. The 375 ml half-bottle carries through to Bananas Foster, 2 to 3 oz pours in a small glass."
+			"before": "The Traditional Breakfast includes a Brandy Milk Punch here; offer wine only as an extra. The 375 ml half-bottle carries through to Bananas Foster — 2–3 oz pours in a small glass. The Dr. Hermann half-bottle is off the current glass page: confirm at lineup that it is still offered before leading with it.",
+			"after": "The Traditional Breakfast includes a Brandy Milk Punch here; offer wine only as an extra. The 375 ml half-bottle carries through to Bananas Foster, 2 to 3 oz pours in a small glass. The Dr. Hermann half-bottle is off the current glass page: confirm at lineup that it is still offered before leading with it.",
+			"override": 1508
 		},
 		{
 			"path": "model.dishes[0].pairing.zeroProofText",
@@ -234,8 +235,9 @@
 		},
 		{
 			"path": "model.dishes[4].pairing.serve",
-			"before": "Sold as a 375 ml half-bottle, about four dessert pours. Suggest it when the table orders sweet starters — it carries on to Bananas Foster. Small white or dessert glass, 2–3 oz.",
-			"after": "Sold as a 375 ml half-bottle, about four dessert pours. Suggest it when the table orders sweet starters, it carries on to Bananas Foster. Small white or dessert glass, 2 to 3 oz."
+			"before": "Sold as a 375 ml half-bottle, about four dessert pours. Suggest it when the table orders sweet starters — it carries on to Bananas Foster. Small white or dessert glass, 2–3 oz. The Dr. Hermann half-bottle is off the current glass page: confirm at lineup that it is still offered before leading with it.",
+			"after": "Sold as a 375 ml half-bottle, about four dessert pours. Suggest it when the table orders sweet starters, it carries on to Bananas Foster. Small white or dessert glass, 2 to 3 oz. The Dr. Hermann half-bottle is off the current glass page: confirm at lineup that it is still offered before leading with it.",
+			"override": 1509
 		},
 		{
 			"path": "model.dishes[5].lines.s10",
@@ -270,8 +272,9 @@
 		},
 		{
 			"path": "model.dishes[5].pairing.serve",
-			"before": "375 ml half-bottle, about four dessert pours — ideal when a table shares sweet starters and wants to carry it to Bananas Foster. Pour 2–3 oz in a small white glass as the plate lands.",
-			"after": "375 ml half-bottle, about four dessert pours, ideal when a table shares sweet starters and wants to carry it to Bananas Foster. Pour 2 to 3 oz in a small white glass as the plate lands."
+			"before": "375 ml half-bottle, about four dessert pours — ideal when a table shares sweet starters and wants to carry it to Bananas Foster. Pour 2–3 oz in a small white glass as the plate lands. The Dr. Hermann half-bottle is off the current glass page: confirm at lineup that it is still offered before leading with it.",
+			"after": "375 ml half-bottle, about four dessert pours, ideal when a table shares sweet starters and wants to carry it to Bananas Foster. Pour 2 to 3 oz in a small white glass as the plate lands. The Dr. Hermann half-bottle is off the current glass page: confirm at lineup that it is still offered before leading with it.",
+			"override": 1510
 		},
 		{
 			"path": "model.dishes[5].pairing.zeroProofText",
@@ -521,11 +524,6 @@
 			"after": "Café Glacé de la Maison, chicory cold brew’s roast mirrors the Sherry’s nuttiness, or the Catalina Island for a bright, bubbly reset."
 		},
 		{
-			"path": "model.dishes[12].pairing.zeroProofWhy",
-			"before": "chicory cold brew’s roast mirrors the Sherry’s nuttiness — or the Catalina Island for a bright, bubbly reset.",
-			"after": "chicory cold brew’s roast mirrors the Sherry’s nuttiness, or the Catalina Island for a bright, bubbly reset."
-		},
-		{
 			"path": "model.dishes[13].lines.s10",
 			"before": "Our Seafood Gumbo — shrimp, crab and oysters with smoky andouille, over Louisiana popcorn rice.",
 			"after": "Our Seafood Gumbo: shrimp, crab and oysters with smoky andouille, over Louisiana popcorn rice."
@@ -625,7 +623,7 @@
 			"path": "model.dishes[15].pairing.stepUp",
 			"before": "Rare by the glass, from the bottle under the Coravin Sparkling stopper: Chardonnay-led vintage Champagne with deeper toasted-almond richness — a celebration upgrade with the same clean cut.",
 			"after": "Rare by the glass, from the bottle under the Coravin Sparkling stopper: Chardonnay-led vintage Champagne with deeper toasted-almond richness, a celebration upgrade with the same clean cut.",
-			"override": 333
+			"override": 327
 		},
 		{
 			"path": "model.dishes[15].pairing.serve",
@@ -1200,8 +1198,9 @@
 		},
 		{
 			"path": "model.dishes[41].pairing.serve",
-			"before": "Pour before the flambé starts, so no glass is set down near the flame. 375 ml half-bottle, 2–3 oz pours in a small glass, 45–50°F. The breakfast tasting includes coffee and chicory here.",
-			"after": "Pour before the flambé starts, so no glass is set down near the flame. 375 ml half-bottle, 2 to 3 oz pours in a small glass, 45 to 50°F. The breakfast tasting includes coffee and chicory here."
+			"before": "Pour before the flambé starts, so no glass is set down near the flame. 375 ml half-bottle, 2–3 oz pours in a small glass, 45–50°F. The breakfast tasting includes coffee and chicory here. The Dr. Hermann half-bottle is off the current glass page: confirm at lineup that it is still offered before leading with it.",
+			"after": "Pour before the flambé starts, so no glass is set down near the flame. 375 ml half-bottle, 2 to 3 oz pours in a small glass, 45 to 50°F. The breakfast tasting includes coffee and chicory here. The Dr. Hermann half-bottle is off the current glass page: confirm at lineup that it is still offered before leading with it.",
+			"override": 1511
 		},
 		{
 			"path": "model.dishes[41].pairing.zeroProofText",
@@ -1240,8 +1239,9 @@
 		},
 		{
 			"path": "model.dishes[42].serviceNote",
-			"before": "Flambéed tableside — follow the same safety steps as Bananas Foster. Cherries may contain pits — confirm with the kitchen whether they’re pitted and warn guests if not. Dairy; alcohol not fully burned off. No minimum is printed (Foster’s is two) — confirm at lineup.",
-			"after": "Flambéed tableside, follow the same safety steps as Bananas Foster. Cherries may contain pits, confirm with the kitchen whether they’re pitted and warn guests if not. Dairy; alcohol not fully burned off. No minimum is printed (Foster’s is two), confirm at lineup."
+			"before": "Flambéed tableside — follow the same safety steps as Bananas Foster. Cherries may contain pits — confirm with the kitchen whether they’re pitted and warn guests if not. Dairy; alcohol not fully burned off. No minimum is printed (Foster’s is two) — confirm at lineup. Not on the current dessert menu (3 October 2026): confirm with a manager that it is served before offering it.",
+			"after": "Flambéed tableside, follow the same safety steps as Bananas Foster. Cherries may contain pits, confirm with the kitchen whether they’re pitted and warn guests if not. Dairy; alcohol not fully burned off. No minimum is printed (Foster’s is two), confirm at lineup. Not on the current dessert menu (3 October 2026): confirm with a manager that it is served before offering it.",
+			"override": 1488
 		},
 		{
 			"path": "model.dishes[42].pairing.sayIt",
@@ -1292,8 +1292,9 @@
 		},
 		{
 			"path": "model.dishes[43].pairing.serve",
-			"before": "375 ml half-bottle, 2–3 oz pours in a small dessert or white glass, 45–50°F. Pour as the dessert order fires.",
-			"after": "375 ml half-bottle, 2 to 3 oz pours in a small dessert or white glass, 45 to 50°F. Pour as the dessert order fires."
+			"before": "375 ml half-bottle, 2–3 oz pours in a small dessert or white glass, 45–50°F. Pour as the dessert order fires. The Dr. Hermann half-bottle is off the current glass page: confirm at lineup that it is still offered before leading with it.",
+			"after": "375 ml half-bottle, 2 to 3 oz pours in a small dessert or white glass, 45 to 50°F. Pour as the dessert order fires. The Dr. Hermann half-bottle is off the current glass page: confirm at lineup that it is still offered before leading with it.",
+			"override": 1512
 		},
 		{
 			"path": "model.dishes[43].pairing.zeroProofText",
@@ -1367,8 +1368,9 @@
 		},
 		{
 			"path": "model.dishes[45].pairing.serve",
-			"before": "375 ml half-bottle, 2–3 oz pours, 45–50°F in a small dessert or white glass. Pour as the dessert fires.",
-			"after": "375 ml half-bottle, 2 to 3 oz pours, 45 to 50°F in a small dessert or white glass. Pour as the dessert fires."
+			"before": "375 ml half-bottle, 2–3 oz pours, 45–50°F in a small dessert or white glass. Pour as the dessert fires. The Dr. Hermann half-bottle is off the current glass page: confirm at lineup that it is still offered before leading with it.",
+			"after": "375 ml half-bottle, 2 to 3 oz pours, 45 to 50°F in a small dessert or white glass. Pour as the dessert fires. The Dr. Hermann half-bottle is off the current glass page: confirm at lineup that it is still offered before leading with it.",
+			"override": 1513
 		},
 		{
 			"path": "model.dishes[46].parts.technique",
@@ -1392,8 +1394,9 @@
 		},
 		{
 			"path": "model.dishes[46].pairing.serve",
-			"before": "375 ml half-bottle, 2–3 oz pours, 45–50°F in a small dessert or white glass; pour as dessert is fired.",
-			"after": "375 ml half-bottle, 2 to 3 oz pours, 45 to 50°F in a small dessert or white glass; pour as dessert is fired."
+			"before": "375 ml half-bottle, 2–3 oz pours, 45–50°F in a small dessert or white glass; pour as dessert is fired. The Dr. Hermann half-bottle is off the current glass page: confirm at lineup that it is still offered before leading with it.",
+			"after": "375 ml half-bottle, 2 to 3 oz pours, 45 to 50°F in a small dessert or white glass; pour as dessert is fired. The Dr. Hermann half-bottle is off the current glass page: confirm at lineup that it is still offered before leading with it.",
+			"override": 1514
 		},
 		{
 			"path": "model.wines[0].sayIt",
@@ -1419,12 +1422,6 @@
 			"path": "model.wines[1].serve",
 			"before": "Serve 43–46°F in a flute or tulip. Ice bucket, half ice and half water. Tilt the glass and pour in two stages so the creamy mousse doesn’t overflow.",
 			"after": "Serve 43 to 46°F in a flute or tulip. Ice bucket, half ice and half water. Tilt the glass and pour in two stages so the creamy mousse doesn’t overflow."
-		},
-		{
-			"path": "model.wines[2].profile",
-			"before": "Rare began as Piper-Heidsieck’s prestige cuvée and is now run as its own house, Rare Champagne; first vintage 1976, only about a dozen vintages ever declared. Chardonnay-led, from a single vintage: white peach, candied citrus, toasted almond and a long, fine mousse. Poured by the glass from an opened bottle kept fresh under the Coravin Sparkling stopper, which re-pressurizes it with CO2, so a single glass is possible. (The restaurant’s own drinks page lists a 2013 Rare Millésime at the same price — check which vintage is open.)",
-			"after": "Rare began as Piper-Heidsieck’s prestige cuvée and is now run as its own house, Rare Champagne; first vintage 1976, only about a dozen vintages ever declared. Chardonnay-led, from a single vintage: white peach, candied citrus, toasted almond and a long, fine mousse. Poured by the glass from an opened bottle kept fresh under the Coravin Sparkling stopper, which re-pressurizes it with CO2, so a single glass is possible. (The restaurant’s own drinks page lists a 2013 Rare Millésime at the same price, check which vintage is open.)",
-			"override": 98
 		},
 		{
 			"path": "model.wines[2].sayIt",
@@ -1575,9 +1572,9 @@
 		},
 		{
 			"path": "model.wines[14].serve",
-			"before": "Serve 58–60°F in a standard red glass for the tasting’s 4 oz pour. No decanting. Slightly cool keeps this juicy old-vine Syrah fresh at breakfast. No vintage is printed on the tasting menu: check the bottle before quoting a year.",
-			"after": "Serve 58 to 60°F in a standard red glass for the tasting’s 4 oz pour. No decanting. Slightly cool keeps this juicy old-vine Syrah fresh at breakfast. No vintage is printed on the tasting menu: check the bottle before quoting a year.",
-			"override": 114
+			"before": "Serve 58–60°F in a standard red glass for the tasting’s 4 oz pour. No decanting. Slightly cool keeps this juicy old-vine Syrah fresh at breakfast. The tasting menu prints 2023: read the label before naming it.",
+			"after": "Serve 58 to 60°F in a standard red glass for the tasting’s 4 oz pour. No decanting. Slightly cool keeps this juicy old-vine Syrah fresh at breakfast. The tasting menu prints 2023: read the label before naming it.",
+			"override": 1456
 		},
 		{
 			"path": "model.wines[15].sayIt",
@@ -1696,7 +1693,7 @@
 			"path": "model.cocktails[2].serviceNote",
 			"before": "Spirit-forward and strong — served without ice (confirm the glass and the bar’s build). Upsells: Thompson’s Dream ($20, Willett 4-year rye, Bitter Truth Creole Bitters, St. George absinthe rinse) and Origin Story ($40, Dudognon Cognac, barrel-aged Peychaud’s, Jade Nouvelle-Orléans absinthe). Herbsaint is ERB-saint.",
 			"after": "Spirit-forward and strong, served without ice (confirm the glass and the bar’s build). Upsells: Thompson’s Dream ($20, Willett 4-year rye, Bitter Truth Creole Bitters, St. George absinthe rinse) and Origin Story ($40, Dudognon Cognac, barrel-aged Peychaud’s, Jade Nouvelle-Orléans absinthe). Herbsaint is ERB-saint.",
-			"override": 399
+			"override": 387
 		},
 		{
 			"path": "model.cocktails[3].lines.s10",
@@ -1800,16 +1797,10 @@
 			"after": "Just me, can I get the Bananas Foster?"
 		},
 		{
-			"path": "model.scenarios[1].you",
-			"before": "It’s made in one pan at the table for at least two people, so the minimum order is two. If you’d like a flambé just for you, Cherries Jubilee is also finished at the table — let me check with the kitchen on a single order. And the Dulce de Leche is the Foster in a glass.",
-			"after": "It’s made in one pan at the table for at least two people, so the minimum order is two. If you’d like a flambé just for you, Cherries Jubilee is also finished at the table, let me check with the kitchen on a single order. And the Dulce de Leche is the Foster in a glass.",
-			"override": 222
-		},
-		{
 			"path": "model.scenarios[1].principle",
-			"before": "Explain the reason for the rule, then offer an alternative with the same theater — and check before you promise. Confirm at lineup whether a single Cherries Jubilee is possible before offering it, so you are not promising twice.",
-			"after": "Explain the reason for the rule, then offer an alternative with the same theater, and check before you promise. Confirm at lineup whether a single Cherries Jubilee is possible before offering it, so you are not promising twice.",
-			"override": 223
+			"before": "Explain the reason for the rule, then offer an alternative with the same theater — and check before you promise. Cherries Jubilee is not on the current dessert menu: confirm with a manager that it is served, and whether a single order is possible, before you mention it.",
+			"after": "Explain the reason for the rule, then offer an alternative with the same theater, and check before you promise. Cherries Jubilee is not on the current dessert menu: confirm with a manager that it is served, and whether a single order is possible, before you mention it.",
+			"override": 1494
 		},
 		{
 			"path": "model.scenarios[5].you",
@@ -1825,7 +1816,7 @@
 			"path": "model.scenarios[6].you",
 			"before": "Congratulations! We pour a prestige vintage Champagne by the glass — Rare, kept fresh under a Coravin stopper, at $75. For something lighter, our house Piper-Heidsieck Extra Brut. And if you’re here on a Friday at 5, we saber Champagne in the courtyard.",
 			"after": "Congratulations! We pour a prestige vintage Champagne by the glass: Rare, kept fresh under a Coravin stopper, at $75. For something lighter, our house Piper-Heidsieck Extra Brut. And if you’re here on a Friday at 5, we saber Champagne in the courtyard.",
-			"override": 229
+			"override": 227
 		},
 		{
 			"path": "model.mixUps[0].difference",
@@ -1854,24 +1845,21 @@
 		},
 		{
 			"path": "model.mixUps[3].difference",
-			"before": "Both are flambéed tableside over housemade vanilla ice cream. Bananas Foster (invented here in 1951) is bananas in butter, brown sugar, cinnamon and rum — rich and caramel. Cherries Jubilee is fresh tart black cherries in Luxardo sauce — brighter and fruitier.",
-			"after": "Both are flambéed tableside over housemade vanilla ice cream. Bananas Foster (invented here in 1951) is bananas in butter, brown sugar, cinnamon and rum, rich and caramel. Cherries Jubilee is fresh tart black cherries in Luxardo sauce, brighter and fruitier."
-		},
-		{
-			"path": "model.mixUps[3].ask",
-			"before": "Would you like something rich and caramelly, or tart and fruity? Or both, for the table — two flambés.",
-			"after": "Would you like something rich and caramelly, or tart and fruity? Or both, for the table, two flambés."
+			"before": "Both are flambéed tableside over housemade vanilla ice cream. Bananas Foster (invented here in 1951) is bananas in butter, brown sugar, cinnamon and rum — rich and caramel. Cherries Jubilee is fresh tart black cherries in Luxardo sauce — brighter and fruitier. Cherries Jubilee is not on the dessert menu of 3 October 2026; confirm with a manager before offering it.",
+			"after": "Both are flambéed tableside over housemade vanilla ice cream. Bananas Foster (invented here in 1951) is bananas in butter, brown sugar, cinnamon and rum, rich and caramel. Cherries Jubilee is fresh tart black cherries in Luxardo sauce, brighter and fruitier. Cherries Jubilee is not on the dessert menu of 3 October 2026; confirm with a manager before offering it.",
+			"override": 1498
 		},
 		{
 			"path": "model.mustKnows[0].body",
 			"before": "Invented at Brennan’s in 1951 — Owen Brennan challenged his sister Ella and chef Paul Blangé to create a banana dessert (the house's own page and Ralph Brennan credit Ella with Blangé; the commission is also called the Metropolitan Crime Commission), named for Richard Foster, Owen’s friend and chairman of the New Orleans Crime Commission. Flambéed tableside, $14, minimum 2 people per order; 2026 is its 75th year.",
 			"after": "Invented at Brennan’s in 1951: Owen Brennan challenged his sister Ella and chef Paul Blangé to create a banana dessert (the house's own page and Ralph Brennan credit Ella with Blangé; the commission is also called the Metropolitan Crime Commission), named for Richard Foster, Owen’s friend and chairman of the New Orleans Crime Commission. Flambéed tableside, $14, minimum 2 people per order; 2026 is its 75th year.",
-			"override": 257
+			"override": 253
 		},
 		{
 			"path": "model.mustKnows[1].body",
-			"before": "Two desserts are flambéed at the table: Bananas Foster and Cherries Jubilee. Chef Kris Padalino (executive chef since June 2025) has said she wants to bring back more tableside cooking — ask at training who performs it (server or captain) and learn the house procedure.",
-			"after": "Two desserts are flambéed at the table: Bananas Foster and Cherries Jubilee. Chef Kris Padalino (executive chef since June 2025) has said she wants to bring back more tableside cooking, ask at training who performs it (server or captain) and learn the house procedure."
+			"before": "Two desserts are flambéed at the table: Bananas Foster and Cherries Jubilee. Chef Kris Padalino (executive chef since June 2025) has said she wants to bring back more tableside cooking — ask at training who performs it (server or captain) and learn the house procedure. Cherries Jubilee is not on the dessert menu of 3 October 2026: confirm with a manager that it is served before offering it.",
+			"after": "Two desserts are flambéed at the table: Bananas Foster and Cherries Jubilee. Chef Kris Padalino (executive chef since June 2025) has said she wants to bring back more tableside cooking, ask at training who performs it (server or captain) and learn the house procedure. Cherries Jubilee is not on the dessert menu of 3 October 2026: confirm with a manager that it is served before offering it.",
+			"override": 1499
 		},
 		{
 			"path": "model.mustKnows[2].body",
@@ -1889,27 +1877,22 @@
 			"after": "Dinner tasting, $80"
 		},
 		{
-			"path": "model.mustKnows[5].body",
-			"before": "Menus checked 2026-09-26; none carries a date. Dinner is a late-summer menu (Creole tomatoes, summer squash, glazed summer vegetables, peaches) and the cocktail list is themed “Summer Vacations of 1946” — expect a fall change soon.",
-			"after": "Menus checked 2026-09-26; none carries a date. Dinner is a late-summer menu (Creole tomatoes, summer squash, glazed summer vegetables, peaches) and the cocktail list is themed “Summer Vacations of 1946”, expect a fall change soon."
-		},
-		{
 			"path": "model.mustKnows[6].body",
 			"before": "Brennan's first won the Wine Spectator Grand Award in 1983, lost the cellar to Katrina in 2005 when a month without power cooked about 35,000 bottles, and won it back in 2021 after rebuilding to more than 15,000 bottles, with Burgundy and Champagne the deep end of the list; the Wine Spectator listing shows about 3,600 selections and more than 19,000 bottles, deepest in Burgundy, Bordeaux and California. Confirm the award years from the listing at lineup. The live by-the-glass list (Binwise) pours Rare Brut 2012 and Leflaive Mâcon-Verzé by Coravin, plus Inglenook Rubicon 2010 at $70. The restaurant’s own “Cocktails & Wine by the Glass” page shows an older, different glass list (e.g., Drouhin Chablis, Peter Michael, Rare 2013) — check the list you’re handed on shift.",
 			"after": "Brennan's first won the Wine Spectator Grand Award in 1983, lost the cellar to Katrina in 2005 when a month without power cooked about 35,000 bottles, and won it back in 2021 after rebuilding to more than 15,000 bottles, with Burgundy and Champagne the deep end of the list; the Wine Spectator listing shows about 3,600 selections and more than 19,000 bottles, deepest in Burgundy, Bordeaux and California. Confirm the award years from the listing at lineup. The live by-the-glass list (Binwise) pours Rare Brut 2012 and Leflaive Mâcon-Verzé by Coravin, plus Inglenook Rubicon 2010 at $70. The restaurant’s own “Cocktails & Wine by the Glass” page shows an older, different glass list (e.g., Drouhin Chablis, Peter Michael, Rare 2013), check the list you’re handed on shift.",
-			"override": 258
+			"override": 254
 		},
 		{
 			"path": "model.mustKnows[7].body",
 			"before": "Classic eye openers: Bloody Bull $13, Brandy Milk Punch $12, Brennan’s Bloody Mary $11 (pickled okra, spicy beans), Brennan’s Irish Coffee $12. Coffee $11: New Orleans– style with chicory, a single-origin Papua New Guinea from Congregation Coffee, and Café Glacé de la Maison (chicory cold brew, cardamom-clove syrup, orange flower foam). Revive cold-pressed juice $10. Congregation roasts in Algiers; read the single origin from the coffee card on shift rather than naming Papua New Guinea from memory.",
 			"after": "Classic eye openers: Bloody Bull $13, Brandy Milk Punch $12, Brennan’s Bloody Mary $11 (pickled okra, spicy beans), Brennan’s Irish Coffee $12. Coffee $11: New Orleans-style with chicory, a single-origin Papua New Guinea from Congregation Coffee, and Café Glacé de la Maison (chicory cold brew, cardamom-clove syrup, orange flower foam). Revive cold-pressed juice $10. Congregation roasts in Algiers; read the single origin from the coffee card on shift rather than naming Papua New Guinea from memory.",
-			"override": 259
+			"override": 255
 		},
 		{
 			"path": "model.mustKnows[8].body",
-			"before": "Roost Bar & Courtyard, Mon–Fri 2–6; Champagne sabering Fridays at 5. Rosé bottles $50–125 (Mirabelle to Pommery), bubbly cocktails $12–20 (Brennan’s Champagne Cocktail $20), and bar snacks: Creole spiced nuts $6, crawfish meat pies with chive rémoulade $16, fries with pink sauce $8, fried pickles $14, popcorn shrimp $15, cheese board $24, Roost Burger $17. The hours are dated 26 September 2026 and disputed (an older guest description gives Tuesday to Friday 2 to 7): confirm on shift. Sabering has been advertised weekly for about a decade; confirm each Friday with the host stand, and check the courtyard is not privately booked before promising it. Mirabelle is Schramsberg's California sparkling rosé, so say sparkling rosé for the bottom of that range and keep the word Champagne for the Pommery.",
-			"after": "Roost Bar & Courtyard, Mon-Fri 2 to 6; Champagne sabering Fridays at 5. Rosé bottles $50 to 125 (Mirabelle to Pommery), bubbly cocktails $12 to 20 (Brennan’s Champagne Cocktail $20), and bar snacks: Creole spiced nuts $6, crawfish meat pies with chive rémoulade $16, fries with pink sauce $8, fried pickles $14, popcorn shrimp $15, cheese board $24, Roost Burger $17. The hours are dated 26 September 2026 and disputed (an older guest description gives Tuesday to Friday 2 to 7): confirm on shift. Sabering has been advertised weekly for about a decade; confirm each Friday with the host stand, and check the courtyard is not privately booked before promising it. Mirabelle is Schramsberg's California sparkling rosé, so say sparkling rosé for the bottom of that range and keep the word Champagne for the Pommery.",
-			"override": 260
+			"before": "Roost Bar & Courtyard, Mon–Fri 2–6; Champagne sabering Fridays at 5. Rosé bottles $50–125 (Mirabelle to Pommery), bubbly cocktails $12–20 (Brennan’s Champagne Cocktail $20), and bar snacks: Creole spiced nuts $6, crawfish meat pies with chive rémoulade $16, fries with pink sauce $8, fried pickles $14, popcorn shrimp $15, cheese board $24, Roost Burger $17. The hours are dated 26 September 2026 and disputed (an older guest description gives Tuesday to Friday 2 to 7): confirm on shift. Sabering has been advertised weekly for about a decade; confirm each Friday with the host stand, and check the courtyard is not privately booked before promising it. Mirabelle is Schramsberg's California sparkling rosé, so say sparkling rosé for the bottom of that range and keep the word Champagne for the Pommery. The bubbly cocktails on the menus of 3 October 2026: Riviera $12.00 (Lillet Blanc, printed Lilet, sparkling wine, lemon), Bodrum $12.00 (rum, pistachio, cream, lime, sparkling water), OBX $12.00 (Gentilly gin, peach, lemon, Elio Perrone Bigaro), Brennan's Champagne Cocktail $20.00 (Champagne, Angostura bitters, demerara sugar cube) and the Chandon Garden Spritz $15.00 (bitter orange liqueur, Chandon Brut sparkling wine).",
+			"after": "Roost Bar & Courtyard, Mon-Fri 2 to 6; Champagne sabering Fridays at 5. Rosé bottles $50 to 125 (Mirabelle to Pommery), bubbly cocktails $12 to 20 (Brennan’s Champagne Cocktail $20), and bar snacks: Creole spiced nuts $6, crawfish meat pies with chive rémoulade $16, fries with pink sauce $8, fried pickles $14, popcorn shrimp $15, cheese board $24, Roost Burger $17. The hours are dated 26 September 2026 and disputed (an older guest description gives Tuesday to Friday 2 to 7): confirm on shift. Sabering has been advertised weekly for about a decade; confirm each Friday with the host stand, and check the courtyard is not privately booked before promising it. Mirabelle is Schramsberg's California sparkling rosé, so say sparkling rosé for the bottom of that range and keep the word Champagne for the Pommery. The bubbly cocktails on the menus of 3 October 2026: Riviera $12.00 (Lillet Blanc, printed Lilet, sparkling wine, lemon), Bodrum $12.00 (rum, pistachio, cream, lime, sparkling water), OBX $12.00 (Gentilly gin, peach, lemon, Elio Perrone Bigaro), Brennan's Champagne Cocktail $20.00 (Champagne, Angostura bitters, demerara sugar cube) and the Chandon Garden Spritz $15.00 (bitter orange liqueur, Chandon Brut sparkling wine).",
+			"override": 1232
 		}
 	]
 }

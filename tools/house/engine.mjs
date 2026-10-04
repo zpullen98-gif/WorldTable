@@ -30,9 +30,23 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    Fixed, so a rebuild is byte for byte the same; --stamp or --now on the builder and keep-all set
    another for a fresh edition. The 21:00 edition of 3 October 2026 was the fuller pack; the 22:00
    edition adds the coaching notes and the rewritten thin lines (noteProblems and thinLines below)
-   and moves every stamp with it. */
-export const EDITION_BUILT_AT = '2026-10-03T22:00:00.000Z';
+   and moves every stamp with it. The 01:30 edition of 4 October 2026 reads the menus the owner
+   pasted on 3 October: the fall list and the dessert, coffee and Bubbles drinks in, the summer
+   list out (tombstoned, so a device drops each one nobody touched), the glass list as printed. It was
+   first stamped 06:00, hours ahead of the clock: keep-all makes every mark a person's at the stamp, so
+   any edit a person made between the publish and 06:00 would have lost to the pack. The stamp is
+   01:30 instead, after the 22:00:00.001 tombstones and before any publish, and editionInFuture below
+   holds every later edition to the same rule. */
+export const EDITION_BUILT_AT = '2026-10-04T01:30:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
+
+/* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a
+   person's at that stamp, and pickMark lets the newer of two person marks win, so an edit made on a
+   device after the publish but before the stamp would lose to the pack: the builder, keep-all and
+   check-pack refuse such a stamp. Returns the sentence to fail with, or empty. */
+export function editionInFuture(ts, now = Date.now()) {
+	return Number.isFinite(ts) && ts > now ? `the edition stamp ${new Date(ts).toISOString()} is later than now (${new Date(now).toISOString()}): a person's edit made before it would lose to the pack; stamp the edition no later than its publish` : '';
+}
 
 /* The page text the verbatim price rule reads: the guide, then every snapshot under pages/ in
    name order, each on its own line. A snapshot whose first line does not name where it came from
@@ -91,12 +105,15 @@ export const CHILD_SECTIONS = ["Children's breakfast", "Children's dinner"];
 export const SNACK_SECTION = 'Roost Bar & Bubbles snacks';
 
 /* The counts the Brennan's pack must carry: the guide's 47 dishes plus the 8 children's plates and
-   the 7 Bubbles snacks (62); the guide's 5 signature drinks and 2 spirit-free drinks plus the 5 drinks
-   of the 1946 list, the 3 Luxury Roost Bar cocktails, the 2 premium Sazeracs, the Bloody Mary, the
-   Champagne Cocktail, the 3 coffees and the juice (23, of which 6 are zero-proof); 85 items with a
-   formula in all; 20 wines; 2 tastings; 13 sources; at least 115 terms; at least 33 scenarios; 4 or
-   more mix-ups; the must-knows; a lineup register of at least 60 questions; the 35 pairings; and the
-   five disputes the plan names. */
+   the 7 Bubbles snacks (62); from the 01:30 edition of 4 October 2026, read against the owner's paste,
+   32 drinks: the 4 signature drinks still printed, the 3 Luxury Roost Bar cocktails, the 2 premium
+   Sazeracs, the Bloody Mary, the Champagne Cocktail, the 3 coffees and the juice, the 6 drinks of
+   Billboard Songs from 1946 and the 2 of Temperance, 1946, the 3 dessert and 2 coffee cocktails and the
+   4 Bubbles cocktails (6 of them zero-proof; the summer list's 8 are retired); 94 items with a formula
+   in all; 34 wines (the guide's 20, the Barbera and the Argyle Brut by the glass, the 7 Birthday Bubbles
+   bottles and the 5 Bubbles rosés); 2 tastings; 14 sources; at least 115 terms; at least 33 scenarios; 4 or more mix-ups; the
+   must-knows; a lineup register of at least 60 questions; the 35 pairings; and the five disputes the
+   plan names. */
 export function countProblems(house) {
 	const out = [];
 	const n = (list) => (Array.isArray(house[list]) ? house[list].length : 0);
@@ -107,12 +124,12 @@ export function countProblems(house) {
 	eq('dishes', n('dishes'), 62);
 	eq("children's plates", inSection(CHILD_SECTIONS), 8);
 	eq('Bubbles snacks', inSection([SNACK_SECTION]), 7);
-	eq('cocktails', n('cocktails'), 23);
+	eq('cocktails', n('cocktails'), 32);
 	eq('spirit-free cocktails', zero, 6);
-	eq('dishes and cocktails in all', n('dishes') + n('cocktails'), 85);
-	eq('wines', n('wines'), 20);
+	eq('dishes and cocktails in all', n('dishes') + n('cocktails'), 94);
+	eq('wines', n('wines'), 34);
 	eq('tastings', n('tastings'), 2);
-	eq('sources', (house.sources || []).length, 13);
+	eq('sources', (house.sources || []).length, 14);
 	ge('terms', n('lexicon'), 115);
 	ge('scenarios', n('scenarios'), 33);
 	ge('mix-ups', n('mixUps'), 4);
@@ -246,9 +263,11 @@ const AMERICAN = new Map(BRITISH);
 export function americanise(s) {
 	if (typeof s !== 'string' || !s) return { out: s, found: [] };
 	const found = [];
-	const out = s.replace(BRITISH_RE, (m, word, plural) => {
+	const out = s.replace(BRITISH_RE, (m, word, plural, at, whole) => {
 		const to = AMERICAN.get(word.toLowerCase());
 		if (!to) return m;
+		/* Earl Grey is a name, the tea's, and keeps its spelling wherever it is printed. */
+		if (word.toLowerCase() === 'grey' && /\bEarl\s+$/i.test(whole.slice(0, at))) return m;
 		found.push(word + plural);
 		const cased = /^[A-Z]/.test(word) ? to.charAt(0).toUpperCase() + to.slice(1) : to;
 		return cased + plural;

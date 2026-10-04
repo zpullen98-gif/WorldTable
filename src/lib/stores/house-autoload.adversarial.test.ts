@@ -19,12 +19,15 @@ const PACK = readFileSync(new URL('../../../static/shared/packs/brennans-new-orl
 /* The shipped edition's own stamp, read off the pack so a new edition cannot leave the test behind. */
 const NEW_AT = Date.parse(JSON.parse(PACK).house.pack.builtAt);
 
-function oldPack(): string | null {
+function packAt(rev: string): string | null {
 	try {
-		return execSync('git show 1b45315:static/shared/packs/brennans-new-orleans.v1.oothouse.json', { cwd: new URL('../../../', import.meta.url).pathname, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+		return execSync(`git show ${rev}:static/shared/packs/brennans-new-orleans.v1.oothouse.json`, { cwd: new URL('../../../', import.meta.url).pathname, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
 	} catch {
 		return null;
 	}
+}
+function oldPack(): string | null {
+	return packAt('1b45315');
 }
 
 /** The next edition, as keep-all would stamp it: every mark, note and record ts moved to the new builtAt. */
@@ -190,5 +193,141 @@ describe('auto-load on a device whose menu holds dishes of her own and no house 
 		const pressed = await api.ensurePack(PACK, { makeCurrent: true });
 		expect(pressed).toMatchObject({ action: 'added', current: true });
 		expect(api.current()?.name).toMatch(/^Brennan/);
+	});
+});
+
+describe('auto-load of an edition that retires drinks', () => {
+	/* The 22:00 edition of 3 October 2026 carried the summer list; the 01:30 edition of 4 October
+	   retires it with tombstones in house.removed, a millisecond after the 22:00 stamp. */
+	it('drops each retired record nobody touched, keeps the drink a person touched, and the next boot writes nothing', async () => {
+		const old = packAt('9830205');
+		if (!old) return;
+		const removed: Record<string, number> = JSON.parse(PACK).house.removed;
+		const drinks = Object.keys(removed).filter((id) => id.startsWith('b-'));
+		expect(drinks.length).toBe(8);
+		const backing = new Map<string, string>();
+		const clock = { at: Date.parse('2026-10-03T23:00:00.000Z') };
+		const first = await boot(backing, structuredClone(EMPTY_HOUSE), old, clock);
+		expect(first.res.action).toBe('added');
+		const before = first.api.current()!;
+		for (const id of drinks) expect(before.cocktails.some((c) => c.id === id)).toBe(true);
+		const touched = drinks[0];
+		clock.at += 60000;
+		const touchedAt = clock.at;
+		expect(await first.api.setMark('cocktail', touched, 'say', { value: 'My own way to say it', by: 'person', ts: touchedAt })).toBe(true);
+		clock.at = NEW_AT + 3600000;
+		const second = await boot(backing, first.rec, PACK, clock);
+		expect(second.res.action).toBe('refreshed');
+		if (second.res.action === 'refreshed') expect(second.res.counts.removed).toBe(Object.keys(removed).length - 1);
+		const house = second.api.current()!;
+		expect(house.cocktails.find((c) => c.id === touched)?.say).toEqual({ value: 'My own way to say it', by: 'person', ts: touchedAt });
+		const left = (['dishes', 'wines', 'cocktails', 'lexicon', 'scenarios', 'mixUps', 'mustKnows', 'askAtLineup', 'disputes', 'tastings'] as const)
+			.flatMap((l) => (house[l] as unknown as { id: string }[]).map((r) => r.id))
+			.filter((id) => id in removed);
+		expect(left).toEqual([touched]);
+		const quiet = JSON.stringify([...backing.entries()]);
+		const third = await boot(backing, second.rec, PACK, clock);
+		expect(third.res.action).toBe('current');
+		expect(third.rec).toBe(second.rec);
+		expect(JSON.stringify([...backing.entries()])).toBe(quiet);
+	});
+});
+
+describe('auto-load of an edition that rewrites its notes', () => {
+	const ITEM_LISTS = ['dishes', 'wines', 'cocktails'] as const;
+	type Item = { id: string; kept?: { q: string; a: string; ts: number }[] };
+	const items = (h: Record<string, unknown>, list: (typeof ITEM_LISTS)[number]) => h[list] as unknown as Item[];
+
+	/** A fresh device that boots the shipped pack from nothing: what every untouched record must equal after a refresh. */
+	async function fresh() {
+		const clock = { at: NEW_AT + 3600000 };
+		const { api } = await boot(new Map<string, string>(), structuredClone(EMPTY_HOUSE), PACK, clock);
+		return api.current()! as unknown as Record<string, unknown>;
+	}
+
+	/** Every dish, wine and drink of the refreshed house equal to the fresh import's twin, but for the ids a person touched. */
+	function expectFreshTwins(house: Record<string, unknown>, clean: Record<string, unknown>, touched: string[]) {
+		for (const list of ITEM_LISTS) {
+			const mine = new Map(items(house, list).map((r) => [r.id, r]));
+			for (const r of items(clean, list)) {
+				if (touched.includes(r.id)) continue;
+				expect(mine.get(r.id), `${list} ${r.id}`).toEqual(r);
+			}
+		}
+	}
+
+	it("replaces the old edition's notes rather than keeping them beside the new ones, so an untouched record is the fresh import's twin", async () => {
+		const old = packAt('9830205');
+		if (!old) return;
+		const backing = new Map<string, string>();
+		const clock = { at: Date.parse('2026-10-03T23:00:00.000Z') };
+		const first = await boot(backing, structuredClone(EMPTY_HOUSE), old, clock);
+		const apple = first.api.current()!.dishes.find((d) => d.name === 'Baked Apple')!;
+		clock.at += 60000;
+		expect(await first.api.setMark('dish', apple.id, 'say', { value: 'My own way to say it', by: 'person', ts: clock.at })).toBe(true);
+		clock.at = NEW_AT + 3600000;
+		const second = await boot(backing, first.rec, PACK, clock);
+		expect(second.res.action).toBe('refreshed');
+		const house = second.api.current()! as unknown as Record<string, unknown>;
+		const clean = await fresh();
+		expectFreshTwins(house, clean, [apple.id]);
+		const mineApple = items(house, 'dishes').find((d) => d.id === apple.id)!;
+		const cleanApple = items(clean, 'dishes').find((d) => d.id === apple.id)!;
+		expect(mineApple.kept).toEqual(cleanApple.kept);
+		expect(JSON.stringify(house).length).toBeLessThan(JSON.stringify(clean).length + 2000);
+	});
+
+	it("clears an older edition's notes that a refresh before this rule left on the device, and keeps a person's own note", async () => {
+		const old = packAt('9830205');
+		if (!old) return;
+		const backing = new Map<string, string>();
+		const clock = { at: Date.parse('2026-10-03T23:00:00.000Z') };
+		const first = await boot(backing, structuredClone(EMPTY_HOUSE), old, clock);
+		const [key, text] = [...backing.entries()].find(([, v]) => v.includes('"dishes"') && v.includes('"pack"'))!;
+		const stored = JSON.parse(text);
+		/* What the old union left: every note of the 21:00 edition beside the 22:00 one, under its own stamp. */
+		const older = Date.parse('2026-10-03T21:00:00.000Z');
+		for (const list of ITEM_LISTS) for (const r of stored[list] as Item[]) if (r.kept) r.kept = [...r.kept.map((n) => ({ ...n, ts: older })), ...r.kept];
+		const mine = stored.wines[0] as Item;
+		const own = { q: 'My own question?', a: 'My own answer, kept on this device.', ts: Date.parse('2026-10-03T23:30:00.000Z') };
+		mine.kept = [...(mine.kept || []), own];
+		backing.set(key, JSON.stringify(stored));
+		clock.at = NEW_AT + 3600000;
+		const second = await boot(backing, first.rec, PACK, clock);
+		expect(second.res.action).toBe('refreshed');
+		const house = second.api.current()! as unknown as Record<string, unknown>;
+		expectFreshTwins(house, await fresh(), [mine.id]);
+		const kept = items(house, 'wines').find((w) => w.id === mine.id)!.kept!;
+		expect(kept).toContainEqual(own);
+		expect(kept.some((n) => n.ts === older)).toBe(false);
+	});
+
+	it('keeps a retired drink a person touched on the 21:00 edition, which was live before the tombstone stamp, and retires the untouched ones', async () => {
+		const at2100 = packAt('69cc2ee');
+		const at2200 = packAt('9830205');
+		if (!at2100 || !at2200) return;
+		const removed: Record<string, number> = JSON.parse(PACK).house.removed;
+		const drinks = Object.keys(removed).filter((id) => id.startsWith('b-'));
+		for (const via of [[at2100], [at2100, at2200]]) {
+			const backing = new Map<string, string>();
+			/* The 21:00 edition reached the site at 20:47:44Z on 3 October 2026. */
+			const clock = { at: Date.parse('2026-10-03T20:50:00.000Z') };
+			let step = await boot(backing, structuredClone(EMPTY_HOUSE), via[0], clock);
+			const touched = drinks.find((id) => step.api.current()!.cocktails.some((c) => c.id === id))!;
+			clock.at = Date.parse('2026-10-03T21:30:00.000Z');
+			const touchedAt = clock.at;
+			expect(await step.api.setMark('cocktail', touched, 'say', { value: 'Said my way', by: 'person', ts: touchedAt })).toBe(true);
+			if (via.length > 1) {
+				clock.at = Date.parse('2026-10-04T00:40:00.000Z');
+				step = await boot(backing, step.rec, via[1], clock);
+				expect(step.res.action).toBe('refreshed');
+			}
+			clock.at = NEW_AT + 3600000;
+			const last = await boot(backing, step.rec, PACK, clock);
+			expect(last.res.action).toBe('refreshed');
+			const house = last.api.current()!;
+			expect(house.cocktails.find((c) => c.id === touched)?.say, via.length + ' editions').toEqual({ value: 'Said my way', by: 'person', ts: touchedAt });
+			for (const id of drinks) if (id !== touched) expect(house.cocktails.some((c) => c.id === id), id).toBe(false);
+		}
 	});
 });

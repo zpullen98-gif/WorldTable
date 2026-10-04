@@ -706,7 +706,7 @@ export function createHouseApi(storage: HouseStorage, opts: HouseApiOpts = {}): 
 			if (!stored) return { action: 'refused', said: 'The house this pack refreshes could not be read from this device.' };
 			if (!(editionBuiltAt(shipped) > editionBuiltAt(stored))) return { action: 'current', id };
 
-			let counts: RefreshCounts = { added: 0, updated: 0, kept: 0 };
+			let counts: RefreshCounts = { added: 0, updated: 0, kept: 0, removed: 0 };
 			if (house && house.id === id) {
 				/* The current house: through the one write door, so a tab's own
 				   writes in flight land beside the refresh, never under it. */

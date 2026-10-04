@@ -28,7 +28,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { loadEngine, GUIDE, HOUSE_JSON, PACK, REL, countProblems, describe, checkArgs, sourceText as pageText, EDITION_TS, noteProblems, noteHay, thinLines } from './engine.mjs';
+import { loadEngine, GUIDE, HOUSE_JSON, PACK, REL, countProblems, describe, checkArgs, sourceText as pageText, EDITION_TS, editionInFuture, noteProblems, noteHay, thinLines } from './engine.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
@@ -50,6 +50,7 @@ const stampAt = args.indexOf('--stamp');
    site's copy to this one): --stamp sets another, --now takes the clock for a fresh edition. */
 const KEEP_TS = stampAt >= 0 ? Number(args[stampAt + 1]) : args.includes('--now') ? Date.now() : EDITION_TS;
 if (!Number.isFinite(KEEP_TS)) fail('--stamp must be a number of milliseconds');
+if (editionInFuture(KEEP_TS)) fail(editionInFuture(KEEP_TS));
 if (!FILE || !fs.existsSync(FILE)) fail(`${REL(FILE)}: missing; run build-brennans.mjs first`);
 if (!fs.existsSync(GUIDE)) fail(`${REL(GUIDE)}: missing`);
 

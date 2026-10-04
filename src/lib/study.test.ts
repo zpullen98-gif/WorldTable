@@ -175,8 +175,8 @@ describe('the cards and the progress', () => {
 		expect(h.back.say).toBe('Hussarde: hoo-SARD.');
 		expect(h.back.price).toBe('$27');
 		expect(h.back.pairs).toEqual([
-			['First pick', 'Brennan’s Essential by Piper-Heidsieck Extra Brut NV, $28 glass'],
-			['Without alcohol', 'Catalina Island']
+			['First pick', 'Brennan’s Essential by Piper-Heidsieck Extra Brut NV, $30.00'],
+			['Without alcohol', 'Personality']
 		]);
 	});
 	it('counts the latest verdict per item and keeps the menu order for the weak ones', () => {

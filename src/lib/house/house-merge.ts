@@ -128,6 +128,17 @@ export function mergeKept(a: readonly unknown[] | undefined, b: readonly unknown
 }
 
 /**
+ * How many records' notes must share one stamp before that stamp is read as
+ * an edition's and not a person's. A person keeps one note at a time, each
+ * with its own clock reading; an edition stamps every note it ships with one
+ * number, and a copy refreshed before the notes rule (the 22:00 edition of
+ * 3 October 2026) may still carry an older edition's notes under that
+ * edition's stamp, on far more records than this, in the house and in a
+ * wing's rows. house-pack.ts refreshEdition and house-sync.ts syncIn read it.
+ */
+export const EDITION_NOTE_SPREAD = 12;
+
+/**
  * The mark fields of one item when the caller named none: the kind's list
  * for a dish, a wine or a cocktail, else every field that carries a mark on
  * either side. The second branch is right for the lists without a kind

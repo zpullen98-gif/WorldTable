@@ -22,7 +22,7 @@ import { join } from 'node:path';
 
 const ROOT = fileURLToPath(new URL('../..', import.meta.url));
 const PACK = join(ROOT, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json');
-const EDITION = '2026-10-03T22:00:00.000Z';
+const EDITION = '2026-10-04T01:30:00.000Z';
 const ABOUT_Q = 'Tell me about it.';
 const COACH = ['How do I sell it?', 'What do guests ask?', 'What should I watch for?'];
 const POUR_Q = 'How do I pour it?';
@@ -57,12 +57,12 @@ describe("the Brennan's pack", () => {
 		expect(existsSync(PACK)).toBe(true);
 		const r = spawnSync(process.execPath, [join(ROOT, 'tools', 'house', 'check-pack.mjs')], { cwd: ROOT, encoding: 'utf8' });
 		expect(r.status, r.stdout + r.stderr).toBe(0);
-		expect(r.stdout).toContain('1188 marks all by person');
-		expect(r.stdout).toContain('notes 105/105/105/105/25 under the five fixed questions, 487 kept notes in all; 0 thin lines');
-		expect(r.stdout).toContain('62 dishes, 23 cocktails (6 spirit-free, 9 pairings on a coffee)');
-		expect(r.stdout).toContain('20 wines (20 with timed lines)');
-		expect(r.stdout).toContain('123 terms, 34 scenarios');
-		expect(r.stdout).toContain('64 to ask');
+		expect(r.stdout).toContain('1399 marks all by person');
+		expect(r.stdout).toContain('notes 128/128/128/128/43 under the five fixed questions, 596 kept notes in all; 0 thin lines');
+		expect(r.stdout).toContain('62 dishes, 32 cocktails (6 spirit-free, 9 pairings on a coffee)');
+		expect(r.stdout).toContain('34 wines (34 with timed lines)');
+		expect(r.stdout).toContain('125 terms, 33 scenarios');
+		expect(r.stdout).toContain('87 to ask');
 		expect(r.stdout).toContain(`edition ${EDITION}`);
 		expect(r.stdout).toContain('0 fatal');
 	});
@@ -139,8 +139,8 @@ describe("the Brennan's pack", () => {
 		const term = (t: string) => h.lexicon.find((x) => x.term === t)!;
 		expect(term('Chicory').itemIds).not.toContain(id('Congregation Single-Origin Coffee'));
 		expect(term('Chicory').itemIds).toContain(id('New Orleans-Style Coffee with Chicory'));
-		expect(term("Peychaud's").itemIds).not.toContain(id('Yellowstone'));
-		expect(term("Peychaud's Aperitivo").itemIds).toContain(id('Yellowstone'));
+		expect(term("Peychaud's").itemIds).toContain(id('Classic Sazerac'));
+		expect([...term('Lillet Blanc').itemIds!].sort()).toEqual([id('To Each His Own'), id('Riviera')].sort());
 		expect(term('Brabant potatoes').say!.value).toBe('bra-BAHNT');
 	});
 
@@ -189,6 +189,16 @@ describe("the Brennan's pack", () => {
 			expect(/\$\d/.test(w.profile!.value), `${w.name} profile carries a price`).toBe(false);
 		}
 		expect(h.dishes.find((d) => d.name === 'Thick-Cut Bacon')!.lines!.value.s10).toBe('Thick-cut bacon, meaty in the middle and crisp at the edges, a great add to any breakfast.');
+	});
+
+	it('retires the summer list with a tombstone for each drink, a millisecond after the edition that last carried it', () => {
+		const h = house() as unknown as { cocktails: Row[]; removed: Record<string, number> };
+		const summer = ['Dulce de Leche', 'Catalina Island', 'Black Hills', 'Yellowstone', 'Miami Beach', 'Niagara Falls', 'Havana', 'Acapulco'];
+		for (const name of summer) expect(h.cocktails.some((c) => c.name === name), name).toBe(false);
+		const drinks = Object.keys(h.removed).filter((k) => k.startsWith('b-'));
+		expect(drinks.length).toBe(summer.length);
+		for (const k of Object.keys(h.removed)) expect(h.removed[k], k).toBe(Date.parse('2026-10-03T22:00:00.000Z') + 1);
+		for (const name of ['Flamingo', 'Birdcage', 'Spoonbill', 'Personality', 'Oh! What It Seemed to Be']) expect(h.cocktails.some((c) => c.name === name), name).toBe(true);
 	});
 
 	it("never pairs a child's plate", () => {

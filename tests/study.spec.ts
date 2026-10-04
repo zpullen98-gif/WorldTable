@@ -19,6 +19,8 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const PACK_FILE = join(HERE, '../static/shared/packs/brennans-new-orleans.v1.oothouse.json');
 const PACK_TEXT = readFileSync(PACK_FILE, 'utf8');
 const PACK = JSON.parse(PACK_TEXT).house;
+/* the pack's own read date as the card writes it, so a new edition needs no edit here */
+const READ_ON = ((iso: string) => { const [y, m, d] = iso.split('-').map(Number); return d + ' ' + ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][m - 1] + ' ' + y; })(PACK.menusReadOn);
 const SHOTS = process.env.STUDY_SHOTS ?? '/tmp/claude-0/-home-user-zpullen98-gif-github-io/09201eae-82ec-5cba-9316-4d6cf5955e5e/scratchpad/shots/';
 const HUSSARDE = 'd-1q0xk7jv';
 const EYEBROW = 'Your words. Allergens: confirm at lineup.';
@@ -124,13 +126,13 @@ test('the Eggs Hussarde card: the first screen answers the table, the rest teach
 	await expect(c.locator('.backline')).toContainText('1 of 14 in Entrées');
 	await expect(c.locator('.backline').getByRole('button', { name: /^Next/ })).toBeVisible();
 	await expect(c.locator('.price')).toHaveText('$27');
-	await expect(c).toContainText('Prices as printed on 26 September 2026. Confirm before quoting.');
+	await expect(c).toContainText('Prices as printed on ' + READ_ON + '. Confirm before quoting.');
 	await expect(c.locator('.sayit')).toHaveText('Hussarde: hoo-SARD.');
 	await expect(c.locator('.ten')).toHaveText(PACK.dishes.find((d: any) => d.id === HUSSARDE).lines.value.s10);
 
 	// The one line a server needs next, on the card's first 844px.
 	const pour = c.locator('.pourline');
-	await expect(pour).toHaveText(/^Pour: Brennan’s Essential by Piper-Heidsieck Extra Brut NV, \$28 glass\.\s+Without alcohol: Catalina Island\.$/);
+	await expect(pour).toHaveText(/^Pour: Brennan’s Essential by Piper-Heidsieck Extra Brut NV, \$30\.00\.\s+Without alcohol: Personality\.$/);
 	const top = (await c.boundingBox())!.y;
 	const pb = (await pour.boundingBox())!;
 	expect(pb.y + pb.height - top).toBeLessThanOrEqual(844);

@@ -175,8 +175,9 @@ describe('the auto-load line', () => {
 			`${h.name} is loaded: ${h.dishes.length} dishes, ${h.cocktails.length} drinks, ${h.wines.length} wines.`
 		);
 		expect(packLine({ action: 'added', id: h.id, current: false }, text)).toContain('Switch to open it.');
-		expect(packLine({ action: 'refreshed', id: h.id, counts: { added: 3, updated: 0, kept: 1 } }, text)).toBe(`${h.name} updated: 3 new.`);
-		expect(packLine({ action: 'refreshed', id: h.id, counts: { added: 0, updated: 2, kept: 0 } }, text)).toBe(`${h.name} updated: 0 new, 2 changed.`);
+		expect(packLine({ action: 'refreshed', id: h.id, counts: { added: 3, updated: 0, kept: 1, removed: 0 } }, text)).toBe(`${h.name} updated: 3 new, 1 left as you had them.`);
+		expect(packLine({ action: 'refreshed', id: h.id, counts: { added: 0, updated: 4, kept: 0, removed: 8 } }, text)).toBe(`${h.name} updated: 0 new, 4 changed, 8 retired.`);
+		expect(packLine({ action: 'refreshed', id: h.id, counts: { added: 0, updated: 2, kept: 0, removed: 0 } }, text)).toBe(`${h.name} updated: 0 new, 2 changed.`);
 		expect(packLine({ action: 'current', id: h.id }, text)).toBe('');
 		expect(packLine({ action: 'refused', said: 'no' }, text)).toBe('');
 		expect(packCounts('not json')).toEqual({ name: 'The house', dishes: 0, cocktails: 0, wines: 0 });
