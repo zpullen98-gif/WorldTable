@@ -352,7 +352,7 @@
 
 <div id="oot-service-slot" data-print="hide"></div>
 
-<header class="house-masthead" class:house-home={path === '/'}>
+<header class="house-masthead" class:house-home={path === '/'} class:house-working={path === '/menu'}>
     <picture class="house-art" aria-hidden="true" data-print="hide">
         <img src="{base}/house/world-table-library-v1.webp" width="1536" height="1024" alt="" fetchpriority="high" decoding="async" />
     </picture>
@@ -837,6 +837,14 @@
         .house-home .brandline { font-size: clamp(2rem, 8.5vw, 3rem); }
         .house-home .head-inner { min-height: 440px; padding-top: 36px; }
         .house-home .house-art img { object-position: 49% 62%; }
+        /* My Menu is a working surface: keep its illustrated nameplate, while
+           the service controls and the first two dishes share the first screen.
+           The full welcome remains on Home; every touch target stays 44px. */
+        .house-working { min-height: 64px; }
+        .house-working .head-inner { min-height: 64px; padding-block: 9px; }
+        .house-working .house-signature, .house-working .eyebrow { display: none; }
+        .house-working .brandline { margin: 0; font-size: 1.65rem; }
+        .house-working .brandline a { display: inline-flex; align-items: center; gap: .22em; min-height: 44px; }
         /* Five words in one row at 390 and 375 (design 3.2), each word whole
            and centred in a box at least 44 px wide. The design's arithmetic
            (4 px padding, 4 px gaps) did not count the Flashcards tab's due pill,

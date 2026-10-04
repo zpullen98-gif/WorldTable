@@ -10,9 +10,10 @@ import { goto } from './helpers';
  * page.route the way house.spec.ts serves it: the suite's server withholds
  * packs, so the auto-load is the subject here and nowhere it is not asked for.
  *
- * The suite runs the standalone build (base ''), where no link to another
- * room is drawn by rule; the address shapes a based build draws are proved
- * in src/lib/wing-links.test.ts.
+ * The suite runs the standalone build (base ''), where a house's study
+ * results cannot link to a different origin's house record. The collection
+ * guide can still introduce the other apps; the record links a based build
+ * draws are proved in src/lib/wing-links.test.ts.
  */
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -57,6 +58,12 @@ test('the study view is what /menu opens on, short, with the first rows on the f
 	// Arm's length: at least two whole dishes on the first screen, not one cut off.
 	const second = (await rows(page).nth(1).boundingBox())!;
 	expect(second.y + second.height, 'the second row ends inside the first 844px').toBeLessThanOrEqual(844);
+	// Compact chrome must keep both appearance choices visible and tappable.
+	for (const name of ['Day service', 'Night service']) {
+		const choice = page.locator('#oot-service-toolbar').getByRole('button', { name, exact: true });
+		await expect(choice).toBeVisible();
+		expect((await choice.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+	}
 	await expect(page.getByRole('button', { name: 'Tasting menus 4' })).toBeVisible();
 
 	const m = await page.evaluate(() => ({ h: document.scrollingElement!.scrollHeight, w: document.scrollingElement!.scrollWidth }));
@@ -110,8 +117,9 @@ test('the shift filter drops a breakfast dish at dinner, and a drink searched fo
 	const elsewhere = page.locator('.study .elsewhere');
 	await expect(elsewhere.locator('h3')).toHaveText('Elsewhere in the house');
 	await expect(elsewhere).toContainText('Classic Sazerac, in the Ledger');
-	// Standalone: plain words, never a link to a room on another origin.
-	expect(await page.locator('a[href*="/ledger/"], a[href*="/codex/"]').count()).toBe(0);
+	// Standalone study results cannot link this house's records across origins.
+	// The collection guide's general app entrances are a separate navigation.
+	expect(await elsewhere.locator('a[href*="/ledger/"], a[href*="/codex/"]').count()).toBe(0);
 	await page.getByRole('button', { name: 'All day' }).click();
 });
 

@@ -1772,6 +1772,9 @@
 	   frame's rule sits closer: the phone's first screen is for the menu. */
 	:global(.house-main) .view > .head.studying { padding-bottom: 4px; }
 	.head.studying h1 { margin-bottom: 0; }
+	@media screen and (max-width: 599px) {
+		:global(.house-main) .view > .head.studying { padding-bottom: 2px; }
+	}
 	.headrow { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 	.quiet.studyedit {
 		min-height: 44px; padding: 0 4px; background: none; border: 0; cursor: pointer;

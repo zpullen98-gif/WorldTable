@@ -554,7 +554,7 @@ test('11. the scope chip: show all is in the address and survives Back; choosing
 
 test('12. Home is the four level cards and nothing else focusable', async ({ page }) => {
 	await home(page);
-	const focusable = await page.locator('.home').evaluate((el) =>
+	const focusable = await page.locator('main .home').evaluate((el) =>
 		[...el.querySelectorAll('a, button, input, select, textarea, [tabindex]')].map((e) => e.className)
 	);
 	expect(focusable).toHaveLength(4);
