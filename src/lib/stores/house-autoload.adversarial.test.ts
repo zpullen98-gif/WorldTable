@@ -16,7 +16,8 @@ import { putDish, removeDishFromHouse, wakeHouse } from './house-wake';
  */
 
 const PACK = readFileSync(new URL('../../../static/shared/packs/brennans-new-orleans.v1.oothouse.json', import.meta.url), 'utf8');
-const NEW_AT = Date.parse('2026-10-03T21:00:00.000Z');
+/* The shipped edition's own stamp, read off the pack so a new edition cannot leave the test behind. */
+const NEW_AT = Date.parse(JSON.parse(PACK).house.pack.builtAt);
 
 function oldPack(): string | null {
 	try {

@@ -34,6 +34,14 @@
 	} from '$lib/maitre';
 	import { adoptLines, LINE_FIELDS, type LineField } from '$lib/maitre-adopt';
 	import { onMount, tick } from 'svelte';
+	import { goto, pushState, replaceState } from '$app/navigation';
+	import { page } from '$app/state';
+	import type { Snapshot } from './$types';
+	import StudyMenu from '$lib/components/StudyMenu.svelte';
+	import StudyCard from '$lib/components/StudyCard.svelte';
+	import { readDrilled, type DrilledEntry } from '$lib/house-drilled';
+	import { latestVerdicts, say, studyRows, type StudyRow } from '$lib/study';
+	import { ITEM_ID_RE, wingInstalled } from '$lib/wing-links';
 	import {
 		buildPass,
 		clashesOver,
@@ -265,16 +273,230 @@
 		// #desk is the Menu Desk's own anchor, the one the home band and the
 		// Service tile link to; it sits below the hand form and is only rendered
 		// once the house is ready, for the same reason the dish anchors are.
-		if (id.startsWith('dish-') || id === 'desk') {
+		// In the study view a dish anchor opens that dish's card (the effect
+		// below, once the house is read), and the desk lives behind Edit.
+		if (id === 'desk' && studyOn) {
+			editMode = true;
+			void tick().then(() => document.getElementById(id)?.scrollIntoView({ block: 'start' }));
+			return;
+		}
+		if ((id.startsWith('dish-') && !studyOn) || id === 'desk') {
 			document.getElementById(id)?.scrollIntoView({ block: 'start' });
 		}
 		// #ask is the chat door: the tools row scrolls into view and her dialog
 		// opens over it, on the family line when there is no key here.
 		if (id === 'ask') {
-			document.querySelector('.tools')?.scrollIntoView({ block: 'start' });
+			if (studyOn && toolsEl) toolsEl.open = true;
+			void tick().then(() => document.querySelector('.tools')?.scrollIntoView({ block: 'start' }));
 			void askHer();
 		}
 	});
+
+	/* ---- the study view ---------------------------------------------------
+	 *
+	 * When a house is current and holds dishes, /menu opens on the study view
+	 * (docs/study-menus-design.md, 2.2): the menu to learn, not the form to
+	 * fill. "Edit the menu" shows today's page unchanged; it is component
+	 * state and never saved, so every load opens on the study view.
+	 *
+	 * The card a reader opens rides in the history (SvelteKit's shallow
+	 * pushState), so a phone's back gesture closes it; a cold /menu#d-... opens
+	 * it directly once the house is read. Stepping to the next card replaces
+	 * the entry, so back from card nine closes the card, not one card.
+	 */
+	let editMode = $state(false);
+	let studyQuery = $state('');
+	let studySection = $state('');
+	let studyMeal = $state('');
+	/** A card opened by a cold hash, held outside the history. */
+	let coldId = $state('');
+	let coldTried = false;
+	/** The list a card was opened from, for its position and its Previous and Next. */
+	let openList = $state<StudyRow[]>([]);
+	let listY = 0;
+	let lastRow = '';
+	let houseOpened = $state(false);
+	let drilled = $state<DrilledEntry[]>([]);
+	let roomsOpen = $state({ codex: false, ledger: false });
+	let toolsEl: HTMLDetailsElement | undefined = $state();
+	let slotEl: HTMLElement | undefined = $state();
+
+	const current = $derived(house.current);
+	const studyOn = $derived(!!current && current.dishes.length > 0 && !editMode && !house.blocked);
+	/* The house read: the prerendered page and the first paint say "Opening
+	   the house" rather than flash the planner's empty prompt above it. */
+	const opened = $derived(houseOpened || !!current);
+	const stateId = $derived(((page.state ?? {}) as App.PageState).study ?? '');
+	const openId = $derived(stateId || coldId);
+	const openDish = $derived(studyOn && openId ? current!.dishes.find((d) => d.id === openId) : undefined);
+	const cardList = $derived(openList.length ? openList : current ? studyRows(current, 'dish') : []);
+	const latest = $derived(current ? latestVerdicts(current.id, drilled) : new Map());
+	const menuDish = $derived(openDish ? house.dishes.find((d) => d.id === openDish.id) : undefined);
+
+	/* Study or edit is decided once a house is read, and again only when the
+	   device goes from no house to one (the shipped pack arriving, Load the
+	   pack, New house). A house the person is building by hand, empty when it
+	   was decided, stays on the editing page as dishes go in; switching
+	   houses keeps whichever page the person is on. */
+	let decided: '' | 'none' | 'house' = '';
+	$effect(() => {
+		if (!opened || decided === 'house') return;
+		const c = current;
+		if (!c) {
+			decided = 'none';
+			return;
+		}
+		decided = 'house';
+		editMode = c.dishes.length === 0;
+	});
+
+	$effect(() => {
+		if (!house.ready || houseOpened) return;
+		const api = house.api;
+		if (!api) return;
+		void api.ready().then(
+			() => (houseOpened = true),
+			() => (houseOpened = true)
+		);
+	});
+
+	onMount(() => {
+		drilled = readDrilled();
+		try {
+			studyMeal = studyMeal || localStorage.getItem('oot-study-meal-v1') || '';
+		} catch {
+			/* a convenience: all day when it cannot be read */
+		}
+		if (sharedOrigin(base)) {
+			const up = typeof navigator === 'undefined' || navigator.onLine !== false;
+			if (up) roomsOpen = { codex: true, ledger: true };
+			else
+				void Promise.all([wingInstalled('codex'), wingInstalled('ledger')]).then(([codex, ledger]) => {
+					roomsOpen = { codex, ledger };
+				});
+		}
+	});
+
+	/* A cold #d-... or #dish-... opens that card once the house is read; a miss is dropped. */
+	$effect(() => {
+		if (coldTried || !current) return;
+		coldTried = true;
+		let raw = '';
+		try {
+			raw = decodeURIComponent(location.hash.slice(1));
+		} catch {
+			return;
+		}
+		const id = raw.startsWith('dish-') ? raw.slice(5) : raw;
+		if (!ITEM_ID_RE.test(id) || !id.startsWith('d-')) return;
+		if (current.dishes.some((d) => d.id === id) && studyOn) coldId = id;
+	});
+
+	/* Back from a card: the list comes back where it was, with the focus on the row that opened it. */
+	let wasOpen = '';
+	$effect(() => {
+		const now = openDish?.id ?? '';
+		if (wasOpen && !now) {
+			const y = listY;
+			const row = lastRow;
+			/* After the router's own popstate scroll, which lands in the same frame. */
+			void tick().then(() =>
+				requestAnimationFrame(() =>
+					requestAnimationFrame(() => {
+						window.scrollTo(0, y);
+						document.querySelector<HTMLElement>(`.study .row[data-id="${row}"]`)?.focus({ preventScroll: true });
+					})
+				)
+			);
+		}
+		wasOpen = now;
+	});
+
+	async function toCardTop() {
+		await tick();
+		slotEl?.scrollIntoView({ block: 'start' });
+	}
+
+	function openCard(id: string, list: readonly StudyRow[]) {
+		listY = window.scrollY;
+		lastRow = id;
+		openList = [...list];
+		pushState('#' + id, { study: id });
+		void toCardTop();
+	}
+
+	function stepCard(id: string) {
+		if (!cardList.some((r) => r.id === id)) openList = current ? studyRows(current, 'dish') : [];
+		lastRow = id;
+		if (stateId) replaceState('#' + id, { study: id });
+		else coldId = id;
+		void toCardTop();
+	}
+
+	function closeCard() {
+		if (stateId) {
+			history.back();
+			return;
+		}
+		coldId = '';
+		replaceState(location.pathname + location.search, {});
+	}
+
+	/** Leave the study view without leaving a card in the history to come back to. */
+	function dropCard() {
+		coldId = '';
+		if (stateId || location.hash) replaceState(location.pathname + location.search, {});
+	}
+
+	async function editOne(id: string) {
+		dropCard();
+		editMode = true;
+		await tick();
+		const d = house.dishes.find((x) => x.id === id);
+		if (d) editDish(d);
+		await tick();
+		document.querySelector('.dishform')?.scrollIntoView({ block: 'start' });
+	}
+
+	async function editAll() {
+		dropCard();
+		editMode = true;
+		await tick();
+		window.scrollTo(0, 0);
+	}
+
+	async function studyAgain() {
+		editMode = false;
+		dishForm = null;
+		await tick();
+		window.scrollTo(0, 0);
+	}
+
+	/** To the flash cards or a drill, marked so their way out comes back here. */
+	function toQuiz(search: string) {
+		void goto(`${base}/menu/quiz?${search}`, { state: { fromStudy: true } });
+	}
+
+	async function openTools() {
+		if (!toolsEl) return;
+		toolsEl.open = true;
+		await tick();
+		toolsEl.scrollIntoView({ block: 'start' });
+		toolsEl.querySelector<HTMLElement>('[data-export]')?.focus();
+	}
+
+	/* The round trip to the flash cards: SvelteKit replays this on a back
+	   navigation and drops it on a fresh one. */
+	export const snapshot: Snapshot<{ q: string; s: string; m: string; y: number }> = {
+		capture: () => ({ q: studyQuery, s: studySection, m: studyMeal, y: typeof window === 'undefined' ? 0 : window.scrollY }),
+		restore: (v) => {
+			studyQuery = v.q ?? '';
+			studySection = v.s ?? '';
+			studyMeal = v.m ?? '';
+			const y = v.y ?? 0;
+			void tick().then(() => requestAnimationFrame(() => window.scrollTo(0, y)));
+		}
+	};
 
 	/* ---- the Maître d' -----------------------------------------------------
 	 * Three doors on this page: her settings and the chat in the tools row,
@@ -791,25 +1013,11 @@
 
 <svelte:head><title>My Menu · The World Table</title></svelte:head>
 
-<div class="shell view">
-	<header class="head">
-		<h1>My Menu</h1>
-		<p class="lede">
-			Pin dishes from any recipe to draft a menu. The worksheet tracks course balance, vegetarian
-			coverage and prep load, then builds a consolidated shopping list.
-		</p>
-	</header>
-
-	<!-- The house this menu belongs to, and the doors into the list of houses
-	     on the device. Prerendered as the no-house line; it reads the device
-	     in onMount only (HouseBar.svelte). -->
-	<HouseBar />
-	<!-- The house card: nothing until a house is current (HouseCard.svelte). -->
-	<HouseCard />
-
+{#snippet toolsRow()}
 	<div class="tools" data-print="hide">
 		<button
 			class="chip"
+			data-export
 			onclick={doExport}
 			disabled={session.held || (!session.menu.length && !session.pantry.length && !house.dishes.length)}
 			title={session.held
@@ -841,8 +1049,37 @@
 	</div>
 	{#if importMsg}<p class="msg" aria-live="polite">{importMsg}</p>{/if}
 	{#if herMsg}<p class="msg" role="alert">{herMsg}</p>{/if}
-	<ExportNudge />
+{/snippet}
 
+{#snippet houseDoors()}
+	<!-- The house this menu belongs to, and the doors into the list of houses
+	     on the device. Prerendered as the no-house line; it reads the device
+	     in onMount only (HouseBar.svelte). -->
+	<HouseBar />
+	<!-- The house card: nothing until a house is current (HouseCard.svelte). -->
+	<HouseCard />
+{/snippet}
+
+{#snippet kitchenLinks()}
+			<a href="{base}/menu/costing">Cost this menu ▸</a>
+			<a href="{base}/menu/preps">Preps ▸</a>
+			<a href="{base}/menu/producers">Producers ▸</a>
+			<a href="{base}/menu/prep-board">The prep board ▸</a>
+			<a href="{base}/menu/waste">The waste log ▸</a>
+			{#if house.dishes.length >= 4}
+				<a href="{base}/menu/quiz">Drill this menu ▸</a>
+			{:else if house.dishes.length}
+				The drill opens at four dishes: {4 - house.dishes.length} more to go.
+			{/if}
+			<!-- Mine is the menu with the record and the tools behind it (the four
+			     levels' nav, 2026-09-26): the two boards that used to hang off the
+			     Practise and Service tabs have their doors here now. -->
+			<a href="{base}/coverage">The coverage board ▸</a>
+			<a href="{base}/repertoire">The Repertoire ▸</a>
+			<a href="{base}/practise/firing">The firing drill ▸</a>
+{/snippet}
+
+{#snippet planner()}
 	{#if !stats}
 		<p class="empty">
 			Nothing pinned yet: open any recipe and tap “Add to menu”. A balanced draft usually wants a
@@ -1058,6 +1295,93 @@
 			{/if}
 		</section>
 	{/if}
+{/snippet}
+
+<div class="shell view">
+	<header class="head" class:studying={studyOn}>
+		<!-- On the study view the switch shares the h1's line, so the house's
+		     name, its facts and the menu itself rise up the phone's first screen. -->
+		<div class="headrow">
+			<h1>My Menu</h1>
+			{#if studyOn && current && opened && !openDish}
+				<button class="quiet studyedit" onclick={editAll}>{say('editOff')}</button>
+			{/if}
+		</div>
+		<!-- The study view says what it is in its own facts line: a lede here
+		     would push the menu itself off a phone's first screen. -->
+		{#if opened && !studyOn}
+			<p class="lede">
+				Pin dishes from any recipe to draft a menu. The worksheet tracks course balance, vegetarian
+				coverage and prep load, then builds a consolidated shopping list.
+			</p>
+		{/if}
+	</header>
+
+	{#if !opened}
+		<p class="opening" role="status">{say('opening')}</p>
+	{:else if studyOn && current}
+		{#if house.houseRefusal}
+			<p class="blocked" role="alert">{house.houseRefusal}</p>
+		{/if}
+		<div class="studyslot" bind:this={slotEl}>
+			{#if openDish}
+				<StudyCard
+					{current}
+					dish={openDish}
+					list={cardList}
+					searching={!!studyQuery.trim()}
+					is86={(id) => house.is86(id)}
+					linkable={roomsOpen}
+					recipeSlug={menuDish?.recipeSlug ?? ''}
+					onBack={closeCard}
+					onOpen={stepCard}
+					onStep={stepCard}
+					onEdit={editOne}
+					onGo={toQuiz}
+				/>
+			{:else}
+				<StudyMenu
+					{current}
+					{latest}
+					bind:query={studyQuery}
+					bind:section={studySection}
+					bind:meal={studyMeal}
+					is86={(id) => house.is86(id)}
+					canLink={roomsOpen.codex || roomsOpen.ledger}
+					onOpen={openCard}
+					onEdit={editAll}
+					showEdit={false}
+					onCards={toQuiz}
+				>
+					{#snippet footer()}<ExportNudge quiet onTools={openTools} />{/snippet}
+				</StudyMenu>
+				<HouseLists mode="study" />
+			{/if}
+		</div>
+		{#if !openDish}
+			<details class="drawer" bind:this={toolsEl} data-print="hide">
+				<summary>Session and tools</summary>
+				{@render houseDoors()}
+				{@render toolsRow()}
+				<p class="hint drawerlinks">{@render kitchenLinks()}</p>
+			</details>
+			<details class="drawer" data-print="hide">
+				<summary>Plan a menu from the Library{#if session.menu.length} ({session.menu.length} pinned){/if}</summary>
+				{@render planner()}
+			</details>
+		{/if}
+	{:else}
+		{#if current && current.dishes.length && editMode}
+			<p class="switchline" data-print="hide">
+				<button class="chip switch" onclick={studyAgain}>{say('editOn')}</button>
+				<span class="hint">Press it to go back to studying the menu.</span>
+			</p>
+		{/if}
+		{@render houseDoors()}
+		{@render toolsRow()}
+		<ExportNudge />
+
+		{@render planner()}
 
 	{#if house.blocked}
 		<!--
@@ -1088,22 +1412,7 @@
 		<p class="hint">
 			The menu the house actually serves: dish by dish, priced and allergen-marked. Saved on this
 			device and carried in the session export like everything else here.
-			<a href="{base}/menu/costing">Cost this menu ▸</a>
-			<a href="{base}/menu/preps">Preps ▸</a>
-			<a href="{base}/menu/producers">Producers ▸</a>
-			<a href="{base}/menu/prep-board">The prep board ▸</a>
-			<a href="{base}/menu/waste">The waste log ▸</a>
-			{#if house.dishes.length >= 4}
-				<a href="{base}/menu/quiz">Drill this menu ▸</a>
-			{:else if house.dishes.length}
-				The drill opens at four dishes: {4 - house.dishes.length} more to go.
-			{/if}
-			<!-- Mine is the menu with the record and the tools behind it (the four
-			     levels' nav, 2026-09-26): the two boards that used to hang off the
-			     Practise and Service tabs have their doors here now. -->
-			<a href="{base}/coverage">The coverage board ▸</a>
-			<a href="{base}/repertoire">The Repertoire ▸</a>
-			<a href="{base}/practise/firing">The firing drill ▸</a>
+			{@render kitchenLinks()}
 		</p>
 
 		<!--
@@ -1337,6 +1646,7 @@
 		     register (HouseLists.svelte). Nothing until a house is current. -->
 		<HouseLists />
 	</section>
+	{/if}
 </div>
 
 <style>
@@ -1348,7 +1658,34 @@
 	 * 320 and 375, h1 and lede sat at x=0 while every healthy route sat at 20.
 	 */
 	.view { padding-block: 26px 80px; max-width: 900px; }
+	/* The study view. The card replaces the list in place and the page
+	   scrolls its top under the modebar, never behind it. */
+	.opening { color: var(--ink-soft); font-size: 1rem; margin: 18px 0; }
+	.studyslot { scroll-margin-top: calc(var(--modebar-h, 0px) + 8px); }
+	.drawer { border-top: 1px solid var(--line); margin: 6px 0 0; }
+	.drawer:last-of-type { border-bottom: 1px solid var(--line); }
+	.drawer > summary {
+		min-height: 48px; display: flex; align-items: center; cursor: pointer;
+		font-family: var(--display); font-size: 1.15rem; color: var(--ink);
+	}
+	.drawer[open] { padding-bottom: 12px; }
+	.drawerlinks { font-size: 1rem; line-height: 2.2; }
+	.drawerlinks :global(a) { color: inherit; }
+	.switchline { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 6px 0 12px; }
+	.switchline .hint { margin: 0; }
+	.switch { min-height: 44px; font-size: 1rem; font-weight: 600; border-color: var(--turmeric-deep); }
 	.head h1 { font-size: var(--t-h2); margin-bottom: 8px; }
+	/* With no lede under it, the study view's h1 needs no gap of its own, and the
+	   frame's rule sits closer: the phone's first screen is for the menu. */
+	:global(.house-main) .view > .head.studying { padding-bottom: 10px; }
+	.head.studying h1 { margin-bottom: 0; }
+	.headrow { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+	.quiet.studyedit {
+		min-height: 44px; padding: 0 4px; background: none; border: 0; cursor: pointer;
+		font: inherit; font-size: 1rem; color: var(--ink-soft); text-decoration: underline;
+		text-underline-offset: 3px; flex: none;
+	}
+	.quiet.studyedit:hover { color: var(--ink); }
 	.tools { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 10px; }
 	.chip {
 		border: 1px solid var(--line); background: var(--card); padding: 8px 14px;

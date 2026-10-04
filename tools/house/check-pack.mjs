@@ -16,7 +16,9 @@
    its list's prefix (h- d- w- b- t- x- s- m- k- a- u-) and is unique, that every mark is by 'person'
    (the pack is the reviewed one), that the pack's format and version are the engine's, and that the
    house readPack returns round-trips through normaliseHouse unchanged, and that no house string
-   carries a British spelling (the house is American English; the research is not).
+   carries a British spelling (the house is American English; the research is not), and that every
+   dish, drink and wine carries its description and its coaching notes under the fixed questions
+   and no line is thin (engine.mjs noteProblems and thinLines, the 22:00 edition's content).
 
    The guide must be there: the validator's price rule reads it as the page, and without it the
    rule would be skipped in silence. The proper-noun and allergen-talk rules read marks by
@@ -27,7 +29,7 @@
    Runs from any directory. Exits 1 with the file and the rule on failure, one line on success. */
 
 import fs from 'node:fs';
-import { loadEngine, GUIDE, PACK, REL, countProblems, describe, eachString, answerNames, britishWords, checkArgs, sourceText as pageText, CHILD_SECTIONS, SNACK_SECTION, stemProblems, upsellRoomProblems } from './engine.mjs';
+import { loadEngine, GUIDE, PACK, REL, countProblems, describe, eachString, answerNames, britishWords, checkArgs, sourceText as pageText, CHILD_SECTIONS, SNACK_SECTION, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, FIXED_QS } from './engine.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
@@ -150,6 +152,22 @@ for (const t of house.tastings) for (const c of t.courses) if (!c.dishIds.length
 for (const s of stemProblems(house)) F('stem: ' + s);
 for (const r of upsellRoomProblems(house)) F('upsell-room: ' + r);
 
+/* The coaching notes (the design's sections 5.2 to 5.6): every dish, drink and wine carries one
+   description under "Tell me about it." and its coaching notes under the fixed questions, each once,
+   in its word range, with its quoted line, its Asked and Answer pairs or its closing sentence, no
+   dash, no banned word, no allergen talk, every price printed and every name and year in a source;
+   and no timed line, guest line or wine part is thin (engine.mjs noteProblems and thinLines). The
+   notes are kept, so they carry the edition stamp like every other kept note (checked above). */
+for (const n of noteProblems(house, noteHay(), lib.onPage)) F('note: ' + n);
+const thin = thinLines(house);
+for (const t of thin.fatal) F('thin: ' + t);
+const nc = noteCounts(house);
+const want = { dishes: 4, cocktails: 5, wines: 5 };
+for (const list of Object.keys(want)) for (const row of house[list]) {
+	const fixed = (row.kept || []).filter((k) => FIXED_QS.includes(k.q)).length;
+	if (fixed < want[list] - (list === 'cocktails' ? 1 : 0) || fixed > want[list]) F(`${list} ${row.name} carries ${fixed} notes under the fixed questions`);
+}
+
 /* The counts, the validator with the guide as the page, and the round trip. */
 for (const c of countProblems(house)) F('count: ' + c);
 const { problems, fatalCount } = lib.validateHouse(house, { sourceText: pageText(fail), fatal: C.FATAL_CODES });
@@ -168,4 +186,4 @@ if (failures.length) {
 	fail(`${failures.length} failure(s)`);
 }
 const zero = house.cocktails.filter((c) => c.zeroProof).length;
-console.log(`check-pack: ${REL(FILE)}: ${Buffer.byteLength(text)} bytes; edition ${house.pack.builtAt}, every stamp ${EDITION}; ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free, ${coffees} pairings on a coffee), ${house.wines.length} wines (${house.wines.filter((w) => w.lines).length} with timed lines), ${house.tastings.length} tastings, ${house.sources.length} sources, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask, ${house.disputes.length} disputes; ${marks} marks all by person; 0 dashes; 0 British spellings; ids ${seen.size} unique with their prefixes; 0 fatal; advisory ${JSON.stringify(flags)}; round trip holds`);
+console.log(`check-pack: ${REL(FILE)}: ${Buffer.byteLength(text)} bytes; edition ${house.pack.builtAt}, every stamp ${EDITION}; ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free, ${coffees} pairings on a coffee), ${house.wines.length} wines (${house.wines.filter((w) => w.lines).length} with timed lines), ${house.tastings.length} tastings, ${house.sources.length} sources, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask, ${house.disputes.length} disputes; ${marks} marks all by person; notes ${FIXED_QS.map((q) => nc[q]).join('/')} under the five fixed questions, ${house.dishes.concat(house.cocktails, house.wines).reduce((t, r) => t + (r.kept || []).length, 0)} kept notes in all; 0 thin lines; 0 dashes; 0 British spellings; ids ${seen.size} unique with their prefixes; 0 fatal; advisory ${JSON.stringify(flags)}; round trip holds`);

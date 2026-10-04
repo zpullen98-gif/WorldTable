@@ -390,7 +390,7 @@ for (const w of parsed.wines) {
 		producer: meta.producer, wine: meta.wine, vintage: meta.vintage, region: meta.region, grapes: [...meta.grapes], style: meta.style, made: meta.made, taste: meta.taste,
 		glass, bottle, pours: priced ? [] : ['4 oz'],
 		profile: w.profile, sayIt: w.sayIt, goesWith: w.goesWith, serve: w.serve, firstPickFor: [...w.firstPickFor], lines: null,
-		serviceNote: '', say: '', why: '', pairs: '', origin: '', kept: []
+		serviceNote: '', say: '', why: '', pairs: '', origin: '', kept: [], parts: {}
 	});
 }
 for (const t of TASTINGS) model.tastings.push(JSON.parse(JSON.stringify(t)));
@@ -686,7 +686,11 @@ for (const r of clean.wines) {
 	put(w, 'goesWith', mark(r.goesWith));
 	put(w, 'firstPickIds', firstIds.length ? mark(firstIds) : undefined);
 	put(w, 'serve', mark(r.serve));
-	put(w, 'parts', partsMark({ main: r.grapes.join(', ') + ' from ' + r.region, technique: r.made, sauce: r.profile.split(/(?<=[.!?])\s+/).slice(0, 2).join(' '), sides: r.goesWith, taste: r.taste }));
+	/* A wine's five parts are the short form (an override's parts.<key>, each 14 words or fewer, the
+	   thin-line rule in engine.mjs), so the card's profile and goes-with blocks carry the long form
+	   and a part never repeats them; a key no override sets falls back to the derived reading. */
+	const wp = r.parts || {};
+	put(w, 'parts', partsMark({ main: wp.main || r.grapes.join(', ') + ' from ' + r.region, technique: wp.technique || r.made, sauce: wp.sauce || r.profile.split(/(?<=[.!?])\s+/).slice(0, 2).join(' '), sides: wp.sides || r.goesWith, taste: wp.taste || r.taste }));
 	put(w, 'lines', linesMark(r.lines));
 	put(w, 'kept', keptNotes(r.kept));
 	w.serviceNote = r.serviceNote || '';

@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { afterNavigate } from '$app/navigation';
+	import { afterNavigate, goto } from '$app/navigation';
+	import { tick } from 'svelte';
+	import { findItem, inMeal, itemCards, latestVerdicts, say, studyProgress, type ItemCard } from '$lib/study';
 	import { page } from '$app/state';
 	import { session } from '$lib/stores/session.svelte';
 	import { house } from '$lib/stores/house.svelte';
@@ -35,13 +37,17 @@
 		ROUND_LENGTH,
 		dealRound,
 		explainAnswer,
+		dealSection,
 		modeFromSearch,
+		studyScopeFromSearch,
+		type StudyAsk,
 		poolSize,
 		shuffleCards,
+		shuffleWith,
 		stillNeeded,
 		type QuizMode
 	} from '$lib/house-drill-round';
-	import { drilledCount, drilledKey, markDrilled } from '$lib/house-drilled';
+	import { drilledCount, drilledKey, markDrilled, readDrilled } from '$lib/house-drilled';
 	import {
 		LENGTH_CHIPS,
 		SAY_KINDS,
@@ -256,7 +262,10 @@
 	function startRound(kinds: readonly DrillKind[], length: number | null) {
 		if (!current) return;
 		resetRound();
-		round = dealRound(current, kinds, length, Math.random);
+		round =
+			drillSec || drillMeal
+				? dealSection(current, kinds, drillSec, length, Math.random, drillMeal)
+				: dealRound(current, kinds, length, Math.random);
 		rSaid = round.length ? '' : 'Nothing to deal yet.';
 	}
 
@@ -315,11 +324,173 @@
 		cFlipped = false;
 	}
 
+	/* ---- the item deck: one card per dish, from the study view ------------
+	 *
+	 * The default of 'cards' when the house has kept lines: the dish's name on
+	 * the front, its ten second line, price, pairing and five parts on the
+	 * back (study.ts itemCards, kept marks only). The whole front is the Flip
+	 * button; Got it and Again are not drawn until the card is turned, so a
+	 * stray tap never grades a card nobody read. An answer is recorded as
+	 * 'card-item' in the house drill slot, the study view's progress reads it
+	 * back, and nothing here touches a level. "Part by part" is the deck this
+	 * page always had.
+	 */
+	type Scope = { kind: 'all' } | { kind: 'section'; section: string } | { kind: 'weak' } | { kind: 'item'; id: string } | { kind: 'parts' };
+	type Entry = { item: ItemCard; part?: undefined } | { part: Flashcard; item?: undefined };
+	let studyAsk = $state<StudyAsk>({ item: '', section: '', deck: '', scenario: '', meal: '' });
+	let pendingAsk = $state(false);
+	let fromStudy = $state(false);
+	let drillSec = $state('');
+	/* The study view's shift filter, carried in the query: it narrows every deck
+	   and round dealt here, as it narrows the rows there ('' is all day). */
+	let drillMeal = $state('');
+	let scope = $state<Scope>({ kind: 'all' });
+	let deckTick = $state(0);
+	const allItems = $derived.by(() => {
+		const h = current;
+		if (!h) return [] as ItemCard[];
+		return itemCards(h, 'dish', { all: true }).filter((c) => {
+			const it = findItem(h, c.itemId);
+			return !it || inMeal(it, drillMeal);
+		});
+	});
+	const itemSections = $derived.by(() => {
+		const order: string[] = [];
+		const n = new Map<string, number>();
+		for (const c of allItems) {
+			if (!n.has(c.section)) order.push(c.section);
+			n.set(c.section, (n.get(c.section) ?? 0) + 1);
+		}
+		return order.map((section) => ({ section, count: n.get(section) ?? 0 }));
+	});
+	const weakIds = $derived.by(() => {
+		void deckTick;
+		void keptHere;
+		if (!current) return [] as string[];
+		const latest = latestVerdicts(current.id, readDrilled());
+		return studyProgress(allItems.map((c) => c.itemId), latest).againIds;
+	});
+	let deckOf = $state<Entry[]>([]);
+	let dIdx = $state(0);
+	let dFlipped = $state(false);
+	let dGot = $state(0);
+	let dAgain = $state(0);
+	let dDone = $state(false);
+	let dMissed = $state<string[]>([]);
+	/* The back's five parts start closed on every card; the summary says which way it goes. */
+	let partsOpen = $state(false);
+	let deckEl: HTMLElement | undefined = $state();
+	const scopeLabel = $derived(
+		scope.kind === 'section' ? scope.section : scope.kind === 'weak' ? 'My weak ones' : scope.kind === 'item' ? (allItems.find((c) => c.itemId === (scope as { id: string }).id)?.name ?? '') : 'Whole menu'
+	);
+
+	function entriesFor(sc: Scope): Entry[] {
+		if (!current) return [];
+		if (sc.kind === 'item') {
+			const card = allItems.find((c) => c.itemId === sc.id);
+			const parts = buildFlashcards(current).filter((f) => f.itemId === sc.id);
+			return [...(card ? [{ item: card }] : []), ...parts.map((part) => ({ part }))];
+		}
+		const pool =
+			sc.kind === 'section'
+				? allItems.filter((c) => c.section === sc.section)
+				: sc.kind === 'weak'
+					? allItems.filter((c) => weakIds.includes(c.itemId))
+					: allItems;
+		return shuffleWith(pool, Math.random).map((item) => ({ item }));
+	}
+
+	async function toDeck() {
+		await tick();
+		deckEl?.scrollIntoView({ block: 'start' });
+	}
+
+	function dealItems(sc: Scope, only?: string[]) {
+		scope = sc;
+		cards = [];
+		cDone = false;
+		if (sc.kind === 'parts') {
+			deckOf = [];
+			startCards();
+			return;
+		}
+		let list = entriesFor(sc);
+		if (only) list = list.filter((e) => e.item && only.includes(e.item.itemId));
+		deckOf = list;
+		dIdx = 0;
+		dFlipped = false;
+		dGot = 0;
+		dAgain = 0;
+		dDone = false;
+		dMissed = [];
+		if (list.length) void toDeck();
+	}
+
+	function flipItem() {
+		partsOpen = false;
+		dFlipped = true;
+		void toDeck();
+	}
+
+	function judgeItem(got: boolean) {
+		const e = deckOf[dIdx];
+		if (!e || !dFlipped || !current) return;
+		if (got) dGot++;
+		else {
+			dAgain++;
+			if (e.item) dMissed = [...dMissed, e.item.itemId];
+		}
+		if (e.item) record(e.item.itemId, 'card-item', got);
+		else record(e.part.itemId, 'card-' + e.part.kind, got);
+		deckTick++;
+		if (dIdx + 1 >= deckOf.length) {
+			dDone = true;
+			markStudied();
+			return;
+		}
+		dIdx++;
+		dFlipped = false;
+		void toDeck();
+	}
+
+	/** The way out of a deck: back to the study view it came from, or to My Menu. */
+	function closeDeck() {
+		if (fromStudy && typeof history !== 'undefined' && history.length > 1) {
+			history.back();
+			return;
+		}
+		void goto(`${base}/menu`);
+	}
+
+	/* What the study view asked for, applied once the house is read. */
+	$effect(() => {
+		if (!pendingAsk || !current) return;
+		pendingAsk = false;
+		const a = studyAsk;
+		if (mode === 'cards' && allItems.length) {
+			if (a.deck === 'parts') dealItems({ kind: 'parts' });
+			else if (a.item && allItems.some((c) => c.itemId === a.item)) dealItems({ kind: 'item', id: a.item });
+			else if (a.deck === 'weak') dealItems({ kind: 'weak' });
+			else if (a.section && allItems.some((c) => c.section === a.section)) dealItems({ kind: 'section', section: a.section });
+			else dealItems({ kind: 'all' });
+		} else if (mode === 'say' && a.item) {
+			if (sayList.some((i) => i.id === a.item)) sayPick(a.item);
+		} else if (mode === 'guest' && a.scenario) {
+			const card = guestCards.find((c) => c.id === a.scenario);
+			if (card) {
+				gCard = card;
+				guestReset();
+			}
+		}
+	});
+
 	function setMode(m: QuizMode) {
 		mode = m;
 		resetRound();
 		cDone = false;
 		cards = [];
+		deckOf = [];
+		dDone = false;
 		recogniser?.stop();
 		sayReset();
 		gCard = null;
@@ -496,6 +667,11 @@
 	afterNavigate(() => {
 		speechOk = !!speechCtor();
 		setMode(modeFromSearch(page.url.search));
+		studyAsk = studyScopeFromSearch(page.url.search);
+		drillSec = mode === 'drill' ? studyAsk.section : '';
+		drillMeal = studyAsk.meal;
+		fromStudy = !!(page.state as App.PageState | undefined)?.fromStudy;
+		pendingAsk = true;
 	});
 </script>
 
@@ -529,6 +705,12 @@
 				<p class="count">
 					{current.name} · {ready.length} of {DRILL_KINDS.length} kinds deal · {keptHere} {keptHere === 1 ? 'answer' : 'answers'} kept on this device
 				</p>
+				{#if drillSec}
+					<p class="count" role="status">This round asks about {drillSec} only. <button class="chip" onclick={() => (drillSec = '')}>The whole menu</button></p>
+				{/if}
+				{#if drillMeal}
+					<p class="count" role="status">This round asks about {drillMeal} only. <button class="chip" onclick={() => (drillMeal = '')}>{say('allDay')}</button></p>
+				{/if}
 				{#if !round.length}
 					<div class="kinds" role="group" aria-label="Which kinds to ask">
 						{#each DRILL_KINDS as k (k)}
@@ -737,10 +919,99 @@
 						</div>
 					{/if}
 				{/if}
+			{:else if mode === 'cards' && allItems.length && scope.kind !== 'parts'}
+				<p class="count">
+					{current.name}{drillMeal ? ' · ' + drillMeal : ''} · {allItems.length} dishes with kept lines · {keptHere} {keptHere === 1 ? 'answer' : 'answers'} kept on this device
+				</p>
+				<div class="scopes" role="group" aria-label="Which cards">
+					<button class="chip" aria-pressed={scope.kind === 'all'} onclick={() => dealItems({ kind: 'all' })}>Whole menu ({allItems.length})</button>
+					{#each itemSections as sec (sec.section)}
+						<button class="chip" aria-pressed={scope.kind === 'section' && scope.section === sec.section} onclick={() => dealItems({ kind: 'section', section: sec.section })}>{sec.section} ({sec.count})</button>
+					{/each}
+					{#if weakIds.length}
+						<button class="chip" aria-pressed={scope.kind === 'weak'} onclick={() => dealItems({ kind: 'weak' })}>{say('weak', { n: weakIds.length })}</button>
+					{:else}
+						<button class="chip" disabled>{say('weakNone')}</button>
+					{/if}
+					<button class="chip" aria-pressed={false} onclick={() => dealItems({ kind: 'parts' })}>Part by part</button>
+				</div>
+				{#if !deckOf.length}
+					<div class="tools">
+						<button class="chip go" onclick={() => dealItems(scope)}>Deal the cards</button>
+					</div>
+				{:else if dDone}
+					<div class="flash" role="status" bind:this={deckEl}>
+						<p class="eyebrow">{say('done')}</p>
+						<p class="term">{say('count', { g: dGot, a: dAgain })}</p>
+						<p class="def">{deckOf.length} {deckOf.length === 1 ? 'card' : 'cards'} turned: {scopeLabel}.</p>
+						<div class="flashtools">
+							{#if dMissed.length}
+								<button class="chip go" onclick={() => dealItems(scope, dMissed.slice())}>{say('againDeck', { n: dMissed.length })}</button>
+							{/if}
+							<button class="chip" onclick={() => dealItems(scope)}>{say('shuffle')}</button>
+							<button class="chip" onclick={closeDeck}>{say('close')}</button>
+						</div>
+					</div>
+				{:else}
+					{@const e = deckOf[dIdx]}
+					<div class="itemdeck" bind:this={deckEl}>
+						<p class="eyebrow">
+							Card {dIdx + 1} of {deckOf.length} · {e.item ? e.item.section : e.part.kind === 'mixUp' ? 'mix-up' : e.part.kind} · {dFlipped ? 'shown' : 'hidden'}
+						</p>
+						{#if !dFlipped}
+							<button class="face" onclick={flipItem}>
+								<span class="facename">{e.item ? e.item.name : e.part.front}</span>
+								<span class="facesay">{e.item ? say('front') : 'Say it out loud, then flip.'}</span>
+								<span class="faceflip">{say('flip')}</span>
+							</button>
+						{:else}
+							<div class="back" aria-live="polite">
+								<p class="backname">{e.item ? e.item.name : e.part.front}</p>
+								{#if e.item}
+									{#if e.item.back.s10}
+										<p class="eyebrow">{say('ten')}</p>
+										<p class="backten">{e.item.back.s10}</p>
+									{/if}
+									{#if e.item.back.price}<p class="backline">{e.item.back.price}</p>{/if}
+									{#each e.item.back.pairs as [label, text] (label)}
+										<p class="backline"><b>{label}:</b> {text}</p>
+									{/each}
+									{#if e.item.back.parts.length}
+										<details class="backparts" bind:open={partsOpen}>
+											<summary>{partsOpen ? say('partsHide') : say('partsShow')}</summary>
+											<dl>
+												{#each e.item.back.parts as [label, text] (label)}<dt>{label}</dt><dd>{text}</dd>{/each}
+											</dl>
+										</details>
+									{/if}
+									{#if e.item.back.say}
+										<p class="eyebrow">{say('say')}</p>
+										<p class="backline">{e.item.back.say}</p>
+									{/if}
+								{:else}
+									<p class="backten">{e.part.back}</p>
+								{/if}
+							</div>
+							<div class="judge">
+								<button class="chip again" onclick={() => judgeItem(false)}>{say('again')}</button>
+								<button class="chip go got" onclick={() => judgeItem(true)}>{say('got')}</button>
+							</div>
+						{/if}
+						<p class="runcount" aria-live="polite">{say('count', { g: dGot, a: dAgain })}</p>
+						<div class="flashtools">
+							<button class="chip" onclick={closeDeck}>{say('close')}</button>
+						</div>
+					</div>
+				{/if}
 			{:else if mode === 'cards'}
 				<p class="count">
 					{current.name} · {cardCount} cards from what is kept · {keptHere} {keptHere === 1 ? 'answer' : 'answers'} kept on this device
 				</p>
+				{#if allItems.length}
+					<div class="tools">
+						<button class="chip" onclick={() => dealItems({ kind: 'all' })}>Back to the dish cards</button>
+					</div>
+				{/if}
 				{#if !cards.length}
 					<div class="tools">
 						<button class="chip go" disabled={!cardCount} onclick={startCards}>
@@ -975,12 +1246,14 @@
 	/* Every control on the page is at least 44px tall: a thumb on a phone in a
 	   dark corridor between courses. */
 	.chip {
-		border: 1px solid var(--line); background: var(--card); padding: 8px 14px;
+		border: 1px solid var(--line); background: var(--card); color: var(--ink); padding: 8px 14px;
 		border-radius: var(--radius); cursor: pointer; font-size: 14px; min-height: 44px;
 	}
 	.chip:hover:not(:disabled) { border-color: var(--turmeric); }
 	.chip.on { border-color: var(--turmeric); font-weight: 600; }
-	.chip.go { border-color: var(--leaf); }
+	/* The go chip keeps app.css's filled art; the scoped .chip above set only the
+	   background, which left the global cream text on a cream button. */
+	.chip.go { background: var(--accent-solid); border-color: var(--accent-solid); color: var(--on-accent); }
 	.chip:disabled { opacity: 0.6; cursor: default; }
 	.count { font-size: var(--t-micro); color: var(--muted); }
 	.empty { padding: 40px 12px; color: var(--muted); font-style: italic; }
@@ -1015,6 +1288,37 @@
 	.opt.wrong { border-color: var(--chili); }
 	.opt:disabled { opacity: 0.55; cursor: default; }
 	.flashtools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+
+	/* The item deck: the whole front one button, the back cut for arm's
+	   length, Got it and Again side by side once the card is turned. */
+	.scopes { display: flex; gap: 8px; overflow-x: auto; overscroll-behavior-x: contain; padding-bottom: 4px; margin: 10px 0; }
+	.scopes .chip { flex: none; white-space: nowrap; font-size: 1rem; }
+	.chip[aria-pressed='true'] { background: var(--accent-solid); border-color: var(--accent-solid); color: var(--on-accent); }
+	.itemdeck { scroll-margin-top: calc(var(--modebar-h, 0px) + 8px); margin-top: 6px; }
+	.face {
+		display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px;
+		width: 100%; min-height: 240px; padding: 20px 22px; text-align: left; cursor: pointer;
+		border: 1px solid var(--line); background: var(--card); color: var(--ink);
+		border-radius: var(--radius); box-shadow: var(--shadow-card); font: inherit;
+	}
+	.face:hover { border-color: var(--turmeric); }
+	.facename { font-family: var(--display); font-size: 1.75rem; line-height: 1.2; }
+	.facesay { font-size: 1rem; color: var(--ink-soft); }
+	.faceflip { margin-top: 6px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+	.back {
+		border: 1px solid var(--line); background: var(--card); border-radius: var(--radius);
+		box-shadow: var(--shadow-card); padding: 16px 18px;
+	}
+	.backname { font-family: var(--display); font-size: 1.4rem; margin: 0 0 6px; }
+	.backten { font-family: var(--display); font-size: 1.25rem; line-height: 1.4; margin: 0 0 8px; border-left: 2px solid var(--turmeric-deep); padding-left: 12px; }
+	.backline { font-size: 1.125rem; line-height: 1.5; margin: 0 0 6px; }
+	.backparts summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-size: 1rem; }
+	.backparts dl { display: grid; grid-template-columns: 8.5em 1fr; gap: 4px 12px; margin: 0 0 8px; }
+	.backparts dt { font-size: var(--t-micro); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+	.backparts dd { margin: 0; font-size: 1.125rem; line-height: 1.5; }
+	.judge { display: flex; gap: 8px; margin-top: 10px; }
+	.judge .chip { flex: 1 1 50%; min-height: 56px; font-size: 1.1rem; }
+	.runcount { font-size: 1rem; color: var(--ink-soft); margin: 8px 0 0; }
 
 	/* Say it back and Guest at the table. Every state is a word on the page:
 	   the verdict, each part's Hit or Missed, the word count against the cap. */

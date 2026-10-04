@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { swStatus } from '$lib/stores/sw-status.svelte';
 
 	/**
 	 * A new build is offered, never imposed.
@@ -9,7 +10,6 @@
 	 * out from under someone to ship a CSS tweak is not a trade worth making.
 	 */
 	let needRefresh = $state(false);
-	let offlineReady = $state(false);
 	let update: ((reload?: boolean) => Promise<void>) | null = null;
 
 	onMount(async () => {
@@ -23,7 +23,8 @@
 			});
 			update = r.updateServiceWorker;
 			r.needRefresh.subscribe((v) => (needRefresh = v));
-			r.offlineReady.subscribe((v) => (offlineReady = v));
+			// The offline-ready news is drawn in flow by the layout, not docked here.
+			r.offlineReady.subscribe((v) => (swStatus.offlineReady = v));
 		} catch {
 			// No service worker in this build (dev, or an unsupported browser).
 		}
@@ -37,11 +38,6 @@
 			<button class="go" onclick={() => update?.(true)}>Reload</button>
 			<button onclick={() => (needRefresh = false)}>Later</button>
 		</div>
-	</div>
-{:else if offlineReady}
-	<div class="toast" role="status">
-		<p>Ready to cook offline: the whole guide is on this device now.</p>
-		<div class="acts"><button onclick={() => (offlineReady = false)}>Good</button></div>
 	</div>
 {/if}
 

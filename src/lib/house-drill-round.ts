@@ -28,6 +28,7 @@ import {
 	type Rand
 } from './house/house-drills';
 import { isMark } from './house/house-schema';
+import { inMeal } from './study';
 import type { FormulaParts, House, HouseItem, Mark, Pairing } from './house/house-schema';
 
 /** The modes of /menu/quiz, as ?mode= names them; 'dish' is the menu quiz the page always had and the default. */
@@ -272,3 +273,64 @@ export function shuffleCards(cards: readonly Flashcard[], rand: Rand): Flashcard
 
 /** Every kind, for a page that lists the row before the house is in. */
 export const ALL_KINDS: readonly DrillKind[] = DRILL_KINDS;
+
+/* -------------------------------------------------------------------------
+ * The study view's doors into this page
+ * ---------------------------------------------------------------------- */
+
+/**
+ * What the study view asked /menu/quiz for, read from the query: one item,
+ * one section, a named deck (`weak`, or `parts` for the part by part cards),
+ * a scenario for Guest at the table and the meal the study view's shift
+ * filter had chosen ('' is all day), which narrows every deck it deals.
+ * Anything else in the query is ignored. Seeded in afterNavigate like the
+ * mode, never in load.
+ */
+export interface StudyAsk {
+	item: string;
+	section: string;
+	deck: '' | 'weak' | 'parts';
+	scenario: string;
+	meal: string;
+}
+
+export function studyScopeFromSearch(search: string): StudyAsk {
+	const q = new URLSearchParams(search);
+	const clean = (v: string | null) => (v ?? '').trim().slice(0, 200);
+	const deck = clean(q.get('deck'));
+	return {
+		item: clean(q.get('item')),
+		section: clean(q.get('section')),
+		deck: deck === 'weak' || deck === 'parts' ? deck : '',
+		scenario: clean(q.get('scenario')),
+		meal: clean(q.get('meal'))
+	};
+}
+
+function sectionOf(house: House, id: string): string {
+	return (findItem(house, id)?.section ?? '').trim();
+}
+
+/**
+ * A round over one section, one meal or both: the whole house's pool dealt,
+ * then only the questions about an item in the section ('' is every
+ * section) and served at the meal ('' is all day; an item nobody tagged is
+ * kept, as the study view keeps it) kept, cut to the length. The
+ * distractors still come from the whole house, so a small section never
+ * deals four options that are all its own dishes.
+ */
+export function dealSection(
+	house: House,
+	kinds: readonly DrillKind[],
+	section: string,
+	length: number | null,
+	rand: Rand,
+	meal = ''
+): DrillQuestion[] {
+	const all = dealRound(house, kinds, null, rand).filter((q) => {
+		if (section && sectionOf(house, q.itemId) !== section) return false;
+		const item = findItem(house, q.itemId);
+		return !item || inMeal(item, meal);
+	});
+	return length === null ? all : all.slice(0, Math.max(0, length));
+}

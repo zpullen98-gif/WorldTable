@@ -17,6 +17,13 @@
 <script lang="ts">
 	import { house } from '$lib/stores/house.svelte';
 
+	/**
+	 * `quiet`: one line in the soft ink at the foot of the study view's header,
+	 * no box, the same facts in fewer words; `onTools` opens Session and tools,
+	 * where the export lives, so the line never sends the reader hunting.
+	 */
+	let { quiet = false, onTools }: { quiet?: boolean; onTools?: () => void } = $props();
+
 	const nudge = $derived(house.exportNudge);
 	const persisted = $derived(house.storagePersisted);
 
@@ -24,7 +31,19 @@
 		days === 0 ? 'today' : days === 1 ? 'yesterday' : `${days} days ago`;
 </script>
 
-{#if nudge || persisted === false}
+{#if quiet && (nudge || persisted === false)}
+	<p class="quietline" data-print="hide">
+		{#if nudge && nudge.days !== null}
+			Last exported {ago(nudge.days)}, and the menu has changed since.
+		{:else if nudge}
+			Not backed up yet.
+		{:else}
+			This browser may not keep this data.
+		{/if}
+		Export from
+		{#if onTools}<button class="toolsdoor" onclick={onTools}>Session and tools</button>{:else}Session and tools{/if}.
+	</p>
+{:else if nudge || persisted === false}
 	<p class="nudge" data-print="hide">
 		{#if nudge}
 			{#if nudge.days === null}
@@ -40,6 +59,23 @@
 {/if}
 
 <style>
+	.quietline {
+		margin: 2px 0 0;
+		font-size: 1rem;
+		line-height: 1.45;
+		color: var(--ink-soft);
+	}
+	.toolsdoor {
+		min-height: 44px;
+		padding: 0 2px;
+		background: none;
+		border: 0;
+		font: inherit;
+		color: var(--ink);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		cursor: pointer;
+	}
 	.nudge {
 		margin: 0 0 12px;
 		padding: 8px 12px;

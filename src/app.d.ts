@@ -7,7 +7,15 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		// interface PageData {}
-		// interface PageState {}
+		/**
+		 * The shallow states /menu and /menu/quiz set: `study` is the dish whose
+		 * card is open on the study view (so the back gesture closes it), and
+		 * `fromStudy` marks a trip to the flash cards that should come back.
+		 */
+		interface PageState {
+			study?: string;
+			fromStudy?: boolean;
+		}
 		// interface Platform {}
 	}
 

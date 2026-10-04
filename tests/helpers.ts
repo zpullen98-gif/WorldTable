@@ -379,3 +379,21 @@ export async function seedHouses(page: Page, houses: Array<Record<string, unknow
 		[HOUSE_INDEX_KEY, houses, current ?? null] as [string, Array<Record<string, unknown>>, string | null]
 	);
 }
+
+/**
+ * Open a page and, when My Menu opens on the study view (a house with dishes
+ * is current), press "Edit the menu" so the spec meets the editing page it
+ * was written against. With no house, or an empty one, the page is already
+ * the editing page and nothing is pressed.
+ */
+export async function gotoEditing(page: Page, path = '/menu') {
+	await goto(page, path);
+	await page.waitForFunction(() => !document.querySelector('.opening'), undefined, { timeout: 15_000 });
+	await editMenu(page);
+}
+
+/** Press "Edit the menu" when the study view is showing; a no-op otherwise. */
+export async function editMenu(page: Page) {
+	const sw = page.locator('button.studyedit');
+	if (await sw.count()) await sw.click();
+}

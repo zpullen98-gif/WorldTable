@@ -1,15 +1,7 @@
 {
 	"about": "Every string the spelling map changed while building the Brennan's house: the research writes British English and the house is American, so each British form became its American spelling.",
-	"count": 18,
+	"count": 17,
 	"changes": [
-		{
-			"path": "model.wines[0].profile",
-			"before": "Extra Brut means very little added sugar, under six grams a litre: very dry, with citrus, orchard fruit, brioche and a firm, chalky finish. The live list shows $28 a glass; the restaurant’s own drinks page shows $30 — check the current price.",
-			"after": "Extra Brut means very little added sugar, under six grams a liter: very dry, with citrus, orchard fruit, brioche and a firm, chalky finish. The live list shows $28 a glass; the restaurant’s own drinks page shows $30 — check the current price.",
-			"words": [
-				"litre"
-			]
-		},
 		{
 			"path": "model.wines[0].kept[0].a",
 			"before": "Our house Champagne is a Piper-Heidsieck Extra Brut bottled under the Brennan's name, so it is drier than a standard Brut; a blend of all three Champagne grapes from the Piper-Heidsieck house. Piper-Heidsieck spells its own cuvee Essentiel. Say 'labelled for us', not 'made for us', until a bottle is checked, and do not quote a dosage or a lees age until the sommelier confirms which cuvee is in the bottle. The Bubbles page lists a bottle at $125, $75 during Bubbles.",

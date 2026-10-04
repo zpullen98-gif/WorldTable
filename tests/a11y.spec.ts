@@ -1,5 +1,5 @@
 import { test, expect, type Page } from '@playwright/test';
-import { cannedDeskFile, goto, seedDesk, seedHouse, seedHouses, seedMaitre, seedSession, TEST_KEY } from './helpers';
+import { cannedDeskFile, editMenu, goto, seedDesk, seedHouse, seedHouses, seedMaitre, seedSession, TEST_KEY } from './helpers';
 import { readFileSync } from 'node:fs';
 import AxeBuilder from '@axe-core/playwright';
 
@@ -151,7 +151,7 @@ const HER_DISH = {
 /* `seed` puts the data on the page; the session seed unless a view needs
    another record. `ready` is the one selector that only exists once the data
    rendered, named per view for the reason given in the loop. */
-const SEEDED: Array<{ path: string; name: string; ready: string; seed?: (page: Page) => Promise<void> }> = [
+const SEEDED: Array<{ path: string; name: string; ready: string; seed?: (page: Page) => Promise<void>; then?: (page: Page) => Promise<void> }> = [
 	{ path: '/menu', name: 'menu worksheet with a menu on it', ready: '.plan li' },
 	{ path: '/repertoire', name: 'repertoire with dishes cooked', ready: '.rows li' },
 	{ path: '/menu/costing', name: 'costing sheet with dishes costed', ready: '.quadrants li' },
@@ -170,7 +170,27 @@ const SEEDED: Array<{ path: string; name: string; ready: string; seed?: (page: P
 	/* The house bar with a house on the device: the line names it, every door
 	   is live, and the dishes the wake projected are on the list. The empty
 	   sweep sees the no-house line and four disabled doors. */
-	{ path: '/menu', name: 'menu worksheet with a house on the device', ready: '.dishes li', seed: (page) => seedHouses(page, [HOUSE_FIXTURE()]) }
+	{
+		path: '/menu',
+		name: 'menu worksheet with a house on the device',
+		ready: '.dishes li',
+		seed: (page) => seedHouses(page, [HOUSE_FIXTURE()]),
+		then: async (page) => {
+			await page.locator('.study .row').first().waitFor({ timeout: 15_000 });
+			await editMenu(page);
+		}
+	},
+	/* The study view the same house opens on, and one dish's card open. */
+	{ path: '/menu', name: 'study view with a house on the device', ready: '.study .row', seed: (page) => seedHouses(page, [HOUSE_FIXTURE()]) },
+	{
+		path: '/menu',
+		name: 'study card open',
+		ready: 'article.card h2',
+		seed: (page) => seedHouses(page, [HOUSE_FIXTURE()]),
+		then: async (page) => {
+			await page.locator('.study .row').first().click();
+		}
+	}
 ];
 
 /** The House's own fixture, the one house.spec.ts imports and switches. */
@@ -181,6 +201,7 @@ for (const view of SEEDED) {
 		test.setTimeout(120_000);
 		await (view.seed ?? seedSession)(page);
 		await goto(page, view.path);
+		if (view.then) await view.then(page);
 		// The section under test only exists once the store has hydrated from IDB.
 		// Named per view rather than as one shared selector: a wait that matches
 		// some other page's markup would pass while the section under test never

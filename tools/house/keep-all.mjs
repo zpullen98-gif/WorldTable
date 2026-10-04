@@ -28,7 +28,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { loadEngine, GUIDE, HOUSE_JSON, PACK, REL, countProblems, describe, checkArgs, sourceText as pageText, EDITION_TS } from './engine.mjs';
+import { loadEngine, GUIDE, HOUSE_JSON, PACK, REL, countProblems, describe, checkArgs, sourceText as pageText, EDITION_TS, noteProblems, noteHay, thinLines } from './engine.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
@@ -66,6 +66,11 @@ const sourceText = pageText(fail);
 const before = lib.validateHouse(house, { sourceText, fatal: C.FATAL_CODES });
 for (const p of before.problems) if (p.fatal) console.error(`keep-all: FATAL ${p.code} ${describe(house, p.path)}: ${p.said}`);
 if (before.fatalCount) fail(`${REL(FILE)}: ${before.fatalCount} fatal problem(s) before the flip; nothing written`);
+/* The coaching notes and the thin lines, held before anything is written (validate-pack and
+   check-pack hold them too): a pack that would fail the gate is never written. */
+const noteBad = noteProblems(house, noteHay(), lib.onPage).concat(thinLines(house).fatal);
+for (const n of noteBad) console.error('keep-all: FATAL ' + n);
+if (noteBad.length) fail(`${REL(FILE)}: ${noteBad.length} note or thin-line problem(s) before the flip; nothing written`);
 
 /* Every mark field on every list, and the card's history, by the engine's own MARK_FIELDS. */
 let flipped = 0;
@@ -89,7 +94,12 @@ let records = 0;
 for (const list of C.HOUSE_LISTS) for (const row of house[list]) {
 	row.ts = KEEP_TS;
 	records++;
-	if (Array.isArray(row.kept)) for (const note of row.kept) note.ts = KEEP_TS;
+	if (Array.isArray(row.kept)) {
+		for (const note of row.kept) note.ts = KEEP_TS;
+		/* In mergeKept's order (stamp, then question): with one stamp across the edition, any other
+		   order is rewritten by the first sync on a device, and a second boot then writes. */
+		row.kept.sort((x, y) => x.ts - y.ts || (x.q < y.q ? -1 : x.q > y.q ? 1 : 0));
+	}
 }
 for (const step of Object.keys(house.build)) house.build[step] = KEEP_TS;
 const builtAt = new Date(KEEP_TS).toISOString();

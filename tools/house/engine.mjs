@@ -28,8 +28,10 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
 /* The edition rule. A shipped pack carries house.pack.builtAt, and every mark and every record's
    ts carries exactly Date.parse of it, so a stamp that differs on a device is a person's edit.
    Fixed, so a rebuild is byte for byte the same; --stamp or --now on the builder and keep-all set
-   another for a fresh edition. */
-export const EDITION_BUILT_AT = '2026-10-03T21:00:00.000Z';
+   another for a fresh edition. The 21:00 edition of 3 October 2026 was the fuller pack; the 22:00
+   edition adds the coaching notes and the rewritten thin lines (noteProblems and thinLines below)
+   and moves every stamp with it. */
+export const EDITION_BUILT_AT = '2026-10-03T22:00:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* The page text the verbatim price rule reads: the guide, then every snapshot under pages/ in
@@ -283,7 +285,9 @@ const RESPELLING = /[A-Z]{2,}/;
 export function answerNames(problems) {
 	const sources = [];
 	if (fs.existsSync(GUIDE)) sources.push(fs.readFileSync(GUIDE, 'utf8'));
-	if (fs.existsSync(RESEARCH)) for (const f of fs.readdirSync(RESEARCH)) sources.push(fs.readFileSync(path.join(RESEARCH, f), 'utf8'));
+	/* Files only: research/deep-2026-10-03/ holds sweeps whose unverifiable and refuted records are
+	   never a source, so a subdirectory is not read here. */
+	if (fs.existsSync(RESEARCH)) for (const f of fs.readdirSync(RESEARCH)) { const p = path.join(RESEARCH, f); if (fs.statSync(p).isFile()) sources.push(fs.readFileSync(p, 'utf8')); }
 	for (const f of pageFiles()) sources.push(fs.readFileSync(f, 'utf8'));
 	const hay = sources.join('\n').replace(/\u2013/g, '-').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[\u2018\u2019]/g, "'").toLowerCase();
 	const fold = (s) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[\u2018\u2019]/g, "'").toLowerCase();
@@ -302,4 +306,161 @@ export function answerNames(problems) {
 		if (r.where.length < 3) r.where.push(p.path);
 	}
 	return [...names.values()].sort((a, b) => a.name.localeCompare(b.name));
+}
+
+/* THE COACHING NOTES (docs/study-menus-design.md, sections 5.2 to 5.6). Every dish, drink and wine
+   carries one kept note under ABOUT_Q, the description a master gives a new server, and the
+   coaching notes under the fixed questions: every kind answers SELL_Q, ASK_Q and WATCH_Q, a wine
+   answers POUR_Q too, a drink may, and a dish never does. The questions are matched character for
+   character, so a wing's notesFor finds them; the word ranges are the design's. These rules run
+   fatal in validate-pack and check-pack over the shipped edition only: a person's own note on a
+   device is never refused. */
+export const ABOUT_Q = 'Tell me about it.';
+export const SELL_Q = 'How do I sell it?';
+export const ASK_Q = 'What do guests ask?';
+export const WATCH_Q = 'What should I watch for?';
+export const POUR_Q = 'How do I pour it?';
+export const COACH_ORDER = [SELL_Q, ASK_Q, WATCH_Q, POUR_Q];
+export const FIXED_QS = [ABOUT_Q, ...COACH_ORDER];
+export const NOTE_WORDS = { [ABOUT_Q]: [120, 200], [SELL_Q]: [50, 110], [ASK_Q]: [60, 140], [WATCH_Q]: [40, 110], [POUR_Q]: [40, 110] };
+export const WATCH_CLOSE = 'Allergens: read the service note and confirm at lineup.';
+/* The floors under the timed lines (a line under them is thin, section 5.4); the caps are the
+   engine's LINE_CAPS. */
+export const LINE_FLOORS = { s10: 12, s20: 25, s45: 60 };
+const NOTE_WORD_RE = /[A-Za-z0-9\u00C0-\u024F'\u2019]+(?:-[A-Za-z0-9\u00C0-\u024F'\u2019]+)*/g;
+export function words(s) {
+	const m = typeof s === 'string' ? s.match(NOTE_WORD_RE) : null;
+	return m ? m.length : 0;
+}
+/* The words no note may use (5.2), and the talk no note may hold: a note names what is on the plate
+   and never rules on an allergen or a diet, so a sentence naming an allergen class or a diet must
+   send the server to the service note, the kitchen or lineup, and a verdict is refused outright. */
+export const BANNED_WORDS = /\b(delicious|amazing|perfect(ly)?|decadent|to die for|mouth-?watering|elevated|unique|world-class)\b/i;
+const ALLERGEN_CLASS = /\b(allerg\w*|intoleran\w*|gluten|dairy|celiac|coeliac|lactose|tree nuts?|shellfish|vegan|vegetarian|sesame|soy)\b/i;
+const ALLERGEN_POINTER = /service note|kitchen|lineup/i;
+const VERDICT = /\b(gluten|dairy|nut|egg|allergen|shellfish|soy|sesame|lactose|meat)[- ]free\b|\bcontains no\b|\bsuitable for\b|\bsafe\b/i;
+const sentencesOf = (s) => s.split(/(?<=[.!?][\u201D"]?)\s+|\n+/).filter((x) => x.trim());
+const quotedSpans = (s) => [...s.matchAll(/[\u201C"]([^\u201D"]+)[\u201D"]/g)].map((m) => m[1]);
+const foldName = (s) => s.normalize('NFD').replace(/[\u0300-\u036F]/g, '').replace(/[\u2018\u2019]/g, "'").toLowerCase();
+const noteOf = (row, q) => (Array.isArray(row.kept) ? row.kept.filter((n) => n && n.q === q) : []);
+
+/* The text the content gates read a note against: the guide, the page snapshots and every file at
+   the top of research/ (the deep sweeps under research/deep-2026-10-03/ are left out, since their
+   unverifiable and refuted records are never a source); noteProblems adds the house itself. */
+export function noteHay() {
+	const parts = [];
+	if (fs.existsSync(GUIDE)) parts.push(fs.readFileSync(GUIDE, 'utf8'));
+	for (const f of pageFiles()) parts.push(fs.readFileSync(f, 'utf8'));
+	if (fs.existsSync(RESEARCH)) for (const f of fs.readdirSync(RESEARCH)) { const p = path.join(RESEARCH, f); if (fs.statSync(p).isFile()) parts.push(fs.readFileSync(p, 'utf8')); }
+	return parts.join('\n');
+}
+
+/* The coaching-note problems of one shipped house, each a sentence naming the item and the rule.
+   `hay` is noteHay() plus the house JSON; `onPage` is the engine's price rule. */
+export function noteProblems(house, hay, onPage) {
+	const out = [];
+	/* The house's own words, its kept notes left out: a note must not vouch for itself. */
+	const folded = foldName(hay + '\n' + JSON.stringify(house, (k, v) => (k === 'kept' ? undefined : v)));
+	const required = { dishes: [SELL_Q, ASK_Q, WATCH_Q], cocktails: [SELL_Q, ASK_Q, WATCH_Q], wines: [SELL_Q, ASK_Q, WATCH_Q, POUR_Q] };
+	for (const list of ['dishes', 'cocktails', 'wines']) for (const row of house[list] || []) {
+		const at = `${list} ${row.name}`;
+		const about = noteOf(row, ABOUT_Q);
+		if (about.length !== 1) out.push(`${at}: ${about.length} notes under "${ABOUT_Q}", expected one`);
+		for (const q of required[list]) if (noteOf(row, q).length !== 1) out.push(`${at}: ${noteOf(row, q).length} notes under "${q}", expected one`);
+		if (list === 'dishes' && noteOf(row, POUR_Q).length) out.push(`${at}: a dish carries "${POUR_Q}"`);
+		if (list === 'cocktails' && noteOf(row, POUR_Q).length > 1) out.push(`${at}: "${POUR_Q}" twice`);
+		for (const n of row.kept || []) {
+			if (!FIXED_QS.includes(n.q)) continue;
+			const a = n.a;
+			const w = words(a);
+			const [lo, hi] = NOTE_WORDS[n.q];
+			if (w < lo || w > hi) out.push(`${at} "${n.q}": ${w} words, the range is ${lo} to ${hi}`);
+			if (BANNED_WORDS.test(a)) out.push(`${at} "${n.q}": the banned word "${a.match(BANNED_WORDS)[0]}"`);
+			if (/[\u2013\u2014]|\s--\s|&[mn]dash;|&#821[12];/.test(a)) out.push(`${at} "${n.q}": a dash`);
+			if (VERDICT.test(a)) out.push(`${at} "${n.q}": an allergen or diet verdict ("${a.match(VERDICT)[0]}")`);
+			for (const s of sentencesOf(a)) if (ALLERGEN_CLASS.test(s) && !ALLERGEN_POINTER.test(s)) out.push(`${at} "${n.q}": names an allergen or a diet without sending the server to the service note or the kitchen: "${s.trim()}"`);
+			for (const p of a.match(/\$\d+(?:\.\d+)?/g) || []) if (!onPage(hay, p)) out.push(`${at} "${n.q}": the price ${p} is printed nowhere in the guide or the page snapshots`);
+			for (const y of a.match(/\b(1[6-9]\d\d|20\d\d)\b/g) || []) if (folded.indexOf(y) < 0) out.push(`${at} "${n.q}": the year ${y} is in no source`);
+			/* Every capitalised word that does not open a sentence, a quote or an Asked/Answer turn is a
+			   name, and a name must stand in a source or the house. */
+			const re = /(^|[\s(])([A-Z\u00C0-\u00DE][\w\u00C0-\u024F'\u2019.]*(?:[- ][A-Z\u00C0-\u00DE][\w\u00C0-\u024F'\u2019.]*)*)/g;
+			for (const m of a.matchAll(re)) {
+				const before = a.slice(0, m.index + m[1].length).replace(/\s+$/, '');
+				if (!before || /[.!?:\u201C"(]$/.test(before) || /\n$/.test(a.slice(0, m.index + m[1].length))) continue;
+				const name = m[2].replace(/[.'\u2019]+$/, '').replace(/[\u2019']s$/, '');
+				if (name.length < 2 || /^(I|A|OK)$/.test(name)) continue;
+				for (const piece of name.split(/[- ]/)) {
+					const f = foldName(piece.replace(/[.,;:]+$/, '').replace(/[\u2019']s$/, '').replace(/[.'\u2019]+$/, ''));
+					if (f.length < 2) continue;
+					if (folded.indexOf(f) < 0) out.push(`${at} "${n.q}": the name ${piece} is in no source and not in the house`);
+				}
+			}
+			if (n.q === SELL_Q) { const qs = quotedSpans(a); if (!qs.length || !qs.some((s) => words(s) <= 25)) out.push(`${at} "${n.q}": no quoted sentence to say of 25 words or fewer`); }
+			if (n.q === POUR_Q) { const qs = quotedSpans(a); if (!qs.length || !qs.some((s) => words(s) <= 20)) out.push(`${at} "${n.q}": no quoted line to say while pouring of 20 words or fewer`); }
+			if (n.q === WATCH_Q && !a.trim().endsWith(WATCH_CLOSE)) out.push(`${at} "${n.q}": does not close on "${WATCH_CLOSE}"`);
+			if (n.q === ASK_Q) {
+				const paras = a.split(/\n\n/).map((p) => p.trim()).filter(Boolean);
+				const pairs = paras.length / 2;
+				const shaped = paras.length % 2 === 0 && paras.every((p, i) => p.startsWith(i % 2 === 0 ? 'Asked: ' : 'Answer: '));
+				if (!shaped || pairs < 2 || pairs > 3) out.push(`${at} "${n.q}": not two or three Asked and Answer pairs, each its own paragraph`);
+			}
+			if (n.q === ABOUT_Q && a.split(/\n\n/).filter((p) => p.trim()).length < 2) out.push(`${at} "${n.q}": one paragraph; the description is written in paragraphs`);
+		}
+	}
+	/* The critic's two rules over the whole edition (5.5): no two descriptions open alike (the first
+	   six words), and no sentence of six words or more in one "How do I sell it?" repeats in another. */
+	const openings = new Map();
+	const sells = new Map();
+	for (const list of ['dishes', 'cocktails', 'wines']) for (const row of house[list] || []) {
+		for (const n of noteOf(row, ABOUT_Q)) {
+			const open = foldName(n.a).replace(/[^a-z0-9' ]+/g, ' ').split(/\s+/).filter(Boolean).slice(0, 6).join(' ');
+			if (openings.has(open)) out.push(`${list} ${row.name} "${ABOUT_Q}": opens as ${openings.get(open)} does ("${open}")`);
+			else openings.set(open, row.name);
+		}
+		for (const n of noteOf(row, SELL_Q)) for (const s of sentencesOf(n.a)) {
+			if (words(s) < 6) continue;
+			const key = foldName(s).trim();
+			if (sells.has(key) && sells.get(key) !== row.name) out.push(`${list} ${row.name} "${SELL_Q}": repeats a sentence of ${sells.get(key)}'s: "${s.trim()}"`);
+			else sells.set(key, row.name);
+		}
+	}
+	return out;
+}
+
+/* Every kept note under a fixed question, counted by question, for the gates' summary lines. */
+export function noteCounts(house) {
+	const out = Object.fromEntries(FIXED_QS.map((q) => [q, 0]));
+	for (const list of ['dishes', 'cocktails', 'wines']) for (const row of house[list] || []) for (const n of row.kept || []) if (n.q in out) out[n.q]++;
+	return out;
+}
+
+/* The thin lines of section 5.4, by code, each a sentence. Fatal in the gates once the edition
+   answers them: a timed line under its floor, a dish guest line that restates the menu line, a
+   wine part that copies the field the card prints in its own block, and a price in a profile. An
+   empty part is reported and not refused (a part no source holds stays empty; a drill skips it). */
+export function thinLines(house) {
+	const fatal = [];
+	const report = [];
+	const kv = (m) => (m && typeof m === 'object' && 'value' in m ? m.value : undefined);
+	const fold = (s) => foldName(String(s || '')).replace(/[^a-z0-9]+/g, ' ').trim();
+	for (const list of ['dishes', 'cocktails', 'wines']) for (const r of house[list] || []) {
+		const at = `${list} ${r.name}`;
+		const L = kv(r.lines);
+		if (L) for (const k of ['s10', 's20', 's45']) { const w = words(L[k]); if (w && w < LINE_FLOORS[k]) fatal.push(`${at}: short-${k.slice(1)}: lines.${k} is ${w} words, the floor is ${LINE_FLOORS[k]}`); }
+		const P = kv(r.parts);
+		if (P) { const empty = ['main', 'technique', 'sauce', 'sides', 'taste'].filter((k) => !String(P[k] || '').trim()); if (empty.length) report.push(`${at}: empty-part: ${empty.join(', ')}`); }
+		if (list === 'dishes' && r.description && kv(r.guest)) {
+			const g = fold(kv(r.guest)).split(' ');
+			const d = new Set(fold(r.description).split(' '));
+			const shared = g.filter((x) => d.has(x)).length / g.length;
+			if (shared >= 0.8 && g.length - d.size <= 8) fatal.push(`${at}: menu-line: the guest line restates the menu line`);
+		}
+		if (list === 'wines' && P) {
+			if (P.sauce && fold(kv(r.profile)).indexOf(fold(P.sauce)) >= 0) fatal.push(`${at}: dup-part: parts.sauce copies the profile`);
+			if (P.sides && fold(kv(r.goesWith)).indexOf(fold(P.sides)) >= 0) fatal.push(`${at}: dup-part: parts.sides copies goesWith`);
+			for (const k of Object.keys(P)) if (words(P[k]) > 14) fatal.push(`${at}: long-part: parts.${k} is ${words(P[k])} words; a wine's part is the short form, 14 or fewer`);
+			if (/\$\d/.test(kv(r.profile) || '')) fatal.push(`${at}: price-in-profile: the profile carries a price`);
+		}
+	}
+	return { fatal, report };
 }

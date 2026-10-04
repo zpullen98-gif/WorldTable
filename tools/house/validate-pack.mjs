@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 /* validate-pack.mjs: the built Brennan's house through the engine's normaliseHouse, then
    validateHouse(house, { sourceText: guide.txt plus every snapshot in pages/, fatal: FATAL_CODES }),
-   with engine.mjs stemProblems (no shared drill stem, no filler part, no unconfirmed glass) and
-   upsellRoomProblems (every upsell poured where the guest sits) as fatal beside the engine's codes,
+   with engine.mjs stemProblems (no shared drill stem, no filler part, no unconfirmed glass),
+   upsellRoomProblems (every upsell poured where the guest sits), noteProblems (the description and
+   the coaching notes on every item, in range, sourced and allergen free) and thinLines (no timed
+   line under its floor, no wine part copying its profile) as fatal beside the engine's codes,
    so a price the guide does not print stands on a committed page whose first line names its
    source, by the same verbatim rule; every problem printed by
    code with the item and the field; the counts asserted; exit 1 on any fatal, any count that is
@@ -17,7 +19,7 @@
    Runs from any directory. Reads house/brennans/house.json by default (the builder's output). */
 
 import fs from 'node:fs';
-import { loadEngine, GUIDE, HOUSE_JSON, REL, countProblems, describe, answerNames, checkArgs, sourceText as pageText, pageFiles, stemProblems, upsellRoomProblems } from './engine.mjs';
+import { loadEngine, GUIDE, HOUSE_JSON, REL, countProblems, describe, answerNames, checkArgs, sourceText as pageText, pageFiles, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines } from './engine.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
@@ -72,6 +74,19 @@ for (const s of stems) console.error('validate-pack: FATAL stem: ' + s);
 const rooms = upsellRoomProblems(house);
 for (const r of rooms) console.error('validate-pack: FATAL upsell-room: ' + r);
 
-const bad = fatalCount + counts.length + changed.length + unanswered.length + stems.length + rooms.length + (lib.sameJson(house, input) ? 0 : 1);
-if (bad) fail(`${REL(FILE)}: ${fatalCount} fatal problem(s), ${stems.length} drill stem problem(s), ${rooms.length} upsell room problem(s), ${counts.length} count(s) off, ${changed.length} normaliser change(s), ${unanswered.length} unanswered name(s)`);
+/* The coaching notes and the thin lines (engine.mjs noteProblems and thinLines, the design's
+   sections 5.2 to 5.6): every dish, drink and wine carries its description and its coaching notes
+   under the fixed questions, each in its range and true to its sources, and no guest-facing line is
+   left under its floor or copying a field the card prints in its own block. Fatal here; the empty
+   parts are printed as a report. */
+const notes = noteProblems(house, noteHay(), lib.onPage);
+for (const n of notes) console.error('validate-pack: FATAL note: ' + n);
+const thin = thinLines(house);
+for (const t of thin.fatal) console.error('validate-pack: FATAL thin: ' + t);
+if (VERBOSE) for (const t of thin.report) console.log('    report ' + t);
+const nc = noteCounts(house);
+console.log(`validate-pack: notes ${Object.entries(nc).map(([q, c]) => `${c} "${q}"`).join(', ')}; ${thin.report.length} item(s) with an empty part (a report, not a gate)`);
+
+const bad = fatalCount + counts.length + changed.length + unanswered.length + stems.length + rooms.length + notes.length + thin.fatal.length + (lib.sameJson(house, input) ? 0 : 1);
+if (bad) fail(`${REL(FILE)}: ${fatalCount} fatal problem(s), ${stems.length} drill stem problem(s), ${rooms.length} upsell room problem(s), ${notes.length} note problem(s), ${thin.fatal.length} thin line(s), ${counts.length} count(s) off, ${changed.length} normaliser change(s), ${unanswered.length} unanswered name(s)`);
 console.log(`validate-pack: ${REL(FILE)}: 0 fatal, ${problems.length} advisory flag(s) in ${byCode.size} code(s), counts hold (${house.dishes.length} dishes, ${house.cocktails.length} cocktails, ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask, ${house.disputes.length} disputes)`);

@@ -31,6 +31,18 @@
 	const WHOM: AskWhom[] = ['chef', 'sommelier', 'bar', 'manager'];
 
 	const current = $derived(house.current);
+	/**
+	 * `study`: the study view's read-only lists, each a closed disclosure,
+	 * kept marks only and no control but the disclosure itself (the design's
+	 * section 2.1). Without it, exactly the editing lists below.
+	 */
+	let { mode = 'edit' }: { mode?: 'edit' | 'study' } = $props();
+	const keptOf = (m: Mark | undefined) => (m && m.by === 'person' && typeof m.value === 'string' ? m.value.trim() : '');
+	const studyMust = $derived(current ? current.mustKnows.filter((k) => keptOf(k.body)) : []);
+	const studyWords = $derived(current ? current.lexicon.filter((t) => keptOf(t.say) || keptOf(t.toGuest)) : []);
+	const studyTable = $derived(current ? current.scenarios.filter((x) => keptOf(x.you)) : []);
+	const studyMix = $derived(current ? current.mixUps.filter((m) => keptOf(m.difference) || keptOf(m.ask)) : []);
+
 	const items = $derived.by(() => {
 		if (!current) return [] as Array<{ id: string; name: string; kind: string }>;
 		return [
@@ -261,7 +273,81 @@
 	</fieldset>
 {/snippet}
 
-{#if current}
+{#if current && mode === 'study'}
+	<section class="houselists study" aria-labelledby="houselists-h" data-print="hide">
+		<h3 class="eyebrow" id="houselists-h">The house</h3>
+		{#if studyMust.length}
+			<details class="sd">
+				<summary>Must-knows ({studyMust.length})</summary>
+				<ul class="entries">
+					{#each studyMust as k (k.id)}
+						<li class="entry"><p class="title">{k.title}</p><p class="val">{keptOf(k.body)}</p></li>
+					{/each}
+				</ul>
+			</details>
+		{/if}
+		{#if studyWords.length}
+			<details class="sd">
+				<summary>The words ({studyWords.length})</summary>
+				<ul class="entries">
+					{#each studyWords as t (t.id)}
+						<li class="entry">
+							<p class="title">{t.term}</p>
+							{#if keptOf(t.say)}<p class="val">{keptOf(t.say)}</p>{/if}
+							{#if keptOf(t.toGuest)}<p class="val">{keptOf(t.toGuest)}</p>{/if}
+							{#if t.itemIds.length}<p class="about">About {namesOf(t.itemIds)}</p>{/if}
+						</li>
+					{/each}
+				</ul>
+			</details>
+		{/if}
+		{#if studyTable.length}
+			<details class="sd">
+				<summary>At the table ({studyTable.length})</summary>
+				<ul class="entries">
+					{#each studyTable as x (x.id)}
+						<li class="entry">
+							<p class="title">{x.title}</p>
+							{#if x.guest}<p class="rowhead">The guest</p><p class="val">{x.guest}</p>{/if}
+							<p class="rowhead">What you say</p><p class="val">{keptOf(x.you)}</p>
+							{#if keptOf(x.principle)}<p class="rowhead">The principle</p><p class="val">{keptOf(x.principle)}</p>{/if}
+						</li>
+					{/each}
+				</ul>
+			</details>
+		{/if}
+		{#if studyMix.length}
+			<details class="sd">
+				<summary>Mix-ups ({studyMix.length})</summary>
+				<ul class="entries">
+					{#each studyMix as m (m.id)}
+						<li class="entry">
+							<p class="title">{nameOf(m.aId)} or {nameOf(m.bId)}</p>
+							{#if keptOf(m.difference)}<p class="val">{keptOf(m.difference)}</p>{/if}
+							{#if keptOf(m.ask)}<p class="rowhead">The question that settles it</p><p class="val">{keptOf(m.ask)}</p>{/if}
+						</li>
+					{/each}
+				</ul>
+			</details>
+		{/if}
+		{#if current.tastings.length}
+			<details class="sd">
+				<summary>The tastings ({current.tastings.length})</summary>
+				{#each current.tastings as t (t.id)}
+					<div class="entry">
+						<p class="title">{t.name}{#if t.price}, {t.price}{/if}{#if t.meal}, {t.meal}{/if}</p>
+						<p class="about">{t.includesDrinks ? 'Drinks included' : 'Drinks not included'}{#if t.note}. {t.note}{/if}</p>
+						<ol class="tcourses">
+							{#each t.courses as c (c.n)}
+								<li>{c.label}: {c.dishIds.length ? namesOf(c.dishIds) : 'none'}{#if c.pourId || c.pourText}. Pour: {pourOf(c)}{/if}</li>
+							{/each}
+						</ol>
+					</div>
+				{/each}
+			</details>
+		{/if}
+	</section>
+{:else if current}
 	<section class="houselists" bind:this={root} aria-labelledby="houselists-h" data-print="hide">
 		<h3 class="eyebrow" id="houselists-h">The house's lists</h3>
 		<p class="said" role="status" aria-live="polite">{said}</p>
@@ -499,6 +585,27 @@
 	.houselists {
 		margin: 12px 0 16px;
 		max-width: var(--measure);
+	}
+	.study .sd {
+		border-bottom: 1px solid var(--line);
+	}
+	.study .sd > summary {
+		min-height: 48px;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		font-family: var(--display);
+		font-size: 1.1rem;
+	}
+	.study .val,
+	.study .about,
+	.study .tcourses {
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+	.tcourses {
+		margin: 4px 0 8px;
+		padding-left: 20px;
 	}
 	.eyebrow {
 		font-size: var(--t-micro);

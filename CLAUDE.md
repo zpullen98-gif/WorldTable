@@ -1138,3 +1138,64 @@ Hard-won rules the suites encode; do not relearn these:
   both spellings resolve identically. Only a based build can see it, which is
   why verify:build now resolves the fallback against `BASE_PATH` and asserts
   precache membership rather than grepping for the string.
+
+## Study menus: My Menu as a training tool
+
+With a house current that holds dishes, `/menu` opens on the study view
+(docs/study-menus-design.md, 2.2), not the editing page. "Edit the menu" shows
+today's page unchanged; it is component state, never saved, and decided once
+per load (and again only when the device goes from no house to one), so a
+house a person is building by hand stays on the editing page as dishes go in.
+
+- **The rules are `src/lib/study.ts`, pure and tested.** The design files them
+  as `src/lib/house/house-study.ts` beside the engine, ported to the two vanilla
+  wings; that directory is the engine's, so the Table's copy lives here with
+  the same names and signatures, and becomes a re-export the day the engine
+  module lands. Kept marks only, read through `kept()`; nothing reads, infers
+  or shows an allergen. The service note is printed verbatim under the fixed
+  eyebrow, and "No service note yet. Ask at lineup." when there is none.
+- **The card rides in the history.** Opening a card is SvelteKit's shallow
+  `pushState('#d-...', { study })`, so a phone's back gesture closes it; Next
+  and Previous replace the entry. A cold `/menu#d-...` (or `#dish-...`) opens
+  the card once the house is read. The list's scroll and focus come back on
+  close, after the router's own popstate scroll (two frames), and the chip
+  row scrolls sideways by `scrollLeft`, never `scrollIntoView`, which moved the
+  page and undid the restore.
+- **The round trip to the flash cards keeps the place**: the page exports a
+  `snapshot` (query, section, meal, scroll) and the quiz's "Close the deck"
+  goes `history.back()` when it was opened from the study view
+  (`page.state.fromStudy`).
+- **Links in this app are matched, never mapped** (`src/lib/study-links.ts`):
+  whole-word hits of the deck's terms and aliases, the Lexicon's terms and the
+  techniques in the dish's own text, overlaps to the longest, and a one-word
+  name not linked behind a capitalised word that does not open its sentence or
+  list item ("Canadian bacon" is loin, the deck's Bacon is belly). The dish's
+  name is exempt (menus set names in title case) and so is the kept "how it
+  tastes" part ("bright and tart" is sour, not the pastry card). Measured on
+  the v1 Brennan's pack, 3 October 2026: 51 of 62 dishes link the Floor Deck,
+  32 the Lexicon, 2 a Library recipe (Bananas Foster, Tarte Tatin). The data
+  comes through the existing precached loaders, so the block works offline.
+- **Cross-room links** (`src/lib/wing-links.ts`) are drawn only on the shared
+  origin (`base === '/table'`), for an item in the house, and when the network
+  is up or the room's own entry point is in the caches. The standalone build
+  the e2e suite runs draws none, by rule; the address shapes are proved in
+  wing-links.test.ts.
+- **Flash cards**: `/menu/quiz?mode=cards` deals one card per dish
+  (`itemCards`) by default, scoped by `section=`, `item=` or `deck=weak`; "Part
+  by part" is the deck the page always had. Got it and Again appear only after
+  Flip, and record `card-item` in the house drill slot, which the study
+  header's progress reads back. `mode=drill&section=` deals `dealSection`.
+  The study view's meal rides along as `meal=` on every deck and round it
+  deals (design 1.1), and the quiz filters its cards and `dealSection` by
+  `inMeal`, so Dinner never deals a breakfast dish. The quiz page's scoped
+  `.chip` sets its own colour and gives `.chip.go` the filled art: with only
+  a background it once drew Got it cream on cream.
+- **The first screen at 390 by 844 holds two whole rows**: no lede on the
+  study view, the switch on the h1's line, the progress on the facts line,
+  the export line at the foot of the list. study.spec asserts it.
+- **The offline-ready line** moved out of the dock into normal flow under the
+  modebar (`stores/sw-status.svelte.ts`), dismissed by Good or after eight
+  seconds; the Reload prompt stays docked.
+- Specs that test the editing page with a house on the device open it through
+  `gotoEditing()` in tests/helpers.ts. The precache with the study view in it:
+  2.954 MB gzipped against the 3.5 MB cap.

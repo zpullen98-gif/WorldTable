@@ -198,3 +198,49 @@ describe('adversarial: the page promises only what it keeps', () => {
 		expect(pageSrc).not.toMatch(/\{keptHere\} answers kept/);
 	});
 });
+
+describe('the study view’s doors into the drill page', () => {
+	it('reads item, section, deck, scenario and meal, and nothing else', async () => {
+		const { studyScopeFromSearch } = await import('./house-drill-round');
+		expect(studyScopeFromSearch('?mode=cards&item=d-1q0xk7jv&section=Entr%C3%A9es&deck=weak&scenario=s-1&meal=Dinner&x=1')).toEqual({
+			item: 'd-1q0xk7jv',
+			section: 'Entrées',
+			deck: 'weak',
+			scenario: 's-1',
+			meal: 'Dinner'
+		});
+		expect(studyScopeFromSearch('?deck=everything').deck).toBe('');
+		expect(studyScopeFromSearch('')).toEqual({ item: '', section: '', deck: '', scenario: '', meal: '' });
+	});
+	it('deals a section round of section items with options from the whole house', async () => {
+		const { readFileSync } = await import('node:fs');
+		const { dealSection, ALL_KINDS } = await import('./house-drill-round');
+		const pack = JSON.parse(readFileSync('static/shared/packs/brennans-new-orleans.v1.oothouse.json', 'utf8')).house;
+		let seed = 7;
+		const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+		const round = dealSection(pack, ALL_KINDS, 'Entrées', 10, rand);
+		expect(round.length).toBeGreaterThan(0);
+		expect(round.length).toBeLessThanOrEqual(10);
+		const entrees = new Set(pack.dishes.filter((d: { section: string }) => d.section === 'Entrées').map((d: { id: string }) => d.id));
+		for (const q of round) expect(entrees.has(q.itemId)).toBe(true);
+		const outside = round.flatMap((q) => q.options).filter((o) => pack.dishes.some((d: { name: string; section: string }) => d.name === o && d.section !== 'Entrées'));
+		expect(outside.length).toBeGreaterThan(0);
+	});
+	it('deals a meal round of items served at that meal, or tagged with none', async () => {
+		const { readFileSync } = await import('node:fs');
+		const { dealSection, ALL_KINDS } = await import('./house-drill-round');
+		const pack = JSON.parse(readFileSync('static/shared/packs/brennans-new-orleans.v1.oothouse.json', 'utf8')).house;
+		let seed = 11;
+		const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+		const round = dealSection(pack, ALL_KINDS, '', null, rand, 'Dinner');
+		expect(round.length).toBeGreaterThan(0);
+		const items = [...pack.dishes, ...pack.cocktails, ...pack.wines] as { id: string; meals?: string[] }[];
+		for (const q of round) {
+			const it = items.find((i) => i.id === q.itemId);
+			const meals = it?.meals ?? [];
+			expect(!meals.length || meals.includes('Dinner'), q.itemId).toBe(true);
+		}
+		const hussarde = pack.dishes.find((d: { name: string }) => d.name === 'Eggs Hussarde');
+		expect(round.some((q) => q.itemId === hussarde.id)).toBe(false);
+	});
+});

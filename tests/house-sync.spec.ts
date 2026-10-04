@@ -2,7 +2,7 @@ import { test, expect, type Page } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { goto, HOUSE_INDEX_KEY, seedHouse, seedHouses } from './helpers';
+import { goto, gotoEditing, editMenu, HOUSE_INDEX_KEY, seedHouse, seedHouses } from './helpers';
 
 /**
  * The Table's sync with the House (stores/house-wake.ts through
@@ -65,7 +65,7 @@ async function houseRecord(page: Page, id: string) {
 }
 
 test('no house on the device: nothing is written on load, and a dish saved stays an implicit house', async ({ page }) => {
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	await page.getByRole('button', { name: 'Add a dish' }).click();
 	await page.getByLabel('Dish name').fill('Harbour Pie');
 	await page.getByRole('button', { name: 'Add to the menu' }).click();
@@ -79,7 +79,7 @@ test('no house on the device: nothing is written on load, and a dish saved stays
 
 test('a House with a dish and an empty Table record wakes with the dish on the menu, persisted', async ({ page }) => {
 	await seedHouses(page, [fixture()]);
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	await expect(dishNames(page)).toHaveText(['Lantern Roast Chicken', 'Beetroot and Apple Salad']);
 	await expect.poll(async () => (await onDevice(page)).dishes.length).toBe(2);
 	const device = await onDevice(page);
@@ -92,14 +92,14 @@ test('a House with a dish and an empty Table record wakes with the dish on the m
 	await expect(page.locator('.da.unchecked')).toHaveCount(2);
 	// And a reload reads the same record, with no second copy.
 	await page.evaluate(() => localStorage.setItem('__wt_seed_off', '1'));
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	await expect(dishNames(page)).toHaveText(['Lantern Roast Chicken', 'Beetroot and Apple Salad']);
 });
 
 test('a Table record the House has not seen is adopted into the current house on wake, allergen line kept', async ({ page }) => {
 	await seedHouse(page); // the Table's own record: Braised cheek, d1, no house
 	await seedHouses(page, [fixture()]);
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	await expect(dishNames(page)).toHaveText(['Braised cheek', 'Lantern Roast Chicken', 'Beetroot and Apple Salad']);
 	await expect.poll(async () => (await onDevice(page)).dishes.find((d: any) => d.id === 'd1')?.house).toBe('h-lantern0');
 	const rec = await houseRecord(page, 'h-lantern0');
@@ -110,7 +110,7 @@ test('a Table record the House has not seen is adopted into the current house on
 
 test('a dish removed on the menu leaves a tombstone on the House and stays gone across a reload', async ({ page }) => {
 	await seedHouses(page, [fixture()]);
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	await expect(dishNames(page)).toHaveText(['Lantern Roast Chicken', 'Beetroot and Apple Salad']);
 	page.on('dialog', (d) => d.accept());
 	await page.locator('.dishes li', { hasText: 'Beetroot and Apple Salad' }).getByRole('button', { name: 'Remove', exact: true }).click();
@@ -119,18 +119,18 @@ test('a dish removed on the menu leaves a tombstone on the House and stays gone 
 	const rec = await houseRecord(page, 'h-lantern0');
 	expect(rec.dishes.map((d: any) => d.id)).toEqual(['d-chicken1']);
 	await page.evaluate(() => localStorage.setItem('__wt_seed_off', '1'));
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	await expect(dishNames(page)).toHaveText(['Lantern Roast Chicken']);
 });
 
 test('another tab writing the index wakes this one', async ({ page, context }) => {
 	await seedHouses(page, [fixture()]);
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	await expect(dishNames(page)).toHaveText(['Lantern Roast Chicken', 'Beetroot and Apple Salad']);
 	await page.evaluate(() => localStorage.setItem('__wt_seed_off', '1'));
 
 	const other = await context.newPage();
-	await goto(other, '/menu');
+	await gotoEditing(other);
 	await expect(dishNames(other)).toHaveText(['Lantern Roast Chicken', 'Beetroot and Apple Salad']);
 	await other.getByRole('button', { name: 'Add a dish' }).click();
 	await other.getByLabel('Dish name').fill('Harbour Pie');

@@ -9,6 +9,7 @@
 	import * as profiles from '$lib/profiles';
 	import { repertoire, dueList } from '$lib/repertoire';
 	import UpdatePrompt from '$lib/components/UpdatePrompt.svelte';
+	import { swStatus } from '$lib/stores/sw-status.svelte';
 	import TimerBar from '$lib/components/TimerBar.svelte';
 	import { bareHtmlPath } from '$lib/htmlPath';
 	import { onMount } from 'svelte';
@@ -114,6 +115,13 @@
 	// and a keystroke into that gap lands on a dead input.
 	$effect(() => {
 		document.documentElement.dataset.hydrated = 'true';
+	});
+
+	/* The offline-ready line dismisses itself after eight seconds. */
+	$effect(() => {
+		if (!swStatus.offlineReady) return;
+		const t = setTimeout(() => (swStatus.offlineReady = false), 8000);
+		return () => clearTimeout(t);
 	});
 
 	/**
@@ -365,6 +373,21 @@
 		</button>
 	</div>
 </nav>
+
+<!--
+	The offline-ready news, in normal flow under the modebar: one line and
+	"Good", gone by itself after eight seconds. It used to sit in the dock and
+	covered the text at the foot of a phone's screen, the study view's rows
+	among it. Placed here it moves nothing it is not above.
+-->
+{#if swStatus.offlineReady}
+	<div class="shell">
+		<div class="toast inflow" role="status">
+			<p>Ready to cook offline: the whole guide is on this device now.</p>
+			<button class="good" onclick={() => (swStatus.offlineReady = false)}>Good</button>
+		</div>
+	</div>
+{/if}
 
 <!--
 	The hold, announced. The house record shows its banner only on /menu, its
@@ -669,6 +692,36 @@
 	}
 
 	/* The house record's .blocked, in the layout. */
+	.toast.inflow {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 8px 14px;
+		margin: 10px 0 0;
+		padding: 6px 0 6px 12px;
+		border-left: 2px solid var(--turmeric-deep);
+		font-size: 1rem;
+		color: var(--ink);
+	}
+	.toast.inflow p {
+		margin: 0;
+	}
+	.toast.inflow .good {
+		min-height: 44px;
+		padding: 0 16px;
+		border: 1px solid var(--line);
+		background: var(--card);
+		color: var(--ink);
+		border-radius: var(--radius);
+		font: inherit;
+		cursor: pointer;
+	}
+	@media print {
+		.toast.inflow {
+			display: none;
+		}
+	}
 	.held {
 		border: 1px solid var(--chili);
 		border-left-width: 3px;

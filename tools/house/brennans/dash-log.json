@@ -1,6 +1,6 @@
 {
 	"about": "Every string the dash pass changed while building the Brennan's house, before and after, for a person to read for a changed meaning; an entry with an override number is a string an overrides.json entry set, not the guide's.",
-	"count": 400,
+	"count": 376,
 	"changes": [
 		{
 			"path": "model.card.sources[0].title",
@@ -181,11 +181,6 @@
 			"path": "model.dishes[3].parts.sauce",
 			"before": "cane syrup–glazed peaches",
 			"after": "cane syrup-glazed peaches"
-		},
-		{
-			"path": "model.dishes[3].lines.s10",
-			"before": "Roasted Rohan duck breast with cane syrup–glazed peaches and candied hazelnuts.",
-			"after": "Roasted Rohan duck breast with cane syrup-glazed peaches and candied hazelnuts."
 		},
 		{
 			"path": "model.dishes[3].lines.s20",
@@ -1102,71 +1097,6 @@
 			"after": "Serve cooler than usual, about 58°F, a few minutes in the ice bucket, so alcohol doesn’t amplify the chili. Standard red glass; pour as the steak fires."
 		},
 		{
-			"path": "model.dishes[29].lines.s10",
-			"before": "Our housemade pork sausage patty — a classic breakfast side.",
-			"after": "Our housemade pork sausage patty, a classic breakfast side."
-		},
-		{
-			"path": "model.dishes[29].lines.s20",
-			"before": "A housemade pork sausage patty — savory and well seasoned, great alongside any of the egg dishes.",
-			"after": "A housemade pork sausage patty, savory and well seasoned, great alongside any of the egg dishes."
-		},
-		{
-			"path": "model.dishes[30].lines.s10",
-			"before": "Thick-cut bacon — a great add to any breakfast.",
-			"after": "Thick-cut bacon, a great add to any breakfast."
-		},
-		{
-			"path": "model.dishes[30].lines.s20",
-			"before": "Thick-cut bacon — meaty, smoky and crisp at the edges. It’s perfect with the Eggs Sardou or the omelette.",
-			"after": "Thick-cut bacon, meaty, smoky and crisp at the edges. It’s perfect with the Eggs Sardou or the omelette."
-		},
-		{
-			"path": "model.dishes[30].lines.s45",
-			"before": "Our bacon is cut thick, so it stays meaty in the middle while the edges crisp up — smoky, salty and satisfying. It’s a natural add-on to the meatless egg dishes like the Eggs Sardou or the Crab & Corn Omelette, or to share around the table.",
-			"after": "Our bacon is cut thick, so it stays meaty in the middle while the edges crisp up, smoky, salty and satisfying. It’s a natural add-on to the meatless egg dishes like the Eggs Sardou or the Crab & Corn Omelette, or to share around the table."
-		},
-		{
-			"path": "model.dishes[31].lines.s10",
-			"before": "A buttermilk biscuit — flaky, tender and warm.",
-			"after": "A buttermilk biscuit, flaky, tender and warm."
-		},
-		{
-			"path": "model.dishes[31].lines.s20",
-			"before": "Our buttermilk biscuit is a Southern classic — tender and flaky, with a gentle tang from the buttermilk. Great for mopping up hollandaise.",
-			"after": "Our buttermilk biscuit is a Southern classic, tender and flaky, with a gentle tang from the buttermilk. Great for mopping up hollandaise."
-		},
-		{
-			"path": "model.dishes[32].lines.s10",
-			"before": "An egg any style — add one to anything.",
-			"after": "An egg any style, add one to anything."
-		},
-		{
-			"path": "model.dishes[32].lines.s20",
-			"before": "An egg cooked any way you like — scrambled, fried, poached — to add to a side, the hanger steak or a bowl of grits.",
-			"after": "An egg cooked any way you like, scrambled, fried, poached, to add to a side, the hanger steak or a bowl of grits."
-		},
-		{
-			"path": "model.dishes[32].lines.s45",
-			"before": "If you’d like an extra egg, we’ll cook it any way you like — scrambled, over easy, sunny-side up, poached. It’s a simple way to make the grits or the Brabant potatoes into a small meal, or to add a little more to the steak.",
-			"after": "If you’d like an extra egg, we’ll cook it any way you like: scrambled, over easy, sunny-side up, poached. It’s a simple way to make the grits or the Brabant potatoes into a small meal, or to add a little more to the steak."
-		},
-		{
-			"path": "model.dishes[33].lines.s10",
-			"before": "Creamy cheddar grits — Southern comfort in a bowl.",
-			"after": "Creamy cheddar grits, Southern comfort in a bowl."
-		},
-		{
-			"path": "model.dishes[33].lines.s20",
-			"before": "Our cheddar grits are creamy grits with cheddar stirred in — the Southern breakfast staple.",
-			"after": "Our cheddar grits are creamy grits with cheddar stirred in, the Southern breakfast staple."
-		},
-		{
-			"path": "model.dishes[33].lines.s45",
-			"before": "Grits are coarsely ground corn, cooked slowly until creamy — the Southern answer to polenta. Ours have cheddar stirred in, so they’re rich and a little sharp. They’re perfect with an egg any style or alongside the bacon or sausage.",
-			"after": "Grits are coarsely ground corn, cooked slowly until creamy, the Southern answer to polenta. Ours have cheddar stirred in, so they’re rich and a little sharp. They’re perfect with an egg any style or alongside the bacon or sausage."
-		},
-		{
 			"path": "model.dishes[33].serviceNote",
 			"before": "Dairy (cheddar, likely butter). Corn is gluten-free — confirm preparation.",
 			"after": "Dairy (cheddar, likely butter). Corn is gluten-free, confirm preparation."
@@ -1175,31 +1105,6 @@
 			"path": "model.dishes[34].parts.technique",
 			"before": "cubed and fried crisp — New Orleans Brabant style",
 			"after": "cubed and fried crisp, New Orleans Brabant style"
-		},
-		{
-			"path": "model.dishes[34].lines.s10",
-			"before": "Brabant potatoes — New Orleans’ crispy cubed potatoes.",
-			"after": "Brabant potatoes, New Orleans’ crispy cubed potatoes."
-		},
-		{
-			"path": "model.dishes[34].lines.s20",
-			"before": "Brabant potatoes are a New Orleans classic — cubes of potato cooked until golden and crisp outside, fluffy inside, traditionally tossed with garlic and parsley.",
-			"after": "Brabant potatoes are a New Orleans classic: cubes of potato cooked until golden and crisp outside, fluffy inside, traditionally tossed with garlic and parsley."
-		},
-		{
-			"path": "model.dishes[35].lines.s10",
-			"before": "Creamed spinach — rich and silky, a classic steakhouse side.",
-			"after": "Creamed spinach, rich and silky, a classic steakhouse side."
-		},
-		{
-			"path": "model.dishes[35].lines.s20",
-			"before": "Our creamed spinach is rich and silky — spinach cooked down in cream. It’s great with the hanger steak or alongside the eggs.",
-			"after": "Our creamed spinach is rich and silky, spinach cooked down in cream. It’s great with the hanger steak or alongside the eggs."
-		},
-		{
-			"path": "model.dishes[36].lines.s10",
-			"before": "Our succotash — glazed summer vegetables with Nueske’s bacon.",
-			"after": "Our succotash, glazed summer vegetables with Nueske’s bacon."
 		},
 		{
 			"path": "model.dishes[36].lines.s45",
@@ -1216,11 +1121,6 @@
 			"path": "model.dishes[37].lines.s10",
 			"before": "Smoked cauliflower with preserved lemon and harissa — smoky, bright and a little spicy.",
 			"after": "Smoked cauliflower with preserved lemon and harissa, smoky, bright and a little spicy."
-		},
-		{
-			"path": "model.dishes[37].lines.s20",
-			"before": "Our smoked cauliflower is finished with preserved lemon and harissa, the North African chili paste — smoky, bright and gently spicy.",
-			"after": "Our smoked cauliflower is finished with preserved lemon and harissa, the North African chili paste, smoky, bright and gently spicy."
 		},
 		{
 			"path": "model.dishes[37].lines.s45",
@@ -1253,11 +1153,6 @@
 			"after": "Maggie’s Mushrooms, our mushroom side, a perfect partner for the steaks and the Chateaubriand."
 		},
 		{
-			"path": "model.dishes[39].lines.s20",
-			"before": "Maggie’s Mushrooms is our mushroom side — earthy and savory, a natural with the Chateaubriand, the hanger steak or the blackened tofu.",
-			"after": "Maggie’s Mushrooms is our mushroom side: earthy and savory, a natural with the Chateaubriand, the hanger steak or the blackened tofu."
-		},
-		{
 			"path": "model.dishes[39].lines.s45",
 			"before": "Maggie’s Mushrooms is our mushroom side, and mushrooms are one of the best things you can put next to beef — their earthy, savory flavor makes a steak taste even beefier. It’s wonderful with the Chateaubriand, the hanger steak, or with the blackened tofu for a vegetarian meal. I’d be happy to tell you exactly how the kitchen is preparing them tonight.",
 			"after": "Maggie’s Mushrooms is our mushroom side, and mushrooms are one of the best things you can put next to beef, their earthy, savory flavor makes a steak taste even beefier. It’s wonderful with the Chateaubriand, the hanger steak, or with the blackened tofu for a vegetarian meal. I’d be happy to tell you exactly how the kitchen is preparing them tonight."
@@ -1266,11 +1161,6 @@
 			"path": "model.dishes[39].serviceNote",
 			"before": "The menu prints no description. At lineup, learn the mushroom varieties, how they’re cooked, who Maggie is, and whether it’s vegetarian (butter, stock) — then tighten these lines.",
 			"after": "The menu prints no description. At lineup, learn the mushroom varieties, how they’re cooked, who Maggie is, and whether it’s vegetarian (butter, stock), then tighten these lines."
-		},
-		{
-			"path": "model.dishes[40].lines.s10",
-			"before": "South Louisiana Rice Dressing — the Cajun cousin of dirty rice.",
-			"after": "South Louisiana Rice Dressing, the Cajun cousin of dirty rice."
 		},
 		{
 			"path": "model.dishes[40].lines.s20",
@@ -1466,11 +1356,6 @@
 			"after": "Our Lemon Tart is bright and light: a yuzu mousse, yuzu is a fragrant Japanese citrus, with lemon jelly, a sweet pastry crumb and toasted meringue."
 		},
 		{
-			"path": "model.dishes[45].lines.s45",
-			"before": "If you want something bright after a rich meal, this is it. It has everything you love about a lemon meringue tart: yuzu mousse — yuzu is a Japanese citrus that tastes like lemon, lime and mandarin at once — with a lemon jelly, a sweet pastry crumb for crunch, and toasted meringue, soft and marshmallowy. Tart, airy and refreshing.",
-			"after": "If you want something bright after a rich meal, this is it. It has everything you love about a lemon meringue tart: yuzu mousse, yuzu is a Japanese citrus that tastes like lemon, lime and mandarin at once, with a lemon jelly, a sweet pastry crumb for crunch, and toasted meringue, soft and marshmallowy. Tart, airy and refreshing."
-		},
-		{
 			"path": "model.dishes[45].serviceNote",
 			"before": "Eggs (meringue, mousse), dairy, gluten (pastry). The lightest dessert — suggest it after a rich meal.",
 			"after": "Eggs (meringue, mousse), dairy, gluten (pastry). The lightest dessert, suggest it after a rich meal."
@@ -1509,12 +1394,6 @@
 			"path": "model.dishes[46].pairing.serve",
 			"before": "375 ml half-bottle, 2–3 oz pours, 45–50°F in a small dessert or white glass; pour as dessert is fired.",
 			"after": "375 ml half-bottle, 2 to 3 oz pours, 45 to 50°F in a small dessert or white glass; pour as dessert is fired."
-		},
-		{
-			"path": "model.wines[0].profile",
-			"before": "Extra Brut means very little added sugar, under six grams a liter: very dry, with citrus, orchard fruit, brioche and a firm, chalky finish. The live list shows $28 a glass; the restaurant’s own drinks page shows $30 — check the current price.",
-			"after": "Extra Brut means very little added sugar, under six grams a liter: very dry, with citrus, orchard fruit, brioche and a firm, chalky finish. The live list shows $28 a glass; the restaurant’s own drinks page shows $30, check the current price.",
-			"override": 94
 		},
 		{
 			"path": "model.wines[0].sayIt",

@@ -3,7 +3,7 @@ import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { goto, HOUSE_INDEX_KEY, seedHouse, seedHouses } from './helpers';
+import { goto, gotoEditing, editMenu, HOUSE_INDEX_KEY, seedHouse, seedHouses } from './helpers';
 
 /**
  * The house bar on /menu, through the real page: the prerendered no-house
@@ -93,10 +93,13 @@ async function houseRecord(page: Page, id: string) {
 
 test('the page is prerendered with the no-house line, and a device with no house still reads it after hydration', async ({ page, request }) => {
 	// The HTML on disk, before any script runs: the one line, and no house name.
+	// The HTML on disk says it is opening the house, so the prerendered page
+	// and the first hydrated paint agree and the planner's empty prompt never
+	// flashes above a house (the study view, docs/study-menus-design.md 2.2.5).
 	const html = await (await request.get('/menu')).text();
-	expect(html).toContain(NO_HOUSE_LINE);
-	expect(html).toContain('<h2 id="house-line"');
-	await goto(page, '/menu');
+	expect(html).toContain('Opening the house');
+	expect(html).not.toContain('Nothing pinned yet');
+	await gotoEditing(page);
 	await expect(houseLine(page)).toHaveText(NO_HOUSE_LINE);
 	// Nothing to switch between, nothing to export, nothing to rename; the two doors in stand open.
 	await expect(page.getByRole('button', { name: 'Switch', exact: true })).toBeDisabled();
@@ -106,7 +109,7 @@ test('the page is prerendered with the no-house line, and a device with no house
 });
 
 test('New house names the line, and a dish added on the menu carries the house', async ({ page }) => {
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	await page.getByRole('button', { name: 'New house' }).click();
 	await page.getByLabel('Name the new house').fill('The Lantern Room');
 	await page.getByRole('button', { name: 'Start it' }).click();
@@ -135,7 +138,7 @@ test('New house names the line, and a dish added on the menu carries the house',
 test('a pack imported by file sends nothing to Anthropic, offers "Open it now?", and Open shows its dishes', async ({ page }) => {
 	const toHer = watchAnthropic(page);
 	await page.route('**/api.anthropic.com/**', (route) => route.abort());
-	await goto(page, '/menu');
+	await gotoEditing(page);
 
 	const dir = mkdtempSync(join(tmpdir(), 'house-'));
 	const file = join(dir, 'house-the-lantern-room.oothouse.json');
@@ -174,7 +177,7 @@ test('a pack imported by file sends nothing to Anthropic, offers "Open it now?",
 
 test('Export downloads the current house as a pack named by packFilename', async ({ page }) => {
 	await seedHouses(page, [fixture()]);
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	await expect(houseLine(page)).toContainText('The Lantern Room ·');
 	const downloading = page.waitForEvent('download');
 	await page.getByRole('button', { name: 'Export', exact: true }).click();
@@ -191,7 +194,7 @@ test('Export downloads the current house as a pack named by packFilename', async
 
 test('Switch between two houses swaps the dish list and brings it back', async ({ page }) => {
 	await seedHouses(page, [fixture(), secondHouse()], 'h-lantern0');
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	await expect(houseLine(page)).toContainText('The Lantern Room ·');
 	await expect(dishNames(page)).toHaveText(['Lantern Roast Chicken', 'Beetroot and Apple Salad']);
 
@@ -216,7 +219,7 @@ test('Switch between two houses swaps the dish list and brings it back', async (
 test('every control on the bar is 44px tall and names itself', async ({ page }) => {
 	await seedHouses(page, [fixture(), secondHouse()]);
 	await page.setViewportSize({ width: 320, height: 800 });
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	await expect(houseLine(page)).toContainText('The Lantern Room ·');
 	await page.getByRole('button', { name: 'Import a pack' }).click();
 	const short = await page.evaluate(() => {
@@ -258,7 +261,7 @@ const chickenRecord = async (page: Page) => (await houseRecord(page, 'h-lantern0
 test('the parts, the lines and the pairing are drawn Hers with the labels, the names and the words; Keep on a part flips it to Kept', async ({ page }) => {
 	const toHer = watchAnthropic(page);
 	await seedHouses(page, [herHouse()]);
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	await expect(dishNames(page)).toHaveText(['Lantern Roast Chicken', 'Beetroot and Apple Salad']);
 
 	const parts = houseRow(page, 'parts');
@@ -297,7 +300,7 @@ test('the parts, the lines and the pairing are drawn Hers with the labels, the n
 
 test('Edit then Save on a timed line shows the live count and writes the typed value as kept', async ({ page }) => {
 	await seedHouses(page, [herHouse()]);
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	const lines = houseRow(page, 'lines');
 	await lines.getByRole('button', { name: 'Edit', exact: true }).click();
 	const ten = lines.getByLabel('Ten seconds, Lantern Roast Chicken');
@@ -324,7 +327,7 @@ test('Edit then Save on a timed line shows the live count and writes the typed v
 
 test('Discard on the pairing removes it from the dish and the record; Keep all keeps everything unkept', async ({ page }) => {
 	await seedHouses(page, [herHouse()]);
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	await expect(chicken(page).locator('.lines .eyebrow')).toHaveText('Hers, not yet kept');
 	await houseRow(page, 'pairing').getByRole('button', { name: 'Discard', exact: true }).click();
 	await expect(houseRow(page, 'pairing')).toHaveCount(0);
@@ -343,7 +346,7 @@ test('Discard on the pairing removes it from the dish and the record; Keep all k
 
 test('the card is read and edited through setCard, and the history is kept through setMark', async ({ page }) => {
 	await seedHouses(page, [herHouse()]);
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	const card = page.locator('.housecard');
 	await expect(card).toContainText('14 Quay Lane, Harbourside');
 	await expect(card).toContainText('01234 567890');
@@ -377,7 +380,7 @@ test('the card is read and edited through setCard, and the history is kept throu
 
 test('a term is added by hand, its say kept, and removed with a tombstone', async ({ page }) => {
 	await seedHouses(page, [herHouse()]);
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	const lists = page.locator('.houselists');
 	const verjus = lists.locator('.entry[data-id="x-verjus01"]');
 	await expect(verjus).toContainText('Verjus');
@@ -413,7 +416,7 @@ test('a term is added by hand, its say kept, and removed with a tombstone', asyn
 
 test('the service note is typed under the fixed eyebrow, saved after the dish, and read back', async ({ page }) => {
 	await seedHouses(page, [herHouse()]);
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	await expect(chicken(page).locator('.row[data-field="serviceNote"]')).toContainText('Ask the chef which stock went into the gravy tonight.');
 	await chicken(page).getByRole('button', { name: 'Edit', exact: true }).last().click();
 	const form = page.locator('.dishform');
@@ -472,7 +475,7 @@ function herHouseBothRecords() {
 
 test('Keep all five over both records keeps all five on the House, none lost to a write in flight', async ({ page }) => {
 	await seedHouses(page, [herHouseBothRecords()]);
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	await expect(chicken(page).locator('.lines .eyebrow')).toHaveText('Hers, not yet kept');
 	await expect(chicken(page).locator('.lines .who').filter({ hasText: 'Hers' })).toHaveCount(5);
 	/* The chip fires the store's queued put (the two Floor Deck marks ride on
@@ -488,7 +491,7 @@ test('Keep all five over both records keeps all five on the House, none lost to 
 
 test('the lists open one editor at a time: an answer being written closes when a mark is edited or a panel opens', async ({ page }) => {
 	await seedHouses(page, [herHouse()]);
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	const lists = page.locator('.houselists');
 	await lists.getByRole('button', { name: 'Answer it' }).click();
 	await expect(lists.getByRole('button', { name: 'Save the answer' })).toHaveCount(1);
@@ -574,7 +577,8 @@ test('?mode=cards flips a card and Got it moves the count on', async ({ page }) 
 	await seedHouses(page, [drillFixture()]);
 	await goto(page, '/menu/quiz?mode=cards');
 	await expect(page.getByRole('button', { name: 'Flip cards' })).toHaveAttribute('aria-pressed', 'true');
-	await page.getByRole('button', { name: 'Shuffle the cards ▸' }).click();
+	// The dish cards are the default where kept lines exist; the part by part deck is a chip away.
+	await page.getByRole('button', { name: 'Part by part' }).click();
 	const card = page.locator('.flash.card');
 	await expect(card).toHaveAttribute('data-flipped', 'no');
 	await expect(card.locator('.eyebrow')).toContainText(/^Card 1 of \d+ · .+ · hidden$/);
@@ -639,7 +643,7 @@ test('a whole round marks the day studied, records every answer, and the session
 	for (const e of slot) expect(e.k.startsWith('house:h-lantern0:')).toBe(true);
 
 	// The .wtjson through the real button on /menu: the slot is not in it.
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	const exporting = page.waitForEvent('download');
 	await page.getByRole('button', { name: 'Export session' }).click();
 	const exported = readFileSync((await (await exporting).path())!, 'utf8');
@@ -798,6 +802,10 @@ test('a fresh device opens /menu and the Brennan’s pack loads itself; a second
 	const pack = JSON.parse(readFileSync(PACK_FILE, 'utf8')).house;
 	const seen = await servePack(page);
 	await goto(page, '/menu');
+	// The pack arrives after the page has opened, and the page turns to the
+	// study view of it: every dish a row. Edit shows the editing page.
+	await expect(page.locator('.study .row')).toHaveCount(pack.dishes.length);
+	await editMenu(page);
 	await expect(houseLine(page)).toContainText(`${pack.name} · ${pack.dishes.length} dishes here · ${pack.wines.length} wines in the Codex · ${pack.cocktails.length} drinks in the Ledger`);
 	await expect(page.locator('.housebar .autoline')).toHaveText(
 		`${pack.name} is loaded: ${pack.dishes.length} dishes, ${pack.cocktails.length} drinks, ${pack.wines.length} wines.`
@@ -814,6 +822,8 @@ test('a fresh device opens /menu and the Brennan’s pack loads itself; a second
 	// The second boot: the same edition, fetched again, and nothing written.
 	await page.reload();
 	await page.waitForSelector('html[data-hydrated]');
+	await expect(page.locator('.study .row').first()).toBeVisible();
+	await editMenu(page);
 	await expect.poll(() => seen.hits).toBe(2);
 	await expect(houseLine(page)).toContainText(`${pack.name} · ${pack.dishes.length} dishes here`);
 	await page.waitForTimeout(800);
@@ -836,7 +846,7 @@ test('her own dishes and no house: the pack is held, nothing is written, and Loa
 	const pack = JSON.parse(readFileSync(PACK_FILE, 'utf8')).house;
 	await seedHouse(page); // the Table's own record: Braised cheek, d1, no house
 	const seen = await servePack(page);
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	await expect(page.locator('.housebar .autoline')).toHaveText(
 		`${pack.name} is ready to load: ${pack.dishes.length} dishes, ${pack.cocktails.length} drinks, ${pack.wines.length} wines. Your own dishes stay as they are until you press Load the pack; loading files them under it.`
 	);
@@ -862,7 +872,7 @@ test('with the pack withheld the boot goes on quietly with no house and no error
 	const errors: string[] = [];
 	page.on('pageerror', (e) => errors.push(String(e)));
 	await page.route('**/shared/packs/**', (route) => route.fulfill({ status: 404, body: 'not found' }));
-	await goto(page, '/menu');
+	await gotoEditing(page);
 	await expect(houseLine(page)).toHaveText(NO_HOUSE_LINE);
 	await expect(page.locator('.housebar .autoline')).toHaveCount(0);
 	expect(errors).toEqual([]);
@@ -901,7 +911,7 @@ test('the drill deals with the worker on and the network off: nothing it needs i
 	await card.locator('.opt').first().click();
 	await expect(card.locator('.answer')).toContainText('The answer:');
 	await page.getByRole('button', { name: 'Flip cards' }).click();
-	await page.getByRole('button', { name: 'Shuffle the cards ▸' }).click();
+	await page.getByRole('button', { name: 'Part by part' }).click();
 	await page.getByRole('button', { name: 'Flip ↦' }).click();
 	await expect(page.locator('.flash.card')).toHaveAttribute('data-flipped', 'yes');
 
