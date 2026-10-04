@@ -72,7 +72,7 @@ describe("the Brennan's pack", () => {
 		expect(r.stdout).toContain(`${h.askAtLineup.length} to ask`);
 		expect(r.stdout).toContain(`edition ${EDITION}`);
 		expect(r.stdout).toContain('0 fatal');
-	});
+	}, 60_000); /* check-pack proves the 3.6 MB pack through the shipped engine: well past the 5 s default on a busy machine */
 
 	it('carries the edition stamp on the pack and on every record', () => {
 		const h = house();
