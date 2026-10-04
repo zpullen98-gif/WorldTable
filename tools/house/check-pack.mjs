@@ -29,7 +29,7 @@
    Runs from any directory. Exits 1 with the file and the rule on failure, one line on success. */
 
 import fs from 'node:fs';
-import { loadEngine, GUIDE, PACK, REL, countProblems, describe, eachString, answerNames, britishWords, checkArgs, editionInFuture, sourceText as pageText, CHILD_SECTIONS, SNACK_SECTION, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, FIXED_QS } from './engine.mjs';
+import { loadEngine, GUIDE, PACK, REL, countProblems, describe, eachString, answerNames, britishWords, checkArgs, editionInFuture, sourceText as pageText, CHILD_SECTIONS, SNACK_SECTION, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, FIXED_QS, componentProblems } from './engine.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
@@ -168,6 +168,8 @@ for (const r of upsellRoomProblems(house)) F('upsell-room: ' + r);
 for (const n of noteProblems(house, noteHay(), lib.onPage)) F('note: ' + n);
 const thin = thinLines(house);
 for (const t of thin.fatal) F('thin: ' + t);
+/* The components and the comparisons (engine.mjs componentProblems), held as the notes are. */
+for (const c of componentProblems(house, noteHay())) F('component: ' + c);
 const nc = noteCounts(house);
 const want = { dishes: 4, cocktails: 5, wines: 5 };
 for (const list of Object.keys(want)) for (const row of house[list]) {
@@ -193,4 +195,4 @@ if (failures.length) {
 	fail(`${failures.length} failure(s)`);
 }
 const zero = house.cocktails.filter((c) => c.zeroProof).length;
-console.log(`check-pack: ${REL(FILE)}: ${Buffer.byteLength(text)} bytes; edition ${house.pack.builtAt}, every stamp ${EDITION}; ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free, ${coffees} pairings on a coffee), ${house.wines.length} wines (${house.wines.filter((w) => w.lines).length} with timed lines), ${house.tastings.length} tastings, ${house.sources.length} sources, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask, ${house.disputes.length} disputes; ${marks} marks all by person; notes ${FIXED_QS.map((q) => nc[q]).join('/')} under the five fixed questions, ${house.dishes.concat(house.cocktails, house.wines).reduce((t, r) => t + (r.kept || []).length, 0)} kept notes in all; 0 thin lines; 0 dashes; 0 British spellings; ids ${seen.size} unique with their prefixes; 0 fatal; advisory ${JSON.stringify(flags)}; round trip holds`);
+console.log(`check-pack: ${REL(FILE)}: ${Buffer.byteLength(text)} bytes; edition ${house.pack.builtAt}, every stamp ${EDITION}; ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free, ${coffees} pairings on a coffee), ${house.wines.length} wines (${house.wines.filter((w) => w.lines).length} with timed lines), ${house.tastings.length} tastings, ${house.sources.length} sources, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask, ${house.disputes.length} disputes, ${(house.components || []).length} components; ${marks} marks all by person; notes ${FIXED_QS.map((q) => nc[q]).join('/')} under the five fixed questions, ${house.dishes.concat(house.cocktails, house.wines).reduce((t, r) => t + (r.kept || []).length, 0)} kept notes in all; 0 thin lines; 0 dashes; 0 British spellings; ids ${seen.size} unique with their prefixes; 0 fatal; advisory ${JSON.stringify(flags)}; round trip holds`);

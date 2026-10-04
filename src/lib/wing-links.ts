@@ -19,7 +19,7 @@
  * draws a link only for a non-empty address and words otherwise.
  */
 import { sharedOrigin } from './desk/desk-share';
-import type { House } from './house/house-schema';
+import type { CompareEntry, House } from './house/house-schema';
 
 export type Room = 'codex' | 'ledger' | 'table';
 
@@ -63,4 +63,36 @@ export async function wingInstalled(room: Room): Promise<boolean> {
 	} catch {
 		return false;
 	}
+}
+
+/** The Ledger's own slug rule (ui-new.js slugify), so a link lands on the canon drink's Library page. */
+export function ledgerSlug(name: string): string {
+	return String(name).toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+/** The address a Table ref opens: recipe/<slug> or technique/<slug>, the builder's tableRef. */
+export const TABLE_REF_RE = /^(recipe|technique)\/[a-z0-9]+(?:-[a-z0-9]+)*$/;
+
+/**
+ * Where a comparison opens, and in which room: a Table recipe or technique
+ * here (always), a Ledger cocktail's Library page or a Codex door on the
+ * shared origin only (a house wine by its card, a grape, producer or primer
+ * through the Codex's #ref= door), and nothing for a classic, which is
+ * words. `room` is the room a cross-room link needs installed or online
+ * (rule 3 above); null for a link inside the Table.
+ */
+export function compareHref(e: Pick<CompareEntry, 'app' | 'ref'>, base: string, house: House | null | undefined): { href: string; room: Room | null } {
+	const ref = typeof e.ref === 'string' ? e.ref.trim() : '';
+	if (!ref) return { href: '', room: null };
+	if (e.app === 'table') return { href: TABLE_REF_RE.test(ref) ? `${base}/${ref}` : '', room: null };
+	if (!sharedOrigin(base)) return { href: '', room: null };
+	if (e.app === 'ledger') {
+		const slug = ledgerSlug(ref);
+		return { href: slug ? `/ledger/#/library/${slug}` : '', room: 'ledger' };
+	}
+	if (e.app === 'codex') {
+		if (/^w-[a-z0-9]{8}$/.test(ref)) return { href: roomHref('codex', ref, base, house), room: 'codex' };
+		return { href: `/codex/#ref=${encodeURIComponent(ref)}`, room: 'codex' };
+	}
+	return { href: '', room: null };
 }

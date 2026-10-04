@@ -520,6 +520,32 @@ function checkParity(T, P) {
 	same('mergeHouse(bare, fixture)', T.mergeHouse(clone(bare), clone(fixture)), P.mergeHouse(clone(bare), clone(fixture)));
 	same('mergeHouse(bare, bare)', T.mergeHouse(clone(bare), clone(bare)), P.mergeHouse(clone(bare), clone(bare)));
 
+	/* The components and the comparisons: normalised, validated (a bad kind, a third comparison, a long card), the helpers a card reads, the flash cards, a merge and an edition refresh that brings them to a device that had none. */
+	const comp = clone(fixture);
+	comp.components.push({ id: 'c-story001', kind: 'story', name: 'The quay', itemIds: ['d-chicken1'], termIds: [], ts: NOW });
+	same('normaliseHouse(components)', T.normaliseHouse(clone(comp), { rand: seeded() }), P.normaliseHouse(clone(comp), { rand: seeded() }));
+	same('componentsFor', ['d-chicken1', 'b-verjus01', 'w-lantern1'].map((id) => T.componentsFor(comp, id)), ['d-chicken1', 'b-verjus01', 'w-lantern1'].map((id) => P.componentsFor(comp, id)));
+	same('componentGroups', T.componentGroups(comp, 'd-chicken1'), P.componentGroups(comp, 'd-chicken1'));
+	same('componentVideos', T.componentVideos(comp, 'c-saltcrs1'), P.componentVideos(comp, 'c-saltcrs1'));
+	same('buildFlashcards(components)', T.buildFlashcards(comp), P.buildFlashcards(comp));
+	const compBad = clone(comp);
+	compBad.components[0].kind = 'garnish';
+	compBad.components[0].card.value.front = 'one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen';
+	compBad.dishes[0].compare.value.push(clone(compBad.dishes[0].compare.value[1]), { app: 'menu', ref: '', label: 'x', same: 'y', different: 'z' });
+	compBad.videos[0].componentIds = ['c-nowhere1'];
+	const compBadT = T.validateHouse(T.normaliseHouse(clone(compBad), { rand: seeded() }).house);
+	same('validateHouse(components)', compBadT, P.validateHouse(P.normaliseHouse(clone(compBad), { rand: seeded() }).house));
+	for (const code of ['component', 'compare', 'word-cap', 'ref']) if (!compBadT.problems.some((/** @type {any} */ x) => x.code === code && (x.path.indexOf('omponent') >= 0 || x.path.indexOf('compare') >= 0))) fail.push('validateHouse(components) named no ' + code + ' problem');
+	const compMoved = clone(comp);
+	compMoved.components[0].card = { value: { front: 'Moved?', back: 'Moved.' }, by: 'person', ts: NOW + 9 };
+	compMoved.dishes[0].compare = { value: [{ app: 'classic', ref: '', label: 'Moved', same: 'S', different: 'D' }], by: 'person', ts: NOW + 9 };
+	same('mergeHouse(components, moved)', T.mergeHouse(clone(comp), clone(compMoved)), P.mergeHouse(clone(comp), clone(compMoved)));
+	const compOld = clone(fixture);
+	delete compOld.components;
+	delete compOld.dishes[0].compare;
+	delete compOld.videos[0].componentIds;
+	same('refreshEdition(components arrive)', T.refreshEdition(clone(compOld), clone(fixture)), P.refreshEdition(clone(compOld), clone(fixture)));
+
 	const PAGES = [['abc 24 def', '24'], ['glass 9', ' 9 '], ['a  b', 'a b'], ['x', ''], ['', 'y']];
 	same('onPage', PAGES.map(([h, n]) => T.onPage(h, n)), PAGES.map(([h, n]) => P.onPage(h, n)));
 

@@ -686,7 +686,8 @@ test("17. the owner's morning, end to end", async ({ page }) => {
 	await page.locator('.study .row', { has: page.locator('.nm', { hasText: 'Eggs Hussarde' }) }).click();
 	const card = page.locator('article.card');
 	await expect(card.locator('dl.bottles > div').first()).toBeVisible();
-	await expect(card.locator('.videos li').first()).toBeVisible();
+	/* The card's own Watch block: the component disclosures hold video lists too, closed until opened. */
+	await expect(card.locator('section[aria-labelledby="watch-h"] .videos li').first()).toBeVisible();
 	await back(page);
 	await expect(page.locator('#study-h')).toHaveText(PACK.name);
 	await back(page);

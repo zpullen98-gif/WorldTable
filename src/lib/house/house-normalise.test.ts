@@ -209,7 +209,7 @@ describe('the empty and the broken', () => {
 			expect(house.build).toEqual({});
 			expect(house.history).toBeUndefined();
 			expect(house.pack).toBeUndefined();
-			expect(Object.keys(house).sort()).toEqual(KEYS.House.filter((k) => k !== 'history' && k !== 'pack' && k !== 'videos').sort());
+			expect(Object.keys(house).sort()).toEqual(KEYS.House.filter((k) => k !== 'history' && k !== 'pack' && k !== 'videos' && k !== 'components').sort());
 			expect(report).toEqual([{ path: 'house.id', code: 'id', said: 'no id; minted ' + house.id }]);
 		}
 	});
@@ -367,11 +367,11 @@ describe('the caps', () => {
 
 describe('normaliseMark', () => {
 	it('knows which fields carry a list, the parts, the lines or the pairing, and that the rest is prose', () => {
-		expect(MARK_KINDS).toEqual({ ingredientsNamed: 'list', firstPickIds: 'list', upsells: 'list', parts: 'parts', lines: 'lines', pairing: 'pairing' });
+		expect(MARK_KINDS).toEqual({ ingredientsNamed: 'list', firstPickIds: 'list', upsells: 'list', parts: 'parts', lines: 'lines', pairing: 'pairing', card: 'card', compare: 'compare' });
 		for (const f of ['say', 'guest', 'why', 'pairs', 'origin', 'profile', 'goesWith', 'serve', 'toGuest', 'you', 'principle', 'difference', 'ask', 'body', 'history']) {
 			expect(markKind(f)).toBe('text');
 		}
-		const kinds = ['text', 'list', 'parts', 'lines', 'pairing'];
+		const kinds = ['text', 'list', 'parts', 'lines', 'pairing', 'card', 'compare'];
 		for (const list of HOUSE_LISTS) for (const f of MARK_FIELDS[list]) expect(kinds, `${list}.${f}`).toContain(markKind(f));
 		for (const f of MARK_FIELDS.house) expect(markKind(f)).toBe('text');
 	});

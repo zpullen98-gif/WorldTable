@@ -184,6 +184,36 @@ export const VIDEO_WHY_WORDS = 25;
 /** The longest link a video may carry. */
 export const VIDEO_URL_MAX = 500;
 
+/**
+ * The components: the ingredients, techniques and stories an item is made
+ * of, each one card shared by every item that uses it. COMPONENT_KINDS is
+ * the whole set a component may be; COMPONENT_LABELS is how a screen heads
+ * each group, in this order.
+ */
+export const COMPONENT_KINDS = ['ingredient', 'technique', 'story'] as const;
+export type ComponentKind = (typeof COMPONENT_KINDS)[number];
+export const COMPONENT_LABELS: Readonly<Record<ComponentKind, string>> = { ingredient: 'Ingredients', technique: 'Techniques', story: 'Stories' };
+
+/**
+ * The word caps on a component: the explanation, the card's front and its
+ * back. The validator holds the caps; the floors (EXPLAIN_FLOOR, CARD_BACK_FLOOR)
+ * are the pack builder's, since a person's own shorter note is no fault.
+ */
+export const COMPONENT_WORDS = { explain: 160, front: 14, back: 45 } as const;
+export const COMPONENT_FLOORS = { explain: 80, back: 20 } as const;
+
+/**
+ * Where a comparison points: a World Table recipe or technique, a Ledger
+ * cocktail, a Codex grape, producer, primer or house wine, or a classic
+ * written out with no link at all.
+ */
+export const COMPARE_APPS = ['table', 'ledger', 'codex', 'classic'] as const;
+export type CompareApp = (typeof COMPARE_APPS)[number];
+/** At most this many comparisons on one item, an in-app one first. */
+export const COMPARE_MAX = 2;
+/** The word caps on a comparison: its label, what is the same and what differs. */
+export const COMPARE_WORDS = { label: 8, same: 30, different: 30 } as const;
+
 const VIDEO_URL = new RegExp('^' + VIDEO_SCHEME + ':\\/\\/([A-Za-z0-9.-]+)(?:[\\/?#][^\\s]*)?$');
 
 /**
@@ -290,6 +320,28 @@ export interface Pairing {
  * The items
  * ---------------------------------------------------------------------- */
 
+/** A component's flash card: the cue on the front and the answer a server gives. */
+export interface ComponentCard {
+	front: string;
+	back: string;
+}
+
+/**
+ * One comparison on an item: `app` says where it points and `ref` is the
+ * target's key there (a Table recipe or technique slug, a Ledger cocktail
+ * name, a Codex grape, producer, primer category or house wine id), empty
+ * for a classic; `label` names it and `same` and `different` say what holds
+ * and what changes.
+ */
+export interface CompareEntry {
+	app: CompareApp;
+	ref: string;
+	label: string;
+	same: string;
+	different: string;
+}
+
+
 /** One printed price, with the meal it was printed for. */
 export interface MealPrice {
 	meal: string;
@@ -319,6 +371,8 @@ export interface ItemBase {
 	kept?: Note[];
 	parts?: Mark<FormulaParts>;
 	lines?: Mark<Lines>;
+	/** One or two comparisons, an in-app match first (CompareEntry), a mark like every other line. */
+	compare?: Mark<CompareEntry[]>;
 	/** A PERSON's words, plain, never written by Lizzy, never handed to her, House-only. */
 	serviceNote: string;
 	ts: number;
@@ -410,6 +464,26 @@ export interface LexiconTerm {
 	say?: Mark;
 	toGuest?: Mark;
 	itemIds: string[];
+	ts: number;
+}
+
+/**
+ * One ingredient, technique or story, written once and shared by every item
+ * that uses it: how to say it, the explanation (what it is, how it is made
+ * or done, where it comes from, why it matters here) and its flash card,
+ * each a mark, with the items it belongs to and the lexicon terms it
+ * explains. `kind` is carried as it came so the validator can name one
+ * outside COMPONENT_KINDS.
+ */
+export interface HouseComponent {
+	id: string;
+	kind: ComponentKind;
+	name: string;
+	say?: Mark;
+	explain?: Mark;
+	card?: Mark<ComponentCard>;
+	itemIds: string[];
+	termIds: string[];
 	ts: number;
 }
 
@@ -517,6 +591,8 @@ export interface HouseVideo {
 	why: string;
 	itemIds: string[];
 	termIds: string[];
+	/** The components it teaches, by id; absent when it names none, so an older video reads unchanged. */
+	componentIds?: string[];
 	house: boolean;
 	checkedOn: string;
 	ts: number;
@@ -533,7 +609,7 @@ export interface PackStamp {
 /**
  * The House. The card first (name, address, phone, site, meals, history,
  * dress code, the date the menus were read, the sources), then the
- * eleven lists (the last, the videos, only when it holds one), then the tombstones (`removed`, id to stamp), the build stamps, how
+ * twelve lists (the last two, the videos and the components, only when they hold one), then the tombstones (`removed`, id to stamp), the build stamps, how
  * it began and when. `createdAt` is an ISO date; `lastWrite` is a stamp.
  */
 export interface House {
@@ -561,6 +637,8 @@ export interface House {
 	disputes: Dispute[];
 	/** The videos: absent when the house holds none, so a house from before the list reads unchanged. */
 	videos?: HouseVideo[];
+	/** The components: absent when the house holds none, the videos' rule. */
+	components?: HouseComponent[];
 	removed: Record<string, number>;
 	build: Partial<Record<BuildStep, number>>;
 	began: Began;
@@ -589,11 +667,11 @@ export interface HouseStub {
  * ---------------------------------------------------------------------- */
 
 /**
- * The eleven lists on a House, in the order the record carries them: the
+ * The twelve lists on a House, in the order the record carries them: the
  * eight a pack builds for Lizzy and the drills, the two working lists a
- * person keeps for lineup, then the videos. Every list holds records with an
- * id, so the merge runs per list by id over all eleven. The videos are
- * OPTIONAL_LISTS: written only when they hold something, so every loop over
+ * person keeps for lineup, then the videos and the components. Every list holds records with an
+ * id, so the merge runs per list by id over all twelve. The videos and the
+ * components are OPTIONAL_LISTS: written only when they hold something, so every loop over
  * this list reads a house's rows through houseRows, never house[list].
  */
 export const HOUSE_LISTS = [
@@ -607,12 +685,13 @@ export const HOUSE_LISTS = [
 	'mustKnows',
 	'askAtLineup',
 	'disputes',
-	'videos'
+	'videos',
+	'components'
 ] as const;
 export type HouseList = (typeof HOUSE_LISTS)[number];
 
 /** The lists a House carries only when they hold something; absent reads as empty. */
-export const OPTIONAL_LISTS = ['videos'] as const satisfies readonly HouseList[];
+export const OPTIONAL_LISTS = ['videos', 'components'] as const satisfies readonly HouseList[];
 
 /** A house's rows on one list, or none when the list is absent (an optional list, or a record from an older edition). */
 export function houseRows(house: House, list: HouseList): unknown[] {
@@ -626,9 +705,9 @@ export function optionalList(list: string): boolean {
 }
 
 /** The mark fields per kind: everything Lizzy may write and a person may keep. Wines carry parts and lines too. */
-export const DISH_MARKS = ['say', 'guest', 'why', 'pairs', 'origin', 'ingredientsNamed', 'parts', 'lines', 'pairing'] as const satisfies readonly (keyof HouseDish)[];
-export const WINE_MARKS = ['say', 'guest', 'why', 'pairs', 'origin', 'profile', 'goesWith', 'firstPickIds', 'serve', 'parts', 'lines'] as const satisfies readonly (keyof HouseWine)[];
-export const COCKTAIL_MARKS = ['say', 'guest', 'why', 'pairs', 'origin', 'ingredientsNamed', 'parts', 'lines', 'upsells'] as const satisfies readonly (keyof HouseCocktail)[];
+export const DISH_MARKS = ['say', 'guest', 'why', 'pairs', 'origin', 'ingredientsNamed', 'parts', 'lines', 'pairing', 'compare'] as const satisfies readonly (keyof HouseDish)[];
+export const WINE_MARKS = ['say', 'guest', 'why', 'pairs', 'origin', 'profile', 'goesWith', 'firstPickIds', 'serve', 'parts', 'lines', 'compare'] as const satisfies readonly (keyof HouseWine)[];
+export const COCKTAIL_MARKS = ['say', 'guest', 'why', 'pairs', 'origin', 'ingredientsNamed', 'parts', 'lines', 'upsells', 'compare'] as const satisfies readonly (keyof HouseCocktail)[];
 
 /**
  * The mark fields on every list and on the card, so a merge, a review screen
@@ -647,7 +726,8 @@ export const MARK_FIELDS = {
 	mustKnows: ['body'] as const satisfies readonly (keyof MustKnow)[],
 	askAtLineup: [] as const,
 	disputes: [] as const,
-	videos: [] as const
+	videos: [] as const,
+	components: ['say', 'explain', 'card'] as const satisfies readonly (keyof HouseComponent)[]
 } satisfies Record<HouseList | 'house', readonly string[]>;
 
 /**
@@ -668,7 +748,8 @@ export const ID_PREFIXES = {
 	mustKnows: 'k-',
 	askAtLineup: 'a-',
 	disputes: 'u-',
-	videos: 'v-'
+	videos: 'v-',
+	components: 'c-'
 } as const satisfies Record<HouseList | 'house', string>;
 
 /* -------------------------------------------------------------------------
@@ -680,7 +761,7 @@ type KeysOf<T> = readonly (keyof T)[];
 /** ItemBase on its own, then spread into the three kinds, so a base key is listed once. */
 const ITEM_BASE_KEYS = [
 	'id', 'house', 'name', 'section', 'meals', 'price', 'prices',
-	'say', 'guest', 'why', 'pairs', 'origin', 'kept', 'parts', 'lines',
+	'say', 'guest', 'why', 'pairs', 'origin', 'kept', 'parts', 'lines', 'compare',
 	'serviceNote', 'ts'
 ] as const satisfies KeysOf<ItemBase>;
 
@@ -718,6 +799,9 @@ export const KEYS = {
 	TastingCourse: ['n', 'label', 'dishIds', 'pourId', 'pourText'] as const satisfies KeysOf<TastingCourse>,
 	Tasting: ['id', 'name', 'price', 'meal', 'includesDrinks', 'courses', 'note', 'ts'] as const satisfies KeysOf<Tasting>,
 	LexiconTerm: ['id', 'term', 'say', 'toGuest', 'itemIds', 'ts'] as const satisfies KeysOf<LexiconTerm>,
+	ComponentCard: ['front', 'back'] as const satisfies KeysOf<ComponentCard>,
+	CompareEntry: ['app', 'ref', 'label', 'same', 'different'] as const satisfies KeysOf<CompareEntry>,
+	HouseComponent: ['id', 'kind', 'name', 'say', 'explain', 'card', 'itemIds', 'termIds', 'ts'] as const satisfies KeysOf<HouseComponent>,
 	Scenario: ['id', 'title', 'guest', 'you', 'principle', 'itemIds', 'ts'] as const satisfies KeysOf<Scenario>,
 	MixUp: ['id', 'aId', 'bId', 'difference', 'ask', 'ts'] as const satisfies KeysOf<MixUp>,
 	MustKnow: ['id', 'title', 'body', 'ts'] as const satisfies KeysOf<MustKnow>,
@@ -726,11 +810,11 @@ export const KEYS = {
 	Dispute: ['id', 'itemId', 'field', 'a', 'b', 'resolution', 'ts'] as const satisfies KeysOf<Dispute>,
 	HouseMeal: ['name', 'days', 'hours'] as const satisfies KeysOf<HouseMeal>,
 	HouseSource: ['title', 'url', 'readOn'] as const satisfies KeysOf<HouseSource>,
-	HouseVideo: ['id', 'url', 'title', 'channel', 'mins', 'topic', 'why', 'itemIds', 'termIds', 'house', 'checkedOn', 'ts'] as const satisfies KeysOf<HouseVideo>,
+	HouseVideo: ['id', 'url', 'title', 'channel', 'mins', 'topic', 'why', 'itemIds', 'termIds', 'componentIds', 'house', 'checkedOn', 'ts'] as const satisfies KeysOf<HouseVideo>,
 	PackStamp: ['id', 'builtBy', 'builtAt', 'version'] as const satisfies KeysOf<PackStamp>,
 	House: [
 		'format', 'version', 'id', 'name', 'address', 'phone', 'site', 'meals', 'history', 'dressCode', 'menusReadOn', 'sources',
-		'tastings', 'dishes', 'wines', 'cocktails', 'lexicon', 'scenarios', 'mixUps', 'mustKnows', 'askAtLineup', 'disputes', 'videos',
+		'tastings', 'dishes', 'wines', 'cocktails', 'lexicon', 'scenarios', 'mixUps', 'mustKnows', 'askAtLineup', 'disputes', 'videos', 'components',
 		'removed', 'build', 'began', 'createdAt', 'lastWrite', 'pack'
 	] as const satisfies KeysOf<House>,
 	HouseIndex: ['v', 'current', 'list'] as const satisfies KeysOf<HouseIndex>,
@@ -746,7 +830,8 @@ export const KEYS = {
 export const OPTIONAL_KEYS = {
 	Pairing: ['bottles'],
 	HouseWine: ['list', 'bin', 'size'],
-	House: ['videos']
+	HouseVideo: ['componentIds'],
+	House: ['videos', 'components']
 } as const;
 
 /* The other direction: a key the interface has and the list forgot is a type
@@ -769,6 +854,9 @@ type KeysComplete = [
 	Assert<Complete<TastingCourse, typeof KEYS.TastingCourse>>,
 	Assert<Complete<Tasting, typeof KEYS.Tasting>>,
 	Assert<Complete<LexiconTerm, typeof KEYS.LexiconTerm>>,
+	Assert<Complete<ComponentCard, typeof KEYS.ComponentCard>>,
+	Assert<Complete<CompareEntry, typeof KEYS.CompareEntry>>,
+	Assert<Complete<HouseComponent, typeof KEYS.HouseComponent>>,
 	Assert<Complete<Scenario, typeof KEYS.Scenario>>,
 	Assert<Complete<MixUp, typeof KEYS.MixUp>>,
 	Assert<Complete<MustKnow, typeof KEYS.MustKnow>>,
@@ -885,6 +973,33 @@ export function videoMeta(v: { channel: string; mins: number }): string {
 	return parts.join(', ');
 }
 
+/**
+ * The components of one item, in the house's order: every component whose
+ * itemIds name it. An absent list reads as none.
+ */
+export function componentsFor(house: House, itemId: string): HouseComponent[] {
+	return (house.components || []).filter((c) => c.itemIds.indexOf(itemId) >= 0);
+}
+
+/**
+ * The components of one item grouped by kind, in COMPONENT_KINDS order
+ * (Ingredients, Techniques, Stories), a kind with none left out.
+ */
+export function componentGroups(house: House, itemId: string): Array<{ kind: ComponentKind; label: string; components: HouseComponent[] }> {
+	const mine = componentsFor(house, itemId);
+	const out: Array<{ kind: ComponentKind; label: string; components: HouseComponent[] }> = [];
+	for (const kind of COMPONENT_KINDS) {
+		const components = mine.filter((c) => c.kind === kind);
+		if (components.length) out.push({ kind, label: COMPONENT_LABELS[kind], components });
+	}
+	return out;
+}
+
+/** The videos that teach one component, in the house's order. */
+export function componentVideos(house: House, componentId: string): HouseVideo[] {
+	return (house.videos || []).filter((v) => Array.isArray(v.componentIds) && v.componentIds.indexOf(componentId) >= 0);
+}
+
 export function mintId(prefix: string, taken: ReadonlySet<string>, rand: () => number = Math.random): string {
 	for (let tries = 0; tries < 1000; tries++) {
 		let s = prefix;
@@ -900,8 +1015,9 @@ export function mintId(prefix: string, taken: ReadonlySet<string>, rand: () => n
 
 /**
  * A value with the mark's shape: a known `by`, a finite stamp, a `model` that
- * is a string when present, and a value that is a string, a list of strings
- * or an object (the parts, the lines, the pairing). The shape only: whether
+ * is a string when present, and a value that is a string, a list of strings,
+ * a list of records (the comparisons) or an object (the parts, the lines, the
+ * pairing, a component's card). The shape only: whether
  * the value is blank, and whether it fits the field it sits on, is the
  * normaliser's question.
  */
@@ -913,7 +1029,8 @@ export function isMark(v: unknown): v is Mark<unknown> {
 	if (m.model !== undefined && typeof m.model !== 'string') return false;
 	const value = m.value;
 	if (typeof value === 'string') return true;
-	if (Array.isArray(value)) return value.every((s) => typeof s === 'string');
+	/* A list of strings (the ids, the names) or a list of records (the comparisons), never a mix. */
+	if (Array.isArray(value)) return value.every((s) => typeof s === 'string') || value.every((s) => !!s && typeof s === 'object' && !Array.isArray(s));
 	return !!value && typeof value === 'object';
 }
 

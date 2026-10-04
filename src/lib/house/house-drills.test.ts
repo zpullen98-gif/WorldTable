@@ -209,7 +209,7 @@ describe('the constants', () => {
 		}
 		expect(Object.keys(LINE_LABELS)).toEqual([...KEYS.Lines]);
 		for (const label of Object.values(LINE_LABELS)) expect(label).not.toMatch(/[0-9]/);
-		expect(FLASHCARD_KINDS).toEqual(['part', 'line', 'term', 'mixUp', 'pairing']);
+		expect(FLASHCARD_KINDS).toEqual(['part', 'line', 'term', 'mixUp', 'pairing', 'component']);
 		expect(Object.keys(GENERATORS).sort()).toEqual([...DRILL_KINDS].sort());
 	});
 
@@ -461,7 +461,7 @@ describe('the random source', () => {
 });
 
 describe('the flashcards', () => {
-	it('come from the fixture\'s kept marks: fifteen parts, nine lines, three term cards, two mix-up cards, two pairing cards', () => {
+	it('come from the fixture\'s kept marks: fifteen parts, nine lines, three term cards, two mix-up cards, two pairing cards, one component card', () => {
 		const cards = buildFlashcards(fixture);
 		const by = (kind: string) => cards.filter((c) => c.kind === kind);
 		expect(by('part')).toHaveLength(15);
@@ -469,7 +469,8 @@ describe('the flashcards', () => {
 		expect(by('term')).toHaveLength(3);
 		expect(by('mixUp')).toHaveLength(2);
 		expect(by('pairing')).toHaveLength(2);
-		expect(cards).toHaveLength(31);
+		expect(by('component')).toHaveLength(1);
+		expect(cards).toHaveLength(32);
 		const ids = idsOf(fixture);
 		for (const c of cards) {
 			expect(Object.keys(c).sort()).toEqual(['back', 'front', 'itemId', 'kind']);
@@ -487,6 +488,8 @@ describe('the flashcards', () => {
 		expect(cards.filter((c) => c.kind === 'mixUp').map((c) => c.front)).toEqual(['Lantern Roast Chicken or Beetroot and Apple Salad', 'Lantern Roast Chicken or Beetroot and Apple Salad: what do you ask?']);
 		const pairing = cards.filter((c) => c.kind === 'pairing');
 		expect(pairing.map((c) => c.front)).toEqual(['Lantern Roast Chicken: the first pick', 'Lantern Roast Chicken: without alcohol']);
+		/* One card per component with a kept card, under the component's own id; the component with no card makes none. */
+		expect(by('component')).toEqual([{ kind: 'component', front: 'What does the salt crust do?', back: expect.stringContaining('own steam'), itemId: 'c-saltcrs1' }]);
 		expect(pairing[0].back).toBe('Quay Lane Harbour White 2024. With the chicken I would pour the Harbour White. It is dry and bright, and it loves the smoke.');
 		expect(pairing[1].back).toBe('Verjus and Tonic. Verjus has the same sharp edge as the wine and none of the alcohol.');
 	});
@@ -503,7 +506,10 @@ describe('the flashcards', () => {
 		expect(cards.filter((c) => c.itemId === 'd-chicken1')).toHaveLength(0);
 		expect(cards.filter((c) => c.kind === 'term').map((c) => c.front)).toEqual(['Verjus: how to say it', 'Salt baked: how to say it']);
 		expect(cards.filter((c) => c.kind === 'mixUp')).toHaveLength(1);
-		expect(cards).toHaveLength(31 - 5 - 3 - 2 - 1 - 1);
+		expect(cards).toHaveLength(32 - 5 - 3 - 2 - 1 - 1);
+		const unkept = clone(fixture);
+		unkept.components![0].card = hers(unkept.components![0].card!.value);
+		expect(buildFlashcards(unkept).filter((c) => c.kind === 'component')).toHaveLength(0);
 
 		const dangling = clone(fixture);
 		const p = dangling.dishes[0].pairing as Mark<Pairing>;

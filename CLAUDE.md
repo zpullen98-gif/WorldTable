@@ -1282,3 +1282,51 @@ house a person is building by hand stays on the editing page as dishes go in.
 - Specs that test the editing page with a house on the device open it through
   `gotoEditing()` in tests/helpers.ts. The precache with the study view in it:
   2.954 MB gzipped against the 3.5 MB cap.
+
+## The components and the comparisons (5 October 2026)
+
+What every dish, drink and wine is made of (its ingredients, techniques and
+stories) and what to compare it with. The plan is section "CURRENT WORK (5 Oct
+2026)" of the session's plan file; what a maintainer needs:
+
+- **The schema** (`src/lib/house/house-schema.ts`, ported as ever):
+  `House.components` is an OPTIONAL list (written only when it holds one) of
+  `HouseComponent { id 'c-', kind ingredient|technique|story, name, say?,
+  explain?, card?: Mark<{front, back}>, itemIds, termIds, ts }`, ONE card per
+  component shared by every item that names it. `ItemBase.compare` is a
+  `Mark<CompareEntry[]>` (`{ app table|ledger|codex|classic, ref, label,
+  same, different }`, at most `COMPARE_MAX` two), so `isMark` takes a list of
+  records as well as a list of strings, never a mix. `HouseVideo.componentIds`
+  is written only when it names one. Merge, refresh and the pack treat both
+  like every other list and mark: a new edition's components arrive and a
+  person's marks survive (house-components.test.ts). The validator's caps are
+  `COMPONENT_WORDS` and `COMPARE_WORDS`; the floors (`COMPONENT_FLOORS`, 80
+  words of explanation, 20 on a card's back) are the pack builder's only.
+  `static/shared/oot-house-ui.js` gained the review steps `compare` and
+  `components`.
+- **A Table ref is an address**: the builder turns a fragment's recipe or
+  technique slug into `recipe/<slug>` or `technique/<slug>`, so every room
+  links it without the Table's data (`wing-links.ts compareHref`). A Codex ref
+  naming a house wine by its exact name becomes that wine's id; a grape,
+  producer or primer stays a name and opens through the Codex's `#ref=` door.
+- **The chain**: `tools/house/build-brennans.mjs` reads the fragments
+  (`engine.mjs readFragments`: `brennans/components/*.json`, or
+  `BRENNANS_COMPONENTS`, or `--components <dir>`); unknown item, term or
+  component names fail the build; c- ids come through `ids.ledger.json`
+  (`components:<key>`, so `--mint` on the first build). `engine.mjs
+  componentProblems` holds the shipped edition to the content rules (80 to
+  160 words in paragraphs, the card's caps, no dash, no banned word, no
+  allergen verdict, names and years in a source by `sourceProblems`, the note
+  rule shared); `countProblems` reads its component figures from the
+  fragments (`fragmentCounts`). `tools/house/check-compare.mjs` resolves every
+  in-app ref against `src/lib/data`, the Ledger's COCKTAILS and the Codex's
+  GRAPES, GRAPES_PLUS, WINE_PRODUCERS and PRIMERS (`LEDGER_SRC`, `CODEX_SRC`,
+  else the siblings); `--fragments` checks the authors' files before a build.
+  The year rule is weak in practice: the Binwise snapshot prints a figure for
+  nearly every year, so a year is held only in a source without one.
+- **The screens**: `MadeOf.svelte` on the study card (What it's made of,
+  Compare with), `study.ts componentBlocks` and `compareRows`; the
+  Flashcards tab deals `components`, `components:{kind}` and
+  `item-components:{id}` (k: references, graded `card-component` under the
+  component's id); Part by part leaves component cards out.
+  `tests/study-components.spec.ts` walks the card and the decks at 390 by 844.

@@ -579,8 +579,8 @@ function fieldsDrawn(r, id) {
 	check('formula: the dish and the cocktail with marks of hers, named with their kind and section',
 		all(r, '[data-item]').map((i) => i.getAttribute('data-item')).join(',') === 'd-chicken1,b-collins1' && text.includes('DishLantern Roast Chicken') && text.includes('CocktailThe Lantern Collins') && text.includes('Mains') && !text.includes('Beetroot and Apple SaladStarters'));
 	check('formula on a dish covers DISH_MARKS without the pairing, in the schema order',
-		same(fieldsDrawn(r, 'd-chicken1'), schema.DISH_MARKS.filter((/** @type {string} */ f) => f !== 'pairing')), fieldsDrawn(r, 'd-chicken1').join(','));
-	check('formula on a cocktail covers COCKTAIL_MARKS, in the schema order', same(fieldsDrawn(r, 'b-collins1'), schema.COCKTAIL_MARKS), fieldsDrawn(r, 'b-collins1').join(','));
+		same(fieldsDrawn(r, 'd-chicken1'), schema.DISH_MARKS.filter((/** @type {string} */ f) => f !== 'pairing' && f !== 'compare')), fieldsDrawn(r, 'd-chicken1').join(','));
+	check('formula on a cocktail covers COCKTAIL_MARKS but the comparisons, in the schema order', same(fieldsDrawn(r, 'b-collins1'), schema.COCKTAIL_MARKS.filter((/** @type {string} */ f) => f !== 'compare')), fieldsDrawn(r, 'b-collins1').join(','));
 	check('every mark of hers carries Keep, Edit and Discard; each item Keep all on this item; the step Keep all that read cleanly',
 		buttonNamed(r, 'Keep').length === 17 && buttonNamed(r, 'Edit').length === 17 && buttonNamed(r, 'Discard').length === 17 && buttonNamed(r, 'Keep all on this item').length === 2 && buttonNamed(r, 'Keep all that read cleanly').length === 1);
 	check('the kept parts, lines and the list are drawn with their labels and counts',
@@ -645,7 +645,7 @@ function fieldsDrawn(r, id) {
 	drawn.push(r.textContent);
 	const kept = calls.setMark.slice(before);
 	check('Keep all on this item keeps every mark of hers on that item, by person, with her values',
-		kept.length === 8 && kept.every((c) => c.kind === 'cocktail' && c.id === 'b-collins1' && c.mark.by === 'person') && same(kept.map((c) => c.field), schema.COCKTAIL_MARKS.filter((/** @type {string} */ f) => f !== 'lines'))
+		kept.length === 8 && kept.every((c) => c.kind === 'cocktail' && c.id === 'b-collins1' && c.mark.by === 'person') && same(kept.map((c) => c.field), schema.COCKTAIL_MARKS.filter((/** @type {string} */ f) => f !== 'lines' && f !== 'compare'))
 			&& kept[0].mark.value === house.cocktails[0].say.value, kept.map((c) => c.field).join(','));
 	check('after it the cocktail leaves the step and the count falls', all(r, '[data-item]').length === 1 && r.textContent.includes('6 lines of hers wait on this step.'));
 }
@@ -678,7 +678,7 @@ function fieldsDrawn(r, id) {
 	flip(house, () => true);
 	const { calls, hooks } = recorder(() => [{ said: 'Hold this one for lineup' }]);
 	const r = review(root(), house, 'wines', hooks);
-	check('wines: the wine with every WINE_MARK, parts and lines among them, in the schema order', same(fieldsDrawn(r, 'w-lantern1'), schema.WINE_MARKS), fieldsDrawn(r, 'w-lantern1').join(','));
+	check('wines: the wine with every WINE_MARK but the comparisons, parts and lines among them, in the schema order', same(fieldsDrawn(r, 'w-lantern1'), schema.WINE_MARKS.filter((/** @type {string} */ f) => f !== 'compare')), fieldsDrawn(r, 'w-lantern1').join(','));
 	check('the wine\'s parts are drawn with WINE_PARTS labels', r.textContent.includes('grape and regionBacchus from Quay Lane') && r.textContent.includes('what it goes withThe roast chicken and the beetroot salad'));
 	check('an id list on a wine is drawn as names', markRowOf(r, 'w-lantern1', 'firstPickIds').textContent.includes('Lantern Roast Chicken'));
 	one(r, '[data-h="keep-clean"]').click();
@@ -727,6 +727,50 @@ function fieldsDrawn(r, id) {
 	one(ed, '[data-h="save"]').click();
 	const v = calls.setMark.length ? calls.setMark[0].mark.value : null;
 	check('Save on a pairing with bottle tiers keeps the tiers as they were', !!v && v.why === 'A new why.' && JSON.stringify(v.bottles) === JSON.stringify(tiers));
+}
+
+{
+	/* compare: each item's comparisons, up to two entries of five boxes */
+	const house = fixture();
+	flip(house, () => true);
+	const { calls, hooks } = recorder();
+	const r = review(root(), house, 'compare', hooks);
+	check('compare: the dish with its comparisons and nothing else', same(all(r, '[data-item]').map((i) => i.getAttribute('data-item')), ['d-chicken1']) && same(fieldsDrawn(r, 'd-chicken1'), ['compare']));
+	check('each comparison is drawn with its label, where it points, what is the same and what differs', r.textContent.includes('The Library roast chicken (table, roast-chicken)') && r.textContent.includes('Chicken in a clay pot (classic)') && r.textContent.includes('cracked open at the table'));
+	pressOn(r, 'd-chicken1', 'compare', 'edit');
+	const ed = one(r, '[data-editor="compare"]');
+	const keys = all(ed, '[data-e]').map((b) => b.getAttribute('data-e'));
+	check('the comparisons editor is two entries of the schema\'s CompareEntry keys', keys.length === 10 && same(keys.slice(0, 5), schema.KEYS.CompareEntry.map((/** @type {string} */ k) => k + '0')) && same(keys.slice(5), schema.KEYS.CompareEntry.map((/** @type {string} */ k) => k + '1')));
+	one(ed, '[data-e="label1"]').value = '';
+	one(ed, '[data-e="same1"]').value = '';
+	one(ed, '[data-e="different1"]').value = '';
+	one(ed, '[data-e="ref1"]').value = '';
+	one(ed, '[data-e="same0"]').value = 'Typed same.';
+	one(ed, '[data-h="save"]').click();
+	drawn.push(r.textContent);
+	const v = calls.setMark.length ? calls.setMark[0].mark.value : null;
+	check('Save on the comparisons writes the entries with something in them, by person, and drops an emptied one',
+		calls.setMark.length === 1 && calls.setMark[0].field === 'compare' && calls.setMark[0].mark.by === 'person' && Array.isArray(v) && v.length === 1 && v[0].same === 'Typed same.' && v[0].app === 'table' && same(Object.keys(v[0]), schema.KEYS.CompareEntry));
+}
+
+{
+	/* components: the say, the explanation and the card, the card in two boxes */
+	const house = fixture();
+	flip(house, () => true);
+	const { calls, hooks } = recorder();
+	const r = review(root(), house, 'components', hooks);
+	check('components: each component with its marks of hers, named with its kind', same(all(r, '[data-item]').map((i) => i.getAttribute('data-item')), ['c-saltcrs1']) && same(fieldsDrawn(r, 'c-saltcrs1'), schema.MARK_FIELDS.components) && r.textContent.includes('ComponentSalt crust'));
+	check('the card is drawn front and back', r.textContent.includes('The frontWhat does the salt crust do?') && r.textContent.includes('The backIt seals the bird'));
+	pressOn(r, 'c-saltcrs1', 'card', 'edit');
+	const ed = one(r, '[data-editor="card"]');
+	check('the card editor is two boxes, the schema\'s ComponentCard keys', same(all(ed, '[data-e]').map((b) => b.getAttribute('data-e')), schema.KEYS.ComponentCard));
+	one(ed, '[data-e="back"]').value = 'A typed back.';
+	one(ed, '[data-h="save"]').click();
+	drawn.push(r.textContent);
+	check('Save on the card writes front and back by person under the list\'s own name', calls.setMark.length === 1 && calls.setMark[0].kind === 'components' && calls.setMark[0].field === 'card' && same(calls.setMark[0].mark.value, { front: 'What does the salt crust do?', back: 'A typed back.' }));
+	one(all(r, '[data-item="c-saltcrs1"]')[0], '[data-h="keep-item"]').click();
+	drawn.push(r.textContent);
+	check('Keep all on this item keeps the say and the explanation too', same(calls.setMark.slice(1).map((c) => c.field), ['say', 'explain']) && all(r, '[data-item]').length === 0);
 }
 
 {

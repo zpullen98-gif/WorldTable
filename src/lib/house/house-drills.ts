@@ -40,6 +40,7 @@
  */
 import { COCKTAIL_PARTS, DISH_PARTS, KEYS, LINE_CAPS, WINE_PARTS, isMark } from './house-schema';
 import type {
+	ComponentCard,
 	FormulaParts,
 	House,
 	HouseItem,
@@ -134,8 +135,12 @@ export interface DrillQuestion {
 	itemId: string;
 }
 
-/** The five flashcard kinds: parts, lines, terms, mix-ups, pairings. */
-export const FLASHCARD_KINDS = ['part', 'line', 'term', 'mixUp', 'pairing'] as const;
+/**
+ * The six flashcard kinds: parts, lines, terms, mix-ups, pairings and the
+ * components. A component card's itemId is the component's own id (c-),
+ * one card shared by every item that uses it.
+ */
+export const FLASHCARD_KINDS = ['part', 'line', 'term', 'mixUp', 'pairing', 'component'] as const;
 export type FlashcardKind = (typeof FLASHCARD_KINDS)[number];
 
 export interface Flashcard {
@@ -492,8 +497,9 @@ function cardBack(name: string, why: string): string {
 /**
  * The flashcard deck over the kept marks: one card per kept part, per kept
  * line, per kept say and toGuest on a term, per kept difference and ask on
- * a mix-up, and per resolved first pick and zero-proof pick in a kept
- * pairing. The order is the record's; the screen shuffles. A mark nobody
+ * a mix-up, per resolved first pick and zero-proof pick in a kept
+ * pairing, and per kept card on a component, once however many items share
+ * it. The order is the record's; the screen shuffles. A mark nobody
  * kept makes no card.
  */
 export function buildFlashcards(house: House): Flashcard[] {
@@ -542,6 +548,13 @@ export function buildFlashcards(house: House): Flashcard[] {
 		if (wine) out.push({ kind: 'pairing', front: name + ': the first pick', back: cardBack(nameOf(wine), p.sayIt || p.why), itemId: d.id });
 		const zero = namedItem(byId, p.zeroProofId, 'cocktail');
 		if (zero) out.push({ kind: 'pairing', front: name + ': without alcohol', back: cardBack(nameOf(zero), p.zeroProofWhy), itemId: d.id });
+	}
+	for (const c of house.components || []) {
+		const card = keptValue<ComponentCard>(c.card);
+		if (!card) continue;
+		const front = plainText(card.front);
+		const back = plainText(card.back);
+		if (front && back) out.push({ kind: 'component', front, back, itemId: c.id });
 	}
 	return out;
 }

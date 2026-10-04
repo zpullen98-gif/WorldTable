@@ -169,6 +169,10 @@ export const LIB = {
 	videoMeta: 'videoMeta',
 	houseRows: 'houseRows',
 	optionalList: 'optionalList',
+	/* the components: an item's, grouped by kind, and the videos that teach one */
+	componentsFor: 'componentsFor',
+	componentGroups: 'componentGroups',
+	componentVideos: 'componentVideos',
 	/* the bottle list and the tiers */
 	wineListOf: 'wineListOf',
 	printedDollars: 'printedDollars',
@@ -203,6 +207,7 @@ export const CONSTANTS = [
 	'ID_PREFIXES', 'KEYS', 'KEPT_CAP', 'MARK_KINDS', 'FORBIDDEN_KEY', 'DASH', 'DASH_SOURCE',
 	'OPTIONAL_KEYS', 'WINE_LISTS', 'BOTTLE_TIERS', 'BOTTLE_BANDS', 'HALF_SIZE', 'BOTTLE_WORDS',
 	'OPTIONAL_LISTS', 'VIDEO_SCHEME', 'VIDEO_HOSTS', 'VIDEO_WHY_WORDS', 'VIDEO_URL_MAX', 'VIDEO_TOPIC_NONE',
+	'COMPONENT_KINDS', 'COMPONENT_LABELS', 'COMPONENT_WORDS', 'COMPONENT_FLOORS', 'COMPARE_APPS', 'COMPARE_MAX', 'COMPARE_WORDS',
 	'FATAL_CODES', 'NEVER_FATAL', 'ALLERGEN_TALK', 'ALLERGEN_WORD', 'QUOTE_WORDS',
 	'PACK_FORMAT', 'PACK_VERSION', 'MY_HOUSE', 'MAP_HOUSE_PREFIX', 'NO_HOUSE_SAID', 'HOUSE_PARTS', 'CARD_KEYS', 'ITEM_FIELDS', 'PUT_LISTS'
 ];
@@ -225,7 +230,9 @@ export function header(date) {
 		'',
 		'   WHAT THIS IS. The House: one record per venue (its card, its dishes, wines',
 		'   and cocktails with her marks, its tastings, lexicon, scenarios, mix-ups,',
-		'   must-knows and the questions for lineup), kept in the browser and shared',
+		'   must-knows, the questions for lineup, the videos and the components: the',
+		'   ingredients, techniques and stories each item is made of, one card each),',
+		'   kept in the browser and shared',
 		'   by the three craft wings. The schema (house-schema.ts), the lines and',
 		'   their caps (house-lines.ts), the normaliser (house-normalise.ts), the',
 		'   validator (house-validate.ts), the merge (house-merge.ts), the sync with',

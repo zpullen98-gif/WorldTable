@@ -1,0 +1,3180 @@
+{
+	"components": [
+		{
+			"key": "bar-sazerac-story",
+			"kind": "story",
+			"name": "The Sazerac",
+			"say": "SAZ-uh-rak",
+			"explain": "The Sazerac is New Orleans' own cocktail: rye whiskey, sugar and Peychaud's bitters, stirred cold and strained into a glass rinsed with an anise spirit, served without ice.\n\nIts name comes from a cognac. Sewell Taylor sold his bar, the Merchants Exchange Coffee House, to import Sazerac de Forge et Fils cognac, and Aaron Bird renamed the bar the Sazerac Coffee House and served the house cocktail on that cognac. Thomas Handy took the bar over about 1870, just as phylloxera was ruining the vineyards of Europe, and rye whiskey took the cognac's place for good.\n\nOn 23 June 2008 the Louisiana Legislature made it the official cocktail of the city of New Orleans, not of the state. At Brennan's it is a ladder of three: the Classic, Thompson's Dream and the Origin Story.",
+			"card": {
+				"front": "Why is the Sazerac named Sazerac?",
+				"back": "It was the house drink of the Sazerac Coffee House, named for Sazerac de Forge et Fils cognac. Rye replaced the cognac after phylloxera; since 2008 it is New Orleans' official cocktail."
+			},
+			"items": [
+				"Classic Sazerac",
+				"Thompson’s Dream",
+				"Origin Story"
+			],
+			"terms": [
+				"Sazerac"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 1)",
+				"research/components-drinks-2026-10-05.md (search 5)",
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"research/dossier-the-bar.md"
+			]
+		},
+		{
+			"key": "bar-peychaud-story",
+			"kind": "story",
+			"name": "Antoine Peychaud, the apothecary on Royal Street",
+			"say": "PAY-shoh",
+			"explain": "Antoine Amédée Peychaud was a Creole apothecary born in Saint-Domingue, now Haiti, who settled in New Orleans. He kept his shop at what was then 123 Royal Street, known as 437 Royal Street today, on the same block as Brennan's at 417.\n\nThere he made a bright red aromatic bitters, sold first as a tonic, between 1849 and 1857. In 1857 he advertised his American Aromatic Bitter Cordial and announced it was in use at the Sazerac House. He sold the Royal Street building in 1868, and the bitters passed through other hands to the Sazerac Company.\n\nA guest may tell you Peychaud invented the word cocktail from a French egg cup. Smile: the word was defined in print in 1806. Tell the true story instead, and check at lineup that the house is happy for the Royal Street detail to be told.",
+			"card": {
+				"front": "Where did Antoine Peychaud keep his apothecary?",
+				"back": "At what is now 437 Royal Street, the same block as Brennan's at 417. He made his red bitters there in the 1850s and they went into the first Sazeracs."
+			},
+			"items": [
+				"Classic Sazerac",
+				"Origin Story",
+				"Thompson’s Dream"
+			],
+			"terms": [
+				"Peychaud's"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 2)",
+				"research/components-drinks-2026-10-05.md (search 18)",
+				"guide.txt (pdf p39, the Classic Sazerac service note)"
+			]
+		},
+		{
+			"key": "bar-word-cocktail-1806",
+			"kind": "story",
+			"name": "The word cocktail, 1806",
+			"say": "",
+			"explain": "The first printed definition of a cocktail appeared on 13 May 1806 in The Balance and Columbian Repository, a newspaper in Hudson, New York. Its editor, Harry Croswell, answered a reader: a cocktail is a stimulating liquor of spirits of any kind, sugar, water and bitters.\n\nThat four-part formula is the Old Fashioned, and it is the skeleton of the Sazerac and of the Champagne Cocktail, where Champagne stands in for the spirit and the water at once.\n\nThe story matters because guests love the tale that Antoine Peychaud coined the word from the French egg cup, the coquetier. He was a small child in 1806, so the tale cannot be true. Never call the Sazerac America's first cocktail; call it New Orleans' official cocktail, which is true and sells better.",
+			"card": {
+				"front": "What four things made a cocktail in the 1806 definition?",
+				"back": "Spirits of any kind, sugar, water and bitters, printed in May 1806. It is the Old Fashioned pattern, the skeleton of the Sazerac, the Birdcage and the Champagne Cocktail."
+			},
+			"items": [
+				"Birdcage",
+				"Classic Sazerac",
+				"Brennan’s Champagne Cocktail",
+				"Rumors are Flying"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 18)",
+				"research/dossier-the-bar.md"
+			]
+		},
+		{
+			"key": "bar-absinthe-story",
+			"kind": "story",
+			"name": "Absinthe, banned and back",
+			"say": "AB-sinth",
+			"explain": "Absinthe is a strong spirit distilled with grand wormwood, green anise and fennel, usually bottled between 55 and 70 percent alcohol and traditionally louched, slowly diluted with cold water until it turns cloudy.\n\nIn 1912 the United States Department of Agriculture banned it, treating wormwood drinks as adulterated. New Orleans, which had loved absinthe through the nineteenth century, turned to substitutes, Herbsaint above all. On 5 March 2007 the federal authorities confirmed that wormwood spirits could be sold again if they were thujone free, and American and French absinthes returned to the bars.\n\nAt Brennan's this is why the ladder changes its rinse: the Classic uses Herbsaint, the substitute born of the ban, while Thompson's Dream uses St. George, the first American absinthe after 2007, and the Origin Story uses Jade Nouvelle-Orléans.",
+			"card": {
+				"front": "When was absinthe banned in the United States, and when did it return?",
+				"back": "Banned in 1912 and legal again in 2007, if thujone free. Herbsaint was created in the gap; our premium Sazeracs use real absinthe rinses."
+			},
+			"items": [
+				"Classic Sazerac",
+				"Thompson’s Dream",
+				"Origin Story"
+			],
+			"terms": [
+				"Absinthe",
+				"Herbsaint"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 4)",
+				"research/components-drinks-2026-10-05.md (search 3)",
+				"research/components-drinks-2026-10-05.md (search 6)",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-origin-story-name",
+			"kind": "story",
+			"name": "Why it is called the Origin Story",
+			"say": "",
+			"explain": "The Origin Story is the top of the house's Sazerac ladder, and its name points back to how the drink began. The first Sazeracs were poured at the Sazerac Coffee House on Sazerac de Forge et Fils cognac with Antoine Peychaud's bitters.\n\nPhylloxera, a root-eating insect, reached the vineyards of Cognac in the 1870s and made cognac scarce through the 1880s; rye whiskey took over and never gave the drink back. So a Sazerac on cognac is the drink as it started.\n\nSay it carefully: the way it began, cognac and Peychaud's, rather than the exact first recipe, because the absinthe rinse probably joined later. Offer it to the guest who has had the Classic and wants to taste where it came from, or at the Chateaubriand table.",
+			"card": {
+				"front": "Why is the Origin Story built on cognac?",
+				"back": "The first Sazeracs were cognac and Peychaud's; rye replaced cognac after phylloxera ruined the vineyards. The Origin Story returns to the way the drink began."
+			},
+			"items": [
+				"Origin Story"
+			],
+			"terms": [
+				"Sazerac"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 5)",
+				"guide.txt (pdf p39)",
+				"research/dossier-the-bar.md"
+			]
+		},
+		{
+			"key": "bar-thompsons-dream-name",
+			"kind": "story",
+			"name": "The name Thompson's Dream",
+			"say": "",
+			"explain": "Thompson's Dream is the middle rung of the Sazerac ladder, built on Willett 4-year rye. The name is the house's own: no Willett bottling carries it.\n\nThe Willett Distilling Company was founded in 1936 on the family farm in Bardstown, Kentucky, with Thompson Willett as its founder and president and his brother Johnny beside him. The first whiskey ran on 17 March 1937. The old distillery closed in the 1980s and the family began distilling on the site again in 2012.\n\nSo a server says the name is probably a nod to Thompson Willett, the distillery's founder, and never says it as settled fact. If a guest wants more, it is a fine question to bring back from the bar or a manager.",
+			"card": {
+				"front": "Who is Thompson's Dream probably named for?",
+				"back": "Probably Thompson Willett, who founded the Willett distillery in Bardstown in 1936. No Willett bottle carries the name, so say probably, never certainly."
+			},
+			"items": [
+				"Thompson’s Dream"
+			],
+			"terms": [
+				"Willett"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 9)",
+				"pack origin note for Thompson’s Dream",
+				"research/dossier-the-bar.md"
+			]
+		},
+		{
+			"key": "bar-milk-punch-story",
+			"kind": "story",
+			"name": "Milk punch",
+			"say": "",
+			"explain": "Milk punch is one of the oldest mixed drinks in the English-speaking world, and it comes in two families. The old English kind is clarified: hot milk is added to spirit, citrus and sugar, the milk curdles, and the curds are strained out, leaving a clear, silky punch that keeps. Mary Rockett wrote one down in 1711, and Benjamin Franklin wrote out his own recipe in 1763.\n\nThe New Orleans kind is the other family: brandy or bourbon with milk or cream, sugar and vanilla, shaken cold and dusted with nutmeg, never clarified.\n\nBrennan's pours both ideas. The Brandy Milk Punch is the cold, creamy eye opener that opens the Traditional Breakfast; the Prisoner of Love on the fall list uses clarified heavy cream, the old English technique.",
+			"card": {
+				"front": "What are the two kinds of milk punch?",
+				"back": "The old clarified kind, curdled and strained clear, as in the Prisoner of Love; and the cold, creamy New Orleans kind, our Brandy Milk Punch, shaken with cream and nutmeg."
+			},
+			"items": [
+				"Brandy Milk Punch",
+				"Prisoner of Love"
+			],
+			"terms": [
+				"Milk punch"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 11)",
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"research/dossier-the-bar.md (milk punch: Franklin wrote one out in 1763)"
+			]
+		},
+		{
+			"key": "bar-eye-opener-story",
+			"kind": "story",
+			"name": "The eye opener",
+			"say": "",
+			"explain": "In New Orleans a proper late breakfast starts with an eye opener: a morning cocktail poured before the food. The menu groups four of them as the classic eye openers: the Brandy Milk Punch, the Bloody Bull, Brennan's Bloody Mary and Brennan's Irish Coffee.\n\nThe habit belongs to the city's long, leisurely breakfasts, the kind Brennan's made famous, where a meal of several courses runs from the milk punch to the Bananas Foster.\n\nFor a server it is a selling rhythm. Offer the milk punch at the greeting, before menus open: it is the first sale of the morning and course one of the Traditional Breakfast. The Bloody Bull follows with the soup course. A guest not drinking is offered the Café Glacé de la Maison or the Revive juice instead, so nobody misses the ritual.",
+			"card": {
+				"front": "Name Brennan's four classic eye openers.",
+				"back": "The Brandy Milk Punch, the Bloody Bull, Brennan's Bloody Mary and Brennan's Irish Coffee. Offer the milk punch at the greeting: it is the first sale of the morning."
+			},
+			"items": [
+				"Brandy Milk Punch",
+				"Bloody Bull",
+				"Brennan’s Bloody Mary",
+				"Brennan’s Irish Coffee",
+				"Revive Cold-Pressed Juice",
+				"Café Glacé de la Maison"
+			],
+			"terms": [
+				"Eye opener"
+			],
+			"sources": [
+				"guide.txt (pdf p49, eye openers, coffee and Bubbles)",
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-bloody-mary-story",
+			"kind": "story",
+			"name": "The Bloody Mary and the Bull Shot",
+			"say": "",
+			"explain": "The Bloody Mary is often credited to Fernand Petiot, a bartender at Harry's New York Bar in Paris about 1921, where it began as vodka and tomato juice. In 1934 he took it to the King Cole Bar at the St. Regis in New York and seasoned it with Worcestershire, lemon, salt, pepper and Tabasco; the hotel tried to call it the Red Snapper. Other claimants exist, so say credited.\n\nThe Bull Shot came from the Caucus Club in Detroit in 1952: vodka with cold canned beef bouillon, dreamed up to sell more bouillon.\n\nA Bloody Bull is the two together, tomato and beef. The guide calls ours a Brennan's breakfast classic; it never says it was invented here, and neither should a server.",
+			"card": {
+				"front": "What is a Bloody Bull, in family terms?",
+				"back": "A Bloody Mary crossed with a Bull Shot: tomato mix, vodka and beef bouillon. Call it a Brennan's breakfast classic, never an invention of the house."
+			},
+			"items": [
+				"Bloody Bull",
+				"Brennan’s Bloody Mary"
+			],
+			"terms": [
+				"Bloody Bull"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 12)",
+				"research/components-drinks-2026-10-05.md (search 13)",
+				"guide.txt (pdf p38 and p39, the bar pages)"
+			]
+		},
+		{
+			"key": "bar-irish-coffee-story",
+			"kind": "story",
+			"name": "Irish coffee",
+			"say": "",
+			"explain": "Irish coffee was born at Foynes, the flying boat terminal in County Limerick, in 1943. When a flight turned back in bad weather, the chef, Joe Sheridan, warmed the passengers with coffee laced with Irish whiskey, sugar and cream; asked if it was Brazilian coffee, he said no, Irish coffee.\n\nOn 10 November 1952 Jack Koeppler of the Buena Vista Cafe in San Francisco and the travel writer Stanton Delaplane set out to recreate it, and Sheridan later moved to San Francisco to work there.\n\nThe rules have not changed: a warmed glass, sugar dissolved in hot coffee, the whiskey, then cream floated on top and never stirred. Brennan's adds a New Orleans accent with chicory coffee and brown sugar, and pours it at breakfast and with dessert.",
+			"card": {
+				"front": "Where and when was Irish coffee first served?",
+				"back": "At Foynes, the flying boat terminal in County Limerick, in 1943, by the chef Joe Sheridan. It reached San Francisco's Buena Vista Cafe in 1952."
+			},
+			"items": [
+				"Brennan’s Irish Coffee"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 14)",
+				"guide.txt (pdf p38 and p39, the bar pages)"
+			]
+		},
+		{
+			"key": "bar-espresso-martini-story",
+			"kind": "story",
+			"name": "The espresso martini",
+			"say": "",
+			"explain": "The espresso martini is a London drink of the 1980s. It is credited to the bartender Dick Bradsell, often dated to 1983 at the Soho Brasserie, who mixed vodka, fresh espresso, coffee liqueur and sugar for a guest who wanted something to wake her up. It was first called the Vodka Espresso; the martini name came later with the cocktail glass.\n\nA hard shake is what makes it: the coffee's oils whip into a fine tan foam that sits on top.\n\nOurs is a New Orleans version. The menu prints chicory, vodka, Frangelico and Kahlua, so it carries the city's chicory and a hazelnut note, and the menu does not print espresso. How the coffee goes in is a question for the bar before a server describes it.",
+			"card": {
+				"front": "Who is credited with the espresso martini, and where?",
+				"back": "The London bartender Dick Bradsell, in the 1980s, often dated 1983 at the Soho Brasserie. Ours adds chicory and Frangelico; the menu does not print espresso."
+			},
+			"items": [
+				"Espresso Martini"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 16)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-champagne-cocktail-story",
+			"kind": "story",
+			"name": "The Champagne Cocktail",
+			"say": "",
+			"explain": "The Champagne Cocktail is one of the oldest named drinks with wine. Jerry Thomas printed it in his bar guide of 1862: a lump of sugar soaked in Angostura bitters in a wine glass, filled with Champagne, finished with lemon peel. Nobody knows who first made it.\n\nIt is the 1806 cocktail formula in sparkling form: the Champagne is spirit and water at once, the cube is the sugar and the bitters soak it. As the cube dissolves it keeps throwing a thin stream of bubbles up through the glass.\n\nAt Brennan's it is the house's bubbly classic, priced at the top of the Bubbles cocktails. Which Champagne, the glass and any garnish are confirmed with the bar; the build on the menu is the classic one.",
+			"card": {
+				"front": "Who first printed the Champagne Cocktail, and when?",
+				"back": "Jerry Thomas, in his bar guide of 1862: a sugar cube soaked in Angostura, topped with Champagne and lemon peel. Ours prints a demerara cube."
+			},
+			"items": [
+				"Brennan’s Champagne Cocktail"
+			],
+			"terms": [
+				"Angostura",
+				"Demerara"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 17)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-bubbles-at-brennans",
+			"kind": "story",
+			"name": "Bubbles at Brennan's",
+			"say": "",
+			"explain": "Bubbles at Brennan's is the house's afternoon Champagne service in the Roost Bar and the courtyard, Monday to Friday from 2 to 6, with Champagne sabred on Fridays at 5, as the guide prints.\n\nIts menu carries five bubbly cocktails, rosé bottles and bar snacks. The Riviera, the Bodrum and the OBX sit at the friendly price, the Chandon Garden Spritz in the middle and Brennan's Champagne Cocktail at the top.\n\nFor a server it is a sales map. Offer the Champagne Cocktail to anyone celebrating, the Riviera to a guest who wants something light in the sun, the OBX to the gin drinker, the spritz to the aperitivo lover and the Bodrum to someone who does not care for wine. Confirm the hours on shift, since they can change.",
+			"card": {
+				"front": "When and where does Bubbles at Brennan's run?",
+				"back": "In the Roost Bar and the courtyard, Monday to Friday, 2 to 6, with Champagne sabred on Fridays at 5. Five bubbly cocktails, rosé bottles and bar snacks."
+			},
+			"items": [
+				"Brennan’s Champagne Cocktail",
+				"Riviera",
+				"Bodrum",
+				"OBX",
+				"Chandon Garden Spritz"
+			],
+			"terms": [
+				"Sabrage"
+			],
+			"sources": [
+				"guide.txt (pdf p49, eye openers, coffee and Bubbles)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-roost-luxury-story",
+			"kind": "story",
+			"name": "The Roost's luxury cocktails",
+			"say": "",
+			"explain": "Three cocktails are poured only in the Roost Bar and Lounge, the house's bar: the Flamingo, the Birdcage and the Spoonbill. The house page calls them Luxury Roost Bar Cocktails and prints their bottles and prices; it prints no measures, glasses or garnishes, so those are confirmed with the bar.\n\nAll three names belong to birds or their keeping, which suits a bar called the Roost; the house has not published the reason, so a server tells no story about it.\n\nThe service rule matters more than the names. Because they are poured only in the Roost, a dining room server never brings one to the table. Mention them as an invitation: the Flamingo for a celebration, the Birdcage as a slow nightcap, the Spoonbill with its spoon of caviar for the start of a big evening.",
+			"card": {
+				"front": "Which three cocktails are poured only in the Roost?",
+				"back": "The Flamingo, the Birdcage and the Spoonbill. From the dining room they are an invitation to the bar, never a drink brought to the table."
+			},
+			"items": [
+				"Flamingo",
+				"Birdcage",
+				"Spoonbill"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt",
+				"pack notes on the Roost cocktails"
+			]
+		},
+		{
+			"key": "bar-beach-names",
+			"kind": "story",
+			"name": "The beach names at Bubbles",
+			"say": "",
+			"explain": "Three of the bubbly cocktails carry the names of seaside places, which suits a menu poured in a courtyard in the afternoon.\n\nThe Riviera calls up the sunny Mediterranean coast. Bodrum is a resort and yachting town on Turkey's Aegean coast, once the ancient Halicarnassus. OBX is the common shorthand for the Outer Banks, the barrier islands off North Carolina.\n\nThe menu says nothing about why these names were chosen, so a server tells no tale beyond what the names are. Used lightly, they are a pleasant way in: the Riviera for a guest who wants something light and French in feeling, the Bodrum for the rum lover, the OBX for the gin drinker who likes fruit with bubbles.",
+			"card": {
+				"front": "What places do the Riviera, Bodrum and OBX name?",
+				"back": "The Mediterranean coast, a resort town on Turkey's Aegean coast, and the Outer Banks of North Carolina. The menu gives no reason for the names, so tell no story."
+			},
+			"items": [
+				"Riviera",
+				"Bodrum",
+				"OBX"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 60)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-spritz-story",
+			"kind": "story",
+			"name": "The spritz",
+			"say": "SHPRITZ",
+			"explain": "The spritz comes from the Veneto in the nineteenth century, under Austrian rule, when soldiers and officials found the local wine too strong and asked for a splash of water in it; spritzen is German for to splash. In time the splash became soda, the wine became sparkling, and a bitter liqueur joined, and in the 1950s Aperol made the bright orange version famous.\n\nA spritz is an aperitivo: low in strength, bittersweet and fizzy, drunk before a meal to wake the appetite.\n\nThe Chandon Garden Spritz follows that pattern with dry Chandon Brut and a bitter orange liqueur. Offer it to the guest who orders an aperitivo or an Aperol spritz, and call the wine sparkling wine, as the menu does, never Champagne.",
+			"card": {
+				"front": "Where does the word spritz come from?",
+				"back": "From German spritzen, to splash: Austrian soldiers in the Veneto asked for water in strong wine. Now sparkling wine, a bitter liqueur and bubbles, drunk as an aperitivo."
+			},
+			"items": [
+				"Chandon Garden Spritz"
+			],
+			"terms": [
+				"Chandon"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 58)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-new-orleans-coffee-story",
+			"kind": "story",
+			"name": "New Orleans, a coffee city",
+			"say": "",
+			"explain": "New Orleans has been a coffee port since the early nineteenth century; by 1840 it was the second largest coffee importer in the United States, and coffee still arrives on its wharves.\n\nThe city's taste came with French habits. France had stretched coffee with roasted chicory root during Napoleon's Continental Blockade, and when the Union blockade cut imports during the Civil War, New Orleanians are said to have done the same; some historians call that last part possibly fabled. Either way the blend stayed, for its body and its gentle, cocoa-like bitterness.\n\nSo coffee at Brennan's is a local story, not an afterthought: chicory coffee closes the Traditional Breakfast beside the Bananas Foster, and the house's beans come from Congregation, a roaster across the river in Algiers Point.",
+			"card": {
+				"front": "Why does New Orleans drink coffee with chicory?",
+				"back": "French habit and a great coffee port: chicory stretched coffee in Napoleon's blockade and, it is said, in the Civil War. It stayed for its body and cocoa-like bitterness."
+			},
+			"items": [
+				"New Orleans-Style Coffee with Chicory",
+				"Congregation Single-Origin Coffee",
+				"Café Glacé de la Maison",
+				"Brennan’s Irish Coffee"
+			],
+			"terms": [
+				"Chicory"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 27)",
+				"guide.txt (pdf p49, eye openers, coffee and Bubbles)"
+			]
+		},
+		{
+			"key": "bar-billboard-1946-list",
+			"kind": "story",
+			"name": "Billboard Songs from 1946 and Temperance, 1946",
+			"say": "",
+			"explain": "The fall cocktail list is called Billboard Songs from 1946, and the menu says it celebrates 80 years at Brennan's, which opened in 1946. Every drink carries the title of a hit song of that year, and the two spirit-free drinks sit beside them under Temperance, 1946.\n\nThe list is built in pairs a server can sell. Rumors are Flying and Personality share tart cherry juice and brown sugar syrup, one on rye and one on zero proof rosé. Old Buttermilk Sky and Oh! What It Seemed to Be are the same fig and egg white sour, one with tequila and one with Lyre's.\n\nSong facts are a gentle table story; tell one only if the guest is curious. The menu's own spelling of each title is the one to say.",
+			"card": {
+				"front": "What do the fall drink names celebrate?",
+				"back": "Hit songs of 1946, the year Brennan's opened: the list celebrates 80 years. Two spirit-free drinks sit beside it under Temperance, 1946."
+			},
+			"items": [
+				"For Sentimental Reasons",
+				"Prisoner of Love",
+				"Rumors are Flying",
+				"To Each His Own",
+				"Old Buttermilk Sky",
+				"Five Minutes More",
+				"Personality",
+				"Oh! What It Seemed to Be"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"guide.txt (pdf p50, the anniversary)",
+				"research/components-drinks-2026-10-05.md (search 19)"
+			]
+		},
+		{
+			"key": "bar-song-sentimental",
+			"kind": "story",
+			"name": "The song For Sentimental Reasons",
+			"say": "",
+			"explain": "The full title is (I Love You) For Sentimental Reasons. The King Cole Trio's recording entered the Billboard Best Seller chart on 22 November 1946 and reached number one on 28 December 1946, Nat King Cole's first number one pop single.\n\nIt is a soft, romantic ballad, the sort of song a couple might have danced to in the year Brennan's opened.\n\nThe drink named for it is the gentlest on the fall list: sparkling wine over pear purée and allspice dram, fizzy and fruity with a warm spice at the end. That makes a natural line for a server: a sentimental, celebratory glass, the one to offer a couple marking an anniversary or a guest who usually orders bubbles.",
+			"card": {
+				"front": "Who took For Sentimental Reasons to number one, and when?",
+				"back": "Nat King Cole with the King Cole Trio, number one on 28 December 1946, his first number one pop single. Ours is the gentle sparkling pear drink."
+			},
+			"items": [
+				"For Sentimental Reasons"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 19)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-song-prisoner",
+			"kind": "story",
+			"name": "The song Prisoner of Love",
+			"say": "",
+			"explain": "Prisoner of Love is older than its hit year. Russ Columbo and Clarence Gaskill wrote the music in 1931, with words by Leo Robin. Perry Como recorded it in December 1945, and his version reached the Billboard charts on 30 March 1946, spent three weeks at number one from 4 May and finished as the top seller of the year on Billboard's year-end list.\n\nThe drink of the same name is the fall list's gin drink, made silky with clarified heavy cream and scented with Earl Grey tea and orange flower water.\n\nThe pairing is easy to tell: a smooth crooner's ballad and a smooth, fragrant drink. Keep the story short, and let the clarified cream be the real talking point.",
+			"card": {
+				"front": "Whose recording made Prisoner of Love a 1946 hit?",
+				"back": "Perry Como's: number one for three weeks from May 1946 and the year's top seller. The song itself dates from 1931. Ours is the silky gin drink."
+			},
+			"items": [
+				"Prisoner of Love"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 20)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-song-rumors",
+			"kind": "story",
+			"name": "The song Rumors Are Flying",
+			"say": "",
+			"explain": "Rumors Are Flying was written by Bennie Benjamin and George David Weiss. Frankie Carle and His Orchestra took it to number one on the Billboard charts in October 1946, and it finished fifth on Billboard's list of the year's biggest sellers. The menu prints the title as Rumors are Flying, and that is how the drink is said.\n\nIt is a bright, bouncy dance band song, quick and full of gossip.\n\nThe drink is the fall list's whiskey drink, built on Brennan's barrel-aged Rittenhouse rye with tart cherry juice, brown sugar syrup and orange bitters, rich and spirit-forward. Offer it to the Old Fashioned drinker, and mention its spirit-free twin, Personality, for anyone at the table not drinking.",
+			"card": {
+				"front": "Which band had the 1946 hit with Rumors Are Flying?",
+				"back": "Frankie Carle and His Orchestra, number one in October 1946. The menu prints Rumors are Flying for our barrel-aged Rittenhouse rye drink."
+			},
+			"items": [
+				"Rumors are Flying"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 21)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-song-each",
+			"kind": "story",
+			"name": "The song To Each His Own",
+			"say": "",
+			"explain": "To Each His Own was written by Jay Livingston and Ray Evans as the title song of a 1946 Paramount film, which won Olivia de Havilland an Academy Award. Eddy Howard and His Orchestra took it to number one on 3 August 1946 for eight weeks, and the Ink Spots and others had versions on the chart at the same moment, so several recordings shared the Top Ten.\n\nThe title fits a drink of personal taste. Ours is the fall list's orchard drink: Daron Fine Calvados, the apple brandy of Normandy, with Lillet Blanc and quince liqueur.\n\nOffer it to the brandy or Cognac drinker who wants the season in a glass; the song is a pleasant aside if the guest asks about the name.",
+			"card": {
+				"front": "Which 1946 film gave us the song To Each His Own?",
+				"back": "The Paramount film To Each His Own; Eddy Howard took the song to number one in August 1946. Ours is the Calvados, Lillet and quince drink."
+			},
+			"items": [
+				"To Each His Own"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 22)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-song-buttermilk",
+			"kind": "story",
+			"name": "The song Ole Buttermilk Sky",
+			"say": "",
+			"explain": "Hoagy Carmichael wrote Ole Buttermilk Sky with Jack Brooks and introduced it himself in the 1946 Western film Canyon Passage. Kay Kyser's recording made it a hit, reaching number one on 14 December 1946, and the song was nominated for an Academy Award.\n\nThe song is spelled Ole; the menu prints the drink as Old Buttermilk Sky, and a server says the menu's name for the drink. A buttermilk sky is a sky of small, rippled clouds.\n\nThe drink is the fall list's tequila sour, made with Volcán reposado, fig liqueur, lemon, cinnamon syrup and egg white, so it has a pale, silky foam on top, a nice echo of those soft clouds. Its spirit-free twin is Oh! What It Seemed to Be.",
+			"card": {
+				"front": "Who wrote the song behind Old Buttermilk Sky?",
+				"back": "Hoagy Carmichael, with Jack Brooks, for the 1946 film Canyon Passage; Kay Kyser had the number one. The song is spelled Ole; our menu prints Old."
+			},
+			"items": [
+				"Old Buttermilk Sky"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 23)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-song-five-minutes",
+			"kind": "story",
+			"name": "The song Five Minutes More",
+			"say": "",
+			"explain": "Five Minutes More was written in 1946 by Sammy Cahn, words, and Jule Styne, music. Frank Sinatra's recording reached number one on 14 September 1946 and stayed there for four weeks, ending the year fourth on Billboard's list.\n\nThe song is a plea to stay a little longer, which makes an easy line at the end of an evening.\n\nThe drink is the fall list's herbal one: Cathead mandarin vodka with Green Chartreuse, Licor 43 and lemon, bright, layered and strong, best sipped slowly. Offer it to a guest who loves herbal liqueurs, or to the vodka drinker who wants more character, perhaps as the reason to stay five minutes more.",
+			"card": {
+				"front": "Who sang the 1946 number one Five Minutes More?",
+				"back": "Frank Sinatra, number one from 14 September 1946. Ours is the Cathead mandarin vodka drink with Green Chartreuse, Licor 43 and lemon."
+			},
+			"items": [
+				"Five Minutes More"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 24)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-song-personality",
+			"kind": "story",
+			"name": "The song Personality",
+			"say": "",
+			"explain": "Personality was written by Johnny Burke and Jimmy Van Heusen for the 1946 film Road to Utopia, where Dorothy Lamour sang it. Johnny Mercer and the Pied Pipers made it a number one record for the week of 9 March 1946.\n\nIt is a playful, witty song, and the drink named for it sits under Temperance, 1946, the spirit-free side of the list.\n\nThe drink is a zero proof Wölffer Estate sparkling rosé with tart cherry juice and brown sugar syrup, bright and fizzy. It shares its cherry and brown sugar with Rumors are Flying, so a couple can order the same idea with and without spirit. It lets a guest who is not drinking join any toast.",
+			"card": {
+				"front": "Which film first featured the song Personality?",
+				"back": "Road to Utopia, 1946, sung by Dorothy Lamour; Johnny Mercer's record was number one in March 1946. Ours is the spirit-free sparkling rosé drink."
+			},
+			"items": [
+				"Personality"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 25)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-song-oh-what",
+			"kind": "story",
+			"name": "The song Oh! What It Seemed to Be",
+			"say": "",
+			"explain": "Oh! What It Seemed to Be was written by Bennie Benjamin, George Weiss and Frankie Carle. In 1946 it reached number one twice over, for Frankie Carle's orchestra and for Frank Sinatra, and between them the two recordings held the top of the charts for a large part of the year.\n\nThe title is wistful, a look back at how things seemed, and the drink sits under Temperance, 1946, the spirit-free list.\n\nIt is the twin of Old Buttermilk Sky: Lyre's non-alcoholic agave spirit with fig syrup, lemon, cinnamon syrup and egg white, a silky sour without spirit. Because Lyre's is labelled under 0.5 percent alcohol, a server says non-alcoholic, never alcohol free.",
+			"card": {
+				"front": "Who took Oh! What It Seemed to Be to number one?",
+				"back": "Both Frankie Carle's orchestra and Frank Sinatra, in 1946. Ours is the spirit-free sour, twin of Old Buttermilk Sky; say non-alcoholic, not alcohol free."
+			},
+			"items": [
+				"Oh! What It Seemed to Be"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 26)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-zero-proof",
+			"kind": "technique",
+			"name": "Zero proof and non-alcoholic",
+			"say": "",
+			"explain": "Spirit-free drinks need exact words, because guests who avoid alcohol rely on them. Zero proof is a marketing term, not a legal one and not a guarantee of 0.0; some zero proof products carry a trace. Non-alcoholic, in American labelling, allows under 0.5 percent.\n\nThe two drinks under Temperance, 1946 show the difference. Personality is built on Wölffer Estate's zero proof sparkling rosé; confirm the figure on its label at lineup. Oh! What It Seemed to Be is built on Lyre's agave, which Lyre's labels under 0.5 percent, so a server says non-alcoholic, never alcohol free or zero.\n\nEach has a spirited twin on the fall list, Rumors are Flying and Old Buttermilk Sky, so a whole table can share an idea. Any question about pregnancy, medication or recovery is answered with the label and the bar, never a promise from the server.",
+			"card": {
+				"front": "Which spirit-free drink do we call non-alcoholic rather than zero?",
+				"back": "Oh! What It Seemed to Be: Lyre's is labelled under 0.5 percent. Personality uses a zero proof rosé; confirm its label figure at lineup."
+			},
+			"items": [
+				"Personality",
+				"Oh! What It Seemed to Be"
+			],
+			"terms": [
+				"Zero proof",
+				"Lyre's"
+			],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"pack service note for Oh! What It Seemed to Be",
+				"research/dossier-the-bar.md"
+			]
+		},
+		{
+			"key": "bar-dessert-cocktails",
+			"kind": "story",
+			"name": "The dessert cocktails",
+			"say": "",
+			"explain": "The dessert menu prints three dessert cocktails: Floating in South Africa, a root beer float with Amarula; the Apple Crumble, bourbon with apple cider, butterscotch, maple and cinnamon; and Banane au Chocolat, banana and chocolate liqueurs with Pedro Ximénez sherry. Beside them sit the coffee cocktails.\n\nA dessert cocktail is a drink that can stand in for a plate, sweet and rich enough to close a meal on its own, or to share beside a dessert.\n\nFor a server they solve a common moment: the table that is too full for another plate but not ready to leave. Offer the float to a birthday table, the Apple Crumble to the bourbon drinker in the fall, and Banane au Chocolat to the chocolate lover or anyone who loved the Bananas Foster.",
+			"card": {
+				"front": "What are the three dessert cocktails, and when do we offer them?",
+				"back": "Floating in South Africa, the Apple Crumble and Banane au Chocolat. Offer them when a table is too full for another plate but not ready to leave."
+			},
+			"items": [
+				"Floating in South Africa",
+				"Apple Crumble",
+				"Banane au Chocolat"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-shaking",
+			"kind": "technique",
+			"name": "Shaking",
+			"say": "",
+			"explain": "Shaking means sealing the drink in a tin with plenty of ice and shaking it hard for several seconds. It chills, dilutes and aerates at once, so a drink with cream, juice or liqueur comes out cold, lightened and smooth, with a fine froth.\n\nThe rule bartenders learn first: shake what is cloudy, stir what is clear. Cream, citrus, egg and purée need the violence of the shake to marry; a drink of spirits alone is stirred so it stays silky.\n\nAt Brennan's the guide prints the Brandy Milk Punch as shaken with heavy cream and vanilla bean. For the sours, the creamy drinks and the espresso martini the menu prints no method, so shaking is the classic way and the bar confirms its own build before a server describes it.",
+			"card": {
+				"front": "Shake or stir: what is the bartender's rule?",
+				"back": "Shake what is cloudy, stir what is clear. Cream, citrus, egg and purée are shaken to chill, dilute and froth; spirit-only drinks are stirred to stay silky."
+			},
+			"items": [
+				"Brandy Milk Punch",
+				"Espresso Martini",
+				"Old Buttermilk Sky",
+				"Oh! What It Seemed to Be",
+				"Five Minutes More",
+				"Bodrum",
+				"Flamingo"
+			],
+			"terms": [],
+			"sources": [
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"expert knowledge",
+				"research/dossier-the-bar.md"
+			]
+		},
+		{
+			"key": "bar-stirring",
+			"kind": "technique",
+			"name": "Stirring",
+			"say": "",
+			"explain": "Stirring is done in a mixing glass with ice and a long bar spoon, turned smoothly for twenty or thirty seconds until the drink is cold and has taken on just enough water. It adds no air, so a drink of spirit, sugar and bitters stays clear, dense and silky.\n\nThat is why the Sazerac is stirred, never shaken: it is all spirit, and it is strained into its glass with no ice, so the dilution in the stir is all the water it will ever get.\n\nAt Brennan's the guide prints the Classic Sazerac as stirred with Peychaud's. Thompson's Dream and the Origin Story follow the same pattern, and an Old Fashioned style drink like the Birdcage is a stirred family too. Confirm each build with the bar.",
+			"card": {
+				"front": "Why is a Sazerac stirred and never shaken?",
+				"back": "It is all spirit: stirring chills and dilutes without adding air, so it stays clear and silky. It is strained into a glass with no ice."
+			},
+			"items": [
+				"Classic Sazerac",
+				"Thompson’s Dream",
+				"Origin Story",
+				"Birdcage",
+				"Rumors are Flying"
+			],
+			"terms": [
+				"Sazerac"
+			],
+			"sources": [
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-the-rinse",
+			"kind": "technique",
+			"name": "The rinse",
+			"say": "",
+			"explain": "A rinse is a small measure of a strongly flavoured spirit swirled round a chilled glass to coat it, with the excess poured away, before the drink goes in. The guest gets the spirit's perfume on every sip without much of its taste.\n\nIn the classic Sazerac build two glasses are used: one is packed with ice to chill while the drink is stirred in the other. The serving glass is emptied, coated with the anise spirit and drained, and the stirred drink is strained into it, with no ice.\n\nAt Brennan's the Classic is rinsed with Herbsaint and Thompson's Dream with St. George absinthe; the Origin Story carries Jade Nouvelle-Orléans absinthe in the same pattern. The bar confirms its own steps.",
+			"card": {
+				"front": "What does a rinse give a drink?",
+				"back": "The aroma of a strong spirit without much of its flavour: the chilled glass is coated, the excess poured away, then the drink strained in with no ice."
+			},
+			"items": [
+				"Classic Sazerac",
+				"Thompson’s Dream",
+				"Origin Story"
+			],
+			"terms": [
+				"Rinse"
+			],
+			"sources": [
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"research/components-drinks-2026-10-05.md (search 5)",
+				"research/dossier-the-bar.md"
+			]
+		},
+		{
+			"key": "bar-rolling",
+			"kind": "technique",
+			"name": "Rolling a Bloody Mary",
+			"say": "",
+			"explain": "Rolling means pouring a drink back and forth between two tins, or a tin and a glass, several times with ice. It chills and mixes without the violence of a shake.\n\nBartenders roll a Bloody Mary because shaking tomato whips air into it, turning it thin and foamy and breaking its texture. Rolled, it stays thick and smooth, with the spice evenly through it.\n\nThe menu prints no method for either of the house's tomato drinks, so rolling is the classic technique a server can explain, not a promise of the house build. The Bloody Bull adds beef bouillon to the house mix, and the Bloody Mary comes with pickled okra and spicy beans; the bar confirms how each is built and served.",
+			"card": {
+				"front": "Why do bartenders roll a Bloody Mary rather than shake it?",
+				"back": "Shaking whips air into tomato and leaves it thin and foamy. Rolling between two tins chills and mixes it while keeping it thick and smooth."
+			},
+			"items": [
+				"Bloody Bull",
+				"Brennan’s Bloody Mary"
+			],
+			"terms": [],
+			"sources": [
+				"research/dossier-the-bar.md",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-dry-shake",
+			"kind": "technique",
+			"name": "The dry shake",
+			"say": "",
+			"explain": "A dry shake is a shake without ice, used for drinks with egg white. Shaken warm, the egg white's proteins unfold and trap air, whipping into a foam rather like a soft meringue. The bartender then adds ice and shakes again to chill and dilute. In the reverse dry shake the order is swapped, ice first, then a shake without it.\n\nThe result is the pale, velvety cap on a sour and the silky body under it; the egg white adds texture, not flavour.\n\nTwo Brennan's drinks print egg white: Old Buttermilk Sky and its spirit-free twin, Oh! What It Seemed to Be. The menu prints no method, so the dry shake is the classic technique and the bar confirms its build. Any question about egg goes to the service note and lineup.",
+			"card": {
+				"front": "What is a dry shake, and why is it done?",
+				"back": "Shaking egg white without ice so it whips into a fine foam, then shaking again with ice to chill. It gives a sour its silky body and pale cap."
+			},
+			"items": [
+				"Old Buttermilk Sky",
+				"Oh! What It Seemed to Be"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 57)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-cream-float",
+			"kind": "technique",
+			"name": "Floating the cream",
+			"say": "",
+			"explain": "Floating is laying a lighter liquid on top of a heavier one so the two stay apart. For an Irish coffee, cream is whipped only until it thickens to a pourable ribbon, then poured slowly over the back of a spoon onto the hot, sweetened coffee.\n\nSugar does real work here: dissolved in the coffee it makes the coffee denser, which helps the cream sit on top. Once the cream is on, the drink is never stirred; the guest sips the hot coffee through the cool cream.\n\nAt Brennan's the guide prints the Irish Coffee built in the glass, sugar into the chicory coffee, then the whiskey, then the cream floated and left alone. The coffee with Frangelico and Nocello also carries whipped cream; whether it is floated or piped is a question for the bar.",
+			"card": {
+				"front": "Why is an Irish coffee never stirred once the cream is on?",
+				"back": "The cream is floated to stay on top: the guest sips hot coffee through cool cream. Sugar dissolved in the coffee makes it denser and helps the float."
+			},
+			"items": [
+				"Brennan’s Irish Coffee",
+				"Ralph’s Coffee"
+			],
+			"terms": [],
+			"sources": [
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"research/components-drinks-2026-10-05.md (search 14)",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-building-in-glass",
+			"kind": "technique",
+			"name": "Building in the glass",
+			"say": "",
+			"explain": "To build a drink is to make it in the glass it is served in, ingredient by ingredient, with no shaker or mixing glass. It suits drinks that would lose their bubbles or their layers if mixed hard.\n\nOrder matters. An Irish coffee is built hot: sugar dissolved in the coffee, then whiskey, then the cream. A Champagne Cocktail starts with the bitters-soaked sugar cube in the glass and the wine poured gently over it so it keeps its sparkle. Highballs and spritzes are built the same way, the sparkling part going in last.\n\nAt Brennan's the guide prints the Irish Coffee as built in the glass, and the Champagne Cocktail's printed build is the classic one. The bar confirms the rest.",
+			"card": {
+				"front": "What does it mean to build a drink?",
+				"back": "To make it in its serving glass, ingredient by ingredient, no shaker. Order matters: sugar, then spirit, then cream for an Irish coffee; cube first, Champagne poured over."
+			},
+			"items": [
+				"Brennan’s Irish Coffee",
+				"Brennan’s Champagne Cocktail",
+				"Chandon Garden Spritz"
+			],
+			"terms": [],
+			"sources": [
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"research/components-drinks-2026-10-05.md (search 17)"
+			]
+		},
+		{
+			"key": "bar-topping-with-bubbles",
+			"kind": "technique",
+			"name": "Topping with bubbles",
+			"say": "",
+			"explain": "Many drinks are finished with something sparkling: Champagne, another sparkling wine or sparkling water. The rule is to add it last and gently, down the side of the glass, never shaking it, so it keeps its fizz.\n\nThe bubbles lift aroma out of the glass and lighten a drink, making a liqueur or a purée feel fresh rather than heavy. Brut, meaning dry, wines keep a drink crisp; a softly sweet one like the Bigaro rounds it.\n\nAt Brennan's this runs through Bubbles and the fall list: Taittinger in the Flamingo, Champagne in the Champagne Cocktail, sparkling wine in the Riviera and For Sentimental Reasons, Chandon Brut in the spritz, the Bigaro in the OBX, sparkling water in the Bodrum and a zero proof rosé in Personality.",
+			"card": {
+				"front": "How is a sparkling top added to a cocktail?",
+				"back": "Last and gently, down the side of the glass, never shaken, so it keeps its fizz. The bubbles lift aroma and lighten the drink."
+			},
+			"items": [
+				"Flamingo",
+				"Brennan’s Champagne Cocktail",
+				"Riviera",
+				"Bodrum",
+				"OBX",
+				"Chandon Garden Spritz",
+				"For Sentimental Reasons",
+				"Personality"
+			],
+			"terms": [
+				"Brut"
+			],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-smoked-cocktail",
+			"kind": "technique",
+			"name": "Smoking a cocktail",
+			"say": "",
+			"explain": "A smoked cocktail is a drink given the aroma of wood smoke just before it is served. Bars do it in several ways: by trapping smoke from burning wood chips in the glass or under a cloche, by smoking the glass before the drink goes in, or with a handheld smoking gun.\n\nThe smoke sits mostly in the aroma, so the first thing the guest meets is the scent of the fire, then the drink underneath. Darker spirits such as bourbon carry it best, because their oak and caramel already lean that way.\n\nThe Birdcage is the Roost's smoked Old Fashioned. The house page prints the bourbon, bitters, orange and cherry but not how the bar smokes it, so a server describes the smoke and lets the bar explain the method.",
+			"card": {
+				"front": "How is the Birdcage made smoky?",
+				"back": "It is smoked just before service, so smoke meets the guest first. The house page does not say how; ask the bar, and describe aroma, not method."
+			},
+			"items": [
+				"Birdcage"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-clarifying",
+			"kind": "technique",
+			"name": "Clarifying with cream",
+			"say": "",
+			"explain": "Clarifying a drink with milk or cream is the old milk punch technique. The spirit and acidic ingredients, such as citrus or tea, are added to the milk or cream, which curdles. Left to rest and then strained slowly through cloth, the curds catch the cloudy parts and the liquid runs clear.\n\nWhat comes through is translucent and silky, without the weight of cream, and keeps far better than a creamy drink; the curds also soften any harsh edges.\n\nThe Prisoner of Love prints clarified heavy cream with gin, Earl Grey tea and orange flower water. How the bar clarifies it and for how long are questions for the bar, and any question about cream goes to the service note and lineup.",
+			"card": {
+				"front": "What does clarifying with cream do to a drink?",
+				"back": "Acid curdles the cream, the curds are strained out through cloth, and the drink runs clear and silky. It is the old milk punch technique, used in the Prisoner of Love."
+			},
+			"items": [
+				"Prisoner of Love"
+			],
+			"terms": [
+				"Milk punch"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 11)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-barrel-ageing",
+			"kind": "technique",
+			"name": "Barrel ageing",
+			"say": "",
+			"explain": "Barrel ageing means resting a spirit, a finished cocktail or even bitters in an oak cask. The wood softens sharp edges and adds vanilla, caramel and spice, and a little evaporation concentrates what is left. A used spirit cask lends some of its old contents too.\n\nTwo Brennan's drinks print it. Rumors are Flying is built on Brennan's Barrel Aged Rittenhouse Rye, and the Origin Story uses barrel-aged Peychaud's.\n\nWhat the menu does not print is who did the ageing, in what cask and for how long. Those are questions for the bar, so a server says barrel-aged for Brennan's and no more until the bar gives the story. Guests often ask; it is worth asking at lineup.",
+			"card": {
+				"front": "What does barrel ageing add, and what do we not know?",
+				"back": "Oak softens and adds vanilla, caramel and spice. Who aged our Rittenhouse and Peychaud's, in what cask and how long, is a question for the bar."
+			},
+			"items": [
+				"Rumors are Flying",
+				"Origin Story"
+			],
+			"terms": [
+				"Rittenhouse"
+			],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"guide.txt (pdf p39)",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-sour-pattern",
+			"kind": "technique",
+			"name": "The sour pattern",
+			"say": "",
+			"explain": "A sour is the oldest pattern behind most shaken cocktails: a spirit, a sour part, usually lemon or lime, and a sweet part, often with egg white for body. The bartender balances sharp against sweet so neither wins.\n\nLearn the pattern and most of the fall list reads at a glance. Old Buttermilk Sky is a tequila sour, with fig liqueur and cinnamon syrup on the sweet side and lemon on the sour. Oh! What It Seemed to Be is the same sour without spirit. Five Minutes More is a vodka sour sweetened by two liqueurs, and the Apple Crumble balances butterscotch and maple with lemon.\n\nTelling a guest it is a sour gives them a map: bright, balanced and refreshing rather than sweet or strong.",
+			"card": {
+				"front": "What are the three parts of a sour?",
+				"back": "A spirit, a sour part such as lemon, and a sweet part, often with egg white. Old Buttermilk Sky and Five Minutes More follow the pattern."
+			},
+			"items": [
+				"Old Buttermilk Sky",
+				"Oh! What It Seemed to Be",
+				"Five Minutes More",
+				"Apple Crumble"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-cold-brew",
+			"kind": "technique",
+			"name": "Cold brew",
+			"say": "",
+			"explain": "Cold brew is coffee made without heat. Coarse ground coffee is steeped in cold or room temperature water for twelve to twenty-four hours, then strained. It is not hot coffee poured over ice; it is a different extraction.\n\nBecause heat never touches it, fewer of the sharp, acidic and bitter compounds come out, so cold brew tastes smoother, rounder and naturally a little sweeter than iced hot coffee.\n\nThe Café Glacé de la Maison starts with chicory cold brew, which makes it smooth and roasty, then a cardamom-clove syrup and an orange flower foam. It is the guide's zero-proof pick for the baked apple, the turtle soup and the duck confit waffle, and the drink to offer anyone skipping the milk punch.",
+			"card": {
+				"front": "How is cold brew made, and how does it taste?",
+				"back": "Coarse coffee steeped in cold water for 12 to 24 hours, then strained. Smoother, rounder and less acidic than iced hot coffee; the base of our Café Glacé."
+			},
+			"items": [
+				"Café Glacé de la Maison"
+			],
+			"terms": [
+				"Café glacé"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 29)",
+				"guide.txt (pdf p49, eye openers, coffee and Bubbles)"
+			]
+		},
+		{
+			"key": "bar-cold-pressing",
+			"kind": "technique",
+			"name": "Cold pressing",
+			"say": "",
+			"explain": "Cold pressing is a way of making juice without heat or fast spinning blades. The fruit is ground to a pulp and pressed hard, often in a cloth, so the juice is squeezed out slowly and stays cool.\n\nJuice made this way keeps more of the fresh fruit's colour and bright flavour; because it is not pasteurised by heat, it is usually kept cold and has a short life.\n\nThe Revive Cold-Pressed Juice is listed under juices that are locally made and fresh squeezed: strawberry, apple and pineapple. Who presses it for Brennan's is not printed, and a search could not confirm the maker, so that is a question for the bar. It is the drink for a guest who wants neither alcohol nor caffeine.",
+			"card": {
+				"front": "What does cold pressed mean on our juice?",
+				"back": "The fruit is pressed slowly without heat, keeping colour and fresh flavour. Ours is strawberry, apple and pineapple; who presses it is a question for the bar."
+			},
+			"items": [
+				"Revive Cold-Pressed Juice"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 30)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-coffee-service",
+			"kind": "technique",
+			"name": "Coffee service at the table",
+			"say": "",
+			"explain": "Coffee closes most meals at Brennan's, so it is served with care. Ask how the guest takes it before it arrives, bring cream and sugar unasked if they take them, and pour or set the cup so the handle faces the guest's right hand.\n\nKnow the three coffees and what makes each different. The New Orleans-style coffee carries chicory, roasty with a gentle bitterness that balances dessert. The Congregation single origin has no chicory and tastes of one place; read today's origin from the coffee card on shift. The Café Glacé is cold brew, cold and lightly sweet.\n\nThe guide pairs chicory coffee with six sweet plates, so offering coffee as dessert menus go down is part of the sale, not an afterthought.",
+			"card": {
+				"front": "What do you ask before bringing a guest coffee?",
+				"back": "How they take it, so cream and sugar arrive with it. Then know the choice: chicory coffee, the single origin without chicory, or the cold Café Glacé."
+			},
+			"items": [
+				"New Orleans-Style Coffee with Chicory",
+				"Congregation Single-Origin Coffee",
+				"Café Glacé de la Maison"
+			],
+			"terms": [
+				"Congregation Coffee"
+			],
+			"sources": [
+				"guide.txt (pdf p49, eye openers, coffee and Bubbles)",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-brandy",
+			"kind": "ingredient",
+			"name": "Brandy",
+			"say": "",
+			"explain": "Brandy is a spirit distilled from wine, or from other fermented fruit, and usually aged in oak. Cognac is France's best-known grape brandy, made under strict rules; Calvados is Normandy's apple brandy.\n\nAged brandy brings dried fruit, vanilla and a soft warmth, rounder than whiskey and less sharp than vodka, which is why it suits cream so well.\n\nThe Brandy Milk Punch prints simply brandy, so a server says brandy and does not name a house or a grade until the bar confirms one. Brandy is the spirit of the New Orleans milk punch tradition; the bourbon version is the other well-known style. The Origin Story is built on a named Cognac, Dudognon, and To Each His Own on Daron Fine Calvados.",
+			"card": {
+				"front": "What is brandy, and which brandy is in our milk punch?",
+				"back": "A spirit distilled from wine or fruit, usually oak aged. The menu prints only brandy for the milk punch, so name no house or grade until the bar confirms it."
+			},
+			"items": [
+				"Brandy Milk Punch"
+			],
+			"terms": [],
+			"sources": [
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-heavy-cream",
+			"kind": "ingredient",
+			"name": "Heavy cream",
+			"say": "",
+			"explain": "Heavy cream is the richest pouring cream, high enough in butterfat to shake into a light froth or whip into peaks. In a cocktail it gives body, softens alcohol and carries flavours such as vanilla, nutmeg and pistachio.\n\nCream drinks are shaken hard with ice so the cream lightens and chills; they are best made fresh and served at once.\n\nThe guide prints the Brandy Milk Punch as shaken with heavy cream and vanilla bean, which makes it cold, creamy and smooth, like a lighter eggnog without the egg. The Bodrum prints cream too, with pistachio, lime and sparkling water. Both carry dairy as printed, so any question about cream goes to the service note and lineup, never a guess.",
+			"card": {
+				"front": "What does heavy cream do in our milk punch?",
+				"back": "Gives body, softens the brandy and carries the vanilla and nutmeg; shaken hard, it turns cold, frothy and smooth. Dairy questions go to the service note."
+			},
+			"items": [
+				"Brandy Milk Punch",
+				"Bodrum"
+			],
+			"terms": [],
+			"sources": [
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-vanilla-bean",
+			"kind": "ingredient",
+			"name": "Vanilla bean",
+			"say": "",
+			"explain": "Vanilla comes from the cured seed pod of a climbing orchid. Picked green, the pods are sweated and dried for months until they turn dark and fragrant, full of tiny black seeds.\n\nA real bean gives a deeper, more floral and warmer perfume than extract. In a bar it is usually steeped ahead in the cream or a syrup, so the flavour is ready for every shake.\n\nThe menu prints vanilla bean, not extract, for the Brandy Milk Punch, and a server can say so with pride; how the bar uses the bean is a question for lineup. Vanilla is also the backbone of the housemade vanilla bean ice cream in Floating in South Africa, and Licor 43 in Five Minutes More leans on it.",
+			"card": {
+				"front": "Vanilla bean or extract: what does our milk punch use?",
+				"back": "Real vanilla bean, as the menu prints: warmer and more floral than extract. How the bar steeps it is a question for lineup."
+			},
+			"items": [
+				"Brandy Milk Punch",
+				"Floating in South Africa"
+			],
+			"terms": [],
+			"sources": [
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-nutmeg",
+			"kind": "ingredient",
+			"name": "Nutmeg",
+			"say": "",
+			"explain": "Nutmeg is the seed of a tropical evergreen tree; mace is the lacy red covering around it. Grated fresh, it gives a warm, sweet, slightly woody perfume that fades fast once ground, which is why bartenders grate it over the drink at the last moment.\n\nIt is the classic finish for cream drinks: milk punch, eggnog and the Brandy Alexander all wear it.\n\nOn the Brandy Milk Punch the menu prints nutmeg and the guide says it tops the drink. The dusting is the first thing the guest smells as the glass comes up, and the first thing a guest sees. Describe it as fresh nutmeg on top only once the bar has confirmed it grates fresh.",
+			"card": {
+				"front": "What tops the Brandy Milk Punch, and why grate it fresh?",
+				"back": "Nutmeg. Freshly grated it gives a warm, sweet perfume that fades quickly once ground, so it goes on at the last moment."
+			},
+			"items": [
+				"Brandy Milk Punch"
+			],
+			"terms": [],
+			"sources": [
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-vodka",
+			"kind": "ingredient",
+			"name": "Vodka",
+			"say": "",
+			"explain": "Vodka is a neutral spirit distilled to high strength from grain, potatoes or other starches, then filtered and cut with water. It is meant to be clean, with little taste of its own beyond a soft texture and a hint of the grain or potato.\n\nThat cleanness is its job in a cocktail: it carries other flavours without fighting them, which is why it anchors the Bloody Mary and the espresso martini.\n\nAt Brennan's the menus name a brand only in some drinks. The Bloody Bull, the Bloody Mary and the Espresso Martini print vodka alone, so which vodka is a question for the bar. The Flamingo names Chopin, a Polish potato vodka, and Five Minutes More names Cathead's mandarin vodka from Mississippi.",
+			"card": {
+				"front": "Which of our drinks name their vodka?",
+				"back": "The Flamingo names Chopin and Five Minutes More names Cathead mandarin. The Bloody Bull, Bloody Mary and Espresso Martini print vodka only; ask the bar which."
+			},
+			"items": [
+				"Bloody Bull",
+				"Brennan’s Bloody Mary",
+				"Espresso Martini",
+				"Flamingo",
+				"Five Minutes More"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-bloody-mary-mix",
+			"kind": "ingredient",
+			"name": "Housemade Bloody Mary mix",
+			"say": "",
+			"explain": "A Bloody Mary mix is the seasoned tomato base of the drink. Classic mixes are tomato juice with lemon, Worcestershire sauce, hot sauce, horseradish, celery salt and black pepper, made ahead so every drink tastes the same.\n\nOurs is printed as housemade on both tomato drinks. The guide sets the heat by the mix and notes that Bloody Mary mixes usually include Worcestershire, which is made with anchovy; that is a general warning, not a confirmed fact about this mix.\n\nSo the server's job is to say housemade and stop there. What goes in it, how hot it runs today and whether the Bloody Bull and the Bloody Mary share one batch are questions for the bar, and any question about fish or spice goes to the service note and lineup.",
+			"card": {
+				"front": "What do we tell a guest about our Bloody Mary mix?",
+				"back": "That it is housemade. Its recipe, today's heat and whether both tomato drinks share it are bar questions; Worcestershire questions go to the service note and lineup."
+			},
+			"items": [
+				"Bloody Bull",
+				"Brennan’s Bloody Mary"
+			],
+			"terms": [],
+			"sources": [
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"research/dossier-the-bar.md"
+			]
+		},
+		{
+			"key": "bar-beef-bouillon",
+			"kind": "ingredient",
+			"name": "Beef bouillon",
+			"say": "BOO-yon",
+			"explain": "Bouillon is French for broth: a clear, savoury stock made by simmering beef, bones and vegetables, strained clean. Cold beef bouillon has a rich, meaty depth with no fat on it.\n\nIn a drink it turns a Bloody Mary into something closer to a spicy, chilled consommé, which is how the guide describes the Bloody Bull. The idea comes from the Bull Shot of 1952, vodka and canned beef bouillon.\n\nAt Brennan's it is the reason the Bloody Bull pours with the turtle soup on the Traditional Breakfast. It also means the drink carries beef: the guide's service note says so plainly and offers the Brennan's Bloody Mary instead. Whether the bouillon is a house stock is a question for the bar.",
+			"card": {
+				"front": "What does beef bouillon add to the Bloody Bull?",
+				"back": "A clear, savoury beef broth: it makes the drink rich and meaty, like a spicy chilled consommé. It carries beef; the Bloody Mary is the alternative."
+			},
+			"items": [
+				"Bloody Bull"
+			],
+			"terms": [
+				"Bloody Bull"
+			],
+			"sources": [
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"research/components-drinks-2026-10-05.md (search 12)"
+			]
+		},
+		{
+			"key": "bar-pickled-okra-beans",
+			"kind": "ingredient",
+			"name": "Pickled okra and spicy beans",
+			"say": "OH-kruh",
+			"explain": "Okra is a green seed pod that came to the American South from Africa through the slave trade, now a staple of Louisiana cooking from gumbo to the pickle jar. Pickled whole in vinegar with spice, it stays crisp and loses the slipperiness okra has when cooked.\n\nSpicy beans in the Gulf South usually means pickled green beans with chilli; the menu prints only spicy beans, so say it as printed.\n\nOn Brennan's Bloody Mary the menu prints both as the garnish, standing in the glass. They give the drink its pickled crunch and a local accent, and they are the easy way to tell it apart from the Bloody Bull. Which vegetables and how hot are confirmed with the bar.",
+			"card": {
+				"front": "What garnishes Brennan's Bloody Mary?",
+				"back": "Pickled okra and spicy beans, as the menu prints: a crisp, tangy, local garnish that sets it apart from the Bloody Bull."
+			},
+			"items": [
+				"Brennan’s Bloody Mary"
+			],
+			"terms": [
+				"Okra"
+			],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"research/dossier-the-bar.md",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-rye-whiskey",
+			"kind": "ingredient",
+			"name": "Rye whiskey",
+			"say": "",
+			"explain": "American rye whiskey is distilled from a mash of at least 51 percent rye and aged in new charred oak. Rye gives a drier, spicier, more peppery whiskey than bourbon's sweet corn, with notes of baking spice and dark bread.\n\nThat spice is why rye became the Sazerac's spirit once cognac grew scarce, and why it suits stirred, spirit-forward drinks.\n\nBrennan's pours three named ryes. The Classic Sazerac uses Sazerac rye, a Sazerac Company brand. Thompson's Dream uses Willett 4-year rye from Bardstown, bigger and hotter. Rumors are Flying uses Brennan's barrel-aged Rittenhouse, a bottled in bond rye. Each step up the ladder brings more spice and heat.",
+			"card": {
+				"front": "How does rye differ from bourbon?",
+				"back": "Rye is at least 51 percent rye grain: drier, spicier and more peppery than corn-sweet bourbon. It became the Sazerac's spirit once cognac grew scarce."
+			},
+			"items": [
+				"Classic Sazerac",
+				"Thompson’s Dream",
+				"Rumors are Flying"
+			],
+			"terms": [
+				"Sazerac",
+				"Willett",
+				"Rittenhouse"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 5)",
+				"research/components-drinks-2026-10-05.md (search 9)",
+				"research/components-drinks-2026-10-05.md (search 41)",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-sazerac-rye",
+			"kind": "ingredient",
+			"name": "Sazerac rye whiskey",
+			"say": "SAZ-uh-rak",
+			"explain": "Sazerac Rye is the straight rye whiskey made under the Sazerac name by the Sazerac Company, the New Orleans firm that grew from Thomas Handy's Sazerac Coffee House business. It is a softer, rounder style of rye, spicy with a little caramel.\n\nThe same company owns Peychaud's bitters and Herbsaint, so the Classic Sazerac at Brennan's is three bottles from one New Orleans family of brands in one glass: Sazerac rye, Peychaud's and a Herbsaint rinse.\n\nThat makes a good table line, and it explains the price: the Classic is the first rung at its price, before Thompson's Dream and the Origin Story. Measures and the sugar are confirmed with the bar.",
+			"card": {
+				"front": "What links Sazerac rye, Peychaud's and Herbsaint?",
+				"back": "All three are Sazerac Company brands, so the Classic Sazerac is one New Orleans family of bottles in a single glass."
+			},
+			"items": [
+				"Classic Sazerac"
+			],
+			"terms": [
+				"Sazerac"
+			],
+			"sources": [
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"research/components-drinks-2026-10-05.md (search 3)",
+				"research/components-drinks-2026-10-05.md (search 5)",
+				"research/dossier-the-bar.md"
+			]
+		},
+		{
+			"key": "bar-peychauds-bitters",
+			"kind": "ingredient",
+			"name": "Peychaud's bitters",
+			"say": "PAY-shoze",
+			"explain": "Peychaud's is a bright red New Orleans aromatic bitters, made first by Antoine Peychaud in his Royal Street apothecary in the 1850s and now by the Sazerac Company. Bitters are spirit infused with bitter roots, barks and spices; a few dashes season a drink the way salt seasons food.\n\nPeychaud's is lighter and more floral than Angostura, with anise and cherry, and it gives the Sazerac its rosy colour. A Sazerac with Angostura instead is a different drink.\n\nAt Brennan's the Classic is stirred with Peychaud's. The Origin Story uses barrel-aged Peychaud's, softened in oak; who ages it is a question for the bar. Thompson's Dream swaps in Bitter Truth Creole Bitters, a German tribute to the same style.",
+			"card": {
+				"front": "How do Peychaud's bitters differ from Angostura?",
+				"back": "Peychaud's is red, lighter and more floral, with anise and cherry, and it colours the Sazerac. Angostura is darker and spicier, in the Old Fashioned and Champagne Cocktail."
+			},
+			"items": [
+				"Classic Sazerac",
+				"Origin Story"
+			],
+			"terms": [
+				"Peychaud's"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 2)",
+				"guide.txt (pdf p38 and p39, the bar pages)"
+			]
+		},
+		{
+			"key": "bar-herbsaint",
+			"kind": "ingredient",
+			"name": "Herbsaint",
+			"say": "ERB-sant",
+			"explain": "Herbsaint is New Orleans' own anise liqueur. J. Marion Legendre and Reginald Parker, who had learned absinthe making in France during the First World War, created it in New Orleans in 1934, after Prohibition and while absinthe was banned. It was sold first as Legendre Absinthe, though it held no grand wormwood; the federal authorities objected, and it became Herbsaint, from herbe sainte, the Creole name for wormwood.\n\nThe Sazerac Company bought the firm in 1949. The H is silent: ERB-sant.\n\nIn the Classic Sazerac it is only a rinse, so the guest gets its anise perfume without much of its flavour. The guide calls it our local anise liqueur: local by birth and ownership, though it is not distilled in the city today.",
+			"card": {
+				"front": "What is Herbsaint, and when was it created?",
+				"back": "New Orleans' anise liqueur, created in 1934 as an absinthe substitute while absinthe was banned. Say ERB-sant; it rinses the Classic Sazerac glass."
+			},
+			"items": [
+				"Classic Sazerac"
+			],
+			"terms": [
+				"Herbsaint",
+				"Rinse"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 3)",
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"guide.txt (pdf p51, the lexicon)"
+			]
+		},
+		{
+			"key": "bar-st-george-absinthe",
+			"kind": "ingredient",
+			"name": "St. George Absinthe Verte",
+			"say": "saint JORJ",
+			"explain": "St. George Absinthe Verte comes from St. George Spirits in Alameda, California. Released after the federal rules changed in 2007, it was the first legal American absinthe since the 1912 ban.\n\nIt is built on brandy and flavoured with wormwood, star anise and fennel, then coloured and perfumed with herbs such as lemon balm, hyssop, meadowsweet, basil, mint, tarragon and stinging nettle. At 60 percent alcohol it is herbal and green rather than candied.\n\nIn Thompson's Dream it rinses the glass in place of the Classic's Herbsaint, so the drink smells greener and more herbal. Alongside the bigger Willett rye and the Creole bitters, that is the honest description of what the extra money buys.",
+			"card": {
+				"front": "What makes St. George absinthe special?",
+				"back": "It was the first legal American absinthe after the ban ended in 2007: a brandy base, wormwood and garden herbs. It rinses Thompson's Dream."
+			},
+			"items": [
+				"Thompson’s Dream"
+			],
+			"terms": [
+				"St. George",
+				"Absinthe"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 6)",
+				"guide.txt (pdf p38 and p39, the bar pages)"
+			]
+		},
+		{
+			"key": "bar-jade-absinthe",
+			"kind": "ingredient",
+			"name": "Jade Nouvelle-Orléans absinthe",
+			"say": "ZHAHD noo-VEL or-lay-AHN",
+			"explain": "Jade Nouvelle-Orléans is an absinthe supérieure made at the Combier distillery in Saumur, in France's Loire Valley. Wormwood and other plants are macerated in wine alcohol and distilled in old alembics; it is bottled at 68 percent.\n\nIt was made as a tribute by a native New Orleanian to the city's nineteenth-century absinthe culture, when the French Quarter's absinthe houses were famous, long before the ban. On the nose it is gentle fennel and fresh herbs with a long, soft anise finish.\n\nIn the Origin Story it brings a floral wormwood aroma to the cognac drink, in place of the Classic's Herbsaint. Whether the bar rinses with it, as the Sazerac pattern suggests, is confirmed at lineup.",
+			"card": {
+				"front": "What is Jade Nouvelle-Orléans, and which drink uses it?",
+				"back": "A French absinthe from the Combier distillery in Saumur, made as a tribute to New Orleans' old absinthe culture. It perfumes the Origin Story."
+			},
+			"items": [
+				"Origin Story"
+			],
+			"terms": [
+				"Jade Nouvelle-Orléans",
+				"Absinthe"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 7)",
+				"guide.txt (pdf p38 and p39, the bar pages)"
+			]
+		},
+		{
+			"key": "bar-creole-bitters",
+			"kind": "ingredient",
+			"name": "Bitter Truth Creole Bitters",
+			"say": "",
+			"explain": "The Bitter Truth is a bitters maker from Munich. Its Creole Bitters are bright red, made in the New Orleans style with anise, caraway and fennel, plus cinnamon, pepper and dried fruit notes; they are sold as a natural choice for a Sazerac and an alternative to Peychaud's.\n\nThey are called Creole, not Peychaud's, because Peychaud's is a brand of its own.\n\nIn Thompson's Dream they take the Classic's Peychaud's role. With the louder Willett rye and the St. George absinthe rinse, the result is spicier and more herbal, though still recognisably a Sazerac. A useful guest line: a German bitters maker's tribute to the New Orleans style, made for exactly this drink.",
+			"card": {
+				"front": "What bitters go in Thompson's Dream?",
+				"back": "Bitter Truth Creole Bitters, from Munich: red, with anise, caraway and fennel, a tribute to the New Orleans style in place of Peychaud's."
+			},
+			"items": [
+				"Thompson’s Dream"
+			],
+			"terms": [
+				"Bitter Truth"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 8)",
+				"guide.txt (pdf p38 and p39, the bar pages)"
+			]
+		},
+		{
+			"key": "bar-willett-rye",
+			"kind": "ingredient",
+			"name": "Willett 4-year rye",
+			"say": "WILL-it",
+			"explain": "Willett is a family distillery in Bardstown, Kentucky, founded in 1936 on the family farm. After the old distillery closed in the 1980s, the family began distilling on the site again in 2012, and its 4-year rye comes from that new production.\n\nThe family estate bottlings are known for being strong and spicy, bottled well above the Classic's rye; read the exact proof on the bottle at the bar rather than quoting one from memory.\n\nIn Thompson's Dream that strength is the point: a Sazerac with louder rye spice and more heat, for the guest who already loves the Classic. It is the drink to offer whenever a guest orders a second Sazerac.",
+			"card": {
+				"front": "Why does Willett rye make Thompson's Dream louder?",
+				"back": "It is a strong, spicy Bardstown rye from a family distillery founded in 1936, bottled higher than the Classic's rye; ask the bar for today's proof."
+			},
+			"items": [
+				"Thompson’s Dream"
+			],
+			"terms": [
+				"Willett"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 9)",
+				"guide.txt (pdf p38 and p39, the bar pages)"
+			]
+		},
+		{
+			"key": "bar-dudognon-cognac",
+			"kind": "ingredient",
+			"name": "Dudognon Cognac",
+			"say": "doo-doh-NYOHN",
+			"explain": "Cognac is grape brandy from the Cognac region of western France, double distilled in copper pot stills and aged in oak. Its best cru is Grande Champagne, chalky country that gives long, fine spirits; the name has nothing to do with the sparkling wine region.\n\nThe Dudognon family has grown grapes at Lignières-Sonneville, in the heart of Grande Champagne, since 1776. It is a traditional estate that distils only its own grapes and sells its spirits by age, such as a 10-year Réserve and a 20-year Vieille Réserve.\n\nThe Origin Story prints Dudognon Cognac without naming the bottling, so which one the bar pours is a lineup question. It gives the drink grape, dried fruit and oak, rounder than rye.",
+			"card": {
+				"front": "Where does Dudognon Cognac come from?",
+				"back": "A family estate at Lignières-Sonneville in Grande Champagne, Cognac's first cru, growing grapes there since 1776. Which bottling we pour is a lineup question."
+			},
+			"items": [
+				"Origin Story"
+			],
+			"terms": [
+				"Dudognon"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 10)",
+				"guide.txt (pdf p38 and p39, the bar pages)"
+			]
+		},
+		{
+			"key": "bar-chicory",
+			"kind": "ingredient",
+			"name": "Chicory",
+			"say": "CHICK-uh-ree",
+			"explain": "Chicory is a hardy plant whose root is dried, roasted and ground. Brewed with coffee it adds body, a dark colour and a roasty, cocoa-like bitterness, and it carries no caffeine of its own.\n\nThe French used it to stretch coffee during Napoleon's blockade, and New Orleans, a French city and a great coffee port, kept the habit; the Civil War blockade is said to have fixed it.\n\nChicory runs through the Brennan's coffee list. The New Orleans-style coffee is blended with it, the Irish Coffee and the walnut and hazelnut coffee use the dark roast with chicory, the Café Glacé is chicory cold brew, and the Espresso Martini prints chicory. How it goes into the martini is a question for the bar.",
+			"card": {
+				"front": "What is chicory, and what does it add to coffee?",
+				"back": "The roasted root of a hardy plant: body, dark colour and a roasty, cocoa-like bitterness, with no caffeine of its own. New Orleans blends it into its coffee."
+			},
+			"items": [
+				"New Orleans-Style Coffee with Chicory",
+				"Brennan’s Irish Coffee",
+				"Café Glacé de la Maison",
+				"Espresso Martini",
+				"Ralph’s Coffee"
+			],
+			"terms": [
+				"Chicory"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 27)",
+				"guide.txt (pdf p49, eye openers, coffee and Bubbles)",
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"guide.txt (pdf p51, the lexicon)"
+			]
+		},
+		{
+			"key": "bar-congregation-coffee",
+			"kind": "ingredient",
+			"name": "Congregation Coffee",
+			"say": "",
+			"explain": "Congregation Coffee is a New Orleans roaster with its café at 240 Pelican Avenue in Algiers Point, across the river from the French Quarter. It was founded in 2015; in 2023 it closed its roastery and reopened later that year under Brennan family ownership, as the local press reported, roasting on Tchoupitoulas Street.\n\nThe breakfast tasting pours Brennan's private blend from Congregation with chicory, and the coffee list carries a Congregation single origin.\n\nSingle origin means the beans come from one place, so the cup tastes of that place rather than a blend, and there is no chicory. Congregation rotates its origins with the seasons, so read today's from the coffee card on shift, never from memory.",
+			"card": {
+				"front": "Where is Congregation Coffee, and what is single origin?",
+				"back": "A roaster with its café in Algiers Point. Single origin means beans from one place, no blend and no chicory; read today's origin from the card."
+			},
+			"items": [
+				"Congregation Single-Origin Coffee",
+				"New Orleans-Style Coffee with Chicory"
+			],
+			"terms": [
+				"Congregation Coffee"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 28)",
+				"guide.txt (pdf p49, eye openers, coffee and Bubbles)"
+			]
+		},
+		{
+			"key": "bar-brown-sugar",
+			"kind": "ingredient",
+			"name": "Brown sugar and brown sugar syrup",
+			"say": "",
+			"explain": "Brown sugar is sugar that keeps some of its molasses, which gives it a soft, caramel and toffee flavour and a darker colour than white sugar. Dissolved with water it becomes brown sugar syrup, the bar's easy way to sweeten a cold drink.\n\nIn hot coffee it melts straight in; in cold drinks a syrup is used, because grains do not dissolve in the cold.\n\nBrennan's uses it three times. In the Irish Coffee it sweetens the chicory coffee and helps the cream float. In Rumors are Flying and its spirit-free twin, Personality, a brown sugar syrup rounds the tart cherry juice, which is why a couple can order the same idea with and without spirit.",
+			"card": {
+				"front": "Which of our drinks use brown sugar?",
+				"back": "The Irish Coffee, stirred into the hot chicory coffee, and Rumors are Flying and Personality, as a syrup rounding the tart cherry juice."
+			},
+			"items": [
+				"Brennan’s Irish Coffee",
+				"Rumors are Flying",
+				"Personality"
+			],
+			"terms": [],
+			"sources": [
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-tullamore-dew",
+			"kind": "ingredient",
+			"name": "Tullamore D.E.W.",
+			"say": "TULL-uh-more DEW",
+			"explain": "Tullamore D.E.W. is an Irish whiskey established in 1829 at Tullamore in County Offaly. The letters are the initials of Daniel Edmund Williams, who rose to manage and then own the original distillery, and they also spell the word dew.\n\nIt is a blend of the three Irish whiskey styles, pot still, malt and grain, and triple distilled, which makes it smooth, light and gently spicy, well suited to hot coffee.\n\nIn Brennan's Irish Coffee it is the named whiskey, with chicory coffee, brown sugar and whipped cream. When a guest asks what the letters mean, the answer is a small, true story to tell while the coffee is poured.",
+			"card": {
+				"front": "What do the letters in Tullamore D.E.W. stand for?",
+				"back": "Daniel Edmund Williams, the manager who came to own the distillery. It is a smooth triple-distilled Irish blend, established in 1829, in our Irish Coffee."
+			},
+			"items": [
+				"Brennan’s Irish Coffee"
+			],
+			"terms": [
+				"Tullamore D.E.W."
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 15)",
+				"guide.txt (pdf p38 and p39, the bar pages)"
+			]
+		},
+		{
+			"key": "bar-whipped-cream",
+			"kind": "ingredient",
+			"name": "Whipped cream",
+			"say": "",
+			"explain": "Whipped cream is cream beaten until it traps air and thickens. For coffee drinks it is usually whipped only lightly, to a soft, pourable ribbon that floats on hot coffee; a stiff, piped cap is a different texture.\n\nCool cream on hot coffee is the pleasure of these drinks: the guest sips the hot, sweet coffee through the cold cap. Stirring it in loses that.\n\nAt Brennan's whipped cream tops the Irish Coffee and the coffee with Frangelico and Nocello. The guide's Irish Coffee lines say a cap of whipped cream; whether the bar floats it soft or tops it firm is a question to settle at lineup. Questions about cream go to the service note.",
+			"card": {
+				"front": "How should whipped cream sit on our coffee cocktails?",
+				"back": "On top, never stirred in: the guest sips hot coffee through cool cream. Whether it is floated soft or set firm is confirmed at lineup."
+			},
+			"items": [
+				"Brennan’s Irish Coffee",
+				"Ralph’s Coffee"
+			],
+			"terms": [],
+			"sources": [
+				"guide.txt (pdf p38 and p39, the bar pages)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-chopin-vodka",
+			"kind": "ingredient",
+			"name": "Chopin vodka",
+			"say": "SHOH-pan",
+			"explain": "Chopin is a Polish single-ingredient vodka. Its best-known bottling is made only from potatoes grown in the Polish region of Podlasie and distilled four times at Siedlce; the brand also makes rye and wheat versions from a single grain each.\n\nPotato vodka is fuller and rounder in texture than most grain vodkas, with a soft, creamy feel and a faint earthiness.\n\nIn the Flamingo it pairs with Monkey 47 gin under dragonfruit, lemon and Taittinger Champagne. The house page prints Chopin Vodka without saying which bottling, so potato is the likely and usual one but not stated; confirm with the bar before saying potato.",
+			"card": {
+				"front": "What kind of vodka is Chopin?",
+				"back": "A Polish single-ingredient vodka, best known in its potato bottling from Podlasie, round and creamy. Confirm the bottling before saying potato."
+			},
+			"items": [
+				"Flamingo"
+			],
+			"terms": [
+				"Chopin"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 31)",
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-monkey-47",
+			"kind": "ingredient",
+			"name": "Monkey 47 gin",
+			"say": "MUNG-kee forty-SEV-en",
+			"explain": "Monkey 47 is a dry gin from Germany's Black Forest, the Schwarzwald. Its name gives away its numbers: 47 botanicals and 47 percent alcohol. Beside juniper and citrus it uses local plants such as lingonberries, spruce shoots and cranberries, and it rests in earthenware before bottling.\n\nThe result is a big, aromatic gin, fruity, green and floral, that stands up in a drink with Champagne.\n\nIn the Flamingo it joins Chopin vodka, dragonfruit, lemon and Taittinger La Française. The vodka gives body and the gin gives the botanical lift a guest notices first. It is a fine name to drop for a gin lover deciding whether to visit the Roost.",
+			"card": {
+				"front": "What do the 47s in Monkey 47 mean?",
+				"back": "47 botanicals and 47 percent alcohol: a Black Forest gin with lingonberries and spruce. It gives the Flamingo its botanical lift."
+			},
+			"items": [
+				"Flamingo"
+			],
+			"terms": [
+				"Monkey 47"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 32)",
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-dragonfruit",
+			"kind": "ingredient",
+			"name": "Dragonfruit",
+			"say": "",
+			"explain": "Dragonfruit, or pitaya, is the fruit of a climbing cactus, with a bright pink or yellow skin covered in green-tipped scales. Inside, the flesh is white or deep magenta, speckled with tiny edible black seeds.\n\nIts flavour is gentle, somewhere between kiwi and pear, mildly sweet, and the red-fleshed kind gives a vivid pink colour, which makes it a favourite in bright, festive drinks.\n\nIn the Flamingo it brings fruit and almost certainly the drink's colour, though how the bar uses it, fresh, as a purée or a syrup, and the colour of the flesh are not printed. Describe it as a soft tropical fruit and let the bar confirm the rest.",
+			"card": {
+				"front": "What does dragonfruit taste like?",
+				"back": "Gently sweet, between kiwi and pear, from a cactus fruit; red-fleshed kinds give vivid pink colour. How the Flamingo uses it is confirmed with the bar."
+			},
+			"items": [
+				"Flamingo"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-champagne",
+			"kind": "ingredient",
+			"name": "Champagne",
+			"say": "sham-PAIN",
+			"explain": "Champagne is sparkling wine from the Champagne region of north-east France, made from Chardonnay, Pinot Noir and Pinot Meunier by the traditional method, with its second fermentation in the bottle and long ageing on the lees. Only wine from that region may carry the name.\n\nBottle ageing gives it fine, persistent bubbles and flavours of citrus, apple, brioche and toast, which is why it lifts a cocktail rather than just fizzing.\n\nTwo Brennan's drinks print Champagne by name. Brennan's Champagne Cocktail prints Champagne without a house, and the Flamingo prints Taittinger La Française. Other drinks print sparkling wine, and a server keeps the distinction exactly as the menu does.",
+			"card": {
+				"front": "When may a sparkling wine be called Champagne?",
+				"back": "Only when it comes from Champagne in north-east France, made by the traditional method. Our menus print Champagne for two drinks; the rest say sparkling wine."
+			},
+			"items": [
+				"Brennan’s Champagne Cocktail",
+				"Flamingo"
+			],
+			"terms": [
+				"Non-vintage"
+			],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-taittinger",
+			"kind": "ingredient",
+			"name": "Taittinger La Française",
+			"say": "teh-tan-ZHAY",
+			"explain": "Taittinger is a Champagne house in Reims, founded in 1734 and family owned since 1932, one of the grandes marques. Its Brut La Française is the non-vintage house style, unusual for its high share of Chardonnay, about 40 percent, with Pinot Noir and Pinot Meunier, aged close to four years on the lees in the chalk cellars under Reims.\n\nThat Chardonnay makes it fresh, light and elegant, with citrus and brioche.\n\nIn the Flamingo it tops Chopin vodka, Monkey 47 gin, dragonfruit and lemon. Brennan's also lists Taittinger La Française as a 3 litre double magnum on the Birthday Bubbles list, so the name links the Roost cocktail to the cellar.",
+			"card": {
+				"front": "What is distinctive about Taittinger La Française?",
+				"back": "A high share of Chardonnay, about 40 percent, for a fresh, elegant non-vintage Champagne from a Reims house founded in 1734. It tops the Flamingo."
+			},
+			"items": [
+				"Flamingo"
+			],
+			"terms": [
+				"Taittinger"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 55)",
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-bourbon",
+			"kind": "ingredient",
+			"name": "Bourbon",
+			"say": "BUR-bun",
+			"explain": "Bourbon is American whiskey made from a mash of at least 51 percent corn and aged in new charred oak barrels. The corn and the new oak give it sweetness, vanilla, caramel and a soft roundness, rounder than rye.\n\nMost bourbon comes from Kentucky, though it may be made anywhere in the United States.\n\nTwo Brennan's drinks use it. The Birdcage is built on Rabbit Hole Dareringer, a wheated Louisville bourbon finished in Pedro Ximénez sherry casks. The Apple Crumble prints bourbon without a brand, so which one is a question for the bar. Its caramel and vanilla are the bridge to the butterscotch, maple and apple in that drink.",
+			"card": {
+				"front": "What makes a whiskey bourbon?",
+				"back": "At least 51 percent corn, aged in new charred oak, in the United States: sweet, with vanilla and caramel. The Birdcage names Rabbit Hole; the Apple Crumble does not."
+			},
+			"items": [
+				"Birdcage",
+				"Apple Crumble"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-rabbit-hole-dareringer",
+			"kind": "ingredient",
+			"name": "Rabbit Hole Dareringer",
+			"say": "RAB-it hole DAIR-ring-er",
+			"explain": "Rabbit Hole is a distillery in Louisville, Kentucky. Dareringer is its straight bourbon of corn, malted wheat and malted barley, aged in new charred oak and then finished in casks that held Pedro Ximénez sherry; it is bottled at 93 proof.\n\nThe sherry finish adds dried fruit, raisin and dark berry notes and a little extra richness to the bourbon's vanilla and oak.\n\nIn the Birdcage that richness carries the smoke, the Angostura, the orange and the cherry of an Old Fashioned. A useful line for the Old Fashioned drinker: a bourbon with a sweet sherry finish, wrapped in smoke, poured only in the Roost.",
+			"card": {
+				"front": "What finish gives Dareringer its dried fruit notes?",
+				"back": "Casks that held Pedro Ximénez sherry, after ageing in new oak. That rich, raisiny bourbon is the base of the smoked Birdcage."
+			},
+			"items": [
+				"Birdcage"
+			],
+			"terms": [
+				"Rabbit Hole Dareringer"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 33)",
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-angostura",
+			"kind": "ingredient",
+			"name": "Angostura bitters",
+			"say": "ang-guh-STOO-ruh",
+			"explain": "Angostura is the world's best-known aromatic bitters, named for the town where it began as a tonic in the nineteenth century. It is a concentrated spirit of gentian and spices, dark red-brown, used a few dashes at a time.\n\nIt tastes of clove, cinnamon and bitter root, and it seasons a drink, pulling sweet and strong together.\n\nAt Brennan's it is in the Birdcage, the smoked Old Fashioned, and in the Champagne Cocktail, soaked into a demerara sugar cube. It is not in the Classic Sazerac, which uses Peychaud's; mixing the two up at the table is a common slip.",
+			"card": {
+				"front": "Which of our drinks use Angostura, and which do not?",
+				"back": "The Birdcage and the Champagne Cocktail use Angostura, a dark, spicy aromatic bitters. The Classic Sazerac uses the red Peychaud's instead; never mix them up."
+			},
+			"items": [
+				"Birdcage",
+				"Brennan’s Champagne Cocktail"
+			],
+			"terms": [
+				"Angostura"
+			],
+			"sources": [
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-orange-cherry",
+			"kind": "ingredient",
+			"name": "Orange and cherry",
+			"say": "",
+			"explain": "Orange and cherry are the classic finishing touches of an Old Fashioned. An orange peel is twisted over the drink to spray its oils, then often dropped in; a cocktail cherry, usually a dark, sweet preserved one, sits in the glass.\n\nThe peel's oil is aroma first, bright and bitter-sweet; the cherry adds a little sweetness at the end.\n\nThe Birdcage prints orange and cherry with Rabbit Hole Dareringer and Angostura. Whether they are a garnish, a peel, a muddled fruit or a cherry liqueur is not printed, so a server says orange and cherry, as the house page does, and lets the bar describe the build and garnish.",
+			"card": {
+				"front": "What do orange and cherry add to an Old Fashioned?",
+				"back": "Orange peel adds bright aroma from its oils; the cherry adds a sweet finish. How the Birdcage uses them is not printed, so ask the bar."
+			},
+			"items": [
+				"Birdcage"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-gin",
+			"kind": "ingredient",
+			"name": "Gin",
+			"say": "",
+			"explain": "Gin is a spirit flavoured above all with juniper, the small blue-black cone of a conifer, together with other botanicals such as coriander, citrus peel and angelica. Dry gin is the classic modern style: piney, citrus-bright and unsweetened.\n\nEvery gin has its own recipe, which is why the brand matters more with gin than with vodka.\n\nFour Brennan's drinks use gin. The Flamingo names Monkey 47, from the Black Forest, the Spoonbill names Hendrick's, with cucumber and rose, and the OBX names Gentilly Gin, made in New Orleans. The Prisoner of Love prints only gin, so which one is a question for the bar.",
+			"card": {
+				"front": "Which botanical must every gin taste of?",
+				"back": "Juniper. Each gin adds its own botanicals: Monkey 47 in the Flamingo, Hendrick's in the Spoonbill, Gentilly in the OBX; the Prisoner of Love's gin is unnamed."
+			},
+			"items": [
+				"Flamingo",
+				"Spoonbill",
+				"OBX",
+				"Prisoner of Love"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-hendricks",
+			"kind": "ingredient",
+			"name": "Hendrick's gin",
+			"say": "HEN-dricks",
+			"explain": "Hendrick's is a Scottish gin launched in 1999 by William Grant and Sons at Girvan. It is made in two stills of different design whose spirits are blended, and essences of Bulgarian rose and cucumber are added after distillation.\n\nThat cucumber and rose made it stand apart when it launched, and they give it a cool, fresh, floral character, softer than a classic juniper-led gin.\n\nIn the Spoonbill it meets Cap Corse Mattei Blanc quinquina and chive oil, with a spoon of caviar alongside. The cucumber links naturally to the green chive, and the rose to the aperitif wine, which is a neat way to explain why the drink tastes so cool and savoury.",
+			"card": {
+				"front": "What two flavours set Hendrick's gin apart?",
+				"back": "Cucumber and rose, added after distillation: a cool, floral Scottish gin from 1999. In the Spoonbill they meet chive oil and caviar."
+			},
+			"items": [
+				"Spoonbill"
+			],
+			"terms": [
+				"Hendrick's"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 34)",
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-cap-corse-mattei",
+			"kind": "ingredient",
+			"name": "Cap Corse Mattei Blanc quinquina",
+			"say": "kap KORS mah-TAY, kan-kee-NAH",
+			"explain": "A quinquina is a wine aperitif flavoured with cinchona bark, the source of quinine, which gives it a gentle bitterness. In 1872 Louis-Napoléon Mattei named his aperitif after Cap Corse, the northern peninsula of Corsica, blending local Vermentino and Muscat wine with cinchona, spices and cédrat, a thick-peeled citron.\n\nCap Corse Mattei Blanc is light, citrusy and softly bitter, and the house is still family owned.\n\nThe house page prints it as Cap Corse Mattei Blanc Quinquina vermouth; strictly it is a quinquina, a cousin of vermouth. In the Spoonbill it plays the vermouth's part in a martini-style drink with Hendrick's gin and chive oil, with a spoon of caviar served alongside.",
+			"card": {
+				"front": "What is a quinquina?",
+				"back": "A wine aperitif flavoured with cinchona bark, the source of quinine, gently bitter. Cap Corse Mattei, from Corsica since 1872, plays the vermouth's part in the Spoonbill."
+			},
+			"items": [
+				"Spoonbill"
+			],
+			"terms": [
+				"Cap Corse Mattei",
+				"Quinquina"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 35)",
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-chive-oil",
+			"kind": "ingredient",
+			"name": "Chive oil",
+			"say": "",
+			"explain": "Chive oil is a bright green oil made by blending fresh chives with a neutral oil, then straining it clear. Kitchens use it to finish soups and plates with colour and a fresh, gently oniony note.\n\nIn a cocktail a few drops float on the surface or bead in the drink, so the guest gets a savoury, green aroma before the first sip.\n\nIn the Spoonbill it is the savoury link between the cool cucumber of Hendrick's gin and the salty spoon of caviar served beside the drink. How the bar makes it and how it is added are not printed; describe the flavour and let the bar describe the method.",
+			"card": {
+				"front": "What does chive oil add to the Spoonbill?",
+				"back": "A bright green, gently oniony aroma that links the cucumber of Hendrick's to the salt of the caviar. How it is made and added is confirmed with the bar."
+			},
+			"items": [
+				"Spoonbill"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-caviar",
+			"kind": "ingredient",
+			"name": "Caviar",
+			"say": "KAV-ee-ar",
+			"explain": "Caviar is the salted roe of sturgeon. The eggs are separated from the membrane, lightly salted and packed; their size, colour and flavour depend on the species, and most caviar served today is from farmed sturgeon.\n\nGood caviar tastes clean and briny, buttery and nutty, and the eggs pop softly on the tongue. It is served cold, traditionally on a non-metal spoon of mother of pearl or horn.\n\nThe Spoonbill comes with a spoon of caviar alongside, which makes the drink a moment. Which caviar, how much and how it is presented are confirmed with the bar; any question about fish or roe goes to the service note and lineup.",
+			"card": {
+				"front": "What is caviar, and how does it come with the Spoonbill?",
+				"back": "Salted sturgeon roe, briny and buttery, served cold. The Spoonbill comes with a spoon of it alongside; which caviar is confirmed with the bar."
+			},
+			"items": [
+				"Spoonbill"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-demerara-cube",
+			"kind": "ingredient",
+			"name": "Demerara sugar cube",
+			"say": "dem-uh-RAIR-uh",
+			"explain": "Demerara is a light brown, large-grained cane sugar with a gentle toffee note, named for the Demerara region of South America, where it was first made. Pressed into a cube it dissolves slowly.\n\nIn a Champagne Cocktail the cube is soaked in bitters, set in the glass and topped with Champagne. As it dissolves it sweetens the wine a little at a time, and its rough surface keeps sending a stream of bubbles up the glass.\n\nBrennan's Champagne Cocktail prints a demerara sugar cube with Angostura and Champagne, the classic build. It gives a faint caramel sweetness that grows as the guest drinks, which is worth telling: the last sip is the sweetest.",
+			"card": {
+				"front": "Why does the Champagne Cocktail keep bubbling?",
+				"back": "The bitters-soaked demerara cube dissolves slowly, and its rough surface keeps sending bubbles up the glass. It also sweetens the wine gradually."
+			},
+			"items": [
+				"Brennan’s Champagne Cocktail"
+			],
+			"terms": [
+				"Demerara"
+			],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"research/components-drinks-2026-10-05.md (search 17)",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-lillet-blanc",
+			"kind": "ingredient",
+			"name": "Lillet Blanc",
+			"say": "lee-LAY BLAHN",
+			"explain": "Lillet is a French wine aperitif from Podensac, south of Bordeaux, founded in 1872 by the brothers Paul and Raymond Lillet. It is about 85 percent Bordeaux wine, Semillon for the Blanc, and 15 percent citrus liqueurs made from orange peels.\n\nThe old Kina Lillet carried more quinine; in 1986 Lillet Blanc replaced it, lighter, fruitier and less bitter. It tastes of orange, honey and blossom, served cold.\n\nTwo Brennan's drinks use it. In the Riviera it is topped with sparkling wine and lemon, light and floral; the menu spells it Lilet, but the bottle is Lillet. In To Each His Own it softens Daron Calvados and quince liqueur.",
+			"card": {
+				"front": "What is Lillet Blanc made from?",
+				"back": "Bordeaux wine, mostly Semillon, with about 15 percent citrus liqueurs: a light French aperitif from Podensac. It is in the Riviera and To Each His Own."
+			},
+			"items": [
+				"Riviera",
+				"To Each His Own"
+			],
+			"terms": [
+				"Lillet Blanc"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 36)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-sparkling-wine",
+			"kind": "ingredient",
+			"name": "Sparkling wine",
+			"say": "",
+			"explain": "Sparkling wine is any wine with bubbles of carbon dioxide trapped in it. The best is made by a second fermentation in the bottle, the traditional method of Champagne; tank-fermented sparkling wines such as Prosecco are fresher and simpler.\n\nOnly wine from Champagne may be called Champagne, so a menu that prints sparkling wine is promising bubbles, not a region.\n\nAt Brennan's the Riviera and For Sentimental Reasons print sparkling wine without a name, so which wine is a question for the bar. The spritz names Chandon Brut, the OBX names the Bigaro and Personality uses a zero proof rosé. Say sparkling wine exactly where the menu does.",
+			"card": {
+				"front": "Why do some menus say sparkling wine, not Champagne?",
+				"back": "Only wine from Champagne may carry that name. The Riviera and For Sentimental Reasons print sparkling wine; which one is a question for the bar."
+			},
+			"items": [
+				"Riviera",
+				"For Sentimental Reasons"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-rum",
+			"kind": "ingredient",
+			"name": "Rum",
+			"say": "",
+			"explain": "Rum is distilled from sugar cane, usually from molasses, sometimes from fresh cane juice. White rums are light and clean; aged rums take colour and vanilla, caramel and spice from the barrel.\n\nIt is the spirit of the Caribbean and of tiki drinks, and it pairs naturally with lime, cream and nuts.\n\nThe Bodrum prints rum without naming one, with pistachio, cream, lime and sparkling water, so which rum is a question for the bar. It is the one bubbly cocktail lengthened with sparkling water rather than wine, which makes it the drink for a rum lover, or for a guest who does not care for wine.",
+			"card": {
+				"front": "Which rum is in the Bodrum?",
+				"back": "The menu prints only rum, so which one is a question for the bar. It is the one Bubbles cocktail lengthened with sparkling water, not wine."
+			},
+			"items": [
+				"Bodrum"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-pistachio",
+			"kind": "ingredient",
+			"name": "Pistachio",
+			"say": "pih-STASH-ee-oh",
+			"explain": "The pistachio is the seed of a small tree native to Iran and Central Asia, now grown widely in California, Iran and Turkey. Roasted, it tastes sweet, buttery and gently resinous, with a green colour that marks pistachio desserts.\n\nIn drinks it usually arrives as a syrup, an orgeat-style nut milk or a liqueur, because whole nuts cannot be shaken smooth.\n\nThe Bodrum prints pistachio with rum, cream, lime and sparkling water. How the pistachio goes in is not printed, so the bar confirms it. The guide's service note says pistachio and cream, as printed, and any question about nuts goes to that note and lineup, never a guess.",
+			"card": {
+				"front": "What do we say if a guest asks about the pistachio?",
+				"back": "That the Bodrum prints pistachio and cream, and how the pistachio goes in is confirmed with the bar. Nut questions go to the service note and lineup."
+			},
+			"items": [
+				"Bodrum"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"pack service note for the Bodrum",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-citrus",
+			"kind": "ingredient",
+			"name": "Fresh lemon and lime",
+			"say": "",
+			"explain": "Fresh citrus juice is the sour side of most cocktails. Lemon is sharp and clean; lime is sharper, greener and a little bitter. Bartenders squeeze it fresh each day, because bottled juice tastes flat and cooked.\n\nCitrus balances sweetness from liqueurs and syrups, brightens fruit and wakes up the spirit; a peel twisted over a drink adds aroma from its oils as well.\n\nLemon is printed in seven Brennan's drinks: the Flamingo, the Riviera, the OBX, Old Buttermilk Sky, Five Minutes More, Oh! What It Seemed to Be and the Apple Crumble. The Bodrum prints lime. Whether each is juice, peel or both is confirmed with the bar.",
+			"card": {
+				"front": "What job does fresh lemon do in a cocktail?",
+				"back": "It is the sour side: it balances sweet liqueurs and syrups and brightens fruit. Seven of our drinks print lemon; the Bodrum prints lime."
+			},
+			"items": [
+				"Flamingo",
+				"Riviera",
+				"OBX",
+				"Old Buttermilk Sky",
+				"Five Minutes More",
+				"Oh! What It Seemed to Be",
+				"Apple Crumble",
+				"Bodrum"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-gentilly-gin",
+			"kind": "ingredient",
+			"name": "Gentilly Gin",
+			"say": "JEN-tih-lee",
+			"explain": "Gentilly Gin is made in New Orleans by Seven Three Distilling Co., which opened in 2017 in Tremé; the name Seven Three is a nod to the city's 73 neighbourhoods, and Gentilly is one of them.\n\nIts seventeen botanicals were inspired by the traiteurs, the old folk healers of south Louisiana, and include elderflower and persimmon; it is bottled at 87 proof, and the distillery also makes a barrel-aged version.\n\nIn the OBX it meets peach, lemon and the softly sweet Elio Perrone Bigaro. A local gin in a courtyard drink is a good story for a visitor; which Gentilly bottling the bar pours is worth confirming.",
+			"card": {
+				"front": "Who makes Gentilly Gin?",
+				"back": "Seven Three Distilling Co. of New Orleans, opened in 2017 in Tremé; its botanicals were inspired by the traiteurs. It is the gin in the OBX."
+			},
+			"items": [
+				"OBX"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 38)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-peach",
+			"kind": "ingredient",
+			"name": "Peach",
+			"say": "",
+			"explain": "The peach is a stone fruit first grown in China and now loved across the American South. A ripe peach is juicy, floral and honeyed, with a soft acidity.\n\nIn drinks it comes as fresh fruit, a purée or a liqueur, and it is happiest with sparkling wine: the Bellini is white peach and Prosecco.\n\nThe OBX prints peach with Gentilly Gin, lemon and Elio Perrone Bigaro, whose Moscato already brings a peach and orange blossom note, so the fruit runs right through the glass. How the peach goes in is not printed; the bar confirms it before a server describes it.",
+			"card": {
+				"front": "What famous drink pairs peach with sparkling wine?",
+				"back": "The Bellini, white peach and Prosecco. The OBX also pairs peach with bubbles, the Bigaro, plus Gentilly Gin and lemon."
+			},
+			"items": [
+				"OBX"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-bigaro",
+			"kind": "ingredient",
+			"name": "Elio Perrone Bigaro",
+			"say": "EL-yoh peh-ROH-neh bee-gah-ROH",
+			"explain": "Bigaro is a softly sparkling pink wine from Piedmont in north-west Italy, made by the Perrone family near Asti from roughly equal parts Brachetto and Moscato. Fermented cool in tank and stopped at about 5 percent alcohol, it stays gently sweet and lightly fizzy.\n\nIts name means mottled in the Piedmontese dialect. It smells of strawberry, raspberry, peach and rose petal.\n\nIn the OBX it tops Gentilly Gin, peach and lemon, adding fruit, a soft sweetness and a light sparkle. It is far gentler than Champagne, which is why the OBX drinks so easily in the afternoon; call it a sparkling wine, never Champagne.",
+			"card": {
+				"front": "What is Elio Perrone Bigaro?",
+				"back": "A gently sweet, lightly sparkling pink wine from Piedmont, Brachetto and Moscato, about 5 percent alcohol. It tops the OBX."
+			},
+			"items": [
+				"OBX"
+			],
+			"terms": [
+				"Bigaro"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 37)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-bitter-orange-liqueur",
+			"kind": "ingredient",
+			"name": "Bitter orange liqueur",
+			"say": "",
+			"explain": "A bitter orange liqueur is a spirit sweetened and flavoured with the peel of bitter oranges, often with herbs and roots that add a pleasant bitterness. The Italian aperitivo bitters, bright orange or red, are the best-known family.\n\nThey are bittersweet rather than sweet: orange peel, gentle bitterness and a light body, made to wake the appetite before a meal.\n\nThe Chandon Garden Spritz prints a bitter orange liqueur with Chandon Brut sparkling wine and does not name it. Which liqueur, and whether the bar builds the drink or pours a ready-made spritz, are questions for the bar, so a server describes the taste rather than a brand.",
+			"card": {
+				"front": "Which orange liqueur is in the Chandon Garden Spritz?",
+				"back": "The menu prints only a bitter orange liqueur, so name no brand. Describe it as bittersweet orange peel under dry bubbles; the bar confirms the rest."
+			},
+			"items": [
+				"Chandon Garden Spritz"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-chandon-brut",
+			"kind": "ingredient",
+			"name": "Chandon Brut",
+			"say": "shahn-DOHN BROOT",
+			"explain": "Chandon is the California sparkling wine house founded in 1973 at Yountville in the Napa Valley by Moët et Chandon of Champagne, the first French-owned sparkling wine venture in the United States. It makes its wines in the Champagne method.\n\nBrut means dry. Chandon Brut is crisp and fresh, with apple, citrus and a little toast.\n\nIn the Chandon Garden Spritz it is the sparkling base under a bitter orange liqueur. Because it is Californian, the menu calls it sparkling wine, never Champagne, and so does the server; the Moët link is a fair and interesting thing to tell a guest who asks.",
+			"card": {
+				"front": "Who founded Chandon in California?",
+				"back": "Moët et Chandon of Champagne, in 1973 at Yountville in Napa. Chandon Brut is dry Californian sparkling wine; never call it Champagne."
+			},
+			"items": [
+				"Chandon Garden Spritz"
+			],
+			"terms": [
+				"Chandon",
+				"Brut"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 39)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-cardamom-clove-syrup",
+			"kind": "ingredient",
+			"name": "Cardamom-clove syrup",
+			"say": "KAR-duh-mum",
+			"explain": "A spiced syrup is sugar dissolved in water and simmered or steeped with whole spices. Cardamom, the green seed pod of a ginger relative, brings a cool, floral, slightly citrus perfume; clove, the dried flower bud of a tropical tree, brings warmth and a sweet, almost medicinal depth.\n\nBoth turn up in coffee traditions around the world, and clove belongs to New Orleans' flamed café brûlot.\n\nIn the Café Glacé de la Maison the syrup sweetens chicory cold brew and gives it warm spice under an orange flower foam. The guide hears an echo of café brûlot in it; how the bar makes the syrup is a question for lineup.",
+			"card": {
+				"front": "What do cardamom and clove bring to the Café Glacé?",
+				"back": "Cardamom adds a cool, floral perfume and clove a warm, sweet depth, a nod to café brûlot. The syrup sweetens the chicory cold brew."
+			},
+			"items": [
+				"Café Glacé de la Maison"
+			],
+			"terms": [
+				"Café brûlot"
+			],
+			"sources": [
+				"guide.txt (pdf p49, eye openers, coffee and Bubbles)",
+				"guide.txt (zero-proof notes)",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-orange-flower-water",
+			"kind": "ingredient",
+			"name": "Orange flower water",
+			"say": "",
+			"explain": "Orange flower water is made by distilling the blossoms of the bitter orange tree. It is clear and intensely fragrant, used by the drop in Mediterranean and Middle Eastern pastries, and in the Ramos Gin Fizz, New Orleans' famous cream and gin drink.\n\nIt tastes of blossom rather than fruit: a heady, floral perfume that lifts cream and tea.\n\nAt Brennan's it appears twice. The Café Glacé de la Maison is topped with an orange flower foam, a floral lift over the cold brew. The Prisoner of Love prints orange flower water with gin, Earl Grey tea and clarified heavy cream. Too much tastes like soap, which is why bartenders measure it in drops.",
+			"card": {
+				"front": "What does orange flower water taste of?",
+				"back": "Blossom, not fruit: a heady floral perfume distilled from bitter orange flowers. It tops the Café Glacé as a foam and scents the Prisoner of Love."
+			},
+			"items": [
+				"Café Glacé de la Maison",
+				"Prisoner of Love"
+			],
+			"terms": [],
+			"sources": [
+				"guide.txt (pdf p49, eye openers, coffee and Bubbles)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-revive-fruit",
+			"kind": "ingredient",
+			"name": "Strawberry, apple and pineapple",
+			"say": "",
+			"explain": "The Revive juice prints three fruits. Strawberry gives colour and a sweet, red fruit perfume; apple gives body and a clean sweetness; pineapple gives tang and a tropical brightness that keeps the juice from tasting flat.\n\nPressed together they make a juice that is sweet but lively, fresh rather than cooked, the way cold-pressed juice is meant to taste.\n\nThe menu lists it under juices that are locally made and fresh squeezed, at breakfast and lunch. It is the drink for a guest who wants neither alcohol nor caffeine, including a child, and it gives a breakfast table a bright option beside the eye openers. Who presses it is confirmed with the bar.",
+			"card": {
+				"front": "What fruits are in the Revive juice?",
+				"back": "Strawberry, apple and pineapple: sweet, fruity and tangy. It is the choice for a guest who wants neither alcohol nor caffeine."
+			},
+			"items": [
+				"Revive Cold-Pressed Juice"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-allspice-dram",
+			"kind": "ingredient",
+			"name": "Allspice dram",
+			"say": "AWL-spice DRAM",
+			"explain": "Allspice dram, also called pimento dram, is a Jamaican liqueur made by steeping allspice berries in rum and sweetening it. Allspice is the dried berry of the pimento tree, and it tastes like clove, cinnamon and nutmeg at once, which is how it got its name.\n\nIt has been traded since the 1850s, appeared in 1930s cocktail books and was taken up by the tiki bars; a little goes a long way.\n\nIn For Sentimental Reasons it sits under pear purée and sparkling wine, giving the drink its warm baking spice finish. Which allspice dram the bar pours is not printed; describe the flavour and let the bar name the bottle.",
+			"card": {
+				"front": "What is allspice dram?",
+				"back": "A Jamaican liqueur of allspice berries steeped in rum, tasting of clove, cinnamon and nutmeg at once. It warms For Sentimental Reasons."
+			},
+			"items": [
+				"For Sentimental Reasons"
+			],
+			"terms": [
+				"Allspice dram"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 40)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-pear-puree",
+			"kind": "ingredient",
+			"name": "Pear purée",
+			"say": "pyoo-RAY",
+			"explain": "A fruit purée is ripe fruit blended smooth and strained, sometimes lightly sweetened. Pear purée is soft, honeyed and floral, with the gentle grain of the fruit, and it gives a drink body as well as flavour.\n\nPurées are thicker than juice, so a purée drink feels rounder and softer in the mouth; with sparkling wine they make the Bellini family.\n\nIn For Sentimental Reasons pear purée meets allspice dram under sparkling wine, so the guest tastes ripe pear first and warm spice at the end. Whether the purée is made in house or bought in is a question for the bar.",
+			"card": {
+				"front": "What does pear purée add to For Sentimental Reasons?",
+				"back": "Ripe, honeyed pear flavour and a soft body, under sparkling wine with allspice dram. Whether it is made in house is a question for the bar."
+			},
+			"items": [
+				"For Sentimental Reasons"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-earl-grey",
+			"kind": "ingredient",
+			"name": "Earl Grey tea",
+			"say": "",
+			"explain": "Earl Grey is black tea scented with oil of bergamot, a fragrant citrus grown mostly in Calabria in southern Italy. It is named for Charles Grey, the second Earl Grey, Prime Minister from 1830 to 1834; the stories of how the blend got his name are uncertain, so tell them lightly if at all.\n\nBergamot gives the tea a floral, perfumed citrus note over the tannic black tea.\n\nIn the Prisoner of Love the tea joins gin, clarified heavy cream and orange flower water. The tea's acidity and tannin help the clarifying, and its bergamot meets the orange flower water, which is why the drink smells so fragrant.",
+			"card": {
+				"front": "What gives Earl Grey tea its perfume?",
+				"back": "Oil of bergamot, a fragrant Italian citrus, over black tea. It scents the Prisoner of Love with gin and clarified cream."
+			},
+			"items": [
+				"Prisoner of Love"
+			],
+			"terms": [
+				"Earl Grey"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 56)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-rittenhouse-rye",
+			"kind": "ingredient",
+			"name": "Brennan's barrel-aged Rittenhouse rye",
+			"say": "RIT-n-house",
+			"explain": "Rittenhouse Rye was introduced in 1934 by Continental Distilling of Philadelphia, named for the city's Rittenhouse Square. From 1948 it was bottled in bond, which by law means the spirit of one distilling season, aged at least four years and bottled at 100 proof. Heaven Hill bought the brand in 1993 and makes it in Bardstown, Kentucky.\n\nIt is a spicy, robust rye that holds its own in cocktails.\n\nThe menu prints Brennan's Barrel Aged Rittenhouse Rye in Rumors are Flying. Who aged it for the house, in what cask and for how long are not printed, so a server says barrel-aged for Brennan's and no more until the bar gives the story.",
+			"card": {
+				"front": "What does bottled in bond mean on Rittenhouse?",
+				"back": "One distilling season, aged at least four years, bottled at 100 proof. Ours is further barrel aged for Brennan's; the details are a question for the bar."
+			},
+			"items": [
+				"Rumors are Flying"
+			],
+			"terms": [
+				"Rittenhouse"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 41)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-tart-cherry",
+			"kind": "ingredient",
+			"name": "Tart cherry juice",
+			"say": "",
+			"explain": "Tart cherries are sour cherries grown for cooking and juice rather than eating fresh. Their juice is deep red, sharp and fruity, with less sugar than sweet cherry juice.\n\nIn a drink it works as both fruit and acid, so it can balance a syrup the way citrus would, while adding colour.\n\nBrennan's uses it twice: in Rumors are Flying with barrel-aged Rittenhouse rye, brown sugar syrup and orange bitters, and in Personality with zero proof sparkling rosé and brown sugar syrup. That shared pairing is the line to sell: the same cherry and brown sugar idea, with or without spirit.",
+			"card": {
+				"front": "Which two drinks share tart cherry juice?",
+				"back": "Rumors are Flying, with barrel-aged rye, and Personality, with zero proof rosé. Both add brown sugar syrup: the same idea with and without spirit."
+			},
+			"items": [
+				"Rumors are Flying",
+				"Personality"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-orange-bitters",
+			"kind": "ingredient",
+			"name": "Orange bitters",
+			"say": "",
+			"explain": "Orange bitters are a concentrated spirit flavoured with dried orange peel and bitter spices such as cardamom, coriander and gentian. A dash or two adds bright citrus aroma and a dry, bitter edge.\n\nThey were standard in early dry martinis and were revived in modern bars; they lift whiskey and gin drinks without adding sweetness.\n\nIn Rumors are Flying they finish the barrel-aged Rittenhouse rye, tart cherry juice and brown sugar syrup, keeping the rich drink from tasting heavy and linking it to the orange peel of an Old Fashioned. Which brand the bar uses is not printed.",
+			"card": {
+				"front": "What do orange bitters add to Rumors are Flying?",
+				"back": "Bright orange aroma and a dry bitter edge that keeps the rich rye, cherry and brown sugar from tasting heavy. The brand is not printed."
+			},
+			"items": [
+				"Rumors are Flying"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-calvados",
+			"kind": "ingredient",
+			"name": "Daron Fine Calvados",
+			"say": "dah-ROHN KAL-vuh-dohs",
+			"explain": "Calvados is apple brandy from Normandy in northern France, distilled from cider, sometimes with some pear, and aged in oak. Pays d'Auge is its finest area, where it is double distilled.\n\nFine is the youngest grade, aged at least two years, so it keeps a fresh, fruity apple character with a light touch of oak. Daron Fine is a Pays d'Auge Calvados belonging to Maison Ferrand.\n\nIn To Each His Own it is the base spirit, with Lillet Blanc and quince liqueur: baked apple and perfumed quince, softened by the Lillet. For a guest who likes it, the next brandy round is the Origin Story, our Sazerac on Cognac.",
+			"card": {
+				"front": "What is Calvados, and what does Fine mean?",
+				"back": "Apple brandy from Normandy, aged in oak. Fine is the youngest grade, at least two years, fresh and fruity. Daron Fine is the base of To Each His Own."
+			},
+			"items": [
+				"To Each His Own"
+			],
+			"terms": [
+				"Calvados"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 42)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-quince-liqueur",
+			"kind": "ingredient",
+			"name": "Quince liqueur",
+			"say": "KWINSS",
+			"explain": "The quince is an old orchard fruit, a cousin of the apple and pear, golden and hard when ripe. Too sour and firm to eat raw, it is cooked into jellies and pastes such as Spanish membrillo, turning pink and intensely perfumed.\n\nA quince liqueur steeps the fruit in spirit and sweetens it; it tastes honeyed and floral, somewhere between apple, pear and rose.\n\nIn To Each His Own it joins Daron Fine Calvados and Lillet Blanc, so apple, quince and the Lillet's orange blossom make the most seasonal drink on the fall list. Which quince liqueur the bar pours is not printed.",
+			"card": {
+				"front": "What does quince taste like?",
+				"back": "Honeyed and floral, between apple, pear and rose. A quince liqueur perfumes To Each His Own with Calvados and Lillet; the brand is not printed."
+			},
+			"items": [
+				"To Each His Own"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-reposado-tequila",
+			"kind": "ingredient",
+			"name": "Volcán reposado tequila",
+			"say": "vol-KAHN reh-poh-SAH-doh",
+			"explain": "Tequila is distilled from the cooked heart of the blue Weber agave in and around Jalisco, Mexico. Reposado means rested: aged in oak for at least two months and under a year, so it keeps the agave's green, peppery character and gains vanilla, honey and soft oak.\n\nVolcán de mi Tierra Reposado is made from highland Blue Weber agave in Jalisco and rested 135 days in American and French oak. It tastes of cooked agave, stone fruit, honey and toasted oak.\n\nIn Old Buttermilk Sky it is the base of the fall list's tequila sour, with fig liqueur, lemon, cinnamon syrup and egg white. It is rounder than an unaged blanco, which suits the fig and cinnamon.",
+			"card": {
+				"front": "What does reposado mean on a tequila?",
+				"back": "Rested in oak for at least two months and under a year: agave plus vanilla and honey. Volcán reposado rests 135 days; it is the base of Old Buttermilk Sky."
+			},
+			"items": [
+				"Old Buttermilk Sky"
+			],
+			"terms": [
+				"Volcán",
+				"Reposado"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 43)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-fig",
+			"kind": "ingredient",
+			"name": "Fig liqueur and fig syrup",
+			"say": "",
+			"explain": "The fig is one of the oldest cultivated fruits, soft and jammy, with honeyed flesh full of tiny seeds; figs grow well in New Orleans gardens. Dried or cooked, they taste of honey, caramel and dark fruit.\n\nA fig liqueur is fig steeped in spirit and sweetened; a fig syrup gives the same flavour without alcohol.\n\nThe fall twins split them exactly that way. Old Buttermilk Sky uses fig liqueur with Volcán reposado tequila, and its spirit-free twin, Oh! What It Seemed to Be, uses fig syrup with Lyre's agave. Both add lemon, cinnamon syrup and egg white. Which fig liqueur the bar pours is not printed.",
+			"card": {
+				"front": "How do the two fig drinks differ?",
+				"back": "Old Buttermilk Sky uses fig liqueur with tequila; Oh! What It Seemed to Be uses fig syrup with Lyre's, no spirit. Both add lemon, cinnamon and egg white."
+			},
+			"items": [
+				"Old Buttermilk Sky",
+				"Oh! What It Seemed to Be"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-egg-white",
+			"kind": "ingredient",
+			"name": "Egg white",
+			"say": "",
+			"explain": "Egg white has almost no flavour, but whipped in a shaker it traps air and turns a sour silky, giving it a pale, velvety cap that holds aromatic bitters or spice on its surface.\n\nIt has been used in sours and fizzes since the nineteenth century; the Ramos Gin Fizz is the famous New Orleans example. Bartenders use fresh egg white and shake it dry, without ice, before shaking with ice.\n\nTwo Brennan's drinks print egg white: Old Buttermilk Sky and its spirit-free twin, Oh! What It Seemed to Be. The guide's notes say egg white, as printed, and any question about egg goes to the service note and lineup before the server answers.",
+			"card": {
+				"front": "Which two drinks carry egg white, and why is it there?",
+				"back": "Old Buttermilk Sky and Oh! What It Seemed to Be. It adds silky texture and a pale cap, not flavour; egg questions go to the service note and lineup."
+			},
+			"items": [
+				"Old Buttermilk Sky",
+				"Oh! What It Seemed to Be"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"pack service notes",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-cinnamon",
+			"kind": "ingredient",
+			"name": "Cinnamon and cinnamon syrup",
+			"say": "",
+			"explain": "Cinnamon is the dried inner bark of a tropical laurel tree, rolled into quills. It tastes sweet, woody and warm, the spice of baking and of fall.\n\nIn drinks it usually arrives as a syrup, sugar steeped with cinnamon sticks, because ground cinnamon will not dissolve and sits gritty on top.\n\nThree fall drinks use it. Old Buttermilk Sky and Oh! What It Seemed to Be print cinnamon syrup with fig, lemon and egg white, so warm spice meets ripe fig. The Apple Crumble prints cinnamon with bourbon, apple cider, butterscotch and maple, the flavour of a fruit crumble. How the Apple Crumble's cinnamon goes in is not printed.",
+			"card": {
+				"front": "Which drinks print cinnamon, and why use a syrup?",
+				"back": "Old Buttermilk Sky, Oh! What It Seemed to Be and the Apple Crumble. A syrup carries the flavour smoothly; ground cinnamon would sit gritty."
+			},
+			"items": [
+				"Old Buttermilk Sky",
+				"Oh! What It Seemed to Be",
+				"Apple Crumble"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-cathead-vodka",
+			"kind": "ingredient",
+			"name": "Cathead mandarin vodka",
+			"say": "KAT-hed",
+			"explain": "Cathead is a distillery in Jackson, Mississippi, founded in 2010 and the first distillery in the state. Among its spirits is a Satsuma mandarin flavoured vodka; the menu prints Cathead Mandarin Vodka, and that is the name to say.\n\nA mandarin vodka carries a sweet, sunny tangerine aroma over a clean spirit; satsumas, a seedless mandarin, grow well along the Gulf Coast.\n\nIn Five Minutes More it is the base of an herbal sour with Green Chartreuse, Licor 43 and lemon: mandarin and lemon first, then the deep herbs, then a soft vanilla finish. A spirit from just up the road gives the visitor a regional story.",
+			"card": {
+				"front": "Where is Cathead vodka made?",
+				"back": "In Jackson, Mississippi, at the state's first distillery, founded in 2010. Its mandarin vodka is the base of Five Minutes More."
+			},
+			"items": [
+				"Five Minutes More"
+			],
+			"terms": [
+				"Cathead"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 44)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-green-chartreuse",
+			"kind": "ingredient",
+			"name": "Green Chartreuse",
+			"say": "shar-TROOZ",
+			"explain": "Chartreuse is a herbal liqueur made by Carthusian monks in the French Alps since 1737, from a secret recipe of 130 herbs, plants and flowers traced to a manuscript of 1605. Green Chartreuse, the stronger of the two main colours at 55 percent, is intense, herbal, minty and peppery, with a long sweet finish; the colour is natural.\n\nIt is a bartender's favourite in small amounts, the backbone of classics such as the Last Word.\n\nIn Five Minutes More it gives the deep green herbal middle between the mandarin vodka and lemon at the start and the vanilla of Licor 43 at the end. It makes the drink strong and layered, a slow sipper.",
+			"card": {
+				"front": "Who makes Green Chartreuse, and from how many plants?",
+				"back": "Carthusian monks in the French Alps, since 1737, from a secret recipe of 130 herbs and plants. It is 55 percent; it gives Five Minutes More its herbal heart."
+			},
+			"items": [
+				"Five Minutes More"
+			],
+			"terms": [
+				"Chartreuse"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 45)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-licor-43",
+			"kind": "ingredient",
+			"name": "Licor 43",
+			"say": "lee-KOR kwah-REN-tah ee TRESS",
+			"explain": "Licor 43 is a golden Spanish liqueur from Cartagena, made since 1946 from 43 ingredients, citrus, vanilla, herbs and spices, whose full list has never been published.\n\nIt tastes sweet and vanilla-led, with orange, lemon and a little cinnamon behind it; in Spain it is a favourite poured into coffee.\n\nIn Five Minutes More it rounds off the Green Chartreuse and mandarin vodka with a soft vanilla sweetness on the finish, balanced by lemon. The 1946 date is a neat coincidence for a list named for the songs of the year Brennan's opened; tell it only as coincidence.",
+			"card": {
+				"front": "What is Licor 43, and what does it bring?",
+				"back": "A Spanish vanilla and citrus liqueur from Cartagena, 43 ingredients, made since 1946. It gives Five Minutes More a soft vanilla finish."
+			},
+			"items": [
+				"Five Minutes More"
+			],
+			"terms": [
+				"Licor 43"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 46)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-wolffer-rose",
+			"kind": "ingredient",
+			"name": "Wölffer Estate zero proof sparkling rosé",
+			"say": "WOLF-er",
+			"explain": "Wölffer Estate is a winery on Long Island, New York, known for its rosé. It was among the first American wineries to make a non-alcoholic sparkling rosé: pale salmon, dry, with strawberry, peach and citrus and fine bubbles.\n\nThe menu prints Wölffer Estate Zero Proof Sparkling Rosé, so that is the name to say. Its exact alcohol figure is read from the label at lineup before a server promises a guest zero.\n\nIn Personality it is the sparkling base, with tart cherry juice and brown sugar syrup, bright and fizzy. It is the drink that lets a guest who is not drinking join the toast, and the twin of Rumors are Flying.",
+			"card": {
+				"front": "What is the base of Personality?",
+				"back": "Wölffer Estate's zero proof sparkling rosé from Long Island, with tart cherry and brown sugar syrup. Read the label figure at lineup before promising zero."
+			},
+			"items": [
+				"Personality"
+			],
+			"terms": [
+				"Wölffer Estate",
+				"Zero proof"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 47)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-lyres-agave",
+			"kind": "ingredient",
+			"name": "Lyre's non-alcoholic agave",
+			"say": "LY-erz",
+			"explain": "Lyre's is an Australian maker of non-alcoholic spirits, blends of natural extracts and essences in water that imitate the taste of a spirit without distilling one. Its agave is made to stand in for tequila: earthy and peppery, with a hint of citrus and smoke.\n\nLyre's labels its spirits under 0.5 percent alcohol, the non-alcoholic threshold, not zero.\n\nIn Oh! What It Seemed to Be it replaces the Volcán tequila of Old Buttermilk Sky, with fig syrup, lemon, cinnamon syrup and egg white. So a server says non-alcoholic rather than alcohol free, and reads the bottle at lineup for any guest who needs certainty.",
+			"card": {
+				"front": "Why do we call Lyre's non-alcoholic, not alcohol free?",
+				"back": "Lyre's is labelled under 0.5 percent alcohol, the non-alcoholic threshold, not zero. It stands in for tequila in Oh! What It Seemed to Be."
+			},
+			"items": [
+				"Oh! What It Seemed to Be"
+			],
+			"terms": [
+				"Lyre's",
+				"Zero proof"
+			],
+			"sources": [
+				"research/dossier-the-bar.md",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"pack service note for Oh! What It Seemed to Be"
+			]
+		},
+		{
+			"key": "bar-amarula",
+			"kind": "ingredient",
+			"name": "Amarula cream liqueur",
+			"say": "am-uh-ROO-luh",
+			"explain": "Amarula is a South African cream liqueur made from the fruit of the marula tree, which grows wild in the warm regions of southern Africa. The fruit is fermented and distilled, aged two years in French oak, then blended with cream; it is bottled at 17 percent.\n\nIt tastes creamy and caramel, with a fruity, slightly nutty tang. Elephants love marula fruit, which is why an elephant is on the bottle.\n\nIt is the South Africa in Floating in South Africa, poured with housemade vanilla bean ice cream and Abita root beer. Cream questions go to the service note and lineup.",
+			"card": {
+				"front": "What is Amarula made from?",
+				"back": "The fruit of the African marula tree, distilled and aged, then blended with cream. It is the South Africa in Floating in South Africa."
+			},
+			"items": [
+				"Floating in South Africa"
+			],
+			"terms": [
+				"Amarula"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 48)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-abita-root-beer",
+			"kind": "ingredient",
+			"name": "Abita root beer",
+			"say": "uh-BEE-tuh",
+			"explain": "Abita Brewing was founded in 1986 in Abita Springs, Louisiana, across Lake Pontchartrain from New Orleans; it makes root beer as well as beer.\n\nAbita Root Beer is made with the town's artesian spring water and Louisiana cane sugar, by a hot mix process with herbs, vanilla and yucca for its foam. It tastes like an old-fashioned soda fountain root beer, sweet, creamy and spiced, and carries no caffeine.\n\nIn Floating in South Africa it is the fizz of a grown-up root beer float, with Amarula and housemade vanilla bean ice cream. It is the same brewery as the Abita Amber in the kitchen's shells and cheese, a local link a guest enjoys.",
+			"card": {
+				"front": "Where does Abita root beer come from?",
+				"back": "Abita Springs, Louisiana, made with artesian water and Louisiana cane sugar. It is the fizz in Floating in South Africa."
+			},
+			"items": [
+				"Floating in South Africa"
+			],
+			"terms": [
+				"Abita Amber"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 49)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-root-beer-float",
+			"kind": "ingredient",
+			"name": "The float",
+			"say": "",
+			"explain": "A root beer float is a scoop of vanilla ice cream dropped into a glass of root beer. The cold ice cream makes the soda foam up in a creamy head, and as it melts the drink turns rich and smooth; it is an American soda fountain classic.\n\nClassic French-style vanilla ice cream is a cooked custard of milk, cream, sugar and egg yolk, infused with vanilla and churned smooth.\n\nFloating in South Africa is a float for grown-ups: the menu prints Amarula, housemade vanilla bean ice cream and Abita root beer. How it is built and served is not printed, so the bar confirms it. Questions about cream or ice cream go to the service note and lineup.",
+			"card": {
+				"front": "What happens when ice cream meets root beer?",
+				"back": "The soda foams into a creamy head and the drink turns rich as the ice cream melts. Ours adds Amarula to Abita root beer and housemade vanilla bean ice cream."
+			},
+			"items": [
+				"Floating in South Africa"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-apple-cider",
+			"kind": "ingredient",
+			"name": "Apple cider",
+			"say": "",
+			"explain": "In America apple cider usually means fresh, unfiltered apple juice, cloudy and sweet, pressed in autumn; in Britain and France cider means the fermented, alcoholic drink. The menu prints apple cider without saying which.\n\nFresh cider tastes of baked and fresh apple, sweet and slightly tart, and it is the base of hot spiced cider and of many fall drinks.\n\nIn the Apple Crumble it meets bourbon, butterscotch schnapps, maple, cinnamon, lemon and black walnut bitters, the flavours of a fruit crumble. Whether the cider is fresh or hard, and whether the drink is served hot or cold, are not printed, so a server describes the flavour and lets the bar describe the build.",
+			"card": {
+				"front": "Is the cider in the Apple Crumble fresh or hard?",
+				"back": "The menu does not say, nor whether the drink is hot or cold. Describe the baked apple flavour and let the bar describe the build."
+			},
+			"items": [
+				"Apple Crumble"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-butterscotch-schnapps",
+			"kind": "ingredient",
+			"name": "Butterscotch schnapps",
+			"say": "",
+			"explain": "Butterscotch is a sweet of brown sugar cooked with butter, rich and toffee-like. Butterscotch schnapps is a sweet liqueur flavoured to taste of it, usually low in strength and bright gold.\n\nIn American use schnapps means a sweet, flavoured liqueur, not the dry fruit brandy the word means in Germany.\n\nIn the Apple Crumble it brings the buttery, toffee note that makes the drink taste like a crumble topping, alongside bourbon, apple cider, maple, cinnamon, lemon and black walnut bitters. The lemon keeps all that sweetness bright, and the menu names no brand.",
+			"card": {
+				"front": "What does butterscotch schnapps bring to the Apple Crumble?",
+				"back": "A buttery, brown sugar toffee flavour, like a crumble topping. The lemon keeps it bright; the brand is not printed."
+			},
+			"items": [
+				"Apple Crumble"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-maple",
+			"kind": "ingredient",
+			"name": "Maple",
+			"say": "",
+			"explain": "Maple syrup is the sap of the sugar maple, boiled down until it thickens; about forty parts of sap make one of syrup. It comes from the forests of north-eastern North America.\n\nIt tastes of caramel, vanilla and wood, less sharply sweet than sugar, and it is a natural partner for bourbon, apple and cinnamon.\n\nThe Apple Crumble prints maple with bourbon, apple cider, butterscotch schnapps, cinnamon, lemon and black walnut bitters. Whether it is pure syrup or a maple liqueur is not printed, so a server says maple, as the menu does.",
+			"card": {
+				"front": "How is maple syrup made?",
+				"back": "Sugar maple sap is boiled down, about forty parts to one, into a syrup tasting of caramel and wood. The Apple Crumble prints maple; ask the bar which form."
+			},
+			"items": [
+				"Apple Crumble"
+			],
+			"terms": [],
+			"sources": [
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"expert knowledge"
+			]
+		},
+		{
+			"key": "bar-black-walnut-bitters",
+			"kind": "ingredient",
+			"name": "Black walnut bitters",
+			"say": "",
+			"explain": "Black walnut bitters are aromatic bitters flavoured with the American black walnut, a stronger, earthier nut than the English walnut. The best-known bottling, from Fee Brothers, tastes of toasted walnut, warm spice and molasses, with a dry, earthy finish.\n\nA few dashes add depth and a toasty finish to whiskey drinks and after-dinner cocktails with maple, vanilla or caramel.\n\nIn the Apple Crumble they give the toasty, nutty finish under the apple, butterscotch and maple. The guide's note prints black walnut bitters, as printed; which brand the bar uses is not printed, and any question about nuts goes to the service note and lineup.",
+			"card": {
+				"front": "What do black walnut bitters taste of?",
+				"back": "Toasted walnut, warm spice and molasses, dry and earthy. They give the Apple Crumble its nutty finish; nut questions go to the service note and lineup."
+			},
+			"items": [
+				"Apple Crumble"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 50)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"pack service note for the Apple Crumble"
+			]
+		},
+		{
+			"key": "bar-creme-de-banane",
+			"kind": "ingredient",
+			"name": "Crème de banane",
+			"say": "krem duh bah-NAHN",
+			"explain": "A crème liqueur is a very sweet liqueur; under European rules a crème carries at least 250 grams of sugar a litre, which gives it a thick, syrupy body. Crème here describes the texture: there is no cream in it.\n\nCrème de banane is made by steeping bananas in spirit and sweetening it: ripe, sweet banana, sometimes with vanilla.\n\nIn Banane au Chocolat, French for banana with chocolate, it is the banana half, with crème de cacao and Pedro Ximénez sherry. It is a fine companion to the house's banana story: Bananas Foster was invented at Brennan's in 1951, so a guest who loves the Foster can sip it instead.",
+			"card": {
+				"front": "Does crème de banane contain cream?",
+				"back": "The word crème means a very sweet, syrupy liqueur; there is no cream in it. It is banana steeped in spirit and sweetened, the banana in Banane au Chocolat."
+			},
+			"items": [
+				"Banane au Chocolat"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 59)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"guide.txt (Bananas Foster, 1951)"
+			]
+		},
+		{
+			"key": "bar-creme-de-cacao",
+			"kind": "ingredient",
+			"name": "Crème de cacao",
+			"say": "krem duh kah-KOW",
+			"explain": "Crème de cacao is a sweet chocolate liqueur made from cacao beans steeped or distilled in spirit and sweetened, usually bottled at 20 to 25 percent. It comes in two kinds: dark, coloured by the beans, and white, a clear distillate with a lighter chocolate flavour.\n\nIt is the chocolate in the Grasshopper and the Brandy Alexander. The menu spells it crème de cocoa.\n\nIn Banane au Chocolat it is the chocolate half, with crème de banane and Pedro Ximénez sherry, so the drink tastes of ripe banana and chocolate over dried fruit. Which brand and whether it is white or dark are not printed.",
+			"card": {
+				"front": "What is crème de cacao, and how does the menu spell it?",
+				"back": "A sweet chocolate liqueur, white or dark; the menu spells it crème de cocoa. It is the chocolate in Banane au Chocolat."
+			},
+			"items": [
+				"Banane au Chocolat"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 59)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-pedro-ximenez",
+			"kind": "ingredient",
+			"name": "Pedro Ximénez sherry",
+			"say": "PAY-droh hee-MEH-nez",
+			"explain": "Pedro Ximénez, or PX, is the sweetest and darkest sherry. The grapes of that name are dried in the sun on mats until they are nearly raisins, then pressed, fortified and aged; most are grown in Montilla-Moriles and Jerez in southern Spain.\n\nThe wine is almost black and syrupy, tasting of raisin, fig, molasses and dark chocolate.\n\nIn Banane au Chocolat it gives the dried fruit depth under crème de banane and crème de cacao. The same sherry's casks finish the Rabbit Hole bourbon in the Birdcage, a small link worth knowing. Which PX the bar pours is not printed.",
+			"card": {
+				"front": "How is Pedro Ximénez sherry made so sweet?",
+				"back": "The grapes are dried in the sun nearly to raisins before pressing, so the wine is dark and syrupy, tasting of raisin and fig. It deepens Banane au Chocolat."
+			},
+			"items": [
+				"Banane au Chocolat",
+				"Birdcage"
+			],
+			"terms": [
+				"Pedro Ximénez"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 54)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"research/components-drinks-2026-10-05.md (search 33)"
+			]
+		},
+		{
+			"key": "bar-kahlua",
+			"kind": "ingredient",
+			"name": "Kahlua",
+			"say": "kuh-LOO-uh",
+			"explain": "Kahlúa is a coffee liqueur from Veracruz, Mexico, introduced in 1936 and made from rum, sugar and arabica coffee. It is sweet, dark and roasty, with vanilla and caramel.\n\nCoffee liqueur is the backbone of the Black Russian and the White Russian, and it sweetens most espresso martinis.\n\nIn Brennan's Espresso Martini the menu prints Kahlua with chicory, vodka and Frangelico, so the coffee flavour comes partly from the liqueur. The menu prints chicory and not espresso, so how the coffee goes in is a question for the bar, and caffeine questions go there too.",
+			"card": {
+				"front": "What is Kahlua made from?",
+				"back": "Rum, sugar and arabica coffee, made in Veracruz, Mexico, since 1936. It brings coffee flavour and sweetness to our Espresso Martini, beside chicory and Frangelico."
+			},
+			"items": [
+				"Espresso Martini"
+			],
+			"terms": [],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 53)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-frangelico",
+			"kind": "ingredient",
+			"name": "Frangelico",
+			"say": "fran-JEL-ih-koh",
+			"explain": "Frangelico is an Italian hazelnut liqueur from Piedmont, launched in 1978 and said to recall a friar named Angelico; its bottle is shaped like a friar's habit with a rope belt. It is made with Tonda Gentile hazelnuts, the region's prized variety, with notes of coffee, cocoa and vanilla.\n\nIt tastes of toasted hazelnut and sweet vanilla.\n\nBrennan's uses it twice on the dessert menu: in the Espresso Martini with chicory, vodka and Kahlua, and in the coffee cocktail with Nocello and whipped cream. The guide's notes print Frangelico, a hazelnut liqueur, as printed, so any nut question goes to the service note and lineup.",
+			"card": {
+				"front": "Which two drinks use Frangelico, and what is it?",
+				"back": "An Italian hazelnut liqueur from Piedmont, in the Espresso Martini and the coffee with Nocello. Nut questions go to the service note and lineup."
+			},
+			"items": [
+				"Espresso Martini",
+				"Ralph’s Coffee"
+			],
+			"terms": [
+				"Frangelico"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 52)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		},
+		{
+			"key": "bar-nocello",
+			"kind": "ingredient",
+			"name": "Nocello",
+			"say": "noh-CHEL-oh",
+			"explain": "Nocello is an Italian walnut liqueur made by the Toschi family company near Modena, in Emilia-Romagna, from walnuts and hazelnuts. It is amber, sweet and nutty, at 24 percent.\n\nIt belongs to the Italian walnut liqueur tradition, of which nocino, made from green walnuts, is the dark, old-fashioned cousin.\n\nOn the dessert menu it goes into hot dark roast coffee with chicory, with Frangelico and whipped cream: a roasty, nutty coffee under cool cream, gentler than the Irish Coffee because it has no whiskey and no brown sugar. The guide's notes print the two nut liqueurs, so nut questions go to the service note and lineup.",
+			"card": {
+				"front": "What kind of liqueur is Nocello?",
+				"back": "An Italian walnut liqueur from near Modena, made with walnuts and hazelnuts. It goes into chicory coffee with Frangelico and whipped cream."
+			},
+			"items": [
+				"Ralph’s Coffee"
+			],
+			"terms": [
+				"Nocello"
+			],
+			"sources": [
+				"research/components-drinks-2026-10-05.md (search 51)",
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+			]
+		}
+	],
+	"compare": [
+		{
+			"item": "Brandy Milk Punch",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Brandy Milk Punch",
+					"label": "The canon Brandy Milk Punch",
+					"same": "The same New Orleans breakfast drink: brandy, milk or cream, vanilla and sugar, shaken hard and finished with grated nutmeg.",
+					"different": "The canon pours cognac with whole milk, rich syrup and vanilla extract; ours prints brandy, heavy cream and real vanilla bean, and no measures."
+				},
+				{
+					"app": "ledger",
+					"ref": "Brandy Alexander",
+					"label": "A creamy brandy cousin",
+					"same": "Brandy shaken with cream and dusted with nutmeg: a cold, smooth, creamy drink.",
+					"different": "The Alexander adds crème de cacao and is served up as dessert; ours has vanilla bean and opens breakfast."
+				}
+			]
+		},
+		{
+			"item": "Bloody Bull",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Bloody Mary",
+					"label": "The canon Bloody Mary",
+					"same": "Vodka in a seasoned tomato base, savoury and spicy, a classic morning drink; the canon is rolled, and the bar confirms ours.",
+					"different": "Ours adds beef bouillon to a housemade mix, making it meaty, like a spicy chilled consommé; the canon has no beef."
+				},
+				{
+					"app": "ledger",
+					"ref": "Caesar",
+					"label": "Canada's savoury tomato drink",
+					"same": "Vodka with tomato and a savoury broth, seasoned with hot sauce and Worcestershire.",
+					"different": "The Caesar uses tomato and clam juice in a celery salt rim; ours uses beef bouillon and the house mix."
+				}
+			]
+		},
+		{
+			"item": "Classic Sazerac",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Sazerac",
+					"label": "The canon Sazerac",
+					"same": "Rye, Peychaud's bitters and an anise rinse, stirred and strained into a chilled glass with no ice.",
+					"different": "The canon rinses with absinthe and lists a sugar cube and lemon peel; ours names Sazerac rye and a Herbsaint rinse."
+				},
+				{
+					"app": "table",
+					"ref": "sazerac",
+					"label": "The Table's Sazerac recipe",
+					"same": "The same two-glass build: rye, Peychaud's, a Herbsaint or absinthe rinse, stirred, no ice.",
+					"different": "The recipe gives measures, sugar and lemon peel; our bar confirms its own sugar, dashes and peel."
+				}
+			]
+		},
+		{
+			"item": "Brennan’s Irish Coffee",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Irish Coffee",
+					"label": "The canon Irish Coffee",
+					"same": "Irish whiskey, hot coffee and brown sugar under a float of lightly whipped cream, never stirred.",
+					"different": "Ours uses dark roast coffee with chicory and names Tullamore D.E.W.; the canon leaves the coffee and whiskey open."
+				},
+				{
+					"app": "table",
+					"ref": "irish-coffee",
+					"label": "The Table's Irish Coffee recipe",
+					"same": "A warmed glass, sugar dissolved in hot coffee, whiskey, then cream floated over a spoon.",
+					"different": "The recipe uses demerara sugar and plain coffee; ours uses brown sugar and New Orleans chicory coffee."
+				}
+			]
+		},
+		{
+			"item": "Flamingo",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "French 75",
+					"label": "Gin, lemon and Champagne",
+					"same": "Gin and lemon topped with Champagne: bright, citrusy and festive.",
+					"different": "The Flamingo adds Chopin vodka and dragonfruit and names Taittinger and Monkey 47; it is poured only in the Roost."
+				}
+			]
+		},
+		{
+			"item": "Birdcage",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Old Fashioned",
+					"label": "The canon Old Fashioned",
+					"same": "Bourbon, Angostura bitters and orange, the spirit-sugar-bitters pattern, short and strong.",
+					"different": "The Birdcage is smoked and names Rabbit Hole Dareringer, finished in PX sherry casks, with cherry; Roost only."
+				},
+				{
+					"app": "ledger",
+					"ref": "Benton's Old Fashioned",
+					"label": "A savoury twist on the Old Fashioned",
+					"same": "Bourbon and Angostura in an Old Fashioned given a savoury, smoky character.",
+					"different": "That drink gets its savouriness from a fat-washed bourbon and maple; ours from smoke at service."
+				}
+			]
+		},
+		{
+			"item": "Spoonbill",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Martini",
+					"label": "The canon gin Martini",
+					"same": "Gin with a wine aperitif, cool and dry, for the martini drinker; the canon is stirred, and the bar confirms ours.",
+					"different": "Ours uses Hendrick's and a Corsican quinquina instead of dry vermouth, adds chive oil, and comes with caviar."
+				},
+				{
+					"app": "ledger",
+					"ref": "Vesper",
+					"label": "A martini with a quinquina-style aperitif",
+					"same": "Gin with a French wine aperitif carrying a gentle bitterness.",
+					"different": "The Vesper adds vodka and Lillet; ours uses Cap Corse Mattei, chive oil and a spoon of caviar."
+				}
+			]
+		},
+		{
+			"item": "Thompson’s Dream",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Sazerac",
+					"label": "The canon Sazerac",
+					"same": "Rye, red Creole-style bitters and an anise rinse, stirred, no ice: the Sazerac pattern.",
+					"different": "Ours uses stronger Willett 4-year rye, Bitter Truth Creole Bitters and a St. George absinthe rinse."
+				}
+			]
+		},
+		{
+			"item": "Origin Story",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Sazerac",
+					"label": "The canon Sazerac",
+					"same": "Peychaud's bitters and an absinthe perfume in a stirred drink with no ice.",
+					"different": "The canon is rye; ours returns to cognac, Dudognon, with barrel-aged Peychaud's and Jade absinthe."
+				},
+				{
+					"app": "ledger",
+					"ref": "Vieux Carré",
+					"label": "New Orleans rye and cognac classic",
+					"same": "A New Orleans stirred drink with cognac and Peychaud's bitters, rich and spirit-forward.",
+					"different": "The Vieux Carré adds rye, sweet vermouth and Bénédictine over ice; ours is cognac only, served without ice."
+				}
+			]
+		},
+		{
+			"item": "Brennan’s Bloody Mary",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Bloody Mary",
+					"label": "The canon Bloody Mary",
+					"same": "Vodka and a seasoned tomato base, savoury, tangy and spicy; the canon is rolled, and the bar confirms ours.",
+					"different": "Ours uses a housemade mix and comes with pickled okra and spicy beans; the canon has celery and lemon."
+				},
+				{
+					"app": "ledger",
+					"ref": "Caesar",
+					"label": "Canada's savoury tomato drink",
+					"same": "Vodka in a spicy, savoury tomato base with a garnish standing in the glass.",
+					"different": "The Caesar adds clam and a celery salt rim; ours is tomato only, with a local pickled garnish."
+				}
+			]
+		},
+		{
+			"item": "Brennan’s Champagne Cocktail",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Champagne Cocktail",
+					"label": "The canon Champagne Cocktail",
+					"same": "A bitters-soaked sugar cube under Champagne: the classic build, fizzing from the bottom up.",
+					"different": "Ours prints a demerara cube and names no lemon twist or cognac; the canon allows an optional cognac."
+				},
+				{
+					"app": "ledger",
+					"ref": "Seelbach",
+					"label": "Bitters and Champagne, Louisville style",
+					"same": "Champagne seasoned with aromatic bitters, built in the flute.",
+					"different": "The Seelbach adds bourbon, Cointreau and Peychaud's; ours is just bitters, sugar and Champagne."
+				}
+			]
+		},
+		{
+			"item": "Riviera",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Kir Royale",
+					"label": "A French aperitif topped with bubbles",
+					"same": "A French aperitif liqueur topped with sparkling wine, light and festive.",
+					"different": "The Kir uses blackcurrant crème de cassis; ours uses Lillet Blanc, floral and citrus, with lemon."
+				},
+				{
+					"app": "ledger",
+					"ref": "Hugo Spritz",
+					"label": "A floral sparkling aperitif",
+					"same": "A floral aperitif lengthened with sparkling wine: light, bright and low in strength.",
+					"different": "The Hugo uses elderflower, soda and mint over ice; ours is Lillet, sparkling wine and lemon."
+				}
+			]
+		},
+		{
+			"item": "Bodrum",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Ramos Gin Fizz",
+					"label": "New Orleans cream and soda fizz",
+					"same": "Spirit, cream and citrus lengthened with sparkling water: creamy yet light.",
+					"different": "The Ramos is gin with egg white and orange flower water; ours is rum with pistachio and lime."
+				}
+			]
+		},
+		{
+			"item": "OBX",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Bellini",
+					"label": "Peach and sparkling wine",
+					"same": "Peach topped with sparkling wine: fruity, sparkling and easy.",
+					"different": "The Bellini is white peach and Prosecco only; ours adds Gentilly Gin, lemon and the sweet pink Bigaro."
+				},
+				{
+					"app": "ledger",
+					"ref": "French 75",
+					"label": "Gin, lemon and bubbles",
+					"same": "Gin and lemon topped with sparkling wine.",
+					"different": "The French 75 uses dry Champagne and sugar; ours adds peach and the softly sweet Bigaro."
+				}
+			]
+		},
+		{
+			"item": "Chandon Garden Spritz",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Aperol Spritz",
+					"label": "The canon spritz",
+					"same": "A bitter orange liqueur with dry sparkling wine: a bittersweet aperitivo.",
+					"different": "The canon names Aperol, Prosecco and soda; ours names Chandon Brut and an unnamed bitter orange liqueur."
+				},
+				{
+					"app": "codex",
+					"ref": "Moët & Chandon",
+					"label": "The Champagne house behind Chandon",
+					"same": "The same family name and the same traditional method of making sparkling wine.",
+					"different": "Moët & Chandon is Champagne from France; Chandon Brut is Californian sparkling wine, never called Champagne."
+				}
+			]
+		},
+		{
+			"item": "New Orleans-Style Coffee with Chicory",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Café Brûlot",
+					"label": "New Orleans' flamed coffee",
+					"same": "New Orleans coffee, chicory-blended in local practice, served after a meal.",
+					"different": "Café brûlot is flamed with brandy, citrus and spice; ours is the plain hot chicory coffee, taken as the guest likes."
+				},
+				{
+					"app": "table",
+					"ref": "wyoming-cowboy-coffee",
+					"label": "A frontier way with coffee",
+					"same": "Strong, dark, hot coffee as a local ritual at the end of a meal.",
+					"different": "Cowboy coffee is boiled with the grounds in a pot; ours is a chicory blend from a New Orleans roaster."
+				}
+			]
+		},
+		{
+			"item": "Congregation Single-Origin Coffee",
+			"entries": [
+				{
+					"app": "classic",
+					"ref": "",
+					"label": "A café pour-over single origin",
+					"same": "Beans from one place, brewed to show that place, with no blend and no chicory.",
+					"different": "Ours is roasted in Algiers Point and rotates with the season; read today's origin from the card."
+				}
+			]
+		},
+		{
+			"item": "Café Glacé de la Maison",
+			"entries": [
+				{
+					"app": "table",
+					"ref": "ca-phe-sua-da",
+					"label": "Vietnamese iced coffee",
+					"same": "A sweetened dark coffee served cold, rich and roasty.",
+					"different": "Cà phê sữa đá drips hot coffee over condensed milk and ice; ours is chicory cold brew with spiced syrup and orange flower foam."
+				},
+				{
+					"app": "ledger",
+					"ref": "Café Brûlot",
+					"label": "New Orleans' spiced coffee",
+					"same": "Coffee perfumed with clove and orange, a New Orleans idea.",
+					"different": "Café brûlot is hot, flamed and spirited; ours is cold, spirit-free and lightly sweet."
+				}
+			]
+		},
+		{
+			"item": "Revive Cold-Pressed Juice",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Cinderella",
+					"label": "A spirit-free fruit classic",
+					"same": "A bright, sweet, spirit-free fruit drink with pineapple.",
+					"different": "The Cinderella mixes juices with lemon, grenadine and soda; ours is a cold-pressed strawberry, apple and pineapple juice."
+				}
+			]
+		},
+		{
+			"item": "For Sentimental Reasons",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Bellini",
+					"label": "Fruit purée and sparkling wine",
+					"same": "Fruit purée topped with sparkling wine: soft-bodied, fruity and fizzy.",
+					"different": "The Bellini is white peach and Prosecco; ours is pear with allspice dram for warm spice."
+				}
+			]
+		},
+		{
+			"item": "Prisoner of Love",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Clarified Milk Punch",
+					"label": "The canon clarified milk punch",
+					"same": "Spirit and acid clarified through curdled cream or milk and strained clear and silky.",
+					"different": "The canon uses milk and citrus with any spirit; ours names gin, Earl Grey and clarified heavy cream."
+				},
+				{
+					"app": "ledger",
+					"ref": "Ramos Gin Fizz",
+					"label": "New Orleans gin, cream and orange flower",
+					"same": "Gin, cream and orange flower water: fragrant and silky.",
+					"different": "The Ramos keeps its cream and egg white, foamy and topped with soda; ours clarifies the cream away."
+				}
+			]
+		},
+		{
+			"item": "Rumors are Flying",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Old Fashioned",
+					"label": "The canon Old Fashioned",
+					"same": "Whiskey with sugar and bitters: rich, spirit-forward, with orange.",
+					"different": "Ours uses barrel-aged Rittenhouse rye and adds tart cherry juice and brown sugar syrup with orange bitters."
+				}
+			]
+		},
+		{
+			"item": "To Each His Own",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Jack Rose",
+					"label": "The canon apple brandy cocktail",
+					"same": "Apple brandy as the base of a fruity, orchard-flavoured drink.",
+					"different": "The Jack Rose is applejack with lemon and grenadine; ours is Calvados with Lillet Blanc and quince liqueur."
+				}
+			]
+		},
+		{
+			"item": "Old Buttermilk Sky",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Pisco Sour",
+					"label": "An egg white sour",
+					"same": "A spirit, citrus and sweetener shaken with egg white into a silky sour.",
+					"different": "The Pisco Sour uses pisco and lime with Angostura; ours uses reposado tequila, lemon, fig and cinnamon."
+				},
+				{
+					"app": "ledger",
+					"ref": "Margarita",
+					"label": "The canon tequila sour",
+					"same": "Tequila balanced with citrus and a sweet liqueur.",
+					"different": "The Margarita is blanco tequila, lime and orange liqueur; ours is reposado with fig, cinnamon and egg white."
+				}
+			]
+		},
+		{
+			"item": "Five Minutes More",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Last Word",
+					"label": "A Green Chartreuse sour",
+					"same": "Green Chartreuse with citrus: bright, intensely herbal and strong.",
+					"different": "The Last Word is gin, maraschino and lime; ours is mandarin vodka, Licor 43 and lemon."
+				}
+			]
+		},
+		{
+			"item": "Personality",
+			"entries": [
+				{
+					"app": "codex",
+					"ref": "Pierre Sparr Brut Rosé Crémant d’Alsace NV",
+					"label": "Our sparkling rosé by the glass",
+					"same": "A pink sparkling wine with red fruit and fine bubbles.",
+					"different": "The Pierre Sparr is a wine with alcohol; Personality uses a zero proof rosé with tart cherry and brown sugar."
+				},
+				{
+					"app": "ledger",
+					"ref": "Shirley Temple",
+					"label": "The best-known spirit-free classic",
+					"same": "A spirit-free, fizzy, red-fruited drink that lets anyone join a toast.",
+					"different": "The Shirley Temple is ginger ale and grenadine; ours is sparkling rosé with tart cherry and brown sugar."
+				}
+			]
+		},
+		{
+			"item": "Oh! What It Seemed to Be",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Pisco Sour",
+					"label": "An egg white sour",
+					"same": "Citrus, a sweetener and egg white shaken into a silky sour.",
+					"different": "Ours has no spirit: Lyre's non-alcoholic agave with fig syrup, lemon and cinnamon."
+				},
+				{
+					"app": "ledger",
+					"ref": "Nojito",
+					"label": "A spirit-free canon drink",
+					"same": "A spirit-free drink built to taste like a real cocktail.",
+					"different": "The Nojito is lime, mint and soda; ours is a silky fig and egg white sour."
+				}
+			]
+		},
+		{
+			"item": "Floating in South Africa",
+			"entries": [
+				{
+					"app": "table",
+					"ref": "egg-cream",
+					"label": "A soda fountain fizz",
+					"same": "A creamy, fizzy, nostalgic soda fountain drink.",
+					"different": "The egg cream is chocolate syrup, milk and seltzer; ours is a root beer float with Amarula and vanilla bean ice cream."
+				},
+				{
+					"app": "ledger",
+					"ref": "Mudslide",
+					"label": "A cream liqueur dessert drink",
+					"same": "A sweet cream liqueur dessert drink, sometimes made with ice cream.",
+					"different": "The Mudslide is vodka, coffee liqueur and Irish cream; ours is Amarula, Abita root beer and ice cream."
+				}
+			]
+		},
+		{
+			"item": "Apple Crumble",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Stone Fence",
+					"label": "Spirit, cider and bitters",
+					"same": "A spirit with apple cider and bitters: orchard fruit and warmth.",
+					"different": "The Stone Fence is applejack or rye with hard cider; ours adds butterscotch, maple, cinnamon and lemon."
+				},
+				{
+					"app": "ledger",
+					"ref": "Whiskey Sour",
+					"label": "The canon bourbon sour",
+					"same": "Bourbon balanced with lemon and a sweetener.",
+					"different": "Ours sweetens with butterscotch, maple and cider, adds cinnamon and black walnut bitters."
+				}
+			]
+		},
+		{
+			"item": "Banane au Chocolat",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Dirty Banana",
+					"label": "Banana dessert cocktail",
+					"same": "Banana liqueur in a rich, sweet dessert drink with a dark flavour.",
+					"different": "The Dirty Banana blends rum, coffee liqueur, fresh banana and cream; ours is two liqueurs with Pedro Ximénez sherry."
+				},
+				{
+					"app": "codex",
+					"ref": "Fortified Wines",
+					"label": "The Codex primer on fortified wines",
+					"same": "Pedro Ximénez is a fortified wine, and the primer explains how fortification and drying make it sweet.",
+					"different": "The primer covers sherry, port and Madeira as wines; ours uses PX as one part of a dessert cocktail."
+				}
+			]
+		},
+		{
+			"item": "Espresso Martini",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Espresso Martini",
+					"label": "The canon espresso martini",
+					"same": "Vodka and coffee liqueur, shaken into a roasty after-dinner drink.",
+					"different": "The canon uses fresh espresso and syrup; ours prints chicory and Frangelico and no espresso."
+				},
+				{
+					"app": "ledger",
+					"ref": "Nutty Irishman",
+					"label": "A Frangelico coffee drink",
+					"same": "Frangelico's hazelnut with coffee flavours after dinner.",
+					"different": "The Nutty Irishman is Frangelico and Irish cream; ours is vodka, Kahlua, chicory and Frangelico."
+				}
+			]
+		},
+		{
+			"item": "Ralph’s Coffee",
+			"entries": [
+				{
+					"app": "ledger",
+					"ref": "Irish Coffee",
+					"label": "The canon Irish Coffee",
+					"same": "Hot coffee with liqueur or spirit under a cap of cool cream.",
+					"different": "Ours has no whiskey and no brown sugar: Frangelico and Nocello in chicory coffee."
+				},
+				{
+					"app": "ledger",
+					"ref": "Nutty Irishman",
+					"label": "A Frangelico coffee drink",
+					"same": "Frangelico's hazelnut, which can be poured into hot coffee.",
+					"different": "The Nutty Irishman pairs it with Irish cream; ours adds Nocello walnut and whipped cream over chicory coffee."
+				}
+			]
+		}
+	]
+}

@@ -20,11 +20,19 @@
  * bottle tier that breaks its rule (a wine not on the bottle list, a price
  * outside the tier's band, a half bottle that is not HALF_SIZE, a tier with
  * no why or no line to say); and 'video' a video whose link is not a video
- * link by videoUrlOk, or that has no title or no why. Those nine are
- * FATAL_CODES, the default list, and a pack builder passes exactly that. A
+ * link by videoUrlOk, or that has no title or no why; 'component' a
+ * component whose kind is outside COMPONENT_KINDS, or with no name, or whose
+ * card lacks a front or a back; and 'compare' an item's comparisons past
+ * COMPARE_MAX, an entry whose app is outside COMPARE_APPS, a classic that
+ * carries a ref, an in-app entry with none, or an entry with no label, same
+ * or different. Those eleven are FATAL_CODES, the default list, and a pack builder passes exactly that. A
  * tier's why and line over BOTTLE_WORDS are 'word-cap', and so is a video's
  * why over VIDEO_WHY_WORDS; a tier naming no house wine is 'ref', and so is
- * a video's item or term that is not in the house.
+ * a video's item or term that is not in the house; a component's explanation
+ * over COMPONENT_WORDS.explain, its card's front or back over theirs, and a
+ * comparison's label, same or different over COMPARE_WORDS are 'word-cap';
+ * a component's item or term, a video's component and a codex comparison
+ * naming a house wine id that the house lacks are 'ref'.
  * Three more are advisory and NEVER fatal, whatever list a caller hands in:
  * 'service-note', a person's note that names an allergen without the word
  * confirm (the note is theirs and stands; the flag reminds them to confirm
@@ -39,7 +47,7 @@
  * sweep (forbiddenKeys, in house-normalise.ts), the dash (house-lines.ts)
  * and onPage, the rule that 12 is not on a page that prints only 12.50.
  */
-import { BOTTLE_TIERS, BOTTLE_WORDS, HALF_SIZE, HOUSE_LISTS, MARK_FIELDS, PRINCIPLES, VIDEO_WHY_WORDS, foldSize, inBottleBand, isMark, printedDollars, videoUrlOk, wineListOf } from './house-schema';
+import { BOTTLE_TIERS, BOTTLE_WORDS, COMPARE_APPS, COMPARE_MAX, COMPARE_WORDS, COMPONENT_KINDS, COMPONENT_WORDS, HALF_SIZE, HOUSE_LISTS, MARK_FIELDS, PRINCIPLES, VIDEO_WHY_WORDS, foldSize, inBottleBand, isMark, printedDollars, videoUrlOk, wineListOf } from './house-schema';
 import type { House, HouseList, Lines, Mark } from './house-schema';
 import { forbiddenKeys } from './house-normalise';
 import { hasDash, lineProblems, wordCount } from './house-lines';
@@ -58,6 +66,8 @@ export type ProblemCode =
 	| 'allergen-talk'
 	| 'tier'
 	| 'video'
+	| 'component'
+	| 'compare'
 	| 'service-note'
 	| 'proper-noun'
 	| 'quote';
@@ -70,7 +80,7 @@ export interface Problem {
 }
 
 /** The codes that stop a pack, and the default `fatal` list. */
-export const FATAL_CODES: readonly ProblemCode[] = ['forbidden', 'dash', 'word-cap', 'ref', 'principles', 'price', 'allergen-talk', 'tier', 'video'];
+export const FATAL_CODES: readonly ProblemCode[] = ['forbidden', 'dash', 'word-cap', 'ref', 'principles', 'price', 'allergen-talk', 'tier', 'video', 'component', 'compare'];
 
 /** The codes that are advice and never fatal, whatever list a caller hands in. */
 export const NEVER_FATAL: readonly ProblemCode[] = ['service-note', 'proper-noun', 'quote'];
@@ -288,11 +298,96 @@ function checkRefs(house: House, add: Add): void {
 		if (disputes[i].itemId !== undefined) ref('house.disputes[' + i + '].itemId', disputes[i].itemId, items, 'a house item', true);
 	}
 	const terms = idSet(listOf(house, 'lexicon'));
+	const components = listOf(house, 'components');
+	const componentIds = idSet(components);
 	const videos = listOf(house, 'videos');
 	for (let i = 0; i < videos.length; i++) {
 		refs('house.videos[' + i + '].itemIds', videos[i].itemIds, items, 'a house item');
 		refs('house.videos[' + i + '].termIds', videos[i].termIds, terms, 'a house term');
+		if (videos[i].componentIds !== undefined) refs('house.videos[' + i + '].componentIds', videos[i].componentIds, componentIds, 'a house component');
 	}
+	for (let i = 0; i < components.length; i++) {
+		refs('house.components[' + i + '].itemIds', components[i].itemIds, items, 'a house item');
+		refs('house.components[' + i + '].termIds', components[i].termIds, terms, 'a house term');
+	}
+	/* A codex comparison naming a house wine by its id must name one this house holds; any other ref is a key in another app, check-compare's to resolve. */
+	eachItem(house, (item, path) => {
+		const compare = item.compare;
+		if (!isMark(compare) || !Array.isArray(compare.value)) return;
+		const entries = compare.value as Raw[];
+		for (let j = 0; j < entries.length; j++) {
+			const e = entries[j];
+			if (e && e.app === 'codex' && typeof e.ref === 'string' && HOUSE_WINE_ID.test(e.ref) && !wines.has(e.ref)) {
+				add(path + '.compare.value[' + j + '].ref', 'ref', e.ref + ' is not a house wine in this house');
+			}
+		}
+	});
+}
+
+/** The shape of a house wine id, the one comparison ref the validator resolves itself. */
+const HOUSE_WINE_ID = /^w-[a-z0-9]{8}$/;
+
+/**
+ * Every component: its kind one of COMPONENT_KINDS, a name, an explanation
+ * within its cap, and a card, when there is one, with a front and a back
+ * each within its cap. The floors are the pack builder's, never a device's.
+ */
+function checkComponents(house: House, add: Add): void {
+	const known: readonly string[] = COMPONENT_KINDS;
+	const components = listOf(house, 'components');
+	for (let i = 0; i < components.length; i++) {
+		const c = components[i];
+		const at = 'house.components[' + i + ']';
+		if (known.indexOf(c.kind as string) < 0) add(at + '.kind', 'component', String(c.kind) + ' is not one of ' + COMPONENT_KINDS.join(', '));
+		if (typeof c.name !== 'string' || !c.name.trim()) add(at + '.name', 'component', 'the component has no name');
+		const explain = c.explain;
+		if (isMark(explain) && typeof explain.value === 'string' && wordCount(explain.value) > COMPONENT_WORDS.explain) {
+			add(at + '.explain.value', 'word-cap', wordCount(explain.value) + ' words; the cap on an explanation is ' + COMPONENT_WORDS.explain);
+		}
+		const card = c.card;
+		if (isMark(card) && card.value && typeof card.value === 'object') {
+			const v = card.value as Raw;
+			for (const side of ['front', 'back'] as const) {
+				const text = typeof v[side] === 'string' ? (v[side] as string) : '';
+				if (!text.trim()) add(at + '.card.value.' + side, 'component', 'the card has no ' + side);
+				else if (wordCount(text) > COMPONENT_WORDS[side]) add(at + '.card.value.' + side, 'word-cap', wordCount(text) + ' words; the cap on a card\'s ' + side + ' is ' + COMPONENT_WORDS[side]);
+			}
+		}
+	}
+}
+
+/**
+ * Every item's comparisons: at most COMPARE_MAX, each with an app from
+ * COMPARE_APPS, a ref for an in-app entry and none for a classic, and a
+ * label, a same and a different, each within its cap.
+ */
+function checkCompare(house: House, add: Add): void {
+	const apps: readonly string[] = COMPARE_APPS;
+	eachItem(house, (item, path) => {
+		const compare = item.compare;
+		if (!isMark(compare)) return;
+		const at = path + '.compare.value';
+		if (!Array.isArray(compare.value)) {
+			add(at, 'compare', 'the comparisons are not a list');
+			return;
+		}
+		const entries = compare.value as Raw[];
+		if (entries.length > COMPARE_MAX) add(at, 'compare', entries.length + ' comparisons; an item carries at most ' + COMPARE_MAX);
+		for (let j = 0; j < entries.length; j++) {
+			const e = entries[j] || {};
+			const here = at + '[' + j + ']';
+			const app = typeof e.app === 'string' ? e.app : '';
+			if (apps.indexOf(app) < 0) add(here + '.app', 'compare', (app || 'nothing') + ' is not one of ' + COMPARE_APPS.join(', '));
+			const ref = typeof e.ref === 'string' ? e.ref.trim() : '';
+			if (app === 'classic' && ref) add(here + '.ref', 'compare', 'a classic is written out and carries no ref');
+			if (app !== 'classic' && apps.indexOf(app) >= 0 && !ref) add(here + '.ref', 'compare', 'an in-app comparison needs the ref it opens');
+			for (const k of ['label', 'same', 'different'] as const) {
+				const text = typeof e[k] === 'string' ? (e[k] as string) : '';
+				if (!text.trim()) add(here + '.' + k, 'compare', 'the comparison has no ' + k);
+				else if (wordCount(text) > COMPARE_WORDS[k]) add(here + '.' + k, 'word-cap', wordCount(text) + ' words; the cap on a comparison\'s ' + k + ' is ' + COMPARE_WORDS[k]);
+			}
+		}
+	});
 }
 
 /**
@@ -536,6 +631,8 @@ export function validateHouse(house: House, opts: ValidateOptions = {}): { probl
 	checkPrinciples(house, add);
 	checkBottles(house, add);
 	checkVideos(house, add);
+	checkComponents(house, add);
+	checkCompare(house, add);
 	if (typeof opts.sourceText === 'string') checkPrices(house, opts.sourceText, add);
 	checkMarks(house, add);
 	checkServiceNotes(house, add);

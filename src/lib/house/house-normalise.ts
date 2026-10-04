@@ -34,7 +34,8 @@
  * pipe or a colon, with the wrong prefix or already taken in this house is
  * minted afresh and the report says so, and every reference to the old id
  * inside the house (a pairing and its bottle tiers, a course, a mix-up, a first pick, an upsell,
- * a term's items, a video's items and terms) follows it, so a pack whose dishes came in under the
+ * a term's items, a video's items, terms and components, a component's items
+ * and terms, a comparison pointing at a house wine) follows it, so a pack whose dishes came in under the
  * desk's 'k-' mint keeps its pairings. An id that would match the client's
  * FORBIDDEN_KEY is minted afresh as well, and a fresh id is drawn again
  * while it would, because a tombstone in `removed` is a KEY and the client
@@ -48,11 +49,20 @@
  * 'video', before it claims an id: a card must never carry a link out to
  * anywhere else. The list is written only when a video survives, so a house
  * from before the list comes back with the keys it went in with.
+ *
+ * COMPONENTS. The ingredients, techniques and stories ride in their own
+ * optional list, written only when one survives, each with its three marks
+ * (say, explain, card). An item's comparisons are one mark of records, and a
+ * video's componentIds are written only when it names a component, so a
+ * record from before either field comes back with the keys it went in with.
  */
 import { BOTTLE_TIERS, BUILD_STEPS, HOUSE_FORMAT, HOUSE_SCHEMA_VERSION, ID_PREFIXES, KEYS, LIST_MAX, MARK_FIELDS, PROSE_MAX, mintId, videoUrlOk } from './house-schema';
 import type {
 	AskAtLineup,
 	BottlePick,
+	CompareEntry,
+	ComponentCard,
+	ComponentKind,
 	AskWhom,
 	Began,
 	BuildStep,
@@ -61,6 +71,7 @@ import type {
 	FormulaParts,
 	House,
 	HouseCocktail,
+	HouseComponent,
 	HouseDish,
 	HouseMeal,
 	HouseSource,
@@ -204,9 +215,10 @@ function blank(s: string): boolean {
 /**
  * What kind of value a mark field carries, so a string can never land on a
  * list field or a list on a prose field: the three list marks, the parts,
- * the lines and the pairing; everything else is prose.
+ * the lines, the pairing, a component's card and an item's comparisons;
+ * everything else is prose.
  */
-export type MarkKind = 'text' | 'list' | 'parts' | 'lines' | 'pairing';
+export type MarkKind = 'text' | 'list' | 'parts' | 'lines' | 'pairing' | 'card' | 'compare';
 
 export const MARK_KINDS: Readonly<Record<string, MarkKind>> = {
 	ingredientsNamed: 'list',
@@ -214,7 +226,9 @@ export const MARK_KINDS: Readonly<Record<string, MarkKind>> = {
 	upsells: 'list',
 	parts: 'parts',
 	lines: 'lines',
-	pairing: 'pairing'
+	pairing: 'pairing',
+	card: 'card',
+	compare: 'compare'
 };
 
 export function markKind(field: string): MarkKind {
@@ -238,6 +252,7 @@ function markValue(v: unknown, kind: MarkKind): unknown {
 		const l = asTextList(v);
 		return l.length ? l : undefined;
 	}
+	if (kind === 'compare') return normaliseCompare(v);
 	if (!isRaw(v)) return undefined;
 	let any = false;
 	if (kind === 'parts') {
@@ -247,6 +262,14 @@ function markValue(v: unknown, kind: MarkKind): unknown {
 			if (!blank(p[k])) any = true;
 		}
 		return any ? p : undefined;
+	}
+	if (kind === 'card') {
+		const c = {} as ComponentCard;
+		for (const k of KEYS.ComponentCard) {
+			c[k] = asText(v[k]);
+			if (!blank(c[k])) any = true;
+		}
+		return any ? c : undefined;
 	}
 	if (kind === 'lines') {
 		const l = {} as Lines;
@@ -275,6 +298,28 @@ function markValue(v: unknown, kind: MarkKind): unknown {
 		}
 	}
 	return any ? p : undefined;
+}
+
+/**
+ * An item's comparisons: each entry rebuilt from KEYS.CompareEntry, every
+ * field a string (the app carried as it came, so the validator can name one
+ * outside COMPARE_APPS), kept only when something is in it; undefined when
+ * none survives. No entry is cut for the count: COMPARE_MAX is the
+ * validator's to name.
+ */
+function normaliseCompare(v: unknown): CompareEntry[] | undefined {
+	const out: CompareEntry[] = [];
+	for (const raw of asList(v)) {
+		if (!isRaw(raw)) continue;
+		const e = {} as CompareEntry;
+		let some = false;
+		for (const k of KEYS.CompareEntry) {
+			(e as unknown as Record<string, string>)[k] = asText(raw[k]);
+			if (k !== 'app' && !blank(asText(raw[k]))) some = true;
+		}
+		if (some) out.push(e);
+	}
+	return out.length ? out : undefined;
 }
 
 /**
@@ -599,7 +644,7 @@ function normaliseVideo(raw: unknown, i: number, ctx: Ctx): HouseVideo | null {
 		ctx.report.push({ path: path + '.url', code: 'video', said: 'the link ' + shown + ' is not a secure link on YouTube or Vimeo; the video was dropped' });
 		return null;
 	}
-	return {
+	const v: HouseVideo = {
 		id: claimId(r.id, ID_PREFIXES.videos, path, ctx),
 		url: r.url as string,
 		title: asText(r.title),
@@ -613,6 +658,37 @@ function normaliseVideo(raw: unknown, i: number, ctx: Ctx): HouseVideo | null {
 		checkedOn: asText(r.checkedOn),
 		ts: asStamp(r.ts)
 	};
+	/* Written only when it names a component, so a video from before the field keeps its keys. */
+	const componentIds = asTextList(r.componentIds);
+	if (componentIds.length) {
+		const out: Record<string, unknown> = {};
+		for (const k of KEYS.HouseVideo) {
+			if (k === 'componentIds') out[k] = componentIds;
+			else if (k in v) out[k] = (v as unknown as Record<string, unknown>)[k];
+		}
+		return out as unknown as HouseVideo;
+	}
+	return v;
+}
+
+/**
+ * One component: its id under the 'c-' prefix, its kind and name as text
+ * (a kind outside COMPONENT_KINDS is carried so the validator names it),
+ * the items and terms it belongs to, and its three marks.
+ */
+function normaliseComponent(raw: unknown, i: number, ctx: Ctx): HouseComponent {
+	const r = asRecord(raw);
+	/* Built in the order KEYS.HouseComponent names, the marks in their place, so a component reads the same however it came. */
+	const c = {
+		id: claimId(r.id, ID_PREFIXES.components, 'house.components[' + i + ']', ctx),
+		kind: asText(r.kind) as ComponentKind,
+		name: asText(r.name)
+	} as HouseComponent;
+	marksOnto(c, r, MARK_FIELDS.components);
+	c.itemIds = asTextList(r.itemIds);
+	c.termIds = asTextList(r.termIds);
+	c.ts = asStamp(r.ts);
+	return c;
 }
 
 function normaliseMeal(v: unknown): HouseMeal {
@@ -708,7 +784,18 @@ function applyRenames(house: House, ctx: Ctx): void {
 		for (const v of house.videos) {
 			v.itemIds = many(v.itemIds);
 			v.termIds = many(v.termIds);
+			if (v.componentIds) v.componentIds = many(v.componentIds);
 		}
+	}
+	if (house.components) {
+		for (const c of house.components) {
+			c.itemIds = many(c.itemIds);
+			c.termIds = many(c.termIds);
+		}
+	}
+	/* A comparison's ref is a house wine's id when it points at one; any other ref is a key in another app and maps to nothing here. */
+	for (const list of [house.dishes, house.wines, house.cocktails] as Array<Array<{ compare?: Mark<CompareEntry[]> }>>) {
+		for (const item of list) if (item.compare) for (const e of item.compare.value) e.ref = one(e.ref);
 	}
 }
 
@@ -773,6 +860,8 @@ export function normaliseHouse(raw: unknown, opts: { rand?: () => number } = {})
 		if (v) videos.push(v);
 	}
 	if (videos.length) house.videos = videos;
+	const components = asList(r.components).map((c, i) => normaliseComponent(c, i, ctx));
+	if (components.length) house.components = components;
 	applyRenames(house, ctx);
 	for (const p of forbiddenKeys(house, 'house', [])) {
 		report.push({ path: p, code: 'forbidden', said: 'a key the client refuses is still on the record after normalising' });

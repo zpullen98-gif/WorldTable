@@ -134,10 +134,12 @@ describe('the constants', () => {
 		});
 	});
 
-	it('list the eleven lists, the marks per kind with parts and lines on wines too, and one prefix per list', () => {
-		expect(HOUSE_LISTS).toEqual(['tastings', 'dishes', 'wines', 'cocktails', 'lexicon', 'scenarios', 'mixUps', 'mustKnows', 'askAtLineup', 'disputes', 'videos']);
-		expect(OPTIONAL_LISTS).toEqual(['videos']);
+	it('list the twelve lists, the marks per kind with parts and lines on wines too, and one prefix per list', () => {
+		expect(HOUSE_LISTS).toEqual(['tastings', 'dishes', 'wines', 'cocktails', 'lexicon', 'scenarios', 'mixUps', 'mustKnows', 'askAtLineup', 'disputes', 'videos', 'components']);
+		expect(OPTIONAL_LISTS).toEqual(['videos', 'components']);
 		expect(MARK_FIELDS.videos).toEqual([]);
+		expect(MARK_FIELDS.components).toEqual(['say', 'explain', 'card']);
+		for (const marks of [DISH_MARKS, WINE_MARKS, COCKTAIL_MARKS]) expect(marks).toContain('compare');
 		for (const marks of [DISH_MARKS, WINE_MARKS, COCKTAIL_MARKS]) {
 			for (const m of ['say', 'guest', 'why', 'pairs', 'origin', 'parts', 'lines']) expect(marks).toContain(m);
 		}
@@ -149,7 +151,7 @@ describe('the constants', () => {
 		const prefixes = Object.values(ID_PREFIXES);
 		expect(new Set(prefixes).size).toBe(prefixes.length);
 		for (const p of prefixes) expect(p).toMatch(/^[a-z]-$/);
-		expect(ID_PREFIXES).toMatchObject({ house: 'h-', dishes: 'd-', wines: 'w-', cocktails: 'b-', tastings: 't-', lexicon: 'x-', scenarios: 's-', mixUps: 'm-', mustKnows: 'k-', videos: 'v-' });
+		expect(ID_PREFIXES).toMatchObject({ house: 'h-', dishes: 'd-', wines: 'w-', cocktails: 'b-', tastings: 't-', lexicon: 'x-', scenarios: 's-', mixUps: 'm-', mustKnows: 'k-', videos: 'v-', components: 'c-' });
 	});
 });
 
@@ -168,7 +170,7 @@ describe('KEYS against the client', () => {
 			[
 				'Mark', 'Note', 'FormulaParts', 'Lines', 'Pairing', 'MealPrice', 'ItemBase', 'HouseDish', 'HouseWine', 'HouseCocktail',
 				'PairingBottles', 'BottlePick', 'TastingCourse', 'Tasting', 'LexiconTerm', 'Scenario', 'MixUp', 'MustKnow', 'AskAtLineup', 'DisputeSide', 'Dispute',
-				'HouseMeal', 'HouseSource', 'HouseVideo', 'PackStamp', 'House', 'HouseIndex', 'HouseStub'
+				'HouseMeal', 'HouseSource', 'HouseVideo', 'PackStamp', 'House', 'HouseIndex', 'HouseStub', 'ComponentCard', 'CompareEntry', 'HouseComponent'
 			].sort()
 		);
 		let walked = 0;

@@ -73,7 +73,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
-import { americanise, checkArgs, EDITION_TS, editionInFuture, PACK } from './engine.mjs';
+import { americanise, checkArgs, EDITION_TS, editionInFuture, PACK, readFragments, componentsDir } from './engine.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DIR = path.join(HERE, 'brennans');
@@ -93,12 +93,19 @@ if (args.includes('--help') || args.includes('-h')) {
   --mint        allow a new id to be minted for a slug the ledger (${REL(LEDGER)}) lacks
   --stamp <ms>  the one build stamp on every mark (default: the shipped edition's fixed stamp; --now takes the clock)
   --verbose     print every principle mapped
+  --components <dir>  read the component fragments from <dir> (default ${REL(componentsDir())}, or BRENNANS_COMPONENTS)
   --help        this text
 
 Writes ${REL(OUT)}, ${REL(DASH_LOG)}, ${REL(SPELL_LOG)} and, with --mint, ${REL(LEDGER)}.`);
 	process.exit(0);
 }
-checkArgs(args, ['--mint', '--stamp', '--verbose', '--now'], ['--stamp'], fail);
+checkArgs(args, ['--mint', '--stamp', '--verbose', '--now', '--components'], ['--stamp', '--components'], fail);
+const compAt = args.indexOf('--components');
+if (compAt >= 0) {
+	const dir = path.resolve(args[compAt + 1]);
+	if (!fs.existsSync(dir)) fail(`--components ${args[compAt + 1]}: no such directory`);
+	process.env.BRENNANS_COMPONENTS = dir;
+}
 const MINT = args.includes('--mint');
 const stampAt = args.indexOf('--stamp');
 /* Fixed by default so a rebuild is byte for byte the pack that shipped (the mirror gate holds the
@@ -694,10 +701,16 @@ function videoTopic(t) {
 	if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(s)) return s;
 	return VIDEO_TOPICS[s] || cap(s.replace(/-/g, ' '));
 }
+/* The components a video teaches, by fragment key (resolved to c- ids at assembly): a list of keys, or none. */
+function componentKeysOf(v, need) {
+	if (v.componentKeys === undefined) return [];
+	need(Array.isArray(v.componentKeys) && v.componentKeys.every((k) => typeof k === 'string' && k.trim() !== ''), 'needs componentKeys as a list of component keys');
+	return [...v.componentKeys];
+}
 /* A video filed by an override, in the research files' shape, checked before anything resolves; the
    attach names resolve at assembly, once every id is known. */
 function newVideo(v, n) {
-	const at = `${REL(OVERRIDES)} entry ${n}`;
+	const at = typeof n === 'string' ? n : `${REL(OVERRIDES)} entry ${n}`;
 	const str = (x) => typeof x === 'string' && x.trim() !== '';
 	if (!v || typeof v !== 'object' || Array.isArray(v)) fail(`${at}: video:+ needs a value, one research video record`);
 	const need = (ok, what) => { if (!ok) fail(`${at}: the video ${str(v.id) ? v.id : '(no id)'} ${what}`); };
@@ -720,7 +733,8 @@ function newVideo(v, n) {
 	return {
 		key: v.id, n, url: v.url, title: v.title, channel: v.channel, mins: typeof v.minutes === 'number' ? v.minutes : 0,
 		topic: videoTopic(v.topic), why: v.why, checkedOn: v.checkedOn, house,
-		dishes: names('dishes'), cocktails: names('cocktails'), wines: names('wines'), terms: names('terms')
+		dishes: names('dishes'), cocktails: names('cocktails'), wines: names('wines'), terms: names('terms'),
+		componentKeys: componentKeysOf(v, need)
 	};
 }
 
@@ -1013,12 +1027,136 @@ for (const u of clean.disputes) {
 	if (u.resolution) r.resolution = u.resolution;
 	house.disputes.push(r);
 }
+/* ---------- the components and the comparisons (engine.mjs readFragments) ---------- */
+/* Each fragment component becomes one house component: its key (unique across every file) is the
+   ledger slug its c- id is minted under, its item and term names resolve to ids within their own
+   lists (an unknown name fails the build), and its say, explanation and card are marks of hers at the
+   build stamp like every other mark. A fragment is hand written and dash free, so a dash fails the
+   build with the file and the field named; the American spelling map runs as it does on every string.
+   The sources stay in the fragment for a reader and the gates; nothing of them reaches the house. */
+let frags;
+try { frags = readFragments(); } catch (e) { fail(e.message); }
+const compIds = new Map();
+const builtComponents = [];
+const fragStr = (x) => typeof x === 'string' && x.trim() !== '';
+const fragText = (s, where) => dashFree(spelled(s, where), where);
+const exactItem = (name) => {
+	for (const list of ['dishes', 'wines', 'cocktails']) {
+		const r = house[list].find((x) => x.name === name) || house[list].find((x) => slug(x.name) === slug(name));
+		if (r) return { list, rec: r };
+	}
+	return null;
+};
+for (const { at, v } of frags.components) {
+	const need = (ok, what) => { if (!ok) fail(`${at}${v && v.key ? ' (' + v.key + ')' : ''}: ${what}`); };
+	need(v && typeof v === 'object' && !Array.isArray(v), 'a component is an object');
+	for (const k of Object.keys(v)) need(['key', 'kind', 'name', 'say', 'explain', 'card', 'items', 'terms', 'sources'].includes(k), `unknown key ${k}`);
+	need(fragStr(v.key) && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(v.key), 'needs a key, a lowercase ascii slug');
+	need(!compIds.has(v.key), `the key ${v.key} is used twice across the fragments`);
+	need(C.COMPONENT_KINDS.includes(v.kind), `kind ${JSON.stringify(v.kind)} is not one of ${C.COMPONENT_KINDS.join(', ')}`);
+	need(fragStr(v.name), 'needs a name');
+	need(typeof v.say === 'string', 'needs say, a respelling or ""');
+	need(fragStr(v.explain), 'needs an explanation');
+	need(v.card && typeof v.card === 'object' && fragStr(v.card.front) && fragStr(v.card.back) && Object.keys(v.card).every((k) => k === 'front' || k === 'back'), 'needs a card { front, back }');
+	need(Array.isArray(v.items) && v.items.length && v.items.every(fragStr), 'needs items, the pack item names it belongs to');
+	need(Array.isArray(v.terms) && v.terms.every(fragStr), 'needs terms, a list of lexicon term names (may be empty)');
+	need(Array.isArray(v.sources) && v.sources.length && v.sources.every(fragStr), 'needs sources, where each fact comes from');
+	for (const [k, x] of [['name', v.name], ['say', v.say], ['explain', v.explain], ['card.front', v.card.front], ['card.back', v.card.back]]) need(!hasDash(x), `${k} carries a dash; write it without one`);
+	const itemIds = [];
+	for (const n of v.items) {
+		const hit = exactItem(n);
+		need(hit, `${n} is not a dish, drink or wine in the house`);
+		need(!itemIds.includes(hit.rec.id), `${n} is named twice`);
+		itemIds.push(hit.rec.id);
+	}
+	const termIds = [];
+	for (const t of v.terms) {
+		const x = house.lexicon.find((r) => r.term === t) || house.lexicon.find((r) => slug(r.term) === slug(t));
+		need(x, `${t} is not a term in the house lexicon`);
+		if (!termIds.includes(x.id)) termIds.push(x.id);
+	}
+	const id = idFor('components', v.key);
+	compIds.set(v.key, id);
+	const where = 'house.components[' + builtComponents.length + ']';
+	const comp = { id, kind: v.kind, name: fragText(v.name, where + '.name') };
+	if (v.say.trim()) comp.say = mark(fragText(v.say, where + '.say'));
+	comp.explain = mark(fragText(v.explain.replace(/\r/g, ''), where + '.explain'));
+	comp.card = mark({ front: fragText(v.card.front, where + '.card.front'), back: fragText(v.card.back, where + '.card.back') });
+	comp.itemIds = itemIds;
+	comp.termIds = termIds;
+	comp.ts = BUILD_TS;
+	builtComponents.push(comp);
+}
+/* Each item's one or two comparisons: the item named as the pack names it, each entry's app one of
+   the four, a classic with no ref and an in-app one with its ref, a table ref carried as the address it
+   opens (tableRef), a codex ref that is a house wine's exact name carried as that wine's id (so the
+   Codex opens its card), every other ref as written for check-compare to resolve against the apps'
+   data. An item compared twice fails. */
+const compared = new Set();
+/* A Table ref as the address under the Table it opens: a recipe slug (src/lib/data/recipes.index.json)
+   becomes recipe/<slug> and a technique slug (techniques.json) technique/<slug>, a recipe first when a
+   slug is both, so every room links it without reading the Table's data. */
+let tableSlugs = null;
+function tableRef(ref, need) {
+	if (!tableSlugs) {
+		const data = path.join(HERE, '..', '..', 'src', 'lib', 'data');
+		const read = (f) => { const p = path.join(data, f); need(fs.existsSync(p), `a Table comparison needs ${REL(p)} to resolve against`); return new Set(JSON.parse(fs.readFileSync(p, 'utf8')).map((r) => r.slug)); };
+		tableSlugs = { recipe: read('recipes.index.json'), technique: read('techniques.json') };
+	}
+	const m = /^(recipe|technique)\/(.+)$/.exec(ref);
+	const slugOnly = m ? m[2] : ref;
+	if (m) { need(tableSlugs[m[1]].has(slugOnly), `table ${JSON.stringify(ref)} names no such ${m[1]}`); return ref; }
+	if (tableSlugs.recipe.has(slugOnly)) return 'recipe/' + slugOnly;
+	if (tableSlugs.technique.has(slugOnly)) return 'technique/' + slugOnly;
+	need(false, `table ${JSON.stringify(ref)} is neither a recipe slug nor a technique slug in the Table's data`);
+	return ref;
+}
+for (const { at, v } of frags.compare) {
+	const need = (ok, what) => { if (!ok) fail(`${at}${v && v.item ? ' (' + v.item + ')' : ''}: ${what}`); };
+	need(v && typeof v === 'object' && fragStr(v.item), 'needs item, the pack item name');
+	for (const k of Object.keys(v)) need(['item', 'entries'].includes(k), `unknown key ${k}`);
+	const hit = exactItem(v.item);
+	need(hit, `${v.item} is not a dish, drink or wine in the house`);
+	need(!compared.has(hit.rec.id), `${v.item} is compared twice`);
+	compared.add(hit.rec.id);
+	need(Array.isArray(v.entries) && v.entries.length >= 1 && v.entries.length <= C.COMPARE_MAX, `needs one or two entries`);
+	const entries = v.entries.map((e, i) => {
+		const here = (ok, what) => need(ok, `entries[${i}] ${what}`);
+		here(e && typeof e === 'object', 'is an object');
+		for (const k of Object.keys(e)) here(['app', 'ref', 'label', 'same', 'different'].includes(k), `unknown key ${k}`);
+		here(C.COMPARE_APPS.includes(e.app), `app ${JSON.stringify(e.app)} is not one of ${C.COMPARE_APPS.join(', ')}`);
+		here(typeof e.ref === 'string', 'needs ref, a string');
+		here(e.app === 'classic' ? e.ref === '' : fragStr(e.ref), e.app === 'classic' ? 'a classic carries ref ""' : 'an in-app comparison needs its ref');
+		for (const k of ['label', 'same', 'different']) { here(fragStr(e[k]), `needs ${k}`); here(!hasDash(e[k]), `${k} carries a dash; write it without one`); }
+		let ref = e.ref;
+		if (e.app === 'table') ref = tableRef(ref, (ok, what) => here(ok, what));
+		if (e.app === 'codex') { const w = wineIds.get(wineKey(ref)); if (w && house.wines.some((x) => x.id === w && (x.name === ref || slug(x.name) === slug(ref)))) ref = w; }
+		const where = `${hit.list}:${hit.rec.name}.compare[${i}]`;
+		return { app: e.app, ref, label: fragText(e.label, where + '.label'), same: fragText(e.same, where + '.same'), different: fragText(e.different, where + '.different') };
+	});
+	hit.rec.compare = mark(entries);
+}
+/* videos.json: a whole research video record with componentKeys files a new video, as video:+ does;
+   { id, componentKeys } alone attaches components to a video an override already files. */
+for (const { at, v } of frags.videos) {
+	if (!v || typeof v !== 'object' || !fragStr(v.id)) fail(`${at}: a video needs its research id`);
+	if (v.componentKeys !== undefined && !(Array.isArray(v.componentKeys) && v.componentKeys.every(fragStr))) fail(`${at} (${v.id}): componentKeys is a list of component keys`);
+	const keys = Array.isArray(v.componentKeys) ? v.componentKeys : [];
+	if (v.url === undefined) {
+		const known = videoAdds.find((x) => x.key === v.id);
+		if (!known) fail(`${at} (${v.id}): no video with that id is filed; file it whole (url, title, channel, why, attach, checkedOn) or name an override's video`);
+		if (!keys.length) fail(`${at} (${v.id}): attaches nothing; name its componentKeys`);
+		for (const k of keys) if (!known.componentKeys.includes(k)) known.componentKeys.push(k);
+		continue;
+	}
+	videoAdds.push(newVideo(v, at));
+}
 /* The videos, after every list they point into: each attach name resolved within its own list (a dish
    among the dishes, a wine by the wine key, a term among the terms), an unknown name failing the build.
    The quoted title and channel take the dash pass alone; why and topic take the spelling map too. */
 if (videoAdds.length) house.videos = [];
 for (const v of videoAdds) {
-	const where = `${REL(OVERRIDES)} entry ${v.n} (video ${v.key})`;
+	const where = `${typeof v.n === 'number' ? REL(OVERRIDES) + ' entry ' + v.n : v.n} (video ${v.key})`;
 	const path = 'house.videos[' + house.videos.length + ']';
 	const inList = (list, name) => {
 		const r = clean[list].find((x) => slug(x.name) === slug(name) || (x.idName && slug(x.idName) === slug(name)));
@@ -1036,13 +1174,25 @@ for (const v of videoAdds) {
 		if (!x) fail(`${where}: ${t} is not a term in the house lexicon`);
 		if (!termIds.includes(x.id)) termIds.push(x.id);
 	}
-	overrideAt.set(path, v.n);
-	house.videos.push({
+	const componentIds = [];
+	for (const k of v.componentKeys) {
+		const id = compIds.get(k);
+		if (!id) fail(`${where}: ${k} is not a component key in the fragments`);
+		if (!componentIds.includes(id)) componentIds.push(id);
+	}
+	if (typeof v.n === 'number') overrideAt.set(path, v.n);
+	const rec = {
 		id: idFor('videos', v.key), url: v.url, title: dashFree(v.title, path + '.title'), channel: dashFree(v.channel, path + '.channel'), mins: v.mins,
 		topic: dashFree(spelled(v.topic, path + '.topic'), path + '.topic'), why: dashFree(spelled(v.why, path + '.why'), path + '.why'),
-		itemIds, termIds, house: v.house, checkedOn: v.checkedOn, ts: BUILD_TS
-	});
+		itemIds, termIds
+	};
+	/* Written only when it names a component, the normaliser's rule. */
+	if (componentIds.length) rec.componentIds = componentIds;
+	Object.assign(rec, { house: v.house, checkedOn: v.checkedOn, ts: BUILD_TS });
+	house.videos.push(rec);
 }
+/* The components after the videos, the order KEYS.House names; written only when there are some. */
+if (builtComponents.length) house.components = builtComponents;
 /* The tombstones by id, then the guard: every id the shipped pack holds is in this house or carries a
    tombstone, so no record leaves a device by accident or lingers on one unannounced (a device keeps a
    record a newer edition simply drops; house-pack.ts refreshEdition drops only a tombstoned one). */
@@ -1088,5 +1238,5 @@ const floorBottles = house.wines.filter((w) => w.list === 'bottle').length;
 const tiered = house.dishes.filter((d) => d.pairing && d.pairing.value.bottles).length;
 console.log(`build-brennans: ${floorBottles} of ${house.wines.length} wines are on the bottle list; ${tiered} dishes carry bottle tiers`);
 console.log(`build-brennans: ${coffeeLinks} pairings take a coffee as their zero-proof pick; ${house.wines.filter((w) => w.lines).length} of ${house.wines.length} wines carry the timed lines`);
-console.log(`build-brennans: ${REL(OUT)}: ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free), ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask at lineup, ${house.disputes.length} disputes, ${(house.videos || []).length} videos; ${overrides.entries.length} overrides applied (${applied.filter((a) => a.skipped).length} skipped), ${principleChanges.length} principles mapped, ${dashLog.length} strings dash-stripped (${dashLog.filter((d) => d.override !== undefined).length} set by an override), ${spellLog.length} strings respelled American, ${minted.length} ids minted`);
+console.log(`build-brennans: ${REL(OUT)}: ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free), ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask at lineup, ${house.disputes.length} disputes, ${(house.videos || []).length} videos, ${builtComponents.length} components (${house.dishes.concat(house.wines, house.cocktails).filter((r) => r.compare).length} items compared, from ${frags.files.length} fragment file(s) in ${REL(frags.dir)}); ${overrides.entries.length} overrides applied (${applied.filter((a) => a.skipped).length} skipped), ${principleChanges.length} principles mapped, ${dashLog.length} strings dash-stripped (${dashLog.filter((d) => d.override !== undefined).length} set by an override), ${spellLog.length} strings respelled American, ${minted.length} ids minted`);
 if (principleChanges.length && args.includes('--verbose')) for (const p of principleChanges) console.log('  principle ' + p.dish + ': ' + p.from + ' to ' + p.to);

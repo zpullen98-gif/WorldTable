@@ -28,7 +28,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { loadEngine, GUIDE, HOUSE_JSON, PACK, REL, countProblems, describe, checkArgs, sourceText as pageText, EDITION_TS, editionInFuture, noteProblems, noteHay, thinLines } from './engine.mjs';
+import { loadEngine, GUIDE, HOUSE_JSON, PACK, REL, countProblems, describe, checkArgs, sourceText as pageText, EDITION_TS, editionInFuture, noteProblems, noteHay, thinLines, componentProblems } from './engine.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
@@ -69,7 +69,7 @@ for (const p of before.problems) if (p.fatal) console.error(`keep-all: FATAL ${p
 if (before.fatalCount) fail(`${REL(FILE)}: ${before.fatalCount} fatal problem(s) before the flip; nothing written`);
 /* The coaching notes and the thin lines, held before anything is written (validate-pack and
    check-pack hold them too): a pack that would fail the gate is never written. */
-const noteBad = noteProblems(house, noteHay(), lib.onPage).concat(thinLines(house).fatal);
+const noteBad = noteProblems(house, noteHay(), lib.onPage).concat(thinLines(house).fatal, componentProblems(house, noteHay()));
 for (const n of noteBad) console.error('keep-all: FATAL ' + n);
 if (noteBad.length) fail(`${REL(FILE)}: ${noteBad.length} note or thin-line problem(s) before the flip; nothing written`);
 
@@ -87,7 +87,7 @@ for (const field of C.MARK_FIELDS.house) flip(house, field);
 for (const list of C.HOUSE_LISTS) {
 	const fields = C.MARK_FIELDS[list];
 	if (!fields.length) continue;
-	for (const row of house[list]) for (const field of fields) flip(row, field);
+	for (const row of house[list] || []) for (const field of fields) flip(row, field);
 }
 /* Every record's ts and every kept note's ts carry the edition stamp too, and so do the build
    steps and lastWrite: one stamp across the whole edition. */

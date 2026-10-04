@@ -4,9 +4,10 @@
   on purpose: the way back and the position, the name and the price, how to
   say it, the ten second line and the one-line answer to what the guest asks
   next (so the first screen at 390 by 844 holds what a server needs at the
-  table), then the longer lines, the story, the pairing, the parts, the
-  coaching, the service note, the videos to watch, the links, the drills and
-  the quiet Edit.
+  table), then the longer lines, the story, the pairing, what it is made of
+  and what to compare it with (MadeOf.svelte), the parts, the coaching,
+  the service note, the videos to watch, the links, the drills and the
+  quiet Edit.
 
   KEPT ONLY. Every value drawn here comes through study.ts's readers, which
   return a mark only when a person kept it. A mark of hers that nobody kept
@@ -40,6 +41,7 @@
 	import { sharedOrigin } from '$lib/desk/desk-share';
 	import StudyLinks from './StudyLinks.svelte';
 	import VideoList from './VideoList.svelte';
+	import MadeOf from './MadeOf.svelte';
 	import TeachingFolio from './TeachingFolio.svelte';
 	import { foliosForDish } from '$lib/teaching-folios';
 
@@ -291,6 +293,8 @@
 	{#each lineup.tastings.filter((t) => t.as === 'dish') as t (t.tasting.id + t.course.n)}
 		<p class="soft tasting">{tastingLine(t)}</p>
 	{/each}
+
+	<MadeOf {current} item={dish} {linkable} />
 
 	{#if parts.length}
 		<section class="block" aria-labelledby="parts-h">

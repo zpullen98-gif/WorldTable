@@ -20,10 +20,14 @@
  * NO ALLERGEN IS READ, INFERRED OR SHOWN HERE. The service note is a
  * person's own words and the card prints it verbatim under the fixed eyebrow.
  */
-import { isMark, DISH_PARTS, COCKTAIL_PARTS, WINE_PARTS, KEYS, BOTTLE_TIERS, foldSize, wineListOf, videoGroups, videoMeta, videosFor } from './house/house-schema';
+import { isMark, DISH_PARTS, COCKTAIL_PARTS, WINE_PARTS, KEYS, BOTTLE_TIERS, foldSize, wineListOf, videoGroups, videoMeta, videosFor, componentGroups, componentVideos } from './house/house-schema';
+import { compareHref, type Room } from './wing-links';
 import type {
 	AskAtLineup,
 	BottleTier,
+	CompareEntry,
+	ComponentCard,
+	ComponentKind,
 	Dispute,
 	FormulaParts,
 	House,
@@ -143,7 +147,20 @@ export const STUDY_WORDS = {
 	videosCount: 'Videos ({n})',
 	videoNote: 'Each video opens on YouTube or Vimeo in a new tab, and needs a connection.',
 	newTab: '(opens in a new tab)',
-	videoFor: 'For {names}'
+	videoFor: 'For {names}',
+	madeOf: "What it's made of",
+	flashThese: 'Flash these components',
+	compareWith: 'Compare with',
+	same: 'The same',
+	different: 'What differs',
+	classic: 'A classic, for comparison',
+	cardFront: 'On the card',
+	cardBack: 'The answer',
+	inTheRoom: 'in the {room}',
+	deckIngredients: 'Ingredients',
+	deckTechniques: 'Techniques',
+	deckStories: 'Stories',
+	deckItem: '{name}: what it is made of'
 } as const;
 export type StudyWordKey = keyof typeof STUDY_WORDS;
 
@@ -785,4 +802,68 @@ export function cardVideos(house: House, item: { id: string }): VideoRow[] {
 /** The Videos entry in the study view: every video by topic, the house's own first. */
 export function studyVideos(house: House): Array<{ topic: string; rows: VideoRow[] }> {
 	return videoGroups(house).map((g) => ({ topic: g.topic, rows: g.videos.map((v) => videoRow(house, v)) }));
+}
+
+/* -------------------------------------------------------------------------
+ * The components and the comparisons
+ * ---------------------------------------------------------------------- */
+
+/** One component as a card draws it: its kept say, its kept explanation in paragraphs, its kept card and its videos. */
+export interface ComponentRow {
+	id: string;
+	kind: ComponentKind;
+	name: string;
+	say: string;
+	paragraphs: string[];
+	card: ComponentCard | null;
+	videos: VideoRow[];
+}
+
+/**
+ * "What it's made of" on an item's card: its components grouped Ingredients,
+ * Techniques, Stories (the schema's order), each with only what a person
+ * kept. A component with nothing kept still names itself, so the list is
+ * whole; its explanation and card wait behind Edit like every other mark.
+ */
+export function componentBlocks(house: House, itemId: string): Array<{ kind: ComponentKind; label: string; rows: ComponentRow[] }> {
+	return componentGroups(house, itemId).map((g) => ({
+		kind: g.kind,
+		label: g.label,
+		rows: g.components.map((c) => {
+			const card = kept<ComponentCard>(c.card);
+			const explain = plain(kept<string>(c.explain));
+			return {
+				id: c.id,
+				kind: c.kind,
+				name: plain(c.name),
+				say: plain(kept<string>(c.say)),
+				paragraphs: explain ? explain.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean) : [],
+				card: card && plain(card.front) && plain(card.back) ? { front: plain(card.front), back: plain(card.back) } : null,
+				videos: componentVideos(house, c.id).map((v) => videoRow(house, v))
+			};
+		})
+	}));
+}
+
+/** One comparison as a card draws it: the words, and the link when it may be drawn. */
+export interface CompareRow {
+	app: CompareEntry['app'];
+	label: string;
+	same: string;
+	different: string;
+	href: string;
+	/** The room a cross-room link needs (installed or online); null inside this app. */
+	room: Room | null;
+}
+
+/** "Compare with" on an item's card: its kept comparisons, each with the address it opens (wing-links.ts compareHref), a classic as words. */
+export function compareRows(house: House, item: HouseItem, base: string): CompareRow[] {
+	const entries = kept<CompareEntry[]>(item.compare);
+	if (!Array.isArray(entries)) return [];
+	return entries
+		.filter((e) => e && plain(e.label))
+		.map((e) => {
+			const { href, room } = e.app === 'classic' ? { href: '', room: null } : compareHref(e, base, house);
+			return { app: e.app, label: plain(e.label), same: plain(e.same), different: plain(e.different), href, room };
+		});
 }
