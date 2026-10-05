@@ -263,7 +263,7 @@ test('the launcher appears and disappears on a tapped navigation, not just a rel
 
 	// Client-side, through the app's own chrome: the Library tab, then its Recipes shelf.
 	await page.getByRole('link', { name: 'Library', exact: true }).click();
-	await page.locator('a.door').filter({ has: page.locator('.door-name', { hasText: /^Recipes$/ }) }).click();
+	await page.locator('a.door').filter({ has: page.locator('.door-name', { hasText: /^The World Atlas of Recipes$/ }) }).click();
 	await expect(page).toHaveURL(/\/recipes/);
 	await expect(add).toHaveCount(0);
 
@@ -300,7 +300,7 @@ test('arriving at a dish leaves focus at the top of the page, not on the dock', 
 	await expect(add).toBeFocused();
 
 	await page.getByRole('link', { name: 'Library', exact: true }).click();
-	await page.locator('a.door').filter({ has: page.locator('.door-name', { hasText: /^Recipes$/ }) }).click();
+	await page.locator('a.door').filter({ has: page.locator('.door-name', { hasText: /^The World Atlas of Recipes$/ }) }).click();
 	await page.locator('a.card').first().click();
 	await expect(page).toHaveURL(/\/recipe\//);
 

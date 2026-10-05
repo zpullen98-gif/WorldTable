@@ -856,3 +856,11 @@ test('screens for the owner, at 390 by 844', async ({ page }) => {
 	await back(page);
 	await shot(page, 'chain-1-home');
 });
+
+test('the Library opens on the World Atlas of Recipes, then the Lexicon (the owner, 5 Oct 2026)', async ({ page }) => {
+	await page.setViewportSize({ width: 390, height: 844 });
+	await goto(page, '/library');
+	const names = page.locator('nav.shelves > .door .door-name, nav.shelves > details.door .door-name');
+	await expect(names.nth(0)).toHaveText('The World Atlas of Recipes');
+	await expect(names.nth(1)).toHaveText('The Lexicon');
+});
