@@ -1330,3 +1330,77 @@ stories) and what to compare it with. The plan is section "CURRENT WORK (5 Oct
   `item-components:{id}` (k: references, graded `card-component` under the
   component's id); Part by part leaves component cards out.
   `tests/study-components.spec.ts` walks the card and the decks at 390 by 844.
+
+## Cook at home: the training kitchen (5 October 2026)
+
+The owner asked for training dishes to cook at home on the way to master
+chef: 25 each of breakfast, lunch, dinner and dessert at every level, so
+Chef ends at 100 of each, step by step at the most detail, with a film for
+each, right under Today's study and Due today on the level page.
+
+- **The source** is `src/lib/data/kitchen/`: `curriculum.json` (the ladder,
+  400 rungs) and `level<L>-<meal>-<meal>.json` (the full dishes), held to
+  the binding entry shape by `tools/kitchen/check-training.mjs` (US measures
+  with metric, °F beside °C, no dash, British spelling, no level numeral,
+  every Brennan's link an exact pack name, a verified film only with its
+  WebSearch evidence). `src/lib/kitchen.ts dishProblems` is the same shape
+  at runtime: the loader refuses a level file that breaks it.
+- **The emit**: `npm run build:kitchen` (the gate, then
+  `tools/derive/kitchen.mjs`) writes `static/kitchen-data/level-<L>.json`
+  (one level whole, about 250 KB gzipped each, NEVER precached: fetched
+  when a dish opens and kept by the NetworkFirst route
+  `oot-table-kitchen-v1` in vite.config.ts) and
+  `src/lib/data/kitchen.index.json` (slug, level, meal, n, title, cuisine,
+  times, difficulty, serves: about 13 KB gzipped, precached as a lazy
+  chunk so the level page's lists, the progress and the Repertoire's names
+  work offline from the first launch). `kitchen.test.ts` fails on a stale
+  emit; verify-build asserts the four files ship outside the manifest and
+  the index chunk inside it. The directory is `kitchen-data`, not
+  `kitchen`, because `/kitchen` is the page.
+- **The page** is ONE prerendered `/kitchen`: `?d={slug}&level={n}` is a
+  dish, nothing is the course overview. The query is read in
+  `afterNavigate`, never in load; four hundred prerendered pages were the
+  alternative and buy nothing. Its parent is `/level/{n}` from the address
+  (`nav.ts parentOf`), under Home in `OWNS`, and it counts as a cooking
+  surface for the timer bar. Cook mode is the recipe page's `CookMode` with
+  three optional props: `guides` (each step's look, and its mistake and fix
+  behind a disclosure), `ratings` (a dish with no standard asked in words
+  on the last screen) and `prep` (the mise en place). **Cook mode opens on
+  the mise**, ahead of step 1, with its ticks (bound to the page's list) and
+  a timer on every line that states a time (timer index `-(k + 1)`, so a
+  mise timer never collides with a step's): real cooking sits in the mise
+  (maqluba's stock braise, the mooncake dough, the rösti parboil) and a
+  cook mode that began at step 1 sent cooks to a step calling for a stock
+  nobody made.
+- **The level page marks re-cooks**: a cooked dish past its date reads
+  "Due again" and a Cook again door names the most overdue in the meal
+  (`kitchen.ts recooksDue`: the Repertoire's fold and `dueList` order,
+  scoped to the meal's kitchen keys).
+- **The grill is the British overhead element**: check-training refuses a
+  dish whose first such mention (page reading order) is not glossed
+  "grill (broiler)"; "broiler" is otherwise refused as American. A dish
+  that needs the broiler never also warms plates in a low oven: one home
+  oven cannot be both (plates go in hot water, or after the grill is off).
+- **The record**: a cook goes through `session.markCooked` like any recipe,
+  under the namespaced slug `kitchen:<slug>`, because more than a hundred
+  kitchen slugs are also Library slugs and a bare slug would fold the two
+  histories together (`slugify` cannot emit a colon). So it counts as
+  cooking everywhere (`cookedDishes`, the Repertoire, More's re-cook count,
+  the day studied) and returns on the 14/35/90/180/365 ladder. The rating
+  is three words (`RATINGS`: Nailed it, Nearly there, Not yet), each one
+  grade, so the word moves the interval; no stars, no number. Notes are
+  `session.notes['kitchen:<slug>']`. No SessionState field was added, so
+  `mergeSessions` needed nothing.
+- **The Brennan's link** is drawn only when the house on the device holds
+  an item of that exact name (folded for case and curly quotes): a dish
+  opens its study card, a cocktail or wine its room through `roomHref` on
+  the shared origin; anything else stays words.
+- `tests/kitchen.spec.ts` walks the section, a dish, cook mode (mise
+  first, a mise timer), marking cooked, Due again, the notes, Back and a
+  level cooking offline at 390 by 844. Offline is proved from the cache,
+  never with `context.setOffline`, which in this Chromium does not stop the
+  service worker's own fetches: the spec asserts `oot-table-kitchen-v1`
+  holds exactly `level-1.json`, aborts `/kitchen-data/*` with
+  `context.route` (it sees worker traffic), opens another level 1 dish and
+  asserts a level never opened says so.
+

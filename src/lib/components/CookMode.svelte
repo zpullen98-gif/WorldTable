@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount, untrack } from 'svelte';
 	import type { Step, DishStandard, TechniqueStandard } from '$lib/types';
 	import type { Grade } from '$lib/repertoire';
 	import type { Palate } from '$lib/types';
@@ -15,7 +15,11 @@
 		standardLabel,
 		onclose,
 		onfinish,
-		onannotate
+		onannotate,
+		guides,
+		ratings,
+		prep,
+		prepDone = $bindable([])
 	}: {
 		name: string;
 		slug: string;
@@ -37,11 +41,50 @@
 		 * opens, and the fault is chosen after that.
 		 */
 		onannotate?: (fault: string) => void;
+		/**
+		 * Cook at home's coaching, one per step (lib/kitchen.ts): what it looks,
+		 * sounds and smells like when it is right, always shown under the step,
+		 * and the common mistake with its fix behind a disclosure, so the step
+		 * stays the headline. Absent for a Library recipe, which carries none.
+		 */
+		guides?: Array<{ look: string; mistake: string; fix: string } | null>;
+		/**
+		 * A dish with no standard to check against can still be rated in words
+		 * (Cook at home's three: each word one grade). Set, the last screen asks
+		 * how it came out with these words and the grade moves the re-cook
+		 * interval like the pass's; unset, a dish with no standard is marked
+		 * cooked ungraded, as it always was.
+		 */
+		ratings?: ReadonlyArray<{ grade: Grade; word: string; line: string }>;
+		/**
+		 * Cook at home's mise en place. Real cooking often sits there (a stock
+		 * braised for the rice, a dough rested, potatoes parboiled), so a dish
+		 * that carries one opens on it, ahead of step 1: the tick list, with a
+		 * timer on every line that states a time. Skipping it would send a cook
+		 * to a step that calls for a stock nobody made. Absent for a Library
+		 * recipe, which opens on its first step as it always did.
+		 */
+		prep?: Array<{ text: string; durationSec: number | null }>;
+		/** The ticks, bound so the dish page's own list and this one agree. */
+		prepDone?: boolean[];
 	} = $props();
+
+	const hasPrep = $derived(!!prep?.length);
+	/* Opens on the mise when there is one. Read once: the dish does not
+	   change under an open cook mode. */
+	let atPrep = $state(untrack(() => !!prep?.length));
+	/* Mise timers are kept apart from step timers by a negative index:
+	   line k is -(k + 1), so step 0's timer and line 0's never collide. */
+	const prepIndex = (k: number) => -(k + 1);
 
 	let i = $state(0);
 	const step = $derived(steps[i]);
 	const last = $derived(i === steps.length - 1);
+	const guide = $derived(guides?.[i] ?? null);
+	/* A written-out step (Cook at home's run to fifty words or more) is set
+	   smaller than a Library step's line, still readable across a kitchen. */
+	const longStep = $derived((step?.text.length ?? 0) > 160);
+	const rated = $derived(!standard && !!ratings?.length);
 
 	/**
 	 * A real <dialog>, opened with showModal().
@@ -96,11 +139,31 @@
 		if (stepTimer) timers.dismiss(stepTimer.id);
 	}
 
+	function startPrepTimer(k: number) {
+		const line = prep?.[k];
+		if (!line?.durationSec) return;
+		const t = timers.find(slug, prepIndex(k));
+		timers.start({
+			label: `${name} · mise ${k + 1}`,
+			seconds: t?.paused ?? line.durationSec,
+			recipeSlug: slug,
+			stepIndex: prepIndex(k)
+		});
+	}
+	function togglePrep(k: number) {
+		const next = prep?.map((_, j) => Boolean(prepDone?.[j])) ?? [];
+		next[k] = !next[k];
+		prepDone = next;
+	}
+
 	function next() {
-		if (!last) i += 1;
+		if (atPrep) atPrep = false;
+		else if (!last) i += 1;
 	}
 	function prev() {
+		if (atPrep) return;
 		if (i > 0) i -= 1;
+		else if (hasPrep) atPrep = true;
 	}
 	/**
 	 * The pass.
@@ -117,7 +180,7 @@
 	let grading = $state(false);
 
 	function finish() {
-		if (standard && !grading) {
+		if ((standard || rated) && !grading) {
 			grading = true;
 			return;
 		}
@@ -217,6 +280,7 @@
 			return standardLabel
 				? `${name}: how was the technique, ${standardLabel}?`
 				: `${name}: how did it come out?`;
+		if (atPrep) return `${name}: mise en place, ${prep?.length ?? 0} jobs before step 1.`;
 		return `${name}: step ${i + 1} of ${steps.length}. ${step?.text ?? ''}`;
 	});
 
@@ -357,6 +421,24 @@
 				<button class="chip go" onclick={close}>Done</button>
 			</div>
 		</div>
+	{:else if grading && rated}
+		<div class="pass live">
+			<p class="eyebrow" tabindex="-1" bind:this={passHeadingEl}>{name} · how it came out</p>
+			<p class="passq">How did it come out?</p>
+			<div class="passbtns words">
+				{#each ratings ?? [] as r (r.grade)}
+					<button class="chip" class:go={r.grade === 'met'} onclick={() => grade(r.grade)}>{r.word}</button>
+				{/each}
+			</div>
+			<ul class="wordlines">
+				{#each ratings ?? [] as r (r.grade)}
+					<li><b>{r.word}</b> {r.line}</li>
+				{/each}
+			</ul>
+			<p class="passnote">
+				An honest word here is the whole point: it sets how soon this dish comes back.
+			</p>
+		</div>
 	{:else if grading}
 		<div class="pass live">
 			<p class="eyebrow" tabindex="-1" bind:this={passHeadingEl}>{name} · the pass</p>
@@ -397,10 +479,54 @@
 				An honest answer here is the whole point: it sets how soon this dish comes back.
 			</p>
 		</div>
+	{:else if atPrep}
+	<div class="live prep">
+		<p class="eyebrow">{name} · before step 1</p>
+		<p class="step long">Mise en place</p>
+		<p class="look">Every job here comes before step 1, and some of them cook. Tick each one off as it is done.</p>
+		<ul class="preplist" aria-label="Mise en place">
+			{#each prep ?? [] as line, k (k)}
+				{@const t = timers.find(slug, prepIndex(k))}
+				{@const left = t ? timers.remaining(t) : line.durationSec}
+				<li>
+					<label class:ticked={prepDone?.[k]}>
+						<input type="checkbox" checked={Boolean(prepDone?.[k])} onchange={() => togglePrep(k)} />
+						<span>{line.text}</span>
+					</label>
+					{#if line.durationSec}
+						<span class="preptimer">
+							<span class="pclock" class:alarm={t?.rang}>{t?.rang ? 'Time' : formatClock(left ?? 0)}</span>
+							{#if t?.rang}
+								<button class="chip" onclick={() => t && timers.dismiss(t.id)}>Clear</button>
+							{:else if t?.endsAt}
+								<button class="chip" onclick={() => t && timers.pause(t.id)}>Pause</button>
+							{:else if t?.paused != null}
+								<button class="chip go" onclick={() => t && timers.resume(t.id)}>Resume</button>
+							{:else}
+								<button class="chip go" onclick={() => startPrepTimer(k)} aria-label="Start timer for mise {k + 1}">Start timer</button>
+							{/if}
+						</span>
+					{/if}
+				</li>
+			{/each}
+		</ul>
+	</div>
+
+	<div class="nav">
+		<button class="chip go" onclick={next}>Start step 1 ▶</button>
+	</div>
 	{:else}
 	<div class="live">
 		<p class="eyebrow">{name} · step {i + 1} of {steps.length}</p>
-		<p class="step" class:alarm={elapsed}>{step?.text}</p>
+		<p class="step" class:alarm={elapsed} class:long={longStep}>{step?.text}</p>
+		{#if guide}
+			<p class="look"><b>Look for</b> {guide.look}</p>
+			<details class="wrong">
+				<summary>If it goes wrong</summary>
+				<p><b>The usual mistake</b> {guide.mistake}</p>
+				<p><b>The fix</b> {guide.fix}</p>
+			</details>
+		{/if}
 	</div>
 
 	<div class="timerrow">
@@ -439,10 +565,10 @@
 	{/if}
 
 	<div class="nav">
-		<button class="chip" onclick={prev} disabled={i === 0}>◀ Back</button>
+		<button class="chip" onclick={prev} disabled={i === 0 && !hasPrep}>{i === 0 && hasPrep ? '◀ Mise' : '◀ Back'}</button>
 		{#if last}
 			<button class="chip go" onclick={finish}>
-				{standard ? 'Done, check the plate ▸' : 'Done, mark cooked ✓'}
+				{standard ? 'Done, check the plate ▸' : rated ? 'Done, say how it came out ▸' : 'Done, mark cooked ✓'}
 			</button>
 		{:else}
 			<button class="chip go" onclick={next}>Next step ▶</button>
@@ -662,6 +788,110 @@
 		text-wrap: balance;
 	}
 	.step.alarm {
+		color: var(--turmeric-deep);
+	}
+	.step.long {
+		font-size: clamp(1.2rem, 1.4vw + 0.95rem, 1.75rem);
+		max-width: 38ch;
+		text-wrap: pretty;
+	}
+	/* Cook at home's coaching under the step: plain text, left set, the
+	   measure of the pass's own lines. */
+	.look,
+	.wrong,
+	.wordlines {
+		width: 100%;
+		max-width: 60ch;
+		text-align: left;
+		line-height: 1.6;
+		color: var(--ink-soft);
+	}
+	.look b,
+	.wrong b,
+	.wordlines b {
+		color: var(--turmeric-deep);
+		font-weight: 600;
+		margin-right: 4px;
+	}
+	.wrong summary {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		min-height: 44px;
+		cursor: pointer;
+		color: var(--ink);
+		text-decoration: underline;
+		text-underline-offset: 4px;
+		text-decoration-color: var(--line-strong);
+	}
+	.wrong summary::after {
+		content: '▸';
+		color: var(--turmeric-deep);
+		text-decoration: none;
+	}
+	.wrong[open] summary::after {
+		content: '▾';
+	}
+	.wrong p {
+		margin: 4px 0 8px;
+	}
+	.wordlines {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	.wordlines li {
+		margin-bottom: 6px;
+	}
+
+	.preplist {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		max-width: 60ch;
+		text-align: left;
+	}
+	.preplist li {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 6px 12px;
+		padding: 6px 0;
+		border-bottom: 1px solid var(--line);
+	}
+	.preplist label {
+		display: flex;
+		gap: 10px;
+		align-items: flex-start;
+		flex: 1 1 22ch;
+		min-height: 44px;
+		line-height: 1.55;
+		cursor: pointer;
+	}
+	.preplist input {
+		flex: none;
+		width: 22px;
+		height: 22px;
+		margin-top: 2px;
+		accent-color: var(--turmeric-deep);
+	}
+	.preplist label.ticked span {
+		color: var(--ink-soft);
+		text-decoration: line-through;
+		text-decoration-color: var(--line-strong);
+	}
+	.preptimer {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		margin-left: auto;
+	}
+	.pclock {
+		font-variant-numeric: tabular-nums;
+		font-weight: 600;
+	}
+	.pclock.alarm {
 		color: var(--turmeric-deep);
 	}
 

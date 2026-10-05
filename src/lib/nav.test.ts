@@ -68,6 +68,10 @@ describe('parentOf', () => {
 		expect(parentOf({ path: '/level/3' })).toBe('/');
 		expect(parentOf({ path: '/level/3/read' })).toBe('/library');
 		expect(parentOf({ path: '/level/3/test' })).toBe('/quizzes');
+		expect(parentOf({ path: '/kitchen', search: '?d=shakshuka&level=3', chosen: 1 })).toBe('/level/3');
+		expect(parentOf({ path: '/kitchen', search: '?d=shakshuka', chosen: 2 })).toBe('/level/2');
+		expect(parentOf({ path: '/kitchen', search: '?d=x&level=9', chosen: 4 })).toBe('/level/4');
+		expect(parentOf({ path: '/kitchen', chosen: 1 })).toBe('/level/1');
 		expect(parentOf({ path: '/menu', chosen: 2 })).toBe('/level/2');
 		expect(parentOf({ path: '/menu', search: '?section=Starters', chosen: 4 })).toBe('/level/4');
 		expect(parentOf({ path: '/menu', hash: '#d-abc' })).toBe('/menu');

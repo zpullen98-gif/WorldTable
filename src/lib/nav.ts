@@ -79,6 +79,14 @@ export function parentOf(ask: ParentAsk): string {
 	if (/^\/level\/[1-4]$/.test(path)) return '/';
 	if (/^\/level\/[1-4]\/read$/.test(path)) return '/library';
 	if (/^\/level\/[1-4]\/test$/.test(path)) return '/quizzes';
+	// Cook at home: a dish's way back is its own level page, named in the
+	// address (the dish page cannot know a slug's level before its data
+	// loads); the course overview, and an address with no level, go to the
+	// chosen one.
+	if (path === '/kitchen') {
+		const lv = q.get('level') ?? '';
+		return `/level/${/^[1-4]$/.test(lv) ? lv : chosen}`;
+	}
 	if (path === '/menu') {
 		// A card open on the study view, or the editing page pushed over it.
 		if (/^(dish-)?d-/.test(hash) || hash === 'edit') return '/menu';

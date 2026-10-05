@@ -7,6 +7,16 @@
     Today's study     Due today, Quick quiz, Next reading: three doors, each
                       a name, a line computed from the engines, the row the
                       button. Due today and Quick quiz start at once.
+    Cook at home      the training kitchen at this level (lib/kitchen.ts):
+                      four tabs, Breakfast, Lunch, Dinner and Dessert, each
+                      with its cooked of 25, the next dish to cook as the
+                      lead door, then the 25 in order with cuisine, time,
+                      difficulty and a cooked mark ("Due again" once a
+                      cooked dish is past its re-cook date, and a Cook
+                      again door to the most overdue, in the Repertoire's
+                      order). The list comes from the
+                      precached index; a dish opens /kitchen?d=, whose level
+                      file is fetched on demand.
     My restaurant     the house line, the Menu Desk's waiting line, the count
                       line, three study doors, the sections as chips, then
                       the quiet links The Menu Desk and The house
@@ -35,6 +45,8 @@
 	import { levels } from '$lib/stores/levels.svelte';
 	import { house } from '$lib/stores/house.svelte';
 	import { today } from '$lib/stores/today.svelte';
+	import { session } from '$lib/stores/session.svelte';
+	import { MEAL_LABEL, PER_MEAL, dishHref, levelProgress, loadKitchenIndex, minutesLabel, cookKey, recooksDue, type KitchenIndex, type Meal } from '$lib/kitchen';
 	import { restoreScroll } from '$lib/stores/nav.svelte';
 	import { plateTitle } from '$lib/plates';
 	import { NEVER_GRADED, MET, type SubsectionProgress } from '$lib/levels';
@@ -60,6 +72,13 @@
 
 	onMount(async () => {
 		mounted = true;
+		void loadKitchenIndex().then((ix) => (kitchenIndex = ix));
+		try {
+			const m = localStorage.getItem(MEAL_KEY);
+			if (m && m in MEAL_LABEL) meal = m as Meal;
+		} catch {
+			/* a convenience: Breakfast when it cannot be read */
+		}
 		levels.choose(data.level as DeckLevel);
 		void levels.load();
 		today.load();
@@ -141,6 +160,41 @@
 		if (slug) return { title: `${levels.techniqueLabel(slug)} · ${levelName}`, href: `${base}/technique/${slug}` };
 		return { title: `Everything at ${levelName} is read. The Library holds the rest.`, href: `${base}/library` };
 	});
+
+	/* ---- Cook at home ---- */
+	/** The meal tab last chosen, per device: a convenience, never exported. */
+	const MEAL_KEY = 'oot-kitchen-meal-v1';
+	let kitchenIndex = $state<KitchenIndex | null>(null);
+	let meal = $state<Meal>('breakfast');
+	const kitchen = $derived(kitchenIndex ? levelProgress(kitchenIndex, n, session.cookedDishes) : []);
+	const mealNow = $derived(kitchen.find((m) => m.meal === meal) ?? null);
+	/* The meal's re-cooks, most overdue first, in the Repertoire's own order:
+	   a cooked dish past due reads "Due again" in the list, and the first is
+	   the re-cook door's. Date.now() inside the derivation, as the Repertoire
+	   does: only a cook can move a dish between states while the page is open. */
+	const recooks = $derived(mealNow ? recooksDue(mealNow.rows, session.cookedLog, Date.now()) : []);
+	const dueAgain = $derived(new Set(recooks.map((r) => r.slug)));
+	function chooseMeal(m: Meal, focus = false) {
+		meal = m;
+		try {
+			localStorage.setItem(MEAL_KEY, m);
+		} catch {
+			/* the tab still changes */
+		}
+		if (focus) document.getElementById(`kt-${m}`)?.focus();
+	}
+	function onMealKey(e: KeyboardEvent) {
+		const order = kitchen.map((k) => k.meal);
+		const i = order.indexOf(meal);
+		let to = -1;
+		if (e.key === 'ArrowRight') to = (i + 1) % order.length;
+		else if (e.key === 'ArrowLeft') to = (i - 1 + order.length) % order.length;
+		else if (e.key === 'Home') to = 0;
+		else if (e.key === 'End') to = order.length - 1;
+		else return;
+		e.preventDefault();
+		chooseMeal(order[to], true);
+	}
 
 	/* ---- My restaurant ---- */
 	const sections = $derived(studySections(rows));
@@ -268,11 +322,12 @@
 	}
 
 	/* Back to this page lands where it was left, once the record has drawn it. */
-	export const snapshot: Snapshot<{ y: number; q: string; open: boolean }> = {
-		capture: () => ({ y: typeof window === 'undefined' ? 0 : window.scrollY, q, open: holdsOpen }),
+	export const snapshot: Snapshot<{ y: number; q: string; open: boolean; meal?: Meal }> = {
+		capture: () => ({ y: typeof window === 'undefined' ? 0 : window.scrollY, q, open: holdsOpen, meal }),
 		restore: (v) => {
 			q = v.q ?? '';
 			holdsOpen = !!v.open;
+			if (v.meal && v.meal in MEAL_LABEL) meal = v.meal;
 			restoreScroll(v.y ?? 0, () => levels.ready && today.ready);
 		}
 	};
@@ -304,6 +359,78 @@
 			<span class="door-line">{nextReading ? nextReading.title : 'Reading your record…'}</span>
 		</a>
 	</nav>
+
+	<h2 class="group" id="kitchen">Cook at home</h2>
+	<p class="note kitchenlede">Twenty five each of breakfast, lunch, dinner and dessert at {levelName}, to cook in your own kitchen, step by step.</p>
+	{#if kitchen.length}
+		<div class="mealtabs" role="tablist" aria-label="Cook at home: the meals" tabindex="-1" onkeydown={onMealKey}>
+			{#each kitchen as k (k.meal)}
+				<button
+					type="button"
+					role="tab"
+					id="kt-{k.meal}"
+					aria-selected={meal === k.meal}
+					aria-controls="kp"
+					tabindex={meal === k.meal ? 0 : -1}
+					class:on={meal === k.meal}
+					onclick={() => chooseMeal(k.meal)}
+				>
+					<span class="tname">{MEAL_LABEL[k.meal]}</span>
+					<span class="tcount">{session.ready ? `${k.cooked} of ${k.total}` : `${k.total}`}</span>
+				</button>
+			{/each}
+		</div>
+		{#if mealNow}
+			<div class="mealpanel" role="tabpanel" id="kp" aria-labelledby="kt-{mealNow.meal}">
+				<p class="kprogress">
+					{session.ready ? `${mealNow.cooked} of ${mealNow.total} ${MEAL_LABEL[mealNow.meal].toLowerCase()} dishes cooked at ${levelName}.` : 'Reading your record…'}
+				</p>
+				{#if mealNow.next}
+					<nav class="quiet" aria-label="Cook next">
+						<a class="door lead" href={dishHref(base, mealNow.next)} data-door="kitchen-next">
+							<span class="door-name">Cook next · {MEAL_LABEL[mealNow.meal]} {mealNow.next.n} of {PER_MEAL}</span>
+							<span class="door-line">{mealNow.next.title}</span>
+							<span class="door-sub">{mealNow.next.cuisine} · {minutesLabel(mealNow.next.total)} · {mealNow.next.difficulty}</span>
+						</a>
+					</nav>
+				{/if}
+				{#if recooks.length}
+					{@const r = recooks[0]}
+					<nav class="quiet" aria-label="Cook again">
+						<a class="door" class:lead={!mealNow.next} href={dishHref(base, r)} data-door="kitchen-recook">
+							<span class="door-name">Cook again · {recooks.length === 1 ? 'due a re-cook' : `the most overdue of ${recooks.length} due`}</span>
+							<span class="door-line">{r.title}</span>
+							<span class="door-sub">{r.cuisine} · {minutesLabel(r.total)} · {r.difficulty}</span>
+						</a>
+					</nav>
+				{/if}
+				{#if !mealNow.next}
+					<p class="note">
+						Every {MEAL_LABEL[mealNow.meal].toLowerCase()} dish at {levelName} is cooked.
+						{recooks.length ? 'The ones due again are marked in the list.' : 'None is due again yet; each comes back as it falls due.'}
+					</p>
+				{/if}
+				<ol class="kdishes">
+					{#each mealNow.rows as r (r.slug)}
+						{@const done = session.cookedDishes.has(cookKey(r.slug))}
+						<li>
+							<a href={dishHref(base, r)}>
+								<span class="kn" aria-hidden="true">{r.n}</span>
+								<span class="kbody">
+									<span class="kt">{r.title}</span>
+									<span class="km">{r.cuisine} · {minutesLabel(r.total)} · {r.difficulty}</span>
+								</span>
+								{#if dueAgain.has(r.slug)}<span class="met due">Due again</span>{:else if done}<span class="met">Cooked</span>{/if}
+							</a>
+						</li>
+					{/each}
+				</ol>
+				<p class="quietlinks"><a href="{base}/kitchen">The whole course, all four levels</a></p>
+			</div>
+		{/if}
+	{:else}
+		<p class="note">Reading the course…</p>
+	{/if}
 
 	<h2 class="group" id="restaurant">My restaurant</h2>
 	<div class="house">
@@ -429,6 +556,122 @@
 		letter-spacing: var(--tracking-eyebrow);
 		text-transform: uppercase;
 		font-size: 0.9375rem;
+		color: var(--turmeric-deep);
+	}
+	/* ---- Cook at home ---- */
+	.kitchenlede {
+		margin-top: 0;
+	}
+	.mealtabs {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 6px;
+		margin: 10px 0 0;
+		max-width: 720px;
+	}
+	.mealtabs button {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 2px;
+		min-height: 56px;
+		padding: 6px 4px;
+		border: var(--rule, 1px) solid var(--house-frame, var(--line));
+		border-radius: var(--radius);
+		background: var(--card);
+		color: var(--ink);
+		font: inherit;
+		cursor: pointer;
+	}
+	.mealtabs button.on {
+		border-color: var(--turmeric-deep);
+		box-shadow: inset 0 -3px 0 var(--turmeric-deep);
+	}
+	.mealtabs button:focus-visible {
+		outline: 2px solid var(--turmeric-deep);
+		outline-offset: 2px;
+	}
+	.tname {
+		font-family: var(--house-display, var(--display));
+		font-size: 1rem;
+		color: var(--turmeric-deep);
+	}
+	.tcount {
+		font-size: 0.9375rem;
+		color: var(--ink-soft);
+		font-variant-numeric: tabular-nums;
+	}
+	.mealpanel {
+		max-width: 720px;
+	}
+	/* Nothing on the level page computes under 15 px (design 2.9), and
+	   Breakfast in the display face does not fit a quarter of a phone at
+	   that size: the four tabs go two by two there. */
+	@media (max-width: 559px) {
+		.mealtabs {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+		.mealtabs button {
+			flex-direction: row;
+			justify-content: space-between;
+			min-height: 48px;
+			padding: 6px 12px;
+		}
+	}
+	.kprogress {
+		margin: 12px 0 0;
+		font-size: 1rem;
+		color: var(--ink-soft);
+	}
+	.kdishes {
+		list-style: none;
+		margin: 14px 0 0;
+		padding: 0;
+		border-top: 1px solid var(--line);
+	}
+	.kdishes a {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		min-height: 56px;
+		padding: 8px 2px;
+		border-bottom: 1px solid var(--line);
+		color: var(--ink);
+		text-decoration: none;
+	}
+	.kdishes a:hover .kt {
+		text-decoration: underline;
+		text-underline-offset: 4px;
+	}
+	.kn {
+		flex: none;
+		width: 2ch;
+		text-align: right;
+		font-family: var(--display);
+		color: var(--turmeric-deep);
+		font-variant-numeric: tabular-nums;
+	}
+	.kbody {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		flex: 1;
+		min-width: 0;
+	}
+	.kt {
+		font-size: 1.0625rem;
+		line-height: 1.35;
+	}
+	.km {
+		font-size: 0.9375rem;
+		color: var(--ink-soft);
+	}
+	.kdishes .met {
+		flex: none;
+		margin-left: 0;
+	}
+	.kdishes .met.due {
 		color: var(--turmeric-deep);
 	}
 	.house :global(.housebar) {
