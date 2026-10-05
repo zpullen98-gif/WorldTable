@@ -42,7 +42,7 @@
 	import StudyMenu from '$lib/components/StudyMenu.svelte';
 	import StudyCard from '$lib/components/StudyCard.svelte';
 	import { readDrilled, type DrilledEntry } from '$lib/house-drilled';
-	import { latestVerdicts, say, studyRows, type StudyRow } from '$lib/study';
+	import { findItem, latestVerdicts, say, studyRows, type StudyRow } from '$lib/study';
 	import { ITEM_ID_RE, wingInstalled } from '$lib/wing-links';
 	import {
 		buildPass,
@@ -358,6 +358,8 @@
 	let openList = $state<StudyRow[]>([]);
 	let listY = 0;
 	let lastRow = '';
+	/** How to find the control that opened the card again: a row, or a tasting's button for one course. */
+	let lastSel = '';
 	let houseOpened = $state(false);
 	let drilled = $state<DrilledEntry[]>([]);
 	let roomsOpen = $state({ codex: false, ledger: false });
@@ -372,7 +374,8 @@
 	const opened = $derived(houseOpened || !!current);
 	const stateId = $derived(((page.state ?? {}) as App.PageState).study ?? '');
 	const openId = $derived(stateId || coldId);
-	const openDish = $derived(studyOn && openId ? current!.dishes.find((d) => d.id === openId) : undefined);
+	/* The card open: a dish from the list, or any item a tasting names (a drink on a course opens its card here too). */
+	const openDish = $derived(studyOn && openId ? findItem(current!, openId) : undefined);
 	const cardList = $derived(openList.length ? openList : current ? studyRows(current, 'dish') : []);
 	const latest = $derived(current ? latestVerdicts(current.id, drilled) : new Map());
 	const menuDish = $derived(openDish ? house.dishes.find((d) => d.id === openDish.id) : undefined);
@@ -453,7 +456,7 @@
 				requestAnimationFrame(() =>
 					requestAnimationFrame(() => {
 						window.scrollTo(0, y);
-						document.querySelector<HTMLElement>(`.study .row[data-id="${row}"]`)?.focus({ preventScroll: true });
+						document.querySelector<HTMLElement>(lastSel || `.study .row[data-id="${row}"]`)?.focus({ preventScroll: true });
 					})
 				)
 			);
@@ -466,9 +469,10 @@
 		slotEl?.scrollIntoView({ block: 'start' });
 	}
 
-	function openCard(id: string, list: readonly StudyRow[]) {
+	function openCard(id: string, list: readonly StudyRow[], from = '') {
 		listY = window.scrollY;
 		lastRow = id;
+		lastSel = from;
 		openList = [...list];
 		nav.pushShallow('#' + id, { study: id });
 		void toCardTop();
@@ -480,7 +484,10 @@
 		   there, never to the row of the card Next last stepped to (design
 		   7.1, test 2). A card opened by a cold hash has no opener, so it takes
 		   the card it is showing. */
-		if (!lastRow) lastRow = id;
+		if (!lastRow) {
+			lastRow = id;
+			lastSel = '';
+		}
 		if (stateId) nav.replaceShallow('#' + id, { study: id });
 		else coldId = id;
 		void toCardTop();

@@ -50,6 +50,10 @@
  * anywhere else. The list is written only when a video survives, so a house
  * from before the list comes back with the keys it went in with.
  *
+ * TASTINGS. A tasting's subtitle and supplement, and a course's choice,
+ * printed lines and pour label, are written only when they say something,
+ * so a tasting from before them comes back with the keys it went in with.
+ *
  * COMPONENTS. The ingredients, techniques and stories ride in their own
  * optional list, written only when one survives, each with its three marks
  * (say, explain, card). An item's comparisons are one mark of records, and a
@@ -517,24 +521,48 @@ function normaliseCocktail(raw: unknown, i: number, ctx: Ctx): HouseCocktail {
 	return c;
 }
 
+/**
+ * One course. The three optional keys are written only when they say
+ * something, in the schema's key order: choice only when true, the printed
+ * lines only when one is not blank, the pour's label only when not blank.
+ * A course from an edition that never had them comes back with the keys it
+ * went in with.
+ */
 function normaliseCourse(raw: unknown, i: number): TastingCourse {
 	const r = asRecord(raw);
 	const n = typeof r.n === 'number' && Number.isFinite(r.n) ? r.n : i + 1;
-	return { n, label: asText(r.label), dishIds: asTextList(r.dishIds), pourId: asText(r.pourId), pourText: asText(r.pourText) };
+	const c: TastingCourse = { n, label: asText(r.label), dishIds: asTextList(r.dishIds), pourId: asText(r.pourId), pourText: asText(r.pourText) };
+	if (asFlag(r.choice)) c.choice = true;
+	const printed = asTextList(r.printed);
+	if (printed.length) c.printed = printed;
+	const pourLabel = asText(r.pourLabel);
+	if (!blank(pourLabel)) c.pourLabel = pourLabel;
+	return c;
 }
 
+/**
+ * One tasting. The subtitle and the supplement are written only when not
+ * blank, between the note and the stamp as the schema lists them, so a
+ * tasting from before either field keeps its keys and their order.
+ */
 function normaliseTasting(raw: unknown, i: number, ctx: Ctx): Tasting {
 	const r = asRecord(raw);
-	return {
+	const t = {
 		id: claimId(r.id, ID_PREFIXES.tastings, 'house.tastings[' + i + ']', ctx),
 		name: asText(r.name),
 		price: asPrinted(r.price),
 		meal: asText(r.meal),
 		includesDrinks: asFlag(r.includesDrinks),
 		courses: asList(r.courses).map(normaliseCourse),
-		note: asText(r.note),
-		ts: asStamp(r.ts)
-	};
+		note: asText(r.note)
+	} as Tasting;
+	const line = asText(r.line);
+	if (!blank(line)) t.line = line;
+	const supplement = asPrinted(r.supplement);
+	if (!blank(supplement)) t.supplement = supplement;
+	/* The stamp last, after the optional pair, the schema's order. */
+	t.ts = asStamp(r.ts);
+	return t;
 }
 
 function normaliseTerm(raw: unknown, i: number, ctx: Ctx): LexiconTerm {

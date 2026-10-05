@@ -41,8 +41,14 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    bottles offered with each dish in three price tiers and a half; it is stamped at the half hour
    before its build, never ahead of the clock. The 06:30 edition of 4 October 2026 carries the
    master review of My Menu (the chef's, the bartender's and the sommelier's overrides, recorded in
-   research/master-review-2026-10-04.md) and the first videos, each filed by a video:+ override. */
-export const EDITION_BUILT_AT = '2026-10-04T20:30:00.000Z';
+   research/master-review-2026-10-04.md) and the first videos, each filed by a video:+ override. The
+   18:30 edition of 5 October 2026 reads the two tasting menus the owner pasted that day
+   (pages/brennans-tasting-menus-pasted-2026-10-05.txt): each course labelled and ordered as printed,
+   the choice of, the lines printed under each course and the words over its pour, the breakfast's
+   printed line and the dinner's supplement, the breakfast coffee course linked to the house's chicory
+   coffee, and the dinner tasting named Dinner Tasting Menu under its old id; stamped at the half hour
+   before its build, never ahead of the clock. */
+export const EDITION_BUILT_AT = '2026-10-05T18:30:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a

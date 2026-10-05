@@ -13,12 +13,20 @@
   The page owns the state (query, section, meal) so its snapshot can bring
   it back after the round trip to the flash cards; this component draws it
   and reports presses.
+
+  THE TASTING MENUS come first, as their own block (TastingMenu.svelte):
+  each menu a separate card, its courses in printed order. The dishes only
+  a tasting serves (study.ts tastingOnlyIds) are left out of the rows and
+  open from their course; a search still finds them. The Tasting menus chip
+  shows the block alone, any other section chip hides it, and the meal
+  filter keeps the menus served at that meal.
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
 	import type { Snippet } from 'svelte';
 	import type { House } from '$lib/house/house-schema';
 	import TeachingFolioCollection from './TeachingFolioCollection.svelte';
+	import TastingMenu from './TastingMenu.svelte';
 	import { BRENNANS_HOUSE_ID } from '$lib/teaching-folios';
 	import {
 		inMeal,
@@ -32,6 +40,9 @@
 		studySections,
 		findItem,
 		studyVideos,
+		tastingOnlyIds,
+		tastingSection,
+		tastingsShown,
 		type StudyRow,
 		type Verdict
 	} from '$lib/study';
@@ -60,7 +71,8 @@
 		is86?: (id: string) => boolean;
 		/** The network is up or the room is installed: cross-room links may be drawn (wing-links.ts, rule 3). */
 		canLink?: boolean;
-		onOpen: (id: string, list: readonly StudyRow[]) => void;
+		/** Open a card: its id, the rows it walks, and, from a tasting, the selector that finds the button again. */
+		onOpen: (id: string, list: readonly StudyRow[], from?: string) => void;
 		onEdit: () => void;
 		/** False when the page draws the switch on its own h1 line (the Table's /menu does). */
 		showEdit?: boolean;
@@ -79,9 +91,16 @@
 			return it ? inMeal(it, meal) : true;
 		})
 	);
-	const found = $derived(searchRows(current, mealRows, query));
-	const chips = $derived(studySections(mealRows));
-	const shown = $derived(section ? found.filter((r) => r.section === section) : found);
+	/* The tasting menus at this meal, and the dishes only a tasting serves, which open from their course. */
+	const tastOnly = $derived(tastingOnlyIds(current));
+	const tastKey = $derived(tastingSection(current));
+	const menus = $derived(tastingsShown(current, meal));
+	const onTastings = $derived(!!tastKey && section === tastKey);
+	const listRows = $derived(mealRows.filter((r) => !tastOnly.has(r.id)));
+	const found = $derived(searchRows(current, query.trim() ? mealRows : listRows, query));
+	const chips = $derived(studySections(listRows));
+	const shown = $derived(onTastings && !query.trim() ? [] : section ? found.filter((r) => r.section === section) : found);
+	const showMenus = $derived(menus.length > 0 && !query.trim() && (!section || onTastings));
 	const grouped = $derived(studySections(shown).map((s) => ({ ...s, rows: shown.filter((r) => r.section === s.section) })));
 	const elsewhere = $derived(query.trim() ? searchElsewhere(current, 'dish', query) : []);
 	const progress = $derived(studyProgress(mealRows.map((r) => r.id), latest));
@@ -95,6 +114,7 @@
 				? say('searchHits', { n: shown.length, query: query.trim() })
 				: say('searchNone', { query: query.trim() });
 		}
+		if (onTastings) return say('showing', { section: say('tastings'), n: menus.length, unit: menus.length === 1 ? 'menu' : 'menus' });
 		if (section) return say('showing', { section, n: shown.length, unit: shown.length === 1 ? 'dish' : 'dishes' });
 		return '';
 	});
@@ -187,6 +207,9 @@
 		</label>
 		<div class="chiprow" bind:this={chipRow} role="group" aria-label="Sections">
 			<button class="chip sec" aria-pressed={!section} onclick={() => pick('')}>{say('all', { n: mealRows.length })}</button>
+			{#if menus.length && tastKey}
+				<button class="chip sec" aria-pressed={onTastings} onclick={() => pick(tastKey)}>{say('tastings')} {menus.length}</button>
+			{/if}
 			{#each chips as c (c.section)}
 				<button class="chip sec" aria-pressed={section === c.section} onclick={() => pick(c.section)}>{c.section} {c.count}</button>
 			{/each}
@@ -196,6 +219,18 @@
 
 	{#if query.trim() && !shown.length}
 		<p class="none">{say('searchNone', { query: query.trim() })}</p>
+	{/if}
+
+	{#if showMenus}
+		<section class="tastings" aria-labelledby="sg-tastings">
+			<div class="grouphead">
+				<h3 class="eyebrow" id="sg-tastings">{say('tastings')} · {menus.length}</h3>
+				<a class="chip small" href="{base}/flashcards?deck=tastings&run=1">{say('cards')}<span class="vh"> for {say('deckTastings')}</span></a>
+			</div>
+			{#each menus as m (m.id)}
+				<TastingMenu {current} menu={m} {is86} onOpen={(id, list, from) => onOpen(id, list, from)} />
+			{/each}
+		</section>
 	{/if}
 
 	{#each grouped as g, gi (g.section)}
@@ -301,6 +336,8 @@
 	.chip.go { border-color: var(--turmeric-deep); font-weight: 600; }
 	.chip[aria-pressed='true'] { background: var(--accent-solid); border-color: var(--accent-solid); color: var(--on-accent); }
 	.chip.small { padding: 6px 12px; }
+	a.chip { display: inline-flex; align-items: center; text-decoration: none; box-sizing: border-box; }
+	.tastings { margin: 6px 0 10px; }
 
 	.bar {
 		/* Under the layout's sticky Back row (--backrow-h), never over it. */

@@ -173,6 +173,8 @@ export const LIB = {
 	componentsFor: 'componentsFor',
 	componentGroups: 'componentGroups',
 	componentVideos: 'componentVideos',
+	/* the tastings: a tasting's name the short way a card or a heading wants it */
+	tastingShortName: 'tastingShortName',
 	/* the bottle list and the tiers */
 	wineListOf: 'wineListOf',
 	printedDollars: 'printedDollars',
@@ -207,7 +209,7 @@ export const CONSTANTS = [
 	'ID_PREFIXES', 'KEYS', 'KEPT_CAP', 'MARK_KINDS', 'FORBIDDEN_KEY', 'DASH', 'DASH_SOURCE',
 	'OPTIONAL_KEYS', 'WINE_LISTS', 'BOTTLE_TIERS', 'BOTTLE_BANDS', 'HALF_SIZE', 'BOTTLE_WORDS',
 	'OPTIONAL_LISTS', 'VIDEO_SCHEME', 'VIDEO_HOSTS', 'VIDEO_WHY_WORDS', 'VIDEO_URL_MAX', 'VIDEO_TOPIC_NONE',
-	'COMPONENT_KINDS', 'COMPONENT_LABELS', 'COMPONENT_WORDS', 'COMPONENT_FLOORS', 'COMPARE_APPS', 'COMPARE_MAX', 'COMPARE_WORDS',
+	'COMPONENT_KINDS', 'COMPONENT_LABELS', 'COMPONENT_WORDS', 'COMPONENT_FLOORS', 'COMPARE_APPS', 'COMPARE_MAX', 'COMPARE_WORDS', 'TASTING_WORDS',
 	'FATAL_CODES', 'NEVER_FATAL', 'ALLERGEN_TALK', 'ALLERGEN_WORD', 'QUOTE_WORDS',
 	'PACK_FORMAT', 'PACK_VERSION', 'MY_HOUSE', 'MAP_HOUSE_PREFIX', 'NO_HOUSE_SAID', 'HOUSE_PARTS', 'CARD_KEYS', 'ITEM_FIELDS', 'PUT_LISTS'
 ];

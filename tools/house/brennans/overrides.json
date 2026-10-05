@@ -1291,7 +1291,7 @@
       "source": "pdf-corrections p5 (medium); gap-tasting-2; dossier-the-cellar section 4.3"
     },
     {
-      "target": "tasting:Dinner tasting",
+      "target": "tasting:Dinner Tasting Menu",
       "field": "note",
       "op": "append",
       "value": "Three of the five pours are variables between the guide and the house page: the lobster pour (Fichet Mâcon-Igé 2024 or Domaine Matrot Meursault 2023), the redfish pour (Jadot Beaune 1er Cru 2023 or Jadot Beaune Bressandes 1er Cru 2022) and the dessert pour (La Tour Vieille Banyuls Reserva or M. Chapoutier Banyuls); the Lafitte and the Paul Hobbs are the pours both sources share. The duck course is printed two ways. Read the printed card on shift. The pairing costs more than the food; do not apologise for it.",
@@ -17554,9 +17554,9 @@
     {
       "target": "tasting:Traditional Breakfast at Brennan’s",
       "field": "courses.4.pourText",
-      "value": "Domaine de Châteaumar Cuvée Vincent Côtes du Rhône 2023, 4 oz",
-      "reason": "The current Traditional Breakfast page prints the Châteaumar as 2023, so the year is no longer unprinted: the menu prints 2023 and the label is read before naming it",
-      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt line 154 (Fourth Course, Petite Filet Mignon, paired with Domaine De Châteaumar 'Cuvée Vincent' Côtes Du Rhône FR 2023 [4oz]); research/menus-pasted-diff-2026-10-03.md"
+      "value": "Domaine De Châteaumar ‘Cuvée Vincent’ Côtes Du Rhône FR 2023 [4oz]",
+      "reason": "The current Traditional Breakfast page prints the Châteaumar as 2023, so the year is no longer unprinted: the menu prints 2023 and the label is read before naming it. From the 18:30 edition of 5 October 2026 every pour on both tastings reads as the tasting prints it, so this course's pour is the printed line, written once more here where the year was first set",
+      "source": "page:brennans-tasting-menus-pasted-2026-10-05.txt line 42 (Fourth Course, Petite Filet Mignon, paired with Domaine De Châteaumar 'Cuvée Vincent' Côtes Du Rhône FR 2023 [4oz]); page:brennansneworleans-menus-pasted-2026-10-03.txt line 154; research/menus-pasted-diff-2026-10-03.md"
     },
     {
       "target": "house",
@@ -17603,7 +17603,7 @@
       "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 114-158 (Traditional Breakfast at Brennan's: Egg Hussarde, paired with Charles Lafitte Brut Champagne FR NV [4oz], line 145) and lines 233-282 (Dinner Tasting Menu: Fichet Château London Mâcon-Igé 2024 at line 255, Louis Jadot 1er Cru Beaune 2023 at line 264, Roasted Rohan Duck Breast with Cane Syrup-glazed Peaches, Candied Hazelnuts at line 269, Domaine La Tour Vieille Reserva Banyuls at line 282)"
     },
     {
-      "target": "tasting:Dinner tasting",
+      "target": "tasting:Dinner Tasting Menu",
       "field": "note",
       "op": "replace",
       "value": {
@@ -51564,6 +51564,46 @@
       },
       "reason": "Master review: ships because a search on 4 October 2026 showed this id with this title and named the channel as its uploader; it teaches Pierre Sparr and 3 wines on the list",
       "source": "research/videos-bar-wine-2026-10-04.json guildsomm-alsace"
+    },
+    {
+      "target": "mustknow:Dinner tasting, $80",
+      "field": "title",
+      "value": "Dinner Tasting Menu, $80",
+      "reason": "The tasting is named as Brennan's prints it, Dinner Tasting Menu, on the menus the owner pasted on 5 October 2026; ids.ledger.json moved the must-know's slug with its id, so a device keeps its copy",
+      "source": "page:brennans-tasting-menus-pasted-2026-10-05.txt line 51 (Dinner Tasting Menu $80)"
+    },
+    {
+      "target": "dish:Louisiana BBQ Lobster",
+      "field": "serviceNote",
+      "op": "replace",
+      "value": {
+        "from": "Dinner tasting: $80",
+        "to": "Dinner Tasting Menu: $80"
+      },
+      "reason": "The tasting is named as Brennan's prints it, Dinner Tasting Menu",
+      "source": "page:brennans-tasting-menus-pasted-2026-10-05.txt line 51 (Dinner Tasting Menu $80) and line 52 (Add Wine Pairing Supplement [4oz pours] $120)"
+    },
+    {
+      "target": "dish:Roasted Rohan Duck Breast",
+      "field": "serviceNote",
+      "op": "replace",
+      "value": {
+        "from": "Dinner tasting course four.",
+        "to": "Dinner Tasting Menu, Fourth Course."
+      },
+      "reason": "The tasting and the course are named as Brennan's prints them: Dinner Tasting Menu, Fourth Course",
+      "source": "page:brennans-tasting-menus-pasted-2026-10-05.txt line 51 (Dinner Tasting Menu $80) and line 84 (Fourth Course, Roasted Rohan Duck Breast)"
+    },
+    {
+      "target": "dish:The Snickers",
+      "field": "serviceNote",
+      "op": "replace",
+      "value": {
+        "from": "Dinner tasting course five.",
+        "to": "Dinner Tasting Menu, Fifth Course."
+      },
+      "reason": "The tasting and the course are named as Brennan's prints them: Dinner Tasting Menu, Fifth Course",
+      "source": "page:brennans-tasting-menus-pasted-2026-10-05.txt line 51 (Dinner Tasting Menu $80) and line 93 (Fifth Course, The Snickers)"
     }
   ]
 }

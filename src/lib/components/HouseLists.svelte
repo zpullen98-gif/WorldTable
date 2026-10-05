@@ -3,8 +3,10 @@
   guest), the guest conversations (title, what the guest says, what you say,
   the principle), the mix-ups (two items resolved to names, the difference,
   the question that settles it), the must-knows (title, body), the tastings
-  (a table, every course resolved to its dish names and its pour) and the
-  lineup register (askAtLineup: question, who to ask, answer, answered on).
+  (a table, every course resolved to its dish names and its pour; on the
+  editing page only, since the study view draws each tasting menu in printed
+  order at its top) and the lineup register (askAtLineup: question, who to
+  ask, answer, answered on).
 
   Every mark on an entry is Hers or Kept, with Keep, Edit and Discard
   through api.setMark(list, id, field, mark): Keep writes her value back
@@ -330,22 +332,8 @@
 				</ul>
 			</details>
 		{/if}
-		{#if current.tastings.length}
-			<details class="sd">
-				<summary>The tastings ({current.tastings.length})</summary>
-				{#each current.tastings as t (t.id)}
-					<div class="entry">
-						<p class="title">{t.name}{#if t.price}, {t.price}{/if}{#if t.meal}, {t.meal}{/if}</p>
-						<p class="about">{t.includesDrinks ? 'Drinks included' : 'Drinks not included'}{#if t.note}. {t.note}{/if}</p>
-						<ol class="tcourses">
-							{#each t.courses as c (c.n)}
-								<li>{c.label}: {c.dishIds.length ? namesOf(c.dishIds) : 'none'}{#if c.pourId || c.pourText}. Pour: {pourOf(c)}{/if}</li>
-							{/each}
-						</ol>
-					</div>
-				{/each}
-			</details>
-		{/if}
+		<!-- The tastings are the study view's own block now (StudyMenu.svelte, TastingMenu.svelte), each menu
+		     in printed order; the list below stays for editing only. -->
 	</section>
 {:else if current}
 	<section class="houselists" bind:this={root} aria-labelledby="houselists-h" data-print="hide">
@@ -598,14 +586,9 @@
 		font-size: 1.1rem;
 	}
 	.study .val,
-	.study .about,
-	.study .tcourses {
+	.study .about {
 		font-size: 1rem;
 		line-height: 1.5;
-	}
-	.tcourses {
-		margin: 4px 0 8px;
-		padding-left: 20px;
 	}
 	.eyebrow {
 		font-size: var(--t-micro);

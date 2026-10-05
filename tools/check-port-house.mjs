@@ -29,7 +29,9 @@
  *      and without a source text), mergeHouse (with itself and with a
  *      changed copy), syncIn for all three adapters (a projection written
  *      by syncOut, a changed projection, no rows, an empty house), the
- *      drills over a widened copy for twenty seeds, the lines, mintId, and
+ *      drills over a widened copy for twenty seeds, a tasting as printed
+ *      (its subtitle, a choice of, the printed lines, the pour labels and a
+ *      flash card per course), the lines, mintId, and
  *      the whole api over a Map through import, mark, card, put, sync,
  *      removeItem and buildPack: each compared, as JSON, with the same call
  *      into the TypeScript, transpiled to CommonJS in memory and run
@@ -545,6 +547,30 @@ function checkParity(T, P) {
 	delete compOld.dishes[0].compare;
 	delete compOld.videos[0].componentIds;
 	same('refreshEdition(components arrive)', T.refreshEdition(clone(compOld), clone(fixture)), P.refreshEdition(clone(compOld), clone(fixture)));
+
+	/* The tastings as printed: a subtitle and a supplement, a drink course, a choice of, printed lines and the pour labels, normalised, validated (a choice of one, a label over no pour, a long line), merged, refreshed onto a device that had none, and dealt as one flash card per course. */
+	const tast = clone(fixture);
+	Object.assign(tast.tastings[0], { line: 'Celebrating the harbour!', supplement: 'Add the Wine Pairing $30.00' });
+	tast.tastings[0].courses = [
+		{ n: 1, label: 'Welcome Drink', dishIds: [], pourId: 'b-collins1', pourText: 'The Lantern Collins', printed: ['Gin, lemon, soda'] },
+		{ n: 2, label: 'First Course', dishIds: ['d-beetrt01', 'd-chicken1'], pourId: 'w-lantern1', pourText: '', choice: true, pourLabel: 'Suggested Pairing' }
+	];
+	const tastT = T.normaliseHouse(clone(tast), { rand: seeded() });
+	same('normaliseHouse(tastings)', tastT, P.normaliseHouse(clone(tast), { rand: seeded() }));
+	if (!tastT.house.tastings[0].courses[1].choice || tastT.house.tastings[0].line !== 'Celebrating the harbour!') fail.push('normaliseHouse(tastings) did not keep the choice of and the printed line');
+	same('buildFlashcards(tastings)', T.buildFlashcards(tastT.house), P.buildFlashcards(tastT.house));
+	if (T.buildFlashcards(tastT.house).filter((/** @type {any} */ c) => c.kind === 'tasting').length !== 2) fail.push('buildFlashcards(tastings) did not deal one card per course');
+	const NAMES = [['Traditional Breakfast at Brennan\u2019s', 'Brennan\u2019s'], ["Supper at Brennan's", 'Brennan\u2019s'], ['Dinner Tasting Menu', 'Brennan\u2019s'], ['', 'x']];
+	same('tastingShortName', NAMES.map(([n, h]) => T.tastingShortName(n, h)), NAMES.map(([n, h]) => P.tastingShortName(n, h)));
+	const tastBad = clone(tast);
+	tastBad.tastings[0].courses[1].dishIds = ['d-beetrt01'];
+	tastBad.tastings[0].courses.push({ n: 3, label: 'Third Course', dishIds: [], pourId: '', pourText: '', pourLabel: 'Paired with', printed: ['x'] });
+	tastBad.tastings[0].line = 'one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty forty one';
+	const tastBadT = T.validateHouse(T.normaliseHouse(clone(tastBad), { rand: seeded() }).house);
+	same('validateHouse(tastings)', tastBadT, P.validateHouse(P.normaliseHouse(clone(tastBad), { rand: seeded() }).house));
+	for (const code of ['tasting', 'word-cap']) if (!tastBadT.problems.some((/** @type {any} */ x) => x.code === code && x.path.indexOf('tastings') >= 0)) fail.push('validateHouse(tastings) named no ' + code + ' problem');
+	same('mergeHouse(fixture, tastings)', T.mergeHouse(clone(fixture), Object.assign(clone(tastT.house), { tastings: [Object.assign(clone(tastT.house.tastings[0]), { ts: NOW + 9 })] })), P.mergeHouse(clone(fixture), Object.assign(clone(tastT.house), { tastings: [Object.assign(clone(tastT.house.tastings[0]), { ts: NOW + 9 })] })));
+	same('refreshEdition(tastings arrive)', T.refreshEdition(clone(fixture), clone(tastT.house)), P.refreshEdition(clone(fixture), clone(tastT.house)));
 
 	const PAGES = [['abc 24 def', '24'], ['glass 9', ' 9 '], ['a  b', 'a b'], ['x', ''], ['', 'y']];
 	same('onPage', PAGES.map(([h, n]) => T.onPage(h, n)), PAGES.map(([h, n]) => P.onPage(h, n)));

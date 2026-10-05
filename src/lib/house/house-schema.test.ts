@@ -260,8 +260,8 @@ describe('the fixture', () => {
 		expectKeys(fixture.pack!, KEYS.PackStamp, KEYS.PackStamp, 'pack');
 		expect(isMark(fixture.history)).toBe(true);
 		for (const t of fixture.tastings) {
-			expectKeys(t, KEYS.Tasting, KEYS.Tasting, t.id);
-			for (const c of t.courses) expectKeys(c, KEYS.TastingCourse, KEYS.TastingCourse, `${t.id} course ${c.n}`);
+			expectKeys(t, KEYS.Tasting, KEYS.Tasting.filter((k) => !(OPTIONAL_KEYS.Tasting as readonly string[]).includes(k)), t.id);
+			for (const c of t.courses) expectKeys(c, KEYS.TastingCourse, KEYS.TastingCourse.filter((k) => !(OPTIONAL_KEYS.TastingCourse as readonly string[]).includes(k)), `${t.id} course ${c.n}`);
 		}
 		for (const d of fixture.dishes) expectKeys(d, KEYS.HouseDish, notMarks(KEYS.HouseDish, DISH_MARKS), d.id);
 		for (const w of fixture.wines) expectKeys(w, KEYS.HouseWine, notMarks(KEYS.HouseWine, [...WINE_MARKS, ...OPTIONAL_KEYS.HouseWine]), w.id);

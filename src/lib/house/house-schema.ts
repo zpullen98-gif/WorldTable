@@ -214,6 +214,14 @@ export const COMPARE_MAX = 2;
 /** The word caps on a comparison: its label, what is the same and what differs. */
 export const COMPARE_WORDS = { label: 8, same: 30, different: 30 } as const;
 
+/**
+ * The word caps on what a tasting prints beyond its courses' names: the
+ * subtitle under its name, the pairing supplement, each line printed under a
+ * course's dishes and the words over a course's pour. Wide, because each is
+ * the menu's own words, and there so a paragraph pasted into a label is caught.
+ */
+export const TASTING_WORDS = { line: 40, supplement: 20, printed: 40, pourLabel: 4 } as const;
+
 const VIDEO_URL = new RegExp('^' + VIDEO_SCHEME + ':\\/\\/([A-Za-z0-9.-]+)(?:[\\/?#][^\\s]*)?$');
 
 /**
@@ -437,15 +445,38 @@ export type HouseItem = HouseDish | HouseWine | HouseCocktail;
  * The rest of the house
  * ---------------------------------------------------------------------- */
 
+/**
+ * One course of a tasting, in the order the menu prints it. `label` is the
+ * course's heading as printed ('Eye Opener Cocktail', 'Third Course'). The
+ * last three keys are OPTIONAL and written only when they say something, so
+ * a course from an edition that never had them reads unchanged: `choice` is
+ * true when the menu prints 'choice of' over the course's dishes; `printed`
+ * holds the lines the menu prints under the course's dish names (or, on a
+ * course with no dish, under its pour), each exactly as printed; and
+ * `pourLabel` is the words the menu prints over the pour ('Paired with',
+ * 'Suggested Pairing'). A course with no dish and a pour is the pour itself,
+ * the eye opener's way, and carries no label.
+ */
 export interface TastingCourse {
 	n: number;
 	label: string;
 	dishIds: string[];
 	/** A house wine or cocktail by id, or empty when the course prints no pour. */
 	pourId: string;
+	/** The pour as the menu prints it, or empty. */
 	pourText: string;
+	choice?: boolean;
+	printed?: string[];
+	pourLabel?: string;
 }
 
+/**
+ * A tasting menu: its name and price as printed, the meal it is served at,
+ * whether the price covers the drinks, the courses in printed order and a
+ * note for the floor. `line` is the subtitle the menu prints under its name
+ * and `supplement` the pairing supplement it prints (its words and its
+ * price, as printed); both OPTIONAL, written only when not blank.
+ */
 export interface Tasting {
 	id: string;
 	name: string;
@@ -454,6 +485,8 @@ export interface Tasting {
 	includesDrinks: boolean;
 	courses: TastingCourse[];
 	note: string;
+	line?: string;
+	supplement?: string;
 	ts: number;
 }
 
@@ -796,8 +829,8 @@ export const KEYS = {
 		...ITEM_BASE_KEYS, 'kind', 'spec', 'method', 'glass', 'garnish', 'note', 'family', 'spirit', 'zeroProof',
 		'upsells', 'ingredientsNamed'
 	] as const satisfies KeysOf<HouseCocktail>,
-	TastingCourse: ['n', 'label', 'dishIds', 'pourId', 'pourText'] as const satisfies KeysOf<TastingCourse>,
-	Tasting: ['id', 'name', 'price', 'meal', 'includesDrinks', 'courses', 'note', 'ts'] as const satisfies KeysOf<Tasting>,
+	TastingCourse: ['n', 'label', 'dishIds', 'pourId', 'pourText', 'choice', 'printed', 'pourLabel'] as const satisfies KeysOf<TastingCourse>,
+	Tasting: ['id', 'name', 'price', 'meal', 'includesDrinks', 'courses', 'note', 'line', 'supplement', 'ts'] as const satisfies KeysOf<Tasting>,
 	LexiconTerm: ['id', 'term', 'say', 'toGuest', 'itemIds', 'ts'] as const satisfies KeysOf<LexiconTerm>,
 	ComponentCard: ['front', 'back'] as const satisfies KeysOf<ComponentCard>,
 	CompareEntry: ['app', 'ref', 'label', 'same', 'different'] as const satisfies KeysOf<CompareEntry>,
@@ -831,6 +864,8 @@ export const OPTIONAL_KEYS = {
 	Pairing: ['bottles'],
 	HouseWine: ['list', 'bin', 'size'],
 	HouseVideo: ['componentIds'],
+	TastingCourse: ['choice', 'printed', 'pourLabel'],
+	Tasting: ['line', 'supplement'],
 	House: ['videos', 'components']
 } as const;
 
@@ -998,6 +1033,23 @@ export function componentGroups(house: House, itemId: string): Array<{ kind: Com
 /** The videos that teach one component, in the house's order. */
 export function componentVideos(house: House, componentId: string): HouseVideo[] {
 	return (house.videos || []).filter((v) => Array.isArray(v.componentIds) && v.componentIds.indexOf(componentId) >= 0);
+}
+
+/**
+ * A tasting's name the short way a card or a heading wants it: the printed
+ * name with a closing "at" and the house's own name taken off, so
+ * "Traditional Breakfast at Brennan's" at Brennan's reads "Traditional
+ * Breakfast". Curly and straight apostrophes count as one. A name that does
+ * not end in the house's name is returned as printed, trimmed.
+ */
+export function tastingShortName(name: string, houseName: string): string {
+	const n = typeof name === 'string' ? name.trim() : '';
+	const h = typeof houseName === 'string' ? houseName.trim() : '';
+	if (!n || !h) return n;
+	const flat = (s: string): string => s.replace(/[\u2018\u2019]/g, "'").toLowerCase();
+	const tail = ' at ' + h;
+	if (n.length > tail.length && flat(n).endsWith(flat(tail))) return n.slice(0, n.length - tail.length).trim();
+	return n;
 }
 
 export function mintId(prefix: string, taken: ReadonlySet<string>, rand: () => number = Math.random): string {

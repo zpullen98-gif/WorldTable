@@ -1,6 +1,6 @@
 {
 	"about": "Every string the dash pass changed while building the Brennan's house, before and after, for a person to read for a changed meaning; an entry with an override number is a string an overrides.json entry set, not the guide's.",
-	"count": 365,
+	"count": 364,
 	"changes": [
 		{
 			"path": "model.card.sources[0].title",
@@ -185,8 +185,9 @@
 		},
 		{
 			"path": "model.dishes[3].serviceNote",
-			"before": "Duck is usually served medium-rare to medium — confirm the kitchen’s standard and mention it. Tree nuts (hazelnuts). Dinner tasting course four.",
-			"after": "Duck is usually served medium-rare to medium, confirm the kitchen’s standard and mention it. Tree nuts (hazelnuts). Dinner tasting course four."
+			"before": "Duck is usually served medium-rare to medium — confirm the kitchen’s standard and mention it. Tree nuts (hazelnuts). Dinner Tasting Menu, Fourth Course.",
+			"after": "Duck is usually served medium-rare to medium, confirm the kitchen’s standard and mention it. Tree nuts (hazelnuts). Dinner Tasting Menu, Fourth Course.",
+			"override": 3437
 		},
 		{
 			"path": "model.dishes[3].pairing.sayIt",
@@ -1316,8 +1317,9 @@
 		},
 		{
 			"path": "model.dishes[44].serviceNote",
-			"before": "PEANUTS — confirm before ordering. Dairy, eggs. Bavarian creams are usually set with gelatin — ask the kitchen for vegetarian guests. Dinner tasting course five.",
-			"after": "PEANUTS, confirm before ordering. Dairy, eggs. Bavarian creams are usually set with gelatin, ask the kitchen for vegetarian guests. Dinner tasting course five."
+			"before": "PEANUTS — confirm before ordering. Dairy, eggs. Bavarian creams are usually set with gelatin — ask the kitchen for vegetarian guests. Dinner Tasting Menu, Fifth Course.",
+			"after": "PEANUTS, confirm before ordering. Dairy, eggs. Bavarian creams are usually set with gelatin, ask the kitchen for vegetarian guests. Dinner Tasting Menu, Fifth Course.",
+			"override": 3438
 		},
 		{
 			"path": "model.dishes[44].pairing.sayIt",
@@ -1842,11 +1844,6 @@
 			"path": "model.mustKnows[3].title",
 			"before": "Traditional Breakfast at Brennan’s — $80",
 			"after": "Traditional Breakfast at Brennan’s, $80"
-		},
-		{
-			"path": "model.mustKnows[4].title",
-			"before": "Dinner tasting — $80",
-			"after": "Dinner tasting, $80"
 		},
 		{
 			"path": "model.mustKnows[6].body",

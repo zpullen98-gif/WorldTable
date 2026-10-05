@@ -38,7 +38,7 @@
  * cocktail named for its glass are left out of that kind's pool rather than
  * asked. The test holds the rule over every kind and many seeds.
  */
-import { COCKTAIL_PARTS, DISH_PARTS, KEYS, LINE_CAPS, WINE_PARTS, isMark } from './house-schema';
+import { COCKTAIL_PARTS, DISH_PARTS, KEYS, LINE_CAPS, WINE_PARTS, isMark, tastingShortName } from './house-schema';
 import type {
 	ComponentCard,
 	FormulaParts,
@@ -50,7 +50,8 @@ import type {
 	Mark,
 	MixUp,
 	Pairing,
-	Scenario
+	Scenario,
+	TastingCourse
 } from './house-schema';
 import { wordCount } from './house-lines';
 
@@ -136,11 +137,13 @@ export interface DrillQuestion {
 }
 
 /**
- * The six flashcard kinds: parts, lines, terms, mix-ups, pairings and the
- * components. A component card's itemId is the component's own id (c-),
- * one card shared by every item that uses it.
+ * The seven flashcard kinds: parts, lines, terms, mix-ups, pairings, the
+ * components and the tasting courses. A component card's itemId is the
+ * component's own id (c-), one card shared by every item that uses it. A
+ * tasting card's itemId is the tasting's id (t-) and its course the course's
+ * n, one card per course in the order the menu prints them.
  */
-export const FLASHCARD_KINDS = ['part', 'line', 'term', 'mixUp', 'pairing', 'component'] as const;
+export const FLASHCARD_KINDS = ['part', 'line', 'term', 'mixUp', 'pairing', 'component', 'tasting'] as const;
 export type FlashcardKind = (typeof FLASHCARD_KINDS)[number];
 
 export interface Flashcard {
@@ -148,6 +151,8 @@ export interface Flashcard {
 	front: string;
 	back: string;
 	itemId: string;
+	/** The course's n, on a tasting card only. */
+	course?: number;
 }
 
 /* -------------------------------------------------------------------------
@@ -494,13 +499,42 @@ function cardBack(name: string, why: string): string {
 	return w ? name + '. ' + w : name;
 }
 
+/** The pour as a tasting course prints it: its printed words, else the house item's name. */
+function coursePour(c: TastingCourse, byId: Map<string, HouseItem>): string {
+	return plainText(c.pourText) || nameOf(byId.get(plainText(c.pourId)));
+}
+
+/**
+ * The back of a tasting course's card: the dishes (a choice of joined by or,
+ * else by and), then the pour under the words the menu prints over it, or
+ * the pour alone on a course that is a drink and nothing else. A label that
+ * ends on a word that leads into its pour ('Paired with') runs straight on;
+ * any other ('Suggested Pairing') takes a colon. Empty when the course names
+ * nothing that resolves.
+ */
+function courseBack(c: TastingCourse, byId: Map<string, HouseItem>): string {
+	const names = (Array.isArray(c.dishIds) ? c.dishIds : []).map((id) => nameOf(byId.get(plainText(id)))).filter(Boolean);
+	const pour = coursePour(c, byId);
+	let dishes = '';
+	if (names.length > 1 && c.choice === true) dishes = 'Choice of ' + names.slice(0, -1).join(', ') + ' or ' + names[names.length - 1];
+	else if (names.length > 1) dishes = names.slice(0, -1).join(', ') + ' and ' + names[names.length - 1];
+	else if (names.length) dishes = names[0];
+	if (!dishes) return pour;
+	if (!pour) return dishes;
+	const label = plainText(c.pourLabel) || 'Paired with';
+	return dishes + '. ' + label + (/\b(with|by|alongside)$/i.test(label) ? ' ' : ': ') + pour;
+}
+
 /**
  * The flashcard deck over the kept marks: one card per kept part, per kept
  * line, per kept say and toGuest on a term, per kept difference and ask on
  * a mix-up, per resolved first pick and zero-proof pick in a kept
  * pairing, and per kept card on a component, once however many items share
- * it. The order is the record's; the screen shuffles. A mark nobody
- * kept makes no card.
+ * it. Then one card per tasting course, in the menu's printed order: the
+ * front names the tasting the short way and the course as printed, the back
+ * the dish and its pairing. A tasting's courses are the menu's own words,
+ * never hers, so they need no keeping. The order is the record's; the
+ * screen shuffles every kind but the courses. A mark nobody kept makes no card.
  */
 export function buildFlashcards(house: House): Flashcard[] {
 	const out: Flashcard[] = [];
@@ -555,6 +589,15 @@ export function buildFlashcards(house: House): Flashcard[] {
 		const front = plainText(card.front);
 		const back = plainText(card.back);
 		if (front && back) out.push({ kind: 'component', front, back, itemId: c.id });
+	}
+	for (const t of house.tastings || []) {
+		const menu = tastingShortName(t.name, house.name);
+		if (!menu) continue;
+		for (const c of t.courses || []) {
+			const label = plainText(c.label);
+			const back = courseBack(c, byId);
+			if (label && back) out.push({ kind: 'tasting', front: menu + ': ' + label, back, itemId: t.id, course: c.n });
+		}
 	}
 	return out;
 }

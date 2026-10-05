@@ -297,29 +297,41 @@ const COCKTAIL_META = {
 	'dulce-de-leche': { family: 'Dessert cocktail', spirit: 'Rum' }
 };
 
-/* The two tastings as the guide's must-knows print them (pdf p49), by name. */
+/* The two tastings as Brennan's prints them on the menus the owner pasted on 5 October 2026
+   (pages/brennans-tasting-menus-pasted-2026-10-05.txt, kept verbatim), in printed order: each course's
+   label as printed, 'choice of' as choice, the lines printed under its dishes as printed (the menu's
+   dashes written as hyphens), the words printed over its pour as pourLabel, and the pour as printed
+   as pourText, the page's 'ChampaPAgne' slip written Champagne. A dish is named as the house names it,
+   by name, so the tasting's 'Egg Hussarde' and 'Grande Isle' resolve to the house's Eggs Hussarde and
+   Grand Isle Jewel Oysters, and the course's printed line stands as the tasting prints it. The breakfast
+   fifth course's Congregation Coffee & Chicory is the house's New Orleans-Style Coffee with Chicory. The
+   dinner tasting was 'Dinner tasting' until this edition; ids.ledger.json moved its slug with its id, so
+   a device's copy is refreshed in place rather than replaced. */
 const TASTINGS = [
 	{
 		name: 'Traditional Breakfast at Brennan’s', price: '$80', meal: 'Breakfast & lunch', includesDrinks: true,
+		line: 'Celebrating 80 Years in 2026! Price includes tasting portions of each course and all drinks listed.',
 		note: 'Tasting portions of each course and all listed drinks included. Take the filet temperature with the order. Do not double-pour the included Champagne.',
 		courses: [
-			{ label: 'Eye opener', dishes: [], pour: 'Brandy Milk Punch', pourText: 'Brandy Milk Punch' },
-			{ label: 'First course', dishes: ['Baked Apple'], pour: '', pourText: '' },
-			{ label: 'Second course', dishes: ['Turtle Soup', 'Seafood Gumbo'], pour: 'Bloody Bull', pourText: 'Turtle soup or seafood gumbo, with a Bloody Bull' },
-			{ label: 'Third course', dishes: ['Eggs Hussarde'], pour: 'Charles Lafitte Brut Champagne NV', pourText: 'Charles Lafitte Brut, 4 oz' },
-			{ label: 'Fourth course', dishes: ['Petite Filet Mignon'], pour: 'Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône', pourText: 'Domaine de Châteaumar Cuvée Vincent Côtes du Rhône, 4 oz' },
-			{ label: 'Fifth course', dishes: ['World Famous Bananas Foster'], pour: '', pourText: 'Bananas Foster tableside with Congregation Coffee & Chicory' }
+			{ label: 'Eye Opener Cocktail', dishes: [], pour: 'Brandy Milk Punch', pourText: 'Brandy Milk Punch', printed: ['Brandy, Heavy Cream, Vanilla Bean, Nutmeg'] },
+			{ label: 'First Course', dishes: ['Baked Apple'], pour: '', pourText: '', printed: ['Oatmeal-pecan-raisin Crumble, Brown Sugar Glaze, Sweetened Crème Fraiche'] },
+			{ label: 'Second Course', choice: true, dishes: ['Turtle Soup', 'Seafood Gumbo'], pourLabel: 'Paired with', pour: 'Bloody Bull', pourText: 'Bloody Bull Cocktail' },
+			{ label: 'Third Course', dishes: ['Eggs Hussarde'], printed: ['Housemade English Muffin, Coffee-cured Canadian Bacon, Hollandaise, Poached Egg, Marchand De Vin Sauce'], pourLabel: 'Paired with', pour: 'Charles Lafitte Brut Champagne NV', pourText: 'Charles Lafitte Brut Champagne FR NV [4oz]' },
+			{ label: 'Fourth Course', dishes: ['Petite Filet Mignon'], printed: ['Potato Rösti, Garlic Spinach'], pourLabel: 'Paired with', pour: 'Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône', pourText: 'Domaine De Châteaumar ‘Cuvée Vincent’ Côtes Du Rhône FR 2023 [4oz]' },
+			{ label: 'Fifth Course', dishes: ['World Famous Bananas Foster'], printed: ['Invented At Brennan’s ~ Bananas, Butter, Brown Sugar, Cinnamon, Rum, Housemade Vanilla Bean Ice Cream, Flambéed Tableside'], pourLabel: 'Paired with', pour: 'New Orleans-Style Coffee with Chicory', pourText: 'Brennan’s Private Blend Congregation Coffee & Chicory' }
 		]
 	},
 	{
-		name: 'Dinner tasting', price: '$80', meal: 'Dinner', includesDrinks: false,
+		name: 'Dinner Tasting Menu', price: '$80', meal: 'Dinner', includesDrinks: false,
+		line: 'Celebrating 80 Years in 2026! Add Wine Pairing Supplement [4oz pours] $120',
+		supplement: 'Add Wine Pairing Supplement, 4 Ounce Wine Pours $120.00',
 		note: 'Five courses. Wine pairing supplement $120, five 4 oz pours: Charles Lafitte Brut, Fichet Mâcon-Igé 2024, Louis Jadot Beaune 1er Cru 2023, Paul Hobbs Coombsville Cabernet 2021, La Tour Vieille Banyuls Reserva. Open the Jadot 20 to 30 minutes ahead, the Hobbs 30 to 60; pour the Banyuls before the Snickers lands.',
 		courses: [
-			{ label: 'First course', dishes: ['Grand Isle Jewel Oysters'], pour: 'Charles Lafitte Brut Champagne NV', pourText: 'Charles Lafitte Brut, 4 oz, on the pairing' },
-			{ label: 'Second course', dishes: ['Louisiana BBQ Lobster'], pour: 'Fichet ‘Château London’ Mâcon-Igé 2024', pourText: 'Fichet Château London Mâcon-Igé 2024, 4 oz, on the pairing' },
-			{ label: 'Third course', dishes: ['Redfish Véronique'], pour: 'Louis Jadot Beaune 1er Cru 2023', pourText: 'Louis Jadot Beaune 1er Cru 2023, 4 oz, on the pairing' },
-			{ label: 'Fourth course', dishes: ['Roasted Rohan Duck Breast'], pour: 'Paul Hobbs Coombsville Cabernet Sauvignon 2021', pourText: 'Paul Hobbs Coombsville Cabernet Sauvignon 2021, 4 oz, on the pairing' },
-			{ label: 'Fifth course', dishes: ['The Snickers'], pour: 'Domaine La Tour Vieille Banyuls Reserva NV', pourText: 'Domaine La Tour Vieille Banyuls Reserva, 4 oz, on the pairing' }
+			{ label: 'First Course', dishes: ['Grand Isle Jewel Oysters'], printed: ['Served Raw, Preserved Fresno Chile Mignonette, Parsley'], pourLabel: 'Suggested Pairing', pour: 'Charles Lafitte Brut Champagne NV', pourText: 'Charles Lafitte Brut Champagne FR NV' },
+			{ label: 'Second Course', dishes: ['Louisiana BBQ Lobster'], printed: ['’nduja, White Bean Stew'], pourLabel: 'Suggested Pairing', pour: 'Fichet ‘Château London’ Mâcon-Igé 2024', pourText: 'Fichet Château London Mâcon-Igé Burgundy FR Chardonnay 2024' },
+			{ label: 'Third Course', dishes: ['Redfish Véronique'], printed: ['Hibiscus-pickled Grapes, Braised Leeks, Fingerling Potatoes, Preserved Lemon Beurre Blanc'], pourLabel: 'Suggested Pairing', pour: 'Louis Jadot Beaune 1er Cru 2023', pourText: 'Louis Jadot 1er Cru Beaune, Burgundy FR Pinot Noir 2023' },
+			{ label: 'Fourth Course', dishes: ['Roasted Rohan Duck Breast'], printed: ['Cane Syrup-glazed Peaches, Candied Hazelnuts'], pourLabel: 'Suggested Pairing', pour: 'Paul Hobbs Coombsville Cabernet Sauvignon 2021', pourText: 'Paul Hobbs Coombsville Napa Valley Cabernet Sauvignon 2021' },
+			{ label: 'Fifth Course', dishes: ['The Snickers'], printed: ['Bavarian Milk Chocolate, Caramel Custard, Nougat Ice Cream, Roasted Peanuts'], pourLabel: 'Suggested Pairing', pour: 'Domaine La Tour Vieille Banyuls Reserva NV', pourText: 'Domaine La Tour Vieille Reserva Banyuls FR NV' }
 		]
 	}
 ];
@@ -940,15 +952,30 @@ for (const r of clean.cocktails) {
 	c.ts = BUILD_TS;
 	house.cocktails.push(c);
 }
+/* Each tasting in the engine's key order, the optional fields written only when they say something
+   (the normaliser's rule, so validate-pack finds the house unchanged by it): a course's choice only
+   when true, its printed lines and its pour's label only when present, the tasting's printed line and
+   supplement only when not blank. */
 for (const t of clean.tastings) {
-	house.tastings.push({
+	const rec = {
 		id: idFor('tastings', slug(t.name)), name: t.name, price: t.price, meal: t.meal, includesDrinks: t.includesDrinks,
-		courses: t.courses.map((c, i) => ({
-			n: i + 1, label: c.label, dishIds: c.dishes.map((n) => itemId(n, t.name)),
-			pourId: c.pour ? (byName.get(slug(c.pour)) || wineId(c.pour, t.name)) : '', pourText: c.pourText
-		})),
-		note: t.note, ts: BUILD_TS
-	});
+		courses: t.courses.map((c, i) => {
+			const course = {
+				n: i + 1, label: c.label, dishIds: c.dishes.map((n) => itemId(n, t.name)),
+				pourId: c.pour ? (byName.get(slug(c.pour)) || wineId(c.pour, t.name)) : '', pourText: c.pourText || ''
+			};
+			if (c.choice === true) course.choice = true;
+			const printed = (c.printed || []).filter((x) => typeof x === 'string' && x.trim());
+			if (printed.length) course.printed = printed;
+			if (c.pourLabel && c.pourLabel.trim()) course.pourLabel = c.pourLabel;
+			return course;
+		}),
+		note: t.note
+	};
+	if (t.line && t.line.trim()) rec.line = t.line;
+	if (t.supplement && t.supplement.trim()) rec.supplement = t.supplement;
+	rec.ts = BUILD_TS;
+	house.tastings.push(rec);
 }
 /* A dish's bottle tiers, named in overrides, as { bottles } with each wine resolved to its id, in
    the engine's tier order; nothing when the dish has none. A wine not on the bottle list fails here,

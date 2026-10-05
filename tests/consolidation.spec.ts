@@ -161,14 +161,17 @@ test('2. the study chain: the list comes back where it was, with the focus on th
 	await expect(page.locator('.study .row').first()).toBeVisible({ timeout: 15_000 });
 	const y = await scrollTo(page, 600);
 	// A row wholly in view below the sticky bars (the Back row and the study
-	// view's own search bar), so the tap needs no scroll to reach it.
+	// view's own search bar), so the tap needs no scroll to reach it: a dish
+	// row, or a dish or a pour on a course of the Tasting menus block at the
+	// top (found again by its course's own key, since a dish may sit on a
+	// course and in the list).
 	const opener = await page.evaluate(() => {
 		const below = Math.max(...[...document.querySelectorAll('.backline, .study .bar')].map((el) => el.getBoundingClientRect().bottom)) + 4;
-		const rows = [...document.querySelectorAll<HTMLElement>('.study .row')];
-		const r = rows.find((el) => el.getBoundingClientRect().top > below) ?? rows[0];
-		return r.dataset.id ?? '';
+		const rows = [...document.querySelectorAll<HTMLElement>('.study .row, .study button.titem')];
+		const r = rows.find((el) => el.getBoundingClientRect().top > below && el.getBoundingClientRect().bottom < innerHeight) ?? rows[0];
+		return { id: r.dataset.id ?? '', sel: r.dataset.key ? `.study [data-key="${r.dataset.key}"]` : `.study .row[data-id="${r.dataset.id}"]` };
 	});
-	await page.locator(`.study .row[data-id="${opener}"]`).click();
+	await page.locator(opener.sel).click();
 	await expect(page.locator('article.card h2')).toBeVisible();
 	await page.locator('article.card .backline').getByRole('button', { name: /^Next/ }).click();
 	await page.locator('article.card .backline').getByRole('button', { name: /^Next/ }).click();
@@ -176,7 +179,7 @@ test('2. the study chain: the list comes back where it was, with the focus on th
 	await back(page);
 	await expect(page.locator('.study .row').first()).toBeVisible();
 	await expectScroll(page, y);
-	await expect.poll(() => page.evaluate(() => (document.activeElement as HTMLElement | null)?.dataset?.id ?? '')).toBe(opener);
+	await expect.poll(() => page.evaluate(() => (document.activeElement as HTMLElement | null)?.dataset?.id ?? '')).toBe(opener.id);
 	await back(page);
 	await expect(heading(page)).toHaveText(NAMES[0]);
 	await back(page);

@@ -160,7 +160,24 @@ export const STUDY_WORDS = {
 	deckIngredients: 'Ingredients',
 	deckTechniques: 'Techniques',
 	deckStories: 'Stories',
-	deckItem: '{name}: what it is made of'
+	deckItem: '{name}: what it is made of',
+	tastings: 'Tasting menus',
+	choiceOf: 'choice of',
+	pairedWith: 'Paired with',
+	drinksIn: 'Every drink listed is included in the price.',
+	flashCourses: 'Flash the courses',
+	tastingNotes: 'Notes for the floor',
+	deckTastings: 'Tasting courses',
+	deckTasting: '{name}: the courses',
+	courseCount: '{n} courses',
+	onTasting: 'On the {name}: {course}',
+	pouredOn: 'Poured on the {name}: {course}',
+	pouredWith: '{course}, poured with {dishes}',
+	noPairing: 'The menu prints no pairing for this course.',
+	pourCarte: 'Pour with it, à la carte',
+	inGlass: 'In the glass',
+	theWine: 'The wine',
+	offerNext: 'Offer next'
 } as const;
 export type StudyWordKey = keyof typeof STUDY_WORDS;
 
@@ -362,22 +379,26 @@ export function shortLine(item: HouseItem): string {
 	return plain((item as HouseWine).style);
 }
 
+/** One item as a row; the section is the item's own unless the caller names the list it sits in. */
+function rowFor(house: House, it: HouseItem, section?: string): StudyRow {
+	return {
+		id: it.id,
+		kind: it.kind,
+		name: plain(it.name),
+		section: section ?? (plain(it.section) || 'The menu'),
+		price: priceLine(it, house),
+		line: shortLine(it),
+		signature: it.kind === 'dish' ? !!(it as HouseDish).signature : false,
+		hasKept: anyKept(it)
+	};
+}
+
 /** One row per named item of the kind, in the house's own order. */
 export function studyRows(house: House, kind: ItemKind): StudyRow[] {
 	const out: StudyRow[] = [];
 	for (const it of itemsOfKind(house, kind)) {
-		const name = plain(it.name);
-		if (!name) continue;
-		out.push({
-			id: it.id,
-			kind,
-			name,
-			section: plain(it.section) || 'The menu',
-			price: priceLine(it, house),
-			line: shortLine(it),
-			signature: it.kind === 'dish' ? !!(it as HouseDish).signature : false,
-			hasKept: anyKept(it)
-		});
+		if (!plain(it.name)) continue;
+		out.push(rowFor(house, it));
 	}
 	return out;
 }
@@ -546,6 +567,234 @@ export function tastingsFor(house: House, itemId: string): Array<{ tasting: Tast
 		}
 	}
 	return out;
+}
+
+/* -------------------------------------------------------------------------
+ * The tasting menus, as printed
+ * ---------------------------------------------------------------------- */
+
+/** A dish or a drink a tasting names, resolved to the house's item. */
+export interface TastingItemRef {
+	id: string;
+	name: string;
+	kind: ItemKind;
+}
+
+/** One course, ready to draw in the order the menu prints it. */
+export interface TastingCourseShown {
+	n: number;
+	/** The course's heading as printed ('Eye Opener Cocktail', 'Third Course'). */
+	label: string;
+	/** True when the menu prints 'choice of' over the course's dishes. */
+	choice: boolean;
+	/** The course's dishes in printed order, each a house dish; an id the house lacks is left out. */
+	dishes: TastingItemRef[];
+	/** The lines printed under the course's dishes, or under its drink on a course that is a drink. */
+	printed: string[];
+	/** The pour as printed (else the house item's name), and the house item it opens; null when the course prints none. */
+	pour: { text: string; item: TastingItemRef | null } | null;
+	/** The words printed over the pour; Paired with when a course with dishes prints none; '' on a drink course. */
+	pourLabel: string;
+	/** True when the course is its drink and nothing else (the eye opener). */
+	drinkCourse: boolean;
+}
+
+/** One tasting menu, ready to draw: what it prints above its courses, then the courses. */
+export interface TastingShown {
+	id: string;
+	name: string;
+	price: string;
+	meal: string;
+	line: string;
+	supplement: string;
+	includesDrinks: boolean;
+	note: string;
+	courses: TastingCourseShown[];
+}
+
+function itemRef(house: House, id: string): TastingItemRef | null {
+	const it = id ? findItem(house, id) : undefined;
+	const name = it ? plain(it.name) : '';
+	return it && name ? { id: it.id, name, kind: it.kind } : null;
+}
+
+/** True when the tasting is served at that meal; a tasting nobody gave a meal is kept under every meal, and '' is all day. */
+export function tastingInMeal(t: Tasting, meal: string): boolean {
+	return !meal || !plain(t.meal) || plain(t.meal) === meal;
+}
+
+/**
+ * The house's tasting menus at a meal, each separate and in the house's
+ * order, every course in the order the menu prints it: its label, the
+ * choice of, its dishes (named as the house names them), the lines printed
+ * under them, and the pour under the words printed over it. A course with
+ * no dish and a pour is the drink itself and carries no label. The menus'
+ * own words, never hers: nothing here needs keeping.
+ */
+export function tastingsShown(house: House, meal = ''): TastingShown[] {
+	const out: TastingShown[] = [];
+	for (const t of house.tastings ?? []) {
+		const name = plain(t.name);
+		if (!name || !tastingInMeal(t, meal)) continue;
+		const courses: TastingCourseShown[] = [];
+		for (const c of t.courses ?? []) {
+			const dishes = (c.dishIds ?? []).map((id) => itemRef(house, id)).filter((r): r is TastingItemRef => !!r && r.kind === 'dish');
+			const item = itemRef(house, plain(c.pourId));
+			const text = plain(c.pourText) || (item ? item.name : '');
+			const pour = text ? { text, item } : null;
+			const drinkCourse = !dishes.length && !!pour;
+			courses.push({
+				n: c.n,
+				label: plain(c.label),
+				choice: c.choice === true && dishes.length > 1,
+				dishes,
+				printed: (c.printed ?? []).map(plain).filter(Boolean),
+				pour,
+				pourLabel: drinkCourse || !pour ? '' : plain(c.pourLabel) || say('pairedWith'),
+				drinkCourse
+			});
+		}
+		out.push({
+			id: t.id,
+			name,
+			price: plain(t.price),
+			meal: plain(t.meal),
+			line: plain(t.line),
+			supplement: plain(t.supplement),
+			includesDrinks: t.includesDrinks === true,
+			note: plain(t.note),
+			courses
+		});
+	}
+	return out;
+}
+
+/**
+ * The dishes only a tasting serves: named on a course of some tasting and
+ * carrying no printed price of their own. The study list leaves them to
+ * their course in the Tasting menus block; their cards open from there.
+ */
+export function tastingOnlyIds(house: House): Set<string> {
+	const on = new Set<string>();
+	for (const t of house.tastings ?? []) for (const c of t.courses ?? []) for (const id of c.dishIds ?? []) on.add(id);
+	const out = new Set<string>();
+	for (const d of house.dishes ?? []) {
+		if (!on.has(d.id)) continue;
+		const priced = plain(d.price) || (d.prices ?? []).some((p) => plain(p.printed));
+		if (!priced) out.add(d.id);
+	}
+	return out;
+}
+
+/**
+ * The section the Tasting menus block answers to: the one section every
+ * tasting-only dish shares (so a level page's chip for it lands on the
+ * block), else the study view's own words. Empty when the house prints no
+ * tasting.
+ */
+export function tastingSection(house: House): string {
+	if (!(house.tastings ?? []).some((t) => plain(t.name))) return '';
+	const only = tastingOnlyIds(house);
+	const sections = new Set((house.dishes ?? []).filter((d) => only.has(d.id)).map((d) => plain(d.section) || 'The menu'));
+	return sections.size === 1 ? [...sections][0] : say('tastings');
+}
+
+/**
+ * A tasting's dishes and drinks as rows, in printed order, each once, every
+ * row filed under the tasting's name: the list a card opened from the
+ * tasting walks with Previous and Next, so Next is the next thing served.
+ */
+export function tastingRows(house: House, t: TastingShown): StudyRow[] {
+	const out: StudyRow[] = [];
+	const seen = new Set<string>();
+	const add = (id: string) => {
+		if (seen.has(id)) return;
+		const it = findItem(house, id);
+		if (!it || !plain(it.name)) return;
+		seen.add(id);
+		out.push(rowFor(house, it, t.name));
+	};
+	for (const c of t.courses) {
+		for (const d of c.dishes) add(d.id);
+		if (c.pour?.item) add(c.pour.item.id);
+	}
+	return out;
+}
+
+/** A pour under the words printed over it: a label that leads into it ('Paired with') runs on, any other takes a colon. */
+export function pourPhrase(label: string, pour: string): string {
+	const l = plain(label) || say('pairedWith');
+	return l + (/\b(with|by|alongside)$/i.test(l) ? ' ' : ': ') + plain(pour);
+}
+
+/**
+ * Where an item sits on the tastings, as its card says it, once per course:
+ * a dish 'On the Dinner Tasting Menu: Third Course. Suggested Pairing: ...'
+ * with the course's pour as printed, a drink 'Poured on the Traditional
+ * Breakfast at Brennan's: Fourth Course'.
+ */
+export function tastingPlaces(house: House, itemId: string): string[] {
+	const out: string[] = [];
+	for (const t of tastingsFor(house, itemId)) {
+		const name = plain(t.tasting.name);
+		if (!name) continue;
+		const course = plain(t.course.label) || 'course ' + t.course.n;
+		let line = say(t.as === 'dish' ? 'onTasting' : 'pouredOn', { name, course });
+		if (t.as === 'dish') {
+			const pour = plain(t.course.pourText) || nameById(house, plain(t.course.pourId));
+			if (pour) line += '. ' + pourPhrase(plain(t.course.pourLabel), pour);
+		}
+		if (!out.includes(line)) out.push(line);
+	}
+	return out;
+}
+
+/** A card opened from one tasting's menu: what that tasting says about the item, drawn under its name. */
+export interface TastingHere {
+	id: string;
+	name: string;
+	price: string;
+	/** Where the item sits on the menu, once per course it is on. */
+	lines: string[];
+	/** What the menu prints about its drinks: every drink included, or the pairing supplement; '' when neither. */
+	terms: string;
+}
+
+/**
+ * The tasting a card was opened from, as the card's first screen says it.
+ * tastingRows files every row under its menu's name, so the section of the
+ * row a card was opened on names the tasting; any other section names none
+ * and this is null, as it is when the tasting does not name the item. Each
+ * line is a course the item is on, as printed: for a dish, the course, the
+ * other dishes of a choice of, and the course's pour under the words printed
+ * over it ('Third Course. Paired with Charles Lafitte Brut Champagne FR NV
+ * [4oz]'), or, on a menu that pours with other courses, that this one prints
+ * none; for the drink a course is, the course ('Eye Opener Cocktail'); for a
+ * pour on a dish's course, the course and its dishes ('Third Course, poured
+ * with Eggs Hussarde'). So a server walking the tasting reads the tasting's
+ * pour first, never the dish's pour off the list.
+ */
+export function tastingHere(house: House, section: string, itemId: string): TastingHere | null {
+	const name = plain(section);
+	const t = name ? tastingsShown(house).find((m) => m.name === name) : undefined;
+	if (!t) return null;
+	const pours = t.courses.some((c) => c.pour);
+	const lines: string[] = [];
+	for (const c of t.courses) {
+		const course = c.label || 'Course ' + c.n;
+		const dishes = c.dishes.map((d) => d.name).join(' or ');
+		let line = '';
+		if (c.dishes.some((d) => d.id === itemId)) {
+			line = course + (c.choice ? ', ' + say('choiceOf') + ' ' + dishes : '');
+			if (c.pour) line += '. ' + pourPhrase(c.pourLabel, c.pour.text);
+			else if (pours) line += '. ' + say('noPairing');
+		} else if (c.pour?.item?.id === itemId) {
+			line = c.drinkCourse || !dishes ? course : say('pouredWith', { course, dishes });
+		}
+		if (line && !lines.includes(line)) lines.push(line);
+	}
+	if (!lines.length) return null;
+	return { id: t.id, name: t.name, price: t.price, lines, terms: t.includesDrinks ? say('drinksIn') : t.supplement };
 }
 
 export function lineupFor(

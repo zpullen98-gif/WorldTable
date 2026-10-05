@@ -25,14 +25,19 @@
  * card lacks a front or a back; and 'compare' an item's comparisons past
  * COMPARE_MAX, an entry whose app is outside COMPARE_APPS, a classic that
  * carries a ref, an in-app entry with none, or an entry with no label, same
- * or different. Those eleven are FATAL_CODES, the default list, and a pack builder passes exactly that. A
+ * or different; and 'tasting' a course printed as a choice that names fewer
+ * than two dishes, a pour label over a course that prints no pour, or
+ * printed lines on a course that names neither a dish nor a pour. Those
+ * twelve are FATAL_CODES, the default list, and a pack builder passes exactly that. A
  * tier's why and line over BOTTLE_WORDS are 'word-cap', and so is a video's
  * why over VIDEO_WHY_WORDS; a tier naming no house wine is 'ref', and so is
  * a video's item or term that is not in the house; a component's explanation
  * over COMPONENT_WORDS.explain, its card's front or back over theirs, and a
  * comparison's label, same or different over COMPARE_WORDS are 'word-cap';
  * a component's item or term, a video's component and a codex comparison
- * naming a house wine id that the house lacks are 'ref'.
+ * naming a house wine id that the house lacks are 'ref'. A tasting's
+ * subtitle and supplement, a course's printed line and its pour label over
+ * TASTING_WORDS are 'word-cap'.
  * Three more are advisory and NEVER fatal, whatever list a caller hands in:
  * 'service-note', a person's note that names an allergen without the word
  * confirm (the note is theirs and stands; the flag reminds them to confirm
@@ -47,7 +52,7 @@
  * sweep (forbiddenKeys, in house-normalise.ts), the dash (house-lines.ts)
  * and onPage, the rule that 12 is not on a page that prints only 12.50.
  */
-import { BOTTLE_TIERS, BOTTLE_WORDS, COMPARE_APPS, COMPARE_MAX, COMPARE_WORDS, COMPONENT_KINDS, COMPONENT_WORDS, HALF_SIZE, HOUSE_LISTS, MARK_FIELDS, PRINCIPLES, VIDEO_WHY_WORDS, foldSize, inBottleBand, isMark, printedDollars, videoUrlOk, wineListOf } from './house-schema';
+import { BOTTLE_TIERS, BOTTLE_WORDS, COMPARE_APPS, COMPARE_MAX, COMPARE_WORDS, COMPONENT_KINDS, COMPONENT_WORDS, HALF_SIZE, HOUSE_LISTS, MARK_FIELDS, PRINCIPLES, TASTING_WORDS, VIDEO_WHY_WORDS, foldSize, inBottleBand, isMark, printedDollars, videoUrlOk, wineListOf } from './house-schema';
 import type { House, HouseList, Lines, Mark } from './house-schema';
 import { forbiddenKeys } from './house-normalise';
 import { hasDash, lineProblems, wordCount } from './house-lines';
@@ -68,6 +73,7 @@ export type ProblemCode =
 	| 'video'
 	| 'component'
 	| 'compare'
+	| 'tasting'
 	| 'service-note'
 	| 'proper-noun'
 	| 'quote';
@@ -80,7 +86,7 @@ export interface Problem {
 }
 
 /** The codes that stop a pack, and the default `fatal` list. */
-export const FATAL_CODES: readonly ProblemCode[] = ['forbidden', 'dash', 'word-cap', 'ref', 'principles', 'price', 'allergen-talk', 'tier', 'video', 'component', 'compare'];
+export const FATAL_CODES: readonly ProblemCode[] = ['forbidden', 'dash', 'word-cap', 'ref', 'principles', 'price', 'allergen-talk', 'tier', 'video', 'component', 'compare', 'tasting'];
 
 /** The codes that are advice and never fatal, whatever list a caller hands in. */
 export const NEVER_FATAL: readonly ProblemCode[] = ['service-note', 'proper-noun', 'quote'];
@@ -391,6 +397,41 @@ function checkCompare(house: House, add: Add): void {
 }
 
 /**
+ * Every tasting as printed: a course marked as a choice names at least two
+ * dishes, a pour label sits only over a course that prints a pour, printed
+ * lines sit only on a course that names a dish or a pour, and the subtitle,
+ * the supplement, each printed line and each pour label are within
+ * TASTING_WORDS. Where each course points is checkRefs' to name.
+ */
+function checkTastings(house: House, add: Add): void {
+	const cap = (path: string, v: unknown, key: keyof typeof TASTING_WORDS, what: string): void => {
+		if (typeof v !== 'string') return;
+		const n = wordCount(v);
+		if (n > TASTING_WORDS[key]) add(path, 'word-cap', n + ' words; the cap on ' + what + ' is ' + TASTING_WORDS[key]);
+	};
+	const tastings = listOf(house, 'tastings');
+	for (let i = 0; i < tastings.length; i++) {
+		const t = tastings[i];
+		const at = 'house.tastings[' + i + ']';
+		cap(at + '.line', t.line, 'line', "a tasting's printed line");
+		cap(at + '.supplement', t.supplement, 'supplement', "a tasting's supplement");
+		const courses = Array.isArray(t.courses) ? (t.courses as Raw[]) : [];
+		for (let j = 0; j < courses.length; j++) {
+			const c = courses[j] || {};
+			const here = at + '.courses[' + j + ']';
+			const dishes = Array.isArray(c.dishIds) ? c.dishIds.length : 0;
+			const pour = (typeof c.pourId === 'string' && c.pourId.trim() !== '') || (typeof c.pourText === 'string' && c.pourText.trim() !== '');
+			if (c.choice === true && dishes < 2) add(here + '.choice', 'tasting', 'a choice of names ' + dishes + ' dish' + (dishes === 1 ? '' : 'es') + '; it needs two or more');
+			if (typeof c.pourLabel === 'string' && c.pourLabel.trim() && !pour) add(here + '.pourLabel', 'tasting', 'a pour label over a course that prints no pour');
+			cap(here + '.pourLabel', c.pourLabel, 'pourLabel', "a course's pour label");
+			const printed = Array.isArray(c.printed) ? c.printed : [];
+			if (printed.length && !dishes && !pour) add(here + '.printed', 'tasting', 'printed lines on a course that names no dish and no pour');
+			for (let k = 0; k < printed.length; k++) cap(here + '.printed[' + k + ']', printed[k], 'printed', "a course's printed line");
+		}
+	}
+}
+
+/**
  * Every video: its link a video link (videoUrlOk, the normaliser's rule,
  * asked again because a validator may be handed a house nobody normalised),
  * a title, and a why within VIDEO_WHY_WORDS. Where each video points is
@@ -633,6 +674,7 @@ export function validateHouse(house: House, opts: ValidateOptions = {}): { probl
 	checkVideos(house, add);
 	checkComponents(house, add);
 	checkCompare(house, add);
+	checkTastings(house, add);
 	if (typeof opts.sourceText === 'string') checkPrices(house, opts.sourceText, add);
 	checkMarks(house, add);
 	checkServiceNotes(house, add);

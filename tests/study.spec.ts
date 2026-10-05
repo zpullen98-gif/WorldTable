@@ -24,6 +24,11 @@ const PACK = JSON.parse(PACK_TEXT).house;
 const READ_ON = ((iso: string) => { const [y, m, d] = iso.split('-').map(Number); return d + ' ' + ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][m - 1] + ' ' + y; })(PACK.menusReadOn);
 const SHOTS = process.env.STUDY_SHOTS ?? '/tmp/claude-0/-home-user-zpullen98-gif-github-io/09201eae-82ec-5cba-9316-4d6cf5955e5e/scratchpad/shots/';
 const HUSSARDE = 'd-1q0xk7jv';
+/* The dishes only a tasting serves (on a course, no printed price of their own) open from their
+   course in the Tasting menus block at the top, not as loose rows; every other dish is a row. */
+const ON_TASTING = new Set<string>(PACK.tastings.flatMap((t: any) => t.courses.flatMap((c: any) => c.dishIds)));
+const TASTING_ONLY = PACK.dishes.filter((d: any) => ON_TASTING.has(d.id) && !d.price && !(d.prices || []).some((p: any) => p.printed));
+const LIST_ROWS = PACK.dishes.length - TASTING_ONLY.length;
 const EYEBROW = 'Your words. Allergens: confirm at lineup.';
 const CLOSING = 'Allergens: read the service note and confirm at lineup.';
 
@@ -48,16 +53,20 @@ const card = (page: Page) => page.locator('article.card');
 test('the study view is what /menu opens on, short, with the first rows on the first screen', async ({ page }) => {
 	await openStudy(page);
 	await expect(page.locator('#study-h')).toHaveText(PACK.name);
-	await expect(rows(page)).toHaveCount(PACK.dishes.length);
+	expect(TASTING_ONLY.length).toBe(4);
+	await expect(rows(page)).toHaveCount(LIST_ROWS);
 	await expect(page.getByText('Nothing pinned yet')).not.toBeVisible();
 
 	// The first screen: the header, the section chips and the first row.
 	const chip = page.getByRole('button', { name: `All ${PACK.dishes.length}` });
 	await expect(chip).toHaveAttribute('aria-pressed', 'true');
 	expect((await chip.boundingBox())!.y + 44).toBeLessThanOrEqual(844);
-	// Arm's length: at least two whole dishes on the first screen, not one cut off.
-	const second = (await rows(page).nth(1).boundingBox())!;
-	expect(second.y + second.height, 'the second row ends inside the first 844px').toBeLessThanOrEqual(844);
+	// Arm's length: the menu opens on the Tasting menus block, and the first screen holds the first
+	// menu's name and two whole things it serves, not one cut off.
+	const firstMenu = page.locator('.study .tmenu').first();
+	expect((await firstMenu.locator('h4').boundingBox())!.y).toBeLessThan(844);
+	const second = (await firstMenu.locator('.titem').nth(1).boundingBox())!;
+	expect(second.y + second.height, 'the second item ends inside the first 844px').toBeLessThanOrEqual(844);
 	// The day and night control is one small round button in the top corner:
 	// visible, tappable, taking no room in the layout, and it switches service.
 	const choice = page.locator('#oot-service-toolbar').getByRole('button', { name: /Switch to (day|night) service/ });
@@ -71,10 +80,11 @@ test('the study view is what /menu opens on, short, with the first rows on the f
 	await choice.click();
 	await expect.poll(() => page.evaluate(() => document.documentElement.getAttribute('data-service'))).not.toBe(before);
 	await choice.click();
-	await expect(page.getByRole('button', { name: 'Tasting menus 4' })).toBeVisible();
+	await expect(page.getByRole('button', { name: 'Tasting menus 2' })).toBeVisible();
 
 	const m = await page.evaluate(() => ({ h: document.scrollingElement!.scrollHeight, w: document.scrollingElement!.scrollWidth }));
-	expect(m.h, 'the page with the house loaded, no card open (235,732 before)').toBeLessThan(9000);
+	// The two tasting menus at the top, every course printed, add about 2,000px (5 October 2026).
+	expect(m.h, 'the page with the house loaded, no card open (235,732 before)').toBeLessThan(12000);
 	expect(m.w).toBeLessThanOrEqual(390);
 
 	// Every control in the study view at least 44px, every row at least 56px.
@@ -334,7 +344,8 @@ test('offline with the worker installed, the study view, a card and its links al
 	await context.setOffline(true);
 	await page.reload();
 	await page.waitForSelector('html[data-hydrated]');
-	await expect(rows(page)).toHaveCount(PACK.dishes.length, { timeout: 15_000 });
+	await expect(rows(page)).toHaveCount(LIST_ROWS, { timeout: 15_000 });
+	await expect(page.locator('.study .tmenu')).toHaveCount(2);
 	await row(page, 'Eggs Hussarde').click();
 	await expect(card(page).locator('h2')).toHaveText('Eggs Hussarde');
 	await expect(card(page).locator('.here .term').first()).toBeVisible({ timeout: 20_000 });

@@ -9,6 +9,19 @@
   the service note, the videos to watch, the links, the drills and the
   quiet Edit.
 
+  A DRINK OR A WINE opens here too, from a tasting's course: the same card
+  with what a pour has (how to say it, its lines, what it is made of, its
+  spec or its wine, what to offer next, where the tastings pour it and its
+  room's link), and without what only a dish has (the pairing, the bottle
+  tiers, the links into the Library, the section drill, Edit).
+
+  FROM A TASTING, the card says the tasting first: under the name, the
+  menu's name and price, the course the item is on as printed with the
+  course's own pour ("Third Course. Paired with Charles Lafitte Brut
+  Champagne FR NV [4oz]"), and what the menu prints about its drinks
+  (study.ts tastingHere). The dish's pour off the list leaves the first
+  screen, and its block further down is headed as the à la carte pour.
+
   KEPT ONLY. Every value drawn here comes through study.ts's readers, which
   return a mark only when a person kept it. A mark of hers that nobody kept
   is never drawn; one line says there is something to look over behind Edit.
@@ -20,7 +33,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { onMount, tick } from 'svelte';
-	import type { House, HouseDish, Pairing } from '$lib/house/house-schema';
+	import type { House, HouseCocktail, HouseDish, HouseItem, HouseWine, Pairing } from '$lib/house/house-schema';
 	import {
 		findItem,
 		hasUnkept,
@@ -35,6 +48,9 @@
 		say,
 		bottlesFor,
 		cardVideos,
+		pairsFor,
+		tastingHere,
+		tastingPlaces,
 		type StudyRow
 	} from '$lib/study';
 	import { roomHref, ROOM_NAMES, type Room } from '$lib/wing-links';
@@ -59,7 +75,8 @@
 		onGo
 	}: {
 		current: House;
-		dish: HouseDish;
+		/** The item the card is about: a dish from the list, or a drink or a wine a tasting names. */
+		dish: HouseItem;
 		/** The rows the card was opened from, in their order: the position, Previous and Next walk this. */
 		list: readonly StudyRow[];
 		searching?: boolean;
@@ -83,23 +100,52 @@
 	const position = $derived.by(() => {
 		if (idx < 0) return '';
 		if (searching) return say('found', { i: idx + 1, n: list.length });
-		const inSection = list.filter((r) => r.section === dish.section);
+		/* The section the row was filed under: the dish's own, or the tasting a card was opened from. */
+		const section = list[idx].section;
+		const inSection = list.filter((r) => r.section === section);
 		const j = inSection.findIndex((r) => r.id === dish.id);
-		return say('position', { i: j + 1, n: inSection.length, section: dish.section });
+		return say('position', { i: j + 1, n: inSection.length, section });
 	});
+	/* Opened from a tasting's menu (its rows are filed under the menu's name): that tasting's course and
+	   pour for this item, right under the name, and the dish's own pour off the list kept off the first
+	   screen and named for what it is, so the guest is never quoted a priced bottle for an included pour. */
+	const here = $derived(idx >= 0 && !searching ? tastingHere(current, list[idx].section, dish.id) : null);
+	const isDish = $derived(dish.kind === 'dish');
+	const signature = $derived(dish.kind === 'dish' && !!(dish as HouseDish).signature);
 
 	const price = $derived(priceLine(dish, current));
+	/* A pour the house prices only by where the tastings pour it ('Poured on the ..., 4 oz') is a
+	   sentence, not a price tag: it sits under the name, never squeezed beside it. */
+	const pouredOn = $derived(/^Poured on /.test(price));
+	const priceTag = $derived(pouredOn ? '' : price);
 	const readOn = $derived(readOnWords(current.menusReadOn));
 	const sayIt = $derived((kept<string>(dish.say) ?? '').trim());
 	const lines = $derived(linesShown(dish));
 	const notes = $derived(notesFor(dish));
 	const parts = $derived(partsShown(dish));
-	const pairing = $derived(kept<Pairing>(dish.pairing));
+	const pairing = $derived(dish.kind === 'dish' ? kept<Pairing>((dish as HouseDish).pairing) : undefined);
+	/* A pour's own facts, plain fields as the house holds them: a cocktail's spec, glass and garnish; a wine's producer, region and grapes, and how to serve it when kept. */
+	const pourFacts = $derived.by<Array<[string, string]>>(() => {
+		if (dish.kind === 'cocktail') {
+			const c = dish as HouseCocktail;
+			return ([['Spec', (c.spec ?? []).map((x) => x.trim()).filter(Boolean).join(', ')], ['Glass', (c.glass ?? '').trim()], ['Garnish', (c.garnish ?? '').trim()]] as Array<[string, string]>).filter(([, v]) => v);
+		}
+		if (dish.kind === 'wine') {
+			const w = dish as HouseWine;
+			return ([['Producer', (w.producer ?? '').trim()], ['Region', (w.region ?? '').trim()], ['Grapes', (w.grapes ?? []).join(', ')], ['Serve', (kept<string>(w.serve) ?? '').trim()]] as Array<[string, string]>).filter(([, v]) => v);
+		}
+		return [];
+	});
+	/* What to offer after a drink, or the dishes a wine is the first pick for, from kept marks only. */
+	const pourNext = $derived(isDish ? [] : pairsFor(current, dish));
+	/* Where the tastings serve it, by course as printed. */
+	const places = $derived(tastingPlaces(current, dish.id));
+	/* The room a drink or a wine lives in, for its own link. */
+	const ownRoom = $derived<Room | ''>(dish.kind === 'wine' ? 'codex' : dish.kind === 'cocktail' ? 'ledger' : '');
 	const lineup = $derived(lineupFor(current, dish.id));
 	const hers = $derived(hasUnkept(dish));
 	const onShared = sharedOrigin(base);
 
-	const nameOf = (id: string) => (id ? (findItem(current, id)?.name ?? '').trim() : '');
 	const wine = $derived(pairing ? findItem(current, pairing.wineId) : undefined);
 	const winePrice = $derived(wine ? priceLine(wine, current) : '');
 	const second = $derived(pairing ? findItem(current, pairing.secondId) : undefined);
@@ -116,11 +162,13 @@
 	const offNote = (room: Room, id: string) =>
 		onShared && !hrefIn(room, id) && roomHref(room, id, base, current) ? say('offlineRoom', { room: ROOM_NAMES[room] }) : '';
 
-	/* The section's floor for its own drill: four dishes with something kept to ask about. */
+	/* The section's floor for its own drill: four dishes with something kept to ask about. A drink or a wine has no section drill here. */
 	const drillable = $derived(
-		itemsOfKind(current, 'dish').filter(
-			(d) => d.section === dish.section && (kept(d.parts) || kept(d.lines) || kept((d as HouseDish).pairing))
-		).length
+		isDish
+			? itemsOfKind(current, 'dish').filter(
+					(d) => d.section === dish.section && (kept(d.parts) || kept(d.lines) || kept((d as HouseDish).pairing))
+				).length
+			: 0
 	);
 
 	let open20 = $state(false);
@@ -144,12 +192,6 @@
 
 	const principleWords = (p: string[]) => p.join(', ');
 	const paragraphs = (s: string) => s.split(/\n\s*\n|\n/).map((x) => x.trim()).filter(Boolean);
-	const tastingLine = (t: (typeof lineup.tastings)[number]) => {
-		const pour = t.course.pourId ? nameOf(t.course.pourId) : '';
-		const text = t.course.pourText?.trim() ?? '';
-		const tail = text ? text : pour;
-		return `On the ${t.tasting.name}, course ${t.course.n}${tail ? ', with ' + tail : ''}`;
-	};
 </script>
 
 <article class="card" aria-labelledby="card-h">
@@ -162,13 +204,22 @@
 	</div>
 
 	<p class="eyebrow">
-		{[dish.section, dish.signature ? 'Signature' : '', is86(dish.id) ? '86 tonight' : ''].filter(Boolean).join(' · ')}
+		{[dish.section, signature ? 'Signature' : '', is86(dish.id) ? '86 tonight' : ''].filter(Boolean).join(' · ')}
 	</p>
 	<div class="namerow">
 		<h2 id="card-h" tabindex="-1" bind:this={heading}>{dish.name}</h2>
-		{#if price}<span class="price">{price}</span>{/if}
+		{#if priceTag}<span class="price">{priceTag}</span>{/if}
 	</div>
-	{#if price && readOn}<p class="soft small">{say('asPrinted', { date: readOn })}</p>{/if}
+	{#if pouredOn}<p class="soft pouredon">{price}</p>{/if}
+	{#if priceTag && readOn}<p class="soft small">{say('asPrinted', { date: readOn })}</p>{/if}
+
+	{#if here}
+		<div class="tcourse" data-tasting={here.id}>
+			<p class="eyebrow">{here.name}{#if here.price}{' · '}{here.price}{/if}</p>
+			{#each here.lines as l, i (i)}<p class="tcline">{l}</p>{/each}
+			{#if here.terms}<p class="soft small">{here.terms}</p>{/if}
+		</div>
+	{/if}
 
 	{#if sayIt}
 		<p class="eyebrow">{say('say')}</p>
@@ -180,7 +231,7 @@
 		<p class="ten">{lines.s10}</p>
 	{/if}
 
-	{#if pairing && (wine || zero)}
+	{#if pairing && (wine || zero) && !here}
 		<p class="pourline">
 			{#if wine}
 				Pour:
@@ -223,7 +274,7 @@
 
 	{#if pairing && (wine || second || zero || pairing.stepUp || bottles.length)}
 		<section class="block" aria-labelledby="pour-h">
-			<h3 class="blockhead" id="pour-h">{say('pour')}</h3>
+			<h3 class="blockhead" id="pour-h">{here ? say('pourCarte') : say('pour')}</h3>
 			<dl class="pairs">
 				{#if wine}
 					<div>
@@ -290,9 +341,19 @@
 			{/if}
 		</section>
 	{/if}
-	{#each lineup.tastings.filter((t) => t.as === 'dish') as t (t.tasting.id + t.course.n)}
-		<p class="soft tasting">{tastingLine(t)}</p>
+	{#each places as p (p)}
+		<p class="soft tasting">{p}</p>
 	{/each}
+
+	{#if pourFacts.length || pourNext.length}
+		<section class="block" aria-labelledby="pourfacts-h">
+			<h3 class="blockhead" id="pourfacts-h">{dish.kind === 'wine' ? say('theWine') : say('inGlass')}</h3>
+			<dl class="pairs">
+				{#each pourFacts as [label, text] (label)}<div><dt>{label}</dt><dd>{text}</dd></div>{/each}
+				{#each pourNext as [label, text] (label)}<div><dt>{label}</dt><dd>{text}</dd></div>{/each}
+			</dl>
+		</section>
+	{/if}
 
 	<MadeOf {current} item={dish} {linkable} />
 
@@ -388,9 +449,22 @@
 		</section>
 	{/if}
 
-	{#key dish.id}
-		<StudyLinks {current} {dish} {recipeSlug} housePour={wine?.name ?? ''} />
-	{/key}
+	{#if dish.kind === 'dish'}
+		{#key dish.id}
+			<StudyLinks {current} dish={dish as HouseDish} {recipeSlug} housePour={wine?.name ?? ''} />
+		{/key}
+	{/if}
+
+	{#if onShared && ownRoom}
+		<section class="block" aria-labelledby="ownroom-h">
+			<h3 class="blockhead" id="ownroom-h">{say('rooms')}</h3>
+			<ul class="plain">
+				<li>
+					{#if hrefIn(ownRoom, dish.id)}<a href={hrefIn(ownRoom, dish.id)}>{say('inRoom', { name: dish.name, room: ROOM_NAMES[ownRoom] })}</a>{:else}{say('inRoom', { name: dish.name, room: ROOM_NAMES[ownRoom] })} <span class="soft">{offNote(ownRoom, dish.id)}</span>{/if}
+				</li>
+			</ul>
+		</section>
+	{/if}
 
 	{#if onShared && (wine || zero)}
 		<section class="block" aria-labelledby="rooms-h">
@@ -419,12 +493,12 @@
 			<button class="chip" onclick={() => onGo('mode=drill')}>{say('drillWhole')}</button>
 		{/if}
 	</div>
-	{#if drillable < 4}<p class="soft small">{say('tooSmall', { section: dish.section })}</p>{/if}
+	{#if isDish && drillable < 4}<p class="soft small">{say('tooSmall', { section: dish.section })}</p>{/if}
 
 	{#if hers}<p class="soft">{say('hers')}</p>{/if}
 
 	<div class="foot">
-		<button class="chip ghost" onclick={() => onEdit(dish.id)}>{say('edit')}<span class="vh"> {dish.name}</span></button>
+		{#if isDish}<button class="chip ghost" onclick={() => onEdit(dish.id)}>{say('edit')}<span class="vh"> {dish.name}</span></button>{/if}
 		<div class="steps">
 			{#if prev}<button class="chip" onclick={() => onStep(prev.id)}>{say('prev', { name: prev.name })}</button>{/if}
 			{#if next}<button class="chip" onclick={() => onStep(next.id)}>{say('next', { name: next.name })}</button>{/if}
@@ -463,6 +537,9 @@
 		border-left: 2px solid var(--turmeric-deep); padding-left: 12px;
 	}
 	.pourline { margin: 6px 0 4px; line-height: 1.5; }
+	.tcourse { margin: 8px 0 4px; padding-left: 12px; border-left: 2px solid var(--turmeric-deep); }
+	.tcourse .eyebrow { margin-top: 0; }
+	.tcline { margin: 2px 0; font-size: 1.05rem; line-height: 1.5; color: var(--ink); }
 	.pourline a, .pairs a, .plain a { color: var(--ink); text-underline-offset: 3px; }
 	.toggles { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
 	.line { margin: 6px 0; line-height: 1.55; max-width: var(--measure); }

@@ -49,7 +49,8 @@ test('the Videos entry lists every video by topic, the house first, each a link 
 	await expect(entry.locator('summary')).toHaveText('Videos (3)');
 	// A disclosure at the foot of the list: closed, and the first screen is still the menu's.
 	await expect(entry).not.toHaveAttribute('open', '');
-	const second = (await page.locator('.study .row').nth(1).boundingBox())!;
+	// The menu's first tappable things: the tasting at the top (its dish and its pour), then the rows.
+	const second = (await page.locator('.study .titem, .study .row').nth(1).boundingBox())!;
 	expect(second.y + second.height).toBeLessThanOrEqual(844);
 
 	await entry.locator('summary').click();
