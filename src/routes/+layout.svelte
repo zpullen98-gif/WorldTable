@@ -355,7 +355,6 @@
     </picture>
 	<div class="shell head-inner">
 		<div class="brand">
-            <p class="house-signature" data-print="hide">Outside Of Time Hospitality</p>
 			<!-- The site name is the page's h1 only on the index. On a recipe or a
 			     chapter the dish/chapter title is the document's real heading, and
 			     two competing h1s make the outline meaningless to a screen reader. -->
@@ -372,7 +371,6 @@
 				from it. Do not hedge it back to "most dishes serve four" - that is the
 				same claim in a softer voice, on 2,176 prerendered pages.
 			-->
-			<p class="eyebrow">An interactive culinary compendium: recipes, lexicon and study</p>
 		</div>
 		<!--
 			The three counts that used to sit here (1,844 recipes, 171 chapters,
@@ -812,8 +810,6 @@
         .house-masthead .brandline { padding: 0; font-family: var(--house-display); font-size: clamp(1.75rem, 3.8vw, 2.6rem); font-weight: 500; line-height: 1.2; letter-spacing: .03em; color: #f1d89e; text-shadow: 0 2px 16px #000c; }
         .house-masthead .brandline em { font-style: normal; color: inherit; }
         .house-masthead .brand p { color: #eee3cb; }
-        .house-masthead .house-signature { margin: 0 0 14px; font-family: var(--house-display); font-size: .69rem; letter-spacing: .22em; }
-        .house-masthead .eyebrow { font-size: .75rem; letter-spacing: .08em; margin-top: 14px; }
         .house-home .head-inner { align-items: flex-start; min-height: clamp(400px, 53vw, 610px); padding-top: 40px; }
         .house-home .brandline { font-size: clamp(2.15rem, 5.8vw, 4.1rem); }
         .house-home .house-art img { opacity: 1; object-position: 50% 58%; }
@@ -828,8 +824,6 @@
         .house-masthead { margin: 0; border-inline: 0; }
         .head-inner { min-height: 150px; padding: 32px 20px 22px; }
         .house-masthead { min-height: 150px; }
-        .house-masthead .house-signature { font-size: .6rem; letter-spacing: .17em; padding-inline: 36px; }
-        .house-masthead .eyebrow { max-width: 32ch; margin: 12px auto 0; line-height: 1.5; letter-spacing: .025em; }
         .house-masthead .brandline { font-size: clamp(1.6rem, 6.4vw, 2.25rem); }
         .house-home .brandline { font-size: clamp(2rem, 8.5vw, 3rem); }
         .house-home .head-inner { min-height: 440px; padding-top: 36px; }
@@ -839,7 +833,6 @@
            The full welcome remains on Home; every touch target stays 44px. */
         .house-working { min-height: 64px; }
         .house-working .head-inner { min-height: 64px; padding-block: 9px; }
-        .house-working .house-signature, .house-working .eyebrow { display: none; }
         .house-working .brandline { margin: 0; font-size: 1.65rem; }
         .house-working .brandline a { display: inline-flex; align-items: center; gap: .22em; min-height: 44px; }
         /* Five words in one row at 390 and 375 (design 3.2), each word whole
