@@ -10,6 +10,8 @@ import {
 	WATCH_Q,
 	bottlesFor,
 	cardVideos,
+	compareRows,
+	componentBlocks,
 	fold,
 	inMeal,
 	itemCards,
@@ -31,6 +33,7 @@ import {
 	studyVideos
 } from './study';
 import { DASH } from './house/house-lines';
+import { compareHref, ledgerSlug } from './wing-links';
 
 const PACK: House = JSON.parse(readFileSync('static/shared/packs/brennans-new-orleans.v1.oothouse.json', 'utf8')).house;
 const MIN = fixture as unknown as House;
@@ -284,5 +287,52 @@ describe('the videos', () => {
 			expect(src).not.toMatch(/<iframe|<video[\s>]|autoplay|youtube-nocookie|player\.vimeo/i);
 		}
 		expect(list).toMatch(/href=\{r\.video\.url\} target="_blank" rel="noopener"/);
+	});
+});
+
+describe('what it is made of, and what to compare it with', () => {
+	it('groups the item\'s components by kind with only what was kept, each with its videos', () => {
+		const blocks = componentBlocks(MIN, 'd-chicken1');
+		expect(blocks.map((b) => [b.label, b.rows.map((r) => r.name)])).toEqual([['Techniques', ['Salt crust']]]);
+		const [row] = blocks[0].rows;
+		expect(row.say).toBe('SALT krust.');
+		expect(row.paragraphs).toHaveLength(2);
+		expect(row.card).toEqual({ front: 'What does the salt crust do?', back: expect.stringContaining('own steam') });
+		expect(row.videos.map((v) => v.video.id)).toEqual(['v-saltbak1']);
+		const hers = JSON.parse(JSON.stringify(MIN)) as House;
+		hers.components![0].explain!.by = 'maitre';
+		hers.components![0].card!.by = 'maitre';
+		const shown = componentBlocks(hers, 'd-chicken1')[0].rows[0];
+		expect(shown.name).toBe('Salt crust');
+		expect(shown.paragraphs).toEqual([]);
+		expect(shown.card).toBeNull();
+		expect(componentBlocks(MIN, 'w-lantern1')).toEqual([]);
+	});
+
+	it('draws a comparison as words with its link: a Table recipe always, the other rooms on the shared origin only, a classic never', () => {
+		const h = JSON.parse(JSON.stringify(MIN)) as House;
+		h.dishes[0].compare!.value = [
+			{ app: 'table', ref: 'recipe/sauce-hollandaise', label: 'The Library hollandaise', same: 'S', different: 'D' },
+			{ app: 'classic', ref: '', label: 'Eggs Benedict', same: 'S', different: 'D' }
+		];
+		expect(compareRows(h, h.dishes[0], '').map((r) => [r.label, r.href, r.room])).toEqual([
+			['The Library hollandaise', '/recipe/sauce-hollandaise', null],
+			['Eggs Benedict', '', null]
+		]);
+		h.dishes[0].compare!.value = [
+			{ app: 'ledger', ref: 'Tom & Jerry', label: 'The canon', same: 'S', different: 'D' },
+			{ app: 'codex', ref: 'w-lantern1', label: 'Our white', same: 'S', different: 'D' }
+		];
+		expect(compareRows(h, h.dishes[0], '').map((r) => r.href)).toEqual(['', '']);
+		expect(compareRows(h, h.dishes[0], '/table').map((r) => [r.href, r.room])).toEqual([
+			['/ledger/#/library/tom-and-jerry', 'ledger'],
+			['/codex/#wine=w-lantern1', 'codex']
+		]);
+		expect(compareHref({ app: 'codex', ref: 'Riesling' }, '/table', h)).toEqual({ href: '/codex/#ref=Riesling', room: 'codex' });
+		expect(compareHref({ app: 'table', ref: 'not a path' }, '/table', h).href).toBe('');
+		expect(ledgerSlug('Ramos Gin Fizz')).toBe('ramos-gin-fizz');
+		const hers = JSON.parse(JSON.stringify(MIN)) as House;
+		hers.dishes[0].compare!.by = 'maitre';
+		expect(compareRows(hers, hers.dishes[0], '')).toEqual([]);
 	});
 });

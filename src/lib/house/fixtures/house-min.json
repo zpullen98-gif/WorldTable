@@ -118,6 +118,14 @@
 				"by": "person",
 				"ts": 1790672400000
 			},
+			"compare": {
+				"value": [
+					{ "app": "table", "ref": "roast-chicken", "label": "The Library roast chicken", "same": "A whole bird roasted and carved, the skin crisp and the meat kept moist.", "different": "Ours is baked under a salt crust and cracked open at the table." },
+					{ "app": "classic", "ref": "", "label": "Chicken in a clay pot", "same": "The bird cooks sealed, in its own steam.", "different": "A clay pot is used again; the salt crust is broken and thrown away." }
+				],
+				"by": "person",
+				"ts": 1790672400000
+			},
 			"kept": [
 				{
 					"q": "What do I say when the table asks how long the chicken takes?",
@@ -439,8 +447,38 @@
 			"why": "See the salt crust go on and come off, so you can tell a guest what the cracking at the table means.",
 			"itemIds": ["d-chicken1"],
 			"termIds": ["x-saltbak1"],
+			"componentIds": ["c-saltcrs1"],
 			"house": false,
 			"checkedOn": "2026-09-28",
+			"ts": 1790589600000
+		}
+	],
+	"components": [
+		{
+			"id": "c-saltcrs1",
+			"kind": "technique",
+			"name": "Salt crust",
+			"say": { "value": "SALT krust.", "by": "person", "ts": 1790672400000 },
+			"explain": {
+				"value": "A salt crust is coarse salt bound with a little water and packed round a whole bird before it goes into the oven.\n\nThe crust sets hard, holds the steam in and seasons the skin through, so the meat stays moist. At the Lantern the crust is cracked at the table, which is the moment a guest remembers.",
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"card": {
+				"value": { "front": "What does the salt crust do?", "back": "It seals the bird so it cooks in its own steam and stays moist; the crust is cracked at the table and never eaten." },
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"itemIds": ["d-chicken1"],
+			"termIds": ["x-saltbak1"],
+			"ts": 1790589600000
+		},
+		{
+			"id": "c-verjus01",
+			"kind": "ingredient",
+			"name": "Verjus",
+			"itemIds": ["b-verjus01"],
+			"termIds": ["x-verjus01"],
 			"ts": 1790589600000
 		}
 	],

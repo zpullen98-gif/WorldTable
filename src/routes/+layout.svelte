@@ -197,7 +197,7 @@
 		['/quizzes', ['/quizzes', '/menu/quiz', '/service/deck/test', '/service/deck/say', '/service/deck/lineup', '/service/drill', '/practise']],
 		['/flashcards', ['/flashcards', '/service/deck/study', '/service/deck']],
 		['/library', ['/library', '/recipes', '/recipe/', '/chapter/', '/family', '/lexicon', '/pantry', '/technique', '/plates', '/service', '/safety', '/palate', '/study']],
-		['', ['/level', '/menu']]
+		['', ['/level', '/menu', '/kitchen']]
 	];
 
 	// bareHtmlPath: page.url keeps the .html spelling a reader may have arrived
@@ -211,8 +211,8 @@
 	 * chapter rails and the home page all carried a floating control for a
 	 * thing none of them do. The owner's rule: the timer belongs to the
 	 * cooking process, so it is offered where cooking happens and nowhere else.
-	 * /recipe/ and /family/ are the two surfaces that render a method, and
-	 * cook mode lives inside them.
+	 * /recipe/ and /family/ render a method, and so does /kitchen (Cook at
+	 * home's dish page); cook mode lives inside all three.
 	 *
 	 * A RUNNING timer still follows you everywhere, which is not a hedge: the
 	 * bar is the only thing in the app that rings, there is no OS notification
@@ -230,7 +230,7 @@
 	 * an error page is precisely the thing being taken off the home page.
 	 */
 	const cooking = $derived(
-		page.status < 400 && (path.startsWith('/recipe/') || path.startsWith('/family/'))
+		page.status < 400 && (path.startsWith('/recipe/') || path.startsWith('/family/') || path === '/kitchen')
 	);
 
 	/* The one number worth carrying in the chrome: the cards due today at the

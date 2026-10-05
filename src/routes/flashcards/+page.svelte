@@ -3,9 +3,12 @@
   front of the app's three card engines, one deck screen, one card screen.
 
     the root      Due today first and alone, then My restaurant (the whole
-                  menu, a deck per section, My weak ones, Part by part), the
-                  level's Floor Deck sections, Words (the Lexicon) and
-                  Reference cards (the whole Floor Deck, Keeps slipping)
+                  menu, a deck per section, My weak ones, Part by part), What
+                  it's made of (Ingredients, Techniques, Stories: one card per
+                  component), the level's Floor Deck sections, Words (the
+                  Lexicon) and Reference cards (the whole Floor Deck, Keeps
+                  slipping); a study card's Flash these components opens
+                  item-components:{id}
     a deck        ?deck={id}: its name, "{n} cards · {m} learnt", Narrow this
                   deck where the engine has a filter, and Start
     the run       ?deck={id}&run=1: the card screen (DeckFrame.svelte), then
@@ -28,7 +31,8 @@
   WHAT A GRADE WRITES, by the engine the card came from, nothing new:
     a house dish card   card-item in the house drill slot, as the study
                         view's flash cards always wrote (Part by part:
-                        card-{kind})
+                        card-{kind}; a component's card: card-component
+                        under the component's id)
     a Floor Deck card   Got it records `close` (FLIP_GRADES.had), Again
                         records `missed` and sends the card round once more,
                         once per card per local day (flipRecordable)
@@ -50,6 +54,7 @@
 	import { drilledKey, markDrilled } from '$lib/house-drilled';
 	import { itemCards, latestVerdicts, mealsOf, inMeal, findItem, say, type ItemCard } from '$lib/study';
 	import { buildFlashcards, type Flashcard } from '$lib/house/house-drills';
+	import { COMPONENT_KINDS, COMPONENT_LABELS, componentsFor, type ComponentKind } from '$lib/house/house-schema';
 	import { shuffleWith } from '$lib/house-drill-round';
 	import { FLIP_GRADES, deckLog, flipRecordable, liveSections, pickSession, scopeFromSearch, slipping } from '$lib/floor-deck';
 	import { metSlugs } from '$lib/repertoire';
@@ -146,7 +151,14 @@
 		}
 		return order.map((s) => ({ section: s, count: count.get(s) ?? 0 }));
 	});
-	const parts = $derived(current ? buildFlashcards(current) : []);
+	const engineCards = $derived(current ? buildFlashcards(current) : []);
+	/* Part by part is the items' own cards; a component's card (one per component, shared by every
+	   item that uses it) is dealt by the component decks: components, components:{kind} and
+	   item-components:{id}, each card a k: reference under the component's id. */
+	const parts = $derived(engineCards.filter((c) => c.kind !== 'component'));
+	const compCards = $derived(new Map(engineCards.filter((c) => c.kind === 'component').map((c) => [c.itemId, c])));
+	const compKind = $derived(new Map((current?.components ?? []).map((c) => [c.id, c.kind])));
+	const compRefs = (ids: string[]) => ids.filter((id) => compCards.has(id)).map((id) => `k:${id}`);
 	const weakIds = $derived(houseCards.filter((c) => verdicts.get(c.itemId) === 'again').map((c) => c.itemId));
 	const lexAt = (n: DeckLevel) => levels.data?.items.lexicon[String(n)] ?? [];
 	/* The whole Lexicon is every term it holds (design 3.7), placed at a level
@@ -172,6 +184,9 @@
 		if (id === 'lexicon-all') return 'The whole Lexicon';
 		if (id.startsWith('menu:')) return id.slice(5);
 		if (id.startsWith('item:')) return (current && findItem(current, id.slice(5))?.name) || 'One dish';
+		if (id === 'components') return 'Every component';
+		if (id.startsWith('components:')) return COMPONENT_LABELS[id.slice(11) as ComponentKind] ?? 'Components';
+		if (id.startsWith('item-components:')) return say('deckItem', { name: (current && findItem(current, id.slice(16))?.name) || 'One item' });
 		if (id.startsWith('deck:')) return sectionTitle(id.slice(5));
 		return 'A deck';
 	}
@@ -196,6 +211,13 @@
 			];
 		}
 		if (id === 'menu-parts') return parts.map((_, i) => `p:${i}`);
+		if (id === 'components') return compRefs([...compCards.keys()]);
+		if (id.startsWith('components:')) return compRefs([...compCards.keys()].filter((c) => compKind.get(c) === id.slice(11)));
+		/* The item's components in the order its card shows them: Ingredients, Techniques, Stories. */
+		if (id.startsWith('item-components:')) {
+			const mine = current ? componentsFor(current, id.slice(16)) : [];
+			return compRefs(COMPONENT_KINDS.flatMap((k) => mine.filter((c) => c.kind === k).map((c) => c.id)));
+		}
 		if (id === 'deck-all') return deck ? deck.cards.map((c) => `c:${c.id}`) : [];
 		if (id === 'deck-slipping') return slipped.map((c) => `c:${c.id}`);
 		if (id.startsWith('deck:')) {
@@ -217,7 +239,7 @@
 			else if (k === 'p') {
 				const card = parts[Number(id)];
 				if (card && current && today.drilled.some((e) => e.k === drilledKey(current.id, card.itemId, 'card-' + card.kind) && e.v !== 'missed')) n++;
-			}
+			} else if (k === 'k' && current && today.drilled.some((e) => e.k === drilledKey(current.id, id, 'card-component') && e.v !== 'missed')) n++;
 		}
 		return n;
 	}
@@ -241,7 +263,7 @@
 		if (id === 'misses') {
 			const p = new URLSearchParams(opts.search ?? location.search);
 			const list = (k: string) => (p.get(k) ?? '').split(',').map((s) => s.trim()).filter(Boolean);
-			return [...list('h').map((x) => `h:${x}`), ...list('c').map((x) => `c:${x}`), ...list('t').map((x) => `t:${x}`)];
+			return [...list('h').map((x) => `h:${x}`), ...list('c').map((x) => `c:${x}`), ...list('t').map((x) => `t:${x}`), ...list('k').map((x) => `k:${x}`)];
 		}
 		if (id.startsWith('deck:') && deck) {
 			const key = id.slice(5);
@@ -255,7 +277,7 @@
 			const picked = pickSession(deck, session.drillLog, now, { scope, levels: lv, focus }).map((c) => `c:${c.id}`);
 			return withCard(picked, opts.card);
 		}
-		if (id.startsWith('item:')) return members(id, opts);
+		if (id.startsWith('item:') || id.startsWith('item-components:')) return members(id, opts);
 		return shuffleWith(members(id, opts), Math.random);
 	}
 
@@ -318,7 +340,7 @@
 		const missed = [...(fc.missed ?? [])];
 		if (r && current && r.kind === 'h') {
 			markDrilled(drilledKey(current.id, r.card.itemId, 'card-item'), got ? 'met' : 'missed');
-		} else if (r && current && r.kind === 'p') {
+		} else if (r && current && (r.kind === 'p' || r.kind === 'k')) {
 			markDrilled(drilledKey(current.id, r.card.itemId, 'card-' + r.card.kind), got ? 'met' : 'missed');
 		} else if (r && r.kind === 'c' && deck) {
 			if (flipRecordable(deckLog(session.drillLog, deck.cards), r.card.id, Date.now())) {
@@ -342,13 +364,14 @@
 		const hs = ids('h');
 		const cs = ids('c');
 		const ts = ids('t');
+		const ks = ids('k');
 		// Part by part's cards go back as their dish's card: one dish, one card to restudy.
 		for (const p of ids('p')) {
 			const card = parts[Number(p)];
 			if (card && !hs.includes(card.itemId) && houseCards.some((c) => c.itemId === card.itemId)) hs.push(card.itemId);
 		}
-		const q = [hs.length ? `h=${hs.join(',')}` : '', cs.length ? `c=${cs.join(',')}` : '', ts.length ? `t=${ts.join(',')}` : ''].filter(Boolean).join('&');
-		const refs = [...hs.map((x) => `h:${x}`), ...cs.map((x) => `c:${x}`), ...ts.map((x) => `t:${x}`)];
+		const q = [hs.length ? `h=${hs.join(',')}` : '', cs.length ? `c=${cs.join(',')}` : '', ts.length ? `t=${ts.join(',')}` : '', ks.length ? `k=${ks.join(',')}` : ''].filter(Boolean).join('&');
+		const refs = [...hs.map((x) => `h:${x}`), ...cs.map((x) => `c:${x}`), ...ts.map((x) => `t:${x}`), ...ks.map((x) => `k:${x}`)];
 		if (ts.length) needLexicon();
 		nav.pushShallow(`${base}/flashcards?deck=misses&run=1&${q}`, { fc: runState('misses', refs) });
 		void focusFrame();
@@ -408,6 +431,7 @@
 	type Resolved =
 		| { kind: 'h'; card: ItemCard }
 		| { kind: 'p'; card: Flashcard }
+		| { kind: 'k'; card: Flashcard }
 		| { kind: 'c'; card: DeckCard }
 		| { kind: 't'; entry: LexiconEntry | null; slug: string };
 
@@ -430,6 +454,10 @@
 			case 'c': {
 				const card = deckById.get(id);
 				return card ? { kind: 'c', card } : null;
+			}
+			case 'k': {
+				const card = compCards.get(id);
+				return card ? { kind: 'k', card } : null;
 			}
 			case 't':
 				return { kind: 't', entry: lexBySlug.get(id) ?? null, slug: id };
@@ -471,6 +499,8 @@
 		if (parts.length) out.push(row('menu-parts'));
 		return out;
 	});
+	/* What the menu is made of: a deck per kind of component, each only when it holds a card. */
+	const componentRows = $derived.by<Row[]>(() => (current ? COMPONENT_KINDS.map((k) => row(`components:${k}`)).filter((r) => r.refs.length) : []));
 	const levelRows = $derived.by<Row[]>(() => sections.map((s) => row(`deck:${s.key}`, s.title)).filter((r) => r.refs.length));
 	const wordRows = $derived.by<Row[]>(() => [all ? row('lexicon-all') : row('lexicon')].filter((r) => r.refs.length));
 	const referenceRows = $derived.by<Row[]>(() => [row('deck-all'), ...(slipped.length ? [row('deck-slipping')] : [])].filter((r) => r.refs.length));
@@ -519,6 +549,18 @@
 		{:else}
 			<nav class="quiet" aria-labelledby="fc-house">
 				{#each restaurantRows as r (r.id)}
+					<button type="button" class="door" data-deck={r.id} onclick={() => openDeck(r.id)}>
+						<span class="door-name">{r.name}</span>
+						<span class="door-line">{line(r)}</span>
+					</button>
+				{/each}
+			</nav>
+		{/if}
+
+		{#if componentRows.length}
+			<h2 class="group" id="fc-made">{say('madeOf')}</h2>
+			<nav class="quiet" aria-labelledby="fc-made">
+				{#each componentRows as r (r.id)}
 					<button type="button" class="door" data-deck={r.id} onclick={() => openDeck(r.id)}>
 						<span class="door-name">{r.name}</span>
 						<span class="door-line">{line(r)}</span>
@@ -649,6 +691,16 @@
 								{/if}
 							</div>
 						{/if}
+					{:else if shown.kind === 'k'}
+						<div class="flash kcard">
+							<p class="kkind">{COMPONENT_LABELS[compKind.get(shown.card.itemId) ?? 'ingredient']}</p>
+							<p class="term">{shown.card.front}</p>
+							{#if fc.flipped}
+								<p class="def back">{shown.card.back}</p>
+							{:else}
+								<p class="def">Say it out loud, then flip.</p>
+							{/if}
+						</div>
 					{:else if shown.kind === 'p'}
 						<div class="flash pcard">
 							<p class="term">{shown.card.front}</p>
@@ -826,5 +878,12 @@
 	}
 	.flash .def.back {
 		font-size: 18px;
+	}
+	.flash .kkind {
+		font-size: var(--t-micro);
+		letter-spacing: var(--tracking-eyebrow);
+		text-transform: uppercase;
+		color: var(--muted);
+		margin: 0 0 4px;
 	}
 </style>

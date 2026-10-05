@@ -42,7 +42,7 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    before its build, never ahead of the clock. The 06:30 edition of 4 October 2026 carries the
    master review of My Menu (the chef's, the bartender's and the sommelier's overrides, recorded in
    research/master-review-2026-10-04.md) and the first videos, each filed by a video:+ override. */
-export const EDITION_BUILT_AT = '2026-10-04T06:30:00.000Z';
+export const EDITION_BUILT_AT = '2026-10-04T20:30:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a
@@ -151,7 +151,58 @@ export function overrideCounts(file = OVERRIDES) {
 	return out;
 }
 
-export function countProblems(house, expect = overrideCounts()) {
+/* THE COMPONENTS. The ingredients, techniques and stories behind every item arrive as fragments, one
+   JSON file per author under brennans/components/ (dishes.json, drinks.json, wines.json, videos.json),
+   in one shape: { components: [{ key, kind, name, say, explain, card: { front, back }, items, terms,
+   sources }], compare: [{ item, entries: [{ app, ref, label, same, different }] }] }, and videos.json
+   { videos: [a research video record with componentKeys, or { id, componentKeys } attaching
+   components to a video an override already files] }. BRENNANS_COMPONENTS names another directory
+   (a fixture), and the builder's --components flag does the same; an absent directory is no
+   fragments. The builder reads them through readFragments, and the counts the gates hold the pack to
+   come from the same read (fragmentCounts), so a new fragment moves the expected figures with it. */
+export function componentsDir() {
+	return process.env.BRENNANS_COMPONENTS ? path.resolve(process.env.BRENNANS_COMPONENTS) : path.join(DIR, 'components');
+}
+export const FRAGMENT_FILES = ['dishes.json', 'drinks.json', 'wines.json', 'videos.json'];
+/* Every fragment file in the directory: the four named files first in that order, then any other .json
+   in name order. Throws with the file named when one does not parse or is not a fragment. */
+export function readFragments(dir = componentsDir()) {
+	const out = { dir, files: [], components: [], compare: [], videos: [] };
+	if (!dir || !fs.existsSync(dir)) return out;
+	const names = fs.readdirSync(dir).filter((f) => f.endsWith('.json'));
+	const rank = (f) => (FRAGMENT_FILES.indexOf(f) < 0 ? 99 : FRAGMENT_FILES.indexOf(f));
+	names.sort((a, b) => rank(a) - rank(b) || (a < b ? -1 : a > b ? 1 : 0));
+	for (const f of names) {
+		const file = path.join(dir, f);
+		let data;
+		try { data = JSON.parse(fs.readFileSync(file, 'utf8')); } catch (e) { throw new Error(`${REL(file)}: does not parse as JSON (${e.message})`); }
+		if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error(`${REL(file)}: a fragment is an object`);
+		for (const k of Object.keys(data)) if (!['components', 'compare', 'videos'].includes(k)) throw new Error(`${REL(file)}: unknown key ${k}; a fragment carries components, compare or videos`);
+		out.files.push(file);
+		for (const [k, list] of [['components', data.components], ['compare', data.compare], ['videos', data.videos]]) {
+			if (list === undefined) continue;
+			if (!Array.isArray(list)) throw new Error(`${REL(file)}: ${k} is a list`);
+			list.forEach((v, i) => out[k].push({ file, at: `${REL(file)} ${k}[${i}]`, v }));
+		}
+	}
+	return out;
+}
+/* The figures the pack must show for the fragments read: components, distinct items named, items
+   compared and videos naming a component. Zero everywhere when there are none. */
+export function fragmentCounts(dir = componentsDir()) {
+	const out = { components: 0, componentItems: 0, compared: 0, componentVideos: 0 };
+	let f;
+	try { f = readFragments(dir); } catch { return out; }
+	out.components = f.components.length;
+	const items = new Set();
+	for (const c of f.components) for (const n of (c.v && Array.isArray(c.v.items) ? c.v.items : [])) items.add(foldName(String(n)));
+	out.componentItems = items.size;
+	out.compared = new Set(f.compare.map((c) => foldName(String((c.v && c.v.item) || ''))).filter(Boolean)).size;
+	out.componentVideos = new Set(f.videos.filter((x) => x.v && Array.isArray(x.v.componentKeys) && x.v.componentKeys.length).map((x) => x.v.id)).size;
+	return out;
+}
+
+export function countProblems(house, expect = overrideCounts(), frag = fragmentCounts()) {
 	const out = [];
 	const n = (list) => (Array.isArray(house[list]) ? house[list].length : 0);
 	const zero = (house.cocktails || []).filter((c) => c.zeroProof === true).length;
@@ -188,6 +239,18 @@ export function countProblems(house, expect = overrideCounts()) {
 		['the Rare vintage', /2013/],
 		['the house Champagne price', /\$30/]
 	]) if (!re.test(disputeText)) out.push(`disputes: ${name} is not among them`);
+	/* The components, read from the fragments the builder read (fragmentCounts): every component they
+	   file, every item they name carrying at least one, every item they compare carrying its
+	   comparisons, and every video they attach naming its components. No fragments, no components. */
+	const comps = Array.isArray(house.components) ? house.components : [];
+	eq('components (from the fragments)', comps.length, frag.components);
+	const withComp = new Set();
+	for (const c of comps) for (const id of c.itemIds || []) withComp.add(id);
+	eq('items carrying a component (from the fragments)', withComp.size, frag.componentItems);
+	const compared = ['dishes', 'wines', 'cocktails'].reduce((n, l) => n + (house[l] || []).filter((r) => r.compare && Array.isArray(r.compare.value) && r.compare.value.length).length, 0);
+	eq('items with comparisons (from the fragments)', compared, frag.compared);
+	const vidComp = (house.videos || []).filter((v) => Array.isArray(v.componentIds) && v.componentIds.length).length;
+	eq('videos naming a component (from the fragments)', vidComp, frag.componentVideos);
 	if (!house.menusReadOn) out.push('menusReadOn is empty');
 	if (house.began !== 'pack') out.push(`began is ${house.began}, expected pack`);
 	if (!house.pack || house.pack.version !== 1) out.push('pack stamp missing or not version 1');
@@ -417,6 +480,28 @@ export function noteHay() {
 	return parts.join('\n');
 }
 
+/* The years and the names in one text that stand in no source: `folded` is the source text folded by
+   foldName. Every year from 1600 to 2099 must be there, and every capitalised word that does not open
+   a sentence, a quote or an Asked/Answer turn is a name that must be there too. Shared by the coaching
+   notes and the components, so both are held to one rule. */
+export function sourceProblems(a, folded) {
+	const out = [];
+	for (const y of a.match(/\b(1[6-9]\d\d|20\d\d)\b/g) || []) if (folded.indexOf(y) < 0) out.push(`the year ${y} is in no source`);
+	const re = /(^|[\s(])([A-Z\u00C0-\u00DE][\w\u00C0-\u024F'\u2019.]*(?:[- ][A-Z\u00C0-\u00DE][\w\u00C0-\u024F'\u2019.]*)*)/g;
+	for (const m of a.matchAll(re)) {
+		const before = a.slice(0, m.index + m[1].length).replace(/\s+$/, '');
+		if (!before || /[.!?:\u201C"(]$/.test(before) || /\n$/.test(a.slice(0, m.index + m[1].length))) continue;
+		const name = m[2].replace(/[.'\u2019]+$/, '').replace(/[\u2019']s$/, '');
+		if (name.length < 2 || /^(I|A|OK)$/.test(name)) continue;
+		for (const piece of name.split(/[- ]/)) {
+			const f = foldName(piece.replace(/[.,;:]+$/, '').replace(/[\u2019']s$/, '').replace(/[.'\u2019]+$/, ''));
+			if (f.length < 2) continue;
+			if (folded.indexOf(f) < 0) out.push(`the name ${piece} is in no source and not in the house`);
+		}
+	}
+	return out;
+}
+
 /* The coaching-note problems of one shipped house, each a sentence naming the item and the rule.
    `hay` is noteHay() plus the house JSON; `onPage` is the engine's price rule. */
 export function noteProblems(house, hay, onPage) {
@@ -442,21 +527,7 @@ export function noteProblems(house, hay, onPage) {
 			if (VERDICT.test(a)) out.push(`${at} "${n.q}": an allergen or diet verdict ("${a.match(VERDICT)[0]}")`);
 			for (const s of sentencesOf(a)) if (ALLERGEN_CLASS.test(s) && !ALLERGEN_POINTER.test(s)) out.push(`${at} "${n.q}": names an allergen or a diet without sending the server to the service note or the kitchen: "${s.trim()}"`);
 			for (const p of a.match(/\$\d+(?:\.\d+)?/g) || []) if (!onPage(hay, p)) out.push(`${at} "${n.q}": the price ${p} is printed nowhere in the guide or the page snapshots`);
-			for (const y of a.match(/\b(1[6-9]\d\d|20\d\d)\b/g) || []) if (folded.indexOf(y) < 0) out.push(`${at} "${n.q}": the year ${y} is in no source`);
-			/* Every capitalised word that does not open a sentence, a quote or an Asked/Answer turn is a
-			   name, and a name must stand in a source or the house. */
-			const re = /(^|[\s(])([A-Z\u00C0-\u00DE][\w\u00C0-\u024F'\u2019.]*(?:[- ][A-Z\u00C0-\u00DE][\w\u00C0-\u024F'\u2019.]*)*)/g;
-			for (const m of a.matchAll(re)) {
-				const before = a.slice(0, m.index + m[1].length).replace(/\s+$/, '');
-				if (!before || /[.!?:\u201C"(]$/.test(before) || /\n$/.test(a.slice(0, m.index + m[1].length))) continue;
-				const name = m[2].replace(/[.'\u2019]+$/, '').replace(/[\u2019']s$/, '');
-				if (name.length < 2 || /^(I|A|OK)$/.test(name)) continue;
-				for (const piece of name.split(/[- ]/)) {
-					const f = foldName(piece.replace(/[.,;:]+$/, '').replace(/[\u2019']s$/, '').replace(/[.'\u2019]+$/, ''));
-					if (f.length < 2) continue;
-					if (folded.indexOf(f) < 0) out.push(`${at} "${n.q}": the name ${piece} is in no source and not in the house`);
-				}
-			}
+			for (const p of sourceProblems(a, folded)) out.push(`${at} "${n.q}": ${p}`);
 			if (n.q === SELL_Q) { const qs = quotedSpans(a); if (!qs.length || !qs.some((s) => words(s) <= 25)) out.push(`${at} "${n.q}": no quoted sentence to say of 25 words or fewer`); }
 			if (n.q === POUR_Q) { const qs = quotedSpans(a); if (!qs.length || !qs.some((s) => words(s) <= 20)) out.push(`${at} "${n.q}": no quoted line to say while pouring of 20 words or fewer`); }
 			if (n.q === WATCH_Q && !a.trim().endsWith(WATCH_CLOSE)) out.push(`${at} "${n.q}": does not close on "${WATCH_CLOSE}"`);
@@ -493,6 +564,61 @@ export function noteProblems(house, hay, onPage) {
 export function noteCounts(house) {
 	const out = Object.fromEntries(FIXED_QS.map((q) => [q, 0]));
 	for (const list of ['dishes', 'cocktails', 'wines']) for (const row of house[list] || []) for (const n of row.kept || []) if (n.q in out) out[n.q]++;
+	return out;
+}
+
+/* THE COMPONENT GATES, over the shipped edition only (a person's own edit on a device is never
+   refused): every component reaches at least one item; its explanation runs 80 to 160 words in two or
+   more paragraphs separated by a blank line; its card's front is 14 words or fewer and its back 20 to
+   45; nothing in it carries a dash, a banned word or an allergen or diet verdict, and a sentence naming
+   an allergen class or a diet sends the server to the service note, the kitchen or lineup (the fixed
+   sentence COMPONENT_DIET_LINE does); every year and every name in the explanation and the card stands
+   in a source (sourceProblems: the guide, the page snapshots, the top of research/ and the house, its
+   kept notes, its components and its comparisons left out so none vouches for itself). Each item's
+   comparisons: one or two, an in-app one before a classic, the label 8 words or fewer and same and
+   different 30 or fewer, no dash, no banned word and no verdict. */
+export const COMPONENT_DIET_LINE = 'Dietary questions go to the service note and the kitchen.';
+export function componentProblems(house, hay) {
+	const out = [];
+	const folded = foldName(hay + '\n' + JSON.stringify(house, (k, v) => (k === 'kept' || k === 'components' || k === 'compare' ? undefined : v)));
+	const DASHED = /[\u2013\u2014]|\s--\s|&[mn]dash;|&#821[12];/;
+	const prose = (at, text) => {
+		if (DASHED.test(text)) out.push(`${at}: a dash`);
+		if (BANNED_WORDS.test(text)) out.push(`${at}: the banned word "${text.match(BANNED_WORDS)[0]}"`);
+		if (VERDICT.test(text)) out.push(`${at}: an allergen or diet verdict ("${text.match(VERDICT)[0]}")`);
+		for (const s of sentencesOf(text)) if (ALLERGEN_CLASS.test(s) && !ALLERGEN_POINTER.test(s)) out.push(`${at}: names an allergen or a diet without sending the server to the service note or the kitchen: "${s.trim()}"`);
+	};
+	const kv = (m) => (m && typeof m === 'object' && 'value' in m ? m.value : undefined);
+	for (const c of house.components || []) {
+		const at = `component ${c.name}`;
+		if (!Array.isArray(c.itemIds) || !c.itemIds.length) out.push(`${at}: reaches no item`);
+		const explain = typeof kv(c.explain) === 'string' ? kv(c.explain) : '';
+		const w = words(explain);
+		if (w < 80 || w > 160) out.push(`${at}: the explanation is ${w} words, the range is 80 to 160`);
+		if (explain.split(/\n\s*\n/).filter((p) => p.trim()).length < 2) out.push(`${at}: the explanation is one paragraph; it is written in paragraphs separated by a blank line`);
+		const card = kv(c.card) || {};
+		const fw = words(card.front);
+		const bw = words(card.back);
+		if (!fw || fw > 14) out.push(`${at}: the card's front is ${fw} words, at most 14`);
+		if (bw < 20 || bw > 45) out.push(`${at}: the card's back is ${bw} words, the range is 20 to 45`);
+		for (const [part, text] of [['explanation', explain], ['card front', card.front || ''], ['card back', card.back || ''], ['say', kv(c.say) || ''], ['name', c.name || '']]) {
+			prose(`${at} ${part}`, String(text));
+			if (part === 'explanation' || part.startsWith('card')) for (const p of sourceProblems(String(text), folded)) out.push(`${at} ${part}: ${p}`);
+		}
+	}
+	for (const list of ['dishes', 'cocktails', 'wines']) for (const r of house[list] || []) {
+		const entries = kv(r.compare);
+		if (entries === undefined) continue;
+		const at = `${list} ${r.name} compare`;
+		if (!Array.isArray(entries) || entries.length < 1 || entries.length > 2) { out.push(`${at}: one or two comparisons, read ${Array.isArray(entries) ? entries.length : 'none'}`); continue; }
+		if (entries.length === 2 && entries[0].app === 'classic' && entries[1].app !== 'classic') out.push(`${at}: the in-app comparison comes first, the classic second`);
+		entries.forEach((e, i) => {
+			const lw = words(e.label);
+			if (!lw || lw > 8) out.push(`${at}[${i}]: the label is ${lw} words, at most 8`);
+			for (const k of ['same', 'different']) { const n = words(e[k]); if (!n || n > 30) out.push(`${at}[${i}]: ${k} is ${n} words, at most 30`); }
+			for (const k of ['label', 'same', 'different']) prose(`${at}[${i}] ${k}`, String(e[k] || ''));
+		});
+	}
 	return out;
 }
 

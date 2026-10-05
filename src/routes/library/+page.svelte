@@ -86,6 +86,15 @@
 	<p class="note libline">{all ? 'Reading for every level. Nothing here is graded.' : `Reading for ${levelName}. Nothing here is graded.`}</p>
 
 	<nav class="quiet shelves" aria-label="The shelves">
+		<!-- The owner, 5 Oct 2026: the World Atlas of Recipes and the Lexicon are the first two shelves. -->
+		<a class="door" href={all ? `${base}/recipes` : `${base}/recipes?diff=${difficulty}`}>
+			<span class="door-name">The World Atlas of Recipes</span>
+			<span class="door-line">{recipeCount} recipes from every region of the world{all ? `, in ${TOTALS.chapters} chapters.` : `, the difficulty ${levelName} cooks at.`}</span>
+		</a>
+		<a class="door" href={all ? `${base}/lexicon` : `${base}/lexicon?level=${chosen}`}>
+			<span class="door-name">The Lexicon</span>
+			<span class="door-line">{all ? `${TOTALS.lexicon} terms.` : count(atLevel('lexicon'), 'terms')}</span>
+		</a>
 		{#if all}
 			{#each LEVEL_KEYS as n (n)}
 				<a class="door" href="{base}/level/{n}/read"><span class="door-name">What {nameOf(n)} asks</span><span class="door-line">The readers for {nameOf(n)}, one per subject.</span></a>
@@ -93,10 +102,6 @@
 		{:else}
 			<a class="door" href="{base}/level/{chosen}/read"><span class="door-name">What {levelName} asks</span><span class="door-line">The readers for {levelName}, one per subject.</span></a>
 		{/if}
-		<a class="door" href={all ? `${base}/recipes` : `${base}/recipes?diff=${difficulty}`}>
-			<span class="door-name">Recipes</span>
-			<span class="door-line">{recipeCount} recipes{all ? ` in ${TOTALS.chapters} chapters.` : `, the difficulty ${levelName} cooks at.`}</span>
-		</a>
 		<details class="door chapters" bind:open={chaptersOpen}>
 			<summary><span class="door-name">Chapters</span><span class="door-line">{chaptersOpen ? 'Hide the chapters' : 'Show the chapters'}</span></summary>
 			<ul class="chapterlist">
@@ -107,10 +112,6 @@
 		</details>
 		<a class="door" href="{base}/study"><span class="door-name">The Path of Study</span><span class="door-line">Ten semesters, from the first omelette to the restaurateur's capstone.</span></a>
 		<a class="door" href="{base}/family"><span class="door-name">The Family Chapter</span><span class="door-line">Your own recipes, kept on this device.</span></a>
-		<a class="door" href={all ? `${base}/lexicon` : `${base}/lexicon?level=${chosen}`}>
-			<span class="door-name">The Lexicon</span>
-			<span class="door-line">{all ? `${TOTALS.lexicon} terms.` : count(atLevel('lexicon'), 'terms')}</span>
-		</a>
 		<a class="door" href={all ? `${base}/technique` : `${base}/technique?level=${chosen}`}>
 			<span class="door-name">Techniques</span>
 			<span class="door-line">{all ? 'Every technique, with the dishes that drill it.' : count(atLevel('techniques'), 'techniques')}</span>

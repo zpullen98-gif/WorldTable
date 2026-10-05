@@ -210,7 +210,8 @@
 	});
 	const pairNeeds = $derived(needs.filter((n) => n.startsWith('First pick') || n.startsWith('Without alcohol')));
 	const pairReady = $derived(PAIR_KINDS.some((k) => ready.includes(k)));
-	const cardCount = $derived(current ? buildFlashcards(current).length : 0);
+	/* The item cards only: a component's card lives in the Flashcards tab's component decks. */
+	const cardCount = $derived(current ? buildFlashcards(current).filter((f) => f.kind !== 'component').length : 0);
 	/* The kinds row: empty means every kind that deals; a chosen kind that
 	   stops dealing (the house changed under us) drops out on its own. */
 	let chosen = $state<DrillKind[]>([]);
@@ -306,7 +307,7 @@
 
 	function startCards() {
 		if (!current) return;
-		cards = shuffleCards(buildFlashcards(current), Math.random);
+		cards = shuffleCards(buildFlashcards(current).filter((f) => f.kind !== 'component'), Math.random);
 		cIdx = 0;
 		cFlipped = false;
 		cGot = 0;

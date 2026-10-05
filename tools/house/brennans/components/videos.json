@@ -1,0 +1,570 @@
+{
+  "videos": [
+    {
+      "id": "food52-saber-champagne",
+      "url": "https://www.youtube.com/watch?v=ClD_-UBaIyI",
+      "title": "How to Saber Champagne",
+      "channel": "Food52",
+      "minutes": null,
+      "topic": "Champagne service",
+      "why": "A bar manager shows the seam, the angle and the stroke along the neck: the theatre a Birthday Bubbles table may ask for.",
+      "componentKeys": [
+        "wine-sabrage",
+        "wine-opening-sparkling"
+      ],
+      "verifiedBy": "WebSearch \"\\\"How to Saber Champagne\\\" ClD_-UBaIyI uploaded by which youtube channel Food52\" on 2026-10-05 listed www.youtube.com/watch?v=ClD_-UBaIyI titled \"How to Saber Champagne - YouTube\" beside the Food52 article that carries it; the result summary named the uploader as Food52",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "cocktail-chemistry-whiskey-sour-reverse-dry-shake",
+      "url": "https://www.youtube.com/watch?v=sbloHsAFqXY",
+      "title": "Basic Cocktails - How To Make The Whiskey Sour (Reverse Dry Shake)",
+      "channel": "Cocktail Chemistry",
+      "minutes": null,
+      "topic": "Egg white and the dry shake",
+      "why": "Why egg white is shaken without ice as well as with it, and how the order changes the foam on a sour.",
+      "componentKeys": [
+        "bar-dry-shake",
+        "bar-egg-white",
+        "bar-sour-pattern",
+        "bar-shaking"
+      ],
+      "verifiedBy": "WebSearch \"\\\"Basic Cocktails - How To Make The Whiskey Sour (Reverse Dry Shake)\\\" youtube channel\" on 2026-10-05 listed www.youtube.com/watch?v=sbloHsAFqXY with this title and the matching cocktailchemistrylab.com page; the summary named the channel as Cocktail Chemistry",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "cocktail-chemistry-clarified-milk-punch",
+      "url": "https://www.youtube.com/watch?v=ZZ1ffluktqM",
+      "title": "Advanced Techniques - Clarified Milk Punch",
+      "channel": "Cocktail Chemistry",
+      "minutes": null,
+      "topic": "Milk punch",
+      "why": "The older, clarified cousin of milk punch: milk curdled and strained clear. Useful contrast with the creamy brunch style.",
+      "componentKeys": [
+        "bar-clarifying",
+        "bar-milk-punch-story"
+      ],
+      "verifiedBy": "WebSearch \"\\\"Cocktail Chemistry\\\" youtube Irish Coffee OR \\\"egg white\\\" OR \\\"milk punch\\\" OR \\\"clarified milk punch\\\" video\" on 2026-10-05 listed m.youtube.com/watch?v=ZZ1ffluktqM titled \"Advanced Techniques - Clarified Milk Punch\", a Pinterest pin of it credited to Cocktail Chemistry, and the summary named the channel as Cocktail Chemistry",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "hoffmann-cold-brew",
+      "url": "https://www.youtube.com/watch?v=AB0QLjroFss",
+      "title": "Everything I Learned About Cold Brew Coffee",
+      "channel": "James Hoffmann",
+      "minutes": null,
+      "topic": "Coffee service",
+      "why": "How cold brew is steeped, why grind and time change its taste, and how it differs from iced coffee when a guest asks.",
+      "componentKeys": [
+        "bar-cold-brew",
+        "bar-coffee-service"
+      ],
+      "verifiedBy": "WebSearch \"\\\"Everything I learned about Cold Brew Coffee\\\" James Hoffmann youtube.com/watch\" on 2026-10-05 listed www.youtube.com/watch?v=AB0QLjroFss titled \"Everything I Learned About Cold Brew Coffee - YouTube\", beside the same title posted by @jameshoffmanncoffee; the summary attributed it to Hoffmann",
+      "checkedOn": "2026-10-04"
+    },
+    {
+      "id": "hollandaise-le-cordon-bleu",
+      "componentKeys": [
+        "hollandaise",
+        "choron",
+        "foyot",
+        "bearnaise",
+        "story-mother-sauces"
+      ]
+    },
+    {
+      "id": "beurre-blanc-chef-jean-pierre",
+      "componentKeys": [
+        "beurre-blanc"
+      ]
+    },
+    {
+      "id": "emulsion-mayonnaise-pepin",
+      "componentKeys": [
+        "remoulade-chive",
+        "pink-sauce"
+      ]
+    },
+    {
+      "id": "pan-sauce-atk",
+      "componentKeys": [
+        "marchand-de-vin",
+        "bordelaise-pecan",
+        "brown-butter"
+      ]
+    },
+    {
+      "id": "roux-food-network",
+      "componentKeys": [
+        "roux",
+        "gumbo-story"
+      ]
+    },
+    {
+      "id": "shuck-oyster-hog-island",
+      "componentKeys": [
+        "louisiana-oysters",
+        "raw-half-shell",
+        "mignonette"
+      ]
+    },
+    {
+      "id": "poached-eggs-kenji",
+      "componentKeys": [
+        "poached-egg",
+        "eggs-to-order"
+      ]
+    },
+    {
+      "id": "flambe-safely",
+      "componentKeys": [
+        "flambe",
+        "cherries-jubilee-story",
+        "cafe-brulot-story"
+      ]
+    },
+    {
+      "id": "saveur-real-bananas-foster",
+      "componentKeys": [
+        "bananas-foster-story",
+        "foster-bananas",
+        "rum-banana-liqueur",
+        "flambe"
+      ]
+    },
+    {
+      "id": "anders-sazerac",
+      "componentKeys": [
+        "bar-sazerac-story",
+        "bar-the-rinse",
+        "bar-peychauds-bitters",
+        "bar-stirring",
+        "bar-herbsaint"
+      ]
+    },
+    {
+      "id": "anders-espresso-martini-3-ways",
+      "componentKeys": [
+        "bar-espresso-martini-story",
+        "bar-shaking"
+      ]
+    },
+    {
+      "id": "anders-why-people-hate-espresso-martini",
+      "componentKeys": [
+        "bar-espresso-martini-story"
+      ]
+    },
+    {
+      "id": "anders-bloody-mary-from-scratch",
+      "componentKeys": [
+        "bar-bloody-mary-story",
+        "bar-bloody-mary-mix"
+      ]
+    },
+    {
+      "id": "wset-why-fortify-wine",
+      "componentKeys": [
+        "wine-mutage",
+        "wine-port-making",
+        "wine-madeira-ageing"
+      ]
+    },
+    {
+      "id": "wset-study-bites-port",
+      "componentKeys": [
+        "wine-port-making",
+        "wine-lbv-port",
+        "wine-colheita",
+        "wine-grape-port-varieties",
+        "wine-region-douro"
+      ]
+    },
+    {
+      "id": "cms-open-serve-sparkling",
+      "componentKeys": [
+        "wine-opening-sparkling"
+      ]
+    },
+    {
+      "id": "cms-open-a-bottle",
+      "componentKeys": [
+        "wine-presenting-bottle",
+        "wine-corked"
+      ]
+    },
+    {
+      "id": "cms-decant-wine",
+      "componentKeys": [
+        "wine-decanting",
+        "wine-mature-bottle"
+      ]
+    },
+    {
+      "id": "cms-hospitality-service",
+      "componentKeys": [
+        "wine-presenting-bottle"
+      ]
+    },
+    {
+      "id": "guildsomm-champagne",
+      "componentKeys": [
+        "wine-region-champagne",
+        "wine-champagne-crus",
+        "wine-dosage",
+        "wine-non-vintage",
+        "wine-blanc-de-blancs-noirs"
+      ]
+    },
+    {
+      "id": "guildsomm-burgundy",
+      "componentKeys": [
+        "wine-burgundy-tiers",
+        "wine-region-bourgogne",
+        "wine-region-chablis",
+        "wine-region-cote-de-beaune",
+        "wine-region-cote-de-nuits",
+        "wine-region-maconnais"
+      ]
+    },
+    {
+      "id": "guildsomm-bordeaux-right-bank",
+      "componentKeys": [
+        "wine-region-right-bank",
+        "wine-grape-merlot",
+        "wine-grape-cabernet-franc"
+      ]
+    },
+    {
+      "id": "guildsomm-northern-rhone",
+      "componentKeys": [
+        "wine-grape-syrah"
+      ]
+    },
+    {
+      "id": "guildsomm-germany",
+      "componentKeys": [
+        "wine-pradikat",
+        "wine-region-mosel",
+        "wine-region-nahe",
+        "wine-region-rheinhessen",
+        "wine-grape-riesling"
+      ]
+    },
+    {
+      "id": "guildsomm-alsace",
+      "componentKeys": [
+        "wine-region-alsace",
+        "wine-grape-gewurztraminer",
+        "wine-grape-pinot-gris",
+        "wine-cremant"
+      ]
+    },
+    {
+      "id": "eater-meat-show-eggs-hussarde",
+      "url": "https://www.youtube.com/watch?v=Cbn-Uqa4ssA",
+      "title": "How Brennan’s Invented A Perfect Egg Dish For Meat Lovers: The Meat Show",
+      "channel": "Eater",
+      "minutes": null,
+      "topic": "Brennan’s house",
+      "why": "Eater inside Brennan’s on Eggs Hussarde and its two sauces. The title overstates: the dish predates Brennan’s (an 1895 recipe); Brennan’s made it famous.",
+      "attach": {
+        "dishes": [
+          "Eggs Hussarde"
+        ],
+        "cocktails": [],
+        "wines": [],
+        "terms": [
+          "Hussarde",
+          "Marchand de vin",
+          "Hollandaise"
+        ],
+        "house": true
+      },
+      "verifiedBy": "WebSearch \"\"How Brennan's Invented A Perfect Egg Dish For Meat Lovers\" Cbn-Uqa4ssA uploaded by Eater\": result listed www.youtube.com/watch?v=Cbn-Uqa4ssA with that title; the summary placed it in Eater's The Meat Show series.",
+      "checkedOn": "2026-10-04",
+      "componentKeys": [
+        "hussarde-story",
+        "marchand-de-vin",
+        "story-breakfast-at-brennans"
+      ]
+    },
+    {
+      "id": "educated-barfly-sazerac",
+      "url": "https://www.youtube.com/watch?v=RuZzOcjJUYw",
+      "title": "Master The Classics: Sazerac",
+      "channel": "The Educated Barfly",
+      "minutes": null,
+      "topic": "The Sazerac",
+      "why": "The Sazerac’s history from Peychaud’s apothecary to rye, and the build step by step, from a classic cocktail series.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [
+          "Classic Sazerac"
+        ],
+        "wines": [],
+        "terms": [
+          "Sazerac",
+          "Peychaud's"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Historic New Orleans Collection youtube Sazerac Peychaud cocktail history lecture video\" listed www.youtube.com/watch?v=RuZzOcjJUYw as \"Master The Classics: Sazerac\"; WebSearch \"\"Master The Classics\" series \"The Educated Barfly\" Sazerac Absinthe Frappé New York Sour\" placed the Master The Classics series with The Educated Barfly.",
+      "checkedOn": "2026-10-04",
+      "componentKeys": [
+        "bar-sazerac-story",
+        "bar-the-rinse",
+        "bar-peychauds-bitters"
+      ]
+    },
+    {
+      "id": "how-to-drink-sazerac",
+      "url": "https://www.youtube.com/watch?v=5cgcMHSO1Z8",
+      "title": "The Sazerac",
+      "channel": "How To Drink",
+      "minutes": null,
+      "topic": "The Sazerac",
+      "why": "A second view of the same drink with its contested history told plainly, useful for the guest who asks where it began.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [
+          "Classic Sazerac"
+        ],
+        "wines": [],
+        "terms": [
+          "Sazerac"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"The Sazerac\" 5cgcMHSO1Z8 uploaded by which youtube channel\": result listed www.youtube.com/watch?v=5cgcMHSO1Z8 as \"The Sazerac\"; the summary named the channel How To Drink from an episode listing (aired 3 March 2017). Weaker than a direct page read: recheck by oEmbed.",
+      "checkedOn": "2026-10-04",
+      "componentKeys": [
+        "bar-sazerac-story",
+        "bar-peychaud-story"
+      ]
+    },
+    {
+      "id": "educated-barfly-absinthe-frappe",
+      "url": "https://www.youtube.com/watch?v=gKX3udyGa5Y",
+      "title": "Master The Classics: Absinthe Frappé",
+      "channel": "The Educated Barfly",
+      "minutes": null,
+      "topic": "Herbsaint and absinthe",
+      "why": "How anise spirits behave with water and ice, which is why a rinse is a coat and not a pour.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [
+          "Classic Sazerac",
+          "Thompson’s Dream",
+          "Origin Story"
+        ],
+        "wines": [],
+        "terms": [
+          "Herbsaint",
+          "Jade Nouvelle-Orléans"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"The Educated Barfly\" Herbsaint OR absinthe OR Chartreuse OR \"Espresso Martini\" OR \"Whiskey Sour\" egg white video\" listed www.youtube.com/watch?v=gKX3udyGa5Y as \"Master The Classics: Absinthe Frappé\"; the series search above placed Master The Classics with The Educated Barfly.",
+      "checkedOn": "2026-10-04",
+      "componentKeys": [
+        "bar-absinthe-story",
+        "bar-herbsaint"
+      ]
+    },
+    {
+      "id": "anders-irish-coffee",
+      "url": "https://www.youtube.com/watch?v=sJsY1LokABA",
+      "title": "Irish Coffee - hot AND cold",
+      "channel": "Anders Erickson",
+      "minutes": null,
+      "topic": "Irish coffee",
+      "why": "The cream float done right: lightly whipped, poured over a spoon, never stirred in, plus the cold version.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [
+          "Brennan’s Irish Coffee"
+        ],
+        "wines": [],
+        "terms": [
+          "Tullamore D.E.W."
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Anders Erickson Irish Coffee video youtube \"Anders Erickson\"\": result listed www.youtube.com/watch?v=sJsY1LokABA with that title; the summary said Anders discusses Irish Coffee in it.",
+      "checkedOn": "2026-10-04",
+      "componentKeys": [
+        "bar-irish-coffee-story",
+        "bar-cream-float",
+        "bar-coffee-service"
+      ]
+    },
+    {
+      "id": "wset-what-is-calvados",
+      "url": "https://www.youtube.com/watch?v=u6UtBEkBmt4",
+      "title": "WSET Bitesize - What is Calvados?",
+      "channel": "Wine & Spirit Education Trust (WSET)",
+      "minutes": null,
+      "topic": "Calvados",
+      "why": "What Calvados is: apple and pear brandy from Normandy, its appellations and ageing, in a few minutes.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [
+          "Riviera",
+          "To Each His Own"
+        ],
+        "wines": [],
+        "terms": [
+          "Calvados"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Calvados explained apple brandy Normandy video youtube channel ...\" listed www.youtube.com/watch?v=u6UtBEkBmt4 as \"WSET Bitesize - What is Calvados?\"; WebSearch \"\"WSET Bitesize\" youtube ... channel name Wine & Spirit Education Trust\" showed the WSET Bitesize series on the channel Wine & Spirit Education Trust (WSET).",
+      "checkedOn": "2026-10-04",
+      "componentKeys": [
+        "bar-calvados"
+      ]
+    },
+    {
+      "id": "cms-riesling-expert-guide",
+      "url": "https://www.youtube.com/watch?v=sE8TYt0CN2c",
+      "title": "An Expert Somm's Guide to What Makes Riesling DELICIOUS",
+      "channel": "Court of Master Sommeliers, Americas",
+      "minutes": null,
+      "topic": "German Riesling",
+      "why": "Riesling dry to sweet around the world, with food pairings, so Kabinett and Auslese become guest language.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "C.H. Berres ‘Old Vines’ Riesling 2022",
+          "Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)",
+          "J.J. Prüm ‘Wehlener Sonnenuhr’ Riesling Kabinett 2020",
+          "Egon Müller ‘Scharzhofberger’ Riesling Kabinett 2020",
+          "Trimbach Riesling Réserve 2020"
+        ],
+        "terms": [
+          "Auslese",
+          "Erdener Prälat"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"Court of Master Sommeliers, Americas\" youtube \"How to\" OR \"Port\" OR \"Madeira\" OR \"Riesling\" OR pairing video\": result listed www.youtube.com/watch?v=sE8TYt0CN2c with that title; the summary listed it among the Court of Master Sommeliers, Americas channel videos, with Matthew Kaner presenting. Recheck channel by oEmbed.",
+      "checkedOn": "2026-10-04",
+      "componentKeys": [
+        "wine-grape-riesling",
+        "wine-off-dry"
+      ]
+    },
+    {
+      "id": "wine-folly-riesling",
+      "url": "https://www.youtube.com/watch?v=ZLXhBKJb01o",
+      "title": "Riesling (Everything you need to know)",
+      "channel": "Wine Folly",
+      "minutes": null,
+      "topic": "German Riesling",
+      "why": "A Master of Wine shows how to tell dry from sweet Riesling on a label, the question guests ask most.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Stein ‘Weihwasser’ Riesling Feinherb 2023",
+          "Stein ‘Palmberg-Terrassen’ Riesling Spätlese-Feinherb 2014",
+          "J.J. Prüm ‘Wehlener Sonnenuhr’ Riesling Kabinett 2020",
+          "C.H. Berres ‘Old Vines’ Riesling 2022"
+        ],
+        "terms": [
+          "Auslese"
+        ],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Wine Folly Madeline Puckette youtube video Port wine explained OR Madeira OR Sauternes OR Riesling sweetness\": result listed www.youtube.com/watch?v=ZLXhBKJb01o with that title; the summary said Wine Folly's Head Wine Educator, Christine Marsiglio MW, presents it.",
+      "checkedOn": "2026-10-04",
+      "componentKeys": [
+        "wine-grape-riesling"
+      ]
+    },
+    {
+      "id": "wine-folly-open-champagne",
+      "url": "https://www.youtube.com/watch?v=Q6ULyip3otQ",
+      "title": "How to Open Champagne (Without it Exploding!)",
+      "channel": "Wine Folly",
+      "minutes": null,
+      "topic": "Champagne service",
+      "why": "The safe open: towel, thumb on the cork, turn the bottle not the cork, a whisper and not a pop.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+          "Charles Lafitte Brut Champagne NV",
+          "Rare Brut 2012 (Coravin)",
+          "Krug ‘Grande Cuvée 170th Edition’ Brut NV",
+          "Louis Roederer ‘Cristal’ Brut 2015",
+          "Dom Pérignon ‘P2’ Brut 2006",
+          "Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+          "Taittinger ‘La Francaise’ Brut NV (3 L double magnum)"
+        ],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"How to Open Champagne (Without it Exploding!)\" Q6ULyip3otQ uploaded by which youtube channel\": result listed www.youtube.com/watch?v=Q6ULyip3otQ with that title; the summary named Wine Folly from the page snippet citing winefolly.com. Recheck channel by oEmbed.",
+      "checkedOn": "2026-10-04",
+      "componentKeys": [
+        "wine-opening-sparkling"
+      ]
+    },
+    {
+      "id": "bon-appetit-every-wine-glass",
+      "url": "https://www.youtube.com/watch?v=cks86rDRMmQ",
+      "title": "Every Wine Glass Explained By A Sommelier",
+      "channel": "Bon Appétit",
+      "minutes": null,
+      "topic": "Glassware",
+      "why": "Which glass for which wine and why the bowl matters, so the right stem lands with the right bottle.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Louis Jadot Beaune 1er Cru 2023",
+          "Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+          "Charles Lafitte Brut Champagne NV"
+        ],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"Bon Appétit \"Every Wine Glass Explained By A Sommelier\" \"Every Wine Tool a Sommelier Uses\" André Mack\": result listed www.youtube.com/watch?v=cks86rDRMmQ with that title; the summary placed it in Bon Appétit's World of Wine with André Mack.",
+      "checkedOn": "2026-10-04",
+      "componentKeys": [
+        "wine-presenting-bottle"
+      ]
+    },
+    {
+      "id": "bon-appetit-champagne-ages",
+      "url": "https://www.youtube.com/watch?v=Ur_nvNZbn6Y",
+      "title": "Sommelier Tastes the Same Champagne at Different Ages (1973-2023)",
+      "channel": "Bon Appétit",
+      "minutes": null,
+      "topic": "Champagne",
+      "why": "How Champagne changes with age, the honest answer when a guest weighs a 2006 or 2015 against a non-vintage.",
+      "attach": {
+        "dishes": [],
+        "cocktails": [],
+        "wines": [
+          "Dom Pérignon ‘P2’ Brut 2006",
+          "Louis Roederer ‘Cristal’ Brut 2015",
+          "Rare Brut 2012 (Coravin)",
+          "Brennan’s Essential by Piper-Heidsieck Extra Brut NV"
+        ],
+        "terms": [],
+        "house": false
+      },
+      "verifiedBy": "WebSearch \"\"| Bon Appétit\" sommelier wine youtube \"World of Wine\" Champagne Bordeaux Burgundy\": result listed www.youtube.com/watch?v=Ur_nvNZbn6Y with that title; the summary described the Veuve Clicquot tasting across fifty years as a Bon Appétit World of Wine episode.",
+      "checkedOn": "2026-10-04",
+      "componentKeys": [
+        "wine-mature-bottle",
+        "wine-region-champagne"
+      ]
+    }
+  ]
+}

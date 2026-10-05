@@ -278,6 +278,37 @@ export default defineConfig({
 						}
 					},
 					/**
+					 * Cook at home's dishes (static/kitchen-data/level-<L>.json, emitted
+					 * by tools/derive/kitchen.mjs): four files of about 250 KB gzipped
+					 * each, a cost the precache could never carry, so they are fetched
+					 * when a dish is opened and kept here. NetworkFirst, the packs'
+					 * rule: a re-emitted level is never served stale while the network
+					 * is up, and the last copy answers offline, so a level opened once
+					 * cooks in a kitchen with no signal. The search is stripped so one
+					 * file is one entry. The glob never names .json, so none of them is
+					 * precached; verify-build asserts it. Prefixed oot- so no sibling
+					 * wing's reaper takes it.
+					 */
+					{
+						urlPattern: ({ url, sameOrigin }) => sameOrigin && /\/kitchen-data\/level-[1-4]\.json$/.test(url.pathname),
+						handler: 'NetworkFirst',
+						options: {
+							cacheName: 'oot-table-kitchen-v1',
+							networkTimeoutSeconds: 8,
+							cacheableResponse: { statuses: [200] },
+							plugins: [
+								{
+									cacheKeyWillBeUsed: async ({ request }) => {
+										const u = new URL(request.url);
+										u.search = '';
+										return u.href;
+									}
+								}
+							],
+							expiration: { maxEntries: 4 }
+						}
+					},
+					/**
 					 * The house packs (static/shared/packs/*.oothouse.json, and the
 					 * site's /shared/packs/), ahead of the /shared/ route below so it
 					 * answers them first. NetworkFirst, so a republished edition is

@@ -19,7 +19,7 @@
    Runs from any directory. Reads house/brennans/house.json by default (the builder's output). */
 
 import fs from 'node:fs';
-import { loadEngine, GUIDE, HOUSE_JSON, REL, countProblems, describe, answerNames, checkArgs, sourceText as pageText, pageFiles, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines } from './engine.mjs';
+import { loadEngine, GUIDE, HOUSE_JSON, REL, countProblems, describe, answerNames, checkArgs, sourceText as pageText, pageFiles, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, componentProblems } from './engine.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
@@ -84,9 +84,14 @@ for (const n of notes) console.error('validate-pack: FATAL note: ' + n);
 const thin = thinLines(house);
 for (const t of thin.fatal) console.error('validate-pack: FATAL thin: ' + t);
 if (VERBOSE) for (const t of thin.report) console.log('    report ' + t);
+/* The components and the comparisons (engine.mjs componentProblems): every component reaching an
+   item, its explanation and card in their ranges, sourced, dash and verdict free; every item's one or
+   two comparisons, the in-app one first, within their caps. Fatal here. */
+const comps = componentProblems(house, noteHay());
+for (const c of comps) console.error('validate-pack: FATAL component: ' + c);
 const nc = noteCounts(house);
 console.log(`validate-pack: notes ${Object.entries(nc).map(([q, c]) => `${c} "${q}"`).join(', ')}; ${thin.report.length} item(s) with an empty part (a report, not a gate)`);
 
-const bad = fatalCount + counts.length + changed.length + unanswered.length + stems.length + rooms.length + notes.length + thin.fatal.length + (lib.sameJson(house, input) ? 0 : 1);
-if (bad) fail(`${REL(FILE)}: ${fatalCount} fatal problem(s), ${stems.length} drill stem problem(s), ${rooms.length} upsell room problem(s), ${notes.length} note problem(s), ${thin.fatal.length} thin line(s), ${counts.length} count(s) off, ${changed.length} normaliser change(s), ${unanswered.length} unanswered name(s)`);
-console.log(`validate-pack: ${REL(FILE)}: 0 fatal, ${problems.length} advisory flag(s) in ${byCode.size} code(s), counts hold (${house.dishes.length} dishes, ${house.cocktails.length} cocktails, ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask, ${house.disputes.length} disputes)`);
+const bad = fatalCount + counts.length + changed.length + unanswered.length + stems.length + rooms.length + notes.length + thin.fatal.length + comps.length + (lib.sameJson(house, input) ? 0 : 1);
+if (bad) fail(`${REL(FILE)}: ${fatalCount} fatal problem(s), ${stems.length} drill stem problem(s), ${rooms.length} upsell room problem(s), ${notes.length} note problem(s), ${comps.length} component problem(s), ${thin.fatal.length} thin line(s), ${counts.length} count(s) off, ${changed.length} normaliser change(s), ${unanswered.length} unanswered name(s)`);
+console.log(`validate-pack: ${REL(FILE)}: 0 fatal, ${problems.length} advisory flag(s) in ${byCode.size} code(s), counts hold (${house.dishes.length} dishes, ${house.cocktails.length} cocktails, ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask, ${house.disputes.length} disputes, ${(house.components || []).length} components)`);

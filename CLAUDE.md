@@ -1282,3 +1282,125 @@ house a person is building by hand stays on the editing page as dishes go in.
 - Specs that test the editing page with a house on the device open it through
   `gotoEditing()` in tests/helpers.ts. The precache with the study view in it:
   2.954 MB gzipped against the 3.5 MB cap.
+
+## The components and the comparisons (5 October 2026)
+
+What every dish, drink and wine is made of (its ingredients, techniques and
+stories) and what to compare it with. The plan is section "CURRENT WORK (5 Oct
+2026)" of the session's plan file; what a maintainer needs:
+
+- **The schema** (`src/lib/house/house-schema.ts`, ported as ever):
+  `House.components` is an OPTIONAL list (written only when it holds one) of
+  `HouseComponent { id 'c-', kind ingredient|technique|story, name, say?,
+  explain?, card?: Mark<{front, back}>, itemIds, termIds, ts }`, ONE card per
+  component shared by every item that names it. `ItemBase.compare` is a
+  `Mark<CompareEntry[]>` (`{ app table|ledger|codex|classic, ref, label,
+  same, different }`, at most `COMPARE_MAX` two), so `isMark` takes a list of
+  records as well as a list of strings, never a mix. `HouseVideo.componentIds`
+  is written only when it names one. Merge, refresh and the pack treat both
+  like every other list and mark: a new edition's components arrive and a
+  person's marks survive (house-components.test.ts). The validator's caps are
+  `COMPONENT_WORDS` and `COMPARE_WORDS`; the floors (`COMPONENT_FLOORS`, 80
+  words of explanation, 20 on a card's back) are the pack builder's only.
+  `static/shared/oot-house-ui.js` gained the review steps `compare` and
+  `components`.
+- **A Table ref is an address**: the builder turns a fragment's recipe or
+  technique slug into `recipe/<slug>` or `technique/<slug>`, so every room
+  links it without the Table's data (`wing-links.ts compareHref`). A Codex ref
+  naming a house wine by its exact name becomes that wine's id; a grape,
+  producer or primer stays a name and opens through the Codex's `#ref=` door.
+- **The chain**: `tools/house/build-brennans.mjs` reads the fragments
+  (`engine.mjs readFragments`: `brennans/components/*.json`, or
+  `BRENNANS_COMPONENTS`, or `--components <dir>`); unknown item, term or
+  component names fail the build; c- ids come through `ids.ledger.json`
+  (`components:<key>`, so `--mint` on the first build). `engine.mjs
+  componentProblems` holds the shipped edition to the content rules (80 to
+  160 words in paragraphs, the card's caps, no dash, no banned word, no
+  allergen verdict, names and years in a source by `sourceProblems`, the note
+  rule shared); `countProblems` reads its component figures from the
+  fragments (`fragmentCounts`). `tools/house/check-compare.mjs` resolves every
+  in-app ref against `src/lib/data`, the Ledger's COCKTAILS and the Codex's
+  GRAPES, GRAPES_PLUS, WINE_PRODUCERS and PRIMERS (`LEDGER_SRC`, `CODEX_SRC`,
+  else the siblings); `--fragments` checks the authors' files before a build.
+  The year rule is weak in practice: the Binwise snapshot prints a figure for
+  nearly every year, so a year is held only in a source without one.
+- **The screens**: `MadeOf.svelte` on the study card (What it's made of,
+  Compare with), `study.ts componentBlocks` and `compareRows`; the
+  Flashcards tab deals `components`, `components:{kind}` and
+  `item-components:{id}` (k: references, graded `card-component` under the
+  component's id); Part by part leaves component cards out.
+  `tests/study-components.spec.ts` walks the card and the decks at 390 by 844.
+
+## Cook at home: the training kitchen (5 October 2026)
+
+The owner asked for training dishes to cook at home on the way to master
+chef: 25 each of breakfast, lunch, dinner and dessert at every level, so
+Chef ends at 100 of each, step by step at the most detail, with a film for
+each, right under Today's study and Due today on the level page.
+
+- **The source** is `src/lib/data/kitchen/`: `curriculum.json` (the ladder,
+  400 rungs) and `level<L>-<meal>-<meal>.json` (the full dishes), held to
+  the binding entry shape by `tools/kitchen/check-training.mjs` (US measures
+  with metric, °F beside °C, no dash, British spelling, no level numeral,
+  every Brennan's link an exact pack name, a verified film only with its
+  WebSearch evidence). `src/lib/kitchen.ts dishProblems` is the same shape
+  at runtime: the loader refuses a level file that breaks it.
+- **The emit**: `npm run build:kitchen` (the gate, then
+  `tools/derive/kitchen.mjs`) writes `static/kitchen-data/level-<L>.json`
+  (one level whole, about 250 KB gzipped each, NEVER precached: fetched
+  when a dish opens and kept by the NetworkFirst route
+  `oot-table-kitchen-v1` in vite.config.ts) and
+  `src/lib/data/kitchen.index.json` (slug, level, meal, n, title, cuisine,
+  times, difficulty, serves: about 13 KB gzipped, precached as a lazy
+  chunk so the level page's lists, the progress and the Repertoire's names
+  work offline from the first launch). `kitchen.test.ts` fails on a stale
+  emit; verify-build asserts the four files ship outside the manifest and
+  the index chunk inside it. The directory is `kitchen-data`, not
+  `kitchen`, because `/kitchen` is the page.
+- **The page** is ONE prerendered `/kitchen`: `?d={slug}&level={n}` is a
+  dish, nothing is the course overview. The query is read in
+  `afterNavigate`, never in load; four hundred prerendered pages were the
+  alternative and buy nothing. Its parent is `/level/{n}` from the address
+  (`nav.ts parentOf`), under Home in `OWNS`, and it counts as a cooking
+  surface for the timer bar. Cook mode is the recipe page's `CookMode` with
+  three optional props: `guides` (each step's look, and its mistake and fix
+  behind a disclosure), `ratings` (a dish with no standard asked in words
+  on the last screen) and `prep` (the mise en place). **Cook mode opens on
+  the mise**, ahead of step 1, with its ticks (bound to the page's list) and
+  a timer on every line that states a time (timer index `-(k + 1)`, so a
+  mise timer never collides with a step's): real cooking sits in the mise
+  (maqluba's stock braise, the mooncake dough, the rösti parboil) and a
+  cook mode that began at step 1 sent cooks to a step calling for a stock
+  nobody made.
+- **The level page marks re-cooks**: a cooked dish past its date reads
+  "Due again" and a Cook again door names the most overdue in the meal
+  (`kitchen.ts recooksDue`: the Repertoire's fold and `dueList` order,
+  scoped to the meal's kitchen keys).
+- **The grill is the British overhead element**: check-training refuses a
+  dish whose first such mention (page reading order) is not glossed
+  "grill (broiler)"; "broiler" is otherwise refused as American. A dish
+  that needs the broiler never also warms plates in a low oven: one home
+  oven cannot be both (plates go in hot water, or after the grill is off).
+- **The record**: a cook goes through `session.markCooked` like any recipe,
+  under the namespaced slug `kitchen:<slug>`, because more than a hundred
+  kitchen slugs are also Library slugs and a bare slug would fold the two
+  histories together (`slugify` cannot emit a colon). So it counts as
+  cooking everywhere (`cookedDishes`, the Repertoire, More's re-cook count,
+  the day studied) and returns on the 14/35/90/180/365 ladder. The rating
+  is three words (`RATINGS`: Nailed it, Nearly there, Not yet), each one
+  grade, so the word moves the interval; no stars, no number. Notes are
+  `session.notes['kitchen:<slug>']`. No SessionState field was added, so
+  `mergeSessions` needed nothing.
+- **The Brennan's link** is drawn only when the house on the device holds
+  an item of that exact name (folded for case and curly quotes): a dish
+  opens its study card, a cocktail or wine its room through `roomHref` on
+  the shared origin; anything else stays words.
+- `tests/kitchen.spec.ts` walks the section, a dish, cook mode (mise
+  first, a mise timer), marking cooked, Due again, the notes, Back and a
+  level cooking offline at 390 by 844. Offline is proved from the cache,
+  never with `context.setOffline`, which in this Chromium does not stop the
+  service worker's own fetches: the spec asserts `oot-table-kitchen-v1`
+  holds exactly `level-1.json`, aborts `/kitchen-data/*` with
+  `context.route` (it sees worker traffic), opens another level 1 dish and
+  asserts a level never opened says so.
+

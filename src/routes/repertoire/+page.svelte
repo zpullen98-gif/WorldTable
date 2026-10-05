@@ -13,6 +13,8 @@
 	import { bySlug, recipeHref } from '$lib/data';
 	import { session } from '$lib/stores/session.svelte';
 	import { repertoire, dueList, sinceLabel, LADDER_DAYS, type RepertoireEntry } from '$lib/repertoire';
+	import { onMount } from 'svelte';
+	import { dishHref, isKitchenKey, loadKitchenIndex, slugOfKey, type KitchenIndex } from '$lib/kitchen';
 
 	let { data } = $props();
 
@@ -41,7 +43,19 @@
 	 * about that split, so the link goes through it rather than being built by
 	 * hand here.
 	 */
+	/* Cook at home's dishes are logged as kitchen:<slug> (lib/kitchen.ts):
+	   their names come from the precached index, read here once. */
+	let kitchen = $state<KitchenIndex | null>(null);
+	onMount(() => {
+		void loadKitchenIndex().then((ix) => (kitchen = ix));
+	});
+
 	function dish(slug: string) {
+		if (isKitchenKey(slug)) {
+			const row = kitchen?.dishes.find((d) => d.slug === slugOfKey(slug));
+			if (row) return { name: `${row.title} (Cook at home)`, href: dishHref(base, row) };
+			return { name: slugOfKey(slug).replace(/-/g, ' '), href: null };
+		}
 		const guide = bySlug.get(slug);
 		if (guide) return { name: guide.name, href: recipeHref(guide) };
 		const fam = session.familyRecipes.find((r) => r.slug === slug);

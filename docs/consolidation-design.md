@@ -502,6 +502,17 @@ heading below the masthead, as today. Nothing else.
      `todayDoor`, `js/ui-levels.js:33-55`, and `openDoor('today')`,
      `js/ui-levels.js:84-99`); the Codex adds **Your first week** while it
      is unfinished (`v25TodayHtml`'s path, `js/codex25.js:1038-1074`).
+3a. **Cook at home** (h2, the Table only; added 5 October 2026 at the
+   owner's request, "right under Today's Study and Due Today"): the
+   training kitchen at this level, `src/lib/kitchen.ts`. Four tabs,
+   Breakfast, Lunch, Dinner and Dessert (a real tablist, arrow keys, each
+   tab at least 48 px with its `{cooked} of 25`, four across, two by two under 560 px so nothing computes under 15 px, the chosen meal remembered per
+   device in `oot-kitchen-meal-v1`); under the chosen tab the progress
+   line, the next dish to cook as the lead door (`Cook next`), then the 25
+   in order, each its title, cuisine, total time, difficulty and a
+   `Cooked` mark (a word, never a glyph, design 2.9); a quiet link to the whole course (`/kitchen`). The
+   list reads the precached index, so it draws offline from the first
+   launch; a dish opens `/kitchen?d={slug}&level={n}`.
 4. **My restaurant** (h2; h3 in the Ledger), whatever the level:
    - the house line, the app's existing component, unchanged;
    - the Menu Desk's waiting line when another room has left rows (the
@@ -1105,6 +1116,11 @@ Every route, its new home, and its logical parent (`parentOf`).
 - `/level/[n]` Home, parent `/`.
 - `/level/[n]/read` Library, parent `/library`.
 - `/level/[n]/test` Quizzes, parent `/quizzes`.
+- `/kitchen` (Cook at home, 5 October 2026) Home, one prerendered page:
+  with `?d={slug}&level={n}` a training dish, parent `/level/{n}` (the
+  level named in the address, the chosen level when it names none); with
+  no dish the course overview, parent `/level/{chosen}`. A link to the
+  next dish is a push, so Back walks back through the dishes first.
 - `/menu` (study view, My restaurant) Home, parent `/level/{chosen}`; with a
   card open (`#d-...`), parent `/menu`; editing (`Edit the menu`, component
   state) the same page. Critic: editing, when pushed, is a shallow entry

@@ -23,14 +23,30 @@ afterAll(() => {
 
 type Entry = Record<string, unknown>;
 
+/* The shipped pack carries the authors' components and the videos only their fragments file; a scratch
+   build without those fragments would drop them, so the copy keeps only what the overrides file. */
+function packWithoutFragments(dir: string): void {
+	const at = join(dir, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json');
+	const p = JSON.parse(readFileSync(at, 'utf8'));
+	const o = JSON.parse(readFileSync(join(dir, 'tools', 'house', 'brennans', 'overrides.json'), 'utf8'));
+	const ledger = JSON.parse(readFileSync(join(dir, 'tools', 'house', 'brennans', 'ids.ledger.json'), 'utf8'));
+	const filed = new Set(o.entries.filter((e: Record<string, any>) => e.target === 'video:+').map((e: Record<string, any>) => ledger['videos:' + e.value.id]));
+	delete p.house.components;
+	if (Array.isArray(p.house.videos)) p.house.videos = p.house.videos.filter((v: Record<string, unknown>) => filed.has(v.id));
+	writeFileSync(at, JSON.stringify(p));
+}
+
 /** A copy of tools/house beside a copy of the shipped engine and pack, with the entries appended. */
 function tree(extra: Entry[]): string {
 	const dir = mkdtempSync(join(tmpdir(), 'oot-bottles-'));
 	made.push(dir);
 	cpSync(join(ROOT, 'tools', 'house'), join(dir, 'tools', 'house'), { recursive: true });
+	/* The component fragments are another test's (brennans-components.test.ts): the bottle list is built without them. */
+	rmSync(join(dir, 'tools', 'house', 'brennans', 'components'), { recursive: true, force: true });
 	mkdirSync(join(dir, 'static', 'shared', 'packs'), { recursive: true });
 	cpSync(join(ROOT, 'static', 'shared', 'oot-house.js'), join(dir, 'static', 'shared', 'oot-house.js'));
 	cpSync(join(ROOT, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json'), join(dir, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json'));
+	packWithoutFragments(dir);
 	// parsed.json is generated and ignored. Build this prerequisite in the
 	// scratch tree so a fresh checkout exercises the same builder as an old one.
 	const parsed = spawnSync(process.execPath, [join(dir, 'tools', 'house', 'parse-guide.mjs'), '--quiet'], { cwd: dir, encoding: 'utf8' });
@@ -107,10 +123,13 @@ describe("the Brennan's builder: the bottle list and the tiers", () => {
 		/* A computed address, so the type check never walks the untyped tool. */
 		const engine = await import(/* @vite-ignore */ pathToFileURL(join(ROOT, 'tools', 'house', 'engine.mjs')).href);
 		const h = JSON.parse(readFileSync(join(ROOT, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json'), 'utf8')).house;
+		/* The shipped pack against the shipped fragments' figures (none when the directory is absent). */
 		expect(engine.countProblems(h)).toEqual([]);
 		expect(engine.MENU_WINES).toBe(34);
 		const more = JSON.parse(JSON.stringify(h));
 		more.wines.push({ ...more.wines[0], id: 'w-testbot1', name: 'A bottle', list: 'bottle', bin: '1', size: '750ml', bottle: '$90' });
+		/* The clone is a new bottle, not a compared item: the first wine's comparison stays with it. */
+		delete more.wines[more.wines.length - 1].compare;
 		const own = engine.overrideCounts();
 		expect(engine.countProblems(more)).toEqual([`the floor's bottles (list bottle, from the overrides' wine:+ adds): ${own.bottles + 1}, expected ${own.bottles}`]);
 		expect(engine.countProblems(more, { bottles: own.bottles + 1, tiered: own.tiered })).toEqual([]);

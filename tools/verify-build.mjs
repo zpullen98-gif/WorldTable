@@ -596,6 +596,26 @@ check('the house packs, when shipped, are NOT precached', () => {
 	return `${packs.length} pack(s) on demand`;
 });
 
+/* Cook at home (tools/derive/kitchen.mjs, src/lib/kitchen.ts): the four
+   level files are fetched on demand and kept by the worker's
+   oot-table-kitchen-v1 route, never installed; the slim index that names all
+   400 dishes rides in the precache so the level page's lists draw offline
+   from the first launch. */
+check('Cook at home: the four level files ship and are NOT precached; the index is', () => {
+	const dir = join(BUILD, 'kitchen-data');
+	assert(existsSync(dir), 'build/kitchen-data missing: static/kitchen-data did not ship (node tools/derive/kitchen.mjs)');
+	const levels = [1, 2, 3, 4].map((l) => `kitchen-data/level-${l}.json`);
+	for (const f of levels) assert(existsSync(join(BUILD, f)), `build/${f} missing`);
+	const listed = precached.filter((u) => u.split('?')[0].replace(/^\//, '').startsWith('kitchen-data/'));
+	assert(listed.length === 0, `precache lists a kitchen level: ${listed.join(', ')}`);
+	const indexChunk = files.find((f) => extname(f) === '.js' && readFileSync(f, 'utf8').includes('soft-boiled-eggs-and-soldiers'));
+	assert(indexChunk, 'no emitted chunk carries the kitchen index');
+	const r = rel(indexChunk);
+	assert(precached.some((u) => u === r || u === '/' + r), `the kitchen index chunk ${r} is not precached`);
+	const kb = levels.reduce((n, f) => n + gzipSync(readFileSync(join(BUILD, f))).length, 0) / 1024;
+	return `4 level files on demand (${kb.toFixed(0)} KB gzipped), the index precached (${(gzipSync(readFileSync(indexChunk)).length / 1024).toFixed(1)} KB)`;
+});
+
 check('fonts are latin subsets only', () => {
 	const woff2 = files.filter((f) => extname(f) === '.woff2');
 	assert(woff2.length > 0, 'no woff2 emitted');
