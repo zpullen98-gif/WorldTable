@@ -30,10 +30,10 @@ test.use({ viewport: { width: 390, height: 844 } });
 const backBtn = (page: Page) => page.locator('.backline button.back');
 const section = (page: Page) => page.locator('#kitchen');
 
-test('the level page carries Cook at home right under Today’s study, four meals of 25', async ({ page }) => {
+test('the level page carries My restaurant, then Cook at home, under Today’s study, four meals of 25', async ({ page }) => {
 	await goto(page, '/level/1');
 	const heads = await page.locator('h2.group').allTextContents();
-	expect(heads.slice(0, 3)).toEqual(["Today's study", 'Cook at home', 'My restaurant']);
+	expect(heads.slice(0, 3)).toEqual(["Today's study", 'My restaurant', 'Cook at home']);
 	await expect(section(page)).toBeVisible();
 
 	const tabs = page.getByRole('tab');

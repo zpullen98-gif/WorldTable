@@ -7,6 +7,9 @@
     Today's study     Due today, Quick quiz, Next reading: three doors, each
                       a name, a line computed from the engines, the row the
                       button. Due today and Quick quiz start at once.
+    My restaurant     the house line, the Menu Desk's waiting line, the count
+                      line, three study doors, the sections as chips, then
+                      the quiet links The Menu Desk and The house
     Cook at home      the training kitchen at this level (lib/kitchen.ts):
                       four tabs, Breakfast, Lunch, Dinner and Dessert, each
                       with its cooked of 25, the next dish to cook as the
@@ -17,9 +20,6 @@
                       order). The list comes from the
                       precached index; a dish opens /kitchen?d=, whose level
                       file is fetched on demand.
-    My restaurant     the house line, the Menu Desk's waiting line, the count
-                      line, three study doors, the sections as chips, then
-                      the quiet links The Menu Desk and The house
     Search            one box over the house and the app, results inline
     What {Level} holds  a closed details: every subsection with N at this
                       level and its word and figure, each a link to its
@@ -360,6 +360,53 @@
 		</a>
 	</nav>
 
+	<h2 class="group" id="restaurant">My restaurant</h2>
+	<div class="house">
+		<HouseBar />
+	</div>
+	{#if deskWaiting}
+		<p class="deskline">
+			<b
+				>{deskWaiting.dishes}
+				{deskWaiting.dishes === 1 ? 'dish' : 'dishes'} from the Menu Desk
+				{deskWaiting.dishes === 1 ? 'is' : 'are'} waiting.</b
+			>
+			Read {deskWaiting.readIn}, {deskWaiting.when}.
+			<a class="chip" href="{base}/menu#desk">Look them over</a>
+		</p>
+	{/if}
+	{#if current && rows.length}
+		<p class="note countline">{countLine}</p>
+		<nav class="quiet" aria-labelledby="restaurant">
+			<a class="door" href="{base}/menu" data-door="study">
+				<span class="door-name">Study the whole menu</span>
+				<span class="door-line">Every dish, its lines, its pairing and its parts, section by section.</span>
+			</a>
+			<a class="door" href="{base}/flashcards?deck=menu" data-door="menu-cards">
+				<span class="door-name">Flashcards for the menu</span>
+				<span class="door-line">One card per dish: the name on the front, the ten second line on the back.</span>
+			</a>
+			<a class="door" href="{base}/menu/quiz?mode=drill" data-door="menu-drill">
+				<span class="door-name">Drill the menu</span>
+				<span class="door-line">Mixed questions from every section, ten at a time.</span>
+			</a>
+		</nav>
+		<nav class="chips sections" aria-label="The menu's sections">
+			{#each sections as s (s.section)}
+				<a class="chip" href="{base}/menu?section={encodeURIComponent(s.section)}">{s.section} {s.count}</a>
+			{/each}
+		</nav>
+		<p class="quietlinks">
+			<a href="{base}/menu#desk">The Menu Desk</a>
+			<a href="{base}/menu#house">The house</a>
+		</p>
+	{:else}
+		<p class="note">No restaurant on this device yet. Start one or import a pack with the house doors above, or read a menu in on the Menu Desk.</p>
+		<p class="quietlinks">
+			<a href="{base}/menu#desk">The Menu Desk</a>
+		</p>
+	{/if}
+
 	<h2 class="group" id="kitchen">Cook at home</h2>
 	<p class="note kitchenlede">Twenty five each of breakfast, lunch, dinner and dessert at {levelName}, to cook in your own kitchen, step by step.</p>
 	{#if kitchen.length}
@@ -430,53 +477,6 @@
 		{/if}
 	{:else}
 		<p class="note">Reading the course…</p>
-	{/if}
-
-	<h2 class="group" id="restaurant">My restaurant</h2>
-	<div class="house">
-		<HouseBar />
-	</div>
-	{#if deskWaiting}
-		<p class="deskline">
-			<b
-				>{deskWaiting.dishes}
-				{deskWaiting.dishes === 1 ? 'dish' : 'dishes'} from the Menu Desk
-				{deskWaiting.dishes === 1 ? 'is' : 'are'} waiting.</b
-			>
-			Read {deskWaiting.readIn}, {deskWaiting.when}.
-			<a class="chip" href="{base}/menu#desk">Look them over</a>
-		</p>
-	{/if}
-	{#if current && rows.length}
-		<p class="note countline">{countLine}</p>
-		<nav class="quiet" aria-labelledby="restaurant">
-			<a class="door" href="{base}/menu" data-door="study">
-				<span class="door-name">Study the whole menu</span>
-				<span class="door-line">Every dish, its lines, its pairing and its parts, section by section.</span>
-			</a>
-			<a class="door" href="{base}/flashcards?deck=menu" data-door="menu-cards">
-				<span class="door-name">Flashcards for the menu</span>
-				<span class="door-line">One card per dish: the name on the front, the ten second line on the back.</span>
-			</a>
-			<a class="door" href="{base}/menu/quiz?mode=drill" data-door="menu-drill">
-				<span class="door-name">Drill the menu</span>
-				<span class="door-line">Mixed questions from every section, ten at a time.</span>
-			</a>
-		</nav>
-		<nav class="chips sections" aria-label="The menu's sections">
-			{#each sections as s (s.section)}
-				<a class="chip" href="{base}/menu?section={encodeURIComponent(s.section)}">{s.section} {s.count}</a>
-			{/each}
-		</nav>
-		<p class="quietlinks">
-			<a href="{base}/menu#desk">The Menu Desk</a>
-			<a href="{base}/menu#house">The house</a>
-		</p>
-	{:else}
-		<p class="note">No restaurant on this device yet. Start one or import a pack with the house doors above, or read a menu in on the Menu Desk.</p>
-		<p class="quietlinks">
-			<a href="{base}/menu#desk">The Menu Desk</a>
-		</p>
 	{/if}
 
 	<h2 class="group" id="search-h">Search</h2>
