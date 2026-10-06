@@ -31,7 +31,7 @@
 			{#if showFor && r.items.length}
 				<span class="for">
 					For
-					{#each r.items as it, i (it.id)}{#if i > 0}, {/if}{#if onOpen && it.kind === 'dish'}<button class="linkish" onclick={() => onOpen(it.id)}>{it.name}</button>{:else}{it.name}{/if}{/each}
+					{#each r.items as it, i (it.id)}{#if i > 0}{', '}{/if}{#if onOpen && it.kind === 'dish'}<button class="linkish" onclick={() => onOpen(it.id)}>{it.name}</button>{:else}{it.name}{/if}{/each}
 				</span>
 			{/if}
 		</li>

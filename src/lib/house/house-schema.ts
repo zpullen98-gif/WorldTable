@@ -203,6 +203,29 @@ export const COMPONENT_WORDS = { explain: 160, front: 14, back: 45 } as const;
 export const COMPONENT_FLOORS = { explain: 80, back: 20 } as const;
 
 /**
+ * The producers: who makes, grows, catches or answers for a component, a
+ * profile a server can speak from at the table. PRODUCER_TYPES is the whole
+ * set a profile may be: a maker (a distiller, a bakery, a winery), a farm, a
+ * fishery, an origin (a place or an appellation rather than one firm) and the
+ * house itself (made in the kitchen or behind the bar). PRODUCER_GROUPS is how
+ * a screen heads them, in this order: who makes it, then where it comes from.
+ */
+export const PRODUCER_TYPES = ['maker', 'farm', 'fishery', 'origin', 'house'] as const;
+export type ProducerType = (typeof PRODUCER_TYPES)[number];
+export const PRODUCER_GROUPS = [
+	{ key: 'makers', label: 'Makers and farms', types: ['maker', 'farm', 'house'] },
+	{ key: 'origins', label: 'Where it comes from', types: ['fishery', 'origin'] }
+] as const satisfies ReadonlyArray<{ key: string; label: string; types: readonly ProducerType[] }>;
+
+/**
+ * The caps on a producer profile: the words in its history, in each fact, in
+ * each note and in the line to say, and how many facts, notes and questions
+ * for the kitchen it may hold. The validator holds them on every device.
+ */
+export const PRODUCER_WORDS = { history: 300, fact: 35, note: 60, sayIt: 30 } as const;
+export const PRODUCER_MAX = { facts: 12, notes: 8, askKitchen: 6 } as const;
+
+/**
  * Where a comparison points: a World Table recipe or technique, a Ledger
  * cocktail, a Codex grape, producer, primer or house wine, or a classic
  * written out with no link at all.
@@ -332,6 +355,25 @@ export interface Pairing {
 export interface ComponentCard {
 	front: string;
 	back: string;
+}
+
+/**
+ * A component's producer: what kind of producer it is, who and where, when it
+ * was founded (as a source prints it: a year, a decade, or empty), its history
+ * in paragraphs, the facts and the notes a server can speak from, the one line
+ * to say at the table, and the questions only the kitchen can answer. Every
+ * field is the profile's own words; nothing here is ever an allergen verdict.
+ */
+export interface ProducerProfile {
+	type: ProducerType;
+	who: string;
+	where: string;
+	founded: string;
+	history: string;
+	facts: string[];
+	notes: string[];
+	sayIt: string;
+	askKitchen: string[];
 }
 
 /**
@@ -515,6 +557,8 @@ export interface HouseComponent {
 	say?: Mark;
 	explain?: Mark;
 	card?: Mark<ComponentCard>;
+	/** Who makes, grows or catches it: absent when nobody has written a profile, so an older component reads unchanged. */
+	producer?: Mark<ProducerProfile>;
 	itemIds: string[];
 	termIds: string[];
 	ts: number;
@@ -760,7 +804,7 @@ export const MARK_FIELDS = {
 	askAtLineup: [] as const,
 	disputes: [] as const,
 	videos: [] as const,
-	components: ['say', 'explain', 'card'] as const satisfies readonly (keyof HouseComponent)[]
+	components: ['say', 'explain', 'card', 'producer'] as const satisfies readonly (keyof HouseComponent)[]
 } satisfies Record<HouseList | 'house', readonly string[]>;
 
 /**
@@ -834,7 +878,8 @@ export const KEYS = {
 	LexiconTerm: ['id', 'term', 'say', 'toGuest', 'itemIds', 'ts'] as const satisfies KeysOf<LexiconTerm>,
 	ComponentCard: ['front', 'back'] as const satisfies KeysOf<ComponentCard>,
 	CompareEntry: ['app', 'ref', 'label', 'same', 'different'] as const satisfies KeysOf<CompareEntry>,
-	HouseComponent: ['id', 'kind', 'name', 'say', 'explain', 'card', 'itemIds', 'termIds', 'ts'] as const satisfies KeysOf<HouseComponent>,
+	ProducerProfile: ['type', 'who', 'where', 'founded', 'history', 'facts', 'notes', 'sayIt', 'askKitchen'] as const satisfies KeysOf<ProducerProfile>,
+	HouseComponent: ['id', 'kind', 'name', 'say', 'explain', 'card', 'producer', 'itemIds', 'termIds', 'ts'] as const satisfies KeysOf<HouseComponent>,
 	Scenario: ['id', 'title', 'guest', 'you', 'principle', 'itemIds', 'ts'] as const satisfies KeysOf<Scenario>,
 	MixUp: ['id', 'aId', 'bId', 'difference', 'ask', 'ts'] as const satisfies KeysOf<MixUp>,
 	MustKnow: ['id', 'title', 'body', 'ts'] as const satisfies KeysOf<MustKnow>,
@@ -891,6 +936,7 @@ type KeysComplete = [
 	Assert<Complete<LexiconTerm, typeof KEYS.LexiconTerm>>,
 	Assert<Complete<ComponentCard, typeof KEYS.ComponentCard>>,
 	Assert<Complete<CompareEntry, typeof KEYS.CompareEntry>>,
+	Assert<Complete<ProducerProfile, typeof KEYS.ProducerProfile>>,
 	Assert<Complete<HouseComponent, typeof KEYS.HouseComponent>>,
 	Assert<Complete<Scenario, typeof KEYS.Scenario>>,
 	Assert<Complete<MixUp, typeof KEYS.MixUp>>,
@@ -1069,7 +1115,7 @@ export function mintId(prefix: string, taken: ReadonlySet<string>, rand: () => n
  * A value with the mark's shape: a known `by`, a finite stamp, a `model` that
  * is a string when present, and a value that is a string, a list of strings,
  * a list of records (the comparisons) or an object (the parts, the lines, the
- * pairing, a component's card). The shape only: whether
+ * pairing, a component's card or producer). The shape only: whether
  * the value is blank, and whether it fits the field it sits on, is the
  * normaliser's question.
  */

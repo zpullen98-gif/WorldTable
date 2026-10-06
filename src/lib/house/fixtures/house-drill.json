@@ -1241,6 +1241,163 @@
 			"ts": 1790589600000
 		}
 	],
+	"components": [
+		{
+			"id": "c-prodlam1",
+			"kind": "ingredient",
+			"name": "Hill lamb",
+			"producer": {
+				"value": {
+					"type": "farm",
+					"who": "Ridge Farm",
+					"where": "The Ridge",
+					"founded": "1901",
+					"history": "Ridge Farm began as a small shop on the quay. It still supplies the room every morning.",
+					"facts": [
+						"It delivers before the doors open."
+					],
+					"notes": [
+						"Say the whole name once, then the short one."
+					],
+					"sayIt": "From Ridge Farm, just along the quay.",
+					"askKitchen": [
+						"Which day does it deliver?"
+					]
+				},
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"itemIds": [
+				"d-lambsh01"
+			],
+			"termIds": [],
+			"ts": 1790672400000
+		},
+		{
+			"id": "c-prodsea1",
+			"kind": "ingredient",
+			"name": "Day boat fish",
+			"producer": {
+				"value": {
+					"type": "fishery",
+					"who": "Quay Boats",
+					"where": "The Quay",
+					"founded": "1901",
+					"history": "Quay Boats began as a small shop on the quay. It still supplies the room every morning.",
+					"facts": [
+						"It delivers before the doors open."
+					],
+					"notes": [
+						"Say the whole name once, then the short one."
+					],
+					"sayIt": "From Quay Boats, just along the quay.",
+					"askKitchen": [
+						"Which day does it deliver?"
+					]
+				},
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"itemIds": [
+				"d-seabas01"
+			],
+			"termIds": [],
+			"ts": 1790672400000
+		},
+		{
+			"id": "c-prodmus1",
+			"kind": "ingredient",
+			"name": "Field mushrooms",
+			"producer": {
+				"value": {
+					"type": "farm",
+					"who": "Wood End Growers",
+					"where": "Wood End",
+					"founded": "1901",
+					"history": "Wood End Growers began as a small shop on the quay. It still supplies the room every morning.",
+					"facts": [
+						"It delivers before the doors open."
+					],
+					"notes": [
+						"Say the whole name once, then the short one."
+					],
+					"sayIt": "From Wood End Growers, just along the quay.",
+					"askKitchen": [
+						"Which day does it deliver?"
+					]
+				},
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"itemIds": [
+				"d-mushrm01"
+			],
+			"termIds": [],
+			"ts": 1790672400000
+		},
+		{
+			"id": "c-prodlem1",
+			"kind": "ingredient",
+			"name": "Sweet pastry",
+			"producer": {
+				"value": {
+					"type": "maker",
+					"who": "Lamp Street Bakery",
+					"where": "Lamp Street",
+					"founded": "1901",
+					"history": "Lamp Street Bakery began as a small shop on the quay. It still supplies the room every morning.",
+					"facts": [
+						"It delivers before the doors open."
+					],
+					"notes": [
+						"Say the whole name once, then the short one."
+					],
+					"sayIt": "From Lamp Street Bakery, just along the quay.",
+					"askKitchen": [
+						"Which day does it deliver?"
+					]
+				},
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"itemIds": [
+				"d-lemont01"
+			],
+			"termIds": [],
+			"ts": 1790672400000
+		},
+		{
+			"id": "c-prodgin1",
+			"kind": "ingredient",
+			"name": "Harbour gin",
+			"producer": {
+				"value": {
+					"type": "maker",
+					"who": "Harbour Distillery",
+					"where": "The Harbour",
+					"founded": "1901",
+					"history": "Harbour Distillery began as a small shop on the quay. It still supplies the room every morning.",
+					"facts": [
+						"It delivers before the doors open."
+					],
+					"notes": [
+						"Say the whole name once, then the short one."
+					],
+					"sayIt": "From Harbour Distillery, just along the quay.",
+					"askKitchen": [
+						"Which day does it deliver?"
+					]
+				},
+				"by": "person",
+				"ts": 1790672400000
+			},
+			"itemIds": [
+				"b-negro001"
+			],
+			"termIds": [],
+			"ts": 1790672400000
+		}
+	],
 	"removed": {},
 	"build": {
 		"card": 1790589600000,

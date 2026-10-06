@@ -11,7 +11,9 @@
                   whole Floor Deck, Keeps slipping); a study card's Flash
                   these components opens item-components:{id}; a tasting
                   menu's Flash the courses opens tasting:{id}, its courses
-                  in printed order
+                  in printed order; Producers (under My restaurant) deals
+                  every producer card, and a card's Flash these producers
+                  opens item-producers:{id}
     a deck        ?deck={id}: its name, "{n} cards · {m} learnt", Narrow this
                   deck where the engine has a filter, and Start
     the run       ?deck={id}&run=1: the card screen (DeckFrame.svelte), then
@@ -36,7 +38,9 @@
                         view's flash cards always wrote (Part by part:
                         card-{kind}; a component's card: card-component
                         under the component's id; a tasting course's
-                        card: card-tasting-{n} under the tasting's id)
+                        card: card-tasting-{n} under the tasting's id; a
+                        producer card: card-producer-{n} under the
+                        component's id)
     a Floor Deck card   Got it records `close` (FLIP_GRADES.had), Again
                         records `missed` and sends the card round once more,
                         once per card per local day (flipRecordable)
@@ -56,7 +60,7 @@
 	import { nav, restoreScroll } from '$lib/stores/nav.svelte';
 	import { markStudied } from '$lib/oot-studied';
 	import { drilledKey, markDrilled } from '$lib/house-drilled';
-	import { itemCards, latestVerdicts, mealsOf, inMeal, findItem, say, tastingInMeal, tastingOnlyIds, type ItemCard } from '$lib/study';
+	import { itemCards, latestVerdicts, mealsOf, inMeal, findItem, producersFor, say, tastingInMeal, tastingOnlyIds, type ItemCard } from '$lib/study';
 	import { buildFlashcards, type Flashcard } from '$lib/house/house-drills';
 	import { COMPONENT_KINDS, COMPONENT_LABELS, componentsFor, type ComponentKind } from '$lib/house/house-schema';
 	import { shuffleWith } from '$lib/house-drill-round';
@@ -166,7 +170,7 @@
 	/* Part by part is the items' own cards; a component's card (one per component, shared by every
 	   item that uses it) is dealt by the component decks: components, components:{kind} and
 	   item-components:{id}, each card a k: reference under the component's id. */
-	const parts = $derived(engineCards.filter((c) => c.kind !== 'component' && c.kind !== 'tasting'));
+	const parts = $derived(engineCards.filter((c) => c.kind !== 'component' && c.kind !== 'tasting' && c.kind !== 'producer'));
 	/* The tasting courses: one card per course, in the order the menu prints them, dealt in that order
 	   (never shuffled: the order is what is learnt). Each is an s: reference, {tastingId}/{n}. */
 	const tasteKey = (c: Flashcard) => `${c.itemId}/${c.course ?? 0}`;
@@ -176,6 +180,14 @@
 	const compCards = $derived(new Map(engineCards.filter((c) => c.kind === 'component').map((c) => [c.itemId, c])));
 	const compKind = $derived(new Map((current?.components ?? []).map((c) => [c.id, c.kind])));
 	const compRefs = (ids: string[]) => ids.filter((id) => compCards.has(id)).map((id) => `k:${id}`);
+	/* The producers: up to three cards per kept profile (house-drills.ts producerCards), each an r:
+	   reference, {componentId}/{n}, graded card-producer-{n} under the component's id. The Producers deck
+	   deals them all, shuffled; an item's producer deck (a card's Flash these producers) deals the item's
+	   producers in the order its card shows them, each producer's cards in order. */
+	const prodKey = (c: Flashcard) => `${c.itemId}/${c.n ?? 0}`;
+	const prodCards = $derived(engineCards.filter((c) => c.kind === 'producer'));
+	const prodByKey = $derived(new Map(prodCards.map((c) => [prodKey(c), c])));
+	const prodGrade = (c: Flashcard) => 'card-producer-' + (c.n ?? 0);
 	const weakIds = $derived(houseCards.filter((c) => verdicts.get(c.itemId) === 'again').map((c) => c.itemId));
 	const lexAt = (n: DeckLevel) => levels.data?.items.lexicon[String(n)] ?? [];
 	/* The whole Lexicon is every term it holds (design 3.7), placed at a level
@@ -206,6 +218,8 @@
 		if (id === 'components') return 'Every component';
 		if (id.startsWith('components:')) return COMPONENT_LABELS[id.slice(11) as ComponentKind] ?? 'Components';
 		if (id.startsWith('item-components:')) return say('deckItem', { name: (current && findItem(current, id.slice(16))?.name) || 'One item' });
+		if (id === 'producers') return say('deckProducers');
+		if (id.startsWith('item-producers:')) return say('deckItemProducers', { name: (current && findItem(current, id.slice(15))?.name) || 'One item' });
 		if (id.startsWith('deck:')) return sectionTitle(id.slice(5));
 		return 'A deck';
 	}
@@ -242,6 +256,11 @@
 			const mine = current ? componentsFor(current, id.slice(16)) : [];
 			return compRefs(COMPONENT_KINDS.flatMap((k) => mine.filter((c) => c.kind === k).map((c) => c.id)));
 		}
+		if (id === 'producers') return prodCards.map((c) => `r:${prodKey(c)}`);
+		if (id.startsWith('item-producers:')) {
+			const mine = current ? producersFor(current, id.slice(15)).map((r) => r.id) : [];
+			return mine.flatMap((cid) => prodCards.filter((c) => c.itemId === cid).map((c) => `r:${prodKey(c)}`));
+		}
 		if (id === 'deck-all') return deck ? deck.cards.map((c) => `c:${c.id}`) : [];
 		if (id === 'deck-slipping') return slipped.map((c) => `c:${c.id}`);
 		if (id.startsWith('deck:')) {
@@ -264,6 +283,10 @@
 				const card = parts[Number(id)];
 				if (card && current && today.drilled.some((e) => e.k === drilledKey(current.id, card.itemId, 'card-' + card.kind) && e.v !== 'missed')) n++;
 			} else if (k === 'k' && current && today.drilled.some((e) => e.k === drilledKey(current.id, id, 'card-component') && e.v !== 'missed')) n++;
+			else if (k === 'r') {
+				const card = prodByKey.get(id);
+				if (card && current && today.drilled.some((e) => e.k === drilledKey(current.id, card.itemId, prodGrade(card)) && e.v !== 'missed')) n++;
+			}
 			else if (k === 's') {
 				const card = tasteByKey.get(id);
 				if (card && current && today.drilled.some((e) => e.k === drilledKey(current.id, card.itemId, tasteGrade(card)) && e.v !== 'missed')) n++;
@@ -291,7 +314,7 @@
 		if (id === 'misses') {
 			const p = new URLSearchParams(opts.search ?? location.search);
 			const list = (k: string) => (p.get(k) ?? '').split(',').map((s) => s.trim()).filter(Boolean);
-			return [...list('h').map((x) => `h:${x}`), ...list('c').map((x) => `c:${x}`), ...list('t').map((x) => `t:${x}`), ...list('k').map((x) => `k:${x}`), ...list('s').map((x) => `s:${x}`)];
+			return [...list('h').map((x) => `h:${x}`), ...list('c').map((x) => `c:${x}`), ...list('t').map((x) => `t:${x}`), ...list('k').map((x) => `k:${x}`), ...list('s').map((x) => `s:${x}`), ...list('r').map((x) => `r:${x}`)];
 		}
 		if (id.startsWith('deck:') && deck) {
 			const key = id.slice(5);
@@ -305,7 +328,7 @@
 			const picked = pickSession(deck, session.drillLog, now, { scope, levels: lv, focus }).map((c) => `c:${c.id}`);
 			return withCard(picked, opts.card);
 		}
-		if (id.startsWith('item:') || id.startsWith('item-components:') || id === 'tastings' || id.startsWith('tasting:')) return members(id, opts);
+		if (id.startsWith('item:') || id.startsWith('item-components:') || id.startsWith('item-producers:') || id === 'tastings' || id.startsWith('tasting:')) return members(id, opts);
 		return shuffleWith(members(id, opts), Math.random);
 	}
 
@@ -372,6 +395,8 @@
 			markDrilled(drilledKey(current.id, r.card.itemId, 'card-' + r.card.kind), got ? 'met' : 'missed');
 		} else if (r && current && r.kind === 's') {
 			markDrilled(drilledKey(current.id, r.card.itemId, tasteGrade(r.card)), got ? 'met' : 'missed');
+		} else if (r && current && r.kind === 'r') {
+			markDrilled(drilledKey(current.id, r.card.itemId, prodGrade(r.card)), got ? 'met' : 'missed');
 		} else if (r && r.kind === 'c' && deck) {
 			if (flipRecordable(deckLog(session.drillLog, deck.cards), r.card.id, Date.now())) {
 				session.markDrilled(r.card.id, got ? FLIP_GRADES.had : FLIP_GRADES.missed);
@@ -396,13 +421,14 @@
 		const ts = ids('t');
 		const ks = ids('k');
 		const ss = ids('s');
+		const rs = ids('r');
 		// Part by part's cards go back as their dish's card: one dish, one card to restudy.
 		for (const p of ids('p')) {
 			const card = parts[Number(p)];
 			if (card && !hs.includes(card.itemId) && houseCards.some((c) => c.itemId === card.itemId)) hs.push(card.itemId);
 		}
-		const q = [hs.length ? `h=${hs.join(',')}` : '', cs.length ? `c=${cs.join(',')}` : '', ts.length ? `t=${ts.join(',')}` : '', ks.length ? `k=${ks.join(',')}` : '', ss.length ? `s=${ss.map(encodeURIComponent).join(',')}` : ''].filter(Boolean).join('&');
-		const refs = [...hs.map((x) => `h:${x}`), ...cs.map((x) => `c:${x}`), ...ts.map((x) => `t:${x}`), ...ks.map((x) => `k:${x}`), ...ss.map((x) => `s:${x}`)];
+		const q = [hs.length ? `h=${hs.join(',')}` : '', cs.length ? `c=${cs.join(',')}` : '', ts.length ? `t=${ts.join(',')}` : '', ks.length ? `k=${ks.join(',')}` : '', ss.length ? `s=${ss.map(encodeURIComponent).join(',')}` : '', rs.length ? `r=${rs.map(encodeURIComponent).join(',')}` : ''].filter(Boolean).join('&');
+		const refs = [...hs.map((x) => `h:${x}`), ...cs.map((x) => `c:${x}`), ...ts.map((x) => `t:${x}`), ...ks.map((x) => `k:${x}`), ...ss.map((x) => `s:${x}`), ...rs.map((x) => `r:${x}`)];
 		if (ts.length) needLexicon();
 		nav.pushShallow(`${base}/flashcards?deck=misses&run=1&${q}`, { fc: runState('misses', refs) });
 		void focusFrame();
@@ -464,6 +490,7 @@
 		| { kind: 'p'; card: Flashcard }
 		| { kind: 'k'; card: Flashcard }
 		| { kind: 's'; card: Flashcard }
+		| { kind: 'r'; card: Flashcard }
 		| { kind: 'c'; card: DeckCard }
 		| { kind: 't'; entry: LexiconEntry | null; slug: string };
 
@@ -494,6 +521,10 @@
 			case 's': {
 				const card = tasteByKey.get(id);
 				return card ? { kind: 's', card } : null;
+			}
+			case 'r': {
+				const card = prodByKey.get(id);
+				return card ? { kind: 'r', card } : null;
 			}
 			case 't':
 				return { kind: 't', entry: lexBySlug.get(id) ?? null, slug: id };
@@ -535,6 +566,7 @@
 		for (const s of houseSections) out.push(row(`menu:${s.section}`));
 		if (weakIds.length) out.push(row('menu-weak'));
 		if (parts.length) out.push(row('menu-parts'));
+		if (prodCards.length) out.push(row('producers'));
 		return out;
 	});
 	/* What the menu is made of: a deck per kind of component, each only when it holds a card. */
@@ -747,6 +779,16 @@
 								<p class="def back">{shown.card.back}</p>
 							{:else}
 								<p class="def">Say the course aloud, then flip.</p>
+							{/if}
+						</div>
+					{:else if shown.kind === 'r'}
+						<div class="flash rcard">
+							<p class="kkind">{say('deckProducers')}</p>
+							<p class="term">{shown.card.front}</p>
+							{#if fc.flipped}
+								<p class="def back">{shown.card.back}</p>
+							{:else}
+								<p class="def">Say it out loud, then flip.</p>
 							{/if}
 						</div>
 					{:else if shown.kind === 'p'}

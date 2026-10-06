@@ -75,6 +75,8 @@ describe('parentOf', () => {
 		expect(parentOf({ path: '/menu', chosen: 2 })).toBe('/level/2');
 		expect(parentOf({ path: '/menu', search: '?section=Starters', chosen: 4 })).toBe('/level/4');
 		expect(parentOf({ path: '/menu', hash: '#d-abc' })).toBe('/menu');
+		expect(parentOf({ path: '/menu', search: '?view=producers', hash: '#d-abc' })).toBe('/menu?view=producers');
+		expect(parentOf({ path: '/menu', search: '?view=producers', chosen: 3 })).toBe('/level/3');
 		expect(parentOf({ path: '/menu', hash: '#edit' })).toBe('/menu');
 		expect(parentOf({ path: '/menu/quiz', search: '?mode=cards' })).toBe('/flashcards');
 		expect(parentOf({ path: '/menu/quiz', search: '?mode=drill' })).toBe('/quizzes');

@@ -55,8 +55,8 @@
  * so a tasting from before them comes back with the keys it went in with.
  *
  * COMPONENTS. The ingredients, techniques and stories ride in their own
- * optional list, written only when one survives, each with its three marks
- * (say, explain, card). An item's comparisons are one mark of records, and a
+ * optional list, written only when one survives, each with its marks (say,
+ * explain, card, and the producer when a profile was written). An item's comparisons are one mark of records, and a
  * video's componentIds are written only when it names a component, so a
  * record from before either field comes back with the keys it went in with.
  */
@@ -92,6 +92,7 @@ import type {
 	PackStamp,
 	Pairing,
 	PairingBottles,
+	ProducerProfile,
 	Principle,
 	Scenario,
 	Tasting,
@@ -222,7 +223,7 @@ function blank(s: string): boolean {
  * the lines, the pairing, a component's card and an item's comparisons;
  * everything else is prose.
  */
-export type MarkKind = 'text' | 'list' | 'parts' | 'lines' | 'pairing' | 'card' | 'compare';
+export type MarkKind = 'text' | 'list' | 'parts' | 'lines' | 'pairing' | 'card' | 'compare' | 'producer';
 
 export const MARK_KINDS: Readonly<Record<string, MarkKind>> = {
 	ingredientsNamed: 'list',
@@ -232,7 +233,8 @@ export const MARK_KINDS: Readonly<Record<string, MarkKind>> = {
 	lines: 'lines',
 	pairing: 'pairing',
 	card: 'card',
-	compare: 'compare'
+	compare: 'compare',
+	producer: 'producer'
 };
 
 export function markKind(field: string): MarkKind {
@@ -257,6 +259,7 @@ function markValue(v: unknown, kind: MarkKind): unknown {
 		return l.length ? l : undefined;
 	}
 	if (kind === 'compare') return normaliseCompare(v);
+	if (kind === 'producer') return normaliseProducer(v);
 	if (!isRaw(v)) return undefined;
 	let any = false;
 	if (kind === 'parts') {
@@ -302,6 +305,33 @@ function markValue(v: unknown, kind: MarkKind): unknown {
 		}
 	}
 	return any ? p : undefined;
+}
+
+/**
+ * A component's producer: rebuilt from KEYS.ProducerProfile, the prose fields
+ * as strings and the facts, the notes and the questions for the kitchen as
+ * lists of strings with the blanks dropped (the type carried as it came, so
+ * the validator can name one outside PRODUCER_TYPES); undefined when nothing
+ * but the type is in it. No list is cut for its length: PRODUCER_MAX is the
+ * validator's to name.
+ */
+function normaliseProducer(v: unknown): ProducerProfile | undefined {
+	if (!isRaw(v)) return undefined;
+	const p = {} as ProducerProfile;
+	let some = false;
+	for (const k of KEYS.ProducerProfile) {
+		if (k === 'facts' || k === 'notes' || k === 'askKitchen') {
+			const l = asTextList(v[k]);
+			p[k] = l;
+			if (l.length) some = true;
+		} else {
+			/* A founding year a hand-edited file wrote as a number meant the year: it is kept as its digits, the price rule. */
+			const t = k === 'founded' ? asPrinted(v[k]) : asText(v[k]);
+			(p as unknown as Record<string, string>)[k] = t;
+			if (k !== 'type' && !blank(t)) some = true;
+		}
+	}
+	return some ? p : undefined;
 }
 
 /**
@@ -702,7 +732,7 @@ function normaliseVideo(raw: unknown, i: number, ctx: Ctx): HouseVideo | null {
 /**
  * One component: its id under the 'c-' prefix, its kind and name as text
  * (a kind outside COMPONENT_KINDS is carried so the validator names it),
- * the items and terms it belongs to, and its three marks.
+ * the items and terms it belongs to, and its marks (the producer among them).
  */
 function normaliseComponent(raw: unknown, i: number, ctx: Ctx): HouseComponent {
 	const r = asRecord(raw);

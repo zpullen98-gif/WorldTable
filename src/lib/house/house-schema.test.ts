@@ -138,7 +138,7 @@ describe('the constants', () => {
 		expect(HOUSE_LISTS).toEqual(['tastings', 'dishes', 'wines', 'cocktails', 'lexicon', 'scenarios', 'mixUps', 'mustKnows', 'askAtLineup', 'disputes', 'videos', 'components']);
 		expect(OPTIONAL_LISTS).toEqual(['videos', 'components']);
 		expect(MARK_FIELDS.videos).toEqual([]);
-		expect(MARK_FIELDS.components).toEqual(['say', 'explain', 'card']);
+		expect(MARK_FIELDS.components).toEqual(['say', 'explain', 'card', 'producer']);
 		for (const marks of [DISH_MARKS, WINE_MARKS, COCKTAIL_MARKS]) expect(marks).toContain('compare');
 		for (const marks of [DISH_MARKS, WINE_MARKS, COCKTAIL_MARKS]) {
 			for (const m of ['say', 'guest', 'why', 'pairs', 'origin', 'parts', 'lines']) expect(marks).toContain(m);
@@ -169,7 +169,7 @@ describe('KEYS against the client', () => {
 		expect(Object.keys(KEYS).sort()).toEqual(
 			[
 				'Mark', 'Note', 'FormulaParts', 'Lines', 'Pairing', 'MealPrice', 'ItemBase', 'HouseDish', 'HouseWine', 'HouseCocktail',
-				'PairingBottles', 'BottlePick', 'TastingCourse', 'Tasting', 'LexiconTerm', 'Scenario', 'MixUp', 'MustKnow', 'AskAtLineup', 'DisputeSide', 'Dispute',
+				'PairingBottles', 'BottlePick', 'ProducerProfile', 'TastingCourse', 'Tasting', 'LexiconTerm', 'Scenario', 'MixUp', 'MustKnow', 'AskAtLineup', 'DisputeSide', 'Dispute',
 				'HouseMeal', 'HouseSource', 'HouseVideo', 'PackStamp', 'House', 'HouseIndex', 'HouseStub', 'ComponentCard', 'CompareEntry', 'HouseComponent'
 			].sort()
 		);

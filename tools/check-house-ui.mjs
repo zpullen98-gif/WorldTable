@@ -759,7 +759,9 @@ function fieldsDrawn(r, id) {
 	flip(house, () => true);
 	const { calls, hooks } = recorder();
 	const r = review(root(), house, 'components', hooks);
-	check('components: each component with its marks of hers, named with its kind', same(all(r, '[data-item]').map((i) => i.getAttribute('data-item')), ['c-saltcrs1']) && same(fieldsDrawn(r, 'c-saltcrs1'), schema.MARK_FIELDS.components) && r.textContent.includes('ComponentSalt crust'));
+	/* The producer profile is a mark too, but this step reviews the say, the explanation and the card only:
+	   the producer research ships kept, and the fixture carries no profile. */
+	check('components: each component with its marks of hers, named with its kind', same(all(r, '[data-item]').map((i) => i.getAttribute('data-item')), ['c-saltcrs1']) && same(fieldsDrawn(r, 'c-saltcrs1'), schema.MARK_FIELDS.components.filter((/** @type {string} */ f) => f !== 'producer')) && r.textContent.includes('ComponentSalt crust'));
 	check('the card is drawn front and back', r.textContent.includes('The frontWhat does the salt crust do?') && r.textContent.includes('The backIt seals the bird'));
 	pressOn(r, 'c-saltcrs1', 'card', 'edit');
 	const ed = one(r, '[data-editor="card"]');

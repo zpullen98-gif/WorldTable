@@ -8,8 +8,9 @@
   techniques), with its count at the level where the data gives one. The
   chapters are a closed disclosure on this page itself, every chapter by
   name with its dish count, because on a phone the recipes' cuisine rail sits
-  under the dishes and 171 chapters would otherwise have no door. Last, the
-  house's videos, each a link out that needs a connection.
+  under the dishes and 171 chapters would otherwise have no door. Then the
+  house's videos, each a link out that needs a connection, and last the door
+  to the house's producers when it has any.
 
   Nothing new is fetched: the levels file and the house are already read,
   and the chapter index ships with the recipes' own eager index.
@@ -24,7 +25,7 @@
 	import { levels } from '$lib/stores/levels.svelte';
 	import { today } from '$lib/stores/today.svelte';
 	import { nav, restoreScroll } from '$lib/stores/nav.svelte';
-	import { studyVideos } from '$lib/study';
+	import { producersLine, say, studyVideos } from '$lib/study';
 	import { LEVEL_KEYS } from '$lib/levels';
 	import ScopeChip from '$lib/components/ScopeChip.svelte';
 	import VideoList from '$lib/components/VideoList.svelte';
@@ -60,6 +61,7 @@
 	const recipeCount = $derived(all ? TOTALS.recipes : recipes.filter((r) => r.difficulty === difficulty).length);
 	const current = $derived(house.current);
 	const videoGroups = $derived(current ? studyVideos(current) : []);
+	const producersCount = $derived(current ? producersLine(current) : '');
 	const listed = $derived(chapters.filter((c) => (dishesIn[c.slug] ?? 0) > 0));
 
 	function setAll(v: boolean) {
@@ -136,6 +138,16 @@
 				<VideoList rows={g.rows} showFor onOpen={(id) => goto(`${base}/menu#${id}`)} />
 			</section>
 		{/each}
+	{/if}
+
+	{#if producersCount}
+		<!-- The house's producers, read and never graded: the Producers view inside My Menu. -->
+		<nav class="quiet shelves" aria-label="The producers">
+			<a class="door" href="{base}/menu?view=producers" data-door="producers">
+				<span class="door-name">{say('producers')}</span>
+				<span class="door-line">{producersCount}</span>
+			</a>
+		</nav>
 	{/if}
 </div>
 

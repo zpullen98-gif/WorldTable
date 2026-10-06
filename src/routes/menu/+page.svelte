@@ -34,13 +34,14 @@
 	} from '$lib/maitre';
 	import { adoptLines, LINE_FIELDS, type LineField } from '$lib/maitre-adopt';
 	import { onMount, tick } from 'svelte';
-	import { goto, replaceState } from '$app/navigation';
+	import { afterNavigate, goto, replaceState } from '$app/navigation';
 	import { nav } from '$lib/stores/nav.svelte';
 	import { cardsTarget } from '$lib/nav';
 	import { page } from '$app/state';
 	import type { Snapshot } from './$types';
 	import StudyMenu from '$lib/components/StudyMenu.svelte';
 	import StudyCard from '$lib/components/StudyCard.svelte';
+	import ProducersView from '$lib/components/ProducersView.svelte';
 	import { readDrilled, type DrilledEntry } from '$lib/house-drilled';
 	import { findItem, latestVerdicts, say, studyRows, type StudyRow } from '$lib/study';
 	import { ITEM_ID_RE, wingInstalled } from '$lib/wing-links';
@@ -366,6 +367,17 @@
 	let toolsEl: HTMLDetailsElement | undefined = $state();
 	let planEl: HTMLDetailsElement | undefined = $state();
 	let slotEl: HTMLElement | undefined = $state();
+
+	/* The Producers view (the producer deep dive, 6 October 2026): ?view=producers
+	   inside this page, no route of its own. Read in afterNavigate, never in
+	   load (the prerender rule), so a link from a card's All producers, a door on
+	   the level page or the Library, and Back into it all set it; a card opened
+	   from it is the shallow '#d-...' entry above it, so closing the card lands
+	   here again with the address still saying the view. */
+	let producersView = $state(false);
+	afterNavigate(() => {
+		producersView = new URLSearchParams(location.search).get('view') === 'producers';
+	});
 
 	const current = $derived(house.current);
 	const studyOn = $derived(!!current && current.dishes.length > 0 && !editMode && !house.blocked);
@@ -1395,7 +1407,7 @@
 		     name, its facts and the menu itself rise up the phone's first screen. -->
 		<div class="headrow">
 			<h1>My Menu</h1>
-			{#if studyOn && current && opened && !openDish}
+			{#if studyOn && current && opened && !openDish && !producersView}
 				<button class="quiet studyedit" onclick={editAll}>{say('editOff')}</button>
 			{/if}
 		</div>
@@ -1436,6 +1448,8 @@
 					onEdit={editOne}
 					onGo={toQuiz}
 				/>
+			{:else if producersView}
+				<ProducersView {current} onOpen={openCard} />
 			{:else}
 				<StudyMenu
 					{current}
@@ -1455,7 +1469,7 @@
 				<HouseLists mode="study" />
 			{/if}
 		</div>
-		{#if !openDish}
+		{#if !openDish && !producersView}
 			<details class="drawer" bind:this={toolsEl} data-print="hide">
 				<summary>Session and tools</summary>
 				{@render houseDoors()}

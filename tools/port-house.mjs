@@ -195,11 +195,11 @@ export const LIB = {
 /** The three adapters under OOT.houseLib.adapters, by the kind of item each wing keeps and by their own names. */
 export const ADAPTERS = { dish: 'tableDish', wine: 'codexWine', cocktail: 'ledgerCocktail', tableDish: 'tableDish', codexWine: 'codexWine', ledgerCocktail: 'ledgerCocktail' };
 
-/** The twelve generators under OOT.houseLib.drills, beside the four functions in LIB and the drill constants. */
-export const DRILLS = ['lineToDish', 'sauceOf', 'sidesOf', 'firstPickFor', 'zeroProofFor', 'termToGuest', 'sayIt', 'mixUp', 'wineGrapes', 'wineGoesWith', 'cocktailGlass', 'cocktailSpec'];
+/** The fifteen generators under OOT.houseLib.drills, beside the four functions in LIB and the drill constants. */
+export const DRILLS = ['lineToDish', 'sauceOf', 'sidesOf', 'firstPickFor', 'zeroProofFor', 'termToGuest', 'sayIt', 'mixUp', 'wineGrapes', 'wineGoesWith', 'cocktailGlass', 'cocktailSpec', 'producerOf', 'producerWhere', 'producerDish'];
 /** The offline graders and their listings, under OOT.houseLib.drills and at the top level of OOT.houseLib (through LIB). */
 export const GRADERS = ['gradeSaid', 'gradeScenario', 'sayable', 'roleable', 'numberWords'];
-export const DRILL_CONSTANTS = ['DRILL_KINDS', 'DRILL_LABELS', 'DRILL_FLOORS', 'DRILL_FLOOR', 'OPTION_COUNT', 'LINE_LABELS', 'FLASHCARD_KINDS', 'GRADE_MET', 'GRADE_CLOSE', 'CAP_NAMES'];
+export const DRILL_CONSTANTS = ['DRILL_KINDS', 'DRILL_LABELS', 'DRILL_FLOORS', 'DRILL_FLOOR', 'PRODUCER_FLOOR', 'PRODUCER_KINDS', 'OPTION_COUNT', 'LINE_LABELS', 'FLASHCARD_KINDS', 'GRADE_MET', 'GRADE_CLOSE', 'CAP_NAMES'];
 
 /** The constants under OOT.houseLib.constants: the schema's, the caps, the key regex and the validator's lists. */
 export const CONSTANTS = [
@@ -210,6 +210,7 @@ export const CONSTANTS = [
 	'OPTIONAL_KEYS', 'WINE_LISTS', 'BOTTLE_TIERS', 'BOTTLE_BANDS', 'HALF_SIZE', 'BOTTLE_WORDS',
 	'OPTIONAL_LISTS', 'VIDEO_SCHEME', 'VIDEO_HOSTS', 'VIDEO_WHY_WORDS', 'VIDEO_URL_MAX', 'VIDEO_TOPIC_NONE',
 	'COMPONENT_KINDS', 'COMPONENT_LABELS', 'COMPONENT_WORDS', 'COMPONENT_FLOORS', 'COMPARE_APPS', 'COMPARE_MAX', 'COMPARE_WORDS', 'TASTING_WORDS',
+	'PRODUCER_TYPES', 'PRODUCER_GROUPS', 'PRODUCER_WORDS', 'PRODUCER_MAX',
 	'FATAL_CODES', 'NEVER_FATAL', 'ALLERGEN_TALK', 'ALLERGEN_WORD', 'QUOTE_WORDS',
 	'PACK_FORMAT', 'PACK_VERSION', 'MY_HOUSE', 'MAP_HOUSE_PREFIX', 'NO_HOUSE_SAID', 'HOUSE_PARTS', 'CARD_KEYS', 'ITEM_FIELDS', 'PUT_LISTS'
 ];
@@ -233,7 +234,8 @@ export function header(date) {
 		'   WHAT THIS IS. The House: one record per venue (its card, its dishes, wines',
 		'   and cocktails with her marks, its tastings, lexicon, scenarios, mix-ups,',
 		'   must-knows, the questions for lineup, the videos and the components: the',
-		'   ingredients, techniques and stories each item is made of, one card each),',
+		'   ingredients, techniques and stories each item is made of, one card each,',
+		'   and the producer behind a component when a profile was written),',
 		'   kept in the browser and shared',
 		'   by the three craft wings. The schema (house-schema.ts), the lines and',
 		'   their caps (house-lines.ts), the normaliser (house-normalise.ts), the',

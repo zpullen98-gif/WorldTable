@@ -1,0 +1,1254 @@
+{
+  "components": [
+    {
+      "key": "ingredient-parmesan",
+      "kind": "ingredient",
+      "name": "Parmesan",
+      "say": "",
+      "explain": "On an American menu, Parmesan is a generic word. In the United States Parmesan is defined by a federal standard of identity, a granular grating cheese cured at least ten months, wherever it is made. In the European Union it is the other way round: since a 2008 ruling of the European Court of Justice, only Parmigiano Reggiano may be sold as parmesan.\n\nParmigiano Reggiano is made only around Parma, Reggio Emilia and Modena, with no preservatives, and is inspected at twelve months.\n\nThe Eggs Sardou prints Parmesan creamed spinach. The kitchen may use Parmigiano Reggiano, the Grana Padano already on the Caesar, or a domestic Parmesan; until the chef says which, call it Parmesan and nothing grander.",
+      "card": {
+        "front": "Does Parmesan on the Eggs Sardou mean Parmigiano Reggiano?",
+        "back": "Not necessarily: in the US Parmesan is a generic name for a hard grating cheese, wherever it is made. Ask the kitchen which cheese goes into the creamed spinach."
+      },
+      "producer": {
+        "type": "origin",
+        "who": "Parmesan, cheese and maker not printed",
+        "where": "As sourced: Parmigiano Reggiano is from Parma, Reggio Emilia and Modena; American Parmesan may come from anywhere",
+        "history": "The word Parmesan means different things on either side of the Atlantic. In the European Union, a 2008 ruling of the European Court of Justice held that only Parmigiano Reggiano, the protected cheese of Parma, Reggio Emilia, Modena and parts of Mantua and Bologna, may be sold as parmesan. Its rules are strict: cows fed on fresh fodder and hay, no silage, no preservatives, dairies that make nothing else, and inspection at twelve months.\n\nIn the United States, Parmesan is a generic name. The federal standard of identity describes a granular cheese with a hard, brittle rind that grates readily, at most 32 per cent moisture and cured at least ten months; it says nothing about where the cheese is made.\n\nSo when an American menu prints Parmesan, as Brennan's does in the creamed spinach of the Eggs Sardou, it promises a hard grating cheese, not a particular one. The kitchen may use Parmigiano Reggiano, the Grana Padano it buys for the Caesar and the Shells & Cheese, which has its own card, or a domestic Parmesan. A server should know the difference and find out which.",
+        "facts": [
+          "A 2008 European Court of Justice ruling reserves the name parmesan in the EU for Parmigiano Reggiano.",
+          "In the United States Parmesan is a generic name defined by a federal standard of identity, not by place.",
+          "The US standard asks for a granular, readily grated cheese, at most 32 per cent moisture, cured at least ten months.",
+          "Parmigiano Reggiano is made around Parma, Reggio Emilia and Modena and inspected at twelve months.",
+          "Parmigiano Reggiano allows no preservatives and no silage in the cows' feed."
+        ],
+        "notes": [
+          "Say Parmesan creamed spinach, as printed; never upgrade it to Parmigiano Reggiano unless the kitchen confirms it.",
+          "Guests who ask whether it is the real thing deserve the honest answer: in America Parmesan is a general name, and you will check which cheese.",
+          "The Creamed Spinach side may share the Sardou's spinach, but that is an inference; confirm at lineup.",
+          "Dairy and other dietary questions about the spinach go to the kitchen."
+        ],
+        "sayIt": "Creamed spinach finished with Parmesan, a hard grating cheese in the Italian style; I can check with the kitchen exactly which one tonight.",
+        "askKitchen": [
+          "Is the Parmesan in the Sardou spinach Parmigiano Reggiano, Grana Padano or a domestic Parmesan?",
+          "Is the Creamed Spinach side the same spinach as the Eggs Sardou?"
+        ]
+      },
+      "items": [
+        "Eggs Sardou"
+      ],
+      "terms": [],
+      "sources": [
+        "research/producers-food-european-protected-2026-10-06.md (section 2)"
+      ]
+    }
+  ],
+  "producers": [
+    {
+      "component": "creekstone-farms",
+      "producer": {
+        "type": "maker",
+        "who": "Creekstone Farms",
+        "where": "Arkansas City, Kansas (founded in Campbellsburg, Kentucky)",
+        "founded": "1995",
+        "history": "Creekstone Farms began in 1995, when John and Carol Stewart set up a purebred Black Angus farm in Campbellsburg, Kentucky. Stewart was a cattle geneticist at heart: he developed his own Angus line, sold bulls, genetics and semen to ranchers, and at one point owned the highest-marbling bull in the breed.\n\nIn 2003 the company moved into processing, buying a processing plant in Arkansas City, Kansas, where it began processing its own Premium Black Angus cattle in May 2003. Its cattle-receiving facility was the first built from the ground up to the low-stress handling standards of Dr. Temple Grandin. After BSE was found in the US herd in December 2003, Creekstone asked in 2004 to test every animal it slaughtered, and when the USDA refused, it took the question to court.\n\nStewart announced his retirement in October 2006. Sun Capital Partners had owned the business since 2005, and in 2017 it sold Creekstone to the Japanese trading house Marubeni Corporation, which owns it today. The company still buys its cattle on verifiable Black Angus genetics rather than hide colour, and its Natural Black Angus line carries the Certified Humane label.\n\nAt Brennan's the name is printed on three plates: both hanger steaks and the tenderloin of the Roasted Chateaubriand.",
+        "facts": [
+          "Founded in 1995 by John and Carol Stewart as a purebred Black Angus farm in Campbellsburg, Kentucky.",
+          "Processes its beef at a plant in Arkansas City, Kansas, bought in 2003; processing began there in May 2003.",
+          "Its cattle-receiving facility was the first built from the ground up to Dr. Temple Grandin's handling standards.",
+          "Cattle are bought on verifiable Black Angus genetics, not on black hide colour alone.",
+          "Owned by Japan's Marubeni Corporation since 2017, which bought it from Sun Capital Partners.",
+          "Its Natural Black Angus Beef has carried the Certified Humane Raised and Handled label since September 2015, verified by Humane Farm Animal Care.",
+          "In 2004 Creekstone asked to test every animal it slaughtered for BSE; the USDA refused and Creekstone went to court.",
+          "USDA Prime, printed on our breakfast hanger, is the top grade: young, well-fed cattle with abundant marbling."
+        ],
+        "notes": [
+          "The menu prints Prime only on the breakfast Creole-Spiced Hanger Steak. Do not call the dinner hanger or the Chateaubriand Prime unless the kitchen confirms it.",
+          "Do not say every Creekstone steak here is Certified Humane: the label covers the Natural Black Angus line, and which programme the kitchen buys is not confirmed.",
+          "Guests ask whether the beef is local. The honest answer: it is Black Angus from Creekstone in Kansas, not a local farm.",
+          "If asked who owns it: Marubeni Corporation, the Japanese trading house, since 2017; John and Carol Stewart founded it in Kentucky in 1995.",
+          "The breakfast menu spells it Creekstone Farm; the company is Creekstone Farms.",
+          "Always take the guest's temperature on a hanger or the Chateaubriand; doneness is the guest's choice and the kitchen's craft."
+        ],
+        "sayIt": "Creekstone Farms is Black Angus beef from Kansas, a company founded as an Angus farm in 1995 and built around careful, low-stress handling of its cattle.",
+        "askKitchen": [
+          "Are the dinner hanger and the Chateaubriand tenderloin graded Prime or Choice?",
+          "Which Creekstone programme do we buy: Natural Black Angus (Certified Humane) or Premium Black Angus?",
+          "Is the beef for the Steak Tartare Cannoli and the short rib débris of the Eggs Owen also Creekstone?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-beef-eggs-duck-2026-10-06.md (section 1)"
+      ]
+    },
+    {
+      "component": "vital-farms-egg",
+      "producer": {
+        "type": "farm",
+        "who": "Vital Farms",
+        "where": "Austin, Texas (packing at Springfield, Missouri)",
+        "founded": "2007",
+        "history": "Vital Farms began in 2007, when Matt O'Hayer started with 20 hens on a 27-acre farm near Austin, Texas. The idea was eggs from hens that genuinely live outdoors, and the company built its standard around pasture: each hen has at least 108 square feet of rotated pasture, where it forages for grasses, succulents and wildflowers. That is the same figure the Certified Humane pasture standard sets, and the eggs carry that certification.\n\nRather than keep one great company flock, Vital Farms works with a network of small family farms, now numbering in the hundreds. In 2017 it opened its own egg washing and packing plant in Springfield, Missouri, which it calls Egg Central Station, and a second Egg Central Station is being built in Seymour, Indiana.\n\nThe company went public on Nasdaq as VITL in July 2020 and is a Certified B Corporation. It sells butter as well as eggs.\n\nOn our menu the name appears once: the sunny-side-up egg on the breakfast Creole-Spiced Hanger Steak, where the runny yolk meets the béarnaise.",
+        "facts": [
+          "Founded in 2007 by Matt O'Hayer and headquartered in Austin, Texas.",
+          "It began with 20 hens on a 27-acre farm.",
+          "Pasture-raised: at least 108 square feet of rotated outdoor pasture per hen, the Certified Humane pasture standard.",
+          "The eggs come from a network of hundreds of small family farms.",
+          "Its own packing plant, Egg Central Station, opened in Springfield, Missouri, in 2017.",
+          "Listed on Nasdaq as VITL since July 2020, and a Certified B Corporation."
+        ],
+        "notes": [
+          "The menu names Vital Farms only on the breakfast hanger. Do not say the eggs on the Hussarde, Sardou, Owen or Duck Confit Waffle are Vital Farms until the kitchen confirms.",
+          "Guests ask what pasture-raised means: at least 108 square feet of rotated outdoor pasture per hen, so the hens forage on grass.",
+          "Do not promise a yolk colour; it changes with the hens' diet and the season.",
+          "Any question about egg doneness or diet goes to the kitchen."
+        ],
+        "sayIt": "The egg is Vital Farms, pasture-raised: every hen has at least 108 square feet of outdoor pasture.",
+        "askKitchen": [
+          "Are all our eggs Vital Farms, or only the egg on the breakfast hanger?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-beef-eggs-duck-2026-10-06.md (section 2)"
+      ]
+    },
+    {
+      "component": "rohan-duck",
+      "producer": {
+        "type": "farm",
+        "who": "D'Artagnan's Rohan duck",
+        "where": "Raised in New York's Catskills; D'Artagnan is based in Union, New Jersey",
+        "founded": "1985",
+        "history": "The Rohan is D'Artagnan's own duck. D'Artagnan was founded in 1985 by Ariane Daguin and George Faison, who met working at a charcuterie shop in New York City. A farmer had the first domestically raised foie gras in the United States and needed someone to sell it, so the two started a company to do it, selling whole raw lobes to New York chefs. Daguin was born in Auch, in Gascony, the eldest child of the Michelin-starred chef André Daguin, and the company is named for the Gascon musketeer. It is based in Union, New Jersey.\n\nD'Artagnan's blog introduced the Rohan in January 2012. It is a proprietary cross of several breeds, including the heritage Mallard and the Pekin, bred to approximate a style of duck found in Normandy and named for the family of dukes and princes of Rohan in Brittany. The birds are raised for D'Artagnan on a farm in New York's Catskills, cage-free and never given antibiotics, hormones or steroids, to 11 weeks, five weeks longer than the average factory duck. Daguin says the extra time deepens the flavour and improves the meat-to-bone ratio.\n\nThe result is rosy, tender, mild meat with a rich, buttery depth. Brennan's prints Rohan on the duck breast of the dinner tasting and on the confit leg of the Duck Confit Waffle.",
+        "facts": [
+          "The Rohan is a proprietary D'Artagnan cross of several breeds, including the heritage Mallard and the Pekin.",
+          "Raised for D'Artagnan on a farm in New York's Catskills to 11 weeks, five weeks longer than the average factory duck.",
+          "Raised cage-free, never given antibiotics, hormones or steroids.",
+          "Named for the family of dukes and princes of Rohan, in Brittany; bred to approximate a style of Normandy duck.",
+          "D'Artagnan was founded in 1985 by Ariane Daguin and George Faison to sell the first domestically raised US foie gras.",
+          "Ariane Daguin is the eldest child of André Daguin, the Michelin-starred Gascon chef famous for foie gras.",
+          "D'Artagnan has its headquarters and distribution centre in Union, New Jersey."
+        ],
+        "notes": [
+          "Say a special cross, not a breed; the guide's word breed is loose.",
+          "The menu prints Rohan, not D'Artagnan. If a guest asks, Rohan is D'Artagnan's duck, raised in New York's Catskills; whether we buy direct is not confirmed.",
+          "Never name a farm: no source names the farm that raises the Rohan, and Crescent Duck Farm on Long Island is a separate Pekin farm.",
+          "The tasting duck changes with the season: the pasted card has cane syrup peaches, the house website a hazelnut-crusted, 14-day dry-aged breast. Read tonight's card.",
+          "Duck breast is served rosy; take the guest's preference to the kitchen rather than promising a temperature."
+        ],
+        "sayIt": "Rohan is a special Mallard and Pekin cross raised in New York's Catskills, longer than most ducks, for rosy, tender meat.",
+        "askKitchen": [
+          "Do we buy the Rohan direct from D'Artagnan or through a distributor?",
+          "Which duck course is on tonight: the cane syrup peaches or the hazelnut-crusted, dry-aged breast?",
+          "If the breast is dry-aged, for how long on the current course?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-beef-eggs-duck-2026-10-06.md (section 3)"
+      ]
+    },
+    {
+      "component": "nueskes-bacon",
+      "producer": {
+        "type": "maker",
+        "who": "Nueske's",
+        "where": "Wittenberg, Wisconsin",
+        "founded": "1933",
+        "history": "The Nueske story starts with Wilhelm and Wilhelmina Nueske, who emigrated from Prussia to Wisconsin in 1887 and brought their family recipes and their way of smoking over applewood. Two generations later, in 1933, Robert Carl Nueske, known as R.C., then 19, left his grandparents, parents, two brothers and a sister to work the family farm at Wittenberg, traded his plough for a delivery truck, and sold the family's smoked bacon, hams and sausages to the resorts of northern Wisconsin.\n\nIn the 1940s he bought a butcher shop and designed and built six smokehouses. The method has barely changed since: the bacon is smoked for about a full day over embers of real Wisconsin applewood logs, which gives a sweet, rounded smoke.\n\nThe company is still family owned and run, now in its third generation, with Tanya Nueske as chief executive; she says the family smokes the way her grandfather did. Besides bacon it smokes hams, poultry and sausages.\n\nAt Brennan's the name is printed on one dish, the dinner Succotash, where the smoky bacon meets the sweet glazed summer vegetables.",
+        "facts": [
+          "Wilhelm and Wilhelmina Nueske emigrated from Prussia to Wisconsin in 1887, bringing the family recipes.",
+          "R.C. Nueske began selling the family's applewood-smoked meats in 1933, at 19, to resorts in northern Wisconsin.",
+          "In the 1940s he bought a butcher shop and designed and built six smokehouses.",
+          "The bacon is smoked for about 24 hours over embers of real Wisconsin applewood logs.",
+          "Third-generation family owned and run in Wittenberg, Wisconsin, with Tanya Nueske as chief executive."
+        ],
+        "notes": [
+          "Nueske's is printed only on the dinner Succotash. Do not say the breakfast Thick-Cut Bacon, the children's bacon or the Roost Burger bacon is Nueske's until the kitchen confirms.",
+          "Say about 24 hours of applewood smoke, not at least 24; accounts range from 20 to 24 hours.",
+          "The Succotash has bacon in it, so mention it when a guest orders vegetables expecting no meat; any dietary question goes to the kitchen.",
+          "The pronunciation is contested; follow the house."
+        ],
+        "sayIt": "The bacon is Nueske's, a Wisconsin family smokehouse since 1933, smoked about a full day over real applewood.",
+        "askKitchen": [
+          "Is the breakfast thick-cut bacon, and the bacon on the Roost Burger, also Nueske's?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-beef-eggs-duck-2026-10-06.md (section 4)"
+      ]
+    },
+    {
+      "component": "grana-padano",
+      "producer": {
+        "type": "origin",
+        "who": "Grana Padano DOP, Consorzio di Tutela",
+        "where": "The Po Valley, northern Italy",
+        "founded": "1954 (the Consorzio di Tutela)",
+        "history": "Grana Padano traces itself to 1135 and the Abbey of Chiaravalle, a few kilometres south of Milan. Bernard of Clairvaux had chosen to reclaim the marshland there, and his Cistercian monks drained and farmed it. With more milk than they could drink, they made a hard cheese that kept, which they called caseus vetus, old cheese. Ordinary people named it for its texture instead: grana, grainy, and Padano, from the Po Valley.\n\nThe Consorzio di Tutela, which protects the name, was founded on 18 June 1954, uniting producers, refiners and merchants, and the European Union made Grana Padano a DOP in 1996. Every wheel, 24 to 40 kg, ages at least nine months; at nine months inspectors test it with a hammer, a needle and a probe, and only a wheel that passes is fire-branded. Some age beyond 24 months.\n\nIt is now the world's best-selling protected cheese, over 5.2 million wheels in 2022. Its rules are its own: it may be made in 32 provinces across five northern regions, the cows may eat silage, and lysozyme, a protein from egg white, may be used as a preservative. With its nine-month minimum it is a younger, milder and different cheese from Parmigiano Reggiano, not a lesser copy of it.",
+        "facts": [
+          "The Consorzio dates the cheese to 1135 at the Abbey of Chiaravalle, south of Milan.",
+          "The monks called it caseus vetus, old cheese; grana means grainy, Padano means of the Po Valley.",
+          "The Consorzio di Tutela was founded on 18 June 1954.",
+          "The European Union recognised Grana Padano as a DOP in 1996.",
+          "Every wheel ages at least nine months and is tested with hammer, needle and probe before fire-branding.",
+          "It is the world's best-selling PDO cheese: over 5.2 million wheels in 2022.",
+          "It may be made in 32 provinces across five northern regions of Italy.",
+          "Its rules allow silage in the feed and lysozyme, an egg-white protein, as a preservative."
+        ],
+        "notes": [
+          "Say Grana Padano is the Po Valley's protected hard cheese, younger and milder than Parmigiano Reggiano; never call it Parmigiano.",
+          "The menu names no maker or age; do not claim a particular maker or a 24-month wheel.",
+          "Lysozyme, an egg-white protein, is allowed in Grana Padano, though not every wheel uses it: any egg question on the Caesar or Shells & Cheese goes to the kitchen.",
+          "The monks of Chiaravalle make a good one-line story: a cheese born of drained marshland and spare milk, in 1135."
+        ],
+        "sayIt": "Grana Padano, the Po Valley's protected hard cheese, first made by Cistercian monks near Milan in 1135: nutty, grainy and a touch milder than Parmigiano.",
+        "askKitchen": [
+          "Which Grana Padano do we buy, and how old is it?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-european-protected-2026-10-06.md (section 1)"
+      ]
+    },
+    {
+      "component": "mimolette",
+      "producer": {
+        "type": "origin",
+        "who": "Mimolette, the Boule de Lille",
+        "where": "Lille and French Flanders",
+        "history": "Mimolette is the French answer to Dutch Edam. The story told in France is that Louis XIV, under the mercantilist policies of his minister Jean-Baptiste Colbert, wanted a native cheese to replace the Edam the French were buying. Another telling has Colbert's embargo on foreign goods leaving the people of Flanders without their favourite Dutch-style cheese, so they made it themselves. Either way, it was made around Lille, and to tell it apart from Edam it was coloured, first with carrot juice and later with annatto, the seed that gives its blazing orange.\n\nAs it ages, cheese mites, which the French call little affineurs, are allowed onto the rind. They eat into the crust, leaving the grey, pitted, moon-like surface, and help the cheese ripen. In 2013 the American FDA detained about a ton of Mimolette because the mites exceeded six per cubic inch; the restriction was lifted in 2014.\n\nToday a large maker is the Normandy cooperative Isigny Sainte-Mère, which began making Mimolette, also called Boule de Lille, in 1951 with master cheesemakers recruited from the north, and sells it from young to extra-mature at 24 months.",
+        "facts": [
+          "Traditionally made around Lille, said to be created under Colbert's policies to replace Dutch Edam.",
+          "It was coloured first with carrot juice, later with annatto, to set it apart from Edam.",
+          "Cheese mites, the French little affineurs, work the rind and give its lunar surface.",
+          "In 2013 the FDA detained about a ton over mite levels above six per cubic inch; lifted in 2014.",
+          "It is also called Boule de Lille.",
+          "Isigny Sainte-Mère has made it since 1951, aged up to 24 months."
+        ],
+        "notes": [
+          "Say mee-mo-LET: the orange French cheese from Lille, nutty and butterscotch-sweet as it ages.",
+          "The mite story delights some tables and puts others off; offer it only to the curious.",
+          "No maker or age is printed; never say Isigny Sainte-Mère or a particular age unless the kitchen confirms it.",
+          "The orange is annatto, a plant colouring, the same seed that turns some cheddar orange; dietary questions about the colouring go to the kitchen."
+        ],
+        "sayIt": "Mimolette, mee-mo-LET, the orange cheese of Lille, made in the seventeenth century to rival Dutch Edam, melted with Abita Amber.",
+        "askKitchen": [
+          "Which Mimolette do we use, and how old is it?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-european-protected-2026-10-06.md (section 3)"
+      ]
+    },
+    {
+      "component": "marcona-almonds",
+      "producer": {
+        "type": "origin",
+        "who": "Marcona almonds of Spain",
+        "where": "Alicante, Spain, and the Mediterranean coast from southern Catalonia to Valencia",
+        "history": "The Marcona is a Spanish almond variety native to the province of Alicante, and grown along the Mediterranean coast in southern Catalonia, Castellón and Valencia. It is called the queen of almonds. It is shorter, wider and rounder than the long almonds of commercial orchards, softer and sweeter, and it has almost none of the bitter edge an ordinary almond carries.\n\nIts oldest work is in sweets. Marcona is the almond of turrón, the nougat of Alicante and Jijona, made in Jijona since at least the sixteenth century, and of marzipan. Jijona grinds the almond to a fine paste for its soft turrón; Alicante uses it whole and toasted in the hard one.\n\nAt the table, Marcona is the tapas almond: blanched to slip off the skin, roasted or fried in olive oil, and dusted with salt, so it eats rich and tender with a gentle crunch, and sits well beside Sherry and cheese.\n\nAt Brennan's it appears twice: in the gremolata on the Crab & Corn Omelette, and in the banana leaf of the Gulf Fish en Papillote, with olives, sorghum and crab.",
+        "facts": [
+          "Marcona is a Spanish almond variety native to the province of Alicante.",
+          "It is shorter, wider and rounder than standard almonds, with almost no bitterness.",
+          "It is the traditional almond of turrón; Jijona turrón is recorded from at least the sixteenth century.",
+          "Jijona turrón grinds it to a paste; Alicante turrón uses it whole and toasted.",
+          "It is usually served blanched, roasted or fried in olive oil, and salted."
+        ],
+        "notes": [
+          "Say Marcona as the round, sweet Spanish almond, the one Spain eats with Sherry.",
+          "No grower or packer is printed; do not name one.",
+          "Tree nut questions on the omelette or the en papillote go straight to the kitchen; never say a dish can be made without them unless the kitchen says so.",
+          "Whether ours are fried, roasted or raw is a lineup question."
+        ],
+        "sayIt": "Marcona almonds, the round, sweet almond of Alicante in Spain, buttery and tender, the one Spain eats with Sherry.",
+        "askKitchen": [
+          "Are our Marcona almonds bought fried and salted, or do we toast them?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-european-protected-2026-10-06.md (section 4)"
+      ]
+    },
+    {
+      "component": "castelvetrano-olives",
+      "producer": {
+        "type": "origin",
+        "who": "Nocellara del Belice olives, Castelvetrano style",
+        "where": "Valle del Belice, south-western Sicily",
+        "founded": "1998",
+        "history": "What Americans call a Castelvetrano olive is, strictly, a way of preparing an olive. The variety is Nocellara del Belice, grown in the Valle del Belice in south-western Sicily, a dual-purpose olive pressed for oil and cured for the table. One of its table preparations is named for the comune of Castelvetrano in the valley, and olives treated that way are sold in the United States as Castelvetrano olives.\n\nThe method explains the taste. The olives are picked young and green and washed in a lye and water solution, which strips their natural bitterness completely in a matter of weeks; they are then kept in brine without fermenting. Skipping fermentation keeps the vivid emerald colour and leaves a mild, buttery, almost sweet olive with a crisp bite. The Sevillian method, by contrast, debitters partly and ferments, for a sharper olive.\n\nIn 1998 Nocellara del Belice was awarded a Protected Designation of Origin, and the variety now carries two: Nocellara del Belice DOP table olives and Valle del Belìce DOP extra virgin olive oil, which must be at least 70 per cent Nocellara.",
+        "facts": [
+          "The variety is Nocellara del Belice, from the Valle del Belice in south-western Sicily.",
+          "Castelvetrano names a preparation, after the comune of Castelvetrano in the valley.",
+          "Awarded a Protected Designation of Origin in 1998.",
+          "Two DOP names: Nocellara del Belice table olives and Valle del Belìce olive oil, at least 70 per cent Nocellara.",
+          "Picked young and washed in lye, then brined without fermentation, keeping them bright green and mild.",
+          "The Sevillian method debitters only partly and ferments the olives."
+        ],
+        "notes": [
+          "Say kah-stel-veh-TRAH-noh: the bright green Sicilian olive, buttery and mild, the one olive-shy guests often like.",
+          "Never call ours DOP unless the kitchen confirms the jar; the menu prints only Castelvetrano.",
+          "Warn that olives can carry stones unless the kitchen confirms they are pitted.",
+          "Guests sometimes ask whether the green means unripe: picked young, yes, and cured to remove bitterness."
+        ],
+        "sayIt": "Castelvetrano olives, the bright green Nocellara del Belice of western Sicily, cured young so they stay mild and buttery.",
+        "askKitchen": [
+          "Are the Castelvetrano olives pitted, and are they DOP Nocellara del Belice?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-european-protected-2026-10-06.md (section 5)"
+      ]
+    },
+    {
+      "component": "luxardo",
+      "producer": {
+        "type": "maker",
+        "who": "Girolamo Luxardo",
+        "where": "Torreglia, near Padua, Italy (founded in Zara, Dalmatia)",
+        "founded": "1821",
+        "history": "In 1817 Girolamo Luxardo moved to Zara, on the Dalmatian coast, as consular representative of the Kingdom of Sardinia. His wife, Maria Canevari, made rosolio maraschino at home, a cherry liqueur of the region, and in 1821 he founded a distillery to make it properly. Within eight years the Emperor recognised it as superior. Around 1905 the plant at Zara made the first Luxardo maraschino cherries, marasca cherries candied in their own syrup, and in 1913 Michelangelo Luxardo, the third generation, built a new distillery.\n\nThe war ended all of it. Allied bombing from November 1943 to October 1944 destroyed 80 per cent of Zara, and the factory with it. Pietro Luxardo and his brother Nicolò, with Nicolò's wife, were killed by Tito's partisans. Giorgio Luxardo, the only survivor of the fourth generation, fled across the Adriatic; the family story says he carried a single cherry sapling.\n\nWith Nicolò III of the fifth generation he re-founded the firm briefly in Venice, then at Torreglia in the Euganean Hills near Padua, where the first marasca orchard was planted in 1947. It now has 20,000 trees, the company is still family owned, and it marked 200 years in 2021.",
+        "facts": [
+          "Founded in 1821 by Girolamo Luxardo in Zara, then Habsburg Dalmatia.",
+          "His wife Maria Canevari made rosolio maraschino at home before the distillery.",
+          "The first Luxardo maraschino cherries were made at Zara around 1905.",
+          "Allied bombing in 1943 and 1944 destroyed the Zara factory.",
+          "Giorgio Luxardo, sole survivor of the fourth generation, re-founded the firm at Torreglia near Padua.",
+          "The first marasca orchard at Torreglia was planted in 1947; it now has 20,000 trees.",
+          "The firm is still family owned and marked 200 years in 2021.",
+          "Luxardo marasca also goes into Sangue Morlacco, its cherry liqueur."
+        ],
+        "notes": [
+          "The Cherries Jubilee prints Luxardo by name, but it was not on the dessert menu of 3 October 2026: confirm with a manager that it is served before offering it.",
+          "Never say which Luxardo product is in the sauce until the kitchen tells you: Maraschino, Sangue Morlacco or the cherries in syrup.",
+          "The single sapling is a family story; tell it as a story, not a record.",
+          "Alcohol questions go to the kitchen: flaming does not remove all the alcohol."
+        ],
+        "sayIt": "Luxardo is the family cherry house founded in Zara in 1821 and replanted near Padua; its marasca cherry is the heart of this dessert.",
+        "askKitchen": [
+          "Which Luxardo product goes into the sauce?",
+          "Which spirit is lit at the table?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-european-protected-2026-10-06.md (section 6)"
+      ]
+    },
+    {
+      "component": "nduja",
+      "producer": {
+        "type": "origin",
+        "who": "'Nduja di Spilinga",
+        "where": "Spilinga, province of Vibo Valentia, Calabria",
+        "history": "'Nduja comes from Spilinga, a hill town in the province of Vibo Valentia, at the toe of Italy. It was a poor family's sausage. After the winter slaughter the better cuts went to the landowners, and what was left, the fatty, less prized trimmings, was turned into something that would keep and feed a household.\n\nThe method is simple and bold: fatback, belly and shoulder trimmings minced very fine with dried Calabrian chilli, around a third of the weight, plus salt, packed into a natural casing, lightly smoked over local wood and aged for several months. The result is soft enough to spread like a pâté and melts into anything warm.\n\nWhere it came from is argued. One theory says the Aragonese brought it in the sixteenth century; another derives it from the French andouille, introduced when Joachim Murat ruled the Kingdom of Naples at the beginning of the nineteenth century. If that second theory is right, the 'nduja in our white beans and the andouille in our gumbo share a French ancestor, a pleasing thought for a New Orleans table, offered as a theory and no more.",
+        "facts": [
+          "'Nduja comes from Spilinga in the province of Vibo Valentia, Calabria.",
+          "It is fatty pork trimmings minced with dried Calabrian chilli, about a third of the weight.",
+          "It is cased, lightly smoked and aged for several months, and spreads like a pâté.",
+          "It began as a way to use the fatty cuts left after the better ones went to landowners.",
+          "One theory credits the Aragonese in the sixteenth century; another the French andouille under Joachim Murat."
+        ],
+        "notes": [
+          "Say en-DOO-yah, and warn spice-shy guests: it carries a slow red-pepper heat.",
+          "The andouille link is a theory, a good one for New Orleans; say one theory is, never that it is fact.",
+          "No maker is printed; whether ours is Italian or American is a kitchen question.",
+          "Pork is in the beans; dietary questions go to the kitchen."
+        ],
+        "sayIt": "'Nduja, en-DOO-yah, the spreadable chilli pork sausage of Spilinga in Calabria, melted into the white beans under the lobster.",
+        "askKitchen": [
+          "Whose 'nduja do we use, and is it rendered into the beans or dolloped on top?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-european-protected-2026-10-06.md (section 7)"
+      ]
+    },
+    {
+      "component": "burrata",
+      "producer": {
+        "type": "origin",
+        "who": "Burrata of Andria",
+        "where": "Andria, the Murgia, Puglia",
+        "founded": "1956",
+        "history": "Burrata is a fresh cheese of the Murgia in Puglia, made from cow's milk, rennet and cream: a pouch of mozzarella filled with shreds of curd soaked in cream. Its birthplace is the town of Andria, though the date is argued. Some place it about 1900, at the farm of the brothers Lorenzo and Vincenzo Bianchino; more recent records credit Lorenzo Bianchino of the Piana Padura farm with first making it in 1956.\n\nThe story told in Puglia is of a heavy February snowfall that kept Bianchino from the market. With milk that would not keep, he wrapped curd, scraps of mozzarella and the cream from the morning milking inside a skin of mozzarella, so nothing was wasted.\n\nFor decades it stayed a local fresh cheese that had to be eaten within days. In November 2016 Burrata di Andria became a protected geographical indication, an IGP, recognising the town's claim.\n\nOn the Creole Tomato Tostada it does what mozzarella does in a caprese: a cool, milky foil for raw Louisiana tomatoes, torn and served at room temperature.",
+        "facts": [
+          "Burrata is a fresh cow's milk cheese of the Murgia in Puglia, mozzarella filled with cream-soaked curd.",
+          "Its birthplace is Andria; some date it to about 1900 at the Bianchino brothers' farm.",
+          "More recent records credit Lorenzo Bianchino of the Piana Padura farm, in 1956.",
+          "The story says a February snowfall kept him from market, so he used up curd and cream.",
+          "Burrata di Andria became a protected geographical indication in November 2016."
+        ],
+        "notes": [
+          "Say boo-RAH-tah: mozzarella with a creamy centre, from Andria in Puglia.",
+          "Never call ours Burrata di Andria IGP or Italian unless the kitchen confirms it; good burrata is also made in America.",
+          "Tell the snowstorm story as a story; the date itself is argued.",
+          "No meat is printed on the dish; vegetarian and dairy questions still go to the kitchen."
+        ],
+        "sayIt": "Burrata, boo-RAH-tah, from Andria in Puglia: a pouch of mozzarella with a soft, creamy centre, beside our Creole tomatoes.",
+        "askKitchen": [
+          "Where is our burrata made, Italy or America?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-european-protected-2026-10-06.md (section 8)"
+      ]
+    },
+    {
+      "component": "aged-sherry",
+      "producer": {
+        "type": "origin",
+        "who": "Sherry, D.O. Jerez-Xeres-Sherry",
+        "where": "Jerez de la Frontera, Sanlúcar de Barrameda and El Puerto de Santa María, Cádiz, Spain",
+        "founded": "1933",
+        "history": "Sherry is the fortified wine of a triangle of towns in the province of Cádiz, in southern Spain: Jerez de la Frontera, Sanlúcar de Barrameda and El Puerto de Santa María. It is made mostly from the Palomino grape, in styles from pale, salty Manzanilla and fino to the darker Amontillado and oloroso, which age in contact with air and turn nutty and deep.\n\nWhat makes Sherry is the way it ages, criaderas y solera. Barrels are stacked in tiers; wine for bottling is drawn from the oldest, which is topped up from the next oldest, and so on up to the youngest. Every bottle is a blend of many years, and the style stays the same from decade to decade. That ageing was long reserved to the three towns.\n\nIn 1933 Jerez became the first denominación de origen recognised under Spain's new wine law, D.O. Jerez-Xeres-Sherry, though Rioja, which set up its own in 1925, also claims to be first.\n\nBrennan's has finished its turtle soup with sherry for a long time: its own published recipe calls for dry sherry and hard-boiled egg, and says the flavour is heightened by a touch of sherry. Tonight's menu prints aged Sherry, and which bottle the kitchen uses is a question for lineup.",
+        "facts": [
+          "Sherry must come from the triangle of Jerez de la Frontera, Sanlúcar de Barrameda and El Puerto de Santa María.",
+          "D.O. Jerez-Xeres-Sherry, recognised in 1933, was the first under Spain's wine law; Rioja dates its own to 1925.",
+          "It ages by criaderas y solera, a tiered blend of young into old wine.",
+          "It is made mostly from Palomino, from Manzanilla and fino to Amontillado and oloroso.",
+          "Brennan's published turtle soup recipe calls for dry sherry and hard-boiled egg.",
+          "The wine list's Sherries are Barbadillo Pale Cream, Valdespino VOS Solera 1842 and La Cigarrera Manzanilla."
+        ],
+        "notes": [
+          "Say aged Sherry, the nutty fortified wine of Jerez, lifts the soup at the end; do not name a bottle until the kitchen does.",
+          "Never say the soup uses a Sherry from the wine list; that is unconfirmed.",
+          "Tell guests who avoid alcohol that Sherry is in the soup; never promise it cooks off.",
+          "A guest who likes the note can be offered a glass of the list's Sherry alongside, checked with the sommelier."
+        ],
+        "sayIt": "Finished with aged Sherry from Jerez in southern Spain, nutty and dry, which cuts the richness of the turtle soup.",
+        "askKitchen": [
+          "Which Sherry finishes the Turtle Soup, and is it added in the kitchen, at the pass or at the table?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-european-protected-2026-10-06.md (section 9)"
+      ]
+    },
+    {
+      "component": "madeira-broccolini",
+      "producer": {
+        "type": "origin",
+        "who": "Madeira, the island's fortified wine",
+        "where": "Madeira, Portugal",
+        "founded": "1419",
+        "history": "Madeira is a Portuguese island in the Atlantic, discovered by the navigators João Gonçalves Zarco and Tristão Vaz Teixeira in 1419. The first settlers planted vines, and by the 16th century the island had a wine trade, its casks shipped across the Atlantic.\n\nThose voyages made the wine. Casks carried across the equator in hot holds came back changed, concentrated, darker and more stable, and the islanders learned to reproduce the voyage at home. The wine is fortified with grape spirit, then aged either by canteiro, casks warmed by the sun in lofts for years, or by estufagem, tanks heated to at most 50°C for at least 90 days, a method pioneered in 1794 by Pantaleão Fernandes. The four noble grapes name the styles, from dry Sercial and medium-dry Verdelho to Bual and sweet Malmsey, from Malvasia.\n\nBecause it has already been heated and aired, Madeira keeps, for decades and even after opening, which made it the wine of the American colonies; the signers are said to have toasted the Declaration of Independence with it in 1776, a story often told but thinly documented.\n\nIn the kitchen that same caramel, walnut and sharp acidity reduces into a glaze for the broccolini on the Creole Hanger Steak.",
+        "facts": [
+          "The island was discovered by João Gonçalves Zarco and Tristão Vaz Teixeira in 1419.",
+          "Heat in ships' holds crossing the equator improved the wine; makers learned to reproduce it.",
+          "Estufagem heats the wine to at most 50°C for at least 90 days, pioneered in 1794.",
+          "Canteiro ages casks warmed naturally by the sun for years.",
+          "Already heated and oxidised, Madeira keeps for decades, even after opening.",
+          "The four noble styles: Sercial, Verdelho, Bual and Malmsey, from dry to sweet.",
+          "The signers are said to have toasted the Declaration of Independence with Madeira in 1776; tell it as a story."
+        ],
+        "notes": [
+          "Say the broccolini is glazed with Madeira, the Portuguese island wine that is heated as it ages, so it tastes of caramel and walnut.",
+          "Never say the glaze uses a bottle from the wine list; the cooking Madeira is not named.",
+          "Guests who avoid alcohol should know the glaze is made with wine; never promise it cooks off.",
+          "A guest who loves the note can be pointed to the list's Madeiras, Broadbent and Henriques & Henriques, through the sommelier."
+        ],
+        "sayIt": "Broccolini glazed with Madeira, the Portuguese island wine aged in heat, beloved of the American colonies: caramel, walnut, bright acidity.",
+        "askKitchen": [
+          "Which Madeira, and which style, goes into the broccolini glaze?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-european-protected-2026-10-06.md (section 10)"
+      ]
+    },
+    {
+      "component": "bavarois",
+      "producer": {
+        "type": "house",
+        "who": "The Brennan's pastry kitchen (chocolate maker not named)",
+        "where": "417 Royal Street, New Orleans",
+        "history": "The Snickers is Brennan's grown-up version of the candy bar, and the menu prints it plainly: Bavarian milk chocolate, caramel custard, nougat ice cream and roasted peanuts, at $15. It appears on the dessert menu and as a choice on the Taste of Brennan's tasting menu, where a diner listing describes it as house made.\n\nBavarian, on a pastry menu, most often names a preparation rather than a place: a Bavarian cream, or bavarois, is a set custard lightened with whipped cream, between a mousse and a custard. Read that way, the line promises a milk chocolate Bavarian cream, not chocolate made in Bavaria. No public source names the chocolate the pastry kitchen melts into it, and no claim should be made about a maker.\n\nThe kitchen's pastry roots are real. Kris Padalino became executive chef in June 2025 after eight years at Brennan's as pastry chef and executive sous chef. Who builds The Snickers now, and with which chocolate, are questions for lineup.",
+        "facts": [
+          "The menu prints Bavarian Milk Chocolate, Caramel Custard, Nougat Ice Cream, Roasted Peanuts, $15.00.",
+          "It also appears as a dessert choice on the tasting menu.",
+          "A diner listing calls it a house-made Snickers-inspired dessert on the Taste of Brennan's menu.",
+          "No public source names the chocolate maker.",
+          "Kris Padalino became executive chef in June 2025 after eight years as pastry chef and executive sous chef."
+        ],
+        "notes": [
+          "Say a milk chocolate Bavarian cream, light and set, between a mousse and a custard.",
+          "Never say the chocolate comes from Bavaria or name a brand; neither is confirmed.",
+          "Peanuts are printed on the dish: dietary questions go to the kitchen before ordering.",
+          "Bavarian creams are usually set with gelatine; vegetarian questions go to the kitchen."
+        ],
+        "sayIt": "Our Snickers: a milk chocolate Bavarian cream, between a mousse and a custard, with caramel custard, nougat ice cream and roasted peanuts.",
+        "askKitchen": [
+          "Which milk chocolate goes into The Snickers, and does Bavarian mean a Bavarian cream?",
+          "Is the Bavarian set with gelatine?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-european-protected-2026-10-06.md (section 11)"
+      ]
+    },
+    {
+      "component": "grand-isle-jewel",
+      "producer": {
+        "type": "farm",
+        "who": "Grand Isle Jewels",
+        "where": "Grand Isle, Jefferson Parish, Louisiana",
+        "founded": "2025",
+        "history": "Grand Isle is the barrier island at the southern edge of Jefferson Parish. Its oyster industry was about 150 years old when it failed in the 1980s.\n\nThe revival began in 2012, when Jules Melancon, a multigenerational oysterman, became the first permitted to farm oysters off-bottom there: seed grown in floating cages just below the surface instead of on the seabed. Others followed, working in the Grand Isle Aquapark, where ocean and estuary water mix and the salinity suits a briny oyster. Melancon died in 2023.\n\nIn April 2025 the Jefferson Parish Economic Development Commission, JEDCO, gathered eight of the island's growers under one regional brand, Grand Isle Jewels. The name nods to the island's pirate past and to Melancon himself. The brand sells to restaurants across the Southeast and Texas, and a distribution partnership with Inland Foods followed a market test of about 10,000 products.",
+        "facts": [
+          "Grand Isle Jewels is a regional oyster brand launched by JEDCO, the Jefferson Parish Economic Development Commission, in April 2025.",
+          "Eight Grand Isle growers farm under the brand, in floating cages rather than on the seabed.",
+          "Jules Melancon brought off-bottom farming to Grand Isle in 2012; the brand's name honours him and the island's pirate past.",
+          "The island's oyster industry, about 150 years old, had failed in the 1980s before off-bottom farming revived it.",
+          "Seed oysters grow just below the surface in an aquapark chosen for temperature, water flow and salinity.",
+          "The growers describe the flavour as briny and bright, from the mix of ocean and estuary water.",
+          "Inland Foods tested about 10,000 Grand Isle Jewels products before expanding distribution across the Southeast and Texas."
+        ],
+        "notes": [
+          "The menu prints Grand Isle Jewel; the brand is Grand Isle Jewels. Either is fine aloud.",
+          "Expect these to taste saltier and brighter than the cooked Louisiana Oysters: they are grown in briny water on purpose.",
+          "Do not name a single farm, or say the method was invented on Grand Isle; say the island revived its oysters by farming them off the bottom.",
+          "Raw shellfish questions go to the manager or the kitchen; point to the asterisk on the menu, never give a safety verdict yourself."
+        ],
+        "sayIt": "These are Grand Isle Jewels, farmed in floating cages off Louisiana's barrier island: briny, bright and served raw.",
+        "askKitchen": [
+          "How many oysters come per order, and which Grand Isle farm or farms are they from tonight?",
+          "Do we buy them from the growers or through a distributor?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-gulf-seafood-2026-10-06.md (section 1)"
+      ]
+    },
+    {
+      "component": "louisiana-oysters",
+      "producer": {
+        "type": "fishery",
+        "who": "Louisiana oyster leases and public reefs",
+        "where": "Louisiana coast, from the Mississippi delta west to Vermilion Bay",
+        "history": "Louisiana leads the nation in oysters. Between 2003 and 2022 it landed about a third of all oysters in the United States, and in 2022 it produced more than seven million pounds of oyster meat.\n\nOystermen have long dredged from two kinds of water bottom: about 1.7 million acres of public reefs, which the state opens each season, and about 400,403 acres of private leases, beds that families rent from the state and tend themselves. For years the split was roughly even. Since about 2007, freshwater pouring onto the main public grounds east of the Mississippi has weakened those reefs, and private leases now give more than nine oysters in ten; in 2023 public reefs gave only 7.3% of landings.\n\nThe Louisiana Wildlife and Fisheries Commission sets the public season each year from its biologists' stock assessment, usually opening in September, with market oysters for sale following. Gulf water is less salty than the Atlantic, partly thanks to the Mississippi, which is why Louisiana oysters are plump, mild and a little sweet.",
+        "facts": [
+          "From 2003 through 2022 Louisiana landed 32.3% of the nation's oysters, more than any other state.",
+          "Louisiana has about 1.7 million acres of public oyster reefs and about 400,403 acres of private leases.",
+          "In 2023 private leases gave 92.7% of Louisiana's commercial oyster landings and public reefs 7.3%.",
+          "Since about 2007 freshwater has weakened the main public grounds east of the Mississippi River.",
+          "The Louisiana Wildlife and Fisheries Commission sets the public season yearly from LDWF biologists' stock assessment.",
+          "Gulf oysters grow in less salty water than Atlantic ones, so they are milder, plumper and slightly sweet."
+        ],
+        "notes": [
+          "Say Louisiana oysters, grown on the state's private leases and public reefs; do not name a bay, reef or family unless the kitchen tells you.",
+          "Guests from the East Coast often ask why these are cooked: Gulf oysters are large and mild, so New Orleans cooks them as often as it eats them raw.",
+          "If a guest wants a briny raw oyster, steer them to the Grand Isle Jewels.",
+          "Never promise the oysters in a cooked dish are local on a given night; the menu prints Louisiana, the source behind it is the kitchen's."
+        ],
+        "sayIt": "These are Louisiana oysters, big and mild from the Gulf, cooked in our New Orleans BBQ sauce.",
+        "askKitchen": [
+          "Where are tonight's cooked oysters from, and how many come per order?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-gulf-seafood-2026-10-06.md (section 2)"
+      ]
+    },
+    {
+      "component": "gulf-shrimp",
+      "producer": {
+        "type": "fishery",
+        "who": "Louisiana shrimpers",
+        "where": "Louisiana coast and the Gulf",
+        "history": "Shrimp is Louisiana's most valuable commercial fishery and the state is first in the nation for shrimp landings: in 2012 nearly 102 million pounds came ashore, worth more than $146 million at the dock. About 5,500 licensed shrimpers work two species, the brown shrimp of the spring season, roughly May to July, and the white shrimp of the autumn season, from mid-August to mid-December. The Louisiana Wildlife and Fisheries Commission opens and closes each area on its biologists' advice.\n\nThe fishery is old and many-voiced. By the 1880s the marshes south of New Orleans were dotted with villages on stilts where shrimp were dried on raised platforms for Asia, the Philippines and Hawaii; at the peak, between 1900 and 1915, there were at least 95. Most of the merchants were Chinese, and the fishermen were Filipino, Chinese, Japanese, Italian, Croatian, Isleño, Creole, Cajun, African American and Native American. Manila Village, built over the oyster reefs of Barataria Bay by Filipino fishermen led by Quintin de la Cruz, even had its own post office.\n\nToday almost 90 percent of the shrimp eaten in America is imported, which is what makes the word Louisiana on a menu worth saying.",
+        "facts": [
+          "Louisiana is first in the nation for commercial shrimp landings; in 2012 nearly 102 million pounds were landed.",
+          "Two species carry the fishery: brown shrimp, Farfantepenaeus aztecus, and white shrimp, Litopenaeus setiferus.",
+          "Brown shrimp season generally runs May to July; white shrimp season mid-August to mid-December.",
+          "Shrimp is Louisiana's most valuable commercial fishery, with about 5,500 licensed commercial shrimpers.",
+          "At the peak of shrimp drying, 1900 to 1915, the marshes held at least 95 platform communities.",
+          "Manila Village in Barataria Bay was founded by Filipino fishermen led by Quintin de la Cruz.",
+          "Almost 90 percent of the shrimp eaten in the United States is imported, which is why Louisiana on a menu matters.",
+          "Louisiana's Act 372 of 2019 requires a menu notice when a restaurant serves imported shrimp or crawfish."
+        ],
+        "notes": [
+          "Use the menu's words: Louisiana shrimp on the Shrimp & Grits and the Roost Popcorn Shrimp, Gulf shrimp on the children's fried shrimp.",
+          "If asked brown or white, the honest answer depends on the season and the boat; ask the kitchen rather than guess.",
+          "Never say all our shrimp are Louisiana: the children's breakfast popcorn shrimp prints no origin.",
+          "A good story at the table: the Filipino and Chinese shrimp-drying villages of the marsh, more than a century ago."
+        ],
+        "sayIt": "It's wild Louisiana shrimp, from the state that lands more shrimp than any other in the country.",
+        "askKitchen": [
+          "Are tonight's shrimp brown or white, and from which supplier?",
+          "Is the children's breakfast popcorn shrimp the same Louisiana shrimp?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-gulf-seafood-2026-10-06.md (section 3)"
+      ]
+    },
+    {
+      "component": "blue-crab-lump",
+      "producer": {
+        "type": "fishery",
+        "who": "Louisiana blue crabbers",
+        "where": "Louisiana coastal marshes and bays",
+        "history": "Louisiana runs the largest commercial blue crab fishery in the Gulf and in the United States, supplying about a quarter of all the blue crab caught in the country. In 2018 it landed 30.6% of the nation's blue crabs, and its 2024 harvest was 40 million pounds. The crab is trapped in the brackish marshes and bays where fresh river water meets the Gulf.\n\nMost of that catch is cooked and picked by hand, and the meat is sold by grade. New Orleans seafood counters sell three: jumbo lump, backfin lump and claw. Lump is prized for its large, sweet white pieces that hold their shape on a plate, while claw meat, darker and sweeter, is what many home cooks put in stuffed crabs.\n\nBrennan's prints Louisiana lump crab on the Pecan Gulf Fish and the Crab & Corn Omelette, Louisiana crab on the Gulf Fish en Papillote, and serves warm Louisiana Crab Claws as a starter. No picking house or crabber is named.",
+        "facts": [
+          "Louisiana's commercial blue crab fishery is the largest in the Gulf and in the United States.",
+          "Louisiana supplies about a quarter of the blue crab harvested in the United States.",
+          "Louisiana landed 30.6% of all US blue crabs in 2018; its 2024 harvest was 40 million pounds.",
+          "New Orleans seafood counters sell picked crabmeat in three grades: jumbo lump, backfin lump and claw.",
+          "The menu prints Louisiana lump crab on the Pecan Gulf Fish and the Crab & Corn Omelette."
+        ],
+        "notes": [
+          "Say Louisiana lump crab, as printed; it is the sweet, large-piece grade, already cooked and only warmed.",
+          "Louisiana catches more blue crab than any other state, which is a fair thing to say with pride.",
+          "Do not name a picking house or claim jumbo lump; the menu prints lump.",
+          "Shellfish questions always go to the kitchen."
+        ],
+        "sayIt": "That's Louisiana lump crab, sweet hand-picked blue crab from the state that catches more of it than any other.",
+        "askKitchen": [
+          "Which picking house supplies our lump and claws?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-gulf-seafood-2026-10-06.md (section 4)"
+      ]
+    },
+    {
+      "component": "gulf-fish",
+      "producer": {
+        "type": "fishery",
+        "who": "Gulf commercial fishermen",
+        "where": "Gulf waters off Louisiana",
+        "history": "Gulf fish on a New Orleans menu means the day's catch, not one species. The city's appetite runs to fish such as true American red snapper and black drum, which sell far above the national average here, and sheepshead, an estuarine fish of Louisiana's coast that is nearly all sold to restaurants and markets in the state.\n\nLouisiana has worked to widen that list. In 1981 the legislature created the Louisiana Seafood Promotion and Marketing Board to promote the state's commercial catch, with particular attention to underused species.\n\nBrennan's owner has a public record on Gulf seafood. After the 2010 BP oil spill Ralph Brennan testified before Congress about the damage to the Gulf seafood industry, and he advocates sustainable, local seafood sourcing in each of his restaurants. In New Orleans the Audubon Nature Institute runs GULF, a sustainable seafood programme founded in 2012 that works with restaurants and fisheries.",
+        "facts": [
+          "Gulf fish means the day's catch from Gulf waters, not a fixed species.",
+          "True American red snapper and black drum sell far above average in the New Orleans area.",
+          "Nearly all commercially caught Louisiana sheepshead is sold to restaurants or markets in the state.",
+          "Louisiana created its Seafood Promotion and Marketing Board in 1981, with a focus on underused species.",
+          "Ralph Brennan testified before Congress on the Gulf seafood industry after the 2010 BP oil spill.",
+          "Audubon Nature Institute's GULF sustainable seafood programme was founded in 2012."
+        ],
+        "notes": [
+          "Learn tonight's fish at lineup; every table will ask what the Gulf fish is.",
+          "You may say our owner, Ralph Brennan, is a public advocate for local Gulf seafood; do not claim any certification or partnership.",
+          "Never guess a species. If the kitchen has not said, offer to ask.",
+          "Redfish on the Véronique is its own fish with its own story; do not call it the Gulf fish of the day."
+        ],
+        "sayIt": "Gulf fish is the day's catch from the Gulf; let me tell you exactly which fish the kitchen has tonight and how it's cooked.",
+        "askKitchen": [
+          "What is tonight's Gulf fish on the Pecan Gulf Fish, the en Papillote and the children's plate?",
+          "Is it from a Louisiana boat, and from which supplier?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-gulf-seafood-2026-10-06.md (section 5)"
+      ]
+    },
+    {
+      "component": "redfish",
+      "producer": {
+        "type": "origin",
+        "who": "Redfish (red drum)",
+        "where": "Gulf of Mexico; farmed redfish mainly in Texas",
+        "history": "Redfish, the red drum, was an important commercial and restaurant fish in Louisiana until 1988. Its fall began one March evening in 1980, when Paul Prudhomme served blackened redfish at K-Paul's in New Orleans; from 1983 he took it on pop-ups to New York and San Francisco, where people queued for hours. Kitchens all over the country copied it, and the Gulf was fished hard: 12.7 million pounds of red drum in a single year.\n\nThe stock fell, and Louisiana's Wildlife and Fisheries Commission closed the commercial redfish fishery in the late 1980s; sources give 1987 and 1988. In 1988 anglers were limited to five fish a day with only one over 27 inches, and there has been no commercial redfish fishing in Louisiana since.\n\nThe collapse also spurred red drum hatcheries and farms, partly to restock the Gulf, and Texas has led the nation in red drum farms. Louisiana law lets licensed dealers sell farm-raised red drum, or red drum legally caught and sold commercially outside the state, so the redfish on a Louisiana menu today is one or the other.",
+        "facts": [
+          "Paul Prudhomme served blackened redfish at K-Paul's in March 1980 and set off a national craze.",
+          "In one year 12.7 million pounds of red drum were harvested from the Gulf.",
+          "Louisiana closed commercial redfish fishing in the late 1980s; sources date the ban to 1987 or 1988.",
+          "Louisiana's 1988 rules cut anglers to five redfish a day, only one over 27 inches; commercial redfish fishing has not returned.",
+          "Louisiana law lets licensed dealers sell farm-raised red drum, or red drum legally caught commercially outside the state.",
+          "Red drum farming grew from the 1980s collapse; in one national count Texas led with eight red drum farms."
+        ],
+        "notes": [
+          "Redfish is the red drum: firm, mild, slightly sweet, with a black spot near the tail.",
+          "Never say ours is wild Louisiana redfish: Louisiana has had no commercial redfish fishery since the late 1980s.",
+          "The story guests enjoy: Prudhomme's blackening craze nearly fished redfish out, and the rules since brought it back.",
+          "Where ours comes from, farmed or another state's catch, is a chef question."
+        ],
+        "sayIt": "Redfish is the red drum, firm and mild; it is the fish Paul Prudhomme made famous, and here it stands in for the classic sole.",
+        "askKitchen": [
+          "Is our redfish farm-raised, and from where?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-gulf-seafood-2026-10-06.md (section 6)"
+      ]
+    },
+    {
+      "component": "crawfish",
+      "producer": {
+        "type": "origin",
+        "who": "Louisiana crawfish farmers and Atchafalaya fishermen",
+        "where": "South Louisiana rice country and the Atchafalaya Basin",
+        "history": "Louisiana grows nearly all of America's crawfish. Its crawfish ponds covered 120,654 acres in 1990 and about 225,789 acres in a recent count, against roughly 7,500 acres in the whole of the rest of the country.\n\nMore than half of that farming happens in rice fields. After the rice harvest in July and August the farmers flood the same fields as crawfish ponds, so the clay soil that suits rice gives a second crop in the cooler months. Farm-raised crawfish make up most of Louisiana's supply, about 80% by one count.\n\nThe rest is wild, trapped in the deeper water of the Atchafalaya Basin, the largest river swamp in the United States, which has historically given about 90% of the state's wild landings.\n\nOn the Roost menu the Crawfish Meat Pies come with a chive rémoulade. The menu does not print Louisiana, so whether the tail meat in them is Louisiana crawfish is a question for the kitchen; Louisiana law requires a menu notice when imported crawfish are served.",
+        "facts": [
+          "Louisiana crawfish ponds grew from 120,654 acres in 1990 to 225,789 acres, against about 7,500 acres elsewhere in the US.",
+          "More than half of Louisiana's crawfish farming is done in rice fields flooded after the rice harvest.",
+          "Farm-raised crawfish are about 80% of Louisiana's crawfish industry by one count; the rest is trapped wild.",
+          "Wild crawfish are trapped in the Atchafalaya Basin, the largest river swamp in the United States.",
+          "About 90% of Louisiana's wild crawfish landings have historically come from the Atchafalaya Basin.",
+          "Louisiana's Act 372 of 2019 requires a menu notice when imported crawfish or shrimp are served."
+        ],
+        "notes": [
+          "The menu prints Crawfish Meat Pies, not Louisiana crawfish; do not add the word until the kitchen confirms it.",
+          "A good line: most Louisiana crawfish grow in rice fields, a second crop after the rice harvest.",
+          "Shellfish questions always go to the kitchen."
+        ],
+        "sayIt": "Crawfish are Louisiana's own: most are raised in flooded rice fields, the rest trapped wild in the Atchafalaya swamp.",
+        "askKitchen": [
+          "Is the crawfish tail meat in the meat pies from Louisiana, and is it farmed or wild?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-gulf-seafood-2026-10-06.md (section 7)"
+      ]
+    },
+    {
+      "component": "turtle-meat",
+      "producer": {
+        "type": "origin",
+        "who": "Louisiana snapping turtle",
+        "where": "Louisiana, from licensed turtle farms and collectors",
+        "history": "Turtle soup has been eaten in Louisiana since the 1700s, and it is still on the menus of the old houses: Arnaud's, Commander's Palace, Mandina's, Felix's and Brennan's among them. At Brennan's the chefs use snappers, freshwater snapping turtles.\n\nThe rules on which snapper changed in 2004. The alligator snapping turtle, the great loggerhead once common in Louisiana markets, became off limits to commercial trappers when a Wildlife and Fisheries regulation took effect on 20 November 2004. Licensed turtle farmers may still sell alligator snappers hatched from their own breeding stock, and Commander's Palace uses farm-raised alligator snapper for a steady supply. The common snapping turtle could still be taken and sold by holders of a reptile and amphibian collection licence, by a 2017 account, and most of the state's turtle trade involves farm-hatched animals.\n\nFor cooks, Brennan's own published turtle soup recipe notes that fresh or frozen turtle meat can be bought from specialty markets and seafood dealers in and around New Orleans. Brennan's menu prints 100% turtle meat, which means the meat in the soup is all turtle, not stretched with veal or beef. It does not say which snapper or which supplier.",
+        "facts": [
+          "Turtle soup has been eaten in Louisiana since the 1700s.",
+          "Louisiana banned commercial trapping of the wild alligator snapping turtle from 20 November 2004.",
+          "Licensed Louisiana turtle farmers may still sell alligator snappers hatched from their breeding stock.",
+          "Commander's Palace buys farm-raised alligator snapping turtle for a steady supply.",
+          "Most of Louisiana's turtle trade involves animals hatched on farms.",
+          "Brennan's published recipe says turtle meat can be bought from seafood dealers in and around New Orleans.",
+          "Our menu prints 100% turtle meat: no veal or beef stretches the soup."
+        ],
+        "notes": [
+          "Say 100% turtle meat, exactly as printed, and explain it means no veal or beef in the soup.",
+          "Do not say farm-raised or name a species or supplier until the chef tells you; both farmed and licensed wild snapping turtle are legal in Louisiana.",
+          "Never the courtyard turtles: they are red-eared sliders, pardoned house mascots, and the chefs use snappers. Smile when guests joke about it.",
+          "For a hesitant guest, describe the taste: rich, meaty and savoury, like a deep, finely chopped stew."
+        ],
+        "sayIt": "It's 100% turtle meat, snapping turtle, in a rich Creole soup finished with spinach, grated egg and aged Sherry.",
+        "askKitchen": [
+          "Which turtle is in our soup, alligator snapper or common snapper, and is it farm-raised?",
+          "Who supplies it?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-gulf-seafood-2026-10-06.md (section 8)"
+      ]
+    },
+    {
+      "component": "leidenheimer",
+      "producer": {
+        "type": "maker",
+        "who": "Leidenheimer Baking Company",
+        "where": "Simon Bolivar Avenue, New Orleans",
+        "founded": "1896",
+        "history": "George Leidenheimer came to New Orleans from Deidesheim in Germany and opened a bakery on Dryades Street in 1896. He began with the heavy, dense brown breads of home, but the city's customers of French descent preferred a light, airy loaf, so he turned to New Orleans French bread, with its crisp crust.\n\nIn 1904 the bakery moved to Simon Bolivar Avenue, where it still bakes. Its bread is older than the po-boy itself, which dates to the late 1920s, yet it became the loaf most of the city's po-boy shops reach for, and Leidenheimer is now the largest and best-known po-boy bread maker in New Orleans. The dough is naturally fermented and hand-stretched to a 32-inch loaf, and the bakery also makes pistolets and muffuletta bread.\n\nThe family still runs it: Robert J. \"Sandy\" Whann IV, George Leidenheimer's great-grandson, is the fourth generation and runs it with his sister, Katherine. After Hurricane Katrina, when the city had no power or clean water, Whann kept the bread coming by sending his operations manager to bake in a friend's bakery in Chicago.",
+        "facts": [
+          "Founded in 1896 by George Leidenheimer, an immigrant from Deidesheim, Germany, first on Dryades Street.",
+          "Moved in 1904 to Simon Bolivar Avenue, where it still bakes.",
+          "He switched from dense German loaves to the light, crisp-crusted New Orleans French bread.",
+          "Its bread predates the po-boy, which dates to the late 1920s.",
+          "The dough is naturally fermented and hand-stretched to a 32-inch loaf.",
+          "Run by Sandy Whann, the fourth generation and George Leidenheimer's great-grandson.",
+          "After Hurricane Katrina it kept baking in a friend's bakery in Chicago."
+        ],
+        "notes": [
+          "Say the crisps are made from Leidenheimer, the city's po-boy bread; that turns a garnish into a piece of New Orleans.",
+          "The menu prints the name; no source says more about how Brennan's buys or makes the crisps, so how they are cut and toasted is a kitchen answer.",
+          "Guests often ask whether the bakery is still family run: yes, the fourth generation.",
+          "Never claim Leidenheimer invented the po-boy; its bread is older than the sandwich."
+        ],
+        "sayIt": "The crisps are made from Leidenheimer French bread, the po-boy loaf New Orleans has baked since 1896.",
+        "askKitchen": [
+          "How are the Leidenheimer crisps made: sliced and toasted here, with butter or oil?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-louisiana-makers-2026-10-06.md (section 1)"
+      ]
+    },
+    {
+      "component": "tien-dat-tofu",
+      "producer": {
+        "type": "maker",
+        "who": "Tien Dat tofu",
+        "where": "West Bank, Jefferson Parish (Marrero and Harvey addresses); co-op in New Orleans East",
+        "history": "Tien Dat is a small local tofu maker, part of the VEGGI Farmers Cooperative, whose extra firm tofu reaches the city through the co-op. Tien Dat Tofu LLC is registered on the West Bank, with addresses in Marrero and Harvey, across the river from the French Quarter. The tofu is made fresh in small batches, sold as extra firm and in flavoured styles such as black mushroom, and lemongrass and red chilli.\n\nVEGGI stands for the Village de L'Est Green Growers Initiative. Village de L'Est is the Vietnamese American community of New Orleans East, and the co-op was established there in 2011, across the street from Mary Queen of Vietnam Church, in the aftermath of the BP oil spill, when twelve growers and programme developers chose through a community forum to build jobs in urban agriculture. It is owned and run by its members.\n\nThe co-op sells herbs, vegetables, chilli oil and more at the Crescent City Farmers Market, but it is best known for its freshly made tofu. Printing the name on the Blackened Tofu ties Brennan's plate to that community.",
+        "facts": [
+          "Tien Dat Tofu LLC is a Louisiana company with West Bank addresses in Marrero and Harvey.",
+          "The tofu is sold through the VEGGI Farmers Cooperative, made fresh in small batches.",
+          "VEGGI means Village de L'Est Green Growers Initiative, after the Vietnamese American community of New Orleans East.",
+          "The co-op was established in 2011, after the BP oil spill, and is member owned.",
+          "It sits across the street from Mary Queen of Vietnam Church.",
+          "Twelve growers and programme developers formed it through a community forum.",
+          "The co-op is best known for its tofu and sells at the Crescent City Farmers Market."
+        ],
+        "notes": [
+          "Say it is made locally by a Vietnamese American maker and sold through a New Orleans East co-op.",
+          "If a guest asks 'made in New Orleans?', the honest answer: the co-op is in New Orleans East; the maker's registered address is across the river on the West Bank.",
+          "No source names the person who makes it or describes the method; do not invent a family story.",
+          "Ingredient and dietary questions about the tofu and the blackening butter go to the kitchen."
+        ],
+        "sayIt": "The tofu is Tien Dat, made locally and sold through the VEGGI co-op, the Vietnamese American growers of New Orleans East.",
+        "askKitchen": [
+          "Which Tien Dat style do we buy (plain extra firm?), and how does the house pronounce it?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-louisiana-makers-2026-10-06.md (section 2)"
+      ]
+    },
+    {
+      "component": "rice-grits",
+      "producer": {
+        "type": "farm",
+        "who": "Two Brooks Farm",
+        "where": "Sumner, Mississippi (the Delta)",
+        "founded": "1992",
+        "history": "Two Brooks Farm sits at Sumner in the Mississippi Delta. Mike Wagner started it in 1992, and he is a ninth-generation farmer: his family counts an unbroken line of ten generations back to 1742. The farm grows about 2,000 acres of rice and 1,000 of soybeans.\n\nWhat sets it apart is the birds. The farm lies on the flyway, and after harvest ducks and geese settle on the flooded fields. Wagner noticed his soil changing where they gathered and began cutting back on fertiliser; the birds now supply much of it, and no fungicides or insecticides go on the rice.\n\nFrom that long-grain rice the family built a line of 14 products, rice, grits and flour among them, with the Original Mississippi Midlands Brown Rice Grits one of Wagner's favourites. His son Lawrence and daughter Abbey, the next generation, have helped widen the range, and the products reach restaurants through US Foods. In 2022 Wagner was named Mississippi's winner of the Swisher Sweets/Sunbelt Ag Expo Southeastern Farmer of the Year award.",
+        "facts": [
+          "At Sumner, Mississippi, in the Delta; started in 1992 by Mike Wagner.",
+          "Wagner is a ninth-generation farmer; the family traces ten generations back to 1742.",
+          "Ducks and geese winter on the fields and supply much of the fertiliser.",
+          "No fungicides or insecticides are used on the rice.",
+          "A line of 14 products, including rice, grits and flour.",
+          "Mississippi's state winner of the 2022 Swisher Sweets/Sunbelt Ag Expo Southeastern Farmer of the Year award.",
+          "Son Lawrence and daughter Abbey, the next generation, help run the farm."
+        ],
+        "notes": [
+          "Two Brooks is in Mississippi, not Louisiana; guests sometimes test this.",
+          "The duck and geese story is true and memorable: the birds help fertilise the rice.",
+          "Whether the grits are cooked with stock or butter is a kitchen answer.",
+          "Do not call the rice organic; the sources say reduced fertiliser and no fungicides or insecticides, not certified organic."
+        ],
+        "sayIt": "The rice grits come from Two Brooks Farm in the Mississippi Delta, a family rice farm where wintering ducks help fertilise the fields.",
+        "askKitchen": [
+          "Which Two Brooks grits do we use, white or brown rice, and are they cooked with stock or butter?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-louisiana-makers-2026-10-06.md (section 3)"
+      ]
+    },
+    {
+      "component": "maggies-mushrooms",
+      "producer": {
+        "type": "farm",
+        "who": "Mushroom Maggie's Farm (to be confirmed by the chef)",
+        "where": "St Francisville, Louisiana",
+        "founded": "2018",
+        "history": "Mushroom Maggie's Farm is the best-known Louisiana grower called Maggie's, and the likely source of the side the menu prints simply as Maggie's Mushrooms. No public source names Brennan's as a customer, so treat the link as likely, not settled.\n\nThe farm is in St Francisville, upriver from Baton Rouge. Maggie Long and her husband Cyrus Lester have owned and run it since 2018. Their start was hard: in 2017, in the first week of official operations, a propane hose burst while they were steaming fruiting blocks, the barn burned down and Lester was left with burns over seventy percent of his skin. They started again from nothing and spent the next year rebuilding, so 2018 became the farm's first real year.\n\nToday the farm grows 1,200 to 1,500 pounds of mushrooms a week, at least eight kinds, among them lion's mane, oyster, pink trumpet, shiitake and chestnut. It supplies about twenty top New Orleans restaurants and many closer to home, and Maggie Long often works directly with chefs as they plan their menus.",
+        "facts": [
+          "In St Francisville, Louisiana, run since 2018 by Maggie Long and Cyrus Lester.",
+          "Grows 1,200 to 1,500 pounds of mushrooms a week.",
+          "At least eight kinds, including lion's mane, oyster, pink trumpet, shiitake and chestnut.",
+          "Supplies about twenty top New Orleans restaurants.",
+          "A 2017 fire in the first week of operations destroyed the barn and badly burned Cyrus Lester; they rebuilt for 2018."
+        ],
+        "notes": [
+          "The menu prints only 'Maggie's Mushrooms'; no source confirms the farm supplies Brennan's.",
+          "Until the chef confirms it, say 'local mushrooms'; once confirmed, name the farm and St Francisville.",
+          "Learn tonight's varieties and how they are cooked at lineup; varieties change.",
+          "Butter, stock and whether the side is vegetarian are kitchen answers."
+        ],
+        "sayIt": "Maggie's Mushrooms is our side of local speciality mushrooms; I'll tell you exactly which varieties the kitchen has tonight.",
+        "askKitchen": [
+          "Are Maggie's Mushrooms from Mushroom Maggie's Farm in St Francisville?",
+          "Which varieties tonight, and how are they cooked (butter, stock)?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-louisiana-makers-2026-10-06.md (section 4)"
+      ]
+    },
+    {
+      "component": "gastrique-crystal",
+      "producer": {
+        "type": "maker",
+        "who": "Crystal hot sauce, Baumer Foods",
+        "where": "Reserve, Louisiana (founded on Tchoupitoulas Street, New Orleans)",
+        "founded": "1923",
+        "history": "In 1923 Alvin A. Baumer borrowed money from his future in-laws and bought Mill's Fruit Products, a small snow-cone syrup company on Tchoupitoulas Street. Tucked in a drawer was a recipe for a pepper sauce labelled Crystal Pure. Baumer renamed it Crystal Pure Louisiana Hot Sauce and began bottling it in the city.\n\nFor decades Baumer Foods was as much a maker of jellies, preserves and mustard as of hot sauce. From the 1940s it bottled Crystal on Tulane Avenue, where a neon sign of a chef stirring a steaming pot of strawberry jam became a local landmark. The flooding after Hurricane Katrina in 2005 ruined that plant and forced the company to drop its historic preserves, jellies and mustard; it moved upriver to Reserve, Louisiana, at the Port of South Louisiana, 9 feet above sea level.\n\nThe recipe is short: aged red cayenne peppers, distilled vinegar and salt, giving a reddish orange sauce with medium heat. The company is still family owned, led by Alvin \"Al\" Baumer Jr.",
+        "facts": [
+          "In 1923 Alvin A. Baumer bought Mill's Fruit Products on Tchoupitoulas Street, with the Crystal recipe included.",
+          "Made from aged red cayenne peppers, distilled vinegar and salt.",
+          "Reddish orange with medium heat.",
+          "From the 1940s it was bottled on Tulane Avenue, under a neon sign of a chef stirring jam.",
+          "Flooding after Hurricane Katrina in 2005 ended the Tulane Avenue plant; production moved upriver to Reserve, Louisiana.",
+          "Still family owned, led by Alvin \"Al\" Baumer Jr."
+        ],
+        "notes": [
+          "Describe the gastrique as sweet, tangy and gently spicy; Crystal reads tangy before hot.",
+          "The menu prints only 'Crystal Gastrique'; how sweet or hot tonight's batch is, ask the kitchen.",
+          "Do not quote factory sizes or gallons shipped; the published figures disagree."
+        ],
+        "sayIt": "The dip is a gastrique made with Crystal, New Orleans' own hot sauce since 1923: sweet, tangy, gently spicy."
+      },
+      "sources": [
+        "research/producers-food-louisiana-makers-2026-10-06.md (section 5)"
+      ]
+    },
+    {
+      "component": "abita-amber",
+      "producer": {
+        "type": "maker",
+        "who": "Abita Brewing Company",
+        "where": "Abita Springs, Louisiana",
+        "founded": "1986",
+        "history": "Abita Brewing was founded in 1986 by Jim Patton and Rush Cumming in downtown Abita Springs, on the Northshore of Lake Pontchartrain. Its first beer went on sale on 4 July that year in New Orleans and Mandeville, and it is described as the first craft brewery to open in the South.\n\nAmber was one of the brewery's original beers, and the one that put it on the map. Patton wrote the recipes for the flagships, Amber, Turbo Dog, Purple Haze and the root beer among them, before selling his share in 1997. Amber is a Munich-style lager of pale and caramel malts with German Perle hops: smooth, malty and lightly caramel, at 4.5 percent and a low 17 IBU.\n\nAt Brennan's the Amber goes into the Mimolette fondue of the Shells & Cheese, where its malt and low bitterness suit a cheese sauce, and the dessert list pours Abita Root Beer in the Amarula float.",
+        "facts": [
+          "Founded in 1986 by Jim Patton and Rush Cumming in Abita Springs, Louisiana.",
+          "Its first beer went on sale on 4 July 1986.",
+          "Described as the first craft brewery to open in the South.",
+          "Amber, one of its original beers, is a Munich-style lager with pale and caramel malts and German Perle hops.",
+          "Amber is 4.5 percent alcohol with a low 17 IBU.",
+          "Brennan's prints Abita Amber in the Shells & Cheese and pours Abita Root Beer in the Amarula float."
+        ],
+        "notes": [
+          "The low bitterness is why it suits a cheese sauce: hops turn bitter as a sauce reduces.",
+          "The guide says the beer's alcohol is mostly but not entirely cooked off; tell guests who avoid alcohol and let the kitchen answer anything further.",
+          "Do not quote well depths or water ages; those figures came from a retailer only.",
+          "Do not say Amber was Abita's very first beer; sources disagree, and some say Golden came first."
+        ],
+        "sayIt": "The fondue is loosened with Abita Amber, brewed across the lake in Abita Springs since 1986, for a smooth, malty depth."
+      },
+      "sources": [
+        "research/producers-food-louisiana-makers-2026-10-06.md (section 6)"
+      ]
+    },
+    {
+      "component": "bar-congregation-coffee",
+      "producer": {
+        "type": "maker",
+        "who": "Congregation Coffee Roasters",
+        "where": "240 Pelican Avenue, Algiers Point, New Orleans",
+        "founded": "2015",
+        "history": "Congregation Coffee was started in 2015 by two partners who met while working at Cochon Butcher. The name is a local joke and a hope at once: a group of alligators is called a congregation, and the blends High Walk, Low Walk and Gallop are named for an alligator's gaits. Two years after the roastery began, the café opened in a Victorian storefront at 240 Pelican Avenue in Algiers Point, across the river from the French Quarter.\n\nBrennan's was a customer long before it was an owner. By 2023 the restaurant had poured Congregation for seven years, and the buyer called them the best roasters in the city. When the company ceased operations that year while looking for new owners, it came under Brennan ownership, and in November 2023 the Algiers Point café and the wholesale roastery on Tchoupitoulas Street reopened, with a founder collaborating. A second café followed at Magazine Street and Jefferson Avenue.\n\nSo the coffee at Brennan's comes from a roaster in the family: the Traditional Breakfast tasting pours Brennan's Private Blend Congregation Coffee & Chicory beside the Bananas Foster, and the coffee list prints a Single Estate-grown Congregation Coffee, Roasted For Brennan's.",
+        "facts": [
+          "Founded in 2015 by two partners who met at Cochon Butcher.",
+          "A group of alligators is a congregation; blends High Walk, Low Walk and Gallop are alligator gaits.",
+          "The flagship café is at 240 Pelican Avenue, Algiers Point.",
+          "It roasts at 1746 Tchoupitoulas Street; the second café is at Magazine Street and Jefferson Avenue.",
+          "Brennan's had served Congregation for seven years before it came under Brennan ownership in 2023.",
+          "Reopened in November 2023, with a founder collaborating.",
+          "The menus print a Brennan's Private Blend with chicory and a single estate coffee roasted for Brennan's."
+        ],
+        "notes": [
+          "You can say the roaster is owned by the Brennan family and the blend is made for the house.",
+          "The chicory blend is the Traditional Breakfast pour; the single estate coffee's origin rotates, so read it from the coffee card. The chicory story itself lives on the chicory card.",
+          "Do not claim Congregation has always been a Brennan company; it was independent until 2023.",
+          "The alligator name story is true and guests enjoy it."
+        ],
+        "sayIt": "The coffee is Congregation, roasted across the river in Algiers Point; this chicory blend is roasted privately for Brennan's.",
+        "askKitchen": [
+          "Which single estate origin is on the coffee card this week?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-louisiana-makers-2026-10-06.md (section 7)"
+      ]
+    },
+    {
+      "component": "honey-chutney-bread",
+      "producer": {
+        "type": "house",
+        "who": "Brennan's honey (source unconfirmed)",
+        "where": "Served at 417 Royal Street; where the honey comes from is not confirmed, so ask the kitchen",
+        "history": "The Roost's Cheese Board prints Brennan's Honey beside three cheeses, a seasonal chutney and fruit and nut bread. The name says the honey belongs to the house, but no public source says where it comes from.\n\nA search for bees, hives or an apiary at 417 Royal Street found nothing; the only small residents the press describes in the courtyard are its turtles. The honey might come from the house's own hives, from a named Louisiana beekeeper bottling for Brennan's, or be a honey the kitchen finishes itself. None of those is confirmed, so until the chef answers at lineup, call it Brennan's honey and nothing more.\n\nWhat a server can say with confidence is what the menu prints. The board belongs to the Roost Bar & Bubbles, at $24.00, and the honey is there for the same reason honey sits on any good cheese board: its sweetness sets off salty, sharp cheese, while the chutney adds fruit and acid and the fruit and nut bread gives crunch.",
+        "facts": [
+          "The Cheese Board prints Brennan's Honey with three cheeses, seasonal chutney and fruit and nut bread, $24.",
+          "No public source names hives at Brennan's or a beekeeper supplying it, so its source is a lineup question.",
+          "The Cheese Board is on the Roost Bar & Bubbles menu.",
+          "Brennan's has stood at 417 Royal Street since Owen Brennan leased the building in 1954."
+        ],
+        "notes": [
+          "Say 'Brennan's honey' exactly as printed; never say 'our own bees' or name a farm until the chef confirms.",
+          "If a guest asks where it comes from, say you will find out, and ask the kitchen.",
+          "Honey flatters salty, sharp cheeses; that is why it is on the board. Which three cheeses are on tonight is a lineup question."
+        ],
+        "sayIt": "The board comes with Brennan's honey, a seasonal chutney and fruit and nut bread, sweet, sharp and crunchy around three cheeses.",
+        "askKitchen": [
+          "Where does Brennan's honey come from: house hives, a named beekeeper, or a private label?",
+          "Which three cheeses are on the board tonight?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-louisiana-makers-2026-10-06.md (section 8)"
+      ]
+    },
+    {
+      "component": "creole-tomato",
+      "producer": {
+        "type": "origin",
+        "who": "Louisiana Creole tomato growers",
+        "where": "St. Bernard and Plaquemines parishes, below New Orleans, and Louisiana generally",
+        "history": "Creole is a growers' word before it is a variety. Farmers in St. Bernard and Plaquemines parishes traditionally sold their tomatoes as Creole, and said that ripening on the vine in rich alluvial river soil gave them a flavour no other Louisiana or American tomato had. In the early 1900s, before tomatoes carried variety names, fruit from St. Charles, St. John and St. James parishes was simply called Creole too.\n\nThe LSU AgCenter muddied the water in 1969, when researcher Teme Hernandez released a variety actually named Creole. It yielded poorly, less than six pounds a plant, was never common in St. Bernard or Plaquemines, and the AgCenter did not keep its seed. So a Creole tomato today is a Louisiana-grown tomato picked ripe, not one cultivar.\n\nThe city celebrates it every June at the French Market's Creole Tomato Festival, which began in 1985 to mark the start of the season and honours the farmers who grow them. The French Market itself has stood since 1791.",
+        "facts": [
+          "St. Bernard and Plaquemines growers traditionally sold their tomatoes as Creole, crediting vine ripening and alluvial soil.",
+          "In the early 1900s tomatoes from St. Charles, St. John and St. James parishes were also simply called Creole.",
+          "LSU AgCenter researcher Teme Hernandez released a variety named Creole in 1969; its seed stock was not kept.",
+          "Hernandez's Creole yielded less than six pounds per plant and was never common in St. Bernard or Plaquemines.",
+          "The French Market's Creole Tomato Festival began in 1985 and is held every June.",
+          "The French Market in New Orleans has stood since 1791."
+        ],
+        "notes": [
+          "Say Creole tomato means a Louisiana tomato picked ripe, not a single variety; the menu pairs them with Louisiana heirlooms.",
+          "Do not name a farm or a parish for tonight's tomatoes unless the kitchen tells you at lineup.",
+          "The tostada follows the summer season; if guests ask why it has gone, the tomatoes have finished.",
+          "Guests sometimes ask whether Creole tomatoes are a breed: the honest answer is that the word is older than the 1969 LSU variety and means local and vine-ripened."
+        ],
+        "sayIt": "Creole tomatoes are Louisiana's summer tomatoes, picked ripe in river soil, served raw here with heirlooms, burrata and smoked tomato water.",
+        "askKitchen": [
+          "Who grows tonight's Creole and heirloom tomatoes, and from which parish?",
+          "How long will the Creole Tomato Tostada stay on this season?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-louisiana-produce-pantry-2026-10-06.md (section 1)"
+      ]
+    },
+    {
+      "component": "cane-syrup",
+      "producer": {
+        "type": "maker",
+        "who": "Louisiana cane syrup (Steen's of Abbeville is the best-known maker; the menu names none)",
+        "where": "Abbeville, Louisiana, on Bayou Vermilion (Steen's)",
+        "founded": "1910 (Steen's)",
+        "history": "Louisiana cane syrup is cane juice concentrated by long cooking in open kettles, with nothing taken out and nothing added. Slow Food lists traditional cane syrup on its Ark of Taste, the catalogue of heritage foods worth saving.\n\nThe name most Louisianans reach for is Steen's. In 1910 an early freeze hit Charley Steen's cane crop near Abbeville. Rather than lose it, he built a small mill and turned the frozen cane into a few barrels of syrup. By 1930 Charley and Elizabeth Steen and their children had built a larger mill in the heart of Abbeville, on the banks of Bayou Vermilion, and from the 1950s the yellow can became a fixture of Cajun and Creole kitchens. The mill is still run by the Steen family and still cooks in open kettles, which is why the label reads 100% Pure Cane Syrup.\n\nBrennan's menu prints cane syrup on the peaches of the Roasted Rohan Duck Breast but names no maker, so Steen's is the story of the style, not a claim about the kitchen's bottle.",
+        "facts": [
+          "Cane syrup is cane juice concentrated by long cooking in open kettles.",
+          "Traditional cane syrup is listed on Slow Food's Ark of Taste.",
+          "Steen's began in 1910 when an early freeze hit Charley Steen's cane crop and he milled it into syrup.",
+          "By 1930 Charley and Elizabeth Steen built a larger mill in Abbeville on Bayou Vermilion.",
+          "Steen's still cooks in open kettles and adds nothing, hence 100% Pure Cane Syrup on the label.",
+          "Molasses is what remains after sugar is crystallised out; cane syrup has nothing removed."
+        ],
+        "notes": [
+          "Say Louisiana cane syrup; never say Steen's is on the plate unless the kitchen confirms it.",
+          "Guests often ask if it is molasses: no, it is lighter and sweeter, cane juice simply boiled down.",
+          "The duck course has appeared in two versions on the house's own pages; describe the one printed tonight.",
+          "Steen's makes a good story for curious guests: a 1910 freeze turned into a Louisiana staple."
+        ],
+        "sayIt": "The peaches are glazed in Louisiana cane syrup, cane juice simply boiled down, lighter and more buttery than molasses, against the rich duck.",
+        "askKitchen": [
+          "Whose cane syrup glazes the peaches on the duck, Steen's or another maker?",
+          "Is tonight's duck the cane syrup peach version or the hazelnut-crusted version?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-louisiana-produce-pantry-2026-10-06.md (section 2)"
+      ]
+    },
+    {
+      "component": "chicory-coffee",
+      "producer": {
+        "type": "origin",
+        "who": "Roasted chicory root, the New Orleans coffee tradition",
+        "where": "Grown mostly in France and Belgium; roasted and blended with coffee in New Orleans",
+        "history": "Chicory is the root of a blue-flowered perennial, dug, cut, dried, roasted and ground. In 1806 the British blockaded the French coast and Napoleon answered with his Continental System, an embargo on British trade that lasted until 1814. Imported coffee grew scarce, chicory became the French substitute, and the French kept their taste for it after the embargo ended. The habit reached New Orleans with its French colonial ties.\n\nNew Orleans was ready for it. By 1840 the port was the second largest coffee importer in the United States. During the Civil War, from 1861, the Union naval blockade cut the port off, and Louisianans stretched what coffee they had with chicory. Smithsonian calls it a cost-saving workaround that stuck around for tradition's sake: the rest of the South dropped it, New Orleans did not.\n\nToday most commercial chicory is grown in France and Belgium. At Brennan's it is in the New Orleans Style Coffee, a blend of chicory and dark roast, in the private blend poured on the breakfast tasting, and baked into the Café Brûlot Coffee Cake.",
+        "facts": [
+          "Chicory is the roasted root of a blue-flowered perennial plant.",
+          "Napoleon's Continental System, an embargo on British trade from 21 November 1806, made imported coffee scarce, and chicory filled the gap.",
+          "The French kept drinking chicory in their coffee after the Continental System collapsed.",
+          "By 1840 New Orleans was the second largest coffee importer in the United States.",
+          "From 1861 the Union naval blockade cut off the port, and Louisianans stretched coffee with chicory.",
+          "Most commercial chicory is grown in France and Belgium.",
+          "Brennan's prints chicory in its New Orleans Style Coffee, the breakfast tasting coffee and the Café Brûlot Coffee Cake."
+        ],
+        "notes": [
+          "Chicory is not coffee: it is a roasted root blended with coffee for body and a roasty, bitter-chocolate depth.",
+          "The breakfast tasting blend is roasted by Congregation, which has its own card; the menu names no roaster for the New Orleans Style Coffee, and where the chicory is grown is not public, so name no country for ours.",
+          "The Civil War story is true but not the whole story: the French habit came first.",
+          "Caffeine questions go to the service note and the kitchen; do not guess decaf options."
+        ],
+        "sayIt": "Chicory is a roasted root, a French habit New Orleans kept through the Civil War blockade; it gives our coffee a roasty, chocolatey depth.",
+        "askKitchen": [
+          "What proportion of chicory is in the New Orleans Style Coffee blend?",
+          "Is the coffee cake baked with the same Congregation chicory blend we pour?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-louisiana-produce-pantry-2026-10-06.md (section 3)"
+      ]
+    },
+    {
+      "component": "pecans",
+      "producer": {
+        "type": "origin",
+        "who": "Louisiana native pecans",
+        "where": "Louisiana and the Mississippi valley; Oak Alley Plantation, St. James Parish, for the first grafted pecans",
+        "history": "Louisiana is one of the few states where the pecan is native. The state holds between 19,000 and 21,000 acres of native trees, and their nuts tend to be small, flavourful and high in oil, unlike the larger improved varieties bred since. The LSU AgCenter runs the only university research station in the country devoted solely to pecans.\n\nThe improved pecan itself began in Louisiana. In the winter of 1846 or 1847, Antoine, an enslaved gardener at Oak Alley Plantation in St. James Parish, grafted pecan wood from a tree with large, thin-shelled nuts onto other trees. He grafted sixteen trees near the house, more were grafted later, and by the end of the Civil War in 1865 Oak Alley had 126 grafted trees in bearing. His nut, later named Centennial, won a prize at the 1876 Centennial Exposition in Philadelphia, and grafting made the pecan an orchard crop.\n\nIn New Orleans kitchens the pecan stands where the almond stood in French recipes. It runs right through Brennan's menus: the pecan bordelaise on the Pecan Gulf Fish, the oat and pecan crumble on the Baked Apple, the pecans on the Café Brûlot Coffee Cake and the pralines on the bread pudding.",
+        "facts": [
+          "Louisiana is one of few states where pecans are native.",
+          "Louisiana has between 19,000 and 21,000 acres of native pecans.",
+          "Native pecans tend to be small, flavourful and high in oil compared with improved varieties.",
+          "The LSU AgCenter runs the only university research station in the United States devoted solely to pecans.",
+          "Antoine, an enslaved gardener at Oak Alley, grafted pecans in 1846 or 1847; by 1865 the plantation had 126 grafted trees.",
+          "Antoine's pecan, named Centennial, won a prize at the 1876 Centennial Exposition in Philadelphia."
+        ],
+        "notes": [
+          "Pecans appear in four dishes; nut questions always go to the kitchen and the service note, never a verdict from you.",
+          "Do not claim our pecans are Louisiana-grown or native unless the kitchen confirms the supplier.",
+          "Antoine's story is a powerful one for interested guests; tell it plainly and with respect.",
+          "Say pih-KAHN, the common Louisiana pronunciation."
+        ],
+        "sayIt": "The pecan is native to Louisiana, and New Orleans cooks use it where French recipes used almonds, from the fish to the pralines.",
+        "askKitchen": [
+          "Where do our pecans come from, and are they Louisiana or native pecans?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-louisiana-produce-pantry-2026-10-06.md (section 4)"
+      ]
+    },
+    {
+      "component": "pralines",
+      "producer": {
+        "type": "origin",
+        "who": "The New Orleans praline and the pralinières",
+        "where": "The French Quarter, New Orleans",
+        "history": "The praline began as a French sugared almond, named for César, duc de Choiseul, comte du Plessis-Praslin, whose chef made it. Early in the eighteenth century the Ursuline nuns are credited with bringing the candy to New Orleans.\n\nThe New Orleans praline is a different thing, and it was made by the city's Black women. They took the almond sweet, used the pecans that grew all around them and added milk or cream, turning a hard sugared nut into the soft, creamy patty the city knows.\n\nIn the mid to late nineteenth century, women called pralinières sold them on the streets of the French Quarter. Free women of colour and enslaved women alike made and sold them, and for Black women it was a way to earn their own money; some bought their own freedom and their families' with the proceeds. On Brennan's New Orleans Bread Pudding, pralines bring that history and a caramel crunch to the whiskey caramel and buttermilk ice cream.",
+        "facts": [
+          "The praline is named for César, duc de Choiseul, comte du Plessis-Praslin, whose chef made sugared almonds.",
+          "The Ursuline nuns are credited with bringing the praline to New Orleans early in the eighteenth century.",
+          "The city's Black women made the pecan praline, adding milk or cream to thicken it.",
+          "Pralinières sold pralines on French Quarter streets in the mid to late nineteenth century.",
+          "Some pralinières bought their own and their families' freedom with their earnings."
+        ],
+        "notes": [
+          "Locals say PRAH-leen; follow the house if a guest says it another way, and never correct them.",
+          "Whether our pralines are made in-house is not public; ask before saying housemade.",
+          "Nut and dairy questions go to the kitchen and the service note.",
+          "Credit the pralinières when a guest asks about the history; it is the true origin of the New Orleans style."
+        ],
+        "sayIt": "New Orleans pralines are pecans, brown sugar and cream, a candy the city's pralinières sold in the French Quarter; they crown our bread pudding.",
+        "askKitchen": [
+          "Are the pralines on the bread pudding made in-house, and if not, by whom?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-louisiana-produce-pantry-2026-10-06.md (section 4)"
+      ]
+    },
+    {
+      "component": "popcorn-rice",
+      "producer": {
+        "type": "origin",
+        "who": "Louisiana popcorn rice (the Della type, bred by the LSU AgCenter)",
+        "where": "LSU Rice Research Station, Crowley, Louisiana; milled across south Louisiana",
+        "founded": "1909 (the LSU Rice Research Station)",
+        "history": "Popcorn rice is Louisiana's own aromatic long grain. The Rice Research Station at Crowley opened in 1909 on a 60-acre farm, set up by the Louisiana Agricultural Experiment Station with the USDA and now run by the LSU AgCenter, and it was the AgCenter that released Della, an aromatic long-grain rice bred for cooks who wanted a fluffy texture and a strong popcorn-like aroma. Della is tall, falls over easily and yields poorly, which is why it remains a speciality rather than a field staple. The aroma itself is 2-acetyl-1-pyrroline, the molecule that also scents basmati, jasmine and fresh popcorn.\n\nThe best-known retail example comes from the Conrad Rice Mill in New Iberia, founded in 1912 by Philip Amalus Conrad and the oldest independently owned rice mill in the United States still working. Its Konriko brand, named in the 1950s, sells Wild Pecan Rice, a Della-type brown popcorn rice that smells of roasted nuts. Mike Davis bought the mill in February 1975 and turned it towards speciality rice.\n\nBrennan's prints popcorn rice under its Seafood Gumbo and names no mill, so Konriko is the story of the style, not the kitchen's bag.",
+        "facts": [
+          "The Rice Research Station at Crowley opened in 1909 on a 60-acre farm, a joint Louisiana and USDA project now run by the LSU AgCenter.",
+          "The LSU AgCenter released Della, an aromatic long grain with a strong popcorn-like aroma.",
+          "Della is tall, lodges easily and yields poorly, so it stays a speciality rice.",
+          "Popcorn rice owes its aroma to 2-acetyl-1-pyrroline, shared with basmati and jasmine.",
+          "The Conrad Rice Mill in New Iberia, founded in 1912, is the oldest independently owned US rice mill still operating.",
+          "Konriko's Wild Pecan Rice is a Della-type brown popcorn rice with a roasted-nut aroma."
+        ],
+        "notes": [
+          "There is no popcorn and no pecan in popcorn rice or Wild Pecan Rice; the names describe the aroma.",
+          "Do not name Konriko or any mill as ours unless the kitchen confirms it.",
+          "If a guest notices a toasty smell as the gumbo lands, that is the rice.",
+          "Do not give a year for Della's release; sources place it only in the early 1970s."
+        ],
+        "sayIt": "The gumbo sits on Louisiana popcorn rice, an aromatic long grain bred at LSU that really smells of popcorn as it cooks.",
+        "askKitchen": [
+          "Whose popcorn rice do we use under the gumbo?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-louisiana-produce-pantry-2026-10-06.md (section 5)"
+      ]
+    },
+    {
+      "component": "rice-dressing",
+      "producer": {
+        "type": "origin",
+        "who": "South Louisiana rice country",
+        "where": "The southwest Louisiana prairie, centred on Crowley, Acadia Parish",
+        "history": "South Louisiana Rice Dressing carries its place in its name. Rice growing on the southwest Louisiana prairie began in earnest in the early 1880s, and by 1890 a record crop of 80 million pounds made Louisiana the leading rice state, overtaking South Carolina. Crowley, the seat of Acadia Parish, became the centre of the industry, its fields watered by canals and wells.\n\nBetween 1800 and 1920 the region changed from subsistence farming and open-range cattle country into the first mechanised commercial rice region in the world, and southwest Louisiana still holds nearly 500,000 acres of rice land.\n\nThat is why rice, not bread, is the stuffing of south Louisiana: rice dressing is cooked rice folded into browned meat and the holy trinity, a Sunday and holiday dish. Brennan's prints the side with no description and no rice brand, so the meats and the rice are questions for the kitchen.",
+        "facts": [
+          "Rice growing in southwest Louisiana began in earnest in the early 1880s.",
+          "Louisiana's record 1890 crop of 80 million pounds made it the leading rice state, passing South Carolina.",
+          "Crowley, seat of Acadia Parish, became the centre of southwestern Louisiana's rice industry.",
+          "Southwestern Louisiana became the first mechanised commercial rice region in the world by 1920.",
+          "Southwest Louisiana holds nearly 500,000 acres of rice land."
+        ],
+        "notes": [
+          "The side prints no description; confirm the meats with the kitchen before describing it.",
+          "Do not claim the rice is from a named mill or parish without the kitchen's word.",
+          "Guests ask how it differs from dirty rice; the honest answer is that it depends who you ask.",
+          "Meat and dietary questions go to the kitchen."
+        ],
+        "sayIt": "Rice dressing is south Louisiana's stuffing, rice from the prairie rice country folded with browned meat and the trinity; I'll confirm tonight's meats.",
+        "askKitchen": [
+          "Which meats go into the South Louisiana Rice Dressing, and is there liver?",
+          "Which rice is it made with?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-louisiana-produce-pantry-2026-10-06.md (section 6)"
+      ]
+    },
+    {
+      "component": "andouille",
+      "producer": {
+        "type": "origin",
+        "who": "LaPlace andouille, the Andouille Capital of the World",
+        "where": "LaPlace, St. John the Baptist Parish, Louisiana",
+        "history": "Andouille in Louisiana is a River Parishes sausage. The Germans of the German Coast, upriver from New Orleans, brought a strong tradition of sausage making, with French, Acadian, Native American, Spanish and African influences alongside. The town that made it famous is LaPlace, which Governor Edwin Edwards proclaimed the Andouille Capital of the World in the 1970s.\n\nThree LaPlace shops carry the name. Jacob's World Famous Andouille dates from 1928, when Nelson and Camille Jacob began selling smoked andouille from their Milesville home; Aaron Lion is its fourth-generation owner. Wayne Jacob's Smokehouse, no relation to Jacob's, opened in 1950, and Bailey's sits next door to Jacob's. Locals say Jacob's is the smokiest, Wayne Jacob's has the spice and the girth, and Bailey's sits in between. LaPlace andouille is, as one writer put it, thick as a wrist, brown as tobacco and steeped in pecan wood smoke.\n\nThe town has held an Andouille Festival every October since the first, on 28 and 29 October 1972. Brennan's prints andouille in its Seafood Gumbo, as in its published gumbo recipe, and names no maker.",
+        "facts": [
+          "Governor Edwin Edwards declared LaPlace the Andouille Capital of the World.",
+          "Jacob's World Famous Andouille in LaPlace dates from 1928, begun by Nelson and Camille Jacob.",
+          "Wayne Jacob's Smokehouse, unaffiliated with Jacob's, opened in 1950.",
+          "Jacob's, Bailey's and Wayne Jacob's are the three LaPlace shops famous for andouille.",
+          "LaPlace andouille is steeped in pecan wood smoke.",
+          "The first LaPlace Andouille Festival was held on 28 and 29 October 1972.",
+          "German Coast settlers brought the sausage-making tradition to the River Parishes."
+        ],
+        "notes": [
+          "The menu names no andouille maker; never say it is from LaPlace or Jacob's unless the kitchen confirms.",
+          "Andouille is pork; tell a guest who avoids pork that it is in the gumbo before they order.",
+          "Say ahn-DOO-ee.",
+          "Louisiana andouille is a smoked seasoning sausage, unlike the French andouille made from tripe; do not confuse them."
+        ],
+        "sayIt": "The gumbo's smoke comes from andouille, Louisiana's coarse smoked pork sausage, a River Parishes tradition centred on LaPlace.",
+        "askKitchen": [
+          "Who makes our andouille, and is it from LaPlace?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-louisiana-produce-pantry-2026-10-06.md (section 7)"
+      ]
+    },
+    {
+      "component": "tasso",
+      "producer": {
+        "type": "origin",
+        "who": "Tasso, the Cajun smokehouse seasoning meat",
+        "where": "Acadiana, south Louisiana",
+        "history": "Tasso belongs to the boucherie, the communal hog butchering of Acadiana, where neighbours killed a pig together and shared every part. The boucherie gave the Cajun larder boudin, cracklin', andouille and tasso, and tasso was traditionally made from the last lean pieces: a seasoning meat, not a meal.\n\nIt is often called a ham, but the name misleads. Tasso is cut from the shoulder, not the hind leg. The shoulder is sliced across the grain into pieces about three inches thick, cured briefly in salt and sugar for only three or four hours, rinsed, rubbed with cayenne and garlic, and hot-smoked until cooked through. The smokehouse has its own Acadian French word, boucanière.\n\nCooks rarely eat tasso on its own. They dice it into jambalaya, stews and braised vegetables, where a little carries smoke, salt and heat through the pot. At Brennan's it seasons the Creole sauce of the New Orleans Shrimp & Grits. The menu names no maker, so who smokes it is a question for the kitchen.",
+        "facts": [
+          "Tasso is a smoked, spiced, cured south Louisiana meat cut from the hog's shoulder, not the leg.",
+          "The shoulder is cut about three inches thick and cured only three or four hours.",
+          "After curing it is rubbed with cayenne and garlic and hot-smoked until cooked through.",
+          "At a boucherie, tasso was made from the last lean pieces; it is a seasoning meat.",
+          "The boucherie gave the Cajun larder boudin, cracklin', andouille and tasso.",
+          "Boucanière is the Acadian French word for smokehouse."
+        ],
+        "notes": [
+          "Call it a seasoning meat; if a guest says Cajun ham, explain it is shoulder, not leg.",
+          "Tasso is pork; flag it for guests who avoid pork before they order the Shrimp & Grits.",
+          "The menu names no maker; ask before claiming it is smoked in-house or bought from a named smokehouse.",
+          "TAH-so and TASS-oh are both heard; follow the house habit."
+        ],
+        "sayIt": "Tasso is Cajun smoked pork shoulder, spiced with cayenne and garlic, used a little at a time to season our Creole sauce.",
+        "askKitchen": [
+          "Is our tasso smoked in-house, and if not, who makes it?"
+        ]
+      },
+      "sources": [
+        "research/producers-food-louisiana-produce-pantry-2026-10-06.md (section 8)"
+      ]
+    }
+  ]
+}

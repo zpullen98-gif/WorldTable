@@ -34,6 +34,7 @@
 		KIND_CHIPS,
 		MODE_LABELS,
 		PAIR_KINDS,
+		PRODUCER_KINDS,
 		ROUND_LENGTH,
 		dealRound,
 		explainAnswer,
@@ -211,7 +212,7 @@
 	const pairNeeds = $derived(needs.filter((n) => n.startsWith('First pick') || n.startsWith('Without alcohol')));
 	const pairReady = $derived(PAIR_KINDS.some((k) => ready.includes(k)));
 	/* The item cards only: a component's card lives in the Flashcards tab's component decks. */
-	const cardCount = $derived(current ? buildFlashcards(current).filter((f) => f.kind !== 'component' && f.kind !== 'tasting').length : 0);
+	const cardCount = $derived(current ? buildFlashcards(current).filter((f) => f.kind !== 'component' && f.kind !== 'tasting' && f.kind !== 'producer').length : 0);
 	/* The kinds row: empty means every kind that deals; a chosen kind that
 	   stops dealing (the house changed under us) drops out on its own. */
 	let chosen = $state<DrillKind[]>([]);
@@ -307,7 +308,7 @@
 
 	function startCards() {
 		if (!current) return;
-		cards = shuffleCards(buildFlashcards(current).filter((f) => f.kind !== 'component' && f.kind !== 'tasting'), Math.random);
+		cards = shuffleCards(buildFlashcards(current).filter((f) => f.kind !== 'component' && f.kind !== 'tasting' && f.kind !== 'producer'), Math.random);
 		cIdx = 0;
 		cFlipped = false;
 		cGot = 0;
@@ -684,6 +685,9 @@
 		setMode(modeFromSearch(page.url.search));
 		studyAsk = studyScopeFromSearch(page.url.search);
 		drillSec = mode === 'drill' ? studyAsk.section : '';
+		/* ?subject=producer (the Producers view's Quiz the producers) narrows the kinds row to the three
+		   producer kinds; any other address leaves the row as the person left it. */
+		if (mode === 'drill' && new URLSearchParams(page.url.search).get('subject') === 'producer') chosen = [...PRODUCER_KINDS];
 		drillMeal = studyAsk.meal;
 		fromStudy = !!(page.state as App.PageState | undefined)?.fromStudy;
 		pendingAsk = true;

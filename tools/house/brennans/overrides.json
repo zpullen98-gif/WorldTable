@@ -51604,6 +51604,568 @@
       },
       "reason": "The tasting and the course are named as Brennan's prints them: Dinner Tasting Menu, Fifth Course",
       "source": "page:brennans-tasting-menus-pasted-2026-10-05.txt line 51 (Dinner Tasting Menu $80) and line 93 (Fifth Course, The Snickers)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Whose beef goes into the Roost Burger's two short rib patties, and is it ground in house?",
+        "askWhom": "chef",
+        "items": [
+          "Roost Burger"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-beef-eggs-duck-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Where does the pork for the housemade sausage patty come from?",
+        "askWhom": "chef",
+        "items": [
+          "Housemade Pork Sausage Patty"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-beef-eggs-duck-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the breakfast thick-cut bacon, the children's bacon and the Roost Burger bacon Nueske's, or another producer?",
+        "askWhom": "chef",
+        "items": [
+          "Thick-Cut Bacon",
+          "Eggs Any Style with Toast and Bacon",
+          "Roost Burger"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-beef-eggs-duck-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Are the eggs on the egg dishes, the waffle and the sides all Vital Farms, or only the egg on the breakfast hanger?",
+        "askWhom": "chef",
+        "items": [
+          "Eggs Hussarde",
+          "Eggs Sardou",
+          "Eggs Owen",
+          "Duck Confit Waffle",
+          "Egg Any Style",
+          "Eggs Any Style with Toast and Bacon"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-beef-eggs-duck-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the coffee-cured Canadian bacon cured in house, and whose pork loin is it?",
+        "askWhom": "chef",
+        "items": [
+          "Eggs Hussarde"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-beef-eggs-duck-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the beef in the steak tartare and the short rib débris Creekstone, and are the dinner hanger and the Chateaubriand Prime?",
+        "askWhom": "chef",
+        "items": [
+          "Steak Tartare Cannoli",
+          "Eggs Owen",
+          "Creole Hanger Steak",
+          "Roasted Chateaubriand"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-beef-eggs-duck-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Do we buy the Rohan duck direct from D'Artagnan or through a distributor?",
+        "askWhom": "chef",
+        "items": [
+          "Roasted Rohan Duck Breast",
+          "Duck Confit Waffle"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-beef-eggs-duck-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Grana Padano do we buy, and how old is it?",
+        "askWhom": "chef",
+        "items": [
+          "Creole Caesar",
+          "Shells & Cheese"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-european-protected-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Parmesan in the Eggs Sardou spinach Parmigiano Reggiano, Grana Padano or a domestic Parmesan?",
+        "askWhom": "chef",
+        "items": [
+          "Eggs Sardou"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-european-protected-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Mimolette do we use, and how old is it?",
+        "askWhom": "chef",
+        "items": [
+          "Shells & Cheese"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-european-protected-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Are the Marcona almonds bought fried and salted, or toasted in house?",
+        "askWhom": "chef",
+        "items": [
+          "Crab & Corn Omelette",
+          "Gulf Fish en Papillote"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-european-protected-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Are the Castelvetrano olives pitted, and are they DOP Nocellara del Belice?",
+        "askWhom": "chef",
+        "items": [
+          "Gulf Fish en Papillote"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-european-protected-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Whose 'nduja do we use, and is it rendered into the beans or added on top?",
+        "askWhom": "chef",
+        "items": [
+          "Louisiana BBQ Lobster"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-european-protected-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Where is our burrata made?",
+        "askWhom": "chef",
+        "items": [
+          "Creole Tomato Tostada"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-european-protected-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Sherry finishes the Turtle Soup?",
+        "askWhom": "chef",
+        "items": [
+          "Turtle Soup"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-european-protected-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Madeira goes into the broccolini glaze?",
+        "askWhom": "chef",
+        "items": [
+          "Creole Hanger Steak"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-european-protected-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which milk chocolate goes into The Snickers?",
+        "askWhom": "chef",
+        "items": [
+          "The Snickers"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-european-protected-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "May we offer a glass of the list's Sherry with the Turtle Soup, or a list Madeira to a guest who enjoys the glaze?",
+        "askWhom": "sommelier",
+        "items": [
+          "Turtle Soup",
+          "Creole Hanger Steak"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-european-protected-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How many Grand Isle Jewel oysters come per order, and which Grand Isle farm or farms supply them tonight?",
+        "askWhom": "chef",
+        "items": [
+          "Grand Isle Jewel Oysters"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-gulf-seafood-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Where are the cooked Louisiana oysters on the BBQ plate and in the gumbo from?",
+        "askWhom": "chef",
+        "items": [
+          "Louisiana Oysters",
+          "Seafood Gumbo"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-gulf-seafood-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Are tonight's shrimp brown or white, and is the children's breakfast popcorn shrimp Louisiana shrimp too?",
+        "askWhom": "chef",
+        "items": [
+          "New Orleans Shrimp & Grits",
+          "Popcorn Shrimp",
+          "Popcorn Shrimp with Brabant Potatoes",
+          "Fried Gulf Shrimp with French Fries",
+          "Seafood Gumbo"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-gulf-seafood-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which picking house supplies the lump crab and the crab claws?",
+        "askWhom": "chef",
+        "items": [
+          "Pecan Gulf Fish",
+          "Crab & Corn Omelette",
+          "Gulf Fish en Papillote",
+          "Louisiana Crab Claws",
+          "Seafood Gumbo"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-gulf-seafood-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is tonight's Gulf fish on each dish, and is it from a Louisiana boat?",
+        "askWhom": "chef",
+        "items": [
+          "Pecan Gulf Fish",
+          "Gulf Fish en Papillote",
+          "Sautéed Gulf Fish with Potato and Green Beans"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-gulf-seafood-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is our redfish farm-raised, and from where?",
+        "askWhom": "chef",
+        "items": [
+          "Redfish Véronique"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-gulf-seafood-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the crawfish in the meat pies Louisiana crawfish, farmed or wild?",
+        "askWhom": "chef",
+        "items": [
+          "Crawfish Meat Pies"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-gulf-seafood-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "May servers say the house sources Gulf seafood locally, and is Brennan's a partner of any sustainable seafood programme such as Audubon GULF?",
+        "askWhom": "manager",
+        "items": [
+          "Pecan Gulf Fish",
+          "Gulf Fish en Papillote",
+          "Redfish Véronique"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-gulf-seafood-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Where does Brennan's honey on the Cheese Board come from: house hives, a named beekeeper or a private label?",
+        "askWhom": "chef",
+        "items": [
+          "Cheese Board"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-louisiana-makers-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Tien Dat tofu style do we buy?",
+        "askWhom": "chef",
+        "items": [
+          "Blackened Tofu"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-louisiana-makers-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Two Brooks rice grits do we use?",
+        "askWhom": "chef",
+        "items": [
+          "Blackened Tofu"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-louisiana-makers-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How are the Leidenheimer crisps made in house?",
+        "askWhom": "chef",
+        "items": [
+          "Creole Caesar"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-louisiana-makers-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Who grows tonight's Creole and heirloom tomatoes, and from which parish? When does the tostada come off?",
+        "askWhom": "chef",
+        "items": [
+          "Creole Tomato Tostada"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-louisiana-produce-pantry-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Whose cane syrup glazes the peaches on the duck?",
+        "askWhom": "chef",
+        "items": [
+          "Roasted Rohan Duck Breast"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-louisiana-produce-pantry-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Who makes our andouille, and is it from LaPlace?",
+        "askWhom": "chef",
+        "items": [
+          "Seafood Gumbo"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-louisiana-produce-pantry-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Whose popcorn rice is under the gumbo?",
+        "askWhom": "chef",
+        "items": [
+          "Seafood Gumbo"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-louisiana-produce-pantry-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the tasso smoked in-house, and if not, by whom?",
+        "askWhom": "chef",
+        "items": [
+          "New Orleans Shrimp & Grits"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-louisiana-produce-pantry-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Where do our pecans come from, and are the pralines made in-house?",
+        "askWhom": "chef",
+        "items": [
+          "Pecan Gulf Fish",
+          "Baked Apple",
+          "Café Brûlot Coffee Cake",
+          "New Orleans Bread Pudding"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-louisiana-produce-pantry-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which meats and which rice go into the South Louisiana Rice Dressing?",
+        "askWhom": "chef",
+        "items": [
+          "South Louisiana Rice Dressing"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-louisiana-produce-pantry-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How much chicory is in the New Orleans Style Coffee we pour, and is the Café Brûlot Coffee Cake baked with the same blend?",
+        "askWhom": "manager",
+        "items": [
+          "Café Brûlot Coffee Cake"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
+      "source": "research:producers-food-louisiana-produce-pantry-2026-10-06.md"
     }
   ]
 }

@@ -5,7 +5,8 @@
   say it, the ten second line and the one-line answer to what the guest asks
   next (so the first screen at 390 by 844 holds what a server needs at the
   table), then the longer lines, the story, the pairing, what it is made of
-  and what to compare it with (MadeOf.svelte), the parts, the coaching,
+  and what to compare it with (who makes it, WhoMakes.svelte, then
+  MadeOf.svelte), the parts, the coaching,
   the service note, the videos to watch, the links, the drills and the
   quiet Edit.
 
@@ -58,6 +59,7 @@
 	import StudyLinks from './StudyLinks.svelte';
 	import VideoList from './VideoList.svelte';
 	import MadeOf from './MadeOf.svelte';
+	import WhoMakes from './WhoMakes.svelte';
 	import TeachingFolio from './TeachingFolio.svelte';
 	import { foliosForDish } from '$lib/teaching-folios';
 
@@ -355,6 +357,7 @@
 		</section>
 	{/if}
 
+	<WhoMakes {current} item={dish} />
 	<MadeOf {current} item={dish} {linkable} />
 
 	{#if parts.length}

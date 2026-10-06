@@ -525,7 +525,7 @@ test('?mode=drill deals from the kept house: an answer shows the score and the e
 	await goto(page, '/menu/quiz?mode=drill');
 	// The heading names the mode (its own address since the consolidation; no mode chips).
 	await expect(page.locator('h1')).toHaveText('Drill the menu');
-	await expect(page.locator('.count').first()).toContainText('The Lantern Room · 12 of 12 kinds deal');
+	await expect(page.locator('.count').first()).toContainText('The Lantern Room · 15 of 15 kinds deal');
 	// Every kind deals over the fixture, so no still-needed line.
 	await expect(page.locator('.needs')).toHaveCount(0);
 	await page.getByRole('button', { name: 'Deal ▸' }).click();
@@ -551,7 +551,7 @@ test('the kinds row narrows the round, the answer carries its explanation, and e
 	await seedHouses(page, [drillFixture()]);
 	await goto(page, '/menu/quiz?mode=drill');
 	const kinds = page.locator('.kinds .chip');
-	await expect(kinds).toHaveCount(12);
+	await expect(kinds).toHaveCount(15);
 	for (const b of await page.locator('.chip, .opt').all()) {
 		const box = await b.boundingBox();
 		if (box) expect(box.height).toBeGreaterThanOrEqual(44);
@@ -810,8 +810,11 @@ test('a fresh device opens /menu and the Brennan’s pack loads itself; a second
 	const seen = await servePack(page);
 	await goto(page, '/menu');
 	// The pack arrives after the page has opened, and the page turns to the
-	// study view of it: every dish a row. Edit shows the editing page.
-	await expect(page.locator('.study .row')).toHaveCount(pack.dishes.length);
+	// study view of it: every dish a row, except the unpriced dishes served
+	// only on a tasting, which the tasting cards carry. Edit shows the editing page.
+	const onTasting = new Set(pack.tastings.flatMap((t: { courses: { dishIds: string[] }[] }) => t.courses.flatMap((c) => c.dishIds)));
+	const tastingOnly = pack.dishes.filter((d: { id: string; price: string; prices?: { printed: string }[] }) => onTasting.has(d.id) && !d.price.trim() && !(d.prices ?? []).some((x) => x.printed.trim())).length;
+	await expect(page.locator('.study .row')).toHaveCount(pack.dishes.length - tastingOnly);
 	await editMenu(page);
 	await expect(houseLine(page)).toContainText(`${pack.name} · ${pack.dishes.length} dishes here · ${pack.wines.length} wines in the Codex · ${pack.cocktails.length} drinks in the Ledger`);
 	await expect(page.locator('.housebar .autoline')).toHaveText(

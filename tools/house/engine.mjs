@@ -47,8 +47,13 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    the choice of, the lines printed under each course and the words over its pour, the breakfast's
    printed line and the dinner's supplement, the breakfast coffee course linked to the house's chicory
    coffee, and the dinner tasting named Dinner Tasting Menu under its old id; stamped at the half hour
-   before its build, never ahead of the clock. */
-export const EDITION_BUILT_AT = '2026-10-05T18:30:00.000Z';
+   before its build, never ahead of the clock. The 18:30 edition of 6 October 2026 carries the
+   producers deep dive for the kitchen (components/producers.json, from the five
+   research/producers-food-*-2026-10-06.md files): a producer profile on forty components, one new
+   component for the Parmesan on the Eggs Sardou, the corrections the research made to existing
+   explanations, and the sourcing questions no source answers, each an ask:+ override for lineup;
+   stamped at the half hour before its build, never ahead of the clock. */
+export const EDITION_BUILT_AT = '2026-10-06T18:30:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a
@@ -162,7 +167,10 @@ export function overrideCounts(file = OVERRIDES) {
    in one shape: { components: [{ key, kind, name, say, explain, card: { front, back }, items, terms,
    sources }], compare: [{ item, entries: [{ app, ref, label, same, different }] }] }, and videos.json
    { videos: [a research video record with componentKeys, or { id, componentKeys } attaching
-   components to a video an override already files] }. BRENNANS_COMPONENTS names another directory
+   components to a video an override already files] }. A fragment may also carry producers: [{ component,
+   producer, sources }], each attaching a producer profile ({ type, who, where, founded, history, facts,
+   notes, sayIt, askKitchen }) to the component an existing key names (producers.json, the producer
+   research), and a component of its own may carry "producer" inline. BRENNANS_COMPONENTS names another directory
    (a fixture), and the builder's --components flag does the same; an absent directory is no
    fragments. The builder reads them through readFragments, and the counts the gates hold the pack to
    come from the same read (fragmentCounts), so a new fragment moves the expected figures with it. */
@@ -172,8 +180,9 @@ export function componentsDir() {
 export const FRAGMENT_FILES = ['dishes.json', 'drinks.json', 'wines.json', 'videos.json'];
 /* Every fragment file in the directory: the four named files first in that order, then any other .json
    in name order. Throws with the file named when one does not parse or is not a fragment. */
+export const FRAGMENT_KEYS = ['components', 'compare', 'videos', 'producers'];
 export function readFragments(dir = componentsDir()) {
-	const out = { dir, files: [], components: [], compare: [], videos: [] };
+	const out = { dir, files: [], components: [], compare: [], videos: [], producers: [] };
 	if (!dir || !fs.existsSync(dir)) return out;
 	const names = fs.readdirSync(dir).filter((f) => f.endsWith('.json'));
 	const rank = (f) => (FRAGMENT_FILES.indexOf(f) < 0 ? 99 : FRAGMENT_FILES.indexOf(f));
@@ -183,9 +192,10 @@ export function readFragments(dir = componentsDir()) {
 		let data;
 		try { data = JSON.parse(fs.readFileSync(file, 'utf8')); } catch (e) { throw new Error(`${REL(file)}: does not parse as JSON (${e.message})`); }
 		if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error(`${REL(file)}: a fragment is an object`);
-		for (const k of Object.keys(data)) if (!['components', 'compare', 'videos'].includes(k)) throw new Error(`${REL(file)}: unknown key ${k}; a fragment carries components, compare or videos`);
+		for (const k of Object.keys(data)) if (!FRAGMENT_KEYS.includes(k)) throw new Error(`${REL(file)}: unknown key ${k}; a fragment carries components, compare, videos or producers`);
 		out.files.push(file);
-		for (const [k, list] of [['components', data.components], ['compare', data.compare], ['videos', data.videos]]) {
+		for (const k of FRAGMENT_KEYS) {
+			const list = data[k];
 			if (list === undefined) continue;
 			if (!Array.isArray(list)) throw new Error(`${REL(file)}: ${k} is a list`);
 			list.forEach((v, i) => out[k].push({ file, at: `${REL(file)} ${k}[${i}]`, v }));
@@ -194,9 +204,10 @@ export function readFragments(dir = componentsDir()) {
 	return out;
 }
 /* The figures the pack must show for the fragments read: components, distinct items named, items
-   compared and videos naming a component. Zero everywhere when there are none. */
+   compared, videos naming a component and components carrying a producer (inline or by a producers
+   entry, each component once). Zero everywhere when there are none. */
 export function fragmentCounts(dir = componentsDir()) {
-	const out = { components: 0, componentItems: 0, compared: 0, componentVideos: 0 };
+	const out = { components: 0, componentItems: 0, compared: 0, componentVideos: 0, producers: 0 };
 	let f;
 	try { f = readFragments(dir); } catch { return out; }
 	out.components = f.components.length;
@@ -205,6 +216,10 @@ export function fragmentCounts(dir = componentsDir()) {
 	out.componentItems = items.size;
 	out.compared = new Set(f.compare.map((c) => foldName(String((c.v && c.v.item) || ''))).filter(Boolean)).size;
 	out.componentVideos = new Set(f.videos.filter((x) => x.v && Array.isArray(x.v.componentKeys) && x.v.componentKeys.length).map((x) => x.v.id)).size;
+	const produced = new Set();
+	for (const c of f.components) if (c.v && c.v.producer && typeof c.v.key === 'string') produced.add(c.v.key);
+	for (const p of f.producers) if (p.v && typeof p.v.component === 'string') produced.add(p.v.component);
+	out.producers = produced.size;
 	return out;
 }
 
@@ -257,6 +272,7 @@ export function countProblems(house, expect = overrideCounts(), frag = fragmentC
 	eq('items with comparisons (from the fragments)', compared, frag.compared);
 	const vidComp = (house.videos || []).filter((v) => Array.isArray(v.componentIds) && v.componentIds.length).length;
 	eq('videos naming a component (from the fragments)', vidComp, frag.componentVideos);
+	eq('components carrying a producer (from the fragments)', comps.filter((c) => c.producer && c.producer.value).length, frag.producers || 0);
 	if (!house.menusReadOn) out.push('menusReadOn is empty');
 	if (house.began !== 'pack') out.push(`began is ${house.began}, expected pack`);
 	if (!house.pack || house.pack.version !== 1) out.push('pack stamp missing or not version 1');
@@ -582,7 +598,8 @@ export function noteCounts(house) {
    in a source (sourceProblems: the guide, the page snapshots, the top of research/ and the house, its
    kept notes, its components and its comparisons left out so none vouches for itself). Each item's
    comparisons: one or two, an in-app one before a classic, the label 8 words or fewer and same and
-   different 30 or fewer, no dash, no banned word and no verdict. */
+   different 30 or fewer, no dash, no banned word and no verdict. A component's producer profile is held
+   by producerProblems below, with the explanation's own prose rule. */
 export const COMPONENT_DIET_LINE = 'Dietary questions go to the service note and the kitchen.';
 export function componentProblems(house, hay) {
 	const out = [];
@@ -612,6 +629,12 @@ export function componentProblems(house, hay) {
 			if (part === 'explanation' || part.startsWith('card')) for (const p of sourceProblems(String(text), folded)) out.push(`${at} ${part}: ${p}`);
 		}
 	}
+	for (const c of house.components || []) {
+		const p = kv(c.producer);
+		if (p === undefined) continue;
+		const at = `component ${c.name} producer`;
+		for (const problem of producerProblems(p, folded, (part, text) => prose(`${at} ${part}`, text))) out.push(`${at} ${problem}`);
+	}
 	for (const list of ['dishes', 'cocktails', 'wines']) for (const r of house[list] || []) {
 		const entries = kv(r.compare);
 		if (entries === undefined) continue;
@@ -624,6 +647,42 @@ export function componentProblems(house, hay) {
 			for (const k of ['same', 'different']) { const n = words(e[k]); if (!n || n > 30) out.push(`${at}[${i}]: ${k} is ${n} words, at most 30`); }
 			for (const k of ['label', 'same', 'different']) prose(`${at}[${i}] ${k}`, String(e[k] || ''));
 		});
+	}
+	return out;
+}
+
+/* THE PRODUCER GATE, over the shipped edition only, with component explain's treatment: the type one of
+   the five and a who; the caps (PRODUCER_CAPS, the engine's PRODUCER_WORDS and PRODUCER_MAX); no dash,
+   no banned word, no allergen or diet verdict, and a sentence naming an allergen class or a diet sends the
+   server to the service note, the kitchen or lineup, in every string of the profile (through `prose`,
+   componentProblems' own, which files its sentence itself); and every name and every year in it stands in
+   a source (sourceProblems: the guide, the page snapshots and the files at the top of research/, the
+   producer research among them, the house's components left out so none vouches for itself). The who and
+   the where are names from their first word, so their first word is held too. Returns the rest of the
+   problems, each a sentence naming the field. */
+export const PRODUCER_TYPES = ['maker', 'farm', 'fishery', 'origin', 'house'];
+export const PRODUCER_CAPS = { history: 300, fact: 35, note: 60, sayIt: 30, facts: 12, notes: 8, askKitchen: 6 };
+export function producerProblems(p, folded, prose) {
+	const out = [];
+	if (!p || typeof p !== 'object' || Array.isArray(p)) return ['is not a record'];
+	const str = (k) => (typeof p[k] === 'string' ? p[k] : '');
+	const list = (k) => (Array.isArray(p[k]) ? p[k].filter((x) => typeof x === 'string') : []);
+	if (!PRODUCER_TYPES.includes(p.type)) out.push(`type ${JSON.stringify(p.type)} is not one of ${PRODUCER_TYPES.join(', ')}`);
+	if (!str('who').trim()) out.push('has no who');
+	const cap = (at, text, n) => { const w = words(text); if (w > n) out.push(`${at}: ${w} words, at most ${n}`); };
+	cap('history', str('history'), PRODUCER_CAPS.history);
+	cap('sayIt', str('sayIt'), PRODUCER_CAPS.sayIt);
+	list('facts').forEach((f, i) => cap(`facts[${i}]`, f, PRODUCER_CAPS.fact));
+	list('notes').forEach((f, i) => cap(`notes[${i}]`, f, PRODUCER_CAPS.note));
+	for (const k of ['facts', 'notes', 'askKitchen']) if (list(k).length > PRODUCER_CAPS[k]) out.push(`${k}: ${list(k).length}, at most ${PRODUCER_CAPS[k]}`);
+	const strings = [['who', str('who')], ['where', str('where')], ['founded', str('founded')], ['history', str('history')], ['sayIt', str('sayIt')]];
+	for (const k of ['facts', 'notes', 'askKitchen']) list(k).forEach((x, i) => strings.push([`${k}[${i}]`, x]));
+	for (const [at, text] of strings) {
+		if (!text) continue;
+		/* A question in askKitchen is printed under Ask the kitchen on every screen, so it is read as sent
+		   there: it may name what only the kitchen can answer, and a verdict in it is still refused. */
+		prose(at, at.startsWith('askKitchen') ? 'Ask the kitchen: ' + text : text);
+		for (const s of sourceProblems(at === 'who' || at === 'where' ? 'of ' + text : text, folded)) out.push(`${at}: ${s}`);
 	}
 	return out;
 }

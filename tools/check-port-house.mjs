@@ -548,6 +548,35 @@ function checkParity(T, P) {
 	delete compOld.videos[0].componentIds;
 	same('refreshEdition(components arrive)', T.refreshEdition(clone(compOld), clone(fixture)), P.refreshEdition(clone(compOld), clone(fixture)));
 
+	/* The producers: a profile on two components, normalised (a stray key dropped, a blank list emptied), validated (a type outside the set, no who, a long history, too many facts), dealt as producer cards and as the three producer drills, merged when a person keeps one, and refreshed onto a device that had none. */
+	const prod = clone(fixture);
+	const profile = (/** @type {string} */ who, /** @type {string} */ where) => ({ type: 'maker', who, where, founded: '1896', history: who + ' began on the quay.\n\nIt still supplies the room.', facts: ['It is the oldest firm on the quay.'], notes: ['Say the name slowly.'], sayIt: 'From ' + who + ', down the road.', askKitchen: ['Which day does it deliver?'] });
+	prod.components[0].producer = { value: Object.assign(profile('Quay Salt Works', 'The Quay'), { stray: 'x' }), by: 'person', ts: NOW };
+	prod.components[1].producer = { value: profile('Verjus House', 'The Hill'), by: 'person', ts: NOW };
+	prod.components.push({ id: 'c-prod0003', kind: 'ingredient', name: 'Hearth bread', producer: { value: profile('Harbour Bakery', 'The Harbour'), by: 'person', ts: NOW }, itemIds: ['d-beetrt01'], termIds: [], ts: NOW });
+	prod.components.push({ id: 'c-prod0004', kind: 'ingredient', name: 'Apples', producer: { value: Object.assign(profile('Orchard Farm', 'The Valley'), { type: 'farm' }), by: 'person', ts: NOW }, itemIds: ['d-beetrt01', 'd-chicken1'], termIds: [], ts: NOW });
+	const prodT = T.normaliseHouse(clone(prod), { rand: seeded() });
+	same('normaliseHouse(producers)', prodT, P.normaliseHouse(clone(prod), { rand: seeded() }));
+	if (!prodT.house.components[0].producer || 'stray' in prodT.house.components[0].producer.value) fail.push('normaliseHouse(producers) did not keep the profile or did not drop the stray key');
+	same('markKind(producer)', T.markKind('producer'), P.markKind('producer'));
+	same('validateHouse(producers)', T.validateHouse(prodT.house), P.validateHouse(P.normaliseHouse(clone(prod), { rand: seeded() }).house));
+	const prodBad = clone(prodT.house);
+	Object.assign(prodBad.components[0].producer.value, { type: 'brand', who: '', history: Array(302).fill('word').join(' '), facts: Array(13).fill('A fact.') });
+	const prodBadT = T.validateHouse(prodBad);
+	same('validateHouse(producers, bad)', prodBadT, P.validateHouse(clone(prodBad)));
+	for (const code of ['component', 'word-cap']) if (!prodBadT.problems.some((/** @type {any} */ x) => x.code === code && x.path.indexOf('producer') >= 0)) fail.push('validateHouse(producers, bad) named no ' + code + ' problem on the producer');
+	same('buildFlashcards(producers)', T.buildFlashcards(prodT.house), P.buildFlashcards(prodT.house));
+	if (T.buildFlashcards(prodT.house).filter((/** @type {any} */ c) => c.kind === 'producer').length !== 12) fail.push('buildFlashcards(producers) did not deal three cards per profile');
+	for (const kind of ['producerOf', 'producerWhere', 'producerDish']) {
+		same(`${kind}(producers)`, [1, 2, 3, 4, 5].map((n) => T[kind](prodT.house, seeded(n))), [1, 2, 3, 4, 5].map((n) => P[kind](prodT.house, seeded(n))));
+		if (!Array.from({ length: 40 }, (_, n) => n * 7919 + 1).some((n) => T[kind](prodT.house, seeded(n)))) fail.push(`${kind}(producers) dealt nothing from four producers`);
+	}
+	same('drillableCounts(producers)', T.drillableCounts(prodT.house), P.drillableCounts(prodT.house));
+	const prodMoved = clone(prodT.house);
+	prodMoved.components[1].producer = { value: Object.assign(clone(prodT.house.components[1].producer.value), { sayIt: 'Moved.' }), by: 'person', ts: NOW + 9 };
+	same('mergeHouse(producers, moved)', T.mergeHouse(clone(prodT.house), clone(prodMoved)), P.mergeHouse(clone(prodT.house), clone(prodMoved)));
+	same('refreshEdition(producers arrive)', T.refreshEdition(clone(fixture), clone(prodT.house)), P.refreshEdition(clone(fixture), clone(prodT.house)));
+
 	/* The tastings as printed: a subtitle and a supplement, a drink course, a choice of, printed lines and the pour labels, normalised, validated (a choice of one, a label over no pour, a long line), merged, refreshed onto a device that had none, and dealt as one flash card per course. */
 	const tast = clone(fixture);
 	Object.assign(tast.tastings[0], { line: 'Celebrating the harbour!', supplement: 'Add the Wine Pairing $30.00' });

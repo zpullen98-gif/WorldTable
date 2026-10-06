@@ -20,7 +20,7 @@
  * NO ALLERGEN IS READ, INFERRED OR SHOWN HERE. The service note is a
  * person's own words and the card prints it verbatim under the fixed eyebrow.
  */
-import { isMark, DISH_PARTS, COCKTAIL_PARTS, WINE_PARTS, KEYS, BOTTLE_TIERS, foldSize, wineListOf, videoGroups, videoMeta, videosFor, componentGroups, componentVideos } from './house/house-schema';
+import { isMark, DISH_PARTS, COCKTAIL_PARTS, WINE_PARTS, KEYS, BOTTLE_TIERS, PRODUCER_GROUPS, foldSize, wineListOf, videoGroups, videoMeta, videosFor, componentGroups, componentVideos, componentsFor } from './house/house-schema';
 import { compareHref, type Room } from './wing-links';
 import type {
 	AskAtLineup,
@@ -43,6 +43,8 @@ import type {
 	MixUp,
 	Note,
 	Pairing,
+	ProducerProfile,
+	ProducerType,
 	Scenario,
 	Tasting,
 	TastingCourse
@@ -177,7 +179,29 @@ export const STUDY_WORDS = {
 	pourCarte: 'Pour with it, à la carte',
 	inGlass: 'In the glass',
 	theWine: 'The wine',
-	offerNext: 'Offer next'
+	offerNext: 'Offer next',
+	whoMakes: 'Who makes it',
+	flashProducers: 'Flash these producers',
+	allProducers: 'All producers',
+	producers: 'The producers',
+	producersLine: '{n} producers behind {m} items on the menu',
+	producersNone: 'No producers written for this house yet.',
+	producerWhere: 'Where',
+	producerFounded: 'Founded',
+	producerFacts: 'Facts',
+	producerHistory: 'The story',
+	producerNotes: 'Notes for the floor',
+	askKitchen: 'Ask the kitchen',
+	onTheMenu: 'On the menu',
+	quizProducers: 'Quiz the producers',
+	flashAllProducers: 'Flash every producer',
+	deckProducers: 'Producers',
+	deckItemProducers: '{name}: who makes it',
+	typeMaker: 'Maker',
+	typeFarm: 'Farm',
+	typeFishery: 'Fishery',
+	typeOrigin: 'Origin',
+	typeHouse: 'Made in house'
 } as const;
 export type StudyWordKey = keyof typeof STUDY_WORDS;
 
@@ -1115,4 +1139,115 @@ export function compareRows(house: House, item: HouseItem, base: string): Compar
 			const { href, room } = e.app === 'classic' ? { href: '', room: null } : compareHref(e, base, house);
 			return { app: e.app, label: plain(e.label), same: plain(e.same), different: plain(e.different), href, room };
 		});
+}
+
+/* -------------------------------------------------------------------------
+ * The producers
+ * ---------------------------------------------------------------------- */
+
+/** How a producer's type is said on a screen. */
+export const PRODUCER_TYPE_WORDS: Readonly<Record<ProducerType, StudyWordKey>> = {
+	maker: 'typeMaker',
+	farm: 'typeFarm',
+	fishery: 'typeFishery',
+	origin: 'typeOrigin',
+	house: 'typeHouse'
+};
+
+/** One producer as a card and the Producers view draw it: its kept profile, its component and the items that use it. */
+export interface ProducerRow {
+	/** The component's id: one profile per component. */
+	id: string;
+	/** What it supplies: the component's name. */
+	supplies: string;
+	/** What it supplies as the row beside the who shows it: empty when the who already says it ('Tien Dat tofu' beside 'Tien Dat tofu'). */
+	suppliesShown: string;
+	type: ProducerType;
+	typeLabel: string;
+	who: string;
+	where: string;
+	founded: string;
+	sayIt: string;
+	facts: string[];
+	/** The history in paragraphs. */
+	paragraphs: string[];
+	notes: string[];
+	askKitchen: string[];
+	/** The named items that use it, in the order the component lists them. */
+	items: Array<{ id: string; name: string; kind: ItemKind }>;
+}
+
+/** Whether a component's name only repeats its producer's who: the same words, or the who and one more word ('Creekstone Farms beef'). */
+function echoes(who: string, supplies: string): boolean {
+	const f = (x: string) => x.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+	const w = f(who);
+	const s = f(supplies);
+	if (!s || !w) return false;
+	return s === w || w.includes(s) || s.startsWith(w + ' ');
+}
+
+function producerRow(house: House, c: { id: string; name: string; producer?: Mark<ProducerProfile>; itemIds: string[] }): ProducerRow | null {
+	const p = kept<ProducerProfile>(c.producer);
+	const who = p ? plain(p.who) : '';
+	if (!p || !who) return null;
+	const list = (v: unknown) => (Array.isArray(v) ? v.map(plain).filter(Boolean) : []);
+	const history = plain(p.history);
+	const type = (PRODUCER_TYPE_WORDS as Record<string, StudyWordKey>)[p.type] ? p.type : 'maker';
+	const items: ProducerRow['items'] = [];
+	for (const id of c.itemIds) {
+		const it = findItem(house, id);
+		if (it && plain(it.name) && !items.some((x) => x.id === id)) items.push({ id, name: plain(it.name), kind: it.kind });
+	}
+	return {
+		id: c.id,
+		supplies: plain(c.name),
+		suppliesShown: echoes(who, plain(c.name)) ? '' : plain(c.name),
+		type,
+		typeLabel: say(PRODUCER_TYPE_WORDS[type]),
+		who,
+		where: plain(p.where),
+		founded: plain(p.founded),
+		sayIt: plain(p.sayIt),
+		facts: list(p.facts),
+		paragraphs: history ? history.split(/\n\s*\n/).map((x) => x.trim()).filter(Boolean) : [],
+		notes: list(p.notes),
+		askKitchen: list(p.askKitchen),
+		items
+	};
+}
+
+/**
+ * "Who makes it" on an item's card: the item's components that carry a kept
+ * producer profile, in the house's order. A profile nobody kept is not the
+ * house's word and is left out, as componentBlocks leaves out an unkept card.
+ */
+export function producersFor(house: House, itemId: string): ProducerRow[] {
+	const out: ProducerRow[] = [];
+	for (const c of componentsFor(house, itemId)) {
+		const row = producerRow(house, c);
+		if (row) out.push(row);
+	}
+	return out;
+}
+
+/**
+ * The Producers view: every kept profile in two groups, Makers and farms
+ * (a maker, a farm, the house itself) then Where it comes from (a fishery,
+ * an origin), each in the house's order; a group with none left out.
+ */
+export function producerRows(house: House): Array<{ key: string; label: string; rows: ProducerRow[] }> {
+	const all: ProducerRow[] = [];
+	for (const c of house.components || []) {
+		const row = producerRow(house, c);
+		if (row) all.push(row);
+	}
+	return PRODUCER_GROUPS.map((g) => ({ key: g.key as string, label: g.label as string, rows: all.filter((r) => (g.types as readonly string[]).includes(r.type)) })).filter((g) => g.rows.length);
+}
+
+/** The one line under the Producers door: how many producers, behind how many items. Empty when there are none. */
+export function producersLine(house: House): string {
+	const rows = producerRows(house).flatMap((g) => g.rows);
+	if (!rows.length) return '';
+	const items = new Set(rows.flatMap((r) => r.items.map((i) => i.id)));
+	return say('producersLine', { n: rows.length, m: items.size }).replace(/^1 producers/, '1 producer').replace(/ 1 items /, ' 1 item ');
 }

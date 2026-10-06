@@ -22,7 +22,9 @@
  * no why or no line to say); and 'video' a video whose link is not a video
  * link by videoUrlOk, or that has no title or no why; 'component' a
  * component whose kind is outside COMPONENT_KINDS, or with no name, or whose
- * card lacks a front or a back; and 'compare' an item's comparisons past
+ * card lacks a front or a back, or whose producer has a type outside
+ * PRODUCER_TYPES, no who, or more facts, notes or questions for the kitchen
+ * than PRODUCER_MAX allows; and 'compare' an item's comparisons past
  * COMPARE_MAX, an entry whose app is outside COMPARE_APPS, a classic that
  * carries a ref, an in-app entry with none, or an entry with no label, same
  * or different; and 'tasting' a course printed as a choice that names fewer
@@ -33,7 +35,9 @@
  * why over VIDEO_WHY_WORDS; a tier naming no house wine is 'ref', and so is
  * a video's item or term that is not in the house; a component's explanation
  * over COMPONENT_WORDS.explain, its card's front or back over theirs, and a
- * comparison's label, same or different over COMPARE_WORDS are 'word-cap';
+ * comparison's label, same or different over COMPARE_WORDS, and a
+ * producer's history, fact, note or line to say over PRODUCER_WORDS are
+ * 'word-cap';
  * a component's item or term, a video's component and a codex comparison
  * naming a house wine id that the house lacks are 'ref'. A tasting's
  * subtitle and supplement, a course's printed line and its pour label over
@@ -52,7 +56,7 @@
  * sweep (forbiddenKeys, in house-normalise.ts), the dash (house-lines.ts)
  * and onPage, the rule that 12 is not on a page that prints only 12.50.
  */
-import { BOTTLE_TIERS, BOTTLE_WORDS, COMPARE_APPS, COMPARE_MAX, COMPARE_WORDS, COMPONENT_KINDS, COMPONENT_WORDS, HALF_SIZE, HOUSE_LISTS, MARK_FIELDS, PRINCIPLES, TASTING_WORDS, VIDEO_WHY_WORDS, foldSize, inBottleBand, isMark, printedDollars, videoUrlOk, wineListOf } from './house-schema';
+import { BOTTLE_TIERS, BOTTLE_WORDS, COMPARE_APPS, COMPARE_MAX, COMPARE_WORDS, COMPONENT_KINDS, COMPONENT_WORDS, HALF_SIZE, HOUSE_LISTS, MARK_FIELDS, PRINCIPLES, PRODUCER_MAX, PRODUCER_TYPES, PRODUCER_WORDS, TASTING_WORDS, VIDEO_WHY_WORDS, foldSize, inBottleBand, isMark, printedDollars, videoUrlOk, wineListOf } from './house-schema';
 import type { House, HouseList, Lines, Mark } from './house-schema';
 import { forbiddenKeys } from './house-normalise';
 import { hasDash, lineProblems, wordCount } from './house-lines';
@@ -359,7 +363,38 @@ function checkComponents(house: House, add: Add): void {
 				else if (wordCount(text) > COMPONENT_WORDS[side]) add(at + '.card.value.' + side, 'word-cap', wordCount(text) + ' words; the cap on a card\'s ' + side + ' is ' + COMPONENT_WORDS[side]);
 			}
 		}
+		const producer = c.producer;
+		if (isMark(producer) && producer.value && typeof producer.value === 'object' && !Array.isArray(producer.value)) checkProducer(producer.value as Raw, at + '.producer.value', add);
 	}
+}
+
+/**
+ * One producer profile: its type one of PRODUCER_TYPES and a who, both
+ * 'component' when wrong; more facts, notes or questions for the kitchen
+ * than PRODUCER_MAX allows, 'component' too; the history, each fact, each
+ * note and the line to say over PRODUCER_WORDS, 'word-cap'. The dash, the
+ * key sweep and her allergen talk are the house wide checks', which walk
+ * this mark like every other.
+ */
+function checkProducer(v: Raw, at: string, add: Add): void {
+	const types: readonly string[] = PRODUCER_TYPES;
+	if (types.indexOf(String(v.type)) < 0) add(at + '.type', 'component', String(v.type) + ' is not one of ' + PRODUCER_TYPES.join(', '));
+	if (typeof v.who !== 'string' || !v.who.trim()) add(at + '.who', 'component', 'the producer has no who');
+	const text = (k: string): string => (typeof v[k] === 'string' ? (v[k] as string) : '');
+	const list = (k: string): string[] => (Array.isArray(v[k]) ? (v[k] as unknown[]).filter((x): x is string => typeof x === 'string') : []);
+	const capped = (path: string, s: string, cap: number, what: string) => {
+		const n = wordCount(s);
+		if (n > cap) add(path, 'word-cap', n + ' words; the cap on ' + what + ' is ' + cap);
+	};
+	capped(at + '.history', text('history'), PRODUCER_WORDS.history, "a producer's history");
+	capped(at + '.sayIt', text('sayIt'), PRODUCER_WORDS.sayIt, "a producer's line to say");
+	for (const [k, cap, what] of [['facts', PRODUCER_WORDS.fact, 'a fact'], ['notes', PRODUCER_WORDS.note, 'a note']] as const) {
+		const l = list(k);
+		l.forEach((s, i) => capped(at + '.' + k + '[' + i + ']', s, cap, what));
+		if (l.length > PRODUCER_MAX[k]) add(at + '.' + k, 'component', l.length + ' ' + k + '; at most ' + PRODUCER_MAX[k]);
+	}
+	const asks = list('askKitchen');
+	if (asks.length > PRODUCER_MAX.askKitchen) add(at + '.askKitchen', 'component', asks.length + ' questions for the kitchen; at most ' + PRODUCER_MAX.askKitchen);
 }
 
 /**

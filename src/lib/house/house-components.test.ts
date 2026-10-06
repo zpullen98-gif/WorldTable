@@ -109,7 +109,8 @@ describe('the normaliser', () => {
 		expect(house.videos![0].componentIds).toEqual([c.id]);
 		expect('extra' in c).toBe(false);
 		expect(c.kind).toBe('garnish');
-		expect(Object.keys(c).sort()).toEqual([...KEYS.HouseComponent].sort());
+		/* The producer is optional: a component with no profile carries no producer key. */
+		expect(Object.keys(c).sort()).toEqual(KEYS.HouseComponent.filter((k) => k !== 'producer').sort());
 	});
 
 	it('rebuilds a card and the comparisons from their keys, drops an empty entry, and cuts none for the count', () => {

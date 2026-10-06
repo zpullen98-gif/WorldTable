@@ -1060,13 +1060,39 @@ for (const u of clean.disputes) {
    lists (an unknown name fails the build), and its say, explanation and card are marks of hers at the
    build stamp like every other mark. A fragment is hand written and dash free, so a dash fails the
    build with the file and the field named; the American spelling map runs as it does on every string.
-   The sources stay in the fragment for a reader and the gates; nothing of them reaches the house. */
+   A component may carry its producer inline (producerFrom below). The sources stay in the fragment for a
+   reader and the gates; nothing of them reaches the house. */
 let frags;
 try { frags = readFragments(); } catch (e) { fail(e.message); }
 const compIds = new Map();
 const builtComponents = [];
 const fragStr = (x) => typeof x === 'string' && x.trim() !== '';
 const fragText = (s, where) => dashFree(spelled(s, where), where);
+/* A fragment's producer profile, held to its shape (the nine keys and no other, a type of the five, a
+   who, every list a list of strings, no dash written in) and returned with every string through the
+   spelling map and the dash pass. The caps and the content rules are the gates' (validate-pack, keep-all,
+   check-pack), so a long history fails there with the field named rather than here. */
+const PRODUCER_KEYS = ['type', 'who', 'where', 'founded', 'history', 'facts', 'notes', 'sayIt', 'askKitchen'];
+function producerFrom(p, need, where) {
+	need(p && typeof p === 'object' && !Array.isArray(p), 'producer is an object');
+	for (const k of Object.keys(p)) need(PRODUCER_KEYS.includes(k), `producer: unknown key ${k}`);
+	need(C.PRODUCER_TYPES.includes(p.type), `producer: type ${JSON.stringify(p.type)} is not one of ${C.PRODUCER_TYPES.join(', ')}`);
+	need(fragStr(p.who), 'producer: needs who');
+	for (const k of ['where', 'founded', 'history', 'sayIt']) need(p[k] === undefined || typeof p[k] === 'string', `producer: ${k} is a string`);
+	for (const k of ['facts', 'notes', 'askKitchen']) need(p[k] === undefined || (Array.isArray(p[k]) && p[k].every(fragStr)), `producer: ${k} is a list of sentences`);
+	const out = {};
+	for (const k of PRODUCER_KEYS) {
+		if (k === 'type') out.type = p.type;
+		else if (k === 'facts' || k === 'notes' || k === 'askKitchen') {
+			out[k] = (p[k] || []).map((x, i) => { need(!hasDash(x), `producer: ${k}[${i}] carries a dash; write it without one`); return fragText(x, `${where}.${k}[${i}]`); });
+		} else {
+			const x = (p[k] || '').replace(/\r/g, '');
+			need(!hasDash(x), `producer: ${k} carries a dash; write it without one`);
+			out[k] = x ? fragText(x, `${where}.${k}`) : '';
+		}
+	}
+	return out;
+}
 const exactItem = (name) => {
 	for (const list of ['dishes', 'wines', 'cocktails']) {
 		const r = house[list].find((x) => x.name === name) || house[list].find((x) => slug(x.name) === slug(name));
@@ -1077,7 +1103,7 @@ const exactItem = (name) => {
 for (const { at, v } of frags.components) {
 	const need = (ok, what) => { if (!ok) fail(`${at}${v && v.key ? ' (' + v.key + ')' : ''}: ${what}`); };
 	need(v && typeof v === 'object' && !Array.isArray(v), 'a component is an object');
-	for (const k of Object.keys(v)) need(['key', 'kind', 'name', 'say', 'explain', 'card', 'items', 'terms', 'sources'].includes(k), `unknown key ${k}`);
+	for (const k of Object.keys(v)) need(['key', 'kind', 'name', 'say', 'explain', 'card', 'producer', 'items', 'terms', 'sources'].includes(k), `unknown key ${k}`);
 	need(fragStr(v.key) && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(v.key), 'needs a key, a lowercase ascii slug');
 	need(!compIds.has(v.key), `the key ${v.key} is used twice across the fragments`);
 	need(C.COMPONENT_KINDS.includes(v.kind), `kind ${JSON.stringify(v.kind)} is not one of ${C.COMPONENT_KINDS.join(', ')}`);
@@ -1109,10 +1135,33 @@ for (const { at, v } of frags.components) {
 	if (v.say.trim()) comp.say = mark(fragText(v.say, where + '.say'));
 	comp.explain = mark(fragText(v.explain.replace(/\r/g, ''), where + '.explain'));
 	comp.card = mark({ front: fragText(v.card.front, where + '.card.front'), back: fragText(v.card.back, where + '.card.back') });
+	if (v.producer !== undefined) comp.producer = mark(producerFrom(v.producer, need, where + '.producer'));
 	comp.itemIds = itemIds;
 	comp.termIds = termIds;
 	comp.ts = BUILD_TS;
 	builtComponents.push(comp);
+}
+/* producers: [{ component, producer, sources }] attaches a profile to the component an existing key
+   names, in any fragment file; a key that names no component fails, and so does a second profile for one
+   component (inline or attached). The profile becomes a mark of hers at the build stamp, its strings
+   through the spelling map and the dash pass like every other fragment string, and keep-all flips it to
+   a person's with every mark. The sources stay in the fragment for a reader and the gates. */
+for (const { at, v } of frags.producers) {
+	const need = (ok, what) => { if (!ok) fail(`${at}${v && v.component ? ' (' + v.component + ')' : ''}: ${what}`); };
+	need(v && typeof v === 'object' && !Array.isArray(v), 'a producers entry is an object');
+	for (const k of Object.keys(v)) need(['component', 'producer', 'sources'].includes(k), `unknown key ${k}`);
+	need(fragStr(v.component), 'needs component, the key of a component in the fragments');
+	const id = compIds.get(v.component);
+	need(id, `${v.component} is not a component key in the fragments`);
+	need(Array.isArray(v.sources) && v.sources.length && v.sources.every(fragStr), 'needs sources, where each fact comes from');
+	const comp = builtComponents.find((c) => c.id === id);
+	need(comp && !comp.producer, `${v.component} already carries a producer; one profile per component`);
+	const where = 'house.components[' + builtComponents.indexOf(comp) + '].producer';
+	comp.producer = mark(producerFrom(v.producer, need, where));
+	/* In the schema's key order (the producer after the card), so the normaliser leaves the record as built. */
+	const ordered = {};
+	for (const k of C.KEYS.HouseComponent) if (comp[k] !== undefined) ordered[k] = comp[k];
+	builtComponents[builtComponents.indexOf(comp)] = ordered;
 }
 /* Each item's one or two comparisons: the item named as the pack names it, each entry's app one of
    the four, a classic with no ref and an in-app one with its ref, a table ref carried as the address it
@@ -1265,5 +1314,5 @@ const floorBottles = house.wines.filter((w) => w.list === 'bottle').length;
 const tiered = house.dishes.filter((d) => d.pairing && d.pairing.value.bottles).length;
 console.log(`build-brennans: ${floorBottles} of ${house.wines.length} wines are on the bottle list; ${tiered} dishes carry bottle tiers`);
 console.log(`build-brennans: ${coffeeLinks} pairings take a coffee as their zero-proof pick; ${house.wines.filter((w) => w.lines).length} of ${house.wines.length} wines carry the timed lines`);
-console.log(`build-brennans: ${REL(OUT)}: ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free), ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask at lineup, ${house.disputes.length} disputes, ${(house.videos || []).length} videos, ${builtComponents.length} components (${house.dishes.concat(house.wines, house.cocktails).filter((r) => r.compare).length} items compared, from ${frags.files.length} fragment file(s) in ${REL(frags.dir)}); ${overrides.entries.length} overrides applied (${applied.filter((a) => a.skipped).length} skipped), ${principleChanges.length} principles mapped, ${dashLog.length} strings dash-stripped (${dashLog.filter((d) => d.override !== undefined).length} set by an override), ${spellLog.length} strings respelled American, ${minted.length} ids minted`);
+console.log(`build-brennans: ${REL(OUT)}: ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free), ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask at lineup, ${house.disputes.length} disputes, ${(house.videos || []).length} videos, ${builtComponents.length} components (${builtComponents.filter((c) => c.producer).length} with a producer, ${house.dishes.concat(house.wines, house.cocktails).filter((r) => r.compare).length} items compared, from ${frags.files.length} fragment file(s) in ${REL(frags.dir)}); ${overrides.entries.length} overrides applied (${applied.filter((a) => a.skipped).length} skipped), ${principleChanges.length} principles mapped, ${dashLog.length} strings dash-stripped (${dashLog.filter((d) => d.override !== undefined).length} set by an override), ${spellLog.length} strings respelled American, ${minted.length} ids minted`);
 if (principleChanges.length && args.includes('--verbose')) for (const p of principleChanges) console.log('  principle ' + p.dish + ': ' + p.from + ' to ' + p.to);

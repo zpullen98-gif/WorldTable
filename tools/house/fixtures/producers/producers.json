@@ -1,0 +1,69 @@
+{
+	"components": [
+		{
+			"key": "abita-amber",
+			"kind": "ingredient",
+			"name": "Abita Amber",
+			"say": "uh-BEE-tuh",
+			"explain": "Abita Brewing was founded in 1986 in Abita Springs, Louisiana, across Lake Pontchartrain from the city, by Jim Patton and Rush Cumming. Amber was its first beer and remains its flagship: a Munich-style lager of pale and caramel malts with German Perle hops, smooth, malty and lightly caramel.\n\nA malty, low-bitterness beer is the right choice for cooking with cheese, because hops turn bitter as a sauce reduces.\n\nIn the Shells & Cheese it loosens the Mimolette fondue and adds a malty depth. The guide notes the beer's alcohol is mostly but not entirely cooked off, so tell guests who avoid alcohol.",
+			"card": {
+				"front": "Why is Abita Amber in the Shells & Cheese?",
+				"back": "A malty, low-bitterness Louisiana lager, Abita’s first beer since 1986; it loosens the Mimolette fondue without turning bitter. Tell guests who avoid alcohol."
+			},
+			"producer": {
+				"type": "maker",
+				"who": "Abita Brewing",
+				"where": "Abita Springs, Louisiana",
+				"founded": "1986",
+				"history": "Abita Brewing was founded in 1986 in Abita Springs, Louisiana, across Lake Pontchartrain from the city, by Jim Patton and Rush Cumming.\n\nAmber was its first beer and remains its flagship: a Munich-style lager of pale and caramel malts with German Perle hops.",
+				"facts": [
+					"Amber was the brewery's first beer and is still its flagship."
+				],
+				"notes": [
+					"A malty, low-bitterness lager suits a cheese sauce, because hops turn bitter as a sauce reduces."
+				],
+				"sayIt": "The beer in the fondue is Abita Amber, from across the lake in Abita Springs.",
+				"askKitchen": [
+					"How much of the beer's alcohol is left in the fondue tonight?"
+				]
+			},
+			"items": [
+				"Shells & Cheese"
+			],
+			"terms": [
+				"Abita Amber"
+			],
+			"sources": [
+				"research/components-dishes-2026-10-05.md (search 40)",
+				"research/dossier-the-kitchen.md (section 7)",
+				"guide.txt (pdf p32)"
+			]
+		}
+	],
+	"producers": [
+		{
+			"component": "leidenheimer",
+			"producer": {
+				"type": "maker",
+				"who": "Leidenheimer Baking Company",
+				"where": "Simon Bolivar Avenue, New Orleans",
+				"founded": "1896",
+				"history": "George Leidenheimer, from Deidesheim in Germany, started the bakery in 1896 and moved it to Simon Bolivar Avenue in 1904.\n\nIt soon switched from dense German loaves to the light, airy loaf with a thin, crackly crust that the city preferred, and that loaf became the standard for po-boys.",
+				"facts": [
+					"Founded in 1896 by George Leidenheimer, from Deidesheim in Germany.",
+					"On Simon Bolivar Avenue since 1904."
+				],
+				"notes": [
+					"The crisps on the Creole Caesar are made from the city's po-boy bread; say so and the garnish becomes a piece of New Orleans."
+				],
+				"sayIt": "The crisps are Leidenheimer, the bakery behind the city's po-boy bread since 1896.",
+				"askKitchen": []
+			},
+			"sources": [
+				"research/components-dishes-2026-10-05.md (search 19)",
+				"research/dossier-the-kitchen.md (Creole Caesar)",
+				"research/gap-sourcing-live-2026-10-03.md (Leidenheimer)"
+			]
+		}
+	]
+}

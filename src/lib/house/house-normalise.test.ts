@@ -367,11 +367,11 @@ describe('the caps', () => {
 
 describe('normaliseMark', () => {
 	it('knows which fields carry a list, the parts, the lines or the pairing, and that the rest is prose', () => {
-		expect(MARK_KINDS).toEqual({ ingredientsNamed: 'list', firstPickIds: 'list', upsells: 'list', parts: 'parts', lines: 'lines', pairing: 'pairing', card: 'card', compare: 'compare' });
+		expect(MARK_KINDS).toEqual({ ingredientsNamed: 'list', firstPickIds: 'list', upsells: 'list', parts: 'parts', lines: 'lines', pairing: 'pairing', card: 'card', compare: 'compare', producer: 'producer' });
 		for (const f of ['say', 'guest', 'why', 'pairs', 'origin', 'profile', 'goesWith', 'serve', 'toGuest', 'you', 'principle', 'difference', 'ask', 'body', 'history']) {
 			expect(markKind(f)).toBe('text');
 		}
-		const kinds = ['text', 'list', 'parts', 'lines', 'pairing', 'card', 'compare'];
+		const kinds = ['text', 'list', 'parts', 'lines', 'pairing', 'card', 'compare', 'producer'];
 		for (const list of HOUSE_LISTS) for (const f of MARK_FIELDS[list]) expect(kinds, `${list}.${f}`).toContain(markKind(f));
 		for (const f of MARK_FIELDS.house) expect(markKind(f)).toBe('text');
 	});

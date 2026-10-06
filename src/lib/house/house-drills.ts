@@ -41,6 +41,8 @@
 import { COCKTAIL_PARTS, DISH_PARTS, KEYS, LINE_CAPS, WINE_PARTS, isMark, tastingShortName } from './house-schema';
 import type {
 	ComponentCard,
+	HouseComponent,
+	ProducerProfile,
 	FormulaParts,
 	House,
 	HouseItem,
@@ -62,7 +64,7 @@ export type Rand = () => number;
  * The kinds, the floors and the labels
  * ---------------------------------------------------------------------- */
 
-/** The twelve multiple-choice kinds, in the order a screen lists them. */
+/** The fifteen multiple-choice kinds, in the order a screen lists them: the last three ask about the producers. */
 export const DRILL_KINDS = [
 	'lineToDish',
 	'sauceOf',
@@ -75,13 +77,26 @@ export const DRILL_KINDS = [
 	'wineGrapes',
 	'wineGoesWith',
 	'cocktailGlass',
-	'cocktailSpec'
+	'cocktailSpec',
+	'producerOf',
+	'producerWhere',
+	'producerDish'
 ] as const;
 export type DrillKind = (typeof DRILL_KINDS)[number];
 
 /** Four options on every question, and four drillable items before a kind deals. */
 export const OPTION_COUNT = 4;
 export const DRILL_FLOOR = 4;
+
+/**
+ * The producer kinds deal from two profiles: a house names few producers,
+ * and every option is still a real record of the house, so the floor that
+ * keeps a padded option out is the option count, which never moves.
+ */
+export const PRODUCER_FLOOR = 2;
+
+/** The three kinds that ask about the producers, for a screen that offers them as one subject. */
+export const PRODUCER_KINDS = ['producerOf', 'producerWhere', 'producerDish'] as const;
 
 /** The floor per kind: how many items must carry the kept mark the kind reads before it deals. */
 export const DRILL_FLOORS: Readonly<Record<DrillKind, number>> = {
@@ -96,7 +111,10 @@ export const DRILL_FLOORS: Readonly<Record<DrillKind, number>> = {
 	wineGrapes: DRILL_FLOOR,
 	wineGoesWith: DRILL_FLOOR,
 	cocktailGlass: DRILL_FLOOR,
-	cocktailSpec: DRILL_FLOOR
+	cocktailSpec: DRILL_FLOOR,
+	producerOf: PRODUCER_FLOOR,
+	producerWhere: PRODUCER_FLOOR,
+	producerDish: PRODUCER_FLOOR
 };
 
 /** What a screen prints above the stem, per kind. */
@@ -112,7 +130,10 @@ export const DRILL_LABELS: Readonly<Record<DrillKind, string>> = {
 	wineGrapes: 'Which grapes go into this wine?',
 	wineGoesWith: 'Which wine goes with these?',
 	cocktailGlass: 'Which glass does this drink take?',
-	cocktailSpec: 'Whose spec is this?'
+	cocktailSpec: 'Whose spec is this?',
+	producerOf: 'Which producer is behind this?',
+	producerWhere: 'Where is this producer from?',
+	producerDish: 'Which dish or drink uses this producer?'
 };
 
 /** The three timed lines, as a flashcard names them. */
@@ -137,13 +158,16 @@ export interface DrillQuestion {
 }
 
 /**
- * The seven flashcard kinds: parts, lines, terms, mix-ups, pairings, the
- * components and the tasting courses. A component card's itemId is the
- * component's own id (c-), one card shared by every item that uses it. A
- * tasting card's itemId is the tasting's id (t-) and its course the course's
- * n, one card per course in the order the menu prints them.
+ * The eight flashcard kinds: parts, lines, terms, mix-ups, pairings, the
+ * components, the tasting courses and the producers. A component card's
+ * itemId is the component's own id (c-), one card shared by every item that
+ * uses it. A tasting card's itemId is the tasting's id (t-) and its course
+ * the course's n, one card per course in the order the menu prints them. A
+ * producer card's itemId is its component's id and its n the card's place
+ * among that producer's three (0 who, 1 one thing to know, 2 the items), so
+ * a grade stays on the same question when a profile gains or loses a card.
  */
-export const FLASHCARD_KINDS = ['part', 'line', 'term', 'mixUp', 'pairing', 'component', 'tasting'] as const;
+export const FLASHCARD_KINDS = ['part', 'line', 'term', 'mixUp', 'pairing', 'component', 'tasting', 'producer'] as const;
 export type FlashcardKind = (typeof FLASHCARD_KINDS)[number];
 
 export interface Flashcard {
@@ -153,6 +177,8 @@ export interface Flashcard {
 	itemId: string;
 	/** The course's n, on a tasting card only. */
 	course?: number;
+	/** The card's place among its producer's cards (0, 1 or 2), on a producer card only. */
+	n?: number;
 }
 
 /* -------------------------------------------------------------------------
@@ -274,6 +300,8 @@ interface Candidate {
 	itemId: string;
 	stems: string[];
 	answer: string;
+	/** Other answers that are right too (a second producer on the same dish), never offered as a distractor. */
+	others?: string[];
 }
 
 /**
@@ -285,6 +313,14 @@ interface Candidate {
 interface KindSpec {
 	pool: (house: House) => Candidate[];
 	field: (house: House) => string[];
+	/**
+	 * Optional: the fair distractors for one record, drawn from first. A
+	 * kind whose field mixes lists (a dish among the wines) or whose options
+	 * can echo the stem (a place that names the stem's own region) says
+	 * which strings would give the answer away; the rest of the field fills
+	 * any shortfall, so a small house still deals.
+	 */
+	fair?: (house: House, c: Candidate, stem: string) => (option: string) => boolean;
 }
 
 function candidate(itemId: string, answer: string, stems: readonly string[]): Candidate | undefined {
@@ -330,6 +366,128 @@ const dishNames = (house: House): string[] => house.dishes.map(nameOf);
 const wineNames = (house: House): string[] => house.wines.map(nameOf);
 const cocktailNames = (house: House): string[] => house.cocktails.map(nameOf);
 const termNames = (house: House): string[] => house.lexicon.map((t: LexiconTerm) => plainText(t.term));
+
+/** One producer as the drills and the cards read it: its component and its kept profile with a who. */
+interface KeptProducer {
+	component: HouseComponent;
+	profile: ProducerProfile;
+	who: string;
+}
+
+/** Every component with a kept producer profile that names its who, in the house's order. */
+function keptProducers(house: House): KeptProducer[] {
+	const out: KeptProducer[] = [];
+	for (const c of house.components || []) {
+		const profile = keptValue<ProducerProfile>(c.producer);
+		const who = profile ? plainText(profile.who) : '';
+		if (profile && who) out.push({ component: c, profile, who });
+	}
+	return out;
+}
+
+/**
+ * A producer as a question names it: the who up to its first bracket or
+ * comma, so 'LaPlace andouille, the Andouille Capital of the World' asks
+ * about LaPlace andouille and 'Brennan's honey (source unconfirmed)' about
+ * Brennan's honey. The profile keeps the whole who, its caveat with it.
+ */
+export function shortWho(who: string): string {
+	const w = plainText(who);
+	const cut = w.split(/\s*\(|,\s/)[0].trim();
+	return cut || w;
+}
+
+/** The named items a producer's component reaches, in the order its itemIds list them. */
+function producerItems(p: KeptProducer, byId: Map<string, HouseItem>): HouseItem[] {
+	const out: HouseItem[] = [];
+	for (const id of p.component.itemIds || []) {
+		const item = byId.get(plainText(id));
+		if (item && nameOf(item) && out.indexOf(item) < 0) out.push(item);
+	}
+	return out;
+}
+
+/** Each named item that carries a producer, its name the stem and its first producer the answer, any other producer on it right too. */
+function producerOfPool(house: House): Candidate[] {
+	const all = keptProducers(house);
+	const byId = itemById(house);
+	return poolOf(
+		itemsOf(house).map((item) => {
+			const whos = distinctText(all.filter((p) => producerItems(p, byId).indexOf(item) >= 0).map((p) => shortWho(p.who)));
+			if (!whos.length) return undefined;
+			const c = candidate(item.id, whos[0], [nameOf(item)]);
+			if (c && whos.length > 1) c.others = whos.slice(1);
+			return c;
+		})
+	);
+}
+
+/** Each producer with a where, its short name the stem and its where the answer. */
+function producerWherePool(house: House): Candidate[] {
+	return poolOf(keptProducers(house).map((p) => candidate(p.component.id, plainText(p.profile.where), [shortWho(p.who)])));
+}
+
+/** Words too common in a place to tell two places apart. */
+const PLACE_STOP = new Set(['and', 'the', 'from', 'with', 'near', 'founded', 'mostly', 'generally', 'across', 'west', 'east', 'north', 'south', 'below', 'parish', 'parishes', 'state']);
+
+/** The telling words of a place or a name, each cut to five letters so coast and coastal meet. */
+function placeWords(s: string): Set<string> {
+	const out = new Set<string>();
+	for (const w of foldAnswer(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').split(/[^a-z]+/)) {
+		if (w.length < 3 || PLACE_STOP.has(w)) continue;
+		out.add(w.slice(0, 5));
+	}
+	return out;
+}
+
+function sharedWords(a: Set<string>, b: Set<string>): number {
+	let n = 0;
+	for (const w of a) if (b.has(w)) n++;
+	return n;
+}
+
+/**
+ * A where is a fair distractor when it shares fewer than two telling words
+ * with the stem and with the right answer: 'South Louisiana rice country and
+ * the Atchafalaya Basin' is no fair wrong answer to 'South Louisiana rice
+ * country', and 'Gulf waters off Louisiana' none to 'Louisiana coast and the
+ * Gulf'.
+ */
+function fairPlace(_house: House, c: Candidate, stem: string): (option: string) => boolean {
+	const s = placeWords(stem);
+	const a = placeWords(c.answer);
+	return (option) => {
+		const o = placeWords(option);
+		return sharedWords(o, s) < 2 && sharedWords(o, a) < 2;
+	};
+}
+
+/**
+ * A dish, a drink or a wine is a fair distractor only beside answers of its
+ * own kind: a food producer's options are dishes, never three bottles and
+ * the dish.
+ */
+function fairItem(house: House, c: Candidate): (option: string) => boolean {
+	const items = itemsOf(house);
+	const right = new Set([c.answer].concat(c.others || []).map(foldAnswer));
+	const kinds = new Set(items.filter((i) => right.has(foldAnswer(nameOf(i)))).map((i) => i.kind));
+	const names = new Set(items.filter((i) => kinds.has(i.kind)).map((i) => foldAnswer(nameOf(i))));
+	return (option) => names.has(foldAnswer(option));
+}
+
+/** Each producer that reaches a named item, its who the stem and its first item the answer, every other item it reaches right too. */
+function producerDishPool(house: House): Candidate[] {
+	const byId = itemById(house);
+	return poolOf(
+		keptProducers(house).map((p) => {
+			const names = distinctText(producerItems(p, byId).map(nameOf));
+			if (!names.length) return undefined;
+			const c = candidate(p.component.id, names[0], [shortWho(p.who)]);
+			if (c && names.length > 1) c.others = names.slice(1);
+			return c;
+		})
+	);
+}
 
 const SPECS: Readonly<Record<DrillKind, KindSpec>> = {
 	lineToDish: {
@@ -386,7 +544,10 @@ const SPECS: Readonly<Record<DrillKind, KindSpec>> = {
 	cocktailSpec: {
 		pool: (house) => poolOf(house.cocktails.map((b) => candidate(b.id, nameOf(b), [specText(b.spec)]))),
 		field: cocktailNames
-	}
+	},
+	producerOf: { pool: producerOfPool, field: (house) => keptProducers(house).map((p) => shortWho(p.who)) },
+	producerWhere: { pool: producerWherePool, field: (house) => keptProducers(house).map((p) => plainText(p.profile.where)), fair: fairPlace },
+	producerDish: { pool: producerDishPool, field: (house) => itemsOf(house).map(nameOf), fair: fairItem }
 };
 
 /* -------------------------------------------------------------------------
@@ -398,7 +559,8 @@ const SPECS: Readonly<Record<DrillKind, KindSpec>> = {
  * drillable items than the kind's floor, or fewer than four distinct
  * options. The record is drawn, then its stem, then three distractors from
  * the field with the answer's own spelling and its folded twins left out,
- * then the four are shuffled; every draw is from `rand`.
+ * then the four are shuffled; every draw is from `rand`. A record with more
+ * than one right answer (a dish with two producers) never offers the others.
  */
 export function dealQuestion(house: House, kind: DrillKind, rand: Rand): DrillQuestion | null {
 	const spec = SPECS[kind];
@@ -408,11 +570,18 @@ export function dealQuestion(house: House, kind: DrillKind, rand: Rand): DrillQu
 	if (field.length < OPTION_COUNT) return null;
 	const c = drawOne(pool, rand);
 	const stem = drawOne(c.stems, rand);
-	const answerFold = foldAnswer(c.answer);
-	const others = shuffleBy(
-		field.filter((s) => foldAnswer(s) !== answerFold),
-		rand
-	).slice(0, OPTION_COUNT - 1);
+	const right = new Set([foldAnswer(c.answer)].concat((c.others || []).map(foldAnswer)));
+	const wrong = field.filter((s) => !right.has(foldAnswer(s)));
+	let others: string[];
+	if (spec.fair) {
+		/* The fair distractors first; the rest of the field only to fill a shortfall in a small house. */
+		const ok = spec.fair(house, c, stem);
+		const fair = shuffleBy(wrong.filter(ok), rand);
+		const rest = fair.length < OPTION_COUNT - 1 ? shuffleBy(wrong.filter((s) => !ok(s)), rand) : [];
+		others = fair.concat(rest).slice(0, OPTION_COUNT - 1);
+	} else {
+		others = shuffleBy(wrong, rand).slice(0, OPTION_COUNT - 1);
+	}
 	if (others.length < OPTION_COUNT - 1) return null;
 	const options = shuffleBy([c.answer].concat(others), rand);
 	return { kind, stem, options, answer: c.answer, itemId: c.itemId };
@@ -465,6 +634,18 @@ export function cocktailGlass(house: House, rand: Rand): DrillQuestion | null {
 /** A cocktail's spec, from its parts: which drink? */
 export function cocktailSpec(house: House, rand: Rand): DrillQuestion | null {
 	return dealQuestion(house, 'cocktailSpec', rand);
+}
+
+export function producerOf(house: House, rand: Rand): DrillQuestion | null {
+	return dealQuestion(house, 'producerOf', rand);
+}
+
+export function producerWhere(house: House, rand: Rand): DrillQuestion | null {
+	return dealQuestion(house, 'producerWhere', rand);
+}
+
+export function producerDish(house: House, rand: Rand): DrillQuestion | null {
+	return dealQuestion(house, 'producerDish', rand);
 }
 
 /* -------------------------------------------------------------------------
@@ -525,12 +706,53 @@ function courseBack(c: TastingCourse, byId: Map<string, HouseItem>): string {
 	return dishes + '. ' + label + (/\b(with|by|alongside)$/i.test(label) ? ' ' : ': ') + pour;
 }
 
+/** A list of names as a sentence says it: one, two joined by and, more with commas and a closing and. */
+function sayList(names: readonly string[]): string {
+	if (names.length < 2) return names.join('');
+	return names.slice(0, -1).join(', ') + ' and ' + names[names.length - 1];
+}
+
+/** The first sentence of a text, for a card that wants one point of a history. */
+function firstSentence(text: string): string {
+	const t = plainText(text).split(/\n\s*\n/)[0] || '';
+	const m = /^[\s\S]*?[.!?](?=\s|$)/.exec(t);
+	return plainText(m ? m[0] : t);
+}
+
+/**
+ * Up to three cards per kept producer profile: who it is (where and when it
+ * was founded), one thing to know (its first fact, else the first sentence
+ * of its history) and what on the menu uses it. A card with nothing to say
+ * on its back is left out.
+ */
+function producerCards(house: House, byId: Map<string, HouseItem>): Flashcard[] {
+	const out: Flashcard[] = [];
+	for (const p of keptProducers(house)) {
+		const id = p.component.id;
+		const where = plainText(p.profile.where);
+		const founded = plainText(p.profile.founded);
+		const name = shortWho(p.who);
+		const who = [where, founded ? 'Founded ' + founded : ''].filter(Boolean).join('. ');
+		if (who) out.push({ kind: 'producer', front: name + (founded ? ': where, and since when?' : ': where from?'), back: who + '.', itemId: id, n: 0 });
+		const facts = Array.isArray(p.profile.facts) ? p.profile.facts.map(plainText).filter(Boolean) : [];
+		const point = facts[0] || firstSentence(p.profile.history);
+		if (point) out.push({ kind: 'producer', front: name + ': one thing to know', back: point, itemId: id, n: 1 });
+		const items = producerItems(p, byId);
+		if (items.length) {
+			const kinds = new Set(items.map((i) => i.kind));
+			const ask = kinds.size === 1 && kinds.has('dish') ? ': which dishes?' : kinds.has('dish') ? ': what on the menu?' : ': which drinks?';
+			out.push({ kind: 'producer', front: name + ask, back: sayList(items.map(nameOf)) + '.', itemId: id, n: 2 });
+		}
+	}
+	return out;
+}
+
 /**
  * The flashcard deck over the kept marks: one card per kept part, per kept
  * line, per kept say and toGuest on a term, per kept difference and ask on
  * a mix-up, per resolved first pick and zero-proof pick in a kept
  * pairing, and per kept card on a component, once however many items share
- * it. Then one card per tasting course, in the menu's printed order: the
+ * it, then up to three per kept producer profile (producerCards). Then one card per tasting course, in the menu's printed order: the
  * front names the tasting the short way and the course as printed, the back
  * the dish and its pairing. A tasting's courses are the menu's own words,
  * never hers, so they need no keeping. The order is the record's; the
@@ -590,6 +812,7 @@ export function buildFlashcards(house: House): Flashcard[] {
 		const back = plainText(card.back);
 		if (front && back) out.push({ kind: 'component', front, back, itemId: c.id });
 	}
+	for (const card of producerCards(house, byId)) out.push(card);
 	for (const t of house.tastings || []) {
 		const menu = tastingShortName(t.name, house.name);
 		if (!menu) continue;

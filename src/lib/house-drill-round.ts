@@ -29,7 +29,7 @@ import {
 } from './house/house-drills';
 import { isMark } from './house/house-schema';
 import { inMeal } from './study';
-import type { FormulaParts, House, HouseItem, Mark, Pairing } from './house/house-schema';
+import type { FormulaParts, House, HouseItem, Mark, Pairing, ProducerProfile } from './house/house-schema';
 
 /** The modes of /menu/quiz, as ?mode= names them; 'dish' is the menu quiz the page always had and the default. */
 export const QUIZ_MODES = ['dish', 'drill', 'cards', 'pair', 'say', 'guest'] as const;
@@ -53,6 +53,9 @@ export function modeFromSearch(search: string): QuizMode {
 /** A round is ten, or the whole pool when the person asks for it. */
 export const ROUND_LENGTH = 10;
 
+/** The producer subject: the three kinds that ask about the producers, dealt alone when ?subject=producer asks for them. */
+export { PRODUCER_KINDS } from './house/house-drills';
+
 /** The pairing drill's two kinds: a dish to its first pick among the house wines, and a dish to its drink without alcohol. */
 export const PAIR_KINDS: readonly DrillKind[] = ['firstPickFor', 'zeroProofFor'];
 
@@ -69,7 +72,10 @@ export const KIND_CHIPS: Readonly<Record<DrillKind, string>> = {
 	wineGrapes: 'Grapes',
 	wineGoesWith: 'Wine goes with',
 	cocktailGlass: 'Glass',
-	cocktailSpec: 'Spec'
+	cocktailSpec: 'Spec',
+	producerOf: 'Producer',
+	producerWhere: 'Where from',
+	producerDish: 'Which dish uses it'
 };
 
 /** What each kind counts and what it offers, for the still-needed line. */
@@ -85,7 +91,10 @@ const KIND_NEEDS: Readonly<Record<DrillKind, { unit: string; field: string }>> =
 	wineGrapes: { unit: 'wines with their grapes named', field: 'four different grape lists' },
 	wineGoesWith: { unit: 'wines with a kept goes-with', field: 'four wines on the list' },
 	cocktailGlass: { unit: 'drinks with a glass named', field: 'four different glasses' },
-	cocktailSpec: { unit: 'drinks with a spec', field: 'four drinks on the bar' }
+	cocktailSpec: { unit: 'drinks with a spec', field: 'four drinks on the bar' },
+	producerOf: { unit: 'items with a kept producer', field: 'four producers' },
+	producerWhere: { unit: 'producers with a kept where', field: 'four different places' },
+	producerDish: { unit: 'producers on a dish or a drink', field: 'four names on the house' }
 };
 
 /**
@@ -206,6 +215,16 @@ function joined(parts: readonly string[]): string {
 	return parts.map(plain).filter(Boolean).join(' ');
 }
 
+/** The kept profile of the producer named `who` on the item, for the line under a Producer answer. */
+function producerNamed(house: House, who: string, itemId: string): ProducerProfile | undefined {
+	for (const c of house.components || []) {
+		if (c.itemIds.indexOf(itemId) < 0) continue;
+		const p = keptValue<ProducerProfile>(c.producer);
+		if (p && plain(p.who) === who) return p;
+	}
+	return undefined;
+}
+
 function findItem(house: House, id: string): HouseItem | undefined {
 	return ([] as HouseItem[]).concat(house.dishes, house.wines, house.cocktails).find((it) => it.id === id);
 }
@@ -256,6 +275,16 @@ export function explainAnswer(house: House, q: DrillQuestion): string {
 			if (!item || item.kind !== 'wine') return '';
 			const profile = keptText(item.profile);
 			return joined([profile, plain(item.region) ? plain(item.region) + '.' : '', plain(item.style) ? plain(item.style) + '.' : '']);
+		}
+		case 'producerOf': {
+			const p = producerNamed(house, q.answer, q.itemId);
+			return p ? joined([plain(p.sayIt), plain(p.where) ? 'From ' + plain(p.where) + '.' : '']) : '';
+		}
+		case 'producerWhere':
+		case 'producerDish': {
+			const c = (house.components || []).find((x) => x.id === q.itemId);
+			const p = c ? keptValue<ProducerProfile>(c.producer) : undefined;
+			return p ? joined([plain(p.sayIt), plain(p.founded) ? 'Founded ' + plain(p.founded) + '.' : '']) : '';
 		}
 		case 'cocktailGlass':
 		case 'cocktailSpec': {

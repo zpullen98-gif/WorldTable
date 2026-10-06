@@ -1,0 +1,25 @@
+{
+	"components": [
+		{
+			"key": "leidenheimer",
+			"kind": "ingredient",
+			"name": "Leidenheimer bread",
+			"say": "LIE-den-hy-mer",
+			"explain": "Leidenheimer is the bakery behind New Orleans French bread and the po-boy. George Leidenheimer, from Deidesheim in Germany, started it in 1896, moved it to Simon Bolivar Avenue in 1904, and soon switched from dense German loaves to the light, airy loaf with a thin, crackly crust that the city preferred.\n\nThat loaf shatters when you bite it and stays tender inside; it is the standard for po-boys across the city.\n\nOn the Creole Caesar it becomes Leidenheimer crisps, thin toasted slices that replace croutons. Telling a guest the crisps are made from the city's po-boy bread turns a garnish into a piece of New Orleans.",
+			"card": {
+				"front": "What is Leidenheimer, and where is it on our menu?",
+				"back": "The New Orleans bakery since 1896 whose light, crackly French loaf is the po-boy standard. Toasted into the crisps on our Creole Caesar."
+			},
+			"items": [
+				"Creole Caesar"
+			],
+			"terms": [
+				"Leidenheimer"
+			],
+			"sources": [
+				"research/components-dishes-2026-10-05.md (search 19)",
+				"research/dossier-the-kitchen.md (Creole Caesar)"
+			]
+		}
+	]
+}

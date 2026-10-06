@@ -25,6 +25,11 @@ import {
 	wineGoesWith,
 	wineGrapes,
 	zeroProofFor,
+	producerOf,
+	producerWhere,
+	producerDish,
+	PRODUCER_FLOOR,
+	PRODUCER_KINDS,
 	gradeSaid,
 	gradeScenario,
 	sayable,
@@ -36,7 +41,7 @@ import {
 } from './house-drills';
 import type { DrillKind, DrillQuestion, Flashcard, Rand } from './house-drills';
 import { HOUSE_LISTS, ID_PREFIXES, KEYS, houseRows } from './house-schema';
-import type { FormulaParts, House, HouseCocktail, HouseDish, HouseWine, LexiconTerm, Lines, Mark, MixUp, Pairing, Principle } from './house-schema';
+import type { FormulaParts, House, HouseCocktail, HouseComponent, HouseDish, HouseWine, LexiconTerm, Lines, Mark, MixUp, Pairing, Principle, ProducerProfile } from './house-schema';
 
 /**
  * The drills are pure generators over a House, so what is under test is the
@@ -132,6 +137,16 @@ function dishMarks(wineId: string, zeroProofId: string, sauce: string, sides: st
 	};
 }
 
+/** A kept producer profile on a new component reaching the items named. */
+function producer(id: string, name: string, who: string, where: string, itemIds: string[], more: Partial<ProducerProfile> = {}): HouseComponent {
+	const profile: ProducerProfile = {
+		type: 'maker', who, where, founded: '1901', history: who + ' began as a small shop on the quay. It still supplies the room every morning.',
+		facts: ['It delivers before the doors open.'], notes: ['Say the whole name once, then the short one.'], sayIt: 'From ' + who + ', just along the quay.',
+		askKitchen: ['Which day does it deliver?'], ...more
+	};
+	return { id, kind: 'ingredient', name, producer: kept(profile), itemIds, termIds: [], ts: TS };
+}
+
 /** The fixture with every list widened past the floor, every new mark kept. */
 function widened(): House {
 	const h = clone(fixture);
@@ -162,6 +177,14 @@ function widened(): House {
 		mixup('m-redred01', 'w-redhil01', 'w-hearth01', 'One is light and from the ridge; the other is dark and named for the fire.', 'Something light, or something with weight?'),
 		mixup('m-sournegr', 'b-sour0001', 'b-negro001', 'One is sharp and shaken; the other is bitter and stirred.', 'Sharp or bitter?')
 	);
+	/* Five producers, each on one item, so every producer question has four real options. */
+	h.components = (h.components || []).concat(
+		producer('c-prodlam1', 'Hill lamb', 'Ridge Farm', 'The Ridge', ['d-lambsh01'], { type: 'farm' }),
+		producer('c-prodsea1', 'Day boat fish', 'Quay Boats', 'The Quay', ['d-seabas01'], { type: 'fishery' }),
+		producer('c-prodmus1', 'Field mushrooms', 'Wood End Growers', 'Wood End', ['d-mushrm01'], { type: 'farm' }),
+		producer('c-prodlem1', 'Sweet pastry', 'Lamp Street Bakery', 'Lamp Street', ['d-lemont01']),
+		producer('c-prodgin1', 'Harbour gin', 'Harbour Distillery', 'The Harbour', ['b-negro001'])
+	);
 	return h;
 }
 
@@ -188,7 +211,8 @@ function expectWellFormed(q: DrillQuestion, kind: DrillKind, house: House) {
 }
 
 const GENERATORS: Record<DrillKind, (house: House, rand: Rand) => DrillQuestion | null> = {
-	lineToDish, sauceOf, sidesOf, firstPickFor, zeroProofFor, termToGuest, sayIt, mixUp, wineGrapes, wineGoesWith, cocktailGlass, cocktailSpec
+	lineToDish, sauceOf, sidesOf, firstPickFor, zeroProofFor, termToGuest, sayIt, mixUp, wineGrapes, wineGoesWith, cocktailGlass, cocktailSpec,
+	producerOf, producerWhere, producerDish
 };
 
 afterEach(() => {
@@ -196,12 +220,14 @@ afterEach(() => {
 });
 
 describe('the constants', () => {
-	it('name twelve kinds, four options, a floor of four for every kind, and a label and a line label free of dashes', () => {
-		expect(DRILL_KINDS).toEqual(['lineToDish', 'sauceOf', 'sidesOf', 'firstPickFor', 'zeroProofFor', 'termToGuest', 'sayIt', 'mixUp', 'wineGrapes', 'wineGoesWith', 'cocktailGlass', 'cocktailSpec']);
+	it('name fifteen kinds, four options, a floor of four for every kind but the producers\' two, and a label and a line label free of dashes', () => {
+		expect(DRILL_KINDS).toEqual(['lineToDish', 'sauceOf', 'sidesOf', 'firstPickFor', 'zeroProofFor', 'termToGuest', 'sayIt', 'mixUp', 'wineGrapes', 'wineGoesWith', 'cocktailGlass', 'cocktailSpec', 'producerOf', 'producerWhere', 'producerDish']);
+		expect(PRODUCER_KINDS).toEqual(['producerOf', 'producerWhere', 'producerDish']);
 		expect(OPTION_COUNT).toBe(4);
 		expect(DRILL_FLOOR).toBe(4);
+		expect(PRODUCER_FLOOR).toBe(2);
 		expect(Object.keys(DRILL_FLOORS).sort()).toEqual([...DRILL_KINDS].sort());
-		for (const kind of DRILL_KINDS) expect(DRILL_FLOORS[kind]).toBe(DRILL_FLOOR);
+		for (const kind of DRILL_KINDS) expect(DRILL_FLOORS[kind]).toBe((PRODUCER_KINDS as readonly string[]).includes(kind) ? PRODUCER_FLOOR : DRILL_FLOOR);
 		expect(Object.keys(DRILL_LABELS).sort()).toEqual([...DRILL_KINDS].sort());
 		for (const label of Object.values(DRILL_LABELS)) {
 			expect(label).not.toMatch(DASH);
@@ -209,7 +235,7 @@ describe('the constants', () => {
 		}
 		expect(Object.keys(LINE_LABELS)).toEqual([...KEYS.Lines]);
 		for (const label of Object.values(LINE_LABELS)) expect(label).not.toMatch(/[0-9]/);
-		expect(FLASHCARD_KINDS).toEqual(['part', 'line', 'term', 'mixUp', 'pairing', 'component', 'tasting']);
+		expect(FLASHCARD_KINDS).toEqual(['part', 'line', 'term', 'mixUp', 'pairing', 'component', 'tasting', 'producer']);
 		expect(Object.keys(GENERATORS).sort()).toEqual([...DRILL_KINDS].sort());
 	});
 
@@ -257,7 +283,11 @@ describe('the fixture, under every floor', () => {
 			wineGrapes: 1,
 			wineGoesWith: 1,
 			cocktailGlass: 2,
-			cocktailSpec: 1
+			cocktailSpec: 1,
+			/* the fixture names no producer */
+			producerOf: 0,
+			producerWhere: 0,
+			producerDish: 0
 		});
 		expect(readyKinds(fixture)).toEqual([]);
 	});

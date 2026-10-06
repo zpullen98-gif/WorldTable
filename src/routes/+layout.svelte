@@ -522,6 +522,9 @@
 	}
 	.brandline a {
 		text-decoration: none;
+		/* Vertical padding on the inline link: the tap target clears the 44px
+		   floor (it measured 35px at phone width) without moving the line. */
+		padding-block: 6px;
 	}
 	.brandline em {
 		font-style: italic;

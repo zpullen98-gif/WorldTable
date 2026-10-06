@@ -50,7 +50,7 @@
 	import { restoreScroll } from '$lib/stores/nav.svelte';
 	import { plateTitle } from '$lib/plates';
 	import { NEVER_GRADED, MET, type SubsectionProgress } from '$lib/levels';
-	import { latestVerdicts, searchElsewhere, searchRows, studyProgress, studyRows, studySections } from '$lib/study';
+	import { latestVerdicts, producersLine, say, searchElsewhere, searchRows, studyProgress, studyRows, studySections } from '$lib/study';
 	import { roomHref } from '$lib/wing-links';
 	import { deskShare, readDeskInbox } from '$lib/desk/desk-inbox';
 	import { readInName, whenRead } from '$lib/desk/desk-share';
@@ -205,6 +205,9 @@
 		if (!progress.studied) return `${head} Nothing studied yet.`;
 		return progress.again ? `${head} ${progress.studied} studied, ${progress.again} to see again.` : `${head} ${progress.studied} studied.`;
 	});
+
+	/* The Producers door's one line: how many producers stand behind how many items, empty when none. */
+	const producersCount = $derived(current ? producersLine(current) : '');
 
 	/* ---- Search ---- */
 	let q = $state('');
@@ -390,6 +393,12 @@
 				<span class="door-name">Drill the menu</span>
 				<span class="door-line">Mixed questions from every section, ten at a time.</span>
 			</a>
+			{#if producersCount}
+				<a class="door" href="{base}/menu?view=producers" data-door="producers">
+					<span class="door-name">{say('producers')}</span>
+					<span class="door-line">{producersCount}</span>
+				</a>
+			{/if}
 		</nav>
 		<nav class="chips sections" aria-label="The menu's sections">
 			{#each sections as s (s.section)}

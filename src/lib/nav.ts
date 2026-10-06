@@ -88,7 +88,8 @@ export function parentOf(ask: ParentAsk): string {
 		return `/level/${/^[1-4]$/.test(lv) ? lv : chosen}`;
 	}
 	if (path === '/menu') {
-		// A card open on the study view, or the editing page pushed over it.
+		// A card opened from the Producers view goes back to the view; one open on the study view, or the editing page pushed over it, to the study view.
+		if (/^(dish-)?d-/.test(hash) && q.get('view') === 'producers') return '/menu?view=producers';
 		if (/^(dish-)?d-/.test(hash) || hash === 'edit') return '/menu';
 		// A drawer More opened: back to More, while the hash says so and after it is cleared.
 		if (MORE_DRAWERS.includes(hash) || ask.via === 'more') return '/more';

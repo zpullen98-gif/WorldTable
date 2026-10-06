@@ -105,7 +105,7 @@ describe("the Brennan's builder: the components and the comparisons", () => {
 		});
 		const r = build(dir, frag);
 		expect(r.status, r.stderr).toBe(0);
-		expect(r.stdout).toContain('1 components (2 items compared, from 3 fragment file(s)');
+		expect(r.stdout).toContain('1 components (0 with a producer, 2 items compared, from 3 fragment file(s)');
 		const h = houseOf(dir);
 		const ledger = JSON.parse(readFileSync(join(dir, 'tools', 'house', 'brennans', 'ids.ledger.json'), 'utf8'));
 		const [c] = h.components;
@@ -129,7 +129,7 @@ describe("the Brennan's builder: the components and the comparisons", () => {
 		/* The gates: the content rules, the counts from the fragments, the validator and check-compare. */
 		const engine = await import(/* @vite-ignore */ pathToFileURL(join(dir, 'tools', 'house', 'engine.mjs')).href);
 		expect(engine.componentProblems(h, engine.noteHay())).toEqual([]);
-		expect(engine.fragmentCounts(frag)).toEqual({ components: 1, componentItems: 1, compared: 2, componentVideos: 1 });
+		expect(engine.fragmentCounts(frag)).toEqual({ components: 1, componentItems: 1, compared: 2, componentVideos: 1, producers: 0 });
 		const v = spawnSync(process.execPath, [join(dir, 'tools', 'house', 'validate-pack.mjs')], { cwd: dir, encoding: 'utf8', env: env(frag) });
 		expect(v.status, v.stderr).toBe(0);
 		const sibling = (name: string) => join(ROOT, '..', name);
@@ -221,13 +221,138 @@ describe('the component gates', () => {
 
 	it('count the fragments, and none when the directory is absent', async () => {
 		const engine = await import(/* @vite-ignore */ pathToFileURL(join(ROOT, 'tools', 'house', 'engine.mjs')).href);
-		expect(engine.fragmentCounts(join(tmpdir(), 'oot-no-such-dir-' + Date.now()))).toEqual({ components: 0, componentItems: 0, compared: 0, componentVideos: 0 });
+		expect(engine.fragmentCounts(join(tmpdir(), 'oot-no-such-dir-' + Date.now()))).toEqual({ components: 0, componentItems: 0, compared: 0, componentVideos: 0, producers: 0 });
 		const dir = mkdtempSync(join(tmpdir(), 'oot-frag-'));
 		made.push(dir);
 		writeFileSync(join(dir, 'dishes.json'), JSON.stringify({ components: [component(), component({ key: 'b', items: ['Eggs Hussarde', 'Turtle Soup'] })], compare: COMPARE }));
 		writeFileSync(join(dir, 'notes.txt'), 'not a fragment');
-		expect(engine.fragmentCounts(dir)).toEqual({ components: 2, componentItems: 2, compared: 2, componentVideos: 0 });
+		expect(engine.fragmentCounts(dir)).toEqual({ components: 2, componentItems: 2, compared: 2, componentVideos: 0, producers: 0 });
 		writeFileSync(join(dir, 'broken.json'), '{');
 		expect(() => engine.readFragments(dir)).toThrow(/broken.json: does not parse as JSON/);
+	});
+});
+
+/* ---- the producers (the producer deep dive, 6 October 2026) ---------------------------------------- */
+
+/* The fixture fragment under tools/house/fixtures/producers/: the Leidenheimer and Abita Amber components
+   as the authors filed them, one profile attached by a producers entry and one carried inline, every word
+   standing in the research files. A test fixture, never shipped. */
+const PRODUCER_FIXTURE = join(ROOT, 'tools', 'house', 'fixtures', 'producers');
+const fixtureFiles = (): Record<string, any> => ({
+	'dishes.json': JSON.parse(readFileSync(join(PRODUCER_FIXTURE, 'dishes.json'), 'utf8')),
+	'producers.json': JSON.parse(readFileSync(join(PRODUCER_FIXTURE, 'producers.json'), 'utf8'))
+});
+
+describe("the Brennan's builder: the producers", () => {
+	it('attaches a profile by a producers entry and one inline, as marks of hers at the build stamp, in the schema\'s key order, and the gates pass', async () => {
+		const { dir, frag } = tree(fixtureFiles());
+		const r = build(dir, frag);
+		expect(r.status, r.stderr).toBe(0);
+		expect(r.stdout).toContain('2 components (2 with a producer, 0 items compared, from 2 fragment file(s)');
+		const h = houseOf(dir);
+		const stamp = h.dishes[0].ts;
+		const leid = h.components.find((c: Rec) => c.name === 'Leidenheimer bread');
+		const abita = h.components.find((c: Rec) => c.name === 'Abita Amber');
+		for (const c of [leid, abita]) {
+			expect(Object.keys(c)).toEqual(['id', 'kind', 'name', 'say', 'explain', 'card', 'producer', 'itemIds', 'termIds', 'ts']);
+			expect(c.producer).toMatchObject({ by: 'maitre', ts: stamp });
+			expect(Object.keys(c.producer.value)).toEqual(['type', 'who', 'where', 'founded', 'history', 'facts', 'notes', 'sayIt', 'askKitchen']);
+		}
+		expect(leid.producer.value.who).toBe('Leidenheimer Baking Company');
+		expect(leid.producer.value.askKitchen).toEqual([]);
+		expect(abita.producer.value.founded).toBe('1986');
+		/* The gates: the producer's prose and sources, the counts from the fragments, the validator. */
+		const engine = await import(/* @vite-ignore */ pathToFileURL(join(dir, 'tools', 'house', 'engine.mjs')).href);
+		expect(engine.componentProblems(h, engine.noteHay())).toEqual([]);
+		expect(engine.fragmentCounts(frag)).toEqual({ components: 2, componentItems: 2, compared: 0, componentVideos: 0, producers: 2 });
+		const v = spawnSync(process.execPath, [join(dir, 'tools', 'house', 'validate-pack.mjs')], { cwd: dir, encoding: 'utf8', env: env(frag) });
+		expect(v.status, v.stderr).toBe(0);
+		/* keep-all flips the producer to a person's with every mark, and the pack carries it. */
+		const k = spawnSync(process.execPath, [join(dir, 'tools', 'house', 'keep-all.mjs'), '--owner-reviewed'], { cwd: dir, encoding: 'utf8', env: env(frag) });
+		expect(k.status, k.stderr).toBe(0);
+		const pack = JSON.parse(readFileSync(join(dir, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json'), 'utf8')).house;
+		for (const c of pack.components) expect(c.producer.by).toBe('person');
+		expect(pack.components.find((c: Rec) => c.name === 'Leidenheimer bread').producer.value).toEqual(leid.producer.value);
+	}, 240_000);
+
+	it('refuses a producers entry naming no component, a second profile, a type outside the five, a dash, an unknown key and a missing source', () => {
+		const EM = String.fromCharCode(0x2014);
+		const files = fixtureFiles();
+		const entry = files['producers.json'].producers[0];
+		const withEntry = (over: Rec, profileOver: Rec = {}) => {
+			const f = fixtureFiles();
+			f['producers.json'].producers = [{ ...entry, producer: { ...entry.producer, ...profileOver }, ...over }];
+			return f;
+		};
+		const twice = fixtureFiles();
+		twice['producers.json'].producers.push({ ...entry, component: 'abita-amber' });
+		const cases: Array<[Record<string, unknown>, RegExp]> = [
+			[withEntry({ component: 'no-such-component' }), /no-such-component is not a component key in the fragments/],
+			[twice, /abita-amber already carries a producer; one profile per component/],
+			[withEntry({}, { type: 'brand' }), /type "brand" is not one of maker, farm, fishery, origin, house/],
+			[withEntry({}, { who: '' }), /producer: needs who/],
+			[withEntry({}, { facts: ['Founded ' + EM + ' 1896.'] }), /facts\[0\] carries a dash/],
+			[withEntry({}, { awards: [] }), /producer: unknown key awards/],
+			[withEntry({ extra: 1 }), /unknown key extra/],
+			[withEntry({ sources: [] }), /needs sources/]
+		];
+		for (const [f, said] of cases) {
+			const { dir, frag } = tree(f);
+			const r = build(dir, frag);
+			expect(r.status, r.stdout).toBe(1);
+			expect(r.stderr).toMatch(said);
+		}
+	}, 600_000);
+});
+
+describe('the producer gate', () => {
+	it('holds a profile to the explanation\'s prose rule, its sources and its caps, and agrees with the schema\'s constants', async () => {
+		const engine = await import(/* @vite-ignore */ pathToFileURL(join(ROOT, 'tools', 'house', 'engine.mjs')).href);
+		const schema = await import('./house/house-schema');
+		expect(engine.PRODUCER_TYPES).toEqual([...schema.PRODUCER_TYPES]);
+		expect(engine.PRODUCER_CAPS).toEqual({ ...schema.PRODUCER_WORDS, ...schema.PRODUCER_MAX });
+		const h = JSON.parse(readFileSync(join(ROOT, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json'), 'utf8')).house;
+		const bare = JSON.parse(JSON.stringify(h));
+		const good = fixtureFiles()['producers.json'].producers[0].producer;
+		const words = (n: number) => Array.from({ length: n }, () => 'bread').join(' ');
+		const at = (p: Rec) => {
+			const one = JSON.parse(JSON.stringify(bare));
+			one.components = [{ ...one.components.find((c: Rec) => c.name === 'Leidenheimer bread'), producer: { value: { ...good, ...p }, by: 'person', ts: 1 } }];
+			return engine.componentProblems(one, engine.noteHay()).filter((x: string) => x.includes(' producer '));
+		};
+		expect(at({})).toEqual([]);
+		const out = at({
+			type: 'brand',
+			who: 'Zorbatron Loaves',
+			founded: '1666',
+			history: words(301),
+			facts: ['It is gluten free.', ...Array(12).fill('A fact.')],
+			notes: ['The best ' + String.fromCharCode(0x2014) + ' loaf.', words(61)],
+			sayIt: 'A unique bread for a unique table.'
+		}).join('\n');
+		for (const said of [
+			'type "brand" is not one of',
+			'history: 301 words, at most 300',
+			'facts: 13, at most 12',
+			'notes[1]: 61 words, at most 60',
+			'who: the name Zorbatron is in no source',
+			'facts[0]: an allergen or diet verdict ("gluten free")',
+			'notes[0]: a dash',
+			'sayIt: the banned word "unique"'
+		]) expect(out).toContain(said);
+		/* The year rule on a founding year (the snapshots print nearly every year, so it is shown on a small source). */
+		expect(engine.sourceProblems('1666', 'founded in 1896')).toEqual(['the year 1666 is in no source']);
+		/* An allergen named without sending the server to the kitchen is refused; sent there, it stands. */
+		expect(at({ notes: ['There is dairy in the loaf.'] }).join('\n')).toContain('names an allergen or a diet without sending the server');
+		expect(at({ notes: ['Dairy questions go to the kitchen at lineup.'] })).toEqual([]);
+		/* A question under Ask the kitchen is sent there by its heading; a verdict in it is still refused. */
+		expect(at({ askKitchen: ['Is there dairy in the loaf?'] })).toEqual([]);
+		expect(at({ askKitchen: ['Is the loaf dairy free?'] }).join('\n')).toContain('an allergen or diet verdict');
+	});
+
+	it('counts the components carrying a producer in the fragments, inline or attached, each once', async () => {
+		const engine = await import(/* @vite-ignore */ pathToFileURL(join(ROOT, 'tools', 'house', 'engine.mjs')).href);
+		expect(engine.fragmentCounts(PRODUCER_FIXTURE).producers).toBe(2);
+		expect(engine.readFragments(PRODUCER_FIXTURE).producers).toHaveLength(1);
 	});
 });

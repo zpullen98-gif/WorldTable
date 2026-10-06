@@ -6,6 +6,7 @@ import {
 	KIND_CHIPS,
 	MODE_LABELS,
 	PAIR_KINDS,
+	PRODUCER_KINDS,
 	QUIZ_MODES,
 	ROUND_LENGTH,
 	dealRound,
@@ -242,5 +243,27 @@ describe('the study view’s doors into the drill page', () => {
 		}
 		const hussarde = pack.dishes.find((d: { name: string }) => d.name === 'Eggs Hussarde');
 		expect(round.some((q) => q.itemId === hussarde.id)).toBe(false);
+	});
+});
+
+describe('the producer subject', () => {
+	it('deals the three producer kinds alone, says what each still needs, and explains an answer from the kept profile', () => {
+		const h = drillHouse();
+		expect([...PRODUCER_KINDS]).toEqual(['producerOf', 'producerWhere', 'producerDish']);
+		for (const k of PRODUCER_KINDS) expect(KIND_CHIPS[k]).not.toMatch(DASH);
+		const round = dealRound(h, PRODUCER_KINDS, null, seeded(5));
+		expect(round.length).toBe(poolSize(h, PRODUCER_KINDS));
+		expect(new Set(round.map((q) => q.kind))).toEqual(new Set(PRODUCER_KINDS));
+		for (const q of round) {
+			expect(q.options).toHaveLength(4);
+			const said = explainAnswer(h, q);
+			expect(said).toContain('just along the quay');
+			expect(said).not.toMatch(DASH);
+		}
+		const of = round.find((q) => q.kind === 'producerOf')!;
+		expect(explainAnswer(h, of)).toMatch(/From The \w+|From [A-Z]/);
+		const m = minHouse();
+		expect(stillNeeded(m, 'producerOf')).toBe('Producer needs 2 items with a kept producer; 0 so far.');
+		expect(stillNeeded(m, 'producerDish')).toBe('Which dish uses it needs 2 producers on a dish or a drink; 0 so far.');
 	});
 });

@@ -736,7 +736,7 @@
       "kind": "ingredient",
       "name": "Louisiana oysters",
       "say": "",
-      "explain": "Louisiana oysters are the Eastern oyster of the Gulf coast, grown in the warm, brackish water where the Mississippi meets the sea. Most are wild from public and leased reefs; a growing number are farmed in cages off the bottom. They are larger, milder and less salty than many northern oysters, which is why New Orleans cooks them as often as it eats them raw.\n\nCooked oysters want only seconds: they are done when the edges curl, and a moment longer shrinks them.\n\nOn our menus oysters come cooked in New Orleans BBQ sauce at breakfast and lunch, in the gumbo, and as the smoky dressing on the Creole Caesar. How many come per order is a lineup question.",
+      "explain": "Louisiana oysters are the Eastern oyster of the Gulf coast, grown in the warm, brackish water where the Mississippi meets the sea. Most come from private leases, beds a family works on state water bottoms, with a small share from the state's public reefs; a growing number are farmed in cages off the bottom. They are larger, milder and less salty than many northern oysters, which is why New Orleans cooks them as often as it eats them raw.\n\nCooked oysters want only seconds: they are done when the edges curl, and a moment longer shrinks them.\n\nOn our menus oysters come cooked in New Orleans BBQ sauce at breakfast and lunch, in the gumbo, and as the smoky dressing on the Creole Caesar. How many come per order is a lineup question.",
       "card": {
         "front": "How do Louisiana oysters differ from northern oysters?",
         "back": "Gulf oysters from brackish Mississippi water: larger, milder and less salty, so New Orleans cooks them as often as it eats them raw. Edges curl when done."
@@ -797,10 +797,10 @@
       "kind": "ingredient",
       "name": "Creole tomatoes",
       "say": "",
-      "explain": "Creole tomatoes are Louisiana's summer tomatoes. The name began with growers in St. Bernard and Plaquemines parishes, below New Orleans, who let their tomatoes ripen on the vine in rich river soil and sold them as Creole; the LSU AgCenter later also bred a variety called Creole. Today the word is used for tomatoes grown in Louisiana.\n\nThey are prized for being picked ripe: juicy, sweet and sharp, with a soft skin, so they do not travel far.\n\nOn the Creole Tomato Tostada they are served raw with heirloom tomatoes, burrata and smoked tomato water. The dish follows the season, so expect it to change when the tomatoes finish.",
+      "explain": "Creole tomatoes are Louisiana's summer tomatoes. Growers in St. Bernard and Plaquemines parishes, below New Orleans, traditionally sold their vine-ripened tomatoes as Creole, crediting the rich river soil, and in the early 1900s tomatoes from the River Parishes upstream were called Creole too. The LSU AgCenter released a variety named Creole in 1969, but today the word is used for tomatoes grown in Louisiana.\n\nThey are prized for being picked ripe: juicy, sweet and sharp, with a soft skin, so they do not travel far.\n\nOn the Creole Tomato Tostada they are served raw with heirloom tomatoes, burrata and smoked tomato water. The dish follows the season, so expect it to change when the tomatoes finish.",
       "card": {
         "front": "What is a Creole tomato?",
-        "back": "A vine-ripened Louisiana tomato, first from St. Bernard and Plaquemines river soil: juicy, sweet and sharp. Served raw on our seasonal Creole Tomato Tostada."
+        "back": "A vine-ripened Louisiana tomato, long sold as Creole by St. Bernard and Plaquemines growers: juicy, sweet and sharp. Served raw on our seasonal Creole Tomato Tostada."
       },
       "items": [
         "Creole Tomato Tostada"
@@ -1660,10 +1660,10 @@
       "kind": "ingredient",
       "name": "Grand Isle Jewel oysters",
       "say": "",
-      "explain": "Grand Isle is the barrier island at the edge of the Louisiana coast. Grand Isle Jewels is a brand launched in April 2025 by JEDCO, the Jefferson Parish economic development commission, with the island's off-bottom oyster farmers.\n\nOff-bottom farming raises oysters in cages that float or hang above the seafloor. The cages are tumbled and sorted, which shapes a deep, clean cup and a tidy shell, and the method is gentler on a storm-damaged coast than dredging wild reefs.\n\nWe serve them raw with a preserved Fresno chilli mignonette, at dinner and as the first course of the dinner tasting. Know the count per order, and ask the chef whether to tell the farming story.",
+      "explain": "Grand Isle is the barrier island at the edge of the Louisiana coast. Grand Isle Jewels is a brand launched in April 2025 by JEDCO, the Jefferson Parish economic development commission, with the island's off-bottom oyster farmers.\n\nOff-bottom farming raises oysters in cages that float or hang above the seafloor. The cages float just below the surface in an aquapark where ocean and estuary water mix, which keeps the oysters off the mud and gives them a briny, bright flavour, and the method is gentler on a storm-damaged coast than dredging wild reefs.\n\nWe serve them raw with a preserved Fresno chilli mignonette, at dinner and as the first course of the dinner tasting. Know the count per order, and ask the chef whether to tell the farming story.",
       "card": {
         "front": "What are Grand Isle Jewel oysters?",
-        "back": "Louisiana oysters farmed in cages above the seafloor off Grand Isle, a 2025 brand from JEDCO and the island’s farmers: deep, clean cups. Served raw."
+        "back": "Louisiana oysters farmed in floating cages off Grand Isle, a 2025 brand from JEDCO and the island’s eight growers: briny and bright. Served raw."
       },
       "items": [
         "Grand Isle Jewel Oysters"
@@ -1803,10 +1803,10 @@
       "kind": "ingredient",
       "name": "Turtle meat",
       "say": "",
-      "explain": "Restaurant turtle in Louisiana is farm-raised freshwater turtle, usually snapping turtle, bought from licensed suppliers; it is not a wild or endangered species. The meat is dark, firm and rich, somewhere between veal and dark chicken, with plenty of gelatin, which gives the soup its body and its silky coat on the palate.\n\nIt is chopped finely and simmered for a long time, so it is tender and spread through the soup rather than served in chunks.\n\nWhen a guest hesitates, describe the taste rather than the animal: rich, meaty and savoury, like a deep beef stew. The current supplier is a question for the chef, not a guess.",
+      "explain": "The turtle in our soup is snapping turtle, a freshwater turtle. The wild alligator snapper has been off limits to commercial trappers in Louisiana since 2004, so restaurants buy it from licensed turtle farms, or buy common snapping turtle, which licensed collectors may still sell. The meat is dark, firm and rich, somewhere between veal and dark chicken, with plenty of gelatine, which gives the soup its body.\n\nIt is chopped finely and simmered for a long time, so it is tender and spread through the soup rather than served in chunks.\n\nWhen a guest hesitates, describe the taste rather than the animal: rich, meaty and savoury, like a deep beef stew. The current supplier is a question for the chef, not a guess.",
       "card": {
         "front": "Where does the turtle in our soup come from?",
-        "back": "Farm-raised freshwater turtle, usually snapping turtle, from licensed suppliers; never the courtyard turtles. Ask the chef for the current supplier."
+        "back": "Snapping turtle from licensed farms or collectors; never the courtyard turtles. Whether ours is farm-raised, and from whom, is a question for the chef."
       },
       "items": [
         "Turtle Soup"
@@ -2680,10 +2680,10 @@
       "kind": "ingredient",
       "name": "Tien Dat tofu",
       "say": "",
-      "explain": "Tofu is soybean milk curdled and pressed into blocks, as cheese is made from milk. Extra-firm tofu is pressed hardest, so it holds its shape in a hot pan and takes a crust.\n\nTien Dat is a local maker: a Vietnamese co-op that sells extra-firm tofu at the Crescent City farmers markets, registered in Marrero on the West Bank, across the river from the city. New Orleans has a large Vietnamese community, and its bakers and tofu makers supply many local kitchens.\n\nOur menu names New Orleans Tien Dat tofu on the Blackened Tofu. Say it is made fresh across the river by a local Vietnamese maker; anything more, ask the kitchen.",
+      "explain": "Tofu is soybean milk curdled and pressed into blocks, as cheese is made from milk. Extra-firm tofu is pressed hardest, so it holds its shape in a hot pan and takes a crust.\n\nTien Dat is a local maker registered on the West Bank, in Marrero, across the river from the city. Its tofu is sold through the VEGGI Farmers Cooperative, the member-owned co-op of Village de L'Est, the Vietnamese American community of New Orleans East, at the Crescent City Farmers Market.\n\nOur menu names New Orleans Tien Dat tofu on the Blackened Tofu. Say it is made fresh across the river by a local Vietnamese maker; anything more, ask the kitchen.",
       "card": {
         "front": "Where does the tofu on the Blackened Tofu come from?",
-        "back": "Tien Dat, a local Vietnamese co-op making extra-firm tofu across the river on the West Bank, sold at the city’s farmers markets."
+        "back": "Tien Dat, a local maker on the West Bank whose extra-firm tofu is sold through VEGGI, the Vietnamese American co-op of New Orleans East."
       },
       "items": [
         "Blackened Tofu"
@@ -2929,10 +2929,10 @@
       "kind": "ingredient",
       "name": "Nueske’s bacon",
       "say": "NOO-skeez",
-      "explain": "Nueske's is a family smokehouse in Wittenberg, Wisconsin. R.C. Nueske began selling the family's smoked hams, sausages and bacon in 1933, from recipes the family brought when it emigrated, driving them to the resorts of northern Wisconsin. The company is known above all for its applewood-smoked bacon, smoked over applewood for at least 24 hours.\n\nApplewood gives a sweet, rich, mellow smoke rather than the sharpness of hickory.\n\nThe menu names Nueske's on the dinner Succotash, where the bacon brings smoke and salt to the sweet glazed vegetables. The pronunciation is contested; NOO-skeez is common, so follow the house.",
+      "explain": "Nueske's is a family smokehouse in Wittenberg, Wisconsin. R.C. Nueske began selling the family's smoked hams, sausages and bacon in 1933, from recipes the family brought when it emigrated, driving them to the resorts of northern Wisconsin. The company is known above all for its applewood-smoked bacon, smoked over applewood for about 24 hours.\n\nApplewood gives a sweet, rich, mellow smoke rather than the sharpness of hickory.\n\nThe menu names Nueske's on the dinner Succotash, where the bacon brings smoke and salt to the sweet glazed vegetables. The pronunciation is contested; NOO-skeez is common, so follow the house.",
       "card": {
         "front": "What is Nueske’s?",
-        "back": "A Wisconsin family smokehouse since 1933, famous for bacon smoked over applewood for at least 24 hours: sweet, mellow smoke. On our Succotash."
+        "back": "A Wisconsin family smokehouse since 1933, famous for bacon smoked over applewood for about 24 hours: sweet, mellow smoke. On our Succotash."
       },
       "items": [
         "Succotash"
