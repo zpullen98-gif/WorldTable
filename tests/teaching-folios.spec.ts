@@ -68,10 +68,10 @@ test('opened companions in all three artwork folders stay available offline', as
 	];
 	for (const [id, path] of studies) {
 		const folio = page.locator(`#folio-${id}`);
-		await folio.locator('summary').click();
+		await folio.locator(':scope > summary').click();
 		await expect.poll(() => folio.locator('figure img').evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true);
 		await expect.poll(() => page.evaluate(async path => !!await (await caches.open('plates-v1')).match(path), path), { timeout: 40_000 }).toBe(true);
-		await folio.locator('summary').click();
+		await folio.locator(':scope > summary').click();
 	}
 	// Keep a genuine offline browser context as well as blocking routed image
 	// requests. Routing alone is not proof that a worker cannot use the network.
@@ -82,9 +82,9 @@ test('opened companions in all three artwork folders stay available offline', as
 	await page.waitForSelector('html[data-hydrated]');
 	for (const [id] of studies) {
 		const folio = page.locator(`#folio-${id}`);
-		await folio.locator('summary').click();
+		await folio.locator(':scope > summary').click();
 		await expect.poll(() => folio.locator('figure img').evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true);
-		await folio.locator('summary').click();
+		await folio.locator(':scope > summary').click();
 	}
 	await context.setOffline(false);
 });
