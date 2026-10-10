@@ -2386,10 +2386,10 @@
 			"kind": "technique",
 			"name": "Dosage: Brut, Extra Brut and Demi-Sec",
 			"say": "doh-SAHZH",
-			"explain": "Dosage is the small dose of wine and sugar added to a sparkling wine just before the final cork, after disgorging. It balances the high acidity, and it decides the word on the label.\n\nFrom driest to sweetest: Brut Nature, no sugar added; Extra Brut, up to 6 grams a litre; Brut, up to 12; then Extra Dry, 12 to 17; Sec, 17 to 32; and Demi-Sec, 32 to 50 grams, noticeably sweet. Confusingly, Extra Dry is sweeter than Brut. Pommery's Nature of 1874 helped turn the world towards dry Champagne, when much of it was very sweet.\n\nOur house Brennan's Essential is Extra Brut, very dry; most of the list is Brut; the Moët Nectar Impérial Rosé and Laurent-Perrier Harmony are Demi-Sec, for dessert.",
+			"explain": "Dosage is the finishing addition, usually wine with sugar, after disgorgement and before the final cork. The sweetness term on a Champagne label describes the sugar in the finished wine, not simply the amount added at this step.\n\nExtra Brut contains 0 to 6 grams per liter; Brut, less than 12; Extra Dry, 12 to 17; Sec, 17 to 32; Demi-Sec, 32 to 50. Brut Nature requires less than 3 grams per liter and no added sugar after the second fermentation. Extra Brut and Brut overlap, so their names alone cannot rank two bottles by sweetness. Acidity and other features also affect how dry a wine tastes.\n\nOur house Brennan's Essential is Extra Brut. Check the current bottle and producer information before quoting its exact dosage or comparing it with another Champagne. Demi-Sec is a sweeter category to consider with dessert; taste and match the actual dish.",
 			"card": {
-				"front": "Rank Brut, Extra Brut and Demi-Sec from driest to sweetest.",
-				"back": "Extra Brut, up to 6 grams of sugar a litre, is driest; then Brut, up to 12; then Demi-Sec, noticeably sweet. Our house Champagne is Extra Brut."
+				"front": "What do Extra Brut, Brut and Demi-Sec tell you about Champagne?",
+				"back": "Finished sugar content: Extra Brut, 0 to 6 grams per liter; Brut, less than 12; Demi-Sec, 32 to 50. Extra Brut and Brut overlap, so labels alone cannot rank two bottles. Our house Champagne is Extra Brut; confirm its current dosage."
 			},
 			"items": [
 				"Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
@@ -2435,7 +2435,8 @@
 			"sources": [
 				"expert knowledge",
 				"research/dossier-the-cellar.md",
-				"research/components-wines-2026-10-05.md (search 3)"
+				"research/components-wines-2026-10-05.md (search 3)",
+				"research/champagne-terminology-2026-10-10.json (Comite Champagne dosage guidance)"
 			]
 		},
 		{
@@ -6037,7 +6038,7 @@
 					"ref": "Champagne",
 					"label": "The Codex Champagne primer",
 					"same": "A traditional method blend of Pinot Noir, Meunier and Chardonnay from Champagne, aged on its lees.",
-					"different": "Ours is Extra Brut, drier than the Brut most houses make, and labelled with the Brennan's name."
+					"different": "Ours carries the Brennan's name and is Extra Brut: 0 to 6 grams of sugar per litre in the finished Champagne. Labels alone cannot rank two bottles."
 				},
 				{
 					"app": "codex",

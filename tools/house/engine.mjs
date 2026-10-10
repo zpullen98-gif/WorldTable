@@ -62,8 +62,12 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    walk-through's repairs: the British forms the spelling map had missed in the drink producers and
    elsewhere (reorganised, learnt, neighbourhood, dealcoholised and their kin) in American spelling, and
    the producer cards' who card saying a founded phrase as its own sentence (house-drills.ts
-   foundedSentence); stamped at the half hour before its build, never ahead of the clock. */
-export const EDITION_BUILT_AT = '2026-10-10T09:30:00.000Z';
+   foundedSentence); stamped at the half hour before its build, never ahead of the clock.
+   The 19:45 edition of 10 October corrects
+   Champagne sweetness terminology: finished sugar content is distinguished from dosage,
+   overlapping categories do not rank two bottles, and the dosage component teaches the
+   Brut Nature condition. IDs, menu facts and personal-edit merge rules are unchanged. */
+export const EDITION_BUILT_AT = '2026-10-10T19:45:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a

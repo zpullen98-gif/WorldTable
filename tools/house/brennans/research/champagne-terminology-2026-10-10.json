@@ -1,0 +1,19 @@
+{
+  "reviewedAt": "2026-10-10",
+  "scope": "Champagne sweetness terminology in the Brennan's study pack",
+  "sources": [
+    {
+      "name": "Comite Champagne, Dosage",
+      "url": "https://www.champagne.fr/en/about-champagne/how-champagne-is-made/dosage",
+      "reading": "The category concerns sugar in the finished wine. Extra Brut spans 0 to 6 grams per liter; Brut is below 12; Extra Dry is 12 to 17; Sec is 17 to 32; Demi-Sec is 32 to 50. Brut Nature combines less than 3 grams per liter with no sugar added after the second fermentation."
+    },
+    {
+      "name": "Comite Champagne, French FAQ",
+      "url": "https://www.champagne.fr/fr/foire-aux-questions-champagne",
+      "reading": "The French wording explicitly joins the two Brut Nature conditions with 'et': low final sugar and no added sugar. It describes Extra Brut as between 0 and 6 grams."
+    }
+  ],
+  "editorialInference": "Extra Brut and Brut have overlapping sugar ranges, so category names alone cannot rank two actual bottles. The house Champagne itself is Extra Brut; other Extra Brut bottles must not be described as drier than it solely because of that label. Perceived dryness also depends on acidity and the wine's other sensory features.",
+  "preserved": "Existing wine names, prices, vintages, IDs, links, menu facts and the instruction to confirm the current house cuvee and dosage with the sommelier.",
+  "changes": "Correct the applicable source overrides, the wine-dosage component and its card, and the Brennan's Essential comparison. Rebuild the pack through the established house pipeline."
+}
