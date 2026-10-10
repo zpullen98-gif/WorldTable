@@ -13,6 +13,8 @@ import {
 	cocktailGlass,
 	cocktailSpec,
 	dealQuestion,
+	dealRound,
+	drillableCount,
 	drillableCounts,
 	firstPickFor,
 	lineToDish,
@@ -298,6 +300,64 @@ describe('the fixture, under every floor', () => {
 			expect(GENERATORS[kind](fixture, rand), kind).toBeNull();
 			expect(dealQuestion(fixture, kind, rand), kind).toBeNull();
 		}
+	});
+});
+
+describe('dealRound: a whole round in one pass', () => {
+	it('deals every drillable item once, each question well formed, by the same rule as dealQuestion', () => {
+		const house = widened();
+		const counts = drillableCounts(house);
+		for (const kind of DRILL_KINDS) {
+			const round = dealRound(house, kind, seeded(5));
+			expect(round.length, kind).toBe(counts[kind]);
+			expect(new Set(round.map((q) => q.itemId)).size, kind).toBe(round.length);
+			for (const q of round) expectWellFormed(q, kind, house);
+		}
+	});
+
+	it('drillableCount says how many dealRound deals: the pool, or none below the floor or a short field', () => {
+		const between = widened();
+		between.wines = between.wines.slice(0, 2);
+		for (const house of [fixture, widened(), between]) {
+			const ready = readyKinds(house);
+			for (const kind of DRILL_KINDS) {
+				const n = drillableCount(house, kind);
+				expect(n, kind).toBe(ready.includes(kind) ? drillableCounts(house)[kind] : 0);
+				expect(dealRound(house, kind, seeded(4)).length, kind).toBe(n);
+			}
+		}
+	});
+
+	it('stops at the limit, and a limit of nothing deals nothing', () => {
+		const house = widened();
+		for (const kind of DRILL_KINDS) {
+			for (const limit of [1, 2, 3]) expect(dealRound(house, kind, seeded(9), limit).length, `${kind} limit ${limit}`).toBe(Math.min(limit, drillableCounts(house)[kind]));
+			expect(dealRound(house, kind, seeded(9), 0), kind).toEqual([]);
+		}
+	});
+
+	it('deals nothing where dealQuestion deals nothing: the floor rule, on the fixture and one in between', () => {
+		const between = widened();
+		between.wines = between.wines.slice(0, 2);
+		for (const house of [fixture, between]) {
+			for (const kind of DRILL_KINDS) {
+				const one = dealQuestion(house, kind, seeded(11));
+				const round = dealRound(house, kind, seeded(11));
+				expect(round.length > 0, kind).toBe(one !== null);
+			}
+		}
+	});
+
+	it('is the same round for the same seed, and a different order for another', () => {
+		const house = widened();
+		expect(dealRound(house, 'wineGoesWith', seeded(42))).toEqual(dealRound(house, 'wineGoesWith', seeded(42)));
+		const orders = new Set([1, 2, 3, 4, 5, 6].map((seed) => dealRound(house, 'lineToDish', seeded(seed)).map((q) => q.itemId).join(',')));
+		expect(orders.size).toBeGreaterThan(1);
+	});
+
+	it('leaves dealQuestion exactly as it was: the same question for the same seed', () => {
+		const house = widened();
+		for (const kind of DRILL_KINDS) expect(dealQuestion(house, kind, seeded(3)), kind).toEqual(GENERATORS[kind](house, seeded(3)));
 	});
 });
 

@@ -568,7 +568,42 @@ export function dealQuestion(house: House, kind: DrillKind, rand: Rand): DrillQu
 	if (pool.length < DRILL_FLOORS[kind]) return null;
 	const field = distinctText(spec.field(house));
 	if (field.length < OPTION_COUNT) return null;
-	const c = drawOne(pool, rand);
+	return questionOf(house, kind, spec, field, drawOne(pool, rand), rand);
+}
+
+/**
+ * A whole round of one kind: up to limit questions, each about a different
+ * item, the items in an order drawn from rand. The pool and the field are
+ * read once, so a round costs one pass over the house rather than one pass
+ * per question, and no item is drawn twice, so nothing is dealt only to be
+ * thrown away. Each question is built by dealQuestion's own rule (the same
+ * floor, the same fair distractors, the same four options); only the order
+ * of the items differs, a shuffle of the pool rather than one draw from it.
+ * An item whose options fall short is skipped and the next is asked; an
+ * unmet floor, a short field or a limit of nothing deals nothing.
+ */
+export function dealRound(house: House, kind: DrillKind, rand: Rand, limit = Infinity): DrillQuestion[] {
+	const spec = SPECS[kind];
+	const pool = spec.pool(house);
+	if (pool.length < DRILL_FLOORS[kind]) return [];
+	const field = distinctText(spec.field(house));
+	if (field.length < OPTION_COUNT) return [];
+	const want = limit > 0 ? limit : 0;
+	const seen = new Set<string>();
+	const out: DrillQuestion[] = [];
+	for (const c of shuffleBy(pool, rand)) {
+		if (out.length >= want) break;
+		if (seen.has(c.itemId)) continue;
+		const q = questionOf(house, kind, spec, field, c, rand);
+		if (!q) continue;
+		seen.add(c.itemId);
+		out.push(q);
+	}
+	return out;
+}
+
+/** One question about one candidate: its stem drawn, its wrong options chosen and the four shuffled, all from rand. */
+function questionOf(house: House, kind: DrillKind, spec: KindSpec, field: string[], c: Candidate, rand: Rand): DrillQuestion | null {
 	const stem = drawOne(c.stems, rand);
 	const right = new Set([foldAnswer(c.answer)].concat((c.others || []).map(foldAnswer)));
 	const wrong = field.filter((s) => !right.has(foldAnswer(s)));
@@ -657,6 +692,19 @@ export function drillableCounts(house: House): Record<DrillKind, number> {
 	const out = {} as Record<DrillKind, number>;
 	for (const kind of DRILL_KINDS) out[kind] = SPECS[kind].pool(house).length;
 	return out;
+}
+
+/**
+ * How many questions dealRound can deal of one kind: the kind's pool when
+ * its floor is met and its field holds four distinct options, else none.
+ * One kind's pool only, so a caller sizing a round reads one pass, not the
+ * nineteen drillableCounts reads. Spends no draw.
+ */
+export function drillableCount(house: House, kind: DrillKind): number {
+	const spec = SPECS[kind];
+	const n = spec.pool(house).length;
+	if (n < DRILL_FLOORS[kind]) return 0;
+	return distinctText(spec.field(house)).length < OPTION_COUNT ? 0 : n;
 }
 
 /** The kinds that deal now: the floor met and four distinct options in the field. Spends no draw. */
