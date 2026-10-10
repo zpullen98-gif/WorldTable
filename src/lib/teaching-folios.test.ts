@@ -12,11 +12,11 @@ const recipes = new Set(read('data/recipes.index.json').map((recipe: { slug: str
 const lexicon = new Set(read('data/lexicon.json').map((term: { slug: string }) => term.slug));
 
 describe('kitchen companion teaching manifest', () => {
-	it('keeps thirteen independently identified studies separate from the twenty reference plates', () => {
-		expect(TEACHING_FOLIOS).toHaveLength(13);
-		expect(new Set(TEACHING_FOLIOS.map(folio => folio.id)).size).toBe(13);
+	it('keeps eighteen independently identified studies separate from the twenty reference plates', () => {
+		expect(TEACHING_FOLIOS).toHaveLength(18);
+		expect(new Set(TEACHING_FOLIOS.map(folio => folio.id)).size).toBe(18);
 		expect(read('data/plates.json').plates).toHaveLength(20);
-		expect(TEACHING_FOLIOS.map(folio => folio.subjects.length)).toEqual([6, 2, 6, 6, 6, 6, 2, 2, 6, 5, 2, 2, 6]);
+		expect(TEACHING_FOLIOS.map(folio => folio.subjects.length)).toEqual([6, 2, 6, 6, 6, 6, 2, 2, 6, 5, 2, 2, 6, 3, 3, 3, 2, 3]);
 	});
 	it('puts every study in exactly one non-empty learning group', () => {
 		const grouped = TEACHING_FOLIO_GROUPS.flatMap(group => {
@@ -67,14 +67,14 @@ describe('kitchen companion teaching manifest', () => {
 		expect(foliosForDish('another-house', 'd-r3h9vj7a')).toEqual([]);
 		expect(foliosForDish(BRENNANS_HOUSE_ID, 'another-dish')).toEqual([]);
 		expect(foliosForDish(BRENNANS_HOUSE_ID, 'd-r3h9vj7a').map(folio => folio.id)).toEqual(['louisiana-larder', 'roux-colour-ladder']);
-		expect(foliosForTechnique('poaching-eggs').map(folio => folio.id)).toEqual(['poached-egg-standard']);
+		expect(foliosForTechnique('poaching-eggs').map(folio => folio.id)).toEqual(['poached-egg-standard', 'simmer-standard']);
 		expect(foliosForTechnique('building-an-emulsion').map(folio => folio.id)).toEqual(['hollandaise-standard']);
 		expect(foliosForTechnique('unrelated')).toEqual([]);
 	});
 	it('links only the intended existing Floor Deck cards and pantry terms', () => {
 		const deck = read('data/floor-deck.json').cards as Array<{ id: string; term: string }>;
 		const linked = deck.filter(card => foliosForCard(card.id).length).map(card => card.term).sort();
-		expect(linked).toEqual(['Andouille', 'Beurre Blanc', 'Béarnaise', 'Hollandaise', 'Poached', 'Seared', 'Tasso', 'Tenderloin', 'Chateaubriand', 'En Papillote', 'Crawfish', 'Oysters', 'Shrimp', 'Blue Crab'].sort());
+		expect(linked).toEqual(['Andouille', 'Beurre Blanc', 'Béarnaise', 'Hollandaise', 'Poached', 'Seared', 'Tasso', 'Tenderloin', 'Chateaubriand', 'En Papillote', 'Crawfish', 'Oysters', 'Shrimp', 'Blue Crab', 'Boiled', 'Puréed', 'Simmered'].sort());
 		expect(foliosForCard('fd_0369')).toEqual([]); // French andouillette is not Cajun andouille.
 		expect(foliosForLexicon('tasso-and-cajun-andouille').map(folio => folio.id)).toEqual(['louisiana-larder']);
 		expect(foliosForLexicon('unrelated')).toEqual([]);

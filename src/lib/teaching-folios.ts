@@ -2,6 +2,8 @@
  *  Copy is reviewed against the linked World Table lessons and Brennan's pack.
  *  Illustrations teach general culinary distinctions, never verified house plating.
  */
+import { FIRST_COLLECTION_TEACHING_FOLIOS } from './teaching-folios-first-collection';
+
 export interface TeachingFolio {
 	id: string;
 	group: 'ingredients' | 'knife-and-heat' | 'sauces-and-eggs';
@@ -20,8 +22,8 @@ export const BRENNANS_HOUSE_ID = 'h-g02pdomw';
 
 export const TEACHING_FOLIO_GROUPS = [
 	{ id: 'ingredients', title: 'Ingredients at a glance', intro: 'Explore herbs, the Louisiana larder and the seafood and parcel ingredients on Brennan’s menu.' },
-	{ id: 'knife-and-heat', title: 'Knife work, searing and slicing', intro: 'Look for even cuts, a developed crust and the direction of the grain, then follow a centre-cut roast.' },
-	{ id: 'sauces-and-eggs', title: 'Sauces and eggs', intro: 'Follow colour, texture and emulsions from the pan to the spoon, then recognise the parts of Eggs Hussarde.' }
+	{ id: 'knife-and-heat', title: 'Knife work and heat', intro: 'Look for even cuts, the direction of the grain, onion colour and the movement of water in the pan.' },
+	{ id: 'sauces-and-eggs', title: 'Sauces, eggs and texture', intro: 'Follow fond, emulsions and texture from the pan to the spoon, then recognise the parts of Eggs Hussarde.' }
 ] as const;
 
 export const TEACHING_FOLIOS: readonly TeachingFolio[] = [
@@ -237,7 +239,8 @@ export const TEACHING_FOLIOS: readonly TeachingFolio[] = [
 			{ title: 'NOAA Fisheries: Eastern oyster', url: 'https://www.fisheries.noaa.gov/species/eastern-oyster' },
 			{ title: 'Louisiana Direct Seafood: crawfish', url: 'https://louisianadirectseafood.com/crawfish/' }
 		]
-	}
+	},
+	...FIRST_COLLECTION_TEACHING_FOLIOS
 ];
 
 export function foliosForTechnique(slug: string): TeachingFolio[] {
@@ -254,8 +257,11 @@ export function teachingFolioAlt(folio: TeachingFolio): string {
 
 /** Exact authored doors from existing cards, never fuzzy culinary-name matches. */
 const CARD_FOLIOS: Readonly<Record<string, readonly string[]>> = {
-	fd_0034: ['poached-egg-standard'],
+	fd_0025: ['simmer-standard'],
+	fd_0034: ['poached-egg-standard', 'simmer-standard'],
+	fd_0036: ['puree-texture-standard'],
 	fd_0039: ['searing-standard'],
+	fd_0040: ['simmer-standard'],
 	fd_0064: ['louisiana-larder'],
 	fd_0077: ['louisiana-larder'],
 	fd_0093: ['chateaubriand-study'],

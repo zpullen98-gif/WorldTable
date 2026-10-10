@@ -4,6 +4,7 @@
 	let { src, title, alt, width, height, embedded = false, guideLabel = 'Follow numbers 1 to 6 in the guide.' }: { src: string; title: string; alt: string; width: number; height: number; embedded?: boolean; guideLabel?: string } = $props();
 	const uid = $props.id();
 	let failed = $state(false);
+	let viewerOpen = $state(false);
 	let zoom = $state(1);
 	let dialog: HTMLDialogElement;
 	let opener: HTMLButtonElement;
@@ -23,6 +24,7 @@
 	}
 	function open() {
 		zoom = 1;
+		viewerOpen = true;
 		priorOverflow = document.body.style.overflow;
 		ownsScrollLock = true;
 		document.body.style.overflow = 'hidden';
@@ -33,6 +35,7 @@
 		if (dialog?.open && canvas) fitWidth = Math.min(canvas.clientWidth, canvas.clientHeight * width / height);
 	}
 	function closed() {
+		viewerOpen = false;
 		unlock();
 		if (opener?.isConnected) opener.focus();
 	}
@@ -59,6 +62,7 @@
 				<span class="folio-mark" aria-hidden="true">✦</span>
 				<strong>The illustration is not available</strong>
 				<p>The numbered guide below is complete without the picture. Reconnect to load the artwork.</p>
+				<button class="chip retry" onclick={() => failed = false}>Try again</button>
 			</div>
 		{:else}
 			<img use:imageStatus {src} {alt} {width} {height} decoding="async" onerror={() => failed = true} />
@@ -85,7 +89,7 @@
 	<p class="viewer-help" id="{uid}-help">Use + and − to zoom, 0 to fit, and Escape to close. Scroll to explore a magnified image.</p>
 	<!-- svelte-ignore a11y_no_noninteractive_tabindex: the magnified image needs a keyboard-focusable scroll region. -->
 	<div class="viewer-canvas" bind:this={canvas} tabindex="0" role="region" aria-label="Scrollable illustration">
-		<img {src} {alt} {width} {height} style:width="{fitWidth * zoom}px" decoding="async" />
+		{#if viewerOpen}<img {src} {alt} {width} {height} style:width="{fitWidth * zoom}px" decoding="async" />{/if}
 	</div>
 </dialog>
 
@@ -99,6 +103,7 @@
 	.folio-mark { color: var(--turmeric-deep); font-size: 30px; margin-bottom: 12px; }
 	figcaption { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 12px; font-size: var(--t-small); color: var(--muted); }
 	.enlarge { min-height: 44px; }
+	.retry { min-height: 44px; margin-top: 8px; }
 	.plate-viewer { width: min(1120px, calc(100vw - 32px)); max-width: none; max-height: calc(100dvh - 32px); margin: auto; padding: 18px; border: 1px solid var(--house-frame); border-radius: 3px; background: var(--paper); color: var(--ink); box-shadow: var(--shadow-sheet); }
 	.plate-viewer::backdrop { background: #030b08df; }
 	.viewer-head { display: flex; justify-content: space-between; align-items: center; gap: 14px; }

@@ -60,23 +60,36 @@
 		{#if menu.supplement}<p class="tterms supp">{menu.supplement}</p>{/if}
 	</header>
 
+	<div class="journey-intro">
+		<p class="journey-title">The course journey <span aria-hidden="true">✦</span></p>
+		<p>Follow the menu in printed order. Open a dish or drink to study it.</p>
+	</div>
 	<ol class="courses" aria-label="{menu.name}, {say('courseCount', { n: menu.courses.length })}">
-		{#each menu.courses as c (c.n)}
+		{#each menu.courses as c, step (c.n)}
 			<li class="course" data-n={c.n}>
-				<p class="clabel">{c.label}</p>
-				{#if c.choice}<p class="choice">{say('choiceOf')}</p>{/if}
-				{#if c.drinkCourse && c.pour}
-					{@render entry(c.n, c.pour.item, c.pour.text, 'drink')}
-				{:else}
-					{#each c.dishes as d (d.id)}
-						{@render entry(c.n, d, d.name, 'dish')}
-					{/each}
-				{/if}
-				{#each c.printed as line, i (i)}<p class="printed">{line}</p>{/each}
-				{#if c.pour && !c.drinkCourse}
-					<p class="plabel">{c.pourLabel}</p>
-					{@render entry(c.n, c.pour.item, c.pour.text, 'pour')}
-				{/if}
+				<span class="waypoint" aria-hidden="true">{String(step + 1).padStart(2, '0')}</span>
+				<div class="course-panel">
+					<p class="clabel">{c.label}</p>
+					<div class="course-content">
+						<div class="food-stage">
+							{#if c.choice}<p class="choice">{say('choiceOf')}</p>{/if}
+							{#if c.drinkCourse && c.pour}
+								{@render entry(c.n, c.pour.item, c.pour.text, 'drink')}
+							{:else}
+								{#each c.dishes as d (d.id)}
+									{@render entry(c.n, d, d.name, 'dish')}
+								{/each}
+							{/if}
+							{#each c.printed as line, i (i)}<p class="printed">{line}</p>{/each}
+						</div>
+						{#if c.pour && !c.drinkCourse}
+							<div class="pour-stage">
+								<p class="plabel">{c.pourLabel}</p>
+								{@render entry(c.n, c.pour.item, c.pour.text, 'pour')}
+							</div>
+						{/if}
+					</div>
+				</div>
 			</li>
 		{/each}
 	</ol>
@@ -84,6 +97,7 @@
 	<div class="tfoot">
 		<a class="chip" href="{base}/flashcards?deck={encodeURIComponent('tasting:' + menu.id)}&run=1">{say('flashCourses')}<span class="vh">: {menu.name}</span></a>
 	</div>
+	<p class="journey-practice">Trace the courses, name the choice, then explain the drink terms above. Test your recall with the course cards.</p>
 	{#if menu.note}
 		<details class="tnotes">
 			<summary>{say('tastingNotes')}<span class="vh">: {menu.name}</span></summary>
@@ -94,30 +108,40 @@
 
 <style>
 	.tmenu {
-		background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-		box-shadow: var(--shadow-card); padding: 12px 14px 10px; margin: 8px 0 12px;
+		background: var(--house-panel); border: 1px solid var(--line-strong); border-radius: var(--radius);
+		box-shadow: var(--shadow-card); padding: 16px 14px 12px; margin: 8px 0 16px;
 	}
 	.thead { border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 2px; }
 	.namerow { display: flex; align-items: baseline; gap: 12px; }
 	.tmname { font-family: var(--display); font-size: 1.3rem; line-height: 1.2; margin: 0; flex: 1; min-width: 0; }
 	.tprice { flex: none; font-variant-numeric: tabular-nums; color: var(--ink); font-size: 1.05rem; }
 	.tline { margin: 4px 0 0; font-size: 1rem; line-height: 1.4; color: var(--ink-soft); }
-	.tterms { margin: 4px 0 0; font-size: 1rem; line-height: 1.4; color: var(--ink); }
+	.tterms { margin: 10px 0 2px; padding: 8px 10px; border-left: 2px solid var(--turmeric); background: var(--paper); font-size: 1rem; line-height: 1.4; color: var(--ink); }
+	.journey-intro { margin: 14px 0 12px; }
+	.journey-intro p { color: var(--ink-soft); margin: 4px 0; font-size: 1rem; line-height: 1.4; }
+	.journey-intro .journey-title { color: var(--turmeric-deep); font-family: var(--display); font-size: 1.2rem; }
+	.journey-title span { margin-left: 8px; font-size: 0.85rem; }
 	.courses { list-style: none; margin: 0; padding: 0; }
-	.course { padding: 8px 0 6px; border-bottom: 1px dotted var(--line); }
-	.course:last-child { border-bottom: 0; }
+	.course { position: relative; display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 10px; padding: 0 0 12px; }
+	.course:not(:last-child)::before { content: ''; position: absolute; top: 32px; bottom: 0; left: 15px; border-left: 1px solid var(--line-strong); }
+	.waypoint { display: grid; place-items: center; position: relative; width: 32px; height: 32px; border: 1px solid var(--line-strong); border-radius: 50%; box-sizing: border-box; color: var(--turmeric-deep); background: var(--paper); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+	.course-panel { min-width: 0; padding: 12px; border: 1px solid var(--line); background: var(--paper); }
+	.course-content { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; }
+	.food-stage, .pour-stage { min-width: 0; }
+	.pour-stage { border-top: 1px dotted var(--line-strong); padding-top: 8px; }
 	.clabel, .plabel, .choice {
 		margin: 0; font-size: var(--t-micro); letter-spacing: var(--tracking-eyebrow);
 		text-transform: uppercase; color: var(--muted); line-height: 1.4;
 	}
 	.choice { text-transform: none; letter-spacing: normal; font-style: italic; font-size: 1rem; color: var(--ink-soft); }
-	.plabel { margin-top: 6px; }
+	.plabel { color: var(--turmeric-deep); }
 	.titem {
 		display: flex; align-items: center; gap: 8px; width: 100%; min-height: 44px; margin: 0;
 		padding: 4px 0; text-align: left; background: none; border: 0; font: inherit; color: var(--ink);
 	}
 	button.titem { cursor: pointer; }
 	.titem .tname { font-family: var(--display); font-size: 1.15rem; line-height: 1.25; }
+	.tname { overflow-wrap: anywhere; }
 	.titem.pour .tname, .titem.plain .tname { font-family: var(--text); font-size: 1.05rem; }
 	button.titem .tname { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
 	button.titem:hover .tname { color: var(--turmeric-deep); text-decoration-color: currentColor; }
@@ -130,6 +154,7 @@
 	.tag.strong { color: var(--ink); font-weight: 700; }
 	.printed { margin: 0 0 2px; font-size: 1rem; line-height: 1.45; color: var(--ink-soft); }
 	.tfoot { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 2px; }
+	.journey-practice { color: var(--ink-soft); font-size: var(--t-small); line-height: 1.5; margin: 8px 0; }
 	.chip {
 		display: inline-flex; align-items: center; border: 1px solid var(--line); background: var(--paper);
 		color: var(--ink); padding: 8px 14px; border-radius: var(--radius); font: inherit;
@@ -144,4 +169,9 @@
 		position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
 		overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 	}
+	@media (min-width: 700px) {
+		.course-content:has(.pour-stage) { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 16px; }
+		.pour-stage { border-top: 0; border-left: 1px dotted var(--line-strong); padding: 4px 0 0 14px; }
+	}
+	@media (max-width: 360px) { .tmenu { padding-inline: 10px; } .course { grid-template-columns: 26px minmax(0, 1fr); gap: 7px; } .waypoint { width: 26px; height: 26px; font-size: 0.8rem; } .course:not(:last-child)::before { top: 26px; left: 12px; } .course-panel { padding: 9px; } }
 </style>

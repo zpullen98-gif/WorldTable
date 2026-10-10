@@ -42,6 +42,8 @@
 	import { roomHref, wingInstalled } from '$lib/wing-links';
 	import { sharedOrigin } from '$lib/desk/desk-share';
 	import CookMode from '$lib/components/CookMode.svelte';
+	import { foliosForKitchen } from '$lib/folio-connections';
+	import TeachingFolio from '$lib/components/TeachingFolio.svelte';
 	import {
 		MEAL_LABEL,
 		PER_MEAL,
@@ -419,6 +421,13 @@
 				<span class="vsub">Every film of it, opens outside the app</span>
 			</a>
 		</section>
+
+		{#if foliosForKitchen(dish).length}
+			<section aria-label="Illustrated studies for this training dish">
+				<h2 class="sec">See the craft</h2>
+				{#each foliosForKitchen(dish) as folio (folio.id)}<TeachingFolio {folio} />{/each}
+			</section>
+		{/if}
 
 		{#if library || dish.techniqueRefs.length}
 			<section aria-labelledby="k-further">

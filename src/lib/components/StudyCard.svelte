@@ -60,6 +60,8 @@
 	import VideoList from './VideoList.svelte';
 	import MadeOf from './MadeOf.svelte';
 	import WhoMakes from './WhoMakes.svelte';
+	import DishComparisons from './DishComparisons.svelte';
+	import { dishComparisons } from '$lib/service-guides';
 	import TeachingFolio from './TeachingFolio.svelte';
 	import { foliosForDish } from '$lib/teaching-folios';
 
@@ -145,6 +147,8 @@
 	/* The room a drink or a wine lives in, for its own link. */
 	const ownRoom = $derived<Room | ''>(dish.kind === 'wine' ? 'codex' : dish.kind === 'cocktail' ? 'ledger' : '');
 	const lineup = $derived(lineupFor(current, dish.id));
+	const comparisonIds = $derived(new Set(dishComparisons(current, dish.id).map((c) => c.id)));
+	const otherMixUps = $derived(lineup.mixUps.filter((m) => !comparisonIds.has(m.id)));
 	const hers = $derived(hasUnkept(dish));
 	const onShared = sharedOrigin(base);
 
@@ -372,7 +376,9 @@
 		</section>
 	{/if}
 
-	{#if notes.coaching.length || lineup.asks.length || lineup.disputes.length || lineup.mixUps.length || notes.more.length || notes.earlier.length}
+	{#key dish.id}<DishComparisons {current} itemId={dish.id} {onOpen} {is86} />{/key}
+
+	{#if notes.coaching.length || lineup.asks.length || lineup.disputes.length || otherMixUps.length || notes.more.length || notes.earlier.length}
 		<section class="block" aria-labelledby="floor-h">
 			<h3 class="blockhead" id="floor-h">{say('floor')}</h3>
 			{#each notes.coaching as c, i (c.q)}
@@ -400,10 +406,10 @@
 					{/each}
 				</ul>
 			{/if}
-			{#if lineup.mixUps.length}
+			{#if otherMixUps.length}
 				<h4 class="eyebrow">{say('mixUp')}</h4>
 				<ul class="plain">
-					{#each lineup.mixUps as m (m.id)}
+					{#each otherMixUps as m (m.id)}
 						{@const other = m.aId === dish.id ? m.bId : m.aId}
 						{@const otherItem = findItem(current, other)}
 						{@const diff = (kept<string>(m.difference) ?? '').trim()}
