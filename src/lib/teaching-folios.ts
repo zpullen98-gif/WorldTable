@@ -19,9 +19,9 @@ export interface TeachingFolio {
 export const BRENNANS_HOUSE_ID = 'h-g02pdomw';
 
 export const TEACHING_FOLIO_GROUPS = [
-	{ id: 'ingredients', title: 'Ingredients at a glance', intro: 'Compare the shapes and flavours of herbs and the Louisiana larder.' },
-	{ id: 'knife-and-heat', title: 'Knife work, searing and slicing', intro: 'Look for even cuts, a developed crust and the direction of the grain.' },
-	{ id: 'sauces-and-eggs', title: 'Sauces and eggs', intro: 'Follow colour, texture and emulsions from the pan to the spoon.' }
+	{ id: 'ingredients', title: 'Ingredients at a glance', intro: 'Explore herbs, the Louisiana larder and the seafood and parcel ingredients on Brennan’s menu.' },
+	{ id: 'knife-and-heat', title: 'Knife work, searing and slicing', intro: 'Look for even cuts, a developed crust and the direction of the grain, then follow a centre-cut roast.' },
+	{ id: 'sauces-and-eggs', title: 'Sauces and eggs', intro: 'Follow colour, texture and emulsions from the pan to the spoon, then recognise the parts of Eggs Hussarde.' }
 ] as const;
 
 export const TEACHING_FOLIOS: readonly TeachingFolio[] = [
@@ -35,7 +35,7 @@ export const TEACHING_FOLIOS: readonly TeachingFolio[] = [
 			{ name: 'Béarnaise', description: 'A rich butter sauce distinguished by its tarragon. The chopped herbs remain visible in the sauce.', image: 'Yellow sauce flecked with green herbs, coating a spoon.' },
 			{ name: 'Choron', description: 'Béarnaise with tomato: the tomato changes the colour while the herbal character remains.', image: 'Soft coral sauce with green herb flecks.' },
 			{ name: 'Foyot', description: 'Béarnaise enriched with reduced beef glaze. Compare its tan colour with Choron’s tomato tint.', image: 'Light caramel-tan sauce with green herb flecks.' },
-			{ name: 'Marchand de vin', description: 'The pack describes a savoury red-wine and mushroom sauce. Compare its red-brown appearance with the pale butter sauces.', image: 'Glossy red-brown sauce with chopped mushroom and shallot.' },
+			{ name: 'Marchand de vin', description: 'A savoury red-wine brown sauce, illustrated here with mushrooms and shallot. Compare it with the pale butter sauces; confirm the current house ingredients with the chef.', image: 'Glossy red-brown sauce with chopped mushroom and shallot.' },
 			{ name: 'Beurre blanc', description: 'A white-wine and butter emulsion. It should look creamy and cohesive, rather than like separated oil.', image: 'Smooth ivory sauce spreading in a white saucer.' }
 		],
 		links: [ { label: 'Hollandaise technique', href: '/technique/hollandaise' }, { label: 'Béarnaise recipe', href: '/recipe/sauce-bearnaise' }, { label: 'The cold-butter mount', href: '/recipe/beurre-blanc-the-cold-butter-mount' } ],
@@ -172,6 +172,71 @@ export const TEACHING_FOLIOS: readonly TeachingFolio[] = [
 		links: [ { label: 'Knife cuts: dice, julienne, bias', href: '/technique/knife-cuts-dice-julienne-bias' }, { label: 'The classical knife-cut ladder', href: '/lexicon#knife-cuts-the-classical-ladder' } ],
 		techniques: ['knife-cuts-dice-julienne-bias'], dishes: [],
 		sources: [ { title: 'Rouxbe: knife-cut shapes and dimensions', url: 'https://rouxbe.com/tips-techniques/495-types-of-knife-cuts' } ]
+	},
+	{
+		id: 'eggs-hussarde-components', group: 'sauces-and-eggs', title: 'Eggs Hussarde: five parts to recognise',
+		intro: 'Explore the five named components of Eggs Hussarde, from the English muffin to its two distinct sauces.',
+		scope: 'The numbers identify components, not an assembly sequence. These separate ingredient studies do not establish the restaurant’s portion size, stacking, sauce placement or current china. Confirm those details at the pass.',
+		image: { src: 'house/brennans/eggs-hussarde-components-v1.webp', thumb: 'house/brennans/eggs-hussarde-components-v1.thumb.webp', width: 1024, height: 1536 },
+		subjects: [
+			{ name: 'English muffin', description: 'Brennan’s menu names a housemade English muffin. Recognise the split bread and open crumb before considering how the kitchen assembles the dish.', image: 'A split English muffin with a lightly toasted, open crumb in the upper-left study.' },
+			{ name: 'Coffee-cured Canadian bacon', description: 'The menu specifies coffee-cured Canadian bacon. This is a loin cut, distinct from the streaky belly bacon used in many other breakfasts.', image: 'Round slices of pink Canadian bacon with a darker cured edge in the upper-right study.' },
+			{ name: 'Poached egg', description: 'Poached eggs are named on the Hussarde. The whole and opened views compare white and yolk texture, not a portion count. Eggs Owen uses a soft-boiled egg instead.', image: 'A whole poached egg beside an opened egg with a flowing yolk in the wide centre study.' },
+			{ name: 'Hollandaise', description: 'This smooth butter-and-yolk emulsion is the pale sauce on the menu. Compare its body and colour with the darker marchand de vin beside it.', image: 'Smooth pale yellow hollandaise in a small white sauce vessel at lower left.' },
+			{ name: 'Marchand de vin', description: 'The second sauce has a savoury red-wine character. The illustration includes mushrooms and shallot as a sauce study; confirm the current house aromatics and additions with the chef.', image: 'Glossy red-brown marchand de vin with small mushroom and shallot pieces at lower right.' }
+		],
+		links: [ { label: 'Poaching eggs', href: '/technique/poaching-eggs' }, { label: 'Hollandaise technique', href: '/technique/hollandaise' } ],
+		techniques: [], dishes: ['d-1q0xk7jv'],
+		sources: [ { title: 'Brennan’s: current breakfast and lunch menu', url: 'https://www.brennansneworleans.com/menus/breakfast-and-lunch/' } ]
+	},
+	{
+		id: 'chateaubriand-study', group: 'knife-and-heat', title: 'Chateaubriand: centre cut to service',
+		intro: 'Locate the centre of the tenderloin, then recognise the roast, summer squash and sauce Foyot named on the dinner menu.',
+		scope: 'This is a cut and component study. The serving arrangement, three illustrated slices and interior colour are illustrative, not Brennan’s portion, plating or doneness standard. Colour alone does not measure temperature; confirm carving and service at the pass.',
+		image: { src: 'house/brennans/chateaubriand-study-v1.webp', thumb: 'house/brennans/chateaubriand-study-v1.thumb.webp', width: 1536, height: 1024 },
+		subjects: [
+			{ name: 'The centre of the tenderloin', description: 'The thicker head, even centre and tapered tail are separated to make the cut easy to read. The centre provides the thick roast commonly called chateaubriand.', image: 'A trimmed raw tenderloin separated into a thicker head, an even centre roast and a tapered tail.' },
+			{ name: 'The menu’s three components', description: 'Brennan’s names Creekstone Farms beef tenderloin, roasted and glazed summer squash, and sauce Foyot, serving two. Foyot belongs to the béarnaise family and is enriched with reduced meat glaze.', image: 'A roasted centre-cut tenderloin with three carved slices, summer squash and a separate boat of tan Foyot sauce.' }
+		],
+		links: [ { label: 'Tenderloin and filet mignon', href: '/lexicon#tenderloin-filet-mignon' }, { label: 'Roasting in a hot oven', href: '/technique/roasting-in-a-hot-oven' } ],
+		techniques: [], dishes: ['d-5wcuejdy'],
+		sources: [ { title: 'Brennan’s: current dinner menu', url: 'https://www.brennansneworleans.com/menus/dinner/' }, { title: 'Beef Checkoff: Chateaubriand tenderloin roast', url: 'https://www.beefitswhatsfordinner.com/cuts/cut/2446/chateaubriand-tenderloin-roast' } ]
+	},
+	{
+		id: 'gulf-fish-papillote', group: 'ingredients', title: 'Gulf Fish en Papillote: outside and within',
+		intro: 'Compare the banana-leaf parcel with an opened ingredient study of the same dish.',
+		scope: 'The menu names Gulf fish without specifying its species. The opened view shows the listed ingredients for recognition; it does not establish their proportions, exact cooking sequence, fastening or tableside opening method.',
+		image: { src: 'house/brennans/gulf-fish-papillote-v1.webp', thumb: 'house/brennans/gulf-fish-papillote-v1.thumb.webp', width: 1536, height: 1024 },
+		subjects: [
+			{ name: 'A banana-leaf parcel', description: 'En papillote describes cooking inside an enclosure. Although the familiar French version uses paper, this menu specifically names a banana-leaf wrap.', image: 'A folded, closed banana-leaf parcel with no visible string or fastener.' },
+			{ name: 'The ingredients inside', description: 'The menu lists Gulf fish, Louisiana crab, sorghum, Marcona almonds, Castelvetrano olives and tomato. Compare the round grains, pale almonds and green olives beside the fish and crab.', image: 'An opened banana leaf holding white fish, crab meat, round sorghum grains, pale Marcona almonds, green Castelvetrano olives and tomato.' }
+		],
+		links: [ { label: 'Steaming and en papillote', href: '/lexicon#steaming-and-en-papillote' }, { label: 'Crab vocabulary', href: '/lexicon#crab-vocabulary' } ],
+		techniques: [], dishes: ['d-szzugxzi'],
+		sources: [ { title: 'Brennan’s: current dinner menu', url: 'https://www.brennansneworleans.com/menus/dinner/' } ]
+	},
+	{
+		id: 'brennans-seafood', group: 'ingredients', title: 'Seafood on Brennan’s menu',
+		intro: 'Explore six seafood subjects and product forms, from a whole red drum to picked crab meat.',
+		scope: 'These culinary studies are not a wild-species identification key, a catch-origin guarantee or a food-safety test. Whole animals, opened shells and prepared products are shown at different scales. The daily Gulf fish is not necessarily red drum; shrimp curl and illustrated colour do not establish doneness.',
+		image: { src: 'house/brennans/brennans-seafood-v1.webp', thumb: 'house/brennans/brennans-seafood-v1.thumb.webp', width: 1024, height: 1536 },
+		subjects: [
+			{ name: 'Red drum, or redfish', description: 'The elongated copper-silver fish and dark spot near the tail are useful visual cues. Keep the named Redfish Véronique distinct from an unspecified Gulf-fish selection.', image: 'A whole copper-silver red drum in side view, with a dark spot near the base of its tail.' },
+			{ name: 'Eastern oyster', description: 'Compare a rough closed shell with its opened, cupped half. The menu’s Louisiana oysters are a different product from the picked crab meat and peeled shrimp below.', image: 'An irregular closed oyster shell beside an opened cupped half with moist oyster flesh.' },
+			{ name: 'Crab fingers', description: 'These prepared claw pieces retain a shell tip for handling. Compare that shape with the separate white lumps of picked body meat.', image: 'Cooked crab fingers with exposed pale claw meat and small shell tips.' },
+			{ name: 'Lump crab meat', description: 'Picked body meat comes in distinct white pieces. Its form differs from claw meat; follow the menu and kitchen specification for the required product.', image: 'A small grouping of ivory-white picked lump crab meat.' },
+			{ name: 'Crawfish', description: 'The small freshwater crustacean has two prominent claws and a segmented tail. The cooked whole animal helps place the peeled tail meat used in prepared dishes.', image: 'A cooked red crawfish beside two pieces of peeled tail meat.' },
+			{ name: 'Shrimp', description: 'Compare the segmented tail and slender shrimp form with the clawed crawfish. The illustration shows a cooked product, without proposing a curl-based doneness rule.', image: 'Cooked pink shrimp with clearly segmented bodies.' }
+		],
+		links: [ { label: 'Oysters: East and West', href: '/lexicon#oysters-east-vs-west' }, { label: 'Crab vocabulary', href: '/lexicon#crab-vocabulary' }, { label: 'Shrimp sizing', href: '/lexicon#shrimp-sizing-and-prawn-confusion' } ],
+		techniques: [], dishes: ['d-wckf36s5', 'd-5p5b1hjn', 'd-nd0d2czb', 'd-k84u864v', 'd-s1bqzuks', 'd-szzugxzi', 'd-vovhoagi', 'd-bqznncn6'],
+		sources: [
+			{ title: 'Brennan’s: current dinner menu', url: 'https://www.brennansneworleans.com/menus/dinner/' },
+			{ title: 'Brennan’s: current breakfast and lunch menu', url: 'https://www.brennansneworleans.com/menus/breakfast-and-lunch/' },
+			{ title: 'Louisiana Department of Wildlife and Fisheries: red drum', url: 'https://www.wlf.louisiana.gov/species/detail/11' },
+			{ title: 'NOAA Fisheries: Eastern oyster', url: 'https://www.fisheries.noaa.gov/species/eastern-oyster' },
+			{ title: 'Louisiana Direct Seafood: crawfish', url: 'https://louisianadirectseafood.com/crawfish/' }
+		]
 	}
 ];
 
@@ -193,6 +258,13 @@ const CARD_FOLIOS: Readonly<Record<string, readonly string[]>> = {
 	fd_0039: ['searing-standard'],
 	fd_0064: ['louisiana-larder'],
 	fd_0077: ['louisiana-larder'],
+	fd_0093: ['chateaubriand-study'],
+	fd_0315: ['chateaubriand-study'],
+	fd_0231: ['gulf-fish-papillote'],
+	fd_0109: ['brennans-seafood'],
+	fd_0115: ['brennans-seafood'],
+	fd_0133: ['brennans-seafood'],
+	fd_0134: ['brennans-seafood'],
 	fd_0196: ['brennans-sauces'],
 	fd_0197: ['brennans-sauces', 'hollandaise-standard'],
 	fd_0205: ['brennans-sauces']

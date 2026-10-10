@@ -256,9 +256,10 @@ export default defineConfig({
 					 * the reader opens one at a
 					 * time, and none of which belongs in the install (the transcriptions
 					 * do, and those are a precached chunk). A plate opened once is kept,
-					 * so it reads again in a walk-in; ninety-six entries hold the twenty
+					 * so it reads again in a walk-in; 128 entries hold the twenty
 					 * folios, their thumbnails, original archives and kitchen companions,
-					 * with room for the six independently revised editions.
+					 * with room for the six independently revised editions and the
+					 * four Brennan's food studies (98 shipped files in October 2026).
 					 * A new art revision uses a new URL, so CacheFirst cannot mask a redraw.
 					 * The glob above never sees .webp, and verify-build
 					 * asserts that none of them is precached.
@@ -274,7 +275,7 @@ export default defineConfig({
 							   since Workbox never deletes a cache it does not own. */
 							cacheName: 'plates-v1',
 							cacheableResponse: { statuses: [0, 200] },
-							expiration: { maxEntries: 96, maxAgeSeconds: 365 * 24 * 60 * 60 }
+							expiration: { maxEntries: 128, maxAgeSeconds: 365 * 24 * 60 * 60 }
 						}
 					},
 					/**
