@@ -1,16 +1,19 @@
 <!--
   One producer's profile, in full: where and when it was founded, the line
   to say at the table, the facts as a list, the story in paragraphs, the
-  notes for the floor and, when the kitchen has something to answer, Ask the
-  kitchen. Drawn inside the study card's Who makes it disclosure and in the
+  notes for the floor and, when there is something to answer, Ask the bar for
+  a producer At the bar (study.ts atTheBar: it reaches a drink and no dish),
+  as the Ledger heads the same list, and Ask the kitchen for every other.
+  Drawn inside the study card's Who makes it disclosure and in the
   Producers view, in the card's own art (the eyebrow for the small heads,
   the dotted rule, prose at the measure). Kept words only: the row comes
   from study.ts producerRow, which reads a profile only when a person kept it.
 -->
 <script lang="ts">
-	import { say, type ProducerRow } from '$lib/study';
+	import { atTheBar, say, type ProducerRow } from '$lib/study';
 
 	let { row }: { row: ProducerRow } = $props();
+	const askHead = $derived(say(atTheBar(row) ? 'askBar' : 'askKitchen'));
 </script>
 
 <div class="pbody">
@@ -38,7 +41,7 @@
 		</ul>
 	{/if}
 	{#if row.askKitchen.length}
-		<h5 class="phead">{say('askKitchen')}</h5>
+		<h5 class="phead">{askHead}</h5>
 		<ul class="plist pask">
 			{#each row.askKitchen as q, i (i)}<li>{q}</li>{/each}
 		</ul>

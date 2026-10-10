@@ -10,8 +10,11 @@ import { goto, seedHouses } from './helpers';
  * producer profiles put on it here: a maker behind the chicken's salt crust
  * and an origin behind the Verjus and Tonic's verjus. The card's "Who makes
  * it" block above "What it's made of", a profile opening in full; the
- * Producers view inside My Menu with its two groups, a dish chip opening the
- * card and Back returning to the view; the Producers deck on the Flashcards
+ * Producers view inside My Menu with its groups (the verjus, behind a drink
+ * and no dish, At the bar), a dish chip opening the card and Back returning
+ * to the view, a drink as words after the dish chips (this standalone build
+ * is off the shared origin, so no Ledger link is drawn; the addresses are
+ * proved in study-producers.test.ts); the Producers deck on the Flashcards
  * tab and an item's producer deck from the card; and a producer question in
  * the menu drill. Every producer here is invented for the invented house.
  */
@@ -43,7 +46,7 @@ function house() {
 		facts: ['The grapes are picked green, weeks before the harvest.'],
 		notes: [],
 		sayIt: 'The verjus is pressed from green grapes on the hill above us.',
-		askKitchen: []
+		askKitchen: ['Which week is the verjus pressed?']
 	});
 	return h;
 }
@@ -90,18 +93,23 @@ test('the card says who makes it, above what it is made of, each producer openin
 	await expect(card(page).locator('section[aria-labelledby="whomakes-h"]')).toHaveCount(0);
 });
 
-test('the Producers view lists both groups in full, a dish chip opens its card, and Back returns to the view', async ({ page }) => {
+test('the Producers view lists its groups in full, a dish chip opens its card, and Back returns to the view', async ({ page }) => {
 	await openChicken(page);
 	await card(page).locator('a', { hasText: 'All producers' }).click();
 	await expect(page).toHaveURL(/\/menu\?view=producers$/);
 	const view = page.locator('section[aria-labelledby="producers-h"]');
 	await expect(view.locator('h2')).toHaveText('The producers');
-	await expect(view.locator('h3.grouphead')).toHaveText(['Makers and farms', 'Where it comes from']);
+	// The verjus reaches a drink and no dish, so it is At the bar whatever its type.
+	await expect(view.locator('h3.grouphead')).toHaveText(['Makers and farms', 'At the bar']);
 	await expect(view.locator('h4.pname')).toHaveText(['Quay Salt Works', 'The Quay Lane vineyards']);
 	const salt = view.locator('li[data-producer="c-saltcrs1"]');
 	await expect(salt.locator('.psub')).toHaveText('Maker · Salt crust');
 	await expect(salt).toContainText('It is the oldest firm on the quay.');
 	await expect(view.locator('li[data-producer="c-verjus01"] .psub')).toHaveText('Origin · Verjus');
+	// The questions are the kitchen's for a producer behind a dish and the bar's At the bar, as the Ledger heads them.
+	await expect(salt.locator('.phead').last()).toHaveText('Ask the kitchen');
+	await expect(view.locator('li[data-producer="c-verjus01"] .phead').last()).toHaveText('Ask the bar');
+	await expect(view.locator('li[data-producer="c-verjus01"] .pask li')).toHaveText(['Which week is the verjus pressed?']);
 	// The study list is not drawn under the view.
 	await expect(page.locator('.study .row')).toHaveCount(0);
 	const chip = salt.locator('button.chip', { hasText: 'Lantern Roast Chicken' });
@@ -114,13 +122,42 @@ test('the Producers view lists both groups in full, a dish chip opens its card, 
 	await expect(page).toHaveURL(/\/menu\?view=producers$/);
 	await expect(card(page)).toHaveCount(0);
 	// Once more by the phone's own gesture.
-	await view.locator('li[data-producer="c-verjus01"] button.chip', { hasText: 'Verjus and Tonic' }).click();
-	await expect(card(page).locator('#card-h')).toHaveText('Verjus and Tonic');
+	await chip.click();
+	await expect(card(page).locator('#card-h')).toHaveText('Lantern Roast Chicken');
 	await page.goBack();
 	await expect(view.locator('h2')).toHaveText('The producers');
 	// Back from the view leaves it for the card it was opened from.
 	await page.locator('.backline button.back').click();
 	await expect(card(page).locator('#card-h')).toHaveText('Lantern Roast Chicken');
+});
+
+test('a drink is the Ledger\'s: At the bar it is listed, and behind a dish too it follows the dish chips, as words off the shared origin', async ({ page }) => {
+	const h = house();
+	// The salt crust now reaches the Collins as well as the chicken: a dish and a drink.
+	h.components[0].itemIds = ['b-collins1', 'd-chicken1'];
+	await seedHouses(page, [h]);
+	await goto(page, '/menu?view=producers');
+	const view = page.locator('section[aria-labelledby="producers-h"]');
+	await expect(view.locator('h2')).toHaveText('The producers', { timeout: 15_000 });
+	await expect(view.locator('h3.grouphead')).toHaveText(['Makers and farms', 'At the bar']);
+	const groupOf = (key: string) => view.locator(`ul[aria-labelledby="pg-${key}"]`);
+	// Behind a dish and a drink: in its food group, the dish a chip, then the drink.
+	const salt = groupOf('makers').locator('li[data-producer="c-saltcrs1"]');
+	await expect(salt.locator('.chips > *')).toHaveText(['Lantern Roast Chicken', 'The Lantern Collins']);
+	await expect(salt.locator('button.chip')).toHaveText(['Lantern Roast Chicken']);
+	const collins = salt.locator('[data-drink="c-saltcrs1:b-collins1"]');
+	await expect(collins).toHaveClass(/words/);
+	expect(await collins.evaluate((el) => el.tagName)).toBe('SPAN');
+	expect((await collins.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+	// At the bar: the verjus, its drink in words, no chip that would open the Table's card.
+	const verjus = groupOf('bar').locator('li[data-producer="c-verjus01"]');
+	await expect(verjus.locator('.psub')).toHaveText('Origin · Verjus');
+	await expect(verjus.locator('[data-drink="c-verjus01:b-verjus01"]')).toHaveText('Verjus and Tonic');
+	await expect(verjus.locator('button.chip')).toHaveCount(0);
+	// Off the shared origin no room is linked, by rule.
+	await expect(view.locator('a[href*="/ledger/"]')).toHaveCount(0);
+	const box = (await view.boundingBox())!;
+	expect(box.x + box.width).toBeLessThanOrEqual(390);
 });
 
 test('the Producers deck deals every producer card under My restaurant, and the card\'s link deals the dish\'s own', async ({ page }) => {

@@ -21,7 +21,7 @@
  * person's own words and the card prints it verbatim under the fixed eyebrow.
  */
 import { isMark, DISH_PARTS, COCKTAIL_PARTS, WINE_PARTS, KEYS, BOTTLE_TIERS, PRODUCER_GROUPS, foldSize, wineListOf, videoGroups, videoMeta, videosFor, componentGroups, componentVideos, componentsFor } from './house/house-schema';
-import { compareHref, type Room } from './wing-links';
+import { compareHref, roomHref, type Room } from './wing-links';
 import type {
 	AskAtLineup,
 	BottleTier,
@@ -192,7 +192,9 @@ export const STUDY_WORDS = {
 	producerHistory: 'The story',
 	producerNotes: 'Notes for the floor',
 	askKitchen: 'Ask the kitchen',
+	askBar: 'Ask the bar',
 	onTheMenu: 'On the menu',
+	producersAtBar: 'At the bar',
 	quizProducers: 'Quiz the producers',
 	flashAllProducers: 'Flash every producer',
 	deckProducers: 'Producers',
@@ -1175,6 +1177,15 @@ export interface ProducerRow {
 	askKitchen: string[];
 	/** The named items that use it, in the order the component lists them. */
 	items: Array<{ id: string; name: string; kind: ItemKind }>;
+	/** The items the Table's own card opens (every item but a drink), in the same order: the Producers view's chips. */
+	chips: Array<{ id: string; name: string; kind: ItemKind }>;
+	/**
+	 * The drinks that use it, in the same order, each with the address that
+	 * opens it in the Ledger (wing-links.ts roomHref): '' off the shared
+	 * origin, where it is words. A screen draws the link only while the
+	 * Ledger can be reached (installed here, or the network up).
+	 */
+	drinks: Array<{ id: string; name: string; href: string }>;
 }
 
 /** Whether a component's name only repeats its producer's who: the same words, or the who and one more word ('Creekstone Farms beef'). */
@@ -1186,7 +1197,7 @@ function echoes(who: string, supplies: string): boolean {
 	return s === w || w.includes(s) || s.startsWith(w + ' ');
 }
 
-function producerRow(house: House, c: { id: string; name: string; producer?: Mark<ProducerProfile>; itemIds: string[] }): ProducerRow | null {
+function producerRow(house: House, c: { id: string; name: string; producer?: Mark<ProducerProfile>; itemIds: string[] }, base: string): ProducerRow | null {
 	const p = kept<ProducerProfile>(c.producer);
 	const who = p ? plain(p.who) : '';
 	if (!p || !who) return null;
@@ -1212,7 +1223,9 @@ function producerRow(house: House, c: { id: string; name: string; producer?: Mar
 		paragraphs: history ? history.split(/\n\s*\n/).map((x) => x.trim()).filter(Boolean) : [],
 		notes: list(p.notes),
 		askKitchen: list(p.askKitchen),
-		items
+		items,
+		chips: items.filter((i) => i.kind !== 'cocktail'),
+		drinks: items.filter((i) => i.kind === 'cocktail').map((i) => ({ id: i.id, name: i.name, href: roomHref('ledger', i.id, base, house) }))
 	};
 }
 
@@ -1220,28 +1233,41 @@ function producerRow(house: House, c: { id: string; name: string; producer?: Mar
  * "Who makes it" on an item's card: the item's components that carry a kept
  * producer profile, in the house's order. A profile nobody kept is not the
  * house's word and is left out, as componentBlocks leaves out an unkept card.
+ * `base` is the app's base path, for the drinks' Ledger addresses.
  */
-export function producersFor(house: House, itemId: string): ProducerRow[] {
+export function producersFor(house: House, itemId: string, base = ''): ProducerRow[] {
 	const out: ProducerRow[] = [];
 	for (const c of componentsFor(house, itemId)) {
-		const row = producerRow(house, c);
+		const row = producerRow(house, c, base);
 		if (row) out.push(row);
 	}
 	return out;
 }
 
+/** Whether a producer belongs At the bar: it reaches a drink and no dish (a wine alone is the cellar's, not the bar's). */
+export function atTheBar(row: Pick<ProducerRow, 'items'>): boolean {
+	return row.items.some((i) => i.kind === 'cocktail') && !row.items.some((i) => i.kind === 'dish');
+}
+
 /**
- * The Producers view: every kept profile in two groups, Makers and farms
- * (a maker, a farm, the house itself) then Where it comes from (a fishery,
- * an origin), each in the house's order; a group with none left out.
+ * The Producers view: every kept profile in three groups, Makers and farms
+ * (a maker, a farm, the house itself), Where it comes from (a fishery, an
+ * origin) and At the bar (one that reaches a drink and no dish, whatever its
+ * type), each in the house's order; a group with none left out. A producer
+ * behind a dish and a drink stays in its food group, its drinks after the
+ * dish chips. `base` is the app's base path, for the drinks' Ledger addresses.
  */
-export function producerRows(house: House): Array<{ key: string; label: string; rows: ProducerRow[] }> {
+export function producerRows(house: House, base = ''): Array<{ key: string; label: string; rows: ProducerRow[] }> {
 	const all: ProducerRow[] = [];
 	for (const c of house.components || []) {
-		const row = producerRow(house, c);
+		const row = producerRow(house, c, base);
 		if (row) all.push(row);
 	}
-	return PRODUCER_GROUPS.map((g) => ({ key: g.key as string, label: g.label as string, rows: all.filter((r) => (g.types as readonly string[]).includes(r.type)) })).filter((g) => g.rows.length);
+	const food = all.filter((r) => !atTheBar(r));
+	return [
+		...PRODUCER_GROUPS.map((g) => ({ key: g.key as string, label: g.label as string, rows: food.filter((r) => (g.types as readonly string[]).includes(r.type)) })),
+		{ key: 'bar', label: say('producersAtBar'), rows: all.filter(atTheBar) }
+	].filter((g) => g.rows.length);
 }
 
 /** The one line under the Producers door: how many producers, behind how many items. Empty when there are none. */

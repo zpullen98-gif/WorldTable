@@ -1,6 +1,6 @@
 {
 	"about": "Every string the spelling map changed while building the Brennan's house: the research writes British English and the house is American, so each British form became its American spelling.",
-	"count": 358,
+	"count": 438,
 	"changes": [
 		{
 			"path": "model.wines[0].kept[0].a",
@@ -24,6 +24,22 @@
 			"after": "All Syrah from fifty year old vines on two parcels beside Châteauneuf-du-Pape, nine kilometers from Orange, farmed organically without certification; unusual in the south, where Grenache usually leads.",
 			"words": [
 				"kilometres"
+			]
+		},
+		{
+			"path": "model.wines[252].kept[0].a",
+			"before": "Château Climens 2010 is the sweet spot bottle with the Lemon Tart: bin 192821, $200.\n\nBarsac is the village next to Sauternes in Bordeaux, on lower, limestone ground, and its sweet wines are known for a lifted freshness. Château Climens, klee-MAHNS, is a first growth of Barsac in the 1855 classification of sweet wines, farmed biodynamically. Unusually, it makes its wine from Sémillon alone. The grapes are picked by hand in several passes once noble rot has shrivelled and concentrated them, and the wine is aged in oak.\n\nAt sixteen years it is deep gold. It tastes of candied lemon, apricot, pineapple, honey and saffron, sweet and rich, but with a freshness that keeps it lively.\n\nIt is on the list as one of the great sweet wines of Bordeaux, and it suits the Lemon Tart because its citrus meets the yuzu and lemon jelly, and its honey loves the toasted meringue.",
+			"after": "Château Climens 2010 is the sweet spot bottle with the Lemon Tart: bin 192821, $200.\n\nBarsac is the village next to Sauternes in Bordeaux, on lower, limestone ground, and its sweet wines are known for a lifted freshness. Château Climens, klee-MAHNS, is a first growth of Barsac in the 1855 classification of sweet wines, farmed biodynamically. Unusually, it makes its wine from Sémillon alone. The grapes are picked by hand in several passes once noble rot has shriveled and concentrated them, and the wine is aged in oak.\n\nAt sixteen years it is deep gold. It tastes of candied lemon, apricot, pineapple, honey and saffron, sweet and rich, but with a freshness that keeps it lively.\n\nIt is on the list as one of the great sweet wines of Bordeaux, and it suits the Lemon Tart because its citrus meets the yuzu and lemon jelly, and its honey loves the toasted meringue.",
+			"words": [
+				"shrivelled"
+			]
+		},
+		{
+			"path": "model.wines[254].kept[2].a",
+			"before": "Asked: How is Sauternes made?\n\nAnswer: From grapes shrivelled by noble rot in misty autumns, which concentrates their sugar and flavor.\n\nAsked: Is it near Yquem?\n\nAnswer: Right beside it, at Preignac; both are first growths of Sauternes.\n\nAsked: How long does an open bottle last?\n\nAnswer: Sweet wine keeps longer than dry once open; the sommelier sets the house rule.",
+			"after": "Asked: How is Sauternes made?\n\nAnswer: From grapes shriveled by noble rot in misty autumns, which concentrates their sugar and flavor.\n\nAsked: Is it near Yquem?\n\nAnswer: Right beside it, at Preignac; both are first growths of Sauternes.\n\nAsked: How long does an open bottle last?\n\nAnswer: Sweet wine keeps longer than dry once open; the sommelier sets the house rule.",
+			"words": [
+				"shrivelled"
 			]
 		},
 		{
@@ -224,6 +240,14 @@
 			]
 		},
 		{
+			"path": "house.components[25].explain",
+			"before": "The holy trinity is onion, celery and green bell pepper, chopped and softened together at the start of a Cajun or Creole dish. It is Louisiana's version of the French mirepoix, with bell pepper in place of carrot, which grew more easily in early Louisiana.\n\nThe name nods to the Catholic faith of the early settlers, and the phrase was most likely popularised by the chef Paul Prudhomme. Garlic is so often added that some cooks call it the pope.\n\nThe trinity is in our gumbo, the turtle soup, the Creole sauce on the Shrimp & Grits and the South Louisiana rice dressing. It is the reason those dishes taste of Louisiana before a single spice goes in.",
+			"after": "The holy trinity is onion, celery and green bell pepper, chopped and softened together at the start of a Cajun or Creole dish. It is Louisiana's version of the French mirepoix, with bell pepper in place of carrot, which grew more easily in early Louisiana.\n\nThe name nods to the Catholic faith of the early settlers, and the phrase was most likely popularized by the chef Paul Prudhomme. Garlic is so often added that some cooks call it the pope.\n\nThe trinity is in our gumbo, the turtle soup, the Creole sauce on the Shrimp & Grits and the South Louisiana rice dressing. It is the reason those dishes taste of Louisiana before a single spice goes in.",
+			"words": [
+				"popularised"
+			]
+		},
+		{
 			"path": "house.components[36].explain",
 			"before": "Grits are dried corn ground coarse and simmered slowly in water or milk until creamy, the Southern answer to polenta. Stone-ground grits keep more of the corn's germ and flavour and take longer to cook than quick grits; hominy grits are made from corn treated with alkali.\n\nThey are a blank, comforting base that takes on butter, cheese and sauce.\n\nWe serve them two ways: Cheddar Grits as a breakfast side, and a fried pimento cheese grit cake, crisp outside and creamy inside, under the New Orleans Shrimp & Grits. Whether ours are stone-ground, and whose corn, are good questions for the kitchen.",
 			"after": "Grits are dried corn ground coarse and simmered slowly in water or milk until creamy, the Southern answer to polenta. Stone-ground grits keep more of the corn's germ and flavor and take longer to cook than quick grits; hominy grits are made from corn treated with alkali.\n\nThey are a blank, comforting base that takes on butter, cheese and sauce.\n\nWe serve them two ways: Cheddar Grits as a breakfast side, and a fried pimento cheese grit cake, crisp outside and creamy inside, under the New Orleans Shrimp & Grits. Whether ours are stone-ground, and whose corn, are good questions for the kitchen.",
@@ -234,9 +258,10 @@
 		{
 			"path": "house.components[38].explain",
 			"before": "Creole seasoning is a dry blend built on paprika, cayenne and black pepper, with garlic and onion powder, dried thyme and oregano, and salt. It gives warmth, colour and savour more than raw heat, and every kitchen keeps its own proportions.\n\nBrennan's makes its own, and the menu names it on the dinner Creole Hanger Steak; the breakfast hanger, the potato on the Eggs Owen and the Roost's spiced nuts are seasoned in the same style.\n\nWhat is in the house blend is not printed, so if a guest asks about a particular spice, or how hot it is, the kitchen has the answer. In general, describe it as warm and savoury rather than fiery.",
-			"after": "Creole seasoning is a dry blend built on paprika, cayenne and black pepper, with garlic and onion powder, dried thyme and oregano, and salt. It gives warmth, color and savour more than raw heat, and every kitchen keeps its own proportions.\n\nBrennan's makes its own, and the menu names it on the dinner Creole Hanger Steak; the breakfast hanger, the potato on the Eggs Owen and the Roost's spiced nuts are seasoned in the same style.\n\nWhat is in the house blend is not printed, so if a guest asks about a particular spice, or how hot it is, the kitchen has the answer. In general, describe it as warm and savory rather than fiery.",
+			"after": "Creole seasoning is a dry blend built on paprika, cayenne and black pepper, with garlic and onion powder, dried thyme and oregano, and salt. It gives warmth, color and savor more than raw heat, and every kitchen keeps its own proportions.\n\nBrennan's makes its own, and the menu names it on the dinner Creole Hanger Steak; the breakfast hanger, the potato on the Eggs Owen and the Roost's spiced nuts are seasoned in the same style.\n\nWhat is in the house blend is not printed, so if a guest asks about a particular spice, or how hot it is, the kitchen has the answer. In general, describe it as warm and savory rather than fiery.",
 			"words": [
 				"colour",
+				"savour",
 				"savoury"
 			]
 		},
@@ -265,11 +290,20 @@
 			]
 		},
 		{
+			"path": "house.components[49].explain",
+			"before": "Filet mignon is a small steak cut from the narrow end of the beef tenderloin, the muscle along the spine that does almost no work. That makes it the most tender cut on the animal and also one of the mildest, so it relies on its sauce and garnish for savour.\n\nA petite filet is a small portion that cooks quickly: seared hard, finished gently and rested for a few minutes so the juices settle.\n\nOn the Traditional Breakfast it is the fourth course, with a crisp potato rösti, garlic spinach and a 4 oz pour of Côtes du Rhône. Take the guest's temperature when you take the tasting order, not when the course fires.",
+			"after": "Filet mignon is a small steak cut from the narrow end of the beef tenderloin, the muscle along the spine that does almost no work. That makes it the most tender cut on the animal and also one of the mildest, so it relies on its sauce and garnish for savor.\n\nA petite filet is a small portion that cooks quickly: seared hard, finished gently and rested for a few minutes so the juices settle.\n\nOn the Traditional Breakfast it is the fourth course, with a crisp potato rösti, garlic spinach and a 4 oz pour of Côtes du Rhône. Take the guest's temperature when you take the tasting order, not when the course fires.",
+			"words": [
+				"savour"
+			]
+		},
+		{
 			"path": "house.components[51].explain",
 			"before": "Garlic spinach is fresh spinach wilted quickly in a hot pan with oil or butter and sliced garlic, then squeezed of its water and seasoned at the last moment so it stays bright green rather than grey.\n\nIt is the simplest of the greens on our menus, light where the creamed spinach is rich.\n\nOn the Petite Filet Mignon it brings the savour that a mild filet lacks: garlic, iron and a little bitterness to balance the beef and the crisp rösti. If a guest asks how it differs from the Sardou's spinach, the answer is that this one is wilted with garlic, not creamed with Parmesan.",
-			"after": "Garlic spinach is fresh spinach wilted quickly in a hot pan with oil or butter and sliced garlic, then squeezed of its water and seasoned at the last moment so it stays bright green rather than gray.\n\nIt is the simplest of the greens on our menus, light where the creamed spinach is rich.\n\nOn the Petite Filet Mignon it brings the savour that a mild filet lacks: garlic, iron and a little bitterness to balance the beef and the crisp rösti. If a guest asks how it differs from the Sardou's spinach, the answer is that this one is wilted with garlic, not creamed with Parmesan.",
+			"after": "Garlic spinach is fresh spinach wilted quickly in a hot pan with oil or butter and sliced garlic, then squeezed of its water and seasoned at the last moment so it stays bright green rather than gray.\n\nIt is the simplest of the greens on our menus, light where the creamed spinach is rich.\n\nOn the Petite Filet Mignon it brings the savor that a mild filet lacks: garlic, iron and a little bitterness to balance the beef and the crisp rösti. If a guest asks how it differs from the Sardou's spinach, the answer is that this one is wilted with garlic, not creamed with Parmesan.",
 			"words": [
-				"grey"
+				"grey",
+				"savour"
 			]
 		},
 		{
@@ -307,8 +341,9 @@
 		{
 			"path": "house.components[57].explain",
 			"before": "Cane syrup is sugar cane juice boiled down in open kettles until thick, with nothing taken out. Molasses is what remains after sugar has been crystallised and removed, so cane syrup is sweeter, lighter and milder, with a buttery caramel taste rather than molasses's bitter edge. Steen's of Abbeville has made it since 1910, after a freeze threatened a cane crop.\n\nIt is a Louisiana pantry staple poured on biscuits, baked into cakes and used to glaze meat.\n\nOn the Roasted Rohan Duck Breast it glazes peaches, sweet and caramelised against rich duck. The menu does not name a brand, so say Louisiana cane syrup, a lighter cousin of molasses.",
-			"after": "Cane syrup is sugar cane juice boiled down in open kettles until thick, with nothing taken out. Molasses is what remains after sugar has been crystallised and removed, so cane syrup is sweeter, lighter and milder, with a buttery caramel taste rather than molasses's bitter edge. Steen's of Abbeville has made it since 1910, after a freeze threatened a cane crop.\n\nIt is a Louisiana pantry staple poured on biscuits, baked into cakes and used to glaze meat.\n\nOn the Roasted Rohan Duck Breast it glazes peaches, sweet and caramelized against rich duck. The menu does not name a brand, so say Louisiana cane syrup, a lighter cousin of molasses.",
+			"after": "Cane syrup is sugar cane juice boiled down in open kettles until thick, with nothing taken out. Molasses is what remains after sugar has been crystallized and removed, so cane syrup is sweeter, lighter and milder, with a buttery caramel taste rather than molasses's bitter edge. Steen's of Abbeville has made it since 1910, after a freeze threatened a cane crop.\n\nIt is a Louisiana pantry staple poured on biscuits, baked into cakes and used to glaze meat.\n\nOn the Roasted Rohan Duck Breast it glazes peaches, sweet and caramelized against rich duck. The menu does not name a brand, so say Louisiana cane syrup, a lighter cousin of molasses.",
 			"words": [
+				"crystallised",
 				"caramelised"
 			]
 		},
@@ -436,6 +471,14 @@
 			"after": "A Caesar dressing is an emulsion of egg yolk, garlic, lemon, Worcestershire, oil and cheese. Ours blends smoked oysters into it, so the oysters take the briny, savory role that anchovy usually plays, and add a gentle smoke.\n\nIt is the change that makes the salad a Gulf dish: the oyster is the most New Orleans of ingredients.\n\nBecause the dressing is made with oysters, the guide asks servers to treat the Creole Caesar as a shellfish dish: flag it on the ticket and check with the kitchen for any guest who asks about shellfish. Whether the dressing also carries anchovy is a question for the chef.",
 			"words": [
 				"savoury"
+			]
+		},
+		{
+			"path": "house.components[91].explain",
+			"before": "Canadian bacon is cured, lightly smoked pork loin, lean and ham-like, sliced into rounds; it is the meat of Eggs Benedict. A coffee cure rubs the loin with salt, sugar and ground coffee before it is smoked or roasted, adding a roasty, slightly bitter depth to the sweet, salty pork.\n\nThe coffee echoes the city's chicory coffee and gives the lean meat more savour.\n\nIt is the meat layer of the Eggs Hussarde, between the English muffin and the marchand de vin. The guide confirms the coffee cure; how long it cures, and whether the kitchen makes it in house, are questions for the chef.",
+			"after": "Canadian bacon is cured, lightly smoked pork loin, lean and ham-like, sliced into rounds; it is the meat of Eggs Benedict. A coffee cure rubs the loin with salt, sugar and ground coffee before it is smoked or roasted, adding a roasty, slightly bitter depth to the sweet, salty pork.\n\nThe coffee echoes the city's chicory coffee and gives the lean meat more savor.\n\nIt is the meat layer of the Eggs Hussarde, between the English muffin and the marchand de vin. The guide confirms the coffee cure; how long it cures, and whether the kitchen makes it in house, are questions for the chef.",
+			"words": [
+				"savour"
 			]
 		},
 		{
@@ -574,6 +617,14 @@
 			]
 		},
 		{
+			"path": "house.components[119].explain",
+			"before": "En papillote means in paper: food sealed in a parcel and baked, so it steams in its own juices and the aromas stay trapped until the parcel is opened. New Orleans knows it from Antoine's, where Jules Alciatore created pompano en papillote for a banquet honouring the Brazilian balloonist Alberto Santos-Dumont; the puffed paper suggested a balloon.\n\nOur Gulf Fish en Papillote wraps the fish in banana leaf instead of paper. The leaf holds moisture just as well and adds a faint grassy, tea-like aroma.\n\nAsk at lineup whether it is opened at the table, and warn the guest to mind the steam when it is.",
+			"after": "En papillote means in paper: food sealed in a parcel and baked, so it steams in its own juices and the aromas stay trapped until the parcel is opened. New Orleans knows it from Antoine's, where Jules Alciatore created pompano en papillote for a banquet honoring the Brazilian balloonist Alberto Santos-Dumont; the puffed paper suggested a balloon.\n\nOur Gulf Fish en Papillote wraps the fish in banana leaf instead of paper. The leaf holds moisture just as well and adds a faint grassy, tea-like aroma.\n\nAsk at lineup whether it is opened at the table, and warn the guest to mind the steam when it is.",
+			"words": [
+				"honouring"
+			]
+		},
+		{
 			"path": "house.components[126].explain",
 			"before": "Shiitake are mushrooms long cultivated on logs in Japan and China; the name joins shii, the tree they grew on, with take, mushroom. They are meaty and deeply savoury, rich in the natural compounds that give umami.\n\nPreserved shiitake are most likely cured in soy or pickled, which concentrates that savoury depth; what the kitchen means by preserved is a question for the chef.\n\nOn the Blackened Tofu they bring the earthy, meaty note that makes the plate satisfying without meat, against the spiced crust and creamy rice grits. Say shee-TAH-keh, not shih-TAH-kee.",
 			"after": "Shiitake are mushrooms long cultivated on logs in Japan and China; the name joins shii, the tree they grew on, with take, mushroom. They are meaty and deeply savory, rich in the natural compounds that give umami.\n\nPreserved shiitake are most likely cured in soy or pickled, which concentrates that savory depth; what the kitchen means by preserved is a question for the chef.\n\nOn the Blackened Tofu they bring the earthy, meaty note that makes the plate satisfying without meat, against the spiced crust and creamy rice grits. Say shee-TAH-keh, not shih-TAH-kee.",
@@ -693,26 +744,38 @@
 		{
 			"path": "house.components[146].explain",
 			"before": "Bananas Foster was created at Brennan's in 1951, while the restaurant was still Owen Brennan's Vieux Carré on Bourbon Street. Owen asked for a new dessert for a dinner honouring his friend Richard Foster, chairman of the New Orleans Crime Commission. His sister Ella and chef Paul Blangé adapted the caramelised bananas their mother made at home, and named it for Foster.\n\nBananas made sense: New Orleans was the main port of entry for bananas from Central and South America.\n\n2026 is its 75th year. It is $14, minimum two per order, made at the table, and the house calls it the most-ordered item on the menu.",
-			"after": "Bananas Foster was created at Brennan's in 1951, while the restaurant was still Owen Brennan's Vieux Carré on Bourbon Street. Owen asked for a new dessert for a dinner honouring his friend Richard Foster, chairman of the New Orleans Crime Commission. His sister Ella and chef Paul Blangé adapted the caramelized bananas their mother made at home, and named it for Foster.\n\nBananas made sense: New Orleans was the main port of entry for bananas from Central and South America.\n\n2026 is its 75th year. It is $14, minimum two per order, made at the table, and the house calls it the most-ordered item on the menu.",
+			"after": "Bananas Foster was created at Brennan's in 1951, while the restaurant was still Owen Brennan's Vieux Carré on Bourbon Street. Owen asked for a new dessert for a dinner honoring his friend Richard Foster, chairman of the New Orleans Crime Commission. His sister Ella and chef Paul Blangé adapted the caramelized bananas their mother made at home, and named it for Foster.\n\nBananas made sense: New Orleans was the main port of entry for bananas from Central and South America.\n\n2026 is its 75th year. It is $14, minimum two per order, made at the table, and the house calls it the most-ordered item on the menu.",
 			"words": [
+				"honouring",
 				"caramelised"
 			]
 		},
 		{
 			"path": "house.components[148].explain",
 			"before": "The printed menu names rum, and the long-standing Brennan's recipe also uses banana liqueur, which loosens the caramel and deepens the banana flavour before the rum is lit. Dark rum gives molasses and spice notes and enough strength to catch the flame.\n\nFollow the house procedure you are trained on rather than any recipe you find elsewhere, and do not quote quantities.\n\nFlaming burns the alcohol vapour above the pan, not all the alcohol in it: a large share stays in the sauce. For a guest who avoids alcohol, the guide steers to the Lemon Tart or the Pineapple Tarte Tatin. Which rum the kitchen pours is a question for the chef.",
-			"after": "The printed menu names rum, and the long-standing Brennan's recipe also uses banana liqueur, which loosens the caramel and deepens the banana flavor before the rum is lit. Dark rum gives molasses and spice notes and enough strength to catch the flame.\n\nFollow the house procedure you are trained on rather than any recipe you find elsewhere, and do not quote quantities.\n\nFlaming burns the alcohol vapour above the pan, not all the alcohol in it: a large share stays in the sauce. For a guest who avoids alcohol, the guide steers to the Lemon Tart or the Pineapple Tarte Tatin. Which rum the kitchen pours is a question for the chef.",
+			"after": "The printed menu names rum, and the long-standing Brennan's recipe also uses banana liqueur, which loosens the caramel and deepens the banana flavor before the rum is lit. Dark rum gives molasses and spice notes and enough strength to catch the flame.\n\nFollow the house procedure you are trained on rather than any recipe you find elsewhere, and do not quote quantities.\n\nFlaming burns the alcohol vapor above the pan, not all the alcohol in it: a large share stays in the sauce. For a guest who avoids alcohol, the guide steers to the Lemon Tart or the Pineapple Tarte Tatin. Which rum the kitchen pours is a question for the chef.",
 			"words": [
-				"flavour"
+				"flavour",
+				"vapour"
+			]
+		},
+		{
+			"path": "house.components[148].card.back",
+			"before": "No. Flaming burns the vapour, and much of the rum and banana liqueur stays in the sauce; steer guests who avoid alcohol to the Lemon Tart or Tarte Tatin.",
+			"after": "No. Flaming burns the vapor, and much of the rum and banana liqueur stays in the sauce; steer guests who avoid alcohol to the Lemon Tart or Tarte Tatin.",
+			"words": [
+				"vapour"
 			]
 		},
 		{
 			"path": "house.components[149].explain",
 			"before": "Flambé means flamed: spirit added to a hot pan and lit, so the alcohol vapour burns in a burst of blue and orange flame. It is theatre and flavour at once, caramelising the sauce's surface. At Brennan's it is done on a guéridon, the tableside cart.\n\nThe guide's steps are learned word for word: measure the spirit into a small vessel, never pour from the bottle near a flame, pull the pan off the flame to add it, tilt to ignite, keep a lid in reach, let the flame die before plating, and turn the burner off before leaving.\n\nIn a bright breakfast room the flame can be almost invisible, so treat the pan as lit until it clearly has died down.",
-			"after": "Flambé means flamed: spirit added to a hot pan and lit, so the alcohol vapour burns in a burst of blue and orange flame. It is theater and flavor at once, caramelising the sauce's surface. At Brennan's it is done on a guéridon, the tableside cart.\n\nThe guide's steps are learned word for word: measure the spirit into a small vessel, never pour from the bottle near a flame, pull the pan off the flame to add it, tilt to ignite, keep a lid in reach, let the flame die before plating, and turn the burner off before leaving.\n\nIn a bright breakfast room the flame can be almost invisible, so treat the pan as lit until it clearly has died down.",
+			"after": "Flambé means flamed: spirit added to a hot pan and lit, so the alcohol vapor burns in a burst of blue and orange flame. It is theater and flavor at once, caramelizing the sauce's surface. At Brennan's it is done on a guéridon, the tableside cart.\n\nThe guide's steps are learned word for word: measure the spirit into a small vessel, never pour from the bottle near a flame, pull the pan off the flame to add it, tilt to ignite, keep a lid in reach, let the flame die before plating, and turn the burner off before leaving.\n\nIn a bright breakfast room the flame can be almost invisible, so treat the pan as lit until it clearly has died down.",
 			"words": [
+				"vapour",
 				"theatre",
-				"flavour"
+				"flavour",
+				"caramelising"
 			]
 		},
 		{
@@ -969,8 +1032,8 @@
 		},
 		{
 			"path": "house.components[224].explain",
-			"before": "Barrel ageing means resting a spirit, a finished cocktail or even bitters in an oak cask. The wood softens sharp edges and adds vanilla, caramel and spice, and a little evaporation concentrates what is left. A used spirit cask lends some of its old contents too.\n\nTwo Brennan's drinks print it. Rumors are Flying is built on Brennan's Barrel Aged Rittenhouse Rye, and the Origin Story uses barrel-aged Peychaud's.\n\nWhat the menu does not print is who did the ageing, in what cask and for how long. Those are questions for the bar, so a server says barrel-aged for Brennan's and no more until the bar gives the story. Guests often ask; it is worth asking at lineup.",
-			"after": "Barrel aging means resting a spirit, a finished cocktail or even bitters in an oak cask. The wood softens sharp edges and adds vanilla, caramel and spice, and a little evaporation concentrates what is left. A used spirit cask lends some of its old contents too.\n\nTwo Brennan's drinks print it. Rumors are Flying is built on Brennan's Barrel Aged Rittenhouse Rye, and the Origin Story uses barrel-aged Peychaud's.\n\nWhat the menu does not print is who did the aging, in what cask and for how long. Those are questions for the bar, so a server says barrel-aged for Brennan's and no more until the bar gives the story. Guests often ask; it is worth asking at lineup.",
+			"before": "Barrel ageing means resting a spirit, a finished cocktail or even bitters in an oak cask. The wood softens sharp edges and adds vanilla, caramel and spice, and a little evaporation concentrates what is left. A used spirit cask lends some of its old contents too.\n\nTwo Brennan's drinks print it. Rumors are Flying is built on Brennan's Barrel Aged Rittenhouse Rye, and the Origin Story uses barrel-aged Peychaud's.\n\nWhat the menu does not print is who did the ageing, in what cask and for how long. Those are questions for the bar, so a server says barrel-aged for Brennan's and no more until the bar gives the story. Guests often ask; it is worth asking at lineup. The Sazerac Company does sell a Peychaud's Barrel-Aged; whether ours is that bottle is a question for the bar.",
+			"after": "Barrel aging means resting a spirit, a finished cocktail or even bitters in an oak cask. The wood softens sharp edges and adds vanilla, caramel and spice, and a little evaporation concentrates what is left. A used spirit cask lends some of its old contents too.\n\nTwo Brennan's drinks print it. Rumors are Flying is built on Brennan's Barrel Aged Rittenhouse Rye, and the Origin Story uses barrel-aged Peychaud's.\n\nWhat the menu does not print is who did the aging, in what cask and for how long. Those are questions for the bar, so a server says barrel-aged for Brennan's and no more until the bar gives the story. Guests often ask; it is worth asking at lineup. The Sazerac Company does sell a Peychaud's Barrel-Aged; whether ours is that bottle is a question for the bar.",
 			"words": [
 				"ageing",
 				"ageing"
@@ -987,10 +1050,11 @@
 		{
 			"path": "house.components[227].explain",
 			"before": "Cold pressing is a way of making juice without heat or fast spinning blades. The fruit is ground to a pulp and pressed hard, often in a cloth, so the juice is squeezed out slowly and stays cool.\n\nJuice made this way keeps more of the fresh fruit's colour and bright flavour; because it is not pasteurised by heat, it is usually kept cold and has a short life.\n\nThe Revive Cold-Pressed Juice is listed under juices that are locally made and fresh squeezed: strawberry, apple and pineapple. Who presses it for Brennan's is not printed, and a search could not confirm the maker, so that is a question for the bar. It is the drink for a guest who wants neither alcohol nor caffeine.",
-			"after": "Cold pressing is a way of making juice without heat or fast spinning blades. The fruit is ground to a pulp and pressed hard, often in a cloth, so the juice is squeezed out slowly and stays cool.\n\nJuice made this way keeps more of the fresh fruit's color and bright flavor; because it is not pasteurised by heat, it is usually kept cold and has a short life.\n\nThe Revive Cold-Pressed Juice is listed under juices that are locally made and fresh squeezed: strawberry, apple and pineapple. Who presses it for Brennan's is not printed, and a search could not confirm the maker, so that is a question for the bar. It is the drink for a guest who wants neither alcohol nor caffeine.",
+			"after": "Cold pressing is a way of making juice without heat or fast spinning blades. The fruit is ground to a pulp and pressed hard, often in a cloth, so the juice is squeezed out slowly and stays cool.\n\nJuice made this way keeps more of the fresh fruit's color and bright flavor; because it is not pasteurized by heat, it is usually kept cold and has a short life.\n\nThe Revive Cold-Pressed Juice is listed under juices that are locally made and fresh squeezed: strawberry, apple and pineapple. Who presses it for Brennan's is not printed, and a search could not confirm the maker, so that is a question for the bar. It is the drink for a guest who wants neither alcohol nor caffeine.",
 			"words": [
 				"colour",
-				"flavour"
+				"flavour",
+				"pasteurised"
 			]
 		},
 		{
@@ -1044,8 +1108,8 @@
 		},
 		{
 			"path": "house.components[239].explain",
-			"before": "Peychaud's is a bright red New Orleans aromatic bitters, made first by Antoine Peychaud in his Royal Street apothecary in the 1850s and now by the Sazerac Company. Bitters are spirit infused with bitter roots, barks and spices; a few dashes season a drink the way salt seasons food.\n\nPeychaud's is lighter and more floral than Angostura, with anise and cherry, and it gives the Sazerac its rosy colour. A Sazerac with Angostura instead is a different drink.\n\nAt Brennan's the Classic is stirred with Peychaud's. The Origin Story uses barrel-aged Peychaud's, softened in oak; who ages it is a question for the bar. Thompson's Dream swaps in Bitter Truth Creole Bitters, a German tribute to the same style.",
-			"after": "Peychaud's is a bright red New Orleans aromatic bitters, made first by Antoine Peychaud in his Royal Street apothecary in the 1850s and now by the Sazerac Company. Bitters are spirit infused with bitter roots, barks and spices; a few dashes season a drink the way salt seasons food.\n\nPeychaud's is lighter and more floral than Angostura, with anise and cherry, and it gives the Sazerac its rosy color. A Sazerac with Angostura instead is a different drink.\n\nAt Brennan's the Classic is stirred with Peychaud's. The Origin Story uses barrel-aged Peychaud's, softened in oak; who ages it is a question for the bar. Thompson's Dream swaps in Bitter Truth Creole Bitters, a German tribute to the same style.",
+			"before": "Peychaud's is a bright red New Orleans aromatic bitters, made first by Antoine Peychaud in his Royal Street apothecary in the 1850s and now by the Sazerac Company. Bitters are spirit infused with bitter roots, barks and spices; a few dashes season a drink the way salt seasons food.\n\nPeychaud's is lighter and more floral than Angostura, with anise and cherry, and it gives the Sazerac its rosy colour. A Sazerac with Angostura instead is a different drink.\n\nAt Brennan's the Classic is stirred with Peychaud's. The Origin Story uses barrel-aged Peychaud's. The Sazerac Company sells one, rested 140 days in Sazerac Rye barrels; whether ours is that bottle or aged by the bar is a question for lineup. Thompson's Dream swaps in Bitter Truth Creole Bitters, a German tribute to the same style.",
+			"after": "Peychaud's is a bright red New Orleans aromatic bitters, made first by Antoine Peychaud in his Royal Street apothecary in the 1850s and now by the Sazerac Company. Bitters are spirit infused with bitter roots, barks and spices; a few dashes season a drink the way salt seasons food.\n\nPeychaud's is lighter and more floral than Angostura, with anise and cherry, and it gives the Sazerac its rosy color. A Sazerac with Angostura instead is a different drink.\n\nAt Brennan's the Classic is stirred with Peychaud's. The Origin Story uses barrel-aged Peychaud's. The Sazerac Company sells one, rested 140 days in Sazerac Rye barrels; whether ours is that bottle or aged by the bar is a question for lineup. Thompson's Dream swaps in Bitter Truth Creole Bitters, a German tribute to the same style.",
 			"words": [
 				"colour"
 			]
@@ -1060,16 +1124,16 @@
 		},
 		{
 			"path": "house.components[240].explain",
-			"before": "Herbsaint is New Orleans' own anise liqueur. J. Marion Legendre and Reginald Parker, who had learned absinthe making in France during the First World War, created it in New Orleans in 1934, after Prohibition and while absinthe was banned. It was sold first as Legendre Absinthe, though it held no grand wormwood; the federal authorities objected, and it became Herbsaint, from herbe sainte, the Creole name for wormwood.\n\nThe Sazerac Company bought the firm in 1949. The H is silent: ERB-sant.\n\nIn the Classic Sazerac it is only a rinse, so the guest gets its anise perfume without much of its flavour. The guide calls it our local anise liqueur: local by birth and ownership, though it is not distilled in the city today.",
-			"after": "Herbsaint is New Orleans' own anise liqueur. J. Marion Legendre and Reginald Parker, who had learned absinthe making in France during the First World War, created it in New Orleans in 1934, after Prohibition and while absinthe was banned. It was sold first as Legendre Absinthe, though it held no grand wormwood; the federal authorities objected, and it became Herbsaint, from herbe sainte, the Creole name for wormwood.\n\nThe Sazerac Company bought the firm in 1949. The H is silent: ERB-sant.\n\nIn the Classic Sazerac it is only a rinse, so the guest gets its anise perfume without much of its flavor. The guide calls it our local anise liqueur: local by birth and ownership, though it is not distilled in the city today.",
+			"before": "Herbsaint is New Orleans' own anise liqueur. J. Marion Legendre and Reginald Parker, who had learned absinthe making in France during the First World War, created it in New Orleans in 1934, after Prohibition and while absinthe was banned. It was sold first as Legendre Absinthe, though it held no grand wormwood; the federal authorities objected, and it became Herbsaint, from herbe sainte, the Creole name for wormwood.\n\nThe Sazerac Company bought the firm in 1949. The H is silent: ERB-sant.\n\nIn the Classic Sazerac it is only a rinse, so the guest gets its anise perfume without much of its flavour. The guide calls it our local anise liqueur: local by birth and by its owner, a New Orleans company; where it is made today is not published, so never say it is made in the city.",
+			"after": "Herbsaint is New Orleans' own anise liqueur. J. Marion Legendre and Reginald Parker, who had learned absinthe making in France during the First World War, created it in New Orleans in 1934, after Prohibition and while absinthe was banned. It was sold first as Legendre Absinthe, though it held no grand wormwood; the federal authorities objected, and it became Herbsaint, from herbe sainte, the Creole name for wormwood.\n\nThe Sazerac Company bought the firm in 1949. The H is silent: ERB-sant.\n\nIn the Classic Sazerac it is only a rinse, so the guest gets its anise perfume without much of its flavor. The guide calls it our local anise liqueur: local by birth and by its owner, a New Orleans company; where it is made today is not published, so never say it is made in the city.",
 			"words": [
 				"flavour"
 			]
 		},
 		{
 			"path": "house.components[241].explain",
-			"before": "St. George Absinthe Verte comes from St. George Spirits in Alameda, California. Released after the federal rules changed in 2007, it was the first legal American absinthe since the 1912 ban.\n\nIt is built on brandy and flavoured with wormwood, star anise and fennel, then coloured and perfumed with herbs such as lemon balm, hyssop, meadowsweet, basil, mint, tarragon and stinging nettle. At 60 percent alcohol it is herbal and green rather than candied.\n\nIn Thompson's Dream it rinses the glass in place of the Classic's Herbsaint, so the drink smells greener and more herbal. Alongside the bigger Willett rye and the Creole bitters, that is the honest description of what the extra money buys.",
-			"after": "St. George Absinthe Verte comes from St. George Spirits in Alameda, California. Released after the federal rules changed in 2007, it was the first legal American absinthe since the 1912 ban.\n\nIt is built on brandy and flavored with wormwood, star anise and fennel, then colored and perfumed with herbs such as lemon balm, hyssop, meadowsweet, basil, mint, tarragon and stinging nettle. At 60 percent alcohol it is herbal and green rather than candied.\n\nIn Thompson's Dream it rinses the glass in place of the Classic's Herbsaint, so the drink smells greener and more herbal. Alongside the bigger Willett rye and the Creole bitters, that is the honest description of what the extra money buys.",
+			"before": "St. George Absinthe Verte comes from St. George Spirits in Alameda, California. Released in December 2007, it was the first legal American-made absinthe since the 1912 ban; Lucid, made in France, had reached American shelves earlier that year.\n\nIt is built on brandy and flavoured with wormwood, star anise and fennel, then coloured and perfumed with herbs such as lemon balm, hyssop, meadowsweet, basil, mint, tarragon and stinging nettle. At 60 percent alcohol it is herbal and green rather than candied.\n\nIn Thompson's Dream it rinses the glass in place of the Classic's Herbsaint, so the drink smells greener and more herbal. Alongside the bigger Willett rye and the Creole bitters, that is the honest description of what the extra money buys.",
+			"after": "St. George Absinthe Verte comes from St. George Spirits in Alameda, California. Released in December 2007, it was the first legal American-made absinthe since the 1912 ban; Lucid, made in France, had reached American shelves earlier that year.\n\nIt is built on brandy and flavored with wormwood, star anise and fennel, then colored and perfumed with herbs such as lemon balm, hyssop, meadowsweet, basil, mint, tarragon and stinging nettle. At 60 percent alcohol it is herbal and green rather than candied.\n\nIn Thompson's Dream it rinses the glass in place of the Classic's Herbsaint, so the drink smells greener and more herbal. Alongside the bigger Willett rye and the Creole bitters, that is the honest description of what the extra money buys.",
 			"words": [
 				"flavoured",
 				"coloured"
@@ -1132,8 +1196,8 @@
 		},
 		{
 			"path": "house.components[255].explain",
-			"before": "Taittinger is a Champagne house in Reims, founded in 1734 and family owned since 1932, one of the grandes marques. Its Brut La Française is the non-vintage house style, unusual for its high share of Chardonnay, about 40 percent, with Pinot Noir and Pinot Meunier, aged close to four years on the lees in the chalk cellars under Reims.\n\nThat Chardonnay makes it fresh, light and elegant, with citrus and brioche.\n\nIn the Flamingo it tops Chopin vodka, Monkey 47 gin, dragonfruit and lemon. Brennan's also lists Taittinger La Française as a 3 litre double magnum on the Birthday Bubbles list, so the name links the Roost cocktail to the cellar.",
-			"after": "Taittinger is a Champagne house in Reims, founded in 1734 and family owned since 1932, one of the grandes marques. Its Brut La Française is the non-vintage house style, unusual for its high share of Chardonnay, about 40 percent, with Pinot Noir and Pinot Meunier, aged close to four years on the lees in the chalk cellars under Reims.\n\nThat Chardonnay makes it fresh, light and elegant, with citrus and brioche.\n\nIn the Flamingo it tops Chopin vodka, Monkey 47 gin, dragonfruit and lemon. Brennan's also lists Taittinger La Française as a 3 liter double magnum on the Birthday Bubbles list, so the name links the Roost cocktail to the cellar.",
+			"before": "Taittinger is a Champagne house in Reims whose story begins in 1734; the Taittinger family bought it in 1932, sold it with its group in 2005, led a bid that bought it back in 2006, and runs it today. Its Brut La Française is the non-vintage house style, unusual for its high share of Chardonnay, about 40 percent, with Pinot Noir and Pinot Meunier, aged close to four years on the lees in the chalk cellars under Reims.\n\nThat Chardonnay makes it fresh, light and elegant, with citrus and brioche.\n\nIn the Flamingo it tops Chopin vodka, Monkey 47 gin, dragonfruit and lemon. Brennan's also lists Taittinger La Française as a 3 litre double magnum on the Birthday Bubbles list, so the name links the Roost cocktail to the cellar.",
+			"after": "Taittinger is a Champagne house in Reims whose story begins in 1734; the Taittinger family bought it in 1932, sold it with its group in 2005, led a bid that bought it back in 2006, and runs it today. Its Brut La Française is the non-vintage house style, unusual for its high share of Chardonnay, about 40 percent, with Pinot Noir and Pinot Meunier, aged close to four years on the lees in the chalk cellars under Reims.\n\nThat Chardonnay makes it fresh, light and elegant, with citrus and brioche.\n\nIn the Flamingo it tops Chopin vodka, Monkey 47 gin, dragonfruit and lemon. Brennan's also lists Taittinger La Française as a 3 liter double magnum on the Birthday Bubbles list, so the name links the Roost cocktail to the cellar.",
 			"words": [
 				"litre"
 			]
@@ -1172,9 +1236,10 @@
 		},
 		{
 			"path": "house.components[262].explain",
-			"before": "A quinquina is a wine aperitif flavoured with cinchona bark, the source of quinine, which gives it a gentle bitterness. In 1872 Louis-Napoléon Mattei named his aperitif after Cap Corse, the northern peninsula of Corsica, blending local Vermentino and Muscat wine with cinchona, spices and cédrat, a thick-peeled citron.\n\nCap Corse Mattei Blanc is light, citrusy and softly bitter, and the house is still family owned.\n\nThe house page prints it as Cap Corse Mattei Blanc Quinquina vermouth; strictly it is a quinquina, a cousin of vermouth. In the Spoonbill it plays the vermouth's part in a martini-style drink with Hendrick's gin and chive oil, with a spoon of caviar served alongside.",
-			"after": "A quinquina is a wine aperitif flavored with cinchona bark, the source of quinine, which gives it a gentle bitterness. In 1872 Louis-Napoléon Mattei named his aperitif after Cap Corse, the northern peninsula of Corsica, blending local Vermentino and Muscat wine with cinchona, spices and cédrat, a thick-peeled citron.\n\nCap Corse Mattei Blanc is light, citrusy and softly bitter, and the house is still family owned.\n\nThe house page prints it as Cap Corse Mattei Blanc Quinquina vermouth; strictly it is a quinquina, a cousin of vermouth. In the Spoonbill it plays the vermouth's part in a martini-style drink with Hendrick's gin and chive oil, with a spoon of caviar served alongside.",
+			"before": "A quinquina is a wine aperitif flavoured with cinchona bark, the source of quinine, which gives it a gentle bitterness. Louis-Napoléon Mattei opened his house in Bastia in 1872 and made his first quinquina wine in 1875; the aperitif is named for Cap Corse, the northern peninsula of Corsica. The Blanc is Vermentino and Muscat grape must, held from fermenting with spirit, flavoured with cinchona, spices and cédrat, a thick-peeled citron.\n\nCap Corse Mattei Blanc is light, citrusy and softly bitter.\n\nThe house page prints it as Cap Corse Mattei Blanc Quinquina vermouth; strictly it is a quinquina, a cousin of vermouth. In the Spoonbill it plays the vermouth's part in a martini-style drink with Hendrick's gin and chive oil, with a spoon of caviar served alongside.",
+			"after": "A quinquina is a wine aperitif flavored with cinchona bark, the source of quinine, which gives it a gentle bitterness. Louis-Napoléon Mattei opened his house in Bastia in 1872 and made his first quinquina wine in 1875; the aperitif is named for Cap Corse, the northern peninsula of Corsica. The Blanc is Vermentino and Muscat grape must, held from fermenting with spirit, flavored with cinchona, spices and cédrat, a thick-peeled citron.\n\nCap Corse Mattei Blanc is light, citrusy and softly bitter.\n\nThe house page prints it as Cap Corse Mattei Blanc Quinquina vermouth; strictly it is a quinquina, a cousin of vermouth. In the Spoonbill it plays the vermouth's part in a martini-style drink with Hendrick's gin and chive oil, with a spoon of caviar served alongside.",
 			"words": [
+				"flavoured",
 				"flavoured"
 			]
 		},
@@ -1220,6 +1285,14 @@
 			"after": "The pistachio is the seed of a small tree native to Iran and Central Asia, now grown widely in California, Iran and Turkey. Roasted, it tastes sweet, buttery and gently resinous, with a green color that marks pistachio desserts.\n\nIn drinks it usually arrives as a syrup, an orgeat-style nut milk or a liqueur, because whole nuts cannot be shaken smooth.\n\nThe Bodrum prints pistachio with rum, cream, lime and sparkling water. How the pistachio goes in is not printed, so the bar confirms it. The guide's service note says pistachio and cream, as printed, and any question about nuts goes to that note and lineup, never a guess.",
 			"words": [
 				"colour"
+			]
+		},
+		{
+			"path": "house.components[271].explain",
+			"before": "Gentilly Gin is made in New Orleans by Seven Three Distilling Co., which opened in 2017 in Tremé; the name Seven Three is a nod to the city's 73 neighbourhoods, and Gentilly is one of them.\n\nIts seventeen botanicals were inspired by the traiteurs, the old folk healers of south Louisiana, and include elderflower and persimmon; it is bottled at 87 proof, and the distillery also makes a barrel-aged version.\n\nIn the OBX it meets peach, lemon and the softly sweet Elio Perrone Bigaro. A local gin in a courtyard drink is a good story for a visitor; which Gentilly bottling the bar pours is worth confirming.",
+			"after": "Gentilly Gin is made in New Orleans by Seven Three Distilling Co., which opened in 2017 in Tremé; the name Seven Three is a nod to the city's 73 neighborhoods, and Gentilly is one of them.\n\nIts seventeen botanicals were inspired by the traiteurs, the old folk healers of south Louisiana, and include elderflower and persimmon; it is bottled at 87 proof, and the distillery also makes a barrel-aged version.\n\nIn the OBX it meets peach, lemon and the softly sweet Elio Perrone Bigaro. A local gin in a courtyard drink is a good story for a visitor; which Gentilly bottling the bar pours is worth confirming.",
+			"words": [
+				"neighbourhoods"
 			]
 		},
 		{
@@ -1328,16 +1401,16 @@
 		},
 		{
 			"path": "house.components[291].explain",
-			"before": "Cathead is a distillery in Jackson, Mississippi, founded in 2010 and the first distillery in the state. Among its spirits is a Satsuma mandarin flavoured vodka; the menu prints Cathead Mandarin Vodka, and that is the name to say.\n\nA mandarin vodka carries a sweet, sunny tangerine aroma over a clean spirit; satsumas, a seedless mandarin, grow well along the Gulf Coast.\n\nIn Five Minutes More it is the base of an herbal sour with Green Chartreuse, Licor 43 and lemon: mandarin and lemon first, then the deep herbs, then a soft vanilla finish. A spirit from just up the road gives the visitor a regional story.",
-			"after": "Cathead is a distillery in Jackson, Mississippi, founded in 2010 and the first distillery in the state. Among its spirits is a Satsuma mandarin flavored vodka; the menu prints Cathead Mandarin Vodka, and that is the name to say.\n\nA mandarin vodka carries a sweet, sunny tangerine aroma over a clean spirit; satsumas, a seedless mandarin, grow well along the Gulf Coast.\n\nIn Five Minutes More it is the base of an herbal sour with Green Chartreuse, Licor 43 and lemon: mandarin and lemon first, then the deep herbs, then a soft vanilla finish. A spirit from just up the road gives the visitor a regional story.",
+			"before": "Cathead is a distillery in Jackson, Mississippi, founded in 2010 and described as the first legal distillery in the state. Among its spirits is a Satsuma mandarin flavoured vodka; the menu prints Cathead Mandarin Vodka, and that is the name to say.\n\nA mandarin vodka carries a sweet, sunny tangerine aroma over a clean spirit; satsumas, a seedless mandarin, grow well along the Gulf Coast.\n\nIn Five Minutes More it is the base of an herbal sour with Green Chartreuse, Licor 43 and lemon: mandarin and lemon first, then the deep herbs, then a soft vanilla finish. A spirit from just up the road gives the visitor a regional story.",
+			"after": "Cathead is a distillery in Jackson, Mississippi, founded in 2010 and described as the first legal distillery in the state. Among its spirits is a Satsuma mandarin flavored vodka; the menu prints Cathead Mandarin Vodka, and that is the name to say.\n\nA mandarin vodka carries a sweet, sunny tangerine aroma over a clean spirit; satsumas, a seedless mandarin, grow well along the Gulf Coast.\n\nIn Five Minutes More it is the base of an herbal sour with Green Chartreuse, Licor 43 and lemon: mandarin and lemon first, then the deep herbs, then a soft vanilla finish. A spirit from just up the road gives the visitor a regional story.",
 			"words": [
 				"flavoured"
 			]
 		},
 		{
 			"path": "house.components[292].explain",
-			"before": "Chartreuse is a herbal liqueur made by Carthusian monks in the French Alps since 1737, from a secret recipe of 130 herbs, plants and flowers traced to a manuscript of 1605. Green Chartreuse, the stronger of the two main colours at 55 percent, is intense, herbal, minty and peppery, with a long sweet finish; the colour is natural.\n\nIt is a bartender's favourite in small amounts, the backbone of classics such as the Last Word.\n\nIn Five Minutes More it gives the deep green herbal middle between the mandarin vodka and lemon at the start and the vanilla of Licor 43 at the end. It makes the drink strong and layered, a slow sipper.",
-			"after": "Chartreuse is a herbal liqueur made by Carthusian monks in the French Alps since 1737, from a secret recipe of 130 herbs, plants and flowers traced to a manuscript of 1605. Green Chartreuse, the stronger of the two main colors at 55 percent, is intense, herbal, minty and peppery, with a long sweet finish; the color is natural.\n\nIt is a bartender's favorite in small amounts, the backbone of classics such as the Last Word.\n\nIn Five Minutes More it gives the deep green herbal middle between the mandarin vodka and lemon at the start and the vanilla of Licor 43 at the end. It makes the drink strong and layered, a slow sipper.",
+			"before": "Chartreuse is a herbal liqueur made by Carthusian monks in the French Alps from a secret recipe of 130 herbs, plants and flowers, traced to a manuscript given to the order in 1605; the monks had a practical recipe for their Elixir by 1737. Green Chartreuse, adapted from it in 1764 by most accounts, is the stronger of the two main colours at 55 percent: intense, herbal, minty and peppery, with a long sweet finish; the colour is natural.\n\nIt is a bartender's favourite in small amounts, the backbone of classics such as the Last Word.\n\nIn Five Minutes More it gives the deep green herbal middle between the mandarin vodka and lemon at the start and the vanilla of Licor 43 at the end. It makes the drink strong and layered, a slow sipper.",
+			"after": "Chartreuse is a herbal liqueur made by Carthusian monks in the French Alps from a secret recipe of 130 herbs, plants and flowers, traced to a manuscript given to the order in 1605; the monks had a practical recipe for their Elixir by 1737. Green Chartreuse, adapted from it in 1764 by most accounts, is the stronger of the two main colors at 55 percent: intense, herbal, minty and peppery, with a long sweet finish; the color is natural.\n\nIt is a bartender's favorite in small amounts, the backbone of classics such as the Last Word.\n\nIn Five Minutes More it gives the deep green herbal middle between the mandarin vodka and lemon at the start and the vanilla of Licor 43 at the end. It makes the drink strong and layered, a slow sipper.",
 			"words": [
 				"colours",
 				"colour",
@@ -1350,6 +1423,14 @@
 			"after": "Licor 43 is a golden Spanish liqueur from Cartagena, made since 1946 from 43 ingredients, citrus, vanilla, herbs and spices, whose full list has never been published.\n\nIt tastes sweet and vanilla-led, with orange, lemon and a little cinnamon behind it; in Spain it is a favorite poured into coffee.\n\nIn Five Minutes More it rounds off the Green Chartreuse and mandarin vodka with a soft vanilla sweetness on the finish, balanced by lemon. The 1946 date is a neat coincidence for a list named for the songs of the year Brennan's opened; tell it only as coincidence.",
 			"words": [
 				"favourite"
+			]
+		},
+		{
+			"path": "house.components[295].explain",
+			"before": "Lyre's is an Australian maker of non-alcoholic spirits, built from water, natural flavours and distillates, agave syrup, salt and acid to imitate the taste of a spirit. Its agave is made to stand in for tequila: earthy and peppery, with a hint of citrus and smoke.\n\nLyre's labels its spirits under 0.5 percent alcohol, the non-alcoholic threshold, not zero.\n\nIn Oh! What It Seemed to Be it replaces the Volcán tequila of Old Buttermilk Sky, with fig syrup, lemon, cinnamon syrup and egg white. So a server says non-alcoholic rather than alcohol free, and reads the bottle at lineup for any guest who needs certainty.",
+			"after": "Lyre's is an Australian maker of non-alcoholic spirits, built from water, natural flavors and distillates, agave syrup, salt and acid to imitate the taste of a spirit. Its agave is made to stand in for tequila: earthy and peppery, with a hint of citrus and smoke.\n\nLyre's labels its spirits under 0.5 percent alcohol, the non-alcoholic threshold, not zero.\n\nIn Oh! What It Seemed to Be it replaces the Volcán tequila of Old Buttermilk Sky, with fig syrup, lemon, cinnamon syrup and egg white. So a server says non-alcoholic rather than alcohol free, and reads the bottle at lineup for any guest who needs certainty.",
+			"words": [
+				"flavours"
 			]
 		},
 		{
@@ -1698,6 +1779,14 @@
 			]
 		},
 		{
+			"path": "house.components[354].explain",
+			"before": "Chablis is the northernmost part of Burgundy, nearer Champagne than Beaune, and it makes only Chardonnay. Its cool climate and Kimmeridgian soil, limestone and clay full of fossilised oyster shells, give lean, crisp, steely wines that taste of lemon, green apple and a chalky, oyster-shell finish.\n\nThe tiers run Petit Chablis, Chablis, Premier Cru and Grand Cru. The seven Grand Crus, Les Preuses among them, sit on one slope facing south-west across the little Serein river.\n\nWe have Louis Michel's village Chablis and Montmains Premier Cru, made in steel with no oak, and Dauvissat's Les Preuses Grand Cru. Chablis with oysters is the oldest pairing advice there is.",
+			"after": "Chablis is the northernmost part of Burgundy, nearer Champagne than Beaune, and it makes only Chardonnay. Its cool climate and Kimmeridgian soil, limestone and clay full of fossilized oyster shells, give lean, crisp, steely wines that taste of lemon, green apple and a chalky, oyster-shell finish.\n\nThe tiers run Petit Chablis, Chablis, Premier Cru and Grand Cru. The seven Grand Crus, Les Preuses among them, sit on one slope facing south-west across the little Serein river.\n\nWe have Louis Michel's village Chablis and Montmains Premier Cru, made in steel with no oak, and Dauvissat's Les Preuses Grand Cru. Chablis with oysters is the oldest pairing advice there is.",
+			"words": [
+				"fossilised"
+			]
+		},
+		{
 			"path": "house.components[357].explain",
 			"before": "Meursault is the largest white wine village of the Côte de Beaune, and its Chardonnay is the richest of the great three: round, nutty and buttery, with hazelnut, ripe lemon, toast and a stony freshness underneath, usually from fermentation and ageing in oak barrels.\n\nIt has no Grand Cru, but famous Premier Crus such as Perrières, Charmes and Genevrières, and many named village vineyards, lieux-dits, like Les Tillets, Les Corbins and the Clos de la Baronne. Every November the village holds the Paulée de Meursault, a harvest feast.\n\nOur list carries Meursault from Jadot, Dupont-Fahn, Bitouzet-Prieur, Comtes Lafon and Leflaive's Sous le Dos d'Ane. For a guest who wants a rich, classic white with lobster or crab, this is the page.",
 			"after": "Meursault is the largest white wine village of the Côte de Beaune, and its Chardonnay is the richest of the great three: round, nutty and buttery, with hazelnut, ripe lemon, toast and a stony freshness underneath, usually from fermentation and aging in oak barrels.\n\nIt has no Grand Cru, but famous Premier Crus such as Perrières, Charmes and Genevrières, and many named village vineyards, lieux-dits, like Les Tillets, Les Corbins and the Clos de la Baronne. Every November the village holds the Paulée de Meursault, a harvest feast.\n\nOur list carries Meursault from Jadot, Dupont-Fahn, Bitouzet-Prieur, Comtes Lafon and Leflaive's Sous le Dos d'Ane. For a guest who wants a rich, classic white with lobster or crab, this is the page.",
@@ -1706,11 +1795,43 @@
 			]
 		},
 		{
+			"path": "house.components[357].card.back",
+			"before": "Meursault is rounder and nuttier, hazelnut and butter over a stony core; Puligny is more chiselled and floral. Both are great Côte de Beaune Chardonnay.",
+			"after": "Meursault is rounder and nuttier, hazelnut and butter over a stony core; Puligny is more chiseled and floral. Both are great Côte de Beaune Chardonnay.",
+			"words": [
+				"chiselled"
+			]
+		},
+		{
+			"path": "house.components[358].explain",
+			"before": "Puligny-Montrachet is the most famous white wine village in the world. It shares with Chassagne the Grand Cru Le Montrachet, and its own Grand Crus and Premier Crus give Chardonnay that is elegant, floral and chiselled: citrus, white flowers, hazelnut and a fine, chalky tension.\n\nThe water table is high here, so cellars are shallow and wines are often aged above ground. Saint-Aubin, tucked into the hills behind Puligny and Chassagne, makes wines in a similar style at a gentler price.\n\nWe have village Puligny from François Carillon and Domaine Leflaive, and Paul Pillot's Le Charmois Saint-Aubin Premier Cru. Recommend Saint-Aubin to a guest who loves Puligny but wants value.",
+			"after": "Puligny-Montrachet is the most famous white wine village in the world. It shares with Chassagne the Grand Cru Le Montrachet, and its own Grand Crus and Premier Crus give Chardonnay that is elegant, floral and chiseled: citrus, white flowers, hazelnut and a fine, chalky tension.\n\nThe water table is high here, so cellars are shallow and wines are often aged above ground. Saint-Aubin, tucked into the hills behind Puligny and Chassagne, makes wines in a similar style at a gentler price.\n\nWe have village Puligny from François Carillon and Domaine Leflaive, and Paul Pillot's Le Charmois Saint-Aubin Premier Cru. Recommend Saint-Aubin to a guest who loves Puligny but wants value.",
+			"words": [
+				"chiselled"
+			]
+		},
+		{
 			"path": "house.components[361].explain",
 			"before": "Nuits-Saint-Georges is the town that gives the Côte de Nuits its name. Its Pinot Noir is the sturdiest of the Côte: dark cherry and plum, earth, an iron or gamey note and firm tannin for Burgundy, needing a few years to soften.\n\nIt has no Grand Cru but many Premier Crus, including Les Saint-Georges and Les Pruliers on the south side of the town. The town is also a centre of the Burgundy trade, home to houses such as Faiveley.\n\nWe pour Henri Gouges, the reference name of the village, in a village half-bottle and Les Pruliers Premier Cru, and Grivot's Les Charmois. With the filet, the short rib or game, a Nuits-Saint-Georges is the Burgundy with the backbone.",
 			"after": "Nuits-Saint-Georges is the town that gives the Côte de Nuits its name. Its Pinot Noir is the sturdiest of the Côte: dark cherry and plum, earth, an iron or gamey note and firm tannin for Burgundy, needing a few years to soften.\n\nIt has no Grand Cru but many Premier Crus, including Les Saint-Georges and Les Pruliers on the south side of the town. The town is also a center of the Burgundy trade, home to houses such as Faiveley.\n\nWe pour Henri Gouges, the reference name of the village, in a village half-bottle and Les Pruliers Premier Cru, and Grivot's Les Charmois. With the filet, the short rib or game, a Nuits-Saint-Georges is the Burgundy with the backbone.",
 			"words": [
 				"centre"
+			]
+		},
+		{
+			"path": "house.components[367].explain",
+			"before": "Gigondas and Beaumes-de-Venise are neighbouring villages under the Dentelles de Montmirail, a jagged limestone ridge whose name means the lace of Montmirail.\n\nGigondas makes powerful, Grenache-led reds with Syrah and Mourvèdre, from terraces rising up the slopes: ripe red and black cherry, garrigue, pepper and firm tannin, often called a junior Châteauneuf. Beaumes-de-Venise is famous for its sweet Muscat, but its dry red, Grenache and Syrah, is lighter and juicy.\n\nWe pour Domaine de Durban's red by the glass, and Gigondas from Raspail-Ay in a half-bottle and Saint Damien's La Louisianne. Say: the value step to Châteauneuf.",
+			"after": "Gigondas and Beaumes-de-Venise are neighboring villages under the Dentelles de Montmirail, a jagged limestone ridge whose name means the lace of Montmirail.\n\nGigondas makes powerful, Grenache-led reds with Syrah and Mourvèdre, from terraces rising up the slopes: ripe red and black cherry, garrigue, pepper and firm tannin, often called a junior Châteauneuf. Beaumes-de-Venise is famous for its sweet Muscat, but its dry red, Grenache and Syrah, is lighter and juicy.\n\nWe pour Domaine de Durban's red by the glass, and Gigondas from Raspail-Ay in a half-bottle and Saint Damien's La Louisianne. Say: the value step to Châteauneuf.",
+			"words": [
+				"neighbouring"
+			]
+		},
+		{
+			"path": "house.components[367].card.back",
+			"before": "Neighbouring Grenache-led reds with Syrah and Mourvèdre, powerful and spicy, at a gentler price. It sits under the Dentelles de Montmirail.",
+			"after": "Neighboring Grenache-led reds with Syrah and Mourvèdre, powerful and spicy, at a gentler price. It sits under the Dentelles de Montmirail.",
+			"words": [
+				"Neighbouring"
 			]
 		},
 		{
@@ -1732,8 +1853,9 @@
 		{
 			"path": "house.components[369].explain",
 			"before": "Bandol is a small appellation on the Provençal coast between Marseille and Toulon, with terraced slopes in an amphitheatre facing the sea. It is the home of Mourvèdre, which needs this heat and sea light to ripen.\n\nIts reds must be at least half Mourvèdre and are aged at least eighteen months in wood, dark, gamey and long-lived. Its rosé, Mourvèdre with Grenache and Cinsault, is the most serious in Provence: salmon-pink, savoury and structured, with garrigue and blood orange.\n\nLucien Peyraud of Domaine Tempier helped make Bandol its own appellation in 1941. We pour the Tempier Bandol rosé, the rosé for a guest who wants pink with real substance.",
-			"after": "Bandol is a small appellation on the Provençal coast between Marseille and Toulon, with terraced slopes in an amphitheatre facing the sea. It is the home of Mourvèdre, which needs this heat and sea light to ripen.\n\nIts reds must be at least half Mourvèdre and are aged at least eighteen months in wood, dark, gamey and long-lived. Its rosé, Mourvèdre with Grenache and Cinsault, is the most serious in Provence: salmon-pink, savory and structured, with garrigue and blood orange.\n\nLucien Peyraud of Domaine Tempier helped make Bandol its own appellation in 1941. We pour the Tempier Bandol rosé, the rosé for a guest who wants pink with real substance.",
+			"after": "Bandol is a small appellation on the Provençal coast between Marseille and Toulon, with terraced slopes in an amphitheater facing the sea. It is the home of Mourvèdre, which needs this heat and sea light to ripen.\n\nIts reds must be at least half Mourvèdre and are aged at least eighteen months in wood, dark, gamey and long-lived. Its rosé, Mourvèdre with Grenache and Cinsault, is the most serious in Provence: salmon-pink, savory and structured, with garrigue and blood orange.\n\nLucien Peyraud of Domaine Tempier helped make Bandol its own appellation in 1941. We pour the Tempier Bandol rosé, the rosé for a guest who wants pink with real substance.",
 			"words": [
+				"amphitheatre",
 				"savoury"
 			]
 		},
@@ -1941,6 +2063,14 @@
 			]
 		},
 		{
+			"path": "house.components[420].explain",
+			"before": "Goldkapsel, gold capsule, is a German grower's signal, not a legal category. A grower bottles a richer, more concentrated selection of the same Prädikat, usually from riper or botrytised berries, and dresses it with a gold foil capsule. A long gold capsule, lange Goldkapsel, marks an even finer selection.\n\nSo a Goldkapsel Auslese is richer and sweeter than the same grower's plain Auslese, and usually made in small amounts, often in half-bottles.\n\nOur gold capsule wines are Dönnhoff's two Auslesen from the Brücke and the Hermannshöhle, Prüm's Wehlener Sonnenuhr Auslese in magnum and Dr. Hermann's Würzgarten Kranklei Spätlese. Point to the capsule when you present the bottle.",
+			"after": "Goldkapsel, gold capsule, is a German grower's signal, not a legal category. A grower bottles a richer, more concentrated selection of the same Prädikat, usually from riper or botrytized berries, and dresses it with a gold foil capsule. A long gold capsule, lange Goldkapsel, marks an even finer selection.\n\nSo a Goldkapsel Auslese is richer and sweeter than the same grower's plain Auslese, and usually made in small amounts, often in half-bottles.\n\nOur gold capsule wines are Dönnhoff's two Auslesen from the Brücke and the Hermannshöhle, Prüm's Wehlener Sonnenuhr Auslese in magnum and Dr. Hermann's Würzgarten Kranklei Spätlese. Point to the capsule when you present the bottle.",
+			"words": [
+				"botrytised"
+			]
+		},
+		{
 			"path": "house.components[421].explain",
 			"before": "An off-dry wine has a little sugar left in it, enough to taste as a soft roundness but not as dessert. In a high-acid grape like Riesling the acidity balances the sugar, so the wine tastes juicy rather than sweet.\n\nGerman growers use feinherb, or halbtrocken, for wines just off dry. The Berres Old Vines by the glass carries about twenty grams of sugar a litre at only 11.5 per cent alcohol; Stein's Weihwasser and Palmberg-Terrassen are feinherb.\n\nOff-dry wine is a server's secret weapon with Creole spice, smoke, sweet glazes and the maple on the duck: the touch of sugar cools heat that would make a dry wine taste bitter and hot.",
 			"after": "An off-dry wine has a little sugar left in it, enough to taste as a soft roundness but not as dessert. In a high-acid grape like Riesling the acidity balances the sugar, so the wine tastes juicy rather than sweet.\n\nGerman growers use feinherb, or halbtrocken, for wines just off dry. The Berres Old Vines by the glass carries about twenty grams of sugar a liter at only 11.5 percent alcohol; Stein's Weihwasser and Palmberg-Terrassen are feinherb.\n\nOff-dry wine is a server's secret weapon with Creole spice, smoke, sweet glazes and the maple on the duck: the touch of sugar cools heat that would make a dry wine taste bitter and hot.",
@@ -2093,6 +2223,22 @@
 			]
 		},
 		{
+			"path": "house.components[446].explain",
+			"before": "The Coravin system lets us pour a glass of a fine still wine without pulling the cork. A thin, hollow needle passes through the cork; the bottle is pressurised with argon, an inert gas, which pushes the wine out through the needle. When the needle is withdrawn, the natural cork closes up again and the argon protects the wine left inside.\n\nSo a bottle such as the Domaine Leflaive Mâcon-Verzé can be poured by the glass over weeks without spoiling, and a guest can taste a great white Burgundy without buying the bottle.\n\nAt the table, say: poured by Coravin, so the bottle is never opened. Present the label. Who handles the device and the house's limits are questions for the bar.",
+			"after": "The Coravin system lets us pour a glass of a fine still wine without pulling the cork. A thin, hollow needle passes through the cork; the bottle is pressurized with argon, an inert gas, which pushes the wine out through the needle. When the needle is withdrawn, the natural cork closes up again and the argon protects the wine left inside.\n\nSo a bottle such as the Domaine Leflaive Mâcon-Verzé can be poured by the glass over weeks without spoiling, and a guest can taste a great white Burgundy without buying the bottle.\n\nAt the table, say: poured by Coravin, so the bottle is never opened. Present the label. Who handles the device and the house's limits are questions for the bar.",
+			"words": [
+				"pressurised"
+			]
+		},
+		{
+			"path": "house.components[447].card.back",
+			"before": "Under a Coravin Sparkling stopper that re-pressurises the opened bottle. The cork is out, so reseal right after each pour and confirm the house limit.",
+			"after": "Under a Coravin Sparkling stopper that re-pressurizes the opened bottle. The cork is out, so reseal right after each pour and confirm the house limit.",
+			"words": [
+				"pressurises"
+			]
+		},
+		{
 			"path": "house.components[450].explain",
 			"before": "A magnum holds 1.5 litres, two standard bottles; a double magnum, called a Jeroboam in Champagne, holds 3 litres, four bottles. Larger bottles still have Biblical names, such as Rehoboam and Methuselah.\n\nWine ages more slowly and gracefully in large bottles, because there is less air for each drop of wine, which is why collectors prize them. And nothing makes a table's toast like a magnum.\n\nOur large formats include the Billecart-Salmon 80th anniversary magnum, the Bollinger and Piper-Heidsieck magnums, the Taittinger double magnum and Prüm's Auslese in magnum. Carry it with both hands, open it like any Champagne, pour in small first pours, and keep it in a deep bucket.",
 			"after": "A magnum holds 1.5 liters, two standard bottles; a double magnum, called a Jeroboam in Champagne, holds 3 liters, four bottles. Larger bottles still have Biblical names, such as Rehoboam and Methuselah.\n\nWine ages more slowly and gracefully in large bottles, because there is less air for each drop of wine, which is why collectors prize them. And nothing makes a table's toast like a magnum.\n\nOur large formats include the Billecart-Salmon 80th anniversary magnum, the Bollinger and Piper-Heidsieck magnums, the Taittinger double magnum and Prüm's Auslese in magnum. Carry it with both hands, open it like any Champagne, pour in small first pours, and keep it in a deep bucket.",
@@ -2121,9 +2267,10 @@
 		{
 			"path": "house.components[454].explain",
 			"before": "A corked wine has been tainted by a compound called TCA, usually from the cork. It smells of wet cardboard, a damp cellar or a musty basement, and the fruit seems flat and muted. It affects a small share of bottles sealed with natural cork, and it is never anyone's fault at the table.\n\nWhen the host tastes and frowns, smell the cork and the glass, or ask the sommelier to. If the wine is faulty, apologise, take the bottle away and bring another, without debate.\n\nOther faults are rarer: a bottle that is oxidised, flat and brown, or cooked by heat. A wine the guest simply dislikes is a different matter, for the sommelier or manager to handle.",
-			"after": "A corked wine has been tainted by a compound called TCA, usually from the cork. It smells of wet cardboard, a damp cellar or a musty basement, and the fruit seems flat and muted. It affects a small share of bottles sealed with natural cork, and it is never anyone's fault at the table.\n\nWhen the host tastes and frowns, smell the cork and the glass, or ask the sommelier to. If the wine is faulty, apologize, take the bottle away and bring another, without debate.\n\nOther faults are rarer: a bottle that is oxidised, flat and brown, or cooked by heat. A wine the guest simply dislikes is a different matter, for the sommelier or manager to handle.",
+			"after": "A corked wine has been tainted by a compound called TCA, usually from the cork. It smells of wet cardboard, a damp cellar or a musty basement, and the fruit seems flat and muted. It affects a small share of bottles sealed with natural cork, and it is never anyone's fault at the table.\n\nWhen the host tastes and frowns, smell the cork and the glass, or ask the sommelier to. If the wine is faulty, apologize, take the bottle away and bring another, without debate.\n\nOther faults are rarer: a bottle that is oxidized, flat and brown, or cooked by heat. A wine the guest simply dislikes is a different matter, for the sommelier or manager to handle.",
 			"words": [
-				"apologise"
+				"apologise",
+				"oxidised"
 			]
 		},
 		{
@@ -2156,6 +2303,14 @@
 			"after": "Piper-Heidsieck of Reims, founded in 1785 by Florens-Louis Heidsieck, who presented his wine to Marie Antoinette. Say labeled for us, not made for us.",
 			"words": [
 				"labelled"
+			]
+		},
+		{
+			"path": "house.components[459].explain",
+			"before": "Rare began as Piper-Heidsieck's prestige cuvée, first made from the 1976 harvest, a year of record heat. It is declared only in exceptional years, about a dozen vintages in half a century, and is now run as its own house, Rare Champagne, in Reims.\n\nIts bottle wears a jewelled dress that recalls a design Fabergé made for the house in the nineteenth century. The wine is Chardonnay-led with Pinot Noir from Grand Cru sites, aged about a decade on its lees: white peach, candied citrus and toasted almond.\n\nWe pour Rare 2012 by the glass under the Coravin Sparkling stopper and list the 2013 by the bottle; the glass page now prints a 2013, so read the label before naming the vintage.",
+			"after": "Rare began as Piper-Heidsieck's prestige cuvée, first made from the 1976 harvest, a year of record heat. It is declared only in exceptional years, about a dozen vintages in half a century, and is now run as its own house, Rare Champagne, in Reims.\n\nIts bottle wears a jeweled dress that recalls a design Fabergé made for the house in the nineteenth century. The wine is Chardonnay-led with Pinot Noir from Grand Cru sites, aged about a decade on its lees: white peach, candied citrus and toasted almond.\n\nWe pour Rare 2012 by the glass under the Coravin Sparkling stopper and list the 2013 by the bottle; the glass page now prints a 2013, so read the label before naming the vintage.",
+			"words": [
+				"jewelled"
 			]
 		},
 		{
@@ -2405,6 +2560,15 @@
 			]
 		},
 		{
+			"path": "house.components[139].producer.notes[3]",
+			"before": "The orange is annatto, a plant colouring, the same seed that turns some cheddar orange; dietary questions about the colouring go to the kitchen.",
+			"after": "The orange is annatto, a plant coloring, the same seed that turns some cheddar orange; dietary questions about the coloring go to the kitchen.",
+			"words": [
+				"colouring",
+				"colouring"
+			]
+		},
+		{
 			"path": "house.components[120].producer.history",
 			"before": "What Americans call a Castelvetrano olive is, strictly, a way of preparing an olive. The variety is Nocellara del Belice, grown in the Valle del Belice in south-western Sicily, a dual-purpose olive pressed for oil and cured for the table. One of its table preparations is named for the comune of Castelvetrano in the valley, and olives treated that way are sold in the United States as Castelvetrano olives.\n\nThe method explains the taste. The olives are picked young and green and washed in a lye and water solution, which strips their natural bitterness completely in a matter of weeks; they are then kept in brine without fermenting. Skipping fermentation keeps the vivid emerald colour and leaves a mild, buttery, almost sweet olive with a crisp bite. The Sevillian method, by contrast, debitters partly and ferments, for a sharper olive.\n\nIn 1998 Nocellara del Belice was awarded a Protected Designation of Origin, and the variety now carries two: Nocellara del Belice DOP table olives and Valle del Belìce DOP extra virgin olive oil, which must be at least 70 per cent Nocellara.",
 			"after": "What Americans call a Castelvetrano olive is, strictly, a way of preparing an olive. The variety is Nocellara del Belice, grown in the Valle del Belice in south-western Sicily, a dual-purpose olive pressed for oil and cured for the table. One of its table preparations is named for the comune of Castelvetrano in the valley, and olives treated that way are sold in the United States as Castelvetrano olives.\n\nThe method explains the taste. The olives are picked young and green and washed in a lye and water solution, which strips their natural bitterness completely in a matter of weeks; they are then kept in brine without fermenting. Skipping fermentation keeps the vivid emerald color and leaves a mild, buttery, almost sweet olive with a crisp bite. The Sevillian method, by contrast, debitters partly and ferments, for a sharper olive.\n\nIn 1998 Nocellara del Belice was awarded a Protected Designation of Origin, and the variety now carries two: Nocellara del Belice DOP table olives and Valle del Belìce DOP extra virgin olive oil, which must be at least 70 percent Nocellara.",
@@ -2428,6 +2592,14 @@
 			"words": [
 				"recognised",
 				"per cent"
+			]
+		},
+		{
+			"path": "house.components[70].producer.history",
+			"before": "Burrata is a fresh cheese of the Murgia in Puglia, made from cow's milk, rennet and cream: a pouch of mozzarella filled with shreds of curd soaked in cream. Its birthplace is the town of Andria, though the date is argued. Some place it about 1900, at the farm of the brothers Lorenzo and Vincenzo Bianchino; more recent records credit Lorenzo Bianchino of the Piana Padura farm with first making it in 1956.\n\nThe story told in Puglia is of a heavy February snowfall that kept Bianchino from the market. With milk that would not keep, he wrapped curd, scraps of mozzarella and the cream from the morning milking inside a skin of mozzarella, so nothing was wasted.\n\nFor decades it stayed a local fresh cheese that had to be eaten within days. In November 2016 Burrata di Andria became a protected geographical indication, an IGP, recognising the town's claim.\n\nOn the Creole Tomato Tostada it does what mozzarella does in a caprese: a cool, milky foil for raw Louisiana tomatoes, torn and served at room temperature.",
+			"after": "Burrata is a fresh cheese of the Murgia in Puglia, made from cow's milk, rennet and cream: a pouch of mozzarella filled with shreds of curd soaked in cream. Its birthplace is the town of Andria, though the date is argued. Some place it about 1900, at the farm of the brothers Lorenzo and Vincenzo Bianchino; more recent records credit Lorenzo Bianchino of the Piana Padura farm with first making it in 1956.\n\nThe story told in Puglia is of a heavy February snowfall that kept Bianchino from the market. With milk that would not keep, he wrapped curd, scraps of mozzarella and the cream from the morning milking inside a skin of mozzarella, so nothing was wasted.\n\nFor decades it stayed a local fresh cheese that had to be eaten within days. In November 2016 Burrata di Andria became a protected geographical indication, an IGP, recognizing the town's claim.\n\nOn the Creole Tomato Tostada it does what mozzarella does in a caprese: a cool, milky foil for raw Louisiana tomatoes, torn and served at room temperature.",
+			"words": [
+				"recognising"
 			]
 		},
 		{
@@ -2462,6 +2634,14 @@
 			"after": "D.O. Jerez-Xeres-Sherry, recognized in 1933, was the first under Spain's wine law; Rioja dates its own to 1925.",
 			"words": [
 				"recognised"
+			]
+		},
+		{
+			"path": "house.components[127].producer.facts[4]",
+			"before": "Already heated and oxidised, Madeira keeps for decades, even after opening.",
+			"after": "Already heated and oxidized, Madeira keeps for decades, even after opening.",
+			"words": [
+				"oxidised"
 			]
 		},
 		{
@@ -2538,6 +2718,22 @@
 			]
 		},
 		{
+			"path": "house.components[125].producer.notes[1]",
+			"before": "The duck and geese story is true and memorable: the birds help fertilise the rice.",
+			"after": "The duck and geese story is true and memorable: the birds help fertilize the rice.",
+			"words": [
+				"fertilise"
+			]
+		},
+		{
+			"path": "house.components[125].producer.sayIt",
+			"before": "The rice grits come from Two Brooks Farm in the Mississippi Delta, a family rice farm where wintering ducks help fertilise the fields.",
+			"after": "The rice grits come from Two Brooks Farm in the Mississippi Delta, a family rice farm where wintering ducks help fertilize the fields.",
+			"words": [
+				"fertilise"
+			]
+		},
+		{
 			"path": "house.components[22].producer.history",
 			"before": "In 1923 Alvin A. Baumer borrowed money from his future in-laws and bought Mill's Fruit Products, a small snow-cone syrup company on Tchoupitoulas Street. Tucked in a drawer was a recipe for a pepper sauce labelled Crystal Pure. Baumer renamed it Crystal Pure Louisiana Hot Sauce and began bottling it in the city.\n\nFor decades Baumer Foods was as much a maker of jellies, preserves and mustard as of hot sauce. From the 1940s it bottled Crystal on Tulane Avenue, where a neon sign of a chef stirring a steaming pot of strawberry jam became a local landmark. The flooding after Hurricane Katrina in 2005 ruined that plant and forced the company to drop its historic preserves, jellies and mustard; it moved upriver to Reserve, Louisiana, at the Port of South Louisiana, 9 feet above sea level.\n\nThe recipe is short: aged red cayenne peppers, distilled vinegar and salt, giving a reddish orange sauce with medium heat. The company is still family owned, led by Alvin \"Al\" Baumer Jr.",
 			"after": "In 1923 Alvin A. Baumer borrowed money from his future in-laws and bought Mill's Fruit Products, a small snow-cone syrup company on Tchoupitoulas Street. Tucked in a drawer was a recipe for a pepper sauce labeled Crystal Pure. Baumer renamed it Crystal Pure Louisiana Hot Sauce and began bottling it in the city.\n\nFor decades Baumer Foods was as much a maker of jellies, preserves and mustard as of hot sauce. From the 1940s it bottled Crystal on Tulane Avenue, where a neon sign of a chef stirring a steaming pot of strawberry jam became a local landmark. The flooding after Hurricane Katrina in 2005 ruined that plant and forced the company to drop its historic preserves, jellies and mustard; it moved upriver to Reserve, Louisiana, at the Port of South Louisiana, 9 feet above sea level.\n\nThe recipe is short: aged red cayenne peppers, distilled vinegar and salt, giving a reddish orange sauce with medium heat. The company is still family owned, led by Alvin \"Al\" Baumer Jr.",
@@ -2560,6 +2756,14 @@
 			"after": "Louisiana cane syrup is cane juice concentrated by long cooking in open kettles, with nothing taken out and nothing added. Slow Food lists traditional cane syrup on its Ark of Taste, the catalog of heritage foods worth saving.\n\nThe name most Louisianans reach for is Steen's. In 1910 an early freeze hit Charley Steen's cane crop near Abbeville. Rather than lose it, he built a small mill and turned the frozen cane into a few barrels of syrup. By 1930 Charley and Elizabeth Steen and their children had built a larger mill in the heart of Abbeville, on the banks of Bayou Vermilion, and from the 1950s the yellow can became a fixture of Cajun and Creole kitchens. The mill is still run by the Steen family and still cooks in open kettles, which is why the label reads 100% Pure Cane Syrup.\n\nBrennan's menu prints cane syrup on the peaches of the Roasted Rohan Duck Breast but names no maker, so Steen's is the story of the style, not a claim about the kitchen's bottle.",
 			"words": [
 				"catalogue"
+			]
+		},
+		{
+			"path": "house.components[57].producer.facts[5]",
+			"before": "Molasses is what remains after sugar is crystallised out; cane syrup has nothing removed.",
+			"after": "Molasses is what remains after sugar is crystallized out; cane syrup has nothing removed.",
+			"words": [
+				"crystallised"
 			]
 		},
 		{
@@ -2597,9 +2801,10 @@
 		{
 			"path": "house.components[143].producer.history",
 			"before": "South Louisiana Rice Dressing carries its place in its name. Rice growing on the southwest Louisiana prairie began in earnest in the early 1880s, and by 1890 a record crop of 80 million pounds made Louisiana the leading rice state, overtaking South Carolina. Crowley, the seat of Acadia Parish, became the centre of the industry, its fields watered by canals and wells.\n\nBetween 1800 and 1920 the region changed from subsistence farming and open-range cattle country into the first mechanised commercial rice region in the world, and southwest Louisiana still holds nearly 500,000 acres of rice land.\n\nThat is why rice, not bread, is the stuffing of south Louisiana: rice dressing is cooked rice folded into browned meat and the holy trinity, a Sunday and holiday dish. Brennan's prints the side with no description and no rice brand, so the meats and the rice are questions for the kitchen.",
-			"after": "South Louisiana Rice Dressing carries its place in its name. Rice growing on the southwest Louisiana prairie began in earnest in the early 1880s, and by 1890 a record crop of 80 million pounds made Louisiana the leading rice state, overtaking South Carolina. Crowley, the seat of Acadia Parish, became the center of the industry, its fields watered by canals and wells.\n\nBetween 1800 and 1920 the region changed from subsistence farming and open-range cattle country into the first mechanised commercial rice region in the world, and southwest Louisiana still holds nearly 500,000 acres of rice land.\n\nThat is why rice, not bread, is the stuffing of south Louisiana: rice dressing is cooked rice folded into browned meat and the holy trinity, a Sunday and holiday dish. Brennan's prints the side with no description and no rice brand, so the meats and the rice are questions for the kitchen.",
+			"after": "South Louisiana Rice Dressing carries its place in its name. Rice growing on the southwest Louisiana prairie began in earnest in the early 1880s, and by 1890 a record crop of 80 million pounds made Louisiana the leading rice state, overtaking South Carolina. Crowley, the seat of Acadia Parish, became the center of the industry, its fields watered by canals and wells.\n\nBetween 1800 and 1920 the region changed from subsistence farming and open-range cattle country into the first mechanized commercial rice region in the world, and southwest Louisiana still holds nearly 500,000 acres of rice land.\n\nThat is why rice, not bread, is the stuffing of south Louisiana: rice dressing is cooked rice folded into browned meat and the holy trinity, a Sunday and holiday dish. Brennan's prints the side with no description and no rice brand, so the meats and the rice are questions for the kitchen.",
 			"words": [
-				"centre"
+				"centre",
+				"mechanised"
 			]
 		},
 		{
@@ -2608,6 +2813,14 @@
 			"after": "Crowley, seat of Acadia Parish, became the center of southwestern Louisiana's rice industry.",
 			"words": [
 				"centre"
+			]
+		},
+		{
+			"path": "house.components[143].producer.facts[3]",
+			"before": "Southwestern Louisiana became the first mechanised commercial rice region in the world by 1920.",
+			"after": "Southwestern Louisiana became the first mechanized commercial rice region in the world by 1920.",
+			"words": [
+				"mechanised"
 			]
 		},
 		{
@@ -2624,6 +2837,427 @@
 			"after": "Tasso belongs to the boucherie, the communal hog butchering of Acadiana, where neighbors killed a pig together and shared every part. The boucherie gave the Cajun larder boudin, cracklin', andouille and tasso, and tasso was traditionally made from the last lean pieces: a seasoning meat, not a meal.\n\nIt is often called a ham, but the name misleads. Tasso is cut from the shoulder, not the hind leg. The shoulder is sliced across the grain into pieces about three inches thick, cured briefly in salt and sugar for only three or four hours, rinsed, rubbed with cayenne and garlic, and hot-smoked until cooked through. The smokehouse has its own Acadian French word, boucanière.\n\nCooks rarely eat tasso on its own. They dice it into jambalaya, stews and braised vegetables, where a little carries smoke, salt and heat through the pot. At Brennan's it seasons the Creole sauce of the New Orleans Shrimp & Grits. The menu names no maker, so who smokes it is a question for the kitchen.",
 			"words": [
 				"neighbours"
+			]
+		},
+		{
+			"path": "house.components[238].producer.history",
+			"before": "Sazerac Rye carries the name of a bar. In the 1850s the Sazerac Coffee House in New Orleans took its name from Sazerac de Forge et Fils cognac, which by the company's account went into its house cocktail. Thomas H. Handy took over the coffee house in 1869, and as phylloxera ruined the European vineyards, rye whiskey took the cognac's place in the city's drink.\n\nThe bottle is the Sazerac Company's namesake straight rye, distilled at Buffalo Trace in Frankfort, Kentucky, and bottled at 90 proof. It was once labelled 6 years old and now carries no age statement; the mash bill is not disclosed, and it shares its grain recipe with Sazerac 18 Year and Thomas H. Handy. Reviewers find it light bodied for a rye, with apricot, orange peel, caramel and vanilla over the pepper.\n\nThe company grew from Handy's firm, which also came to own Antoine Peychaud's bitters. It was reorganised as the Sazerac Company in 1919, rode out Prohibition as a grocery wholesaler, and in 1948 was bought by Magnolia Liquor, a New Orleans wholesaler founded by two partners; the family of one of them owns it still. It bought Herbsaint in 1949 and the distillery now called Buffalo Trace in 1992, and it remains privately held, headquartered in Metairie, with more than 500 brands. All three bottles of the Classic Sazerac are its own.\n\nIn 2019 it opened the Sazerac House at the corner of Canal and Magazine, a museum with a small still that makes Sazerac rye.",
+			"after": "Sazerac Rye carries the name of a bar. In the 1850s the Sazerac Coffee House in New Orleans took its name from Sazerac de Forge et Fils cognac, which by the company's account went into its house cocktail. Thomas H. Handy took over the coffee house in 1869, and as phylloxera ruined the European vineyards, rye whiskey took the cognac's place in the city's drink.\n\nThe bottle is the Sazerac Company's namesake straight rye, distilled at Buffalo Trace in Frankfort, Kentucky, and bottled at 90 proof. It was once labeled 6 years old and now carries no age statement; the mash bill is not disclosed, and it shares its grain recipe with Sazerac 18 Year and Thomas H. Handy. Reviewers find it light bodied for a rye, with apricot, orange peel, caramel and vanilla over the pepper.\n\nThe company grew from Handy's firm, which also came to own Antoine Peychaud's bitters. It was reorganized as the Sazerac Company in 1919, rode out Prohibition as a grocery wholesaler, and in 1948 was bought by Magnolia Liquor, a New Orleans wholesaler founded by two partners; the family of one of them owns it still. It bought Herbsaint in 1949 and the distillery now called Buffalo Trace in 1992, and it remains privately held, headquartered in Metairie, with more than 500 brands. All three bottles of the Classic Sazerac are its own.\n\nIn 2019 it opened the Sazerac House at the corner of Canal and Magazine, a museum with a small still that makes Sazerac rye.",
+			"words": [
+				"labelled",
+				"reorganised"
+			]
+		},
+		{
+			"path": "house.components[238].producer.facts[1]",
+			"before": "A 90 proof straight rye distilled at Buffalo Trace in Frankfort, Kentucky; once labelled 6 years old, it now carries no age statement.",
+			"after": "A 90 proof straight rye distilled at Buffalo Trace in Frankfort, Kentucky; once labeled 6 years old, it now carries no age statement.",
+			"words": [
+				"labelled"
+			]
+		},
+		{
+			"path": "house.components[240].producer.history",
+			"before": "Herbsaint was born in New Orleans in 1934, just after the repeal of Prohibition, while absinthe was still banned in the United States, as it had been since 1912. Its makers were J. Marion Legendre and Reginald Parker, who had learnt absinthe making in France during the First World War.\n\nLegendre first sold it as Legendre Absinthe, though it never held grand wormwood. Within months the Federal Alcohol Control Administration objected to the word absinthe, and he renamed it Herbsaint, from herbe sainte, the Creole name for wormwood. In time it became a usual rinse for the Sazerac, the city's own cocktail.\n\nIn June 1949 the Sazerac Company, the New Orleans firm behind Sazerac Rye and Peychaud's, bought J.M. Legendre and Co. In the mid-1950s the standard bottling became a different 90 proof recipe, and by the early 1970s it was the only Herbsaint made. In December 2009, for the brand's 75th anniversary, the company brought back Legendre's original 100 proof recipe as Herbsaint Original. Both are sold today, and the 90 proof remains the predominant bottling.\n\nThe company does not say where Herbsaint is made now, so it is described as born in New Orleans, not made there.",
+			"after": "Herbsaint was born in New Orleans in 1934, just after the repeal of Prohibition, while absinthe was still banned in the United States, as it had been since 1912. Its makers were J. Marion Legendre and Reginald Parker, who had learned absinthe making in France during the First World War.\n\nLegendre first sold it as Legendre Absinthe, though it never held grand wormwood. Within months the Federal Alcohol Control Administration objected to the word absinthe, and he renamed it Herbsaint, from herbe sainte, the Creole name for wormwood. In time it became a usual rinse for the Sazerac, the city's own cocktail.\n\nIn June 1949 the Sazerac Company, the New Orleans firm behind Sazerac Rye and Peychaud's, bought J.M. Legendre and Co. In the mid-1950s the standard bottling became a different 90 proof recipe, and by the early 1970s it was the only Herbsaint made. In December 2009, for the brand's 75th anniversary, the company brought back Legendre's original 100 proof recipe as Herbsaint Original. Both are sold today, and the 90 proof remains the predominant bottling.\n\nThe company does not say where Herbsaint is made now, so it is described as born in New Orleans, not made there.",
+			"words": [
+				"learnt"
+			]
+		},
+		{
+			"path": "house.components[240].producer.notes[1]",
+			"before": "It is a rinse, not a pour: the guest gets the anise perfume without much of the flavour.",
+			"after": "It is a rinse, not a pour: the guest gets the anise perfume without much of the flavor.",
+			"words": [
+				"flavour"
+			]
+		},
+		{
+			"path": "house.components[282].producer.history",
+			"before": "Rittenhouse Rye was first sold in Philadelphia in 1934, just after Prohibition, by Continental Distilling, and named for the city's Rittenhouse Square. In 1948 it was relaunched as a four-year-old bottled in bond rye, the form it keeps. Heaven Hill bought the brand in the 1990s, in 1993 by some accounts and 1999 by others, and moved its production from Pennsylvania to Kentucky.\n\nHeaven Hill itself was founded at Bardstown in 1935 by a group of investors; in time five brothers of one family bought out the rest, and their descendants own and run the company still. On 7 November 1996 fire swept through its warehouses, and some 90,000 barrels burned. In 1999 it bought the Bernheim distillery in Louisville, where it has distilled since, while ageing and bottling stayed around Bardstown; a new Bardstown distillery filled its first barrel on 7 April 2025.\n\nBottled in bond means the spirit of a single distilling season, aged at least four years in a federally bonded warehouse and bottled at 100 proof. Rittenhouse is 51 percent rye, with corn and malted barley: a modern Kentucky recipe, lower in rye than the old Pennsylvania ryes it nods to.\n\nRumors are Flying prints Brennan's Barrel Aged Rittenhouse Rye. No public source says what that means: a barrel chosen for the house, or rye rested again in a cask of the bar's own. The bar holds that story.",
+			"after": "Rittenhouse Rye was first sold in Philadelphia in 1934, just after Prohibition, by Continental Distilling, and named for the city's Rittenhouse Square. In 1948 it was relaunched as a four-year-old bottled in bond rye, the form it keeps. Heaven Hill bought the brand in the 1990s, in 1993 by some accounts and 1999 by others, and moved its production from Pennsylvania to Kentucky.\n\nHeaven Hill itself was founded at Bardstown in 1935 by a group of investors; in time five brothers of one family bought out the rest, and their descendants own and run the company still. On 7 November 1996 fire swept through its warehouses, and some 90,000 barrels burned. In 1999 it bought the Bernheim distillery in Louisville, where it has distilled since, while aging and bottling stayed around Bardstown; a new Bardstown distillery filled its first barrel on 7 April 2025.\n\nBottled in bond means the spirit of a single distilling season, aged at least four years in a federally bonded warehouse and bottled at 100 proof. Rittenhouse is 51 percent rye, with corn and malted barley: a modern Kentucky recipe, lower in rye than the old Pennsylvania ryes it nods to.\n\nRumors are Flying prints Brennan's Barrel Aged Rittenhouse Rye. No public source says what that means: a barrel chosen for the house, or rye rested again in a cask of the bar's own. The bar holds that story.",
+			"words": [
+				"ageing"
+			]
+		},
+		{
+			"path": "house.components[282].producer.facts[6]",
+			"before": "Since 1999 Heaven Hill has distilled at Bernheim in Louisville, ageing and bottling around Bardstown.",
+			"after": "Since 1999 Heaven Hill has distilled at Bernheim in Louisville, aging and bottling around Bardstown.",
+			"words": [
+				"ageing"
+			]
+		},
+		{
+			"path": "house.components[257].producer.history",
+			"before": "Rabbit Hole was founded in Louisville in 2012 by a former clinical psychologist who left the profession to distil whiskey. The name, by one account, comes from his wife's warning that the venture would take the family down a rabbit hole from which they could never return. She is a Louisville native and a bourbon lover who had drawn him from Scotch to bourbon, and Dareringer, the sherry-finished bourbon, is named in her honour.\n\nIn its first years the brand's whiskey was made at other distilleries while its own was designed and built. The distillery opened in May 2018 in downtown Louisville. In June 2019 Pernod Ricard USA agreed to buy a majority share, at a price never disclosed; at the time the founder kept most of his shares and stayed on to run the company.\n\nDareringer is a wheated Kentucky straight bourbon. It ages first in new charred American oak, then is finished in casks that held Pedro Ximénez, a dark and very sweet sherry, and it is bottled at 93 proof. The finish lays raisin and dried fruit richness over the bourbon's vanilla and oak, a richness that carries the smoke, the Angostura, the orange and the cherry of the Birdcage.",
+			"after": "Rabbit Hole was founded in Louisville in 2012 by a former clinical psychologist who left the profession to distil whiskey. The name, by one account, comes from his wife's warning that the venture would take the family down a rabbit hole from which they could never return. She is a Louisville native and a bourbon lover who had drawn him from Scotch to bourbon, and Dareringer, the sherry-finished bourbon, is named in her honor.\n\nIn its first years the brand's whiskey was made at other distilleries while its own was designed and built. The distillery opened in May 2018 in downtown Louisville. In June 2019 Pernod Ricard USA agreed to buy a majority share, at a price never disclosed; at the time the founder kept most of his shares and stayed on to run the company.\n\nDareringer is a wheated Kentucky straight bourbon. It ages first in new charred American oak, then is finished in casks that held Pedro Ximénez, a dark and very sweet sherry, and it is bottled at 93 proof. The finish lays raisin and dried fruit richness over the bourbon's vanilla and oak, a richness that carries the smoke, the Angostura, the orange and the cherry of the Birdcage.",
+			"words": [
+				"honour"
+			]
+		},
+		{
+			"path": "house.components[242].producer.history",
+			"before": "Jade Nouvelle-Orléans is the work of Jade Liqueurs, a company founded in 2000 by a New Orleans-born scientist and absinthe historian. He researched surviving pre-ban absinthes and the old methods of making them, aiming to recreate the spirit as it was before the bans of the early twentieth century, without the myths that had grown up around it. Nouvelle-Orléans was the first Jade absinthe; a specialist retailer dates it to 2004 and says the founder has personally produced every batch since.\n\nIt is made at the Combier distillery in Saumur, in the Loire Valley, chosen partly for its historic equipment: copper bain-marie alembics built in the 1870s and acquired from one of the original absinthe distilleries of Pontarlier, France. Wormwood and other plants are macerated in wine alcohol and distilled, and a second infusion of plants in the distillate gives the pale green colour. It is bottled at 68 percent.\n\nThe name is a tribute to the founder's home city and its nineteenth-century absinthe culture. Its sellers describe the style as rooted in the absinthes that made the Sazerac and the Absinthe Frappé famous: fresh, with a peppery spice.\n\nAt Brennan's it is printed only on the Origin Story, the top of the Sazerac ladder, beside Dudognon Cognac and barrel-aged Peychaud's.",
+			"after": "Jade Nouvelle-Orléans is the work of Jade Liqueurs, a company founded in 2000 by a New Orleans-born scientist and absinthe historian. He researched surviving pre-ban absinthes and the old methods of making them, aiming to recreate the spirit as it was before the bans of the early twentieth century, without the myths that had grown up around it. Nouvelle-Orléans was the first Jade absinthe; a specialist retailer dates it to 2004 and says the founder has personally produced every batch since.\n\nIt is made at the Combier distillery in Saumur, in the Loire Valley, chosen partly for its historic equipment: copper bain-marie alembics built in the 1870s and acquired from one of the original absinthe distilleries of Pontarlier, France. Wormwood and other plants are macerated in wine alcohol and distilled, and a second infusion of plants in the distillate gives the pale green color. It is bottled at 68 percent.\n\nThe name is a tribute to the founder's home city and its nineteenth-century absinthe culture. Its sellers describe the style as rooted in the absinthes that made the Sazerac and the Absinthe Frappé famous: fresh, with a peppery spice.\n\nAt Brennan's it is printed only on the Origin Story, the top of the Sazerac ladder, beside Dudognon Cognac and barrel-aged Peychaud's.",
+			"words": [
+				"colour"
+			]
+		},
+		{
+			"path": "house.components[242].producer.facts[3]",
+			"before": "Wormwood and other plants are macerated in wine alcohol and distilled; a second infusion of plants gives the pale green colour.",
+			"after": "Wormwood and other plants are macerated in wine alcohol and distilled; a second infusion of plants gives the pale green color.",
+			"words": [
+				"colour"
+			]
+		},
+		{
+			"path": "house.components[242].producer.facts[5]",
+			"before": "Reviewers describe it as reverse-engineered from the botanicals and flavour profiles of the pre-ban absinthes of the early 1900s.",
+			"after": "Reviewers describe it as reverse-engineered from the botanicals and flavor profiles of the pre-ban absinthes of the early 1900s.",
+			"words": [
+				"flavour"
+			]
+		},
+		{
+			"path": "house.components[241].producer.history",
+			"before": "St. George Spirits was founded in 1982 as an eau de vie distillery, making clear fruit brandies. Its founder was master distiller for 28 years before handing the role to his successor in 2010. In 2004 the company moved into a 65,000-square-foot aircraft hangar on the former Alameda Naval Air Station, where it still distils.\n\nWhen absinthe returned to American shelves in 2007, once federal regulators accepted that a properly made one met the thujone limit, St. George had a recipe ready, developed over eleven years. The label office refused the label several times, objecting to the monkey on it and to the word Verte, before approving it in early December 2007. St. George Absinthe Verte went on sale on 21 December 2007, the first legal American-made absinthe in 95 years, and the first 1,800 bottles sold out in six hours.\n\nIt is built on brandy rather than the beet spirit of many absinthes. Wormwood, fennel and star anise are infused in the brandy and distilled; the distillate is then infused with mint, tarragon, Genovese basil, lemon balm, hyssop and stinging nettle, which give the green colour and a garden character. Star anise is itself a departure from the green anise of the classic European recipes. It is bottled at 60 percent.\n\nAt Brennan's it rinses the glass of Thompson's Dream, the first step up from the Classic Sazerac, in place of the Classic's Herbsaint.",
+			"after": "St. George Spirits was founded in 1982 as an eau de vie distillery, making clear fruit brandies. Its founder was master distiller for 28 years before handing the role to his successor in 2010. In 2004 the company moved into a 65,000-square-foot aircraft hangar on the former Alameda Naval Air Station, where it still distils.\n\nWhen absinthe returned to American shelves in 2007, once federal regulators accepted that a properly made one met the thujone limit, St. George had a recipe ready, developed over eleven years. The label office refused the label several times, objecting to the monkey on it and to the word Verte, before approving it in early December 2007. St. George Absinthe Verte went on sale on 21 December 2007, the first legal American-made absinthe in 95 years, and the first 1,800 bottles sold out in six hours.\n\nIt is built on brandy rather than the beet spirit of many absinthes. Wormwood, fennel and star anise are infused in the brandy and distilled; the distillate is then infused with mint, tarragon, Genovese basil, lemon balm, hyssop and stinging nettle, which give the green color and a garden character. Star anise is itself a departure from the green anise of the classic European recipes. It is bottled at 60 percent.\n\nAt Brennan's it rinses the glass of Thompson's Dream, the first step up from the Classic Sazerac, in place of the Classic's Herbsaint.",
+			"words": [
+				"colour"
+			]
+		},
+		{
+			"path": "house.components[292].producer.facts[6]",
+			"before": "Distilled at Aiguenoire since 2018; the Caves de la Chartreuse in Voiron opened as a visitors' centre.",
+			"after": "Distilled at Aiguenoire since 2018; the Caves de la Chartreuse in Voiron opened as a visitors' center.",
+			"words": [
+				"centre"
+			]
+		},
+		{
+			"path": "house.components[292].producer.notes[4]",
+			"before": "If asked about the green, say the colour is natural, from the plants; never say it is dyed.",
+			"after": "If asked about the green, say the color is natural, from the plants; never say it is dyed.",
+			"words": [
+				"colour"
+			]
+		},
+		{
+			"path": "house.components[262].producer.history",
+			"before": "Louis-Napoléon Mattei opened his first shop in Bastia, on Corsica, in 1872, selling cigars, coffee, wine and liqueurs. In 1874 he began distilling cédrat, the thick-skinned citron of Cap Corse, the island's northern peninsula, and in 1875 he made a medicinal wine with quinquina, the cinchona bark that gives quinine. Accounts differ on how he came to the bark: his importer says he found it on a voyage to the Caribbean; another source says he meant it against malaria.\n\nThe Blanc is a mistelle: Muscat and Vermentinu grape must kept from fermenting with neutral alcohol, so its sweetness is the grape's own. It is flavoured with cinchona, cédrat and other plants, fruits and spices, and bottled at 17 percent. The bark brings spice and gentle bitterness to the middle and finish; the cédrat brings citrus perfume and a silky texture.\n\nIts American importer has long called the house family owned, with macerations, ageing and bottling done in house, by one report in the Borgo industrial zone. Monocle reports, though, that a Corsican drinks group, Groupe Boisson Corse, has since bought the house, revived the founder's recipe and taken output from about 80,000 bottles to about 400,000. On Cap Corse stands the Moulin Mattei, a windmill a later head of the house turned into an advertisement for the aperitif; the Conservatoire du Littoral bought it in 2004 and restored its 1930s look.\n\nAt Brennan's it plays the vermouth's part in the Spoonbill, with Hendrick's gin and chive oil.",
+			"after": "Louis-Napoléon Mattei opened his first shop in Bastia, on Corsica, in 1872, selling cigars, coffee, wine and liqueurs. In 1874 he began distilling cédrat, the thick-skinned citron of Cap Corse, the island's northern peninsula, and in 1875 he made a medicinal wine with quinquina, the cinchona bark that gives quinine. Accounts differ on how he came to the bark: his importer says he found it on a voyage to the Caribbean; another source says he meant it against malaria.\n\nThe Blanc is a mistelle: Muscat and Vermentinu grape must kept from fermenting with neutral alcohol, so its sweetness is the grape's own. It is flavored with cinchona, cédrat and other plants, fruits and spices, and bottled at 17 percent. The bark brings spice and gentle bitterness to the middle and finish; the cédrat brings citrus perfume and a silky texture.\n\nIts American importer has long called the house family owned, with macerations, aging and bottling done in house, by one report in the Borgo industrial zone. Monocle reports, though, that a Corsican drinks group, Groupe Boisson Corse, has since bought the house, revived the founder's recipe and taken output from about 80,000 bottles to about 400,000. On Cap Corse stands the Moulin Mattei, a windmill a later head of the house turned into an advertisement for the aperitif; the Conservatoire du Littoral bought it in 2004 and restored its 1930s look.\n\nAt Brennan's it plays the vermouth's part in the Spoonbill, with Hendrick's gin and chive oil.",
+			"words": [
+				"flavoured",
+				"ageing"
+			]
+		},
+		{
+			"path": "house.components[262].producer.facts[4]",
+			"before": "Flavoured with cinchona, cédrat and other plants, fruits and spices; bottled at 17 percent.",
+			"after": "Flavored with cinchona, cédrat and other plants, fruits and spices; bottled at 17 percent.",
+			"words": [
+				"Flavoured"
+			]
+		},
+		{
+			"path": "house.components[262].producer.notes[1]",
+			"before": "Guests ask if it has quinine. The honest answer: it is flavoured with cinchona bark, the source of quinine, for a gentle bitterness; the amount is not published.",
+			"after": "Guests ask if it has quinine. The honest answer: it is flavored with cinchona bark, the source of quinine, for a gentle bitterness; the amount is not published.",
+			"words": [
+				"flavoured"
+			]
+		},
+		{
+			"path": "house.components[306].producer.notes[1]",
+			"before": "Our menu prints chicory, not espresso: part of the coffee flavour comes from the Kahlua. Caffeine questions go to the bar.",
+			"after": "Our menu prints chicory, not espresso: part of the coffee flavor comes from the Kahlua. Caffeine questions go to the bar.",
+			"words": [
+				"flavour"
+			]
+		},
+		{
+			"path": "house.components[308].producer.history",
+			"before": "Nocello is made by Toschi, a family company founded in 1945 in Vignola, near Modena, by two brothers. They began by preserving cherries in spirit, and the company still specialises in fruit in spirit, liqueurs and products for gelato. Its working headquarters are now at Savignano sul Panaro, close by.\n\nNocello is made from walnuts and hazelnuts. It is amber, sweet and rounded, with a balanced walnut flavour and tones of vanilla, and bottled at 24 percent; in 2004 it won a gold medal at the IWSC. In the United States its label reads Imitation Liqueur. Toschi has not published its method, so a server describes the taste, not a process.\n\nIt belongs to the walnut liqueur tradition of Emilia-Romagna, whose best-known member is nocino, the dark liqueur made by steeping green walnuts in alcohol; by custom the walnuts are picked around St John's Day, 24 June. Toschi makes a Nocino too. Nocello is the lighter, sweeter cousin.\n\nAt Brennan's it goes into Ralph’s Coffee, with dark roast coffee and chicory, Frangelico and whipped cream: a roasty, nutty after-dinner coffee.",
+			"after": "Nocello is made by Toschi, a family company founded in 1945 in Vignola, near Modena, by two brothers. They began by preserving cherries in spirit, and the company still specializes in fruit in spirit, liqueurs and products for gelato. Its working headquarters are now at Savignano sul Panaro, close by.\n\nNocello is made from walnuts and hazelnuts. It is amber, sweet and rounded, with a balanced walnut flavor and tones of vanilla, and bottled at 24 percent; in 2004 it won a gold medal at the IWSC. In the United States its label reads Imitation Liqueur. Toschi has not published its method, so a server describes the taste, not a process.\n\nIt belongs to the walnut liqueur tradition of Emilia-Romagna, whose best-known member is nocino, the dark liqueur made by steeping green walnuts in alcohol; by custom the walnuts are picked around St John's Day, 24 June. Toschi makes a Nocino too. Nocello is the lighter, sweeter cousin.\n\nAt Brennan's it goes into Ralph’s Coffee, with dark roast coffee and chicory, Frangelico and whipped cream: a roasty, nutty after-dinner coffee.",
+			"words": [
+				"specialises",
+				"flavour"
+			]
+		},
+		{
+			"path": "house.components[308].producer.facts[5]",
+			"before": "Labelled Imitation Liqueur in the United States.",
+			"after": "Labeled Imitation Liqueur in the United States.",
+			"words": [
+				"Labelled"
+			]
+		},
+		{
+			"path": "house.components[279].producer.history",
+			"before": "Allspice dram, called pimento dram in Jamaica, is rum in which allspice berries have been steeped, then sweetened. Allspice is the dried berry of the pimento tree; the Oxford Companion to Spirits and Cocktails says its flavour recalls cloves, cinnamon and nutmeg, and records the dram as an article of commerce since the 1850s. Bottles were shown at the International Exhibition of 1862. In Jamaica the berry kept its Spanish name, pimiento, now pimento; the English called it allspice. It is no relation of the pimento pepper.\n\nThe National Museum Jamaica records that the liqueur became popular in Europe and North America in the early 1900s, when J. Wray & Nephew bottled and sold it. It appeared in drinks such as the Lion's Tail and was taken up by the tiki bars. Imports to the United States later stopped, and bartenders made their own.\n\nThe revival came in 2008 with St. Elizabeth Allspice Dram, made in Austria from Jamaican allspice berries, raw sugar and pot-stilled Jamaican rum for an American importer.\n\nAt Brennan's it gives For Sentimental Reasons its warm baking spice, under pear purée and sparkling wine. The menu names no brand, so which dram the bar pours is a lineup question.",
+			"after": "Allspice dram, called pimento dram in Jamaica, is rum in which allspice berries have been steeped, then sweetened. Allspice is the dried berry of the pimento tree; the Oxford Companion to Spirits and Cocktails says its flavor recalls cloves, cinnamon and nutmeg, and records the dram as an article of commerce since the 1850s. Bottles were shown at the International Exhibition of 1862. In Jamaica the berry kept its Spanish name, pimiento, now pimento; the English called it allspice. It is no relation of the pimento pepper.\n\nThe National Museum Jamaica records that the liqueur became popular in Europe and North America in the early 1900s, when J. Wray & Nephew bottled and sold it. It appeared in drinks such as the Lion's Tail and was taken up by the tiki bars. Imports to the United States later stopped, and bartenders made their own.\n\nThe revival came in 2008 with St. Elizabeth Allspice Dram, made in Austria from Jamaican allspice berries, raw sugar and pot-stilled Jamaican rum for an American importer.\n\nAt Brennan's it gives For Sentimental Reasons its warm baking spice, under pear purée and sparkling wine. The menu names no brand, so which dram the bar pours is a lineup question.",
+			"words": [
+				"flavour"
+			]
+		},
+		{
+			"path": "house.components[279].producer.facts[1]",
+			"before": "Its flavour recalls cloves, cinnamon and nutmeg, says the Oxford Companion to Spirits and Cocktails.",
+			"after": "Its flavor recalls cloves, cinnamon and nutmeg, says the Oxford Companion to Spirits and Cocktails.",
+			"words": [
+				"flavour"
+			]
+		},
+		{
+			"path": "house.components[279].producer.notes[1]",
+			"before": "The menu names no brand; describe the flavour and let the bar name the bottle.",
+			"after": "The menu names no brand; describe the flavor and let the bar name the bottle.",
+			"words": [
+				"flavour"
+			]
+		},
+		{
+			"path": "house.components[251].producer.history",
+			"before": "Chopin is a Polish vodka named for the composer Frédéric Chopin, a favoured son of Poland. It is made by Podlaska Wytwórnia Wódek Polmos of Siedlce, east of Warsaw, at a distillery near the hamlet of Krzesk that has made vodka since 1896. The brand says its still of that year is one of the oldest remaining stills in Poland.\n\nThe brand dates from the early 1990s: sources give 1992 or 1993. When its founder bought the distillery itself is less clear: one account says 1993, another 2003. Chopin reached North America in 1997. The company calls itself family owned and run, now in its second generation, and Poland’s last family owned vodka brand.\n\nChopin is a single-ingredient vodka. Each bottling is made from one raw material, potato, rye or wheat, and distilled four times. The brand grows some of its ingredients on its own farmland and buys the rest from family farms near the distillery, and its water comes from an artesian spring beneath the grounds. The potato vodka, the best known bottling, uses Stobrawa potatoes, which retailers say are grown in Podlasie.\n\nPotato vodka is fuller and creamier in texture than most grain vodkas, with a faint earthiness. Which Chopin goes into the Flamingo is a question for the bar.",
+			"after": "Chopin is a Polish vodka named for the composer Frédéric Chopin, a favored son of Poland. It is made by Podlaska Wytwórnia Wódek Polmos of Siedlce, east of Warsaw, at a distillery near the hamlet of Krzesk that has made vodka since 1896. The brand says its still of that year is one of the oldest remaining stills in Poland.\n\nThe brand dates from the early 1990s: sources give 1992 or 1993. When its founder bought the distillery itself is less clear: one account says 1993, another 2003. Chopin reached North America in 1997. The company calls itself family owned and run, now in its second generation, and Poland’s last family owned vodka brand.\n\nChopin is a single-ingredient vodka. Each bottling is made from one raw material, potato, rye or wheat, and distilled four times. The brand grows some of its ingredients on its own farmland and buys the rest from family farms near the distillery, and its water comes from an artesian spring beneath the grounds. The potato vodka, the best known bottling, uses Stobrawa potatoes, which retailers say are grown in Podlasie.\n\nPotato vodka is fuller and creamier in texture than most grain vodkas, with a faint earthiness. Which Chopin goes into the Flamingo is a question for the bar.",
+			"words": [
+				"favoured"
+			]
+		},
+		{
+			"path": "house.components[251].producer.facts[0]",
+			"before": "Named for the composer Frédéric Chopin, a favoured son of Poland.",
+			"after": "Named for the composer Frédéric Chopin, a favored son of Poland.",
+			"words": [
+				"favoured"
+			]
+		},
+		{
+			"path": "house.components[252].producer.history",
+			"before": "Monkey 47 tells its own story through a British officer. By the brand’s account, Montgomery Collins, known as Monty, a Royal Air Force officer posted to Berlin after the Second World War, sponsored a monkey named Max at the Berlin Zoo. He left the air force in 1951, settled in the northern Black Forest and opened a guesthouse, Zum Wilden Affen, the Wild Monkey, where his Schwarzwald Dry Gin was the house drink until the 1970s. No archive or independent account of him has been found, so it is told as the brand’s story.\n\nThe modern gin began in 2008, when the founder, from a German brandy family, left a job at Nokia to recreate the recipe in the Black Forest. After more than 120 trial distillations the gin came to market, usually dated 2010. In January 2016 Pernod Ricard Deutschland agreed to buy a majority stake, and in March 2020 Pernod Ricard bought the rest, with the founder staying on as an adviser. The distillery near Loßburg, built in 2015, centres on a custom still from a German coppersmith.\n\nThe name holds the numbers: 47 botanicals and 47 percent alcohol. About a third of the botanicals are Black Forest plants, among them spruce, lingonberries, elderflower, blackthorn and bramble leaves, and the citrus peels go in fresh. They macerate in molasses-based neutral spirit and spring water before distillation in small stills; the gin then rests in large earthenware vessels for about three months, is cut slowly with water and is bottled without chill filtration.",
+			"after": "Monkey 47 tells its own story through a British officer. By the brand’s account, Montgomery Collins, known as Monty, a Royal Air Force officer posted to Berlin after the Second World War, sponsored a monkey named Max at the Berlin Zoo. He left the air force in 1951, settled in the northern Black Forest and opened a guesthouse, Zum Wilden Affen, the Wild Monkey, where his Schwarzwald Dry Gin was the house drink until the 1970s. No archive or independent account of him has been found, so it is told as the brand’s story.\n\nThe modern gin began in 2008, when the founder, from a German brandy family, left a job at Nokia to recreate the recipe in the Black Forest. After more than 120 trial distillations the gin came to market, usually dated 2010. In January 2016 Pernod Ricard Deutschland agreed to buy a majority stake, and in March 2020 Pernod Ricard bought the rest, with the founder staying on as an adviser. The distillery near Loßburg, built in 2015, centers on a custom still from a German coppersmith.\n\nThe name holds the numbers: 47 botanicals and 47 percent alcohol. About a third of the botanicals are Black Forest plants, among them spruce, lingonberries, elderflower, blackthorn and bramble leaves, and the citrus peels go in fresh. They macerate in molasses-based neutral spirit and spring water before distillation in small stills; the gin then rests in large earthenware vessels for about three months, is cut slowly with water and is bottled without chill filtration.",
+			"words": [
+				"centres"
+			]
+		},
+		{
+			"path": "house.components[261].producer.history",
+			"before": "Hendrick’s is a Scottish gin made by William Grant & Sons, the family-owned company William Grant founded in 1887, the year his Glenfiddich distillery began production, and still run by his descendants. The gin is made at Girvan, where the company built its grain distillery in 1963 under a great-grandson of William Grant.\n\nThat same great-grandson bought two old stills at auction in 1966: a Bennett still of 1860 and a Carter-Head still built in 1948 by John Dore & Co. By the company’s account, in 1988 he set a company distiller the task of making one spirit from both. After years of trials Hendrick’s launched in 1999: the gins of the two stills are blended, then essences of rose and cucumber are added. Because the rose and cucumber go in after distillation, it cannot be labelled a London Dry gin.\n\nEleven botanicals stand behind the rose and cucumber, among them juniper, orris root, chamomile, cubeb, elderflower, yarrow, caraway and lemon and orange peel. The rose is described as Bulgarian; the cucumbers come from Holland or Belgium. The name, by most accounts, was chosen by a member of the Grant family after Hendrick, a gardener who took particular care of the family’s roses.\n\nOn 1 October 2018 the company opened the Hendrick’s Gin Palace in the grounds at Girvan, with new still houses that doubled capacity and glasshouses of exotic botanicals.",
+			"after": "Hendrick’s is a Scottish gin made by William Grant & Sons, the family-owned company William Grant founded in 1887, the year his Glenfiddich distillery began production, and still run by his descendants. The gin is made at Girvan, where the company built its grain distillery in 1963 under a great-grandson of William Grant.\n\nThat same great-grandson bought two old stills at auction in 1966: a Bennett still of 1860 and a Carter-Head still built in 1948 by John Dore & Co. By the company’s account, in 1988 he set a company distiller the task of making one spirit from both. After years of trials Hendrick’s launched in 1999: the gins of the two stills are blended, then essences of rose and cucumber are added. Because the rose and cucumber go in after distillation, it cannot be labeled a London Dry gin.\n\nEleven botanicals stand behind the rose and cucumber, among them juniper, orris root, chamomile, cubeb, elderflower, yarrow, caraway and lemon and orange peel. The rose is described as Bulgarian; the cucumbers come from Holland or Belgium. The name, by most accounts, was chosen by a member of the Grant family after Hendrick, a gardener who took particular care of the family’s roses.\n\nOn 1 October 2018 the company opened the Hendrick’s Gin Palace in the grounds at Girvan, with new still houses that doubled capacity and glasshouses of exotic botanicals.",
+			"words": [
+				"labelled"
+			]
+		},
+		{
+			"path": "house.components[261].producer.facts[4]",
+			"before": "Because rose and cucumber go in after distillation, Hendrick’s cannot be labelled a London Dry gin.",
+			"after": "Because rose and cucumber go in after distillation, Hendrick’s cannot be labeled a London Dry gin.",
+			"words": [
+				"labelled"
+			]
+		},
+		{
+			"path": "house.components[271].producer.history",
+			"before": "Seven Three Distilling Co. is a New Orleans craft distillery named for the city’s 73 officially recognised neighbourhoods, and it names its spirits after them: St. Roch Vodka, Bywater Bourbon, Marigny Moonshine, Irish Channel Whiskey, Black Pearl Rum and Gentilly Gin. A New Orleans husband and wife developed the brand while building a custom distillery, which opened in early 2017 in a warehouse at 301 North Claiborne Avenue, on the corner of Bienville Street, usually described as Tremé. Its first release was a run of 1,000 bottles of St. Roch Vodka, a neutral spirit redistilled and filtered for five days through copper, limestone and charcoal.\n\nGentilly Gin starts from the same neutral base. Juniper is joined by persimmon and elderflower, 17 botanicals in all, inspired by the traiteurs, the old faith healers of Louisiana. It is bottled at 87 proof, 43.5 percent. Tasters find elderflower, a little anise and vanilla on the nose, honeyed persimmon, ginger and juniper on the palate, and a peppery finish. A Barrel Reserve version rests in barrels before bottling.\n\nGentilly itself is one of the city’s old neighbourhoods. By the common account, in 1727 the colonists Mathurin and Pierre Dreux chose the natural levee along Bayou Sauvage for their plantation and named it after the French community they came from; one recent history argues the name began as Chantilly.",
+			"after": "Seven Three Distilling Co. is a New Orleans craft distillery named for the city’s 73 officially recognized neighborhoods, and it names its spirits after them: St. Roch Vodka, Bywater Bourbon, Marigny Moonshine, Irish Channel Whiskey, Black Pearl Rum and Gentilly Gin. A New Orleans husband and wife developed the brand while building a custom distillery, which opened in early 2017 in a warehouse at 301 North Claiborne Avenue, on the corner of Bienville Street, usually described as Tremé. Its first release was a run of 1,000 bottles of St. Roch Vodka, a neutral spirit redistilled and filtered for five days through copper, limestone and charcoal.\n\nGentilly Gin starts from the same neutral base. Juniper is joined by persimmon and elderflower, 17 botanicals in all, inspired by the traiteurs, the old faith healers of Louisiana. It is bottled at 87 proof, 43.5 percent. Tasters find elderflower, a little anise and vanilla on the nose, honeyed persimmon, ginger and juniper on the palate, and a peppery finish. A Barrel Reserve version rests in barrels before bottling.\n\nGentilly itself is one of the city’s old neighborhoods. By the common account, in 1727 the colonists Mathurin and Pierre Dreux chose the natural levee along Bayou Sauvage for their plantation and named it after the French community they came from; one recent history argues the name began as Chantilly.",
+			"words": [
+				"recognised",
+				"neighbourhoods",
+				"neighbourhoods"
+			]
+		},
+		{
+			"path": "house.components[271].producer.facts[0]",
+			"before": "Named for the city’s 73 officially recognised neighbourhoods; each spirit takes a neighbourhood’s name.",
+			"after": "Named for the city’s 73 officially recognized neighborhoods; each spirit takes a neighborhood’s name.",
+			"words": [
+				"recognised",
+				"neighbourhoods",
+				"neighbourhood"
+			]
+		},
+		{
+			"path": "house.components[271].producer.notes[1]",
+			"before": "Guests ask what Gentilly means: one of the city’s neighbourhoods, and the distillery names every spirit after one.",
+			"after": "Guests ask what Gentilly means: one of the city’s neighborhoods, and the distillery names every spirit after one.",
+			"words": [
+				"neighbourhoods"
+			]
+		},
+		{
+			"path": "house.components[271].producer.sayIt",
+			"before": "Gentilly Gin is made here in New Orleans by Seven Three Distilling, named for one of our neighbourhoods, with persimmon and elderflower.",
+			"after": "Gentilly Gin is made here in New Orleans by Seven Three Distilling, named for one of our neighborhoods, with persimmon and elderflower.",
+			"words": [
+				"neighbourhoods"
+			]
+		},
+		{
+			"path": "house.components[291].producer.history",
+			"before": "Cathead Distillery was founded in 2010 by two friends and blues fans who had spent about eleven years working in South Carolina before coming home to Jackson, Mississippi. Mississippi passed statewide prohibition in 1907 and was the last state to repeal it, in 1966, and then only county by county; the founders had to help amend several old state laws before they could open. Cathead went to market in May 2010, and Visit Jackson and the company’s own releases call it Mississippi’s first legal distillery.\n\nIt began in Gluckstadt and moved downtown to 422 South Farish Street in 2015. The name is blues slang: the old blues players called each other cats, as a term of respect. The logo draws on the folk art of the Delta bluesman James Son Thomas, who sculpted cat heads from river clay, and the company has sent part of its sales to music nonprofits.\n\nCathead makes vodkas, Bristow Gin, a chicory liqueur called Hoodoo and Old Soul Bourbon in small batches. Its vodka is made in runs of 500 gallons or less, with some sweet corn in the grain for a crisp finish, and bottled at 80 proof. Beside the plain vodka come flavoured ones: honeysuckle, pecan, a bitter orange made with bitter orange and satsuma extracts, and a Satsuma Mandarin Vodka listed on the distillery’s shop pages, most likely the bottle the menu calls Cathead Mandarin Vodka. No source gives its proof or how it is flavoured; a canned Satsuma Mandarin vodka soda at 5 percent is a different product.",
+			"after": "Cathead Distillery was founded in 2010 by two friends and blues fans who had spent about eleven years working in South Carolina before coming home to Jackson, Mississippi. Mississippi passed statewide prohibition in 1907 and was the last state to repeal it, in 1966, and then only county by county; the founders had to help amend several old state laws before they could open. Cathead went to market in May 2010, and Visit Jackson and the company’s own releases call it Mississippi’s first legal distillery.\n\nIt began in Gluckstadt and moved downtown to 422 South Farish Street in 2015. The name is blues slang: the old blues players called each other cats, as a term of respect. The logo draws on the folk art of the Delta bluesman James Son Thomas, who sculpted cat heads from river clay, and the company has sent part of its sales to music nonprofits.\n\nCathead makes vodkas, Bristow Gin, a chicory liqueur called Hoodoo and Old Soul Bourbon in small batches. Its vodka is made in runs of 500 gallons or less, with some sweet corn in the grain for a crisp finish, and bottled at 80 proof. Beside the plain vodka come flavored ones: honeysuckle, pecan, a bitter orange made with bitter orange and satsuma extracts, and a Satsuma Mandarin Vodka listed on the distillery’s shop pages, most likely the bottle the menu calls Cathead Mandarin Vodka. No source gives its proof or how it is flavored; a canned Satsuma Mandarin vodka soda at 5 percent is a different product.",
+			"words": [
+				"flavoured",
+				"flavoured"
+			]
+		},
+		{
+			"path": "house.components[291].producer.facts[7]",
+			"before": "Flavoured vodkas include honeysuckle, pecan and bitter orange, made with bitter orange and satsuma extracts; a Satsuma Mandarin Vodka is listed on its shop pages.",
+			"after": "Flavored vodkas include honeysuckle, pecan and bitter orange, made with bitter orange and satsuma extracts; a Satsuma Mandarin Vodka is listed on its shop pages.",
+			"words": [
+				"Flavoured"
+			]
+		},
+		{
+			"path": "house.components[291].producer.notes[0]",
+			"before": "Say Cathead Mandarin Vodka, as the menu prints it. The distillery has listed a Satsuma Mandarin Vodka, and a canned 5 percent vodka soda shares the flavour: confirm the bottle at lineup.",
+			"after": "Say Cathead Mandarin Vodka, as the menu prints it. The distillery has listed a Satsuma Mandarin Vodka, and a canned 5 percent vodka soda shares the flavor: confirm the bottle at lineup.",
+			"words": [
+				"flavour"
+			]
+		},
+		{
+			"path": "house.components[291].producer.notes[3]",
+			"before": "Do not claim the vodka is flavoured with Mississippi satsumas: no source says what the mandarin flavour is made from, or its proof.",
+			"after": "Do not claim the vodka is flavored with Mississippi satsumas: no source says what the mandarin flavor is made from, or its proof.",
+			"words": [
+				"flavoured",
+				"flavour"
+			]
+		},
+		{
+			"path": "house.components[287].producer.history",
+			"before": "Volcán De Mi Tierra, the volcano of my land, is a tequila house born of a partnership between Moët Hennessy, the wine and spirits arm of LVMH, and a Mexican family whose lineage in Mexico goes back to the seventeenth century. By the brand’s story, a meeting between a family elder and LVMH executives raised the question of why the group had no tequila. The family owned land and a small distillery near the long-dormant Tequila Volcano in Jalisco; the partners chose the distillery, NOM 1523, revamped it and revived a brand the family had called Volcán. It has been described as the first 50:50 partnership LVMH had entered.\n\nThe tequila launched on 1 May 2017 with a Blanco and a Cristalino, a blend of añejo and extra añejo tequilas filtered clear, in eight American cities and Mexico. In October 2025 it was named the Official Tequila of Formula 1 under LVMH’s ten-year deal with the series.\n\nThe brand says the volcano’s ash left a soil rich in basalt and iron, which gives the tequila its taste. The agave comes from two terroirs: the highlands, at about 1,700 metres on iron-rich red clay, and the lowlands, at about 1,000 metres on dark volcanic soil that gives earthier, spicier notes. The Reposado rests in American and European oak, 135 days by one account and nine months by another, and is bottled at 40 percent: honey, dried fruit, toasted nuts, oak and vanilla.",
+			"after": "Volcán De Mi Tierra, the volcano of my land, is a tequila house born of a partnership between Moët Hennessy, the wine and spirits arm of LVMH, and a Mexican family whose lineage in Mexico goes back to the seventeenth century. By the brand’s story, a meeting between a family elder and LVMH executives raised the question of why the group had no tequila. The family owned land and a small distillery near the long-dormant Tequila Volcano in Jalisco; the partners chose the distillery, NOM 1523, revamped it and revived a brand the family had called Volcán. It has been described as the first 50:50 partnership LVMH had entered.\n\nThe tequila launched on 1 May 2017 with a Blanco and a Cristalino, a blend of añejo and extra añejo tequilas filtered clear, in eight American cities and Mexico. In October 2025 it was named the Official Tequila of Formula 1 under LVMH’s ten-year deal with the series.\n\nThe brand says the volcano’s ash left a soil rich in basalt and iron, which gives the tequila its taste. The agave comes from two terroirs: the highlands, at about 1,700 meters on iron-rich red clay, and the lowlands, at about 1,000 meters on dark volcanic soil that gives earthier, spicier notes. The Reposado rests in American and European oak, 135 days by one account and nine months by another, and is bottled at 40 percent: honey, dried fruit, toasted nuts, oak and vanilla.",
+			"words": [
+				"metres",
+				"metres"
+			]
+		},
+		{
+			"path": "house.components[287].producer.facts[3]",
+			"before": "Blends blue agave from the highlands, about 1,700 metres on iron-rich red clay, with lowland agave on dark volcanic soil at about 1,000 metres.",
+			"after": "Blends blue agave from the highlands, about 1,700 meters on iron-rich red clay, with lowland agave on dark volcanic soil at about 1,000 meters.",
+			"words": [
+				"metres",
+				"metres"
+			]
+		},
+		{
+			"path": "house.components[287].producer.facts[8]",
+			"before": "The Cristalino blends añejo and extra añejo tequilas, filtered to remove the colour.",
+			"after": "The Cristalino blends añejo and extra añejo tequilas, filtered to remove the color.",
+			"words": [
+				"colour"
+			]
+		},
+		{
+			"path": "house.components[287].producer.notes[1]",
+			"before": "Do not quote the ageing time: one source says 135 days, another nine months. Say rested in American and European oak.",
+			"after": "Do not quote the aging time: one source says 135 days, another nine months. Say rested in American and European oak.",
+			"words": [
+				"ageing"
+			]
+		},
+		{
+			"path": "house.components[255].producer.history",
+			"before": "Taittinger traces its start to 1734, when Jacques Fourneaux began trading Champagne wines and worked with the Benedictine abbeys that owned some of the best vineyards. In the 1820s the firm became Forest-Fourneaux, and in 1932 Pierre Taittinger bought it and gave it his name; one source gives 1931.\n\nIn the years from 1945 to 1960 the house set up its cellars in the Gallo-Roman chalk pits beneath the site of the Saint-Nicaise abbey in Reims, where the wines still age. In 2005 the family sold its group to the American fund Starwood Capital Group; in 2006 a family-led bid, backed by the bank Crédit Agricole, bought the Champagne house back. A member of the family has been president since 1 January 2020.\n\nBrut La Française is the house’s non-vintage Brut. Its mark is a high share of Chardonnay for a non-vintage blend, about 40 percent, with Pinot Noir and Meunier, which gives the light, fresh, elegant style the house is known for. One reviewer says it spends a year longer on its lees than the Brut Réserve, which ages at least three years.\n\nAt Brennan’s it tops the Flamingo in the Roost, and the same wine sits on the Birthday Bubbles list as a 3 litre double magnum.",
+			"after": "Taittinger traces its start to 1734, when Jacques Fourneaux began trading Champagne wines and worked with the Benedictine abbeys that owned some of the best vineyards. In the 1820s the firm became Forest-Fourneaux, and in 1932 Pierre Taittinger bought it and gave it his name; one source gives 1931.\n\nIn the years from 1945 to 1960 the house set up its cellars in the Gallo-Roman chalk pits beneath the site of the Saint-Nicaise abbey in Reims, where the wines still age. In 2005 the family sold its group to the American fund Starwood Capital Group; in 2006 a family-led bid, backed by the bank Crédit Agricole, bought the Champagne house back. A member of the family has been president since 1 January 2020.\n\nBrut La Française is the house’s non-vintage Brut. Its mark is a high share of Chardonnay for a non-vintage blend, about 40 percent, with Pinot Noir and Meunier, which gives the light, fresh, elegant style the house is known for. One reviewer says it spends a year longer on its lees than the Brut Réserve, which ages at least three years.\n\nAt Brennan’s it tops the Flamingo in the Roost, and the same wine sits on the Birthday Bubbles list as a 3 liter double magnum.",
+			"words": [
+				"litre"
+			]
+		},
+		{
+			"path": "house.components[255].producer.facts[7]",
+			"before": "Brennan’s lists La Française as a 3 litre double magnum on Birthday Bubbles, and Taittinger Prestige Rosé among the Bubbles rosé bottles.",
+			"after": "Brennan’s lists La Française as a 3 liter double magnum on Birthday Bubbles, and Taittinger Prestige Rosé among the Bubbles rosé bottles.",
+			"words": [
+				"litre"
+			]
+		},
+		{
+			"path": "house.components[255].producer.notes[4]",
+			"before": "A guest who loves the Flamingo’s wine will find the same Taittinger La Française on the Birthday Bubbles list as a 3 litre double magnum; the sommelier handles the cellar side.",
+			"after": "A guest who loves the Flamingo’s wine will find the same Taittinger La Française on the Birthday Bubbles list as a 3 liter double magnum; the sommelier handles the cellar side.",
+			"words": [
+				"litre"
+			]
+		},
+		{
+			"path": "house.components[273].producer.history",
+			"before": "Elio Perrone is a family estate in Castiglione Tinella, in the Moscato hills of the province of Asti in Piedmont. Sources say the family has made Moscato there since the end of the nineteenth century, over four generations. One profile dates the present generation’s taking over to 1989, when the son of the man whose name is on the label took the reins; another says the father retired in the late 1990s.\n\nMoscato is the heart of the estate’s production. The family also farms vines at Isola d’Asti, where Barbera leads and Brachetto grows too, and the present generation created Bigaro, a blend of the two aromatic grapes made in the style of Moscato d’Asti.\n\nBigaro is its pink, softly sparkling wine: half Brachetto and half Moscato, crushed together and left a few days on the skins, with the fermentation stopped by filtering, so that it keeps some grape sugar and a light fizz at about 5 percent alcohol; one listing gives 7 percent for the 2024. Brachetto brings red berries and rose, Moscato brings peach and orange blossom, and the colour is salmon. Its importer lists it as Piedmont DOC, and it is served well chilled, as an aperitif or with fruit desserts.\n\nIn the OBX it tops Gentilly Gin, peach and lemon, adding fruit, a soft sweetness and a gentle sparkle.",
+			"after": "Elio Perrone is a family estate in Castiglione Tinella, in the Moscato hills of the province of Asti in Piedmont. Sources say the family has made Moscato there since the end of the nineteenth century, over four generations. One profile dates the present generation’s taking over to 1989, when the son of the man whose name is on the label took the reins; another says the father retired in the late 1990s.\n\nMoscato is the heart of the estate’s production. The family also farms vines at Isola d’Asti, where Barbera leads and Brachetto grows too, and the present generation created Bigaro, a blend of the two aromatic grapes made in the style of Moscato d’Asti.\n\nBigaro is its pink, softly sparkling wine: half Brachetto and half Moscato, crushed together and left a few days on the skins, with the fermentation stopped by filtering, so that it keeps some grape sugar and a light fizz at about 5 percent alcohol; one listing gives 7 percent for the 2024. Brachetto brings red berries and rose, Moscato brings peach and orange blossom, and the color is salmon. Its importer lists it as Piedmont DOC, and it is served well chilled, as an aperitif or with fruit desserts.\n\nIn the OBX it tops Gentilly Gin, peach and lemon, adding fruit, a soft sweetness and a gentle sparkle.",
+			"words": [
+				"colour"
+			]
+		},
+		{
+			"path": "house.components[273].producer.facts[7]",
+			"before": "A salmon-coloured, softly sweet, gently sparkling wine, listed by its importer as Piedmont DOC.",
+			"after": "A salmon-colored, softly sweet, gently sparkling wine, listed by its importer as Piedmont DOC.",
+			"words": [
+				"coloured"
+			]
+		},
+		{
+			"path": "house.components[273].producer.notes[4]",
+			"before": "A guest who likes Moscato d’Asti will recognise the style: grapey, floral and gently sweet.",
+			"after": "A guest who likes Moscato d’Asti will recognize the style: grapey, floral and gently sweet.",
+			"words": [
+				"recognise"
+			]
+		},
+		{
+			"path": "house.components[294].producer.history",
+			"before": "Wölffer Estate began with Christian Wölffer, a German-born investor who bought farmland at Sagaponack, on Long Island, from 1978, first for a horse farm. The original vineyard, acquired in 1988, had been a potato field. The winery was founded as Sagpond Vineyards in 1987 or 1988, by different accounts, and later renamed Wölffer Estate Vineyard, in 1997 by one account, when a new winery opened. Its winemaker came from Germany in 1992 and is now a partner. Christian Wölffer died on New Year’s Eve 2008 in Brazil, and the estate is owned and run by his children with that partner. It is known above all for its rosé.\n\nWölffer began making non-alcoholic drinks in 1996, with verjus. In 2021 it launched Spring in a Bottle, a non-alcoholic sparkling rosé made in Germany from a certified organic vineyard in Rheinhessen, with the alcohol and other volatiles gently removed at a low 77°F. It also sells Petite Rosé, a sparkling drink pressed from unripe grapes, and a still Summer in a Bottle Rosé Zero.\n\nA dealcoholised wine is made as wine first and then stripped of its alcohol: by vacuum distillation at low temperature, by a spinning cone column, which takes off the lightest aromas first and blends them back, or by reverse osmosis through fine membranes. Wölffer does not say which method it uses.",
+			"after": "Wölffer Estate began with Christian Wölffer, a German-born investor who bought farmland at Sagaponack, on Long Island, from 1978, first for a horse farm. The original vineyard, acquired in 1988, had been a potato field. The winery was founded as Sagpond Vineyards in 1987 or 1988, by different accounts, and later renamed Wölffer Estate Vineyard, in 1997 by one account, when a new winery opened. Its winemaker came from Germany in 1992 and is now a partner. Christian Wölffer died on New Year’s Eve 2008 in Brazil, and the estate is owned and run by his children with that partner. It is known above all for its rosé.\n\nWölffer began making non-alcoholic drinks in 1996, with verjus. In 2021 it launched Spring in a Bottle, a non-alcoholic sparkling rosé made in Germany from a certified organic vineyard in Rheinhessen, with the alcohol and other volatiles gently removed at a low 77°F. It also sells Petite Rosé, a sparkling drink pressed from unripe grapes, and a still Summer in a Bottle Rosé Zero.\n\nA dealcoholized wine is made as wine first and then stripped of its alcohol: by vacuum distillation at low temperature, by a spinning cone column, which takes off the lightest aromas first and blends them back, or by reverse osmosis through fine membranes. Wölffer does not say which method it uses.",
+			"words": [
+				"dealcoholised"
+			]
+		},
+		{
+			"path": "house.components[294].producer.facts[7]",
+			"before": "Dealcoholised wine is fermented as wine first, then stripped of alcohol by vacuum distillation, a spinning cone column or reverse osmosis.",
+			"after": "Dealcoholized wine is fermented as wine first, then stripped of alcohol by vacuum distillation, a spinning cone column or reverse osmosis.",
+			"words": [
+				"Dealcoholised"
+			]
+		},
+		{
+			"path": "house.components[295].producer.history",
+			"before": "Lyre’s makes non-alcoholic spirits, drinks built to taste like gin, whisky, rum, agave spirit and the rest without the alcohol. The company dates itself to 2019 and says it was founded to replicate the world’s most popular spirits in a non-alcoholic form. It was started by two Australians; one account calls it a British company at the start, while business databases place its head office in Leichhardt, Sydney.\n\nThe name comes from the lyrebird, the Australian bird famous for mimicking birdsong and every other sound, even a mobile phone. A co-founder has said the range is meant to be the most successful mimic of classic spirits, and a lyrebird in a top hat sits on the neck of each bottle.\n\nThe Agave Blanco lists water, natural flavours, agave syrup, citric acid, salt, a stabiliser and a preservative; Lyre’s says its flavours and distillates come from seeds, botanicals, fruits and spices. Its American page calls it simply non-alcoholic, and an Australian listing gives under 0.5 percent alcohol. Under United States federal rules for malt beverages and dealcoholised wine, non-alcoholic means under 0.5 percent, while alcohol free means no alcohol at all.\n\nThe range runs to 13 spirits, sold in over 60 countries. In March 2025 Amber Beverage Group added Lyre’s to its portfolio; one report calls it a partnership and another an acquisition.",
+			"after": "Lyre’s makes non-alcoholic spirits, drinks built to taste like gin, whisky, rum, agave spirit and the rest without the alcohol. The company dates itself to 2019 and says it was founded to replicate the world’s most popular spirits in a non-alcoholic form. It was started by two Australians; one account calls it a British company at the start, while business databases place its head office in Leichhardt, Sydney.\n\nThe name comes from the lyrebird, the Australian bird famous for mimicking birdsong and every other sound, even a mobile phone. A co-founder has said the range is meant to be the most successful mimic of classic spirits, and a lyrebird in a top hat sits on the neck of each bottle.\n\nThe Agave Blanco lists water, natural flavors, agave syrup, citric acid, salt, a stabiliser and a preservative; Lyre’s says its flavors and distillates come from seeds, botanicals, fruits and spices. Its American page calls it simply non-alcoholic, and an Australian listing gives under 0.5 percent alcohol. Under United States federal rules for malt beverages and dealcoholized wine, non-alcoholic means under 0.5 percent, while alcohol free means no alcohol at all.\n\nThe range runs to 13 spirits, sold in over 60 countries. In March 2025 Amber Beverage Group added Lyre’s to its portfolio; one report calls it a partnership and another an acquisition.",
+			"words": [
+				"flavours",
+				"flavours",
+				"dealcoholised"
+			]
+		},
+		{
+			"path": "house.components[295].producer.facts[3]",
+			"before": "The Agave Blanco lists water, natural flavours, agave syrup, citric acid, salt, cellulose gum and potassium sorbate.",
+			"after": "The Agave Blanco lists water, natural flavors, agave syrup, citric acid, salt, cellulose gum and potassium sorbate.",
+			"words": [
+				"flavours"
+			]
+		},
+		{
+			"path": "house.components[295].producer.facts[5]",
+			"before": "Under United States federal rules for malt beverages and dealcoholised wine, non-alcoholic means under 0.5 percent alcohol; alcohol free means none.",
+			"after": "Under United States federal rules for malt beverages and dealcoholized wine, non-alcoholic means under 0.5 percent alcohol; alcohol free means none.",
+			"words": [
+				"dealcoholised"
+			]
+		},
+		{
+			"path": "house.components[295].producer.notes[2]",
+			"before": "Guests ask how it can taste like tequila. The honest answer: it is water built up with natural flavours, agave syrup and a little salt and acid, made to mimic one, as the lyrebird mimics.",
+			"after": "Guests ask how it can taste like tequila. The honest answer: it is water built up with natural flavors, agave syrup and a little salt and acid, made to mimic one, as the lyrebird mimics.",
+			"words": [
+				"flavours"
 			]
 		},
 		{
@@ -2827,11 +3461,27 @@
 			]
 		},
 		{
+			"path": "wines:Rare Brut 2012 (Coravin).compare[1].different",
+			"before": "Pol Roger is all Chardonnay; Rare adds Pinot Noir and is a prestige cuvée with a jewelled bottle.",
+			"after": "Pol Roger is all Chardonnay; Rare adds Pinot Noir and is a prestige cuvée with a jeweled bottle.",
+			"words": [
+				"jewelled"
+			]
+		},
+		{
 			"path": "wines:Charles Lafitte Brut Champagne NV.compare[1].different",
 			"before": "The Pommery is a rosé, coloured with red wine; the Lafitte is white, poured on both tastings.",
 			"after": "The Pommery is a rosé, colored with red wine; the Lafitte is white, poured on both tastings.",
 			"words": [
 				"coloured"
+			]
+		},
+		{
+			"path": "wines:Domaine de Durban Beaumes-de-Venise Rouge 2024.compare[1].same",
+			"before": "Neighbouring villages under the Dentelles, Grenache with Syrah.",
+			"after": "Neighboring villages under the Dentelles, Grenache with Syrah.",
+			"words": [
+				"Neighbouring"
 			]
 		},
 		{
@@ -2899,11 +3549,27 @@
 			]
 		},
 		{
+			"path": "wines:Ridge Vineyards ‘Essence’ Zinfandel Sonoma 2014 (375 ml).compare[0].different",
+			"before": "Essence is late harvest and sweet, from shrivelled grapes, made only in rare years.",
+			"after": "Essence is late harvest and sweet, from shriveled grapes, made only in rare years.",
+			"words": [
+				"shrivelled"
+			]
+		},
+		{
 			"path": "wines:Château Suduiraut Sauternes 2016 (375 ml).compare[1].label",
 			"before": "Yquem 2016, its neighbour",
 			"after": "Yquem 2016, its neighbor",
 			"words": [
 				"neighbour"
+			]
+		},
+		{
+			"path": "wines:Domaine Paul Pillot ‘Le Charmois’ Saint-Aubin Premier Cru 2022.compare[1].same",
+			"before": "Both are fine, chalky white Burgundy from neighbouring villages.",
+			"after": "Both are fine, chalky white Burgundy from neighboring villages.",
+			"words": [
+				"neighbouring"
 			]
 		},
 		{

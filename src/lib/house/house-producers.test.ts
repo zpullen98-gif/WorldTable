@@ -17,7 +17,7 @@ import { FORBIDDEN_KEY, markKind, normaliseHouse, normaliseMark } from './house-
 import { validateHouse } from './house-validate';
 import { mergeHouse, sameJson } from './house-merge';
 import { buildPack, readPack, refreshEdition } from './house-pack';
-import { buildFlashcards, dealQuestion, drillableCounts, readyKinds, shortWho, PRODUCER_KINDS } from './house-drills';
+import { buildFlashcards, dealQuestion, drillableCounts, foundedSentence, readyKinds, shortWho, PRODUCER_KINDS } from './house-drills';
 
 const fixture: House = JSON.parse(readFileSync(fileURLToPath(new URL('./fixtures/house-min.json', import.meta.url)), 'utf8'));
 const clone = <T>(v: T): T => JSON.parse(JSON.stringify(v));
@@ -232,6 +232,28 @@ describe('the cards and the drills', () => {
 		]);
 		h2.components![1].producer = hers(profile());
 		expect(buildFlashcards(h2).filter((c) => c.itemId === 'c-verjus01')).toEqual([]);
+	});
+
+	it('say a founded value after Founded only when it opens on a date, and as its own sentence when it opens on any other capital', () => {
+		expect(foundedSentence('1896')).toBe('Founded 1896');
+		expect(foundedSentence('1920s.')).toBe('Founded 1920s');
+		expect(foundedSentence('between 1849 and 1857, by the most careful account')).toBe('Founded between 1849 and 1857, by the most careful account');
+		expect(foundedSentence('May 1896')).toBe('Founded May 1896');
+		expect(foundedSentence('Distillery 1896; brand 1992 or 1993')).toBe('Distillery 1896; brand 1992 or 1993');
+		expect(foundedSentence('The family has pressed salt on the quay since the 1890s.')).toBe('The family has pressed salt on the quay since the 1890s');
+		expect(foundedSentence('An article of commerce since the 1850s')).toBe('An article of commerce since the 1850s');
+		expect(foundedSentence('')).toBe('');
+		expect(foundedSentence(undefined)).toBe('');
+		/* on the who card: one stop at the end, never Founded before a sentence of its own, never two stops */
+		const h = withProducers();
+		h.components![0].producer = kept(profile({ where: 'The Quay.', founded: 'Works 1896; brand 1990.' }));
+		const card = buildFlashcards(h).find((c) => c.itemId === 'c-saltcrs1' && c.n === 0)!;
+		expect(card.back).toBe('The Quay. Works 1896; brand 1990.');
+		h.components![0].producer = kept(profile({ founded: 'The family has pressed salt there since the 1890s' }));
+		const card2 = buildFlashcards(h).find((c) => c.itemId === 'c-saltcrs1' && c.n === 0)!;
+		expect(card2.front).toBe('Quay Salt Works: where, and since when?');
+		expect(card2.back).toBe('The Quay. The family has pressed salt there since the 1890s.');
+		expect(card2.back).not.toContain('Founded The');
 	});
 
 	it('the producer drills deal from two profiles, never offer a second right answer as a distractor, and deal nothing from a house with none', () => {

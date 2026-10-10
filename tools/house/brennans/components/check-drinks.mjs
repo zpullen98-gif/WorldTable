@@ -2,16 +2,23 @@
 /* Checks components/drinks.json, the master bartender's fragment: valid JSON in the fragment shape, every item and
    term name in the pack, every in-app compare ref in the real data, the word caps, no dash, the note gates
    (banned words, allergen verdicts, years and names in a source), and every drink with components and a compare.
+   Then the producers behind a drink, wherever they are filed (producers.json, or inline on a component, in this
+   fragment or another beside it): every profile whose component, new or attached by key, names a drink is held
+   to the Ledger's living rule, the dash rule and the allergen rule in its who, where, founded, history, facts,
+   notes, sayIt and askKitchen (engine.mjs drinkProducerProblems). A food producer is not read here.
+   The living names are engine.mjs LIVING_FLOOR and living.json beside the fragments (an array of surnames).
+   The fragments beside this one are read from engine.mjs componentsDir (this folder, or BRENNANS_COMPONENTS).
    Usage: node check-drinks.mjs [path/to/fragment.json]. Exits 1 with each problem named. */
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
-import { noteHay, words, BANNED_WORDS } from '../../engine.mjs';
+import { noteHay, words, BANNED_WORDS, REL, componentsDir, readFragments, livingNames, livingRegex, livingIn, drinkProducers, drinkProducerProblems, LIVING_SAID } from '../../engine.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
-if (process.argv.includes('--help')) { console.log('node check-drinks.mjs [fragment.json]  checks the drink components fragment'); process.exit(0); }
+if (process.argv.includes('--help')) { console.log('node check-drinks.mjs [fragment.json]  checks the drink components fragment, then every producer behind a drink in the fragments beside it (the living, dash and allergen rules; living.json adds surnames)'); process.exit(0); }
 const FILE = process.argv[2] || path.join(HERE, 'drinks.json');
+const FRAGS = componentsDir();
 const WT = path.resolve(HERE, '../../../..');
 const PACK = path.join(WT, 'static/shared/packs/brennans-new-orleans.v1.oothouse.json');
 const LEDGER = process.env.LEDGER_SRC || path.resolve(WT, '../bartendersledger');
@@ -50,10 +57,14 @@ const VERDICT = /\b(gluten|dairy|nut|egg|allergen|shellfish|soy|sesame|lactose|m
 const sentencesOf = (s) => s.split(/(?<=[.!?][”"]?)\s+|\n+/).filter((x) => x.trim());
 const AMERICAN = /\b(flavor|flavors|flavored|color|colors|colored|savory|favorite|honor|honored|center|centered|caramelize[sd]?|caramelizing|caramelized|fiber|gray|organize[sd]?|neighbor|labor|odor|humor|theater)\b(?![\u00C0-\u024F])/i;
 
-/* The Ledger names nobody living: a short list of living people met in the research, refused anywhere in the drink prose. */
-const LIVING = /\b(Ralph|Patrick|Breaux|Zamanian|Gracie|Winters|Rupf|Murray|Guthrie|Barrileaux|Underhill|Kulsveen|Hauck|Berg|Livings|Hartmann|Branson|Kregar)\b/;
+/* The Ledger names nobody living: the living people met in the research (engine.mjs LIVING_FLOOR and living.json
+   beside the fragments), refused anywhere in the drink prose and in a drink producer's. */
+let LIVING_NAMES;
+try { LIVING_NAMES = livingNames(FRAGS); } catch (e) { console.error(e.message); process.exit(1); }
+const LIVING = livingRegex(LIVING_NAMES);
+const printed = [...allItems];
 function textGates(at, s) {
-	if (LIVING.test(s)) bad(`${at}: names a living person ("${s.match(LIVING)[0]}")`);
+	for (const name of livingIn(s, LIVING, printed)) bad(`${at}: ${LIVING_SAID(name)}`);
 	if (BANNED_WORDS.test(s)) bad(`${at}: the banned word "${s.match(BANNED_WORDS)[0]}"`);
 	if (VERDICT.test(s)) bad(`${at}: a verdict or health claim ("${s.match(VERDICT)[0]}")`);
 	for (const t of sentencesOf(s)) if (ALLERGEN_CLASS.test(t) && !ALLERGEN_POINTER.test(t)) bad(`${at}: names an allergen or diet without sending the server to the kitchen: "${t.trim()}"`);
@@ -76,7 +87,7 @@ function textGates(at, s) {
 /* Keys across every fragment present, so a key stays unique across the four files. */
 const otherKeys = new Map();
 for (const f of ['dishes.json', 'wines.json', 'videos.json']) {
-	const p = path.join(HERE, f);
+	const p = path.join(FRAGS, f);
 	if (path.resolve(p) === path.resolve(FILE) || !fs.existsSync(p)) continue;
 	try { for (const c of JSON.parse(fs.readFileSync(p, 'utf8')).components || []) otherKeys.set(c.key, f); } catch { /* another author's file mid-write */ }
 }
@@ -145,8 +156,21 @@ for (const d of dishNames) {
 	if (!compared.has(d)) bad(`drink ${d}: no compare`);
 }
 
+/* The producers behind a drink: every fragment in the folder, this file standing in for its drinks.json. */
+let all = { components: [], producers: [] };
+try { all = readFragments(FRAGS); } catch (e) { bad(`the producers cannot be read: ${e.message}`); }
+const mine = new Set([path.resolve(FILE), path.resolve(FRAGS, 'drinks.json')]);
+const own = (k) => (Array.isArray(frag[k]) ? frag[k] : []).map((v, i) => ({ file: FILE, at: `${REL(FILE)} ${k}[${i}]`, v }));
+const frags = {
+	components: [...all.components.filter((x) => !mine.has(path.resolve(x.file))), ...own('components')],
+	producers: [...all.producers.filter((x) => !mine.has(path.resolve(x.file))), ...own('producers')]
+};
+const behind = drinkProducers(frags, dishNames);
+for (const m of drinkProducerProblems(frags, dishNames, LIVING, printed)) bad(m);
+
 const fewest = [...dishNames].map((d) => [d, perItem.get(d) || 0]).sort((a, b) => a[1] - b[1]).slice(0, 10);
 console.log(`components ${comps.length}: ingredient ${kinds.ingredient}, technique ${kinds.technique}, story ${kinds.story}; compares ${compared.size}`);
+console.log(`drink producers ${behind.length}${behind.length ? ': ' + behind.map((b) => b.key).join(', ') : ''}; living names refused ${LIVING_NAMES.length}`);
 console.log('fewest: ' + fewest.map(([d, n]) => `${d} ${n}`).join('; '));
 if (out.length) { for (const m of out) console.error(m); console.error(`${out.length} problems`); process.exit(1); }
 console.log('drinks.json: every check passes');

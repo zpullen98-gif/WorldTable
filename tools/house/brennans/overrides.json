@@ -52166,6 +52166,275 @@
       },
       "reason": "Producers deep dive: a sourcing question no source answers goes to the kitchen at lineup",
       "source": "research:producers-food-louisiana-produce-pantry-2026-10-06.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Classic poured on the standard 90 proof Sazerac Rye, and is the rinse the 90 proof Herbsaint or the 100 proof Herbsaint Original?",
+        "askWhom": "bar",
+        "items": [
+          "Classic Sazerac"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-whiskey-sazerac-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "May servers tell guests that Antoine Peychaud's apothecary stood on our block of Royal Street, as the Sazerac Company tells it?",
+        "askWhom": "manager",
+        "items": [
+          "Classic Sazerac",
+          "Origin Story"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-whiskey-sazerac-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Tullamore D.E.W. bottling goes into Brennan's Irish Coffee?",
+        "askWhom": "bar",
+        "items": [
+          "Brennan’s Irish Coffee"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-whiskey-sazerac-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "May a Birdcage be sent from the Roost to a dining room table, or is it poured for guests in the Roost only?",
+        "askWhom": "manager",
+        "items": [
+          "Birdcage"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-whiskey-sazerac-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which orange bitters finish Rumors are Flying: Regans', Angostura Orange, Fee Brothers, The Bitter Truth or another?",
+        "askWhom": "bar",
+        "items": [
+          "Rumors are Flying"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-absinthe-bitters-brandy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which black walnut bitters go into the Apple Crumble: Fee Brothers or another maker?",
+        "askWhom": "bar",
+        "items": [
+          "Apple Crumble"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-absinthe-bitters-brandy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Origin Story's glass rinsed with the Jade, as the Classic is with Herbsaint?",
+        "askWhom": "bar",
+        "items": [
+          "Origin Story"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-absinthe-bitters-brandy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Champagne Cocktail's sugar cube soaked with Angostura before the Champagne goes in, and with how many dashes?",
+        "askWhom": "bar",
+        "items": [
+          "Brennan’s Champagne Cocktail"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-absinthe-bitters-brandy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which butterscotch schnapps goes into the Apple Crumble?",
+        "askWhom": "bar",
+        "items": [
+          "Apple Crumble"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-liqueurs-aperitifs-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "If our Green Chartreuse allocation runs short, does Five Minutes More come off the list or change?",
+        "askWhom": "manager",
+        "items": [
+          "Five Minutes More"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-liqueurs-aperitifs-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Should servers call the Cap Corse Mattei a quinquina, as the bottle does, though the Roost page prints vermouth?",
+        "askWhom": "manager",
+        "items": [
+          "Spoonbill"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-liqueurs-aperitifs-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which vodka goes into the Brennan’s Bloody Mary, the Bloody Bull and the Espresso Martini, and is it the same bottle in all three?",
+        "askWhom": "bar",
+        "items": [
+          "Brennan’s Bloody Mary",
+          "Bloody Bull",
+          "Espresso Martini"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-white-spirits-agave-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Chopin goes into the Flamingo: the potato vodka, or the rye or wheat?",
+        "askWhom": "bar",
+        "items": [
+          "Flamingo"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-white-spirits-agave-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Cathead bottle goes into Five Minutes More: is it the Satsuma Mandarin Vodka, and at what proof?",
+        "askWhom": "bar",
+        "items": [
+          "Five Minutes More"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-white-spirits-agave-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the OBX made with the standard Gentilly Gin or the Gentilly Gin Barrel Reserve?",
+        "askWhom": "bar",
+        "items": [
+          "OBX"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-white-spirits-agave-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Who presses the Revive Cold-Pressed Juice, and is Revive the maker’s name or the juice’s?",
+        "askWhom": "manager",
+        "items": [
+          "Revive Cold-Pressed Juice"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-wines-zero-mixers-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which vintage of the Elio Perrone Bigaro is open, and what alcohol figure does its label print?",
+        "askWhom": "bar",
+        "items": [
+          "OBX"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-wines-zero-mixers-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Flamingo always topped with Taittinger La Française, and how long does an opened bottle stay in service at the Roost?",
+        "askWhom": "bar",
+        "items": [
+          "Flamingo"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-wines-zero-mixers-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Abita Root Beer in Floating in South Africa poured from bottle or can?",
+        "askWhom": "bar",
+        "items": [
+          "Floating in South Africa"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
+      "source": "research:producers-bar-wines-zero-mixers-2026-10-10.md"
     }
   ]
 }

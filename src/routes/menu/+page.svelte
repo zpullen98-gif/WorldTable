@@ -1449,7 +1449,7 @@
 					onGo={toQuiz}
 				/>
 			{:else if producersView}
-				<ProducersView {current} onOpen={openCard} />
+				<ProducersView {current} onOpen={openCard} linkable={roomsOpen} />
 			{:else}
 				<StudyMenu
 					{current}

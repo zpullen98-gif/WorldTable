@@ -261,7 +261,7 @@ describe('the producer subject', () => {
 			expect(said).not.toMatch(DASH);
 		}
 		const of = round.find((q) => q.kind === 'producerOf')!;
-		expect(explainAnswer(h, of)).toMatch(/From The \w+|From [A-Z]/);
+		expect(explainAnswer(h, of)).toMatch(/Where: [A-Z]/);
 		const m = minHouse();
 		expect(stillNeeded(m, 'producerOf')).toBe('Producer needs 2 items with a kept producer; 0 so far.');
 		expect(stillNeeded(m, 'producerDish')).toBe('Which dish uses it needs 2 producers on a dish or a drink; 0 so far.');

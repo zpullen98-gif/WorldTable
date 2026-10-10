@@ -719,11 +719,35 @@ function firstSentence(text: string): string {
 	return plainText(m ? m[0] : t);
 }
 
+/** The months, which open a date as a figure does ('May 1896'). */
+const MONTH_WORD = /^(?:January|February|March|April|May|June|July|August|September|October|November|December)\b/;
+
+/**
+ * A profile's founded value as a sentence says it, without its closing full
+ * stop. A value that opens on a date reads after Founded: a figure ('1896',
+ * '1920s'), a month, or a lower case word that carries one ('between 1849
+ * and 1857', 'about 1900', 'c. 1850'). A value that opens on any other
+ * capital is a sentence of its own and is said as written: 'Distillery
+ * 1896; brand 1992 or 1993', 'The family has made Moscato there since the
+ * end of the nineteenth century', never 'Founded The family has...'.
+ */
+export function foundedSentence(founded: unknown): string {
+	const f = plainText(founded).replace(/[\s.]+$/, '');
+	if (!f) return '';
+	return /^[0-9a-z]/.test(f) || MONTH_WORD.test(f) ? 'Founded ' + f : f;
+}
+
+/** Sentences as a card's back joins them: each without its own closing stop, then one stop at the end. */
+function joinSentences(parts: readonly string[]): string {
+	const kept = parts.map((p) => plainText(p).replace(/[\s.]+$/, '')).filter(Boolean);
+	return kept.length ? kept.join('. ') + '.' : '';
+}
+
 /**
  * Up to three cards per kept producer profile: who it is (where and when it
- * was founded), one thing to know (its first fact, else the first sentence
- * of its history) and what on the menu uses it. A card with nothing to say
- * on its back is left out.
+ * was founded, the founded value by foundedSentence), one thing to know (its
+ * first fact, else the first sentence of its history) and what on the menu
+ * uses it. A card with nothing to say on its back is left out.
  */
 function producerCards(house: House, byId: Map<string, HouseItem>): Flashcard[] {
 	const out: Flashcard[] = [];
@@ -732,8 +756,8 @@ function producerCards(house: House, byId: Map<string, HouseItem>): Flashcard[] 
 		const where = plainText(p.profile.where);
 		const founded = plainText(p.profile.founded);
 		const name = shortWho(p.who);
-		const who = [where, founded ? 'Founded ' + founded : ''].filter(Boolean).join('. ');
-		if (who) out.push({ kind: 'producer', front: name + (founded ? ': where, and since when?' : ': where from?'), back: who + '.', itemId: id, n: 0 });
+		const who = joinSentences([where, foundedSentence(founded)]);
+		if (who) out.push({ kind: 'producer', front: name + (founded ? ': where, and since when?' : ': where from?'), back: who, itemId: id, n: 0 });
 		const facts = Array.isArray(p.profile.facts) ? p.profile.facts.map(plainText).filter(Boolean) : [];
 		const point = facts[0] || firstSentence(p.profile.history);
 		if (point) out.push({ kind: 'producer', front: name + ': one thing to know', back: point, itemId: id, n: 1 });

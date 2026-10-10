@@ -1,15 +1,18 @@
 /**
  * The study view's producer readers (study.ts producersFor, producerRows and
  * producersLine): kept profiles only, in the house's order, grouped Makers
- * and farms then Where it comes from, each with the items that use it by
- * name. The words they print are STUDY_WORDS', walked for dashes by
- * study.test.ts. Every producer here is invented for the fixture's house.
+ * and farms, Where it comes from, then At the bar (a producer behind a drink
+ * and no dish), each with the items that use it by name: the dishes and
+ * wines as the chips the Table's card opens, the drinks with their Ledger
+ * address on the shared origin. The words they print are STUDY_WORDS',
+ * walked for dashes by study.test.ts. Every producer here is invented for
+ * the fixture's house.
  */
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import type { House, ProducerProfile } from './house/house-schema';
-import { PRODUCER_TYPE_WORDS, STUDY_WORDS, producerRows, producersFor, producersLine, say } from './study';
+import { PRODUCER_TYPE_WORDS, STUDY_WORDS, atTheBar, producerRows, producersFor, producersLine, say } from './study';
 
 const fixture: House = JSON.parse(readFileSync(fileURLToPath(new URL('./house/fixtures/house-min.json', import.meta.url)), 'utf8'));
 const clone = <T>(v: T): T => JSON.parse(JSON.stringify(v));
@@ -59,7 +62,9 @@ describe('producersFor', () => {
 			paragraphs: ['The salt works began on the quay.', 'It still packs the salt by hand.'],
 			notes: ['Say the name slowly.'],
 			askKitchen: ['Which week does the salt arrive?'],
-			items: [{ id: 'd-chicken1', name: 'Lantern Roast Chicken', kind: 'dish' }]
+			items: [{ id: 'd-chicken1', name: 'Lantern Roast Chicken', kind: 'dish' }],
+			chips: [{ id: 'd-chicken1', name: 'Lantern Roast Chicken', kind: 'dish' }],
+			drinks: []
 		});
 		/* The items by name, an id the house lacks left out. */
 		expect(rows[1].items.map((i) => i.name)).toEqual(['Beetroot and Apple Salad', 'Lantern Roast Chicken']);
@@ -79,18 +84,66 @@ describe('producersFor', () => {
 	});
 });
 
-describe('producerRows and producersLine', () => {
-	it('group the kept profiles Makers and farms then Where it comes from, a group with none left out', () => {
-		const groups = producerRows(house());
-		expect(groups.map((g) => [g.label, g.rows.map((r) => r.who)])).toEqual([
-			['Makers and farms', ['Quay Salt Works', 'The Lantern kitchen']],
-			['Where it comes from', ['Quay Boats']]
+describe('the drinks a producer reaches', () => {
+	it("split the items into the Table's chips and the drinks, each drink with its Ledger address on the shared origin only", () => {
+		const h = house();
+		h.components!.find((c) => c.id === 'c-saltcrs1')!.itemIds = ['b-collins1', 'd-chicken1', 'w-lantern1', 'b-verjus01'];
+		const [salt] = producersFor(h, 'd-chicken1', '/table');
+		expect(salt.items.map((i) => i.id)).toEqual(['b-collins1', 'd-chicken1', 'w-lantern1', 'b-verjus01']);
+		expect(salt.chips).toEqual([
+			{ id: 'd-chicken1', name: 'Lantern Roast Chicken', kind: 'dish' },
+			{ id: 'w-lantern1', name: 'Quay Lane Harbour White 2024', kind: 'wine' }
 		]);
-		expect(groups[0].rows[1].typeLabel).toBe('Made in house');
+		expect(salt.drinks).toEqual([
+			{ id: 'b-collins1', name: 'The Lantern Collins', href: '/ledger/#drink=b-collins1' },
+			{ id: 'b-verjus01', name: 'Verjus and Tonic', href: '/ledger/#drink=b-verjus01' }
+		]);
+		/* Off the shared origin (the standalone build) a drink is words: no address. */
+		expect(producersFor(h, 'd-chicken1')[0].drinks.map((d) => d.href)).toEqual(['', '']);
+		expect(producersFor(h, 'd-chicken1', '/elsewhere')[0].drinks.map((d) => d.href)).toEqual(['', '']);
+	});
+
+	it('put a producer At the bar when it reaches a drink and no dish, and leave a wine alone to its type', () => {
+		expect(atTheBar({ items: [{ id: 'b-verjus01', name: 'Verjus and Tonic', kind: 'cocktail' }] })).toBe(true);
+		expect(atTheBar({ items: [{ id: 'b-verjus01', name: 'Verjus and Tonic', kind: 'cocktail' }, { id: 'w-lantern1', name: 'White', kind: 'wine' }] })).toBe(true);
+		expect(atTheBar({ items: [{ id: 'b-verjus01', name: 'Verjus and Tonic', kind: 'cocktail' }, { id: 'd-chicken1', name: 'Chicken', kind: 'dish' }] })).toBe(false);
+		expect(atTheBar({ items: [{ id: 'w-lantern1', name: 'White', kind: 'wine' }] })).toBe(false);
+		expect(atTheBar({ items: [] })).toBe(false);
+	});
+});
+
+describe('producerRows and producersLine', () => {
+	it('group the kept profiles Makers and farms, Where it comes from, then At the bar, a group with none left out', () => {
+		const groups = producerRows(house());
+		expect(groups.map((g) => [g.key, g.label, g.rows.map((r) => r.who)])).toEqual([
+			['makers', 'Makers and farms', ['Quay Salt Works']],
+			['origins', 'Where it comes from', ['Quay Boats']],
+			['bar', 'At the bar', ['The Lantern kitchen']]
+		]);
+		/* At the bar whatever its type: the house's own, said as such. */
+		expect(groups[2].rows[0].typeLabel).toBe('Made in house');
+		expect(groups[2].rows[0].chips).toEqual([]);
+		expect(groups[2].rows[0].drinks).toEqual([{ id: 'b-verjus01', name: 'Verjus and Tonic', href: '' }]);
+		expect(producerRows(house(), '/table')[2].rows[0].drinks[0].href).toBe('/ledger/#drink=b-verjus01');
 		const makersOnly = house();
 		makersOnly.components = makersOnly.components!.filter((c) => c.id !== 'c-boats001');
-		expect(producerRows(makersOnly).map((g) => g.key)).toEqual(['makers']);
+		expect(producerRows(makersOnly).map((g) => g.key)).toEqual(['makers', 'bar']);
 		expect(producerRows(fixture)).toEqual([]);
+	});
+
+	it('keep a producer behind a dish and a drink in its food group, its drinks after the dish chips, and a wine alone in its type', () => {
+		const h = house();
+		h.components!.find((c) => c.id === 'c-boats001')!.itemIds = ['b-collins1', 'd-beetrt01'];
+		h.components!.find((c) => c.id === 'c-house001')!.itemIds = ['w-lantern1'];
+		const groups = producerRows(h, '/table');
+		expect(groups.map((g) => [g.key, g.rows.map((r) => r.who)])).toEqual([
+			['makers', ['Quay Salt Works', 'The Lantern kitchen']],
+			['origins', ['Quay Boats']]
+		]);
+		const boats = groups[1].rows[0];
+		expect(boats.chips.map((i) => i.name)).toEqual(['Beetroot and Apple Salad']);
+		expect(boats.drinks).toEqual([{ id: 'b-collins1', name: 'The Lantern Collins', href: '/ledger/#drink=b-collins1' }]);
+		expect(groups[0].rows[1].chips.map((i) => i.kind)).toEqual(['wine']);
 	});
 
 	it('say how many producers stand behind how many items, singular when one, and nothing when none', () => {
@@ -103,7 +156,10 @@ describe('producerRows and producersLine', () => {
 
 	it('name every type in words, and the words carry no dash', () => {
 		for (const key of Object.values(PRODUCER_TYPE_WORDS)) expect(say(key)).toMatch(/^[A-Z]/);
-		for (const k of ['whoMakes', 'flashProducers', 'allProducers', 'producers', 'askKitchen'] as const) expect(STUDY_WORDS[k]).not.toMatch(new RegExp('[\\u2013\\u2014]|\\s' + '--' + '\\s'));
+		for (const k of ['whoMakes', 'flashProducers', 'allProducers', 'producers', 'askKitchen', 'askBar'] as const) expect(STUDY_WORDS[k]).not.toMatch(new RegExp('[\\u2013\\u2014]|\\s' + '--' + '\\s'));
 		expect(STUDY_WORDS.whoMakes).toBe('Who makes it');
+		/* the questions of a producer At the bar are the bar's, as the Ledger heads them (ProducerBody.svelte) */
+		expect(STUDY_WORDS.askBar).toBe('Ask the bar');
+		expect(STUDY_WORDS.askKitchen).toBe('Ask the kitchen');
 	});
 });

@@ -356,3 +356,135 @@ describe('the producer gate', () => {
 		expect(engine.readFragments(PRODUCER_FIXTURE).producers).toHaveLength(1);
 	});
 });
+
+/* ---- the Ledger names nobody living, over the producers behind a drink ----------------------------- */
+
+/* engine.mjs drinkProducers and drinkProducerProblems, the gate check-drinks.mjs runs over every fragment and
+   componentProblems runs over the shipped edition: a profile whose component (new or attached by key) names a
+   drink is held to the living rule, the dash rule and the allergen rule; a food producer is not. Every name here
+   is invented for the test, a living one standing in for the people the drink research meets. */
+describe("the Ledger's living rule over the drink producers", () => {
+	const engineOf = () => import(/* @vite-ignore */ pathToFileURL(join(ROOT, 'tools', 'house', 'engine.mjs')).href);
+	const DRINKS = ['Quay Sazerac', 'Lantern Collins'];
+	const profile = (over: Rec = {}): Rec => ({ type: 'maker', who: 'Quay Distilling', where: 'Quay Lane', founded: '', history: 'The still was built on the quay.', facts: [], notes: [], sayIt: '', askKitchen: [], ...over });
+	const frags = (key: string, over: Rec = {}, inline?: Rec) => ({
+		components: [
+			{ at: 'drinks.json components[0]', v: { key: 'bar-bitters', items: ['Quay Sazerac'] } },
+			{ at: 'dishes.json components[0]', v: { key: 'food-bread', items: ['Eggs Hussarde'] } },
+			...(inline ? [{ at: 'producers.json components[0]', v: inline }] : [])
+		],
+		producers: key ? [{ at: 'producers.json producers[0]', v: { component: key, producer: profile(over) } }] : []
+	});
+
+	it('refuses a living surname in a drink producer, attached by key or inline, and passes the same surname in a food-only producer', async () => {
+		const engine = await engineOf();
+		const living = engine.livingRegex(engine.LIVING_FLOOR);
+		const said = 'producers.json producers[0] (bar-bitters) producer history: names a living person ("Hauck"); the Ledger names nobody living';
+		expect(engine.drinkProducerProblems(frags('bar-bitters', { history: 'The still was built by Hauck on the quay.' }), DRINKS, living).join('\n')).toContain(said);
+		expect(engine.drinkProducerProblems(frags('food-bread', { history: 'The still was built by Hauck on the quay.' }), DRINKS, living)).toEqual([]);
+		/* Every field of the profile is read: who, where, founded, history, each fact and note, sayIt and each question. */
+		const each = engine.drinkProducerProblems(frags('bar-bitters', { who: 'Hauck Spirits', where: "Hauck's yard", founded: 'By Hauck', facts: ['Kregar ran it.'], notes: ['Say Underhill.'], sayIt: 'Ask for Patrick.', askKitchen: ['Is Branson in?'] }), DRINKS, living).join('\n');
+		for (const f of ['who', 'where', 'founded', 'facts[0]', 'notes[0]', 'sayIt', 'askKitchen[0]']) expect(each).toContain(`(bar-bitters) producer ${f}: names a living person`);
+		/* Inline on a new component that names a drink (and a dish), matched folded for case. */
+		const inline = { key: 'bar-syrup', items: ['Eggs Hussarde', 'lantern collins'], producer: profile({ notes: ['Murray makes it.'] }) };
+		expect(engine.drinkProducerProblems(frags('', {}, inline), DRINKS, living)).toEqual([expect.stringContaining('producers.json components[0] (bar-syrup) producer notes[0]: names a living person ("Murray")')]);
+		expect(engine.drinkProducers(frags('', {}, inline), DRINKS).map((p: Rec) => [p.key, p.drinks])).toEqual([['bar-syrup', ['lantern collins']]]);
+		expect(engine.drinkProducerProblems(frags('', {}, { ...inline, items: ['Eggs Hussarde'] }), DRINKS, living)).toEqual([]);
+		/* A whole word only, and the dead may be named. */
+		expect(engine.drinkProducerProblems(frags('bar-bitters', { history: 'Heidelberg bergamot, after Antoine Peychaud.' }), DRINKS, living)).toEqual([]);
+		/* A name printed on the menu is the menu's word, read past; outside it the same name is refused. */
+		const printed = frags('bar-bitters', { history: 'The coffee in Ralph’s Coffee.' });
+		expect(engine.drinkProducerProblems(printed, DRINKS, living, ['Ralph’s Coffee'])).toEqual([]);
+		expect(engine.drinkProducerProblems(printed, DRINKS, living).join('\n')).toContain('names a living person ("Ralph")');
+	});
+
+	it('holds a drink producer to the dash and allergen rules, and sends a question to the kitchen by its heading', async () => {
+		const engine = await engineOf();
+		const EM = String.fromCharCode(0x2014);
+		const out = engine.drinkProducerProblems(frags('bar-bitters', { facts: ['Founded ' + EM + ' on the quay.', 'It is gluten free.'], notes: ['There is dairy in the syrup.'] }), DRINKS).join('\n');
+		for (const s of ['facts[0]: a dash', 'facts[1]: an allergen or diet verdict ("gluten free")', 'notes[0]: names an allergen or a diet without sending the server']) expect(out).toContain(s);
+		expect(engine.drinkProducerProblems(frags('bar-bitters', { notes: ['Dairy questions go to the kitchen at lineup.'], askKitchen: ['Is there dairy in the syrup?'] }), DRINKS)).toEqual([]);
+		expect(engine.drinkProducerProblems(frags('food-bread', { facts: ['Founded ' + EM + ' on the quay.'] }), DRINKS)).toEqual([]);
+	});
+
+	it('extends the floor from living.json beside the fragments, refuses a malformed list, and the fragment reader skips it', async () => {
+		const engine = await engineOf();
+		const dir = mkdtempSync(join(tmpdir(), 'oot-living-'));
+		made.push(dir);
+		expect(engine.livingNames(dir)).toEqual(engine.LIVING_FLOOR);
+		writeFileSync(join(dir, 'living.json'), JSON.stringify(['Quayside', 'Hauck', "O'Lantern"]));
+		writeFileSync(join(dir, 'dishes.json'), JSON.stringify({ components: [component()] }));
+		const names = engine.livingNames(dir);
+		expect(names).toEqual([...engine.LIVING_FLOOR, 'Quayside', "O'Lantern"]);
+		expect(engine.readFragments(dir).files.map((f: string) => f.split(/[\\/]/).pop())).toEqual(['dishes.json']);
+		const living = engine.livingRegex(names);
+		expect(engine.drinkProducerProblems(frags('bar-bitters', { sayIt: 'Quayside distils it.' }), DRINKS, living).join('\n')).toContain('names a living person ("Quayside")');
+		expect(engine.drinkProducerProblems(frags('bar-bitters', { sayIt: 'Quaysides distil it.' }), DRINKS, living)).toEqual([]);
+		for (const [bad, said] of [['["quayside"]', /\[0\] "quayside" is not a surname/], ['{"names":[]}', /is a list of surnames/], ['[', /does not parse as JSON/]] as const) {
+			writeFileSync(join(dir, 'living.json'), bad);
+			expect(() => engine.livingNames(dir)).toThrow(said);
+		}
+	});
+
+	it("holds the shipped edition too: a living surname in the profile behind a drink is refused, behind a dish it is not the gate's", async () => {
+		const engine = await engineOf();
+		const h = JSON.parse(readFileSync(join(ROOT, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json'), 'utf8')).house;
+		const drinkIds = new Set(h.cocktails.map((c: Rec) => c.id));
+		const bar = h.components.find((c: Rec) => c.producer && (c.itemIds as string[]).some((id) => drinkIds.has(id)));
+		const food = h.components.find((c: Rec) => c.name === 'Leidenheimer bread');
+		expect(bar, 'a component behind a drink carries a producer').toBeTruthy();
+		const at = (c: Rec) => {
+			const one = JSON.parse(JSON.stringify(h));
+			one.components = [{ ...c, producer: { ...(c.producer as Rec), value: { ...((c.producer as Rec).value as Rec), notes: ['Hauck roasts it.'] } } }];
+			return engine.componentProblems(one, engine.noteHay()).filter((x: string) => x.includes('living'));
+		};
+		expect(at(bar).join('\n')).toContain('producer notes[0]: names a living person ("Hauck")');
+		expect(at(food)).toEqual([]);
+		expect(engine.componentProblems(h, engine.noteHay())).toEqual([]);
+	});
+
+	/* check-drinks.mjs on a copy of the authors' folder: needs the Ledger's and the Codex's data for its compare
+	   check, so it is skipped on a machine without those checkouts. */
+	const LEDGER = process.env.LEDGER_SRC || join(ROOT, '..', 'bartendersledger');
+	const CODEX = process.env.CODEX_SRC || join(ROOT, '..', 'sommelierscodex');
+	const sources = existsSync(join(LEDGER, 'js', 'data-core.js')) && existsSync(join(CODEX, 'js', 'data-producers.js'));
+	it.skipIf(!sources)('check-drinks refuses a living name from living.json in a drink producer, and passes it in a food-only one', () => {
+		const COMP = join(ROOT, 'tools', 'house', 'brennans', 'components');
+		const run = (move: (p: Rec) => void) => {
+			const dir = mkdtempSync(join(tmpdir(), 'oot-check-drinks-'));
+			made.push(dir);
+			for (const f of ['dishes.json', 'drinks.json', 'wines.json', 'videos.json']) cpSync(join(COMP, f), join(dir, f));
+			const p = JSON.parse(readFileSync(join(COMP, 'producers.json'), 'utf8'));
+			move(p);
+			writeFileSync(join(dir, 'producers.json'), JSON.stringify(p, null, 1));
+			writeFileSync(join(dir, 'living.json'), JSON.stringify(['Quayside']));
+			return spawnSync(process.execPath, [join(COMP, 'check-drinks.mjs'), join(dir, 'drinks.json')], { cwd: dir, encoding: 'utf8', env: { ...process.env, BRENNANS_COMPONENTS: dir, LEDGER_SRC: LEDGER, CODEX_SRC: CODEX } });
+		};
+		const FACT = 'The roastery was founded by Quayside.';
+		const entry = (p: Rec, key: string) => (p.producers as Rec[]).find((x) => x.component === key) as Rec & { producer: { facts: string[] } };
+		const drink = run((p) => entry(p, 'bar-congregation-coffee').producer.facts.push(FACT));
+		expect(drink.status, drink.stdout).toBe(1);
+		expect(drink.stderr).toMatch(/producers\.json producers\[\d+\] \(bar-congregation-coffee\) producer facts\[\d+\]: names a living person \("Quayside"\)/);
+		const food = run((p) => entry(p, 'creekstone-farms').producer.facts.push(FACT));
+		expect(food.status, food.stderr).toBe(0);
+		expect(food.stdout).toMatch(/drink producers \d+: bar-congregation-coffee\b[^;\n]*; living names refused 19/);
+	}, 60_000);
+});
+
+describe("the Brennan's spelling map", () => {
+	const engineOf = () => import(/* @vite-ignore */ pathToFileURL(join(ROOT, 'tools', 'house', 'engine.mjs')).href);
+
+	it('respells the forms the producer walk-through found in the drink producers, keeps a capital, and leaves the wine called Télégramme whole', async () => {
+		const engine = await engineOf();
+		const said = (s: string) => engine.americanise(s).out;
+		expect(said('It was reorganised as the company.')).toBe('It was reorganized as the company.');
+		expect(said('who had learnt absinthe making in France')).toBe('who had learned absinthe making in France');
+		expect(said('the city’s 73 neighbourhoods; each takes a neighbourhood’s name')).toBe('the city’s 73 neighborhoods; each takes a neighborhood’s name');
+		expect(said('Dealcoholised wine is made as wine first, then dealcoholised.')).toBe('Dealcoholized wine is made as wine first, then dealcoholized.');
+		expect(said('Neighbouring villages, an amphitheatre of vines, the alcohol vapour')).toBe('Neighboring villages, an amphitheater of vines, the alcohol vapor');
+		expect(said('a re-pressurises stopper')).toBe('a re-pressurizes stopper');
+		expect(said('its younger wine is called Télégramme')).toBe('its younger wine is called Télégramme');
+		expect(said('savoury, savour and flavour')).toBe('savory, savor and flavor');
+		expect(engine.britishWords('It was reorganised; they learnt it.')).toEqual(['reorganised', 'learnt']);
+	});
+});

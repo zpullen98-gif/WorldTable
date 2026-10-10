@@ -1,11 +1,15 @@
 <!--
   The producers: every kept producer profile of the house, inside My Menu at
   /menu?view=producers (the producer deep dive, 6 October 2026; no route of
-  its own, so the precache does not grow). Two groups, Makers and farms (a
-  maker, a farm, the house itself) then Where it comes from (a fishery, an
-  origin), each profile in full with the dishes and drinks that use it as
-  chips. A chip opens that item's study card through the page's own openCard,
-  a shallow entry, so Back returns here where the reader was.
+  its own, so the precache does not grow). Three groups, Makers and farms (a
+  maker, a farm, the house itself), Where it comes from (a fishery, an
+  origin) and At the bar (a producer that reaches a drink and no dish), each
+  profile in full with the items that use it. A dish or wine is a chip that
+  opens its study card through the page's own openCard, a shallow entry, so
+  Back returns here where the reader was. A drink, after the chips, opens in
+  the Ledger (wing-links.ts roomHref), by the card's Compare with rule: a
+  link on the shared origin while the Ledger is installed here or the
+  network is up, and words otherwise.
 
   The art is the study view's: the display face for the heads, the eyebrow
   for the group heads, the dotted rule between profiles, 44px chips. KEPT
@@ -15,18 +19,22 @@
 	import { base } from '$app/paths';
 	import type { House } from '$lib/house/house-schema';
 	import { producerRows, say, studyRows, type StudyRow } from '$lib/study';
+	import { ROOM_NAMES } from '$lib/wing-links';
 	import ProducerBody from './ProducerBody.svelte';
 
 	let {
 		current,
-		onOpen
+		onOpen,
+		linkable = { codex: false, ledger: false }
 	}: {
 		current: House;
 		/** Open an item's card: its id, the rows it walks, and the selector that finds the chip again on Back. */
 		onOpen: (id: string, list: readonly StudyRow[], from?: string) => void;
+		/** Per room: the network is up or the room is installed here (wing-links.ts, rule 3). */
+		linkable?: { codex: boolean; ledger: boolean };
 	} = $props();
 
-	const groups = $derived(producerRows(current));
+	const groups = $derived(producerRows(current, base));
 	const dishRows = $derived(studyRows(current, 'dish'));
 	const chipSel = (pid: string, iid: string) => `[data-chip="${pid}:${iid}"]`;
 </script>
@@ -51,8 +59,15 @@
 						{#if r.items.length}
 							<h5 class="onmenu">{say('onTheMenu')}</h5>
 							<div class="chips">
-								{#each r.items as it (it.id)}
+								{#each r.chips as it (it.id)}
 									<button type="button" class="chip" data-chip="{r.id}:{it.id}" onclick={() => onOpen(it.id, dishRows, chipSel(r.id, it.id))}>{it.name}</button>
+								{/each}
+								{#each r.drinks as d (d.id)}
+									{#if linkable.ledger && d.href}
+										<a class="chip drink" href={d.href} data-drink="{r.id}:{d.id}"><span>{d.name}<span class="room">, {say('inTheRoom', { room: ROOM_NAMES.ledger })}</span></span></a>
+									{:else}
+										<span class="drink words" data-drink="{r.id}:{d.id}">{d.name}</span>
+									{/if}
 								{/each}
 							</div>
 						{/if}
@@ -88,4 +103,6 @@
 	}
 	.chip:hover { border-color: var(--turmeric); }
 	.chip.go { border-color: var(--turmeric-deep); font-weight: 600; }
+	.room { color: var(--ink-soft); }
+	.words { display: inline-flex; align-items: center; min-height: 44px; padding: 0 4px; color: var(--ink); }
 </style>

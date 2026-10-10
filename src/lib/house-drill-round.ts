@@ -21,6 +21,7 @@ import {
 	OPTION_COUNT,
 	dealQuestion,
 	drillableCounts,
+	foundedSentence,
 	readyKinds,
 	type DrillKind,
 	type DrillQuestion,
@@ -278,13 +279,15 @@ export function explainAnswer(house: House, q: DrillQuestion): string {
 		}
 		case 'producerOf': {
 			const p = producerNamed(house, q.answer, q.itemId);
-			return p ? joined([plain(p.sayIt), plain(p.where) ? 'From ' + plain(p.where) + '.' : '']) : '';
+			/* the where as a label, since a where may open on its own verb ('Created on Royal Street...') */
+			return p ? joined([plain(p.sayIt), plain(p.where) ? 'Where: ' + plain(p.where).replace(/[\s.]+$/, '') + '.' : '']) : '';
 		}
 		case 'producerWhere':
 		case 'producerDish': {
 			const c = (house.components || []).find((x) => x.id === q.itemId);
 			const p = c ? keptValue<ProducerProfile>(c.producer) : undefined;
-			return p ? joined([plain(p.sayIt), plain(p.founded) ? 'Founded ' + plain(p.founded) + '.' : '']) : '';
+			const founded = foundedSentence(p ? p.founded : '');
+			return p ? joined([plain(p.sayIt), founded ? founded + '.' : '']) : '';
 		}
 		case 'cocktailGlass':
 		case 'cocktailSpec': {

@@ -52,8 +52,18 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    research/producers-food-*-2026-10-06.md files): a producer profile on forty components, one new
    component for the Parmesan on the Eggs Sardou, the corrections the research made to existing
    explanations, and the sourcing questions no source answers, each an ask:+ override for lineup;
-   stamped at the half hour before its build, never ahead of the clock. */
-export const EDITION_BUILT_AT = '2026-10-06T18:30:00.000Z';
+   stamped at the half hour before its build, never ahead of the clock. The 08:30 edition of 10 October
+   2026 carries the producers deep dive for the bar (components/producers.json, from the five
+   research/producers-bar-*-2026-10-10.md files): a producer profile on thirty-five drink components,
+   each held to the Ledger's living rule with the surnames that research met in living.json, the
+   corrections the research made to existing drink explanations and cards, and the questions about a
+   drink's producer no source answers, each an ask:+ override for lineup; stamped at the half hour
+   before its build, never ahead of the clock. The 09:30 edition of the same day carries the producer
+   walk-through's repairs: the British forms the spelling map had missed in the drink producers and
+   elsewhere (reorganised, learnt, neighbourhood, dealcoholised and their kin) in American spelling, and
+   the producer cards' who card saying a founded phrase as its own sentence (house-drills.ts
+   foundedSentence); stamped at the half hour before its build, never ahead of the clock. */
+export const EDITION_BUILT_AT = '2026-10-10T09:30:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a
@@ -181,10 +191,13 @@ export const FRAGMENT_FILES = ['dishes.json', 'drinks.json', 'wines.json', 'vide
 /* Every fragment file in the directory: the four named files first in that order, then any other .json
    in name order. Throws with the file named when one does not parse or is not a fragment. */
 export const FRAGMENT_KEYS = ['components', 'compare', 'videos', 'producers'];
+/* The one .json beside the fragments that is not one: living.json, the surnames the Ledger's living rule
+   refuses (livingNames below). */
+export const LIVING_FILE = 'living.json';
 export function readFragments(dir = componentsDir()) {
 	const out = { dir, files: [], components: [], compare: [], videos: [], producers: [] };
 	if (!dir || !fs.existsSync(dir)) return out;
-	const names = fs.readdirSync(dir).filter((f) => f.endsWith('.json'));
+	const names = fs.readdirSync(dir).filter((f) => f.endsWith('.json') && f !== LIVING_FILE);
 	const rank = (f) => (FRAGMENT_FILES.indexOf(f) < 0 ? 99 : FRAGMENT_FILES.indexOf(f));
 	names.sort((a, b) => rank(a) - rank(b) || (a < b ? -1 : a > b ? 1 : 0));
 	for (const f of names) {
@@ -383,7 +396,19 @@ const BRITISH = [
 	['defence', 'defense'], ['licence', 'license'], ['practise', 'practice'], ['practised', 'practiced'],
 	['mould', 'mold'], ['draught', 'draft'], ['grey', 'gray'], ['jewellery', 'jewelry'], ['sulphite', 'sulfite'], ['sulphur', 'sulfur'],
 	['yoghurt', 'yogurt'], ['sceptical', 'skeptical'], ['catalogue', 'catalog'], ['aluminium', 'aluminum'], ['enquire', 'inquire'], ['enquiry', 'inquiry'],
-	['whilst', 'while'], ['amongst', 'among'], ['storey', 'story'], ['tyre', 'tire'], ['kerb', 'curb'], ['cheque', 'check']
+	['whilst', 'while'], ['amongst', 'among'], ['storey', 'story'], ['tyre', 'tire'], ['kerb', 'curb'], ['cheque', 'check'],
+	/* the forms the producer walk-through of 10 October 2026 found the map had missed, and their kin met in the
+	   same pack; never 'gramme', which would cut the wine called Télégramme (a letter with an accent is no word
+	   character to the boundary) */
+	['reorganise', 'reorganize'], ['reorganised', 'reorganized'], ['reorganising', 'reorganizing'], ['reorganisation', 'reorganization'],
+	['learnt', 'learned'], ['neighbourhood', 'neighborhood'], ['neighbouring', 'neighboring'],
+	['dealcoholise', 'dealcoholize'], ['dealcoholised', 'dealcoholized'], ['amphitheatre', 'amphitheater'], ['botrytised', 'botrytized'],
+	['caramelising', 'caramelizing'], ['recognising', 'recognizing'], ['chiselled', 'chiseled'], ['jewelled', 'jeweled'], ['shrivelled', 'shriveled'],
+	['colouring', 'coloring'], ['favour', 'favor'], ['favoured', 'favored'], ['honoured', 'honored'], ['honouring', 'honoring'],
+	['savour', 'savor'], ['vapour', 'vapor'], ['crystallise', 'crystallize'], ['crystallised', 'crystallized'],
+	['fertilise', 'fertilize'], ['fertilised', 'fertilized'], ['fossilised', 'fossilized'], ['mechanised', 'mechanized'],
+	['oxidise', 'oxidize'], ['oxidised', 'oxidized'], ['pasteurise', 'pasteurize'], ['pasteurised', 'pasteurized'],
+	['popularise', 'popularize'], ['popularised', 'popularized'], ['pressurise', 'pressurize'], ['pressurised', 'pressurized']
 ];
 const BRITISH_RE = new RegExp('\\b(' + BRITISH.map((b) => b[0]).join('|') + ')(s?)\\b', 'gi');
 const AMERICAN = new Map(BRITISH);
@@ -599,7 +624,8 @@ export function noteCounts(house) {
    kept notes, its components and its comparisons left out so none vouches for itself). Each item's
    comparisons: one or two, an in-app one before a classic, the label 8 words or fewer and same and
    different 30 or fewer, no dash, no banned word and no verdict. A component's producer profile is held
-   by producerProblems below, with the explanation's own prose rule. */
+   by producerProblems below, with the explanation's own prose rule, and one behind a drink by the Ledger's
+   living rule too (livingIn below, the names printed on the menu read past). */
 export const COMPONENT_DIET_LINE = 'Dietary questions go to the service note and the kitchen.';
 export function componentProblems(house, hay) {
 	const out = [];
@@ -629,11 +655,17 @@ export function componentProblems(house, hay) {
 			if (part === 'explanation' || part.startsWith('card')) for (const p of sourceProblems(String(text), folded)) out.push(`${at} ${part}: ${p}`);
 		}
 	}
+	/* The Ledger names nobody living: a profile whose component reaches a drink is held to the living rule too. */
+	let living;
+	try { living = livingRegex(livingNames()); } catch (e) { out.push(e.message); living = livingRegex(LIVING_FLOOR); }
+	const drinkIds = new Set((house.cocktails || []).map((d) => d.id));
+	const printed = ['dishes', 'cocktails', 'wines'].flatMap((l) => (house[l] || []).map((r) => r.name));
 	for (const c of house.components || []) {
 		const p = kv(c.producer);
 		if (p === undefined) continue;
 		const at = `component ${c.name} producer`;
 		for (const problem of producerProblems(p, folded, (part, text) => prose(`${at} ${part}`, text))) out.push(`${at} ${problem}`);
+		if ((c.itemIds || []).some((id) => drinkIds.has(id))) for (const [part, text] of producerStrings(p)) for (const name of livingIn(text, living, printed)) out.push(`${at} ${part}: ${LIVING_SAID(name)}`);
 	}
 	for (const list of ['dishes', 'cocktails', 'wines']) for (const r of house[list] || []) {
 		const entries = kv(r.compare);
@@ -683,6 +715,103 @@ export function producerProblems(p, folded, prose) {
 		   there: it may name what only the kitchen can answer, and a verdict in it is still refused. */
 		prose(at, at.startsWith('askKitchen') ? 'Ask the kitchen: ' + text : text);
 		for (const s of sourceProblems(at === 'who' || at === 'where' ? 'of ' + text : text, folded)) out.push(`${at}: ${s}`);
+	}
+	return out;
+}
+
+/* THE LEDGER NAMES NOBODY LIVING, over the producers behind a drink. A drink's producer is read in the
+   Ledger, which names no living person: not a founder still alive, a current master distiller, an owner
+   or a bartender; they are said by role (the founder, the current master distiller). The dead may be
+   named. LIVING_FLOOR is the list the drink research met first and no file can shorten; living.json
+   beside the fragments (an array of surnames, each a capitalised word or two) adds the names later
+   research meets. livingRegex matches a name as a whole word, case as written. */
+export const LIVING_FLOOR = ['Ralph', 'Patrick', 'Breaux', 'Zamanian', 'Gracie', 'Winters', 'Rupf', 'Murray', 'Guthrie', 'Barrileaux', 'Underhill', 'Kulsveen', 'Hauck', 'Berg', 'Livings', 'Hartmann', 'Branson', 'Kregar'];
+const LIVING_NAME = /^[A-Z\u00C0-\u00DE][A-Za-z\u00C0-\u024F'\u2019]+(?:[ -][A-Z\u00C0-\u00DE][A-Za-z\u00C0-\u024F'\u2019]+)?$/;
+export function livingNames(dir = componentsDir()) {
+	const out = [...LIVING_FLOOR];
+	const file = path.join(dir, LIVING_FILE);
+	if (!fs.existsSync(file)) return out;
+	let list;
+	try { list = JSON.parse(fs.readFileSync(file, 'utf8')); } catch (e) { throw new Error(`${REL(file)}: does not parse as JSON (${e.message})`); }
+	if (!Array.isArray(list)) throw new Error(`${REL(file)}: is a list of surnames, read ${typeof list}`);
+	list.forEach((n, i) => {
+		if (typeof n !== 'string' || !LIVING_NAME.test(n)) throw new Error(`${REL(file)}: [${i}] ${JSON.stringify(n)} is not a surname (a capitalised word, or two)`);
+		if (!out.includes(n)) out.push(n);
+	});
+	return out;
+}
+export function livingRegex(names = livingNames()) {
+	const esc = (n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+	return new RegExp('(?<![\\p{L}\\p{N}])(' + names.map(esc).join('|') + ')(?![\\p{L}\\p{N}])', 'gu');
+}
+/* Every living name a text carries, each once, in the order met. `exempt` are the names printed on the
+   menu (the pack's items: Ralph's Coffee is the drink's printed name), blanked before the text is read,
+   with either apostrophe. */
+export function livingIn(text, living = livingRegex(), exempt = []) {
+	let t = String(text || '');
+	for (const n of exempt) {
+		const name = String(n || '');
+		if (!name) continue;
+		for (const form of new Set([name, name.replace(/\u2019/g, "'"), name.replace(/'/g, '\u2019')])) t = t.split(form).join(' '.repeat(form.length));
+	}
+	const out = [];
+	for (const m of t.matchAll(new RegExp(living.source, 'gu'))) if (!out.includes(m[1])) out.push(m[1]);
+	return out;
+}
+export const LIVING_SAID = (name) => `names a living person ("${name}"); the Ledger names nobody living, so say it by role (the founder, the current master distiller)`;
+
+/* The prose of a producer profile, field by field, as [field, text]: who, where, founded, history, each
+   fact, each note, sayIt and each question for the kitchen. */
+export const PRODUCER_PROSE = ['who', 'where', 'founded', 'history', 'facts', 'notes', 'sayIt', 'askKitchen'];
+export function producerStrings(p) {
+	const out = [];
+	if (!p || typeof p !== 'object' || Array.isArray(p)) return out;
+	for (const k of PRODUCER_PROSE) {
+		if (typeof p[k] === 'string') { if (p[k]) out.push([k, p[k]]); }
+		else if (Array.isArray(p[k])) p[k].forEach((x, i) => { if (typeof x === 'string' && x) out.push([`${k}[${i}]`, x]); });
+	}
+	return out;
+}
+
+/* The producers in the fragments (readFragments' shape) whose component touches a drink: one a component
+   naming a drink carries inline, and one a producers entry attaches by key to a component (in any fragment)
+   that names a drink. `drinkNames` are the pack's cocktails, matched folded for case, accents and curly
+   quotes. Each as { at, key, producer, drinks }. */
+export function drinkProducers(frags, drinkNames) {
+	const drinks = new Map([...drinkNames].map((n) => [foldName(String(n)), String(n)]));
+	const drinksOf = (c) => (c && Array.isArray(c.items) ? c.items.filter((i) => drinks.has(foldName(String(i)))) : []);
+	const byKey = new Map();
+	for (const { v } of frags.components || []) if (v && typeof v.key === 'string' && !byKey.has(v.key)) byKey.set(v.key, v);
+	const out = [];
+	for (const { at, v } of frags.components || []) {
+		if (!v || v.producer === undefined || !drinksOf(v).length) continue;
+		out.push({ at: `${at} (${v.key}) producer`, key: v.key, producer: v.producer, drinks: drinksOf(v) });
+	}
+	for (const { at, v } of frags.producers || []) {
+		const c = v && byKey.get(v.component);
+		if (!c || !drinksOf(c).length) continue;
+		out.push({ at: `${at} (${v.component}) producer`, key: v.component, producer: v.producer, drinks: drinksOf(c) });
+	}
+	return out;
+}
+
+/* The drink producers' prose held to the Ledger's rules: no living person named, no dash, no allergen or
+   diet verdict, and a sentence naming an allergen class or a diet sends the server to the service note,
+   the kitchen or lineup (a question under Ask the kitchen is read as sent there). `exempt` are the names
+   printed on the menu, read past by the living rule. Each problem a sentence naming the fragment, the key
+   and the field. A food producer is not read here. */
+export function drinkProducerProblems(frags, drinkNames, living = livingRegex(), exempt = []) {
+	const out = [];
+	const DASHED = /[\u2013\u2014]|\s--\s|&[mn]dash;|&#821[12];|&#x201[34];/i;
+	for (const { at, producer } of drinkProducers(frags, drinkNames)) {
+		for (const [part, text] of producerStrings(producer)) {
+			const here = `${at} ${part}`;
+			for (const name of livingIn(text, living, exempt)) out.push(`${here}: ${LIVING_SAID(name)}`);
+			if (DASHED.test(text)) out.push(`${here}: a dash; write it with a comma, a colon or a full stop`);
+			const read = part.startsWith('askKitchen') ? 'Ask the kitchen: ' + text : text;
+			if (VERDICT.test(read)) out.push(`${here}: an allergen or diet verdict ("${read.match(VERDICT)[0]}")`);
+			for (const s of sentencesOf(read)) if (ALLERGEN_CLASS.test(s) && !ALLERGEN_POINTER.test(s)) out.push(`${here}: names an allergen or a diet without sending the server to the service note or the kitchen: "${s.trim()}"`);
+		}
 	}
 	return out;
 }
