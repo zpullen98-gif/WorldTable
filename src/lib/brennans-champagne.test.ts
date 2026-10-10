@@ -52,6 +52,20 @@ describe('Brennan\'s Champagne terminology', () => {
 		expect(bottle(house).price).toBe(bottle(previous).price);
 		expect(house.pack!.builtAt).toBe(shipped.pack!.builtAt);
 	});
+	it('keeps the Brut lexicon consistent with the finished wine ranges and refreshes an older definition', () => {
+		const brut = shipped.lexicon.find(t => t.term === 'Brut')!;
+		const definition = brut.toGuest!.value;
+		expect(definition).toContain('less than 12 grams of sugar per liter in the finished wine');
+		expect(definition).toContain('Extra Brut is 0 to 6 grams per liter');
+		expect(definition).toContain('the categories overlap');
+		expect(definition).toContain('those words alone do not prove one bottle is drier than another');
+		expect(definition).toContain('Extra Dry is the sweeter category at 12 to 17 grams per liter');
+		expect(definition).not.toContain('driest first');
+		const previous = precedingEdition();
+		previous.lexicon.find(t => t.id === brut.id)!.toGuest!.value = 'Brut means dry. The order on a label, driest first: Extra Brut, Brut, Extra Dry, Demi-Sec.';
+		const { house } = refreshEdition(previous, shipped);
+		expect(house.lexicon.find(t => t.id === brut.id)).toEqual(brut);
+	});
 	it('preserves a personal profile and lineup note while updating other edition-owned notes', () => {
 		const previous = precedingEdition();
 		const wine = bottle(previous);

@@ -66,8 +66,9 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    The 19:45 edition of 10 October corrects
    Champagne sweetness terminology: finished sugar content is distinguished from dosage,
    overlapping categories do not rank two bottles, and the dosage component teaches the
-   Brut Nature condition. IDs, menu facts and personal-edit merge rules are unchanged. */
-export const EDITION_BUILT_AT = '2026-10-10T19:45:00.000Z';
+   Brut Nature condition. The 20:20 edition applies the same finished wine ranges and overlap
+   caveat to the Brut lexicon definition. IDs, menu facts and personal-edit merge rules are unchanged. */
+export const EDITION_BUILT_AT = '2026-10-10T20:20:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a

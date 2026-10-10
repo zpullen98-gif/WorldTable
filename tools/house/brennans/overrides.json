@@ -50419,10 +50419,10 @@
       "value": {
         "term": "Brut",
         "say": "BROOT",
-        "toGuest": "Brut means dry. The order on a label, driest first: Extra Brut, Brut, Extra Dry, Demi-Sec; Extra Dry is sweeter than Brut, which surprises most guests."
+        "toGuest": "Brut is a dry sparkling wine category with less than 12 grams of sugar per liter in the finished wine. Extra Brut is 0 to 6 grams per liter, so the categories overlap: those words alone do not prove one bottle is drier than another. Extra Dry is the sweeter category at 12 to 17 grams per liter."
       },
-      "reason": "Master review: the sweetness words are the most asked and most misread on a sparkling list, and the house pours Extra Brut, Brut and a Demi Sec.",
-      "source": "research:master-review-somm-2026-10-04.md#The Birthday Bubbles (expert, the sweetness words)"
+      "reason": "Champagne terminology review: teach finished wine sugar ranges and the overlap between Brut and Extra Brut, so label categories are not used to rank two bottles by dryness.",
+      "source": "research:champagne-terminology-2026-10-10.json (Comite Champagne, dosage categories and overlap)"
     },
     {
       "target": "term:+",
