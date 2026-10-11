@@ -197,6 +197,7 @@
 				<button class="chip" onclick={() => cards('mode=cards&deck=weak')}>{say('weak', { n: progress.againIds.length })}</button>
 			{/if}
 			<button class="chip" onclick={() => cards('mode=drill')}>Drill the menu</button>
+			{#if current.id === BRENNANS_HOUSE_ID}<a class="chip" href="#illustrated-kitchen-studies">Illustrated kitchen studies <span aria-hidden="true">↓</span></a>{/if}
 		</div>
 	</header>
 
@@ -279,7 +280,7 @@
 	{/if}
 
 	{#if current.id === BRENNANS_HOUSE_ID}
-		<section class="teaching-library" aria-label="Illustrated kitchen studies">
+		<section class="teaching-library" id="illustrated-kitchen-studies" aria-label="Illustrated kitchen studies">
 			<h2>Illustrated kitchen studies</h2>
 			<TeachingFolioCollection />
 		</section>

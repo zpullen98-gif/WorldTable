@@ -77,8 +77,16 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    Imperial, with the house's own Impérial explained once; the where of Raymond Dupont-Fahn and Pol Roger a
    place, the disputes kept in their stories; and the glass of the house Champagne printing its label with
    the curly apostrophe its name carries; stamped at the half hour before its build, never ahead of the
-   clock. */
-export const EDITION_BUILT_AT = '2026-10-10T23:00:00.000Z';
+   clock.
+   The 19:45 edition of 10 October corrects
+   Champagne sweetness terminology: finished sugar content is distinguished from dosage,
+   overlapping categories do not rank two bottles, and the dosage component teaches the
+   Brut Nature condition. The 20:20 edition applies the same finished wine ranges and overlap
+   caveat to the Brut lexicon definition. IDs, menu facts and personal-edit merge rules are unchanged.
+   The 00:30 edition of 11 October joins the two: the cellar producers and their repairs with the
+   Champagne sweetness corrections made on the visual learning branch; stamped at the half hour before its
+   build, never ahead of the clock. */
+export const EDITION_BUILT_AT = '2026-10-11T00:30:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a

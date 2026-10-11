@@ -1,11 +1,11 @@
 {
 	"about": "Every string the spelling map changed while building the Brennan's house: the research writes British English and the house is American, so each British form became its American spelling.",
-	"count": 730,
+	"count": 728,
 	"changes": [
 		{
 			"path": "model.wines[0].kept[0].a",
-			"before": "Our house Champagne is a Piper-Heidsieck Extra Brut bottled under the Brennan's name, so it is drier than a standard Brut; a blend of all three Champagne grapes from the Piper-Heidsieck house. Piper-Heidsieck spells its own cuvee Essentiel. Say 'labelled for us', not 'made for us', until a bottle is checked, and do not quote a dosage or a lees age until the sommelier confirms which cuvee is in the bottle. The Binwise list of 3 October prices the bottle at $140; the current Bubbles at Brennan's page lists no bottle of it.",
-			"after": "Our house Champagne is a Piper-Heidsieck Extra Brut bottled under the Brennan's name, so it is drier than a standard Brut; a blend of all three Champagne grapes from the Piper-Heidsieck house. Piper-Heidsieck spells its own cuvee Essentiel. Say 'labeled for us', not 'made for us', until a bottle is checked, and do not quote a dosage or a lees age until the sommelier confirms which cuvee is in the bottle. The Binwise list of 3 October prices the bottle at $140; the current Bubbles at Brennan's page lists no bottle of it.",
+			"before": "Our house Champagne is a Piper-Heidsieck Extra Brut bottled under the Brennan's name, a very dry style; a blend of all three Champagne grapes from the Piper-Heidsieck house. Piper-Heidsieck spells its own cuvee Essentiel. Say 'labelled for us', not 'made for us', until a bottle is checked, and do not quote a dosage or a lees age until the sommelier confirms which cuvee is in the bottle. The Binwise list of 3 October prices the bottle at $140; the current Bubbles at Brennan's page lists no bottle of it.",
+			"after": "Our house Champagne is a Piper-Heidsieck Extra Brut bottled under the Brennan's name, a very dry style; a blend of all three Champagne grapes from the Piper-Heidsieck house. Piper-Heidsieck spells its own cuvee Essentiel. Say 'labeled for us', not 'made for us', until a bottle is checked, and do not quote a dosage or a lees age until the sommelier confirms which cuvee is in the bottle. The Binwise list of 3 October prices the bottle at $140; the current Bubbles at Brennan's page lists no bottle of it.",
 			"words": [
 				"labelled"
 			]
@@ -85,8 +85,8 @@
 		},
 		{
 			"path": "model.terms[84].toGuest",
-			"before": "Extra Brut means under six grams of sugar a litre, very dry; our house Champagne is one.",
-			"after": "Extra Brut means under six grams of sugar a liter, very dry; our house Champagne is one.",
+			"before": "Extra Brut means 0 to 6 grams of sugar per litre in the finished Champagne. Our house Champagne is Extra Brut, a very dry style.",
+			"after": "Extra Brut means 0 to 6 grams of sugar per liter in the finished Champagne. Our house Champagne is Extra Brut, a very dry style.",
 			"words": [
 				"litre"
 			]
@@ -1988,22 +1988,6 @@
 			"after": "The Santa Cruz Mountains run along the coast south of San Francisco, with vineyards high on ridges above the fog, some over two thousand feet up. Cool nights, thin soils and fractured limestone give Cabernet Sauvignon and Chardonnay with freshness and structure rather than plush ripeness.\n\nRidge Vineyards' Monte Bello estate sits near the top of one ridge. Its 1971 Cabernet came fifth among the reds at the Paris tasting of 1976 and won the thirtieth anniversary re-tasting outright in 2006.\n\nOur Ridge Estate Cabernet comes from vineyards around Monte Bello: blackcurrant, cedar and graphite, structured and savory, in a half-bottle.",
 			"words": [
 				"savoury"
-			]
-		},
-		{
-			"path": "house.components[405].explain",
-			"before": "Dosage is the small dose of wine and sugar added to a sparkling wine just before the final cork, after disgorging. It balances the high acidity, and it decides the word on the label.\n\nFrom driest to sweetest: Brut Nature, no sugar added; Extra Brut, up to 6 grams a litre; Brut, up to 12; then Extra Dry, 12 to 17; Sec, 17 to 32; and Demi-Sec, 32 to 50 grams, noticeably sweet. Confusingly, Extra Dry is sweeter than Brut. Pommery's Nature of 1874 helped turn the world towards dry Champagne, when much of it was very sweet.\n\nOur house Brennan's Essential is Extra Brut, very dry; most of the list is Brut; the Moët Nectar Impérial Rosé and Laurent-Perrier Harmony are Demi-Sec, for dessert.",
-			"after": "Dosage is the small dose of wine and sugar added to a sparkling wine just before the final cork, after disgorging. It balances the high acidity, and it decides the word on the label.\n\nFrom driest to sweetest: Brut Nature, no sugar added; Extra Brut, up to 6 grams a liter; Brut, up to 12; then Extra Dry, 12 to 17; Sec, 17 to 32; and Demi-Sec, 32 to 50 grams, noticeably sweet. Confusingly, Extra Dry is sweeter than Brut. Pommery's Nature of 1874 helped turn the world towards dry Champagne, when much of it was very sweet.\n\nOur house Brennan's Essential is Extra Brut, very dry; most of the list is Brut; the Moët Nectar Impérial Rosé and Laurent-Perrier Harmony are Demi-Sec, for dessert.",
-			"words": [
-				"litre"
-			]
-		},
-		{
-			"path": "house.components[405].card.back",
-			"before": "Extra Brut, up to 6 grams of sugar a litre, is driest; then Brut, up to 12; then Demi-Sec, noticeably sweet. Our house Champagne is Extra Brut.",
-			"after": "Extra Brut, up to 6 grams of sugar a liter, is driest; then Brut, up to 12; then Demi-Sec, noticeably sweet. Our house Champagne is Extra Brut.",
-			"words": [
-				"litre"
 			]
 		},
 		{
@@ -5841,10 +5825,10 @@
 		},
 		{
 			"path": "wines:Brennan’s Essential by Piper-Heidsieck Extra Brut NV.compare[0].different",
-			"before": "Ours is Extra Brut, drier than the Brut most houses make, and labelled with the Brennan's name.",
-			"after": "Ours is Extra Brut, drier than the Brut most houses make, and labeled with the Brennan's name.",
+			"before": "Ours carries the Brennan's name and is Extra Brut: 0 to 6 grams of sugar per litre in the finished Champagne. Labels alone cannot rank two bottles.",
+			"after": "Ours carries the Brennan's name and is Extra Brut: 0 to 6 grams of sugar per liter in the finished Champagne. Labels alone cannot rank two bottles.",
 			"words": [
-				"labelled"
+				"litre"
 			]
 		},
 		{

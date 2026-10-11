@@ -12,6 +12,8 @@
 	import { DIFFICULTY_LABEL } from '$lib/types';
 	import Ornament from '$lib/components/Ornament.svelte';
 	import CookMode from '$lib/components/CookMode.svelte';
+	import { foliosForRecipe } from '$lib/folio-connections';
+	import TeachingFolio from '$lib/components/TeachingFolio.svelte';
 
 	import type {
 		Pairing,
@@ -43,6 +45,7 @@
 
 	const r = $derived(summary);
 	const d = $derived(detail);
+	const folios = $derived(foliosForRecipe(r.slug, d.techniques, r.source));
 
 	let scale = $state(1);
 
@@ -349,6 +352,13 @@
 			</ol>
 		</section>
 	</div>
+
+	{#if folios.length}
+		<section aria-label="Illustrated studies for this recipe">
+			<h2 class="sec">See the craft</h2>
+			{#each folios as folio (folio.id)}<TeachingFolio {folio} />{/each}
+		</section>
+	{/if}
 
 	<!-- Between the method and the note on purpose: how to make it, then how to
 	     know you got it right, then why it matters.

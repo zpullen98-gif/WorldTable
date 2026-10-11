@@ -948,10 +948,10 @@
       "op": "replace",
       "value": {
         "from": "Extra Brut means very little added sugar: bone-dry,",
-        "to": "Extra Brut means very little added sugar, under six grams a litre: very dry,"
+        "to": "Extra Brut means 0 to 6 grams of sugar per litre in the finished wine: a very dry style,"
       },
-      "reason": "Bone dry strictly means Brut Nature",
-      "source": "pdf-corrections p41 (medium)"
+      "reason": "Champagne terminology review: Extra Brut describes the finished sugar content, not sugar added or an absolute dryness ranking.",
+      "source": "pdf-corrections p41 (medium); research:champagne-terminology-2026-10-10.json"
     },
     {
       "target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
@@ -967,10 +967,10 @@
       "op": "add",
       "value": {
         "q": "Is it a bespoke blend or the Essentiel under our label?",
-        "a": "Our house Champagne is a Piper-Heidsieck Extra Brut bottled under the Brennan's name, so it is drier than a standard Brut; a blend of all three Champagne grapes from the Piper-Heidsieck house. Piper-Heidsieck spells its own cuvee Essentiel. Say 'labelled for us', not 'made for us', until a bottle is checked, and do not quote a dosage or a lees age until the sommelier confirms which cuvee is in the bottle. The Binwise list of 3 October prices the bottle at $140; the current Bubbles at Brennan's page lists no bottle of it."
+        "a": "Our house Champagne is a Piper-Heidsieck Extra Brut bottled under the Brennan's name, a very dry style; a blend of all three Champagne grapes from the Piper-Heidsieck house. Piper-Heidsieck spells its own cuvee Essentiel. Say 'labelled for us', not 'made for us', until a bottle is checked, and do not quote a dosage or a lees age until the sommelier confirms which cuvee is in the bottle. The Binwise list of 3 October prices the bottle at $140; the current Bubbles at Brennan's page lists no bottle of it."
       },
-      "reason": "forThePack; the last sentence replaced: the earlier Bubbles bottle price ($125, $75 during Bubbles) is on no page the owner pasted, and Binwise prints the bottle at 140",
-      "source": "somm-whites-1; gap-wine-7; gap-wine-8; pdf-corrections p41; research/winelist-2026-10-03.json (page:binwise-wine-list-2026-10-03.txt) line 2874; page:brennansneworleans-menus-pasted-2026-10-03.txt lines 282-310"
+      "reason": "forThePack; the last sentence replaced: the earlier Bubbles bottle price ($125, $75 during Bubbles) is on no page the owner pasted, and Binwise prints the bottle at 140; Champagne terminology review distinguishes finished sugar content from dosage and avoids unsupported bottle rankings",
+      "source": "somm-whites-1; gap-wine-7; gap-wine-8; pdf-corrections p41; research/winelist-2026-10-03.json (page:binwise-wine-list-2026-10-03.txt) line 2874; page:brennansneworleans-menus-pasted-2026-10-03.txt lines 282-310; research:champagne-terminology-2026-10-10.json"
     },
     {
       "target": "wine:Rare Brut 2012 (Coravin)",
@@ -2058,10 +2058,10 @@
       "value": {
         "term": "Extra Brut",
         "say": "As it reads: Extra Brut.",
-        "toGuest": "Extra Brut means under six grams of sugar a litre, very dry; our house Champagne is one."
+        "toGuest": "Extra Brut means 0 to 6 grams of sugar per litre in the finished Champagne. Our house Champagne is Extra Brut, a very dry style."
       },
-      "reason": "wine word",
-      "source": "pdf-corrections p41"
+      "reason": "wine word; Champagne terminology review distinguishes finished sugar content from dosage and avoids unsupported bottle rankings",
+      "source": "pdf-corrections p41; research:champagne-terminology-2026-10-10.json"
     },
     {
       "target": "term:+",
@@ -5379,10 +5379,10 @@
       "value": {
         "s10": "Our house Champagne, Brennan's Essential by Piper-Heidsieck: Extra Brut, very dry and crisp, a beautiful way to start.",
         "s20": "Our house Champagne is from Piper-Heidsieck and carries the Brennan's name. It's Extra Brut, so very dry: citrus, orchard fruit and brioche with a firm, chalky finish, lovely with turtle soup, oysters and the Hussarde.",
-        "s45": "Our house Champagne is Brennan's Essential, a Piper-Heidsieck Extra Brut labeled for us, a blend of Pinot Noir, Meunier and Chardonnay. Extra Brut means very little added sugar, so it's very dry and crisp: citrus, orchard fruit, a little brioche and a firm, chalky finish. That dryness and those fine bubbles cut through rich, salty food, which is why it's our first pick with the turtle soup, raw oysters and Eggs Hussarde, morning and night."
+        "s45": "Our house Champagne is Brennan's Essential, a Piper-Heidsieck Extra Brut labeled for us, a blend of Pinot Noir, Meunier and Chardonnay. Extra Brut means 0 to 6 grams of sugar per liter in the finished wine, a very dry style: citrus, orchard fruit, a little brioche and a firm, chalky finish. That dryness and those fine bubbles cut through rich, salty food, which is why it's our first pick with the turtle soup, raw oysters and Eggs Hussarde, morning and night."
       },
-      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing",
-      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries"
+      "reason": "The owner asked for the timed lines on every wine; these are built only from the guide's own PROFILE, SAY IT, GOES WITH and SERVE for this wine and the verified facts already in the pack, reworded, so they invent nothing; Champagne terminology review distinguishes finished sugar content from dosage and avoids unsupported bottle rankings",
+      "source": "pdf p41 to p46 (this wine's block); the wine's existing overrides and research entries; research:champagne-terminology-2026-10-10.json"
     },
     {
       "target": "wine:Pierre Sparr Brut Rosé Crémant d’Alsace NV",
@@ -10120,9 +10120,9 @@
     {
       "target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
       "field": "profile",
-      "value": "Extra Brut means very little added sugar, under six grams a liter: very dry, with citrus, orchard fruit, brioche and a firm, chalky finish.",
-      "reason": "Thin line (price-in-profile): rewritten within its cap from the item's own record and the sources named, so the line says what a guest needs",
-      "source": "guide.txt lines 2240-2560, the by-the-glass list (pdf p41 to p46); the by-the-glass list and wine program must-knows; somm-whites-1; gap-wine-7 and 8; pdf-corrections p41; the lineup ask and dispute on the glass price"
+      "value": "Extra Brut means 0 to 6 grams of sugar per liter in the finished wine: a very dry style, with citrus, orchard fruit, brioche and a firm, chalky finish.",
+      "reason": "Thin line (price-in-profile): rewritten within its cap from the item's own record and the sources named, so the line says what a guest needs; Champagne terminology review distinguishes finished sugar content from dosage and avoids unsupported bottle rankings",
+      "source": "guide.txt lines 2240-2560, the by-the-glass list (pdf p41 to p46); the by-the-glass list and wine program must-knows; somm-whites-1; gap-wine-7 and 8; pdf-corrections p41; the lineup ask and dispute on the glass price; research:champagne-terminology-2026-10-10.json"
     },
     {
       "target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
@@ -10165,10 +10165,10 @@
       "op": "add",
       "value": {
         "q": "Tell me about it.",
-        "a": "Brennan's Essential by Piper-Heidsieck Extra Brut is our house Champagne, poured by the glass at breakfast and lunch and at dinner: $28 a glass on the Binwise list and $30 on the current menu, so the price is confirmed at lineup.\n\nIt is a Piper-Heidsieck Extra Brut labeled for us, a blend of all three Champagne grapes, Pinot Noir, Meunier and Chardonnay, made by the traditional method. Extra Brut means very little added sugar, under six grams a liter, so it is drier than a standard Brut. Piper-Heidsieck spells its own cuvée Essentiel; the dosage and lees age wait on the sommelier confirming which cuvée is in the bottle.\n\nIn the glass it is pale and lively, with fine bubbles. It tastes very dry and crisp: citrus, orchard fruit and a little brioche, with a firm, chalky finish.\n\nThat dryness and those fine bubbles cut through rich, salty food, which is why it is the first pick with the turtle soup, the Grand Isle Jewel oysters and the Eggs Hussarde, and the second choice with the Louisiana Oysters, the Creole Caesar and the omelette. It is the house bubbles, morning and night."
+        "a": "Brennan's Essential by Piper-Heidsieck Extra Brut is our house Champagne, poured by the glass at breakfast and lunch and at dinner: $28 a glass on the Binwise list and $30 on the current menu, so the price is confirmed at lineup.\n\nIt is a Piper-Heidsieck Extra Brut labeled for us, a blend of all three Champagne grapes, Pinot Noir, Meunier and Chardonnay, made by the traditional method. Extra Brut means 0 to 6 grams of sugar per liter in the finished Champagne. It overlaps Brut; the label alone cannot rank two bottles by dryness. Piper-Heidsieck spells its own cuvée Essentiel; the dosage and lees age wait on the sommelier confirming which cuvée is in the bottle.\n\nIn the glass it is pale and lively, with fine bubbles. It tastes very dry and crisp: citrus, orchard fruit and a little brioche, with a firm, chalky finish.\n\nThat dryness and those fine bubbles cut through rich, salty food, which is why it is the first pick with the turtle soup, the Grand Isle Jewel oysters and the Eggs Hussarde, and the second choice with the Louisiana Oysters, the Creole Caesar and the omelette. It is the house bubbles, morning and night."
       },
-      "reason": "Study notes, the description: what a master tells a new Brennan’s server who asks about it, every fact from the sources named; the price sentence now names both lists of 3 October 2026",
-      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 461 and 503 ($30.00); research/winelist-2026-10-03.json (page:binwise-wine-list-2026-10-03.txt) line 5 (By the Glass, Sparkling, $28 glass) and line 2874 (bottle, 140, no bin); guide.txt lines 2240-2560 (the by-the-glass list, pdf p41 to p46); research/menus-pasted-diff-2026-10-03.md"
+      "reason": "Study notes, the description: what a master tells a new Brennan’s server who asks about it, every fact from the sources named; the price sentence now names both lists of 3 October 2026; Champagne terminology review distinguishes finished sugar content from dosage and avoids unsupported bottle rankings",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 461 and 503 ($30.00); research/winelist-2026-10-03.json (page:binwise-wine-list-2026-10-03.txt) line 5 (By the Glass, Sparkling, $28 glass) and line 2874 (bottle, 140, no bin); guide.txt lines 2240-2560 (the by-the-glass list, pdf p41 to p46); research/menus-pasted-diff-2026-10-03.md; research:champagne-terminology-2026-10-10.json"
     },
     {
       "target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
@@ -10187,10 +10187,10 @@
       "op": "add",
       "value": {
         "q": "What do guests ask?",
-        "a": "Asked: What does Extra Brut mean?\n\nAnswer: Very little added sugar, under six grams a liter, so it is drier than a standard Brut.\n\nAsked: Is it made for Brennan's?\n\nAnswer: It is a Piper-Heidsieck Extra Brut labeled for us. I say labeled for us, not made for us, until the sommelier confirms which cuvée is in the bottle.\n\nAsked: What does it go with?\n\nAnswer: The turtle soup, raw oysters and the Eggs Hussarde above all: its dryness and bubbles cut through rich, salty food."
+        "a": "Asked: What does Extra Brut mean?\n\nAnswer: It means 0 to 6 grams of sugar per liter in the finished Champagne, a very dry style. It does not state the amount of sugar added at dosage.\n\nAsked: Is it made for Brennan's?\n\nAnswer: It is a Piper-Heidsieck Extra Brut labeled for us. I say labeled for us, not made for us, until the sommelier confirms which cuvée is in the bottle.\n\nAsked: What does it go with?\n\nAnswer: The turtle soup, raw oysters and the Eggs Hussarde above all: its dryness and bubbles cut through rich, salty food."
       },
-      "reason": "Study notes, coaching: the questions guests ask and the true answers, or the person to ask, from the sources named",
-      "source": "guide.txt lines 2240-2560, the by-the-glass list (pdf p41 to p46); the by-the-glass list and wine program must-knows; somm-whites-1; gap-wine-7 and 8; pdf-corrections p41; the lineup ask and dispute on the glass price"
+      "reason": "Study notes, coaching: the questions guests ask and the true answers, or the person to ask, from the sources named; Champagne terminology review distinguishes finished sugar content from dosage and avoids unsupported bottle rankings",
+      "source": "guide.txt lines 2240-2560, the by-the-glass list (pdf p41 to p46); the by-the-glass list and wine program must-knows; somm-whites-1; gap-wine-7 and 8; pdf-corrections p41; the lineup ask and dispute on the glass price; research:champagne-terminology-2026-10-10.json"
     },
     {
       "target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
@@ -19062,10 +19062,10 @@
       "op": "add",
       "value": {
         "q": "What should I watch for?",
-        "a": "It is Extra Brut, drier than our house Champagne, so warn a guest who likes softer bubbles. It sits under Grower Producers, Vallée de la Marne, as JM Sélèque \"Solessence\" Extra Brut, bin 32252, $100. Which harvest the current bottling is based on is a lineup question for the sommelier. Allergens: read the service note and confirm at lineup."
+        "a": "It is Extra Brut, as is our house Champagne. The label alone does not tell us which tastes drier; ask the guest about their preferred style and confirm the current bottling with the sommelier. It sits under Grower Producers, Vallée de la Marne, as JM Sélèque \"Solessence\" Extra Brut, bin 32252, $100. Which harvest the current bottling is based on is a lineup question for the sommelier. Allergens: read the service note and confirm at lineup."
       },
-      "reason": "Study notes, coaching: the mix-ups, timings, rules, disputes and lineup questions tied to it, closing on the service note, from the sources named",
-      "source": "research/winelist-2026-10-03.json n=376 (page:binwise-wine-list-2026-10-03.txt line 1963: bin 32252, JM Sélèque \"Solessence\" Extra Brut, NV, 100; Champagne > Grower Producers ~ Vallée de la Marne); research/bottle-selection-2026-10-04.json jm-seleque-solessence-extra-brut-nv (roles classic; Fried Pickles sweet spot, $100 to $250); research/bottle-facts-cards-a-2026-10-04.json n376; guide.txt lines 2255-2290 (the sparkling and Coravin serve) and 2700-2716 (the wine program)"
+      "reason": "Study notes, coaching: the mix-ups, timings, rules, disputes and lineup questions tied to it, closing on the service note, from the sources named; Champagne terminology review distinguishes finished sugar content from dosage and avoids unsupported bottle rankings",
+      "source": "research/winelist-2026-10-03.json n=376 (page:binwise-wine-list-2026-10-03.txt line 1963: bin 32252, JM Sélèque \"Solessence\" Extra Brut, NV, 100; Champagne > Grower Producers ~ Vallée de la Marne); research/bottle-selection-2026-10-04.json jm-seleque-solessence-extra-brut-nv (roles classic; Fried Pickles sweet spot, $100 to $250); research/bottle-facts-cards-a-2026-10-04.json n376; guide.txt lines 2255-2290 (the sparkling and Coravin serve) and 2700-2716 (the wine program); research:champagne-terminology-2026-10-10.json"
     },
     {
       "target": "wine:JM Sélèque ‘Solessence’ Extra Brut NV",
@@ -19293,10 +19293,10 @@
       "op": "add",
       "value": {
         "q": "What do guests ask?",
-        "a": "Asked: What does Grand Cru mean in Champagne?\n\nAnswer: The village is one of the top rated in Champagne. Bouzy is a Grand Cru village known for Pinot Noir.\n\nAsked: What is the XVIII?\n\nAnswer: It identifies the blend; I will check with the sommelier which harvest it is built on.\n\nAsked: Is it dry?\n\nAnswer: Very dry. Extra Brut means very little sugar is added."
+        "a": "Asked: What does Grand Cru mean in Champagne?\n\nAnswer: The village is one of the top rated in Champagne. Bouzy is a Grand Cru village known for Pinot Noir.\n\nAsked: What is the XVIII?\n\nAnswer: It identifies the blend; I will check with the sommelier which harvest it is built on.\n\nAsked: Is it dry?\n\nAnswer: It is a very dry style. Extra Brut means 0 to 6 grams of sugar per liter in the finished Champagne, not the amount added at dosage."
       },
-      "reason": "Study notes, coaching: the questions guests ask and the true answers, or the person to ask, from the sources named",
-      "source": "research/winelist-2026-10-03.json n=386 (page:binwise-wine-list-2026-10-03.txt line 2013: bin 3161, Pierre Paillard Grand Cru \"Les Parcelles XVIII\" Extra Brut, NV, 120; Champagne > Grower Producers ~ Vallée de la Marne); research/bottle-selection-2026-10-04.json pierre-paillard-grand-cru-les-parcelles-xviii-nv (roles classic; Louisiana Oysters sweet spot, $100 to $250); research/bottle-facts-cards-a-2026-10-04.json n386; guide.txt lines 2255-2290 (the sparkling and Coravin serve) and 2700-2716 (the wine program)"
+      "reason": "Study notes, coaching: the questions guests ask and the true answers, or the person to ask, from the sources named; Champagne terminology review distinguishes finished sugar content from dosage and avoids unsupported bottle rankings",
+      "source": "research/winelist-2026-10-03.json n=386 (page:binwise-wine-list-2026-10-03.txt line 2013: bin 3161, Pierre Paillard Grand Cru \"Les Parcelles XVIII\" Extra Brut, NV, 120; Champagne > Grower Producers ~ Vallée de la Marne); research/bottle-selection-2026-10-04.json pierre-paillard-grand-cru-les-parcelles-xviii-nv (roles classic; Louisiana Oysters sweet spot, $100 to $250); research/bottle-facts-cards-a-2026-10-04.json n386; guide.txt lines 2255-2290 (the sparkling and Coravin serve) and 2700-2716 (the wine program); research:champagne-terminology-2026-10-10.json"
     },
     {
       "target": "wine:Pierre Paillard Grand Cru ‘Les Parcelles XVIII’ Extra Brut NV",
@@ -19304,10 +19304,10 @@
       "op": "add",
       "value": {
         "q": "What should I watch for?",
-        "a": "The list prints it as Pierre Paillard Grand Cru \"Les Parcelles XVIII\" Extra Brut, bin 3161, $120, filed under Vallée de la Marne although Bouzy is on the Montagne de Reims. It is drier than our house Champagne. What the XVIII marks is a lineup question for the sommelier. Allergens: read the service note and confirm at lineup."
+        "a": "The list prints it as Pierre Paillard Grand Cru \"Les Parcelles XVIII\" Extra Brut, bin 3161, $120, filed under Vallée de la Marne although Bouzy is on the Montagne de Reims. It is Extra Brut, as is our house Champagne; the label alone cannot rank their perceived dryness. What the XVIII marks is a lineup question for the sommelier. Allergens: read the service note and confirm at lineup."
       },
-      "reason": "Study notes, coaching: the mix-ups, timings, rules, disputes and lineup questions tied to it, closing on the service note, from the sources named",
-      "source": "research/winelist-2026-10-03.json n=386 (page:binwise-wine-list-2026-10-03.txt line 2013: bin 3161, Pierre Paillard Grand Cru \"Les Parcelles XVIII\" Extra Brut, NV, 120; Champagne > Grower Producers ~ Vallée de la Marne); research/bottle-selection-2026-10-04.json pierre-paillard-grand-cru-les-parcelles-xviii-nv (roles classic; Louisiana Oysters sweet spot, $100 to $250); research/bottle-facts-cards-a-2026-10-04.json n386; guide.txt lines 2255-2290 (the sparkling and Coravin serve) and 2700-2716 (the wine program)"
+      "reason": "Study notes, coaching: the mix-ups, timings, rules, disputes and lineup questions tied to it, closing on the service note, from the sources named; Champagne terminology review distinguishes finished sugar content from dosage and avoids unsupported bottle rankings",
+      "source": "research/winelist-2026-10-03.json n=386 (page:binwise-wine-list-2026-10-03.txt line 2013: bin 3161, Pierre Paillard Grand Cru \"Les Parcelles XVIII\" Extra Brut, NV, 120; Champagne > Grower Producers ~ Vallée de la Marne); research/bottle-selection-2026-10-04.json pierre-paillard-grand-cru-les-parcelles-xviii-nv (roles classic; Louisiana Oysters sweet spot, $100 to $250); research/bottle-facts-cards-a-2026-10-04.json n386; guide.txt lines 2255-2290 (the sparkling and Coravin serve) and 2700-2716 (the wine program); research:champagne-terminology-2026-10-10.json"
     },
     {
       "target": "wine:Pierre Paillard Grand Cru ‘Les Parcelles XVIII’ Extra Brut NV",
@@ -19658,10 +19658,10 @@
       "op": "add",
       "value": {
         "q": "What do guests ask?",
-        "a": "Asked: What is Blanc de Blancs?\n\nAnswer: White from whites: a Champagne made only from Chardonnay, which is lighter, crisper and more citrusy.\n\nAsked: Why is it called Longitude?\n\nAnswer: It is blended from villages that sit on the same line of longitude in the Côte des Blancs.\n\nAsked: Is it very dry?\n\nAnswer: Yes. Extra Brut means very little sugar is added, so it is bone dry."
+        "a": "Asked: What is Blanc de Blancs?\n\nAnswer: White from whites: a Champagne made only from Chardonnay, which is lighter, crisper and more citrusy.\n\nAsked: Why is it called Longitude?\n\nAnswer: It is blended from villages that sit on the same line of longitude in the Côte des Blancs.\n\nAsked: Is it very dry?\n\nAnswer: It is a very dry style. Extra Brut means 0 to 6 grams of sugar per liter in the finished Champagne, not zero sugar or a stated dosage."
       },
-      "reason": "Study notes, coaching: the questions guests ask and the true answers, or the person to ask, from the sources named",
-      "source": "research/winelist-2026-10-03.json n=408 (page:binwise-wine-list-2026-10-03.txt line 2125: bin 31911, Larmandier-Bernier Premier Cru \"Longitude\" Extra Brut, NV, 135; Champagne > Grower Producers ~ Côtes de Blancs); research/bottle-selection-2026-10-04.json larmandier-bernier-premier-cru-longitude-extra-brut-nv (roles classic; Grand Isle Jewel Oysters sweet spot, $100 to $250); research/bottle-facts-cards-a-2026-10-04.json n408; guide.txt lines 2255-2290 (the sparkling and Coravin serve) and 2700-2716 (the wine program)"
+      "reason": "Study notes, coaching: the questions guests ask and the true answers, or the person to ask, from the sources named; Champagne terminology review distinguishes finished sugar content from dosage and avoids unsupported bottle rankings",
+      "source": "research/winelist-2026-10-03.json n=408 (page:binwise-wine-list-2026-10-03.txt line 2125: bin 31911, Larmandier-Bernier Premier Cru \"Longitude\" Extra Brut, NV, 135; Champagne > Grower Producers ~ Côtes de Blancs); research/bottle-selection-2026-10-04.json larmandier-bernier-premier-cru-longitude-extra-brut-nv (roles classic; Grand Isle Jewel Oysters sweet spot, $100 to $250); research/bottle-facts-cards-a-2026-10-04.json n408; guide.txt lines 2255-2290 (the sparkling and Coravin serve) and 2700-2716 (the wine program); research:champagne-terminology-2026-10-10.json"
     },
     {
       "target": "wine:Larmandier-Bernier Premier Cru ‘Longitude’ Extra Brut NV",
@@ -19669,10 +19669,10 @@
       "op": "add",
       "value": {
         "q": "What should I watch for?",
-        "a": "It is Extra Brut, drier than our house Champagne, so check the guest wants bone dry. It is bin 31911, $135, under Côtes de Blancs as the list spells it. The villages in the current blend and its base harvest are questions for the sommelier. Allergens: read the service note and confirm at lineup."
+        "a": "It is Extra Brut, as is our house Champagne. Ask the guest about their preferred style; the label alone cannot tell us which bottle tastes drier. It is bin 31911, $135, under Côtes de Blancs as the list spells it. The villages in the current blend and its base harvest are questions for the sommelier. Allergens: read the service note and confirm at lineup."
       },
-      "reason": "Study notes, coaching: the mix-ups, timings, rules, disputes and lineup questions tied to it, closing on the service note, from the sources named",
-      "source": "research/winelist-2026-10-03.json n=408 (page:binwise-wine-list-2026-10-03.txt line 2125: bin 31911, Larmandier-Bernier Premier Cru \"Longitude\" Extra Brut, NV, 135; Champagne > Grower Producers ~ Côtes de Blancs); research/bottle-selection-2026-10-04.json larmandier-bernier-premier-cru-longitude-extra-brut-nv (roles classic; Grand Isle Jewel Oysters sweet spot, $100 to $250); research/bottle-facts-cards-a-2026-10-04.json n408; guide.txt lines 2255-2290 (the sparkling and Coravin serve) and 2700-2716 (the wine program)"
+      "reason": "Study notes, coaching: the mix-ups, timings, rules, disputes and lineup questions tied to it, closing on the service note, from the sources named; Champagne terminology review distinguishes finished sugar content from dosage and avoids unsupported bottle rankings",
+      "source": "research/winelist-2026-10-03.json n=408 (page:binwise-wine-list-2026-10-03.txt line 2125: bin 31911, Larmandier-Bernier Premier Cru \"Longitude\" Extra Brut, NV, 135; Champagne > Grower Producers ~ Côtes de Blancs); research/bottle-selection-2026-10-04.json larmandier-bernier-premier-cru-longitude-extra-brut-nv (roles classic; Grand Isle Jewel Oysters sweet spot, $100 to $250); research/bottle-facts-cards-a-2026-10-04.json n408; guide.txt lines 2255-2290 (the sparkling and Coravin serve) and 2700-2716 (the wine program); research:champagne-terminology-2026-10-10.json"
     },
     {
       "target": "wine:Larmandier-Bernier Premier Cru ‘Longitude’ Extra Brut NV",
@@ -19773,10 +19773,10 @@
       "op": "add",
       "value": {
         "q": "What do guests ask?",
-        "a": "Asked: Is this the same as the glass?\n\nAnswer: Yes, it is our house Champagne, Brennan’s Essential by Piper-Heidsieck, opened by the bottle.\n\nAsked: How many glasses in a bottle?\n\nAnswer: About five or six glasses, so for three or more guests drinking Champagne the bottle makes sense.\n\nAsked: Is it very dry?\n\nAnswer: Yes. Extra Brut means very little added sugar, so it is drier than most Brut Champagne."
+        "a": "Asked: Is this the same as the glass?\n\nAnswer: Yes, it is our house Champagne, Brennan’s Essential by Piper-Heidsieck, opened by the bottle.\n\nAsked: How many glasses in a bottle?\n\nAnswer: About five or six glasses, so for three or more guests drinking Champagne the bottle makes sense.\n\nAsked: Is it very dry?\n\nAnswer: It is a very dry style. Extra Brut means 0 to 6 grams of sugar per liter in the finished Champagne. The ranges overlap, so it need not taste drier than every Brut."
       },
-      "reason": "Study notes, coaching: the questions guests ask and the true answers, or the person to ask, from the sources named",
-      "source": "research/winelist-2026-10-03.json n=557 (page:binwise-wine-list-2026-10-03.txt line 2874: no bin printed, Brennan's Essential by Piper-Heidsieck Extra Brut, NV, 140; Champagne > Grande Marques); research/bottle-selection-2026-10-04.json brennan-s-essential-by-piper-heidsieck-extra-nv (roles classic, anchor; Eggs Hussarde sweet spot, $100 to $250); research/bottle-facts-cards-a-2026-10-04.json n557; guide.txt lines 2255-2290 (the sparkling and Coravin serve) and 2700-2716 (the wine program)"
+      "reason": "Study notes, coaching: the questions guests ask and the true answers, or the person to ask, from the sources named; Champagne terminology review distinguishes finished sugar content from dosage and avoids unsupported bottle rankings",
+      "source": "research/winelist-2026-10-03.json n=557 (page:binwise-wine-list-2026-10-03.txt line 2874: no bin printed, Brennan's Essential by Piper-Heidsieck Extra Brut, NV, 140; Champagne > Grande Marques); research/bottle-selection-2026-10-04.json brennan-s-essential-by-piper-heidsieck-extra-nv (roles classic, anchor; Eggs Hussarde sweet spot, $100 to $250); research/bottle-facts-cards-a-2026-10-04.json n557; guide.txt lines 2255-2290 (the sparkling and Coravin serve) and 2700-2716 (the wine program); research:champagne-terminology-2026-10-10.json"
     },
     {
       "target": "wine:Piper-Heidsieck ‘Brennan’s Essential’ Extra Brut NV",
@@ -24301,10 +24301,10 @@
       "op": "add",
       "value": {
         "q": "What should I watch for?",
-        "a": "Do not confuse Veuve Fourny with Veuve Clicquot, and do not confuse this white half, bin 32921, $120, with the Veuve Fourny rosé half beside it. It is Extra Brut, drier than our house Champagne; check the guest wants bone dry. Allergens: read the service note and confirm at lineup."
+        "a": "Do not confuse Veuve Fourny with Veuve Clicquot, and do not confuse this white half, bin 32921, $120, with the Veuve Fourny rosé half beside it. It is Extra Brut, as is our house Champagne. Ask the guest about their preferred style; these labels alone do not rank the two bottles by dryness. Allergens: read the service note and confirm at lineup."
       },
-      "reason": "Study notes, coaching: the mix-ups, timings, rules, disputes and lineup questions tied to it, closing on the service note, from the sources named",
-      "source": "research/winelist-2026-10-03.json n=426 (page:binwise-wine-list-2026-10-03.txt line 2215: bin 32921, Veuve Fourny et Fils Premier Cru Blanc de Blancs Extra Brut • 375ml Half-bottle, NV, 120; Champagne > Grower Producers ~ Côtes de Blancs); research/bottle-selection-2026-10-04.json veuve-fourny-et-fils-premier-cru-blanc-nv-375ml (roles half; Grand Isle Jewel Oysters half-bottle; Fried Pickles half-bottle); research/bottle-facts-cards-a-2026-10-04.json n426; guide.txt lines 2255-2290 (the sparkling and Coravin serve) and 2700-2716 (the wine program)"
+      "reason": "Study notes, coaching: the mix-ups, timings, rules, disputes and lineup questions tied to it, closing on the service note, from the sources named; Champagne terminology review distinguishes finished sugar content from dosage and avoids unsupported bottle rankings",
+      "source": "research/winelist-2026-10-03.json n=426 (page:binwise-wine-list-2026-10-03.txt line 2215: bin 32921, Veuve Fourny et Fils Premier Cru Blanc de Blancs Extra Brut • 375ml Half-bottle, NV, 120; Champagne > Grower Producers ~ Côtes de Blancs); research/bottle-selection-2026-10-04.json veuve-fourny-et-fils-premier-cru-blanc-nv-375ml (roles half; Grand Isle Jewel Oysters half-bottle; Fried Pickles half-bottle); research/bottle-facts-cards-a-2026-10-04.json n426; guide.txt lines 2255-2290 (the sparkling and Coravin serve) and 2700-2716 (the wine program); research:champagne-terminology-2026-10-10.json"
     },
     {
       "target": "wine:Veuve Fourny et Fils Premier Cru Blanc de Blancs Extra Brut NV (375 ml)",
@@ -50372,11 +50372,11 @@
       "value": {
         "a": "Argyle Brut Willamette Valley 2022",
         "b": "Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
-        "difference": "The Argyle Brut, $15.00, is our friendliest glass of bubbles, a sparkling wine from Oregon: never call it Champagne. Brennan's Essential, $30 on the current menu, is our house Champagne from Piper-Heidsieck, Extra Brut, drier still. The Birthday Bubbles page prints the Argyle under Champagne by the Glass, which is how the confusion starts.",
+        "difference": "The Argyle Brut, $15.00, is our friendliest glass of bubbles, a sparkling wine from Oregon: never call it Champagne. Brennan's Essential, $30 on the current menu, is our house Champagne from Piper-Heidsieck, Extra Brut, a very dry style. The sugar ranges overlap, so these label terms alone do not rank the two bottles by dryness. The Birthday Bubbles page prints the Argyle under Champagne by the Glass, which is how the confusion starts.",
         "ask": "Would you like our house Champagne, or the Oregon sparkling wine, a gentler price?"
       },
-      "reason": "Master review: a wine mix-up servers really make: a guest who asks for \"a glass of Champagne\" may be given either; one is half the price and not Champagne.",
-      "source": "the Argyle and Essential cards; research:master-review-somm-2026-10-04.md#Service"
+      "reason": "Master review: a wine mix-up servers really make: a guest who asks for \"a glass of Champagne\" may be given either; one is half the price and not Champagne; Champagne terminology review distinguishes finished sugar content from dosage and avoids unsupported bottle rankings",
+      "source": "the Argyle and Essential cards; research:master-review-somm-2026-10-04.md#Service; research:champagne-terminology-2026-10-10.json"
     },
     {
       "target": "mixup:+",
@@ -50419,10 +50419,10 @@
       "value": {
         "term": "Brut",
         "say": "BROOT",
-        "toGuest": "Brut means dry. The order on a label, driest first: Extra Brut, Brut, Extra Dry, Demi-Sec; Extra Dry is sweeter than Brut, which surprises most guests."
+        "toGuest": "Brut is a dry sparkling wine category with less than 12 grams of sugar per liter in the finished wine. Extra Brut is 0 to 6 grams per liter, so the categories overlap: those words alone do not prove one bottle is drier than another. Extra Dry is the sweeter category at 12 to 17 grams per liter."
       },
-      "reason": "Master review: the sweetness words are the most asked and most misread on a sparkling list, and the house pours Extra Brut, Brut and a Demi Sec.",
-      "source": "research:master-review-somm-2026-10-04.md#The Birthday Bubbles (expert, the sweetness words)"
+      "reason": "Champagne terminology review: teach finished wine sugar ranges and the overlap between Brut and Extra Brut, so label categories are not used to rank two bottles by dryness.",
+      "source": "research:champagne-terminology-2026-10-10.json (Comite Champagne, dosage categories and overlap)"
     },
     {
       "target": "term:+",

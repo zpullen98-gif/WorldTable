@@ -29,6 +29,7 @@
 	import { LEVEL_KEYS } from '$lib/levels';
 	import ScopeChip from '$lib/components/ScopeChip.svelte';
 	import VideoList from '$lib/components/VideoList.svelte';
+	import { TEACHING_FOLIOS } from '$lib/teaching-folios';
 	import type { DeckLevel } from '$lib/types';
 	import type { Snapshot } from './$types';
 
@@ -37,6 +38,7 @@
 	let mounted = $state(false);
 	let all = $state(false);
 	let chaptersOpen = $state(false);
+	let folioPreviewFailed = $state(false);
 	/** chapter slug -> dish count, from the eager index, built once on mount */
 	let dishesIn = $state<Record<string, number>>({});
 
@@ -58,6 +60,7 @@
 	const levelName = $derived(nameOf(chosen));
 	const difficulty = $derived(chosen === 1 ? 1 : chosen === 2 ? 2 : 3);
 	const atLevel = (key: 'lexicon' | 'techniques' | 'plates') => levels.data?.items[key]?.[String(chosen)]?.length ?? null;
+	const referencePlateCount = $derived(levels.data ? new Set(Object.values(levels.data.items.plates).flat()).size : null);
 	const recipeCount = $derived(all ? TOTALS.recipes : recipes.filter((r) => r.difficulty === difficulty).length);
 	const current = $derived(house.current);
 	const videoGroups = $derived(current ? studyVideos(current) : []);
@@ -119,7 +122,11 @@
 			<span class="door-line">{all ? 'Every technique, with the dishes that drill it.' : count(atLevel('techniques'), 'techniques')}</span>
 		</a>
 		<a class="door" href="{base}/pantry"><span class="door-name">The pantry</span><span class="door-line">What is in season, and what you can cook from what you have.</span></a>
-		<a class="door" href="{base}/plates"><span class="door-name">The Plates</span><span class="door-line">{all ? 'Twenty illustrated folios, read and never graded.' : count(atLevel('plates'), 'plates') || 'Twenty illustrated folios, read and never graded.'}</span></a>
+		<a class="door" href="{base}/plates"><span class="door-name">The Plates</span><span class="door-line">{all ? (referencePlateCount === null ? 'Illustrated reference plates, read and never graded.' : `${referencePlateCount} reference plates, read and never graded.`) : count(atLevel('plates'), 'reference plates') || 'Illustrated reference plates, read and never graded.'}</span></a>
+		<a class="door illustrated-door" href="{base}/plates#companion-studies-h">
+			<span class="folio-preview" aria-hidden="true">{#if !folioPreviewFailed}<img src="{base}/{TEACHING_FOLIOS[0].image.thumb}" alt="" width="64" height="88" loading="lazy" decoding="async" onerror={() => folioPreviewFailed = true} />{:else}✦{/if}</span>
+			<span><span class="door-name">Illustrated kitchen studies</span><span class="door-line">{TEACHING_FOLIOS.length} companion studies · ingredients, cooking and the Brennan’s menu.</span></span>
+		</a>
 		<a class="door" href="{base}/service"><span class="door-name">Service</span><span class="door-line">The service track: the words of the floor, module by module.</span></a>
 		<a class="door" href="{base}/palate"><span class="door-name">The repair table</span><span class="door-line">Too flat, too salty, too sweet: the levers, gentlest first.</span></a>
 		<a class="door" href="{base}/safety"><span class="door-name">Food safety</span><span class="door-line">The numbers and the disciplines the guide states, and its gaps.</span></a>
@@ -152,6 +159,10 @@
 </div>
 
 <style>
+	.illustrated-door { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 14px; align-items: center; }
+	.illustrated-door .door-line { display: block; margin-top: 6px; }
+	.folio-preview { display: grid; place-items: center; width: 64px; height: 88px; overflow: hidden; border: 1px solid var(--house-frame); background: var(--paper-raised); color: var(--turmeric-deep); }
+	.folio-preview img { width: 100%; height: 100%; object-fit: contain; }
 	.libline {
 		font-size: var(--t-body);
 	}

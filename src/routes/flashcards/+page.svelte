@@ -70,6 +70,9 @@
 	import FloorCard, { type OpenLayers } from '$lib/components/FloorCard.svelte';
 	import DeckFrame from '$lib/components/DeckFrame.svelte';
 	import ScopeChip from '$lib/components/ScopeChip.svelte';
+	import FolioLinks from '$lib/components/FolioLinks.svelte';
+	import { foliosForDish } from '$lib/teaching-folios';
+	import { foliosForComponent, foliosForTastingCourse } from '$lib/folio-connections';
 	import type { DeckCard, DeckLevel, FloorDeck, LexiconEntry } from '$lib/types';
 	import type { Snapshot } from './$types';
 
@@ -540,6 +543,13 @@
 	const runRefs = $derived(fc?.refs ?? []);
 	const currentRef = $derived(runRefs[fc?.i ?? 0]);
 	const shown = $derived(resolveRef(currentRef));
+	const shownFolios = $derived.by(() => {
+		if (!current || !shown) return [];
+		if (shown.kind === 'h') return foliosForDish(current.id, shown.card.itemId);
+		if (shown.kind === 'k') return foliosForComponent(current, shown.card.itemId);
+		if (shown.kind === 's') return foliosForTastingCourse(current, shown.card.itemId, shown.card.course);
+		return [];
+	});
 	let layers = $state<OpenLayers>({ why: false, facts: false, context: false });
 	let partsOpen = $state(false);
 	const titles = $derived(new Map((deck?.sections ?? []).map((s) => [s.key, s.title])));
@@ -828,6 +838,9 @@
 								<p class="def">Opening the Lexicon…</p>
 							{/if}
 						</div>
+					{/if}
+					{#if fc.flipped}
+						<FolioLinks folios={shownFolios} label={shown?.kind === 'k' ? 'Illustrated studies for these menu items' : shown?.kind === 's' ? 'Illustrated studies for this course' : 'Illustrated studies'} />
 					{/if}
 				{/snippet}
 			</DeckFrame>

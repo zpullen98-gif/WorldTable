@@ -10,6 +10,8 @@
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { foliosForLexicon } from '$lib/teaching-folios';
+	import FolioLinks from '$lib/components/FolioLinks.svelte';
 
 	let { data } = $props();
 	const m = $derived(data.module);
@@ -33,6 +35,7 @@
 					<a class="src" href="{base}/lexicon#{t.slug}">{t.category}</a>
 				</h2>
 				<p class="svcdef">{t.definition}</p>
+				<FolioLinks folios={foliosForLexicon(t.slug)} />
 			</li>
 		{/each}
 	</ol>
