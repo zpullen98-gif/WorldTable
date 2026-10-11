@@ -16,7 +16,9 @@
      6. no producer or place prose speaks of allergens or diets (a description is about who makes the
         wine and where, never what is in the glass for a guest's health);
      7. every whole card (cards, n to a wine id) is a pack wine on the bottle list whose bin, vintage
-        and size are that catalogue entry's.
+        and size are that catalogue entry's, and a bottle with no bin is carded only on an entry whose
+        printed name carries its producer (an empty bin matches every binless entry of that vintage
+        and size).
 
    Usage: node tools/house/check-winelist.mjs [--file <list>] [--pack <file>] [--catalogue <file>] [--bins]
    Runs from any directory. Exits 1 with the file and the rule on failure, one line on success. No
@@ -26,7 +28,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
-import { CATALOGUE, HALF_SECTION, OUT, PACK, WINELIST_FORMAT, WINELIST_VERSION, flagsOf, foldSize, listName, sectionOfPlace, sharedBins } from './build-winelist.mjs';
+import { CATALOGUE, HALF_SECTION, OUT, PACK, WINELIST_FORMAT, WINELIST_VERSION, flagsOf, foldName, foldSize, listName, sectionOfPlace, sharedBins } from './build-winelist.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ENGINE = path.join(HERE, '..', '..', 'static', 'shared', 'oot-house.js');
@@ -144,6 +146,7 @@ export function winelistProblems(text, catalogue, page, pack, hasDash) {
 		if (!w) { out.push(`cards: entry ${n} names ${id}, which is no wine in the pack`); continue; }
 		if (w.list !== 'bottle') out.push(`cards: entry ${n} names ${id} (${w.name}), which is not on the bottle list`);
 		if (String(w.bin || '') !== String(e.bin) || String(w.vintage || '') !== String(e.vintage) || foldSize(w.size) !== foldSize(e.size)) out.push(`cards: entry ${n} (bin ${e.bin}, ${e.vintage}, ${e.size}) names ${id} (bin ${w.bin}, ${w.vintage}, ${w.size})`);
+		if (!String(w.bin || '').trim() && !(' ' + foldName(e.name) + ' ').includes(' ' + foldName(w.producer) + ' ')) out.push(`cards: entry ${n} (${e.name}) names ${id} (${w.name}), a bottle with no bin, but its printed name does not carry ${w.producer}`);
 	}
 	for (const w of wines.values()) if (w.list === 'bottle' && !Object.values(cards).includes(w.id)) out.push(`the pack's bottle ${w.name} (${w.id}) has no entry in cards; rebuild the list`);
 	return out;

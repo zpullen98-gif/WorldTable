@@ -46,6 +46,7 @@
 		shuffleCards,
 		shuffleWith,
 		stillNeeded,
+		tableDrillHouse,
 		type QuizMode
 	} from '$lib/house-drill-round';
 	import { drilledCount, drilledKey, markDrilled, readDrilled } from '$lib/house-drilled';
@@ -203,11 +204,15 @@
 	/* The House, re-derived with the store's tick: null before the api is
 	   ready and on a device with no house. */
 	const current = $derived(house.current);
-	const ready = $derived<DrillKind[]>(current ? readyKinds(current) : []);
-	const counts = $derived(current ? drillableCounts(current) : null);
+	/* The house the drill and the pairings deal from: the same record, its producer profiles narrowed
+	   to the producers behind a dish (house-drill-round.ts tableDrillHouse), so the producer questions
+	   never ask about, or offer, a producer the bar or the cellar keeps for its own room. */
+	const drillHouse = $derived(current ? tableDrillHouse(current) : null);
+	const ready = $derived<DrillKind[]>(drillHouse ? readyKinds(drillHouse) : []);
+	const counts = $derived(drillHouse ? drillableCounts(drillHouse) : null);
 	const needs = $derived.by(() => {
-		if (!current || !counts) return [] as string[];
-		return DRILL_KINDS.map((k) => stillNeeded(current, k, counts)).filter(Boolean);
+		if (!drillHouse || !counts) return [] as string[];
+		return DRILL_KINDS.map((k) => stillNeeded(drillHouse, k, counts)).filter(Boolean);
 	});
 	const pairNeeds = $derived(needs.filter((n) => n.startsWith('First pick') || n.startsWith('Without alcohol')));
 	const pairReady = $derived(PAIR_KINDS.some((k) => ready.includes(k)));
@@ -218,7 +223,7 @@
 	let chosen = $state<DrillKind[]>([]);
 	const active = $derived<DrillKind[]>(chosen.length ? chosen.filter((k) => ready.includes(k)) : ready);
 	let whole = $state(false);
-	const wholeSize = $derived(current ? poolSize(current, active) : 0);
+	const wholeSize = $derived(drillHouse ? poolSize(drillHouse, active) : 0);
 
 	/* One round state for 'drill' and 'pair': the questions, the index, the
 	   pick, the score and whether the round is over. */
@@ -229,7 +234,7 @@
 	let rDone = $state(false);
 	let rSaid = $state('');
 	const rQ = $derived<DrillQuestion | null>(round[rIdx] ?? null);
-	const rExplained = $derived(current && rQ && rPicked !== null ? explainAnswer(current, rQ) : '');
+	const rExplained = $derived(drillHouse && rQ && rPicked !== null ? explainAnswer(drillHouse, rQ) : '');
 	const answered = $derived(rDone ? round.length : rIdx + (rPicked !== null ? 1 : 0));
 
 	/* The flip cards. */
@@ -267,12 +272,12 @@
 	}
 
 	function startRound(kinds: readonly DrillKind[], length: number | null) {
-		if (!current) return;
+		if (!drillHouse) return;
 		resetRound();
 		round =
 			drillSec || drillMeal
-				? dealSection(current, kinds, drillSec, length, Math.random, drillMeal)
-				: dealRound(current, kinds, length, Math.random);
+				? dealSection(drillHouse, kinds, drillSec, length, Math.random, drillMeal)
+				: dealRound(drillHouse, kinds, length, Math.random);
 		rSaid = round.length ? '' : 'Nothing to deal yet.';
 	}
 

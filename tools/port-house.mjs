@@ -148,6 +148,9 @@ export const LIB = {
 	editionBuiltAt: 'editionBuiltAt',
 	/* the drills */
 	dealQuestion: 'dealQuestion',
+	/* a whole round of one kind in one pass over the house (the Codex's Drill the list) */
+	dealRound: 'dealRound',
+	drillableCount: 'drillableCount',
 	drillableCounts: 'drillableCounts',
 	readyKinds: 'readyKinds',
 	buildFlashcards: 'buildFlashcards',

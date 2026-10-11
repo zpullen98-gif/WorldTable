@@ -14,7 +14,9 @@ import {
 	modeFromSearch,
 	poolSize,
 	shuffleCards,
-	stillNeeded
+	stillNeeded,
+	tableDrillHouse,
+	tableProducerCards
 } from './house-drill-round';
 import { DRILL_KINDS, buildFlashcards, drillableCounts, readyKinds, type Rand } from './house/house-drills';
 import type { House } from './house/house-schema';
@@ -215,11 +217,12 @@ describe('the study view’s doors into the drill page', () => {
 	});
 	it('deals a section round of section items with options from the whole house', async () => {
 		const { readFileSync } = await import('node:fs');
-		const { dealSection, ALL_KINDS } = await import('./house-drill-round');
+		const { dealSection, ALL_KINDS, tableDrillHouse } = await import('./house-drill-round');
 		const pack = JSON.parse(readFileSync('static/shared/packs/brennans-new-orleans.v1.oothouse.json', 'utf8')).house;
 		let seed = 7;
 		const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
-		const round = dealSection(pack, ALL_KINDS, 'Entrées', 10, rand);
+		/* Dealt from the house as /menu/quiz deals it (tableDrillHouse): the producers behind a dish only. */
+		const round = dealSection(tableDrillHouse(pack), ALL_KINDS, 'Entrées', 10, rand);
 		expect(round.length).toBeGreaterThan(0);
 		expect(round.length).toBeLessThanOrEqual(10);
 		const entrees = new Set(pack.dishes.filter((d: { section: string }) => d.section === 'Entrées').map((d: { id: string }) => d.id));
@@ -229,11 +232,11 @@ describe('the study view’s doors into the drill page', () => {
 	});
 	it('deals a meal round of items served at that meal, or tagged with none', async () => {
 		const { readFileSync } = await import('node:fs');
-		const { dealSection, ALL_KINDS } = await import('./house-drill-round');
+		const { dealSection, ALL_KINDS, tableDrillHouse } = await import('./house-drill-round');
 		const pack = JSON.parse(readFileSync('static/shared/packs/brennans-new-orleans.v1.oothouse.json', 'utf8')).house;
 		let seed = 11;
 		const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
-		const round = dealSection(pack, ALL_KINDS, '', null, rand, 'Dinner');
+		const round = dealSection(tableDrillHouse(pack), ALL_KINDS, '', null, rand, 'Dinner');
 		expect(round.length).toBeGreaterThan(0);
 		const items = [...pack.dishes, ...pack.cocktails, ...pack.wines] as { id: string; meals?: string[] }[];
 		for (const q of round) {
@@ -264,6 +267,113 @@ describe('the producer subject', () => {
 		expect(explainAnswer(h, of)).toMatch(/Where: [A-Z]/);
 		const m = minHouse();
 		expect(stillNeeded(m, 'producerOf')).toBe('Producer needs 2 items with a kept producer; 0 so far.');
-		expect(stillNeeded(m, 'producerDish')).toBe('Which dish uses it needs 2 producers on a dish or a drink; 0 so far.');
+		expect(stillNeeded(m, 'producerDish')).toBe('Which dish uses it needs 2 producers behind a dish; 0 so far.');
+	});
+});
+
+/* ---------------------------------------------------------------------------
+ * The Table deals the producers behind a dish
+ * ------------------------------------------------------------------------ */
+
+/**
+ * The drill fixture with a producer In the cellar put on two of its wines
+ * (every name invented for the invented house). The fixture already holds
+ * four producers behind a dish and one At the bar (Harbour Distillery,
+ * behind the Harbour Negroni and no dish).
+ */
+function roomsHouse(): House {
+	const h = drillHouse();
+	const ts = h.components![0].ts;
+	h.components!.push({
+		id: 'c-cellar01',
+		kind: 'ingredient',
+		name: 'Ridge wines',
+		producer: {
+			value: {
+				type: 'maker',
+				who: 'Red Hill Cellars',
+				where: 'The ridge above the harbour',
+				founded: '1911',
+				history: 'The cellars were cut into the ridge above the harbour.',
+				facts: ['The casks rest in the cut rock.'],
+				notes: [],
+				sayIt: 'Red Hill Cellars makes the red from the ridge.',
+				askKitchen: []
+			},
+			by: 'person',
+			ts
+		},
+		itemIds: ['w-redhil01', 'w-hearth01'],
+		termIds: [],
+		ts
+	});
+	return h;
+}
+
+const ROOMS_WHO = ['Harbour Distillery', 'Red Hill Cellars'];
+const ROOMS_WHERE = ['The Harbour', 'The ridge above the harbour'];
+const ROOMS_IDS = ['c-prodgin1', 'c-cellar01'];
+
+describe('the Table deals the producers behind a dish', () => {
+	it('narrows the house it hands the engine to the profiles behind a dish, on a copy, and leaves every other kind as it was', () => {
+		const h = roomsHouse();
+		const t = tableDrillHouse(h);
+		expect(t).not.toBe(h);
+		expect(t.components!.filter((c) => c.producer).map((c) => c.id)).toEqual(['c-prodlam1', 'c-prodsea1', 'c-prodmus1', 'c-prodlem1']);
+		/* the record handed in is untouched */
+		expect(h.components!.filter((c) => c.producer).map((c) => c.id)).toEqual(['c-prodlam1', 'c-prodsea1', 'c-prodmus1', 'c-prodlem1', 'c-prodgin1', 'c-cellar01']);
+		/* the bar's and the cellar's components stay, without their profiles */
+		expect(t.components!.find((c) => c.id === 'c-cellar01')!.itemIds).toEqual(['w-redhil01', 'w-hearth01']);
+		const before = drillableCounts(h);
+		const after = drillableCounts(t);
+		for (const k of DRILL_KINDS) if (!(PRODUCER_KINDS as readonly string[]).includes(k)) expect(after[k], k).toBe(before[k]);
+		expect(readyKinds(t)).toEqual(readyKinds(h));
+		/* a house with nothing to take off is handed back as it is */
+		const m = minHouse();
+		expect(tableDrillHouse(m)).toBe(m);
+	});
+
+	it('never asks about, or offers, a producer of the bar or the cellar, where the whole house would', () => {
+		const h = roomsHouse();
+		const whole = dealRound(h, PRODUCER_KINDS, null, seeded(3));
+		/* the unnarrowed engine does deal them: the narrowing is what keeps them out */
+		expect(whole.some((q) => ROOMS_IDS.includes(q.itemId) || ROOMS_WHO.some((w) => q.stem === w || q.answer === w))).toBe(true);
+		const t = tableDrillHouse(h);
+		for (let seed = 1; seed <= 25; seed++) {
+			const round = dealRound(t, PRODUCER_KINDS, null, seeded(seed));
+			expect(round.length).toBe(poolSize(t, PRODUCER_KINDS));
+			for (const q of round) {
+				expect(ROOMS_IDS).not.toContain(q.itemId);
+				for (const w of [...ROOMS_WHO, ...ROOMS_WHERE]) {
+					expect(q.stem).not.toBe(w);
+					expect(q.options).not.toContain(w);
+				}
+				/* a question about an item asks about a dish: no wine or drink here has a producer behind a dish */
+				if (q.kind === 'producerOf') expect(q.itemId.startsWith('d-')).toBe(true);
+				expect(explainAnswer(t, q)).not.toMatch(/Red Hill Cellars|Harbour Distillery|cut into the ridge/);
+			}
+		}
+		/* the still-needed line counts the Table's producers only */
+		expect(stillNeeded(t, 'producerDish')).toBe('');
+		const cellarOnly = roomsHouse();
+		cellarOnly.components = cellarOnly.components!.filter((c) => !c.producer || ROOMS_IDS.includes(c.id));
+		expect(stillNeeded(tableDrillHouse(cellarOnly), 'producerDish')).toBe('Which dish uses it needs 2 producers behind a dish; 0 so far.');
+		expect(readyKinds(cellarOnly).some((k) => (PRODUCER_KINDS as readonly string[]).includes(k))).toBe(true);
+		expect(readyKinds(tableDrillHouse(cellarOnly)).some((k) => (PRODUCER_KINDS as readonly string[]).includes(k))).toBe(false);
+	});
+
+	it("deals the Producers deck from the cards of the producers behind a dish only, in the engine's order", () => {
+		const h = roomsHouse();
+		const all = buildFlashcards(h).filter((c) => c.kind === 'producer');
+		expect(new Set(all.map((c) => c.itemId))).toEqual(new Set(['c-prodlam1', 'c-prodsea1', 'c-prodmus1', 'c-prodlem1', 'c-prodgin1', 'c-cellar01']));
+		const deck = tableProducerCards(h);
+		expect(deck.length).toBeGreaterThan(0);
+		expect(new Set(deck.map((c) => c.itemId))).toEqual(new Set(['c-prodlam1', 'c-prodsea1', 'c-prodmus1', 'c-prodlem1']));
+		expect(deck).toEqual(all.filter((c) => !ROOMS_IDS.includes(c.itemId)));
+		expect(deck.every((c) => c.kind === 'producer')).toBe(true);
+		for (const c of deck) for (const w of ROOMS_WHO) expect(c.front + ' ' + c.back).not.toContain(w);
+		/* the cards handed in are the ones narrowed */
+		expect(tableProducerCards(h, buildFlashcards(h))).toEqual(deck);
+		expect(tableProducerCards(minHouse())).toEqual([]);
 	});
 });

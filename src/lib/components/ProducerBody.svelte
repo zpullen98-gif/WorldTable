@@ -3,17 +3,21 @@
   to say at the table, the facts as a list, the story in paragraphs, the
   notes for the floor and, when there is something to answer, Ask the bar for
   a producer At the bar (study.ts atTheBar: it reaches a drink and no dish),
-  as the Ledger heads the same list, and Ask the kitchen for every other.
-  Drawn inside the study card's Who makes it disclosure and in the
-  Producers view, in the card's own art (the eyebrow for the small heads,
-  the dotted rule, prose at the measure). Kept words only: the row comes
-  from study.ts producerRow, which reads a profile only when a person kept it.
+  as the Ledger heads the same list, Ask the sommelier for one In the cellar
+  (study.ts inTheCellar: it reaches a wine and no dish or drink), and Ask the
+  kitchen for every other. Drawn inside the study card's Who makes it
+  disclosure and in the Producers view, in the card's own art (the eyebrow
+  for the small heads, the dotted rule, prose at the measure); `level` is the
+  small heads' level, one below the name's (h5 under an h4 name, h6 under
+  the cellar's h5). Kept words only: the row comes from study.ts producerRow,
+  which reads a profile only when a person kept it.
 -->
 <script lang="ts">
-	import { atTheBar, say, type ProducerRow } from '$lib/study';
+	import { atTheBar, inTheCellar, say, type ProducerRow } from '$lib/study';
 
-	let { row }: { row: ProducerRow } = $props();
-	const askHead = $derived(say(atTheBar(row) ? 'askBar' : 'askKitchen'));
+	let { row, level = 5 }: { row: ProducerRow; level?: 5 | 6 } = $props();
+	const askHead = $derived(say(atTheBar(row) ? 'askBar' : inTheCellar(row) ? 'askSommelier' : 'askKitchen'));
+	const head = $derived(`h${level}`);
 </script>
 
 <div class="pbody">
@@ -25,23 +29,23 @@
 	{/if}
 	{#if row.sayIt}<p class="psay"><span class="eyebrow-in">{say('say')}:</span> “{row.sayIt}”</p>{/if}
 	{#if row.facts.length}
-		<h5 class="phead">{say('producerFacts')}</h5>
+		<svelte:element this={head} class="phead">{say('producerFacts')}</svelte:element>
 		<ul class="plist">
 			{#each row.facts as f, i (i)}<li>{f}</li>{/each}
 		</ul>
 	{/if}
 	{#if row.paragraphs.length}
-		<h5 class="phead">{say('producerHistory')}</h5>
+		<svelte:element this={head} class="phead">{say('producerHistory')}</svelte:element>
 		{#each row.paragraphs as para, i (i)}<p class="para">{para}</p>{/each}
 	{/if}
 	{#if row.notes.length}
-		<h5 class="phead">{say('producerNotes')}</h5>
+		<svelte:element this={head} class="phead">{say('producerNotes')}</svelte:element>
 		<ul class="plist">
 			{#each row.notes as n, i (i)}<li>{n}</li>{/each}
 		</ul>
 	{/if}
 	{#if row.askKitchen.length}
-		<h5 class="phead">{askHead}</h5>
+		<svelte:element this={head} class="phead">{askHead}</svelte:element>
 		<ul class="plist pask">
 			{#each row.askKitchen as q, i (i)}<li>{q}</li>{/each}
 		</ul>

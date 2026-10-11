@@ -677,6 +677,11 @@ function checkParity(T, P) {
 			}
 			dealt += a.filter(Boolean).length;
 			same(`dealQuestion(${label}, ${kind})`, a, b);
+			/* a whole round: every limit the Codex asks for, the same questions in the same order */
+			for (const limit of [1, 4, 15, Infinity]) {
+				same(`dealRound(${label}, ${kind}, ${limit})`, T.dealRound(house, kind, seeded(7), limit), P.dealRound(house, kind, seeded(7), limit));
+			}
+			same(`drillableCount(${label}, ${kind})`, T.drillableCount(house, kind), P.drillableCount(house, kind));
 		}
 		if (label === 'widened' && !dealt) fail.push('the widened house dealt no question of any kind, so the drills are not proved');
 	}

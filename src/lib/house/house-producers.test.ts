@@ -305,6 +305,24 @@ describe('the cards and the drills', () => {
 		}
 	});
 
+	it('never offer two options a reader cannot tell apart: one label printed with a straight and a curly apostrophe is one option', () => {
+		const h = withProducers();
+		const base = h.dishes.find((d) => d.id === 'd-beetrt01')!;
+		const twin = (id: string, name: string) => h.dishes.push({ ...clone(base), id, name });
+		twin('d-tart0001', "Quay's Tart");
+		twin('d-tart0002', 'Quay\u2019s Tart');
+		const fold = (s: string) => s.toLowerCase().replace(/[\u2018\u2019]/g, "'");
+		let seen = 0;
+		for (let s = 1; s <= 60; s++) {
+			const q = dealQuestion(h, 'producerDish', seeded(s))!;
+			expect(q.options).toHaveLength(4);
+			expect(new Set(q.options.map(fold)).size).toBe(4);
+			if (q.options.some((o) => fold(o) === "quay's tart")) seen++;
+		}
+		/* the tart is still offered, once */
+		expect(seen).toBeGreaterThan(0);
+	});
+
 	it('never offer as a wrong place one that echoes the stem or the right answer', () => {
 		const h = withProducers();
 		const add = (id: string, who: string, where: string) =>

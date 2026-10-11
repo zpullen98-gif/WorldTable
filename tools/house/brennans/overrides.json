@@ -47112,7 +47112,7 @@
         "classic": {
           "wine": "Moët & Chandon ‘Nectar Imperial’ Rosé Demi Sec NV",
           "why": "Bridge and fat: demi-sec rosé Champagne has red berry fruit for the raspberries and bubbles to lift the mascarpone mousse.",
-          "sayIt": "For a festive brunch, Moët Nectar Impérial Rosé: a gently sweet pink Champagne, raspberries and cream in a glass."
+          "sayIt": "For a festive brunch, Moët Nectar Imperial Rosé: a gently sweet pink Champagne, raspberries and cream in a glass."
         },
         "splurge": {
           "wine": "Château d’Yquem Sauternes 2015 (375 ml)",
@@ -52435,6 +52435,3431 @@
       },
       "reason": "Producers deep dive, the bar: a question about a drink producer that no source answers goes to the bar or a manager at lineup",
       "source": "research:producers-bar-wines-zero-mixers-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is our C.H. Berres the importer's Estate Riesling Old Vines, is the vintage still 2022, and can the family's 1510 date be confirmed from the label or the importer?",
+        "askWhom": "sommelier",
+        "items": [
+          "C.H. Berres ‘Old Vines’ Riesling 2022"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-alsace-jura-mosel-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does our Dr. Hermann Erdener Prälat Auslese 2014 label say Goldkapsel, as one retailer lists it, and may a single dessert pour be sold from the half-bottle?",
+        "askWhom": "manager",
+        "items": [
+          "Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-alsace-jura-mosel-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "The list prints the Pélican Vin Jaune 2016 at 750 ml; Vin Jaune is sold only in the 62 cl clavelin. Which bottle do we hold, and should the list be corrected?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine du Pélican Vin Jaune Arbois 2016"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-alsace-jura-mosel-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the Albert Boxler Pinot Gris 2020 taste dry or touched with sweetness, and is any of its fruit from the Brand or the Sommerberg?",
+        "askWhom": "sommelier",
+        "items": [
+          "Albert Boxler Pinot Gris 2020"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-alsace-jura-mosel-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How sweet do the Trimbach Pinot Gris Réserve Personnelle 2007 and Gewurztraminer Vendanges Tardives 2007 taste now, and which vineyards feed the Réserve Personnelle?",
+        "askWhom": "sommelier",
+        "items": [
+          "F.E. Trimbach Pinot Gris ‘Réserve Personnelle’ 2007",
+          "Trimbach Gewurztraminer Vendanges Tardives 2007"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-alsace-jura-mosel-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Where does the Stein Weihwasser grow, how old are its vines, does it ferment in large old casks as the pack's card says, and what does 1900 mean on the Alfer Holle Kabinett Trocken?",
+        "askWhom": "sommelier",
+        "items": [
+          "Stein ‘Weihwasser’ Riesling Feinherb 2023",
+          "Stein ‘Palmberg-Terrassen’ Riesling Spätlese-Feinherb 2014"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-alsace-jura-mosel-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Should the young Prüm Kabinett 2020 and the Egon Müller Kabinett 2020 be opened ahead to let a reductive note clear?",
+        "askWhom": "sommelier",
+        "items": [
+          "J.J. Prüm ‘Wehlener Sonnenuhr’ Riesling Kabinett 2020",
+          "Egon Müller ‘Scharzhofberger’ Riesling Kabinett 2020"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-alsace-jura-mosel-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Who founded Weingut Dr. Hermann and when, and is it a VDP member, so the floor can answer from the label?",
+        "askWhom": "sommelier",
+        "items": [
+          "Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)",
+          "Dr. Hermann ‘Ürziger Würzgarten in der Kranklei’ Riesling Spätlese Goldkapsel 2018"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-alsace-jura-mosel-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Why is Domaine du Pélican so named, and which member of the d'Angerville family founded it?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine du Pélican Vin Jaune Arbois 2016"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-alsace-jura-mosel-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Moulin d'Issan vintage is open, the 2021 the menu prints or the 2023 on Binwise, and what is its blend: Merlot led, as the château describes it, or Cabernet led, as our list heads it?",
+        "askWhom": "sommelier",
+        "items": [
+          "Moulin d’Issan Bordeaux Supérieur 2021"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-left-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Who owns and runs Château d'Issan today, if a guest asks? Our research holds only unconfirmed recollection.",
+        "askWhom": "sommelier",
+        "items": [
+          "Moulin d’Issan Bordeaux Supérieur 2021"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-left-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is the 2018 blend of La Chapelle de Meyney, what does the name La Chapelle refer to, and what of the estate’s history should we tell?",
+        "askWhom": "sommelier",
+        "items": [
+          "La Chapelle de Meyney Saint-Estèphe 2018"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-left-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the Haut-Bages Libéral 2018 label carry the organic or biodynamic certification (our research dates it from 2019), and where does the name Libéral come from?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Haut-Bages Libéral Pauillac 5ème Cru Classé 2018"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-left-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Talbot 2019 or the 1996 in the cellar tonight?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Talbot Saint-Julien 4ème Cru Classé 2019"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-left-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How long should the Grand-Puy-Lacoste 2008 and the Pichon Lalande 2004 stand, and how far ahead should each be decanted off its sediment?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Grand-Puy-Lacoste Pauillac 5ème Cru Classé 2008",
+          "Château Pichon-Longueville Comtesse de Lalande Pauillac 2ème Cru Classé 2004"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-left-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which artist made the Mouton Rothschild 2005 label?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Mouton-Rothschild Pauillac 1er Cru Classé 2005"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-left-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Château Margaux vintages are in tonight, and may we offer the Pavillon Rouge 2010 as the gentler choice?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Margaux 1er Cru Classé 2007"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-left-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which of the Lafite family’s other bottles are in tonight to offer at a gentler price: Duhart-Milon, L’Évangile or Légende Pauillac?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Lafite-Rothschild Pauillac 1er Cru Classé 2004"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-left-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How many bottles of the Latour 1946 are in the cellar (bin 27340 is printed twice), what are their fill level and cork condition, who presents it, and how far ahead should the Latour 2005 be decanted?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Latour Pauillac Premier Cru Classé 1946",
+          "Château Latour Pauillac 1er Cru Classé 2005"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-left-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is bin 33553 the Cos d’Estournel 2015 magnum, as Large Formats prints it, or a 750 ml bottle, as the Saint-Estèphe page prints it?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Cos d’Estournel Saint-Estèphe 2015 (1.5 L magnum)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-left-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Since when has the Borie family owned Grand-Puy-Lacoste? Our list and the Codex name the family but give no year.",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Grand-Puy-Lacoste Pauillac 5ème Cru Classé 2008"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-left-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does Château Lassègue hold Grand Cru Classé rank, as the list says, and does the 2021 Les Cadrans label print it? Bin 28352 is also printed for Château L’Évangile 2015 at $800: which bin is right for each?",
+        "askWhom": "sommelier",
+        "items": [
+          "Les Cadrans de Lassègue Saint-Émilion Grand Cru 2021"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-right-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Do the Bellegrave 2019 and Clos L’Église 2019 labels carry an organic certification, and are both Clos L’Église vintages, 2019 and 2006, in the cellar?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Bellegrave Pomerol 2019",
+          "Clos L’Église Pomerol 2019"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-right-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "The list prints Le Petit Cheval Blanc 1er Grand Cru Classé A 2012 at $620 under red Saint-Émilion: is it Le Petit Cheval, the red second wine? Which Cheval Blanc vintages are in tonight?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Cheval Blanc Saint-Émilion 1er Grand Cru Classé A 2008"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-right-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How does the sommelier describe the 1980 vintage at Pétrus, how are the 1980 and 1989 showing, and should a server call the sommelier before confirming either?",
+        "askWhom": "sommelier",
+        "items": [
+          "Pétrus Pomerol 1980"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-right-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "When did the Moueix family come to Trotanoy, and who made the 1946?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Trotanoy Pomerol 1946"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-right-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "For the three 1946 Right Bank bottles: how are their levels and corks, who opens them, and what do the Figeac and Canon labels print, given the Saint-Émilion classification began in 1955?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Trotanoy Pomerol 1946",
+          "Château-Figeac Saint-Émilion Premier Grand Cru Classé 1946",
+          "Château Canon Saint-Émilion Premier Grand Cru Classé 1946"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-right-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "The list prints Figeac as 1er Grand Cru Classé B; since 2022 it is ranked A. Which should a server say at the table?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château-Figeac Saint-Émilion Premier Grand Cru Classé 1946"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-right-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Where does the name Troplong Mondot come from, who runs the estate today, which spelling does it use, and is the 750 ml 2020 (bin 25471) in the cellar?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Troplong Mondot Saint-Émilion 2020 (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-right-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is Haut-Brion Blanc listed in the Graves classification? The Codex says it carries none; our research could not confirm it either way, and a collector may ask.",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Haut-Brion Blanc Pessac-Léognan 2019"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-white-sweet-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How far ahead should the Haut-Brion 2002 be decanted, and does the sommelier present both the red and the Haut-Brion Blanc 2019?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Haut-Brion Pessac-Léognan 1er Cru Classé 2002",
+          "Château Haut-Brion Blanc Pessac-Léognan 2019"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-white-sweet-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How does L'Enclos de Carbonnieux (2021, $75) relate to Château Carbonnieux, and what of the château's history and family should we tell?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Carbonnieux Pessac-Léognan Blanc 2016"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-white-sweet-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Carbonnieux is in service tonight, the 2016 at $160 or the 2022 at $190?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Carbonnieux Pessac-Léognan Blanc 2016"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-white-sweet-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "When was our Gilette Crème de Tête 1989 released, and how is it showing?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Gilette ‘Crème de Tête’ Sauternes 1989"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-white-sweet-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How many days does the house keep an open Sauternes or Barsac, half-bottle or full, and who decides when it is poured out?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Suduiraut Sauternes 2016 (375 ml)",
+          "Château Suduiraut Sauternes Premier Cru Classé 2010",
+          "Château d’Yquem Sauternes 2015 (375 ml)",
+          "Château d’Yquem Sauternes 2016 (375 ml)",
+          "Château d’Yquem Sauternes 2007",
+          "Château Climens Barsac Premier Cru Classé 2010",
+          "Château Gilette ‘Crème de Tête’ Sauternes 1989"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-white-sweet-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does Climens still farm biodynamically since the 2022 sale, if a guest asks?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Climens Barsac Premier Cru Classé 2010"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-white-sweet-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How is each Yquem showing, the 2015 and 2016 halves and the 2007, and which older vintages and the 2016 magnum are in the cellar?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château d’Yquem Sauternes 2015 (375 ml)",
+          "Château d’Yquem Sauternes 2016 (375 ml)",
+          "Château d’Yquem Sauternes 2007"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-white-sweet-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Who owns Château Suduiraut today, and since when? A card of 4 October named AXA Millésimes from memory; no search confirmed it, so the profile names no owner.",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Suduiraut Sauternes 2016 (375 ml)",
+          "Château Suduiraut Sauternes Premier Cru Classé 2010"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-white-sweet-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is the blend of our Gilette Crème de Tête 1989, and does it include any Muscadelle?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Gilette ‘Crème de Tête’ Sauternes 1989"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-bordeaux-white-sweet-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Gainey Chardonnay is poured by the glass, what appellation does its current label print, and does the 2023 read fresh rather than oaky enough to lead on the crab dishes?",
+        "askWhom": "sommelier",
+        "items": [
+          "Gainey Estate Vineyards Chardonnay 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-central-coast-oregon-world-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Can the producers confirm the Gainey family history the earlier research gives (the ranch bought in 1962, the winery opened in 1984) and the founding years of Sandhi, Ken Wright Cellars and Bergstrom, before any server quotes a year?",
+        "askWhom": "sommelier",
+        "items": [
+          "Gainey Estate Vineyards Chardonnay 2023",
+          "Sandhi Chardonnay Sta. Rita Hills 2021",
+          "Ken Wright Cellars Willamette Valley Pinot Noir 2024",
+          "Bergstrom ‘Reserve’ Pinot Noir Willamette Valley 2022 (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-central-coast-oregon-world-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How are Sandhi, Kumeu and Gaia said at this house: SAHN-dee or SAN-dee, KOO-may-oo or KOO-mee-oo, GUY-ah or nearer the Greek YEH-ah? The pack and the components disagree or are unconfirmed.",
+        "askWhom": "sommelier",
+        "items": [
+          "Sandhi Chardonnay Sta. Rita Hills 2021",
+          "Kumeu River ‘Estate’ Chardonnay Auckland 2022",
+          "Gaia ‘Wild Ferment’ Assyrtiko Santorini 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-central-coast-oregon-world-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which vineyards make the 2021 Sandhi Sta. Rita Hills, and how much new oak does it see?",
+        "askWhom": "sommelier",
+        "items": [
+          "Sandhi Chardonnay Sta. Rita Hills 2021"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-central-coast-oregon-world-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Did Jim Clendenen found Au Bon Climat alone in 1982, or with a partner the house should name? Which magnums and older vintages (Hildegard 2002, Nuits Blanches au Bouge 2001, La Bauge au Dessus 2000, Isabelle 2007) are in the cellar?",
+        "askWhom": "sommelier",
+        "items": [
+          "Au Bon Climat ‘Sanford & Benedict’ Chardonnay Sta. Rita Hills 2021"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-central-coast-oregon-world-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the 2021 Piedrasassi Bien Nacido from the X Block, and when were those vines planted (retailer notes say 1973, unconfirmed)? How is the vineyard farmed today, and what does the name Piedrasassi mean?",
+        "askWhom": "sommelier",
+        "items": [
+          "Piedrasassi ‘Bien Nacido Vineyard’ Santa Maria Valley Syrah 2021"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-central-coast-oregon-world-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which vineyards go into the 2024 Ken Wright Willamette Valley blend, and which sub-appellation is Freedom Hill in?",
+        "askWhom": "sommelier",
+        "items": [
+          "Ken Wright Cellars Willamette Valley Pinot Noir 2024"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-central-coast-oregon-world-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which vineyards make the 2022 Bergstrom Reserve half-bottle (is it the bottling labelled Cumberland Reserve?), and is the estate’s biodynamic farming certified?",
+        "askWhom": "sommelier",
+        "items": [
+          "Bergstrom ‘Reserve’ Pinot Noir Willamette Valley 2022 (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-central-coast-oregon-world-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Do our Penfolds Grange and Bin 389 labels read South Australia, or Barossa Valley as the list prints, and what share of Cabernet Sauvignon is in each?",
+        "askWhom": "sommelier",
+        "items": [
+          "Penfolds ‘Bin 389’ Cabernet Shiraz 2019",
+          "Penfolds ‘Grange’ Shiraz 2004"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-central-coast-oregon-world-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Grange vintages (2004, 2009, 2010, 2011) and which Musar wines (1994, 1995, 1997, 2003, Hochar 2020) are in tonight, how have the old bottles been stored, and who decants them?",
+        "askWhom": "sommelier",
+        "items": [
+          "Penfolds ‘Grange’ Shiraz 2004",
+          "Château Musar Bekaa Valley 2003"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-central-coast-oregon-world-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is the blend of the Château Musar 2003?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château Musar Bekaa Valley 2003"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-central-coast-oregon-world-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the 2023 Gaia Wild Ferment ferment in oak or acacia, and in what share? And who founded Gaia (from memory Leon Karatsalos and Yiannis Paraskevopoulos, unconfirmed)?",
+        "askWhom": "sommelier",
+        "items": [
+          "Gaia ‘Wild Ferment’ Assyrtiko Santorini 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-central-coast-oregon-world-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Inniskillin Cabernet Franc Icewine 2015 a 375 ml or a 750 ml bottle, as the list prints, and is it ever poured by the glass with the Blackberry Trifle?",
+        "askWhom": "manager",
+        "items": [
+          "Inniskillin Cabernet Franc Icewine Niagara Peninsula 2015"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-central-coast-oregon-world-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the 2022 Kumeu River Estate show the struck-match note of the house style, and how should a server describe its oak?",
+        "askWhom": "sommelier",
+        "items": [
+          "Kumeu River ‘Estate’ Chardonnay Auckland 2022"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-central-coast-oregon-world-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Were Rajat Parr and Sashi Moorman the only founding partners at Sandhi?",
+        "askWhom": "sommelier",
+        "items": [
+          "Sandhi Chardonnay Sta. Rita Hills 2021"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-central-coast-oregon-world-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Fichet Château London Mâcon-Igé 2024 still the lobster pour on the dinner tasting, or has it changed to the Domaine Matrot Meursault 2023 the house website has shown?",
+        "askWhom": "manager",
+        "items": [
+          "Fichet ‘Château London’ Mâcon-Igé 2024"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-chablis-maconnais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Can the Fichet Château London Mâcon-Igé be sold by the glass à la carte, or is it a dinner tasting pour only?",
+        "askWhom": "manager",
+        "items": [
+          "Fichet ‘Château London’ Mâcon-Igé 2024"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-chablis-maconnais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How much of our 2024 Fichet Château London saw oak (the 2023 was about a tenth), and do we have a tech sheet?",
+        "askWhom": "sommelier",
+        "items": [
+          "Fichet ‘Château London’ Mâcon-Igé 2024"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-chablis-maconnais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the Roc des Boutires En Bertilionne 2020 label say Premier Cru, or is it village Pouilly-Fuissé as our list prints it, and how is it showing now?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine du Roc des Boutires ‘En Bertilionne’ Pouilly-Fuissé 2020"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-chablis-maconnais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is our Lafon Mâcon the village Mâcon-Milly-Lamartine or the Clos du Four, and how was the 2023 raised?",
+        "askWhom": "sommelier",
+        "items": [
+          "Les Héritiers du Comte Lafon Mâcon-Milly-Lamartine 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-chablis-maconnais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How much of the Droin Vaillons 2023 saw oak (about a fifth in 2022)?",
+        "askWhom": "sommelier",
+        "items": [
+          "Jean-Paul & Benoît Droin ‘Vaillons’ Chablis Premier Cru 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-chablis-maconnais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How is the Dauvissat Les Preuses 2015 showing, and should it be decanted for the oysters?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine René et Vincent Dauvissat ‘Les Preuses’ Chablis Grand Cru 2015"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-chablis-maconnais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Should the Raveneau Montée de Tonnerre 2022 be decanted, how many bottles do we hold, and may a server offer it or only the sommelier?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine François Raveneau ‘Montée de Tonnerre’ Chablis Premier Cru 2022"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-chablis-maconnais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which premiers crus make up our Jadot Beaune 1er Cru 2023, and is it a Maison or a Domaine bottling?",
+        "askWhom": "sommelier",
+        "items": [
+          "Louis Jadot Beaune 1er Cru 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-chablis-maconnais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Can the Jadot Beaune 1er Cru be poured à la carte by the glass, outside the dinner tasting?",
+        "askWhom": "manager",
+        "items": [
+          "Louis Jadot Beaune 1er Cru 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-chablis-maconnais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Jadot Beaune 1er Cru 2023 still the redfish pour on the dinner tasting, or the Jadot Beaune Bressandes 1er Cru 2022 the house website has shown?",
+        "askWhom": "manager",
+        "items": [
+          "Louis Jadot Beaune 1er Cru 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-chablis-maconnais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is our Pierre Paillard Les Parcelles still the XVIII, the 2018 base, or a later number, and what dosage does its back label give? Are the vines certified organic now?",
+        "askWhom": "sommelier",
+        "items": [
+          "Pierre Paillard Grand Cru ‘Les Parcelles XVIII’ Extra Brut NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-growers-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which three harvests and what dosage does our Selosse Initial, disgorged 10.16.23, hold, how far ahead should it be opened, and is it in the cellar?",
+        "askWhom": "sommelier",
+        "items": [
+          "Jacques Selosse ‘Initial’ Blanc de Blancs Brut NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-growers-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is the blend of the Chartogne-Taillet Rosé we pour, and how much red wine colours it?",
+        "askWhom": "sommelier",
+        "items": [
+          "Chartogne-Taillet Rosé Brut NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-growers-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the Tribaut-Schloesser Origine half-bottle carry NM or RM, and should servers present it as grower Champagne, as the list files it?",
+        "askWhom": "sommelier",
+        "items": [
+          "Tribaut-Schloesser ‘Origine’ Brut NV (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-growers-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is the blend of the Veuve Fourny Premier Cru Rosé half and how is it coloured, and do the Veuve Fourny labels carry RM or NM?",
+        "askWhom": "sommelier",
+        "items": [
+          "Veuve Fourny et Fils Premier Cru Rosé Brut NV (375 ml)",
+          "Veuve Fourny et Fils Premier Cru Blanc de Blancs Extra Brut NV (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-growers-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Veuve Fourny Vinothèque MV2000 magnum white or rosé, and is it a 2000 vintage or a multi-vintage blend built on 2000? Is Monts de Vertus a single site or a blend of Vertus parcels?",
+        "askWhom": "sommelier",
+        "items": [],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-growers-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the Pierre Péters Cuvée de Réserve magnum see any wood for its base or reserve wines, or only steel and concrete?",
+        "askWhom": "sommelier",
+        "items": [
+          "Pierre Péters ‘Cuvée de Réserve’ Brut NV (1.5 L magnum)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-growers-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which base harvests and dosages do the Sélèque Solessence, the Larmandier-Bernier Longitude and the Pierre Péters Cuvée de Réserve magnum carry now?",
+        "askWhom": "sommelier",
+        "items": [
+          "JM Sélèque ‘Solessence’ Extra Brut NV",
+          "Larmandier-Bernier Premier Cru ‘Longitude’ Extra Brut NV",
+          "Pierre Péters ‘Cuvée de Réserve’ Brut NV (1.5 L magnum)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-growers-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is Collection 244 still the release in our cellar, or has a later Collection number arrived?",
+        "askWhom": "sommelier",
+        "items": [
+          "Louis Roederer ‘Collection 244’ Brut NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-houses-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Do we keep Cristal in its wrap until it reaches the table, and who unwraps it?",
+        "askWhom": "sommelier",
+        "items": [
+          "Louis Roederer ‘Cristal’ Brut 2015"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-houses-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "The list prints a Charles Heidsieck Réserve Brut 3 L double magnum as 1985 at $9000: is it a vintage 1985 bottle, and is it in the cellar?",
+        "askWhom": "sommelier",
+        "items": [],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-houses-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "May we tell guests the Fort Jackson story of Champagne Charlie, arrested in New Orleans in 1862, when we present the Charles Heidsieck?",
+        "askWhom": "manager",
+        "items": [
+          "Charles Heidsieck ‘Réserve’ Brut NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-houses-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "The list prints Veuve Clicquot La Grand Dame Extra Brut 2015: is that the label as written, and which La Grande Dame do we offer a guest stepping up from Yellow Label?",
+        "askWhom": "sommelier",
+        "items": [
+          "Veuve Clicquot ‘Yellow Label’ Brut NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-houses-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which harvests are in our Armand de Brignac Brut Gold, and should the gold bottle go on ice earlier than our other Champagnes?",
+        "askWhom": "sommelier",
+        "items": [
+          "Armand de Brignac ‘Gold’ Brut NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-houses-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "For a guest who asks for Churchill’s Champagne, which Pol Roger Sir Winston Churchill do we offer first, the 2013 or the 2015?",
+        "askWhom": "sommelier",
+        "items": [
+          "Pol Roger ‘Blanc de Blancs’ Brut 2015"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-houses-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What disgorgement date does our Dom Pérignon P2 2006 carry on its back label?",
+        "askWhom": "sommelier",
+        "items": [
+          "Dom Pérignon ‘P2’ Brut 2006"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-houses-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Bin 32684 is printed for both Salon 2013 and Pétrus 1989: which bin do we quote for the Salon, and do we pour it straight into white-wine glasses or decant it?",
+        "askWhom": "sommelier",
+        "items": [
+          "Salon ‘Le Mesnil’ Blanc de Blancs Brut 2013"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-houses-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "The list prints a Laurent-Perrier Rosé Brut magnum as 1959 at $5000: what year is on the bottle, given the Cuvée Rosé began in 1968?",
+        "askWhom": "sommelier",
+        "items": [],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-houses-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "May we fill Harmony’s grapes in the pack as Chardonnay, Pinot Noir and Meunier, the blend the retailers give?",
+        "askWhom": "sommelier",
+        "items": [
+          "Laurent-Perrier ‘Harmony’ Demi Sec NV (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-houses-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is our Nicolas Feuillatte half-bottle labelled Réserve Exclusive Brut, the house’s current name, or another Réserve?",
+        "askWhom": "sommelier",
+        "items": [
+          "Nicolas Feuillatte ‘Réserve’ Brut NV (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-houses-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is Brennan’s Essential Piper-Heidsieck’s Essentiel Extra Brut under our label or a blend made for us, and what disgorgement date and dosage does the back label give?",
+        "askWhom": "sommelier",
+        "items": [
+          "Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+          "Piper-Heidsieck ‘Brennan’s Essential’ Extra Brut NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Rare vintage is open by the glass, 2012 or 2013, and how long is an opened bottle kept under the Coravin Sparkling stopper?",
+        "askWhom": "sommelier",
+        "items": [
+          "Rare Brut 2012 (Coravin)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Charles Lafitte cuvée is poured on the two tastings, what is its blend, and can it be sold by the glass?",
+        "askWhom": "sommelier",
+        "items": [
+          "Charles Lafitte Brut Champagne NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Champagne goes with the Eggs Hussarde on the breakfast tasting today: Charles Lafitte Brut (the guide) or Brennan’s Essential (the house’s tasting page)?",
+        "askWhom": "manager",
+        "items": [
+          "Charles Lafitte Brut Champagne NV",
+          "Brennan’s Essential by Piper-Heidsieck Extra Brut NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Paul Bara half-bottle the Brut Rosé Grand Cru (Grand Rosé), and is it in stock, since Binwise does not list it?",
+        "askWhom": "sommelier",
+        "items": [
+          "Paul Bara Grand Cru Reserve Rosé Brut NV (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Drappier Carte d’Or half-bottle in stock, since Binwise lists the Carte d’Or only as a 6 L?",
+        "askWhom": "sommelier",
+        "items": [
+          "Drappier ‘Carte d’Or’ Brut NV (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Krug Grande Cuvée edition is in the half-bottle?",
+        "askWhom": "sommelier",
+        "items": [
+          "Krug ‘Grand Cuvée’ Brut NV (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Billecart-Salmon 80th anniversary magnum a special Sous Bois cuvée or the standard Sous Bois with an anniversary label, and how many remain?",
+        "askWhom": "manager",
+        "items": [
+          "Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How should the floor say Billecart: bee-yeh-KAR or beel-KAR? Our notes use both.",
+        "askWhom": "sommelier",
+        "items": [
+          "Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+          "Billecart-Salmon ‘Réserve’ Brut NV",
+          "Billecart-Salmon ‘Cuvée Elisabeth Salmon’ Rosé Brut 2009",
+          "Billecart-Salmon ‘Réserve’ Brut NV (15 L Nebuchadnezzar)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Louis Pommery rosé the California bottling the menu prints (Louis Pommery is also made in England), and is it in stock?",
+        "askWhom": "bar",
+        "items": [
+          "Louis Pommery Rosé Brut NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Pommery rosé the Brut Rosé Royal?",
+        "askWhom": "sommelier",
+        "items": [
+          "Pommery Rosé Brut NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Are the Pommery rosé, the Moët Imperial Rosé and the Taittinger Prestige Rosé sold outside Bubbles at Brennan’s, and at what price?",
+        "askWhom": "manager",
+        "items": [
+          "Pommery Rosé Brut NV",
+          "Moët & Chandon ‘Imperial’ Rosé Brut NV",
+          "Taittinger ‘Prestige’ Rosé Brut NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which grapes are in the Keller PIUS 2022, and does the label say Riesling? The list prints it \"Riesling Auslese\" in one place; the 4 October research says its varieties change by vintage.",
+        "askWhom": "sommelier",
+        "items": [
+          "Keller ‘PIUS’ Auslese Rheinhessen 2022 (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-germany-austria-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is our Kracher bottle the Cuvée Auslese 2017, is it 750 ml as the list prints or the 375 ml it is commonly sold in, and what is its Welschriesling and Chardonnay split?",
+        "askWhom": "sommelier",
+        "items": [
+          "Kracher ‘Cuvée’ Auslese Burgenland 2017"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-germany-austria-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "May a single dessert pour be sold from the Dönnhoff and Keller half-bottles, or only the whole half?",
+        "askWhom": "manager",
+        "items": [
+          "Dönnhoff ‘Oberhäuser Brücke’ Riesling Auslese Goldkapsel 2023 (375 ml)",
+          "Dönnhoff ‘Niederhäuser Hermannshöhle’ Riesling Auslese Goldkapsel 2023 (375 ml)",
+          "Keller ‘PIUS’ Auslese Rheinhessen 2022 (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-germany-austria-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Bin 287232 is printed for both the Hirtzberger Honivogl and a Dujac red Burgundy, and bin 19234 for the Kracher Auslese and two other wines. Which bin does the cellar use for each?",
+        "askWhom": "manager",
+        "items": [
+          "Franz Hirtzberger ‘Honivogl’ Grüner Veltliner Smaragd 2022",
+          "Kracher ‘Cuvée’ Auslese Burgenland 2017"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-germany-austria-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the Loimer Lois label read Kamptal or Niederösterreich, is Loimer certified biodynamic, and may servers name Fred Loimer?",
+        "askWhom": "sommelier",
+        "items": [
+          "Loimer ‘Lois’ Grüner Veltliner 2022"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-germany-austria-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How sweet does the Hexamer Rheingrafenberg Spätlese 2010 taste now, how have our bottles shown, and should it be decanted?",
+        "askWhom": "sommelier",
+        "items": [
+          "Hexamer ‘Meddersheimer Rheingrafenberg’ Riesling Spätlese 2010"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-germany-austria-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is our Bründlmayer Heiligenstein half-bottle the Erste Lage Zöbinger Heiligenstein bottling, or another?",
+        "askWhom": "sommelier",
+        "items": [
+          "Bründlmayer ‘Heiligenstein’ Riesling 2022 (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-germany-austria-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which pronunciations do we teach: DURN-hoff or DUN-hoff for Dönnhoff, and HEERTS-bair-ger or HIRTS-bair-ger for Hirtzberger?",
+        "askWhom": "sommelier",
+        "items": [
+          "Dönnhoff ‘Oberhäuser Brücke’ Riesling Auslese Goldkapsel 2023 (375 ml)",
+          "Dönnhoff ‘Niederhäuser Hermannshöhle’ Riesling Auslese Goldkapsel 2023 (375 ml)",
+          "Franz Hirtzberger ‘Honivogl’ Grüner Veltliner Smaragd 2022"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-germany-austria-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Where does the Honivogl lie, and on what soil? No source read places it; the component wine-region-kamptal-wachau says Spitz.",
+        "askWhom": "sommelier",
+        "items": [
+          "Franz Hirtzberger ‘Honivogl’ Grüner Veltliner Smaragd 2022"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-germany-austria-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which de Vogüé, DRC and Rousseau bottles are in the cellar tonight, and who presents, opens and decants them?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Comte Georges de Vogüé Musigny Grand Cru Vieilles Vignes 2012",
+          "Domaine de la Romanée-Conti Echézeaux Grand Cru 2015",
+          "Domaine de la Romanée-Conti La Tâche Grand Cru 2012",
+          "Domaine de la Romanée-Conti Romanée-Conti Grand Cru 2014",
+          "Domaine Armand Rousseau ‘Clos Saint Jacques’ Gevrey-Chambertin Premier Cru 2019"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-grand-burgundy-beaujolais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How far ahead should the de Vogüé Musigny Vieilles Vignes 2012, the La Tâche 2012, the Romanée-Conti 2014 and the Rousseau Clos Saint-Jacques 2019 be decanted, if at all?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Comte Georges de Vogüé Musigny Grand Cru Vieilles Vignes 2012",
+          "Domaine de la Romanée-Conti La Tâche Grand Cru 2012",
+          "Domaine de la Romanée-Conti Romanée-Conti Grand Cru 2014",
+          "Domaine Armand Rousseau ‘Clos Saint Jacques’ Gevrey-Chambertin Premier Cru 2019"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-grand-burgundy-beaujolais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is de Vogüé’s white Musigny sold as Musigny again or still as Bourgogne Blanc, and do we carry it?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Comte Georges de Vogüé Musigny Grand Cru Vieilles Vignes 2012"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-grand-burgundy-beaujolais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is any DRC poured by the glass or by Coravin, or by the bottle only?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine de la Romanée-Conti Echézeaux Grand Cru 2015",
+          "Domaine de la Romanée-Conti La Tâche Grand Cru 2012",
+          "Domaine de la Romanée-Conti Romanée-Conti Grand Cru 2014"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-grand-burgundy-beaujolais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Clos Saint-Jacques walled today, as our Rousseau card says?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Armand Rousseau ‘Clos Saint Jacques’ Gevrey-Chambertin Premier Cru 2019"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-grand-burgundy-beaujolais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Clos de la Roilette walled, is it wholly the Couderts’ (a monopole), when did the family come to it, and does the domaine use whole bunches?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Coudert ‘Clos de la Roilette’ Fleurie 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-grand-burgundy-beaujolais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is our Clos de la Roilette the straight Fleurie or another cuvée from the clos, and how long and in what vessels does it rest?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Coudert ‘Clos de la Roilette’ Fleurie 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-grand-burgundy-beaujolais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Foillard Côte du Py is in the cellar tonight (the 2022 bottle, the 2023 bottle or the 2023 magnum), and do we chill Beaujolais in an ice bucket at the table?",
+        "askWhom": "sommelier",
+        "items": [
+          "Jean Foillard ‘Côte du Py’ Morgon 2022",
+          "Jean Foillard ‘Côte du Py’ Morgon 2023 (1.5 L magnum)",
+          "Domaine Coudert ‘Clos de la Roilette’ Fleurie 2023",
+          "Marcel Lapierre Morgon 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-grand-burgundy-beaujolais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is our Lapierre Morgon 2023 the bottling with added sulphur or the one without, and is it the 2023 or the 2024 in the cellar tonight?",
+        "askWhom": "sommelier",
+        "items": [
+          "Marcel Lapierre Morgon 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-grand-burgundy-beaujolais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Domaine Coudert Moulin-à-Vent 2023 on our list made by the same family as the Clos de la Roilette Fleurie?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Coudert ‘Clos de la Roilette’ Fleurie 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-grand-burgundy-beaujolais-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is La Miraja's Le Masche poured tonight, is the 2023 open, and does the label read Barbera d'Asti or Barbera d'Asti Superiore? The producer's sheet we have, steel then at least twelve months in neutral oak, is for the Superiore.",
+        "askWhom": "sommelier",
+        "items": [
+          "La Miraja ‘Le Masche’ Barbera d’Asti 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-italy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Fèlsina Rancia vintage is in tonight, the 2019 (bin 16433) or the 2020 (bin 15672), and does our Chianti Classico label read Berardenga?",
+        "askWhom": "sommelier",
+        "items": [
+          "Fattoria di Fèlsina Chianti Classico 2022",
+          "Fattoria di Fèlsina ‘Rancia’ Chianti Classico Riserva 2019"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-italy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Do the Produttori del Barbaresco 2019 single vineyards (Asili, Montefico, Ovello, Rabajà) carry Riserva on the label?",
+        "askWhom": "sommelier",
+        "items": [
+          "Produttori del Barbaresco ‘Asili’ Barbaresco 2019"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-italy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Bin 17832 is printed for the Il Poggione Brunello 2018 ($198) and the Grgich Hills Napa Valley 2020 ($90); bin 19321 for the Quintarelli Recioto 1997 ($500) and the Taylor Fladgate Quinta de Vargellas 1987 ($185). Which bins are right?",
+        "askWhom": "manager",
+        "items": [
+          "Il Poggione Brunello di Montalcino 2018",
+          "Giuseppe Quintarelli Recioto della Valpolicella Classico 1997"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-italy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Gaja Barbaresco 2020 at $400 (bin 15481), printed under half bottles and again on the Barbaresco page, one 375ml bottle or two sizes?",
+        "askWhom": "sommelier",
+        "items": [
+          "Gaja Barbaresco 2012"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-italy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is the Quintarelli Ca' del Merlo 2023 and 2024 the list files under Italian whites (bins 21732 and 105222): a white wine, or the red filed in the wrong place?",
+        "askWhom": "sommelier",
+        "items": [
+          "Giuseppe Quintarelli Recioto della Valpolicella Classico 1997"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-italy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How are the older Italian bottles showing, and who checks and decants them: Tignanello 2010, Masseto 2011, Gaja 2012, Biondi Santi Annata 2012, Florus 2011 and the Quintarelli Recioto 1997?",
+        "askWhom": "sommelier",
+        "items": [
+          "Antinori ‘Tignanello’ Toscana 2010",
+          "Ornellaia ‘Masseto’ Toscana 2011",
+          "Gaja Barbaresco 2012",
+          "Biondi Santi Tenuta Greppo Brunello di Montalcino 2012",
+          "Castello Banfi ‘Florus’ Moscadello di Montalcino 2011",
+          "Giuseppe Quintarelli Recioto della Valpolicella Classico 1997"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-italy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Bartolo Mascarello vintages are in tonight (nine are printed, 2011 to 2021), and which Biondi Santi Riservas (1999, 2011, 2015)?",
+        "askWhom": "sommelier",
+        "items": [
+          "Bartolo Mascarello Barolo 2017",
+          "Biondi Santi Tenuta Greppo Brunello di Montalcino 2012"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-italy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "If a guest asks, what should we say about who owns Masseto and when it became a separate estate? The Codex says 2018 and our bottle card 2019, and neither dates an owner.",
+        "askWhom": "sommelier",
+        "items": [
+          "Ornellaia ‘Masseto’ Toscana 2011"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-italy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which grapes are in the Quintarelli Alzero 2007 (1.5L) on our list? The Codex says dried-grape Cabernet Franc; we say only dried Cabernet grapes until the label or the sommelier settles it.",
+        "askWhom": "sommelier",
+        "items": [
+          "Giuseppe Quintarelli Recioto della Valpolicella Classico 1997"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-italy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How is the open bottle of Inglenook Rubicon 2010 kept between $70 glass pours (Coravin, stopper and fridge, or same-night sell-through), and is the 2010 still the vintage open?",
+        "askWhom": "manager",
+        "items": [
+          "Inglenook ‘Rubicon’ 2010",
+          "Inglenook ‘Rubicon’ Rutherford 2010"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is the blend of the Rubicon 2010 on the estate’s fact sheet?",
+        "askWhom": "sommelier",
+        "items": [
+          "Inglenook ‘Rubicon’ 2010",
+          "Inglenook ‘Rubicon’ Rutherford 2010"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Paul Hobbs open for the dinner tasting the Coombsville Cabernet or the Nathan Coombs Estate, when is it opened, and may a guest order a glass outside the pairing?",
+        "askWhom": "sommelier",
+        "items": [
+          "Paul Hobbs Coombsville Cabernet Sauvignon 2021"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "The list prints Opus One Overture as NV and as 2021 and 2022: which is in the cellar, and is Overture now dated by vintage? What are the blends of the Opus One 2010 and the 2015 half-bottle?",
+        "askWhom": "sommelier",
+        "items": [
+          "Opus One Napa Valley 2015 (375 ml)",
+          "Opus One Napa Valley 2010"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Harlan Estate vintages of the ten printed are in the cellar tonight, and how should a guest be guided through the vertical?",
+        "askWhom": "sommelier",
+        "items": [
+          "Harlan Estate Oakville 2006"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What are the proportions of the Screaming Eagle Second Flight 2012 on the sommelier’s sheet? The pack’s profile still calls it rarer than the estate wine, a claim the October check withdrew: may it come out?",
+        "askWhom": "sommelier",
+        "items": [
+          "Screaming Eagle ‘Second Flight’ Napa Valley 2012"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is the blend of the Dominus 2014, and is the 2001 in the cellar? Did the Napanook vineyard belong to the Inglenook family (John Daniel Jr., father of Robin Lail of Lail Vineyards on our list) before Dominus, as some tell it, and was Dominus first a partnership?",
+        "askWhom": "sommelier",
+        "items": [
+          "Dominus Estate Napa Valley 2014"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How are the older Heitz Martha's Vineyard vintages drinking, and which of the 750 ml and magnum vintages are in the cellar tonight? Who owns Martha's Vineyard and Heitz Cellar today, with a dated source?",
+        "askWhom": "sommelier",
+        "items": [
+          "Heitz Cellar ‘Martha’s Vineyard’ Napa Valley 2009"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the Shafer One Point Five 2023 label print Stags Leap District or Napa Valley, and is the 2021 printed at $375 a 750 ml bottle? Who owns Shafer Vineyards today, with a dated source?",
+        "askWhom": "sommelier",
+        "items": [
+          "Shafer ‘One Point Five’ Stags Leap District Cabernet Sauvignon 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Caymus Napa Valley poured at the Roost bar, and are the 2018 Special Selection and the 2019 Special Select magnum in the cellar tonight? Is Special Selection made every year, or only in vintages the family chooses?",
+        "askWhom": "manager",
+        "items": [
+          "Caymus Napa Valley Cabernet Sauvignon 2023",
+          "Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Was the Chateau Montelena Chardonnay 2023 made without malolactic conversion, as the house style traditionally is?",
+        "askWhom": "sommelier",
+        "items": [
+          "Chateau Montelena Chardonnay Napa Valley 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What are the blends of the Joseph Phelps Insignia 2011 half-bottle and the Insignia 2013, and who owns Joseph Phelps today, if a guest asks?",
+        "askWhom": "sommelier",
+        "items": [
+          "Joseph Phelps ‘Insignia’ Napa Valley 2011 (375 ml)",
+          "Joseph Phelps ‘Insignia’ Napa Valley 2013"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is the blend of the Grgich Hills Violetta 2012, whom is the name Violetta for, and how should we speak of Mike Grgich today if a guest asks?",
+        "askWhom": "sommelier",
+        "items": [
+          "Grgich Hills ‘Violetta’ Late Harvest Napa Valley 2012 (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is the blend of the Chappellet Mountain Cuvée 2024, and was Chappellet the first winery built on Pritchard Hill, as the Codex says, or one of the first, as our wine list says?",
+        "askWhom": "sommelier",
+        "items": [
+          "Chappellet ‘Mountain Cuvée’ Napa Valley 2024"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "When was Frog's Leap founded and where does its name come from? Is the Frog's Leap Estate Rutherford 1991 on the Merlot page a Merlot, or the Cabernet printed twice?",
+        "askWhom": "sommelier",
+        "items": [
+          "Frog’s Leap ‘Estate’ Rutherford Cabernet Sauvignon 2021"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Silver Oak Napa Valley 2020 poured at the Roost as well as in the dining room?",
+        "askWhom": "manager",
+        "items": [
+          "Silver Oak Napa Valley Cabernet Sauvignon 2020"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is in the Silver Oak Napa Valley 2020 besides Cabernet Sauvignon, who runs Silver Oak today, and where does the name come from?",
+        "askWhom": "sommelier",
+        "items": [
+          "Silver Oak Napa Valley Cabernet Sauvignon 2020"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Cakebread Chardonnay vintage is open, the 2023 the pack names or the 2024 also on the list?",
+        "askWhom": "sommelier",
+        "items": [
+          "Cakebread Cellars Chardonnay Napa Valley 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How is the Kongsgaard Chardonnay made and aged, what is the story behind The Judge, and how do we ring the Chardonnay 2016 when the Cabernet and the Syrah 2016 print under the same name?",
+        "askWhom": "sommelier",
+        "items": [
+          "Kongsgaard Chardonnay Napa Valley 2016"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Duckhorn Cabernet magnum do we sell to a large table, the 2022 at $255 or the 2021 at $325, and who owns Duckhorn today, if a guest asks?",
+        "askWhom": "sommelier",
+        "items": [
+          "Duckhorn Cabernet Sauvignon Napa Valley 2022 (1.5 L magnum)",
+          "Duckhorn Napa Valley Cabernet Sauvignon 2022",
+          "Duckhorn ‘Three Palms Vineyard’ Napa Valley Merlot 2020"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Chalk Hill half-bottle from the estate's own Chalk Hill vineyards or a wider Sonoma bottling, how is it oaked, and what is the soil that names the Chalk Hill area?",
+        "askWhom": "sommelier",
+        "items": [
+          "Chalk Hill Chardonnay Sonoma County 2021 (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What are the blends of the Ridge Monte Bello 2012, the Estate Cabernet 2020, the Lytton Springs 2022 and the Three Valleys 2023, when was Essence first made, and who owns Ridge today?",
+        "askWhom": "sommelier",
+        "items": [
+          "Ridge ‘Monte Bello’ Santa Cruz Mountains 2012",
+          "Ridge Vineyards ‘Estate’ Cabernet Sauvignon Santa Cruz Mountains 2020 (375 ml)",
+          "Ridge ‘Lytton Springs’ Dry Creek Valley 2022",
+          "Ridge ‘Three Valleys’ Sonoma County 2023",
+          "Ridge Vineyards ‘Essence’ Zinfandel Sonoma 2014 (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "When was Kosta Browne founded, who makes the wine today, and has it won any award a guest may mention?",
+        "askWhom": "sommelier",
+        "items": [
+          "Kosta Browne Sonoma Coast Pinot Noir 2021"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the Cakebread family still run Cakebread, the Kongsgaard family Kongsgaard, and John Williams Frog's Leap, if a guest asks?",
+        "askWhom": "sommelier",
+        "items": [
+          "Cakebread Cellars Chardonnay Napa Valley 2023",
+          "Kongsgaard Chardonnay Napa Valley 2016",
+          "Frog’s Leap ‘Estate’ Rutherford Cabernet Sauvignon 2021"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does our bottle of the Henriques & Henriques Founder's Solera 1894 read Malvasia, as the producer describes it, or Verdelho, as the list prints it? And does closed in 1899 mean no younger wine went into the solera? The pack's guest answer says it holds wine from 1894 onward.",
+        "askWhom": "sommelier",
+        "items": [
+          "Henriques & Henriques ‘Founder’s Solera’ Madeira 1894"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-port-madeira-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Bin 19321 is printed for both the Taylor Fladgate Quinta de Vargellas 1987 and the Quintarelli Recioto della Valpolicella 1997: which bottle does it ring, and will the list be corrected?",
+        "askWhom": "sommelier",
+        "items": [
+          "Taylor Fladgate ‘Quinta de Vargellas’ Vintage Port 1987"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-port-madeira-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Bin 191212 is printed for both the Graham's 1948 and the Graham's 1983: which bottle does it ring, and will the list be corrected?",
+        "askWhom": "sommelier",
+        "items": [
+          "Graham’s Vintage Port 1983"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-port-madeira-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which cask number does our Broadbent Single Cask Malvasia 2009 carry (an online listing shows cask N122), and who made it on the island?",
+        "askWhom": "sommelier",
+        "items": [
+          "Broadbent ‘Single Cask’ Malvasia Madeira 500 ml 2009"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-port-madeira-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Are the Feist LBV 2006 and the Sandeman LBV 1999 filtered or traditional unfiltered, and should servers always decant them?",
+        "askWhom": "sommelier",
+        "items": [
+          "Feist Late Bottled Vintage Port 2006",
+          "Sandeman Late Bottled Vintage Port 1999"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-port-madeira-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Dow's 1985 poured at Bubbles with the Cheese Board, and by the glass or only by the bottle?",
+        "askWhom": "manager",
+        "items": [
+          "Dow’s Vintage Port 1985"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-port-madeira-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Was 1987 a declared Niepoort vintage, may the Niepoort 1987 be poured at breakfast and lunch, and what bottling date does the Colheita 1997 half-bottle carry?",
+        "askWhom": "sommelier",
+        "items": [
+          "Niepoort Vintage Port 1987",
+          "Niepoort Colheita Port 1997 (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-port-madeira-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How does the floor say Taylor Fladgate? The pack writes TAY-lor FLAG-ate; the spelling reads FLAD-gate.",
+        "askWhom": "sommelier",
+        "items": [
+          "Taylor Fladgate ‘Quinta de Vargellas’ Vintage Port 1987",
+          "Taylor Fladgate Vintage Port 1977"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-port-madeira-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "The list prints Graham's 1948 and 1972 with no style named: is the 1972 a Vintage Port or a single harvest tawny, and is the 1948 a Vintage Port?",
+        "askWhom": "sommelier",
+        "items": [],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-port-madeira-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "The list prints Sandeman 1977 with no style named; the house notes treat it as a Vintage Port. Is that right, and does it ring separately from the LBV 1999 (bin 19243)?",
+        "askWhom": "sommelier",
+        "items": [
+          "Sandeman Late Bottled Vintage Port 1999"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-port-madeira-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Durand estate makes our Sauvignon Blanc by the glass, what appellation does the label print, who imports it, and is the open bottle the 2024 (as the menu prints) or the 2025 (as Binwise prints)?",
+        "askWhom": "sommelier",
+        "items": [
+          "Famille Durand Val de Loire Sauvignon Blanc 2024"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-provence-loire-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the open Minuty Prestige still the 2024, and what is its blend this vintage (Cinsault, Tibouren)?",
+        "askWhom": "sommelier",
+        "items": [
+          "Minuty ‘Prestige’ Côtes de Provence Rosé 2024"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-provence-loire-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What are the two Domaine Tempier Bandol bottles filed under Provence whites (bins 22522 and 27123), and what is the Tempier Bandol Natural 2016 under Sustainable Selections (bin 23344)?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Tempier Bandol Rosé 2024"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-provence-loire-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is the blend of the Trévallon white 2016, and which of the three white vintages (2016, 2019, 2021) should we offer first?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine de Trévallon Blanc Alpilles 2016"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-provence-loire-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is Pascal Cotat Lot 2024 the 2024 harvest, and which bin rings it, since bin 28431 is also printed for the Dubreuil-Fontaine Clos Berthet 2015? Does the Monts Damnés 2022 carry any residual sugar?",
+        "askWhom": "sommelier",
+        "items": [
+          "Pascal Cotat ‘Lot 2024’ Chavignol Rosé",
+          "Pascal Cotat ‘Les Monts Damnés’ Sancerre 2022"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-provence-loire-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How long did the Pépière Monnières-Saint Fiacre 2020 rest on its lees, and is bin 1124 a magnum (the Loire page prints 1.5L, the Large Formats page 750ml)?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine de la Pépière ‘Monnières-Saint Fiacre’ Muscadet 2020"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-provence-loire-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Who runs Domaine de l’Écu today, and is the Ange Pinot Noir 2020 (bin 25221) worth offering beside the Orthogneiss?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine de l’Écu ‘Orthogneiss’ Muscadet Sèvre-et-Maine 2022"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-provence-loire-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How is Damien Laureau’s L’Alliance made (parcels, oak or tank), and what does the name refer to?",
+        "askWhom": "sommelier",
+        "items": [
+          "Damien Laureau ‘L’Alliance’ Savennières 2022"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-provence-loire-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Can the Baumard Clos Sainte Catherine 2006 be poured by the glass with the Baked Apple on the breakfast tasting, and is the Baumard Savennières 2018 (bin 28661) the Clos du Papillon?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine des Baumard ‘Clos Sainte Catherine’ Coteaux du Layon 2006"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-provence-loire-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Are the Mas de Valériole Vé magnum (bin 1569) and the 750 ml bottle (bin 122332) both in stock, and is the Whispering Angel still the 2024?",
+        "askWhom": "manager",
+        "items": [
+          "Mas de Valériole ‘Vé’ Rosé Méditerranée 2025 (1.5 L magnum)",
+          "Château d’Esclans ‘Whispering Angel’ Côtes de Provence Rosé 2024"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-provence-loire-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Where do the grapes for the Damien Martin Bourgogne Pinot Noir grow, and is the glass $18, as the menu prints, or $17, as Binwise prints?",
+        "askWhom": "sommelier",
+        "items": [
+          "Damien Martin Bourgogne Pinot Noir 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-red-burgundy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which parcels go into the Gouges village Nuits-Saint-Georges half-bottle, and what founding year does the domaine itself give? The Codex prints 1925, unconfirmed.",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Henri Gouges Nuits-Saint-Georges 2021 (375 ml)",
+          "Domaine Henri Gouges ‘Les Pruliers’ Nuits-Saint-Georges Premier Cru 2016"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-red-burgundy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is our Faiveley Bourgogne Rouge 2022 from the domaine’s own vines or a bottling from bought fruit, and how does the label show the difference?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Faiveley Bourgogne Rouge 2022"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-red-burgundy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How far ahead should the Grivot Echézeaux 2011 and Les Charmois 2013 stand upright, and does the sommelier decant them?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Jean Grivot Echézeaux Grand Cru 2011",
+          "Domaine Jean Grivot ‘Les Charmois’ Nuits-Saint-Georges 2013"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-red-burgundy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "When was Domaine Tollot-Beaut founded, and who in the family runs it today?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Tollot-Beaut ‘Les Lavières’ Savigny-lès-Beaune Premier Cru 2019"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-red-burgundy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the sommelier want the Roumier Clos de la Bussière 2014 and the d’Angerville Clos des Ducs 2014 decanted, or opened thirty minutes ahead?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Georges Roumier ‘Clos de la Bussière’ Morey-Saint-Denis Premier Cru 2014",
+          "Marquis d’Angerville ‘Clos des Ducs’ Volnay Premier Cru 2014"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-red-burgundy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Who runs Marquis d’Angerville and Maison Joseph Drouhin today? No source in this pass names anyone.",
+        "askWhom": "sommelier",
+        "items": [
+          "Marquis d’Angerville ‘Clos des Ducs’ Volnay Premier Cru 2014",
+          "Domaine Joseph Drouhin ‘Clos des Mouches’ Beaune Premier Cru 2015"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-red-burgundy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Has Mathilde Grivot led Domaine Jean Grivot since 2017, as the research of 4 October 2026 says? The wine list line still names Étienne Grivot.",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Jean Grivot ‘Les Charmois’ Nuits-Saint-Georges 2013",
+          "Domaine Jean Grivot Echézeaux Grand Cru 2011"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-red-burgundy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Where does the Nuits-Saint-Georges request to promote Les Saint-Georges to grand cru stand today?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Henri Gouges Nuits-Saint-Georges 2021 (375 ml)",
+          "Domaine Henri Gouges ‘Les Pruliers’ Nuits-Saint-Georges Premier Cru 2016"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-red-burgundy-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What blend and alcohol does the Durban Beaumes-de-Venise 2024 label give, and is the glass $19 (current menu) or $18 (Binwise)? Does the cellar hold Durban's Muscat de Beaumes-de-Venise, and does the back label name the family?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine de Durban Beaumes-de-Venise Rouge 2024"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-north-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Châteaumar vintage is open for the breakfast tasting (the page prints 2023)? Does its back label give the blend as all Syrah, name the estate's village and say who Vincent is? Does the estate make a Châteauneuf of the same cuvée name?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-north-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "May a guest order the Châteaumar Cuvée Vincent à la carte, outside the Traditional Breakfast?",
+        "askWhom": "manager",
+        "items": [
+          "Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-north-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Who makes the Graillot wines today, and does the label still carry Alain Graillot's name? Is the Graillot 2017 at $85, filed under white, the white Crozes-Hermitage? Is the Encinas from Bierzo, printed under Antoine Graillot and Raúl Pérez, made by the same Graillot family?",
+        "askWhom": "sommelier",
+        "items": [
+          "Alain Graillot Crozes-Hermitage 2015"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-north-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is our André Perret Condrieu 2019 at $165 the classic bottling? The list names the Chéry and Clos Chanson separately.",
+        "askWhom": "sommelier",
+        "items": [
+          "André Perret Condrieu 2019"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-north-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Was the Rostaing Ampodium 2012 fermented with whole bunches or destemmed? The Codex says destemmed, an undated search says about 90 percent whole clusters. Who runs the domaine today, and since when?",
+        "askWhom": "sommelier",
+        "items": [
+          "René Rostaing ‘Ampodium’ Côte-Rôtie 2012"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-north-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How long should the Clape Cornas 2016 be decanted, and which Clape vintages are in the cellar tonight? Is Clape's Saint-Péray Marsanne alone, or Marsanne with Roussanne?",
+        "askWhom": "sommelier",
+        "items": [
+          "Auguste Clape Cornas 2016"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-north-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Chave 2008 at $450, filed under white Hermitage, the Hermitage blanc, and how far ahead is the 2013 decanted?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Jean-Louis Chave Hermitage 2013"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-north-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the sommelier present and decant the Guigal La Mouline 2012 at the table, and how far ahead?",
+        "askWhom": "sommelier",
+        "items": [
+          "E. Guigal ‘La Mouline’ Côte-Rôtie 2012"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-north-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Clape domaine dated from its founding by Auguste Clape, or did the family hold vines in Cornas before him? The house names no founding year until the sommelier or a dated source settles it.",
+        "askWhom": "sommelier",
+        "items": [
+          "Auguste Clape Cornas 2016"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-north-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the La Tour Vieille Banyuls Reserva poured à la carte, at breakfast and at dinner, and at what price for 2 to 3 oz? Is the bottle the oxidative Reserva and not the Rimage?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine La Tour Vieille Banyuls Reserva NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-south-roussillon-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What does the Riveyrac 1975 label print (La Cuvée des Aigles, ambré, hors d'âge)? Bin 193312 is printed for both the Riveyrac and Marco de Bartoli's Bukkuram 2008: which bin is right for each?",
+        "askWhom": "sommelier",
+        "items": [
+          "Riveyrac Rivesaltes 1975"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-south-roussillon-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Why is the Saint Damien parcel called La Louisiane? Has the estate or its importer ever told the story? And is La Louisianne 2023 (bin 27732) in, given Souteyrades 2023 is printed at the same $95?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Saint Damien ‘La Louisianne’ Gigondas 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-south-roussillon-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Raspail-Ay Gigondas 2021 half-bottle (bin 32733) in stock, what is its blend, and do we open the 750 ml (bin 26722, $115) on request?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Raspail-Ay Gigondas 2021 (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-south-roussillon-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Pegau bottles are open to sell (the Réservée 2020 in 750 ml, the 2021, the magnums), and is Château Pegau, whose Cuvée Maclura is on the list, a Féraud family estate?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine du Pegau ‘Cuvée Réservée’ Châteauneuf-du-Pape 2020"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-south-roussillon-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the Beaucastel Oenothèque 2007 label show the date it left the château's cellar, which Oenothèque vintages are in tonight, and how long should it stand before decanting?",
+        "askWhom": "sommelier",
+        "items": [
+          "Château de Beaucastel Châteauneuf-du-Pape Oenothèque 2007"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-south-roussillon-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Vieux Télégraphe: the estate's history page gives 1898 and the Codex 1891 for the first vines on La Crau, and when the Chappe telegraph tower stood on the plateau is not settled. Which dates does the estate print? Is the 2014 (bin 284217) in?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine du Vieux Télégraphe ‘La Crau’ Châteauneuf-du-Pape 2014"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-south-roussillon-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Who presents the Château Rayas 2011 at $1200: is it offered only with the sommelier at the table, and is it decanted or poured straight?",
+        "askWhom": "manager",
+        "items": [
+          "Château Rayas Châteauneuf-du-Pape 2011"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-rhone-south-roussillon-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which vintage of Pazo das Bruxas is open tonight, 2024 or 2025? Does the label name Familia Torres, say where in Rías Baixas the grapes grow, and say whether Torres owns the vineyards?",
+        "askWhom": "sommelier",
+        "items": [
+          "Pazo das Bruxas Albariño 2025"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-spain-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "The menu page prints Pazo das Brujas, the Castilian spelling; Binwise prints Pazo das Bruxas. Which spelling should the menu carry?",
+        "askWhom": "manager",
+        "items": [
+          "Pazo das Bruxas Albariño 2025"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-spain-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Familia Torres Secret del Priorat 2019 a dry red, as the wine list tell groups it with Salmos, or a sweet wine?",
+        "askWhom": "sommelier",
+        "items": [],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-spain-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What blend and time in barrel does the López de Heredia Viña Cubillo 2016 back label give?",
+        "askWhom": "sommelier",
+        "items": [
+          "López de Heredia ‘Viña Cubillo’ Rioja Crianza 2016"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-spain-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What blend and time in oak does the CVNE Imperial Reserva 2018 give, and is the CVNE Gran Reserva 2016 on the list an Imperial Gran Reserva?",
+        "askWhom": "sommelier",
+        "items": [
+          "CVNE ‘Imperial’ Rioja Reserva 2018"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-spain-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What does the sommelier tell guests about the name Pingus, and how long should the Flor de Pingus 2022 be decanted?",
+        "askWhom": "sommelier",
+        "items": [
+          "Dominio de Pingus ‘Flor de Pingus’ Ribera del Duero 2022"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-spain-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What do the La Rioja Alta 904 2015 back label and technical sheet give for blend and months in oak, and how should the 890 2010 be offered beside it?",
+        "askWhom": "sommelier",
+        "items": [
+          "La Rioja Alta ‘Gran Reserva 904’ Rioja 2015"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-spain-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Who owns Vega Sicilia today and since when, as the sommelier would put it at the table, and how long should the Único 2009 be decanted?",
+        "askWhom": "sommelier",
+        "items": [
+          "Vega Sicilia ‘Único’ Ribera del Duero 2009"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-spain-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How is the Raúl Pérez Ultreia Godello 2021 fermented and aged, and is it from his family vines at Valtuille or bought fruit?",
+        "askWhom": "sommelier",
+        "items": [
+          "Raúl Pérez ‘Ultreia’ Godello Bierzo 2021"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-spain-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What does the Do Ferreiro Cepas Vellas 2018 back label say of the vines' age and of how the wine was aged?",
+        "askWhom": "sommelier",
+        "items": [
+          "Do Ferreiro ‘Cepas Vellas’ Albariño Rías Baixas 2018"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-spain-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "When was La Cigarrera founded, who owns it and why the name? Is the half-bottle in the cellar tonight, and how long is an opened one kept?",
+        "askWhom": "sommelier",
+        "items": [
+          "La Cigarrera Manzanilla Sanlúcar de Barrameda NV (375 ml)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-spain-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "When was Bodegas Barbadillo founded and by whom? What sweetens the Pale Cream, and does the sommelier pour it with any dessert, or only as an aperitif and with the Cheese Board?",
+        "askWhom": "sommelier",
+        "items": [
+          "Barbadillo ‘Pale Cream’ Sherry NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-spain-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Jansz in our cellar the non-vintage Premium Cuvée, or a 2022 vintage wine as the list prints it (Premier Cuvée Brut 2022)?",
+        "askWhom": "sommelier",
+        "items": [
+          "Jansz ‘Premier Cuvée’ Brut Tasmania 2022"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-sparkling-elsewhere-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which Mirabelle Brut Rosé bottling is behind the Roost Bar, and is it still $50 during Bubbles?",
+        "askWhom": "bar",
+        "items": [
+          "Mirabelle Brut Rosé North Coast NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-sparkling-elsewhere-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Ridgeview was sold out of administration in February 2026: is our supply steady, and are the Cavendish 2014 and Fitzrovia still in the cellar?",
+        "askWhom": "sommelier",
+        "items": [
+          "Ridgeview ‘Bloomsbury’ Brut Sussex NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-sparkling-elsewhere-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is the blend of the Argyle 2022 Brut we pour by the glass?",
+        "askWhom": "sommelier",
+        "items": [
+          "Argyle Brut Willamette Valley 2022"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-sparkling-elsewhere-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How dry is the Huet Pétillant 2019, and is it the Pétillant Brut?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Huet Pétillant Vouvray 2019"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-sparkling-elsewhere-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is our Chapel Down Rosé Brut the current release, and may servers mention its 2024 Decanter Best in Show?",
+        "askWhom": "sommelier",
+        "items": [
+          "Chapel Down Rosé Brut Kent NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-sparkling-elsewhere-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How long do we keep an open bottle of the Pierre Sparr Brut Rosé for glass pours, and with what stopper?",
+        "askWhom": "bar",
+        "items": [
+          "Pierre Sparr Brut Rosé Crémant d’Alsace NV"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-sparkling-elsewhere-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is our Leflaive glass pour the straight Mâcon-Verzé 2022, and how many days does a Coravin bottle stay in service?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Leflaive Mâcon-Verzé 2022 (Coravin)"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-white-burgundy-cote-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How far ahead should the Leflaive Chevalier-Montrachet 2015 be opened, and who presents it at the table?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine Leflaive Chevalier-Montrachet Grand Cru 2015"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-white-burgundy-cote-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is our Jean-Philippe Fichet Bourgogne Blanc the straight cuvée, raised in tank, or the Vieilles Vignes, aged in barrel? Is he related to the Fichet family of Igé?",
+        "askWhom": "sommelier",
+        "items": [
+          "Jean-Philippe Fichet Bourgogne Blanc 2023"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-white-burgundy-cote-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Tonight’s dinner tasting lobster pour: the Fichet Château London Mâcon-Igé 2024 as the guide prints, or the Domaine Matrot Meursault 2023 the website has shown?",
+        "askWhom": "manager",
+        "items": [
+          "Fichet ‘Château London’ Mâcon-Igé 2024"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-white-burgundy-cote-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which vintages are in service for Dupont-Fahn Les Tillets (2022 or 2023), Paul Pillot Le Charmois (2021, 2022 or 2023) and the Carillon village Puligny (2022 or 2023)?",
+        "askWhom": "sommelier",
+        "items": [
+          "Raymond Dupont-Fahn ‘Les Tillets’ Meursault 2022",
+          "Domaine Paul Pillot ‘Le Charmois’ Saint-Aubin Premier Cru 2022",
+          "François Carillon Puligny-Montrachet 2022"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-white-burgundy-cote-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Are the Bitouzet-Prieur Les Corbins 2020 and the Lafon Clos de la Baronne 2022 drinking well now, and should either be decanted?",
+        "askWhom": "sommelier",
+        "items": [
+          "Bitouzet-Prieur ‘Les Corbins’ Meursault 2020",
+          "Domaine des Comtes Lafon ‘Clos de la Baronne’ Meursault 2022"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-white-burgundy-cote-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How many bottles of the Roulot Meursault and the Coche-Dury Bourgogne Blanc are in the cellar, is there a limit per table, and may a server offer them or only the sommelier?",
+        "askWhom": "manager",
+        "items": [
+          "Domaine Roulot Meursault 2022",
+          "Domaine Coche-Dury Bourgogne Blanc 2022"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-white-burgundy-cote-2026-10-10.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Are the Matrot vines certified organic now, or farmed organically without certification, and does the importer give Raymond Dupont-Fahn’s address as Tailly or Monthélie?",
+        "askWhom": "sommelier",
+        "items": [
+          "Thierry et Pascale Matrot Bourgogne Blanc 2022 (375 ml)",
+          "Raymond Dupont-Fahn ‘Les Tillets’ Meursault 2022"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
+      "source": "research:producers-cellar-white-burgundy-cote-2026-10-10.md"
+    },
+    {
+      "target": "wine:Rare Brut 2012 (Coravin)",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "first vintage 1976, only about a dozen vintages ever declared.",
+        "to": "first vintage 1976, declared only in exceptional years."
+      },
+      "reason": "Producers deep dive, the cellar: the research found the card claiming more than any source holds (vintage count, Grand Cru sites, years on the lees, roots to 1834, a Pinot Noir and Meunier led blend)",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md#section 2"
+    },
+    {
+      "target": "wine:Rare Brut 2012 (Coravin)",
+      "field": "parts.technique",
+      "op": "replace",
+      "value": {
+        "from": "single vintage from Grand Cru sites, about ten years on the lees",
+        "to": "single vintage from grand and premier cru villages, long on the lees"
+      },
+      "reason": "Producers deep dive, the cellar: the research found the card claiming more than any source holds (vintage count, Grand Cru sites, years on the lees, roots to 1834, a Pinot Noir and Meunier led blend)",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md#section 2"
+    },
+    {
+      "target": "wine:Rare Brut 2012 (Coravin)",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "is now its own Champagne house, with only about a dozen vintages ever declared.",
+        "to": "is now its own Champagne house, declared only in exceptional years."
+      },
+      "reason": "Producers deep dive, the cellar: the research found the card claiming more than any source holds (vintage count, Grand Cru sites, years on the lees, roots to 1834, a Pinot Noir and Meunier led blend)",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md#section 2"
+    },
+    {
+      "target": "wine:Rare Brut 2012 (Coravin)",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "mostly Chardonnay, about ten years on its lees;",
+        "to": "mostly Chardonnay, long on its lees;"
+      },
+      "reason": "Producers deep dive, the cellar: the research found the card claiming more than any source holds (vintage count, Grand Cru sites, years on the lees, roots to 1834, a Pinot Noir and Meunier led blend)",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md#section 2"
+    },
+    {
+      "target": "wine:Rare Brut 2012 (Coravin)",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "its first vintage was 1976, and only about a dozen vintages have ever been declared.",
+        "to": "its first vintage was 1976, and it is declared only in exceptional years."
+      },
+      "reason": "Producers deep dive, the cellar: the research found the card claiming more than any source holds (vintage count, Grand Cru sites, years on the lees, roots to 1834, a Pinot Noir and Meunier led blend)",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md#section 2"
+    },
+    {
+      "target": "wine:Rare Brut 2012 (Coravin)",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "from a single vintage and Grand Cru sites, with about ten years on its lees.",
+        "to": "from a single vintage and grand and premier cru villages, long on its lees."
+      },
+      "reason": "Producers deep dive, the cellar: the research found the card claiming more than any source holds (vintage count, Grand Cru sites, years on the lees, roots to 1834, a Pinot Noir and Meunier led blend)",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md#section 2"
+    },
+    {
+      "target": "wine:Rare Brut 2012 (Coravin)",
+      "field": "kept.3.a",
+      "op": "replace",
+      "value": {
+        "from": "only about a dozen vintages have ever been declared.",
+        "to": "it is declared only in exceptional years."
+      },
+      "reason": "Producers deep dive, the cellar: the research found the card claiming more than any source holds (vintage count, Grand Cru sites, years on the lees, roots to 1834, a Pinot Noir and Meunier led blend)",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md#section 2"
+    },
+    {
+      "target": "wine:Charles Lafitte Brut Champagne NV",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "A house with roots to 1834, now part of the Vranken-Pommery group; the blend is led by Pinot Noir and Meunier with Chardonnay.",
+        "to": "A Champagne brand the Vranken-Pommery group dates to 1983; retailers describe its Champagnes as blends of Chardonnay, Pinot Noir and Meunier, and the sommelier confirms this cuvée's blend."
+      },
+      "reason": "Producers deep dive, the cellar: the research found the card claiming more than any source holds (vintage count, Grand Cru sites, years on the lees, roots to 1834, a Pinot Noir and Meunier led blend)",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md#section 3"
+    },
+    {
+      "target": "wine:Charles Lafitte Brut Champagne NV",
+      "field": "parts.main",
+      "op": "replace",
+      "value": {
+        "from": "Pinot Noir and Meunier led, with Chardonnay, from Champagne",
+        "to": "Chardonnay, Pinot Noir and Meunier, from Champagne"
+      },
+      "reason": "Producers deep dive, the cellar: the research found the card claiming more than any source holds (vintage count, Grand Cru sites, years on the lees, roots to 1834, a Pinot Noir and Meunier led blend)",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md#section 3"
+    },
+    {
+      "target": "wine:Charles Lafitte Brut Champagne NV",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "a blend led by Pinot Noir and Meunier with Chardonnay, from a house with roots to 1834:",
+        "to": "a blend of Chardonnay, Pinot Noir and Meunier, from a Champagne brand of the Vranken-Pommery group:"
+      },
+      "reason": "Producers deep dive, the cellar: the research found the card claiming more than any source holds (vintage count, Grand Cru sites, years on the lees, roots to 1834, a Pinot Noir and Meunier led blend)",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md#section 3"
+    },
+    {
+      "target": "wine:Charles Lafitte Brut Champagne NV",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "is a house with roots to 1834, now part of the Vranken-Pommery group. This is a traditional method Brut, a blend led by Pinot Noir and Meunier with Chardonnay.",
+        "to": "is a Champagne brand of the Vranken-Pommery group, which dates it to 1983. This is a traditional method Brut; retailers describe its Champagnes as blends of Chardonnay, Pinot Noir and Meunier."
+      },
+      "reason": "Producers deep dive, the cellar: the research found the card claiming more than any source holds (vintage count, Grand Cru sites, years on the lees, roots to 1834, a Pinot Noir and Meunier led blend)",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md#section 3"
+    },
+    {
+      "target": "wine:Charles Lafitte Brut Champagne NV",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "Charles Lafitte, a house with roots to 1834, now part of the Vranken-Pommery group.",
+        "to": "Charles Lafitte, a Champagne brand of the Vranken-Pommery group, which dates it to 1983."
+      },
+      "reason": "Producers deep dive, the cellar: the research found the card claiming more than any source holds (vintage count, Grand Cru sites, years on the lees, roots to 1834, a Pinot Noir and Meunier led blend)",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md#section 3"
+    },
+    {
+      "target": "wine:Pazo das Bruxas Albariño 2025",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "Made by Familia Torres at its Rías Baixas estate;",
+        "to": "Made by Familia Torres;"
+      },
+      "reason": "Producers deep dive, the cellar: no source confirms that Familia Torres owns an estate in Rías Baixas; the wine list says only made by the Torres family",
+      "source": "research:producers-cellar-spain-2026-10-10.md#section 1"
+    },
+    {
+      "target": "wine:Pazo das Bruxas Albariño 2025",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "The Albariño is from Pazo das Bruxas, the Familia Torres estate in Rías Baixas,",
+        "to": "The Albariño is Pazo das Bruxas, made by Familia Torres in Rías Baixas,"
+      },
+      "reason": "Producers deep dive, the cellar: no source confirms that Familia Torres owns an estate in Rías Baixas; the wine list says only made by the Torres family",
+      "source": "research:producers-cellar-spain-2026-10-10.md#section 1"
+    },
+    {
+      "target": "wine:Pazo das Bruxas Albariño 2025",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "it is the Familia Torres estate in Rías Baixas,",
+        "to": "it is made by Familia Torres, an Albariño from Rías Baixas,"
+      },
+      "reason": "Producers deep dive, the cellar: no source confirms that Familia Torres owns an estate in Rías Baixas; the wine list says only made by the Torres family",
+      "source": "research:producers-cellar-spain-2026-10-10.md#section 1"
+    },
+    {
+      "target": "wine:Pazo das Bruxas Albariño 2025",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "Manor of the witches. It is the Familia Torres estate in Rías Baixas.",
+        "to": "Manor of the witches. It is made by Familia Torres, from Rías Baixas."
+      },
+      "reason": "Producers deep dive, the cellar: no source confirms that Familia Torres owns an estate in Rías Baixas; the wine list says only made by the Torres family",
+      "source": "research:producers-cellar-spain-2026-10-10.md#section 1"
+    },
+    {
+      "target": "wine:Domaine des Baumard ‘Clos Sainte Catherine’ Coteaux du Layon 2006",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "the Clos Sainte Catherine is its walled vineyard in the Coteaux du Layon.",
+        "to": "the Clos Sainte Catherine is its clos in the Coteaux du Layon."
+      },
+      "reason": "Producers deep dive, the cellar: no searched source confirms a wall around the Clos Sainte Catherine",
+      "source": "research:producers-cellar-provence-loire-2026-10-10.md#section 11"
+    },
+    {
+      "target": "wine:Domaine des Baumard ‘Clos Sainte Catherine’ Coteaux du Layon 2006",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "comes from a walled vineyard in the Coteaux du Layon",
+        "to": "comes from a clos in the Coteaux du Layon"
+      },
+      "reason": "Producers deep dive, the cellar: no searched source confirms a wall around the Clos Sainte Catherine",
+      "source": "research:producers-cellar-provence-loire-2026-10-10.md#section 11"
+    },
+    {
+      "target": "wine:Domaine des Baumard ‘Clos Sainte Catherine’ Coteaux du Layon 2006",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "The Clos Sainte Catherine is Baumard’s walled vineyard there.",
+        "to": "The Clos Sainte Catherine is Baumard’s clos there."
+      },
+      "reason": "Producers deep dive, the cellar: no searched source confirms a wall around the Clos Sainte Catherine",
+      "source": "research:producers-cellar-provence-loire-2026-10-10.md#section 11"
     }
   ]
 }

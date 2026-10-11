@@ -65,6 +65,10 @@ const REL = (p) => { const r = path.relative(process.cwd(), p); return !r ? p : 
 /** A size folded for comparison, the engine's foldSize: lower case, no spaces. */
 export const foldSize = (s) => String(s == null ? '' : s).toLowerCase().replace(/\s+/g, '');
 
+/** A name folded for comparison: lower case, no accents, '&' as and, every other mark a space. */
+export const foldName = (s) => String(s == null ? '' : s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+	.replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, ' ').trim();
+
 /** The flags of one catalogue entry, as the letters the file carries. */
 export function flagsOf(e) {
 	let f = '';
@@ -231,12 +235,18 @@ export function buildWinelist(catalogue, files, pack) {
 	if (unusedPlaces.length) notes.push(`${unusedPlaces.length} place(s) described but reached by no entry, left out: ${unusedPlaces.slice(0, 8).join('; ')}${unusedPlaces.length > 8 ? '; ...' : ''}`);
 
 	/* The first tier: every pack wine on the bottle list, matched to the catalogue by bin, vintage and
-	   folded size. A bin the list prints in two sections gives one card two entries. */
+	   folded size. A bin the list prints in two sections gives one card two entries. A bottle with no
+	   bin (the house Champagne) is matched by vintage and size only among the entries whose printed
+	   name carries its producer: an empty bin is no evidence, and every binless NV 750ml entry
+	   matched it before (a Taittinger and a Pierre Sparr carried the Piper-Heidsieck card). */
 	const cards = {};
 	const wines = pack && pack.house && Array.isArray(pack.house.wines) ? pack.house.wines : [];
 	for (const w of wines) {
 		if (w.list !== 'bottle') continue;
-		const hits = cat.filter((e) => String(e.bin) === String(w.bin || '') && String(e.vintage) === String(w.vintage || '') && foldSize(e.size) === foldSize(w.size));
+		const binless = !String(w.bin || '').trim();
+		const maker = foldName(w.producer);
+		const hits = cat.filter((e) => String(e.bin) === String(w.bin || '') && String(e.vintage) === String(w.vintage || '') && foldSize(e.size) === foldSize(w.size)
+			&& (!binless || (maker !== '' && (' ' + foldName(e.name) + ' ').includes(' ' + maker + ' '))));
 		if (!hits.length) { failures.push(`the pack's bottle ${w.name} (${w.id}, bin ${w.bin}, ${w.vintage}, ${w.size}) matches no catalogue entry by bin, vintage and size`); continue; }
 		for (const e of hits) {
 			if (cards[e.n] && cards[e.n] !== w.id) failures.push(`catalogue entry ${e.n} matches two pack bottles, ${cards[e.n]} and ${w.id}`);

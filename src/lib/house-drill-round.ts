@@ -19,6 +19,7 @@ import {
 	DRILL_FLOORS,
 	DRILL_KINDS,
 	OPTION_COUNT,
+	buildFlashcards,
 	dealQuestion,
 	drillableCounts,
 	foundedSentence,
@@ -29,7 +30,7 @@ import {
 	type Rand
 } from './house/house-drills';
 import { isMark } from './house/house-schema';
-import { inMeal } from './study';
+import { inMeal, tableProducerIds } from './study';
 import type { FormulaParts, House, HouseItem, Mark, Pairing, ProducerProfile } from './house/house-schema';
 
 /** The modes of /menu/quiz, as ?mode= names them; 'dish' is the menu quiz the page always had and the default. */
@@ -56,6 +57,38 @@ export const ROUND_LENGTH = 10;
 
 /** The producer subject: the three kinds that ask about the producers, dealt alone when ?subject=producer asks for them. */
 export { PRODUCER_KINDS } from './house/house-drills';
+
+/* -------------------------------------------------------------------------
+ * The Table's producers: the ones behind a dish
+ * ---------------------------------------------------------------------- */
+
+/**
+ * The house as the Table's drills read it: the same record, except that a
+ * component keeps its producer profile only while that producer stands
+ * behind a dish (study.ts tableProducerIds), on a copy of the components.
+ * A producer At the bar or In the cellar is its own room's to ask about, in
+ * the Ledger or the Codex, so the Table's producer questions neither ask
+ * about one nor offer one as a wrong answer. Every other kind reads no
+ * profile and deals exactly as it did. The shared engine deals every
+ * profile it is handed and is left as it is; the house it is handed is
+ * narrowed here. The same house back when there is nothing to take off.
+ */
+export function tableDrillHouse(house: House): House {
+	const comps = house.components || [];
+	const keep = tableProducerIds(house);
+	if (!comps.some((c) => c.producer && !keep.has(c.id))) return house;
+	return { ...house, components: comps.map((c) => (c.producer && !keep.has(c.id) ? { ...c, producer: undefined } : c)) };
+}
+
+/**
+ * The Table's Producers deck: the engine's producer cards (buildFlashcards)
+ * of the producers behind a dish only, in the engine's order. The bar's and
+ * the cellar's cards are dealt by their own rooms.
+ */
+export function tableProducerCards(house: House, cards: readonly Flashcard[] = buildFlashcards(house)): Flashcard[] {
+	const keep = tableProducerIds(house);
+	return cards.filter((c) => c.kind === 'producer' && keep.has(c.itemId));
+}
 
 /** The pairing drill's two kinds: a dish to its first pick among the house wines, and a dish to its drink without alcohol. */
 export const PAIR_KINDS: readonly DrillKind[] = ['firstPickFor', 'zeroProofFor'];
@@ -95,7 +128,7 @@ const KIND_NEEDS: Readonly<Record<DrillKind, { unit: string; field: string }>> =
 	cocktailSpec: { unit: 'drinks with a spec', field: 'four drinks on the bar' },
 	producerOf: { unit: 'items with a kept producer', field: 'four producers' },
 	producerWhere: { unit: 'producers with a kept where', field: 'four different places' },
-	producerDish: { unit: 'producers on a dish or a drink', field: 'four names on the house' }
+	producerDish: { unit: 'producers behind a dish', field: 'four names on the house' }
 };
 
 /**

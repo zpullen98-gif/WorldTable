@@ -441,7 +441,8 @@ describe("the Ledger's living rule over the drink producers", () => {
 		expect(at(bar).join('\n')).toContain('producer notes[0]: names a living person ("Hauck")');
 		expect(at(food)).toEqual([]);
 		expect(engine.componentProblems(h, engine.noteHay())).toEqual([]);
-	});
+		/* The whole shipped edition through the gate: with the cellar's two hundred profiles it reads well past five seconds. */
+	}, 60_000);
 
 	/* check-drinks.mjs on a copy of the authors' folder: needs the Ledger's and the Codex's data for its compare
 	   check, so it is skipped on a machine without those checkouts. */

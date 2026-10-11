@@ -37,7 +37,7 @@
 	import { nav, restoreScroll } from '$lib/stores/nav.svelte';
 	import { markStudied } from '$lib/oot-studied';
 	import { drilledKey, markDrilled } from '$lib/house-drilled';
-	import { dealRound, explainAnswer, shuffleWith } from '$lib/house-drill-round';
+	import { dealRound, explainAnswer, shuffleWith, tableDrillHouse } from '$lib/house-drill-round';
 	import { DRILL_LABELS, readyKinds } from '$lib/house/house-drills';
 	import { itemCards } from '$lib/study';
 	import { deckLog, mcFor, owedIds } from '$lib/floor-deck';
@@ -102,7 +102,8 @@
 	const ROUND = 10;
 
 	function houseQuestions(n: number): Q[] {
-		const h = current;
+		/* The producers behind a dish only (tableDrillHouse): the bar's and the cellar's are their rooms' to ask about. */
+		const h = current ? tableDrillHouse(current) : null;
 		if (!h || n <= 0) return [];
 		const kinds = readyKinds(h);
 		if (!kinds.length) return [];

@@ -12,8 +12,9 @@
                   these components opens item-components:{id}; a tasting
                   menu's Flash the courses opens tasting:{id}, its courses
                   in printed order; Producers (under My restaurant) deals
-                  every producer card, and a card's Flash these producers
-                  opens item-producers:{id}
+                  the cards of every producer behind a dish (the bar's and
+                  the cellar's are their rooms' to deal), and a card's Flash
+                  these producers opens item-producers:{id}
     a deck        ?deck={id}: its name, "{n} cards · {m} learnt", Narrow this
                   deck where the engine has a filter, and Start
     the run       ?deck={id}&run=1: the card screen (DeckFrame.svelte), then
@@ -63,7 +64,7 @@
 	import { itemCards, latestVerdicts, mealsOf, inMeal, findItem, producersFor, say, tastingInMeal, tastingOnlyIds, type ItemCard } from '$lib/study';
 	import { buildFlashcards, type Flashcard } from '$lib/house/house-drills';
 	import { COMPONENT_KINDS, COMPONENT_LABELS, componentsFor, type ComponentKind } from '$lib/house/house-schema';
-	import { shuffleWith } from '$lib/house-drill-round';
+	import { shuffleWith, tableProducerCards } from '$lib/house-drill-round';
 	import { FLIP_GRADES, deckLog, flipRecordable, liveSections, pickSession, scopeFromSearch, slipping } from '$lib/floor-deck';
 	import { metSlugs } from '$lib/repertoire';
 	import FloorCard, { type OpenLayers } from '$lib/components/FloorCard.svelte';
@@ -182,10 +183,14 @@
 	const compRefs = (ids: string[]) => ids.filter((id) => compCards.has(id)).map((id) => `k:${id}`);
 	/* The producers: up to three cards per kept profile (house-drills.ts producerCards), each an r:
 	   reference, {componentId}/{n}, graded card-producer-{n} under the component's id. The Producers deck
-	   deals them all, shuffled; an item's producer deck (a card's Flash these producers) deals the item's
-	   producers in the order its card shows them, each producer's cards in order. */
+	   deals, shuffled, the cards of the producers behind a dish only (house-drill-round.ts
+	   tableProducerCards): a producer At the bar or In the cellar is its own room's to deal, so the
+	   engine's deck is narrowed here and the engine left as it is. An item's producer deck (a card's Flash these producers) deals
+	   the item's producers in the order its card shows them, each producer's cards in order; every
+	   producer card stays readable by its reference, so a miss from either deck deals again. */
 	const prodKey = (c: Flashcard) => `${c.itemId}/${c.n ?? 0}`;
 	const prodCards = $derived(engineCards.filter((c) => c.kind === 'producer'));
+	const dishProdCards = $derived(current ? tableProducerCards(current, engineCards) : []);
 	const prodByKey = $derived(new Map(prodCards.map((c) => [prodKey(c), c])));
 	const prodGrade = (c: Flashcard) => 'card-producer-' + (c.n ?? 0);
 	const weakIds = $derived(houseCards.filter((c) => verdicts.get(c.itemId) === 'again').map((c) => c.itemId));
@@ -256,7 +261,7 @@
 			const mine = current ? componentsFor(current, id.slice(16)) : [];
 			return compRefs(COMPONENT_KINDS.flatMap((k) => mine.filter((c) => c.kind === k).map((c) => c.id)));
 		}
-		if (id === 'producers') return prodCards.map((c) => `r:${prodKey(c)}`);
+		if (id === 'producers') return dishProdCards.map((c) => `r:${prodKey(c)}`);
 		if (id.startsWith('item-producers:')) {
 			const mine = current ? producersFor(current, id.slice(15)).map((r) => r.id) : [];
 			return mine.flatMap((cid) => prodCards.filter((c) => c.itemId === cid).map((c) => `r:${prodKey(c)}`));
@@ -566,7 +571,7 @@
 		for (const s of houseSections) out.push(row(`menu:${s.section}`));
 		if (weakIds.length) out.push(row('menu-weak'));
 		if (parts.length) out.push(row('menu-parts'));
-		if (prodCards.length) out.push(row('producers'));
+		if (dishProdCards.length) out.push(row('producers'));
 		return out;
 	});
 	/* What the menu is made of: a deck per kind of component, each only when it holds a card. */

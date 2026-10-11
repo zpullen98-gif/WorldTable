@@ -4428,9 +4428,15 @@ const FLASHCARD_KINDS = ['part', 'line', 'term', 'mixUp', 'pairing', 'component'
 function plainText(v) {
     return typeof v === 'string' ? v.trim() : '';
 }
-/** Lower case, whitespace collapsed: how two option strings are told apart and how a stem is searched for its answer. */
+/**
+ * Lower case, whitespace collapsed, the curly quotes read as straight: how
+ * two option strings are told apart and how a stem is searched for its
+ * answer. Two wines may print one label with either apostrophe (Brennan's
+ * and Brennan\u2019s Essential), and a reader sees one answer, so the field
+ * keeps one of them and a question never offers both.
+ */
 function foldAnswer(s) {
-    return plainText(s).toLowerCase().replace(/\s+/g, ' ');
+    return plainText(s).toLowerCase().replace(/[\u2018\u2019\u02bc]/g, "'").replace(/[\u201c\u201d]/g, '"').replace(/\s+/g, ' ');
 }
 /** The value of a mark a person kept; nothing for her unkept mark, a missing one, or a value that is not a mark. */
 function keptValue(m) {
@@ -4731,7 +4737,45 @@ function dealQuestion(house, kind, rand) {
     const field = distinctText(spec.field(house));
     if (field.length < OPTION_COUNT)
         return null;
-    const c = drawOne(pool, rand);
+    return questionOf(house, kind, spec, field, drawOne(pool, rand), rand);
+}
+/**
+ * A whole round of one kind: up to limit questions, each about a different
+ * item, the items in an order drawn from rand. The pool and the field are
+ * read once, so a round costs one pass over the house rather than one pass
+ * per question, and no item is drawn twice, so nothing is dealt only to be
+ * thrown away. Each question is built by dealQuestion's own rule (the same
+ * floor, the same fair distractors, the same four options); only the order
+ * of the items differs, a shuffle of the pool rather than one draw from it.
+ * An item whose options fall short is skipped and the next is asked; an
+ * unmet floor, a short field or a limit of nothing deals nothing.
+ */
+function dealRound(house, kind, rand, limit = Infinity) {
+    const spec = SPECS[kind];
+    const pool = spec.pool(house);
+    if (pool.length < DRILL_FLOORS[kind])
+        return [];
+    const field = distinctText(spec.field(house));
+    if (field.length < OPTION_COUNT)
+        return [];
+    const want = limit > 0 ? limit : 0;
+    const seen = new Set();
+    const out = [];
+    for (const c of shuffleBy(pool, rand)) {
+        if (out.length >= want)
+            break;
+        if (seen.has(c.itemId))
+            continue;
+        const q = questionOf(house, kind, spec, field, c, rand);
+        if (!q)
+            continue;
+        seen.add(c.itemId);
+        out.push(q);
+    }
+    return out;
+}
+/** One question about one candidate: its stem drawn, its wrong options chosen and the four shuffled, all from rand. */
+function questionOf(house, kind, spec, field, c, rand) {
     const stem = drawOne(c.stems, rand);
     const right = new Set([foldAnswer(c.answer)].concat((c.others || []).map(foldAnswer)));
     const wrong = field.filter((s) => !right.has(foldAnswer(s)));
@@ -4817,6 +4861,19 @@ function drillableCounts(house) {
     for (const kind of DRILL_KINDS)
         out[kind] = SPECS[kind].pool(house).length;
     return out;
+}
+/**
+ * How many questions dealRound can deal of one kind: the kind's pool when
+ * its floor is met and its field holds four distinct options, else none.
+ * One kind's pool only, so a caller sizing a round reads one pass, not the
+ * nineteen drillableCounts reads. Spends no draw.
+ */
+function drillableCount(house, kind) {
+    const spec = SPECS[kind];
+    const n = spec.pool(house).length;
+    if (n < DRILL_FLOORS[kind])
+        return 0;
+    return distinctText(spec.field(house)).length < OPTION_COUNT ? 0 : n;
 }
 /** The kinds that deal now: the floor met and four distinct options in the field. Spends no draw. */
 function readyKinds(house) {
@@ -6032,6 +6089,8 @@ var ootHouseLib = {
 	editionItemStamp: editionItemStamp,
 	editionBuiltAt: editionBuiltAt,
 	dealQuestion: dealQuestion,
+	dealRound: dealRound,
+	drillableCount: drillableCount,
 	drillableCounts: drillableCounts,
 	readyKinds: readyKinds,
 	buildFlashcards: buildFlashcards,
