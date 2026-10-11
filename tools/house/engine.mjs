@@ -62,15 +62,33 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    walk-through's repairs: the British forms the spelling map had missed in the drink producers and
    elsewhere (reorganised, learnt, neighbourhood, dealcoholised and their kin) in American spelling, and
    the producer cards' who card saying a founded phrase as its own sentence (house-drills.ts
-   foundedSentence); stamped at the half hour before its build, never ahead of the clock.
+   foundedSentence); stamped at the half hour before its build, never ahead of the clock. The 20:00
+   edition of the same day carries the producers deep dive for the cellar (components/producers.json,
+   from the twenty-two research/producers-cellar-*-2026-10-10.md files): a producer profile for every
+   one of the 204 producer names on the wine list, 200 profiles in all, 144 of them on new components
+   (one per producer where a story component named two or three), the corrections the research made
+   to existing wine explanations, cards and four wine cards, the wine list's producer lines it
+   corrected, and the questions about a wine's producer no source answers, each an ask:+ override for
+   lineup; stamped at the half hour before its build, never ahead of the clock. The 23:00 edition of the
+   same day carries the second round of the producer walk-through's repairs: research provenance taken out
+   of what a server reads (the research of a date, a search, the pages read on a day, the pack, an earlier
+   card, Wikipedia), each fact said as its source says it and dated as of October 2026 where the rule asks
+   for a date, now held by componentProblems' PROVENANCE rule; Moët's wines named as our menus print them,
+   Imperial, with the house's own Impérial explained once; the where of Raymond Dupont-Fahn and Pol Roger a
+   place, the disputes kept in their stories; and the glass of the house Champagne printing its label with
+   the curly apostrophe its name carries; stamped at the half hour before its build, never ahead of the
+   clock.
    The 19:45 edition of 10 October corrects
    Champagne sweetness terminology: finished sugar content is distinguished from dosage,
    overlapping categories do not rank two bottles, and the dosage component teaches the
    Brut Nature condition. The 20:20 edition applies the same finished wine ranges and overlap
-   caveat to the Brut lexicon definition. IDs, menu facts and personal-edit merge rules are unchanged. */
-/* The 00:50 edition of 11 October corrects the Prisoner of Love comparison:
-   clarified heavy cream remains a milk ingredient, with preparation to confirm at the bar. */
-export const EDITION_BUILT_AT = '2026-10-11T00:50:00.000Z';
+   caveat to the Brut lexicon definition. IDs, menu facts and personal-edit merge rules are unchanged.
+   The 00:30 edition of 11 October joins the two: the cellar producers and their repairs with the
+   Champagne sweetness corrections made on the visual learning branch; stamped at the half hour before its
+   build, never ahead of the clock. The 16:20 edition retains those updates and corrects the
+   Prisoner of Love comparison: clarified heavy cream remains a milk ingredient, with preparation
+   to confirm at the bar. */
+export const EDITION_BUILT_AT = '2026-10-11T16:20:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a
@@ -519,6 +537,13 @@ const ALLERGEN_CLASS = /\b(allerg\w*|intoleran\w*|gluten|dairy|celiac|coeliac|la
 const ALLERGEN_POINTER = /service note|kitchen|lineup/i;
 const VERDICT = /\b(gluten|dairy|nut|egg|allergen|shellfish|soy|sesame|lactose|meat)[- ]free\b|\bcontains no\b|\bsuitable for\b|\bsafe\b/i;
 const sentencesOf = (s) => s.split(/(?<=[.!?][\u201D"]?)\s+|\n+/).filter((x) => x.trim());
+/* RESEARCH PROVENANCE, held out of what a server reads (the producer walk-through of 10 October 2026,
+   its second round): how a fact was found (the research of a date, a search, the pages read on a day,
+   the pack, an earlier card, Wikipedia) is the file's business, never the card's. The fact is said as
+   its source says it, dated by "as of" where the rule asks for a date (a current owner, a winemaker, a
+   certification), and the source itself stays in the fragment's sources. "Was read as a U" (CVNE) is
+   reading, not research, and is left alone. */
+export const PROVENANCE = /\b(?:by|in|from|of|as|the|our|a|any|no) (?:house's |house |earlier |fresh |future )?(?:research|search(?:es)?)\b|\bresearch of\b|\bsearched\b|\bsearches\b|\bsearch notes\b|\bread (?:in|on) (?:early )?(?:\d{1,2} )?October\b|\bas read on\b|\bthe pack\b|\bpack's\b|\bwikipedia\b|\bearlier (?:records?|research|search)\b|\bcard of \d|\bsources? read\b|\bwas read\b(?! as)/i;
 const quotedSpans = (s) => [...s.matchAll(/[\u201C"]([^\u201D"]+)[\u201D"]/g)].map((m) => m[1]);
 const foldName = (s) => s.normalize('NFD').replace(/[\u0300-\u036F]/g, '').replace(/[\u2018\u2019]/g, "'").toLowerCase();
 const noteOf = (row, q) => (Array.isArray(row.kept) ? row.kept.filter((n) => n && n.q === q) : []);
@@ -642,6 +667,7 @@ export function componentProblems(house, hay) {
 		if (DASHED.test(text)) out.push(`${at}: a dash`);
 		if (BANNED_WORDS.test(text)) out.push(`${at}: the banned word "${text.match(BANNED_WORDS)[0]}"`);
 		if (VERDICT.test(text)) out.push(`${at}: an allergen or diet verdict ("${text.match(VERDICT)[0]}")`);
+		if (PROVENANCE.test(text)) out.push(`${at}: research provenance ("${text.match(PROVENANCE)[0]}"): say what the source says, dated "as of" where a date is due, and keep the source in the fragment's sources`);
 		for (const s of sentencesOf(text)) if (ALLERGEN_CLASS.test(s) && !ALLERGEN_POINTER.test(s)) out.push(`${at}: names an allergen or a diet without sending the server to the service note or the kitchen: "${s.trim()}"`);
 	};
 	const kv = (m) => (m && typeof m === 'object' && 'value' in m ? m.value : undefined);

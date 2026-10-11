@@ -1316,8 +1316,11 @@ stories) and what to compare it with. The plan is section "CURRENT WORK (5 Oct
   (`components:<key>`, so `--mint` on the first build). `engine.mjs
   componentProblems` holds the shipped edition to the content rules (80 to
   160 words in paragraphs, the card's caps, no dash, no banned word, no
-  allergen verdict, names and years in a source by `sourceProblems`, the note
-  rule shared); `countProblems` reads its component figures from the
+  allergen verdict, no research provenance (`PROVENANCE`: the research of a
+  date, a search, pages read on a day, the pack, an earlier card, Wikipedia;
+  the fact is said as its source says it, dated "as of" where a date is due,
+  and the source stays in the fragment's sources), names and years in a
+  source by `sourceProblems`, the note rule shared); `countProblems` reads its component figures from the
   fragments (`fragmentCounts`). `tools/house/check-compare.mjs` resolves every
   in-app ref against `src/lib/data`, the Ledger's COCKTAILS and the Codex's
   GRAPES, GRAPES_PLUS, WINE_PRODUCERS and PRIMERS (`LEDGER_SRC`, `CODEX_SRC`,

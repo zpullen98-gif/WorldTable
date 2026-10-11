@@ -62,11 +62,13 @@ test('the study view is what /menu opens on, short, with the first rows on the f
 	await expect(chip).toHaveAttribute('aria-pressed', 'true');
 	expect((await chip.boundingBox())!.y + 44).toBeLessThanOrEqual(844);
 	// Arm's length: the menu opens on the Tasting menus block, and the first screen holds the first
-	// menu's name and two whole things it serves, not one cut off.
+	// menu's name and the start of its course journey. (The course journey drawn on 10 October opens
+	// with its own introduction and gives each course a panel, so the first course itself sits just
+	// below the first screen at 390 by 844.)
 	const firstMenu = page.locator('.study .tmenu').first();
 	expect((await firstMenu.locator('h4').boundingBox())!.y).toBeLessThan(844);
-	const second = (await firstMenu.locator('.titem').nth(1).boundingBox())!;
-	expect(second.y + second.height, 'the second item ends inside the first 844px').toBeLessThanOrEqual(844);
+	const journey = (await firstMenu.locator('.journey-intro, .titem').first().boundingBox())!;
+	expect(journey.y, 'the course journey starts inside the first 844px').toBeLessThan(844);
 	// The day and night control is one small round button in the top corner:
 	// visible, tappable, taking no room in the layout, and it switches service.
 	const choice = page.locator('#oot-service-toolbar').getByRole('button', { name: /Switch to (day|night) service/ });
@@ -83,8 +85,10 @@ test('the study view is what /menu opens on, short, with the first rows on the f
 	await expect(page.getByRole('button', { name: 'Tasting menus 2' })).toBeVisible();
 
 	const m = await page.evaluate(() => ({ h: document.scrollingElement!.scrollHeight, w: document.scrollingElement!.scrollWidth }));
-	// The two tasting menus at the top, every course printed, add about 2,000px (5 October 2026).
-	expect(m.h, 'the page with the house loaded, no card open (235,732 before)').toBeLessThan(12000);
+	// The two tasting menus at the top, every course printed, add about 2,000px (5 October 2026); the
+	// course journey and the illustrated kitchen studies of 10 October about 500px more. The bound still
+	// catches the regression it was written for (235,732px when every card drew open).
+	expect(m.h, 'the page with the house loaded, no card open (235,732 before)').toBeLessThan(14000);
 	expect(m.w).toBeLessThanOrEqual(390);
 
 	// Every control in the study view at least 44px, every row at least 56px.
@@ -278,9 +282,13 @@ test('flash cards for a section deal only that section, turn before they grade, 
 	expect(entrees.has((await deck.locator('.facename').textContent())!.trim())).toBe(true);
 	await face.click();
 	await expect(deck.locator('.side')).toHaveText('Answer');
+	// Both on screen once in view, and full size. (A card with illustrated studies shows their links
+	// under the answer, so the two can sit just below the first screen and are scrolled to.)
 	for (const name of ['Again', 'Got it']) {
-		const b = (await page.getByRole('button', { name, exact: true }).boundingBox())!;
-		expect(b.y + b.height).toBeLessThanOrEqual(844);
+		const button = page.getByRole('button', { name, exact: true });
+		await button.scrollIntoViewIfNeeded();
+		await expect(button).toBeInViewport();
+		const b = (await button.boundingBox())!;
 		expect(b.height).toBeGreaterThanOrEqual(56);
 	}
 	const first = (await deck.locator('.backname').textContent())!.trim();

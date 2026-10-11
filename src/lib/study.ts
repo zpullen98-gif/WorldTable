@@ -193,17 +193,25 @@ export const STUDY_WORDS = {
 	producerNotes: 'Notes for the floor',
 	askKitchen: 'Ask the kitchen',
 	askBar: 'Ask the bar',
+	askSommelier: 'Ask the sommelier',
 	onTheMenu: 'On the menu',
+	onTheList: 'On the wine list',
 	producersAtBar: 'At the bar',
-	quizProducers: 'Quiz the producers',
-	flashAllProducers: 'Flash every producer',
+	producersInCellar: 'In the cellar',
+	producersJump: 'Jump to a group',
+	cellarRegions: 'Jump to a region ({n})',
+	regionNotGiven: 'Region not given',
+	quizProducers: 'Quiz the producers behind the dishes',
+	flashAllProducers: 'Flash the producers behind the dishes',
 	deckProducers: 'Producers',
 	deckItemProducers: '{name}: who makes it',
 	typeMaker: 'Maker',
 	typeFarm: 'Farm',
 	typeFishery: 'Fishery',
 	typeOrigin: 'Origin',
-	typeHouse: 'Made in house'
+	typeHouse: 'Made in house',
+	typeEstate: 'Estate',
+	typeWineHouse: 'Wine house'
 } as const;
 export type StudyWordKey = keyof typeof STUDY_WORDS;
 
@@ -1156,6 +1164,14 @@ export const PRODUCER_TYPE_WORDS: Readonly<Record<ProducerType, StudyWordKey>> =
 	house: 'typeHouse'
 };
 
+/**
+ * How a type is said for a producer In the cellar, where the words for the
+ * kitchen's suppliers mislead: a wine estate that grows its own grapes is an
+ * Estate, not a Farm, and a wine house (a Beaune or a Port house) is a Wine
+ * house, never Made in house, which is the restaurant's own kitchen or bar.
+ */
+const CELLAR_TYPE_WORDS: Readonly<Partial<Record<ProducerType, StudyWordKey>>> = { farm: 'typeEstate', house: 'typeWineHouse' };
+
 /** One producer as a card and the Producers view draw it: its kept profile, its component and the items that use it. */
 export interface ProducerRow {
 	/** The component's id: one profile per component. */
@@ -1177,7 +1193,11 @@ export interface ProducerRow {
 	askKitchen: string[];
 	/** The named items that use it, in the order the component lists them. */
 	items: Array<{ id: string; name: string; kind: ItemKind }>;
-	/** The items the Table's own card opens (every item but a drink), in the same order: the Producers view's chips. */
+	/**
+	 * The items the Table's own card opens, in the same order: the Producers
+	 * view's chips. Every item but a drink, and none for a producer In the
+	 * cellar, whose wines open in the Codex.
+	 */
 	chips: Array<{ id: string; name: string; kind: ItemKind }>;
 	/**
 	 * The drinks that use it, in the same order, each with the address that
@@ -1186,6 +1206,13 @@ export interface ProducerRow {
 	 * Ledger can be reached (installed here, or the network up).
 	 */
 	drinks: Array<{ id: string; name: string; href: string }>;
+	/**
+	 * The wines of a producer In the cellar (inTheCellar), in the same order,
+	 * each with the address that opens its card in the Codex (roomHref, the
+	 * drinks' rule): '' off the shared origin, where it is words. Empty for
+	 * every other producer, whose wines are chips.
+	 */
+	wines: Array<{ id: string; name: string; href: string }>;
 }
 
 /** Whether a component's name only repeats its producer's who: the same words, or the who and one more word ('Creekstone Farms beef'). */
@@ -1209,12 +1236,13 @@ function producerRow(house: House, c: { id: string; name: string; producer?: Mar
 		const it = findItem(house, id);
 		if (it && plain(it.name) && !items.some((x) => x.id === id)) items.push({ id, name: plain(it.name), kind: it.kind });
 	}
+	const cellar = inTheCellar({ items });
 	return {
 		id: c.id,
 		supplies: plain(c.name),
 		suppliesShown: echoes(who, plain(c.name)) ? '' : plain(c.name),
 		type,
-		typeLabel: say(PRODUCER_TYPE_WORDS[type]),
+		typeLabel: say((cellar && CELLAR_TYPE_WORDS[type]) || PRODUCER_TYPE_WORDS[type]),
 		who,
 		where: plain(p.where),
 		founded: plain(p.founded),
@@ -1224,8 +1252,9 @@ function producerRow(house: House, c: { id: string; name: string; producer?: Mar
 		notes: list(p.notes),
 		askKitchen: list(p.askKitchen),
 		items,
-		chips: items.filter((i) => i.kind !== 'cocktail'),
-		drinks: items.filter((i) => i.kind === 'cocktail').map((i) => ({ id: i.id, name: i.name, href: roomHref('ledger', i.id, base, house) }))
+		chips: cellar ? [] : items.filter((i) => i.kind !== 'cocktail'),
+		drinks: items.filter((i) => i.kind === 'cocktail').map((i) => ({ id: i.id, name: i.name, href: roomHref('ledger', i.id, base, house) })),
+		wines: cellar ? items.map((i) => ({ id: i.id, name: i.name, href: roomHref('codex', i.id, base, house) })) : []
 	};
 }
 
@@ -1249,25 +1278,196 @@ export function atTheBar(row: Pick<ProducerRow, 'items'>): boolean {
 	return row.items.some((i) => i.kind === 'cocktail') && !row.items.some((i) => i.kind === 'dish');
 }
 
+/** Whether a producer belongs In the cellar: it reaches a wine and no dish or drink, whatever its type. */
+export function inTheCellar(row: Pick<ProducerRow, 'items'>): boolean {
+	return row.items.some((i) => i.kind === 'wine') && !row.items.some((i) => i.kind === 'dish' || i.kind === 'cocktail');
+}
+
 /**
- * The Producers view: every kept profile in three groups, Makers and farms
- * (a maker, a farm, the house itself), Where it comes from (a fishery, an
- * origin) and At the bar (one that reaches a drink and no dish, whatever its
- * type), each in the house's order; a group with none left out. A producer
- * behind a dish and a drink stays in its food group, its drinks after the
- * dish chips. `base` is the app's base path, for the drinks' Ledger addresses.
+ * Whether a producer is the Table's to drill: it reaches a dish. A producer
+ * At the bar or In the cellar belongs to its own room's deck and questions,
+ * and one that reaches nothing on the menu to none.
  */
-export function producerRows(house: House, base = ''): Array<{ key: string; label: string; rows: ProducerRow[] }> {
+export function behindADish(row: Pick<ProducerRow, 'items'>): boolean {
+	return row.items.some((i) => i.kind === 'dish');
+}
+
+/**
+ * The component ids of the producers the Table's own Producers deck and
+ * producer questions deal: every kept profile behind a dish (behindADish),
+ * in the house's order. The engine deals every profile; the Table's callers
+ * narrow it with this, and the shared engine is left as it is.
+ */
+export function tableProducerIds(house: House): Set<string> {
+	const out = new Set<string>();
+	for (const c of house.components || []) {
+		const row = producerRow(house, c, '');
+		if (row && behindADish(row)) out.add(c.id);
+	}
+	return out;
+}
+
+/** One region of the cellar: its heading, a key for its anchor, and its producers in the order of their names. */
+export interface ProducerRegion {
+	key: string;
+	label: string;
+	rows: ProducerRow[];
+}
+
+/** One group of the Producers view; In the cellar alone carries its rows again by region. */
+export interface ProducerGroup {
+	key: string;
+	label: string;
+	rows: ProducerRow[];
+	regions?: ProducerRegion[];
+}
+
+/**
+ * The names a wine list prints for a region that the cellar heads under one
+ * name: the same place in another tongue (Piemonte is Piedmont, Val de Loire
+ * the Loire Valley) and an appellation inside the region that holds it
+ * (Côtes de Provence in Provence, Rías Baixas in Galicia), keyed folded.
+ * Each is a fact of geography, so two wines of one region never stand under
+ * two headings; nothing else is renamed.
+ */
+const REGION_ONE_NAME: Readonly<Record<string, string>> = {
+	piemonte: 'Piedmont',
+	'val de loire': 'Loire Valley',
+	'cotes de provence': 'Provence',
+	'rias baixas': 'Galicia'
+};
+
+/** A place folded for comparison: lower case, no accents, every other mark a space. */
+function foldPlace(s: string): string {
+	return s
+		.normalize('NFD')
+		.replace(/[\u0300-\u036f]/g, '')
+		.toLowerCase()
+		.replace(/[^a-z0-9]+/g, ' ')
+		.trim();
+}
+
+/**
+ * The heading a wine's printed region files under: its last two places, so
+ * 'Meursault, Côte de Beaune, Burgundy, France' heads as 'Burgundy, France'
+ * and 'Oakville, Napa Valley, California' as 'Napa Valley, California'. A
+ * place the list prints by another of its names reads as the cellar's one
+ * name (REGION_ONE_NAME), a place said twice so is said once ('Rías Baixas,
+ * Galicia, Spain' heads as 'Galicia, Spain'), and a place given as a
+ * direction ('near Arles') is no region and is passed over, so 'Camargue,
+ * near Arles, France' heads as 'Camargue, France'. A region of one or two
+ * places is its own heading, its first letter raised. Nothing is added to
+ * what the list prints; '' when it prints no region.
+ */
+export function regionHead(region: string): string {
+	const places: string[] = [];
+	for (const raw of plain(region).split(',')) {
+		const p = raw.trim();
+		if (!p || /^near\s/i.test(p)) continue;
+		const named = REGION_ONE_NAME[foldPlace(p)] ?? p;
+		if (places.length && foldPlace(places[places.length - 1]) === foldPlace(named)) continue;
+		places.push(named);
+	}
+	const head = places.slice(-2).join(', ');
+	return head ? head.charAt(0).toUpperCase() + head.slice(1) : '';
+}
+
+/** A region's heading as an anchor's key: lower case ASCII words joined by hyphens. */
+function regionKey(label: string): string {
+	return (
+		label
+			.normalize('NFD')
+			.replace(/[\u0300-\u036f]/g, '')
+			.toLowerCase()
+			.replace(/[^a-z0-9]+/g, '-')
+			.replace(/^-+|-+$/g, '') || 'region'
+	);
+}
+
+/**
+ * In the cellar, by region: each producer under the heading its wines print
+ * (regionHead) that its own where names closest (the earliest named, a
+ * where running from the village to the country), so Duckhorn of St.
+ * Helena, Napa Valley stands under Napa Valley though its first wine is a
+ * North Coast Sauvignon Blanc; else the first its wines print, in the order
+ * its component lists them. Its where's own heading is a candidate too when
+ * another wine of the cellar prints it, so an estate whose wine says only
+ * the Rhône Valley stands under the Southern Rhône its where names. The regions in the order of their headings and the producers in
+ * each by name, so a server finds a house by where it is and what it is
+ * called; a producer whose wines print no region last, under Region not
+ * given.
+ */
+function cellarRegions(house: House, rows: ProducerRow[]): ProducerRegion[] {
+	const wines = new Map((house.wines ?? []).map((w) => [w.id, w]));
+	const order = (a: string, b: string) => a.localeCompare(b, 'en', { sensitivity: 'base' });
+	const printed = new Set((house.wines ?? []).map((w) => regionHead(w.region ?? '')).filter(Boolean));
+	/* where in the producer's where a heading's leading place is named, -1 when it is not: a where runs
+	   from the most particular place to the widest, so the earliest named is the closest heading */
+	const named = (where: string, head: string) => {
+		const lead = foldPlace(head.split(',')[0]);
+		return lead ? (' ' + foldPlace(where) + ' ').indexOf(' ' + lead + ' ') : -1;
+	};
+	const by = new Map<string, ProducerRow[]>();
+	for (const r of rows) {
+		const theirs: string[] = [];
+		for (const w of r.wines) {
+			const h = regionHead(wines.get(w.id)?.region ?? '');
+			if (h && !theirs.includes(h)) theirs.push(h);
+		}
+		/* the where up to its first semicolon: after it a profile says more than where the house is */
+		const where = r.where.split(';')[0];
+		const own = regionHead(where);
+		const heads = own && printed.has(own) && !theirs.includes(own) ? theirs.concat(own) : theirs;
+		let head = theirs[0] ?? '';
+		let closest = Infinity;
+		for (const h of heads) {
+			const at = named(where, h);
+			if (at >= 0 && at < closest) {
+				closest = at;
+				head = h;
+			}
+		}
+		const list = by.get(head) ?? [];
+		list.push(r);
+		by.set(head, list);
+	}
+	const heads = [...by.keys()].filter(Boolean).sort(order);
+	if (by.has('')) heads.push('');
+	const taken = new Set<string>();
+	return heads.map((head) => {
+		const label = head || say('regionNotGiven');
+		let key = regionKey(label);
+		for (let n = 2; taken.has(key); n++) key = regionKey(label) + '-' + n;
+		taken.add(key);
+		return { key, label, rows: (by.get(head) ?? []).slice().sort((a, b) => order(a.who, b.who)) };
+	});
+}
+
+/**
+ * The Producers view: every kept profile in four groups, Makers and farms
+ * (a maker, a farm, the house itself), Where it comes from (a fishery, an
+ * origin), At the bar (one that reaches a drink and no dish, whatever its
+ * type) and In the cellar (one that reaches a wine and no dish or drink,
+ * whatever its type), the first three in the house's order and the cellar
+ * by region (cellarRegions); a group with none left out. A producer behind a
+ * dish and a drink stays in its food group, its drinks after the dish chips.
+ * `base` is the app's base path, for the drinks' Ledger addresses and the
+ * wines' Codex addresses.
+ */
+export function producerRows(house: House, base = ''): ProducerGroup[] {
 	const all: ProducerRow[] = [];
 	for (const c of house.components || []) {
 		const row = producerRow(house, c, base);
 		if (row) all.push(row);
 	}
-	const food = all.filter((r) => !atTheBar(r));
-	return [
+	const food = all.filter((r) => !atTheBar(r) && !inTheCellar(r));
+	const regions = cellarRegions(house, all.filter(inTheCellar));
+	const groups: ProducerGroup[] = [
 		...PRODUCER_GROUPS.map((g) => ({ key: g.key as string, label: g.label as string, rows: food.filter((r) => (g.types as readonly string[]).includes(r.type)) })),
-		{ key: 'bar', label: say('producersAtBar'), rows: all.filter(atTheBar) }
-	].filter((g) => g.rows.length);
+		{ key: 'bar', label: say('producersAtBar'), rows: all.filter(atTheBar) },
+		{ key: 'cellar', label: say('producersInCellar'), rows: regions.flatMap((r) => r.rows), regions }
+	];
+	return groups.filter((g) => g.rows.length);
 }
 
 /** The one line under the Producers door: how many producers, behind how many items. Empty when there are none. */

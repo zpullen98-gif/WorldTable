@@ -18,6 +18,8 @@ import { putDish, removeDishFromHouse, wakeHouse } from './house-wake';
 const PACK = readFileSync(new URL('../../../static/shared/packs/brennans-new-orleans.v1.oothouse.json', import.meta.url), 'utf8');
 /* The shipped edition's own stamp, read off the pack so a new edition cannot leave the test behind. */
 const NEW_AT = Date.parse(JSON.parse(PACK).house.pack.builtAt);
+/* The next edition an hour after the shipped one, read the same way, so a later edition never overtakes it. */
+const NEXT_AT = new Date(NEW_AT + 3600000).toISOString();
 
 function packAt(rev: string): string | null {
 	try {
@@ -96,7 +98,7 @@ describe('auto-load across editions, through the Table wake', () => {
 		const first = await boot(backing, structuredClone(EMPTY_HOUSE), PACK, clock);
 		const target = first.api.current()!.dishes[3];
 		clock.at += 86400000;
-		const next = nextEdition(PACK, '2026-10-10T21:00:00.000Z', (h) => {
+		const next = nextEdition(PACK, NEXT_AT, (h) => {
 			h.dishes.find((d: any) => d.id === target.id).description = 'A new description from the next edition';
 		});
 		const second = await boot(backing, first.rec, next, clock);
@@ -116,7 +118,7 @@ describe('auto-load across editions, through the Table wake', () => {
 		let rec: HouseRecord = { ...first.rec, dishes: first.rec.dishes.map((d) => (d.id === mine.id ? mine : d)).filter((d) => d.id !== removed.id) };
 		await removeDishFromHouse(first.api, removed.id);
 		clock.at += 86400000;
-		const next = nextEdition(PACK, '2026-10-10T21:00:00.000Z', (h) => {
+		const next = nextEdition(PACK, NEXT_AT, (h) => {
 			h.dishes.find((d: any) => d.id === edited.id).description = 'The edition rewrote it';
 		});
 		const second = await boot(backing, rec, next, clock);
