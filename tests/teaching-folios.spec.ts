@@ -10,10 +10,10 @@ test('kitchen studies stay closed until wanted, then provide a numbered key and 
 	});
 	await goto(page, '/plates');
 	const collection = page.locator('.companion-studies');
-	await expect(collection.locator('details.teaching-folio')).toHaveCount(9);
+	await expect(collection.locator('details.teaching-folio')).toHaveCount(13);
 	await expect(collection.getByRole('heading', { level: 3 })).toHaveCount(3);
 	await expect(collection.locator('img')).toHaveCount(0);
-	await page.getByRole('link', { name: 'Explore 9 kitchen studies' }).click();
+	await page.getByRole('link', { name: 'Explore 13 kitchen studies' }).click();
 	await expect(page).toHaveURL(/#companion-studies-h$/);
 	expect(artRequests).toEqual([]);
 	const egg = collection.locator('#folio-poached-egg-standard');
@@ -62,24 +62,59 @@ test('opened companions in all three artwork folders stay available offline', as
 	await page.waitForFunction(() => navigator.serviceWorker.controller?.scriptURL === new URL('/sw.js', location.href).href, undefined, { timeout: 40_000 });
 	const studies = [
 		['brennans-sauces', '/house/brennans/brennans-sauces-v1.webp'],
+		['eggs-hussarde-components', '/house/brennans/eggs-hussarde-components-v1.webp'],
 		['poached-egg-standard', '/standards/poached-egg-standard-v1.webp'],
 		['louisiana-larder', '/plates/louisiana-larder-v1.webp']
 	];
 	for (const [id, path] of studies) {
 		const folio = page.locator(`#folio-${id}`);
-		await folio.locator('summary').click();
+		await folio.locator(':scope > summary').click();
 		await expect.poll(() => folio.locator('figure img').evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true);
 		await expect.poll(() => page.evaluate(async path => !!await (await caches.open('plates-v1')).match(path), path), { timeout: 40_000 }).toBe(true);
-		await folio.locator('summary').click();
+		await folio.locator(':scope > summary').click();
 	}
+	// Keep a genuine offline browser context as well as blocking routed image
+	// requests. Routing alone is not proof that a worker cannot use the network.
+	await context.route('**/*.webp', route => route.abort());
 	await context.setOffline(true);
+	expect(await page.evaluate(() => navigator.onLine)).toBe(false);
 	await page.reload();
 	await page.waitForSelector('html[data-hydrated]');
 	for (const [id] of studies) {
 		const folio = page.locator(`#folio-${id}`);
-		await folio.locator('summary').click();
+		await folio.locator(':scope > summary').click();
 		await expect.poll(() => folio.locator('figure img').evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true);
-		await folio.locator('summary').click();
+		await folio.locator(':scope > summary').click();
 	}
 	await context.setOffline(false);
+});
+
+test('the Brennan’s component guides open from exact study links without loading the other studies', async ({ page }) => {
+	await page.setViewportSize({ width: 390, height: 844 });
+	const artRequests: string[] = [];
+	page.on('request', request => {
+		const path = new URL(request.url()).pathname;
+		if (/\/house\/brennans\/.*\.webp$/.test(path)) artRequests.push(path);
+	});
+	await goto(page, '/service/deck/study?card=fd_0231');
+	const door = page.locator('a[href$="#folio-gulf-fish-papillote"]');
+	await expect(door).toBeVisible();
+	await door.click();
+	const parcel = page.locator('#folio-gulf-fish-papillote');
+	await expect(parcel).toHaveAttribute('open');
+	await expect(parcel.locator('.folio-key > li')).toHaveCount(2);
+	await expect(parcel.locator('.folio-key')).toContainText('banana-leaf wrap');
+	await expect.poll(() => parcel.locator('figure img').evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth === 1536)).toBe(true);
+	await expect(parcel.locator('figure img')).toHaveAttribute('alt', /1\. A banana-leaf parcel:.*2\. The ingredients inside:/);
+	expect(artRequests.every(path => path.endsWith('/gulf-fish-papillote-v1.webp'))).toBe(true);
+	await parcel.getByText('Sources and further reading', { exact: true }).click();
+	await expect(parcel.getByRole('link', { name: /Brennan’s: current dinner menu/ })).toHaveAttribute('href', 'https://www.brennansneworleans.com/menus/dinner/');
+	expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390);
+
+	await goto(page, '/plates#folio-eggs-hussarde-components');
+	const hussarde = page.locator('#folio-eggs-hussarde-components');
+	await expect(hussarde).toHaveAttribute('open');
+	await expect(hussarde.locator('.folio-key > li')).toHaveCount(5);
+	await expect(hussarde.locator('.folio-scope')).toContainText('not an assembly sequence');
+	await expect.poll(() => hussarde.locator('figure img').evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth === 1024)).toBe(true);
 });

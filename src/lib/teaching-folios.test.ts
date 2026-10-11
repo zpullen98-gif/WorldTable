@@ -12,11 +12,11 @@ const recipes = new Set(read('data/recipes.index.json').map((recipe: { slug: str
 const lexicon = new Set(read('data/lexicon.json').map((term: { slug: string }) => term.slug));
 
 describe('kitchen companion teaching manifest', () => {
-	it('keeps nine independently identified studies separate from the twenty reference plates', () => {
-		expect(TEACHING_FOLIOS).toHaveLength(9);
-		expect(new Set(TEACHING_FOLIOS.map(folio => folio.id)).size).toBe(9);
+	it('keeps thirteen independently identified studies separate from the twenty reference plates', () => {
+		expect(TEACHING_FOLIOS).toHaveLength(13);
+		expect(new Set(TEACHING_FOLIOS.map(folio => folio.id)).size).toBe(13);
 		expect(read('data/plates.json').plates).toHaveLength(20);
-		expect(TEACHING_FOLIOS.map(folio => folio.subjects.length)).toEqual([6, 2, 6, 6, 6, 6, 2, 2, 6]);
+		expect(TEACHING_FOLIOS.map(folio => folio.subjects.length)).toEqual([6, 2, 6, 6, 6, 6, 2, 2, 6, 5, 2, 2, 6]);
 	});
 	it('puts every study in exactly one non-empty learning group', () => {
 		const grouped = TEACHING_FOLIO_GROUPS.flatMap(group => {
@@ -74,7 +74,7 @@ describe('kitchen companion teaching manifest', () => {
 	it('links only the intended existing Floor Deck cards and pantry terms', () => {
 		const deck = read('data/floor-deck.json').cards as Array<{ id: string; term: string }>;
 		const linked = deck.filter(card => foliosForCard(card.id).length).map(card => card.term).sort();
-		expect(linked).toEqual(['Andouille', 'Beurre Blanc', 'Béarnaise', 'Hollandaise', 'Poached', 'Seared', 'Tasso'].sort());
+		expect(linked).toEqual(['Andouille', 'Beurre Blanc', 'Béarnaise', 'Hollandaise', 'Poached', 'Seared', 'Tasso', 'Tenderloin', 'Chateaubriand', 'En Papillote', 'Crawfish', 'Oysters', 'Shrimp', 'Blue Crab'].sort());
 		expect(foliosForCard('fd_0369')).toEqual([]); // French andouillette is not Cajun andouille.
 		expect(foliosForLexicon('tasso-and-cajun-andouille').map(folio => folio.id)).toEqual(['louisiana-larder']);
 		expect(foliosForLexicon('unrelated')).toEqual([]);
@@ -104,7 +104,7 @@ describe('kitchen companion teaching manifest', () => {
 		expect(TEACHING_FOLIOS.find(folio => folio.id === 'knife-cuts')!.dishes).toEqual([]);
 	});
 	it('keeps traceable primary reading sources alongside the new comparison keys', () => {
-		for (const id of ['french-herbs', 'searing-standard', 'resting-slicing-standard', 'knife-cuts']) {
+		for (const id of ['french-herbs', 'searing-standard', 'resting-slicing-standard', 'knife-cuts', 'eggs-hussarde-components', 'chateaubriand-study', 'gulf-fish-papillote', 'brennans-seafood']) {
 			const folio = TEACHING_FOLIOS.find(folio => folio.id === id)!;
 			expect(folio.sources?.length, id).toBeGreaterThan(0);
 			for (const source of folio.sources!) {
@@ -112,6 +112,33 @@ describe('kitchen companion teaching manifest', () => {
 				expect(source.title.length).toBeGreaterThan(10);
 			}
 		}
+	});
+	it('joins each new dish study to its exact menu identity and its named components', () => {
+		const studies = [
+			{ id: 'eggs-hussarde-components', dish: 'd-1q0xk7jv', name: 'Eggs Hussarde', terms: ['English muffins', 'coffee-cured Canadian bacon', 'hollandaise', 'poached eggs', 'marchand de vin'] },
+			{ id: 'chateaubriand-study', dish: 'd-5wcuejdy', name: 'Roasted Chateaubriand', terms: ['tenderloin', 'summer squash', 'Foyot'] },
+			{ id: 'gulf-fish-papillote', dish: 'd-szzugxzi', name: 'Gulf Fish en Papillote', terms: ['Banana leaf', 'crab', 'sorghum', 'Marcona almonds', 'Castelvetrano olives', 'tomato'] }
+		];
+		for (const study of studies) {
+			const folio = TEACHING_FOLIOS.find(folio => folio.id === study.id)!;
+			expect(folio.dishes).toEqual([study.dish]);
+			const dish = house.dishes.find((dish: { id: string }) => dish.id === study.dish);
+			expect(dish.name).toBe(study.name);
+			for (const term of study.terms) expect(dish.description.toLowerCase(), `${study.id}: ${term}`).toContain(term.toLowerCase());
+			expect(foliosForDish(BRENNANS_HOUSE_ID, study.dish)).toContain(folio);
+			expect(foliosForDish('another-house', study.dish)).not.toContain(folio);
+		}
+		expect(foliosForDish(BRENNANS_HOUSE_ID, 'd-44jfmkdb').map(folio => folio.id)).not.toContain('eggs-hussarde-components');
+	});
+	it('keeps seafood forms separate from similarly named poultry, mushrooms and unrelated crab species', () => {
+		const folio = TEACHING_FOLIOS.find(folio => folio.id === 'brennans-seafood')!;
+		expect(folio.subjects.map(subject => subject.name)).toEqual(['Red drum, or redfish', 'Eastern oyster', 'Crab fingers', 'Lump crab meat', 'Crawfish', 'Shrimp']);
+		for (const id of folio.dishes) {
+			const dish = house.dishes.find((dish: { id: string }) => dish.id === id);
+			expect(`${dish.name} ${dish.description}`, id).toMatch(/oyster|crab|redfish|crawfish|shrimp/i);
+		}
+		for (const id of ['fd_0307', 'fd_0145', 'fd_0375', 'fd_0376']) expect(foliosForCard(id).map(folio => folio.id), id).not.toContain(folio.id);
+		expect(folio.dishes).not.toContain('d-1bvercoh'); // A daily Gulf-fish selection does not assert red drum.
 	});
 	it('distinguishes soft-boiled Eggs Owen and the two different hanger steak preparations', () => {
 		const owen = house.dishes.find((dish: { id: string }) => dish.id === 'd-44jfmkdb');
