@@ -68,7 +68,9 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    overlapping categories do not rank two bottles, and the dosage component teaches the
    Brut Nature condition. The 20:20 edition applies the same finished wine ranges and overlap
    caveat to the Brut lexicon definition. IDs, menu facts and personal-edit merge rules are unchanged. */
-export const EDITION_BUILT_AT = '2026-10-10T20:20:00.000Z';
+/* The 00:50 edition of 11 October corrects the Prisoner of Love comparison:
+   clarified heavy cream remains a milk ingredient, with preparation to confirm at the bar. */
+export const EDITION_BUILT_AT = '2026-10-11T00:50:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a
