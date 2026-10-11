@@ -85,8 +85,11 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    caveat to the Brut lexicon definition. IDs, menu facts and personal-edit merge rules are unchanged.
    The 00:30 edition of 11 October joins the two: the cellar producers and their repairs with the
    Champagne sweetness corrections made on the visual learning branch; stamped at the half hour before its
-   build, never ahead of the clock. */
-export const EDITION_BUILT_AT = '2026-10-11T00:30:00.000Z';
+   build, never ahead of the clock. The 16:20 edition of 11 October carries the correction published with
+   the site's Ledger method studies: Prisoner of Love's comparison with the Ramos no longer says the
+   clarification takes the cream away, since clarifying does not establish that the milk is gone, and it
+   sends the server to confirm the preparation with the bar. */
+export const EDITION_BUILT_AT = '2026-10-11T16:20:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a
