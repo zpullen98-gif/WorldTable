@@ -1,0 +1,606 @@
+{
+	"batch": "house-menu-2",
+	"readCount": 21,
+	"total": 21,
+	"entries": [
+		{
+			"target": "wine:Charles Lafitte Brut Champagne NV",
+			"field": "lines.s45",
+			"op": "replace",
+			"value": {
+				"from": "It isn't on the by-the-glass list, so I'd check with the bar before promising a glass.",
+				"to": "It isn't on the by-the-glass list, so I'd check with the sommelier before promising a glass."
+			},
+			"reason": "Cellar review, house-menu-2: the why mark and every kept note send an a la carte glass of the tasting pour to the sommelier; the 45 second line alone said the bar.",
+			"source": "research:cellar-review-2026-10-11-house-menu-2.md#1. Charles Lafitte"
+		},
+		{
+			"target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+			"field": "profile",
+			"op": "replace",
+			"value": {
+				"from": "a family estate farmed by the Fichet brothers,",
+				"to": "a family estate whose present domaine dates to 1988,"
+			},
+			"reason": "Cellar review, house-menu-2: who farms the estate today is a present role; the domaine is dated instead, to the year the present domaine was formed, and nobody is named. House-menu-1 repairs the hundred year old vines and the name in the same field, on other text, so the two batches apply in either order.",
+			"source": "research:producers-cellar-chablis-maconnais-2026-10-10.md#1. Domaine Fichet, Igé, Mâconnais"
+		},
+		{
+			"target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": ", farmed by the Fichet brothers; it is not the Meursault Fichet.",
+				"to": "; the domaine as it is today was formed in 1988, and it is not the Meursault Fichet."
+			},
+			"reason": "Cellar review, house-menu-2: the brothers who run the estate are a present role, so the description dates the domaine instead and names nobody, in the words of the producer component (the domaine as it is today, 1988); a full stop of its own, since after house-menu-1 the clause follows in the Mâconnais and a whose would read as the region’s. House-menu-1 repairs the vines, the name and the respelling of Igé in the same note, on other text, so the two batches apply in either order.",
+			"source": "research:producers-cellar-chablis-maconnais-2026-10-10.md#1. Domaine Fichet, Igé, Mâconnais"
+		},
+		{
+			"target": "wine:Louis Jadot Beaune 1er Cru 2023",
+			"field": "profile",
+			"op": "replace",
+			"value": {
+				"from": "The dinner tasting’s red for the Redfish Véronique (4 oz pour):",
+				"to": "The dinner tasting’s first red, for the Redfish Véronique (4 oz pour):"
+			},
+			"reason": "Cellar review, house-menu-2: the dinner tasting pours two reds, the Jadot with the redfish and the Paul Hobbs Cabernet with the duck, so the Jadot is the first red, not the red.",
+			"source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+		},
+		{
+			"target": "wine:Louis Jadot Beaune 1er Cru 2023",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "is the dinner tasting's red, a 4 oz pour with the Redfish Véronique",
+				"to": "is the dinner tasting's first red, a 4 oz pour with the Redfish Véronique"
+			},
+			"reason": "Cellar review, house-menu-2: two reds on the dinner tasting; the Jadot is the first.",
+			"source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+		},
+		{
+			"target": "wine:Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône 2023",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "offer the Personality, our spirit-free sparkling rosé, in its place",
+				"to": "offer the Personality, our spirit-free drink built on a zero-proof sparkling rosé, in its place"
+			},
+			"reason": "Cellar review, house-menu-2: the Personality is a spirit-free drink of zero-proof sparkling rosé, tart cherry and brown sugar syrup, not a sparkling rosé on its own.",
+			"source": "research:producers-bar-wines-zero-mixers-2026-10-10.md#4. Wölffer Estate Vineyard, Sagaponack, Long Island (Personality)"
+		},
+		{
+			"target": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023",
+			"field": "profile",
+			"op": "replace",
+			"value": {
+				"from": "the producer describes native fermentation in steel and about a year in neutral oak, so confirm this bottle with the sommelier.",
+				"to": "the producer's sheet, written for the Superiore, describes native fermentation in steel and at least twelve months in neutral oak, so confirm this bottle with the sommelier."
+			},
+			"reason": "Cellar review, house-menu-2: the sheet says at least twelve months, not about a year, and it is written for the Barbera d’Asti Superiore while the menu prints Barbera d’Asti.",
+			"source": "research:producers-cellar-italy-2026-10-10.md#1. La Miraja"
+		},
+		{
+			"target": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "How long it spends in barrel, and what Le Masche means, are questions for the sommelier.",
+				"to": "Le Masche, leh MAHS-keh, means the witches in Piemontese dialect, here the local spirits said to guard the vineyard; the producer's sheet, written for the Superiore, describes steel, then at least twelve months in neutral oak, so confirm this bottle with the sommelier."
+			},
+			"reason": "Cellar review, house-menu-2: the description deferred the name and the aging, which the profile and the research already answer; the name is told as the research tells it (masca, plural masche, the dialect word for a witch; the name recalls the local spirits believed to protect the vineyard), and the aging keeps the profile’s caveat: a sheet written for the Superiore, the bottle confirmed with the sommelier.",
+			"source": "research:producers-cellar-italy-2026-10-10.md#1. La Miraja"
+		},
+		{
+			"target": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023",
+			"field": "kept.2.a",
+			"op": "replace",
+			"value": {
+				"from": "Answer: The menu does not say how it is aged, so I will check with the sommelier.",
+				"to": "Answer: Not noticeably: the producer describes steel, then neutral oak, which softens the wine without an oaky flavor; I will confirm this bottle with the sommelier."
+			},
+			"reason": "Cellar review, house-menu-2: the guest asks whether it is oaky; neutral oak is the answer the producer gives, with the bottle confirmed.",
+			"source": "research:producers-cellar-italy-2026-10-10.md#1. La Miraja"
+		},
+		{
+			"target": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "Say Barbera d'Asti as bar-BEAR-ah dee-AHS-tee, and La Miraja and Le Masche as the label reads until the sommelier gives the pronunciation.",
+				"to": "Say Barbera d'Asti as bar-BEAR-ah DAHS-tee, La Miraja as lah mee-RAH-yah and Le Masche as leh MAHS-keh."
+			},
+			"reason": "Cellar review, house-menu-2: the watch note respelled d’Asti as if the d were a separate word and deferred the producer’s names, against the say mark (DAHS-tee, lah mee-RAH-yah, leh MAHS-keh).",
+			"source": "research:producers-cellar-italy-2026-10-10.md#1. La Miraja"
+		},
+		{
+			"target": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023",
+			"field": "kept.4.a",
+			"op": "replace",
+			"value": {
+				"from": "Show the label and say La Miraja Le Masche, Barbera d'Asti, as the label reads.",
+				"to": "Show the label and say lah mee-RAH-yah, leh MAHS-keh, Barbera d'Asti."
+			},
+			"reason": "Cellar review, house-menu-2: the pour note deferred the names the say mark already respells.",
+			"source": "research:producers-cellar-italy-2026-10-10.md#1. La Miraja"
+		},
+		{
+			"target": "wine:Inglenook ‘Rubicon’ 2010",
+			"field": "profile",
+			"op": "replace",
+			"value": {
+				"from": "Rubicon is its Cabernet Sauvignon-led Bordeaux blend, with Merlot, Cabernet Franc and Petit Verdot.",
+				"to": "Rubicon is its Cabernet Sauvignon-led Bordeaux blend: the 2010 is about 87 percent Cabernet Sauvignon, with Cabernet Franc, Petit Verdot and a little Merlot."
+			},
+			"reason": "Cellar review, house-menu-2: the blend line was the 2019’s order of grapes; the 2010 we pour is about 87 percent Cabernet Sauvignon with Merlot the smallest part.",
+			"source": "research:cellar-review-2026-10-11-house-menu-2.md#6. Inglenook Rubicon 2010"
+		},
+		{
+			"target": "wine:Inglenook ‘Rubicon’ 2010",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "sell through the same night; never decant it for more than about thirty minutes.",
+				"to": "sell through the same night."
+			},
+			"reason": "Cellar review, house-menu-2: the thirty minute ceiling on air stands in no source and is poor advice for a structured Napa blend; the serve mark’s upright bottle and slow pour stay.",
+			"source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+		},
+		{
+			"target": "wine:Inglenook ‘Rubicon’ 2010",
+			"field": "kept.4.a",
+			"op": "replace",
+			"value": {
+				"from": "pour slowly and leave the sediment behind; never decant it for more than about thirty minutes.",
+				"to": "pour slowly and leave the sediment behind."
+			},
+			"reason": "Cellar review, house-menu-2: the thirty minute ceiling on air stands in no source; how long the sommelier decants a bottle is a lineup question.",
+			"source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+		},
+		{
+			"target": "wine:Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+			"field": "profile",
+			"op": "replace",
+			"value": {
+				"from": "The dinner tasting’s red, with the Rohan duck (4 oz pour).",
+				"to": "The dinner tasting’s Cabernet, with the Rohan duck (4 oz pour)."
+			},
+			"reason": "Cellar review, house-menu-2: the dinner tasting pours two reds; the Jadot Beaune is the other, so the Hobbs is the Cabernet.",
+			"source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+		},
+		{
+			"target": "wine:Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "is the dinner tasting's red, a 4 oz pour",
+				"to": "is the dinner tasting's Cabernet, a 4 oz pour"
+			},
+			"reason": "Cellar review, house-menu-2: two reds on the dinner tasting; the Hobbs is the Cabernet.",
+			"source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+		},
+		{
+			"target": "wine:Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "Paul Hobbs is the Napa winemaker behind it, and Coombsville, KOOMZ-vil, is one of Napa's cooler corners, near the town of Napa, so its Cabernet keeps its freshness.",
+				"to": "Paul Hobbs founded his winery in 1991 at Sebastopol, in Sonoma County; this Cabernet comes from Coombsville, KOOMZ-vil, one of Napa's cooler corners, just east of the city of Napa and open to San Pablo Bay, so it keeps its freshness."
+			},
+			"reason": "Cellar review, house-menu-2: his winery is at Sebastopol in Sonoma County, so the Napa winemaker was wrong, and a living winemaker is named by a dated fact, the founding, not a present role; Coombsville is placed as the sources place it.",
+			"source": "research:producers-cellar-napa-icons-2026-10-10.md#2. Paul Hobbs"
+		},
+		{
+			"target": "wine:Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+			"field": "kept.2.a",
+			"op": "replace",
+			"value": {
+				"from": "Answer: One of Napa's cooler corners, near the town of Napa, so the Cabernet keeps its freshness.",
+				"to": "Answer: Just east of the city of Napa, open to San Pablo Bay: one of Napa's cooler corners, so the Cabernet keeps its freshness."
+			},
+			"reason": "Cellar review, house-menu-2: the answer now says why Coombsville is cool, the bay air, as the sources give it.",
+			"source": "research:producers-cellar-napa-icons-2026-10-10.md#2. Paul Hobbs"
+		},
+		{
+			"target": "wine:Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "at breakfast and lunch and at dinner; it is the only sweet wine sold à la carte.",
+				"to": "at breakfast and lunch and at dinner; the bottle list carries more sweet wines, among them a gold capsule Spätlese from the same estate."
+			},
+			"reason": "Cellar review, house-menu-2: the bottle list sells twenty five dessert and fortified wines a la carte, the estate’s own Kranklei Spätlese Goldkapsel among them, so only sweet wine sold a la carte was wrong.",
+			"source": "research:cellar-review-2026-10-11-house-menu-2.md#8. Dr. Hermann"
+		},
+		{
+			"target": "wine:Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)",
+			"field": "sayIt",
+			"op": "replace",
+			"value": {
+				"from": "It’s perfect to share.",
+				"to": "It pours about four small glasses, made for sharing."
+			},
+			"reason": "Cellar review, house-menu-2: perfect is the empty praise the notes ban; the guest line now gives the fact behind it, four small glasses.",
+			"source": "research:cellar-review-2026-10-11-house-menu-2.md#8. Dr. Hermann"
+		},
+		{
+			"target": "wine:Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)",
+			"field": "lines.s20",
+			"op": "replace",
+			"value": {
+				"from": "It pours about four dessert glasses, perfect to share.",
+				"to": "It pours about four dessert glasses, made for sharing."
+			},
+			"reason": "Cellar review, house-menu-2: perfect is the empty praise the notes ban.",
+			"source": "research:cellar-review-2026-10-11-house-menu-2.md#8. Dr. Hermann"
+		},
+		{
+			"target": "wine:Domaine La Tour Vieille Banyuls Reserva NV",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "until it is answered, the coffee cake, the Jubilee and the Snickers are coffee only à la carte.",
+				"to": "until it is answered, offer our coffee with the coffee cake, the Jubilee and the Snickers à la carte, and bring the sommelier to a guest who wants a sweet wine."
+			},
+			"reason": "Cellar review, house-menu-2: the sentence was not sayable as written and left a guest who wants a sweet wine with nothing; the sommelier holds the bottle list’s fortified wines.",
+			"source": "research:cellar-review-2026-10-11-house-menu-2.md#9. Domaine La Tour Vieille"
+		},
+		{
+			"target": "wine:Drappier ‘Carte d’Or’ Brut NV (375 ml)",
+			"field": "profile",
+			"op": "replace",
+			"value": {
+				"from": "Carte d'Or is mostly Pinot Noir, about three parts in four, with Chardonnay and Meunier",
+				"to": "Carte d'Or is mostly Pinot Noir, three parts in four or more, with Chardonnay and Meunier"
+			},
+			"reason": "Cellar review, house-menu-2: the sources give about 75 or about 90 percent Pinot Noir; three parts in four or more is true of both.",
+			"source": "research:producers-cellar-champagne-menu-2026-10-10.md#4. Drappier, Urville, Côte des Bar"
+		},
+		{
+			"target": "wine:Drappier ‘Carte d’Or’ Brut NV (375 ml)",
+			"field": "kept.2.a",
+			"op": "replace",
+			"value": {
+				"from": "Answer: Mostly Pinot Noir, about three parts in four, with Chardonnay and Meunier;",
+				"to": "Answer: Mostly Pinot Noir, three parts in four or more, with Chardonnay and Meunier;"
+			},
+			"reason": "Cellar review, house-menu-2: the two sources disagree, 75 or 90 percent Pinot Noir; the answer now holds for both.",
+			"source": "research:producers-cellar-champagne-menu-2026-10-10.md#4. Drappier, Urville, Côte des Bar"
+		},
+		{
+			"target": "wine:Krug ‘Grand Cuvée’ Brut NV (375 ml)",
+			"field": "kept.2.a",
+			"op": "replace",
+			"value": {
+				"from": "Answer: No, it is Krug's prestige non-vintage Champagne.",
+				"to": "Answer: No, by design: it is Krug's prestige Champagne, a blend of more than a hundred wines from ten or more years."
+			},
+			"reason": "Cellar review, house-menu-2: a guest who hears non-vintage at $305 hears a lesser wine; the many-year blend the profile already teaches is the answer, said as a choice Krug makes rather than as an apology.",
+			"source": "research:master-review-somm-2026-10-04.md#The Birthday Bubbles, the Bubbles rosés and the Argyle: what is in the bottle"
+		},
+		{
+			"target": "wine:Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+			"field": "lines.s45",
+			"op": "replace",
+			"value": {
+				"from": "Sous Bois means the Champagne is aged in oak, as the menu prints it, which gives a dry Brut roundness and a toasty, nutty depth.",
+				"to": "Sous Bois, under wood, means its base wines are fermented and aged in oak barrels, which gives a dry Brut roundness and a toasty, nutty depth."
+			},
+			"reason": "Cellar review, house-menu-2: the finished Champagne is not aged in oak; every base wine is fermented and aged in oak barrels before the second fermentation in bottle. A guest line, so the menu’s own words are left to the menu.",
+			"source": "research:producers-cellar-champagne-menu-2026-10-10.md#7. Billecart-Salmon"
+		},
+		{
+			"target": "wine:Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "is its oak-aged Brut, printed on our menu as oak aged;",
+				"to": "is its Brut whose base wines are fermented in oak barrels, printed on our menu as oak aged;"
+			},
+			"reason": "Cellar review, house-menu-2: the oak is in the making of the base wines, not on the finished Champagne.",
+			"source": "research:producers-cellar-champagne-menu-2026-10-10.md#7. Billecart-Salmon"
+		},
+		{
+			"target": "wine:Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "The blend, and how many bottles were made, are questions for the sommelier.",
+				"to": "The Sous Bois is usually about a third each of Chardonnay, Pinot Noir and Meunier; this bottling's blend, and how many were made, are questions for the sommelier."
+			},
+			"reason": "Cellar review, house-menu-2: the profile gives the usual blend; the description deferred it whole.",
+			"source": "research:producers-cellar-champagne-menu-2026-10-10.md#7. Billecart-Salmon"
+		},
+		{
+			"target": "wine:Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+			"field": "kept.2.a",
+			"op": "replace",
+			"value": {
+				"from": "Answer: The Champagne is aged in oak, which gives it roundness and a toasty, nutty depth.",
+				"to": "Answer: Under wood: every base wine is fermented and aged in oak barrels before the second fermentation in bottle, which gives roundness and a toasty, nutty depth."
+			},
+			"reason": "Cellar review, house-menu-2: the answer now says what sous bois means and where the oak comes in.",
+			"source": "research:producers-cellar-champagne-menu-2026-10-10.md#7. Billecart-Salmon"
+		},
+		{
+			"target": "wine:Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+			"field": "kept.4.a",
+			"op": "replace",
+			"value": {
+				"from": "beel-KAR sal-MOHN, soo BWAH.",
+				"to": "bee-yeh-KAR sal-MOHN, soo BWAH."
+			},
+			"reason": "Cellar review, house-menu-2: the pour note said the name one way and the say mark and the description another; brought into line with the say mark, the house’s choice, until the lineup settles it.",
+			"source": "research:master-review-somm-2026-10-04.md#Pronunciation"
+		},
+		{
+			"target": "wine:Bollinger ‘Special Cuvée’ Brut NV (1.5 L magnum)",
+			"field": "kept.2.a",
+			"op": "replace",
+			"value": {
+				"from": "Answer: It is two standard bottles in one; the sommelier can tell you how far it will go for your table.",
+				"to": "Answer: It is two standard bottles in one, about ten to twelve glasses of Champagne: a toast and a second glass for a table of five or six."
+			},
+			"reason": "Cellar review, house-menu-2: the answer deferred simple arithmetic a server should give at the table; the pour size is a lineup question.",
+			"source": "research:cellar-review-2026-10-11-house-menu-2.md#14. Bollinger"
+		},
+		{
+			"target": "wine:Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum)",
+			"field": "profile",
+			"op": "replace",
+			"value": {
+				"from": "A magnum is 1.5 L, two standard bottles in one.",
+				"to": "A magnum is 1.5 L, two standard bottles in one. The producer's sheet gives about half Pinot Noir, a third Meunier and the rest Chardonnay, from more than a hundred crus."
+			},
+			"reason": "Cellar review, house-menu-2: the producer’s sheet for the Cuvée Brut gives the blend; the card left the grapes out.",
+			"source": "research:producers-cellar-champagne-menu-2026-10-10.md#1. Piper-Heidsieck, Reims"
+		},
+		{
+			"target": "wine:Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum)",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "The blend is a question for the sommelier.",
+				"to": "The producer's sheet gives about half Pinot Noir, a third Meunier and the rest Chardonnay, from more than a hundred crus."
+			},
+			"reason": "Cellar review, house-menu-2: the blend is on the producer’s sheet; the description deferred it.",
+			"source": "research:producers-cellar-champagne-menu-2026-10-10.md#1. Piper-Heidsieck, Reims"
+		},
+		{
+			"target": "wine:Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum)",
+			"field": "kept.4.a",
+			"op": "replace",
+			"value": {
+				"from": "say Piper-Heidsieck Cuvée, PIE-per HIDE-sick.",
+				"to": "say Piper-Heidsieck Cuvée, PEE-pair HIDE-seek."
+			},
+			"reason": "Cellar review, house-menu-2: the pour note gave a third respelling, against the say mark (PEE-pair HIDE-seek, with PIE-per HIDE-seek accepted).",
+			"source": "research:producers-cellar-champagne-menu-2026-10-10.md#1. Piper-Heidsieck, Reims"
+		},
+		{
+			"target": "wine:Taittinger ‘La Francaise’ Brut NV (3 L double magnum)",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "The blend is a question for the sommelier.",
+				"to": "It is rich in Chardonnay for a house Brut, about four parts in ten, with Pinot Noir and Meunier, which is where its elegance comes from."
+			},
+			"reason": "Cellar review, house-menu-2: the profile already gives the Chardonnay-rich blend; the description deferred it.",
+			"source": "research:producers-bar-wines-zero-mixers-2026-10-10.md#1. Taittinger: Champagne Taittinger, Reims (Flamingo)"
+		},
+		{
+			"target": "wine:Taittinger ‘La Francaise’ Brut NV (3 L double magnum)",
+			"field": "kept.2.a",
+			"op": "replace",
+			"value": {
+				"from": "Answer: Three liters, four standard bottles in one; the sommelier can tell you how far it will go for your party.",
+				"to": "Answer: Three liters, four standard bottles in one, the size Champagne calls a Jeroboam: about twenty to twenty-four glasses, two each for a party of ten or twelve."
+			},
+			"reason": "Cellar review, house-menu-2: the menu prints double magnum, the Bordeaux word; in Champagne the 3 liter bottle is a Jeroboam, which a guest who knows Champagne may say; the count of glasses is arithmetic a server gives, twice the Bollinger magnum’s ten to twelve, so the two cards agree.",
+			"source": "research:cellar-review-2026-10-11-house-menu-2.md#16. Taittinger La Française"
+		},
+		{
+			"target": "wine:Taittinger ‘Prestige’ Rosé Brut NV",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "The blend is a question for the sommelier.",
+				"to": "It is Pinot Noir, Chardonnay and Meunier, colored with a little still red Pinot Noir; the exact shares are a question for the sommelier."
+			},
+			"reason": "Cellar review, house-menu-2: the grapes and the red wine are sourced and in the profile; only the shares conflict between sources.",
+			"source": "research:producers-cellar-champagne-menu-2026-10-10.md#9. Taittinger, Reims: the wine side"
+		}
+	],
+	"verdicts": [
+		{
+			"stemStart": "wine:Charles Lafitte Brut Champagne NV | lines.s45 | It isn't on the by-the-glass list, so I'd check with the bar",
+			"verdict": "kept",
+			"why": "The why mark and every kept note send an à la carte glass to the sommelier; the 45 second line was the lone outlier. Wording only, no drill stem."
+		},
+		{
+			"stemStart": "wine:Fichet ‘Château London’ Mâcon-Igé 2024 | profile | a family estate farmed by the Fichet brothers,",
+			"verdict": "kept",
+			"why": "Who farms the estate today is a present role. 1988 stands in Wine Anorak's \"current domaine, which was formed in 1988\" and in the producer component (\"the domaine as it is today ... 1988\"); nobody is named. Applies beside house-menu-1's profile entry in either order (scratch chain, both orders)."
+		},
+		{
+			"stemStart": "wine:Fichet ‘Château London’ Mâcon-Igé 2024 | kept.0.a | , farmed by the Fichet brothers; it is not the Meursault Fic",
+			"verdict": "amended",
+			"why": "Right to date the domaine and name nobody, but once house-menu-1 has run the clause follows \"in the Mâconnais\", so \"whose present domaine\" read as the region's. Now a clause of its own in the component's words: \"the domaine as it is today was formed in 1988\"."
+		},
+		{
+			"stemStart": "wine:Louis Jadot Beaune 1er Cru 2023 | profile | The dinner tasting’s red for the Redfish Véronique (4 oz pou",
+			"verdict": "kept",
+			"why": "The tasting paste pours the Jadot with the third course and the Hobbs Cabernet with the fourth: two reds, the Jadot first."
+		},
+		{
+			"stemStart": "wine:Louis Jadot Beaune 1er Cru 2023 | kept.0.a | is the dinner tasting's red, a 4 oz pour with the Redfish Vé",
+			"verdict": "kept",
+			"why": "Same fact as the profile; the Tell me about it now agrees."
+		},
+		{
+			"stemStart": "wine:Louis Jadot Beaune 1er Cru 2023 | parts.technique | Louis Jadot; Premier Cru is Beaune’s top tier",
+			"verdict": "reverted",
+			"why": "The original was true: Beaune has no Grand Cru, so Premier Cru is its top tier. The wines label this part \"how it is made\" (codex27 V27_WINE_PARTS, house-schema), and opening a bottle 20 to 30 minutes ahead is service, not making; the swap traded one off-category drill answer for another and repeated the serve mark as the old one repeated the profile. No error to correct, so the stem stays."
+		},
+		{
+			"stemStart": "wine:Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône 2023 | kept.3.a | offer the Personality, our spirit-free sparkling rosé, in it",
+			"verdict": "kept",
+			"why": "The pack's Personality is Wölffer Zero Proof Sparkling Rosé, tart cherry juice and brown sugar syrup: a mixed drink, not a bottle of rosé."
+		},
+		{
+			"stemStart": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023 | profile | the producer describes native fermentation in steel and abou",
+			"verdict": "kept",
+			"why": "The sheet says at least twelve months, not about a year, and it is written for the Superiore while the menu prints Barbera d'Asti; the confirm-with-the-sommelier close stays."
+		},
+		{
+			"stemStart": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023 | kept.0.a | How long it spends in barrel, and what Le Masche means, are ",
+			"verdict": "amended",
+			"why": "\"Are the witches of Piemontese folklore said to guard the vineyard\" fused two readings into one claim; the research gives masca, plural masche, as the dialect word for a witch, and the name as recalling the local spirits believed to protect the vineyard, so both are told. The aging had also lost the caveat the profile and the source keep; \"so confirm this bottle with the sommelier\" is restored."
+		},
+		{
+			"stemStart": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023 | kept.2.a | Answer: The menu does not say how it is aged, so I will chec",
+			"verdict": "kept",
+			"why": "Whether this bottle is steel only or steel then neutral oak, the honest answer to \"is it oaky?\" is no; neutral oak shapes texture, not flavour, and the bottle is still confirmed."
+		},
+		{
+			"stemStart": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023 | kept.3.a | Say Barbera d'Asti as bar-BEAR-ah dee-AHS-tee, and La Miraja",
+			"verdict": "kept",
+			"why": "d'Asti elides, DAHS-tee, as the say mark gives it; the two names are the say mark's own respellings (master-review-somm, expert)."
+		},
+		{
+			"stemStart": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023 | kept.4.a | Show the label and say La Miraja Le Masche, Barbera d'Asti, ",
+			"verdict": "kept",
+			"why": "The pour note now says what the say mark says, as every other pour note does."
+		},
+		{
+			"stemStart": "wine:Inglenook ‘Rubicon’ 2010 | profile | Rubicon is its Cabernet Sauvignon-led Bordeaux blend, with M",
+			"verdict": "kept",
+			"why": "One WebSearch of 11 October 2026 (wine.com, reprinting the Wine Advocate) confirms 87 Cabernet Sauvignon, 6 Cabernet Franc, 5 Petit Verdot, 2 Merlot for the 2010, with no conflicting figure; the old order was the 2019's. The lineup ask on the estate's own sheet stands."
+		},
+		{
+			"stemStart": "wine:Inglenook ‘Rubicon’ 2010 | kept.0.a | sell through the same night; never decant it for more than a",
+			"verdict": "kept",
+			"why": "The thirty minute ceiling stands in no source (napa-icons verification item 14; claims.json somm-reds-20 calls it unconfirmed); the upright bottle and slow pour stay. The bottle list Rubicon (w-hcewiwtc) still carries it, outside this batch."
+		},
+		{
+			"stemStart": "wine:Inglenook ‘Rubicon’ 2010 | kept.4.a | pour slowly and leave the sediment behind; never decant it f",
+			"verdict": "kept",
+			"why": "Same ceiling, same want of a source; the decant is a lineup question already filed."
+		},
+		{
+			"stemStart": "wine:Paul Hobbs Coombsville Cabernet Sauvignon 2021 | profile | The dinner tasting’s red, with the Rohan duck (4 oz pour).",
+			"verdict": "kept",
+			"why": "Two reds on the dinner tasting; the Hobbs is the Cabernet, as napa-icons \"Repairs owed in the pack\" gives it."
+		},
+		{
+			"stemStart": "wine:Paul Hobbs Coombsville Cabernet Sauvignon 2021 | kept.0.a | is the dinner tasting's red, a 4 oz pour",
+			"verdict": "kept",
+			"why": "Same fact in the Tell me about it."
+		},
+		{
+			"stemStart": "wine:Paul Hobbs Coombsville Cabernet Sauvignon 2021 | kept.0.a | Paul Hobbs is the Napa winemaker behind it, and Coombsville,",
+			"verdict": "amended",
+			"why": "Right: \"the Napa winemaker\" was wrong (his winery is at Sebastopol, Sonoma County), and naming him by the 1991 founding is a dated fact, not a present role; Coombsville placed east of the city of Napa and open to San Pablo Bay as items 1 to 3 give it. But the new sentence no longer tied the wine to Coombsville, so \"this Cabernet comes from Coombsville\" joins the two halves."
+		},
+		{
+			"stemStart": "wine:Paul Hobbs Coombsville Cabernet Sauvignon 2021 | kept.2.a | Answer: One of Napa's cooler corners, near the town of Napa,",
+			"verdict": "kept",
+			"why": "The answer now says why Coombsville is cool, the bay air, on the same sources; \"city\" rather than \"town\" of Napa is right."
+		},
+		{
+			"stemStart": "wine:Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml) | kept.0.a | at breakfast and lunch and at dinner; it is the only sweet w",
+			"verdict": "kept",
+			"why": "The pack sells twenty five Dessert and fortified bottles à la carte, the estate's Kranklei Spätlese Goldkapsel 2018 at $95 (w-1j9ri89c) among them, so \"the only sweet wine sold à la carte\" was false."
+		},
+		{
+			"stemStart": "wine:Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml) | sayIt | It’s perfect to share.",
+			"verdict": "kept",
+			"why": "\"Perfect\" is in engine.mjs BANNED_WORDS; the guest line now gives the fact behind the praise. Field name sayIt is the builder's and applied in the chain."
+		},
+		{
+			"stemStart": "wine:Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml) | lines.s20 | It pours about four dessert glasses, perfect to share.",
+			"verdict": "kept",
+			"why": "Same banned word in the 20 second line."
+		},
+		{
+			"stemStart": "wine:Domaine La Tour Vieille Banyuls Reserva NV | kept.3.a | until it is answered, the coffee cake, the Jubilee and the S",
+			"verdict": "kept",
+			"why": "The watch note now tells the server what to offer and where a guest who wants a sweet wine goes, consistent with the sell note's coffee with chicory."
+		},
+		{
+			"stemStart": "wine:Drappier ‘Carte d’Or’ Brut NV (375 ml) | profile | Carte d'Or is mostly Pinot Noir, about three parts in four, ",
+			"verdict": "kept",
+			"why": "Sources give about 75 or about 90 percent Pinot Noir; \"three parts in four or more\" is true of both."
+		},
+		{
+			"stemStart": "wine:Drappier ‘Carte d’Or’ Brut NV (375 ml) | kept.2.a | Answer: Mostly Pinot Noir, about three parts in four, with C",
+			"verdict": "kept",
+			"why": "Same repair in the guest answer."
+		},
+		{
+			"stemStart": "wine:Krug ‘Grand Cuvée’ Brut NV (375 ml) | kept.2.a | Answer: No, it is Krug's prestige non-vintage Champagne.",
+			"verdict": "amended",
+			"why": "The original was true but thin; the fix's closing \"never a lesser non-vintage\" was a defensive clause a server would not say at the table. Now the blend is stated plainly as Krug's choice: \"No, by design: it is Krug's prestige Champagne, a blend of more than a hundred wines from ten or more years.\""
+		},
+		{
+			"stemStart": "wine:Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum) | lines.s45 | Sous Bois means the Champagne is aged in oak, as the menu pr",
+			"verdict": "amended",
+			"why": "Right on the oak: the base wines, not the finished Champagne, are fermented and aged in barrel. But \"the menu's oak aged\" is an aside no guest line can carry; dropped."
+		},
+		{
+			"stemStart": "wine:Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum) | kept.0.a | is its oak-aged Brut, printed on our menu as oak aged;",
+			"verdict": "kept",
+			"why": "The oak is placed in the making of the base wines; the menu's words are kept as the menu's."
+		},
+		{
+			"stemStart": "wine:Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum) | kept.0.a | The blend, and how many bottles were made, are questions for",
+			"verdict": "kept",
+			"why": "The usual third each of the three grapes is sourced (K&L, Flatiron, Millesima via master-review-somm); this bottling's blend and count stay with the sommelier."
+		},
+		{
+			"stemStart": "wine:Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum) | kept.2.a | Answer: The Champagne is aged in oak, which gives it roundne",
+			"verdict": "kept",
+			"why": "Says what sous bois means and where the oak comes in."
+		},
+		{
+			"stemStart": "wine:Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum) | kept.4.a | beel-KAR sal-MOHN, soo BWAH.",
+			"verdict": "kept",
+			"why": "Brings the pour note into line with the card's own say mark and Tell me about it; the pronunciation is unsettled in the research and the lineup question stands."
+		},
+		{
+			"stemStart": "wine:Bollinger ‘Special Cuvée’ Brut NV (1.5 L magnum) | kept.2.a | Answer: It is two standard bottles in one; the sommelier can",
+			"verdict": "kept",
+			"why": "Arithmetic: 1.5 liters is about 50.7 oz, ten glasses at 5 oz and twelve at 4 oz; two each for five or six. The house pour size is asked at lineup."
+		},
+		{
+			"stemStart": "wine:Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum) | profile | A magnum is 1.5 L, two standard bottles in one.",
+			"verdict": "kept",
+			"why": "The producer's sheet gives 50 to 55 Pinot Noir, 30 to 35 Meunier, 15 to 20 Chardonnay and more than 100 crus; about half, a third and the rest is a fair rounding."
+		},
+		{
+			"stemStart": "wine:Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum) | kept.0.a | The blend is a question for the sommelier.",
+			"verdict": "kept",
+			"why": "Same sheet in the Tell me about it."
+		},
+		{
+			"stemStart": "wine:Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum) | kept.4.a | say Piper-Heidsieck Cuvée, PIE-per HIDE-sick.",
+			"verdict": "kept",
+			"why": "The pour note now gives the say mark's respelling (Wine Spectator via master-review-somm)."
+		},
+		{
+			"stemStart": "wine:Taittinger ‘La Francaise’ Brut NV (3 L double magnum) | kept.0.a | The blend is a question for the sommelier.",
+			"verdict": "kept",
+			"why": "Mirrors the profile's sourced 40, 35, 25."
+		},
+		{
+			"stemStart": "wine:Taittinger ‘La Francaise’ Brut NV (3 L double magnum) | kept.2.a | Answer: Three liters, four standard bottles in one; the somm",
+			"verdict": "amended",
+			"why": "Jeroboam is right for the 3 liter Champagne bottle (the large format component says the same), but \"about twenty glasses, enough for a party of ten\" was the 5 oz floor while the Bollinger magnum card gives ten to twelve; now twenty to twenty-four, two each for ten or twelve, so the two cards agree."
+		},
+		{
+			"stemStart": "wine:Taittinger ‘Prestige’ Rosé Brut NV | kept.0.a | The blend is a question for the sommelier.",
+			"verdict": "kept",
+			"why": "The three grapes and the still red Pinot Noir are sourced and already in the profile; only the shares conflict, and those stay with the sommelier."
+		}
+	]
+}

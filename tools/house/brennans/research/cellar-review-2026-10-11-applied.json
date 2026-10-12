@@ -1,0 +1,2382 @@
+{
+  "integration": "The bounded cellar review of the Brennan’s house cards, 11 October 2026: the six research/cellar-review-2026-10-11-house files and their notes, as the refuters left them, applied to brennans/overrides.json and built into the 23:30 edition, then repaired by the verifier and rebuilt as the 01:00 edition of 12 October.",
+  "integratedOn": "2026-10-12",
+  "resumed": "A run of this integration was cut by a container restart at about 23:35 UTC on 11 October, after appending 261 entries (244 replace or set entries and 17 asks), stamping 23:30 and mirroring a pack. This run read git diff of overrides.json and engine.mjs, matched every appended entry against the six review files (none missing, none duplicated, none appended twice), kept the stamp, held back one entry (below), tidied the reasons, and ran the whole chain and every check again from the start.",
+  "edition": {
+    "stamp": "2026-10-11T23:30:00.000Z",
+    "previous": "2026-10-11T16:20:00.000Z (WorldTable 5a095a9)",
+    "rule": "later than the previous stamp and never ahead of the clock: the clock read 2026-10-11T23:41Z when this run resumed and the chain ran from 23:49Z on, so the stamp the earlier run set was kept",
+    "engineComment": "tools/house/engine.mjs: the edition history gains the 23:30 edition’s line (the bounded cellar review of the house’s wine cards, as the refuters left them), stamped at the half hour before its build, never ahead of the clock.",
+    "current": "2026-10-12T01:00:00.000Z (after the verifier repairs; the 23:30 stamp above is the integration run's, kept as history in engine.mjs)"
+  },
+  "counts": {
+    "overridesBefore": 3739,
+    "overridesAfter": 3999,
+    "appended": 260,
+    "replaceOrSetEntries": 243,
+    "fromTheReviewFiles": 238,
+    "integratorEntries": 5,
+    "asksFiled": 17,
+    "askLinesInTheNotes": 18,
+    "lineupRegisterAfter": 543,
+    "overridesAfterVerifier": 4026,
+    "verifierEntries": 27
+  },
+  "batches": [
+    {
+      "batch": "house-floor-1",
+      "reviewFile": "research/cellar-review-2026-10-11-house-floor-1.json",
+      "note": "research/cellar-review-2026-10-11-house-floor-1.md",
+      "reviewEntries": 26,
+      "applied": 26,
+      "skippedFromNoLongerMatching": 0,
+      "verdicts": 26,
+      "askLinesInNote": 1,
+      "asksFiledFromNote": 1,
+      "adaptations": []
+    },
+    {
+      "batch": "house-floor-2",
+      "reviewFile": "research/cellar-review-2026-10-11-house-floor-2.json",
+      "note": "research/cellar-review-2026-10-11-house-floor-2.md",
+      "reviewEntries": 10,
+      "applied": 10,
+      "skippedFromNoLongerMatching": 0,
+      "verdicts": 10,
+      "askLinesInNote": 3,
+      "asksFiledFromNote": 3,
+      "adaptations": [
+        "entries[9] (Pascal Cotat Lot 2024, region): the reason said Sancerre in the string linked the Codex card to the Sancerre Terroir row; no TERROIR row is named Sancerre (v28Terroir over js/reference.js links neither the old nor the new string), so the reason says instead that the string read as its appellation against the card’s own warning."
+      ]
+    },
+    {
+      "batch": "house-floor-3",
+      "reviewFile": "research/cellar-review-2026-10-11-house-floor-3.json",
+      "note": "research/cellar-review-2026-10-11-house-floor-3.md",
+      "reviewEntries": 76,
+      "applied": 76,
+      "skippedFromNoLongerMatching": 0,
+      "verdicts": 76,
+      "askLinesInNote": 2,
+      "asksFiledFromNote": 2,
+      "adaptations": []
+    },
+    {
+      "batch": "house-floor-4",
+      "reviewFile": "research/cellar-review-2026-10-11-house-floor-4.json",
+      "note": "research/cellar-review-2026-10-11-house-floor-4.md",
+      "reviewEntries": 64,
+      "applied": 64,
+      "skippedFromNoLongerMatching": 0,
+      "verdicts": 64,
+      "askLinesInNote": 4,
+      "asksFiledFromNote": 4,
+      "adaptations": [
+        "entries[14] (Dominus 2014): the review named the field guest, the pack’s name; the override names it sayIt, the model’s name for the same line (build-brennans.mjs newWine maps guest to sayIt), and the from matched there."
+      ]
+    },
+    {
+      "batch": "house-menu-1",
+      "reviewFile": "research/cellar-review-2026-10-11-house-menu-1.json",
+      "note": "research/cellar-review-2026-10-11-house-menu-1.md",
+      "reviewEntries": 25,
+      "applied": 25,
+      "skippedFromNoLongerMatching": 0,
+      "verdicts": 25,
+      "askLinesInNote": 3,
+      "asksFiledFromNote": 3,
+      "adaptations": []
+    },
+    {
+      "batch": "house-menu-2",
+      "reviewFile": "research/cellar-review-2026-10-11-house-menu-2.json",
+      "note": "research/cellar-review-2026-10-11-house-menu-2.md",
+      "reviewEntries": 37,
+      "applied": 37,
+      "skippedFromNoLongerMatching": 0,
+      "verdicts": 38,
+      "askLinesInNote": 5,
+      "asksFiledFromNote": 5,
+      "adaptations": []
+    }
+  ],
+  "sourcesAndReasons": "Every appended entry’s source opens research:cellar-review-2026-10-11-house-<batch>.md#<section>; where a review entry named only the producer research, the review note’s section was put first and the producer source kept after it. Every reason opens “Cellar review of 11 October 2026, house-<batch>:”; where the review’s own reason already opened “Cellar review, house <batch>:” the doubled opening was taken out (138 reasons), the words otherwise as the refuters left them.",
+  "integratorEntries": [
+    {
+      "n": 3977,
+      "target": "dish:Creole-Spiced Hanger Steak",
+      "field": "pairing.why",
+      "op": "replace",
+      "review": "integrator, lead note 10(d)"
+    },
+    {
+      "n": 3978,
+      "target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+      "field": "grapes",
+      "op": "set",
+      "review": "integrator, lead note 10(d)"
+    },
+    {
+      "n": 3979,
+      "target": "dish:Eggs Hussarde",
+      "field": "bottles.splurge.sayIt",
+      "op": "replace",
+      "review": "integrator, lead note 10(d)"
+    },
+    {
+      "n": 3980,
+      "target": "wine:Stein ‘Weihwasser’ Riesling Feinherb 2023",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "integrator, lead note 10(d)"
+    },
+    {
+      "n": 3981,
+      "target": "wine:Loimer ‘Lois’ Grüner Veltliner 2022",
+      "field": "parts.main",
+      "op": "replace",
+      "review": "integrator, lead note 10(d)"
+    }
+  ],
+  "integratorEntriesWhy": {
+    "dish:Creole-Spiced Hanger Steak pairing.why": "a fromRe, because the model holds the guide’s en dash between Cabernet and Merlot, and a plain from carrying a dash is refused (house-menu-1, Seen and not filed)",
+    "wine:Moulin d’Issan Bordeaux Supérieur 2021 grapes": "a set, because grapes is a list: Merlot now leads, as the importer’s sheet for the 2021 and the card’s other lines say (house-menu-1, Seen and not filed)",
+    "dish:Eggs Hussarde bottles.splurge.sayIt": "the Rare splurge line, the same words as the Rare 2013 s10 (house-floor-1 section 11 and house-menu-1); the Rare 2013 s10 itself is house-floor-1 entries[24], applied as filed",
+    "wine:Stein ‘Weihwasser’ Riesling Feinherb 2023 lines.s45": "the old vines near the village church taken out, as the profile entry of house-floor-2 section 7 takes them out (the refuter’s report names the s45)",
+    "wine:Loimer ‘Lois’ Grüner Veltliner 2022 parts.main": "Lower Austria by a Kamptal estate, to agree with the region string and profile of house-floor-2 section 6 (the refuter’s report names parts.main)"
+  },
+  "notApplied": [
+    {
+      "what": "wine:Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum) grapes, a set to Pinot Noir, Meunier, Chardonnay (house-menu-2 section 15, left by the reviewer for the integrator)",
+      "status": "held back",
+      "why": "True and sourced, and not on the lead’s 10(d) list. Filling the empty list adds one wineGrapes question to the house (1,320 to 1,321 questions dealt), which moves the fixed seed of src/lib/house-drill-round.test.ts, “deals a section round of section items with options from the whole house” (seed 7), so its Entrées round deals no option that is a dish from another section and the test fails; the round itself stays valid. The test is not a file this integration may edit, so the set waits for an edition that reseeds or widens that test. The entry as the earlier run filed it is kept in this file under heldBackEntry."
+    },
+    {
+      "what": "Stein Weihwasser compare row, “from old vines at Alf”",
+      "status": "not supported by the engine",
+      "why": "A comparison is built from brennans/components/wines.json and attached after the overrides are applied (build-brennans.mjs, the compare loop); no override op reaches it, and components/wines.json is not a file this integration may edit. Left for the owner."
+    }
+  ],
+  "heldBackEntry": {
+    "target": "wine:Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum)",
+    "field": "grapes",
+    "op": "set",
+    "value": [
+      "Pinot Noir",
+      "Meunier",
+      "Chardonnay"
+    ],
+    "reason": "Cellar review of 11 October 2026, house-menu-2: the grapes list was empty while the profile and the description now give the blend; the producer’s sheet gives Pinot Noir up to 50 to 55 per cent, Meunier 30 to 35 and Chardonnay 15 to 20, so the three grapes are listed in that order. A list, so a set, left by the reviewer for the integrator.",
+    "source": "research:cellar-review-2026-10-11-house-menu-2.md#15. Piper-Heidsieck ‘Cuvée’ Brut NV, magnum (w-a7np8xs9); research:producers-cellar-champagne-menu-2026-10-10.md#1"
+  },
+  "keptIndexProof": {
+    "how": "Applied as written (the notes say kept.N counts the builder’s model order, not the pack’s alphabetical display order). Proof: the builder refuses a replace whose from is not found, and it built; and an instrumented copy of build-brennans.mjs, run from the scratchpad and writing nothing, recorded the question at each named index as the entry was applied.",
+    "entries": 104,
+    "everyFromFoundAtItsIndex": true,
+    "byIndex": {
+      "0: How is the open bottle kept?": 1,
+      "0: Is it a bespoke blend or the Essentiel under our label?": 1,
+      "0: Tell me about it.": 60,
+      "0: What is Rare, in one breath?": 1,
+      "1: How do I sell it?": 2,
+      "1: Tell me about it.": 1,
+      "2: What do guests ask?": 23,
+      "3: What should I watch for?": 9,
+      "4: How do I pour it?": 3,
+      "4: What should I watch for?": 2,
+      "5: How do I pour it?": 1
+    }
+  },
+  "asksFiled": [
+    {
+      "n": 3982,
+      "question": "What soils does Ridgeview’s Ditchling vineyard, where the Bloomsbury grows, stand on: chalk, as some pages say, or clay, limestone, flint and loam, as a retailer’s sheet for the Bloomsbury says?",
+      "askWhom": "sommelier",
+      "items": [
+        "Ridgeview ‘Bloomsbury’ Brut Sussex NV"
+      ],
+      "source": "research:cellar-review-2026-10-11-house-floor-1.md#Lineup questions no source could settle"
+    },
+    {
+      "n": 3983,
+      "question": "Which Napa vineyards grow the Chateau Montelena Chardonnay 2023? The importer’s sheets name the south-central Napa Valley near Mount Veeder, another reference names the Oak Knoll District, and neither names Calistoga, where the winery stands.",
+      "askWhom": "sommelier",
+      "items": [
+        "Chateau Montelena Chardonnay Napa Valley 2023"
+      ],
+      "source": "research:cellar-review-2026-10-11-house-floor-2.md#Lineup questions no source settled"
+    },
+    {
+      "n": 3984,
+      "question": "Which Meursault parcels make the Coche-Dury Bourgogne Blanc 2022? Only one merchant places them, as parcels across the domaine in Meursault; nothing from the estate says so.",
+      "askWhom": "sommelier",
+      "items": [
+        "Domaine Coche-Dury Bourgogne Blanc 2022"
+      ],
+      "source": "research:cellar-review-2026-10-11-house-floor-2.md#Lineup questions no source settled"
+    },
+    {
+      "n": 3985,
+      "question": "Is the Mas de Valériole Vé 2025 magnum labeled IGP Méditerranée, as our list prints it, or IGP Pays des Bouches-du-Rhône, Terre de Camargue, the label the estate uses for some of its other wines?",
+      "askWhom": "sommelier",
+      "items": [
+        "Mas de Valériole ‘Vé’ Rosé Méditerranée 2025 (1.5 L magnum)"
+      ],
+      "source": "research:cellar-review-2026-10-11-house-floor-2.md#Lineup questions no source settled"
+    },
+    {
+      "n": 3986,
+      "question": "Does the Pétrus 1980 (bin 21131) carry a little Cabernet Franc, as the estate grew some in those years, or is it all Merlot as our card lists it?",
+      "askWhom": "sommelier",
+      "items": [
+        "Pétrus Pomerol 1980"
+      ],
+      "source": "research:cellar-review-2026-10-11-house-floor-3.md#Lineup questions no source settled"
+    },
+    {
+      "n": 3987,
+      "question": "Does the Fèlsina Rancia 2019 (bin 16433) label read Chianti Classico Riserva, as the list prints, or Chianti Classico Gran Selezione?",
+      "askWhom": "sommelier",
+      "items": [
+        "Fattoria di Fèlsina ‘Rancia’ Chianti Classico Riserva 2019"
+      ],
+      "source": "research:cellar-review-2026-10-11-house-floor-3.md#Lineup questions no source settled"
+    },
+    {
+      "n": 3988,
+      "question": "The Joseph Phelps Insignia 2013 card calls Insignia California’s first proprietary Bordeaux-style blend, and the Insignia 2011 half-bottle card, the wine list and one October card say one of the first: which does the sommelier want the floor to say?",
+      "askWhom": "sommelier",
+      "items": [
+        "Joseph Phelps ‘Insignia’ Napa Valley 2013",
+        "Joseph Phelps ‘Insignia’ Napa Valley 2011 (375 ml)"
+      ],
+      "source": "research:cellar-review-2026-10-11-house-floor-4.md#7. Lineup questions"
+    },
+    {
+      "n": 3989,
+      "question": "Who planted Martha’s Vineyard in Oakville: Tom and Martha May, or an earlier owner before them? Our cards now say only that it was the Mays’ vineyard.",
+      "askWhom": "sommelier",
+      "items": [
+        "Heitz Cellar ‘Martha’s Vineyard’ Napa Valley 2009"
+      ],
+      "source": "research:cellar-review-2026-10-11-house-floor-4.md#7. Lineup questions"
+    },
+    {
+      "n": 3990,
+      "question": "If a guest asks who runs the house today, what does the sommelier want said, with a dated source, for Bartolo Mascarello, Gaja, Kracher, Niepoort, Harlan Estate, Dominus, Caymus, Chappellet, Quintarelli, Piedrasassi and Broadbent? The cards now give only who founded or made each name.",
+      "askWhom": "sommelier",
+      "items": [
+        "Bartolo Mascarello Barolo 2017",
+        "Gaja Barbaresco 2012",
+        "Kracher ‘Cuvée’ Auslese Burgenland 2017",
+        "Niepoort Vintage Port 1987",
+        "Harlan Estate Oakville 2006",
+        "Dominus Estate Napa Valley 2014",
+        "Caymus Napa Valley Cabernet Sauvignon 2023",
+        "Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018",
+        "Chappellet ‘Mountain Cuvée’ Napa Valley 2024",
+        "Giuseppe Quintarelli Recioto della Valpolicella Classico 1997",
+        "Piedrasassi ‘Bien Nacido Vineyard’ Santa Maria Valley Syrah 2021",
+        "Broadbent ‘Single Cask’ Malvasia Madeira 500 ml 2009"
+      ],
+      "source": "research:cellar-review-2026-10-11-house-floor-4.md#7. Lineup questions"
+    },
+    {
+      "n": 3991,
+      "question": "Did Castello Banfi revive Moscadello di Montalcino, or join growers already making it? Our cards said revived; no source does, and they now say only that Banfi makes Florus.",
+      "askWhom": "sommelier",
+      "items": [
+        "Castello Banfi ‘Florus’ Moscadello di Montalcino 2011"
+      ],
+      "source": "research:cellar-review-2026-10-11-house-floor-4.md#7. Lineup questions"
+    },
+    {
+      "n": 3992,
+      "question": "The château calls the Moulin d’Issan Merlot-led and the importer’s sheet for the 2021 gives 90 percent Merlot, yet the current menu and Binwise head it under Cabernet Sauvignon blends: should the menus head it as a Merlot blend?",
+      "askWhom": "sommelier",
+      "items": [
+        "Moulin d’Issan Bordeaux Supérieur 2021"
+      ],
+      "source": "research:cellar-review-2026-10-11-house-menu-1.md#Lineup questions no source settled"
+    },
+    {
+      "n": 3993,
+      "question": "What vine age may a server quote for the Fichet Château London, and what age does Domaine Fichet give for the parcel? No source gives a hundred years, the cards now say only old vines, and one listing of the 2018 gives 86 years for the oldest vine.",
+      "askWhom": "sommelier",
+      "items": [
+        "Fichet ‘Château London’ Mâcon-Igé 2024"
+      ],
+      "source": "research:cellar-review-2026-10-11-house-menu-1.md#Lineup questions no source settled; research:cellar-review-2026-10-11-house-menu-2.md#Lineup questions no source could settle"
+    },
+    {
+      "n": 3994,
+      "question": "The house respells Famille Durand as doo-RAHN and Domaine de Durban as dur-BAHN, one French first syllable written two ways: which respelling should the floor use for both?",
+      "askWhom": "sommelier",
+      "items": [
+        "Famille Durand Val de Loire Sauvignon Blanc 2024",
+        "Domaine de Durban Beaumes-de-Venise Rouge 2024"
+      ],
+      "source": "research:cellar-review-2026-10-11-house-menu-1.md#Lineup questions no source settled"
+    },
+    {
+      "n": 3995,
+      "question": "How many glasses does the house pour from a Birthday Bubbles magnum and from the 3 L Taittinger, at 4 oz or 5 oz, so the floor can tell a table how far a bottle goes?",
+      "askWhom": "sommelier",
+      "items": [
+        "Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+        "Bollinger ‘Special Cuvée’ Brut NV (1.5 L magnum)",
+        "Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum)",
+        "Taittinger ‘La Francaise’ Brut NV (3 L double magnum)"
+      ],
+      "source": "research:cellar-review-2026-10-11-house-menu-2.md#Lineup questions no source could settle"
+    },
+    {
+      "n": 3996,
+      "question": "When a table buys the Inglenook Rubicon 2010 by the bottle, does the sommelier decant it, and for how long?",
+      "askWhom": "sommelier",
+      "items": [
+        "Inglenook ‘Rubicon’ 2010",
+        "Inglenook ‘Rubicon’ Rutherford 2010"
+      ],
+      "source": "research:cellar-review-2026-10-11-house-menu-2.md#Lineup questions no source could settle"
+    },
+    {
+      "n": 3997,
+      "question": "When presenting the 3 L Taittinger, does the house want it called a double magnum, as the menu prints, or a Jeroboam, the Champagne name?",
+      "askWhom": "sommelier",
+      "items": [
+        "Taittinger ‘La Francaise’ Brut NV (3 L double magnum)"
+      ],
+      "source": "research:cellar-review-2026-10-11-house-menu-2.md#Lineup questions no source could settle"
+    },
+    {
+      "n": 3998,
+      "question": "Does the house want the floor to say that the 2010 Rubicon is about 87 percent Cabernet Sauvignon, as the Wine Advocate gives it, or does the estate’s own sheet for the 2010 give other shares?",
+      "askWhom": "sommelier",
+      "items": [
+        "Inglenook ‘Rubicon’ 2010",
+        "Inglenook ‘Rubicon’ Rutherford 2010"
+      ],
+      "source": "research:cellar-review-2026-10-11-house-menu-2.md#Lineup questions no source could settle"
+    }
+  ],
+  "asksMerged": "The two Fichet Château London vine age questions (house-menu-1 and house-menu-2) are one ask with both sources, so eighteen ask lines file seventeen asks.",
+  "floor2Repair": {
+    "what": "research/cellar-review-2026-10-11-house-floor-2.json, which another agent’s scratch script rewrote at 20:53 UTC (three entries’ reason and source, and the verdicts array)",
+    "comparedWith": "the house-floor-2 refuter’s report and transcript in workflow run wf_1738de03-78a (agent ac5b6b30337312d0b): the reviewer’s file as the refuter read it, the refuter’s apply script (the Fichet, Coche-Dury and Loimer Lois region reasons and the two sources, the ten verdicts) and its three later corrections (Bouches-du-Rhône, and “a search of my own” twice), rebuilt in the scratchpad",
+    "result": "The file on disk is byte for byte that reconstruction: three amended reasons, ten verdicts (seven kept, three amended). The earlier run of this integration repaired it at 23:19 UTC; this run verified it and changed nothing in it."
+  },
+  "noteCorrections": [
+    "research/cellar-review-2026-10-11-house-floor-2.md: the false claim that the card matched a Meursault Terroir row by the first part of its string is struck from the header, with a note saying it was corrected at integration, and section 3 no longer carries it. This run made that note exact: each old string links the same Terroir row as its new one, Napa Valley for the Montelena, Beaujolais for the Foillard magnum, none for the others (v28Terroir lifted from codex28.js over the TERROIR rows of js/reference.js, every old and new string of the batch).",
+    "research/cellar-review-2026-10-11-house-floor-1.md section 1 (Matrot): the same false Meursault Terroir row claim, corrected by the earlier run of this integration with a note; verified. The Schramsberg string (Calistoga to North Coast) does drop the Napa Valley Terroir link, as its reason says."
+  ],
+  "appliedEntries": [
+    {
+      "n": 3739,
+      "target": "wine:Thierry et Pascale Matrot Bourgogne Blanc 2022 (375 ml)",
+      "field": "region",
+      "op": "replace",
+      "review": "house-floor-1 entries[0]"
+    },
+    {
+      "n": 3740,
+      "target": "wine:Thierry et Pascale Matrot Bourgogne Blanc 2022 (375 ml)",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-1 entries[1]"
+    },
+    {
+      "n": 3741,
+      "target": "wine:Thierry et Pascale Matrot Bourgogne Blanc 2022 (375 ml)",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-1 entries[2]"
+    },
+    {
+      "n": 3742,
+      "target": "wine:Thierry et Pascale Matrot Bourgogne Blanc 2022 (375 ml)",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-1 entries[3]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3743,
+      "target": "wine:Schramsberg ‘Blanc de Blancs’ North Coast 2021 (375 ml)",
+      "field": "region",
+      "op": "replace",
+      "review": "house-floor-1 entries[4]"
+    },
+    {
+      "n": 3744,
+      "target": "wine:Schramsberg ‘Blanc de Blancs’ North Coast 2021 (375 ml)",
+      "field": "lines.s20",
+      "op": "replace",
+      "review": "house-floor-1 entries[5]"
+    },
+    {
+      "n": 3745,
+      "target": "wine:Chartogne-Taillet Rosé Brut NV",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-1 entries[6]"
+    },
+    {
+      "n": 3746,
+      "target": "wine:Tribaut-Schloesser ‘Origine’ Brut NV (375 ml)",
+      "field": "style",
+      "op": "replace",
+      "review": "house-floor-1 entries[7]"
+    },
+    {
+      "n": 3747,
+      "target": "wine:Tribaut-Schloesser ‘Origine’ Brut NV (375 ml)",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-1 entries[8]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3748,
+      "target": "wine:Tribaut-Schloesser ‘Origine’ Brut NV (375 ml)",
+      "field": "kept.1.a",
+      "op": "replace",
+      "review": "house-floor-1 entries[9]",
+      "keptQuestionAtIndex": "How do I sell it?"
+    },
+    {
+      "n": 3749,
+      "target": "wine:Ridgeview ‘Bloomsbury’ Brut Sussex NV",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-1 entries[11]"
+    },
+    {
+      "n": 3750,
+      "target": "wine:Ridgeview ‘Bloomsbury’ Brut Sussex NV",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-1 entries[11]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3751,
+      "target": "wine:Ridgeview ‘Bloomsbury’ Brut Sussex NV",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-1 entries[12]"
+    },
+    {
+      "n": 3752,
+      "target": "wine:Ridgeview ‘Bloomsbury’ Brut Sussex NV",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-floor-1 entries[13]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3753,
+      "target": "wine:Ridgeview ‘Bloomsbury’ Brut Sussex NV",
+      "field": "kept.3.a",
+      "op": "replace",
+      "review": "house-floor-1 entries[14]",
+      "keptQuestionAtIndex": "What should I watch for?"
+    },
+    {
+      "n": 3754,
+      "target": "wine:Chapel Down Rosé Brut Kent NV",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-1 entries[15]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3755,
+      "target": "wine:Chapel Down Rosé Brut Kent NV",
+      "field": "why",
+      "op": "replace",
+      "review": "house-floor-1 entries[16]"
+    },
+    {
+      "n": 3756,
+      "target": "wine:Chapel Down Rosé Brut Kent NV",
+      "field": "kept.3.a",
+      "op": "replace",
+      "review": "house-floor-1 entries[17]",
+      "keptQuestionAtIndex": "What should I watch for?"
+    },
+    {
+      "n": 3757,
+      "target": "wine:Armand de Brignac ‘Gold’ Brut NV",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-1 entries[18]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3758,
+      "target": "wine:Armand de Brignac ‘Gold’ Brut NV",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-floor-1 entries[19]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3759,
+      "target": "wine:Jacques Selosse ‘Initial’ Blanc de Blancs Brut NV",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-1 entries[20]"
+    },
+    {
+      "n": 3760,
+      "target": "wine:Dow’s Vintage Port 2000 (375 ml)",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-floor-1 entries[21]"
+    },
+    {
+      "n": 3761,
+      "target": "wine:Dow’s Vintage Port 2000 (375 ml)",
+      "field": "lines.s20",
+      "op": "replace",
+      "review": "house-floor-1 entries[22]"
+    },
+    {
+      "n": 3762,
+      "target": "wine:Dow’s Vintage Port 2000 (375 ml)",
+      "field": "parts.sauce",
+      "op": "replace",
+      "review": "house-floor-1 entries[23]"
+    },
+    {
+      "n": 3763,
+      "target": "wine:Rare Champagne ‘Rare’ Brut 2013",
+      "field": "lines.s10",
+      "op": "replace",
+      "review": "house-floor-1 entries[24]"
+    },
+    {
+      "n": 3764,
+      "target": "wine:Rare Champagne ‘Rare’ Brut 2013",
+      "field": "why",
+      "op": "replace",
+      "review": "house-floor-1 entries[25]"
+    },
+    {
+      "n": 3765,
+      "target": "wine:Mas de Valériole ‘Vé’ Rosé Méditerranée 2025 (1.5 L magnum)",
+      "field": "region",
+      "op": "replace",
+      "review": "house-floor-2 entries[0]"
+    },
+    {
+      "n": 3766,
+      "target": "wine:Jean Foillard ‘Côte du Py’ Morgon 2023 (1.5 L magnum)",
+      "field": "region",
+      "op": "replace",
+      "review": "house-floor-2 entries[1]"
+    },
+    {
+      "n": 3767,
+      "target": "wine:Jean-Philippe Fichet Bourgogne Blanc 2023",
+      "field": "region",
+      "op": "replace",
+      "review": "house-floor-2 entries[2]"
+    },
+    {
+      "n": 3768,
+      "target": "wine:Domaine Coche-Dury Bourgogne Blanc 2022",
+      "field": "region",
+      "op": "replace",
+      "review": "house-floor-2 entries[3]"
+    },
+    {
+      "n": 3769,
+      "target": "wine:Château d’Esclans ‘Whispering Angel’ Côtes de Provence Rosé 2024",
+      "field": "region",
+      "op": "replace",
+      "review": "house-floor-2 entries[4]"
+    },
+    {
+      "n": 3770,
+      "target": "wine:Loimer ‘Lois’ Grüner Veltliner 2022",
+      "field": "region",
+      "op": "replace",
+      "review": "house-floor-2 entries[5]"
+    },
+    {
+      "n": 3771,
+      "target": "wine:Loimer ‘Lois’ Grüner Veltliner 2022",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-floor-2 entries[6]"
+    },
+    {
+      "n": 3772,
+      "target": "wine:Stein ‘Weihwasser’ Riesling Feinherb 2023",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-floor-2 entries[7]"
+    },
+    {
+      "n": 3773,
+      "target": "wine:Chateau Montelena Chardonnay Napa Valley 2023",
+      "field": "region",
+      "op": "replace",
+      "review": "house-floor-2 entries[8]"
+    },
+    {
+      "n": 3774,
+      "target": "wine:Pascal Cotat ‘Lot 2024’ Chavignol Rosé",
+      "field": "region",
+      "op": "replace",
+      "review": "house-floor-2 entries[9]"
+    },
+    {
+      "n": 3775,
+      "target": "wine:Château Latour Pauillac Premier Cru Classé 1946",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-floor-3 entries[3]"
+    },
+    {
+      "n": 3776,
+      "target": "wine:Château Latour Pauillac Premier Cru Classé 1946",
+      "field": "lines.s10",
+      "op": "replace",
+      "review": "house-floor-3 entries[3]"
+    },
+    {
+      "n": 3777,
+      "target": "wine:Château Latour Pauillac Premier Cru Classé 1946",
+      "field": "lines.s20",
+      "op": "replace",
+      "review": "house-floor-3 entries[3]"
+    },
+    {
+      "n": 3778,
+      "target": "wine:Château Latour Pauillac Premier Cru Classé 1946",
+      "field": "sayIt",
+      "op": "replace",
+      "review": "house-floor-3 entries[3]"
+    },
+    {
+      "n": 3779,
+      "target": "wine:Château Trotanoy Pomerol 1946",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-floor-3 entries[6]"
+    },
+    {
+      "n": 3780,
+      "target": "wine:Château Trotanoy Pomerol 1946",
+      "field": "lines.s10",
+      "op": "replace",
+      "review": "house-floor-3 entries[6]"
+    },
+    {
+      "n": 3781,
+      "target": "wine:Château Trotanoy Pomerol 1946",
+      "field": "sayIt",
+      "op": "replace",
+      "review": "house-floor-3 entries[6]"
+    },
+    {
+      "n": 3782,
+      "target": "wine:Château-Figeac Saint-Émilion Premier Grand Cru Classé 1946",
+      "field": "lines.s20",
+      "op": "replace",
+      "review": "house-floor-3 entries[8]"
+    },
+    {
+      "n": 3783,
+      "target": "wine:Château-Figeac Saint-Émilion Premier Grand Cru Classé 1946",
+      "field": "sayIt",
+      "op": "replace",
+      "review": "house-floor-3 entries[8]"
+    },
+    {
+      "n": 3784,
+      "target": "wine:Château Canon Saint-Émilion Premier Grand Cru Classé 1946",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-floor-3 entries[11]"
+    },
+    {
+      "n": 3785,
+      "target": "wine:Château Canon Saint-Émilion Premier Grand Cru Classé 1946",
+      "field": "lines.s10",
+      "op": "replace",
+      "review": "house-floor-3 entries[11]"
+    },
+    {
+      "n": 3786,
+      "target": "wine:Château Canon Saint-Émilion Premier Grand Cru Classé 1946",
+      "field": "sayIt",
+      "op": "replace",
+      "review": "house-floor-3 entries[11]"
+    },
+    {
+      "n": 3787,
+      "target": "wine:Château Latour Pauillac Premier Cru Classé 1946",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-3 entries[12]"
+    },
+    {
+      "n": 3788,
+      "target": "wine:Château Latour Pauillac Premier Cru Classé 1946",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[13]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3789,
+      "target": "wine:Château Mouton-Rothschild Pauillac 1er Cru Classé 2005",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-3 entries[17]"
+    },
+    {
+      "n": 3790,
+      "target": "wine:Château Mouton-Rothschild Pauillac 1er Cru Classé 2005",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-3 entries[17]"
+    },
+    {
+      "n": 3791,
+      "target": "wine:Château Mouton-Rothschild Pauillac 1er Cru Classé 2005",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[17]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3792,
+      "target": "wine:Château Mouton-Rothschild Pauillac 1er Cru Classé 2005",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[17]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3793,
+      "target": "wine:Domaine Jean Grivot Echézeaux Grand Cru 2011",
+      "field": "region",
+      "op": "replace",
+      "review": "house-floor-3 entries[18]"
+    },
+    {
+      "n": 3794,
+      "target": "wine:Domaine de la Romanée-Conti Echézeaux Grand Cru 2015",
+      "field": "region",
+      "op": "replace",
+      "review": "house-floor-3 entries[19]"
+    },
+    {
+      "n": 3795,
+      "target": "wine:Domaine Jean Grivot Echézeaux Grand Cru 2011",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-3 entries[20]"
+    },
+    {
+      "n": 3796,
+      "target": "wine:Domaine Jean Grivot ‘Les Charmois’ Nuits-Saint-Georges 2013",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-3 entries[21]"
+    },
+    {
+      "n": 3797,
+      "target": "wine:Domaine Jean Grivot ‘Les Charmois’ Nuits-Saint-Georges 2013",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[22]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3798,
+      "target": "wine:Domaine Jean Grivot Echézeaux Grand Cru 2011",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-3 entries[23]"
+    },
+    {
+      "n": 3799,
+      "target": "wine:Domaine Jean Grivot Echézeaux Grand Cru 2011",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[24]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3800,
+      "target": "wine:Domaine de la Romanée-Conti La Tâche Grand Cru 2012",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-3 entries[25]"
+    },
+    {
+      "n": 3801,
+      "target": "wine:Domaine de la Romanée-Conti La Tâche Grand Cru 2012",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-3 entries[26]"
+    },
+    {
+      "n": 3802,
+      "target": "wine:Domaine de la Romanée-Conti La Tâche Grand Cru 2012",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[27]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3803,
+      "target": "wine:Domaine de la Romanée-Conti La Tâche Grand Cru 2012",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[28]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3804,
+      "target": "wine:Domaine de la Romanée-Conti Romanée-Conti Grand Cru 2014",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[29]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3805,
+      "target": "wine:Domaine Armand Rousseau ‘Clos Saint Jacques’ Gevrey-Chambertin Premier Cru 2019",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-3 entries[30]"
+    },
+    {
+      "n": 3806,
+      "target": "wine:Domaine Armand Rousseau ‘Clos Saint Jacques’ Gevrey-Chambertin Premier Cru 2019",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-3 entries[32]"
+    },
+    {
+      "n": 3807,
+      "target": "wine:Domaine Armand Rousseau ‘Clos Saint Jacques’ Gevrey-Chambertin Premier Cru 2019",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[32]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3808,
+      "target": "wine:Domaine Armand Rousseau ‘Clos Saint Jacques’ Gevrey-Chambertin Premier Cru 2019",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[33]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3809,
+      "target": "wine:Domaine Armand Rousseau ‘Clos Saint Jacques’ Gevrey-Chambertin Premier Cru 2019",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[34]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3810,
+      "target": "wine:Domaine Armand Rousseau ‘Clos Saint Jacques’ Gevrey-Chambertin Premier Cru 2019",
+      "field": "kept.3.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[35]",
+      "keptQuestionAtIndex": "What should I watch for?"
+    },
+    {
+      "n": 3811,
+      "target": "wine:Domaine Coudert ‘Clos de la Roilette’ Fleurie 2023",
+      "field": "style",
+      "op": "replace",
+      "review": "house-floor-3 entries[36]"
+    },
+    {
+      "n": 3812,
+      "target": "wine:Domaine Coudert ‘Clos de la Roilette’ Fleurie 2023",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-floor-3 entries[37]"
+    },
+    {
+      "n": 3813,
+      "target": "wine:Domaine Coudert ‘Clos de la Roilette’ Fleurie 2023",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-3 entries[38]"
+    },
+    {
+      "n": 3814,
+      "target": "wine:Domaine Coudert ‘Clos de la Roilette’ Fleurie 2023",
+      "field": "parts.main",
+      "op": "replace",
+      "review": "house-floor-3 entries[39]"
+    },
+    {
+      "n": 3815,
+      "target": "wine:Domaine Coudert ‘Clos de la Roilette’ Fleurie 2023",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-3 entries[40]"
+    },
+    {
+      "n": 3816,
+      "target": "wine:Domaine Coudert ‘Clos de la Roilette’ Fleurie 2023",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[41]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3817,
+      "target": "wine:Domaine Coudert ‘Clos de la Roilette’ Fleurie 2023",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[42]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3818,
+      "target": "wine:René Rostaing ‘Ampodium’ Côte-Rôtie 2012",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-floor-3 entries[43]"
+    },
+    {
+      "n": 3819,
+      "target": "wine:René Rostaing ‘Ampodium’ Côte-Rôtie 2012",
+      "field": "parts.technique",
+      "op": "replace",
+      "review": "house-floor-3 entries[44]"
+    },
+    {
+      "n": 3820,
+      "target": "wine:René Rostaing ‘Ampodium’ Côte-Rôtie 2012",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-3 entries[45]"
+    },
+    {
+      "n": 3821,
+      "target": "wine:René Rostaing ‘Ampodium’ Côte-Rôtie 2012",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[46]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3822,
+      "target": "wine:René Rostaing ‘Ampodium’ Côte-Rôtie 2012",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-3 entries[47]"
+    },
+    {
+      "n": 3823,
+      "target": "wine:Alain Graillot Crozes-Hermitage 2015",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-floor-3 entries[48]"
+    },
+    {
+      "n": 3824,
+      "target": "wine:Alain Graillot Crozes-Hermitage 2015",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-3 entries[51]"
+    },
+    {
+      "n": 3825,
+      "target": "wine:Alain Graillot Crozes-Hermitage 2015",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[51]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3826,
+      "target": "wine:Alain Graillot Crozes-Hermitage 2015",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[51]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3827,
+      "target": "wine:André Perret Condrieu 2019",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-3 entries[52]"
+    },
+    {
+      "n": 3828,
+      "target": "wine:André Perret Condrieu 2019",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[53]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3829,
+      "target": "wine:Château Rayas Châteauneuf-du-Pape 2011",
+      "field": "serve",
+      "op": "replace",
+      "review": "house-floor-3 entries[54]"
+    },
+    {
+      "n": 3830,
+      "target": "wine:Château de Beaucastel Châteauneuf-du-Pape Oenothèque 2007",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[55]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3831,
+      "target": "wine:Château de Beaucastel Châteauneuf-du-Pape Oenothèque 2007",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[56]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3832,
+      "target": "wine:Château de Beaucastel Châteauneuf-du-Pape Oenothèque 2007",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[57]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3833,
+      "target": "wine:Château de Beaucastel Châteauneuf-du-Pape Oenothèque 2007",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-3 entries[58]"
+    },
+    {
+      "n": 3834,
+      "target": "wine:Château Haut-Bages Libéral Pauillac 5ème Cru Classé 2018",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-3 entries[59]"
+    },
+    {
+      "n": 3835,
+      "target": "wine:Château Haut-Bages Libéral Pauillac 5ème Cru Classé 2018",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[60]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3836,
+      "target": "wine:Dominio de Pingus ‘Flor de Pingus’ Ribera del Duero 2022",
+      "field": "lines.s10",
+      "op": "replace",
+      "review": "house-floor-3 entries[61]"
+    },
+    {
+      "n": 3837,
+      "target": "wine:Dominio de Pingus ‘Flor de Pingus’ Ribera del Duero 2022",
+      "field": "sayIt",
+      "op": "replace",
+      "review": "house-floor-3 entries[62]"
+    },
+    {
+      "n": 3838,
+      "target": "wine:Dominio de Pingus ‘Flor de Pingus’ Ribera del Duero 2022",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-floor-3 entries[63]"
+    },
+    {
+      "n": 3839,
+      "target": "wine:Dominio de Pingus ‘Flor de Pingus’ Ribera del Duero 2022",
+      "field": "parts.technique",
+      "op": "replace",
+      "review": "house-floor-3 entries[64]"
+    },
+    {
+      "n": 3840,
+      "target": "wine:Dominio de Pingus ‘Flor de Pingus’ Ribera del Duero 2022",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-3 entries[66]"
+    },
+    {
+      "n": 3841,
+      "target": "wine:Dominio de Pingus ‘Flor de Pingus’ Ribera del Duero 2022",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[66]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3842,
+      "target": "wine:Dominio de Pingus ‘Flor de Pingus’ Ribera del Duero 2022",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-3 entries[67]"
+    },
+    {
+      "n": 3843,
+      "target": "wine:Marcel Lapierre Morgon 2023",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-3 entries[68]"
+    },
+    {
+      "n": 3844,
+      "target": "wine:Marcel Lapierre Morgon 2023",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[69]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3845,
+      "target": "wine:Domaine Jean Grivot Echézeaux Grand Cru 2011",
+      "field": "lines.s20",
+      "op": "replace",
+      "review": "house-floor-3 entries[70]"
+    },
+    {
+      "n": 3846,
+      "target": "wine:Domaine Armand Rousseau ‘Clos Saint Jacques’ Gevrey-Chambertin Premier Cru 2019",
+      "field": "lines.s20",
+      "op": "replace",
+      "review": "house-floor-3 entries[71]"
+    },
+    {
+      "n": 3847,
+      "target": "wine:Château Rayas Châteauneuf-du-Pape 2011",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[72]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3848,
+      "target": "wine:Château Rayas Châteauneuf-du-Pape 2011",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[73]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3849,
+      "target": "wine:Château de Beaucastel Châteauneuf-du-Pape Oenothèque 2007",
+      "field": "parts.sauce",
+      "op": "replace",
+      "review": "house-floor-3 entries[74]"
+    },
+    {
+      "n": 3850,
+      "target": "wine:Château de Beaucastel Châteauneuf-du-Pape Oenothèque 2007",
+      "field": "kept.1.a",
+      "op": "replace",
+      "review": "house-floor-3 entries[75]",
+      "keptQuestionAtIndex": "How do I sell it?"
+    },
+    {
+      "n": 3851,
+      "target": "wine:Screaming Eagle ‘Second Flight’ Napa Valley 2012",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-floor-4 entries[0]"
+    },
+    {
+      "n": 3852,
+      "target": "wine:Screaming Eagle ‘Second Flight’ Napa Valley 2012",
+      "field": "parts.sauce",
+      "op": "replace",
+      "review": "house-floor-4 entries[1]"
+    },
+    {
+      "n": 3853,
+      "target": "wine:Screaming Eagle ‘Second Flight’ Napa Valley 2012",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[2]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3854,
+      "target": "wine:Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-floor-4 entries[3]"
+    },
+    {
+      "n": 3855,
+      "target": "wine:Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-4 entries[4]"
+    },
+    {
+      "n": 3856,
+      "target": "wine:Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-4 entries[5]"
+    },
+    {
+      "n": 3857,
+      "target": "wine:Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018",
+      "field": "parts.technique",
+      "op": "replace",
+      "review": "house-floor-4 entries[6]"
+    },
+    {
+      "n": 3858,
+      "target": "wine:Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[7]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3859,
+      "target": "wine:Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[8]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3860,
+      "target": "wine:Caymus Napa Valley Cabernet Sauvignon 2023",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-4 entries[9]"
+    },
+    {
+      "n": 3861,
+      "target": "wine:Caymus Napa Valley Cabernet Sauvignon 2023",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[10]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3862,
+      "target": "wine:Caymus Napa Valley Cabernet Sauvignon 2023",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[11]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3863,
+      "target": "wine:Caymus Napa Valley Cabernet Sauvignon 2023",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-4 entries[12]"
+    },
+    {
+      "n": 3864,
+      "target": "wine:Dominus Estate Napa Valley 2014",
+      "field": "lines.s10",
+      "op": "replace",
+      "review": "house-floor-4 entries[14]"
+    },
+    {
+      "n": 3865,
+      "target": "wine:Dominus Estate Napa Valley 2014",
+      "field": "sayIt",
+      "op": "replace",
+      "review": "house-floor-4 entries[14]"
+    },
+    {
+      "n": 3866,
+      "target": "wine:Dominus Estate Napa Valley 2014",
+      "field": "why",
+      "op": "replace",
+      "review": "house-floor-4 entries[15]"
+    },
+    {
+      "n": 3867,
+      "target": "wine:Dominus Estate Napa Valley 2014",
+      "field": "lines.s20",
+      "op": "replace",
+      "review": "house-floor-4 entries[16]"
+    },
+    {
+      "n": 3868,
+      "target": "wine:Dominus Estate Napa Valley 2014",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-4 entries[17]"
+    },
+    {
+      "n": 3869,
+      "target": "wine:Dominus Estate Napa Valley 2014",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[18]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3870,
+      "target": "wine:Dominus Estate Napa Valley 2014",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[19]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3871,
+      "target": "wine:Harlan Estate Oakville 2006",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-floor-4 entries[20]"
+    },
+    {
+      "n": 3872,
+      "target": "wine:Harlan Estate Oakville 2006",
+      "field": "parts.technique",
+      "op": "replace",
+      "review": "house-floor-4 entries[21]"
+    },
+    {
+      "n": 3873,
+      "target": "wine:Heitz Cellar ‘Martha’s Vineyard’ Napa Valley 2009",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-4 entries[22]"
+    },
+    {
+      "n": 3874,
+      "target": "wine:Heitz Cellar ‘Martha’s Vineyard’ Napa Valley 2009",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-4 entries[23]"
+    },
+    {
+      "n": 3875,
+      "target": "wine:Heitz Cellar ‘Martha’s Vineyard’ Napa Valley 2009",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[24]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3876,
+      "target": "wine:Heitz Cellar ‘Martha’s Vineyard’ Napa Valley 2009",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[25]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3877,
+      "target": "wine:Shafer ‘One Point Five’ Stags Leap District Cabernet Sauvignon 2023",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-4 entries[26]"
+    },
+    {
+      "n": 3878,
+      "target": "wine:Shafer ‘One Point Five’ Stags Leap District Cabernet Sauvignon 2023",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-4 entries[27]"
+    },
+    {
+      "n": 3879,
+      "target": "wine:Shafer ‘One Point Five’ Stags Leap District Cabernet Sauvignon 2023",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[28]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3880,
+      "target": "wine:Shafer ‘One Point Five’ Stags Leap District Cabernet Sauvignon 2023",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-4 entries[30]"
+    },
+    {
+      "n": 3881,
+      "target": "wine:Shafer ‘One Point Five’ Stags Leap District Cabernet Sauvignon 2023",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[30]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3882,
+      "target": "wine:Ken Wright Cellars Willamette Valley Pinot Noir 2024",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-floor-4 entries[31]"
+    },
+    {
+      "n": 3883,
+      "target": "wine:Château Gilette ‘Crème de Tête’ Sauternes 1989",
+      "field": "style",
+      "op": "replace",
+      "review": "house-floor-4 entries[32]"
+    },
+    {
+      "n": 3884,
+      "target": "wine:Bartolo Mascarello Barolo 2017",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-4 entries[33]"
+    },
+    {
+      "n": 3885,
+      "target": "wine:Bartolo Mascarello Barolo 2017",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-4 entries[34]"
+    },
+    {
+      "n": 3886,
+      "target": "wine:Bartolo Mascarello Barolo 2017",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[35]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3887,
+      "target": "wine:Gaja Barbaresco 2012",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-4 entries[36]"
+    },
+    {
+      "n": 3888,
+      "target": "wine:Gaja Barbaresco 2012",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[37]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3889,
+      "target": "wine:Vega Sicilia ‘Único’ Ribera del Duero 2009",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-4 entries[38]"
+    },
+    {
+      "n": 3890,
+      "target": "wine:Vega Sicilia ‘Único’ Ribera del Duero 2009",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[39]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3891,
+      "target": "wine:Ornellaia ‘Masseto’ Toscana 2011",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-4 entries[40]"
+    },
+    {
+      "n": 3892,
+      "target": "wine:Ornellaia ‘Masseto’ Toscana 2011",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[41]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3893,
+      "target": "wine:Chappellet ‘Mountain Cuvée’ Napa Valley 2024",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-4 entries[42]"
+    },
+    {
+      "n": 3894,
+      "target": "wine:Chappellet ‘Mountain Cuvée’ Napa Valley 2024",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-4 entries[43]"
+    },
+    {
+      "n": 3895,
+      "target": "wine:Chappellet ‘Mountain Cuvée’ Napa Valley 2024",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[44]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3896,
+      "target": "wine:Frog’s Leap ‘Estate’ Rutherford Cabernet Sauvignon 2021",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-4 entries[45]"
+    },
+    {
+      "n": 3897,
+      "target": "wine:Frog’s Leap ‘Estate’ Rutherford Cabernet Sauvignon 2021",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-4 entries[47]"
+    },
+    {
+      "n": 3898,
+      "target": "wine:Frog’s Leap ‘Estate’ Rutherford Cabernet Sauvignon 2021",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[47]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3899,
+      "target": "wine:Silver Oak Napa Valley Cabernet Sauvignon 2020",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-4 entries[48]"
+    },
+    {
+      "n": 3900,
+      "target": "wine:Silver Oak Napa Valley Cabernet Sauvignon 2020",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[49]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3901,
+      "target": "wine:Kracher ‘Cuvée’ Auslese Burgenland 2017",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-4 entries[50]"
+    },
+    {
+      "n": 3902,
+      "target": "wine:Kracher ‘Cuvée’ Auslese Burgenland 2017",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-4 entries[51]"
+    },
+    {
+      "n": 3903,
+      "target": "wine:Kracher ‘Cuvée’ Auslese Burgenland 2017",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[52]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3904,
+      "target": "wine:Niepoort Vintage Port 1987",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-4 entries[53]"
+    },
+    {
+      "n": 3905,
+      "target": "wine:Niepoort Vintage Port 1987",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-4 entries[54]"
+    },
+    {
+      "n": 3906,
+      "target": "wine:Niepoort Vintage Port 1987",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[55]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3907,
+      "target": "wine:Niepoort Vintage Port 1987",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[56]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3908,
+      "target": "wine:Château Suduiraut Sauternes Premier Cru Classé 2010",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-4 entries[57]"
+    },
+    {
+      "n": 3909,
+      "target": "wine:Château Suduiraut Sauternes Premier Cru Classé 2010",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[58]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3910,
+      "target": "wine:Feist Late Bottled Vintage Port 2006",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-floor-4 entries[59]"
+    },
+    {
+      "n": 3911,
+      "target": "wine:Feist Late Bottled Vintage Port 2006",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[60]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3912,
+      "target": "wine:Castello Banfi ‘Florus’ Moscadello di Montalcino 2011",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-floor-4 entries[61]"
+    },
+    {
+      "n": 3913,
+      "target": "wine:Castello Banfi ‘Florus’ Moscadello di Montalcino 2011",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[62]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3914,
+      "target": "wine:Giuseppe Quintarelli Recioto della Valpolicella Classico 1997",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-floor-4 entries[63]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3915,
+      "target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+      "field": "kept.4.a",
+      "op": "replace",
+      "review": "house-menu-1 entries[0]",
+      "keptQuestionAtIndex": "What should I watch for?"
+    },
+    {
+      "n": 3916,
+      "target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-1 entries[1]",
+      "keptQuestionAtIndex": "Is it a bespoke blend or the Essentiel under our label?"
+    },
+    {
+      "n": 3917,
+      "target": "dish:Eggs Hussarde",
+      "field": "pairing.palate",
+      "op": "replace",
+      "review": "house-menu-1 entries[2]"
+    },
+    {
+      "n": 3918,
+      "target": "wine:Rare Brut 2012 (Coravin)",
+      "field": "why",
+      "op": "replace",
+      "review": "house-menu-1 entries[3]"
+    },
+    {
+      "n": 3919,
+      "target": "wine:Rare Brut 2012 (Coravin)",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-1 entries[4]",
+      "keptQuestionAtIndex": "What is Rare, in one breath?"
+    },
+    {
+      "n": 3920,
+      "target": "dish:Grand Isle Jewel Oysters",
+      "field": "pairing.stepUp",
+      "op": "replace",
+      "review": "house-menu-1 entries[5]"
+    },
+    {
+      "n": 3921,
+      "target": "wine:C.H. Berres ‘Old Vines’ Riesling 2022",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-1 entries[6]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3922,
+      "target": "wine:Famille Durand Val de Loire Sauvignon Blanc 2024",
+      "field": "kept.5.a",
+      "op": "replace",
+      "review": "house-menu-1 entries[7]",
+      "keptQuestionAtIndex": "How do I pour it?"
+    },
+    {
+      "n": 3923,
+      "target": "wine:Famille Durand Val de Loire Sauvignon Blanc 2024",
+      "field": "kept.1.a",
+      "op": "replace",
+      "review": "house-menu-1 entries[8]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3924,
+      "target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-menu-1 entries[9]"
+    },
+    {
+      "n": 3925,
+      "target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-1 entries[10]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3926,
+      "target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-1 entries[11]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3927,
+      "target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-menu-1 entries[12]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3928,
+      "target": "wine:Damien Martin Bourgogne Pinot Noir 2023",
+      "field": "origin",
+      "op": "replace",
+      "review": "house-menu-1 entries[13]"
+    },
+    {
+      "n": 3929,
+      "target": "wine:Damien Martin Bourgogne Pinot Noir 2023",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-1 entries[14]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3930,
+      "target": "wine:Damien Martin Bourgogne Pinot Noir 2023",
+      "field": "kept.3.a",
+      "op": "replace",
+      "review": "house-menu-1 entries[15]",
+      "keptQuestionAtIndex": "What should I watch for?"
+    },
+    {
+      "n": 3931,
+      "target": "wine:Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône 2023",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-1 entries[16]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3932,
+      "target": "wine:Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône 2023",
+      "field": "kept.3.a",
+      "op": "replace",
+      "review": "house-menu-1 entries[17]",
+      "keptQuestionAtIndex": "What should I watch for?"
+    },
+    {
+      "n": 3933,
+      "target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-menu-1 entries[18]"
+    },
+    {
+      "n": 3934,
+      "target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+      "field": "lines.s20",
+      "op": "replace",
+      "review": "house-menu-1 entries[19]"
+    },
+    {
+      "n": 3935,
+      "target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-menu-1 entries[20]"
+    },
+    {
+      "n": 3936,
+      "target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+      "field": "parts.main",
+      "op": "replace",
+      "review": "house-menu-1 entries[21]"
+    },
+    {
+      "n": 3937,
+      "target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-1 entries[22]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3938,
+      "target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-menu-1 entries[23]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3939,
+      "target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+      "field": "kept.3.a",
+      "op": "replace",
+      "review": "house-menu-1 entries[24]",
+      "keptQuestionAtIndex": "What should I watch for?"
+    },
+    {
+      "n": 3940,
+      "target": "wine:Charles Lafitte Brut Champagne NV",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-menu-2 entries[0]"
+    },
+    {
+      "n": 3941,
+      "target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-menu-2 entries[1]"
+    },
+    {
+      "n": 3942,
+      "target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[2]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3943,
+      "target": "wine:Louis Jadot Beaune 1er Cru 2023",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-menu-2 entries[3]"
+    },
+    {
+      "n": 3944,
+      "target": "wine:Louis Jadot Beaune 1er Cru 2023",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[4]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3945,
+      "target": "wine:Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône 2023",
+      "field": "kept.3.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[5]",
+      "keptQuestionAtIndex": "What should I watch for?"
+    },
+    {
+      "n": 3946,
+      "target": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-menu-2 entries[6]"
+    },
+    {
+      "n": 3947,
+      "target": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[7]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3948,
+      "target": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[8]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3949,
+      "target": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023",
+      "field": "kept.3.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[9]",
+      "keptQuestionAtIndex": "What should I watch for?"
+    },
+    {
+      "n": 3950,
+      "target": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023",
+      "field": "kept.4.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[10]",
+      "keptQuestionAtIndex": "How do I pour it?"
+    },
+    {
+      "n": 3951,
+      "target": "wine:Inglenook ‘Rubicon’ 2010",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-menu-2 entries[11]"
+    },
+    {
+      "n": 3952,
+      "target": "wine:Inglenook ‘Rubicon’ 2010",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[12]",
+      "keptQuestionAtIndex": "How is the open bottle kept?"
+    },
+    {
+      "n": 3953,
+      "target": "wine:Inglenook ‘Rubicon’ 2010",
+      "field": "kept.4.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[13]",
+      "keptQuestionAtIndex": "What should I watch for?"
+    },
+    {
+      "n": 3954,
+      "target": "wine:Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-menu-2 entries[14]"
+    },
+    {
+      "n": 3955,
+      "target": "wine:Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[15]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3956,
+      "target": "wine:Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[16]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3957,
+      "target": "wine:Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[17]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3958,
+      "target": "wine:Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[18]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3959,
+      "target": "wine:Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)",
+      "field": "sayIt",
+      "op": "replace",
+      "review": "house-menu-2 entries[19]"
+    },
+    {
+      "n": 3960,
+      "target": "wine:Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)",
+      "field": "lines.s20",
+      "op": "replace",
+      "review": "house-menu-2 entries[20]"
+    },
+    {
+      "n": 3961,
+      "target": "wine:Domaine La Tour Vieille Banyuls Reserva NV",
+      "field": "kept.3.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[21]",
+      "keptQuestionAtIndex": "What should I watch for?"
+    },
+    {
+      "n": 3962,
+      "target": "wine:Drappier ‘Carte d’Or’ Brut NV (375 ml)",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-menu-2 entries[22]"
+    },
+    {
+      "n": 3963,
+      "target": "wine:Drappier ‘Carte d’Or’ Brut NV (375 ml)",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[23]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3964,
+      "target": "wine:Krug ‘Grand Cuvée’ Brut NV (375 ml)",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[24]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3965,
+      "target": "wine:Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "house-menu-2 entries[25]"
+    },
+    {
+      "n": 3966,
+      "target": "wine:Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[26]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3967,
+      "target": "wine:Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[27]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3968,
+      "target": "wine:Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[28]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3969,
+      "target": "wine:Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+      "field": "kept.4.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[29]",
+      "keptQuestionAtIndex": "How do I pour it?"
+    },
+    {
+      "n": 3970,
+      "target": "wine:Bollinger ‘Special Cuvée’ Brut NV (1.5 L magnum)",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[30]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3971,
+      "target": "wine:Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum)",
+      "field": "profile",
+      "op": "replace",
+      "review": "house-menu-2 entries[31]"
+    },
+    {
+      "n": 3972,
+      "target": "wine:Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum)",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[32]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3973,
+      "target": "wine:Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum)",
+      "field": "kept.4.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[33]",
+      "keptQuestionAtIndex": "How do I pour it?"
+    },
+    {
+      "n": 3974,
+      "target": "wine:Taittinger ‘La Francaise’ Brut NV (3 L double magnum)",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[34]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3975,
+      "target": "wine:Taittinger ‘La Francaise’ Brut NV (3 L double magnum)",
+      "field": "kept.2.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[35]",
+      "keptQuestionAtIndex": "What do guests ask?"
+    },
+    {
+      "n": 3976,
+      "target": "wine:Taittinger ‘Prestige’ Rosé Brut NV",
+      "field": "kept.0.a",
+      "op": "replace",
+      "review": "house-menu-2 entries[36]",
+      "keptQuestionAtIndex": "Tell me about it."
+    },
+    {
+      "n": 3977,
+      "target": "dish:Creole-Spiced Hanger Steak",
+      "field": "pairing.why",
+      "op": "replace",
+      "review": "integrator, lead note 10(d)"
+    },
+    {
+      "n": 3978,
+      "target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+      "field": "grapes",
+      "op": "set",
+      "review": "integrator, lead note 10(d)"
+    },
+    {
+      "n": 3979,
+      "target": "dish:Eggs Hussarde",
+      "field": "bottles.splurge.sayIt",
+      "op": "replace",
+      "review": "integrator, lead note 10(d)"
+    },
+    {
+      "n": 3980,
+      "target": "wine:Stein ‘Weihwasser’ Riesling Feinherb 2023",
+      "field": "lines.s45",
+      "op": "replace",
+      "review": "integrator, lead note 10(d)"
+    },
+    {
+      "n": 3981,
+      "target": "wine:Loimer ‘Lois’ Grüner Veltliner 2022",
+      "field": "parts.main",
+      "op": "replace",
+      "review": "integrator, lead note 10(d)"
+    }
+  ],
+  "gates": [
+    {
+      "gate": "check-parse",
+      "command": "node tools/house/check-parse.mjs (from /home/user/worldtable)",
+      "result": "pass",
+      "summary": "check-parse: tools/house/brennans/parsed.json holds: 52 items (47 dishes, 5 drinks), 20 wines, 7 scenarios, 4 mix-ups, 12 must-knows, 25 terms, 13 sources; every line within one word of its printed count by the guide's own counting; every pairing and first pick resolves",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "build-brennans",
+      "command": "node tools/house/build-brennans.mjs",
+      "result": "pass",
+      "summary": "build-brennans: tools/house/brennans/house.json: 62 dishes, 32 cocktails (6 spirit-free), 271 wines, 2 tastings, 180 terms, 55 scenarios, 29 mix-ups, 35 must-knows, 543 to ask at lineup, 11 disputes, 40 videos, 691 components (275 with a producer, 259 items compared, from 5 fragment file(s) in tools/house/brennans/components); 3999 overrides applied (1 skipped), 14 principles mapped, 363 strings dash-stripped (43 set by an override), 728 strings respelled American, 0 ids minted",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "validate-pack",
+      "command": "node tools/house/validate-pack.mjs",
+      "result": "pass",
+      "summary": "validate-pack: tools/house/brennans/house.json: 0 fatal, 19119 advisory flag(s) in 3 code(s), counts hold (62 dishes, 32 cocktails, 271 wines, 2 tastings, 180 terms, 55 scenarios, 29 mix-ups, 35 must-knows, 543 to ask, 11 disputes, 691 components)",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "keep-all",
+      "command": "node tools/house/keep-all.mjs --owner-reviewed",
+      "result": "pass",
+      "summary": "keep-all: static/shared/packs/brennans-new-orleans.v1.oothouse.json: 6497 marks flipped to person (0 already), every mark and 1951 records stamped 1791761400000 (builtAt 2026-10-11T23:30:00.000Z), 4855598 bytes on disk, read back and valid; advisory flags {\"service-note\":25}",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "check-pack (WorldTable)",
+      "command": "node tools/house/check-pack.mjs",
+      "result": "pass",
+      "summary": "check-pack: static/shared/packs/brennans-new-orleans.v1.oothouse.json: 4855598 bytes; edition 2026-10-11T23:30:00.000Z, every stamp 1791761400000; 62 dishes, 32 cocktails (6 spirit-free, 9 pairings on a coffee), 271 wines (271 with timed lines), 2 tastings, 14 sources, 180 terms, 55 scenarios, 29 mix-ups, 35 must-knows, 543 to ask, 11 disputes, 691 components; 6497 marks all by person; notes 365/365/365/365/280 under the five fixed questions, 1783 kept notes in all; 0 thin lines; 0 dashes; 0 British spellings; ids 1952 unique with their prefixes; 0 fatal; advisory {\"service-note\":25}; round trip holds",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "check-compare",
+      "command": "LEDGER_SRC=/home/user/bartendersledger CODEX_SRC=/home/user/sommelierscodex node tools/house/check-compare.mjs",
+      "result": "pass",
+      "summary": "check-compare: tools/house/brennans/house.json: 347 comparison(s), every in-app ref resolves (65 table, 47 ledger, 213 codex, 22 classic)",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "thin-lines",
+      "command": "node tools/house/thin-lines.mjs",
+      "result": "pass",
+      "summary": "thin-lines: tools/house/brennans/house.json: 0 thin line(s), 51 item(s) with an empty part (a report; exit 0)",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "build-winelist",
+      "command": "node tools/house/build-winelist.mjs",
+      "result": "pass",
+      "summary": "build-winelist: static/shared/packs/brennans-new-orleans.winelist.v1.json: 3577 entries in 36 sections, 984 producers, 301 places, 277 with a whole card; 111 clash(es); 942213 bytes",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "check-winelist",
+      "command": "node tools/house/check-winelist.mjs",
+      "result": "pass",
+      "summary": "check-winelist: static/shared/packs/brennans-new-orleans.winelist.v1.json: 3577 entries, each the catalogue's at its printed price; 82 bins printed for more than one bottle (a report; --bins lists them); 984 producers described; 301 places with a line; 277 whole cards in the pack; no dash; no allergen talk; 942213 bytes",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "check-wines",
+      "command": "node tools/house/brennans/components/check-wines.mjs",
+      "result": "pass",
+      "summary": "wines.json: every check passes",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "check-dishes",
+      "command": "node tools/house/brennans/components/check-dishes.mjs",
+      "result": "pass",
+      "summary": "dishes.json: every check passes",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "check-drinks",
+      "command": "node tools/house/brennans/components/check-drinks.mjs",
+      "result": "pass",
+      "summary": "drinks.json: every check passes",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "second build byte-identical",
+      "command": "check-parse, build-brennans, keep-all --owner-reviewed and build-winelist run again; sha256 of house.json, parsed.json, both packs, dash-log, spelling-log and ids.ledger compared",
+      "result": "pass",
+      "summary": "every file byte-identical; pack sha256 30e1bbc73dced4205023e05e617a083a190437aa441e7de59d304b4399822259, wine list 43ec1e72c3e333cc96afa62c7f0df73aa6290a7be3896c0b329d7b4bda76381c",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "npm test (WorldTable)",
+      "command": "npm test",
+      "result": "pass on rerun (the full run failed one test, explained)",
+      "summary": "Full run: 2,499 of 2,500 passed, 126 of 127 files; the one failure was src/lib/build-integrity.test.ts, every pack byte-identical on the site, because the suite started before the pack was mirrored. Rerun of src/lib/build-integrity.test.ts and src/lib/house-drill-round.test.ts after the mirror: 36 of 36 passed. With the Piper-Heidsieck grapes set in, house-drill-round failed one fixed-seed test; with it held back, it passes (see notApplied).",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "npm run check (WorldTable)",
+      "command": "npm run check",
+      "result": "pass",
+      "summary": "svelte-check: 914 files, 0 errors, 0 warnings, 0 files with problems",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "mirror to the site",
+      "command": "cp static/shared/packs/brennans-new-orleans.v1.oothouse.json to /home/user/zpullen98-gif.github.io/shared/packs/; cmp both packs",
+      "result": "pass",
+      "summary": "both packs byte-equal on the site (the wine list was already)",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "Codex check-regions",
+      "command": "node .scripts/check-regions.js (from /home/user/sommelierscodex)",
+      "result": "pass",
+      "summary": "check-regions: 68 passed, 0 failed; house wines: 271 of 271 resolve, 262 to an article, 9 to a country (pack read from the site’s shared/packs)",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "Codex check-house",
+      "command": "node .scripts/check-house.js",
+      "result": "pass",
+      "summary": "check-house: all 282 checks pass",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "Codex check-study",
+      "command": "node .scripts/check-study.js",
+      "result": "pass",
+      "summary": "check-study: all 103 checks pass",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "Codex check-producers-house",
+      "command": "node .scripts/check-producers-house.js",
+      "result": "pass",
+      "summary": "check-producers-house: 138 passed, 0 failed",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "Ledger check-import",
+      "command": "OOT_SHARED=/home/user/zpullen98-gif.github.io/shared node tools/check-import.mjs (from /home/user/bartendersledger)",
+      "result": "pass",
+      "summary": "210 tests, 210 pass, 0 fail",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "Ledger check-house-wiring",
+      "command": "OOT_SHARED=/home/user/zpullen98-gif.github.io/shared node tools/check-house-wiring.mjs",
+      "result": "pass",
+      "summary": "exit 0: progress.bar is written only through its doors (11 writes, all inside saveBarRecord, removeBarRecord, normalizeBarRecords, boot, dataImport, houseSyncIn)",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "site check-pack",
+      "command": "node tools/check-pack.mjs (from /home/user/zpullen98-gif.github.io)",
+      "result": "pass",
+      "summary": "check-pack: 1 pack(s) proved through the shipped engine, 11 steps; every mark a person's, every reference resolved, no dash",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "site check-mirror",
+      "command": "node tools/check-mirror.mjs",
+      "result": "pass",
+      "summary": "check-mirror: 12 pairs byte-equal; the shared mirror has not drifted",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    },
+    {
+      "gate": "site bump-shared (plan only)",
+      "command": "node tools/bump-shared.mjs, without --apply",
+      "result": "pending, for the lead",
+      "summary": "codex/sw.js oot-codex-v140 to v141 pending (a shared/ change); sw.js and ledger/sw.js need none; light/ and almanac/ carry forward. Not applied: this integration writes nothing on the site but shared/packs.",
+      "refreshedNote": "summaries are the 23:30 run's; the 01:00 rebuild reran every gate: build 4026 overrides applied, keep-all and check-pack 4,855,438 bytes, 0 fatal, byte-identical rebuild, mirror equal"
+    }
+  ],
+  "site": {
+    "written": [
+      "shared/packs/brennans-new-orleans.v1.oothouse.json (byte for byte the WorldTable 01:00 build, 4,855,438 bytes)"
+    ],
+    "unchanged": [
+      "shared/packs/brennans-new-orleans.winelist.v1.json (the rebuild is byte-identical, already mirrored)",
+      "table/, light/, almanac/ and every other path"
+    ],
+    "workerBumpsPending": "node tools/bump-shared.mjs (plan only, nothing applied): codex/sw.js oot-codex-v140 to oot-codex-v141 is pending, because the Codex worker runtime caches every /shared/ miss; sw.js and ledger/sw.js need none; light/ and almanac/ are carry-forward notes for their own repos. The lead, who syncs and publishes the Codex wing, makes the bump.",
+    "codexFilesChanged": "None. This integration wrote no file in sommelierscodex, bartendersledger or the site’s codex/ or ledger/; the only shipped file it changed is the house pack under shared/packs."
+  },
+  "leftForTheOwner": [
+    "The Piper-Heidsieck magnum’s empty grapes list (Pinot Noir, Meunier, Chardonnay by the producer’s sheet), held back as above; the Pommery magnum’s grapes list is empty too (house-menu-2).",
+    "components/wines.json: the Moulin d’Issan Bordeaux comparison still says Left Bank Cabernet blend, and the Argyle comparison writes speciality, which the spelling map does not carry (house-menu-1, Seen and not filed).",
+    "Region string shape left as the reviewers left it: the three Bründlmayer cards read Kamptal, Austria while the Loimer now reads Niederösterreich, Austria, and Bollinger PN TX20 reads Aÿ and Tauxières (house-floor-1, notes for the integrator).",
+    "The Taittinger 3 L answer now gives about twenty to twenty-four glasses as arithmetic while the filed ask asks how many glasses the house pours from it; the sommelier’s answer settles both.",
+    "Stein Weihwasser: the verifier took the unsettled parcel, vine age and casks off parts and the kept notes; the compare row in components/wines.json (from old vines at Alf) still carries them and the lineup ask carries the question.",
+    "Living people as who runs an estate today: the verifier took the undated names off the Roulot, Dupont-Fahn, Loimer and both Stein cards and dated the Coche-Dury change of hands (research/cellar-review-2026-10-12-verifier.md); the producer profiles under Who makes it keep their own dated lines."
+  ],
+  "verifierRepairs": {
+    "note": "research/cellar-review-2026-10-12-verifier.md",
+    "entries": "27 replace entries, overrides 3999 to 4025 counted from 0",
+    "what": "the house Champagne by the bottle labeled for us, not made for us, and its say line matched to the glass card; five cards dropped an undated living person as who runs an estate today; the Stein Weihwasser card dropped the unsettled parcel, vine age and casks from the fields the review had not swept",
+    "edition": "2026-10-12T01:00:00.000Z, the clock reading 2026-10-12T01:0x when it was built and 02:00 when this file was refreshed"
+  }
+}

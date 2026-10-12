@@ -1,0 +1,425 @@
+{
+  "batch": "house-floor-1",
+  "readCount": 60,
+  "total": 60,
+  "entries": [
+    {
+      "target": "wine:Thierry et Pascale Matrot Bourgogne Blanc 2022 (375 ml)",
+      "field": "region",
+      "op": "replace",
+      "value": {
+        "from": "Meursault, Burgundy, France",
+        "to": "Bourgogne, Burgundy, France"
+      },
+      "reason": "Region string: a Bourgogne Blanc carries the regional appellation Bourgogne, not Meursault, as the card's own style, profile and guest answer say. The Codex card prints the string as the wine's Region, the same line a village Meursault carries, so a server read this half-bottle as a Meursault, the very confusion its own guest answer warns against. No Terroir row at any level is named Meursault and the regions join reads both strings as Burgundy, so no link moves. It now matches the Fichet and Coche-Dury Bourgogne Blancs as the house-floor-2 review set them, and the Faiveley Bourgogne Rouge.",
+      "source": "research:cellar-review-2026-10-11-house-floor-1.md#1. Matrot Bourgogne Blanc, the region string"
+    },
+    {
+      "target": "wine:Thierry et Pascale Matrot Bourgogne Blanc 2022 (375 ml)",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "Thierry and Pascale Matrot run a family domaine in Meursault, in the Côte de Beaune; this half-bottle is their Bourgogne Blanc.",
+        "to": "Matrot is a family domaine in Meursault, in the Côte de Beaune; its label carries the names of Thierry and Pascale Matrot, and this half-bottle is its Bourgogne Blanc."
+      },
+      "reason": "Who runs it: the card said in the present tense that Thierry and Pascale Matrot run the domaine. The research found that their daughters Adèle and Elsa Matrot took over from their father with the 2016 vintage, and a current winemaker or owner is never named as fact. The domaine is now named by family, and the label still carries the two names it prints.",
+      "source": "research:producers-cellar-white-burgundy-cote-2026-10-10.md#3. Thierry et Pascale Matrot, Meursault (Bourgogne Blanc half-bottle)"
+    },
+    {
+      "target": "wine:Thierry et Pascale Matrot Bourgogne Blanc 2022 (375 ml)",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "Thierry and Pascale Matrot run a family domaine in Meursault, in the Côte de Beaune, and their Bourgogne Blanc is",
+        "to": "Matrot is a family domaine in Meursault, in the Côte de Beaune, and its Bourgogne Blanc is"
+      },
+      "reason": "Who runs it: the card said in the present tense that Thierry and Pascale Matrot run the domaine. The research found that their daughters Adèle and Elsa Matrot took over from their father with the 2016 vintage, and a current winemaker or owner is never named as fact. The domaine is now named by family, and the label still carries the two names it prints.",
+      "source": "research:producers-cellar-white-burgundy-cote-2026-10-10.md#3. Thierry et Pascale Matrot, Meursault (Bourgogne Blanc half-bottle)"
+    },
+    {
+      "target": "wine:Thierry et Pascale Matrot Bourgogne Blanc 2022 (375 ml)",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "Thierry and Pascale Matrot run a family domaine in Meursault, one of the great white wine villages of the Côte de Beaune.",
+        "to": "Matrot is a family domaine in Meursault, one of the great white wine villages of the Côte de Beaune, and the label carries the names of Thierry and Pascale Matrot."
+      },
+      "reason": "Who runs it: the card said in the present tense that Thierry and Pascale Matrot run the domaine. The research found that their daughters Adèle and Elsa Matrot took over from their father with the 2016 vintage, and a current winemaker or owner is never named as fact. The domaine is now named by family, and the label still carries the two names it prints.",
+      "source": "research:producers-cellar-white-burgundy-cote-2026-10-10.md#3. Thierry et Pascale Matrot, Meursault (Bourgogne Blanc half-bottle)"
+    },
+    {
+      "target": "wine:Schramsberg ‘Blanc de Blancs’ North Coast 2021 (375 ml)",
+      "field": "region",
+      "op": "replace",
+      "value": {
+        "from": "Calistoga, Napa Valley, California",
+        "to": "North Coast, California"
+      },
+      "reason": "Region string: the wine is a North Coast Blanc de Blancs, as its name prints and the card's own Tell me about it says (Chardonnay drawn from vineyards across the North Coast). Calistoga is where the winery stands, not the wine's appellation. The Codex card prints the string as the wine's Region and linked the Napa Valley Terroir row from it; the regions join reads both strings as Napa and Sonoma, so only that wrong Terroir link goes. It now matches the Duckhorn North Coast Sauvignon Blanc and the Mirabelle, and follows the house-floor-2 repair of the Montelena string.",
+      "source": "research:cellar-review-2026-10-11-house-floor-1.md#2. Schramsberg Blanc de Blancs, North Coast not Napa"
+    },
+    {
+      "target": "wine:Schramsberg ‘Blanc de Blancs’ North Coast 2021 (375 ml)",
+      "field": "lines.s20",
+      "op": "replace",
+      "value": {
+        "from": "all Chardonnay sparkling wine from Napa:",
+        "to": "all Chardonnay sparkling wine from California’s North Coast:"
+      },
+      "reason": "The 20 second line called the wine Napa sparkling wine; it is a North Coast wine, from vineyards across the North Coast, as the name and the card's own Tell me about it say. The winery is in Napa; the grapes are not all Napa grapes.",
+      "source": "research:cellar-review-2026-10-11-house-floor-1.md#2. Schramsberg Blanc de Blancs, North Coast not Napa"
+    },
+    {
+      "target": "wine:Chartogne-Taillet Rosé Brut NV",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "northwest of Reims in the Montagne de Reims.",
+        "to": "northwest of Reims in the Massif de Saint-Thierry."
+      },
+      "reason": "Geography: Merfy lies in the Massif de Saint-Thierry, north-west of Reims, not on the Montagne de Reims, which rises south of the city. The research quotes the estate's importer and the vineyard notes placing Merfy's slopes on the Massif de Saint-Thierry. The list's own section heading, Grower Producers, Montagne de Reims, is quoted in the card as the list prints it and is left alone.",
+      "source": "research:producers-cellar-champagne-growers-2026-10-10.md#3. Chartogne-Taillet, Merfy (the Rosé Brut)"
+    },
+    {
+      "target": "wine:Tribaut-Schloesser ‘Origine’ Brut NV (375 ml)",
+      "field": "style",
+      "op": "replace",
+      "value": {
+        "from": "Grower Brut Champagne, non-vintage, half-bottle",
+        "to": "Brut Champagne from a family house, non-vintage, half-bottle"
+      },
+      "reason": "Grower or house: Hachette records that the third generation of Tribaut-Schloesser took négociant status, and the research's profile therefore calls it a family house; it named the cards' a grower Brut as an error left to the overrides. Whether the label prints NM or RM is already an open lineup question. Family house is true either way; the list's own filing under Grower Producers is quoted where the card quotes it.",
+      "source": "research:producers-cellar-champagne-growers-2026-10-10.md#6. Tribaut-Schloesser, Romery (Origine half-bottle)"
+    },
+    {
+      "target": "wine:Tribaut-Schloesser ‘Origine’ Brut NV (375 ml)",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "Tribaut-Schloesser Origine is a grower Brut in a half-bottle,",
+        "to": "Tribaut-Schloesser Origine is a family house’s Brut in a half-bottle,"
+      },
+      "reason": "Grower or house: Hachette records that the third generation of Tribaut-Schloesser took négociant status, and the research's profile therefore calls it a family house; it named the cards' a grower Brut as an error left to the overrides. Whether the label prints NM or RM is already an open lineup question. Family house is true either way; the list's own filing under Grower Producers is quoted where the card quotes it.",
+      "source": "research:producers-cellar-champagne-growers-2026-10-10.md#6. Tribaut-Schloesser, Romery (Origine half-bottle)"
+    },
+    {
+      "target": "wine:Tribaut-Schloesser ‘Origine’ Brut NV (375 ml)",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "grower Champagne from Romery",
+        "to": "Champagne from a family house in Romery"
+      },
+      "reason": "Grower or house: Hachette records that the third generation of Tribaut-Schloesser took négociant status, and the research's profile therefore calls it a family house; it named the cards' a grower Brut as an error left to the overrides. Whether the label prints NM or RM is already an open lineup question. Family house is true either way; the list's own filing under Grower Producers is quoted where the card quotes it.",
+      "source": "research:producers-cellar-champagne-growers-2026-10-10.md#6. Tribaut-Schloesser, Romery (Origine half-bottle)"
+    },
+    {
+      "target": "wine:Ridgeview ‘Bloomsbury’ Brut Sussex NV",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "Ridgeview is a family sparkling wine estate at Ditchling in Sussex, on the chalk of the South Downs in southern England.",
+        "to": "Ridgeview is a sparkling wine estate at Ditchling in Sussex, in southern England, founded by the Roberts family."
+      },
+      "reason": "Ridgeview's place: the card set the estate on the chalk of the South Downs and called it a family estate in the present tense. The research's refuting pass found no source placing the Ditchling vineyard on chalk (the one sourced chalk site in English sparkling wine is Kit's Coty in Kent), and a search on 11 October 2026 found the soils given as chalk by some pages and as clay, limestone, flint and loam by others, at 5 to 65 metres, below the Downs. The business was sold out of administration in February 2026, so family estate is stale; founded by the Roberts family is the dated truth.",
+      "source": "research:cellar-review-2026-10-11-house-floor-1.md#3. Ridgeview, the chalk and the family"
+    },
+    {
+      "target": "wine:Ridgeview ‘Bloomsbury’ Brut Sussex NV",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "Ridgeview is a family sparkling wine estate at Ditchling in Sussex, on the chalk of the South Downs in southern England.",
+        "to": "Ridgeview is a sparkling wine estate at Ditchling in Sussex, in southern England, founded by the Roberts family."
+      },
+      "reason": "Ridgeview's place: the card set the estate on the chalk of the South Downs and called it a family estate in the present tense. The research's refuting pass found no source placing the Ditchling vineyard on chalk (the one sourced chalk site in English sparkling wine is Kit's Coty in Kent), and a search on 11 October 2026 found the soils given as chalk by some pages and as clay, limestone, flint and loam by others, at 5 to 65 metres, below the Downs. The business was sold out of administration in February 2026, so family estate is stale; founded by the Roberts family is the dated truth.",
+      "source": "research:cellar-review-2026-10-11-house-floor-1.md#3. Ridgeview, the chalk and the family"
+    },
+    {
+      "target": "wine:Ridgeview ‘Bloomsbury’ Brut Sussex NV",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "Ridgeview is a family estate at Ditchling in Sussex, on the chalk of the South Downs, and one of",
+        "to": "Ridgeview is an estate at Ditchling in Sussex, founded by the Roberts family, and one of"
+      },
+      "reason": "Ridgeview's place: the card set the estate on the chalk of the South Downs and called it a family estate in the present tense. The research's refuting pass found no source placing the Ditchling vineyard on chalk (the one sourced chalk site in English sparkling wine is Kit's Coty in Kent), and a search on 11 October 2026 found the soils given as chalk by some pages and as clay, limestone, flint and loam by others, at 5 to 65 metres, below the Downs. The business was sold out of administration in February 2026, so family estate is stale; founded by the Roberts family is the dated truth.",
+      "source": "research:cellar-review-2026-10-11-house-floor-1.md#3. Ridgeview, the chalk and the family"
+    },
+    {
+      "target": "wine:Ridgeview ‘Bloomsbury’ Brut Sussex NV",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "It is made the same way, on similar chalk, in a cool climate.",
+        "to": "It is made the same way, in a cool climate."
+      },
+      "reason": "Ridgeview's place: the card set the estate on the chalk of the South Downs and called it a family estate in the present tense. The research's refuting pass found no source placing the Ditchling vineyard on chalk (the one sourced chalk site in English sparkling wine is Kit's Coty in Kent), and a search on 11 October 2026 found the soils given as chalk by some pages and as clay, limestone, flint and loam by others, at 5 to 65 metres, below the Downs. The business was sold out of administration in February 2026, so family estate is stale; founded by the Roberts family is the dated truth.",
+      "source": "research:cellar-review-2026-10-11-house-floor-1.md#3. Ridgeview, the chalk and the family"
+    },
+    {
+      "target": "wine:Ridgeview ‘Bloomsbury’ Brut Sussex NV",
+      "field": "kept.3.a",
+      "op": "replace",
+      "value": {
+        "from": "the Chapel Down from Kent, the pink English bottle;",
+        "to": "the Chapel Down rosé from Kent;"
+      },
+      "reason": "The only one: What should I watch for? called the Chapel Down the pink English bottle, but the Binwise list of 3 October 2026 also carries Ridgeview Fitzrovia Rosé Brut Sussex, and the card's own Tell me about it counts four English sparkling wines on the list, three of them Ridgeview. The same slip as the Chapel Down card's, filed beside it.",
+      "source": "research:cellar-review-2026-10-11-house-floor-1.md#8. Chapel Down, not the only English rosé"
+    },
+    {
+      "target": "wine:Chapel Down Rosé Brut Kent NV",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "Chapel Down Rosé Brut is the English sparkling rosé on our list,",
+        "to": "Chapel Down Rosé Brut is an English sparkling rosé on our list,"
+      },
+      "reason": "The only one: the card called it the English sparkling rosé on our list, but the Binwise list of 3 October 2026 also carries Ridgeview Fitzrovia Rosé Brut Sussex. The research's refuting pass named this slip in the card for the integrator.",
+      "source": "research:producers-cellar-sparkling-elsewhere-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Chapel Down Rosé Brut Kent NV",
+      "field": "why",
+      "op": "replace",
+      "value": {
+        "from": "and our English sparkling rosé.",
+        "to": "an English sparkling rosé from Kent."
+      },
+      "reason": "The only one: the why line called it our English sparkling rosé, the same slip as Tell me about it; the Binwise list of 3 October 2026 also carries Ridgeview Fitzrovia Rosé Brut Sussex.",
+      "source": "research:cellar-review-2026-10-11-house-floor-1.md#8. Chapel Down, not the only English rosé"
+    },
+    {
+      "target": "wine:Chapel Down Rosé Brut Kent NV",
+      "field": "kept.3.a",
+      "op": "replace",
+      "value": {
+        "from": "the Ridgeview Bloomsbury, our other English bottle, which is a white sparkling wine from Sussex;",
+        "to": "the Ridgeview Bloomsbury, a white English sparkling wine from Sussex;"
+      },
+      "reason": "The only other: What should I watch for? called the Bloomsbury our other English bottle, but the list carries three Ridgeview wines and the Chapel Down, as the Ridgeview card's own Tell me about it says (four English sparkling wines, three of them Ridgeview); the Binwise list of 3 October 2026 prints Bloomsbury, Cavendish and Fitzrovia Rosé.",
+      "source": "research:cellar-review-2026-10-11-house-floor-1.md#8. Chapel Down, not the only English rosé; research:producers-cellar-sparkling-elsewhere-2026-10-10.md#8. Ridgeview, Ditchling, Sussex ('Bloomsbury' Brut NV)"
+    },
+    {
+      "target": "wine:Armand de Brignac ‘Gold’ Brut NV",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "and today it is owned in partnership by Shawn Carter, the artist known as Jay-Z, and Moët Hennessy.",
+        "to": "and in February 2021 Shawn Carter, the artist known as Jay-Z, whose company had bought the brand in 2014, sold half of it to Moët Hennessy."
+      },
+      "reason": "A living owner as present fact: the card said Armand de Brignac is owned today in partnership by Shawn Carter and Moët Hennessy, an undated present ownership naming a living person, which ownership changes can make false. The research gives the two dated events: a company led by Jay-Z bought the brand in November 2014, and in February 2021 Carter sold half of it to Moët Hennessy. The card now tells those, dated, and states no present owner.",
+      "source": "research:producers-cellar-champagne-houses-2026-10-10.md#4. Armand de Brignac, Chigny-les-Roses (Brut Gold)"
+    },
+    {
+      "target": "wine:Armand de Brignac ‘Gold’ Brut NV",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "The Cattier family in Chigny-les-Roses on the Montagne de Reims; it is owned in partnership by Jay-Z and Moët Hennessy.",
+        "to": "The Cattier family in Chigny-les-Roses on the Montagne de Reims. Jay-Z’s company bought the brand in 2014, and Moët Hennessy bought half of it in February 2021."
+      },
+      "reason": "A living owner as present fact: the card said Armand de Brignac is owned today in partnership by Shawn Carter and Moët Hennessy, an undated present ownership naming a living person, which ownership changes can make false. The research gives the two dated events: a company led by Jay-Z bought the brand in November 2014, and in February 2021 Carter sold half of it to Moët Hennessy. The card now tells those, dated, and states no present owner.",
+      "source": "research:producers-cellar-champagne-houses-2026-10-10.md#4. Armand de Brignac, Chigny-les-Roses (Brut Gold)"
+    },
+    {
+      "target": "wine:Jacques Selosse ‘Initial’ Blanc de Blancs Brut NV",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "and Anselme Selosse is the winemaker who inspired a generation of growers",
+        "to": "and Anselme Selosse, who took over from his father, inspired a generation of growers"
+      },
+      "reason": "A current winemaker named as fact: the 45 second line called Anselme Selosse the estate's winemaker in the present tense, and the house never names a living person as a current winemaker. The research holds an undated Gault and Millau claim that Guillaume Selosse has taken over management, and an iDealwine visit with him in November 2023, and would not state the handover as fact; the fix states no present winemaker either way. What Anselme did is history and stays, in the words the card's own Tell me about it already uses.",
+      "source": "research:producers-cellar-champagne-growers-2026-10-10.md#5. Jacques Selosse, Avize (Initial); research:producers-cellar-champagne-growers-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Dow’s Vintage Port 2000 (375 ml)",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "with firm tannin softened by twenty-five years in bottle.",
+        "to": "with firm tannin softened by many years in bottle."
+      },
+      "reason": "A volatile age: the card gave the 2000 twenty-five years in bottle, and its parts a 25-year-old Port. Vintage Port is bottled after about two years in wood, so in October 2026 the 2000 has about twenty-four years in bottle and twenty-six from its harvest, and any figure is wrong again a year later. The card's own 45 second line already says years in bottle; the profile, the 20 second line and the parts now say the same kind of thing without a number.",
+      "source": "research:cellar-review-2026-10-11-house-floor-1.md#4. Dow's 2000, the years in bottle"
+    },
+    {
+      "target": "wine:Dow’s Vintage Port 2000 (375 ml)",
+      "field": "lines.s20",
+      "op": "replace",
+      "value": {
+        "from": "is vintage Port with twenty-five years of age:",
+        "to": "is vintage Port with long bottle age:"
+      },
+      "reason": "A volatile age: the card gave the 2000 twenty-five years in bottle, and its parts a 25-year-old Port. Vintage Port is bottled after about two years in wood, so in October 2026 the 2000 has about twenty-four years in bottle and twenty-six from its harvest, and any figure is wrong again a year later. The card's own 45 second line already says years in bottle; the profile, the 20 second line and the parts now say the same kind of thing without a number.",
+      "source": "research:cellar-review-2026-10-11-house-floor-1.md#4. Dow's 2000, the years in bottle"
+    },
+    {
+      "target": "wine:Dow’s Vintage Port 2000 (375 ml)",
+      "field": "parts.sauce",
+      "op": "replace",
+      "value": {
+        "from": "a 25-year-old vintage Port in a small bottle",
+        "to": "a mature vintage Port in a small bottle"
+      },
+      "reason": "A volatile age: the card gave the 2000 twenty-five years in bottle, and its parts a 25-year-old Port. Vintage Port is bottled after about two years in wood, so in October 2026 the 2000 has about twenty-four years in bottle and twenty-six from its harvest, and any figure is wrong again a year later. The card's own 45 second line already says years in bottle; the profile, the 20 second line and the parts now say the same kind of thing without a number.",
+      "source": "research:cellar-review-2026-10-11-house-floor-1.md#4. Dow's 2000, the years in bottle"
+    },
+    {
+      "target": "wine:Rare Champagne ‘Rare’ Brut 2013",
+      "field": "lines.s10",
+      "op": "replace",
+      "value": {
+        "from": "Piper-Heidsieck’s prestige vintage Champagne",
+        "to": "the prestige vintage Champagne born at Piper-Heidsieck"
+      },
+      "reason": "Out of date: Rare became its own brand in September 2018 and is managed separately, so the 10 second line's Piper-Heidsieck's prestige vintage told the past as the present. The card's origin and Tell me about it already say it began at Piper-Heidsieck and now carries its own name, and the house-menu-1 review repaired the same words on the Grand Isle Jewel Oysters tier.",
+      "source": "research:producers-cellar-champagne-menu-2026-10-10.md#2. Rare Champagne, Reims (the Coravin glass and the 2013 bottle)"
+    },
+    {
+      "target": "wine:Rare Champagne ‘Rare’ Brut 2013",
+      "field": "why",
+      "op": "replace",
+      "value": {
+        "from": "Eggs Hussarde, from the house behind our house Champagne.",
+        "to": "Eggs Hussarde, a prestige vintage that began at the house behind our house Champagne."
+      },
+      "reason": "Out of date: the why line said Rare comes from the house behind our house Champagne, Piper-Heidsieck, in the present tense; Rare became its own brand in September 2018 and is managed separately. The same repair as the 10 second line's, told as where it began.",
+      "source": "research:cellar-review-2026-10-11-house-floor-1.md#11. Rare 2013, no longer Piper-Heidsieck's"
+    }
+  ],
+  "verdicts": [
+    {
+      "stemStart": "Thierry et Pascale Matrot Bourgogne Blanc 2022, region: Meursault, Burgundy, France",
+      "verdict": "amended",
+      "why": "The fix is right: a Bourgogne Blanc's appellation is Bourgogne, and the to-text introduces only that word, from the wine's own name. The reason was not: no TERROIR row at any level is named Meursault, and regions-join resolves both strings to Burgundy, so the card never linked a Meursault row (the same false claim the house-floor-2 pass struck from the Fichet reason). What misled was the Region line the card prints. Reason rewritten to say so. Side effect for the integrator: the old string was unique, so the recite deck called The Meursault, Burgundy, France pour for this bottle, itself a wrong lesson; the new string is shared with the Faiveley Bourgogne Rouge (and the Fichet and Coche-Dury once house-floor-2 lands), so codex27 drops the ambiguous call. The note's section 1 still carries the Terroir claim, for the integrator to strike."
+    },
+    {
+      "stemStart": "Thierry et Pascale Matrot Bourgogne Blanc 2022, origin: Thierry and Pascale Matrot run a family domaine",
+      "verdict": "amended",
+      "why": "Right in substance: the sisters Adèle and Elsa Matrot took over with the 2016 vintage, so the present tense was stale, and a current owner is never named. The to-text hung its relative clause on the Côte de Beaune (in the Côte de Beaune, whose label carries); it now reads Matrot is a family domaine in Meursault, in the Côte de Beaune; its label carries the names of Thierry and Pascale Matrot, and this half-bottle is its Bourgogne Blanc. The label claim holds: the producers file (section 3, items 3 and 4) gives the Thierry et Pascale Matrot label from 2009, the Binwise list prints it, and a search on 11 October 2026 found a US retailer listing the 2022 as Thierry et Pascale Matrot Bourgogne Blanc and Inside Burgundy giving the label name from 2009 with the daughters running production since 2016. No new name."
+    },
+    {
+      "stemStart": "Thierry et Pascale Matrot Bourgogne Blanc 2022, lines.s45: Thierry and Pascale Matrot run a family",
+      "verdict": "kept",
+      "why": "Same stale present tense, same repair; reads cleanly, 70 words, no new name."
+    },
+    {
+      "stemStart": "Thierry et Pascale Matrot Bourgogne Blanc 2022, kept.0.a: Thierry and Pascale Matrot run a family",
+      "verdict": "kept",
+      "why": "Same repair in Tell me about it; the label clause is sourced as above and the sentence reads cleanly after the wine's own name opens the answer."
+    },
+    {
+      "stemStart": "Schramsberg Blanc de Blancs North Coast 2021, region: Calistoga, Napa Valley, California",
+      "verdict": "amended",
+      "why": "The fix is right: the list prints North Coast and the card's own Tell me about it draws the Chardonnay from across the North Coast; Calistoga is the winery's town. The reason's claim that the Codex reads the first part as the appellation was loose: the card prints the string as its Region and v28Terroir linked the Napa Valley row from the middle part; regions-join reads both strings as napa-sonoma. Reason rewritten to say only the wrong Napa Valley Terroir link goes. The recite call stays ambiguous either way (three wines shared the old string, three share the new)."
+    },
+    {
+      "stemStart": "Schramsberg Blanc de Blancs North Coast 2021, lines.s20: all Chardonnay sparkling wine from Napa",
+      "verdict": "kept",
+      "why": "Napa sparkling wine was the same error as the region string; California's North Coast matches parts.main, 32 words."
+    },
+    {
+      "stemStart": "Chartogne-Taillet Rosé Brut NV, origin: northwest of Reims in the Montagne de Reims",
+      "verdict": "kept",
+      "why": "Merfy lies on the Massif de Saint-Thierry north-west of Reims, by the producers file (section 3, items 1 and 5), which the note quotes; the Montagne de Reims rises south of the city. Even read in the broad sense some maps give the Montagne zone, the new words are true and more exact. The list's own heading, quoted as the list prints it, rightly stays."
+    },
+    {
+      "stemStart": "Tribaut-Schloesser Origine Brut NV (375 ml), style: Grower Brut Champagne",
+      "verdict": "kept",
+      "why": "By Hachette the third generation took négociant status, so grower claims what the best source denies; family house is true whether the label prints NM or RM, which stays an open lineup question. No new name."
+    },
+    {
+      "stemStart": "Tribaut-Schloesser Origine Brut NV (375 ml), kept.0.a: Tribaut-Schloesser Origine is a grower Brut",
+      "verdict": "kept",
+      "why": "Same repair; a family house's Brut is a little stiff beside the next paragraph's family Champagne house, but correct and plain, and the list's own filing under Grower Producers is still quoted as the list's."
+    },
+    {
+      "stemStart": "Tribaut-Schloesser Origine Brut NV (375 ml), kept.1.a: grower Champagne from Romery",
+      "verdict": "kept",
+      "why": "Same repair inside the Say line; reads naturally."
+    },
+    {
+      "stemStart": "Ridgeview Bloomsbury Brut Sussex NV, origin: Ridgeview is a family sparkling wine estate",
+      "verdict": "kept",
+      "why": "Both removals stand. The chalk at Ditchling has no source (the producers file's Verification item 2; the note's search found pages disagreeing and a retailer's 5 to 65 metres on clay, limestone, flint and loam), and the sale out of administration to QBRidge on 11 February 2026 is sourced to FRP's release and two trade reports (section 8, item 7), so family estate in the present tense is stale. Founded by the Roberts family is true whatever the soils or owner: Mike Roberts co-founded it with his wife Chris (section 8, item 1), and the Roberts name is in the note with its passage."
+    },
+    {
+      "stemStart": "Ridgeview Bloomsbury Brut Sussex NV, kept.0.a: Ridgeview is a family sparkling wine estate",
+      "verdict": "kept",
+      "why": "The same sentence in Tell me about it, repaired identically."
+    },
+    {
+      "stemStart": "Ridgeview Bloomsbury Brut Sussex NV, lines.s45: Ridgeview is a family estate at Ditchling",
+      "verdict": "kept",
+      "why": "Same repair; 88 words."
+    },
+    {
+      "stemStart": "Ridgeview Bloomsbury Brut Sussex NV, kept.2.a: It is made the same way, on similar chalk",
+      "verdict": "kept",
+      "why": "Removing the unsourced chalk leaves a true answer to How does it compare with Champagne."
+    },
+    {
+      "stemStart": "Ridgeview Bloomsbury Brut Sussex NV, kept.3.a: the Chapel Down from Kent, the pink English bottle",
+      "verdict": "amended",
+      "why": "Added by this pass: the reviewer's Chapel Down fix was incomplete. The Ridgeview card's own What should I watch for? called the Chapel Down the pink English bottle, while the list prints Ridgeview Fitzrovia Rosé Brut Sussex (pages/binwise-wine-list-2026-10-03.txt line 3097, quoted in the note's section 8) and this card's Tell me about it counts four English sparkling wines, three of them Ridgeview. Now the Chapel Down rosé from Kent; no new name."
+    },
+    {
+      "stemStart": "Chapel Down Rosé Brut Kent NV, kept.0.a: Chapel Down Rosé Brut is the English sparkling rosé",
+      "verdict": "kept",
+      "why": "Right and in the voice: the list also carries Ridgeview Fitzrovia Rosé. The fix was incomplete, not wrong: the same uniqueness slip stood in the card's why line and its What should I watch for? (our other English bottle), and in the Ridgeview card's watch line; three sibling entries are added beside it."
+    },
+    {
+      "stemStart": "Chapel Down Rosé Brut Kent NV, why: and our English sparkling rosé",
+      "verdict": "amended",
+      "why": "Added by this pass: the why line repeated the slip (our English sparkling rosé). Now an English sparkling rosé from Kent; no new name."
+    },
+    {
+      "stemStart": "Chapel Down Rosé Brut Kent NV, kept.3.a: the Ridgeview Bloomsbury, our other English bottle",
+      "verdict": "amended",
+      "why": "Added by this pass: our other English bottle is false, since the list prints Bloomsbury, Cavendish and Fitzrovia Rosé from Ridgeview besides the Chapel Down (the Ridgeview card's own count). Now the Ridgeview Bloomsbury, a white English sparkling wine from Sussex; the pink one stays, as it compares only the two bottles named."
+    },
+    {
+      "stemStart": "Armand de Brignac Gold Brut NV, kept.0.a: and today it is owned in partnership by Shawn Carter",
+      "verdict": "kept",
+      "why": "An undated present owner, a living one, was the house rule broken; the to-text tells two dated events, November 2014 (a company led by Jay-Z bought the brand) and February 2021 (Carter sold half to Moët Hennessy), both quoted in the note from the houses file, section 4, item 5, and states no present owner. Shawn Carter and Jay-Z were already on the card."
+    },
+    {
+      "stemStart": "Armand de Brignac Gold Brut NV, kept.2.a: The Cattier family in Chigny-les-Roses; it is owned",
+      "verdict": "kept",
+      "why": "Same repair in the guest answer, the same two dates, no present owner."
+    },
+    {
+      "stemStart": "Jacques Selosse Initial Blanc de Blancs Brut NV, lines.s45: and Anselme Selosse is the winemaker",
+      "verdict": "amended",
+      "why": "The text fix is right: a living person named as the current winemaker, now told as history in the card's own words, 87 words. The reason said the research records that Guillaume Selosse has taken over management; the producers file's own verification (item 5) calls that an undated Gault and Millau claim and refuses to state it. Reason rewritten to say the fix names no present winemaker either way, with the verification section added to the source."
+    },
+    {
+      "stemStart": "Dow's Vintage Port 2000 (375 ml), profile: with firm tannin softened by twenty-five years",
+      "verdict": "amended",
+      "why": "Right to remove the number: bottled about 2002, the 2000 had about twenty-four years in bottle in October 2026, and any figure dates. Long years in bottle reads as elegy rather than the card's plain voice; now many years in bottle. The fix was also incomplete: parts.sauce still said a 25-year-old vintage Port, so an entry is added and the reasons now name the parts."
+    },
+    {
+      "stemStart": "Dow's Vintage Port 2000 (375 ml), lines.s20: is vintage Port with twenty-five years of age",
+      "verdict": "kept",
+      "why": "Long bottle age is idiomatic cellar language and true for good; 28 words. Reason extended to name the parts entry."
+    },
+    {
+      "stemStart": "Dow's Vintage Port 2000 (375 ml), parts.sauce: a 25-year-old vintage Port in a small bottle",
+      "verdict": "amended",
+      "why": "Added by this pass: the same volatile figure in the parts, missed by the sweep. Now a mature vintage Port in a small bottle; no new name or year."
+    },
+    {
+      "stemStart": "Rare Champagne Rare Brut 2013, lines.s10: Piper-Heidsieck's prestige vintage Champagne",
+      "verdict": "kept",
+      "why": "Rare has been its own brand, managed separately, since September 2018 (champagne-menu file, section 2, item 3); born at Piper-Heidsieck tells the past as past, 19 words. The why line carried the same present tense and is added beside it."
+    },
+    {
+      "stemStart": "Rare Champagne Rare Brut 2013, why: from the house behind our house Champagne",
+      "verdict": "amended",
+      "why": "Added by this pass: the why line said Rare comes from the house behind our house Champagne, the same stale present tense as the 10 second line. Now a prestige vintage that began at the house behind our house Champagne; no new name."
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "batch": "house-floor-2",
+  "readCount": 60,
+  "total": 60,
+  "entries": [
+    {
+      "target": "wine:Mas de Valériole ‘Vé’ Rosé Méditerranée 2025 (1.5 L magnum)",
+      "field": "region",
+      "op": "replace",
+      "value": {
+        "from": "Camargue, near Arles, France",
+        "to": "Camargue, Provence, France"
+      },
+      "reason": "Region string: \"near Arles\" is a direction, not a region, so the string broke the sub-region, region, country form every other bottle keeps. The estate is at Gageron near Arles, inside the Camargue regional park in the Bouches-du-Rhône, which is Provence; the wine itself stays IGP Méditerranée, as its name says.",
+      "source": "research:cellar-review-2026-10-11-house-floor-2.md#1. Mas de Valériole, the region string"
+    },
+    {
+      "target": "wine:Jean Foillard ‘Côte du Py’ Morgon 2023 (1.5 L magnum)",
+      "field": "region",
+      "op": "replace",
+      "value": {
+        "from": "Morgon, Beaujolais, France",
+        "to": "Morgon, Beaujolais, Burgundy, France"
+      },
+      "reason": "Region string: the same Foillard Côte du Py in bottle (2022) and every other Beaujolais card (Lapierre Morgon, Clos de la Roilette Fleurie, the Jadot Beaujolais-Villages) read Beaujolais, Burgundy, France; the magnum alone dropped Burgundy.",
+      "source": "research:cellar-review-2026-10-11-house-floor-2.md#2. Jean Foillard Côte du Py magnum, the region string"
+    },
+    {
+      "target": "wine:Jean-Philippe Fichet Bourgogne Blanc 2023",
+      "field": "region",
+      "op": "replace",
+      "value": {
+        "from": "Meursault, Côte de Beaune, Burgundy, France",
+        "to": "Bourgogne, Burgundy, France"
+      },
+      "reason": "Region string: a Bourgogne Blanc carries the regional appellation Bourgogne, not Meursault. The Codex card prints the string as the wine’s Region, the same line the village Meursaults beside it on the list carry, so a server read this bottle as a Meursault, the one thing never to tell a guest about a Bourgogne Blanc. The Meursault origin of the three parcels stays in the profile and the parts, where it is said as origin; the string now matches the Faiveley Bourgogne Rouge.",
+      "source": "research:cellar-review-2026-10-11-house-floor-2.md#3. Jean-Philippe Fichet Bourgogne Blanc, the region string; research:producers-cellar-white-burgundy-cote-2026-10-10.md#2. Jean-Philippe Fichet, Meursault (Bourgogne Blanc 2023)"
+    },
+    {
+      "target": "wine:Domaine Coche-Dury Bourgogne Blanc 2022",
+      "field": "region",
+      "op": "replace",
+      "value": {
+        "from": "Meursault, Côte de Beaune, Burgundy, France",
+        "to": "Bourgogne, Burgundy, France"
+      },
+      "reason": "Region string: a Bourgogne Blanc carries the regional appellation Bourgogne, not Meursault; the profile already calls it a regional wine. The Codex card prints the string as the wine’s Region, the same line the village Meursaults beside it on the list carry, so the bottle read as a Meursault. The Meursault home of the estate stays in the origin and the parts; the string now matches the Faiveley Bourgogne Rouge.",
+      "source": "research:cellar-review-2026-10-11-house-floor-2.md#4. Domaine Coche-Dury Bourgogne Blanc, the region string; research:producers-cellar-white-burgundy-cote-2026-10-10.md#10. Domaine Coche-Dury, Meursault (Bourgogne Blanc 2022)"
+    },
+    {
+      "target": "wine:Château d’Esclans ‘Whispering Angel’ Côtes de Provence Rosé 2024",
+      "field": "region",
+      "op": "replace",
+      "value": {
+        "from": "Côtes de Provence, France",
+        "to": "Côtes de Provence, Provence, France"
+      },
+      "reason": "Region string: it named the appellation and the country and skipped the region, where the Bandol and the Alpilles cards name all three.",
+      "source": "research:cellar-review-2026-10-11-house-floor-2.md#5. Whispering Angel, the region string"
+    },
+    {
+      "target": "wine:Loimer ‘Lois’ Grüner Veltliner 2022",
+      "field": "region",
+      "op": "replace",
+      "value": {
+        "from": "Kamptal, Austria",
+        "to": "Niederösterreich, Austria"
+      },
+      "reason": "Region string: retailers list the 2022 Lois under Niederösterreich, and one gives it as made from estate fruit and contracted growers in Lower Austria; the Kamptal is the estate’s home, not the origin the 2022 is listed under. Niederösterreich holds the Kamptal, so the string is true whichever word the label in hand prints; the Binwise list prints Kamptal, and the lineup ask already filed asks which the label reads.",
+      "source": "research:cellar-review-2026-10-11-house-floor-2.md#6. Loimer Lois, the region string and the profile"
+    },
+    {
+      "target": "wine:Loimer ‘Lois’ Grüner Veltliner 2022",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "A light, fresh Grüner Veltliner from the Kamptal:",
+        "to": "A light, fresh Grüner Veltliner from Lower Austria, made by a Kamptal estate:"
+      },
+      "reason": "Profile: the same correction as the region string; the fruit is not the Kamptal’s alone, while the estate is.",
+      "source": "research:cellar-review-2026-10-11-house-floor-2.md#6. Loimer Lois, the region string and the profile"
+    },
+    {
+      "target": "wine:Stein ‘Weihwasser’ Riesling Feinherb 2023",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "from old vines on steep slate near the old church in Alf:",
+        "to": "from Stein’s steep Mosel slate:"
+      },
+      "reason": "Profile: where the Weihwasser grows and how old its vines are is unsettled. The 4 October card put the vines both in the St. Aldegunder Klosterkammer and near the old church in Alf, partly from knowledge, and the producer component now leaves the parcel and the vine age to the sommelier, with a lineup ask filed. The steep slate the estate reclaimed is sourced; the parcel is not.",
+      "source": "research:producers-cellar-alsace-jura-mosel-2026-10-10.md#6. Weingut Stein, Alf (Weihwasser and Palmberg-Terrassen)"
+    },
+    {
+      "target": "wine:Chateau Montelena Chardonnay Napa Valley 2023",
+      "field": "region",
+      "op": "replace",
+      "value": {
+        "from": "Calistoga, Napa Valley, California",
+        "to": "Napa Valley, California"
+      },
+      "reason": "Region string: Calistoga is the winery’s home and its estate Cabernet’s, not this wine’s. The importer’s technical sheets put the Chardonnay’s vineyards in the south-central Napa Valley near the base of Mount Veeder, and another reference names the Oak Knoll District; none names Calistoga. The label’s appellation, Napa Valley, is what the wine’s own name prints.",
+      "source": "research:cellar-review-2026-10-11-house-floor-2.md#8. Chateau Montelena Chardonnay, the region string"
+    },
+    {
+      "target": "wine:Pascal Cotat ‘Lot 2024’ Chavignol Rosé",
+      "field": "region",
+      "op": "replace",
+      "value": {
+        "from": "Chavignol, Sancerre, Loire Valley, France",
+        "to": "Chavignol, Loire Valley, France"
+      },
+      "reason": "Region string: the searched card says the parcel was declassified from the Sancerre appellation after a local dispute and the rosé is labelled as a lot, Vin de France, and the card itself tells the floor not to call it Sancerre rosé. Sancerre in the string read as its appellation and linked the Codex card to the Sancerre Terroir row. Chavignol stays; Sancerre country stays in the style and the lines, where it is the district, not a claim.",
+      "source": "research:producers-cellar-provence-loire-2026-10-10.md#10. Pascal Cotat"
+    }
+  ],
+  "verdicts": [
+    {
+      "stemStart": "Mas de Valériole ‘Vé’ magnum, region: Camargue, near Arles, France",
+      "verdict": "kept",
+      "why": "The original was true but out of form, and it resolved to France alone; the new string resolves to the Provence article (regions-join, exact) and changes no Terroir row. Gageron lies in the commune of Arles, in the Grande Camargue of the Bouches-du-Rhône, so Provence is right for this estate even though the Petite Camargue reaches into the Gard. The string claims no Provence appellation; the IGP stays in the wine’s name, and the IGP question is filed as an ask."
+    },
+    {
+      "stemStart": "Jean Foillard ‘Côte du Py’ magnum, region: Morgon, Beaujolais, France",
+      "verdict": "kept",
+      "why": "Not wrong before, but the same wine in bottle and every other Beaujolais card carry Burgundy, and a magnum should not read as a different place. The join resolves Beaujolais either way; the one side effect is that the recite call The Morgon, Beaujolais, France pour, a near twin of the bottle’s, is no longer dealt, which is a gain."
+    },
+    {
+      "stemStart": "Jean-Philippe Fichet Bourgogne Blanc 2023, region: Meursault, Côte de Beaune",
+      "verdict": "amended",
+      "why": "The fix is right: the appellation is Bourgogne. The reason was not: no TERROIR row at any level is named Meursault, and regions-join resolves both the old and the new string to Burgundy, so the card never linked a Meursault Terroir row. What misled was the Region line the card prints, identical to the village Meursaults’. Reason rewritten to say so, and the batch note’s section 3 added to the source; the same false Terroir claim stands in the note’s header and section 3 for the integrator to strike."
+    },
+    {
+      "stemStart": "Domaine Coche-Dury Bourgogne Blanc 2022, region: Meursault, Côte de Beaune",
+      "verdict": "amended",
+      "why": "As for Fichet: the to-text is right and introduces only Bourgogne, from the wine’s own name; the reason’s Terroir row claim was false and is replaced by the printed Region line, and section 4 of the batch note is added to the source."
+    },
+    {
+      "stemStart": "Château d’Esclans ‘Whispering Angel’, region: Côtes de Provence, France",
+      "verdict": "kept",
+      "why": "A form fix, not an error fix: the old string was true and resolved to Provence already. It brings the card into line with Bandol and Alpilles and changes nothing a server is taught, so it stands as harmless consistency."
+    },
+    {
+      "stemStart": "Loimer ‘Lois’ Grüner Veltliner 2022, region: Kamptal, Austria",
+      "verdict": "amended",
+      "why": "Kept in substance: a search of my own (11 October 2026) found Delectable listing the 2022 as Lois Niederösterreich and a Wine Spectator review of the 2009 printing Qualitätswein Niederösterreich Lois, so the generic region is the Lois’s long-standing label; Champion’s Niederösterreich DAC is not a real DAC and is rightly not used. The reason was tightened: across Lower Austria overstated the one summary that says in Lower Austria, and the Kamptal was called not the wine’s appellation when Niederösterreich is not an appellation either. The join and the producer grouping are unchanged; Delectable also lists a 2023 as Lois Kamptal, so the filed label ask still matters for later vintages."
+    },
+    {
+      "stemStart": "Loimer ‘Lois’ profile: A light, fresh Grüner Veltliner from the Kamptal:",
+      "verdict": "kept",
+      "why": "True whichever the label prints, in the voice, British in its spelling, and Lower Austria is the English form of the Niederösterreich the note sources. parts.main (Langenlois in the Kamptal) still contradicts it and is set down for the integrator in the note."
+    },
+    {
+      "stemStart": "Stein ‘Weihwasser’ profile: from old vines on steep slate near the old church in Alf:",
+      "verdict": "kept",
+      "why": "A second search of my own (11 October 2026) found retailers agreeing on the St. Aldegunder Klosterkammer, steep blue slate and vines near an old church, but giving fifty to sixty year old vines unevenly and placing the church in Alf for a site named after St. Aldegund, so the original was a retailer’s slip carried as fact. The to-text keeps only the steep slate, which those pages and the producer profile support. Still carrying the unsettled place and vine age, outside this batch’s fields: the s45 (for its old vines near the village church), the compare row (from old vines at Alf), parts.main and parts.technique and kept notes 2 and 3."
+    },
+    {
+      "stemStart": "Chateau Montelena Chardonnay Napa Valley 2023, region: Calistoga, Napa Valley",
+      "verdict": "kept",
+      "why": "The fix only removes a place no current source gives the Chardonnay and leaves the appellation the wine’s own name prints; Napa Valley, California is true wherever in the valley the fruit grows. The join and the Terroir row (Napa Valley) are unchanged."
+    },
+    {
+      "stemStart": "Pascal Cotat ‘Lot 2024’ Chavignol Rosé, region: Chavignol, Sancerre, Loire",
+      "verdict": "kept",
+      "why": "The rosé is Vin de France by the sourced card, and Sancerre standing in the string as an appellation contradicted the card’s own warning; the to-text introduces no name. The join resolves Loire either way. The Monts Damnés keeps the Sancerre string, so the two Chavignol calls in the recite deck now teach the difference rather than collapse into one."
+    }
+  ]
+}

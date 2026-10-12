@@ -1,0 +1,1033 @@
+{
+  "batch": "house-floor-4",
+  "readCount": 57,
+  "total": 57,
+  "entries": [
+    {
+      "target": "wine:Screaming Eagle ‘Second Flight’ Napa Valley 2012",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "from the Screaming Eagle estate in Oakville, rarer than the estate wine itself.",
+        "to": "from the Screaming Eagle estate in Oakville, its second wine."
+      },
+      "reason": "Withdrawn claims: the 4 October repairer withdrew the card’s claim that Second Flight is made in smaller amounts than the estate wine (published figures give about 710 cases of the 2012), and no source carries a closed mailing list; the 4 October card says the estate sells mainly through its mailing list.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#5. Screaming Eagle, Oakville, Napa Valley (Second Flight 2012)"
+    },
+    {
+      "target": "wine:Screaming Eagle ‘Second Flight’ Napa Valley 2012",
+      "field": "parts.sauce",
+      "op": "replace",
+      "value": {
+        "from": "Napa’s most famous cult name, rarer still",
+        "to": "Napa’s most famous cult name, rare in its own right"
+      },
+      "reason": "Withdrawn claims: the 4 October repairer withdrew the card’s claim that Second Flight is made in smaller amounts than the estate wine (published figures give about 710 cases of the 2012), and no source carries a closed mailing list; the 4 October card says the estate sells mainly through its mailing list.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#5. Screaming Eagle, Oakville, Napa Valley (Second Flight 2012)"
+    },
+    {
+      "target": "wine:Screaming Eagle ‘Second Flight’ Napa Valley 2012",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "whose wine is sold almost entirely to a long-closed mailing list.",
+        "to": "whose wine is sold mainly through its mailing list."
+      },
+      "reason": "Withdrawn claims: the 4 October repairer withdrew the card’s claim that Second Flight is made in smaller amounts than the estate wine (published figures give about 710 cases of the 2012), and no source carries a closed mailing list; the 4 October card says the estate sells mainly through its mailing list.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#5. Screaming Eagle, Oakville, Napa Valley (Second Flight 2012)"
+    },
+    {
+      "target": "wine:Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "bottled as Special Selection only in some years and aged longer in oak.",
+        "to": "bottled as Special Selection and aged longer in oak."
+      },
+      "reason": "Withdrawn claim and undated owner: the October check found no source that names a year Special Selection was not made, so “only in some years” came out of the research and became a lineup question (it is one already); “the Wagner family winery” is an undated present owner, now the founding the Codex dates to 1972.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "Special Selection is the top Cabernet of Caymus Vineyards, the Wagner family winery in Rutherford, Napa Valley, made from its best lots.",
+        "to": "Special Selection is the top Cabernet of Caymus Vineyards, the winery the Wagner family founded in Rutherford, Napa Valley, made from its best lots."
+      },
+      "reason": "Withdrawn claim and undated owner: the October check found no source that names a year Special Selection was not made, so “only in some years” came out of the research and became a lineup question (it is one already); “the Wagner family winery” is an undated present owner, now the founding the Codex dates to 1972.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "Special Selection is the top Cabernet of Caymus, the Wagner family winery in Rutherford. They make it only in some years, from their best lots, and give it longer in oak than their Napa Valley Cabernet.",
+        "to": "Special Selection is the top Cabernet of Caymus, the winery the Wagner family founded in Rutherford. It is made from the best lots and given longer in oak than the Napa Valley Cabernet."
+      },
+      "reason": "Withdrawn claim and undated owner: the October check found no source that names a year Special Selection was not made, so “only in some years” came out of the research and became a lineup question (it is one already); “the Wagner family winery” is an undated present owner, now the founding the Codex dates to 1972.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018",
+      "field": "parts.technique",
+      "op": "replace",
+      "value": {
+        "from": "Special Selection, made only in some years, longer in oak",
+        "to": "Special Selection, longer in oak"
+      },
+      "reason": "Withdrawn claim and undated owner: the October check found no source that names a year Special Selection was not made, so “only in some years” came out of the research and became a lineup question (it is one already); “the Wagner family winery” is an undated present owner, now the founding the Codex dates to 1972.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "Caymus Vineyards is the Wagner family winery in Rutherford, in the Napa Valley, known for a ripe, plush style of Cabernet Sauvignon. Special Selection is its top wine. It is made only in some years, from the family’s best lots, and aged longer in oak",
+        "to": "Caymus Vineyards is the winery the Wagner family founded in Rutherford, in the Napa Valley, known for a ripe, plush style of Cabernet Sauvignon. Special Selection is its top wine. It is made from the best lots and aged longer in oak"
+      },
+      "reason": "Withdrawn claim and undated owner: the October check found no source that names a year Special Selection was not made, so “only in some years” came out of the research and became a lineup question (it is one already); “the Wagner family winery” is an undated present owner, now the founding the Codex dates to 1972.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "Answer: It is made only in some years, from the family’s best lots, and aged longer in oak.",
+        "to": "Answer: It is made from the best lots and aged longer in oak than the Napa Valley Cabernet."
+      },
+      "reason": "Withdrawn claim and undated owner: the October check found no source that names a year Special Selection was not made, so “only in some years” came out of the research and became a lineup question (it is one already); “the Wagner family winery” is an undated present owner, now the founding the Codex dates to 1972.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Caymus Napa Valley Cabernet Sauvignon 2023",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "Caymus Vineyards is the Wagner family winery in Rutherford, Napa Valley, run by Chuck Wagner and his family and known for a plush, ripe style.",
+        "to": "Caymus Vineyards is the winery the Wagner family founded in Rutherford, Napa Valley, known for a plush, ripe style."
+      },
+      "reason": "Living person, undated: “run by Chuck Wagner and his family” names a living person in a present role with no date, which the house never states; the 4 October card that carries it is knowledge, not a search. The card now gives the founding, as the October check proposed.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Repairs owed in the pack (for the integrator, not part of the contract)"
+    },
+    {
+      "target": "wine:Caymus Napa Valley Cabernet Sauvignon 2023",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "Caymus, KAY-mus, is the Wagner family’s winery in Rutherford, in the middle of the Napa Valley, run by Chuck Wagner and his family.",
+        "to": "Caymus, KAY-mus, is the winery the Wagner family founded in Rutherford, in the middle of the Napa Valley."
+      },
+      "reason": "Living person, undated: “run by Chuck Wagner and his family” names a living person in a present role with no date, which the house never states; the 4 October card that carries it is knowledge, not a search. The card now gives the founding, as the October check proposed.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Repairs owed in the pack (for the integrator, not part of the contract)"
+    },
+    {
+      "target": "wine:Caymus Napa Valley Cabernet Sauvignon 2023",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "The family also makes the Special Selection, our celebration Caymus.",
+        "to": "Caymus also makes the Special Selection, our celebration Caymus."
+      },
+      "reason": "Living person, undated: “run by Chuck Wagner and his family” names a living person in a present role with no date, which the house never states; the 4 October card that carries it is knowledge, not a search. The card now gives the founding, as the October check proposed.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Repairs owed in the pack (for the integrator, not part of the contract)"
+    },
+    {
+      "target": "wine:Caymus Napa Valley Cabernet Sauvignon 2023",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "Caymus is the Wagner family’s winery in Rutherford,",
+        "to": "Caymus is the winery the Wagner family founded in Rutherford,"
+      },
+      "reason": "Undated present owner, added by the adversarial read: the 2023’s 45 second line still opened on “the Wagner family’s winery”, the present owner its origin and Tell me about it lose in the entries above; it now gives the founding, as they do, in the October check’s own words (“the Rutherford winery the Wagner family founded”, Verification item 11; p-caymus founded 1972).",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Dominus Estate Napa Valley 2014",
+      "field": "lines.s10",
+      "op": "replace",
+      "value": {
+        "from": "Dominus 2014, Christian Moueix’s Napa estate:",
+        "to": "Dominus 2014, the Napa estate Christian Moueix created:"
+      },
+      "reason": "Living person, undated: the card made Christian Moueix the present owner and farmer of Dominus, which no dated source supports; the October check turned “Christian Moueix’s Napa estate” into “the Napa estate Christian Moueix created”, the founding the Codex dates.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Dominus Estate Napa Valley 2014",
+      "field": "guest",
+      "op": "replace",
+      "value": {
+        "from": "Dominus 2014, Christian Moueix’s Napa estate:",
+        "to": "Dominus 2014, the Napa estate Christian Moueix created:"
+      },
+      "reason": "Living person, undated: the card made Christian Moueix the present owner and farmer of Dominus, which no dated source supports; the October check turned “Christian Moueix’s Napa estate” into “the Napa estate Christian Moueix created”, the founding the Codex dates.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Dominus Estate Napa Valley 2014",
+      "field": "why",
+      "op": "replace",
+      "value": {
+        "from": "Dominus, the Napa estate of Christian Moueix of Bordeaux,",
+        "to": "Dominus, the Napa estate created by Christian Moueix of Bordeaux,"
+      },
+      "reason": "Living person, undated: the card made Christian Moueix the present owner and farmer of Dominus, which no dated source supports; the October check turned “Christian Moueix’s Napa estate” into “the Napa estate Christian Moueix created”, the founding the Codex dates.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Dominus Estate Napa Valley 2014",
+      "field": "lines.s20",
+      "op": "replace",
+      "value": {
+        "from": "Dominus comes from Christian Moueix, of the Pomerol family:",
+        "to": "Dominus was created by Christian Moueix, of the Pomerol family:"
+      },
+      "reason": "Living person, undated: the card made Christian Moueix the present owner and farmer of Dominus, which no dated source supports; the October check turned “Christian Moueix’s Napa estate” into “the Napa estate Christian Moueix created”, the founding the Codex dates.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Dominus Estate Napa Valley 2014",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "Dominus is the Napa estate of Christian Moueix, from the Bordeaux family behind Pétrus and Trotanoy, which is on our list from 1946. He farms the historic Napanook vineyard at Yountville and makes the wine with a Bordeaux hand.",
+        "to": "Dominus is the Napa estate created by Christian Moueix, from the Bordeaux family behind Pétrus and Trotanoy, which is on our list from 1946. It stands on the historic Napanook vineyard at Yountville, and the wine is made with a Bordeaux hand."
+      },
+      "reason": "Living person, undated: the card made Christian Moueix the present owner and farmer of Dominus, which no dated source supports; the October check turned “Christian Moueix’s Napa estate” into “the Napa estate Christian Moueix created”, the founding the Codex dates.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Dominus Estate Napa Valley 2014",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "is the Napa estate of Christian Moueix, of the Libourne family behind Pétrus and Trotanoy; our 1946 Trotanoy is the same family’s Pomerol. He farms the historic Napanook vineyard at Yountville, in the Napa Valley, and makes the wine with a Bordeaux sensibility:",
+        "to": "is the Napa estate created by Christian Moueix, of the Libourne family behind Pétrus and Trotanoy; our 1946 Trotanoy is the same family’s Pomerol. It stands on the historic Napanook vineyard at Yountville, in the Napa Valley, and the wine is made with a Bordeaux sensibility:"
+      },
+      "reason": "Living person, undated: the card made Christian Moueix the present owner and farmer of Dominus, which no dated source supports; the October check turned “Christian Moueix’s Napa estate” into “the Napa estate Christian Moueix created”, the founding the Codex dates.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Dominus Estate Napa Valley 2014",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "Answer: Christian Moueix, of the Bordeaux family behind Pétrus and Trotanoy, on the Napanook vineyard at Yountville.",
+        "to": "Answer: The estate was created by Christian Moueix, of the Bordeaux family behind Pétrus and Trotanoy, on the Napanook vineyard at Yountville."
+      },
+      "reason": "Living person, undated: the card made Christian Moueix the present owner and farmer of Dominus, which no dated source supports; the October check turned “Christian Moueix’s Napa estate” into “the Napa estate Christian Moueix created”, the founding the Codex dates.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Harlan Estate Oakville 2006",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "from Bill Harlan’s hillside estate above Oakville.",
+        "to": "from the hillside estate Bill Harlan founded above Oakville."
+      },
+      "reason": "Living person, undated: “Bill Harlan’s hillside estate” makes a living founder the present owner with no date. The card’s own origin says he founded it, which the Codex dates (the 1984 land purchase); the profile and the parts now say that.",
+      "source": "research:cellar-review-2026-10-11-house-floor-4.md#2. Harlan Estate, the founder as owner"
+    },
+    {
+      "target": "wine:Harlan Estate Oakville 2006",
+      "field": "parts.technique",
+      "op": "replace",
+      "value": {
+        "from": "Bill Harlan’s estate, aged in new French oak",
+        "to": "the estate Bill Harlan founded, aged in new French oak"
+      },
+      "reason": "Living person, undated: “Bill Harlan’s hillside estate” makes a living founder the present owner with no date. The card’s own origin says he founded it, which the Codex dates (the 1984 land purchase); the profile and the parts now say that.",
+      "source": "research:cellar-review-2026-10-11-house-floor-4.md#2. Harlan Estate, the founder as owner"
+    },
+    {
+      "target": "wine:Heitz Cellar ‘Martha’s Vineyard’ Napa Valley 2009",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "named for Martha May, who planted it with her husband Tom,",
+        "to": "named for Martha May, whose vineyard it was with her husband Tom,"
+      },
+      "reason": "Plausible relation: the Codex says Martha’s Vineyard was owned by Tom and Martha May; only the 4 October card (knowledge) and the pack say they planted it, and the October check recalled an earlier couple planting it before the Mays bought it. The card now says whose vineyard it was, never who planted it.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Heitz Cellar ‘Martha’s Vineyard’ Napa Valley 2009",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "from the Oakville vineyard planted by Tom and Martha May,",
+        "to": "from the Oakville vineyard of Tom and Martha May,"
+      },
+      "reason": "Plausible relation: the Codex says Martha’s Vineyard was owned by Tom and Martha May; only the 4 October card (knowledge) and the pack say they planted it, and the October check recalled an earlier couple planting it before the Mays bought it. The card now says whose vineyard it was, never who planted it.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Heitz Cellar ‘Martha’s Vineyard’ Napa Valley 2009",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "comes from a vineyard in Oakville planted by Tom and Martha May,",
+        "to": "comes from the Oakville vineyard of Tom and Martha May,"
+      },
+      "reason": "Plausible relation: the Codex says Martha’s Vineyard was owned by Tom and Martha May; only the 4 October card (knowledge) and the pack say they planted it, and the October check recalled an earlier couple planting it before the Mays bought it. The card now says whose vineyard it was, never who planted it.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Heitz Cellar ‘Martha’s Vineyard’ Napa Valley 2009",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "Answer: Martha May, who planted the vineyard in Oakville with her husband Tom.",
+        "to": "Answer: Martha May; the Oakville vineyard was hers and her husband Tom’s."
+      },
+      "reason": "Plausible relation: the Codex says Martha’s Vineyard was owned by Tom and Martha May; only the 4 October card (knowledge) and the pack say they planted it, and the October check recalled an earlier couple planting it before the Mays bought it. The card now says whose vineyard it was, never who planted it.",
+      "source": "research:producers-cellar-napa-icons-2026-10-10.md#Verification 2026-10-10"
+    },
+    {
+      "target": "wine:Shafer ‘One Point Five’ Stags Leap District Cabernet Sauvignon 2023",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "Shafer Vineyards is the Shafer family winery in the Stags Leap District of Napa; One Point Five is named for John Shafer and his son Doug,",
+        "to": "Shafer Vineyards is the winery John Shafer founded in the Stags Leap District of Napa; One Point Five is named for him and his son Doug,"
+      },
+      "reason": "Wrong owner: Shafer Vineyards was sold to Shinsegae Property in February 2022 (search, 11 October 2026), so “the Shafer family winery” and “a family estate” are no longer true; the card now says John Shafer founded it, as its own One Point Five line already does.",
+      "source": "research:cellar-review-2026-10-11-house-floor-4.md#3. Shafer, the family estate"
+    },
+    {
+      "target": "wine:Shafer ‘One Point Five’ Stags Leap District Cabernet Sauvignon 2023",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "Shafer is a family estate in the Stags Leap District,",
+        "to": "Shafer is an estate in the Stags Leap District,"
+      },
+      "reason": "Wrong owner: Shafer Vineyards was sold to Shinsegae Property in February 2022 (search, 11 October 2026), so “the Shafer family winery” and “a family estate” are no longer true; the card now says John Shafer founded it, as its own One Point Five line already does.",
+      "source": "research:cellar-review-2026-10-11-house-floor-4.md#3. Shafer, the family estate"
+    },
+    {
+      "target": "wine:Shafer ‘One Point Five’ Stags Leap District Cabernet Sauvignon 2023",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "Shafer Vineyards, SHAY-fer, is a family estate in the Stags Leap District,",
+        "to": "Shafer Vineyards, SHAY-fer, is an estate in the Stags Leap District,"
+      },
+      "reason": "Wrong owner: Shafer Vineyards was sold to Shinsegae Property in February 2022 (search, 11 October 2026), so “the Shafer family winery” and “a family estate” are no longer true; the card now says John Shafer founded it, as its own One Point Five line already does.",
+      "source": "research:cellar-review-2026-10-11-house-floor-4.md#3. Shafer, the family estate"
+    },
+    {
+      "target": "wine:Shafer ‘One Point Five’ Stags Leap District Cabernet Sauvignon 2023",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "from their Stags Leap vineyards,",
+        "to": "from Shafer’s Stags Leap vineyards,"
+      },
+      "reason": "Wrong owner, added by the adversarial read: after “One Point Five is named for John Shafer ... and his son Doug”, “from their Stags Leap vineyards” still made the Shafers the owners of the vines; the February 2022 sale to Shinsegae Property took in the winery and its estate vineyards (search 3 of the batch note, and Wine Spectator’s report of 16 February 2022: 225 acres of vines over four ranches, two in Stags Leap District). The line now says Shafer’s Stags Leap vineyards, the card’s own profile wording (“Cabernet Sauvignon from Shafer’s Stags Leap District vineyards”).",
+      "source": "research:cellar-review-2026-10-11-house-floor-4.md#3. Shafer, the family estate"
+    },
+    {
+      "target": "wine:Shafer ‘One Point Five’ Stags Leap District Cabernet Sauvignon 2023",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "from their Stags Leap vineyards,",
+        "to": "from Shafer’s Stags Leap vineyards,"
+      },
+      "reason": "Wrong owner, added by the adversarial read: after “One Point Five is named for John Shafer ... and his son Doug”, “from their Stags Leap vineyards” still made the Shafers the owners of the vines; the February 2022 sale to Shinsegae Property took in the winery and its estate vineyards (search 3 of the batch note, and Wine Spectator’s report of 16 February 2022: 225 acres of vines over four ranches, two in Stags Leap District). The line now says Shafer’s Stags Leap vineyards, the card’s own profile wording (“Cabernet Sauvignon from Shafer’s Stags Leap District vineyards”).",
+      "source": "research:cellar-review-2026-10-11-house-floor-4.md#3. Shafer, the family estate"
+    },
+    {
+      "target": "wine:Ken Wright Cellars Willamette Valley Pinot Noir 2024",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "Pinot Noir from Ken Wright’s vineyards across the Willamette Valley,",
+        "to": "Pinot Noir from Ken Wright’s vineyard sources across the Willamette Valley,"
+      },
+      "reason": "Plausible owner: no source says Ken Wright owns the vineyards behind this blend; the 4 October card calls it his blend across vineyard sources, and the single vineyards on our list (Canary Hill, Shea, Carter, McCrone) are named sites, Shea bottled by more than one producer.",
+      "source": "research:producers-cellar-central-coast-oregon-world-2026-10-10.md#5. Ken Wright Cellars, Carlton, Willamette Valley (Willamette Valley Pinot Noir 2024)"
+    },
+    {
+      "target": "wine:Château Gilette ‘Crème de Tête’ Sauternes 1989",
+      "field": "style",
+      "op": "replace",
+      "value": {
+        "from": "Old Sauternes aged decades in concrete before release,",
+        "to": "Old Sauternes aged close to twenty years in concrete before release,"
+      },
+      "reason": "Plausible number: the searched record says the Crème de Tête stays in small concrete vats for close to twenty years and the 4 October card says often around two decades; “decades” in the vat claimed more than either. The wine is thirty-seven years old, so the 10 second line’s “aged for decades” stands.",
+      "source": "research:producers-cellar-bordeaux-white-sweet-2026-10-10.md#6. Château Gilette, Preignac (Crème de Tête Sauternes 1989)"
+    },
+    {
+      "target": "wine:Bartolo Mascarello Barolo 2017",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "village of Barolo, run by Maria Teresa Mascarello, famous for",
+        "to": "village of Barolo, famous for"
+      },
+      "reason": "Living person, undated: “run by Maria Teresa Mascarello” names a living person in a present role; the October research found her named twice, neither dated, and left her out of the profile.",
+      "source": "research:producers-cellar-italy-2026-10-10.md#6. Bartolo Mascarello"
+    },
+    {
+      "target": "wine:Bartolo Mascarello Barolo 2017",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "village of Barolo, now run by Maria Teresa Mascarello, and it is famous",
+        "to": "village of Barolo, and it is famous"
+      },
+      "reason": "Living person, undated: “run by Maria Teresa Mascarello” names a living person in a present role; the October research found her named twice, neither dated, and left her out of the profile.",
+      "source": "research:producers-cellar-italy-2026-10-10.md#6. Bartolo Mascarello"
+    },
+    {
+      "target": "wine:Bartolo Mascarello Barolo 2017",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "village of Barolo, now run by Maria Teresa Mascarello. They are traditionalists.",
+        "to": "village of Barolo. They are traditionalists."
+      },
+      "reason": "Living person, undated: “run by Maria Teresa Mascarello” names a living person in a present role; the October research found her named twice, neither dated, and left her out of the profile.",
+      "source": "research:producers-cellar-italy-2026-10-10.md#6. Bartolo Mascarello"
+    },
+    {
+      "target": "wine:Gaja Barbaresco 2012",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "Angelo Gaja made it world famous, and his family runs it today.",
+        "to": "Angelo Gaja made it world famous."
+      },
+      "reason": "Undated present owner: “his family runs it today” is an ownership fact with no date, which the October research marked and left out of the profile. Angelo Gaja’s part in the name stays.",
+      "source": "research:producers-cellar-italy-2026-10-10.md#7. Gaja"
+    },
+    {
+      "target": "wine:Gaja Barbaresco 2012",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "Angelo Gaja made it one of the most famous names in Italian wine, and his family runs it today.",
+        "to": "Angelo Gaja made it one of the most famous names in Italian wine."
+      },
+      "reason": "Undated present owner: “his family runs it today” is an ownership fact with no date, which the October research marked and left out of the profile. Angelo Gaja’s part in the name stays.",
+      "source": "research:producers-cellar-italy-2026-10-10.md#7. Gaja"
+    },
+    {
+      "target": "wine:Vega Sicilia ‘Único’ Ribera del Duero 2009",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "Castilla y León, owned by the Álvarez family; Único is its flagship.",
+        "to": "Castilla y León; Único is its flagship."
+      },
+      "reason": "Undated present owner: “owned by the Álvarez family” comes from the 4 October card written from knowledge, not a search; the October research used it in no profile and sent the owner to the lineup, where the question already stands.",
+      "source": "research:producers-cellar-spain-2026-10-10.md#6. Vega Sicilia, Valbuena de Duero (Ribera del Duero)"
+    },
+    {
+      "target": "wine:Vega Sicilia ‘Único’ Ribera del Duero 2009",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "on the high plateau of Castilla y León, owned by the Álvarez family. Único is its flagship.",
+        "to": "on the high plateau of Castilla y León. Único is its flagship."
+      },
+      "reason": "Undated present owner: “owned by the Álvarez family” comes from the 4 October card written from knowledge, not a search; the October research used it in no profile and sent the owner to the lineup, where the question already stands.",
+      "source": "research:producers-cellar-spain-2026-10-10.md#6. Vega Sicilia, Valbuena de Duero (Ribera del Duero)"
+    },
+    {
+      "target": "wine:Ornellaia ‘Masseto’ Toscana 2011",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "is now run as an estate of its own by the Frescobaldi family.",
+        "to": "is now run as an estate of its own."
+      },
+      "reason": "Undated present owner: the October research found the Frescobaldi ownership stated with no date in the Codex and the pack, and the year Masseto became its own estate given two ways (2018, 2019); the profile names no owner and no year, and the lineup already asks.",
+      "source": "research:producers-cellar-italy-2026-10-10.md#10. Masseto (Tenuta dell'Ornellaia)"
+    },
+    {
+      "target": "wine:Ornellaia ‘Masseto’ Toscana 2011",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "and it is now run as an estate of its own by the Frescobaldi family.",
+        "to": "and it is now run as an estate of its own."
+      },
+      "reason": "Undated present owner: the October research found the Frescobaldi ownership stated with no date in the Codex and the pack, and the year Masseto became its own estate given two ways (2018, 2019); the profile names no owner and no year, and the lineup already asks.",
+      "source": "research:producers-cellar-italy-2026-10-10.md#10. Masseto (Tenuta dell'Ornellaia)"
+    },
+    {
+      "target": "wine:Chappellet ‘Mountain Cuvée’ Napa Valley 2024",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "in 1967; the family still runs it.",
+        "to": "in 1967."
+      },
+      "reason": "Undated present owner: “the family still runs it” is the pack’s own present tense; the October research notes that who runs it is ownership and can change. The founding by Donn and Molly Chappellet in 1967 stays.",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md#3. Chappellet, Pritchard Hill, Napa Valley (Mountain Cuvée 2024)"
+    },
+    {
+      "target": "wine:Chappellet ‘Mountain Cuvée’ Napa Valley 2024",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "on the east side of the valley, and still run by the family. Mountain Cuvée",
+        "to": "on the east side of the valley. Mountain Cuvée"
+      },
+      "reason": "Undated present owner: “the family still runs it” is the pack’s own present tense; the October research notes that who runs it is ownership and can change. The founding by Donn and Molly Chappellet in 1967 stays.",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md#3. Chappellet, Pritchard Hill, Napa Valley (Mountain Cuvée 2024)"
+    },
+    {
+      "target": "wine:Chappellet ‘Mountain Cuvée’ Napa Valley 2024",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "in 1967, and the family still runs it. Their top wines",
+        "to": "in 1967. Their top wines"
+      },
+      "reason": "Undated present owner: “the family still runs it” is the pack’s own present tense; the October research notes that who runs it is ownership and can change. The founding by Donn and Molly Chappellet in 1967 stays.",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md#3. Chappellet, Pritchard Hill, Napa Valley (Mountain Cuvée 2024)"
+    },
+    {
+      "target": "wine:Frog’s Leap ‘Estate’ Rutherford Cabernet Sauvignon 2021",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "Frog’s Leap is John Williams’s winery in Rutherford, Napa Valley,",
+        "to": "Frog’s Leap is a winery in Rutherford, Napa Valley,"
+      },
+      "reason": "Living person, undated: “John Williams’s winery” makes a living person the present owner with no date, from a 4 October card written from knowledge; the Codex also names Larry Turley as a co-founder. The lineup already asks who runs it.",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md#4. Frog's Leap, Rutherford, Napa Valley (Estate Rutherford Cabernet Sauvignon 2021)"
+    },
+    {
+      "target": "wine:Frog’s Leap ‘Estate’ Rutherford Cabernet Sauvignon 2021",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "Frog’s Leap is John Williams’s winery in Rutherford,",
+        "to": "Frog’s Leap is a winery in Rutherford,"
+      },
+      "reason": "Living person, undated: “John Williams’s winery” makes a living person the present owner with no date, from a 4 October card written from knowledge; the Codex also names Larry Turley as a co-founder. The lineup already asks who runs it.",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md#4. Frog's Leap, Rutherford, Napa Valley (Estate Rutherford Cabernet Sauvignon 2021)"
+    },
+    {
+      "target": "wine:Frog’s Leap ‘Estate’ Rutherford Cabernet Sauvignon 2021",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "Frog’s Leap is John Williams’s winery in Rutherford,",
+        "to": "Frog’s Leap is a winery in Rutherford,"
+      },
+      "reason": "Living person, undated: “John Williams’s winery” makes a living person the present owner with no date, from a 4 October card written from knowledge; the Codex also names Larry Turley as a co-founder. The lineup already asks who runs it.",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md#4. Frog's Leap, Rutherford, Napa Valley (Estate Rutherford Cabernet Sauvignon 2021)"
+    },
+    {
+      "target": "wine:Silver Oak Napa Valley Cabernet Sauvignon 2020",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "founded by Justin Meyer and Ray Duncan and run by the Duncan family, makes",
+        "to": "founded by Justin Meyer and Ray Duncan, makes"
+      },
+      "reason": "Undated present owner: “run by the Duncan family” comes from a 4 October card written from knowledge; the October research notes that who runs it is ownership and can change, and the lineup already asks. The founders stay.",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md#5. Silver Oak Cellars, Napa Valley and Alexander Valley (Napa Valley Cabernet Sauvignon 2020)"
+    },
+    {
+      "target": "wine:Silver Oak Napa Valley Cabernet Sauvignon 2020",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "was founded by Justin Meyer and Ray Duncan and is run by the Duncan family. It makes",
+        "to": "was founded by Justin Meyer and Ray Duncan. It makes"
+      },
+      "reason": "Undated present owner: “run by the Duncan family” comes from a 4 October card written from knowledge; the October research notes that who runs it is ownership and can change, and the lineup already asks. The founders stay.",
+      "source": "research:producers-cellar-napa-sonoma-2026-10-10.md#5. Silver Oak Cellars, Napa Valley and Alexander Valley (Napa Valley Cabernet Sauvignon 2020)"
+    },
+    {
+      "target": "wine:Kracher ‘Cuvée’ Auslese Burgenland 2017",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "made famous for sweet wine by Alois Kracher and run today by his son Gerhard.",
+        "to": "made famous for sweet wine by Alois Kracher."
+      },
+      "reason": "Living person, undated: “run today by his son Gerhard” names a living person in a present role with no date; the October research kept him only as named by the 4 October 2026 card, a dated record the pack does not carry. Alois Kracher’s part stays.",
+      "source": "research:producers-cellar-germany-austria-2026-10-10.md#7. Weinlaubenhof Kracher, Illmitz (Neusiedlersee, Burgenland)"
+    },
+    {
+      "target": "wine:Kracher ‘Cuvée’ Auslese Burgenland 2017",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "Alois Kracher made the name, and his son Gerhard runs it now.",
+        "to": "Alois Kracher made the name."
+      },
+      "reason": "Living person, undated: “run today by his son Gerhard” names a living person in a present role with no date; the October research kept him only as named by the 4 October 2026 card, a dated record the pack does not carry. Alois Kracher’s part stays.",
+      "source": "research:producers-cellar-germany-austria-2026-10-10.md#7. Weinlaubenhof Kracher, Illmitz (Neusiedlersee, Burgenland)"
+    },
+    {
+      "target": "wine:Kracher ‘Cuvée’ Auslese Burgenland 2017",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "Alois Kracher made the estate’s name around the world, and his son Gerhard runs it today.",
+        "to": "Alois Kracher made the estate’s name around the world."
+      },
+      "reason": "Living person, undated: “run today by his son Gerhard” names a living person in a present role with no date; the October research kept him only as named by the 4 October 2026 card, a dated record the pack does not carry. Alois Kracher’s part stays.",
+      "source": "research:producers-cellar-germany-austria-2026-10-10.md#7. Weinlaubenhof Kracher, Illmitz (Neusiedlersee, Burgenland)"
+    },
+    {
+      "target": "wine:Niepoort Vintage Port 1987",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "in Porto, now led by Dirk Niepoort, also a leading maker of Douro table wines.",
+        "to": "in Porto, also a leading maker of Douro table wines."
+      },
+      "reason": "Living person, undated: “now led by Dirk Niepoort” names a living person in a present role from a 4 October card marked knowledge; the October research says no profile names who leads the house today.",
+      "source": "research:producers-cellar-port-madeira-2026-10-10.md#2. Niepoort (Vila Nova de Gaia; Quinta de Nápoles, Tedo valley, Douro)"
+    },
+    {
+      "target": "wine:Niepoort Vintage Port 1987",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "in Porto, run today by Dirk Niepoort, and its Ports",
+        "to": "in Porto, and its Ports"
+      },
+      "reason": "Living person, undated: “now led by Dirk Niepoort” names a living person in a present role from a 4 October card marked knowledge; the October research says no profile names who leads the house today.",
+      "source": "research:producers-cellar-port-madeira-2026-10-10.md#2. Niepoort (Vila Nova de Gaia; Quinta de Nápoles, Tedo valley, Douro)"
+    },
+    {
+      "target": "wine:Niepoort Vintage Port 1987",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "in Porto, now led by Dirk Niepoort, who is also one of the leading makers of Douro table wines.",
+        "to": "in Porto, and also one of the leading makers of Douro table wines."
+      },
+      "reason": "Living person, undated: “now led by Dirk Niepoort” names a living person in a present role from a 4 October card marked knowledge; the October research says no profile names who leads the house today.",
+      "source": "research:producers-cellar-port-madeira-2026-10-10.md#2. Niepoort (Vila Nova de Gaia; Quinta de Nápoles, Tedo valley, Douro)"
+    },
+    {
+      "target": "wine:Niepoort Vintage Port 1987",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "Answer: A family Port house of Dutch origin in Porto, led today by Dirk Niepoort.",
+        "to": "Answer: A family Port house of Dutch origin in Porto, known for elegant Ports and old Colheitas."
+      },
+      "reason": "Living person, undated: “now led by Dirk Niepoort” names a living person in a present role from a 4 October card marked knowledge; the October research says no profile names who leads the house today.",
+      "source": "research:producers-cellar-port-madeira-2026-10-10.md#2. Niepoort (Vila Nova de Gaia; Quinta de Nápoles, Tedo valley, Douro)"
+    },
+    {
+      "target": "wine:Château Suduiraut Sauternes Premier Cru Classé 2010",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "beside Château d’Yquem; it is owned by AXA Millésimes.",
+        "to": "beside Château d’Yquem."
+      },
+      "reason": "Undated present owner: AXA Millésimes is named by a 4 October card from knowledge, not from a search, and the October research could not date the purchase; the lineup already asks who owns it.",
+      "source": "research:producers-cellar-bordeaux-white-sweet-2026-10-10.md#3. Château Suduiraut, Preignac (Sauternes 2016 half-bottle and 2010)"
+    },
+    {
+      "target": "wine:Château Suduiraut Sauternes Premier Cru Classé 2010",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "right beside Château d’Yquem, and is owned by AXA Millésimes. It is",
+        "to": "right beside Château d’Yquem. It is"
+      },
+      "reason": "Undated present owner: AXA Millésimes is named by a 4 October card from knowledge, not from a search, and the October research could not date the purchase; the lineup already asks who owns it.",
+      "source": "research:producers-cellar-bordeaux-white-sweet-2026-10-10.md#3. Château Suduiraut, Preignac (Sauternes 2016 half-bottle and 2010)"
+    },
+    {
+      "target": "wine:Feist Late Bottled Vintage Port 2006",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "from": "founded by two German cousins and now part of the Sogevinus group,",
+        "to": "founded by two German cousins and bought by the Sogevinus group in 2006,"
+      },
+      "reason": "Present owner made a dated event: the searched record of 4 October gives Feist bought by Sogevinus in 2006; the October check reworded “has belonged to the Sogevinus group since 2006” to the dated purchase, since a present owner can change.",
+      "source": "research:producers-cellar-port-madeira-2026-10-10.md#3. Feist (founded in London; Oporto; Douro)"
+    },
+    {
+      "target": "wine:Feist Late Bottled Vintage Port 2006",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "founded by two German cousins, today part of the Sogevinus group,",
+        "to": "founded by two German cousins and bought by the Sogevinus group in 2006,"
+      },
+      "reason": "Present owner made a dated event: the searched record of 4 October gives Feist bought by Sogevinus in 2006; the October check reworded “has belonged to the Sogevinus group since 2006” to the dated purchase, since a present owner can change.",
+      "source": "research:producers-cellar-port-madeira-2026-10-10.md#3. Feist (founded in London; Oporto; Douro)"
+    },
+    {
+      "target": "wine:Castello Banfi ‘Florus’ Moscadello di Montalcino 2011",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "Castello Banfi revived it with Florus, a late harvest wine",
+        "to": "Castello Banfi makes it as Florus, a late harvest wine"
+      },
+      "reason": "Unsourced claim: no source says Banfi revived Moscadello; the component wine-region-montalcino says only that Banfi makes a late harvest Moscadello called Florus, and the October research left the revival out.",
+      "source": "research:producers-cellar-italy-2026-10-10.md#11. Castello Banfi"
+    },
+    {
+      "target": "wine:Castello Banfi ‘Florus’ Moscadello di Montalcino 2011",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "American wine importers, revived it with Florus: a late harvest wine",
+        "to": "American wine importers, makes it as Florus: a late harvest wine"
+      },
+      "reason": "Unsourced claim: no source says Banfi revived Moscadello; the component wine-region-montalcino says only that Banfi makes a late harvest Moscadello called Florus, and the October research left the revival out.",
+      "source": "research:producers-cellar-italy-2026-10-10.md#11. Castello Banfi"
+    },
+    {
+      "target": "wine:Giuseppe Quintarelli Recioto della Valpolicella Classico 1997",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "Answer: Giuseppe Quintarelli, the great traditionalist of Valpolicella; his family runs the estate today.",
+        "to": "Answer: Giuseppe Quintarelli, the great traditionalist of Valpolicella, whose name the estate carries."
+      },
+      "reason": "Undated present owner: “his family runs the estate today” states who runs the estate now with no date, the shape the October research took out of the other cards; the card’s own origin already says the family carries on the estate, and the answer now says only whose name it carries.",
+      "source": "research:cellar-review-2026-10-11-house-floor-4.md#4. The undated owners"
+    }
+  ],
+  "verdicts": [
+    {
+      "stemStart": "Screaming Eagle ‘Second Flight’ Napa Valley 2012, profile: from the Screaming Eagle estate in Oakville, rarer than the estate win",
+      "verdict": "kept",
+      "why": "Right. The 4 October repairer withdrew the claim that Second Flight is made in smaller amounts than the estate wine (n3114: about 710 cases of the 2012), and no source carries a closed list; the profile now ends on the October research's own suggested words, the sauce part and the Tell me about it drop the comparison, and the Tell me about it keeps the card's \"rare in its own right\". The sauce part does not copy the profile; no new name or year."
+    },
+    {
+      "stemStart": "Screaming Eagle ‘Second Flight’ Napa Valley 2012, parts.sauce: Napa’s most famous cult name, rarer still",
+      "verdict": "kept",
+      "why": "Right. The 4 October repairer withdrew the claim that Second Flight is made in smaller amounts than the estate wine (n3114: about 710 cases of the 2012), and no source carries a closed list; the profile now ends on the October research's own suggested words, the sauce part and the Tell me about it drop the comparison, and the Tell me about it keeps the card's \"rare in its own right\". The sauce part does not copy the profile; no new name or year."
+    },
+    {
+      "stemStart": "Screaming Eagle ‘Second Flight’ Napa Valley 2012, kept.0.a: whose wine is sold almost entirely to a long-closed mailing list.",
+      "verdict": "kept",
+      "why": "Right. The 4 October repairer withdrew the claim that Second Flight is made in smaller amounts than the estate wine (n3114: about 710 cases of the 2012), and no source carries a closed list; the profile now ends on the October research's own suggested words, the sauce part and the Tell me about it drop the comparison, and the Tell me about it keeps the card's \"rare in its own right\". The sauce part does not copy the profile; no new name or year."
+    },
+    {
+      "stemStart": "Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018, profile: bottled as Special Selection only in some years and aged longer in oak",
+      "verdict": "kept",
+      "why": "Right to cut: n2778 and the Codex note claim a selective release, but no record names a year Special Selection was skipped, and the lineup already asks (entry 3631). The profile keeps \"the Wagner family's best lots\", a fact of the 2018 wine, not a present owner."
+    },
+    {
+      "stemStart": "Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018, origin: Special Selection is the top Cabernet of Caymus Vineyards, the Wagner ",
+      "verdict": "kept",
+      "why": "Right: \"the Wagner family winery\" is an undated present owner, and \"the winery the Wagner family founded\" is the October check's own repair (Verification item 11) on the Codex record p-caymus, founded 1972 as Charlie Wagner's house. \"Only in some years\" goes for the reason above. s45 at 78 words, Tell me about it at 145, both in range."
+    },
+    {
+      "stemStart": "Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018, lines.s45: Special Selection is the top Cabernet of Caymus, the Wagner family win",
+      "verdict": "kept",
+      "why": "Right: \"the Wagner family winery\" is an undated present owner, and \"the winery the Wagner family founded\" is the October check's own repair (Verification item 11) on the Codex record p-caymus, founded 1972 as Charlie Wagner's house. \"Only in some years\" goes for the reason above. s45 at 78 words, Tell me about it at 145, both in range."
+    },
+    {
+      "stemStart": "Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018, parts.technique: Special Selection, made only in some years, longer in oak",
+      "verdict": "amended",
+      "why": "The cut is right, but the to-text repeated \"from the best lots\" one part after parts.main (\"Cabernet Sauvignon from the Wagner family's best lots\"); it now reads \"Special Selection, longer in oak\", the original less the withdrawn words. Five words."
+    },
+    {
+      "stemStart": "Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018, kept.0.a: Caymus Vineyards is the Wagner family winery in Rutherford, in the Nap",
+      "verdict": "kept",
+      "why": "Right: \"the Wagner family winery\" is an undated present owner, and \"the winery the Wagner family founded\" is the October check's own repair (Verification item 11) on the Codex record p-caymus, founded 1972 as Charlie Wagner's house. \"Only in some years\" goes for the reason above. s45 at 78 words, Tell me about it at 145, both in range."
+    },
+    {
+      "stemStart": "Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018, kept.2.a: Answer: It is made only in some years, from the family’s best lots, an",
+      "verdict": "amended",
+      "why": "The cut is right but broke a gate: What do guests ask? fell to 58 words, under engine.mjs NOTE_WORDS' floor of 60 for that note, a check-pack failure. The answer now ends \"aged longer in oak than the Napa Valley Cabernet.\", the comparison n2778 and the card's own Tell me about it give; 63 words, three shaped pairs, no new name or year."
+    },
+    {
+      "stemStart": "Caymus Napa Valley Cabernet Sauvignon 2023, origin: Caymus Vineyards is the Wagner family winery in Rutherford, Napa Valle",
+      "verdict": "kept",
+      "why": "Right: \"run by Chuck Wagner and his family\" puts a living man in a present role with no date, from a card marked knowledge (n2776; research section 9, item 3, used in no profile). The founding stands on p-caymus (1972); \"Caymus also makes\" keeps the sentence without making the family the present maker. Tell me about it at 149 words."
+    },
+    {
+      "stemStart": "Caymus Napa Valley Cabernet Sauvignon 2023, kept.0.a: Caymus, KAY-mus, is the Wagner family’s winery in Rutherford, in the m",
+      "verdict": "kept",
+      "why": "Right: \"run by Chuck Wagner and his family\" puts a living man in a present role with no date, from a card marked knowledge (n2776; research section 9, item 3, used in no profile). The founding stands on p-caymus (1972); \"Caymus also makes\" keeps the sentence without making the family the present maker. Tell me about it at 149 words."
+    },
+    {
+      "stemStart": "Caymus Napa Valley Cabernet Sauvignon 2023, kept.0.a: The family also makes the Special Selection, our celebration Caymus.",
+      "verdict": "kept",
+      "why": "Right: \"run by Chuck Wagner and his family\" puts a living man in a present role with no date, from a card marked knowledge (n2776; research section 9, item 3, used in no profile). The founding stands on p-caymus (1972); \"Caymus also makes\" keeps the sentence without making the family the present maker. Tell me about it at 149 words."
+    },
+    {
+      "stemStart": "Caymus Napa Valley Cabernet Sauvignon 2023, lines.s45: Caymus is the Wagner family’s winery in Rutherford,",
+      "verdict": "amended",
+      "why": "Added by the adversarial read: the 2023's s45 still opened \"Caymus is the Wagner family's winery in Rutherford\", the present owner its origin and Tell me about it lose in this batch; it now reads \"the winery the Wagner family founded\", as they do. 83 words, under the cap of 110; no new name."
+    },
+    {
+      "stemStart": "Dominus Estate Napa Valley 2014, lines.s10: Dominus 2014, Christian Moueix’s Napa estate:",
+      "verdict": "kept",
+      "why": "Right: \"Christian Moueix's Napa estate\" made a living man the present owner with no dated source; \"created\" is the pack's own origin and n2834, and the October check's wording (Verification item 7). s10 at 17 words and s20 at 32 sit inside their floors and caps; the guest line carries the same words as the s10, as before."
+    },
+    {
+      "stemStart": "Dominus Estate Napa Valley 2014, guest: Dominus 2014, Christian Moueix’s Napa estate:",
+      "verdict": "kept",
+      "why": "Right: \"Christian Moueix's Napa estate\" made a living man the present owner with no dated source; \"created\" is the pack's own origin and n2834, and the October check's wording (Verification item 7). s10 at 17 words and s20 at 32 sit inside their floors and caps; the guest line carries the same words as the s10, as before."
+    },
+    {
+      "stemStart": "Dominus Estate Napa Valley 2014, why: Dominus, the Napa estate of Christian Moueix of Bordeaux,",
+      "verdict": "kept",
+      "why": "Right: \"Christian Moueix's Napa estate\" made a living man the present owner with no dated source; \"created\" is the pack's own origin and n2834, and the October check's wording (Verification item 7). s10 at 17 words and s20 at 32 sit inside their floors and caps; the guest line carries the same words as the s10, as before."
+    },
+    {
+      "stemStart": "Dominus Estate Napa Valley 2014, lines.s20: Dominus comes from Christian Moueix, of the Pomerol family:",
+      "verdict": "kept",
+      "why": "Right: \"Christian Moueix's Napa estate\" made a living man the present owner with no dated source; \"created\" is the pack's own origin and n2834, and the October check's wording (Verification item 7). s10 at 17 words and s20 at 32 sit inside their floors and caps; the guest line carries the same words as the s10, as before."
+    },
+    {
+      "stemStart": "Dominus Estate Napa Valley 2014, lines.s45: Dominus is the Napa estate of Christian Moueix, from the Bordeaux fami",
+      "verdict": "amended",
+      "why": "The fix is right (\"He farms the historic Napanook vineyard ... and makes the wine\" was a present role for a living man), but \"It grows on the historic Napanook vineyard\" made the estate grow; now \"It stands on the historic Napanook vineyard\", as the pack's origin has the estate \"on the historic Napanook vineyard\". Word counts unchanged (s45 84, Tell me about it 145)."
+    },
+    {
+      "stemStart": "Dominus Estate Napa Valley 2014, kept.0.a: is the Napa estate of Christian Moueix, of the Libourne family behind ",
+      "verdict": "amended",
+      "why": "The fix is right (\"He farms the historic Napanook vineyard ... and makes the wine\" was a present role for a living man), but \"It grows on the historic Napanook vineyard\" made the estate grow; now \"It stands on the historic Napanook vineyard\", as the pack's origin has the estate \"on the historic Napanook vineyard\". Word counts unchanged (s45 84, Tell me about it 145)."
+    },
+    {
+      "stemStart": "Dominus Estate Napa Valley 2014, kept.2.a: Answer: Christian Moueix, of the Bordeaux family behind Pétrus and Tro",
+      "verdict": "kept",
+      "why": "Right: the answer to \"Who makes Dominus?\" said who makes it now, which no dated source holds; it now says who created the estate, on the pack's origin. 68 words, three shaped pairs."
+    },
+    {
+      "stemStart": "Harlan Estate Oakville 2006, profile: from Bill Harlan’s hillside estate above Oakville.",
+      "verdict": "kept",
+      "why": "Right: the possessive made Bill Harlan, living, the present owner. The card's own origin and n2854 say he founded it, the Codex dates the land to 1984 and the October Verification confirms it; the s45's \"Bill Harlan planted it\" already speaks of the founding. Technique part at 10 words, under 14."
+    },
+    {
+      "stemStart": "Harlan Estate Oakville 2006, parts.technique: Bill Harlan’s estate, aged in new French oak",
+      "verdict": "kept",
+      "why": "Right: the possessive made Bill Harlan, living, the present owner. The card's own origin and n2854 say he founded it, the Codex dates the land to 1984 and the October Verification confirms it; the s45's \"Bill Harlan planted it\" already speaks of the founding. Technique part at 10 words, under 14."
+    },
+    {
+      "stemStart": "Heitz Cellar ‘Martha’s Vineyard’ Napa Valley 2009, origin: named for Martha May, who planted it with her husband Tom,",
+      "verdict": "kept",
+      "why": "Right, and the original was probably wrong: the Codex (w-marthas-vineyard) holds only that Tom and Martha May owned the vineyard, the planting rests on a card marked knowledge, and the October check recalled an earlier couple planting it before the Mays bought it. The past tense (\"whose vineyard it was\", \"was hers\") claims nothing volatile about who owns it now; the batch's lineup ask on the planters stands. Tell me about it 142 words, What do guests ask? 62."
+    },
+    {
+      "stemStart": "Heitz Cellar ‘Martha’s Vineyard’ Napa Valley 2009, lines.s45: from the Oakville vineyard planted by Tom and Martha May,",
+      "verdict": "kept",
+      "why": "Right, and the original was probably wrong: the Codex (w-marthas-vineyard) holds only that Tom and Martha May owned the vineyard, the planting rests on a card marked knowledge, and the October check recalled an earlier couple planting it before the Mays bought it. The past tense (\"whose vineyard it was\", \"was hers\") claims nothing volatile about who owns it now; the batch's lineup ask on the planters stands. Tell me about it 142 words, What do guests ask? 62."
+    },
+    {
+      "stemStart": "Heitz Cellar ‘Martha’s Vineyard’ Napa Valley 2009, kept.0.a: comes from a vineyard in Oakville planted by Tom and Martha May,",
+      "verdict": "kept",
+      "why": "Right, and the original was probably wrong: the Codex (w-marthas-vineyard) holds only that Tom and Martha May owned the vineyard, the planting rests on a card marked knowledge, and the October check recalled an earlier couple planting it before the Mays bought it. The past tense (\"whose vineyard it was\", \"was hers\") claims nothing volatile about who owns it now; the batch's lineup ask on the planters stands. Tell me about it 142 words, What do guests ask? 62."
+    },
+    {
+      "stemStart": "Heitz Cellar ‘Martha’s Vineyard’ Napa Valley 2009, kept.2.a: Answer: Martha May, who planted the vineyard in Oakville with her husb",
+      "verdict": "kept",
+      "why": "Right, and the original was probably wrong: the Codex (w-marthas-vineyard) holds only that Tom and Martha May owned the vineyard, the planting rests on a card marked knowledge, and the October check recalled an earlier couple planting it before the Mays bought it. The past tense (\"whose vineyard it was\", \"was hers\") claims nothing volatile about who owns it now; the batch's lineup ask on the planters stands. Tell me about it 142 words, What do guests ask? 62."
+    },
+    {
+      "stemStart": "Shafer ‘One Point Five’ Stags Leap District Cabernet Sauvignon 2023, origin: Shafer Vineyards is the Shafer family winery in the Stags Leap Distric",
+      "verdict": "kept",
+      "why": "Right: Shafer Vineyards was sold to Shinsegae Property in February 2022 (the batch's search 3; confirmed by a second search on 11 October 2026: Wine Spectator and Decanter, about $250 million, the estate vines included), so \"the Shafer family winery\" and \"a family estate\" are no longer true. The origin now names the founder, as the card's own One Point Five line does, on the Codex's founded 1972. No buyer is named on the card."
+    },
+    {
+      "stemStart": "Shafer ‘One Point Five’ Stags Leap District Cabernet Sauvignon 2023, lines.s45: Shafer is a family estate in the Stags Leap District,",
+      "verdict": "kept",
+      "why": "Right: Shafer Vineyards was sold to Shinsegae Property in February 2022 (the batch's search 3; confirmed by a second search on 11 October 2026: Wine Spectator and Decanter, about $250 million, the estate vines included), so \"the Shafer family winery\" and \"a family estate\" are no longer true. The origin now names the founder, as the card's own One Point Five line does, on the Codex's founded 1972. No buyer is named on the card."
+    },
+    {
+      "stemStart": "Shafer ‘One Point Five’ Stags Leap District Cabernet Sauvignon 2023, kept.0.a: Shafer Vineyards, SHAY-fer, is a family estate in the Stags Leap Distr",
+      "verdict": "kept",
+      "why": "Right: Shafer Vineyards was sold to Shinsegae Property in February 2022 (the batch's search 3; confirmed by a second search on 11 October 2026: Wine Spectator and Decanter, about $250 million, the estate vines included), so \"the Shafer family winery\" and \"a family estate\" are no longer true. The origin now names the founder, as the card's own One Point Five line does, on the Codex's founded 1972. No buyer is named on the card."
+    },
+    {
+      "stemStart": "Shafer ‘One Point Five’ Stags Leap District Cabernet Sauvignon 2023, lines.s45: from their Stags Leap vineyards,",
+      "verdict": "amended",
+      "why": "Added by the adversarial read: after \"One Point Five is named for John Shafer ... and his son Doug\", \"from their Stags Leap vineyards\" still made the Shafers the owners of the vines, and the 2022 sale took in the estate vineyards (Wine Spectator: 225 acres over four ranches, two in Stags Leap District). It now reads \"from Shafer's Stags Leap vineyards\", the card's own profile wording. Word counts unchanged (s45 82, Tell me about it 146); no new name."
+    },
+    {
+      "stemStart": "Shafer ‘One Point Five’ Stags Leap District Cabernet Sauvignon 2023, kept.0.a: from their Stags Leap vineyards,",
+      "verdict": "amended",
+      "why": "Added by the adversarial read: after \"One Point Five is named for John Shafer ... and his son Doug\", \"from their Stags Leap vineyards\" still made the Shafers the owners of the vines, and the 2022 sale took in the estate vineyards (Wine Spectator: 225 acres over four ranches, two in Stags Leap District). It now reads \"from Shafer's Stags Leap vineyards\", the card's own profile wording. Word counts unchanged (s45 82, Tell me about it 146); no new name."
+    },
+    {
+      "stemStart": "Ken Wright Cellars Willamette Valley Pinot Noir 2024, profile: Pinot Noir from Ken Wright’s vineyards across the Willamette Valley,",
+      "verdict": "kept",
+      "why": "Right: no source has Ken Wright owning the vineyards behind the appellation blend; the 4 October card calls it his blend across vineyard sources, the card's technique part already says vineyard sources, and Shea is bottled by Bergstrom too on our own list."
+    },
+    {
+      "stemStart": "Château Gilette ‘Crème de Tête’ Sauternes 1989, style: Old Sauternes aged decades in concrete before release,",
+      "verdict": "kept",
+      "why": "Right: search 51 gives close to twenty years in small concrete vats and the 4 October card around two decades; \"decades\" in the vat claimed more. The 10 second line's \"aged for decades\" is true of a wine 37 years old and rightly stands."
+    },
+    {
+      "stemStart": "Bartolo Mascarello Barolo 2017, origin: village of Barolo, run by Maria Teresa Mascarello, famous for",
+      "verdict": "kept",
+      "why": "Right: Maria Teresa Mascarello, living, in a present role with no date; the October research names her twice, undated, and keeps her out of the profile. \"A small family cellar\" stays and names no one. s45 at 80 words, Tell me about it at 148."
+    },
+    {
+      "stemStart": "Bartolo Mascarello Barolo 2017, lines.s45: village of Barolo, now run by Maria Teresa Mascarello, and it is famou",
+      "verdict": "kept",
+      "why": "Right: Maria Teresa Mascarello, living, in a present role with no date; the October research names her twice, undated, and keeps her out of the profile. \"A small family cellar\" stays and names no one. s45 at 80 words, Tell me about it at 148."
+    },
+    {
+      "stemStart": "Bartolo Mascarello Barolo 2017, kept.0.a: village of Barolo, now run by Maria Teresa Mascarello. They are tradit",
+      "verdict": "kept",
+      "why": "Right: Maria Teresa Mascarello, living, in a present role with no date; the October research names her twice, undated, and keeps her out of the profile. \"A small family cellar\" stays and names no one. s45 at 80 words, Tell me about it at 148."
+    },
+    {
+      "stemStart": "Gaja Barbaresco 2012, origin: Angelo Gaja made it world famous, and his family runs it today.",
+      "verdict": "kept",
+      "why": "Right: \"his family runs it today\" is an undated present owner the October research kept out of the profile; Angelo Gaja's past part in the fame stands, and \"the family winery\" names no one. Tell me about it at 149 words."
+    },
+    {
+      "stemStart": "Gaja Barbaresco 2012, kept.0.a: Angelo Gaja made it one of the most famous names in Italian wine, and ",
+      "verdict": "kept",
+      "why": "Right: \"his family runs it today\" is an undated present owner the October research kept out of the profile; Angelo Gaja's past part in the fame stands, and \"the family winery\" names no one. Tell me about it at 149 words."
+    },
+    {
+      "stemStart": "Vega Sicilia ‘Único’ Ribera del Duero 2009, origin: Castilla y León, owned by the Álvarez family; Único is its flagship.",
+      "verdict": "kept",
+      "why": "Right: the Álvarez ownership rests on a card from knowledge, undated, used in no profile, and the lineup asks for a dated answer (entry 3700). Tell me about it at 141 words."
+    },
+    {
+      "stemStart": "Vega Sicilia ‘Único’ Ribera del Duero 2009, kept.0.a: on the high plateau of Castilla y León, owned by the Álvarez family. Ú",
+      "verdict": "kept",
+      "why": "Right: the Álvarez ownership rests on a card from knowledge, undated, used in no profile, and the lineup asks for a dated answer (entry 3700). Tell me about it at 141 words."
+    },
+    {
+      "stemStart": "Ornellaia ‘Masseto’ Toscana 2011, origin: is now run as an estate of its own by the Frescobaldi family.",
+      "verdict": "kept",
+      "why": "Right: the Frescobaldi ownership is undated in the Codex and the pack, and the research found the year of separation given two ways; \"now run as an estate of its own\" names no owner and no year, and the lineup asks (entry 3620). Tell me about it at 139 words."
+    },
+    {
+      "stemStart": "Ornellaia ‘Masseto’ Toscana 2011, kept.0.a: and it is now run as an estate of its own by the Frescobaldi family.",
+      "verdict": "kept",
+      "why": "Right: the Frescobaldi ownership is undated in the Codex and the pack, and the research found the year of separation given two ways; \"now run as an estate of its own\" names no owner and no year, and the lineup asks (entry 3620). Tell me about it at 139 words."
+    },
+    {
+      "stemStart": "Chappellet ‘Mountain Cuvée’ Napa Valley 2024, origin: in 1967; the family still runs it.",
+      "verdict": "kept",
+      "why": "Right: \"the family still runs it\" is the pack's own undated present tense. The founding by Donn and Molly Chappellet on Pritchard Hill in 1967 stands on p-chappellet and the 4 October search. The \"their\" that follows now reads as the house, which British usage takes as plural; s45 at 78 words, Tell me about it at 151."
+    },
+    {
+      "stemStart": "Chappellet ‘Mountain Cuvée’ Napa Valley 2024, lines.s45: on the east side of the valley, and still run by the family. Mountain ",
+      "verdict": "kept",
+      "why": "Right: \"the family still runs it\" is the pack's own undated present tense. The founding by Donn and Molly Chappellet on Pritchard Hill in 1967 stands on p-chappellet and the 4 October search. The \"their\" that follows now reads as the house, which British usage takes as plural; s45 at 78 words, Tell me about it at 151."
+    },
+    {
+      "stemStart": "Chappellet ‘Mountain Cuvée’ Napa Valley 2024, kept.0.a: in 1967, and the family still runs it. Their top wines",
+      "verdict": "kept",
+      "why": "Right: \"the family still runs it\" is the pack's own undated present tense. The founding by Donn and Molly Chappellet on Pritchard Hill in 1967 stands on p-chappellet and the 4 October search. The \"their\" that follows now reads as the house, which British usage takes as plural; s45 at 78 words, Tell me about it at 151."
+    },
+    {
+      "stemStart": "Frog’s Leap ‘Estate’ Rutherford Cabernet Sauvignon 2021, origin: Frog’s Leap is John Williams’s winery in Rutherford, Napa Valley,",
+      "verdict": "kept",
+      "why": "Right: \"John Williams's winery\" makes a living man the present owner from a card marked knowledge, and the Codex names Larry Turley as a co-founder, so a single founder would be wrong too; the lineup asks (entry 3645). s45 at 79 words, Tell me about it at 152."
+    },
+    {
+      "stemStart": "Frog’s Leap ‘Estate’ Rutherford Cabernet Sauvignon 2021, lines.s45: Frog’s Leap is John Williams’s winery in Rutherford,",
+      "verdict": "kept",
+      "why": "Right: \"John Williams's winery\" makes a living man the present owner from a card marked knowledge, and the Codex names Larry Turley as a co-founder, so a single founder would be wrong too; the lineup asks (entry 3645). s45 at 79 words, Tell me about it at 152."
+    },
+    {
+      "stemStart": "Frog’s Leap ‘Estate’ Rutherford Cabernet Sauvignon 2021, kept.0.a: Frog’s Leap is John Williams’s winery in Rutherford,",
+      "verdict": "kept",
+      "why": "Right: \"John Williams's winery\" makes a living man the present owner from a card marked knowledge, and the Codex names Larry Turley as a co-founder, so a single founder would be wrong too; the lineup asks (entry 3645). s45 at 79 words, Tell me about it at 152."
+    },
+    {
+      "stemStart": "Silver Oak Napa Valley Cabernet Sauvignon 2020, origin: founded by Justin Meyer and Ray Duncan and run by the Duncan family, m",
+      "verdict": "kept",
+      "why": "Right: \"run by the Duncan family\" is an undated present owner from a card from knowledge; the two founders stand, and the lineup asks (entry 3638). Tell me about it at 151 words."
+    },
+    {
+      "stemStart": "Silver Oak Napa Valley Cabernet Sauvignon 2020, kept.0.a: was founded by Justin Meyer and Ray Duncan and is run by the Duncan fa",
+      "verdict": "kept",
+      "why": "Right: \"run by the Duncan family\" is an undated present owner from a card from knowledge; the two founders stand, and the lineup asks (entry 3638). Tell me about it at 151 words."
+    },
+    {
+      "stemStart": "Kracher ‘Cuvée’ Auslese Burgenland 2017, origin: made famous for sweet wine by Alois Kracher and run today by his son G",
+      "verdict": "kept",
+      "why": "Right: \"run today by his son Gerhard\" puts a living man in a present role with no date in the pack; Alois Kracher's part stands on search 48. s45 at 70 words, Tell me about it at 143."
+    },
+    {
+      "stemStart": "Kracher ‘Cuvée’ Auslese Burgenland 2017, lines.s45: Alois Kracher made the name, and his son Gerhard runs it now.",
+      "verdict": "kept",
+      "why": "Right: \"run today by his son Gerhard\" puts a living man in a present role with no date in the pack; Alois Kracher's part stands on search 48. s45 at 70 words, Tell me about it at 143."
+    },
+    {
+      "stemStart": "Kracher ‘Cuvée’ Auslese Burgenland 2017, kept.0.a: Alois Kracher made the estate’s name around the world, and his son Ger",
+      "verdict": "kept",
+      "why": "Right: \"run today by his son Gerhard\" puts a living man in a present role with no date in the pack; Alois Kracher's part stands on search 48. s45 at 70 words, Tell me about it at 143."
+    },
+    {
+      "stemStart": "Niepoort Vintage Port 1987, origin: in Porto, now led by Dirk Niepoort, also a leading maker of Douro tabl",
+      "verdict": "kept",
+      "why": "Right: \"now led by Dirk Niepoort\" is a present role for a living man from a card marked knowledge, and the October research names no leader in any profile. \"Also a leading maker of Douro table wines\" now reads of the house, which the 4 October card supports. s45 at 79 words, Tell me about it at 149."
+    },
+    {
+      "stemStart": "Niepoort Vintage Port 1987, lines.s45: in Porto, run today by Dirk Niepoort, and its Ports",
+      "verdict": "kept",
+      "why": "Right: \"now led by Dirk Niepoort\" is a present role for a living man from a card marked knowledge, and the October research names no leader in any profile. \"Also a leading maker of Douro table wines\" now reads of the house, which the 4 October card supports. s45 at 79 words, Tell me about it at 149."
+    },
+    {
+      "stemStart": "Niepoort Vintage Port 1987, kept.0.a: in Porto, now led by Dirk Niepoort, who is also one of the leading mak",
+      "verdict": "kept",
+      "why": "Right: \"now led by Dirk Niepoort\" is a present role for a living man from a card marked knowledge, and the October research names no leader in any profile. \"Also a leading maker of Douro table wines\" now reads of the house, which the 4 October card supports. s45 at 79 words, Tell me about it at 149."
+    },
+    {
+      "stemStart": "Niepoort Vintage Port 1987, kept.2.a: Answer: A family Port house of Dutch origin in Porto, led today by Dir",
+      "verdict": "kept",
+      "why": "Right: the answer now gives the house's reputation in the 4 October card's own words (\"known for elegant Ports and for old Colheitas\") instead of an undated leader. 70 words, three shaped pairs."
+    },
+    {
+      "stemStart": "Château Suduiraut Sauternes Premier Cru Classé 2010, origin: beside Château d’Yquem; it is owned by AXA Millésimes.",
+      "verdict": "kept",
+      "why": "Right: AXA Millésimes is named only by a card from knowledge, and the October research could not date the purchase; the first growth and the place beside Yquem stand, and the lineup asks (entry 3533). Tell me about it at 147 words."
+    },
+    {
+      "stemStart": "Château Suduiraut Sauternes Premier Cru Classé 2010, kept.0.a: right beside Château d’Yquem, and is owned by AXA Millésimes. It is",
+      "verdict": "kept",
+      "why": "Right: AXA Millésimes is named only by a card from knowledge, and the October research could not date the purchase; the first growth and the place beside Yquem stand, and the lineup asks (entry 3533). Tell me about it at 147 words."
+    },
+    {
+      "stemStart": "Feist Late Bottled Vintage Port 2006, origin: founded by two German cousins and now part of the Sogevinus group,",
+      "verdict": "kept",
+      "why": "Right: the searched record (vintageport.se, 4 October) gives Feist bought by Sogevinus in 2006, and the October check made the same change from a present owner to the dated purchase. The year stands in the research and in the house, so the note's year rule holds. Tell me about it at 168 words."
+    },
+    {
+      "stemStart": "Feist Late Bottled Vintage Port 2006, kept.0.a: founded by two German cousins, today part of the Sogevinus group,",
+      "verdict": "kept",
+      "why": "Right: the searched record (vintageport.se, 4 October) gives Feist bought by Sogevinus in 2006, and the October check made the same change from a present owner to the dated purchase. The year stands in the research and in the house, so the note's year rule holds. Tell me about it at 168 words."
+    },
+    {
+      "stemStart": "Castello Banfi ‘Florus’ Moscadello di Montalcino 2011, lines.s45: Castello Banfi revived it with Florus, a late harvest wine",
+      "verdict": "kept",
+      "why": "Kept. The original may well be true (Banfi is often credited with the modern Moscadello), but no source in the repositories says revived, and the Montalcino component says only that Banfi makes Florus; \"makes it as Florus\" is safe, and the batch's lineup ask carries the revival. s45 at 80 words, Tell me about it at 158."
+    },
+    {
+      "stemStart": "Castello Banfi ‘Florus’ Moscadello di Montalcino 2011, kept.0.a: American wine importers, revived it with Florus: a late harvest wine",
+      "verdict": "kept",
+      "why": "Kept. The original may well be true (Banfi is often credited with the modern Moscadello), but no source in the repositories says revived, and the Montalcino component says only that Banfi makes Florus; \"makes it as Florus\" is safe, and the batch's lineup ask carries the revival. s45 at 80 words, Tell me about it at 158."
+    },
+    {
+      "stemStart": "Giuseppe Quintarelli Recioto della Valpolicella Classico 1997, kept.2.a: Answer: Giuseppe Quintarelli, the great traditionalist of Valpolicella",
+      "verdict": "kept",
+      "why": "Right: \"his family runs the estate today\" states who runs it now with no date, the shape this batch takes out of Gaja; \"whose name the estate carries\" is plainly true. 60 words, exactly on the floor of 60, three shaped pairs. The origin's \"his family carries on the estate\" names no one and is left, as the note says."
+    }
+  ]
+}

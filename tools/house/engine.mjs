@@ -88,8 +88,23 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    build, never ahead of the clock. The 16:20 edition of 11 October carries the correction published with
    the site's Ledger method studies: Prisoner of Love's comparison with the Ramos no longer says the
    clarification takes the cream away, since clarifying does not establish that the milk is gone, and it
-   sends the server to confirm the preparation with the bar. */
-export const EDITION_BUILT_AT = '2026-10-11T16:20:00.000Z';
+   sends the server to confirm the preparation with the bar. The 23:30 edition of 11 October carries the
+   bounded cellar review of the house's wine cards (the six research/cellar-review-2026-10-11-house files
+   and their notes, as the refuters left them): region strings in the appellation, region and country
+   shape (a Bourgogne Blanc read as Bourgogne, not Meursault), the withdrawn and unsourced claims the
+   reviewers filed taken off the fields they swept, the Moulin d'Issan Merlot-led, Rare no longer called
+   Piper-Heidsieck's, and the questions no source settled, each an ask:+ override for the sommelier at
+   lineup; it left named living people in present roles on cards outside the swept fields. The 01:00
+   edition of 12 October carries the verifier's repairs to those cards
+   (research/cellar-review-2026-10-12-verifier.md): the house Champagne by the bottle labeled for us, not
+   made for us, and said as the glass card says it; Roulot, Dupont-Fahn, Loimer and both Stein cards no
+   longer name who runs the estate today, and Coche-Dury dates its change of hands to 2010; the Stein
+   Weihwasser keeps only its sourced steep slate on its card, the parcel, the vine age and the casks left
+   to the lineup ask (its comparison row, built from components/wines.json, still says old vines at Alf,
+   for the owner); stamped at the half hour before its build, never ahead of the clock. This is not a
+   claim that no card anywhere names a living person in a present role: only the cards named here were
+   read for it. */
+export const EDITION_BUILT_AT = '2026-10-12T01:00:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a

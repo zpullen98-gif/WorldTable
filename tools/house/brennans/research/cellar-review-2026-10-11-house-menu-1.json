@@ -1,0 +1,409 @@
+{
+	"batch": "house-menu-1",
+	"readCount": 17,
+	"total": 17,
+	"entries": [
+		{
+			"target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+			"field": "kept.4.a",
+			"op": "replace",
+			"value": {
+				"from": "On the Traditional Breakfast the included pour with the Hussarde is a lineup question too.",
+				"to": "On the Traditional Breakfast the included pour with the Hussarde is Charles Lafitte Brut, 4 oz, as the guide and the current menu print: pour the house Champagne with the Hussarde only à la carte, and never double-pour."
+			},
+			"reason": "Cellar review, house menu 1: the What should I watch for? note left the breakfast tasting pour open, while the guide, the tasting menus pasted on 5 October and the Charles Lafitte card all name Charles Lafitte Brut, 4 oz, on the Hussarde course; the server needs the one answer and the double-pour warning.",
+			"source": "research:cellar-review-2026-10-11-house-menu-1.md#E1"
+		},
+		{
+			"target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "cuvee",
+				"to": "cuvée"
+			},
+			"reason": "Cellar review, house menu 1: the bespoke-blend note spells cuvee twice where every other line of the card, and the house, writes cuvée; read aloud, the bare form is said koo-VEE.",
+			"source": "research:cellar-review-2026-10-11-house-menu-1.md#E2"
+		},
+		{
+			"target": "dish:Eggs Hussarde",
+			"field": "pairing.palate",
+			"op": "replace",
+			"value": {
+				"from": "the Pinot-based body stands up to the winey marchand de vin",
+				"to": "the body from its Pinot Noir and Meunier stands up to the winey marchand de vin"
+			},
+			"reason": "Cellar review, house menu 1: the house Champagne is a blend of all three grapes whose proportions wait on the sommelier naming the cuvée, so Pinot-based claimed a proportion no source holds; the two black grapes it does name carry the point, said as the body from them so the line reads aloud in one pass.",
+			"source": "research:cellar-review-2026-10-11-house-menu-1.md#E3"
+		},
+		{
+			"target": "wine:Rare Brut 2012 (Coravin)",
+			"field": "why",
+			"op": "replace",
+			"value": {
+				"from": "and the stepUp on the oysters, turtle soup, Hussarde and omelette.",
+				"to": "and the upgrade we offer with the oysters, the turtle soup, the Hussarde and the omelette."
+			},
+			"reason": "Cellar review, house menu 1: the why printed the pairing field name stepUp as a word; a server reads the why aloud.",
+			"source": "research:cellar-review-2026-10-11-house-menu-1.md#E4"
+		},
+		{
+			"target": "wine:Rare Brut 2012 (Coravin)",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "prestige cuvee",
+				"to": "prestige cuvée"
+			},
+			"reason": "Cellar review, house menu 1: cuvée spelled without its accent, unlike the rest of the card.",
+			"source": "research:cellar-review-2026-10-11-house-menu-1.md#E5"
+		},
+		{
+			"target": "dish:Grand Isle Jewel Oysters",
+			"field": "pairing.stepUp",
+			"op": "replace",
+			"value": {
+				"from": "Piper-Heidsieck's prestige vintage Champagne, Chardonnay-led from Grand Cru vineyards,",
+				"to": "a prestige vintage Champagne that began at Piper-Heidsieck and is now its own house, Chardonnay-led from grand and premier cru villages,"
+			},
+			"reason": "Cellar review, house menu 1: the oyster step up still called Rare Piper-Heidsieck's and drawn from Grand Cru vineyards, the two claims the producers deep dive took off the Rare card (its own house since 2018; the 2013 from seven grand cru and three premier cru sites among eleven crus).",
+			"source": "research:producers-cellar-champagne-menu-2026-10-10.md#section 2"
+		},
+		{
+			"target": "wine:C.H. Berres ‘Old Vines’ Riesling 2022",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "C.H. Berres, BEH-ress, is an old Mosel family estate at Ürzig in the Middle Mosel, with roots to 1510.",
+				"to": "C.H. Berres, BEH-ress, is a family estate at Ürzig in the Middle Mosel, and the Berres family traces its work in Ürzig's vineyards to 1510."
+			},
+			"reason": "Cellar review, house menu 1: the 1510 date, which the producers deep dive held unconfirmed, now has a source, tourism listings that give the family's records of its work in Ürzig's vineyards since 1510; the estate as named came later, so the date sits on the family and is told as the family's own tracing, and the doubled Mosel goes.",
+			"source": "research:cellar-review-2026-10-11-house-menu-1.md#E7"
+		},
+		{
+			"target": "wine:Famille Durand Val de Loire Sauvignon Blanc 2024",
+			"field": "kept.5.a",
+			"op": "replace",
+			"value": {
+				"from": "Durand as dur-AHN",
+				"to": "Durand as doo-RAHN"
+			},
+			"reason": "Cellar review, house menu 1: the pour note respelled Durand dur-AHN while the card's say line gives fah-MEE doo-RAHN; one sound for the name on every line.",
+			"source": "research:master-review-somm-2026-10-04.md#Famille Durand"
+		},
+		{
+			"target": "wine:Famille Durand Val de Loire Sauvignon Blanc 2024",
+			"field": "kept.1.a",
+			"op": "replace",
+			"value": {
+				"from": "The Durand family, dur-AHN,",
+				"to": "The Durand family, doo-RAHN,"
+			},
+			"reason": "Cellar review, house menu 1: the description respelled Durand dur-AHN against the say line's doo-RAHN.",
+			"source": "research:master-review-somm-2026-10-04.md#Famille Durand"
+		},
+		{
+			"target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+			"field": "profile",
+			"op": "replace",
+			"value": {
+				"from": "Château London is a named vineyard parcel at Igé, old limestone with some vines over a hundred years old, no castle and nothing to do with England;",
+				"to": "Château London is a named slope at Igé, old limestone with old vines, its name traced to an original owner who lived on the rue Landon in Paris, so no castle and nothing to do with England;"
+			},
+			"reason": "Cellar review, house menu 1: no source gives vines over a hundred years old (the nearest is 86 years for the oldest vine, in a 2018 listing), Château London is a lieu-dit several producers bottle rather than Fichet's own parcel, and the name now has its sourced origin, the rue Landon.",
+			"source": "research:producers-cellar-chablis-maconnais-2026-10-10.md#section 1, items 7, 8 and 10"
+		},
+		{
+			"target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "Château London is a named vineyard parcel on old limestone, with some vines over a hundred years old: no castle, and nothing to do with England.",
+				"to": "Château London is a named slope on old limestone, with old vines; its name traces to an original owner who lived on the rue Landon in Paris, so there is no castle and nothing to do with England."
+			},
+			"reason": "Cellar review, house menu 1: the description repeated the unsourced hundred-year-old vines; the slope, the old vines and the rue Landon story stand on the producers deep dive.",
+			"source": "research:producers-cellar-chablis-maconnais-2026-10-10.md#section 1, items 7, 8 and 10"
+		},
+		{
+			"target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "is a family estate at Igé, mah-KAWN ee-ZHAY, in the Mâconnais",
+				"to": "is a family estate at Igé, ee-ZHAY, in the Mâconnais"
+			},
+			"reason": "Cellar review, house menu 1: the respelling for Mâcon-Igé sat after the village name alone, so the server read Igé as mah-KAWN ee-ZHAY.",
+			"source": "research:producers-cellar-chablis-maconnais-2026-10-10.md#section 1, expert knowledge"
+		},
+		{
+			"target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+			"field": "kept.2.a",
+			"op": "replace",
+			"value": {
+				"from": "No. Château London is a named vineyard parcel at Igé, on old limestone; no castle, and nothing to do with England.",
+				"to": "No. Château London is a named slope at Igé, on old limestone; the name traces to an original owner who lived on the rue Landon in Paris, so no castle, and nothing to do with England."
+			},
+			"reason": "Cellar review, house menu 1: the guest asks about the castle, and the sourced answer is the rue Landon; the slope is shared by several producers, so not Fichet's parcel alone.",
+			"source": "research:producers-cellar-chablis-maconnais-2026-10-10.md#section 1, items 7 and 8"
+		},
+		{
+			"target": "wine:Damien Martin Bourgogne Pinot Noir 2023",
+			"field": "origin",
+			"op": "replace",
+			"value": {
+				"from": "founded in 1982 by Robert and run by his son Damien, about twenty hectares.",
+				"to": "founded in 1982 by Robert; the label carries the name of his son, Damien."
+			},
+			"reason": "Cellar review, house menu 1: who runs the domaine today is a current role stated without a date, and the twenty hectares are an undated size the producers deep dive does not use; the founding and the label name stand.",
+			"source": "research:producers-cellar-red-burgundy-2026-10-10.md#section 1, items 1 and 2"
+		},
+		{
+			"target": "wine:Damien Martin Bourgogne Pinot Noir 2023",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "founded in 1982 by Robert and run by his son Damien, dah-mee-EN mar-TAN.",
+				"to": "founded in 1982 by Robert; the label carries the name of his son, Damien Martin, dah-mee-EN mar-TAN."
+			},
+			"reason": "Cellar review, house menu 1: the description named a living person in a current role, run by his son, with no date; the label name carries the respelling instead.",
+			"source": "research:producers-cellar-red-burgundy-2026-10-10.md#section 1, items 1 and 2"
+		},
+		{
+			"target": "wine:Damien Martin Bourgogne Pinot Noir 2023",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "The producer and importer are a lineup question for the sommelier.",
+				"to": "Where the grapes for this Bourgogne grow is a lineup question for the sommelier."
+			},
+			"reason": "Cellar review, house menu 1: the producer is settled (Domaine Robert et Damien Martin at Davayé, on the card itself); the question still open is where a Mâconnais domaine grows the grapes for its Bourgogne Pinot Noir.",
+			"source": "research:producers-cellar-red-burgundy-2026-10-10.md#section 1, items 1, 2 and Not confirmed"
+		},
+		{
+			"target": "wine:Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône 2023",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "and remember it is the Côtes du Rhône, not the estate's Châteauneuf of the same name.",
+				"to": "and name it as a Côtes du Rhône: the vines border Châteauneuf-du-Pape, but the wine is not a Châteauneuf."
+			},
+			"reason": "Cellar review, house menu 1: no source confirms that Châteaumar makes a Châteauneuf of the same name; the real mix-up is the Châteauneuf-du-Pape border, which the card already sources.",
+			"source": "research:producers-cellar-rhone-north-2026-10-10.md#section 2 and the open list"
+		},
+		{
+			"target": "wine:Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône 2023",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "and confirm it is the Côtes du Rhône, not the estate's Châteauneuf of the same name.",
+				"to": "and call it a Côtes du Rhône, never a Châteauneuf: the vines border Châteauneuf-du-Pape, but the wine is not one."
+			},
+			"reason": "Cellar review, house menu 1: the watch note asserted an estate Châteauneuf of the same name that no source shows.",
+			"source": "research:producers-cellar-rhone-north-2026-10-10.md#section 2 and the open list"
+		},
+		{
+			"target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+			"field": "profile",
+			"op": "replace",
+			"value": {
+				"from": "a Cabernet Sauvignon blend as the menu heads it, named for a ruined seventeenth century windmill:",
+				"to": "named for a ruined seventeenth century windmill; the château describes it as Merlot-led, with Cabernet Sauvignon, though the menu heads it a Cabernet Sauvignon blend:"
+			},
+			"reason": "Cellar review, house menu 1: the château calls the Moulin d'Issan Merlot-led, four expert reviews agree, and the importer's sheet for the 2021, the vintage the menu prints, gives 90 per cent Merlot; the menu's heading is kept as the menu's.",
+			"source": "research:producers-cellar-bordeaux-left-2026-10-10.md#section 1, items 2, 3 and 5"
+		},
+		{
+			"target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+			"field": "lines.s20",
+			"op": "replace",
+			"value": {
+				"from": "in Margaux: a Cabernet Sauvignon blend, cassis, plum and cedar, medium-bodied",
+				"to": "in Margaux. It's Merlot-led, with Cabernet Sauvignon: cassis, plum and cedar, medium-bodied"
+			},
+			"reason": "Cellar review, house menu 1: the guest line called a Merlot-led wine a Cabernet Sauvignon blend.",
+			"source": "research:producers-cellar-bordeaux-left-2026-10-10.md#section 1, items 2, 3 and 5"
+		},
+		{
+			"target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+			"field": "lines.s45",
+			"op": "replace",
+			"value": {
+				"from": "It's a Bordeaux Supérieur, a Cabernet Sauvignon blend:",
+				"to": "It's a Bordeaux Supérieur, Merlot-led with Cabernet Sauvignon:"
+			},
+			"reason": "Cellar review, house menu 1: the 45 second line called a Merlot-led wine a Cabernet Sauvignon blend.",
+			"source": "research:producers-cellar-bordeaux-left-2026-10-10.md#section 1, items 2, 3 and 5"
+		},
+		{
+			"target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+			"field": "parts.main",
+			"op": "replace",
+			"value": {
+				"from": "a Cabernet Sauvignon blend from Bordeaux, as the menu heads it",
+				"to": "Merlot-led, with Cabernet Sauvignon, from Bordeaux"
+			},
+			"reason": "Cellar review, house menu 1: the drill stem taught the menu heading as the grapes; the wine is Merlot-led, and the importer's sheet for the 2021 gives 90 per cent Merlot. Only the grape half of the grape and region part moves: from Bordeaux was right, and d'Issan or Margaux in the part would let Say it back grade it met on the wine's own name, or on the wrong answer Margaux.",
+			"source": "research:producers-cellar-bordeaux-left-2026-10-10.md#section 1, items 2, 3 and 5"
+		},
+		{
+			"target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "The menu heads it a Cabernet Sauvignon blend; the blend of the 2021 is a question for the sommelier.",
+				"to": "The château calls it Merlot-led, with Cabernet Sauvignon, though the menu heads it a Cabernet Sauvignon blend."
+			},
+			"reason": "Cellar review, house menu 1: the description gave only the menu heading for the grapes.",
+			"source": "research:producers-cellar-bordeaux-left-2026-10-10.md#section 1, items 2, 3 and 5"
+		},
+		{
+			"target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+			"field": "kept.2.a",
+			"op": "replace",
+			"value": {
+				"from": "Our menu lists it as a Cabernet Sauvignon blend: cassis, plum and cedar. The exact blend of this vintage I will check with the sommelier.",
+				"to": "Mostly Merlot, by the château's own account, with Cabernet Sauvignon, though our menu lists it as a Cabernet Sauvignon blend: cassis, plum and cedar. I will check this vintage's exact mix with the sommelier."
+			},
+			"reason": "Cellar review, house menu 1: the guest who asks Cabernet or Merlot was answered with the menu heading alone; the château's own description answers it.",
+			"source": "research:producers-cellar-bordeaux-left-2026-10-10.md#section 1, items 2, 3 and 5"
+		},
+		{
+			"target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "Say what the menu prints, a Cabernet Sauvignon blend; the blend of the vintage open is a lineup question for the sommelier.",
+				"to": "The menu heads it a Cabernet Sauvignon blend, but the château describes it as Merlot-led: say Merlot with Cabernet Sauvignon, and leave the mix in the vintage open to the sommelier at lineup."
+			},
+			"reason": "Cellar review, house menu 1: the watch note told the server to say the menu heading, which is not the wine's blend.",
+			"source": "research:producers-cellar-bordeaux-left-2026-10-10.md#section 1, items 2, 3 and 5"
+		}
+	],
+	"verdicts": [
+		{
+			"stemStart": "Brennan’s Essential by Piper-Heidsieck Extra Brut NV, kept.4.a: On the Traditional Breakfast the included pour with the Huss",
+			"verdict": "kept",
+			"why": "Right. The guide's Hussarde page reads that on the Traditional Breakfast the included pour is Charles Lafitte Brut, 4 oz, with no double pour and Piper-Heidsieck by the glass only a la carte, and the tasting menu pasted on 5 October pairs the Egg Hussarde with Charles Lafitte Brut [4oz]; the house dispute is already resolved that way, and the Hussarde's own watch note names the same pour, so the open note was stale. The lineup ask to confirm the bottle open stays filed."
+		},
+		{
+			"stemStart": "Brennan’s Essential by Piper-Heidsieck Extra Brut NV, kept.0.a: cuvee",
+			"verdict": "kept",
+			"why": "Right. The card writes cuvée in its other notes and the spelling map leaves the accent alone; the scratch build prints cuvée in both places."
+		},
+		{
+			"stemStart": "Eggs Hussarde, pairing.palate: the Pinot-based body stands up to the winey marchand de vin",
+			"verdict": "amended",
+			"why": "The original was probably true of Piper-Heidsieck's own non-vintage blends, which are Pinot Noir led, but the card holds the Brennan's cuvée and its proportions open, so taking off Pinot-based is right. The proposed to, the body its Pinot Noir and Meunier give it stands up, is a garden path read aloud; now the body from its Pinot Noir and Meunier stands up. Not a stem, no name added."
+		},
+		{
+			"stemStart": "Rare Brut 2012 (Coravin), why: and the stepUp on the oysters, turtle soup, Hussarde and ome",
+			"verdict": "kept",
+			"why": "Right. stepUp is the pairing field name read aloud as a word. In the build Rare is the stepUp on exactly the four dishes named (Grand Isle Jewel Oysters, Turtle Soup, Eggs Hussarde, Crab and Corn Omelette), so the list is complete."
+		},
+		{
+			"stemStart": "Rare Brut 2012 (Coravin), kept.0.a: prestige cuvee",
+			"verdict": "kept",
+			"why": "Right, the same accent as the rest of the card."
+		},
+		{
+			"stemStart": "Grand Isle Jewel Oysters, pairing.stepUp: Piper-Heidsieck's prestige vintage Champagne, Chardonnay-led",
+			"verdict": "kept",
+			"why": "Right. Grand Cru vineyards alone was wrong (the deep dive's Rare 2013: seven grand cru and three premier cru sites among eleven crus) and Piper-Heidsieck's is stale since Rare became its own brand in 2018; the to is the Rare card's own wording. Lower case grand and premier cru are vineyard terms, not the Codex's named levels. Outside this batch: the Eggs Hussarde splurge sayIt and the Rare 2013 bottle's s10 still say Piper-Heidsieck's prestige vintage Champagne."
+		},
+		{
+			"stemStart": "C.H. Berres ‘Old Vines’ Riesling 2022, kept.0.a: C.H. Berres, BEH-ress, is an old Mosel family estate at Ürzi",
+			"verdict": "amended",
+			"why": "The fix to the doubled Mosel and the move of the date onto the family stand. But S3 is a search summary of tourism listings repeating the family's own history, and the deep dive filed the date as the family's claim, so has worked Ürzig's vineyards since 1510 asserted unbroken work as fact; now the Berres family traces its work in Ürzig's vineyards to 1510, which agrees with the profile's a family with roots to 1510. No new name or year."
+		},
+		{
+			"stemStart": "Famille Durand Val de Loire Sauvignon Blanc 2024, kept.5.a: Durand as dur-AHN",
+			"verdict": "kept",
+			"why": "Right. The say line gives fah-MEE doo-RAHN; dur-AHN moved the r into the first syllable and read as the English dur. The French is du-RAHN with a rounded u; doo-RAHN is the house respelling, now on every line."
+		},
+		{
+			"stemStart": "Famille Durand Val de Loire Sauvignon Blanc 2024, kept.1.a: The Durand family, dur-AHN,",
+			"verdict": "kept",
+			"why": "Right, the same respelling as the say line."
+		},
+		{
+			"stemStart": "Fichet ‘Château London’ Mâcon-Igé 2024, profile: Château London is a named vineyard parcel at Igé, old limest",
+			"verdict": "kept",
+			"why": "Right. No source gives a hundred years (the deep dive's item 10; the oldest vine 86 years in a 2018 listing), so old vines; Hachette's coteau réputé d'Igé carries named slope; Boisset's 2021 sheet carries the rue Landon story. Fichet's own parcel in the lieu-dit stays in parts.main, untouched, which is right because that stem was not wrong."
+		},
+		{
+			"stemStart": "Fichet ‘Château London’ Mâcon-Igé 2024, kept.0.a: Château London is a named vineyard parcel on old limestone, ",
+			"verdict": "kept",
+			"why": "Right, the same three sourced points as the profile; the unsourced hundred years goes."
+		},
+		{
+			"stemStart": "Fichet ‘Château London’ Mâcon-Igé 2024, kept.0.a: is a family estate at Igé, mah-KAWN ee-ZHAY, in the Mâconnai",
+			"verdict": "kept",
+			"why": "Right. The respelling mah-KAWN ee-ZHAY belongs to Mâcon-Igé and sat after Igé alone; the say line still carries the full appellation."
+		},
+		{
+			"stemStart": "Fichet ‘Château London’ Mâcon-Igé 2024, kept.2.a: No. Château London is a named vineyard parcel at Igé, on old",
+			"verdict": "kept",
+			"why": "Right. The guest who asks about a castle gets the sourced answer, and the slope is no longer Fichet's alone."
+		},
+		{
+			"stemStart": "Damien Martin Bourgogne Pinot Noir 2023, origin: founded in 1982 by Robert and run by his son Damien, about t",
+			"verdict": "kept",
+			"why": "Right. Run by his son Damien is a living person's current role with no date, and about twenty hectares is the undated size the deep dive declined. The label carries Damien's name whether it reads Damien Martin or Robert et Damien Martin, and the founding in 1982 by Robert is the searched record (items 1 and 2)."
+		},
+		{
+			"stemStart": "Damien Martin Bourgogne Pinot Noir 2023, kept.0.a: founded in 1982 by Robert and run by his son Damien, dah-mee",
+			"verdict": "kept",
+			"why": "Right, the same repair in the description; the respelling now sits on the name it sounds."
+		},
+		{
+			"stemStart": "Damien Martin Bourgogne Pinot Noir 2023, kept.3.a: The producer and importer are a lineup question for the somm",
+			"verdict": "kept",
+			"why": "Right. The producer (Domaine Robert et Damien Martin at Davayé) and the importer (Hand Picked Selections, item 1) are both in the deep dive, so the old question was stale; where the grapes grow is the open one, and it is already filed."
+		},
+		{
+			"stemStart": "Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône 2023, kept.0.a: and remember it is the Côtes du Rhône, not the estate's Chât",
+			"verdict": "kept",
+			"why": "Right. No source shows a Châteaumar Châteauneuf of the same cuvée name (the deep dive's open list and the reviewer's S2); the new wording needs no such wine and stays true whether or not the estate makes one, and the border with Châteauneuf-du-Pape is sourced (section 2, item 1)."
+		},
+		{
+			"stemStart": "Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône 2023, kept.3.a: and confirm it is the Côtes du Rhône, not the estate's Châte",
+			"verdict": "kept",
+			"why": "Right, the same repair in the watch note; the double pour and allergen sentences are untouched."
+		},
+		{
+			"stemStart": "Moulin d’Issan Bordeaux Supérieur 2021, profile: a Cabernet Sauvignon blend as the menu heads it, named for a",
+			"verdict": "kept",
+			"why": "Right. One search (A1, standard, 11 October 2026): the château's own sheet for the 2021, chateau-issan.com/docs/en/MOULIN_ISSAN_2021.pdf, lists 90 per cent Merlot and 10 per cent Cabernet Sauvignon, as the Enotria sheet in S1 does; Bordeaux Tradition's 65 per cent Cabernet describes the grand vin. So the château describes it as Merlot-led is true, and the menu heading is rightly kept as the menu's."
+		},
+		{
+			"stemStart": "Moulin d’Issan Bordeaux Supérieur 2021, lines.s20: in Margaux: a Cabernet Sauvignon blend, cassis, plum and ced",
+			"verdict": "kept",
+			"why": "Right, and the guest line stays inside the 50 word cap; saying it back meets."
+		},
+		{
+			"stemStart": "Moulin d’Issan Bordeaux Supérieur 2021, lines.s45: It's a Bordeaux Supérieur, a Cabernet Sauvignon blend:",
+			"verdict": "kept",
+			"why": "Right, the same correction in the 45 second line."
+		},
+		{
+			"stemStart": "Moulin d’Issan Bordeaux Supérieur 2021, parts.main: a Cabernet Sauvignon blend from Bordeaux, as the menu heads ",
+			"verdict": "amended",
+			"why": "A stem change was needed for the grapes, but the region half, from Bordeaux, was right. The proposed from d'Issan vines outside the Margaux appellation put the wine's own name and Margaux into the grape and region part, and the house's Say it back (gradeSaid, tested on the scratch pack) then graded the part hit on The Moulin d'Issan: cassis, plum and cedar (matched dissan) and on the wrong a classic Margaux (matched margaux). With Merlot-led, with Cabernet Sauvignon, from Bordeaux both miss, while the right answer and the kept line hit."
+		},
+		{
+			"stemStart": "Moulin d’Issan Bordeaux Supérieur 2021, kept.0.a: The menu heads it a Cabernet Sauvignon blend; the blend of t",
+			"verdict": "kept",
+			"why": "Right. The description now gives the château's account beside the menu heading."
+		},
+		{
+			"stemStart": "Moulin d’Issan Bordeaux Supérieur 2021, kept.2.a: Our menu lists it as a Cabernet Sauvignon blend: cassis, plu",
+			"verdict": "kept",
+			"why": "Right. The guest who asks Cabernet or Merlot gets the true answer, with the menu heading and the vintage mix left to the sommelier."
+		},
+		{
+			"stemStart": "Moulin d’Issan Bordeaux Supérieur 2021, kept.3.a: Say what the menu prints, a Cabernet Sauvignon blend; the bl",
+			"verdict": "kept",
+			"why": "Right. The watch note no longer tells the server to say the heading as the blend; its closing allergen sentence is intact."
+		}
+	]
+}

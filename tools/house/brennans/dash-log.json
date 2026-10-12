@@ -1,6 +1,6 @@
 {
 	"about": "Every string the dash pass changed while building the Brennan's house, before and after, for a person to read for a changed meaning; an entry with an override number is a string an overrides.json entry set, not the guide's.",
-	"count": 364,
+	"count": 363,
 	"changes": [
 		{
 			"path": "model.card.sources[0].title",
@@ -613,8 +613,9 @@
 		},
 		{
 			"path": "model.dishes[15].pairing.palate",
-			"before": "Yolk and hollandaise coat the tongue and blunt most wines. The Champagne’s acidity and bubbles lift that coating so each bite tastes fresh. The dry finish sharpens the salty, coffee-cured bacon, and the Pinot-based body stands up to the winey marchand de vin instead of disappearing. Toasty autolytic notes meet the toasted muffin, and the rhythm stays clean — rich bite, bright sip, repeat.",
-			"after": "Yolk and hollandaise coat the tongue and blunt most wines. The Champagne’s acidity and bubbles lift that coating so each bite tastes fresh. The dry finish sharpens the salty, coffee-cured bacon, and the Pinot-based body stands up to the winey marchand de vin instead of disappearing. Toasty autolytic notes meet the toasted muffin, and the rhythm stays clean: rich bite, bright sip, repeat."
+			"before": "Yolk and hollandaise coat the tongue and blunt most wines. The Champagne’s acidity and bubbles lift that coating so each bite tastes fresh. The dry finish sharpens the salty, coffee-cured bacon, and the body from its Pinot Noir and Meunier stands up to the winey marchand de vin instead of disappearing. Toasty autolytic notes meet the toasted muffin, and the rhythm stays clean — rich bite, bright sip, repeat.",
+			"after": "Yolk and hollandaise coat the tongue and blunt most wines. The Champagne’s acidity and bubbles lift that coating so each bite tastes fresh. The dry finish sharpens the salty, coffee-cured bacon, and the body from its Pinot Noir and Meunier stands up to the winey marchand de vin instead of disappearing. Toasty autolytic notes meet the toasted muffin, and the rhythm stays clean: rich bite, bright sip, repeat.",
+			"override": 3917
 		},
 		{
 			"path": "model.dishes[15].pairing.stepUp",
@@ -833,11 +834,6 @@
 			"path": "model.dishes[22].serviceNote",
 			"before": "Ask temperature — hanger is at its best medium-rare to medium. Eggs (runny yolk, béarnaise), dairy. Mild spice. Different plate from dinner’s Creole Hanger Steak — don’t mix them up.",
 			"after": "Ask temperature, hanger is at its best medium-rare to medium. Eggs (runny yolk, béarnaise), dairy. Mild spice. Different plate from dinner’s Creole Hanger Steak, don’t mix them up."
-		},
-		{
-			"path": "model.dishes[22].pairing.why",
-			"before": "A Cabernet–Merlot Bordeaux has the tannin and cassis to stand up to beef and cut through the béarnaise.",
-			"after": "A Cabernet-Merlot Bordeaux has the tannin and cassis to stand up to beef and cut through the béarnaise."
 		},
 		{
 			"path": "model.dishes[22].pairing.sayIt",
@@ -1597,8 +1593,9 @@
 		},
 		{
 			"path": "model.wines[18].sayIt",
-			"before": "For dessert, a half-bottle of Mosel Auslese is a treat — honeyed and sweet, but with so much acidity it never feels heavy. It’s perfect to share.",
-			"after": "For dessert, a half-bottle of Mosel Auslese is a treat, honeyed and sweet, but with so much acidity it never feels heavy. It’s perfect to share."
+			"before": "For dessert, a half-bottle of Mosel Auslese is a treat — honeyed and sweet, but with so much acidity it never feels heavy. It pours about four small glasses, made for sharing.",
+			"after": "For dessert, a half-bottle of Mosel Auslese is a treat, honeyed and sweet, but with so much acidity it never feels heavy. It pours about four small glasses, made for sharing.",
+			"override": 3959
 		},
 		{
 			"path": "model.wines[18].goesWith",
