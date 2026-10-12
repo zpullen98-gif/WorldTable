@@ -1,0 +1,54 @@
+{
+	"rungs": [
+		{
+			"key": "white",
+			"name": "White",
+			"minutes": [3, 5],
+			"cue": "As pale as the flour, bubbling gently, with no colour at all",
+			"smell": "Raw flour giving way to a smell of cooked pastry",
+			"thickening": "The strongest: the starch is barely changed",
+			"uses": [],
+			"dishes": []
+		},
+		{
+			"key": "blond",
+			"name": "Blond",
+			"minutes": [6, 10],
+			"cue": "Straw to pale gold, the colour of sand",
+			"smell": "Toasted bread, with a hint of popcorn",
+			"thickening": "Nearly as strong as white",
+			"uses": [],
+			"dishes": []
+		},
+		{
+			"key": "peanut-butter",
+			"name": "Peanut butter",
+			"minutes": [15, 20],
+			"cue": "Light tan, the colour of smooth peanut butter",
+			"smell": "Roasted nuts",
+			"thickening": "Noticeably weaker than blond",
+			"uses": [],
+			"dishes": []
+		},
+		{
+			"key": "milk-chocolate",
+			"name": "Milk chocolate",
+			"minutes": [25, 35],
+			"cue": "Mid brown, the colour of milk chocolate",
+			"smell": "Toasted nuts with a note of cocoa",
+			"thickening": "Much weaker: flavour now matters more than body",
+			"uses": [],
+			"dishes": []
+		},
+		{
+			"key": "dark-brick",
+			"name": "Dark brick",
+			"minutes": [35, 45],
+			"cue": "Deep red brown, the colour of old brick or dark chocolate",
+			"smell": "Deep roast, close to coffee; an acrid note means it has burnt",
+			"thickening": "The weakest: a dark roux mostly colours and flavours",
+			"uses": [],
+			"dishes": [{ "dish": "d-r3h9vj7a", "components": ["Roux"] }]
+		}
+	]
+}

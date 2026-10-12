@@ -13,6 +13,7 @@
 		"verify:data": "node tools/verify-extraction.mjs",
 		"build:data": "node tools/build-data.mjs",
 		"build:kitchen": "node tools/kitchen/check-training.mjs --quiet && node tools/derive/kitchen.mjs",
+		"build:cuisine": "node tools/derive/cuisine.mjs",
 		"test": "vitest run",
 		"test:watch": "vitest",
 		"verify:build": "node tools/verify-build.mjs",

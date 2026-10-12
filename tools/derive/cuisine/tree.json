@@ -1,0 +1,96 @@
+{
+	"careme": {
+		"four": ["Espagnole", "Velouté", "Allemande", "Béchamel"],
+		"note": "Carême grouped the French sauces under four grandes sauces: espagnole, velouté, allemande and béchamel. Allemande is now taught as a daughter of velouté, and the five mothers of the modern kitchen, a scheme usually traced to Escoffier's Le Guide culinaire of 1903, add sauce tomate and hollandaise."
+	},
+	"mothers": [
+		{
+			"name": "Béchamel",
+			"say": "bay-sha-MEL",
+			"liaison": "White roux",
+			"liquid": "Milk",
+			"children": [
+				{ "name": "Mornay", "say": "mor-NAY", "adds": "Gruyère and Parmesan, melted in off the heat" },
+				{ "name": "Soubise", "say": "soo-BEEZ", "adds": "A purée of onions sweated without colour" },
+				{ "name": "Nantua", "say": "nahn-TWAH", "adds": "Crayfish butter and cream" }
+			]
+		},
+		{
+			"name": "Velouté",
+			"say": "vuh-loo-TAY",
+			"liaison": "Blond roux",
+			"liquid": "White stock of veal, chicken or fish",
+			"children": [
+				{ "name": "Suprême", "say": "soo-PREM", "adds": "Cream and butter, on a chicken velouté" },
+				{ "name": "Allemande", "say": "al-MAHND", "adds": "Egg yolk and lemon, on a veal velouté" },
+				{ "name": "Bercy", "say": "bair-SEE", "adds": "Shallot and white wine, on a fish velouté" }
+			]
+		},
+		{
+			"name": "Espagnole",
+			"say": "es-pan-YOL",
+			"liaison": "Brown roux",
+			"liquid": "Brown stock, with tomato and mirepoix",
+			"children": [
+				{ "name": "Bordelaise", "say": "bor-duh-LEZ", "adds": "Red wine, shallot and bone marrow" },
+				{
+					"name": "Marchand de vin",
+					"say": "mar-SHAHN duh VAN",
+					"adds": "Red wine and shallot; in New Orleans, often mushroom and ham",
+					"dishes": [
+						{ "dish": "d-1q0xk7jv", "components": ["Marchand de vin"] },
+						{ "dish": "d-44jfmkdb", "components": ["Marchand de vin"] }
+					]
+				},
+				{ "name": "Robert", "say": "roh-BAIR", "adds": "Onion, white wine and mustard" },
+				{ "name": "Demi-glace", "say": "DEM-ee glahs", "adds": "More brown stock, reduced by half until glossy" }
+			]
+		},
+		{
+			"name": "Sauce tomate",
+			"say": "sohs toh-MAHT",
+			"liaison": "Reduction",
+			"liquid": "Tomatoes, with white stock",
+			"children": [
+				{ "name": "Provençale", "say": "proh-vahn-SAHL", "adds": "Garlic, olive oil and parsley" },
+				{ "name": "Portugaise", "say": "por-too-GEZ", "adds": "Onion, garlic and chopped tomato flesh" },
+				{
+					"name": "Creole sauce",
+					"adds": "The holy trinity, garlic, bay, thyme and cayenne",
+					"dishes": [{ "dish": "d-bqznncn6", "components": ["Creole sauce"] }]
+				}
+			]
+		},
+		{
+			"name": "Hollandaise",
+			"say": "HOL-un-dayz",
+			"entry": "hollandaise",
+			"liaison": "Egg yolk emulsion",
+			"liquid": "Clarified butter",
+			"children": [
+				{
+					"name": "Béarnaise",
+					"say": "bair-NAYZ",
+					"entry": "bearnaise",
+					"adds": "A reduction of vinegar, shallot and tarragon",
+					"children": [
+						{
+							"name": "Choron",
+							"say": "sho-ROHN",
+							"adds": "Tomato purée reduced to a paste",
+							"dishes": [{ "dish": "d-fs311zha", "components": ["Sauce Choron"] }]
+						},
+						{
+							"name": "Foyot",
+							"say": "fwah-YO",
+							"adds": "Meat glaze, glace de viande",
+							"dishes": [{ "dish": "d-5wcuejdy", "components": ["Sauce Foyot"] }]
+						}
+					]
+				},
+				{ "name": "Mousseline", "say": "moos-LEEN", "adds": "Whipped cream folded in" },
+				{ "name": "Maltaise", "say": "mal-TEZ", "adds": "Blood orange juice and zest" }
+			]
+		}
+	]
+}
