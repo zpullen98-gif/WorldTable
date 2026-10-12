@@ -1336,9 +1336,9 @@
     {
       "target": "term:Mignonette",
       "field": "say",
-      "value": "meen-yo-NET (min-yuh-NET is also accepted)",
-      "reason": "The first vowel is a long ee in French",
-      "source": "pdf-corrections p50 (low)"
+      "value": "min-yo-NET (meen-yo-NET, nearer the French, is also heard)",
+      "reason": "The guide prints min-yo-NET (Menu words, p50) and the Floor Deck now carries the same; the French long ee (pdf-corrections p50, low) stays as an also-heard note",
+      "source": "pdf p50; research/respellings-2026-10-12.md"
     },
     {
       "target": "term:Mignonette",
@@ -1463,7 +1463,7 @@
       "op": "add",
       "value": {
         "term": "Mascarpone",
-        "say": "mahs-kar-POH-neh",
+        "say": "mas-kar-POH-nay",
         "toGuest": "Mascarpone is a rich Italian cream cheese, whipped into a light mousse for the French toast."
       },
       "reason": "widened lexicon",
@@ -1474,7 +1474,7 @@
       "op": "add",
       "value": {
         "term": "Shiitake",
-        "say": "shee-TAH-keh",
+        "say": "shee-TAH-kee",
         "toGuest": "Shiitake are the savory Japanese mushrooms, preserved, on the blackened tofu."
       },
       "reason": "widened lexicon",
@@ -1485,7 +1485,7 @@
       "op": "add",
       "value": {
         "term": "Burrata",
-        "say": "boo-RAH-tah",
+        "say": "boo-RAH-tuh",
         "toGuest": "Burrata is fresh mozzarella with a creamy centre, on the Creole tomato tostada."
       },
       "reason": "widened lexicon",
@@ -1529,7 +1529,7 @@
       "op": "add",
       "value": {
         "term": "Harissa",
-        "say": "hah-REE-sah",
+        "say": "huh-REE-suh",
         "toGuest": "Harissa is the North African chili paste that seasons the smoked cauliflower."
       },
       "reason": "widened lexicon",
@@ -1661,7 +1661,7 @@
       "op": "add",
       "value": {
         "term": "Bavarois",
-        "say": "bav-ar-WAH",
+        "say": "bah-vahr-WAH",
         "toGuest": "A bavarois, or Bavarian, is a set cream; the Snickers starts with a Bavarian milk chocolate."
       },
       "reason": "widened lexicon",
@@ -3812,7 +3812,7 @@
       "op": "add",
       "value": {
         "term": "Rémoulade",
-        "say": "ray-moo-LAHD",
+        "say": "REM-uh-lahd (RUM-uh-lahd is heard in New Orleans)",
         "toGuest": "Rémoulade is a tangy, herby sauce for dipping; ours carries chives and comes with the crawfish meat pies."
       },
       "reason": "A hard name the new drinks or snacks bring to the table",
@@ -5012,7 +5012,7 @@
           "s20": "Our crawfish meat pies are Louisiana hand pies filled with crawfish, served with a chive rémoulade for dipping: savory pastry and a cool, tangy, herby sauce. Lovely with bubbles.",
           "s45": "Meat pies are a Louisiana tradition, and at Bubbles we fill ours with crawfish and serve them with a chive rémoulade, a tangy, herby sauce for dipping. You get savory crawfish in pastry, then the cool, bright rémoulade. They're $16 and made for sharing over a glass of bubbles: the Pierre Sparr rosé or the house Champagne both cut the pastry beautifully."
         },
-        "say": "Rémoulade is ray-moo-LAHD.",
+        "say": "Rémoulade is REM-uh-lahd.",
         "guest": "Crawfish meat pies with a chive rémoulade for dipping: savory crawfish in pastry and a cool, tangy sauce.",
         "why": "The most Louisiana snack on the Bubbles list, $16; offer it to visitors who want a local taste in the courtyard.",
         "pairs": "With the Pierre Sparr rosé or the house Champagne: bubbles and acid for pastry and rémoulade."
@@ -6197,7 +6197,7 @@
       "op": "add",
       "value": {
         "q": "Tell me about it.",
-        "a": "The Creole Tomato Tostada is a dinner starter at $18, and our celebration of Louisiana tomato season.\n\nCreole tomatoes are Louisiana's summer tomato: juicy, sweet and a little tart. Here they are mixed with heirloom tomatoes and served raw and simply, with creamy burrata, boo-RAH-tah, fresh mozzarella with a soft, creamy center. They sit on a crisp tostada, a flat shell the kitchen makes in house with okra, and a smoked tomato water, a clear, intensely tomatoey broth, is poured around.\n\nThe guest sees bright tomatoes and white burrata on the crisp shell, with the clear broth around them. It tastes juicy, sweet and tart, cool and creamy, with crunch and a whisper of smoke.\n\nIt is light, seasonal and gone when the tomatoes are, so it changes as the season turns. The Minuty rosé from Provence is the pour, dry and bright enough for raw tomato and delicate enough for the burrata."
+        "a": "The Creole Tomato Tostada is a dinner starter at $18, and our celebration of Louisiana tomato season.\n\nCreole tomatoes are Louisiana's summer tomato: juicy, sweet and a little tart. Here they are mixed with heirloom tomatoes and served raw and simply, with creamy burrata, boo-RAH-tuh, fresh mozzarella with a soft, creamy center. They sit on a crisp tostada, a flat shell the kitchen makes in house with okra, and a smoked tomato water, a clear, intensely tomatoey broth, is poured around.\n\nThe guest sees bright tomatoes and white burrata on the crisp shell, with the clear broth around them. It tastes juicy, sweet and tart, cool and creamy, with crunch and a whisper of smoke.\n\nIt is light, seasonal and gone when the tomatoes are, so it changes as the season turns. The Minuty rosé from Provence is the pour, dry and bright enough for raw tomato and delicate enough for the burrata."
       },
       "reason": "Study notes, the description: what a master tells a new Brennan’s server who asks about it (what it is, how it is made, what the guest sees and tastes, where it comes from, what makes it ours), every fact from the sources named",
       "source": "guide.txt lines 558-595; dossier-the-cellar sections 4.3 and 4.5; the Season and dates must-know"
@@ -6285,7 +6285,7 @@
       "op": "add",
       "value": {
         "q": "Tell me about it.",
-        "a": "The Grand Isle Jewel Oysters are a dinner starter at $22, and the first course of our $80 dinner tasting.\n\nGrand Isle is a barrier island on Louisiana's coast. Grand Isle Jewels are farmed oysters raised there in floating cages above the seabed and tumbled, so they grow a deep cup and a clean shell. The brand brought the island's farmers together in 2025 and honors the late Jules Melancon, the first permitted to farm off bottom there, in 2012. We serve them raw on the half shell with a mignonette, meen-yo-NET, the classic raw bar sauce of vinegar, shallot and cracked pepper, made here with preserved Fresno chili, and parsley.\n\nThe guest gets cold oysters on the shell with the mignonette and a green note of parsley. They taste clean, briny and cold, the vinegar bright and the chili a gentle warmth, not real heat.\n\nOysters and Champagne are the classic: the house Piper-Heidsieck Extra Brut is the pour à la carte, and the dinner tasting pours Charles Lafitte Brut."
+        "a": "The Grand Isle Jewel Oysters are a dinner starter at $22, and the first course of our $80 dinner tasting.\n\nGrand Isle is a barrier island on Louisiana's coast. Grand Isle Jewels are farmed oysters raised there in floating cages above the seabed and tumbled, so they grow a deep cup and a clean shell. The brand brought the island's farmers together in 2025 and honors the late Jules Melancon, the first permitted to farm off bottom there, in 2012. We serve them raw on the half shell with a mignonette, min-yo-NET, the classic raw bar sauce of vinegar, shallot and cracked pepper, made here with preserved Fresno chili, and parsley.\n\nThe guest gets cold oysters on the shell with the mignonette and a green note of parsley. They taste clean, briny and cold, the vinegar bright and the chili a gentle warmth, not real heat.\n\nOysters and Champagne are the classic: the house Piper-Heidsieck Extra Brut is the pour à la carte, and the dinner tasting pours Charles Lafitte Brut."
       },
       "reason": "Study notes, the description: what a master tells a new Brennan’s server who asks about it (what it is, how it is made, what the guest sees and tastes, where it comes from, what makes it ours), every fact from the sources named",
       "source": "guide.txt lines 648-696; chef-dishes-a-2; gap-sourcing-3; somm-pairings-21 and 25; chef-dishes-a-25; pdf-corrections p13 and p41; dossier-the-cellar sections 4.2, 4.4 and 4.5"
@@ -7033,7 +7033,7 @@
       "op": "add",
       "value": {
         "q": "Tell me about it.",
-        "a": "The Blackened Tofu is a dinner entrée at $25, and the plate for a guest who wants a meatless entrée, once the kitchen has confirmed how it is made tonight.\n\nThe tofu comes from Tien Dat, a Vietnamese family co-op across the river that presses it fresh every week. We blacken it, the Louisiana technique of coating in spices and searing in a very hot pan, so it gets a dark, spiced crust. It sits over rice grits from Two Brooks Farm, a family rice farm at Sumner in the Mississippi Delta: broken grains of rice cooked creamy like grits. Preserved shiitake mushrooms, shee-TAH-keh, bring deep, savory flavor.\n\nThe guest gets the dark-crusted tofu over creamy grits with the mushrooms. It tastes spiced and crusty outside, soft inside, earthy and savory, with moderate spice.\n\nIt shows the kitchen's local sourcing. The Damien Martin Bourgogne Pinot Noir is the pour: light and silky with an earthy note that loves mushrooms, and low tannin that will not clash with the spice."
+        "a": "The Blackened Tofu is a dinner entrée at $25, and the plate for a guest who wants a meatless entrée, once the kitchen has confirmed how it is made tonight.\n\nThe tofu comes from Tien Dat, a Vietnamese family co-op across the river that presses it fresh every week. We blacken it, the Louisiana technique of coating in spices and searing in a very hot pan, so it gets a dark, spiced crust. It sits over rice grits from Two Brooks Farm, a family rice farm at Sumner in the Mississippi Delta: broken grains of rice cooked creamy like grits. Preserved shiitake mushrooms, shee-TAH-kee, bring deep, savory flavor.\n\nThe guest gets the dark-crusted tofu over creamy grits with the mushrooms. It tastes spiced and crusty outside, soft inside, earthy and savory, with moderate spice.\n\nIt shows the kitchen's local sourcing. The Damien Martin Bourgogne Pinot Noir is the pour: light and silky with an earthy note that loves mushrooms, and low tannin that will not clash with the spice."
       },
       "reason": "Study notes, the description: what a master tells a new Brennan’s server who asks about it (what it is, how it is made, what the guest sees and tastes, where it comes from, what makes it ours), every fact from the sources named",
       "source": "guide.txt lines 1511-1556; gap-sourcing-1 and 2; dossier-the-cellar section 4.3; the lineup asks on the tofu and on sourcing names"
@@ -7753,7 +7753,7 @@
       "op": "add",
       "value": {
         "q": "Tell me about it.",
-        "a": "The Smoked Cauliflower is a dinner side at $12, smoky, bright and gently spicy.\n\nWe smoke the cauliflower so it picks up a deep, savory flavor, then finish it with preserved lemon, lemons cured in salt, which taste intensely citrusy and a little floral, and harissa, hah-REE-sah, the North African chili paste with warm spice.\n\nThe guest gets the smoked cauliflower dressed with the harissa and the preserved lemon. It tastes smoky and savory, then bright and citrusy, with a moderate warmth from the harissa.\n\nIt is the vegetable side with the most going on, and a good partner for the Blackened Tofu or the Gulf Fish en Papillote; it also gives a steak dinner something lively and green-tasting beside the richness.\n\nThe heat is moderate, so it is worth a word to a spice-shy guest. Whether it suits a guest's diet is a kitchen question: the service note marks it as one to confirm."
+        "a": "The Smoked Cauliflower is a dinner side at $12, smoky, bright and gently spicy.\n\nWe smoke the cauliflower so it picks up a deep, savory flavor, then finish it with preserved lemon, lemons cured in salt, which taste intensely citrusy and a little floral, and harissa, huh-REE-suh, the North African chili paste with warm spice.\n\nThe guest gets the smoked cauliflower dressed with the harissa and the preserved lemon. It tastes smoky and savory, then bright and citrusy, with a moderate warmth from the harissa.\n\nIt is the vegetable side with the most going on, and a good partner for the Blackened Tofu or the Gulf Fish en Papillote; it also gives a steak dinner something lively and green-tasting beside the richness.\n\nThe heat is moderate, so it is worth a word to a spice-shy guest. Whether it suits a guest's diet is a kitchen question: the service note marks it as one to confirm."
       },
       "reason": "Study notes, the description: what a master tells a new Brennan’s server who asks about it (what it is, how it is made, what the guest sees and tastes, where it comes from, what makes it ours), every fact from the sources named",
       "source": "guide.txt lines 1744-1768; the Harissa lexicon term"
@@ -8715,7 +8715,7 @@
       "op": "add",
       "value": {
         "q": "Tell me about it.",
-        "a": "Crawfish Meat Pies are the most Louisiana snack on the Bubbles at Brennan's list, $16, served in the Roost Bar and the courtyard.\n\nMeat pies are a Louisiana tradition: savory hand pies. At Bubbles ours are filled with crawfish and served with a chive rémoulade, ray-moo-LAHD, a tangy, herby sauce for dipping. How the kitchen makes the pastry and the filling is not printed and is a kitchen question.\n\nThe guest gets the pies with the green-flecked rémoulade beside them. They taste of savory crawfish in pastry, then the cool, bright, tangy dip.\n\nThey are the snack to suggest to a visitor who wants a local taste in the courtyard, and to share over a glass of bubbles: the Pierre Sparr sparkling rosé or the house Champagne both cut the pastry, because bubbles and acid love anything fried or baked and rich.\n\nBubbles runs on weekday afternoons, with the hours confirmed on shift."
+        "a": "Crawfish Meat Pies are the most Louisiana snack on the Bubbles at Brennan's list, $16, served in the Roost Bar and the courtyard.\n\nMeat pies are a Louisiana tradition: savory hand pies. At Bubbles ours are filled with crawfish and served with a chive rémoulade, REM-uh-lahd, a tangy, herby sauce for dipping. How the kitchen makes the pastry and the filling is not printed and is a kitchen question.\n\nThe guest gets the pies with the green-flecked rémoulade beside them. They taste of savory crawfish in pastry, then the cool, bright, tangy dip.\n\nThey are the snack to suggest to a visitor who wants a local taste in the courtyard, and to share over a glass of bubbles: the Pierre Sparr sparkling rosé or the house Champagne both cut the pastry, because bubbles and acid love anything fried or baked and rich.\n\nBubbles runs on weekday afternoons, with the hours confirmed on shift."
       },
       "reason": "Study notes, the description: what a master tells a new Brennan’s server who asks about it (what it is, how it is made, what the guest sees and tastes, where it comes from, what makes it ours), every fact from the sources named",
       "source": "guide.txt Bubbles at Brennan’s must-know (pdf p49); dossier-the-bar section 10; the Bubbles at Brennan’s must-know; the Rémoulade lexicon term"
@@ -8748,7 +8748,7 @@
       "op": "add",
       "value": {
         "q": "What should I watch for?",
-        "a": "The build is not printed: how many pies, the pastry and the filling are questions for the kitchen, never a guess. Say rémoulade as ray-moo-LAHD. Confirm the Bubbles hours on shift, and check the courtyard is free. Allergens: read the service note and confirm at lineup."
+        "a": "The build is not printed: how many pies, the pastry and the filling are questions for the kitchen, never a guess. Say rémoulade as REM-uh-lahd. Confirm the Bubbles hours on shift, and check the courtyard is free. Allergens: read the service note and confirm at lineup."
       },
       "reason": "Study notes, coaching: the mix-ups, timings, rules, disputes and lineup questions tied to it, closing on the service note, from the sources named",
       "source": "guide.txt Bubbles at Brennan’s must-know (pdf p49); dossier-the-bar section 10; the Bubbles at Brennan’s must-know; the Rémoulade lexicon term"
@@ -48781,7 +48781,7 @@
       "op": "add",
       "value": {
         "term": "Bordelaise",
-        "say": "bor-duh-LEZ",
+        "say": "bor-duh-LAYZ",
         "toGuest": "In France a red wine sauce; in New Orleans it often means garlic butter, so we confirm which the kitchen means on the Pecan Gulf Fish."
       },
       "reason": "Master review: the guide's own best catch had no card",

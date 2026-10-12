@@ -160,7 +160,7 @@ const cards = [
 		id: 'fd_0146',
 		term: 'Shiitake',
 		level: 1,
-		say: 'shih-TAH-kee',
+		say: 'shee-TAH-kee',
 		packet: true,
 		gist: 'Brown East Asian mushroom with a smoky, deeply savory bite',
 		guest: "It's a mushroom from East Asia grown on hardwood, meaty and smoky with a deep savory flavor. It's wonderful off the grill or in a broth.",

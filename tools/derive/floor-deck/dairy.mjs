@@ -63,7 +63,7 @@ const cards = [
 		id: 'fd_0157',
 		term: 'Crème Fraîche',
 		level: 2,
-		say: 'KREM FRESH',
+		say: 'krem FRESH',
 		packet: true,
 		gist: "Thick, mild cultured cream that won't curdle when hot",
 		guest: "It's French cultured cream, thick and rich with a gentle tang, like a silkier, milder sour cream. It melts into anything warm.",

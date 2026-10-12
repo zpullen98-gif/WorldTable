@@ -347,7 +347,7 @@ const cards = [
 		id: 'fd_0126',
 		term: 'Bottarga',
 		level: 4,
-		say: 'boh-TAR-guh',
+		say: 'boh-TAR-gah',
 		aliases: ['Poutargue'],
 		gist: 'Salted, pressed and dried fish-egg sac, grated like a cheese',
 		guest: "It's cured fish roe, dried into an amber block and grated over the dish. Salty and savory, it tastes like the sea's answer to parmesan.",

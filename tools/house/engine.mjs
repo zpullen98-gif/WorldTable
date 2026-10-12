@@ -108,8 +108,13 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    the six culinary terms that linked nothing (Mother sauces, Escoffier, Guéridon, Bavarois and Blangé
    on the items their own words name, Creole and Cajun on its story component's) and a new Filé term on
    the Seafood Gumbo that keeps the rule of published recipe, never menu; stamped at the half hour
-   before its build, never ahead of the clock. */
-export const EDITION_BUILT_AT = '2026-10-12T04:00:00.000Z';
+   before its build, never ahead of the clock. The 05:00 edition of 12 October reconciles the house's
+   respellings with the World Table's Floor Deck (research/respellings-2026-10-12.md): the guide's own
+   printed words stand (min-yo-NET over the French long ee), rémoulade takes the city's first-syllable
+   stress (REM-uh-lahd), and bordelaise, mascarpone, burrata, shiitake, harissa and bavarois take the
+   American dining room's dictionary form the Floor Deck carries; stamped at the hour before its build,
+   never ahead of the clock. */
+export const EDITION_BUILT_AT = '2026-10-12T05:00:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a

@@ -26,7 +26,7 @@ const cards = [
 		id: 'fd_0267',
 		term: 'Banyuls',
 		level: 4,
-		say: 'bahn-YOOLZ',
+		say: 'bahn-YOOLS',
 		packet: true,
 		gist: "Sweet fortified Grenache from France's far south, or its vinegar",
 		guest: 'Banyuls is a sweet red wine from the south of France, by the Spanish border. On a menu it is usually the vinegar made from it, rounder and a little sweeter than red wine vinegar.',
