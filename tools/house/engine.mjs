@@ -103,8 +103,13 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    to the lineup ask (its comparison row, built from components/wines.json, still says old vines at Alf,
    for the owner); stamped at the half hour before its build, never ahead of the clock. This is not a
    claim that no card anywhere names a living person in a present role: only the cards named here were
-   read for it. */
-export const EDITION_BUILT_AT = '2026-10-12T01:00:00.000Z';
+   read for it. The 04:00 edition of 12 October carries the term links, each an items override on the
+   term (build-brennans.mjs namedItems): Roux on the five dishes of its component beside its Riesling,
+   the six culinary terms that linked nothing (Mother sauces, Escoffier, Guéridon, Bavarois and Blangé
+   on the items their own words name, Creole and Cajun on its story component's) and a new Filé term on
+   the Seafood Gumbo that keeps the rule of published recipe, never menu; stamped at the half hour
+   before its build, never ahead of the clock. */
+export const EDITION_BUILT_AT = '2026-10-12T04:00:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a

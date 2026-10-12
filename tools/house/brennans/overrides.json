@@ -1,5 +1,5 @@
 {
-  "about": "Every departure from the server guide that the Brennan's pack makes, each with its reason and its source, so a reader can audit the pack against the guide (house/brennans/guide.txt, menus read 26 September 2026) and the research under house/brennans/research/. The builder (house/build-brennans.mjs) applies the entries in order after parsing and before dash stripping; a replace whose 'from' is not found fails the build. Verdict ids (chef-dishes-b-4, gap-pron-6 and so on) are the ids in research/verified-facts.json; 'pdf-corrections pN' points at research/pdf-corrections.json by page. A still-unverifiable fact is placed nowhere as a fact; a refuted claim appears only as its correction. A price is never touched here, except where a newer printed menu prints another: from the 01:30 edition of 4 October 2026 the owner's paste of 3 October sets the Damien Martin and the Durban glass prices, each with the older figure kept as a dispute. Targets: house | dish:<name> | wine:<name> | cocktail:<name> | tasting:<name> | term:<term> | scenario:<title> | mixup:<a> vs <b> | mustknow:<title> | <list>:+ to add. Ops: set (default), replace {from,to}, append, add, retire {tombstone}. A retire takes a dish, wine or drink the current menus no longer print out of the house and puts its id in house.removed under the stamp named, a millisecond after the last edition that carried it, so a device drops the copy nobody touched; an add on wine:+ files a whole wine, and an add on house sources files a source. From the 3 October 2026 edition, an add on dish:+ or cocktail:+ files a whole item the guide prints only as a price line or a must-know, or a house page the research read prints (the 1946 list, the Luxury Roost Bar cocktails, the premium Sazeracs, the eye openers, the coffees and juice, the children's menu, the Bubbles snacks); every such price stands verbatim on guide.txt or on a snapshot under house/brennans/pages/ whose first line names its source. From the 22:00 edition of 3 October 2026, every dish, drink and wine also carries an add on kept for each fixed question of docs/study-menus-design.md section 5 (Tell me about it., How do I sell it?, What do guests ask?, What should I watch for?, and How do I pour it? for every wine and the drinks finished at the table), each with a reason opening Study notes and its sources, and every thin guest line (engine.mjs thinLines) is rewritten by a set whose reason opens Thin line with its code; engine.mjs noteProblems holds both in validate-pack, keep-all and check-pack. From the 01:30 edition of 4 October 2026 an add on dispute:+ may carry a resolution, which says which side a newer printed menu bears out while both sides stay, and a mix-up is named mixup:<a> vs <b> by its two sides.",
+  "about": "Every departure from the server guide that the Brennan's pack makes, each with its reason and its source, so a reader can audit the pack against the guide (house/brennans/guide.txt, menus read 26 September 2026) and the research under house/brennans/research/. The builder (house/build-brennans.mjs) applies the entries in order after parsing and before dash stripping; a replace whose 'from' is not found fails the build. Verdict ids (chef-dishes-b-4, gap-pron-6 and so on) are the ids in research/verified-facts.json; 'pdf-corrections pN' points at research/pdf-corrections.json by page. A still-unverifiable fact is placed nowhere as a fact; a refuted claim appears only as its correction. A price is never touched here, except where a newer printed menu prints another: from the 01:30 edition of 4 October 2026 the owner's paste of 3 October sets the Damien Martin and the Durban glass prices, each with the older figure kept as a dispute. Targets: house | dish:<name> | wine:<name> | cocktail:<name> | tasting:<name> | term:<term> | scenario:<title> | mixup:<a> vs <b> | mustknow:<title> | <list>:+ to add. Ops: set (default), replace {from,to}, append, add, retire {tombstone}. A retire takes a dish, wine or drink the current menus no longer print out of the house and puts its id in house.removed under the stamp named, a millisecond after the last edition that carried it, so a device drops the copy nobody touched; an add on wine:+ files a whole wine, and an add on house sources files a source. From the 3 October 2026 edition, an add on dish:+ or cocktail:+ files a whole item the guide prints only as a price line or a must-know, or a house page the research read prints (the 1946 list, the Luxury Roost Bar cocktails, the premium Sazeracs, the eye openers, the coffees and juice, the children's menu, the Bubbles snacks); every such price stands verbatim on guide.txt or on a snapshot under house/brennans/pages/ whose first line names its source. From the 22:00 edition of 3 October 2026, every dish, drink and wine also carries an add on kept for each fixed question of docs/study-menus-design.md section 5 (Tell me about it., How do I sell it?, What do guests ask?, What should I watch for?, and How do I pour it? for every wine and the drinks finished at the table), each with a reason opening Study notes and its sources, and every thin guest line (engine.mjs thinLines) is rewritten by a set whose reason opens Thin line with its code; engine.mjs noteProblems holds both in validate-pack, keep-all and check-pack. From the 01:30 edition of 4 October 2026 an add on dispute:+ may carry a resolution, which says which side a newer printed menu bears out while both sides stay, and a mix-up is named mixup:<a> vs <b> by its two sides. From the 04:00 edition of 12 October 2026 a term may name its items, with field items on term:<term> or as items in its term:+ add: each the exact name of a dish, wine or drink in the house, joined to the items the term's words reach, in the house's order, an unknown name failing the build; notItems, set on term:<term>, takes off an item the words reach but the term would misdescribe.",
   "principles": {
     "map": {
       "bubbles": "fat",
@@ -59086,6 +59086,98 @@
       },
       "reason": "Verifier repair of 12 October 2026: the part kept the unsettled large old casks, which the review sent to the lineup ask with the parcel and the vine age.",
       "source": "research:cellar-review-2026-10-12-verifier.md#8. Stein Weihwasser: only the sourced steep slate; research/producers-cellar-alsace-jura-mosel-2026-10-10.md#6; research/cellar-review-2026-10-11-house-floor-2.md#7. Weingut Stein Weihwasser, the profile"
+    },
+    {
+      "target": "term:Roux",
+      "field": "items",
+      "value": [
+        "Seafood Gumbo",
+        "Turtle Soup",
+        "Eggs Hussarde",
+        "Eggs Owen",
+        "South Louisiana Rice Dressing"
+      ],
+      "reason": "Term links of 12 October 2026: the roux term reached only the Bründlmayer Heiligenstein Riesling, whose own text says it is built for a dark roux, and none of the dishes a roux sits under. These are the items of the roux component (c-5ucoil5x), in its order; the Riesling stays as the words' own hit.",
+      "source": "components/dishes.json roux (c-5ucoil5x, its items); research/dossier-the-kitchen.md section 5 (Turtle Soup; Seafood Gumbo); build-brennans.mjs termsIn"
+    },
+    {
+      "target": "term:Mother sauces",
+      "field": "items",
+      "value": [
+        "Eggs Hussarde",
+        "Eggs Owen"
+      ],
+      "reason": "Term links of 12 October 2026: the term linked nothing. Of the five sauces its words name, only hollandaise is printed on a dish, on the Eggs Hussarde and the Eggs Owen; its words name no béarnaise, Choron or Foyot, so the Eggs Sardou, the hanger steak and the Chateaubriand stay off until they do.",
+      "source": "the term's toGuest (the term:+ add of Mother sauces); the menu lines of the Eggs Hussarde and the Eggs Owen (hollandaise); must-know The sauces on our menus"
+    },
+    {
+      "target": "term:Escoffier",
+      "field": "items",
+      "value": [
+        "Roasted Chateaubriand",
+        "Cherries Jubilee"
+      ],
+      "reason": "Term links of 12 October 2026: the term linked nothing. Its words name sauce Foyot, printed on the Roasted Chateaubriand, and Cherries Jubilee, and no other item.",
+      "source": "the term's toGuest (the master review's set on term:Escoffier); the Roasted Chateaubriand's menu line (sauce Foyot); chef-dishes-b-19"
+    },
+    {
+      "target": "term:Guéridon",
+      "field": "items",
+      "value": [
+        "World Famous Bananas Foster"
+      ],
+      "reason": "Term links of 12 October 2026: the term linked nothing. Its words name the Bananas Foster, made on the cart at the table, and no other item.",
+      "source": "the term's toGuest (the term:+ add of Guéridon); dossier-the-kitchen section 12"
+    },
+    {
+      "target": "term:Bavarois",
+      "field": "items",
+      "value": [
+        "The Snickers"
+      ],
+      "reason": "Term links of 12 October 2026: the term linked nothing. Its words say the Snickers starts with a Bavarian milk chocolate, as its menu line prints it, and name no other item.",
+      "source": "the term's toGuest (the term:+ add of Bavarois); The Snickers' menu line (Bavarian milk chocolate)"
+    },
+    {
+      "target": "term:Blangé",
+      "field": "items",
+      "value": [
+        "World Famous Bananas Foster",
+        "Eggs Hussarde"
+      ],
+      "reason": "Term links of 12 October 2026: the term linked nothing. Its words name the two dishes he created, Bananas Foster and Eggs Hussarde, and no other item.",
+      "source": "the term's toGuest (the term:+ add of Blangé); dossier-the-kitchen section 13; chef-history-15"
+    },
+    {
+      "target": "term:Creole and Cajun",
+      "field": "items",
+      "value": [
+        "Seafood Gumbo",
+        "New Orleans Shrimp & Grits",
+        "Turtle Soup",
+        "South Louisiana Rice Dressing",
+        "Creole Hanger Steak",
+        "Creole-Spiced Hanger Steak",
+        "Creole Spiced Nuts",
+        "Crawfish Meat Pies",
+        "Eggs Owen"
+      ],
+      "reason": "Term links of 12 October 2026: the term linked nothing. Its words name no single item, only that Brennan's is Creole, so it takes the items of the Creole and Cajun story (c-774jkdda), the component that already names this term, in its order.",
+      "source": "components/dishes.json story-creole-and-cajun (c-774jkdda, its items and terms); the term's toGuest (the term:+ add of Creole and Cajun)"
+    },
+    {
+      "target": "term:+",
+      "op": "add",
+      "value": {
+        "term": "Filé",
+        "say": "FEE-lay",
+        "toGuest": "Filé is ground sassafras leaves, which came to Louisiana cooking from the Choctaw, and it thickens a gumbo. Our published gumbo recipe carries a touch of it, but the menu does not list it, so whether tonight's gumbo has it is a question for the kitchen.",
+        "items": [
+          "Seafood Gumbo"
+        ]
+      },
+      "reason": "Term links of 12 October 2026: the gumbo's notes and its lineup ask speak of filé and no term said what it is. The line keeps the house rule, published recipe, never menu: it claims no filé in the dining room gumbo, which stays a lineup question. Linked to the Seafood Gumbo by name, since its menu line does not print the word.",
+      "source": "gap-recipes-4 (the published Seafood Filé Gumbo, a teaspoon of filé; say published recipe, never menu); research/dossier-the-kitchen.md section 5 (Seafood Gumbo: Choctaw filé); components/dishes.json gumbo-story (filé, ground sassafras leaves, from the Choctaw); research/deep-2026-10-03/catalogue.json (a roux thickened with okra or filé)"
     }
   ]
 }

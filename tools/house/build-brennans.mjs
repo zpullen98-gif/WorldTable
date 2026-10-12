@@ -21,7 +21,9 @@
       entry builds any more; both put the id in house.removed, and every id the shipped pack holds
       must be in the new house or carry a tombstone, or the build fails;
       a dispute an add files may carry a resolution (the side a newer printed menu bears out), and a
-      mix-up is targeted by its two sides, mixup:<a> vs <b>. An add on video:+ files one video in the
+      mix-up is targeted by its two sides, mixup:<a> vs <b>. A term links the items its words reach;
+      items on term:<term> (or on its term:+ add) names more by exact name, an unknown name failing
+      the build, and notItems takes one off. An add on video:+ files one video in the
       shape of a research/videos-*.json record, copied in whole (see VIDEOS below);
    5. runs every string through the spelling map (the research's British forms become the house's
       American ones, logged to house/brennans/spelling-log.json) and then the dash pass: an en dash
@@ -568,8 +570,15 @@ overrides.entries.forEach((e, n) => {
 	if (op === 'add') {
 		const v = e.value;
 		if (list === 'terms') {
-			if (model.terms.some((t) => slug(t.term) === slug(v.term))) { applied.push({ n, skipped: 'term exists' }); return; }
-			model.terms.push({ term: v.term, say: v.say || '', toGuest: v.toGuest || '' });
+			if (model.terms.some((t) => slug(t.term) === slug(v.term))) {
+				if (v.items !== undefined) fail(`${REL(OVERRIDES)} entry ${n}: the term ${v.term} exists, so this add is skipped and its items would be lost; set them with term:${v.term} field items`);
+				applied.push({ n, skipped: 'term exists' });
+				return;
+			}
+			const term = { term: v.term, say: v.say || '', toGuest: v.toGuest || '' };
+			/* The items it names, if any, by exact name; namedItems checks them at assembly. */
+			if (v.items !== undefined) term.items = Array.isArray(v.items) ? [...v.items] : v.items;
+			model.terms.push(term);
 		} else if (list === 'scenarios') {
 			if (model.scenarios.some((s) => slug(s.title) === slug(v.title))) fail(`${REL(OVERRIDES)} entry ${n}: the scenario ${v.title} exists`);
 			model.scenarios.push({ title: v.title, guest: v.guest, you: v.you, principle: v.principle, items: Array.isArray(v.items) ? [...v.items] : [] });
@@ -1008,19 +1017,44 @@ function upsellIds(r) {
 	return ids;
 }
 const allText = (r) => [r.name, r.description, r.spec ? r.spec.join(' ') : '', r.parts ? Object.values(r.parts).join(' ') : ''].join(' ');
+/* The items a term names in overrides (items, set on term:<term> or carried by its term:+ add), each by
+   its exact name in the house: an item the term's own words describe that no word of the item's text
+   reaches (the roux under the gumbo, the cart under the Bananas Foster). They join the items the
+   term's words reach, in the house's own order, so a term that names none links exactly as before;
+   an unknown name, a name given twice or a list of anything but names fails the build. */
+function namedItems(t) {
+	const named = new Set();
+	if (t.items === undefined) return named;
+	const where = `${REL(OVERRIDES)}: term ${t.term} items`;
+	if (!Array.isArray(t.items) || !t.items.length || !t.items.every((n) => typeof n === 'string' && n.trim() !== '')) fail(`${where} must be a list of item names`);
+	for (const n of t.items) {
+		let rec = null;
+		for (const list of ['dishes', 'wines', 'cocktails']) { rec = rec || clean[list].find((r) => r.name === n) || null; }
+		if (!rec) {
+			const near = byName.get(slug(n));
+			const like = near ? ['dishes', 'wines', 'cocktails'].map((l) => clean[l].find((r) => r.id === near)).find(Boolean) : null;
+			fail(`${where}: ${n} is not the exact name of a dish, wine or cocktail in the house${like ? `; the house names it ${like.name}` : ''}`);
+		}
+		if (named.has(rec.id)) fail(`${where}: ${n} is named twice`);
+		named.add(rec.id);
+	}
+	return named;
+}
 for (const t of clean.terms) {
 	const x = { id: idFor('lexicon', slug(t.term)), term: t.term };
 	put(x, 'say', mark(t.say || 'As it reads: ' + t.term + '.'));
 	put(x, 'toGuest', t.toGuest ? mark(t.toGuest) : undefined);
+	const named = namedItems(t);
 	const ids = [];
 	for (const list of ['dishes', 'wines', 'cocktails']) for (const r of clean[list]) {
-		if (termsIn(allText(r)).some((h) => h === t)) ids.push(r.id);
+		if (named.has(r.id) || termsIn(allText(r)).some((h) => h === t)) ids.push(r.id);
 	}
 	for (const id of itemsFor(t.term)) if (!ids.includes(id)) ids.push(id);
 	/* An item the term's words reach but whose own card the term would misdescribe (the chicory term on
 	   the coffee that has none, the bitters term on a drink that carries the aperitivo) is named in
 	   overrides as notItems and left off. */
 	const not = Array.isArray(t.notItems) ? t.notItems.map((n) => itemId(n, 'term ' + t.term + ' notItems')) : [];
+	for (const id of not) if (named.has(id)) fail(`term ${t.term}: ${id} is named in both items and notItems; keep one`);
 	for (const id of not) if (!ids.includes(id)) fail(`term ${t.term}: notItems names ${id}, which the term does not reach; drop the entry`);
 	x.itemIds = ids.filter((id) => !not.includes(id));
 	x.ts = BUILD_TS;

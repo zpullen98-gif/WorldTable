@@ -222,14 +222,20 @@ describe('the study view’s doors into the drill page', () => {
 		let seed = 7;
 		const rand = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
 		/* Dealt from the house as /menu/quiz deals it (tableDrillHouse): the producers behind a dish only. */
-		const round = dealSection(tableDrillHouse(pack), ALL_KINDS, 'Entrées', 10, rand);
+		const house = tableDrillHouse(pack);
+		const round = dealSection(house, ALL_KINDS, 'Entrées', 10, rand);
 		expect(round.length).toBeGreaterThan(0);
 		expect(round.length).toBeLessThanOrEqual(10);
 		const entrees = new Set(pack.dishes.filter((d: { section: string }) => d.section === 'Entrées').map((d: { id: string }) => d.id));
 		for (const q of round) expect(entrees.has(q.itemId)).toBe(true);
-		const outside = round.flatMap((q) => q.options).filter((o) => pack.dishes.some((d: { name: string; section: string }) => d.name === o && d.section !== 'Entrées'));
+		/* Options from the whole house, read over the full round: which ten
+		   questions a seed deals first moves whenever the pack gains a term, and
+		   ten wine or producer questions carry no dish names at all. */
+		const full = dealSection(house, ALL_KINDS, 'Entrées', null, rand);
+		for (const q of full) expect(entrees.has(q.itemId)).toBe(true);
+		const outside = full.flatMap((q) => q.options).filter((o) => pack.dishes.some((d: { name: string; section: string }) => d.name === o && d.section !== 'Entrées'));
 		expect(outside.length).toBeGreaterThan(0);
-	});
+	}, 30000);
 	it('deals a meal round of items served at that meal, or tagged with none', async () => {
 		const { readFileSync } = await import('node:fs');
 		const { dealSection, ALL_KINDS, tableDrillHouse } = await import('./house-drill-round');
