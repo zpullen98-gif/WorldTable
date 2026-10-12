@@ -448,8 +448,8 @@
 		},
 		{
 			"path": "house.components[70].explain",
-			"before": "Burrata is a fresh cheese from Puglia in southern Italy: a pouch of mozzarella filled with stracciatella, shreds of curd soaked in cream. Cut open, the centre spills out soft and milky.\n\nIt is best at room temperature and torn rather than sliced; cold burrata is firm and loses its sweetness.\n\nOn the Creole Tomato Tostada it is the creamy partner to the raw Louisiana tomatoes, the way mozzarella partners tomato in a caprese. The guide's line, mozzarella with a creamy centre, is exactly right for a guest. Say boo-RAH-tah.",
-			"after": "Burrata is a fresh cheese from Puglia in southern Italy: a pouch of mozzarella filled with stracciatella, shreds of curd soaked in cream. Cut open, the center spills out soft and milky.\n\nIt is best at room temperature and torn rather than sliced; cold burrata is firm and loses its sweetness.\n\nOn the Creole Tomato Tostada it is the creamy partner to the raw Louisiana tomatoes, the way mozzarella partners tomato in a caprese. The guide's line, mozzarella with a creamy center, is exactly right for a guest. Say boo-RAH-tah.",
+			"before": "Burrata is a fresh cheese from Puglia in southern Italy: a pouch of mozzarella filled with stracciatella, shreds of curd soaked in cream. Cut open, the centre spills out soft and milky.\n\nIt is best at room temperature and torn rather than sliced; cold burrata is firm and loses its sweetness.\n\nOn the Creole Tomato Tostada it is the creamy partner to the raw Louisiana tomatoes, the way mozzarella partners tomato in a caprese. The guide's line, mozzarella with a creamy centre, is exactly right for a guest. Say boo-RAH-tuh.",
+			"after": "Burrata is a fresh cheese from Puglia in southern Italy: a pouch of mozzarella filled with stracciatella, shreds of curd soaked in cream. Cut open, the center spills out soft and milky.\n\nIt is best at room temperature and torn rather than sliced; cold burrata is firm and loses its sweetness.\n\nOn the Creole Tomato Tostada it is the creamy partner to the raw Louisiana tomatoes, the way mozzarella partners tomato in a caprese. The guide's line, mozzarella with a creamy center, is exactly right for a guest. Say boo-RAH-tuh.",
 			"words": [
 				"centre",
 				"centre"
@@ -666,8 +666,8 @@
 		},
 		{
 			"path": "house.components[126].explain",
-			"before": "Shiitake are mushrooms long cultivated on logs in Japan and China; the name joins shii, the tree they grew on, with take, mushroom. They are meaty and deeply savoury, rich in the natural compounds that give umami.\n\nPreserved shiitake are most likely cured in soy or pickled, which concentrates that savoury depth; what the kitchen means by preserved is a question for the chef.\n\nOn the Blackened Tofu they bring the earthy, meaty note that makes the plate satisfying without meat, against the spiced crust and creamy rice grits. Say shee-TAH-keh, not shih-TAH-kee.",
-			"after": "Shiitake are mushrooms long cultivated on logs in Japan and China; the name joins shii, the tree they grew on, with take, mushroom. They are meaty and deeply savory, rich in the natural compounds that give umami.\n\nPreserved shiitake are most likely cured in soy or pickled, which concentrates that savory depth; what the kitchen means by preserved is a question for the chef.\n\nOn the Blackened Tofu they bring the earthy, meaty note that makes the plate satisfying without meat, against the spiced crust and creamy rice grits. Say shee-TAH-keh, not shih-TAH-kee.",
+			"before": "Shiitake are mushrooms long cultivated on logs in Japan and China; the name joins shii, the tree they grew on, with take, mushroom. They are meaty and deeply savoury, rich in the natural compounds that give umami.\n\nPreserved shiitake are most likely cured in soy or pickled, which concentrates that savoury depth; what the kitchen means by preserved is a question for the chef.\n\nOn the Blackened Tofu they bring the earthy, meaty note that makes the plate satisfying without meat, against the spiced crust and creamy rice grits. Say shee-TAH-kee.",
+			"after": "Shiitake are mushrooms long cultivated on logs in Japan and China; the name joins shii, the tree they grew on, with take, mushroom. They are meaty and deeply savory, rich in the natural compounds that give umami.\n\nPreserved shiitake are most likely cured in soy or pickled, which concentrates that savory depth; what the kitchen means by preserved is a question for the chef.\n\nOn the Blackened Tofu they bring the earthy, meaty note that makes the plate satisfying without meat, against the spiced crust and creamy rice grits. Say shee-TAH-kee.",
 			"words": [
 				"savoury",
 				"savoury"
@@ -4346,16 +4346,16 @@
 		},
 		{
 			"path": "house.components[70].producer.notes[0]",
-			"before": "Say boo-RAH-tah: mozzarella with a creamy centre, from Andria in Puglia.",
-			"after": "Say boo-RAH-tah: mozzarella with a creamy center, from Andria in Puglia.",
+			"before": "Say boo-RAH-tuh: mozzarella with a creamy centre, from Andria in Puglia.",
+			"after": "Say boo-RAH-tuh: mozzarella with a creamy center, from Andria in Puglia.",
 			"words": [
 				"centre"
 			]
 		},
 		{
 			"path": "house.components[70].producer.sayIt",
-			"before": "Burrata, boo-RAH-tah, from Andria in Puglia: a pouch of mozzarella with a soft, creamy centre, beside our Creole tomatoes.",
-			"after": "Burrata, boo-RAH-tah, from Andria in Puglia: a pouch of mozzarella with a soft, creamy center, beside our Creole tomatoes.",
+			"before": "Burrata, boo-RAH-tuh, from Andria in Puglia: a pouch of mozzarella with a soft, creamy centre, beside our Creole tomatoes.",
+			"after": "Burrata, boo-RAH-tuh, from Andria in Puglia: a pouch of mozzarella with a soft, creamy center, beside our Creole tomatoes.",
 			"words": [
 				"centre"
 			]
