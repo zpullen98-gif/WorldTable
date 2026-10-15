@@ -1188,6 +1188,24 @@ is a separate ten-card door, prioritising misses, unseen cards and older practic
 it does not change the existing Due today count. `fall-menu.test.ts` pins the
 coverage, stable IDs, references, scoped decks, round and latest-verdict behaviour.
 
+The companion `fall-menu-art-2026.json` holds one reviewed, AI-generated ingredient
+study per item. These are selected components, never confirmed house plating or
+cocktail presentations. The captions, HTML teaching keys and context qualify what
+the picture can establish; recipes, portions, glassware and allergy decisions do
+not come from an illustration. Exact generation and correction prompts live in
+`docs/fall-menu-image-prompts.txt`.
+
+`FallTeachingImage.svelte` reuses the accessible PlateIllustration viewer. Reading
+pages show the picture and key; flashcards mount them only after reveal and after
+opening a closed disclosure. Modal keyboard input must never grade the card.
+`tools/port-fall-menu-art.mjs` generates Ledger metadata and mirrors the full and
+thumbnail WebP files byte for byte; use `--check` before release. Immutable `-v1`
+paths live under `house/brennans/`, stay out of precache, and use `plates-v1` with
+a 160-entry bound. Change filenames when replacing an image. The browser check
+`tools/check-fall-art-browser.mjs` covers recall isolation, all studies in both
+service themes, small screens, zoom, fallback, and optional production offline
+checks (`FALL_ART_OFFLINE=1`).
+
 ## Testing
 
 `npm test` (192 unit) · `npm run test:e2e` (45 Playwright: regressions named for

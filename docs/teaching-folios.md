@@ -60,7 +60,13 @@ The illustrated surrounds carry the house's antique gold, hospitality and restra
 
 Earlier B01, B02 and B06 presentation concepts remain outside the app pending actual plating review. These four component and ingredient studies do not silently promote those concepts to house standards.
 
-Companion images use immutable versioned paths in `static/house/brennans/`, `static/standards/` and `static/plates/`. Full images and thumbnails stay out of precache. Their loaded images use the existing `plates-v1` on-demand cache, now holding up to 128 entries for the 108 shipped artwork files and room for revisions without renaming readers’ cache. Both first-visit warm-up and Workbox accept the new roots. The independent manifest and integration tests verify links and scope; inspect every generated subject against its key before release.
+Companion images use immutable versioned paths in `static/house/brennans/`, `static/standards/` and `static/plates/`. Full images and thumbnails stay out of precache. Their loaded images use the existing `plates-v1` on-demand cache, now holding up to 160 entries for the 142 shipped artwork files including the Fall 2026 collection. Both first-visit warm-up and Workbox accept the new roots. The independent manifest and integration tests verify links and scope; inspect every generated subject against its key before release.
+
+## Fall 2026 ingredient studies
+
+The eight dishes and nine cocktails each have a reviewed component still life, a full image, a thumbnail and a readable teaching key. `src/lib/data/fall-menu-art-2026.json` owns the shared metadata; `tools/port-fall-menu-art.mjs` generates the Ledger catalogue and copies the images. Full images are 1200 by 800 and thumbnails 420 by 280. All images retain their uncropped 3:2 composition. Exact generation and correction prompts are in `docs/fall-menu-image-prompts.txt`.
+
+The dark wood, green linen, brass compass and candlelight establish the collection's exploration theme. Food and drinks remain visually natural. These are selected-ingredient studies rather than approved plating or final cocktail builds. Source fruit and botanical cues are explicitly distinguished from additions to a recipe. Unknown terrine assembly, cocktail measures and glassware are not invented. The pictured agnolotti folds and Maldon-style flakes were corrected during review. Captions and per-item limitations remain visible in the reader and in the optional answer disclosure; the question face contains no art or image request.
 
 ## Visual learning connections, 10 October 2026
 

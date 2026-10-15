@@ -62,6 +62,7 @@
 	import { markStudied } from '$lib/oot-studied';
 	import { drilledKey, markDrilled } from '$lib/house-drilled';
 	import { fallCardById, fallMembers, fallDeckName, fallGradeKey, fallVerdicts, fallPractice, fallSourceById, type FallCard } from '$lib/fall-menu';
+	import FallTeachingImage from '$lib/components/FallTeachingImage.svelte';
 	import { itemCards, latestVerdicts, mealsOf, inMeal, findItem, producersFor, say, tastingInMeal, tastingOnlyIds, type ItemCard } from '$lib/study';
 	import { buildFlashcards, type Flashcard } from '$lib/house/house-drills';
 	import { COMPONENT_KINDS, COMPONENT_LABELS, componentsFor, type ComponentKind } from '$lib/house/house-schema';
@@ -580,6 +581,7 @@
 
 	function onkey(e: KeyboardEvent) {
 		if (screen !== 'card' || e.metaKey || e.ctrlKey || e.altKey) return;
+		if (document.querySelector('dialog[open]')) return;
 		const t = e.target as HTMLElement | null;
 		if (t && ['BUTTON', 'A', 'SUMMARY', 'INPUT', 'TEXTAREA', 'SELECT'].includes(t.tagName)) return;
 		if ((e.key === ' ' || e.key === 'Enter') && !fc?.flipped) {
@@ -782,6 +784,7 @@
 								<p class="note">{shown.card.sourceIds.length ? 'Background sources:' : 'Based on your Fall 2026 training sheet and the collection’s service notes.'}</p>
 								{#each shown.card.sourceIds as sid}{@const source = fallSourceById.get(sid)}{#if source}<p class="note"><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a></p>{/if}{/each}
 								<a class="chip" href="{base}/menu?view=fall&kind={shown.card.kind}&item={shown.card.itemId}">Read this item</a>
+								{#key shown.card.id}<FallTeachingImage itemId={shown.card.itemId} compact />{/key}
 							{:else}<p class="def">Say it aloud, then flip.</p>{/if}
 						</div>
 					{:else if shown.kind === 'h'}
