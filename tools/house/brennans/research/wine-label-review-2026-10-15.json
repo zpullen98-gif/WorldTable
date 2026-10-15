@@ -1,0 +1,123 @@
+{
+  "title": "Selected Brennan's wine label and service corrections",
+  "reviewedOn": "2026-10-15",
+  "scope": "Targeted corrections to 14 saved wine records and their linked components and comparisons. This is not verification of every wine, producer history or current stock in the pack.",
+  "inventoryPolicy": "Preserve all record IDs, names, vintages, prices, bins, formats and menu membership. Published menu discrepancies are not authority to replace saved inventory silently. Personal edits continue through the existing edition merge. The unverified grape arrays for both private-label Piper records are empty, and the three grape-specific component links are removed pending bottle confirmation. Minuty 2024 also has an empty grape array and no grape-specific component association until a vintage-specific source is confirmed; current cuvée notes retain all four names.",
+  "sources": [
+    {
+      "url": "https://inglenook.com/product/rubicon/",
+      "authority": "Producer historical vintage archive, 2010 section only",
+      "facts": [
+        "Rubicon 2010: 86% Cabernet Sauvignon, 6% Cabernet Franc, 5% Petit Verdot, 3% Merlot.",
+        "Rutherford, Napa Valley; 20 months in barrel."
+      ],
+      "qualification": "A vintage archive's release-era decant suggestion does not establish the condition or ideal air exposure of a restaurant bottle today. Do not substitute another accordion's vintage figures."
+    },
+    {
+      "url": "https://inglenook.com/wp-content/uploads/2024/02/10_Rubicon_WS_FS.pdf",
+      "authority": "Producer 2010 fact sheet",
+      "facts": [
+        "Four grape varieties and release in September 2013."
+      ],
+      "qualification": "Years since the 2010 harvest are not years spent in bottle. Tasting descriptions are cues, not a guarantee that an individual mature bottle is sound or soft."
+    },
+    {
+      "url": "https://www.champagne.fr/en/champagne-tasting/preparations-for-drinking-champagne",
+      "authority": "Comité Champagne",
+      "facts": [
+        "Extra Brut: 0 to 6 g/L sugar in the finished wine.",
+        "Brut: less than 12 g/L.",
+        "Brut Nature: less than 3 g/L with no sugar added after the second fermentation."
+      ],
+      "qualification": "Extra Brut and Brut overlap. These label terms do not state the quantity of sugar added at dosage and cannot by themselves rank two bottles' perceived sweetness or roundness."
+    },
+    {
+      "url": "https://www.piper-heidsieck.com/en/wine/essentiel/",
+      "authority": "Producer standard Essentiel cuvée",
+      "facts": [
+        "The page describes a standard Essentiel bottling using Pinot Noir, Meunier and Chardonnay."
+      ],
+      "qualification": "Not confirmation of Brennan's private-label cuvée or exact lot. The currently described mise en cave 2019 composition differs from the 2016 technical sheet. Do not transfer either to the restaurant bottle without a match."
+    },
+    {
+      "url": "https://www.piper-heidsieck.com/wp-content/uploads/2024/10/PH_Technical-Sheet_Essentiel_MEC-2016_EN.pdf",
+      "authority": "Producer batch-specific sheet",
+      "facts": [
+        "Mise en cave 2016 Essentiel uses 50% Pinot Noir, 30% Meunier, 20% Chardonnay."
+      ],
+      "qualification": "Cellaring year is not necessarily a declared harvest vintage. These figures are not added to the house-label wine record."
+    },
+    {
+      "url": "https://minuty.com/en-int/products/prestige-rose",
+      "authority": "Producer current Prestige Rosé cuvée page",
+      "facts": [
+        "Lists Grenache, Syrah, Rolle and Cinsault without proportions."
+      ],
+      "qualification": "The current producer page does not securely establish exact 2024 proportions. Current cuvée information is qualified in the service and reading notes, while the exact-vintage grape array stays empty. Cinsault and Rolle therefore cannot distinguish Whispering Angel by absence from current Prestige. The estate classification should not automatically be transferred to a cuvée."
+    },
+    {
+      "url": "https://www.latourvieille.com/vins/vin-banyuls-reserva/",
+      "authority": "Producer current nonvintage Reserva page",
+      "facts": [
+        "80% Grenache Noir, 15% Grenache Gris, 5% Carignan.",
+        "Sweet fortified wine aged oxidatively, blending vintages."
+      ],
+      "qualification": "Current cuvée information, not analysis of the restaurant's uninspected lot. Supersedes incomplete Grenache-only wording for the current Reserva."
+    },
+    {
+      "url": "https://domainefichet.fr/le-domaine/",
+      "authority": "Producer estate history and dated timeline",
+      "facts": [
+        "Francis and Christiane Fichet created the domaine in 1976.",
+        "Pierre-Yves joined in 1988; Olivier joined in 1990."
+      ],
+      "qualification": "1988 is not the founding date. Domaine Fichet at Igé remains distinct from Jean-Philippe Fichet at Meursault. This correction does not certify the retained Château London etymology, old-vine age or exact 2024 oak share."
+    },
+    {
+      "url": "https://www.brennansneworleans.com/menus/cocktails/",
+      "authority": "Restaurant primary page, undated, observed 15 October 2026",
+      "facts": [
+        "The main glass section names Rare 2013 while Birthday Bubbles names Rare 2012."
+      ],
+      "qualification": "Keep the saved 2012 glass identity stable. Guest scripts must confirm the actual open label rather than promise either vintage."
+    },
+    {
+      "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+      "authority": "Public wine list linked by the restaurant",
+      "facts": [
+        "The file carries creation timestamp 2026-10-04T21:02:22.314-07:00.",
+        "The glass list prints Rare 2012."
+      ],
+      "qualification": "The creation timestamp is not verified stock freshness. Several printed prices and vintages differ from the restaurant's other pages; retain saved inventory pending lineup confirmation."
+    },
+    {
+      "url": "https://www.coravin.com/pages/support-product-sparkling",
+      "authority": "Equipment manufacturer",
+      "facts": [
+        "Coravin Sparkling uses its dedicated stopper, charger and CO2 system."
+      ],
+      "qualification": "The stopper alone does not recharge the bottle. Follow the equipment instructions and the trained house procedure."
+    },
+    {
+      "url": "https://www.ivdp.pt/en/wines/port-wines/special-categories/",
+      "authority": "Instituto dos Vinhos do Douro e do Porto",
+      "facts": [
+        "Colheita is a single vintage tawny Port, matured in cask for at least seven years."
+      ],
+      "qualification": "The saved comparison is Niepoort Colheita 1997, not a generic tawny category. Confirm its bottle strength and condition rather than ranking every Port against every Banyuls."
+    }
+  ],
+  "editorialServiceGuidance": [
+    "The sommelier assesses the actual mature bottle before deciding on air or decanting. Sediment appearance, not a fixed last inch, governs when to stop the pour.",
+    "An open bottle's useful life depends on condition, handling and the house preservation procedure; its vintage alone cannot establish a one-day deadline.",
+    "No promised saving: two $70 glasses total $140, not approximately a $360 bottle. Compare confirmed volumes and prices before proposing a format change.",
+    "Tasting cues and pairing suggestions remain guidance for a conversation, not chemical analysis or a guaranteed sensory result.",
+    "Banyuls fortification does not guarantee weeks of sound quality after opening. Record the opening date and follow the house storage and assessment procedure. Do not teach a universal Banyuls versus Port ranking of alcohol or texture. The saved comparison is Reserva NV versus a named 1997 Colheita."
+  ],
+  "deliberatelyUnchanged": [
+    "Gainey Estate Chardonnay 2023 is correctly recorded as Sta. Rita Hills; the producer's exact 2023 trade sheet confirms that origin.",
+    "Châteaumar Cuvée Vincent 2023 remains 100% Syrah, consistent with the producer's US importer sheet.",
+    "Louis Jadot Beaune Premier Cru remains a general cuvée; do not rename it Les Grèves without the actual label.",
+    "Unreviewed producer-history claims, recipe pairings, inventory and unrelated aged-wine cards are outside this correction pass."
+  ]
+}

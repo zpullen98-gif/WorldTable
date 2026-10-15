@@ -1,6 +1,6 @@
 {
 	"about": "Every string the dash pass changed while building the Brennan's house, before and after, for a person to read for a changed meaning; an entry with an override number is a string an overrides.json entry set, not the guide's.",
-	"count": 363,
+	"count": 360,
 	"changes": [
 		{
 			"path": "model.card.sources[0].title",
@@ -1572,16 +1572,6 @@
 			"after": "Serve 60 to 62°F in a Bordeaux glass. No decanting by the glass; if a table takes a bottle, open or decant it 20 to 30 minutes ahead to soften the tannin."
 		},
 		{
-			"path": "model.wines[16].sayIt",
-			"before": "For the Chateaubriand, we pour the 2010 Inglenook Rubicon by the glass — a Napa legend with sixteen years of age, so it’s powerful but silky.",
-			"after": "For the Chateaubriand, we pour the 2010 Inglenook Rubicon by the glass, a Napa legend with sixteen years of age, so it’s powerful but silky."
-		},
-		{
-			"path": "model.wines[16].serve",
-			"before": "Serve 60–64°F in a large Bordeaux glass. A sixteen-year-old Cabernet can throw sediment: keep the bottle upright, pour slowly and leave the last inch behind. Present the label — it’s a Napa icon.",
-			"after": "Serve 60 to 64°F in a large Bordeaux glass. A sixteen-year-old Cabernet can throw sediment: keep the bottle upright, pour slowly and leave the last inch behind. Present the label, it’s a Napa icon."
-		},
-		{
 			"path": "model.wines[17].sayIt",
 			"before": "With the duck we pour Paul Hobbs Cabernet from Coombsville — dark fruit to meet the peaches and structure for the rich meat.",
 			"after": "With the duck we pour Paul Hobbs Cabernet from Coombsville, dark fruit to meet the peaches and structure for the rich meat."
@@ -1612,11 +1602,6 @@
 			"before": "Banyuls is a sweet red from the south of France — fig, caramel and coffee. With chocolate, it’s the classic.",
 			"after": "Banyuls is a sweet red from the south of France, fig, caramel and coffee. With chocolate, it’s the classic.",
 			"override": 122
-		},
-		{
-			"path": "model.wines[19].serve",
-			"before": "Serve slightly cool, about 55°F, in a small dessert glass: 2–3 oz, or 4 oz on the tasting. No decanting. Fortified, it keeps for weeks once open — recork and store cool.",
-			"after": "Serve slightly cool, about 55°F, in a small dessert glass: 2 to 3 oz, or 4 oz on the tasting. No decanting. Fortified, it keeps for weeks once open, recork and store cool."
 		},
 		{
 			"path": "model.cocktails[0].lines.s10",
