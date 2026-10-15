@@ -71,7 +71,7 @@
 <div class="shell hub foundations" aria-busy={!!entry && loading}>
 	{#if entry && reading}
 		<header class="entry-head"><p class="eyebrow">The Kitchen Fieldbook · {categoryTitle(entry.category)}</p><h1 tabindex="-1">{entry.term}</h1>
-			{#if entry.aliases?.length}<p class="aliases">Also found as {entry.aliases.join(' · ')}</p>{/if}
+			{#if entry.aliases?.length}<p class="aliases">Related names &amp; spellings: {entry.aliases.join(' · ')}</p>{/if}
 			<p class="record">{status(entry)}</p>
 		</header>
 		<Ornament seed={entry.id} />
