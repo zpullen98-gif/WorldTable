@@ -52,6 +52,7 @@
 	import { NEVER_GRADED, MET, type SubsectionProgress } from '$lib/levels';
 	import { latestVerdicts, producersLine, say, searchElsewhere, searchRows, studyProgress, studyRows, studySections } from '$lib/study';
 	import { roomHref } from '$lib/wing-links';
+	import { foundationsEntries } from '$lib/foundations';
 	import { deskShare, readDeskInbox } from '$lib/desk/desk-inbox';
 	import { readInName, whenRead } from '$lib/desk/desk-share';
 	import HouseBar from '$lib/components/HouseBar.svelte';
@@ -65,7 +66,7 @@
 	/** slug -> display name, for the subsections the eager index cannot name */
 	let names = $state<Record<string, string>>({});
 	/** what the search looks through besides the house */
-	type Found = { name: string; href: string; what: string };
+	type Found = { name: string; href: string; what: string; search?: string };
 	let index = $state<Found[]>([]);
 	let deskWaiting = $state<{ dishes: number; readIn: string; when: string } | null>(null);
 	let mounted = $state(false);
@@ -99,14 +100,15 @@
 				loadPlates()
 			]);
 			const map: Record<string, string> = {};
-			const found: Found[] = [];
+			const found: Found[] = foundationsEntries.map((entry) => ({ name: entry.term, search: [entry.term, ...entry.aliases].join(' '), href: `${base}/foundations?term=${encodeURIComponent(entry.id)}`, what: 'your culinary terms' }));
+			const fieldbookRefs = new Set(foundationsEntries.map((entry) => entry.ref));
 			for (const e of lexicon) {
 				map[e.slug] = e.term;
-				found.push({ name: e.term, href: `${base}/lexicon#${e.slug}`, what: 'the Lexicon' });
+				if (!fieldbookRefs.has(`t:${e.slug}`)) found.push({ name: e.term, href: `${base}/lexicon#${e.slug}`, what: 'the Lexicon' });
 			}
 			for (const c of deck.cards) {
 				map[c.id] = c.term;
-				found.push({ name: c.term, href: `${base}/flashcards?deck=${encodeURIComponent('deck:' + c.section)}&card=${c.id}&run=1`, what: 'a Floor Deck card' });
+				if (!fieldbookRefs.has(`c:${c.id}`)) found.push({ name: c.term, href: `${base}/flashcards?deck=${encodeURIComponent('deck:' + c.section)}&card=${c.id}&run=1`, what: 'a Floor Deck card' });
 			}
 			for (const m of track.modules) {
 				map[m.key] = m.title;
@@ -228,7 +230,7 @@
 		const starts: Found[] = [];
 		const has: Found[] = [];
 		for (const f of index) {
-			const nm = f.name.toLowerCase();
+			const nm = (f.search ?? f.name).toLowerCase();
 			if (nm.startsWith(t)) starts.push(f);
 			else if (nm.includes(t)) has.push(f);
 			if (starts.length >= 8) break;
@@ -349,6 +351,10 @@
 
 	<h2 class="group" id="today">Today's study</h2>
 	<nav class="quiet" aria-labelledby="today">
+		<a class="door" href="{base}/foundations" data-door="foundations">
+			<span class="door-name">Your culinary terms</span>
+			<span class="door-line">All {foundationsEntries.length} terms from your sheets: clear definitions, kitchen understanding, guest descriptions and daily practice.</span>
+		</a>
 		<a class="door lead" href={dueHref} data-door="due">
 			<span class="door-name">Due today</span>
 			<span class="door-line">{due ? due.line : 'Reading your record…'}</span>

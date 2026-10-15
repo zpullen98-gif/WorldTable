@@ -10,17 +10,15 @@ const cards = [
 		level: 2,
 		say: 'ess-kar-GOH',
 		packet: true,
-		gist: 'Land snails baked in their shells under garlic and parsley butter',
-		guest: "They're snails, baked in a sizzling garlic and herb butter. The texture is like a tender mushroom or a clam, and the butter is the star, so save bread for it.",
+		gist: "Edible land snails, often served with garlic and herb butter",
+		guest: "They are edible land snails. The familiar Burgundy preparation serves them with garlic and herb butter, though recipes and presentation vary.",
 		why: 'The snail is a land mollusk, a cousin of the clam, bought cleaned and precooked, usually tinned. It tastes of very little on its own, mild and earthy, so it carries the sauce: in the Burgundy classic, butter beaten with garlic, parsley and shallot.',
 		madeWith: ['snail', 'butter', 'garlic', 'parsley', 'often shallot', 'sometimes white wine'],
 		origin: 'French for snail, and the classic recipe comes from Burgundy',
 		pairs: 'Crusty bread for the butter, a glass of white Burgundy',
 		seeAlso: ['fd_0137', 'fd_0114'],
 		line: 'Escargot in garlic parsley butter, grilled baguette',
-		traps: [
-			{ says: 'Small sea snails picked from the shell and served chilled with lemon', why: 'These are land snails, and the dish is served piping hot in butter, not cold.' }
-		]
+		traps: [{"says":"Small sea snails always served chilled with lemon","why":"These are land snails. Garlic and herb butter is a classic preparation, but the menu determines the dish."}]
 	},
 	{
 		id: 'fd_0051',
@@ -46,28 +44,26 @@ const cards = [
 		term: 'Quail',
 		level: 2,
 		packet: true,
-		gist: 'Tiny farmed game bird, served one or two a plate, mild and juicy',
-		guest: "It's a small bird, about a handful, tender and juicy with a flavor a little richer than chicken dark meat. The legs are meant to be picked up.",
-		why: 'Restaurant quail is farm raised and weighs about 5 ounces whole, so it cooks in minutes and stays moist. The meat is all fairly dark but mild, not gamy. Most kitchens serve it semi-boneless, with the rib cage out and the leg and wing bones left in.',
+		gist: "Small game bird, often farm-raised, with delicate, flavorful meat",
+		guest: "It is a small game bird, often farm-raised, with delicate meat and a flavor a little richer than chicken. The bones and portion depend on the preparation.",
+		why: "Quail are sold in different sizes and in whole or semi-boneless forms. Farmed birds often have a gentle flavor, but age and breed matter. Check the supplied bird and recipe rather than assuming one weight, cooking time or bone arrangement.",
 		madeWith: ['quail', 'often butter', 'sometimes bacon', 'sometimes pork sausage'],
 		note: 'Semi-boneless still means small bones in the legs and wings. Warn guests who expect a boneless bird.',
 		pairs: 'Grits, sausage stuffing, a honey or sorghum glaze, pepper jelly',
 		seeAlso: ['fd_0053', 'fd_0057'],
 		line: 'Grilled semi-boneless quail, cheddar grits, pepper jelly',
-		traps: [
-			{ says: 'Tiny wild-shot bird with a strong, gamy flavor and dark, livery meat', why: 'Restaurant quail is farmed and eats mild, only a little richer than chicken dark meat.' }
-		]
+		traps: [{"says":"Always wild-shot, strongly gamy and served with every bone removed","why":"Farm-raised birds are common, flavor varies, and whole or semi-boneless forms may still have bones."}]
 	},
 	{
 		id: 'fd_0053',
 		term: 'Squab',
 		level: 3,
 		packet: true,
-		gist: 'Young pigeon raised on a farm, deep red meat served rosy',
+		gist: "Young domestic pigeon with tender, rich, naturally dark meat",
 		guest: 'Squab is a young farm-raised pigeon. The meat is dark red and rich, closer to duck or even a tender steak than to chicken.',
 		why: 'Squab are raised in lofts and taken at about four weeks, before they fly, so the muscle is tender. Pigeon breast is all dark meat, full of the iron-rich protein that makes beef red, which gives a deep, slightly livery flavor. It is milder than wild game.',
 		madeWith: ['pigeon', 'often butter', 'sometimes red wine'],
-		note: 'The breast is classically served medium rare. Cooked through it turns dry and tastes of liver, so ask before it fires.',
+		note: "Confirm the kitchen's cooking specification and describe that preparation; dark or pink color alone does not establish doneness.",
 		origin: 'English word for a young pigeon, pigeonneau on French menus',
 		pairs: 'Cherries, beets, farro, a red wine or berry sauce',
 		seeAlso: ['fd_0056', 'fd_0052'],
@@ -81,9 +77,9 @@ const cards = [
 		term: 'Sweetbreads',
 		level: 3,
 		packet: true,
-		gist: 'Calf thymus or pancreas, crisp outside and creamy within',
-		guest: "They're a gland, usually the thymus of veal, and neither sweet nor bread. A mild organ meat, nothing like liver, crisp outside and soft and creamy inside.",
-		why: 'Sweetbreads are glands: the thymus in the throat of a young animal and the pancreas near the stomach. They are soaked, blanched, peeled of their membrane and pressed, then seared or fried. Little muscle means no chew, just a soft, milky richness.',
+		gist: "Thymus or pancreas used as mild, delicate organ meat",
+		guest: "Sweetbreads are mild organ meats, usually veal thymus, known for a soft, creamy texture.",
+		why: "Sweetbreads are the thymus or pancreas of young animals. Preparation may include soaking, blanching, trimming and pressing before a separate cooking stage. A crisp exterior comes from the final preparation, not from the ingredient's identity.",
 		madeWith: ['veal', 'sometimes lamb', 'often butter', 'often wheat flour', 'sometimes egg', 'sometimes milk'],
 		pairs: 'Brown butter, capers, lemon, mushrooms, a sharp gastrique',
 		recipe: 'grilled-veal-sweetbreads',

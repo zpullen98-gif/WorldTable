@@ -994,11 +994,11 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Caper",
 		c: "The Global Pantry Atlas",
-		d: "The unopened flower bud of Capparis spinosa, unpleasant raw and made edible by cure: bruising and salting bring the glucosinolate glucocapparin into contact with myrosinase, releasing volatile methyl isothiocyanate, the mustardy, faintly sulfurous note that is caper flavor. Brine adds acetic sharpness on top, salt packing does not, which is why SALT-PACKED capers taste of caper and vinegar-packed ones largely of vinegar. Buds are graded by size, NONPAREIL smallest and firmest. White specks on a salted bud are rutin crystals, a mark of quality rather than mold. CAPER BERRIES are the fruit that follows the flower, stalk attached and seedy: milder, and not a substitute. Never pickle a wild lookalike: the green fruit of caper spurge, Euphorbia lathyris, has been pickled in error for capers and is a violent purgative and skin irritant. Rinse salt-packed buds, soak, and add late, since heat blows the pungency off.",
+		d: "Unopened flower buds preserved in salt or brine. They add concentrated saltiness and a tangy bite. Caperberries are the later fruit. Caperberries are larger, seeded fruits, often served with a stalk; they are not just oversized capers. Check whether packed in salt or brine. Rinse or soak as the recipe requires and taste before adding more salt.",
 		season: [],
 		choose: "Salt-packed, small, and firm: a nonpareil should feel dry and gritty in the hand and snap between the teeth after soaking. Reject soft khaki buds and jars whose brine has clouded or smells yeasty.",
 		store: "Salt-packed keep a year or more in a cool cupboard, refrigerated once opened and buried in their salt. Brined keep a few months under liquid in the refrigerator; buds above the line brown and turn slimy.",
-		prep: "Rinse salt-packed capers in several changes of water, soak 10 to 15 minutes, then taste one before committing. Pat dry if they are going into hot fat or they will spit. Chop only for a sauce.",
+		prep: "Check whether packed in salt or brine. Rinse or soak as the recipe requires and taste before adding more salt.",
 		methods: ["sauteing", "frying", "braising", "roasting", "simmering"]
 	},
 	{
@@ -1624,11 +1624,11 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Chives",
 		c: "The Herb & Chile Atlas",
-		d: "A true allium, and the mildest of them: cut the hollow leaf and alliinase meets its sulfur precursors and builds thiosulfinates in seconds, the same reaction that gives a raw onion its bite, but from a far smaller store, so the result is onion perfume instead of onion punch. Those thiosulfinates are volatile and fall apart with heat into dull sulfides, which is why cooked chives taste of nothing much and slump into green threads. They go on at the end: potatoes, eggs, sour cream, a finished soup. GARLIC CHIVES (nira, or Chinese chives) are a different species with a flat solid leaf and a real garlic note, and those do hold their own in a hot wok. The purple flower heads are edible and sharper than the leaves: pull them into florets, discard the wiry stalk, and use fewer than you think. Snip chives with scissors, since a blade crushes the tube flat and wrings it out onto the board.",
+		d: "Fine green allium leaves used as an herb, with a mild onion flavor. The flowers are edible too. Garlic chives have flatter leaves and a more garlic-like flavor. Wash and dry; cut cleanly with a sharp knife or scissors. Sprinkle on shortly before serving. At the table: Chives add a delicate, fresh onion note. Use the actual menu preparation when explaining the finished dish.",
 		season: [4, 5, 6, 7, 8, 9, 10],
 		choose: "Stiff upright uniformly green tubes that snap rather than fold, smelling cleanly of onion. Reject yellow or translucent strands, flattened bunches, and any wet patch under the band, which spreads through the bundle.",
 		store: "Dry, loosely wrapped in paper inside a box at 4 C (39 F): about a week, and moisture is the only real enemy. Cut chives hold almost nothing, so snip what the plate needs and no more.",
-		prep: "Hold a small bundle taut and cut straight down with sharp scissors into even lengths; dragging a dull knife squeezes them empty. Do not wash unless you have to, and dry them completely before cutting.",
+		prep: "Wash and dry; cut cleanly with a sharp knife or scissors. Sprinkle on shortly before serving.",
 		methods: ["raw", "garnishing", "infusing", "stir-frying", "blending"]
 	},
 	{
@@ -1974,11 +1974,11 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Arugula",
 		c: "The Vegetable Atlas",
-		d: "A brassica, not a lettuce, and that is the whole flavor: chewing ruptures cells and lets MYROSINASE meet the GLUCOSINOLATES, generating isothiocyanates in seconds, the same reaction that sharpens mustard and horseradish. Pungency climbs with heat, drought and age, so summer-stressed or bolting plants bite hard while cool-grown spring leaf tastes green and nutty. Salad arugula is ERUCA SATIVA, broad and moderate; WILD or SYLVETTA rocket is another plant, DIPLOTAXIS TENUIFOLIA, narrow-lobed and twice as hot; baby leaf is mildest. The glucosinolates are water-soluble, so soaking leaches them; the isothiocyanates are volatile, so leaves cut early go flat. Heat denatures the enzyme near 70 C, so arugula on a hot pizza wilts sweet. Dress it whole, at the last second, with fat and acid.",
+		d: "A leafy mustard-family green, also called rocket, with a peppery, sometimes nutty bite. Young leaves are often milder; variety and growing conditions affect strength. Lettuce is usually milder; watercress is another peppery green, not the same plant. Choose lively leaves; wash and dry before dressing. Use raw or add near the end of cooking.",
 		season: [4, 5, 6, 9, 10],
 		choose: "Leaves stiff and dark with dry stems, smelling sharply of mustard when you crush one. Reject yellowing, wet clumped leaves at the bottom of the box, and long thick stalks carrying flower buds, which are fibrous.",
 		store: "Refrigerate at 0 to 2 C (32 to 36 F) in a vented box with a dry towel, 3 to 5 days. Trapped moisture turns it to slime overnight; only pea shoots fail faster.",
-		prep: "Wash once in cold water and dry gently but completely, since bruised leaves darken and go bitter. Leave the leaves whole, pull off any stem thicker than a matchstick, and add it off the heat if it is going into something hot.",
+		prep: "Choose lively leaves; wash and dry before dressing. Use raw or add near the end of cooking.",
 		methods: ["raw", "wilt", "saute", "puree", "grill"]
 	},
 	{
@@ -2014,21 +2014,21 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Beet",
 		c: "The Vegetable Atlas",
-		d: "Beta vulgaris, the same species as sugar beet and chard. The color is not anthocyanin but BETALAIN, a nitrogen-bearing pigment in two families: red-violet betacyanin and yellow betaxanthin. Betalains are water-soluble and escape through the smallest cut, so a peeled, chopped beet boils out pale while the water goes crimson. They degrade under sustained heat and above about pH 6, sliding toward brown. Sugar runs 6 to 8 percent, among the highest in any vegetable, which is why beets roast to near-candy. In some eaters the pigment passes through and reddens urine and stool, which is harmless. The earthy note is GEOSMIN; acid breaks it down to something odorless, the real reason beets with vinegar, with goat cheese, with citrus all work. Roast them whole in their skins, covered, then slip the skins off while warm.",
+		d: "A sweet, earthy root vegetable with edible greens. Red, golden and striped varieties differ in color; color alone does not establish sweetness. Beet is grown mainly for its root; chard is grown for leaves and stalks. Choose firm roots. Wash well; cook until tender or shave thinly. Red beet juice can stain adjoining ingredients.",
 		season: [6, 7, 8, 9, 10],
 		choose: "Small to medium, 5-8 cm (2-3 in), heavy for their size, with taut unwrinkled skin and a short intact tail. Lively tops are a freshness tell and good eating, though they match spinach for oxalate, which matters to anyone who forms kidney stones. Reject soft shoulders and anything bigger than a fist, which runs woody.",
 		store: "Cut the tops back to 2 cm (1 in) so they stop drawing moisture. Refrigerate the roots unwashed in a bag for two to three weeks and the greens separately for three days. Cooked beets hold five days.",
-		prep: "Cook whole and unpeeled to keep the color in, then rub the skins away in a towel. If you must cut them raw, use a board you do not mind staining and acidulate the water. Gloves save your hands; lemon juice lifts the stain.",
+		prep: "Choose firm roots. Wash well; cook until tender or shave thinly. Red beet juice can stain adjoining ingredients.",
 		methods: ["roast", "boil", "pickle", "raw", "braise", "grill"]
 	},
 	{
 		t: "Belgian Endive",
 		c: "The Vegetable Atlas",
-		d: "WITLOOF, the forced chicory: the root is grown in a field through summer, lifted, then regrown in complete darkness for about three weeks, which is why the chicon is ivory and tight. With no light there is no chlorophyll and far less of the bitterness the green plant would build, leaving a crisp, faintly bitter leaf with a hollow snap and a bullet-shaped structure nothing else offers. Light undoes that work: a head left out under bright light greens at the tips within hours and turns genuinely bitter, which is why growers ship it wrapped in blue paper. The solid cone of core at the base is the sharpest part of all. Whole leaves make the best edible spoon in the kitchen, and halves braised cut side down in butter with a pinch of sugar go silky and faintly caramel. Keep it wrapped and dark until you use it.",
+		d: "A compact chicory shoot grown without light, producing pale, crisp leaves with a gentle bitterness. This is the forced shoot of chicory, distinct from curly endive, also called frisée, and broad-leaved escarole. In service, name the type actually on the plate rather than treating every use of endive as the same vegetable. Keep cool and protected from light. Separate leaves for salads or halve the head for cooking.",
 		season: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-		choose: "Tight torpedo shapes, ivory with pale yellow tips and no green, firm and heavy in the hand. Reject greening tips, splayed or opening leaves, brown flecks, and soft butts.",
-		store: "Refrigerate wrapped in paper inside a bag, in the dark, at 2 to 4 C (36 to 39 F), 1 to 2 weeks. Light, not age, is what makes stored endive bitter.",
-		prep: "Trim a sliver off the butt and pull the leaves away whole, or halve lengthwise and cut out the solid cone of core. Cut surfaces brown quickly, so acidulate with lemon or cut to order.",
+		choose: "Choose firm, compact heads with fresh-looking leaves. Avoid soft or damaged heads.",
+		store: "Refrigerate and protect from light; use while the leaves are crisp and sound.",
+		prep: "Keep cool and protected from light. Separate leaves for salads or halve the head for cooking.",
 		methods: ["raw", "braise", "grill", "roast", "saute", "gratin"]
 	},
 	{
@@ -2094,21 +2094,21 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Broccolini",
 		c: "The Vegetable Atlas",
-		d: "Not baby broccoli: a deliberate 1993 cross of broccoli with gai lan, bred in Japan and sold as Aspabroc, small loose head from one parent, long sweet stem from the other. The point of it is that the stem is the vegetable, tender the whole way down, no peeling and no woody core, so the whole spear cooks in one piece in one timing. It is milder and sweeter than broccoli, with a faint mustard edge from the gai lan side. Its enemy is timing: heat frees the plant's acids, they strip magnesium from chlorophyll, and green turns to khaki pheophytin, which nothing brings back. Cook it fast, uncovered, acid only at the end. Sear it dry in a hot pan or on a grill, two to three minutes, until the stems are marked and still snap, then off the heat with lemon, chili, and salt.",
+		d: "A long-stemmed green vegetable with small broccoli-like florets. Its tender stalks, leaves and florets are eaten together. It is not simply an immature head of standard broccoli; broccoli rabe is a different, more bitter vegetable. Wash, trim dry ends and judge the actual stems. Split thick stems if needed; roast, grill or sauté until the stem is tender.",
 		season: [10, 11, 12, 1, 2],
 		choose: "Stems firm enough to snap rather than bend, heads tightly closed and deep green. Reject open yellow flowers, cut ends gone hollow and dry, or limp stems that curl over in the hand.",
 		store: "Perforated bag in the crisper, 4 to 5 days; it is more perishable than broccoli. Standing the cut ends in a centimeter of water keeps the stems turgid if you must hold it an extra day.",
-		prep: "Trim 1 cm off the dry ends and cook it whole. Only the thickest stems need splitting lengthwise so they finish alongside the leaves; nothing on this plant needs peeling.",
+		prep: "Wash, trim dry ends and judge the actual stems. Split thick stems if needed; roast, grill or sauté until the stem is tender.",
 		methods: ["grill", "saute", "roast", "blanch", "stir-fry", "steam"]
 	},
 	{
 		t: "Brussels Sprouts",
 		c: "The Vegetable Atlas",
-		d: "Axillary buds: each sprout is a miniature cabbage head formed in a leaf axil along a thick stalk, which is why they arrive by the dozen and why the ones lowest on the stalk are the biggest and the oldest. Frost is a real event for them, cold driving the plant to pile up sucrose and glucose as antifreeze, so the same field tastes sweeter in December than it did in October. The bitterness people remember is sinigrin and progoitrin, bred sharply down since the 1990s; what remains is beaten not by longer boiling but by browning. Halve them, lay the cut face down in a hot pan with fat, and leave them alone until that face is properly dark: Maillard against the sprout's own sugars. Boiled whole they go gray and sulfurous instead. Shred the small raw ones for slaw with lemon and hard cheese.",
+		d: "Small, compact leafy buds that grow along a stalk in the cabbage family. They have a cabbage-like flavor and can be steamed, sautéed or roasted. They are not miniature harvested cabbages; each is a side bud on a larger plant. Select firm heads of similar size. Remove damaged outer leaves and halve larger sprouts for more even cooking.",
 		season: [10, 11, 12, 1, 2],
 		choose: "Tight, hard, bright green spheres that feel like golf balls, ideally still on the stalk. Reject yellowing outer leaves, a puffy loose head, or a blackened cut base, which all mean age.",
 		store: "On the stalk in the cold, 2 weeks; loose in a perforated bag, 5 to 7 days. They yellow and turn sulfurous fastest at room temperature, so buy them cold and keep them cold.",
-		prep: "Trim a thin slice off the dry base and pull only the loose or blemished outer leaves; cutting a cross in the base is folklore that just floods them with water. Halve through the stem so the leaves stay attached.",
+		prep: "Select firm heads of similar size. Remove damaged outer leaves and halve larger sprouts for more even cooking.",
 		methods: ["roast", "saute", "fry", "braise", "grill", "steam"]
 	},
 	{
@@ -2184,11 +2184,11 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Celeriac",
 		c: "The Vegetable Atlas",
-		d: "The swollen stem base of a celery cultivar grown for the root rather than the stalk, and the most underused vegetable in a Western kitchen. It tastes of celery crossed with hazelnut and parsley, and it is DENSE AND LOW IN STARCH, which is the whole point: it purees to silk and cannot turn gluey the way potato does when ruptured starch granules meet a blade. That same low starch is why a celeriac puree takes cream and butter without sliding into wallpaper paste, and why it holds a clean edge under a roast instead of collapsing. Cut surfaces brown within minutes through polyphenol oxidase, the same enzyme that darkens a cut apple, so peeled pieces go straight into acidulated water. Rule of the house: reach for it wherever you want potato's body without potato's starch.",
+		d: "Also called celeriac: a knobbly celery variety grown for its swollen base. The pale interior tastes gently of celery, with a nutty quality. It is not a potato, and ordinary stalk celery will not give the same body in a purée. Scrub, peel away the rough exterior and cut evenly. Use shaved in slaw, cooked in soup or puréed. At the table: Celery root gives a mellow celery flavor and a smooth texture when puréed.",
 		season: [9, 10, 11, 12, 1, 2],
 		choose: "Heavy for its size and firm everywhere, with no give at the crown where the stalks were cut. Smaller is better: much above 800g the center is often hollow, woody or both, and you pay for weight you will cut away.",
 		store: "Unwrapped in a bag in the cold, where it keeps for weeks; it is a storage root and behaves like one. Once cut, wrap the remainder tight, because the open face dries and browns faster than it rots.",
-		prep: "Cut a flat foot so it stands, then take the skin down in strips with a knife. A peeler cannot clear the matted root hairs and you will fight it for ten minutes and still leave grit. Hold cut pieces in acidulated water.",
+		prep: "Scrub, peel away the rough exterior and cut evenly. Use shaved in slaw, cooked in soup or puréed.",
 		methods: ["puree", "roast", "remoulade", "gratin", "soup", "braise"]
 	},
 	{
@@ -2224,21 +2224,21 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Cipollini Onion",
 		c: "The Vegetable Atlas",
-		d: "A flat disc of an Italian onion, 25 to 60 mm across, and the shape is the point: the distance from skin to center is tiny, so it cooks through in the time the outside takes to brown. Sugar runs higher than a yellow onion and the flesh is dense, which is why cipollini is the onion that glazes rather than dissolves. Leave the root plate intact and the layers stay welded into one piece through 40 minutes in a pot roast; caramelize them in butter with vinegar and honey and you have AGRODOLCE, the sweet-sour treatment that suits their sugar. The skin is thinner and clings harder than a storage onion, which is the one annoyance, since peeling raw tears the flesh open. Boil 60 seconds, shock in ice, and the skins slip off in a squeeze. Buy them graded to one size or half the pan burns.",
+		d: "Small, flattened onions that can become sweet when cooked. Their broad, shallow shape suits whole roasting and glazing. Pearl onions are small and rounded; cipollini are flatter and are not automatically interchangeable at the same cooking time. Choose firm bulbs of similar size. Peel and trim while leaving enough base to hold the layers together.",
 		season: [9, 10, 11],
 		choose: "Flat, dense and firm, 25 to 60 mm across, skin dry and still attached, root plate dry. Insist on one size per bag so they cook evenly. Reject sprouted necks, mold at the root, and any that feel light or hollow.",
 		store: "Cool, dark and airy in a single layer, six to eight weeks: better than a sweet onion, worse than a yellow. Anything damper than a cellar and the thin skins mold at the root plate first, so pick through the box weekly.",
-		prep: "Never peel them raw. Blanch, shock, trim the stem, then pinch and the skin slides. Shave the root plate flat but do not cut it off, or the onion falls apart into loose rings the moment it hits the pan.",
+		prep: "Choose firm bulbs of similar size. Peel and trim while leaving enough base to hold the layers together.",
 		methods: ["braising", "glazing", "roasting", "grilling", "caramelizing", "pickling"]
 	},
 	{
 		t: "Collard Greens",
 		c: "The Vegetable Atlas",
-		d: "The same species as cabbage that never learned to make a head: broad flat paddle leaves on long stems, the most heat-tolerant and the toughest of the family. Toughness is the point. Those cell walls and thick midribs survive the hour-long simmer with pork, onion, and vinegar that defines them in the American South, and the cooking liquid, potlikker, holds the water-soluble vitamins and the sweetness pulled out of the leaf, which is why it gets served rather than poured away. Put the acid in at the end and not the start: vinegar early slows the cell walls from softening and the leaves stay stubborn. Blanched whole, they are also the family's best wrapper, flexible enough not to crack. Simmer until the leaf is fully limp and dark, then finish with vinegar off the heat.",
+		d: "Large, sturdy leaves in the cabbage family. Mature leaves suit slow cooking; young leaves can be cooked more quickly. Potlikker is the cooking liquid; collards themselves do not necessarily contain pork. Wash thoroughly to remove grit and trim tough ribs. Confirm the stock and seasoning before describing the dish as vegetarian.",
 		season: [10, 11, 12, 1, 2],
 		choose: "Deep green unblemished leaves with no yellowing, on stems that snap rather than bend. Smaller leaves are more tender. Reject dry brittle edges, heavy insect holes, or any leaf gone limp.",
 		store: "Unwashed in a perforated bag in the crisper, 5 to 7 days. Grit hides at the base of the midrib, so wash at service in a full sink of water, lifting the leaves up out of the sand.",
-		prep: "Wash whole first, lifting the leaves clear of the sand. Fold each along the rib, cut the rib out, stack, roll, and cut across into ribbons. Save the ribs and start them 10 minutes early.",
+		prep: "Wash thoroughly to remove grit and trim tough ribs. Confirm the stock and seasoning before describing the dish as vegetarian.",
 		methods: ["braise", "simmer", "saute", "steam", "blanch"]
 	},
 	{
@@ -2334,11 +2334,11 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Fennel Bulb",
 		c: "The Vegetable Atlas",
-		d: "Not a root but a swollen cluster of overlapping leaf bases, which is why it layers like an onion and shreds like celery. The anise scent is anethole, the same molecule in star anise and pastis, held in oil ducts that rupture at the knife, so fennel is loudest the second you cut it and quieter every minute after. Heat is the switch. Raw it is crunchy, cold, and aggressively licorice; braised, the anethole steams away and the flesh turns mild and sweet with no browning at all, while dry roasting also browns surface sugars and amino acids into something nutty that people do not recognize as fennel. Florence fennel, finocchio, is the bulbing kind; wild herb fennel gives fronds, pollen, and seed but never a bulb. Buy wild fennel, do not gather it: poison hemlock carries the same feathery leaf and white umbel and is lethal, and it is told apart by smooth purple blotched stems and a rank smell, never anise. Use all of it: the bulb for the dish, the stalks for stock and as a grilling bed, the fronds as an herb, the pollen as a finishing spice. Shave it paper thin for salads, or cut fat wedges through the core so they hold while they brown.",
+		d: "Florence fennel has overlapping swollen leaf bases with a sweet anise-like flavor. It is crisp raw and softens when cooked; the fronds are also useful. Florence fennel is grown for its swollen base; herb fennel is grown mainly for its leaves and seeds. An anise-like aroma does not make it anise or licorice root. Use purchased culinary fennel; this description is not a wild-plant identification guide. Trim dry or tough outer parts. Shave for salad or cut wedges through the base for roasting.",
 		season: [10, 11, 12, 1, 2, 3],
-		choose: "Squat, white, tightly packed bulbs with no splitting between the layers and fronds still attached, which is the real freshness tell. Reject flattened, yellowing, or dried bulbs and any with a woody brown base.",
-		store: "Refrigerate whole in the crisper up to a week, but cut the fronds off and bag them separately since they wilt within a day. Cut surfaces brown and lose aroma fast, so slice to order.",
-		prep: "Trim the stalks, shave the dry base, halve through the root. Leave the core in for wedges that must hold their shape; cut it out for shaving on a mandoline into ice water, which curls and crisps the slices.",
+		choose: "Choose firm, compact bulbs with sound outer layers. Fresh fronds are useful when included.",
+		store: "Refrigerate. Keep the delicate fronds protected and use while fresh; check the bulb before preparation.",
+		prep: "Trim dry or tough outer parts. Shave for salad or cut wedges through the base for roasting.",
 		methods: ["roasting", "braising", "grilling", "sauteing", "steaming", "raw"]
 	},
 	{
@@ -2354,11 +2354,11 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Frisee",
 		c: "The Vegetable Atlas",
-		d: "Curly endive, CICHORIUM ENDIVIA var. crispum, not the C. INTYBUS of Belgian endive and radicchio. Coarse green heads sold as chicory are the same species grown unblanched; frisee is blanched, its HEART pale and mild because the grower tied or covered the head to shut light out, halting chlorophyll and suppressing the SESQUITERPENE LACTONES, lactucin and lactucopicrin, that carry the bitterness. Only the blanched heart is salad; the green skirt braises, and pricing a head means pricing that pale center. Architecture matters as much as taste: those fine wiry leaves trap a warm dressing instead of shedding it and stay crisp under hot bacon fat long enough to be eaten, which is the logic of a lyonnaise salad. Buy for the heart, tear rather than chop, and give it fat, egg yolk, vinegar and salt: bitterness needs all four.",
+		d: "Curly endive with fine, frilled leaves. The pale inner leaves are often milder than the green outer leaves. Different from torpedo-shaped Belgian endive. Light-exclusion blanching during growing is different from dipping food in boiling water. Wash and dry well. Use tender leaves raw; tougher outer leaves can be cooked or trimmed according to the dish.",
 		season: [9, 10, 11, 12],
 		choose: "A broad head with a large creamy white to pale yellow heart and no green creeping toward the center. Reject dark heads with a tiny pale core, dry brown leaf tips, and sliminess at the base.",
 		store: "Refrigerate whole and unwashed in a bag at 1 to 4 C (34 to 39 F), 5 to 7 days. Light greens the heart back up in storage and brings the bitterness with it, so keep it bagged and dark.",
-		prep: "Halve the head, cut out the solid core, and tear the pale leaves into bite pieces, saving the dark skirt for braising. Wash and dry completely: warm dressing beads up and runs straight off a wet leaf.",
+		prep: "Wash and dry well. Use tender leaves raw; tougher outer leaves can be cooked or trimmed according to the dish.",
 		methods: ["raw", "wilt", "braise", "saute", "grill"]
 	},
 	{
@@ -2604,11 +2604,11 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Parsnip",
 		c: "The Vegetable Atlas",
-		d: "A carrot relative that trades carotene for starch and a resinous, almost clove-like aroma built from terpenes. It needs frost to be worth eating: at temperatures near 0C (32F) the root breaks stored starch down into sucrose and fructose to protect its cells, which is why a September parsnip tastes like raw potato and a December one tastes like candy. That sugar load browns hard and early, so parsnips scorch at heat that merely colors a carrot. The core lignifies with size into a fibrous column. Note the sap: parsnip leaves and skin carry furanocoumarins that raise a burning rash on skin later exposed to sunlight, so wear gloves when peeling a crate of them. Roast at 200C (400F) until the edges are mahogany and collapsing.",
+		d: "Pale roots related to carrots, with a sweet, earthy flavor. Cold growing conditions can increase sweetness, but frost is not a requirement for eating them. A parsnip is not a white carrot; it has its own more aromatic flavor. Choose firm roots; scrub or peel and inspect a large root for a woody core. Roast, simmer or mash until tender.",
 		season: [11, 12, 1, 2, 3],
 		choose: "Ivory to pale tan, firm, and no thicker than 5 cm (2 in) at the shoulder; big ones hide a woody core. Reject any that flexes, any with brown soft patches at the crown, and any furred with gray storage mold.",
 		store: "Refrigerate unwashed in a perforated bag for two to four weeks; the damp stops them going rubbery, and cold near 0C (32F) goes on turning starch to sugar, so they improve in storage. Trim any greens off at once. Blanched, they freeze well; peeled ones hold a day in water, trading a little aroma for it.",
-		prep: "Peel, halve or quarter lengthwise, and cut the core out of anything wrist-thick. The cut faces oxidize gray-brown, so hold them in acidulated water. Glove up for volume work: the sap burns skin in sunlight.",
+		prep: "Choose firm roots; scrub or peel and inspect a large root for a woody core. Roast, simmer or mash until tender.",
 		methods: ["roast", "puree", "braise", "fry", "steam", "glaze"]
 	},
 	{
@@ -2684,11 +2684,11 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Radicchio",
 		c: "The Vegetable Atlas",
-		d: "Red chicory, the round CHIOGGIA head the one most markets sell: burgundy leaves veined white, colored by ANTHOCYANINS that intensify with cold nights and turn blue-gray in anything alkaline. Bitterness comes from sesquiterpene lactones, mainly lactucin and lactucopicrin. Season matters: chicory banks INULIN, not starch, and cold hydrolyzes that fructan to sugar, so autumn and winter heads are balanced while summer heads are punishing. Three things tame it, as the Veneto worked out: fat, salt and heat. Grilled or roasted, the cut face caramelizes and the leaves go sweet and smoky; soaked in ice water for 20 minutes, raw wedges shed their harshest edge. CASTELFRANCO is the pale speckled loose head, milder and best raw. Cook it hard or dress it hard, with anchovy, vinegar, cheese or pork fat; nothing about radicchio rewards timidity.",
+		d: "A leafy chicory, often burgundy and white, valued for its bitterness. Varieties can form round or elongated heads. It can resemble red cabbage but belongs to the chicory group. Dress raw leaves or grill wedges. Taste the batch and balance its bitterness with the rest of the dish. At the table: Radicchio gives a crisp, pleasantly bitter counterpoint.",
 		season: [10, 11, 12, 1, 2],
 		choose: "A firm head that feels heavy and dense for its size, leaves tight and glossy with crisp white ribs. Reject soft or spongy heads, brown edges on the outer leaves, and a dry split core.",
 		store: "Refrigerate whole and unwashed at 1 to 4 C (34 to 39 F), 2 to 3 weeks; it is the longest-keeping leaf in this chapter. Cut faces oxidize brown, so keep heads whole until service.",
-		prep: "Peel off bruised outer leaves and quarter through the core so the wedges hold together. Soak raw wedges in ice water to mellow them. Use a sharp stainless knife, since carbon steel blackens the cut ribs.",
+		prep: "Dress raw leaves or grill wedges. Taste the batch and balance its bitterness with the rest of the dish.",
 		methods: ["grill", "roast", "raw", "braise", "saute", "char"]
 	},
 	{
@@ -2704,11 +2704,11 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Ramps",
 		c: "The Vegetable Atlas",
-		d: "Allium tricoccum, a wild woodland allium of eastern North America, and the only member of this family whose entry has to talk about supply. A ramp takes five to seven years from seed to a bulb worth pulling: the seed roots over one warm summer and leafs only after the winter that follows, and the plant photosynthesizes for only a few weeks each spring before the tree canopy closes over it. Dig the bulb and you have removed a decade. A patch harvested whole does not come back, commercial sale is banned in Quebec, and harvest is regulated elsewhere. Cut one leaf from a clump and the plant lives. The flavor is why people push it anyway: pungent, sitting between garlic and onion, with a sweetness in the broad leaf that neither has. The window is three to four weeks. Griddle whole plants in a dry pan, or chop the leaves into butter and freeze it.",
+		d: "A North American woodland allium with broad spring leaves and a strong onion-garlic aroma. Leaves and bulbs can be used in cooking. Ramps are not ordinary leeks or scallions. Their brief season and slow growth make sourcing important. Buy from a responsible, identified supplier. Leaves can season butter or sauces; bulbs and stems can be cooked or pickled.",
 		season: [4, 5],
 		choose: "Two broad glossy leaves on a burgundy stalk, bulb firm and white, roots intact. Crush a leaf and smell it: ramps reek of garlic. Lily of the valley and false hellebore come up in the same woods, look close enough to fool people, smell of nothing and are poisonous. Reject any leaf with no allium smell, and any that is wilted, yellowed or torn. Ask whether leaves were cut rather than bulbs dug.",
 		store: "Refrigerate in the crisper in a barely damp cloth inside an open bag, five days at the outside, well away from butter and milk. Ramp butter or ramp salt made the day they arrive is how to hold the season past a week.",
-		prep: "Rinse the bulbs hard, since they carry woodland grit and a slippery outer skin that pulls off with a thumbnail. Separate leaf from bulb and cook them apart: the bulb needs three minutes, the leaf about twenty seconds.",
+		prep: "Buy from a responsible, identified supplier. Leaves can season butter or sauces; bulbs and stems can be cooked or pickled.",
 		methods: ["grilling", "charring", "sweating", "roasting", "pickling"]
 	},
 	{
@@ -2734,11 +2734,11 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Rhubarb",
 		c: "The Vegetable Atlas",
-		d: "A vegetable that eats like a fruit: the petiole of a giant sorrel relative, sour with malic and oxalic acid and almost devoid of sugar, which is why every recipe for it adds some. THE LEAVES ARE NOT FOOD. The blades carry oxalic acid at levels high enough to cause serious poisoning, along with anthraquinone glycosides; cut them off at the market and compost them, and never let them near a stockpot, an infusion, or a salad. The stalk is the safe part and the part you want. FORCED rhubarb, grown in dark sheds and harvested by candlelight in winter, is pink, slender, tender, and mild; FIELD rhubarb in late spring is greener, stringier, and far more sour. Color is variety, not ripeness, so a green stalk can be perfectly ripe. Pectin is low, so rhubarb collapses into threads rather than setting: cook it briefly with sugar, or bake the pieces spread on a tray so they hold their shape.",
+		d: "A vegetable used for its tart leaf stalks, often in fruit-style dishes. Stalks may be green or red; the leaves are not eaten. It looks like colored celery but is unrelated and tastes sharply tart. Use the stalks only. Wash, trim and cook to the desired texture; balance sweetness to the actual recipe and batch. At the table: Rhubarb adds a bright tartness, especially in a compote or dessert.",
 		season: [1, 2, 3, 4, 5, 6],
 		choose: "Firm, glossy stalks that snap crisply and feel heavy for their size: forced run 1 to 2cm across, field 2 to 3cm, and thicker than that is usually pithy. Reject limp or split stalks, and get the leaves off before you carry it home.",
 		store: "Leaves off, refrigerated in a bag up to a week; stalks go limp as they lose water. It freezes well raw in cut lengths and goes into the pot straight from the freezer, no softening first.",
-		prep: "Wash, trim both ends, cut into 3cm lengths. Peeling is unnecessary except on thick, stringy field stalks late in the season. The leaves are not an ingredient in any preparation, cooked or raw.",
+		prep: "Use the stalks only. Wash, trim and cook to the desired texture; balance sweetness to the actual recipe and batch.",
 		methods: ["baking", "stewing", "roasting", "poaching", "pickling"]
 	},
 	{
@@ -2794,11 +2794,11 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Salsify",
 		c: "The Vegetable Atlas",
-		d: "The taproot of a purple goatsbeard, called oyster plant for a faint shellfish note in the cooked flesh. Its storage carbohydrate is INULIN rather than starch, so it never turns floury: it cooks to a dense, silky, faintly sweet firmness and thickens nothing around it. Inulin also brings the same digestive complaint that follows sunchokes, in smaller measure. The white flesh browns fast and hard once cut, driven by polyphenol oxidase, and the root weeps a sticky white latex that glues itself to a peeler and to your hands. Black salsify, SCORZONERA, is a different plant with the same behavior under a tougher dark skin. Peel under running water into lemon water, then simmer in a blanc of water, flour, and lemon juice to hold it ivory.",
+		d: "A long pale root, sometimes called oyster plant for its delicate savory flavor. Black salsify is a related but different plant. The nickname does not mean it contains oyster; check the full sauce and preparation separately. Scrub well; the skin can be removed after cooking or peeled beforehand as the recipe directs. Use steamed, sautéed or in soup.",
 		season: [10, 11, 12, 1, 2],
 		choose: "Straight firm roots about as thick as a thumb, sold with their soil on and the skin unbroken. Limp or heavily forked roots lose half their weight to the peeler. Reject any that feels hollow or spongy at the thick end.",
 		store: "Refrigerate unwashed and unpeeled in a bag with the soil still clinging, up to two weeks. Peeled, it browns within minutes and must sit in acidulated water. Cooked, it keeps three days held in its own liquid.",
-		prep: "Wear gloves; the latex is sticky and stains. Scrub, then peel under running water straight into lemon water. Cut even lengths and simmer in a blanc, water slackened with a spoon of flour and lemon, to keep the color.",
+		prep: "Scrub well; the skin can be removed after cooking or peeled beforehand as the recipe directs. Use steamed, sautéed or in soup.",
 		methods: ["simmer", "roast", "fry", "puree", "saute", "gratin"]
 	},
 	{
@@ -2824,21 +2824,21 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Shallot",
 		c: "The Vegetable Atlas",
-		d: "Not a small onion but a different habit of growth: Allium cepa of the Aggregatum group, dividing into clustered cloves. The name covers several things, so buy by the bulb: banana and echalion shallots are usually one long lobe, and in Britain and Australia shallot can mean a green onion. Dry matter runs higher than a bulb onion and the layers are thin, so a fine mince vanishes into a sauce instead of staying in pieces, which is why classical sauce work is built on it. It scorches easily: over the heat that browns onion in ten minutes, minced shallot goes bitter in three. Raw it is still an allium, and the fix is maceration: minced into vinegar for ten minutes, acid halts the alliinase and leaches out the pungency already made. Sweat it gently in butter, or chop it into acid and leave it alone.",
+		d: "A type of onion, often smaller and milder than common bulb onions, used finely chopped in sauces and dressings or cooked whole. Shallots are a kind of onion; they are not garlic, despite some bulbs dividing into lobes. Choose firm bulbs. Peel, cut evenly and cook a fine mince gently so it does not scorch. At the table: Shallot adds a gentle onion flavor to the sauce.",
 		season: [8, 9, 10],
 		choose: "Firm and heavy under taut coppery or rose skin, neck papery and dry. Squeeze for a solid core inside the wrapper. Reject soft shoulders, green shoots at the tip, or a bulb rattling loose in slack skin.",
 		store: "Cool, dark and airy in an open basket, one to two months, never sealed and never refrigerated whole. Humidity is the enemy: the wrapper mildews at the neck and the rot travels down into the clove within days. Shallots confited in oil are a botulism risk at room temperature: chill them, use them in four days, or freeze them.",
-		prep: "Cut the top off, peel the skin back, and separate the cloves; each keeps its own root plate to hold it steady while you mince. Keep the mince even, because ragged cuts burn at the small end before the large end colors.",
+		prep: "Choose firm bulbs. Peel, cut evenly and cook a fine mince gently so it does not scorch.",
 		methods: ["sweating", "deep-frying", "roasting", "confiting", "pickling"]
 	},
 	{
 		t: "Snap Pea",
 		c: "The Vegetable Atlas",
-		d: "A 1970s cross, not an heirloom: Pisum sativum bred from a snow pea toward the fat round pod of a shelling pea. The snow pea already lacked the parchment that lines a shelling pod; what was new is the thick sweet wall, tender at full seed size. Like sweet corn, it turns sugar to starch fast after picking, so a pod that tastes floury has spent too long in transit. A shelling pea at its peak is as sweet; here you also eat the wall. Most varieties still run a string down one or both seams, and it stays fibrous however you cook it. Cooking is barely cooking: 60 to 90 seconds in boiling salted water, or 30 seconds in a ripping hot pan finished with a splash of water. Eat them raw when they are good. If a pod needs more than two minutes to be pleasant, it is too old to rescue. Never pick pods off a flowering ornamental vine: sweet pea, Lathyrus odoratus, is a different genus and is poisonous.",
+		d: "Peas with plump, sweet, edible pods. Both the pod and the peas inside are eaten. Snow peas have flat pods and tiny peas; shelling peas are removed from a tougher pod. Choose crisp pods, remove any tough strings and serve washed raw or cook briefly to the desired tenderness. At the table: Sugar snap peas give a sweet, crisp bite.",
 		season: [4, 5, 6],
 		choose: "Plump, bright, squeaky pods that snap audibly and feel heavy for their size, with seeds visible but not straining the wall. Reject dull, flabby, or yellowing pods and any that have dried out at the stem end.",
 		store: "Refrigerate in a perforated bag up to three days and use them sooner; the sugar-to-starch loss runs on temperature, so give them the coldest shelf. Ethylene from bananas and apples yellows the pods instead.",
-		prep: "Snap the stem end backward and pull the string down the straight seam, then check the second seam on thick pods. Split them lengthwise for salads so the peas show, or leave whole for the pan.",
+		prep: "Choose crisp pods, remove any tough strings and serve washed raw or cook briefly to the desired tenderness.",
 		methods: ["blanching", "stir-frying", "sauteing", "steaming", "grilling", "raw"]
 	},
 	{
@@ -2894,11 +2894,11 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Sunchoke",
 		c: "The Vegetable Atlas",
-		d: "Neither from Jerusalem nor an artichoke: the tuber of a North American sunflower, Helianthus tuberosus, with a nutty, faintly artichoke sweetness. It stores INULIN instead of starch, a chain of fructose units that the human small intestine has no enzyme to break. Two things follow. It cooks without ever going floury, holding a dense creaminess that makes the silkiest puree of any root. And the intact inulin arrives in the colon, where gut bacteria ferment it into gas; the flatulence is real, famous, and worth warning a table about rather than pretending away. Long slow cooking and acid hydrolyze some of the inulin into fructose, which sweetens the tuber and eases the effect. Serve a small portion the first time, and cook them long and low rather than fast and hot.",
+		d: "Also called Jerusalem artichokes: edible tubers of a North American sunflower. They have a nutty, gently sweet flavor. They are not globe artichoke hearts. Do not promise a cooking technique eliminates digestive effects. Scrub the folds thoroughly. Thin skins may be left on; roast, simmer or purée as appropriate. At the table: Sunchokes are sunflower tubers with a nutty flavor and a tender texture when cooked.",
 		season: [10, 11, 12, 1, 2, 3],
 		choose: "Firm heavy knobs with tight skin and shallow rather than convoluted lobes, since every fold costs flesh at the peeler. Reject soft spots, wrinkling, sprouts, and mold in the folds. Green or purple tinges are harmless here; this is a sunflower, not a potato.",
 		store: "Refrigerate unwashed in a perforated bag for one to two weeks; they dehydrate faster than potatoes and go rubbery. Room temperature ruins them in days. Cooked puree holds four days covered.",
-		prep: "Scrub hard and leave the skin on where you can, since it is thin and tasty. Cut flesh browns fast, so drop it into lemon water. Halve and roast cut side down. Raw slices off a mandoline carry the whole undiminished inulin load, so keep them to a garnish.",
+		prep: "Scrub the folds thoroughly. Thin skins may be left on; roast, simmer or purée as appropriate.",
 		methods: ["roast", "puree", "braise", "raw", "fry", "simmer"]
 	},
 	{
@@ -2934,11 +2934,11 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Swiss Chard",
 		c: "The Vegetable Atlas",
-		d: "A beet bred for leaf and stalk instead of root, Beta vulgaris, which is why chard tastes faintly of beet and why the stems run red, gold or white: BETALAIN pigments, water-soluble and quick to bleed into anything pale. It carries the same oxalic acid as spinach, concentrated in the leaf, so the chalky tooth feel and the dairy fix apply here too. The working rule is that chard is two vegetables in one bunch. The stalk is fibrous and dense, closer to celery, and wants a 4 to 6 minute head start; the leaf collapses in ninety seconds. Cook them together and you serve raw stalk under gray leaf. RAINBOW and RUBY are the handsome ones but they bleed; FORDHOOK GIANT, white-stalked, is the workhorse. Separate stem from leaf at the board every time and start the stems in the fat first.",
+		d: "A leafy vegetable related to beet, with broad leaves and edible stalks that may be white, red or yellow. It resembles spinach in use, but its thicker stalks usually need more cooking. Wash well. Cut stalks separately and give thicker pieces a head start before adding the leaves. At the table: Chard is a hearty green with a gently earthy flavor.",
 		season: [6, 7, 8, 9, 10],
 		choose: "Stalks firm, glossy and squeaky, snapping cleanly; leaves upright with no collapsed midribs. Reject brown pitting, split stalks, and any bunch whose cut ends have dried out and gone corky.",
 		store: "Refrigerate unwashed in a bag at 0 to 2 C (32 to 36 F), 4 to 7 days; the leaves fail long before the stems. Keep it away from ethylene fruit and do not wash first: water in the crown rots the base.",
-		prep: "Fold each leaf along the rib and cut the stalk out, then slice the stalks crosswise like celery. Cut stems oxidize and dull, so cook them promptly or hold them in acidulated water. Chiffonade the leaf at the last moment.",
+		prep: "Wash well. Cut stalks separately and give thicker pieces a head start before adding the leaves.",
 		methods: ["saute", "braise", "blanch", "steam", "grill", "gratin"]
 	},
 	{
@@ -2994,11 +2994,11 @@ export const LEXICON_SUPPLEMENT = [
 	{
 		t: "Watercress",
 		c: "The Vegetable Atlas",
-		d: "A semi-aquatic brassica, NASTURTIUM OFFICINALE, grown in flowing spring water, whose hollow stems are as edible as the leaf and whose heat comes from PHENETHYL ISOTHIOCYANATE, released the moment the cells break: sharper and more sinus-directed than arugula. Heat denatures the enzyme and the isothiocyanate is volatile, so a minute in a hot pan takes the bite out and the soup tastes gentle and green. Wild cress carries two dangers. Streams below sheep or cattle pasture leave liver fluke cysts stuck to the leaf, where washing and vinegar cannot reach, so only cooking through makes it safe. And watercress grows in the same ditches as HEMLOCK WATER DROPWORT and WATER HEMLOCK, which have killed foragers, so buy cultivated. UPLAND cress (BARBAREA VERNA) is a soil crop, similar pepper, neither concern. Use the stems, ice the bunch to stiffen it, and add it to hot food last.",
+		d: "A small-leaved green with edible tender stems and a peppery flavor. Use cultivated food-grade supplies. It is not ornamental nasturtium, despite sharing part of a botanical name; do not use a short menu card as a foraging guide. Choose fresh green leaves. Wash and dry; use in salad, sandwiches, soup or a quick sauté. At the table: Watercress brings a fresh, peppery lift.",
 		season: [3, 4, 5, 10, 11],
 		choose: "Dark glossy leaves on crisp stems that snap, the bunch heavy and springy in the hand. Reject yellow leaves, blackened stem ends, a sour swampy smell, and bunches standing in warm water at the market.",
 		store: "Stand the stems in 2 cm of cold water with the leaves loosely bagged, at 1 to 4 C (34 to 39 F), 3 to 4 days, changing the water daily. Laid flat it wilts in half the time.",
-		prep: "Wash in several changes of cold water and check the crown for grit and small snails. Pinch off only the thickest woody stalks, since the fine stems carry most of the pepper. Chill hard before plating it raw.",
+		prep: "Choose fresh green leaves. Wash and dry; use in salad, sandwiches, soup or a quick sauté.",
 		methods: ["raw", "wilt", "blanch", "puree", "simmer"]
 	},
 	{

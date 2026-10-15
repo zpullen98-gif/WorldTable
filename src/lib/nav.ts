@@ -68,7 +68,8 @@ export function parentOf(ask: ParentAsk): string {
 		const deck = q.get('deck');
 		if (!deck) return '/';
 		// A run's parent is its deck screen; Due today and the misses have none.
-		if (q.get('run') === '1' && deck !== 'due' && deck !== 'misses') return `/flashcards?deck=${encodeURIComponent(deck)}`;
+		if (q.get('run') === '1' && deck !== 'due' && deck !== 'misses' && deck !== 'foundations:misses') return `/flashcards?deck=${encodeURIComponent(deck)}`;
+		if (deck.startsWith('foundations')) return '/foundations';
 		return '/flashcards';
 	}
 	if (path === '/quizzes') return q.get('quick') === '1' ? '/quizzes' : '/';
@@ -79,6 +80,13 @@ export function parentOf(ask: ParentAsk): string {
 	if (/^\/level\/[1-4]$/.test(path)) return '/';
 	if (/^\/level\/[1-4]\/read$/.test(path)) return '/library';
 	if (/^\/level\/[1-4]\/test$/.test(path)) return '/quizzes';
+	if (path === '/foundations') {
+		if (q.has('term')) {
+			q.delete('term');
+			return `/foundations${q.size ? '?' + q : ''}`;
+		}
+		return `/level/${chosen}`;
+	}
 	// Cook at home: a dish's way back is its own level page, named in the
 	// address (the dish page cannot know a slug's level before its data
 	// loads); the course overview, and an address with no level, go to the

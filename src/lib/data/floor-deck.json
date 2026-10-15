@@ -153,7 +153,7 @@
         "often stock",
         "sometimes wheat flour"
       ],
-      "notThis": "Not stewed: a stew cuts meat small and covers it in liquid. A braise keeps big pieces, half submerged.",
+      "notThis": "A stew usually uses smaller pieces in liquid; a braise often keeps larger cuts partly submerged in a covered pot.",
       "recipe": "oregon-pinot-noir-braised-short-ribs",
       "seeAlso": [
         "fd_0092",
@@ -167,22 +167,21 @@
       "term": "Brined",
       "section": "methods",
       "level": 1,
-      "gist": "Soaked in salted water before cooking to season and stay juicy",
-      "guest": "It's soaked in salt water before it's cooked, so it stays juicy and seasoned all the way through. Pork chops and turkey love it.",
-      "why": "Over hours, salt water works into the meat and loosens its proteins, so they hold on to more of their own juice in the heat. The result is juicier, evenly seasoned meat, which is why lean pork, chicken and turkey are brined most. Sugar and herbs often ride along.",
+      "gist": "Seasoned ahead with salt, wet or dry, to help retain moisture",
+      "guest": "It is seasoned ahead with salt, either in a water brine or directly on the meat, to help it stay juicy during cooking.",
+      "why": "Wet brining uses salted water; dry brining applies salt without added water. Salt changes muscle proteins so they retain moisture during cooking. Sugar and aromatics add flavor, but ordinary pre-cook brining is not a preservation process.",
       "madeWith": [
         "salt",
         "often sugar",
         "sometimes herbs"
       ],
-      "notThis": "Not pickled: a quick pickle sits in vinegar and turns sour. A meat brine only seasons, then the meat is cooked.",
+      "notThis": "A quick pickle gets sourness from vinegar. A pre-cook brine seasons with salt; curing uses a controlled preservation process.",
       "recipe": "vermont-maple-brined-pork-chops",
       "confusedWith": [
         "fd_0033",
         "fd_0030"
       ],
-      "line": "Brined pork chop, apple mostarda, braised greens",
-      "prompt": "Over hours, salt water works into the meat and loosens its proteins, so they hold on to more of their own juice in the heat. The result is juicier, evenly seasoned meat, which is why lean pork, chicken and turkey are __ most. Sugar and herbs often ride along."
+      "line": "Brined pork chop, apple mostarda, braised greens"
     },
     {
       "id": "fd_0028",
@@ -210,14 +209,14 @@
       "section": "methods",
       "level": 2,
       "gist": "Cooked slowly and fully submerged in fat at low heat",
-      "guest": "It's usually duck leg, cooked slowly in its own fat until it's meltingly tender. Then it's crisped up so the skin crackles.",
-      "why": "The meat is salted overnight, covered in fat and cooked gently for hours, well below frying heat, so it poaches rather than fries. It turns silky and pulls from the bone. Before refrigeration the fat seal kept it for months. Garlic or tomato confit is cooked the same way in oil.",
+      "guest": "It is cooked gently in fat or oil until very tender. Duck leg is a classic example, often crisped separately before serving.",
+      "why": "For meat confit, seasoning and a slow cook in fat develop tenderness; the fat need not come from that animal. Garlic and other vegetables can cook gently in oil. Historical preservation is separate from the kitchen's current cooling and storage procedure.",
       "madeWith": [
-        "duck",
-        "duck fat",
-        "salt",
-        "often garlic",
-        "often thyme"
+        "fat or oil",
+        "often duck",
+        "often salt",
+        "sometimes garlic",
+        "sometimes thyme"
       ],
       "origin": "French, from confire, to preserve",
       "notThis": "Not fried: confit fat stays far below frying heat, so the meat poaches soft. Fried food browns fast.",
@@ -234,7 +233,7 @@
         "fd_0075"
       ],
       "line": "Duck leg confit, white beans, frisée, mustard",
-      "prompt": "The meat is salted overnight, covered in fat and cooked gently for hours, well below frying heat, so it poaches rather than fries. It turns silky and pulls from the bone. Before refrigeration the fat seal kept it for months. Garlic or tomato __ is cooked the same way in oil."
+      "prompt": "For meat __, seasoning and a slow cook in fat develop tenderness; the fat need not come from that animal. Garlic and other vegetables can cook gently in oil. Historical preservation is separate from the kitchen's current cooling and storage procedure."
     },
     {
       "id": "fd_0030",
@@ -252,7 +251,7 @@
         "sometimes fish",
         "sometimes spirits"
       ],
-      "note": "Prosciutto crudo, bresaola, gravlax and lox are cured, not cooked, and are usually served raw.",
+      "note": "Some cured products are ready to serve; others need cooking. Check the exact product and the kitchen's preparation.",
       "notThis": "Not smoked: smoke adds flavor, salt does the curing. Plenty of cured meat never sees smoke.",
       "recipe": "dill-and-aquavit-cured-salmon",
       "seeAlso": [
@@ -326,9 +325,9 @@
       "term": "Grilled",
       "section": "methods",
       "level": 1,
-      "gist": "Cooked on a grate right over an open flame or glowing coals",
-      "guest": "It's cooked over an open flame, which gives it those dark grill marks and a smoky, charred edge.",
-      "why": "Heat radiates up from flame or coals, and the hot bars sear stripes where they touch. Fat and juices drip onto the fire and rise back as flavorful smoke. It is fast, high heat, so it suits steaks, fish, vegetables and anything thin enough to cook through before it burns.",
+      "gist": "Cooked over direct heat on a grill, usually on a metal grate",
+      "guest": "It is cooked over direct heat on a grill, which browns the surface. The exact smoky character depends on the kitchen's heat source.",
+      "why": "Grilling places food on an open grid over a heat source, which may use charcoal, gas or electricity. The hot grate and radiant heat brown the surface. Smoke character depends on the equipment, fuel and preparation.",
       "note": "A grilled cheese or grilled sandwich is cooked on a flat griddle, not over a flame.",
       "notThis": "Not smoked, which is slow, low heat in wood smoke, and not blackened, a spice crust seared in a skillet.",
       "recipe": "whole-grilled-fish-with-ladolemono",
@@ -350,15 +349,15 @@
       "section": "methods",
       "level": 1,
       "gist": "Kept in a sour liquid, usually vinegar, so it turns tangy and sharp",
-      "guest": "It's been soaked in tangy vinegar, so it comes out bright, sour and often a little crunchy. It's there to cut through the richer things on the plate.",
+      "guest": "It has a bright, sour flavor from vinegar or fermentation, giving a refreshing contrast to the richer parts of the dish.",
       "why": "Vegetables, fruit, eggs or fish sit in vinegar with salt and often sugar and spices. The acid seasons them all the way through, and raw vegetables keep their crunch. Quick pickles are ready in hours; fermented pickles get their sourness from bacteria over days.",
       "madeWith": [
-        "vinegar",
+        "often vinegar",
         "salt",
         "often sugar",
         "sometimes mustard seed"
       ],
-      "notThis": "Not brined: brining soaks meat in salt water before cooking, while a pickle is sour and eaten as it is.",
+      "notThis": "Quick pickles use added vinegar; fermented pickles develop acid in a salt brine. A pre-cook meat brine need not turn sour.",
       "recipe": "pickled-vegetables-for-the-plate",
       "seeAlso": [
         "fd_0279",
@@ -378,7 +377,7 @@
       "level": 1,
       "gist": "Cooked in hot liquid that never bubbles, so it stays soft and moist",
       "guest": "It's cooked gently in a flavorful liquid that never quite bubbles, so it stays tender and juicy. It's one of the gentlest ways to cook fish, eggs or chicken.",
-      "why": "The liquid, water, stock, wine, milk, butter or oil, stays below a simmer, about 71 to 82 C (160 to 180 F). Proteins firm slowly without squeezing out much juice, so fish flakes silkily and eggs set around a soft yolk. Nothing browns, so the flavor stays clean.",
+      "why": "Poaching gently cooks food in hot liquid with little movement. Water, stock, wine, milk or other suitable liquids can be used. The method gives little surface browning; the food, cooking time and kitchen specification determine the finished texture.",
       "madeWith": [
         "often stock",
         "sometimes fish stock",
@@ -387,7 +386,7 @@
         "sometimes butter",
         "sometimes olive oil"
       ],
-      "note": "A poached egg normally arrives with a runny, not fully set, yolk.",
+      "note": "Poaching describes the method, not a guaranteed center. Confirm the kitchen's finish for eggs, fish or meat.",
       "notThis": "Not boiled: boiling bubbles hard and toughens delicate food, while poaching keeps the liquid barely trembling.",
       "seeAlso": [
         "fd_0029",
@@ -406,9 +405,9 @@
       "term": "Preserved",
       "section": "methods",
       "level": 1,
-      "gist": "Made to keep for months by any of several methods, not just one",
-      "guest": "It's been made to last, with salt, sugar or vinegar, the way cooks kept summer food for winter. That also concentrates the flavor, so a little goes a long way.",
-      "why": "It is an umbrella word, not one technique. Salt, sugar and drying pull water out of food, acid slows spoilage, and time does the rest. Texture softens and taste deepens: preserved lemon rind turns silky and salty, preserved cherries turn syrupy.",
+      "gist": "Prepared by a process that extends keeping quality beyond fresh food",
+      "guest": "It has been prepared to keep longer. The method might use salt, sugar, acid, drying or another process, and that shapes its flavor.",
+      "why": "Preservation is a family of methods, including drying, freezing, fermentation, pickling, curing and canning. Different processes control spoilage differently. The word alone does not tell you how long food keeps or whether it needs refrigeration.",
       "madeWith": [
         "salt",
         "often sugar",
@@ -417,14 +416,13 @@
         "sometimes alcohol",
         "sometimes sulfites"
       ],
-      "notThis": "Not fresh: the item was made weeks or months ahead, and it tastes saltier, sweeter or sourer than the raw ingredient.",
+      "notThis": "Not one flavor or one age: a dried ingredient, a frozen ingredient and a pickle can all be preserved in different ways.",
       "seeAlso": [
         "fd_0277",
         "fd_0030",
         "fd_0033"
       ],
-      "line": "Roast chicken, preserved lemon, green olives",
-      "prompt": "It is an umbrella word, not one technique. Salt, sugar and drying pull water out of food, acid slows spoilage, and time does the rest. Texture softens and taste deepens: __ lemon rind turns silky and salty, __ cherries turn syrupy."
+      "line": "Roast chicken, preserved lemon, green olives"
     },
     {
       "id": "fd_0036",
@@ -435,21 +433,20 @@
       ],
       "section": "methods",
       "level": 1,
-      "gist": "Blended thick and completely smooth, firm enough to hold its shape",
-      "guest": "It's been blended until it's completely smooth, like a velvety spread on the plate. You get the flavor of the vegetable or fruit in a rich, silky form.",
-      "why": "Food, usually cooked soft first, is blended or pushed through a fine sieve until no fiber or lump is left, so it eats silky and dense. Kitchens often loosen it with butter, cream or stock, which is why a purée can taste richer than the vegetable. A mash keeps some texture.",
+      "gist": "Blended or passed smooth, with thickness suited to the dish",
+      "guest": "It has been blended or passed smooth for an even, velvety texture. Its thickness is suited to the dish.",
+      "why": "Food is blended or passed through a sieve to reduce pieces and fibers. The result can be a thick accompaniment or a pourable soup or sauce. Added liquid and the ingredient itself determine consistency; a mash generally retains more texture.",
       "madeWith": [
         "often butter",
         "often cream",
         "sometimes stock"
       ],
       "origin": "French purer, to strain or make pure",
-      "notThis": "Not a coulis: a coulis is a thin sauce you pour, while a purée is thick enough to hold its shape on the plate.",
+      "notThis": "A mash may keep pieces; a purée is smoother. A coulis is a sauce, often made from a strained fruit or vegetable purée.",
       "confusedWith": [
         "fd_0203"
       ],
-      "line": "Seared scallops, cauliflower purée, brown butter",
-      "prompt": "Food, usually cooked soft first, is blended or pushed through a fine sieve until no fiber or lump is left, so it eats silky and dense. Kitchens often loosen it with butter, cream or stock, which is why a __ can taste richer than the vegetable. A mash keeps some texture."
+      "line": "Seared scallops, cauliflower purée, brown butter"
     },
     {
       "id": "fd_0037",
@@ -458,12 +455,12 @@
       "level": 1,
       "gist": "Cooked by dry heat in an oven until browned outside and tender inside",
       "guest": "It's cooked in a hot oven, so the outside browns and caramelizes while the inside stays juicy. That browning is where the deep, savory flavor comes from.",
-      "why": "Hot, dry air surrounds the food on every side. The surface dries and browns, building a savory crust on meat and sweet, caramelized edges on vegetables, while the center cooks more gently. Unlike braising, no liquid goes in, and big cuts rest before carving.",
+      "why": "Roasting exposes food to dry oven heat, allowing the surface to brown while the interior cooks. Basting or some liquid in the tray does not automatically make it a braise. In a braise, covered moist cooking is the main method.",
       "madeWith": [
         "often oil",
         "sometimes butter"
       ],
-      "note": "Roast beef and lamb are usually carved pink, at medium rare, unless asked otherwise.",
+      "note": "Roasted describes the cooking method. Confirm the cut, the kitchen's finish and the guest's preference before promising a pink center.",
       "notThis": "Not pan-roasted: that starts in a skillet for the crust and finishes in the oven, usually for a single portion.",
       "seeAlso": [
         "fd_0028",
@@ -508,13 +505,13 @@
       "section": "methods",
       "level": 1,
       "gist": "Browned hard on a very hot surface to give it a dark, flavorful crust",
-      "guest": "It's cooked in a very hot pan just long enough to build a deep golden crust, so you get a caramelized outside with a tender, juicy inside.",
-      "why": "Dry food meets metal hot enough for the Maillard reaction, the browning of proteins and sugars that makes crust and roasted flavor. It takes a minute or two, so tuna or scallops can stay rare inside. It builds flavor; it does not seal in juice.",
+      "guest": "It is browned over intense heat to create a savory crust. The center may be cooked further depending on the dish.",
+      "why": "Intense heat browns a food's surface and develops a savory crust, often through the Maillard reaction. Searing may begin or finish another cooking method. Its timing varies, and the browned surface does not establish the center's doneness or seal in juices.",
       "madeWith": [
         "often oil",
         "sometimes butter"
       ],
-      "note": "Seared tuna is usually served rare, and seared scallops translucent in the center.",
+      "note": "Searing describes the surface, not the center. Confirm the kitchen's finish and the guest's request.",
       "notThis": "Not blackened: blackening coats the food in spices and chars that coating, while searing browns the food itself.",
       "recipe": "seared-digby-scallops",
       "seeAlso": [
@@ -583,12 +580,12 @@
       "say": "soo-VEED",
       "section": "methods",
       "level": 2,
-      "gist": "Sealed in a bag and held in a warm water bath at its exact doneness",
-      "guest": "It's cooked slowly in a warm water bath set to exactly the doneness we want, and meats get a sear at the end. It comes out tender and evenly cooked.",
-      "why": "The food is vacuum sealed and set in water held at the target temperature itself, well below a simmer, so it can never overshoot. A steak comes out pink from edge to edge with no gray band. It gets no crust in the bag, so kitchens sear it afterward.",
-      "note": "Steak, chops and duck come out evenly pink by design. Take any doneness request to the kitchen.",
+      "gist": "Cooked in a sealed pouch using carefully controlled time and temperature",
+      "guest": "It is cooked at a carefully controlled temperature for an even texture. The chef may finish it with a sear when the dish calls for a crust.",
+      "why": "Food in a sealed pouch cooks in a controlled water bath. The stable temperature limits overheating, but time still changes texture, so food should not be held indefinitely. A separate sear can add browning when the recipe calls for it.",
+      "note": "Follow the kitchen's specified time, temperature and finishing procedure. Sous vide does not require a pink center, and color alone does not establish doneness.",
       "origin": "French for under vacuum, a restaurant method since the 1970s",
-      "notThis": "Not poached. A poach sits in open, barely bubbling liquid; this sits sealed in a bath held at its exact doneness.",
+      "notThis": "Direct poaching puts food in the cooking liquid. This method keeps food in a sealed pouch within a controlled bath.",
       "lexiconSlug": "sous-vide",
       "seeAlso": [
         "fd_0039"
@@ -1014,8 +1011,8 @@
       "say": "ess-kar-GOH",
       "section": "meats",
       "level": 2,
-      "gist": "Land snails baked in their shells under garlic and parsley butter",
-      "guest": "They're snails, baked in a sizzling garlic and herb butter. The texture is like a tender mushroom or a clam, and the butter is the star, so save bread for it.",
+      "gist": "Edible land snails, often served with garlic and herb butter",
+      "guest": "They are edible land snails. The familiar Burgundy preparation serves them with garlic and herb butter, though recipes and presentation vary.",
       "why": "The snail is a land mollusk, a cousin of the clam, bought cleaned and precooked, usually tinned. It tastes of very little on its own, mild and earthy, so it carries the sauce: in the Burgundy classic, butter beaten with garlic, parsley and shallot.",
       "madeWith": [
         "snail",
@@ -1066,9 +1063,9 @@
       "term": "Quail",
       "section": "meats",
       "level": 2,
-      "gist": "Tiny farmed game bird, served one or two a plate, mild and juicy",
-      "guest": "It's a small bird, about a handful, tender and juicy with a flavor a little richer than chicken dark meat. The legs are meant to be picked up.",
-      "why": "Restaurant quail is farm raised and weighs about 5 ounces whole, so it cooks in minutes and stays moist. The meat is all fairly dark but mild, not gamy. Most kitchens serve it semi-boneless, with the rib cage out and the leg and wing bones left in.",
+      "gist": "Small game bird, often farm-raised, with delicate, flavorful meat",
+      "guest": "It is a small game bird, often farm-raised, with delicate meat and a flavor a little richer than chicken. The bones and portion depend on the preparation.",
+      "why": "Quail are sold in different sizes and in whole or semi-boneless forms. Farmed birds often have a gentle flavor, but age and breed matter. Check the supplied bird and recipe rather than assuming one weight, cooking time or bone arrangement.",
       "madeWith": [
         "quail",
         "often butter",
@@ -1082,14 +1079,14 @@
         "fd_0057"
       ],
       "line": "Grilled semi-boneless quail, cheddar grits, pepper jelly",
-      "prompt": "Restaurant __ is farm raised and weighs about 5 ounces whole, so it cooks in minutes and stays moist. The meat is all fairly dark but mild, not gamy. Most kitchens serve it semi-boneless, with the rib cage out and the leg and wing bones left in."
+      "prompt": "__ are sold in different sizes and in whole or semi-boneless forms. Farmed birds often have a gentle flavor, but age and breed matter. Check the supplied bird and recipe rather than assuming one weight, cooking time or bone arrangement."
     },
     {
       "id": "fd_0053",
       "term": "Squab",
       "section": "meats",
       "level": 3,
-      "gist": "Young pigeon raised on a farm, deep red meat served rosy",
+      "gist": "Young domestic pigeon with tender, rich, naturally dark meat",
       "guest": "Squab is a young farm-raised pigeon. The meat is dark red and rich, closer to duck or even a tender steak than to chicken.",
       "why": "Squab are raised in lofts and taken at about four weeks, before they fly, so the muscle is tender. Pigeon breast is all dark meat, full of the iron-rich protein that makes beef red, which gives a deep, slightly livery flavor. It is milder than wild game.",
       "madeWith": [
@@ -1097,7 +1094,7 @@
         "often butter",
         "sometimes red wine"
       ],
-      "note": "The breast is classically served medium rare. Cooked through it turns dry and tastes of liver, so ask before it fires.",
+      "note": "Confirm the kitchen's cooking specification and describe that preparation; dark or pink color alone does not establish doneness.",
       "origin": "English word for a young pigeon, pigeonneau on French menus",
       "pairs": "Cherries, beets, farro, a red wine or berry sauce",
       "seeAlso": [
@@ -1112,9 +1109,9 @@
       "term": "Sweetbreads",
       "section": "meats",
       "level": 3,
-      "gist": "Calf thymus or pancreas, crisp outside and creamy within",
-      "guest": "They're a gland, usually the thymus of veal, and neither sweet nor bread. A mild organ meat, nothing like liver, crisp outside and soft and creamy inside.",
-      "why": "Sweetbreads are glands: the thymus in the throat of a young animal and the pancreas near the stomach. They are soaked, blanched, peeled of their membrane and pressed, then seared or fried. Little muscle means no chew, just a soft, milky richness.",
+      "gist": "Thymus or pancreas used as mild, delicate organ meat",
+      "guest": "Sweetbreads are mild organ meats, usually veal thymus, known for a soft, creamy texture.",
+      "why": "Sweetbreads are the thymus or pancreas of young animals. Preparation may include soaking, blanching, trimming and pressing before a separate cooking stage. A crisp exterior comes from the final preparation, not from the ingredient's identity.",
       "madeWith": [
         "veal",
         "sometimes lamb",
@@ -1134,7 +1131,7 @@
         "fd_0364"
       ],
       "line": "Crispy veal sweetbreads, brown butter, capers, lemon",
-      "prompt": "__ are glands: the thymus in the throat of a young animal and the pancreas near the stomach. They are soaked, blanched, peeled of their membrane and pressed, then seared or fried. Little muscle means no chew, just a soft, milky richness."
+      "prompt": "__ are the thymus or pancreas of young animals. Preparation may include soaking, blanching, trimming and pressing before a separate cooking stage. A crisp exterior comes from the final preparation, not from the ingredient's identity."
     },
     {
       "id": "fd_0055",
@@ -1672,7 +1669,7 @@
         "sometimes onion"
       ],
       "pairs": "Gumbo, jambalaya, red beans and rice, shrimp and grits",
-      "notThis": "Not tasso, its smokehouse partner, a solid spiced slab of shoulder. French andouille, its ancestor, is a tripe sausage.",
+      "notThis": "Not tasso, a solid spiced piece of shoulder. French andouille is a different family of sausages, often made with tripe.",
       "lexiconSlug": "tasso-and-cajun-andouille",
       "recipe": "chicken-and-andouille-gumbo",
       "seeAlso": [
@@ -1691,19 +1688,18 @@
       "say": "chor-EE-zoh",
       "section": "cured",
       "level": 1,
-      "gist": "Paprika-red pork sausage, dry-cured in Spain and sold raw in Mexico",
-      "guest": "It's a garlicky pork sausage stained deep red. Sliced like salami it's the cured Spanish kind, and crumbled it's the fresh Mexican kind, which is spicier.",
-      "why": "Two products share one word. Spanish chorizo is chopped pork cured with pimentón, the smoked paprika that gives it color and smoke, then dried until sliceable. Mexican chorizo is raw ground pork with dried chiles and vinegar, cooked loose so its red fat stains the dish.",
+      "gist": "Seasoned sausage in fresh and cured forms, with regional differences",
+      "guest": "It is a boldly seasoned sausage, paprika-led in Spanish styles and often chile-led in Mexican styles. Heat, smoke and texture vary by product.",
+      "why": "Spanish chorizo includes dry-cured slicing sausages and fresh cooking forms, usually seasoned with paprika. Mexican versions commonly use fresh meat and chiles. Paprika is not always smoked, and neither country guarantees a particular heat level.",
       "madeWith": [
-        "pork",
-        "pork fat",
-        "smoked paprika",
-        "garlic",
+        "often pork",
+        "fat",
+        "often paprika",
+        "often garlic",
         "sometimes dried chiles",
-        "sometimes vinegar",
-        "sometimes white wine"
+        "sometimes vinegar"
       ],
-      "note": "Ask the kitchen which kind. Cured Spanish chorizo is air-dried, not cooked, and sliced as is. Fresh Mexican chorizo is always cooked.",
+      "note": "Check the exact product: fresh chorizo needs cooking, while cured slicing styles may be ready to serve. Verify smoke and heat with the kitchen.",
       "origin": "Spain and Portugal, remade in Mexico with local chiles",
       "lexiconSlug": "chorizo-spanish-vs-mexican",
       "seeAlso": [
@@ -1712,7 +1708,7 @@
         "fd_0080"
       ],
       "line": "Steamed clams, Spanish chorizo, white wine, grilled bread",
-      "prompt": "Two products share one word. Spanish __ is chopped pork cured with pimentón, the smoked paprika that gives it color and smoke, then dried until sliceable. Mexican __ is raw ground pork with dried chiles and vinegar, cooked loose so its red fat stains the dish."
+      "prompt": "Spanish __ includes dry-cured slicing sausages and fresh cooking forms, usually seasoned with paprika. Mexican versions commonly use fresh meat and chiles. Paprika is not always smoked, and neither country guarantees a particular heat level."
     },
     {
       "id": "fd_0066",
@@ -1737,7 +1733,7 @@
         "sometimes fennel"
       ],
       "note": "A dry-cured coppa is air-dried, not cooked, and is served as is in thin slices.",
-      "notThis": "Not prosciutto, which is the whole hind leg cured with salt alone. Coppa is a smaller, spiced, fattier muscle.",
+      "notThis": "Coppa comes from the neck area; prosciutto crudo comes from the hind leg. The cut and seasoning give each a different character.",
       "lexiconSlug": "coppa-capocollo",
       "seeAlso": [
         "fd_0091",
@@ -1764,7 +1760,7 @@
         "often sugar",
         "sometimes black pepper"
       ],
-      "note": "Served two ways: shaved uncooked like prosciutto, or sliced thicker and pan-fried. Ask the kitchen which.",
+      "note": "Check whether this ham is ready-to-eat or requires cooking. The product label and kitchen preparation determine how it is served.",
       "pairs": "Biscuits, red-eye gravy, grits, melon, pickles",
       "lexiconSlug": "american-country-ham",
       "recipe": "country-ham-with-redeye-gravy",
@@ -1781,8 +1777,8 @@
       "say": "gwan-CHAH-leh",
       "section": "cured",
       "level": 3,
-      "gist": "Italian cured pork jowl, unsmoked, richer and fattier than belly",
-      "guest": "It's cured pork jowl, the fatty cheek, like an unsmoked Italian bacon with richer, silkier fat. It's the classic pork in carbonara and amatriciana.",
+      "gist": "Italian cured pork jowl, rich in fat and often used in pasta",
+      "guest": "It is cured pork jowl, rich in fat and savory flavor. It is classic in carbonara and amatriciana, and most familiar styles are unsmoked.",
       "why": "The jowl is rubbed with salt, black pepper and sometimes herbs, then hung to dry for weeks. It is mostly fat with streaks of lean, and that fat is firmer and more flavorful than belly fat. In a pan it renders into crisp pieces and a savory fat that becomes the sauce.",
       "madeWith": [
         "pork",
@@ -1793,7 +1789,7 @@
         "sometimes thyme"
       ],
       "note": "Nearly always cooked: diced and rendered until crisp, not sliced for a board.",
-      "notThis": "Not pancetta, which is cured belly, leaner and milder, and not bacon, which is smoked belly. This is the jowl.",
+      "notThis": "Guanciale comes from the jowl; pancetta comes from the belly. Both have regional variations, including smoked products.",
       "lexiconSlug": "guanciale-jowl-and-lardo",
       "recipe": "guanciale",
       "seeAlso": [
@@ -1845,16 +1841,15 @@
       ],
       "section": "cured",
       "level": 4,
-      "gist": "Spanish air-dried whole pork loin, lean, rubbed with smoked paprika",
-      "guest": "It's Spanish cured pork loin, air-dried with smoked paprika and garlic. It's as lean as cured pork gets, clean, meaty and gently smoky.",
-      "why": "The whole loin, the long lean muscle along the back, is trimmed, rubbed with salt, pimentón and garlic, cased and dried for two months or more. With almost no fat it slices rosy and eats firm and meaty. From ibérico pigs it shows fine marbling and a nutty depth.",
+      "gist": "Spanish cured whole pork loin, often seasoned with paprika and garlic",
+      "guest": "Here it is Spanish cured pork loin, sliced thin. Paprika and garlic are common seasonings, but the exact recipe and marbling vary.",
+      "why": "The whole pork loin is seasoned, cased and dried as an intact cut. Paprika and garlic are common, though versions without paprika exist. Texture, marbling and seasoning depend on the pig and producer; the cut is loin, not tenderloin.",
       "madeWith": [
         "pork",
         "salt",
-        "smoked paprika",
-        "garlic",
-        "sometimes oregano",
-        "sometimes olive oil"
+        "often paprika",
+        "often garlic",
+        "sometimes oregano"
       ],
       "note": "Air-dried, not cooked, and served as is in thin slices.",
       "origin": "Spain; lomo is Spanish for loin",
@@ -1877,9 +1872,9 @@
       "say": "pan-CHEH-tah",
       "section": "cured",
       "level": 2,
-      "gist": "Italian pork belly cured with salt and spice, air-dried, not smoked",
-      "guest": "It's Italian bacon without the smoke, pork belly cured with salt, pepper and spices. It tastes cleaner and sweeter than American bacon, all pork and spice.",
-      "why": "Same cut as bacon, the belly, but salt-cured with pepper, garlic and spices such as juniper or nutmeg, then air-dried for weeks instead of smoked. It comes as a flat slab for dicing or a rolled spiral for slicing. Without smoke, the sweet pork and spice come through.",
+      "gist": "Italian cured pork belly, flat or rolled, usually unsmoked",
+      "guest": "It is Italian cured pork belly, usually unsmoked, with a rich pork-and-spice character. Smoked versions also exist.",
+      "why": "Pork belly is cured with salt and seasoning, then sold in flat or rolled forms. The familiar style is unsmoked, but pancetta affumicata is smoked. Format, seasoning and intended cooking vary, so identify the actual product.",
       "madeWith": [
         "pork",
         "salt",
@@ -1890,7 +1885,7 @@
         "sometimes fennel"
       ],
       "note": "Usually diced and cooked crisp. Thin-sliced rolled pancetta may be served uncooked, so ask the kitchen.",
-      "notThis": "Not bacon, which is smoked, and not guanciale, which is the jowl. Pancetta is unsmoked belly.",
+      "notThis": "The key cut is belly, not the jowl used for guanciale. Pancetta is usually unsmoked, but smoked versions also exist.",
       "lexiconSlug": "pancetta-tesa-and-arrotolata",
       "seeAlso": [
         "fd_0094",
@@ -1903,16 +1898,17 @@
         "fd_0074",
         "fd_0094"
       ],
-      "line": "Brussels sprouts, crisp pancetta, aged balsamic"
+      "line": "Brussels sprouts, crisp pancetta, aged balsamic",
+      "prompt": "Pork belly is cured with salt and seasoning, then sold in flat or rolled forms. The familiar style is unsmoked, but __ affumicata is smoked. Format, seasoning and intended cooking vary, so identify the actual product."
     },
     {
       "id": "fd_0072",
       "term": "Pastrami",
       "section": "cured",
       "level": 1,
-      "gist": "Brined beef, crusted in pepper and coriander, smoked, then steamed",
-      "guest": "It's beef cured like corned beef, then crusted in cracked pepper and coriander, smoked and steamed until tender. Peppery, smoky and rich.",
-      "why": "Brisket, or the fattier navel cut beside it, sits in brine for days, which seasons it through and keeps it rosy. Then a pepper and coriander rub, smoke, and a long steam that melts the tough tissue. Think corned beef with a crust and a smoky edge.",
+      "gist": "Cured, spice-coated smoked beef, cooked tender for deli service",
+      "guest": "It is cured beef with a peppery spice coating and smoke flavor, cooked until tender. The final cooking method depends on the maker.",
+      "why": "Deli pastrami commonly starts with brisket or navel, a salt cure, a spice coating and smoke. Moist cooking then develops tenderness. Some makers steam; Katz's boils its smoked meat, then holds it on a steam table before slicing.",
       "madeWith": [
         "beef",
         "salt",
@@ -1933,7 +1929,8 @@
       "confusedWith": [
         "fd_0085"
       ],
-      "line": "House pastrami, rye, whole grain mustard, pickles"
+      "line": "House pastrami, rye, whole grain mustard, pickles",
+      "prompt": "Deli __ commonly starts with brisket or navel, a salt cure, a spice coating and smoke. Moist cooking then develops tenderness. Some makers steam; Katz's boils its smoked meat, then holds it on a steam table before slicing."
     },
     {
       "id": "fd_0073",
@@ -1941,9 +1938,9 @@
       "say": "pah-TAY",
       "section": "cured",
       "level": 2,
-      "gist": "Ground meat, fat, often liver, baked, chilled, spread on toast",
-      "guest": "It's a French meat spread, usually pork and liver, baked and chilled. It can be silky or coarse, and it's rich, so a little on toast goes a long way.",
-      "why": "Meat, fat and usually some liver are ground with salt, spice and often brandy, packed into a mold and baked gently in a water bath. Chilled, it sets firm enough to slice. Liver gives the deep mineral richness, and fat makes it spread.",
+      "gist": "Seasoned meat preparation, smooth or coarse, often made with liver",
+      "guest": "It is a rich, seasoned meat preparation, smooth or coarse, often with liver. The exact meat and texture depend on the recipe.",
+      "why": "Meat and fat are ground or blended with seasoning; liver is common but not required. Country styles may bake in a terrine, while some liver versions are cooked in a pan before blending. The recipe determines the texture and cooking method.",
       "madeWith": [
         "pork",
         "liver",
@@ -1953,7 +1950,7 @@
         "often brandy",
         "sometimes pistachio"
       ],
-      "note": "Served cold. Liver versions are often left pink inside, so ask the kitchen how theirs is cooked.",
+      "note": "Confirm the meats and the kitchen's cooking procedure. Color alone is not a reliable guide to how liver has been cooked.",
       "notThis": "Not rillettes, which are shredded, and not foie gras, fattened duck or goose liver. A terrine is the same family, named for its mold.",
       "lexiconSlug": "pate-and-terrine",
       "seeAlso": [
@@ -1981,15 +1978,15 @@
       "section": "cured",
       "level": 1,
       "gist": "Italian pork leg, salted, air-dried a year or more, shaved thin",
-      "guest": "It's Italian ham, salted and air-dried for a year or more, never cooked or smoked. Sliced paper-thin, it's silky, a little sweet, and melts on your tongue.",
+      "guest": "This is prosciutto crudo, Italian dry-cured ham served in thin slices. Prosciutto cotto is a different, cooked style.",
       "why": "A whole hind leg is rubbed with sea salt, then hung in moving air for a year or longer. It slowly loses water while the meat's own enzymes build sweet, nutty flavor. Cut thin, the fat melts on contact. It is sweeter and softer than Spanish ham.",
       "madeWith": [
         "pork",
         "sea salt"
       ],
-      "note": "Served raw, as cured. Heat turns it salty and tough, so it goes on hot dishes last.",
+      "note": "This card teaches the dry-cured crudo style. Check the named product; the word prosciutto can also describe cooked ham.",
       "pairs": "Melon, figs, burrata, arugula, breadsticks",
-      "notThis": "Not speck, the same leg lightly smoked, not pancetta, cured belly for cooking, and not jamón ibérico, Spain's longer-aged ham.",
+      "notThis": "Crudo is dry-cured ham; cotto is cooked ham. Speck Alto Adige combines curing with light smoking, and pancetta comes from belly.",
       "lexiconSlug": "prosciutto-di-parma-and-san-daniele",
       "seeAlso": [
         "fd_0067",
@@ -2009,9 +2006,9 @@
       "say": "ree-YET",
       "section": "cured",
       "level": 2,
-      "gist": "Meat cooked slowly in its own fat, then shredded into a rich spread",
-      "guest": "Think pulled pork, but French and spreadable. The meat cooks for hours in its own fat until it falls apart, then it's packed in a jar and served with toast.",
-      "why": "Pork, duck or rabbit is salted and simmered very gently in fat until it collapses, then shredded, stirred with some of that fat and sealed in a jar under a fat cap. It is soft and stringy, not smooth, and it tastes milder than liver-rich pâté.",
+      "gist": "Cooked meat or fish, shredded and mixed with fat into a rich spread",
+      "guest": "It is a rich spread with a shredded texture, often made from slowly cooked pork or duck. Fish versions also exist.",
+      "why": "Traditional meat rillettes cook gently until tender, then are shredded and mixed with fat. Fish versions may combine cooked fish and butter. The defining texture is soft shreds rather than a smooth paste; the recipe determines the fat and method.",
       "madeWith": [
         "pork",
         "pork fat",
@@ -2022,7 +2019,7 @@
         "often garlic"
       ],
       "note": "Served cool, not fridge-cold, so the fat softens and spreads. The pale layer of fat on top is normal.",
-      "notThis": "Not pâté, which is ground and baked, usually with liver. Not confit, which is served whole, not shredded.",
+      "notThis": "Rillettes retain shreds; pâté is ground or blended. Rillons keep larger pieces, while confit names a cooking method.",
       "recipe": "pork-rillettes",
       "seeAlso": [
         "fd_0047",
@@ -2032,7 +2029,8 @@
         "fd_0073",
         "fd_0029"
       ],
-      "line": "Pork rillettes, grilled bread, cornichons, mustard"
+      "line": "Pork rillettes, grilled bread, cornichons, mustard",
+      "prompt": "Traditional meat __ cook gently until tender, then are shredded and mixed with fat. Fish versions may combine cooked fish and butter. The defining texture is soft shreds rather than a smooth paste; the recipe determines the fat and method."
     },
     {
       "id": "fd_0076",
@@ -2056,7 +2054,7 @@
       ],
       "note": "Served raw, as cured. Cold smoke flavors it but does not cook it.",
       "pairs": "Rye bread, pickles, horseradish, apples, mountain cheeses",
-      "notThis": "Not prosciutto, which is never smoked. In German the word just means bacon, so on an Austrian menu it may be bacon.",
+      "notThis": "Alto Adige speck combines curing with light smoke. Parma crudo is unsmoked; the word speck can mean other pork products elsewhere.",
       "lexiconSlug": "speck-alto-adige",
       "seeAlso": [
         "fd_0041",
@@ -2079,7 +2077,7 @@
       "level": 3,
       "gist": "Cajun pork shoulder, cured, crusted in cayenne and garlic, smoked",
       "guest": "It's Cajun smoked pork, rubbed with cayenne and garlic. Spicy, salty and very smoky, so the kitchen dices it small to season a dish, the way you'd use bacon.",
-      "why": "Called a ham, but it is not leg meat. Pork shoulder is cut into slabs, briefly cured, packed in a cayenne, garlic and paprika rub and hot smoked until cooked through. Too intense to eat by the slice, it goes into gumbo, jambalaya, beans, grits and cream sauces.",
+      "why": "Despite the common name tasso ham, this Cajun specialty is usually pork shoulder. It is cured, seasoned and smoked, contributing salt, smoke and spice. Kitchens use it in sauces, soups, beans, greens and grits, in pieces suited to the dish.",
       "madeWith": [
         "pork",
         "salt",
@@ -2100,7 +2098,8 @@
       "confusedWith": [
         "fd_0064"
       ],
-      "line": "Shrimp and grits, tasso ham gravy, scallions"
+      "line": "Shrimp and grits, tasso ham gravy, scallions",
+      "prompt": "Despite the common name __ ham, this Cajun specialty is usually pork shoulder. It is cured, seasoned and smoked, contributing salt, smoke and spice. Kitchens use it in sauces, soups, beans, greens and grits, in pieces suited to the dish."
     },
     {
       "id": "fd_0078",
@@ -2644,7 +2643,7 @@
         "beef",
         "often butter"
       ],
-      "note": "Thin, so it cooks fast. The marbling needs heat to melt, and most kitchens send it medium rare.",
+      "note": "The cap may be sold flat or rolled into steaks. Thickness and preparation determine the cooking time.",
       "notThis": "Not coulotte, the leaner sirloin cap from the back end. Calotte and coulotte sound alike on a menu.",
       "seeAlso": [
         "fd_0090",
@@ -2676,7 +2675,7 @@
         "often red wine",
         "sometimes wheat flour"
       ],
-      "note": "Always slow cooked through, so there is no temperature to ask the guest for.",
+      "note": "Usually slow-cooked, often braised. Confirm the preparation rather than assuming it is served like a quick-cooked steak.",
       "pairs": "Red wine braise, polenta, mashed potato, root vegetables",
       "lexiconSlug": "shank-oxtail-and-cheek",
       "seeAlso": [
@@ -2726,7 +2725,7 @@
       "section": "cuts",
       "level": 1,
       "gist": "Bony lower leg joint of a pig, usually smoked and simmered to flavor a pot",
-      "guest": "It's the smoked lower joint of the pork leg. It simmers in the pot for hours and gives the whole dish a deep, smoky pork flavor.",
+      "guest": "It is the lower-leg hock, often cured or smoked, and slowly cooked for rich flavor and body. I can confirm which preparation the kitchen uses.",
       "why": "The hock is where the leg meets the foot: mostly skin, tendon and bone with a little meat, usually cured and smoked like ham. Simmered for hours, the skin and tendon melt into gelatin that gives body to beans, greens and soups, and the smoke and salt season the pot.",
       "madeWith": [
         "pork",
@@ -2782,14 +2781,15 @@
       ],
       "section": "cuts",
       "level": 1,
-      "gist": "Hard-working cut above the front leg that shreds after hours of low heat",
-      "guest": "Shoulder is the cut made for slow cooking. After hours of low heat it pulls apart with a fork and has more flavor than any of the lean cuts.",
-      "why": "The front legs carry most of an animal's weight, so the shoulder is dense with connective tissue and seamed with fat, and chewy if cooked fast. Braised, smoked or slow roasted for hours, that tissue melts and the meat shreds. It is pulled pork and carnitas on a pig, pot roast on a steer.",
+      "gist": "Working region with muscles suited to different cooking methods",
+      "guest": "Many shoulder cuts become tender with slow cooking. Some individual muscles instead suit a quicker preparation.",
+      "why": "Shoulder has several working muscles with differing amounts of connective tissue and fat. Large pork shoulder cuts commonly suit braising, smoking or slow roasting. Selected beef shoulder muscles, including petite tender, can instead be cooked as tender steaks.",
       "madeWith": [
         "often pork",
         "often lamb",
         "sometimes beef"
       ],
+      "note": "Many large shoulder cuts suit slow cooking, but selected beef shoulder muscles, such as petite tender, can be grilled.",
       "notThis": "Pork butt, or Boston butt, is the upper shoulder, not the rear of the pig. The rear leg is the ham.",
       "recipe": "cider-braised-pork-shoulder",
       "seeAlso": [
@@ -2798,7 +2798,7 @@
         "fd_0101"
       ],
       "line": "Slow-roasted lamb shoulder, white beans, salsa verde",
-      "prompt": "The front legs carry most of an animal's weight, so the __ is dense with connective tissue and seamed with fat, and chewy if cooked fast. Braised, smoked or slow roasted for hours, that tissue melts and the meat shreds. It is pulled pork and carnitas on a pig, pot roast on a steer."
+      "prompt": "__ has several working muscles with differing amounts of connective tissue and fat. Large pork __ cuts commonly suit braising, smoking or slow roasting. Selected beef __ muscles, including petite tender, can instead be cooked as tender steaks."
     },
     {
       "id": "fd_0092",
@@ -2810,9 +2810,9 @@
       ],
       "section": "cuts",
       "level": 1,
-      "gist": "Fatty beef on stubby bones from low on the chest, braised until it yields",
-      "guest": "Short rib is thick, well-marbled beef braised for hours until it falls off the bone. Rich and soft, like pot roast turned all the way up.",
-      "why": "It comes from the lower rib cage, in the chuck and plate, where the meat is heavily marbled and layered with connective tissue. A long braise melts both, so the beef holds its shape but gives to a fork. Sawn thin across the bones, the same cut is grilled fast for Korean barbecue.",
+      "gist": "Rich beef cuts sold in thick or thin cross-cut pieces, often bone-in",
+      "guest": "Short ribs are richly flavored beef rib cuts. Thick pieces are often braised, while thin cross-cut pieces can be grilled.",
+      "why": "Short ribs come from chuck, rib or plate sections, not the brisket itself. Thick pieces are commonly braised until their connective tissue softens; thin cross-cut strips can be grilled. The cut size and recipe determine the cooking method.",
       "madeWith": [
         "beef",
         "often red wine",
@@ -2830,7 +2830,7 @@
         "fd_0087"
       ],
       "line": "Red wine braised short rib, potato puree, glazed carrots",
-      "prompt": "It comes from the lower __ cage, in the chuck and plate, where the meat is heavily marbled and layered with connective tissue. A long braise melts both, so the beef holds its shape but gives to a fork. Sawn thin across the bones, the same cut is grilled fast for Korean barbecue."
+      "prompt": "__ __ come from chuck, __ or plate sections, not the brisket itself. Thick pieces are commonly braised until their connective tissue softens; thin cross-cut strips can be grilled. The cut size and recipe determine the cooking method."
     },
     {
       "id": "fd_0093",
@@ -2851,7 +2851,7 @@
         "sometimes bacon",
         "often butter"
       ],
-      "note": "Beef filet dries out past medium, so most kitchens suggest rare to medium rare. Pork tenderloin is always cooked further.",
+      "note": "Confirm the animal, cut and kitchen cooking specification. The word tenderloin does not by itself establish the serving temperature.",
       "pairs": "Bearnaise, peppercorn sauce, red wine sauce, mushrooms",
       "lexiconSlug": "tenderloin-filet-mignon",
       "seeAlso": [
@@ -2871,8 +2871,8 @@
       "term": "Pork Belly",
       "section": "cuts",
       "level": 1,
-      "gist": "Fresh, uncured slab from the underside of the pig, layered fat and lean",
-      "guest": "It's the same cut as bacon, only fresh. It's very rich, cooked slowly until spoon tender, then crisped on the outside.",
+      "gist": "Rich underside cut with alternating layers of lean meat and fat",
+      "guest": "Pork belly is a rich cut with alternating layers of lean meat and fat. The preparation determines whether it is tender, crisp, cured or smoked.",
       "why": "The boneless underside of the pig, in alternating layers of fat and lean. Slow cooking melts the fat and softens the meat, then high heat crisps the surface or the skin. Rich like short rib but softer and sweeter, so portions are small and come with something sharp.",
       "madeWith": [
         "pork",
@@ -2881,7 +2881,7 @@
         "sometimes sugar"
       ],
       "pairs": "Pickles, apples, mustard, bitter greens, soy and ginger glazes",
-      "notThis": "Not bacon, which is this cut cured and smoked, nor pancetta, cured and not smoked. Belly on a menu is fresh meat.",
+      "notThis": "Bacon and pancetta are cured belly products. Belly names the cut; it does not by itself tell you whether it was cured or smoked.",
       "lexiconSlug": "pork-belly",
       "recipe": "siu-yuk-crackling-roast-pork-belly",
       "seeAlso": [
@@ -3497,15 +3497,15 @@
       "section": "fish",
       "level": 2,
       "gist": "Cold-water cousin of salmon and trout with pink, moderately rich flesh",
-      "guest": "It's a cold-water fish from the salmon family, and it eats right between salmon and trout. Rich but mild, with a fine flake and a thin skin that crisps.",
-      "why": "A member of the salmon family from icy northern lakes and coasts, now mostly farmed in cold tanks. Its fat sits between trout and salmon, so the pink to red flesh stays moist and fine-flaked, with a cleaner, milder flavor than salmon.",
+      "guest": "Arctic char is a cold-water fish in the salmon family, with a delicate flake. The flavor and richness depend on the fish and preparation.",
+      "why": "Arctic char belongs to the salmon family and lives in northern cold waters. Some populations stay in fresh water; others move between fresh and salt water. Flesh color, richness and texture vary, so it is better to describe the actual portion than promise a fixed midpoint between salmon and trout.",
       "madeWith": [
         "arctic char",
         "often butter",
         "often lemon"
       ],
-      "note": "Nearly all of it is farmed, mostly in Iceland and Canada. The thin skin crisps well and is meant to be eaten.",
-      "notThis": "Not salmon or trout, though kin to both. It is milder and finer than salmon, and richer than trout.",
+      "note": "Confirm the supplier’s origin and the kitchen’s skin-on or skin-off preparation.",
+      "notThis": "Related to salmon and trout, but not a guaranteed midpoint between them in fat or flavor.",
       "seeAlso": [
         "fd_0039"
       ],
@@ -3513,7 +3513,8 @@
         "fd_0117",
         "fd_0122"
       ],
-      "line": "Crispy-skin arctic char, fennel, citrus beurre blanc"
+      "line": "Crispy-skin arctic char, fennel, citrus beurre blanc",
+      "prompt": "__ __ belongs to the salmon family and lives in northern cold waters. Some populations stay in fresh water; others move between fresh and salt water. Flesh color, richness and texture vary, so it is better to describe the actual portion than promise a fixed midpoint between salmon and trout."
     },
     {
       "id": "fd_0109",
@@ -3527,7 +3528,7 @@
       "level": 1,
       "gist": "Finger-long freshwater crustacean, a tiny lobster eaten for its tail",
       "guest": "They're freshwater shellfish that look like tiny lobsters, a Louisiana staple. The tail meat is sweet and tender, somewhere between shrimp and lobster.",
-      "why": "A freshwater crustacean from Louisiana's swamps and rice ponds, built like a lobster about a finger long. Only the tail holds real meat, sweet and tender, while the fat in the head carries the flavor, so whole ones are boiled in spice and peeled by hand.",
+      "why": "Crawfish are freshwater crustaceans, central to Louisiana cooking. The tail is the principal meat portion sold peeled. Whole crawfish are also boiled and eaten by hand; the rich material commonly called crawfish fat is hepatopancreatic tissue and contributes flavor to many preparations.",
       "madeWith": [
         "crawfish",
         "often butter",
@@ -3535,7 +3536,7 @@
         "often cayenne",
         "sometimes pork sausage"
       ],
-      "note": "Live season runs roughly late winter to early summer. Outside it, most kitchens cook with frozen peeled tail meat.",
+      "note": "Availability varies with weather and production. Confirm live whole crawfish versus prepared tail meat, and verify the actual origin with the supplier.",
       "pairs": "Boils with corn, potato and sausage; étouffée over rice",
       "recipe": "backyard-crawfish-boil",
       "seeAlso": [
@@ -3543,7 +3544,8 @@
         "fd_0133",
         "fd_0064"
       ],
-      "line": "Crawfish étouffée, Carolina Gold rice, scallion"
+      "line": "Crawfish étouffée, Carolina Gold rice, scallion",
+      "prompt": "__ are freshwater crustaceans, central to Louisiana cooking. The tail is the principal meat portion sold peeled. Whole __ are also boiled and eaten by hand; the rich material commonly called __ fat is hepatopancreatic tissue and contributes flavor to many preparations."
     },
     {
       "id": "fd_0110",
@@ -3556,7 +3558,7 @@
       "level": 2,
       "gist": "Wing of a ray, its sweet white flesh pulling apart in long strands",
       "guest": "It's the wing of a ray, a cousin of the stingray. The meat is sweet and mild, a little like scallop or crab, and it pulls away in long tender strands.",
-      "why": "Skates are rays, with a skeleton of cartilage instead of bone. Only the wings are eaten: a fan of long muscle strands over a sheet of soft cartilage, so the flesh comes away in ribbons, not flakes. It is lean, sweet and mild, and takes well to a hot pan.",
+      "why": "Skates and rays have a skeleton of cartilage rather than bone. The wing is the familiar restaurant cut: muscle arranged in strands over a sheet of cartilage. Other parts, such as cheeks, are also used. Wing meat has a mild, sweet character and suits pan-roasting or poaching.",
       "madeWith": [
         "skate",
         "often butter",
@@ -3564,7 +3566,7 @@
         "often wheat flour",
         "often lemon or vinegar"
       ],
-      "note": "No pin bones. A bone-in wing has a flat sheet of soft cartilage in the middle, and the meat slides off it with a fork.",
+      "note": "A wing served on its cartilage has meat above and below a flat central sheet. Explain the presentation and check whether the kitchen serves it on or off the cartilage.",
       "pairs": "Black butter, capers, parsley and vinegar, the French classic, or brown butter and lemon",
       "seeAlso": [
         "fd_0161",
@@ -3572,7 +3574,7 @@
         "fd_0232"
       ],
       "line": "Pan-roasted skate wing, brown butter, capers, lemon",
-      "prompt": "__ are rays, with a skeleton of cartilage instead of bone. Only the wings are eaten: a fan of long muscle strands over a sheet of soft cartilage, so the flesh comes away in ribbons, not flakes. It is lean, sweet and mild, and takes well to a hot pan."
+      "prompt": "__ and rays have a skeleton of cartilage rather than bone. The wing is the familiar restaurant cut: muscle arranged in strands over a sheet of cartilage. Other parts, such as cheeks, are also used. Wing meat has a mild, sweet character and suits pan-roasting or poaching."
     },
     {
       "id": "fd_0111",
@@ -3650,9 +3652,9 @@
         "often lemon",
         "sometimes egg"
       ],
-      "note": "So lean it dries out fast. Kitchens pull it just as it turns opaque, and it is a poor choice for well done.",
+      "note": "Halibut is lean. Follow the kitchen's approved cooking endpoint; FDA advises cooking most seafood to 63 C (145 F).",
       "origin": "Middle English haly butte, holy flatfish, eaten on feast days",
-      "notThis": "Not flounder, a small flatfish sold in thin fillets, or turbot, which is richer and more gelatinous.",
+      "notThis": "Halibut, flounder and turbot are distinct flatfish choices. A thick halibut portion cooks differently from a thin flounder fillet.",
       "recipe": "baked-alaska-halibut-with-mayonnaise-crust",
       "seeAlso": [
         "fd_0205"
@@ -3673,7 +3675,7 @@
       "level": 1,
       "gist": "Blue-black bivalve with soft, sweet meat, steamed open in its own broth",
       "guest": "They're shellfish in blue-black shells, steamed until they pop open. The meat is soft and sweet, milder than a clam, and the broth is made for dipping bread.",
-      "why": "A bivalve farmed in clusters on ropes, which keeps sand out. Steamed a few minutes with wine, garlic and shallot, the shells open and release their own liquor, which becomes the broth. The meat is plump and soft, sweeter and less briny than clam or oyster.",
+      "why": "Mussels are bivalves with hinged shells. Blue mussels are grown on ropes or in seabed culture, and their meat is tender and mildly sweet. When cooked in a covered pan, their juices contribute to the cooking liquid; wine, aromatics and dairy depend on the recipe.",
       "madeWith": [
         "mussels",
         "often white wine",
@@ -3682,7 +3684,7 @@
         "often shallot",
         "sometimes cream"
       ],
-      "note": "A mussel still shut after steaming should be left in the bowl, not pried open. Orange or cream meat is only male or female.",
+      "note": "Discard mussels that remain closed after cooking, following FDA guidance. Meat color can vary and is not, by itself, a complete quality assessment.",
       "notThis": "Not clams. Mussels have thin, blue-black teardrop shells and soft meat. Clams are rounder, paler and chewier.",
       "lexiconSlug": "mussels-scallops-and-the-cold-water-winter",
       "recipe": "penn-cove-mussels-steamed-in-cider",
@@ -3694,7 +3696,8 @@
       "confusedWith": [
         "fd_0137"
       ],
-      "line": "Steamed mussels, white wine, garlic, grilled bread"
+      "line": "Steamed mussels, white wine, garlic, grilled bread",
+      "prompt": "__ are bivalves with hinged shells. Blue __ are grown on ropes or in seabed culture, and their meat is tender and mildly sweet. When cooked in a covered pan, their juices contribute to the cooking liquid; wine, aromatics and dairy depend on the recipe."
     },
     {
       "id": "fd_0115",
@@ -3702,8 +3705,8 @@
       "section": "fish",
       "level": 1,
       "gist": "Rough-shelled bivalve, often eaten raw, that tastes of its home water",
-      "guest": "They're shellfish, and on the half shell they're shucked to order and eaten raw. A cold, silky bite of clean ocean, some brinier, some sweeter.",
-      "why": "A bivalve that filters the water it grows in, so each bay gives its own flavor, the way a vineyard does for wine. East Coast ones run briny and firm, West Coast ones sweeter and creamier, with a cucumber or melon note.",
+      "guest": "Oysters are shellfish whose flavor can range from sweet to briny. I can describe today’s variety, growing area and preparation.",
+      "why": "Oysters are bivalves that filter water as they feed. Their growing environment and the particular oyster influence flavor. Learn the named variety and taste the product rather than relying only on an East Coast or West Coast generalisation.",
       "madeWith": [
         "oysters",
         "often lemon",
@@ -3713,7 +3716,7 @@
         "sometimes wheat flour",
         "sometimes anise liqueur"
       ],
-      "note": "On the half shell they come raw and alive on ice, opened to order. The list changes daily, so learn each name and where it grew.",
+      "note": "Half shell means served in one half of the shell; it does not by itself mean raw. Confirm whether the dish is raw, grilled, baked or otherwise cooked.",
       "pairs": "Mignonette, lemon, cocktail sauce, horseradish; Champagne, Chablis, Muscadet",
       "lexiconSlug": "oysters-east-vs-west",
       "recipe": "oysters-rockefeller",
@@ -3726,7 +3729,8 @@
         "fd_0307",
         "fd_0145"
       ],
-      "line": "Half dozen oysters on the half shell, mignonette, lemon"
+      "line": "Half dozen oysters on the half shell, mignonette, lemon",
+      "prompt": "__ are bivalves that filter water as they feed. Their growing environment and the particular __ influence flavor. Learn the named variety and taste the product rather than relying only on an East Coast or West Coast generalisation."
     },
     {
       "id": "fd_0116",
@@ -3745,9 +3749,9 @@
         "sometimes butter",
         "sometimes bacon"
       ],
-      "note": "Loose salted roe, like salmon roe, is cured but never cooked: it is served raw.",
+      "note": "Roe may be fresh, salt-cured, pasteurized, cooked or smoked. Check the product and preparation before describing it as raw.",
       "pairs": "Blini, sour cream, chives, sushi rice, brown butter, bacon",
-      "notThis": "Caviar on its own means salted sturgeon roe. Any other roe sold as caviar has to name the fish, as in salmon caviar.",
+      "notThis": "In classical culinary usage, caviar means salt-cured sturgeon roe. Other fish eggs should be identified by their species, such as salmon roe.",
       "lexiconSlug": "roe-caviar-ikura-tobiko-bottarga",
       "recipe": "shad-roe-with-bacon",
       "seeAlso": [
@@ -3797,14 +3801,14 @@
       "section": "fish",
       "level": 1,
       "gist": "Sweet round muscle a shellfish uses to clap its two shells shut",
-      "guest": "Scallops are the sweet muscle that snaps the shell shut, seared golden on the outside and soft, almost creamy, in the middle.",
-      "why": "A scallop swims by clapping its shells, driven by one big muscle, and that muscle is what we eat. It is rich in glycogen and sweet amino acids, so it tastes sweet and browns well. Sea scallops are large and sear. Bay scallops are small and cook in seconds. Untreated dry ones sear best.",
+      "guest": "Scallops are sweet shellfish, often seared for a golden surface and a tender center.",
+      "why": "Scallops are bivalves whose adductor muscle closes the shell. That sweet, pale muscle is most commonly sold in the United States, although whole scallops are also marketed. Size and treatment affect handling and cooking; use the product specification rather than one universal cooking time.",
       "madeWith": [
         "scallops",
         "often butter",
         "often lemon"
       ],
-      "note": "Best seared golden and left just translucent in the center. Cooked through, they turn rubbery.",
+      "note": "Overcooking can toughen scallops. FDA describes cooked flesh as firm, pearly and opaque; follow the kitchen's approved preparation and cooking endpoint.",
       "notThis": "Not king trumpet mushroom scallops, which are thick rounds of mushroom stem cut to look like the real thing.",
       "lexiconSlug": "scallops-dry-vs-wet-u-10",
       "recipe": "seared-digby-scallops",
@@ -3817,7 +3821,7 @@
         "fd_0143"
       ],
       "line": "Seared sea scallops, cauliflower puree, brown butter",
-      "prompt": "A __ swims by clapping its shells, driven by one big muscle, and that muscle is what we eat. It is rich in glycogen and sweet amino acids, so it tastes sweet and browns well. Sea __ are large and sear. Bay __ are small and cook in seconds. Untreated dry ones sear best."
+      "prompt": "__ are bivalves whose adductor muscle closes the shell. That sweet, pale muscle is most commonly sold in the United States, although whole __ are also marketed. Size and treatment affect handling and cooking; use the product specification rather than one universal cooking time."
     },
     {
       "id": "fd_0119",
@@ -3827,9 +3831,9 @@
       ],
       "section": "fish",
       "level": 1,
-      "gist": "Red-skinned warm-reef fish, lean and sweet, often served whole",
-      "guest": "Snapper is a mild, slightly sweet white fish from warm Gulf waters. It is lean and flaky, and the skin crisps up beautifully.",
-      "why": "Snapper live on warm reefs in the Gulf of Mexico and the southern Atlantic. They are lean, so the flesh is mild and sweet with moist, medium flakes, and the red skin crisps well in a hot pan. Whole snapper, fried or grilled, is a classic of the Gulf and the Caribbean.",
+      "gist": "A group of white-fleshed fish with several distinct commercial species",
+      "guest": "Snapper is a mild white fish. There are several species, so we identify the one actually being served.",
+      "why": "Snapper is a common name for multiple species, including red, gray and yellowtail snappers. They differ in color and distribution. Confirm the actual species and source before making a claim about red skin, Gulf origin or the particular fishery.",
       "madeWith": [
         "fish",
         "often butter",
@@ -3837,7 +3841,7 @@
         "sometimes wheat flour"
       ],
       "note": "Served whole, it arrives on the bone, with fins and small bones to work around.",
-      "notThis": "Not grouper, which is firmer and chunkier. West Coast Pacific snapper is usually rockfish, a different fish.",
+      "notThis": "Red snapper is one species. Other snappers and unrelated fish share similar market names, so confirm the supplier's identification.",
       "seeAlso": [
         "fd_0128",
         "fd_0127"
@@ -3847,7 +3851,7 @@
         "fd_0378"
       ],
       "line": "Whole fried red snapper, green mango slaw, lime",
-      "prompt": "__ live on warm reefs in the Gulf of Mexico and the southern Atlantic. They are lean, so the flesh is mild and sweet with moist, medium flakes, and the red skin crisps well in a hot pan. Whole __, fried or grilled, is a classic of the Gulf and the Caribbean."
+      "prompt": "__ is a common name for multiple species, including red, gray and yellowtail __. They differ in color and distribution. Confirm the actual species and source before making a claim about red skin, Gulf origin or the particular fishery."
     },
     {
       "id": "fd_0120",
@@ -3872,14 +3876,11 @@
     {
       "id": "fd_0121",
       "term": "Tilefish",
-      "aliases": [
-        "Golden Tilefish"
-      ],
       "section": "fish",
       "level": 3,
-      "gist": "Lean deep-water fish that eats crab, sweet and firm like lobster",
-      "guest": "Tilefish is a lean white fish from deep Atlantic waters. It eats crab and shrimp, so it tastes sweet, a little like lobster, with firm, moist flakes.",
-      "why": "Golden tilefish live at the edge of the continental shelf, digging burrows in the clay and feeding on crabs and shrimp. That diet is why the flesh tastes so sweet, often compared to lobster or scallop. It is lean, with a firm, fine flake closer to halibut than to cod.",
+      "gist": "Several deep-water fish species with mild, sweet flesh and a firm flake",
+      "guest": "Tilefish has mild, sweet white flesh and a firm, tender texture.",
+      "why": "Tilefish includes distinct species such as golden and blueline tilefish. Both have mild, sweet white flesh. A comparison with lobster describes flavor, not shellfish identity or a proven dietary cause. Confirm the actual species and catch area with the supplier.",
       "madeWith": [
         "fish",
         "often butter"
@@ -3890,7 +3891,7 @@
         "fd_0113"
       ],
       "line": "Pan-roasted golden tilefish, clams, fennel broth",
-      "prompt": "Golden __ live at the edge of the continental shelf, digging burrows in the clay and feeding on crabs and shrimp. That diet is why the flesh tastes so sweet, often compared to lobster or scallop. It is lean, with a firm, fine flake closer to halibut than to cod."
+      "prompt": "__ includes distinct species such as golden and blueline __. Both have mild, sweet white flesh. A comparison with lobster describes flavor, not shellfish identity or a proven dietary cause. Confirm the actual species and catch area with the supplier."
     },
     {
       "id": "fd_0122",
@@ -4659,7 +4660,7 @@
       "level": 3,
       "gist": "Thin, hollow, charcoal-dark wild funnel with a deep, smoky flavor",
       "guest": "It's a wild mushroom shaped like a little dark horn. It's thin and delicate, with a deep, smoky flavor, a bit like truffle, that goes a long way.",
-      "why": "A wild relative of the chanterelle, foraged under hardwoods and not farmed. It has no gills, just a thin hollow funnel, so it cooks in a minute and turns silky. Its aroma is intense and smoky, and it dries so well that dried ones are ground into sauces.",
+      "why": "Black trumpets are dark, hollow mushrooms related to chanterelles. Their thin flesh has a concentrated earthy flavor and is used fresh or dried in sauces and other preparations. Clean the hollow centers carefully and cook according to the dish.",
       "madeWith": [
         "black trumpet mushroom",
         "often butter",
@@ -4667,7 +4668,7 @@
         "sometimes shallot"
       ],
       "note": "The hollow funnel traps forest grit, so kitchens split and rinse each one.",
-      "origin": "French trompette de la mort, for its dark color and All Saints' season",
+      "origin": "Temperate forests, with species varying by region",
       "notThis": "Not king trumpet, the thick white farmed stem. This one is wild, thin and nearly black.",
       "lexiconSlug": "black-trumpet",
       "seeAlso": [
@@ -4678,7 +4679,8 @@
         "fd_0143",
         "fd_0382"
       ],
-      "line": "Black trumpet risotto, parmesan, brown butter"
+      "line": "Black trumpet risotto, parmesan, brown butter",
+      "prompt": "__ __ are dark, hollow mushrooms related to chanterelles. Their thin flesh has a concentrated earthy flavor and is used fresh or dried in sauces and other preparations. Clean the hollow centers carefully and cook according to the dish."
     },
     {
       "id": "fd_0141",
@@ -4783,8 +4785,8 @@
       "section": "mushrooms",
       "level": 2,
       "gist": "Hollow, honeycombed spring mushroom, always cooked through",
-      "guest": "It's a wild spring mushroom with a honeycombed cap, one of the most prized there is. It's nutty and earthy, and all those pockets soak up the sauce.",
-      "why": "Morels come up for a few weeks each spring in woods, old orchards and burned forest, and most are still foraged, hence the price. The cap is a hollow honeycomb, light and chewy, and its pits hold butter or cream. The flavor is deep, nutty and meaty, stronger still when dried.",
+      "guest": "Morels are mushrooms with honeycomb-like caps, an earthy flavor and a texture that carries sauce.",
+      "why": "Morels are sold both wild-harvested and cultivated. The pitted cap traps sauce but can also hold grit, so careful cleaning matters. Thorough cooking is important: outbreaks have been associated with raw or insufficiently cooked morels.",
       "madeWith": [
         "morel mushroom",
         "often butter",
@@ -4801,7 +4803,7 @@
         "fd_0147"
       ],
       "line": "Morels and asparagus, cream, grilled bread",
-      "prompt": "__ come up for a few weeks each spring in woods, old orchards and burned forest, and most are still foraged, hence the price. The cap is a hollow honeycomb, light and chewy, and its pits hold butter or cream. The flavor is deep, nutty and meaty, stronger still when dried."
+      "prompt": "__ are sold both wild-harvested and cultivated. The pitted cap traps sauce but can also hold grit, so careful cleaning matters. Thorough cooking is important: outbreaks have been associated with raw or insufficiently cooked __."
     },
     {
       "id": "fd_0145",
@@ -5380,8 +5382,8 @@
       "section": "dairy",
       "level": 1,
       "gist": "Thick, tangy cultured milk that tenderizes batters and brines",
-      "guest": "It's a tangy, lightly thick cultured milk, the classic secret to tender biscuits and juicy fried chicken.",
-      "why": "Once the liquid left after churning butter, today it is low-fat milk soured with lactic cultures. Its acid loosens meat proteins in a brine and reacts with baking soda in batters for lift. It tastes like thin, sharp yogurt, not butter.",
+      "guest": "Buttermilk is tangy cultured milk, often used in biscuits, dressings and fried-chicken marinades.",
+      "why": "Traditional buttermilk is the liquid left after churning butter. Much retail buttermilk is milk fermented with lactic cultures, and its fat level varies by product. It adds tang and moisture to batters and dressings; its acidity can react with baking soda for lift.",
       "madeWith": [
         "milk",
         "lactic cultures"
@@ -5392,7 +5394,8 @@
         "fd_0157",
         "fd_0020"
       ],
-      "line": "Buttermilk fried chicken, hot honey, slaw"
+      "line": "Buttermilk fried chicken, hot honey, slaw",
+      "prompt": "Traditional __ is the liquid left after churning butter. Much retail __ is milk fermented with lactic cultures, and its fat level varies by product. It adds tang and moisture to batters and dressings; its acidity can react with baking soda for lift."
     },
     {
       "id": "fd_0156",
@@ -5400,17 +5403,17 @@
       "say": "SHEV-ruh",
       "section": "dairy",
       "level": 2,
-      "gist": "Soft, bright, tangy fresh cheese made from goat's milk",
-      "guest": "It's fresh goat cheese, creamy and bright with a clean tang. It's lovely with beets, honey or a warm salad.",
-      "why": "Goat's milk is set slowly with cultures and a little rennet, then drained into soft logs. The cultures give the lemony tang, goat's milk fatty acids the goaty note. Young it is spreadable, like tangier cream cheese. Aged, it firms and grows a rind.",
+      "gist": "Goat’s-milk cheese; on many US menus, the fresh, soft style",
+      "guest": "Chèvre is goat's-milk cheese. Fresh versions are soft and gently tangy.",
+      "why": "Chèvre can refer broadly to goat’s-milk cheese. The familiar fresh style is cultured, gently set and drained into a soft cheese with a tangy flavor. Other goat cheeses are aged, ripened or brined, so learn the actual cheese before describing its texture.",
       "madeWith": [
         "goat's milk",
         "salt",
         "often rennet"
       ],
-      "origin": "French for goat, used in America for fresh goat cheese",
+      "origin": "French for goat; US menus often mean fresh goat cheese",
       "pairs": "Roasted beets, honey, figs, arugula, toasted walnuts",
-      "notThis": "Not feta, which is brined, saltier and firmer. Chèvre is soft, creamy and never sits in brine.",
+      "notThis": "Fresh chèvre is soft and spreadable; feta is usually firmer and brined. Other goat cheeses may be aged or brined, so confirm the style.",
       "seeAlso": [
         "fd_0154",
         "fd_0158"
@@ -5419,7 +5422,8 @@
         "fd_0168",
         "fd_0386"
       ],
-      "line": "Roasted beets, whipped chèvre, pistachio, honey"
+      "line": "Roasted beets, whipped chèvre, pistachio, honey",
+      "prompt": "__ can refer broadly to goat’s-milk cheese. The familiar fresh style is cultured, gently set and drained into a soft cheese with a tangy flavor. Other goat cheeses are aged, ripened or brined, so learn the actual cheese before describing its texture."
     },
     {
       "id": "fd_0157",
@@ -5427,22 +5431,23 @@
       "say": "krem FRESH",
       "section": "dairy",
       "level": 2,
-      "gist": "Thick, mild cultured cream that won't curdle when hot",
-      "guest": "It's French cultured cream, thick and rich with a gentle tang, like a silkier, milder sour cream. It melts into anything warm.",
-      "why": "Heavy cream is ripened with lactic cultures until it thickens and turns softly sour. With about twice the fat of sour cream, it can go into a hot pan sauce without splitting, and it tastes nutty and mellow rather than sharp.",
+      "gist": "Thick cultured cream with a rich texture and a gentle tang",
+      "guest": "Crème fraîche is thick cultured cream with a gentle tang and a rich, smooth texture.",
+      "why": "Cream is fermented with cultures until thick and gently tangy. Crème fraîche is generally richer than sour cream and is useful in warm sauces as well as cold toppings. Fat content and formulation vary; follow the recipe when heating it.",
       "madeWith": [
         "cream",
         "lactic cultures"
       ],
       "origin": "French, fresh cream, though it is cultured, not plain",
       "pairs": "Caviar, smoked salmon, potatoes, fruit tarts",
-      "notThis": "Not sour cream, which is leaner and sharper and curdles in a hot sauce.",
+      "notThis": "Sour cream is generally sharper and lower in fat. The two can work differently in a hot sauce or baked recipe.",
       "seeAlso": [
         "fd_0155",
         "fd_0164",
         "fd_0125"
       ],
-      "line": "Smoked trout, potato rosti, crème fraîche, dill"
+      "line": "Smoked trout, potato rosti, crème fraîche, dill",
+      "prompt": "Cream is fermented with cultures until thick and gently tangy. __ __ is generally richer than sour cream and is useful in warm sauces as well as cold toppings. Fat content and formulation vary; follow the recipe when heating it."
     },
     {
       "id": "fd_0158",
@@ -5460,7 +5465,7 @@
       ],
       "origin": "French for white cheese, a staple of French breakfasts and desserts",
       "pairs": "Berries and honey, or herbs, shallot and black pepper",
-      "notThis": "Not ricotta, which is grainier and made by heating. This is smooth, tangy and set without heat.",
+      "notThis": "Unlike heat-set ricotta, this fresh cheese sets mainly through culturing, often with a little rennet. The milk may be gently warmed.",
       "seeAlso": [
         "fd_0157",
         "fd_0156"
@@ -5478,21 +5483,23 @@
       ],
       "section": "dairy",
       "level": 1,
-      "gist": "Hard, long-aged Italian cow's milk cheese, nutty and salty",
-      "guest": "It's a hard, long-aged cheese, nutty and savory with little crunchy crystals. It makes everything taste deeper.",
-      "why": "The real one is made around Parma from raw, part-skimmed cow's milk and aged 12 months or far longer. As it ages, proteins break down into savory amino acids, which is where the depth comes from. The crunchy white specks are clusters of one of them, tyrosine.",
+      "gist": "Hard, savory grating cheese; identify whether it is Parmigiano Reggiano",
+      "guest": "Parmesan is a hard grating cheese with a savory, nutty character. Parmigiano Reggiano identifies a specific Italian cheese.",
+      "why": "Parmigiano Reggiano is made in a defined Italian area from raw, partly skimmed cow's milk, salt and calf rennet, and matures at least twelve months. In the United States, Parmesan can also describe cheeses made elsewhere. Check the label before promising the protected specification.",
       "madeWith": [
         "cow's milk",
         "salt",
-        "traditionally calf rennet"
+        "rennet"
       ],
-      "origin": "English for Parmigiano-Reggiano, though US parmesan can be domestic",
+      "note": "Name the actual cheese. Check its label for milk treatment, rennet and age rather than inferring these from the word Parmesan.",
+      "origin": "Defined Italian area for Parmigiano Reggiano; Parmesan usage varies by market",
       "pairs": "Pasta, risotto, balsamic, pears, Caesar salad",
       "seeAlso": [
         "fd_0181",
         "fd_0266"
       ],
-      "line": "Shaved Parmigiano-Reggiano, arugula, lemon"
+      "line": "Shaved Parmigiano-Reggiano, arugula, lemon",
+      "prompt": "Parmigiano Reggiano is made in a defined Italian area from raw, partly skimmed cow's milk, salt and calf rennet, and matures at least twelve months. In the United States, __ can also describe cheeses made elsewhere. Check the label before promising the protected specification."
     },
     {
       "id": "fd_0160",

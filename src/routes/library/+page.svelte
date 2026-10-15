@@ -100,6 +100,7 @@
 			<span class="door-name">The Lexicon</span>
 			<span class="door-line">{all ? `${TOTALS.lexicon} terms.` : count(atLevel('lexicon'), 'terms')}</span>
 		</a>
+		<a class="door" href="{base}/foundations"><span class="door-name">The Kitchen Fieldbook</span><span class="door-line">Your culinary terms &amp; definitions, gathered from your training sheets. Every subject and level is open.</span></a>
 		{#if all}
 			{#each LEVEL_KEYS as n (n)}
 				<a class="door" href="{base}/level/{n}/read"><span class="door-name">What {nameOf(n)} asks</span><span class="door-line">The readers for {nameOf(n)}, one per subject.</span></a>
