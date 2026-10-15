@@ -361,9 +361,16 @@
 			<span class="door-name">Next reading</span>
 			<span class="door-line">{nextReading ? nextReading.title : 'Reading your record…'}</span>
 		</a>
+		<a class="door" href="{base}/flashcards?deck=fall%3Atoday" data-door="fall-practice">
+			<span class="door-name">Fall menu practice</span>
+			<span class="door-line">Ten seasonal cards: ingredients, origins and tableside descriptions. Missed answers first.</span>
+		</a>
 	</nav>
 
 	<h2 class="group" id="restaurant">My restaurant</h2>
+	<nav class="quiet" aria-label="Seasonal restaurant training">
+		<a class="door" href="{base}/menu?view=fall" data-door="fall-menu"><span class="door-name">Fall food &amp; cocktails</span><span class="door-line">Brennan's Fall 2026: eight dishes, nine cocktails and the stories behind them.</span></a>
+	</nav>
 	<div class="house">
 		<HouseBar />
 	</div>

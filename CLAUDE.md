@@ -1170,6 +1170,24 @@ asserts NOT_SCREENED stays non-empty so the day it lands, the copy must change.
   in a draft comment, both times reasoned rather than measured; the build now
   gates it in technique-standards.mjs's ceiling sentence.)
 
+## Fall 2026 training collection
+
+`src/lib/data/fall-menu-2026.json` is a dated, read-only curriculum transcribed
+from the owner's eight food sheets and one cocktail sheet. It does not replace
+House records or approve Maître d' marks. Background claims cite the collection's
+source registry; printed ingredients and dietary wording remain separate from
+kitchen questions. No cocktail measures, glassware or production methods are
+inferred. `tools/port-fall-menu.mjs` generates the Ledger's `js/data-fall-menu.js`;
+run it after editing the JSON and use `--check` before releasing both rooms.
+
+The reader is `/menu?view=fall`, with `kind=dish|cocktail|all` and optional `item`.
+Flashcards reuse DeckFrame with `f:` references, the `fall` decks and `f=` misses.
+Grades use the bounded local drill log under `curriculum-fall-2026`, never a live
+house, menu, professional level or exported training record. Today's fall practice
+is a separate ten-card door, prioritising misses, unseen cards and older practice;
+it does not change the existing Due today count. `fall-menu.test.ts` pins the
+coverage, stable IDs, references, scoped decks, round and latest-verdict behaviour.
+
 ## Testing
 
 `npm test` (192 unit) · `npm run test:e2e` (45 Playwright: regressions named for
