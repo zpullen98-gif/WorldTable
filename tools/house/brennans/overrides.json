@@ -59965,6 +59965,573 @@
       "value": "Serve slightly cool, about 55°F, in a small dessert glass: 2 to 3 oz, or 4 oz on the tasting. Confirm the house pour before service. Record the opening date, close and store the bottle under house procedure, and assess its condition before each service. Fortification alone does not guarantee a fixed life once open.",
       "reason": "Wine label review: remove an unconditional open bottle lifespan; follow the house storage and condition assessment procedure.",
       "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "cocktail:Brandy Milk Punch",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the milk punch at the greeting, before the menus are even open: it is the first sale of the morning and the classic way to start. Every guest on the Traditional Breakfast gets one; for the others, it sets the mood. Next rounds are the Bloody Bull at $13 or, with dessert, the Irish Coffee at $12. Say: “Can I start you with a Brandy Milk Punch? It's our classic New Orleans eye opener: brandy, cream, vanilla and nutmeg.”"
+        },
+        {
+          "q": "Is there a published recipe?",
+          "a": "Published recipes credited to Brennan's exist, including one supplied to Explore Louisiana. They document a published version, not a measured current bar build. The saved menu prints brandy, heavy cream, vanilla bean and nutmeg; confirm today's measures, sweetener and service with the bar."
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "The Brandy Milk Punch is a Brennan's signature at $12 and opens the saved Traditional Breakfast tasting. Its menu lists brandy, heavy cream, vanilla bean and nutmeg; the guide describes shaking it and serving it cold. Lead with those four ingredients, then explain the creamy texture and the vanilla and nutmeg aromas. A guest who recognises eggnog has a useful flavour reference, but that comparison does not establish an identical recipe.\n\nPublished Brennan's recipes exist, including one supplied to Explore Louisiana. They document a published version rather than today's confirmed measured build. Ask the bar about measures and sweetener before giving preparation advice. Confirm current tasting service and any substitution before promising one. For a related lesson, compare Prisoner of Love: its gin, tea and clarified heavy cream introduce a different spirit and preparation, while both menus name cream."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What is an eye opener?\n\nAnswer: A New Orleans name for a breakfast cocktail, not a claim that alcohol improves alertness.\n\nAsked: Is it eggnog?\n\nAnswer: It shares a creamy texture and nutmeg, but the menu names brandy, heavy cream, vanilla bean and nutmeg. I will verify the complete recipe for an ingredient concern.\n\nAsked: Can I have the recipe?\n\nAnswer: Brennan's has supplied published recipes, including one to Explore Louisiana. I can share that reference and ask the bar about the current version."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "The saved Traditional Breakfast includes this opening drink; confirm current tasting service and substitutions on shift. Published recipes do not establish today's measures. Heavy cream means milk is present; do not infer egg absence from a short ingredient list. Send ingredient concerns to the service note and kitchen, with the bar confirming its complete recipe and handling. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Replace the false absence of published recipes with a supplied recipe versus current menu distinction; avoid an egg absence guarantee.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Brandy Milk Punch",
+      "field": "lines.s45",
+      "value": "Our Brandy Milk Punch is a New Orleans breakfast classic: brandy with heavy cream, vanilla bean and nutmeg. It is creamy and aromatic, and it opens our saved Traditional Breakfast tasting. If you enjoy vanilla and nutmeg, it is a good drink to consider; I can also help you choose a drink without spirits. Would you enjoy a creamy drink with breakfast, or prefer a fruit juice?",
+      "reason": "Bar accuracy review 15 October 2026: Remove egg absence and guaranteed comparative strength.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Ralph’s Coffee",
+      "field": "lines.s45",
+      "value": "Ralph's Coffee brings together dark roast coffee with chicory, Frangelico hazelnut liqueur, Nocello walnut liqueur and whipped cream. Expect a roasty, nutty direction with cream on top. It is $8.00 on the saved menu. Would you prefer that nutty profile or the Irish whiskey and brown sugar listed in our Irish Coffee? I can help you choose by flavour and check the current preparation.",
+      "reason": "Bar accuracy review 15 October 2026: No measured recipe supports the gentlest coffee cocktail ranking.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Ralph’s Coffee",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "The bar builds Ralph's Coffee and you present it. Carry it level so the cream cap stays whole, turn any handle toward the guest's right hand, and say the name as you set it down so it is never taken for the Irish Coffee. Ask the guest not to stir: the coffee is meant to be sipped through the cream. At a Bananas Foster table, bring it just before the flame, never beside it. Say: “Here's Ralph's Coffee: hazelnut and walnut in our chicory coffee. Sip it through the cream.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "Offer Ralph's Coffee as dessert arrives, with Bananas Foster or the bread pudding, and to a guest who wants a coffee with a little something but not a whiskey drink. Next rounds: Brennan's Irish Coffee at $12.00 with whiskey, the Espresso Martini at $16.00, or our New Orleans Style Coffee at $11.00 on its own. Say: “Ralph's Coffee is our chicory coffee with hazelnut and walnut liqueurs under whipped cream: nutty and comforting.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Ralph's Coffee is $8.00 on the saved dessert menu. It lists dark roast coffee with chicory, Frangelico hazelnut liqueur, Nocello walnut liqueur and whipped cream. The named ingredients suggest a roasty, nutty direction with cream, making the drink useful for a guest who enjoys coffee and nut flavours at dessert. Explain the two liqueurs individually so the guest understands the choice.\n\nThis is a useful comparison with Brennan's Irish Coffee, whose menu lists Irish whiskey and brown sugar. Compare the named ingredients and ask which flavour direction the guest prefers; the menu alone cannot rank their alcohol or caffeine content. Nor does a short list prove an unlisted ingredient is absent from a full recipe. Confirm temperature, glass, measures and full ingredients with the bar. The source of the name is unconfirmed, so ask a manager before giving a namesake story."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: Who is Ralph?\n\nAnswer: The menu does not explain the name; I will check with a manager.\n\nAsked: How does it differ from Irish Coffee?\n\nAnswer: Both list chicory coffee and whipped cream. Ralph's names Frangelico and Nocello; the Irish Coffee names Irish whiskey and brown sugar.\n\nAsked: Is it weaker?\n\nAnswer: I cannot rank the finished drinks from the ingredient list. I will check their measures with the bar."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Do not mix it up with Brennan's Irish Coffee: both are chicory coffee under whipped cream, so name the drink as you ring it and as it lands. Confirm at lineup that it is served hot, and in which glass. It carries two nut liqueurs and cream: read the service note and confirm at lineup before answering ingredient questions. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Replace unsupported strength ranking and ingredient absence claims with printed contrasts.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Brennan’s Irish Coffee",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "The bar builds the Irish Coffee; you present it. Carry it level so the cream cap stays whole, set it down with the handle toward the guest's right hand, and name it as it lands. Do not stir it: the point is to sip the hot coffee through the cool cream. If the table is having Bananas Foster, bring it just before the flambé, never set down beside the flame. Say: “Here's our Irish Coffee: sip it through the cream, don't stir it.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Irish Coffee as dessert arrives, above all with Bananas Foster or the bread pudding, and to a guest lingering after a meal. Next rounds: Ralph's Coffee at $8.00 for a nutty coffee profile, the Espresso Martini at $16.00, or our New Orleans-style coffee with chicory at $11 without whiskey. Say: “With the Foster, our Irish Coffee is lovely: chicory coffee, brown sugar and Tullamore D.E.W. under whipped cream.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Brennan's Irish Coffee is a signature drink, $12 at breakfast and lunch and at dinner: an Irish coffee with a New Orleans accent.\n\nIt starts with our dark roast coffee with chicory, CHICK-uh-ree, roasted chicory root blended in the New Orleans way, which adds a roasty, almost chocolatey depth. It is sweetened with brown sugar, spiked with Tullamore D.E.W. Irish whiskey, whose initials are those of Daniel E. Williams, the distillery's manager who became its owner, and topped with whipped cream.\n\nThe guest gets a warm coffee under a cool white cap of cream, and sips the hot coffee through it. It tastes warm, sweet and smooth, roasty from the chicory.\n\nIt is the dessert upsell, on the breakfast and lunch menu and on the dessert menu: the natural partner for Bananas Foster or the bread pudding. For a guest who wants coffee without whiskey, our New Orleans-style coffee with chicory is the same roast on its own."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What makes it Brennan's?\n\nAnswer: Our dark roast coffee with chicory, the New Orleans tradition, sweetened with brown sugar.\n\nAsked: What whiskey is in it?\n\nAnswer: Tullamore D.E.W. Irish whiskey; the initials are those of Daniel E. Williams, the distillery's manager who became its owner.\n\nAsked: Can I have it without alcohol?\n\nAnswer: Our New Orleans-style coffee with chicory is the same roast without the whiskey."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "It is served hot with a cream cap: carry it level and set it down with the handle toward the guest. It carries caffeine and whiskey. For a guest avoiding alcohol, offer the plain coffee with chicory, which still carries caffeine; for a guest avoiding caffeine, offer the Revive Cold-Pressed Juice, or say “I will ask the bar about decaf.” Fire it with dessert so it arrives with the Foster, not after. Allergens: read the service note and confirm at lineup."
+        },
+        {
+          "q": "Where does Irish coffee come from?",
+          "a": "Irish coffee is credited to Joe Sheridan, the chef at the Foynes flying boat terminal in County Limerick, in the winter of 1942 to 1943, warming passengers off a flight turned back by weather. The Buena Vista Cafe in San Francisco recreated it in 1952, and it pours Tullamore D.E.W., the whiskey in ours. Our accent is the chicory coffee and the brown sugar. Tell it in two sentences as the glass lands."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Remove Ralph’s unmeasured lower strength comparison.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Espresso Martini",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Espresso Martini as dessert menus go down, to a vodka drinker, and to a table that wants coffee and a nightcap at once. Next rounds: Ralph's Coffee at $8.00 for coffee with nut liqueurs, Brennan's Irish Coffee at $12.00, or the Banane au Chocolat at $16.00 for chocolate. Say: “Our Espresso Martini has a New Orleans accent: vodka with chicory, Frangelico and Kahlua, roasty and smooth.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Our Espresso Martini is the first of the two coffee cocktails on the dessert menu, at $16.00: the modern classic with a New Orleans accent.\n\nThe menu prints chicory, vodka, Frangelico and Kahlua. Chicory, CHICK-uh-ree, is the roasted root New Orleans blends into its coffee, which adds body and a cocoa-like bitterness. Frangelico, fran-JEL-ih-koh, is an Italian hazelnut liqueur, and Kahlua, kuh-LOO-uh, a coffee liqueur. Whether the chicory comes as our chicory coffee or another way, the measures, the glass and the garnish are confirmed with the bar.\n\nThe guest gets a dark coffee cocktail. It tastes roasty and smooth: chicory and coffee liqueur, toasted hazelnut, and clean vodka underneath.\n\nIt is the drink for a guest who wants dessert and a coffee in one glass, and for a vodka drinker at the end of a meal. Ralph's Coffee, beside it on the menu, carries the Frangelico too, in coffee under whipped cream."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: Is there espresso in it?\n\nAnswer: The menu prints chicory, vodka, Frangelico and Kahlua. I will check how the bar prepares the coffee component.\n\nAsked: Does it contain caffeine?\n\nAnswer: Yes, the listed Kahlua coffee liqueur contains caffeine. The total depends on the measures and any additional coffee; chicory itself does not supply caffeine.\n\nAsked: Will it keep me awake?\n\nAnswer: I cannot predict that for you, but it is not a caffeine free choice."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "The listed Kahlua contains caffeine, even if the bar uses no additional coffee. Confirm the coffee preparation and measures to discuss total caffeine; do not offer the printed drink as caffeine free. Frangelico is a hazelnut liqueur. Consult the service note and kitchen for an allergy request, with the bar checking its complete recipe, bottles and handling. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Remove Ralph’s unmeasured lower strength comparison.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Riviera",
+      "field": "lines.s20",
+      "value": "The Riviera is Lillet Blanc, a French wine aperitif, with sparkling wine and lemon: floral, citrusy and sparkling. It is $12.00 on the saved Bubbles menu.",
+      "reason": "Bar accuracy review 15 October 2026: Lillet is a wine aperitif; no measured recipe supports lightest ranking.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Riviera",
+      "field": "lines.s45",
+      "value": "The Riviera combines Lillet Blanc, a French wine aperitif, with sparkling wine and lemon. It suggests a floral, citrusy direction with bubbles, so I would offer it to someone who prefers that profile to bitter orange. It is $12.00 on the saved Bubbles menu; I can check the current pour and availability with the bar. Would you enjoy a floral aperitif?",
+      "reason": "Bar accuracy review 15 October 2026: Replace alcohol strength inference with flavor choice.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Riviera",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "Present the Riviera the moment it leaves the bar, while it is still sparkling: carry it by the stem or the base, set it down at the guest's right and name it as it lands. In the courtyard, keep the tray out of the direct sun. If the bar tops it at the table, let the guest see the wine go in. Say: “Here's your Riviera: Lillet, sparkling wine and lemon, light and bright.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Riviera to a guest settling into the courtyard or the Roost at Bubbles, to someone who prefers floral citrus to bitter orange, and as the first round before the Friday sabering. Next rounds: the Chandon Garden Spritz at $15.00 for something bittersweet, Brennan's Champagne Cocktail at $20.00, or the OBX at $12.00 for gin and peach. Say: “The Riviera is Lillet Blanc, sparkling wine and lemon: light, floral and lovely in the afternoon.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "The Riviera is one of the bubbly cocktails at Bubbles at Brennan's, our afternoon Champagne service in the Roost Bar and the courtyard, at $12.00.\n\nThe menu prints Lillet Blanc, sparkling wine and lemon, though it spells the aperitif Lilet; the bottle is Lillet, lee-LAY BLAHN, a French wine aperitif, floral and citrusy. Which sparkling wine, the measures, the glass and the garnish are confirmed with the bar.\n\nThe guest gets a pale, sparkling drink. It tastes light and bright: the Lillet's floral, citrusy notes, lifted by the bubbles and the lemon.\n\nIt is the easy afternoon drink, with an aperitif wine, lemon and sparkling wine. The name calls up the sunny Mediterranean coast, and it suits the courtyard. The same Lillet appears on the fall list in To Each His Own, with Calvados and quince."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What is Lillet?\n\nAnswer: A French wine aperitif, with a floral and citrus character.\n\nAsked: Is the Riviera low in alcohol?\n\nAnswer: Both Lillet and the sparkling wine contain alcohol. I will check the actual measures before comparing strength.\n\nAsked: When is Bubbles?\n\nAnswer: The saved menu lists weekday afternoons; I will confirm today's hours, location and current drink availability."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "The menu spells it Lilet; say and write Lillet. The Bubbles hours are disputed between the menu and an older listing, so confirm them on shift, and check the courtyard is not privately booked before you promise a table there. Which sparkling wine and the glass are lineup questions. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Flavor or sparkling format cannot establish lower alcohol.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Chandon Garden Spritz",
+      "field": "lines.s45",
+      "value": "The Chandon Garden Spritz pairs sparkling wine and bitter orange on our saved Bubbles menu, at $15.00. It is a bittersweet, sparkling aperitivo for someone who enjoys that flavor direction. I will confirm whether the bar pours Chandon's ready to serve bottle or builds the drink, and which bottling it uses. It is sparkling wine, not Champagne. Would you enjoy bitter orange?",
+      "reason": "Bar accuracy review 15 October 2026: Do not infer strength, country or production method from the menu alone.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:For Sentimental Reasons",
+      "field": "lines.s45",
+      "value": "For Sentimental Reasons combines allspice dram, pear purée and sparkling wine on our fall list. The pear brings fruit and body, the dram suggests baking spice, and the wine brings bubbles. It is $15.00 on the saved menu. If you prefer a drink without a conventional spirit, Personality is another sparkling option; I will check the actual bottle label if you need a precise alcohol figure.",
+      "reason": "Bar accuracy review 15 October 2026: Dram and wine both contain alcohol; avoid a lower strength or absolute zero promise.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:For Sentimental Reasons",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer For Sentimental Reasons at the start of brunch or dinner, to a table celebrating, and to a guest who would otherwise order a glass of sparkling wine. Next rounds: To Each His Own at $18.00 for orchard fruit with more depth, the Prisoner of Love at $16.00 for a gin drink, or the Personality at $16.00 for a spirit free option, with its label checked for strict alcohol avoidance. Say: “For Sentimental Reasons is pear and warm allspice topped with sparkling wine: fizzy, fruity and a lovely way to start.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "For Sentimental Reasons is the first drink on our fall list, Billboard Songs from 1946, at $15.00, the lowest price on that list. The list celebrates 80 years of Brennan's, which opened in 1946, and each drink carries the title of a song from that year.\n\nThe menu prints three parts: allspice dram, a liqueur that tastes of warm baking spice, then pear purée, topped with sparkling wine. Which sparkling wine, which allspice dram, the measures, the glass and the garnish are confirmed with the bar.\n\nThe guest gets a sparkling drink with the soft body the purée gives. It tastes fizzy and fruity, ripe pear first, with a gentle spice on the finish.\n\nIt is a sparkling way into the fall list: a brunch drink, a toast for a celebration, and the one to offer a guest who usually orders a glass of bubbles. Its spirit-free neighbor on the menu is the Personality, a sparkling rosé drink."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What is allspice dram?\n\nAnswer: An alcoholic liqueur flavored with allspice, a berry with a baking spice character. I will check which brand the bar uses.\n\nAsked: Is it sweet?\n\nAnswer: The dram and pear suggest sweetness. The actual balance depends on the wine and measures, so I will check today's preparation rather than promise it is dry or low in sugar.\n\nAsked: Why the song title?\n\nAnswer: The fall menu is titled Billboard Songs from 1946, the year Brennan's opened."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Say the full name, For Sentimental Reasons, when you ring it, so the bar never has to guess between song titles. Which sparkling wine, which allspice dram, the measures, the glass and the garnish are lineup questions for the bar; describe only the three printed parts until then. It is a sparkling drink: carry it straight from the bar so it keeps its fizz. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Do not equate bubbles or a fruit profile with low alcohol or low sugar.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Old Buttermilk Sky",
+      "field": "lines.s45",
+      "value": "Old Buttermilk Sky is our fall tequila sour: Volcán reposado, fig liqueur, lemon, egg white and cinnamon syrup, $18.00 on the saved menu. Expect a fig and cinnamon direction with lemon and an egg white texture. Do you enjoy fruit and spice in a sour? Oh! What It Seemed to Be uses a nonalcoholic agave alternative and fig syrup instead; I will check the label if an exact alcohol figure matters.",
+      "reason": "Bar accuracy review 15 October 2026: Avoid guaranteed preference, strength and absolute alcohol absence claims.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Old Buttermilk Sky",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer Old Buttermilk Sky to a margarita or whiskey sour drinker, and to a guest who wants a fall flavor in a lighter, silky drink. Next rounds: Five Minutes More at $20.00 for an herbal citrus drink, Rumors are Flying at $20.00 for whiskey, or Oh! What It Seemed to Be at $16.00, its spirit-free twin. Say: “Old Buttermilk Sky is a tequila sour with fig and cinnamon, silky from the egg white and bright with lemon.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Old Buttermilk Sky is the tequila sour on our fall list, Billboard Songs from 1946, at $18.00, named for one of the songs of the year Brennan's opened.\n\nThe menu prints Volcán Reposado Tequila, vol-KAHN reh-poh-SAH-doh, a tequila rested in oak; then fig liqueur, lemon, cinnamon syrup and egg white. Egg white is the classic way to give a sour its silky body. Which fig liqueur, the measures, the glass and the garnish are confirmed with the bar.\n\nThe guest gets a sour with a silky texture. It tastes warm and fruity, ripe fig and cinnamon over the rested tequila, with lemon keeping it bright.\n\nIt is the drink for a margarita or whiskey sour lover who wants something for fall. Its spirit-free twin on the menu, Oh! What It Seemed to Be, follows the same pattern on Lyre's non-alcoholic agave spirit with fig syrup, with the actual alcohol label checked when needed."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What does reposado mean?\n\nAnswer: Rested, referring to time in oak; it does not guarantee that a finished cocktail is softer or lower in alcohol.\n\nAsked: Can the egg white be omitted?\n\nAnswer: I will check the bar's full recipe and preparation before promising a modification.\n\nAsked: What is the nonalcoholic comparison?\n\nAnswer: Oh! What It Seemed to Be uses a nonalcoholic agave alternative and fig syrup, with lemon, egg white and cinnamon syrup. The actual bottle's alcohol figure still needs checking."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "It carries egg white, as printed: read the service note and confirm at lineup before you answer any question about egg. Do not mix it up with Oh! What It Seemed to Be, its spirit-free twin with the same lemon, egg white and cinnamon syrup: name the drink clearly when you ring it. Which fig liqueur and the glass are lineup questions. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Retain useful sour comparison without false strength or dietary assurances.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Prisoner of Love",
+      "field": "parts.technique",
+      "value": "gin, Earl Grey tea, clarified heavy cream and orange flower water; the clarification process, method and measures are not supplied",
+      "reason": "Bar accuracy review 15 October 2026: The menu does not prove a specific acid, curdling or filtration recipe.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Prisoner of Love",
+      "field": "lines.s45",
+      "value": "Prisoner of Love is gin with Earl Grey tea, clarified heavy cream and orange flower water, $16.00 on the saved fall menu. Earl Grey brings a bergamot tea direction and orange flower water adds floral aroma. The clarified cream is the point to explore with the bar: I can explain the general technique, but I will confirm how this drink is made. It still lists milk.",
+      "reason": "Bar accuracy review 15 October 2026: Distinguish general clarification from the unconfirmed house process; retain milk warning.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Prisoner of Love",
+      "field": "serviceNote",
+      "value": "Heavy cream means milk is present. Clarification is not evidence that milk allergens or lactose are absent. Alcohol. Confirm the full recipe, preparation and handling with the bar for a dietary request.",
+      "reason": "Bar accuracy review 15 October 2026: Clarification does not establish milk absence.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Prisoner of Love",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Prisoner of Love to a gin drinker, to a tea lover, and to a guest who wants something silky and fragrant before dinner or as a fragrant after dinner choice. Next rounds: Five Minutes More at $20.00 for a bolder herbal drink, For Sentimental Reasons at $15.00 for bubbles, or the Personality at $16.00 for a spirit free option, with its label checked for strict alcohol avoidance. Say: “Prisoner of Love is gin with Earl Grey tea and orange flower water, made silky with clarified cream.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Prisoner of Love is the gin drink on the saved fall menu, $16.00, with Earl Grey tea, clarified heavy cream and orange flower water. Its named ingredients suggest a fragrant tea and floral direction. Earl Grey offers a bergamot reference; orange flower water points to blossom aroma rather than a measured addition of orange juice. The menu does not name the gin or provide quantities.\n\nMilk clarification commonly uses curdling and filtration, but the menu does not identify the house's acid, sequence, filtration or holding procedure. Ask the bar how this version works before describing it. Compare it with Brandy Milk Punch for the printed differences: gin and tea here, brandy and vanilla there; both list cream. Learn the confirmed appearance and texture on shift, and use those observations rather than promising that every clarified drink is transparent or tastes the same."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What does clarified cream mean?\n\nAnswer: Clarification aims to remove suspended solids. In milk punch, curdling and filtering is one common approach; I will check the bar's exact process for this drink.\n\nAsked: Is milk still a concern?\n\nAnswer: The menu lists heavy cream. Clarification does not establish milk absence; ingredient concerns go to the service note and kitchen.\n\nAsked: Which gin is it?\n\nAnswer: The menu does not name the gin; I will check with the bar."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Do not describe clarified heavy cream as absent from the finished drink, and do not promise a transparent appearance or extended holding time from the menu wording. Confirm the gin, complete ingredients, clarification method, storage procedure, glass and garnish with the bar. Brandy Milk Punch is a different drink; both print cream. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Avoid inventing house clarification and remove the dairy free or shelf life implication.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Revive Cold-Pressed Juice",
+      "field": "parts.technique",
+      "value": "juice extracted by pressing; any later heat treatment or other pathogen control is unconfirmed",
+      "reason": "Bar accuracy review 15 October 2026: Cold pressing describes extraction, not subsequent processing.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Revive Cold-Pressed Juice",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the juice to a guest who wants no alcohol and no caffeine, to a light breakfast eater, to a child, and to a guest who turns down the coffee. Next rounds: the Personality at $16.00 or Oh! What It Seemed to Be at $16.00 for something more like a cocktail. Say: “We also pour Revive, a cold-pressed juice of strawberry, apple and pineapple: fresh and bright, with no alcohol.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Revive Cold-Pressed Juice sits on the breakfast and lunch menu at $10.00, under Cold Pressed Juices, locally made and fresh squeezed, and is used in no pairing.\n\nThe menu prints its fruit: strawberry, apple and pineapple. Cold pressing describes extraction by pressure; it does not identify any later heat or other treatment. Who presses it for us, and whether another juice joins it, are questions for the bar.\n\nThe guest gets a glass of cold juice. It tastes fresh, sweet and fruity: strawberry first, with apple and the tang of pineapple.\n\nIt is the drink for a guest who wants neither alcohol nor caffeine, and for anyone who would like something light with breakfast. It suits a child or a guest who is not drinking and does not want coffee, and it gives a breakfast table a fresh option beside the eye openers."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What is in it?\n\nAnswer: The menu lists strawberry, apple and pineapple.\n\nAsked: What does cold pressed mean?\n\nAnswer: It describes juice extraction by pressing. It does not tell us whether the juice is later heat treated or treated another way.\n\nAsked: Is it pasteurized?\n\nAnswer: The menu does not say. I will ask the bar or check the supplier label."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "The menu prints one juice, Revive, with strawberry, apple and pineapple: name those, and ask the bar before promising any other. Confirm current availability for a dinner order. Cold pressed is not proof of pasteurization or its absence. Check the supplier's processing and storage directions when a guest asks about untreated juice. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: FDA distinguishes extraction from later heat or nonheat pathogen control.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Origin Story",
+      "field": "origin",
+      "value": "The Sazerac Company's history connects the drink with Sazerac de Forge et Fils Cognac and describes a later shift toward rye amid phylloxera shortages. This is the producer's historical account, not proof of an exact first recipe or a universal change on one date. Origin Story is Brennan's Cognac interpretation of the Sazerac family.",
+      "reason": "Bar accuracy review 15 October 2026: Attribute the producer history and remove the exact first recipe claim.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Origin Story",
+      "field": "parts.taste",
+      "value": "Cognac, aromatic bitters and absinthe suggest fruit, oak and herbal notes; compare the actual served drinks before ranking softness or richness",
+      "reason": "Bar accuracy review 15 October 2026: No controlled house tasting supports relative softness or richness.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Origin Story",
+      "field": "lines",
+      "value": {
+        "s10": "Origin Story: Dudognon Cognac, barrel-aged Peychaud's and Jade Nouvelle-Orléans absinthe in the Sazerac family.",
+        "s20": "Origin Story is our Cognac interpretation of the Sazerac: Dudognon, barrel-aged Peychaud's and Jade Nouvelle-Orléans absinthe. It is $40 on the saved menu. Do you enjoy Cognac?",
+        "s45": "Origin Story explores the Cognac side of the Sazerac story with Dudognon, barrel-aged Peychaud's and Jade Nouvelle-Orléans absinthe. The producer's history links the cocktail with Cognac before rye became its familiar base, but this is a house interpretation, not a reconstruction of a proven first recipe. It is $40 on the saved menu. Do you prefer grape brandy or rye whiskey?"
+      },
+      "reason": "Bar accuracy review 15 October 2026: Keep history as attributed context and the house drink as an interpretation.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Origin Story",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the printed choice: Dudognon Cognac, barrel-aged Peychaud's and Jade Nouvelle-Orléans absinthe, $40. Ask whether the guest prefers Cognac or rye. Compare with the Classic Sazerac at $13 and Thompson's Dream at $20 as different ingredients and prices. Say: “Origin Story explores the Cognac side of the Sazerac family, with aromatic bitters and absinthe.” Confirm current availability before taking the order."
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "The Sazerac Company's history connects the drink with Sazerac de Forge et Fils Cognac and describes a later shift toward rye amid phylloxera shortages. This is the producer's historical account, not proof of an exact first recipe or a universal change on one date. Origin Story is Brennan's Cognac interpretation of the Sazerac family.\n\nThe saved menu prints Dudognon Cognac, barrel-aged Peychaud's and Jade Nouvelle-Orléans absinthe at $40. Confirm the Cognac expression, the bitters bottle or ageing process, measures, glass and service with the bar. Its grape spirit makes a useful comparison with the two rye based Sazeracs; taste the current preparation before asserting that it is softer or richer. Ask whether the guest wants to explore Cognac or prefers the familiar rye direction, then explain the ingredient and price differences without treating cost as a strength ranking."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: Is this the original Sazerac recipe?\n\nAnswer: It refers to the Cognac tradition in the Sazerac Company's historical account, but it is Brennan's interpretation, not a proven first recipe.\n\nAsked: What is Dudognon?\n\nAnswer: A Cognac producer associated with Grande Champagne; I will check the exact expression.\n\nAsked: Who ages the bitters?\n\nAnswer: The menu prints barrel-aged Peychaud's. I will confirm the bottle and process with the bar."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Name the $40 saved menu price and confirm current availability. Do not call this an exact original recipe or guarantee it is softer than the rye versions. Confirm the Dudognon expression, bitters source, measures and service. Ingredient questions require the full recipe, actual bottles and the kitchen's guidance. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Consistent historical boundary across all retained study notes.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Thompson’s Dream",
+      "field": "parts.taste",
+      "value": "rye spice, Creole bitters and herbal absinthe; compare the actual bottling and build before ranking strength against the Classic",
+      "reason": "Bar accuracy review 15 October 2026: Willett proof varies and recipe measures are unknown.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Thompson’s Dream",
+      "field": "origin",
+      "value": "The menu does not explain the name. Thompson Willett founded the distillery, but a connection to this cocktail name requires confirmation from the house.",
+      "reason": "Bar accuracy review 15 October 2026: Do not teach a guessed namesake as the expected guest answer.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Thompson’s Dream",
+      "field": "lines.s20",
+      "value": "Thompson's Dream uses Willett 4-year rye, Bitter Truth Creole Bitters and a St. George absinthe rinse. It is a different Sazerac selection for exploring the rye, bitters and rinse together.",
+      "reason": "Bar accuracy review 15 October 2026: Do not imply higher proof means guaranteed stronger or bolder finished drink.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Thompson’s Dream",
+      "field": "lines.s45",
+      "value": "Thompson's Dream changes all three named ingredients from our Classic Sazerac: Willett 4-year rye, Bitter Truth Creole Bitters and a St. George absinthe rinse. It is $20 on the saved menu. That makes it useful for exploring rye spice and herbal aromas, though I would check today's bottling and build before comparing strength. Origin Story is the Cognac alternative. Which spirit do you usually enjoy?",
+      "reason": "Bar accuracy review 15 October 2026: Remove unmeasured strength and exact origin claims.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Thompson’s Dream",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer Thompson's Dream to a guest ordering a second Sazerac, and to a rye lover curious about another bottling. It sits between the Classic at $13 and Origin Story at $40. Next rounds: Origin Story, or Rumors are Flying at $20.00, our barrel-aged rye with tart cherry. Say: “If you loved the Sazerac, Thompson's Dream is the next rung: Willett rye, Creole bitters and a St. George absinthe rinse.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Thompson's Dream is $20 on the saved menu and lists Willett 4-year rye, Bitter Truth Creole Bitters and a St. George absinthe rinse. All three differ from the Classic Sazerac, which names Sazerac rye, Peychaud's and Herbsaint. That makes the pair useful for learning how a change of spirit, bitters and aromatic rinse alters a familiar family. Start with the ingredient comparison rather than promising a stronger finished drink.\n\nThe menu does not give measures, proof, glass or garnish, so confirm the actual preparation. A bottle's proof alone cannot establish the alcohol in a served drink without its measure. Ask what the guest enjoys about rye and anise, then explain the available choices. The name's connection to Thompson Willett is unconfirmed; ask the house before telling that story. Origin Story offers the Cognac comparison on the same menu."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: Who is Thompson?\n\nAnswer: The menu does not explain the name; I will ask the bar.\n\nAsked: How does it differ from the Classic?\n\nAnswer: It changes Sazerac rye to Willett 4-year rye, Peychaud's to Bitter Truth Creole Bitters, and Herbsaint to a St. George absinthe rinse.\n\nAsked: Is it stronger?\n\nAnswer: I will check the current bottle's proof and the house measures before comparing finished drinks."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Confirm the Willett bottling and proof, measures, glass, garnish and service at lineup. Do not assume the name honors Thompson Willett until the house confirms it. A higher bottle proof would not alone establish more alcohol per served drink. Check the actual bottles and full recipe for ingredient questions. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Remove stronger recipe guarantee and unverified namesake.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Classic Sazerac",
+      "field": "lines.s45",
+      "value": "The Sazerac is New Orleans’ official cocktail, named so by the Louisiana Legislature in 2008: the city’s, not the state’s. It’s Sazerac rye whiskey, stirred with Peychaud’s, a bright red New Orleans bitters with anise and cherry notes, and served in a glass rinsed with Herbsaint, the anise liqueur created in New Orleans in 1934, for anise aroma and flavor. It’s spirit-forward, spicy and aromatic. If you’d like to go further, we have two luxury versions: Thompson’s Dream with Willett rye, and Origin Story with Cognac and absinthe.",
+      "reason": "Bar accuracy review 15 October 2026: A rinse contributes flavor as well as aroma.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Classic Sazerac",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Sazerac to whiskey drinkers, to anyone who asks for a New Orleans cocktail, and before dinner. Then climb the ladder: Thompson's Dream at $20 for Willett rye, Origin Story at $40 for a Cognac interpretation. Say: “The Sazerac is New Orleans' official cocktail: Sazerac rye and Peychaud's bitters, in a glass rinsed with Herbsaint.” For a curious guest, describe all three rungs and let them choose."
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "The Classic Sazerac is a Brennan's signature drink, $13 at breakfast and lunch and at dinner, and New Orleans' own cocktail.\n\nThe Louisiana Legislature named it the official cocktail of New Orleans in 2008: the city's, not the state's. Ours is Sazerac rye whiskey stirred with Peychaud's, PAY-shoze, the bright red New Orleans bitters with anise and cherry notes, and served without ice in a glass rinsed with Herbsaint, ERB-sant, the anise liqueur created in New Orleans in 1934. The rinse contributes anise aroma and flavor. Sugar and lemon peel are confirmed with the bar.\n\nThe guest gets a short, amber, iceless drink with an anise perfume. It tastes spirit-forward, spicy and aromatic, and strong.\n\nIt is the first rung of the house's Sazerac ladder: $13, then Thompson's Dream at $20 with Willett rye, then Origin Story at $40 with Cognac and absinthe, a Cognac interpretation of the family. It suits the guest before dinner or with the steak."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: Is it really the official cocktail?\n\nAnswer: Yes, of the city of New Orleans, named by the Louisiana Legislature in 2008; the city's, not the state's.\n\nAsked: What is Herbsaint?\n\nAnswer: ERB-sant: an anise liqueur created in New Orleans in 1934. It rinses the glass and contributes anise aroma and flavor.\n\nAsked: Can I have it on the rocks?\n\nAnswer: It is served without ice. I will check with the bar before promising it on the rocks."
+        },
+        {
+          "q": "What is the classic Sazerac build, and is it ours?",
+          "a": "The Classic Sazerac at Brennan's is Sazerac rye stirred with Peychaud's bitters, served without ice in a glass rinsed with Herbsaint (ERB-saint), $13; confirm sugar and lemon peel with the bar. The Sazerac Company's own recipe is a sugar cube, three dashes of Peychaud's, an ounce and a half of Sazerac Rye, a quarter ounce of Herbsaint and a lemon peel, built across two glasses and served neat in a chilled rocks glass; the IBA version is Cognac based with absinthe. Give those as the classic, never as the house build. If a guest asks for it on the rocks, check with the bar before promising it. Two luxury versions: Thompson's Dream with Willett rye, and Origin Story with Cognac and absinthe; the price ladder is $13, $20 and $40."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "It is strong and served without ice: confirm the glass and the bar's build, sugar and lemon peel included, at lineup. Give the Sazerac Company's recipe only as the classic, never as our house build. Never say America's first cocktail. Say Herbsaint without the H. Pronounce Peychaud's PAY-shoze, and confirm the pharmacy story at lineup before telling it. Allergens: read the service note and confirm at lineup."
+        },
+        {
+          "q": "What story can I tell at the table?",
+          "a": "Three short ones, each true. First, the bitters: Antoine Peychaud kept his apothecary at what is now 437 Royal Street, the same block as ours at 417, as the Sazerac Company tells it; the house has not said it wants that told, so check at lineup first. Second, the bottles: Sazerac rye, Peychaud's and Herbsaint are all Sazerac Company brands, one New Orleans family in one glass. Third, the name Herbsaint comes from herbe sainte, the Creole name for wormwood; it was created in 1934 to stand in for absinthe, banned from 1912 until 2007. If a guest tells you Peychaud served it in an egg cup and so gave us the word cocktail, smile: the word was in print in 1806. Never call it America's first cocktail."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Carry corrected rinse and origin language through study notes.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Brennan’s Bloody Mary",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Bloody Mary to a guest who wants a savory eye opener, and to anyone who orders a Bloody Mary by name. For a guest who wants it richer, the Bloody Bull at $13.00; for a sweeter start, the Brandy Milk Punch at $12.00; without alcohol, the Revive cold-pressed juice at $10.00. Say: “Our Bloody Mary is vodka and our housemade mix with pickled okra and spicy beans: savory, tangy and bright.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Brennan's Bloody Mary is one of the classic eye openers, $11.00 at breakfast and lunch, the morning drinks New Orleans is known for.\n\nThe menu prints four parts: our housemade Bloody Mary mix, vodka, pickled okra and spicy beans. The Bloody Bull's menu line prints a housemade Bloody Mary mix too, with beef bouillon added; whether it is the same batch is a question for the bar, with which vodka, how hot the mix runs today and the glass.\n\nThe guest gets a red, savory drink with the pickled okra and spicy beans standing in it. It tastes savory, tangy and spicy, with a pickled crunch.\n\nCompare the printed menu with the Bloody Bull, which explicitly adds beef bouillon. The Bloody Mary mix is not fully disclosed: consult the service note and kitchen for ingredient concerns, and ask the bar for its complete recipe. For a guest who wants a morning drink without alcohol, the Revive cold-pressed juice takes its place."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: How is it different from the Bloody Bull?\n\nAnswer: The Bloody Bull explicitly lists beef bouillon. The Bloody Mary lists a housemade mix, pickled okra and spicy beans; that shorter list does not establish beef absence.\n\nAsked: How spicy is it?\n\nAnswer: That depends on the mix; I will check with the bar how it is running today.\n\nAsked: Which vodka do you use?\n\nAnswer: The menu prints vodka without naming it, so I will check with the bar."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "The menu prints the mix as housemade, but not the vodka or the heat: those are lineup questions for the bar. For a guest who avoids beef, ask the bar for the complete mix recipe before recommending it. It is poured at breakfast and lunch only. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Remove remaining conflicting wording from retained study notes.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Bloody Bull",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Bloody Bull to a guest who likes a savory morning drink, and with the turtle soup or the gumbo. On the Traditional Breakfast it arrives with the soup. For a guest who wants it classic, the Brennan's Bloody Mary at $11; for a guest skipping alcohol, the Café Glacé de la Maison at $11.00. Say: “Our Bloody Bull is a Bloody Mary with beef bouillon, savory and rich, and it's wonderful with the turtle soup.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "The Bloody Bull is a Brennan's signature drink, $13 at breakfast and lunch, and the drink poured with the soup course on the Traditional Breakfast.\n\nIt is a Bloody Mary with beef bouillon stirred in: vodka, our housemade Bloody Mary mix and bouillon, a clear, savory beef broth. The guide calls it a Brennan's breakfast classic, and that is how a server says it. Where it was first made is not something we tell as fact: a guest who asks gets a manager's answer, never a claim that it was invented here.\n\nThe guest gets a deep red, savory drink. It tastes savory, rich and meaty, almost like a spicy, chilled consommé, with the spice of the house mix.\n\nIt is wonderful with the turtle soup, which is why the tasting pairs them. Brennan's Bloody Mary at $11 is the related menu choice, with pickled okra and spicy beans. If the guest avoids beef, confirm the complete mix before recommending it as suitable."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What makes it a Bull?\n\nAnswer: Beef bouillon, a clear, savory beef broth, stirred into a Bloody Mary with our housemade mix and vodka.\n\nAsked: Was it invented here?\n\nAnswer: It is a Brennan's breakfast classic; I will check with a manager before telling its history.\n\nAsked: Is it spicy?\n\nAnswer: The spice comes from our housemade mix. If you are sensitive to heat, I will ask the bar how it is running today."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "It carries beef: say so plainly. If a guest avoids beef, confirm the Bloody Mary's complete mix before suggesting it as an alternative. Never say it was invented here; call it a Brennan's breakfast classic and leave its history to a manager. On the Traditional Breakfast it is the included soup course drink: do not charge it. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Remove remaining conflicting wording from retained study notes.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Revive Cold-Pressed Juice",
+      "field": "lines.s20",
+      "value": "Revive is a cold-pressed juice of strawberry, apple and pineapple, listed as locally made. It suggests a bright fruit profile. I can check the supplier's treatment and storage information if you need it.",
+      "reason": "Bar accuracy review 15 October 2026: Remove no heat processing claim.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Revive Cold-Pressed Juice",
+      "field": "lines.s45",
+      "value": "Revive lists strawberry, apple and pineapple and is $10.00 on the saved breakfast menu. Cold pressed describes how the juice is extracted; it does not establish whether there is a later heat or other treatment. I will check the supplier's label if processing or ingredients matter to your choice. Would you like a fruit juice alongside breakfast, or a coffee instead?",
+      "reason": "Bar accuracy review 15 October 2026: Separate extraction and later processing.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Rumors are Flying",
+      "field": "parts.technique",
+      "value": "the menu prints Brennan's Barrel Aged Rittenhouse Rye with tart cherry, brown sugar and orange bitters; confirm the ageing scope, method and measures",
+      "reason": "Bar accuracy review 15 October 2026: Do not infer a house ageing process.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Rumors are Flying",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer Rumors are Flying to a guest who orders an Old Fashioned, to a rye lover, and as a slow drink after dinner. Next rounds: the Classic Sazerac at $13.00 to try the New Orleans original, Thompson's Dream at $20.00 for another rye selection, or the Personality at $16.00, its spirit-free twin. Say: “Rumors are Flying is Brennan's Barrel Aged Rittenhouse Rye with tart cherry and brown sugar: rich, spicy and a little tart.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Rumors are Flying is the whiskey drink on our fall list, Billboard Songs from 1946, at $20.00, the top price on the list beside Five Minutes More.\n\nThe menu prints Brennan's Barrel Aged Rittenhouse Rye, then tart cherry juice, brown sugar syrup and orange bitters. The printed barrel aged description does not establish exactly what was aged, who did it, the vessel or duration. Quote the menu and ask the bar for the process. The measures, the method, the glass and the garnish are confirmed with the bar too.\n\nThe guest gets a dark, spirit-forward drink. It tastes rich: rye spice and oak, with dark tart cherry and a warm brown sugar roundness.\n\nIt is the drink for an Old Fashioned lover, and the bridge to our Sazerac ladder. Its spirit-free twin on the menu is the Personality, which shares the tart cherry juice and brown sugar syrup."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What is Brennan's barrel-aged rye?\n\nAnswer: The menu prints Brennan's Barrel Aged Rittenhouse Rye. I will confirm what was aged, who did it, the vessel and duration with the bar.\n\nAsked: Is it like an Old Fashioned?\n\nAnswer: Close: rye, sugar and bitters, with tart cherry juice for brightness.\n\nAsked: Is it sweet?\n\nAnswer: It includes brown sugar syrup and tart cherry juice. I will check the current balance before comparing sweetness with another drink."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Do not mix it up with the Personality, its spirit-free twin: both carry tart cherry juice and brown sugar syrup, so repeat the name when you ring it. Quote the menu's barrel aged description and confirm what was aged, by whom, in which vessel and for how long. The measures, the glass and whether it comes over ice are lineup questions. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Remove remaining conflicting wording from retained study notes.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Brennan’s Bloody Mary",
+      "field": "why",
+      "value": "A savory eye opener with vodka, housemade mix, pickled okra and spicy beans. Confirm the complete mix before advising someone who avoids beef.",
+      "reason": "Bar accuracy review 15 October 2026: A short menu list does not establish beef absence from the complete housemade mix.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Brennan’s Bloody Mary",
+      "field": "lines.s45",
+      "value": "Our Bloody Mary is one of the classic eye openers, the morning drinks New Orleans is known for. It is vodka with our housemade Bloody Mary mix, finished with pickled okra and spicy beans for a pickled crunch. The Bloody Bull explicitly lists beef bouillon; I will check the complete mix recipe before advising on an ingredient you avoid. Ask me about the spice level and I will check with the bar.",
+      "reason": "Bar accuracy review 15 October 2026: A short menu list does not establish beef absence from the complete housemade mix.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Bloody Bull",
+      "field": "why",
+      "value": "The savory eye opener and the soup course's drink on the saved Traditional Breakfast. It lists beef bouillon; confirm another drink's complete recipe before recommending it to someone avoiding beef.",
+      "reason": "Bar accuracy review 15 October 2026: Do not recommend the Bloody Mary as excluding beef without confirming its complete mix.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
     }
   ]
 }
