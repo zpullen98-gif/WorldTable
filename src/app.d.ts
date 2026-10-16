@@ -42,7 +42,8 @@ declare global {
 			/** /quizzes: the quick quiz, its answers and its results (routes/quizzes). */
 			qq?: {
 				qs: Array<{
-					kind: 'house' | 'deck' | 'lexicon';
+					/** cuisine: one of Cuisine's multiple choice questions, ref its id (since 12 Oct 2026). */
+					kind: 'house' | 'deck' | 'lexicon' | 'cuisine';
 					ref: string;
 					label: string;
 					stem: string;
@@ -50,12 +51,47 @@ declare global {
 					answer: string;
 					why?: string;
 					drill?: string;
+					/** cuisine: the entry it is about (Read about it) and the card it teaches (Study the misses). */
+					entry?: string;
+					card?: string;
 				}>;
 				i: number;
 				picked: string | null;
 				right: number;
 				chosen: Array<string | null>;
 				done: boolean;
+			};
+			/**
+			 * /cuisine: a card run and its summary, or a round and its results
+			 * (routes/cuisine). The chapters, the entries, the deck screens and
+			 * the views are drawn from the address and carry no state.
+			 */
+			cz?: {
+				/** 'run': the card screen then the summary; 'round': the questions then the results. */
+				s: 'run' | 'round';
+				/** run: the deck (all, lv:<n>, ch:<key>, e:<entryId>, today or misses). */
+				deck?: string;
+				/** run: the card ids in the order shown, an Again card sent round once more at the end. */
+				refs?: string[];
+				/** run and round: the place, from 0. */
+				i: number;
+				flipped?: boolean;
+				got?: number;
+				again?: number;
+				/** run: the card ids answered Again. */
+				missed?: string[];
+				/** round: the scope (all, lv:<n>, ch:<key>, e:<entryId>) and the kind. */
+				quiz?: string;
+				kind?: 'mc' | 'steps' | 'match';
+				/** round: each item as dealt: its id, its shuffled options (mc), its shuffled stages (steps) or its right column's order (match). */
+				items?: Array<{ id: string; opts?: string[]; pool?: string[]; order?: number[] }>;
+				/** round, the item on show: the option picked (mc), the pool indexes placed (steps), the pairs made as [left, right] (match). */
+				picked?: string | null;
+				placed?: number[];
+				links?: Array<[number, number]>;
+				/** round: each answered item, right or not, with what was said and the positions or rows that were wrong. */
+				answers?: Array<{ ok: boolean; said?: string; wrong?: number[] }>;
+				done?: boolean;
 			};
 		}
 		// interface Platform {}

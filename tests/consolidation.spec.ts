@@ -33,7 +33,7 @@ const HUSSARDE = 'd-1q0xk7jv';
 const SHOTS = process.env.CONS_SHOTS ?? '';
 
 /** The shallow states the two hubs keep in their entries (src/app.d.ts App.PageState). */
-type Q = { kind: 'house' | 'deck' | 'lexicon'; ref: string; options: string[]; answer: string };
+type Q = { kind: 'house' | 'deck' | 'lexicon' | 'cuisine'; ref: string; options: string[]; answer: string; card?: string };
 type Hub = { qq?: { qs: Q[]; i: number; chosen: Array<string | null> }; fc?: { refs?: string[] } };
 
 test.use({ viewport: { width: 390, height: 844 } });
@@ -227,7 +227,8 @@ test('3b. Study the misses deals exactly the missed items that have cards, of ev
 	await answerAll(page, 3);
 	const qq = (await round(page))!;
 	const missed = qq.qs.filter((q, i) => qq.chosen[i] !== q.answer);
-	const want = missed.map((q) => (q.kind === 'house' ? `h:${q.ref}` : q.kind === 'deck' ? `c:${q.ref}` : `t:${q.ref}`));
+	/* A missed Cuisine question goes back as the card it teaches (since 12 Oct 2026). */
+	const want = missed.map((q) => (q.kind === 'house' ? `h:${q.ref}` : q.kind === 'deck' ? `c:${q.ref}` : q.kind === 'cuisine' ? `z:${q.card}` : `t:${q.ref}`));
 	await page.getByRole('link', { name: 'Study the misses' }).click();
 	await expect(page.locator('.deckframe .where')).toHaveText(new RegExp(`^Card 1 of ${new Set(want).size} · The misses$`));
 	const fc = await page.evaluate(() => (history.state?.['sveltekit:states'] as Hub | undefined)?.fc ?? null);
@@ -459,11 +460,17 @@ test('8. old addresses land, each with a Back whose first press is its parent', 
 	}
 });
 
-test('9. four tab words and a quiet More, one row at 390 and 375, every target 44 px, the lit one marked', async ({ page }) => {
+/* The Table's bar is six words since 12 Oct 2026: Cuisine, the owner's sixth
+   tab, sits between Library and More (the Ledger and the Codex keep four). */
+test('9. five tab words and a quiet More, one row at 390 and 375, every target 44 px, the lit one marked', async ({ page }) => {
+	/* Twelve page loads (six screens at two widths): more than the default
+	   thirty seconds allows once the suite runs four workers. */
+	test.setTimeout(90_000);
 	for (const [path, lit] of [
 		['/flashcards', 'Flashcards'],
 		['/quizzes', 'Quizzes'],
 		['/library', 'Library'],
+		['/cuisine', 'Cuisine'],
 		['/more', 'More'],
 		['/', 'Home']
 	] as const) {
@@ -472,7 +479,7 @@ test('9. four tab words and a quiet More, one row at 390 and 375, every target 4
 			await goto(page, path);
 			const tabs = page.locator('nav.modebar .modetab');
 			const words = (await tabs.allTextContents()).map((t) => t.replace(/\d+\s*due$/, '').trim());
-			expect(words).toEqual(['Home', 'Flashcards', 'Quizzes', 'Library', 'More']);
+			expect(words).toEqual(['Home', 'Flashcards', 'Quizzes', 'Library', 'Cuisine', 'More']);
 			const boxes = await tabs.evaluateAll((els) => els.map((e) => e.getBoundingClientRect()).map((r) => ({ y: Math.round(r.top), w: r.width, h: r.height, right: r.right })));
 			expect(Math.max(...boxes.map((b) => b.y)) - Math.min(...boxes.map((b) => b.y)), `one row at ${width} on ${path}`).toBeLessThan(8);
 			for (const b of boxes) expect(b.w >= 44 && b.h >= 44, 'every tab at least 44 by 44').toBe(true);
@@ -486,8 +493,8 @@ test('9. four tab words and a quiet More, one row at 390 and 375, every target 4
 				return { cur: e.getAttribute('aria-current'), border: c.borderTopWidth + c.borderTopStyle + c.borderLeftWidth };
 			})
 		);
-		const more = styles[4];
-		const unlit = styles.slice(0, 4).find((s) => !s.cur)!;
+		const more = styles[5];
+		const unlit = styles.slice(0, 5).find((s) => !s.cur)!;
 		expect(more.border).not.toBe(unlit.border);
 		expect(more.cur === 'page').toBe(lit === 'More');
 	}
@@ -501,7 +508,8 @@ const SCREENS = [
 	'/repertoire', '/coverage', '/practise/firing', '/practise/calibrate',
 	'/service', '/service/knife-work', '/service/deck', '/service/deck/test', '/service/deck/say', '/service/deck/lineup', '/service/drill',
 	'/recipes', '/recipe/cacio-e-pepe', '/chapter/italian', '/family', '/lexicon', '/pantry', '/technique', '/technique/braising',
-	'/plates', '/palate', '/safety', '/study'
+	'/plates', '/palate', '/safety', '/study',
+	'/cuisine', '/cuisine?ch=mother-sauces', '/cuisine?ch=mother-sauces&e=hollandaise', '/cuisine?deck=all', '/cuisine?view=tree', '/cuisine?view=ladder'
 ];
 
 test('10. one Back on every screen but Home, clear of the badge at rest and when scrolled', async ({ page }) => {
@@ -516,8 +524,23 @@ test('10. one Back on every screen but Home, clear of the badge at rest and when
 		let r = (await btn.boundingBox())!;
 		expect(r.width >= 44 && r.height >= 44, `${path}: Back is 44 by 44`).toBe(true);
 		expect(hits(r), `${path}: Back clear of the badge at scroll 0`).toBe(false);
-		await page.evaluate(() => window.scrollTo(0, Math.min(2000, document.documentElement.scrollHeight)));
-		await page.waitForTimeout(200);
+		/* Scrolled on the page as drawn, not as it was while its data was still
+		   coming: under four busy workers a page measured short (12 Oct 2026:
+		   /menu/costing before the house had loaded) left the scroll a few
+		   pixels short of where the row sticks and moves clear of the badge,
+		   and the content that arrived after never moved it. So the scroll is
+		   made again until the page has settled, and the assertions below hold
+		   the settled page to the same rule. */
+		await expect
+			.poll(
+				async () => {
+					await page.evaluate(() => window.scrollTo(0, Math.min(2000, document.documentElement.scrollHeight)));
+					await page.waitForTimeout(200);
+					return hits((await btn.boundingBox())!);
+				},
+				{ message: `${path}: Back clear of the badge once scrolled`, timeout: 10_000 }
+			)
+			.toBe(false);
 		r = (await btn.boundingBox())!;
 		expect(r.y >= 0 && r.y + r.height <= 844, `${path}: Back still in view when scrolled`).toBe(true);
 		expect(hits(r), `${path}: Back clear of the badge when scrolled`).toBe(false);
@@ -566,7 +589,11 @@ test('12. Home is the four level cards and nothing else focusable', async ({ pag
 });
 
 test('13. words, never glyphs, and nothing smaller than 15 px or cut with an ellipsis on the new screens', async ({ page }) => {
-	for (const path of ['/level/1', '/flashcards', '/quizzes', '/library', '/more']) {
+	/* Six screens with a settling pause each, Cuisine's among them since 12 Oct
+	   2026: about 15 seconds alone, past the default thirty once the suite runs
+	   four workers beside the axe runs. */
+	test.setTimeout(90_000);
+	for (const path of ['/level/1', '/flashcards', '/quizzes', '/library', '/cuisine', '/more']) {
 		await goto(page, path);
 		await page.waitForTimeout(1500);
 		const bad = await page.evaluate(() => {

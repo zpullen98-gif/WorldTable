@@ -58,7 +58,11 @@ const VIEWS = [
 	{ path: '/menu/preps', name: 'prep list' },
 	{ path: '/menu/producers', name: 'producer list' },
 	{ path: '/menu/costing', name: 'costing sheet' },
-	{ path: '/practise/calibrate', name: 'calibration' }
+	{ path: '/practise/calibrate', name: 'calibration' },
+	/* Cuisine, the Table's sixth tab (12 Oct 2026): its root. The screens that
+	   draw from a chapter file are in the SEEDED block below, each waiting for
+	   the part that only exists once its data is in. */
+	{ path: '/cuisine', name: 'cuisine' }
 ];
 
 /* Both services. The app follows prefers-color-scheme, so emulating it is
@@ -190,7 +194,16 @@ const SEEDED: Array<{ path: string; name: string; ready: string; seed?: (page: P
 		then: async (page) => {
 			await page.locator('.study .row').first().click();
 		}
-	}
+	},
+	/* Cuisine's screens that draw from its files once the page has read the
+	   address: the chapter doors, a chapter, an entry read whole (sections,
+	   ratios, faults, At Brennan's, sources), the family tree and the roux
+	   ladder. */
+	{ path: '/cuisine', name: 'cuisine with its chapters drawn', ready: '.chapters .door' },
+	{ path: '/cuisine?ch=mother-sauces', name: 'a cuisine chapter', ready: '.entries .door' },
+	{ path: '/cuisine?ch=mother-sauces&e=hollandaise', name: 'a cuisine entry', ready: 'article.czentry' },
+	{ path: '/cuisine?view=tree', name: 'the cuisine family tree', ready: '.careme' },
+	{ path: '/cuisine?view=ladder', name: 'the cuisine roux ladder', ready: 'ol.rungs' }
 ];
 
 /** The House's own fixture, the one house.spec.ts imports and switches. */

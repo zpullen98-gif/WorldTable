@@ -14,7 +14,10 @@
                   in printed order; Producers (under My restaurant) deals
                   the cards of every producer behind a dish (the bar's and
                   the cellar's are their rooms' to deal), and a card's Flash
-                  these producers opens item-producers:{id}
+                  these producers opens item-producers:{id}; Cuisine (the
+                  sixth tab's cards, 12 Oct 2026): a deck per chapter that
+                  holds cards at the chosen level (cz:ch:{key}), and Every
+                  Cuisine card (cz:all), each card a z: reference
     a deck        ?deck={id}: its name, "{n} cards · {m} learnt", Narrow this
                   deck where the engine has a filter, and Start
     the run       ?deck={id}&run=1: the card screen (DeckFrame.svelte), then
@@ -46,6 +49,12 @@
                         records `missed` and sends the card round once more,
                         once per card per local day (flipRecordable)
     a Lexicon term      nothing, as the Lexicon's own cards recorded nothing
+    a Cuisine card      session.markDrilled('cuisine:<id>'): Got it `met`,
+                        Again `missed` and sent round once more, once per
+                        card per local day (lib/cuisine.ts recordable), the
+                        grade the Cuisine tab's own card screen writes; dealt
+                        by dealCards (due, then new in teaching order, then
+                        the rest, twenty a run)
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
@@ -53,6 +62,9 @@
 	import { page } from '$app/state';
 	import { onMount, tick } from 'svelte';
 	import { loadFloorDeck, loadLexicon, loadPlates } from '$lib/data';
+	import { cuisine } from '$lib/stores/cuisine.svelte';
+	import { cardGrade, cardsInScope, czSlug, dealCards, recordable, type CzCard, type CzEntry, type CzTuple } from '$lib/cuisine';
+	import CzCardFace from '$lib/components/cuisine/CzCardFace.svelte';
 	import { plateIndexes } from '$lib/plates';
 	import { session } from '$lib/stores/session.svelte';
 	import { house } from '$lib/stores/house.svelte';
@@ -90,6 +102,7 @@
 		mounted = true;
 		today.load();
 		void levels.load();
+		void cuisine.load();
 		void loadFloorDeck().then(
 			(d) => (deck = d),
 			() => {
@@ -208,6 +221,30 @@
 	const slipped = $derived(deck ? slipping(deck, session.drillLog, Date.now()) : []);
 	const dueNow = $derived(today.at(chosen));
 
+	/* Cuisine's cards (the sixth tab): z: references, read from its index, a
+	   chapter's bodies loaded when one of its cards is on show. A chapter deck
+	   holds the chapter's cards at the chosen level, or at every level under
+	   Show all or Narrow this deck's Every level; Every Cuisine card is every
+	   level always. */
+	const czIndex = $derived(cuisine.index);
+	const czChapterTitle = (key: string) => czIndex?.chapters.find((c) => c.key === key)?.title ?? 'A chapter';
+	function czCards(id: string, every = false): CzTuple[] {
+		if (!czIndex) return [];
+		if (id === 'cz:all') return cardsInScope(czIndex, { kind: 'all' });
+		if (id.startsWith('cz:ch:')) {
+			const cards = cardsInScope(czIndex, { kind: 'chapter', key: id.slice(6) });
+			return all || every ? cards : cards.filter((c) => c[2] === chosen);
+		}
+		return [];
+	}
+	/** True while a z: card's chapter is still on its way (never once a file has failed). */
+	function czOpening(ref: string | undefined): boolean {
+		if (!ref?.startsWith('z:') || cuisine.failed) return false;
+		if (!czIndex) return true;
+		const ch = cuisine.chaptersOfCards([ref.slice(2)])[0];
+		return !!ch && !cuisine.has(ch);
+	}
+
 	/** A deck's name, for its heading, its row and the card screen's position line. */
 	function deckName(id: string): string {
 		if (id === 'due') return 'Due today';
@@ -229,6 +266,8 @@
 		if (id === 'producers') return say('deckProducers');
 		if (id.startsWith('item-producers:')) return say('deckItemProducers', { name: (current && findItem(current, id.slice(15))?.name) || 'One item' });
 		if (id.startsWith('deck:')) return sectionTitle(id.slice(5));
+		if (id === 'cz:all') return 'Every Cuisine card';
+		if (id.startsWith('cz:ch:')) return `Cuisine · ${czChapterTitle(id.slice(6))}`;
 		return 'A deck';
 	}
 
@@ -277,6 +316,7 @@
 		}
 		if (id === 'lexicon') return lexAt(chosen).map((s) => `t:${s}`);
 		if (id === 'lexicon-all') return allLexicon.map((s) => `t:${s}`);
+		if (id.startsWith('cz:')) return czCards(id, opts.every).map((c) => `z:${c[0]}`);
 		return [];
 	}
 
@@ -298,7 +338,7 @@
 			else if (k === 's') {
 				const card = tasteByKey.get(id);
 				if (card && current && today.drilled.some((e) => e.k === drilledKey(current.id, card.itemId, tasteGrade(card)) && e.v !== 'missed')) n++;
-			}
+			} else if (k === 'z' && met.has(czSlug(id))) n++;
 		}
 		return n;
 	}
@@ -322,8 +362,10 @@
 		if (id === 'misses') {
 			const p = new URLSearchParams(opts.search ?? location.search);
 			const list = (k: string) => (p.get(k) ?? '').split(',').map((s) => s.trim()).filter(Boolean);
-			return [...list('h').map((x) => `h:${x}`), ...list('c').map((x) => `c:${x}`), ...list('t').map((x) => `t:${x}`), ...list('k').map((x) => `k:${x}`), ...list('s').map((x) => `s:${x}`), ...list('r').map((x) => `r:${x}`)];
+			return [...list('h').map((x) => `h:${x}`), ...list('c').map((x) => `c:${x}`), ...list('t').map((x) => `t:${x}`), ...list('k').map((x) => `k:${x}`), ...list('s').map((x) => `s:${x}`), ...list('r').map((x) => `r:${x}`), ...list('z').map((x) => `z:${x}`)];
 		}
+		/* Cuisine's own order, never a shuffle: what is due, then what is new in teaching order, then the rest. */
+		if (id.startsWith('cz:')) return dealCards(czCards(id, opts.every), session.drillLog, now).refs.map((c) => `z:${c}`);
 		if (id.startsWith('deck:') && deck) {
 			const key = id.slice(5);
 			const lv = all || opts.every ? null : new Set([chosen]);
@@ -411,6 +453,10 @@
 			}
 			// Again sends a deck card round once more in this run, as the sitting did.
 			if (!got && refs.indexOf(ref) === refs.lastIndexOf(ref)) refs.push(ref);
+		} else if (r && r.kind === 'z') {
+			// The Cuisine tab's own grade, once per card per local day; Again sends it round once more.
+			if (recordable(session.drillLog, r.card.id, Date.now())) session.markDrilled(czSlug(r.card.id), cardGrade(got));
+			if (!got && refs.indexOf(ref) === refs.lastIndexOf(ref)) refs.push(ref);
 		}
 		if (!got && !missed.includes(ref)) missed.push(ref);
 		today.refresh();
@@ -430,13 +476,14 @@
 		const ks = ids('k');
 		const ss = ids('s');
 		const rs = ids('r');
+		const zs = ids('z');
 		// Part by part's cards go back as their dish's card: one dish, one card to restudy.
 		for (const p of ids('p')) {
 			const card = parts[Number(p)];
 			if (card && !hs.includes(card.itemId) && houseCards.some((c) => c.itemId === card.itemId)) hs.push(card.itemId);
 		}
-		const q = [hs.length ? `h=${hs.join(',')}` : '', cs.length ? `c=${cs.join(',')}` : '', ts.length ? `t=${ts.join(',')}` : '', ks.length ? `k=${ks.join(',')}` : '', ss.length ? `s=${ss.map(encodeURIComponent).join(',')}` : '', rs.length ? `r=${rs.map(encodeURIComponent).join(',')}` : ''].filter(Boolean).join('&');
-		const refs = [...hs.map((x) => `h:${x}`), ...cs.map((x) => `c:${x}`), ...ts.map((x) => `t:${x}`), ...ks.map((x) => `k:${x}`), ...ss.map((x) => `s:${x}`), ...rs.map((x) => `r:${x}`)];
+		const q = [hs.length ? `h=${hs.join(',')}` : '', cs.length ? `c=${cs.join(',')}` : '', ts.length ? `t=${ts.join(',')}` : '', ks.length ? `k=${ks.join(',')}` : '', ss.length ? `s=${ss.map(encodeURIComponent).join(',')}` : '', rs.length ? `r=${rs.map(encodeURIComponent).join(',')}` : '', zs.length ? `z=${zs.join(',')}` : ''].filter(Boolean).join('&');
+		const refs = [...hs.map((x) => `h:${x}`), ...cs.map((x) => `c:${x}`), ...ts.map((x) => `t:${x}`), ...ks.map((x) => `k:${x}`), ...ss.map((x) => `s:${x}`), ...rs.map((x) => `r:${x}`), ...zs.map((x) => `z:${x}`)];
 		if (ts.length) needLexicon();
 		nav.pushShallow(`${base}/flashcards?deck=misses&run=1&${q}`, { fc: runState('misses', refs) });
 		void focusFrame();
@@ -468,6 +515,7 @@
 			return !!lexicon;
 		}
 		if (id.startsWith('lexicon')) return !!levels.data;
+		if (id.startsWith('cz:')) return (!!czIndex || cuisine.failed) && session.ready;
 		return true;
 	};
 
@@ -500,7 +548,8 @@
 		| { kind: 's'; card: Flashcard }
 		| { kind: 'r'; card: Flashcard }
 		| { kind: 'c'; card: DeckCard }
-		| { kind: 't'; entry: LexiconEntry | null; slug: string };
+		| { kind: 't'; entry: LexiconEntry | null; slug: string }
+		| { kind: 'z'; card: CzCard; entry: CzEntry; chapter: string };
 
 	const deckById = $derived(new Map((deck?.cards ?? []).map((c) => [c.id, c])));
 	const lexBySlug = $derived(new Map((lexicon ?? []).map((e) => [e.slug, e])));
@@ -536,6 +585,10 @@
 			}
 			case 't':
 				return { kind: 't', entry: lexBySlug.get(id) ?? null, slug: id };
+			case 'z': {
+				const f = cuisine.cardById(id);
+				return f ? { kind: 'z', ...f } : null;
+			}
 		}
 		return null;
 	}
@@ -557,6 +610,11 @@
 	const termNames = $derived(new Map((deck?.cards ?? []).map((c) => [c.id, c.term])));
 	$effect(() => {
 		if (runRefs.some((r) => r.startsWith('t:'))) needLexicon();
+	});
+	/* The chapters a run's Cuisine cards live in, loaded once the index is in (a pop back to a run after a reload, too). */
+	$effect(() => {
+		const ids = runRefs.filter((r) => r.startsWith('z:')).map((r) => r.slice(2));
+		if (ids.length && czIndex) void cuisine.ensure(cuisine.chaptersOfCards(ids));
 	});
 
 	function onkey(e: KeyboardEvent) {
@@ -589,12 +647,17 @@
 	const levelRows = $derived.by<Row[]>(() => sections.map((s) => row(`deck:${s.key}`, s.title)).filter((r) => r.refs.length));
 	const wordRows = $derived.by<Row[]>(() => [all ? row('lexicon-all') : row('lexicon')].filter((r) => r.refs.length));
 	const referenceRows = $derived.by<Row[]>(() => [row('deck-all'), ...(slipped.length ? [row('deck-slipping')] : [])].filter((r) => r.refs.length));
+	/* Cuisine: a deck per chapter holding cards at the chosen level (every level under Show all), then every card. */
+	const cuisineRows = $derived.by<Row[]>(() => {
+		if (!czIndex) return [];
+		return [...czIndex.chapters.map((c) => row(`cz:ch:${c.key}`, c.title)), row('cz:all')].filter((r) => r.refs.length);
+	});
 	const line = (r: Row) => `${r.refs.length} ${r.refs.length === 1 ? 'card' : 'cards'} · ${learnt(r.refs)} learnt`;
 
 	/* ---- the deck screen --------------------------------------------------- */
 	const deckRefs = $derived(fc && !fc.run ? members(fc.deck, { meal: fc.meal, every: fc.every }) : []);
 	const meals = $derived(current ? mealsOf(current) : []);
-	const canNarrow = $derived(!!fc && !fc.run && ((fc.deck === 'menu' || fc.deck.startsWith('menu:')) ? meals.length > 1 : fc.deck.startsWith('deck:') && !all));
+	const canNarrow = $derived(!!fc && !fc.run && ((fc.deck === 'menu' || fc.deck.startsWith('menu:')) ? meals.length > 1 : (fc.deck.startsWith('deck:') || fc.deck.startsWith('cz:ch:')) && !all));
 
 	/* Back to the root lands where it was left, once the decks have drawn. */
 	export const snapshot: Snapshot<{ y: number }> = {
@@ -678,6 +741,24 @@
 			{/each}
 		</nav>
 
+		<h2 class="group" id="fc-cuisine">Cuisine</h2>
+		{#if !czIndex && !cuisine.failed}
+			<p class="note">Opening Cuisine…</p>
+		{:else if !czIndex}
+			<p class="note">Cuisine could not be opened on this device. Open it once with a connection and it stays for offline use.</p>
+		{:else if !cuisineRows.length}
+			<p class="note">No Cuisine cards are written yet.</p>
+		{:else}
+			<nav class="quiet" aria-labelledby="fc-cuisine">
+				{#each cuisineRows as r (r.id)}
+					<button type="button" class="door" data-deck={r.id} onclick={() => openDeck(r.id)}>
+						<span class="door-name">{r.name}</span>
+						<span class="door-line">{line(r)}</span>
+					</button>
+				{/each}
+			</nav>
+		{/if}
+
 		<h2 class="group" id="fc-ref">Reference cards</h2>
 		<nav class="quiet" aria-labelledby="fc-ref">
 			{#each referenceRows as r (r.id)}
@@ -693,7 +774,7 @@
 		{#if canNarrow}
 			<details class="fold narrow">
 				<summary>Narrow this deck</summary>
-				{#if fc.deck.startsWith('deck:')}
+				{#if fc.deck.startsWith('deck:') || fc.deck.startsWith('cz:ch:')}
 					<div class="chips" role="group" aria-label="Which levels">
 						<button type="button" class="chip" aria-pressed={!fc.every} onclick={() => setNarrow({ every: false })}>At {levelName}{!fc.every ? ', chosen' : ', off'}</button>
 						<button type="button" class="chip" aria-pressed={!!fc.every} onclick={() => setNarrow({ every: true })}>Every level{fc.every ? ', chosen' : ', off'}</button>
@@ -710,7 +791,7 @@
 		{/if}
 		{#if deckRefs.length}
 			<button type="button" class="chip go start" onclick={() => startRun(fc.deck, { meal: fc.meal, every: fc.every })}>Start</button>
-		{:else if !today.houseSettled || (fc.deck.startsWith('deck') && !deck)}
+		{:else if !today.houseSettled || (fc.deck.startsWith('deck') && !deck) || (fc.deck.startsWith('cz:') && !czIndex && !cuisine.failed)}
 			<p class="note">Opening the deck…</p>
 		{:else}
 			<p class="note">No cards in this deck yet.</p>
@@ -730,7 +811,7 @@
 	{:else if screen === 'card' && fc}
 		<h1 class="vh-h">{deckName(fc.deck)}</h1>
 		{#if missingCard}<p class="note empty" role="status">There is no card with that id. It may have been retired from the deck.</p>{/if}
-		{#if !shown && currentRef && ((currentRef.startsWith('c:') && !deck) || (currentRef.startsWith('h:') && !today.houseSettled))}
+		{#if !shown && currentRef && ((currentRef.startsWith('c:') && !deck) || (currentRef.startsWith('h:') && !today.houseSettled) || czOpening(currentRef))}
 			<p class="note">Opening the deck…</p>
 		{:else}
 			<div class="framewrap" bind:this={frameEl}>
@@ -815,6 +896,14 @@
 								<p class="def">Say it out loud, then flip.</p>
 							{/if}
 						</div>
+					{:else if shown.kind === 'z'}
+						<CzCardFace
+							front={shown.card.front}
+							back={shown.card.back}
+							eyebrow="Cuisine · {shown.entry.title}"
+							flipped={!!fc.flipped}
+							readHref="{base}/cuisine?ch={encodeURIComponent(shown.chapter)}&e={encodeURIComponent(shown.entry.slug)}"
+						/>
 					{:else if shown.kind === 'c'}
 						{#key currentRef + ':' + (fc.i ?? 0)}
 							<FloorCard

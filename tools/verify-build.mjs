@@ -366,8 +366,26 @@ function deckCost() {
    the wings' house screen, the quote bank and the packs stay lazy and out
    of the manifest (SHARED_LAZY below), so what the raise buys is the
    Table's own screens. At the raise the precache stood at 2.887 MB against
-   the old cap. */
-const CAP_MB = 3.5;
+   the old cap.
+
+   Raised from 3.5 MB to 4.0 MB on 2026-10-12, by the owner's decision of
+   that day, for Cuisine: the World Table's sixth tab, French and Creole
+   cooking in depth for the kitchen and the floor at Brennan's, about 165
+   entries in twelve chapters (the stocks and the mother sauces, butter and
+   emulsions, the methods, Creole and Cajun, the larder, the old houses,
+   Brennan's own plates, pastry, kitchen French, the history and food
+   safety), each with its cards, its questions, its ordered methods and its
+   family matches. All of it is precached, the index and every chapter, so
+   it reads, flips and quizzes in a walk-in with no signal from the first
+   launch, the Floor Deck's argument; the alternative weighed, the chapter
+   bodies fetched on demand behind a runtime cache (the Cook at home
+   pattern), is the fallback if Cuisine's own cost (printed by the check
+   "Cuisine installs with the app") passes 0.6 MB. The owner's standing
+   instruction is to raise every cap rather than thin the material, and the
+   reason is written here as it asks. At the raise the precache stood at
+   3.086 MB against the old cap, with Cuisine's seed of three entries in;
+   the plan put the whole at about 0.40 to 0.48 MB. */
+const CAP_MB = 4.0;
 
 check(`precache stays under ${CAP_MB} MB gzipped`, () => {
 	let raw = 0;
@@ -517,6 +535,55 @@ check('the primers ship in the install, and each level has its reader page', () 
 	const pages = [1, 2, 3, 4].filter((n) => html.some((f) => rel(f) === `level/${n}/read.html` || rel(f) === `level/${n}/read/index.html`));
 	assert(pages.length === 4, `${pages.length} of 4 level reader pages on disk`);
 	return `${chunks.length} chunk(s) precached, 4 reader pages`;
+});
+
+/* Cuisine, the sixth tab (tools/derive/cuisine.mjs, stores/cuisine.svelte.ts):
+   the index and every chapter file with a body are lazy chunks the worker
+   installs, so Cuisine reads, flips and quizzes offline from the first launch.
+   Each is found by what only it carries, since chunk names are content
+   hashes: the index by its byDish key (assessability.json carries a
+   byTechnique too, so that one is no needle); a chapter by its first card's id
+   (else its first steps or match id) in a chunk that is not the index's,
+   because the index names every id too. A card id is the needle rather than
+   an entry id because Brennan's generated match names other chapters'
+   entries. Cuisine's cost is printed here, gzipped and per entry, because a
+   raise of the cap is argued from it (CAP_MB above). */
+check('Cuisine installs with the app', () => {
+	const dir = join(ROOT, 'src', 'lib', 'data', 'cuisine');
+	assert(existsSync(join(dir, 'index.json')), 'src/lib/data/cuisine/index.json missing: run node tools/derive/cuisine.mjs');
+	const index = JSON.parse(readFileSync(join(dir, 'index.json'), 'utf8'));
+	const js = files.filter((f) => extname(f) === '.js');
+	const text = new Map(js.map((f) => [f, readFileSync(f, 'utf8')]));
+	/* An object literal (byDish:), or JSON.parse of a string with the quotes
+	   plain or escaped. */
+	const indexChunks = js.filter((f) => /\bbyDish\\?"?:/.test(text.get(f) ?? ''));
+	assert(indexChunks.length, 'no built chunk carries byDish: the Cuisine index never reached the bundle');
+	const chunks = new Set(indexChunks);
+	const written = index.chapters.filter((/** @type {{ file: string | null }} */ c) => c.file);
+	for (const head of written) {
+		assert(existsSync(join(dir, head.file)), `src/lib/data/cuisine/${head.file} missing, though the index names it`);
+		const body = JSON.parse(readFileSync(join(dir, head.file), 'utf8'));
+		const id = body.entries?.[0]?.cards?.[0]?.id ?? body.steps?.[0]?.id ?? body.matches?.[0]?.id;
+		assert(id, `${head.file} holds no card, steps or match to find it by`);
+		const found = js.filter((f) => !indexChunks.includes(f) && (text.get(f) ?? '').includes(id));
+		assert(found.length, `no built chunk but the index's carries ${id}: ${head.file} never reached the bundle`);
+		for (const f of found) chunks.add(f);
+	}
+	const missing = [...chunks].map(rel).filter((r) => !precached.some((u) => u === '/' + r || u === r));
+	assert(!missing.length, `these hold Cuisine and are NOT in the precache: ${missing.join(', ')}`);
+	const kb = [...chunks].reduce((n, f) => n + gzipSync(readFileSync(f)).length, 0) / 1024;
+	const entries = index.entries.length;
+	return (
+		`${chunks.size} chunk(s), index and ${written.length} chapter(s), all precached, ${kb.toFixed(1)} KB gzipped, ` +
+		(entries ? `${(kb / entries).toFixed(2)} KB per entry (${entries} entries)` : 'no entries yet')
+	);
+});
+
+check('cuisine.html exists with an h1', () => {
+	const file = join(BUILD, 'cuisine.html');
+	assert(existsSync(file), 'build/cuisine.html missing: the Cuisine tab has no prerendered page');
+	assert(/<h1[ >]/.test(readFileSync(file, 'utf8')), 'build/cuisine.html has no h1');
+	return 'prerendered, with its h1';
 });
 
 // ── offline integrity ────────────────────────────────────────────────────────

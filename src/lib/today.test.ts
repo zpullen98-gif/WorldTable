@@ -30,6 +30,7 @@ function input(over: Partial<TodayInput> = {}): TodayInput {
 		deck: deck(30, 30),
 		drillLog: [],
 		lexiconAt: ['braise', 'sear'],
+		cuisineAt: [],
 		...over
 	};
 }
@@ -116,6 +117,43 @@ describe('dueToday', () => {
 			expect(t.total).toBe(t.fromMenu + t.fromLevel);
 		}
 		expect(after.refs).not.toContain('h:d-a');
+	});
+});
+
+describe('Cuisine in Due today (the sixth tab, 12 Oct 2026)', () => {
+	const CZ = ['cz-aaaaaaa1', 'cz-aaaaaaa2', 'cz-aaaaaaa3'];
+	const old = NOW - 30 * DAY;
+
+	it('appends the Cuisine cards due after the due Lexicon terms, inside the due part', () => {
+		const drillLog: CookEntry[] = [
+			{ slug: 'braise', at: old, grade: 'close' },
+			{ slug: 'cuisine:cz-aaaaaaa1', at: old, grade: 'met' }
+		];
+		const t = dueToday(input({ houseIds: [], drillLog, cuisineAt: CZ }));
+		const z = t.refs.indexOf('z:cz-aaaaaaa1');
+		expect(z).toBeGreaterThan(t.refs.indexOf('t:braise'));
+		expect(z).toBeLessThan(t.due);
+		expect(t.total).toBe(t.due + t.fresh);
+		expect(t.total).toBe(t.fromMenu + t.fromLevel);
+	});
+
+	it('never deals a Cuisine card as new, so a fresh device counts what it counted before', () => {
+		expect(dueToday(input({ cuisineAt: CZ }))).toEqual(dueToday(input()));
+		expect(dueToday(input({ houseIds: [], cuisineAt: CZ }))).toEqual(dueToday(input({ houseIds: [] })));
+		const drillLog: CookEntry[] = [{ slug: 'cuisine:cz-aaaaaaa1', at: old, grade: 'met' }];
+		const t = dueToday(input({ houseIds: [], drillLog, cuisineAt: CZ }));
+		expect(t.refs.filter((r) => r.startsWith('z:'))).toEqual(['z:cz-aaaaaaa1']);
+	});
+
+	it('reads only the ids it is given: a card outside them, or an index that failed to load, is no card', () => {
+		const drillLog: CookEntry[] = [{ slug: 'cuisine:cz-aaaaaaa9', at: old, grade: 'missed' }];
+		expect(dueToday(input({ drillLog, cuisineAt: CZ })).refs.some((r) => r.startsWith('z:'))).toBe(false);
+		expect(dueToday(input({ drillLog, cuisineAt: [] })).refs.some((r) => r.startsWith('z:'))).toBe(false);
+	});
+
+	it('a card graded today is not due again today', () => {
+		const drillLog: CookEntry[] = [{ slug: 'cuisine:cz-aaaaaaa1', at: NOW - 1000, grade: 'met' }];
+		expect(dueToday(input({ houseIds: [], drillLog, cuisineAt: CZ })).refs).not.toContain('z:cz-aaaaaaa1');
 	});
 });
 

@@ -618,7 +618,14 @@ desk, online only, on the owner's own Anthropic key. The rules that will bite:
   the trap that once lost `Prep.station`.
 - **The precache is nearly full; the live figure is whatever
   `npm run verify:build` prints, never a number in prose.** A new route is
-  not affordable. The elastic part is the wine vocabulary in `desk-vocab.ts`
+  not affordable. One dated exception: `/cuisine` (12 October 2026), the
+  owner's sixth tab. Cuisine is training material that has to open in a
+  walk-in with no signal from the first launch (the Floor Deck's argument),
+  and the owner's standing instruction is to raise caps rather than thin the
+  material, so `CAP_MB` went from 3.5 to 4.0 with the reason written beside
+  it in `tools/verify-build.mjs`. It is ONE prerendered page whose screens
+  are addresses on it, never a route per entry; see "Cuisine: the sixth
+  tab" below. The elastic part is the wine vocabulary in `desk-vocab.ts`
   (`DESK_REGIONS`, `DESK_GRAPES`): it can move to a fetched
   `static/desk-vocab.json` because the reader is correct without it (an
   unread descriptor part stays verbatim and the row is low). Never trim the
@@ -711,8 +718,12 @@ is locked**: a level guides, it never bars.
   falling back to `firstUnmetLevel`; opening a level page chooses it.
 - **The nav** is the four tab words `Home · Flashcards · Quizzes · Library`,
   then More, last and quiet (a ruled box at the bar's right end, lit only on
-  a More screen), in all three apps; `navigation.test.ts` pins the words,
-  the order, More last and quiet, and the owner order. The rest is the
+  a More screen), in all three apps; and the Table alone carries a fifth tab
+  word, `Cuisine`, between Library and More, six words in all (the owner,
+  12 October 2026, a deliberate departure from the parity of 4 October). The
+  Ledger and the Codex keep four tab words and More. `navigation.test.ts`
+  pins the words, the order (`Home · Flashcards · Quizzes · Library ·
+  Cuisine · More`), More last and quiet, and the owner order. The rest is the
   section "The consolidation" below. `/level` is an old address that
   forwards to the chosen level; `/level/[n]` is the level page (Today's
   study, My restaurant, Search, then a closed What {Level} holds);
@@ -790,15 +801,23 @@ screen's new home and the copy. What a maintainer needs:
   (Again) once per card per local day, a Lexicon term nothing.
 - **Due today is one function**, `src/lib/today.ts dueToday` (pure, tested):
   due cards (the house's Again, the deck's owed at the level, the level's due
-  terms) then new ones (the house first in menu order, then the level's
-  unseen cards), 20 a run, 10 new at most. The pill, the level page's row and
+  terms, and since 12 October 2026 the Cuisine cards due at or below the
+  level, `z:` references, after the terms) then new ones (the house first in
+  menu order, then the level's unseen cards; never a Cuisine card, so a fresh
+  device counts what it counted before Cuisine), 20 a run, 10 new at most. The pill, the level page's row and
   the Flashcards root all read it through `stores/today.svelte.ts`, which
   waits for `house.booted` so a fresh device counts Brennan's.
-- **The quick quiz** deals five dish questions from `dealRound` and five from
-  the level (Floor Deck cards by `mcFor` with no traps, Lexicon terms by
-  `optionsForTerm`), graded as each engine grades; its results list every
-  miss with `Study this card` or `Read about it`, and `Study the misses`
-  deals them all on the card screen (`?deck=misses&h=&c=&t=`).
+- **The quick quiz** deals dish questions from `dealRound` and questions
+  from the level (Floor Deck cards by `mcFor` with no traps, Lexicon terms by
+  `optionsForTerm`), and since 12 October 2026 two of Cuisine's multiple
+  choice questions: four, four and two with a house, eight and two without,
+  each side topping up the others (`src/lib/quick-quiz.ts`, pure and
+  tested; with no Cuisine to ask it deals five and five as before). Each is
+  graded as its engine grades; its results list every miss with `Study this
+  card` or `Read about it`, and `Study the misses` deals them all on the
+  card screen (`?deck=misses&h=&c=&t=&z=`, a Cuisine miss as the card its
+  question teaches). The level page's own Quick quiz door still says five
+  and five: the level page is pinned and was left as it was.
 - **`tests/consolidation.spec.ts`** walks the back chains (by the button and
   the gesture), the old addresses, the one row of tab words, one Back on
   every screen at scroll 0 and 2000, the owner's morning, one count and the
@@ -1407,3 +1426,117 @@ each, right under Today's study and Due today on the level page.
   `context.route` (it sees worker traffic), opens another level 1 dish and
   asserts a level never opened says so.
 
+## Cuisine: the sixth tab (12 October 2026)
+
+The owner, training at Brennan's, asked as master chef and trainer for a deep
+dive into French and Creole cooking, "expansive and in depth", in a tab of
+its own, drillable and learning focused: the stocks and the five mother
+sauces, the holy trinity, the methods, the larder, the old houses, every
+Brennan's dish on its foundations, pastry, kitchen French, the history and
+food safety. The plan is the session plan's section "NOW (12 Oct 2026)".
+What a maintainer needs:
+
+- **A real tab, the Table's alone.** `MODES` gains `Cuisine` between Library
+  and More and `OWNS` gains `['/cuisine', ['/cuisine']]` before Home; the
+  Ledger and the Codex keep four tab words (see "The nav" above). The layout's
+  `onTab` treats a Cuisine run or round (`st.cz`) and Cuisine's query
+  screens (`ch`, `deck`, `quiz`, `view`, `due`) as off the root, so a tap on
+  the lit word there navigates and a tap on the bare root only scrolls.
+- **The phone CSS, measured.** Six words in one row at 390 and 375, every box
+  at least 44 by 44: `.modetab` pads 2 px a side, `min-width: 44px`,
+  `.64rem`, no tracking; `.modebar-inner` gaps 4 px with a 6 px right gutter;
+  under 400 px the words are `.6rem` and the gaps 3 px; and the due pill
+  left the line to become a corner badge (`position: absolute; top: 2px;
+  right: -2px`), so its width no longer widens Flashcards. Measured in
+  Chromium on the built copy: Home 44, Flashcards 68, Quizzes 46, Library
+  44, Cuisine 44, More 44 px wide, 46 tall (More 47), 4 px to spare at 375
+  and 19 at 390; below 375 More wraps to a second row, as the bar always
+  could. The numbers are in the CSS comment; `tests/consolidation.spec.ts`
+  test 9 decides, not the arithmetic.
+- **The pipeline.** `tools/cuisine/roster.json` plans the entries (about 165
+  in twelve chapters); `node tools/cuisine/brief.mjs <chapter>` prints an
+  author's brief (the roster rows, the contract's rules in words, the pack's
+  dishes and components, candidate see-also references, an exemplar);
+  authors write parts to `tools/cuisine/out/<chapter>/*.json`;
+  `node tools/cuisine/validate.mjs --draft <chapter>` holds a draft to the
+  contract inside the whole set; `node tools/cuisine/merge.mjs <chapter>`
+  (or `tree`, `ladder`) writes `tools/derive/cuisine/<chapter>.json`; and
+  `npm run build:cuisine` (`node tools/derive/cuisine.mjs`, `--mint` when
+  there are new stems) writes `src/lib/data/cuisine/index.json` (chapters,
+  entry heads, card and question tuples `[id, entryId, level]`, steps and
+  match heads, the tree, the ladder, the reverse maps, and `dishes`, every
+  linked dish's name from the pack, so a reader whose house is not Brennan's
+  still reads the dish) and `ch-<key>.json` (one chapter's bodies, cards,
+  questions, steps, matches and `labels`, the names of its see-also
+  references). ONE contract, `tools/derive/cuisine-contract.mjs`, is read by
+  the build, the validator and `src/lib/cuisine-contract.test.ts`, so they
+  cannot drift; `CUISINE_COMPLETE` turns on the floors once every chapter is
+  written. A field the screens need goes into the build's output, never into
+  the authored contract.
+- **Ids.** `cz-` and eight base36 characters of a sha1 of the stem key,
+  minted once into `tools/derive/cuisine.ledger.json` and looked up by stem
+  ever after, so an entry that moves chapter keeps its id and the reader's
+  progress with it; the build refuses an unminted, colliding or retired id
+  (`--retire <kind>:<key> --reason <text>`). Never type an id.
+- **Installed, not fetched.** The store (`src/lib/stores/cuisine.svelte.ts`)
+  loads the index as a lazy chunk and each chapter through
+  `import.meta.glob`, so a page loads only the chapters it draws, and every
+  one of those chunks is precached: Cuisine opens offline from the first
+  launch. `verify-build` "Cuisine installs with the app" finds the index by
+  its `byDish` key and each chapter by its first card's id, asserts each is
+  in the precache and prints Cuisine's cost in KB and KB per entry, the
+  figure any later raise is argued from. If that cost passes 0.6 MB the
+  chapter bodies move to `static/cuisine-data/` behind an
+  `oot-table-cuisine-v1` NetworkFirst route (the Cook at home pattern).
+- **One prerendered page, every screen an address.** `/cuisine` is the root
+  (the level, In Cuisine today, Next unread at {Level}, the chapter doors,
+  the drills, the two diagrams in words); `?ch=` a chapter, `?ch=&e=` an
+  entry, `?deck=` a deck screen (`all`, `lv:<n>`, `ch:<key>`, `e:<entryId>`)
+  and `&run=1` its run, `?deck=misses&z=` the misses, `?due=1` In Cuisine
+  today, `?quiz=<scope>&kind=mc|steps|match` a round, `?view=tree` and
+  `?view=ladder`. The query is read in `afterNavigate`, never at load; a run
+  or a round rides in `PageState.cz` (pushed with `nav.pushShallow`,
+  changed with `nav.replaceShallow`) and falls to its parent on a cold load;
+  `nav.ts parentOf` walks entry, chapter, Cuisine, Home. A chapter with
+  nothing written is a "coming" row (`.door.coming`), never a link. Built
+  only from what exists (tokens, `hub.css` doors, chips and groups,
+  `DeckFrame`, `ScopeChip`, `BackButton`): no new colour, font, picture or
+  icon; the tree and the ladder are typography.
+- **The record.** Every grade is `session.markDrilled('cuisine:<id>')` (the
+  `kitchen:` precedent: `slugify` cannot emit a colon, so no Cuisine slug
+  can fold into a recipe's or a term's), so no SessionState field was added
+  and `mergeSessions` needed nothing. A card: Got it `met`, Again `missed`
+  and sent round once more in the run, on the term ladder
+  (`TERM_LADDER_DAYS`) with one climb a day. A round's item: right `close`,
+  wrong `missed` (a quiz answer holds a rung, it never climbs one). Each at
+  most once per item per local day (`cuisine.ts recordable`), from any
+  screen. Every reader scopes the log to the ids it knows (`czLog`), never by
+  the prefix, so a retired card can never be promised in a count. "I have
+  read this" is per device, `oot-cuisine-read-table-v1`
+  (`src/lib/cuisine-read.ts`), never exported.
+- **Elsewhere in the app.** Flashcards has a Cuisine group: a deck per
+  chapter holding cards at the chosen level (`cz:ch:<key>`, every level
+  under Show all or Narrow this deck) and Every Cuisine card (`cz:all`),
+  dealt in place by `dealCards` as `z:<cardId>` references through
+  `deckName`, `members`, `deal`, `resolveRef`, the grade and the learnt
+  count, the misses as `z=`. Quizzes has a Cuisine group whose rows open
+  `/cuisine?quiz=<scope>&kind=...` (so they light the Cuisine tab and Back
+  returns to Quizzes). The quick quiz asks two Cuisine questions and Due
+  today appends due Cuisine cards (both in "The consolidation" above);
+  `stores/today.svelte.ts` waits for Cuisine's index once and counts an
+  index that failed as no cards. The level page is untouched.
+- **The name collision.** "Cuisine" the tab is neither
+  `CuisineRail.svelte` (the Library's rail of the world's cuisines, its
+  chapters) nor `kitchen.ts`'s `cuisine` field (a Cook at home dish's
+  national cuisine). The tab's code says `cz` throughout (`Cz*` components,
+  `cz-` ids, `PageState.cz`, `z:` references, the `cz:` deck ids on
+  Flashcards) so a search for one never lands in the others.
+- **Tests.** `cuisine.test.ts` (the engines, the read marks, the shipped
+  seed, and a scan of the Cuisine page, its components and its modules for
+  dashes, American spellings and a level by its number, with the contract's
+  own detectors), `cuisine-contract.test.ts` (the contract re-derived and
+  each rule broken once), `today.test.ts`, `quick-quiz.test.ts`,
+  `nav.test.ts` (every `/cuisine` form) and `navigation.test.ts` (six words).
+  The e2e suites pinned to five words now hold six (`tests/nav.spec.ts`, the
+  consolidation tests 9 and 10, `layout.spec.ts`, `a11y.spec.ts`); the
+  Cuisine walk is `tests/cuisine.spec.ts`.

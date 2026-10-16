@@ -159,20 +159,25 @@
 		return () => ro.disconnect();
 	});
 
-	/* The one nav the three apps share (docs/consolidation-design.md 2.1 and
-	   3.2): the four tab words Home, Flashcards, Quizzes, Library, in that
-	   order, then More, drawn as the bar's quiet control at its right end
+	/* The nav (docs/consolidation-design.md 2.1 and 3.2): six words on the
+	   Table, the tab words Home, Flashcards, Quizzes, Library and Cuisine, in
+	   that order, then More, drawn as the bar's quiet control at its right end
 	   where the service toggle's moon was, and lit only while a More screen
-	   shows. Every href is a literal, so verify-build's scanner resolves each
-	   to a page; navigation.test.ts pins the words, the order and More last
-	   and quiet. Home is the four levels; a level page opens on Today's study
-	   and My restaurant; every deck is under Flashcards, every round under
-	   Quizzes, all reading under Library, the record and the tools under More. */
+	   shows. The Ledger and the Codex keep four tab words and More: Cuisine
+	   is the Table's own sixth word, the owner's choice of 12 Oct 2026 and a
+	   deliberate departure from the parity of 4 Oct. Every href is a literal,
+	   so verify-build's scanner resolves each to a page; navigation.test.ts
+	   pins the words, the order and More last and quiet. Home is the four
+	   levels; a level page opens on Today's study and My restaurant; every
+	   deck is under Flashcards, every round under Quizzes, all reading under
+	   Library, French and Creole cooking under Cuisine, the record and the
+	   tools under More. */
 	const MODES = [
 		{ href: '', label: 'Home' },
 		{ href: '/flashcards', label: 'Flashcards' },
 		{ href: '/quizzes', label: 'Quizzes' },
 		{ href: '/library', label: 'Library' },
+		{ href: '/cuisine', label: 'Cuisine' },
 		{ href: '/more', label: 'More', quiet: true }
 	];
 
@@ -197,6 +202,7 @@
 		['/quizzes', ['/quizzes', '/menu/quiz', '/service/deck/test', '/service/deck/say', '/service/deck/lineup', '/service/drill', '/practise']],
 		['/flashcards', ['/flashcards', '/service/deck/study', '/service/deck']],
 		['/library', ['/library', '/recipes', '/recipe/', '/chapter/', '/family', '/lexicon', '/pantry', '/technique', '/plates', '/service', '/safety', '/palate', '/study']],
+		['/cuisine', ['/cuisine']],
 		['', ['/level', '/menu', '/kitchen']]
 	];
 
@@ -288,12 +294,15 @@
 	 * adds no history entry (design 2.1): the same address is a replace in the
 	 * router, and a thumb tapping the lit word to get back to the top must not
 	 * cost a Back press. A root is the tab's own path with no screen of its
-	 * own open over it (a deck, a run, the quick quiz).
+	 * own open over it (a deck, a run, the quick quiz, a Cuisine run or
+	 * round). Cuisine's chapters, entries, decks and views are addresses on
+	 * its one page that carry no state, so its query says when one is open.
 	 */
 	function onTab(e: MouseEvent, href: string) {
 		if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
 		const st = (page.state ?? {}) as App.PageState;
-		if (owner !== href || path !== (href || '/') || st.fc || st.qq) return;
+		const cuisineScreen = href === '/cuisine' && /[?&](?:ch|deck|quiz|view|due)=/.test(location.search);
+		if (owner !== href || path !== (href || '/') || st.fc || st.qq || st.cz || cuisineScreen) return;
 		e.preventDefault();
 		window.scrollTo(0, 0);
 	}
@@ -838,15 +847,29 @@
         .house-working .head-inner { min-height: 64px; padding-block: 9px; }
         .house-working .brandline { margin: 0; font-size: 1.65rem; }
         .house-working .brandline a { display: inline-flex; align-items: center; gap: .22em; min-height: 44px; }
-        /* Five words in one row at 390 and 375 (design 3.2), each word whole
-           and centred in a box at least 44 px wide. The design's arithmetic
-           (4 px padding, 4 px gaps) did not count the Flashcards tab's due pill,
-           which measured 26 px, so the padding is 3 px, the gaps 2 px, the
-           tracking .02em and the right gutter 12 px: measured, the bar then ends
-           inside the line at 375. */
-        .modetab { padding-inline: 3px; min-width: 44px; text-align: center; font-size: .66rem; letter-spacing: .02em; }
-        .modebar-inner { gap: 2px; padding-right: 12px; }
-        .pill { margin-left: 3px; padding: 0 5px; }
+        /* Six words in one row at 390 and 375 (Cuisine, 12 Oct 2026), each
+           word whole and centred in a box at least 44 by 44 px. Five fitted
+           375 with 2.5 px to spare at the old numbers, and Cuisine overflowed
+           by about 50 px, so the tabs pad 2 px a side with no tracking at
+           .64rem, the gaps are 4 px and the right gutter 6 px, and the due pill
+           leaves the line: a corner badge placed over the tab's top padding,
+           so its 26 px no longer widen Flashcards. Under 400 px the words are
+           .6rem and the gaps 3 px. MEASURED in Chromium on the built copy
+           (12 Oct 2026), not trusted: at 375 and 390 the boxes are Home 44,
+           Flashcards 68, Quizzes 46, Library 44, Cuisine 44 and More 44 wide,
+           46 tall (More 47), in one row with 4 px to spare at 375 and 19 at
+           390 and no overflow; the pill is 19 by 14, its right edge 2 px past
+           Flashcards and 1 px clear of Quizzes. At 414 to 599 (.64rem):
+           Flashcards 71, Quizzes 49, Library 46, Cuisine 46, 28 px spare at
+           414. Below 375 the bar wraps More to a second line (360 is 11 px
+           short), as it always could; none of the fallbacks was needed. */
+        .modetab { position: relative; padding-inline: 2px; min-width: 44px; text-align: center; font-size: .64rem; letter-spacing: 0; }
+        .modebar-inner { gap: 4px; padding-right: 6px; }
+        .pill { position: absolute; top: 2px; right: -2px; margin-left: 0; padding: 0 5px; line-height: 14px; }
+    }
+    @media screen and (max-width: 399px) {
+        .modetab { font-size: .6rem; }
+        .modebar-inner { gap: 3px; }
     }
     @media screen and (forced-colors: active) {
         .house-masthead { background: Canvas; border-color: CanvasText; min-height: auto; }

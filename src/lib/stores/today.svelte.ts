@@ -6,13 +6,17 @@
  *
  * The house drill slot is localStorage, so a page that grades a card calls
  * `refresh()` to have it read again. The deck's index (small, precached) is
- * loaded on the first ask, never in the prerender pass.
+ * loaded on the first ask, never in the prerender pass, and so is Cuisine's
+ * (stores/cuisine.svelte.ts): its cards due at the level and below join the
+ * run after the due Lexicon terms. Cuisine's index failing to load is an
+ * empty list, never a count held back.
  */
 import { browser } from '$app/environment';
 import { loadDeckIndex } from '../data';
 import { readDrilled, type DrilledEntry } from '../house-drilled';
 import { itemCards, latestVerdicts } from '../study';
 import { dueToday, type Today } from '../today';
+import { cuisine } from './cuisine.svelte';
 import { house } from './house.svelte';
 import { levels } from './levels.svelte';
 import { session } from './session.svelte';
@@ -23,6 +27,7 @@ class TodayStore {
 	#drilled = $state<DrilledEntry[]>([]);
 	#loading = false;
 	#houseSettled = $state(false);
+	#cuisineSettled = $state(false);
 
 	/** Load what the count needs. Idempotent; a no-op on the server. */
 	load() {
@@ -36,6 +41,9 @@ class TodayStore {
 				/* the count stands on the house and the Lexicon alone */
 			}
 		);
+		/* Cuisine's index resolves null when it cannot be read: settled either
+		   way, so the count waits for it once and never for ever. */
+		void cuisine.load().finally(() => (this.#cuisineSettled = true));
 		void this.#settleHouse();
 	}
 
@@ -67,9 +75,9 @@ class TodayStore {
 		return this.#drilled;
 	}
 
-	/** True once the inputs are in: the record, the levels and the index. */
+	/** True once the inputs are in: the record, the levels, the deck's index and Cuisine's (read or failed). */
 	get ready(): boolean {
-		return levels.ready && this.#index !== null && this.#houseSettled;
+		return levels.ready && this.#index !== null && this.#houseSettled && this.#cuisineSettled;
 	}
 
 	/** Due today at a level (the chosen one when none is named). Null until ready. */
@@ -79,6 +87,7 @@ class TodayStore {
 		const current = house.current;
 		const houseIds = current ? itemCards(current, 'dish', { all: true }).map((c) => c.itemId) : [];
 		const latest = current ? latestVerdicts(current.id, this.#drilled) : new Map();
+		const cuisineAt = (cuisine.index?.cards ?? []).filter((c) => c[2] <= n).map((c) => c[0]);
 		return dueToday({
 			now: Date.now(),
 			level: n,
@@ -87,7 +96,8 @@ class TodayStore {
 			latest,
 			deck: this.#index,
 			drillLog: session.drillLog,
-			lexiconAt: levels.data.items.lexicon[String(n)] ?? []
+			lexiconAt: levels.data.items.lexicon[String(n)] ?? [],
+			cuisineAt
 		});
 	}
 }

@@ -51,19 +51,20 @@ describe('the MODES literal stays machine-readable', () => {
 	});
 
 	/**
-	 * The one nav the three apps share (docs/consolidation-design.md 2.1): the
-	 * four tab words in this order, then More, last and quiet (the bar's
-	 * quiet control, never a fifth tab drawn like the others). The Ledger and
-	 * the Codex pin theirs the same way, so a tab renamed in one app alone
-	 * fails that app's gate.
+	 * The nav (docs/consolidation-design.md 2.1): six words on the Table, the
+	 * five tab words in this order, then More, last and quiet (the bar's quiet
+	 * control, never a sixth tab drawn like the others). Cuisine is the
+	 * Table's own (the owner, 12 Oct 2026): the Ledger and the Codex keep four
+	 * tab words and More, and pin theirs the same way, so a tab renamed in one
+	 * app alone fails that app's gate.
 	 */
-	it('reads Home, Flashcards, Quizzes, Library, then More, last and quiet', () => {
+	it('reads Home, Flashcards, Quizzes, Library, Cuisine, then More, last and quiet', () => {
 		const entries = [...body.matchAll(/\{ href: '([^']*)', label: '([^']+)'([^}]*)\}/g)].map((m) => ({ href: m[1], label: m[2], rest: m[3] }));
-		expect(entries.map((e) => e.label)).toEqual(['Home', 'Flashcards', 'Quizzes', 'Library', 'More']);
-		expect(entries.map((e) => e.href)).toEqual(['', '/flashcards', '/quizzes', '/library', '/more']);
-		const tabs = entries.slice(0, 4);
-		expect(tabs.every((e) => !/quiet/.test(e.rest)), 'the four tabs are drawn as tabs').toBe(true);
-		expect(entries[4].rest, 'More is the quiet control, never a fifth tab').toMatch(/quiet: true/);
+		expect(entries.map((e) => e.label)).toEqual(['Home', 'Flashcards', 'Quizzes', 'Library', 'Cuisine', 'More']);
+		expect(entries.map((e) => e.href)).toEqual(['', '/flashcards', '/quizzes', '/library', '/cuisine', '/more']);
+		const tabs = entries.slice(0, 5);
+		expect(tabs.every((e) => !/quiet/.test(e.rest)), 'the five tabs are drawn as tabs').toBe(true);
+		expect(entries[5].rest, 'More is the quiet control, never a sixth tab').toMatch(/quiet: true/);
 	});
 
 	it('draws More with its own quiet style and lights it like any tab', () => {
@@ -76,8 +77,8 @@ describe('the MODES literal stays machine-readable', () => {
 /**
  * Who owns which path (design 3.2), the first match winning: the level test
  * and the level's reading by pattern, then More, Quizzes, Flashcards, Library,
- * and Home last. A reordering that lets /menu claim /menu/quiz, or /level
- * claim the test, fails here before it ships a wrong lit tab.
+ * Cuisine, and Home last. A reordering that lets /menu claim /menu/quiz, or
+ * /level claim the test, fails here before it ships a wrong lit tab.
  */
 describe('the owner of a path', () => {
 	const layout = readFileSync('src/routes/+layout.svelte', 'utf8');
@@ -89,10 +90,10 @@ describe('the owner of a path', () => {
 		expect(layout).toMatch(/\[\/\^\\\/level\\\/\[1-4\]\\\/test\$\/, '\/quizzes'\]/);
 		expect(layout).toMatch(/\[\/\^\\\/level\\\/\[1-4\]\\\/read\$\/, '\/library'\]/);
 	});
-	it('orders the prefixes More, Quizzes, Flashcards, Library, Home', () => {
+	it('orders the prefixes More, Quizzes, Flashcards, Library, Cuisine, Home', () => {
 		const body = layout.slice(layout.indexOf('const OWNS'), layout.indexOf('];', layout.indexOf('const OWNS')));
 		const order = [...body.matchAll(/\['([^']*)', \[/g)].map((m) => m[1]);
-		expect(order).toEqual(['/more', '/quizzes', '/flashcards', '/library', '']);
+		expect(order).toEqual(['/more', '/quizzes', '/flashcards', '/library', '/cuisine', '']);
 	});
 });
 

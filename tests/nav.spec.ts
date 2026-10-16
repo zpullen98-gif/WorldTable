@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { goto, seedSession } from './helpers';
 
 /**
- * The four tabs, and the reason this file exists.
+ * The tabs, and the reason this file exists.
  *
  * The rest of the suite is structurally BLIND to a dead route. tools/serve.mjs
  * answers any unknown path with shell.html at status 200 — that is deliberate,
@@ -18,13 +18,16 @@ import { goto, seedSession } from './helpers';
  *
  * Home, Flashcards, Quizzes, Library, then a quiet More: the one nav the
  * three apps share, in that order (the consolidation, 4 Oct 2026,
- * docs/consolidation-design.md 2.1).
+ * docs/consolidation-design.md 2.1). The Table alone adds Cuisine between
+ * Library and More, its sixth word (the owner, 12 Oct 2026); the Ledger and
+ * the Codex keep four.
  */
 const TABS = [
 	{ href: '/', label: 'Home', h1: /The World/i },
 	{ href: '/flashcards', label: 'Flashcards', h1: /^Flashcards$/ },
 	{ href: '/quizzes', label: 'Quizzes', h1: /^Quizzes$/ },
 	{ href: '/library', label: 'Library', h1: /^Library$/ },
+	{ href: '/cuisine', label: 'Cuisine', h1: /^Cuisine$/ },
 	{ href: '/more', label: 'More', h1: /^More$/ }
 ];
 
@@ -39,14 +42,14 @@ for (const tab of TABS) {
 	});
 }
 
-test('the bar shows the four tab words and then More, in the shared order', async ({ page }) => {
+test('the bar shows the five tab words and then More, in the Table\'s order', async ({ page }) => {
 	await goto(page, '/');
 	const tabs = page.locator('.modetab');
-	await expect(tabs).toHaveCount(5);
-	for (const [i, label] of ['Home', 'Flashcards', 'Quizzes', 'Library', 'More'].entries()) {
+	await expect(tabs).toHaveCount(6);
+	for (const [i, label] of ['Home', 'Flashcards', 'Quizzes', 'Library', 'Cuisine', 'More'].entries()) {
 		await expect(tabs.nth(i)).toHaveText(new RegExp(`^${label}`));
 	}
-	await expect(tabs.nth(4)).toHaveClass(/quiet/);
+	await expect(tabs.nth(5)).toHaveClass(/quiet/);
 });
 
 /**
@@ -97,6 +100,10 @@ test.describe('exactly one tab owns each route', () => {
 		['/lexicon', 'Library'],
 		['/pantry', 'Library'],
 		['/family', 'Library'],
+		['/cuisine', 'Cuisine'],
+		['/cuisine?ch=mother-sauces', 'Cuisine'],
+		['/cuisine?ch=mother-sauces&e=hollandaise', 'Cuisine'],
+		['/cuisine?view=tree', 'Cuisine'],
 		['/more', 'More'],
 		['/menu/costing', 'More'],
 		['/menu/preps', 'More'],
@@ -191,7 +198,9 @@ test('the coverage board can be reached from More and left', async ({ page }) =>
  *
  * The rest of the suite runs at the Playwright default of 1280 and is blind to
  * all of it, which is why it survived this long. Four tabs fit more easily
- * than five did; the floor is the same.
+ * than five did; the floor is the same. Cuisine (12 Oct 2026) made the
+ * Table's bar six words again, and the phone CSS in +layout.svelte carries
+ * the measurements that fit them in one row at 375.
  */
 test.describe('the mode bar fits on a phone', () => {
 	/*
@@ -204,7 +213,7 @@ test.describe('the mode bar fits on a phone', () => {
 	 * identical on every route. The one case that needs a Library-lit page uses
 	 * /family, a page that tab owns and which is nearly empty.
 	 */
-	test('the four tabs and More stay reachable from 320 to 600', async ({ page }) => {
+	test('the five tabs and More stay reachable from 320 to 600', async ({ page }) => {
 		await goto(page, '/level/1');
 
 		for (const width of [320, 375, 390, 414, 430, 600]) {

@@ -106,6 +106,36 @@ describe('parentOf', () => {
 		expect(parentOf({ path: '/nowhere/at/all' })).toBe('/');
 	});
 
+	it('walks every Cuisine form up its own chain to Home', () => {
+		expect(parentOf({ path: '/cuisine' })).toBe('/');
+		expect(parentOf({ path: '/cuisine', search: '?all=1' })).toBe('/');
+		expect(parentOf({ path: '/cuisine', search: '?ch=mother-sauces' })).toBe('/cuisine');
+		expect(parentOf({ path: '/cuisine', search: '?ch=mother-sauces&e=hollandaise' })).toBe('/cuisine?ch=mother-sauces');
+		expect(parentOf({ path: '/cuisine', search: '?deck=ch%3Amother-sauces' })).toBe('/cuisine');
+		expect(parentOf({ path: '/cuisine', search: '?deck=ch%3Amother-sauces&run=1' })).toBe('/cuisine?deck=ch%3Amother-sauces');
+		expect(parentOf({ path: '/cuisine', search: '?deck=e:cz-pruvtw8d&run=1' })).toBe('/cuisine?deck=e%3Acz-pruvtw8d');
+		expect(parentOf({ path: '/cuisine', search: '?deck=today&run=1' })).toBe('/cuisine');
+		expect(parentOf({ path: '/cuisine', search: '?deck=misses&run=1&z=cz-r7icuvh8' })).toBe('/cuisine');
+		expect(parentOf({ path: '/cuisine', search: '?due=1' })).toBe('/cuisine');
+		for (const kind of ['mc', 'steps', 'match']) expect(parentOf({ path: '/cuisine', search: `?quiz=lv:1&kind=${kind}` }), kind).toBe('/cuisine');
+		expect(parentOf({ path: '/cuisine', search: '?view=tree' })).toBe('/cuisine');
+		expect(parentOf({ path: '/cuisine', search: '?view=ladder' })).toBe('/cuisine');
+		// From the deepest forms to Home, one screen a press.
+		const walk = (from: string) => {
+			const chain: string[] = [];
+			let at = from;
+			while (at !== '/' && chain.length < 6) {
+				const [p, s] = at.split('?');
+				at = parentOf({ path: p, search: s ? '?' + s : '' });
+				chain.push(at);
+			}
+			return chain;
+		};
+		expect(walk('/cuisine?ch=mother-sauces&e=hollandaise')).toEqual(['/cuisine?ch=mother-sauces', '/cuisine', '/']);
+		expect(walk('/cuisine?deck=ch%3Amother-sauces&run=1')).toEqual(['/cuisine?deck=ch%3Amother-sauces', '/cuisine', '/']);
+		expect(walk('/cuisine?quiz=ch:mother-sauces&kind=steps')).toEqual(['/cuisine', '/']);
+	});
+
 	it('sends a Quizzes row and a More drawer back to the tab that opened them', () => {
 		expect(parentOf({ path: '/lexicon', search: '?start=quiz' })).toBe('/quizzes');
 		expect(parentOf({ path: '/lexicon', search: '?level=2&start=quiz' })).toBe('/quizzes');

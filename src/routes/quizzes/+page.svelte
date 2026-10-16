@@ -3,10 +3,13 @@
   of the app's round builders, the quick quiz first and the level test last.
 
     the root        Quick quiz first and alone, then My restaurant (the house
-                    rounds), the level's subject quizzes, Hands on, and last
-                    the level's test, each row naming what it asks
-    ?quick=1        the quick quiz: ten in one round, alternating the house
-                    and the level, then the results screen
+                    rounds), the level's subject quizzes, Cuisine (rows that
+                    open the sixth tab's rounds, /cuisine?quiz=<scope>&kind=
+                    mc|steps|match, and so light the Cuisine tab), Hands on,
+                    and last the level's test, each row naming what it asks
+    ?quick=1        the quick quiz: ten in one round, the house and the
+                    level in turn with two Cuisine questions among them,
+                    then the results screen
 
   THE QUICK QUIZ builds from the engines already here and adds no new kind of
   question: the house's from dealRound over the kinds that deal (recorded as
@@ -15,7 +18,12 @@
   them, with NO traps: only the written test and the level test may load
   them) and the level's Lexicon terms (optionsForTerm), graded by
   gradeLevelAnswer, so the level's figure moves the way each subsection's
-  own rounds move it. A side that cannot give five is topped up by the other.
+  own rounds move it; and two of Cuisine's multiple choice questions (since
+  12 Oct 2026: at the level first, then below it, then above, each band in
+  askOrder's order), graded as the Cuisine tab grades them, `close` or
+  `missed` under cuisine:<id> once per question per local day. With a house
+  the round asks four, four and two; without one, eight and two; a side that
+  cannot give its share is topped up by the others (lib/quick-quiz.ts).
 
   ONE ENTRY, THE ROUND. Starting pushes question one; every answer and every
   next question replaces it; the results replace the last question, so Back
@@ -44,6 +52,9 @@
 	import { nextTarget, optionsForTerm } from '$lib/lexicon-quiz';
 	import { gradeLevelAnswer, LEVEL_KEYS } from '$lib/levels';
 	import { dueList, repertoire, scopeToSlugs, TERM_LADDER_DAYS } from '$lib/repertoire';
+	import { cuisine } from '$lib/stores/cuisine.svelte';
+	import { askOrder, czSlug, mcOptions, questionsInScope, recordable, roundGrade, type CzLevel } from '$lib/cuisine';
+	import { QUICK_ROUND, quickLine as quickLineFor, quickOrder, quickSources, quickSplit, quickTargets } from '$lib/quick-quiz';
 	import ScopeChip from '$lib/components/ScopeChip.svelte';
 	import type { DeckLevel, FloorDeck, LexiconEntry } from '$lib/types';
 	import type { Snapshot } from './$types';
@@ -61,6 +72,7 @@
 		mounted = true;
 		today.load();
 		void levels.load();
+		void cuisine.load();
 	});
 
 	function needFiles(): Promise<void> {
@@ -99,7 +111,7 @@
 	});
 
 	/* ---- the quick quiz --------------------------------------------------- */
-	const ROUND = 10;
+	const ROUND = QUICK_ROUND;
 
 	function houseQuestions(n: number): Q[] {
 		/* The producers behind a dish only (tableDrillHouse): the bar's and the cellar's are their rooms' to ask about. */
@@ -188,21 +200,67 @@
 		return out;
 	}
 
-	function buildQuick(level: DeckLevel): Q[] {
-		let h = houseQuestions(hasHouse ? ROUND / 2 : 0);
-		const l = levelQuestions(ROUND - h.length, level);
-		// A short level is topped up from the house.
-		if (hasHouse && h.length + l.length < ROUND) {
-			const more = houseQuestions(ROUND - l.length);
-			if (more.length > h.length) h = more;
+	/**
+	 * Cuisine's questions in the order the quick quiz asks them: those at the
+	 * level first, then the levels below it (nearest first), then those above
+	 * (a level guides, it never bars), each band missed last time first, then
+	 * never asked, then the oldest asked (askOrder). From the index alone.
+	 */
+	function cuisineOrder(level: DeckLevel): string[] {
+		const index = cuisine.index;
+		if (!index) return [];
+		const rank = (l: number) => (l === level ? 0 : l < level ? level - l : 4 + l - level);
+		const bands = new Map<number, string[]>();
+		for (const [id, , l] of questionsInScope(index, { kind: 'all' })) {
+			const r = rank(l);
+			bands.set(r, [...(bands.get(r) ?? []), id]);
 		}
+		return [...bands.keys()].sort((a, b) => a - b).flatMap((r) => askOrder(bands.get(r) ?? [], session.drillLog, Math.random));
+	}
+
+	/** Enough of Cuisine's questions to top a round up, with their chapters loaded. An unread index is none. */
+	async function needCuisine(level: DeckLevel): Promise<string[]> {
+		const index = await cuisine.load();
+		if (!index) return [];
+		const ids = cuisineOrder(level).slice(0, ROUND);
+		const entryOf = new Map(index.questions.map(([q, e]) => [q, e]));
+		await cuisine.ensure(ids.map((id) => cuisine.head(entryOf.get(id) ?? '')?.chapter ?? '').filter(Boolean));
+		return ids;
+	}
+
+	function cuisineQuestions(ids: readonly string[]): Q[] {
 		const out: Q[] = [];
-		while (out.length < ROUND && (h.length || l.length)) {
-			const a = out.length % 2 === 0 ? h : l;
-			const b = a === h ? l : h;
-			out.push((a.length ? a : b).shift()!);
+		for (const id of ids) {
+			const f = cuisine.questionById(id);
+			if (!f) continue;
+			out.push({
+				kind: 'cuisine',
+				ref: id,
+				label: `Cuisine · ${f.entry.title}`,
+				stem: f.question.q,
+				options: mcOptions(f.question, Math.random),
+				answer: f.question.answer,
+				why: f.question.why,
+				entry: f.entry.id,
+				card: f.question.teaches
+			});
 		}
 		return out;
+	}
+
+	/** The round: each side's share (lib/quick-quiz.ts), the house and the level in turn, Cuisine spread among them. */
+	function buildQuick(level: DeckLevel, czIds: readonly string[]): Q[] {
+		const h = houseQuestions(hasHouse ? ROUND : 0);
+		const l = levelQuestions(ROUND, level);
+		const z = cuisineQuestions(czIds);
+		const n = quickSplit(quickTargets(hasHouse), { house: h.length, level: l.length, cuisine: z.length });
+		return quickOrder(h.slice(0, n.house), l.slice(0, n.level), z.slice(0, n.cuisine));
+	}
+
+	/** Every file a round draws on, then Cuisine's questions for the level. */
+	async function prepare(level: DeckLevel): Promise<string[]> {
+		await needFiles();
+		return needCuisine(level);
 	}
 
 	function freshRound(qs: Q[]): Qq {
@@ -212,9 +270,9 @@
 	let starting = $state(false);
 	async function startQuick() {
 		starting = true;
-		await needFiles();
+		const czIds = await prepare(chosen);
 		starting = false;
-		const qs = buildQuick(chosen);
+		const qs = buildQuick(chosen, czIds);
 		nav.pushShallow(`${base}/quizzes?quick=1`, { qq: freshRound(qs) });
 		await focusTop();
 	}
@@ -223,8 +281,8 @@
 		const want = pending;
 		if (!want || !today.houseSettled || !session.ready || !levels.data) return;
 		pending = null;
-		void needFiles().then(() => {
-			nav.replaceShallow(location.href, { qq: freshRound(buildQuick(chosen)) });
+		void prepare(chosen).then((czIds) => {
+			nav.replaceShallow(location.href, { qq: freshRound(buildQuick(chosen, czIds)) });
 			void focusTop();
 		});
 	});
@@ -252,6 +310,9 @@
 			session.markDrilled(q.ref, gradeLevelAnswer('deck', ok));
 		} else if (q.kind === 'lexicon') {
 			session.markDrilled(q.ref, gradeLevelAnswer('lexicon', ok));
+		} else if (q.kind === 'cuisine') {
+			// The Cuisine tab's round grade, once per question per local day.
+			if (recordable(session.drillLog, q.ref, Date.now())) session.markDrilled(czSlug(q.ref), roundGrade(ok));
 		}
 		const chosenList = [...qq.chosen];
 		chosenList[qq.i] = o;
@@ -270,8 +331,8 @@
 	}
 
 	async function dealAnother() {
-		await needFiles();
-		nav.pushShallow(`${base}/quizzes?quick=1`, { qq: freshRound(buildQuick(chosen)) });
+		const czIds = await prepare(chosen);
+		nav.pushShallow(`${base}/quizzes?quick=1`, { qq: freshRound(buildQuick(chosen, czIds)) });
 		await focusTop();
 	}
 
@@ -282,6 +343,10 @@
 		if (q.kind === 'house') return { href: `${base}/menu#${q.ref}`, word: 'Study this card' };
 		if (q.kind === 'deck') return { href: `${base}/flashcards?deck=${encodeURIComponent('deck:' + (q.drill ?? ''))}&card=${q.ref}&run=1`, word: 'Study this card' };
 		if (q.kind === 'lexicon') return { href: `${base}/lexicon#${q.ref}`, word: 'Read about it' };
+		if (q.kind === 'cuisine') {
+			const h = q.entry ? cuisine.head(q.entry) : null;
+			return h ? { href: `${base}/cuisine?ch=${encodeURIComponent(h.chapter)}&e=${encodeURIComponent(h.slug)}`, word: 'Read about it' } : null;
+		}
 		return null;
 	}
 
@@ -291,9 +356,11 @@
 		const h = misses.filter((m) => m.q.kind === 'house' && carded.has(m.q.ref)).map((m) => m.q.ref);
 		const c = misses.filter((m) => m.q.kind === 'deck').map((m) => m.q.ref);
 		const t = misses.filter((m) => m.q.kind === 'lexicon').map((m) => m.q.ref);
-		if (!h.length && !c.length && !t.length) return '';
+		/* A Cuisine question goes back as the card it teaches, dealt on the one card screen. */
+		const z = misses.filter((m) => m.q.kind === 'cuisine' && !!m.q.card).map((m) => m.q.card as string);
+		if (!h.length && !c.length && !t.length && !z.length) return '';
 		const uniq = (xs: string[]) => [...new Set(xs)].join(',');
-		const parts = [h.length ? `h=${uniq(h)}` : '', c.length ? `c=${uniq(c)}` : '', t.length ? `t=${uniq(t)}` : ''].filter(Boolean);
+		const parts = [h.length ? `h=${uniq(h)}` : '', c.length ? `c=${uniq(c)}` : '', t.length ? `t=${uniq(t)}` : '', z.length ? `z=${uniq(z)}` : ''].filter(Boolean);
 		return `${base}/flashcards?deck=misses&run=1&${parts.join('&')}`;
 	});
 
@@ -303,7 +370,28 @@
 		nav.replaceShallow(`${base}/quizzes${v ? '?all=1' : ''}`, { ...((page.state ?? {}) as App.PageState) });
 	}
 
-	const quickLine = $derived(hasHouse ? `Ten questions: five from the menu, five from ${levelName}.` : `Ten questions from ${levelName}.`);
+	const czIndex = $derived(cuisine.index);
+	const quickLine = $derived(quickLineFor(hasHouse, (czIndex?.questions.length ?? 0) > 0, levelName));
+
+	/* Cuisine's rounds, each a door into the Cuisine tab (its address lights it): the quiz at the
+	   level (every level under Show all, or when the level holds none yet), Order the steps and
+	   Family matching over every chapter, as the Cuisine root deals them. */
+	const cuisineRows = $derived.by(() => {
+		if (!czIndex) return [];
+		const enc = encodeURIComponent;
+		const rows: Array<{ name: string; line: string; href: string }> = [];
+		const atLevel = questionsInScope(czIndex, { kind: 'level', level: chosen as CzLevel }).length;
+		const every = czIndex.questions.length;
+		const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
+		if (every) {
+			const scope = all || !atLevel ? 'all' : `lv:${chosen}`;
+			const lead = all ? 'Every level' : atLevel ? levelName : `None at ${levelName} yet, so every level`;
+			rows.push({ name: 'The Cuisine quiz', line: `${lead}: ${plural(all || !atLevel ? every : atLevel, 'question', 'questions')}, up to ten a round, four options each.`, href: `${base}/cuisine?quiz=${enc(scope)}&kind=mc` });
+		}
+		if (czIndex.steps.length) rows.push({ name: 'Order the steps', line: `Put a method's stages in order: ${plural(czIndex.steps.length, 'method', 'methods')}.`, href: `${base}/cuisine?quiz=all&kind=steps` });
+		if (czIndex.matches.length) rows.push({ name: 'Family matching', line: `Pair each item with its family: ${plural(czIndex.matches.length, 'set', 'sets')}.`, href: `${base}/cuisine?quiz=all&kind=match` });
+		return rows;
+	});
 	const levelRows = (n: DeckLevel | null) => {
 		const q = n ? `?level=${n}` : '';
 		return [
@@ -368,6 +456,21 @@
 			</nav>
 		{/if}
 
+		<h2 class="group" id="qz-cuisine">Cuisine</h2>
+		{#if !czIndex && !cuisine.failed}
+			<p class="note">Opening Cuisine…</p>
+		{:else if !czIndex}
+			<p class="note">Cuisine could not be opened on this device. Open it once with a connection and it stays for offline use.</p>
+		{:else if !cuisineRows.length}
+			<p class="note">No Cuisine questions are written yet.</p>
+		{:else}
+			<nav class="quiet" aria-labelledby="qz-cuisine">
+				{#each cuisineRows as r (r.href)}
+					<a class="door" href={r.href}><span class="door-name">{r.name}</span><span class="door-line">{r.line}</span></a>
+				{/each}
+			</nav>
+		{/if}
+
 		<h2 class="group" id="qz-hands">Hands on</h2>
 		<nav class="quiet" aria-labelledby="qz-hands">
 			<a class="door" href="{base}/practise/firing"><span class="door-name">The firing drill</span><span class="door-line">Which dish fires first? Your pinned menu, planned back from service.</span></a>
@@ -414,7 +517,7 @@
 		<p class="note score" aria-live="polite">{qq.right} right of {qq.i + (qq.picked !== null ? 1 : 0)} answered</p>
 	{:else if screen === 'results' && qq}
 		<h1 tabindex="-1" bind:this={top}>What you missed</h1>
-		<p class="note">The quick quiz: ten questions from the menu and {levelName}. {qq.right} right of {qq.qs.length}.</p>
+		<p class="note">The quick quiz: {qq.qs.length === 10 ? 'ten' : qq.qs.length} questions from {quickSources(qq.qs.map((q) => q.kind), levelName)}. {qq.right} right of {qq.qs.length}.</p>
 		{#if !qq.qs.length}
 			<p class="note">Nothing could be dealt yet: the level's files did not load, and no house is on this device.</p>
 		{:else if !misses.length}

@@ -16,13 +16,19 @@
  * order pickSession's new quota walks).
  *
  *   due    the house's Again cards (in menu order), the Floor Deck's owed
- *          cards at the level (owed reaches down, the deck's rule), then the
- *          level's Lexicon terms the ladder says are due
- *   new    the house's dishes never graded, then the level's unseen cards
+ *          cards at the level (owed reaches down, the deck's rule), the
+ *          level's Lexicon terms the ladder says are due, then the Cuisine
+ *          cards due (the sixth tab, 12 Oct 2026: at or below the level, most
+ *          overdue first, as In Cuisine today owes them)
+ *   new    the house's dishes never graded, then the level's unseen cards;
+ *          never a Cuisine card, so a fresh device's count is what it was
+ *          before Cuisine (the Cuisine tab's own In Cuisine today starts them)
  *
  * Each card is a reference string the card screen can draw: `h:{itemId}` a
- * house dish card, `c:{cardId}` a Floor Deck card, `t:{slug}` a Lexicon term.
+ * house dish card, `c:{cardId}` a Floor Deck card, `t:{slug}` a Lexicon term,
+ * `z:{cardId}` a Cuisine card.
  */
+import { cardRepertoire, dueIds } from './cuisine';
 import { deckLog, owedIds } from './floor-deck';
 import { dueList, repertoire, scopeToSlugs, TERM_LADDER_DAYS, type CookEntry } from './repertoire';
 import type { Verdict } from './study';
@@ -46,6 +52,14 @@ export interface TodayInput {
 	drillLog: readonly CookEntry[];
 	/** The Lexicon slugs placed at the level. */
 	lexiconAt: readonly string[];
+	/**
+	 * The Cuisine card ids the level owes: those at the level and below it
+	 * (what is owed reaches down, as In Cuisine today reads them), from the
+	 * Cuisine index; empty when the index could not be read. Only their due
+	 * cards join the run, never their new ones. Required, not optional: an
+	 * omitted optional argument compiles in silence.
+	 */
+	cuisineAt: readonly string[];
 }
 
 export interface Today {
@@ -77,7 +91,8 @@ export function dueToday(input: TodayInput): Today {
 	const lexDue = lexiconAt.length
 		? dueList(repertoire(scopeToSlugs(drillLog as CookEntry[], new Set(lexiconAt)), now, TERM_LADDER_DAYS), now).map((e) => `t:${e.slug}`)
 		: [];
-	const due = [...houseDue, ...deckDue, ...lexDue].slice(0, RUN_CAP);
+	const czDue = input.cuisineAt.length ? dueIds(cardRepertoire(drillLog, input.cuisineAt, now), now).map((id) => `z:${id}`) : [];
+	const due = [...houseDue, ...deckDue, ...lexDue, ...czDue].slice(0, RUN_CAP);
 
 	/* ---- new ---- */
 	const room = Math.min(NEW_CAP, RUN_CAP - due.length);

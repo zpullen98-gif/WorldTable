@@ -181,6 +181,18 @@ the Flashcards tab carries the due-today count, drawn with the Table's
 existing `.pill` (`+layout.svelte` `.pill` rule) or the Ledger's and the
 Codex's existing small count style, and a visually hidden " due".
 
+Note, 12 October 2026: the Table only has six words. The owner asked for
+Cuisine, French and Creole cooking in depth, as a real tab of its own, so
+the Table's bar reads `Home`, `Flashcards`, `Quizzes`, `Library`,
+`Cuisine`, then `More`, still one row at 390 and 375 with every target 44
+by 44; the Ledger and the Codex keep the four words and More above. It is a
+deliberate departure from this section's parity, the owner's choice, and
+it changes nothing else here: More stays last and quiet, the lit word is
+still a word and a mark, and a tap on the lit tab at its root still only
+scrolls. The CSS that fits six words, with its measurements, is in
+`+layout.svelte`; `tests/consolidation.spec.ts` test 9 asserts it, and the
+Table's section "Cuisine: the sixth tab" in its CLAUDE.md is the rest.
+
 ### 2.2 The Back control
 
 - **Look:** each app's existing chip or ghost button, the word `Back` and

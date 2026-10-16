@@ -16,13 +16,25 @@ import { goto } from './helpers';
  * One page load, resized in place - four extra specs in parallel once starved
  * /recipes hydration and failed seven bystanders (see nav.spec.ts).
  */
-const GUTTER_ROUTES = ['/family', '/lexicon', '/menu', '/menu/quiz', '/menu/producers', '/pantry', '/study', '/safety', '/service/deck', '/service/deck/study', '/service/deck/test', '/service/deck/say', '/service/deck/lineup', '/level/1', '/level/1/test', '/level/1/read', '/plates', '/plates/beef-cuts'];
+const GUTTER_ROUTES = ['/family', '/lexicon', '/menu', '/menu/quiz', '/menu/producers', '/pantry', '/study', '/safety', '/service/deck', '/service/deck/study', '/service/deck/test', '/service/deck/say', '/service/deck/lineup', '/level/1', '/level/1/test', '/level/1/read', '/plates', '/plates/beef-cuts', '/cuisine', '/cuisine?ch=mother-sauces', '/cuisine?ch=mother-sauces&e=hollandaise', '/cuisine?view=tree', '/cuisine?view=ladder'];
+
+/* Cuisine's screens draw from files read after hydration (its one page reads
+   the address in afterNavigate), so each waits for the part that only exists
+   once its data is in before it is measured. */
+const READY: Record<string, string> = {
+	'/cuisine': '.chapters .door',
+	'/cuisine?ch=mother-sauces': '.entries .door',
+	'/cuisine?ch=mother-sauces&e=hollandaise': 'article.czentry',
+	'/cuisine?view=tree': '.careme',
+	'/cuisine?view=ladder': 'ol.rungs'
+};
 
 test('every route fits a 320px phone with its gutters on', async ({ page }) => {
 	test.setTimeout(120_000);
 	await page.setViewportSize({ width: 320, height: 800 });
 	for (const route of GUTTER_ROUTES) {
 		await goto(page, route);
+		if (READY[route]) await page.locator(READY[route]).first().waitFor({ timeout: 15_000 });
 		const m = await page.evaluate(() => {
 			const de = document.documentElement;
 			const h1 = document.querySelector('.shell h1, h1');

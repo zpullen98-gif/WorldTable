@@ -73,6 +73,21 @@ export function parentOf(ask: ParentAsk): string {
 	}
 	if (path === '/quizzes') return q.get('quick') === '1' ? '/quizzes' : '/';
 	if (path === '/library' || path === '/more') return '/';
+	// Cuisine, the sixth tab, one page: an entry goes back to its chapter, a
+	// chapter to Cuisine; a run to its deck screen (In Cuisine today and the
+	// misses have none), a deck, a round and a view to Cuisine; Cuisine to Home.
+	if (path === '/cuisine') {
+		const deck = q.get('deck');
+		if (deck) {
+			if (q.get('run') === '1' && deck !== 'today' && deck !== 'misses') return `/cuisine?deck=${encodeURIComponent(deck)}`;
+			return '/cuisine';
+		}
+		if (q.get('quiz') || q.get('view') || q.get('due') === '1') return '/cuisine';
+		const ch = q.get('ch');
+		if (ch && q.get('e')) return `/cuisine?ch=${encodeURIComponent(ch)}`;
+		if (ch) return '/cuisine';
+		return '/';
+	}
 
 	// Home's own screens.
 	if (path === '/level') return '/';
