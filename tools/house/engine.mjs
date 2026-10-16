@@ -114,7 +114,11 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    stress (REM-uh-lahd), and bordelaise, mascarpone, burrata, shiitake, harissa and bavarois take the
    American dining room's dictionary form the Floor Deck carries; stamped at the hour before its build,
    never ahead of the clock. */
-export const EDITION_BUILT_AT = '2026-10-12T05:00:00.000Z';
+/* 15 October wine label review: corrected selected blends, overlapping Champagne sugar ranges,
+   vintage qualification and mature bottle service. Saved inventory and record ids remain intact. */
+/* 15 October bar review: correct product categories and service claims without changing
+   the saved menu, then connect the reviewed collection to practical cocktail recall. */
+export const EDITION_BUILT_AT = '2026-10-15T23:03:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a

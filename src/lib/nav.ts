@@ -68,7 +68,8 @@ export function parentOf(ask: ParentAsk): string {
 		const deck = q.get('deck');
 		if (!deck) return '/';
 		// A run's parent is its deck screen; Due today and the misses have none.
-		if (q.get('run') === '1' && deck !== 'due' && deck !== 'misses') return `/flashcards?deck=${encodeURIComponent(deck)}`;
+		if (q.get('run') === '1' && deck !== 'due' && deck !== 'misses' && deck !== 'foundations:misses') return `/flashcards?deck=${encodeURIComponent(deck)}`;
+		if (deck.startsWith('foundations')) return '/foundations';
 		return '/flashcards';
 	}
 	if (path === '/quizzes') return q.get('quick') === '1' ? '/quizzes' : '/';
@@ -94,6 +95,13 @@ export function parentOf(ask: ParentAsk): string {
 	if (/^\/level\/[1-4]$/.test(path)) return '/';
 	if (/^\/level\/[1-4]\/read$/.test(path)) return '/library';
 	if (/^\/level\/[1-4]\/test$/.test(path)) return '/quizzes';
+	if (path === '/foundations') {
+		if (q.has('term')) {
+			q.delete('term');
+			return `/foundations${q.size ? '?' + q : ''}`;
+		}
+		return `/level/${chosen}`;
+	}
 	// Cook at home: a dish's way back is its own level page, named in the
 	// address (the dish page cannot know a slug's level before its data
 	// loads); the course overview, and an address with no level, go to the
@@ -103,6 +111,7 @@ export function parentOf(ask: ParentAsk): string {
 		return `/level/${/^[1-4]$/.test(lv) ? lv : chosen}`;
 	}
 	if (path === '/menu') {
+		if (q.get('view') === 'fall') return q.has('item') ? `/menu?view=fall&kind=${['dish', 'cocktail', 'all'].includes(q.get('kind') ?? '') ? q.get('kind') : 'dish'}` : '/menu';
 		// A card opened from the Producers view goes back to the view; one open on the study view, or the editing page pushed over it, to the study view.
 		if (/^(dish-)?d-/.test(hash) && q.get('view') === 'producers') return '/menu?view=producers';
 		if (/^(dish-)?d-/.test(hash) || hash === 'edit') return '/menu';

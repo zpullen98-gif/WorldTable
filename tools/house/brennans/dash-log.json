@@ -1,6 +1,6 @@
 {
 	"about": "Every string the dash pass changed while building the Brennan's house, before and after, for a person to read for a changed meaning; an entry with an override number is a string an overrides.json entry set, not the guide's.",
-	"count": 363,
+	"count": 358,
 	"changes": [
 		{
 			"path": "model.card.sources[0].title",
@@ -1572,16 +1572,6 @@
 			"after": "Serve 60 to 62°F in a Bordeaux glass. No decanting by the glass; if a table takes a bottle, open or decant it 20 to 30 minutes ahead to soften the tannin."
 		},
 		{
-			"path": "model.wines[16].sayIt",
-			"before": "For the Chateaubriand, we pour the 2010 Inglenook Rubicon by the glass — a Napa legend with sixteen years of age, so it’s powerful but silky.",
-			"after": "For the Chateaubriand, we pour the 2010 Inglenook Rubicon by the glass, a Napa legend with sixteen years of age, so it’s powerful but silky."
-		},
-		{
-			"path": "model.wines[16].serve",
-			"before": "Serve 60–64°F in a large Bordeaux glass. A sixteen-year-old Cabernet can throw sediment: keep the bottle upright, pour slowly and leave the last inch behind. Present the label — it’s a Napa icon.",
-			"after": "Serve 60 to 64°F in a large Bordeaux glass. A sixteen-year-old Cabernet can throw sediment: keep the bottle upright, pour slowly and leave the last inch behind. Present the label, it’s a Napa icon."
-		},
-		{
 			"path": "model.wines[17].sayIt",
 			"before": "With the duck we pour Paul Hobbs Cabernet from Coombsville — dark fruit to meet the peaches and structure for the rich meat.",
 			"after": "With the duck we pour Paul Hobbs Cabernet from Coombsville, dark fruit to meet the peaches and structure for the rich meat."
@@ -1614,11 +1604,6 @@
 			"override": 122
 		},
 		{
-			"path": "model.wines[19].serve",
-			"before": "Serve slightly cool, about 55°F, in a small dessert glass: 2–3 oz, or 4 oz on the tasting. No decanting. Fortified, it keeps for weeks once open — recork and store cool.",
-			"after": "Serve slightly cool, about 55°F, in a small dessert glass: 2 to 3 oz, or 4 oz on the tasting. No decanting. Fortified, it keeps for weeks once open, recork and store cool."
-		},
-		{
 			"path": "model.cocktails[0].lines.s10",
 			"before": "Our Brandy Milk Punch — brandy, cream, vanilla bean and nutmeg. The classic New Orleans eye opener.",
 			"after": "Our Brandy Milk Punch: brandy, cream, vanilla bean and nutmeg. The classic New Orleans eye opener."
@@ -1627,11 +1612,6 @@
 			"path": "model.cocktails[0].lines.s20",
 			"before": "The Brandy Milk Punch is New Orleans’ classic breakfast cocktail: brandy with heavy cream and vanilla bean, finished with nutmeg — cold, creamy and gently boozy.",
 			"after": "The Brandy Milk Punch is New Orleans’ classic breakfast cocktail: brandy with heavy cream and vanilla bean, finished with nutmeg, cold, creamy and gently boozy."
-		},
-		{
-			"path": "model.cocktails[0].lines.s45",
-			"before": "In New Orleans, a proper breakfast starts with an “eye opener,” and the Brandy Milk Punch is the classic. It’s brandy with heavy cream and real vanilla bean, served cold with fresh nutmeg on top — think of a lighter, boozier eggnog without the egg. It’s creamy, smooth and a little sweet, and it’s how our Traditional Breakfast begins. Shall I start you with one?",
-			"after": "In New Orleans, a proper breakfast starts with an “eye opener,” and the Brandy Milk Punch is the classic. It’s brandy with heavy cream and real vanilla bean, served cold with fresh nutmeg on top, think of a lighter, boozier eggnog without the egg. It’s creamy, smooth and a little sweet, and it’s how our Traditional Breakfast begins. Shall I start you with one?"
 		},
 		{
 			"path": "model.cocktails[0].serviceNote",
@@ -1663,12 +1643,6 @@
 			"before": "The Sazerac is New Orleans’ official cocktail: Sazerac rye whiskey and Peychaud’s bitters, served in a glass rinsed with Herbsaint, the anise liqueur created in New Orleans in 1934 — spicy, aromatic and strong.",
 			"after": "The Sazerac is New Orleans’ official cocktail: Sazerac rye whiskey and Peychaud’s bitters, served in a glass rinsed with Herbsaint, the anise liqueur created in New Orleans in 1934, spicy, aromatic and strong.",
 			"override": 30
-		},
-		{
-			"path": "model.cocktails[2].lines.s45",
-			"before": "The Sazerac is New Orleans’ official cocktail, named so by the Louisiana Legislature in 2008: the city’s, not the state’s. It’s Sazerac rye whiskey, stirred with Peychaud’s — a bright red New Orleans bitters with anise and cherry notes — and served in a glass rinsed with Herbsaint, the anise liqueur created in New Orleans in 1934, so you get its aroma without much of its flavor. It’s spirit-forward, spicy and aromatic. If you’d like to go further, we have two luxury versions: Thompson’s Dream with Willett rye, and Origin Story with Cognac and absinthe.",
-			"after": "The Sazerac is New Orleans’ official cocktail, named so by the Louisiana Legislature in 2008: the city’s, not the state’s. It’s Sazerac rye whiskey, stirred with Peychaud’s, a bright red New Orleans bitters with anise and cherry notes, and served in a glass rinsed with Herbsaint, the anise liqueur created in New Orleans in 1934, so you get its aroma without much of its flavor. It’s spirit-forward, spicy and aromatic. If you’d like to go further, we have two luxury versions: Thompson’s Dream with Willett rye, and Origin Story with Cognac and absinthe.",
-			"override": 32
 		},
 		{
 			"path": "model.cocktails[2].serviceNote",

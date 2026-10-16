@@ -5,10 +5,10 @@
 			"kind": "story",
 			"name": "The Sazerac",
 			"say": "SAZ-uh-rak",
-			"explain": "The Sazerac is New Orleans' own cocktail: rye whiskey, sugar and Peychaud's bitters, stirred cold and strained into a glass rinsed with an anise spirit, served without ice.\n\nIts name comes from a cognac. Sewell Taylor sold his bar, the Merchants Exchange Coffee House, to import Sazerac de Forge et Fils cognac, and Aaron Bird renamed the bar the Sazerac Coffee House and served the house cocktail on that cognac. Thomas Handy took the bar over about 1870, just as phylloxera was ruining the vineyards of Europe, and rye whiskey took the cognac's place for good.\n\nOn 23 June 2008 the Louisiana Legislature made it the official cocktail of the city of New Orleans, not of the state. At Brennan's it is a ladder of three: the Classic, Thompson's Dream and the Origin Story.",
+			"explain": "The familiar Sazerac pattern combines a spirit, sugar, bitters and an anise rinse. The Brennan's Classic menu names Sazerac rye, Peychaud's and Herbsaint; the guide describes stirring and service without ice, while sugar and lemon peel remain bar confirmations.\n\nThe Sazerac Company's historical account connects the name with Sazerac de Forge et Fils Cognac and the Sazerac Coffee House. Its timeline places Handy's purchase in 1869 and a shift toward rye amid phylloxera shortages later, in 1885. These are separate events in the producer's account, not evidence of an exact first recipe or a simultaneous universal switch.\n\nFor training, compare the three actual house choices: the Classic, Thompson's Dream and Origin Story. Tell the attributed history briefly without claiming America's first cocktail.",
 			"card": {
-				"front": "Why is the Sazerac named Sazerac?",
-				"back": "It was the house drink of the Sazerac Coffee House, named for Sazerac de Forge et Fils cognac. Rye replaced the cognac after phylloxera; since 2008 it is New Orleans' official cocktail."
+				"front": "What can we safely say about the Sazerac's Cognac and rye history?",
+				"back": "The Sazerac Company connects the name with Cognac and describes a later shift toward rye amid phylloxera shortages. Do not turn that account into a verified first recipe; the house offers both rye and Cognac interpretations."
 			},
 			"items": [
 				"Classic Sazerac",
@@ -22,7 +22,8 @@
 				"research/components-drinks-2026-10-05.md (search 1)",
 				"research/components-drinks-2026-10-05.md (search 5)",
 				"guide.txt (pdf p38 and p39, the bar pages)",
-				"research/dossier-the-bar.md"
+				"research/dossier-the-bar.md",
+				"research/brennans-bar-review-2026-10-15.md"
 			]
 		},
 		{
@@ -33,7 +34,7 @@
 			"explain": "Antoine Amédée Peychaud was a Creole apothecary born in Saint-Domingue, now Haiti, who settled in New Orleans. He kept his shop at what was then 123 Royal Street, known as 437 Royal Street today, on the same block as Brennan's at 417.\n\nThere he made a bright red aromatic bitters, sold first as a tonic, between 1849 and 1857. In 1857 he advertised his American Aromatic Bitter Cordial and announced it was in use at the Sazerac House. He sold the Royal Street building in 1868, and the bitters passed through other hands to the Sazerac Company.\n\nA guest may tell you Peychaud invented the word cocktail from a French egg cup. Smile: the word was defined in print in 1806. Tell the true story instead, and check at lineup that the house is happy for the Royal Street detail to be told.",
 			"card": {
 				"front": "Where did Antoine Peychaud keep his apothecary?",
-				"back": "At what is now 437 Royal Street, the same block as Brennan's at 417. He made his red bitters there in the 1850s and they went into the first Sazeracs."
+				"back": "At what is now 437 Royal Street, on the same block as Brennan's at 417, according to the Sazerac Company's account. His bitters are central to the Sazerac tradition; do not infer a proven first recipe."
 			},
 			"items": [
 				"Classic Sazerac",
@@ -46,7 +47,8 @@
 			"sources": [
 				"research/components-drinks-2026-10-05.md (search 2)",
 				"research/components-drinks-2026-10-05.md (search 18)",
-				"guide.txt (pdf p39, the Classic Sazerac service note)"
+				"guide.txt (pdf p39, the Classic Sazerac service note)",
+				"research/brennans-bar-review-2026-10-15.md"
 			]
 		},
 		{
@@ -102,10 +104,10 @@
 			"kind": "story",
 			"name": "Why it is called the Origin Story",
 			"say": "",
-			"explain": "The Origin Story is the top of the house's Sazerac ladder, and its name points back to how the drink began. The first Sazeracs were poured at the Sazerac Coffee House on Sazerac de Forge et Fils cognac with Antoine Peychaud's bitters.\n\nPhylloxera, a root-eating insect, reached the vineyards of Cognac in the 1870s and made cognac scarce through the 1880s; rye whiskey took over and never gave the drink back. So a Sazerac on cognac is the drink as it started.\n\nSay it carefully: the way it began, cognac and Peychaud's, rather than the exact first recipe, because the absinthe rinse probably joined later. Offer it to the guest who has had the Classic and wants to taste where it came from, or at the Chateaubriand table.",
+			"explain": "The Sazerac Company's history connects the drink with Sazerac de Forge et Fils Cognac and describes a later shift toward rye amid phylloxera shortages. This is the producer's historical account, not proof of an exact first recipe or a universal change on one date. Origin Story is Brennan's Cognac interpretation of the Sazerac family.\n\nThe saved house menu names Dudognon Cognac, barrel-aged Peychaud's and Jade Nouvelle-Orléans absinthe. Those named products make it a contemporary house drink. Ask the bar which expressions and measures it uses; do not teach it as a recovered nineteenth century specification.",
 			"card": {
-				"front": "Why is the Origin Story built on cognac?",
-				"back": "The first Sazeracs were cognac and Peychaud's; rye replaced cognac after phylloxera ruined the vineyards. The Origin Story returns to the way the drink began."
+				"front": "How should a server explain Origin Story's Cognac connection?",
+				"back": "A Cognac interpretation of the Sazerac family, referring to the producer's Cognac origin account. It is not proof of an exact first recipe."
 			},
 			"items": [
 				"Origin Story"
@@ -116,7 +118,8 @@
 			"sources": [
 				"research/components-drinks-2026-10-05.md (search 5)",
 				"guide.txt (pdf p39)",
-				"research/dossier-the-bar.md"
+				"research/dossier-the-bar.md",
+				"research/brennans-bar-review-2026-10-15.md"
 			]
 		},
 		{
@@ -146,10 +149,10 @@
 			"kind": "story",
 			"name": "Milk punch",
 			"say": "",
-			"explain": "Milk punch is one of the oldest mixed drinks in the English-speaking world, and it comes in two families. The old English kind is clarified: hot milk is added to spirit, citrus and sugar, the milk curdles, and the curds are strained out, leaving a clear, silky punch that keeps. Mary Rockett wrote one down in 1711, and Benjamin Franklin wrote out his own recipe in 1763.\n\nThe New Orleans kind is the other family: brandy or bourbon with milk or cream, sugar and vanilla, shaken cold and dusted with nutmeg, never clarified.\n\nBrennan's pours both ideas. The Brandy Milk Punch is the cold, creamy eye opener that opens the Traditional Breakfast; the Prisoner of Love on the fall list uses clarified heavy cream, the old English technique.",
+			"explain": "Two useful milk punch patterns are a creamy drink and a clarified drink. A creamy version keeps the milk or cream dispersed in the drink. A common clarified approach curdles milk or cream and filters the liquid through the curds. The exact process and texture vary.\n\nBrennan's Brandy Milk Punch lists brandy, heavy cream, vanilla bean and nutmeg. Prisoner of Love lists gin, Earl Grey tea, clarified heavy cream and orange flower water. The latter menu does not supply a clarification procedure. Both list cream; clarification establishes neither milk absence nor a validated holding time.\n\nA Brandy Milk Punch recipe supplied by Brennan's is published by Explore Louisiana. Use it as a published version, not today's confirmed measured house build.",
 			"card": {
-				"front": "What are the two kinds of milk punch?",
-				"back": "The old clarified kind, curdled and strained clear, as in the Prisoner of Love; and the cold, creamy New Orleans kind, our Brandy Milk Punch, shaken with cream and nutmeg."
+				"front": "How do creamy and clarified milk punch differ for training?",
+				"back": "Creamy punch retains its creamy texture; a common clarified method uses curdling and filtration. Brennan's prints cream in both relevant drinks. Confirm house process and never assume milk absence or shelf life."
 			},
 			"items": [
 				"Brandy Milk Punch",
@@ -162,7 +165,8 @@
 				"research/components-drinks-2026-10-05.md (search 11)",
 				"guide.txt (pdf p38 and p39, the bar pages)",
 				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
-				"research/dossier-the-bar.md (milk punch: Franklin wrote one out in 1763)"
+				"research/dossier-the-bar.md (milk punch: Franklin wrote one out in 1763)",
+				"research/brennans-bar-review-2026-10-15.md"
 			]
 		},
 		{
@@ -347,10 +351,10 @@
 			"kind": "story",
 			"name": "The spritz",
 			"say": "SHPRITZ",
-			"explain": "The spritz comes from the Veneto in the nineteenth century, under Austrian rule, when soldiers and officials found the local wine too strong and asked for a splash of water in it; spritzen is German for to splash. In time the splash became soda, the wine became sparkling, and a bitter liqueur joined, and in the 1950s Aperol made the bright orange version famous.\n\nA spritz is an aperitivo: low in strength, bittersweet and fizzy, drunk before a meal to wake the appetite.\n\nThe Chandon Garden Spritz follows that pattern with dry Chandon Brut and a bitter orange liqueur. Offer it to the guest who orders an aperitivo or an Aperol spritz, and call the wine sparkling wine, as the menu does, never Champagne.",
+			"explain": "A spritz is a useful sparkling aperitif family, often involving wine and a bitter or aromatic component. Recipes vary, including ready to serve products; the family name alone does not promise low alcohol.\n\nThe saved Brennan's menu names Chandon Brut and bitter orange liqueur. Chandon also sells Garden Spritz as a prepared drink. Confirm the bottle or separate build, measures and service with the bar.\n\nAsk whether the guest enjoys bitter orange or would prefer a floral direction such as Riviera. Compare flavour first; a strength comparison requires actual recipes and portions.",
 			"card": {
-				"front": "Where does the word spritz come from?",
-				"back": "From German spritzen, to splash: Austrian soldiers in the Veneto asked for water in strong wine. Now sparkling wine, a bitter liqueur and bubbles, drunk as an aperitivo."
+				"front": "Does spritz mean low alcohol or a fixed three ingredient build?",
+				"back": "No. Recipes and products vary. Brennan's prints Chandon Brut and bitter orange liqueur, but the bar must confirm whether it uses a prepared bottle or a separate build."
 			},
 			"items": [
 				"Chandon Garden Spritz"
@@ -360,7 +364,8 @@
 			],
 			"sources": [
 				"research/components-drinks-2026-10-05.md (search 58)",
-				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"research/brennans-bar-review-2026-10-15.md"
 			]
 		},
 		{
@@ -419,10 +424,10 @@
 			"kind": "story",
 			"name": "The song For Sentimental Reasons",
 			"say": "",
-			"explain": "The full title is (I Love You) For Sentimental Reasons. The King Cole Trio's recording entered the Billboard Best Seller chart on 22 November 1946 and reached number one on 28 December 1946, Nat King Cole's first number one pop single.\n\nIt is a soft, romantic ballad, the sort of song a couple might have danced to in the year Brennan's opened.\n\nThe drink named for it is the gentlest on the fall list: sparkling wine over pear purée and allspice dram, fizzy and fruity with a warm spice at the end. That makes a natural line for a server: a sentimental, celebratory glass, the one to offer a couple marking an anniversary or a guest who usually orders bubbles.",
+			"explain": "The full title is (I Love You) For Sentimental Reasons. The King Cole Trio's recording entered the Billboard Best Seller chart on 22 November 1946 and reached number one on 28 December 1946, Nat King Cole's first number one pop single.\n\nIt is a soft, romantic ballad, the sort of song a couple might have danced to in the year Brennan's opened.\n\nThe drink named for it is a sparkling choice on the fall list: sparkling wine over pear purée and allspice dram, fizzy and fruity with a warm spice at the end. That makes a natural line for a server: a sentimental, celebratory glass, the one to offer a couple marking an anniversary or a guest who usually orders bubbles.",
 			"card": {
 				"front": "Who took For Sentimental Reasons to number one, and when?",
-				"back": "Nat King Cole with the King Cole Trio, number one on 28 December 1946, his first number one pop single. Ours is the gentle sparkling pear drink."
+				"back": "Nat King Cole with the King Cole Trio, number one on 28 December 1946, his first number one pop single. Ours is the sparkling pear drink."
 			},
 			"items": [
 				"For Sentimental Reasons"
@@ -430,7 +435,8 @@
 			"terms": [],
 			"sources": [
 				"research/components-drinks-2026-10-05.md (search 19)",
-				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"research/brennans-bar-review-2026-10-15.md"
 			]
 		},
 		{
@@ -616,10 +622,10 @@
 			"kind": "technique",
 			"name": "Shaking",
 			"say": "",
-			"explain": "Shaking means sealing the drink in a tin with plenty of ice and shaking it hard for several seconds. It chills, dilutes and aerates at once, so a drink with cream, juice or liqueur comes out cold, lightened and smooth, with a fine froth.\n\nThe rule bartenders learn first: shake what is cloudy, stir what is clear. Cream, citrus, egg and purée need the violence of the shake to marry; a drink of spirits alone is stirred so it stays silky.\n\nAt Brennan's the guide prints the Brandy Milk Punch as shaken with heavy cream and vanilla bean. For the sours, the creamy drinks and the espresso martini the menu prints no method, so shaking is the classic way and the bar confirms its own build before a server describes it.",
+			"explain": "Shaking with ice combines, chills, dilutes and aerates a cocktail. It is commonly useful when a recipe contains citrus, cream, egg white or purée and calls for an aerated texture. Liqueur alone does not determine the method; many stirred cocktails contain liqueurs.\n\nShake cloudy and stir clear is a starting memory aid, not a rule for every recipe. Follow the specified method and intended texture. Do not put carbonated ingredients in a closed shaker.\n\nThe Brennan's guide describes shaking the Brandy Milk Punch. For other drinks, distinguish a classic technique lesson from an unconfirmed house build.",
 			"card": {
-				"front": "Shake or stir: what is the bartender's rule?",
-				"back": "Shake what is cloudy, stir what is clear. Cream, citrus, egg and purée are shaken to chill, dilute and froth; spirit-only drinks are stirred to stay silky."
+				"front": "Does an ingredient list determine shake versus stir?",
+				"back": "No. Shaking often suits citrus, cream, egg or purée and adds aeration. Stirring suits many smooth spirit led recipes, including some with liqueur. Follow the actual recipe; never seal carbonation in a shaker."
 			},
 			"items": [
 				"Brandy Milk Punch",
@@ -634,7 +640,8 @@
 			"sources": [
 				"guide.txt (pdf p38 and p39, the bar pages)",
 				"expert knowledge",
-				"research/dossier-the-bar.md"
+				"research/dossier-the-bar.md",
+				"research/brennans-bar-review-2026-10-15.md"
 			]
 		},
 		{
@@ -642,10 +649,10 @@
 			"kind": "technique",
 			"name": "Stirring",
 			"say": "",
-			"explain": "Stirring is done in a mixing glass with ice and a long bar spoon, turned smoothly for twenty or thirty seconds until the drink is cold and has taken on just enough water. It adds no air, so a drink of spirit, sugar and bitters stays clear, dense and silky.\n\nThat is why the Sazerac is stirred, never shaken: it is all spirit, and it is strained into its glass with no ice, so the dilution in the stir is all the water it will ever get.\n\nAt Brennan's the guide prints the Classic Sazerac as stirred with Peychaud's. Thompson's Dream and the Origin Story follow the same pattern, and an Old Fashioned style drink like the Birdcage is a stirred family too. Confirm each build with the bar.",
+			"explain": "Stirring with ice mixes, chills and dilutes while limiting aeration compared with shaking. It suits many spirit led recipes whose intended texture is smooth and relatively clear. Time is a guide, not a universal endpoint: ice, starting temperature, quantity and technique affect the result.\n\nThe Brennan's Classic Sazerac is described as stirred and served without ice. Its water can come from ingredients and preparation; stirring is not literally the only possible source.\n\nThompson's Dream, Origin Story and Birdcage offer useful related structures, but their exact house builds need bar confirmation.",
 			"card": {
-				"front": "Why is a Sazerac stirred and never shaken?",
-				"back": "It is all spirit: stirring chills and dilutes without adding air, so it stays clear and silky. It is strained into a glass with no ice."
+				"front": "What should a bartender control when stirring?",
+				"back": "Chill, dilution and texture, with limited aeration. A fixed number of seconds or a clear appearance alone does not prove the drink is ready. Follow the recipe and house standard."
 			},
 			"items": [
 				"Classic Sazerac",
@@ -659,7 +666,8 @@
 			],
 			"sources": [
 				"guide.txt (pdf p38 and p39, the bar pages)",
-				"expert knowledge"
+				"expert knowledge",
+				"research/brennans-bar-review-2026-10-15.md"
 			]
 		},
 		{
@@ -752,10 +760,10 @@
 			"kind": "technique",
 			"name": "Building in the glass",
 			"say": "",
-			"explain": "To build a drink is to make it in the glass it is served in, ingredient by ingredient, with no shaker or mixing glass. It suits drinks that would lose their bubbles or their layers if mixed hard.\n\nOrder matters. An Irish coffee is built hot: sugar dissolved in the coffee, then whiskey, then the cream. A Champagne Cocktail starts with the bitters-soaked sugar cube in the glass and the wine poured gently over it so it keeps its sparkle. Highballs and spritzes are built the same way, the sparkling part going in last.\n\nAt Brennan's the guide prints the Irish Coffee as built in the glass, and the Champagne Cocktail's printed build is the classic one. The bar confirms the rest.",
+			"explain": "Building means combining a drink directly in its serving glass. The recipe controls ingredient order, ice, mixing and finish. Irish Coffee, a Champagne Cocktail and a spritz can all be built, but they do not share one universal sequence.\n\nA classic Champagne Cocktail can start with bitters on a sugar cube before wine. A manufacturer's spritz may use a different order or a prepared bottle. Keep carbonated ingredients out of a sealed shaker and mix gently as the recipe directs.\n\nThe Brennan's guide describes its Irish Coffee as built; confirm the exact service for other house drinks.",
 			"card": {
-				"front": "What does it mean to build a drink?",
-				"back": "To make it in its serving glass, ingredient by ingredient, no shaker. Order matters: sugar, then spirit, then cream for an Irish coffee; cube first, Champagne poured over."
+				"front": "Does building a drink always mean adding bubbles last?",
+				"back": "No. Build in the serving glass and follow the particular recipe or product instructions. Protect carbonation and never seal it in a shaker."
 			},
 			"items": [
 				"Brennan’s Irish Coffee",
@@ -766,7 +774,8 @@
 			"sources": [
 				"guide.txt (pdf p38 and p39, the bar pages)",
 				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
-				"research/components-drinks-2026-10-05.md (search 17)"
+				"research/components-drinks-2026-10-05.md (search 17)",
+				"research/brennans-bar-review-2026-10-15.md"
 			]
 		},
 		{
@@ -774,10 +783,10 @@
 			"kind": "technique",
 			"name": "Topping with bubbles",
 			"say": "",
-			"explain": "Many drinks are finished with something sparkling: Champagne, another sparkling wine or sparkling water. The rule is to add it last and gently, down the side of the glass, never shaking it, so it keeps its fizz.\n\nThe bubbles lift aroma out of the glass and lighten a drink, making a liqueur or a purée feel fresh rather than heavy. Brut, meaning dry, wines keep a drink crisp; a softly sweet one like the Bigaro rounds it.\n\nAt Brennan's this runs through Bubbles and the fall list: Taittinger in the Flamingo, Champagne in the Champagne Cocktail, sparkling wine in the Riviera and For Sentimental Reasons, Chandon Brut in the spritz, the Bigaro in the OBX, sparkling water in the Bodrum and a zero proof rosé in Personality.",
+			"explain": "A sparkling ingredient adds carbonation and can change aroma, texture, sweetness and alcohol content. When a recipe calls for a sparkling top, combine the noncarbonated ingredients as directed, then add that top gently. Other built or prepared drinks can use different sequences.\n\nNever seal a carbonated mixture in a shaker. Follow the house recipe and supplier directions. Bubbles do not cancel sweetness or prove a drink is low in alcohol.\n\nHouse examples include sparkling wine in For Sentimental Reasons, Champagne in Flamingo, sparkling water in Bodrum and a labeled zero proof sparkling rosé in Personality. Confirm actual bottles, measures and order.",
 			"card": {
-				"front": "How is a sparkling top added to a cocktail?",
-				"back": "Last and gently, down the side of the glass, never shaken, so it keeps its fizz. The bubbles lift aroma and lighten the drink."
+				"front": "What matters when adding a sparkling ingredient?",
+				"back": "Follow the recipe, handle it gently and never seal carbonation in a shaker. Bubbles affect texture but do not prove dryness or lower alcohol."
 			},
 			"items": [
 				"Flamingo",
@@ -795,7 +804,8 @@
 			"sources": [
 				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
 				"pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt",
-				"expert knowledge"
+				"expert knowledge",
+				"research/brennans-bar-review-2026-10-15.md"
 			]
 		},
 		{
@@ -822,10 +832,10 @@
 			"kind": "technique",
 			"name": "Clarifying with cream",
 			"say": "",
-			"explain": "Clarifying a drink with milk or cream is the old milk punch technique. The spirit and acidic ingredients, such as citrus or tea, are added to the milk or cream, which curdles. Left to rest and then strained slowly through cloth, the curds catch the cloudy parts and the liquid runs clear.\n\nWhat comes through is translucent and silky, without the weight of cream, and keeps far better than a creamy drink; the curds also soften any harsh edges.\n\nThe Prisoner of Love prints clarified heavy cream with gin, Earl Grey tea and orange flower water. How the bar clarifies it and for how long are questions for the bar, and any question about cream goes to the service note and lineup.",
+			"explain": "One common milk punch clarification method uses acid to curdle milk or cream, then filters liquid through the curds to remove suspended material. That is a general method, not a complete recipe for every clarified drink.\n\nClarification can change appearance and texture. It does not establish milk absence or determine how long the finished drink should be stored. Follow a validated house process and holding instructions.\n\nPrisoner of Love prints clarified heavy cream with gin, Earl Grey tea and orange flower water. The house acid, sequence, filtration and storage procedure are not supplied by that ingredient list.",
 			"card": {
-				"front": "What does clarifying with cream do to a drink?",
-				"back": "Acid curdles the cream, the curds are strained out through cloth, and the drink runs clear and silky. It is the old milk punch technique, used in the Prisoner of Love."
+				"front": "What must not be inferred from clarified heavy cream?",
+				"back": "Do not infer the house's acid or process, milk absence, or a validated holding time. Curdling and filtering is a general technique; the bar must confirm its actual preparation."
 			},
 			"items": [
 				"Prisoner of Love"
@@ -835,7 +845,8 @@
 			],
 			"sources": [
 				"research/components-drinks-2026-10-05.md (search 11)",
-				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"research/brennans-bar-review-2026-10-15.md"
 			]
 		},
 		{
@@ -843,10 +854,10 @@
 			"kind": "technique",
 			"name": "Barrel ageing",
 			"say": "",
-			"explain": "Barrel ageing means resting a spirit, a finished cocktail or even bitters in an oak cask. The wood softens sharp edges and adds vanilla, caramel and spice, and a little evaporation concentrates what is left. A used spirit cask lends some of its old contents too.\n\nTwo Brennan's drinks print it. Rumors are Flying is built on Brennan's Barrel Aged Rittenhouse Rye, and the Origin Story uses barrel-aged Peychaud's.\n\nWhat the menu does not print is who did the ageing, in what cask and for how long. Those are questions for the bar, so a server says barrel-aged for Brennan's and no more until the bar gives the story. Guests often ask; it is worth asking at lineup. The Sazerac Company does sell a Peychaud's Barrel-Aged; whether ours is that bottle is a question for the bar.",
+			"explain": "Ageing in a cask can change aroma, flavour and texture, depending on the vessel, previous contents, time and liquid. It does not guarantee a smoother drink. A spirit, bitters or a mixed cocktail can each be aged; they are different processes.\n\nRumors are Flying prints Brennan's Barrel Aged Rittenhouse Rye and Origin Story prints barrel-aged Peychaud's. Those words do not identify who aged which material, the vessel or duration.\n\nRepeat the printed description and ask the bar what was aged, by whom and how. Do not invent a house cask program or transfer a brand's process to the finished cocktail.",
 			"card": {
-				"front": "What does barrel ageing add, and what do we not know?",
-				"back": "Oak softens and adds vanilla, caramel and spice. Who aged our Rittenhouse and Peychaud's, in what cask and how long, is a question for the bar."
+				"front": "What does the printed barrel aged description leave unknown?",
+				"back": "What material was aged, by whom, in which vessel and for how long. Quote the menu and confirm the process; ageing does not guarantee smoothness or establish the finished cocktail's strength."
 			},
 			"items": [
 				"Rumors are Flying",
@@ -858,7 +869,8 @@
 			"sources": [
 				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
 				"guide.txt (pdf p39)",
-				"expert knowledge"
+				"expert knowledge",
+				"research/brennans-bar-review-2026-10-15.md"
 			]
 		},
 		{
@@ -909,10 +921,10 @@
 			"kind": "technique",
 			"name": "Cold pressing",
 			"say": "",
-			"explain": "Cold pressing is a way of making juice without heat or fast spinning blades. The fruit is ground to a pulp and pressed hard, often in a cloth, so the juice is squeezed out slowly and stays cool.\n\nJuice made this way keeps more of the fresh fruit's colour and bright flavour; because it is not pasteurised by heat, it is usually kept cold and has a short life.\n\nThe Revive Cold-Pressed Juice is listed under juices that are locally made and fresh squeezed: strawberry, apple and pineapple. Who presses it for Brennan's is not printed, and no source confirms the maker, so that is a question for the bar. It is the drink for a guest who wants neither alcohol nor caffeine.",
+			"explain": "Cold pressing describes extracting juice by pressure. It does not tell a server whether the juice is subsequently heat treated or treated with another pathogen control process.\n\nFDA distinguishes pasteurized and otherwise treated juices from untreated juice. Check the supplier label and bar procedure rather than inferring safety, storage or shelf life from the extraction name.\n\nThe saved Revive menu lists strawberry, apple and pineapple. The supplier and treatment are not confirmed by that list. The extraction term alone is not a description of every production step.",
 			"card": {
-				"front": "What does cold pressed mean on our juice?",
-				"back": "The fruit is pressed slowly without heat, keeping colour and fresh flavour. Ours is strawberry, apple and pineapple; who presses it is a question for the bar."
+				"front": "Does cold pressed prove a juice is unpasteurized?",
+				"back": "No. It describes extraction. Later heat or nonheat treatment and storage instructions must be checked with the supplier or bar."
 			},
 			"items": [
 				"Revive Cold-Pressed Juice"
@@ -920,7 +932,8 @@
 			"terms": [],
 			"sources": [
 				"research/components-drinks-2026-10-05.md (search 30)",
-				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"research/brennans-bar-review-2026-10-15.md"
 			]
 		},
 		{
@@ -1935,10 +1948,10 @@
 			"kind": "ingredient",
 			"name": "Chandon Brut",
 			"say": "shahn-DOHN BROOT",
-			"explain": "Chandon is the California sparkling wine house founded in 1973 by Moët Hennessy, the group behind Moët & Chandon Champagne, and based at Yountville in the Napa Valley since 1977, the first French sparkling wine house in California. It makes its wines in the Champagne method.\n\nBrut means dry. Chandon Brut is crisp and fresh, with apple, citrus and a little toast.\n\nIn the Chandon Garden Spritz it is the sparkling base under a bitter orange liqueur. Whether ours is the Californian Chandon Brut or Chandon's ready-made Garden Spritz from Mendoza is a question for the bar; either way the menu calls it sparkling wine, never Champagne, and so does the server; the Moët link is a fair and interesting thing to tell a guest who asks.",
+			"explain": "Chandon makes sparkling wine in more than one country, so the name alone does not establish California or a bottle fermentation. The saved house menu prints Chandon Brut sparkling wine and bitter orange liqueur.\n\nThe U.S. Garden Spritz technical sheet describes an Argentine ready to serve product with second fermentation and ageing in tank, called the Long Charmat method. The bitter orange component is blended before bottling. That is a product reference, not confirmation of the bottle Brennan's currently pours.\n\nAsk whether the house builds the drink from separate ingredients or pours a prepared bottle, then read its country and product name. Call it sparkling wine, not Champagne.",
 			"card": {
-				"front": "Who founded Chandon in California?",
-				"back": "Moët Hennessy, owner of Moët & Chandon Champagne, in 1973; its Yountville winery opened in 1977. Chandon Brut is dry sparkling wine; never call it Champagne."
+				"front": "Can the Chandon Garden Spritz menu prove California and traditional method?",
+				"back": "No. Chandon has several origins and products. Its U.S. Garden Spritz technical sheet describes Argentina and tank second fermentation. Confirm the actual bottle or house build."
 			},
 			"items": [
 				"Chandon Garden Spritz"
@@ -1949,7 +1962,8 @@
 			],
 			"sources": [
 				"research/components-drinks-2026-10-05.md (search 39)",
-				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"research/brennans-bar-review-2026-10-15.md"
 			]
 		},
 		{
@@ -2080,10 +2094,10 @@
 			"kind": "ingredient",
 			"name": "Brennan's barrel-aged Rittenhouse rye",
 			"say": "RIT-n-house",
-			"explain": "Rittenhouse Rye was introduced in 1934 by Continental Distilling of Philadelphia, named for the city's Rittenhouse Square. From 1948 it was bottled in bond, which by law means the spirit of one distilling season, aged at least four years and bottled at 100 proof. Heaven Hill, the Bardstown family firm, bought the brand in the 1990s and makes it in Kentucky.\n\nIt is a spicy, robust rye that holds its own in cocktails.\n\nThe menu prints Brennan's Barrel Aged Rittenhouse Rye in Rumors are Flying. Who aged it for the house, in what cask and for how long are not printed, so a server says barrel-aged for Brennan's and no more until the bar gives the story.",
+			"explain": "Rittenhouse Rye was introduced in 1934 by Continental Distilling of Philadelphia, named for the city's Rittenhouse Square. From 1948 it was bottled in bond, which by law means the spirit of one distilling season, aged at least four years and bottled at 100 proof. Heaven Hill, the Bardstown family firm, bought the brand in the 1990s and makes it in Kentucky.\n\nIt is a spicy, robust rye that holds its own in cocktails.\n\nThe menu prints Brennan's Barrel Aged Rittenhouse Rye. Confirm the actual bottle and what material was aged, by whom, in which cask and for how long before describing a house process.",
 			"card": {
 				"front": "What does bottled in bond mean on Rittenhouse?",
-				"back": "One distilling season, aged at least four years, bottled at 100 proof. The menu calls ours barrel aged for Brennan's; what that means is a question for the bar."
+				"back": "Bottled in bond refers to production and ageing rules, including one distilling season, at least four years and 100 proof. The menu's Brennan's Barrel Aged wording still needs a separate house explanation."
 			},
 			"items": [
 				"Rumors are Flying"
@@ -2093,7 +2107,8 @@
 			],
 			"sources": [
 				"research/components-drinks-2026-10-05.md (search 41)",
-				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"research/brennans-bar-review-2026-10-15.md"
 			]
 		},
 		{
@@ -2572,10 +2587,10 @@
 			"kind": "ingredient",
 			"name": "Kahlua",
 			"say": "kuh-LOO-uh",
-			"explain": "Kahlúa is a coffee liqueur from Veracruz, Mexico, introduced in 1936 and made from rum, sugar and arabica coffee. It is sweet, dark and roasty, with vanilla and caramel.\n\nCoffee liqueur is the backbone of the Black Russian and the White Russian, and it sweetens most espresso martinis.\n\nIn Brennan's Espresso Martini the menu prints Kahlua with chicory, vodka and Frangelico, so the coffee flavour comes partly from the liqueur. The menu prints chicory and not espresso, so how the coffee goes in is a question for the bar, and caffeine questions go there too.",
+			"explain": "Kahlúa is a Mexican coffee liqueur made with Arabica coffee and rum. The producer confirms it contains caffeine.\n\nBrennan's Espresso Martini lists Kahlua, chicory, vodka and Frangelico. Kahlua therefore supplies caffeine even if no espresso is added. The total caffeine depends on the measures and any additional coffee preparation. Chicory itself does not establish a caffeine free drink.\n\nCheck the actual expression and label for alcohol content, since the producer describes different market strengths. Do not apply information for Kahlúa Original to every ready to drink variant.",
 			"card": {
-				"front": "What is Kahlua made from?",
-				"back": "Rum, sugar and arabica coffee, made in Veracruz, Mexico, since 1936. It brings coffee flavour and sweetness to our Espresso Martini, beside chicory and Frangelico."
+				"front": "Can Brennan's Espresso Martini be called caffeine free because it prints chicory?",
+				"back": "No. The printed Kahlua coffee liqueur contains caffeine. Confirm measures and additional coffee for the total; do not promise a caffeine free drink."
 			},
 			"items": [
 				"Espresso Martini"
@@ -2583,7 +2598,8 @@
 			"terms": [],
 			"sources": [
 				"research/components-drinks-2026-10-05.md (search 53)",
-				"pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+				"pages/brennansneworleans-menus-pasted-2026-10-03.txt",
+				"research/brennans-bar-review-2026-10-15.md"
 			]
 		},
 		{
@@ -2638,8 +2654,8 @@
 					"app": "ledger",
 					"ref": "Brandy Milk Punch",
 					"label": "The canon Brandy Milk Punch",
-					"same": "The same New Orleans breakfast drink: brandy, milk or cream, vanilla and sugar, shaken hard and finished with grated nutmeg.",
-					"different": "The canon pours cognac with whole milk, rich syrup and vanilla extract; ours prints brandy, heavy cream and real vanilla bean, and no measures."
+					"same": "Both belong to the creamy brandy milk punch family, with vanilla and nutmeg.",
+					"different": "The canon specifies whole milk and syrup; the saved house menu lists heavy cream without measures. Published Brennan's recipes exist but do not establish today's build."
 				},
 				{
 					"app": "ledger",
@@ -2664,7 +2680,7 @@
 					"app": "ledger",
 					"ref": "Caesar",
 					"label": "Canada's savoury tomato drink",
-					"same": "Vodka with tomato and a savoury broth, seasoned with hot sauce and Worcestershire.",
+					"same": "Vodka in a savoury tomato based family; exact seasonings depend on the recipe.",
 					"different": "The Caesar uses tomato and clam juice in a celery salt rim; ours uses beef bouillon and the house mix."
 				}
 			]
@@ -2745,7 +2761,7 @@
 					"app": "ledger",
 					"ref": "Martini",
 					"label": "The canon gin Martini",
-					"same": "Gin with a wine aperitif, cool and dry, for the martini drinker; the canon is stirred, and the bar confirms ours.",
+					"same": "Gin with a wine aperitif in a martini related structure; the canon is stirred, while the house method needs confirmation.",
 					"different": "Ours uses Hendrick's and a Corsican quinquina instead of dry vermouth, adds chive oil, and comes with caviar."
 				},
 				{
@@ -2764,8 +2780,8 @@
 					"app": "ledger",
 					"ref": "Sazerac",
 					"label": "The canon Sazerac",
-					"same": "Rye, red Creole-style bitters and an anise rinse, stirred, no ice: the Sazerac pattern.",
-					"different": "Ours uses stronger Willett 4-year rye, Bitter Truth Creole Bitters and a St. George absinthe rinse."
+					"same": "Rye, Creole style bitters and an anise rinse connect it to the Sazerac family; confirm the house service.",
+					"different": "The house names Willett 4-year rye, Bitter Truth Creole Bitters and St. George absinthe. Check proof and measures before ranking strength."
 				}
 			]
 		},
@@ -2776,15 +2792,15 @@
 					"app": "ledger",
 					"ref": "Sazerac",
 					"label": "The canon Sazerac",
-					"same": "Peychaud's bitters and an absinthe perfume in a stirred drink with no ice.",
-					"different": "The canon is rye; ours returns to cognac, Dudognon, with barrel-aged Peychaud's and Jade absinthe."
+					"same": "Peychaud's and an anise spirit connect the recipes to the Sazerac family.",
+					"different": "The Ledger canon uses rye; the house menu names Dudognon Cognac, barrel-aged Peychaud's and Jade absinthe. It is a Cognac interpretation, not a verified first recipe."
 				},
 				{
 					"app": "ledger",
 					"ref": "Vieux Carré",
 					"label": "New Orleans rye and cognac classic",
 					"same": "A New Orleans stirred drink with cognac and Peychaud's bitters, rich and spirit-forward.",
-					"different": "The Vieux Carré adds rye, sweet vermouth and Bénédictine over ice; ours is cognac only, served without ice."
+					"different": "The Vieux Carré canon combines rye, Cognac, sweet vermouth and Bénédictine; the house list names Dudognon Cognac, barrel-aged Peychaud's and Jade absinthe. Confirm the full house build."
 				}
 			]
 		},
@@ -2803,7 +2819,7 @@
 					"ref": "Caesar",
 					"label": "Canada's savoury tomato drink",
 					"same": "Vodka in a spicy, savoury tomato base with a garnish standing in the glass.",
-					"different": "The Caesar adds clam and a celery salt rim; ours is tomato only, with a local pickled garnish."
+					"different": "The Caesar canon names clam juice. Brennan's names housemade mix, pickled okra and spicy beans; the service note and kitchen address ingredient concerns."
 				}
 			]
 		},
@@ -2821,8 +2837,8 @@
 					"app": "ledger",
 					"ref": "Seelbach",
 					"label": "Bitters and Champagne, Louisville style",
-					"same": "Champagne seasoned with aromatic bitters, built in the flute.",
-					"different": "The Seelbach adds bourbon, Cointreau and Peychaud's; ours is just bitters, sugar and Champagne."
+					"same": "Champagne and aromatic bitters connect the drinks.",
+					"different": "The Seelbach canon adds bourbon, Cointreau and Peychaud's. The house menu lists Champagne, Angostura and a demerara cube; confirm the full build and glass."
 				}
 			]
 		},
@@ -2833,14 +2849,14 @@
 					"app": "ledger",
 					"ref": "Kir Royale",
 					"label": "A French aperitif topped with bubbles",
-					"same": "A French aperitif liqueur topped with sparkling wine, light and festive.",
-					"different": "The Kir uses blackcurrant crème de cassis; ours uses Lillet Blanc, floral and citrus, with lemon."
+					"same": "An aperitif ingredient combined with sparkling wine.",
+					"different": "The Kir Royale uses blackcurrant crème de cassis, a liqueur; Riviera names Lillet Blanc, a wine aperitif, and lemon."
 				},
 				{
 					"app": "ledger",
 					"ref": "Hugo Spritz",
 					"label": "A floral sparkling aperitif",
-					"same": "A floral aperitif lengthened with sparkling wine: light, bright and low in strength.",
+					"same": "Floral and citrus directions with sparkling wine; strength depends on the recipe and serving.",
 					"different": "The Hugo uses elderflower, soda and mint over ice; ours is Lillet, sparkling wine and lemon."
 				}
 			]
@@ -2890,8 +2906,8 @@
 					"app": "codex",
 					"ref": "Moët & Chandon",
 					"label": "The Champagne house behind Chandon",
-					"same": "The same family name and the same traditional method of making sparkling wine.",
-					"different": "Moët & Chandon is Champagne from France; Chandon Brut is Californian sparkling wine, never called Champagne."
+					"same": "Moët & Chandon and Chandon share a corporate history, but that does not establish the same origin or fermentation method.",
+					"different": "Moët & Chandon is Champagne. The U.S. Garden Spritz technical sheet describes an Argentine product with second fermentation in tank; Brennan's actual bottle or separate build remains a bar confirmation."
 				}
 			]
 		},
@@ -2976,8 +2992,8 @@
 					"app": "ledger",
 					"ref": "Clarified Milk Punch",
 					"label": "The canon clarified milk punch",
-					"same": "Spirit and acid clarified through curdled cream or milk and strained clear and silky.",
-					"different": "The canon uses milk and citrus with any spirit; ours names gin, Earl Grey and clarified heavy cream."
+					"same": "Both invite a lesson about milk clarification; that connection does not establish the same house process.",
+					"different": "The canon uses milk and citrus for curdling and filtration. Brennan's names gin, tea, clarified heavy cream and orange flower water; confirm the actual process."
 				},
 				{
 					"app": "ledger",
@@ -3145,8 +3161,8 @@
 					"app": "ledger",
 					"ref": "Espresso Martini",
 					"label": "The canon espresso martini",
-					"same": "Vodka and coffee liqueur, shaken into a roasty after-dinner drink.",
-					"different": "The canon uses fresh espresso and syrup; ours prints chicory and Frangelico and no espresso."
+					"same": "Vodka and coffee liqueur in an after dinner cocktail.",
+					"different": "The canon names fresh espresso and syrup. Brennan's lists chicory, Frangelico, Kahlua and vodka; confirm coffee preparation and method. Kahlua itself contains caffeine."
 				},
 				{
 					"app": "ledger",
@@ -3165,7 +3181,7 @@
 					"ref": "Irish Coffee",
 					"label": "The canon Irish Coffee",
 					"same": "Hot coffee with liqueur or spirit under a cap of cool cream.",
-					"different": "Ours has no whiskey and no brown sugar: Frangelico and Nocello in chicory coffee."
+					"different": "This listing names Frangelico, Nocello and chicory coffee; Brennan's Irish Coffee names whiskey and brown sugar. Compare listed ingredients without inferring absence from the complete recipe."
 				},
 				{
 					"app": "ledger",

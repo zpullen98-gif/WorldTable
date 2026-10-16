@@ -42,6 +42,7 @@
 	import StudyMenu from '$lib/components/StudyMenu.svelte';
 	import StudyCard from '$lib/components/StudyCard.svelte';
 	import ProducersView from '$lib/components/ProducersView.svelte';
+	import FallMenu from '$lib/components/FallMenu.svelte';
 	import { readDrilled, type DrilledEntry } from '$lib/house-drilled';
 	import { findItem, latestVerdicts, say, studyRows, type StudyRow } from '$lib/study';
 	import { ITEM_ID_RE, wingInstalled } from '$lib/wing-links';
@@ -375,7 +376,14 @@
 	   from it is the shallow '#d-...' entry above it, so closing the card lands
 	   here again with the address still saying the view. */
 	let producersView = $state(false);
+	let fallView = $state(false);
+	let fallItem = $state('');
+	let fallKind = $state('dish');
 	afterNavigate(() => {
+		const fallQuery = new URLSearchParams(location.search);
+		fallView = fallQuery.get('view') === 'fall';
+		fallItem = fallQuery.get('item') ?? '';
+		fallKind = ['dish', 'cocktail', 'all'].includes(fallQuery.get('kind') ?? '') ? fallQuery.get('kind')! : 'dish';
 		producersView = new URLSearchParams(location.search).get('view') === 'producers';
 	});
 
@@ -1406,14 +1414,14 @@
 		<!-- On the study view the switch shares the h1's line, so the house's
 		     name, its facts and the menu itself rise up the phone's first screen. -->
 		<div class="headrow">
-			<h1>My Menu</h1>
-			{#if studyOn && current && opened && !openDish && !producersView}
+			<h1>{fallView ? 'Fall 2026' : 'My Menu'}</h1>
+			{#if studyOn && current && opened && !openDish && !producersView && !fallView}
 				<button class="quiet studyedit" onclick={editAll}>{say('editOff')}</button>
 			{/if}
 		</div>
 		<!-- The study view says what it is in its own facts line: a lede here
 		     would push the menu itself off a phone's first screen. -->
-		{#if opened && !studyOn}
+		{#if opened && !studyOn && !fallView}
 			<p class="lede">
 				Pin dishes from any recipe to draft a menu. The worksheet tracks course balance, vegetarian
 				coverage and prep load, then builds a consolidated shopping list.
@@ -1421,7 +1429,15 @@
 		{/if}
 	</header>
 
-	{#if !opened}
+	{#if fallView || !openDish}
+		<nav class="chips" aria-label="My restaurant collections">
+			<a class="chip" href="{base}/menu" aria-current={!fallView ? 'page' : undefined}>My menu</a>
+			<a class="chip" href="{base}/menu?view=fall" aria-current={fallView ? 'page' : undefined}>Fall food &amp; cocktails</a>
+		</nav>
+	{/if}
+	{#if fallView}
+		<FallMenu itemId={fallItem} kind={fallKind} />
+	{:else if !opened}
 		<!-- The doors More and My restaurant link to (#tools, #plan, #maitre, #desk,
 		     #house) are opened by the hash handler once the house is read; these
 		     empty anchors stand for them in the prerendered page, whose link

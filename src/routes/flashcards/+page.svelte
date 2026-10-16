@@ -73,6 +73,10 @@
 	import { nav, restoreScroll } from '$lib/stores/nav.svelte';
 	import { markStudied } from '$lib/oot-studied';
 	import { drilledKey, markDrilled } from '$lib/house-drilled';
+	import { fallCardById, fallMembers, fallDeckName, fallGradeKey, fallVerdicts, fallPractice, fallSourceById, type FallCard } from '$lib/fall-menu';
+	import FallTeachingImage from '$lib/components/FallTeachingImage.svelte';
+	import { foundationsCategories, foundationsEntries, foundationEntryById, foundationEntryByRef, foundationsMembers, foundationsPractice, foundationsDeckName, foundationLogKey, foundationRecordable, resolveFoundation } from '$lib/foundations';
+	import FoundationReading from '$lib/components/FoundationReading.svelte';
 	import { itemCards, latestVerdicts, mealsOf, inMeal, findItem, producersFor, say, tastingInMeal, tastingOnlyIds, type ItemCard } from '$lib/study';
 	import { buildFlashcards, type Flashcard } from '$lib/house/house-drills';
 	import { COMPONENT_KINDS, COMPONENT_LABELS, componentsFor, type ComponentKind } from '$lib/house/house-schema';
@@ -95,6 +99,9 @@
 	/* ---- the files and the record ---------------------------------------- */
 	let deck = $state<FloorDeck | null>(null);
 	let lexicon = $state<LexiconEntry[] | null>(null);
+	let lexiconLoading = $state(false);
+	let lexiconFailed = $state(false);
+	let deckFailed = $state(false);
 	let plateOf = $state<ReadonlyMap<string, { slug: string; title: string }>>(new Map());
 	let mounted = $state(false);
 
@@ -103,12 +110,7 @@
 		today.load();
 		void levels.load();
 		void cuisine.load();
-		void loadFloorDeck().then(
-			(d) => (deck = d),
-			() => {
-				/* the house decks stand without the Floor Deck */
-			}
-		);
+		needDeck();
 		void loadPlates().then(
 			(p) => (plateOf = plateIndexes(p).byCard),
 			() => {
@@ -117,9 +119,20 @@
 		);
 	});
 
+	function needDeck() {
+		deckFailed = false;
+		void loadFloorDeck().then(
+			(d) => (deck = d),
+			() => {
+				deckFailed = true;
+			}
+		);
+	}
+
 	function needLexicon() {
-		if (lexicon) return;
-		void loadLexicon().then((l) => (lexicon = l));
+		if (lexicon || lexiconLoading || lexiconFailed) return;
+		lexiconLoading = true;
+		void loadLexicon().then((l) => (lexicon = l), () => { lexiconFailed = true; }).finally(() => { lexiconLoading = false; });
 	}
 
 	const chosen = $derived<DeckLevel>(mounted ? levels.chosen : 1);
@@ -132,6 +145,7 @@
 	/* ---- where we are ---------------------------------------------------- */
 	const fc = $derived<Fc | null>(((page.state ?? {}) as App.PageState).fc ?? null);
 	const screen = $derived(!fc ? 'root' : !fc.run ? 'deck' : fc.done ? 'summary' : 'card');
+	$effect(() => { if (fc?.deck.startsWith('foundations')) needLexicon(); });
 	let all = $state(false);
 	/** A run asked for by a link (Due today, Start, a card's door), dealt once the files are in. */
 	let pending = $state<{ deck: string; run: boolean; card: string; meal: string; search: string } | null>(null);
@@ -153,7 +167,7 @@
 		   layout's afterNavigate (which runs after this one) has read the
 		   depth. The misses deal again from their address; a card asked for by
 		   name is drawn. */
-		if (n.type === 'enter' && run && id !== 'misses' && !card) {
+		if (n.type === 'enter' && run && id !== 'misses' && id !== 'foundations:misses' && !card) {
 			void tick().then(() => {
 				if (id === 'due') nav.fallTo(`${base}/flashcards`, {});
 				else nav.fallTo(deckUrl(id), { fc: { deck: id, meal: p.get('meal') || undefined } });
@@ -220,6 +234,7 @@
 	});
 	const slipped = $derived(deck ? slipping(deck, session.drillLog, Date.now()) : []);
 	const dueNow = $derived(today.at(chosen));
+	const fallLatest = $derived(fallVerdicts(today.drilled));
 
 	/* Cuisine's cards (the sixth tab): z: references, read from its index, a
 	   chapter's bodies loaded when one of its cards is on show. A chapter deck
@@ -247,6 +262,9 @@
 
 	/** A deck's name, for its heading, its row and the card screen's position line. */
 	function deckName(id: string): string {
+		if (id === 'foundations:misses') return 'Your culinary terms · practise again';
+		if (id === 'foundations' || id.startsWith('foundations:')) return foundationsDeckName(id);
+		if (id === 'fall' || id.startsWith('fall:')) return fallDeckName(id);
 		if (id === 'due') return 'Due today';
 		if (id === 'menu') return 'The whole menu';
 		if (id === 'menu-weak') return 'My weak ones';
@@ -273,6 +291,10 @@
 
 	/** Every card a deck holds, before any dealing, as references. */
 	function members(id: string, opts: { meal?: string; every?: boolean } = {}): string[] {
+		if (id === 'foundations:today') return foundationsPractice(session.drillLog, Date.now());
+		if (id === 'foundations' || id.startsWith('foundations:')) return foundationsMembers(id);
+		if (id === 'fall:today') return fallPractice(today.drilled).map((c) => `f:${c.id}`);
+		if (id === 'fall' || id.startsWith('fall:')) return fallMembers(id).map((c) => `f:${c.id}`);
 		const meal = opts.meal ?? '';
 		const keepMeal = (c: ItemCard) => {
 			if (!meal || !current) return true;
@@ -325,6 +347,7 @@
 		let n = 0;
 		for (const r of refs) {
 			const [k, id] = [r.slice(0, 1), r.slice(2)];
+			if (k === 'f' && fallLatest.get(id)?.v === 'met') n++;
 			if (k === 'h' && verdicts.get(id) === 'got') n++;
 			else if ((k === 'c' || k === 't') && met.has(id)) n++;
 			else if (k === 'p') {
@@ -357,12 +380,17 @@
 
 	/** The run: the cards in the order they are shown. */
 	function deal(id: string, opts: { meal?: string; every?: boolean; card?: string; search?: string } = {}): string[] {
+		if (id === 'foundations:misses') {
+			return [...new Set((new URLSearchParams(opts.search ?? location.search).get('refs') ?? '').split(',').filter(ref => foundationEntryByRef.has(ref)))];
+		}
+		if (id === 'foundations:today' || id.startsWith('foundations:item:')) return members(id);
+		if (id === 'fall:today' || id.startsWith('fall:item:')) return members(id);
 		const now = Date.now();
 		if (id === 'due') return [...(dueNow?.refs ?? [])];
 		if (id === 'misses') {
 			const p = new URLSearchParams(opts.search ?? location.search);
 			const list = (k: string) => (p.get(k) ?? '').split(',').map((s) => s.trim()).filter(Boolean);
-			return [...list('h').map((x) => `h:${x}`), ...list('c').map((x) => `c:${x}`), ...list('t').map((x) => `t:${x}`), ...list('k').map((x) => `k:${x}`), ...list('s').map((x) => `s:${x}`), ...list('r').map((x) => `r:${x}`), ...list('z').map((x) => `z:${x}`)];
+			return [...list('f').filter((id) => fallCardById.has(id)).map((x) => `f:${x}`), ...list('h').map((x) => `h:${x}`), ...list('c').map((x) => `c:${x}`), ...list('t').map((x) => `t:${x}`), ...list('k').map((x) => `k:${x}`), ...list('s').map((x) => `s:${x}`), ...list('r').map((x) => `r:${x}`), ...list('z').map((x) => `z:${x}`)];
 		}
 		/* Cuisine's own order, never a shuffle: what is due, then what is new in teaching order, then the rest. */
 		if (id.startsWith('cz:')) return dealCards(czCards(id, opts.every), session.drillLog, now).refs.map((c) => `z:${c}`);
@@ -439,7 +467,13 @@
 		const ref = refs[fc.i ?? 0];
 		const r = resolveRef(ref);
 		const missed = [...(fc.missed ?? [])];
-		if (r && current && r.kind === 'h') {
+		const foundation = fc.deck.startsWith('foundations') ? foundationEntryByRef.get(ref) : undefined;
+		if (r && r.kind === 'f') markDrilled(fallGradeKey(r.card.id), got ? 'met' : 'missed');
+		if (foundation) {
+			const key = foundationLogKey(foundation);
+			if (foundationRecordable(session.drillLog, foundation, Date.now())) session.markDrilled(key, got ? FLIP_GRADES.had : FLIP_GRADES.missed);
+			if (!got && refs.indexOf(ref) === refs.lastIndexOf(ref)) refs.push(ref);
+		} else if (r && current && r.kind === 'h') {
 			markDrilled(drilledKey(current.id, r.card.itemId, 'card-item'), got ? 'met' : 'missed');
 		} else if (r && current && (r.kind === 'p' || r.kind === 'k')) {
 			markDrilled(drilledKey(current.id, r.card.itemId, 'card-' + r.card.kind), got ? 'met' : 'missed');
@@ -469,6 +503,13 @@
 
 	function studyMisses() {
 		if (!fc) return;
+		if (fc.deck.startsWith('foundations')) {
+			const refs = (fc.missed ?? []).filter(ref => foundationEntryByRef.has(ref));
+			const query = refs.map(encodeURIComponent).join(',');
+			nav.pushShallow(`${deckUrl('foundations:misses')}&run=1&refs=${query}`, { fc: runState('foundations:misses', refs) });
+			void focusFrame();
+			return;
+		}
 		const ids = (k: string) => (fc.missed ?? []).filter((r) => r.startsWith(k + ':')).map((r) => r.slice(2));
 		const hs = ids('h');
 		const cs = ids('c');
@@ -477,13 +518,14 @@
 		const ss = ids('s');
 		const rs = ids('r');
 		const zs = ids('z');
+		const fs = ids('f').filter((id) => fallCardById.has(id));
 		// Part by part's cards go back as their dish's card: one dish, one card to restudy.
 		for (const p of ids('p')) {
 			const card = parts[Number(p)];
 			if (card && !hs.includes(card.itemId) && houseCards.some((c) => c.itemId === card.itemId)) hs.push(card.itemId);
 		}
-		const q = [hs.length ? `h=${hs.join(',')}` : '', cs.length ? `c=${cs.join(',')}` : '', ts.length ? `t=${ts.join(',')}` : '', ks.length ? `k=${ks.join(',')}` : '', ss.length ? `s=${ss.map(encodeURIComponent).join(',')}` : '', rs.length ? `r=${rs.map(encodeURIComponent).join(',')}` : '', zs.length ? `z=${zs.join(',')}` : ''].filter(Boolean).join('&');
-		const refs = [...hs.map((x) => `h:${x}`), ...cs.map((x) => `c:${x}`), ...ts.map((x) => `t:${x}`), ...ks.map((x) => `k:${x}`), ...ss.map((x) => `s:${x}`), ...rs.map((x) => `r:${x}`), ...zs.map((x) => `z:${x}`)];
+		const q = [fs.length ? `f=${fs.map(encodeURIComponent).join(',')}` : '', hs.length ? `h=${hs.join(',')}` : '', cs.length ? `c=${cs.join(',')}` : '', ts.length ? `t=${ts.join(',')}` : '', ks.length ? `k=${ks.join(',')}` : '', ss.length ? `s=${ss.map(encodeURIComponent).join(',')}` : '', rs.length ? `r=${rs.map(encodeURIComponent).join(',')}` : '', zs.length ? `z=${zs.join(',')}` : ''].filter(Boolean).join('&');
+		const refs = [...fs.map((x) => `f:${x}`), ...hs.map((x) => `h:${x}`), ...cs.map((x) => `c:${x}`), ...ts.map((x) => `t:${x}`), ...ks.map((x) => `k:${x}`), ...ss.map((x) => `s:${x}`), ...rs.map((x) => `r:${x}`), ...zs.map((x) => `z:${x}`)];
 		if (ts.length) needLexicon();
 		nav.pushShallow(`${base}/flashcards?deck=misses&run=1&${q}`, { fc: runState('misses', refs) });
 		void focusFrame();
@@ -507,6 +549,15 @@
 
 	/* ---- the run asked for by the address, once the files are in ---------- */
 	const canDeal = (id: string) => {
+		if (id === 'foundations' || id.startsWith('foundations:')) {
+			needLexicon();
+			return mounted && !!deck && !!lexicon && session.ready;
+		}
+		if (id === 'fall' || id.startsWith('fall:')) return mounted;
+		if (id === 'misses' && mounted) {
+			const q = new URLSearchParams(location.search);
+			if (q.has('f') && !['h', 'c', 't', 'k', 's', 'r'].some((k) => q.get(k))) return true;
+		}
 		if (!today.houseSettled) return false;
 		if (id === 'due') return today.ready;
 		if (id.startsWith('deck') || id === 'misses') return !!deck && session.ready;
@@ -542,6 +593,8 @@
 
 	/* ---- one card ---------------------------------------------------------- */
 	type Resolved =
+		| { kind: 'u'; entry: typeof foundationsEntries[number] }
+		| { kind: 'f'; card: FallCard }
 		| { kind: 'h'; card: ItemCard }
 		| { kind: 'p'; card: Flashcard }
 		| { kind: 'k'; card: Flashcard }
@@ -559,6 +612,14 @@
 		if (!ref) return null;
 		const id = ref.slice(2);
 		switch (ref[0]) {
+			case 'u': {
+				const entry = foundationEntryById.get(id);
+				return entry ? { kind: 'u', entry } : null;
+			}
+			case 'f': {
+				const card = fallCardById.get(id);
+				return card ? { kind: 'f', card } : null;
+			}
 			case 'h': {
 				const card = houseById.get(id);
 				return card ? { kind: 'h', card } : null;
@@ -596,6 +657,8 @@
 	const runRefs = $derived(fc?.refs ?? []);
 	const currentRef = $derived(runRefs[fc?.i ?? 0]);
 	const shown = $derived(resolveRef(currentRef));
+	const shownFoundation = $derived(fc?.deck.startsWith('foundations') ? foundationEntryByRef.get(currentRef) : undefined);
+	const foundationReading = $derived(shownFoundation ? resolveFoundation(shownFoundation, deck ?? undefined, lexicon ?? undefined) : null);
 	const shownFolios = $derived.by(() => {
 		if (!current || !shown) return [];
 		if (shown.kind === 'h') return foliosForDish(current.id, shown.card.itemId);
@@ -619,6 +682,7 @@
 
 	function onkey(e: KeyboardEvent) {
 		if (screen !== 'card' || e.metaKey || e.ctrlKey || e.altKey) return;
+		if (document.querySelector('dialog[open]')) return;
 		const t = e.target as HTMLElement | null;
 		if (t && ['BUTTON', 'A', 'SUMMARY', 'INPUT', 'TEXTAREA', 'SELECT'].includes(t.tagName)) return;
 		if ((e.key === ' ' || e.key === 'Enter') && !fc?.flipped) {
@@ -652,7 +716,14 @@
 		if (!czIndex) return [];
 		return [...czIndex.chapters.map((c) => row(`cz:ch:${c.key}`, c.title)), row('cz:all')].filter((r) => r.refs.length);
 	});
-	const line = (r: Row) => `${r.refs.length} ${r.refs.length === 1 ? 'card' : 'cards'} · ${learnt(r.refs)} learnt`;
+	const foundationStudied = (refs: readonly string[]) => {
+		const now = Date.now();
+		return refs.filter(ref => {
+			const entry = foundationEntryByRef.get(ref);
+			return entry && session.drillLog.some(event => event.slug === foundationLogKey(entry) && Number.isFinite(event.at) && event.at <= now);
+		}).length;
+	};
+	const line = (r: Row) => `${r.refs.length} ${r.refs.length === 1 ? 'card' : 'cards'} · ${r.id.startsWith('foundations') ? `${foundationStudied(r.refs)} practised` : `${learnt(r.refs)} learnt`}`;
 
 	/* ---- the deck screen --------------------------------------------------- */
 	const deckRefs = $derived(fc && !fc.run ? members(fc.deck, { meal: fc.meal, every: fc.every }) : []);
@@ -672,6 +743,9 @@
 <svelte:head><title>{screen === 'root' ? 'Flashcards' : fc ? deckName(fc.deck) : 'Flashcards'} · The World Table</title></svelte:head>
 
 <div class="shell hub flashcards" data-screen={screen}>
+	{#if (fc?.deck.startsWith('foundations') || pending?.deck.startsWith('foundations')) && (deckFailed || lexiconFailed)}
+		<div class="note" role="status"><p>The field notes could not load. Your practice record is safe.</p><button class="chip" onclick={() => { if (deckFailed) needDeck(); lexiconFailed = false; needLexicon(); }}>Try the field notes again</button></div>
+	{/if}
 	{#if screen === 'root'}
 		<h1 tabindex="-1">Flashcards</h1>
 		<ScopeChip names={nameOf} {chosen} {all} onAll={setAll} onChoose={(n) => levels.choose(n)} />
@@ -689,6 +763,14 @@
 			{/if}
 		</section>
 
+		<h2 class="group" id="fc-foundations">Your culinary terms</h2>
+		<p class="note">Every term from your sheets, at every level. Read in <a href="{base}/foundations">The Kitchen Fieldbook</a>, then practise here.</p>
+		<nav class="quiet" aria-labelledby="fc-foundations">
+			{#each ['foundations:today', 'foundations', ...foundationsCategories.map(category => `foundations:category:${category.id}`)] as id}
+				<button type="button" class="door" data-deck={id} onclick={() => openDeck(id)}><span class="door-name">{deckName(id)}</span><span class="door-line">{line(row(id))}</span></button>
+			{/each}
+		</nav>
+
 		<h2 class="group" id="fc-house">My restaurant</h2>
 		{#if !today.houseSettled}
 			<p class="note">Opening the house…</p>
@@ -705,6 +787,12 @@
 			</nav>
 		{/if}
 
+		<h2 class="group" id="fc-fall">Brennan's Fall 2026</h2>
+		<nav class="quiet" aria-labelledby="fc-fall">
+			{#each ['fall:today', 'fall:food', 'fall:cocktail', 'fall:tableside'] as id}
+				<button type="button" class="door" data-deck={id} onclick={() => openDeck(id)}><span class="door-name">{deckName(id)}</span><span class="door-line">{line(row(id))}</span></button>
+			{/each}
+		</nav>
 		{#if componentRows.length}
 			<h2 class="group" id="fc-made">{say('madeOf')}</h2>
 			<nav class="quiet" aria-labelledby="fc-made">
@@ -770,7 +858,16 @@
 		</nav>
 	{:else if screen === 'deck' && fc}
 		<h1 tabindex="-1">{deckName(fc.deck)}</h1>
-		<p class="note deckline">{deckRefs.length} {deckRefs.length === 1 ? 'card' : 'cards'} · {learnt(deckRefs)} learnt</p>
+		<p class="note deckline">{line({ id: fc.deck, name: deckName(fc.deck), refs: deckRefs })}</p>
+		{#if fc.deck.startsWith('foundations')}
+			<p class="note">Say what the term means and how you would explain it to a guest. {fc.deck === 'foundations:today' ? 'A short daily selection: missed answers, new words and earlier practice.' : 'All levels are included.'} Your first self-check for each term today is saved; these flips do not award mastery.</p>
+			<a class="chip" href="{base}/foundations">Read your terms &amp; definitions</a>
+			{#if !deck || !lexicon || !session.ready}<p class="note" role="status">Opening your field notes and practice record…</p>{/if}
+		{/if}
+		{#if fc.deck === 'fall' || fc.deck.startsWith('fall:')}
+			<p class="note">Say your answer aloud before flipping. {fc.deck === 'fall:today' ? 'Ten cards: missed answers first, then unseen material and older practice.' : 'Ingredients, origins, tableside language and lineup questions.'} Progress is kept on this device.</p>
+			<a class="chip" href="{base}/menu?view=fall">Read the fall collection</a>
+		{/if}
 		{#if canNarrow}
 			<details class="fold narrow">
 				<summary>Narrow this deck</summary>
@@ -790,7 +887,7 @@
 			</details>
 		{/if}
 		{#if deckRefs.length}
-			<button type="button" class="chip go start" onclick={() => startRun(fc.deck, { meal: fc.meal, every: fc.every })}>Start</button>
+			<button type="button" class="chip go start" disabled={fc.deck.startsWith('foundations') && (!deck || !lexicon || !session.ready)} onclick={() => startRun(fc.deck, { meal: fc.meal, every: fc.every })}>Start</button>
 		{:else if !today.houseSettled || (fc.deck.startsWith('deck') && !deck) || (fc.deck.startsWith('cz:') && !czIndex && !cuisine.failed)}
 			<p class="note">Opening the deck…</p>
 		{:else}
@@ -807,6 +904,7 @@
 				<button type="button" class="chip go" onclick={studyMisses}>Study the misses</button>
 			{/if}
 			<button type="button" class="chip" onclick={anotherDeck}>Another deck</button>
+			{#if fc.deck.startsWith('foundations')}<a class="chip" href="{base}/foundations">Open the Fieldbook</a>{/if}
 		</div>
 	{:else if screen === 'card' && fc}
 		<h1 class="vh-h">{deckName(fc.deck)}</h1>
@@ -823,8 +921,29 @@
 				onGrade={grade}
 			>
 				{#snippet face()}
-					{#if !shown}
+					{#if shownFoundation && foundationReading}
+						<div class="flash foundation-card" data-foundation={shownFoundation.id}>
+							<p class="kkind">{foundationsCategories.find(category => category.id === shownFoundation.category)?.title}</p>
+							<h2 class="term">{shownFoundation.term}</h2>
+							{#if fc.flipped}
+								<FoundationReading reading={foundationReading} />
+								<a class="chip reading-door" href="{base}/foundations?term={encodeURIComponent(shownFoundation.id)}">Open this field note</a>
+							{:else}<p class="def">What does it mean? Describe it to a guest, then flip.</p>{/if}
+						</div>
+					{:else if !shown}
 						<div class="flash"><p class="def">This card is no longer in the deck. Grade it either way to move on.</p></div>
+					{:else if shown.kind === 'f'}
+						<div class="flash">
+							<p class="kkind">{shown.card.itemName} · {shown.card.topic}</p>
+							<p class="term">{shown.card.prompt}</p>
+							{#if fc.flipped}
+								<p class="def back">{shown.card.answer}</p>
+								<p class="note">{shown.card.sourceIds.length ? 'Background sources:' : 'Based on your Fall 2026 training sheet and the collection’s service notes.'}</p>
+								{#each shown.card.sourceIds as sid}{@const source = fallSourceById.get(sid)}{#if source}<p class="note"><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a></p>{/if}{/each}
+								<a class="chip" href="{base}/menu?view=fall&kind={shown.card.kind}&item={shown.card.itemId}">Read this item</a>
+								{#key shown.card.id}<FallTeachingImage itemId={shown.card.itemId} compact />{/key}
+							{:else}<p class="def">Say it aloud, then flip.</p>{/if}
+						</div>
 					{:else if shown.kind === 'h'}
 						{@const c = shown.card}
 						{#if !fc.flipped}
@@ -918,7 +1037,7 @@
 								bind:open={layers}
 							/>
 						{/key}
-					{:else}
+					{:else if shown.kind === 't'}
 						<div class="flash tcard">
 							{#if shown.entry}
 								<p class="term">{shown.entry.term}</p>
@@ -927,6 +1046,7 @@
 								<p class="def">Opening the Lexicon…</p>
 							{/if}
 						</div>
+					{:else}<div class="flash"><p class="def">Open this term through <a href="{base}/foundations">The Kitchen Fieldbook</a>.</p></div>
 					{/if}
 					{#if fc.flipped}
 						<FolioLinks folios={shownFolios} label={shown?.kind === 'k' ? 'Illustrated studies for these menu items' : shown?.kind === 's' ? 'Illustrated studies for this course' : 'Illustrated studies'} />
@@ -940,6 +1060,8 @@
 </div>
 
 <style>
+	.foundation-card .term { margin-bottom: 18px; }
+	.reading-door { margin-top: 22px; }
 	.start {
 		margin-top: 10px;
 		min-height: 52px;

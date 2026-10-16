@@ -59178,6 +59178,1360 @@
       },
       "reason": "Term links of 12 October 2026: the gumbo's notes and its lineup ask speak of filé and no term said what it is. The line keeps the house rule, published recipe, never menu: it claims no filé in the dining room gumbo, which stays a lineup question. Linked to the Seafood Gumbo by name, since its menu line does not print the word.",
       "source": "gap-recipes-4 (the published Seafood Filé Gumbo, a teaspoon of filé; say published recipe, never menu); research/dossier-the-kitchen.md section 5 (Seafood Gumbo: Choctaw filé); components/dishes.json gumbo-story (filé, ground sassafras leaves, from the Choctaw); research/deep-2026-10-03/catalogue.json (a roux thickened with okra or filé)"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ 2010",
+      "field": "grapes",
+      "value": [
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Petit Verdot",
+        "Merlot"
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ 2010",
+      "field": "style",
+      "value": "Mature Rutherford red, Cabernet Sauvignon led blend",
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ 2010",
+      "field": "sayIt",
+      "value": "Inglenook Rubicon 2010 by the glass: a mature Rutherford red, led by Cabernet Sauvignon, with blackcurrant, cedar and tobacco notes.",
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ 2010",
+      "field": "profile",
+      "value": "Rubicon is Inglenook's flagship from Rutherford in Napa Valley. The estate records the 2010 as 86 percent Cabernet Sauvignon, 6 percent Cabernet Franc, 5 percent Petit Verdot and 3 percent Merlot. It spent 20 months in barrel and was released in September 2013. Blackcurrant, cedar, tobacco and earth are useful tasting cues; assess the actual bottle before promising softness or maturity. Years since harvest are not years spent in bottle.",
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ 2010",
+      "field": "serve",
+      "value": "Serve 60 to 64°F in a large Bordeaux glass. Settle the bottle upright ahead of service. Follow the sommelier’s plan for the bottle’s condition; pour steadily and stop when sediment approaches the neck. Decide on decanting and air by assessment, not a fixed time.",
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ 2010",
+      "field": "parts",
+      "value": {
+        "main": "Cabernet Sauvignon, Cabernet Franc, Petit Verdot and Merlot from Rutherford",
+        "technique": "2010 vintage; 20 months in barrel, released in September 2013",
+        "sauce": "mature Napa flagship, by the glass",
+        "sides": "Chateaubriand with sauce Foyot and the hanger steaks",
+        "taste": "blackcurrant, cedar, tobacco and earth; assess the bottle’s condition"
+      },
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ 2010",
+      "field": "lines",
+      "value": {
+        "s10": "The 2010 Inglenook Rubicon by the glass: a mature Cabernet led red from Rutherford.",
+        "s20": "For the Chateaubriand, Inglenook Rubicon 2010 by the glass: Rutherford Cabernet leads the blend, with blackcurrant, cedar and tobacco notes. I will confirm the bottle is showing well.",
+        "s45": "Rubicon is the flagship of Inglenook, the historic Rutherford estate. The 2010 blends Cabernet Sauvignon with Cabernet Franc, Petit Verdot and Merlot. Think blackcurrant, cedar, tobacco and earth alongside the Chateaubriand and its sauce Foyot. A mature wine can vary from bottle to bottle, so our sommelier assesses its condition and decides how much air it needs. I will confirm the wine, vintage and price before we serve it."
+      },
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ 2010",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "Present the label and confirm Inglenook Rubicon 2010. Serve at 60 to 64°F in a large Bordeaux glass. Settle the bottle upright ahead of service and ask the sommelier to assess its condition and decanting needs. Pour steadily, stopping when sediment approaches the neck; there is no fixed amount to leave or universal air time. Follow the house procedure for the open bottle and glass pour. Say: “Rubicon 2010, a mature Rutherford red.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "Offer Rubicon to a guest who enjoys Cabernet Sauvignon and wants to explore a mature Rutherford wine, especially with the Chateaubriand or hanger steak. Confirm availability and price before the recommendation. For several glasses, compare the actual pour volume and total price with the bottle; never imply a saving without doing that calculation. Say: “Inglenook Rubicon 2010 brings Cabernet depth, with cedar and tobacco notes alongside the beef.”"
+        },
+        {
+          "q": "How is the open bottle kept?",
+          "a": "Confirm the house preservation method, opening record and discard policy at lineup. Assess the wine before each service; age alone cannot set an open bottle’s usable life. Follow the equipment instructions if a preservation system is used. Keep the bottle settled and stop the pour when sediment approaches the neck."
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Inglenook Rubicon 2010 is our featured mature red by the glass at $70. The saved list offers both formats; confirm the bottle, vintage, pour and price before service.\n\nRubicon is the flagship of Inglenook, the historic Rutherford estate in Napa Valley. The estate records the 2010 blend as 86 percent Cabernet Sauvignon, 6 percent Cabernet Franc, 5 percent Petit Verdot and 3 percent Merlot. It spent 20 months in barrel and was released in September 2013. The harvest date does not tell us how many years it spent in bottle.\n\nBlackcurrant, cedar, tobacco and earth are useful tasting cues. Maturity can change fruit and tannin, but it does not guarantee a silky texture or a sound bottle. The sommelier assesses this bottle and decides how much air it needs.\n\nOffer it with the Chateaubriand and sauce Foyot or a hanger steak. For a table considering several glasses, compare the confirmed pour size and total price with a full bottle. Pour steadily and watch for sediment rather than leaving an arbitrary amount behind."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What is the blend?\n\nAnswer: The estate lists 86 percent Cabernet Sauvignon, with Cabernet Franc, Petit Verdot and Merlot.\n\nAsked: Will it have sediment?\n\nAnswer: It may. We settle it upright and pour or decant carefully according to its condition.\n\nAsked: Is the glass the same as the bottle?\n\nAnswer: The saved list names 2010 in both formats; I will confirm what is open tonight."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Confirm the 2010 label and the format: the saved list prints bin 18231 at $70 by the glass and $360 by the bottle, with other vintages nearby. An old vintage is not a promise of sound condition or soft tannin. Follow the sommelier’s assessment for preservation, sediment and air. Compare prices using the confirmed pour size; two $70 glasses do not approach $360. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+      "field": "grapes",
+      "value": [
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Petit Verdot",
+        "Merlot"
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+      "field": "style",
+      "value": "Mature Rutherford red, Cabernet Sauvignon led blend",
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+      "field": "sayIt",
+      "value": "Inglenook Rubicon 2010 as a whole bottle: a mature Rutherford red, led by Cabernet Sauvignon, with blackcurrant, cedar and tobacco notes.",
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+      "field": "profile",
+      "value": "Rubicon is Inglenook's flagship from Rutherford in Napa Valley. The estate records the 2010 as 86 percent Cabernet Sauvignon, 6 percent Cabernet Franc, 5 percent Petit Verdot and 3 percent Merlot. It spent 20 months in barrel and was released in September 2013. Blackcurrant, cedar, tobacco and earth are useful tasting cues; assess the actual bottle before promising softness or maturity. Years since harvest are not years spent in bottle.",
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+      "field": "serve",
+      "value": "Serve 60 to 64°F in a large Bordeaux glass. Settle the bottle upright ahead of service. Follow the sommelier’s plan for the bottle’s condition; pour steadily and stop when sediment approaches the neck. Decide on decanting and air by assessment, not a fixed time.",
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+      "field": "parts",
+      "value": {
+        "main": "Cabernet Sauvignon, Cabernet Franc, Petit Verdot and Merlot from Rutherford",
+        "technique": "2010 vintage; 20 months in barrel, released in September 2013",
+        "sauce": "mature Napa flagship, the whole bottle",
+        "sides": "Chateaubriand with sauce Foyot and the hanger steaks",
+        "taste": "blackcurrant, cedar, tobacco and earth; assess the bottle’s condition"
+      },
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+      "field": "lines",
+      "value": {
+        "s10": "The 2010 Inglenook Rubicon the whole bottle: a mature Cabernet led red from Rutherford.",
+        "s20": "For the Chateaubriand, Inglenook Rubicon 2010 as a whole bottle: Rutherford Cabernet leads the blend, with blackcurrant, cedar and tobacco notes. I will confirm the bottle is showing well.",
+        "s45": "Rubicon is the flagship of Inglenook, the historic Rutherford estate. The 2010 blends Cabernet Sauvignon with Cabernet Franc, Petit Verdot and Merlot. Think blackcurrant, cedar, tobacco and earth alongside the Chateaubriand and its sauce Foyot. A mature wine can vary from bottle to bottle, so our sommelier assesses its condition and decides how much air it needs. I will confirm the wine, vintage and price before we serve it."
+      },
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "Present the label and confirm Inglenook Rubicon 2010. Serve at 60 to 64°F in a large Bordeaux glass. Settle the bottle upright ahead of service and ask the sommelier to assess its condition and decanting needs. Pour steadily, stopping when sediment approaches the neck; there is no fixed amount to leave or universal air time. Follow the house procedure for the host’s taste and bottle service. Say: “Rubicon 2010, a mature Rutherford red.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "A full bottle suits guests who want to explore Rubicon together over the beef course. Check the vintage, condition and $360 listing with the sommelier before offering it. If the table has already ordered glasses, calculate their confirmed volumes and total cost before comparing formats. Say: “For the table, Rubicon 2010 is a mature Rutherford blend, with Cabernet depth alongside your Chateaubriand.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Inglenook Rubicon 2010 is the full bottle at $360, bin 18231. The saved list offers both formats; confirm the bottle, vintage, pour and price before service.\n\nRubicon is the flagship of Inglenook, the historic Rutherford estate in Napa Valley. The estate records the 2010 blend as 86 percent Cabernet Sauvignon, 6 percent Cabernet Franc, 5 percent Petit Verdot and 3 percent Merlot. It spent 20 months in barrel and was released in September 2013. The harvest date does not tell us how many years it spent in bottle.\n\nBlackcurrant, cedar, tobacco and earth are useful tasting cues. Maturity can change fruit and tannin, but it does not guarantee a silky texture or a sound bottle. The sommelier assesses this bottle and decides how much air it needs.\n\nOffer it with the Chateaubriand and sauce Foyot or a hanger steak. For a table considering several glasses, compare the confirmed pour size and total price with a full bottle. Pour steadily and watch for sediment rather than leaving an arbitrary amount behind."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What is the blend?\n\nAnswer: The estate lists 86 percent Cabernet Sauvignon, with Cabernet Franc, Petit Verdot and Merlot.\n\nAsked: Will it have sediment?\n\nAnswer: It may. We settle it upright and pour or decant carefully according to its condition.\n\nAsked: Is the glass the same as the bottle?\n\nAnswer: The saved list names 2010 in both formats; I will confirm what is open tonight."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Confirm the 2010 label and the format: the saved list prints bin 18231 at $70 by the glass and $360 by the bottle, with other vintages nearby. An old vintage is not a promise of sound condition or soft tannin. Follow the sommelier’s assessment for preservation, sediment and air. Compare prices using the confirmed pour size; two $70 glasses do not approach $360. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+      "field": "why",
+      "value": "A mature Rutherford bottle for guests exploring Cabernet with the Chateaubriand; compare actual pour volumes and prices before suggesting a format change.",
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:JM Sélèque ‘Solessence’ Extra Brut NV",
+      "field": "lines",
+      "value": {
+        "s10": "For a bottle, JM Sélèque Solessence Extra Brut: a grower Champagne, crisp and very dry, lovely with fried pickles.",
+        "s20": "If you would like real Champagne from a family grower, the Sélèque Solessence comes from Pierry, near Épernay: Extra Brut, so very dry, with citrus, almond and a chalky snap for the pickles.",
+        "s45": "JM Sélèque is a grower in Pierry, just south of Épernay, which means the family grows the grapes and makes the wine. Solessence blends Chardonnay and Meunier with a little Pinot Noir from seven villages, part fermented in oak, and it is Extra Brut: 0 to 6 grams of sugar per liter in the finished wine. It tastes of white flowers, ripe citrus and almond paste with a chalky, precise finish. Dry enough for vinegar and fresh enough for fried batter, it is a first pick for the fried pickles."
+      },
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:JM Sélèque ‘Solessence’ Extra Brut NV",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "Present the bottle and say JM Sélèque Solessence, say LECK soh leh SAHNSS. Serve it at 45 to 48°F in a tulip or white wine glass, from an ice bucket half ice and half water. Hold the cork and cage together and let it out with a quiet sigh. Pour the host last. Say: “Grower Champagne from Pierry: very dry, chalky and bright.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Solessence to a guest who asks for Champagne at the Roost Bar with the fried pickles or the oysters, and to anyone who likes their bubbles dry. A grower story plays well with curious drinkers. If they want a cult bottle with the pickles, the Jacques Selosse Initial is the celebration choice. Say: “Sélèque is a family grower near Épernay; the Solessence is very dry and chalky, made for something salty.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "JM Sélèque Solessence is a grower Champagne, $100, listed under Grower Producers, Vallée de la Marne, and a first pick for the fried pickles.\n\nJM Sélèque is a family grower in Pierry, on the slopes just south of Épernay: they farm their own vines and make the wine themselves. Solessence blends Chardonnay and Meunier with a little Pinot Noir from seven villages, and part of it is fermented in oak barrels. Extra Brut means 0 to 6 grams of sugar per liter in the finished wine.\n\nIn the glass it is pale gold with fine bubbles. It tastes of white flowers, ripe citrus and almond paste, with a chalky, precise finish, very dry and very clean.\n\nIt is on the list as a door into grower Champagne at a sweet spot price. Its dryness stands up to vinegar and its freshness lifts fried batter, which turns a snack at the Roost Bar into a bottle worth remembering."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What is a grower Champagne?\n\nAnswer: One made by the family that grows the grapes, rather than by a big house that buys them. Sélèque farms its own vines in Pierry.\n\nAsked: What does Extra Brut mean?\n\nAnswer: Extra Brut means 0 to 6 grams of sugar per liter in the finished wine. Brut is less than 12; the ranges overlap, so the labels alone cannot rank two bottles by dryness.\n\nAsked: Is it a vintage Champagne?\n\nAnswer: No, it is non vintage, a blend across years; the sommelier can say which harvest it is based on."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "It is Extra Brut, as is our house Champagne. The label alone does not tell us which tastes drier; ask the guest about their preferred style and confirm the current bottling with the sommelier. It sits under Grower Producers, Vallée de la Marne, as JM Sélèque \"Solessence\" Extra Brut, bin 32252, $100. Which harvest the current bottling is based on is a lineup question for the sommelier. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Pierre Paillard Grand Cru ‘Les Parcelles XVIII’ Extra Brut NV",
+      "field": "lines",
+      "value": {
+        "s10": "For a bottle of bubbles, the Pierre Paillard Grand Cru Extra Brut: very dry, with the body for butter.",
+        "s20": "If you would like a serious Champagne with the barbecue oysters, the Pierre Paillard is a Grand Cru grower from Bouzy: Pinot Noir body, very dry, red apple and chalk against the butter.",
+        "s45": "Pierre Paillard is a family grower in Bouzy, a Grand Cru village on the Montagne de Reims best known for Pinot Noir. Les Parcelles blends the family’s own Pinot Noir and Chardonnay parcels in the village, and it is Extra Brut: 0 to 6 grams of sugar per liter in the finished wine. It drinks very dry, with red apple, citrus peel and chalk, with a firm sense of body. That body stands up to barbecue butter while the bubbles clear the fried saltine crumble, so it is our sweet spot bottle for the Louisiana oysters."
+      },
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Pierre Paillard Grand Cru ‘Les Parcelles XVIII’ Extra Brut NV",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "Present the bottle and say Pierre Paillard, Grand Cru, from Bouzy. Serve it at 45 to 48°F in a tulip or white wine glass, from an ice bucket half ice and half water. Hold the cork and cage together and ease the cork out with a quiet sigh. Host last. Say: “Grand Cru Champagne from Bouzy: very dry, with Pinot Noir body.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "Suggest the Paillard to a table at breakfast or lunch ordering the Louisiana oysters, or to a guest who likes a Champagne with some body but no sweetness. Grand Cru on the label helps with a guest who wants a sense of occasion. For all Pinot Noir and more power, Bollinger PNTX20 is the celebration bottle with the same oysters. Say: “The Paillard is Grand Cru Champagne from Bouzy, very dry with Pinot body, built for that barbecue butter.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Pierre Paillard Les Parcelles XVIII is a Grand Cru grower Champagne, $120, under Grower Producers, Vallée de la Marne on our list, and the sweet spot bottle for the Louisiana oysters.\n\nPierre Paillard is a family grower in Bouzy, a Grand Cru village on the Montagne de Reims famous for its Pinot Noir. Les Parcelles blends Pinot Noir and Chardonnay from the family’s own parcels in Bouzy, and the Roman numeral on the label identifies the blend; what it marks is a question for the sommelier. Extra Brut means 0 to 6 grams of sugar per liter in the finished wine.\n\nIn the glass it is gold with fine, firm bubbles. It tastes of red apple, citrus peel and chalk, very dry, with the weight Pinot Noir brings.\n\nIt is on the list as a Grand Cru at a sweet spot price. With the barbecue oysters, its body meets the buttery sauce, its dryness and chalk love the brine, and the bubbles clear the fried saltine crumble."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What does Grand Cru mean in Champagne?\n\nAnswer: The village is one of the top rated in Champagne. Bouzy is a Grand Cru village known for Pinot Noir.\n\nAsked: What is the XVIII?\n\nAnswer: It identifies the blend; I will check with the sommelier which harvest it is built on.\n\nAsked: Is it dry?\n\nAnswer: It is a very dry style. Extra Brut means 0 to 6 grams of sugar per liter in the finished Champagne, not the amount added at dosage."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "The list prints it as Pierre Paillard Grand Cru \"Les Parcelles XVIII\" Extra Brut, bin 3161, $120, filed under Vallée de la Marne although Bouzy is on the Montagne de Reims. It is Extra Brut, as is our house Champagne; the label alone cannot rank their perceived dryness. What the XVIII marks is a lineup question for the sommelier. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Larmandier-Bernier Premier Cru ‘Longitude’ Extra Brut NV",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "Present the bottle and say Larmandier Bernier Longitude, lar mahn DYAY bair NYAY. Serve it at 45 to 48°F in a tulip or white wine glass, from an ice bucket half ice and half water. Hold the cork and cage together and ease the cork out with a quiet sigh. Host last. Say: “All Chardonnay, bone dry and chalky, made for oysters.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Longitude to a table at dinner ordering a dozen of the Grand Isle oysters, or to any guest who asks for a dry Champagne or a Blanc de Blancs. It also suits the crab claws. For a still white of the same spirit, Dauvissat Les Preuses Chablis is the celebration bottle with those oysters. Say: “All Chardonnay from a grower in the Côte des Blancs: bone dry and chalky, it tastes like the oysters’ own sea.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Larmandier Bernier Longitude is an all Chardonnay grower Champagne, $135, under Grower Producers, Côtes de Blancs on our list, and the sweet spot bottle for the Grand Isle Jewel oysters.\n\nLarmandier Bernier is a family grower in Vertus, at the southern end of the Côte des Blancs, the chalk slope where Champagne’s finest Chardonnay grows. Longitude is a Blanc de Blancs, all Chardonnay, rated Premier Cru and named for villages that lie along the same line of longitude. Extra Brut means 0 to 6 grams of sugar per liter in the finished wine.\n\nIn the glass it is pale, almost silver, with fine bubbles. It tastes of lemon, green apple and chalk, bone dry, with a salty, lingering finish.\n\nIt is on the list as the oyster Champagne of the sweet spot. Its chalk and acidity mirror the brine and the mignonette, and its bubbles calm the Fresno chili."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What is Blanc de Blancs?\n\nAnswer: White from whites: a Champagne made only from Chardonnay, which is lighter, crisper and more citrusy.\n\nAsked: Why is it called Longitude?\n\nAnswer: It is blended from villages that sit on the same line of longitude in the Côte des Blancs.\n\nAsked: Is it very dry?\n\nAnswer: It is a very dry style. Extra Brut means 0 to 6 grams of sugar per liter in the finished Champagne, not zero sugar or a stated dosage."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "It is Extra Brut, as is our house Champagne. Ask the guest about their preferred style; the label alone cannot tell us which bottle tastes drier. It is bin 31911, $135, under Côtes de Blancs as the list spells it. The villages in the current blend and its base harvest are questions for the sommelier. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Piper-Heidsieck ‘Brennan’s Essential’ Extra Brut NV",
+      "field": "profile",
+      "value": "The full bottle carrying Brennan’s Essential Extra Brut from Piper Heidsieck. Extra Brut means 0 to 6 grams of sugar per liter in the finished wine; it overlaps Brut. Confirm the exact bottling and blend before applying a standard Essentiel technical sheet to this private label.",
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Piper-Heidsieck ‘Brennan’s Essential’ Extra Brut NV",
+      "field": "lines",
+      "value": {
+        "s10": "Eggs and Champagne: a bottle of our own Brennan’s Essential by Piper Heidsieck, very dry and crisp.",
+        "s20": "For the whole table, a bottle of our house Champagne: Brennan’s Essential, made by Piper Heidsieck with our name on it, Extra Brut, so very dry, and it keeps hollandaise tasting light.",
+        "s45": "This is the full bottle of Brennan’s Essential from Piper Heidsieck, labeled for Brennan’s. Extra Brut describes 0 to 6 grams of sugar per liter in the finished wine, a dry style that can overlap Brut. Think citrus, orchard fruit, brioche and fine bubbles for oysters, turtle soup or the Hussarde. The sommelier can confirm the exact bottling and blend; I would not quote figures from another Piper cuvée without matching the label."
+      },
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Piper-Heidsieck ‘Brennan’s Essential’ Extra Brut NV",
+      "field": "parts",
+      "value": {
+        "main": "Piper Heidsieck house label; confirm the exact cuvée and blend",
+        "technique": "Extra Brut, measured by finished wine sugar; the full bottle",
+        "sauce": "the house Champagne for the whole table",
+        "sides": "hollandaise, eggs, turtle soup, oysters",
+        "taste": "citrus, orchard fruit, brioche, a chalky finish"
+      },
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Piper-Heidsieck ‘Brennan’s Essential’ Extra Brut NV",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "Present the bottle and say Brennan’s Essential by Piper Heidsieck, PEE pair HIDE seek. Serve it at 43 to 46°F in a tulip or white wine glass, from an ice bucket half ice and half water. Hold the cork and cage together, turn the bottle and ease the cork out with a quiet sigh. Host last. Say: “Our own house Champagne: Brennan’s Essential, very dry and crisp.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "When three or four guests each order a glass of the house Champagne, offer the full bottle of Essential instead, and with the Eggs Hussarde at brunch. It is the house’s own, so it carries a story. For a prestige vintage with the Hussarde, Rare 2013 is the celebration bottle. Say: “Since you are all having bubbles, a bottle of our own Brennan’s Essential: very dry, and it keeps the hollandaise light.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Brennan’s Essential by Piper Heidsieck is our house Champagne, and the full bottle is $140 on the list among the grandes marques. It is the sweet spot bottle for the Eggs Hussarde.\n\nIt is an Extra Brut from Piper Heidsieck, a Champagne house in Reims, labeled for us: the label carries the Brennan’s name. It is Extra Brut: 0 to 6 grams of sugar per liter in the finished wine. Confirm the exact bottling and blend before applying a standard Essentiel technical sheet to this label.\n\nThe guest knows it from the glass; the bottle is the same wine opened at the table for the whole party. In the glass it is pale gold with lively bubbles. It tastes bone dry, with citrus, orchard fruit and brioche, and a firm, chalky finish.\n\nOrdering the bottle makes sense for a table of four or more drinking Champagne through brunch. With the Hussarde, its acidity keeps the hollandaise light and its toastiness suits the coffee cured Canadian bacon."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: Is this the same as the glass?\n\nAnswer: Yes, it is our house Champagne, Brennan’s Essential by Piper Heidsieck, opened by the bottle.\n\nAsked: How many glasses in a bottle?\n\nAnswer: About five or six glasses, so for three or more guests drinking Champagne the bottle makes sense.\n\nAsked: Is it very dry?\n\nAnswer: It is a very dry style. Extra Brut means 0 to 6 grams of sugar per liter in the finished Champagne. The ranges overlap, so it need not taste drier than every Brut."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "The list prints the bottle without a bin, under Grande Marques, at $140. The glass price is in dispute, $28 on Binwise and $30 on the current menus, so quote the glass from the menu in hand. The breakfast tasting pairs the Hussarde with Charles Lafitte Brut, not this wine. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Veuve Fourny et Fils Premier Cru Blanc de Blancs Extra Brut NV (375 ml)",
+      "field": "lines",
+      "value": {
+        "s10": "A half bottle of Veuve Fourny Blanc de Blancs: bone dry Champagne, ideal with a plate of oysters.",
+        "s20": "For two with the raw oysters, the Veuve Fourny half bottle is a grower Champagne from Vertus, all Chardonnay and Extra Brut: lemon and chalk, bone dry against the brine.",
+        "s45": "Veuve Fourny et Fils is a family grower in Vertus, a Premier Cru village at the southern end of the Côte des Blancs, Champagne’s Chardonnay slope. This Blanc de Blancs is all Chardonnay and Extra Brut: 0 to 6 grams of sugar per liter in the finished wine: lemon, green apple and chalk, bone dry, with a saline finish. That chalk and salt mirror oyster brine and mignonette vinegar, so a half bottle is our pour for two with the Grand Isle oysters, and with the fried pickles at the bar."
+      },
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Veuve Fourny et Fils Premier Cru Blanc de Blancs Extra Brut NV (375 ml)",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "Present the half bottle and say Veuve Fourny Blanc de Blancs, vuhv foor NEE. Serve it at 43 to 46°F in a tulip or white wine glass from an ice bucket, half ice and half water. Hold the cork and cage together and ease it out with a quiet sigh. Host last. Say: “Veuve Fourny: bone dry Chardonnay Champagne for the oysters.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Veuve Fourny half to two guests sharing the Grand Isle oysters at dinner or the fried pickles at the Roost Bar who want Champagne but not a full bottle. A guest who likes their bubbles very dry will love it. For a full bottle with the oysters, the Larmandier Bernier Longitude from the same village is the sweet spot. Say: “A half bottle of Veuve Fourny: bone dry grower Champagne, all Chardonnay, made for raw oysters.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Veuve Fourny et Fils Blanc de Blancs Extra Brut is a grower Champagne in a half bottle, $120 for 375 ml, filed under Grower Producers, Côtes de Blancs, the half bottle for the Grand Isle Jewel oysters and a first pick for the fried pickles.\n\nVeuve Fourny et Fils is a family grower in Vertus, a Premier Cru village at the southern end of the Côte des Blancs, the chalk slope where Champagne’s Chardonnay grows. This is a Blanc de Blancs, all Chardonnay, and Extra Brut: 0 to 6 grams of sugar per liter in the finished wine.\n\nThe guest sees a half bottle, opened at the table, two or three glasses. In the glass it is pale with fine bubbles. It tastes of lemon, green apple and chalk, bone dry, with a saline finish.\n\nIt is on the list as the oyster Champagne for two. Its chalk and salt mirror the brine and the mignonette, and its acidity matches the vinegar in the pickles."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: Is this Veuve Clicquot?\n\nAnswer: No. Veuve means widow, and both houses were run by one, but Veuve Fourny is a family grower in Vertus.\n\nAsked: What is Extra Brut?\n\nAnswer: Extra Brut means 0 to 6 grams of sugar per liter in the finished wine. Brut is less than 12; the ranges overlap, so the labels alone cannot rank two bottles by dryness.\n\nAsked: What is Blanc de Blancs?\n\nAnswer: A Champagne made only from Chardonnay, crisp and citrusy."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Do not confuse Veuve Fourny with Veuve Clicquot, and do not confuse this white half, bin 32921, $120, with the Veuve Fourny rosé half beside it. It is Extra Brut, as is our house Champagne. Ask the guest about their preferred style; these labels alone do not rank the two bottles by dryness. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum)",
+      "field": "profile",
+      "value": "Piper Heidsieck Cuvée Brut in a 1.5 liter magnum: two standard 750ml bottles. A dry, crisp Champagne from the Reims house behind Brennan’s Essential. Brut is less than 12 grams of sugar per liter in the finished wine; Extra Brut is 0 to 6. The ranges overlap, so neither name proves this bottle tastes sweeter or rounder than our house pour.",
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum)",
+      "field": "parts",
+      "value": {
+        "main": "Champagne from Piper Heidsieck, its Cuvée Brut",
+        "technique": "non vintage Brut Champagne in a 1.5 L magnum",
+        "sauce": "our house Champagne's family, in a big bottle",
+        "sides": "a table toast, oysters, the Caesar, the poussin",
+        "taste": "dry and crisp; sweetness categories alone do not rank bottles"
+      },
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum)",
+      "field": "lines",
+      "value": {
+        "s10": "For the table, a magnum of Piper Heidsieck, the house behind our house Champagne: crisp, dry and lively.",
+        "s20": "For the table, Piper Heidsieck Cuvée Brut in a magnum: dry, crisp Champagne from the same producer as our house pour, with two standard bottles in one.",
+        "s45": "Piper Heidsieck is the producer behind Brennan’s Essential. Its Cuvée Brut is a different label, here in a 1.5 liter magnum, two standard bottles in one. Think dry, crisp Champagne for a whole table’s toast, from oysters through the meal. Brut and Extra Brut have overlapping sugar ranges, so I would compare the actual wines rather than promise that one tastes sweeter. I will confirm the current bottle and price."
+      },
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum)",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "Present the magnum and say Piper Heidsieck Cuvée, PEE pair HIDE seek. Serve it at 43 to 46°F in a tulip or white wine glass, from a deep ice bucket half ice and half water. Hold the cork and cage together, ease the cork out with a quiet sigh, and pour with two hands, thumb in the punt. Guests first and the host last. Say: “Piper Heidsieck, from the house behind our house Champagne. Cheers.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Piper Heidsieck magnum to a table of four or more that is enjoying the house Champagne, a party celebrating on a budget, or a brunch table toasting together. It suits the oysters, the Caesar and the poussin. Say: “Since you like our house Champagne, a magnum of Piper Heidsieck is the same house in a big bottle, for the whole table.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Piper Heidsieck Cuvée Brut is listed in a 1.5 liter magnum on the Birthday Bubbles menu at $275. Confirm the current bottle and price before offering it. A magnum holds two standard 750ml bottles, making it a useful format for a table’s celebration.\n\nIt comes from the Reims house behind Brennan’s Essential, but the labels identify different cuvées. Do not substitute one for the other without the guest’s agreement. Brut means less than 12 grams of sugar per liter in the finished wine; Extra Brut means 0 to 6. Those ranges overlap. The words alone do not prove which actual bottle is sweeter, rounder or drier.\n\nThe tasting cues are dry, crisp and lively, with fine bubbles. Offer it with oysters, the Caesar or the omelette, asking the guest about the style they enjoy. A large bottle needs a suitable bucket and time to chill. Confirm availability with the sommelier before promising a larger format."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: Is it the house Champagne?\n\nAnswer: It comes from the same producer, but this is Cuvée Brut in a magnum. Our house glass carries the Brennan’s Essential Extra Brut label.\n\nAsked: Is Brut sweeter?\n\nAnswer: Brut and Extra Brut overlap in finished sugar content. I would compare these actual bottles rather than judge from those words alone.\n\nAsked: How big is it?\n\nAnswer: 1.5 liters, or two standard bottles. I will check availability before offering a larger format."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Do not call it the house Champagne: ours is the Brennan's Essential Extra Brut, and this is Piper Heidsieck's Brut. A magnum needs a deep bucket and time to chill, so ask the bar to ice it as soon as it is ordered. The double magnum on the bottle list is not on the Birthday Bubbles page: check with the sommelier before offering it. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+      "field": "parts",
+      "value": {
+        "main": "House label from Piper Heidsieck; confirm the exact bottling and blend",
+        "technique": "Traditional method Champagne, Extra Brut, bottled under the Brennan’s name",
+        "sauce": "very dry and crisp, the house bubbles",
+        "sides": "turtle soup, raw oysters and the Hussarde",
+        "taste": "citrus, orchard fruit and brioche, a chalky finish"
+      },
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+      "field": "lines",
+      "value": {
+        "s10": "Our house Champagne, Brennan's Essential by Piper Heidsieck: Extra Brut, very dry and crisp, a beautiful way to start.",
+        "s20": "Our house Champagne is from Piper Heidsieck and carries the Brennan's name. It's Extra Brut, so very dry: citrus, orchard fruit and brioche with a firm, chalky finish, lovely with turtle soup, oysters and the Hussarde.",
+        "s45": "Our house Champagne is Brennan’s Essential, a Piper Heidsieck Extra Brut labeled for us. Extra Brut means 0 to 6 grams of sugar per liter in the finished wine. Think citrus, orchard fruit, brioche and fine bubbles with the turtle soup, oysters or Eggs Hussarde. Piper also sells its own Essentiel cuvée; I will confirm which bottling is under our label before quoting its blend, dosage or lees age."
+      },
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "Show the label and say the name as it reads: Brennan's Essential by Piper Heidsieck Extra Brut. Serve it at 43 to 46°F in a tulip or white wine glass, from an ice bucket half ice and half water. Hold the cork and cage together, turn the bottle, and ease the cork out with a quiet sigh, never a pop. Pour the guests first and the host last. Say: “Our house Champagne, Extra Brut: very dry, with fine bubbles. Enjoy.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the house Champagne at the greeting, to anyone celebrating, and with the turtle soup, the oysters and the Hussarde. It is the easiest first glass at either meal. Step up a special occasion to Rare by the glass at $75. Say: “Our house Champagne is Piper Heidsieck, labeled for Brennan's: Extra Brut, very dry and crisp, a lovely way to start.” Quote the price from the list in hand."
+        },
+        {
+          "q": "Is it a bespoke blend or the Essentiel under our label?",
+          "a": "Our house Champagne carries the Brennan’s Essential name and is labeled Extra Brut. Piper Heidsieck sells a standard Essentiel cuvée, but its technical sheet alone does not identify the wine under our private label. Say labeled for us. Confirm the cuvée, bottling and blend with the sommelier before quoting percentages, dosage or lees age. Do not assume different releases of the standard cuvée have identical figures."
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Brennan’s Essential by Piper Heidsieck Extra Brut is our house Champagne. The saved menus disagree on the glass price, $28 or $30, so confirm at lineup and quote the list in hand.\n\nIt is a traditional method Champagne labeled for Brennan’s. Piper Heidsieck also sells its own Essentiel cuvée. That product’s technical sheets do not, by themselves, establish the precise bottling or blend under our private label. Confirm those details before quoting percentages, dosage or lees age.\n\nExtra Brut means 0 to 6 grams of sugar per liter in the finished wine. Brut is less than 12. These ranges overlap; the words alone cannot rank two bottles by dryness or tell you the amount of sugar added at dosage.\n\nThink citrus, orchard fruit, brioche and fine bubbles. It is a natural first offer with turtle soup, oysters or Eggs Hussarde: freshness and bubbles provide contrast to rich, salty food. Present the actual label and describe the wine the guest will receive."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What does Extra Brut mean?\n\nAnswer: It means 0 to 6 grams of sugar per liter in the finished Champagne, a very dry style. It does not state the amount of sugar added at dosage.\n\nAsked: Is it made for Brennan's?\n\nAnswer: It is a Piper Heidsieck Extra Brut labeled for us. I say labeled for us, not made for us, until the sommelier confirms which cuvée is in the bottle.\n\nAsked: What does it go with?\n\nAnswer: The turtle soup, raw oysters and the Eggs Hussarde above all: its dryness and bubbles cut through rich, salty food."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "The glass price is disputed: the Binwise list read on 3 October prints $28, and the current Wines by the Glass and Birthday Bubbles pages both print $30, so confirm at lineup and quote the list in hand. Say labeled for us, never made for us, and quote no dosage or lees age until the sommelier names the cuvée. On the Traditional Breakfast the included pour with the Hussarde is Charles Lafitte Brut, 4 oz, as the guide and the current menu print: pour the house Champagne with the Hussarde only à la carte, and never double pour. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Rare Brut 2012 (Coravin)",
+      "field": "lines",
+      "value": {
+        "s10": "Rare by the glass: prestige vintage Champagne. I will confirm the vintage on the open bottle.",
+        "s20": "For a special occasion, we pour Rare by the glass: a prestige vintage Champagne, Chardonnay led, with white peach, candied citrus, toasted almond and a long, fine mousse. A rare chance to taste it without buying the bottle.",
+        "s45": "Rare began as Piper Heidsieck's prestige cuvée and is now its own Champagne house, declared only in exceptional years. It's Chardonnay led, from a single vintage, so it shows white peach, candied citrus, toasted almond and a long, fine mousse. We keep the opened bottle fresh under a Coravin Sparkling stopper, which is why we can pour a single glass. It's wonderful with raw oysters or crab claws, or on its own for a celebration. I'll confirm whether the 2012 or the 2013 is open."
+      },
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Rare Brut 2012 (Coravin)",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "Bring the bottle to the table and present the label: the guest is paying for the name. Serve it at 46 to 50°F, a touch warmer than the house bubbles so the vintage complexity shows, in a tulip or white wine glass. Lift the Coravin Sparkling stopper, pour, and reseal it straight away. Say the vintage only once you have read it on the label. Say: “This is Rare, the prestige vintage: toasted almond and candied citrus. Happy celebration.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "Offer Rare to a table celebrating, an anniversary or a guest who loves Champagne, as the step up from the house glass with the oysters, the turtle soup or the Hussarde. Tell them it is a rare chance to taste a wine like this without buying the bottle. Say: “For a special occasion, we pour Rare by the glass: a prestige vintage Champagne with toasted almond and candied citrus.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Rare is our prestige vintage Champagne by the glass, $75 at breakfast and lunch and at dinner, poured from a bottle kept fresh under a Coravin Sparkling stopper.\n\nRare began as Piper Heidsieck's prestige cuvée and is now run as its own house, Rare Champagne; its first vintage was 1976, and it is declared only in exceptional years. It is Chardonnay led, with Pinot Noir, from a single vintage and grand and premier cru villages, long on its lees. Because the opened bottle sits under a Coravin Sparkling stopper, used with the Coravin Sparkling charger to restore pressure, a single glass is possible.\n\nIn the glass it is golden, with a long, fine mousse. It tastes of white peach, candied citrus and toasted almond.\n\nIt is the celebration step up: from the house Champagne with the turtle soup, the oysters, the Hussarde and the omelette, and wonderful with crab claws or on its own. The Binwise list and the Birthday Bubbles page print 2012, and the current Wines by the Glass page a 2013 Millésime, so the open vintage is read at lineup."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What is Rare?\n\nAnswer: A prestige vintage Champagne that began at Piper Heidsieck and is now its own house; it is declared only in exceptional years.\n\nAsked: How can you pour it by the glass?\n\nAnswer: The opened bottle is kept fresh under a Coravin Sparkling stopper, used with the Coravin Sparkling charger to restore pressure, so a single glass is possible.\n\nAsked: Which vintage is it?\n\nAnswer: Our wine list and the Birthday Bubbles menu print 2012, and the glass list a 2013, so I read the label before naming it."
+        },
+        {
+          "q": "What is Rare, in one breath?",
+          "a": "Rare is a real vintage of the prestige cuvée, mostly Chardonnay, long on its lees; the $75 Coravin glass is a fair way into a bottle our list prices at $350 for the 2012 and $650 for the 2013. Check with the bar whether the 2012 or the 2013 is open before naming the vintage. Serve a touch warmer than the house bubbles so the toast, almond and candied citrus show."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "The vintage is disputed: the Binwise list and the Birthday Bubbles page print 2012, and the current Wines by the Glass page a 2013 Rare Millésime, both at $75. The bottle list carries both vintages, so read the label at lineup before you name it. Ask the sommelier which device and log procedure the bar uses. Never call it oxidative. At $75 a glass, name the price when you offer it. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Rare Champagne ‘Rare’ Brut 2013",
+      "field": "parts",
+      "value": {
+        "main": "Chardonnay led vintage Champagne, Piper Heidsieck’s prestige origin",
+        "technique": "single harvest 2013, Brut, long aged",
+        "sauce": "Rare 2013 by the bottle; confirm the vintage of the glass pour",
+        "sides": "eggs, bacon, marchand de vin, soup",
+        "taste": "white peach, candied citrus, toasted almond"
+      },
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Rare Champagne ‘Rare’ Brut 2013",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "Present the bottle, show the 2013 and say Rare. Serve it at 46 to 50°F in a white wine glass from an ice bucket, half ice and half water. This is a full bottle, opened with the cork: hold the cork and cage together and ease it out with a quiet sigh. Host last. Say: “Rare 2013: white peach and toasted almond, rich and elegant.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "Offer Rare 2013 for a table that wants a full bottle of prestige vintage Champagne for a celebration. Confirm the $650 listing and the bottle’s availability before ordering. Do not assume that the wine open by the glass is the same vintage, or suggest a saving without checking actual pour sizes and prices. Say: “Rare 2013: a Chardonnay led vintage Champagne with white peach and toasted almond notes.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Rare Brut 2013 is a full bottle of prestige vintage Champagne, $650 on our list among the grandes marques, and the celebration bottle for the Eggs Hussarde.\n\nRare began as the prestige cuvée of Piper Heidsieck, the Reims house that makes our Brennan’s Essential, and today it carries its own name. The 2013 is a single vintage, Chardonnay led with Pinot Noir, aged for years on its lees before release.\n\nIn the glass it is gold with a long, fine mousse. It tastes of white peach, candied citrus and toasted almond, rich and elegant, with a long finish.\n\nBy the glass, Rare is poured through the Coravin, so a guest can try one glass without opening a bottle. The full bottle is for the table that wants the whole experience. With the Hussarde, its depth meets the coffee cured bacon and the marchand de vin, while its freshness keeps the hollandaise light."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: Is this the same as the Rare by the glass?\n\nAnswer: It is the same producer and cuvée, but the vintage may differ. We use Coravin Sparkling for the glass pour; the vintage open tonight is a lineup question, because our lists print both 2012 and 2013.\n\nAsked: Who makes Rare?\n\nAnswer: It began as Piper Heidsieck’s prestige cuvée, the house that makes our Brennan’s Essential.\n\nAsked: Is it dry?\n\nAnswer: Yes, it is Brut: dry, rich and elegant."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "This bottle is bin 32471, 2013, $650. The glass on Coravin is disputed: Binwise prints Rare Brut 2012 and the current menu prints 2013 Rare Millésime, so never promise the glass is the same vintage as this bottle without checking at lineup. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Minuty ‘Prestige’ Côtes de Provence Rosé 2024",
+      "field": "grapes",
+      "value": [
+        "Grenache",
+        "Syrah",
+        "Rolle",
+        "Cinsault"
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Minuty ‘Prestige’ Côtes de Provence Rosé 2024",
+      "field": "serviceNote",
+      "value": "The producer’s current Prestige Rosé description lists Grenache, Syrah, Rolle and Cinsault without percentages. This is cuvée information, not a verified recipe for the saved 2024 vintage. Confirm the open vintage and any exact blend at lineup.",
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Minuty ‘Prestige’ Côtes de Provence Rosé 2024",
+      "field": "parts",
+      "value": {
+        "main": "Prestige rosé: Grenache, Syrah, Rolle and Cinsault on the current producer page",
+        "technique": "pressed pale and bottled young",
+        "sauce": "a pale, dry, classic Provence rosé",
+        "sides": "the tomato tostada and the shrimp and grits",
+        "taste": "white peach, wild strawberry, citrus zest, mineral"
+      },
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Minuty ‘Prestige’ Côtes de Provence Rosé 2024",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "Show the label and say mee nu TEE. Serve it at 45 to 48°F in a white wine glass, from an ice bucket half ice and half water, with no decanting. Pour where the guest can see the pale Provence color, guests first and the host last, and return the bottle to the ice. Say: “The Minuty, a classic Provence rosé: pale, dry and refreshing.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Minuty on a warm day, in the courtyard, with the tomato tostada, the shrimp and grits and the papillote, and to any guest who asks for rosé. Say: “The Minuty is a classic Provence rosé: pale, dry and refreshing, lovely with tomatoes and shrimp.” Pour it where the guest can see the pale color."
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "The Minuty Prestige Côtes de Provence Rosé 2024 is our still rosé by the glass, $17 at breakfast and lunch and at dinner.\n\nMinuty, mee nu TEE, is one of the classic names of Provence rosé. The current Prestige Rosé description lists Grenache, Syrah, Rolle and Cinsault. Exact proportions for our saved 2024 vintage are not confirmed; do not borrow a different release’s recipe.\n\nIn the glass it is the pale color Provence is known for, and the color is part of the appeal. It tastes dry and refreshing: white peach, wild strawberry and citrus zest, with a light mineral finish.\n\nIts freshness and red fruit are made for tomatoes and shrimp, which is why it is the first pick with the Creole Tomato Tostada, whose raw tomatoes need a wine as bright as they are, and with the New Orleans Shrimp & Grits, where the acidity meets the tomato based Creole sauce and the fruit cushions the tasso. It is the second choice with the Gulf Fish en Papillote for the tomato and olive, and a natural glass in the courtyard on a warm afternoon."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: Is it sweet?\n\nAnswer: No, it is dry: white peach, wild strawberry and citrus zest with a light mineral finish.\n\nAsked: Where is it from?\n\nAnswer: Provence, in the south of France. Minuty is one of the classic names of Provence rosé.\n\nAsked: What goes with it?\n\nAnswer: Tomatoes and shrimp above all: the Creole tomato tostada and the shrimp and grits."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Confirm at lineup that the vintage is still the 2024: young rosé rolls over. Keep it iced, half ice and half water, and pour it well chilled. Say Minuty as mee nu TEE. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Domaine La Tour Vieille Banyuls Reserva NV",
+      "field": "grapes",
+      "value": [
+        "Grenache Noir",
+        "Grenache Gris",
+        "Carignan"
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Domaine La Tour Vieille Banyuls Reserva NV",
+      "field": "serviceNote",
+      "value": "The producer’s current nonvintage Reserva page lists 80 percent Grenache Noir, 15 percent Grenache Gris and 5 percent Carignan. These are current cuvée figures, not confirmation of the restaurant bottle’s lot. Confirm the release and tasting pour at lineup.",
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Domaine La Tour Vieille Banyuls Reserva NV",
+      "field": "parts",
+      "value": {
+        "main": "Grenache Noir, Grenache Gris and Carignan from Banyuls, Roussillon",
+        "technique": "vin doux naturel: fermentation stopped with grape spirit, aged oxidatively",
+        "sauce": "a sweet fortified red, the classic with chocolate",
+        "sides": "The Snickers on the dinner tasting",
+        "taste": "dried fig, walnut, caramel, coffee and orange peel"
+      },
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Domaine La Tour Vieille Banyuls Reserva NV",
+      "field": "origin",
+      "value": "Banyuls is a fortified sweet wine from the Côte Vermeille in Roussillon. La Tour Vieille’s current Reserva description lists 80 percent Grenache Noir, 15 percent Grenache Gris and 5 percent Carignan. Added grape spirit stops fermentation, retaining grape sugar. Reserva is aged oxidatively and blends vintages; confirm the restaurant lot before treating current cuvée figures as its analysis.",
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Domaine La Tour Vieille Banyuls Reserva NV",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "Show the label and say lah TOOR vee AY, bahn YOOLS. Serve it slightly cool, about 55°F, in a small dessert glass: 4 oz on the tasting, 2 to 3 oz otherwise, with no decanting. Pour it before the dessert lands, guests first and the host last. Say: “To close, Banyuls from La Tour Vieille: fig, caramel and coffee, the classic with chocolate.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "You sell the Banyuls with the dinner tasting's pairing, as the Snickers lands. À la carte, offer it with the chocolate and caramel desserts only once the sommelier confirms it is poured by the glass and at what price; otherwise our coffee with chicory. Say: “Banyuls is a sweet red from the south of France: fig, caramel and coffee. With chocolate, it's the classic.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Domaine La Tour Vieille Banyuls Reserva is the dinner tasting's dessert wine, a 4 oz pour with The Snickers on the $120 wine pairing; it is not on the by the glass list.\n\nBanyuls, bahn YOOLS, is a sweet fortified red, a vin doux naturel, from the schist terraces around Banyuls sur Mer in Roussillon, French Catalonia. The current Reserva description lists Grenache Noir, Grenache Gris and Carignan; exact restaurant lot figures need confirmation. Grape spirit stops fermentation, retaining grape sugar. La Tour Vieille, lah TOOR vee AY, ages its Reserva the oxidative way.\n\nIn the glass it is a deep, browning red. It tastes of dried fig, walnut, caramel, coffee and orange peel.\n\nIt is the classic wine for chocolate: its sweetness keeps chocolate from turning it bitter, and its cocoa and coffee notes echo the dessert. It is the first pick with The Snickers, the Cherries Jubilee and the Café Brûlot Coffee Cake, and the sommelier may lead with it on Bananas Foster and the bread pudding, once a manager confirms it is poured outside the tasting."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What is Banyuls?\n\nAnswer: Bahn YOOLS: a sweet fortified red from Roussillon, in French Catalonia, mostly Grenache. Grape spirit stops the fermentation so the wine stays sweet.\n\nAsked: Is it like port?\n\nAnswer: It is made in a similar way, a fortified sweet red, but from a Grenache led blend in the south of France.\n\nAsked: Can I order a glass?\n\nAnswer: It is poured on the dinner tasting; whether it is poured à la carte is a question for the sommelier, so I will check."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Whether it is poured à la carte, at breakfast or at dinner, and at what price, is a sommelier question: until it is answered, offer our coffee with the coffee cake, the Jubilee and the Snickers à la carte, and bring the sommelier to a guest who wants a sweet wine. The guide and the current menu both print this Banyuls on the tasting. Lead with fig, caramel and coffee, not fresh black cherry. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+      "field": "profile",
+      "value": "The dinner tasting’s white, with the Louisiana BBQ lobster (4 oz pour). Mâcon Chardonnay: apple, citrus, a gentle roundness and a fresh finish. Château London is a named slope at Igé, old limestone with old vines, its name traced to an original owner who lived on the rue Landon in Paris, so no castle and nothing to do with England; the wine is from Domaine Fichet of Igé, a family estate founded by Francis Fichet in 1976; Pierre Yves joined in 1988, mostly steel with a touch of old oak, not the Meursault Fichet.",
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "Show the label and say fee SHAY, mah KAWN ee ZHAY, once you have confirmed it is tonight's pour. Serve it at 50 to 53°F in a white wine glass, from a bottle opened at the start of service and kept in a cooler so it does not over chill. Pour exactly 4 oz just before the lobster lands, guests first and the host last. Say: “With the lobster, a Mâcon Igé from Domaine Fichet: round enough for the butter, fresh against the spice.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "You sell the Fichet by selling the dinner tasting's $120 pairing; it is the white that meets the lobster. Name it as you pour, and tell the parcel story: guests enjoy that Château London has no castle. If a guest wants a glass on its own, check with the sommelier. Say: “With the lobster we pour a Mâcon from Burgundy: Chardonnay with body for the lobster and a fresh finish.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "The Fichet Château London Mâcon Igé 2024 is the dinner tasting's white, a 4 oz pour with the Louisiana BBQ Lobster on the $120 wine pairing; it is not on the by the glass list.\n\nDomaine Fichet, fee SHAY, is a family estate at Igé, ee ZHAY, in the Mâconnais; Francis Fichet created the domaine in 1976; his son Pierre Yves joined in 1988, and it is not the Meursault Fichet. Château London is a named slope on old limestone, with old vines; its name traces to an original owner who lived on the rue Landon in Paris, so there is no castle and nothing to do with England. The wine is made mostly in steel with a touch of old oak.\n\nIn the glass it is pale gold. It tastes of apple and citrus, with a gentle roundness and a fresh finish.\n\nThat roundness gives it the body for lobster and butter, and the fresh finish lifts the palate after the spicy ’nduja, which is why the guide and the current menu both pour it on that course."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: Is there a castle?\n\nAnswer: No. Château London is a named slope at Igé, on old limestone; the name traces to an original owner who lived on the rue Landon in Paris, so no castle, and nothing to do with England.\n\nAsked: Is it from Meursault?\n\nAnswer: No, this Fichet is a family estate at Igé in the Mâconnais, not the Meursault Fichet.\n\nAsked: Can I have a glass on its own?\n\nAnswer: It is poured on the tasting pairing and not on the glass list, so I will check with the sommelier."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "The guide and the current menu both print this Fichet with the lobster; read the supplement card at lineup all the same. It is an included 4 oz pour on the pairing: never double pour. Open it at the start of service and keep it in a cooler, not an ice bath. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Wine label review: correct supported blend, terminology or service consistency while preserving saved inventory and stable identity.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+      "field": "grapes",
+      "value": [],
+      "reason": "Wine label review: no exact blend is confirmed for the private label; keep grapes empty so grape drills cannot turn a standard Essentiel recipe into a house bottle fact.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Piper-Heidsieck ‘Brennan’s Essential’ Extra Brut NV",
+      "field": "grapes",
+      "value": [],
+      "reason": "Wine label review: no exact blend is confirmed for the private label; keep grapes empty so grape drills cannot turn a standard Essentiel recipe into a house bottle fact.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Minuty ‘Prestige’ Côtes de Provence Rosé 2024",
+      "field": "grapes",
+      "value": [],
+      "reason": "Wine label review: the generic grape drill cannot display the current cuvée versus exact 2024 qualification. Keep the four producer-listed varieties in qualified reading notes and leave this array empty pending a vintage-specific source.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "wine:Domaine La Tour Vieille Banyuls Reserva NV",
+      "field": "serve",
+      "value": "Serve slightly cool, about 55°F, in a small dessert glass: 2 to 3 oz, or 4 oz on the tasting. Confirm the house pour before service. Record the opening date, close and store the bottle under house procedure, and assess its condition before each service. Fortification alone does not guarantee a fixed life once open.",
+      "reason": "Wine label review: remove an unconditional open bottle lifespan; follow the house storage and condition assessment procedure.",
+      "source": "research/wine-label-review-2026-10-15.json"
+    },
+    {
+      "target": "cocktail:Brandy Milk Punch",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the milk punch at the greeting, before the menus are even open: it is the first sale of the morning and the classic way to start. Every guest on the Traditional Breakfast gets one; for the others, it sets the mood. Next rounds are the Bloody Bull at $13 or, with dessert, the Irish Coffee at $12. Say: “Can I start you with a Brandy Milk Punch? It's our classic New Orleans eye opener: brandy, cream, vanilla and nutmeg.”"
+        },
+        {
+          "q": "Is there a published recipe?",
+          "a": "Published recipes credited to Brennan's exist, including one supplied to Explore Louisiana. They document a published version, not a measured current bar build. The saved menu prints brandy, heavy cream, vanilla bean and nutmeg; confirm today's measures, sweetener and service with the bar."
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "The Brandy Milk Punch is a Brennan's signature at $12 and opens the saved Traditional Breakfast tasting. Its menu lists brandy, heavy cream, vanilla bean and nutmeg; the guide describes shaking it and serving it cold. Lead with those four ingredients, then explain the creamy texture and the vanilla and nutmeg aromas. A guest who recognises eggnog has a useful flavour reference, but that comparison does not establish an identical recipe.\n\nPublished Brennan's recipes exist, including one supplied to Explore Louisiana. They document a published version rather than today's confirmed measured build. Ask the bar about measures and sweetener before giving preparation advice. Confirm current tasting service and any substitution before promising one. For a related lesson, compare Prisoner of Love: its gin, tea and clarified heavy cream introduce a different spirit and preparation, while both menus name cream."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What is an eye opener?\n\nAnswer: A New Orleans name for a breakfast cocktail, not a claim that alcohol improves alertness.\n\nAsked: Is it eggnog?\n\nAnswer: It shares a creamy texture and nutmeg, but the menu names brandy, heavy cream, vanilla bean and nutmeg. I will verify the complete recipe for an ingredient concern.\n\nAsked: Can I have the recipe?\n\nAnswer: Brennan's has supplied published recipes, including one to Explore Louisiana. I can share that reference and ask the bar about the current version."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "The saved Traditional Breakfast includes this opening drink; confirm current tasting service and substitutions on shift. Published recipes do not establish today's measures. Heavy cream means milk is present; do not infer egg absence from a short ingredient list. Send ingredient concerns to the service note and kitchen, with the bar confirming its complete recipe and handling. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Replace the false absence of published recipes with a supplied recipe versus current menu distinction; avoid an egg absence guarantee.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Brandy Milk Punch",
+      "field": "lines.s45",
+      "value": "Our Brandy Milk Punch is a New Orleans breakfast classic: brandy with heavy cream, vanilla bean and nutmeg. It is creamy and aromatic, and it opens our saved Traditional Breakfast tasting. If you enjoy vanilla and nutmeg, it is a good drink to consider; I can also help you choose a drink without spirits. Would you enjoy a creamy drink with breakfast, or prefer a fruit juice?",
+      "reason": "Bar accuracy review 15 October 2026: Remove egg absence and guaranteed comparative strength.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Ralph’s Coffee",
+      "field": "lines.s45",
+      "value": "Ralph's Coffee brings together dark roast coffee with chicory, Frangelico hazelnut liqueur, Nocello walnut liqueur and whipped cream. Expect a roasty, nutty direction with cream on top. It is $8.00 on the saved menu. Would you prefer that nutty profile or the Irish whiskey and brown sugar listed in our Irish Coffee? I can help you choose by flavour and check the current preparation.",
+      "reason": "Bar accuracy review 15 October 2026: No measured recipe supports the gentlest coffee cocktail ranking.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Ralph’s Coffee",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "The bar builds Ralph's Coffee and you present it. Carry it level so the cream cap stays whole, turn any handle toward the guest's right hand, and say the name as you set it down so it is never taken for the Irish Coffee. Ask the guest not to stir: the coffee is meant to be sipped through the cream. At a Bananas Foster table, bring it just before the flame, never beside it. Say: “Here's Ralph's Coffee: hazelnut and walnut in our chicory coffee. Sip it through the cream.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "Offer Ralph's Coffee as dessert arrives, with Bananas Foster or the bread pudding, and to a guest who wants a coffee with a little something but not a whiskey drink. Next rounds: Brennan's Irish Coffee at $12.00 with whiskey, the Espresso Martini at $16.00, or our New Orleans Style Coffee at $11.00 on its own. Say: “Ralph's Coffee is our chicory coffee with hazelnut and walnut liqueurs under whipped cream: nutty and comforting.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Ralph's Coffee is $8.00 on the saved dessert menu. It lists dark roast coffee with chicory, Frangelico hazelnut liqueur, Nocello walnut liqueur and whipped cream. The named ingredients suggest a roasty, nutty direction with cream, making the drink useful for a guest who enjoys coffee and nut flavours at dessert. Explain the two liqueurs individually so the guest understands the choice.\n\nThis is a useful comparison with Brennan's Irish Coffee, whose menu lists Irish whiskey and brown sugar. Compare the named ingredients and ask which flavour direction the guest prefers; the menu alone cannot rank their alcohol or caffeine content. Nor does a short list prove an unlisted ingredient is absent from a full recipe. Confirm temperature, glass, measures and full ingredients with the bar. The source of the name is unconfirmed, so ask a manager before giving a namesake story."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: Who is Ralph?\n\nAnswer: The menu does not explain the name; I will check with a manager.\n\nAsked: How does it differ from Irish Coffee?\n\nAnswer: Both list chicory coffee and whipped cream. Ralph's names Frangelico and Nocello; the Irish Coffee names Irish whiskey and brown sugar.\n\nAsked: Is it weaker?\n\nAnswer: I cannot rank the finished drinks from the ingredient list. I will check their measures with the bar."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Do not mix it up with Brennan's Irish Coffee: both are chicory coffee under whipped cream, so name the drink as you ring it and as it lands. Confirm at lineup that it is served hot, and in which glass. It carries two nut liqueurs and cream: read the service note and confirm at lineup before answering ingredient questions. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Replace unsupported strength ranking and ingredient absence claims with printed contrasts.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Brennan’s Irish Coffee",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "The bar builds the Irish Coffee; you present it. Carry it level so the cream cap stays whole, set it down with the handle toward the guest's right hand, and name it as it lands. Do not stir it: the point is to sip the hot coffee through the cool cream. If the table is having Bananas Foster, bring it just before the flambé, never set down beside the flame. Say: “Here's our Irish Coffee: sip it through the cream, don't stir it.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Irish Coffee as dessert arrives, above all with Bananas Foster or the bread pudding, and to a guest lingering after a meal. Next rounds: Ralph's Coffee at $8.00 for a nutty coffee profile, the Espresso Martini at $16.00, or our New Orleans-style coffee with chicory at $11 without whiskey. Say: “With the Foster, our Irish Coffee is lovely: chicory coffee, brown sugar and Tullamore D.E.W. under whipped cream.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Brennan's Irish Coffee is a signature drink, $12 at breakfast and lunch and at dinner: an Irish coffee with a New Orleans accent.\n\nIt starts with our dark roast coffee with chicory, CHICK-uh-ree, roasted chicory root blended in the New Orleans way, which adds a roasty, almost chocolatey depth. It is sweetened with brown sugar, spiked with Tullamore D.E.W. Irish whiskey, whose initials are those of Daniel E. Williams, the distillery's manager who became its owner, and topped with whipped cream.\n\nThe guest gets a warm coffee under a cool white cap of cream, and sips the hot coffee through it. It tastes warm, sweet and smooth, roasty from the chicory.\n\nIt is the dessert upsell, on the breakfast and lunch menu and on the dessert menu: the natural partner for Bananas Foster or the bread pudding. For a guest who wants coffee without whiskey, our New Orleans-style coffee with chicory is the same roast on its own."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What makes it Brennan's?\n\nAnswer: Our dark roast coffee with chicory, the New Orleans tradition, sweetened with brown sugar.\n\nAsked: What whiskey is in it?\n\nAnswer: Tullamore D.E.W. Irish whiskey; the initials are those of Daniel E. Williams, the distillery's manager who became its owner.\n\nAsked: Can I have it without alcohol?\n\nAnswer: Our New Orleans-style coffee with chicory is the same roast without the whiskey."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "It is served hot with a cream cap: carry it level and set it down with the handle toward the guest. It carries caffeine and whiskey. For a guest avoiding alcohol, offer the plain coffee with chicory, which still carries caffeine; for a guest avoiding caffeine, offer the Revive Cold-Pressed Juice, or say “I will ask the bar about decaf.” Fire it with dessert so it arrives with the Foster, not after. Allergens: read the service note and confirm at lineup."
+        },
+        {
+          "q": "Where does Irish coffee come from?",
+          "a": "Irish coffee is credited to Joe Sheridan, the chef at the Foynes flying boat terminal in County Limerick, in the winter of 1942 to 1943, warming passengers off a flight turned back by weather. The Buena Vista Cafe in San Francisco recreated it in 1952, and it pours Tullamore D.E.W., the whiskey in ours. Our accent is the chicory coffee and the brown sugar. Tell it in two sentences as the glass lands."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Remove Ralph’s unmeasured lower strength comparison.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Espresso Martini",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Espresso Martini as dessert menus go down, to a vodka drinker, and to a table that wants coffee and a nightcap at once. Next rounds: Ralph's Coffee at $8.00 for coffee with nut liqueurs, Brennan's Irish Coffee at $12.00, or the Banane au Chocolat at $16.00 for chocolate. Say: “Our Espresso Martini has a New Orleans accent: vodka with chicory, Frangelico and Kahlua, roasty and smooth.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Our Espresso Martini is the first of the two coffee cocktails on the dessert menu, at $16.00: the modern classic with a New Orleans accent.\n\nThe menu prints chicory, vodka, Frangelico and Kahlua. Chicory, CHICK-uh-ree, is the roasted root New Orleans blends into its coffee, which adds body and a cocoa-like bitterness. Frangelico, fran-JEL-ih-koh, is an Italian hazelnut liqueur, and Kahlua, kuh-LOO-uh, a coffee liqueur. Whether the chicory comes as our chicory coffee or another way, the measures, the glass and the garnish are confirmed with the bar.\n\nThe guest gets a dark coffee cocktail. It tastes roasty and smooth: chicory and coffee liqueur, toasted hazelnut, and clean vodka underneath.\n\nIt is the drink for a guest who wants dessert and a coffee in one glass, and for a vodka drinker at the end of a meal. Ralph's Coffee, beside it on the menu, carries the Frangelico too, in coffee under whipped cream."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: Is there espresso in it?\n\nAnswer: The menu prints chicory, vodka, Frangelico and Kahlua. I will check how the bar prepares the coffee component.\n\nAsked: Does it contain caffeine?\n\nAnswer: Yes, the listed Kahlua coffee liqueur contains caffeine. The total depends on the measures and any additional coffee; chicory itself does not supply caffeine.\n\nAsked: Will it keep me awake?\n\nAnswer: I cannot predict that for you, but it is not a caffeine free choice."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "The listed Kahlua contains caffeine, even if the bar uses no additional coffee. Confirm the coffee preparation and measures to discuss total caffeine; do not offer the printed drink as caffeine free. Frangelico is a hazelnut liqueur. Consult the service note and kitchen for an allergy request, with the bar checking its complete recipe, bottles and handling. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Remove Ralph’s unmeasured lower strength comparison.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Riviera",
+      "field": "lines.s20",
+      "value": "The Riviera is Lillet Blanc, a French wine aperitif, with sparkling wine and lemon: floral, citrusy and sparkling. It is $12.00 on the saved Bubbles menu.",
+      "reason": "Bar accuracy review 15 October 2026: Lillet is a wine aperitif; no measured recipe supports lightest ranking.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Riviera",
+      "field": "lines.s45",
+      "value": "The Riviera combines Lillet Blanc, a French wine aperitif, with sparkling wine and lemon. It suggests a floral, citrusy direction with bubbles, so I would offer it to someone who prefers that profile to bitter orange. It is $12.00 on the saved Bubbles menu; I can check the current pour and availability with the bar. Would you enjoy a floral aperitif?",
+      "reason": "Bar accuracy review 15 October 2026: Replace alcohol strength inference with flavor choice.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Riviera",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I pour it?",
+          "a": "Present the Riviera the moment it leaves the bar, while it is still sparkling: carry it by the stem or the base, set it down at the guest's right and name it as it lands. In the courtyard, keep the tray out of the direct sun. If the bar tops it at the table, let the guest see the wine go in. Say: “Here's your Riviera: Lillet, sparkling wine and lemon, light and bright.”"
+        },
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Riviera to a guest settling into the courtyard or the Roost at Bubbles, to someone who prefers floral citrus to bitter orange, and as the first round before the Friday sabering. Next rounds: the Chandon Garden Spritz at $15.00 for something bittersweet, Brennan's Champagne Cocktail at $20.00, or the OBX at $12.00 for gin and peach. Say: “The Riviera is Lillet Blanc, sparkling wine and lemon: light, floral and lovely in the afternoon.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "The Riviera is one of the bubbly cocktails at Bubbles at Brennan's, our afternoon Champagne service in the Roost Bar and the courtyard, at $12.00.\n\nThe menu prints Lillet Blanc, sparkling wine and lemon, though it spells the aperitif Lilet; the bottle is Lillet, lee-LAY BLAHN, a French wine aperitif, floral and citrusy. Which sparkling wine, the measures, the glass and the garnish are confirmed with the bar.\n\nThe guest gets a pale, sparkling drink. It tastes light and bright: the Lillet's floral, citrusy notes, lifted by the bubbles and the lemon.\n\nIt is the easy afternoon drink, with an aperitif wine, lemon and sparkling wine. The name calls up the sunny Mediterranean coast, and it suits the courtyard. The same Lillet appears on the fall list in To Each His Own, with Calvados and quince."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What is Lillet?\n\nAnswer: A French wine aperitif, with a floral and citrus character.\n\nAsked: Is the Riviera low in alcohol?\n\nAnswer: Both Lillet and the sparkling wine contain alcohol. I will check the actual measures before comparing strength.\n\nAsked: When is Bubbles?\n\nAnswer: The saved menu lists weekday afternoons; I will confirm today's hours, location and current drink availability."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "The menu spells it Lilet; say and write Lillet. The Bubbles hours are disputed between the menu and an older listing, so confirm them on shift, and check the courtyard is not privately booked before you promise a table there. Which sparkling wine and the glass are lineup questions. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Flavor or sparkling format cannot establish lower alcohol.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Chandon Garden Spritz",
+      "field": "lines.s45",
+      "value": "The Chandon Garden Spritz pairs sparkling wine and bitter orange on our saved Bubbles menu, at $15.00. It is a bittersweet, sparkling aperitivo for someone who enjoys that flavor direction. I will confirm whether the bar pours Chandon's ready to serve bottle or builds the drink, and which bottling it uses. It is sparkling wine, not Champagne. Would you enjoy bitter orange?",
+      "reason": "Bar accuracy review 15 October 2026: Do not infer strength, country or production method from the menu alone.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:For Sentimental Reasons",
+      "field": "lines.s45",
+      "value": "For Sentimental Reasons combines allspice dram, pear purée and sparkling wine on our fall list. The pear brings fruit and body, the dram suggests baking spice, and the wine brings bubbles. It is $15.00 on the saved menu. If you prefer a drink without a conventional spirit, Personality is another sparkling option; I will check the actual bottle label if you need a precise alcohol figure.",
+      "reason": "Bar accuracy review 15 October 2026: Dram and wine both contain alcohol; avoid a lower strength or absolute zero promise.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:For Sentimental Reasons",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer For Sentimental Reasons at the start of brunch or dinner, to a table celebrating, and to a guest who would otherwise order a glass of sparkling wine. Next rounds: To Each His Own at $18.00 for orchard fruit with more depth, the Prisoner of Love at $16.00 for a gin drink, or the Personality at $16.00 for a spirit free option, with its label checked for strict alcohol avoidance. Say: “For Sentimental Reasons is pear and warm allspice topped with sparkling wine: fizzy, fruity and a lovely way to start.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "For Sentimental Reasons is the first drink on our fall list, Billboard Songs from 1946, at $15.00, the lowest price on that list. The list celebrates 80 years of Brennan's, which opened in 1946, and each drink carries the title of a song from that year.\n\nThe menu prints three parts: allspice dram, a liqueur that tastes of warm baking spice, then pear purée, topped with sparkling wine. Which sparkling wine, which allspice dram, the measures, the glass and the garnish are confirmed with the bar.\n\nThe guest gets a sparkling drink with the soft body the purée gives. It tastes fizzy and fruity, ripe pear first, with a gentle spice on the finish.\n\nIt is a sparkling way into the fall list: a brunch drink, a toast for a celebration, and the one to offer a guest who usually orders a glass of bubbles. Its spirit-free neighbor on the menu is the Personality, a sparkling rosé drink."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What is allspice dram?\n\nAnswer: An alcoholic liqueur flavored with allspice, a berry with a baking spice character. I will check which brand the bar uses.\n\nAsked: Is it sweet?\n\nAnswer: The dram and pear suggest sweetness. The actual balance depends on the wine and measures, so I will check today's preparation rather than promise it is dry or low in sugar.\n\nAsked: Why the song title?\n\nAnswer: The fall menu is titled Billboard Songs from 1946, the year Brennan's opened."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Say the full name, For Sentimental Reasons, when you ring it, so the bar never has to guess between song titles. Which sparkling wine, which allspice dram, the measures, the glass and the garnish are lineup questions for the bar; describe only the three printed parts until then. It is a sparkling drink: carry it straight from the bar so it keeps its fizz. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Do not equate bubbles or a fruit profile with low alcohol or low sugar.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Old Buttermilk Sky",
+      "field": "lines.s45",
+      "value": "Old Buttermilk Sky is our fall tequila sour: Volcán reposado, fig liqueur, lemon, egg white and cinnamon syrup, $18.00 on the saved menu. Expect a fig and cinnamon direction with lemon and an egg white texture. Do you enjoy fruit and spice in a sour? Oh! What It Seemed to Be uses a nonalcoholic agave alternative and fig syrup instead; I will check the label if an exact alcohol figure matters.",
+      "reason": "Bar accuracy review 15 October 2026: Avoid guaranteed preference, strength and absolute alcohol absence claims.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Old Buttermilk Sky",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer Old Buttermilk Sky to a margarita or whiskey sour drinker, and to a guest who wants a fall flavor in a lighter, silky drink. Next rounds: Five Minutes More at $20.00 for an herbal citrus drink, Rumors are Flying at $20.00 for whiskey, or Oh! What It Seemed to Be at $16.00, its spirit-free twin. Say: “Old Buttermilk Sky is a tequila sour with fig and cinnamon, silky from the egg white and bright with lemon.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Old Buttermilk Sky is the tequila sour on our fall list, Billboard Songs from 1946, at $18.00, named for one of the songs of the year Brennan's opened.\n\nThe menu prints Volcán Reposado Tequila, vol-KAHN reh-poh-SAH-doh, a tequila rested in oak; then fig liqueur, lemon, cinnamon syrup and egg white. Egg white is the classic way to give a sour its silky body. Which fig liqueur, the measures, the glass and the garnish are confirmed with the bar.\n\nThe guest gets a sour with a silky texture. It tastes warm and fruity, ripe fig and cinnamon over the rested tequila, with lemon keeping it bright.\n\nIt is the drink for a margarita or whiskey sour lover who wants something for fall. Its spirit-free twin on the menu, Oh! What It Seemed to Be, follows the same pattern on Lyre's non-alcoholic agave spirit with fig syrup, with the actual alcohol label checked when needed."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What does reposado mean?\n\nAnswer: Rested, referring to time in oak; it does not guarantee that a finished cocktail is softer or lower in alcohol.\n\nAsked: Can the egg white be omitted?\n\nAnswer: I will check the bar's full recipe and preparation before promising a modification.\n\nAsked: What is the nonalcoholic comparison?\n\nAnswer: Oh! What It Seemed to Be uses a nonalcoholic agave alternative and fig syrup, with lemon, egg white and cinnamon syrup. The actual bottle's alcohol figure still needs checking."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "It carries egg white, as printed: read the service note and confirm at lineup before you answer any question about egg. Do not mix it up with Oh! What It Seemed to Be, its spirit-free twin with the same lemon, egg white and cinnamon syrup: name the drink clearly when you ring it. Which fig liqueur and the glass are lineup questions. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Retain useful sour comparison without false strength or dietary assurances.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Prisoner of Love",
+      "field": "parts.technique",
+      "value": "gin, Earl Grey tea, clarified heavy cream and orange flower water; the clarification process, method and measures are not supplied",
+      "reason": "Bar accuracy review 15 October 2026: The menu does not prove a specific acid, curdling or filtration recipe.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Prisoner of Love",
+      "field": "lines.s45",
+      "value": "Prisoner of Love is gin with Earl Grey tea, clarified heavy cream and orange flower water, $16.00 on the saved fall menu. Earl Grey brings a bergamot tea direction and orange flower water adds floral aroma. The clarified cream is the point to explore with the bar: I can explain the general technique, but I will confirm how this drink is made. It still lists milk.",
+      "reason": "Bar accuracy review 15 October 2026: Distinguish general clarification from the unconfirmed house process; retain milk warning.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Prisoner of Love",
+      "field": "serviceNote",
+      "value": "Heavy cream means milk is present. Clarification is not evidence that milk allergens or lactose are absent. Alcohol. Confirm the full recipe, preparation and handling with the bar for a dietary request.",
+      "reason": "Bar accuracy review 15 October 2026: Clarification does not establish milk absence.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Prisoner of Love",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Prisoner of Love to a gin drinker, to a tea lover, and to a guest who wants something silky and fragrant before dinner or as a fragrant after dinner choice. Next rounds: Five Minutes More at $20.00 for a bolder herbal drink, For Sentimental Reasons at $15.00 for bubbles, or the Personality at $16.00 for a spirit free option, with its label checked for strict alcohol avoidance. Say: “Prisoner of Love is gin with Earl Grey tea and orange flower water, made silky with clarified cream.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Prisoner of Love is the gin drink on the saved fall menu, $16.00, with Earl Grey tea, clarified heavy cream and orange flower water. Its named ingredients suggest a fragrant tea and floral direction. Earl Grey offers a bergamot reference; orange flower water points to blossom aroma rather than a measured addition of orange juice. The menu does not name the gin or provide quantities.\n\nMilk clarification commonly uses curdling and filtration, but the menu does not identify the house's acid, sequence, filtration or holding procedure. Ask the bar how this version works before describing it. Compare it with Brandy Milk Punch for the printed differences: gin and tea here, brandy and vanilla there; both list cream. Learn the confirmed appearance and texture on shift, and use those observations rather than promising that every clarified drink is transparent or tastes the same."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What does clarified cream mean?\n\nAnswer: Clarification aims to remove suspended solids. In milk punch, curdling and filtering is one common approach; I will check the bar's exact process for this drink.\n\nAsked: Is milk still a concern?\n\nAnswer: The menu lists heavy cream. Clarification does not establish milk absence; ingredient concerns go to the service note and kitchen.\n\nAsked: Which gin is it?\n\nAnswer: The menu does not name the gin; I will check with the bar."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Do not describe clarified heavy cream as absent from the finished drink, and do not promise a transparent appearance or extended holding time from the menu wording. Confirm the gin, complete ingredients, clarification method, storage procedure, glass and garnish with the bar. Brandy Milk Punch is a different drink; both print cream. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Avoid inventing house clarification and remove the dairy free or shelf life implication.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Revive Cold-Pressed Juice",
+      "field": "parts.technique",
+      "value": "juice extracted by pressing; any later heat treatment or other pathogen control is unconfirmed",
+      "reason": "Bar accuracy review 15 October 2026: Cold pressing describes extraction, not subsequent processing.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Revive Cold-Pressed Juice",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the juice to a guest who wants no alcohol and no caffeine, to a light breakfast eater, to a child, and to a guest who turns down the coffee. Next rounds: the Personality at $16.00 or Oh! What It Seemed to Be at $16.00 for something more like a cocktail. Say: “We also pour Revive, a cold-pressed juice of strawberry, apple and pineapple: fresh and bright, with no alcohol.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Revive Cold-Pressed Juice sits on the breakfast and lunch menu at $10.00, under Cold Pressed Juices, locally made and fresh squeezed, and is used in no pairing.\n\nThe menu prints its fruit: strawberry, apple and pineapple. Cold pressing describes extraction by pressure; it does not identify any later heat or other treatment. Who presses it for us, and whether another juice joins it, are questions for the bar.\n\nThe guest gets a glass of cold juice. It tastes fresh, sweet and fruity: strawberry first, with apple and the tang of pineapple.\n\nIt is the drink for a guest who wants neither alcohol nor caffeine, and for anyone who would like something light with breakfast. It suits a child or a guest who is not drinking and does not want coffee, and it gives a breakfast table a fresh option beside the eye openers."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What is in it?\n\nAnswer: The menu lists strawberry, apple and pineapple.\n\nAsked: What does cold pressed mean?\n\nAnswer: It describes juice extraction by pressing. It does not tell us whether the juice is later heat treated or treated another way.\n\nAsked: Is it pasteurized?\n\nAnswer: The menu does not say. I will ask the bar or check the supplier label."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "The menu prints one juice, Revive, with strawberry, apple and pineapple: name those, and ask the bar before promising any other. Confirm current availability for a dinner order. Cold pressed is not proof of pasteurization or its absence. Check the supplier's processing and storage directions when a guest asks about untreated juice. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: FDA distinguishes extraction from later heat or nonheat pathogen control.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Origin Story",
+      "field": "origin",
+      "value": "The Sazerac Company's history connects the drink with Sazerac de Forge et Fils Cognac and describes a later shift toward rye amid phylloxera shortages. This is the producer's historical account, not proof of an exact first recipe or a universal change on one date. Origin Story is Brennan's Cognac interpretation of the Sazerac family.",
+      "reason": "Bar accuracy review 15 October 2026: Attribute the producer history and remove the exact first recipe claim.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Origin Story",
+      "field": "parts.taste",
+      "value": "Cognac, aromatic bitters and absinthe suggest fruit, oak and herbal notes; compare the actual served drinks before ranking softness or richness",
+      "reason": "Bar accuracy review 15 October 2026: No controlled house tasting supports relative softness or richness.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Origin Story",
+      "field": "lines",
+      "value": {
+        "s10": "Origin Story: Dudognon Cognac, barrel-aged Peychaud's and Jade Nouvelle-Orléans absinthe in the Sazerac family.",
+        "s20": "Origin Story is our Cognac interpretation of the Sazerac: Dudognon, barrel-aged Peychaud's and Jade Nouvelle-Orléans absinthe. It is $40 on the saved menu. Do you enjoy Cognac?",
+        "s45": "Origin Story explores the Cognac side of the Sazerac story with Dudognon, barrel-aged Peychaud's and Jade Nouvelle-Orléans absinthe. The producer's history links the cocktail with Cognac before rye became its familiar base, but this is a house interpretation, not a reconstruction of a proven first recipe. It is $40 on the saved menu. Do you prefer grape brandy or rye whiskey?"
+      },
+      "reason": "Bar accuracy review 15 October 2026: Keep history as attributed context and the house drink as an interpretation.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Origin Story",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the printed choice: Dudognon Cognac, barrel-aged Peychaud's and Jade Nouvelle-Orléans absinthe, $40. Ask whether the guest prefers Cognac or rye. Compare with the Classic Sazerac at $13 and Thompson's Dream at $20 as different ingredients and prices. Say: “Origin Story explores the Cognac side of the Sazerac family, with aromatic bitters and absinthe.” Confirm current availability before taking the order."
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "The Sazerac Company's history connects the drink with Sazerac de Forge et Fils Cognac and describes a later shift toward rye amid phylloxera shortages. This is the producer's historical account, not proof of an exact first recipe or a universal change on one date. Origin Story is Brennan's Cognac interpretation of the Sazerac family.\n\nThe saved menu prints Dudognon Cognac, barrel-aged Peychaud's and Jade Nouvelle-Orléans absinthe at $40. Confirm the Cognac expression, the bitters bottle or ageing process, measures, glass and service with the bar. Its grape spirit makes a useful comparison with the two rye based Sazeracs; taste the current preparation before asserting that it is softer or richer. Ask whether the guest wants to explore Cognac or prefers the familiar rye direction, then explain the ingredient and price differences without treating cost as a strength ranking."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: Is this the original Sazerac recipe?\n\nAnswer: It refers to the Cognac tradition in the Sazerac Company's historical account, but it is Brennan's interpretation, not a proven first recipe.\n\nAsked: What is Dudognon?\n\nAnswer: A Cognac producer associated with Grande Champagne; I will check the exact expression.\n\nAsked: Who ages the bitters?\n\nAnswer: The menu prints barrel-aged Peychaud's. I will confirm the bottle and process with the bar."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Name the $40 saved menu price and confirm current availability. Do not call this an exact original recipe or guarantee it is softer than the rye versions. Confirm the Dudognon expression, bitters source, measures and service. Ingredient questions require the full recipe, actual bottles and the kitchen's guidance. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Consistent historical boundary across all retained study notes.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Thompson’s Dream",
+      "field": "parts.taste",
+      "value": "rye spice, Creole bitters and herbal absinthe; compare the actual bottling and build before ranking strength against the Classic",
+      "reason": "Bar accuracy review 15 October 2026: Willett proof varies and recipe measures are unknown.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Thompson’s Dream",
+      "field": "origin",
+      "value": "The menu does not explain the name. Thompson Willett founded the distillery, but a connection to this cocktail name requires confirmation from the house.",
+      "reason": "Bar accuracy review 15 October 2026: Do not teach a guessed namesake as the expected guest answer.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Thompson’s Dream",
+      "field": "lines.s20",
+      "value": "Thompson's Dream uses Willett 4-year rye, Bitter Truth Creole Bitters and a St. George absinthe rinse. It is a different Sazerac selection for exploring the rye, bitters and rinse together.",
+      "reason": "Bar accuracy review 15 October 2026: Do not imply higher proof means guaranteed stronger or bolder finished drink.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Thompson’s Dream",
+      "field": "lines.s45",
+      "value": "Thompson's Dream changes all three named ingredients from our Classic Sazerac: Willett 4-year rye, Bitter Truth Creole Bitters and a St. George absinthe rinse. It is $20 on the saved menu. That makes it useful for exploring rye spice and herbal aromas, though I would check today's bottling and build before comparing strength. Origin Story is the Cognac alternative. Which spirit do you usually enjoy?",
+      "reason": "Bar accuracy review 15 October 2026: Remove unmeasured strength and exact origin claims.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Thompson’s Dream",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer Thompson's Dream to a guest ordering a second Sazerac, and to a rye lover curious about another bottling. It sits between the Classic at $13 and Origin Story at $40. Next rounds: Origin Story, or Rumors are Flying at $20.00, our barrel-aged rye with tart cherry. Say: “If you loved the Sazerac, Thompson's Dream is the next rung: Willett rye, Creole bitters and a St. George absinthe rinse.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Thompson's Dream is $20 on the saved menu and lists Willett 4-year rye, Bitter Truth Creole Bitters and a St. George absinthe rinse. All three differ from the Classic Sazerac, which names Sazerac rye, Peychaud's and Herbsaint. That makes the pair useful for learning how a change of spirit, bitters and aromatic rinse alters a familiar family. Start with the ingredient comparison rather than promising a stronger finished drink.\n\nThe menu does not give measures, proof, glass or garnish, so confirm the actual preparation. A bottle's proof alone cannot establish the alcohol in a served drink without its measure. Ask what the guest enjoys about rye and anise, then explain the available choices. The name's connection to Thompson Willett is unconfirmed; ask the house before telling that story. Origin Story offers the Cognac comparison on the same menu."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: Who is Thompson?\n\nAnswer: The menu does not explain the name; I will ask the bar.\n\nAsked: How does it differ from the Classic?\n\nAnswer: It changes Sazerac rye to Willett 4-year rye, Peychaud's to Bitter Truth Creole Bitters, and Herbsaint to a St. George absinthe rinse.\n\nAsked: Is it stronger?\n\nAnswer: I will check the current bottle's proof and the house measures before comparing finished drinks."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Confirm the Willett bottling and proof, measures, glass, garnish and service at lineup. Do not assume the name honors Thompson Willett until the house confirms it. A higher bottle proof would not alone establish more alcohol per served drink. Check the actual bottles and full recipe for ingredient questions. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Remove stronger recipe guarantee and unverified namesake.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Classic Sazerac",
+      "field": "lines.s45",
+      "value": "The Sazerac is New Orleans’ official cocktail, named so by the Louisiana Legislature in 2008: the city’s, not the state’s. It’s Sazerac rye whiskey, stirred with Peychaud’s, a bright red New Orleans bitters with anise and cherry notes, and served in a glass rinsed with Herbsaint, the anise liqueur created in New Orleans in 1934, for anise aroma and flavor. It’s spirit-forward, spicy and aromatic. If you’d like to go further, we have two luxury versions: Thompson’s Dream with Willett rye, and Origin Story with Cognac and absinthe.",
+      "reason": "Bar accuracy review 15 October 2026: A rinse contributes flavor as well as aroma.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Classic Sazerac",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Sazerac to whiskey drinkers, to anyone who asks for a New Orleans cocktail, and before dinner. Then climb the ladder: Thompson's Dream at $20 for Willett rye, Origin Story at $40 for a Cognac interpretation. Say: “The Sazerac is New Orleans' official cocktail: Sazerac rye and Peychaud's bitters, in a glass rinsed with Herbsaint.” For a curious guest, describe all three rungs and let them choose."
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "The Classic Sazerac is a Brennan's signature drink, $13 at breakfast and lunch and at dinner, and New Orleans' own cocktail.\n\nThe Louisiana Legislature named it the official cocktail of New Orleans in 2008: the city's, not the state's. Ours is Sazerac rye whiskey stirred with Peychaud's, PAY-shoze, the bright red New Orleans bitters with anise and cherry notes, and served without ice in a glass rinsed with Herbsaint, ERB-sant, the anise liqueur created in New Orleans in 1934. The rinse contributes anise aroma and flavor. Sugar and lemon peel are confirmed with the bar.\n\nThe guest gets a short, amber, iceless drink with an anise perfume. It tastes spirit-forward, spicy and aromatic, and strong.\n\nIt is the first rung of the house's Sazerac ladder: $13, then Thompson's Dream at $20 with Willett rye, then Origin Story at $40 with Cognac and absinthe, a Cognac interpretation of the family. It suits the guest before dinner or with the steak."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: Is it really the official cocktail?\n\nAnswer: Yes, of the city of New Orleans, named by the Louisiana Legislature in 2008; the city's, not the state's.\n\nAsked: What is Herbsaint?\n\nAnswer: ERB-sant: an anise liqueur created in New Orleans in 1934. It rinses the glass and contributes anise aroma and flavor.\n\nAsked: Can I have it on the rocks?\n\nAnswer: It is served without ice. I will check with the bar before promising it on the rocks."
+        },
+        {
+          "q": "What is the classic Sazerac build, and is it ours?",
+          "a": "The Classic Sazerac at Brennan's is Sazerac rye stirred with Peychaud's bitters, served without ice in a glass rinsed with Herbsaint (ERB-saint), $13; confirm sugar and lemon peel with the bar. The Sazerac Company's own recipe is a sugar cube, three dashes of Peychaud's, an ounce and a half of Sazerac Rye, a quarter ounce of Herbsaint and a lemon peel, built across two glasses and served neat in a chilled rocks glass; the IBA version is Cognac based with absinthe. Give those as the classic, never as the house build. If a guest asks for it on the rocks, check with the bar before promising it. Two luxury versions: Thompson's Dream with Willett rye, and Origin Story with Cognac and absinthe; the price ladder is $13, $20 and $40."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "It is strong and served without ice: confirm the glass and the bar's build, sugar and lemon peel included, at lineup. Give the Sazerac Company's recipe only as the classic, never as our house build. Never say America's first cocktail. Say Herbsaint without the H. Pronounce Peychaud's PAY-shoze, and confirm the pharmacy story at lineup before telling it. Allergens: read the service note and confirm at lineup."
+        },
+        {
+          "q": "What story can I tell at the table?",
+          "a": "Three short ones, each true. First, the bitters: Antoine Peychaud kept his apothecary at what is now 437 Royal Street, the same block as ours at 417, as the Sazerac Company tells it; the house has not said it wants that told, so check at lineup first. Second, the bottles: Sazerac rye, Peychaud's and Herbsaint are all Sazerac Company brands, one New Orleans family in one glass. Third, the name Herbsaint comes from herbe sainte, the Creole name for wormwood; it was created in 1934 to stand in for absinthe, banned from 1912 until 2007. If a guest tells you Peychaud served it in an egg cup and so gave us the word cocktail, smile: the word was in print in 1806. Never call it America's first cocktail."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Carry corrected rinse and origin language through study notes.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Brennan’s Bloody Mary",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Bloody Mary to a guest who wants a savory eye opener, and to anyone who orders a Bloody Mary by name. For a guest who wants it richer, the Bloody Bull at $13.00; for a sweeter start, the Brandy Milk Punch at $12.00; without alcohol, the Revive cold-pressed juice at $10.00. Say: “Our Bloody Mary is vodka and our housemade mix with pickled okra and spicy beans: savory, tangy and bright.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Brennan's Bloody Mary is one of the classic eye openers, $11.00 at breakfast and lunch, the morning drinks New Orleans is known for.\n\nThe menu prints four parts: our housemade Bloody Mary mix, vodka, pickled okra and spicy beans. The Bloody Bull's menu line prints a housemade Bloody Mary mix too, with beef bouillon added; whether it is the same batch is a question for the bar, with which vodka, how hot the mix runs today and the glass.\n\nThe guest gets a red, savory drink with the pickled okra and spicy beans standing in it. It tastes savory, tangy and spicy, with a pickled crunch.\n\nCompare the printed menu with the Bloody Bull, which explicitly adds beef bouillon. The Bloody Mary mix is not fully disclosed: consult the service note and kitchen for ingredient concerns, and ask the bar for its complete recipe. For a guest who wants a morning drink without alcohol, the Revive cold-pressed juice takes its place."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: How is it different from the Bloody Bull?\n\nAnswer: The Bloody Bull explicitly lists beef bouillon. The Bloody Mary lists a housemade mix, pickled okra and spicy beans; that shorter list does not establish beef absence.\n\nAsked: How spicy is it?\n\nAnswer: That depends on the mix; I will check with the bar how it is running today.\n\nAsked: Which vodka do you use?\n\nAnswer: The menu prints vodka without naming it, so I will check with the bar."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "The menu prints the mix as housemade, but not the vodka or the heat: those are lineup questions for the bar. For a guest who avoids beef, ask the bar for the complete mix recipe before recommending it. It is poured at breakfast and lunch only. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Remove remaining conflicting wording from retained study notes.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Bloody Bull",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer the Bloody Bull to a guest who likes a savory morning drink, and with the turtle soup or the gumbo. On the Traditional Breakfast it arrives with the soup. For a guest who wants it classic, the Brennan's Bloody Mary at $11; for a guest skipping alcohol, the Café Glacé de la Maison at $11.00. Say: “Our Bloody Bull is a Bloody Mary with beef bouillon, savory and rich, and it's wonderful with the turtle soup.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "The Bloody Bull is a Brennan's signature drink, $13 at breakfast and lunch, and the drink poured with the soup course on the Traditional Breakfast.\n\nIt is a Bloody Mary with beef bouillon stirred in: vodka, our housemade Bloody Mary mix and bouillon, a clear, savory beef broth. The guide calls it a Brennan's breakfast classic, and that is how a server says it. Where it was first made is not something we tell as fact: a guest who asks gets a manager's answer, never a claim that it was invented here.\n\nThe guest gets a deep red, savory drink. It tastes savory, rich and meaty, almost like a spicy, chilled consommé, with the spice of the house mix.\n\nIt is wonderful with the turtle soup, which is why the tasting pairs them. Brennan's Bloody Mary at $11 is the related menu choice, with pickled okra and spicy beans. If the guest avoids beef, confirm the complete mix before recommending it as suitable."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What makes it a Bull?\n\nAnswer: Beef bouillon, a clear, savory beef broth, stirred into a Bloody Mary with our housemade mix and vodka.\n\nAsked: Was it invented here?\n\nAnswer: It is a Brennan's breakfast classic; I will check with a manager before telling its history.\n\nAsked: Is it spicy?\n\nAnswer: The spice comes from our housemade mix. If you are sensitive to heat, I will ask the bar how it is running today."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "It carries beef: say so plainly. If a guest avoids beef, confirm the Bloody Mary's complete mix before suggesting it as an alternative. Never say it was invented here; call it a Brennan's breakfast classic and leave its history to a manager. On the Traditional Breakfast it is the included soup course drink: do not charge it. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Remove remaining conflicting wording from retained study notes.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Revive Cold-Pressed Juice",
+      "field": "lines.s20",
+      "value": "Revive is a cold-pressed juice of strawberry, apple and pineapple, listed as locally made. It suggests a bright fruit profile. I can check the supplier's treatment and storage information if you need it.",
+      "reason": "Bar accuracy review 15 October 2026: Remove no heat processing claim.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Revive Cold-Pressed Juice",
+      "field": "lines.s45",
+      "value": "Revive lists strawberry, apple and pineapple and is $10.00 on the saved breakfast menu. Cold pressed describes how the juice is extracted; it does not establish whether there is a later heat or other treatment. I will check the supplier's label if processing or ingredients matter to your choice. Would you like a fruit juice alongside breakfast, or a coffee instead?",
+      "reason": "Bar accuracy review 15 October 2026: Separate extraction and later processing.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Rumors are Flying",
+      "field": "parts.technique",
+      "value": "the menu prints Brennan's Barrel Aged Rittenhouse Rye with tart cherry, brown sugar and orange bitters; confirm the ageing scope, method and measures",
+      "reason": "Bar accuracy review 15 October 2026: Do not infer a house ageing process.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Rumors are Flying",
+      "field": "kept",
+      "value": [
+        {
+          "q": "How do I sell it?",
+          "a": "Offer Rumors are Flying to a guest who orders an Old Fashioned, to a rye lover, and as a slow drink after dinner. Next rounds: the Classic Sazerac at $13.00 to try the New Orleans original, Thompson's Dream at $20.00 for another rye selection, or the Personality at $16.00, its spirit-free twin. Say: “Rumors are Flying is Brennan's Barrel Aged Rittenhouse Rye with tart cherry and brown sugar: rich, spicy and a little tart.”"
+        },
+        {
+          "q": "Tell me about it.",
+          "a": "Rumors are Flying is the whiskey drink on our fall list, Billboard Songs from 1946, at $20.00, the top price on the list beside Five Minutes More.\n\nThe menu prints Brennan's Barrel Aged Rittenhouse Rye, then tart cherry juice, brown sugar syrup and orange bitters. The printed barrel aged description does not establish exactly what was aged, who did it, the vessel or duration. Quote the menu and ask the bar for the process. The measures, the method, the glass and the garnish are confirmed with the bar too.\n\nThe guest gets a dark, spirit-forward drink. It tastes rich: rye spice and oak, with dark tart cherry and a warm brown sugar roundness.\n\nIt is the drink for an Old Fashioned lover, and the bridge to our Sazerac ladder. Its spirit-free twin on the menu is the Personality, which shares the tart cherry juice and brown sugar syrup."
+        },
+        {
+          "q": "What do guests ask?",
+          "a": "Asked: What is Brennan's barrel-aged rye?\n\nAnswer: The menu prints Brennan's Barrel Aged Rittenhouse Rye. I will confirm what was aged, who did it, the vessel and duration with the bar.\n\nAsked: Is it like an Old Fashioned?\n\nAnswer: Close: rye, sugar and bitters, with tart cherry juice for brightness.\n\nAsked: Is it sweet?\n\nAnswer: It includes brown sugar syrup and tart cherry juice. I will check the current balance before comparing sweetness with another drink."
+        },
+        {
+          "q": "What should I watch for?",
+          "a": "Do not mix it up with the Personality, its spirit-free twin: both carry tart cherry juice and brown sugar syrup, so repeat the name when you ring it. Quote the menu's barrel aged description and confirm what was aged, by whom, in which vessel and for how long. The measures, the glass and whether it comes over ice are lineup questions. Allergens: read the service note and confirm at lineup."
+        }
+      ],
+      "reason": "Bar accuracy review 15 October 2026: Remove remaining conflicting wording from retained study notes.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Brennan’s Bloody Mary",
+      "field": "why",
+      "value": "A savory eye opener with vodka, housemade mix, pickled okra and spicy beans. Confirm the complete mix before advising someone who avoids beef.",
+      "reason": "Bar accuracy review 15 October 2026: A short menu list does not establish beef absence from the complete housemade mix.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Brennan’s Bloody Mary",
+      "field": "lines.s45",
+      "value": "Our Bloody Mary is one of the classic eye openers, the morning drinks New Orleans is known for. It is vodka with our housemade Bloody Mary mix, finished with pickled okra and spicy beans for a pickled crunch. The Bloody Bull explicitly lists beef bouillon; I will check the complete mix recipe before advising on an ingredient you avoid. Ask me about the spice level and I will check with the bar.",
+      "reason": "Bar accuracy review 15 October 2026: A short menu list does not establish beef absence from the complete housemade mix.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Bloody Bull",
+      "field": "why",
+      "value": "The savory eye opener and the soup course's drink on the saved Traditional Breakfast. It lists beef bouillon; confirm another drink's complete recipe before recommending it to someone avoiding beef.",
+      "reason": "Bar accuracy review 15 October 2026: Do not recommend the Bloody Mary as excluding beef without confirming its complete mix.",
+      "source": "research/brennans-bar-review-2026-10-15.md"
     }
   ]
 }

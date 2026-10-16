@@ -1,15 +1,7 @@
 {
 	"about": "Every string the spelling map changed while building the Brennan's house: the research writes British English and the house is American, so each British form became its American spelling.",
-	"count": 728,
+	"count": 730,
 	"changes": [
-		{
-			"path": "model.wines[0].kept[0].a",
-			"before": "Our house Champagne is a Piper-Heidsieck Extra Brut bottled under the Brennan's name, a very dry style; a blend of all three Champagne grapes from the Piper-Heidsieck house. Piper-Heidsieck spells its own cuvée Essentiel. Say 'labelled for us', not 'made for us', until a bottle is checked, and do not quote a dosage or a lees age until the sommelier confirms which cuvée is in the bottle. The Binwise list of 3 October prices the bottle at $140; the current Bubbles at Brennan's page lists no bottle of it.",
-			"after": "Our house Champagne is a Piper-Heidsieck Extra Brut bottled under the Brennan's name, a very dry style; a blend of all three Champagne grapes from the Piper-Heidsieck house. Piper-Heidsieck spells its own cuvée Essentiel. Say 'labeled for us', not 'made for us', until a bottle is checked, and do not quote a dosage or a lees age until the sommelier confirms which cuvée is in the bottle. The Binwise list of 3 October prices the bottle at $140; the current Bubbles at Brennan's page lists no bottle of it.",
-			"words": [
-				"labelled"
-			]
-		},
 		{
 			"path": "model.wines[4].profile",
 			"before": "Light-bodied Mosel Riesling from old vines: green apple, peach, slate and racy acidity. It is off-dry: a touch of sweetness, about twenty grams of sugar a litre, with only 11.5% alcohol and racy Mosel acidity, which is why it is our glass for spice and for the maple on the duck. The estate is at Ürzig in the Middle Mosel, a family with roots to 1510. Taste it at lineup if the vintage has changed.",
@@ -43,6 +35,15 @@
 			]
 		},
 		{
+			"path": "model.cocktails[0].kept[2].a",
+			"before": "The Brandy Milk Punch is a Brennan's signature at $12 and opens the saved Traditional Breakfast tasting. Its menu lists brandy, heavy cream, vanilla bean and nutmeg; the guide describes shaking it and serving it cold. Lead with those four ingredients, then explain the creamy texture and the vanilla and nutmeg aromas. A guest who recognises eggnog has a useful flavour reference, but that comparison does not establish an identical recipe.\n\nPublished Brennan's recipes exist, including one supplied to Explore Louisiana. They document a published version rather than today's confirmed measured build. Ask the bar about measures and sweetener before giving preparation advice. Confirm current tasting service and any substitution before promising one. For a related lesson, compare Prisoner of Love: its gin, tea and clarified heavy cream introduce a different spirit and preparation, while both menus name cream.",
+			"after": "The Brandy Milk Punch is a Brennan's signature at $12 and opens the saved Traditional Breakfast tasting. Its menu lists brandy, heavy cream, vanilla bean and nutmeg; the guide describes shaking it and serving it cold. Lead with those four ingredients, then explain the creamy texture and the vanilla and nutmeg aromas. A guest who recognizes eggnog has a useful flavor reference, but that comparison does not establish an identical recipe.\n\nPublished Brennan's recipes exist, including one supplied to Explore Louisiana. They document a published version rather than today's confirmed measured build. Ask the bar about measures and sweetener before giving preparation advice. Confirm current tasting service and any substitution before promising one. For a related lesson, compare Prisoner of Love: its gin, tea and clarified heavy cream introduce a different spirit and preparation, while both menus name cream.",
+			"words": [
+				"recognises",
+				"flavour"
+			]
+		},
+		{
 			"path": "model.cocktails[5].guest",
 			"before": "Seedlip Grove 42, a British citrus non-alcoholic spirit at 0.0 per cent alcohol, with local watermelon and tonic: bright and dry, $15.",
 			"after": "Seedlip Grove 42, a British citrus non-alcoholic spirit at 0.0 percent alcohol, with local watermelon and tonic: bright and dry, $15.",
@@ -57,6 +58,39 @@
 			"words": [
 				"labelled",
 				"per cent"
+			]
+		},
+		{
+			"path": "model.cocktails[16].kept[1].a",
+			"before": "The Sazerac Company's history connects the drink with Sazerac de Forge et Fils Cognac and describes a later shift toward rye amid phylloxera shortages. This is the producer's historical account, not proof of an exact first recipe or a universal change on one date. Origin Story is Brennan's Cognac interpretation of the Sazerac family.\n\nThe saved menu prints Dudognon Cognac, barrel-aged Peychaud's and Jade Nouvelle-Orléans absinthe at $40. Confirm the Cognac expression, the bitters bottle or ageing process, measures, glass and service with the bar. Its grape spirit makes a useful comparison with the two rye based Sazeracs; taste the current preparation before asserting that it is softer or richer. Ask whether the guest wants to explore Cognac or prefers the familiar rye direction, then explain the ingredient and price differences without treating cost as a strength ranking.",
+			"after": "The Sazerac Company's history connects the drink with Sazerac de Forge et Fils Cognac and describes a later shift toward rye amid phylloxera shortages. This is the producer's historical account, not proof of an exact first recipe or a universal change on one date. Origin Story is Brennan's Cognac interpretation of the Sazerac family.\n\nThe saved menu prints Dudognon Cognac, barrel-aged Peychaud's and Jade Nouvelle-Orléans absinthe at $40. Confirm the Cognac expression, the bitters bottle or aging process, measures, glass and service with the bar. Its grape spirit makes a useful comparison with the two rye based Sazeracs; taste the current preparation before asserting that it is softer or richer. Ask whether the guest wants to explore Cognac or prefers the familiar rye direction, then explain the ingredient and price differences without treating cost as a strength ranking.",
+			"words": [
+				"ageing"
+			]
+		},
+		{
+			"path": "model.cocktails[25].parts.technique",
+			"before": "the menu prints Brennan's Barrel Aged Rittenhouse Rye with tart cherry, brown sugar and orange bitters; confirm the ageing scope, method and measures",
+			"after": "the menu prints Brennan's Barrel Aged Rittenhouse Rye with tart cherry, brown sugar and orange bitters; confirm the aging scope, method and measures",
+			"words": [
+				"ageing"
+			]
+		},
+		{
+			"path": "model.cocktails[35].lines.s45",
+			"before": "Ralph's Coffee brings together dark roast coffee with chicory, Frangelico hazelnut liqueur, Nocello walnut liqueur and whipped cream. Expect a roasty, nutty direction with cream on top. It is $8.00 on the saved menu. Would you prefer that nutty profile or the Irish whiskey and brown sugar listed in our Irish Coffee? I can help you choose by flavour and check the current preparation.",
+			"after": "Ralph's Coffee brings together dark roast coffee with chicory, Frangelico hazelnut liqueur, Nocello walnut liqueur and whipped cream. Expect a roasty, nutty direction with cream on top. It is $8.00 on the saved menu. Would you prefer that nutty profile or the Irish whiskey and brown sugar listed in our Irish Coffee? I can help you choose by flavor and check the current preparation.",
+			"words": [
+				"flavour"
+			]
+		},
+		{
+			"path": "model.cocktails[35].kept[2].a",
+			"before": "Ralph's Coffee is $8.00 on the saved dessert menu. It lists dark roast coffee with chicory, Frangelico hazelnut liqueur, Nocello walnut liqueur and whipped cream. The named ingredients suggest a roasty, nutty direction with cream, making the drink useful for a guest who enjoys coffee and nut flavours at dessert. Explain the two liqueurs individually so the guest understands the choice.\n\nThis is a useful comparison with Brennan's Irish Coffee, whose menu lists Irish whiskey and brown sugar. Compare the named ingredients and ask which flavour direction the guest prefers; the menu alone cannot rank their alcohol or caffeine content. Nor does a short list prove an unlisted ingredient is absent from a full recipe. Confirm temperature, glass, measures and full ingredients with the bar. The source of the name is unconfirmed, so ask a manager before giving a namesake story.",
+			"after": "Ralph's Coffee is $8.00 on the saved dessert menu. It lists dark roast coffee with chicory, Frangelico hazelnut liqueur, Nocello walnut liqueur and whipped cream. The named ingredients suggest a roasty, nutty direction with cream, making the drink useful for a guest who enjoys coffee and nut flavors at dessert. Explain the two liqueurs individually so the guest understands the choice.\n\nThis is a useful comparison with Brennan's Irish Coffee, whose menu lists Irish whiskey and brown sugar. Compare the named ingredients and ask which flavor direction the guest prefers; the menu alone cannot rank their alcohol or caffeine content. Nor does a short list prove an unlisted ingredient is absent from a full recipe. Confirm temperature, glass, measures and full ingredients with the bar. The source of the name is unconfirmed, so ask a manager before giving a namesake story.",
+			"words": [
+				"flavours",
+				"flavour"
 			]
 		},
 		{
@@ -1015,6 +1049,14 @@
 			]
 		},
 		{
+			"path": "house.components[201].explain",
+			"before": "A spritz is a useful sparkling aperitif family, often involving wine and a bitter or aromatic component. Recipes vary, including ready to serve products; the family name alone does not promise low alcohol.\n\nThe saved Brennan's menu names Chandon Brut and bitter orange liqueur. Chandon also sells Garden Spritz as a prepared drink. Confirm the bottle or separate build, measures and service with the bar.\n\nAsk whether the guest enjoys bitter orange or would prefer a floral direction such as Riviera. Compare flavour first; a strength comparison requires actual recipes and portions.",
+			"after": "A spritz is a useful sparkling aperitif family, often involving wine and a bitter or aromatic component. Recipes vary, including ready to serve products; the family name alone does not promise low alcohol.\n\nThe saved Brennan's menu names Chandon Brut and bitter orange liqueur. Chandon also sells Garden Spritz as a prepared drink. Confirm the bottle or separate build, measures and service with the bar.\n\nAsk whether the guest enjoys bitter orange or would prefer a floral direction such as Riviera. Compare flavor first; a strength comparison requires actual recipes and portions.",
+			"words": [
+				"flavour"
+			]
+		},
+		{
 			"path": "house.components[211].explain",
 			"before": "Oh! What It Seemed to Be was written by Bennie Benjamin, George Weiss and Frankie Carle. In 1946 it reached number one twice over, for Frankie Carle's orchestra and for Frank Sinatra, and between them the two recordings held the top of the charts for a large part of the year.\n\nThe title is wistful, a look back at how things seemed, and the drink sits under Temperance, 1946, the spirit-free list.\n\nIt is the twin of Old Buttermilk Sky: Lyre's non-alcoholic agave spirit with fig syrup, lemon, cinnamon syrup and egg white, a silky sour without spirit. Because Lyre's is labelled under 0.5 percent alcohol, a server says non-alcoholic, never alcohol free.",
 			"after": "Oh! What It Seemed to Be was written by Bennie Benjamin, George Weiss and Frankie Carle. In 1946 it reached number one twice over, for Frankie Carle's orchestra and for Frank Sinatra, and between them the two recordings held the top of the charts for a large part of the year.\n\nThe title is wistful, a look back at how things seemed, and the drink sits under Temperance, 1946, the spirit-free list.\n\nIt is the twin of Old Buttermilk Sky: Lyre's non-alcoholic agave spirit with fig syrup, lemon, cinnamon syrup and egg white, a silky sour without spirit. Because Lyre's is labeled under 0.5 percent alcohol, a server says non-alcoholic, never alcohol free.",
@@ -1072,38 +1114,19 @@
 		},
 		{
 			"path": "house.components[224].explain",
-			"before": "Barrel ageing means resting a spirit, a finished cocktail or even bitters in an oak cask. The wood softens sharp edges and adds vanilla, caramel and spice, and a little evaporation concentrates what is left. A used spirit cask lends some of its old contents too.\n\nTwo Brennan's drinks print it. Rumors are Flying is built on Brennan's Barrel Aged Rittenhouse Rye, and the Origin Story uses barrel-aged Peychaud's.\n\nWhat the menu does not print is who did the ageing, in what cask and for how long. Those are questions for the bar, so a server says barrel-aged for Brennan's and no more until the bar gives the story. Guests often ask; it is worth asking at lineup. The Sazerac Company does sell a Peychaud's Barrel-Aged; whether ours is that bottle is a question for the bar.",
-			"after": "Barrel aging means resting a spirit, a finished cocktail or even bitters in an oak cask. The wood softens sharp edges and adds vanilla, caramel and spice, and a little evaporation concentrates what is left. A used spirit cask lends some of its old contents too.\n\nTwo Brennan's drinks print it. Rumors are Flying is built on Brennan's Barrel Aged Rittenhouse Rye, and the Origin Story uses barrel-aged Peychaud's.\n\nWhat the menu does not print is who did the aging, in what cask and for how long. Those are questions for the bar, so a server says barrel-aged for Brennan's and no more until the bar gives the story. Guests often ask; it is worth asking at lineup. The Sazerac Company does sell a Peychaud's Barrel-Aged; whether ours is that bottle is a question for the bar.",
+			"before": "Ageing in a cask can change aroma, flavour and texture, depending on the vessel, previous contents, time and liquid. It does not guarantee a smoother drink. A spirit, bitters or a mixed cocktail can each be aged; they are different processes.\n\nRumors are Flying prints Brennan's Barrel Aged Rittenhouse Rye and Origin Story prints barrel-aged Peychaud's. Those words do not identify who aged which material, the vessel or duration.\n\nRepeat the printed description and ask the bar what was aged, by whom and how. Do not invent a house cask program or transfer a brand's process to the finished cocktail.",
+			"after": "Aging in a cask can change aroma, flavor and texture, depending on the vessel, previous contents, time and liquid. It does not guarantee a smoother drink. A spirit, bitters or a mixed cocktail can each be aged; they are different processes.\n\nRumors are Flying prints Brennan's Barrel Aged Rittenhouse Rye and Origin Story prints barrel-aged Peychaud's. Those words do not identify who aged which material, the vessel or duration.\n\nRepeat the printed description and ask the bar what was aged, by whom and how. Do not invent a house cask program or transfer a brand's process to the finished cocktail.",
 			"words": [
-				"ageing",
-				"ageing"
-			]
-		},
-		{
-			"path": "house.components[224].card.front",
-			"before": "What does barrel ageing add, and what do we not know?",
-			"after": "What does barrel aging add, and what do we not know?",
-			"words": [
-				"ageing"
-			]
-		},
-		{
-			"path": "house.components[227].explain",
-			"before": "Cold pressing is a way of making juice without heat or fast spinning blades. The fruit is ground to a pulp and pressed hard, often in a cloth, so the juice is squeezed out slowly and stays cool.\n\nJuice made this way keeps more of the fresh fruit's colour and bright flavour; because it is not pasteurised by heat, it is usually kept cold and has a short life.\n\nThe Revive Cold-Pressed Juice is listed under juices that are locally made and fresh squeezed: strawberry, apple and pineapple. Who presses it for Brennan's is not printed, and no source confirms the maker, so that is a question for the bar. It is the drink for a guest who wants neither alcohol nor caffeine.",
-			"after": "Cold pressing is a way of making juice without heat or fast spinning blades. The fruit is ground to a pulp and pressed hard, often in a cloth, so the juice is squeezed out slowly and stays cool.\n\nJuice made this way keeps more of the fresh fruit's color and bright flavor; because it is not pasteurized by heat, it is usually kept cold and has a short life.\n\nThe Revive Cold-Pressed Juice is listed under juices that are locally made and fresh squeezed: strawberry, apple and pineapple. Who presses it for Brennan's is not printed, and no source confirms the maker, so that is a question for the bar. It is the drink for a guest who wants neither alcohol nor caffeine.",
-			"words": [
-				"colour",
-				"flavour",
-				"pasteurised"
-			]
-		},
-		{
-			"path": "house.components[227].card.back",
-			"before": "The fruit is pressed slowly without heat, keeping colour and fresh flavour. Ours is strawberry, apple and pineapple; who presses it is a question for the bar.",
-			"after": "The fruit is pressed slowly without heat, keeping color and fresh flavor. Ours is strawberry, apple and pineapple; who presses it is a question for the bar.",
-			"words": [
-				"colour",
+				"Ageing",
 				"flavour"
+			]
+		},
+		{
+			"path": "house.components[224].card.back",
+			"before": "What material was aged, by whom, in which vessel and for how long. Quote the menu and confirm the process; ageing does not guarantee smoothness or establish the finished cocktail's strength.",
+			"after": "What material was aged, by whom, in which vessel and for how long. Quote the menu and confirm the process; aging does not guarantee smoothness or establish the finished cocktail's strength.",
+			"words": [
+				"ageing"
 			]
 		},
 		{
@@ -1344,6 +1367,14 @@
 			]
 		},
 		{
+			"path": "house.components[275].explain",
+			"before": "Chandon makes sparkling wine in more than one country, so the name alone does not establish California or a bottle fermentation. The saved house menu prints Chandon Brut sparkling wine and bitter orange liqueur.\n\nThe U.S. Garden Spritz technical sheet describes an Argentine ready to serve product with second fermentation and ageing in tank, called the Long Charmat method. The bitter orange component is blended before bottling. That is a product reference, not confirmation of the bottle Brennan's currently pours.\n\nAsk whether the house builds the drink from separate ingredients or pours a prepared bottle, then read its country and product name. Call it sparkling wine, not Champagne.",
+			"after": "Chandon makes sparkling wine in more than one country, so the name alone does not establish California or a bottle fermentation. The saved house menu prints Chandon Brut sparkling wine and bitter orange liqueur.\n\nThe U.S. Garden Spritz technical sheet describes an Argentine ready to serve product with second fermentation and aging in tank, called the Long Charmat method. The bitter orange component is blended before bottling. That is a product reference, not confirmation of the bottle Brennan's currently pours.\n\nAsk whether the house builds the drink from separate ingredients or pours a prepared bottle, then read its country and product name. Call it sparkling wine, not Champagne.",
+			"words": [
+				"ageing"
+			]
+		},
+		{
 			"path": "house.components[278].explain",
 			"before": "The Revive juice prints three fruits. Strawberry gives colour and a sweet, red fruit perfume; apple gives body and a clean sweetness; pineapple gives tang and a tropical brightness that keeps the juice from tasting flat.\n\nPressed together they make a juice that is sweet but lively, fresh rather than cooked, the way cold-pressed juice is meant to taste.\n\nThe menu lists it under juices that are locally made and fresh squeezed, at breakfast and lunch. It is the drink for a guest who wants neither alcohol nor caffeine, including a child, and it gives a breakfast table a bright option beside the eye openers. Who presses it is confirmed with the bar.",
 			"after": "The Revive juice prints three fruits. Strawberry gives color and a sweet, red fruit perfume; apple gives body and a clean sweetness; pineapple gives tang and a tropical brightness that keeps the juice from tasting flat.\n\nPressed together they make a juice that is sweet but lively, fresh rather than cooked, the way cold-pressed juice is meant to taste.\n\nThe menu lists it under juices that are locally made and fresh squeezed, at breakfast and lunch. It is the drink for a guest who wants neither alcohol nor caffeine, including a child, and it gives a breakfast table a bright option beside the eye openers. Who presses it is confirmed with the bar.",
@@ -1381,6 +1412,14 @@
 			"after": "Earl Grey is black tea scented with oil of bergamot, a fragrant citrus grown mostly in Calabria in southern Italy. It is named for Charles Gray, the second Earl Grey, Prime Minister from 1830 to 1834; the stories of how the blend got his name are uncertain, so tell them lightly if at all.\n\nBergamot gives the tea a floral, perfumed citrus note over the tannic black tea.\n\nIn the Prisoner of Love the tea joins gin, clarified heavy cream and orange flower water. The tea's acidity and tannin help the clarifying, and its bergamot meets the orange flower water, which is why the drink smells so fragrant.",
 			"words": [
 				"Grey"
+			]
+		},
+		{
+			"path": "house.components[282].card.back",
+			"before": "Bottled in bond refers to production and ageing rules, including one distilling season, at least four years and 100 proof. The menu's Brennan's Barrel Aged wording still needs a separate house explanation.",
+			"after": "Bottled in bond refers to production and aging rules, including one distilling season, at least four years and 100 proof. The menu's Brennan's Barrel Aged wording still needs a separate house explanation.",
+			"words": [
+				"ageing"
 			]
 		},
 		{
@@ -1537,22 +1576,6 @@
 			"after": "Crème de cacao is a sweet chocolate liqueur made from cacao beans steeped or distilled in spirit and sweetened, usually bottled at 20 to 25 percent. It comes in two kinds: dark, colored by the beans, and white, a clear distillate with a lighter chocolate flavor.\n\nIt is the chocolate in the Grasshopper and the Brandy Alexander. The menu spells it crème de cocoa.\n\nIn Banane au Chocolat it is the chocolate half, with crème de banane and Pedro Ximénez sherry, so the drink tastes of ripe banana and chocolate over dried fruit. Which brand and whether it is white or dark are not printed.",
 			"words": [
 				"coloured",
-				"flavour"
-			]
-		},
-		{
-			"path": "house.components[306].explain",
-			"before": "Kahlúa is a coffee liqueur from Veracruz, Mexico, introduced in 1936 and made from rum, sugar and arabica coffee. It is sweet, dark and roasty, with vanilla and caramel.\n\nCoffee liqueur is the backbone of the Black Russian and the White Russian, and it sweetens most espresso martinis.\n\nIn Brennan's Espresso Martini the menu prints Kahlua with chicory, vodka and Frangelico, so the coffee flavour comes partly from the liqueur. The menu prints chicory and not espresso, so how the coffee goes in is a question for the bar, and caffeine questions go there too.",
-			"after": "Kahlúa is a coffee liqueur from Veracruz, Mexico, introduced in 1936 and made from rum, sugar and arabica coffee. It is sweet, dark and roasty, with vanilla and caramel.\n\nCoffee liqueur is the backbone of the Black Russian and the White Russian, and it sweetens most espresso martinis.\n\nIn Brennan's Espresso Martini the menu prints Kahlua with chicory, vodka and Frangelico, so the coffee flavor comes partly from the liqueur. The menu prints chicory and not espresso, so how the coffee goes in is a question for the bar, and caffeine questions go there too.",
-			"words": [
-				"flavour"
-			]
-		},
-		{
-			"path": "house.components[306].card.back",
-			"before": "Rum, sugar and arabica coffee, made in Veracruz, Mexico, since 1936. It brings coffee flavour and sweetness to our Espresso Martini, beside chicory and Frangelico.",
-			"after": "Rum, sugar and arabica coffee, made in Veracruz, Mexico, since 1936. It brings coffee flavor and sweetness to our Espresso Martini, beside chicory and Frangelico.",
-			"words": [
 				"flavour"
 			]
 		},
@@ -2315,8 +2338,8 @@
 		},
 		{
 			"path": "house.components[458].explain",
-			"before": "Piper-Heidsieck was founded in Reims in 1785 by Florens-Louis Heidsieck, a cloth merchant from Westphalia who set out to make a cuvée worthy of a queen and presented his wine to Marie Antoinette. His nephew Christian Heidsieck joined him, and Henri-Guillaume Piper came into the firm in the founder's lifetime; after Christian's death Piper married his widow, and the two names were joined.\n\nToday Piper-Heidsieck makes our house Champagne, an Extra Brut of Pinot Noir, Meunier and Chardonnay bottled under the Brennan's name, poured by the glass and by the bottle, and its Cuvée Brut in magnum on Birthday Bubbles.\n\nSay labelled for us, not made for us; Piper-Heidsieck spells its own cuvée Essentiel, and which cuvée is in the bottle, and its dosage, is for the sommelier to confirm.",
-			"after": "Piper-Heidsieck was founded in Reims in 1785 by Florens-Louis Heidsieck, a cloth merchant from Westphalia who set out to make a cuvée worthy of a queen and presented his wine to Marie Antoinette. His nephew Christian Heidsieck joined him, and Henri-Guillaume Piper came into the firm in the founder's lifetime; after Christian's death Piper married his widow, and the two names were joined.\n\nToday Piper-Heidsieck makes our house Champagne, an Extra Brut of Pinot Noir, Meunier and Chardonnay bottled under the Brennan's name, poured by the glass and by the bottle, and its Cuvée Brut in magnum on Birthday Bubbles.\n\nSay labeled for us, not made for us; Piper-Heidsieck spells its own cuvée Essentiel, and which cuvée is in the bottle, and its dosage, is for the sommelier to confirm.",
+			"before": "Piper-Heidsieck was founded in Reims in 1785 by Florens-Louis Heidsieck, a cloth merchant from Westphalia who set out to make a cuvée worthy of a queen and presented his wine to Marie Antoinette. His nephew Christian Heidsieck joined him, and Henri-Guillaume Piper came into the firm in the founder's lifetime; after Christian's death Piper married his widow, and the two names were joined.\n\nToday Piper-Heidsieck makes our house Champagne, an Extra Brut bottled under the Brennan's name, poured by the glass and by the bottle, and its Cuvée Brut in magnum on Birthday Bubbles.\n\nSay labelled for us, not made for us; Piper-Heidsieck spells its own cuvée Essentiel, and which cuvée is in the bottle, and its dosage, is for the sommelier to confirm.",
+			"after": "Piper-Heidsieck was founded in Reims in 1785 by Florens-Louis Heidsieck, a cloth merchant from Westphalia who set out to make a cuvée worthy of a queen and presented his wine to Marie Antoinette. His nephew Christian Heidsieck joined him, and Henri-Guillaume Piper came into the firm in the founder's lifetime; after Christian's death Piper married his widow, and the two names were joined.\n\nToday Piper-Heidsieck makes our house Champagne, an Extra Brut bottled under the Brennan's name, poured by the glass and by the bottle, and its Cuvée Brut in magnum on Birthday Bubbles.\n\nSay labeled for us, not made for us; Piper-Heidsieck spells its own cuvée Essentiel, and which cuvée is in the bottle, and its dosage, is for the sommelier to confirm.",
 			"words": [
 				"labelled"
 			]
@@ -2331,8 +2354,8 @@
 		},
 		{
 			"path": "house.components[459].explain",
-			"before": "Rare began as Piper-Heidsieck's prestige cuvée, first made from the 1976 harvest, a year of record heat. It is declared only in exceptional years and has been run as its own house, Rare Champagne, in Reims since 2018.\n\nIts bottle wears a jewelled dress that recalls a design Fabergé made for the house in the nineteenth century. The wine is Chardonnay-led with Pinot Noir from grand and premier cru villages, long on its lees (at least eight years for the 2013): white peach, candied citrus and toasted almond.\n\nWe pour Rare 2012 by the glass under the Coravin Sparkling stopper and list the 2013 by the bottle; the glass page now prints a 2013, so read the label before naming the vintage.",
-			"after": "Rare began as Piper-Heidsieck's prestige cuvée, first made from the 1976 harvest, a year of record heat. It is declared only in exceptional years and has been run as its own house, Rare Champagne, in Reims since 2018.\n\nIts bottle wears a jeweled dress that recalls a design Fabergé made for the house in the nineteenth century. The wine is Chardonnay-led with Pinot Noir from grand and premier cru villages, long on its lees (at least eight years for the 2013): white peach, candied citrus and toasted almond.\n\nWe pour Rare 2012 by the glass under the Coravin Sparkling stopper and list the 2013 by the bottle; the glass page now prints a 2013, so read the label before naming the vintage.",
+			"before": "Rare began as Piper-Heidsieck's prestige cuvée, first made from the 1976 harvest, a year of record heat. It is declared only in exceptional years and has been run as its own house, Rare Champagne, in Reims since 2018.\n\nIts bottle wears a jewelled dress that recalls a design Fabergé made for the house in the nineteenth century. The wine is Chardonnay-led with Pinot Noir from grand and premier cru villages, long on its lees (at least eight years for the 2013): white peach, candied citrus and toasted almond.\n\nBrennan’s published pages disagree on the glass vintage, naming 2012 and 2013. Confirm the open label at lineup before offering a vintage or comparing it with the 2013 bottle.",
+			"after": "Rare began as Piper-Heidsieck's prestige cuvée, first made from the 1976 harvest, a year of record heat. It is declared only in exceptional years and has been run as its own house, Rare Champagne, in Reims since 2018.\n\nIts bottle wears a jeweled dress that recalls a design Fabergé made for the house in the nineteenth century. The wine is Chardonnay-led with Pinot Noir from grand and premier cru villages, long on its lees (at least eight years for the 2013): white peach, candied citrus and toasted almond.\n\nBrennan’s published pages disagree on the glass vintage, naming 2012 and 2013. Confirm the open label at lineup before offering a vintage or comparing it with the 2013 bottle.",
 			"words": [
 				"jewelled"
 			]
@@ -2852,8 +2875,8 @@
 		},
 		{
 			"path": "house.components[570].producer.history",
-			"before": "The Larmandier and Bernier families trace their roots back to the French Revolution, but Champagne Larmandier-Bernier began with a marriage: Philippe Larmandier and Elisabeth Bernier wed in 1971, she brought her Vertus vineyards, and they built their cellar in Vertus, at the southern end of the Côte des Blancs.\n\nPierre Larmandier took over in 1988, and with his wife, Sophie, he changed the farming. They gave up herbicides in 1992 and had the whole estate in biodynamics by 1999; it has been certified organic since 2003, and the wines ferment with their own indigenous yeasts. Their sons Arthur, then Georges, have worked with them since 2017. The house keeps dosage very low or leaves it out: Terre de Vertus, a single-village Premier Cru from mid-slope Vertus, is a Brut Nature, made with no added sugar at all.\n\nLongitude, our bottle, is all Chardonnay from Vertus, Oger, Avize and Cramant, villages that line up close to the fourth meridian; because Vertus is premier cru, the blend is labelled Premier Cru. About 40 percent of it comes from a perpetual reserve begun in 2004, and the house prints a dosage of about 2 g/L.",
-			"after": "The Larmandier and Bernier families trace their roots back to the French Revolution, but Champagne Larmandier-Bernier began with a marriage: Philippe Larmandier and Elisabeth Bernier wed in 1971, she brought her Vertus vineyards, and they built their cellar in Vertus, at the southern end of the Côte des Blancs.\n\nPierre Larmandier took over in 1988, and with his wife, Sophie, he changed the farming. They gave up herbicides in 1992 and had the whole estate in biodynamics by 1999; it has been certified organic since 2003, and the wines ferment with their own indigenous yeasts. Their sons Arthur, then Georges, have worked with them since 2017. The house keeps dosage very low or leaves it out: Terre de Vertus, a single-village Premier Cru from mid-slope Vertus, is a Brut Nature, made with no added sugar at all.\n\nLongitude, our bottle, is all Chardonnay from Vertus, Oger, Avize and Cramant, villages that line up close to the fourth meridian; because Vertus is premier cru, the blend is labeled Premier Cru. About 40 percent of it comes from a perpetual reserve begun in 2004, and the house prints a dosage of about 2 g/L.",
+			"before": "The Larmandier and Bernier families trace their roots back to the French Revolution, but Champagne Larmandier-Bernier began with a marriage: Philippe Larmandier and Elisabeth Bernier wed in 1971, she brought her Vertus vineyards, and they built their cellar in Vertus, at the southern end of the Côte des Blancs.\n\nPierre Larmandier took over in 1988, and with his wife, Sophie, he changed the farming. They gave up herbicides in 1992 and had the whole estate in biodynamics by 1999; it has been certified organic since 2003, and the wines ferment with their own indigenous yeasts. Their sons Arthur, then Georges, have worked with them since 2017. The house keeps dosage very low or leaves it out: Terre de Vertus, a single-village Premier Cru from mid-slope Vertus, is a Brut Nature: less than 3 grams of sugar per liter in the finished wine, with no sugar added after the second fermentation.\n\nLongitude, our bottle, is all Chardonnay from Vertus, Oger, Avize and Cramant, villages that line up close to the fourth meridian; because Vertus is premier cru, the blend is labelled Premier Cru. About 40 percent of it comes from a perpetual reserve begun in 2004, and the house prints a dosage of about 2 g/L.",
+			"after": "The Larmandier and Bernier families trace their roots back to the French Revolution, but Champagne Larmandier-Bernier began with a marriage: Philippe Larmandier and Elisabeth Bernier wed in 1971, she brought her Vertus vineyards, and they built their cellar in Vertus, at the southern end of the Côte des Blancs.\n\nPierre Larmandier took over in 1988, and with his wife, Sophie, he changed the farming. They gave up herbicides in 1992 and had the whole estate in biodynamics by 1999; it has been certified organic since 2003, and the wines ferment with their own indigenous yeasts. Their sons Arthur, then Georges, have worked with them since 2017. The house keeps dosage very low or leaves it out: Terre de Vertus, a single-village Premier Cru from mid-slope Vertus, is a Brut Nature: less than 3 grams of sugar per liter in the finished wine, with no sugar added after the second fermentation.\n\nLongitude, our bottle, is all Chardonnay from Vertus, Oger, Avize and Cramant, villages that line up close to the fourth meridian; because Vertus is premier cru, the blend is labeled Premier Cru. About 40 percent of it comes from a perpetual reserve begun in 2004, and the house prints a dosage of about 2 g/L.",
 			"words": [
 				"labelled"
 			]
@@ -4712,14 +4735,6 @@
 			]
 		},
 		{
-			"path": "house.components[306].producer.notes[1]",
-			"before": "Our menu prints chicory, not espresso: part of the coffee flavour comes from the Kahlua. Caffeine questions go to the bar.",
-			"after": "Our menu prints chicory, not espresso: part of the coffee flavor comes from the Kahlua. Caffeine questions go to the bar.",
-			"words": [
-				"flavour"
-			]
-		},
-		{
 			"path": "house.components[308].producer.history",
 			"before": "Nocello is made by Toschi, a family company founded in 1945 in Vignola, near Modena, by two brothers. They began by preserving cherries in spirit, and the company still specialises in fruit in spirit, liqueurs and products for gelato. Its working headquarters are now at Savignano sul Panaro, close by.\n\nNocello is made from walnuts and hazelnuts. It is amber, sweet and rounded, with a balanced walnut flavour and tones of vanilla, and bottled at 24 percent; in 2004 it won a gold medal at the IWSC. In the United States its label reads Imitation Liqueur. Toschi has not published its method, so a server describes the taste, not a process.\n\nIt belongs to the walnut liqueur tradition of Emilia-Romagna, whose best-known member is nocino, the dark liqueur made by steeping green walnuts in alcohol; by custom the walnuts are picked around St John's Day, 24 June. Toschi makes a Nocino too. Nocello is the lighter, sweeter cousin.\n\nAt Brennan's it goes into Ralph’s Coffee, with dark roast coffee and chicory, Frangelico and whipped cream: a roasty, nutty after-dinner coffee.",
 			"after": "Nocello is made by Toschi, a family company founded in 1945 in Vignola, near Modena, by two brothers. They began by preserving cherries in spirit, and the company still specializes in fruit in spirit, liqueurs and products for gelato. Its working headquarters are now at Savignano sul Panaro, close by.\n\nNocello is made from walnuts and hazelnuts. It is amber, sweet and rounded, with a balanced walnut flavor and tones of vanilla, and bottled at 24 percent; in 2004 it won a gold medal at the IWSC. In the United States its label reads Imitation Liqueur. Toschi has not published its method, so a server describes the taste, not a process.\n\nIt belongs to the walnut liqueur tradition of Emilia-Romagna, whose best-known member is nocino, the dark liqueur made by steeping green walnuts in alcohol; by custom the walnuts are picked around St John's Day, 24 June. Toschi makes a Nocino too. Nocello is the lighter, sweeter cousin.\n\nAt Brennan's it goes into Ralph’s Coffee, with dark roast coffee and chicory, Frangelico and whipped cream: a roasty, nutty after-dinner coffee.",
@@ -4926,6 +4941,14 @@
 			"after": "A guest who loves the Flamingo’s wine will find the same Taittinger La Française on the Birthday Bubbles list as a 3 liter double magnum; the sommelier handles the cellar side.",
 			"words": [
 				"litre"
+			]
+		},
+		{
+			"path": "house.components[275].producer.history",
+			"before": "Chandon is the international sparkling wine house developed beyond Champagne by the Moët group. Chandon California and Chandon Argentina are distinct origins. A brand family connection does not prove one origin or one production method.\n\nThe cited U.S. Garden Spritz technical sheet describes Argentine sparkling wine made with second fermentation and ageing in tank, then blended with a bitter orange component before bottling. Do not confuse that product with a Californian traditional method Brut.\n\nBrennan's menu prints Chandon Brut sparkling wine and bitter orange liqueur, but does not establish whether the bar uses separate bottles or a ready to serve product. Confirm the current bottle, label and service.",
+			"after": "Chandon is the international sparkling wine house developed beyond Champagne by the Moët group. Chandon California and Chandon Argentina are distinct origins. A brand family connection does not prove one origin or one production method.\n\nThe cited U.S. Garden Spritz technical sheet describes Argentine sparkling wine made with second fermentation and aging in tank, then blended with a bitter orange component before bottling. Do not confuse that product with a Californian traditional method Brut.\n\nBrennan's menu prints Chandon Brut sparkling wine and bitter orange liqueur, but does not establish whether the bar uses separate bottles or a ready to serve product. Confirm the current bottle, label and service.",
+			"words": [
+				"ageing"
 			]
 		},
 		{
@@ -5141,11 +5164,10 @@
 		},
 		{
 			"path": "house.components[458].producer.history",
-			"before": "Piper-Heidsieck was founded in Reims in 1785 by Florens-Louis Heidsieck, and the house tells that he presented his Champagne to Queen Marie Antoinette. His nephew Christian Heidsieck joined the firm, and Henri-Guillaume Piper was working in it in the founder’s lifetime, from about 1815 by one account. After Florens-Louis died in 1828 Christian ran the house; after Christian died, his widow married Piper, and the two names were joined in the nineteenth century. Charles Heidsieck and Heidsieck & Co Monopole are separate houses.\n\nFor its centenary in 1885 the house commissioned Fabergé to design a jewelled bottle. It was never made as drawn, but the idea lives on in the golden dress of Rare, first made from the 1976 harvest as Piper’s prestige cuvée and sold as its own house since 2018.\n\nThe Cuvée Brut is Pinot Noir-led, with Meunier and Chardonnay from more than a hundred crus, and reserve wines keep the house style steady. The Essentiel Extra Brut adds more reserve wine and longer ageing, with less sugar. At Brennan’s the house Champagne is a Piper-Heidsieck Extra Brut labelled Brennan’s Essential; a 2024 NOWFE event page called it Brennan’s private-label Piper-Heidsieck, and which Piper cuvée fills the bottle is for the sommelier to confirm.",
-			"after": "Piper-Heidsieck was founded in Reims in 1785 by Florens-Louis Heidsieck, and the house tells that he presented his Champagne to Queen Marie Antoinette. His nephew Christian Heidsieck joined the firm, and Henri-Guillaume Piper was working in it in the founder’s lifetime, from about 1815 by one account. After Florens-Louis died in 1828 Christian ran the house; after Christian died, his widow married Piper, and the two names were joined in the nineteenth century. Charles Heidsieck and Heidsieck & Co Monopole are separate houses.\n\nFor its centenary in 1885 the house commissioned Fabergé to design a jeweled bottle. It was never made as drawn, but the idea lives on in the golden dress of Rare, first made from the 1976 harvest as Piper’s prestige cuvée and sold as its own house since 2018.\n\nThe Cuvée Brut is Pinot Noir-led, with Meunier and Chardonnay from more than a hundred crus, and reserve wines keep the house style steady. The Essentiel Extra Brut adds more reserve wine and longer aging, with less sugar. At Brennan’s the house Champagne is a Piper-Heidsieck Extra Brut labeled Brennan’s Essential; a 2024 NOWFE event page called it Brennan’s private-label Piper-Heidsieck, and which Piper cuvée fills the bottle is for the sommelier to confirm.",
+			"before": "Piper-Heidsieck was founded in Reims in 1785 by Florens-Louis Heidsieck, and the house tells that he presented his Champagne to Queen Marie Antoinette. His nephew Christian Heidsieck joined the firm, and Henri-Guillaume Piper was working in it in the founder’s lifetime, from about 1815 by one account. After Florens-Louis died in 1828 Christian ran the house; after Christian died, his widow married Piper, and the two names were joined in the nineteenth century. Charles Heidsieck and Heidsieck & Co Monopole are separate houses.\n\nFor its centenary in 1885 the house commissioned Fabergé to design a jewelled bottle. It was never made as drawn, but the idea lives on in the golden dress of Rare, first made from the 1976 harvest as Piper’s prestige cuvée and sold as its own house since 2018.\n\nThe Cuvée Brut is Pinot Noir-led, with Meunier and Chardonnay from more than a hundred crus, and reserve wines keep the house style steady. Essentiel is a separate Extra Brut cuvée; its technical figures vary by release and do not identify Brennan’s private label. At Brennan’s the house Champagne is a Piper-Heidsieck Extra Brut labelled Brennan’s Essential; a 2024 NOWFE event page called it Brennan’s private-label Piper-Heidsieck, and which Piper cuvée fills the bottle is for the sommelier to confirm.",
+			"after": "Piper-Heidsieck was founded in Reims in 1785 by Florens-Louis Heidsieck, and the house tells that he presented his Champagne to Queen Marie Antoinette. His nephew Christian Heidsieck joined the firm, and Henri-Guillaume Piper was working in it in the founder’s lifetime, from about 1815 by one account. After Florens-Louis died in 1828 Christian ran the house; after Christian died, his widow married Piper, and the two names were joined in the nineteenth century. Charles Heidsieck and Heidsieck & Co Monopole are separate houses.\n\nFor its centenary in 1885 the house commissioned Fabergé to design a jeweled bottle. It was never made as drawn, but the idea lives on in the golden dress of Rare, first made from the 1976 harvest as Piper’s prestige cuvée and sold as its own house since 2018.\n\nThe Cuvée Brut is Pinot Noir-led, with Meunier and Chardonnay from more than a hundred crus, and reserve wines keep the house style steady. Essentiel is a separate Extra Brut cuvée; its technical figures vary by release and do not identify Brennan’s private label. At Brennan’s the house Champagne is a Piper-Heidsieck Extra Brut labeled Brennan’s Essential; a 2024 NOWFE event page called it Brennan’s private-label Piper-Heidsieck, and which Piper cuvée fills the bottle is for the sommelier to confirm.",
 			"words": [
 				"jewelled",
-				"ageing",
 				"labelled"
 			]
 		},
@@ -5155,14 +5177,6 @@
 			"after": "For its 1885 centenary the house commissioned a jeweled bottle design from Fabergé; the bottle was never made as drawn.",
 			"words": [
 				"jewelled"
-			]
-		},
-		{
-			"path": "house.components[458].producer.facts[5]",
-			"before": "Essentiel Extra Brut is Pinot Noir-led, with more reserve wine and longer lees ageing than the Brut and a dosage of about 4 to 6 g/L.",
-			"after": "Essentiel Extra Brut is Pinot Noir-led, with more reserve wine and longer lees aging than the Brut and a dosage of about 4 to 6 g/L.",
-			"words": [
-				"ageing"
 			]
 		},
 		{
@@ -5753,8 +5767,8 @@
 		},
 		{
 			"path": "cocktails:Bloody Bull.compare[1].same",
-			"before": "Vodka with tomato and a savoury broth, seasoned with hot sauce and Worcestershire.",
-			"after": "Vodka with tomato and a savory broth, seasoned with hot sauce and Worcestershire.",
+			"before": "Vodka in a savoury tomato based family; exact seasonings depend on the recipe.",
+			"after": "Vodka in a savory tomato based family; exact seasonings depend on the recipe.",
 			"words": [
 				"savoury"
 			]

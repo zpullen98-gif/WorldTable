@@ -145,6 +145,14 @@ describe('parentOf', () => {
 		expect(parentOf({ path: '/menu', hash: '#house', chosen: 2 })).toBe('/level/2');
 		expect(parentOf({ path: '/menu', hash: '#d-abc', via: 'more' })).toBe('/menu');
 	});
+
+	it('returns a cold Fieldbook reading to its filtered list and practice to the collection', () => {
+		expect(parentOf({ path: '/foundations', search: '?category=vegetables&q=cipollini&term=vegetables-cippolini', chosen: 3 })).toBe('/foundations?category=vegetables&q=cipollini');
+		expect(parentOf({ path: '/foundations', chosen: 3 })).toBe('/level/3');
+		expect(parentOf({ path: '/flashcards', search: '?deck=foundations%3Atoday&run=1' })).toBe('/flashcards?deck=foundations%3Atoday');
+		expect(parentOf({ path: '/flashcards', search: '?deck=foundations%3Atoday' })).toBe('/foundations');
+		expect(parentOf({ path: '/flashcards', search: '?deck=foundations%3Amisses&run=1&refs=u%3Adairy-singingbrook' })).toBe('/foundations');
+	});
 });
 
 describe('depthAfter', () => {

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
 
-	let { src, title, alt, width, height, embedded = false, guideLabel = 'Follow numbers 1 to 6 in the guide.' }: { src: string; title: string; alt: string; width: number; height: number; embedded?: boolean; guideLabel?: string } = $props();
+	let { src, title, alt, width, height, embedded = false, guideLabel = 'Follow numbers 1 to 6 in the guide.', unavailableLabel = 'The numbered guide below is complete without the picture. Reconnect to load the artwork.' }: { src: string; title: string; alt: string; width: number; height: number; embedded?: boolean; guideLabel?: string; unavailableLabel?: string } = $props();
 	const uid = $props.id();
 	let failed = $state(false);
 	let viewerOpen = $state(false);
@@ -56,12 +56,12 @@
 <svelte:window onresize={fit} />
 
 <figure class="plate teaching-illustration" class:embedded>
-	<div class="illustration-box" style:--illustration-aspect="{width} / {height}">
+	<div class="illustration-box" class:failed style:--illustration-aspect="{width} / {height}">
 		{#if failed}
 			<div class="image-unavailable" role="status">
 				<span class="folio-mark" aria-hidden="true">✦</span>
 				<strong>The illustration is not available</strong>
-				<p>The numbered guide below is complete without the picture. Reconnect to load the artwork.</p>
+				<p>{unavailableLabel}</p>
 				<button class="chip retry" onclick={() => failed = false}>Try again</button>
 			</div>
 		{:else}
@@ -97,6 +97,8 @@
 	.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 	.teaching-illustration { margin: 0; min-width: 0; }
 	.illustration-box { display: grid; width: 100%; aspect-ratio: var(--illustration-aspect); overflow: hidden; border: 1px solid var(--house-frame); border-radius: 3px; background: var(--paper-raised); }
+	/* Recovery copy and its retry control must fit even on the narrowest phones. */
+	.illustration-box.failed { aspect-ratio: auto; }
 	.illustration-box > img { display: block; width: 100%; height: 100%; object-fit: contain; }
 	.image-unavailable { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; color: var(--ink-soft); }
 	.image-unavailable p { max-width: 32ch; margin-top: 10px; font-size: var(--t-small); }

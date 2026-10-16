@@ -518,6 +518,21 @@ check('the plates ship as text in the install and as pictures on demand', () => 
 	return `${chunks.length} text chunk(s) precached, ${pictures.length} pictures on demand, ${pages} pages`;
 });
 
+check('every fall ingredient study ships with its key and pictures on demand', () => {
+	const art = JSON.parse(readFileSync(join(ROOT, 'src/lib/data/fall-menu-art-2026.json'), 'utf8'));
+	const resources = art.items.flatMap((item) => [item.src, item.thumbnailSrc])
+		.map((resource) => resource.replace('img/fall-2026/', 'house/brennans/fall-'));
+	for (const resource of resources) {
+		assert(existsSync(join(BUILD, resource)), `fall study missing ${resource}`);
+		assert(!precached.some((u) => u.replace(/^\//, '') === resource), `${resource} must stay on demand`);
+		assert(readFileSync(join(BUILD, resource)).equals(readFileSync(join(ROOT, 'static', resource))), `${resource} differs from its reviewed original`);
+	}
+	const chunks = files.filter((f) => extname(f) === '.js' && readFileSync(f, 'utf8').includes(art.items[0].caption));
+	assert(chunks.length, 'fall image teaching key never reached the bundle');
+	for (const chunk of chunks) assert(precached.some((u) => u.replace(/^\//, '') === rel(chunk)), `fall teaching key ${rel(chunk)} is not precached`);
+	return `${art.items.length} studies, ${resources.length} exact pictures on demand, teaching key precached`;
+});
+
 check('the primers ship in the install, and each level has its reader page', () => {
 	/* The primers are the text of /level/[n]/read: a lazily imported chunk
 	   found by a key only that file carries, precached so the shell can

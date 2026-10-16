@@ -1189,6 +1189,42 @@ asserts NOT_SCREENED stays non-empty so the day it lands, the copy must change.
   in a draft comment, both times reasoned rather than measured; the build now
   gates it in technique-standards.mjs's ceiling sentence.)
 
+## Fall 2026 training collection
+
+`src/lib/data/fall-menu-2026.json` is a dated, read-only curriculum transcribed
+from the owner's eight food sheets and one cocktail sheet. It does not replace
+House records or approve Maître d' marks. Background claims cite the collection's
+source registry; printed ingredients and dietary wording remain separate from
+kitchen questions. No cocktail measures, glassware or production methods are
+inferred. `tools/port-fall-menu.mjs` generates the Ledger's `js/data-fall-menu.js`;
+run it after editing the JSON and use `--check` before releasing both rooms.
+
+The reader is `/menu?view=fall`, with `kind=dish|cocktail|all` and optional `item`.
+Flashcards reuse DeckFrame with `f:` references, the `fall` decks and `f=` misses.
+Grades use the bounded local drill log under `curriculum-fall-2026`, never a live
+house, menu, professional level or exported training record. Today's fall practice
+is a separate ten-card door, prioritising misses, unseen cards and older practice;
+it does not change the existing Due today count. `fall-menu.test.ts` pins the
+coverage, stable IDs, references, scoped decks, round and latest-verdict behaviour.
+
+The companion `fall-menu-art-2026.json` holds one reviewed, AI-generated ingredient
+study per item. These are selected components, never confirmed house plating or
+cocktail presentations. The captions, HTML teaching keys and context qualify what
+the picture can establish; recipes, portions, glassware and allergy decisions do
+not come from an illustration. Exact generation and correction prompts live in
+`docs/fall-menu-image-prompts.txt`.
+
+`FallTeachingImage.svelte` reuses the accessible PlateIllustration viewer. Reading
+pages show the picture and key; flashcards mount them only after reveal and after
+opening a closed disclosure. Modal keyboard input must never grade the card.
+`tools/port-fall-menu-art.mjs` generates Ledger metadata and mirrors the full and
+thumbnail WebP files byte for byte; use `--check` before release. Immutable `-v1`
+paths live under `house/brennans/`, stay out of precache, and use `plates-v1` with
+a 160-entry bound. Change filenames when replacing an image. The browser check
+`tools/check-fall-art-browser.mjs` covers recall isolation, all studies in both
+service themes, small screens, zoom, fallback, and optional production offline
+checks (`FALL_ART_OFFLINE=1`).
+
 ## Testing
 
 `npm test` (192 unit) · `npm run test:e2e` (45 Playwright: regressions named for
