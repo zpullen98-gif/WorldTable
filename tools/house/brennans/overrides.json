@@ -48672,7 +48672,7 @@
       "op": "add",
       "value": {
         "title": "The sauces on our menus",
-        "body": "Learn the sauces first: here the sauce usually matters more than the protein. Escoffier's five mother sauces are espagnole, velouté, béchamel, tomate and hollandaise, and the first five courtyard turtles carry their names. The hollandaise family, each a warm emulsion of egg yolk and butter: hollandaise on the Eggs Hussarde and the Eggs Owen; béarnaise, hollandaise with tarragon, shallot and vinegar, on the breakfast hanger steak; Choron, béarnaise with tomato, on the Eggs Sardou; Foyot, béarnaise with meat glaze, on the Chateaubriand. Beurre blanc, the Loire butter sauce made with white wine, is on the Redfish Véronique. The red wine sauce: marchand de vin on the Hussarde and the Owen. Bordelaise is red wine in France and often garlic butter in New Orleans; ask at lineup which the pecan bordelaise on the Pecan Gulf Fish is. New Orleans BBQ is buttery and peppery, never smoky or tomato, on the Louisiana Oysters and the BBQ Lobster. Creole sauce is tomato and the trinity, on the shrimp and grits."
+        "body": "Learn the sauces first: here the sauce usually matters more than the protein. The five mother sauces, as kitchens teach them, are espagnole, velouté, béchamel, tomate and hollandaise (Escoffier's own base sauces were the first four), and the first five courtyard turtles carry their names. The hollandaise family, each a warm emulsion of egg yolk and butter: hollandaise on the Eggs Hussarde and the Eggs Owen; béarnaise, hollandaise with tarragon, shallot and vinegar, on the breakfast hanger steak; Choron, béarnaise with tomato, on the Eggs Sardou; Foyot, béarnaise with meat glaze, on the Chateaubriand. Beurre blanc, the Loire butter sauce made with white wine, is on the Redfish Véronique. The red wine sauce: marchand de vin on the Hussarde and the Owen. Bordelaise is red wine in France and often garlic butter in New Orleans; ask at lineup which the pecan bordelaise on the Pecan Gulf Fish is. New Orleans BBQ is buttery and peppery, never smoky or tomato, on the Louisiana Oysters and the BBQ Lobster. Creole sauce is tomato and the trinity, on the shrimp and grits."
       },
       "reason": "Master review: the guide says the sauce matters more than the protein, yet no card put the menu's nine sauces side by side; one map makes Choron, Foyot and béarnaise memorable as one family; corrected after the repair review: the pecan bordelaise stands apart from the red wine family until the kitchen says which it is",
       "source": "guide p2 as research/dossier-the-kitchen.md section 0 quotes it; research/dossier-the-kitchen.md section 10; research/master-review-chef-2026-10-04.md (Sauces)"
@@ -48903,10 +48903,10 @@
       "value": {
         "term": "Mother sauces",
         "say": "As it reads: mother sauces.",
-        "toGuest": "Escoffier's five base sauces: espagnole, velouté, béchamel, tomate and hollandaise; the first five courtyard turtles are named for them."
+        "toGuest": "The five mother sauces kitchens teach: espagnole, velouté, béchamel, tomate and hollandaise (Escoffier built on the first four); the first five courtyard turtles are named for them."
       },
       "reason": "Master review: the turtles' names are a house story, and the five sauces are the key to every sauce on the menu",
-      "source": "research/master-review-chef-2026-10-04.md (Sauces); must-know The courtyard turtles"
+      "source": "research/master-review-chef-2026-10-04.md (Sauces); must-know The courtyard turtles; research/escoffier-mother-sauces-2026-10-16.md"
     },
     {
       "target": "term:Brown butter",

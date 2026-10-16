@@ -152,7 +152,7 @@
       "kind": "story",
       "name": "The courtyard turtles",
       "say": "",
-      "explain": "During the 2014 restoration the builders found turtles living in the courtyard, and the house adopted them. Ten turtles live there now, named for sauces: five for Escoffier's mother sauces, Béchamel, Velouté, Espagnole, Tomate and Hollandaise, and five for New Orleans sauces, Rémoulade, Ravigote, Bordelaise, Mignonette and Cocktail. Cocktail is the only male.\n\nEach spring the house holds a turtle parade to the fountain, which it calls the slowest second line on earth.\n\nGuests ordering the turtle soup sometimes look nervously at the fountain. Say it before they ask, with a smile: the soup is not the turtles, and the courtyard ten are family.",
+      "explain": "During the 2014 restoration the builders found turtles living in the courtyard, and the house adopted them. Ten turtles live there now, named for sauces: five for the French mother sauces as kitchens teach them, Béchamel, Velouté, Espagnole, Tomate and Hollandaise, and five for New Orleans sauces, Rémoulade, Ravigote, Bordelaise, Mignonette and Cocktail. Cocktail is the only male.\n\nEach spring the house holds a turtle parade to the fountain, which it calls the slowest second line on earth.\n\nGuests ordering the turtle soup sometimes look nervously at the fountain. Say it before they ask, with a smile: the soup is not the turtles, and the courtyard ten are family.",
       "card": {
         "front": "Is the turtle soup made from the courtyard turtles?",
         "back": "No. The ten courtyard turtles, named for five French mother sauces and five New Orleans sauces, are house pets; the soup uses farm-raised turtle."
@@ -165,7 +165,8 @@
       ],
       "sources": [
         "research/dossier-the-kitchen.md (section 1, the second life)",
-        "research/summary-keyfacts.md"
+        "research/summary-keyfacts.md",
+        "research/escoffier-mother-sauces-2026-10-16.md"
       ]
     },
     {
@@ -203,7 +204,7 @@
       "kind": "story",
       "name": "Escoffier and the mother sauces",
       "say": "",
-      "explain": "Auguste Escoffier, the chef who codified French restaurant cooking in Le Guide Culinaire, organised sauces into families. The mother sauces are espagnole, velouté, béchamel, tomate and hollandaise; every other classical sauce is a daughter, built by adding to one of them.\n\nBrennan's menus read like a lesson in the hollandaise family: plain hollandaise on the Hussarde and Owen, béarnaise on the breakfast hanger, Choron on the Sardou, Foyot on the Chateaubriand. The marchand de vin and bordelaise come from the brown side.\n\nThe guide's own advice is that the sauce usually matters more than the protein, for the guest and for the wine. Learn the sauce on each plate first and the rest of the description follows.",
+      "explain": "Auguste Escoffier, the chef who codified French restaurant cooking in Le Guide Culinaire (1903), organised sauces into families built on four base sauces: espagnole, velouté, béchamel and tomate. Kitchens now add hollandaise and teach five mother sauces; every other classical sauce is a daughter, built by adding to one of them.\n\nBrennan's menus read like a lesson in the hollandaise family: plain hollandaise on the Hussarde and Owen, béarnaise on the breakfast hanger, Choron on the Sardou, Foyot on the Chateaubriand. The marchand de vin and bordelaise come from the brown side.\n\nThe guide's own advice is that the sauce usually matters more than the protein, for the guest and for the wine. Learn the sauce on each plate first and the rest of the description follows.",
       "card": {
         "front": "Name the five French mother sauces.",
         "back": "Espagnole, velouté, béchamel, tomate and hollandaise. Our egg dishes and steaks use the hollandaise family: hollandaise, béarnaise, Choron and Foyot."
@@ -223,7 +224,8 @@
       "sources": [
         "research/master-review-chef-2026-10-04.md (sauces)",
         "research/components-dishes-2026-10-05.md (search 11)",
-        "guide.txt (pdf p2)"
+        "guide.txt (pdf p2)",
+        "research/escoffier-mother-sauces-2026-10-16.md"
       ]
     },
     {
@@ -285,7 +287,7 @@
       "kind": "technique",
       "name": "Hollandaise",
       "say": "HOL-un-dayz",
-      "explain": "Hollandaise is a warm emulsion of egg yolks and butter, sharpened with lemon juice or a reduction of vinegar. The yolks are whisked over gentle heat until they thicken, then melted or clarified butter goes in slowly; lecithin in the yolk holds fat and water together in a smooth, pale yellow sauce.\n\nThe name means Dutch sauce, though no clear Dutch link has been found. Escoffier counted it among his five mother sauces, and béarnaise, Choron and Foyot are its daughters.\n\nIt is fragile: too hot and it scrambles, too cool and it splits. On the Eggs Hussarde and Eggs Owen it is the rich, lemony layer over the egg, the classic half of their two-sauce finish.",
+      "explain": "Hollandaise is a warm emulsion of egg yolks and butter, sharpened with lemon juice or a reduction of vinegar. The yolks are whisked over gentle heat until they thicken, then melted or clarified butter goes in slowly; lecithin in the yolk holds fat and water together in a smooth, pale yellow sauce.\n\nThe name means Dutch sauce, though no clear Dutch link has been found. Escoffier set it among the warm emulsified sauces rather than his four base sauces; kitchens now teach it as the fifth mother sauce, and béarnaise, Choron and Foyot are its daughters.\n\nIt is fragile: too hot and it scrambles, too cool and it splits. On the Eggs Hussarde and Eggs Owen it is the rich, lemony layer over the egg, the classic half of their two-sauce finish.",
       "card": {
         "front": "What is hollandaise, and which of our dishes carry it?",
         "back": "A warm emulsion of egg yolk and butter sharpened with lemon or vinegar reduction; the mother of béarnaise. It tops the Eggs Hussarde and the Eggs Owen."
@@ -301,7 +303,8 @@
       "sources": [
         "research/components-dishes-2026-10-05.md (search 11)",
         "research/dossier-the-kitchen.md (section 10)",
-        "guide.txt (pdf p50)"
+        "guide.txt (pdf p50)",
+        "research/escoffier-mother-sauces-2026-10-16.md"
       ]
     },
     {

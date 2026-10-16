@@ -118,7 +118,13 @@ export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'br
    vintage qualification and mature bottle service. Saved inventory and record ids remain intact. */
 /* 15 October bar review: correct product categories and service claims without changing
    the saved menu, then connect the reviewed collection to practical cocktail recall. */
-export const EDITION_BUILT_AT = '2026-10-15T23:03:00.000Z';
+/* The 22:15 edition of 16 October corrects five cards that gave Escoffier five mother sauces
+   (research/escoffier-mother-sauces-2026-10-16.md): Le Guide Culinaire (1903) builds on four base
+   sauces, hollandaise sits with the warm emulsions, and the five are how kitchens teach the families
+   now; the Hollandaise technique, the Escoffier story, the courtyard turtles, the sauces must-know
+   and the Mother sauces term say so; stamped at the quarter hour before its build, never ahead of
+   the clock. */
+export const EDITION_BUILT_AT = '2026-10-16T22:15:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a
