@@ -658,7 +658,7 @@ function termOptionsFor(card: DeckCard, cards: readonly DeckCard[], rand: Rand) 
  *
  * Up to three of the ten ask about a word on a dish line. The house's own menu
  * is used where it names a deck term (`houseLines`: dish names, descriptions
- * and ingredient lines from My Menu), and the card's authored `line` where it
+ * and ingredient lines from the house's menu), and the card's authored `line` where it
  * does not, so the mode works on the day a venue has entered nothing.
  */
 export function sayRound(

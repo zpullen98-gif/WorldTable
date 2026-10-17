@@ -63,7 +63,7 @@
     a Cuisine card      session.markDrilled('cuisine:<id>'): Got it `met`,
                         Again `missed` and sent round once more, once per
                         card per local day (lib/cuisine.ts recordable), the
-                        grade the Cuisine tab's own card screen writes; dealt
+                        grade Cuisine's own card screen writes; dealt
                         by dealCards (due, then new in teaching order, then
                         the rest, twenty a run)
 -->
@@ -250,7 +250,7 @@
 	const dueNow = $derived(today.at(chosen));
 	const fallLatest = $derived(fallVerdicts(today.drilled));
 
-	/* Cuisine's cards (the sixth tab): z: references, read from its index, a
+	/* Cuisine's cards (under Brennan's): z: references, read from its index, a
 	   chapter's bodies loaded when one of its cards is on show. A chapter deck
 	   holds the chapter's cards at the chosen level, or at every level under
 	   Show all or Narrow this deck's Every level; Every Cuisine card is every
@@ -502,7 +502,7 @@
 			// Again sends a deck card round once more in this run, as the sitting did.
 			if (!got && refs.indexOf(ref) === refs.lastIndexOf(ref)) refs.push(ref);
 		} else if (r && r.kind === 'z') {
-			// The Cuisine tab's own grade, once per card per local day; Again sends it round once more.
+			// Cuisine's own grade, once per card per local day; Again sends it round once more.
 			if (recordable(session.drillLog, r.card.id, Date.now())) session.markDrilled(czSlug(r.card.id), cardGrade(got));
 			if (!got && refs.indexOf(ref) === refs.lastIndexOf(ref)) refs.push(ref);
 		}

@@ -6,7 +6,7 @@
  * not vocabulary every kitchen shares, so they came out of the Floor Deck, and
  * they needed somewhere to go: a server who can say where the cheese on the
  * board comes from, and one true sentence about the people who made it, sells
- * the board. So My Menu gets a place to write them down, study them, and tie
+ * the board. So the house's page gets a place to write them down, study them, and tie
  * them to the dishes they are on. Nothing is seeded; a venue types its own.
  *
  * WHAT A PRODUCER IS. The basics (name, where, what kind, what they supply),

@@ -1,5 +1,6 @@
 <!--
-  Cuisine, the World Table's sixth tab (the owner, 12 Oct 2026): French and
+  Cuisine, the World Table's cooking page, under Brennan's since 17 Oct 2026
+  (its own tab from 12 Oct, the owner's): French and
   Creole cooking, in depth and drillable, for the kitchen and the floor at
   Brennan's. One prerendered page; every screen is an address on it.
 

@@ -1,5 +1,5 @@
 /**
- * Due today, live: the one count the Flashcards tab's pill, the level page's
+ * Due today, live: the one count the Practise tab's pill, the level page's
  * `Due today` row and the Flashcards root's Due today block all read
  * (docs/consolidation-design.md 2.6 and 6.2). The rule is lib/today.ts, pure;
  * this only gathers its inputs in the browser and re-derives on every change.

@@ -1,5 +1,5 @@
 /**
- * Cuisine, the sixth tab: French and Creole cooking, read and drilled.
+ * Cuisine, under Brennan's: French and Creole cooking, read and drilled.
  *
  * ONE prerendered page for every screen (see +page.svelte for the
  * addresses): the chapters, the entries, the decks, the rounds and the two

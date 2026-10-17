@@ -1,5 +1,5 @@
 /**
- * Cuisine, the World Table's sixth tab: the engines.
+ * Cuisine, the World Table's cooking page under Brennan's (its own tab from 12 to 17 Oct 2026): the engines.
  *
  * PURE, like repertoire.ts and today.ts and for the same reason: a runes
  * module cannot be reached from a unit test, and a schedule or a grade must be

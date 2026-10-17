@@ -198,8 +198,8 @@
 
 	let mode = $state<QuizMode>('dish');
 	/* What each mode is called on every Table screen: ?mode=drill is "Drill the
-	   menu", the words of the level page's door and the Quizzes row.
-	   MODE_LABELS keeps its values for the record's history. */
+	   menu", the words of the Practise row (lib/practise-rows.ts) and the study
+	   view's chip. MODE_LABELS keeps its values for the record's history. */
 	const PAGE_TITLES: Readonly<Record<QuizMode, string>> = { ...MODE_LABELS, drill: 'Drill the menu', cards: 'Flashcards' };
 	/* The House, re-derived with the store's tick: null before the api is
 	   ready and on a device with no house. */
@@ -216,7 +216,7 @@
 	});
 	const pairNeeds = $derived(needs.filter((n) => n.startsWith('First pick') || n.startsWith('Without alcohol')));
 	const pairReady = $derived(PAIR_KINDS.some((k) => ready.includes(k)));
-	/* The item cards only: a component's card lives in the Flashcards tab's component decks. */
+	/* The item cards only: a component's card lives in Practise's component decks. */
 	const cardCount = $derived(current ? buildFlashcards(current).filter((f) => f.kind !== 'component' && f.kind !== 'tasting' && f.kind !== 'producer').length : 0);
 	/* The kinds row: empty means every kind that deals; a chosen kind that
 	   stops dealing (the house changed under us) drops out on its own. */
@@ -465,7 +465,7 @@
 		void toDeck();
 	}
 
-	/** The way out of a deck: back to the study view it came from, or to My Menu. */
+	/** The way out of a deck: back to the study view it came from, or to the house's page. */
 	function closeDeck() {
 		if (fromStudy && typeof history !== 'undefined' && history.length > 1) {
 			history.back();
@@ -678,7 +678,7 @@
 	   round itself waits for a chip. */
 	afterNavigate(() => {
 		/* ONE CARD STYLE (docs/consolidation-design.md 3.7): the flip cards
-		   are the Flashcards tab's now. ?mode=cards, with its scope, forwards
+		   are Practise's now. ?mode=cards, with its scope, forwards
 		   there with a replace, so every old link lands on the one card
 		   screen and this page never draws a card of its own. */
 		if (modeFromSearch(location.search) === 'cards') {
@@ -719,7 +719,7 @@
 			{#if !current}
 				<p class="empty">
 					No house on this device yet. The house drills read what a house has kept: start one or
-					import a pack on <a href="{base}/menu">My Menu</a>.
+					import a pack on <a href="{base}/menu">My restaurant</a>.
 				</p>
 			{:else if mode === 'drill'}
 				<p class="count">
@@ -787,7 +787,7 @@
 					{/each}
 				</div>
 				{#if !sayList.length}
-					<p class="empty">Nothing here has a kept timed line yet. Keep a ten, twenty or forty five second line on My Menu and it can be said back here.</p>
+					<p class="empty">Nothing here has a kept timed line yet. Keep a ten, twenty or forty five second line on the house's page and it can be said back here.</p>
 				{:else}
 					<div class="say flash">
 						<div class="pickrow">
@@ -872,7 +872,7 @@
 				</p>
 				<p class="kitchen">Allergens are the kitchen’s: when a guest asks, confirm with the kitchen at lineup, never from a drill.</p>
 				{#if !guestCards.length}
-					<p class="empty">No kept guest answers yet. Keep an answer on a scenario, or a difference on a mix-up, on My Menu and the guest can sit down here.</p>
+					<p class="empty">No kept guest answers yet. Keep an answer on a scenario, or a difference on a mix-up, on the house's page and the guest can sit down here.</p>
 				{:else if !gCard}
 					<div class="tools">
 						<button class="chip go" onclick={guestDeal}>Seat a guest ▸</button>
@@ -993,13 +993,13 @@
 			<p class="empty">
 				The drill opens at four dishes. {dishes.length
 					? `${dishes.length} on the menu so far: add ${4 - dishes.length} more on `
-					: 'Enter the menu on '}<a href="{base}/menu">My Menu</a>.
+					: 'Enter the menu on '}<a href="{base}/menu">My restaurant</a>.
 			</p>
 		{:else if drillable.length < 2 && !deck}
 			<p class="empty">
 				The quiz needs at least two dishes it can ask about: a dish counts once it has a
 				description, two or more ingredient lines, or a price no other dish on the menu shares.
-				Fill them in on <a href="{base}/menu">My Menu</a>. The flashcards work meanwhile.
+				Fill them in on <a href="{base}/menu">My restaurant</a>. The flashcards work meanwhile.
 			</p>
 			<div class="tools">
 				<button class="chip" onclick={startDeck}>Study mode ▸ flashcards</button>
@@ -1009,7 +1009,7 @@
 				<div class="tools">
 					<button class="chip" onclick={startQuiz}>Quiz me ▸ multiple choice</button>
 					<!-- One card style: with the house's dish cards on the device, the
-					     flash cards are the Flashcards tab's; the in-page deck stays only
+					     flash cards are Practise's; the in-page deck stays only
 					     for a menu typed in by hand with no house behind it. -->
 					{#if allItems.length}
 						<a class="chip" href="{base}/flashcards?deck=menu">Flashcards for the menu</a>

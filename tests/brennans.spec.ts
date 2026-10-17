@@ -43,7 +43,8 @@ const PACK_TEXT = readFileSync(join(HERE, '../static/shared/packs/brennans-new-o
 const PACK = JSON.parse(PACK_TEXT).house as {
 	id: string;
 	name: string;
-	dishes: Array<{ id: string; name: string; section: string; lines: { value: { s10: string; s20: string; s45: string } } }>;
+	dishes: Array<{ id: string; name: string; section: string; meals?: string[]; lines: { value: { s10: string; s20: string; s45: string } } }>;
+	meals?: Array<{ name: string }>;
 };
 const PACK_URL = '**/shared/packs/brennans-new-orleans.v1.oothouse.json';
 const INDEX = JSON.parse(readFileSync(join(HERE, '../src/lib/data/cuisine/index.json'), 'utf8')) as {
@@ -209,6 +210,8 @@ test("the jump row walks the page's groups by buttons that scroll to and focus a
 	if (await videos.count()) {
 		await videos.click();
 		await expect(page.locator('#videos-h')).toBeFocused();
+		// A summary is focusable on its own: the jump leaves it in the Tab order, no tabindex="-1" written on it.
+		await expect(page.locator('#videos-h')).toHaveJSProperty('tabIndex', 0);
 		expect(page.url()).toBe(url);
 	}
 	// Back from the bare root, after every jump, is Home: the jumps added nothing.
@@ -293,18 +296,27 @@ test('the Fall 2026 section leads the chips with its eight rows once the pack ho
 	await expect(fallChip).toHaveAttribute('aria-pressed', 'true');
 	await expect(page.locator('#study-h')).toBeFocused();
 	await expect(page).toHaveURL(/\/menu$/);
+	// Under a meal the fall dishes are not served at (the sheet's are Dinner), the section leaves the chip
+	// row, and the jump leaves the row with it, so it never lands on an empty list; All day brings both back.
+	const offMeal = (PACK.meals ?? []).map((m) => m.name).find((m) => !FALL_IN_PACK.some((d) => (d.meals ?? []).includes(m)))!;
+	expect(offMeal, 'a meal of the house the fall dishes are not served at').toBeTruthy();
+	const meals = page.locator('.study .meals');
+	await meals.getByRole('button', { name: offMeal, exact: true }).click();
+	await expect(fallChip).toHaveCount(0);
+	await expect(jumps(page).locator('button.chip', { hasText: 'Fall 2026' })).toHaveCount(0);
+	await meals.getByRole('button', { name: 'All day', exact: true }).click();
+	await expect(fallChip).toHaveCount(1);
+	await expect(jumps(page).locator('button.chip', { hasText: 'Fall 2026' })).toHaveCount(1);
 });
 
-test("a dish named as the training sheet names it draws the sheet's field notes on its card: the ingredients, the compact image and the two quiet links", async ({ page }) => {
-	// The fall dishes are not in the pack yet, so the join is proved on a seeded house whose
-	// dish takes the sheet's name verbatim; the pack is withheld so the seeded house stays current.
-	await page.unroute(PACK_URL);
+test("a Fall 2026 dish of the Brennan's house draws the sheet's field notes on its card: the ingredients, the compact image and the two quiet links; a dish off the sheet, and the sheet's name on another house, draw none", async ({ page }) => {
+	// The join is by the sheet's name, for the Brennan's house alone (the sheet is its training
+	// sheet): proved on the pack's own Steak Tartare with Rye, then refused on a dish off the sheet
+	// and on a seeded house whose dish takes the sheet's name verbatim.
 	const item = FALL.items.find((i) => i.id === 'steak-tartare-rye')!;
-	const h = JSON.parse(JSON.stringify(FIXTURE));
-	h.dishes[0].name = item.name;
-	await seedHouses(page, [h]);
-	await goto(page, '/menu');
-	await expect(page.locator('.study .row').first()).toBeVisible({ timeout: 15_000 });
+	expect(FALL_IN_PACK.some((d) => d.name === item.name), "the pack carries the sheet's dish by name").toBe(true);
+	await openHouse(page);
+	await page.getByRole('button', { name: `${FALL_SECTION} ${FALL_IN_PACK.length}`, exact: true }).click();
 	await page.locator('.study .row', { has: page.locator('.nm', { hasText: item.name }) }).click();
 	const c = card(page);
 	await expect(c.locator('#card-h')).toHaveText(item.name);
@@ -353,8 +365,20 @@ test("a dish named as the training sheet names it draws the sheet's field notes 
 	await shot(page, 'fall-card-top');
 	// A dish off the sheet draws no field notes.
 	await backBtn(page).click();
-	await page.locator('.study .row', { has: page.locator('.nm', { hasText: 'Beetroot' }) }).click();
-	await expect(card(page).locator('#card-h')).toContainText('Beetroot');
+	await page.getByRole('button', { name: 'Entrées 14', exact: true }).click();
+	await page.locator('.study .row', { has: page.locator('.nm', { hasText: 'Eggs Hussarde' }) }).click();
+	await expect(card(page).locator('#card-h')).toContainText('Eggs Hussarde');
+	await expect(card(page).locator('#fall-h')).toHaveCount(0);
+	// The sheet's name on another house draws none: the notes are Brennan's. The pack is withheld
+	// so the seeded house stays current.
+	await page.unroute(PACK_URL);
+	const h = JSON.parse(JSON.stringify(FIXTURE));
+	h.dishes[0].name = item.name;
+	await seedHouses(page, [h]);
+	await goto(page, '/menu');
+	await expect(page.locator('.study .row').first()).toBeVisible({ timeout: 15_000 });
+	await page.locator('.study .row', { has: page.locator('.nm', { hasText: item.name }) }).click();
+	await expect(card(page).locator('#card-h')).toHaveText(item.name);
 	await expect(card(page).locator('#fall-h')).toHaveCount(0);
 });
 
@@ -450,6 +474,19 @@ test("the lit word from a card, a section's list or the editing page returns to 
 	await expect(card(page)).toHaveCount(0);
 	await expect(heading(page)).toHaveText(PACK.name);
 	await expect(page.locator('.study .row').first()).toBeVisible();
+	// The browser's Back returns to the cold entry and the card opens again with its address (the
+	// page stays mounted through a navigation within its own route, so the one-time cold open is not
+	// what brings it back); the Back button closes it to the list, and the next press is Home.
+	await page.goBack();
+	await expect(page).toHaveURL(new RegExp(`/menu#${HUSSARDE}$`));
+	await expect(card(page).locator('h2').first()).toHaveText('Eggs Hussarde');
+	await backBtn(page).click();
+	await expect(card(page)).toHaveCount(0);
+	await expect(page).toHaveURL(/\/menu$/);
+	await expect(page.locator('.study .row').first()).toBeVisible();
+	await backBtn(page).click();
+	await expect(page).toHaveURL(/\/$/);
+	await expect(page.locator('a.level')).toHaveCount(4);
 
 	await goto(page, '/menu?section=Starters');
 	await expect(page.getByRole('button', { name: /^Starters \d+$/ })).toHaveAttribute('aria-pressed', 'true', { timeout: 15_000 });

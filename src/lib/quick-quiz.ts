@@ -6,7 +6,7 @@
  * reached from a unit test, and a mix that has to top itself up from three
  * sources is arithmetic that must be tested rather than eyeballed.
  *
- * Three sides since Cuisine, the sixth tab (12 Oct 2026): the house's dish
+ * Three sides since Cuisine (12 Oct 2026): the house's dish
  * questions, the level's (the Floor Deck and the Lexicon in turn) and
  * Cuisine's multiple choice. With a house the round asks four, four and two;
  * without one, eight from the level and two from Cuisine. A side that cannot

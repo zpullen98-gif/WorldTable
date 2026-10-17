@@ -77,8 +77,12 @@ describe('go deeper', () => {
 	it('groups the Hussarde’s Cuisine entries by chapter in the index’s order, each with the entry’s address', () => {
 		const groups = deeperGroups(CUISINE, HUSSARDE, '');
 		expect(groups.flatMap((g) => g.entries)).toHaveLength(CUISINE.byDish[HUSSARDE].length);
-		expect(groups.flatMap((g) => g.entries)).toHaveLength(15);
-		expect(groups).toHaveLength(7);
+		/* 15 entries across 7 chapters on 17 October 2026, 18 once the larder grew that evening: the floor
+		   is pinned, the exact count is the index's, so the pin never trails Cuisine's growth. */
+		expect(groups.flatMap((g) => g.entries).length).toBeGreaterThanOrEqual(15);
+		const linked = CUISINE.chapters.filter((c) => CUISINE.entries.some((e) => e.chapter === c.key && CUISINE.byDish[HUSSARDE].includes(e.id)));
+		expect(groups).toHaveLength(linked.length);
+		expect(groups.length).toBeGreaterThanOrEqual(7);
 		const order = CUISINE.chapters.map((c) => c.key);
 		expect(groups.map((g) => order.indexOf(g.key))).toEqual(groups.map((g) => order.indexOf(g.key)).slice().sort((a, b) => a - b));
 		for (const g of groups) expect(g.title).toBe(CUISINE.chapters.find((c) => c.key === g.key)!.title);

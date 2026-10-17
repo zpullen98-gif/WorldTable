@@ -4,7 +4,7 @@
   card", the written test's misses) and for verify-build's scanner.
 
   ONE CARD STYLE (docs/consolidation-design.md 2.6 and 3.7): the cards are
-  studied on the Flashcards tab's one card screen now, so this page forwards
+  studied on Practise's one card screen now, so this page forwards
   there with a replace and draws nothing of its own:
 
     ?card={id}          the card's section deck, opened on that card with its
@@ -56,6 +56,6 @@
 
 <div class="shell hub">
 	<h1>Flip cards</h1>
-	<p class="note" aria-live="polite">Opening the cards on the Flashcards tab…</p>
-	<p class="note">If nothing opens, <a href="{base}/flashcards">open Flashcards</a>.</p>
+	<p class="note" aria-live="polite">Opening the cards on Practise…</p>
+	<p class="note">If nothing opens, <a href="{base}/flashcards">open Practise</a>.</p>
 </div>

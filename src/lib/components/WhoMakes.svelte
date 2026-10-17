@@ -7,8 +7,8 @@
   Each of the item's components that carries a kept producer profile is a
   closed disclosure: who, with what it supplies beside it, opening to the
   profile in full (ProducerBody.svelte). Under the list, "Flash these
-  producers" deals the item's producer deck on the Flashcards tab and "All
-  producers" opens the Producers view inside My Menu.
+  producers" deals the item's producer deck on Practise and "All
+  producers" opens the Producers view inside the house's page.
 
   KEPT ONLY, through study.ts producersFor. Nothing here speaks of allergens:
   a question about one is the kitchen's, and the profile says so in its own

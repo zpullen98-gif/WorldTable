@@ -44,7 +44,7 @@
 	import ProducersView from '$lib/components/ProducersView.svelte';
 	import FallMenu from '$lib/components/FallMenu.svelte';
 	import { readDrilled, type DrilledEntry } from '$lib/house-drilled';
-	import { findItem, latestVerdicts, producersLine, say, studyRows, studySections, studyVideos, type StudyRow } from '$lib/study';
+	import { findItem, inMeal, latestVerdicts, producersLine, say, studyRows, studySections, studyVideos, type StudyRow } from '$lib/study';
 	import { ITEM_ID_RE, wingInstalled } from '$lib/wing-links';
 	import { cuisine } from '$lib/stores/cuisine.svelte';
 	import { foundationsCategories, foundationsEntries } from '$lib/foundations';
@@ -391,9 +391,29 @@
 		/* A card opened cold (/menu#d-..., held outside the history) closes
 		   when a navigation takes the hash away: the lit Brennan's word is a
 		   link to the bare root from any of this page's screens (17 October
-		   2026), and the root is the list, never the card. */
+		   2026), and the root is the list, never the card. A pop back to that
+		   entry opens the card again: the page stays mounted through a
+		   navigation within its own route, so the one-time cold open below
+		   never runs twice, and without this the address would name a card
+		   over the list and the next Back would spend a press on nothing. */
 		if (coldId && !location.hash) coldId = '';
+		else if (!coldId && !stateId && current && studyOn) {
+			const id = coldHashId();
+			if (id && current.dishes.some((d) => d.id === id)) coldId = id;
+		}
 	});
+
+	/** The dish a cold #d-... or #dish-... hash names, or '' (a hand-typed hash that is not a URI is a miss). */
+	function coldHashId(): string {
+		let raw = '';
+		try {
+			raw = decodeURIComponent(location.hash.slice(1));
+		} catch {
+			return '';
+		}
+		const id = raw.startsWith('dish-') ? raw.slice(5) : raw;
+		return ITEM_ID_RE.test(id) && id.startsWith('d-') ? id : '';
+	}
 
 	const current = $derived(house.current);
 	const studyOn = $derived(!!current && current.dishes.length > 0 && !editMode && !house.blocked);
@@ -427,7 +447,18 @@
 	 */
 	const FALL_SECTION = 'Fall 2026';
 	const houseName = $derived(current ? current.name : 'My restaurant');
-	const sectionsHere = $derived(current ? studySections(studyRows(current, 'dish')) : []);
+	/* The sections at the chosen meal (the menu's own filter, StudyMenu's mealRows): the Fall 2026
+	   jump is hidden while the meal keeps its dishes off the chip row, so it never lands on an empty list. */
+	const sectionsHere = $derived(
+		current
+			? studySections(
+					studyRows(current, 'dish').filter((r) => {
+						const it = findItem(current, r.id);
+						return it ? inMeal(it, studyMeal) : true;
+					})
+				)
+			: []
+	);
 	const hasFall = $derived(sectionsHere.some((s) => s.section === FALL_SECTION));
 	const hasProducers = $derived(!!current && !!producersLine(current));
 	const hasStudies = $derived(!!current && current.id === BRENNANS_HOUSE_ID);
@@ -440,8 +471,9 @@
 	function jumpTo(id: string) {
 		const el = document.getElementById(id);
 		if (!el) return;
-		/* A heading another component draws without a tabindex still takes the focus. */
-		if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+		/* A heading another component draws without a tabindex still takes the focus; a summary (Videos),
+		   focusable on its own, keeps its place in the Tab order. */
+		if (el.tabIndex < 0) el.setAttribute('tabindex', '-1');
 		el.scrollIntoView({ block: 'start' });
 		/* The page's scroll padding clears the mode bar; the Back row and the
 		   menu's own sticky bar, when either is stuck over the heading, are
@@ -518,15 +550,8 @@
 	$effect(() => {
 		if (coldTried || !current) return;
 		coldTried = true;
-		let raw = '';
-		try {
-			raw = decodeURIComponent(location.hash.slice(1));
-		} catch {
-			return;
-		}
-		const id = raw.startsWith('dish-') ? raw.slice(5) : raw;
-		if (!ITEM_ID_RE.test(id) || !id.startsWith('d-')) return;
-		if (current.dishes.some((d) => d.id === id) && studyOn) coldId = id;
+		const id = coldHashId();
+		if (id && current.dishes.some((d) => d.id === id) && studyOn) coldId = id;
 	});
 
 	/* Back from a card: the list comes back where it was, with the focus on the row that opened it. */
@@ -646,7 +671,7 @@
 		window.scrollTo(0, 0);
 	}
 
-	/** To the flash cards (the Flashcards tab, the one card screen) or a drill. A push, so Back comes back here. */
+	/** To the flash cards (Practise, the one card screen) or a drill. A push, so Back comes back here. */
 	function toQuiz(search: string) {
 		if (new URLSearchParams(search).get('mode') === 'cards') void goto(`${base}${cardsTarget(search)}`);
 		else void goto(`${base}/menu/quiz?${search}`);

@@ -64174,6 +64174,28 @@
       },
       "reason": "The Fall 2026 sheets are the source the eight fall dishes, their lineup asks and the fall cocktails' sheet notes are read from; they are saved verbatim under pages/",
       "source": "page:brennans-fall-2026-training-sheets-2026-10-15.txt"
+    },
+    {
+      "target": "dish:Crawfish Meat Pies",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "Ray-moo-LAHD",
+        "to": "REM-uh-lahd"
+      },
+      "reason": "Review of 17 October 2026: the kept note 'What do guests ask?' still printed the pre-reconciliation respelling, while the dish's say, its polished s20 and s45 and its watch note say REM-uh-lahd; the pack's term card gives REM-uh-lahd (the 05:00 edition of 12 October), so the record no longer contradicts itself",
+      "source": "research/respellings-2026-10-12.md (Rémoulade row: REM-uh-lahd); house lexicon term Rémoulade; overrides entries 4381 and 4382 (Crawfish Meat Pies lines.s20 and lines.s45)"
+    },
+    {
+      "target": "dish:Tuna Crudo",
+      "field": "bottles.splurge.sayIt",
+      "op": "replace",
+      "value": {
+        "from": "the most sought after Riesling in Germany",
+        "to": "among the most sought after Rieslings in Germany"
+      },
+      "reason": "Review of 17 October 2026: the celebration tier's table line called the Scharzhofberger the most sought after Riesling in Germany, a superlative no source ranks; the estate's standing is beyond doubt, so the line now says among the most sought after, which the record supports and a guest cannot contest",
+      "source": "pages/binwise-wine-list-2026-10-03.txt (Egon Müller Scharzhofberger Riesling Kabinett 2020, $395); research/components-wines-2026-10-05.md; research/producers-cellar-alsace-jura-mosel-2026-10-10.md; the wine's own card in the pack"
     }
   ]
 }

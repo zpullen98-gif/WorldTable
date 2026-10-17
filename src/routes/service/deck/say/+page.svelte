@@ -7,7 +7,7 @@
   taken out (redacted at BUILD time, tools/derive/floor-deck.mjs, and held to
   the redactor's leak gates) and ask for the term. Up to three in a round show
   a dish line and ask what a word in it means, using the house's own menu from
-  My Menu where it names a deck term, and the card's authored line where it
+  the house's menu where it names a deck term, and the card's authored line where it
   does not, so the mode works on the day a venue has typed in nothing.
 
   Two steps, on purpose: the prompt alone first, with "I've said it" before the

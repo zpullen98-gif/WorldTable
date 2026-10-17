@@ -192,8 +192,10 @@
 	   by the pack's ids). The index is the lazy chunk the worker precaches; nothing new is fetched. */
 	const isBrennans = $derived(current.id === BRENNANS_HOUSE_ID);
 	const deeper = $derived(isBrennans ? deeperGroups(cuisine.index, dish.id, base) : []);
-	/* The Fall 2026 field notes: the training sheet's item of this name, joined in fall-menu.ts. */
-	const fall = $derived(fallItemForDish(dish.name));
+	/* The Fall 2026 field notes: the training sheet's item of this name, joined in fall-menu.ts, for
+	   the Brennan's house alone (the sheet is its training sheet; another house's dish of the same
+	   name draws none). */
+	const fall = $derived(isBrennans ? fallItemForDish(dish.name) : undefined);
 	const fallSources = (ids: readonly string[]) => ids.map((id) => fallSourceById.get(id)).filter((s): s is NonNullable<typeof s> => !!s);
 
 	let heading: HTMLHeadingElement | undefined = $state();

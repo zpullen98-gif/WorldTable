@@ -91,7 +91,7 @@
 			The recipes that never made it into any book: Nonna’s Sunday sauce, the church-cookbook
 			casserole, the thing your father makes without measuring. Added here, they behave like any
 			other page of the guide: they appear in the grid, match in the pantry, pin to menus, and cook
-			in cook mode. Kept on this device; export a session file from My Menu to carry them.
+			in cook mode. Kept on this device; export a session file from My restaurant to carry them.
 		</p>
 	</header>
 

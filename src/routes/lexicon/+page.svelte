@@ -29,7 +29,7 @@
 
 	/* `?level=2` narrows the page to the terms placed at that level (the four
 	   levels' door in), and `&start=flash` or `&start=quiz` opens that mode on
-	   them at once, so a level page's "Flashcards" door lands on cards and not
+	   them at once, so a Practise row for the level lands on cards and not
 	   on a list. Seeded in afterNavigate, never in load: a prerendered page may
 	   not read the query at load time. Null is every term, as it always was. */
 	let level = $state<DeckLevel | null>(null);
@@ -52,7 +52,7 @@
 		const wanted = levelFromSearch(page.url.search);
 		const start = new URLSearchParams(page.url.search).get('start');
 		/* ONE CARD STYLE (docs/consolidation-design.md 3.7): the Lexicon's flash
-		   cards are the Flashcards tab's now; ?start=flash forwards there with a
+		   cards are Practise's now; ?start=flash forwards there with a
 		   replace, on the level's terms when ?level= names one. */
 		if (start === 'flash') {
 			if (wanted) levelStore.choose(wanted);
@@ -219,7 +219,7 @@
 	const showDirectory = $derived(!q.trim() && !category);
 
 	/* ---- flashcards ----
-	 * The Lexicon's flash cards moved to the Flashcards tab, the one card
+	 * The Lexicon's flash cards moved to Practise, the one card
 	 * screen (docs/consolidation-design.md 3.7): the button above opens the
 	 * level's terms there, or every term, and ?start=flash forwards there.
 	 */

@@ -511,7 +511,7 @@ the same reason: a room answering aloud is a fact about the venue, never about
 whoever holds the tablet. It merges by union on `slug|at` and caps at 2,000
 AFTER the union, so two full tablets do not lose the newest answers to the cap.
 
-`producers` (Producers in My Menu, `src/lib/producers.ts`, `/menu/producers`)
+`producers` (Producers on the house's page, `src/lib/producers.ts`, `/menu/producers`)
 is the venue's own suppliers: name, place, kind, what they supply, the story a
 server can tell, and the dishes they are on. **The dish link lives on the
 producer (`dishIds`)**, never on the dish: `saveDish()` in `/menu` rebuilds a
@@ -1286,7 +1286,7 @@ Hard-won rules the suites encode; do not relearn these:
   why verify:build now resolves the fallback against `BASE_PATH` and asserts
   precache membership rather than grepping for the string.
 
-## Study menus: My Menu as a training tool
+## Study menus: the house's page as a training tool
 
 With a house current that holds dishes, `/menu` opens on the study view
 (docs/study-menus-design.md, 2.2), not the editing page. "Edit the menu" shows
@@ -1310,7 +1310,7 @@ house a person is building by hand stays on the editing page as dishes go in.
   page and undid the restore.
 - **The round trip to the flash cards keeps the place**: the page exports a
   `snapshot` (query, section, meal, scroll), and the cards are a push to the
-  Flashcards tab, so Back returns to the study view where it was.
+  Practise tab, so Back returns to the study view where it was.
 - **Links in this app are matched, never mapped** (`src/lib/study-links.ts`):
   whole-word hits of the deck's terms and aliases, the Lexicon's terms and the
   techniques in the dish's own text, overlaps to the longest, and a one-word
@@ -1326,7 +1326,7 @@ house a person is building by hand stays on the editing page as dishes go in.
   is up or the room's own entry point is in the caches. The standalone build
   the e2e suite runs draws none, by rule; the address shapes are proved in
   wing-links.test.ts.
-- **Flash cards** are the Flashcards tab's (the consolidation, above): the
+- **Flash cards** are the Practise tab's (the consolidation, above; Flashcards until 17 October 2026): the
   study view's card buttons open `/flashcards?deck=menu`, `menu:{section}`,
   `menu-weak`, `menu-parts` or `item:{id}`, one card per dish (`itemCards`),
   and `/menu/quiz?mode=cards` with its scope forwards to the same decks. Got
@@ -1391,7 +1391,7 @@ stories) and what to compare it with. The plan is section "CURRENT WORK (5 Oct
   nearly every year, so a year is held only in a source without one.
 - **The screens**: `MadeOf.svelte` on the study card (What it's made of,
   Compare with), `study.ts componentBlocks` and `compareRows`; the
-  Flashcards tab deals `components`, `components:{kind}` and
+  Practise tab deals `components`, `components:{kind}` and
   `item-components:{id}` (k: references, graded `card-component` under the
   component's id); Part by part leaves component cards out.
   `tests/study-components.spec.ts` walks the card and the decks at 390 by 844.
@@ -1549,7 +1549,8 @@ What a maintainer needs:
   its `byDish` key and each chapter by its first card's id, asserts each is
   in the precache and prints Cuisine's cost in KB and KB per entry, the
   figure any later raise is argued from. Whole, on 17 October 2026, it
-  costs 718 KB gzipped (4.35 KB an entry), past the 0.6 MB the plan had
+  cost 718 KB gzipped (4.35 KB an entry) at 165 entries, and 781 KB at
+  179 once the larder grew that evening, past the 0.6 MB the plan had
   set for moving the chapter bodies to `static/cuisine-data/` behind an
   `oot-table-cuisine-v1` NetworkFirst route (the Cook at home pattern).
   It stays precached by the owner's rule (raise the cap, never thin the
@@ -1588,7 +1589,7 @@ What a maintainer needs:
   dealt in place by `dealCards` as `z:<cardId>` references through
   `deckName`, `members`, `deal`, `resolveRef`, the grade and the learnt
   count, the misses as `z=`. Quizzes has a Cuisine group whose rows open
-  `/cuisine?quiz=<scope>&kind=...` (so they light the Cuisine tab and Back
+  `/cuisine?quiz=<scope>&kind=...` (so they light Brennan's and Back
   returns to Quizzes). The quick quiz asks two Cuisine questions and Due
   today appends due Cuisine cards (both in "The consolidation" above);
   `stores/today.svelte.ts` waits for Cuisine's index once and counts an
@@ -1659,8 +1660,9 @@ needs:
   Cuisine entries for the dish from `index.json byDish`, grouped by chapter,
   only when the house is Brennan's), **Fall 2026 field notes** (ChatGPT's
   sheet item joined by name through `fall-menu.ts fallItemForDish` and
-  `FALL_NAME_ALIASES`, drawn with `FallTeachingImage compact` and closed
-  disclosures; the sheet's dietary notes are never drawn on the card), then
+  `FALL_NAME_ALIASES`, for the Brennan's house alone since the sheet is its
+  own, drawn with `FallTeachingImage compact` and closed disclosures; the
+  sheet's dietary notes are never drawn on the card), then
   the coaching, the service note, the videos, the links and the drills.
   `tests/study.spec.ts` pins `#l45`'s type and place and `#deeper-h`.
 - **Practise** is `/flashcards` relabelled, its root in this order: Due

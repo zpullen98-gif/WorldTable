@@ -8,7 +8,7 @@
   Stories, each a closed disclosure that opens to how to say it, the
   explanation in paragraphs, the flash card's question and answer and the
   videos that teach it (links out, never a player). "Flash these
-  components" opens the item's component deck on the Flashcards tab.
+  components" opens the item's component deck on Practise.
 
   COMPARE WITH. One or two comparisons: a Table recipe or technique opens
   here, a Ledger cocktail or a Codex door opens in that room on the shared

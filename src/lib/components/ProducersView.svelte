@@ -1,5 +1,5 @@
 <!--
-  The producers: every kept producer profile of the house, inside My Menu at
+  The producers: every kept producer profile of the house, inside the house's page at
   /menu?view=producers (the producer deep dive, 6 October 2026; no route of
   its own, so the precache does not grow). Four groups, Makers and farms (a
   maker, a farm, the house itself), Where it comes from (a fishery, an

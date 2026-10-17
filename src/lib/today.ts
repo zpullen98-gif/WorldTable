@@ -2,8 +2,8 @@
  * Due today: one function, one count (docs/consolidation-design.md, 2.6, 3.6
  * and 6.2).
  *
- * The level page's `Due today` row, the Flashcards root's Due today block and
- * the Flashcards tab's pill all read `dueToday`, so the three can never
+ * The level page's `Due today` row, the Practise root's Due today block and
+ * the Practise tab's pill all read `dueToday`, so the three can never
  * disagree. It is PURE, like repertoire.ts and for the same reason: a runes
  * module cannot be reached from a unit test, and a schedule must be tested
  * rather than eyeballed.
@@ -18,11 +18,11 @@
  *   due    the house's Again cards (in menu order), the Floor Deck's owed
  *          cards at the level (owed reaches down, the deck's rule), the
  *          level's Lexicon terms the ladder says are due, then the Cuisine
- *          cards due (the sixth tab, 12 Oct 2026: at or below the level, most
+ *          cards due (Cuisine, 12 Oct 2026: at or below the level, most
  *          overdue first, as In Cuisine today owes them)
  *   new    the house's dishes never graded, then the level's unseen cards;
  *          never a Cuisine card, so a fresh device's count is what it was
- *          before Cuisine (the Cuisine tab's own In Cuisine today starts them)
+ *          before Cuisine (Cuisine's own In Cuisine today starts them)
  *
  * Each card is a reference string the card screen can draw: `h:{itemId}` a
  * house dish card, `c:{cardId}` a Floor Deck card, `t:{slug}` a Lexicon term,

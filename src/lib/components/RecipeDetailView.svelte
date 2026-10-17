@@ -445,7 +445,7 @@
 
 	<section class="notes" data-print="hide">
 		<label for="famnotes" class="sec">Family notes</label>
-		<p class="hint">Saved on this device and kept across visits: export from My Menu to move them.</p>
+		<p class="hint">Saved on this device and kept across visits: export from My restaurant to move them.</p>
 		<textarea
 			id="famnotes"
 			rows="4"

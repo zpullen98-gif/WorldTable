@@ -409,7 +409,7 @@ test('7d. a fresh arrival at the address recorded last starts at the bottom of t
 test('7e. the Lexicon quiz lights Practise and More\'s drawers light More, and Back goes to the tab that opened them', async ({ page }) => {
 	await page.goto('about:blank');
 	await goto(page, '/lexicon?start=quiz');
-	await expect(page.locator('.modetab.on')).toHaveText('Practise');
+	await expect(page.locator('.modetab.on')).toHaveText(/^Practise/);
 	await expect(page.locator('.quizdef')).toBeVisible({ timeout: 15_000 });
 	await back(page);
 	await expect(heading(page)).toHaveText('Practise');

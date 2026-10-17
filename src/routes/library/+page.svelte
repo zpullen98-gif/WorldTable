@@ -151,7 +151,7 @@
 	{/if}
 
 	{#if producersCount}
-		<!-- The house's producers, read and never graded: the Producers view inside My Menu. -->
+		<!-- The house's producers, read and never graded: the Producers view inside the house's page. -->
 		<nav class="quiet shelves" aria-label="The producers">
 			<a class="door" href="{base}/menu?view=producers" data-door="producers">
 				<span class="door-name">{say('producers')}</span>

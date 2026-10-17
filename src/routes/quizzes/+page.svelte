@@ -22,7 +22,7 @@
   gradeLevelAnswer, so the level's figure moves the way each subsection's
   own rounds move it; and two of Cuisine's multiple choice questions (since
   12 Oct 2026: at the level first, then below it, then above, each band in
-  askOrder's order), graded as the Cuisine tab grades them, `close` or
+  askOrder's order), graded as Cuisine grades them, `close` or
   `missed` under cuisine:<id> once per question per local day. With a house
   the round asks four, four and two; without one, eight and two; a side that
   cannot give its share is topped up by the others (lib/quick-quiz.ts).
@@ -317,7 +317,7 @@
 		} else if (q.kind === 'lexicon') {
 			session.markDrilled(q.ref, gradeLevelAnswer('lexicon', ok));
 		} else if (q.kind === 'cuisine') {
-			// The Cuisine tab's round grade, once per question per local day.
+			// Cuisine's own round grade, once per question per local day.
 			if (recordable(session.drillLog, q.ref, Date.now())) session.markDrilled(czSlug(q.ref), roundGrade(ok));
 		}
 		const chosenList = [...qq.chosen];

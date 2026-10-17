@@ -4,7 +4,7 @@
 
   The quiet row of doors that sat under the cards went with the consolidation
   (4 Oct 2026): Today is a level page's Today's study now, the Library is its
-  own tab, the Record is under More, and My Menu is My restaurant on every
+  own tab, the Record is under More, and the house's page is My restaurant on every
   level page, with the Menu Desk's waiting line beside it.
 
     <section class="levels">   four <a class="level"> cards, Commis to Chef, each
