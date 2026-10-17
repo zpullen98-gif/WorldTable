@@ -120,9 +120,10 @@ render function by name, stop.
 - Prerendering and precaching are separate decisions. The service worker caches
   the shell + data + fonts and rebuilds pages from the `shell.html` navigation
   fallback. Never precache the prerendered HTML files. The precache has a cap
-  (3.0 MB gzipped since 27 Sep 2026, raised from 2.7 by the owner for the
-  Plates' transcriptions and the study material to come), asserted in
-  `tools/verify-build.mjs` with its history and the live figure; every
+  (`CAP_MB` in `tools/verify-build.mjs`, 4.5 MB gzipped since 17 October 2026,
+  raised step by step by the owner for the Plates' transcriptions, the study
+  material and Cuisine; the live figure is what `npm run verify:build`
+  prints, never a number in prose), asserted there with its history; every
   emitted `.js` chunk counts against it, lazy import or not. Pictures under
   `static/plates/` are the one thing served on demand and never installed.
 - Day/night are full token sets in `src/lib/styles/tokens.css`, not overrides on
@@ -716,15 +717,19 @@ is locked**: a level guides, it never bars.
   is `levels.chosen` (`stores/levels.svelte.ts`, the per-device slot
   `oot-level-table-v1`, read lazily in the browser and never exported),
   falling back to `firstUnmetLevel`; opening a level page chooses it.
-- **The nav** is the four tab words `Home · Flashcards · Quizzes · Library`,
-  then More, last and quiet (a ruled box at the bar's right end, lit only on
-  a More screen), in all three apps; and the Table alone carries a fifth tab
-  word, `Cuisine`, between Library and More, six words in all (the owner,
-  12 October 2026, a deliberate departure from the parity of 4 October). The
-  Ledger and the Codex keep four tab words and More. `navigation.test.ts`
-  pins the words, the order (`Home · Flashcards · Quizzes · Library ·
-  Cuisine · More`), More last and quiet, and the owner order. The rest is the
-  section "The consolidation" below. `/level` is an old address that
+- **The nav** in the Table is the four tab words `Home · Brennan’s ·
+  Practise · Library`, then More, last and quiet (a ruled box at the bar's
+  right end, lit only on a More screen): the owner's choice of 17 October
+  2026 (fewer words, Brennan's its own place outside the levels, the cards
+  and the rounds under one word; before it the Table read `Home · Flashcards
+  · Quizzes · Library · Cuisine · More`, the 12 October departure). The Ledger
+  and the Codex still read `Home · Flashcards · Quizzes · Library` and More
+  until their own treatment. `Brennan’s` is the literal word in `MODES`
+  (U+2019, as the pack's `house.name` prints it) at `/menu`; `Practise` is
+  `/flashcards`. `navigation.test.ts` pins the words, the order, More last
+  and quiet, and the owner order (`/more`, `/flashcards`, `/library`,
+  `/menu`, then Home); the section "Brennan's, the house tab" at the end of
+  this file is the rest. `/level` is an old address that
   forwards to the chosen level; `/level/[n]` is the level page (Today's
   study, My restaurant, Search, then a closed What {Level} holds);
   `/level/[n]/test` is the level test (the deck's written test at the level
@@ -753,7 +758,9 @@ screen's new home and the copy. What a maintainer needs:
   cards), `/quizzes` (the quick quiz, the house rounds, the level's quizzes,
   Hands on, the level test last), `/library` (reading only), `/more` (the
   record, the tools, backup, the Maître d', the service toggle, About), and
-  the level page. Each loads in `onMount` from files already precached; the
+  the level page. Since 17 October 2026 `/flashcards` is the Practise root
+  and lists the rounds' doors too (`src/lib/practise-rows.ts`); `/quizzes`
+  stays the rounds' own page under Practise, reached by its old addresses. Each loads in `onMount` from files already precached; the
   styles they share are `src/lib/styles/hub.css` (the home's old door, moved).
 - **Back is `BackButton.svelte`**, drawn by the layout on every path but `/`,
   sticky under the modebar and moved to x 64 once stuck (one
@@ -781,7 +788,7 @@ screen's new home and the copy. What a maintainer needs:
   `nav.fallTo`: one step back when the entry beneath is its parent (the
   record keeps that entry's address as `below`), else a replace.
 - **Two screens light the tab that opened them**, in the browser only:
-  `/lexicon?start=quiz` lights Quizzes, and a `/menu` drawer More opened
+  `/lexicon?start=quiz` lights Practise, and a `/menu` drawer More opened
   (`#plan`, `#tools`, `#maitre`) lights More, remembered as `via: 'more'` in
   the entry's state once the hash is cleared; `parentOf` gives both the same
   parent.
@@ -1335,8 +1342,8 @@ house a person is building by hand stays on the editing page as dishes go in.
   modebar (`stores/sw-status.svelte.ts`), dismissed by Good or after eight
   seconds; the Reload prompt stays docked.
 - Specs that test the editing page with a house on the device open it through
-  `gotoEditing()` in tests/helpers.ts. The precache with the study view in it:
-  2.954 MB gzipped against the 3.5 MB cap.
+  `gotoEditing()` in tests/helpers.ts. The precache figure is whatever
+  `npm run verify:build` prints against `CAP_MB`.
 
 ## The components and the comparisons (5 October 2026)
 
@@ -1491,23 +1498,24 @@ Brennan's dish on its foundations, pastry, kitchen French, the history and
 food safety. The plan is the session plan's section "NOW (12 Oct 2026)".
 What a maintainer needs:
 
-- **A real tab, the Table's alone.** `MODES` gains `Cuisine` between Library
-  and More and `OWNS` gains `['/cuisine', ['/cuisine']]` before Home; the
-  Ledger and the Codex keep four tab words (see "The nav" above). The layout's
-  `onTab` treats a Cuisine run or round (`st.cz`) and Cuisine's query
-  screens (`ch`, `deck`, `quiz`, `view`, `due`) as off the root, so a tap on
-  the lit word there navigates and a tap on the bare root only scrolls.
-- **The phone CSS, measured.** Six words in one row at 390 and 375, every box
-  at least 44 by 44: `.modetab` pads 2 px a side, `min-width: 44px`,
-  `.64rem`, no tracking; `.modebar-inner` gaps 4 px with a 6 px right gutter;
-  under 400 px the words are `.6rem` and the gaps 3 px; and the due pill
-  left the line to become a corner badge (`position: absolute; top: 2px;
-  right: -2px`), so its width no longer widens Flashcards. Measured in
-  Chromium on the built copy: Home 44, Flashcards 68, Quizzes 46, Library
-  44, Cuisine 44, More 44 px wide, 46 tall (More 47), 4 px to spare at 375
-  and 19 at 390; below 375 More wraps to a second row, as the bar always
-  could. The numbers are in the CSS comment; `tests/consolidation.spec.ts`
-  test 9 decides, not the arithmetic.
+- **A tab from 12 to 17 October 2026, now a shelf of Brennan's.** Cuisine
+  was the Table's sixth tab word for five days; since 17 October it is
+  reached from the Brennan's page ("The cooking": a lead door and the twelve
+  chapter doors) and from the Library's Cuisine door, lights the `Brennan’s`
+  word (`OWNS` lists `/cuisine` under `/menu`) and its root's parent is
+  `/menu`; every `/cuisine` address and screen is unchanged (the section
+  "Brennan's, the house tab" at the end of this file).
+- **The phone CSS, measured.** The rules that fit six words in one row at
+  390 and 375 stay for five, every box at least 44 by 44: `.modetab` pads 2
+  px a side, `min-width: 44px`, `.64rem`, no tracking; `.modebar-inner` gaps
+  4 px with a 6 px right gutter; under 400 px the words are `.6rem` and the
+  gaps 3 px; and the due pill is a corner badge (`position: absolute; top:
+  2px; right: -2px`). Measured in Chromium on the built copy, 17 October:
+  Home 44, Brennan’s 61, Practise 51, Library 44, More 44 px wide, 46 tall
+  (More 47), one row, 56 px open between Library and More at 375 and 71 at
+  390 (the six-word figures of 12 October were 44/68/46/44/44/44 with 4 px
+  to spare). The numbers are in the CSS comment; `tests/consolidation.spec.ts`
+  test 9 and `tests/brennans.spec.ts` decide, not the arithmetic.
 - **The pipeline.** `tools/cuisine/roster.json` plans the entries (about 165
   in twelve chapters); `node tools/cuisine/brief.mjs <chapter>` prints an
   author's brief (the roster rows, the contract's rules in words, the pack's
@@ -1596,7 +1604,81 @@ What a maintainer needs:
   dashes, American spellings and a level by its number, with the contract's
   own detectors), `cuisine-contract.test.ts` (the contract re-derived and
   each rule broken once), `today.test.ts`, `quick-quiz.test.ts`,
-  `nav.test.ts` (every `/cuisine` form) and `navigation.test.ts` (six words).
-  The e2e suites pinned to five words now hold six (`tests/nav.spec.ts`, the
-  consolidation tests 9 and 10, `layout.spec.ts`, `a11y.spec.ts`); the
-  Cuisine walk is `tests/cuisine.spec.ts`.
+  `nav.test.ts` (every `/cuisine` form) and `navigation.test.ts` (the five
+  words). The e2e suites pinned to the bar hold five words since 17 October
+  (`tests/nav.spec.ts`, the consolidation test 9, `tests/brennans.spec.ts`);
+  the Cuisine walk is `tests/cuisine.spec.ts`, which reaches Cuisine from
+  the Brennan's page.
+
+## Brennan's, the house tab (17 October 2026)
+
+The owner, as master chef and trainer at Brennan's, asked for fewer tabs and
+one cohesive flow, Brennan's information in one place, the tableside
+descriptions at the very top of every dish, the fall menu under Brennan's
+and expanded, and every ingredient and aspect expanded and detailed. The
+plan is the session plan's section "NOW (17 Oct 2026)". What a maintainer
+needs:
+
+- **The bar** is `Home · Brennan’s · Practise · Library` and More (see "The
+  nav" above). `OWNS`, first match wins: More's prefixes, then Practise
+  (`/flashcards`, `/quizzes`, `/menu/quiz`, `/service/deck`, `/service/drill`,
+  `/practise`), then the Library's, then Brennan's (`/menu`, `/cuisine`,
+  `/foundations`), then Home (`/level`, `/kitchen`). The layout's `onTab`
+  treats any `/menu` search, hash or editing state as off the root, so a
+  tap on the lit `Brennan’s` word from a card, the fall or producers view or
+  a section returns to the bare page, and a tap on the bare page only
+  scrolls. `parentOf` (`src/lib/nav.ts`): the bare `/menu` to `/` as every
+  tab root; the fall and producers views to `/menu`; a card to its view;
+  `/cuisine`'s root and `/foundations`' list to `/menu`; `/quizzes`, the
+  level test, every `/menu/quiz` mode and `/lexicon?start=quiz` to
+  `/flashcards`.
+- **The Brennan's page** (`src/routes/menu/+page.svelte`, the study view):
+  the house's name as the title and h1 on every view (`My restaurant` with
+  no house; "My Menu" is retired); the collection chips `The menu` and
+  `Fall field notes`; a jump row of `button.chip` entries (`nav.jumps`) that
+  scroll to and focus a `tabindex="-1"` heading with no hash and no history
+  (The menu, Fall 2026 which also sets the section filter, The cooking, Your
+  terms, The lists, Studies, Videos; Producers is an `a.chip` to
+  `?view=producers`; a chip whose target is absent is hidden); then
+  `StudyMenu` (the `Fall 2026` section group drawn right after the tastings
+  when the house is Brennan's), `HouseLists`, **The cooking** (`#cooking-h`:
+  a lead door to `/cuisine` and one `a.door` per chapter of the Cuisine
+  index, `cuisine.load()` in `onMount`, the precached chunk) and **Your
+  culinary terms** (`#terms-h`: the Fieldbook door, the nine category chips
+  to `/foundations?category=`, a go chip to the `foundations:today` deck),
+  the drawers and Edit the menu as before. The level page keeps Today's
+  study (five doors) and offers one door, `data-door="house"`, to the page;
+  the Library lists Cuisine after the Lexicon. ChatGPT's `/foundations` and
+  fall screens are untouched.
+- **The dish card** (`StudyCard.svelte`): the ten, twenty and forty-five
+  second lines open at the top with no buttons (`section.lines`, `#l10`,
+  `#l20`, `#l45`; `.fortyfive` takes the display face at the old `.ten`
+  size), then the guest line where it differs, the pour line, About it, the
+  folios, the pairing and the bottles, the five parts, Who makes it, What
+  it's made of and Compare with, Tell the dishes apart, **Go deeper** (the
+  Cuisine entries for the dish from `index.json byDish`, grouped by chapter,
+  only when the house is Brennan's), **Fall 2026 field notes** (ChatGPT's
+  sheet item joined by name through `fall-menu.ts fallItemForDish` and
+  `FALL_NAME_ALIASES`, drawn with `FallTeachingImage compact` and closed
+  disclosures; the sheet's dietary notes are never drawn on the card), then
+  the coaching, the service note, the videos, the links and the drills.
+  `tests/study.spec.ts` pins `#l45`'s type and place and `#deeper-h`.
+- **Practise** is `/flashcards` relabelled, its root in this order: Due
+  today, Quick quiz (a link to `/quizzes?quick=1`, so the round still runs
+  there and Back returns), the house (its decks, then the five drill doors,
+  then Fall 2026's decks, What it's made of, Your culinary terms), Cuisine
+  (decks and the three quizzes), the level (the Floor Deck sections, the
+  Words rows, the four rounds), Hands on, the level test, Reference cards;
+  the rows the two pages share are `src/lib/practise-rows.ts`. The due pill
+  stays on this word.
+- **The pack** gains the section `Fall 2026` (the eight fall dishes filed
+  on `dish:+` with `priceUnknown`, their pairings from the house list, their
+  components and ChatGPT's photos joined by name), the polished lines of
+  every dish, and an ingredient component for every printed ingredient: see
+  "The components and the comparisons" (staging) and the edition's own
+  history in `engine.mjs`.
+- **Tests.** `tests/brennans.spec.ts` walks the bar at 390 and 375, the page,
+  the jump row, The cooking, Your terms, the Fall 2026 section (conditional
+  on the pack), a fall card, Go deeper, the Back chains and the Practise
+  root; `nav.test.ts`, `navigation.test.ts`, `fall-menu.test.ts` and
+  `study.test.ts` pin the engines and the words.

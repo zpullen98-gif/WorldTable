@@ -193,6 +193,17 @@ scrolls. The CSS that fits six words, with its measurements, is in
 `+layout.svelte`; `tests/consolidation.spec.ts` test 9 asserts it, and the
 Table's section "Cuisine: the sixth tab" in its CLAUDE.md is the rest.
 
+Note, 17 October 2026: the Table now has five words, `Home`, `Brennan’s`,
+`Practise`, `Library`, then `More`. The owner asked for fewer tabs and one
+place for Brennan's: the house's page (`/menu`) is its own tab outside the
+levels, the Flashcards and Quizzes tabs are one word, Practise (the
+Flashcards page grown, with the rounds' doors; `/quizzes` stays the rounds'
+page under it), and Cuisine and the Kitchen Fieldbook live inside Brennan's
+and on the Library. The Ledger and the Codex keep the four words and More
+above until their own treatment. Measured at 375 and 390: 44, 61, 51, 44
+and 44 px wide, one row, 56 px open at 375. The Table's section "Brennan's,
+the house tab" in its CLAUDE.md is the rest.
+
 ### 2.2 The Back control
 
 - **Look:** each app's existing chip or ghost button, the word `Back` and
@@ -865,6 +876,12 @@ The regression suite's "no h2 and no h3 on the home" stays true.
 
 ### 3.6 The level page (`/level/[n]`)
 
+Note, 17 October 2026: My restaurant on the level page is now the house's
+count line and one door to the Brennan's page (`data-door="house"`), the
+section chips and the quiet links; the four doors it carried (the study
+view, the menu's cards, the menu drill, the producers) moved to the
+Brennan's page and the Practise root. Today's study keeps its five doors.
+
 Rewritten in place (same route, same load, same `data.counts`,
 `data.subsections`, `data.primed`):
 
@@ -1122,6 +1139,14 @@ card hash (`menu/+page.svelte:380-394`), each then cleared with
 ### 3.11 The Table's screen map
 
 Every route, its new home, and its logical parent (`parentOf`).
+
+Note, 17 October 2026: the homes and parents below predate `/foundations`,
+`/cuisine` and the five-word bar. Since then: `/menu` is the Brennan's tab's
+root (parent `/`); its fall and producers views, `/cuisine`'s root and
+`/foundations`' list go back to `/menu` and light `Brennan’s`; `/quizzes`,
+the level test, every `/menu/quiz` mode, `/service/deck/*`, `/service/drill`,
+`/practise/*` and `/lexicon?start=quiz` light Practise and go back to
+`/flashcards`. `src/lib/nav.test.ts` is the map as it stands.
 
 - `/` Home (Home), no parent, no Back.
 - `/level` Home, forwards to the chosen level (unchanged, `replaceState`).
