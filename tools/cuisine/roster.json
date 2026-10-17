@@ -4748,6 +4748,911 @@
 						"folios": [],
 						"deck": []
 					}
+				},
+				{
+					"stem": "eggs-and-yolks",
+					"slug": "eggs-and-yolks",
+					"title": "Eggs and yolks",
+					"kind": "ingredient",
+					"level": 1,
+					"covers": [
+						"The egg as the kitchen's binder, leavener, emulsifier and sauce base: the yolk's lecithin holds hollandaise, béarnaise, mayonnaise and the tartare dressing",
+						"Grades, sizes and freshness: a fresh egg's tight white and standing yolk, why the poaching egg must be fresh and why an older egg peels",
+						"Pasture-raised as Vital Farms prints it, 108 square feet (10 square metres) of pasture a hen, against the cage-free and free-range labels",
+						"The ways the menu cooks an egg: poached on the Hussarde and Sardou, soft-boiled on the Owen, sunny side up on the breakfast hanger, grated on the turtle soup, cured as the yolk bottarga on the tartare cannoli",
+						"Raw and lightly cooked egg at the table: the consumer advisory said before the answer, and whether the yolk is pasteurised as a question for the kitchen",
+						"At Brennan's: the Vital Farms yolk on the fall Steak Tartare with Rye and the egg in its dressing"
+					],
+					"leaves": [
+						"egg safety and the pasteurised answer belong to eggs",
+						"poaching, frying and the omelette belong to eggs-to-order",
+						"hollandaise belongs to hollandaise",
+						"mayonnaise belongs to mayonnaise",
+						"the Hussarde belongs to eggs-hussarde"
+					],
+					"brennans": [
+						{
+							"dish": "d-jlc7ybty",
+							"components": [
+								"Vital Farms egg yolk, on the tartare",
+								"Vital Farms egg",
+								"Eggs"
+							]
+						},
+						{
+							"dish": "d-1q0xk7jv",
+							"components": [
+								"Eggs",
+								"The poached egg"
+							]
+						},
+						{
+							"dish": "d-4jee8o34",
+							"components": [
+								"Vital Farms egg",
+								"Eggs cooked to order",
+								"Eggs"
+							]
+						},
+						{
+							"dish": "d-0w2k5cdm",
+							"components": [
+								"Egg yolk bottarga",
+								"Eggs"
+							]
+						}
+					],
+					"seeAlso": {
+						"techniques": [
+							"poaching-eggs",
+							"egg-wash-and-the-bakers-shine"
+						],
+						"lexicon": [
+							"tempering-eggs-and-chocolate",
+							"custards-anglaise-patissiere-and-curds"
+						],
+						"recipes": [
+							"the-french-omelette"
+						],
+						"kitchen": [
+							"eggs-benedict",
+							"fried-eggs-basted-and-over-easy",
+							"soft-boiled-eggs-and-soldiers",
+							"oeufs-brouilles"
+						],
+						"plates": [],
+						"folios": [
+							"poached-egg-standard",
+							"eggs-hussarde-components"
+						],
+						"deck": []
+					}
+				},
+				{
+					"stem": "butter",
+					"slug": "butter",
+					"title": "Butter",
+					"kind": "ingredient",
+					"level": 1,
+					"covers": [
+						"What butter is: cream churned until the fat gathers, about 80 per cent fat with water and milk solids, which is why it browns, burns and splits",
+						"Sweet, salted and cultured butter, European-style at 82 per cent and above, and why the kitchen cooks with unsalted",
+						"Butter's four jobs on the menu: the fat a pan starts in, the body of a warm emulsion, the gloss of a sauce mounted at the end, and brown butter as a sauce in its own right",
+						"Keeping it: cold for lamination and beurre blanc, soft for creaming, clarified for the high heat of a sauté",
+						"Dairy questions go to the service note and the kitchen; butter travels through more plates than a guest expects",
+						"At Brennan's: the brown butter on the Swordfish Grenobloise and the crab claws, the butter that finishes the frascarelli on the Chateau Espagnole, the beurre blanc on the Véronique and the pan the Bananas Foster starts in"
+					],
+					"leaves": [
+						"clarified butter belongs to clarified-butter",
+						"beurre noisette and beurre noir belong to beurre-noisette-and-noir",
+						"beurre blanc belongs to beurre-blanc",
+						"compound butters belong to compound-butters",
+						"monter au beurre belongs to monter-au-beurre",
+						"how a butter emulsion holds and breaks belongs to breaking-and-rescuing"
+					],
+					"brennans": [
+						{
+							"dish": "d-jgihqqda",
+							"components": [
+								"Butter",
+								"Brown butter"
+							]
+						},
+						{
+							"dish": "d-8onx3lq1",
+							"components": [
+								"Butter",
+								"Finishing pasta in butter"
+							]
+						},
+						{
+							"dish": "d-s1bqzuks",
+							"components": [
+								"Butter"
+							]
+						},
+						{
+							"dish": "d-w6h1p19m",
+							"components": [
+								"Butter",
+								"Bananas, butter, brown sugar and cinnamon"
+							]
+						}
+					],
+					"seeAlso": {
+						"techniques": [
+							"brown-butter",
+							"creaming-butter-and-sugar",
+							"rendering-fat-and-cooking-in-what-runs-out"
+						],
+						"lexicon": [
+							"butterfat-fluency-butter-cream-and-cultures",
+							"fat-the-flavor-carrier"
+						],
+						"recipes": [
+							"beurre-blanc-the-cold-butter-mount",
+							"beurre-monte-butter-held-liquid"
+						],
+						"kitchen": [],
+						"plates": [],
+						"folios": [],
+						"deck": [
+							"fd_0160",
+							"fd_0161",
+							"fd_0163",
+							"fd_0162"
+						]
+					}
+				},
+				{
+					"stem": "cream",
+					"slug": "cream",
+					"title": "Cream and crème fraîche",
+					"kind": "ingredient",
+					"level": 1,
+					"covers": [
+						"Cream by fat: single and whipping at 30 to 36 per cent, double and heavy at 36 to 48, and why fat decides what whips, what boils and what splits",
+						"Crème fraîche, say krem FRESH, cultured cream that holds its body in heat and lifts a sweet plate with tang; mascarpone, say mas-kar-POH-nay, the Italian cousin",
+						"Cream in a sauce: reduced on its own until it coats a spoon, or stirred in off the heat; acid and salt added last so it stays smooth",
+						"Whipping: cold cream, cold bowl, soft peaks for folding and firm for piping; over-beaten cream turns to butter",
+						"Dairy questions go to the service note and the kitchen",
+						"At Brennan's: the mustard cream sauce on the Poussin, the Creamed Spinach, the whipped crème fraîche on the Café Brûlot Coffee Cake and the cream set with gelatine in the fall Chocolate Crémeux"
+					],
+					"leaves": [
+						"crème anglaise belongs to creme-anglaise",
+						"Bavarian cream belongs to bavarian-cream",
+						"cream as a liaison belongs to thickeners-and-liaisons",
+						"Creole cream cheese belongs to creole-heirlooms",
+						"ice cream and the Foster belong to bananas-foster"
+					],
+					"brennans": [
+						{
+							"dish": "d-l5877hs6",
+							"components": [
+								"Mustard cream sauce"
+							]
+						},
+						{
+							"dish": "d-nhcrhwrw",
+							"components": [
+								"Creamed spinach"
+							]
+						},
+						{
+							"dish": "d-husneh7o",
+							"components": [
+								"Whipping cream",
+								"Crème fraîche"
+							]
+						},
+						{
+							"dish": "d-kgmv4fmp",
+							"components": [
+								"Setting a cream with gelatine"
+							]
+						}
+					],
+					"seeAlso": {
+						"techniques": [
+							"churning-ice-cream",
+							"tempering-a-custard"
+						],
+						"lexicon": [
+							"butterfat-fluency-butter-cream-and-cultures",
+							"cream-cheese-and-its-kin",
+							"infusion-steeping-flavor-into-fat-cream-and-syrup"
+						],
+						"recipes": [
+							"cream-reduction-the-sauce-that-may-boil",
+							"panna-cotta"
+						],
+						"kitchen": [
+							"swedish-meatballs"
+						],
+						"plates": [],
+						"folios": [],
+						"deck": [
+							"fd_0263",
+							"fd_0252",
+							"fd_0260"
+						]
+					}
+				},
+				{
+					"stem": "mushrooms",
+					"slug": "mushrooms",
+					"title": "Mushrooms",
+					"kind": "ingredient",
+					"level": 1,
+					"covers": [
+						"The cultivated kinds a kitchen buys: white button, cremini and portobello as one species at three ages, shiitake, oyster and king oyster; the wild kinds by season",
+						"Cooking them: a hot pan, no crowding, salt late, so they brown instead of steaming; a mushroom is mostly water",
+						"Mushroom liquor, duxelles and the mushrooms in a brown sauce: the marchand de vin's red wine and mushroom base",
+						"Preserving: dried, pickled and the kitchen's preserved shiitake, say shee-TAH-kee",
+						"Mushroom Maggie's Farm of St Francisville as the name behind the side; tonight's varieties and whether they are cooked in butter or stock are lineup questions",
+						"At Brennan's: inside the marchand de vin on the Eggs Hussarde and Eggs Owen, the preserved shiitake on the Blackened Tofu and the Maggie's Mushrooms side"
+					],
+					"leaves": [
+						"the marchand de vin belongs to marchand-de-vin",
+						"the sauté belongs to saute",
+						"sauce Bienville belongs to oysters-bienville",
+						"the brown family belongs to brown-sauce-family"
+					],
+					"brennans": [
+						{
+							"dish": "d-1q0xk7jv",
+							"components": [
+								"Mushrooms"
+							]
+						},
+						{
+							"dish": "d-44jfmkdb",
+							"components": [
+								"Mushrooms"
+							]
+						},
+						{
+							"dish": "d-yo5hh58f",
+							"components": [
+								"Maggie’s Mushrooms",
+								"Mushrooms"
+							]
+						},
+						{
+							"dish": "d-377dkkse",
+							"components": [
+								"Preserved shiitake mushrooms",
+								"Mushrooms"
+							]
+						}
+					],
+					"seeAlso": {
+						"techniques": [],
+						"lexicon": [
+							"mushroom-field-guide",
+							"wild-mushrooms-the-forest-calendar",
+							"shiitake",
+							"dried-shiitake",
+							"white-button-mushroom"
+						],
+						"recipes": [],
+						"kitchen": [
+							"chicken-ballotine"
+						],
+						"plates": [
+							"culinary-mushrooms"
+						],
+						"folios": [],
+						"deck": [
+							"fd_0146",
+							"fd_0145",
+							"fd_0139"
+						]
+					}
+				},
+				{
+					"stem": "red-wine-in-the-kitchen",
+					"slug": "red-wine-in-the-kitchen",
+					"title": "Red wine in the kitchen",
+					"kind": "ingredient",
+					"level": 2,
+					"covers": [
+						"Which wine to cook with: dry, sound and drinkable, never a corked or oxidised bottle; the fault cooks in and the fruit cooks off",
+						"What wine does in a pan: deglazes the fond, brings acid and tannin, and reduces to concentrate; the alcohol largely cooks away but never wholly, so tell a guest who avoids it",
+						"The red wine sauces of the house: marchand de vin, bordelaise and the braising liquid of a short rib daube",
+						"Reduction rules: the wine reduced before the stock goes in, by half or more, and tasted for rawness",
+						"Red wine against white, fortified and beer in the kitchen: where each belongs on this menu",
+						"At Brennan's: the marchand de vin on the Eggs Hussarde and the red wine-braised short rib débris on the Eggs Owen"
+					],
+					"leaves": [
+						"the marchand de vin belongs to marchand-de-vin",
+						"bordelaise belongs to bordelaise",
+						"the braise belongs to braise-and-daube",
+						"deglazing belongs to deglaze-and-pan-sauce",
+						"Madeira, sherry and the fortified sauces belong to fortified-wine-sauces"
+					],
+					"brennans": [
+						{
+							"dish": "d-1q0xk7jv",
+							"components": [
+								"Red wine in the kitchen"
+							]
+						},
+						{
+							"dish": "d-44jfmkdb",
+							"components": [
+								"Red wine in the kitchen",
+								"Braising in red wine"
+							]
+						}
+					],
+					"seeAlso": {
+						"techniques": [
+							"deglazing-and-pan-sauces",
+							"braising"
+						],
+						"lexicon": [
+							"deglaze-and-fond",
+							"reduction-nappe-and-mounting",
+							"wine-faults-corked-oxidized-reduced-and-friends",
+							"braising-and-stewing"
+						],
+						"recipes": [
+							"red-wine-jus-monter-au-beurre",
+							"coq-au-vin",
+							"boeuf-bourguignon"
+						],
+						"kitchen": [
+							"boeuf-bourguignon"
+						],
+						"plates": [],
+						"folios": [],
+						"deck": []
+					}
+				},
+				{
+					"stem": "capers",
+					"slug": "capers",
+					"title": "Capers",
+					"kind": "ingredient",
+					"level": 2,
+					"covers": [
+						"The unopened flower bud of a Mediterranean shrub, picked by hand and cured in salt or brine; the caperberry is the fruit on its stem, a different thing",
+						"Sizes by name: nonpareil the smallest and dearest, then surfines, capucines and the large capotes; salt-packed rinsed and soaked, brined drained",
+						"What they do: a sharp, floral, salty bite that cuts fat, in the tartare dressing, the Grenobloise, ravigote, rémoulade and piccata",
+						"Fried capers: patted dry and dropped in hot oil until they open and crisp, a burst of salt on a buttery plate",
+						"At Brennan's: the capers in the dressing of the fall Steak Tartare with Rye and the fried capers on the Swordfish Grenobloise"
+					],
+					"leaves": [
+						"ravigote belongs to ravigote",
+						"Creole rémoulade belongs to creole-remoulade",
+						"beurre noisette belongs to beurre-noisette-and-noir",
+						"the fry station belongs to frying"
+					],
+					"brennans": [
+						{
+							"dish": "d-jlc7ybty",
+							"components": [
+								"Capers"
+							]
+						},
+						{
+							"dish": "d-jgihqqda",
+							"components": [
+								"Fried capers"
+							]
+						}
+					],
+					"seeAlso": {
+						"techniques": [],
+						"lexicon": [
+							"caper"
+						],
+						"recipes": [
+							"chicken-piccata",
+							"salsa-verde-italian",
+							"tapenade-noire-au-mortier"
+						],
+						"kitchen": [
+							"chicken-piccata"
+						],
+						"plates": [],
+						"folios": [],
+						"deck": [
+							"fd_0278"
+						]
+					}
+				},
+				{
+					"stem": "preserved-lemon",
+					"slug": "preserved-lemon",
+					"title": "Preserved lemon",
+					"kind": "ingredient",
+					"level": 2,
+					"covers": [
+						"Lemons packed in salt and their own juice for weeks until the rind turns soft, translucent and perfumed: a North African larder staple the kitchen makes itself",
+						"Using it: the rind rinsed and chopped, the pulp mostly discarded; it is salty, so the dish is seasoned after it goes in",
+						"Where it works: a beurre blanc, an aïoli, say eye-OH-lee, a braise of fennel, a dressing for roasted vegetables",
+						"Preserved lemon against fresh lemon, lemon confit and Meyer lemon: what each gives a plate",
+						"The time it takes: weeks in salt and months in the fridge, so the curing belongs to the kitchen and the batch is a lineup question",
+						"At Brennan's: the preserved lemon beurre blanc on the Redfish Véronique, the Smoked Cauliflower with preserved lemon and harissa, say huh-REE-suh, and the preserved lemon aïoli on the fall Fish Bouillabaisse"
+					],
+					"leaves": [
+						"beurre blanc belongs to beurre-blanc",
+						"the Véronique belongs to redfish-veronique",
+						"aïoli belongs to aioli-and-french-remoulade",
+						"smoking belongs to smoking",
+						"confit belongs to confit"
+					],
+					"brennans": [
+						{
+							"dish": "d-s1bqzuks",
+							"components": [
+								"Preserved lemon"
+							]
+						},
+						{
+							"dish": "d-xdpmzd3t",
+							"components": [
+								"Preserved lemon"
+							]
+						},
+						{
+							"dish": "d-iwmu4qf7",
+							"components": [
+								"Preserved lemon",
+								"Preserved lemon aioli"
+							]
+						}
+					],
+					"seeAlso": {
+						"techniques": [],
+						"lexicon": [
+							"preserved-lemon",
+							"lemon",
+							"meyer-lemon"
+						],
+						"recipes": [
+							"preserved-lemons",
+							"chicken-tagine-preserved-lemon-and-olives"
+						],
+						"kitchen": [
+							"chicken-tagine"
+						],
+						"plates": [],
+						"folios": [],
+						"deck": [
+							"fd_0277",
+							"fd_0195"
+						]
+					}
+				},
+				{
+					"stem": "beef-tenderloin",
+					"slug": "beef-tenderloin",
+					"title": "Beef tenderloin and the Chateaubriand",
+					"kind": "ingredient",
+					"level": 1,
+					"covers": [
+						"The tenderloin: the muscle along the inside of the backbone that does almost no work, so it is the most tender cut and the mildest; the filet mignon, the Chateaubriand and the tartare are all cut from it",
+						"Its parts: the head, the centre cut (the Chateaubriand, say shah-toh-bree-AHN), the tail; the chain and the silverskin trimmed away",
+						"Cooking it: seared, roasted and rested, served pink because it has little fat to carry it further; Prime, Choice and Select as the USDA grades and Creekstone Farms as the house's Black Angus supplier",
+						"Served raw: the tartare, say tar-TAR, hand cut or chopped, and the consumer advisory given first",
+						"At Brennan's: the Roasted Chateaubriand for two with sauce Foyot, the 12 oz (340 g) Chateaubriand on the fall Chateau Espagnole, the Steak Tartare with Rye and the tasting menu's Petite Filet Mignon"
+					],
+					"leaves": [
+						"the Chateaubriand with Foyot belongs to chateaubriand-foyot",
+						"the hanger steak belongs to hanger-steak-bearnaise",
+						"the pan-roast belongs to pan-roast-and-poele",
+						"doneness temperatures belong to cooking-temperatures",
+						"the cuts by name belong to cuts-by-name"
+					],
+					"brennans": [
+						{
+							"dish": "d-8onx3lq1",
+							"components": [
+								"Chateaubriand, the center cut",
+								"Cooking a Chateaubriand: sear, roast, rest"
+							]
+						},
+						{
+							"dish": "d-5wcuejdy",
+							"components": [
+								"Chateaubriand",
+								"Creekstone Farms beef"
+							]
+						},
+						{
+							"dish": "d-jlc7ybty",
+							"components": [
+								"Beef tenderloin, served raw"
+							]
+						}
+					],
+					"seeAlso": {
+						"techniques": [
+							"resting-meat-and-slicing-against-the-grain"
+						],
+						"lexicon": [
+							"tenderloin-filet-mignon",
+							"fillet-steak-loin-and-collar",
+							"grass-fed-vs-grain-finished"
+						],
+						"recipes": [
+							"sunday-roast-beef-and-yorkshire-puddings"
+						],
+						"kitchen": [
+							"steak-bearnaise",
+							"beef-wellington"
+						],
+						"plates": [
+							"beef-cuts"
+						],
+						"folios": [
+							"chateaubriand-study"
+						],
+						"deck": [
+							"fd_0093",
+							"fd_0315",
+							"fd_0217",
+							"fd_0294"
+						]
+					}
+				},
+				{
+					"stem": "lamb",
+					"slug": "lamb",
+					"title": "Lamb and the shank",
+					"kind": "ingredient",
+					"level": 2,
+					"covers": [
+						"Lamb, hogget and mutton by age, and why American lamb is larger and milder than New Zealand's; spring lamb as a season that no longer rules the market",
+						"The cuts by use: rack and loin for fast heat, leg for roasting, shoulder and shank for the slow braise",
+						"The shank: the lower leg, full of sinew and collagen that melts to gelatine over hours in wine and aromatics, the daube of Provence",
+						"A jus from the braise: the juices strained and reduced to a glossy sauce, here scented with star anise, orange and cinnamon",
+						"Lamb's flavour and the guests who hesitate: how to describe it (sweet, grassy, richer than beef) and what to steer them to",
+						"At Brennan's: the fall Lamb Shank en Croûte, say ahn KROOT, a lamb shank daube under puff pastry with the spiced lamb jus"
+					],
+					"leaves": [
+						"the daube and the braise belong to braise-and-daube",
+						"brown stock belongs to brown-stock",
+						"the jus and the glaces belong to glaces",
+						"cooking temperatures belong to cooking-temperatures"
+					],
+					"brennans": [
+						{
+							"dish": "d-00p5tuen",
+							"components": [
+								"Lamb shank",
+								"Spiced lamb jus"
+							]
+						}
+					],
+					"seeAlso": {
+						"techniques": [
+							"braising"
+						],
+						"lexicon": [
+							"lamb-primals",
+							"lamb-spring-hogget-and-mutton",
+							"shank-oxtail-and-cheek",
+							"braising-and-stewing"
+						],
+						"recipes": [
+							"daube-provencale",
+							"colorado-lamb-chops",
+							"slow-roast-saltbush-lamb-shoulder"
+						],
+						"kitchen": [
+							"dum-pukht-raan",
+							"osso-buco"
+						],
+						"plates": [],
+						"folios": [],
+						"deck": [
+							"fd_0105",
+							"fd_0103"
+						]
+					}
+				},
+				{
+					"stem": "swordfish",
+					"slug": "swordfish",
+					"title": "Swordfish",
+					"kind": "ingredient",
+					"level": 2,
+					"covers": [
+						"A large ocean fish of warm and temperate seas, sold as thick steaks: firm, dense, meaty and mildly sweet, closer to a cutlet than to a fillet",
+						"Buying and keeping: the bloodline trimmed, the skin off, a steak cut thick so the middle stays moist; the US Atlantic fishery as a recovery story a guest may ask about",
+						"Cooking it: grilled or pan-seared hard and taken off just before the centre turns opaque, since it dries fast; rested like meat",
+						"Mercury and the pregnancy question: a large predatory fish, so the question goes to the kitchen and the service note, never answered from the floor",
+						"Grenobloise, say gruh-nob-LWAHZ: the meunière's cousin, brown butter with lemon segments, capers and croutons, from Grenoble",
+						"At Brennan's: the fall Swordfish Grenobloise on a leek fondue with brown butter, lemon, fried capers, Leidenheimer croutons and parsley"
+					],
+					"leaves": [
+						"beurre noisette belongs to beurre-noisette-and-noir",
+						"the meunière belongs to meuniere",
+						"the Gulf fish belong to gulf-fish",
+						"the grill belongs to grill-and-salamander",
+						"capers belong to capers"
+					],
+					"brennans": [
+						{
+							"dish": "d-jgihqqda",
+							"components": [
+								"Swordfish"
+							]
+						}
+					],
+					"seeAlso": {
+						"techniques": [
+							"resting-meat-and-slicing-against-the-grain"
+						],
+						"lexicon": [
+							"fatty-vs-lean-fish",
+							"fillet-steak-loin-and-collar"
+						],
+						"recipes": [
+							"sole-meuniere"
+						],
+						"kitchen": [],
+						"plates": [],
+						"folios": [],
+						"deck": [
+							"fd_0130"
+						]
+					}
+				},
+				{
+					"stem": "tuna",
+					"slug": "tuna",
+					"title": "Tuna",
+					"kind": "ingredient",
+					"level": 2,
+					"covers": [
+						"The tunas a kitchen names: yellowfin (ahi), bigeye, albacore and bluefin, by colour, fat and price; what sashimi-grade means and does not mean",
+						"Raw service: the loin, the cuts by fat (akami, chūtoro, ōtoro), kept at the cold edge and handled fast; freezing for parasites as the kitchen's answer",
+						"Crudo, say KROO-doh, the Italian word for raw: fish sliced and dressed with oil, acid and salt, against ceviche, which cures in citrus, and aguachile, which drowns it in a chilli and lime water",
+						"The consumer advisory, said first, and the species and cut as lineup questions",
+						"Sustainability and the guest who asks: the fishery, the gear and the label are the kitchen's to confirm",
+						"At Brennan's: the fall Tuna Crudo with carrot and ginger aguachile, salsa seca, burnt orange, coriander, pickled pearl onions and Maldon salt"
+					],
+					"leaves": [
+						"the consumer advisory belongs to cooking-temperatures",
+						"the Gulf fish belong to gulf-fish",
+						"raw oyster service belongs to raw-and-cooked-oysters",
+						"seasoning with salt belongs to seasoning-and-tasting"
+					],
+					"brennans": [
+						{
+							"dish": "d-0m4q3e52",
+							"components": [
+								"Tuna, served raw"
+							]
+						}
+					],
+					"seeAlso": {
+						"techniques": [
+							"ceviche"
+						],
+						"lexicon": [
+							"tuna-grades-akami-chutoro-otoro",
+							"tuna-and-winter-fat",
+							"sashimi-grade-and-ikejime",
+							"fatty-vs-lean-fish"
+						],
+						"recipes": [
+							"geoduck-crudo"
+						],
+						"kitchen": [
+							"sashimi-moriawase",
+							"ceviche"
+						],
+						"plates": [],
+						"folios": [],
+						"deck": [
+							"fd_0131",
+							"fd_0220",
+							"fd_0221"
+						]
+					}
+				},
+				{
+					"stem": "rye-and-caraway",
+					"slug": "rye-and-caraway",
+					"title": "Rye and caraway",
+					"kind": "ingredient",
+					"level": 3,
+					"covers": [
+						"Rye the grain: dense, earthy and faintly sour, with little of the protein that makes wheat bread rise, the bread of northern Europe and of the Jewish delis of New York and Montreal",
+						"Caraway the seed: the warm, anise-edged flavour most people take for the taste of rye bread; a cousin of cumin and fennel, and a note in Montreal steak seasoning",
+						"The deli echo on the fall plate: Montreal seasoning (black pepper, caraway, coriander, chilli flake and mustard seed) and a rye tuile stand in for the deli's pastrami on rye",
+						"A tuile, say TWEEL: a thin, crisp wafer named for the French roof tile, here made with rye for crunch against soft beef and yolk",
+						"Rye flour against wheat: why rye doughs are sticky and dense, and why a tuile is the easy way to put rye on a plate",
+						"At Brennan's: the Rye Tuile and Montreal Seasoning on the fall Steak Tartare with Rye"
+					],
+					"leaves": [
+						"New Orleans French bread belongs to french-bread",
+						"mustard belongs to creole-mustard",
+						"seasoning blends belong to seasoning-and-tasting",
+						"the beef and the tartare belong to beef-tenderloin"
+					],
+					"brennans": [
+						{
+							"dish": "d-jlc7ybty",
+							"components": [
+								"Rye tuile",
+								"Montreal seasoning"
+							]
+						}
+					],
+					"seeAlso": {
+						"techniques": [],
+						"lexicon": [
+							"caraway-and-nigella",
+							"bread-flour"
+						],
+						"recipes": [
+							"pastrami-on-rye",
+							"rye-sourdough-starter",
+							"vollkornbrot-with-rye-soaker"
+						],
+						"kitchen": [
+							"pastrami-on-rye",
+							"gravlax"
+						],
+						"plates": [],
+						"folios": [],
+						"deck": [
+							"fd_0072"
+						]
+					}
+				},
+				{
+					"stem": "fresh-pasta",
+					"slug": "fresh-pasta",
+					"title": "Fresh pasta and agnolotti",
+					"kind": "ingredient",
+					"level": 2,
+					"covers": [
+						"Fresh egg pasta against dried durum: soft wheat and egg rolled thin and cooked in a minute or two, against semolina and water extruded and dried, firm and holding its shape",
+						"Agnolotti del plin, say ah-nyoh-LOT-tee del PLEEN: Piedmont's small pinched parcels, plin being the pinch; a thin sheet folded over a filling and pinched shut",
+						"Frascarelli, say fras-ka-REL-lee: rough pasta pieces of the Marche, flour and egg loosely combined, boiled and finished in butter",
+						"Cooking pasta: salted water at a rolling boil, pulled a minute early and finished in the pan, the starchy water binding the sauce; butter and cheese as the oldest sauce",
+						"Conchiglie, the shells of the Shells & Cheese, as the dried contrast; the children's buttered noodles finished the same way",
+						"At Brennan's: the fall Agnolotti del Plin with pork, braised collards, ricotta, Parmesan and lemon pangrattato, and the frascarelli under the Chateau Espagnole"
+					],
+					"leaves": [
+						"boiling and blanching belong to boil-blanch-and-steam",
+						"finishing with butter belongs to monter-au-beurre",
+						"béchamel for a cheese sauce belongs to bechamel"
+					],
+					"brennans": [
+						{
+							"dish": "d-u34mwyw8",
+							"components": [
+								"Agnolotti del plin"
+							]
+						},
+						{
+							"dish": "d-8onx3lq1",
+							"components": [
+								"Frascarelli",
+								"Finishing pasta in butter"
+							]
+						},
+						{
+							"dish": "d-rarw81tw",
+							"components": [
+								"Pasta shells",
+								"Cooking pasta"
+							]
+						},
+						{
+							"dish": "d-anailpmk",
+							"components": [
+								"Buttered noodles with cheese",
+								"Cooking pasta",
+								"Finishing pasta in butter"
+							]
+						}
+					],
+					"seeAlso": {
+						"techniques": [
+							"fresh-pasta",
+							"gnocchi"
+						],
+						"lexicon": [
+							"00-flour",
+							"semolina",
+							"ricotta"
+						],
+						"recipes": [
+							"fresh-egg-pasta-tagliatelle-master",
+							"ravioli-del-plin",
+							"ravioli-di-ricotta-the-seal",
+							"cacio-e-pepe"
+						],
+						"kitchen": [
+							"agnolotti-del-plin"
+						],
+						"plates": [],
+						"folios": [],
+						"deck": [
+							"fd_0172",
+							"fd_0191",
+							"fd_0184"
+						]
+					}
+				},
+				{
+					"stem": "dark-chocolate",
+					"slug": "dark-chocolate",
+					"title": "Dark chocolate",
+					"kind": "ingredient",
+					"level": 2,
+					"covers": [
+						"From bean to bar: cocoa beans fermented, roasted and ground to chocolate liquor; cocoa butter, cocoa solids and sugar as the three parts a percentage describes",
+						"Dark, bittersweet, semisweet and milk by their share of liquor: bittersweet at 35 per cent and above by the US rule, usually 60 to 72 per cent; milk chocolate with milk solids added; white chocolate with no cocoa solids at all",
+						"Cocoa nibs: the roasted bean broken into bitter, crunchy pieces, chocolate before sugar, not chocolate chips",
+						"Chocolate in the pastry kitchen: melted gently, seized by a drop of water, set by its own cocoa butter in a crémeux, say kray-MUH, or a ganache; tempering for shine and snap",
+						"Dairy questions go to the service note and the kitchen; the maker, origin and percentage of the house bar are lineup questions",
+						"At Brennan's: the fall Chocolate Crémeux with cocoa nib crumble, lemon olive oil and Maldon salt, the bittersweet chocolate of the Café Brûlot Coffee Cake and the Bavarian milk chocolate of The Snickers"
+					],
+					"leaves": [
+						"crème anglaise belongs to creme-anglaise",
+						"Bavarian cream belongs to bavarian-cream",
+						"caramel belongs to caramel",
+						"chicory coffee belongs to chicory",
+						"café brûlot belongs to cafe-brulot"
+					],
+					"brennans": [
+						{
+							"dish": "d-kgmv4fmp",
+							"components": [
+								"Chocolate, in the crémeux",
+								"Cocoa nib crumble"
+							]
+						},
+						{
+							"dish": "d-husneh7o",
+							"components": [
+								"Bittersweet and milk chocolate"
+							]
+						},
+						{
+							"dish": "d-8oncjhit",
+							"components": [
+								"Bittersweet and milk chocolate"
+							]
+						}
+					],
+					"seeAlso": {
+						"techniques": [
+							"tempering-chocolate"
+						],
+						"lexicon": [
+							"ganache-bloom-and-chocolate-craft",
+							"tempering-eggs-and-chocolate"
+						],
+						"recipes": [
+							"tempered-dark-chocolate-by-seeding",
+							"molten-chocolate-cake",
+							"fudgy-brownies"
+						],
+						"kitchen": [
+							"churros-con-chocolate",
+							"profiteroles"
+						],
+						"plates": [],
+						"folios": [],
+						"deck": [
+							"fd_0346",
+							"fd_0251",
+							"fd_0255",
+							"fd_0408"
+						]
+					}
 				}
 			],
 			"steps": [

@@ -1,0 +1,1315 @@
+{
+  "entries": [
+    {
+      "stem": "red-wine-in-the-kitchen",
+      "slug": "red-wine-in-the-kitchen",
+      "title": "Red wine in the kitchen",
+      "say": "As it reads: red wine.",
+      "level": 2,
+      "kind": "ingredient",
+      "summary": "Dry red wine is a seasoning in a French kitchen: it lifts the browned bits from a pan, brings acid and tannin, and reduces into the deep sauces of the house. A sound bottle is the only kind to cook with.",
+      "guest": "We cook with dry red wine in sauces such as the marchand de vin on the Eggs Hussarde; most of the alcohol cooks away but not all, so tell me if you avoid it.",
+      "sections": [
+        {
+          "key": "what",
+          "paras": [
+            "Red wine in a kitchen is a seasoning, not a drink. A dry red brings three things to a pan: acid, which brightens and cuts fat; tannin, the drying grip from grape skins, which gives a sauce backbone and deep colour; and fruit, which reduction concentrates into something winey and savoury. Most of the alcohol boils off, but never all of it. Deglazing, lifting the browned fond with liquid, has its own entry."
+          ]
+        },
+        {
+          "key": "buying",
+          "paras": [
+            "Cook with a wine you would drink: dry, sound and clean. A corked bottle, musty like a wet cellar, or an oxidised one, flat and sherry-like, cooks its fault straight into the sauce, because reduction concentrates the fault while the fruit that might have hidden it cooks off. Avoid salted cooking wine. A medium-bodied red with moderate tannin is the workhorse; a very tannic young wine reduces to bitterness, and a sweet one makes a sweet sauce. Taste the bottle before it goes near the pan."
+          ]
+        },
+        {
+          "key": "how",
+          "paras": [
+            "Wine goes into a sauce before the stock, and it is reduced on its own first. Sweat shallot in butter, pour in the wine and boil it hard until it has lost at least half its volume and the raw, sharp smell of alcohol gives way to a round, fruity one. Taste it: a reduction that still bites like raw wine bites in the finished sauce; stock and butter soften it only a little. Then add the stock or demi-glace and reduce again until it coats a spoon. Reducing the wine first spares the stock an hour of boiling.",
+            "Alcohol boils at about 78°C (172°F), but it is dissolved in the liquid and leaves slowly. The USDA's table of retention factors gives about 40 per cent of the alcohol still present after 15 minutes of simmering, about 25 per cent after an hour and about 5 per cent after two and a half hours. A marchand de vin reduced for twenty minutes still carries wine."
+          ]
+        },
+        {
+          "key": "family",
+          "paras": [
+            "Three classical preparations stand on red wine. Marchand de vin, the wine merchant's sauce, reduces red wine with shallot, or in New Orleans with onion and garlic, into brown stock. Bordelaise in its French form reduces red wine with shallot, thyme and bay into demi-glace. A daube, the Provençal braise, cooks beef slowly in red wine and stock until it falls apart; the skimmed, reduced liquid is the sauce. On this menu the house's two are the marchand de vin and the Owen's short rib braise; the pecan bordelaise on the Pecan Gulf Fish is most likely the New Orleans butter kind; confirm which with the kitchen.",
+            "Each wine belongs somewhere. Red goes with brown stock, beef and dark braises. Dry white goes with fish, chicken and the pale sauces, the beurre blanc above all. The fortified wines, Madeira, sherry and port, are richer and sweeter and finish a sauce rather than build it; they have their own entry. Beer stands in for wine in a Flemish carbonnade; on this menu it goes into the Shells & Cheese, whose Mimolette fondue is made with Abita Amber, and cooking leaves some of its alcohol behind."
+          ]
+        },
+        {
+          "key": "faults",
+          "paras": [
+            "Harsh and sour: the wine was not reduced enough before the stock went in; reduce further, or soften it with more stock and a knob of butter. Bitter and drying: too much tannin from a big young wine reduced hard; round it off with butter or a spoonful of glace. Musty or flat: the bottle was off, and no reduction cures it, so throw the sauce out."
+          ]
+        },
+        {
+          "key": "brennans",
+          "paras": [
+            "At Brennan's two plates are built on red wine. The marchand de vin on the Eggs Hussarde and the Eggs Owen is red wine cooked with aromatics and beef stock into a glossy brown sauce. The Owen's short rib is braised in red wine for about three hours, and its skimmed, reduced braising liquid becomes the gravy of the débris. Which wine the kitchen cooks with is not printed, so name none. Both plates carry alcohol, and their service notes say so."
+          ]
+        },
+        {
+          "key": "service",
+          "paras": [
+            "At the table, call the marchand de vin the wine merchant's sauce, a red wine sauce the guide describes as red wine and mushroom; call it a mushroom sauce only once the chef confirms mushrooms are in it tonight, and say the Owen's short rib is braised in red wine. If a guest avoids alcohol, say that both plates carry wine and that cooking does not remove all of it, then offer another dish; never promise it has cooked away."
+          ]
+        }
+      ],
+      "ratios": [
+        {
+          "label": "Reduction before the stock",
+          "value": "By half at least, often to a third, until the raw smell of alcohol has gone"
+        },
+        {
+          "label": "Wine to stock in a marchand de vin",
+          "value": "About 1 part red wine, reduced, to 2 parts brown stock, then reduced again to coat a spoon"
+        },
+        {
+          "label": "Alcohol left after simmering",
+          "value": "About 40 per cent after 15 minutes, 25 per cent after an hour, 5 per cent after two and a half hours"
+        }
+      ],
+      "temps": [
+        {
+          "label": "Alcohol boils at about",
+          "c": 78,
+          "f": 172
+        }
+      ],
+      "faults": [
+        {
+          "fault": "Harsh, sour sauce",
+          "cause": "The wine went into the stock before it was reduced, or was reduced too little.",
+          "fix": "Reduce further; soften with a little more stock and a knob of butter."
+        },
+        {
+          "fault": "Bitter, drying sauce",
+          "cause": "A big, tannic young wine reduced hard.",
+          "fix": "Round it off with butter or a spoonful of glace; choose a softer wine next time."
+        },
+        {
+          "fault": "Musty or flat sauce",
+          "cause": "A corked or oxidised bottle, whose fault reduction concentrated.",
+          "fix": "Throw it out; no reduction cures it. Taste every bottle before it goes near the pan."
+        },
+        {
+          "fault": "Muddy, mauve butter sauce",
+          "cause": "Red wine where the dish wanted dry white, or a thin, oxidised red.",
+          "fix": "Use dry white for a beurre blanc; a red wine butter sauce, beurre rouge, is its own preparation and wants a sound, full red."
+        }
+      ],
+      "brennans": [
+        {
+          "dish": "d-1q0xk7jv",
+          "components": [
+            "Red wine in the kitchen"
+          ],
+          "how": "The marchand de vin under the poached eggs is red wine cooked with aromatics and beef stock into a glossy brown sauce. The wine is not printed, so name none, and tell a guest who avoids alcohol that the plate carries it."
+        },
+        {
+          "dish": "d-44jfmkdb",
+          "components": [
+            "Red wine in the kitchen",
+            "Braising in red wine"
+          ],
+          "how": "Red wine appears twice: in the marchand de vin, and in the braise, where the short rib cooks slowly in wine and stock for about three hours and falls apart into its own reduced liquid as the débris."
+        }
+      ],
+      "seeAlso": {
+        "entries": [
+          "marchand-de-vin",
+          "bordelaise",
+          "braise-and-daube",
+          "deglaze-and-pan-sauce",
+          "fortified-wine-sauces",
+          "demi-glace",
+          "finishing-a-sauce",
+          "eggs-hussarde",
+          "eggs-owen"
+        ],
+        "techniques": [
+          "deglazing-and-pan-sauces",
+          "braising"
+        ],
+        "lexicon": [
+          "deglaze-and-fond",
+          "reduction-nappe-and-mounting",
+          "wine-faults-corked-oxidized-reduced-and-friends",
+          "braising-and-stewing"
+        ],
+        "recipes": [
+          "red-wine-jus-monter-au-beurre",
+          "coq-au-vin",
+          "boeuf-bourguignon"
+        ],
+        "kitchen": [
+          "boeuf-bourguignon"
+        ],
+        "components": [
+          "Red wine in the kitchen",
+          "Braising in red wine",
+          "Marchand de vin",
+          "Short rib débris"
+        ]
+      },
+      "sources": [
+        {
+          "title": "USDA Table of Nutrient Retention Factors, Release 6 (2007), USDA Agricultural Research Service",
+          "url": "https://www.ars.usda.gov/Services/docs.htm?docid=9448",
+          "asOf": "2026-10-17",
+          "year": 2007
+        },
+        {
+          "title": "USDA Table of Nutrient Retention Factors, Release 6 (2007), Data.gov catalogue record",
+          "url": "https://catalog.data.gov/dataset/usda-table-of-nutrient-retention-factors-release-6-2007-1b152",
+          "asOf": "2026-10-17",
+          "year": 2007
+        },
+        {
+          "title": "Brennan's, Breakfast & Lunch menu",
+          "url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+          "asOf": "2026-10-17"
+        }
+      ],
+      "cards": [
+        {
+          "stem": "what-it-does",
+          "front": "What does red wine do in a pan?",
+          "back": "Three things: its acid brightens and cuts fat, its tannin gives backbone and deep colour, and its fruit concentrates as it reduces into a winey, savoury depth."
+        },
+        {
+          "stem": "which-bottle",
+          "front": "Which red wine should you cook with?",
+          "back": "One you would drink: dry, sound and clean, medium-bodied with moderate tannin. Never a corked or oxidised bottle, and never salted cooking wine."
+        },
+        {
+          "stem": "faults-cook-in",
+          "front": "Why does a corked or oxidised bottle ruin a sauce?",
+          "back": "Reduction concentrates everything, the fault included, while the fruit that might have hidden it cooks off; no reduction cures it."
+        },
+        {
+          "stem": "reduce-first",
+          "front": "When does the wine go in, and how far is it reduced?",
+          "back": "Before the stock, on its own, by half or more, until the raw smell of alcohol gives way to a round, fruity one. Taste it for rawness before the stock goes in."
+        },
+        {
+          "stem": "alcohol-left",
+          "front": "How much alcohol is left after a sauce simmers?",
+          "back": "The USDA's retention table gives about 40 per cent after 15 minutes, 25 per cent after an hour and 5 per cent after two and a half hours, so never promise it has all cooked away."
+        },
+        {
+          "stem": "house-sauces",
+          "front": "Which preparations stand on red wine, and which two does the house serve?",
+          "back": "Marchand de vin, French bordelaise and the daube; at Brennan's, the marchand de vin on the Hussarde and the Owen and the Owen's short rib braise. In each the wine is reduced before the stock goes in."
+        },
+        {
+          "stem": "red-against-white",
+          "front": "Where do red, white, fortified wine and beer each belong?",
+          "back": "Red with brown stock, beef and dark braises; dry white with fish, chicken and the pale sauces; Madeira, sherry and port to finish a sauce; beer, on this menu, in the Abita Amber fondue of the Shells & Cheese."
+        },
+        {
+          "stem": "harsh-fix",
+          "front": "A finished red wine sauce tastes harsh and sour. Why, and what is the fix?",
+          "back": "The wine was not reduced enough before the stock went in. Reduce further, or soften it with a little more stock and a knob of butter."
+        },
+        {
+          "stem": "bitter-fix",
+          "front": "A red wine sauce is bitter and drying on the tongue. Why?",
+          "back": "Too much tannin, from a big young wine reduced hard. Round it off with butter or glace, and choose a softer wine next time."
+        },
+        {
+          "stem": "brennans",
+          "front": "Where does red wine appear at Brennan's, and what does a server say?",
+          "back": "In the marchand de vin on the Eggs Hussarde and Eggs Owen, and in the red wine braise of the Owen's short rib. Both plates carry alcohol; the wine is not printed, so name none."
+        }
+      ],
+      "questions": [
+        {
+          "stem": "q-which-bottle",
+          "q": "Which bottle belongs in the pan for a marchand de vin?",
+          "answer": "A dry, sound red you would drink",
+          "distractors": [
+            "A bottle labelled cooking wine",
+            "A corked bottle, since cooking hides the fault",
+            "A sweet red, for a rounder sauce"
+          ],
+          "why": "Reduction concentrates a fault and cooks off the fruit that might hide it; cooking wine carries salt, and a sweet wine makes a sweet sauce.",
+          "teaches": "which-bottle"
+        },
+        {
+          "stem": "q-reduce-first",
+          "q": "When does the red wine go into a sauce, and how far is it reduced?",
+          "answer": "Before the stock, by half or more",
+          "distractors": [
+            "After the stock, with no reduction",
+            "At the very end, off the heat",
+            "With the butter, as the sauce is mounted"
+          ],
+          "why": "Reducing the wine on its own drives off the raw alcohol and lets the cook taste it before the stock is committed to an hour of boiling.",
+          "teaches": "reduce-first"
+        },
+        {
+          "stem": "q-alcohol-left",
+          "q": "About how much alcohol remains in a sauce simmered for 15 minutes?",
+          "answer": "About 40 per cent",
+          "distractors": [
+            "None at all",
+            "About 90 per cent",
+            "Exactly half, always"
+          ],
+          "why": "The USDA's retention table gives about 40 per cent after 15 minutes, 25 per cent after an hour and 5 per cent after two and a half hours; it never reaches none.",
+          "teaches": "alcohol-left"
+        },
+        {
+          "stem": "q-harsh",
+          "q": "A finished red wine sauce tastes harsh and raw. What went wrong?",
+          "answer": "The wine was reduced too little",
+          "distractors": [
+            "The stock was too rich",
+            "Too much butter was mounted in",
+            "The shallots were sweated too long"
+          ],
+          "why": "Stock and butter soften a raw reduction only a little; the fix is to reduce further, then round it off with stock and a knob of butter.",
+          "teaches": "harsh-fix"
+        },
+        {
+          "stem": "q-bitter",
+          "q": "A red wine sauce is bitter and drying. Which wine most likely caused it?",
+          "answer": "A big, tannic young red, reduced hard",
+          "distractors": [
+            "A light, soft Côtes du Rhône",
+            "A dry white wine",
+            "A splash of Madeira"
+          ],
+          "why": "Tannin concentrates as the wine reduces, so a heavily tannic wine reduces to bitterness; a medium-bodied red with moderate tannin is the kitchen's workhorse.",
+          "teaches": "bitter-fix"
+        },
+        {
+          "stem": "q-white",
+          "q": "Which of these sauces wants dry white wine rather than red?",
+          "answer": "Beurre blanc",
+          "distractors": [
+            "Marchand de vin",
+            "Bordelaise",
+            "A beef daube"
+          ],
+          "why": "White belongs with fish, chicken and the pale sauces; made with red the sauce becomes a different one, beurre rouge, while the three brown preparations stand on red wine.",
+          "teaches": "red-against-white"
+        },
+        {
+          "stem": "q-house",
+          "q": "Which two Brennan's preparations are built on red wine?",
+          "answer": "Marchand de vin and the Owen's short rib braise",
+          "distractors": [
+            "Hollandaise and béarnaise",
+            "Beurre blanc and the pecan bordelaise",
+            "Sauce Foyot and the Creole sauce"
+          ],
+          "why": "The marchand de vin and the short rib braise reduce red wine before the stock goes in; the warm emulsions take vinegar or white wine, and the pecan bordelaise is most likely the New Orleans butter kind, confirmed with the kitchen.",
+          "teaches": "house-sauces"
+        },
+        {
+          "stem": "q-brennans",
+          "q": "A guest at breakfast avoids alcohol and asks about the Eggs Owen. What do you say?",
+          "answer": "It carries wine in the sauce and the braise",
+          "distractors": [
+            "The alcohol has all cooked away",
+            "Only the hollandaise carries wine",
+            "The kitchen uses a bottle with no alcohol"
+          ],
+          "why": "The marchand de vin and the short rib braise both carry red wine, and cooking never removes all of it; the honest answer is the plate carries it, then offer another dish.",
+          "teaches": "brennans"
+        }
+      ]
+    },
+    {
+      "stem": "capers",
+      "slug": "capers",
+      "title": "Capers",
+      "say": "KAY-perz",
+      "level": 2,
+      "kind": "ingredient",
+      "summary": "The unopened flower bud of a Mediterranean shrub, picked by hand and cured in salt or brine until it turns briny, sharp and faintly floral. A small bite that cuts fat, from the tartare dressing to the Grenobloise.",
+      "guest": "Capers are the cured flower buds of a Mediterranean shrub: small, salty and sharp. On the swordfish they are fried crisp; in the tartare they sit in the dressing with the Dijon.",
+      "sections": [
+        {
+          "key": "what",
+          "paras": [
+            "A caper is the unopened flower bud of Capparis spinosa, a low, scrambling shrub of hot, dry hillsides and old walls around the Mediterranean. The buds are picked by hand before they open, which is why good capers are dear. Fresh, a bud is bitter; curing makes it. Packed in salt or steeped in vinegar brine for weeks, it turns briny, tangy and faintly floral. The caperberry is a different thing: the fruit that forms if the bud is left to flower, picked later on its stem, bigger and milder, served whole like an olive."
+          ]
+        },
+        {
+          "key": "buying",
+          "paras": [
+            "Capers are graded by size, and the names are French. Nonpareil, say non-puh-REL, are the smallest, under about 7 mm across, and the dearest; then surfines, capucines, capotes and fines, each a little larger, up to grusas at 14 mm and more. Smaller buds are firmer; larger ones are softer and better for chopping. Salt-packed capers, from Pantelleria and the Aeolian islands off Sicily above all, keep the truest flavour: rinse them, soak them in cold water for 15 to 30 minutes, changing it once, and pat them dry. Brined capers are drained, and rinsed for a dressing."
+          ]
+        },
+        {
+          "key": "how",
+          "paras": [
+            "Fried capers turn a soft, sour pop into crunch. Drain brined capers, or rinse and soak salted ones, then dry them thoroughly on a cloth, because water in hot fat spits. Drop them into neutral oil or clarified butter at about 180°C (356°F), a small handful at a time, and fry for 1 to 2 minutes until they open like tiny flowers, stop bubbling and turn crisp. Lift them onto a rack, never paper, and use them within the hour: they soften as they stand. Frying drives off the water and sharpens the brine into a burst of salt."
+          ]
+        },
+        {
+          "key": "family",
+          "paras": [
+            "Capers earn their place by cutting fat. In the tartare dressing they bring salt and a sharp, briny bite against raw beef and yolk. In the Grenobloise they join brown butter, lemon and parsley over a sautéed fish. In a ravigote they sit with herbs and shallot, and in the French rémoulade with cornichons and herbs in a mayonnaise; each has its own entry. In a piccata they finish a pan sauce of lemon, butter and white wine. Add capers late: long cooking turns them mushy."
+          ]
+        },
+        {
+          "key": "faults",
+          "paras": [
+            "Salt-packed capers used unrinsed make a dish too salty to eat, and no lemon rescues it; soak them first and season only after they go in. Capers fried wet spit and never crisp. Fried too long, or in fat that is too hot, they turn dark and bitter. A jar whose buds have gone soft and brown is old: throw it out."
+          ]
+        },
+        {
+          "key": "history",
+          "paras": [
+            "Capers are an old Mediterranean food, salted and pickled around that sea since antiquity, and the plant still grows wild out of the stone of Greek and Roman ruins. In the French kitchen they belong among the sharp garnishes: Escoffier's Le Guide Culinaire of 1903 already sends capers, onion and parsley to the table beside his chopped raw fillet with a yolk, the beefsteak à l'Américaine, an early written ancestor of the steak tartare, which is why caper and tartare still travel together."
+          ]
+        },
+        {
+          "key": "brennans",
+          "paras": [
+            "At Brennan's the pack places capers on two plates of the Fall 2026 sheet. On the Steak Tartare with Rye they sit inside the tartare dressing with the yolk, Dijon, shallot, hot sauce, parsley and black pepper, the salty, sharp bite that cuts the richness of the yolk; the proportions and the build are the chef's answers. On the Swordfish Grenobloise the capers are fried, the crisp, salty counterpoint to the brown butter and the soft leeks, and part of what makes the garnish Grenobloise rather than a plain meunière. How the kitchen fries them, and in what, is not printed: ask at lineup."
+          ]
+        },
+        {
+          "key": "service",
+          "paras": [
+            "If a guest tastes something briny and bright in the tartare, that is the caper. Describe a fried caper as a caper crisped in hot fat so that it opens and crunches with a burst of salt. A guest who dislikes capers can be told where they are, but whether either plate can be made without them is the kitchen's answer, never a promise at the table."
+          ]
+        }
+      ],
+      "ratios": [
+        {
+          "label": "Soaking salt-packed capers",
+          "value": "15 to 30 minutes in cold water, changed once, then patted dry"
+        },
+        {
+          "label": "Frying capers",
+          "value": "1 to 2 minutes at about 180°C (356°F), a small handful at a time, until they open and crisp"
+        },
+        {
+          "label": "The sizes, smallest first",
+          "value": "Nonpareil under about 7 mm, then surfines, capucines, capotes and fines, up to grusas at 14 mm and more"
+        }
+      ],
+      "temps": [
+        {
+          "label": "Fat for frying capers",
+          "c": 180,
+          "f": 356
+        }
+      ],
+      "faults": [
+        {
+          "fault": "A dish far too salty",
+          "cause": "Salt-packed capers went in unrinsed, or the dish was seasoned before the capers.",
+          "fix": "Soak salted capers first; add the capers, then taste, then salt."
+        },
+        {
+          "fault": "Fried capers that spit and stay soft",
+          "cause": "They went into the fat wet.",
+          "fix": "Dry them thoroughly on a cloth before they meet the oil."
+        },
+        {
+          "fault": "Dark, bitter fried capers",
+          "cause": "Fried too long or in fat that was too hot.",
+          "fix": "Fry a small handful for 1 to 2 minutes at about 180°C (356°F), and lift them out as soon as they stop bubbling."
+        },
+        {
+          "fault": "Mushy capers with no bite",
+          "cause": "Cooked from the start of the sauce.",
+          "fix": "Add them at the end, off the heat or in the last minute."
+        }
+      ],
+      "brennans": [
+        {
+          "dish": "d-jlc7ybty",
+          "components": [
+            "Capers"
+          ],
+          "how": "The capers sit inside the tartare dressing with the yolk, Dijon, shallot, hot sauce, parsley and black pepper, the salty, sharp bite that cuts the yolk's richness. Proportions and the build are the chef's answers."
+        },
+        {
+          "dish": "d-jgihqqda",
+          "components": [
+            "Fried capers"
+          ],
+          "how": "Fried until they open and crisp, the capers are the salty crunch against brown butter and soft leek fondue, part of what makes the garnish Grenobloise. How the kitchen fries them, and in what, is a lineup question."
+        }
+      ],
+      "seeAlso": {
+        "entries": [
+          "ravigote",
+          "creole-remoulade",
+          "aioli-and-french-remoulade",
+          "beurre-noisette-and-noir",
+          "meuniere",
+          "frying",
+          "beef-tenderloin",
+          "swordfish"
+        ],
+        "lexicon": [
+          "caper"
+        ],
+        "recipes": [
+          "chicken-piccata",
+          "salsa-verde-italian",
+          "tapenade-noire-au-mortier"
+        ],
+        "kitchen": [
+          "chicken-piccata"
+        ],
+        "deck": [
+          "fd_0278"
+        ],
+        "components": [
+          "Capers",
+          "Fried capers",
+          "The tartare dressing",
+          "The Grenobloise garnish"
+        ],
+        "terms": [
+          "vegetables-capers"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Caper, Encyclopaedia Britannica",
+          "url": "https://www.britannica.com/plant/caper",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "A Guide to Modern Cookery, A. Escoffier (London: Heinemann, 1907), Project Gutenberg eBook 71395",
+          "url": "https://www.gutenberg.org/ebooks/71395",
+          "year": 1907
+        },
+        {
+          "title": "Brennan's, Dinner menu",
+          "url": "https://www.brennansneworleans.com/menus/dinner/",
+          "asOf": "2026-10-17"
+        }
+      ],
+      "cards": [
+        {
+          "stem": "what-it-is",
+          "front": "What is a caper?",
+          "back": "The unopened flower bud of a Mediterranean shrub, Capparis spinosa, picked by hand and cured in salt or vinegar brine until it is briny, sharp and faintly floral."
+        },
+        {
+          "stem": "caperberry",
+          "front": "How does a caperberry differ from a caper?",
+          "back": "A caperberry is the fruit that forms if the bud is left to flower: picked later on its stem, bigger and milder, served whole like an olive. A caper is the bud."
+        },
+        {
+          "stem": "sizes",
+          "front": "Name the caper sizes, smallest first.",
+          "back": "Nonpareil, under about 7 mm, the dearest; then surfines, capucines, capotes and fines; grusas, at 14 mm and more, are the largest."
+        },
+        {
+          "stem": "curing",
+          "front": "How are salt-packed and brined capers prepared?",
+          "back": "Salt-packed: rinse, soak in cold water for 15 to 30 minutes, changing it once, and pat dry. Brined: drain, and rinse for a dressing."
+        },
+        {
+          "stem": "cut-fat",
+          "front": "What do capers do on a plate?",
+          "back": "They cut fat with a sharp, floral, salty bite: in the tartare dressing, the Grenobloise, a ravigote, a rémoulade and a piccata."
+        },
+        {
+          "stem": "fried",
+          "front": "How are fried capers made?",
+          "back": "Dried thoroughly, then fried in oil or clarified butter at about 180°C (356°F) for 1 to 2 minutes until they open and crisp; drained on a rack and used within the hour."
+        },
+        {
+          "stem": "add-late",
+          "front": "When do capers go into a cooked sauce?",
+          "back": "At the end: cooked from the start they turn mushy and lose their bite."
+        },
+        {
+          "stem": "salt-fault",
+          "front": "A dish with capers has come out far too salty. What went wrong?",
+          "back": "Salt-packed capers went in unrinsed, or the dish was seasoned before the capers. Soak them first; add the capers, taste, then salt."
+        },
+        {
+          "stem": "escoffier",
+          "front": "Why do capers and steak tartare travel together?",
+          "back": "Escoffier's Le Guide Culinaire of 1903 already sends capers, onion and parsley to the table beside his chopped raw fillet with a yolk, an early written ancestor of the tartare."
+        },
+        {
+          "stem": "brennans",
+          "front": "Where are capers on the Fall 2026 sheet at Brennan's?",
+          "back": "Inside the dressing of the Steak Tartare with Rye, with the Dijon, and fried on the Swordfish Grenobloise against brown butter and leeks."
+        }
+      ],
+      "questions": [
+        {
+          "stem": "q-what",
+          "q": "What part of the plant is a caper?",
+          "answer": "The unopened flower bud",
+          "distractors": [
+            "The ripe fruit on its stem",
+            "The seed inside the pod",
+            "A tiny green olive"
+          ],
+          "why": "The bud is picked by hand before it opens and cured in salt or brine; the fruit that forms if the bud flowers is the caperberry, a different thing.",
+          "teaches": "what-it-is"
+        },
+        {
+          "stem": "q-smallest",
+          "q": "Which caper grade is the smallest and dearest?",
+          "answer": "Nonpareil",
+          "distractors": [
+            "Capotes",
+            "Grusas",
+            "Capucines"
+          ],
+          "why": "Nonpareil are under about 7 mm across, tight and firm; surfines, capucines, capotes and fines follow, and grusas at 14 mm and more are the largest.",
+          "teaches": "sizes"
+        },
+        {
+          "stem": "q-salted",
+          "q": "How are salt-packed capers prepared before they go into a dish?",
+          "answer": "Rinsed, soaked in cold water, then dried",
+          "distractors": [
+            "Used straight from the jar",
+            "Boiled for ten minutes in brine",
+            "Fried in their own salt"
+          ],
+          "why": "A soak of 15 to 30 minutes, changed once, draws out the curing salt; unrinsed they make a dish too salty to eat.",
+          "teaches": "curing"
+        },
+        {
+          "stem": "q-fried",
+          "q": "What turns a caper crisp for the Grenobloise?",
+          "answer": "A short fry in hot fat after drying",
+          "distractors": [
+            "A night in the fridge, uncovered",
+            "Toasting dry in a cold pan",
+            "A long simmer in the brown butter"
+          ],
+          "why": "Dried and dropped into fat at about 180°C (356°F) for 1 to 2 minutes, the bud opens like a flower and its water leaves, so it crunches with a burst of salt.",
+          "teaches": "fried"
+        },
+        {
+          "stem": "q-when",
+          "q": "When should capers go into a sauce that cooks for a while?",
+          "answer": "At the end",
+          "distractors": [
+            "With the shallots at the start",
+            "Halfway through the reduction",
+            "Before the stock, to flavour it"
+          ],
+          "why": "Long cooking turns capers mushy and dulls their bite; added late they keep their shape and their sharp, briny pop.",
+          "teaches": "add-late"
+        },
+        {
+          "stem": "q-cut-fat",
+          "q": "Why do capers belong on a buttery plate like the Grenobloise?",
+          "answer": "Their salty, sharp bite cuts the fat",
+          "distractors": [
+            "They thicken the brown butter",
+            "They sweeten the lemon",
+            "They keep the fish from sticking"
+          ],
+          "why": "Capers earn their place by cutting richness, which is why they sit beside brown butter, raw beef and yolk, and mayonnaise.",
+          "teaches": "cut-fat"
+        },
+        {
+          "stem": "q-escoffier",
+          "q": "Which garnish did Escoffier's 1903 Guide send out beside its chopped raw fillet with a yolk?",
+          "answer": "Capers, onion and parsley",
+          "distractors": [
+            "Truffle, foie gras and Madeira",
+            "Croutons, lemon and brown butter",
+            "Mustard, cornichons and anchovy"
+          ],
+          "why": "That beefsteak à l'Américaine is a documented ancestor of the steak tartare, and its capers are why the two still travel together.",
+          "teaches": "escoffier"
+        },
+        {
+          "stem": "q-brennans",
+          "q": "On the Steak Tartare with Rye, where do the capers sit?",
+          "answer": "Inside the tartare dressing",
+          "distractors": [
+            "Fried on top of the rye tuile",
+            "In the Montreal seasoning",
+            "Whole, beside the egg yolk"
+          ],
+          "why": "The sheet lists capers in the dressing with the yolk, Dijon, shallot, hot sauce, parsley and black pepper; the fried capers belong to the Swordfish Grenobloise.",
+          "teaches": "brennans"
+        }
+      ]
+    },
+    {
+      "stem": "preserved-lemon",
+      "slug": "preserved-lemon",
+      "title": "Preserved lemon",
+      "say": "As it reads: preserved lemon.",
+      "level": 2,
+      "kind": "ingredient",
+      "summary": "Lemons packed in salt and their own juice for weeks until the rind turns soft, translucent and perfumed: a North African larder staple a kitchen can make itself, salty and floral rather than sour, and used for its rind.",
+      "guest": "Preserved lemon is lemon cured in salt for weeks until the peel turns soft and perfumed; it tastes salty and floral rather than sour, and it brightens the butter sauce on the redfish.",
+      "sections": [
+        {
+          "key": "what",
+          "paras": [
+            "A preserved lemon is a whole lemon cut almost through, packed with coarse salt and pressed into a jar with more lemons and their juice, then left for weeks. The salt draws out the juice, the lemons sit under it, and the rind slowly softens and turns translucent while its bitterness mellows into something salty, floral and almost perfumed. It is a staple of the North African larder, of Moroccan tagines above all. The cook uses the rind, rinsed and finely chopped; the pulp is mostly set aside. It is a seasoning, so a dish is salted after it goes in, never before."
+          ]
+        },
+        {
+          "key": "how",
+          "paras": [
+            "Wash unwaxed lemons and cut each from the tip almost to the stem end, in a cross, so it opens but holds together. Pack the cut faces with coarse salt, about 15 g (1 tbsp) a lemon, and press the lemons into a clean jar as tightly as they will go. Cover them with fresh lemon juice until nothing is exposed. Seal the jar and leave it at room temperature for three to four weeks, turning it every few days, until the rind is soft all through. Then keep it in the fridge, where it lasts for months as long as the lemons stay under the juice."
+          ]
+        },
+        {
+          "key": "family",
+          "paras": [
+            "The rind goes where a bright, salty lift is wanted and a squeeze of fresh lemon would thin or curdle the dish. In a beurre blanc it lifts the butter with salt and perfume, where a squeeze of fresh juice at the end would only thin the sauce and taste raw; the reduction already carries the sauce's acid. In an aïoli, say eye-OH-lee, the garlic mayonnaise of Provence, it stands in for part of the lemon juice and adds perfume. A braise of fennel takes a few strips with the olive oil; roasted vegetables take a dressing of chopped rind, oil and herbs. It is at home beside harissa, say huh-REE-suh, the North African chilli paste."
+          ]
+        },
+        {
+          "key": "buying",
+          "paras": [
+            "Fresh lemon gives clean, sharp acid from its juice and perfume from its zest, and goes in at the end. Preserved lemon gives salt and perfume with little acid, and it can cook. Lemon confit is an ambiguous name: in French kitchens citron confit most often means this same salt-cured lemon, but it can also mean lemon slices cooked slowly in sugar syrup, which is sweet, so ask which is meant.",
+            "The Meyer lemon, thought to be a cross between a lemon and an orange and brought to the United States from China by the plant explorer Frank Meyer in 1908, is sweeter, thinner-skinned and more floral; it makes a gentler preserved lemon that cures faster. Weeks in salt and months in the fridge mean a batch is a lineup question: whether the house cures its own, and what went in."
+          ]
+        },
+        {
+          "key": "faults",
+          "paras": [
+            "A batch that grows mould or smells off was not kept under the juice, or the jar was not clean; throw it out, and next time pack tighter and top up with juice. Rind still firm after a month came from thick-skinned fruit or too little salt, and needs more time. A dish gone too salty was seasoned before the lemon, or the rind went in unrinsed. Bitterness comes from the pith of an under-cured lemon, and from the pulp."
+          ]
+        },
+        {
+          "key": "brennans",
+          "paras": [
+            "At Brennan's the pack places preserved lemon on three plates. On the Redfish Véronique it flavours the beurre blanc, the silky white wine and butter sauce under the redfish, the hibiscus-pickled grapes and the braised leeks. On the Smoked Cauliflower, a dinner side, it partners harissa, salt and perfume against the paste's warmth and the smoke. On the Fish Bouillabaisse of the Fall 2026 sheet it flavours the aïoli beside the fish terrine and the shrimp mousse. Whether the kitchen cures its own and how long the batch has stood are not printed, so confirm them at lineup before you describe it."
+          ]
+        },
+        {
+          "key": "service",
+          "paras": [
+            "Describe it to a guest as lemon cured in salt, salty and perfumed rather than sour, with the peel eaten and the flesh set aside. On the Véronique it makes the butter sauce bright without making it sharp; on the cauliflower it answers the harissa. The curing takes weeks, so whether the house cures its own and what went into the batch are the kitchen's answers."
+          ]
+        }
+      ],
+      "ratios": [
+        {
+          "label": "Salt for each lemon",
+          "value": "About 15 g (1 tbsp) of coarse salt, pressed into the cut faces, plus a spoonful on top"
+        },
+        {
+          "label": "The cure",
+          "value": "Three to four weeks at room temperature, under the juice, the jar turned every few days"
+        },
+        {
+          "label": "Keeping",
+          "value": "Months in the fridge, as long as the lemons stay under the juice"
+        }
+      ],
+      "faults": [
+        {
+          "fault": "Mould, or a jar that smells off",
+          "cause": "The lemons were not kept under the juice, or the jar was not clean.",
+          "fix": "Throw it out; pack the next batch tighter and top it up with fresh lemon juice."
+        },
+        {
+          "fault": "Rind still firm after a month",
+          "cause": "Thick-skinned fruit, or too little salt.",
+          "fix": "Give it more time; use thinner-skinned lemons and the full measure of salt next time."
+        },
+        {
+          "fault": "A dish far too salty",
+          "cause": "Seasoned before the preserved lemon went in, or the rind unrinsed.",
+          "fix": "Rinse the rind; add it, taste, then salt."
+        },
+        {
+          "fault": "A bitter taste",
+          "cause": "Pith from an under-cured lemon, or pulp left in.",
+          "fix": "Use only the soft rind of a fully cured lemon and set the pulp aside."
+        }
+      ],
+      "brennans": [
+        {
+          "dish": "d-s1bqzuks",
+          "components": [
+            "Preserved lemon"
+          ],
+          "how": "Chopped preserved lemon flavours the beurre blanc under the redfish, lifting the butter sauce with salt and perfume rather than sharp acid, beside the hibiscus-pickled grapes and braised leeks."
+        },
+        {
+          "dish": "d-xdpmzd3t",
+          "components": [
+            "Preserved lemon"
+          ],
+          "how": "On the smoked cauliflower the preserved lemon partners harissa: salt and perfume against the chilli paste's warmth and the smoke. The harissa brings moderate heat, so warn a spice-shy guest."
+        },
+        {
+          "dish": "d-iwmu4qf7",
+          "components": [
+            "Preserved lemon",
+            "Preserved lemon aioli"
+          ],
+          "how": "Preserved lemon flavours the aïoli, the garlic sauce of Provence, beside the fish terrine, shrimp mousse and bouillabaisse sauce. The sheet names an aioli, not rouille, so say aioli; what is in tonight's batch is the kitchen's answer."
+        }
+      ],
+      "seeAlso": {
+        "entries": [
+          "beurre-blanc",
+          "redfish-veronique",
+          "aioli-and-french-remoulade",
+          "mayonnaise",
+          "smoking",
+          "confit",
+          "seasoning-and-tasting"
+        ],
+        "lexicon": [
+          "preserved-lemon",
+          "lemon",
+          "meyer-lemon"
+        ],
+        "recipes": [
+          "preserved-lemons",
+          "chicken-tagine-preserved-lemon-and-olives"
+        ],
+        "kitchen": [
+          "chicken-tagine"
+        ],
+        "deck": [
+          "fd_0277",
+          "fd_0195"
+        ],
+        "components": [
+          "Preserved lemon",
+          "Preserved lemon aioli",
+          "Harissa",
+          "Lemon"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Lemon, Encyclopaedia Britannica",
+          "url": "https://www.britannica.com/plant/lemon",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "Meyer lemon, Citrus Variety Collection, University of California, Riverside",
+          "url": "https://citrusvariety.ucr.edu/crc3737",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "Brennan's, Dinner menu",
+          "url": "https://www.brennansneworleans.com/menus/dinner/",
+          "asOf": "2026-10-17"
+        }
+      ],
+      "cards": [
+        {
+          "stem": "what-it-is",
+          "front": "What is a preserved lemon?",
+          "back": "A whole lemon cut almost through, packed in coarse salt and its own juice for weeks until the rind turns soft, translucent and perfumed: a North African larder staple."
+        },
+        {
+          "stem": "which-part",
+          "front": "Which part of a preserved lemon does the cook use?",
+          "back": "The rind, rinsed and finely chopped. The pulp is mostly set aside, or squeezed for its salty juice."
+        },
+        {
+          "stem": "season-after",
+          "front": "When is a dish salted that takes preserved lemon?",
+          "back": "After the lemon goes in, never before: the rind carries more salt than it seems."
+        },
+        {
+          "stem": "make-it",
+          "front": "How is a preserved lemon made?",
+          "back": "Cut in a cross, packed with about 15 g (1 tbsp) of coarse salt a lemon, pressed into a jar under lemon juice, and left three to four weeks at room temperature, turned every few days."
+        },
+        {
+          "stem": "keeping",
+          "front": "How long does a batch keep, and what is the one rule?",
+          "back": "Months in the fridge, as long as the lemons stay under the juice. Exposed fruit is where mould starts."
+        },
+        {
+          "stem": "where-it-works",
+          "front": "Name four places preserved lemon works.",
+          "back": "A beurre blanc, an aïoli, a braise of fennel and a dressing for roasted vegetables: anywhere a salty, perfumed lift is wanted without sharp acid."
+        },
+        {
+          "stem": "against-fresh",
+          "front": "How do preserved lemon, fresh lemon, lemon confit and Meyer lemon differ?",
+          "back": "Fresh gives sharp acid, added at the end; preserved gives salt and perfume and can cook; citron confit usually means the same salt cure but can mean sugar-cooked slices; Meyer is sweeter and more floral."
+        },
+        {
+          "stem": "meyer",
+          "front": "What is a Meyer lemon?",
+          "back": "A lemon thought to be a cross with an orange, brought to the United States from China by the plant explorer Frank Meyer in 1908: sweeter, thinner-skinned and more floral."
+        },
+        {
+          "stem": "lineup",
+          "front": "Why is the preserved lemon batch a lineup question?",
+          "back": "The cure takes weeks and the keeping months, so whether the kitchen cures its own, what went in and how long the batch has stood are the chef's answers, never a guess at the table."
+        },
+        {
+          "stem": "brennans",
+          "front": "Where does preserved lemon appear at Brennan's?",
+          "back": "In the beurre blanc on the Redfish Véronique, with harissa on the Smoked Cauliflower, and in the aïoli on the Fall 2026 Fish Bouillabaisse."
+        }
+      ],
+      "questions": [
+        {
+          "stem": "q-what",
+          "q": "What turns a fresh lemon into a preserved lemon?",
+          "answer": "Weeks in salt and its own juice",
+          "distractors": [
+            "A slow simmer in sugar syrup",
+            "A night in white wine vinegar",
+            "Drying in a low oven"
+          ],
+          "why": "Salt draws out the juice and the rind softens under it over three to four weeks; the sugar method is the other meaning of lemon confit, and it is sweet.",
+          "teaches": "what-it-is"
+        },
+        {
+          "stem": "q-which-part",
+          "q": "Which part of a preserved lemon goes into a beurre blanc?",
+          "answer": "The rind, rinsed and chopped",
+          "distractors": [
+            "The pulp, mashed",
+            "The pips, crushed",
+            "The whole lemon, sliced"
+          ],
+          "why": "The cured rind carries the salt and perfume; the pulp is mostly set aside because it is bitter and very salty.",
+          "teaches": "which-part"
+        },
+        {
+          "stem": "q-season",
+          "q": "A cook is finishing a dish with preserved lemon. When is it salted?",
+          "answer": "After the lemon goes in",
+          "distractors": [
+            "Before, as always",
+            "Never; the lemon replaces all salt",
+            "Only if the lemon was rinsed"
+          ],
+          "why": "The rind carries more salt than it seems, so the dish is tasted after the lemon and salted only then.",
+          "teaches": "season-after"
+        },
+        {
+          "stem": "q-salt",
+          "q": "About how much coarse salt goes into each lemon for the cure?",
+          "answer": "About 15 g (1 tbsp)",
+          "distractors": [
+            "A pinch",
+            "About 150 g (5 oz)",
+            "None; the juice does the work"
+          ],
+          "why": "Each lemon takes about 15 g (1 tbsp) pressed into its cut faces, with a spoonful on top; too little salt leaves the rind firm and the jar at risk.",
+          "teaches": "make-it"
+        },
+        {
+          "stem": "q-mould",
+          "q": "A jar of preserved lemons has grown mould. What was the likely cause?",
+          "answer": "The lemons were not kept under the juice",
+          "distractors": [
+            "Too much salt in the jar",
+            "The jar was turned too often",
+            "The lemons were unwaxed"
+          ],
+          "why": "Fruit exposed above the juice is where mould starts; the batch is packed tight, topped up with juice and kept submerged for months.",
+          "teaches": "keeping"
+        },
+        {
+          "stem": "q-meyer",
+          "q": "How does a Meyer lemon differ from an ordinary lemon?",
+          "answer": "Sweeter, thinner-skinned and more floral",
+          "distractors": [
+            "Larger, thicker-skinned and sharper",
+            "Green, seedless and very sour",
+            "Salted on the tree before picking"
+          ],
+          "why": "Thought to be a cross with an orange and brought from China in 1908 by Frank Meyer, it makes a gentler preserved lemon that cures faster.",
+          "teaches": "meyer"
+        },
+        {
+          "stem": "q-brennans",
+          "q": "On which Brennan's dish does preserved lemon flavour a beurre blanc?",
+          "answer": "Redfish Véronique",
+          "distractors": [
+            "Smoked Cauliflower",
+            "Fish Bouillabaisse",
+            "Swordfish Grenobloise"
+          ],
+          "why": "The Véronique's butter sauce carries the preserved lemon; the cauliflower pairs it with harissa, and the bouillabaisse puts it in the aïoli.",
+          "teaches": "brennans"
+        }
+      ]
+    },
+    {
+      "stem": "beef-tenderloin",
+      "slug": "beef-tenderloin",
+      "title": "Beef tenderloin and the Chateaubriand",
+      "say": "As it reads: beef tenderloin; Chateaubriand, shah-toh-bree-AHN.",
+      "level": 1,
+      "kind": "ingredient",
+      "summary": "The tenderloin is the long, lean muscle along the inside of the backbone that does almost no work, so it is the most tender cut and the mildest. The filet mignon, the Chateaubriand and the steak tartare are all cut from it.",
+      "guest": "The Chateaubriand is the thick centre of the tenderloin, the most tender cut, roasted whole for two to the temperature you choose and carved; lean, so at its best pink, with a rich sauce.",
+      "sections": [
+        {
+          "key": "what",
+          "paras": [
+            "The tenderloin is the long, tapering muscle that lies along the inside of the backbone. It does almost no work, so its fibres stay fine and it carries little connective tissue, the most tender cut on the animal. It is also lean: tenderness and marbling are different things, and the tenderloin has the first without much of the second, so its flavour is mild and it leans on its crust and its sauce."
+          ]
+        },
+        {
+          "key": "buying",
+          "paras": [
+            "A whole tenderloin comes in three parts. The head is the thick end. The centre cut is the even cylinder in the middle, and that is the Chateaubriand, say shah-toh-bree-AHN, the roast for two. The tail is thin, best for tartare or medallions. The chain, a sinewy strip along one side, is pulled away for stock, and the silverskin, a pearly membrane that never melts in cooking, is sliced off with the tip of a thin knife held flat.",
+            "USDA Prime is the most marbled beef from young cattle, Choice the broad middle, Select the leanest; the grade is a quality stamp, not a cut. Creekstone Farms, the Black Angus producer named on the Roasted Chateaubriand and the hanger steaks, grades Prime and Choice, so say Prime only where the menu prints it."
+          ]
+        },
+        {
+          "key": "how",
+          "paras": [
+            "A thick centre cut is cooked like a small roast. Trim it, tie it so it keeps an even shape, and salt it. Sear it hard on every side to a deep brown crust, then move it to an oven at about 200°C (392°F) and roast it until the centre reaches the temperature the guest asked for; a 700 g (1.5 lb) Chateaubriand takes roughly 15 to 25 minutes to medium-rare.",
+            "Pull it early, because the centre keeps rising as it rests. Rest it on a board for about ten minutes, then carve thick slices across the grain, so every slice has a crust and a pink heart."
+          ]
+        },
+        {
+          "key": "family",
+          "paras": [
+            "The filet mignon is a thick steak cut across the tenderloin, 170 to 225 g (6 to 8 oz). A Chateaubriand is the centre cut roasted whole for two. Served raw, the tenderloin becomes steak tartare, say tar-TAR: trimmed of every sinew, cut by hand, never minced in a machine, which turns it pasty and grey, and dressed at the last moment with yolk, mustard, capers and shallot. Because it is raw, the consumer advisory is given before the order is taken."
+          ]
+        },
+        {
+          "key": "faults",
+          "paras": [
+            "A grey band under the crust and a dry centre: roasted too hot for too long, or not rested; pull it earlier and rest it. No crust: the meat was wet or the pan not hot enough. A chewy, grey tartare: minced by machine or cut hours ahead; cut it by hand, cold, to order."
+          ]
+        },
+        {
+          "key": "history",
+          "paras": [
+            "The name Chateaubriand is said to come from Montmireil, chef to the writer François-René de Chateaubriand, who around 1822 roasted the thick cut between two lesser steaks that were thrown away; by Escoffier's Guide of 1903 the Chateaubriand is simply a thick cut from the centre of the fillet, grilled for two. The tartare has an ancestor rather than an inventor: Escoffier's Le Guide Culinaire of 1903 records beefsteak à l'Américaine, chopped raw fillet with a yolk, capers, onion and parsley beside it."
+          ]
+        },
+        {
+          "key": "brennans",
+          "paras": [
+            "At Brennan's the pack carries the tenderloin on four plates. The Roasted Chateaubriand is Creekstone Farms tenderloin roasted whole for two at $120, with glazed summer squash and sauce Foyot; ask the temperature once for the table. The Chateau Espagnole on the Fall 2026 sheet is a 340 g (12 oz) centre cut with frascarelli and sauce Espagnole: no price, method, serving count or producer is printed, so promise none. The Steak Tartare with Rye is raw tenderloin, chopped and dressed. The Petite Filet Mignon is the fourth course of the Traditional Breakfast."
+          ]
+        },
+        {
+          "key": "service",
+          "paras": [
+            "Say Chateaubriand, shah-toh-bree-AHN, and tartare, tar-TAR. Describe the tenderloin as the most tender cut and a lean one, served pink because it has little fat to carry it further. Take the temperature with the order, repeat it back and write it down; a whole roast takes longer than a steak, so say so. For the tartare, say raw before anything else and give the consumer advisory; questions about the egg yolk, the portion or the beef's source go to the kitchen."
+          ]
+        }
+      ],
+      "ratios": [
+        {
+          "label": "A whole tenderloin",
+          "value": "About 2.3 to 3.2 kg (5 to 7 lb) untrimmed, trimming to roughly 1.4 to 1.8 kg (3 to 4 lb) once the chain, fat and silverskin are off"
+        },
+        {
+          "label": "A filet mignon",
+          "value": "170 to 225 g (6 to 8 oz), cut thick across the muscle"
+        },
+        {
+          "label": "Roasting a Chateaubriand",
+          "value": "Seared on every side, then about 15 to 25 minutes at 200°C (392°F) for a 700 g (1.5 lb) cut to medium-rare"
+        },
+        {
+          "label": "The rest",
+          "value": "About ten minutes on a board before carving across the grain"
+        }
+      ],
+      "temps": [
+        {
+          "label": "Oven for roasting a Chateaubriand after the sear",
+          "c": 200,
+          "f": 392
+        }
+      ],
+      "faults": [
+        {
+          "fault": "Grey band and a dry centre",
+          "cause": "Roasted too hot for too long, or carved without a rest.",
+          "fix": "Pull it earlier, since the centre keeps rising, and rest it about ten minutes."
+        },
+        {
+          "fault": "No crust",
+          "cause": "A wet surface or a pan that was not hot enough.",
+          "fix": "Dry the meat, heat the pan hard and sear every side before the oven."
+        },
+        {
+          "fault": "Pasty, grey tartare",
+          "cause": "Minced by machine, or cut hours ahead and left to stand.",
+          "fix": "Cut by hand, cold, and dress it to order."
+        },
+        {
+          "fault": "Slices that fall apart or chew",
+          "cause": "Carved along the grain, or straight from the oven.",
+          "fix": "Rest it, then carve thick slices across the grain."
+        }
+      ],
+      "brennans": [
+        {
+          "dish": "d-8onx3lq1",
+          "components": [
+            "Chateaubriand, the center cut",
+            "Cooking a Chateaubriand: sear, roast, rest"
+          ],
+          "how": "The sheet prints a 340 g (12 oz) centre cut with frascarelli and sauce Espagnole, and no price, method, temperatures, serving count or producer, so learn those at lineup and never promise a plate for two."
+        },
+        {
+          "dish": "d-5wcuejdy",
+          "components": [
+            "Chateaubriand",
+            "Creekstone Farms beef"
+          ],
+          "how": "Creekstone Farms Black Angus tenderloin, the centre cut roasted whole for two at $120 with glazed summer squash and sauce Foyot. Ask the temperature once for the table, set the timing, and confirm at lineup where it is carved."
+        },
+        {
+          "dish": "d-jlc7ybty",
+          "components": [
+            "Beef tenderloin, served raw"
+          ],
+          "how": "Raw beef tenderloin, chopped and dressed, never cooked: say raw first and give the consumer advisory before the order. How it is cut, the portion and where the beef comes from are not printed, so ask the chef at lineup."
+        }
+      ],
+      "seeAlso": {
+        "entries": [
+          "chateaubriand-foyot",
+          "hanger-steak-bearnaise",
+          "pan-roast-and-poele",
+          "roast-and-baste",
+          "cooking-temperatures",
+          "cuts-by-name",
+          "choron-and-foyot",
+          "espagnole",
+          "capers"
+        ],
+        "techniques": [
+          "resting-meat-and-slicing-against-the-grain"
+        ],
+        "lexicon": [
+          "tenderloin-filet-mignon",
+          "fillet-steak-loin-and-collar",
+          "grass-fed-vs-grain-finished"
+        ],
+        "recipes": [
+          "sunday-roast-beef-and-yorkshire-puddings"
+        ],
+        "kitchen": [
+          "steak-bearnaise",
+          "beef-wellington"
+        ],
+        "plates": [
+          "beef-cuts"
+        ],
+        "folios": [
+          "chateaubriand-study"
+        ],
+        "deck": [
+          "fd_0093",
+          "fd_0315",
+          "fd_0217",
+          "fd_0294"
+        ],
+        "components": [
+          "Chateaubriand, the center cut",
+          "Chateaubriand",
+          "Creekstone Farms beef",
+          "Beef tenderloin, served raw",
+          "USDA beef grades: Prime, Choice and Select",
+          "Steak tartare"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Beef grades and standards, USDA Agricultural Marketing Service",
+          "url": "https://www.ams.usda.gov/grades-standards/beef",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "FDA Food Code 2022, U.S. Food and Drug Administration",
+          "url": "https://www.fda.gov/food/fda-food-code/food-code-2022",
+          "asOf": "2026-10-17",
+          "year": 2022
+        },
+        {
+          "title": "A Guide to Modern Cookery, A. Escoffier (London: Heinemann, 1907), Project Gutenberg eBook 71395",
+          "url": "https://www.gutenberg.org/ebooks/71395",
+          "year": 1907
+        },
+        {
+          "title": "Brennan's, Dinner menu",
+          "url": "https://www.brennansneworleans.com/menus/dinner/",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "Brennan's, Traditional Breakfast tasting menu",
+          "url": "https://www.brennansneworleans.com/menus/breakfasttastingmenu/",
+          "asOf": "2026-10-17"
+        }
+      ],
+      "cards": [
+        {
+          "stem": "what-it-is",
+          "front": "Why is the tenderloin the most tender cut?",
+          "back": "It is the muscle along the inside of the backbone that does almost no work, so its fibres stay fine and it carries little connective tissue."
+        },
+        {
+          "stem": "lean",
+          "front": "Why does a tenderloin lean on its sauce?",
+          "back": "Tenderness and marbling are different things: the tenderloin is tender but lean, so its flavour is mild and it dries past medium."
+        },
+        {
+          "stem": "three-parts",
+          "front": "Name the three parts of a tenderloin and what each is for.",
+          "back": "The head, the thick end, for filets; the centre cut, the Chateaubriand, roasted for two; the tail, thin, for tartare, medallions or a stir-fry."
+        },
+        {
+          "stem": "trim",
+          "front": "What are the chain and the silverskin?",
+          "back": "The chain is the sinewy strip along the side, pulled off for stock; the silverskin is the pearly membrane that never melts, sliced off with a thin knife held flat; left on, it tightens as it cooks and chews like gristle."
+        },
+        {
+          "stem": "grades",
+          "front": "What are USDA Prime, Choice and Select?",
+          "back": "Quality grades, not cuts: Prime the most marbled beef from young cattle, Choice the broad middle, Select the leanest."
+        },
+        {
+          "stem": "creekstone",
+          "front": "Who supplies the beef for the Roasted Chateaubriand?",
+          "back": "Creekstone Farms, a Black Angus producer that grades Prime and Choice; say Prime only where the menu prints it."
+        },
+        {
+          "stem": "sear-roast-rest",
+          "front": "How is a Chateaubriand cooked?",
+          "back": "Tied, salted and seared hard on every side, then roasted at about 200°C (392°F) to the guest's temperature, pulled early and rested about ten minutes before carving across the grain."
+        },
+        {
+          "stem": "pink",
+          "front": "Why is the tenderloin served pink?",
+          "back": "It has little fat to carry it further: past medium a lean cut dries out, which is why the rest and a rich sauce matter."
+        },
+        {
+          "stem": "tartare",
+          "front": "How is steak tartare cut, and what is said first?",
+          "back": "Trimmed of every sinew and cut by hand, never minced by machine, which turns it pasty and grey; the server says raw first and gives the consumer advisory."
+        },
+        {
+          "stem": "name",
+          "front": "Where does the name Chateaubriand come from?",
+          "back": "A story: Montmireil, chef to the writer François-René de Chateaubriand, is said to have roasted the thick cut around 1822 between two lesser steaks that were thrown away."
+        },
+        {
+          "stem": "brennans",
+          "front": "Which four Brennan's plates are cut from the tenderloin?",
+          "back": "The Roasted Chateaubriand for two with sauce Foyot, the Fall 2026 Chateau Espagnole, the Steak Tartare with Rye and the Petite Filet Mignon on the Traditional Breakfast."
+        }
+      ],
+      "questions": [
+        {
+          "stem": "q-tender",
+          "q": "Why is the tenderloin the most tender cut on the animal?",
+          "answer": "It does almost no work",
+          "distractors": [
+            "It is the most marbled muscle",
+            "It is aged longer than other cuts",
+            "It is cut from the shoulder"
+          ],
+          "why": "The muscle lies along the inside of the backbone and barely moves, so its fibres stay fine and it carries little connective tissue; marbling is a different quality.",
+          "teaches": "what-it-is"
+        },
+        {
+          "stem": "q-centre",
+          "q": "Which part of the tenderloin is the Chateaubriand?",
+          "answer": "The centre cut",
+          "distractors": [
+            "The tapering tail",
+            "The chain along the side",
+            "The thick head end"
+          ],
+          "why": "The even cylinder in the middle is roasted whole for two; the head goes to filets and the tail to tartare and medallions.",
+          "teaches": "three-parts"
+        },
+        {
+          "stem": "q-silverskin",
+          "q": "What happens if the silverskin is left on a tenderloin?",
+          "answer": "It never melts and chews like gristle",
+          "distractors": [
+            "It melts and bastes the roast",
+            "It adds a deeper crust",
+            "It keeps the centre pink"
+          ],
+          "why": "The pearly membrane never melts in cooking, so it is sliced off with the tip of a thin knife held flat before the meat is tied.",
+          "teaches": "trim"
+        },
+        {
+          "stem": "q-grades",
+          "q": "What does a USDA grade of Prime, Choice or Select describe?",
+          "answer": "The marbling and the age of the animal",
+          "distractors": [
+            "The cut the butcher took",
+            "The weight of the carcass",
+            "The breed of the cattle"
+          ],
+          "why": "The grade is a quality stamp, not a cut: Prime is the most marbled beef from young cattle, Choice the middle and Select the leanest.",
+          "teaches": "grades"
+        },
+        {
+          "stem": "q-rest",
+          "q": "A Chateaubriand comes out of the oven. What happens next?",
+          "answer": "It rests, then is carved across the grain",
+          "distractors": [
+            "It is carved at once, along the grain",
+            "It goes back into the pan to finish",
+            "It is chilled so it slices cleanly"
+          ],
+          "why": "The centre keeps rising as it rests, and a rested roast cut across the grain gives slices with a crust and a pink heart that part easily.",
+          "teaches": "sear-roast-rest"
+        },
+        {
+          "stem": "q-pink",
+          "q": "Why is the tenderloin served pink rather than well done?",
+          "answer": "It is lean and dries past medium",
+          "distractors": [
+            "Its fat needs heat to render",
+            "Its grain is too loose to cook through",
+            "The sauce would curdle on hot meat"
+          ],
+          "why": "Tenderness and marbling are different things; the tenderloin has little fat to carry it further, so it is pulled early, rested and served with a rich sauce.",
+          "teaches": "pink"
+        },
+        {
+          "stem": "q-tartare",
+          "q": "A guest orders the Steak Tartare with Rye. What does the server say first?",
+          "answer": "That the beef is raw, with the consumer advisory",
+          "distractors": [
+            "That it is lightly seared on one side",
+            "That the egg yolk is cooked",
+            "That it serves two"
+          ],
+          "why": "The sheet names raw beef tenderloin, chopped and dressed, never cooked, and the advisory is given before the order; the yolk and the portion are kitchen questions.",
+          "teaches": "tartare"
+        },
+        {
+          "stem": "q-brennans",
+          "q": "Which Brennan's plate serves the tenderloin whole for two with sauce Foyot?",
+          "answer": "The Roasted Chateaubriand",
+          "distractors": [
+            "The Chateau Espagnole",
+            "The Petite Filet Mignon",
+            "The Creole-Spiced Hanger Steak"
+          ],
+          "why": "The Roasted Chateaubriand is the $120 dinner plate for two; the Chateau Espagnole is a 340 g (12 oz) cut whose serving count is not printed, so never promise it for two.",
+          "teaches": "brennans"
+        }
+      ]
+    }
+  ]
+}

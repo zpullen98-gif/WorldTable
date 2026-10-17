@@ -1,0 +1,1531 @@
+{
+  "entries": [
+    {
+      "stem": "eggs-and-yolks",
+      "slug": "eggs-and-yolks",
+      "title": "Eggs and yolks",
+      "say": "As it reads: eggs and yolks.",
+      "level": 1,
+      "kind": "ingredient",
+      "summary": "The hen's egg is the kitchen's binder, leavener, emulsifier and sauce base: a white of water and protein around a yolk of fat and lecithin. Freshness, grade and size decide how it poaches, peels and holds a sauce.",
+      "guest": "Poached on the Hussarde, soft-boiled on the Owen, and sunny side up on the breakfast hanger, with a Vital Farms pasture-raised egg. If you would like one cooked differently, I will ask the kitchen.",
+      "sections": [
+        {
+          "key": "what",
+          "paras": [
+            "A hen's egg is two foods in one shell. The white, about two thirds of the weight, is water and protein: it sets firm with heat, whips to a foam and lifts a bake. The yolk holds the fat, flavour and colour, and carries lecithin, a natural emulsifier that lets it hold droplets of butter or oil apart in a little water. That is why a yolk can build hollandaise, béarnaise, mayonnaise and a tartare dressing.",
+            "The egg is thus the kitchen's binder, leavener, emulsifier and sauce base: a whole egg binds a forcemeat, whipped whites lift a soufflé, a yolk holds a warm emulsion, and yolks in hot cream make a custard. A large egg weighs about 50 g (1.75 oz) out of the shell, a third of it yolk."
+          ]
+        },
+        {
+          "key": "buying",
+          "paras": [
+            "American eggs are graded AA, A and B on the shell, the white and the yolk, and sized by the weight of a dozen: large eggs weigh 680 g (24 oz) a dozen. A fresh egg cracked onto a plate shows a thick white standing close round a tall, domed yolk; an older egg spreads thin and flat and its yolk breaks easily.",
+            "The poaching egg must be fresh, because only a thick white gathers round the yolk in the water; a thin white feathers into rags. The egg for boiling is better a week old: as an egg ages, carbon dioxide escapes through the shell, the white's acidity falls and the membrane under the shell lets go, so it peels clean where a fresh one tears. Keep eggs at 7°C (45°F) or below.",
+            "The carton describes the hen's life, not the egg's grade. Cage-free means no cages but perhaps no outdoors; free-range means some access outside, with no set space; pasture-raised, as Vital Farms prints it, means at least 108 square feet (10 square metres) of rotated outdoor pasture a hen. Never promise a yolk colour: it changes with diet and season."
+          ]
+        },
+        {
+          "key": "how",
+          "paras": [
+            "Heat sets an egg in stages: the white thickens from about 62°C (144°F), is a tender, milky solid by 65°C (149°F) and firms fully nearer 80°C (176°F); the yolk thickens from about 65°C (149°F) and is firm by about 70°C (158°F). A poached egg, cooked out of its shell in water just below a simmer for about three minutes, has a set white and a running yolk; a hard-boiled egg goes past both marks and can be grated. Frying, boiling and the omelette belong to eggs to order.",
+            "Cured, a yolk becomes a seasoning: buried in salt and sugar for a day or more, rinsed and dried at a low heat until firm enough to grate, it is egg yolk bottarga, say boh-TAR-gah, named for the salted, dried fish roe it imitates. Raw, a yolk with mustard binds a tartare dressing. Raw or lightly cooked, it is the egg the consumer advisory covers; whether a yolk comes from a pasteurised egg is the kitchen's answer, and the rest is in the entry on eggs and safety."
+          ]
+        },
+        {
+          "key": "brennans",
+          "paras": [
+            "At Brennan's the egg is poached on the Eggs Hussarde and the Eggs Sardou, soft-boiled on the Eggs Owen, sunny side up on the breakfast Creole-Spiced Hanger Steak and the Duck Confit Waffle, folded into the Crab & Corn Omelette, grated hard-boiled over the Turtle Soup, and cured as the egg yolk bottarga on the Steak Tartare Cannoli; the yolk also builds the hollandaise, béarnaise, Choron and Foyot.",
+            "The menus name Vital Farms on the breakfast hanger's egg and, on the fall sheet, on the yolk of the Steak Tartare with Rye; whose eggs go into the other plates is the chef's answer. That tartare's dressing holds egg as well, so taking the yolk off does not take egg out of the plate: send the question to the kitchen."
+          ]
+        },
+        {
+          "key": "service",
+          "paras": [
+            "Say how the egg is cooked: soft poached on the Hussarde and the Sardou, and check with the kitchen before promising a firmer egg. For pasture-raised, say Vital Farms, every hen with at least 108 square feet of outdoor pasture, only of the plates that print the name. For a raw or lightly cooked egg, say the consumer advisory first and send the pasteurised question to the kitchen; egg as an allergen goes to the service note and the kitchen."
+          ]
+        }
+      ],
+      "ratios": [
+        {
+          "label": "A large egg, out of the shell",
+          "value": "About 50 g (1.75 oz): roughly 33 g (1.2 oz) of white and 17 g (0.6 oz) of yolk"
+        },
+        {
+          "label": "A dozen large eggs",
+          "value": "680 g (24 oz) in the shell, the United States size standard"
+        },
+        {
+          "label": "Pasture-raised, as Vital Farms prints it",
+          "value": "At least 108 square feet (10 square metres) of rotated pasture a hen"
+        }
+      ],
+      "temps": [
+        {
+          "label": "The white begins to thicken",
+          "c": 62,
+          "f": 144
+        },
+        {
+          "label": "The white is set, tender; the yolk begins to thicken",
+          "c": 65,
+          "f": 149
+        },
+        {
+          "label": "The yolk is firm by about",
+          "c": 70,
+          "f": 158
+        },
+        {
+          "label": "The white firms fully, nearer",
+          "c": 80,
+          "f": 176
+        },
+        {
+          "label": "Keep eggs at or below",
+          "c": 7,
+          "f": 45
+        }
+      ],
+      "faults": [
+        {
+          "fault": "A poached egg that feathers into rags",
+          "cause": "An older egg with a thin white, which will not gather round the yolk in the water.",
+          "fix": "Poach the freshest eggs and keep the older ones for boiling and baking."
+        },
+        {
+          "fault": "A boiled egg that will not peel",
+          "cause": "The egg was too fresh, so the membrane still clung to the shell.",
+          "fix": "Boil eggs a week or more old, cool them in iced water and peel under running water."
+        },
+        {
+          "fault": "A grey ring round a hard-boiled yolk",
+          "cause": "The egg was cooked too long or too hard, so iron in the yolk met sulphur from the white at the edge.",
+          "fix": "Cook to time, then cool the eggs at once in iced water."
+        },
+        {
+          "fault": "A yolk that will not hold its butter or oil",
+          "cause": "The fat went in faster than the lecithin could coat it, or the base was too cool.",
+          "fix": "Whisk the fat in drop by drop until it takes; the rescues belong to the entry on breaking and rescuing."
+        }
+      ],
+      "brennans": [
+        {
+          "dish": "d-jlc7ybty",
+          "components": [
+            "Vital Farms egg yolk, on the tartare",
+            "Vital Farms egg",
+            "Eggs"
+          ],
+          "how": "The fall sheet names a Vital Farms yolk on the Steak Tartare with Rye, for richness, and egg is in the dressing too; whether the yolk is raw or pasteurised, and where it sits on the plate, are the kitchen's answers."
+        },
+        {
+          "dish": "d-1q0xk7jv",
+          "components": [
+            "Eggs",
+            "The poached egg"
+          ],
+          "how": "The Hussarde's eggs are soft poached, cooked out of the shell in water held below a simmer until the white sets and the yolk runs; check with the kitchen before promising a firmer egg."
+        },
+        {
+          "dish": "d-4jee8o34",
+          "components": [
+            "Vital Farms egg",
+            "Eggs cooked to order",
+            "Eggs"
+          ],
+          "how": "On the breakfast Creole-Spiced Hanger Steak a Vital Farms egg is served sunny side up beside the steak and the smoked potato pavé, its runny yolk meeting the béarnaise."
+        },
+        {
+          "dish": "d-0w2k5cdm",
+          "components": [
+            "Egg yolk bottarga",
+            "Eggs"
+          ],
+          "how": "Yolks cured in salt and sugar, dried firm and grated over the Steak Tartare Cannoli in place of a raw yolk; it is the only dish on the current menus with cured yolk, so it is not a standing house preparation."
+        }
+      ],
+      "seeAlso": {
+        "entries": [
+          "eggs",
+          "eggs-to-order",
+          "hollandaise",
+          "mayonnaise",
+          "eggs-hussarde",
+          "eggs-sardou",
+          "eggs-owen",
+          "poaching",
+          "hanger-steak-bearnaise",
+          "brennans-turtle-soup",
+          "creme-anglaise",
+          "sabayon",
+          "breaking-and-rescuing"
+        ],
+        "techniques": [
+          "poaching-eggs",
+          "egg-wash-and-the-bakers-shine"
+        ],
+        "lexicon": [
+          "tempering-eggs-and-chocolate",
+          "custards-anglaise-patissiere-and-curds"
+        ],
+        "recipes": [
+          "the-french-omelette"
+        ],
+        "kitchen": [
+          "eggs-benedict",
+          "fried-eggs-basted-and-over-easy",
+          "soft-boiled-eggs-and-soldiers",
+          "oeufs-brouilles"
+        ],
+        "folios": [
+          "poached-egg-standard",
+          "eggs-hussarde-components"
+        ],
+        "components": [
+          "Eggs",
+          "Vital Farms egg",
+          "Vital Farms egg yolk, on the tartare",
+          "Egg yolk bottarga",
+          "The poached egg",
+          "Eggs cooked to order",
+          "The tartare dressing"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Shell Egg Grades and Standards, USDA Agricultural Marketing Service",
+          "url": "https://www.ams.usda.gov/grades-standards/shell-egg-grades-and-standards",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "Shell Eggs from Farm to Table, USDA Food Safety and Inspection Service",
+          "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/eggs/shell-eggs-farm-table",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "FDA Food Code, US Food and Drug Administration",
+          "url": "https://www.fda.gov/food/retail-food-protection/fda-food-code",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "Vital Farms, pasture-raised eggs",
+          "url": "https://vitalfarms.com/",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "Brennan’s, Breakfast & Lunch menu",
+          "url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "Brennan’s, Dinner menu",
+          "url": "https://www.brennansneworleans.com/menus/dinner/",
+          "asOf": "2026-10-17"
+        }
+      ],
+      "cards": [
+        {
+          "stem": "what-it-is",
+          "front": "What are the two parts of an egg, and what does each do in the kitchen?",
+          "back": "The white, water and protein, sets firm, whips to a foam and lifts a bake; the yolk, fat and flavour, carries lecithin, the emulsifier that holds butter or oil in a sauce."
+        },
+        {
+          "stem": "four-jobs",
+          "front": "Name the egg's four jobs in a kitchen.",
+          "back": "Binder, leavener, emulsifier and sauce base: a whole egg binds a forcemeat, whipped whites lift a soufflé, a yolk holds a hollandaise, and yolks in hot cream make a custard."
+        },
+        {
+          "stem": "lecithin",
+          "front": "Why can a yolk hold a hollandaise, a mayonnaise or a tartare dressing together?",
+          "back": "Its lecithin coats each droplet of butter or oil so it cannot join the next, as long as the fat goes in slowly enough for the yolk to take it."
+        },
+        {
+          "stem": "fresh-egg",
+          "front": "How do you tell a fresh egg from an old one on the plate?",
+          "back": "A fresh egg's thick white stands close round a tall, domed yolk; an old egg spreads thin and flat and its yolk breaks easily."
+        },
+        {
+          "stem": "poach-fresh",
+          "front": "Why must the poaching egg be fresh?",
+          "back": "Only a thick, fresh white gathers round the yolk in the water; a thin, older white feathers into rags."
+        },
+        {
+          "stem": "peel-old",
+          "front": "Why does an older egg peel cleanly where a fresh one tears?",
+          "back": "As an egg ages, carbon dioxide escapes, the white's acidity falls and the membrane under the shell lets go more easily, so a week-old egg peels clean."
+        },
+        {
+          "stem": "sizes",
+          "front": "What does a large egg weigh, and what is the American standard for a dozen?",
+          "back": "About 50 g (1.75 oz) out of the shell, roughly 33 g (1.2 oz) of white and 17 g (0.6 oz) of yolk; a dozen large eggs weigh 680 g (24 oz) in the shell."
+        },
+        {
+          "stem": "set-temps",
+          "front": "At what temperatures do the white and the yolk set?",
+          "back": "The white begins to thicken at about 62°C (144°F), is a tender solid by 65°C (149°F) and firms fully nearer 80°C (176°F); the yolk thickens from about 65°C (149°F) and is firm by about 70°C (158°F)."
+        },
+        {
+          "stem": "pasture-raised",
+          "front": "What does pasture-raised mean on the Vital Farms carton?",
+          "back": "Each hen has at least 108 square feet (10 square metres) of rotated outdoor pasture; cage-free and free-range set no such space."
+        },
+        {
+          "stem": "cured-yolk",
+          "front": "What is egg yolk bottarga?",
+          "back": "Yolks buried in salt and sugar for a day or more, rinsed and dried at a low heat until firm enough to grate, named for the salted, dried fish roe it imitates."
+        },
+        {
+          "stem": "menu-ways",
+          "front": "How does the Brennan's menu cook an egg?",
+          "back": "Poached on the Hussarde and Sardou, soft-boiled on the Owen, sunny side up on the breakfast hanger and the Duck Confit Waffle, folded into the Crab & Corn Omelette, grated over the turtle soup, and cured as yolk bottarga on the tartare cannoli."
+        },
+        {
+          "stem": "raw-yolk",
+          "front": "A guest asks about the raw yolk on the Steak Tartare with Rye. What do you say?",
+          "back": "The consumer advisory first; whether the yolk is pasteurised is the kitchen's answer, and egg is in the dressing too, so taking the yolk off does not take egg out of the plate."
+        }
+      ],
+      "questions": [
+        {
+          "stem": "q-lecithin",
+          "q": "What in the yolk lets it hold butter or oil in a sauce?",
+          "answer": "Lecithin, a natural emulsifier",
+          "distractors": [
+            "Albumen, the white's protein",
+            "Gelatine from the shell membrane",
+            "Starch stored in the yolk"
+          ],
+          "why": "Lecithin coats each droplet of fat so it cannot join the next, which is how a yolk builds hollandaise, mayonnaise and the tartare dressing.",
+          "teaches": "lecithin"
+        },
+        {
+          "stem": "q-fresh",
+          "q": "Cracked onto a plate, how does a fresh egg look?",
+          "answer": "Thick white standing close round a domed yolk",
+          "distractors": [
+            "Thin white spread flat round a broken yolk",
+            "A cloudy white with a pale, sunken yolk",
+            "A white that runs clear as water"
+          ],
+          "why": "The thick white and tall yolk are the marks of freshness; with age the white thins and spreads and the yolk's membrane weakens.",
+          "teaches": "fresh-egg"
+        },
+        {
+          "stem": "q-poach",
+          "q": "Which egg goes to the poaching pan, and why?",
+          "answer": "The freshest, so the white gathers round the yolk",
+          "distractors": [
+            "The oldest, so the white sets faster",
+            "Any egg, as long as it is at room temperature",
+            "A pasteurised egg, so the white stays clear"
+          ],
+          "why": "Only a thick, fresh white holds together in the water; an older, thinner white feathers into rags and is better kept for boiling.",
+          "teaches": "poach-fresh"
+        },
+        {
+          "stem": "q-peel",
+          "q": "Why does a week-old egg peel more cleanly than a fresh one?",
+          "answer": "Its membrane has loosened as the egg aged",
+          "distractors": [
+            "Its shell has grown thinner in the fridge",
+            "Its yolk has shrunk away from the shell",
+            "Its white has turned firmer with age"
+          ],
+          "why": "As an egg ages, carbon dioxide escapes, the white's acidity falls and the membrane under the shell lets go, so the shell comes away clean.",
+          "teaches": "peel-old"
+        },
+        {
+          "stem": "q-set",
+          "q": "At about what temperature does an egg white begin to set?",
+          "answer": "62°C (144°F)",
+          "distractors": [
+            "40°C (104°F)",
+            "85°C (185°F)",
+            "100°C (212°F)"
+          ],
+          "why": "The white thickens from about 62°C (144°F) and is a tender solid by 65°C (149°F); the yolk follows, firm by about 70°C (158°F), and every egg dish stops somewhere between.",
+          "teaches": "set-temps"
+        },
+        {
+          "stem": "q-pasture",
+          "q": "What does pasture-raised mean on the Vital Farms carton?",
+          "answer": "At least 108 square feet of outdoor pasture a hen",
+          "distractors": [
+            "The hens are kept in a barn without cages",
+            "The hens may go outside, with no set space",
+            "The hens are fed only grass and no grain"
+          ],
+          "why": "Vital Farms' standard gives each hen at least 108 square feet (10 square metres) of rotated pasture; cage-free and free-range promise less and set no space.",
+          "teaches": "pasture-raised"
+        },
+        {
+          "stem": "q-bottarga",
+          "q": "How is the egg yolk bottarga on the tartare cannoli made?",
+          "answer": "Yolks cured in salt and sugar, then dried",
+          "distractors": [
+            "Yolks whipped with butter and set cold",
+            "Yolks poached and pressed into a cake",
+            "Yolks smoked over pecan wood until firm"
+          ],
+          "why": "The yolks are buried in salt and sugar for a day or more, rinsed and dried at a low heat until firm enough to grate, like the fish roe the name comes from.",
+          "teaches": "cured-yolk"
+        },
+        {
+          "stem": "q-raw",
+          "q": "A guest asks whether the yolk on the Steak Tartare with Rye is pasteurised. What do you do?",
+          "answer": "Give the advisory and ask the kitchen",
+          "distractors": [
+            "Say yes, every yolk we serve is pasteurised",
+            "Offer to leave the yolk off so there is no egg",
+            "Say no, the kitchen never uses pasteurised eggs"
+          ],
+          "why": "Whether a yolk comes from a pasteurised egg is the kitchen's answer, and egg is in the dressing as well, so leaving the yolk off does not take egg out of the plate.",
+          "teaches": "raw-yolk"
+        },
+        {
+          "stem": "q-menu",
+          "q": "On which Brennan's dish is a hard-boiled egg grated over the plate?",
+          "answer": "Turtle Soup",
+          "distractors": [
+            "Eggs Hussarde",
+            "Eggs Owen",
+            "Creole-Spiced Hanger Steak"
+          ],
+          "why": "A hard-boiled egg is grated over the Turtle Soup; the Hussarde's egg is poached, the Owen's soft-boiled and the breakfast hanger's sunny side up.",
+          "teaches": "menu-ways"
+        }
+      ]
+    },
+    {
+      "stem": "butter",
+      "slug": "butter",
+      "title": "Butter",
+      "say": "As it reads: butter.",
+      "level": 1,
+      "kind": "ingredient",
+      "summary": "Cream churned until its fat gathers: about 80 per cent fat with water and milk solids, which is why butter browns, burns and splits. The kitchen clarifies it, chills it or mounts it to suit the job, and cooks with unsalted.",
+      "guest": "Butter is in nearly every savoury plate we serve: it starts the pan, builds the warm sauces and finishes the rest. If you have a dairy question, I will check with the kitchen.",
+      "sections": [
+        {
+          "key": "what",
+          "paras": [
+            "Butter is cream churned until its fat gathers into grains and the buttermilk runs off: about 80 per cent milk fat, the American minimum, with around 16 per cent water and a little milk solids. Those two small parts explain what butter does in a pan. The water is why butter spits and foams as it melts, the foam being water boiling off at 100°C (212°F); the solids are what brown, nutty and sweet, and what burn, bitter and black, a few seconds later. Whole butter smokes at about 150°C (302°F), too low for a hard sear; clarified, with water and solids gone, it takes about 250°C (482°F).",
+            "Sweet butter, the kitchen's word for unsalted, is the cook's butter, because salt is then the cook's decision, measured at the pan; salted butter carries about 1.5 to 2 per cent salt and belongs to the bread basket. Cultured butter is churned from cream ripened with lactic cultures, as most French butter is, and tastes faintly tangy. European-style butters are churned to 82 per cent fat and above, drier and richer, which matters in pastry, where less water means a crisper layer."
+          ]
+        },
+        {
+          "key": "family",
+          "paras": [
+            "Butter has four jobs on the menu. It is the fat a pan starts in, for a sweated shallot, a meunière, the Bananas Foster. It is the body of a warm emulsion, the fat that egg yolk holds in a hollandaise or béarnaise and that a reduction holds on its own in a beurre blanc. It is the gloss a sauce takes when cold butter is swirled in at the end, monter au beurre, which rounds and thickens it. And cooked until its solids toast, it is a sauce in its own right: brown butter, beurre noisette, say burr nwah-ZET."
+          ]
+        },
+        {
+          "key": "how",
+          "paras": [
+            "Keep butter in three states. Cold, from the fridge at 4°C (39°F), for lamination and for beurre blanc: cold butter folded into dough stays in sheets, and cold butter whisked into a reduction melts slowly enough to be caught as an emulsion. Soft, at room temperature, for creaming with sugar and for compound butters. Clarified, melted and skimmed with the water and solids lifted away, for the high heat of a sauté and a steadier hollandaise. Butter melts at about 32 to 35°C (90 to 95°F), just below the warmth of the mouth, so it feels rich on the tongue, and a sauce mounted with it must never boil again."
+          ]
+        },
+        {
+          "key": "history",
+          "paras": [
+            "In France butter draws a line across the country: the north and west, Normandy, Brittany and the Charentes, cook with butter, the south with olive oil and the south west with duck and goose fat. Brittany's butter is salted, and tradition ties that to the old salt tax, the gabelle, which Brittany did not pay under the monarchy, so salt stayed cheap there; Normandy's is sweet."
+          ]
+        },
+        {
+          "key": "brennans",
+          "paras": [
+            "On the menu, butter is the brown butter on the Swordfish Grenobloise, stopped with acid as its solids toast nutty, and the warm brown butter vinaigrette on the Louisiana Crab Claws, the browned butter sharpened with acid and finished with fines herbes. It is the butter the frascarelli on the Chateau Espagnole are finished in, tossed until starch and fat make a glossy coat; the sheet prints only finished in butter, so anything else in that pan is the kitchen's answer.",
+            "It is the preserved lemon beurre blanc on the Redfish Véronique, cold butter whisked into a wine, vinegar and shallot reduction with no egg, and the butter melted with brown sugar into a bubbling caramel that the Bananas Foster starts in at the table."
+          ]
+        },
+        {
+          "key": "service",
+          "paras": [
+            "Butter travels through more plates than a guest expects. Never answer from memory whether a plate has butter in it; whose butter the kitchen buys is not printed, and a dairy question goes to the service note and the kitchen every time. Say what butter does: brown butter is butter cooked until it tastes of hazelnuts, beurre blanc is a butter sauce without egg, and the Foster's caramel starts with butter and brown sugar in the pan."
+          ]
+        }
+      ],
+      "ratios": [
+        {
+          "label": "Milk fat in butter",
+          "value": "At least 80 per cent in America; European-style 82 per cent and above"
+        },
+        {
+          "label": "Water in a block",
+          "value": "About 16 per cent, which boils off as foam"
+        },
+        {
+          "label": "Salt in salted butter",
+          "value": "About 1.5 to 2 per cent"
+        }
+      ],
+      "temps": [
+        {
+          "label": "The water boils off as foam",
+          "c": 100,
+          "f": 212
+        },
+        {
+          "label": "Whole butter smokes at about",
+          "c": 150,
+          "f": 302
+        },
+        {
+          "label": "Clarified butter smokes at about",
+          "c": 250,
+          "f": 482
+        },
+        {
+          "label": "Butter melts from about",
+          "c": 32,
+          "f": 90
+        },
+        {
+          "label": "Cold, for lamination and beurre blanc",
+          "c": 4,
+          "f": 39
+        }
+      ],
+      "faults": [
+        {
+          "fault": "Black, bitter butter in the pan",
+          "cause": "Taken past brown, or held in a pan hotter than whole butter can bear.",
+          "fix": "Start again; stop a brown butter with lemon or stock the moment it smells nutty, and use clarified butter or oil for a hard sear."
+        },
+        {
+          "fault": "A sauce gone oily after the butter went in",
+          "cause": "It boiled after mounting, or the butter went in too hot or too fast and the emulsion let go.",
+          "fix": "Off the heat, whisk in a spoonful of cold water or stock; the full rescues belong to the entry on breaking and rescuing."
+        },
+        {
+          "fault": "Butter that tastes of the fridge",
+          "cause": "Left unwrapped next to onions, fish or anything strong.",
+          "fix": "Wrap it, keep it apart from strong smells and take out only what the shift needs."
+        },
+        {
+          "fault": "Tough, greasy pastry",
+          "cause": "The butter softened and melted into the flour instead of staying in cold layers.",
+          "fix": "Cold butter, cold hands, a cold bench, and rest the dough in the fridge between folds."
+        }
+      ],
+      "brennans": [
+        {
+          "dish": "d-jgihqqda",
+          "components": [
+            "Butter",
+            "Brown butter"
+          ],
+          "how": "The Swordfish Grenobloise is finished with brown butter, butter cooked until its milk solids toast to hazelnut and stopped with acid, with fried capers and parsley in the Grenobloise garnish."
+        },
+        {
+          "dish": "d-8onx3lq1",
+          "components": [
+            "Butter",
+            "Finishing pasta in butter"
+          ],
+          "how": "The frascarelli are finished in butter, tossed in the pan until starch and fat make a glossy coat on every piece; the sheet prints only finished in butter, so anything else in the pan is the kitchen's answer."
+        },
+        {
+          "dish": "d-s1bqzuks",
+          "components": [
+            "Butter"
+          ],
+          "how": "The Redfish Véronique carries a preserved lemon beurre blanc: cold butter whisked piece by piece into a reduction of white wine, vinegar and shallot, with no egg yolk, salty and perfumed against the flaky fish."
+        },
+        {
+          "dish": "d-w6h1p19m",
+          "components": [
+            "Butter",
+            "Bananas, butter, brown sugar and cinnamon"
+          ],
+          "how": "Bananas Foster starts with butter melted with brown sugar in the pan at the table until it bubbles to a blond caramel, dusted with cinnamon, before the bananas, the rum and the flame."
+        }
+      ],
+      "seeAlso": {
+        "entries": [
+          "clarified-butter",
+          "beurre-noisette-and-noir",
+          "beurre-blanc",
+          "beurre-monte",
+          "compound-butters",
+          "monter-au-beurre",
+          "breaking-and-rescuing",
+          "hollandaise",
+          "meuniere",
+          "redfish-veronique",
+          "bananas-foster-at-the-table",
+          "chateaubriand-foyot",
+          "cream"
+        ],
+        "techniques": [
+          "brown-butter",
+          "creaming-butter-and-sugar",
+          "rendering-fat-and-cooking-in-what-runs-out"
+        ],
+        "lexicon": [
+          "butterfat-fluency-butter-cream-and-cultures",
+          "fat-the-flavor-carrier"
+        ],
+        "recipes": [
+          "beurre-blanc-the-cold-butter-mount",
+          "beurre-monte-butter-held-liquid"
+        ],
+        "deck": [
+          "fd_0160",
+          "fd_0161",
+          "fd_0163",
+          "fd_0162"
+        ],
+        "components": [
+          "Butter",
+          "Brown butter",
+          "Finishing pasta in butter",
+          "Beurre blanc",
+          "Bananas, butter, brown sugar and cinnamon"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Butter, Encyclopaedia Britannica",
+          "url": "https://www.britannica.com/topic/butter",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "Butter Grades and Standards, USDA Agricultural Marketing Service",
+          "url": "https://www.ams.usda.gov/grades-standards/butter-grades-and-standards",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "Brennan’s, Dinner menu",
+          "url": "https://www.brennansneworleans.com/menus/dinner/",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "Brennan’s, Bananas Foster recipe",
+          "url": "https://www.brennansneworleans.com/recipes/bananas-foster/",
+          "asOf": "2026-10-17"
+        }
+      ],
+      "cards": [
+        {
+          "stem": "what-it-is",
+          "front": "What is butter, and how much of it is fat?",
+          "back": "Cream churned until its fat gathers and the buttermilk runs off: at least 80 per cent milk fat in America, with around 16 per cent water and a little milk solids."
+        },
+        {
+          "stem": "water-and-solids",
+          "front": "Why does butter foam, brown and burn?",
+          "back": "The water boils off as foam at 100°C (212°F); the milk solids then toast nutty and brown, and a few seconds later burn bitter and black."
+        },
+        {
+          "stem": "smoke-points",
+          "front": "Why does a hard sear want clarified butter rather than whole?",
+          "back": "Whole butter smokes at about 150°C (302°F) because its solids burn; clarified, with the water and solids gone, it takes about 250°C (482°F)."
+        },
+        {
+          "stem": "unsalted",
+          "front": "Why does the kitchen cook with unsalted butter?",
+          "back": "So salt is the cook's decision, measured at the pan: salted butter carries about 1.5 to 2 per cent salt, which the cook cannot take out."
+        },
+        {
+          "stem": "cultured-european",
+          "front": "What are cultured and European-style butters?",
+          "back": "Cultured butter is churned from cream ripened with lactic cultures, faintly tangy; European-style is churned to 82 per cent fat and above, drier and richer, which gives crisper pastry."
+        },
+        {
+          "stem": "four-jobs",
+          "front": "What are butter's four jobs on the menu?",
+          "back": "The fat a pan starts in, the body of a warm emulsion, the gloss of a sauce mounted at the end, and brown butter as a sauce in its own right."
+        },
+        {
+          "stem": "three-states",
+          "front": "When is butter kept cold, soft or clarified?",
+          "back": "Cold for lamination and beurre blanc, soft at room temperature for creaming and compound butters, clarified for the high heat of a sauté and a steadier hollandaise."
+        },
+        {
+          "stem": "melt",
+          "front": "At what temperature does butter melt, and why does that matter?",
+          "back": "At about 32 to 35°C (90 to 95°F), just below the warmth of the mouth, which is why it feels rich on the tongue and why a sauce mounted with it must not boil again."
+        },
+        {
+          "stem": "salted-history",
+          "front": "Why is Brittany's butter salted and Normandy's sweet?",
+          "back": "Tradition ties it to the old salt tax, the gabelle, which Brittany did not pay, so salt stayed cheap there; Normandy, the Charentes and the kitchen's cooking butter are sweet, meaning unsalted."
+        },
+        {
+          "stem": "brennans-plates",
+          "front": "Where does butter show on the Brennan's plates this entry names?",
+          "back": "Brown butter on the Swordfish Grenobloise and the crab claws, the frascarelli finished in butter on the Chateau Espagnole, the beurre blanc on the Redfish Véronique and the pan the Bananas Foster starts in."
+        },
+        {
+          "stem": "dairy-question",
+          "front": "A guest asks whether a dish has butter in it. What do you do?",
+          "back": "Never answer from memory: butter travels through sauces, sides and pans a guest does not expect, so the service note and the kitchen hold the answer, as for any dairy question."
+        }
+      ],
+      "questions": [
+        {
+          "stem": "q-fat",
+          "q": "About how much of a block of American butter is milk fat?",
+          "answer": "80 per cent",
+          "distractors": [
+            "50 per cent",
+            "65 per cent",
+            "95 per cent"
+          ],
+          "why": "American butter is at least 80 per cent milk fat, with around 16 per cent water and a little milk solids; European-style butters run to 82 per cent and above.",
+          "teaches": "what-it-is"
+        },
+        {
+          "stem": "q-foam",
+          "q": "Butter foams when it melts in a pan. What is the foam?",
+          "answer": "Its water boiling off",
+          "distractors": [
+            "Its milk solids toasting",
+            "Air whipped in at the churn",
+            "Salt dissolving into the fat"
+          ],
+          "why": "Butter is about 16 per cent water, which boils away as foam at 100°C (212°F); only once it is gone do the milk solids begin to brown.",
+          "teaches": "water-and-solids"
+        },
+        {
+          "stem": "q-smoke",
+          "q": "Why does whole butter burn in a pan hot enough to sear?",
+          "answer": "Its milk solids scorch at about 150°C (302°F)",
+          "distractors": [
+            "Its water turns to steam and catches fire",
+            "Its salt scorches on the metal",
+            "Its fat breaks down at 100°C (212°F)"
+          ],
+          "why": "Whole butter smokes at about 150°C (302°F) because its solids scorch; clarified butter, with the solids gone, takes about 250°C (482°F).",
+          "teaches": "smoke-points"
+        },
+        {
+          "stem": "q-unsalted",
+          "q": "Why does a professional kitchen cook with unsalted butter?",
+          "answer": "So salt stays the cook's decision",
+          "distractors": [
+            "Because unsalted butter keeps longer",
+            "Because salted butter will not brown",
+            "Because unsalted butter has more fat"
+          ],
+          "why": "Salted butter carries about 1.5 to 2 per cent salt that cannot be taken out; with sweet butter the cook measures the salt at the pan.",
+          "teaches": "unsalted"
+        },
+        {
+          "stem": "q-cold",
+          "q": "For which job must the butter be cold from the fridge?",
+          "answer": "A beurre blanc",
+          "distractors": [
+            "Creaming with sugar",
+            "A compound butter",
+            "A high-heat sauté"
+          ],
+          "why": "Cold butter whisked into a reduction melts slowly enough to be caught as an emulsion, and cold butter folded into dough stays in sheets; the other jobs want soft or clarified butter.",
+          "teaches": "three-states"
+        },
+        {
+          "stem": "q-four-jobs",
+          "q": "Which of these is one of butter's four jobs on the menu?",
+          "answer": "The gloss of a sauce mounted at the end",
+          "distractors": [
+            "The crust on a blackened fish",
+            "The smoke in a tasso ham",
+            "The acid that sharpens a mignonette"
+          ],
+          "why": "Butter starts the pan, gives a warm emulsion its body, glosses a sauce mounted at the end and, browned, is a sauce in its own right; the other three come from spice, smoke and vinegar.",
+          "teaches": "four-jobs"
+        },
+        {
+          "stem": "q-melt",
+          "q": "At about what temperature does butter melt?",
+          "answer": "32 to 35°C (90 to 95°F)",
+          "distractors": [
+            "10 to 15°C (50 to 59°F)",
+            "60 to 65°C (140 to 149°F)",
+            "100°C (212°F)"
+          ],
+          "why": "Butter melts just below the warmth of the mouth, which is why it feels rich on the tongue and why a sauce mounted with it is kept warm and never boiled again.",
+          "teaches": "melt"
+        },
+        {
+          "stem": "q-brennans",
+          "q": "Which Brennan's dish carries a beurre blanc, a butter sauce with no egg?",
+          "answer": "Redfish Véronique",
+          "distractors": [
+            "Swordfish Grenobloise",
+            "Chateau Espagnole",
+            "Eggs Hussarde"
+          ],
+          "why": "The Véronique's preserved lemon beurre blanc is cold butter whisked into a wine, vinegar and shallot reduction; the Grenobloise carries brown butter, the Chateau Espagnole butter-finished frascarelli and the Hussarde hollandaise.",
+          "teaches": "brennans-plates"
+        },
+        {
+          "stem": "q-dairy",
+          "q": "A guest asks whether the leeks under the redfish have butter in them. What do you do?",
+          "answer": "Check the service note and ask the kitchen",
+          "distractors": [
+            "Say no, vegetables are cooked in oil",
+            "Say yes, everything here is cooked in butter",
+            "Guess from the look of the plate"
+          ],
+          "why": "Butter travels through more plates than a guest expects, so a question about it, like any dairy question, goes to the service note and the kitchen, never to memory.",
+          "teaches": "dairy-question"
+        }
+      ]
+    },
+    {
+      "stem": "cream",
+      "slug": "cream",
+      "title": "Cream and crème fraîche",
+      "say": "As it reads: cream; creme fraiche, krem FRESH.",
+      "level": 1,
+      "kind": "ingredient",
+      "summary": "Cream is the fat skimmed from milk, sold by its fat: the more fat, the better it whips, the harder it can boil and the less it splits. Crème fraîche is cream thickened and soured by cultures, and mascarpone its richer Italian cousin.",
+      "guest": "Crème fraîche is a cultured French cream, richer and milder than sour cream with a gentle tang, whipped on our coffee cake. If you have a dairy question, I will check with the kitchen.",
+      "sections": [
+        {
+          "key": "what",
+          "paras": [
+            "Cream is the fat skimmed from milk, and everything it does follows from its fat. Fat is what whips: below about 30 per cent the fat globules cannot trap air. Fat is what boils: a rich cream, low in protein, can be simmered hard and reduced without curdling. And fat resists splitting when acid or salt meets it. American labels are set by law: half-and-half at 10.5 to under 18 per cent, light cream at 18 to under 30, light whipping cream at 30 to under 36 and heavy cream at 36 and above, the cream a kitchen buys.",
+            "British labels run on the same scale with other names: single cream at about 18 per cent, whipping at 35, double at 48 and clotted at 55, so a British recipe's double cream is richer than American heavy cream and reduces faster. Any dairy question goes to the service note and the kitchen."
+          ]
+        },
+        {
+          "key": "family",
+          "paras": [
+            "Crème fraîche, say krem FRESH, is cream thickened and gently soured by lactic cultures, the same kind that sour buttermilk, held warm at about 20 to 24°C (68 to 75°F) for a day until it sets. It carries at least 30 per cent fat, which is why it behaves unlike sour cream: it can be stirred into a hot sauce or simmered without splitting, and it whips. Its slightly nutty tang lifts a sweet plate and cuts a rich one. A kitchen cultures its own from heavy cream and a spoonful of buttermilk, left covered overnight.",
+            "Mascarpone, say mas-kar-POH-nay, is the Italian cousin: cream thickened with a little acid and drained rather than cultured, at about 45 per cent fat by weight, richer than heavy cream (the higher figure often quoted is of its dry matter), sweet, dense and spoonable, the body of a tiramisu. Both whip like cream, lightened with a little of it."
+          ]
+        },
+        {
+          "key": "how",
+          "paras": [
+            "Cream enters a sauce in one of two ways. Reduced on its own, it is simmered in a wide pan until it has lost a third to a half and coats the back of a spoon, the nappe; it may boil, because its fat protects it, but it catches on the bottom, so swirl the pan. Stirred in off the heat, a splash softens and rounds a finished sauce. Acid and salt go in last, once the cream has reduced: lemon, wine or mustard stirred into a thin, simmering cream can grain it, and mustard boiled loses its bite.",
+            "Whipping beats air into fat. Everything cold, the cream at 4°C (39°F), the bowl and the whisk too, because cold fat globules partly join around each bubble and hold it. At soft peaks the cream holds a shape that falls over at the tip, for folding into a mousse or spooning beside a dessert; at firm peaks the tip stands, for piping. A minute past firm the cream turns grainy and then, as the fat gathers, to butter and buttermilk: there is no road back, so stop early and finish by hand."
+          ]
+        },
+        {
+          "key": "brennans",
+          "paras": [
+            "On the menu, cream is the mustard cream sauce on the Poussin à la Moutarde, the bistro classic of shallot softened in butter, white wine reduced, cream simmered and mustard stirred in off the heat, over a sweet tea-brined fried Cornish hen; tonight's build, the mustard included, is the kitchen's answer. It is the Creamed Spinach side: the classic build is spinach blanched, squeezed dry and chopped, bound with reduced cream or a light béchamel and finished with Parmesan and nutmeg, but the menu prints only its name, so whether ours carries Parmesan, like the Sardou's, or flour is the kitchen's answer.",
+            "It is the whipped crème fraîche on the Café Brûlot Coffee Cake, and crème fraîche is the cool, silky layer in the Steak Tartare Cannoli too. And it is the fall Chocolate Crémeux, an anglaise set with chocolate, which can set on its chocolate alone but takes a little gelatine for a firmer set; the sheet marks gelatine as present, so its source, pork, beef or fish, and a vegetarian guest's question both go to the kitchen."
+          ]
+        },
+        {
+          "key": "service",
+          "paras": [
+            "Describe crème fraîche as a slightly tangy cultured cream, richer and milder than sour cream, and say krem FRESH. Call the Poussin's sauce a French mustard cream over Southern fried chicken, the whole idea of the dish. Cream hides in sauces and sides a guest may not expect, so a dairy question is never answered from memory: it goes to the service note and the kitchen."
+          ]
+        }
+      ],
+      "ratios": [
+        {
+          "label": "Cream that whips",
+          "value": "At least 30 per cent fat; heavy cream is 36 per cent and above"
+        },
+        {
+          "label": "British labels",
+          "value": "Single about 18 per cent, whipping 35, double 48, clotted 55"
+        },
+        {
+          "label": "A cream reduction",
+          "value": "Reduce 250 ml (1 cup) by a third to a half, until it coats the back of a spoon"
+        },
+        {
+          "label": "Home-cultured crème fraîche",
+          "value": "250 ml (1 cup) of heavy cream with 15 ml (1 tbsp) of buttermilk, covered overnight at room temperature"
+        }
+      ],
+      "temps": [
+        {
+          "label": "Whip cream cold, from",
+          "c": 4,
+          "f": 39
+        },
+        {
+          "label": "Crème fraîche cultures from about",
+          "c": 20,
+          "f": 68
+        },
+        {
+          "label": "and up to about",
+          "c": 24,
+          "f": 75
+        }
+      ],
+      "faults": [
+        {
+          "fault": "A cream sauce gone grainy or curdled",
+          "cause": "Acid or salt went in while the cream was thin, or a low-fat cream was boiled.",
+          "fix": "Reduce heavy cream first and add lemon, wine or mustard last, off the heat."
+        },
+        {
+          "fault": "Cream that will not whip",
+          "cause": "The cream, the bowl or the room was warm, or the cream had too little fat.",
+          "fix": "Chill the cream, the bowl and the whisk, and use heavy cream at 36 per cent or more."
+        },
+        {
+          "fault": "Whipped cream gone grainy and yellow",
+          "cause": "Beaten past firm peaks, so the fat gathered and began to turn to butter.",
+          "fix": "If only just grainy, fold in a little unwhipped cream by hand; past that it is butter, so start again."
+        },
+        {
+          "fault": "Cream scorched on the bottom of the pan",
+          "cause": "Left unstirred in a narrow pan over a hard flame.",
+          "fix": "Reduce in a wide pan over moderate heat, swirling, and never walk away."
+        },
+        {
+          "fault": "Watery creamed spinach",
+          "cause": "The blanched spinach was not squeezed dry before the cream went in.",
+          "fix": "Squeeze the spinach hard after blanching, then bind it with reduced cream."
+        }
+      ],
+      "brennans": [
+        {
+          "dish": "d-l5877hs6",
+          "components": [
+            "Mustard cream sauce"
+          ],
+          "how": "The classic mustard cream sauce is shallot softened in butter, white wine reduced, cream simmered and mustard stirred in off the heat so it keeps its bite; ours goes over the sweet tea-brined fried Cornish hen, and what goes into tonight's sauce, the mustard included, is the kitchen's answer."
+        },
+        {
+          "dish": "d-nhcrhwrw",
+          "components": [
+            "Creamed spinach"
+          ],
+          "how": "Creamed Spinach, a breakfast and lunch side, prints only its name; the classic build is spinach blanched, squeezed dry, bound with reduced cream or a light béchamel and finished with Parmesan and nutmeg, and whether ours carries Parmesan or flour, and whether it is the Sardou's spinach, are the kitchen's answers."
+        },
+        {
+          "dish": "d-husneh7o",
+          "components": [
+            "Whipping cream",
+            "Crème fraîche"
+          ],
+          "how": "The Café Brûlot Coffee Cake is served with whipped crème fraîche, cold cultured cream beaten to soft peaks, whose tang keeps the cake from being too sweet."
+        },
+        {
+          "dish": "d-kgmv4fmp",
+          "components": [
+            "Setting a cream with gelatine"
+          ],
+          "how": "The Chocolate Crémeux is an anglaise set with chocolate, and the sheet marks gelatine, so treat it as present: whether it is pork, beef or fish, and whether the course can be made without it, are the kitchen's answers."
+        }
+      ],
+      "seeAlso": {
+        "entries": [
+          "creme-anglaise",
+          "bavarian-cream",
+          "thickeners-and-liaisons",
+          "creole-heirlooms",
+          "bananas-foster",
+          "butter",
+          "eggs-sardou",
+          "creme-patissiere",
+          "cafe-brulot",
+          "bechamel"
+        ],
+        "techniques": [
+          "churning-ice-cream",
+          "tempering-a-custard"
+        ],
+        "lexicon": [
+          "butterfat-fluency-butter-cream-and-cultures",
+          "cream-cheese-and-its-kin",
+          "infusion-steeping-flavor-into-fat-cream-and-syrup"
+        ],
+        "recipes": [
+          "cream-reduction-the-sauce-that-may-boil",
+          "panna-cotta"
+        ],
+        "kitchen": [
+          "swedish-meatballs"
+        ],
+        "deck": [
+          "fd_0263",
+          "fd_0252",
+          "fd_0260"
+        ],
+        "components": [
+          "Mustard cream sauce",
+          "Creamed spinach",
+          "Whipping cream",
+          "Crème fraîche",
+          "Setting a cream with gelatine"
+        ],
+        "terms": [
+          "dairy-cremefraiche"
+        ]
+      },
+      "sources": [
+        {
+          "title": "21 CFR 131.150, Heavy cream, Electronic Code of Federal Regulations",
+          "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-131/subpart-B/section-131.150",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "Brennan’s, Dinner menu",
+          "url": "https://www.brennansneworleans.com/menus/dinner/",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "Brennan’s, Breakfast & Lunch menu",
+          "url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "Brennan’s, Dessert menu",
+          "url": "https://www.brennansneworleans.com/menus/dessert/",
+          "asOf": "2026-10-17"
+        }
+      ],
+      "cards": [
+        {
+          "stem": "by-fat",
+          "front": "How is cream sold, and why does the fat matter?",
+          "back": "By its fat: fat is what whips, what lets a cream boil without curdling and what resists splitting when acid or salt meets it; below about 30 per cent it cannot hold air."
+        },
+        {
+          "stem": "us-labels",
+          "front": "What are the American cream labels by fat?",
+          "back": "Half-and-half 10.5 to under 18 per cent, light cream 18 to under 30, light whipping cream 30 to under 36, heavy cream 36 and above, the one a kitchen buys."
+        },
+        {
+          "stem": "british-labels",
+          "front": "What are single, whipping, double and clotted cream in Britain?",
+          "back": "About 18, 35, 48 and 55 per cent fat; British double cream is richer than American heavy cream, so a sauce written for it reduces faster."
+        },
+        {
+          "stem": "creme-fraiche",
+          "front": "What is crème fraîche, and how do you say it?",
+          "back": "Cream thickened and gently soured by lactic cultures, at least 30 per cent fat, richer and milder than sour cream; it can be simmered without splitting and it whips; whipped on the coffee cake, and the cool layer in the Steak Tartare Cannoli. Say krem FRESH."
+        },
+        {
+          "stem": "mascarpone",
+          "front": "What is mascarpone, and how is it made?",
+          "back": "The Italian cousin, say mas-kar-POH-nay: cream thickened with a little acid and drained, at about 45 per cent fat by weight, richer than heavy cream; the 60 per cent and more often quoted is a share of its dry matter. Sweet, dense and spoonable."
+        },
+        {
+          "stem": "reduce",
+          "front": "How is cream reduced for a sauce, and when do acid and salt go in?",
+          "back": "Simmered in a wide pan until it loses a third to a half and coats a spoon; it may boil but must be swirled. Acid and salt go in last, once it has reduced, so it stays smooth."
+        },
+        {
+          "stem": "whip-cold",
+          "front": "Why must the cream and the bowl be cold to whip?",
+          "back": "Cold fat globules partly join around each air bubble and hold it; warm ones slide apart, and cream under about 30 per cent fat cannot hold air at all."
+        },
+        {
+          "stem": "peaks",
+          "front": "What are soft and firm peaks for?",
+          "back": "Soft peaks, which fall over at the tip, for folding into a mousse or spooning beside a dessert; firm peaks, which stand, for piping."
+        },
+        {
+          "stem": "over-beaten",
+          "front": "What happens to cream beaten past firm peaks?",
+          "back": "It turns grainy and then, as the fat gathers, to butter and buttermilk; there is no road back, so stop early and finish by hand."
+        },
+        {
+          "stem": "mustard-cream",
+          "front": "How is the mustard cream sauce on the Poussin made?",
+          "back": "In the classic way: shallot softened in butter, white wine reduced, cream simmered and mustard stirred in off the heat, because boiling dulls its bite; ours goes over sweet tea-brined fried Cornish hen, and tonight's build is the kitchen's answer."
+        },
+        {
+          "stem": "gelatine",
+          "front": "Why does the sheet mark gelatine on the Chocolate Crémeux?",
+          "back": "A crémeux, an anglaise set with chocolate, can set on its chocolate alone, but a little gelatine gives a firmer, cleaner set; the sheet marks it, so its source, pork, beef or fish, is the kitchen's answer."
+        },
+        {
+          "stem": "dairy-question",
+          "front": "A guest asks about dairy in the Creamed Spinach: who answers, you or the kitchen?",
+          "back": "The service note and the kitchen, every time: cream hides in sauces and sides a guest does not expect, so it is never answered from memory."
+        }
+      ],
+      "questions": [
+        {
+          "stem": "q-whip-fat",
+          "q": "What is the least fat a cream needs to whip?",
+          "answer": "About 30 per cent",
+          "distractors": [
+            "About 10 per cent",
+            "About 18 per cent",
+            "About 48 per cent"
+          ],
+          "why": "Below about 30 per cent the fat globules cannot trap air; heavy cream, at 36 per cent and above, is what a kitchen whips.",
+          "teaches": "by-fat"
+        },
+        {
+          "stem": "q-heavy",
+          "q": "What is the American standard for heavy cream?",
+          "answer": "At least 36 per cent fat",
+          "distractors": [
+            "At least 18 per cent fat",
+            "At least 30 per cent fat",
+            "At least 48 per cent fat"
+          ],
+          "why": "Heavy cream is 36 per cent and above by law; light whipping cream is 30 to under 36, light cream 18 to under 30 and half-and-half 10.5 to under 18.",
+          "teaches": "us-labels"
+        },
+        {
+          "stem": "q-double",
+          "q": "A British recipe calls for double cream. How does it differ from American heavy cream?",
+          "answer": "It is richer, at about 48 per cent fat",
+          "distractors": [
+            "It is lighter, at about 18 per cent fat",
+            "It is the same cream under another name",
+            "It is cultured, like crème fraîche"
+          ],
+          "why": "British double cream is about 48 per cent fat against heavy cream's 36 and above, so it whips faster and a sauce written for it reduces sooner.",
+          "teaches": "british-labels"
+        },
+        {
+          "stem": "q-cf",
+          "q": "What is crème fraîche, and what thickens it?",
+          "answer": "Cream soured and thickened by cultures",
+          "distractors": [
+            "Cream whipped with sugar until firm",
+            "Cream reduced by half over heat",
+            "Cream curdled with lemon and drained"
+          ],
+          "why": "Lactic cultures thicken and gently sour the cream; at least 30 per cent fat, it is richer and milder than sour cream and does not split when warmed.",
+          "teaches": "creme-fraiche"
+        },
+        {
+          "stem": "q-acid",
+          "q": "When does lemon or mustard go into a cream sauce?",
+          "answer": "Last, once the cream has reduced",
+          "distractors": [
+            "First, before the cream goes in",
+            "Halfway, while the cream is simmering",
+            "Never; acid always curdles cream"
+          ],
+          "why": "Acid stirred into a thin, simmering cream can grain it, and mustard boiled loses its bite; once the cream has reduced its fat protects it and the sauce stays smooth.",
+          "teaches": "reduce"
+        },
+        {
+          "stem": "q-cold",
+          "q": "Why must the cream, the bowl and the whisk be cold for whipping?",
+          "answer": "Cold fat holds the air bubbles",
+          "distractors": [
+            "Cold cream has more fat in it",
+            "Cold stops the sugar dissolving",
+            "Cold keeps the cream from souring"
+          ],
+          "why": "Cold fat globules partly join around each bubble and hold it; warm ones slide apart, and the cream never thickens.",
+          "teaches": "whip-cold"
+        },
+        {
+          "stem": "q-overbeat",
+          "q": "Whipped cream has gone grainy and yellow in the bowl. What has happened?",
+          "answer": "It is turning to butter",
+          "distractors": [
+            "It has been under-whipped",
+            "The sugar went in too early",
+            "The cream was too cold"
+          ],
+          "why": "Past firm peaks the fat gathers and the cream separates into butter and buttermilk; there is no road back, so stop early and finish by hand.",
+          "teaches": "over-beaten"
+        },
+        {
+          "stem": "q-mustard",
+          "q": "Why does the mustard go into the Poussin's cream sauce off the heat?",
+          "answer": "Boiling dulls its bite and can make it bitter",
+          "distractors": [
+            "Heat would curdle the cream around it",
+            "It melts into the cream only when cool",
+            "It would colour the sauce too dark"
+          ],
+          "why": "The sauce is shallot, reduced white wine and simmered cream; mustard stirred in at the end keeps its tang, which boiling would dull.",
+          "teaches": "mustard-cream"
+        },
+        {
+          "stem": "q-gelatine",
+          "q": "A guest asks whether the Chocolate Crémeux is set with gelatine and what kind. What do you say?",
+          "answer": "The sheet marks gelatine; its source is the kitchen's answer",
+          "distractors": [
+            "It sets on chocolate alone, so there is none",
+            "It is pork gelatine, like every dessert here",
+            "It is fish gelatine, so there is no pork in it"
+          ],
+          "why": "A crémeux can set on its chocolate alone, but the training sheet marks gelatine on ours, so treat it as present and send its source, pork, beef or fish, to the kitchen.",
+          "teaches": "gelatine"
+        }
+      ]
+    },
+    {
+      "stem": "mushrooms",
+      "slug": "mushrooms",
+      "title": "Mushrooms",
+      "say": "As it reads: mushrooms.",
+      "level": 1,
+      "kind": "ingredient",
+      "summary": "The cultivated kinds a kitchen buys, button to king oyster, and the wild ones by season; a mushroom is mostly water, so it browns only in a hot, uncrowded pan with the salt held back. Dried, pickled or preserved, it keeps its savoury depth.",
+      "guest": "Maggie's Mushrooms is our mushroom side, earthy and savoury; I can tell you which mushrooms the kitchen has tonight and how they are cooked, and they are a natural beside the Chateaubriand.",
+      "sections": [
+        {
+          "key": "what",
+          "paras": [
+            "A mushroom is the fruit of a fungus, and to a cook it is two things at once: about 90 per cent water, and a store of glutamates, the compounds behind the savoury depth, umami, of aged cheese and cured ham. Cooking drives off the water and concentrates the rest, so a handful shrinks to a spoonful that tastes of so much. White button, cremini and portobello are one species, Agaricus bisporus: the white strain sold small as the button, and the brown strain sold young as cremini and broad, dark and open-capped as portobello, deeper in flavour as it matures.",
+            "Shiitake, say shee-TAH-kee, is long grown on logs in Japan and China, meaty and smoky, with a tough stem that goes to the stockpot. Oyster mushrooms grow in soft, fan-shaped shelves and cook in moments; king oyster has a thick stem that slices into scallop-like coins. The wild kinds come by season: morels in spring, chanterelles and black trumpets through summer and autumn, cèpes, the porcini of Italy, in autumn, dear because nobody farms them. Buy them dry and firm; keep them cold in paper, never plastic, and wipe or rinse them quickly and dry them rather than soaking, since they drink water."
+          ]
+        },
+        {
+          "key": "how",
+          "paras": [
+            "Three rules make mushrooms brown instead of steam. A hot pan, the fat shimmering. No crowding: a single layer, in batches if need be, because a crowded pan drops in temperature and the water the mushrooms release pools and boils them grey. And salt late: salt draws water out, so a mushroom salted at the start gives up its juice before it can colour. Leave them until golden, then toss and season. Butter burns at the heat they want, so start them in oil and add butter, garlic and herbs at the end.",
+            "What the mushrooms release is mushroom liquor, never poured away but reduced into the stock or the sauce. Duxelles, say dook-SEL, is mushrooms chopped fine and cooked slowly with shallot in butter until the pan is dry, a paste for stuffing, pastry or a sauce, named, it is said, for the Marquis d'Uxelles, whose cook was La Varenne. In a brown sauce, mushrooms sweated with shallot before the stock and wine go in give a marchand de vin its earthy base. Dried mushrooms soaked 20 to 30 minutes in warm water give a dark liquor to strain through muslin.",
+            "Preserving keeps the depth. Dried mushrooms, shiitake and cèpes above all, keep for a year in a sealed jar; pickled, cooked briefly and covered in a seasoned vinegar, they bring acid as well as savour. The kitchen's preserved shiitake on the Blackened Tofu are most likely cured in soy or pickled; what the kitchen means by preserved is the chef's answer."
+          ]
+        },
+        {
+          "key": "history",
+          "paras": [
+            "The white button is the champignon de Paris, where it was first farmed at scale: tradition credits the gardeners of Louis XIV, and by the nineteenth century growers were raising it on beds of horse manure in the cool limestone quarries beneath and around the city. The Métro pushed the growers out around 1900, and the trade moved to the caves of the Loire."
+          ]
+        },
+        {
+          "key": "brennans",
+          "paras": [
+            "On the menu, mushrooms are inside the marchand de vin on the Eggs Hussarde and the Eggs Owen, a red wine and mushroom sauce in the guide's words; Brennan's own published recipe sweats mushrooms with onion, shallot and garlic, but whether tonight's sauce carries them is a question for the chef. They are the preserved shiitake on the Blackened Tofu, the earthy, meaty note against the spiced crust and the creamy rice grits.",
+            "And they are Maggie's Mushrooms, a dinner side the menu prints with no description. The likely source is Mushroom Maggie's Farm in St Francisville, upriver from Baton Rouge, run by Maggie Long and Cyrus Lester, who grow lion's mane, oyster, shiitake and chestnut mushrooms for New Orleans restaurants; the house has not confirmed that link, so say our mushroom side until the chef confirms the farm."
+          ]
+        },
+        {
+          "key": "service",
+          "paras": [
+            "Learn three things at lineup for Maggie's Mushrooms: tonight's varieties, how they are cooked, and whether in butter or stock, because a guest will ask all three. Call the marchand de vin a mushroom sauce only once the chef confirms the mushrooms are in it tonight. Whether a mushroom side is vegetarian, and what the tofu's shiitake are preserved in, are kitchen answers."
+          ]
+        }
+      ],
+      "ratios": [
+        {
+          "label": "Water in a fresh mushroom",
+          "value": "About 90 per cent"
+        },
+        {
+          "label": "Dried mushrooms to soak",
+          "value": "30 g (1 oz) in 250 ml (1 cup) of warm water for 20 to 30 minutes"
+        },
+        {
+          "label": "Duxelles",
+          "value": "500 g (1 lb) of mushrooms, chopped fine, to one shallot and 30 g (1 oz) of butter, cooked until dry"
+        }
+      ],
+      "temps": [
+        {
+          "label": "Keep fresh mushrooms cold, in paper",
+          "c": 4,
+          "f": 39
+        }
+      ],
+      "faults": [
+        {
+          "fault": "Grey, rubbery mushrooms sitting in liquid",
+          "cause": "The pan was crowded or too cool, or the mushrooms were salted at the start.",
+          "fix": "A hot pan, a single layer in batches, and salt only once they are golden."
+        },
+        {
+          "fault": "Burnt butter and pale mushrooms",
+          "cause": "Butter alone was used at the heat mushrooms need to brown.",
+          "fix": "Start them in oil and add the butter, garlic and herbs at the end."
+        },
+        {
+          "fault": "Slimy mushrooms in the walk-in",
+          "cause": "Sealed in plastic, where they sweat.",
+          "fix": "Keep them cold in paper or an open container and use them within days."
+        },
+        {
+          "fault": "Grit in a sauce made with dried mushrooms",
+          "cause": "The soaking liquor went in unstrained.",
+          "fix": "Strain it through muslin and leave the last spoonful behind."
+        },
+        {
+          "fault": "Browned mushrooms but a thin pan sauce",
+          "cause": "The mushroom liquor was poured away.",
+          "fix": "Keep the liquor and reduce it into the sauce."
+        }
+      ],
+      "brennans": [
+        {
+          "dish": "d-1q0xk7jv",
+          "components": [
+            "Mushrooms"
+          ],
+          "how": "The Hussarde's marchand de vin is, in the guide's words, a savoury red wine and mushroom sauce, and Brennan's published recipe sweats mushrooms with onion, shallot and garlic; whether tonight's sauce carries them is a question for the chef."
+        },
+        {
+          "dish": "d-44jfmkdb",
+          "components": [
+            "Mushrooms"
+          ],
+          "how": "The Eggs Owen carries the same marchand de vin under the short rib débris and the soft-boiled egg; confirm with the chef before promising mushrooms in it, and which kind."
+        },
+        {
+          "dish": "d-yo5hh58f",
+          "components": [
+            "Maggie’s Mushrooms",
+            "Mushrooms"
+          ],
+          "how": "A dinner side the menu prints with no description. Learn tonight's varieties, how they are cooked and whether in butter or stock at lineup, and name Mushroom Maggie's Farm in St Francisville only once the chef confirms it."
+        },
+        {
+          "dish": "d-377dkkse",
+          "components": [
+            "Preserved shiitake mushrooms",
+            "Mushrooms"
+          ],
+          "how": "The preserved shiitake bring the earthy, meaty note that makes the Blackened Tofu satisfying against the spiced crust and creamy rice grits; most likely cured in soy or pickled, and what the kitchen means by preserved is the chef's answer."
+        }
+      ],
+      "seeAlso": {
+        "entries": [
+          "marchand-de-vin",
+          "saute",
+          "oysters-bienville",
+          "brown-sauce-family",
+          "eggs-hussarde",
+          "eggs-owen",
+          "la-varenne",
+          "blackening",
+          "chateaubriand-foyot",
+          "brown-stock"
+        ],
+        "lexicon": [
+          "mushroom-field-guide",
+          "wild-mushrooms-the-forest-calendar",
+          "shiitake",
+          "dried-shiitake",
+          "white-button-mushroom"
+        ],
+        "kitchen": [
+          "chicken-ballotine"
+        ],
+        "plates": [
+          "culinary-mushrooms"
+        ],
+        "deck": [
+          "fd_0146",
+          "fd_0145",
+          "fd_0139"
+        ],
+        "components": [
+          "Mushrooms",
+          "Maggie’s Mushrooms",
+          "Preserved shiitake mushrooms"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Mushroom, Encyclopaedia Britannica",
+          "url": "https://www.britannica.com/science/mushroom",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "Mushroom Maggie, Country Roads Magazine",
+          "url": "https://countryroadsmagazine.com/cuisine/Louisiana-foodways/mushroom-maggie/",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "The champignon de Paris left the capital years ago, The Connexion",
+          "url": "https://www.connexionfrance.com/magazine/champignon-de-paris-left-capital-years-ago/504546",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "Brennan’s, Dinner menu",
+          "url": "https://www.brennansneworleans.com/menus/dinner/",
+          "asOf": "2026-10-17"
+        },
+        {
+          "title": "Brennan’s, Breakfast & Lunch menu",
+          "url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+          "asOf": "2026-10-17"
+        }
+      ],
+      "cards": [
+        {
+          "stem": "water",
+          "front": "How much of a fresh mushroom is water, and why does that matter in the pan?",
+          "back": "About 90 per cent, so it shrinks to a spoonful as it cooks and will steam grey in a crowded or cool pan instead of browning."
+        },
+        {
+          "stem": "one-species",
+          "front": "How are white button, cremini and portobello related?",
+          "back": "They are one species, Agaricus bisporus: the white strain sold small as the button, and the brown strain sold young as cremini and grown on into the broad, dark, open-capped portobello, deeper in flavour as it matures."
+        },
+        {
+          "stem": "cultivated-kinds",
+          "front": "Name the cultivated mushrooms a kitchen buys all year, and the wild ones by season.",
+          "back": "White button, cremini and portobello, shiitake, say shee-TAH-kee, oyster and king oyster; the wild kinds, morels, chanterelles, black trumpets and cèpes, come by season."
+        },
+        {
+          "stem": "three-rules",
+          "front": "What three rules make mushrooms brown instead of steam?",
+          "back": "A hot pan with the fat shimmering, no crowding, in batches if need be, and salt late, because salt draws water out before the mushrooms can colour."
+        },
+        {
+          "stem": "oil-then-butter",
+          "front": "Why start mushrooms in oil and add butter at the end?",
+          "back": "Butter burns at the heat mushrooms need to brown; oil takes it, and butter, garlic and herbs go in at the end for flavour."
+        },
+        {
+          "stem": "liquor",
+          "front": "What is mushroom liquor, and what happens to it?",
+          "back": "The juice mushrooms release as they cook, or the dark water dried mushrooms soak in; it is never poured away but strained and reduced into the stock or the sauce."
+        },
+        {
+          "stem": "duxelles",
+          "front": "What is duxelles, and how is it made?",
+          "back": "Mushrooms chopped fine and cooked slowly with shallot in butter until the pan is dry, say dook-SEL: a paste for stuffing, lining pastry or deepening a sauce, named for the Marquis d'Uxelles, whose cook was La Varenne."
+        },
+        {
+          "stem": "marchand",
+          "front": "Where are mushrooms inside a Brennan's sauce?",
+          "back": "In the marchand de vin on the Eggs Hussarde and Eggs Owen, a red wine and mushroom sauce in the guide's words; whether tonight's sauce carries them is the chef's question before you promise it."
+        },
+        {
+          "stem": "preserving",
+          "front": "How are mushrooms preserved, and what are the tofu's shiitake?",
+          "back": "Dried, pickled or cured in a seasoned liquid. The sheet says only preserved for the tofu's shiitake; the pack reads that as most likely a soy cure or a pickle, and what the kitchen means is the chef's answer."
+        },
+        {
+          "stem": "maggies",
+          "front": "What do you learn at lineup for Maggie's Mushrooms?",
+          "back": "Tonight's varieties, how they are cooked, and whether in butter or stock; name Mushroom Maggie's Farm in St Francisville only once the chef confirms the link, and say our mushroom side until then."
+        },
+        {
+          "stem": "storing",
+          "front": "How are fresh mushrooms kept?",
+          "back": "Cold, dry and in paper or an open container, never sealed in plastic, where they sweat and turn slimy; buy them firm and dry, wipe or rinse them quickly rather than soak, and use them within days."
+        },
+        {
+          "stem": "paris",
+          "front": "Why is the white button called the champignon de Paris?",
+          "back": "Because it was first farmed on a large scale in the cool limestone quarries beneath and around Paris, on beds of horse manure, by the nineteenth century, before the trade moved to the Loire."
+        }
+      ],
+      "questions": [
+        {
+          "stem": "q-water",
+          "q": "Why do mushrooms shrink so much in the pan?",
+          "answer": "They are about 90 per cent water",
+          "distractors": [
+            "Their fat renders out as they cook",
+            "Their air pockets collapse in the heat",
+            "Their sugars burn off as they brown"
+          ],
+          "why": "A fresh mushroom is mostly water, which cooking drives off, so a handful becomes a spoonful that tastes of everything the water left behind.",
+          "teaches": "water"
+        },
+        {
+          "stem": "q-species",
+          "q": "What exactly is a portobello mushroom?",
+          "answer": "A fully grown cremini",
+          "distractors": [
+            "A wild mushroom gathered in autumn",
+            "A shiitake grown on oak logs",
+            "A large oyster mushroom"
+          ],
+          "why": "White button, cremini and portobello are one species, Agaricus bisporus; the portobello is the brown strain, the cremini, grown on until its cap is broad, dark and open.",
+          "teaches": "one-species"
+        },
+        {
+          "stem": "q-salt",
+          "q": "When are mushrooms salted, and why?",
+          "answer": "At the end, once they are golden",
+          "distractors": [
+            "At the start, so the salt cooks into them",
+            "Halfway, once they have released their liquor",
+            "Never, because salt makes them rubbery"
+          ],
+          "why": "Salt draws water out; a mushroom salted early releases its juice into the pan and boils in it instead of colouring.",
+          "teaches": "three-rules"
+        },
+        {
+          "stem": "q-crowd",
+          "q": "Mushrooms are sitting grey in a pool of liquid. What went wrong?",
+          "answer": "The pan was crowded or too cool",
+          "distractors": [
+            "The mushrooms were too fresh",
+            "They were cooked in oil, not butter",
+            "They were sliced too thin"
+          ],
+          "why": "A crowded pan drops in temperature and the water the mushrooms release pools and boils them; a hot pan, a single layer and batches let them brown.",
+          "teaches": "three-rules"
+        },
+        {
+          "stem": "q-oil",
+          "q": "Why start mushrooms in oil and add the butter at the end?",
+          "answer": "Butter burns at the heat they need to brown",
+          "distractors": [
+            "Oil makes them release more water",
+            "Butter would stop them taking salt",
+            "Oil browns them faster than any fat"
+          ],
+          "why": "Mushrooms brown in a pan hotter than whole butter can bear; oil takes the heat, and butter, garlic and herbs go in last for flavour.",
+          "teaches": "oil-then-butter"
+        },
+        {
+          "stem": "q-duxelles",
+          "q": "What is duxelles, and how is it made?",
+          "answer": "Chopped mushrooms cooked dry with shallot in butter",
+          "distractors": [
+            "A sauce of mushrooms and cream over pasta",
+            "Dried mushrooms soaked and strained",
+            "Mushrooms pickled in seasoned vinegar"
+          ],
+          "why": "Finely chopped mushrooms are cooked slowly with shallot in butter until every drop of water has gone; the paste stuffs, lines pastry and deepens sauces.",
+          "teaches": "duxelles"
+        },
+        {
+          "stem": "q-liquor",
+          "q": "Dried cèpes have been soaked for a sauce. What happens to the soaking water?",
+          "answer": "Strained through muslin and added to the sauce",
+          "distractors": [
+            "Poured away, because it is gritty",
+            "Used to wash the fresh mushrooms",
+            "Boiled with the stems for a stock only"
+          ],
+          "why": "The dark liquor holds the mushrooms' flavour; it is strained through muslin to catch the grit, the last spoonful left behind, and reduced into the sauce.",
+          "teaches": "liquor"
+        },
+        {
+          "stem": "q-marchand",
+          "q": "A guest asks whether the Hussarde's sauce has mushrooms in it. What do you say?",
+          "answer": "Confirm with the chef before promising it",
+          "distractors": [
+            "Yes, it is a mushroom sauce by definition",
+            "No, marchand de vin is only wine and stock",
+            "Only on the Owen, never the Hussarde"
+          ],
+          "why": "The guide calls the marchand de vin a red wine and mushroom sauce and Brennan's published recipe sweats mushrooms into it, but whether tonight's sauce carries them is the chef's answer.",
+          "teaches": "marchand"
+        },
+        {
+          "stem": "q-maggies",
+          "q": "Before naming the farm behind Maggie's Mushrooms, what must happen?",
+          "answer": "The chef confirms the link",
+          "distractors": [
+            "The menu prints a description",
+            "A guest says they know Maggie",
+            "The side sells out that night"
+          ],
+          "why": "Mushroom Maggie's Farm in St Francisville is the likely source, but the house has not confirmed it, so say our mushroom side until the chef does.",
+          "teaches": "maggies"
+        },
+        {
+          "stem": "q-preserved",
+          "q": "A guest asks how the shiitake on the Blackened Tofu are preserved. What do you say?",
+          "answer": "Ask the chef what preserved means here",
+          "distractors": [
+            "They are pickled in seasoned vinegar",
+            "They are dried and soaked back",
+            "They are cured in a seasoned brine"
+          ],
+          "why": "The sheet prints preserved and nothing more; pickling, drying and a cure are all ways to preserve a shiitake, so the chef's answer is the only one a server gives.",
+          "teaches": "preserving"
+        }
+      ]
+    }
+  ]
+}
