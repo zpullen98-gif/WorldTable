@@ -104,9 +104,10 @@ test('a level page opens on Today\'s study and My restaurant, and keeps its eigh
 	await expect(page.locator('h1')).toHaveText(NAMES[0]);
 	await expect(page).toHaveTitle(`${NAMES[0]} · The World Table`);
 	await expect(page.locator('.stat')).toHaveText(/Untouched/);
-	// Today's study: three doors, each a name and a line
+	// Today's study: five doors, each a name and a line (Your culinary terms
+	// and Fall menu practice joined the three with the fall menu, 2026)
 	const today = page.locator('nav.quiet[aria-labelledby="today"] .door');
-	await expect(today.locator('.door-name')).toHaveText(['Due today', 'Quick quiz', 'Next reading']);
+	await expect(today.locator('.door-name')).toHaveText(['Your culinary terms', 'Due today', 'Quick quiz', 'Next reading', 'Fall menu practice']);
 	await expect(page.getByRole('heading', { level: 2, name: 'My restaurant' })).toBeVisible();
 	await expect(page.getByRole('heading', { level: 2, name: 'Search' })).toBeVisible();
 	// What the level holds: a closed disclosure, every subsection inside it

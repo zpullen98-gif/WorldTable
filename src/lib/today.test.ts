@@ -152,7 +152,10 @@ describe('Cuisine in Due today (the sixth tab, 12 Oct 2026)', () => {
 	});
 
 	it('a card graded today is not due again today', () => {
-		const drillLog: CookEntry[] = [{ slug: 'cuisine:cz-aaaaaaa1', at: NOW - 1000, grade: 'met' }];
+		/* Due before today's grade, so the test proves the grade took it off, not a card that was never due. */
+		const owed: CookEntry[] = [{ slug: 'cuisine:cz-aaaaaaa1', at: old, grade: 'met' }];
+		expect(dueToday(input({ houseIds: [], drillLog: owed, cuisineAt: CZ })).refs).toContain('z:cz-aaaaaaa1');
+		const drillLog: CookEntry[] = [...owed, { slug: 'cuisine:cz-aaaaaaa1', at: NOW - 1000, grade: 'met' }];
 		expect(dueToday(input({ houseIds: [], drillLog, cuisineAt: CZ })).refs).not.toContain('z:cz-aaaaaaa1');
 	});
 });

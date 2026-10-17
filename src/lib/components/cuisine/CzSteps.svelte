@@ -6,6 +6,7 @@
   place, and the places that are wrong are named, with the order beside it.
 -->
 <script lang="ts">
+	import { tick } from 'svelte';
 	import type { CzStepsSet, StepsResult } from '$lib/cuisine';
 
 	let {
@@ -33,6 +34,16 @@
 	const left = $derived(pool.map((text, i) => ({ text, i })).filter((x) => !placed.includes(x.i)));
 	const wrongAt = $derived(new Set(result?.wrong ?? []));
 
+	/* Placing or taking back a stage removes the button that was pressed, so
+	   focus goes on to the first stage still to place, or to Check once every
+	   place is filled, never back to the start of the page. */
+	let poolEl: HTMLUListElement | undefined = $state();
+	let checkEl: HTMLButtonElement | undefined = $state();
+	async function moved() {
+		await tick();
+		(poolEl?.querySelector<HTMLButtonElement>('button:not(:disabled)') ?? checkEl)?.focus();
+	}
+
 	/** "positions 2 and 5", counted from 1 as a cook counts. */
 	function places(list: readonly number[]): string {
 		const n = list.map((i) => String(i + 1));
@@ -45,12 +56,12 @@
 	<p class="stem">{set.prompt}</p>
 	{#if set.distractor}<p class="hint">One step does not belong: leave it out.</p>{/if}
 
-	<h3 class="sub" id="order-{set.id}">Your order, {placed.length} of {need}</h3>
+	<h2 class="sub" id="order-{set.id}">Your order, {placed.length} of {need}</h2>
 	{#if placed.length}
 		<ol class="order" aria-labelledby="order-{set.id}">
 			{#each placed as p, pos (p)}
 				<li class:wrong={result && wrongAt.has(pos)} class:right={result && !wrongAt.has(pos)}>
-					<button type="button" class="stage" disabled={!!result} onclick={() => onRemove(pos)} aria-label="Take back from place {pos + 1}: {pool[p]}">
+					<button type="button" class="stage" disabled={!!result} onclick={() => { onRemove(pos); void moved(); }} aria-label="Take back from place {pos + 1}: {pool[p]}">
 						<span class="num" aria-hidden="true">{pos + 1}.</span>
 						<span class="text">{pool[p]}</span>
 					</button>
@@ -63,26 +74,26 @@
 	{/if}
 
 	{#if !result}
-		<h3 class="sub" id="pool-{set.id}">The stages</h3>
+		<h2 class="sub" id="pool-{set.id}">The stages</h2>
 		{#if left.length}
-			<ul class="pool" aria-labelledby="pool-{set.id}">
+			<ul class="pool" aria-labelledby="pool-{set.id}" bind:this={poolEl}>
 				{#each left as s (s.i)}
 					<li>
-						<button type="button" class="stage" disabled={placed.length >= need} onclick={() => onPlace(s.i)} aria-label="Place next: {s.text}">
+						<button type="button" class="stage" disabled={placed.length >= need} onclick={() => { onPlace(s.i); void moved(); }} aria-label="Place next: {s.text}">
 							<span class="text">{s.text}</span>
 						</button>
 					</li>
 				{/each}
 			</ul>
 		{/if}
-		<button type="button" class="chip go check" disabled={placed.length < need} onclick={onCheck}>Check the order</button>
+		<button type="button" class="chip go check" disabled={placed.length < need} onclick={onCheck} bind:this={checkEl}>Check the order</button>
 	{:else}
 		<p class="answer" role="status">
 			<b>{result.right ? 'Right.' : 'Not quite.'}</b>
 			{#if !result.right && result.wrong.length}{result.wrong.length === 1 ? 'The wrong stage is in' : 'The wrong stages are in'} {places(result.wrong)}.{/if}
 			{#if result.intruder}The stage that does not belong was placed.{/if}
 		</p>
-		<h3 class="sub">The order</h3>
+		<h2 class="sub">The order</h2>
 		<ol class="key">
 			{#each set.steps as s, i (i)}<li>{s}</li>{/each}
 		</ol>

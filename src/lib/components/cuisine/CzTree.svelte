@@ -141,10 +141,12 @@
 		font-size: 1.2rem;
 		color: var(--ink);
 	}
+	/* A short name (Bercy, Foyot) is still a 44 by 44 target once it links its entry. */
 	a.nname {
 		display: inline-flex;
 		align-items: center;
 		min-height: 44px;
+		min-width: 44px;
 	}
 	h2 .nname {
 		font-size: inherit;
@@ -172,6 +174,7 @@
 		display: inline-flex;
 		align-items: center;
 		min-height: 44px;
+		min-width: 44px;
 		color: var(--ink);
 	}
 	.xlabel {

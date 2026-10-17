@@ -15,6 +15,7 @@
  *   ensure(keys)      the chapters named, after the index
  *   ensureAll()       every chapter that has a file
  *   chapter(key)      a loaded chapter, or null
+ *   failed, chapterFailed(key)   the index, or one chapter, could not be read
  *   entryBySlug(s)    a loaded entry with its chapter's key, or null
  *   cardById(id)      a loaded card with its entry, or null
  *   questionById(id)  a loaded question with its entry, or null
@@ -30,6 +31,8 @@ class CuisineStore {
 	#index = $state.raw<CzIndex | null>(null);
 	#chapters = $state.raw<Record<string, CzChapter>>({});
 	#failed = $state(false);
+	/** The chapters whose file could not be read, each until a later ask lands it. */
+	#lost = $state.raw<ReadonlySet<string>>(new Set());
 	#loading: Promise<CzIndex | null> | null = null;
 	#asked = new Map<string, Promise<CzChapter | null>>();
 
@@ -73,9 +76,14 @@ class CuisineStore {
 		return this.#index;
 	}
 
-	/** True when a file could not be read (offline before the worker had it, say). */
+	/** True while the index could not be read (offline before the worker had it, say); a later load that lands it clears it. */
 	get failed(): boolean {
 		return this.#failed;
+	}
+
+	/** True when this chapter's file could not be read, until a later ask lands it: one chapter's failure never marks another as lost. */
+	chapterFailed(key: string): boolean {
+		return this.#lost.has(key);
 	}
 
 	/** The index; idempotent, the first caller loads and every later one awaits it. */
@@ -85,6 +93,7 @@ class CuisineStore {
 			this.#loading = import('../data/cuisine/index.json').then(
 				(m) => {
 					this.#index = m.default as unknown as CzIndex;
+					this.#failed = false;
 					return this.#index;
 				},
 				() => {
@@ -113,10 +122,11 @@ class CuisineStore {
 					(m) => {
 						const ch = (m as { default: unknown }).default as CzChapter;
 						this.#chapters = { ...this.#chapters, [key]: ch };
+						if (this.#lost.has(key)) this.#lost = new Set([...this.#lost].filter((k) => k !== key));
 						return ch;
 					},
 					() => {
-						this.#failed = true;
+						this.#lost = new Set([...this.#lost, key]);
 						this.#asked.delete(key);
 						return null;
 					}

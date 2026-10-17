@@ -69,7 +69,7 @@
 	{/if}
 	<div class="cols">
 		<div class="col">
-			<h3 class="sub" id="left-{set.id}">{set.left}</h3>
+			<h2 class="sub" id="left-{set.id}">{set.left}</h2>
 			<ul aria-labelledby="left-{set.id}">
 				{#each set.pairs as p, l (l)}
 					{@const r = rightOf.get(l)}
@@ -83,7 +83,7 @@
 							onclick={() => tapLeft(l)}
 						>
 							<span class="text">{p[0]}</span>
-							{#if r !== undefined}<span class="with">With {set.pairs[r][1]}</span>{/if}
+							{#if r !== undefined}<span class="with">Paired: {set.pairs[r][1]}</span>{/if}
 						</button>
 						{#if result && wrong.has(l)}<p class="should">Its partner: {p[1]}</p>{/if}
 					</li>
@@ -91,7 +91,7 @@
 			</ul>
 		</div>
 		<div class="col">
-			<h3 class="sub" id="right-{set.id}">{set.right}</h3>
+			<h2 class="sub" id="right-{set.id}">{set.right}</h2>
 			<ul aria-labelledby="right-{set.id}">
 				{#each order as r (r)}
 					<li>

@@ -1521,9 +1521,14 @@ What a maintainer needs:
   launch. `verify-build` "Cuisine installs with the app" finds the index by
   its `byDish` key and each chapter by its first card's id, asserts each is
   in the precache and prints Cuisine's cost in KB and KB per entry, the
-  figure any later raise is argued from. If that cost passes 0.6 MB the
-  chapter bodies move to `static/cuisine-data/` behind an
+  figure any later raise is argued from. Whole, on 17 October 2026, it
+  costs 718 KB gzipped (4.35 KB an entry), past the 0.6 MB the plan had
+  set for moving the chapter bodies to `static/cuisine-data/` behind an
   `oot-table-cuisine-v1` NetworkFirst route (the Cook at home pattern).
+  It stays precached by the owner's rule (raise the cap, never thin the
+  material, offline from the first launch), and `CAP_MB` went to 4.5 with
+  the reason beside it. The fetched route stays the fallback, never the
+  default.
 - **One prerendered page, every screen an address.** `/cuisine` is the root
   (the level, In Cuisine today, Next unread at {Level}, the chapter doors,
   the drills, the two diagrams in words); `?ch=` a chapter, `?ch=&e=` an

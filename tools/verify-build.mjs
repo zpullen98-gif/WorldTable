@@ -384,8 +384,17 @@ function deckCost() {
    instruction is to raise every cap rather than thin the material, and the
    reason is written here as it asks. At the raise the precache stood at
    3.086 MB against the old cap, with Cuisine's seed of three entries in;
-   the plan put the whole at about 0.40 to 0.48 MB. */
-const CAP_MB = 4.0;
+   the plan put the whole at about 0.40 to 0.48 MB.
+
+   Raised from 4.0 MB to 4.5 MB on 2026-10-17, when Cuisine landed whole: 165
+   entries, 1,928 cards and 1,444 questions cost 718 KB gzipped (4.35 KB an
+   entry), past the 0.6 MB line above, and the precache stood at 3.847 MB,
+   0.15 MB under the old cap. The material stays precached rather than
+   fetched: a trainee's walk-in has no signal, and the owner's standing
+   instruction is to raise the cap rather than thin the material or make it
+   best-effort offline. The new headroom is for the next room's additions,
+   so a feature does not meet the cap the week it lands. */
+const CAP_MB = 4.5;
 
 check(`precache stays under ${CAP_MB} MB gzipped`, () => {
 	let raw = 0;

@@ -174,7 +174,8 @@ export interface CzBrennans {
 	how: string;
 }
 
-export const SEE_KEYS = ['entries', 'techniques', 'lexicon', 'recipes', 'kitchen', 'plates', 'folios', 'deck', 'components'] as const;
+/** The contract's SEE_ALSO_KEYS, in its order; `terms` is the owner's own sheet terms (From your sheets). */
+export const SEE_KEYS = ['entries', 'techniques', 'lexicon', 'recipes', 'kitchen', 'plates', 'folios', 'deck', 'components', 'terms'] as const;
 export type CzSeeKey = (typeof SEE_KEYS)[number];
 
 export interface CzEntry {
@@ -231,6 +232,32 @@ export interface CzLabels {
 	kitchen?: Record<string, [string, number]>;
 	/** id: [term, section] */
 	deck?: Record<string, [string, string]>;
+	/** A sheet term's entry id in culinary-foundations.json: its term, as Your culinary terms prints it. */
+	terms?: Record<string, string>;
+}
+
+/** One row of From your sheets: a link to the owner's own term. */
+export interface CzSheetLink {
+	id: string;
+	href: string;
+	label: string;
+}
+
+/**
+ * From your sheets: the owner's own sheet terms an entry teaches or rests on,
+ * in the entry's order, each a link to its page in Your culinary terms,
+ * `{base}/foundations?term=<id>`, the address that page opens a term by. The
+ * label is the term as the sheet names it, written by the build. A term the
+ * build could not name is left out, never drawn as a link to a page that
+ * would not find it; no terms, no rows, and the entry draws no block.
+ */
+export function sheetLinks(ids: readonly string[] | undefined, labels: CzLabels | undefined, base: string): CzSheetLink[] {
+	const out: CzSheetLink[] = [];
+	for (const id of ids ?? []) {
+		const label = labels?.terms?.[id];
+		if (label && !out.some((r) => r.id === id)) out.push({ id, href: `${base}/foundations?term=${encodeURIComponent(id)}`, label });
+	}
+	return out;
 }
 
 export interface CzChapter {

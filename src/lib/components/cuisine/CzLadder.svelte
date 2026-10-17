@@ -98,10 +98,12 @@
 	dd {
 		margin: 0;
 	}
+	/* min-width too: Roux alone is still a 44 by 44 target */
 	dd a {
 		display: inline-flex;
 		align-items: center;
 		min-height: 44px;
+		min-width: 44px;
 		color: var(--ink);
 	}
 	@media (max-width: 599px) {

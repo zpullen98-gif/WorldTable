@@ -37,6 +37,7 @@ import {
 	roundGrade,
 	scopeName,
 	scopeString,
+	sheetLinks,
 	stepsInScope,
 	stepsPool,
 	teachingOrder,
@@ -48,6 +49,7 @@ import {
 } from './cuisine';
 import { READ_KEY, readRead, setRead, writeRead, type ReadStorage } from './cuisine-read';
 import { DAY_MS, type CookEntry, type Grade } from './repertoire';
+import { foundationEntryById } from './foundations';
 
 /** A rand that walks a fixed list, so every shuffle is the same on every run. */
 function seq(...xs: number[]) {
@@ -419,6 +421,43 @@ describe('the shipped seed reads through the engines', () => {
 
 	it('names every dish Cuisine links, for a reader whose house is not Brennan\'s', () => {
 		for (const id of Object.keys(shipped.byDish)) expect(shipped.dishes?.[id], id).toBeTruthy();
+	});
+});
+
+describe('From your sheets (sheetLinks)', () => {
+	const labels = { terms: { 'cured-andouille': 'Andouille', 'methods-smoked': 'Smoked' } };
+
+	it('links each sheet term to its page in Your culinary terms, by its own name, in the entry\'s order', () => {
+		expect(sheetLinks(['methods-smoked', 'cured-andouille'], labels, '/table')).toEqual([
+			{ id: 'methods-smoked', href: '/table/foundations?term=methods-smoked', label: 'Smoked' },
+			{ id: 'cured-andouille', href: '/table/foundations?term=cured-andouille', label: 'Andouille' }
+		]);
+		expect(sheetLinks(['cured-andouille'], labels, '')[0].href).toBe('/foundations?term=cured-andouille');
+	});
+
+	it('draws nothing for an entry without terms, and leaves out a term the build could not name, once each', () => {
+		expect(sheetLinks(undefined, labels, '')).toEqual([]);
+		expect(sheetLinks([], labels, '')).toEqual([]);
+		expect(sheetLinks(['cured-andouille'], {}, '')).toEqual([]);
+		expect(sheetLinks(['cured-andouille'], undefined, '')).toEqual([]);
+		expect(sheetLinks(['not-on-the-sheets', 'cured-andouille', 'cured-andouille'], labels, '').map((r) => r.id)).toEqual(['cured-andouille']);
+	});
+
+	it('every shipped link opens a term the Your culinary terms page holds, under that term\'s name', () => {
+		let n = 0;
+		for (const f of readdirSync('src/lib/data/cuisine').filter((x) => /^ch-.+\.json$/.test(x))) {
+			const ch = JSON.parse(readFileSync(join('src/lib/data/cuisine', f), 'utf8'));
+			for (const e of ch.entries) {
+				for (const row of sheetLinks(e.seeAlso.terms, ch.labels, '')) {
+					const id = new URLSearchParams(row.href.split('?')[1]).get('term') ?? '';
+					expect(row.href.startsWith('/foundations?term='), row.href).toBe(true);
+					expect(foundationEntryById.get(id)?.term, `${e.slug} ${id}`).toBe(row.label);
+					n++;
+				}
+				expect(sheetLinks(e.seeAlso.terms, ch.labels, '').length, e.slug).toBe((e.seeAlso.terms ?? []).length);
+			}
+		}
+		expect(n).toBeGreaterThan(0);
 	});
 });
 

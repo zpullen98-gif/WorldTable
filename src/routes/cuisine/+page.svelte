@@ -425,26 +425,14 @@
 	}
 
 	async function roundItems(scopeStr: string, kind: CzKind): Promise<Item[]> {
-		const all = scopeItems(scopeStr, kind);
-		await cuisine.ensure(chaptersOfItems(kind, all));
 		const rand = Math.random;
-		const lg = session.drillLog;
-		if (kind === 'mc') {
-			const ids = all.filter((id) => cuisine.questionById(id));
-			return askOrder(ids, lg, rand)
-				.slice(0, ROUND_LENGTH.mc)
-				.map((id) => ({ id, opts: mcOptions(cuisine.questionById(id)!.question, rand) }));
-		}
-		if (kind === 'steps') {
-			const ids = all.filter((id) => cuisine.stepsById(id));
-			return askOrder(ids, lg, rand)
-				.slice(0, ROUND_LENGTH.steps)
-				.map((id) => ({ id, pool: stepsPool(cuisine.stepsById(id)!.set, rand) }));
-		}
-		const ids = all.filter((id) => cuisine.matchById(id));
-		return askOrder(ids, lg, rand)
-			.slice(0, ROUND_LENGTH.match)
-			.map((id) => ({ id, order: matchOrder(cuisine.matchById(id)!.set.pairs.length, rand) }));
+		/* Ordered and cut from the index alone, so a round loads the chapters
+		   of the items it asks, never every chapter its scope reaches. */
+		const ids = askOrder(scopeItems(scopeStr, kind), session.drillLog, rand).slice(0, ROUND_LENGTH[kind]);
+		await cuisine.ensure(chaptersOfItems(kind, ids));
+		if (kind === 'mc') return ids.filter((id) => cuisine.questionById(id)).map((id) => ({ id, opts: mcOptions(cuisine.questionById(id)!.question, rand) }));
+		if (kind === 'steps') return ids.filter((id) => cuisine.stepsById(id)).map((id) => ({ id, pool: stepsPool(cuisine.stepsById(id)!.set, rand) }));
+		return ids.filter((id) => cuisine.matchById(id)).map((id) => ({ id, order: matchOrder(cuisine.matchById(id)!.set.pairs.length, rand) }));
 	}
 
 	function roundState(quiz: string, kind: CzKind, items: Item[]): Cz {
@@ -503,6 +491,7 @@
 		if (!cz || !stepsItem || !item || answered) return;
 		const r = gradeSteps(stepsItem.set, item.pool ?? [], cz.placed ?? []);
 		answer(r.right, { wrong: r.wrong, said: (cz.placed ?? []).join(',') });
+		void focusNext();
 	}
 	const stepsResult = $derived.by<StepsResult | null>(() => {
 		if (!cz || !stepsItem || !item || !answered) return null;
@@ -521,6 +510,7 @@
 		if (!cz || !matchItem || answered) return;
 		const r = gradeMatch(matchItem.set, cz.links ?? []);
 		answer(r.right, { wrong: r.wrong });
+		void focusNext();
 	}
 	const matchResult = $derived.by<MatchResult | null>(() => {
 		if (!cz || !matchItem || !answered) return null;
@@ -578,6 +568,13 @@
 		await tick();
 		window.scrollTo(0, 0);
 		top?.focus({ preventScroll: true });
+	}
+	/* A check puts the verdict where its own button was: focus goes on to the
+	   next item's button, never back to the start of the page. */
+	let nextBtn: HTMLButtonElement | undefined = $state();
+	async function focusNext() {
+		await tick();
+		nextBtn?.focus();
 	}
 	let frame: DeckFrame | undefined = $state();
 	let frameEl: HTMLElement | undefined = $state();
@@ -766,7 +763,8 @@
 			<p class="note">Opening Cuisine…</p>
 		{:else if !chHead}
 			<h1 tabindex="-1">No such chapter</h1>
-			<p class="note">Cuisine has no chapter at this address. <a href={cuisineHref()}>Open Cuisine</a> for the twelve.</p>
+			<p class="note">Cuisine has no chapter at this address.</p>
+			<a class="chip" href={cuisineHref()}>Open Cuisine for the twelve</a>
 		{:else}
 			<p class="eyebrow">Cuisine</p>
 			<h1 tabindex="-1">{chHead.title}</h1>
@@ -801,16 +799,16 @@
 			{/if}
 		{/if}
 	{:else if screen === 'entry'}
-		{#if !index || (entryHead && !entryBody && !cuisine.has(entryHead.chapter) && !cuisine.failed)}
+		{#if !index || (entryHead && !entryBody && !cuisine.has(entryHead.chapter) && !cuisine.chapterFailed(entryHead.chapter))}
 			<h1 tabindex="-1">{entryHead?.title ?? 'Cuisine'}</h1>
 			<p class="note">Opening the entry…</p>
-		{:else if entryHead && !entryBody && cuisine.failed}
+		{:else if entryHead && !entryBody && cuisine.chapterFailed(entryHead.chapter)}
 			<h1 tabindex="-1">{entryHead.title}</h1>
 			<p class="note">This chapter could not be opened on this device. Open it once with a connection and it stays for offline use.</p>
 		{:else if !entryHead || !entryBody}
 			<h1 tabindex="-1">Not written yet</h1>
 			<p class="note">There is no Cuisine entry at this address yet. It may be coming.</p>
-			{#if chHead}<p class="note"><a href={cuisineHref(`ch=${enc(chHead.key)}`)}>{chHead.title}</a></p>{/if}
+			{#if chHead}<a class="chip" href={cuisineHref(`ch=${enc(chHead.key)}`)}>{chHead.title}</a>{/if}
 		{:else}
 			{#key entryBody.id}
 				<CzEntry
@@ -905,7 +903,7 @@
 			<p class="note">Opening the chapter…</p>
 		{/if}
 		{#if answered}
-			<button type="button" class="chip go nextq" onclick={nextItem}>{cz.i + 1 >= n ? 'See what you missed' : `Next ${KIND_ITEM[cz.kind ?? 'mc'].toLowerCase()}`}</button>
+			<button type="button" class="chip go nextq" onclick={nextItem} bind:this={nextBtn}>{cz.i + 1 >= n ? 'See what you missed' : `Next ${KIND_ITEM[cz.kind ?? 'mc'].toLowerCase()}`}</button>
 		{/if}
 		<p class="note score" aria-live="polite">{rightCount} right of {(cz.answers ?? []).filter(Boolean).length} answered</p>
 	{:else if screen === 'results' && cz}

@@ -46,6 +46,7 @@
 	import { levels } from '$lib/stores/levels.svelte';
 	import { house } from '$lib/stores/house.svelte';
 	import { today } from '$lib/stores/today.svelte';
+	import { cuisine } from '$lib/stores/cuisine.svelte';
 	import { session } from '$lib/stores/session.svelte';
 	import { MEAL_LABEL, PER_MEAL, dishHref, levelProgress, loadKitchenIndex, minutesLabel, cookKey, recooksDue, type KitchenIndex, type Meal } from '$lib/kitchen';
 	import { restoreScroll } from '$lib/stores/nav.svelte';
@@ -144,8 +145,10 @@
 	const dueHref = $derived(due && due.total === 0 ? `${base}/quizzes?quick=1` : `${base}/flashcards?deck=due&run=1`);
 	const current = $derived(house.current);
 	const rows = $derived(current ? studyRows(current, 'dish') : []);
-	/* The Quick quiz's own words (quick-quiz.ts), so the door says what the round deals: two of the ten from Cuisine. */
-	const quickLine = $derived(quickLineFor(Boolean(current && rows.length), true, levelName));
+	/* The Quick quiz's own words (quick-quiz.ts), so the door says what the round deals: two of the ten from Cuisine while
+	   its index loads (today.load asks for it) or holds questions; an index that could not be read deals none, so then the
+	   line is the round's without them. */
+	const quickLine = $derived(quickLineFor(Boolean(current && rows.length), !cuisine.failed && (cuisine.index?.questions.length ?? 1) > 0, levelName));
 
 	const SAFETY_ID: Record<string, string> = { clause: 'disciplines', fact: 'entries', numeric: 'numbers', gap: 'gaps' };
 	const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);

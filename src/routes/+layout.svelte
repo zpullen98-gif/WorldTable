@@ -203,7 +203,7 @@
 		['/flashcards', ['/flashcards', '/service/deck/study', '/service/deck']],
 		['/library', ['/library', '/recipes', '/recipe/', '/chapter/', '/family', '/lexicon', '/pantry', '/technique', '/plates', '/service', '/safety', '/palate', '/study']],
 		['/cuisine', ['/cuisine']],
-		['', ['/level', '/menu', '/kitchen']]
+		['', ['/level', '/menu', '/kitchen', '/foundations']]
 	];
 
 	// bareHtmlPath: page.url keeps the .html spelling a reader may have arrived

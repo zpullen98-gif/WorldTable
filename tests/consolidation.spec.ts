@@ -129,8 +129,15 @@ test('1. the flashcard chain steps back one screen at a time, by the button and 
 		await expect(heading(page)).toHaveText('Flashcards');
 		await expect(page.locator('button.door', { hasText: 'The whole menu' })).toBeVisible({ timeout: 15_000 });
 		await expect(page.locator('button.door').nth(8)).toBeVisible();
-		const pickerY = await scrollTo(page, 400);
-		await page.locator('button.door', { hasText: 'The whole menu' }).click();
+		// Scrolled so The whole menu stands 400 px down the glass and the tap
+		// needs no scroll of Playwright's own: with Your culinary terms and
+		// Brennan's Fall 2026 above My restaurant it sits near y 1700, and a
+		// flat 400 left it below the fold, so the click scrolled first and the
+		// page rightly kept that scroll, not the one the test had measured.
+		const whole = page.locator('button.door', { hasText: 'The whole menu' });
+		const wholeY = await whole.evaluate((el) => el.getBoundingClientRect().top + window.scrollY);
+		const pickerY = await scrollTo(page, Math.max(0, Math.round(wholeY) - 400));
+		await whole.click();
 		await expect(heading(page)).toHaveText('The whole menu');
 		await page.getByRole('button', { name: 'Start', exact: true }).click();
 		await expect(page.locator('.deckframe .where')).toHaveText(/^Card 1 of \d+ · The whole menu$/);

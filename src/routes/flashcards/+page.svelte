@@ -252,12 +252,12 @@
 		}
 		return [];
 	}
-	/** True while a z: card's chapter is still on its way (never once a file has failed). */
+	/** True while a z: card's chapter is still on its way (never once its own file, or the index, has failed). */
 	function czOpening(ref: string | undefined): boolean {
-		if (!ref?.startsWith('z:') || cuisine.failed) return false;
-		if (!czIndex) return true;
+		if (!ref?.startsWith('z:')) return false;
+		if (!czIndex) return !cuisine.failed;
 		const ch = cuisine.chaptersOfCards([ref.slice(2)])[0];
-		return !!ch && !cuisine.has(ch);
+		return !!ch && !cuisine.has(ch) && !cuisine.chapterFailed(ch);
 	}
 
 	/** A deck's name, for its heading, its row and the card screen's position line. */

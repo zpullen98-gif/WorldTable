@@ -218,11 +218,12 @@
 		return [...bands.keys()].sort((a, b) => a - b).flatMap((r) => askOrder(bands.get(r) ?? [], session.drillLog, Math.random));
 	}
 
-	/** Enough of Cuisine's questions to top a round up, with their chapters loaded. An unread index is none. */
-	async function needCuisine(level: DeckLevel): Promise<string[]> {
+	/** The first `want` of Cuisine's questions for the level, with only their chapters loaded. An unread index is none. */
+	async function needCuisine(level: DeckLevel, want: number): Promise<string[]> {
+		if (want <= 0) return [];
 		const index = await cuisine.load();
 		if (!index) return [];
-		const ids = cuisineOrder(level).slice(0, ROUND);
+		const ids = cuisineOrder(level).slice(0, want);
 		const entryOf = new Map(index.questions.map(([q, e]) => [q, e]));
 		await cuisine.ensure(ids.map((id) => cuisine.head(entryOf.get(id) ?? '')?.chapter ?? '').filter(Boolean));
 		return ids;
@@ -248,19 +249,21 @@
 		return out;
 	}
 
-	/** The round: each side's share (lib/quick-quiz.ts), the house and the level in turn, Cuisine spread among them. */
-	function buildQuick(level: DeckLevel, czIds: readonly string[]): Q[] {
+	/**
+	 * The round: each side's share (lib/quick-quiz.ts), the house and the level
+	 * in turn, Cuisine spread among them. Every file the house and the level
+	 * draw on first; then Cuisine is asked for its share and for whatever the
+	 * other two cannot give, so only those questions' chapters load.
+	 */
+	async function dealQuick(level: DeckLevel): Promise<Q[]> {
+		await needFiles();
 		const h = houseQuestions(hasHouse ? ROUND : 0);
 		const l = levelQuestions(ROUND, level);
-		const z = cuisineQuestions(czIds);
-		const n = quickSplit(quickTargets(hasHouse), { house: h.length, level: l.length, cuisine: z.length });
+		const targets = quickTargets(hasHouse);
+		const want = quickSplit(targets, { house: h.length, level: l.length, cuisine: ROUND }).cuisine;
+		const z = cuisineQuestions(await needCuisine(level, want));
+		const n = quickSplit(targets, { house: h.length, level: l.length, cuisine: z.length });
 		return quickOrder(h.slice(0, n.house), l.slice(0, n.level), z.slice(0, n.cuisine));
-	}
-
-	/** Every file a round draws on, then Cuisine's questions for the level. */
-	async function prepare(level: DeckLevel): Promise<string[]> {
-		await needFiles();
-		return needCuisine(level);
 	}
 
 	function freshRound(qs: Q[]): Qq {
@@ -270,9 +273,8 @@
 	let starting = $state(false);
 	async function startQuick() {
 		starting = true;
-		const czIds = await prepare(chosen);
+		const qs = await dealQuick(chosen);
 		starting = false;
-		const qs = buildQuick(chosen, czIds);
 		nav.pushShallow(`${base}/quizzes?quick=1`, { qq: freshRound(qs) });
 		await focusTop();
 	}
@@ -281,8 +283,8 @@
 		const want = pending;
 		if (!want || !today.houseSettled || !session.ready || !levels.data) return;
 		pending = null;
-		void prepare(chosen).then((czIds) => {
-			nav.replaceShallow(location.href, { qq: freshRound(buildQuick(chosen, czIds)) });
+		void dealQuick(chosen).then((qs) => {
+			nav.replaceShallow(location.href, { qq: freshRound(qs) });
 			void focusTop();
 		});
 	});
@@ -331,8 +333,8 @@
 	}
 
 	async function dealAnother() {
-		const czIds = await prepare(chosen);
-		nav.pushShallow(`${base}/quizzes?quick=1`, { qq: freshRound(buildQuick(chosen, czIds)) });
+		const qs = await dealQuick(chosen);
+		nav.pushShallow(`${base}/quizzes?quick=1`, { qq: freshRound(qs) });
 		await focusTop();
 	}
 

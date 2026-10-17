@@ -5,14 +5,16 @@
   written (°C first, °F beside), the faults (fault, cause, fix) and At
   Brennan's (each dish linked to its study card when the house on this device
   is Brennan's and holds it, else named in words, with the menu component's
-  own explanation behind a disclosure when a person kept it), See also, the
+  own explanation behind a disclosure when a person kept it), From your
+  sheets (the owner's own sheet terms the entry meets, each a link to its page
+  in Your culinary terms, drawn only when there are any), See also, the
   sources and the quote, then the drills, I have read this, and Next entry.
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { TEACHING_FOLIOS } from '$lib/teaching-folios';
 	import FolioLinks from '$lib/components/FolioLinks.svelte';
-	import { KIND_WORDS, SECTION_TITLES, dateWords, type CzEntry, type CzLabels } from '$lib/cuisine';
+	import { KIND_WORDS, SECTION_TITLES, dateWords, sheetLinks, type CzEntry, type CzLabels } from '$lib/cuisine';
 
 	let {
 		entry,
@@ -53,6 +55,11 @@
 		return line.charAt(0).toUpperCase() + line.slice(1);
 	}
 	const has = (key: string) => entry.sections.some((s) => s.key === key);
+	/* A temperature's label is written to read either side of its figure:
+	   "The yolks begin to thicken" after it, "Hold hot for service at or
+	   above" before it. A label that ends on the word leading into the
+	   figure is read first, so no line ends "at or above" with nothing after. */
+	const leadsIn = (label: string) => /\b(?:about|around|above|below|by|from|least|most|near|over|reaches|reads|roughly|than|to|typically|under|until)$/i.test(label.trim());
 
 	/* The blocks that belong under a section's heading: drawn there when the
 	   entry has that section, else on their own after the sections. */
@@ -62,6 +69,9 @@
 
 	/* Every menu component the entry names, once: the dishes' own and See also's. */
 	const components = $derived([...new Set([...entry.brennans.flatMap((b) => b.components), ...(entry.seeAlso.components ?? [])])]);
+	/* Each fold says what a tap does, in the house's words for a details
+	   (Show what Commis holds, Hide what Commis holds). */
+	let opened = $state<Record<string, boolean>>({});
 	const explained = $derived(components.map((name) => ({ name, text: componentExplain(name) })).filter((c): c is { name: string; text: string } => !!c.text));
 
 	type Row = { key: string; href: string | null; label: string };
@@ -99,6 +109,7 @@
 		return groups;
 	});
 	const folios = $derived((entry.seeAlso.folios ?? []).map((id) => TEACHING_FOLIOS.find((f) => f.id === id)).filter((f) => !!f));
+	const sheets = $derived(sheetLinks(entry.seeAlso.terms, labels, base));
 </script>
 
 {#snippet ratios()}
@@ -109,7 +120,9 @@
 	{/if}
 	{#if entry.temps.length}
 		<ul class="temps" aria-label="Temperatures">
-			{#each entry.temps as t (t.label)}<li><span class="tval">{t.c}°C ({t.f}°F)</span> <span class="tlabel">{t.label}</span></li>{/each}
+			{#each entry.temps as t (t.label)}
+				<li>{#if leadsIn(t.label)}<span class="tlabel">{t.label}</span> <span class="tval after">{t.c}°C ({t.f}°F)</span>{:else}<span class="tval">{t.c}°C ({t.f}°F)</span> <span class="tlabel">{t.label}</span>{/if}</li>
+			{/each}
 		</ul>
 	{/if}
 {/snippet}
@@ -128,7 +141,8 @@
 
 {#snippet brennans()}
 	<ul class="dishes">
-		{#each entry.brennans as b (b.dish)}
+		<!-- keyed by place: an entry may link one dish more than once, each link its own facet -->
+		{#each entry.brennans as b, i (i)}
 			{@const d = dishLink(b.dish)}
 			<li>
 				<p class="dname">{#if d.href}<a href={d.href}>{d.name}</a>{:else}{d.name}{/if}</p>
@@ -137,8 +151,8 @@
 		{/each}
 	</ul>
 	{#each explained as c (c.name)}
-		<details class="fold explain">
-			<summary>{c.name}, as the menu explains it</summary>
+		<details class="fold explain" ontoggle={(e) => (opened[c.name] = (e.currentTarget as HTMLDetailsElement).open)}>
+			<summary>{opened[c.name] ? 'Hide' : 'Show'} how the menu explains {c.name}</summary>
 			{#each c.text.split(/\n\n+/) as para, i (i)}<p>{para}</p>{/each}
 		</details>
 	{/each}
@@ -171,6 +185,15 @@
 	{/if}
 	{#if brennansAlone}
 		<section class="part" aria-labelledby="sec-brennans"><h2 id="sec-brennans">At Brennan's</h2>{@render brennans()}</section>
+	{/if}
+
+	{#if sheets.length}
+		<section class="part sheets" aria-labelledby="sec-sheets">
+			<h2 id="sec-sheets">From your sheets</h2>
+			<ul class="links">
+				{#each sheets as t (t.id)}<li><a href={t.href}>{t.label}</a></li>{/each}
+			</ul>
+		</section>
 	{/if}
 
 	{#if see.length || folios.length}
@@ -319,6 +342,10 @@
 		font-weight: 600;
 		margin-right: 6px;
 	}
+	.tval.after {
+		margin-right: 0;
+		white-space: nowrap;
+	}
 	.faults li,
 	.dishes li {
 		padding: 10px 0;
@@ -338,6 +365,7 @@
 		display: inline-flex;
 		align-items: center;
 		min-height: 44px;
+		min-width: 44px;
 		color: var(--ink);
 	}
 	.fline,
@@ -361,12 +389,14 @@
 	.links li {
 		font-size: var(--t-body);
 	}
+	/* min-width too: a one-word reference (Jus, Filé, Roux) is still a 44 by 44 target */
 	.links a,
 	.links span,
 	.sources a {
 		display: inline-flex;
 		align-items: center;
 		min-height: 44px;
+		min-width: 44px;
 		color: var(--ink);
 		line-height: 1.4;
 	}
@@ -415,6 +445,7 @@
 		display: inline-flex;
 		align-items: center;
 		min-height: 44px;
+		min-width: 44px;
 		color: var(--ink);
 		font-family: var(--display);
 		font-size: 1.2rem;
