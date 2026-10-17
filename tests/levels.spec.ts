@@ -128,7 +128,7 @@ test('a level page opens on Today\'s study and My restaurant, and keeps its eigh
 	await subs.nth(0).locator('details summary').click();
 	await expect(subs.nth(0).locator('details li a').first()).not.toHaveText(/-/);
 	// the training doors and the test moved: Read to Library, decks to
-	// Flashcards, quizzes and the test to Quizzes
+	// Practise, quizzes and the test to Practise too (17 Oct 2026)
 	await expect(page.locator('a.train, a.leveltest')).toHaveCount(0);
 });
 

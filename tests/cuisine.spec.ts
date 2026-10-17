@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { goto, seedSession, HOUSE_INDEX_KEY } from './helpers';
 
 /**
- * Cuisine, the World Table's sixth tab (12 Oct 2026), walked in a phone's
+ * Cuisine (12 Oct 2026; a Brennan's screen since 17 Oct 2026), walked in a phone's
  * Chromium at 390 by 844, with a 375 case for the bar and the screens. The
  * shipped Brennan's pack is served on the context the way house.spec.ts
  * serves it (the suite's server withholds packs, and only a context route
@@ -20,7 +20,7 @@ import { goto, seedSession, HOUSE_INDEX_KEY } from './helpers';
  * draw as a "coming" row, and the unit tests keep that case.
  *
  * ChatGPT's Today's study and Your culinary terms are walked beside the tab
- * at both widths, so the sixth tab is proven not to crowd them.
+ * at both widths, so the bar is proven not to crowd them.
  *
  * A round's items ride in the page's history entry (App.PageState.cz), so
  * the spec reads the item it is shown from there and looks the right answer
@@ -41,7 +41,11 @@ const NAMES = LEVELS.levels.map((l) => l.name);
 const SHOTS = process.env.CUISINE_SHOTS ?? '';
 const HUSSARDE = 'd-1q0xk7jv';
 const DAY = 86_400_000;
-const WORDS = ['Home', 'Flashcards', 'Quizzes', 'Library', 'Cuisine', 'More'];
+/* The bar's five words since 17 Oct 2026: Cuisine lives under Brennan's (the
+   second word, the pack's own spelling with its curly apostrophe), reached
+   from the house's page by its lead door, and its address lights that word. */
+const WORDS = ['Home', 'Brennan’s', 'Practise', 'Library', 'More'];
+const BRENNANS = WORDS[1];
 
 type Tuple = [string, string, number];
 type Card = { id: string; front: string; back: string };
@@ -204,7 +208,7 @@ test.beforeEach(async ({ page }) => {
 
 /* ------------------------------------------------------------------------ */
 
-test('the bar holds six words in one row at 375 and 390, every tab 44 by 44, and Cuisine opens with its twelve chapters', async ({ page }) => {
+test("the bar holds five words in one row at 375 and 390, every tab 44 by 44, and Cuisine opens from the Brennan's page with its twelve chapters", async ({ page }) => {
 	test.setTimeout(90_000);
 	expect(INDEX.complete, 'the full set is built').toBe(true);
 	expect(INDEX.chapters).toHaveLength(12);
@@ -226,10 +230,16 @@ test('the bar holds six words in one row at 375 and 390, every tab 44 by 44, and
 		expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
 		if (SHOTS) await page.locator('nav.modebar').screenshot({ path: `${SHOTS}${width}-bar.png` });
 
-		await page.locator('nav.modebar .modetab', { hasText: 'Cuisine' }).click();
+		// To Cuisine the way the bar leads there now: the Brennan's word, then
+		// the house page's lead door under The cooking; Cuisine's address lights
+		// the Brennan's word.
+		await page.locator('nav.modebar .modetab', { hasText: BRENNANS }).click();
+		await expect(page).toHaveURL(/\/menu$/);
+		await expect(heading(page)).toHaveText(BRENNANS, { timeout: 15_000 });
+		await page.locator('.house-groups a.door[data-door="cuisine"]').click();
 		await expect(page).toHaveURL(/\/cuisine$/);
 		await expect(heading(page)).toHaveText('Cuisine');
-		await expect(page.locator('.modetab[aria-current="page"]')).toHaveText('Cuisine');
+		await expect(page.locator('.modetab[aria-current="page"]')).toHaveText(BRENNANS);
 		// Twelve chapter doors, every one a link to a written chapter, its title the index's own.
 		await expect(page.locator('.chapters > li')).toHaveCount(12, { timeout: 15_000 });
 		await expect(page.locator('.chapters a.door')).toHaveCount(12);
@@ -530,8 +540,12 @@ test.describe('a chapter that cannot be read', () => {
 		await goto(page, `/cuisine?ch=${lostKey}&e=${lost.slug}`);
 		await expect(cuisineMain(page).locator('.note', { hasText: 'This chapter could not be opened' })).toBeVisible({ timeout: 15_000 });
 
-		// To Cuisine by the bar, then the Next unread door: an in-app move, so the failure is still in the store.
-		await page.locator('nav.modebar .modetab', { hasText: 'Cuisine' }).click();
+		// To Cuisine by Back twice (the entry's chapter, then Cuisine: in-app
+		// moves, so the failure is still in the store), then the Next unread door.
+		await backBtn(page).click();
+		await expect(page).toHaveURL(new RegExp(`/cuisine\\?ch=${lostKey}$`));
+		await backBtn(page).click();
+		await expect(page).toHaveURL(/\/cuisine$/);
 		await expect(door(page, next.title)).toBeVisible({ timeout: 15_000 });
 		await page.evaluate(() => {
 			const w = window as unknown as { lostSeen: boolean };
@@ -580,16 +594,22 @@ test('the family tree and the roux ladder draw in words, every node and rung', a
 	await expect(heading(page)).toHaveText('Cuisine');
 });
 
-test('a cold deep link to an entry walks Back up through its chapter and Cuisine to Home', async ({ page }) => {
+test("a cold deep link to an entry walks Back up through its chapter, Cuisine and the Brennan's page to Home", async ({ page }) => {
 	await goto(page, `/cuisine?ch=mother-sauces&e=${HOLLANDAISE.slug}`);
 	await expect(heading(page)).toHaveText(HOLLANDAISE.title);
 	await expect(page.locator('article.czentry')).toBeVisible({ timeout: 15_000 });
+	await expect(page.locator('.modetab[aria-current="page"]')).toHaveText(BRENNANS);
 	await backBtn(page).click();
 	await expect(page).toHaveURL(/\/cuisine\?ch=mother-sauces$/);
 	await expect(heading(page)).toHaveText(MOTHER.title);
 	await backBtn(page).click();
 	await expect(page).toHaveURL(/\/cuisine$/);
 	await expect(heading(page)).toHaveText('Cuisine');
+	// Cuisine is a Brennan's screen (17 Oct 2026): its parent is the house's page, a tab root.
+	await backBtn(page).click();
+	await expect(page).toHaveURL(/\/menu$/);
+	await expect(heading(page)).toHaveText(BRENNANS, { timeout: 15_000 });
+	await expect(page.locator('.modetab[aria-current="page"]')).toHaveText(BRENNANS);
 	await backBtn(page).click();
 	await expect(page).toHaveURL(/\/$/);
 	await expect(page.locator('a.level')).toHaveCount(4);
@@ -597,7 +617,7 @@ test('a cold deep link to an entry walks Back up through its chapter and Cuisine
 	await expect(page.locator('.modetab[aria-current="page"]')).toHaveText('Home');
 });
 
-test('a Cuisine card due three days ago is counted in the Flashcards pill and dealt first by Due today', async ({ page }) => {
+test('a Cuisine card due three days ago is counted in the Practise pill and dealt first by Due today', async ({ page }) => {
 	// One Got it five days ago: the first rung of the term ladder is two days, so it fell due three days ago.
 	const [cardId] = INDEX.cards[0];
 	const card = CARD.get(cardId)!;
@@ -624,9 +644,10 @@ test('a Cuisine card due three days ago is counted in the Flashcards pill and de
 });
 
 test('the quick quiz asks two Cuisine questions, labelled Cuisine, whose misses open their entries', async ({ page }) => {
-	await goto(page, '/quizzes');
-	await expect(heading(page)).toHaveText('Quizzes');
-	await page.getByRole('button', { name: 'Start the quick quiz' }).click();
+	// Started from the Practise root (17 Oct 2026): the link in its Quick quiz group, to /quizzes?quick=1.
+	await goto(page, '/flashcards');
+	await expect(heading(page)).toHaveText('Practise');
+	await page.locator('section[aria-labelledby="fc-quick"]').getByRole('link', { name: 'Start the quick quiz' }).click();
 	await expect(page.locator('.opt').first()).toBeVisible({ timeout: 15_000 });
 	const qq = (await qqState(page))!;
 	const cz = qq.qs.filter((q) => q.kind === 'cuisine');
@@ -649,7 +670,7 @@ test('the quick quiz asks two Cuisine questions, labelled Cuisine, whose misses 
 	const title = ((await misses.first().locator('.mlabel').textContent()) ?? '').replace(/^Cuisine · /, '');
 	await misses.first().locator('a.chip', { hasText: 'Read about it' }).click();
 	await expect(heading(page)).toHaveText(title);
-	await expect(page.locator('.modetab[aria-current="page"]')).toHaveText('Cuisine');
+	await expect(page.locator('.modetab[aria-current="page"]')).toHaveText(BRENNANS);
 	await backBtn(page).click();
 	await expect(heading(page)).toHaveText('What you missed');
 });
@@ -807,14 +828,14 @@ test('every Cuisine screen at 375 and 390: no sideways scroll, every control 44 
 	await page.setViewportSize({ width: 390, height: 844 });
 });
 
-test("ChatGPT's Today's study and Your culinary terms beside the sixth tab at 375 and 390: five doors 44 px, no sideways scroll", async ({ page }) => {
+test("ChatGPT's Today's study and Your culinary terms beside the Brennan's tab at 375 and 390: five doors 44 px, no sideways scroll", async ({ page }) => {
 	test.setTimeout(90_000);
 	const term = SHEETS_ENTRY && CHAPTERS[SHEETS_ENTRY.chapter].entries.find((e) => e.id === SHEETS_ENTRY.id)!.seeAlso.terms![0];
 	for (const width of [375, 390]) {
 		await page.setViewportSize({ width, height: 844 });
 		/* `targets` false on ChatGPT's own page: Your culinary terms stays as
 		   ChatGPT left it (its inline links are its design, not this tab's to
-		   restyle), so the walk proves only what the sixth tab could break there,
+		   restyle), so the walk proves only what the bar could break there,
 		   the glass's width. */
 		const check = async (name: string, within: string, full = false, targets = true) => {
 			const m = await measure(page, within);
@@ -824,7 +845,7 @@ test("ChatGPT's Today's study and Your culinary terms beside the sixth tab at 37
 			await shot(page, `${width}-${name}`, full);
 		};
 
-		// Today's study on the level page: its five doors as ChatGPT left them, the bar's six words above.
+		// Today's study on the level page: its five doors as ChatGPT left them, the bar's five words above.
 		await goto(page, '/level/1');
 		const today = page.locator('nav.quiet[aria-labelledby="today"] .door');
 		await expect(today.locator('.door-name')).toHaveText(['Your culinary terms', 'Due today', 'Quick quiz', 'Next reading', 'Fall menu practice']);

@@ -100,6 +100,8 @@
 			<span class="door-name">The Lexicon</span>
 			<span class="door-line">{all ? `${TOTALS.lexicon} terms.` : count(atLevel('lexicon'), 'terms')}</span>
 		</a>
+		<!-- Cuisine and the Fieldbook live under Brennan's (17 October 2026) and are listed here as reading, their addresses unchanged. -->
+		<a class="door" href="{base}/cuisine" data-door="cuisine"><span class="door-name">Cuisine</span><span class="door-line">French and Creole cooking in depth: twelve chapters, 165 entries, the family tree and the roux ladder.</span></a>
 		<a class="door" href="{base}/foundations"><span class="door-name">The Kitchen Fieldbook</span><span class="door-line">Your culinary terms &amp; definitions, gathered from your training sheets. Every subject and level is open.</span></a>
 		{#if all}
 			{#each LEVEL_KEYS as n (n)}

@@ -63,7 +63,9 @@ export function parentOf(ask: ParentAsk): string {
 
 	if (path === '/') return '/';
 
-	// The four roots: their parent is Home.
+	// The tab roots: their parent is Home. Practise is /flashcards; the
+	// rounds' page, /quizzes, is a Practise screen (the quick quiz runs on it
+	// too, so Back from the round returns to Practise).
 	if (path === '/flashcards') {
 		const deck = q.get('deck');
 		if (!deck) return '/';
@@ -72,11 +74,12 @@ export function parentOf(ask: ParentAsk): string {
 		if (deck.startsWith('foundations')) return '/foundations';
 		return '/flashcards';
 	}
-	if (path === '/quizzes') return q.get('quick') === '1' ? '/quizzes' : '/';
+	if (path === '/quizzes') return '/flashcards';
 	if (path === '/library' || path === '/more') return '/';
-	// Cuisine, the sixth tab, one page: an entry goes back to its chapter, a
+	// Cuisine, one page under Brennan's: an entry goes back to its chapter, a
 	// chapter to Cuisine; a run to its deck screen (In Cuisine today and the
-	// misses have none), a deck, a round and a view to Cuisine; Cuisine to Home.
+	// misses have none), a deck, a round and a view to Cuisine; Cuisine to
+	// the Brennan's page.
 	if (path === '/cuisine') {
 		const deck = q.get('deck');
 		if (deck) {
@@ -87,20 +90,23 @@ export function parentOf(ask: ParentAsk): string {
 		const ch = q.get('ch');
 		if (ch && q.get('e')) return `/cuisine?ch=${encodeURIComponent(ch)}`;
 		if (ch) return '/cuisine';
-		return '/';
+		return '/menu';
 	}
 
-	// Home's own screens.
+	// Home's own screens: the levels. A level's reading is a Library screen
+	// and its test a Practise one.
 	if (path === '/level') return '/';
 	if (/^\/level\/[1-4]$/.test(path)) return '/';
 	if (/^\/level\/[1-4]\/read$/.test(path)) return '/library';
-	if (/^\/level\/[1-4]\/test$/.test(path)) return '/quizzes';
+	if (/^\/level\/[1-4]\/test$/.test(path)) return '/flashcards';
+	// The Kitchen Fieldbook lives under Brennan's: a reading goes back to its
+	// filtered list, the list to the Brennan's page.
 	if (path === '/foundations') {
 		if (q.has('term')) {
 			q.delete('term');
 			return `/foundations${q.size ? '?' + q : ''}`;
 		}
-		return `/level/${chosen}`;
+		return '/menu';
 	}
 	// Cook at home: a dish's way back is its own level page, named in the
 	// address (the dish page cannot know a slug's level before its data
@@ -110,6 +116,9 @@ export function parentOf(ask: ParentAsk): string {
 		const lv = q.get('level') ?? '';
 		return `/level/${/^[1-4]$/.test(lv) ? lv : chosen}`;
 	}
+	// The Brennan's page, the house's tab root: its parent is Home, as every
+	// tab root's is (a level page's door to it still pushes, so Back from
+	// that is history.back()).
 	if (path === '/menu') {
 		if (q.get('view') === 'fall') return q.has('item') ? `/menu?view=fall&kind=${['dish', 'cocktail', 'all'].includes(q.get('kind') ?? '') ? q.get('kind') : 'dish'}` : '/menu';
 		// A card opened from the Producers view goes back to the view; one open on the study view, or the editing page pushed over it, to the study view.
@@ -117,15 +126,16 @@ export function parentOf(ask: ParentAsk): string {
 		if (/^(dish-)?d-/.test(hash) || hash === 'edit') return '/menu';
 		// A drawer More opened: back to More, while the hash says so and after it is cleared.
 		if (MORE_DRAWERS.includes(hash) || ask.via === 'more') return '/more';
-		return `/level/${chosen}`;
+		// The Producers view is a screen of the house's page, like the fall view: cold, it goes back to the page.
+		if (q.get('view') === 'producers') return '/menu';
+		return '/';
 	}
-	// The Lexicon quiz is a Quizzes row: its way back is Quizzes, not the shelf.
-	if (path === '/lexicon' && q.get('start') === 'quiz') return '/quizzes';
+	// The Lexicon quiz is a Practise row: its way back is Practise, not the shelf.
+	if (path === '/lexicon' && q.get('start') === 'quiz') return '/flashcards';
 
-	// The More screens, then the quizzes (the /menu/quiz cards go to Flashcards).
+	// The More screens, then the rounds and the decks: every one a Practise row.
 	if (MORE_ITEMS.includes(path)) return '/more';
-	if (path === '/menu/quiz') return q.get('mode') === 'cards' ? '/flashcards' : '/quizzes';
-	if (QUIZ_ITEMS.includes(path)) return '/quizzes';
+	if (path === '/menu/quiz' || QUIZ_ITEMS.includes(path)) return '/flashcards';
 	if (path === '/service/deck' || path === '/service/deck/study') return '/flashcards';
 
 	// The Library's shelves and what they hold.
@@ -142,7 +152,7 @@ export function parentOf(ask: ParentAsk): string {
 /**
  * Where an old flash-card address lands on the one card screen (design 3.7):
  * /menu/quiz?mode=cards with its scope (item=, section=, deck=weak or
- * deck=parts, and the study view's meal=), as a Flashcards run of the
+ * deck=parts, and the study view's meal=), as a Practise run of the
  * matching deck.
  */
 export function cardsTarget(search: string): string {
@@ -163,7 +173,7 @@ export function cardsTarget(search: string): string {
 
 /**
  * Where the Lexicon's old flash cards land (/lexicon?start=flash): the level's
- * terms when ?level= names one, else the whole Lexicon, as a Flashcards run.
+ * terms when ?level= names one, else the whole Lexicon, as a Practise run.
  */
 export function lexiconCardsTarget(level: number | null): string {
 	return `/flashcards?deck=${level ? 'lexicon' : 'lexicon-all'}&run=1`;

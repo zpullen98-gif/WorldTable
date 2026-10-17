@@ -159,25 +159,27 @@
 		return () => ro.disconnect();
 	});
 
-	/* The nav (docs/consolidation-design.md 2.1 and 3.2): six words on the
-	   Table, the tab words Home, Flashcards, Quizzes, Library and Cuisine, in
-	   that order, then More, drawn as the bar's quiet control at its right end
+	/* The nav (docs/consolidation-design.md 2.1 and 3.2): five words on the
+	   Table, the tab words Home, Brennan's, Practise and Library, in that
+	   order, then More, drawn as the bar's quiet control at its right end
 	   where the service toggle's moon was, and lit only while a More screen
-	   shows. The Ledger and the Codex keep four tab words and More: Cuisine
-	   is the Table's own sixth word, the owner's choice of 12 Oct 2026 and a
-	   deliberate departure from the parity of 4 Oct. Every href is a literal,
+	   shows. The owner's choice of 17 Oct 2026: Brennan's is one tab, the
+	   house's whole information in one place, and Flashcards and Quizzes are
+	   one word, Practise. The Ledger and the Codex keep four tab words and
+	   More; they get the same treatment afterwards. Every href is a literal,
 	   so verify-build's scanner resolves each to a page; navigation.test.ts
 	   pins the words, the order and More last and quiet. Home is the four
-	   levels; a level page opens on Today's study and My restaurant; every
-	   deck is under Flashcards, every round under Quizzes, all reading under
-	   Library, French and Creole cooking under Cuisine, the record and the
-	   tools under More. */
+	   levels; a level page opens on Today's study and the house; the menu,
+	   the cards, Cuisine and the Kitchen Fieldbook are under Brennan's,
+	   every deck and every round under Practise, all reading under Library,
+	   the record and the tools under More. The label is the literal word
+	   with its curly apostrophe (U+2019), as house.name prints it: the
+	   prerendered bar carries it at first paint, before any pack is read. */
 	const MODES = [
 		{ href: '', label: 'Home' },
-		{ href: '/flashcards', label: 'Flashcards' },
-		{ href: '/quizzes', label: 'Quizzes' },
+		{ href: '/menu', label: 'Brennan’s' },
+		{ href: '/flashcards', label: 'Practise' },
 		{ href: '/library', label: 'Library' },
-		{ href: '/cuisine', label: 'Cuisine' },
 		{ href: '/more', label: 'More', quiet: true }
 	];
 
@@ -189,21 +191,23 @@
 	 * there would assert on files that can never exist.
 	 *
 	 * The level test and the level's reading are matched by pattern first,
-	 * because their stem (/level) is Home's. /menu/quiz is Quizzes' although
-	 * /menu is Home's, so the More and Quizzes prefixes are tested before
-	 * Home's. Every screen reached from More lights More.
+	 * because their stem (/level) is Home's. /menu/quiz is Practise's and the
+	 * More tools (/menu/costing and the rest) are More's although /menu is
+	 * Brennan's, so the More and Practise prefixes are tested before
+	 * Brennan's. Cuisine and the Kitchen Fieldbook are Brennan's screens;
+	 * Home keeps the levels and Cook at home. Every screen reached from More
+	 * lights More.
 	 */
 	const OWN_PATTERNS: Array<[RegExp, string]> = [
-		[/^\/level\/[1-4]\/test$/, '/quizzes'],
+		[/^\/level\/[1-4]\/test$/, '/flashcards'],
 		[/^\/level\/[1-4]\/read$/, '/library']
 	];
 	const OWNS: Array<[string, string[]]> = [
 		['/more', ['/more', '/repertoire', '/coverage', '/menu/costing', '/menu/preps', '/menu/prep-board', '/menu/waste', '/menu/producers', '/menu/guest']],
-		['/quizzes', ['/quizzes', '/menu/quiz', '/service/deck/test', '/service/deck/say', '/service/deck/lineup', '/service/drill', '/practise']],
-		['/flashcards', ['/flashcards', '/service/deck/study', '/service/deck']],
+		['/flashcards', ['/flashcards', '/quizzes', '/menu/quiz', '/service/deck', '/service/drill', '/practise']],
 		['/library', ['/library', '/recipes', '/recipe/', '/chapter/', '/family', '/lexicon', '/pantry', '/technique', '/plates', '/service', '/safety', '/palate', '/study']],
-		['/cuisine', ['/cuisine']],
-		['', ['/level', '/menu', '/kitchen', '/foundations']]
+		['/menu', ['/menu', '/cuisine', '/foundations']],
+		['', ['/level', '/kitchen']]
 	];
 
 	// bareHtmlPath: page.url keeps the .html spelling a reader may have arrived
@@ -241,14 +245,14 @@
 
 	/* The one number worth carrying in the chrome: the cards due today at the
 	   chosen level and the house, new ones included (lib/today.ts), the same
-	   number the level page's Due today row and the Flashcards root show. A
+	   number the level page's Due today row and the Practise root show. A
 	   pill with a hidden word, absent at zero. The house's dish count moved to
-	   My restaurant's count line, the re-cook count to More's Record row. */
+	   the house's count line, the re-cook count to More's Record row. */
 	const dueToday = $derived(today.at()?.total ?? 0);
 	/* After the page has drawn: the pill waits on the levels file, the deck's
 	   index and the house's boot, and on a page as heavy as the recipe grid
 	   that work must not race the page's own hydration. The pages that show
-	   the count themselves (a level page, Flashcards) load it at once. */
+	   the count themselves (a level page, Practise) load it at once. */
 	$effect(() => {
 		const t = setTimeout(() => today.load(), 1500);
 		return () => clearTimeout(t);
@@ -268,13 +272,12 @@
 	const owner = $derived.by(() => {
 		if (path === '/') return '';
 		for (const [re, tab] of OWN_PATTERNS) if (re.test(path)) return tab;
-		/* The flash cards' old address lights Flashcards in the browser only:
-		   the prerendered page cannot read the query (the first Convention). */
-		if (browser && path === '/menu/quiz' && page.url.searchParams.get('mode') === 'cards') return '/flashcards';
-		/* The same rule for two more: the Lexicon quiz is a Quizzes row, and a
-		   /menu drawer More opened (#plan, #tools, #maitre, remembered in the
-		   entry's state once the hash is cleared) is a More screen. */
-		if (browser && path === '/lexicon' && page.url.searchParams.get('start') === 'quiz') return '/quizzes';
+		/* Two screens the address alone does not place, read in the browser
+		   only (the prerendered page cannot read the query, the first
+		   Convention): the Lexicon quiz is a Practise row, and a /menu drawer
+		   More opened (#plan, #tools, #maitre, remembered in the entry's state
+		   once the hash is cleared) is a More screen. */
+		if (browser && path === '/lexicon' && page.url.searchParams.get('start') === 'quiz') return '/flashcards';
 		if (browser && path === '/menu' && (MORE_DRAWERS.includes(page.url.hash.slice(1)) || (page.state as App.PageState).via === 'more')) return '/more';
 		for (const [tab, prefixes] of OWNS) {
 			for (const prefix of prefixes) {
@@ -294,15 +297,19 @@
 	 * adds no history entry (design 2.1): the same address is a replace in the
 	 * router, and a thumb tapping the lit word to get back to the top must not
 	 * cost a Back press. A root is the tab's own path with no screen of its
-	 * own open over it (a deck, a run, the quick quiz, a Cuisine run or
-	 * round). Cuisine's chapters, entries, decks and views are addresses on
-	 * its one page that carry no state, so its query says when one is open.
+	 * own open over it (a deck, a run, the quick quiz). Cuisine and the
+	 * Fieldbook are Brennan's screens on their own pages, so the lit word
+	 * there is a link to the house's root, never a scroll. The Brennan's
+	 * page's own screens are a card (#d-...), the editing page (#edit), the
+	 * fall and producers views (?view=) and a section's list (?section=):
+	 * from any of them the lit word navigates to the bare root, and only on
+	 * the bare root, no query and no hash, does it scroll.
 	 */
 	function onTab(e: MouseEvent, href: string) {
 		if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
 		const st = (page.state ?? {}) as App.PageState;
-		const cuisineScreen = href === '/cuisine' && /[?&](?:ch|deck|quiz|view|due)=/.test(location.search);
-		if (owner !== href || path !== (href || '/') || st.fc || st.qq || st.cz || cuisineScreen) return;
+		const menuScreen = href === '/menu' && (location.search !== '' || location.hash !== '' || !!st.edit);
+		if (owner !== href || path !== (href || '/') || st.fc || st.qq || st.cz || menuScreen) return;
 		e.preventDefault();
 		window.scrollTo(0, 0);
 	}
@@ -840,29 +847,34 @@
         .house-home .brandline { font-size: clamp(2rem, 8.5vw, 3rem); }
         .house-home .head-inner { min-height: 440px; padding-top: 36px; }
         .house-home .house-art img { object-position: 49% 62%; }
-        /* My Menu is a working surface: keep its illustrated nameplate, while
+        /* The Brennan's page is a working surface: keep its illustrated nameplate, while
            the service controls and the first two dishes share the first screen.
            The full welcome remains on Home; every touch target stays 44px. */
         .house-working { min-height: 64px; }
         .house-working .head-inner { min-height: 64px; padding-block: 9px; }
         .house-working .brandline { margin: 0; font-size: 1.65rem; }
         .house-working .brandline a { display: inline-flex; align-items: center; gap: .22em; min-height: 44px; }
-        /* Six words in one row at 390 and 375 (Cuisine, 12 Oct 2026), each
-           word whole and centred in a box at least 44 by 44 px. Five fitted
-           375 with 2.5 px to spare at the old numbers, and Cuisine overflowed
-           by about 50 px, so the tabs pad 2 px a side with no tracking at
-           .64rem, the gaps are 4 px and the right gutter 6 px, and the due pill
-           leaves the line: a corner badge placed over the tab's top padding,
-           so its 26 px no longer widen Flashcards. Under 400 px the words are
-           .6rem and the gaps 3 px. MEASURED in Chromium on the built copy
-           (12 Oct 2026), not trusted: at 375 and 390 the boxes are Home 44,
-           Flashcards 68, Quizzes 46, Library 44, Cuisine 44 and More 44 wide,
-           46 tall (More 47), in one row with 4 px to spare at 375 and 19 at
-           390 and no overflow; the pill is 19 by 14, its right edge 2 px past
-           Flashcards and 1 px clear of Quizzes. At 414 to 599 (.64rem):
-           Flashcards 71, Quizzes 49, Library 46, Cuisine 46, 28 px spare at
-           414. Below 375 the bar wraps More to a second line (360 is 11 px
-           short), as it always could; none of the fallbacks was needed. */
+        /* Five words in one row at 390 and 375 (Brennan's, 17 Oct 2026), each
+           word whole and centred in a box at least 44 by 44 px. The rules
+           are the six-word bar's of 12 Oct, kept as they were: the tabs pad
+           2 px a side with no tracking at .64rem, the gaps are 4 px and the
+           right gutter 6 px, and the due pill leaves the line, a corner
+           badge placed over the tab's top padding, so its 26 px do not widen
+           Practise. Under 400 px the words are .6rem and the gaps 3 px.
+           MEASURED in Chromium on the built copy (17 Oct 2026, the house's
+           page with the due pill drawn, tests/brennans.spec.ts), not
+           estimated: at 375 and 390 alike the boxes are Home 44, Brennan's
+           61, Practise 51, Library 44 and More 44 wide, 46 tall (More 47),
+           in one row with no overflow; the four tab words run from x 60 to
+           269 (209 px), More sits at the right end (325 to 369 at 375, 340
+           to 384 at 390) with the 6 px gutter, so 56 px stand open between
+           Library and More at 375 and 71 at 390; the pill is 19 by 14, its
+           right edge 2 px past Practise. The 12 Oct estimate (Brennan's 62,
+           Practise 55) was close; the open space is what lifting the phone
+           words back towards .72rem would spend, a choice to offer the
+           owner, not part of this change. Below 375 the bar could wrap More
+           to a second line, as it always could; none of the fallbacks was
+           needed. */
         .modetab { position: relative; padding-inline: 2px; min-width: 44px; text-align: center; font-size: .64rem; letter-spacing: 0; }
         .modebar-inner { gap: 4px; padding-right: 6px; }
         .pill { position: absolute; top: 2px; right: -2px; margin-left: 0; padding: 0 5px; line-height: 14px; }

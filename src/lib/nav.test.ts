@@ -67,25 +67,33 @@ describe('parentOf', () => {
 	it('follows the screen map', () => {
 		expect(parentOf({ path: '/level/3' })).toBe('/');
 		expect(parentOf({ path: '/level/3/read' })).toBe('/library');
-		expect(parentOf({ path: '/level/3/test' })).toBe('/quizzes');
+		expect(parentOf({ path: '/level/3/test' })).toBe('/flashcards');
 		expect(parentOf({ path: '/kitchen', search: '?d=shakshuka&level=3', chosen: 1 })).toBe('/level/3');
 		expect(parentOf({ path: '/kitchen', search: '?d=shakshuka', chosen: 2 })).toBe('/level/2');
 		expect(parentOf({ path: '/kitchen', search: '?d=x&level=9', chosen: 4 })).toBe('/level/4');
 		expect(parentOf({ path: '/kitchen', chosen: 1 })).toBe('/level/1');
-		expect(parentOf({ path: '/menu', chosen: 2 })).toBe('/level/2');
-		expect(parentOf({ path: '/menu', search: '?section=Starters', chosen: 4 })).toBe('/level/4');
+		// The Brennan's page is a tab root: its parent is Home, whatever the chosen level.
+		expect(parentOf({ path: '/menu', chosen: 2 })).toBe('/');
+		expect(parentOf({ path: '/menu', search: '?section=Starters', chosen: 4 })).toBe('/');
 		expect(parentOf({ path: '/menu', hash: '#d-abc' })).toBe('/menu');
 		expect(parentOf({ path: '/menu', search: '?view=producers', hash: '#d-abc' })).toBe('/menu?view=producers');
-		expect(parentOf({ path: '/menu', search: '?view=producers', chosen: 3 })).toBe('/level/3');
+		expect(parentOf({ path: '/menu', search: '?view=producers', chosen: 3 })).toBe('/menu');
+		expect(parentOf({ path: '/menu', search: '?view=fall' })).toBe('/menu');
 		expect(parentOf({ path: '/menu', hash: '#edit' })).toBe('/menu');
+		// Every round and every deck is a Practise row.
 		expect(parentOf({ path: '/menu/quiz', search: '?mode=cards' })).toBe('/flashcards');
-		expect(parentOf({ path: '/menu/quiz', search: '?mode=drill' })).toBe('/quizzes');
+		expect(parentOf({ path: '/menu/quiz', search: '?mode=drill' })).toBe('/flashcards');
+		expect(parentOf({ path: '/menu/quiz' })).toBe('/flashcards');
 		expect(parentOf({ path: '/menu/costing' })).toBe('/more');
 		expect(parentOf({ path: '/repertoire' })).toBe('/more');
-		expect(parentOf({ path: '/practise/firing' })).toBe('/quizzes');
+		expect(parentOf({ path: '/practise/firing' })).toBe('/flashcards');
+		expect(parentOf({ path: '/practise/calibrate' })).toBe('/flashcards');
 		expect(parentOf({ path: '/service/deck' })).toBe('/flashcards');
 		expect(parentOf({ path: '/service/deck/study' })).toBe('/flashcards');
-		expect(parentOf({ path: '/service/deck/test' })).toBe('/quizzes');
+		expect(parentOf({ path: '/service/deck/test' })).toBe('/flashcards');
+		expect(parentOf({ path: '/service/deck/say' })).toBe('/flashcards');
+		expect(parentOf({ path: '/service/deck/lineup' })).toBe('/flashcards');
+		expect(parentOf({ path: '/service/drill' })).toBe('/flashcards');
 		expect(parentOf({ path: '/service' })).toBe('/library');
 		expect(parentOf({ path: '/service/knife-work' })).toBe('/service');
 		expect(parentOf({ path: '/recipe/cacio-e-pepe' })).toBe('/recipes');
@@ -99,16 +107,18 @@ describe('parentOf', () => {
 		expect(parentOf({ path: '/flashcards', search: '?deck=menu&run=1' })).toBe('/flashcards?deck=menu');
 		expect(parentOf({ path: '/flashcards', search: '?deck=due&run=1' })).toBe('/flashcards');
 		expect(parentOf({ path: '/flashcards', search: '?deck=misses&run=1&h=d-1' })).toBe('/flashcards');
-		expect(parentOf({ path: '/quizzes' })).toBe('/');
-		expect(parentOf({ path: '/quizzes', search: '?quick=1' })).toBe('/quizzes');
+		// The rounds' page is a Practise screen, the quick quiz on it too: Back from the round returns to Practise.
+		expect(parentOf({ path: '/quizzes' })).toBe('/flashcards');
+		expect(parentOf({ path: '/quizzes', search: '?quick=1' })).toBe('/flashcards');
+		expect(parentOf({ path: '/quizzes', search: '?all=1' })).toBe('/flashcards');
 		expect(parentOf({ path: '/library' })).toBe('/');
 		expect(parentOf({ path: '/more' })).toBe('/');
 		expect(parentOf({ path: '/nowhere/at/all' })).toBe('/');
 	});
 
-	it('walks every Cuisine form up its own chain to Home', () => {
-		expect(parentOf({ path: '/cuisine' })).toBe('/');
-		expect(parentOf({ path: '/cuisine', search: '?all=1' })).toBe('/');
+	it('walks every Cuisine form up its own chain, through the Brennan’s page, to Home', () => {
+		expect(parentOf({ path: '/cuisine' })).toBe('/menu');
+		expect(parentOf({ path: '/cuisine', search: '?all=1' })).toBe('/menu');
 		expect(parentOf({ path: '/cuisine', search: '?ch=mother-sauces' })).toBe('/cuisine');
 		expect(parentOf({ path: '/cuisine', search: '?ch=mother-sauces&e=hollandaise' })).toBe('/cuisine?ch=mother-sauces');
 		expect(parentOf({ path: '/cuisine', search: '?deck=ch%3Amother-sauces' })).toBe('/cuisine');
@@ -131,24 +141,25 @@ describe('parentOf', () => {
 			}
 			return chain;
 		};
-		expect(walk('/cuisine?ch=mother-sauces&e=hollandaise')).toEqual(['/cuisine?ch=mother-sauces', '/cuisine', '/']);
-		expect(walk('/cuisine?deck=ch%3Amother-sauces&run=1')).toEqual(['/cuisine?deck=ch%3Amother-sauces', '/cuisine', '/']);
-		expect(walk('/cuisine?quiz=ch:mother-sauces&kind=steps')).toEqual(['/cuisine', '/']);
+		expect(walk('/cuisine?ch=mother-sauces&e=hollandaise')).toEqual(['/cuisine?ch=mother-sauces', '/cuisine', '/menu', '/']);
+		expect(walk('/cuisine?deck=ch%3Amother-sauces&run=1')).toEqual(['/cuisine?deck=ch%3Amother-sauces', '/cuisine', '/menu', '/']);
+		expect(walk('/cuisine?quiz=ch:mother-sauces&kind=steps')).toEqual(['/cuisine', '/menu', '/']);
 	});
 
-	it('sends a Quizzes row and a More drawer back to the tab that opened them', () => {
-		expect(parentOf({ path: '/lexicon', search: '?start=quiz' })).toBe('/quizzes');
-		expect(parentOf({ path: '/lexicon', search: '?level=2&start=quiz' })).toBe('/quizzes');
+	it('sends a Practise row and a More drawer back to the tab that opened them', () => {
+		expect(parentOf({ path: '/lexicon', search: '?start=quiz' })).toBe('/flashcards');
+		expect(parentOf({ path: '/lexicon', search: '?level=2&start=quiz' })).toBe('/flashcards');
 		expect(parentOf({ path: '/lexicon', search: '?level=2' })).toBe('/library');
 		for (const h of ['#plan', '#tools', '#maitre']) expect(parentOf({ path: '/menu', hash: h, chosen: 2 }), h).toBe('/more');
 		expect(parentOf({ path: '/menu', via: 'more', chosen: 2 })).toBe('/more');
-		expect(parentOf({ path: '/menu', hash: '#house', chosen: 2 })).toBe('/level/2');
+		expect(parentOf({ path: '/menu', hash: '#house', chosen: 2 })).toBe('/');
 		expect(parentOf({ path: '/menu', hash: '#d-abc', via: 'more' })).toBe('/menu');
 	});
 
-	it('returns a cold Fieldbook reading to its filtered list and practice to the collection', () => {
+	it('returns a cold Fieldbook reading to its filtered list, the list to the Brennan’s page and practice to the collection', () => {
 		expect(parentOf({ path: '/foundations', search: '?category=vegetables&q=cipollini&term=vegetables-cippolini', chosen: 3 })).toBe('/foundations?category=vegetables&q=cipollini');
-		expect(parentOf({ path: '/foundations', chosen: 3 })).toBe('/level/3');
+		expect(parentOf({ path: '/foundations', chosen: 3 })).toBe('/menu');
+		expect(parentOf({ path: '/foundations', search: '?category=vegetables' })).toBe('/menu');
 		expect(parentOf({ path: '/flashcards', search: '?deck=foundations%3Atoday&run=1' })).toBe('/flashcards?deck=foundations%3Atoday');
 		expect(parentOf({ path: '/flashcards', search: '?deck=foundations%3Atoday' })).toBe('/foundations');
 		expect(parentOf({ path: '/flashcards', search: '?deck=foundations%3Amisses&run=1&refs=u%3Adairy-singingbrook' })).toBe('/foundations');

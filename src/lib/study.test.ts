@@ -12,6 +12,7 @@ import {
 	cardVideos,
 	compareRows,
 	componentBlocks,
+	deeperGroups,
 	fold,
 	inMeal,
 	itemCards,
@@ -34,8 +35,10 @@ import {
 } from './study';
 import { DASH } from './house/house-lines';
 import { compareHref, ledgerSlug } from './wing-links';
+import type { CzIndex } from './cuisine';
 
 const PACK: House = JSON.parse(readFileSync('static/shared/packs/brennans-new-orleans.v1.oothouse.json', 'utf8')).house;
+const CUISINE: CzIndex = JSON.parse(readFileSync('src/lib/data/cuisine/index.json', 'utf8'));
 const MIN = fixture as unknown as House;
 const byName = (h: House, name: string): HouseItem =>
 	[...h.dishes, ...h.wines, ...h.cocktails].find((i) => i.name === name) as HouseItem;
@@ -52,7 +55,44 @@ describe('the words', () => {
 		expect(say('position', { i: 3, n: 14, section: 'Entrées' })).toBe('3 of 14 in Entrées');
 		expect(say('weak', {})).toBe('My weak ones ({n})');
 		expect(STUDY_WORDS.eyebrow).toBe('Your words. Allergens: confirm at lineup.');
-		expect(STUDY_WORDS.fortyFive).toBe('Forty-five seconds');
+	});
+	it('head the three lines as open text, with no word to hide one, and name the two new blocks', () => {
+		expect(STUDY_WORDS.lines).toBe('The lines');
+		expect(STUDY_WORDS.ten).toBe('In ten seconds');
+		expect(STUDY_WORDS.twenty).toBe('In twenty seconds');
+		expect(STUDY_WORDS.fortyFive).toBe('In forty-five seconds');
+		expect(Object.keys(STUDY_WORDS).filter((k) => /hide/i.test(k) && /twenty|forty/i.test(k))).toEqual([]);
+		expect(STUDY_WORDS.deeper).toBe('Go deeper');
+		expect(STUDY_WORDS.deeperLine).toBe('The cooking behind this plate, read in Cuisine.');
+		expect(STUDY_WORDS.fallNotes).toBe('Fall 2026 field notes');
+		expect(say('fallFrom', { file: '1000005538.jpg' })).toBe("From the Fall 2026 training sheet, 1000005538.jpg: the sheet's words, never the kitchen's spec.");
+		/* The fixed pointer the Confirm at lineup block closes on: the coaching's own close, so the card names allergens nowhere else. */
+		expect(STUDY_WORDS.fallPointer).toBe('Allergens: read the service note and confirm at lineup.');
+		for (const k of ['fallSheet', 'fallIngredients', 'fallOrigins', 'fallConfirm', 'fallPage', 'fallDrill'] as const) expect(STUDY_WORDS[k]).toMatch(/^[A-Z]/);
+	});
+});
+
+describe('go deeper', () => {
+	const HUSSARDE = 'd-1q0xk7jv';
+	it('groups the Hussarde’s Cuisine entries by chapter in the index’s order, each with the entry’s address', () => {
+		const groups = deeperGroups(CUISINE, HUSSARDE, '');
+		expect(groups.flatMap((g) => g.entries)).toHaveLength(CUISINE.byDish[HUSSARDE].length);
+		expect(groups.flatMap((g) => g.entries)).toHaveLength(15);
+		expect(groups).toHaveLength(7);
+		const order = CUISINE.chapters.map((c) => c.key);
+		expect(groups.map((g) => order.indexOf(g.key))).toEqual(groups.map((g) => order.indexOf(g.key)).slice().sort((a, b) => a - b));
+		for (const g of groups) expect(g.title).toBe(CUISINE.chapters.find((c) => c.key === g.key)!.title);
+		const hollandaise = groups.find((g) => g.key === 'mother-sauces')!.entries.find((e) => e.title === 'Hollandaise')!;
+		expect(hollandaise.href).toBe('/cuisine?ch=mother-sauces&e=hollandaise');
+		expect(hollandaise.summary.length).toBeGreaterThan(20);
+		expect(deeperGroups(CUISINE, HUSSARDE, '/table')[0].entries[0].href).toMatch(/^\/table\/cuisine\?ch=/);
+		for (const e of groups.flatMap((g) => g.entries)) expect(e.href).not.toMatch(DASH);
+	});
+	it('draws nothing before the index lands, for a dish Cuisine does not link, or for an id the index no longer heads', () => {
+		expect(deeperGroups(null, HUSSARDE, '')).toEqual([]);
+		expect(deeperGroups(CUISINE, 'd-nowhere1', '')).toEqual([]);
+		const stale = { ...CUISINE, byDish: { [HUSSARDE]: ['cz-gone0000'] } };
+		expect(deeperGroups(stale, HUSSARDE, '')).toEqual([]);
 	});
 });
 

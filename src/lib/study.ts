@@ -22,6 +22,7 @@
  */
 import { isMark, DISH_PARTS, COCKTAIL_PARTS, WINE_PARTS, KEYS, BOTTLE_TIERS, PRODUCER_GROUPS, foldSize, wineListOf, videoGroups, videoMeta, videosFor, componentGroups, componentVideos, componentsFor } from './house/house-schema';
 import { compareHref, roomHref, type Room } from './wing-links';
+import type { CzIndex } from './cuisine';
 import type {
 	AskAtLineup,
 	BottleTier,
@@ -87,12 +88,22 @@ export const STUDY_WORDS = {
 	editOff: 'Edit the menu',
 	editOn: 'Edit the menu: on',
 	edit: 'Edit',
+	lines: 'The lines',
 	ten: 'In ten seconds',
-	twenty: 'Twenty seconds',
-	twentyHide: 'Hide twenty seconds',
-	fortyFive: 'Forty-five seconds',
-	fortyFiveHide: 'Hide forty-five seconds',
+	twenty: 'In twenty seconds',
+	fortyFive: 'In forty-five seconds',
 	say: 'Say it',
+	deeper: 'Go deeper',
+	deeperLine: 'The cooking behind this plate, read in Cuisine.',
+	fallNotes: 'Fall 2026 field notes',
+	fallFrom: "From the Fall 2026 training sheet, {file}: the sheet's words, never the kitchen's spec.",
+	fallSheet: 'On the training sheet',
+	fallIngredients: 'Explore the ingredients',
+	fallOrigins: 'Origins and traditions',
+	fallConfirm: 'Confirm at lineup',
+	fallPointer: 'Allergens: read the service note and confirm at lineup.',
+	fallPage: 'The field notes in full',
+	fallDrill: 'Drill this item',
 	asPrinted: 'Prices as printed on {date}. Confirm before quoting.',
 	allDay: 'All day',
 	elsewhere: 'Elsewhere in the house',
@@ -1149,6 +1160,55 @@ export function compareRows(house: House, item: HouseItem, base: string): Compar
 			const { href, room } = e.app === 'classic' ? { href: '', room: null } : compareHref(e, base, house);
 			return { app: e.app, label: plain(e.label), same: plain(e.same), different: plain(e.different), href, room };
 		});
+}
+
+/* -------------------------------------------------------------------------
+ * Go deeper: a dish's entries in Cuisine
+ * ---------------------------------------------------------------------- */
+
+/** One Cuisine entry as a card links it: its title, its summary and the address that opens it. */
+export interface DeeperEntry {
+	id: string;
+	title: string;
+	summary: string;
+	href: string;
+}
+
+/** One chapter's entries under its title, in the chapter's own order. */
+export interface DeeperGroup {
+	key: string;
+	title: string;
+	entries: DeeperEntry[];
+}
+
+/**
+ * "Go deeper" on a dish's card: the Cuisine entries the index links to the
+ * dish (`byDish`, built by tools/derive/cuisine.mjs), grouped by chapter in
+ * the index's chapter order and within a chapter in the index's entry order,
+ * each with the address the Cuisine page opens an entry by,
+ * `{base}/cuisine?ch=<chapter>&e=<slug>`. An id the index no longer heads is
+ * left out; a dish the index does not link draws no block. `index` is null
+ * until the lazy chunk lands, and then there is nothing to draw yet.
+ */
+export function deeperGroups(index: Pick<CzIndex, 'chapters' | 'entries' | 'byDish'> | null, dishId: string, base: string): DeeperGroup[] {
+	const ids = index?.byDish?.[dishId];
+	if (!index || !Array.isArray(ids) || !ids.length) return [];
+	const want = new Set(ids);
+	const out: DeeperGroup[] = [];
+	for (const ch of index.chapters) {
+		const entries: DeeperEntry[] = [];
+		for (const h of index.entries) {
+			if (h.chapter !== ch.key || !want.has(h.id)) continue;
+			entries.push({
+				id: h.id,
+				title: plain(h.title),
+				summary: plain(h.summary),
+				href: `${base}/cuisine?ch=${encodeURIComponent(ch.key)}&e=${encodeURIComponent(h.slug)}`
+			});
+		}
+		if (entries.length) out.push({ key: ch.key, title: plain(ch.title), entries });
+	}
+	return out;
 }
 
 /* -------------------------------------------------------------------------

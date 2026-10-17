@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { goto } from './helpers';
 
 /**
- * The two Brennan's tasting menus at the top of My Menu, at a phone's 390 by
+ * The two Brennan's tasting menus at the top of the house's page, at a phone's 390 by
  * 844, from the shipped pack served through page.route as study.spec.ts
  * serves it: two separate cards, Traditional Breakfast at Brennan's and the
  * Dinner Tasting Menu, each in the exact order the house prints it (the
@@ -75,7 +75,7 @@ async function tastingFirst(page: Page, lines: string[]) {
 	await expect(c.locator('.pourline')).toHaveCount(0);
 }
 
-test('two separate tasting menus at the top of My Menu, each in the exact printed order', async ({ page }) => {
+test('two separate tasting menus at the top of the house\'s page, each in the exact printed order', async ({ page }) => {
 	await openStudy(page);
 	const menus = page.locator('.study .tmenu');
 	await expect(menus).toHaveCount(2);
@@ -264,7 +264,7 @@ test('a dish and a pour open their study cards, walk the menu in printed order, 
 	await expect(c.locator('#pour-h')).toHaveText('Pour with it');
 });
 
-test('the Tasting courses deck deals one card per course in printed order, under My restaurant', async ({ page }) => {
+test('the Tasting courses deck deals one card per course in printed order, under the house\'s group on Practise', async ({ page }) => {
 	await openStudy(page);
 	await menu(page, DINNER_ID).getByRole('link', { name: /^Flash the courses/ }).click();
 	await expect(page).toHaveURL(new RegExp(`/flashcards\\?deck=tasting%3A${DINNER_ID}&run=1$`));
@@ -281,7 +281,7 @@ test('the Tasting courses deck deals one card per course in printed order, under
 	const slot = await page.evaluate(() => JSON.parse(localStorage.getItem('oot-house-drilled-v1') || '[]'));
 	expect(slot.map((e: { k: string }) => e.k)).toContain(`house:${PACK.id}:${DINNER_ID}:card-tasting-3`);
 
-	// Back to My Menu, then the whole deck under My restaurant: eleven cards, breakfast first.
+	// Back to the house's page, then the whole deck under the house's group: eleven cards, breakfast first.
 	await page.locator('.backline button.back').click();
 	await expect(page).toHaveURL(/\/menu$/);
 	await goto(page, '/flashcards');

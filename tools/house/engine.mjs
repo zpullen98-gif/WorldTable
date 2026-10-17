@@ -25,6 +25,18 @@ export const RESEARCH = path.join(DIR, 'research');
 export const PAGES = path.join(DIR, 'pages');
 export const HOUSE_JSON = path.join(DIR, 'house.json');
 export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json');
+/* Staging, for authors working in parallel (17 October 2026). A chunk's overrides go in
+   brennans/_staging/<name>.overrides.json ({ entries: [...] } in overrides.json's own shape) and its
+   component fragments in components/_staging/<name>.json (a fragment's own shape), never in
+   overrides.json or a fragment file, until the integrator merges them. build-brennans --staging a,b
+   reads the base files plus those chunks and writes under _staging/out/, minting ids in memory and
+   never writing the ledger; validate-pack --staging a,b reads the same fragments and prints the
+   edition's fixed counts as advisory. readFragments never reads the _staging directory on its own:
+   a file there is not a fragment of the edition until it is merged. */
+export const STAGING = path.join(DIR, '_staging');
+export function stagingNames(arg) { return String(arg || '').split(',').map((s) => s.trim()).filter(Boolean); }
+export function stagingOverrideFiles(names) { return names.map((n) => path.join(STAGING, n + '.overrides.json')).filter((f) => fs.existsSync(f)); }
+export function stagingFragmentFiles(names) { return names.map((n) => path.join(componentsDir(), '_staging', n + '.json')).filter((f) => fs.existsSync(f)); }
 /* The edition rule. A shipped pack carries house.pack.builtAt, and every mark and every record's
    ts carries exactly Date.parse of it, so a stamp that differs on a device is a person's edit.
    Fixed, so a rebuild is byte for byte the same; --stamp or --now on the builder and keep-all set
@@ -255,14 +267,9 @@ export const FRAGMENT_KEYS = ['components', 'compare', 'videos', 'producers'];
 /* The one .json beside the fragments that is not one: living.json, the surnames the Ledger's living rule
    refuses (livingNames below). */
 export const LIVING_FILE = 'living.json';
-export function readFragments(dir = componentsDir()) {
+export function readFragments(dir = componentsDir(), extra = []) {
 	const out = { dir, files: [], components: [], compare: [], videos: [], producers: [] };
-	if (!dir || !fs.existsSync(dir)) return out;
-	const names = fs.readdirSync(dir).filter((f) => f.endsWith('.json') && f !== LIVING_FILE);
-	const rank = (f) => (FRAGMENT_FILES.indexOf(f) < 0 ? 99 : FRAGMENT_FILES.indexOf(f));
-	names.sort((a, b) => rank(a) - rank(b) || (a < b ? -1 : a > b ? 1 : 0));
-	for (const f of names) {
-		const file = path.join(dir, f);
+	const readOne = (file) => {
 		let data;
 		try { data = JSON.parse(fs.readFileSync(file, 'utf8')); } catch (e) { throw new Error(`${REL(file)}: does not parse as JSON (${e.message})`); }
 		if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error(`${REL(file)}: a fragment is an object`);
@@ -274,16 +281,24 @@ export function readFragments(dir = componentsDir()) {
 			if (!Array.isArray(list)) throw new Error(`${REL(file)}: ${k} is a list`);
 			list.forEach((v, i) => out[k].push({ file, at: `${REL(file)} ${k}[${i}]`, v }));
 		}
+	};
+	if (dir && fs.existsSync(dir)) {
+		const names = fs.readdirSync(dir).filter((f) => f.endsWith('.json') && f !== LIVING_FILE);
+		const rank = (f) => (FRAGMENT_FILES.indexOf(f) < 0 ? 99 : FRAGMENT_FILES.indexOf(f));
+		names.sort((a, b) => rank(a) - rank(b) || (a < b ? -1 : a > b ? 1 : 0));
+		for (const f of names) readOne(path.join(dir, f));
 	}
+	/* The staged chunks (STAGING above), read after the edition's own files, in the order named. */
+	for (const file of extra) readOne(path.resolve(file));
 	return out;
 }
 /* The figures the pack must show for the fragments read: components, distinct items named, items
    compared, videos naming a component and components carrying a producer (inline or by a producers
    entry, each component once). Zero everywhere when there are none. */
-export function fragmentCounts(dir = componentsDir()) {
+export function fragmentCounts(dir = componentsDir(), extra = []) {
 	const out = { components: 0, componentItems: 0, compared: 0, componentVideos: 0, producers: 0 };
 	let f;
-	try { f = readFragments(dir); } catch { return out; }
+	try { f = readFragments(dir, extra); } catch { return out; }
 	out.components = f.components.length;
 	const items = new Set();
 	for (const c of f.components) for (const n of (c.v && Array.isArray(c.v.items) ? c.v.items : [])) items.add(foldName(String(n)));

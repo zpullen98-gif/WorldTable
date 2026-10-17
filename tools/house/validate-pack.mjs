@@ -19,22 +19,26 @@
    Runs from any directory. Reads house/brennans/house.json by default (the builder's output). */
 
 import fs from 'node:fs';
-import { loadEngine, GUIDE, HOUSE_JSON, REL, countProblems, describe, answerNames, checkArgs, sourceText as pageText, pageFiles, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, componentProblems } from './engine.mjs';
+import { loadEngine, GUIDE, HOUSE_JSON, REL, countProblems, describe, answerNames, checkArgs, sourceText as pageText, pageFiles, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, componentProblems, fragmentCounts, stagingNames, stagingFragmentFiles } from './engine.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
 	console.log(`validate-pack.mjs: normalise and validate ${REL(HOUSE_JSON)} against ${REL(GUIDE)} and the page snapshots beside it.
 
   --file <path>  validate another house file (a pack file is read through its house key)
+  --staging <a,b>  the file is a staged dry build (build-brennans --staging): the staged fragments are
+                 counted with the edition's, and the edition's fixed counts are printed as advisory
   --verbose      print every advisory flag, not only the counts
   --help         this text`);
 	process.exit(0);
 }
 function fail(msg) { console.error('validate-pack: ' + msg); process.exit(1); }
-checkArgs(args, ['--file', '--verbose'], ['--file'], fail);
+checkArgs(args, ['--file', '--verbose', '--staging'], ['--file', '--staging'], fail);
 const fileAt = args.indexOf('--file');
 const FILE = fileAt >= 0 ? args[fileAt + 1] : HOUSE_JSON;
 const VERBOSE = args.includes('--verbose');
+const stagingAt = args.indexOf('--staging');
+const STAGED = stagingAt >= 0 ? stagingNames(args[stagingAt + 1]) : [];
 if (!FILE || !fs.existsSync(FILE)) fail(`${REL(FILE || '(none)')}: missing; run build-brennans.mjs first`);
 if (!fs.existsSync(GUIDE)) fail(`${REL(GUIDE)}: missing`);
 
@@ -64,8 +68,8 @@ if (names.length) {
 	if (VERBOSE) for (const n of names) console.log(`    ${n.answered ? 'answered  ' : 'UNANSWERED'} ${n.name} (${n.count}) ${n.where[0]}`);
 	for (const n of unanswered) console.log(`    UNANSWERED ${n.name} (${n.count}) at ${n.where.join(', ')}`);
 }
-const counts = countProblems(house);
-for (const c of counts) console.error('validate-pack: count: ' + c);
+const counts = countProblems(house, undefined, fragmentCounts(undefined, stagingFragmentFiles(STAGED)));
+for (const c of counts) console.error(`validate-pack: ${STAGED.length ? "staging count (advisory, the edition's fixed figures): " : 'count: '}` + c);
 /* The pack's own fatal rules beside the engine's: no two records share a drill stem, no filler part
    or unconfirmed glass stands as a drill stem or answer, and no upsell sends a guest to a drink
    that is not poured where they sit. */
@@ -92,6 +96,6 @@ for (const c of comps) console.error('validate-pack: FATAL component: ' + c);
 const nc = noteCounts(house);
 console.log(`validate-pack: notes ${Object.entries(nc).map(([q, c]) => `${c} "${q}"`).join(', ')}; ${thin.report.length} item(s) with an empty part (a report, not a gate)`);
 
-const bad = fatalCount + counts.length + changed.length + unanswered.length + stems.length + rooms.length + notes.length + thin.fatal.length + comps.length + (lib.sameJson(house, input) ? 0 : 1);
+const bad = fatalCount + (STAGED.length ? 0 : counts.length) + changed.length + unanswered.length + stems.length + rooms.length + notes.length + thin.fatal.length + comps.length + (lib.sameJson(house, input) ? 0 : 1);
 if (bad) fail(`${REL(FILE)}: ${fatalCount} fatal problem(s), ${stems.length} drill stem problem(s), ${rooms.length} upsell room problem(s), ${notes.length} note problem(s), ${comps.length} component problem(s), ${thin.fatal.length} thin line(s), ${counts.length} count(s) off, ${changed.length} normaliser change(s), ${unanswered.length} unanswered name(s)`);
 console.log(`validate-pack: ${REL(FILE)}: 0 fatal, ${problems.length} advisory flag(s) in ${byCode.size} code(s), counts hold (${house.dishes.length} dishes, ${house.cocktails.length} cocktails, ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask, ${house.disputes.length} disputes, ${(house.components || []).length} components)`);

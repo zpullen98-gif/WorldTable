@@ -44,8 +44,11 @@
 	import ProducersView from '$lib/components/ProducersView.svelte';
 	import FallMenu from '$lib/components/FallMenu.svelte';
 	import { readDrilled, type DrilledEntry } from '$lib/house-drilled';
-	import { findItem, latestVerdicts, say, studyRows, type StudyRow } from '$lib/study';
+	import { findItem, latestVerdicts, producersLine, say, studyRows, studySections, studyVideos, type StudyRow } from '$lib/study';
 	import { ITEM_ID_RE, wingInstalled } from '$lib/wing-links';
+	import { cuisine } from '$lib/stores/cuisine.svelte';
+	import { foundationsCategories, foundationsEntries } from '$lib/foundations';
+	import { BRENNANS_HOUSE_ID } from '$lib/teaching-folios';
 	import {
 		buildPass,
 		clashesOver,
@@ -385,6 +388,11 @@
 		fallItem = fallQuery.get('item') ?? '';
 		fallKind = ['dish', 'cocktail', 'all'].includes(fallQuery.get('kind') ?? '') ? fallQuery.get('kind')! : 'dish';
 		producersView = new URLSearchParams(location.search).get('view') === 'producers';
+		/* A card opened cold (/menu#d-..., held outside the history) closes
+		   when a navigation takes the hash away: the lit Brennan's word is a
+		   link to the bare root from any of this page's screens (17 October
+		   2026), and the root is the list, never the card. */
+		if (coldId && !location.hash) coldId = '';
 	});
 
 	const current = $derived(house.current);
@@ -399,6 +407,60 @@
 	const cardList = $derived(openList.length ? openList : current ? studyRows(current, 'dish') : []);
 	const latest = $derived(current ? latestVerdicts(current.id, drilled) : new Map());
 	const menuDish = $derived(openDish ? house.dishes.find((d) => d.id === openDish.id) : undefined);
+
+	/* ---- the house's own page (Brennan's as its own tab, 17 October 2026) --
+	 *
+	 * The study view is the house's home. Its name is the page's title and h1
+	 * on every view (the fall view's own h2 names that collection); with no
+	 * house the page keeps the generic word. Under the menu and the house's
+	 * lists sit two groups drawn with hub.css: The cooking (a lead door to
+	 * Cuisine and one door per chapter, from the index the worker precaches,
+	 * loaded in onMount and never fetched) and Your culinary terms (the
+	 * Fieldbook door, its nine subjects as chips, today's practice).
+	 *
+	 * A jump row at the top walks the page's groups by BUTTONS that scroll to
+	 * a heading and put the focus on it (ProducersView's jump): never a #hash,
+	 * which this page reads as a card to open, and never a history entry. A
+	 * chip whose target the house does not draw is hidden; Fall 2026 sets the
+	 * section filter and jumps to the menu; Producers is a link to its view,
+	 * a push, as the level page's door is.
+	 */
+	const FALL_SECTION = 'Fall 2026';
+	const houseName = $derived(current ? current.name : 'My restaurant');
+	const sectionsHere = $derived(current ? studySections(studyRows(current, 'dish')) : []);
+	const hasFall = $derived(sectionsHere.some((s) => s.section === FALL_SECTION));
+	const hasProducers = $derived(!!current && !!producersLine(current));
+	const hasStudies = $derived(!!current && current.id === BRENNANS_HOUSE_ID);
+	const hasVideos = $derived(!!current && studyVideos(current).some((g) => g.rows.length > 0));
+	/** Cuisine's chapters with something written, in the index's order; empty until the index is in. */
+	const chapters = $derived((cuisine.index?.chapters ?? []).filter((c) => c.file));
+	const jumpsOn = $derived(studyOn && !!current && opened && !openDish && !producersView && !fallView);
+
+	/** Bring a heading to the top and put the focus on it, the address and the history left as they are. */
+	function jumpTo(id: string) {
+		const el = document.getElementById(id);
+		if (!el) return;
+		/* A heading another component draws without a tabindex still takes the focus. */
+		if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+		el.scrollIntoView({ block: 'start' });
+		/* The page's scroll padding clears the mode bar; the Back row and the
+		   menu's own sticky bar, when either is stuck over the heading, are
+		   brought out from over it. */
+		let cover = 0;
+		for (const s of document.querySelectorAll('.backline, .study .bar')) {
+			if (!(s.compareDocumentPosition(el) & Node.DOCUMENT_POSITION_FOLLOWING)) continue;
+			cover = Math.max(cover, s.getBoundingClientRect().bottom);
+		}
+		const over = cover + 8 - el.getBoundingClientRect().top;
+		if (over > 0) window.scrollBy(0, -over);
+		el.focus({ preventScroll: true });
+	}
+
+	/** The fall menu: the section chip chosen, then the menu brought to the top. */
+	function jumpFall() {
+		studySection = FALL_SECTION;
+		void tick().then(() => jumpTo('study-h'));
+	}
 
 	/* Study or edit is decided once a house is read, and again only when the
 	   device goes from no house to one (the shipped pack arriving, Load the
@@ -439,6 +501,9 @@
 		   and never in load (the prerender rule), so Back and a reload keep it. */
 		const wantSection = new URLSearchParams(location.search).get('section');
 		if (wantSection) studySection = wantSection;
+		/* The cooking group's chapter doors: Cuisine's index, a precached chunk
+		   (stores/cuisine.svelte.ts), so nothing new is fetched. */
+		void cuisine.load();
 		if (sharedOrigin(base)) {
 			const up = typeof navigator === 'undefined' || navigator.onLine !== false;
 			if (up) roomsOpen = { codex: true, ledger: true };
@@ -1121,7 +1186,7 @@
 	}
 </script>
 
-<svelte:head><title>My Menu · The World Table</title></svelte:head>
+<svelte:head><title>{houseName} · The World Table</title></svelte:head>
 
 {#snippet toolsRow()}
 	<div class="tools" data-print="hide">
@@ -1414,7 +1479,7 @@
 		<!-- On the study view the switch shares the h1's line, so the house's
 		     name, its facts and the menu itself rise up the phone's first screen. -->
 		<div class="headrow">
-			<h1>{fallView ? 'Fall 2026' : 'My Menu'}</h1>
+			<h1>{houseName}</h1>
 			{#if studyOn && current && opened && !openDish && !producersView && !fallView}
 				<button class="quiet studyedit" onclick={editAll}>{say('editOff')}</button>
 			{/if}
@@ -1430,9 +1495,21 @@
 	</header>
 
 	{#if fallView || !openDish}
-		<nav class="chips" aria-label="My restaurant collections">
-			<a class="chip" href="{base}/menu" aria-current={!fallView ? 'page' : undefined}>My menu</a>
-			<a class="chip" href="{base}/menu?view=fall" aria-current={fallView ? 'page' : undefined}>Fall food &amp; cocktails</a>
+		<nav class="chips collections" aria-label="{houseName} collections">
+			<a class="chip" href="{base}/menu" aria-current={!fallView ? 'page' : undefined}>The menu</a>
+			<a class="chip" href="{base}/menu?view=fall" aria-current={fallView ? 'page' : undefined}>Fall field notes</a>
+		</nav>
+	{/if}
+	{#if jumpsOn}
+		<nav class="chips jumps" aria-label="On this page">
+			<button type="button" class="chip" onclick={() => jumpTo('study-h')}>The menu</button>
+			{#if hasFall}<button type="button" class="chip" onclick={jumpFall}>Fall 2026</button>{/if}
+			<button type="button" class="chip" onclick={() => jumpTo('cooking-h')}>The cooking</button>
+			<button type="button" class="chip" onclick={() => jumpTo('terms-h')}>Your terms</button>
+			{#if hasProducers}<a class="chip" href="{base}/menu?view=producers">Producers</a>{/if}
+			<button type="button" class="chip" onclick={() => jumpTo('houselists-h')}>The lists</button>
+			{#if hasStudies}<button type="button" class="chip" onclick={() => jumpTo('studies-h')}>Studies</button>{/if}
+			{#if hasVideos}<button type="button" class="chip" onclick={() => jumpTo('videos-h')}>Videos</button>{/if}
 		</nav>
 	{/if}
 	{#if fallView}
@@ -1483,6 +1560,40 @@
 					{#snippet footer()}<ExportNudge quiet onTools={openTools} />{/snippet}
 				</StudyMenu>
 				<HouseLists mode="study" />
+				<!-- The house's two reading groups, drawn with hub.css (the level
+				     page's doors and chips) and nothing of their own. -->
+				<div class="hub house-groups">
+					<h2 class="group" id="cooking-h" tabindex="-1">The cooking</h2>
+					<nav class="quiet" aria-labelledby="cooking-h">
+						<a class="door lead" href="{base}/cuisine" data-door="cuisine">
+							<span class="door-name">Cuisine</span>
+							<span class="door-line">French and Creole cooking in depth: today's cards, the drills, the two diagrams.</span>
+						</a>
+						{#each chapters as c (c.key)}
+							<a class="door" href="{base}/cuisine?ch={encodeURIComponent(c.key)}" data-chapter={c.key}>
+								<span class="door-name">{c.title}</span>
+								<span class="door-line">{c.intro}</span>
+								<span class="door-sub">{c.entries} {c.entries === 1 ? 'entry' : 'entries'} · {c.cards} {c.cards === 1 ? 'card' : 'cards'}</span>
+							</a>
+						{/each}
+					</nav>
+					{#if !cuisine.index}
+						<p class="note" role="status">{cuisine.failed ? 'The chapters could not be read here; the door above still opens Cuisine.' : 'Opening Cuisine…'}</p>
+					{/if}
+					<h2 class="group" id="terms-h" tabindex="-1">Your culinary terms</h2>
+					<nav class="quiet" aria-labelledby="terms-h">
+						<a class="door" href="{base}/foundations" data-door="foundations">
+							<span class="door-name">The Kitchen Fieldbook</span>
+							<span class="door-line">All {foundationsEntries.length} terms from your sheets: clear definitions, kitchen understanding, guest descriptions and daily practice.</span>
+						</a>
+					</nav>
+					<nav class="chips subjects" aria-label="The subjects">
+						{#each foundationsCategories as c (c.id)}
+							<a class="chip" href="{base}/foundations?category={encodeURIComponent(c.id)}">{c.title}</a>
+						{/each}
+						<a class="chip go" href="{base}/flashcards?deck=foundations%3Atoday">Practise today's terms</a>
+					</nav>
+				</div>
 			{/if}
 		</div>
 		{#if !openDish && !producersView}
@@ -1813,6 +1924,16 @@
 		:global(.house-main) .view > .head.studying { padding-bottom: 2px; }
 	}
 	.headrow { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+	/* The collection chips, the jump row and the house's groups: the page's
+	   chip at the hub's size (44px, 1rem), never the tools row's 14px; the go
+	   chip as the study view draws it. hub.css draws the doors and the
+	   subject chips; the wrapper gives up the hub's page padding, since the
+	   drawers follow it. */
+	.jumps { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+	.collections .chip, .jumps .chip, .house-groups .chip { min-height: 44px; font: inherit; font-size: 1rem; color: var(--ink); }
+	.house-groups .chip.go { border-color: var(--turmeric-deep); font-weight: 600; }
+	.house-groups { padding-block: 0; }
+	.house-groups h2.group:focus-visible { outline: 2px solid var(--turmeric-deep); outline-offset: 2px; }
 	.quiet.studyedit {
 		min-height: 44px; padding: 0 4px; background: none; border: 0; cursor: pointer;
 		font: inherit; font-size: 1rem; color: var(--ink-soft); text-decoration: underline;

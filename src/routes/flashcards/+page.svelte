@@ -1,23 +1,34 @@
 <!--
-  Flashcards (docs/consolidation-design.md 2.6 and 3.7): one deck picker in
-  front of the app's three card engines, one deck screen, one card screen.
+  Practise (docs/consolidation-design.md 2.6 and 3.7; the Practise tab since
+  17 Oct 2026): one deck picker in front of the app's three card engines,
+  with the quiz doors beside the decks they drill, one deck screen, one card
+  screen. The rounds themselves still run on their own pages (/quizzes for
+  the quick quiz, /menu/quiz for the house's, the level's and Cuisine's on
+  theirs); this root is the one place that lists them.
 
-    the root      Due today first and alone, then My restaurant (the whole
+    the root      Due today first and alone; Quick quiz (its line from
+                  lib/quick-quiz, a link to /quizzes?quick=1, so Back from
+                  the round returns here); the house by name (the whole
                   menu, Tasting courses, a deck per section but none for a
                   section only the tastings serve, My weak ones, Part by
-                  part), What it's made of (Ingredients, Techniques,
-                  Stories: one card per component), the level's Floor Deck
-                  sections, Words (the Lexicon) and Reference cards (the
-                  whole Floor Deck, Keeps slipping); a study card's Flash
-                  these components opens item-components:{id}; a tasting
-                  menu's Flash the courses opens tasting:{id}, its courses
-                  in printed order; Producers (under My restaurant) deals
-                  the cards of every producer behind a dish (the bar's and
-                  the cellar's are their rooms' to deal), and a card's Flash
-                  these producers opens item-producers:{id}; Cuisine (the
-                  sixth tab's cards, 12 Oct 2026): a deck per chapter that
-                  holds cards at the chosen level (cz:ch:{key}), and Every
-                  Cuisine card (cz:all), each card a z: reference
+                  part, Producers, then its five rounds: The dishes, Drill
+                  the menu, Pairings, Say it back, Guest at the table), Fall
+                  2026 (the four fall decks), What it's made of
+                  (Ingredients, Techniques, Stories: one card per component)
+                  and Your culinary terms (the Fieldbook's decks); Cuisine
+                  (a deck per chapter that holds cards at the chosen level
+                  (cz:ch:{key}), Every Cuisine card (cz:all), each card a
+                  z: reference, then its three rounds); the level (its
+                  Floor Deck sections, the Lexicon's deck and its four
+                  rounds); Hands on; the level's test; Reference cards (the
+                  whole Floor Deck, Keeps slipping). The quiz doors' words
+                  are lib/practise-rows.ts, shared with /quizzes. A study
+                  card's Flash these components opens item-components:{id};
+                  a tasting menu's Flash the courses opens tasting:{id}, its
+                  courses in printed order; Producers deals the cards of
+                  every producer behind a dish (the bar's and the cellar's
+                  are their rooms' to deal), and a card's Flash these
+                  producers opens item-producers:{id}
     a deck        ?deck={id}: its name, "{n} cards · {m} learnt", Narrow this
                   deck where the engine has a filter, and Start
     the run       ?deck={id}&run=1: the card screen (DeckFrame.svelte), then
@@ -78,7 +89,10 @@
 	import { foundationsCategories, foundationsEntries, foundationEntryById, foundationEntryByRef, foundationsMembers, foundationsPractice, foundationsDeckName, foundationLogKey, foundationRecordable, resolveFoundation } from '$lib/foundations';
 	import FoundationReading from '$lib/components/FoundationReading.svelte';
 	import { itemCards, latestVerdicts, mealsOf, inMeal, findItem, producersFor, say, tastingInMeal, tastingOnlyIds, type ItemCard } from '$lib/study';
-	import { buildFlashcards, type Flashcard } from '$lib/house/house-drills';
+	import { buildFlashcards, readyKinds, type Flashcard } from '$lib/house/house-drills';
+	import { LEVEL_KEYS } from '$lib/levels';
+	import { quickLine as quickLineFor } from '$lib/quick-quiz';
+	import { cuisineQuizRows, handsOnRows, houseQuizRows, levelQuizRows, levelTestRow } from '$lib/practise-rows';
 	import { COMPONENT_KINDS, COMPONENT_LABELS, componentsFor, type ComponentKind } from '$lib/house/house-schema';
 	import { shuffleWith, tableProducerCards } from '$lib/house-drill-round';
 	import { FLIP_GRADES, deckLog, flipRecordable, liveSections, pickSession, scopeFromSearch, slipping } from '$lib/floor-deck';
@@ -716,6 +730,16 @@
 		if (!czIndex) return [];
 		return [...czIndex.chapters.map((c) => row(`cz:ch:${c.key}`, c.title)), row('cz:all')].filter((r) => r.refs.length);
 	});
+	/* The quiz doors beside the decks (lib/practise-rows.ts, the words /quizzes draws too): the quick
+	   quiz's line, the house's five rounds, Cuisine's three, the level's four (under Show all with no
+	   level named, so each page opens at its own chosen level), Hands on and the level's test. */
+	const hasHouse = $derived(!!current && readyKinds(current).length > 0);
+	const quickLine = $derived(quickLineFor(hasHouse, (czIndex?.questions.length ?? 0) > 0, levelName));
+	const houseQuiz = houseQuizRows(base);
+	const cuisineQuiz = $derived(cuisineQuizRows(base, czIndex, { all, chosen, levelName }));
+	const levelQuiz = $derived(levelQuizRows(base, all ? null : chosen));
+	const handsOn = handsOnRows(base);
+	const testRows = $derived((all ? LEVEL_KEYS : [chosen]).map((n) => levelTestRow(base, n, nameOf(n))));
 	const foundationStudied = (refs: readonly string[]) => {
 		const now = Date.now();
 		return refs.filter(ref => {
@@ -740,14 +764,14 @@
 </script>
 
 <svelte:window onkeydown={onkey} />
-<svelte:head><title>{screen === 'root' ? 'Flashcards' : fc ? deckName(fc.deck) : 'Flashcards'} · The World Table</title></svelte:head>
+<svelte:head><title>{screen === 'root' ? 'Practise' : fc ? deckName(fc.deck) : 'Practise'} · The World Table</title></svelte:head>
 
 <div class="shell hub flashcards" data-screen={screen}>
 	{#if (fc?.deck.startsWith('foundations') || pending?.deck.startsWith('foundations')) && (deckFailed || lexiconFailed)}
 		<div class="note" role="status"><p>The field notes could not load. Your practice record is safe.</p><button class="chip" onclick={() => { if (deckFailed) needDeck(); lexiconFailed = false; needLexicon(); }}>Try the field notes again</button></div>
 	{/if}
 	{#if screen === 'root'}
-		<h1 tabindex="-1">Flashcards</h1>
+		<h1 tabindex="-1">Practise</h1>
 		<ScopeChip names={nameOf} {chosen} {all} onAll={setAll} onChoose={(n) => levels.choose(n)} />
 
 		<section class="dueblock" aria-labelledby="due-h">
@@ -758,20 +782,18 @@
 				<p class="note dueline">{dueNow.line}</p>
 				<button type="button" class="chip go start" onclick={startDue}>Start today's cards</button>
 			{:else}
+				<!-- Nothing due: the Quick quiz group right below offers the round, so no second chip here. -->
 				<p class="note dueline">{dueNow.line}</p>
-				<a class="chip" href="{base}/quizzes?quick=1">Start the quick quiz</a>
 			{/if}
 		</section>
 
-		<h2 class="group" id="fc-foundations">Your culinary terms</h2>
-		<p class="note">Every term from your sheets, at every level. Read in <a href="{base}/foundations">The Kitchen Fieldbook</a>, then practise here.</p>
-		<nav class="quiet" aria-labelledby="fc-foundations">
-			{#each ['foundations:today', 'foundations', ...foundationsCategories.map(category => `foundations:category:${category.id}`)] as id}
-				<button type="button" class="door" data-deck={id} onclick={() => openDeck(id)}><span class="door-name">{deckName(id)}</span><span class="door-line">{line(row(id))}</span></button>
-			{/each}
-		</nav>
+		<section aria-labelledby="fc-quick">
+			<h2 class="group" id="fc-quick">Quick quiz</h2>
+			<p class="note quickline">{quickLine}</p>
+			<a class="chip go start" href="{base}/quizzes?quick=1">Start the quick quiz</a>
+		</section>
 
-		<h2 class="group" id="fc-house">My restaurant</h2>
+		<h2 class="group" id="fc-house">{current ? current.name : 'My restaurant'}</h2>
 		{#if !today.houseSettled}
 			<p class="note">Opening the house…</p>
 		{:else if !restaurantRows.length}
@@ -784,10 +806,13 @@
 						<span class="door-line">{line(r)}</span>
 					</button>
 				{/each}
+				{#each houseQuiz as r (r.href)}
+					<a class="door" href={r.href}><span class="door-name">{r.name}</span><span class="door-line">{r.line}</span></a>
+				{/each}
 			</nav>
 		{/if}
 
-		<h2 class="group" id="fc-fall">Brennan's Fall 2026</h2>
+		<h2 class="group" id="fc-fall">Fall 2026</h2>
 		<nav class="quiet" aria-labelledby="fc-fall">
 			{#each ['fall:today', 'fall:food', 'fall:cocktail', 'fall:tableside'] as id}
 				<button type="button" class="door" data-deck={id} onclick={() => openDeck(id)}><span class="door-name">{deckName(id)}</span><span class="door-line">{line(row(id))}</span></button>
@@ -805,27 +830,11 @@
 			</nav>
 		{/if}
 
-		<h2 class="group" id="fc-level">{all ? 'Every level' : levelName}</h2>
-		{#if !deck}
-			<p class="note">Opening the Floor Deck…</p>
-		{:else}
-			<nav class="quiet" aria-labelledby="fc-level">
-				{#each levelRows as r (r.id)}
-					<button type="button" class="door" data-deck={r.id} onclick={() => openDeck(r.id)}>
-						<span class="door-name">{r.name}</span>
-						<span class="door-line">{line(r)}</span>
-					</button>
-				{/each}
-			</nav>
-		{/if}
-
-		<h2 class="group" id="fc-words">Words</h2>
-		<nav class="quiet" aria-labelledby="fc-words">
-			{#each wordRows as r (r.id)}
-				<button type="button" class="door" data-deck={r.id} onclick={() => openDeck(r.id)}>
-					<span class="door-name">{r.name}</span>
-					<span class="door-line">{line(r)}</span>
-				</button>
+		<h2 class="group" id="fc-foundations">Your culinary terms</h2>
+		<p class="note">Every term from your sheets, at every level. Read in <a href="{base}/foundations">The Kitchen Fieldbook</a>, then practise here.</p>
+		<nav class="quiet" aria-labelledby="fc-foundations">
+			{#each ['foundations:today', 'foundations', ...foundationsCategories.map(category => `foundations:category:${category.id}`)] as id}
+				<button type="button" class="door" data-deck={id} onclick={() => openDeck(id)}><span class="door-name">{deckName(id)}</span><span class="door-line">{line(row(id))}</span></button>
 			{/each}
 		</nav>
 
@@ -834,7 +843,7 @@
 			<p class="note">Opening Cuisine…</p>
 		{:else if !czIndex}
 			<p class="note">Cuisine could not be opened on this device. Open it once with a connection and it stays for offline use.</p>
-		{:else if !cuisineRows.length}
+		{:else if !cuisineRows.length && !cuisineQuiz.length}
 			<p class="note">No Cuisine cards are written yet.</p>
 		{:else}
 			<nav class="quiet" aria-labelledby="fc-cuisine">
@@ -844,8 +853,47 @@
 						<span class="door-line">{line(r)}</span>
 					</button>
 				{/each}
+				{#each cuisineQuiz as r (r.href)}
+					<a class="door" href={r.href}><span class="door-name">{r.name}</span><span class="door-line">{r.line}</span></a>
+				{/each}
 			</nav>
 		{/if}
+
+		<h2 class="group" id="fc-level">{all ? 'Every level' : levelName}</h2>
+		{#if !deck}
+			<p class="note">Opening the Floor Deck…</p>
+		{/if}
+		<nav class="quiet" aria-labelledby="fc-level">
+			{#each levelRows as r (r.id)}
+				<button type="button" class="door" data-deck={r.id} onclick={() => openDeck(r.id)}>
+					<span class="door-name">{r.name}</span>
+					<span class="door-line">{line(r)}</span>
+				</button>
+			{/each}
+			{#each wordRows as r (r.id)}
+				<button type="button" class="door" data-deck={r.id} onclick={() => openDeck(r.id)}>
+					<span class="door-name">{r.name}</span>
+					<span class="door-line">{line(r)}</span>
+				</button>
+			{/each}
+			{#each levelQuiz as r (r.href)}
+				<a class="door" href={r.href}><span class="door-name">{r.name}</span><span class="door-line">{r.line}</span></a>
+			{/each}
+		</nav>
+
+		<h2 class="group" id="fc-hands">Hands on</h2>
+		<nav class="quiet" aria-labelledby="fc-hands">
+			{#each handsOn as r (r.href)}
+				<a class="door" href={r.href}><span class="door-name">{r.name}</span><span class="door-line">{r.line}</span></a>
+			{/each}
+		</nav>
+
+		<h2 class="group" id="fc-test">{all ? 'The level tests' : `The ${levelName} test`}</h2>
+		<nav class="quiet" aria-labelledby="fc-test">
+			{#each testRows as r (r.href)}
+				<a class="door leveltest" href={r.href}><span class="door-name">{r.name}</span><span class="door-line">{r.line}</span></a>
+			{/each}
+		</nav>
 
 		<h2 class="group" id="fc-ref">Reference cards</h2>
 		<nav class="quiet" aria-labelledby="fc-ref">
@@ -1068,7 +1116,8 @@
 		padding-inline: 22px;
 		font-size: 1.1rem;
 	}
-	.dueline {
+	.dueline,
+	.quickline {
 		font-size: var(--t-body);
 	}
 	.deckline,

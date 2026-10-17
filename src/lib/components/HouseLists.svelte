@@ -277,7 +277,7 @@
 
 {#if current && mode === 'study'}
 	<section class="houselists study" aria-labelledby="houselists-h" data-print="hide">
-		<h3 class="eyebrow" id="houselists-h">The house</h3>
+		<h3 class="eyebrow" id="houselists-h" tabindex="-1">The house</h3>
 		{#if studyMust.length}
 			<details class="sd">
 				<summary>Must-knows ({studyMust.length})</summary>

@@ -8,8 +8,13 @@
                       a name, a line computed from the engines, the row the
                       button. Due today and Quick quiz start at once.
     My restaurant     the house line, the Menu Desk's waiting line, the count
-                      line, three study doors, the sections as chips, then
-                      the quiet links The Menu Desk and The house
+                      line (the fall menu named on it once the pack holds the
+                      section), ONE lead door named by the house into its own
+                      page at /menu (the menu and its lines, the fall menu,
+                      the cooking, the terms, the producers, the lists and
+                      the drills all live there, 17 October 2026), the
+                      sections as chips, then the quiet links The Menu Desk
+                      and The house
     Cook at home      the training kitchen at this level (lib/kitchen.ts):
                       four tabs, Breakfast, Lunch, Dinner and Dessert, each
                       with its cooked of 25, the next dish to cook as the
@@ -52,7 +57,7 @@
 	import { restoreScroll } from '$lib/stores/nav.svelte';
 	import { plateTitle } from '$lib/plates';
 	import { NEVER_GRADED, MET, type SubsectionProgress } from '$lib/levels';
-	import { latestVerdicts, producersLine, say, searchElsewhere, searchRows, studyProgress, studyRows, studySections } from '$lib/study';
+	import { latestVerdicts, searchElsewhere, searchRows, studyProgress, studyRows, studySections } from '$lib/study';
 	import { roomHref } from '$lib/wing-links';
 	import { foundationsEntries } from '$lib/foundations';
 	import { deskShare, readDeskInbox } from '$lib/desk/desk-inbox';
@@ -206,15 +211,17 @@
 	/* ---- My restaurant ---- */
 	const sections = $derived(studySections(rows));
 	const progress = $derived(current ? studyProgress(rows.map((r) => r.id), latestVerdicts(current.id, today.drilled)) : null);
+	/* The fall menu is named on the count line once the house's pack holds the
+	   section (the Fall 2026 dishes, Brennan's next edition): nothing until then. */
+	const FALL_LINE = ' Fall 2026: eight dishes and nine cocktails.';
+	const hasFall = $derived(sections.some((s) => s.section === 'Fall 2026'));
 	const countLine = $derived.by(() => {
 		if (!current || !progress) return '';
 		const head = `${current.name}: ${rows.length} ${rows.length === 1 ? 'dish' : 'dishes'} in ${sections.length} ${sections.length === 1 ? 'section' : 'sections'}.`;
-		if (!progress.studied) return `${head} Nothing studied yet.`;
-		return progress.again ? `${head} ${progress.studied} studied, ${progress.again} to see again.` : `${head} ${progress.studied} studied.`;
+		const fall = hasFall ? FALL_LINE : '';
+		if (!progress.studied) return `${head} Nothing studied yet.${fall}`;
+		return (progress.again ? `${head} ${progress.studied} studied, ${progress.again} to see again.` : `${head} ${progress.studied} studied.`) + fall;
 	});
-
-	/* The Producers door's one line: how many producers stand behind how many items, empty when none. */
-	const producersCount = $derived(current ? producersLine(current) : '');
 
 	/* ---- Search ---- */
 	let q = $state('');
@@ -379,9 +386,6 @@
 	</nav>
 
 	<h2 class="group" id="restaurant">My restaurant</h2>
-	<nav class="quiet" aria-label="Seasonal restaurant training">
-		<a class="door" href="{base}/menu?view=fall" data-door="fall-menu"><span class="door-name">Fall food &amp; cocktails</span><span class="door-line">Brennan's Fall 2026: eight dishes, nine cocktails and the stories behind them.</span></a>
-	</nav>
 	<div class="house">
 		<HouseBar />
 	</div>
@@ -398,25 +402,13 @@
 	{/if}
 	{#if current && rows.length}
 		<p class="note countline">{countLine}</p>
+		<!-- One door, named by the house, into its own page: everything the
+		     four doors and the fall door opened lives there now. -->
 		<nav class="quiet" aria-labelledby="restaurant">
-			<a class="door" href="{base}/menu" data-door="study">
-				<span class="door-name">Study the whole menu</span>
-				<span class="door-line">Every dish, its lines, its pairing and its parts, section by section.</span>
+			<a class="door lead" href="{base}/menu" data-door="house">
+				<span class="door-name">{current.name}</span>
+				<span class="door-line">The menu and its lines, the fall menu, the cooking, your terms, the producers, the house's lists and the drills.</span>
 			</a>
-			<a class="door" href="{base}/flashcards?deck=menu" data-door="menu-cards">
-				<span class="door-name">Flashcards for the menu</span>
-				<span class="door-line">One card per dish: the name on the front, the ten second line on the back.</span>
-			</a>
-			<a class="door" href="{base}/menu/quiz?mode=drill" data-door="menu-drill">
-				<span class="door-name">Drill the menu</span>
-				<span class="door-line">Mixed questions from every section, ten at a time.</span>
-			</a>
-			{#if producersCount}
-				<a class="door" href="{base}/menu?view=producers" data-door="producers">
-					<span class="door-name">{say('producers')}</span>
-					<span class="door-line">{producersCount}</span>
-				</a>
-			{/if}
 		</nav>
 		<nav class="chips sections" aria-label="The menu's sections">
 			{#each sections as s (s.section)}

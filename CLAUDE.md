@@ -1388,6 +1388,25 @@ stories) and what to compare it with. The plan is section "CURRENT WORK (5 Oct
   `item-components:{id}` (k: references, graded `card-component` under the
   component's id); Part by part leaves component cards out.
   `tests/study-components.spec.ts` walks the card and the decks at 390 by 844.
+- **Staging, for authors working in parallel (17 October 2026)**: a chunk's
+  overrides go in `brennans/_staging/<name>.overrides.json` (`{ entries: [...]
+  }` in overrides.json's own shape) and its component fragments in
+  `brennans/components/_staging/<name>.json` (a fragment's own shape), never
+  in overrides.json or a fragment file, until an integrator merges them.
+  `build-brennans.mjs --staging a,b` is a dry build: the base files plus those
+  chunks (the staged entries after the base entries, numbered on from them;
+  the staged fragments after the edition's), written under
+  `brennans/_staging/out/<a+b>.house.json` with its own dash and spelling
+  logs, ids minted in memory and the ledger never written.
+  `validate-pack.mjs --file <that house> --staging a,b` holds it to every
+  gate but prints the edition's fixed counts (`countProblems`) as advisory,
+  reading the staged fragments with the edition's (`readFragments` and
+  `fragmentCounts` take an `extra` list; `engine.mjs STAGING`,
+  `stagingNames`, `stagingOverrideFiles`, `stagingFragmentFiles`).
+  `readFragments` never reads `_staging` on its own. A dish a house page
+  prints with no price (the Fall 2026 training sheets) files on `dish:+` with
+  `priceUnknown: true`, an empty price and no printed prices, and the
+  assembly refuses it unless an `ask:+` with `blocksField 'price'` names it.
 
 ## Cook at home: the training kitchen (5 October 2026)
 

@@ -17,6 +17,38 @@ export const fallCards: FallCard[] = fallMenu.items.flatMap((item) => item.drill
 export const fallCardById = new Map(fallCards.map((c) => [c.id, c]));
 export const fallItemById = new Map(fallMenu.items.map((i) => [i.id, i]));
 export const fallSourceById = new Map(fallMenu.sources.map((s) => [s.id, s]));
+
+/**
+ * The house's name for an item the sheet spells otherwise, so a dish card
+ * finds its field notes by name: the pack's "Old Buttermilk Sky" is the
+ * sheet's "Ole Buttermilk Sky". The sheet's JSON is never edited for a join.
+ */
+export const FALL_NAME_ALIASES: Readonly<Record<string, string>> = { 'Old Buttermilk Sky': 'Ole Buttermilk Sky' };
+
+/** A name folded for the join: NFD with the accents taken off, every apostrophe dropped, lower case, one space between words. */
+function foldFallName(s: string): string {
+	return String(s ?? '')
+		.normalize('NFD')
+		.replace(/[̀-ͯ]/g, '')
+		.replace(/[‘’‚‛']/g, '')
+		.toLowerCase()
+		.replace(/\s+/g, ' ')
+		.trim();
+}
+const fallByFoldedName = new Map(fallMenu.items.map((i) => [foldFallName(i.name), i]));
+const fallAliasByFoldedName = new Map(Object.entries(FALL_NAME_ALIASES).map(([house, sheet]) => [foldFallName(house), foldFallName(sheet)]));
+
+/**
+ * The Fall 2026 training sheet's item for a house item of this name, or
+ * undefined when the sheet has none: the alias first, then the folded name
+ * (accents and apostrophes folded, lower case). PURE, so a card's join is
+ * tested under plain Node.
+ */
+export function fallItemForDish(name: string): FallItem | undefined {
+	const key = foldFallName(name);
+	if (!key) return undefined;
+	return fallByFoldedName.get(fallAliasByFoldedName.get(key) ?? key);
+}
 // Curriculum practice uses the bounded local drill log, outside every live house.
 // It cannot edit a menu, approve a Maître d' mark, or raise a professional level.
 export const fallGradeKey = (id: string) => drilledKey('curriculum-fall-2026', id, 'card');

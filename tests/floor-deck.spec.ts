@@ -35,7 +35,7 @@ const countAt = (section: string, level: number) => {
 
 /**
  * The one card screen (the consolidation, docs/consolidation-design.md 3.7):
- * /service/deck/study forwards to the Flashcards tab, where a card shows Flip
+ * /service/deck/study forwards to the Practise tab, where a card shows Flip
  * and then Got it (recorded `close`, what Had it and Shaky both recorded) or
  * Again (`missed`, and the card comes round once more).
  */

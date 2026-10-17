@@ -1,8 +1,10 @@
 <!--
-  The study view of My Menu: what the page shows when a house is current and
-  Edit is off (docs/study-menus-design.md, 2.1 and 2.2). A short header, a
-  sticky bar with the search and one row of section chips, then the dishes
-  as compact rows, each one button that opens its card.
+  The study view of the house's page, /menu: what it shows when a house is
+  current and Edit is off (docs/study-menus-design.md, 2.1 and 2.2). A short
+  header, a sticky bar with the search and one row of section chips, then
+  the dishes as compact rows, each one button that opens its card. When the
+  house is Brennan's, its Fall 2026 section leads the chips and the groups,
+  right after the tasting menus (fallFirst below).
 
   The art is the Table's: parchment tokens, the display face for names, the
   eyebrow for section heads, the page's chip for every chip. Only layout and
@@ -98,10 +100,20 @@
 	const onTastings = $derived(!!tastKey && section === tastKey);
 	const listRows = $derived(mealRows.filter((r) => !tastOnly.has(r.id)));
 	const found = $derived(searchRows(current, query.trim() ? mealRows : listRows, query));
-	const chips = $derived(studySections(listRows));
+	/* The Fall 2026 section, the menu the owner is learning now, is drawn first,
+	   right after the Tasting menus block and ahead of the other sections, when
+	   the house is Brennan's: one ordering rule for the chip row and the groups,
+	   no data change. Inert for any other house, and for this one until its pack
+	   holds the section. */
+	const FALL_SECTION = 'Fall 2026';
+	const fallFirst = <T extends { section: string }>(list: T[]): T[] =>
+		current.id === BRENNANS_HOUSE_ID && list.some((g) => g.section === FALL_SECTION)
+			? [...list.filter((g) => g.section === FALL_SECTION), ...list.filter((g) => g.section !== FALL_SECTION)]
+			: list;
+	const chips = $derived(fallFirst(studySections(listRows)));
 	const shown = $derived(onTastings && !query.trim() ? [] : section ? found.filter((r) => r.section === section) : found);
 	const showMenus = $derived(menus.length > 0 && !query.trim() && (!section || onTastings));
-	const grouped = $derived(studySections(shown).map((s) => ({ ...s, rows: shown.filter((r) => r.section === s.section) })));
+	const grouped = $derived(fallFirst(studySections(shown)).map((s) => ({ ...s, rows: shown.filter((r) => r.section === s.section) })));
 	const elsewhere = $derived(query.trim() ? searchElsewhere(current, 'dish', query) : []);
 	const progress = $derived(studyProgress(mealRows.map((r) => r.id), latest));
 	const againSet = $derived(new Set(progress.againIds));
@@ -173,7 +185,8 @@
 <section class="study" aria-labelledby="study-h">
 	<header class="studyhead">
 		<div class="titlerow">
-			<h2 id="study-h">{current.name}</h2>
+			<!-- tabindex="-1": the page's jump row brings the menu to the top and puts the focus here. -->
+			<h2 id="study-h" tabindex="-1">{current.name}</h2>
 			{#if showEdit}<button class="quiet studyedit" onclick={onEdit}>{say('editOff')}</button>{/if}
 		</div>
 		<!-- One line of facts with the progress on it: the first screen at 390 by
@@ -280,15 +293,16 @@
 	{/if}
 
 	{#if current.id === BRENNANS_HOUSE_ID}
-		<section class="teaching-library" id="illustrated-kitchen-studies" aria-label="Illustrated kitchen studies">
-			<h2>Illustrated kitchen studies</h2>
+		<section class="teaching-library" id="illustrated-kitchen-studies" aria-labelledby="studies-h">
+			<h2 id="studies-h" tabindex="-1">Illustrated kitchen studies</h2>
 			<TeachingFolioCollection />
 		</section>
 	{/if}
 
 	{#if videoCount}
 		<details class="videos" id="study-videos">
-			<summary>{say('videosCount', { n: videoCount })}</summary>
+			<!-- The summary is the Videos heading the page's jump row lands on; a summary takes the focus on its own. -->
+			<summary id="videos-h">{say('videosCount', { n: videoCount })}</summary>
 			<p class="vnote">{say('videoNote')}</p>
 			{#each videoGroups as g, gi (g.topic)}
 				<section class="vgroup" aria-labelledby="vg-{gi}">
@@ -315,6 +329,8 @@
 	.studyhead { margin: 0; }
 	.titlerow { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 6px; }
 	.titlerow h2 { font-family: var(--display); font-size: var(--t-h3); line-height: 1.15; margin: 0; }
+	/* The jump row's landing places, outlined only for a keyboard (ProducersView's heads). */
+	.titlerow h2:focus-visible, .teaching-library > h2:focus-visible { outline: 2px solid var(--turmeric-deep); outline-offset: 2px; }
 	.quiet {
 		min-height: 44px; padding: 0 4px; background: none; border: 0; cursor: pointer;
 		font: inherit; font-size: 1rem; color: var(--ink-soft); text-decoration: underline;

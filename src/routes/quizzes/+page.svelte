@@ -4,9 +4,11 @@
 
     the root        Quick quiz first and alone, then My restaurant (the house
                     rounds), the level's subject quizzes, Cuisine (rows that
-                    open the sixth tab's rounds, /cuisine?quiz=<scope>&kind=
-                    mc|steps|match, and so light the Cuisine tab), Hands on,
-                    and last the level's test, each row naming what it asks
+                    open Cuisine's rounds, /cuisine?quiz=<scope>&kind=
+                    mc|steps|match, and so light Brennan's), Hands on, and
+                    last the level's test, each row naming what it asks;
+                    the rows' words are lib/practise-rows.ts, the ones the
+                    Practise root (/flashcards) draws beside its decks
     ?quick=1        the quick quiz: ten in one round, the house and the
                     level in turn with two Cuisine questions among them,
                     then the results screen
@@ -30,7 +32,8 @@
   from the results is this root. The whole round rides in the entry's page
   state, results included, so a pop back to it (from Study this card, say)
   draws the same misses. A cold load or a reload with no round in its state
-  falls back to this root with a replace.
+  falls to Practise (/flashcards, this page's parent since 17 Oct 2026, the
+  root that lists the rounds) with a replace.
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
@@ -53,8 +56,9 @@
 	import { gradeLevelAnswer, LEVEL_KEYS } from '$lib/levels';
 	import { dueList, repertoire, scopeToSlugs, TERM_LADDER_DAYS } from '$lib/repertoire';
 	import { cuisine } from '$lib/stores/cuisine.svelte';
-	import { askOrder, czSlug, mcOptions, questionsInScope, recordable, roundGrade, type CzLevel } from '$lib/cuisine';
+	import { askOrder, czSlug, mcOptions, questionsInScope, recordable, roundGrade } from '$lib/cuisine';
 	import { QUICK_ROUND, quickLine as quickLineFor, quickOrder, quickSources, quickSplit, quickTargets } from '$lib/quick-quiz';
+	import { cuisineQuizRows, handsOnRows, houseQuizRows, levelQuizRows, levelTestRow } from '$lib/practise-rows';
 	import ScopeChip from '$lib/components/ScopeChip.svelte';
 	import type { DeckLevel, FloorDeck, LexiconEntry } from '$lib/types';
 	import type { Snapshot } from './$types';
@@ -99,12 +103,12 @@
 		pending = null;
 		if (qq || p.get('quick') !== '1') return;
 		/* A cold load or a reload of the round has nothing to draw: it falls to
-		   Quizzes at once, without waiting for the files, so a quick Back press
-		   cannot land on the screen it was about to fall to. A tick first, so
-		   the layout's afterNavigate (which runs after this one) has read the
-		   depth. */
+		   Practise, its parent (lib/nav.ts parentOf), at once, without waiting
+		   for the files, so a quick Back press cannot land on the screen it was
+		   about to fall to. A tick first, so the layout's afterNavigate (which
+		   runs after this one) has read the depth. */
 		if (n.type === 'enter') {
-			void tick().then(() => nav.fallTo(`${base}/quizzes`, {}));
+			void tick().then(() => nav.fallTo(`${base}/flashcards`, {}));
 			return;
 		}
 		pending = { cold: false };
@@ -375,34 +379,13 @@
 	const czIndex = $derived(cuisine.index);
 	const quickLine = $derived(quickLineFor(hasHouse, (czIndex?.questions.length ?? 0) > 0, levelName));
 
-	/* Cuisine's rounds, each a door into the Cuisine tab (its address lights it): the quiz at the
-	   level (every level under Show all, or when the level holds none yet), Order the steps and
-	   Family matching over every chapter, as the Cuisine root deals them. */
-	const cuisineRows = $derived.by(() => {
-		if (!czIndex) return [];
-		const enc = encodeURIComponent;
-		const rows: Array<{ name: string; line: string; href: string }> = [];
-		const atLevel = questionsInScope(czIndex, { kind: 'level', level: chosen as CzLevel }).length;
-		const every = czIndex.questions.length;
-		const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
-		if (every) {
-			const scope = all || !atLevel ? 'all' : `lv:${chosen}`;
-			const lead = all ? 'Every level' : atLevel ? levelName : `None at ${levelName} yet, so every level`;
-			rows.push({ name: 'The Cuisine quiz', line: `${lead}: ${plural(all || !atLevel ? every : atLevel, 'question', 'questions')}, up to ten a round, four options each.`, href: `${base}/cuisine?quiz=${enc(scope)}&kind=mc` });
-		}
-		if (czIndex.steps.length) rows.push({ name: 'Order the steps', line: `Put a method's stages in order: ${plural(czIndex.steps.length, 'method', 'methods')}.`, href: `${base}/cuisine?quiz=all&kind=steps` });
-		if (czIndex.matches.length) rows.push({ name: 'Family matching', line: `Pair each item with its family: ${plural(czIndex.matches.length, 'set', 'sets')}.`, href: `${base}/cuisine?quiz=all&kind=match` });
-		return rows;
-	});
-	const levelRows = (n: DeckLevel | null) => {
-		const q = n ? `?level=${n}` : '';
-		return [
-			{ name: 'The written test', line: 'Which of these is the word? The Floor Deck, with its traps; it ends on what you missed.', href: `${base}/service/deck/test${q}` },
-			{ name: 'Say it back: the Floor Deck', line: 'A guest describes it; you say the word before the choices appear.', href: `${base}/service/deck/say${q}` },
-			{ name: 'The Lexicon quiz', line: 'Which term is this? Ten definitions, four terms each.', href: `${base}/lexicon${n ? `?level=${n}&start=quiz` : '?start=quiz'}` },
-			{ name: 'The service drill', line: 'The service track’s terms, ten questions a round.', href: `${base}/service/drill${q}` }
-		];
-	};
+	/* The rows, the words the Practise root draws too (lib/practise-rows.ts): the house's five rounds,
+	   Cuisine's three (each a door into the Cuisine page, whose address lights Brennan's), the level's
+	   four, Hands on and the level's test. */
+	const houseRows = houseQuizRows(base);
+	const cuisineRows = $derived(cuisineQuizRows(base, czIndex, { all, chosen, levelName }));
+	const levelRows = (n: DeckLevel | null) => levelQuizRows(base, n);
+	const handsOn = handsOnRows(base);
 
 	export const snapshot: Snapshot<{ y: number }> = {
 		capture: () => ({ y: typeof window === 'undefined' ? 0 : window.scrollY }),
@@ -432,11 +415,9 @@
 			<p class="note">No restaurant on this device yet. Set one up from a level page.</p>
 		{:else}
 			<nav class="quiet" aria-labelledby="qz-house">
-				<a class="door" href="{base}/menu/quiz"><span class="door-name">The dishes</span><span class="door-line">Name the dish from its description, its ingredients or its price.</span></a>
-				<a class="door" href="{base}/menu/quiz?mode=drill"><span class="door-name">Drill the menu</span><span class="door-line">Mixed questions from every section, ten at a time.</span></a>
-				<a class="door" href="{base}/menu/quiz?mode=pair"><span class="door-name">Pairings</span><span class="door-line">Which wine, or which drink without alcohol, goes with each dish.</span></a>
-				<a class="door" href="{base}/menu/quiz?mode=say"><span class="door-name">Say it back</span><span class="door-line">The ten, twenty and forty five second lines, out loud.</span></a>
-				<a class="door" href="{base}/menu/quiz?mode=guest"><span class="door-name">Guest at the table</span><span class="door-line">A guest asks; you answer.</span></a>
+				{#each houseRows as r (r.href)}
+					<a class="door" href={r.href}><span class="door-name">{r.name}</span><span class="door-line">{r.line}</span></a>
+				{/each}
 			</nav>
 		{/if}
 
@@ -475,17 +456,18 @@
 
 		<h2 class="group" id="qz-hands">Hands on</h2>
 		<nav class="quiet" aria-labelledby="qz-hands">
-			<a class="door" href="{base}/practise/firing"><span class="door-name">The firing drill</span><span class="door-line">Which dish fires first? Your pinned menu, planned back from service.</span></a>
-			<a class="door" href="{base}/practise/calibrate"><span class="door-name">Calibrate your palate</span><span class="door-line">Taste, then say which fault and how far; the ladder climbs as you do.</span></a>
-			<a class="door" href="{base}/service/deck/lineup"><span class="door-name">The lineup</span><span class="door-line">The Floor Deck read aloud to the whole room before service.</span></a>
+			{#each handsOn as r (r.href)}
+				<a class="door" href={r.href}><span class="door-name">{r.name}</span><span class="door-line">{r.line}</span></a>
+			{/each}
 		</nav>
 
 		<h2 class="group" id="qz-test">{all ? 'The level tests' : `The ${levelName} test`}</h2>
 		<nav class="quiet" aria-labelledby="qz-test">
 			{#each all ? LEVEL_KEYS : [chosen] as n (n)}
-				<a class="door leveltest" href="{base}/level/{n}/test">
-					<span class="door-name">The {nameOf(n)} test</span>
-					<span class="door-line">The Floor Deck, service and the Lexicon at {nameOf(n)}, untimed; it ends on what you missed, with the right answers and no score.</span>
+				{@const r = levelTestRow(base, n, nameOf(n))}
+				<a class="door leveltest" href={r.href}>
+					<span class="door-name">{r.name}</span>
+					<span class="door-line">{r.line}</span>
 				</a>
 			{/each}
 		</nav>

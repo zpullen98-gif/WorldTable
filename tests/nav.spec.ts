@@ -1,5 +1,23 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, type Page } from '@playwright/test';
+import { readFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { goto, seedSession } from './helpers';
+
+const HERE = dirname(fileURLToPath(import.meta.url));
+const PACK_TEXT = readFileSync(join(HERE, '../static/shared/packs/brennans-new-orleans.v1.oothouse.json'), 'utf8');
+const PACK = JSON.parse(PACK_TEXT).house as { name: string };
+
+/**
+ * The shipped Brennan's pack, served on the page the way study.spec.ts serves
+ * it (the suite's server withholds packs): the Brennan's tab opens on the
+ * house, so its h1 is the house's name only once the pack has loaded itself.
+ */
+async function servePack(page: Page) {
+	await page.route('**/shared/packs/brennans-new-orleans.v1.oothouse.json', (route) =>
+		route.fulfill({ status: 200, contentType: 'application/json', body: PACK_TEXT })
+	);
+}
 
 /**
  * The tabs, and the reason this file exists.
@@ -16,40 +34,46 @@ import { goto, seedSession } from './helpers';
  * at a route whose component throws, or at SvelteKit's error page. So each tab
  * is asserted to render its own H1 here.
  *
- * Home, Flashcards, Quizzes, Library, then a quiet More: the one nav the
- * three apps share, in that order (the consolidation, 4 Oct 2026,
- * docs/consolidation-design.md 2.1). The Table alone adds Cuisine between
- * Library and More, its sixth word (the owner, 12 Oct 2026); the Ledger and
- * the Codex keep four.
+ * Home, Brennan's, Practise, Library, then a quiet More: the Table's five
+ * words since 17 Oct 2026 (the owner's choice: the house as one tab, with
+ * its menu, the fall menu, Cuisine and the Kitchen Fieldbook inside it, and
+ * Flashcards and Quizzes as one word, Practise, with Due today at its top).
+ * The Ledger and the Codex keep the four words of the consolidation (4 Oct
+ * 2026, docs/consolidation-design.md 2.1) until their own treatment.
+ *
+ * The Brennan's word is the literal with its curly apostrophe (U+2019), as
+ * the house's name prints it: the specs use that character or PACK.name,
+ * never the straight apostrophe.
  */
 const TABS = [
 	{ href: '/', label: 'Home', h1: /The World/i },
-	{ href: '/flashcards', label: 'Flashcards', h1: /^Flashcards$/ },
-	{ href: '/quizzes', label: 'Quizzes', h1: /^Quizzes$/ },
+	{ href: '/menu', label: 'Brennan’s', h1: PACK.name },
+	{ href: '/flashcards', label: 'Practise', h1: /^Practise$/ },
 	{ href: '/library', label: 'Library', h1: /^Library$/ },
-	{ href: '/cuisine', label: 'Cuisine', h1: /^Cuisine$/ },
 	{ href: '/more', label: 'More', h1: /^More$/ }
 ];
 
 for (const tab of TABS) {
 	test(`the ${tab.label} tab renders its own page`, async ({ page }) => {
+		// The house's page is named by the house, so its h1 waits on the pack.
+		if (tab.href === '/menu') await servePack(page);
 		await goto(page, tab.href);
 
 		// The error page is what a moved-route-on-a-stale-install looks like, and
 		// it renders inside the same chrome. Name it explicitly.
 		await expect(page.locator('h1')).not.toHaveText(/Nothing at this address/);
-		await expect(page.locator('h1').first()).toHaveText(tab.h1);
+		await expect(page.locator('h1').first()).toHaveText(tab.h1, { timeout: 15_000 });
 	});
 }
 
-test('the bar shows the five tab words and then More, in the Table\'s order', async ({ page }) => {
+test('the bar shows the four tab words and then More, in the Table\'s order', async ({ page }) => {
 	await goto(page, '/');
 	const tabs = page.locator('.modetab');
-	await expect(tabs).toHaveCount(6);
-	for (const [i, label] of ['Home', 'Flashcards', 'Quizzes', 'Library', 'Cuisine', 'More'].entries()) {
+	await expect(tabs).toHaveCount(5);
+	for (const [i, label] of ['Home', 'Brennan’s', 'Practise', 'Library', 'More'].entries()) {
 		await expect(tabs.nth(i)).toHaveText(new RegExp(`^${label}`));
 	}
-	await expect(tabs.nth(5)).toHaveClass(/quiet/);
+	await expect(tabs.nth(4)).toHaveClass(/quiet/);
 });
 
 /**
@@ -66,27 +90,35 @@ test('the old Levels address forwards to the lowest level not yet met', async ({
 /**
  * Exactly ONE tab may be lit. The old isActive tested `startsWith`, so
  * '/recipes' matched the '/recipe' tab and a recipe page lit two at once.
- * The owners are the design's (3.2): the level test is Quizzes', the level's
- * reading Library's, everything reached from More lights More.
+ * The owners are the design's (3.2, and the Brennan's tab of 17 Oct 2026):
+ * the house's page, Cuisine and the Kitchen Fieldbook are Brennan's; the
+ * level test, every deck, every round and every drill are Practise's; the
+ * level's reading is Library's; everything reached from More lights More.
  */
 test.describe('exactly one tab owns each route', () => {
 	const ROUTES = [
 		['/', 'Home'],
 		['/level/1', 'Home'],
-		['/menu', 'Home'],
-		['/foundations', 'Home'],
-		['/level/1/test', 'Quizzes'],
+		['/menu', 'Brennan’s'],
+		['/menu?view=fall', 'Brennan’s'],
+		['/menu?view=producers', 'Brennan’s'],
+		['/foundations', 'Brennan’s'],
+		['/foundations?category=methods', 'Brennan’s'],
+		['/level/1/test', 'Practise'],
 		['/level/1/read', 'Library'],
-		['/flashcards', 'Flashcards'],
-		['/service/deck', 'Flashcards'],
-		['/quizzes', 'Quizzes'],
-		['/service/deck/test', 'Quizzes'],
-		['/service/deck/say', 'Quizzes'],
-		['/service/deck/lineup', 'Quizzes'],
-		['/service/drill', 'Quizzes'],
-		['/practise/calibrate', 'Quizzes'],
-		['/practise/firing', 'Quizzes'],
-		['/menu/quiz', 'Quizzes'],
+		['/flashcards', 'Practise'],
+		['/service/deck', 'Practise'],
+		['/quizzes', 'Practise'],
+		['/quizzes?quick=1', 'Practise'],
+		['/service/deck/test', 'Practise'],
+		['/service/deck/say', 'Practise'],
+		['/service/deck/lineup', 'Practise'],
+		['/service/drill', 'Practise'],
+		['/practise/calibrate', 'Practise'],
+		['/practise/firing', 'Practise'],
+		['/menu/quiz', 'Practise'],
+		['/menu/quiz?mode=drill', 'Practise'],
+		['/menu/quiz?mode=cards', 'Practise'],
 		['/library', 'Library'],
 		['/study', 'Library'],
 		['/plates', 'Library'],
@@ -101,10 +133,12 @@ test.describe('exactly one tab owns each route', () => {
 		['/lexicon', 'Library'],
 		['/pantry', 'Library'],
 		['/family', 'Library'],
-		['/cuisine', 'Cuisine'],
-		['/cuisine?ch=mother-sauces', 'Cuisine'],
-		['/cuisine?ch=mother-sauces&e=hollandaise', 'Cuisine'],
-		['/cuisine?view=tree', 'Cuisine'],
+		['/cuisine', 'Brennan’s'],
+		['/cuisine?ch=mother-sauces', 'Brennan’s'],
+		['/cuisine?ch=mother-sauces&e=hollandaise', 'Brennan’s'],
+		['/cuisine?view=tree', 'Brennan’s'],
+		['/cuisine?deck=all', 'Brennan’s'],
+		['/cuisine?quiz=all&kind=mc', 'Brennan’s'],
 		['/more', 'More'],
 		['/menu/costing', 'More'],
 		['/menu/preps', 'More'],
@@ -200,8 +234,10 @@ test('the coverage board can be reached from More and left', async ({ page }) =>
  * The rest of the suite runs at the Playwright default of 1280 and is blind to
  * all of it, which is why it survived this long. Four tabs fit more easily
  * than five did; the floor is the same. Cuisine (12 Oct 2026) made the
- * Table's bar six words again, and the phone CSS in +layout.svelte carries
- * the measurements that fit them in one row at 375.
+ * Table's bar six words, and the Brennan's tab (17 Oct 2026) brought it to
+ * five, Home, Brennan's, Practise, Library and More, on the same phone CSS
+ * in +layout.svelte, whose comment carries the measurements that fit them
+ * in one row at 375 and 390.
  */
 test.describe('the mode bar fits on a phone', () => {
 	/*
@@ -214,7 +250,7 @@ test.describe('the mode bar fits on a phone', () => {
 	 * identical on every route. The one case that needs a Library-lit page uses
 	 * /family, a page that tab owns and which is nearly empty.
 	 */
-	test('the five tabs and More stay reachable from 320 to 600', async ({ page }) => {
+	test('the four tab words and More stay reachable from 320 to 600', async ({ page }) => {
 		await goto(page, '/level/1');
 
 		for (const width of [320, 375, 390, 414, 430, 600]) {

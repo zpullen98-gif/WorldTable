@@ -11,13 +11,13 @@ import { goto, seedHouses } from './helpers';
  * an origin behind the Verjus and Tonic's verjus and a vineyard behind the
  * Harbour White and nothing else. The card's "Who makes it" block above
  * "What it's made of", a profile opening in full; the Producers view inside
- * My Menu with its groups (the verjus, behind a drink and no dish, At the
+ * the house's page with its groups (the verjus, behind a drink and no dish, At the
  * bar; the vineyard, behind a wine and no dish or drink, In the cellar under
  * its region) and its jump list, a dish chip opening the card and Back
  * returning to the view, a drink and a cellar wine as words (this standalone
  * build is off the shared origin, so no Ledger or Codex link is drawn; the
  * addresses are proved in study-producers.test.ts); the Producers deck on
- * the Flashcards tab, dealing the producers behind a dish only, and an
+ * the Practise tab, dealing the producers behind a dish only, and an
  * item's producer deck from the card; and a producer question in the menu
  * drill, never about the bar's or the cellar's. Every producer and place
  * here is invented for the invented house.
@@ -216,7 +216,7 @@ test('a drink is the Ledger\'s: At the bar it is listed, and behind a dish too i
 	expect(box.x + box.width).toBeLessThanOrEqual(390);
 });
 
-test('the Producers deck deals the producers behind a dish under My restaurant, and the card\'s link deals the dish\'s own', async ({ page }) => {
+test('the Producers deck deals the producers behind a dish under the house\'s group on Practise, and the card\'s link deals the dish\'s own', async ({ page }) => {
 	await openChicken(page);
 	await card(page).locator('a', { hasText: 'Flash these producers' }).click();
 	await expect(page).toHaveURL(/\/flashcards\?deck=item-producers/);

@@ -576,7 +576,7 @@ test('the kinds row narrows the round, the answer carries its explanation, and e
 
 test('?mode=cards lands on the one card screen: a card flips and Got it moves the count on', async ({ page }) => {
 	await seedHouses(page, [drillFixture()]);
-	// The flip cards are the Flashcards tab's since the consolidation: the old
+	// The flip cards are the Practise tab's (Flashcards until 17 Oct 2026) since the consolidation: the old
 	// address, with its scope, forwards to the matching deck's run.
 	await goto(page, '/menu/quiz?mode=cards&deck=parts');
 	await expect(page).toHaveURL(/\/flashcards\?deck=menu-parts&run=1$/);

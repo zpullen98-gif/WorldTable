@@ -75,16 +75,16 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
-import { americanise, checkArgs, EDITION_TS, editionInFuture, PACK, readFragments, componentsDir } from './engine.mjs';
+import { americanise, checkArgs, EDITION_TS, editionInFuture, PACK, readFragments, componentsDir, STAGING, stagingNames, stagingOverrideFiles, stagingFragmentFiles } from './engine.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DIR = path.join(HERE, 'brennans');
 const PARSED = path.join(DIR, 'parsed.json');
 const OVERRIDES = path.join(DIR, 'overrides.json');
 const LEDGER = path.join(DIR, 'ids.ledger.json');
-const DASH_LOG = path.join(DIR, 'dash-log.json');
-const SPELL_LOG = path.join(DIR, 'spelling-log.json');
-const OUT = path.join(DIR, 'house.json');
+let DASH_LOG = path.join(DIR, 'dash-log.json');
+let SPELL_LOG = path.join(DIR, 'spelling-log.json');
+let OUT = path.join(DIR, 'house.json');
 const ENGINE = path.join(HERE, '..', '..', 'static', 'shared', 'oot-house.js');
 const REL = (p) => path.relative(process.cwd(), p) || p;
 
@@ -96,19 +96,35 @@ if (args.includes('--help') || args.includes('-h')) {
   --stamp <ms>  the one build stamp on every mark (default: the shipped edition's fixed stamp; --now takes the clock)
   --verbose     print every principle mapped
   --components <dir>  read the component fragments from <dir> (default ${REL(componentsDir())}, or BRENNANS_COMPONENTS)
+  --staging <a,b>  a dry build of staged chunks: the base files plus ${REL(STAGING)}/<name>.overrides.json
+                (its entries after the base file's, numbered on from them) and components/_staging/<name>.json,
+                written under ${REL(STAGING)}/out/, ids minted in memory and the ledger never written
   --help        this text
 
 Writes ${REL(OUT)}, ${REL(DASH_LOG)}, ${REL(SPELL_LOG)} and, with --mint, ${REL(LEDGER)}.`);
 	process.exit(0);
 }
-checkArgs(args, ['--mint', '--stamp', '--verbose', '--now', '--components'], ['--stamp', '--components'], fail);
+checkArgs(args, ['--mint', '--stamp', '--verbose', '--now', '--components', '--staging'], ['--stamp', '--components', '--staging'], fail);
 const compAt = args.indexOf('--components');
 if (compAt >= 0) {
 	const dir = path.resolve(args[compAt + 1]);
 	if (!fs.existsSync(dir)) fail(`--components ${args[compAt + 1]}: no such directory`);
 	process.env.BRENNANS_COMPONENTS = dir;
 }
-const MINT = args.includes('--mint');
+const stagingAt = args.indexOf('--staging');
+const STAGING_NAMES = stagingAt >= 0 ? stagingNames(args[stagingAt + 1]) : [];
+if (stagingAt >= 0 && !STAGING_NAMES.length) fail('--staging names at least one chunk, comma separated');
+if (STAGING_NAMES.length) {
+	const outDir = path.join(STAGING, 'out');
+	fs.mkdirSync(outDir, { recursive: true });
+	const stem = STAGING_NAMES.join('+');
+	OUT = path.join(outDir, stem + '.house.json');
+	DASH_LOG = path.join(outDir, stem + '.dash-log.json');
+	SPELL_LOG = path.join(outDir, stem + '.spelling-log.json');
+}
+/* A staged build mints in memory: a new dish or component in a chunk needs an id to build at all,
+   and the ledger is written only by the real build with --mint. */
+const MINT = args.includes('--mint') || STAGING_NAMES.length > 0;
 const stampAt = args.indexOf('--stamp');
 /* Fixed by default so a rebuild is byte for byte the pack that shipped (the mirror gate holds the
    site's copy to this one): --stamp sets another, --now takes the clock for a fresh edition. */
@@ -141,6 +157,14 @@ const FORBIDDEN_KEY = C.FORBIDDEN_KEY;
 /* ---------- inputs ---------- */
 const parsed = JSON.parse(fs.readFileSync(PARSED, 'utf8'));
 const overrides = JSON.parse(fs.readFileSync(OVERRIDES, 'utf8'));
+const BASE_ENTRIES = overrides.entries.length;
+for (const f of stagingOverrideFiles(STAGING_NAMES)) {
+	let staged;
+	try { staged = JSON.parse(fs.readFileSync(f, 'utf8')); } catch (e) { fail(`${REL(f)}: does not parse as JSON (${e.message})`); }
+	const entries = Array.isArray(staged) ? staged : staged && Array.isArray(staged.entries) ? staged.entries : null;
+	if (!entries) fail(`${REL(f)}: a staged overrides file is { entries: [...] } or a list of entries`);
+	for (const e of entries) overrides.entries.push(e);
+}
 let ledger = {};
 if (fs.existsSync(LEDGER)) ledger = JSON.parse(fs.readFileSync(LEDGER, 'utf8'));
 const ledgerBefore = JSON.stringify(ledger);
@@ -511,6 +535,9 @@ const retired = [];
 /* Ids of records the shipped pack held that no override builds any more (an ask answered by a newer
    menu, a note on a retired drink), each with its tombstone stamp: see 'tombstone' below. */
 const buried = [];
+/* The dishes filed with no printed price (newItem's priceUnknown): each must be named by an ask that
+   blocks the price, checked at assembly. */
+const priceUnknownNames = [];
 overrides.entries.forEach((e, n) => {
 	const op = e.op || 'set';
 	/* A video's title and channel are quoted from the page as published and its bookkeeping (verifiedBy,
@@ -649,8 +676,17 @@ function newItem(list, v, n) {
 	for (const l of ['dishes', 'wines', 'cocktails']) if (model[l].some((r) => slug(r.name) === slug(v.name))) fail(`${at}: ${v.name} is already in the house`);
 	need(str(v.section), 'a section');
 	need(Array.isArray(v.meals) && v.meals.length, 'its meals');
-	need(str(v.price), 'a printed price');
-	need(Array.isArray(v.prices) && v.prices.length && v.prices.every((p) => str(p.meal) && str(p.printed)), 'its printed prices');
+	/* A dish a house page prints with no price (the Fall 2026 training sheets print none) files with
+	   priceUnknown: true, an empty price and no printed prices; an ask:+ with blocksField 'price' must
+	   name it (checked at assembly), so the card asks for the price rather than inventing one. */
+	const unpriced = list === 'dishes' && v.priceUnknown === true;
+	if (unpriced) {
+		need((v.price === undefined || v.price === '') && (v.prices === undefined || (Array.isArray(v.prices) && v.prices.length === 0)), 'an empty price and no printed prices, since priceUnknown is set');
+		priceUnknownNames.push(v.name);
+	} else {
+		need(str(v.price), 'a printed price');
+		need(Array.isArray(v.prices) && v.prices.length && v.prices.every((p) => str(p.meal) && str(p.printed)), 'its printed prices');
+	}
 	/* Main, technique and taste always; a sauce or sides nobody printed is left empty rather than filled
 	   with 'not printed', because each is a drill stem and an empty part is one the dealer skips. */
 	need(v.parts && ['main', 'technique', 'taste'].every((k) => str(v.parts[k])), 'its main, technique and taste');
@@ -658,7 +694,7 @@ function newItem(list, v, n) {
 	need(v.lines && ['s10', 's20', 's45'].every((k) => str(v.lines[k])), 'all three timed lines');
 	for (const f of ['say', 'guest', 'why']) need(str(v[f]), f);
 	const base = {
-		name: v.name, section: v.section, signature: false, meals: [...v.meals], price: v.price, prices: v.prices.map((p) => ({ meal: p.meal, printed: p.printed })),
+		name: v.name, section: v.section, signature: false, meals: [...v.meals], price: unpriced ? '' : v.price, prices: unpriced ? [] : v.prices.map((p) => ({ meal: p.meal, printed: p.printed })),
 		parts: Object.assign({}, v.parts), lines: Object.assign({}, v.lines), serviceNote: v.serviceNote || '',
 		say: v.say, guest: v.guest, why: v.why, pairs: v.pairs || '', origin: v.origin || '', kept: Array.isArray(v.kept) ? v.kept.map((k) => ({ q: k.q, a: k.a })) : []
 	};
@@ -1081,6 +1117,9 @@ for (const a of clean.asks) {
 	r.ts = BUILD_TS;
 	house.askAtLineup.push(r);
 }
+for (const name of priceUnknownNames) {
+	if (!clean.asks.some((a) => a.blocksField === 'price' && a.items.some((i) => slug(i) === slug(name)))) fail(`the dish ${name} is filed with priceUnknown and no ask:+ with blocksField price names it; add one so the card asks for the price rather than inventing it`);
+}
 for (const u of clean.disputes) {
 	const r = { id: idFor('disputes', slug((u.item || 'house') + '-' + u.field).slice(0, 60)), field: u.field, a: u.a, b: u.b, ts: BUILD_TS };
 	if (u.item) r.itemId = itemId(u.item, 'dispute');
@@ -1097,7 +1136,7 @@ for (const u of clean.disputes) {
    A component may carry its producer inline (producerFrom below). The sources stay in the fragment for a
    reader and the gates; nothing of them reaches the house. */
 let frags;
-try { frags = readFragments(); } catch (e) { fail(e.message); }
+try { frags = readFragments(undefined, stagingFragmentFiles(STAGING_NAMES)); } catch (e) { fail(e.message); }
 const compIds = new Map();
 const builtComponents = [];
 const fragStr = (x) => typeof x === 'string' && x.trim() !== '';
@@ -1337,7 +1376,7 @@ if (!lib.sameJson(normal, house)) {
 fs.writeFileSync(OUT, JSON.stringify(house, null, '\t') + '\n');
 fs.writeFileSync(DASH_LOG, JSON.stringify({ about: 'Every string the dash pass changed while building the Brennan\'s house, before and after, for a person to read for a changed meaning; an entry with an override number is a string an overrides.json entry set, not the guide\'s.', count: dashLog.length, changes: dashLog }, null, '\t') + '\n');
 fs.writeFileSync(SPELL_LOG, JSON.stringify({ about: 'Every string the spelling map changed while building the Brennan\'s house: the research writes British English and the house is American, so each British form became its American spelling.', count: spellLog.length, changes: spellLog }, null, '\t') + '\n');
-if (JSON.stringify(ledger) !== ledgerBefore) {
+if (JSON.stringify(ledger) !== ledgerBefore && !STAGING_NAMES.length) {
 	const sorted = {};
 	for (const k of Object.keys(ledger).sort()) sorted[k] = ledger[k];
 	fs.writeFileSync(LEDGER, JSON.stringify(sorted, null, '\t') + '\n');
@@ -1348,5 +1387,5 @@ const floorBottles = house.wines.filter((w) => w.list === 'bottle').length;
 const tiered = house.dishes.filter((d) => d.pairing && d.pairing.value.bottles).length;
 console.log(`build-brennans: ${floorBottles} of ${house.wines.length} wines are on the bottle list; ${tiered} dishes carry bottle tiers`);
 console.log(`build-brennans: ${coffeeLinks} pairings take a coffee as their zero-proof pick; ${house.wines.filter((w) => w.lines).length} of ${house.wines.length} wines carry the timed lines`);
-console.log(`build-brennans: ${REL(OUT)}: ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free), ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask at lineup, ${house.disputes.length} disputes, ${(house.videos || []).length} videos, ${builtComponents.length} components (${builtComponents.filter((c) => c.producer).length} with a producer, ${house.dishes.concat(house.wines, house.cocktails).filter((r) => r.compare).length} items compared, from ${frags.files.length} fragment file(s) in ${REL(frags.dir)}); ${overrides.entries.length} overrides applied (${applied.filter((a) => a.skipped).length} skipped), ${principleChanges.length} principles mapped, ${dashLog.length} strings dash-stripped (${dashLog.filter((d) => d.override !== undefined).length} set by an override), ${spellLog.length} strings respelled American, ${minted.length} ids minted`);
+console.log(`build-brennans: ${REL(OUT)}: ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free), ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask at lineup, ${house.disputes.length} disputes, ${(house.videos || []).length} videos, ${builtComponents.length} components (${builtComponents.filter((c) => c.producer).length} with a producer, ${house.dishes.concat(house.wines, house.cocktails).filter((r) => r.compare).length} items compared, from ${frags.files.length} fragment file(s) in ${REL(frags.dir)}); ${overrides.entries.length} overrides applied (${applied.filter((a) => a.skipped).length} skipped), ${principleChanges.length} principles mapped, ${dashLog.length} strings dash-stripped (${dashLog.filter((d) => d.override !== undefined).length} set by an override), ${spellLog.length} strings respelled American, ${minted.length} ids minted${STAGING_NAMES.length ? ` (a staged dry build of ${STAGING_NAMES.join(', ')}: ${overrides.entries.length - BASE_ENTRIES} staged entries after the base file's ${BASE_ENTRIES}, ids minted in memory only, the ledger untouched)` : ''}`);
 if (principleChanges.length && args.includes('--verbose')) for (const p of principleChanges) console.log('  principle ' + p.dish + ': ' + p.from + ' to ' + p.to);

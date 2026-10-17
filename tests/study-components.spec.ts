@@ -11,7 +11,7 @@ import { goto, seedHouses } from './helpers';
  * it here: the card's "What it's made of" block grouped Ingredients,
  * Techniques, Stories, a component opening to its say, explanation, card and
  * video; "Flash these components" dealing the dish's component deck on the
- * Flashcards tab; the Flashcards root's decks by kind; and "Compare with"
+ * Practise tab; the Practise root's decks by kind; and "Compare with"
  * linking a Library recipe and a technique here and writing a classic out.
  */
 

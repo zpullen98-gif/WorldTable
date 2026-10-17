@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { goto } from './helpers';
 
 /**
- * The study view of My Menu (docs/study-menus-design.md, 2.2 and 7.1), at a
+ * The study view of the house's page, /menu, the Brennan's tab (docs/study-menus-design.md, 2.2 and 7.1), at a
  * phone's 390 by 844, with the shipped Brennan's pack served through
  * page.route the way house.spec.ts serves it: the suite's server withholds
  * packs, so the auto-load is the subject here and nowhere it is not asked for.
@@ -62,13 +62,15 @@ test('the study view is what /menu opens on, short, with the first rows on the f
 	await expect(chip).toHaveAttribute('aria-pressed', 'true');
 	expect((await chip.boundingBox())!.y + 44).toBeLessThanOrEqual(844);
 	// Arm's length: the menu opens on the Tasting menus block, and the first screen holds the first
-	// menu's name and the start of its course journey. (The course journey drawn on 10 October opens
-	// with its own introduction and gives each course a panel, so the first course itself sits just
-	// below the first screen at 390 by 844.)
+	// menu's name; its course journey starts just under it. (The course journey drawn on 10 October
+	// opens with its own introduction and gives each course a panel, so the first course itself sits
+	// below the first screen at 390 by 844; the page's two chip rows of 17 October 2026, the
+	// collections and the jump row, put the journey's start about 60 px past the first screen too,
+	// measured at 902.)
 	const firstMenu = page.locator('.study .tmenu').first();
 	expect((await firstMenu.locator('h4').boundingBox())!.y).toBeLessThan(844);
 	const journey = (await firstMenu.locator('.journey-intro, .titem').first().boundingBox())!;
-	expect(journey.y, 'the course journey starts inside the first 844px').toBeLessThan(844);
+	expect(journey.y, 'the course journey starts just past the first 844px').toBeLessThan(1000);
 	// The day and night control is one small round button in the top corner:
 	// visible, tappable, taking no room in the layout, and it switches service.
 	const choice = page.locator('#oot-service-toolbar').getByRole('button', { name: /Switch to (day|night) service/ });
@@ -86,9 +88,10 @@ test('the study view is what /menu opens on, short, with the first rows on the f
 
 	const m = await page.evaluate(() => ({ h: document.scrollingElement!.scrollHeight, w: document.scrollingElement!.scrollWidth }));
 	// The two tasting menus at the top, every course printed, add about 2,000px (5 October 2026); the
-	// course journey and the illustrated kitchen studies of 10 October about 500px more. The bound still
-	// catches the regression it was written for (235,732px when every card drew open).
-	expect(m.h, 'the page with the house loaded, no card open (235,732 before)').toBeLessThan(14000);
+	// course journey and the illustrated kitchen studies of 10 October about 500px more; The cooking's
+	// thirteen doors and Your culinary terms of 17 October about 1,700px more (measured 15,672). The
+	// bound still catches the regression it was written for (235,732px when every card drew open).
+	expect(m.h, 'the page with the house loaded, no card open (235,732 before)').toBeLessThan(18000);
 	expect(m.w).toBeLessThanOrEqual(390);
 
 	// Every control in the study view at least 44px, every row at least 56px.
@@ -157,27 +160,40 @@ test('the Eggs Hussarde card: the first screen answers the table, the rest teach
 	await expect(c.locator('.price')).toHaveText('$27');
 	await expect(c).toContainText('Prices as printed on ' + READ_ON + '. Confirm before quoting.');
 	await expect(c.locator('.sayit')).toHaveText('Hussarde: hoo-SARD.');
-	await expect(c.locator('.ten')).toHaveText(PACK.dishes.find((d: any) => d.id === HUSSARDE).lines.value.s10);
+	const lines = PACK.dishes.find((d: any) => d.id === HUSSARDE).lines.value;
+	await expect(c.locator('.ten')).toHaveText(lines.s10);
 
-	// The one line a server needs next, on the card's first 844px.
+	// The three tableside lines open at the top, no button to press (17 October 2026): the ten,
+	// the twenty and the forty-five, the forty-five in large type, the one the owner wants learnt.
+	await expect(c.locator('#lines-h')).toHaveText('The lines');
+	await expect(c.locator('#l10')).toBeVisible();
+	await expect(c.locator('#l10')).toHaveText(lines.s10);
+	await expect(c.locator('#l20')).toBeVisible();
+	await expect(c.locator('#l20')).toHaveText(lines.s20);
+	await expect(c.locator('#l45')).toBeVisible();
+	await expect(c.locator('#l45')).toHaveText(lines.s45);
+	await expect(c.getByRole('button', { name: /Twenty seconds|Forty-five seconds/ })).toHaveCount(0);
+	await expect(c.locator('[aria-controls="l20"], [aria-controls="l45"]')).toHaveCount(0);
+	const size = (sel: string) => c.locator(sel).evaluate((el) => parseFloat(getComputedStyle(el).fontSize));
+	expect(await size('#l45')).toBeGreaterThanOrEqual(await size('#l20'));
+	expect(await size('#l45')).toBeGreaterThanOrEqual(await size('#l10'));
+	const top = (await c.boundingBox())!.y;
+	const l45 = (await c.locator('#l45').boundingBox())!;
+	expect(l45.y - top, 'the forty-five starts on the first screen').toBeLessThanOrEqual(700);
+	expect(l45.y + l45.height - top, 'the forty-five ends by the second screen').toBeLessThanOrEqual(1000);
+
+	// The pour line follows the lines: the next thing a server needs.
 	const pour = c.locator('.pourline');
 	await expect(pour).toHaveText(/^Pour: Brennan’s Essential by Piper-Heidsieck Extra Brut NV, \$30\.00\.\s+Without alcohol: Personality\.$/);
-	const top = (await c.boundingBox())!.y;
 	const pb = (await pour.boundingBox())!;
-	expect(pb.y + pb.height - top).toBeLessThanOrEqual(844);
+	expect(pb.y).toBeGreaterThan(l45.y + l45.height - 1);
 
-	// The longer lines behind two toggles that say their state in words.
-	const twenty = c.getByRole('button', { name: 'Twenty seconds' });
-	await expect(twenty).toHaveAttribute('aria-expanded', 'false');
-	await twenty.click();
-	await expect(c.getByRole('button', { name: 'Hide twenty seconds' })).toHaveAttribute('aria-expanded', 'true');
-	await expect(c.locator('#l20')).not.toBeEmpty();
-	await expect(c.getByRole('button', { name: 'Forty-five seconds' })).toHaveAttribute('aria-expanded', 'false');
-
-	// The parts, the pairing, the notes, the service note.
+	// The parts, the pairing, the notes, the service note, and Go deeper into Cuisine.
 	await expect(c.locator('dl.parts dt')).toHaveCount(5);
 	await expect(c.locator('#pour-h')).toHaveText('Pour with it');
 	await expect(c.locator('.pairs').first()).toContainText('Brennan’s Essential by Piper-Heidsieck');
+	await expect(c.locator('#deeper-h')).toHaveText('Go deeper', { timeout: 15_000 });
+	await expect(c.locator('section[aria-labelledby="deeper-h"] a[href="/cuisine?ch=mother-sauces&e=hollandaise"]')).toHaveCount(1);
 	await expect(c.locator('#floor-h')).toHaveText('On the floor');
 	await expect(c.locator('.note .eyebrow')).toHaveText(EYEBROW);
 	await expect(c.locator('.note .para')).toContainText('hoo-SARD');

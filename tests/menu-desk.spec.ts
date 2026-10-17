@@ -322,7 +322,7 @@ test('the bulk send moves the ticked rows to the cellar, the bar, or out', async
 	await expect(page.getByRole('button', { name: 'Add 2 dishes to the menu' })).toBeVisible();
 });
 
-test('the desk has its own anchor on My Menu, and the engine row names both engines in order', async ({ page }) => {
+test('the desk has its own anchor on the house\'s page, and the engine row names both engines in order', async ({ page }) => {
 	// Since the consolidation the desk is My restaurant's: every level page's
 	// quiet link "The Menu Desk" and the waiting line's "Look them over" both
 	// land on its own anchor, #desk.

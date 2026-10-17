@@ -6,10 +6,14 @@ import { goto } from './helpers';
 
 /**
  * The consolidation (docs/consolidation-design.md, section 7): four tabs and a
- * quiet More, Back on every screen, every deck under Flashcards and every
- * round under Quizzes, at a phone's 390 by 844 with the shipped Brennan's
- * pack on the device (served through page.route, as study.spec.ts serves it:
- * the suite's server withholds packs).
+ * quiet More, Back on every screen, at a phone's 390 by 844 with the shipped
+ * Brennan's pack on the device (served through page.route, as study.spec.ts
+ * serves it: the suite's server withholds packs). Since 17 Oct 2026 the
+ * Table's words are Home, Brennan's, Practise, Library and More: the house's
+ * page is the Brennan's tab (its h1 the house's name, PACK.name, with the
+ * curly apostrophe the pack prints), and every deck and every round, the
+ * quick quiz first, is under Practise (/flashcards; the rounds still run on
+ * /quizzes and /menu/quiz, whose parent is Practise).
  *
  * "Back" is the Back control; "gesture" is page.goBack(). "Scroll kept" is
  * scrollY within 4 px of the value before leaving. The numbers in the test
@@ -68,6 +72,13 @@ async function tab(page: Page, name: string) {
 	await page.locator('nav.modebar .modetab', { hasText: name }).dispatchEvent('click');
 }
 
+/**
+ * The quick quiz's start on the Practise root: the link in its own group
+ * (Due today draws a link of the same name when nothing is due, so the
+ * group names which one), to /quizzes?quick=1, a push whose Back is Practise.
+ */
+const quickStart = (page: Page) => page.locator('section[aria-labelledby="fc-quick"]').getByRole('link', { name: 'Start the quick quiz' });
+
 async function scrollTo(page: Page, y: number) {
 	await page.evaluate((v) => window.scrollTo(0, v), y);
 	await page.waitForTimeout(150);
@@ -125,15 +136,17 @@ test('1. the flashcard chain steps back one screen at a time, by the button and 
 		await home(page);
 		await openLevel(page, 0);
 		const levelY = await scrollTo(page, 300);
-		await tab(page, 'Flashcards');
-		await expect(heading(page)).toHaveText('Flashcards');
+		await tab(page, 'Practise');
+		await expect(heading(page)).toHaveText('Practise');
 		await expect(page.locator('button.door', { hasText: 'The whole menu' })).toBeVisible({ timeout: 15_000 });
+		// The whole menu is the first deck door, right under Due today and the
+		// quick quiz; the house's other decks follow it.
+		await expect(page.locator('button.door').first()).toHaveText(/The whole menu/);
 		await expect(page.locator('button.door').nth(8)).toBeVisible();
 		// Scrolled so The whole menu stands 400 px down the glass and the tap
-		// needs no scroll of Playwright's own: with Your culinary terms and
-		// Brennan's Fall 2026 above My restaurant it sits near y 1700, and a
-		// flat 400 left it below the fold, so the click scrolled first and the
-		// page rightly kept that scroll, not the one the test had measured.
+		// needs no scroll of Playwright's own: measured from the door itself,
+		// so wherever the root's groups put it the click scrolls nothing, and
+		// the page keeps the scroll the test measured, not one of Playwright's.
 		const whole = page.locator('button.door', { hasText: 'The whole menu' });
 		const wholeY = await whole.evaluate((el) => el.getBoundingClientRect().top + window.scrollY);
 		const pickerY = await scrollTo(page, Math.max(0, Math.round(wholeY) - 400));
@@ -149,7 +162,7 @@ test('1. the flashcard chain steps back one screen at a time, by the button and 
 		await expect(heading(page)).toHaveText('The whole menu');
 		await expect(page.getByRole('button', { name: 'Start', exact: true })).toBeVisible();
 		await back(page, how);
-		await expect(heading(page)).toHaveText('Flashcards');
+		await expect(heading(page)).toHaveText('Practise');
 		await expectScroll(page, pickerY);
 		await expect(page.locator('.scope')).toContainText('show all levels');
 		await back(page, how);
@@ -164,7 +177,7 @@ test('1. the flashcard chain steps back one screen at a time, by the button and 
 test('2. the study chain: the list comes back where it was, with the focus on the row that opened the card', async ({ page }) => {
 	await home(page);
 	await openLevel(page, 0);
-	await page.locator('[data-door="study"]').click();
+	await page.locator('[data-door="house"]').click();
 	await expect(page.locator('.study .row').first()).toBeVisible({ timeout: 15_000 });
 	const y = await scrollTo(page, 600);
 	// A row wholly in view below the sticky bars (the Back row and the study
@@ -193,13 +206,13 @@ test('2. the study chain: the list comes back where it was, with the focus on th
 	await expect(page.locator('a.level')).toHaveCount(4);
 });
 
-test('3. the quiz chain: the results survive a trip to a card, and Back from them is Quizzes', async ({ page }) => {
+test('3. the quiz chain: the results survive a trip to a card, and Back from them is Practise', async ({ page }) => {
 	for (const from of ['quizzes', 'level'] as const) {
 		await home(page);
 		if (from === 'quizzes') {
-			await tab(page, 'Quizzes');
-			await expect(heading(page)).toHaveText('Quizzes');
-			await page.getByRole('button', { name: 'Start the quick quiz' }).click();
+			await tab(page, 'Practise');
+			await expect(heading(page)).toHaveText('Practise');
+			await quickStart(page).click();
 		} else {
 			await openLevel(page, 1);
 			await page.locator('[data-door="quick"]').click();
@@ -221,7 +234,7 @@ test('3. the quiz chain: the results survive a trip to a card, and Back from the
 		await expect(heading(page)).toHaveText('What you missed');
 		expect(await page.locator('.miss').allTextContents()).toEqual(misses);
 		await back(page, 'gesture');
-		await expect(heading(page)).toHaveText(from === 'quizzes' ? 'Quizzes' : NAMES[1]);
+		await expect(heading(page)).toHaveText(from === 'quizzes' ? 'Practise' : NAMES[1]);
 		await back(page);
 		await expect(page.locator('a.level')).toHaveCount(4);
 	}
@@ -229,8 +242,8 @@ test('3. the quiz chain: the results survive a trip to a card, and Back from the
 
 test('3b. Study the misses deals exactly the missed items that have cards, of every engine in the round', async ({ page }) => {
 	await home(page);
-	await tab(page, 'Quizzes');
-	await page.getByRole('button', { name: 'Start the quick quiz' }).click();
+	await tab(page, 'Practise');
+	await quickStart(page).click();
 	await answerAll(page, 3);
 	const qq = (await round(page))!;
 	const missed = qq.qs.filter((q, i) => qq.chosen[i] !== q.answer);
@@ -300,22 +313,22 @@ test('6. a cold deep link walks up to Home, replacing as it goes', async ({ page
 
 test('7. the depth survives a reload', async ({ page }) => {
 	await home(page);
-	await tab(page, 'Flashcards');
+	await tab(page, 'Practise');
 	await page.locator('button.door', { hasText: 'The whole menu' }).click();
 	await expect(heading(page)).toHaveText('The whole menu');
 	await page.reload();
 	await page.waitForSelector('html[data-hydrated]');
 	await expect(heading(page)).toHaveText('The whole menu', { timeout: 15_000 });
 	await back(page);
-	await expect(heading(page)).toHaveText('Flashcards');
+	await expect(heading(page)).toHaveText('Practise');
 	await back(page);
 	await expect(page.locator('a.level')).toHaveCount(4);
 });
 
 test('7b. a reload during a run or the quick quiz falls to its parent, and the next Back is a new screen', async ({ page }) => {
-	// A deck's run: reload, the deck screen, then Flashcards in one press.
+	// A deck's run: reload, the deck screen, then Practise in one press.
 	await home(page);
-	await tab(page, 'Flashcards');
+	await tab(page, 'Practise');
 	await page.locator('button.door', { hasText: 'Desserts' }).click();
 	await expect(heading(page)).toHaveText('Desserts');
 	await page.getByRole('button', { name: 'Start', exact: true }).click();
@@ -326,31 +339,31 @@ test('7b. a reload during a run or the quick quiz falls to its parent, and the n
 	await expect(heading(page)).toHaveText('Desserts', { timeout: 15_000 });
 	await expect(page.getByRole('button', { name: 'Start', exact: true })).toBeVisible();
 	await back(page);
-	await expect(heading(page)).toHaveText('Flashcards');
+	await expect(heading(page)).toHaveText('Practise');
 	await back(page);
 	await expect(page.locator('a.level')).toHaveCount(4);
 
-	// Today's cards: reload, Flashcards, then Home in one press.
-	await tab(page, 'Flashcards');
+	// Today's cards: reload, Practise, then Home in one press.
+	await tab(page, 'Practise');
 	await page.getByRole('button', { name: "Start today's cards" }).click();
 	await expect(page.locator('.deckframe .where')).toHaveText(/^Card 1 of \d+ · Due today$/);
 	await page.reload();
 	await page.waitForSelector('html[data-hydrated]');
 	await expect(page).not.toHaveURL(/run=1/);
 	await expect(page.getByRole('button', { name: "Start today's cards" })).toBeVisible({ timeout: 15_000 });
-	await expect(heading(page)).toHaveText('Flashcards');
+	await expect(heading(page)).toHaveText('Practise');
 	await back(page);
 	await expect(page.locator('a.level')).toHaveCount(4);
 
-	// The quick quiz: reload, Quizzes, then Home in one press.
-	await tab(page, 'Quizzes');
-	await page.getByRole('button', { name: 'Start the quick quiz' }).click();
+	// The quick quiz: reload, Practise, then Home in one press.
+	await tab(page, 'Practise');
+	await quickStart(page).click();
 	await expect(page.locator('.where')).toHaveText(/^Question 1 of /);
 	await page.reload();
 	await page.waitForSelector('html[data-hydrated]');
 	await expect(page).not.toHaveURL(/quick=1/);
-	await expect(page.getByRole('button', { name: 'Start the quick quiz' })).toBeVisible({ timeout: 15_000 });
-	await expect(heading(page)).toHaveText('Quizzes');
+	await expect(quickStart(page)).toBeVisible({ timeout: 15_000 });
+	await expect(heading(page)).toHaveText('Practise');
 	await back(page);
 	await expect(page.locator('a.level')).toHaveCount(4);
 });
@@ -361,7 +374,7 @@ test('7c. the lit tab on its root scrolls to the top and adds nothing, so Back n
 	await expect(page.locator('button.door').first()).toBeVisible({ timeout: 15_000 });
 	const len = await histLen(page);
 	await scrollTo(page, 600);
-	await tab(page, 'Flashcards');
+	await tab(page, 'Practise');
 	await expect.poll(() => scrollY(page)).toBe(0);
 	expect(await histLen(page)).toBe(len);
 	await back(page);
@@ -393,13 +406,13 @@ test('7d. a fresh arrival at the address recorded last starts at the bottom of t
 	await expect(page).not.toHaveURL('about:blank');
 });
 
-test('7e. the Lexicon quiz lights Quizzes and More\'s drawers light More, and Back goes to the tab that opened them', async ({ page }) => {
+test('7e. the Lexicon quiz lights Practise and More\'s drawers light More, and Back goes to the tab that opened them', async ({ page }) => {
 	await page.goto('about:blank');
 	await goto(page, '/lexicon?start=quiz');
-	await expect(page.locator('.modetab.on')).toHaveText('Quizzes');
+	await expect(page.locator('.modetab.on')).toHaveText('Practise');
 	await expect(page.locator('.quizdef')).toBeVisible({ timeout: 15_000 });
 	await back(page);
-	await expect(heading(page)).toHaveText('Quizzes');
+	await expect(heading(page)).toHaveText('Practise');
 	for (const name of ['Plan a menu from the Library', 'Back up, restore and print', "The Maître d'"]) {
 		await home(page);
 		await tab(page, 'More');
@@ -425,7 +438,7 @@ test('7e. the Lexicon quiz lights Quizzes and More\'s drawers light More, and Ba
 test('7f. the whole Lexicon deck holds every term', async ({ page }) => {
 	const n = (JSON.parse(readFileSync(join(HERE, '../src/lib/data/lexicon.json'), 'utf8')) as unknown[]).length;
 	await home(page);
-	await tab(page, 'Flashcards');
+	await tab(page, 'Practise');
 	await page.getByRole('button', { name: 'show all levels' }).click();
 	await expect(page.locator('button.door', { hasText: 'The whole Lexicon' }).locator('.door-line')).toHaveText(new RegExp(`^${n} cards · `), { timeout: 15_000 });
 });
@@ -433,17 +446,19 @@ test('7f. the whole Lexicon deck holds every term', async ({ page }) => {
 const OLD: Array<{ path: string; lands: RegExp | string; parent: RegExp | string; card?: boolean }> = [
 	{ path: '/level', lands: NAMES[0], parent: 'home' },
 	{ path: '/level/2', lands: NAMES[1], parent: 'home' },
-	// My restaurant's parent is the chosen level's page: /level/2 just chose Chef de Partie
-	{ path: '/menu', lands: 'My Menu', parent: NAMES[1] },
-	{ path: `/menu#${HUSSARDE}`, lands: 'My Menu', parent: 'My Menu' },
-	{ path: '/menu#desk', lands: 'My Menu', parent: NAMES[1] },
-	{ path: '/menu?section=Starters', lands: 'My Menu', parent: NAMES[1] },
+	// The house's page is the Brennan's tab's root (17 Oct 2026): its h1 is the
+	// house's name and its parent Home, whatever the level chosen; a card over
+	// it closes to the page, and a section's list or the desk's anchor walk to Home.
+	{ path: '/menu', lands: PACK.name, parent: 'home' },
+	{ path: `/menu#${HUSSARDE}`, lands: PACK.name, parent: PACK.name },
+	{ path: '/menu#desk', lands: PACK.name, parent: 'home' },
+	{ path: '/menu?section=Starters', lands: PACK.name, parent: 'home' },
 	{ path: '/menu/quiz?mode=cards', lands: 'card', parent: 'The whole menu', card: true },
 	{ path: `/service/deck/study?card=${DECK.cards[0].id}`, lands: 'card', parent: DECK.sections.find((s) => s.key === DECK.cards[0].section)!.title, card: true },
-	{ path: '/service/deck', lands: /Floor Deck/, parent: 'Flashcards' },
+	{ path: '/service/deck', lands: /Floor Deck/, parent: 'Practise' },
 	{ path: '/lexicon?level=1&start=flash', lands: 'card', parent: `The Lexicon at ${NAMES[0]}`, card: true },
 	{ path: '/repertoire', lands: /Repertoire/, parent: 'More' },
-	{ path: '/practise/firing', lands: /firing/i, parent: 'Quizzes' }
+	{ path: '/practise/firing', lands: /firing/i, parent: 'Practise' }
 ];
 
 test('8. old addresses land, each with a Back whose first press is its parent', async ({ page }) => {
@@ -460,24 +475,25 @@ test('8. old addresses land, each with a Back whose first press is its parent', 
 		await expect(backBtn(page), o.path).toHaveCount(1);
 		await back(page);
 		if (o.parent === 'home') await expect(page.locator('a.level'), o.path).toHaveCount(4);
-		else if (o.parent === 'My Menu') {
+		else if (o.parent === PACK.name) {
 			await expect(page.locator('article.card'), o.path).toHaveCount(0);
-			await expect(heading(page)).toHaveText('My Menu');
+			await expect(heading(page)).toHaveText(PACK.name);
 		} else await expect(heading(page), o.path).toHaveText(o.parent);
 	}
 });
 
-/* The Table's bar is six words since 12 Oct 2026: Cuisine, the owner's sixth
-   tab, sits between Library and More (the Ledger and the Codex keep four). */
-test('9. five tab words and a quiet More, one row at 390 and 375, every target 44 px, the lit one marked', async ({ page }) => {
-	/* Twelve page loads (six screens at two widths): more than the default
+/* The Table's bar is five words since 17 Oct 2026: Home, Brennan's (the
+   house's page, with Cuisine and the Fieldbook inside it), Practise (every
+   deck and round) and Library, then the quiet More (the Ledger and the Codex
+   keep four). The word is the pack's own spelling, with its curly apostrophe. */
+test('9. four tab words and a quiet More, one row at 390 and 375, every target 44 px, the lit one marked', async ({ page }) => {
+	/* Ten page loads (five screens at two widths): more than the default
 	   thirty seconds allows once the suite runs four workers. */
 	test.setTimeout(90_000);
 	for (const [path, lit] of [
-		['/flashcards', 'Flashcards'],
-		['/quizzes', 'Quizzes'],
+		['/menu', PACK.name],
+		['/flashcards', 'Practise'],
 		['/library', 'Library'],
-		['/cuisine', 'Cuisine'],
 		['/more', 'More'],
 		['/', 'Home']
 	] as const) {
@@ -486,7 +502,7 @@ test('9. five tab words and a quiet More, one row at 390 and 375, every target 4
 			await goto(page, path);
 			const tabs = page.locator('nav.modebar .modetab');
 			const words = (await tabs.allTextContents()).map((t) => t.replace(/\d+\s*due$/, '').trim());
-			expect(words).toEqual(['Home', 'Flashcards', 'Quizzes', 'Library', 'Cuisine', 'More']);
+			expect(words).toEqual(['Home', PACK.name, 'Practise', 'Library', 'More']);
 			const boxes = await tabs.evaluateAll((els) => els.map((e) => e.getBoundingClientRect()).map((r) => ({ y: Math.round(r.top), w: r.width, h: r.height, right: r.right })));
 			expect(Math.max(...boxes.map((b) => b.y)) - Math.min(...boxes.map((b) => b.y)), `one row at ${width} on ${path}`).toBeLessThan(8);
 			for (const b of boxes) expect(b.w >= 44 && b.h >= 44, 'every tab at least 44 by 44').toBe(true);
@@ -500,8 +516,8 @@ test('9. five tab words and a quiet More, one row at 390 and 375, every target 4
 				return { cur: e.getAttribute('aria-current'), border: c.borderTopWidth + c.borderTopStyle + c.borderLeftWidth };
 			})
 		);
-		const more = styles[5];
-		const unlit = styles.slice(0, 5).find((s) => !s.cur)!;
+		const more = styles[4];
+		const unlit = styles.slice(0, 4).find((s) => !s.cur)!;
 		expect(more.border).not.toBe(unlit.border);
 		expect(more.cur === 'page').toBe(lit === 'More');
 	}
@@ -565,7 +581,7 @@ test('10. one Back on every screen but Home, clear of the badge at rest and when
 
 test('11. the scope chip: show all is in the address and survives Back; choosing a level moves Home', async ({ page }) => {
 	await home(page);
-	await tab(page, 'Flashcards');
+	await tab(page, 'Practise');
 	const scope = page.locator('.scope');
 	await expect(scope).toContainText(`${NAMES[0]}`);
 	await expect(scope).toContainText('show all levels');
@@ -652,19 +668,19 @@ test('14. offline: the flashcard and quiz chains still run', async ({ page, cont
 	await context.setOffline(true);
 	await goto(page, '/');
 	await openLevel(page, 0);
-	await tab(page, 'Flashcards');
+	await tab(page, 'Practise');
 	await page.locator('button.door', { hasText: 'The whole menu' }).click();
 	await page.getByRole('button', { name: 'Start', exact: true }).click();
 	await page.getByRole('button', { name: 'Flip', exact: true }).click();
 	await page.getByRole('button', { name: 'Got it', exact: true }).click();
 	await back(page);
 	await back(page);
-	await expect(heading(page)).toHaveText('Flashcards');
-	await tab(page, 'Quizzes');
-	await page.getByRole('button', { name: 'Start the quick quiz' }).click();
+	await expect(heading(page)).toHaveText('Practise');
+	await tab(page, 'Practise');
+	await quickStart(page).click();
 	await answerAll(page);
 	await back(page);
-	await expect(heading(page)).toHaveText('Quizzes');
+	await expect(heading(page)).toHaveText('Practise');
 	await context.setOffline(false);
 });
 
@@ -678,18 +694,29 @@ test('15. Escape closes the level list and the address stays', async ({ page }) 
 	expect(page.url()).toBe(url);
 });
 
-test("16. Brennan's: My restaurant names it on first open; its cards, the bottle tiers and the videos are two taps from a level page", async ({ page }) => {
+test("16. Brennan's: My restaurant names it on first open; its page, its cards, the bottle tiers and the videos are two taps from a level page", async ({ page }) => {
 	await home(page);
 	await openLevel(page, 0);
 	await expect(page.locator('.countline')).toContainText(PACK.name, { timeout: 15_000 });
-	await page.locator('[data-door="menu-cards"]').click();
-	await expect(heading(page)).toHaveText('The whole menu');
+	// One lead door, named by the house, into its own page (17 Oct 2026).
+	const door = page.locator('[data-door="house"]');
+	await expect(door.locator('.door-name')).toHaveText(PACK.name);
+	await expect(page.locator('[data-door="menu-cards"], [data-door="study"], [data-door="fall-menu"]')).toHaveCount(0);
+	await door.click();
+	await expect(heading(page)).toHaveText(PACK.name);
+	await expect(page.locator('nav.jumps')).toBeVisible({ timeout: 15_000 });
+	// Its cards: the menu's own Flash cards, one tap on the house's page.
+	await page.locator('.study .studyhead').getByRole('button', { name: 'Flash cards' }).click();
+	await expect(page.locator('.deckframe .where')).toHaveText(/^Card 1 of \d+ · The whole menu$/);
 	await back(page);
-	await page.getByRole('link', { name: /^Entrées \d+$/ }).click();
+	await expect(heading(page)).toHaveText(PACK.name);
+	await page.getByRole('button', { name: /^Entrées \d+$/ }).click();
 	await page.locator('.study .row', { has: page.locator('.nm', { hasText: 'Eggs Hussarde' }) }).click();
 	await expect(page.locator('article.card dl.bottles > div').first()).toBeVisible();
 	await back(page);
+	await expect(page.locator('article.card')).toHaveCount(0);
 	await back(page);
+	await expect(heading(page)).toHaveText(NAMES[0]);
 	await tab(page, 'Library');
 	await expect(page.locator('.vgroup li').first()).toBeVisible({ timeout: 15_000 });
 });
@@ -718,13 +745,16 @@ test("17. the owner's morning, end to end", async ({ page }) => {
 	expect(await page.locator('.miss').allTextContents()).toEqual(misses);
 	await back(page);
 	await expect(heading(page)).toHaveText(NAMES[1]);
-	await page.locator('[data-door="study"]').click();
+	await page.locator('[data-door="house"]').click();
 	await expect(page.locator('.study .row').first()).toBeVisible({ timeout: 15_000 });
 	await page.locator('.study .row', { has: page.locator('.nm', { hasText: 'Eggs Hussarde' }) }).click();
 	const card = page.locator('article.card');
 	await expect(card.locator('dl.bottles > div').first()).toBeVisible();
 	/* The card's own Watch block: the component disclosures hold video lists too, closed until opened. */
 	await expect(card.locator('section[aria-labelledby="watch-h"] .videos li').first()).toBeVisible();
+	/* Go deeper (17 Oct 2026): the dish's entries in Cuisine, once the index chunk is in. */
+	await expect(card.locator('#deeper-h')).toHaveText('Go deeper', { timeout: 15_000 });
+	await expect(card.locator('section[aria-labelledby="deeper-h"] a[href="/cuisine?ch=mother-sauces&e=hollandaise"]')).toHaveCount(1);
 	await back(page);
 	await expect(page.locator('#study-h')).toHaveText(PACK.name);
 	await back(page);
@@ -736,7 +766,7 @@ test("17. the owner's morning, end to end", async ({ page }) => {
 
 test('18. changes within a screen add no history; a round is one entry', async ({ page }) => {
 	await home(page);
-	await tab(page, 'Flashcards');
+	await tab(page, 'Practise');
 	await expect(page.locator('button.door').first()).toBeVisible({ timeout: 15_000 });
 	let len = await histLen(page);
 	await page.getByRole('button', { name: 'show all levels' }).click();
@@ -785,7 +815,7 @@ test("21. Today's study's first row is on the first screen of every level page",
 	}
 });
 
-test('22. one count: the pill, the level row and the Flashcards root agree, before and after a grade', async ({ page }) => {
+test('22. one count: the pill, the level row and the Practise root agree, before and after a grade', async ({ page }) => {
 	await home(page);
 	await openLevel(page, 0);
 	const read = async () => {
@@ -799,7 +829,7 @@ test('22. one count: the pill, the level row and the Flashcards root agree, befo
 	const row1 = figure((await page.locator('[data-door="due"] .door-line').textContent()) ?? '');
 	expect(row1).toBeGreaterThan(0);
 	expect(await read()).toBe(row1);
-	await tab(page, 'Flashcards');
+	await tab(page, 'Practise');
 	await expect(page.locator('.dueline')).toBeVisible({ timeout: 15_000 });
 	expect(figure((await page.locator('.dueline').textContent()) ?? '')).toBe(row1);
 	await page.getByRole('button', { name: "Start today's cards" }).click();
@@ -841,10 +871,10 @@ test('24. one card style: the old card addresses land on the one card screen, an
 		await page.waitForTimeout(600);
 		await expect(page.getByRole('button', { name: 'Got it', exact: true }), path).toHaveCount(0);
 		await expect(page.getByRole('button', { name: 'Again', exact: true }), path).toHaveCount(0);
-		// No second quiz picker inside Quizzes: /menu/quiz has no mode chips.
+		// No second quiz picker inside Practise: /menu/quiz has no mode chips.
 		await expect(page.getByRole('button', { name: /^(The dishes|Drill the (house|menu)|Flip cards|Pairings|Say it back|Guest at the table), (chosen|off)$/ }), path).toHaveCount(0);
 	}
-	// The study view's card buttons open the Flashcards decks.
+	// The study view's card buttons open the Practise decks.
 	await goto(page, `/menu#${HUSSARDE}`);
 	await page.locator('article.card').getByRole('button', { name: /Flash cards for this/ }).click();
 	await expect(page).toHaveURL(/\/flashcards\?deck=item%3Ad-1q0xk7jv&run=1$/);
@@ -857,7 +887,7 @@ test('screens for the owner, at 390 by 844', async ({ page }) => {
 	test.skip(!SHOTS, 'CONS_SHOTS names the folder');
 	await home(page);
 	await openLevel(page, 0);
-	await tab(page, 'Flashcards');
+	await tab(page, 'Practise');
 	await expect(page.locator('button.door').first()).toBeVisible({ timeout: 15_000 });
 	await shot(page, 'flashcards');
 	await page.locator('button.door', { hasText: 'The whole menu' }).click();
@@ -865,9 +895,9 @@ test('screens for the owner, at 390 by 844', async ({ page }) => {
 	await page.getByRole('button', { name: 'Start', exact: true }).click();
 	await page.getByRole('button', { name: 'Flip', exact: true }).click();
 	await shot(page, 'card');
-	await tab(page, 'Quizzes');
+	await tab(page, 'Practise');
 	await shot(page, 'quizzes');
-	await page.getByRole('button', { name: 'Start the quick quiz' }).click();
+	await quickStart(page).click();
 	await answerAll(page, 2);
 	await shot(page, 'results');
 	await tab(page, 'Library');
@@ -878,7 +908,7 @@ test('screens for the owner, at 390 by 844', async ({ page }) => {
 	// The five-step chain, each step and each Back.
 	await home(page);
 	await openLevel(page, 1);
-	await page.locator('[data-door="study"]').click();
+	await page.locator('[data-door="house"]').click();
 	await expect(page.locator('.study .row').first()).toBeVisible({ timeout: 15_000 });
 	await page.locator('.study .row', { has: page.locator('.nm', { hasText: 'Eggs Hussarde' }) }).click();
 	await page.locator('article.card').getByRole('button', { name: /Flash cards for this/ }).click();

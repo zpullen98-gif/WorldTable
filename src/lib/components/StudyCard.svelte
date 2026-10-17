@@ -1,14 +1,21 @@
 <!--
   One dish, studied: the detail card that replaces the list in place
   (docs/study-menus-design.md, 1.3 and 1.4). Top to bottom, in this order
-  on purpose: the way back and the position, the name and the price, how to
-  say it, the ten second line and the one-line answer to what the guest asks
-  next (so the first screen at 390 by 844 holds what a server needs at the
-  table), then the longer lines, the story, the pairing, what it is made of
-  and what to compare it with (who makes it, WhoMakes.svelte, then
-  MadeOf.svelte), the parts, the coaching,
-  the service note, the videos to watch, the links, the drills and the
-  quiet Edit.
+  on purpose (17 October 2026): the way back and the position, the name and
+  the price, how to say it, then THE THREE LINES OPEN, the ten, the twenty
+  and the forty-five second tableside descriptions with no button to press,
+  the forty-five in large type because it is the one the owner wants learnt
+  (the guide's five-part line, the house detail and a gentle
+  recommendation), then the guest line when it says something the twenty
+  does not, and the pour line, so the first screens hold what a server
+  says at the table; then the story, the pairing, the five parts, what it
+  is made of (who makes it, WhoMakes.svelte, then MadeOf.svelte), what to
+  compare it with, Go deeper (the dish's entries in Cuisine, grouped by
+  chapter, for the Brennan's house only), the Fall 2026 field notes (the
+  training sheet's own words and photo for a dish on it, joined by name
+  through fall-menu.ts, never the kitchen's spec), the coaching, the
+  service note, the videos to watch, the links, the drills and the quiet
+  Edit.
 
   A DRINK OR A WINE opens here too, from a tasting's course: the same card
   with what a pour has (how to say it, its lines, what it is made of, its
@@ -36,6 +43,7 @@
 	import { onMount, tick } from 'svelte';
 	import type { House, HouseCocktail, HouseDish, HouseItem, HouseWine, Pairing } from '$lib/house/house-schema';
 	import {
+		deeperGroups,
 		findItem,
 		hasUnkept,
 		itemsOfKind,
@@ -63,7 +71,10 @@
 	import DishComparisons from './DishComparisons.svelte';
 	import { dishComparisons } from '$lib/service-guides';
 	import TeachingFolio from './TeachingFolio.svelte';
-	import { foliosForDish } from '$lib/teaching-folios';
+	import { foliosForDish, BRENNANS_HOUSE_ID } from '$lib/teaching-folios';
+	import { cuisine } from '$lib/stores/cuisine.svelte';
+	import { fallItemForDish, fallSourceById } from '$lib/fall-menu';
+	import FallTeachingImage from './FallTeachingImage.svelte';
 
 	let {
 		current,
@@ -177,20 +188,25 @@
 			: 0
 	);
 
-	let open20 = $state(false);
-	let open45 = $state(false);
+	/* Go deeper: the dish's entries in Cuisine, for the Brennan's house only (the index links its dishes
+	   by the pack's ids). The index is the lazy chunk the worker precaches; nothing new is fetched. */
+	const isBrennans = $derived(current.id === BRENNANS_HOUSE_ID);
+	const deeper = $derived(isBrennans ? deeperGroups(cuisine.index, dish.id, base) : []);
+	/* The Fall 2026 field notes: the training sheet's item of this name, joined in fall-menu.ts. */
+	const fall = $derived(fallItemForDish(dish.name));
+	const fallSources = (ids: readonly string[]) => ids.map((id) => fallSourceById.get(id)).filter((s): s is NonNullable<typeof s> => !!s);
+
 	let heading: HTMLHeadingElement | undefined = $state();
 
 	onMount(() => {
 		heading?.focus({ preventScroll: true });
+		if (isBrennans) void cuisine.load();
 	});
-	/* A step to another card in place: the toggles close and the heading takes the focus again. */
+	/* A step to another card in place: the heading takes the focus again. */
 	let shownId = '';
 	$effect(() => {
 		const id = dish.id;
 		if (shownId && shownId !== id) {
-			open20 = false;
-			open45 = false;
 			void tick().then(() => heading?.focus({ preventScroll: true }));
 		}
 		shownId = id;
@@ -232,9 +248,28 @@
 		<p class="sayit">{sayIt}</p>
 	{/if}
 
-	{#if lines.s10}
-		<p class="eyebrow">{say('ten')}</p>
-		<p class="ten">{lines.s10}</p>
+	<!-- The three tableside lines, open, no button: the ten for the order, the twenty as the plate
+	     lands, the forty-five in large type (the one the owner wants learnt). -->
+	{#if lines.s10 || lines.s20 || lines.s45}
+		<section class="lines" aria-labelledby="lines-h">
+			<h3 class="vh" id="lines-h">{say('lines')}</h3>
+			{#if lines.s10}
+				<p class="eyebrow">{say('ten')}</p>
+				<p class="ten" id="l10">{lines.s10}</p>
+			{/if}
+			{#if lines.s20}
+				<p class="eyebrow">{say('twenty')}</p>
+				<p class="line" id="l20">{lines.s20}</p>
+			{/if}
+			{#if lines.s45}
+				<p class="eyebrow">{say('fortyFive')}</p>
+				<p class="fortyfive" id="l45">{lines.s45}</p>
+			{/if}
+		</section>
+	{/if}
+	{#if lines.guestShown}
+		<p class="eyebrow">The guest line</p>
+		<p class="line">{lines.guest}</p>
 	{/if}
 
 	{#if pairing && (wine || zero) && !here}
@@ -248,23 +283,6 @@
 				{#if hrefIn('ledger', zero.id)}<a href={hrefIn('ledger', zero.id)}>{zero.name}</a>{:else}{zero.name}{/if}.
 			{/if}
 		</p>
-	{/if}
-
-	{#if lines.s20 || lines.s45}
-		<div class="toggles">
-			{#if lines.s20}
-				<button class="chip" aria-expanded={open20} aria-controls="l20" onclick={() => (open20 = !open20)}>{open20 ? say('twentyHide') : say('twenty')}</button>
-			{/if}
-			{#if lines.s45}
-				<button class="chip" aria-expanded={open45} aria-controls="l45" onclick={() => (open45 = !open45)}>{open45 ? say('fortyFiveHide') : say('fortyFive')}</button>
-			{/if}
-		</div>
-		{#if open20 && lines.s20}<p class="line" id="l20">{lines.s20}</p>{/if}
-		{#if open45 && lines.s45}<p class="line" id="l45">{lines.s45}</p>{/if}
-	{/if}
-	{#if lines.guestShown}
-		<p class="eyebrow">The guest line</p>
-		<p class="line">{lines.guest}</p>
 	{/if}
 
 	{#if notes.about}
@@ -361,9 +379,6 @@
 		</section>
 	{/if}
 
-	<WhoMakes {current} item={dish} />
-	<MadeOf {current} item={dish} {linkable} />
-
 	{#if parts.length}
 		<section class="block" aria-labelledby="parts-h">
 			<h3 class="blockhead" id="parts-h">{say('parts')}</h3>
@@ -376,7 +391,88 @@
 		</section>
 	{/if}
 
+	<WhoMakes {current} item={dish} />
+	<MadeOf {current} item={dish} {linkable} />
+
 	{#key dish.id}<DishComparisons {current} itemId={dish.id} {onOpen} {is86} />{/key}
+
+	<!-- Go deeper: the dish's entries in Cuisine, by chapter, each a link into the entry. -->
+	{#if deeper.length}
+		<section class="block" aria-labelledby="deeper-h">
+			<h3 class="blockhead" id="deeper-h">{say('deeper')}</h3>
+			<p class="soft small">{say('deeperLine')}</p>
+			{#each deeper as g (g.key)}
+				<h4 class="eyebrow">{g.title}</h4>
+				<ul class="plain">
+					{#each g.entries as e (e.id)}
+						<li>
+							<a href={e.href}>{e.title}</a>
+							{#if e.summary}<span class="sub">{e.summary}</span>{/if}
+						</li>
+					{/each}
+				</ul>
+			{/each}
+		</section>
+	{/if}
+
+	<!-- The Fall 2026 field notes: the training sheet's words and photo, kept with the house's card.
+	     The sheet's dietary notes are not drawn: the card's rule, no allergen list. -->
+	{#if fall}
+		<section class="block fallnotes" aria-labelledby="fall-h">
+			<h3 class="blockhead" id="fall-h">{say('fallNotes')}</h3>
+			<p class="soft small">{say('fallFrom', { file: fall.photoFile })}</p>
+			{#key fall.id}<FallTeachingImage itemId={fall.id} compact />{/key}
+			<details class="coach">
+				<summary>{say('fallSheet')}</summary>
+				<ul class="plain">
+					{#each fall.listedIngredients as ingredient, i (i)}<li>{ingredient}</li>{/each}
+				</ul>
+			</details>
+			{#if fall.ingredientNotes.length}
+				<details class="coach">
+					<summary>{say('fallIngredients')}</summary>
+					{#each fall.ingredientNotes as note, i (i)}
+						<p class="para"><b>{note.name}</b></p>
+						<p class="para">{note.explanation}</p>
+						{#if note.houseBoundary}<p class="para soft">{note.houseBoundary}</p>{/if}
+						{#if fallSources(note.sourceIds).length}
+							<ul class="plain">
+								{#each fallSources(note.sourceIds) as s (s.id)}
+									<li><a href={s.url} target="_blank" rel="noopener">{s.title}</a> <span class="soft">{say('newTab')}</span></li>
+								{/each}
+							</ul>
+						{/if}
+					{/each}
+				</details>
+			{/if}
+			{#if fall.originNotes.length}
+				<details class="coach">
+					<summary>{say('fallOrigins')}</summary>
+					{#each fall.originNotes as note, i (i)}
+						<p class="para">{note.text}</p>
+						{#if fallSources(note.sourceIds).length}
+							<ul class="plain">
+								{#each fallSources(note.sourceIds) as s (s.id)}
+									<li><a href={s.url} target="_blank" rel="noopener">{s.title}</a> <span class="soft">{say('newTab')}</span></li>
+								{/each}
+							</ul>
+						{/if}
+					{/each}
+				</details>
+			{/if}
+			<details class="coach">
+				<summary>{say('fallConfirm')}</summary>
+				<ul class="plain">
+					{#each fall.serviceChecks as check, i (i)}<li>{check}</li>{/each}
+				</ul>
+				<p class="para">{say('fallPointer')}</p>
+			</details>
+			<ul class="plain">
+				<li><a href="{base}/menu?view=fall&kind={fall.kind}&item={encodeURIComponent(fall.id)}">{say('fallPage')}</a></li>
+				<li><a href="{base}/flashcards?deck=fall%3Aitem%3A{encodeURIComponent(fall.id)}">{say('fallDrill')}</a></li>
+			</ul>
+		</section>
+	{/if}
 
 	{#if notes.coaching.length || lineup.asks.length || lineup.disputes.length || otherMixUps.length || notes.more.length || notes.earlier.length}
 		<section class="block" aria-labelledby="floor-h">
@@ -541,16 +637,20 @@
 	.soft { color: var(--ink-soft); }
 	.small { font-size: 1rem; margin: 2px 0 0; }
 	.sayit { font-size: 1.1rem; margin: 0; }
+	.lines { margin: 0; }
 	.ten {
-		font-family: var(--display); font-size: 1.25rem; line-height: 1.4; margin: 2px 0 6px;
+		font-family: var(--display); font-size: 1.1rem; line-height: 1.45; margin: 2px 0 6px;
 		border-left: 2px solid var(--turmeric-deep); padding-left: 12px;
+	}
+	.fortyfive {
+		font-family: var(--display); font-size: 1.25rem; line-height: 1.4; margin: 2px 0 6px;
+		border-left: 2px solid var(--turmeric-deep); padding-left: 12px; max-width: var(--measure);
 	}
 	.pourline { margin: 6px 0 4px; line-height: 1.5; }
 	.tcourse { margin: 8px 0 4px; padding-left: 12px; border-left: 2px solid var(--turmeric-deep); }
 	.tcourse .eyebrow { margin-top: 0; }
 	.tcline { margin: 2px 0; font-size: 1.05rem; line-height: 1.5; color: var(--ink); }
 	.pourline a, .pairs a, .plain a { color: var(--ink); text-underline-offset: 3px; }
-	.toggles { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
 	.line { margin: 6px 0; line-height: 1.55; max-width: var(--measure); }
 	.block { margin: 20px 0 4px; }
 	.blockhead { font-family: var(--display); font-size: var(--t-h4, 1.25rem); margin: 0 0 6px; }
@@ -570,6 +670,10 @@
 	.parts dd { margin: 0; line-height: 1.5; }
 	.plain { list-style: none; margin: 0; padding: 0; }
 	.plain li { padding: 6px 0; border-bottom: 1px dotted var(--line); line-height: 1.5; min-height: 44px; }
+	/* A link that leads a row (Go deeper's entries, the fall sources, the quiet links) is the
+	   control, not its row: its hit area is stretched to 44 px with padding the negative margin
+	   gives back, so the row is drawn as before and a thumb lands on the link wherever it taps. */
+	.plain li > a { display: inline-block; padding-block: 12px; margin-block: -12px; }
 	.linkish {
 		background: none; border: 0; padding: 0; min-height: 44px; font: inherit; font-weight: 600;
 		color: var(--ink); text-decoration: underline; text-underline-offset: 3px; cursor: pointer;

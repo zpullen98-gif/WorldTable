@@ -1,7 +1,43 @@
 import { describe, it, expect } from 'vitest';
-import { fallMenu, fallCards, fallMembers, fallPractice, fallGradeKey, fallVerdicts } from './fall-menu';
+import { readFileSync } from 'node:fs';
+import { fallMenu, fallCards, fallMembers, fallPractice, fallGradeKey, fallVerdicts, fallItemForDish, FALL_NAME_ALIASES } from './fall-menu';
 import { markDrilled, readDrilled, type SlotStorage } from './house-drilled';
 import { parentOf } from './nav';
+
+describe('the join from a house item to the sheet', () => {
+	const PACK = JSON.parse(readFileSync('static/shared/packs/brennans-new-orleans.v1.oothouse.json', 'utf8')).house as { dishes: { name: string }[]; cocktails: { name: string }[] };
+	it('resolves the eight dish and nine cocktail names of the data to their own items', () => {
+		const dishes = fallMenu.items.filter((i) => i.kind === 'dish');
+		const cocktails = fallMenu.items.filter((i) => i.kind === 'cocktail');
+		expect(dishes).toHaveLength(8);
+		expect(cocktails).toHaveLength(9);
+		for (const i of [...dishes, ...cocktails]) expect(fallItemForDish(i.name)?.id, i.name).toBe(i.id);
+	});
+	it('folds accents, apostrophes, case and spacing, and takes the house’s alias first', () => {
+		expect(fallItemForDish('Chocolate Cremeux')?.id).toBe('chocolate-cremeux-tasting');
+		expect(fallItemForDish('LAMB SHANK EN CROUTE')?.id).toBe('lamb-shank-en-croute');
+		expect(fallItemForDish('  agnolotti   del plin ')?.id).toBe('agnolotti-del-plin');
+		expect(fallItemForDish('Ole Buttermilk Sky')?.id).toBe('fall-ole-buttermilk-sky');
+		expect(FALL_NAME_ALIASES).toEqual({ 'Old Buttermilk Sky': 'Ole Buttermilk Sky' });
+		expect(fallItemForDish('Old Buttermilk Sky')?.id).toBe('fall-ole-buttermilk-sky');
+		expect(fallItemForDish('old buttermilk sky')?.id).toBe('fall-ole-buttermilk-sky');
+	});
+	it('reaches every fall cocktail from the pack’s own names, and a name off the sheet reaches nothing', () => {
+		const names = PACK.cocktails.map((c) => c.name);
+		for (const i of fallMenu.items.filter((i) => i.kind === 'cocktail')) {
+			expect(names.filter((n) => fallItemForDish(n)?.id === i.id), i.name).toHaveLength(1);
+		}
+		expect(fallItemForDish('Eggs Hussarde')).toBeUndefined();
+		expect(fallItemForDish('Classic Sazerac')).toBeUndefined();
+		expect(fallItemForDish('')).toBeUndefined();
+		expect(fallItemForDish('Fall 2026')).toBeUndefined();
+		/* The pack's dishes that are not on the sheet never join; the eight on it join when the pack carries them by the sheet's names. */
+		for (const d of PACK.dishes) {
+			const hit = fallItemForDish(d.name);
+			if (hit) expect(hit.kind, d.name).toBe('dish');
+		}
+	});
+});
 
 describe('Fall 2026 training collection', () => {
 	it('covers the eight photographed dishes and nine drinks with cited lessons and stable drills', () => {
