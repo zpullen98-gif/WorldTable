@@ -1,6 +1,6 @@
 {
 	"about": "Every string the dash pass changed while building the Brennan's house, before and after, for a person to read for a changed meaning; an entry with an override number is a string an overrides.json entry set, not the guide's.",
-	"count": 358,
+	"count": 298,
 	"changes": [
 		{
 			"path": "model.card.sources[0].title",
@@ -68,16 +68,6 @@
 			"after": "Oatmeal-pecan-raisin crumble, brown sugar glaze, sweetened crème fraîche"
 		},
 		{
-			"path": "model.dishes[0].lines.s20",
-			"before": "The Traditional Breakfast begins with a baked apple, filled with an oatmeal, pecan and raisin crumble, glazed with brown sugar and served with sweetened crème fraîche — like a warm apple crisp.",
-			"after": "The Traditional Breakfast begins with a baked apple, filled with an oatmeal, pecan and raisin crumble, glazed with brown sugar and served with sweetened crème fraîche, like a warm apple crisp."
-		},
-		{
-			"path": "model.dishes[0].lines.s45",
-			"before": "Breakfast at Brennan’s has always been a long, celebratory meal, and the baked apple is a gentle start. The apple is baked until soft, with a crumble of oatmeal, pecans and raisins, then glazed with brown sugar. Sweetened crème fraîche — a slightly tangy cultured cream — balances the sweetness. It’s warm and comforting, and it comes after your Brandy Milk Punch eye opener, before the soup.",
-			"after": "Breakfast at Brennan’s has always been a long, celebratory meal, and the baked apple is a gentle start. The apple is baked until soft, with a crumble of oatmeal, pecans and raisins, then glazed with brown sugar. Sweetened crème fraîche, a slightly tangy cultured cream, balances the sweetness. It’s warm and comforting, and it comes after your Brandy Milk Punch eye opener, before the soup."
-		},
-		{
 			"path": "model.dishes[0].serviceNote",
 			"before": "Breakfast tasting ($80) includes tasting portions and all listed drinks. Tree nuts (pecans), dairy; oats may carry gluten — confirm.",
 			"after": "Breakfast tasting ($80) includes tasting portions and all listed drinks. Tree nuts (pecans), dairy; oats may carry gluten, confirm."
@@ -119,16 +109,6 @@
 			"after": "Potato rösti, garlic spinach, with a 4 oz pour of Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône"
 		},
 		{
-			"path": "model.dishes[1].lines.s20",
-			"before": "Our fourth course is a petite filet mignon with a potato rösti — a crisp, Swiss-style shredded potato cake — and garlic spinach, poured with Domaine de Châteaumar’s Côtes du Rhône.",
-			"after": "Our fourth course is a petite filet mignon with a potato rösti, a crisp, Swiss-style shredded potato cake, and garlic spinach, poured with Domaine de Châteaumar’s Côtes du Rhône."
-		},
-		{
-			"path": "model.dishes[1].lines.s45",
-			"before": "The last savory course is the steak — a classic part of a grand New Orleans breakfast. It’s a petite filet mignon, the most tender cut, with a potato rösti, a Swiss-style cake of shredded potato fried golden and crisp, and garlicky wilted spinach. We pour a four-ounce glass of Domaine de Châteaumar’s ‘Cuvée Vincent’ Côtes du Rhône — juicy, soft and just right for red meat at breakfast.",
-			"after": "The last savory course is the steak, a classic part of a grand New Orleans breakfast. It’s a petite filet mignon, the most tender cut, with a potato rösti, a Swiss-style cake of shredded potato fried golden and crisp, and garlicky wilted spinach. We pour a four-ounce glass of Domaine de Châteaumar’s ‘Cuvée Vincent’ Côtes du Rhône, juicy, soft and just right for red meat at breakfast."
-		},
-		{
 			"path": "model.dishes[1].pairing.sayIt",
 			"before": "This course comes with a glass of Côtes du Rhône — juicy and soft, perfect for the filet.",
 			"after": "This course comes with a glass of Côtes du Rhône, juicy and soft, perfect for the filet."
@@ -147,16 +127,6 @@
 			"path": "model.dishes[1].pairing.serve",
 			"before": "Included 4 oz pour on the Traditional Breakfast; pour as the course fires. Slightly cool, 58–60°F, standard red glass. Take filet temperatures with the tasting order.",
 			"after": "Included 4 oz pour on the Traditional Breakfast; pour as the course fires. Slightly cool, 58 to 60°F, standard red glass. Take filet temperatures with the tasting order."
-		},
-		{
-			"path": "model.dishes[2].lines.s20",
-			"before": "Our Louisiana BBQ Lobster is lobster done in the New Orleans barbecue style, over a white bean stew with ’nduja — a soft, spicy Calabrian pork sausage that melts into the beans.",
-			"after": "Our Louisiana BBQ Lobster is lobster done in the New Orleans barbecue style, over a white bean stew with ’nduja, a soft, spicy Calabrian pork sausage that melts into the beans."
-		},
-		{
-			"path": "model.dishes[2].lines.s45",
-			"before": "New Orleans “barbecue” isn’t a smoker or a tomato sauce — it’s the buttery, peppery style made famous by barbecue shrimp. Here it’s lobster, which is sweet and rich. It sits on a white bean stew with ’nduja — en-DOO-yah — a spreadable, spicy pork sausage from Calabria in southern Italy, which melts into the beans and gives them a warm, red-pepper heat. Rich, spicy and comforting. We pour a Mâcon Chardonnay from Burgundy with it.",
-			"after": "New Orleans “barbecue” isn’t a smoker or a tomato sauce, it’s the buttery, peppery style made famous by barbecue shrimp. Here it’s lobster, which is sweet and rich. It sits on a white bean stew with ’nduja, en-DOO-yah, a spreadable, spicy pork sausage from Calabria in southern Italy, which melts into the beans and gives them a warm, red-pepper heat. Rich, spicy and comforting. We pour a Mâcon Chardonnay from Burgundy with it."
 		},
 		{
 			"path": "model.dishes[2].pairing.sayIt",
@@ -205,21 +175,6 @@
 			"after": "Included 4 oz pour on the dinner-tasting pairing; open the bottle 30 to 60 minutes ahead. 60 to 64°F in a Bordeaux glass. For a guest who wants Pinot, offer the Bourgogne."
 		},
 		{
-			"path": "model.dishes[4].parts.sides",
-			"before": "blackberry financier biscuits — small, buttery almond cakes",
-			"after": "blackberry financier biscuits, small, buttery almond cakes"
-		},
-		{
-			"path": "model.dishes[4].lines.s20",
-			"before": "Our Blackberry Trifle layers blackberry curd and lemon curd with coconut chia pudding and little blackberry financier biscuits — bright, tart and creamy, a lovely lighter way to begin breakfast.",
-			"after": "Our Blackberry Trifle layers blackberry curd and lemon curd with coconut chia pudding and little blackberry financier biscuits: bright, tart and creamy, a lovely lighter way to begin breakfast."
-		},
-		{
-			"path": "model.dishes[4].lines.s45",
-			"before": "It’s one of our sweet starters, and a nice one to share. A trifle is a layered dessert, and ours goes blackberry curd, lemon curd and coconut chia pudding — chia seeds soaked until they turn into a soft, spoonable pudding — with blackberry financiers, which are small, buttery almond cakes, for texture. It’s tart and fruity more than sugary, so it wakes you up rather than weighing you down. Put it in the middle of the table while you look at the egg dishes.",
-			"after": "It’s one of our sweet starters, and a nice one to share. A trifle is a layered dessert, and ours goes blackberry curd, lemon curd and coconut chia pudding, chia seeds soaked until they turn into a soft, spoonable pudding, with blackberry financiers, which are small, buttery almond cakes, for texture. It’s tart and fruity more than sugary, so it wakes you up rather than weighing you down. Put it in the middle of the table while you look at the egg dishes."
-		},
-		{
 			"path": "model.dishes[4].serviceNote",
 			"before": "Coconut; eggs and dairy (curds); gluten and likely almonds (financiers are traditionally made with almond flour — confirm). Chia has a seedy texture — mention it for guests who dislike that. Sweet: suggest it to share.",
 			"after": "Coconut; eggs and dairy (curds); gluten and likely almonds (financiers are traditionally made with almond flour, confirm). Chia has a seedy texture, mention it for guests who dislike that. Sweet: suggest it to share."
@@ -244,12 +199,6 @@
 			"path": "model.dishes[5].lines.s20",
 			"before": "Framboise is French for raspberry. We make French toast from our housemade citrus brioche and finish it with mascarpone mousse, a raspberry coulis and fresh local raspberries — soft, rich and bright.",
 			"after": "Framboise is French for raspberry. We make French toast from our housemade citrus brioche and finish it with mascarpone mousse, a raspberry coulis and fresh local raspberries, soft, rich and bright."
-		},
-		{
-			"path": "model.dishes[5].lines.s45",
-			"before": "Framboise — frahm-BWAHZ — is French for raspberry, and that’s the star here. We bake our own citrus brioche, a rich, buttery egg bread, and turn it into French toast. Mascarpone, a rich Italian cream cheese whipped into a light mousse, adds richness, the raspberry coulis — a smooth fruit sauce — adds tartness, and fresh local raspberries go on top. It sits with our starters, so it’s perfect to share for the table, or as your sweet course.",
-			"after": "Framboise, frahm-BWAHZ, is French for raspberry, and that’s the star here. We bake our own citrus brioche, a rich, buttery egg bread, and turn it into French toast. Mascarpone, a rich Italian cream cheese whipped into a light mousse, adds richness, the raspberry coulis, a smooth fruit sauce, adds tartness, and fresh local raspberries go on top. It sits with our starters, so it’s perfect to share for the table, or as your sweet course.",
-			"override": 42
 		},
 		{
 			"path": "model.dishes[5].serviceNote",
@@ -288,11 +237,6 @@
 			"after": "Our Café Brûlot Coffee Cake: chicory coffee and bittersweet chocolate, pecans, spiced citrus glaze and whipped crème fraîche."
 		},
 		{
-			"path": "model.dishes[6].lines.s45",
-			"before": "Café brûlot is a classic New Orleans after-dinner coffee — flamed with brandy, orange and lemon peel, cinnamon and clove. This cake borrows those flavors: chicory coffee and bittersweet chocolate in the cake, a glaze with citrus and warm spice, and pecans for crunch. Whipped crème fraîche, a slightly tangy cream, keeps it from being too sweet. It’s a great one to share with a cup of our coffee and chicory.",
-			"after": "Café brûlot is a classic New Orleans after-dinner coffee: flamed with brandy, orange and lemon peel, cinnamon and clove. This cake borrows those flavors: chicory coffee and bittersweet chocolate in the cake, a glaze with citrus and warm spice, and pecans for crunch. Whipped crème fraîche, a slightly tangy cream, keeps it from being too sweet. It’s a great one to share with a cup of our coffee and chicory."
-		},
-		{
 			"path": "model.dishes[6].pairing.sayIt",
 			"before": "If you’d like a glass with it, Banyuls — a sweet red from the south of France — is a classic with chocolate and coffee. Otherwise, our chicory coffee is perfect.",
 			"after": "If you’d like a glass with it, Banyuls, a sweet red from the south of France, is a classic with chocolate and coffee. Otherwise, our chicory coffee is perfect."
@@ -318,16 +262,6 @@
 			"after": "the classic, or the Café Glacé de la Maison if the guest wants it cold."
 		},
 		{
-			"path": "model.dishes[7].lines.s20",
-			"before": "Our Louisiana Oysters come in New Orleans BBQ sauce — which here means buttery and peppery, not smoky or tomato — with pickled collard greens, shallots and a crunchy fried saltine crumble.",
-			"after": "Our Louisiana Oysters come in New Orleans BBQ sauce, which here means buttery and peppery, not smoky or tomato, with pickled collard greens, shallots and a crunchy fried saltine crumble."
-		},
-		{
-			"path": "model.dishes[7].lines.s45",
-			"before": "In New Orleans, “barbecue” doesn’t mean a smoker or a tomato sauce — it’s the style made famous by barbecue shrimp: a rich, buttery sauce with lots of black pepper and savory Worcestershire. We pair it with Louisiana oysters, then add pickled collard greens for a sharp, bright bite, shallots, and a fried saltine crumble for crunch. It’s rich and peppery, a real New Orleans flavor, and great to share before your eggs.",
-			"after": "In New Orleans, “barbecue” doesn’t mean a smoker or a tomato sauce, it’s the style made famous by barbecue shrimp: a rich, buttery sauce with lots of black pepper and savory Worcestershire. We pair it with Louisiana oysters, then add pickled collard greens for a sharp, bright bite, shallots, and a fried saltine crumble for crunch. It’s rich and peppery, a real New Orleans flavor, and great to share before your eggs."
-		},
-		{
 			"path": "model.dishes[7].pairing.sayIt",
 			"before": "With the oysters I’d pour the Gainey Chardonnay — creamy enough for the butter sauce, fresh enough for the pickled greens.",
 			"after": "With the oysters I’d pour the Gainey Chardonnay, creamy enough for the butter sauce, fresh enough for the pickled greens."
@@ -348,11 +282,6 @@
 			"after": "Avoid lean, green whites that the butter flattens, and tannic reds, tannin with oysters tastes metallic."
 		},
 		{
-			"path": "model.dishes[8].lines.s45",
-			"before": "Creole tomatoes are Louisiana’s summer tomato — juicy, sweet and a little tart — and here they’re mixed with heirlooms and served simply. Burrata is fresh mozzarella with a soft, creamy center, so it’s cool and rich against the acidity. The tostada — a crisp flat shell — is made in-house with okra, and smoked tomato water, a clear, intensely tomatoey broth, adds a whisper of smoke. It’s light, seasonal and gone when the tomatoes are, so I’d grab it now.",
-			"after": "Creole tomatoes are Louisiana’s summer tomato, juicy, sweet and a little tart, and here they’re mixed with heirlooms and served simply. Burrata is fresh mozzarella with a soft, creamy center, so it’s cool and rich against the acidity. The tostada, a crisp flat shell, is made in-house with okra, and smoked tomato water, a clear, intensely tomatoey broth, adds a whisper of smoke. It’s light, seasonal and gone when the tomatoes are, so I’d grab it now."
-		},
-		{
 			"path": "model.dishes[8].serviceNote",
 			"before": "No meat listed — confirm with the kitchen for vegetarians. Dairy (burrata). Ask about gluten in the okra tostada. Seasonal: Creole tomatoes are a summer crop, so expect it to change as the season turns.",
 			"after": "No meat listed, confirm with the kitchen for vegetarians. Dairy (burrata). Ask about gluten in the okra tostada. Seasonal: Creole tomatoes are a summer crop, so expect it to change as the season turns."
@@ -371,16 +300,6 @@
 			"path": "model.dishes[9].parts.sides",
 			"before": "fines herbes — parsley, chives, tarragon and chervil",
 			"after": "fines herbes: parsley, chives, tarragon and chervil"
-		},
-		{
-			"path": "model.dishes[9].lines.s20",
-			"before": "Our Louisiana Crab Claws come in a warm brown butter vinaigrette — nutty browned butter with a bright, tangy edge — finished with fines herbes, the classic French mix of delicate herbs.",
-			"after": "Our Louisiana Crab Claws come in a warm brown butter vinaigrette, nutty browned butter with a bright, tangy edge, finished with fines herbes, the classic French mix of delicate herbs."
-		},
-		{
-			"path": "model.dishes[9].lines.s45",
-			"before": "Crab claws are a Louisiana favorite — sweet, delicate crab meat you pick up and eat right off the claw. We dress ours in a warm brown butter vinaigrette: butter cooked until it turns nutty and toasty, balanced with acidity so it’s rich but bright. Fines herbes — parsley, chives, tarragon and chervil — finish it with a soft, fresh green note. It’s simple and elegant, and it’s great for the table to share.",
-			"after": "Crab claws are a Louisiana favorite, sweet, delicate crab meat you pick up and eat right off the claw. We dress ours in a warm brown butter vinaigrette: butter cooked until it turns nutty and toasty, balanced with acidity so it’s rich but bright. Fines herbes, parsley, chives, tarragon and chervil, finish it with a soft, fresh green note. It’s simple and elegant, and it’s great for the table to share."
 		},
 		{
 			"path": "model.dishes[9].serviceNote",
@@ -408,18 +327,6 @@
 			"after": "Avoid heavily oaked Chardonnay, oak plus brown butter turns heavy, and reds, whose tannin turns metallic with crab."
 		},
 		{
-			"path": "model.dishes[10].lines.s20",
-			"before": "Our Grand Isle Jewel oysters come from the Louisiana coast and are served raw, with a mignonette — the classic raw bar sauce of shallot, cracked pepper and vinegar — made with preserved Fresno chili for a little warmth.",
-			"after": "Our Grand Isle Jewel oysters come from the Louisiana coast and are served raw, with a mignonette, the classic raw bar sauce of shallot, cracked pepper and vinegar, made with preserved Fresno chili for a little warmth.",
-			"override": 3170
-		},
-		{
-			"path": "model.dishes[10].lines.s45",
-			"before": "Grand Isle is a barrier island on Louisiana’s coast, and these oysters are named for it. We serve them raw, very simply, so you taste the oyster: clean, briny and cold. A mignonette is the classic raw bar sauce, vinegar, shallot and cracked pepper, and ours is made with preserved Fresno chili, so it’s tangy with just a gentle warmth. Parsley adds a green note. They open our dinner tasting, too — a perfect first bite with Champagne.",
-			"after": "Grand Isle is a barrier island on Louisiana’s coast, and these oysters are named for it. We serve them raw, very simply, so you taste the oyster: clean, briny and cold. A mignonette is the classic raw bar sauce, vinegar, shallot and cracked pepper, and ours is made with preserved Fresno chili, so it’s tangy with just a gentle warmth. Parsley adds a green note. They open our dinner tasting, too, a perfect first bite with Champagne.",
-			"override": 25
-		},
-		{
 			"path": "model.dishes[10].serviceNote",
 			"before": "Raw shellfish: give the consumer advisory — raw oysters carry risk, especially for guests who are pregnant, immunocompromised or have liver disease. Fresno chili is mild. Know the count per order. On the dinner tasting they’re paired with Charles Lafitte Brut.",
 			"after": "Raw shellfish: give the consumer advisory: raw oysters carry risk, especially for guests who are pregnant, immunocompromised or have liver disease. Fresno chili is mild. Know the count per order. On the dinner tasting they’re paired with Charles Lafitte Brut."
@@ -433,11 +340,6 @@
 			"path": "model.dishes[11].parts.main",
 			"before": "Steak tartare — raw, finely chopped beef",
 			"after": "Steak tartare, raw, finely chopped beef"
-		},
-		{
-			"path": "model.dishes[11].lines.s45",
-			"before": "It’s a playful take on steak tartare. Tartare is raw beef, finely chopped and seasoned, and instead of toast we pipe it into a crisp potato shell shaped like a cannoli. Crème fraîche, a tangy cultured cream, keeps it cool and silky. The egg yolk is cured until firm and grated over the top, the way Italians grate bottarga, cured fish roe — it adds a rich, salty finish. Two or three bites, and a great way to start.",
-			"after": "It’s a playful take on steak tartare. Tartare is raw beef, finely chopped and seasoned, and instead of toast we pipe it into a crisp potato shell shaped like a cannoli. Crème fraîche, a tangy cultured cream, keeps it cool and silky. The egg yolk is cured until firm and grated over the top, the way Italians grate bottarga, cured fish roe, it adds a rich, salty finish. Two or three bites, and a great way to start."
 		},
 		{
 			"path": "model.dishes[11].serviceNote",
@@ -485,12 +387,6 @@
 			"after": "Our Turtle Soup is made with 100% turtle meat, with brown butter spinach and grated egg, and aged Sherry for a nutty lift at the end, rich, savory and very New Orleans."
 		},
 		{
-			"path": "model.dishes[12].lines.s45",
-			"before": "Turtle soup is one of the great Creole soups, and ours is made with 100% turtle meat. It’s deep and savory — if you’ve never had turtle, think of a rich, finely chopped stew. Brown butter spinach adds a toasty, earthy note, the grated egg adds richness, and aged Sherry brings a nutty, dry lift that cuts the richness. It’s also the soup on our Traditional Breakfast, so if you want one bowl that tells you what Brennan’s is about, this is it.",
-			"after": "Turtle soup is one of the great Creole soups, and ours is made with 100% turtle meat. It’s deep and savory: if you’ve never had turtle, think of a rich, finely chopped stew. Brown butter spinach adds a toasty, earthy note, the grated egg adds richness, and aged Sherry brings a nutty, dry lift that cuts the richness. It’s also the soup on our Traditional Breakfast, so if you want one bowl that tells you what Brennan’s is about, this is it.",
-			"override": 47
-		},
-		{
 			"path": "model.dishes[12].serviceNote",
 			"before": "Contains alcohol (Sherry) — flag it for guests avoiding alcohol. Egg; dairy (brown butter). Creole turtle soups are usually roux-thickened, so ask the kitchen about gluten. On the breakfast tasting, guests choose this or the gumbo (served with a Bloody Bull). Say “turtle” plainly — many guests are trying it for the first time.",
 			"after": "Contains alcohol (Sherry), flag it for guests avoiding alcohol. Egg; dairy (brown butter). Creole turtle soups are usually roux-thickened, so ask the kitchen about gluten. On the breakfast tasting, guests choose this or the gumbo (served with a Bloody Bull). Say “turtle” plainly, many guests are trying it for the first time."
@@ -531,11 +427,6 @@
 			"after": "Our Seafood Gumbo is loaded with shrimp, crab and oysters, with andouille sausage for smoke and a little spice, over popcorn rice, a fragrant Louisiana long-grain that really does smell a little like popcorn."
 		},
 		{
-			"path": "model.dishes[13].lines.s45",
-			"before": "Gumbo is the dish that says Louisiana, and ours is all about the seafood: shrimp, crab and oysters, so you get sweetness and a little brine in every spoonful. Andouille — a coarse, smoked Cajun pork sausage — gives it a savory, smoky backbone and a gentle warmth. It’s served over popcorn rice, a Louisiana long-grain with a nutty, toasty aroma. It’s hearty, so it’s a great start before one of the egg dishes, and it’s the other choice on our Traditional Breakfast.",
-			"after": "Gumbo is the dish that says Louisiana, and ours is all about the seafood: shrimp, crab and oysters, so you get sweetness and a little brine in every spoonful. Andouille, a coarse, smoked Cajun pork sausage, gives it a savory, smoky backbone and a gentle warmth. It’s served over popcorn rice, a Louisiana long-grain with a nutty, toasty aroma. It’s hearty, so it’s a great start before one of the egg dishes, and it’s the other choice on our Traditional Breakfast."
-		},
-		{
 			"path": "model.dishes[13].serviceNote",
 			"before": "Shellfish (shrimp, crab, oysters) and pork (andouille). Gumbo is usually built on a roux — ask the kitchen about gluten. Mild to moderate spice. Breakfast tasting guests choose this or the turtle soup.",
 			"after": "Shellfish (shrimp, crab, oysters) and pork (andouille). Gumbo is usually built on a roux, ask the kitchen about gluten. Mild to moderate spice. Breakfast tasting guests choose this or the turtle soup."
@@ -559,11 +450,6 @@
 			"path": "model.dishes[14].lines.s10",
 			"before": "Our Creole Caesar — crisp gem lettuce in a smoked oyster dressing, with Grana Padano and Leidenheimer crisps.",
 			"after": "Our Creole Caesar, crisp gem lettuce in a smoked oyster dressing, with Grana Padano and Leidenheimer crisps."
-		},
-		{
-			"path": "model.dishes[14].lines.s45",
-			"before": "It’s our Louisiana take on a Caesar. Gem lettuce is small, sweet and very crisp, so it holds up to a creamy dressing — and ours is made with smoked oysters, which bring a savory, smoky depth. Grana Padano, a nutty Italian hard cheese, adds salt and richness, and the crisps come from Leidenheimer, the bakery behind New Orleans’ po-boy bread. It’s a great, lighter start before an egg dish or the redfish.",
-			"after": "It’s our Louisiana take on a Caesar. Gem lettuce is small, sweet and very crisp, so it holds up to a creamy dressing, and ours is made with smoked oysters, which bring a savory, smoky depth. Grana Padano, a nutty Italian hard cheese, adds salt and richness, and the crisps come from Leidenheimer, the bakery behind New Orleans’ po-boy bread. It’s a great, lighter start before an egg dish or the redfish."
 		},
 		{
 			"path": "model.dishes[14].serviceNote",
@@ -594,17 +480,6 @@
 			"path": "model.dishes[15].lines.s10",
 			"before": "Eggs Hussarde — poached eggs, coffee-cured Canadian bacon and our own English muffins, with hollandaise and marchand de vin.",
 			"after": "Eggs Hussarde: poached eggs, coffee-cured Canadian bacon and our own English muffins, with hollandaise and marchand de vin."
-		},
-		{
-			"path": "model.dishes[15].lines.s20",
-			"before": "Eggs Hussarde is our signature egg dish: housemade English muffins, coffee-cured Canadian bacon and poached eggs, with two sauces — buttery hollandaise and marchand de vin, a savory red wine sauce.",
-			"after": "Eggs Hussarde is our signature egg dish: housemade English muffins, coffee-cured Canadian bacon and poached eggs, with two sauces, buttery hollandaise and marchand de vin, a savory red wine sauce."
-		},
-		{
-			"path": "model.dishes[15].lines.s45",
-			"before": "Eggs Hussarde is the New Orleans cousin of Eggs Benedict, and it’s the egg dish we’re known for. We make our own English muffins, and the Canadian bacon is cured with coffee, so it’s smoky and a little roasty. Then come two sauces: marchand de vin — “wine merchant’s sauce,” a savory red wine and mushroom sauce — and hollandaise, the buttery, lemony one. Rich, savory and bright all at once. It’s the heart of our Traditional Breakfast, so if it’s your first breakfast at Brennan’s, this is the one.",
-			"after": "Eggs Hussarde is the New Orleans cousin of Eggs Benedict, and it’s the egg dish we’re known for. We make our own English muffins, and the Canadian bacon is cured with coffee, so it’s smoky and a little roasty. Then come two sauces: marchand de vin, “wine merchant’s sauce,” a savory red wine and mushroom sauce, and hollandaise, the buttery, lemony one. Rich, savory and bright all at once. It’s the heart of our Traditional Breakfast, so if it’s your first breakfast at Brennan’s, this is the one.",
-			"override": 11
 		},
 		{
 			"path": "model.dishes[15].pairing.sayIt",
@@ -644,11 +519,6 @@
 			"after": "Eggs Sardou: poached eggs, crispy artichokes and Parmesan creamed spinach, finished with Choron sauce."
 		},
 		{
-			"path": "model.dishes[16].lines.s20",
-			"before": "Eggs Sardou is a New Orleans classic: poached eggs with crispy artichokes and Parmesan creamed spinach, finished with Choron — a béarnaise, the tarragon butter sauce, brightened with tomato.",
-			"after": "Eggs Sardou is a New Orleans classic: poached eggs with crispy artichokes and Parmesan creamed spinach, finished with Choron: a béarnaise, the tarragon butter sauce, brightened with tomato."
-		},
-		{
 			"path": "model.dishes[16].serviceNote",
 			"before": "No meat listed — confirm the creamed spinach and sauce with the kitchen for strict vegetarians. Eggs, dairy (Parmesan, cream, butter). Crispy artichokes are likely breaded or fried — ask about gluten. Sardou is sar-DOO.",
 			"after": "No meat listed, confirm the creamed spinach and sauce with the kitchen for strict vegetarians. Eggs, dairy (Parmesan, cream, butter). Crispy artichokes are likely breaded or fried, ask about gluten. Sardou is sar-DOO."
@@ -679,12 +549,6 @@
 			"after": "Eggs Owen: red wine-braised short rib débris, Creole-spiced potato and a soft-boiled egg, with hollandaise and marchand de vin."
 		},
 		{
-			"path": "model.dishes[17].lines.s45",
-			"before": "If you want something hearty, this is it. Débris — DAY-bree — is the New Orleans word for slow-cooked meat that falls apart into its own gravy, and ours is short rib braised in red wine. It sits with a Creole-spiced potato and a soft-boiled egg, so the yolk runs into everything. Then two sauces: hollandaise for richness, and marchand de vin, a savory red wine and mushroom sauce that doubles down on the braise. Think of it as steak and eggs, New Orleans style.",
-			"after": "If you want something hearty, this is it. Débris, DAY-bree, is the New Orleans word for slow-cooked meat that falls apart into its own gravy, and ours is short rib braised in red wine. It sits with a Creole-spiced potato and a soft-boiled egg, so the yolk runs into everything. Then two sauces: hollandaise for richness, and marchand de vin, a savory red wine and mushroom sauce that doubles down on the braise. Think of it as steak and eggs, New Orleans style.",
-			"override": 15
-		},
-		{
 			"path": "model.dishes[17].serviceNote",
 			"before": "Beef; eggs (soft-boiled, and in hollandaise), dairy; red wine in the braise and sauce. Mild spice. Guests may guess it’s named for founder Owen Brennan — the menu doesn’t say, so confirm at lineup before you tell that story.",
 			"after": "Beef; eggs (soft-boiled, and in hollandaise), dairy; red wine in the braise and sauce. Mild spice. Guests may guess it’s named for founder Owen Brennan, the menu doesn’t say, so confirm at lineup before you tell that story."
@@ -710,11 +574,6 @@
 			"after": "confit, cooked slowly in its own fat"
 		},
 		{
-			"path": "model.dishes[18].lines.s45",
-			"before": "This is chicken and waffles gone luxurious. The duck leg is confit — cured and cooked slowly in its own fat until it’s tender, with crisp skin. It sits on a savory cornbread and chive waffle, and the foie gras butter melts in for extra richness. Mustard maple syrup brings sweet with a little tang to balance all that, and a sunny-side-up egg ties it together. Sweet, savory, rich — it’s a showstopper for a brunch guest who wants something different.",
-			"after": "This is chicken and waffles gone luxurious. The duck leg is confit, cured and cooked slowly in its own fat until it’s tender, with crisp skin. It sits on a savory cornbread and chive waffle, and the foie gras butter melts in for extra richness. Mustard maple syrup brings sweet with a little tang to balance all that, and a sunny-side-up egg ties it together. Sweet, savory, rich, it’s a showstopper for a brunch guest who wants something different."
-		},
-		{
 			"path": "model.dishes[18].serviceNote",
 			"before": "Foie gras (some guests avoid it — ask the kitchen if it can be left off). Eggs, dairy; the waffle likely contains wheat flour — confirm for gluten. Rich — suggest a lighter starter alongside.",
 			"after": "Foie gras (some guests avoid it, ask the kitchen if it can be left off). Eggs, dairy; the waffle likely contains wheat flour, confirm for gluten. Rich, suggest a lighter starter alongside."
@@ -728,17 +587,6 @@
 			"path": "model.dishes[18].pairing.whyThisWine",
 			"before": "It’s rich duck with maple syrup, so I want brightness and a touch of fruit. This German Riesling cuts the richness and loves the maple — it keeps every bite fresh.",
 			"after": "It’s rich duck with maple syrup, so I want brightness and a touch of fruit. This German Riesling cuts the richness and loves the maple, it keeps every bite fresh."
-		},
-		{
-			"path": "model.dishes[19].lines.s20",
-			"before": "Our Shrimp & Grits puts Louisiana shrimp in a Creole sauce with tasso over a fried pimento cheese grit cake — creamy inside, crisp outside — with crunchy fried okra chips on top.",
-			"after": "Our Shrimp & Grits puts Louisiana shrimp in a Creole sauce with tasso over a fried pimento cheese grit cake, creamy inside, crisp outside, with crunchy fried okra chips on top."
-		},
-		{
-			"path": "model.dishes[19].lines.s45",
-			"before": "Our take on shrimp and grits has a twist: instead of a bowl of grits, the grits are made with pimento cheese, set into a cake and fried, so they’re crisp outside and creamy inside. Louisiana shrimp go on top in Creole sauce — a tomato-based sauce with the holy trinity of onion, celery and bell pepper — with tasso, a smoky, spiced Cajun ham, for depth. Fried okra chips add crunch. Shrimp and grits began as a Charleston breakfast; ours is Creole, a tomato sauce rather than a bacon gravy.",
-			"after": "Our take on shrimp and grits has a twist: instead of a bowl of grits, the grits are made with pimento cheese, set into a cake and fried, so they’re crisp outside and creamy inside. Louisiana shrimp go on top in Creole sauce, a tomato-based sauce with the holy trinity of onion, celery and bell pepper, with tasso, a smoky, spiced Cajun ham, for depth. Fried okra chips add crunch. Shrimp and grits began as a Charleston breakfast; ours is Creole, a tomato sauce rather than a bacon gravy.",
-			"override": 3171
 		},
 		{
 			"path": "model.dishes[19].pairing.sayIt",
@@ -759,11 +607,6 @@
 			"path": "model.dishes[20].parts.technique",
 			"before": "cooked to order — know today’s fish and preparation",
 			"after": "cooked to order, know today’s fish and preparation"
-		},
-		{
-			"path": "model.dishes[20].lines.s45",
-			"before": "This is our Gulf fish plate — the fish changes with what’s fresh, and I can tell you what it is today. It’s topped with Louisiana lump crab, the sweet, meaty pieces from the body of the crab. The sauce is a pecan bordelaise, so it’s nutty and savory. Underneath, a silky cauliflower purée and wilted collard greens, which bring a little earthiness. Lighter than the egg dishes but still very satisfying.",
-			"after": "This is our Gulf fish plate, the fish changes with what’s fresh, and I can tell you what it is today. It’s topped with Louisiana lump crab, the sweet, meaty pieces from the body of the crab. The sauce is a pecan bordelaise, so it’s nutty and savory. Underneath, a silky cauliflower purée and wilted collard greens, which bring a little earthiness. Lighter than the egg dishes but still very satisfying."
 		},
 		{
 			"path": "model.dishes[20].serviceNote",
@@ -801,11 +644,6 @@
 			"after": "Our Crab & Corn Omelette: lump crab, roasted sweet corn, miso butter, lemon, basil and a Marcona almond gremolata."
 		},
 		{
-			"path": "model.dishes[21].lines.s45",
-			"before": "It’s a summer-in-Louisiana omelette. Lump crab and roasted sweet corn are both naturally sweet, so they’re a perfect match. Our house-made miso butter adds a savory, almost nutty depth, and lemon and basil keep it fresh. On top, a gremolata — a bright Italian mix of herbs and citrus zest — made with Marcona almonds, the rich, tender Spanish almonds, for crunch. It’s a lighter choice that still feels special.",
-			"after": "It’s a summer-in-Louisiana omelette. Lump crab and roasted sweet corn are both naturally sweet, so they’re a perfect match. Our house-made miso butter adds a savory, almost nutty depth, and lemon and basil keep it fresh. On top, a gremolata, a bright Italian mix of herbs and citrus zest, made with Marcona almonds, the rich, tender Spanish almonds, for crunch. It’s a lighter choice that still feels special."
-		},
-		{
 			"path": "model.dishes[21].pairing.sayIt",
 			"before": "If you love white Burgundy, the Leflaive Mâcon is a beautiful match — rich enough for the crab and butter, bright enough for the lemon.",
 			"after": "If you love white Burgundy, the Leflaive Mâcon is a beautiful match, rich enough for the crab and butter, bright enough for the lemon."
@@ -819,16 +657,6 @@
 			"path": "model.dishes[21].pairing.avoid",
 			"before": "Avoid tannic reds — miso and egg yolk make tannin taste bitter and metallic — and heavy, buttery Chardonnay that smothers the crab.",
 			"after": "Avoid tannic reds, miso and egg yolk make tannin taste bitter and metallic, and heavy, buttery Chardonnay that smothers the crab."
-		},
-		{
-			"path": "model.dishes[22].lines.s20",
-			"before": "Our Creole-Spiced Hanger Steak is Creekstone Prime hanger with a smoked potato pavé — thin potato slices layered and crisped — a sunny-side-up Vital Farms egg and classic French béarnaise.",
-			"after": "Our Creole-Spiced Hanger Steak is Creekstone Prime hanger with a smoked potato pavé, thin potato slices layered and crisped, a sunny-side-up Vital Farms egg and classic French béarnaise."
-		},
-		{
-			"path": "model.dishes[22].lines.s45",
-			"before": "This is steak and eggs done properly. Hanger is a butcher’s favorite cut — loose-grained and very beefy — and ours is Prime grade from Creekstone Farms, seasoned with Creole spice. The potato pavé is thin slices layered, pressed and crisped, with a smoky note. A sunny-side-up egg from Vital Farms gives you a runny yolk, and béarnaise — butter, egg yolk, shallot and tarragon — is the classic steak sauce. How would you like it cooked?",
-			"after": "This is steak and eggs done properly. Hanger is a butcher’s favorite cut, loose-grained and very beefy, and ours is Prime grade from Creekstone Farms, seasoned with Creole spice. The potato pavé is thin slices layered, pressed and crisped, with a smoky note. A sunny-side-up egg from Vital Farms gives you a runny yolk, and béarnaise, butter, egg yolk, shallot and tarragon, is the classic steak sauce. How would you like it cooked?"
 		},
 		{
 			"path": "model.dishes[22].serviceNote",
@@ -876,16 +704,6 @@
 			"after": "Our Chateaubriand for two, roasted Creekstone Farms tenderloin with glazed summer squash and sauce Foyot."
 		},
 		{
-			"path": "model.dishes[23].lines.s20",
-			"before": "The Roasted Chateaubriand serves two: the thick center of a Creekstone Farms beef tenderloin, roasted whole, with roasted and glazed summer squash and sauce Foyot — a béarnaise enriched with meat glaze.",
-			"after": "The Roasted Chateaubriand serves two: the thick center of a Creekstone Farms beef tenderloin, roasted whole, with roasted and glazed summer squash and sauce Foyot, a béarnaise enriched with meat glaze."
-		},
-		{
-			"path": "model.dishes[23].lines.s45",
-			"before": "Chateaubriand is the classic French cut for two: the thickest, most tender center of the beef tenderloin, roasted whole so it stays juicy. Ours is Creekstone Farms beef. The sauce is Foyot — fwah-YO — which is béarnaise, the tarragon butter sauce, made even richer with a reduced meat glaze. Roasted and glazed summer squash balances it. It’s a celebration dish, and with a side of mushrooms or the shells and cheese, it’s a full feast for two.",
-			"after": "Chateaubriand is the classic French cut for two: the thickest, most tender center of the beef tenderloin, roasted whole so it stays juicy. Ours is Creekstone Farms beef. The sauce is Foyot, fwah-YO, which is béarnaise, the tarragon butter sauce, made even richer with a reduced meat glaze. Roasted and glazed summer squash balances it. It’s a celebration dish, and with a side of mushrooms or the shells and cheese, it’s a full feast for two."
-		},
-		{
 			"path": "model.dishes[23].serviceNote",
 			"before": "Serves two, $120. Ask temperature once for the table. A whole roast takes longer — confirm timing with the kitchen and set expectations. Dairy and eggs (Foyot). Ask at lineup whether it’s carved tableside or in the kitchen. Natural side upsells: Maggie’s Mushrooms, Shells & Cheese ($12 each).",
 			"after": "Serves two, $120. Ask temperature once for the table. A whole roast takes longer, confirm timing with the kitchen and set expectations. Dairy and eggs (Foyot). Ask at lineup whether it’s carved tableside or in the kitchen. Natural side upsells: Maggie’s Mushrooms, Shells & Cheese ($12 each)."
@@ -915,16 +733,6 @@
 			"path": "model.dishes[24].lines.s10",
 			"before": "Redfish Véronique — hibiscus-pickled grapes, braised leeks and fingerlings, with a preserved lemon beurre blanc.",
 			"after": "Redfish Véronique: hibiscus-pickled grapes, braised leeks and fingerlings, with a preserved lemon beurre blanc."
-		},
-		{
-			"path": "model.dishes[24].lines.s20",
-			"before": "Our Redfish Véronique is a classic French idea with a Louisiana fish: redfish with grapes — ours are pickled with hibiscus — plus braised leeks, fingerling potatoes and a preserved lemon beurre blanc.",
-			"after": "Our Redfish Véronique is a classic French idea with a Louisiana fish: redfish with grapes, ours are pickled with hibiscus, plus braised leeks, fingerling potatoes and a preserved lemon beurre blanc."
-		},
-		{
-			"path": "model.dishes[24].lines.s45",
-			"before": "“Véronique” — vay-ro-NEEK — is the French classic of fish with grapes. We make it with Louisiana redfish, which is mild and flaky. The grapes are pickled with hibiscus, so they’re sweet, tart and floral. Braised leeks are soft and gently sweet, fingerling potatoes make it satisfying, and a beurre blanc — a butter sauce with white wine — gets brightness from preserved lemon. It’s elegant and balanced, and it’s on our dinner tasting too.",
-			"after": "“Véronique”, vay-ro-NEEK, is the French classic of fish with grapes. We make it with Louisiana redfish, which is mild and flaky. The grapes are pickled with hibiscus, so they’re sweet, tart and floral. Braised leeks are soft and gently sweet, fingerling potatoes make it satisfying, and a beurre blanc, a butter sauce with white wine, gets brightness from preserved lemon. It’s elegant and balanced, and it’s on our dinner tasting too."
 		},
 		{
 			"path": "model.dishes[24].serviceNote",
@@ -957,11 +765,6 @@
 			"after": "Banana leaf-wrapped Gulf fish, Louisiana crab, sorghum, Marcona almonds, Castelvetrano olives, tomato"
 		},
 		{
-			"path": "model.dishes[25].lines.s45",
-			"before": "En papillote — ahn pah-pee-YOHT — means cooked sealed in a wrapper, and here the wrapper is a banana leaf, so the fish steams gently in its own juices and stays very moist. Inside, Louisiana crab adds sweetness, tomato and Castelvetrano olives — bright green, mild and buttery — give it a Mediterranean feel, and Marcona almonds and sorghum, a chewy ancient grain, add nutty texture. It’s a lighter entrée that’s still full of flavor.",
-			"after": "En papillote, ahn pah-pee-YOHT, means cooked sealed in a wrapper, and here the wrapper is a banana leaf, so the fish steams gently in its own juices and stays very moist. Inside, Louisiana crab adds sweetness, tomato and Castelvetrano olives, bright green, mild and buttery, give it a Mediterranean feel, and Marcona almonds and sorghum, a chewy ancient grain, add nutty texture. It’s a lighter entrée that’s still full of flavor."
-		},
-		{
 			"path": "model.dishes[25].serviceNote",
 			"before": "Know today’s fish. Fish, shellfish (crab), tree nuts (Marcona almonds). Sorghum is gluten-free, but confirm the whole dish. Ask at lineup whether it’s opened at the table — if so, warn guests about the steam.",
 			"after": "Know today’s fish. Fish, shellfish (crab), tree nuts (Marcona almonds). Sorghum is gluten-free, but confirm the whole dish. Ask at lineup whether it’s opened at the table, if so, warn guests about the steam."
@@ -985,17 +788,6 @@
 			"path": "model.dishes[26].lines.s10",
 			"before": "Our Poussin à la Moutarde — a sweet tea–brined, fried Cornish hen with turnips, shallots and mustard cream sauce.",
 			"after": "Our Poussin à la Moutarde: a sweet tea-brined, fried Cornish hen with turnips, shallots and mustard cream sauce."
-		},
-		{
-			"path": "model.dishes[26].lines.s20",
-			"before": "Poussin à la moutarde means young chicken with mustard. Ours is a Cornish hen brined in sweet tea and fried, with turnips and shallots and a mustard cream sauce — Southern fried chicken meets French bistro.",
-			"after": "Poussin à la moutarde means young chicken with mustard. Ours is a Cornish hen brined in sweet tea and fried, with turnips and shallots and a mustard cream sauce, Southern fried chicken meets French bistro."
-		},
-		{
-			"path": "model.dishes[26].lines.s45",
-			"before": "It’s where a French bistro meets a Southern kitchen. Poussin — poo-SAN — is a young, small chicken, and we use a Cornish hen. It’s brined in sweet tea, which seasons it and keeps it juicy, then fried until crisp. The classic French pairing is mustard, so there’s a mustard cream sauce — tangy and rich — with turnips and shallots for a gentle sweetness. Crisp and comforting, it's the bistro classic chicken with mustard, made the Southern way.",
-			"after": "It’s where a French bistro meets a Southern kitchen. Poussin, poo-SAN, is a young, small chicken, and we use a Cornish hen. It’s brined in sweet tea, which seasons it and keeps it juicy, then fried until crisp. The classic French pairing is mustard, so there’s a mustard cream sauce, tangy and rich, with turnips and shallots for a gentle sweetness. Crisp and comforting, it's the bistro classic chicken with mustard, made the Southern way.",
-			"override": 3174
 		},
 		{
 			"path": "model.dishes[26].serviceNote",
@@ -1038,12 +830,6 @@
 			"after": "blackened, coated in spices and seared in a very hot pan"
 		},
 		{
-			"path": "model.dishes[27].lines.s45",
-			"before": "It’s our vegetarian entrée, and it’s full of flavor. The tofu comes from Tien Dat, a Vietnamese family co-op across the river that presses it fresh every week. We blacken it — the Louisiana technique of coating in spices and searing in a very hot pan — so it gets a dark, spiced crust. Rice grits are broken rice cooked creamy like grits, and preserved shiitake mushrooms bring deep, savory flavor. Spiced, earthy and satisfying — you won’t miss the meat.",
-			"after": "It’s our vegetarian entrée, and it’s full of flavor. The tofu comes from Tien Dat, a Vietnamese family co-op across the river that presses it fresh every week. We blacken it, the Louisiana technique of coating in spices and searing in a very hot pan, so it gets a dark, spiced crust. Rice grits are broken rice cooked creamy like grits, and preserved shiitake mushrooms bring deep, savory flavor. Spiced, earthy and satisfying, you won’t miss the meat.",
-			"override": 72
-		},
-		{
 			"path": "model.dishes[27].serviceNote",
 			"before": "Soy. Ask the kitchen whether it’s fully vegan — blackening is traditionally done with butter — and whether the rice grits use any stock. Rice is naturally gluten-free; confirm the spice blend and mushrooms. Moderate spice.",
 			"after": "Soy. Ask the kitchen whether it’s fully vegan, blackening is traditionally done with butter, and whether the rice grits use any stock. Rice is naturally gluten-free; confirm the spice blend and mushrooms. Moderate spice."
@@ -1062,11 +848,6 @@
 			"path": "model.dishes[27].pairing.serve",
 			"before": "Serve slightly cool, 55–58°F, in a Burgundy bowl — a few minutes in the ice bucket if the bar runs warm.",
 			"after": "Serve slightly cool, 55 to 58°F, in a Burgundy bowl, a few minutes in the ice bucket if the bar runs warm."
-		},
-		{
-			"path": "model.dishes[28].lines.s45",
-			"before": "Hanger is a butcher’s favorite — loose-grained and very beefy — and ours is Creekstone Farms beef seasoned with our own Creole spice. Broccolini is glazed with Madeira, the fortified wine, so it’s a little sweet and nutty. Persillade — pair-see-YAHD — is chopped parsley and garlic, and we add pepitas, pumpkin seeds, for crunch. Chili crisp, a crunchy chili oil, brings heat. Bold, spiced and fun. How do you like your steak?",
-			"after": "Hanger is a butcher’s favorite, loose-grained and very beefy, and ours is Creekstone Farms beef seasoned with our own Creole spice. Broccolini is glazed with Madeira, the fortified wine, so it’s a little sweet and nutty. Persillade, pair-see-YAHD, is chopped parsley and garlic, and we add pepitas, pumpkin seeds, for crunch. Chili crisp, a crunchy chili oil, brings heat. Bold, spiced and fun. How do you like your steak?"
 		},
 		{
 			"path": "model.dishes[28].serviceNote",
@@ -1094,12 +875,6 @@
 			"after": "cubed and fried crisp, New Orleans Brabant style"
 		},
 		{
-			"path": "model.dishes[36].lines.s45",
-			"before": "Succotash is a Native American dish of corn and beans, some four hundred years old, that the South adopted — traditionally corn and lima beans — and ours is a mix of glazed summer vegetables, sweet and bright, with Nueske’s bacon, a Wisconsin bacon known for its deep applewood smoke. It’s a great partner for the Chateaubriand or the hen, and it’s seasonal, so it’s best right now.",
-			"after": "Succotash is a Native American dish of corn and beans, some four hundred years old, that the South adopted, traditionally corn and lima beans, and ours is a mix of glazed summer vegetables, sweet and bright, with Nueske’s bacon, a Wisconsin bacon known for its deep applewood smoke. It’s a great partner for the Chateaubriand or the hen, and it’s seasonal, so it’s best right now.",
-			"override": 23
-		},
-		{
 			"path": "model.dishes[36].serviceNote",
 			"before": "Pork (bacon) — not vegetarian. Seasonal; confirm tonight’s vegetables.",
 			"after": "Pork (bacon), not vegetarian. Seasonal; confirm tonight’s vegetables."
@@ -1108,11 +883,6 @@
 			"path": "model.dishes[37].lines.s10",
 			"before": "Smoked cauliflower with preserved lemon and harissa — smoky, bright and a little spicy.",
 			"after": "Smoked cauliflower with preserved lemon and harissa, smoky, bright and a little spicy."
-		},
-		{
-			"path": "model.dishes[37].lines.s45",
-			"before": "We smoke the cauliflower so it picks up a deep, savory flavor, then finish it with preserved lemon — lemons cured in salt, which taste intensely citrusy and a little floral — and harissa, a North African chili paste with warm spice. Smoky, bright and gently spicy, it’s a great vegetable side and a good partner for the tofu or the fish.",
-			"after": "We smoke the cauliflower so it picks up a deep, savory flavor, then finish it with preserved lemon, lemons cured in salt, which taste intensely citrusy and a little floral, and harissa, a North African chili paste with warm spice. Smoky, bright and gently spicy, it’s a great vegetable side and a good partner for the tofu or the fish."
 		},
 		{
 			"path": "model.dishes[37].serviceNote",
@@ -1125,39 +895,14 @@
 			"after": "Shells & Cheese, pasta shells in a Mimolette and Abita Amber fondue with Grana Padano."
 		},
 		{
-			"path": "model.dishes[38].lines.s45",
-			"before": "It’s our take on mac and cheese. Shells hold the sauce in every curve, and the sauce is a fondue of Mimolette — mee-mo-LET — a bright-orange French cheese that’s nutty and a little sweet as it ages, made with Abita Amber, a Louisiana beer, for a malty depth. Grana Padano adds a salty finish. It’s perfect with the Chateaubriand or the hanger steak.",
-			"after": "It’s our take on mac and cheese. Shells hold the sauce in every curve, and the sauce is a fondue of Mimolette, mee-mo-LET, a bright-orange French cheese that’s nutty and a little sweet as it ages, made with Abita Amber, a Louisiana beer, for a malty depth. Grana Padano adds a salty finish. It’s perfect with the Chateaubriand or the hanger steak."
-		},
-		{
 			"path": "model.dishes[38].serviceNote",
 			"before": "Gluten (pasta, beer), dairy. Contains beer — alcohol mostly cooked, not all.",
 			"after": "Gluten (pasta, beer), dairy. Contains beer, alcohol mostly cooked, not all."
 		},
 		{
-			"path": "model.dishes[39].lines.s10",
-			"before": "Maggie’s Mushrooms — our mushroom side, a perfect partner for the steaks and the Chateaubriand.",
-			"after": "Maggie’s Mushrooms, our mushroom side, a perfect partner for the steaks and the Chateaubriand."
-		},
-		{
-			"path": "model.dishes[39].lines.s45",
-			"before": "Maggie’s Mushrooms is our mushroom side, and mushrooms are one of the best things you can put next to beef — their earthy, savory flavor makes a steak taste even beefier. It’s wonderful with the Chateaubriand, the hanger steak, or with the blackened tofu for a vegetarian meal. I’d be happy to tell you exactly how the kitchen is preparing them tonight.",
-			"after": "Maggie’s Mushrooms is our mushroom side, and mushrooms are one of the best things you can put next to beef, their earthy, savory flavor makes a steak taste even beefier. It’s wonderful with the Chateaubriand, the hanger steak, or with the blackened tofu for a vegetarian meal. I’d be happy to tell you exactly how the kitchen is preparing them tonight."
-		},
-		{
 			"path": "model.dishes[39].serviceNote",
 			"before": "The menu prints no description. At lineup, learn the mushroom varieties, how they’re cooked, who Maggie is, and whether it’s vegetarian (butter, stock) — then tighten these lines.",
 			"after": "The menu prints no description. At lineup, learn the mushroom varieties, how they’re cooked, who Maggie is, and whether it’s vegetarian (butter, stock), then tighten these lines."
-		},
-		{
-			"path": "model.dishes[40].lines.s20",
-			"before": "Rice dressing is a South Louisiana classic — rice cooked with savory seasoned meat and the holy trinity of onion, celery and bell pepper. Think of it as dirty rice’s Cajun cousin.",
-			"after": "Rice dressing is a South Louisiana classic, rice cooked with savory seasoned meat and the holy trinity of onion, celery and bell pepper. Think of it as dirty rice’s Cajun cousin."
-		},
-		{
-			"path": "model.dishes[40].lines.s45",
-			"before": "Rice dressing is what South Louisiana families serve at Sunday dinners and holidays. Traditionally it’s rice cooked with well-seasoned ground meat — often including liver for depth — and the holy trinity of onion, celery and bell pepper. It’s savory and hearty, a lot like dirty rice. It’s a great partner for the poussin or the hanger steak. I can check exactly what goes into ours tonight.",
-			"after": "Rice dressing is what South Louisiana families serve at Sunday dinners and holidays. Traditionally it’s rice cooked with well-seasoned ground meat, often including liver for depth, and the holy trinity of onion, celery and bell pepper. It’s savory and hearty, a lot like dirty rice. It’s a great partner for the poussin or the hanger steak. I can check exactly what goes into ours tonight."
 		},
 		{
 			"path": "model.dishes[41].description",
@@ -1168,12 +913,6 @@
 			"path": "model.dishes[41].lines.s10",
 			"before": "Bananas Foster — invented here in 1951 — flambéed right at your table and spooned over our vanilla ice cream.",
 			"after": "Bananas Foster, invented here in 1951, flambéed right at your table and spooned over our vanilla ice cream."
-		},
-		{
-			"path": "model.dishes[41].lines.s45",
-			"before": "Bananas Foster was born here in 1951 — Owen Brennan asked his sister Ella and chef Paul Blangé for a banana dessert, and named it for his friend Richard Foster. Butter, brown sugar and cinnamon melt into a caramel… then banana liqueur, and the bananas go in to soften. Now the rum — please sit back just a little — and there’s the flame. As it burns, the caramel deepens. We spoon the bananas over our vanilla ice cream, then the warm sauce. Enjoy — this year, it turns seventy-five.",
-			"after": "Bananas Foster was born here in 1951, Owen Brennan asked his sister Ella and chef Paul Blangé for a banana dessert, and named it for his friend Richard Foster. Butter, brown sugar and cinnamon melt into a caramel… then banana liqueur, and the bananas go in to soften. Now the rum, please sit back just a little, and there’s the flame. As it burns, the caramel deepens. We spoon the bananas over our vanilla ice cream, then the warm sauce. Enjoy, this year, it turns seventy-five.",
-			"override": 4
 		},
 		{
 			"path": "model.dishes[41].serviceNote",
@@ -1217,16 +956,6 @@
 			"after": "Cherries Jubilee, tart black cherries in a Luxardo sauce, flambéed at your table over vanilla ice cream."
 		},
 		{
-			"path": "model.dishes[42].lines.s20",
-			"before": "Cherries Jubilee is the other flambé classic: fresh, tart black cherries in a Luxardo sauce — named for the Italian maraschino cherry house — flamed right at your table and spooned over our housemade vanilla ice cream.",
-			"after": "Cherries Jubilee is the other flambé classic: fresh, tart black cherries in a Luxardo sauce, named for the Italian maraschino cherry house, flamed right at your table and spooned over our housemade vanilla ice cream."
-		},
-		{
-			"path": "model.dishes[42].lines.s45",
-			"before": "Cherries Jubilee is a grand old flambé dessert, and we make it right at your table. Fresh black cherries — tart and juicy — go into a warm Luxardo sauce — Luxardo is the Italian house famous for maraschino cherries and liqueur. We light it, and as the flame burns, the sauce deepens and the cherries soften. Then it all goes over our housemade vanilla ice cream, warm and cold together. If Bananas Foster isn’t your thing, or you want two flambés for the table, this is the one.",
-			"after": "Cherries Jubilee is a grand old flambé dessert, and we make it right at your table. Fresh black cherries, tart and juicy, go into a warm Luxardo sauce, Luxardo is the Italian house famous for maraschino cherries and liqueur. We light it, and as the flame burns, the sauce deepens and the cherries soften. Then it all goes over our housemade vanilla ice cream, warm and cold together. If Bananas Foster isn’t your thing, or you want two flambés for the table, this is the one."
-		},
-		{
 			"path": "model.dishes[42].serviceNote",
 			"before": "Flambéed tableside — follow the same safety steps as Bananas Foster. Cherries may contain pits — confirm with the kitchen whether they’re pitted and warn guests if not. Dairy; alcohol not fully burned off. No minimum is printed (Foster’s is two) — confirm at lineup. Not on the current dessert menu (3 October 2026): confirm with a manager that it is served before offering it.",
 			"after": "Flambéed tableside, follow the same safety steps as Bananas Foster. Cherries may contain pits, confirm with the kitchen whether they’re pitted and warn guests if not. Dairy; alcohol not fully burned off. No minimum is printed (Foster’s is two), confirm at lineup. Not on the current dessert menu (3 October 2026): confirm with a manager that it is served before offering it.",
@@ -1265,17 +994,6 @@
 			"after": "Bread pudding, bread baked in a sweet custard"
 		},
 		{
-			"path": "model.dishes[43].lines.s20",
-			"before": "Our New Orleans Bread Pudding comes with a warm whiskey caramel, buttermilk ice cream — a little tangy — and pralines, the classic New Orleans pecan candy, for crunch.",
-			"after": "Our New Orleans Bread Pudding comes with a warm whiskey caramel, buttermilk ice cream, a little tangy, and pralines, the classic New Orleans pecan candy, for crunch."
-		},
-		{
-			"path": "model.dishes[43].lines.s45",
-			"before": "Bread pudding is New Orleans’ comfort dessert — bread soaked in a sweet custard and baked until soft inside and golden on top. Ours gets a whiskey caramel, rich and a little boozy, and buttermilk ice cream, which has a gentle tang that keeps it from being too sweet. Pralines — PRAH-leens — are the New Orleans candy of pecans, butter and brown sugar, and they add crunch. Warm and cold, sweet and tangy.",
-			"after": "Bread pudding is New Orleans’ comfort dessert, bread soaked in a sweet custard and baked until soft inside and golden on top. Ours gets a whiskey caramel, rich and a little boozy, and buttermilk ice cream, which has a gentle tang that keeps it from being too sweet. Pralines, PRAH-leens, are the New Orleans candy of pecans, butter and brown sugar, and they add crunch. Warm and cold, sweet and tangy.",
-			"override": 3169
-		},
-		{
 			"path": "model.dishes[43].pairing.sayIt",
 			"before": "With the bread pudding, a glass of Mosel Auslese — honeyed and sweet, with enough acidity to keep it bright.",
 			"after": "With the bread pudding, a glass of Mosel Auslese, honeyed and sweet, with enough acidity to keep it bright."
@@ -1295,21 +1013,6 @@
 			"path": "model.dishes[43].pairing.zeroProof",
 			"before": "New Orleans–style coffee with chicory",
 			"after": "New Orleans-style coffee with chicory"
-		},
-		{
-			"path": "model.dishes[44].lines.s10",
-			"before": "The Snickers — milk chocolate Bavarian cream, caramel custard, nougat ice cream and roasted peanuts.",
-			"after": "The Snickers: milk chocolate Bavarian cream, caramel custard, nougat ice cream and roasted peanuts."
-		},
-		{
-			"path": "model.dishes[44].lines.s20",
-			"before": "The Snickers is our grown-up candy bar: a milk chocolate Bavarian cream, caramel custard, nougat ice cream and roasted peanuts — all the flavors you know, done as a plated dessert.",
-			"after": "The Snickers is our grown-up candy bar: a milk chocolate Bavarian cream, caramel custard, nougat ice cream and roasted peanuts, all the flavors you know, done as a plated dessert."
-		},
-		{
-			"path": "model.dishes[44].lines.s45",
-			"before": "You can guess the inspiration. Each part of the candy bar becomes its own dessert: a milk chocolate Bavarian — a light, set cream, somewhere between a mousse and a custard — plus a silky caramel custard, nougat turned into ice cream, and roasted peanuts for salt and crunch. It’s nostalgic and fun, but refined. It closes our dinner tasting with a glass of Banyuls, a sweet red from France — chocolate’s best friend.",
-			"after": "You can guess the inspiration. Each part of the candy bar becomes its own dessert: a milk chocolate Bavarian, a light, set cream, somewhere between a mousse and a custard, plus a silky caramel custard, nougat turned into ice cream, and roasted peanuts for salt and crunch. It’s nostalgic and fun, but refined. It closes our dinner tasting with a glass of Banyuls, a sweet red from France, chocolate’s best friend."
 		},
 		{
 			"path": "model.dishes[44].serviceNote",
@@ -1338,16 +1041,6 @@
 			"after": "New Orleans-style coffee with chicory"
 		},
 		{
-			"path": "model.dishes[45].lines.s10",
-			"before": "Our Lemon Tart — yuzu mousse, lemon jelly, sweet pastry crumb and toasted meringue.",
-			"after": "Our Lemon Tart: yuzu mousse, lemon jelly, sweet pastry crumb and toasted meringue."
-		},
-		{
-			"path": "model.dishes[45].lines.s20",
-			"before": "Our Lemon Tart is bright and light: a yuzu mousse — yuzu is a fragrant Japanese citrus — with lemon jelly, a sweet pastry crumb and toasted meringue.",
-			"after": "Our Lemon Tart is bright and light: a yuzu mousse, yuzu is a fragrant Japanese citrus, with lemon jelly, a sweet pastry crumb and toasted meringue."
-		},
-		{
 			"path": "model.dishes[45].serviceNote",
 			"before": "Eggs (meringue, mousse), dairy, gluten (pastry). The lightest dessert — suggest it after a rich meal.",
 			"after": "Eggs (meringue, mousse), dairy, gluten (pastry). The lightest dessert, suggest it after a rich meal."
@@ -1372,11 +1065,6 @@
 			"path": "model.dishes[46].lines.s10",
 			"before": "Pineapple Tarte Tatin — charred pineapple on puff pastry, with sweetened condensed anglaise and whipped vanilla mousse.",
 			"after": "Pineapple Tarte Tatin, charred pineapple on puff pastry, with sweetened condensed anglaise and whipped vanilla mousse."
-		},
-		{
-			"path": "model.dishes[46].lines.s45",
-			"before": "Tarte Tatin — tart tah-TAN — is the famous French upside-down tart, usually apples caramelized in butter and sugar on crisp pastry. We make it with pineapple, charred so it’s caramelized with a little smoky edge. Puff pastry gives it flaky layers, and the anglaise — a pourable vanilla custard — is made with sweetened condensed milk for a rich, caramel-milk flavor. Whipped vanilla mousse keeps it light. Tropical, buttery and bright.",
-			"after": "Tarte Tatin, tart tah-TAN, is the famous French upside-down tart, usually apples caramelized in butter and sugar on crisp pastry. We make it with pineapple, charred so it’s caramelized with a little smoky edge. Puff pastry gives it flaky layers, and the anglaise, a pourable vanilla custard, is made with sweetened condensed milk for a rich, caramel-milk flavor. Whipped vanilla mousse keeps it light. Tropical, buttery and bright."
 		},
 		{
 			"path": "model.dishes[46].pairing.sayIt",

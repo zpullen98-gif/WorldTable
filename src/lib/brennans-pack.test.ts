@@ -65,7 +65,7 @@ describe("the Brennan's pack", () => {
 		const timed = h.wines.filter((w) => w.lines).length;
 		expect(r.stdout).toMatch(/\d+ marks all by person/);
 		expect(r.stdout).toContain(`notes ${[ABOUT_Q, ...COACH, POUR_Q].map(notes).join('/')} under the five fixed questions, ${kept} kept notes in all; 0 thin lines`);
-		expect(r.stdout).toContain('62 dishes, 32 cocktails (6 spirit-free, 9 pairings on a coffee)');
+		expect(r.stdout).toContain('70 dishes, 32 cocktails (6 spirit-free, 10 pairings on a coffee)');
 		expect(r.stdout).toContain(`${h.wines.length} wines (${timed} with timed lines)`);
 		expect(timed).toBe(h.wines.length);
 		expect(r.stdout).toContain(`${h.lexicon.length} terms, ${h.scenarios.length} scenarios, ${h.mixUps.length} mix-ups, ${h.mustKnows.length} must-knows`);

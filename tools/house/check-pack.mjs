@@ -135,7 +135,8 @@ for (const c of house.cocktails) {
 }
 /* Every zero-proof pick a pairing names in its words resolves to a drink when the house pours one by that name. */
 const coffees = house.dishes.filter((d) => d.pairing && d.pairing.value.zeroProofId && /coffee/i.test((drinkIds.get(d.pairing.value.zeroProofId) || {}).family || '')).length;
-if (coffees !== 9) F(`${coffees} pairings take a coffee as their zero-proof pick, expected the guide's 9`);
+/* The guide's 9 coffee picks and, from the 12:30 edition of 17 October 2026, the Chocolate Crémeux's chicory coffee (the sommelier's pick for the chocolate course, on the Snickers' precedent). */
+if (coffees !== 10) F(`${coffees} pairings take a coffee as their zero-proof pick, expected the guide's 9 and the Chocolate Crémeux's chicory coffee`);
 
 /* The edition rule: one stamp, Date.parse(house.pack.builtAt), on every mark, kept note and record. */
 const EDITION = house.pack ? Date.parse(house.pack.builtAt) : NaN;

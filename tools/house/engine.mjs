@@ -136,7 +136,20 @@ export function stagingFragmentFiles(names) { return names.map((n) => path.join(
    now; the Hollandaise technique, the Escoffier story, the courtyard turtles, the sauces must-know
    and the Mother sauces term say so; stamped at the quarter hour before its build, never ahead of
    the clock. */
-export const EDITION_BUILT_AT = '2026-10-16T22:15:00.000Z';
+/* The 12:30 edition of 17 October is the Fall 2026 edition: the eight dishes of the owner's Fall 2026
+   training sheets (pages/brennans-fall-2026-training-sheets-2026-10-15.txt), filed in a Fall 2026
+   section with no price (priceUnknown, a manager ask blocking the price), each with its pairing, its
+   bottle tiers, its lineup asks, its components and its compare rows; the polished lines of every
+   dish (s10, s20 and s45 to the standard, the guest line following the s20, and the parts and origins
+   a line contradicted); the ingredient and technique components of the whole menu
+   (components/_staging comp-1 to comp-6, research/ingredients-comp-1 to 6-2026-10-17.md) with the
+   dishes the existing components gained (_staging/gains.json); the Eggs Hussarde origin reconciled
+   across its origin, its lines, its kept notes, the Blangé term and the Hussarde versus Sardou
+   mix-up (older than the restaurant, Blangé credited with the Brennan's version, never invented
+   here); the nine fall cocktails' sheet notes; the mascarpone, burrata and harissa kept notes set to
+   the pack's term cards; and the Fall 2026 sheets filed as the fifteenth source; stamped at the
+   quarter hour before its build, never ahead of the clock. */
+export const EDITION_BUILT_AT = '2026-10-17T12:30:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a
@@ -214,17 +227,19 @@ export function loadEngine(fail) {
 export const CHILD_SECTIONS = ["Children's breakfast", "Children's dinner"];
 export const SNACK_SECTION = 'Roost Bar & Bubbles snacks';
 
-/* The counts the Brennan's pack must carry: the guide's 47 dishes plus the 8 children's plates and
-   the 7 Bubbles snacks (62); from the 01:30 edition of 4 October 2026, read against the owner's paste,
-   32 drinks: the 4 signature drinks still printed, the 3 Luxury Roost Bar cocktails, the 2 premium
-   Sazeracs, the Bloody Mary, the Champagne Cocktail, the 3 coffees and the juice, the 6 drinks of
-   Billboard Songs from 1946 and the 2 of Temperance, 1946, the 3 dessert and 2 coffee cocktails and the
-   4 Bubbles cocktails (6 of them zero-proof; the summer list's 8 are retired); 94 items with a formula
-   in all; 34 wines (the guide's 20, the Barbera and the Argyle Brut by the glass, the 7 Birthday Bubbles
-   bottles and the 5 Bubbles rosés), the menus' wines, with the floor's bottles and the dishes they
-   tier counted from the overrides (overrideCounts); 2 tastings; 14 sources; at least 115 terms; at least 33 scenarios; 4 or more mix-ups; the
-   must-knows; a lineup register of at least 60 questions; the 35 pairings; and the five disputes the
-   plan names. */
+/* The counts the Brennan's pack must carry: the guide's 47 dishes plus the 8 children's plates, the
+   7 Bubbles snacks and, from the 12:30 edition of 17 October 2026, the 8 dishes of the Fall 2026
+   section read from the owner's training sheets (70); from the 01:30 edition of 4 October 2026, read
+   against the owner's paste, 32 drinks: the 4 signature drinks still printed, the 3 Luxury Roost Bar
+   cocktails, the 2 premium Sazeracs, the Bloody Mary, the Champagne Cocktail, the 3 coffees and the
+   juice, the 6 drinks of Billboard Songs from 1946 and the 2 of Temperance, 1946, the 3 dessert and 2
+   coffee cocktails and the 4 Bubbles cocktails (6 of them zero-proof; the summer list's 8 are
+   retired); 102 items with a formula in all; 34 wines (the guide's 20, the Barbera and the Argyle Brut
+   by the glass, the 7 Birthday Bubbles bottles and the 5 Bubbles rosés), the menus' wines, with the
+   floor's bottles and the dishes they tier counted from the overrides (overrideCounts); 2 tastings;
+   15 sources (the Fall 2026 training sheets the fifteenth); at least 115 terms; at least 33
+   scenarios; 4 or more mix-ups; the must-knows; a lineup register of at least 60 questions; the 43
+   pairings (the guide's 35 and the 8 fall dishes'); and the five disputes the plan names. */
 /* THE FLOOR'S BOTTLES. The menus' wines stay fixed at 34 (list 'glass', the default), and the bottle
    list's wines and the dishes with bottle tiers are counted from what the overrides file asks for,
    so a new bottle or a new tier moves the expected figure with it rather than a number here: every
@@ -319,12 +334,12 @@ export function countProblems(house, expect = overrideCounts(), frag = fragmentC
 	const eq = (what, got, want) => { if (got !== want) out.push(`${what}: ${got}, expected ${want}`); };
 	const ge = (what, got, want) => { if (got < want) out.push(`${what}: ${got}, expected at least ${want}`); };
 	const inSection = (names) => (house.dishes || []).filter((d) => names.includes(d.section)).length;
-	eq('dishes', n('dishes'), 62);
+	eq('dishes', n('dishes'), 70);
 	eq("children's plates", inSection(CHILD_SECTIONS), 8);
 	eq('Bubbles snacks', inSection([SNACK_SECTION]), 7);
 	eq('cocktails', n('cocktails'), 32);
 	eq('spirit-free cocktails', zero, 6);
-	eq('dishes and cocktails in all', n('dishes') + n('cocktails'), 94);
+	eq('dishes and cocktails in all', n('dishes') + n('cocktails'), 102);
 	const bottles = (house.wines || []).filter((w) => w.list === 'bottle');
 	eq('wines on the menus (list glass)', n('wines') - bottles.length, MENU_WINES);
 	eq("the floor's bottles (list bottle, from the overrides' wine:+ adds)", bottles.length, expect.bottles);
@@ -333,14 +348,14 @@ export function countProblems(house, expect = overrideCounts(), frag = fragmentC
 	const tiered = (house.dishes || []).filter((d) => d.pairing && d.pairing.value && d.pairing.value.bottles).length;
 	eq("dishes with bottle tiers (from the overrides' bottles entries)", tiered, expect.tiered);
 	eq('tastings', n('tastings'), 2);
-	eq('sources', (house.sources || []).length, 14);
+	eq('sources', (house.sources || []).length, 15);
 	ge('terms', n('lexicon'), 115);
 	ge('scenarios', n('scenarios'), 33);
 	ge('mix-ups', n('mixUps'), 4);
 	ge('must-knows', n('mustKnows'), 12);
 	ge('askAtLineup', n('askAtLineup'), 60);
 	const pairings = (house.dishes || []).filter((d) => d.pairing && d.pairing.value && d.pairing.value.wineId).length;
-	eq('pairings', pairings, 35);
+	eq('pairings', pairings, 43);
 	const disputeText = JSON.stringify(house.disputes || []).toLowerCase();
 	for (const [name, re] of [
 		['the Hussarde Champagne', /lafitte/],

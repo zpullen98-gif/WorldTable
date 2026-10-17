@@ -35,7 +35,8 @@
         ]
       },
       "items": [
-        "Eggs Sardou"
+        "Eggs Sardou",
+        "Agnolotti del Plin"
       ],
       "terms": [],
       "sources": [
@@ -7242,7 +7243,7 @@
         "who": "Vital Farms",
         "where": "Austin, Texas (packing at Springfield, Missouri)",
         "founded": "2007",
-        "history": "Vital Farms began in 2007, when Matt O'Hayer started with 20 hens on a 27-acre farm near Austin, Texas. The idea was eggs from hens that genuinely live outdoors, and the company built its standard around pasture: each hen has at least 108 square feet of rotated pasture, where it forages for grasses, succulents and wildflowers. That is the same figure the Certified Humane pasture standard sets, and the eggs carry that certification.\n\nRather than keep one great company flock, Vital Farms works with a network of small family farms, now numbering in the hundreds. In 2017 it opened its own egg washing and packing plant in Springfield, Missouri, which it calls Egg Central Station, and a second Egg Central Station is being built in Seymour, Indiana.\n\nThe company went public on Nasdaq as VITL in July 2020 and is a Certified B Corporation. It sells butter as well as eggs.\n\nOn our menu the name appears once: the sunny-side-up egg on the breakfast Creole-Spiced Hanger Steak, where the runny yolk meets the béarnaise.",
+        "history": "Vital Farms began in 2007, when Matt O'Hayer started with 20 hens on a 27-acre farm near Austin, Texas. The idea was eggs from hens that genuinely live outdoors, and the company built its standard around pasture: each hen has at least 108 square feet of rotated pasture, where it forages for grasses, succulents and wildflowers. That is the same figure the Certified Humane pasture standard sets, and the eggs carry that certification.\n\nRather than keep one great company flock, Vital Farms works with a network of small family farms, now numbering in the hundreds. In 2017 it opened its own egg washing and packing plant in Springfield, Missouri, which it calls Egg Central Station, and a second Egg Central Station is being built in Seymour, Indiana.\n\nThe company went public on Nasdaq as VITL in July 2020 and is a Certified B Corporation. It sells butter as well as eggs.\n\nOn our menus the name appears twice: the sunny-side-up egg on the breakfast Creole-Spiced Hanger Steak, where the runny yolk meets the béarnaise, and the egg yolk on the Fall 2026 Steak Tartare with Rye.",
         "facts": [
           "Founded in 2007 by Matt O'Hayer and headquartered in Austin, Texas.",
           "It began with 20 hens on a 27-acre farm.",
@@ -7252,18 +7253,19 @@
           "Listed on Nasdaq as VITL since July 2020, and a Certified B Corporation."
         ],
         "notes": [
-          "The menu names Vital Farms only on the breakfast hanger. Do not say the eggs on the Hussarde, Sardou, Owen or Duck Confit Waffle are Vital Farms until the kitchen confirms.",
+          "The menus name Vital Farms on the breakfast hanger and on the fall Steak Tartare with Rye's egg yolk. Do not say the eggs on the Hussarde, Sardou, Owen or Duck Confit Waffle are Vital Farms until the kitchen confirms.",
           "Guests ask what pasture-raised means: at least 108 square feet of rotated outdoor pasture per hen, so the hens forage on grass.",
           "Do not promise a yolk colour; it changes with the hens' diet and the season.",
           "Any question about egg doneness or diet goes to the kitchen."
         ],
         "sayIt": "The egg is Vital Farms, pasture-raised: every hen has at least 108 square feet of outdoor pasture.",
         "askKitchen": [
-          "Are all our eggs Vital Farms, or only the egg on the breakfast hanger?"
+          "Are all our eggs Vital Farms, or only the egg on the breakfast hanger and the yolk on the Steak Tartare with Rye?"
         ]
       },
       "sources": [
-        "research/producers-food-beef-eggs-duck-2026-10-06.md (section 2)"
+        "research/producers-food-beef-eggs-duck-2026-10-06.md (section 2)",
+        "page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 4-15 (Steak Tartare with Rye: Vital Farms Egg Yolk)"
       ]
     },
     {
@@ -11212,6 +11214,44 @@
       },
       "sources": [
         "research/producers-cellar-white-burgundy-cote-2026-10-10.md (section 8)"
+      ]
+    },
+    {
+      "component": "lobster",
+      "producer": {
+        "type": "fishery",
+        "who": "The American lobster fishery of Maine and Atlantic Canada (no supplier is printed)",
+        "where": "The Gulf of Maine and the cold North Atlantic coast, from Labrador and Nova Scotia down past New England",
+        "founded": "",
+        "history": "The clawed lobster on an American menu is Homarus americanus, the American lobster, which lives in the cold water of the North Atlantic from Labrador and Nova Scotia down past New England; the warm Gulf of Mexico has only the clawless spiny lobster. It is caught in baited traps, never nets, mostly within a few miles of shore.\n\nMaine is the fishery's heart on the American side. Its Department of Marine Resources' preliminary figures for 2024 put the state's landings at about 86.1 million pounds, worth $528.4 million at the boat, an average of $6.14 a pound, the second highest price on record; the catch was down from 96.9 million pounds in 2023 and was the lowest in fifteen years, with about 285,000 fewer traps set and a cooler Gulf of Maine. Canada is by far the largest exporter of live and frozen American lobster, with the United States second.\n\nIts conservation rules are a point of pride. In Maine a lobster must measure at least 3 1/4 inches along the body shell and no more than 5 inches, so the small ones grow and the large breeders stay in the water; an egg-bearing female is returned with a V-notch cut in a tail flipper, and any lobster carrying that mark is returned while the notch lasts.\n\nA lobster that has just moulted, in summer and early autumn, has a soft shell and sweet, wet meat and ships poorly; a hard-shell lobster from the colder months is fuller and travels live for days. Restaurants far from the coast buy live lobsters by air or cooked meat and tails. The menu prints no supplier, state or fishery for the Louisiana BBQ Lobster, so where the kitchen buys its lobster is a question for the chef.",
+        "facts": [
+          "The clawed lobster is Homarus americanus, the American lobster of the cold North Atlantic; the Gulf of Mexico has only spiny lobster.",
+          "Maine landed about 86.1 million pounds of lobster in 2024, worth $528.4 million at the boat, by its Department of Marine Resources' preliminary figures.",
+          "The 2024 boat price averaged $6.14 a pound, the second highest on record, while the catch was the lowest in fifteen years.",
+          "Canada is by far the largest exporter of live and frozen American lobster; the United States is second.",
+          "Maine's legal lobster measures between 3 1/4 and 5 inches along the body shell; the small grow on and the big breeders stay.",
+          "An egg-bearing female is V-notched in a tail flipper and returned, and any lobster with that mark is returned while the notch lasts, about two moults.",
+          "Lobsters are caught in baited traps, not nets; soft-shell lobsters follow the summer moult, hard-shell ones the colder months."
+        ],
+        "notes": [
+          "Say cold North Atlantic water, not the Gulf: Louisiana in the dish's name is the barbecue style, not where the lobster swims.",
+          "Never name Maine, Canada or any supplier as the kitchen's source until the chef confirms it; the menu prints none.",
+          "If a guest asks whether it is fresh, ask the chef how tonight's lobster arrived, live or as cooked meat, and say that.",
+          "Ask at lineup whether the lobster is blanched and shelled ahead or cooked from raw in the sauce before you describe the cooking.",
+          "Dietary questions go to the service note and the kitchen."
+        ],
+        "sayIt": "Clawed lobster comes from the cold North Atlantic, mostly Maine and Atlantic Canada, caught in traps under rules that return the breeders to the water.",
+        "askKitchen": [
+          "Where does our lobster come from, and does it arrive live or as cooked meat?",
+          "Is it blanched and shelled ahead or cooked from raw in the barbecue sauce?",
+          "Hard-shell or soft-shell this season?"
+        ]
+      },
+      "sources": [
+        "research/ingredients-comp-5-2026-10-17.md (section 2)",
+        "guide.txt (pdf p5 to p6, the Louisiana BBQ Lobster card)",
+        "research/dossier-the-kitchen.md (Louisiana BBQ Lobster; section 15)",
+        "components/dishes.json (lobster)"
       ]
     }
   ]
