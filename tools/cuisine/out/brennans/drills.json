@@ -1,0 +1,140 @@
+{
+	"steps": [
+		{
+			"stem": "build-a-classic-eggs-hussarde",
+			"entry": "eggs-hussarde",
+			"title": "Build the Eggs Hussarde",
+			"prompt": "Put the stages of the Eggs Hussarde, poached ahead and stacked as the house guide gives it, in order. One stage does not belong.",
+			"steps": [
+				"Poach the eggs ahead in water just below a simmer, about 85°C (185°F), for about three minutes",
+				"Lift them into iced water and hold them until the order comes in",
+				"On the order, rewarm a held egg in hot water, well below a simmer, for 30 seconds to a minute, while the split English muffin toasts and the Canadian bacon warms",
+				"Lay the muffin on the plate and the Canadian bacon on the muffin",
+				"Spoon the hot marchand de vin over the bacon",
+				"Drain the warmed egg well and set it on the sauce",
+				"Spoon the warm hollandaise over the egg and send the plate at once"
+			],
+			"distractor": "Keep the poaching water at a rolling boil so the whites set faster",
+			"why": "Many kitchens poach ahead and hold the eggs cold, so the plate comes together in moments. The house guide stacks from the bottom: muffin, bacon, marchand de vin, egg, hollandaise, so the dark sauce sits under the egg and the pale one rests on it. A rolling boil tears the whites. Confirm the house stacking at the pass."
+		},
+		{
+			"stem": "flame-bananas-foster-at-the-table",
+			"entry": "bananas-foster-at-the-table",
+			"title": "Flame Bananas Foster at the table",
+			"prompt": "Put the stages of Bananas Foster at the guéridon, the tableside cart, in order. One stage does not belong.",
+			"steps": [
+				"Set the cart where nothing hangs overhead, the spirits measured into small vessels and a lid in reach",
+				"Melt the butter and brown sugar to a bubbling blond caramel and dust it with cinnamon",
+				"Stir in the measured banana liqueur",
+				"Lay in the bananas and turn them once, just until they soften",
+				"Ask the guests to sit back a little for the rum, then stop talking",
+				"Pull the pan off the flame and pour in the measured rum",
+				"Return the pan to the flame and tilt the far edge to catch, away from the guests",
+				"Once the flame has clearly died, spoon the bananas over the ice cream, then the warm sauce",
+				"With the plates set down, turn the burner off, and only then leave the cart"
+			],
+			"distractor": "Pour more rum straight from the bottle into the burning pan",
+			"why": "The caramel is built and the bananas softened before any spirit is lit, the banana liqueur going in before the bananas, as the house's published recipe has it. The guests sit back, the rum goes in off the flame, nothing is plated until the flame dies, and the burner goes off before you leave. Lineup confirms the cart build."
+		}
+	],
+	"match": [
+		{
+			"stem": "brennans-garnish",
+			"title": "Brennan's plates and what comes with them",
+			"prompt": "Match each Brennan's plate to what the menu serves with it.",
+			"left": "Dish",
+			"right": "What comes with it",
+			"pairs": [
+				[
+					"Eggs Hussarde",
+					"Housemade English muffins and coffee-cured Canadian bacon",
+					"eggs-hussarde"
+				],
+				[
+					"Eggs Sardou",
+					"Crispy artichokes and Parmesan creamed spinach",
+					"eggs-sardou"
+				],
+				[
+					"Turtle Soup",
+					"Brown butter spinach, grated egg and aged sherry",
+					"brennans-turtle-soup"
+				],
+				[
+					"Seafood Gumbo",
+					"Andouille and Louisiana popcorn rice",
+					"brennans-seafood-gumbo"
+				],
+				[
+					"New Orleans Shrimp & Grits",
+					"Tasso, Creole sauce and fried okra chips",
+					"shrimp-and-grits"
+				],
+				[
+					"Pecan Gulf Fish",
+					"Louisiana lump crab, cauliflower purée and wilted collard greens",
+					"pecan-gulf-fish"
+				],
+				[
+					"Redfish Véronique",
+					"Hibiscus-pickled grapes, braised leeks and fingerling potatoes",
+					"redfish-veronique"
+				],
+				[
+					"Roasted Chateaubriand",
+					"Roasted and glazed summer squash, served for two",
+					"chateaubriand-foyot"
+				]
+			]
+		},
+		{
+			"stem": "brennans-methods",
+			"title": "Brennan's plates and their method",
+			"prompt": "Match each Brennan's plate to the method that cooks it, or leaves it raw.",
+			"left": "Dish",
+			"right": "Method",
+			"pairs": [
+				[
+					"Gulf Fish en Papillote",
+					"Sealed in a banana leaf and baked, so the fish steams in its own juices",
+					"en-papillote"
+				],
+				[
+					"Blackened Tofu",
+					"A spice crust toasted dark in a dry cast-iron pan heated past smoking",
+					"blackening"
+				],
+				[
+					"Poussin à la Moutarde",
+					"Brined in sweet tea, then fried until the skin is crisp",
+					"frying"
+				],
+				[
+					"Duck Confit Waffle",
+					"The duck leg cooked slowly under fat, then crisped",
+					"confit"
+				],
+				[
+					"Roasted Rohan Duck Breast",
+					"Started skin down so the fat renders, finished in the oven, served pink",
+					"roast-and-baste"
+				],
+				[
+					"Eggs Owen",
+					"Short rib braised slowly in red wine, then pulled",
+					"braise-and-daube"
+				],
+				[
+					"Steak Tartare Cannoli",
+					"No heat at all: seasoned raw, piped into a fried potato shell",
+					"brennans-menu-by-method"
+				],
+				[
+					"New Orleans Bread Pudding",
+					"Soaked in custard, then baked until set",
+					"bread-pudding"
+				]
+			]
+		}
+	]
+}

@@ -1,0 +1,90 @@
+{
+	"steps": [
+		{
+			"stem": "put-louisianas-arrivals-in-order",
+			"entry": "creole-roots",
+			"title": "Put Louisiana's arrivals in order",
+			"prompt": "Put the peoples who shaped Creole cooking in the order they came into Louisiana's story, starting with those already on the land. One stage did not happen.",
+			"steps": [
+				"The Choctaw and their neighbours live on the land, growing corn, beans and squash",
+				"France founds New Orleans on the Mississippi",
+				"The first slave ships from West Africa reach the colony",
+				"Louisiana passes to Spain, whose cooks favour peppers, tomatoes and rice",
+				"Refugees from Saint-Domingue arrive by way of Cuba, bringing their cooks",
+				"Sicilian immigrants fill the French Quarter's markets and groceries"
+			],
+			"distractor": "British governors take the city from Spain and rule it until 1803",
+			"why": "The Choctaw and their neighbours were on the land first. France founded New Orleans in 1718, and slave ships brought West Africans from 1719. Spain ruled from the 1760s until 1803; Britain never ruled the city. Saint-Domingue's refugees came in 1809 and 1810, the Sicilians from the 1880s."
+		},
+		{
+			"stem": "tell-the-brennans-story-in-order",
+			"entry": "owen-and-ella-brennan",
+			"title": "Tell the Brennan's story in order",
+			"prompt": "Put the Brennan's story in the order it happened, as you would tell it to a curious table. One stage did not happen.",
+			"steps": [
+				"Owen Brennan runs the Old Absinthe House, a bar on Bourbon Street",
+				"Owen opens Owen Brennan's Vieux Carré across the street",
+				"At Owen's request, the kitchen creates Bananas Foster, named for his friend Richard Foster",
+				"Owen dies, and Ella holds the family's restaurant together",
+				"Ella and the family open the restaurant at 417 Royal Street",
+				"The family divides: Owen's widow and sons keep Royal Street, Ella's side takes Commander's Palace",
+				"Brennan's closes after a foreclosure and a family dispute",
+				"Ralph Brennan and Terry White restore the house and reopen it"
+			],
+			"distractor": "Owen Brennan welcomes the first guests to 417 Royal Street",
+			"why": "Owen ran the Old Absinthe House before opening across the street in July 1946. Bananas Foster followed in 1951. Owen died in 1955, before the move, so Ella and the family opened on Royal Street in 1956. The family divided in 1973 and 1974; the house closed in 2013 and reopened in 2014."
+		},
+		{
+			"stem": "order-the-old-houses-by-their-founding",
+			"entry": "antoines",
+			"title": "Order the old houses by their founding",
+			"prompt": "Put these New Orleans restaurants in the order they were founded, oldest first. One stage did not happen.",
+			"steps": [
+				"Antoine Alciatore, a young cook from Marseille, opens his restaurant",
+				"Emile Commander opens his restaurant on a Garden District corner",
+				"Jean Galatoire buys Victor's Restaurant on Bourbon Street and gives it his name",
+				"Arnaud Cazenave, the wine salesman called Count Arnaud, opens his restaurant",
+				"Dooky Chase's opens in Tremé as a sandwich shop selling po-boys and lottery tickets",
+				"Owen Brennan opens his Vieux Carré restaurant on Bourbon Street"
+			],
+			"distractor": "Ella Brennan opens Commander's Palace in the Garden District",
+			"why": "Antoine's, from 1840, comes first. Commander's Palace comes next whether you take 1880 or 1893, then Galatoire's in 1905, Arnaud's in 1918, Dooky Chase's in 1941 and Brennan's in 1946. Emile Commander opened Commander's Palace; the Brennan family bought it around 1970."
+		}
+	],
+	"match": [
+		{
+			"stem": "people-gifts",
+			"title": "People and what they gave the kitchen",
+			"prompt": "Match each person to what they gave the kitchen.",
+			"left": "Person",
+			"right": "What they gave",
+			"pairs": [
+				["La Varenne", "Le Cuisinier françois, with bouillon, reduction and an early printed roux", "la-varenne"],
+				["Carême", "Sugar pièces montées and four great sauces, allemande among them", "careme"],
+				["Escoffier", "The kitchen brigade of stations, and Le Guide culinaire", "escoffier"],
+				["Lafcadio Hearn", "La Cuisine Créole, the 1885 cookbook generally credited to him", "hearn-la-cuisine-creole"],
+				["Owen Brennan", "Breakfast at Brennan's, a long morning meal in courses", "owen-and-ella-brennan"],
+				["Paul Blangé", "Bananas Foster, created at Owen Brennan's request in 1951", "paul-blange"],
+				["Paul Prudhomme", "Blackened redfish and the Magic Seasoning Blends", "paul-prudhomme"],
+				["Leah Chase", "Gumbo z'herbes on Holy Thursday at Dooky Chase's", "leah-chase"]
+			]
+		},
+		{
+			"stem": "roots-gifts",
+			"title": "Roots and what each brought",
+			"prompt": "Match each root of Louisiana cooking to what it brought to the kitchen.",
+			"left": "Root",
+			"right": "What it brought",
+			"pairs": [
+				["French", "Technique, the roux and sauces built on stock", "creole-roots"],
+				["Spanish", "Peppers, tomatoes and rice cooked with meat in one pan", "jambalaya"],
+				["West African", "Okra, rice growing and cooking, and deep frying", "okra"],
+				["Caribbean", "Cooks from Saint-Domingue, where French, African and island cooking had met", "creole-roots"],
+				["Native American", "Filé, ground dried sassafras leaves, with corn, beans and squash", "file"],
+				["German", "Sausage and mustard making, credited with shaping Louisiana andouille and Creole mustard", "andouille"],
+				["Sicilian", "The muffuletta: cured meats, cheese and olive salad on a round loaf", "creole-roots"],
+				["Acadian", "The country cooking at the root of Cajun food", "creole-and-cajun"]
+			]
+		}
+	]
+}

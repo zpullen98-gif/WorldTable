@@ -1,0 +1,55 @@
+{
+  "steps": [
+    {
+      "stem": "flame-a-cafe-brulot",
+      "entry": "cafe-brulot",
+      "title": "Flame a café brûlot",
+      "prompt": "Put the stages of a café brûlot in order, from the coffee pot to the cup. One stage does not belong.",
+      "steps": [
+        "Brew strong chicory coffee and keep it hot, short of the boil",
+        "With the coffee ready and the burner unlit, put the sugar, cinnamon, cloves and lemon peel in the bowl and add the brandy and orange liqueur from a small measuring jug",
+        "Light the burner low and warm the bowl gently",
+        "Light the warm spirit with a long match and stir gently to melt the sugar",
+        "Hold the clove-studded orange spiral on a fork over the bowl and pour flaming brandy slowly down it from the ladle",
+        "Ladle in the hot coffee gradually until the flame dies",
+        "Ladle the drink into demitasse cups, leaving the spice and peel behind"
+      ],
+      "distractor": "Top up the flaming bowl with brandy straight from the bottle to keep the flame going",
+      "why": "Everything is ready before anything is lit: the coffee hot and the spirit measured into the bowl before the burner goes on, never poured from the bottle near a flame. The spirit burns with the spice first, the orange spiral gets its flaming pour, and the coffee goes in last to put the flame out."
+    },
+    {
+      "stem": "twice-fry-souffle-potatoes",
+      "entry": "souffle-potatoes",
+      "title": "Twice-fry soufflé potatoes",
+      "prompt": "Put the stages of soufflé potatoes in order, from the whole potato to the table. One stage does not belong.",
+      "steps": [
+        "Peel a mature, floury potato such as a russet and square it off",
+        "Cut lengthwise slices about 3 mm (1/8 inch) thick on a mandoline, every slice the same, and trim them to ovals",
+        "Dry the slices thoroughly",
+        "Fry them a few at a time at about 150°C (302°F) for 4 to 6 minutes, until cooked through and blistered but not coloured",
+        "Lift them onto a rack and let them wait for service",
+        "To order, drop them into the second fryer at 190 to 200°C (374 to 392°F), where the good ones swell within seconds",
+        "Fry them a minute or two more, until crisp and golden",
+        "Drain them on a rack, salt them and send them to the table at once"
+      ],
+      "distractor": "Cover the puffed potatoes and hold them warm until the table is ready",
+      "why": "Even, dry slices go into the cooler first fry, which cooks them and sets a skin on each face without colour. Only at service does the hot second fryer flash the moisture inside to steam and puff them; a minute more crisps the skins, and a puffed slice softens if it waits."
+    }
+  ],
+  "match": [
+    {
+      "stem": "house-signatures",
+      "title": "Old houses and their signatures",
+      "prompt": "Match each New Orleans house to the dish it made its own.",
+      "left": "House",
+      "right": "Signature dish",
+      "pairs": [
+        ["Antoine's", "Oysters Rockefeller", "oysters-rockefeller"],
+        ["Arnaud's", "Shrimp Arnaud in red rémoulade", "shrimp-remoulade-and-arnaud"],
+        ["Galatoire's", "Trout meunière amandine", "trout-at-galatoires"],
+        ["Commander's Palace", "Bread pudding soufflé", "bread-pudding-souffle"],
+        ["Brennan's", "Bananas Foster", "bananas-foster-at-the-table"]
+      ]
+    }
+  ]
+}

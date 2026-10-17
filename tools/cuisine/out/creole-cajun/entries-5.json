@@ -1,0 +1,706 @@
+{
+	"entries": [
+		{
+			"stem": "grillades",
+			"slug": "grillades",
+			"title": "Grillades and grits",
+			"say": "gree-YAHDS and GRITS",
+			"level": 3,
+			"kind": "dish",
+			"summary": "Thin pieces of veal or beef round, pounded, seasoned, browned hard and braised in a brown roux gravy with the trinity and tomato until fork tender, then spooned over slow-cooked grits. A Creole brunch classic with country roots.",
+			"guest": "Grillades are thin slices of beef or veal braised slowly in a dark gravy with onion, pepper and tomato, spooned over creamy grits: old New Orleans brunch food.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Grillades, said gree-YAHDS, are thin pieces of veal or beef round, pounded flat, seasoned, browned hard and braised slowly in a brown roux gravy with the trinity and tomato until fork tender. Spooned over grits they become grillades and grits, a Creole brunch classic that suits a crowd, since the gravy improves overnight.",
+						"The name comes from the French griller, to grill, yet nothing here is grilled: the meat is seared, then stewed. Veal is the old city choice, beef round the everyday one and pork the country one; the round is lean and hard-working, which is why it wants pounding."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Cut 900 g (2 lb) of top round or veal round across the grain into slices 1 cm (3/8 inch) thick, pound them to about 5 mm (1/4 inch) and cut palm-sized pieces. Season with salt, black pepper and cayenne, dust with flour and brown in hot oil, a few at a time, 1 to 2 minutes a side. The browned bits left behind, the fond, flavour the gravy.",
+						"In the same pot cook 60 g (2 oz) of flour in 60 ml (1/4 cup) of oil over medium-low heat to a medium brown roux, the colour of milk chocolate, 25 to 35 minutes. Add 300 g (10 oz) of diced trinity, which stops the roux darkening, and soften it for 5 to 8 minutes, adding garlic at the end. Stir in 400 g (14 oz) of chopped tomatoes, 750 ml (about 3 cups) of beef or veal stock, thyme, two bay leaves and 30 to 60 ml (2 to 4 tbsp) of red wine or red wine vinegar to cut the richness.",
+						"Return the meat, cover and braise at a bare simmer or in a 160°C (320°F) oven for 1 to 1 1/2 hours, until fork tender. Season once the gravy has reduced and finish with green onion and parsley. To hold, keep the meat covered under its gravy at 57°C (135°F) or above, the FDA Food Code's hot-holding line; meat left out dries and turns stringy."
+					]
+				},
+				{
+					"key": "ratio",
+					"paras": [
+						"The gravy takes about 60 g (2 oz) of flour, cooked in the same weight of fat, for every 1 litre (about 1 quart) of liquid: a generous hand, because a brown roux thickens less than a pale one.",
+						"Grits take 1 part to 4 parts liquid by volume: 160 g (1 cup) to 1 litre (about 1 quart) of water, or milk and water, with 5 g (1 tsp) of salt, whisked in a thin stream. Stone-ground grits, coarse and carrying the germ, may need more liquid and 45 to 60 minutes of low heat, stirred often; quick grits, ground finer, take about 5 minutes. Finish with butter, and for cheese grits stir in 115 g (4 oz) of grated sharp cheddar off the heat."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"Most faults come from hurry. A crowded pot steams the meat grey, a hard boil makes it stringy and a roux pulled too soon leaves the gravy pale and floury. Grits lump when poured in fast and stiffen on the hold; loosen them with hot milk."
+					]
+				},
+				{
+					"key": "history",
+					"paras": [
+						"The usual telling puts the roots at the boucherie, the communal pig killing of the south Louisiana countryside, where fresh pork was cut thin and fried with onions over the fire. It is a likely story, not a documented one. What is certain is that the city took it up as a breakfast and brunch dish."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"There are no grillades on the Brennan's menus we study, but each half has a cousin. The Cheddar Grits, a breakfast and lunch side, are the cheese grits variation. The Eggs Owen shares the idea of beef slow-cooked in a rich gravy for the morning, but it is short rib débris, DAY-bree, beef braised in red wine until it falls into shreds in its deep, winey gravy."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Call grillades what they are: thin slices of beef or veal braised in a dark gravy with onion, pepper and tomato, over creamy grits. A guest who hears grill expects a steak, so say soft, rich and gently spiced. At Brennan's breakfast and lunch, steer a guest who wants grillades to the Eggs Owen. Questions about flour, dairy or anything else go to the service note and the kitchen."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Roux for the gravy",
+					"value": "60 g (2 oz) flour in 60 ml (1/4 cup) oil for 1 litre (about 1 quart) of liquid"
+				},
+				{
+					"label": "Grits to liquid",
+					"value": "1 to 4 by volume, 160 g (1 cup) to 1 litre (about 1 quart)"
+				},
+				{
+					"label": "Cheese grits",
+					"value": "115 g (4 oz) sharp cheddar for 160 g (1 cup) of grits"
+				},
+				{
+					"label": "Meat thickness",
+					"value": "Cut 1 cm (3/8 inch), pounded to 5 mm (1/4 inch)"
+				}
+			],
+			"temps": [
+				{
+					"label": "Oven for the braise",
+					"c": 160,
+					"f": 320
+				},
+				{
+					"label": "Hold covered in the gravy at or above",
+					"c": 57,
+					"f": 135
+				}
+			],
+			"faults": [
+				{
+					"fault": "Grey, steamed meat with no crust",
+					"cause": "Too many pieces in the pot at once, so the heat dropped and the meat stewed in its juices.",
+					"fix": "Brown in batches with space between the pieces, in fat hot enough to sizzle loudly."
+				},
+				{
+					"fault": "Tough grillades",
+					"cause": "The braise stopped before the connective tissue had softened.",
+					"fix": "Keep braising, covered, at a bare simmer until a fork slides through."
+				},
+				{
+					"fault": "Dry, stringy meat",
+					"cause": "The pot boiled hard, or the meat sat out of the gravy on the hold.",
+					"fix": "Keep the heat low and the meat covered by gravy; loosen the gravy with hot stock."
+				},
+				{
+					"fault": "Pale, floury gravy",
+					"cause": "The roux came off the heat before it reached medium brown, or was not cooked through.",
+					"fix": "Simmer the gravy longer to cook out the flour, and take the roux darker next time."
+				},
+				{
+					"fault": "Lumpy grits",
+					"cause": "The grits went into the liquid too fast or without stirring.",
+					"fix": "Whisk them in a thin stream; whisk hard or strain if lumps form."
+				},
+				{
+					"fault": "Stiff grits on the hold",
+					"cause": "Grits keep thickening as they stand.",
+					"fix": "Loosen with hot milk or water just before serving."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-594lmt4x",
+					"components": [
+						"Grits"
+					],
+					"how": "The Cheddar Grits, a breakfast and lunch side, are slow-cooked creamy grits with cheddar stirred in: the cheese grits variation, served in a bowl rather than under braised beef. Whether they are stone-ground is a question for the kitchen."
+				},
+				{
+					"dish": "d-44jfmkdb",
+					"components": [
+						"Braising in red wine"
+					],
+					"how": "The Eggs Owen is the house's nearest cousin to grillades: beef slow-cooked in a rich gravy for the morning, but it is short rib braised in red wine into débris, over a Creole-spiced potato with a soft-boiled egg."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"braise-and-daube",
+					"roux-ladder",
+					"the-holy-trinity",
+					"brown-stock",
+					"shrimp-and-grits",
+					"eggs-owen"
+				],
+				"techniques": [
+					"searing-the-hard-crust",
+					"the-bare-simmer-holding-liquid-below-the-boil"
+				],
+				"lexicon": [
+					"the-round-top-bottom-eye",
+					"braising-and-stewing"
+				],
+				"recipes": [
+					"grillades-and-grits"
+				],
+				"kitchen": [
+					"grillades-and-grits"
+				],
+				"plates": [
+					"beef-cuts"
+				],
+				"folios": [
+					"roux-colour-ladder",
+					"searing-standard"
+				],
+				"deck": [
+					"fd_0178"
+				],
+				"components": [
+					"Grits",
+					"Braising in red wine",
+					"The breakfast and lunch sides"
+				],
+				"terms": [
+					"methods-braised",
+					"southern-hominy"
+				]
+			},
+			"sources": [
+				{
+					"title": "Grits and Grillades, New Orleans Magazine",
+					"url": "https://www.myneworleans.com/grits-and-grillades/",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "FDA Food Code",
+					"url": "https://www.fda.gov/food/retail-food-protection/fda-food-code",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan's, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-10-12"
+				}
+			],
+			"cards": [
+				{
+					"stem": "what-it-is",
+					"front": "What exactly are grillades, in plain words?",
+					"back": "Thin pieces of veal or beef round, pounded, seasoned, browned and braised in a brown roux gravy with the trinity and tomato until fork tender."
+				},
+				{
+					"stem": "name",
+					"front": "Grillades take their name from griller, to grill. Are they grilled?",
+					"back": "No. The meat is seared hard for colour, then braised slowly in gravy until fork tender: a braise wearing a grill's name."
+				},
+				{
+					"stem": "cut",
+					"front": "Which cut goes into grillades, and why is it pounded?",
+					"back": "The round, lean and hard-working; pounding it thin breaks up the fibres, so it browns fast and braises tender sooner."
+				},
+				{
+					"stem": "roux",
+					"front": "What colour of roux goes into grillade gravy?",
+					"back": "Medium brown, the colour of milk chocolate, after 25 to 35 minutes, then stopped by the cold trinity going in."
+				},
+				{
+					"stem": "gravy",
+					"front": "What goes into the gravy after the roux and the trinity?",
+					"back": "Tomato, beef or veal stock, thyme, bay and a splash of red wine or red wine vinegar to cut the richness."
+				},
+				{
+					"stem": "braise",
+					"front": "How long, and how hot, do grillades braise?",
+					"back": "Covered, at a bare simmer or in a 160°C (320°F) oven, for 1 to 1 1/2 hours, until a fork slides through."
+				},
+				{
+					"stem": "holding",
+					"front": "How do you hold grillades without drying them out?",
+					"back": "Covered, under their gravy, at 57°C (135°F) or above; meat left out of the gravy turns dry and stringy. Loosen thick gravy with hot stock."
+				},
+				{
+					"stem": "grits-ratio",
+					"front": "What is the working ratio of grits to liquid?",
+					"back": "About 1 part grits to 4 parts liquid by volume, 160 g (1 cup) to 1 litre (about 1 quart), salted and finished with butter."
+				},
+				{
+					"stem": "stone-ground",
+					"front": "How do stone-ground grits differ from quick grits?",
+					"back": "Stone-ground are coarse and keep the germ, so they taste more of corn and take 45 to 60 minutes; quick grits are finer and cook in about 5."
+				},
+				{
+					"stem": "lumps",
+					"front": "How do you keep grits from lumping?",
+					"back": "Whisk them into simmering liquid in a thin stream and keep stirring; whisk hard or strain if lumps still form."
+				},
+				{
+					"stem": "boucherie",
+					"front": "Where does the usual telling place the roots of grillades?",
+					"back": "At the country boucherie, the communal pig killing, where fresh pork was cut thin and fried with onions. It is a telling, not a documented fact."
+				},
+				{
+					"stem": "brennans",
+					"front": "Which Brennan's dish is the nearest cousin to grillades and grits?",
+					"back": "The Eggs Owen: beef slow-cooked in a rich gravy for the morning, though it is red wine braised short rib débris over a Creole-spiced potato."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-cut",
+					"q": "Which cut of beef is the traditional choice for grillades?",
+					"answer": "The round",
+					"distractors": [
+						"The rib eye",
+						"The tenderloin",
+						"The brisket point"
+					],
+					"why": "The round is lean, hard-working and cheap; pounded thin and braised in gravy it turns tender, where a tenderloin would be wasted.",
+					"teaches": "cut"
+				},
+				{
+					"stem": "q-name",
+					"q": "Despite their name, how are grillades actually cooked?",
+					"answer": "Seared, then braised in gravy",
+					"distractors": [
+						"Grilled over charcoal, then sliced",
+						"Fried in batter",
+						"Poached in court-bouillon"
+					],
+					"why": "The meat is browned hard for colour and flavour, then braised slowly with the roux gravy until a fork slides through it.",
+					"teaches": "name"
+				},
+				{
+					"stem": "q-roux",
+					"q": "What colour of roux does a grillade gravy usually take?",
+					"answer": "Medium brown, like milk chocolate",
+					"distractors": [
+						"White, cooked for only a minute",
+						"Blond, the pale colour of sand",
+						"Black, well past dark chocolate"
+					],
+					"why": "A medium brown roux gives the gravy its toasty depth while keeping enough thickening power to coat the meat.",
+					"teaches": "roux"
+				},
+				{
+					"stem": "q-braise",
+					"q": "How do you know grillades have braised long enough?",
+					"answer": "A fork slides through the meat",
+					"distractors": [
+						"The gravy is at a rolling boil",
+						"The meat has turned grey all through",
+						"Twenty minutes have passed"
+					],
+					"why": "Fork tender is the test: the clock is only a guide, and a hard boil toughens the meat rather than softening it.",
+					"teaches": "braise"
+				},
+				{
+					"stem": "q-holding",
+					"q": "What keeps grillades from drying out on the hold?",
+					"answer": "Keeping them covered under their gravy",
+					"distractors": [
+						"Holding them uncovered on a sheet tray",
+						"Raising the heat to a full boil",
+						"Draining the gravy off the meat"
+					],
+					"why": "Meat out of the gravy loses moisture and turns stringy; covered and submerged, it stays tender through service.",
+					"teaches": "holding"
+				},
+				{
+					"stem": "q-grits-ratio",
+					"q": "What is a sound starting ratio of grits to liquid, by volume?",
+					"answer": "1 to 4",
+					"distractors": [
+						"1 to 1",
+						"1 to 2",
+						"1 to 10"
+					],
+					"why": "One part grits to four parts liquid cooks to a creamy, spoonable bowl; stone-ground grits may take a little more liquid.",
+					"teaches": "grits-ratio"
+				},
+				{
+					"stem": "q-stone-ground",
+					"q": "Why do stone-ground grits take longer to cook than quick grits?",
+					"answer": "They are coarser and keep the germ",
+					"distractors": [
+						"They are made from rice",
+						"They are cooked in cream alone",
+						"They are dried after cooking"
+					],
+					"why": "Coarse pieces of whole corn need 45 to 60 minutes to soften, where finely ground quick grits are ready in minutes.",
+					"teaches": "stone-ground"
+				},
+				{
+					"stem": "q-brennans",
+					"q": "A guest asks for grillades at Brennan's. Which dish is the nearest cousin on the menu?",
+					"answer": "Eggs Owen",
+					"distractors": [
+						"Eggs Sardou",
+						"Pecan Gulf Fish",
+						"Turtle Soup"
+					],
+					"why": "The Eggs Owen is beef slow-cooked in a rich gravy and eaten in the morning, like grillades, though it is red wine braised short rib débris.",
+					"teaches": "brennans"
+				},
+				{
+					"stem": "q-boucherie",
+					"q": "Where does the usual telling place the roots of grillades?",
+					"answer": "The country boucherie, a pig killing",
+					"distractors": [
+						"A grand Paris restaurant kitchen",
+						"The kitchens of a Spanish royal court",
+						"A Mississippi riverboat galley"
+					],
+					"why": "The story is that fresh pork was cut thin and fried with onions at the boucherie; it is a likely telling, not a documented fact.",
+					"teaches": "boucherie"
+				}
+			]
+		},
+		{
+			"stem": "red-beans-and-rice",
+			"slug": "red-beans-and-rice",
+			"title": "Red beans and rice",
+			"say": "As it reads: red beans and rice.",
+			"level": 2,
+			"kind": "dish",
+			"summary": "Red kidney beans simmered slowly with the trinity, garlic, bay and a ham bone or pickled pork until the pot turns creamy, served with rice and sausage. New Orleans's Monday dish and a signature of the city.",
+			"guest": "Red beans and rice is the city's Monday dish: kidney beans cooked low for hours with pork, onion and peppers until creamy, over white rice, usually with smoked sausage.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Red beans and rice is New Orleans's Monday dish: dried red kidney beans simmered for hours with the trinity, garlic, bay and a ham bone or pickled pork until the pot turns thick and creamy, served with white rice and andouille or smoked sausage. It is the city's everyday food, in homes, lunch counters and old restaurants alike, and guests from away often ask about it."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Pick over 450 g (1 lb) of dried red kidney beans and rinse them. Soak them for at least 5 hours, or overnight, in three times their volume of cold water, then pour the soaking water away: that is the FDA's advice, and soaked beans cook faster. Some home cooks skip it; a professional kitchen follows the FDA. Brown the seasoning meat in a heavy pot, a ham bone, a smoked hock or about 450 g (1 lb) of cubed pickled pork, which is pork cured in a spiced vinegar brine, then soften 300 g (10 oz) of diced trinity in the fat for 8 to 10 minutes, adding four cloves of garlic at the end.",
+						"Add the drained beans, two bay leaves, thyme, cayenne, black pepper and about 2.5 litres (about 2.5 quarts) of fresh water or light stock, enough to cover by 5 cm (2 inches). Bring it to a hard boil and keep it boiling hard for at least 30 minutes, as the FDA advises, then lower it to a gentle simmer, partly covered, for 2 to 3 hours. Stir from the bottom as it thickens, because beans catch and scorch, and add hot water whenever they peek above the liquid.",
+						"When the beans are tender, mash a ladleful against the side of the pot with the back of a spoon, stir it back in and simmer uncovered for 20 to 30 minutes more. The broken beans release their starch, and that, not cream or butter, turns the liquid into a creamy gravy that coats a spoon. Salt at the end, since the pork is salty and the pot reduces. Finish with green onion and parsley, serve rice beneath or beside, and brown sliced andouille or smoked sausage to go alongside, or simmer it in the pot."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"Old beans never soften. Dried beans kept a year or more, especially warm and damp, harden in their cell walls and no simmering brings them back, so buy from a shop that sells plenty and use them within the year. Acid and hard water also slow softening: add tomato, vinegar or hot sauce only once the beans are tender. A thin pot wants more mashing and an uncovered simmer."
+					]
+				},
+				{
+					"key": "safety",
+					"paras": [
+						"Red kidney beans must boil hard before they settle to a simmer: the FDA advises soaking them for at least 5 hours, pouring that water away and boiling them in fresh water for at least 30 minutes. Raw and undercooked kidney beans carry a natural lectin, phytohaemagglutinin, that causes sharp stomach upset, and a real boil destroys it. Slow cookers set low have been behind outbreaks, so beans bound for one are boiled first. Cool a big pot quickly in shallow pans before it goes into the fridge."
+					]
+				},
+				{
+					"key": "history",
+					"paras": [
+						"Monday was washday in old New Orleans, when the laundry was done by hand from morning till night. Sunday's ham left a bone, and the bone went into a pot of beans that sat on the back of the stove all day, minding itself while the household worked. The habit has outlived the washboard: plenty of New Orleans restaurants and lunch counters still serve red beans on Mondays. Louis Armstrong, the city's own, sometimes signed his letters Red beans and ricely yours."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"There is no red beans dish on the Brennan's menus we study, but the idea sits under the Louisiana BBQ Lobster on the dinner tasting. Its white bean stew, creamy beans of the same family as a Louisiana pot, carries ’nduja, en-DOO-yah, a soft, spicy Calabrian pork sausage, which plays the part andouille plays in red beans. Whether the ’nduja is cooked in or spooned on is a question for the chef."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Describe it plainly: kidney beans cooked low for hours with pork, onion, celery and pepper until creamy, over rice, with smoked sausage. A guest may expect a fiery dish; it is savoury and gently peppery, and the heat comes from the bottle on the table. Pork seasons the pot, so a guest who asks whether it is vegetarian is answered by the kitchen, never by a guess."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Dried beans to water",
+					"value": "450 g (1 lb) to about 2.5 litres (about 2.5 quarts), topped up as needed"
+				},
+				{
+					"label": "Trinity to beans",
+					"value": "300 g (10 oz) of diced trinity for 450 g (1 lb) of dried beans"
+				},
+				{
+					"label": "Seasoning meat",
+					"value": "A ham bone, a smoked hock or about 450 g (1 lb) of pickled pork for 450 g (1 lb) of beans"
+				},
+				{
+					"label": "Beans mashed for creaminess",
+					"value": "About a ladleful, pressed against the pot and stirred back in"
+				}
+			],
+			"faults": [
+				{
+					"fault": "Beans still hard after hours",
+					"cause": "Old beans, kept a year or more or stored warm and damp, whose cell walls have hardened; hard water and early acid make it worse.",
+					"fix": "Buy from a busy shop and use within the year; add tomato, vinegar or hot sauce only once the beans are tender."
+				},
+				{
+					"fault": "Thin, watery pot",
+					"cause": "Too much liquid, or no beans broken to release their starch.",
+					"fix": "Mash a ladleful against the pot and simmer uncovered until the gravy coats a spoon."
+				},
+				{
+					"fault": "Scorched, bitter taste",
+					"cause": "The thickening beans caught on the base of the pot.",
+					"fix": "Stir from the bottom often and keep the heat low; a scorched pot cannot be rescued, so start again."
+				},
+				{
+					"fault": "Too salty",
+					"cause": "Salted early, before the pork gave up its salt and the pot reduced.",
+					"fix": "Salt only at the end; loosen an oversalted pot with unsalted water or more beans."
+				},
+				{
+					"fault": "Beans burst to mush",
+					"cause": "Boiled hard for hours instead of simmered.",
+					"fix": "Boil only at the start, then hold a gentle simmer."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-5e4ptrq8",
+					"components": [
+						"White bean stew",
+						"’Nduja"
+					],
+					"how": "Under the Louisiana BBQ Lobster on the dinner tasting, a creamy white bean stew carries ’nduja, which plays the part andouille plays in red beans. Whether it is cooked in or spooned on is a question for the chef."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"andouille",
+					"louisiana-rice",
+					"the-holy-trinity",
+					"tasso",
+					"creole-and-cajun",
+					"cooling-stocks-and-sauces"
+				],
+				"techniques": [
+					"soaking-dried-goods-back-to-life",
+					"the-bare-simmer-holding-liquid-below-the-boil"
+				],
+				"lexicon": [
+					"kidney-bean",
+					"ham-and-hock",
+					"long-grain-white-rice"
+				],
+				"recipes": [
+					"red-beans-and-rice"
+				],
+				"kitchen": [
+					"red-beans-and-rice"
+				],
+				"plates": [
+					"pork-cuts"
+				],
+				"folios": [
+					"louisiana-larder"
+				],
+				"deck": [
+					"fd_0089"
+				],
+				"components": [
+					"White bean stew"
+				],
+				"terms": [
+					"cured-andouille",
+					"cuts-hamhock"
+				]
+			},
+			"sources": [
+				{
+					"title": "Red Beans and Ricely Yours, JazzTimes",
+					"url": "https://www.jazztimes.com/archives/red-beans-and-ricely-yours/",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Bad Bug Book, Second Edition, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/foodborne-pathogens/bad-bug-book-second-edition",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Cooking dry beans safely, Kansas State University",
+					"url": "https://www.k-state.edu/news/you-asked-it/articles/2017/10/cooking-dry-beans-safely.html",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan's, Dinner Tasting Menu",
+					"url": "https://www.brennansneworleans.com/menus/dinnertastingmenu/",
+					"asOf": "2026-10-12"
+				}
+			],
+			"cards": [
+				{
+					"stem": "what-it-is",
+					"front": "What is red beans and rice?",
+					"back": "Red kidney beans simmered for hours with the trinity, garlic, bay and a ham bone or pickled pork until creamy, served with rice and sausage."
+				},
+				{
+					"stem": "monday",
+					"front": "Why is red beans and rice a Monday dish?",
+					"back": "Monday was washday: Sunday's ham bone went into a pot of beans that simmered all day, minding itself while the washing was done."
+				},
+				{
+					"stem": "creamy",
+					"front": "Where does the creaminess of red beans come from?",
+					"back": "From mashing some of the cooked beans against the pot, so their starch thickens the liquid; no cream or butter is needed."
+				},
+				{
+					"stem": "seasoning-meat",
+					"front": "Name two seasoning meats for a pot of red beans.",
+					"back": "A ham bone or smoked ham hock, and pickled pork, which is pork cured in a spiced vinegar brine. Tasso and andouille go in too."
+				},
+				{
+					"stem": "soaking",
+					"front": "Must red beans be soaked before cooking?",
+					"back": "The FDA advises it: at least 5 hours in cold water, poured away before cooking. Soaked beans also cook faster; some home cooks skip it for a creamier pot."
+				},
+				{
+					"stem": "old-beans",
+					"front": "Why do some dried beans never soften, however long they cook?",
+					"back": "They are old: beans kept a year or more, especially warm and damp, harden in their cell walls. Buy from a busy shop and use within the year."
+				},
+				{
+					"stem": "acid",
+					"front": "When do tomato, vinegar or hot sauce go into a pot of beans?",
+					"back": "Only once the beans are tender: acid slows softening, so a pot soured early can stay hard."
+				},
+				{
+					"stem": "boil-first",
+					"front": "Why must kidney beans boil hard before they simmer?",
+					"back": "Raw and undercooked kidney beans carry a natural lectin that causes sharp stomach upset. A hard boil destroys it, at least 30 minutes by the FDA's advice; a slow cooker set low never gets there."
+				},
+				{
+					"stem": "scorch",
+					"front": "Why is a pot of red beans stirred from the bottom?",
+					"back": "As the beans thicken they catch on the base and scorch, and a burnt taste runs through the whole pot."
+				},
+				{
+					"stem": "on-the-plate",
+					"front": "What goes on the plate with the beans?",
+					"back": "White rice beneath or beside, and andouille or smoked sausage, browned alongside or simmered in the pot."
+				},
+				{
+					"stem": "armstrong",
+					"front": "How did Louis Armstrong sometimes sign his letters?",
+					"back": "Red beans and ricely yours, a nod to the dish of his home city."
+				},
+				{
+					"stem": "brennans",
+					"front": "Where does a cousin of red beans appear at Brennan's?",
+					"back": "In the white bean stew under the Louisiana BBQ Lobster on the dinner tasting, where ’nduja plays the part andouille plays in red beans."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-monday",
+					"q": "Why did red beans and rice become the Monday dish in New Orleans?",
+					"answer": "Monday was washday; the pot minded itself",
+					"distractors": [
+						"Dried beans came to market only on Mondays",
+						"Restaurants closed on Mondays",
+						"The markets were shut on Sundays"
+					],
+					"why": "Sunday's ham bone went into a pot of beans that could simmer untended all day while the household did the washing by hand.",
+					"teaches": "monday"
+				},
+				{
+					"stem": "q-creamy",
+					"q": "What makes a pot of red beans creamy?",
+					"answer": "Mashing some beans against the pot",
+					"distractors": [
+						"Stirring in double cream at the end",
+						"Whisking in a blond roux",
+						"Adding a cornflour slurry"
+					],
+					"why": "Broken beans release their starch into the liquid, which thickens it into a creamy gravy without any cream or butter.",
+					"teaches": "creamy"
+				},
+				{
+					"stem": "q-old-beans",
+					"q": "A pot of red beans is still hard after four hours of simmering. What is the likeliest cause?",
+					"answer": "The beans were old",
+					"distractors": [
+						"The pot was stirred too often",
+						"The trinity was cut too small",
+						"The beans were rinsed first"
+					],
+					"why": "Beans kept a year or more, especially warm and damp, harden in their cell walls and will not soften however long they cook.",
+					"teaches": "old-beans"
+				},
+				{
+					"stem": "q-acid",
+					"q": "When should hot sauce or vinegar go into a pot of red beans?",
+					"answer": "Once the beans are tender",
+					"distractors": [
+						"Into the soaking water",
+						"With the beans, at the start",
+						"With the trinity, before the beans"
+					],
+					"why": "Acid slows the softening of the beans, so it goes in at the end or at the table.",
+					"teaches": "acid"
+				},
+				{
+					"stem": "q-boil",
+					"q": "Why are red kidney beans brought to a hard boil before the long simmer?",
+					"answer": "To destroy a lectin that upsets the stomach",
+					"distractors": [
+						"To split the skins so they take salt",
+						"To turn the beans a deeper, darker red",
+						"To stop the rice beside them going sticky"
+					],
+					"why": "Raw and undercooked kidney beans carry phytohaemagglutinin, which only a real boil destroys, at least 30 minutes by the FDA's advice; slow cookers set low have caused outbreaks.",
+					"teaches": "boil-first"
+				},
+				{
+					"stem": "q-seasoning",
+					"q": "What is pickled pork, the seasoning meat of many red bean pots?",
+					"answer": "Pork cured in a spiced vinegar brine",
+					"distractors": [
+						"Pork smoked hard and coated in cayenne",
+						"Pork preserved in its own fat",
+						"Fresh pork ground with rice"
+					],
+					"why": "Pickled pork is cured in vinegar brine; the smoked, cayenne-coated meat is tasso, and pork ground with rice is boudin.",
+					"teaches": "seasoning-meat"
+				},
+				{
+					"stem": "q-armstrong",
+					"q": "Which New Orleans musician sometimes signed his letters Red beans and ricely yours?",
+					"answer": "Louis Armstrong",
+					"distractors": [
+						"Jelly Roll Morton",
+						"Fats Domino",
+						"Sidney Bechet"
+					],
+					"why": "Louis Armstrong, born in New Orleans, signed letters with a play on the city's Monday dish.",
+					"teaches": "armstrong"
+				},
+				{
+					"stem": "q-brennans",
+					"q": "On the Brennan's dinner tasting, what plays the part andouille plays in red beans?",
+					"answer": "’Nduja in the white bean stew",
+					"distractors": [
+						"Andouille in the white bean stew",
+						"Tasso in the white bean stew",
+						"Chorizo in the white bean stew"
+					],
+					"why": "’Nduja melts into the white bean stew under the Louisiana BBQ Lobster, playing the part andouille plays in a pot of red beans.",
+					"teaches": "brennans"
+				}
+			]
+		}
+	]
+}

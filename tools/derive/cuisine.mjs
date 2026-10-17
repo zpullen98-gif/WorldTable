@@ -150,6 +150,7 @@ export function loadRefs(opts = {}) {
 		deck: readJson(path.join(DATA, 'floor-deck.index.json')),
 		folios: readFolios(),
 		pack: readJson(PACK),
+		foundations: readJson(path.join(DATA, 'culinary-foundations.json')),
 		roster: opts.roster === false ? null : readRoster()
 	});
 }
@@ -411,8 +412,9 @@ export function derive(set, generated, ids, opts = {}) {
 		});
 		/* What each cross reference is called, and the two addresses the refs
 		   lack (a Cook at home dish's level, a Floor Deck card's section), so
-		   an entry draws every See also row as a named link without loading
-		   the files they come from. One table a chapter. */
+		   an entry draws every See also row, and every From your sheets row, as
+		   a named link without loading the files they come from. One table a
+		   chapter. */
 		/** @type {Record<string, Record<string, unknown>>} */
 		const labels = {};
 		/** @param {string} kind @param {string} slug @param {unknown} v */
@@ -426,6 +428,8 @@ export function derive(set, generated, ids, opts = {}) {
 			for (const s of arr(see.lexicon)) label('lexicon', s, refs?.lexicon.get(s));
 			for (const s of arr(see.recipes)) label('recipes', s, refs?.recipes.get(s));
 			for (const s of arr(see.plates)) label('plates', s, refs?.plates.get(s));
+			/* From your sheets: each sheet term by its own name, as Your culinary terms prints it */
+			for (const s of arr(see.terms)) label('terms', s, refs?.foundations.get(s));
 			for (const s of arr(see.kitchen)) {
 				const t = refs?.kitchen.get(s);
 				const lv = links?.kitchen.get(s);

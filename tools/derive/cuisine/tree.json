@@ -1,95 +1,374 @@
 {
 	"careme": {
-		"four": ["Espagnole", "Velouté", "Allemande", "Béchamel"],
-		"note": "Carême grouped the French sauces under four grandes sauces: espagnole, velouté, allemande and béchamel. Allemande is now taught as a daughter of velouté, and the five mothers of the modern kitchen, a scheme usually traced to Escoffier's Le Guide culinaire of 1903, add sauce tomate and hollandaise."
+		"four": [
+			"Espagnole",
+			"Velouté",
+			"Allemande",
+			"Béchamel"
+		],
+		"note": "Carême, early in the nineteenth century, sorted the French sauces into families under four great sauces: espagnole, velouté, allemande and béchamel. Allemande is now taught as a daughter of velouté. Escoffier's Le Guide culinaire (1903) named four base sauces, espagnole, velouté, béchamel and tomate; the 1907 English translation printed hollandaise among its leading warm sauces, and later teaching made five the mothers taught today."
 	},
 	"mothers": [
 		{
-			"name": "Béchamel",
-			"say": "bay-sha-MEL",
+			"say": "BESH-uh-mel",
+			"entry": "bechamel",
 			"liaison": "White roux",
 			"liquid": "Milk",
 			"children": [
-				{ "name": "Mornay", "say": "mor-NAY", "adds": "Gruyère and Parmesan, melted in off the heat" },
-				{ "name": "Soubise", "say": "soo-BEEZ", "adds": "A purée of onions sweated without colour" },
-				{ "name": "Nantua", "say": "nahn-TWAH", "adds": "Crayfish butter and cream" }
-			]
-		},
-		{
-			"name": "Velouté",
-			"say": "vuh-loo-TAY",
-			"liaison": "Blond roux",
-			"liquid": "White stock of veal, chicken or fish",
-			"children": [
-				{ "name": "Suprême", "say": "soo-PREM", "adds": "Cream and butter, on a chicken velouté" },
-				{ "name": "Allemande", "say": "al-MAHND", "adds": "Egg yolk and lemon, on a veal velouté" },
-				{ "name": "Bercy", "say": "bair-SEE", "adds": "Shallot and white wine, on a fish velouté" }
-			]
-		},
-		{
-			"name": "Espagnole",
-			"say": "es-pan-YOL",
-			"liaison": "Brown roux",
-			"liquid": "Brown stock, with tomato and mirepoix",
-			"children": [
-				{ "name": "Bordelaise", "say": "bor-duh-LAYZ", "adds": "Red wine, shallot and bone marrow" },
 				{
-					"name": "Marchand de vin",
-					"say": "mar-SHAHN duh VAN",
-					"adds": "Red wine and shallot; in New Orleans, often mushroom and ham",
-					"dishes": [
-						{ "dish": "d-1q0xk7jv", "components": ["Marchand de vin"] },
-						{ "dish": "d-44jfmkdb", "components": ["Marchand de vin"] }
-					]
+					"name": "Mornay",
+					"say": "mor-NAY",
+					"entry": "bechamel-family",
+					"adds": "Gruyère and Parmesan melted in off the heat, finished with butter"
 				},
-				{ "name": "Robert", "say": "roh-BAIR", "adds": "Onion, white wine and mustard" },
-				{ "name": "Demi-glace", "say": "DEM-ee glahs", "adds": "More brown stock, reduced by half until glossy" }
-			]
-		},
-		{
-			"name": "Sauce tomate",
-			"say": "sohs toh-MAHT",
-			"liaison": "Reduction",
-			"liquid": "Tomatoes, with white stock",
-			"children": [
-				{ "name": "Provençale", "say": "proh-vahn-SAHL", "adds": "Garlic, olive oil and parsley" },
-				{ "name": "Portugaise", "say": "por-too-GEZ", "adds": "Onion, garlic and chopped tomato flesh" },
 				{
-					"name": "Creole sauce",
-					"adds": "The holy trinity, garlic, bay, thyme and cayenne",
-					"dishes": [{ "dish": "d-bqznncn6", "components": ["Creole sauce"] }]
+					"name": "Soubise",
+					"say": "soo-BEEZ",
+					"entry": "bechamel-family",
+					"adds": "A purée of onions cooked soft in butter without colour"
+				},
+				{
+					"name": "Nantua",
+					"say": "nahn-TWAH",
+					"entry": "bechamel-family",
+					"adds": "Cream and crayfish butter, garnished with crayfish tails"
+				},
+				{
+					"name": "Crème",
+					"say": "KREM",
+					"entry": "bechamel-family",
+					"adds": "Cream reduced in, then more cream and a squeeze of lemon"
+				},
+				{
+					"name": "Cardinal",
+					"say": "kar-dee-NAHL",
+					"entry": "bechamel-family",
+					"adds": "Fish fumet, lobster butter and a pinch of cayenne"
+				},
+				{
+					"name": "Bienville",
+					"say": "BEE-en-vil",
+					"entry": "oysters-bienville",
+					"adds": "Shrimp, mushroom, green onion, yolk and sherry, baked under crumbs: a New Orleans cousin"
 				}
 			]
 		},
 		{
-			"name": "Hollandaise",
+			"say": "veh-loo-TAY",
+			"entry": "veloute",
+			"liaison": "Blond roux",
+			"liquid": "White stock of veal, chicken or fish",
+			"children": [
+				{
+					"name": "Suprême",
+					"say": "soo-PREM",
+					"entry": "veloute-family",
+					"adds": "Cream and mushroom liquor reduced into chicken velouté, finished with butter",
+					"children": [
+						{
+							"name": "Ivoire",
+							"say": "ee-VWAHR",
+							"entry": "veloute-family",
+							"adds": "A little pale poultry glaze, giving the colour of old ivory"
+						},
+						{
+							"name": "Albuféra",
+							"say": "al-boo-FAY-rah",
+							"entry": "veloute-family",
+							"adds": "Red pepper butter, worked in at the finish"
+						}
+					]
+				},
+				{
+					"name": "Allemande",
+					"say": "al-MAHND",
+					"entry": "veloute-family",
+					"adds": "Egg yolks and lemon bound into veal velouté",
+					"children": [
+						{
+							"name": "Poulette",
+							"say": "poo-LET",
+							"entry": "veloute-family",
+							"adds": "Mushroom liquor, lemon and chopped parsley"
+						}
+					]
+				},
+				{
+					"name": "Aurore",
+					"say": "oh-ROR",
+					"entry": "veloute-family",
+					"adds": "Thick tomato purée, turning it pink"
+				},
+				{
+					"name": "Hongroise",
+					"say": "ohn-GRWAHZ",
+					"entry": "veloute-family",
+					"adds": "Onion softened in butter with paprika, and a white wine reduction"
+				},
+				{
+					"name": "Bercy",
+					"say": "bair-SEE",
+					"entry": "veloute-family",
+					"adds": "Shallot and white wine reduced into fish velouté, finished with butter and parsley"
+				},
+				{
+					"name": "Normande",
+					"say": "nor-MAHND",
+					"entry": "veloute-family",
+					"adds": "Mushroom and oyster liquor in fish velouté, with a liaison of yolks and cream"
+				},
+				{
+					"name": "Vin blanc",
+					"say": "van BLAHN",
+					"entry": "veloute-family",
+					"adds": "Fish fumet and yolks in fish velouté, finished with butter"
+				},
+				{
+					"name": "Ravigote (warm)",
+					"say": "rah-vee-GOHT",
+					"entry": "veloute-family",
+					"adds": "A white wine and vinegar reduction, shallot butter and fines herbes"
+				}
+			]
+		},
+		{
+			"say": "es-pan-YOHL",
+			"entry": "espagnole",
+			"liaison": "Brown roux",
+			"liquid": "Brown stock, with tomato and mirepoix",
+			"children": [
+				{
+					"name": "Demi-glace",
+					"say": "DEM-ee-glahss",
+					"entry": "demi-glace",
+					"adds": "Brown stock in equal part, reduced by half: the base the brown daughters start from"
+				},
+				{
+					"name": "Bordelaise",
+					"say": "bor-duh-LAYZ",
+					"entry": "bordelaise",
+					"adds": "A red wine, shallot and thyme reduction, finished with poached bone marrow"
+				},
+				{
+					"name": "Marchand de vin",
+					"say": "mar-SHAHN duh VAN",
+					"entry": "marchand-de-vin",
+					"adds": "A red wine and shallot reduction; in New Orleans, onion, garlic, often ham and mushroom",
+					"dishes": [
+						{
+							"dish": "d-1q0xk7jv",
+							"components": [
+								"Marchand de vin"
+							]
+						},
+						{
+							"dish": "d-44jfmkdb",
+							"components": [
+								"Marchand de vin"
+							]
+						}
+					]
+				},
+				{
+					"name": "Robert",
+					"say": "roh-BAIR",
+					"entry": "brown-sauce-family",
+					"adds": "Onion softened pale, a white wine and vinegar reduction, mustard off the heat",
+					"children": [
+						{
+							"name": "Charcutière",
+							"say": "shar-koo-TYAIR",
+							"entry": "brown-sauce-family",
+							"adds": "Gherkins cut in fine strips"
+						}
+					]
+				},
+				{
+					"name": "Chasseur",
+					"say": "sha-SUR",
+					"entry": "brown-sauce-family",
+					"adds": "Mushrooms, shallot, white wine, tomato and tarragon"
+				},
+				{
+					"name": "Diable",
+					"say": "dee-AH-bluh",
+					"entry": "brown-sauce-family",
+					"adds": "A white wine and shallot reduction with a good pinch of cayenne"
+				},
+				{
+					"name": "Piquante",
+					"say": "pee-KAHNT",
+					"entry": "brown-sauce-family",
+					"adds": "A vinegar, white wine and shallot reduction, then chopped gherkins and herbs"
+				},
+				{
+					"name": "Lyonnaise",
+					"say": "lee-oh-NAYZ",
+					"entry": "brown-sauce-family",
+					"adds": "Onions cooked golden in butter, with a white wine and vinegar reduction"
+				},
+				{
+					"name": "Poivrade",
+					"say": "pwah-VRAHD",
+					"entry": "brown-sauce-family",
+					"adds": "A browned mirepoix, a vinegar and marinade reduction, crushed peppercorns last",
+					"children": [
+						{
+							"name": "Grand veneur",
+							"say": "grahn vuh-NUR",
+							"entry": "brown-sauce-family",
+							"adds": "Redcurrant jelly and cream, for venison"
+						}
+					]
+				},
+				{
+					"name": "Bigarade",
+					"say": "bee-gah-RAHD",
+					"entry": "brown-sauce-family",
+					"adds": "Bitter orange juice and zest with a gastrique, for duck"
+				},
+				{
+					"name": "Madère",
+					"say": "mah-DAIR",
+					"entry": "fortified-wine-sauces",
+					"adds": "Madeira stirred in off the heat, never boiled",
+					"children": [
+						{
+							"name": "Périgueux",
+							"say": "pay-ree-GUH",
+							"entry": "fortified-wine-sauces",
+							"adds": "Truffle essence and chopped black truffle"
+						}
+					]
+				}
+			]
+		},
+		{
+			"say": "sohs toh-MAHT",
+			"entry": "sauce-tomate",
+			"liaison": "Reduction, classically with a little roux",
+			"liquid": "Tomatoes, with white stock",
+			"children": [
+				{
+					"name": "Provençale",
+					"say": "proh-vahn-SAHL",
+					"entry": "sauce-tomate",
+					"adds": "Garlic, olive oil and parsley or other herbs"
+				},
+				{
+					"name": "Portugaise",
+					"say": "por-too-GAYZ",
+					"entry": "sauce-tomate",
+					"adds": "Onion softened in oil, garlic, chopped tomato flesh and parsley"
+				},
+				{
+					"name": "Creole sauce",
+					"say": "As it reads: Creole sauce.",
+					"entry": "creole-sauce",
+					"adds": "The holy trinity, garlic, bay, thyme and cayenne: a New Orleans cousin",
+					"dishes": [
+						{
+							"dish": "d-bqznncn6",
+							"components": [
+								"Creole sauce"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
 			"say": "HOL-un-dayz",
 			"entry": "hollandaise",
 			"liaison": "Egg yolk emulsion",
-			"liquid": "Clarified butter",
+			"liquid": "Warm butter, usually clarified, sharpened with lemon or a vinegar reduction",
 			"children": [
 				{
 					"name": "Béarnaise",
 					"say": "bair-NAYZ",
 					"entry": "bearnaise",
-					"adds": "A reduction of vinegar, shallot and tarragon",
+					"adds": "Its own reduction of tarragon vinegar, white wine and shallot, finished with fresh herbs",
+					"dishes": [
+						{
+							"dish": "d-4jee8o34",
+							"components": [
+								"Béarnaise"
+							]
+						}
+					],
 					"children": [
 						{
 							"name": "Choron",
 							"say": "sho-ROHN",
-							"adds": "Tomato purée reduced to a paste",
-							"dishes": [{ "dish": "d-fs311zha", "components": ["Sauce Choron"] }]
+							"entry": "choron-and-foyot",
+							"adds": "Tomato cooked down to a thick paste",
+							"dishes": [
+								{
+									"dish": "d-fs311zha",
+									"components": [
+										"Sauce Choron"
+									]
+								}
+							]
 						},
 						{
 							"name": "Foyot",
 							"say": "fwah-YO",
-							"adds": "Meat glaze, glace de viande",
-							"dishes": [{ "dish": "d-5wcuejdy", "components": ["Sauce Foyot"] }]
+							"entry": "choron-and-foyot",
+							"adds": "Glace de viande, a reduced meat glaze; also called Valois",
+							"dishes": [
+								{
+									"dish": "d-5wcuejdy",
+									"components": [
+										"Sauce Foyot"
+									]
+								}
+							]
+						},
+						{
+							"name": "Paloise",
+							"say": "pahl-WAHZ",
+							"entry": "warm-emulsion-family",
+							"adds": "Mint in place of tarragon, in the reduction and the finish"
+						},
+						{
+							"name": "Tyrolienne",
+							"say": "tee-roh-LYEN",
+							"entry": "warm-emulsion-family",
+							"adds": "Oil mounted in place of butter; old books differ, some add tomato"
 						}
 					]
 				},
-				{ "name": "Mousseline", "say": "moos-LEEN", "adds": "Whipped cream folded in" },
-				{ "name": "Maltaise", "say": "mal-TEZ", "adds": "Blood orange juice and zest" }
+				{
+					"name": "Maltaise",
+					"say": "mahl-TAYZ",
+					"entry": "warm-emulsion-family",
+					"adds": "Blood orange juice and grated zest"
+				},
+				{
+					"name": "Mikado",
+					"say": "mih-KAH-doh",
+					"entry": "warm-emulsion-family",
+					"adds": "Mandarin juice and zest"
+				},
+				{
+					"name": "Mousseline",
+					"say": "moos-LEEN",
+					"entry": "warm-emulsion-family",
+					"adds": "Lightly whipped cream folded in; also called Chantilly"
+				},
+				{
+					"name": "Noisette",
+					"say": "nwah-ZET",
+					"entry": "warm-emulsion-family",
+					"adds": "Brown butter, beurre noisette, in place of plain butter"
+				},
+				{
+					"name": "Moutarde",
+					"say": "moo-TARD",
+					"entry": "warm-emulsion-family",
+					"adds": "Dijon mustard whisked in at the end"
+				}
 			]
 		}
 	]

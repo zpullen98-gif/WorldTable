@@ -1,0 +1,147 @@
+{
+	"steps": [
+		{
+			"stem": "hold-hollandaise-through-service",
+			"entry": "holding-warm-emulsions",
+			"title": "Hold hollandaise through service",
+			"prompt": "Put the stages of holding a batch of hollandaise through service in order. One stage does not belong.",
+			"steps": [
+				"Take the yolks from the fridge for a small batch timed to service, and note the time: the sauce's clock starts there",
+				"Make the hollandaise, then strain it into a clean, dry container, never one that held the last batch",
+				"Label it the moment it is filled, with the time it was made and the time it must be gone, then stand it in a bain-marie that steams but never bubbles, away from the flame",
+				"Through service, stir it now and then so no skin forms, and check it with a probe thermometer",
+				"Discard it when its time runs out, or sooner if it splits, skins or smells sour, and start the next batch clean"
+			],
+			"distractor": "Pour the fresh batch onto what is left of the old sauce, so nothing goes to waste",
+			"why": "The clock starts when the yolks leave the fridge, not when the sauce is finished, and sets the label. Where it sits below 57°C (135°F), the sauce runs on the kitchen's written time limit. Old sauce is never topped up: the new batch would take on its time and whatever has grown in it."
+		},
+		{
+			"stem": "cool-a-stock-in-two-stages",
+			"entry": "cooling-stocks-and-sauces",
+			"title": "Cool a stock in two stages",
+			"prompt": "Put the stages of cooling a large batch of stock in order, from the stove to the walk-in. One stage does not belong.",
+			"steps": [
+				"Take the stock off the stove and start cooling at once, never leaving it on the range",
+				"Strain the stock off its bones and vegetables, dividing it among smaller metal containers",
+				"Stand them in an ice bath, with ice and water up to the level of the stock",
+				"Stir the stock often, or stir an ice wand through it, topping up the ice as it melts",
+				"Probe the centre of each and log it: down to 21°C (70°F) within 2 hours",
+				"Once it has reached 21°C (70°F), label each container and set it on a top shelf of the walk-in, loosely covered, with nothing stacked on it",
+				"Probe and log again: 5°C (41°F) or below within 6 hours of the start"
+			],
+			"distractor": "Put the full stockpot straight into the walk-in with a tight lid on",
+			"why": "Straining takes out the bones and vegetables that hold heat; the batch is divided and set in ice at once, and stirring carries heat to the cold wall. The first stage, to 21°C (70°F) within 2 hours, has the shorter clock because bacteria grow quickest there. A hot pot in the walk-in warms everything around it."
+		},
+		{
+			"stem": "take-an-allergy-to-the-kitchen",
+			"entry": "allergen-conversation",
+			"title": "Take an allergy to the kitchen",
+			"prompt": "A guest tells you of a food allergy: put the server's routine in order, from the table to the kitchen and back. One stage does not belong.",
+			"steps": [
+				"Listen while the guest says it in full, neither arguing nor reassuring",
+				"Write it on the ticket, against the right seat",
+				"Tell the chef, or whoever runs the pass, in person as well as through the printer",
+				"Bring the chef's answer back to the guest in the chef's words",
+				"When the plate is up, carry it by itself, straight from the pass",
+				"Name the dish as it lands in front of the guest"
+			],
+			"distractor": "Tell the guest the dish should be fine, since the menu does not list it",
+			"why": "The guest is heard in full and the need is written against the seat, then said to the chef face to face, because a printed ticket can be missed in a rush. Only the chef's answer goes back to the table, and the plate travels alone so nothing touches it on the way."
+		}
+	],
+	"match": [
+		{
+			"stem": "safety-cues",
+			"title": "Safety cue to action",
+			"prompt": "Match each cue on the line or the floor to what a trained hand does next.",
+			"left": "Cue",
+			"right": "What you do",
+			"pairs": [
+				[
+					"The thermometer was knocked or dropped",
+					"Calibrate it in iced water before it is used again",
+					"danger-zone"
+				],
+				[
+					"An oyster gapes and will not close when tapped",
+					"Throw it out: it is dead",
+					"raw-and-cooked-oysters"
+				],
+				[
+					"The flambé flame grows too big or spreads",
+					"Slide the lid over the pan and turn the burner off",
+					"flambe-safety"
+				],
+				[
+					"A guest names a food allergy",
+					"Tell the kitchen in person, as well as on the ticket",
+					"allergen-conversation"
+				],
+				[
+					"The ice bath under the stock has turned to warm water",
+					"Drain some water, add fresh ice and keep stirring",
+					"cooling-stocks-and-sauces"
+				],
+				[
+					"A fresh batch of hollandaise is ready and old sauce remains",
+					"Start a new labelled container; never top up the old",
+					"holding-warm-emulsions"
+				],
+				[
+					"A guest asks whether a runny yolk is all right to eat",
+					"Point to the menu's advisory and offer to ask the kitchen",
+					"eggs"
+				],
+				[
+					"Frozen shrimp are wanted for tomorrow's service",
+					"Thaw them in the walk-in overnight",
+					"shellfish-handling"
+				]
+			]
+		},
+		{
+			"stem": "temperatures",
+			"title": "Temperatures that matter",
+			"prompt": "Match each temperature from the FDA Food Code to what it marks in the kitchen.",
+			"left": "Temperature",
+			"right": "What it marks",
+			"pairs": [
+				[
+					"5°C (41°F)",
+					"Cold holding, and the end of cooling within 6 hours",
+					"danger-zone"
+				],
+				[
+					"7°C (45°F)",
+					"Raw shell eggs: the storage air at or below it",
+					"eggs"
+				],
+				[
+					"21°C (70°F)",
+					"The first stage of cooling, reached within 2 hours",
+					"cooling-stocks-and-sauces"
+				],
+				[
+					"57°C (135°F)",
+					"Hot holding: food kept at or above it",
+					"danger-zone"
+				],
+				[
+					"63°C (145°F)",
+					"Fish, whole cuts of meat and an egg broken to order, held 15 seconds",
+					"cooking-temperatures"
+				],
+				[
+					"68°C (155°F)",
+					"Minced meat, held 17 seconds",
+					"cooking-temperatures"
+				],
+				[
+					"74°C (165°F)",
+					"Poultry, stuffed foods, and cooled food reheated for hot holding",
+					"cooking-temperatures"
+				]
+			]
+		}
+	]
+}

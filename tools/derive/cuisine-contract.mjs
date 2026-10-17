@@ -65,6 +65,7 @@ import { sayProblems } from './floor-deck-contract.mjs';
  *   dishes: Map<string, string>,
  *   components: Map<string, PackComponent>,
  *   terms: Map<string, { term: string, say: string }>,
+ *   foundations: Map<string, string>,
  *   names: string[],
  *   roster: RosterRow[] | null
  * }} Refs
@@ -76,7 +77,7 @@ import { sayProblems } from './floor-deck-contract.mjs';
 /** Flip on when all twelve chapters are written: then every level holds
  *  LIMITS.levelMin entries, every chapter has a file, every mother links its
  *  entry, and draft mode is refused. */
-export const CUISINE_COMPLETE = false;
+export const CUISINE_COMPLETE = true;
 
 /** The four brigade levels by their frozen integer keys. */
 export const LEVELS = [1, 2, 3, 4];
@@ -86,7 +87,11 @@ export const LEVEL_NAMES = { 1: 'Commis', 2: 'Chef de Partie', 3: 'Sous Chef', 4
 
 export const KINDS = ['sauce', 'stock', 'emulsion', 'method', 'dish', 'ingredient', 'person', 'place', 'history', 'term', 'pastry', 'safety'];
 export const SECTION_KEYS = ['what', 'how', 'ratio', 'family', 'faults', 'brennans', 'history', 'service', 'buying', 'safety'];
-export const SEE_ALSO_KEYS = ['entries', 'techniques', 'lexicon', 'recipes', 'kitchen', 'plates', 'folios', 'deck', 'components'];
+/** `terms` is the owner's own sheet terms (Your culinary terms, /foundations),
+ *  by the entry id of src/lib/data/culinary-foundations.json, drawn on the
+ *  entry as From your sheets. Not the Brennan's pack's lexicon terms, which
+ *  live in Refs.terms and give a respelling. */
+export const SEE_ALSO_KEYS = ['entries', 'techniques', 'lexicon', 'recipes', 'kitchen', 'plates', 'folios', 'deck', 'components', 'terms'];
 
 /** The twelve chapters. chapters.json holds their order, titles and intros. */
 export const CHAPTER_KEYS = [
@@ -138,7 +143,9 @@ export const LIMITS = {
 	/** a quote is from a public domain text, printed in or before this year */
 	quoteYear: 1930,
 	/** temperatures: Fahrenheit within this many degrees of the conversion */
-	tempSlack: 3
+	tempSlack: 3,
+	/** seeAlso.terms: the sheet terms an entry teaches or rests on, never a passing mention */
+	sheetTerms: 5
 };
 
 /** The public domain texts a quote may come from. */
@@ -435,7 +442,10 @@ export function rosterRows(raw) {
  * The reference sets every cross reference resolves against, from data the
  * caller has already read.
  *
- * @param {{ techniques: Loose[], lexicon: Loose[], recipes: Loose[], kitchen: Loose, plates: Loose, folios: Array<{ id: string, title: string }>, deck: Loose, pack: Loose, roster?: unknown }} data
+ * `foundations` is src/lib/data/culinary-foundations.json, the owner's own
+ * sheet terms, mapped entry id to term; left out, no sheet term resolves.
+ *
+ * @param {{ techniques: Loose[], lexicon: Loose[], recipes: Loose[], kitchen: Loose, plates: Loose, folios: Array<{ id: string, title: string }>, deck: Loose, pack: Loose, foundations?: Loose, roster?: unknown }} data
  * @returns {Refs}
  */
 export function makeRefs(data) {
@@ -466,6 +476,7 @@ export function makeRefs(data) {
 		dishes,
 		components,
 		terms,
+		foundations: map(Array.isArray(data.foundations?.entries) ? data.foundations.entries : [], 'id', 'term'),
 		names,
 		roster: data.roster === undefined || data.roster === null ? null : rosterRows(data.roster)
 	};
@@ -705,6 +716,7 @@ export function checkEntry(e, at, chapter, ctx) {
 					continue;
 				}
 				if (new Set(v).size !== v.length) ctx.push(`${sat}.${k}`, `${k} repeats a reference`);
+				if (k === 'terms' && v.length > LIMITS.sheetTerms) ctx.push(`${sat}.${k}`, `${v.length} sheet terms; at most ${LIMITS.sheetTerms}, the ones the entry teaches or rests on`);
 				for (const ref of v) {
 					const where = `${sat}.${k}`;
 					if (typeof ref !== 'string') {
@@ -716,6 +728,8 @@ export function checkEntry(e, at, chapter, ctx) {
 						else if (!cuisineResolves(ctx, ref)) ctx.push(where, unresolved(ctx, ref));
 					} else if (k === 'components') {
 						if (!ctx.refs.components.has(ref)) ctx.push(where, `"${ref}" is not a component of the Brennan's pack (exact name)`);
+					} else if (k === 'terms') {
+						if (!ctx.refs.foundations.has(ref)) ctx.push(where, `"${ref}" is not a term of your culinary sheets (an entry id in ${REF_SOURCES.terms})`);
 					} else {
 						const set = /** @type {Map<string, string>} */ (ctx.refs[/** @type {'techniques'} */ (k)]);
 						if (!set.has(ref)) ctx.push(where, `"${ref}" is not in ${k} (${REF_SOURCES[k]})`);
@@ -862,7 +876,8 @@ const REF_SOURCES = {
 	plates: 'src/lib/data/plates.json',
 	folios: 'TEACHING_FOLIOS in src/lib/teaching-folios.ts',
 	deck: 'src/lib/data/floor-deck.index.json',
-	components: "the Brennan's pack"
+	components: "the Brennan's pack",
+	terms: 'src/lib/data/culinary-foundations.json'
 };
 
 /** @param {unknown} v @param {string} at @param {(path: string, s: string) => void} visit */
@@ -1470,7 +1485,7 @@ export const RULES = [
 	`sections: ${LIMITS.sections[0]} or more, "what" first, keys from ${SECTION_KEYS.join(', ')}, each key once; the body is ${WORDS.body[0]} to ${WORDS.body[1]} words, no paragraph over ${WORDS.paragraph[1]}.`,
 	'ratios [{label, value}], temps [{label, c, f}] (c and f both numbers), faults [{fault, cause, fix}]: optional, but a sauce without its ratio and faults is not finished.',
 	`brennans [{dish, components, how}]: dish is a d- id of the Brennan's pack, every component an exact pack component name whose itemIds include that dish, how ${WORDS.brennansHow[0]} to ${WORDS.brennansHow[1]} words.`,
-	`seeAlso {${SEE_ALSO_KEYS.join(', ')}}: every key optional, every value an array that resolves (techniques, lexicon, recipes and kitchen by slug, plates by slug, folios by TEACHING_FOLIOS id, deck by fd_ id, components by exact pack name, entries by Cuisine slug).`,
+	`seeAlso {${SEE_ALSO_KEYS.join(', ')}}: every key optional, every value an array that resolves (techniques, lexicon, recipes and kitchen by slug, plates by slug, folios by TEACHING_FOLIOS id, deck by fd_ id, components by exact pack name, entries by Cuisine slug, terms by the entry id of the owner's sheet terms in src/lib/data/culinary-foundations.json). terms holds at most ${LIMITS.sheetTerms}: only the sheet terms the entry teaches or rests on, never a passing mention.`,
 	`quote {text, source, year}: optional, at most ${WORDS.quote[1]} words, only from a public domain text (Escoffier, Hearn, the Picayune) printed in ${LIMITS.quoteYear} or before. A quote keeps its own spelling.`,
 	`sources [{title, url, asOf?, year?, evidence?}]: at least ${LIMITS.sources}, at least ${LIMITS.sourcesStrict} for kind history and for every safety entry; https addresses only; asOf YYYY-MM-DD, never after the build date. In the safety chapter every temperature and time in the body and temps appears as a figure in some source's evidence (the source's own words).`,
 	`cards: ${LIMITS.cards[0]} to ${LIMITS.cards[1]} of {stem, front, back}, front ${WORDS.cardFront[0]} to ${WORDS.cardFront[1]} words, back ${WORDS.cardBack[0]} to ${WORDS.cardBack[1]}.`,

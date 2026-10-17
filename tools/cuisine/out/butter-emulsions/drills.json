@@ -1,0 +1,125 @@
+{
+	"steps": [
+		{
+			"stem": "mount-a-beurre-blanc",
+			"entry": "beurre-blanc",
+			"title": "Mount a beurre blanc",
+			"prompt": "Put the stages of a classic beurre blanc in order. One stage does not belong.",
+			"steps": [
+				"Boil the white wine, white wine vinegar and chopped shallot until about 2 tbsp (30 ml) of syrupy liquid remains",
+				"If the house uses cream, add a spoonful now and reduce it by half",
+				"Turn the heat to its lowest, with the butter cold from the fridge in 2 cm cubes",
+				"Whisk in two or three cubes and let them soften into a creamy sauce",
+				"Add two more cubes as each lot turns creamy, lifting the pan whenever it feels hot",
+				"Season with salt, white pepper and a little lemon, and strain out the shallot or leave it in for a rustic sauce",
+				"Hold it warm, 55 to 60°C (131 to 140°F), in a bain-marie or at the back of the stove"
+			],
+			"distractor": "Whisk two egg yolks into the reduction to bind the butter",
+			"why": "The reduction is boiled down hard first, with any cream reduced in it, and only then does the heat drop. Cold butter goes in a few cubes at a time so each lot emulsifies before the next. A beurre blanc takes no yolk: the butter's own milk proteins hold it."
+		},
+		{
+			"stem": "clarify-butter",
+			"entry": "clarified-butter",
+			"title": "Clarify butter",
+			"prompt": "Put the stages of clarifying butter in order. One stage does not belong.",
+			"steps": [
+				"Cut unsalted butter into pieces",
+				"Melt it over low heat in a heavy pan, a bain-marie or a low oven",
+				"Let it bubble quietly without stirring while the water cooks off, skimming away the white foam of milk protein as it rises",
+				"When the bubbling slows and the fat looks clear, take it off the heat and let it stand",
+				"Ladle the golden fat off the top, leaving the milky layer behind",
+				"Strain it through muslin (cheesecloth) for a clean finish",
+				"Label and date it, and keep it liquid on the station with its own clean ladle"
+			],
+			"distractor": "Turn the heat up high and stir hard so the water boils off faster",
+			"why": "Low, quiet heat lets the water cook off and the solids part from the fat without browning; stirring would mix them back in. The foam is skimmed as it rises, the fat settles before it is ladled off, and muslin catches the last specks."
+		},
+		{
+			"stem": "cook-a-fish-a-la-meuniere",
+			"entry": "meuniere",
+			"title": "Cook a fish à la meunière",
+			"prompt": "Put the stages of a fish à la meunière in order, from the raw fillet to the pass. One stage does not belong.",
+			"steps": [
+				"Pat the fish dry with a cloth and season it with salt and white pepper",
+				"With the fish dried and seasoned, heat clarified butter in a heavy frying pan until it shimmers",
+				"Once the fat shimmers, dredge the fish in flour and shake off every bit of excess",
+				"Lay it in presentation side down and leave it until the edge turns golden",
+				"Turn it once, cook the second side and lift it onto a warm plate",
+				"Pour off the fat and wipe out the pan",
+				"Brown fresh whole butter to noisette, hazelnut brown and smelling of toasted nuts",
+				"Off the heat, add the lemon juice and chopped parsley",
+				"Pour the foaming butter over the fish and send it at once"
+			],
+			"distractor": "Brown the sauce butter around the fish while it finishes cooking, to save time",
+			"why": "The fish is dry and the fat shimmering before the flour goes on, so the coat fries crisp instead of turning to paste. The fish comes out and the pan is wiped before fresh butter browns, because scorched flour turns the sauce bitter; the lemon goes in off the heat."
+		},
+		{
+			"stem": "make-a-mayonnaise-by-hand",
+			"entry": "mayonnaise",
+			"title": "Make a mayonnaise by hand",
+			"prompt": "Put the stages of a mayonnaise whisked by hand in order. One stage does not belong.",
+			"steps": [
+				"Have the yolk and the oil at room temperature, and set the bowl on a damp cloth",
+				"Whisk the yolk with the mustard, a pinch of salt and a few drops of vinegar or lemon juice",
+				"Whisk in the oil a drop at a time until the sauce thickens and turns pale",
+				"Once it has taken, pour the oil in a thin, steady stream, whisking all the while",
+				"When it stiffens, loosen it with a few drops of water or lemon juice, then whisk in the rest of the oil",
+				"Finish with acid and salt to taste",
+				"Cover it and keep it cold, at 5°C (41°F) or below"
+			],
+			"distractor": "Chill the bowl and the oil well first, so the sauce sets thicker",
+			"why": "The emulsion must take before the oil speeds up: drops first, until it turns pale and thick, then a stream. Water runs out before the yolk does, so a stiff sauce is loosened before more oil goes in. Cold ingredients slow the emulsion, so everything starts at room temperature."
+		},
+		{
+			"stem": "rescue-a-split-hollandaise",
+			"entry": "breaking-and-rescuing",
+			"title": "Rescue a split hollandaise",
+			"prompt": "A hollandaise has split on the line. Put the stages of the rescue in order. One stage does not belong.",
+			"steps": [
+				"Take it off the heat and tell the chef at once",
+				"Look closely: a greasy split can be saved, but curds of cooked egg mean starting again",
+				"Put a teaspoon of warm water in a clean bowl, or whisk a fresh yolk with a spoonful of water over barely simmering water to a light ribbon",
+				"Whisk the broken sauce into it a few drops at a time",
+				"Once it takes and thickens, whisk in the rest in a thin stream",
+				"Check it coats a spoon and holds a line drawn through it, loosening it with warm water if needed",
+				"Hold it warm in a bain-marie, away from direct heat"
+			],
+			"distractor": "Turn up the heat and whisk hard until the sauce pulls back together",
+			"why": "The heat comes off first and the chef hears straight away. A greasy split comes back when it is rebuilt a droplet at a time on a fresh base, but a truly scrambled sauce does not: heat has cooked the yolk. Only once it takes does the stream speed up."
+		}
+	],
+	"match": [
+		{
+			"stem": "butter-stages",
+			"title": "Butter from melted to black",
+			"prompt": "Match each stage of butter in a hot pan, from melted to black, to what the cook sees and smells.",
+			"left": "Butter",
+			"right": "What the cook sees",
+			"pairs": [
+				["Melted", "A quiet, pale yellow liquid with no browning yet", "beurre-noisette-and-noir"],
+				["Foaming", "Loud crackling and a white foam as the water boils off", "beurre-noisette-and-noir"],
+				["Foam subsiding", "The crackling quietens and the first brown flecks appear", "beurre-noisette-and-noir"],
+				["Beurre noisette", "Hazelnut-brown specks and a smell of toasted nuts: stop it now", "beurre-noisette-and-noir"],
+				["Beurre noir", "A deep, dark brown, past hazelnut but not yet black: the moment for vinegar and capers", "beurre-noisette-and-noir"],
+				["Burnt", "Black specks and a bitter, smoky smell: pour it away", "beurre-noisette-and-noir"]
+			]
+		},
+		{
+			"stem": "emulsion-rescues",
+			"title": "Emulsion faults and their rescue",
+			"prompt": "Match each broken or failing emulsion to the rescue a cook reaches for.",
+			"left": "Fault",
+			"right": "Rescue",
+			"pairs": [
+				["Mayonnaise split into a thin, oily pool", "Whisk it drop by drop into a fresh yolk in a clean bowl", "breaking-and-rescuing"],
+				["Beurre blanc starting to oil out from heat", "Off the heat, whisk in a cube or two of cold butter", "breaking-and-rescuing"],
+				["Beurre blanc fully separated", "Whisk it slowly into a spoonful of warm reduction or cream", "breaking-and-rescuing"],
+				["Butter sauce set thick and dull from cold", "Warm it very gently while whisking, never with a blast of heat", "breaking-and-rescuing"],
+				["Sauce turned stiff and glassy, with a sheen of fat at the edge", "Whisk in a spoonful of warm water at once", "breaking-and-rescuing"],
+				["Hollandaise only just turned grainy", "Whisk in a spoonful of cold water off the heat, then strain out the grains", "hollandaise"],
+				["Hollandaise scrambled into curds of cooked egg", "Nothing brings it back: start a new batch", "breaking-and-rescuing"],
+				["Vinaigrette separated in the bowl", "Whisk or shake it again just before use", "vinaigrette"]
+			]
+		}
+	]
+}

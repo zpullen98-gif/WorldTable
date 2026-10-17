@@ -1,0 +1,1124 @@
+{
+	"entries": [
+		{
+			"stem": "creole-and-cajun",
+			"slug": "creole-and-cajun",
+			"title": "Creole and Cajun",
+			"say": "As it reads: Creole, Cajun.",
+			"level": 1,
+			"kind": "history",
+			"summary": "Creole cooking is the city's: New Orleans households and restaurants, French technique with butter, cream and tomato. Cajun cooking is the country's: the Acadians' descendants on the bayous and prairies, with smoked meats, dark roux and rice.",
+			"guest": "Creole is the city, Cajun the country: Creole means butter, cream and tomato, Cajun smoked meats and dark roux. Our menu is the city with country seasoning.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Creole and Cajun are the two great cooking traditions of south Louisiana, and guests mix them up every week. Put simply, Creole belongs to the city and Cajun to the country. Creole is the cooking of New Orleans households and restaurants: French in technique, and shaped by the Spanish, West African, Caribbean, German and Italian cooks who worked in the city's kitchens. It leans on butter, cream and tomato, and on sauces made apart from the pot.",
+						"Cajun is the country food of the Acadians' descendants on the bayous and prairies west of the city: thrifty, one-pot cooking of smoked meats such as andouille and tasso, a roux, flour cooked in fat, taken dark, rice with nearly everything, and the game, fish and crawfish of the swamps and fields."
+					]
+				},
+				{
+					"key": "history",
+					"paras": [
+						"Creole cooking grew up in colonial New Orleans under French and then Spanish rule, in kitchens where cooks of African descent, enslaved and free, did much of the work. How those hands built it is the subject of the entry on Creole roots.",
+						"The Cajun story begins far to the north, in Acadia, today's Nova Scotia, New Brunswick and Prince Edward Island in Maritime Canada. From 1755 the British expelled its French settlers, an exile Acadians call le Grand Dérangement, the great upheaval. Exiles reached Louisiana from the 1760s, among them a party led by Joseph Broussard that settled in the Bayou Teche country in 1765, and some three thousand came in all. In south Louisiana speech, Acadien wore down to Cadien and then, in English, to Cajun. Their cooking fed farmers, trappers and fishermen: one pot, a long simmer and whatever the land gave.",
+						"For the rest of the country, the two blurred in the 1980s. Paul Prudhomme, a Cajun-born chef who had cooked in New Orleans kitchens, grew famous with his French Quarter restaurant, K-Paul's, and his blackened redfish. Cajun became the national word for any spicy Louisiana food, and menus far from the bayous sold Cajun chicken and Cajun pasta. Many New Orleans cooks still wince when a Creole dish is called Cajun. His own story belongs to his entry."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"The two traditions share far more than they divide: the holy trinity of onion, celery and green pepper, the roux, gumbo, and rice under almost everything. Both grew from French cooking, and both took in African, Spanish and Native American ingredients and hands. The textbook line says a Creole gumbo carries tomato and seafood while a Cajun gumbo carries a darker roux, poultry and smoked sausage, and that a red jambalaya is Creole while a brown one is Cajun. Real kitchens cross the line every day: city cooks reach for andouille and tasso, and country cooks make tomato gravies. Teach the line, then expect it to blur."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"Brennan's is a Creole house that borrows Cajun pantry staples: tasso, andouille and rice dressing. Andouille, a coarse smoked pork sausage, gives the Seafood Gumbo its smoky backbone. Tasso, a spiced and smoked seasoning meat cut from the pork shoulder, seasons the Creole sauce on the New Orleans Shrimp & Grits. The South Louisiana Rice Dressing, rice folded with browned meat and the trinity, is country cooking among the dinner sides; the menu prints no description, so confirm its meats with the kitchen."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"When a guest asks the difference, give the one-line answer and go back to the menu: Creole is the city, Cajun the country, and our menu is the city with country seasoning. If they want more, add one sentence: Creole cooking is French technique with butter, cream and tomato, and Cajun cooking is the Acadians' country food of smoked meats, dark roux and rice. Never call the whole menu Cajun.",
+						"Say the word Creole with care. It comes from the Spanish criollo, born in the colony, and in Louisiana it was used by people of many backgrounds born there: descendants of French and Spanish settlers, free people of colour, Africans and their descendants, and families of mixed ancestry. In the century after the Civil War the word was fought over, and who may call themselves Creole is still argued. Use it of the food and the city's tradition, and let guests describe themselves."
+					]
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-r3h9vj7a",
+					"components": ["Creole and Cajun"],
+					"how": "A Creole seafood gumbo carrying a Cajun pantry staple: andouille, the coarse smoked pork sausage, gives a smoky backbone under the shrimp, crab and oysters."
+				},
+				{
+					"dish": "d-klbj5891",
+					"components": ["Creole and Cajun"],
+					"how": "Country cooking on a city menu: rice dressing is rice folded with browned meat and the trinity. The menu prints no description, so confirm the meats with the kitchen."
+				},
+				{
+					"dish": "d-bqznncn6",
+					"components": ["Creole and Cajun"],
+					"how": "The Creole sauce is city cooking, tomato and the trinity, and it is seasoned with tasso, the Cajun spiced and smoked pork shoulder."
+				}
+			],
+			"seeAlso": {
+				"entries": ["creole-roots", "the-holy-trinity", "paul-prudhomme", "gumbo", "jambalaya", "andouille", "tasso"],
+				"lexicon": ["mirepoix-trinity-sofrito-and-friends"],
+				"recipes": ["chicken-and-andouille-gumbo", "shrimp-creole"],
+				"components": ["Creole and Cajun", "Andouille", "Tasso", "South Louisiana rice dressing"],
+				"terms": ["cured-andouille", "cured-tasso"]
+			},
+			"sources": [
+				{
+					"title": "Cajuns, 64 Parishes (Louisiana Endowment for the Humanities)",
+					"url": "https://64parishes.org/entry/cajuns",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Acadians in Colonial Louisiana: Adaptation, 64 Parishes",
+					"url": "https://64parishes.org/entry/acadians-colonial-louisiana-adaptation",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Creoles, 64 Parishes (Louisiana Endowment for the Humanities)",
+					"url": "https://64parishes.org/entry/creoles",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Paul Prudhomme, 64 Parishes",
+					"url": "https://64parishes.org/entry/paul-prudhomme",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan’s, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-09-26"
+				},
+				{
+					"title": "Brennan’s, Dinner menu",
+					"url": "https://www.brennansneworleans.com/menus/dinner/",
+					"asOf": "2026-09-26"
+				}
+			],
+			"cards": [
+				{
+					"stem": "city-country",
+					"front": "In one line, how do Creole and Cajun cooking differ?",
+					"back": "Creole is the city's cooking, from New Orleans households and restaurants; Cajun is the country cooking of the Acadians' descendants on the bayous and prairies."
+				},
+				{
+					"stem": "creole-hands",
+					"front": "Whose cooks shaped Creole cooking on its French base?",
+					"back": "Spanish, West African, Caribbean, German and Italian cooks, working in New Orleans homes and restaurants on a base of French technique."
+				},
+				{
+					"stem": "creole-larder",
+					"front": "Which three ingredients does Creole cooking lean on?",
+					"back": "Butter, cream and tomato, with sauces made apart from the pot: the habits of a city kitchen."
+				},
+				{
+					"stem": "cajun-larder",
+					"front": "What marks Cajun country cooking?",
+					"back": "Smoked meats such as andouille and tasso, a dark roux, rice with nearly everything, and the game and fish of the bayous and prairies, cooked in one pot."
+				},
+				{
+					"stem": "acadians",
+					"front": "Who were the Acadians, and when did they reach Louisiana?",
+					"back": "French settlers of Acadia, in today's Maritime Canada, expelled by the British from 1755; exiles settled on Louisiana's bayous and prairies from the 1760s."
+				},
+				{
+					"stem": "cajun-name",
+					"front": "Where does the word Cajun come from?",
+					"back": "From Acadian: the French Acadien wore down in Louisiana speech to Cadien, and then in English to Cajun."
+				},
+				{
+					"stem": "shared",
+					"front": "What do Creole and Cajun cooking share?",
+					"back": "The holy trinity, roux, gumbo and rice, and a French root; real kitchens cross the line between them every day."
+				},
+				{
+					"stem": "creole-word",
+					"front": "Why say the word Creole with care?",
+					"back": "It is layered and contested: from the Spanish criollo, born in the colony, it was used by people of many backgrounds born in colonial Louisiana."
+				},
+				{
+					"stem": "prudhomme",
+					"front": "How did Paul Prudhomme blur Creole and Cajun for the rest of the country?",
+					"back": "His fame in the 1980s, with K-Paul's and blackened redfish, made Cajun the national word for any spicy Louisiana food, Creole dishes included."
+				},
+				{
+					"stem": "table-line",
+					"front": "What is the one-line answer at the table?",
+					"back": "Creole is the city, Cajun the country, and our menu is the city with country seasoning."
+				},
+				{
+					"stem": "brennans",
+					"front": "Which Cajun staples does the Brennan's menu borrow?",
+					"back": "Andouille in the Seafood Gumbo, tasso in the Creole sauce on the Shrimp & Grits, and the South Louisiana Rice Dressing at dinner."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-city-country",
+					"q": "Which pairing describes Creole and Cajun cooking?",
+					"answer": "Creole the city, Cajun the country",
+					"distractors": ["Creole the country, Cajun the city", "Creole the coast, Cajun the hill country", "Two names for one and the same cuisine"],
+					"why": "Creole is the cooking of New Orleans homes and restaurants; Cajun is the country cooking of the Acadians' descendants on the bayous and prairies.",
+					"teaches": "city-country"
+				},
+				{
+					"stem": "q-creole-larder",
+					"q": "Creole cooking leans on which three ingredients more than Cajun cooking does?",
+					"answer": "Butter, cream and tomato",
+					"distractors": ["Smoked sausage, game and dark roux", "Lard, cornmeal and salt pork", "Olive oil, garlic and anchovy"],
+					"why": "City kitchens built on French technique reach for butter, cream and tomato; smoked meats and dark roux are the marks of the country.",
+					"teaches": "creole-larder"
+				},
+				{
+					"stem": "q-cajun-larder",
+					"q": "Which set of ingredients marks Cajun country cooking?",
+					"answer": "Smoked meats, dark roux, rice and game",
+					"distractors": ["Cream sauces, puff pastry and aspic", "Raw fish, citrus and fresh chilli", "Butter, cream and a pale roux"],
+					"why": "Cajun cooking is thrifty one-pot food of the bayous and prairies: smoked meats, a roux taken dark, rice and whatever the land gave.",
+					"teaches": "cajun-larder"
+				},
+				{
+					"stem": "q-acadians",
+					"q": "From 1755, the British expelled the French settlers who became the Cajuns from which homeland?",
+					"answer": "Acadia, in today's Maritime Canada",
+					"distractors": ["Brittany, in north-western France", "Saint-Domingue, in the Caribbean", "The Canary Islands, off north-west Africa"],
+					"why": "Acadia lay in today's Nova Scotia and its neighbours; after the expulsion, exiles settled in Louisiana from the 1760s and became the Cajuns.",
+					"teaches": "acadians"
+				},
+				{
+					"stem": "q-creole-word",
+					"q": "What did the word Creole first mean in colonial Louisiana?",
+					"answer": "Born in the colony",
+					"distractors": ["Of French birth only", "From the Caribbean islands", "A cook in a city household"],
+					"why": "From the Spanish criollo, it was used by people of many backgrounds born in Louisiana, which is why the word is layered and said with care.",
+					"teaches": "creole-word"
+				},
+				{
+					"stem": "q-prudhomme",
+					"q": "Whose fame in the 1980s made Cajun the national word for spicy Louisiana food?",
+					"answer": "Paul Prudhomme",
+					"distractors": ["Leah Chase", "Owen Brennan", "Lafcadio Hearn"],
+					"why": "Prudhomme, a Cajun-born chef, became famous with K-Paul's and blackened redfish, and Cajun spread across American menus as a word for any spicy Louisiana food.",
+					"teaches": "prudhomme"
+				},
+				{
+					"stem": "q-table-line",
+					"q": "A guest asks the difference. What is the house's one-line answer?",
+					"answer": "Creole is the city, Cajun the country, and our menu is the city with country seasoning",
+					"distractors": [
+						"Cajun is the city, Creole the country, and our menu is the country with city polish",
+						"Creole is mild and Cajun is spicy, and our menu is Creole with a little Cajun heat",
+						"Creole is Spanish, Cajun is French, and our menu is French with a Spanish accent"
+					],
+					"why": "Brennan's is a Creole house that borrows Cajun staples such as tasso, andouille and rice dressing, so the line is the city with country seasoning.",
+					"teaches": "table-line"
+				},
+				{
+					"stem": "q-shared",
+					"q": "Which of these do Creole and Cajun cooking share?",
+					"answer": "The holy trinity, roux, gumbo and rice",
+					"distractors": ["Puff pastry, aspic and cream", "Saffron, olive oil and paella pans", "Corn tortillas and dried chillies"],
+					"why": "Both grew from French cooking on Louisiana ground, so both start with the trinity and a roux and serve their gumbo over rice.",
+					"teaches": "shared"
+				},
+				{
+					"stem": "q-brennans",
+					"q": "Which Cajun staple gives the Brennan's Seafood Gumbo its smoky backbone?",
+					"answer": "Andouille",
+					"distractors": ["Tasso", "Boudin", "Smoked bacon"],
+					"why": "Andouille, the coarse smoked pork sausage, is in the Seafood Gumbo; tasso seasons the Creole sauce on the Shrimp & Grits instead.",
+					"teaches": "brennans"
+				},
+				{
+					"stem": "q-cajun-name",
+					"q": "Where does the word Cajun come from?",
+					"answer": "Acadien, worn down to Cadien",
+					"distractors": ["A Choctaw word for the bayou", "The Spanish caja, a box", "The surname of an early settler"],
+					"why": "French Acadien wore down in Louisiana speech to Cadien and then, in English, to Cajun: the word names the Acadians' descendants.",
+					"teaches": "cajun-name"
+				}
+			]
+		},
+		{
+			"stem": "the-holy-trinity",
+			"slug": "the-holy-trinity",
+			"title": "The holy trinity and the mirepoix",
+			"say": "As it reads: holy trinity.",
+			"level": 1,
+			"kind": "ingredient",
+			"summary": "Onion, celery and green bell pepper, diced and softened together at the start of a Creole or Cajun dish. It is south Louisiana's answer to the French mirepoix, with green pepper standing where the carrot would be.",
+			"guest": "The holy trinity is onion, celery and green pepper cooked together. It is the base of our gumbo, the turtle soup and the Creole sauce on the shrimp and grits.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"The holy trinity is the aromatic base of south Louisiana cooking: onion, celery and green bell pepper, diced and cooked together in fat until soft. It plays the part that mirepoix plays in a French kitchen, and the difference is the point. Where mirepoix takes carrot, the trinity takes green pepper, which gives a sharper, greener savour and less of the carrot's sugar.",
+						"It is shared by both of Louisiana's great cooking traditions. Creole cooking, the city cooking of New Orleans, puts it under tomato, butter and stock; Cajun cooking, from the prairies and bayous to the west, puts it into dark roux, game and smoked meat."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"Mirepoix itself is classically two parts onion to one part each of carrot and celery, by weight, cut small for a sauce and large for a long-simmered stock. A white mirepoix leaves out the carrot, often taking leek in its place, so that a pale stock or sauce stays pale. A matignon is a mirepoix cooked gently in butter, often with ham, and left in the dish to be eaten rather than strained out. Spain's sofrito and Italy's soffritto are cousins further off."
+					]
+				},
+				{
+					"key": "history",
+					"paras": [
+						"The vegetables are old in Louisiana kitchens; the name is newer. It nods to the Catholic faith of south Louisiana and was most likely popularised by the chef Paul Prudhomme in the 1980s. Garlic is added so often that some cooks call it the pope.",
+						"Why pepper for carrot? Nobody has documented it. The usual telling credits the hot climate and the Spanish taste for peppers, but an LSU AgCenter horticulturist points out that both crops do well in Louisiana, carrots in the cool season and peppers in the warm, so treat it as a story rather than a fact. Either way the result is plain in the pot: a sharper, more savoury base that suits smoked meat, seafood and dark roux."
+					]
+				},
+				{
+					"key": "ratio",
+					"paras": [
+						"Ratios vary by cook, and the argument is an old one. Many use equal parts of all three; others follow the mirepoix habit of two parts onion to one part each of celery and pepper, which gives a rounder, sweeter base. For a pot of gumbo for eight, about 300 g (10.5 oz) of diced onion to 150 g (about 5 oz) each of celery and green pepper is a sound start. In a professional kitchen, the chef's recipe settles it."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Cut the three to the same small dice so they soften together; the cuts themselves are taught under knife cuts. In a gumbo or an étouffée the trinity goes straight into the hot roux, which all but stops the roux darkening, give or take a shade, and cooks the vegetables in its heat; stir hard, because the pot will hiss and steam. For a Creole sauce it is sweated instead: cooked in butter or oil over moderate heat until soft and translucent, ten minutes or so, without browning, before the garlic and then the tomatoes and stock go in.",
+						"Garlic follows once the trinity has softened, for a minute or two, because it scorches faster than the others and turns bitter when it does. At the end, sliced green onion, the spring onion of a British market, and chopped flat-leaf parsley are stirred in or scattered over the bowl. They are the finishing herbs of Louisiana cooking, fresh and green against the long-cooked base."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"At Brennan's the trinity is in the Seafood Gumbo, the Turtle Soup, the Creole sauce on the New Orleans Shrimp & Grits and the South Louisiana Rice Dressing. It is the reason those dishes taste of Louisiana before a single spice goes in."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"At the table the trinity needs only a sentence: onion, celery and green bell pepper, cooked together as the base of Creole and Cajun cooking. Say holy trinity as it reads. A guest who avoids onion, celery or peppers should hear that the trinity is in the base of the gumbo, the turtle soup, the Creole sauce and the rice dressing, and the question goes to the kitchen before the order is fired."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Equal parts",
+					"value": "Onion, celery and green pepper, one part each"
+				},
+				{
+					"label": "The mirepoix habit",
+					"value": "Two parts onion to one part each of celery and green pepper"
+				},
+				{
+					"label": "French mirepoix, by weight",
+					"value": "Two parts onion to one part each of carrot and celery"
+				}
+			],
+			"faults": [
+				{
+					"fault": "Hard pieces in the finished pot",
+					"cause": "Uneven dice, so some pieces cooked through and others did not.",
+					"fix": "Cut all three to the same small dice before the roux is ready."
+				},
+				{
+					"fault": "Scorched roux when the vegetables go in",
+					"cause": "The trinity was not ready and the roux kept darkening.",
+					"fix": "Have the diced trinity beside the stove before the roux starts, and add it a shade before the colour you want; the roux darkens a little more as the vegetables cook in it."
+				},
+				{
+					"fault": "A sweet, flat Creole sauce",
+					"cause": "Too much onion, or the trinity browned when it should have been sweated.",
+					"fix": "Keep to the chosen ratio and sweat over moderate heat; in a dark-roux gumbo the vegetables are meant to colour."
+				},
+				{
+					"fault": "A bitter edge through the dish",
+					"cause": "Black specks of burnt roux, or garlic dropped into bare hot roux before the vegetables cooled it.",
+					"fix": "Start again if the roux shows black specks; add the garlic with or after the trinity, never alone into hot roux."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-r3h9vj7a",
+					"components": ["The holy trinity"],
+					"how": "The trinity is in the base of the Seafood Gumbo, beneath the shrimp, crab, oysters and smoky andouille, and is part of why the bowl tastes of Louisiana."
+				},
+				{
+					"dish": "d-ecy8tdsb",
+					"components": ["The holy trinity"],
+					"how": "The trinity is part of the dark, roux-thickened base of the Turtle Soup, which is finished with brown butter spinach, grated egg and aged sherry."
+				},
+				{
+					"dish": "d-bqznncn6",
+					"components": ["The holy trinity"],
+					"how": "It is the base of the Creole sauce on the New Orleans Shrimp & Grits, a tomato sauce seasoned with tasso, the spiced smoked pork."
+				},
+				{
+					"dish": "d-klbj5891",
+					"components": ["The holy trinity"],
+					"how": "The trinity seasons the South Louisiana Rice Dressing, the rice side at dinner; the menu prints no description, so confirm the meats with the kitchen."
+				}
+			],
+			"seeAlso": {
+				"entries": ["roux-ladder", "knife-cuts", "creole-and-cajun", "creole-sauce", "gumbo", "paul-prudhomme"],
+				"techniques": ["sweating-aromatics-soft-never-browned", "knife-cuts-dice-julienne-bias", "making-a-roux"],
+				"lexicon": ["mirepoix-trinity-sofrito-and-friends", "celery", "bell-pepper", "yellow-onion", "flat-leaf-parsley", "tasso-and-cajun-andouille"],
+				"recipes": ["chicken-and-andouille-gumbo", "shrimp-etouffee", "shrimp-creole"],
+				"kitchen": ["chicken-and-andouille-gumbo", "crawfish-etouffee"],
+				"folios": ["louisiana-larder", "aromatics-standard", "knife-cuts"],
+				"components": ["The holy trinity", "Roux", "Creole sauce"]
+			},
+			"sources": [
+				{
+					"title": "For whom the bell grows: A brief history of the Cajun holy trinity, LSU AgCenter",
+					"url": "https://www.lsuagcenter.com/articles/page1621432197656",
+					"year": 2021
+				},
+				{
+					"title": "The Holy Trinity of Cajun Cooking, Explore Louisiana",
+					"url": "https://www.explorelouisiana.com/culinary/recipes/behold-holy-trinity-cajun-cooking"
+				},
+				{
+					"title": "Paul Prudhomme, 64 Parishes",
+					"url": "https://64parishes.org/entry/paul-prudhomme",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan’s, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-09-26"
+				},
+				{
+					"title": "Brennan’s, Dinner menu",
+					"url": "https://www.brennansneworleans.com/menus/dinner/",
+					"asOf": "2026-09-26"
+				}
+			],
+			"cards": [
+				{
+					"stem": "three",
+					"front": "Which three vegetables make the holy trinity?",
+					"back": "Onion, celery and green bell pepper, diced and softened together at the start of a Creole or Cajun dish."
+				},
+				{
+					"stem": "mirepoix",
+					"front": "How does the trinity differ from a French mirepoix?",
+					"back": "Mirepoix uses carrot; the trinity puts green bell pepper in its place, for a sharper, less sugary base."
+				},
+				{
+					"stem": "name",
+					"front": "Where does the name holy trinity come from?",
+					"back": "It nods to the Catholic faith of south Louisiana; the chef Paul Prudhomme most likely popularised it in the 1980s."
+				},
+				{
+					"stem": "pope",
+					"front": "What do some cooks call the garlic added to the trinity?",
+					"back": "The pope, a joke on the name, because garlic joins the three so often."
+				},
+				{
+					"stem": "ratio",
+					"front": "What ratios do cooks use for the trinity?",
+					"back": "Equal parts of all three, or the mirepoix habit of two parts onion to one part each of celery and green pepper."
+				},
+				{
+					"stem": "roux",
+					"front": "What happens when the trinity goes into a hot dark roux?",
+					"back": "It all but stops the roux darkening, give or take a shade, and cooks in the roux's heat; the pot hisses and steams, so stir hard."
+				},
+				{
+					"stem": "dice",
+					"front": "Why cut the three vegetables to the same size?",
+					"back": "So they soften at the same rate and melt into the dish together instead of leaving hard pieces."
+				},
+				{
+					"stem": "mirepoix-ratio",
+					"front": "What is the classic ratio of a French mirepoix?",
+					"back": "Two parts onion to one part each of carrot and celery, by weight, cut small for a sauce and large for a stock."
+				},
+				{
+					"stem": "white-mirepoix",
+					"front": "What is a white mirepoix, and why use one?",
+					"back": "A mirepoix without carrot, often with leek in its place, so that a pale stock or sauce keeps its colour."
+				},
+				{
+					"stem": "brennans",
+					"front": "Which Brennan's dishes start with the trinity?",
+					"back": "The Seafood Gumbo, the Turtle Soup, the Creole sauce on the Shrimp & Grits and the South Louisiana Rice Dressing."
+				},
+				{
+					"stem": "why-pepper",
+					"front": "Why did green pepper take the carrot's place in Louisiana?",
+					"back": "Nobody knows for certain: the usual telling credits Louisiana's hot summers and Spanish cooks, though an LSU AgCenter horticulturist notes that carrots grow there too, in the cool season."
+				},
+				{
+					"stem": "finishing",
+					"front": "Which fresh herbs finish a Louisiana pot built on the trinity?",
+					"back": "Sliced green onion, the spring onion, and chopped flat-leaf parsley, stirred in or scattered over at the end against the long-cooked base."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-three",
+					"q": "Which vegetables make up the holy trinity of Louisiana cooking?",
+					"answer": "Onion, celery and bell pepper",
+					"distractors": ["Onion, carrot and celery stalk", "Garlic, shallot and leek", "Tomato, onion and okra"],
+					"why": "Onion, celery and green pepper are the three; onion, carrot and celery is the French mirepoix that the trinity adapts.",
+					"teaches": "three"
+				},
+				{
+					"stem": "q-mirepoix",
+					"q": "Which vegetable of the French mirepoix does the trinity replace with green pepper?",
+					"answer": "Carrot",
+					"distractors": ["Onion", "Celery", "Leek"],
+					"why": "Mirepoix is onion, carrot and celery; Louisiana kept the onion and celery and put green bell pepper where the carrot was.",
+					"teaches": "mirepoix"
+				},
+				{
+					"stem": "q-pope",
+					"q": "In kitchen slang, what is the pope added to the trinity?",
+					"answer": "Garlic",
+					"distractors": ["Cayenne", "Parsley", "Bay leaf"],
+					"why": "Garlic joins the three so often that cooks joke it is the pope, keeping the religious name going.",
+					"teaches": "pope"
+				},
+				{
+					"stem": "q-roux",
+					"q": "What does adding the trinity to a hot dark roux do?",
+					"answer": "All but stops the browning as they soften",
+					"distractors": [
+						"Darkens it fast as the onion sugars burn",
+						"Thickens it into a stiff, dry paste",
+						"Lightens it back to blond as it soaks up water"
+					],
+					"why": "The cool, wet vegetables drop the roux's temperature and all but halt its colour while its heat softens them, so they go in a shade before the colour wanted.",
+					"teaches": "roux"
+				},
+				{
+					"stem": "q-name",
+					"q": "Who most likely popularised the name holy trinity?",
+					"answer": "Paul Prudhomme",
+					"distractors": ["Auguste Escoffier", "Antoine Alciatore", "Marie-Antoine Carême"],
+					"why": "Prudhomme, the Louisiana chef, is credited with spreading the phrase in the 1980s; the three vegetables themselves are far older in Louisiana pots.",
+					"teaches": "name"
+				},
+				{
+					"stem": "q-brennans",
+					"q": "Which Brennan's dish has the trinity in its base?",
+					"answer": "Seafood Gumbo",
+					"distractors": ["Eggs Sardou", "Grand Isle Jewel Oysters", "Roasted Chateaubriand"],
+					"why": "The trinity is in the gumbo's base; the Sardou is built on artichoke and Choron sauce, the Jewel Oysters come raw with a mignonette, and the Chateaubriand carries sauce Foyot.",
+					"teaches": "brennans"
+				},
+				{
+					"stem": "q-mirepoix-ratio",
+					"q": "What is the classic proportion of a French mirepoix, by weight?",
+					"answer": "Two parts onion to one each of carrot and celery",
+					"distractors": [
+						"Equal parts onion, carrot and celery",
+						"Two parts carrot to one each of onion and celery",
+						"Two parts celery to one each of onion and carrot"
+					],
+					"why": "Classical mirepoix leans on onion, two parts to one each of carrot and celery; the trinity keeps the onion and swaps the carrot for green pepper.",
+					"teaches": "mirepoix-ratio"
+				},
+				{
+					"stem": "q-dice",
+					"q": "Why are the three vegetables cut to the same small dice?",
+					"answer": "So they soften at the same rate",
+					"distractors": ["So they brown as darkly as possible", "So they can be lifted out later", "So the pot needs less stirring"],
+					"why": "Even pieces cook through together and melt into the dish; uneven ones leave some hard while others collapse.",
+					"teaches": "dice"
+				},
+				{
+					"stem": "q-why-pepper",
+					"q": "What is the usual, though unproven, telling of why green pepper took the carrot's place?",
+					"answer": "Peppers suited the hot, wet climate",
+					"distractors": ["Carrot was kept for French stocks only", "Green pepper is sweeter than carrot", "French chefs found carrot too sweet"],
+					"why": "The common story credits the hot, wet climate; an LSU AgCenter horticulturist notes that both crops grow in Louisiana in different seasons, so it remains a story.",
+					"teaches": "why-pepper"
+				},
+				{
+					"stem": "q-finishing",
+					"q": "Which pair of fresh herbs finishes a gumbo or an étouffée?",
+					"answer": "Green onion and flat-leaf parsley",
+					"distractors": ["Tarragon and chervil, chopped fine", "Fresh thyme and a bay leaf", "Basil and torn mint leaves"],
+					"why": "Sliced green onion and chopped parsley go in at the end, fresh and green against the long-cooked trinity and roux.",
+					"teaches": "finishing"
+				}
+			]
+		},
+		{
+			"stem": "roux-ladder",
+			"slug": "roux-ladder",
+			"title": "The roux ladder",
+			"say": "ROO LAD-er",
+			"level": 1,
+			"kind": "method",
+			"summary": "The Louisiana roux ladder runs from white and blond through peanut butter and milk chocolate to dark chocolate, or brick. Each rung takes longer, tastes deeper and thickens less, and each dish wants its own rung.",
+			"guest": "A roux is flour cooked in fat until it toasts; the darker it goes, the deeper the flavour. It is part of why a gumbo tastes deep rather than brothy.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"A roux, said ROO, is flour cooked in fat and stirred until it reaches the colour the dish needs. French kitchens cook it white or blond for béchamel, the milk sauce, and velouté, the stock sauce, and brown for espagnole, the brown sauce, though Escoffier's brown roux stops at a light, nutty brown; the French roux have their own entry. Louisiana cooks keep going, naming the stages by familiar colours: white, blond, peanut butter, milk chocolate, which is a medium brown, and dark chocolate, also called brick. Each rung up takes longer, smells and tastes deeper, and thickens less.",
+						"The colour of the roux is the flavour of the pot: pulled too early, the dish tastes flat; taken too far, it tastes burnt."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Use a heavy pot over a medium flame. For a dark roux use oil or lard, not whole butter: its milk solids scorch long before the flour turns brown, so whole butter is kept for the pale rungs. Clarified butter, its milk solids taken out, can go darker, as in the classical French brown roux. Weigh equal amounts of fat and flour, such as 225 g (8 oz) of each. Heat the fat until it shimmers, whisk in the flour, then work with a flat-ended wooden spoon that reaches the corners, and never stop stirring.",
+						"Rough times over a medium flame: blond in 5 to 10 minutes, peanut butter in 15 to 20, milk chocolate in 25 to 35, and dark chocolate in 40 minutes or more. Read the roux, not the clock. As it darkens it loosens and runs more freely, and its smell moves from raw flour to toast, roasted nuts, then cocoa and coffee. The oven roux is the slower, gentler path: bake the fat and flour uncovered at 175°C (350°F), stirring every 20 to 30 minutes, for 1.5 to 2.5 hours.",
+						"A roux keeps cooking in its own heat, so stop it just before the colour you want. In Louisiana the trinity does the stopping: the cool, wet onion, celery and pepper go in all at once, drop the temperature and halt the browning while the roux softens them. The stock follows, whisked in gradually."
+					]
+				},
+				{
+					"key": "ratio",
+					"paras": [
+						"Darker means more flavour and less thickening, and the reason is the starch. Flour is mostly starch, long chains of glucose packed into granules. In a pale roux the granules are barely changed, and when liquid goes in they swell and thicken it. Long heat breaks those chains into shorter ones called dextrins, which brown and taste toasty but can no longer swell and bind. Flour for flour, a dark roux thickens far less than a blond one, so a gumbo, though far thinner than a sauce, takes about as much flour as a medium béchamel: around 50 g (1.75 oz) a litre."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"Each rung has its dishes. White and blond thicken most French sauces, and a brown roux the classical espagnole; blond to peanut butter suits an étouffée, which wants body and a buttery colour. Milk chocolate suits the gravy of grillades and a Creole courtbouillon. Dark chocolate belongs to chicken and andouille gumbo, duck and sausage gumbo, sauce piquante and most New Orleans seafood gumbos, the published Brennan's recipe among them, though some cooks stop a seafood gumbo a shade lighter so the shrimp and crab stay in front. In a professional kitchen the chef sets how dark each house roux goes, because the colour sets both the flavour and how much flour the recipe needs."
+					]
+				},
+				{
+					"key": "safety",
+					"paras": [
+						"Black flecks or a sharp, acrid smell mean the roux has burnt, and there is no rescue: the bitterness runs through the whole pot, so start again. Hot roux also burns cooks. A dark roux runs well over 150°C (302°F) and clings to skin like hot sugar, which is why Louisiana cooks call it Cajun napalm. Wear long sleeves, keep water away from the pot, never taste from the spoon, and add the spitting trinity away from your face."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"At Brennan's, roux is part of why the Seafood Gumbo and the Turtle Soup taste deep rather than brothy. A dark roux is the Creole tradition for both, and the house's published gumbo recipe, as the lineup notes give it, starts with a dark mahogany roux, but how dark the kitchen takes each one is the chef's call: confirm it at lineup before describing it. Questions about flour in a dish go to the kitchen."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Fat to flour",
+					"value": "Equal weights, such as 225 g (8 oz) of each"
+				},
+				{
+					"label": "Rough times over a medium flame",
+					"value": "Blond 5 to 10 minutes, peanut butter 15 to 20, milk chocolate 25 to 35, dark chocolate 40 or more"
+				},
+				{
+					"label": "Thickening, flour for flour",
+					"value": "The darker the roux, the less it thickens, so a dark roux is used in larger amounts"
+				}
+			],
+			"temps": [
+				{
+					"label": "Oven roux, baked uncovered and stirred every 20 to 30 minutes",
+					"c": 175,
+					"f": 350
+				},
+				{
+					"label": "A dark roux runs well above this",
+					"c": 150,
+					"f": 302
+				}
+			],
+			"faults": [
+				{
+					"fault": "Black flecks and an acrid smell",
+					"cause": "The roux burnt: the flame was too high, the stirring stopped or the pot was thin.",
+					"fix": "Throw it out and start again; a burnt roux cannot be rescued."
+				},
+				{
+					"fault": "Scorched at the corners, pale in the middle",
+					"cause": "The spoon or whisk never reached the edges, or the pot has hot spots.",
+					"fix": "Use a heavy pot and a flat-ended wooden spoon, and keep the flame at medium."
+				},
+				{
+					"fault": "A flat, pale-tasting gumbo",
+					"cause": "The roux was pulled from the heat before it reached its colour.",
+					"fix": "Cook the roux to the colour by sight and smell next time; a small dark roux made apart can be stirred in now."
+				},
+				{
+					"fault": "A thin, watery pot",
+					"cause": "A dark roux was asked to thicken more liquid than it can.",
+					"fix": "Simmer it down, or stir in a little more roux made in another pan, and adjust the recipe."
+				},
+				{
+					"fault": "Lumps in the sauce or gumbo",
+					"cause": "The liquid went in too fast.",
+					"fix": "Whisk the stock in gradually, and whisk hard as it comes to a simmer."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-r3h9vj7a",
+					"components": ["Roux"],
+					"how": "The Seafood Gumbo rests on a roux; the published Brennan's gumbo recipe takes it to a dark mahogany, but confirm at lineup that the dining room pot follows it before saying so."
+				},
+				{
+					"dish": "d-ecy8tdsb",
+					"components": ["Roux"],
+					"how": "Creole turtle soup is traditionally thickened with a dark roux, which gives its deep colour and toasty depth; how dark the house roux goes is a question for the chef."
+				}
+			],
+			"seeAlso": {
+				"entries": ["roux", "gumbo", "etouffee", "the-holy-trinity", "seafood-gumbo", "sauce-piquante", "grillades", "allergen-conversation"],
+				"techniques": ["making-a-roux"],
+				"lexicon": ["roux-slurry-and-liaison", "the-maillard-reaction"],
+				"recipes": ["chicken-and-andouille-gumbo", "shrimp-etouffee"],
+				"folios": ["roux-colour-ladder"],
+				"components": ["Roux"]
+			},
+			"sources": [
+				{
+					"title": "A Guide to Modern Cookery, A. Escoffier (London: Heinemann, 1907)",
+					"url": "https://www.gutenberg.org/ebooks/71395",
+					"year": 1907
+				},
+				{
+					"title": "Brennan’s, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-09-26"
+				}
+			],
+			"cards": [
+				{
+					"stem": "rungs",
+					"front": "Name the five rungs of the Louisiana roux ladder, pale to dark.",
+					"back": "White, blond, peanut butter, milk chocolate (a medium brown) and dark chocolate, also called brick."
+				},
+				{
+					"stem": "times",
+					"front": "Roughly how long does each rung take over a medium flame?",
+					"back": "Blond 5 to 10 minutes, peanut butter 15 to 20, milk chocolate 25 to 35 and dark chocolate 40 or more; read the roux, not the clock."
+				},
+				{
+					"stem": "fat",
+					"front": "Why use oil or lard rather than butter for a dark roux?",
+					"back": "Whole butter's milk solids scorch long before the flour turns dark brown, so oil or lard is used; clarified butter can go darker, as in the classical French brown roux."
+				},
+				{
+					"stem": "ratio",
+					"front": "What is the proportion of fat to flour in a roux?",
+					"back": "Equal weights, such as 225 g (8 oz) of each; 240 ml (a cup) of each by volume comes out lighter on flour."
+				},
+				{
+					"stem": "stir",
+					"front": "What pot, tool and habit does a dark roux need?",
+					"back": "A heavy pot over a medium flame, a flat-ended wooden spoon that reaches the corners, and stirring that never stops."
+				},
+				{
+					"stem": "cues",
+					"front": "Besides colour, what tells you how far a roux has gone?",
+					"back": "Smell and texture: it moves from raw flour to toast, roasted nuts, then cocoa and coffee, and loosens as it darkens."
+				},
+				{
+					"stem": "burnt",
+					"front": "What do black flecks or an acrid smell mean?",
+					"back": "The roux has burnt. There is no rescue, because the bitterness runs through the whole pot: throw it out and start again."
+				},
+				{
+					"stem": "stop",
+					"front": "How do Louisiana cooks stop a roux at the right colour?",
+					"back": "They add the trinity all at once: the cool, wet vegetables drop the temperature and halt the browning while the roux softens them."
+				},
+				{
+					"stem": "dextrins",
+					"front": "Why does a darker roux thicken less?",
+					"back": "Long heat breaks the flour's starch chains into shorter dextrins, which brown and taste toasty but can no longer swell and bind liquid."
+				},
+				{
+					"stem": "danger",
+					"front": "Why is hot roux so dangerous, and what are the rules?",
+					"back": "It runs well over 150°C (302°F) and clings to skin like hot sugar: long sleeves, no splashing, no tasting from the spoon, and add the trinity away from your face."
+				},
+				{
+					"stem": "oven",
+					"front": "What is an oven roux?",
+					"back": "Fat and flour baked uncovered at 175°C (350°F), stirred every 20 to 30 minutes for 1.5 to 2.5 hours: slower, gentler and much less likely to burn."
+				},
+				{
+					"stem": "rung-dish",
+					"front": "Which rung suits a chicken and andouille gumbo, and which an étouffée?",
+					"back": "Dark chocolate for the gumbo, blond to peanut butter for the étouffée. In a professional kitchen the chef sets each house roux, because colour sets flavour and the flour needed."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-rungs",
+					"q": "Which rung of the Louisiana roux ladder sits between blond and milk chocolate?",
+					"answer": "Peanut butter",
+					"distractors": ["Dark chocolate", "White", "Caramel"],
+					"why": "The ladder runs white, blond, peanut butter, milk chocolate and dark chocolate, or brick; caramel is not one of its names.",
+					"teaches": "rungs"
+				},
+				{
+					"stem": "q-times",
+					"q": "Roughly how long does a dark chocolate roux take over a medium flame?",
+					"answer": "40 minutes or more",
+					"distractors": ["5 to 10 minutes", "15 to 20 minutes", "About 2 minutes"],
+					"why": "Blond takes 5 to 10 minutes and peanut butter 15 to 20; the darkest rung needs 40 minutes or more of steady stirring.",
+					"teaches": "times"
+				},
+				{
+					"stem": "q-fat",
+					"q": "Why is butter a poor fat for a dark roux?",
+					"answer": "Its milk solids scorch too soon",
+					"distractors": ["It makes the roux too thick to stir", "It stops the flour browning at all", "It turns the roux pale again"],
+					"why": "Butter carries milk solids that scorch at a lower heat than a dark roux needs, so Louisiana cooks use oil or lard for the dark rungs.",
+					"teaches": "fat"
+				},
+				{
+					"stem": "q-ratio",
+					"q": "What proportion of fat to flour makes a classic roux?",
+					"answer": "Equal weights of each",
+					"distractors": ["Twice as much fat as flour", "Three parts flour to one of fat", "Fat only, with flour added later"],
+					"why": "Equal weights coat every grain of flour in fat so it cooks evenly and later disperses into the liquid without lumps.",
+					"teaches": "ratio"
+				},
+				{
+					"stem": "q-burnt",
+					"q": "Black flecks appear and the roux smells acrid. What do you do?",
+					"answer": "Throw it out and start again",
+					"distractors": ["Add stock to stop it", "Whisk in more flour to hide it", "Strain out the black flecks"],
+					"why": "A burnt roux carries its bitterness into the whole pot; a little oil and flour is cheaper than a ruined gumbo.",
+					"teaches": "burnt"
+				},
+				{
+					"stem": "q-stop",
+					"q": "In a gumbo, what goes into the roux to stop it browning?",
+					"answer": "The trinity, all at once",
+					"distractors": ["Cold water, poured in fast", "Another handful of flour", "A knob of cold butter"],
+					"why": "The cool, wet vegetables drop the roux's temperature at once; water would spit dangerously and more flour would only burn.",
+					"teaches": "stop"
+				},
+				{
+					"stem": "q-dextrins",
+					"q": "Why does a dark roux thicken less than a blond one?",
+					"answer": "Its starch has broken into shorter dextrins",
+					"distractors": [
+						"Its fat has cooked away in the long heat",
+						"Its flour has soaked up all the fat",
+						"Its proteins have set into tough curds"
+					],
+					"why": "Long heat cuts the starch chains into dextrins that brown and taste toasty but can no longer swell and bind, so more roux is needed.",
+					"teaches": "dextrins"
+				},
+				{
+					"stem": "q-danger",
+					"q": "Which is the right habit around a hot dark roux?",
+					"answer": "No splashing and no tasting from the spoon",
+					"distractors": [
+						"Taste a drop to judge how toasty it is",
+						"Cool a smoking spot with a splash of water",
+						"Drop the trinity in from high above the pot"
+					],
+					"why": "Hot roux runs well above boiling and clings to skin, so cooks keep water away, never taste it hot, and tip the trinity in low over the pot, away from the face, to limit splashing.",
+					"teaches": "danger"
+				},
+				{
+					"stem": "q-oven",
+					"q": "What does an oven roux trade for its lower risk of burning?",
+					"answer": "Time: an hour and a half or more",
+					"distractors": ["Colour: it never goes past blond", "Flavour: it tastes of raw flour", "Body: it cannot thicken at all"],
+					"why": "Baked uncovered at 175°C (350°F) and stirred now and then, it reaches dark brown in 1.5 to 2.5 hours with far less watching.",
+					"teaches": "oven"
+				},
+				{
+					"stem": "q-rung-dish",
+					"q": "Which roux colour does a chicken and andouille gumbo traditionally take?",
+					"answer": "Dark chocolate",
+					"distractors": ["White", "Blond", "Peanut butter"],
+					"why": "Smoked sausage and chicken stand up to the deepest roux; blond to peanut butter suits an étouffée, and the chef sets each house roux.",
+					"teaches": "rung-dish"
+				}
+			]
+		},
+		{
+			"stem": "gumbo",
+			"slug": "gumbo",
+			"title": "Gumbo",
+			"say": "GUM-boh",
+			"level": 1,
+			"kind": "dish",
+			"summary": "Gumbo is Louisiana's soup-stew, served over rice and thickened with roux, okra, filé or a mix of them. Its name most likely comes from a Bantu word for okra, and its pot holds the state's history.",
+			"guest": "Gumbo is Louisiana's great soup-stew, built on a roux and served over rice. Ours is seafood: shrimp, crab, oysters and smoky andouille over popcorn rice.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Gumbo is a Louisiana soup-stew served over rice. It is thicker than a soup and thinner than a stew or a gravy, and it is thickened by roux, which is flour cooked in fat until it toasts, by okra, by filé, which is ground dried sassafras leaves, or by a mix of them. Nearly every modern gumbo starts with a roux and the holy trinity of onion, celery and green pepper, then stock, a long simmer and whatever the cook has: seafood, chicken, sausage, duck or greens. It is the dish most guests come to Louisiana expecting, and often the first one they ask about."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Most gumbos follow one shape. Cook a roux in a heavy pot to the colour the recipe calls for, stir in the trinity to stop it, then the garlic. Add smoked sausage such as andouille, then whisk in hot stock gradually and bring it to a simmer. Simmer an hour or more, skimming the fat that rises and seasoning as it goes. Poultry goes in early enough to turn tender; seafood goes in only for the last few minutes, so it stays sweet. Finish with sliced green onion and parsley. How okra and filé go in is a lesson of its own.",
+						"Rice goes in the bowl, never in the pot: plain long-grain rice cooked apart, with the gumbo ladled around it. Cooked in the pot, the rice would drink the liquid and turn the gumbo to porridge. In some Cajun homes a scoop of potato salad goes alongside, or straight into the bowl."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"Gumbos come in families. Seafood gumbo carries shrimp, crab and oysters in a stock made from their shells. Chicken and andouille is the everyday country gumbo: a dark roux, chicken and smoked sausage. Duck and sausage is the hunters' gumbo of duck season, its roux taken very dark. Gumbo z'herbes is the green gumbo of many greens, tied to Lent and Holy Thursday. Each has its own lesson.",
+						"The city and country line shows here too. Creole gumbos often carry tomato and seafood, and okra; Cajun gumbos lean to a dark roux, poultry and smoked sausage, and rarely see tomato. Like every line between Creole and Cajun, it blurs in real kitchens."
+					]
+				},
+				{
+					"key": "history",
+					"paras": [
+						"A gumbo tells Louisiana's history in one bowl. The name most likely comes from ki-ngombo, a word for okra in the Bantu languages of west-central Africa, shortened to gombo; okra itself crossed the Atlantic with the slave trade. The other theory traces the name to kombo, a Choctaw word for filé, and filé itself came from the Choctaw. The roux is French, taken darker in Louisiana, and Spanish, German and Caribbean cooks added their hands, the German settlers upriver among them with their smoked sausage. Written accounts place gumbo at a governor's reception in New Orleans in 1803, and Lafcadio Hearn's La Cuisine Créole of 1885 already printed several gumbos."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"A burnt roux makes a bitter pot, and nothing rescues it. A thin, watery gumbo usually means a dark roux was asked to thicken more liquid than it could. A greasy surface means the fat was not skimmed. Rubbery shrimp and shrunken oysters went in too early or were reheated too hard, and mushy rice was cooked in the pot."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"At Brennan's the gumbo is the Seafood Gumbo: shrimp, crab, oysters and andouille over Louisiana popcorn rice, a signature at both meals and the other soup choice on the Traditional Breakfast. Its own entry tells its story; anything in tonight's pot beyond what the menu prints is a lineup question."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Say GUM-boh, and describe it in a breath: Louisiana's soup-stew, built on a roux and served over rice. Tell the guest what is in tonight's bowl, then how it eats: rice and gumbo in the same spoon. Asked whether ours is spicy, the house answer is mild to moderate. Whether bread or hot sauce comes with it is the house's call, so learn it at lineup. If a guest asks about okra or filé, or about shellfish or flour, read the service note and ask the kitchen rather than guess."
+					]
+				}
+			],
+			"faults": [
+				{
+					"fault": "A bitter, burnt taste",
+					"cause": "The roux burnt before the trinity went in.",
+					"fix": "Start again; a burnt roux cannot be rescued, and it spoils every ingredient added after it."
+				},
+				{
+					"fault": "Thin and watery",
+					"cause": "Too much stock for the roux, often a dark roux, which thickens less.",
+					"fix": "Simmer it down, or stir in a little roux made in another pan."
+				},
+				{
+					"fault": "A greasy surface",
+					"cause": "Fat from the roux and the sausage was never skimmed.",
+					"fix": "Skim through the simmer, and lift the fat that rises before serving."
+				},
+				{
+					"fault": "Rubbery shrimp and shrunken oysters",
+					"cause": "The seafood went in too early or was boiled on reheating.",
+					"fix": "Add seafood only for the last few minutes, and reheat gently."
+				},
+				{
+					"fault": "Mushy rice and a porridge-thick pot",
+					"cause": "The rice was cooked in the gumbo.",
+					"fix": "Cook the rice apart and put it in the bowl."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-r3h9vj7a",
+					"components": ["Gumbo"],
+					"how": "Ours is the Seafood Gumbo: shrimp, crab, oysters and andouille over Louisiana popcorn rice, a Brennan's signature at both meals and the other soup choice on the Traditional Breakfast."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"gumbo-thickeners",
+					"seafood-gumbo",
+					"gumbo-zherbes",
+					"brennans-seafood-gumbo",
+					"roux-ladder",
+					"the-holy-trinity",
+					"creole-and-cajun",
+					"okra",
+					"file",
+					"andouille",
+					"louisiana-rice"
+				],
+				"lexicon": ["okra"],
+				"recipes": ["chicken-and-andouille-gumbo", "gumbo-zherbes"],
+				"kitchen": ["chicken-and-andouille-gumbo"],
+				"folios": ["roux-colour-ladder"],
+				"components": ["Gumbo", "Louisiana popcorn rice", "Andouille"],
+				"terms": [
+					"cured-andouille"
+				]
+			},
+			"sources": [
+				{
+					"title": "A Short History of Gumbo, Stanley Dry, Southern Foodways Alliance",
+					"url": "https://www.southernfoodways.org/?p=13142",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Filé, 64 Parishes",
+					"url": "https://www.64parishes.org/entry/file",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan’s, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-09-26"
+				},
+				{
+					"title": "La cuisine creole (1885), attributed to Lafcadio Hearn, Project Gutenberg eBook 75027",
+					"url": "https://www.gutenberg.org/ebooks/75027",
+					"year": 1885,
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Gumbo, Encyclopaedia Britannica",
+					"url": "https://www.britannica.com/topic/gumbo",
+					"asOf": "2026-10-12"
+				}
+			],
+			"cards": [
+				{
+					"stem": "what",
+					"front": "What, in plain words, is gumbo?",
+					"back": "A Louisiana soup-stew served over rice, thickened with roux, okra, filé or a mix of them."
+				},
+				{
+					"stem": "thickeners",
+					"front": "Which three thickeners can a gumbo use?",
+					"back": "Roux; okra; and filé, ground dried sassafras leaves; alone or in a mix. Nearly every modern gumbo starts with a roux."
+				},
+				{
+					"stem": "name",
+					"front": "Where does the word gumbo most likely come from?",
+					"back": "From ki-ngombo, a Bantu word for okra from west and central Africa, shortened to gombo; the other theory is kombo, a Choctaw word for filé."
+				},
+				{
+					"stem": "families",
+					"front": "Name four families of gumbo.",
+					"back": "Seafood; chicken and andouille; duck and sausage; and gumbo z'herbes, the green gumbo of many greens."
+				},
+				{
+					"stem": "creole-cajun",
+					"front": "How does a Creole gumbo tend to differ from a Cajun one?",
+					"back": "Creole gumbos often carry tomato, seafood and okra; Cajun gumbos lean to a dark roux, poultry and smoked sausage, and rarely tomato."
+				},
+				{
+					"stem": "method",
+					"front": "What is the usual order of building a gumbo?",
+					"back": "Roux, then the trinity to stop it, garlic, sausage, hot stock and any poultry, a long simmer with skimming, seafood in the last few minutes, then green onion and parsley."
+				},
+				{
+					"stem": "rice",
+					"front": "Why is the rice never cooked in the gumbo pot?",
+					"back": "It would drink the liquid and turn the gumbo to porridge, so rice is cooked apart and goes in the bowl."
+				},
+				{
+					"stem": "potato-salad",
+					"front": "What goes alongside gumbo in some Cajun homes?",
+					"back": "A scoop of potato salad, set beside the bowl or dropped straight into it."
+				},
+				{
+					"stem": "seafood-last",
+					"front": "Why does seafood go into a gumbo last?",
+					"back": "Shrimp, crab and oysters need only minutes; added early or boiled on reheating, they turn rubbery and shrink."
+				},
+				{
+					"stem": "history",
+					"front": "Whose cooking meets in a bowl of gumbo?",
+					"back": "French roux, West African okra and Choctaw filé, with the hands of Spanish, German and Caribbean cooks."
+				},
+				{
+					"stem": "brennans",
+					"front": "What is the gumbo on the Brennan's menu?",
+					"back": "The Seafood Gumbo: shrimp, crab, oysters and andouille over Louisiana popcorn rice, served at both meals."
+				},
+				{
+					"stem": "service",
+					"front": "A guest asks whether tonight's gumbo has okra or filé. What do you do?",
+					"back": "Check the service note and ask the kitchen rather than guess; anything beyond what the menu prints is the kitchen's to confirm."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-what",
+					"q": "In Louisiana, what is a bowl of gumbo served over?",
+					"answer": "Rice",
+					"distractors": ["Grits", "Mashed potatoes", "Toasted French bread"],
+					"why": "Gumbo is a soup-stew ladled over plain rice cooked apart; grits go under grillades and shrimp, not gumbo.",
+					"teaches": "what"
+				},
+				{
+					"stem": "q-name",
+					"q": "What does the word gumbo most likely come from?",
+					"answer": "A Bantu word for okra",
+					"distractors": ["A French word for stew", "A Spanish word for pot", "A Choctaw word for crawfish"],
+					"why": "Ki-ngombo, a word for okra in the Bantu languages of west and central Africa, was shortened to gombo; the rival theory is a Choctaw word for filé, not for crawfish.",
+					"teaches": "name"
+				},
+				{
+					"stem": "q-thickeners",
+					"q": "Nearly every modern gumbo starts on which thickener?",
+					"answer": "A roux of flour cooked in fat",
+					"distractors": ["Okra, smothered first in oil", "Filé, boiled with the stock", "Egg yolk whisked in at the end"],
+					"why": "Okra and filé are the other two traditional thickeners, but nearly every modern gumbo begins with a roux, the trinity stirred straight into it.",
+					"teaches": "thickeners"
+				},
+				{
+					"stem": "q-families",
+					"q": "Which of these is a classic family of gumbo?",
+					"answer": "Duck and sausage",
+					"distractors": ["Chicken and dumplings", "Turtle and sherry", "Red beans and pickled pork"],
+					"why": "Seafood, chicken and andouille, duck and sausage, and the green gumbo z'herbes are the families every cook knows; the others are Southern pots, not gumbos.",
+					"teaches": "families"
+				},
+				{
+					"stem": "q-creole-cajun",
+					"q": "Which ingredient is common in Creole gumbos but rare in Cajun ones?",
+					"answer": "Tomato",
+					"distractors": ["Rice", "Roux", "Onion"],
+					"why": "City gumbos often take tomato with their seafood; country gumbos lean on a dark roux, poultry and smoked sausage instead.",
+					"teaches": "creole-cajun"
+				},
+				{
+					"stem": "q-rice",
+					"q": "Why is rice cooked apart rather than in the gumbo pot?",
+					"answer": "It would turn the gumbo to porridge",
+					"distractors": ["Rice would thin the gumbo to a broth", "Rice cannot cook through in a stock", "Its starch would darken the roux"],
+					"why": "Rice drinks liquid as it cooks; in the pot it would swell and thicken the gumbo into mush, so it goes in the bowl.",
+					"teaches": "rice"
+				},
+				{
+					"stem": "q-seafood-last",
+					"q": "When does the seafood go into a gumbo?",
+					"answer": "In the last few minutes",
+					"distractors": ["At the start, with the roux", "With the trinity", "The night before, to marinate"],
+					"why": "Shrimp, crab and oysters cook in minutes; any longer and they turn rubbery and shrink in the pot.",
+					"teaches": "seafood-last"
+				},
+				{
+					"stem": "q-history",
+					"q": "Which people gave gumbo its filé?",
+					"answer": "The Choctaw",
+					"distractors": ["The Spanish", "The Acadians", "The Germans"],
+					"why": "Filé, ground sassafras leaves, came to Louisiana cooking from the Choctaw, beside French roux and West African okra.",
+					"teaches": "history"
+				},
+				{
+					"stem": "q-brennans",
+					"q": "What does the Brennan's Seafood Gumbo sit on?",
+					"answer": "Louisiana popcorn rice",
+					"distractors": ["Two Brooks Farm rice grits", "A fried pimento cheese grit cake", "Carolina Gold heirloom rice"],
+					"why": "The menu prints popcorn rice; the rice grits sit under the Blackened Tofu and the grit cake under the Shrimp & Grits.",
+					"teaches": "brennans"
+				},
+				{
+					"stem": "q-potato-salad",
+					"q": "What do some Cajun homes serve with gumbo, beside or in the bowl?",
+					"answer": "Potato salad",
+					"distractors": ["Coleslaw", "Cornbread", "Pickled okra"],
+					"why": "A scoop of potato salad with gumbo is a Cajun home habit, set beside the bowl or dropped into it.",
+					"teaches": "potato-salad"
+				}
+			]
+		}
+	]
+}

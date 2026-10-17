@@ -1,0 +1,181 @@
+{
+	"steps": [
+		{
+			"stem": "saute-a-fish-fillet",
+			"entry": "saute",
+			"title": "Sauté a fish fillet",
+			"prompt": "Put the stages of sautéing a fish fillet to order in order, from the pan to the plate. One stage does not belong.",
+			"steps": [
+				"Heat the empty pan over medium-high heat",
+				"Add a thin film of oil or clarified butter and wait until it shimmers",
+				"As the fat shimmers, season the dried fillet and dredge it in flour, shaking off every loose speck",
+				"Lay it in presentation side down, away from you, and press it flat for a moment",
+				"Leave it alone until the crust forms and it lets go of the pan",
+				"Turn it once, lower the heat and finish it gently",
+				"Lift it out and plate it presentation side up"
+			],
+			"distractor": "Crowd every fillet on the ticket into the pan at once so the order goes out together",
+			"why": "The pan is hot before the fat and the fat before the fish, which is dredged at the last moment so the coat stays dry. Left alone, it releases once the crust forms; crowded, the pan cools and the fish stews grey."
+		},
+		{
+			"stem": "poach-eggs-for-service",
+			"entry": "poaching",
+			"title": "Poach eggs for service",
+			"prompt": "Put the stages of poaching eggs ahead for a busy brunch in order, from the pan to the plate. One stage does not belong.",
+			"steps": [
+				"Bring water at least 8 cm (3 inches) deep to a bare shiver, with a splash of white vinegar if the chef uses it",
+				"Crack each egg, as fresh as you can get, into its own cup and slide it in close to the surface",
+				"Poach for about 3 minutes, until the white is set and the yolk still flows",
+				"Lift each egg out with a slotted spoon straight into iced water to stop the cooking, then trim any ragged edges",
+				"Hold the eggs cold for the time the chef sets",
+				"On the order, warm an egg in water at about 70°C (158°F) for about a minute, until warm through",
+				"Blot it dry on a cloth and set it on the plate"
+			],
+			"distractor": "Leave the poached eggs in the hot poaching water until the order comes in",
+			"why": "Fresh eggs, a bare shiver and a cup for each egg keep the whites neat. For service the eggs are poached ahead, stopped in iced water and held cold, then warmed through for about a minute; left waiting in hot water, they keep cooking until the yolks set."
+		},
+		{
+			"stem": "make-a-french-omelette",
+			"entry": "eggs-to-order",
+			"title": "Make a French omelette",
+			"prompt": "Put the stages of a classic French omelette in order, from the bowl to the plate. One stage does not belong.",
+			"steps": [
+				"Beat 3 eggs with a pinch of salt until no streaks of white remain",
+				"Heat 15 g (1 tbsp) of butter in a 20 cm (8 inch) egg pan over brisk heat until it foams",
+				"Pour in the eggs while the butter foams, before it takes any colour",
+				"Stir fast with a fork while shaking the pan, so the eggs set in small, soft curds",
+				"Stop stirring after about 30 seconds, while the top is still soft and moist, baveuse",
+				"Roll the omelette away from the handle",
+				"Turn it out seam down onto the plate, pale, smooth and soft at the centre"
+			],
+			"distractor": "Let the butter brown to a nutty hazelnut colour before the eggs go in",
+			"why": "The whole omelette takes under a minute, so the eggs are beaten smooth before the butter goes on. They go in as the butter foams, are stirred to small curds and rolled while still moist; browned butter would colour and toughen a French omelette, which leaves the pan pale and soft."
+		},
+		{
+			"stem": "blanch-and-refresh-green-vegetables",
+			"entry": "boil-blanch-and-steam",
+			"title": "Blanch and refresh green vegetables",
+			"prompt": "Put the stages of blanching and refreshing green beans for service in order. One stage does not belong.",
+			"steps": [
+				"Bring plenty of water, about 10 g of salt to 1 litre (about 1 quart), to a rolling boil, with a bowl of iced water beside it",
+				"Drop in the beans a handful at a time, so the water comes straight back to the boil",
+				"Boil them uncovered for 2 to 3 minutes, until bright green and just tender",
+				"Lift them straight into the iced water to stop the cooking and set the colour",
+				"Leave them only until cold, then drain them well",
+				"Dry them on a cloth, so no clinging water thins the butter later",
+				"At service, finish them in moments in hot butter or sauce"
+			],
+			"distractor": "Put the lid on and add a squeeze of lemon to keep the beans bright",
+			"why": "The iced water waits before the beans go in, because the refresh must follow at once. A big, salted, uncovered rolling boil cooks them fast and keeps the green; a lid and early acid turn them olive. Drained and dried, they finish in moments at service."
+		},
+		{
+			"stem": "braise-short-rib-in-red-wine",
+			"entry": "braise-and-daube",
+			"title": "Braise short rib in red wine",
+			"prompt": "Put the stages of a short rib braised in red wine in order, from the sear to the sauce. One stage does not belong.",
+			"steps": [
+				"Season and dry the short rib, then sear it in a little oil in a heavy pot until deep brown on every side",
+				"Lift the meat out, pour off most of the fat and soften onion, carrot, celery and garlic",
+				"Pour in the red wine, scrape up the fond and reduce it by about half",
+				"Add the stock and return the meat, the liquid a third to halfway up its sides",
+				"Add a bouquet garni, bring it just to a simmer and cover the pot",
+				"Braise in a low oven, about 150 to 160°C (302 to 320°F), until a fork slides in and out with no pull",
+				"Lift out the meat, strain the liquid and skim off the fat",
+				"Reduce the liquid until it coats a spoon, season it and warm the meat through in it"
+			],
+			"distractor": "Boil it hard on the stove so the collagen softens faster",
+			"why": "The sear and its fond come first, because they flavour the sauce, and the wine is reduced before the stock so it loses its raw edge. Liquid partway up, a lid and a low oven melt the collagen slowly; a hard boil leaves the meat dry and stringy."
+		},
+		{
+			"stem": "build-and-bake-a-fish-en-papillote",
+			"entry": "en-papillote",
+			"title": "Build and bake a fish en papillote",
+			"prompt": "Put the stages of a fish fillet baked en papillote, in a parchment heart, in order. One stage does not belong.",
+			"steps": [
+				"Cut a heart of parchment about 30 to 35 cm (12 to 14 inches) across and brush it with butter",
+				"Lay a bed of fine julienne of leek, carrot and fennel on one half, with sliced shallot and herbs",
+				"Set the seasoned fillet on the bed with a knob of butter and 15 to 30 ml (1 to 2 tbsp) of white wine",
+				"Fold the paper over and crimp the edges in small, tight, overlapping folds all the way round",
+				"Twist the tip so no steam can escape",
+				"Bake on a tray at about 200°C (392°F), roughly 12 to 15 minutes for a fillet 2.5 cm (1 inch) thick",
+				"Probe a test parcel through the paper for 63°C (145°F) at the thickest point",
+				"Send it at once, while the parcel is still puffed"
+			],
+			"distractor": "Leave the edges loosely folded so the steam can escape as it bakes",
+			"why": "The aromatics are cut fine and laid first, so the fish sits on them and they cook in its time. Tight crimps and a twisted tip trap the steam that cooks the fish; loose folds let it out, so the fish dries and the parcel never puffs."
+		},
+		{
+			"stem": "deglaze-and-finish-a-pan-sauce",
+			"entry": "deglaze-and-pan-sauce",
+			"title": "Deglaze and finish a pan sauce",
+			"prompt": "Put the stages of a pan sauce made in the searing pan in order, while the meat rests. One stage does not belong.",
+			"steps": [
+				"Sear the meat in a stainless or carbon steel pan, then lift it out to rest",
+				"Pour off all but about 15 ml (1 tbsp) of the fat and lower the heat",
+				"Sweat a finely chopped shallot for a minute, soft and without colour",
+				"Pour in the wine and scrape up the fond with a flat wooden spatula",
+				"Reduce the wine almost dry, au sec",
+				"Add the stock, reduce it to nappe and tip in the meat's resting juices",
+				"Off the heat, swirl in cold butter a piece at a time until the sauce is glossy",
+				"Season it and serve it at once"
+			],
+			"distractor": "Bring the sauce back to a hard boil after the butter goes in, to thicken it",
+			"why": "The fat is poured off and the shallot sweated before the wine lifts the fond. The wine goes almost dry before the stock so its raw taste cooks away, and the butter goes in last, off the heat: boiled after mounting, the sauce breaks and turns greasy."
+		},
+		{
+			"stem": "bread-and-fry-at-the-station",
+			"entry": "frying",
+			"title": "Bread and fry at the station",
+			"prompt": "Put the stages of breading and deep frying a piece of seafood in order, from the board to the pass. One stage does not belong.",
+			"steps": [
+				"Pat the seafood dry and season it",
+				"Dredge it in flour and shake off the excess, keeping one hand for the dry",
+				"Dip it in the egg wash with the other hand, the wet hand",
+				"Press it into the crumbs until it is coated all over",
+				"Rest the breaded pieces a few minutes so the coating sets",
+				"With the oil at about 175°C (347°F), lower the basket gently, no more than half full",
+				"Fry until golden, then lift the basket and shake it over the oil",
+				"Turn the food onto a rack, salt it at once and send it straight away"
+			],
+			"distractor": "Fill the basket to the top so the whole order fries in one load",
+			"why": "Flour dries the surface so the egg clings, and the egg glues on the crumbs; a short rest sets the coat. A half-full basket keeps the oil hot so the crust sets fast; an overloaded one drops the heat and the food soaks up fat. Salt it on the rack while hot."
+		},
+		{
+			"stem": "flambe-a-pan-sauce",
+			"entry": "flambe",
+			"title": "Flambé a pan sauce",
+			"prompt": "Put the stages of a flambé pan sauce of brandy and green peppercorn in order, made at the stove. One stage does not belong.",
+			"steps": [
+				"Sear the steaks, lift them out to rest and pour off most of the fat",
+				"Sweat shallot with drained green peppercorns",
+				"Pull the pan off the flame and pour in about 60 ml (1/4 cup) of brandy from a measuring jug",
+				"Return the pan and tilt its far edge to the flame to light it, a lid within reach",
+				"Stand back and let the flame burn out on its own",
+				"Add brown stock and reduce it by half",
+				"Add cream and simmer it to nappe",
+				"Off the heat, swirl in cold butter and serve"
+			],
+			"distractor": "Pour more brandy from the bottle into the pan while it is still alight",
+			"why": "The spirit goes in off the flame from a measure, never the bottle, because fire can travel back up the neck. It is lit with a lid in reach and left to burn out before the stock, and the sauce is reduced after, so no harsh, boozy edge remains."
+		}
+	],
+	"match": [
+		{
+			"stem": "method-heat",
+			"title": "Methods and their heat",
+			"prompt": "Match each cooking method to the heat and the medium that cook the food.",
+			"left": "Method",
+			"right": "Heat and medium",
+			"pairs": [
+				["Sauté", "A thin film of hot fat in a wide pan, the food tossed or turned", "saute"],
+				["Poach", "Water, stock, wine or milk held below the simmer, the surface barely trembling", "poaching"],
+				["Braise", "Liquid partway up the meat in a covered pot, in a low oven for hours", "braise-and-daube"],
+				["Confit", "Submerged in fat that is barely moving, about 85 to 95°C (185 to 203°F)", "confit"],
+				["Deep fry", "Submerged in oil at about 170 to 190°C (338 to 374°F)", "frying"],
+				["Roast", "The dry heat of an oven, with no liquid in the pan", "roast-and-baste"],
+				["Grill", "Radiant heat from below, and hot bars that brand the surface", "grill-and-salamander"],
+				["Steam", "The vapour above boiling water, the food never touching it", "boil-blanch-and-steam"]
+			]
+		}
+	]
+}

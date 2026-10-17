@@ -1,0 +1,1463 @@
+{
+	"entries": [
+		{
+			"stem": "brennans-sauce-family",
+			"slug": "brennans-sauce-family",
+			"title": "The Brennan's sauce family",
+			"say": "As it reads: the Brennan's sauce family.",
+			"level": 2,
+			"kind": "sauce",
+			"summary": "Every sauce on the Brennan's menus placed in the family it comes from: the warm egg emulsions, the brown sauces, the butter sauces, the Creole sauces, the bistro and raw bar sauces, and the sweet sauces of dessert.",
+			"guest": "Most of our plates are built around a classic sauce: the egg dishes carry hollandaise and its cousins, the breakfast steak béarnaise, and the Creole plates a peppery butter or tomato sauce.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Almost every plate at Brennan's is built around a sauce, and almost every sauce belongs to a family: a small group of sauces made the same way from the same base. Learn the family and you know how a sauce is made, tastes and fails before you learn a recipe. Each sauce has its own entry.",
+						"The house guide says the sauce usually matters more than the protein. For the guest, a mild fish or lean tenderloin tastes mostly of its sauce; for the wine, the sauce sets the match: hollandaise wants acid and bubbles, a red wine sauce welcomes a red."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"Kitchens teach five mother sauces: espagnole, velouté, béchamel, tomate and hollandaise. Escoffier's Le Guide Culinaire (1903) named four grandes sauces de base, the first four, and set hollandaise among the warm emulsified sauces, fat and liquid held as one smooth sauce. Carême, earlier, counted espagnole, velouté, allemande and béchamel.",
+						"The French classics. Hollandaise is egg yolk and butter, sharpened with lemon or a vinegar reduction. Built on a vinegar, shallot and tarragon reduction it becomes béarnaise; with tomato paste folded in, béarnaise becomes Choron; with glace de viande, a syrupy meat glaze, it becomes Foyot. The brown family gives marchand de vin, the wine merchant's sauce: red wine and brown stock, in New Orleans often bound with a roux, flour cooked in fat. The butter sauces give beurre blanc, cold butter whisked into a sharp wine and shallot reduction, with no yolk.",
+						"The Creole side. Creole sauce is the city's tomato sauce on the holy trinity of onion, celery and green pepper, carrying tasso on the shrimp and grits. New Orleans barbecue sauce is a buttery, peppery pan sauce in the barbecue shrimp style, not smoky and not tomato, on the Louisiana Oysters; the BBQ Lobster carries one in the same style, confirmed at lineup, the short staff meeting before each service. A chive rémoulade, a cold spiced sauce, comes with the Crawfish Meat Pies.",
+						"The bistro and the bar. A mustard cream sauce, shallot, wine and cream with mustard stirred in off the heat, on the Poussin; mignonette, shallot in vinegar with cracked pepper, on the Grand Isle Jewel Oysters; brown butter, cooked until its milk solids toast nutty, as a warm vinaigrette on the Crab Claws; a gastrique, caramel loosened with vinegar, made with Crystal hot sauce for the Popcorn Shrimp; and the Creole Caesar's dressing, an emulsion in the Caesar way with smoked oysters taking anchovy's usual briny role.",
+						"The sweet sauces. A crème anglaise, the stirred pouring custard, made with sweetened condensed milk for the Pineapple Tarte Tatin; a whiskey caramel on the bread pudding; and the Foster's blond caramel of butter and brown sugar, lit with rum at the table."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"What binds a sauce decides how it is held. Egg yolk binds the warm emulsions, made in small batches and held warm, around 60°C (140°F), and cold ones too, such as the Caesar dressing and a mayonnaise rémoulade. Butter alone binds beurre blanc and the barbecue sauce, which break if they boil or sit. Roux and reduction give body to the brown and tomato sauces, which can simmer and hold. Acid alone carries the mignonette, yolk heated to about 82°C (180°F) sets the anglaise, and sugar cooked to caramel carries the caramels."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"The pecan bordelaise on the Pecan Gulf Fish needs a question first, because bordelaise names two sauces: in the French kitchen a red wine sauce with shallot, demi-glace, a glossy reduced brown sauce, and bone marrow; in New Orleans usually a garlic butter with parsley. Confirm which with the kitchen before you pair a wine: a red wine sauce changes the bottle.",
+						"The Brennan's sauces folio sets six of the menu's sauces side by side, classic studies, not photographs of our plates: hollandaise pale yellow; béarnaise flecked with tarragon; Choron soft coral; Foyot tan from its glaze; marchand de vin glossy red-brown; beurre blanc ivory. Learn them by colour."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"Each family fails its own way: a warm emulsion scrambles when too hot and splits when too cool, a butter sauce breaks when it boils, a roux scorches bitter, and caramel burns in seconds."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Name the sauce in plain words first and the French second: a buttery, lemony egg-yolk sauce, hollandaise. House recipes are not printed, so recipe questions go to the kitchen. Mention the alcohol in the whiskey caramel and the Foster to a guest who avoids it: flaming burns the vapour, not all the rum."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Warm emulsions, butter to each yolk",
+					"value": "About 75 g (2.5 oz) of clarified butter"
+				},
+				{
+					"label": "Roux for a brown sauce",
+					"value": "Equal weights of flour and fat"
+				},
+				{
+					"label": "Gastrique",
+					"value": "Sugar and vinegar in roughly equal parts"
+				}
+			],
+			"temps": [
+				{
+					"label": "Hold hollandaise, béarnaise, Choron and Foyot warm",
+					"c": 60,
+					"f": 140
+				},
+				{
+					"label": "A crème anglaise coats the spoon",
+					"c": 82,
+					"f": 180
+				}
+			],
+			"faults": [
+				{
+					"fault": "Calling every yellow sauce hollandaise",
+					"cause": "The warm emulsions look alike at the pass.",
+					"fix": "Learn the plate: Choron on the Sardou, béarnaise on the breakfast hanger, Foyot on the Chateaubriand, hollandaise on the Hussarde and the Owen."
+				},
+				{
+					"fault": "Describing the barbecue sauce as smoky or tomato",
+					"cause": "The word barbecue suggests a grill and a bottled sauce.",
+					"fix": "Call it a buttery, peppery New Orleans BBQ sauce, a pan sauce in the barbecue shrimp style."
+				},
+				{
+					"fault": "Promising which bordelaise the Pecan Gulf Fish carries",
+					"cause": "Bordelaise names a French red wine sauce and a New Orleans garlic butter.",
+					"fix": "Confirm with the kitchen before describing it or pairing a wine."
+				},
+				{
+					"fault": "Pairing the wine to the protein",
+					"cause": "The fish or beef seems the main thing on the plate.",
+					"fix": "Pair to the sauce: acid and bubbles for the warm emulsions, a red for the red wine sauces."
+				},
+				{
+					"fault": "A warm emulsion or butter sauce split on the plate",
+					"cause": "Held too hot, held too cool, or boiled.",
+					"fix": "The kitchen rescues it from a fresh base or makes it again; a broken sauce never goes out."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-1q0xk7jv",
+					"components": [
+						"Hollandaise",
+						"Marchand de vin"
+					],
+					"how": "The Eggs Hussarde carries two families on one plate: marchand de vin, the dark, winey brown sauce, beneath the egg, and hollandaise, the bright warm emulsion, on top."
+				},
+				{
+					"dish": "d-fs311zha",
+					"components": [
+						"Sauce Choron"
+					],
+					"how": "On the Eggs Sardou, Choron, béarnaise finished with tomato, takes the place of the usual hollandaise: coral, tangy and herbal, brighter than hollandaise."
+				},
+				{
+					"dish": "d-5wcuejdy",
+					"components": [
+						"Sauce Foyot"
+					],
+					"how": "Foyot, béarnaise with glace de viande whisked in, brings tawny, savoury depth to the Roasted Chateaubriand, a lean, mild cut that needs a rich sauce."
+				},
+				{
+					"dish": "d-4jee8o34",
+					"components": [
+						"Béarnaise"
+					],
+					"how": "The breakfast Creole-Spiced Hanger Steak carries French béarnaise, hollandaise built on a vinegar, shallot and tarragon reduction: the classic sharp, herbal sauce for beef."
+				},
+				{
+					"dish": "d-s1bqzuks",
+					"components": [
+						"Beurre blanc"
+					],
+					"how": "The Redfish Véronique carries a preserved lemon beurre blanc: cold butter whisked into a sharp reduction with no yolk, salty and perfumed over a firm, mild fish."
+				},
+				{
+					"dish": "d-1bvercoh",
+					"components": [
+						"Pecan bordelaise"
+					],
+					"how": "The pecan bordelaise is most likely the New Orleans garlic butter with toasted pecans rather than the French red wine sauce; confirm with the kitchen before pairing a wine."
+				},
+				{
+					"dish": "d-bqznncn6",
+					"components": [
+						"Creole sauce"
+					],
+					"how": "Creole sauce, the city's tomato sauce on the holy trinity, carries tasso on the New Orleans Shrimp & Grits, so it is smoky as well as tangy."
+				},
+				{
+					"dish": "d-wckf36s5",
+					"components": [
+						"New Orleans barbecue sauce"
+					],
+					"how": "The Louisiana Oysters at breakfast and lunch come in New Orleans barbecue sauce: a buttery, peppery pan sauce in the barbecue shrimp style, neither smoky nor tomato."
+				},
+				{
+					"dish": "d-5e4ptrq8",
+					"components": [
+						"New Orleans barbecue sauce"
+					],
+					"how": "The Louisiana BBQ Lobster on the dinner tasting carries a New Orleans barbecue sauce in the same buttery, peppery style; the recipe is not published, so confirm the kitchen's version at lineup."
+				},
+				{
+					"dish": "d-nd0d2czb",
+					"components": [
+						"Mignonette"
+					],
+					"how": "The Grand Isle Jewel Oysters come with a preserved Fresno chilli mignonette with parsley: shallot, vinegar and cracked pepper, spooned on by the guest at the table."
+				},
+				{
+					"dish": "d-5p5b1hjn",
+					"components": [
+						"Brown butter"
+					],
+					"how": "On the Louisiana Crab Claws, brown butter becomes a warm vinaigrette: butter cooked until its milk solids toast nutty, then sharpened with acid."
+				},
+				{
+					"dish": "d-vovhoagi",
+					"components": [
+						"Chive rémoulade"
+					],
+					"how": "The Crawfish Meat Pies at the Roost come with a chive rémoulade, cool, tangy and herby against hot pastry; which rémoulade style it follows, the kitchen can say."
+				},
+				{
+					"dish": "d-5f1lj940",
+					"components": [
+						"Crystal gastrique"
+					],
+					"how": "The Popcorn Shrimp at the Roost come with a Crystal gastrique, a sweet and sour reduction made with the New Orleans hot sauce: sweet, tangy and gently spicy for dipping."
+				},
+				{
+					"dish": "d-l5877hs6",
+					"components": [
+						"Mustard cream sauce"
+					],
+					"how": "The Poussin à la Moutarde puts a Burgundian bistro mustard cream sauce over a sweet tea-brined, fried Cornish hen: a French sauce on a Southern bird."
+				},
+				{
+					"dish": "d-t96e4urn",
+					"components": [
+						"Sweetened condensed anglaise"
+					],
+					"how": "Beside the Pineapple Tarte Tatin, a crème anglaise made with sweetened condensed milk brings a caramel note, cool and silky against hot caramel and pastry."
+				},
+				{
+					"dish": "d-tdqej73i",
+					"components": [
+						"Smoked oyster dressing"
+					],
+					"how": "The Creole Caesar's dressing is a Caesar emulsion with smoked oysters blended in, taking the briny role anchovy usually plays; whether it also carries anchovy is for the chef. Treat it as a shellfish dish, flag it on the ticket and check with the kitchen."
+				},
+				{
+					"dish": "d-un9zb9af",
+					"components": [
+						"Whiskey caramel"
+					],
+					"how": "The New Orleans Bread Pudding carries a whiskey caramel, amber caramel loosened with cream and butter, with whiskey for warmth; mention the alcohol to a guest who avoids it."
+				},
+				{
+					"dish": "d-w6h1p19m",
+					"components": [
+						"Bananas, butter, brown sugar and cinnamon",
+						"Rum and banana liqueur"
+					],
+					"how": "The Foster's sauce is made at the table: butter and brown sugar melted to a bubbling blond caramel with cinnamon, then loosened with banana liqueur and lit with rum."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"hollandaise",
+					"bearnaise",
+					"choron-and-foyot",
+					"marchand-de-vin",
+					"bordelaise",
+					"beurre-blanc",
+					"creole-sauce",
+					"barbecue-shrimp",
+					"creole-remoulade",
+					"mignonette",
+					"beurre-noisette-and-noir",
+					"creme-anglaise",
+					"warm-emulsion-family",
+					"eggs-hussarde"
+				],
+				"lexicon": [
+					"emulsions"
+				],
+				"folios": [
+					"brennans-sauces",
+					"hollandaise-standard"
+				],
+				"deck": [
+					"fd_0197",
+					"fd_0196",
+					"fd_0205",
+					"fd_0201",
+					"fd_0202",
+					"fd_0209"
+				],
+				"components": [
+					"Escoffier and the mother sauces"
+				]
+			},
+			"sources": [
+				{
+					"title": "A Guide to Modern Cookery, A. Escoffier (London: Heinemann, 1907)",
+					"url": "https://www.gutenberg.org/ebooks/71395",
+					"year": 1907
+				},
+				{
+					"title": "Brennan's, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan's, Dinner menu",
+					"url": "https://www.brennansneworleans.com/menus/dinner/",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan's, Dessert menu",
+					"url": "https://www.brennansneworleans.com/menus/dessert/",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan's, Bubbles at Brennan's menu",
+					"url": "https://www.brennansneworleans.com/menus/bubbles-at-brennans/",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan's, Dinner Tasting Menu ($80)",
+					"url": "https://www.brennansneworleans.com/menus/dinnertastingmenu/",
+					"asOf": "2026-10-12"
+				}
+			],
+			"cards": [
+				{
+					"stem": "families",
+					"front": "Name the six families of the Brennan's sauces, with a sauce from each.",
+					"back": "Warm egg emulsions (hollandaise and its cousins), brown (marchand de vin), butter (beurre blanc), Creole (Creole sauce, barbecue sauce, rémoulade), bistro and bar (mustard cream, mignonette, a Crystal gastrique of caramel, vinegar and hot sauce) and sweet (anglaise, caramels)."
+				},
+				{
+					"stem": "warm-emulsions",
+					"front": "Which four menu sauces belong to the hollandaise family?",
+					"back": "Hollandaise on the Hussarde and the Owen, béarnaise on the breakfast hanger, Choron on the Sardou and Foyot on the Chateaubriand. Escoffier's 1903 Guide named four base sauces and set hollandaise among the warm emulsions; later teaching made it the fifth mother sauce."
+				},
+				{
+					"stem": "choron-foyot",
+					"front": "How do Choron and Foyot each change béarnaise?",
+					"back": "Choron folds in tomato cooked to a paste, turning it coral and tangy; Foyot whisks in glace de viande, a meat glaze, turning it tan and savoury."
+				},
+				{
+					"stem": "marchand",
+					"front": "Which family does marchand de vin come from?",
+					"back": "The brown family: red wine reduced with brown stock, in New Orleans with onion, garlic and often mushroom, and often bound with a roux."
+				},
+				{
+					"stem": "beurre-blanc",
+					"front": "What holds a beurre blanc together when it has no egg yolk?",
+					"back": "Cold butter whisked piece by piece into a sharp wine, vinegar and shallot reduction over low heat. Ours is preserved lemon, on the Redfish Véronique."
+				},
+				{
+					"stem": "bbq",
+					"front": "Is New Orleans barbecue sauce smoky or tomato-based?",
+					"back": "Neither: it is a buttery, peppery pan sauce in the barbecue shrimp style, on the Louisiana Oysters and the Louisiana BBQ Lobster."
+				},
+				{
+					"stem": "bordelaise",
+					"front": "Why is the pecan bordelaise the sauce to confirm?",
+					"back": "Bordelaise names two sauces, the French red wine sauce and the New Orleans garlic butter. Ask the kitchen which it is before pairing a wine."
+				},
+				{
+					"stem": "sauce-first",
+					"front": "Why learn the sauce on a plate before the protein?",
+					"back": "The sauce usually decides how a dish tastes and what wine it wants: hollandaise wants acid and bubbles, a red wine sauce welcomes a red."
+				},
+				{
+					"stem": "raw-bar",
+					"front": "What is a mignonette, and which oysters carry ours?",
+					"back": "Shallot in vinegar with cracked pepper, spooned on raw oysters. Ours adds preserved Fresno chilli and parsley, on the Grand Isle Jewel Oysters, which are served raw: give the consumer advisory the service note carries."
+				},
+				{
+					"stem": "sweet",
+					"front": "Name three sweet sauces and the desserts they go with.",
+					"back": "The sweetened condensed anglaise with the Pineapple Tarte Tatin, the whiskey caramel on the bread pudding, and the rum-lit caramel of the Bananas Foster."
+				},
+				{
+					"stem": "holding",
+					"front": "How does each family's binding change the way the kitchen holds it?",
+					"back": "Warm emulsions are made in small batches and held warm, about 60°C (140°F); butter sauces break if they boil; roux and tomato sauces can simmer and hold."
+				},
+				{
+					"stem": "caesar",
+					"front": "What makes the Creole Caesar dressing different?",
+					"back": "Smoked oysters are blended into the Caesar emulsion, taking anchovy's usual briny role; whether it also carries anchovy is for the chef. Flag it as a shellfish dish on the ticket and check with the kitchen."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-warm",
+					"q": "Which of these sauces is not a member of the hollandaise family?",
+					"answer": "Marchand de vin",
+					"distractors": [
+						"Béarnaise",
+						"Choron",
+						"Foyot"
+					],
+					"why": "Béarnaise, Choron and Foyot are all built on the warm yolk and butter emulsion; marchand de vin is a red wine brown sauce.",
+					"teaches": "warm-emulsions"
+				},
+				{
+					"stem": "q-choron",
+					"q": "Which sauce is béarnaise finished with tomato?",
+					"answer": "Choron",
+					"distractors": [
+						"Foyot",
+						"Paloise",
+						"Maltaise"
+					],
+					"why": "Choron folds tomato paste into béarnaise; Foyot adds meat glaze, Paloise swaps the tarragon for mint, and Maltaise is hollandaise with blood orange.",
+					"teaches": "choron-foyot"
+				},
+				{
+					"stem": "q-marchand",
+					"q": "Which family does the marchand de vin on the egg dishes come from?",
+					"answer": "The brown sauces",
+					"distractors": [
+						"The warm egg emulsions",
+						"The butter sauces",
+						"The sweet sauces"
+					],
+					"why": "Marchand de vin is red wine reduced with brown stock, in New Orleans often bound with a roux, so it sits in the brown family.",
+					"teaches": "marchand"
+				},
+				{
+					"stem": "q-beurre-blanc",
+					"q": "What binds a beurre blanc, which has no egg yolk?",
+					"answer": "Cold butter whisked into a reduction",
+					"distractors": [
+						"A roux of flour and fat",
+						"Arrowroot slaked and stirred in at the end",
+						"Gelatine from veal bones"
+					],
+					"why": "Cold butter added piece by piece over low heat to a wine, vinegar and shallot reduction forms the emulsion, and it breaks if it boils.",
+					"teaches": "beurre-blanc"
+				},
+				{
+					"stem": "q-bbq",
+					"q": "How would you describe the New Orleans barbecue sauce on the Louisiana Oysters?",
+					"answer": "Buttery and peppery",
+					"distractors": [
+						"Smoky and sweet",
+						"Tomato and molasses",
+						"Vinegar and mustard"
+					],
+					"why": "New Orleans barbecue sauce is a pan sauce of butter and black pepper in the barbecue shrimp style, never smoky and never tomato-based.",
+					"teaches": "bbq"
+				},
+				{
+					"stem": "q-bordelaise",
+					"q": "Before pairing a wine with the Pecan Gulf Fish, what should a server confirm with the kitchen?",
+					"answer": "Which bordelaise it carries",
+					"distractors": [
+						"How long the fish was aged",
+						"Which farm grew the pecans",
+						"Whether the crab is local"
+					],
+					"why": "Bordelaise can mean a French red wine sauce or a New Orleans garlic butter, and a red wine sauce changes the bottle.",
+					"teaches": "bordelaise"
+				},
+				{
+					"stem": "q-sauce-first",
+					"q": "Why learn the sauce on each Brennan's plate before the protein?",
+					"answer": "It usually decides taste and wine",
+					"distractors": [
+						"It is the costliest part",
+						"It is always made to order at the pass",
+						"It sets the cooking time"
+					],
+					"why": "For the guest and for the wine the sauce usually matters more than the protein: hollandaise wants acid and bubbles, a red wine sauce a red.",
+					"teaches": "sauce-first"
+				},
+				{
+					"stem": "q-caesar",
+					"q": "In the Creole Caesar's dressing, what role do the smoked oysters take?",
+					"answer": "The anchovy's briny role",
+					"distractors": [
+						"The egg yolk's binding role",
+						"The lemon's sharp role",
+						"The oil's rich role"
+					],
+					"why": "Smoked oysters take the briny role anchovy usually plays, so the house guide treats the salad as a shellfish dish: flag it and check with the kitchen. Whether it also carries anchovy is for the chef.",
+					"teaches": "caesar"
+				},
+				{
+					"stem": "q-escoffier",
+					"q": "In Le Guide Culinaire (1903), where did Escoffier set hollandaise?",
+					"answer": "Among the warm emulsified sauces",
+					"distractors": [
+						"As the fifth of his base sauces",
+						"Among the cold sauces of the larder",
+						"Among the brown sauces"
+					],
+					"why": "Escoffier named four grandes sauces de base, espagnole, velouté, béchamel and tomate, and set hollandaise among the warm emulsions; the five mother sauces are later teaching.",
+					"teaches": "warm-emulsions"
+				},
+				{
+					"stem": "q-gastrique",
+					"q": "What is the Crystal gastrique served with the Popcorn Shrimp at the Roost?",
+					"answer": "Caramel loosened with vinegar",
+					"distractors": [
+						"Mayonnaise with chopped pickles and capers",
+						"Cold butter whisked into a wine reduction",
+						"Tomato cooked down with the trinity"
+					],
+					"why": "A gastrique is sugar cooked to caramel, then loosened with vinegar; made with Crystal hot sauce it turns sweet, tangy and gently spicy, a bar sauce for dipping fried shrimp.",
+					"teaches": "families"
+				}
+			]
+		},
+		{
+			"stem": "eggs-hussarde",
+			"slug": "eggs-hussarde",
+			"title": "Eggs Hussarde",
+			"say": "EGZ hoo-SARD",
+			"level": 1,
+			"kind": "dish",
+			"summary": "The Brennan's signature egg dish: poached eggs on coffee-cured Canadian bacon and housemade English muffins, with marchand de vin, a red wine sauce, beneath and hollandaise on top. New Orleans' answer to Eggs Benedict, under a name older than the restaurant.",
+			"guest": "Eggs Hussarde is our signature egg dish: our own English muffins, coffee-cured Canadian bacon and poached eggs, with two sauces, buttery hollandaise and a savoury red wine sauce.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Eggs Hussarde is poached eggs on Canadian bacon over a toasted bread base, with two sauces: marchand de vin, a dark red wine sauce, beneath the egg, and hollandaise, the warm butter and egg-yolk sauce, on top. At Brennan's it is the signature egg dish and the egg course of the Traditional Breakfast, built on housemade English muffins and coffee-cured Canadian bacon.",
+						"Think of it as New Orleans' answer to Eggs Benedict. The Benedict has one sauce; the Hussarde adds a second, deep and winey, so every forkful carries something bright and something rich. For a new cook it is three classical foundations on one plate."
+					]
+				},
+				{
+					"key": "history",
+					"paras": [
+						"Hussarde is French for hussar style. The hussars were light cavalry, first raised in Hungary, and why the dish took their name is not known. The name is older than the restaurant: a recipe for poached eggs à la Hussarde was printed in 1895, credited to the chef Adolphe Gallier of the Hotel Brunswick in New York, and Escoffier gave a version in Le Guide Culinaire in 1903. The two-sauce plate is the New Orleans form, which Brennan's made famous from about 1950. So call it our signature, and never say it was invented here.",
+						"The house guide credits Paul Blangé, the first chef, with the Brennan's Hussarde; confirm that wording with a manager at lineup, the short staff meeting before each service, before you tell it."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"A kitchen builds it in parts that meet at the pass, the counter where plates leave the kitchen. The eggs are poached in water held just below a simmer, about 85°C (185°F), often with a splash of vinegar, for about three minutes, until the white is set and the yolk still runs. Many kitchens poach ahead, hold the eggs in iced water and rewarm them to order for 30 seconds to a minute in hot water, well below a simmer. The bacon is warmed, the muffin split and toasted, and both sauces wait at the station: the marchand de vin hot, the hollandaise warm, around 60°C (140°F), never hot.",
+						"The house guide gives the stack from the bottom: English muffin, coffee-cured Canadian bacon, marchand de vin, poached egg, hollandaise. The guide also speaks of the sauces side by side, so confirm tonight's plating at the pass. In the classic build the two sauces stay distinct: the brown sauce goes on first, under the egg, and the hollandaise last, over it, so the pale sauce rests on the egg instead of sinking into the dark one."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"Each part rests on a foundation taught in its own entry. The egg is poaching. The marchand de vin, the wine merchant's sauce, comes from the brown family: in the New Orleans way, onion and plenty of garlic in place of the shallot, often ham and mushroom, beef stock and red wine, frequently bound with a roux, flour cooked in fat. The hollandaise is the warm emulsion, egg yolk holding butter in a smooth, lemony sauce."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"What goes wrong at the pass: a hard yolk, from an egg poached too long or warmed too hot; a ragged white, from water at a rolling boil or a tired egg; a hollandaise that is greasy or grainy, from a sauce held too hot or too cool; sauces that run together, from too much of either. Each is a reason to cook the plate again, a refire, never to send it."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"At Brennan's the base is housemade English muffins, split so their craggy holes catch both sauces. The classic Brennan's Hussarde was built on Holland rusks, dry, crisp toasts; a returning guest may notice the change. Canadian bacon is cured, lightly smoked pork loin; a coffee cure rubs it with salt, sugar and ground coffee, which gives the lean meat a roasty, slightly bitter depth. How long it cures, whether it is made in house, and whether tonight's marchand de vin carries ham or mushroom are questions for the chef."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Say it hoo-SARD, and the red wine sauce marchand de vin, mar-SHAHN duh VAN. Lead a guest's first breakfast with it, and offer it to anyone who loves Eggs Benedict. Describe it as rich, buttery and savoury, with a deep, winey note and a bright, lemony edge. The yolks come soft: check with the kitchen before promising firmer eggs, and send every allergen question to the kitchen and the service note. Do not confuse it with Eggs Owen, which shares the two sauces over short rib débris."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Vinegar in the poaching water",
+					"value": "About 15 ml (1 tbsp) to 1 litre (about 1 quart)"
+				}
+			],
+			"temps": [
+				{
+					"label": "Poaching water, just below a simmer",
+					"c": 85,
+					"f": 185
+				},
+				{
+					"label": "Hold the hollandaise warm",
+					"c": 60,
+					"f": 140
+				}
+			],
+			"faults": [
+				{
+					"fault": "A hard yolk",
+					"cause": "The egg was poached too long, or warmed too hot after holding.",
+					"fix": "Poach for about three minutes, and rewarm a held egg for 30 seconds to a minute in hot, not simmering, water; refire rather than send."
+				},
+				{
+					"fault": "A ragged, wispy white",
+					"cause": "Water at a rolling boil, or an egg past its best.",
+					"fix": "Keep the water just below a simmer, use the freshest eggs and add a splash of vinegar."
+				},
+				{
+					"fault": "Greasy or grainy hollandaise on the plate",
+					"cause": "The sauce was held too cool and split, or too hot and scrambled.",
+					"fix": "The kitchen rescues it from a fresh base or makes it again; a broken sauce never goes out."
+				},
+				{
+					"fault": "The two sauces run together",
+					"cause": "Too much of either, or the hollandaise spooned on before the egg was in place.",
+					"fix": "Brown sauce first, under the egg, hollandaise last, over it, in measured spoonfuls."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-1q0xk7jv",
+					"components": [
+						"The poached egg",
+						"Housemade English muffins",
+						"Coffee-cured Canadian bacon"
+					],
+					"how": "Soft poached eggs sit on coffee-cured Canadian bacon over a split housemade English muffin; the classic house build used Holland rusks, and the stacking is confirmed at the pass."
+				},
+				{
+					"dish": "d-1q0xk7jv",
+					"components": [
+						"Hollandaise",
+						"Marchand de vin"
+					],
+					"how": "Marchand de vin, the dark, winey brown sauce, goes beneath the egg and hollandaise, the bright warm emulsion, over it, so each forkful carries one deep sauce and one bright one."
+				},
+				{
+					"dish": "d-1q0xk7jv",
+					"components": [
+						"The Eggs Hussarde name"
+					],
+					"how": "Hussarde is hussar style, after the light cavalry. A recipe under the name was printed in 1895 and Escoffier gave one in 1903; Brennan's made the two-sauce plate famous from about 1950, so it is our signature, never our invention."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"hollandaise",
+					"marchand-de-vin",
+					"poaching",
+					"eggs-owen",
+					"eggs-sardou",
+					"brennans-sauce-family",
+					"breakfast-at-brennans"
+				],
+				"techniques": [
+					"poaching-eggs",
+					"hollandaise"
+				],
+				"kitchen": [
+					"eggs-hussarde",
+					"eggs-benedict"
+				],
+				"folios": [
+					"eggs-hussarde-components",
+					"hollandaise-standard",
+					"poached-egg-standard"
+				],
+				"deck": [
+					"fd_0197"
+				],
+				"terms": [
+					"methods-poached",
+					"methods-cured"
+				]
+			},
+			"sources": [
+				{
+					"title": "Brennan's, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Eggs Hussarde, Barry Popik, The Big Apple",
+					"url": "https://barrypopik.com/blog/eggs_hussarde",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Hussar, Encyclopaedia Britannica",
+					"url": "https://www.britannica.com/topic/hussar",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "A Guide to Modern Cookery, A. Escoffier (London: Heinemann, 1907)",
+					"url": "https://www.gutenberg.org/ebooks/71395",
+					"year": 1907
+				}
+			],
+			"cards": [
+				{
+					"stem": "what-it-is",
+					"front": "What is Eggs Hussarde at Brennan's?",
+					"back": "Poached eggs on coffee-cured Canadian bacon over housemade English muffins, with marchand de vin beneath and hollandaise on top: the house's signature egg dish."
+				},
+				{
+					"stem": "two-sauces",
+					"front": "How does Eggs Hussarde differ from Eggs Benedict?",
+					"back": "It carries a second sauce, marchand de vin (mar-SHAHN duh VAN), a red wine sauce, under the egg as well as the hollandaise on top, so it tastes bright and deep at once."
+				},
+				{
+					"stem": "invented",
+					"front": "Was Eggs Hussarde invented at Brennan's?",
+					"back": "No. A recipe under the name was printed in 1895 and Escoffier gave a version in 1903; Brennan's made the two-sauce plate famous from about 1950. The house guide credits chef Paul Blangé with its version: use that wording once a manager confirms it."
+				},
+				{
+					"stem": "name",
+					"front": "What does Hussarde mean, and how do you say it?",
+					"back": "Hussar style, after the hussars, the light cavalry first raised in Hungary. Say it hoo-SARD."
+				},
+				{
+					"stem": "stack",
+					"front": "What is the stack the house guide gives, from the bottom up?",
+					"back": "English muffin, coffee-cured Canadian bacon, marchand de vin, poached egg, hollandaise. The house's own stacking is confirmed at the pass."
+				},
+				{
+					"stem": "distinct",
+					"front": "Why does the marchand de vin go under the egg and the hollandaise over it?",
+					"back": "So the two sauces stay distinct: the dark sauce sits beneath, the pale emulsion rests on the egg, and the guest sees and tastes both."
+				},
+				{
+					"stem": "poach",
+					"front": "How long is the egg poached, and in what water?",
+					"back": "About three minutes in water held just below a simmer, often with a splash of vinegar, until the white sets and the yolk still runs."
+				},
+				{
+					"stem": "foundations",
+					"front": "Name the three classical foundations on the plate.",
+					"back": "Poaching for the egg, the brown family and a roux for the marchand de vin, and the warm emulsion for the hollandaise."
+				},
+				{
+					"stem": "base",
+					"front": "What did the classic Brennan's Hussarde sit on, and what does it sit on now?",
+					"back": "Holland rusks, dry, crisp toasts. The restaurant now makes its own English muffins, a change a returning guest may notice."
+				},
+				{
+					"stem": "bacon",
+					"front": "What is coffee-cured Canadian bacon?",
+					"back": "Cured pork loin, lean and ham-like; a coffee cure rubs it with salt, sugar and ground coffee for a roasty depth. Ask the chef how long it cures."
+				},
+				{
+					"stem": "firmer",
+					"front": "A guest asks for firmer eggs on the Hussarde. What do you do?",
+					"back": "Explain the yolks come soft poached, and check with the kitchen before promising firmer eggs, never promising from memory."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-two-sauces",
+					"q": "What does Eggs Hussarde carry that Eggs Benedict does not?",
+					"answer": "Marchand de vin, a red wine sauce",
+					"distractors": [
+						"A second poached egg",
+						"A bed of creamed spinach",
+						"Béarnaise in place of hollandaise"
+					],
+					"why": "The Hussarde keeps the Benedict's hollandaise and adds marchand de vin beneath the egg, so the plate is bright and deep at once.",
+					"teaches": "two-sauces"
+				},
+				{
+					"stem": "q-invented",
+					"q": "Which is the truthful thing to tell a guest about where Eggs Hussarde began?",
+					"answer": "An older name, made famous here",
+					"distractors": [
+						"Invented by Owen Brennan in 1946",
+						"Created at Antoine's for a playwright",
+						"First cooked for the house's reopening"
+					],
+					"why": "A recipe under the name was printed in 1895 and Escoffier gave one in 1903; Brennan's made the two-sauce plate famous from about 1950, so it is our signature, never our invention.",
+					"teaches": "invented"
+				},
+				{
+					"stem": "q-name",
+					"q": "What was a hussar, the figure Eggs Hussarde is named for?",
+					"answer": "A light cavalryman",
+					"distractors": [
+						"A Paris wine merchant",
+						"A ship's cook",
+						"A French playwright"
+					],
+					"why": "Hussarde means hussar style, after the light cavalry first raised in Hungary. A wine merchant names marchand de vin, and a playwright names the Sardou.",
+					"teaches": "name"
+				},
+				{
+					"stem": "q-distinct",
+					"q": "In the classic build, which sauce sits directly beneath the poached egg?",
+					"answer": "Marchand de vin",
+					"distractors": [
+						"Hollandaise",
+						"The Creole sauce",
+						"Beurre blanc"
+					],
+					"why": "The dark brown sauce goes under the egg and the hollandaise over it, so the two stay distinct; the house's own plating is confirmed at the pass.",
+					"teaches": "distinct"
+				},
+				{
+					"stem": "q-poach",
+					"q": "Roughly how long does a poached egg take to set its white while the yolk still runs?",
+					"answer": "About three minutes",
+					"distractors": [
+						"About thirty seconds",
+						"About ten minutes",
+						"About six minutes"
+					],
+					"why": "In water just below a simmer, about three minutes sets the white and leaves the yolk running, the way the Hussarde is served.",
+					"teaches": "poach"
+				},
+				{
+					"stem": "q-foundations",
+					"q": "What often binds the New Orleans marchand de vin on the Hussarde?",
+					"answer": "A roux, flour cooked in fat",
+					"distractors": [
+						"Egg yolk and butter",
+						"Cream reduced by half",
+						"Cornflour slaked in cold water"
+					],
+					"why": "New Orleans marchand de vin is frequently roux-bound, which places it in the brown family; egg yolk and butter make the hollandaise on top.",
+					"teaches": "foundations"
+				},
+				{
+					"stem": "q-base",
+					"q": "What did the classic Brennan's Hussarde sit on before the housemade English muffins?",
+					"answer": "Holland rusks",
+					"distractors": [
+						"Buttermilk biscuits",
+						"Fried grit cakes",
+						"Brioche toast"
+					],
+					"why": "The classic build used Holland rusks, dry, crisp toasts; the restaurant now bakes its own muffins, which a returning guest may notice.",
+					"teaches": "base"
+				},
+				{
+					"stem": "q-firmer",
+					"q": "A guest asks for the Hussarde's eggs cooked firmer. What is the right response?",
+					"answer": "Ask the kitchen first",
+					"distractors": [
+						"Promise firmer eggs at once",
+						"Say the yolks only come soft",
+						"Suggest scrambled eggs instead"
+					],
+					"why": "The eggs come soft poached; the house guide says to check with the kitchen before promising firmer, so the promise is the kitchen's to make.",
+					"teaches": "firmer"
+				}
+			]
+		},
+		{
+			"stem": "eggs-sardou",
+			"slug": "eggs-sardou",
+			"title": "Eggs Sardou",
+			"say": "EGZ sar-DOO",
+			"level": 1,
+			"kind": "dish",
+			"summary": "Poached eggs on artichokes with creamed spinach, a New Orleans classic born at Antoine's and named for the playwright Victorien Sardou. Brennan's sets the eggs on crispy artichokes and Parmesan creamed spinach under Choron, a béarnaise with tomato.",
+			"guest": "Eggs Sardou is a New Orleans classic: poached eggs with crispy artichokes and Parmesan creamed spinach, finished with Choron, a tangy béarnaise brightened with tomato.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Eggs Sardou is poached eggs set on artichokes, usually with creamed spinach, under a warm butter sauce. It is one of the classic New Orleans egg dishes, and Brennan's serves it at breakfast and lunch as a signature. It is not a Brennan's invention: it was born at Antoine's, the French Quarter restaurant opened in 1840, and Brennan's serves it in its own style.",
+						"For a new cook the plate is a lesson in contrast: soft egg against crisp artichoke, rich spinach against a tangy sauce. For a server it is the only one of the three house egg dishes, with the Hussarde and the Owen, that has no meat printed on its menu line, a natural partner to a Hussarde across the table; a guest who asks whether it suits a particular diet goes to the kitchen."
+					]
+				},
+				{
+					"key": "history",
+					"paras": [
+						"Antoine's created the dish and named it in honour of Victorien Sardou, the French playwright, and the story ties it to a visit to New Orleans. Sources disagree on the year, and whether he ever ate it there belongs to the legend: say named for him, not created for him. Antoine's original set poached eggs on artichoke bottoms, the cup-shaped base of the heart, with hollandaise, ham, anchovy and truffle, and no spinach at all. Most later versions dropped the ham, anchovy and truffle for creamed spinach, and that is the version Brennan's made its own."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"In the Brennan's style the plate is four preparations brought together at the pass, the counter where the kitchen finishes plates and hands them to the servers. The artichoke hearts are trimmed, cooked until tender, then coated and fried crisp in oil at about 175 to 190°C (347 to 374°F), drained on a rack and kept hot; the classic Sardou used cooked artichoke bottoms, and the crisp coating is the house's change. The spinach is blanched, plunged into iced water, squeezed hard, chopped and bound with reduced cream or a light béchamel, then finished with Parmesan and often a little nutmeg.",
+						"The eggs are poached for about three minutes in water just below a simmer, until the white sets and the yolk runs. The Choron is made in small batches and held warm, around 60°C (140°F), never hot. In the classic build the spinach goes down first, the artichoke sits on it, the egg sits in or on the artichoke, and the sauce goes over the egg. The house's own plating is confirmed at the pass."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"Each part rests on a foundation. The eggs are poaching. The artichokes are frying: a coating dries and browns into a crust while the inside steams. The creamed spinach is bound with reduced cream or a light béchamel, the white sauce of milk thickened with a roux; squeezing out the water is the step that keeps it rich, not watery. The sauce is the béarnaise family. Béarnaise is hollandaise built on a vinegar, shallot and tarragon reduction; Choron is béarnaise finished with tomato cooked down to a thick paste, so it turns a soft coral and tastes tangy and herbal, brighter than hollandaise."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"The faults to catch at the pass are soggy artichokes, from oil too cool or from sitting under sauce too long; watery spinach, not squeezed dry, which bleeds green water across the plate; a hard yolk; and a split or thin Choron. Each means cooking the plate again, a refire, never sending it."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"The Brennan's Sardou sets poached eggs over crispy artichokes and Parmesan creamed spinach, with Choron in place of hollandaise. On an American menu Parmesan is a generic name for a hard grating cheese, so until the chef says which cheese goes in, call it Parmesan and nothing grander. The crispy artichokes are likely breaded or floured before frying, and any question about the coating goes to the kitchen. Whether the Sardou's spinach is the same preparation as the creamed spinach side is worth confirming before you say so."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Say it sar-DOO, and Choron sho-ROHN. Describe Choron as a béarnaise, the tarragon butter sauce, brightened with tomato: tangy and herbal. Offer the Sardou to a guest who loves artichokes or creamed spinach, or who wants an egg dish without the Canadian bacon. Never present it as a Brennan's invention: it is Antoine's dish in the Brennan's style. Questions about allergens, the coating or a diet go to the kitchen and the service note."
+					]
+				}
+			],
+			"temps": [
+				{
+					"label": "Frying oil for the artichokes, about",
+					"c": 180,
+					"f": 356
+				},
+				{
+					"label": "Hold the Choron warm",
+					"c": 60,
+					"f": 140
+				}
+			],
+			"faults": [
+				{
+					"fault": "Soggy, greasy artichokes",
+					"cause": "Oil too cool, or the artichokes left sitting under the sauce.",
+					"fix": "Fry at about 175 to 190°C (347 to 374°F), drain on a rack and plate at once."
+				},
+				{
+					"fault": "Watery creamed spinach",
+					"cause": "The blanched spinach was not squeezed dry before it was bound.",
+					"fix": "Squeeze hard after the iced water, chop, then bind with reduced cream or a light béchamel."
+				},
+				{
+					"fault": "A thin, pale Choron",
+					"cause": "The tomato went in as a watery purée instead of a cooked-down paste.",
+					"fix": "Cook the tomato to a thick paste before folding it into the béarnaise."
+				},
+				{
+					"fault": "A hard yolk",
+					"cause": "The egg was poached too long or warmed too hot after holding.",
+					"fix": "Poach for about three minutes, rewarm a held egg for 30 seconds to a minute in hot, not simmering, water, and refire rather than send."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-fs311zha",
+					"components": [
+						"The Eggs Sardou name"
+					],
+					"how": "Born at Antoine's and named for the playwright Victorien Sardou, with no spinach in the original; Brennan's serves the later creamed spinach version in its own style, never as its invention."
+				},
+				{
+					"dish": "d-fs311zha",
+					"components": [
+						"The poached egg",
+						"Crispy artichokes",
+						"Creamed spinach",
+						"Parmesan"
+					],
+					"how": "Poached eggs over crispy fried artichoke hearts and Parmesan creamed spinach: crunch against soft egg and rich spinach. Ask the kitchen about the artichokes' coating and which cheese goes in."
+				},
+				{
+					"dish": "d-fs311zha",
+					"components": [
+						"Sauce Choron"
+					],
+					"how": "Choron, béarnaise finished with tomato paste, replaces the usual hollandaise: coral, tangy and herbal, brighter than hollandaise against the rich spinach."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"choron-and-foyot",
+					"bearnaise",
+					"hollandaise",
+					"bechamel",
+					"frying",
+					"poaching",
+					"antoines",
+					"eggs-hussarde",
+					"brennans-sauce-family"
+				],
+				"techniques": [
+					"poaching-eggs",
+					"hollandaise",
+					"deep-frying"
+				],
+				"kitchen": [
+					"eggs-sardou"
+				],
+				"folios": [
+					"poached-egg-standard",
+					"brennans-sauces"
+				],
+				"deck": [
+					"fd_0196"
+				],
+				"terms": [
+					"methods-poached",
+					"dairy-parmesan"
+				]
+			},
+			"sources": [
+				{
+					"title": "Brennan's, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Eggs Sardou, Barry Popik, The Big Apple",
+					"url": "https://barrypopik.com/blog/eggs_sardou",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Antoine's Restaurant, New Orleans",
+					"url": "https://www.antoines.com/",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Victorien Sardou, Encyclopaedia Britannica",
+					"url": "https://www.britannica.com/biography/Victorien-Sardou",
+					"asOf": "2026-10-12"
+				}
+			],
+			"cards": [
+				{
+					"stem": "what-it-is",
+					"front": "What is the Brennan's Eggs Sardou?",
+					"back": "Poached eggs over crispy artichokes and Parmesan creamed spinach, finished with Choron sauce in place of hollandaise. Say sar-DOO."
+				},
+				{
+					"stem": "origin",
+					"front": "Where was Eggs Sardou created, and who is it named for?",
+					"back": "At Antoine's in New Orleans, named for the French playwright Victorien Sardou. Sources disagree on the year, so give none."
+				},
+				{
+					"stem": "original",
+					"front": "What did Antoine's original Eggs Sardou carry?",
+					"back": "Poached eggs on artichoke bottoms with hollandaise, ham, anchovy and truffle, and no spinach at all."
+				},
+				{
+					"stem": "later",
+					"front": "How did later versions of the Sardou change the dish?",
+					"back": "They dropped the ham, anchovy and truffle and added creamed spinach, the version Brennan's made its own."
+				},
+				{
+					"stem": "choron",
+					"front": "What is Choron sauce?",
+					"back": "Béarnaise finished with tomato cooked down to a paste: coral in colour, tangy and herbal, brighter than hollandaise. Say sho-ROHN."
+				},
+				{
+					"stem": "never-invention",
+					"front": "How should you describe where the Sardou comes from?",
+					"back": "As Antoine's dish in the Brennan's style, named for Sardou, never as a Brennan's invention."
+				},
+				{
+					"stem": "spinach",
+					"front": "What keeps creamed spinach rich rather than watery?",
+					"back": "Squeezing the blanched spinach hard before it is chopped and bound with reduced cream or a light béchamel."
+				},
+				{
+					"stem": "artichokes",
+					"front": "How are the artichokes on our Sardou cooked?",
+					"back": "Trimmed hearts are cooked tender, then coated and fried crisp for crunch; any question about the coating goes to the kitchen."
+				},
+				{
+					"stem": "parmesan",
+					"front": "Does Parmesan on our menu mean Parmigiano Reggiano?",
+					"back": "Not necessarily: in the United States Parmesan is a generic name for a hard grating cheese, so ask the kitchen which cheese it is."
+				},
+				{
+					"stem": "foundations",
+					"front": "Name the four foundations on the Sardou plate.",
+					"back": "Poaching for the eggs, frying for the artichokes, cream or béchamel for the spinach, and the béarnaise family for the Choron."
+				},
+				{
+					"stem": "artichoke-bottom",
+					"front": "What is an artichoke bottom?",
+					"back": "The cup-shaped base of the artichoke heart, the seat the classic Sardou gives each poached egg."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-choron",
+					"q": "What sauce does the Brennan's Sardou carry in place of hollandaise?",
+					"answer": "Choron",
+					"distractors": [
+						"Foyot",
+						"Marchand de vin",
+						"Beurre blanc"
+					],
+					"why": "Choron, béarnaise finished with tomato, replaces hollandaise on our Sardou; Foyot goes with the Chateaubriand and marchand de vin with the Hussarde.",
+					"teaches": "choron"
+				},
+				{
+					"stem": "q-origin",
+					"q": "Which New Orleans restaurant created Eggs Sardou?",
+					"answer": "Antoine's",
+					"distractors": [
+						"Brennan's",
+						"Galatoire's",
+						"Arnaud's"
+					],
+					"why": "Antoine's created it and named it for Victorien Sardou; Brennan's serves it in its own style and never presents it as an invention.",
+					"teaches": "origin"
+				},
+				{
+					"stem": "q-namesake",
+					"q": "Who was Victorien Sardou, the man the dish is named for?",
+					"answer": "A French playwright",
+					"distractors": [
+						"A Creole chef",
+						"A New Orleans mayor",
+						"A cavalry officer"
+					],
+					"why": "The dish honours the French playwright Victorien Sardou; the story ties it to a visit to New Orleans, though sources disagree on the year.",
+					"teaches": "origin"
+				},
+				{
+					"stem": "q-original",
+					"q": "What did Antoine's original Eggs Sardou leave out that most later versions include?",
+					"answer": "Creamed spinach",
+					"distractors": [
+						"Artichoke bottoms",
+						"Hollandaise",
+						"Poached eggs"
+					],
+					"why": "The original carried ham, anchovy and truffle with no spinach; later versions swapped those for creamed spinach, the version Brennan's made its own.",
+					"teaches": "later"
+				},
+				{
+					"stem": "q-spinach",
+					"q": "Why is blanched spinach squeezed hard before it is creamed?",
+					"answer": "So water does not thin the cream",
+					"distractors": [
+						"So the leaves stay whole",
+						"So the leaves stay bright green",
+						"So it soaks up frying oil"
+					],
+					"why": "Spinach holds a great deal of water; left in, it thins the cream and bleeds across the plate, so it is squeezed dry first.",
+					"teaches": "spinach"
+				},
+				{
+					"stem": "q-parmesan",
+					"q": "A guest asks whether the Sardou's Parmesan is Parmigiano Reggiano. What do you do?",
+					"answer": "Check with the kitchen",
+					"distractors": [
+						"Say yes, it always is",
+						"Say it is Grana Padano",
+						"Say it is a soft cheese"
+					],
+					"why": "In the United States Parmesan is a generic name for a hard grating cheese; until the chef says which, call it Parmesan and nothing grander.",
+					"teaches": "parmesan"
+				},
+				{
+					"stem": "q-crunch",
+					"q": "What gives the Brennan's Eggs Sardou its crunch?",
+					"answer": "Crispy fried artichokes",
+					"distractors": [
+						"Toasted English muffins",
+						"Fried saltine crumble",
+						"Holland rusks"
+					],
+					"why": "The artichoke hearts are cooked tender, then coated and fried crisp, so they bring crunch against the soft eggs and the creamy spinach.",
+					"teaches": "artichokes"
+				}
+			]
+		},
+		{
+			"stem": "eggs-owen",
+			"slug": "eggs-owen",
+			"title": "Eggs Owen",
+			"say": "As it reads: Eggs Owen.",
+			"level": 2,
+			"kind": "dish",
+			"summary": "Short rib débris braised in red wine and pulled, with a Creole-spiced potato and a soft-boiled egg, under the Hussarde's two sauces, hollandaise and marchand de vin. The hearty plate of the Brennan's breakfast and lunch menu: steak and eggs, New Orleans style.",
+			"guest": "Eggs Owen is short rib braised in red wine until it falls apart, with a Creole-spiced potato, a soft-boiled egg and our two sauces: steak and eggs, New Orleans style.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Eggs Owen is short rib débris, beef braised slowly in red wine and pulled into its own gravy, with a Creole-spiced potato and a soft-boiled egg, finished with the same two sauces as the Eggs Hussarde: hollandaise and marchand de vin. On the breakfast and lunch menu it is the heartier plate, steak and eggs in the New Orleans way, for the hungry guest or the table that wants red wine at breakfast.",
+						"Guests often guess the name honours Owen Brennan, who founded the restaurant in 1946. The menu does not say so and the house has not published that story, so it is confirmed at lineup before it is told. Until then, describe the plate and let the name wait."
+					]
+				},
+				{
+					"key": "history",
+					"paras": [
+						"Débris, said DAY-bree, is Louisiana French for scraps. In New Orleans it means the shreds of meat that fall into the gravy as a roast cooks and is carved, and it is best known on the roast beef po-boy: Mother's Restaurant on Poydras Street, open since 1938, made the word famous. The Brennan's débris takes the same idea and makes it richer, with short rib in place of the roast."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Short rib is a tough, marbled, sinewy cut, full of connective tissue, which is why it is braised rather than grilled: slow, covered cooking in a little liquid melts that tissue into gelatine. In a red wine braise the ribs are seasoned and seared hard for colour, the vegetables sweated, cooked gently without colour, in the same pan, and the pan deglazed with red wine, poured in to lift the browned bits from the bottom, which is reduced before stock goes in, enough to come about halfway up the meat. The pot is covered and goes into a low oven, about 150 to 160°C (302 to 320°F), for about three hours, until a fork turns the meat.",
+						"The meat is lifted out and pulled into shreds, the bone, gristle and loose fat discarded. The braising liquid is strained, skimmed and reduced into a glossy sauce, and the meat goes back into it. That is débris: tender beef in a deep, winey gravy that echoes the marchand de vin on the same plate.",
+						"The egg is soft-boiled: simmered in its shell for about six minutes, so the white sets and the yolk stays runny, then cooled and peeled. When the guest cuts in, the yolk becomes a third sauce. The potato is seasoned in the style of the house's own Creole spice; how it is cut and cooked is confirmed at the pass."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"Its foundations are three: the red wine braise, the warm emulsion of hollandaise, and the brown family's marchand de vin, often bound with a roux. Set it beside the Hussarde and the differences are the lesson: braised beef for the Canadian bacon, a potato for the English muffin, and a soft-boiled egg for a poached one. The sauces are the same, so the two plates taste of one kitchen, but the Owen is deeper and meatier."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"Stringy, dry débris has been cooked too hot or too briefly, or left out of its liquid. A greasy gravy was not skimmed. A thin sauce was not reduced. An egg simmered well past six minutes loses its runny yolk, and with it half the sauce on this plate."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"The Brennan's Eggs Owen takes the Hussarde's two sauces, hollandaise for butter and lemon and marchand de vin for depth, over red wine-braised short rib débris and a Creole-spiced potato, topped with a soft-boiled egg. Older write-ups describe a poached egg and hash version that is gone, so use the current menu wording only. The house blend of Creole spice is not printed: describe it as warm and savoury rather than fiery, and send any question about a particular spice, or the heat, to the kitchen."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Say débris DAY-bree, and describe it as slow-cooked beef that falls apart into its own gravy. Offer the Owen to a guest who wants steak and eggs, or who finds the Hussarde too delicate. The braise and the marchand de vin both carry red wine, so a soft red makes sense here even at breakfast. Never tell the Owen Brennan story unless lineup has confirmed it, and send allergen questions to the kitchen and the service note."
+					]
+				}
+			],
+			"temps": [
+				{
+					"label": "A low oven for the braise, about",
+					"c": 150,
+					"f": 302
+				}
+			],
+			"faults": [
+				{
+					"fault": "Stringy, dry débris",
+					"cause": "Braised too hot or not long enough, or the pulled meat held out of its liquid.",
+					"fix": "Cook covered in a low oven until a fork turns the meat, and keep the pulled meat in its sauce."
+				},
+				{
+					"fault": "A greasy gravy",
+					"cause": "The fat from the braise was not skimmed.",
+					"fix": "Skim the strained liquid, or chill the braise and lift off the set fat before reducing."
+				},
+				{
+					"fault": "A thin, watery sauce",
+					"cause": "The braising liquid was not reduced.",
+					"fix": "Strain it and reduce until it coats a spoon, then return the meat."
+				},
+				{
+					"fault": "A firm yolk",
+					"cause": "The egg simmered well past six minutes.",
+					"fix": "Time the egg, cool it at once in iced water, and cook a fresh one rather than send it."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-44jfmkdb",
+					"components": [
+						"Short rib débris",
+						"Braising in red wine"
+					],
+					"how": "Short rib braised slowly in red wine until it falls apart, then pulled into its own reduced braising liquid: the New Orleans débris idea made richer, in place of the Hussarde's Canadian bacon."
+				},
+				{
+					"dish": "d-44jfmkdb",
+					"components": [
+						"Hollandaise",
+						"Marchand de vin"
+					],
+					"how": "The Hussarde's two sauces: hollandaise brings butter and lemon, and marchand de vin, the dark red wine sauce, echoes the braise, so the plate is deep and bright at once."
+				},
+				{
+					"dish": "d-44jfmkdb",
+					"components": [
+						"The Eggs Owen name"
+					],
+					"how": "Guests guess it honours Owen Brennan, who founded the restaurant in 1946, but the menu does not say so and the house has not published it: confirm at lineup before telling it."
+				},
+				{
+					"dish": "d-44jfmkdb",
+					"components": [
+						"Housemade Creole spice"
+					],
+					"how": "The potato is seasoned in the style of the house's own Creole spice, warm and savoury rather than fiery; the blend is not printed, so spice questions go to the kitchen."
+				},
+				{
+					"dish": "d-44jfmkdb",
+					"components": [
+						"Eggs cooked to order"
+					],
+					"how": "The menu prints a soft-boiled egg: simmered in its shell for about six minutes so the yolk stays runny. Confirm the egg styles the kitchen offers at lineup."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"braise-and-daube",
+					"hollandaise",
+					"marchand-de-vin",
+					"eggs-hussarde",
+					"owen-and-ella-brennan",
+					"eggs-to-order",
+					"brennans-sauce-family",
+					"breakfast-at-brennans"
+				],
+				"techniques": [
+					"braising"
+				],
+				"lexicon": [
+					"short-ribs-english-vs-flanken"
+				],
+				"kitchen": [
+					"roast-beef-po-boy",
+					"soft-boiled-eggs-and-soldiers"
+				],
+				"folios": [
+					"brennans-sauces",
+					"eggs-hussarde-components"
+				],
+				"deck": [
+					"fd_0092",
+					"fd_0026"
+				],
+				"terms": [
+					"cuts-shortrib",
+					"methods-braised"
+				]
+			},
+			"sources": [
+				{
+					"title": "Brennan's, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Mother's Restaurant, New Orleans",
+					"url": "https://www.mothersrestaurant.net/",
+					"asOf": "2026-10-12"
+				}
+			],
+			"cards": [
+				{
+					"stem": "what-it-is",
+					"front": "What is Eggs Owen at Brennan's?",
+					"back": "Short rib débris braised in red wine, a Creole-spiced potato and a soft-boiled egg, under hollandaise and marchand de vin, the Hussarde's two sauces."
+				},
+				{
+					"stem": "name",
+					"front": "Is Eggs Owen named for Owen Brennan?",
+					"back": "The menu does not say so and the house has not published it, so confirm at lineup before you tell that story."
+				},
+				{
+					"stem": "debris",
+					"front": "What does débris mean in New Orleans?",
+					"back": "Louisiana French for scraps: the shreds of meat that fall into the gravy as a roast cooks and is carved, best known on the roast beef po-boy."
+				},
+				{
+					"stem": "say-debris",
+					"front": "How do you say débris, and how do you describe it?",
+					"back": "DAY-bree, the New Orleans way. Describe it as slow-cooked beef that falls apart into its own gravy."
+				},
+				{
+					"stem": "why-braise",
+					"front": "Why is short rib braised rather than grilled?",
+					"back": "It is tough, marbled and sinewy; slow, covered cooking in liquid melts its connective tissue into gelatine, giving tender meat and a glossy sauce."
+				},
+				{
+					"stem": "braise-steps",
+					"front": "What are the main steps of the red wine braise?",
+					"back": "Sear the ribs hard, sweat the vegetables, deglaze with red wine and reduce, add stock, cover and cook in a low oven about three hours, then pull the meat and reduce the liquid."
+				},
+				{
+					"stem": "differs",
+					"front": "How does Eggs Owen differ from Eggs Hussarde?",
+					"back": "Braised short rib for the Canadian bacon, a potato for the English muffin, and a soft-boiled egg for a poached one; the two sauces are the same."
+				},
+				{
+					"stem": "soft-boiled",
+					"front": "How is the soft-boiled egg cooked?",
+					"back": "Simmered in its shell for about six minutes, so the white sets and the yolk stays runny, then cooled and peeled."
+				},
+				{
+					"stem": "foundations",
+					"front": "Name the three foundations of the Eggs Owen.",
+					"back": "The red wine braise, hollandaise as the warm emulsion, and marchand de vin from the brown family."
+				},
+				{
+					"stem": "red-wine",
+					"front": "Why does a red wine suit the Eggs Owen, even at breakfast?",
+					"back": "The braise and the marchand de vin both carry red wine, so a soft, ripe red meets the sauce rather than fighting it."
+				},
+				{
+					"stem": "creole-spice",
+					"front": "A guest asks how hot the Creole-spiced potato is. What do you say?",
+					"back": "Warm and savoury rather than fiery. The house blend is not printed, so a question about a particular spice goes to the kitchen."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-name",
+					"q": "A guest asks whether Eggs Owen is named for Owen Brennan. What is the right answer?",
+					"answer": "The menu does not say; confirm at lineup",
+					"distractors": [
+						"Yes, he created the dish himself",
+						"No, it is named for a regular of the 1950s",
+						"Yes, the menu prints the story"
+					],
+					"why": "The house has not published that story and the menu is silent, so the house guide's instruction stands: confirm at lineup before telling it.",
+					"teaches": "name"
+				},
+				{
+					"stem": "q-debris",
+					"q": "In New Orleans, what does the word débris mean on a menu?",
+					"answer": "Shreds of meat in the gravy",
+					"distractors": [
+						"A dark Creole roux",
+						"A spiced smoked pork",
+						"Crumbs left by fried fish"
+					],
+					"why": "Débris is Louisiana French for scraps: the shreds of a roast that fall into its gravy, best known on the roast beef po-boy.",
+					"teaches": "debris"
+				},
+				{
+					"stem": "q-braise",
+					"q": "Why is short rib braised slowly rather than grilled?",
+					"answer": "Its collagen melts into gelatine",
+					"distractors": [
+						"It is too lean to take a sear",
+						"It has no bone to hold",
+						"Red wine is needed to tenderise it"
+					],
+					"why": "Short rib is tough and sinewy; slow, covered cooking in wine and stock turns that tissue into gelatine, giving tender meat and a glossy sauce.",
+					"teaches": "why-braise"
+				},
+				{
+					"stem": "q-egg",
+					"q": "Which egg does Eggs Owen carry, where the Hussarde has a poached one?",
+					"answer": "A soft-boiled egg",
+					"distractors": [
+						"A fried egg",
+						"A scrambled egg",
+						"A raw yolk"
+					],
+					"why": "The Owen swaps the poached egg for a soft-boiled one, the bacon for braised short rib and the muffin for a Creole-spiced potato.",
+					"teaches": "differs"
+				},
+				{
+					"stem": "q-sauces",
+					"q": "Which two sauces does Eggs Owen share with Eggs Hussarde?",
+					"answer": "Hollandaise and marchand de vin",
+					"distractors": [
+						"Béarnaise and Choron",
+						"Creole sauce and rémoulade",
+						"Beurre blanc and mignonette"
+					],
+					"why": "The Owen takes the Hussarde's pair: hollandaise for butter and lemon, marchand de vin for a deep red wine note that echoes the braise.",
+					"teaches": "foundations"
+				},
+				{
+					"stem": "q-soft",
+					"q": "Roughly how long is a soft-boiled egg simmered in its shell?",
+					"answer": "About six minutes",
+					"distractors": [
+						"About one minute",
+						"About fifteen minutes",
+						"About ten minutes"
+					],
+					"why": "About six minutes sets the white and keeps the yolk runny, so it runs into the débris and the sauces when the guest cuts in.",
+					"teaches": "soft-boiled"
+				},
+				{
+					"stem": "q-time",
+					"q": "Roughly how long does short rib braise, covered in a low oven, before a fork turns it?",
+					"answer": "About three hours",
+					"distractors": [
+						"About fifteen minutes",
+						"About forty minutes",
+						"About one hour"
+					],
+					"why": "Connective tissue needs long, gentle heat to melt; about three hours covered in a low oven brings short rib to tender.",
+					"teaches": "braise-steps"
+				},
+				{
+					"stem": "q-spice",
+					"q": "How should a server describe the heat of the Creole-spiced potato?",
+					"answer": "Warm and savoury, not fiery",
+					"distractors": [
+						"Very hot, like raw chilli",
+						"Sweet, like candied fruit",
+						"Smoky, like mesquite"
+					],
+					"why": "Creole seasoning gives warmth, colour and savour more than raw heat; the house blend is not printed, so questions about a spice go to the kitchen.",
+					"teaches": "creole-spice"
+				}
+			]
+		}
+	]
+}

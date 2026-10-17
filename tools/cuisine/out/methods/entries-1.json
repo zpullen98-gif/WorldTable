@@ -1,0 +1,1391 @@
+{
+	"entries": [
+		{
+			"stem": "saute",
+			"slug": "saute",
+			"title": "Sauté and the shallow fry",
+			"say": "soh-TAY",
+			"level": 1,
+			"kind": "method",
+			"summary": "Sautéing cooks small or thin pieces fast in a little hot fat, tossed or turned; shallow frying uses more fat and a coating. Heat, a dry surface and room in the pan decide whether food browns or steams.",
+			"guest": "Sautéed means cooked quickly in a hot pan, so the fish stays moist and flaky with a light golden edge.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Sauter is French for to jump. A sauté is small or thin pieces of food cooked fast in a little hot fat in a wide, shallow pan, tossed or turned so every surface meets the metal: fish fillets, shrimp, tender cuts, mushrooms. The heat is high and the cooking takes minutes. It is often the first pan method a new cook learns, because it teaches what every pan method depends on: heat, a dry surface and room.",
+						"Shallow frying is its close cousin. The fat is deeper, about 1 cm (1/2 inch), a third of the way up the food, and the food usually wears a coating: seasoned flour, or flour, egg and breadcrumbs. It suits cutlets, crab cakes and soft-shell crab, which want a crisp jacket and are turned once rather than tossed."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"The order never changes: the pan hot before the fat, the fat hot before the food, the food dry and never crowded. Heat the empty pan, add a thin film of oil or clarified butter and wait until it shimmers; whole butter burns at this heat because of its milk solids. Pat the food dry and season it just before it goes in. Lay it in one layer with space between the pieces. Crowd the pan and its heat drops, juice leaks out and the food stews grey, because a wet surface cannot climb past 100°C (212°F) and so cannot brown.",
+						"For a fish fillet, dry it well and, if the dish wants a crust, dredge it in seasoned flour and shake off every loose speck. Lay it presentation side down first, the side the guest will see, or skin side down for crisp skin, pressing it flat for a moment so it does not curl. Leave it alone: it releases from the pan once the crust has formed. Turn it once, lower the heat and finish gently. A thin fillet takes two or three minutes in all; a thick one is browned on the stove and finished in the oven.",
+						"For a shallow fry, heat the fat to about 170 to 180°C (338 to 356°F), when a crumb dropped in sizzles at once. Lay the coated food in away from you so the fat cannot splash back, fry until golden underneath, turn once and drain on a rack, where the crust stays crisp."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"Three words describe one pan at three heats. To sweat is to cook gently in a little fat over low heat, often with a pinch of salt or a lid, until vegetables are soft and translucent with no colour: the start of a soup, a rice pilaf or a Creole sauce built on the trinity. To sauté is medium-high heat and movement, for a light golden colour. To sear is the hottest pan and no movement at all, for a deep crust on a steak or a scallop. The classic pans are the sloping-sided sauteuse, built for tossing, and the straight-sided sautoir, which also holds a sauce."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"Food that sticks went into a pan not hot enough, was wet, or was moved before its crust let go. Food that greys and weeps was crowded. A coating that slides off was not patted dry or was turned too often. A dark outside with a raw centre means the piece was too thick for the heat: lower the flame or finish it in the oven."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"The children’s dinner at Brennan’s offers Sautéed Gulf Fish with Potato and Green Beans, the day’s Gulf fish cooked quickly in a hot pan. The children’s menu is read from the restaurant’s web card rather than the server guide, so confirm the plate and its set price on the live card. At breakfast and lunch, the Pecan Gulf Fish is likely pan-roasted or sautéed to order, and the kitchen confirms which. The fish changes with the catch: learn today’s fish and how it is cooked at lineup."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Say soh-TAY, and give the guest the plain picture: cooked quickly in a hot pan. Is a sautéed fish fried? Not deep-fried: it is cooked in a little fat in a hot pan, where frying uses far more fat and usually a batter or crumb. Never guess the fish; it is the day’s catch. Questions about what it is dusted in, or the fat it is cooked in, go to the kitchen."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Fat for a sauté",
+					"value": "A thin film, about 15 to 30 ml (1 to 2 tbsp) in a 30 cm (12 inch) pan"
+				},
+				{
+					"label": "Fat for a shallow fry",
+					"value": "About 1 cm (1/2 inch), a third of the way up the food"
+				},
+				{
+					"label": "Food in the pan",
+					"value": "One layer, with a finger’s width between the pieces"
+				}
+			],
+			"temps": [
+				{
+					"label": "Shallow-frying fat, the low end",
+					"c": 170,
+					"f": 338
+				},
+				{
+					"label": "Shallow-frying fat, the high end",
+					"c": 180,
+					"f": 356
+				},
+				{
+					"label": "A wet surface stays near this, so it cannot brown",
+					"c": 100,
+					"f": 212
+				}
+			],
+			"faults": [
+				{
+					"fault": "Food sticks and tears",
+					"cause": "The pan was not hot enough, the food was wet, or it was moved before the crust formed.",
+					"fix": "Heat the pan first, pat the food dry, and wait until it releases on its own before turning."
+				},
+				{
+					"fault": "Pale, grey and watery",
+					"cause": "The pan was crowded, so its heat dropped and the food stewed in its juices.",
+					"fix": "Cook in batches, in one layer with space around each piece."
+				},
+				{
+					"fault": "Bitter, smoking fat",
+					"cause": "The fat was too hot for its kind, or whole butter was used at full heat.",
+					"fix": "Use oil or clarified butter, and add whole butter only late, for flavour."
+				},
+				{
+					"fault": "Coating slides off",
+					"cause": "The food was not dried, sat too long in the flour, or was turned too often.",
+					"fix": "Dry it, dredge just before cooking, shake off the excess and turn it once."
+				},
+				{
+					"fault": "Dark outside, raw centre",
+					"cause": "The piece was too thick for the heat.",
+					"fix": "Lower the flame, or brown it and finish it in the oven."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-zzpgkxbr",
+					"components": [
+						"Sautéing fish"
+					],
+					"how": "The children’s dinner plate: the day’s Gulf fish sautéed quickly in a hot pan, with potato and green beans. The children’s menu comes from the web card, so confirm it and the fish at lineup."
+				},
+				{
+					"dish": "d-1bvercoh",
+					"components": [
+						"Sautéing fish"
+					],
+					"how": "The fish is likely pan-roasted or sautéed to order, then topped with lump crab and a pecan bordelaise. Learn the day’s fish and how it is cooked at lineup."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"meuniere",
+					"deglaze-and-pan-sauce",
+					"frying",
+					"heat-and-the-pan",
+					"pan-roast-and-poele",
+					"gulf-fish",
+					"pecan-gulf-fish"
+				],
+				"techniques": [
+					"sauteing-and-the-shallow-fry",
+					"searing-the-hard-crust",
+					"the-coat-before-the-fry-dredge-crumb-batter",
+					"sweating-aromatics-soft-never-browned"
+				],
+				"lexicon": [
+					"sweat-vs-saute-vs-sear",
+					"searing-and-pan-technique",
+					"deep-and-shallow-frying"
+				],
+				"folios": [
+					"searing-standard"
+				],
+				"deck": [
+					"fd_0038",
+					"fd_0039",
+					"fd_0135"
+				],
+				"components": [
+					"Sautéing fish",
+					"Gulf fish of the day"
+				],
+				"terms": [
+					"methods-sauteed",
+					"methods-fried"
+				]
+			},
+			"sources": [
+				{
+					"title": "A Guide to Modern Cookery, A. Escoffier (London: Heinemann, 1907)",
+					"url": "https://www.gutenberg.org/ebooks/71395",
+					"year": 1907
+				},
+				{
+					"title": "Brennan’s, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-10-12"
+				}
+			],
+			"cards": [
+				{
+					"stem": "meaning",
+					"front": "What does the French word sauter mean, and what does a sauté describe?",
+					"back": "To jump: small or thin pieces cooked fast in a little hot fat, tossed or turned so every side meets the pan."
+				},
+				{
+					"stem": "order",
+					"front": "What is the order of things in a sauté?",
+					"back": "The pan hot before the fat, the fat hot before the food, the food dry and never crowded. Each keeps the surface hot enough to brown."
+				},
+				{
+					"stem": "crowding",
+					"front": "Why does a crowded pan turn food grey?",
+					"back": "Too much food drops the heat, juice leaks out and the food stews; a wet surface stays near 100°C (212°F) and cannot brown."
+				},
+				{
+					"stem": "butter",
+					"front": "Why is whole butter a poor fat for a hot sauté?",
+					"back": "Its milk solids burn at sauté heat. Use oil or clarified butter, and add whole butter late, for flavour."
+				},
+				{
+					"stem": "fish-side",
+					"front": "Which side of a fish fillet goes into the pan first?",
+					"back": "The presentation side, the one the guest will see, or the skin side for crisp skin. It is turned once."
+				},
+				{
+					"stem": "release",
+					"front": "How do you know a fillet is ready to turn?",
+					"back": "It lets go of the pan on its own once the crust has formed; forcing it early tears the flesh."
+				},
+				{
+					"stem": "shallow-fry",
+					"front": "How does shallow frying differ from a sauté?",
+					"back": "More fat, about 1 cm (1/2 inch), and usually a coating of flour or crumb, for cutlets, crab cakes and soft-shell crab; turned once, not tossed."
+				},
+				{
+					"stem": "sweat-saute-sear",
+					"front": "What separates a sweat, a sauté and a sear?",
+					"back": "Heat and colour: a sweat is low and pale, a sauté is medium-high and golden, a sear is the hottest pan and a deep crust."
+				},
+				{
+					"stem": "thick",
+					"front": "What do you do with a fillet too thick to cook through on the stove?",
+					"back": "Brown it in the pan, then finish it in the oven, so the centre cooks before the outside burns."
+				},
+				{
+					"stem": "brennans",
+					"front": "Which Brennan’s plates teach the sauté?",
+					"back": "The children’s Sautéed Gulf Fish with Potato and Green Beans, and the Pecan Gulf Fish, likely pan-roasted or sautéed to order. Learn the day’s fish at lineup."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-meaning",
+					"q": "What does the French verb sauter, which gives the sauté its name, mean?",
+					"answer": "To jump",
+					"distractors": [
+						"To simmer",
+						"To soften",
+						"To seal"
+					],
+					"why": "Small pieces are tossed so they jump in the pan, every side meeting hot metal, which is how a sauté cooks evenly and fast.",
+					"teaches": "meaning"
+				},
+				{
+					"stem": "q-order",
+					"q": "Which order sets up a sauté correctly?",
+					"answer": "Hot pan, then hot fat, then dry food in one layer",
+					"distractors": [
+						"Cold pan, fat and food together, then heat",
+						"Hot pan, then the food, then fat poured over",
+						"Warm fat, wet food, the pan filled to the edge"
+					],
+					"why": "Each step keeps the surface hot: a hot pan heats the fat, hot fat browns at once, and dry, uncrowded food never cools it.",
+					"teaches": "order"
+				},
+				{
+					"stem": "q-crowding",
+					"q": "Fish cooked in a crowded pan comes out pale and wet. Why?",
+					"answer": "The heat dropped and the fish stewed in its juices",
+					"distractors": [
+						"The fat was too hot and scorched the crust at once",
+						"The fish was dredged in flour first",
+						"The pan was heated for too long beforehand"
+					],
+					"why": "Too much food cools the pan and releases juice; a wet surface stays near the boiling point of water and cannot brown.",
+					"teaches": "crowding"
+				},
+				{
+					"stem": "q-butter",
+					"q": "Why is whole butter a poor choice for a hot sauté?",
+					"answer": "Its milk solids burn at that heat",
+					"distractors": [
+						"It has no flavour at high heat",
+						"It makes a coating slide off",
+						"It turns the fish grey"
+					],
+					"why": "Whole butter carries milk solids that blacken at sauté heat; oil or clarified butter takes the heat, and whole butter goes in late.",
+					"teaches": "butter"
+				},
+				{
+					"stem": "q-fish-side",
+					"q": "When sautéing a skinless fish fillet, which side goes down first?",
+					"answer": "The presentation side, the side the guest sees",
+					"distractors": [
+						"The side that will rest face down on the plate",
+						"Whichever side is thinner",
+						"Neither: it is turned constantly"
+					],
+					"why": "The first side meets the hottest pan and takes the cleanest, most even crust, so it is the side that faces up on the plate.",
+					"teaches": "fish-side"
+				},
+				{
+					"stem": "q-shallow",
+					"q": "Which of these suits a shallow fry rather than a sauté?",
+					"answer": "A soft-shell crab in seasoned flour",
+					"distractors": [
+						"Sliced button mushrooms for a garnish",
+						"Spinach leaves wilted for a side",
+						"Diced onion softened for a sauce"
+					],
+					"why": "A shallow fry uses more fat and a coating for a crisp jacket, turned once; small pieces that are tossed are sautéed.",
+					"teaches": "shallow-fry"
+				},
+				{
+					"stem": "q-sear",
+					"q": "Which word means the hottest pan, no movement and a deep brown crust?",
+					"answer": "Sear",
+					"distractors": [
+						"Sweat",
+						"Sauté",
+						"Shallow fry"
+					],
+					"why": "A sweat is low heat and no colour, a sauté is medium-high and golden, and a sear is maximum heat for a deep crust.",
+					"teaches": "sweat-saute-sear"
+				},
+				{
+					"stem": "q-thick",
+					"q": "A thick fillet is browning fast but still raw at the centre. What is the fix?",
+					"answer": "Finish it in the oven",
+					"distractors": [
+						"Turn up the flame",
+						"Add more cold fat",
+						"Press it flat with a spatula"
+					],
+					"why": "The oven’s surrounding heat cooks the centre through gently while the crust, already made, stops darkening.",
+					"teaches": "thick"
+				},
+				{
+					"stem": "q-brennans",
+					"q": "On the Brennan’s children’s dinner, how is the Gulf fish with potato and green beans cooked?",
+					"answer": "Sautéed quickly in a hot pan",
+					"distractors": [
+						"Deep fried in a cornmeal crust",
+						"Poached in a court-bouillon",
+						"Baked in a banana-leaf parcel"
+					],
+					"why": "The children’s Gulf fish is sautéed in a little hot fat; the fried plates are the shrimp, and the banana-leaf parcel is the dinner en papillote. The fish changes with the catch.",
+					"teaches": "brennans"
+				}
+			]
+		},
+		{
+			"stem": "pan-roast-and-poele",
+			"slug": "pan-roast-and-poele",
+			"title": "Pan-roast and poêlé",
+			"say": "PAN-rohst and pwah-LAY",
+			"level": 4,
+			"kind": "method",
+			"summary": "Two ways to roast in a pan. Pan-roasting sears on the stove, finishes in a hot oven and bastes with butter on its return; poêlé roasts tender meat in butter on vegetables in a covered pot, uncovered at the end to colour.",
+			"guest": "Pan-roasted means seared in a hot pan for a golden crust, then finished in the oven, so it stays juicy inside.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Pan-roasting is how a restaurant cooks a thick piece to order. It is seared hard in an ovenproof pan on the stove, the same pan goes into a hot oven, and on its return to the stove it is basted with foaming butter. The crust comes from the stove, the even cooking from the oven, and one pan does both. It suits fillets, chops and steaks too thick to cook through by searing alone.",
+						"Poêler (pwah-LAY) is the older, gentler cousin. A tender bird or a fine cut is set on a bed of matignon: carrot, onion and celery cut small, with raw ham, thyme and bay, stewed soft in butter. It is buttered, covered and cooked in a moderate oven, then uncovered near the end to colour. The classical books treat it as a roast made under a lid."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Heat the oven to about 200 to 220°C (392 to 428°F). Dry and season the meat or fish and sear it in a little oil in an ovenproof pan until the presentation side is deep golden. Turn it and put the pan straight into the oven: a few minutes for a thick fish fillet, longer for a chicken breast or a chop, judged by a probe against the chef’s chart. Bring the pan back to the stove holding the handle with a dry cloth, because it is now as hot as the oven.",
+						"To baste, arroser in the French kitchen, add a knob of butter, a sprig of thyme and a crushed clove of garlic, tilt the pan so the butter pools, and as it foams spoon it over the meat for a minute. The foam carries the herbs onto the crust, browns it further and gives it a nutty flavour. Stop before the butter turns from hazelnut to burnt, then lift the meat out to rest.",
+						"To poêler a chicken, stew the matignon in butter in a heavy pot just large enough for the bird. Season the bird, set it on the vegetables, pour melted butter over, cover and cook in a moderate oven, about 160 to 180°C (320 to 356°F), basting every 10 to 15 minutes. For the last 15 to 20 minutes take off the lid so the skin browns. A chicken is done at 74°C (165°F) in the thickest part of the thigh; duck, pigeon and fillet of beef are served pink, checked with a probe.",
+						"The vegetables are the start of the sauce, never a bed to throw away. Lift the bird out to rest, pour a little veal stock into the pot over the matignon, butter and juices, simmer it a few minutes, then strain and skim off the fat. Served in its pot, the dish is called en cocotte or en casserole.",
+						"A chef also reads the timing: each pan-roast holds an ovenproof pan and a place in the oven for up to about 15 minutes, so the station fires it first and builds the garnish around it."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"Poêlé sits between a roast and a braise. Like a roast, it uses tender meat and fat and stops when the meat is just cooked; like a braise, it is covered and sits on vegetables. The difference is liquid. A braise is half covered in stock or wine and cooks tough meat for hours; a poêlé has little or none beyond the butter and the meat’s own juices. A roast is open to dry heat throughout. That is why poêlé suits tender poultry, game birds and fine cuts such as a fillet of beef, which butter and vegetables keep moist."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"A thick grey band under the crust means the outside cooked far ahead of the centre: a long sear in a pan that was not hot enough, or too long in a hot oven. Dry meat stayed in too long, and bitter basting butter met too fierce a flame."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"On a modern menu, pan-roasted marks a thick piece cooked to order: a chicken breast with its skin, a pork chop, a thick fillet of fish. Give the guest the plain picture: seared for a golden crust, then finished in the oven. Poêlé seldom appears by name; a chicken en cocotte is the same method, a bird roasted in butter in a covered pot on vegetables, often brought to the table in its pot. At Brennan’s the Pecan Gulf Fish is likely pan-roasted or sautéed to order: learn the day’s fish and its cooking at lineup."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Basting butter",
+					"value": "About 30 g (2 tbsp) of butter for one or two portions, with a sprig of thyme and a clove of garlic"
+				},
+				{
+					"label": "Matignon under a poêlé",
+					"value": "A bed about 2 cm (3/4 inch) deep, enough to lift the bird off the base of the pot"
+				},
+				{
+					"label": "Uncovered at the end of a poêlé",
+					"value": "The last 15 to 20 minutes, for colour"
+				}
+			],
+			"temps": [
+				{
+					"label": "Hot oven for a pan-roast, the low end",
+					"c": 200,
+					"f": 392
+				},
+				{
+					"label": "Hot oven for a pan-roast, the high end",
+					"c": 220,
+					"f": 428
+				},
+				{
+					"label": "Moderate oven for a poêlé, the low end",
+					"c": 160,
+					"f": 320
+				},
+				{
+					"label": "Moderate oven for a poêlé, the high end",
+					"c": 180,
+					"f": 356
+				}
+			],
+			"faults": [
+				{
+					"fault": "Thick grey band under the crust",
+					"cause": "A long sear in a pan that was not hot enough, or the piece left in a hot oven past its mark, so the outside overcooked while the centre caught up.",
+					"fix": "Sear hard and fast in a properly hot pan, then pull the piece from the oven the moment the probe reads its mark."
+				},
+				{
+					"fault": "Burnt crust",
+					"cause": "Seared too long on the stove before the oven.",
+					"fix": "Sear only to deep golden; the oven and the basting butter brown it further."
+				},
+				{
+					"fault": "Bitter basting butter",
+					"cause": "The flame was too fierce and the butter burnt past hazelnut.",
+					"fix": "Lower the heat before the butter goes in, and baste for a minute, not five."
+				},
+				{
+					"fault": "Pale skin on a poêlé",
+					"cause": "The lid stayed on to the end, so the skin steamed.",
+					"fix": "Uncover for the last 15 to 20 minutes and keep basting."
+				},
+				{
+					"fault": "Greasy poêlé sauce",
+					"cause": "The butter and fat were not skimmed after the juices were loosened.",
+					"fix": "Strain, let it settle and skim the fat from the top before serving."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"roast-and-baste",
+					"saute",
+					"braise-and-daube",
+					"deglaze-and-pan-sauce",
+					"pecan-gulf-fish"
+				],
+				"techniques": [
+					"searing-the-hard-crust",
+					"roasting-in-a-hot-oven"
+				],
+				"lexicon": [
+					"baste-arroser-and-glaze",
+					"roasting-baking-and-carryover"
+				],
+				"folios": [
+					"searing-standard"
+				],
+				"deck": [
+					"fd_0049"
+				],
+				"terms": [
+					"methods-roasted",
+					"methods-seared"
+				]
+			},
+			"sources": [
+				{
+					"title": "A Guide to Modern Cookery, A. Escoffier (London: Heinemann, 1907)",
+					"url": "https://www.gutenberg.org/ebooks/71395",
+					"year": 1907
+				},
+				{
+					"title": "Brennan’s, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Safe Minimum Internal Temperatures, FoodSafety.gov",
+					"url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+					"asOf": "2026-10-12"
+				}
+			],
+			"cards": [
+				{
+					"stem": "pan-roast",
+					"front": "What are the stages of a pan-roast?",
+					"back": "Sear in an ovenproof pan on the stove, finish in a hot oven in the same pan, then baste with foaming butter on its return."
+				},
+				{
+					"stem": "why-oven",
+					"front": "Why finish a thick cut in the oven rather than on the stove?",
+					"back": "Surrounding heat cooks it through evenly; left on the stove, the crust would burn before the centre was done."
+				},
+				{
+					"stem": "handle",
+					"front": "What must you remember when a pan comes out of the oven?",
+					"back": "The handle is as hot as the oven. Grip it only with a dry cloth, and mark it, often with a dusting of flour, so nobody grabs it bare; keep every cloth clear of the flame."
+				},
+				{
+					"stem": "arroser",
+					"front": "What does arroser mean, and how is it done?",
+					"back": "To baste: tilt the pan and spoon foaming butter, thyme and garlic over the meat as it finishes, browning the crust and adding flavour."
+				},
+				{
+					"stem": "poele",
+					"front": "What is a poêlé?",
+					"back": "A tender bird or cut roasted in butter in a covered pot on a bed of matignon, basted, then uncovered at the end to colour."
+				},
+				{
+					"stem": "matignon",
+					"front": "What is the matignon under a poêlé?",
+					"back": "Carrot, onion and celery cut small, with raw ham, thyme and bay, stewed in butter: the bed a poêlé cooks on and the start of its sauce."
+				},
+				{
+					"stem": "which-cuts",
+					"front": "Why does poêlé suit tender poultry and fine cuts rather than tough ones?",
+					"back": "Gentle heat from butter and vegetables cooks them moist without liquid; tough cuts need a braise’s long, wet cooking to melt their collagen."
+				},
+				{
+					"stem": "lid-off",
+					"front": "Why does the lid come off a poêlé near the end?",
+					"back": "Under the lid the skin steams pale; the last 15 to 20 minutes uncovered let it brown."
+				},
+				{
+					"stem": "vs-braise",
+					"front": "How is a poêlé told from a braise and a roast?",
+					"back": "A braise is half covered in liquid, a roast is open to dry heat, and a poêlé is covered, with butter and vegetables but little or no liquid."
+				},
+				{
+					"stem": "sauce",
+					"front": "Where does a poêlé’s sauce come from?",
+					"back": "The matignon, butter and juices left in the pot, deglazed with a little veal stock, simmered, strained and skimmed: the vegetables are the start of the sauce."
+				},
+				{
+					"stem": "guest",
+					"front": "How do you describe a pan-roasted dish to a guest?",
+					"back": "Seared in a hot pan for a golden crust, then finished in the oven, so it stays juicy inside."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-stages",
+					"q": "Which sequence of steps describes a pan-roast?",
+					"answer": "Sear on the stove, finish in a hot oven, baste with butter",
+					"distractors": [
+						"Simmer in stock, then brown under the salamander",
+						"Marinate overnight, then cook covered in wine",
+						"Roast it uncovered in the oven from the start to the finish"
+					],
+					"why": "The stove gives the crust, the oven cooks the piece through evenly, and the butter baste on its return adds colour and flavour.",
+					"teaches": "pan-roast"
+				},
+				{
+					"stem": "q-why-oven",
+					"q": "Why is a thick chop finished in the oven after searing?",
+					"answer": "The oven cooks the centre before the crust burns",
+					"distractors": [
+						"The oven seals in the juices",
+						"The oven gives a thicker crust than the stove",
+						"The oven adds a smoky flavour"
+					],
+					"why": "Surrounding heat reaches the centre evenly while the crust, already made, stops darkening; searing does not seal in juice.",
+					"teaches": "why-oven"
+				},
+				{
+					"stem": "q-handle",
+					"q": "A pan has just come out of a 220°C (428°F) oven. What do you do before touching it?",
+					"answer": "Grip the handle only with a dry cloth",
+					"distractors": [
+						"Wrap the handle in a damp towel",
+						"Cool the handle under the tap",
+						"Wait ten seconds, then grip it bare-handed"
+					],
+					"why": "The handle is as hot as the oven. A dry cloth protects the hand; a damp one turns to steam and burns through it.",
+					"teaches": "handle"
+				},
+				{
+					"stem": "q-arroser",
+					"q": "What does the French verb arroser mean at the stove?",
+					"answer": "To baste with the pan’s fat",
+					"distractors": [
+						"To season with salt and pepper",
+						"To flame with a splash of spirit",
+						"To deglaze with wine"
+					],
+					"why": "Arroser is to baste: foaming butter, thyme and garlic spooned over the meat as it finishes, browning the crust and flavouring it.",
+					"teaches": "arroser"
+				},
+				{
+					"stem": "q-matignon",
+					"q": "On what does a classical poêlé cook?",
+					"answer": "A bed of matignon softened in butter",
+					"distractors": [
+						"A rack over boiling water",
+						"A thick layer of coarse salt",
+						"Stock poured halfway up the sides of the meat"
+					],
+					"why": "The bird sits on carrot, onion and celery cut small, with raw ham, thyme and bay, which perfume it and become the base of the sauce.",
+					"teaches": "matignon"
+				},
+				{
+					"stem": "q-cuts",
+					"q": "Which of these suits a poêlé?",
+					"answer": "A young chicken",
+					"distractors": [
+						"Beef shank cut across the bone",
+						"Ox cheeks trimmed of sinew",
+						"An old boiling hen"
+					],
+					"why": "Poêlé is gentle, short cooking in butter for tender meat; the shank, the cheeks and an old boiling hen need long, wet cooking to melt their collagen.",
+					"teaches": "which-cuts"
+				},
+				{
+					"stem": "q-lid",
+					"q": "Why is the lid taken off a poêlé for the last part of the cooking?",
+					"answer": "So the skin can brown",
+					"distractors": [
+						"So the stock can reduce",
+						"So the bird can rest in the pot",
+						"So the vegetables can soften further"
+					],
+					"why": "Under the lid the bird cooks moist but the skin stays pale; uncovered and basted for the last minutes, it takes colour.",
+					"teaches": "lid-off"
+				},
+				{
+					"stem": "q-vs-braise",
+					"q": "What chiefly separates a poêlé from a braise?",
+					"answer": "Little or no liquid beyond the butter",
+					"distractors": [
+						"A poêlé is never covered at any stage",
+						"A braise is made with no vegetables at all",
+						"A poêlé is cooked on the stove top only"
+					],
+					"why": "Both are covered and sit on vegetables, but a braise is half covered in liquid for tough meat, while a poêlé cooks tender meat in butter.",
+					"teaches": "vs-braise"
+				},
+				{
+					"stem": "q-sauce",
+					"q": "How is a poêlé’s sauce made?",
+					"answer": "Deglaze the pot with stock, then strain and skim it",
+					"distractors": [
+						"Whisk egg yolks into the pot’s butter over a gentle heat",
+						"Thicken a separate stock with a dark roux and add it",
+						"Blend the vegetables with cream until smooth"
+					],
+					"why": "The butter, juices and matignon left in the pot hold the flavour; a little veal stock lifts them, and straining and skimming finish it.",
+					"teaches": "sauce"
+				}
+			]
+		},
+		{
+			"stem": "braise-and-daube",
+			"slug": "braise-and-daube",
+			"title": "Braise and daube",
+			"say": "BRAYZ and DOHB",
+			"level": 2,
+			"kind": "method",
+			"summary": "Braising sears a tough, hard-working cut, then cooks it slowly, covered, with wine or stock partway up, until its collagen melts into gelatine and the liquid becomes its sauce. A daube is Provence’s red wine braise, marinated first.",
+			"guest": "Braised means browned, then cooked slowly in a covered pot with wine or stock for hours, so it is fork-tender and the cooking liquid becomes its sauce.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"To braise is to brown a large piece of meat hard, then cook it slowly in a covered pot with liquid coming partway up its sides. It is the method for tough, hard-working cuts: short rib, chuck, shank and cheek. These muscles are laced with collagen, the connective tissue that makes them chewy. Held for hours in moist heat below the boil, collagen melts into gelatine from about 70°C (158°F), which keeps the fibres moist, makes the meat spoon-tender and thickens the liquid into a glossy sauce. The gelatine is the reward, and the reason a braise cannot be hurried."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Season and dry the meat, then sear it in a little oil in a heavy pot until deep brown on every side: that crust, and the browned bits it leaves on the pot, the fond, flavour the finished sauce. Lift the meat out, pour off most of the fat and soften onion, carrot, celery and garlic in what remains. Pour in the wine, scrape up the fond and reduce it by about half to cook off its raw edge, then add stock.",
+						"Return the meat. The liquid comes a third to halfway up, never over it: the exposed top cooks in the steam trapped under the lid while the rest simmers, and takes a glaze if the lid comes off for the last half hour and it is basted.",
+						"Add a bouquet garni, a tied bundle of herbs, bring it just to a simmer, cover and move it to a low oven of about 150 to 160°C (302 to 320°F), or keep it at a lazy simmer on the stove, the surface barely moving. Short rib and chuck take roughly 2 1/2 to 3 1/2 hours, shank and cheek often longer. It is done when a fork slides in and out with no pull, not at a time on a clock.",
+						"Finishing turns the liquid into a sauce. Lift the meat out, strain the liquid, let it settle and skim off the fat, or chill it overnight and lift the set fat away. Reduce it until it coats a spoon; if it needs more body, thicken it with beurre manié (butter and flour kneaded together) or mount it with cold butter. Season, then warm the meat through in its sauce."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"A daube (DOHB) is the red wine braise of Provence. Beef in large pieces is marinated overnight in red wine with garlic, herbs and often a strip of orange peel, then cooked slowly in a daubière, a pot-bellied earthenware pot. Boeuf bourguignon and coq au vin are Burgundy’s red wine braises of beef and of cockerel, with lardons, mushrooms and small onions. A white braise skips the browning and uses pale stock, for veal, sweetbreads or vegetables such as leeks and celery.",
+						"New Orleans Creole cooks kept the daube, and daube glacée, the braised beef set cold in its own jelly, is a dish of the Creole Christmas table. Grillades, beef or veal rounds braised in a brown roux gravy with the trinity and tomato, are the Creole braise and have their own entry."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"Tough meat has not cooked long enough: collagen needs hours. Dry, stringy meat was boiled rather than simmered, or cooked far past tender. A pale, thin sauce lacked a good sear or was never reduced. A sour, winey edge means the wine went in with the stock unreduced. A greasy sauce was not skimmed, and a bitter one came from a fond burnt black in the sear."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"At Brennan’s the braise is the short rib débris (DAY-bree) on the Eggs Owen, at breakfast and lunch. It is braised the classic way: short rib seared hard, the vegetables sweated, the pan deglazed with red wine and reduced, then stock added and the pot cooked in a low oven for about three hours, until a fork turns the meat; the liquid is skimmed and reduced and the meat pulled back into it. Confirm the kitchen’s own steps and timing at lineup. Débris is Louisiana French for scraps."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Describe a braise as slow-cooked: browned, then cooked for hours in a covered pot until fork-tender, its own liquid the sauce. Call the débris slow-cooked beef that falls apart into its own gravy. The menu does not say Eggs Owen is named for Owen Brennan, so confirm at lineup before telling that story. Ingredient questions go to the kitchen."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Liquid in the pot",
+					"value": "A third to halfway up the meat, never covering it"
+				},
+				{
+					"label": "Wine before the stock",
+					"value": "Reduced by about half"
+				},
+				{
+					"label": "Short rib or chuck",
+					"value": "Roughly 2 1/2 to 3 1/2 hours in a low oven, until a fork slides out freely"
+				}
+			],
+			"temps": [
+				{
+					"label": "Low oven for a braise, the low end",
+					"c": 150,
+					"f": 302
+				},
+				{
+					"label": "Low oven for a braise, the high end",
+					"c": 160,
+					"f": 320
+				},
+				{
+					"label": "Collagen begins to melt into gelatine, given time",
+					"c": 70,
+					"f": 158
+				},
+				{
+					"label": "A full boil, which makes braised meat dry and stringy",
+					"c": 100,
+					"f": 212
+				}
+			],
+			"faults": [
+				{
+					"fault": "Tough, chewy meat",
+					"cause": "Not cooked long enough for the collagen to melt.",
+					"fix": "Return it to the oven and test again every 20 to 30 minutes."
+				},
+				{
+					"fault": "Dry, stringy meat",
+					"cause": "The liquid boiled hard, or the meat cooked far past tender.",
+					"fix": "Keep a lazy simmer or a low oven; serve it in plenty of its sauce."
+				},
+				{
+					"fault": "Thin, pale sauce",
+					"cause": "A weak sear, or the liquid was never reduced.",
+					"fix": "Sear to deep brown, and reduce the strained liquid until it coats a spoon."
+				},
+				{
+					"fault": "Sour, winey edge",
+					"cause": "The wine went in with the stock and never reduced.",
+					"fix": "Reduce the wine by about half before the stock; reduce the finished sauce further."
+				},
+				{
+					"fault": "Greasy sauce",
+					"cause": "The fat was not skimmed.",
+					"fix": "Let the liquid settle and skim it, or chill it and lift off the set fat."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-44jfmkdb",
+					"components": [
+						"Braising in red wine",
+						"Short rib débris"
+					],
+					"how": "Short rib seared hard, braised in red wine and stock in a low oven for about three hours, then pulled into its reduced liquid: the débris served with a soft-boiled egg, hollandaise and marchand de vin."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"grillades",
+					"eggs-owen",
+					"marchand-de-vin",
+					"deglaze-and-pan-sauce",
+					"saute",
+					"brown-stock",
+					"monter-au-beurre",
+					"pan-roast-and-poele"
+				],
+				"techniques": [
+					"braising",
+					"searing-the-hard-crust",
+					"the-overnight-rest-letting-a-dish-marry"
+				],
+				"lexicon": [
+					"braising-and-stewing",
+					"short-ribs-english-vs-flanken",
+					"chuck"
+				],
+				"recipes": [
+					"daube-provencale",
+					"boeuf-bourguignon",
+					"coq-au-vin"
+				],
+				"kitchen": [
+					"boeuf-bourguignon",
+					"roast-beef-po-boy"
+				],
+				"deck": [
+					"fd_0026",
+					"fd_0092"
+				],
+				"components": [
+					"Braising in red wine",
+					"Short rib débris"
+				],
+				"terms": [
+					"methods-braised",
+					"methods-seared",
+					"cuts-shortrib"
+				]
+			},
+			"sources": [
+				{
+					"title": "A Guide to Modern Cookery, A. Escoffier (London: Heinemann, 1907)",
+					"url": "https://www.gutenberg.org/ebooks/71395",
+					"year": 1907
+				},
+				{
+					"title": "Brennan’s, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "La Cuisine Créole: A Collection of Culinary Recipes from Leading Chefs and Noted Creole Housewives (1885), Project Gutenberg",
+					"url": "https://www.gutenberg.org/ebooks/75027",
+					"asOf": "2026-10-12",
+					"year": 1885
+				}
+			],
+			"cards": [
+				{
+					"stem": "what",
+					"front": "What does it mean to braise?",
+					"back": "To sear meat, then cook it slowly, covered, with liquid partway up, until its collagen melts into gelatine and the liquid becomes its sauce."
+				},
+				{
+					"stem": "cuts",
+					"front": "Which cuts are made for braising, and why?",
+					"back": "Short rib, chuck, shank and cheek: hard-working muscles full of collagen, which melts into gelatine with long, moist heat."
+				},
+				{
+					"stem": "gelatine",
+					"front": "Why does a braise take hours?",
+					"back": "Collagen turns to gelatine slowly, from about 70°C (158°F); only time makes a tough cut tender and the sauce glossy."
+				},
+				{
+					"stem": "liquid",
+					"front": "How far up the meat should braising liquid come?",
+					"back": "A third to halfway, never over it: the base simmers and the top cooks in the trapped steam. Covered completely and cut small, it is a stew."
+				},
+				{
+					"stem": "heat",
+					"front": "What heat does a braise want?",
+					"back": "A lazy simmer, the surface barely moving, or a low oven of about 150 to 160°C (302 to 320°F). A hard boil makes dry, stringy meat."
+				},
+				{
+					"stem": "sear",
+					"front": "Why sear the meat before braising?",
+					"back": "The brown crust and the fond left in the pot give the sauce its depth; a pale sear gives a pale sauce."
+				},
+				{
+					"stem": "wine",
+					"front": "Why reduce the wine before the stock goes in?",
+					"back": "To cook off its raw, sharp edge; wine that is not reduced leaves the finished sauce sour."
+				},
+				{
+					"stem": "finish",
+					"front": "How is braising liquid turned into a sauce?",
+					"back": "Strain it, skim the fat, reduce it until it coats a spoon, thicken or mount it with butter if needed, then warm the meat in it."
+				},
+				{
+					"stem": "doneness",
+					"front": "How do you know a braise is done?",
+					"back": "A fork or a skewer slides in and out with no pull. Judge the meat, not the clock."
+				},
+				{
+					"stem": "daube",
+					"front": "What is a Provençal daube?",
+					"back": "A red wine braise of beef, marinated first with garlic, herbs and often orange peel, cooked slowly in a daubière, a pot-bellied earthenware pot."
+				},
+				{
+					"stem": "creole",
+					"front": "How did New Orleans keep the braise and the daube?",
+					"back": "In daube glacée, braised beef set cold in its own jelly for the Creole Christmas table, and in grillades, beef or veal braised in a brown roux gravy with the trinity and tomato."
+				},
+				{
+					"stem": "brennans",
+					"front": "What is the short rib débris on the Eggs Owen?",
+					"back": "Short rib braised slowly in red wine until it falls apart, pulled into its reduced braising liquid; débris, DAY-bree, is Louisiana French for scraps."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-cuts",
+					"q": "Which of these cuts is made for braising?",
+					"answer": "Beef short rib",
+					"distractors": [
+						"Beef tenderloin",
+						"Sirloin strip",
+						"Ribeye cap"
+					],
+					"why": "Short rib is a hard-working, collagen-rich cut that turns tender with hours of moist heat; the others are tender and dry out.",
+					"teaches": "cuts"
+				},
+				{
+					"stem": "q-liquid",
+					"q": "How far should braising liquid come up the meat?",
+					"answer": "A third to halfway up",
+					"distractors": [
+						"Just a film on the base",
+						"Over the top by 5 cm (2 inches)",
+						"None: the lid traps the steam"
+					],
+					"why": "Partway up lets the base simmer while the top cooks in the steam under the lid; covered completely, the meat stews.",
+					"teaches": "liquid"
+				},
+				{
+					"stem": "q-heat",
+					"q": "Which oven temperature suits a braise?",
+					"answer": "About 150 to 160°C (302 to 320°F)",
+					"distractors": [
+						"About 60 to 70°C (140 to 158°F)",
+						"About 220 to 230°C (428 to 446°F)",
+						"About 260°C (500°F)"
+					],
+					"why": "A low oven keeps the liquid at a lazy simmer, hot enough to melt collagen over hours but never hard enough to toughen the fibres.",
+					"teaches": "heat"
+				},
+				{
+					"stem": "q-stringy",
+					"q": "A braise came out dry and stringy though it cooked for hours. What is the likely cause?",
+					"answer": "The liquid boiled hard instead of simmering",
+					"distractors": [
+						"The meat was seared far too dark at the start",
+						"The lid fitted the pot too tightly",
+						"It rested overnight in its own liquid"
+					],
+					"why": "A hard boil squeezes the muscle fibres dry even as the collagen melts; a lazy simmer keeps them moist.",
+					"teaches": "heat"
+				},
+				{
+					"stem": "q-wine",
+					"q": "Why is the wine reduced before the stock goes into a braise?",
+					"answer": "To cook off its raw, sharp edge",
+					"distractors": [
+						"So the meat absorbs it faster",
+						"To add colour to the crust",
+						"To stop the meat from browning"
+					],
+					"why": "Unreduced wine leaves a sour, winey taste in the finished sauce; reducing it first concentrates its fruit and softens its acid.",
+					"teaches": "wine"
+				},
+				{
+					"stem": "q-daube",
+					"q": "What sets a Provençal daube apart from a plain braise?",
+					"answer": "The beef is marinated in red wine first",
+					"distractors": [
+						"It is cooked uncovered in a hot oven",
+						"It uses fish stock and white wine",
+						"It is finished with egg yolk and cream"
+					],
+					"why": "A daube marinates its beef overnight in red wine with garlic, herbs and often orange peel, then braises slowly in a daubière.",
+					"teaches": "daube"
+				},
+				{
+					"stem": "q-finish",
+					"q": "Once the meat is lifted out, what comes first in turning the braising liquid into a sauce?",
+					"answer": "Strain it and skim off the fat",
+					"distractors": [
+						"Reduce it hard with the vegetables still in",
+						"Add raw flour straight to the pot",
+						"Whisk in cold cream at once"
+					],
+					"why": "Straining removes the spent vegetables and skimming removes the fat; only then is the liquid reduced and finished.",
+					"teaches": "finish"
+				},
+				{
+					"stem": "q-done",
+					"q": "How do you judge when a braise is finished?",
+					"answer": "A fork slides in and out with no pull",
+					"distractors": [
+						"It has cooked for exactly two hours",
+						"The liquid has boiled away",
+						"The liquid has reduced by half"
+					],
+					"why": "Cuts and pieces differ, so the clock is only a guide; the meat is ready when the collagen has melted and a fork meets no resistance.",
+					"teaches": "doneness"
+				},
+				{
+					"stem": "q-brennans",
+					"q": "What is the débris on the Brennan’s Eggs Owen?",
+					"answer": "Short rib braised in red wine until it falls apart",
+					"distractors": [
+						"Short rib grilled over pecan wood, then sliced thin",
+						"Ground beef browned with onions and peppers",
+						"Cured beef brisket smoked and chopped"
+					],
+					"why": "Débris, DAY-bree, is meat that falls into its gravy; ours is short rib braised in red wine and pulled into its reduced liquid.",
+					"teaches": "brennans"
+				}
+			]
+		},
+		{
+			"stem": "poaching",
+			"slug": "poaching",
+			"title": "Poaching, shallow and deep",
+			"say": "As it reads: poaching.",
+			"level": 1,
+			"kind": "method",
+			"summary": "Poaching cooks food gently in liquid held below the simmer, so eggs, fish and chicken stay moist and nothing browns. Deep poaching submerges the food; shallow poaching half covers fish on shallots and turns the liquor into the sauce.",
+			"guest": "Poached means cooked gently in hot liquid kept below a simmer, so it stays soft and moist. Our poached eggs come with soft, runny yolks.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"To poach is to cook food in liquid kept hot but below the simmer: the surface trembles and steams, and only an odd bubble rises. That gentle heat sets proteins slowly, so they do not tighten and squeeze out their juice, which is why poaching suits delicate foods: eggs, fish, chicken breast, fruit. Nothing browns, so the flavour stays clean, and the liquid, water, stock, wine or milk, flavours the food. Learn to read the water: a poach barely shivers, a simmer sends up lazy bubbles at about 85 to 95°C (185 to 203°F), and a boil rolls at 100°C (212°F)."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Deep poaching covers the food completely in liquid held at about 70 to 85°C (158 to 185°F): a whole salmon, a chicken, a thick fillet, pears in syrup. Start large pieces in cool or warm liquid so the outside does not overcook before the centre is done; lower small pieces into liquid already hot. The liquid is often a court-bouillon, an aromatic poaching liquid with its own entry.",
+						"Shallow poaching is the classical way with fillets of sole, trout or other white fish. Butter a shallow pan, scatter it with chopped shallot, lay the seasoned fillets on top and pour in fish stock and white wine to come halfway up. Cover with a circle of buttered paper, a cartouche, bring it to a bare simmer on the stove, then finish in a moderate oven until the flesh turns opaque. The liquor left behind, the cuisson, is reduced hard and finished with cream or butter: the cooking liquid becomes the sauce.",
+						"The poached egg comes first for most cooks. Use the freshest eggs, whose thick white holds together. Bring water at least 8 cm (3 inches) deep to a bare shiver, with a splash of white vinegar if you like, about 15 ml (1 tbsp) to 1 litre (about 1 quart), to help the white set. Crack each egg into a cup and slide it in close to the surface. After about 3 minutes the white is set and the yolk flows. Lift it with a slotted spoon, blot it on a cloth and trim any ragged edges.",
+						"For a busy brunch, kitchens poach ahead. Each egg goes from the pan straight into iced water to stop the cooking and is held cold for the time the chef sets. At service it is reheated in hot water at about 70°C (158°F) for about a minute, until warm through but still runny, then blotted dry."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"Fish à la nage, swimming, is fish poached in an aromatic court-bouillon and served in a shallow bowl in some of its liquor. Sole Véronique (vay-ro-NEEK) is shallow-poached sole in a creamy white wine sauce with peeled green grapes, glazed under the salamander; the story credits Escoffier, and the tellings vary. Our Redfish Véronique keeps the name and the grapes, pickled with hibiscus, with a preserved lemon beurre blanc; the menu does not say how the redfish is cooked, so ask the kitchen before describing it."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"A wispy, ragged egg was stale or went into water boiling too hard. A rubbery white and a firm yolk cooked too long or too hot. Fish that falls apart dry was poached at a boil. A thin, flat sauce from a shallow poach was not reduced far enough before the butter or cream went in, and an egg that tastes sharp met too much vinegar."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"At Brennan’s the poached egg is the heart of the Eggs Hussarde and the Eggs Sardou. On the Hussarde, poached eggs sit on our own English muffins and coffee-cured Canadian bacon, with two sauces, hollandaise and marchand de vin, a red wine sauce. On the Sardou, they sit on crispy artichokes and Parmesan creamed spinach under Choron, a béarnaise with tomato. The eggs come soft, the white set and the yolk running, and the house guide asks servers to check with the kitchen before promising a guest firmer eggs."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"To a guest, poached means cooked gently in hot water kept below a simmer, so the white is tender and the yolk runs into the sauce when the guest cuts in. A guest who wants a firmer yolk hears that you will ask the kitchen, never a promise."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Vinegar for poaching eggs, if used",
+					"value": "About 15 ml (1 tbsp) to 1 litre (about 1 quart) of water"
+				},
+				{
+					"label": "Water for poaching eggs",
+					"value": "At least 8 cm (3 inches) deep"
+				},
+				{
+					"label": "Liquid for a shallow poach",
+					"value": "Fish stock and white wine, halfway up the fillets"
+				}
+			],
+			"temps": [
+				{
+					"label": "Deep-poaching liquid, the low end",
+					"c": 70,
+					"f": 158
+				},
+				{
+					"label": "Deep-poaching liquid, the high end",
+					"c": 85,
+					"f": 185
+				},
+				{
+					"label": "A simmer, with lazy bubbles, reaches about",
+					"c": 95,
+					"f": 203
+				},
+				{
+					"label": "Hot water to reheat a held poached egg",
+					"c": 70,
+					"f": 158
+				},
+				{
+					"label": "A rolling boil",
+					"c": 100,
+					"f": 212
+				}
+			],
+			"faults": [
+				{
+					"fault": "Wispy, ragged egg",
+					"cause": "A stale egg with a thin white, or water boiling too hard.",
+					"fix": "Use the freshest eggs and keep the water at a bare shiver; trim the edges."
+				},
+				{
+					"fault": "Rubbery white, firm yolk",
+					"cause": "Cooked too long or too hot.",
+					"fix": "About 3 minutes at a bare shiver, then straight out or into iced water."
+				},
+				{
+					"fault": "Dry fish that falls apart",
+					"cause": "The liquid boiled.",
+					"fix": "Hold the liquid below the simmer, about 70 to 85°C (158 to 185°F)."
+				},
+				{
+					"fault": "Thin, flat shallow-poach sauce",
+					"cause": "The cuisson was not reduced before the butter or cream.",
+					"fix": "Reduce it hard first, then finish and season."
+				},
+				{
+					"fault": "Sharp-tasting egg",
+					"cause": "Too much vinegar in the water.",
+					"fix": "Use about 15 ml (1 tbsp) to 1 litre (about 1 quart), or none at all with very fresh eggs."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-1q0xk7jv",
+					"components": [
+						"The poached egg"
+					],
+					"how": "Soft poached eggs on our own English muffins and coffee-cured Canadian bacon, with two sauces, buttery hollandaise and marchand de vin, a red wine sauce; the yolk runs into both."
+				},
+				{
+					"dish": "d-fs311zha",
+					"components": [
+						"The poached egg"
+					],
+					"how": "Soft poached eggs over crispy artichokes and Parmesan creamed spinach, finished with Choron. Check with the kitchen before promising a guest firmer eggs."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"court-bouillon-and-nage",
+					"eggs",
+					"eggs-hussarde",
+					"eggs-sardou",
+					"eggs-to-order",
+					"redfish-veronique",
+					"boil-blanch-and-steam",
+					"beurre-blanc"
+				],
+				"techniques": [
+					"poaching-eggs",
+					"the-bare-simmer-holding-liquid-below-the-boil"
+				],
+				"lexicon": [
+					"poach-simmer-boil"
+				],
+				"folios": [
+					"poached-egg-standard",
+					"simmer-standard",
+					"eggs-hussarde-components"
+				],
+				"deck": [
+					"fd_0034"
+				],
+				"components": [
+					"The poached egg",
+					"Véronique"
+				],
+				"terms": [
+					"methods-poached"
+				]
+			},
+			"sources": [
+				{
+					"title": "A Guide to Modern Cookery, A. Escoffier (London: Heinemann, 1907)",
+					"url": "https://www.gutenberg.org/ebooks/71395",
+					"year": 1907
+				},
+				{
+					"title": "Brennan’s, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan’s, Dinner menu",
+					"url": "https://www.brennansneworleans.com/menus/dinner/",
+					"asOf": "2026-10-12"
+				}
+			],
+			"cards": [
+				{
+					"stem": "what",
+					"front": "What does it mean to poach food?",
+					"back": "To cook it gently in liquid held below the simmer, so proteins set slowly and stay moist, and nothing browns."
+				},
+				{
+					"stem": "poach-temp",
+					"front": "At what temperature is deep-poaching liquid held?",
+					"back": "About 70 to 85°C (158 to 185°F): the surface trembles and steams, below the lazy bubbles of a simmer."
+				},
+				{
+					"stem": "read-water",
+					"front": "How do you tell a poach, a simmer and a boil apart by eye?",
+					"back": "A poach barely shivers with an odd bubble, a simmer sends up lazy bubbles, and a boil rolls hard at 100°C (212°F)."
+				},
+				{
+					"stem": "large-cold",
+					"front": "Why start a whole fish or a chicken in cool or warm liquid?",
+					"back": "So the outside does not overcook before the heat reaches the centre; small pieces go into liquid already hot."
+				},
+				{
+					"stem": "shallow",
+					"front": "How is a fish fillet shallow-poached?",
+					"back": "On buttered shallots, with fish stock and wine halfway up, covered with buttered paper, brought to a bare simmer and finished in the oven."
+				},
+				{
+					"stem": "cuisson",
+					"front": "What happens to the liquor from a shallow poach?",
+					"back": "The cuisson is reduced hard and finished with cream or butter: the cooking liquid becomes the sauce."
+				},
+				{
+					"stem": "fresh-egg",
+					"front": "Why do fresh eggs poach better than old ones?",
+					"back": "A fresh egg has a thick white that holds tightly round the yolk; an old egg’s thin white spreads into wisps."
+				},
+				{
+					"stem": "egg-time",
+					"front": "How long does a poached egg take, and what is the result?",
+					"back": "About 3 minutes at a bare shiver: the white set and the yolk still flowing."
+				},
+				{
+					"stem": "holding",
+					"front": "How are poached eggs held for a busy service?",
+					"back": "Straight into iced water to stop the cooking, held cold for the time the chef sets, then warmed through in hot water for about a minute and blotted dry."
+				},
+				{
+					"stem": "nage",
+					"front": "What does à la nage mean on a menu?",
+					"back": "Swimming: fish poached in an aromatic court-bouillon and served in a shallow bowl with some of its liquor and vegetables."
+				},
+				{
+					"stem": "veronique",
+					"front": "What is the classic Sole Véronique?",
+					"back": "Shallow-poached sole in a creamy white wine sauce with peeled green grapes, glazed under the salamander. The story credits Escoffier."
+				},
+				{
+					"stem": "brennans",
+					"front": "How are the eggs on the Hussarde and the Sardou cooked?",
+					"back": "Soft poached: the white set and the yolk running. Check with the kitchen before promising a guest firmer eggs."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-temp",
+					"q": "At roughly what temperature is deep-poaching liquid held?",
+					"answer": "70 to 85°C (158 to 185°F)",
+					"distractors": [
+						"40 to 50°C (104 to 122°F)",
+						"100°C (212°F), at a rolling boil",
+						"90 to 95°C (194 to 203°F)"
+					],
+					"why": "Below the simmer, proteins set slowly and stay moist; a boil toughens and breaks delicate fish and eggs.",
+					"teaches": "poach-temp"
+				},
+				{
+					"stem": "q-read",
+					"q": "Water in the pan sends up lazy bubbles that break gently at the surface. What is it doing?",
+					"answer": "Simmering",
+					"distractors": [
+						"Poaching",
+						"Boiling hard",
+						"Holding warm, with no movement at all"
+					],
+					"why": "A poach barely shivers with an odd bubble, a simmer sends up lazy bubbles, and a boil rolls hard; poaching needs the barely shivering water.",
+					"teaches": "read-water"
+				},
+				{
+					"stem": "q-large",
+					"q": "Why is a whole salmon started in cool or warm poaching liquid?",
+					"answer": "So the outside does not overcook first",
+					"distractors": [
+						"So the skin turns crisp",
+						"So the liquid reduces faster as it heats",
+						"So the fish absorbs less salt"
+					],
+					"why": "Large pieces need time for heat to reach the centre; starting cooler keeps the outside from overcooking while it does.",
+					"teaches": "large-cold"
+				},
+				{
+					"stem": "q-shallow",
+					"q": "In a shallow poach, how far does the liquid come up the fish?",
+					"answer": "About halfway",
+					"distractors": [
+						"Over the top",
+						"Just a film on the base",
+						"None: it steams dry"
+					],
+					"why": "Half covered under buttered paper, the fish cooks in liquid and steam together, and the small amount of liquor becomes a concentrated sauce.",
+					"teaches": "shallow"
+				},
+				{
+					"stem": "q-cuisson",
+					"q": "What becomes of the liquor left after shallow-poaching a fillet?",
+					"answer": "It is reduced and made into the sauce",
+					"distractors": [
+						"It is kept as the next day’s stock",
+						"It is poured off and thrown away",
+						"It is thickened with roux for soup"
+					],
+					"why": "The cuisson holds the flavour of fish, wine and shallot; reduced hard and finished with butter or cream, it sauces the fish it cooked.",
+					"teaches": "cuisson"
+				},
+				{
+					"stem": "q-fresh",
+					"q": "Why does a fresh egg poach into a neater shape than an old one?",
+					"answer": "Its thick white holds tight to the yolk",
+					"distractors": [
+						"Its shell is easier to crack",
+						"Its yolk is smaller",
+						"It is colder, coming straight from the fridge"
+					],
+					"why": "As an egg ages its white thins and spreads into wisps in the water; a fresh egg’s thick white sets close round the yolk.",
+					"teaches": "fresh-egg"
+				},
+				{
+					"stem": "q-time",
+					"q": "About how long does a poached egg take for a set white and a flowing yolk?",
+					"answer": "About 3 minutes",
+					"distractors": [
+						"About 30 seconds",
+						"About 8 minutes",
+						"About 15 minutes"
+					],
+					"why": "At a bare shiver, about 3 minutes sets the white while the yolk stays liquid; longer firms the yolk.",
+					"teaches": "egg-time"
+				},
+				{
+					"stem": "q-holding",
+					"q": "How do kitchens hold poached eggs ahead of a busy service?",
+					"answer": "In iced water, then reheated briefly in hot water",
+					"distractors": [
+						"Left in the hot poaching water for the whole service",
+						"Under a heat lamp until they are ordered",
+						"Wrapped dry at room temperature"
+					],
+					"why": "Iced water stops the cooking so the yolk stays runny; a short dip in hot water warms the egg through for the plate.",
+					"teaches": "holding"
+				},
+				{
+					"stem": "q-nage",
+					"q": "What does à la nage tell you about a fish dish?",
+					"answer": "It is poached and served in its aromatic liquor",
+					"distractors": [
+						"It is fried in a light batter and drained",
+						"It is grilled over live coals and brushed with herbs",
+						"It is baked in a sealed paper parcel"
+					],
+					"why": "Nage means swimming: the fish is poached in a court-bouillon and comes to the table in a shallow bowl with some of that liquor.",
+					"teaches": "nage"
+				},
+				{
+					"stem": "q-brennans",
+					"q": "A guest asks for the eggs on the Eggs Hussarde cooked firm. What do you do?",
+					"answer": "Check with the kitchen before promising it",
+					"distractors": [
+						"Promise it, since a firm egg is simple to do",
+						"Tell the guest it cannot be done",
+						"Order it soft and say nothing"
+					],
+					"why": "The Hussarde’s eggs come soft poached, and the house guide says to check with the kitchen before promising firmer eggs.",
+					"teaches": "brennans"
+				}
+			]
+		}
+	]
+}

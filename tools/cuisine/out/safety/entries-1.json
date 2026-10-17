@@ -1,0 +1,1043 @@
+{
+	"entries": [
+		{
+			"stem": "holding-warm-emulsions",
+			"slug": "holding-warm-emulsions",
+			"title": "Holding hollandaise and warm emulsions",
+			"say": "As it reads: holding hollandaise, HOL-un-dayz, and warm emulsions.",
+			"level": 2,
+			"kind": "safety",
+			"summary": "How a kitchen keeps hollandaise, béarnaise and beurre blanc warm enough to stay smooth and cool enough not to scramble or split, and the written time limit, labels and clean containers that keep a warm egg and butter sauce fit to serve.",
+			"guest": "Our hollandaise is a warm sauce of egg yolk and butter, sharpened with lemon. If you have a question about the eggs in it, I will ask the kitchen for you.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Hollandaise, béarnaise and beurre blanc are warm emulsions: tiny droplets of butterfat held apart in a little water, by egg yolk in the first two and by the butter's own milk solids in beurre blanc. Too hot and the yolk sets into curds or the butter oils out; too cool and the sauce thickens, then splits. So a warm emulsion is held in a bain-marie, a pan of hot, never boiling water in which containers of sauce stand to keep warm.",
+						"That gentle warmth suits bacteria too. Egg and butter feed them well, and the FDA Food Code sets 57°C (135°F) as the line for holding hot food. A hollandaise in a steady bain-marie can sit at or a little above that line, as the hollandaise entry teaches; a beurre blanc, or a sauce at the bain-marie's cool edge or checked too rarely, slips below it. Below the line the sauce is in the danger zone, so a kitchen with a written procedure holds it on time instead."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Make the sauce in small batches timed to service, each in a clean, dry container, never one that held the last batch. Stand it in water that steams but never bubbles, away from the flame, and stir it now and then so no skin forms. Label it as soon as it is filled, with the time it was made and the time it must be gone.",
+						"Check it with a probe thermometer. A sauce holding at 57°C (135°F) or above is hot held like any hot food. A beurre blanc rarely holds that hot without oiling out, and a hollandaise drifts below it as the bain-marie cools, so many kitchens run every warm emulsion on time as a public health control, an exception the Food Code allows only with written procedures kept in the kitchen.",
+						"The clock starts when the food leaves temperature control: for a hollandaise, when the yolks come out of the fridge, not when the sauce is finished. The container is marked with the time 4 hours on, and the sauce is served or discarded by then. No time on it, or past its time, and it goes in the bin.",
+						"Never top up old sauce with new: the fresh sauce takes on the old one's time and whatever has grown in it, and the label stops telling the truth. Start a new, labelled container and let the old one go."
+					]
+				},
+				{
+					"key": "safety",
+					"paras": [
+						"Pasteurised yolks, heated gently to destroy Salmonella without cooking them, lower the risk from the egg itself, and many kitchens use them for warm egg sauces. Bacteria that arrive later, on a spoon or a hand, can still grow, so the time limit and labels still apply. Whether a kitchen must use them, and how it holds and times its sauces, is set by its written procedure and the local health code: ask the chef.",
+						"Beurre blanc has no yolk but is just as fussy: too hot and the butterfat separates, too cool and it sets solid. It holds best at a gentle warmth, often below 57°C (135°F), so it gets the same small batch, clean container, label and time limit. Clarified butter, butter with its water and milk solids taken out, is nearly pure fat and gives bacteria far less to work with, but it is still kept covered, labelled, ladled with a clean spoon and never topped up."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"A sauce goes when it has split, turned grainy, grown a skin or crust, smells sour or wrong, or passed its time. One that has just begun to split can sometimes be brought back, as the entry on breaking and rescuing shows, but it keeps its original time."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"At Brennan's, hollandaise is the rich, lemony layer over the egg on the Eggs Hussarde and the Eggs Owen, and a preserved lemon beurre blanc dresses the Redfish Véronique. The house notes on hollandaise say what every cook learns: too hot and it scrambles, too cool and it splits. How the line holds and times each sauce is the chef's to explain at lineup."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"A guest may ask about the egg. Describe the sauce: warm egg yolk and butter, sharpened with lemon, whisked over gentle heat but not cooked firm. Questions about raw egg, pasteurised yolks or risk go to the kitchen, and the server brings back its answer. A sauce that looks split or skinned on the pass, the counter where plates leave the kitchen, goes back."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Time limit under a written time control",
+					"value": "4 hours from when the clock starts, then served or discarded"
+				},
+				{
+					"label": "Batch, container and label",
+					"value": "One batch, one clean container, one label with the time made and the time it goes"
+				}
+			],
+			"temps": [
+				{
+					"label": "Hot holding under the Food Code: at or above",
+					"c": 57,
+					"f": 135
+				}
+			],
+			"faults": [
+				{
+					"fault": "Old sauce topped up with new",
+					"cause": "A cook saving time or waste pours a fresh batch onto the last one.",
+					"fix": "Start a clean container with its own label; the old sauce keeps its time and goes when that runs out."
+				},
+				{
+					"fault": "No time on the container",
+					"cause": "The label was skipped in a rush.",
+					"fix": "Discard it, since nobody can show it is within its limit, and label every batch as it is filled."
+				},
+				{
+					"fault": "Scrambled at the edges",
+					"cause": "The bain-marie water boiled, or the container sat over direct heat.",
+					"fix": "Keep the water steaming, never bubbling, away from the flame; a sauce that has curdled is replaced."
+				},
+				{
+					"fault": "A thick skin or crust",
+					"cause": "Held uncovered and never stirred.",
+					"fix": "Stir it now and then and cover it loosely; a crusted sauce is replaced with a fresh batch."
+				},
+				{
+					"fault": "Split in the bain-marie",
+					"cause": "Held too hot, or allowed to cool and thicken.",
+					"fix": "Rescue it only within its time, as breaking and rescuing shows; the clock does not restart."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-1q0xk7jv",
+					"components": [
+						"Hollandaise"
+					],
+					"how": "Hollandaise is the rich, lemony layer over the poached egg on the Eggs Hussarde. The house notes its fragility: too hot and it scrambles, too cool and it splits. Ask the chef how the line holds and times it."
+				},
+				{
+					"dish": "d-s1bqzuks",
+					"components": [
+						"Beurre blanc"
+					],
+					"how": "The Redfish Véronique carries a preserved lemon beurre blanc: cold butter whisked into a reduction of white wine, vinegar and shallot, with no yolks. A butter emulsion asks the same care in holding; how the line holds it is a lineup question."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"hollandaise",
+					"bearnaise",
+					"beurre-blanc",
+					"clarified-butter",
+					"breaking-and-rescuing",
+					"warm-emulsion-family",
+					"eggs",
+					"danger-zone"
+				],
+				"techniques": [
+					"beurre-blanc",
+					"the-water-bath"
+				],
+				"lexicon": [
+					"food-safety-the-chef-owners-non-negotiables",
+					"thermometers-and-the-instrument-cluster"
+				],
+				"recipes": [
+					"hollandaise-and-the-two-ways-it-splits"
+				],
+				"folios": [
+					"hollandaise-standard",
+					"brennans-sauces"
+				],
+				"deck": [
+					"fd_0205",
+					"fd_0160",
+					"fd_0198"
+				],
+				"components": [
+					"Hollandaise",
+					"Beurre blanc"
+				]
+			},
+			"sources": [
+				{
+					"title": "FDA Food Code 2022, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/fda-food-code/food-code-2022",
+					"asOf": "2026-10-12",
+					"year": 2022,
+					"evidence": "3-501.16 (A) ... TIME/TEMPERATURE CONTROL FOR SAFETY FOOD shall be maintained: (1) At 57°C (135°F) or above ... or (2) At 5°C (41°F) or less. 3-501.19 (A) ... (1) Written procedures shall be prepared in advance, maintained in the FOOD ESTABLISHMENT and made available to the REGULATORY AUTHORITY upon request ... (B) If time without temperature control is used as the public health control up to a maximum of 4 hours: ... (2) The FOOD shall be marked or otherwise identified to indicate the time that is 4 hours past the point in time when the FOOD is removed from temperature control; (3) The FOOD shall be cooked and served, served at any temperature if READY-TO-EAT, or discarded, within 4 hours from the point in time when the FOOD is removed from temperature control; and (4) ... FOOD in unmarked containers or packages, or marked to exceed a 4-hour limit shall be discarded. (C) If time without temperature control is used as the public health control up to a maximum of 6 hours: (1) The FOOD shall have an initial temperature of 5°C (41°F) or less when removed from temperature control and the FOOD temperature may not exceed 21°C (70°F) within a maximum time period of 6 hours"
+				},
+				{
+					"title": "What You Need to Know About Egg Safety, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan’s, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-09-26"
+				},
+				{
+					"title": "Brennan’s, Dinner menu",
+					"url": "https://www.brennansneworleans.com/menus/dinner/",
+					"asOf": "2026-09-26"
+				}
+			],
+			"cards": [
+				{
+					"stem": "tension",
+					"front": "Why is holding a hollandaise a balancing act?",
+					"back": "Too hot and the yolk scrambles or the butter oils out; too cool and it thickens and splits. And the warmth that keeps it smooth also suits bacteria."
+				},
+				{
+					"stem": "bain-marie",
+					"front": "What is a bain-marie, and how hot is its water for a warm emulsion?",
+					"back": "A pan of hot water in which containers of sauce stand to keep warm. For a warm emulsion the water steams but never bubbles, away from direct flame."
+				},
+				{
+					"stem": "hot-holding",
+					"front": "Why do many kitchens hold hollandaise on a clock rather than trusting the bain-marie?",
+					"back": "Water that steams but never bubbles often leaves the sauce below 57°C (135°F), the Food Code's hot holding line, so it sits in the danger zone and runs on a written time limit."
+				},
+				{
+					"stem": "time-control",
+					"front": "What does time as a public health control ask of a warm sauce held below hot holding?",
+					"back": "Written procedures kept in the kitchen, a clock that starts when the yolks leave the fridge, a mark showing the time 4 hours on, and service or discard within those 4 hours."
+				},
+				{
+					"stem": "never-top-up",
+					"front": "Why is old hollandaise never topped up with a fresh batch?",
+					"back": "The new sauce takes on the old one's time and bacteria, and the label stops telling the truth. Start a clean container instead."
+				},
+				{
+					"stem": "label",
+					"front": "What goes on the label of every batch of warm sauce?",
+					"back": "The time it was made and the time it must be gone, written the moment the clean container is filled."
+				},
+				{
+					"stem": "no-label",
+					"front": "What happens to a container of warm sauce with no time on it?",
+					"back": "It is discarded: without a time nobody can show it is within its limit, and the Food Code's time rule sends unmarked food to the bin."
+				},
+				{
+					"stem": "pasteurised",
+					"front": "Do pasteurised yolks remove the need for a time limit?",
+					"back": "No. They lower the risk from the egg itself, but bacteria arriving later on a spoon or a hand can still grow in a warm sauce."
+				},
+				{
+					"stem": "beurre-blanc",
+					"front": "Why does beurre blanc get the same holding care as hollandaise?",
+					"back": "It is a warm butter emulsion that holds only at a gentle warmth, often below 57°C (135°F), so it needs a clean container, a label and a time limit."
+				},
+				{
+					"stem": "discard-signs",
+					"front": "Name the signs that a held warm sauce must be thrown away.",
+					"back": "Split into oil and liquid, grainy, skinned or crusted, a sour smell, no label, or past its time."
+				},
+				{
+					"stem": "rescue-clock",
+					"front": "Does rescuing a split sauce restart its clock?",
+					"back": "No. A rescued sauce keeps its original time and is discarded when that time runs out."
+				},
+				{
+					"stem": "brennans",
+					"front": "Which warm emulsions does a Brennan's server meet on the Eggs Hussarde and the Redfish Véronique?",
+					"back": "Hollandaise over the poached egg on the Eggs Hussarde, and a preserved lemon beurre blanc on the Redfish Véronique."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-hot-holding",
+					"q": "A hollandaise probes at 53°C (127°F) in the bain-marie. What does that mean for how it is held?",
+					"answer": "It is below hot holding, so it runs on time",
+					"distractors": [
+						"It counts as hot held, like any soup",
+						"It must be reheated to 74°C (165°F) at once",
+						"It may stay until it starts to split"
+					],
+					"why": "Below 57°C (135°F) a warm sauce is in the danger zone, so it runs on the kitchen's written time limit and goes when its time is up.",
+					"teaches": "hot-holding"
+				},
+				{
+					"stem": "q-time-control",
+					"q": "Under time as a public health control, how long may a warm sauce be held before it is served or discarded?",
+					"answer": "4 hours",
+					"distractors": [
+						"8 hours",
+						"6 hours",
+						"Until the end of service"
+					],
+					"why": "The Food Code's rule marks the food with the time 4 hours on and has it served or discarded by then; the 6-hour form is only for cold food that never rises above 21°C (70°F).",
+					"teaches": "time-control"
+				},
+				{
+					"stem": "q-top-up",
+					"q": "A batch of hollandaise is running low in the middle of service. What is the right move?",
+					"answer": "Start a fresh batch in a clean, labelled container",
+					"distractors": [
+						"Pour the fresh sauce on top of the old",
+						"Whisk in warm water to stretch it",
+						"Move it nearer the flame to keep it going"
+					],
+					"why": "Topping up passes the old sauce's time and bacteria to the new; a clean container with its own label keeps the record true.",
+					"teaches": "never-top-up"
+				},
+				{
+					"stem": "q-bain-marie",
+					"q": "How should the water in a bain-marie behave when it holds a warm emulsion?",
+					"answer": "It steams but never bubbles",
+					"distractors": [
+						"It boils hard all through service",
+						"It is iced to keep the sauce cool",
+						"It is left to cool to room temperature"
+					],
+					"why": "Boiling water scrambles yolk and splits butter at the edges; water that only steams keeps the sauce warm and smooth.",
+					"teaches": "bain-marie"
+				},
+				{
+					"stem": "q-pasteurised",
+					"q": "What do pasteurised yolks change about holding a hollandaise?",
+					"answer": "Lower risk from the egg; the time limit stays",
+					"distractors": [
+						"No label is needed, so it holds all day",
+						"It may be topped up with a fresh batch",
+						"The bain-marie can boil without harm"
+					],
+					"why": "Pasteurising destroys Salmonella in the egg before it reaches the kitchen, but bacteria arriving later can still grow in a warm sauce.",
+					"teaches": "pasteurised"
+				},
+				{
+					"stem": "q-no-label",
+					"q": "A container of béarnaise in the bain-marie carries no time. What happens to it?",
+					"answer": "It is discarded",
+					"distractors": [
+						"It is served first",
+						"It is reheated and served",
+						"It is given the current time"
+					],
+					"why": "Without a time nobody can show it is within its limit, and the Food Code's time rule sends unmarked food to the bin.",
+					"teaches": "no-label"
+				},
+				{
+					"stem": "q-discard",
+					"q": "Which of these is a sign that a held warm sauce must be thrown away?",
+					"answer": "A sour smell",
+					"distractors": [
+						"A soft ribbon from the spoon",
+						"A pale yellow colour",
+						"A glossy surface"
+					],
+					"why": "A sour smell, a split, a crust or a passed time all mean the sauce goes; a soft ribbon and a gloss are what a good one shows.",
+					"teaches": "discard-signs"
+				},
+				{
+					"stem": "q-beurre-blanc",
+					"q": "Why do many kitchens hold beurre blanc on a time limit like hollandaise, though it has no yolk?",
+					"answer": "It holds only at a gentle warmth, below hot holding",
+					"distractors": [
+						"Its butter is raw and carries Salmonella",
+						"Its wine reduction turns sour within the hour",
+						"The Food Code lists every butter sauce as raw"
+					],
+					"why": "Too hot and its butterfat separates, too cool and it sets, so it usually sits below 57°C (135°F) and runs on time.",
+					"teaches": "beurre-blanc"
+				},
+				{
+					"stem": "q-brennans",
+					"q": "Which Brennan's dish carries a preserved lemon beurre blanc?",
+					"answer": "Redfish Véronique",
+					"distractors": [
+						"Eggs Hussarde",
+						"Bananas Foster",
+						"Turtle Soup"
+					],
+					"why": "The Redfish Véronique carries the preserved lemon beurre blanc; the Eggs Hussarde carries hollandaise with marchand de vin.",
+					"teaches": "brennans"
+				}
+			]
+		},
+		{
+			"stem": "eggs",
+			"slug": "eggs",
+			"title": "Eggs and safety",
+			"say": "As it reads: eggs and safety.",
+			"level": 1,
+			"kind": "safety",
+			"summary": "Why a runny yolk or a raw-egg sauce carries a risk of Salmonella, who it matters to most, and the habits that manage it: cold storage, clean hands, pasteurised eggs where the kitchen chooses them, and the menu's consumer advisory.",
+			"guest": "Our poached eggs come soft, so the yolk runs into the sauce. If you would like yours firmer, or have a question about the eggs, I will ask the kitchen.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Eggs can carry Salmonella, a bacterium that causes food poisoning. It can sit on the shell, and it can be inside an egg that looks, smells and tastes normal, because a hen can pass it into the egg before the shell forms. Heat kills it. A firm-cooked egg carries very little risk. A runny yolk, a soft poached egg or a raw-egg sauce such as mayonnaise carries some, because part of the egg never gets hot enough; hollandaise yolks are warmed to a ribbon, not cooked firm.",
+						"The illness can be serious for the very young, older people, anyone who is pregnant and anyone whose immune system is weakened by illness or treatment. That is why menus carry a warning, why many kitchens buy pasteurised eggs, and why the safety question always goes to the kitchen."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Eggs arrive cold and stay cold. The FDA Food Code, the model behind most American health codes, asks for raw shell eggs to be stored in refrigeration that keeps the air at 7°C (45°F) or less, and most kitchens simply keep them in the walk-in, the kitchen's cold room, with other chilled food at 5°C (41°F) or less. Keep them in their carton, on a shelf below anything ready to eat, and rotate them so the oldest are used first.",
+						"Check every egg as you use it. A cracked or dirty egg is discarded, because the shell is the egg's first defence. Crack eggs on a flat surface, keep shell out of the food, and wash your hands at the hand sink, with soap and running water for at least 20 seconds, after handling raw shells and before touching anything ready to eat, such as toast. Crack eggs as each order comes rather than breaking a big batch into one bowl and leaving it out: one bad egg in a pooled bowl spreads to every portion.",
+						"Kitchens that poach ahead slide the cooked eggs into iced water, keep it at 5°C (41°F) or below with fresh ice, and reheat each egg briefly in hot water at service; a tray left to warm on the station goes in the bin."
+					]
+				},
+				{
+					"key": "safety",
+					"paras": [
+						"For an egg broken to a guest's order and served at once, the Food Code's cooking figure is 63°C (145°F) for 15 seconds, and a firm-cooked egg reaches it. A soft poached egg or a sunny side up egg, fried on one side only, is served runny on purpose, and its centre may never reach that figure, which is why such a dish is served under a consumer advisory. Eggs cooked ahead and held hot, such as a batch of scrambled eggs, take a higher figure: 68°C (155°F) for 17 seconds.",
+						"Pasteurised eggs lower the risk before cooking starts. Pasteurised shell eggs are heated gently in their shells, in warm water, enough to destroy Salmonella without cooking them; pasteurised yolks come liquid, in cartons. Where the kitchen chooses them, they can go into poached eggs, hollandaise and mayonnaise. Which eggs a dish uses, and whether it still carries the advisory mark, is the kitchen's answer.",
+						"The advisory, taught in full under cooking temperatures, marks a dish with a runny yolk, or a sauce of yolks never cooked firm, on the menu and ties it to a reminder, in wording the kitchen keeps, such as the 2022 Food Code's: “Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness.” Learn the wording the house prints."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"At Brennan's the poached eggs on the Eggs Hussarde and the Eggs Sardou come soft unless the guest asks otherwise, and the house guide says to check with the kitchen before promising firmer eggs. The Egg Any Style side is one egg, cooked as the guest asks: confirm the style and doneness as you write it, as the service note asks, and confirm at lineup the styles the kitchen offers."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"A server describes how the egg is cooked and lets the kitchen answer the safety question. If a guest asks whether a runny yolk is all right to eat, or a risk in pregnancy, do not reassure and do not lecture. Point to the menu's advisory where it carries one, and offer to ask the kitchen, which can say whether the egg can be cooked firmer or made with pasteurised eggs.",
+						"A guest's allergy to egg is a different conversation, taught under the allergen conversation, and it always goes to the kitchen."
+					]
+				}
+			],
+			"temps": [
+				{
+					"label": "Egg broken to order and served at once: cook to, for 15 seconds",
+					"c": 63,
+					"f": 145
+				},
+				{
+					"label": "Eggs cooked ahead and held hot: cook to, for 17 seconds",
+					"c": 68,
+					"f": 155
+				},
+				{
+					"label": "Raw shell eggs: stored with the air at or below",
+					"c": 7,
+					"f": 45
+				},
+				{
+					"label": "Cold holding in the walk-in: at or below",
+					"c": 5,
+					"f": 41
+				}
+			],
+			"faults": [
+				{
+					"fault": "A cracked egg used anyway",
+					"cause": "Saving an egg in a rush.",
+					"fix": "Discard cracked or dirty eggs; the shell is the egg's first defence against bacteria."
+				},
+				{
+					"fault": "Eggs pooled in a bowl and left out",
+					"cause": "Cracking a big batch ahead for speed.",
+					"fix": "Crack to order, or keep any pooled eggs cold and use them promptly, as the kitchen's procedure sets."
+				},
+				{
+					"fault": "Hands go from shells to toast",
+					"cause": "No hand wash between raw shells and ready-to-eat food.",
+					"fix": "Wash hands after handling shells and before touching anything served without further cooking."
+				},
+				{
+					"fault": "A server promises a runny yolk is fine",
+					"cause": "Trying to reassure a guest.",
+					"fix": "Describe how the egg is cooked, point to the advisory and ask the kitchen."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-1q0xk7jv",
+					"components": [
+						"The poached egg"
+					],
+					"how": "The poached eggs on the Eggs Hussarde come soft, the white set and the yolk running into the sauces. The house guide says to check with the kitchen before promising firmer eggs."
+				},
+				{
+					"dish": "d-6wxu3l09",
+					"components": [
+						"Eggs cooked to order"
+					],
+					"how": "Egg Any Style is one egg cooked as the guest asks: write the style and doneness exactly, such as over easy or scrambled soft, and confirm the styles the kitchen offers at lineup."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"holding-warm-emulsions",
+					"hollandaise",
+					"mayonnaise",
+					"eggs-to-order",
+					"poaching",
+					"cooking-temperatures",
+					"allergen-conversation"
+				],
+				"lexicon": [
+					"food-safety-the-chef-owners-non-negotiables"
+				],
+				"recipes": [
+					"mayonnaise-by-hand-and-the-rescue"
+				],
+				"folios": [
+					"poached-egg-standard",
+					"eggs-hussarde-components"
+				],
+				"components": [
+					"The poached egg",
+					"Eggs cooked to order"
+				]
+			},
+			"sources": [
+				{
+					"title": "FDA Food Code 2022, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/fda-food-code/food-code-2022",
+					"asOf": "2026-10-12",
+					"year": 2022,
+					"evidence": "3-401.11 (A) ... (1) 63°C (145°F) or above for 15 seconds for: (a) Raw EGGS that are broken and prepared in response to a CONSUMER'S order and for immediate service ... (2) 68°C (155°F) for 17 seconds or the temperature specified in the following chart that corresponds to the holding time for ... raw EGGS that are not prepared as specified under Subparagraph (A)(1)(a) of this section ... 3-501.16 (A) ... (2) At 5°C (41°F) or less. (B) EGGS that have not been treated to destroy all viable Salmonellae shall be stored in refrigerated EQUIPMENT that maintains an ambient air temperature of 7°C (45°F) or less. 3-603.11 (C) ... (2) Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness ... 2-301.12 Cleaning Procedure. (A) ... FOOD EMPLOYEES shall clean their hands and exposed portions of their arms ... for at least 20 seconds, using a cleaning compound in a HANDWASHING SINK"
+				},
+				{
+					"title": "FDA Releases 2026 Food Code, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/hfp-constituent-updates/fda-releases-2026-food-code",
+					"asOf": "2026-10-12",
+					"year": 2026,
+					"evidence": "September 17, 2026 ... the establishment of an alternative cooling process for foods at retail"
+				},
+				{
+					"title": "What You Need to Know About Egg Safety, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan’s, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-09-26"
+				}
+			],
+			"cards": [
+				{
+					"stem": "salmonella-inside",
+					"front": "Where can Salmonella be found in an egg?",
+					"back": "On the shell, and inside an egg that looks normal, because a hen can pass it into the egg before the shell forms."
+				},
+				{
+					"stem": "who-at-risk",
+					"front": "Who is most at risk from an undercooked egg?",
+					"back": "The very young, older people, anyone who is pregnant and anyone whose immune system is weakened by illness or treatment."
+				},
+				{
+					"stem": "runny-risk",
+					"front": "Why does a runny yolk carry a risk that a firm one does not?",
+					"back": "Heat kills Salmonella, and the centre of a runny yolk may never get hot enough to do it."
+				},
+				{
+					"stem": "cook-figure",
+					"front": "What is the Food Code's cooking figure for an egg broken to order and served at once?",
+					"back": "63°C (145°F) for 15 seconds. A yolk served runny on purpose may not reach it, so the dish sits under the advisory."
+				},
+				{
+					"stem": "storage",
+					"front": "How cold must raw shell eggs be stored under the Food Code?",
+					"back": "In refrigeration that keeps the air at 7°C (45°F) or less; most kitchens keep them in the walk-in at 5°C (41°F) or less."
+				},
+				{
+					"stem": "cracked",
+					"front": "What happens to a cracked or dirty egg?",
+					"back": "It is discarded: the shell is the egg's first defence, and a crack or dirt lets bacteria in."
+				},
+				{
+					"stem": "hands",
+					"front": "When must a cook wash their hands around eggs?",
+					"back": "After handling raw shells and before touching anything ready to eat, such as toast or a garnish: at the hand sink, with soap and running water, for at least 20 seconds."
+				},
+				{
+					"stem": "pooled",
+					"front": "Why are eggs cracked to order rather than pooled in one bowl ahead?",
+					"back": "One contaminated egg in a pooled bowl spreads to every portion made from it."
+				},
+				{
+					"stem": "pasteurised",
+					"front": "What are pasteurised shell eggs?",
+					"back": "Eggs heated gently in their shells, in warm water, enough to destroy Salmonella without cooking them. The kitchen decides where to use them."
+				},
+				{
+					"stem": "advisory",
+					"front": "Which egg dishes does the menu's consumer advisory reach?",
+					"back": "Eggs served with a runny yolk, such as a soft poached or sunny side up egg, and sauces whose yolks are never cooked firm. Which dishes the house marks, and whether pasteurised eggs change that, is the kitchen's answer."
+				},
+				{
+					"stem": "server",
+					"front": "A guest asks whether a runny yolk is all right in pregnancy. What does the server do?",
+					"back": "Describe how the egg is cooked, point to the menu's advisory and offer to ask the kitchen. Never reassure, never lecture."
+				},
+				{
+					"stem": "brennans",
+					"front": "How do the poached eggs on the Eggs Hussarde come?",
+					"back": "Soft, the white set and the yolk running. The house guide says to check with the kitchen before promising firmer eggs."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-inside",
+					"q": "Why can a clean, uncracked egg still carry Salmonella?",
+					"answer": "A hen can pass it in before the shell forms",
+					"distractors": [
+						"It spreads from the carton once opened",
+						"It forms when the yolk is overcooked",
+						"It enters only through the pointed end"
+					],
+					"why": "Salmonella can be inside a normal-looking egg from the hen itself, which is why heat, cold storage and pasteurising matter.",
+					"teaches": "salmonella-inside"
+				},
+				{
+					"stem": "q-risk",
+					"q": "Which guests are most at risk from a runny yolk?",
+					"answer": "The very young, older people, the pregnant and the immunocompromised",
+					"distractors": [
+						"Guests who have had food poisoning before, and nobody else",
+						"Older guests only, since children shake off Salmonella quickly",
+						"Anyone who eats more than two runny eggs at a sitting"
+					],
+					"why": "An infection can be serious for those groups, which is why the advisory exists and the kitchen answers their questions.",
+					"teaches": "who-at-risk"
+				},
+				{
+					"stem": "q-figure",
+					"q": "What is the Food Code's cooking figure for an egg broken to order and served at once?",
+					"answer": "63°C (145°F) for 15 seconds",
+					"distractors": [
+						"50°C (122°F) for 15 seconds",
+						"74°C (165°F) for 5 minutes",
+						"100°C (212°F) for 1 second"
+					],
+					"why": "The Food Code sets 63°C (145°F) for 15 seconds for an egg cooked to a guest's order for immediate service.",
+					"teaches": "cook-figure"
+				},
+				{
+					"stem": "q-storage",
+					"q": "At what air temperature or below does the Food Code store raw shell eggs?",
+					"answer": "7°C (45°F)",
+					"distractors": [
+						"15°C (59°F)",
+						"10°C (50°F)",
+						"21°C (70°F)"
+					],
+					"why": "Untreated shell eggs go in refrigeration holding the air at 7°C (45°F) or less; most kitchens use the walk-in, colder still.",
+					"teaches": "storage"
+				},
+				{
+					"stem": "q-cracked",
+					"q": "A cook finds a cracked egg in the carton. What should they do?",
+					"answer": "Discard it",
+					"distractors": [
+						"Use it first, for a soft poached egg",
+						"Wash it and put it back",
+						"Tape the shell and store it"
+					],
+					"why": "A crack lets bacteria past the shell, the egg's first defence, so cracked and dirty eggs are thrown away.",
+					"teaches": "cracked"
+				},
+				{
+					"stem": "q-pasteurised",
+					"q": "How are pasteurised shell eggs made?",
+					"answer": "Heated gently in their shells",
+					"distractors": [
+						"Boiled hard and then chilled",
+						"Washed in vinegar before packing",
+						"Frozen solid and thawed for use"
+					],
+					"why": "Gentle heat destroys Salmonella in the shell while the egg stays raw, so the kitchen can use them for runny yolks and sauces.",
+					"teaches": "pasteurised"
+				},
+				{
+					"stem": "q-advisory",
+					"q": "Made with raw shell eggs, which of these egg dishes goes on the menu under the consumer advisory?",
+					"answer": "A soft poached egg with a runny yolk",
+					"distractors": [
+						"A hard-boiled egg, cooked right through",
+						"Scrambled eggs cooked until firm",
+						"A frittata baked until set firm"
+					],
+					"why": "A runny yolk may never reach 63°C (145°F) for 15 seconds, so the dish is served under the advisory; eggs cooked firm reach the figure.",
+					"teaches": "advisory"
+				},
+				{
+					"stem": "q-server",
+					"q": "A guest asks if the soft poached egg is a risk for them. What should the server do?",
+					"answer": "Describe it, point to the advisory and ask the kitchen",
+					"distractors": [
+						"Reassure them that the eggs are delivered fresh daily",
+						"Explain the Salmonella risk to them in full yourself",
+						"Ask the cook to poach theirs firmer without telling them"
+					],
+					"why": "The server describes the egg and the kitchen answers the safety question; a promise from the floor is never given.",
+					"teaches": "server"
+				},
+				{
+					"stem": "q-hands",
+					"q": "When should a cook wash their hands while cooking eggs?",
+					"answer": "After touching raw shells, before ready-to-eat food",
+					"distractors": [
+						"Before cracking the eggs, but not after",
+						"Once the eggs are plated, before the next ticket",
+						"When a piece of shell drops into the bowl"
+					],
+					"why": "Shells can carry Salmonella on the outside, so hands are washed between raw shells and anything served without further cooking.",
+					"teaches": "hands"
+				}
+			]
+		},
+		{
+			"stem": "raw-and-cooked-oysters",
+			"slug": "raw-and-cooked-oysters",
+			"title": "Raw and cooked oysters",
+			"say": "As it reads: raw and cooked oysters.",
+			"level": 1,
+			"kind": "safety",
+			"summary": "Why a raw Gulf oyster carries a rare but serious risk from Vibrio vulnificus, who it matters to most, the warnings Louisiana and the menu require, the shellstock tags, and how cooking and cold, careful handling change the picture.",
+			"guest": "These oysters are served raw. As the menu notes, raw oysters carry a risk of illness, more so with certain health conditions, and I am glad to ask the kitchen any question.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"An oyster feeds by filtering seawater, and it is eaten whole, often raw, so whatever lives in that water comes to the table with it. In the warm, brackish water of the Gulf, part salt and part fresh, the concern is Vibrio vulnificus, a bacterium that lives there naturally. It is not a sign of dirty water, and an oyster carrying it looks, smells and tastes like any other. It grows most in warm water, so the risk rises in the warm months.",
+						"Illness is rare, but for some people it is serious and can be life-threatening once it reaches the blood. The Centers for Disease Control and Prevention lists those most at risk: people with liver disease, diabetes, cancer or HIV, people whose immune system is weakened, and people who take medicine to lower stomach acid or have had recent stomach surgery. Hot sauce, lemon, a strong drink and the vinegar in a mignonette, the sharp shallot sauce served with raw oysters, do not kill it."
+					]
+				},
+				{
+					"key": "safety",
+					"paras": [
+						"Two notices go with a raw oyster. The first is the menu's consumer advisory, from the FDA Food Code: the dish described as raw or marked with an asterisk, and a reminder that raw or undercooked food may increase the risk of foodborne illness. The second is Louisiana's raw oyster warning, required by the state sanitary code wherever raw oysters are sold or served, on a sign, the menu or a table tent. One permitted wording tells anyone with chronic illness of the liver, stomach or blood, or other immune disorders, to eat oysters fully cooked; the other warns more generally of foodborne illness from raw or undercooked food. The manager confirms which the house displays.",
+						"Cooking changes the picture. Heat kills Vibrio, so an oyster cooked right through, in an Oysters Rockefeller, a barbecue sauce or a gumbo, carries less risk than a raw one; the Food Code's cooking figure for fish, a word it uses for oysters too, is 63°C (145°F) for 15 seconds. Some kitchens choose post-harvest processed oysters for raw service, treated by high pressure, quick freezing or gentle heat to bring Vibrio down to very low levels while the oyster still eats raw."
+					]
+				},
+				{
+					"key": "buying",
+					"paras": [
+						"Live oysters in the shell are called shellstock, and each sack or box arrives with a tag naming the shipper and its certification number, the harvest area and the harvest date. The tag stays with its container until the last oyster is gone, takes the date of that last one, and is then filed in date order and kept for 90 days. If a guest falls ill, the tag leads the health department back to the water. Oysters from different tags are not mixed before they are ordered, so every oyster can still be traced."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Oysters must stay alive and cold until shucked, opened with a knife for service. Keep them in the walk-in at 5°C (41°F) or less, the Food Code's figure for cold food, in their sack or box, or cup side down under a damp cloth; never sealed airtight in plastic, never in fresh water or melted ice, which kills them. Before opening, check that each shell is closed, or closes when tapped, and is not cracked. An oyster that gapes and will not close is dead and is discarded, as is any with an off smell."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"At Brennan's the Grand Isle Jewel oysters are shucked to order and served raw on crushed ice with their liquor, the salty juice in the shell, and a preserved Fresno chilli mignonette. The service note asks for the consumer advisory: raw oysters carry risk, especially for guests who are pregnant, immunocompromised or have liver disease. The Louisiana Oysters at breakfast and lunch come cooked, in New Orleans barbecue sauce; how they are cooked and plated is confirmed at lineup."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Say the warning plainly: these oysters are served raw, and as the menu notes, raw oysters carry a risk of illness, greater with certain health conditions. Never promise an oyster carries no risk, or offer reasons it might not: cold water, a trusted farm, hot sauce or a month with an R in it. A guest told to avoid raw oysters can ask the kitchen about the cooked oyster dishes, the Louisiana Oysters at breakfast and lunch or the Seafood Gumbo: how far each is cooked, and every question about risk, goes to the kitchen or the manager."
+					]
+				}
+			],
+			"temps": [
+				{
+					"label": "Live oysters held cold in the walk-in: at or below",
+					"c": 5,
+					"f": 41
+				},
+				{
+					"label": "The Food Code's cooking figure for fish, oysters included, held for 15 seconds",
+					"c": 63,
+					"f": 145
+				}
+			],
+			"faults": [
+				{
+					"fault": "Oysters sealed in a bag or left in standing water",
+					"cause": "Trying to keep them moist.",
+					"fix": "Store them cold in their sack or box, or cup side down under a damp cloth, so they can breathe."
+				},
+				{
+					"fault": "A tag thrown away with the empty sack",
+					"cause": "Clearing the walk-in in a rush.",
+					"fix": "Write the date of the last oyster served on the tag and file it in date order for 90 days."
+				},
+				{
+					"fault": "Oysters from two tags mixed in one tray",
+					"cause": "Topping up a display.",
+					"fix": "Keep each tag's oysters apart until they are ordered, so every oyster can be traced."
+				},
+				{
+					"fault": "A gaping oyster shucked anyway",
+					"cause": "The tap test was skipped.",
+					"fix": "Tap every open oyster; if it does not close, it is dead and goes in the bin."
+				},
+				{
+					"fault": "A server calls a raw oyster risk-free",
+					"cause": "Trying to reassure a guest.",
+					"fix": "Give the warning plainly and send every question about risk to the kitchen or the manager."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-nd0d2czb",
+					"components": [
+						"Raw on the half shell",
+						"Grand Isle Jewel oysters"
+					],
+					"how": "The Grand Isle Jewel oysters, farmed in floating cages off Grand Isle, are shucked to order and served raw on crushed ice with their liquor. The service note asks for the consumer advisory, especially for guests who are pregnant, immunocompromised or have liver disease."
+				},
+				{
+					"dish": "d-wckf36s5",
+					"components": [
+						"Louisiana oysters"
+					],
+					"how": "The Louisiana Oysters at breakfast and lunch come cooked, in New Orleans barbecue sauce with pickled collards and a saltine crumble. How the kitchen cooks and plates them, and how many come per order, is confirmed at lineup."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"gulf-oysters",
+					"oysters-rockefeller",
+					"oysters-bienville",
+					"mignonette",
+					"shellfish-handling",
+					"cooking-temperatures"
+				],
+				"lexicon": [
+					"oysters-and-the-r-month-rule",
+					"food-safety-the-chef-owners-non-negotiables",
+					"bivalves-oysters-clams-mussels-scallops"
+				],
+				"folios": [
+					"brennans-seafood"
+				],
+				"deck": [
+					"fd_0115"
+				],
+				"components": [
+					"Grand Isle Jewel oysters",
+					"Raw on the half shell",
+					"Louisiana oysters"
+				],
+				"terms": [
+					"fish-oysters"
+				]
+			},
+			"sources": [
+				{
+					"title": "FDA Food Code 2022, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/fda-food-code/food-code-2022",
+					"asOf": "2026-10-12",
+					"year": 2022,
+					"evidence": "3-203.12 ... (B) The date when the last SHELLSTOCK from the container is sold or served shall be recorded on the tag or label. (C) The identity of the source of SHELLSTOCK that are sold or served shall be maintained by retaining SHELLSTOCK tags or labels for 90 calendar days from the date that is recorded on the tag or label ... 3-401.11 (A) ... (1) 63°C (145°F) or above for 15 seconds for: ... FISH, MEAT, and commercially raised GAME ANIMALS ... 3-501.16 (A) ... (2) At 5°C (41°F) or less."
+				},
+				{
+					"title": "About Vibrio Infection, Centers for Disease Control and Prevention",
+					"url": "https://www.cdc.gov/vibrio/about/",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Food Safety for Seafood, Louisiana Department of Health",
+					"url": "https://ldh.la.gov/bureau-of-sanitarian-services/food-safety-for-seafood",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Louisiana Administrative Code, Title 51, Part XXIII, §1109, the raw oyster warning (state-rules.com)",
+					"url": "https://state-rules.com/louisiana/lac/XXIII.1109/",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Gregor v. Argenot Great Central Insurance Co., Louisiana Supreme Court, LSU Law Center",
+					"url": "https://biotech.law.lsu.edu/cases/food/gregor.htm",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Selecting and Serving Fresh and Frozen Seafood Safely, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan’s, Dinner menu",
+					"url": "https://www.brennansneworleans.com/menus/dinner/",
+					"asOf": "2026-09-26"
+				},
+				{
+					"title": "Brennan’s, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-09-26"
+				}
+			],
+			"cards": [
+				{
+					"stem": "vibrio",
+					"front": "What is Vibrio vulnificus, and where does it live?",
+					"back": "A bacterium that lives naturally in warm, brackish coastal water such as the Gulf's. An oyster carrying it looks, smells and tastes normal."
+				},
+				{
+					"stem": "at-risk",
+					"front": "Who is most at risk from Vibrio vulnificus in a raw oyster?",
+					"back": "People with liver disease, diabetes, cancer or HIV, a weakened immune system, low stomach acid from medicine, or recent stomach surgery."
+				},
+				{
+					"stem": "no-kill",
+					"front": "Do hot sauce, lemon or a strong drink make a raw oyster less risky?",
+					"back": "No. None of them kills Vibrio; thorough cooking or post-harvest processing is what lowers the risk."
+				},
+				{
+					"stem": "two-notices",
+					"front": "What two notices go with raw oysters in a Louisiana restaurant?",
+					"back": "The menu's consumer advisory under the FDA Food Code, and Louisiana's own raw oyster warning, on a sign, the menu or a table tent."
+				},
+				{
+					"stem": "la-warning",
+					"front": "What does one permitted wording of Louisiana's raw oyster warning advise?",
+					"back": "That anyone with chronic illness of the liver, stomach or blood, or other immune disorders, eat oysters fully cooked."
+				},
+				{
+					"stem": "tags",
+					"front": "How long are shellstock tags kept, and from when?",
+					"back": "For 90 days from the date the last oyster in the container was served, filed in date order."
+				},
+				{
+					"stem": "tag-why",
+					"front": "Why does a kitchen keep shellstock tags at all?",
+					"back": "If someone falls ill, the tag traces the oysters back to the shipper, the harvest area and the harvest date."
+				},
+				{
+					"stem": "cooked",
+					"front": "Why do cooked oysters carry less risk than raw ones?",
+					"back": "Heat kills Vibrio. An oyster cooked right through, as in Oysters Rockefeller or a gumbo, carries less risk than one served raw."
+				},
+				{
+					"stem": "php",
+					"front": "What is a post-harvest processed oyster?",
+					"back": "One treated after harvest by high pressure, quick freezing or gentle heat to bring Vibrio down to very low levels, while it still eats raw."
+				},
+				{
+					"stem": "gaping",
+					"front": "What does a cook do with an oyster that gapes and will not close when tapped?",
+					"back": "Discard it: it is dead. Oysters with cracked shells or an off smell are discarded too."
+				},
+				{
+					"stem": "storage",
+					"front": "How are live oysters stored before shucking?",
+					"back": "Cold, at 5°C (41°F) or less, in their sack or box or cup side down under a damp cloth; never airtight and never in fresh water."
+				},
+				{
+					"stem": "server",
+					"front": "What does a server say when selling raw oysters?",
+					"back": "The warning, plainly: served raw, and raw oysters carry a risk of illness, greater with certain health conditions. Never a promise of no risk."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-vibrio",
+					"q": "Where does Vibrio vulnificus come from?",
+					"answer": "It lives naturally in warm, brackish coastal water",
+					"distractors": [
+						"It comes only from polluted or sewage-fouled water",
+						"It forms when oysters are shucked too early",
+						"It grows on the ice in the raw bar overnight"
+					],
+					"why": "Vibrio is a natural part of warm Gulf water, not a sign of pollution, and it does not change how an oyster looks or tastes.",
+					"teaches": "vibrio"
+				},
+				{
+					"stem": "q-risk",
+					"q": "Which guest faces the greatest risk from a raw Gulf oyster?",
+					"answer": "A guest with liver disease",
+					"distractors": [
+						"A guest who has eaten oysters before",
+						"A guest drinking Champagne",
+						"A guest from the East Coast"
+					],
+					"why": "Liver disease, diabetes, weakened immunity and low stomach acid raise the risk of serious Vibrio illness; a glass of Champagne or past oysters change nothing.",
+					"teaches": "at-risk"
+				},
+				{
+					"stem": "q-hot-sauce",
+					"q": "A guest says hot sauce makes raw oysters harmless. What is true?",
+					"answer": "Hot sauce does not kill Vibrio",
+					"distractors": [
+						"Hot sauce kills Vibrio if left to soak",
+						"Lemon works but hot sauce does not",
+						"Only a strong drink kills it"
+					],
+					"why": "Neither hot sauce, lemon, vinegar nor alcohol kills Vibrio; thorough cooking or post-harvest processing is what lowers the risk.",
+					"teaches": "no-kill"
+				},
+				{
+					"stem": "q-tags",
+					"q": "How long does the Food Code ask a kitchen to keep shellstock tags?",
+					"answer": "90 days from the last oyster served",
+					"distractors": [
+						"90 days from the day the sack arrived",
+						"30 days from the last oyster served",
+						"Until the last oyster in the sack is gone"
+					],
+					"why": "The tag stays with the oysters until the container is empty, takes the date of the last one served, then is kept for 90 days.",
+					"teaches": "tags"
+				},
+				{
+					"stem": "q-tag-why",
+					"q": "Why are shellstock tags kept on file?",
+					"answer": "To trace an illness back to the harvest",
+					"distractors": [
+						"To work out the price per dozen",
+						"To show guests where they were farmed",
+						"To count how many were shucked"
+					],
+					"why": "Each tag records the shipper, the harvest area and the date, so a reported illness can be traced to the water the oysters came from.",
+					"teaches": "tag-why"
+				},
+				{
+					"stem": "q-gaping",
+					"q": "An oyster in the walk-in gapes and does not close when tapped. What happens to it?",
+					"answer": "It is discarded",
+					"distractors": [
+						"It is shucked first",
+						"It is cooked instead of served raw",
+						"It is put back on ice to recover"
+					],
+					"why": "An oyster that will not close is dead, and a dead oyster is never served, raw or cooked.",
+					"teaches": "gaping"
+				},
+				{
+					"stem": "q-la-warning",
+					"q": "Louisiana's raw oyster warning advises guests with chronic liver, stomach or blood illness to do what?",
+					"answer": "Eat oysters fully cooked",
+					"distractors": [
+						"Eat oysters only in winter",
+						"Add hot sauce to each oyster",
+						"Eat no more than six"
+					],
+					"why": "One permitted wording tells people with chronic illness of the liver, stomach or blood, or immune disorders, to eat oysters fully cooked.",
+					"teaches": "la-warning"
+				},
+				{
+					"stem": "q-php",
+					"q": "What does post-harvest processing do to a raw oyster?",
+					"answer": "Brings Vibrio down to very low levels",
+					"distractors": [
+						"Cooks it through before shucking",
+						"Adds salt to make it brinier",
+						"Removes the liquor before service"
+					],
+					"why": "High pressure, quick freezing or gentle heat brings Vibrio down while the oyster still eats raw; it lowers the risk, it does not end it.",
+					"teaches": "php"
+				},
+				{
+					"stem": "q-server",
+					"q": "What may a server never say about a raw oyster?",
+					"answer": "That it carries no risk",
+					"distractors": [
+						"That it is served raw",
+						"That it comes from Louisiana",
+						"That the menu carries a warning"
+					],
+					"why": "A server gives the warning plainly and sends questions about risk to the kitchen or the manager; nobody promises a raw oyster is without risk.",
+					"teaches": "server"
+				},
+				{
+					"stem": "q-storage",
+					"q": "How should live oysters be stored before they are shucked?",
+					"answer": "Cold, in their sack or box, able to breathe",
+					"distractors": [
+						"Sealed airtight in a plastic bag to stay moist",
+						"Covered in fresh water so they stay clean",
+						"At room temperature until they are shucked"
+					],
+					"why": "Oysters are kept alive and cold, at 5°C (41°F) or less; airtight plastic or fresh water kills them.",
+					"teaches": "storage"
+				}
+			]
+		}
+	]
+}

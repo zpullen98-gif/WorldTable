@@ -1,0 +1,1273 @@
+{
+  "entries": [
+    {
+      "stem": "boudin",
+      "slug": "boudin",
+      "title": "Boudin",
+      "say": "BOO-dan",
+      "level": 3,
+      "kind": "ingredient",
+      "summary": "Cajun boudin is a fresh sausage of cooked pork, pork liver, rice, onion, green onion and pepper, heated in its casing and eaten hot, squeezed from the skin. It is Acadiana's everyday snack, sold by the link at meat markets and roadside counters.",
+      "guest": "Boudin, BOO-dan, is Acadiana's pork and rice sausage, soft and peppery, eaten hot and squeezed from its casing. It is a roadside food of Cajun country rather than one of our dishes.",
+      "sections": [
+        {
+          "key": "what",
+          "paras": [
+            "Boudin is the sausage of Acadiana, the Cajun parishes of south-west Louisiana. Cajun boudin blanc, white boudin, is pork shoulder and pork liver, simmered tender, minced and mixed with cooked rice, onion, green onion, parsley, bell pepper, black pepper and cayenne, then stuffed into a casing. Everything is cooked before it goes in, so the link is only heated through. It eats soft, moist and peppery, closer to a rice dressing in a casing than to a firm sausage, and the filling is squeezed hot from the skin.",
+            "It is a lesson in thrift from the boucherie, the communal pig killing where neighbours shared every part: boudin uses the liver, the trimmings and the rich cooking broth, and stretches them with rice from the fields nearby."
+          ]
+        },
+        {
+          "key": "how",
+          "paras": [
+            "Simmer pork shoulder in large pieces with onion, celery, bell pepper and seasoning, in water just to cover, for 1.5 to 2 hours, until it falls apart. Add the pork liver, roughly one part to three or four of shoulder, for the last 30 minutes, so it cooks through without turning grainy. Lift everything out, keep the broth, and grind the meat, liver and vegetables through a coarse plate, about 6 mm (1/4 inch).",
+            "Fold the meat into hot cooked long-grain rice with plenty of green onion and parsley, then loosen it with broth until moist and spoonable: the broth carries the flavour and keeps the rice from drying in the casing. Roughly equal weights of meat and rice is a common start. Season it hard while hot, then stuff it loosely into hog casings and twist it into links.",
+            "To serve, heat the links in water held at 80 to 85°C (176 to 185°F), well below the boil, for 10 to 15 minutes, or steam them; boiling bursts the casing. Boudin made ahead and reheated for hot holding should reach 74°C (165°F) in the centre and then be kept at 57°C (135°F) or above, as the FDA Food Code sets out."
+          ]
+        },
+        {
+          "key": "family",
+          "paras": [
+            "Boudin rouge, red boudin, adds pig's blood to the same pork and rice, turning it dark and rich. It belongs to the boucherie and the home kitchen and is now rare in commerce, so most guests know only the white one. Boudin balls are the filling without the casing: chilled until firm, rolled into balls about 4 cm (1.5 inches) across, dipped in seasoned flour, beaten egg and breadcrumbs, and fried at 175°C (347°F) for 3 to 4 minutes until deep golden.",
+            "France's boudins are distant cousins that share the name and little else. French boudin blanc is a fine, pale sausage of pork, chicken or veal bound with milk or cream and egg, poached, then browned in butter. Boudin noir is the French blood sausage, pig's blood, fat and slow-cooked onion, poached and seared crisp, classic with apples. Neither carries rice, which is what makes the Cajun one Cajun."
+          ]
+        },
+        {
+          "key": "history",
+          "paras": [
+            "Boudin is sold hot from steamers at meat markets, grocery counters and petrol stations across Acadiana, by the link or by the pound, often for breakfast. Visitor guides map a boudin trail of these counters through the parishes around Lafayette, and towns compete for the title: in 2012 the Louisiana Legislature named Scott, just west of Lafayette, the Boudin Capital of the World. How the Acadians came to the prairies is told in the Creole and Cajun entry."
+          ]
+        },
+        {
+          "key": "faults",
+          "paras": [
+            "Dry, crumbly boudin had too little broth or too much rice: loosen the filling before stuffing. Burst links were boiled or stuffed too tight. A pasty filling came from overcooked rice or hard mixing, so cook the rice just tender and fold, never beat. Bland boudin was seasoned cold; rice dulls salt and pepper, so taste the hot filling and season it hard."
+          ]
+        },
+        {
+          "key": "service",
+          "paras": [
+            "Say BOO-dan. Brennan's menus print no boudin, so a guest who asks is asking about Louisiana, not the menu: describe it as Acadiana's pork and rice sausage, eaten hot from its casing, then offer the Cajun meats the house does serve, andouille in the Seafood Gumbo and tasso in the Creole sauce of the New Orleans Shrimp & Grits. Questions about what goes into any dish go to the kitchen."
+          ]
+        }
+      ],
+      "ratios": [
+        {
+          "label": "Pork liver to pork shoulder",
+          "value": "Roughly 1 part to 3 or 4 by weight"
+        },
+        {
+          "label": "Cooked meat to cooked rice",
+          "value": "Roughly equal weights; some shops use more rice"
+        },
+        {
+          "label": "Grinding plate",
+          "value": "Coarse, about 6 mm (1/4 inch)"
+        },
+        {
+          "label": "Boudin balls",
+          "value": "About 4 cm (1.5 inches) across, fried 3 to 4 minutes"
+        }
+      ],
+      "temps": [
+        {
+          "label": "Poaching water for the links, low end",
+          "c": 80,
+          "f": 176
+        },
+        {
+          "label": "Poaching water for the links, high end",
+          "c": 85,
+          "f": 185
+        },
+        {
+          "label": "Centre of boudin reheated for hot holding",
+          "c": 74,
+          "f": 165
+        },
+        {
+          "label": "Hot holding at the counter, at or above",
+          "c": 57,
+          "f": 135
+        },
+        {
+          "label": "Frying oil for boudin balls",
+          "c": 175,
+          "f": 347
+        }
+      ],
+      "faults": [
+        {
+          "fault": "Dry, crumbly filling",
+          "cause": "Too little broth, or too much rice for the meat.",
+          "fix": "Loosen the filling with more of the cooking broth until moist and spoonable before stuffing."
+        },
+        {
+          "fault": "Burst links",
+          "cause": "Heated in boiling water, or stuffed too tight.",
+          "fix": "Stuff loosely and heat in water well below the boil, or steam."
+        },
+        {
+          "fault": "Pasty, gluey filling",
+          "cause": "Overcooked rice, or the filling beaten hard.",
+          "fix": "Cook the rice just tender and fold the meat through it gently."
+        },
+        {
+          "fault": "Bland boudin",
+          "cause": "Seasoned cold or timidly; rice dulls salt and pepper.",
+          "fix": "Taste the hot filling and season it hard before it goes into the casing."
+        }
+      ],
+      "seeAlso": {
+        "entries": [
+          "andouille",
+          "tasso",
+          "creole-and-cajun",
+          "louisiana-rice",
+          "frying"
+        ],
+        "lexicon": [
+          "boudin-noir-and-boudin-blanc"
+        ],
+        "recipes": [
+          "boudin-noir-aux-pommes"
+        ],
+        "plates": [
+          "charcuterie"
+        ],
+        "deck": [
+          "fd_0312",
+          "fd_0366"
+        ],
+        "terms": [
+          "cuts-shoulder"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Desperately Seeking Boudin, 64 Parishes",
+          "url": "https://64parishes.org/desperately-seeking-boudin",
+          "asOf": "2026-10-12"
+        },
+        {
+          "title": "FDA Food Code, US Food and Drug Administration",
+          "url": "https://www.fda.gov/food/retail-food-protection/fda-food-code",
+          "asOf": "2026-10-12"
+        },
+        {
+          "title": "HCR 41 of the 2012 Regular Session, Louisiana Legislature, enrolled text (LegiScan)",
+          "url": "https://legiscan.com/LA/text/HCR41/2012",
+          "asOf": "2026-10-12",
+          "year": 2012
+        },
+        {
+          "title": "House Committee on the Judiciary roll call votes, 29 March 2012, Louisiana House of Representatives",
+          "url": "https://www.house.louisiana.gov/H_CmteRecordRolCallVotes/RollCallVotes/JUD_03292012.pdf",
+          "asOf": "2026-10-12",
+          "year": 2012
+        }
+      ],
+      "cards": [
+        {
+          "stem": "what-it-is",
+          "front": "What goes into Cajun boudin blanc?",
+          "back": "Cooked pork shoulder and pork liver, minced and mixed with cooked rice, onion, green onion, parsley and pepper, loosened with the broth and stuffed into a casing."
+        },
+        {
+          "stem": "eating",
+          "front": "How is Cajun boudin eaten?",
+          "back": "Hot, by the link, the soft filling squeezed from the casing straight into the mouth; it is sold from steamers at meat markets and roadside counters."
+        },
+        {
+          "stem": "heating",
+          "front": "How is a link of boudin heated, and why never at a boil?",
+          "back": "In water at 80 to 85°C (176 to 185°F), or steamed: the filling is already cooked, and boiling water bursts the casing."
+        },
+        {
+          "stem": "broth",
+          "front": "Why does the cooking broth go back into the boudin filling?",
+          "back": "It carries the flavour of the pork and liver and keeps the rice moist; without it the boudin eats dry and crumbly."
+        },
+        {
+          "stem": "rouge",
+          "front": "What is boudin rouge?",
+          "back": "Red boudin: the pork and rice filling with pig's blood added, dark and rich. A boucherie and home kitchen food, now rare in commerce."
+        },
+        {
+          "stem": "balls",
+          "front": "What is a boudin ball?",
+          "back": "Boudin filling without the casing, chilled, rolled into balls, breaded in flour, egg and crumbs and fried at 175°C (347°F) until deep golden."
+        },
+        {
+          "stem": "french-cousins",
+          "front": "How do the French boudin blanc and boudin noir differ from Cajun boudin?",
+          "back": "French boudin blanc is fine white meat bound with milk and egg; boudin noir is a blood sausage. Neither carries rice, which defines the Cajun one."
+        },
+        {
+          "stem": "scott",
+          "front": "Which town did the Louisiana Legislature name the Boudin Capital of the World?",
+          "back": "Scott, just west of Lafayette, in 2012. It sits on the boudin trail of meat markets and counters across Acadiana."
+        },
+        {
+          "stem": "holding",
+          "front": "To what temperatures is boudin reheated and then held?",
+          "back": "Boudin made ahead is reheated to 74°C (165°F) in the centre, then held hot at 57°C (135°F) or above, as the FDA Food Code sets out."
+        },
+        {
+          "stem": "dry",
+          "front": "What makes boudin dry and crumbly, and how is it fixed?",
+          "back": "Too little broth or too much rice. Loosen the filling with more cooking broth until it is moist and spoonable before stuffing."
+        },
+        {
+          "stem": "menu",
+          "front": "Is boudin on Brennan's menus?",
+          "back": "No. Explain what it is, then offer the Cajun meats the house serves: andouille in the Seafood Gumbo and tasso on the Shrimp & Grits."
+        }
+      ],
+      "questions": [
+        {
+          "stem": "q-what",
+          "q": "Which mix makes the filling of Cajun boudin blanc?",
+          "answer": "Pork, pork liver and rice",
+          "distractors": [
+            "Chicken, milk and egg",
+            "Pig's blood, fat and onion",
+            "Smoked pork shoulder alone"
+          ],
+          "why": "Cajun boudin is cooked pork and liver stretched with rice; chicken with milk is the French boudin blanc, and blood with onion is boudin noir.",
+          "teaches": "what-it-is"
+        },
+        {
+          "stem": "q-heating",
+          "q": "How should a kitchen heat links of boudin for service?",
+          "answer": "In water well below the boil, or steamed",
+          "distractors": [
+            "At a rolling boil for 20 minutes",
+            "Baked dry in a hot oven for an hour",
+            "Deep fried in the casing"
+          ],
+          "why": "The filling is already cooked, so the link only needs heating through; a rolling boil bursts the casing.",
+          "teaches": "heating"
+        },
+        {
+          "stem": "q-rouge",
+          "q": "What sets boudin rouge apart from boudin blanc?",
+          "answer": "Pig's blood in the filling",
+          "distractors": [
+            "Tomato cooked into the rice",
+            "Smoked paprika in the seasoning",
+            "Crawfish fat in the filling"
+          ],
+          "why": "Red boudin is the same pork and rice with pig's blood, which darkens it; it is now rare in commerce.",
+          "teaches": "rouge"
+        },
+        {
+          "stem": "q-balls",
+          "q": "What is a boudin ball, as Cajun counters sell it?",
+          "answer": "Boudin filling, breaded and fried",
+          "distractors": [
+            "A link of boudin, smoked until firm",
+            "Rice dressing baked in a ring mould",
+            "A dumpling poached in gumbo"
+          ],
+          "why": "The filling is chilled, rolled, breaded in flour, egg and crumbs, and fried until golden, with no casing at all.",
+          "teaches": "balls"
+        },
+        {
+          "stem": "q-french",
+          "q": "What does French boudin blanc lack that defines the Cajun boudin?",
+          "answer": "Rice",
+          "distractors": [
+            "Pork or chicken",
+            "A casing",
+            "Poaching"
+          ],
+          "why": "French boudin blanc is fine white meat bound with milk and egg, cased and poached; only the Cajun boudin is stretched with rice.",
+          "teaches": "french-cousins"
+        },
+        {
+          "stem": "q-scott",
+          "q": "In 2012 the Louisiana Legislature named which town the Boudin Capital of the World?",
+          "answer": "Scott",
+          "distractors": [
+            "LaPlace",
+            "Crowley",
+            "Breaux Bridge"
+          ],
+          "why": "Scott, just west of Lafayette, holds the title; LaPlace claims andouille and Crowley calls itself the Rice Capital of America.",
+          "teaches": "scott"
+        },
+        {
+          "stem": "q-holding",
+          "q": "Boudin made ahead is reheated for hot holding. What should its centre reach?",
+          "answer": "74°C (165°F)",
+          "distractors": [
+            "38°C (100°F)",
+            "52°C (126°F)",
+            "57°C (135°F)"
+          ],
+          "why": "The FDA Food Code asks for 74°C (165°F) when cooked food is reheated for hot holding, then 57°C (135°F) or above while it waits.",
+          "teaches": "holding"
+        },
+        {
+          "stem": "q-menu",
+          "q": "A guest asks for boudin at Brennan's. Where is it on the menu?",
+          "answer": "It is not on the menu",
+          "distractors": [
+            "It is a dinner side",
+            "It is in the Seafood Gumbo",
+            "It is on the breakfast tasting"
+          ],
+          "why": "The menus print no boudin; explain it, then offer the andouille in the Seafood Gumbo or the tasso on the Shrimp & Grits.",
+          "teaches": "menu"
+        }
+      ]
+    },
+    {
+      "stem": "file",
+      "slug": "file",
+      "title": "Filé",
+      "say": "FEE-lay",
+      "level": 2,
+      "kind": "ingredient",
+      "summary": "Filé is the ground dried leaf of the sassafras tree, a Choctaw ingredient taken up by Creole and Cajun cooks. Earthy and woody, with a hint of root beer, it seasons and thickens gumbo, and it goes in off the heat.",
+      "guest": "Filé, FEE-lay, is ground sassafras leaves, earthy and a little like root beer. It came to Louisiana cooking from the Choctaw, and it thickens a gumbo.",
+      "sections": [
+        {
+          "key": "what",
+          "paras": [
+            "Filé is a fine, olive-green powder made from the dried leaves of the sassafras tree, which grows wild across the eastern United States. It is a Choctaw ingredient, taken up by Creole and Cajun cooks; the Creole roots entry tells how. In a Louisiana kitchen it does two jobs at once: it seasons, with a smell all its own, and it thickens, giving a gumbo body and a faint silkiness.",
+            "Its taste and smell are earthy and woody, a little like eucalyptus, with a hint of root beer, which is no accident: root beer was traditionally flavoured with sassafras root. Fresh filé smells green and lively the moment the jar opens. A gumbo thickened with it, rather than with okra, is called a gumbo filé."
+          ]
+        },
+        {
+          "key": "how",
+          "paras": [
+            "Making filé is simple and slow. Sassafras leaves are picked, dried in the shade until brittle, then pounded or ground and sifted to a fine powder, with the stems and coarse veins sieved out so it is not gritty.",
+            "In a gumbo, filé goes in at the end, off the heat, or as a pinch over the bowl at the table; boiled, it turns stringy. The gumbo thickeners entry teaches how filé, okra and roux share the work, with the doses and the faults."
+          ]
+        },
+        {
+          "key": "buying",
+          "paras": [
+            "Buy filé in small jars and read the label. Pure filé lists only ground sassafras leaves; some blends are cut with thyme or other herbs, which change the taste and weaken the thickening, so a cook who wants control buys it pure. Look for a fresh olive-green colour and a strong green, woody smell; brown, dusty powder that smells of hay has lost its aroma. Filé fades fast once opened. Keep it sealed, in a cool, dark cupboard away from the stove, and use it within a few months."
+          ]
+        },
+        {
+          "key": "faults",
+          "paras": [
+            "Most of filé's faults happen in the gumbo pot, and the gumbo thickeners entry teaches them. In the jar the fault is age: a flat, dusty taste and weak thickening mean old filé, or a blend cut with other herbs, so smell the jar before it goes near the pot."
+          ]
+        },
+        {
+          "key": "safety",
+          "paras": [
+            "Sassafras root and bark carry safrole, the main part of sassafras oil, which the US Food and Drug Administration barred as a food additive in 1960; that is why root beer is now flavoured without it. Safrole sits mostly in the root and bark rather than in the leaves that filé is made from. Even so, a guest's health question about filé, as about any ingredient, goes to the kitchen; a server never answers it from the floor."
+          ]
+        },
+        {
+          "key": "brennans",
+          "paras": [
+            "Brennan's menus do not list filé. The house's published Seafood Gumbo recipe carries filé, with okra and tomato, but the menu lists none of them, so whether tonight's gumbo has filé is a question for the kitchen, confirmed at lineup and never promised from the published recipe."
+          ]
+        },
+        {
+          "key": "service",
+          "paras": [
+            "Say FEE-lay. Describe filé as ground sassafras leaves, earthy and woody with a hint of root beer, which came to Louisiana cooking from the Choctaw and thickens a gumbo. A guest who asks for filé is asking for the old custom of a pinch over the bowl: ask the kitchen whether there is any to send."
+          ]
+        }
+      ],
+      "ratios": [
+        {
+          "label": "Over a bowl at the table",
+          "value": "A pinch, 1/4 to 1/2 tsp (1 to 2.5 ml)"
+        }
+      ],
+      "faults": [
+        {
+          "fault": "Flat, dusty taste and weak thickening",
+          "cause": "Old filé that has lost its aroma, or a blend cut with other herbs.",
+          "fix": "Buy pure filé in small jars, keep it sealed, cool and dark, and smell it before use."
+        }
+      ],
+      "seeAlso": {
+        "entries": [
+          "gumbo-thickeners",
+          "creole-roots",
+          "gumbo",
+          "okra",
+          "brennans-seafood-gumbo"
+        ],
+        "lexicon": [
+          "old-bay-creole-and-the-american-tins"
+        ],
+        "folios": [
+          "louisiana-larder"
+        ],
+        "components": [
+          "Gumbo"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Real Food Encyclopedia: Sassafras and Filé, FoodPrint",
+          "url": "https://foodprint.org/real-food/sassafras-and-file/",
+          "asOf": "2026-10-12"
+        },
+        {
+          "title": "Filé, 64 Parishes",
+          "url": "https://www.64parishes.org/entry/file",
+          "asOf": "2026-10-12"
+        },
+        {
+          "title": "21 CFR 189.180 Safrole, Electronic Code of Federal Regulations",
+          "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-189/subpart-C/section-189.180",
+          "asOf": "2026-10-12"
+        },
+        {
+          "title": "Brennan's, Breakfast & Lunch menu",
+          "url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+          "asOf": "2026-10-12"
+        }
+      ],
+      "cards": [
+        {
+          "stem": "what-it-is",
+          "front": "What is filé, in plain words?",
+          "back": "The ground dried leaves of the sassafras tree: a fine olive-green powder that seasons and thickens, a Choctaw ingredient taken up by Creole and Cajun cooks."
+        },
+        {
+          "stem": "taste",
+          "front": "What do filé's taste and smell remind you of?",
+          "back": "Earthy and woody, a little like eucalyptus, with a hint of root beer, which was traditionally flavoured with sassafras root."
+        },
+        {
+          "stem": "off-heat",
+          "front": "When does filé go into a pot of gumbo, and why?",
+          "back": "At the end, off the heat, or at the table: boiled once it is in, filé turns the gumbo stringy and ropy."
+        },
+        {
+          "stem": "dose",
+          "front": "How much filé does a guest add over a bowl at the table?",
+          "back": "A pinch, 1/4 to 1/2 tsp (1 to 2.5 ml), stirred into the hot bowl; the doses for a whole pot belong to the gumbo thickeners entry."
+        },
+        {
+          "stem": "pure",
+          "front": "What should a cook look for when buying filé?",
+          "back": "Only ground sassafras leaves on the label, not a blend cut with thyme or other herbs, and a fresh olive-green colour with a strong smell."
+        },
+        {
+          "stem": "keeping",
+          "front": "How is filé kept, and why so carefully?",
+          "back": "Sealed, cool and dark, bought in small jars and used within a few months: it loses its aroma fast once opened."
+        },
+        {
+          "stem": "gumbo-file",
+          "front": "How do you say filé, and what is a gumbo filé?",
+          "back": "FEE-lay. A gumbo filé is a gumbo thickened with filé rather than with okra."
+        },
+        {
+          "stem": "safrole",
+          "front": "Where in the sassafras tree is safrole found, and who answers a guest's health question about filé?",
+          "back": "Mostly in the root and bark, not the leaves filé is made from. Health questions always go to the kitchen, never answered from the floor."
+        },
+        {
+          "stem": "stringy",
+          "front": "A gumbo filé has turned stringy and ropy. What went wrong?",
+          "back": "It boiled after the filé went in. Filé goes in at the end, off the heat, or as a pinch over the bowl at the table."
+        },
+        {
+          "stem": "brennans",
+          "front": "Does the Brennan's Seafood Gumbo carry filé?",
+          "back": "The menu does not list it, though the published recipe carries it. Whether tonight's gumbo has it is confirmed with the kitchen, never promised."
+        },
+        {
+          "stem": "making",
+          "front": "How is filé made from sassafras leaves?",
+          "back": "The leaves are picked, dried in the shade until brittle, then pounded or ground and sifted, with the stems and coarse veins sieved out so it is not gritty."
+        },
+        {
+          "stem": "fresh-old",
+          "front": "How do you tell fresh filé from old filé in the jar?",
+          "back": "Fresh filé is olive green and smells green and woody; old filé turns brown and dusty, smells of hay and has lost its aroma."
+        }
+      ],
+      "questions": [
+        {
+          "stem": "q-what",
+          "q": "Which part of the sassafras tree is ground to make filé?",
+          "answer": "The dried leaves",
+          "distractors": [
+            "The root bark",
+            "The seeds",
+            "The dried flowers"
+          ],
+          "why": "Filé is dried, ground sassafras leaves; the root and bark, which carry most of the safrole, are not used.",
+          "teaches": "what-it-is"
+        },
+        {
+          "stem": "q-off-heat",
+          "q": "When should filé be stirred into a pot of gumbo?",
+          "answer": "Off the heat, just before serving",
+          "distractors": [
+            "At the start, with the roux",
+            "Halfway through a long simmer",
+            "With the stock, at a full boil"
+          ],
+          "why": "Boiled, filé turns the gumbo stringy and ropy, so it goes in at the end, off the heat, or at the table.",
+          "teaches": "off-heat"
+        },
+        {
+          "stem": "q-taste",
+          "q": "Which drink's flavour does filé faintly recall?",
+          "answer": "Root beer",
+          "distractors": [
+            "Ginger ale",
+            "Black tea",
+            "Chicory coffee"
+          ],
+          "why": "Root beer was traditionally flavoured with sassafras root, and the leaves carry a hint of the same woody, sweet smell.",
+          "teaches": "taste"
+        },
+        {
+          "stem": "q-pure",
+          "q": "What does the label of a pure filé list?",
+          "answer": "Ground sassafras leaves only",
+          "distractors": [
+            "Sassafras leaves with thyme",
+            "Dried okra and sassafras root",
+            "Ground bay leaves and thyme"
+          ],
+          "why": "Blends cut with thyme or other herbs change the taste and weaken the thickening, so a cook who wants control buys filé pure.",
+          "teaches": "pure"
+        },
+        {
+          "stem": "q-keeping",
+          "q": "Why do cooks buy filé in small jars?",
+          "answer": "It loses its aroma fast once opened",
+          "distractors": [
+            "It must be kept frozen once it is opened",
+            "It sets hard in the jar with time",
+            "It turns sour if left in the light"
+          ],
+          "why": "Filé fades within months of opening, so it is bought small, kept sealed, cool and dark, and smelt before use.",
+          "teaches": "keeping"
+        },
+        {
+          "stem": "q-gumbo-file",
+          "q": "What is a gumbo thickened with ground sassafras leaves rather than okra called?",
+          "answer": "Gumbo filé",
+          "distractors": [
+            "Gumbo févi",
+            "Gumbo z'herbes",
+            "Gumbo ya-ya"
+          ],
+          "why": "A gumbo filé is named for its thickener; gumbo févi is the okra gumbo and gumbo z'herbes the gumbo of greens.",
+          "teaches": "gumbo-file"
+        },
+        {
+          "stem": "q-safrole",
+          "q": "A guest asks a health question about the filé in a dish. What does the server do?",
+          "answer": "Send the question to the kitchen",
+          "distractors": [
+            "Explain the 1960 safrole rule",
+            "Say the leaves carry no safrole",
+            "Tell them to skip the gumbo"
+          ],
+          "why": "Health and ingredient questions are never answered from the floor; the kitchen knows what went into the dish.",
+          "teaches": "safrole"
+        },
+        {
+          "stem": "q-brennans",
+          "q": "What should a server say about filé in the Brennan's Seafood Gumbo?",
+          "answer": "It is not on the menu; ask the kitchen",
+          "distractors": [
+            "It is always in the gumbo, as in the recipe",
+            "Brennan's never puts filé in a gumbo",
+            "It comes on the side with every bowl"
+          ],
+          "why": "The published recipe carries filé but the menu does not, so it is confirmed with the kitchen, never promised.",
+          "teaches": "brennans"
+        },
+        {
+          "stem": "q-making",
+          "q": "How are sassafras leaves dried to make filé?",
+          "answer": "In the shade until brittle",
+          "distractors": [
+            "In a hot oven until toasted",
+            "Smoked over pecan wood",
+            "Roasted dark like chicory"
+          ],
+          "why": "Filé is made by drying sassafras leaves in the shade until brittle, then pounding or grinding them and sifting out the stems and veins.",
+          "teaches": "making"
+        }
+      ]
+    },
+    {
+      "stem": "okra",
+      "slug": "okra",
+      "title": "Okra",
+      "say": "OH-kruh",
+      "level": 2,
+      "kind": "ingredient",
+      "summary": "Okra is the green seed pod of a plant in the mallow family, carried from West and Central Africa through the slave trade. Cut and simmered, it releases a slippery gel that thickens gumbo; fried or pickled, it stays crisp.",
+      "guest": "Okra, OH-kruh, is the pod from West and Central Africa that gave gumbo its name. Ours is crisp: the dinner tostada under the Creole tomatoes, and fried chips on the daytime Shrimp & Grits.",
+      "sections": [
+        {
+          "key": "what",
+          "paras": [
+            "Okra is the seed pod of a tall, heat-loving plant of the mallow family, kin to cotton and hibiscus. The pods are ridged, green and finger-length, filled with soft white seeds. Okra came to the Americas from West and Central Africa through the slave trade, with the enslaved cooks who knew how to use it, and the word gumbo most likely comes from ki ngombo, a word for okra in the Bantu languages of west-central Africa. The Creole roots entry tells that story.",
+            "What makes okra matter in the kitchen is its mucilage, the clear, slippery gel that seeps from a cut pod as it heats in liquid. In a gumbo or a stew it thickens, giving body and a silky feel; in the wrong dish it reads as slime. Every okra method is a choice about the mucilage: cook it down long in fat to tame it, use it to thicken, or cook the pods fast and dry so it never shows."
+          ]
+        },
+        {
+          "key": "how",
+          "paras": [
+            "To tame it, smother the okra: cut it in rounds and cook it slowly in fat with onion, often with tomato, stirring now and then, for 45 minutes to an hour, until the ropy strings cook away and it turns soft and silky. Acid helps, which is why okra and tomato are old partners. To avoid it, keep the pods whole or cut them only just before cooking, keep them dry, and use high, dry heat: frying, roasting or a hot grill.",
+            "For fried okra, slice pods into rounds about 1 cm (about 1/2 inch) thick, toss them in buttermilk, then in seasoned cornmeal, and fry at 175 to 180°C (347 to 356°F) for 3 to 4 minutes until golden; drain on a rack and salt at once. Okra and tomatoes is stewed with onion, often with bacon or shrimp. Pickled okra is whole pods packed in a hot vinegar brine with garlic, chilli and dill, crisp and never slippery."
+          ]
+        },
+        {
+          "key": "buying",
+          "paras": [
+            "Choose small, firm, bright green pods about 5 to 8 cm (2 to 3 inches) long that snap cleanly at the tip. Pods much past 10 cm (4 inches) turn woody and stringy and stay tough however long they cook. Avoid dark patches and soft ends. Okra bruises and blackens quickly: keep it dry and unwashed in a paper bag in the fridge, use it within two or three days, and wash and dry it just before cutting. In Louisiana it is a summer crop; frozen cut okra serves the rest of the year."
+          ]
+        },
+        {
+          "key": "faults",
+          "paras": [
+            "Slimy okra in a dish meant to be crisp was wet, crowded or cut too early: dry the pods, cut them just before cooking and fry in small batches so the oil stays hot. Tough, fibrous pieces came from overgrown pods. Greasy fried okra met oil that was too cool. Okra that darkens in the pot has usually met copper, brass or bare iron, or simply cooked too long. The darkening is harmless, and a well-seasoned black iron pot, the traditional gumbo pot, is fine for a dark gumbo; use stainless steel or enamel when the okra must stay green."
+          ]
+        },
+        {
+          "key": "brennans",
+          "paras": [
+            "At Brennan's okra is served crisp. On the Creole Tomato Tostada the tostada itself, a flat, crisp shell, is housemade with okra, and the smoked tomato water goes on last so the shell stays crunchy for the first bites. On the New Orleans Shrimp & Grits, fried okra chips go on top for crunch. The Brennan's Bloody Mary carries pickled okra and spicy beans standing in the glass. The house's published gumbo recipe carries okra, but the menu does not list it in the Seafood Gumbo, so never promise it there; whether tonight's gumbo has it is confirmed at lineup."
+          ]
+        },
+        {
+          "key": "service",
+          "paras": [
+            "Say OH-kruh. A guest who fears slime can be told that ours is crisp, never slippery, and that the tostada is best eaten soon after it lands, as the crunch fades within minutes. The menu does not say whether the okra tostada is made on masa or wheat, so a gluten question goes to the kitchen, as does any question about the coating or the fryer for the okra chips."
+          ]
+        }
+      ],
+      "temps": [
+        {
+          "label": "Frying oil for okra, low end",
+          "c": 175,
+          "f": 347
+        },
+        {
+          "label": "Frying oil for okra, high end",
+          "c": 180,
+          "f": 356
+        }
+      ],
+      "ratios": [
+        {
+          "label": "Pods to choose",
+          "value": "5 to 8 cm (2 to 3 inches) long"
+        },
+        {
+          "label": "Rounds for frying",
+          "value": "About 1 cm (about 1/2 inch) thick, fried 3 to 4 minutes"
+        },
+        {
+          "label": "Smothering",
+          "value": "45 minutes to an hour, slowly, in fat with onion"
+        }
+      ],
+      "faults": [
+        {
+          "fault": "Slimy okra in a dish meant to be crisp",
+          "cause": "Wet pods, cut too early, or crowded in the pan so the oil cooled.",
+          "fix": "Dry the pods, cut them just before cooking and fry in small batches."
+        },
+        {
+          "fault": "Tough, fibrous pieces",
+          "cause": "Pods picked too large.",
+          "fix": "Choose small, firm pods about 5 to 8 cm (2 to 3 inches) long."
+        },
+        {
+          "fault": "Greasy fried okra",
+          "cause": "Oil below 175°C (347°F), so the coating soaked it up.",
+          "fix": "Heat the oil to 175 to 180°C (347 to 356°F) and fry in batches."
+        },
+        {
+          "fault": "Okra darkens in the pot",
+          "cause": "Contact with copper, brass or bare iron, or cooked too long.",
+          "fix": "Cook it in stainless steel or enamel when it must stay green, and only as long as the dish needs. The darkening is harmless; a well-seasoned black iron gumbo pot is fine for a dark gumbo."
+        }
+      ],
+      "brennans": [
+        {
+          "dish": "d-1gj8ji36",
+          "components": [
+            "Okra",
+            "Okra tostada and smoked tomato water"
+          ],
+          "how": "The crisp tostada under the Creole tomatoes and burrata is housemade with okra, and the smoked tomato water goes on last so the shell stays crunchy; whether it is masa or wheat is a question for the kitchen."
+        },
+        {
+          "dish": "d-bqznncn6",
+          "components": [
+            "Okra"
+          ],
+          "how": "Fried okra chips go on top of the Louisiana shrimp, the Creole sauce and the fried pimento cheese grit cake, adding crunch; questions about the coating and fryer go to the kitchen."
+        }
+      ],
+      "seeAlso": {
+        "entries": [
+          "gumbo-thickeners",
+          "creole-roots",
+          "gumbo",
+          "creole-tomato",
+          "shrimp-and-grits",
+          "frying",
+          "file"
+        ],
+        "lexicon": [
+          "okra"
+        ],
+        "recipes": [
+          "fried-okra"
+        ],
+        "plates": [
+          "southeastern-vegetables"
+        ],
+        "folios": [
+          "louisiana-larder"
+        ],
+        "components": [
+          "Okra",
+          "Okra tostada and smoked tomato water",
+          "Pickled okra and spicy beans"
+        ],
+        "terms": [
+          "methods-fried",
+          "methods-pickled"
+        ]
+      },
+      "sources": [
+        {
+          "title": "Okra, Encyclopaedia Britannica",
+          "url": "https://www.britannica.com/plant/okra",
+          "asOf": "2026-10-12"
+        },
+        {
+          "title": "Brennan's, Dinner menu",
+          "url": "https://www.brennansneworleans.com/menus/dinner/",
+          "asOf": "2026-10-12"
+        },
+        {
+          "title": "Brennan's, Breakfast & Lunch menu",
+          "url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+          "asOf": "2026-10-12"
+        },
+        {
+          "title": "Brennan's, Cocktails & Wine by the Glass",
+          "url": "https://www.brennansneworleans.com/menus/cocktails/",
+          "asOf": "2026-10-12"
+        }
+      ],
+      "cards": [
+        {
+          "stem": "what-it-is",
+          "front": "What is okra, and what family does it belong to?",
+          "back": "The green, ridged seed pod of a heat-loving plant in the mallow family, kin to cotton and hibiscus, carried from West and Central Africa through the slave trade."
+        },
+        {
+          "stem": "gumbo-word",
+          "front": "Where does the word gumbo most likely come from?",
+          "back": "From ki ngombo, a word for okra in the Bantu languages of west-central Africa, carried to Louisiana with the enslaved cooks who knew the pod."
+        },
+        {
+          "stem": "mucilage",
+          "front": "What is okra's mucilage, and what does it do?",
+          "back": "The clear, slippery gel a cut pod releases as it heats in liquid. It thickens a gumbo or stew and gives it a silky body."
+        },
+        {
+          "stem": "taming",
+          "front": "How do cooks tame okra's slipperiness when they want it soft?",
+          "back": "They smother it, cooking rounds slowly in fat with onion and often tomato for 45 minutes to an hour, until the ropy strings cook away."
+        },
+        {
+          "stem": "avoiding",
+          "front": "How do cooks keep okra from turning slimy when they want it crisp?",
+          "back": "Keep pods whole or cut them just before cooking, keep them dry and cook fast with high, dry heat: frying, roasting or grilling."
+        },
+        {
+          "stem": "choosing",
+          "front": "Which okra pods should a cook choose?",
+          "back": "Small, firm, bright green pods about 5 to 8 cm (2 to 3 inches) long that snap at the tip; large pods turn woody and stay tough."
+        },
+        {
+          "stem": "fried",
+          "front": "How is Southern fried okra made?",
+          "back": "Rounds about 1 cm (about 1/2 inch) thick, dipped in buttermilk and seasoned cornmeal, fried at 175 to 180°C (347 to 356°F) until golden and drained on a rack."
+        },
+        {
+          "stem": "dishes",
+          "front": "Name four classic Southern okra dishes.",
+          "back": "Fried okra, okra and tomatoes, smothered okra and pickled okra, the last packed whole in a vinegar brine so it stays crisp."
+        },
+        {
+          "stem": "keeping",
+          "front": "How is fresh okra stored in the kitchen?",
+          "back": "Dry and unwashed in a paper bag in the fridge, used within two or three days, and washed and dried only just before cutting."
+        },
+        {
+          "stem": "brennans",
+          "front": "Where does okra appear on Brennan's menus?",
+          "back": "Always crisp: the housemade okra tostada under the Creole tomatoes, fried okra chips on the Shrimp & Grits, and pickled okra in the Bloody Mary."
+        },
+        {
+          "stem": "gumbo-menu",
+          "front": "Is okra in the Brennan's Seafood Gumbo?",
+          "back": "The menu does not list it, though the published recipe carries it, so never promise it; whether tonight's gumbo has okra is a question for the kitchen."
+        }
+      ],
+      "questions": [
+        {
+          "stem": "q-family",
+          "q": "Okra belongs to which plant family?",
+          "answer": "The mallow family",
+          "distractors": [
+            "The nightshade family",
+            "The bean family",
+            "The gourd family"
+          ],
+          "why": "Okra is a mallow, kin to cotton and hibiscus; tomatoes are nightshades and cucumbers are gourds.",
+          "teaches": "what-it-is"
+        },
+        {
+          "stem": "q-word",
+          "q": "Which dish's name most likely comes from an African word for okra?",
+          "answer": "Gumbo",
+          "distractors": [
+            "Jambalaya",
+            "Étouffée",
+            "Grillades"
+          ],
+          "why": "Gumbo most likely comes from ki ngombo, a Bantu word for okra; étouffée and grillades are French words.",
+          "teaches": "gumbo-word"
+        },
+        {
+          "stem": "q-mucilage",
+          "q": "What does okra's mucilage do in a gumbo?",
+          "answer": "It thickens the pot",
+          "distractors": [
+            "It colours it brown",
+            "It adds a smoky flavour",
+            "It keeps the seafood firm"
+          ],
+          "why": "The gel a cut pod releases in hot liquid thickens the pot; colour comes from the roux and smoke from the meats.",
+          "teaches": "mucilage"
+        },
+        {
+          "stem": "q-avoid",
+          "q": "Which approach keeps okra crisp rather than slimy?",
+          "answer": "Dry pods, cut late, cooked fast",
+          "distractors": [
+            "Simmered slowly in stock",
+            "Cut a day ahead and soaked",
+            "Stewed under a lid with tomato"
+          ],
+          "why": "Mucilage seeps out in moisture and slow heat, so dry pods, cut late and cooked fast, stay crisp.",
+          "teaches": "avoiding"
+        },
+        {
+          "stem": "q-taming",
+          "q": "What does smothering okra do to it?",
+          "answer": "Cooks the slipperiness away in fat",
+          "distractors": [
+            "Fries it crisp in a hot pan",
+            "Pickles it whole in a vinegar brine",
+            "Freezes it to keep for the winter"
+          ],
+          "why": "Smothered okra cooks slowly in fat with onion, often tomato, for up to an hour, until the ropy strings are gone.",
+          "teaches": "taming"
+        },
+        {
+          "stem": "q-choose",
+          "q": "Which okra pods should a cook choose at the market?",
+          "answer": "Small, firm and bright green",
+          "distractors": [
+            "Large, soft and pale",
+            "Dark-spotted and fully ripe",
+            "Long pods past 15 cm (6 inches)"
+          ],
+          "why": "Small pods are tender; large ones turn woody and stay tough however long they cook.",
+          "teaches": "choosing"
+        },
+        {
+          "stem": "q-brennans",
+          "q": "How is okra served on the New Orleans Shrimp & Grits?",
+          "answer": "As fried okra chips on top",
+          "distractors": [
+            "Stewed into the Creole sauce",
+            "Pickled, on the side",
+            "Puréed into the grits"
+          ],
+          "why": "The menu puts fried okra chips over the shrimp and the fried pimento cheese grit cake, for crunch.",
+          "teaches": "brennans"
+        },
+        {
+          "stem": "q-gumbo",
+          "q": "A guest asks whether the Seafood Gumbo has okra in it. What does the server say?",
+          "answer": "The menu does not list it; I will ask",
+          "distractors": [
+            "Yes, it is thickened with fresh okra",
+            "No, Brennan's never puts okra in gumbo",
+            "Yes, as fried chips on top"
+          ],
+          "why": "The menu does not list okra in the gumbo, so the server never promises it and checks with the kitchen.",
+          "teaches": "gumbo-menu"
+        }
+      ]
+    },
+    {
+      "stem": "louisiana-rice",
+      "slug": "louisiana-rice",
+      "title": "Louisiana rice",
+      "say": "As it reads: Louisiana rice.",
+      "level": 2,
+      "kind": "ingredient",
+      "summary": "Louisiana grows its rice on the south-west prairie around Crowley, and rice sits under or inside most Creole and Cajun dishes. Long grain is the everyday rice, cooked to stay separate; popcorn rice is the aromatic local long grain.",
+      "guest": "Our Seafood Gumbo sits on Louisiana popcorn rice, an aromatic long grain that really does smell a little of popcorn as it cooks.",
+      "sections": [
+        {
+          "key": "what",
+          "paras": [
+            "Rice is the starch of Creole and Cajun cooking. Gumbo, étouffée and red beans are served over it; jambalaya and rice dressing are cooked with it. Louisiana grows its own on the prairie of south-west Louisiana, in the parishes around Crowley, the seat of Acadia Parish, which calls itself the Rice Capital of America and first held its rice festival, now the International Rice Festival, in 1937.",
+            "Long grain is the everyday rice: slender grains that cook up dry and separate, so they sit under a gumbo without turning to paste. Louisiana also grows medium grain, softer and stickier. Popcorn rice is the local speciality, an aromatic long grain of the Della type developed in Louisiana, which smells of popcorn as it cooks. The aroma comes from 2-acetyl-1-pyrroline, the molecule that also scents basmati, jasmine and fresh popcorn; there is no popcorn in the bag."
+          ]
+        },
+        {
+          "key": "how",
+          "paras": [
+            "For rice that stays separate under a gumbo or étouffée, rinse it in cold water, swirling and draining two or three times until the water runs nearly clear; that washes off loose surface starch, the glue of gummy rice. Measure the water: for rinsed long grain, about 1.5 parts water to 1 part rice by volume, so 1 cup (240 ml) of rice to 1.5 cups (360 ml) of water, with salt and a little butter. Aromatic rice may want a little less; follow the bag.",
+            "Bring it to the boil, stir once, cover tightly and turn the heat to its lowest for 15 to 18 minutes, without lifting the lid. Take it off the heat and rest it, still covered, for 10 minutes, so the steam finishes the grains evenly, then fluff it with a fork. The old Creole way, still used for large batches, boils rice in plenty of salted water like pasta, drains it and lets it steam dry, covered, over the lowest heat or in a low oven. Either way, the rice goes into the bowl first and the gumbo over it: rice never cooks in the gumbo pot."
+          ]
+        },
+        {
+          "key": "family",
+          "paras": [
+            "Rice dressing and dirty rice turn rice into a meal. Brown ground pork or beef, add chicken livers and gizzards, the gizzards simmered tender first and both chopped fine, then the trinity of onion, celery and green pepper, with garlic, a little stock and sometimes a spoonful of roux, and simmer until thick. Fold in cold cooked rice, about equal weights of rice and meat, with green onion and parsley. Dirty rice is usually said to take its name from the colour browned livers give it, though cooks disagree over which of the two dishes carries the livers. Jambalaya and red beans have their own entries."
+          ]
+        },
+        {
+          "key": "history",
+          "paras": [
+            "Rice growing on the south-west prairie began in earnest in the early 1880s, and the Rice Research Station at Crowley, opened in 1909 and now run by the LSU AgCenter, has bred Louisiana rice for more than a century. The fields do double duty: after the rice harvest many farmers flood them again and raise crawfish in the stubble from winter into spring, a rotation the crawfish entry explains."
+          ]
+        },
+        {
+          "key": "safety",
+          "paras": [
+            "Cooked rice can carry spores of Bacillus cereus, a bacterium that survives cooking and grows if the rice sits warm. Hold rice hot at 57°C (135°F) or above, or cool it fast and shallow: from 57°C (135°F) to 21°C (70°F) within two hours, and to 5°C (41°F) within six hours in all, as the FDA Food Code sets out. Cold cooked rice is exactly what rice dressing wants, so cool it right the day before."
+          ]
+        },
+        {
+          "key": "brennans",
+          "paras": [
+            "At Brennan's the Seafood Gumbo is served over Louisiana popcorn rice. If a guest notices a nutty, toasty smell as the bowl lands, that is the rice, not the roux, and a nice detail to share; the roux, which the published recipe takes to a dark mahogany, gives the gumbo its colour and depth. The menu names no mill, so never name one. The South Louisiana Rice Dressing is a dinner side with no printed description: confirm the meats at lineup, pork, beef or chicken liver, before describing it, and never offer it as a vegetable side."
+          ]
+        },
+        {
+          "key": "service",
+          "paras": [
+            "Describe the rice dressing as south Louisiana's stuffing: rice folded into browned, seasoned meat and the trinity, a cousin of dirty rice and a Sunday and holiday dish. Meat and dietary questions about it go to the kitchen."
+          ]
+        }
+      ],
+      "ratios": [
+        {
+          "label": "Rinsed long grain to water",
+          "value": "1 to 1.5 by volume: 1 cup (240 ml) of rice to 1.5 cups (360 ml) of water"
+        },
+        {
+          "label": "Cooking and resting",
+          "value": "15 to 18 minutes covered on the lowest heat, then 10 minutes' rest off the heat"
+        },
+        {
+          "label": "Rice dressing",
+          "value": "About equal weights of cold cooked rice and meat mixture"
+        }
+      ],
+      "temps": [
+        {
+          "label": "Hold cooked rice hot at or above",
+          "c": 57,
+          "f": 135
+        },
+        {
+          "label": "Cool to this within two hours",
+          "c": 21,
+          "f": 70
+        },
+        {
+          "label": "Cool to this within six hours in all",
+          "c": 5,
+          "f": 41
+        }
+      ],
+      "faults": [
+        {
+          "fault": "Gummy, clumped rice",
+          "cause": "Unrinsed rice, too much water, or stirring as it cooked.",
+          "fix": "Rinse until the water runs nearly clear, measure the water and stir only once, at the boil."
+        },
+        {
+          "fault": "Hard, chalky centres",
+          "cause": "Too little water, the lid lifted, or no rest.",
+          "fix": "Keep the lid on and rest the rice covered for 10 minutes; sprinkle in a little hot water and steam it if needed."
+        },
+        {
+          "fault": "Scorched base",
+          "cause": "Heat too high under a thin pan.",
+          "fix": "Use a heavy pan on the lowest heat, and do not scrape the scorched layer into the rice."
+        },
+        {
+          "fault": "Mushy rice in the gumbo",
+          "cause": "Rice cooked in the gumbo pot, or held too long in steam.",
+          "fix": "Cook the rice apart, put it in the bowl first and ladle the gumbo over it."
+        }
+      ],
+      "brennans": [
+        {
+          "dish": "d-r3h9vj7a",
+          "components": [
+            "Louisiana popcorn rice"
+          ],
+          "how": "The Seafood Gumbo is served over Louisiana popcorn rice, firm, separate grains that hold their shape in the broth; a nutty, toasty smell as the bowl lands is the rice, not the roux. The menu names no mill."
+        },
+        {
+          "dish": "d-klbj5891",
+          "components": [
+            "South Louisiana rice dressing"
+          ],
+          "how": "A dinner side of rice folded into seasoned meat and the trinity, printed with no description, so the meats are confirmed with the kitchen before it is described, and it is never offered as a vegetable side."
+        }
+      ],
+      "seeAlso": {
+        "entries": [
+          "jambalaya",
+          "red-beans-and-rice",
+          "crawfish",
+          "gumbo",
+          "etouffee",
+          "the-holy-trinity",
+          "brennans-seafood-gumbo",
+          "boudin"
+        ],
+        "lexicon": [
+          "long-grain-white-rice"
+        ],
+        "recipes": [
+          "dirty-rice"
+        ],
+        "folios": [
+          "louisiana-larder"
+        ],
+        "deck": [
+          "fd_0331"
+        ],
+        "components": [
+          "Louisiana popcorn rice",
+          "South Louisiana rice dressing",
+          "The holy trinity"
+        ]
+      },
+      "sources": [
+        {
+          "title": "FDA Food Code, US Food and Drug Administration",
+          "url": "https://www.fda.gov/food/retail-food-protection/fda-food-code",
+          "asOf": "2026-10-12"
+        },
+        {
+          "title": "Brennan's, Dinner menu",
+          "url": "https://www.brennansneworleans.com/menus/dinner/",
+          "asOf": "2026-10-12"
+        },
+        {
+          "title": "Brennan's, Breakfast & Lunch menu",
+          "url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+          "asOf": "2026-10-12"
+        },
+        {
+          "title": "History of the H. Rouse Caffey Rice Research Station, LSU AgCenter",
+          "url": "https://www.lsuagcenter.com/portals/our_offices/research_stations/rice/features/history%20of%20the%20station",
+          "asOf": "2026-10-12"
+        },
+        {
+          "title": "Acadia Parish history, Acadia Parish Convention and Visitors Commission",
+          "url": "https://acadiatourism.org/history/",
+          "asOf": "2026-10-12"
+        },
+        {
+          "title": "2026 International Rice Festival, Acadia Parish Convention and Visitors Commission",
+          "url": "https://acadiatourism.org/events/2026-international-rice-festival/",
+          "asOf": "2026-10-12"
+        }
+      ],
+      "cards": [
+        {
+          "stem": "rice-country",
+          "front": "Where is Louisiana's rice country?",
+          "back": "The prairie parishes of south-west Louisiana around Crowley, the seat of Acadia Parish and the self-styled Rice Capital of America."
+        },
+        {
+          "stem": "long-grain",
+          "front": "Why is long grain the everyday rice under Creole dishes?",
+          "back": "Its slender grains cook up dry and separate, so they hold their shape under a gumbo or étouffée instead of turning to paste."
+        },
+        {
+          "stem": "popcorn",
+          "front": "What is popcorn rice, and why does it smell of popcorn?",
+          "back": "A Louisiana aromatic long grain of the Della type; it carries 2-acetyl-1-pyrroline, the aroma of basmati and popcorn."
+        },
+        {
+          "stem": "rinse",
+          "front": "Why rinse rice before cooking it for gumbo?",
+          "back": "Rinsing washes off loose surface starch, the glue that makes grains gummy and clump together."
+        },
+        {
+          "stem": "ratio",
+          "front": "What is a dependable water ratio for rinsed long-grain rice?",
+          "back": "About 1.5 parts water to 1 part rice by volume: 1 cup (240 ml) of rice to 1.5 cups (360 ml) of water."
+        },
+        {
+          "stem": "rest",
+          "front": "Why does covered rice rest off the heat before it is fluffed?",
+          "back": "The trapped steam finishes the grains evenly, so they separate cleanly instead of breaking or sticking."
+        },
+        {
+          "stem": "bowl",
+          "front": "How is rice served with gumbo?",
+          "back": "Cooked apart and put in the bowl first, with the gumbo ladled over; rice cooked in the gumbo pot turns mushy."
+        },
+        {
+          "stem": "dressing",
+          "front": "What are rice dressing and dirty rice?",
+          "back": "Rice folded into browned ground meat, giblets or liver and the trinity; dirty rice is named for the colour the livers give it."
+        },
+        {
+          "stem": "crawfish-rotation",
+          "front": "How do Louisiana rice farmers also raise crawfish?",
+          "back": "After the rice harvest the fields are flooded again, and crawfish feed in the stubble from winter into spring."
+        },
+        {
+          "stem": "cooling",
+          "front": "How fast must cooked rice cool, by the FDA Food Code?",
+          "back": "From 57°C (135°F) to 21°C (70°F) within two hours, and to 5°C (41°F) within six hours in all, spread shallow."
+        },
+        {
+          "stem": "brennans",
+          "front": "Which rice goes under the Brennan's Seafood Gumbo, and what about the rice dressing?",
+          "back": "Louisiana popcorn rice under the gumbo. The rice dressing is a dinner side with no printed description, so confirm its meats at lineup."
+        }
+      ],
+      "questions": [
+        {
+          "stem": "q-country",
+          "q": "Which Louisiana town calls itself the Rice Capital of America?",
+          "answer": "Crowley",
+          "distractors": [
+            "LaPlace",
+            "Scott",
+            "Breaux Bridge"
+          ],
+          "why": "Crowley, seat of Acadia Parish, sits at the heart of the prairie rice country and first held its rice festival, now the International Rice Festival, in 1937.",
+          "teaches": "rice-country"
+        },
+        {
+          "stem": "q-popcorn",
+          "q": "Where does popcorn rice get its popcorn smell?",
+          "answer": "A compound it shares with basmati",
+          "distractors": [
+            "Popcorn milled in with the grain",
+            "Toasting the grain before it is sold",
+            "Butter added at the mill"
+          ],
+          "why": "Popcorn rice carries 2-acetyl-1-pyrroline, the molecule behind basmati, jasmine and fresh popcorn; nothing is added to it.",
+          "teaches": "popcorn"
+        },
+        {
+          "stem": "q-rinse",
+          "q": "Why is rice rinsed before it is cooked to stay separate?",
+          "answer": "To wash off loose surface starch",
+          "distractors": [
+            "To make the grains cook faster",
+            "To strip the bran from each grain",
+            "To season the grain before cooking"
+          ],
+          "why": "Loose starch on the surface turns to glue in the pot; rinsing it away keeps the grains apart.",
+          "teaches": "rinse"
+        },
+        {
+          "stem": "q-ratio",
+          "q": "Which water ratio suits rinsed long-grain rice, measured by volume?",
+          "answer": "1.5 parts water to 1 of rice",
+          "distractors": [
+            "3 parts water to 1 of rice",
+            "Half a part water to 1 of rice",
+            "6 parts water to 1, never drained"
+          ],
+          "why": "About 1.5 to 1 is absorbed fully in 15 to 18 minutes; more water turns it soft, less leaves hard centres.",
+          "teaches": "ratio"
+        },
+        {
+          "stem": "q-bowl",
+          "q": "How should rice meet a gumbo in the bowl?",
+          "answer": "Cooked apart, gumbo ladled over",
+          "distractors": [
+            "Simmered in the gumbo for an hour",
+            "Stirred raw into the gumbo pot",
+            "Fried crisp and scattered over the top"
+          ],
+          "why": "Rice cooked in the gumbo goes mushy and thickens the pot, so it is cooked apart and put in the bowl first.",
+          "teaches": "bowl"
+        },
+        {
+          "stem": "q-dirty",
+          "q": "What gives dirty rice its name?",
+          "answer": "The colour of the browned livers",
+          "distractors": [
+            "Grain that was never rinsed",
+            "A dark roux cooked into it",
+            "Brown rice in place of white"
+          ],
+          "why": "Chopped chicken livers and gizzards, browned with the meat, stain the rice a dark, speckled brown.",
+          "teaches": "dressing"
+        },
+        {
+          "stem": "q-cooling",
+          "q": "By the FDA Food Code, cooked rice cools from 57°C (135°F) to 21°C (70°F) within how long?",
+          "answer": "Two hours",
+          "distractors": [
+            "Six hours",
+            "Twelve hours",
+            "One day"
+          ],
+          "why": "The first stage of cooling runs through the warmest range, so it gets two hours; reaching 5°C (41°F) takes six in all.",
+          "teaches": "cooling"
+        },
+        {
+          "stem": "q-brennans",
+          "q": "What does a server do before describing the Brennan's South Louisiana Rice Dressing?",
+          "answer": "Confirm the meats at lineup",
+          "distractors": [
+            "Describe it as a vegetable side",
+            "Name the mill the rice came from",
+            "Say it is made with crawfish"
+          ],
+          "why": "The menu prints no description, so the meats, pork, beef or chicken liver, are confirmed with the kitchen first.",
+          "teaches": "brennans"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1269 @@
+{
+	"entries": [
+		{
+			"stem": "jambalaya",
+			"slug": "jambalaya",
+			"title": "Jambalaya, red and brown",
+			"say": "jum-buh-LY-uh",
+			"level": 2,
+			"kind": "dish",
+			"summary": "Rice cooked in one pot with meat, seafood or both, the grains drinking a seasoned stock until none is left. Red jambalaya, with tomato, belongs to the city; brown, coloured by well-browned meat and onions, belongs to the Cajun country.",
+			"guest": "Jambalaya is Louisiana rice cooked in one pot with sausage, chicken or shrimp, so every grain takes up the seasoned stock. Red has tomato; brown gets its colour from browned meat.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Jambalaya is rice cooked in one pot with meat, seafood or both. The meat and the trinity go in first, then stock, then raw long-grain rice, and the lid goes on. The rice drinks the stock until none is left, so every grain carries the seasoning of the pot: not a base under a sauce but the dish itself.",
+						"It is the party and church-fair dish of south Louisiana: one pot feeds a crowd, and smoked sausage, chicken or shrimp season every grain of rice."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"Red jambalaya, the Creole kind of New Orleans, carries tomato, which tints the rice a soft red and gives it a gentle acidity; shrimp with ham or sausage is a common pairing. Brown jambalaya, the Cajun kind of the country, has no tomato. Its colour comes from browning: chicken and pork or smoked sausage seared hard, onions cooked down deep brown, and the browned bits scraped up into the stock. A pale brown jambalaya means the browning was rushed.",
+						"Its kin cook rice in a seasoned liquid too: Spanish paella, with meat or seafood in a wide pan, and West African jollof, in a base of tomato, pepper and onion. The origin of the name is disputed: one account points to a Provençal word, jambalaia, another joins jambon, French for ham, to a West African word for rice, and none is proven."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"For about eight: brown 450 g (1 lb) of sliced smoked sausage in a heavy pot, then 900 g (2 lb) of chicken thigh in pieces, in batches so it sears rather than steams, and lift them out. For a red jambalaya, soften 2 onions, 2 sticks of celery and 1 green pepper, diced, for 8 to 10 minutes, scraping up the browned bits. For a brown one, cook the onions alone first, stirring, until deep brown, 20 to 30 minutes, then add the celery and pepper. Add 4 cloves of garlic for the last minute. For a red jambalaya add 400 g (14 oz) of chopped tomatoes. Return the meat and season with cayenne, thyme, bay, salt and pepper.",
+						"Add the stock, bring it to a full boil and taste it: it should be a little saltier and hotter than seems right, because the rice takes up every drop. Allow 1 part long-grain rice to about 1.5 to 2 parts liquid by volume in all: 480 ml (2 cups) of rice to 720 to 960 ml (3 to 4 cups) of liquid, the lower figure when the vegetables are wet, more for parboiled rice. In a red jambalaya the 400 g (14 oz) of tomatoes count as about 300 ml (1.25 cups) of that liquid, so use that much less stock.",
+						"Stir the rice in once, return it to the boil, cover, turn the heat to its lowest and leave it for 20 to 25 minutes, then rest it covered off the heat for 10 minutes; the chicken will be well past 74°C (165°F). Never stir under the lid: stirring breaks the grains and rubs off starch that turns the pot to mush. In the great outdoor pots, cast-iron kettles over gas flames that feed hundreds, cooks turn the rice once or twice from the bottom with a paddle so the top cooks evenly: a gentle turn, not a stir."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"Mushy rice comes from stirring or too much liquid, often the tomato's juice left uncounted. A scorched bottom means heat too high under a thin pot; never scrape the burnt layer into the rest. Crunchy grains on top mean steam escaped: add a little hot stock, cover tightly and give it 5 minutes more. Bland rice means the stock was under-seasoned, and salt stirred in later never reaches the centre of the grain."
+					]
+				},
+				{
+					"key": "history",
+					"paras": [
+						"Gonzales, in Ascension Parish, calls itself the Jambalaya Capital of the World, a title Governor John McKeithen proclaimed in 1968, the year of its first Jambalaya Festival, which still gathers cooks and their great pots each spring."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Jambalaya is not on our printed menus, but guests ask, and the answer is short: Louisiana rice cooked in one pot with sausage, chicken or shrimp, red with tomato in the city, brown without it in the country. Cooked rice left warm is a known risk, because the spores of Bacillus cereus, a bacterium common on rice, survive cooking, so kitchens hold it at 57°C (135°F) or above or cool it fast. Questions about pork, shellfish or spice in any dish go to the kitchen."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Rice to liquid, by volume",
+					"value": "1 to about 1.5 or 2, counting tomato juice; more for parboiled rice"
+				},
+				{
+					"label": "For about eight",
+					"value": "480 ml (2 cups) of long-grain rice to 720 to 960 ml (3 to 4 cups) of liquid, tomatoes counted"
+				},
+				{
+					"label": "Meat to rice",
+					"value": "About 1.35 kg (3 lb) of sausage and chicken to 480 ml (2 cups) of rice"
+				},
+				{
+					"label": "Covered on the lowest heat",
+					"value": "20 to 25 minutes, then 10 minutes' rest off the heat, lid on"
+				}
+			],
+			"temps": [
+				{
+					"label": "Chicken cooked through in the pot",
+					"c": 74,
+					"f": 165
+				},
+				{
+					"label": "Hold cooked rice hot at or above",
+					"c": 57,
+					"f": 135
+				}
+			],
+			"faults": [
+				{
+					"fault": "Mushy, sticky rice",
+					"cause": "Stirred after the lid went on, or too much liquid for the rice.",
+					"fix": "Measure the liquid, tomatoes included, bring it to a full boil, stir the rice in once, then cover and leave it alone."
+				},
+				{
+					"fault": "Scorched bottom",
+					"cause": "Heat too high under a thin pot, or too little liquid.",
+					"fix": "Use a heavy pot on the lowest flame; never scrape the burnt layer into the rest."
+				},
+				{
+					"fault": "Crunchy grains on top",
+					"cause": "Steam escaped through a loose or lifted lid, or the liquid ran short.",
+					"fix": "Add a few spoonfuls of hot stock, cover tightly and give it 5 more minutes."
+				},
+				{
+					"fault": "Pale, flat brown jambalaya",
+					"cause": "The meat and onions were not browned hard and the browned bits were left in the pan.",
+					"fix": "Sear in batches, cook the onions down deep brown and scrape every browned bit into the stock."
+				},
+				{
+					"fault": "Bland rice",
+					"cause": "The stock was under-seasoned before the rice went in.",
+					"fix": "Season the boiling stock until it tastes a little too salty and hot; the rice takes it all up."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"louisiana-rice",
+					"andouille",
+					"the-holy-trinity",
+					"creole-and-cajun",
+					"gumbo",
+					"etouffee"
+				],
+				"techniques": [
+					"jollof-and-party-smoke"
+				],
+				"lexicon": [
+					"long-grain-white-rice",
+					"tasso-and-cajun-andouille"
+				],
+				"recipes": [
+					"chicken-and-sausage-jambalaya",
+					"dirty-rice",
+					"jollof-rice"
+				],
+				"kitchen": [
+					"jollof-rice"
+				],
+				"folios": [
+					"louisiana-larder"
+				]
+			},
+			"sources": [
+				{
+					"title": "History, the Jambalaya Festival, Gonzales, Louisiana",
+					"url": "https://www.jambalayafestival.net/history",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Feed Your Soul at One of Louisiana's Oldest Festivals, Explore Louisiana",
+					"url": "https://explorelouisiana.com/blog/feed-your-soul-one-louisianas-oldest-festivals",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "FDA Food Code, U.S. Food and Drug Administration",
+					"url": "https://www.fda.gov/food/retail-food-protection/fda-food-code",
+					"asOf": "2026-10-12"
+				}
+			],
+			"cards": [
+				{
+					"stem": "what-it-is",
+					"front": "What is a jambalaya?",
+					"back": "Long-grain rice cooked in one pot with meat, seafood or both, the grains drinking the seasoned stock until none is left."
+				},
+				{
+					"stem": "red-brown",
+					"front": "What separates a red jambalaya from a brown one?",
+					"back": "Red, the Creole city kind, carries tomato; brown, the Cajun country kind, has none and takes its colour from well-browned meat and onions."
+				},
+				{
+					"stem": "brown-colour",
+					"front": "Where does a brown jambalaya get its colour?",
+					"back": "From browning: meat seared hard in the pot, onions cooked down deep brown, and the browned bits scraped up into the stock."
+				},
+				{
+					"stem": "ratio",
+					"front": "What is the working ratio of rice to liquid in a jambalaya?",
+					"back": "About 1 part long-grain rice to 1.5 to 2 parts liquid by volume, counting tomato juice, with more for a parboiled rice."
+				},
+				{
+					"stem": "no-stir",
+					"front": "Why is a jambalaya never stirred once the lid is on?",
+					"back": "Stirring breaks the grains and rubs starch from them, which turns the pot to mush; the rice is left covered on the lowest heat."
+				},
+				{
+					"stem": "timing",
+					"front": "How long does the rice cook, and how is it finished?",
+					"back": "Covered on the lowest heat for 20 to 25 minutes, then rested off the heat, lid still on, for 10 minutes before fluffing."
+				},
+				{
+					"stem": "season-stock",
+					"front": "Why taste and season the stock before the rice goes in?",
+					"back": "The rice takes up every drop, so the stock should taste slightly over-seasoned; salt added afterwards never reaches the centre of the grain."
+				},
+				{
+					"stem": "gonzales",
+					"front": "Which town calls itself the Jambalaya Capital of the World?",
+					"back": "Gonzales, in Ascension Parish, proclaimed so by Governor John McKeithen in 1968, the year of its first Jambalaya Festival."
+				},
+				{
+					"stem": "kin",
+					"front": "Which rice dishes are kin to jambalaya?",
+					"back": "Spanish paella and West African jollof: each cooks rice in one pan or pot in a seasoned liquid, with meat, seafood or tomato."
+				},
+				{
+					"stem": "name",
+					"front": "Where does the word jambalaya come from?",
+					"back": "Nobody knows for certain: one account points to a Provençal word, jambalaia; another joins jambon, ham, to a West African word for rice."
+				},
+				{
+					"stem": "scorch",
+					"front": "What scorches the bottom of a jambalaya, and how do you prevent it?",
+					"back": "Heat too high under a thin pot, or too little liquid; use a heavy pot on the lowest flame and never scrape burnt rice into the rest."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-brown-colour",
+					"q": "What gives a brown Cajun jambalaya its colour?",
+					"answer": "Well-browned meat and onions",
+					"distractors": [
+						"Tomato paste cooked dark",
+						"A spoonful of saffron",
+						"Red wine reduced in the pot"
+					],
+					"why": "Brown jambalaya has no tomato; the colour comes from searing the meat, cooking the onions down and scraping the browned bits into the stock.",
+					"teaches": "brown-colour"
+				},
+				{
+					"stem": "q-red",
+					"q": "Which of the two jambalayas carries tomato in the pot?",
+					"answer": "Red, the Creole city style",
+					"distractors": [
+						"Brown, the Cajun country style",
+						"Neither, for tomato is never used",
+						"Both, in equal measure"
+					],
+					"why": "Tomato tints the rice of the city's red jambalaya; the brown jambalaya of the country leaves it out and colours the pot by browning.",
+					"teaches": "red-brown"
+				},
+				{
+					"stem": "q-ratio",
+					"q": "Roughly what ratio of long-grain rice to liquid, by volume, does a jambalaya take?",
+					"answer": "1 to about 1.5 or 2",
+					"distractors": [
+						"1 to 4",
+						"1 to 6, drained like pasta",
+						"2 to 1, more rice than liquid"
+					],
+					"why": "The rice must take up all the liquid and finish dry and separate; much more liquid makes mush, much less leaves it hard.",
+					"teaches": "ratio"
+				},
+				{
+					"stem": "q-no-stir",
+					"q": "The rice is in and the lid is on. What should the cook do now?",
+					"answer": "Leave it alone on the lowest heat",
+					"distractors": [
+						"Stir it every five minutes to even it",
+						"Turn the heat up high to finish fast",
+						"Add cold stock whenever it looks dry"
+					],
+					"why": "Stirring breaks the grains and releases starch, which turns a jambalaya to mush; the covered pot cooks the rice by steam.",
+					"teaches": "no-stir"
+				},
+				{
+					"stem": "q-season",
+					"q": "Why should the stock taste a little over-seasoned before the rice goes in?",
+					"answer": "The rice takes up every drop",
+					"distractors": [
+						"Boiling drives off most of the salt",
+						"Salt stops the grains from swelling",
+						"Cayenne fades as the rice cooks"
+					],
+					"why": "Each grain absorbs the seasoned stock as it cooks; salt stirred in at the end coats the outside and never reaches the centre.",
+					"teaches": "season-stock"
+				},
+				{
+					"stem": "q-gonzales",
+					"q": "Which Louisiana town was proclaimed the Jambalaya Capital of the World in 1968?",
+					"answer": "Gonzales",
+					"distractors": [
+						"Breaux Bridge",
+						"LaPlace",
+						"Crowley"
+					],
+					"why": "Governor John McKeithen proclaimed Gonzales the Jambalaya Capital of the World in 1968, the year of its first Jambalaya Festival.",
+					"teaches": "gonzales"
+				},
+				{
+					"stem": "q-scorch",
+					"q": "What best prevents a scorched bottom on a jambalaya?",
+					"answer": "A heavy pot on the lowest flame",
+					"distractors": [
+						"A thin pot over a high flame",
+						"Extra oil poured in at the start",
+						"Less liquid and a loose lid"
+					],
+					"why": "A heavy pot spreads gentle heat evenly, so the bottom layer cooks with the rest instead of catching and burning.",
+					"teaches": "scorch"
+				},
+				{
+					"stem": "q-kin",
+					"q": "Which West African rice dish is kin to jambalaya?",
+					"answer": "Jollof rice",
+					"distractors": [
+						"Couscous",
+						"Fufu",
+						"Injera"
+					],
+					"why": "Jollof cooks rice in one pot in a base of tomato, pepper and onion, the grains taking the colour of the pot, as a red jambalaya does.",
+					"teaches": "kin"
+				}
+			]
+		},
+		{
+			"stem": "courtbouillon",
+			"slug": "courtbouillon",
+			"title": "Creole courtbouillon",
+			"say": "KREE-ohl coo-bee-YON",
+			"level": 4,
+			"kind": "dish",
+			"summary": "Redfish cooked gently in a thick, rust-red gravy of roux, tomato and the trinity, with garlic, bay, lemon and wine, and served over rice. Said coo-bee-YON in Louisiana, it borrows a French word and means a different dish.",
+			"guest": "Courtbouillon, said coo-bee-YON here, is redfish simmered in a rich tomato and roux gravy with onion, celery, pepper and a little wine, spooned over rice.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"A Creole courtbouillon is fish, most often redfish, cooked gently in a thick tomato gravy built on a roux and the trinity, seasoned with garlic, bay, thyme, lemon and red or white wine, and in some recipes allspice. It is served over rice, the fish in thick slices or bone-in steaks, or whole when the cook wants a show.",
+						"The name trips people up. In the French kitchen a court-bouillon is a short, quick broth of water, wine or vinegar and aromatics for poaching fish, thin and clear, and it has its own entry. In Louisiana the same word, run together and said coo-bee-YON, means this thick, red, saucy dish. A cook who knows both will never confuse an order."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"For about six: cut 1.4 kg (3 lb) of redfish fillet into thick pieces, season them with salt and cayenne and keep them cold. In a wide, heavy pot make a roux of 60 g (2 oz) each of oil and flour, cooked to peanut butter or milk chocolate brown, 15 to 30 minutes over a medium flame. Add 2 onions, 2 sticks of celery and 1 green pepper, diced, to stop the browning, and soften them for 8 minutes, then add 4 cloves of garlic for a minute.",
+						"Add 800 g (28 oz) of chopped tomatoes, 120 ml (half a cup) of dry wine and about 720 ml (3 cups) of fish stock, with 2 bay leaves, thyme, a pinch of ground allspice, cayenne and salt. Simmer the gravy for 30 to 45 minutes, until it is thick and the raw tomato taste has gone. Only then lay the fish in, spoon the gravy over, cover and keep it below the boil for 10 to 15 minutes, until the flesh is opaque and flakes, about 63°C (145°F) at the thickest part. Shake the pot rather than stir it, so the pieces stay whole. Finish with lemon juice and thin lemon slices, green onion and parsley."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"Creole versions, the city's, are rich with tomato and a well-browned roux, the gravy thick enough to coat the fish like a sauce. Cajun versions in the country are often made with catfish or redfish and less roux, or none, so the gravy is lighter and leans on the tomato, the onion and the fish's own juices. Both go over rice. Among its neighbours, a courtbouillon is gentler than a sauce piquante, made for fish rather than game, and redder and looser than an étouffée."
+					]
+				},
+				{
+					"key": "history",
+					"paras": [
+						"Courtbouillon is old in New Orleans print. Lafcadio Hearn's La Cuisine Créole of 1885 lists a courtbouillon among its recipes, and The Picayune's Creole Cook Book prints a Courtbouillon à la Créole, for which, it says, Creole cooks favour redfish or red snapper over other fish. Where its tomato came from, perhaps Spanish cooking, the evidence is too thin to say."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"Fish in shreds means it was stirred or boiled: lay it in last, shake the pot and keep the gravy below the boil. Dry, chalky fish went in too early or cooked too long; it needs only 10 to 15 minutes. A thin, watery gravy was not reduced before the fish went in, and the fish adds water of its own, so simmer the gravy a little thicker than you want. A sharp, raw tomato taste means the gravy was rushed. A muddy, bitter gravy comes from a roux taken too dark or scorched, which buries a fish as delicate as redfish."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Courtbouillon is not on our printed menus. If a guest asks, describe it as redfish simmered in a thick tomato and roux gravy with the trinity, over rice, and say it the Louisiana way, coo-bee-YON. A guest who knows the French word may expect a poaching broth; explain that here it names this saucy fish stew. Whole fish and bone-in steaks carry bones, so say so, and send questions about fish, flour or wine in any dish to the kitchen."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Roux for 1.4 kg (3 lb) of fish",
+					"value": "60 g (2 oz) each of oil and flour, peanut butter to milk chocolate brown"
+				},
+				{
+					"label": "The gravy",
+					"value": "800 g (28 oz) of tomatoes, about 720 ml (3 cups) of fish stock and 120 ml (half a cup) of wine"
+				},
+				{
+					"label": "Simmer the gravy before the fish",
+					"value": "30 to 45 minutes, until thick"
+				},
+				{
+					"label": "Fish in the gravy",
+					"value": "10 to 15 minutes, covered, below the boil"
+				}
+			],
+			"temps": [
+				{
+					"label": "Fish opaque and flaking at the thickest part",
+					"c": 63,
+					"f": 145
+				}
+			],
+			"faults": [
+				{
+					"fault": "Fish broken into shreds",
+					"cause": "Stirred, or boiled hard, once the fish was in.",
+					"fix": "Lay the fish in last, shake the pot and spoon the gravy over, and keep it below the boil."
+				},
+				{
+					"fault": "Dry, chalky fish",
+					"cause": "The fish went in too early and cooked through the whole simmer.",
+					"fix": "Simmer the gravy first, then give the fish only 10 to 15 minutes."
+				},
+				{
+					"fault": "Thin, watery gravy",
+					"cause": "The gravy was not reduced, and the fish released its own water.",
+					"fix": "Simmer the gravy a little thicker than wanted before the fish goes in."
+				},
+				{
+					"fault": "Sharp, raw tomato taste",
+					"cause": "The gravy was rushed.",
+					"fix": "Give it the full 30 to 45 minutes before the fish, until the tomato tastes cooked and round."
+				},
+				{
+					"fault": "Muddy, bitter gravy",
+					"cause": "The roux was taken too dark or scorched.",
+					"fix": "Keep the roux to peanut butter or milk chocolate; if it shows black flecks, start again."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"court-bouillon-and-nage",
+					"gulf-fish",
+					"hearn-la-cuisine-creole",
+					"picayune-creole-cook-book",
+					"roux-ladder",
+					"the-holy-trinity",
+					"sauce-piquante",
+					"etouffee"
+				],
+				"lexicon": [
+					"allspice",
+					"bay-leaf"
+				],
+				"kitchen": [
+					"redfish-courtbouillon"
+				],
+				"plates": [
+					"gulf-coast-fish"
+				],
+				"folios": [
+					"roux-colour-ladder"
+				]
+			},
+			"sources": [
+				{
+					"title": "La cuisine creole (1885), attributed to Lafcadio Hearn, Project Gutenberg eBook 75027",
+					"url": "https://www.gutenberg.org/ebooks/75027",
+					"year": 1885,
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "La cuisine creole (1885), Michigan State University Libraries digital collection",
+					"url": "https://d.lib.msu.edu/fa/19",
+					"year": 1885,
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "The Picayune's Creole Cook Book, fourth edition (1910), Cornell University Library copy, Internet Archive",
+					"url": "https://archive.org/details/cu31924073878708",
+					"year": 1910,
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Safe Minimum Internal Temperatures, FoodSafety.gov",
+					"url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+					"asOf": "2026-10-12"
+				}
+			],
+			"cards": [
+				{
+					"stem": "what-it-is",
+					"front": "What is a Creole courtbouillon?",
+					"back": "Fish, usually redfish, cooked gently in a thick gravy of roux, tomato and the trinity with garlic, bay, lemon and wine, served over rice."
+				},
+				{
+					"stem": "say",
+					"front": "How is courtbouillon said in Louisiana?",
+					"back": "Coo-bee-YON, run together as one word, with the weight on the last syllable."
+				},
+				{
+					"stem": "french",
+					"front": "How does the Louisiana courtbouillon differ from the French court-bouillon?",
+					"back": "The French one is a thin, quick poaching broth of water, wine or vinegar and aromatics; the Louisiana one is a thick red fish stew."
+				},
+				{
+					"stem": "roux",
+					"front": "How dark is the roux for a Creole courtbouillon?",
+					"back": "Peanut butter to milk chocolate brown: dark enough for depth, light enough that the redfish still leads."
+				},
+				{
+					"stem": "fish-last",
+					"front": "When does the fish go into the gravy, and why?",
+					"back": "Last, for 10 to 15 minutes below the boil, after the gravy has simmered thick, so the fish cooks through without falling apart."
+				},
+				{
+					"stem": "shake",
+					"front": "How do you keep the fish pieces whole in the pot?",
+					"back": "Shake the pot and spoon the gravy over them instead of stirring, and keep the gravy below the boil."
+				},
+				{
+					"stem": "creole-cajun",
+					"front": "How do Creole and Cajun courtbouillons differ?",
+					"back": "Creole versions are rich with tomato and roux; Cajun cooks often use catfish or redfish with less roux, or none, for a lighter gravy."
+				},
+				{
+					"stem": "old-texts",
+					"front": "Which old New Orleans cookbooks print a courtbouillon?",
+					"back": "Hearn's La Cuisine Créole of 1885 and The Picayune's Creole Cook Book, whose Courtbouillon à la Créole favours redfish or red snapper."
+				},
+				{
+					"stem": "allspice",
+					"front": "Which warm spice turns up in some courtbouillon recipes?",
+					"back": "Allspice, a pinch beside the thyme and bay, for a warm, clove-like note under the tomato."
+				},
+				{
+					"stem": "serving",
+					"front": "How is a courtbouillon served?",
+					"back": "Over rice, the fish in thick slices, bone-in steaks or whole, with lemon, green onion and parsley; warn the guest about bones."
+				},
+				{
+					"stem": "doneness",
+					"front": "How do you know the fish in a courtbouillon is done?",
+					"back": "The flesh turns opaque and flakes under gentle pressure, at about 63°C (145°F) in the thickest part."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-say",
+					"q": "How do Louisiana cooks say courtbouillon?",
+					"answer": "coo-bee-YON",
+					"distractors": [
+						"court-BOO-yon",
+						"KOR-bull-ee-on",
+						"coor-BWEE-yon"
+					],
+					"why": "In Louisiana the French word is run together and said coo-bee-YON, with the weight on the last syllable.",
+					"teaches": "say"
+				},
+				{
+					"stem": "q-french",
+					"q": "A guest trained in France expects courtbouillon to be a poaching broth. What do you tell them?",
+					"answer": "Here it means a thick red fish stew",
+					"distractors": [
+						"Yes, a thin broth of wine and aromatics",
+						"It is a cold, jellied fish terrine",
+						"It is a clear consommé of redfish"
+					],
+					"why": "The French court-bouillon is a thin poaching liquid; the Louisiana courtbouillon borrows the word for a thick, red, saucy fish dish.",
+					"teaches": "french"
+				},
+				{
+					"stem": "q-fish-last",
+					"q": "When does the redfish go into a courtbouillon?",
+					"answer": "Last, into the finished gravy",
+					"distractors": [
+						"First, browned hard in the roux",
+						"With the trinity, before the tomato",
+						"At the start, for the whole simmer"
+					],
+					"why": "The gravy needs 30 to 45 minutes; the fish needs only 10 to 15, so it goes in last and stays moist and whole.",
+					"teaches": "fish-last"
+				},
+				{
+					"stem": "q-roux",
+					"q": "Which roux colour suits a Creole courtbouillon?",
+					"answer": "Peanut butter to milk chocolate",
+					"distractors": [
+						"Raw and white",
+						"Black, almost burnt",
+						"None, for cream thickens the gravy"
+					],
+					"why": "A middling brown roux gives depth without burying the fish; the darkest rungs belong to game pots such as sauce piquante.",
+					"teaches": "roux"
+				},
+				{
+					"stem": "q-cajun",
+					"q": "How does a Cajun courtbouillon usually differ from a Creole one?",
+					"answer": "Less roux, often with catfish",
+					"distractors": [
+						"A darker roux and more tomato",
+						"Cream and butter in the gravy",
+						"Shrimp in place of any fish"
+					],
+					"why": "Cajun cooks often make it with catfish or redfish and little or no roux; the city's Creole version is rich with tomato and roux.",
+					"teaches": "creole-cajun"
+				},
+				{
+					"stem": "q-old",
+					"q": "How far back does courtbouillon go in New Orleans print?",
+					"answer": "At least to 1885, in Hearn's La Cuisine Créole",
+					"distractors": [
+						"Only to 1946, the year Brennan's opened",
+						"Only to the 1980s and Prudhomme's books",
+						"Only to the 1950s and the first tourist guides"
+					],
+					"why": "Lafcadio Hearn's La Cuisine Créole of 1885 lists a courtbouillon, and The Picayune's Creole Cook Book later prints a Courtbouillon à la Créole of redfish or red snapper.",
+					"teaches": "old-texts"
+				},
+				{
+					"stem": "q-shake",
+					"q": "How should a cook keep the fish whole as a courtbouillon finishes?",
+					"answer": "Shake the pot and spoon gravy over",
+					"distractors": [
+						"Stir hard so every piece is coated",
+						"Boil it fast to firm the fish",
+						"Cut the fish into small cubes"
+					],
+					"why": "Stirring and boiling break cooked fish into shreds; a gentle shake and basting keep the pieces whole for the plate.",
+					"teaches": "shake"
+				},
+				{
+					"stem": "q-doneness",
+					"q": "At about what temperature in the thickest part is the fish in a courtbouillon cooked through?",
+					"answer": "63°C (145°F)",
+					"distractors": [
+						"40°C (104°F)",
+						"50°C (122°F)",
+						"100°C (212°F)"
+					],
+					"why": "At about 63°C (145°F) the flesh is opaque and flakes; the gravy stays below the boil so the fish never gets near 100°C (212°F).",
+					"teaches": "doneness"
+				}
+			]
+		},
+		{
+			"stem": "sauce-piquante",
+			"slug": "sauce-piquante",
+			"title": "Sauce piquante",
+			"say": "SOHS pee-KAHNT",
+			"level": 3,
+			"kind": "sauce",
+			"summary": "A Cajun stew rather than a sauce: meat, game or seafood simmered long in a dark roux gravy with the trinity, tomato and plenty of cayenne and hot pepper, served over rice. Piquante means sharp, and the heat is the point.",
+			"guest": "Sauce piquante is a spicy Cajun stew: a dark roux and tomato gravy with onion, celery and pepper, simmered with chicken, game or alligator and served over rice.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"In Cajun country, sauce piquante is not a sauce to pour but a stew to eat: a dark roux, the trinity, tomato and a generous load of cayenne and hot pepper, simmered for hours with whatever the hunt, the swamp or the yard has given. Rabbit, squirrel, venison, duck, turtle, alligator and chicken all go in, shrimp too, and it is always served over rice. Piquante is French for sharp or pricking: the bite of the pepper, and in some pots a splash of vinegar.",
+						"It teaches a cook what a dark roux and long simmering do together. The roux gives a deep, roasted flavour, the tomato cooks down into a rich, brick-red gravy, and tough meat that would be chewy in a quick sauce turns tender in two hours."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"For about eight: season 1.8 kg (4 lb) of rabbit, chicken thigh or alligator in pieces with salt and cayenne, brown it in oil in a heavy pot, and lift it out. Make a dark roux in the same pot with 115 g (4 oz) each of oil and flour, stirring without stopping until it reaches dark chocolate, 40 minutes or more over a medium flame. Tip in 2 onions, 2 sticks of celery and 2 green peppers, diced, to stop the browning, soften them for 10 minutes, then add 4 cloves of garlic.",
+						"Add 800 g (28 oz) of crushed tomatoes, a spoonful of tomato paste, about 1 litre (about 1 quart) of stock, bay, thyme, cayenne and hot pepper sauce or chopped fresh hot peppers. Return the meat and simmer, partly covered, stirring now and then so nothing catches: about 1 hour for chicken or alligator tail, by which time chicken is well past 74°C (165°F); 1.5 to 2.5 hours for rabbit, venison or alligator body meat, until the meat is tender and the oil rises in red beads on the surface. Skim some of it off.",
+						"Shrimp go in for the last 3 to 5 minutes only. Taste, add a splash of vinegar if the pot wants sharpness, and finish with green onion and parsley. Build the heat in stages. Pepper concentrates as the gravy reduces, so a pot seasoned fiercely at the start can end too hot to enjoy."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"Know it against its neighbours. The Creole sauce of the city is a bright tomato sauce on softened trinity, sometimes a light roux, mild enough for eggs and shrimp. Sauce piquante takes a much darker roux, far more heat and long cooking with meat, so it is a stew rather than a sauce. Against a courtbouillon it is the darker, hotter pot, made for game rather than delicate fish.",
+						"The French sauce piquante shares only the name. In the classical kitchen it is a brown sauce: white wine and vinegar reduced with shallots, finished with demi-glace, a brown stock sauce reduced until it is glossy and rich, then chopped gherkins and herbs. It belongs to the brown family; the Cajun pot is another thing altogether."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"Black flecks in the roux mean it scorched: throw it out and start again, because burnt flour is bitter and stirring cannot hide it. Tough meat has not simmered long enough; keep going until it gives. A burnt bottom comes from a thick gravy left unstirred over too much heat. A greasy surface wants skimming. Rubbery shrimp went in too early. A pot that is too fierce was seasoned hard at the start; more tomato and stock calm it a little, but the cure is to season in stages."
+					]
+				},
+				{
+					"key": "history",
+					"paras": [
+						"Sauce piquante is a gathering dish. Cajun cooks make it in great pots for family gatherings and cook-offs, simmering through the morning and ladling it over rice by lunchtime, and every family argues for its own meat and its own heat. As with gumbo, the rice is never optional."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Sauce piquante is not on our printed menus. If a guest asks, describe it as a spicy Cajun stew of dark roux, tomato and the trinity, with chicken, game or alligator, over rice, and be honest about the heat: it is meant to bite. Held for service, it stays at 57°C (135°F) or above. Questions about spice, shellfish or flour in any dish go to the kitchen."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Roux",
+					"value": "Equal weights of oil and flour, 115 g (4 oz) each for 1.8 kg (4 lb) of meat, cooked to dark chocolate"
+				},
+				{
+					"label": "Liquid",
+					"value": "About 1 litre (about 1 quart) of stock and 800 g (28 oz) of tomatoes"
+				},
+				{
+					"label": "Simmer",
+					"value": "About 1 hour for chicken or alligator tail; 1.5 to 2.5 hours for rabbit, venison or alligator body meat"
+				},
+				{
+					"label": "Shrimp",
+					"value": "The last 3 to 5 minutes only"
+				}
+			],
+			"temps": [
+				{
+					"label": "Chicken cooked through",
+					"c": 74,
+					"f": 165
+				},
+				{
+					"label": "Hold hot for service at or above",
+					"c": 57,
+					"f": 135
+				}
+			],
+			"faults": [
+				{
+					"fault": "Bitter, black-flecked roux",
+					"cause": "The roux scorched on its long way to dark chocolate.",
+					"fix": "Throw it out and start again; stirring the flecks in does not remove the bitterness."
+				},
+				{
+					"fault": "Tough, chewy meat",
+					"cause": "Game, rabbit or alligator body meat not simmered long enough.",
+					"fix": "Keep simmering gently, up to 2.5 hours, until the meat gives easily."
+				},
+				{
+					"fault": "Burnt bottom",
+					"cause": "A thick gravy left unstirred over too much heat.",
+					"fix": "Keep the simmer low, stir now and then, and use a heavy pot."
+				},
+				{
+					"fault": "Rubbery shrimp",
+					"cause": "Added with the meat and cooked through the long simmer.",
+					"fix": "Add shrimp for the last 3 to 5 minutes only."
+				},
+				{
+					"fault": "Heat too fierce",
+					"cause": "Seasoned hard at the start; pepper concentrates as the gravy reduces.",
+					"fix": "Add more tomato and stock to soften it, and next time build the heat in stages."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"creole-sauce",
+					"brown-sauce-family",
+					"turtle-soup",
+					"roux-ladder",
+					"the-holy-trinity",
+					"courtbouillon",
+					"creole-and-cajun",
+					"louisiana-hot-sauces"
+				],
+				"lexicon": [
+					"chile-fluency-fresh-and-dried",
+					"roux-slurry-and-liaison"
+				],
+				"folios": [
+					"roux-colour-ladder"
+				]
+			},
+			"sources": [
+				{
+					"title": "A Guide to Modern Cookery, A. Escoffier (London: Heinemann, 1907)",
+					"url": "https://www.gutenberg.org/ebooks/71395",
+					"year": 1907
+				},
+				{
+					"title": "Cajuns, 64 Parishes (Louisiana Endowment for the Humanities)",
+					"url": "https://64parishes.org/entry/cajuns",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Safe Minimum Internal Temperatures, FoodSafety.gov",
+					"url": "https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "FDA Food Code, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/retail-food-protection/fda-food-code",
+					"asOf": "2026-10-12"
+				}
+			],
+			"cards": [
+				{
+					"stem": "what-it-is",
+					"front": "What is a Cajun sauce piquante?",
+					"back": "A stew of meat, game or seafood simmered long in a dark roux gravy with the trinity, tomato and plenty of pepper, served over rice."
+				},
+				{
+					"stem": "meaning",
+					"front": "What does piquante mean, and where does the sharpness come from?",
+					"back": "Sharp or pricking: the heat of cayenne and hot pepper, and in some pots a splash of vinegar."
+				},
+				{
+					"stem": "roux",
+					"front": "How dark is the roux for a sauce piquante?",
+					"back": "Dark chocolate, cooked 40 minutes or more: its deep, roasted flavour stands up to long-simmered meat and plenty of pepper."
+				},
+				{
+					"stem": "meats",
+					"front": "Which meats go into a sauce piquante?",
+					"back": "Whatever the country gives: rabbit, squirrel, venison, duck, turtle, alligator or chicken, with shrimp added only at the very end."
+				},
+				{
+					"stem": "vs-creole",
+					"front": "How does sauce piquante differ from a Creole sauce?",
+					"back": "A much darker roux, far more heat and long cooking with meat, so it is a stew; Creole sauce is a bright, mild tomato sauce."
+				},
+				{
+					"stem": "vs-french",
+					"front": "What is the French sauce piquante?",
+					"back": "A brown sauce: white wine and vinegar reduced with shallots, finished with demi-glace, chopped gherkins and herbs. It shares only the name."
+				},
+				{
+					"stem": "simmer",
+					"front": "How long does a sauce piquante simmer?",
+					"back": "About 1 hour for chicken or lean alligator tail, which tightens if simmered longer, and 1.5 to 2.5 hours for rabbit, venison or alligator body meat, until tender."
+				},
+				{
+					"stem": "shrimp",
+					"front": "When do shrimp go into a sauce piquante?",
+					"back": "For the last 3 to 5 minutes only, or they turn tight and rubbery in the long simmer."
+				},
+				{
+					"stem": "heat",
+					"front": "How should the heat be built in a sauce piquante?",
+					"back": "In stages, tasting as it goes: pepper concentrates as the gravy reduces, so a pot seasoned hard at the start can end too fierce."
+				},
+				{
+					"stem": "cook-offs",
+					"front": "Where does sauce piquante gather a crowd?",
+					"back": "At the cook-offs and festivals of Cajun country, where teams simmer great outdoor pots and serve them over rice."
+				},
+				{
+					"stem": "scorched",
+					"front": "A dark roux shows black flecks. What now?",
+					"back": "Throw it out and start again: scorched flour is bitter, and the flecks cannot be stirred away."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-roux",
+					"q": "Which roux colour belongs to a sauce piquante?",
+					"answer": "Dark chocolate",
+					"distractors": [
+						"White",
+						"Blond",
+						"Peanut butter"
+					],
+					"why": "Sauce piquante stands on one of the darkest roux in the Louisiana kitchen, for a roasted depth that carries game and pepper.",
+					"teaches": "roux"
+				},
+				{
+					"stem": "q-meaning",
+					"q": "What does the word piquante tell a guest about the dish?",
+					"answer": "It is sharp with pepper heat",
+					"distractors": [
+						"It is sweet and creamy",
+						"It is smoked over pecan wood",
+						"It is thickened with filé"
+					],
+					"why": "Piquante means sharp or pricking: the dish carries the heat of cayenne and hot pepper, sometimes with a splash of vinegar.",
+					"teaches": "meaning"
+				},
+				{
+					"stem": "q-vs-creole",
+					"q": "How does a sauce piquante differ from a Creole sauce?",
+					"answer": "A darker roux, more heat, a stew with meat",
+					"distractors": [
+						"A lighter roux, finished with butter and cream",
+						"No tomato and no trinity at all",
+						"It is always served cold, as a dip"
+					],
+					"why": "Creole sauce is a bright, mild tomato sauce; sauce piquante takes a dark roux, far more pepper and long cooking with meat.",
+					"teaches": "vs-creole"
+				},
+				{
+					"stem": "q-french",
+					"q": "What finishes the classical French sauce piquante?",
+					"answer": "Chopped gherkins and herbs",
+					"distractors": [
+						"Dijon mustard, as in sauce Robert",
+						"Sliced mushrooms, as in chasseur",
+						"Bone marrow, as in bordelaise"
+					],
+					"why": "The French sauce is a brown sauce of reduced wine and vinegar with shallots and demi-glace, finished with gherkins and herbs.",
+					"teaches": "vs-french"
+				},
+				{
+					"stem": "q-shrimp",
+					"q": "When should shrimp go into a sauce piquante?",
+					"answer": "For the last 3 to 5 minutes",
+					"distractors": [
+						"At the start, with the roux",
+						"Halfway through the long simmer",
+						"Before the trinity goes in"
+					],
+					"why": "Shrimp cook in minutes; added early they spend hours in the pot and turn tight and rubbery.",
+					"teaches": "shrimp"
+				},
+				{
+					"stem": "q-simmer",
+					"q": "Roughly how long does rabbit or venison simmer in a sauce piquante?",
+					"answer": "1.5 to 2.5 hours",
+					"distractors": [
+						"5 to 10 minutes",
+						"20 minutes",
+						"Overnight at a full boil"
+					],
+					"why": "Tough meat needs long, gentle simmering to turn tender; chicken and lean alligator tail need about an hour.",
+					"teaches": "simmer"
+				},
+				{
+					"stem": "q-heat",
+					"q": "Why build the heat of a sauce piquante in stages?",
+					"answer": "Pepper concentrates as the gravy reduces",
+					"distractors": [
+						"Cayenne loses all its heat when cooked",
+						"Salt cancels the pepper out",
+						"The roux absorbs every trace of pepper"
+					],
+					"why": "As the gravy cooks down the pepper grows stronger, so a pot seasoned hard at the start can end too fierce.",
+					"teaches": "heat"
+				},
+				{
+					"stem": "q-scorched",
+					"q": "A dark roux for sauce piquante shows black flecks. What should the cook do?",
+					"answer": "Start a new roux",
+					"distractors": [
+						"Stir the flecks in and carry on",
+						"Add sugar to hide the bitterness",
+						"Add the trinity at once to save it"
+					],
+					"why": "Scorched flour is bitter, and no stirring, sugar or vegetable hides it; the only fix is a fresh roux.",
+					"teaches": "scorched"
+				}
+			]
+		},
+		{
+			"stem": "creole-sauce",
+			"slug": "creole-sauce",
+			"title": "Creole sauce",
+			"say": "As it reads: Creole sauce.",
+			"level": 1,
+			"kind": "sauce",
+			"summary": "The New Orleans tomato sauce: onion, celery and green pepper softened in fat with garlic, then tomatoes, stock, bay, thyme and cayenne, simmered thick. It is the backbone of shrimp Creole and of many Creole fish and egg dishes.",
+			"guest": "Creole sauce is our New Orleans tomato sauce, built on onion, celery and bell pepper with a little cayenne; on the Shrimp & Grits it carries smoky tasso.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Creole sauce is the tomato sauce of New Orleans. It starts with the holy trinity, onion, celery and green pepper, softened in butter or oil with garlic. Then tomatoes and a little stock go in with bay, thyme and cayenne, and it simmers until it is thick enough to coat a spoon. Some cooks start it on a light roux for body, and some add a pinch of sugar to soften the acid of the tomatoes.",
+						"It matters because so much of the city's cooking stands on it. It is the backbone of shrimp Creole, of Creole omelettes and eggs, and of fish baked or poached à la Créole, which simply means in the Creole style. Learn this one sauce and a whole page of the old menus makes sense."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"For about 1 litre (about 1 quart): melt 30 g (1 oz) of butter, or warm 30 ml (2 tbsp) of oil, in a heavy pan over a medium heat. Add 1 large onion, 2 sticks of celery and 1 green pepper, diced, about 450 g (1 lb) in all, and sweat them, stirring, for 8 to 10 minutes, until soft and translucent but not brown. Add 3 cloves of garlic for a minute, just until fragrant; garlic burns fast and turns bitter.",
+						"Add 800 g (28 oz) of tinned or peeled ripe tomatoes, chopped, and 240 ml (1 cup) of chicken, shrimp or fish stock, with 2 bay leaves, a few sprigs of thyme, salt, black pepper and cayenne, a pinch to 2.5 ml (1/2 tsp) to taste. Simmer it gently, uncovered, for 30 to 45 minutes, stirring now and then, until the raw tomato edge has gone and a spoon drawn across the pan leaves a trail. If it tastes sharp, a pinch of sugar or a knob of butter rounds it. Finish with green onion and parsley, and hold it for service at 57°C (135°F) or above.",
+						"For a thicker sauce, start with a blond roux: 30 g (1 oz) each of butter and flour, cooked for about 5 minutes before the trinity goes in. For shrimp Creole, slip 675 g (1.5 lb) of peeled shrimp into the simmering sauce for the last 3 to 4 minutes, only until pink and opaque, about 63°C (145°F), and serve it over rice."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"Know it against its neighbours. An Italian tomato sauce starts from onion or garlic in olive oil and leans on basil or oregano; Creole sauce has the trinity, so it tastes of green pepper and celery, and it carries cayenne heat. A Cajun gravy, as in a sauce piquante or a brown stew, stands on a dark roux and tastes roasted and brown; Creole sauce is bright, red and tangy, the tomato in front. The French sauce tomate is another sauce again, with its own entry."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"Crunchy vegetables in a long-simmered sauce mean the trinity went in raw with the tomatoes: acid slows softening, so they must be sweated soft first. A watery sauce was not reduced, or the shrimp gave up their water; simmer it thicker before the seafood goes in. A sharp, tinny taste comes from underripe tomatoes or a short simmer. Bitterness means browned garlic or a scorched bottom, so keep the heat gentle and stir."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"At Brennan's, Creole sauce is on the New Orleans Shrimp & Grits, a breakfast and lunch entrée: Louisiana shrimp in Creole sauce over a fried pimento cheese grit cake, with fried okra chips. Our sauce carries tasso, the spiced, smoked pork shoulder used a little at a time as a seasoning meat, so it is smoky as well as tangy. That tomato base is what makes the dish Creole rather than the bacon and lemon pan gravy of the Carolina dish."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Describe it simply: a New Orleans tomato sauce with onion, celery and bell pepper and a little cayenne, here seasoned with smoky tasso, and the spice is mild to moderate. The house guide gives TAH-so, and TASS-oh is also heard, so confirm the house habit at lineup. Tasso is pork, so tell a guest who avoids pork before they order. Every question about shellfish, dairy or flour goes to the service note and the kitchen."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Trinity for 1 litre (about 1 quart) of sauce",
+					"value": "About 450 g (1 lb) of onion, celery and green pepper, heavier on onion"
+				},
+				{
+					"label": "Tomatoes to stock",
+					"value": "800 g (28 oz) of tomatoes to 240 ml (1 cup) of stock"
+				},
+				{
+					"label": "A light roux, when used",
+					"value": "30 g (1 oz) each of butter and flour, cooked about 5 minutes to blond"
+				},
+				{
+					"label": "Simmer",
+					"value": "30 to 45 minutes, uncovered, until a spoon leaves a trail"
+				},
+				{
+					"label": "Shrimp in the sauce",
+					"value": "3 to 4 minutes, only until pink"
+				}
+			],
+			"temps": [
+				{
+					"label": "Shrimp cooked through",
+					"c": 63,
+					"f": 145
+				},
+				{
+					"label": "Hold hot for service at or above",
+					"c": 57,
+					"f": 135
+				}
+			],
+			"faults": [
+				{
+					"fault": "Crunchy vegetables",
+					"cause": "The trinity went in raw with the tomatoes, and their acid slowed its softening.",
+					"fix": "Sweat the trinity soft for 8 to 10 minutes before any tomato goes in."
+				},
+				{
+					"fault": "Watery sauce",
+					"cause": "Not reduced enough, or the shrimp released their water into it.",
+					"fix": "Simmer it uncovered until a spoon leaves a trail before the seafood goes in."
+				},
+				{
+					"fault": "Sharp, tinny taste",
+					"cause": "Underripe tomatoes or too short a simmer.",
+					"fix": "Simmer longer, then round it with a pinch of sugar or a knob of butter."
+				},
+				{
+					"fault": "Bitter sauce",
+					"cause": "Browned garlic, or a thick sauce scorched on the bottom.",
+					"fix": "Cook the garlic only until fragrant, keep the heat gentle and stir now and then; if it scorched, start again."
+				},
+				{
+					"fault": "Flat and dull",
+					"cause": "Under-seasoned.",
+					"fix": "Taste and add salt and cayenne, then finish with green onion and parsley."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-bqznncn6",
+					"components": [
+						"Creole sauce",
+						"Tasso"
+					],
+					"how": "Louisiana shrimp sit in a Creole sauce seasoned with tasso, the spiced and smoked pork shoulder, over a fried pimento cheese grit cake, so the sauce tastes smoky as well as tangy."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"the-holy-trinity",
+					"sauce-tomate",
+					"shrimp-and-grits",
+					"tasso",
+					"sauce-piquante",
+					"courtbouillon",
+					"gulf-shrimp",
+					"creole-tomato"
+				],
+				"techniques": [
+					"sweating-aromatics-soft-never-browned"
+				],
+				"lexicon": [
+					"mirepoix-trinity-sofrito-and-friends"
+				],
+				"recipes": [
+					"shrimp-creole",
+					"sofrito-shrimp-creole"
+				],
+				"folios": [
+					"louisiana-larder",
+					"aromatics-standard"
+				],
+				"components": [
+					"Creole sauce",
+					"Tasso"
+				],
+				"terms": [
+					"cured-tasso"
+				]
+			},
+			"sources": [
+				{
+					"title": "Brennan’s, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "For whom the bell grows: A brief history of the Cajun holy trinity, LSU AgCenter",
+					"url": "https://www.lsuagcenter.com/articles/page1621432197656",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "FDA Food Code, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/retail-food-protection/fda-food-code",
+					"asOf": "2026-10-12"
+				}
+			],
+			"cards": [
+				{
+					"stem": "what-it-is",
+					"front": "What is Creole sauce?",
+					"back": "The New Orleans tomato sauce: the trinity and garlic softened in fat, then tomatoes, stock, bay, thyme and cayenne, simmered thick."
+				},
+				{
+					"stem": "trinity",
+					"front": "Which vegetables start a Creole sauce, and how are they cooked?",
+					"back": "Onion, celery and green pepper, the holy trinity, sweated in butter or oil for 8 to 10 minutes until soft but not brown."
+				},
+				{
+					"stem": "garlic",
+					"front": "Why does the garlic go in after the trinity, and only for a minute?",
+					"back": "Garlic burns fast and turns bitter, so it goes in once the trinity is soft, just until fragrant, before the tomatoes."
+				},
+				{
+					"stem": "thick",
+					"front": "How do you know a Creole sauce has simmered long enough?",
+					"back": "After 30 to 45 minutes the raw tomato edge is gone and a spoon drawn across the pan leaves a trail."
+				},
+				{
+					"stem": "roux-sugar",
+					"front": "What two optional touches do some cooks give a Creole sauce?",
+					"back": "A light, blond roux at the start for body, and a pinch of sugar to soften the acid of the tomatoes."
+				},
+				{
+					"stem": "dishes",
+					"front": "Which dishes stand on Creole sauce?",
+					"back": "Shrimp Creole, Creole omelettes and eggs, and many fish dishes cooked à la Créole, meaning in the Creole style."
+				},
+				{
+					"stem": "vs-italian",
+					"front": "How does Creole sauce differ from an Italian tomato sauce?",
+					"back": "It is built on the trinity, so it tastes of green pepper and celery, and it carries cayenne heat rather than basil."
+				},
+				{
+					"stem": "vs-cajun",
+					"front": "How does Creole sauce differ from a Cajun gravy?",
+					"back": "A Cajun gravy stands on a dark roux and tastes roasted and brown; Creole sauce is bright and tangy, with the tomato in front."
+				},
+				{
+					"stem": "acid",
+					"front": "Why must the trinity soften before the tomatoes go in?",
+					"back": "Acid slows softening, so trinity added with the tomatoes stays firm long after it should be tender; sweat it soft first."
+				},
+				{
+					"stem": "shrimp",
+					"front": "How long does shrimp cook in a Creole sauce?",
+					"back": "Only 3 to 4 minutes in the simmering sauce, until pink; any longer and it turns tight and rubbery."
+				},
+				{
+					"stem": "brennans",
+					"front": "What makes the Creole sauce on our New Orleans Shrimp & Grits different?",
+					"back": "It carries tasso, the spiced, smoked pork shoulder, so it is smoky as well as tangy; tell a guest who avoids pork before they order, and send further questions to the kitchen."
+				},
+				{
+					"stem": "tasso-say",
+					"front": "How is tasso said at Brennan's?",
+					"back": "The house guide gives TAH-so; TASS-oh is also heard in Louisiana, so confirm the house habit at lineup."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-trinity",
+					"q": "Which three vegetables start a Creole sauce?",
+					"answer": "Onion, celery and green pepper",
+					"distractors": [
+						"Onion, carrot and celery stalk",
+						"Garlic, basil and fennel bulb",
+						"Leek, potato and white turnip"
+					],
+					"why": "The holy trinity starts every Creole sauce; onion, carrot and celery is the French mirepoix.",
+					"teaches": "trinity"
+				},
+				{
+					"stem": "q-acid",
+					"q": "Why does trinity added raw with the tomatoes stay firm so long?",
+					"answer": "The tomatoes' acid keeps them firm",
+					"distractors": [
+						"Tomatoes cool the pan too much",
+						"Celery never softens in liquid",
+						"Salt in the stock hardens them"
+					],
+					"why": "Acid slows the softening of vegetables, so the trinity must be sweated soft before the tomatoes go in.",
+					"teaches": "acid"
+				},
+				{
+					"stem": "q-garlic",
+					"q": "Why does the garlic go in only after the trinity has softened?",
+					"answer": "It burns fast and turns bitter",
+					"distractors": [
+						"It thickens the sauce too much",
+						"It turns the sauce green",
+						"It stops the tomatoes cooking"
+					],
+					"why": "Garlic needs only a minute to turn fragrant; given the trinity's ten it browns and makes the sauce bitter.",
+					"teaches": "garlic"
+				},
+				{
+					"stem": "q-italian",
+					"q": "What sets a Creole sauce apart from an Italian tomato sauce?",
+					"answer": "The trinity and cayenne",
+					"distractors": [
+						"Olive oil and fresh basil",
+						"Cream and nutmeg",
+						"Anchovy and capers"
+					],
+					"why": "Green pepper and celery give it a Louisiana taste, and cayenne a gentle heat, where an Italian sauce leans on olive oil and basil.",
+					"teaches": "vs-italian"
+				},
+				{
+					"stem": "q-cajun",
+					"q": "Compared with a Cajun gravy on a dark roux, how does a Creole sauce taste?",
+					"answer": "Bright and tangy, the tomato in front",
+					"distractors": [
+						"Roasted and brown from the dark roux",
+						"Creamy and mild, with cheese",
+						"Sweet and sticky like a glaze"
+					],
+					"why": "A Cajun gravy tastes of its dark roux; Creole sauce is a tomato sauce first, bright and red.",
+					"teaches": "vs-cajun"
+				},
+				{
+					"stem": "q-done",
+					"q": "How can a cook tell a Creole sauce has simmered long enough?",
+					"answer": "A spoon drawn across leaves a trail",
+					"distractors": [
+						"It has turned a deep roux brown",
+						"It foams up the sides of the pan",
+						"The garlic starts to brown"
+					],
+					"why": "After 30 to 45 minutes the sauce is thick enough to hold a trail and the raw tomato edge has cooked away.",
+					"teaches": "thick"
+				},
+				{
+					"stem": "q-sugar",
+					"q": "Why might a cook add a pinch of sugar to a Creole sauce?",
+					"answer": "To soften the acid of the tomatoes",
+					"distractors": [
+						"To thicken it as a roux would",
+						"To caramelise it to a dark brown",
+						"To keep the shrimp sweet and tender"
+					],
+					"why": "A pinch of sugar rounds the sharpness of tomatoes, especially underripe ones, without making the sauce taste sweet.",
+					"teaches": "roux-sugar"
+				},
+				{
+					"stem": "q-shrimp",
+					"q": "How long do peeled shrimp need in a simmering Creole sauce?",
+					"answer": "3 to 4 minutes, until pink",
+					"distractors": [
+						"8 to 10 minutes, until curled tight",
+						"12 to 15 minutes, until firm",
+						"20 to 30 minutes, until tender"
+					],
+					"why": "Shrimp cook in minutes; longer in the sauce and they turn tight and rubbery.",
+					"teaches": "shrimp"
+				},
+				{
+					"stem": "q-brennans",
+					"q": "What gives the Creole sauce on our New Orleans Shrimp & Grits its smoky note?",
+					"answer": "Tasso",
+					"distractors": [
+						"Andouille",
+						"Bacon",
+						"Smoked paprika"
+					],
+					"why": "Tasso, the spiced and smoked pork shoulder, seasons the sauce; andouille is the smoky backbone of the Seafood Gumbo instead.",
+					"teaches": "brennans"
+				}
+			]
+		}
+	]
+}

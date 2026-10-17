@@ -1,0 +1,54 @@
+{
+	"rungs": [
+		{
+			"key": "white",
+			"name": "White roux",
+			"minutes": [2, 5],
+			"cue": "As pale as the flour, bubbling gently into a smooth paste like wet sand, with no colour at all",
+			"smell": "The raw, pasty smell of flour gives way to cooked pastry or plain biscuit",
+			"thickening": "The strongest on the ladder: the starch is barely changed, so a little roux thickens a lot of milk",
+			"uses": ["bechamel", "roux"],
+			"dishes": []
+		},
+		{
+			"key": "blond",
+			"name": "Blond roux",
+			"minutes": [5, 10],
+			"cue": "Pale straw to light gold, the colour of sand, a little looser in the pan",
+			"smell": "Toasted bread with a hint of popcorn, and no raw flour left",
+			"thickening": "Nearly as strong as white: the starch is only lightly toasted, so it still binds stock into a coating sauce",
+			"uses": ["veloute", "creole-sauce"],
+			"dishes": []
+		},
+		{
+			"key": "peanut-butter",
+			"name": "Peanut butter roux",
+			"minutes": [15, 20],
+			"cue": "Light tan, the colour of smooth peanut butter, running more freely off the spoon",
+			"smell": "Roasted peanuts, deeper and nuttier than toast",
+			"thickening": "Noticeably weaker than blond, yet still enough body for a thick, smothered sauce",
+			"uses": ["etouffee", "espagnole"],
+			"dishes": []
+		},
+		{
+			"key": "milk-chocolate",
+			"name": "Milk chocolate roux (medium brown)",
+			"minutes": [25, 35],
+			"cue": "Medium brown, the colour of milk chocolate or a hazelnut shell, loose and glossy in the pot",
+			"smell": "Toasted nuts turning towards cocoa, roasted and deep",
+			"thickening": "Much weaker: from here a roux gives more flavour than body, so recipes call for more of it",
+			"uses": ["grillades", "courtbouillon"],
+			"dishes": []
+		},
+		{
+			"key": "dark-brick",
+			"name": "Dark chocolate roux (brick)",
+			"minutes": [40, 60],
+			"cue": "Deep red brown, the colour of dark chocolate or old brick, thin and shiny; black flecks mean it has burnt",
+			"smell": "Deep roast, close to coffee and cocoa; a sharp, acrid smell means it has gone too far",
+			"thickening": "The weakest: a dark roux mostly colours and flavours, so even a thin gumbo takes a generous amount",
+			"uses": ["gumbo", "seafood-gumbo", "sauce-piquante", "turtle-soup"],
+			"dishes": [{ "dish": "d-r3h9vj7a", "components": ["Roux"] }]
+		}
+	]
+}

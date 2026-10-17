@@ -1,0 +1,209 @@
+{
+	"steps": [
+		{
+			"stem": "make-a-bechamel",
+			"entry": "bechamel",
+			"title": "Make a béchamel",
+			"prompt": "Put the stages of a classic béchamel in order. One stage does not belong.",
+			"steps": [
+				"Pin a bay leaf to half an onion with a clove, warm it in the milk to infuse, then lift it out",
+				"With the milk infused, melt the butter over a low heat and stir in an equal weight of flour",
+				"Cook the roux for 2 to 3 minutes, stirring, until it smells of biscuit but shows no colour",
+				"Add the warm milk in three or four stages, whisking each one smooth before the next",
+				"Keep whisking as it comes up to a bare simmer and thickens",
+				"Simmer it gently for at least 15 to 20 minutes, stirring the corners, until no floury taste remains",
+				"Season with salt, white pepper and nutmeg, and strain it through a fine sieve",
+				"Press parchment onto the surface and hold it in a bain-marie at 57°C (135°F) or above"
+			],
+			"distractor": "Cook the roux until it turns the colour of milky coffee",
+			"why": "The milk takes the onion's flavour before it meets the roux, and the white roux cooks without colour. The milk goes in by stages so the starch spreads before it swells, the long gentle simmer cooks out the flour, and seasoning, straining and a covered surface come last."
+		},
+		{
+			"stem": "make-a-veloute",
+			"entry": "veloute",
+			"title": "Make a velouté",
+			"prompt": "Put the stages of a classic velouté in order. One stage does not belong.",
+			"steps": [
+				"Melt the butter and stir in an equal weight of flour",
+				"Cook the roux over a low to moderate heat for 3 to 5 minutes, until pale gold and nutty",
+				"Take the roux off the heat and let it cool for a minute",
+				"Whisk in the hot white stock a ladle at a time, smooth after each",
+				"Bring it to the boil, still whisking, then lower it to a gentle simmer",
+				"Simmer it off centre for at least 30 minutes, skimming fat and scum from the quiet side",
+				"Strain it through a fine sieve, season it and protect the surface from a skin"
+			],
+			"distractor": "Roast the bones dark brown first so the stock carries more colour",
+			"why": "A blond roux, cooled a little, takes hot stock in stages without lumps. The long simmer with the pan off centre gathers fat and scum on one side to be skimmed away, dépouiller, which makes it glossy; salt waits because the sauce concentrates."
+		},
+		{
+			"stem": "make-an-espagnole",
+			"entry": "espagnole",
+			"title": "Make an espagnole",
+			"prompt": "Put the stages of a classic espagnole in order. One stage does not belong.",
+			"steps": [
+				"Brown the mirepoix, with diced bacon or ham if used, in fat over a moderate heat",
+				"Stir in the flour and cook it for 8 to 15 minutes, to a hazelnut brown roux",
+				"Whisk in the hot brown stock in stages, smooth after each",
+				"With the stock whisked in smooth, add the tomato and a bouquet garni and bring it to the boil",
+				"Lower it to a lazy simmer, off centre, for two to three hours or more, skimming steadily",
+				"Strain it through a fine sieve, pressing lightly",
+				"Cool it quickly if it is not used at once"
+			],
+			"distractor": "Salt it fully at the start so the seasoning cooks in",
+			"why": "Colour comes first, from browned mirepoix and a roux taken to hazelnut, before any liquid goes in. The stock follows in stages, then the tomato and herbs, and hours of off centre simmering and skimming give depth and gloss. Salt waits, because the reduction concentrates it."
+		},
+		{
+			"stem": "take-espagnole-to-demi-glace",
+			"entry": "demi-glace",
+			"title": "Take espagnole to demi-glace",
+			"prompt": "Put the stages of taking espagnole to demi-glace in order. One stage does not belong.",
+			"steps": [
+				"Combine equal parts espagnole and brown stock in a heavy pan",
+				"Bring it to a simmer with the pan set slightly off centre",
+				"Reduce it slowly by about half, skimming the quiet side every 10 to 15 minutes, until it is glossy and coats a spoon",
+				"Pass it through a chinois lined with muslin",
+				"Off the heat, once strained, finish it with Madeira or dry sherry",
+				"Hold it at 57°C (135°F) or above for service, or cool it quickly and chill it"
+			],
+			"distractor": "Boil it hard so it reduces faster",
+			"why": "Demi-glace is espagnole and brown stock reduced together by half. A gentle simmer with the pan off centre lets the fat be skimmed rather than beaten in, the sauce is strained fine, and the wine goes in last, off the heat, so its perfume survives."
+		},
+		{
+			"stem": "build-a-hollandaise",
+			"entry": "hollandaise",
+			"title": "Build a hollandaise",
+			"prompt": "Put the stages of a classic hollandaise in order. One stage does not belong.",
+			"steps": [
+				"Reduce white wine vinegar with crushed white peppercorns and a little water, then strain it and let it cool",
+				"While the reduction cools, clarify the butter and keep it warm, not hot",
+				"Whisk the yolks with the reduction in a bowl over barely simmering water, the bowl never touching it",
+				"Keep whisking until the yolks thicken into a pale ribbon, at about 60 to 65°C (140 to 149°F)",
+				"Off the heat, whisk in the warm butter a few drops at a time until it takes, then in a thin stream",
+				"Season with salt, lemon juice and a pinch of cayenne, loosening it with warm water if it stiffens",
+				"Hold it warm, around 60°C (140°F), in a bain-marie away from direct heat"
+			],
+			"distractor": "Bring the yolks to a rolling boil so they thicken faster",
+			"why": "The reduction is made and cooled, and the butter clarified, before the yolks meet any heat. The yolks are taken to a ribbon over gentle heat, and only then does the butter go in, slowly and off the heat; the finished sauce is held warm, never hot."
+		},
+		{
+			"stem": "the-bearnaise-reduction",
+			"entry": "bearnaise",
+			"title": "The béarnaise reduction",
+			"prompt": "Put the stages of a béarnaise, from its reduction to the finish, in order. One stage does not belong.",
+			"steps": [
+				"Chop the shallots finely and crush the peppercorns",
+				"Put the white wine, tarragon vinegar, shallot, tarragon stalks, chervil and pepper in a small pan",
+				"Boil it down to about 30 ml (2 tbsp), almost dry and fiercely sharp",
+				"Let it cool a little, then strain it, or leave the shallot in for texture",
+				"Whisk it with the yolks over barely simmering water until they thicken to a ribbon",
+				"Off the heat, mount the warm butter in, slowly at first",
+				"Finish with chopped fresh tarragon and chervil, and taste for salt"
+			],
+			"distractor": "Finish it with dried tarragon in place of fresh",
+			"why": "The reduction is the flavour, so it is boiled almost dry: the acid concentrates and the water that would slacken the sauce is gone. It cools a little before it meets the yolks, the butter goes in off the heat, and the fresh herbs wait for the end."
+		},
+		{
+			"stem": "finish-a-bearnaise-as-choron",
+			"entry": "choron-and-foyot",
+			"title": "Finish a béarnaise as Choron",
+			"prompt": "Put the stages of a sauce Choron in order. One stage does not belong.",
+			"steps": [
+				"Cook chopped ripe tomatoes in a wide pan, stirring often, until a spoon drawn through leaves a clear line",
+				"Pass the tomato through a fine sieve and let it cool to warm",
+				"With the tomato ready, reduce the white wine, tarragon vinegar, shallot and tarragon almost dry",
+				"Whisk the yolks with the reduction over barely simmering water to a ribbon",
+				"Off the heat, mount the warm butter, slowly at first",
+				"Fold the warm tomato through the béarnaise, about one part to six",
+				"Hold it warm, around 60°C (140°F), in a bain-marie, never on direct heat"
+			],
+			"distractor": "Stir in chopped raw tomato straight from the fridge",
+			"why": "The tomato is cooked down first, because water is the one thing a yolk and butter sauce cannot spare, and a finished béarnaise will not wait while tomato reduces. The tomato goes in warm and last, off the heat, and the sauce is held warm, never hot."
+		},
+		{
+			"stem": "build-a-new-orleans-marchand-de-vin",
+			"entry": "marchand-de-vin",
+			"title": "Build a New Orleans marchand de vin",
+			"prompt": "Put the stages of a New Orleans marchand de vin in order. One stage does not belong.",
+			"steps": [
+				"Cook the onion, garlic, ham and mushrooms in butter until soft and lightly browned",
+				"Stir in the flour and cook it for 5 to 8 minutes, until it smells nutty and turns light brown",
+				"Pour in the red wine and boil it down by half",
+				"Add the beef stock, a bay leaf and a sprig of thyme",
+				"Simmer it gently for 20 to 30 minutes, skimming, until it coats the back of a spoon",
+				"Lift out the herbs and season with salt, black pepper and a pinch of cayenne"
+			],
+			"distractor": "Add the wine and the stock together so they reduce as one",
+			"why": "The aromatics and ham are browned before the flour goes in, and the roux is cooked before any liquid. The wine is reduced on its own first, to drive off its raw edge, then the stock goes in and the sauce simmers to coating body."
+		}
+	],
+	"match": [
+		{
+			"stem": "hollandaise-family",
+			"title": "The hollandaise family",
+			"prompt": "Match each sauce of the hollandaise family to what it adds to its parent, hollandaise or béarnaise.",
+			"left": "Sauce",
+			"right": "What it adds",
+			"pairs": [
+				["Béarnaise", "Its own reduction of tarragon vinegar, white wine and shallot, finished with fresh herbs", "bearnaise"],
+				["Choron", "Tomato cooked down to a thick paste", "choron-and-foyot"],
+				["Foyot", "Glace de viande, a reduced meat glaze; also called Valois", "choron-and-foyot"],
+				["Paloise", "Mint in place of tarragon, in the reduction and the finish", "warm-emulsion-family"],
+				["Mousseline", "Lightly whipped cream folded in; also called Chantilly", "warm-emulsion-family"],
+				["Maltaise", "Blood orange juice and grated zest", "warm-emulsion-family"],
+				["Mikado", "Mandarin juice and zest", "warm-emulsion-family"],
+				["Noisette", "Brown butter, beurre noisette, in place of plain butter", "warm-emulsion-family"]
+			]
+		},
+		{
+			"stem": "white-families",
+			"title": "The béchamel and velouté families",
+			"prompt": "Match each small sauce of béchamel or velouté to what it adds to its mother.",
+			"left": "Sauce",
+			"right": "What it adds",
+			"pairs": [
+				["Mornay", "Gruyère and Parmesan melted in off the heat, finished with butter", "bechamel-family"],
+				["Soubise", "A purée of onions cooked soft in butter without colour", "bechamel-family"],
+				["Nantua", "Cream and crayfish butter, garnished with crayfish tails", "bechamel-family"],
+				["Cardinal", "Fish fumet, lobster butter and a pinch of cayenne", "bechamel-family"],
+				["Suprême", "Cream and mushroom liquor reduced into chicken velouté, finished with butter", "veloute-family"],
+				["Allemande", "Egg yolks and lemon bound into veal velouté", "veloute-family"],
+				["Aurore", "Thick tomato purée, turning it pink", "veloute-family"],
+				["Bercy", "Shallot and white wine reduced into fish velouté, finished with butter and parsley", "veloute-family"]
+			]
+		},
+		{
+			"stem": "brown-family",
+			"title": "The brown family",
+			"prompt": "Match each brown sauce to what it adds to the brown base.",
+			"left": "Sauce",
+			"right": "What it adds",
+			"pairs": [
+				["Bordelaise", "A red wine, shallot and thyme reduction, finished with poached bone marrow", "bordelaise"],
+				["Marchand de vin", "A red wine and shallot reduction; in New Orleans, onion, garlic, often ham and mushroom", "marchand-de-vin"],
+				["Robert", "Onion softened pale, a white wine and vinegar reduction, mustard off the heat", "brown-sauce-family"],
+				["Chasseur", "Mushrooms, shallot, white wine, tomato and tarragon", "brown-sauce-family"],
+				["Diable", "A white wine and shallot reduction with a good pinch of cayenne", "brown-sauce-family"],
+				["Poivrade", "A browned mirepoix, a vinegar and marinade reduction, crushed peppercorns last", "brown-sauce-family"],
+				["Bigarade", "Bitter orange juice and zest with a gastrique, for duck", "brown-sauce-family"],
+				["Madère", "Madeira stirred in off the heat, never boiled", "fortified-wine-sauces"]
+			]
+		},
+		{
+			"stem": "sauce-namesakes",
+			"title": "Sauces named for places and people",
+			"prompt": "Match each sauce to the place or person it is named for. Some of these names rest on tradition.",
+			"left": "Sauce",
+			"right": "Place or person",
+			"pairs": [
+				["Béchamel", "Louis de Béchameil, steward to Louis XIV, by tradition", "bechamel"],
+				["Béarnaise", "Béarn, the region of south-west France where Henri IV was born", "bearnaise"],
+				["Choron", "Alexandre Étienne Choron, chef of the Voisin in Paris", "choron-and-foyot"],
+				["Foyot", "The Restaurant Foyot, facing the Senate in Paris", "choron-and-foyot"],
+				["Nantua", "A town in the Ain known for its crayfish", "bechamel-family"],
+				["Maltaise", "Malta and its blood oranges", "warm-emulsion-family"],
+				["Périgueux", "The capital of Périgord, the black truffle country", "fortified-wine-sauces"],
+				["Bordelaise", "Bordeaux and its red wine", "bordelaise"]
+			]
+		}
+	]
+}

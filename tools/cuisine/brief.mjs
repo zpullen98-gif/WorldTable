@@ -171,7 +171,7 @@ const brief = {
 		build: 'node tools/derive/cuisine.mjs --mint'
 	},
 	shapes: {
-		entry: '{ stem, slug, title, say, level (1-4), kind, summary, guest, sections: [{ key, paras: [string] }], ratios?: [{ label, value }], temps?: [{ label, c, f }], faults?: [{ fault, cause, fix }], brennans?: [{ dish, components, how }], seeAlso?: { entries, techniques, lexicon, recipes, kitchen, plates, folios, deck, components }, quote?: { text, source, year }, sources: [{ title, url, asOf?, year?, evidence? }], cards: [{ stem, front, back }], questions: [{ stem, q, answer, distractors: [3], why, teaches }] }',
+		entry: '{ stem, slug, title, say, level (1-4), kind, summary, guest, sections: [{ key, paras: [string] }], ratios?: [{ label, value }], temps?: [{ label, c, f }], faults?: [{ fault, cause, fix }], brennans?: [{ dish, components, how }], seeAlso?: { entries, techniques, lexicon, recipes, kitchen, plates, folios, deck, components, terms }, quote?: { text, source, year }, sources: [{ title, url, asOf?, year?, evidence? }], cards: [{ stem, front, back }], questions: [{ stem, q, answer, distractors: [3], why, teaches }] }',
 		steps: '{ stem, entry, title, prompt, steps: [4 to 9 strings in order], distractor?: string, why }',
 		match: '{ stem, title, prompt, left, right, pairs: [[left, right] or [left, right, entry slug]] }',
 		part: '{ entries: [...], steps?: [...], match?: [...] } in tools/cuisine/out/<chapter>/<name>.json; tree and ladder go to tools/cuisine/out/tree.json and ladder.json whole',
@@ -199,7 +199,8 @@ const brief = {
 		plates: relevant([...refs.plates].map(([k, v]) => [k, v]), 8),
 		folios: [...refs.folios].map(([k, v]) => [k, v]),
 		deck: relevant([...refs.deck].map(([k, v]) => [k, v]), 20),
-		components: relevant(comps.map((c) => [c.name, c.name, c.kind]), 30)
+		components: relevant(comps.map((c) => [c.name, c.name, c.kind]), 30),
+		terms: relevant([...refs.foundations].map(([k, v]) => [k, v]), 15)
 	},
 	exemplar
 };

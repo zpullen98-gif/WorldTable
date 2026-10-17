@@ -1,0 +1,219 @@
+{
+	"steps": [
+		{
+			"stem": "send-a-table-through-the-pass",
+			"entry": "the-pass",
+			"title": "Send a table through the pass",
+			"prompt": "Put the stages of sending one table's course through the pass in order, from the ticket to the seat. One stage does not belong.",
+			"steps": [
+				"Read the new ticket to the line as it arrives, so every station can get ready",
+				"Wait until the table is ready for the course, the soup bowls cleared and nobody away",
+				"Fire the course, the slowest dish first and the quicker ones after, timed to land together",
+				"Call for the table's plates and gather them at the pass as they come up",
+				"Check every plate against the ticket, and the flagged allergy plate with the kitchen as well",
+				"Call hands, and give the plates to servers who know the table and its seat numbers",
+				"Send each plate to its seat by number, the flagged plate carried alone and never stacked"
+			],
+			"distractor": "Fire the whole table's mains the moment the ticket arrives, before the starters have gone",
+			"why": "The line hears the ticket early so it can prepare, but nothing is fired until the table is ready, and the slowest dish goes first so every plate lands at once. Each plate is checked hot, right and clean before hands are called, and the flagged allergy plate, checked with the kitchen, travels alone."
+		}
+	],
+	"match": [
+		{
+			"stem": "stations",
+			"title": "Stations of the brigade",
+			"prompt": "Match each station of the classical brigade to what it cooks.",
+			"left": "Station",
+			"right": "What it cooks",
+			"pairs": [
+				[
+					"Saucier",
+					"Sauces and the sautéed dishes made to order",
+					"the-stations"
+				],
+				[
+					"Poissonnier",
+					"Fish and seafood",
+					"the-stations"
+				],
+				[
+					"Rôtisseur",
+					"Roast meat and poultry, with their jus",
+					"the-stations"
+				],
+				[
+					"Grillardin",
+					"Whatever is cooked over the grill",
+					"the-stations"
+				],
+				[
+					"Friturier",
+					"Whatever comes out of the fryer",
+					"the-stations"
+				],
+				[
+					"Entremetier",
+					"Vegetables, soups, eggs and starches",
+					"the-stations"
+				],
+				[
+					"Garde manger",
+					"Salads, terrines and cold sauces",
+					"the-stations"
+				],
+				[
+					"Pâtissier",
+					"Pastry and desserts",
+					"the-stations"
+				]
+			]
+		},
+		{
+			"stem": "line-calls",
+			"title": "Calls on the line",
+			"prompt": "Match each call heard on the line to what it means.",
+			"left": "Call",
+			"right": "What it means",
+			"pairs": [
+				[
+					"Oui, chef",
+					"I heard the instruction and I am on it",
+					"calls-on-the-line"
+				],
+				[
+					"Behind",
+					"Someone is passing at your back, so hold still",
+					"calls-on-the-line"
+				],
+				[
+					"Hot",
+					"A pan, tray or pot just off the heat is coming through, so give way",
+					"calls-on-the-line"
+				],
+				[
+					"Fire",
+					"Start cooking that table's next course now",
+					"calls-on-the-line"
+				],
+				[
+					"All day",
+					"The total to cook across every open ticket",
+					"calls-on-the-line"
+				],
+				[
+					"On the fly",
+					"As fast as possible, ahead of the queue",
+					"calls-on-the-line"
+				],
+				[
+					"Eighty-six",
+					"The kitchen has run out of that item",
+					"calls-on-the-line"
+				],
+				[
+					"In the weeds",
+					"A station is overwhelmed and cannot keep up",
+					"calls-on-the-line"
+				]
+			]
+		},
+		{
+			"stem": "menu-french-plain",
+			"title": "Menu French in plain English",
+			"prompt": "Match each French word on the menu to what a server says it means in plain English.",
+			"left": "French",
+			"right": "Plain English",
+			"pairs": [
+				[
+					"À la",
+					"In the style of",
+					"menu-french"
+				],
+				[
+					"Amuse-bouche",
+					"A single bite the chef sends before the meal",
+					"menu-french"
+				],
+				[
+					"Prix fixe",
+					"A set run of courses at one price",
+					"menu-french"
+				],
+				[
+					"Jus",
+					"The natural juice of a roast, thinner than a sauce",
+					"menu-french"
+				],
+				[
+					"Entrée",
+					"On an American menu, the main course",
+					"menu-french"
+				],
+				[
+					"Confit",
+					"Cooked slowly in fat, as duck legs are",
+					"menu-french"
+				],
+				[
+					"Flambé",
+					"Flamed: spirit lit in a hot pan",
+					"menu-french"
+				],
+				[
+					"En papillote",
+					"Sealed in a parcel and baked, so it steams in its own juices",
+					"menu-french"
+				]
+			]
+		},
+		{
+			"stem": "garnish-names",
+			"title": "Old names and what they promise",
+			"prompt": "Match each classical name on a menu to what it promises on the plate.",
+			"left": "Name",
+			"right": "What it promises",
+			"pairs": [
+				[
+					"Florentine",
+					"Spinach",
+					"old-dish-names"
+				],
+				[
+					"Dubarry",
+					"Cauliflower",
+					"old-dish-names"
+				],
+				[
+					"Clamart",
+					"Peas",
+					"old-dish-names"
+				],
+				[
+					"Argenteuil",
+					"Asparagus",
+					"old-dish-names"
+				],
+				[
+					"Crécy",
+					"Carrots",
+					"old-dish-names"
+				],
+				[
+					"Véronique",
+					"Grapes",
+					"old-dish-names"
+				],
+				[
+					"Rossini",
+					"Foie gras and truffle",
+					"old-dish-names"
+				],
+				[
+					"Provençale",
+					"Tomato, garlic and olive oil",
+					"old-dish-names"
+				]
+			]
+		}
+	]
+}

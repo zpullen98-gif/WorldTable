@@ -1,0 +1,972 @@
+{
+	"entries": [
+		{
+			"stem": "cooling-stocks-and-sauces",
+			"slug": "cooling-stocks-and-sauces",
+			"title": "Cooling stocks and sauces",
+			"say": "As it reads: cooling stocks and sauces.",
+			"level": 2,
+			"kind": "safety",
+			"summary": "Cooked food that will be kept must lose its heat quickly, in two timed stages, so the bacteria that survive cooking never get the warm hours they need. Big, thick pots need the most help.",
+			"guest": "How the kitchen makes and keeps its soups and sauces is the chef's to answer, so let me ask and come straight back to you.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Cooling is the stretch between the stove and the fridge, where big batches most often go wrong. Cooking kills most bacteria but not all: Clostridium perfringens and Bacillus cereus form spores, tough resting cells that survive the boil and wake as the food cools. In a deep pot that cools slowly they multiply through the warm hours, and a stock or a pot of beans that looked fine can make a dining room ill.",
+						"The FDA Food Code, the model behind most American health codes, calls such foods TCS, short for time and temperature control for safety: stocks, sauces, soups, cooked rice, beans and meat. Cooling is a clock nobody can see on the plate, so it is timed, probed and written down."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"The Food Code sets two stages. First, from 57°C (135°F) to 21°C (70°F) within 2 hours. Then on to 5°C (41°F) or below within a total of 6 hours, so if the first stage takes its full 2 hours, 4 hours remain for the second. The first stage has the shorter clock because it covers the range where bacteria grow quickest. These figures are the 2022 Food Code's; FDA issued a new edition on 17 September 2026 that adds an alternative cooling process, and the kitchen follows its own health authority's code and its written procedure.",
+						"Heat leaves through surfaces, so every tool gives the food more surface or more cold. Stand the pot in an ice bath, ice and water up to the level of the food, and stir: stirring carries hot liquid from the middle to the cold wall. An ice wand, a sealed paddle of frozen water, is stirred through the pot. Pour thick food into shallow metal pans, about 5 cm (2 inches) deep, and divide big batches. A blast chiller does the same work with fast, cold air, and where the recipe allows, ice can stand in for some of the water.",
+						"In the walk-in, cooling pans sit uncovered or loosely covered on a top shelf, with air around them and nothing stacked on top; a tight lid traps the heat. Probe the centre about every hour, so a slow pan is caught in time, and log each reading with its time. If the food is still above 21°C (70°F) at 2 hours, tell the chef at once; the written procedure decides whether it is reheated and cooled again or discarded."
+					]
+				},
+				{
+					"key": "safety",
+					"paras": [
+						"Thin stock cools fastest because it circulates, carrying heat to the cold wall. Thick food barely moves, so heat has to creep out through the food itself. Gumbo, roux-thickened sauces such as velouté and espagnole, red beans, rice and braises can keep a warm core for hours in a deep pot. They need the most care: shallow pans at once, frequent stirring and the probe in the centre, never at the edge.",
+						"Never put a full, hot stockpot straight into the walk-in. A walk-in holds cold food cold; it is not built to pull the heat out of 20 litres (about 5 gallons) of stock. The pot warms the air and everything near it, the cream and the raw fish included, while its own centre stays warm far into the night.",
+						"Cooled food wanted hot again is reheated quickly on the stove or in the oven, never in the steam table, until every part reaches 74°C (165°F) for 15 seconds, within 2 hours. Every container in the walk-in is labelled with what it is, the date and time it was made and the cook's initials. Ready-to-eat food kept longer than 24 hours is also marked with its last day, at most 7 days at 5°C (41°F) or below, with the day of making counted as the first."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"Most cooling failures are quiet: a pot left on the range to cool a little loses its first hour, a lid traps the heat, the ice melts unnoticed, a warm core goes unprobed. A stock that smells sour or looks cloudy and fizzy has cooled too slowly or been kept too long. It is thrown away, never boiled again in hope: boiling does not undo the toxins some bacteria have already made."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"A server never sees the cooling, but its questions reach the table: was the soup made today, has it been reheated? Never guess; take the question to the kitchen. Out front, a lukewarm soup goes back, and an unlabelled container in a side station goes to the chef."
+					]
+				}
+			],
+			"temps": [
+				{
+					"label": "Cooling starts from",
+					"c": 57,
+					"f": 135
+				},
+				{
+					"label": "Stage one: reach this within 2 hours",
+					"c": 21,
+					"f": 70
+				},
+				{
+					"label": "Stage two: reach this or below within a total of 6 hours",
+					"c": 5,
+					"f": 41
+				},
+				{
+					"label": "Reheat for hot holding: every part, for 15 seconds",
+					"c": 74,
+					"f": 165
+				}
+			],
+			"faults": [
+				{
+					"fault": "The centre is still warm the next morning",
+					"cause": "A deep pot or a full container went into the walk-in, so the core never lost its heat.",
+					"fix": "Divide hot food into shallow pans in an ice bath straight off the stove, probe the centre and log each reading."
+				},
+				{
+					"fault": "The walk-in reads warm during prep",
+					"cause": "Hot pots were put inside to cool, warming the air and everything around them.",
+					"fix": "Cool hot food in an ice bath or a blast chiller first, and move it to the walk-in in shallow pans."
+				},
+				{
+					"fault": "The ice bath has turned to warm water",
+					"cause": "Too little ice, or the melt was never topped up.",
+					"fix": "Drain some water, add fresh ice, keep the level up to the food line and stir every few minutes."
+				},
+				{
+					"fault": "Stock smells sour or looks cloudy and fizzy",
+					"cause": "It cooled too slowly or was kept too long, and bacteria grew in it.",
+					"fix": "Throw it away. Boiling again does not undo the toxins some bacteria have already made."
+				},
+				{
+					"fault": "A container in the walk-in has no label",
+					"cause": "It was meant to be labelled later, and never was.",
+					"fix": "If nobody can say what it is and when it was made, it is discarded. Label before it goes in."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"danger-zone",
+					"white-stock",
+					"brown-stock",
+					"gumbo",
+					"red-beans-and-rice",
+					"roux"
+				],
+				"lexicon": [
+					"food-safety-the-chef-owners-non-negotiables",
+					"costing-time-prep-lists-batch-and-cook-chill",
+					"stocks-blanc-brun-broth-and-demi"
+				]
+			},
+			"sources": [
+				{
+					"title": "FDA Food Code 2022, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/fda-food-code/food-code-2022",
+					"asOf": "2026-10-12",
+					"year": 2022,
+					"evidence": "3-501.14 Cooling. (A) Cooked TIME/TEMPERATURE CONTROL FOR SAFETY FOOD shall be cooled: (1) Within 2 hours from 57°C (135°F) to 21°C (70°F); and (2) Within a total of 6 hours from 57°C (135°F) to 5°C (41°F) or less. (B) TIME/TEMPERATURE CONTROL FOR SAFETY FOOD shall be cooled within 4 hours to 5°C (41°F) or less if prepared from ingredients at ambient temperature, such as reconstituted FOODS and canned tuna. 3-501.15 Cooling Methods. (A) ... (1) Placing the FOOD in shallow pans; (2) Separating the FOOD into smaller or thinner portions; (3) Using rapid cooling EQUIPMENT; (4) Stirring the FOOD in a container placed in an ice water bath; (5) Using containers that facilitate heat transfer; (6) Adding ice as an ingredient; or (7) Other effective methods. (B) ... FOOD containers in which FOOD is being cooled shall be ... Arranged in the EQUIPMENT to provide maximum heat transfer through the container walls; and ... Loosely covered, or uncovered if protected from overhead contamination ... 3-403.11 ... cooked and cooled TIME/TEMPERATURE CONTROL FOR SAFETY FOOD that is reheated for hot holding shall be reheated so that all parts of the FOOD reach a temperature of at least 74°C (165°F) for 15 seconds. ... Reheating for hot holding ... shall be done rapidly and the time the FOOD is between 5°C (41°F) and the temperatures specified ... may not exceed 2 hours. 3-501.17 ... refrigerated, READY-TO-EAT, TIME/TEMPERATURE CONTROL FOR SAFETY FOOD prepared and held in a FOOD ESTABLISHMENT for more than 24 hours shall be clearly marked to indicate the date or day by which the FOOD shall be consumed on the PREMISES, sold, or discarded when held at a temperature of 5°C (41°F) or less for a maximum of 7 days. The day of preparation shall be counted as Day 1."
+				},
+				{
+					"title": "FDA Releases 2026 Food Code, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/hfp-constituent-updates/fda-releases-2026-food-code",
+					"asOf": "2026-10-12",
+					"year": 2026,
+					"evidence": "September 17, 2026 ... the establishment of an alternative cooling process for foods at retail"
+				},
+				{
+					"title": "Bad Bug Book, Second Edition: Clostridium perfringens and Bacillus cereus, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/foodborne-pathogens/bad-bug-book-second-edition",
+					"asOf": "2026-10-12"
+				}
+			],
+			"cards": [
+				{
+					"stem": "two-stage",
+					"front": "What are the two stages of cooling in the FDA Food Code?",
+					"back": "From 57°C (135°F) to 21°C (70°F) within 2 hours, then on to 5°C (41°F) or below within a total of 6 hours."
+				},
+				{
+					"stem": "why-fast",
+					"front": "Why must cooked food cool quickly when cooking has already killed most bacteria?",
+					"back": "Spore-forming bacteria such as Clostridium perfringens survive cooking and multiply while food cools slowly through the warm range."
+				},
+				{
+					"stem": "first-stage",
+					"front": "Why does the first stage of cooling get the shorter clock?",
+					"back": "It covers the warm range where bacteria grow quickest, so the food must be pushed through it fastest."
+				},
+				{
+					"stem": "tools",
+					"front": "Name the ways to make a hot batch cool faster.",
+					"back": "An ice bath with stirring, an ice wand, shallow metal pans, and dividing a big batch into smaller containers; a blast chiller too."
+				},
+				{
+					"stem": "stirring",
+					"front": "Why stir a pot standing in an ice bath?",
+					"back": "Stirring carries hot liquid from the middle to the cold wall of the pot, so heat leaves far faster than if the pot sits still."
+				},
+				{
+					"stem": "dense",
+					"front": "Which foods cool slowest, and why?",
+					"back": "Thick foods such as gumbo, roux-thickened sauces, beans and rice: they barely circulate, so heat has to creep out through the food itself."
+				},
+				{
+					"stem": "walk-in",
+					"front": "Why must a full, hot stockpot never go straight into the walk-in?",
+					"back": "It warms the air and every container around it while its own centre stays warm for hours: a walk-in holds cold food, it does not cool hot food."
+				},
+				{
+					"stem": "covering",
+					"front": "How should a pan of food sit in the walk-in while it cools?",
+					"back": "Uncovered or loosely covered, on a top shelf with air around it and nothing stacked on top, so heat and steam can leave."
+				},
+				{
+					"stem": "reheat",
+					"front": "How is cooled food reheated for hot holding?",
+					"back": "Quickly, on the stove or in the oven, until every part reaches 74°C (165°F) for 15 seconds, taking no more than 2 hours to climb from 5°C (41°F)."
+				},
+				{
+					"stem": "label",
+					"front": "What goes on the label of every container in the walk-in?",
+					"back": "What it is, the date and time it was made and the cook's initials, so anyone can tell what it is and how old it is."
+				},
+				{
+					"stem": "date-mark",
+					"front": "How long may ready-to-eat food made in the kitchen be kept cold under the Food Code?",
+					"back": "At most 7 days at 5°C (41°F) or below, counting the day it was made as the first, and it is marked with that last day."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-two-stage",
+					"q": "Under the FDA Food Code, how quickly must cooked food fall from 57°C (135°F) to 21°C (70°F)?",
+					"answer": "Within 2 hours",
+					"distractors": [
+						"Within 6 hours",
+						"Within 30 minutes",
+						"By the next morning"
+					],
+					"why": "The first stage must be finished within 2 hours; the whole cooling, down to 5°C (41°F), within a total of 6.",
+					"teaches": "two-stage"
+				},
+				{
+					"stem": "q-why-fast",
+					"q": "Why does a big pot of stock need fast cooling even though it was boiled?",
+					"answer": "Spores survive the boil and grow as it cools",
+					"distractors": [
+						"Boiling adds bacteria from the steam",
+						"Cold stock loses its flavour",
+						"The fat turns rancid while it is warm"
+					],
+					"why": "Spore-formers such as Clostridium perfringens outlast cooking and multiply through the warm hours of slow cooling.",
+					"teaches": "why-fast"
+				},
+				{
+					"stem": "q-stirring",
+					"q": "What does stirring a pot in an ice bath do?",
+					"answer": "Carries hot liquid to the cold wall",
+					"distractors": [
+						"Adds air that kills bacteria",
+						"Stops the ice from melting",
+						"Thickens the stock as it cools"
+					],
+					"why": "Heat leaves through the wall of the pot; stirring keeps bringing the hottest liquid to it.",
+					"teaches": "stirring"
+				},
+				{
+					"stem": "q-dense",
+					"q": "Which of these will cool slowest in the same deep pot?",
+					"answer": "A gumbo thickened with roux",
+					"distractors": [
+						"A thin white chicken stock",
+						"A strained court-bouillon",
+						"A clear consommé"
+					],
+					"why": "Thick food barely circulates, so heat has to travel out through the food itself; thin liquids carry it to the wall.",
+					"teaches": "dense"
+				},
+				{
+					"stem": "q-walk-in",
+					"q": "Why is a full, hot stockpot never put straight into the walk-in?",
+					"answer": "It warms nearby food and stays warm inside",
+					"distractors": [
+						"The walk-in would cool it far too fast",
+						"Cold air dulls the flavour of a stock",
+						"The steel pot may warp in the cold"
+					],
+					"why": "A walk-in is built to hold cold food cold; a hot pot raises the temperature of everything near it and cools far too slowly.",
+					"teaches": "walk-in"
+				},
+				{
+					"stem": "q-covering",
+					"q": "How should a pan of stock sit in the walk-in while it cools?",
+					"answer": "Uncovered or loosely covered, air around it",
+					"distractors": [
+						"Tightly lidded so no steam drips out",
+						"On the bottom shelf, under the raw meat",
+						"Stacked on other pans to save space"
+					],
+					"why": "A loose cover or none lets heat and steam leave the surface; a tight lid traps the heat and drips condensation back in.",
+					"teaches": "covering"
+				},
+				{
+					"stem": "q-reheat",
+					"q": "To what temperature must cooled food be reheated before it is held hot?",
+					"answer": "74°C (165°F) in every part",
+					"distractors": [
+						"57°C (135°F) in every part",
+						"63°C (145°F) in every part",
+						"68°C (155°F) in every part"
+					],
+					"why": "The Food Code asks for every part at 74°C (165°F) for 15 seconds, reached within 2 hours, before hot holding.",
+					"teaches": "reheat"
+				},
+				{
+					"stem": "q-date-mark",
+					"q": "How long may ready-to-eat food made in the kitchen be held at 5°C (41°F) under the Food Code?",
+					"answer": "At most 7 days, counting the day it was made",
+					"distractors": [
+						"At most 3 days, not counting the first",
+						"As long as it smells fresh",
+						"At most 14 days from opening"
+					],
+					"why": "Food kept longer than a day is marked with its last day, at most 7 days with the day of making counted as the first.",
+					"teaches": "date-mark"
+				},
+				{
+					"stem": "q-tools",
+					"q": "Which way cools a big batch of gumbo fastest once it leaves the stove?",
+					"answer": "Shallow metal pans in an ice bath, stirred",
+					"distractors": [
+						"The full pot in the walk-in, lidded tight",
+						"The pot left on the range to settle first",
+						"A deep plastic tub on the walk-in floor"
+					],
+					"why": "Shallow metal pans give the heat more surface to leave by, the ice bath draws it out, and stirring keeps carrying it to the cold wall.",
+					"teaches": "tools"
+				}
+			]
+		},
+		{
+			"stem": "danger-zone",
+			"slug": "danger-zone",
+			"title": "The danger zone and hot holding",
+			"say": "As it reads: the danger zone and hot holding.",
+			"level": 1,
+			"kind": "safety",
+			"summary": "The danger zone is 5 to 57°C (41 to 135°F), where bacteria multiply fastest. Food is held above or below it, checked with a calibrated thermometer, or kept on a written clock and served or thrown away by its marked time.",
+			"guest": "Hot dishes go out hot and cold dishes cold; if anything reaches you lukewarm, please tell me and I will take it straight back to the kitchen.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"The danger zone is the band of temperatures in which the bacteria that make people ill multiply fastest. The FDA Food Code, the model behind most American health codes, sets its edges through its holding rules: 5 to 57°C (41 to 135°F). Cold below it slows most bacteria to a crawl; heat above it stops them growing. The USDA notes that in its own, slightly wider band bacteria can double in number in as little as 20 minutes, so a pan left out all afternoon can turn a few hundred cells into millions.",
+						"The Food Code figures in this entry come from its 2022 edition; FDA issued a new edition on 17 September 2026, and a kitchen works to the code its own authority has adopted, so learn the house's numbers. The rule is simple: food is kept hot, kept cold or kept on a written clock, and it passes through the zone as quickly as it can."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Hot holding means cooked food kept at 57°C (135°F) or above until it is served; cold holding means 5°C (41°F) or below. Steam tables, bains-marie (pans of hot water in which containers of sauce stand to keep warm), soup wells and warming drawers hold hot food; the fridge, the walk-in and the cold rail, the chilled well of containers on the line, hold cold. Keep lids on, stir soups and sauces so the top does not cool, keep the water topped up, and take the food's own temperature: the unit's dial reads the water or the air, not the sauce.",
+						"Steam tables and bains-marie hold heat; they are not built to raise it. Cooled food set in a steam table climbs through the zone far too slowly, so it is reheated first, on the stove or in the oven, until every part reaches 74°C (165°F). The cold side works the same way: a cold rail keeps chilled food cold, it does not chill warm food.",
+						"Use the thermometer every time: stir, push the probe into the thickest part or the centre of the pan, wait for the reading to settle and write it on the log. Clean and sanitise the probe between foods so it never carries raw juices into cooked food. Calibrate it at the start of each shift and after any knock: in a glass packed with crushed ice and topped with water, it should read the freezing point of water; if not, adjust it or take it out of use. The Food Code asks for accuracy within one degree Celsius, or two Fahrenheit."
+					]
+				},
+				{
+					"key": "safety",
+					"paras": [
+						"Some kitchens use a written exception called time as a public health control: instead of holding a food hot or cold, they hold it on a clock. Under the Food Code the food starts at 5°C (41°F) or below, or at 57°C (135°F) or above, and is marked with the time 4 hours after it left temperature control. Within those 4 hours it is served or thrown away. It never goes back into the fridge or the hot well to reset the clock, and an unmarked container is discarded.",
+						"A second form allows up to 6 hours for cold food that starts at 5°C (41°F) or below and never rises above 21°C (70°F). Either way the procedure is written in advance, kept in the kitchen and shown to the health inspector on request, and the cook follows it, not memory."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"Holding fails in small, ordinary ways: a soup well with its water run dry, a sauce judged by the dial, a pan left on the pass, the counter where plates leave the kitchen, between rushes, a thermometer not calibrated since it fell, a cold rail packed above its fill line so the top layer sits in warm air. Each has the same cure, a probe in the food and a reading on the log, and a wrong reading goes straight to the chef."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Servers hold food too: at the pass, at the tray stand, a folding rack for a loaded tray, and at the side station, the servers' stand in the dining room. Run plates as soon as they are up, keep cold garnishes and butter in the cold, and never park a plate under a heat lamp for a table that is not ready. A guest who says a dish is lukewarm is thanked, and the plate goes back to the kitchen for the chef to decide."
+					]
+				}
+			],
+			"temps": [
+				{
+					"label": "Bottom of the danger zone: cold food is held at or below this",
+					"c": 5,
+					"f": 41
+				},
+				{
+					"label": "Top of the danger zone: hot food is held at or above this",
+					"c": 57,
+					"f": 135
+				},
+				{
+					"label": "Cooled food is reheated to this before it goes into the steam table",
+					"c": 74,
+					"f": 165
+				},
+				{
+					"label": "Time control for cold food, the 6-hour form: never above this",
+					"c": 21,
+					"f": 70
+				}
+			],
+			"faults": [
+				{
+					"fault": "Soup in the hot well reads below the hot holding figure",
+					"cause": "The water ran low, the lid was left off or the well was set too low.",
+					"fix": "Tell the chef, whose written procedure decides whether it is reheated on the stove or thrown away; then top up the water and lid the well."
+				},
+				{
+					"fault": "The holding temperature was read from the dial",
+					"cause": "The dial reads the water or the air around the food, not the food.",
+					"fix": "Stir, probe the food itself and write the reading on the log."
+				},
+				{
+					"fault": "The thermometer reads wrong",
+					"cause": "It was dropped or knocked and never calibrated again.",
+					"fix": "Calibrate it in iced water at the start of each shift and after any knock; take it out of use if it cannot be adjusted."
+				},
+				{
+					"fault": "The probe carries raw juices into cooked food",
+					"cause": "It was not cleaned between foods.",
+					"fix": "Wipe and sanitise the probe after every reading."
+				},
+				{
+					"fault": "Food on time control is past its marked time",
+					"cause": "The discard time was missed in the rush.",
+					"fix": "Throw it away; never top it up with fresh food or put it back in the fridge."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"cooling-stocks-and-sauces",
+					"holding-warm-emulsions",
+					"cooking-temperatures",
+					"eggs"
+				],
+				"lexicon": [
+					"food-safety-the-chef-owners-non-negotiables",
+					"thermometers-and-the-instrument-cluster"
+				]
+			},
+			"sources": [
+				{
+					"title": "FDA Food Code 2022, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/fda-food-code/food-code-2022",
+					"asOf": "2026-10-12",
+					"year": 2022,
+					"evidence": "3-501.16 (A) ... TIME/TEMPERATURE CONTROL FOR SAFETY FOOD shall be maintained: (1) At 57°C (135°F) or above ... or (2) At 5°C (41°F) or less. 3-501.19 ... Written procedures shall be prepared in advance, maintained in the FOOD ESTABLISHMENT and made available to the REGULATORY AUTHORITY upon request ... (B) If time without temperature control is used as the public health control up to a maximum of 4 hours: ... The FOOD shall have an initial temperature of 5°C (41°F) or less when removed from cold holding temperature control, or 57°C (135°F) or greater when removed from hot holding temperature control; ... The FOOD shall be marked or otherwise identified to indicate the time that is 4 hours past the point in time when the FOOD is removed from temperature control; ... The FOOD shall be cooked and served, served at any temperature if READY-TO-EAT, or discarded, within 4 hours from the point in time when the FOOD is removed from temperature control; and ... FOOD in unmarked containers or packages, or marked to exceed a 4-hour limit shall be discarded. (C) If time without temperature control is used as the public health control up to a maximum of 6 hours: ... The FOOD shall have an initial temperature of 5°C (41°F) or less when removed from temperature control and the FOOD temperature may not exceed 21°C (70°F) within a maximum time period of 6 hours ... 3-403.11 ... reheated so that all parts of the FOOD reach a temperature of at least 74°C (165°F) for 15 seconds. 4-203.11 (A) FOOD TEMPERATURE MEASURING DEVICES that are scaled only in Celsius or dually scaled in Celsius and Fahrenheit shall be accurate to ±1°C in the intended range of use. (B) FOOD TEMPERATURE MEASURING DEVICES that are scaled only in Fahrenheit shall be accurate to ±2°F in the intended range of use."
+				},
+				{
+					"title": "FDA Releases 2026 Food Code, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/hfp-constituent-updates/fda-releases-2026-food-code",
+					"asOf": "2026-10-12",
+					"year": 2026,
+					"evidence": "September 17, 2026 ... the establishment of an alternative cooling process for foods at retail"
+				},
+				{
+					"title": "Danger Zone, USDA Food Safety and Inspection Service",
+					"url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/danger-zone-40f-140f",
+					"asOf": "2026-10-12",
+					"evidence": "Bacteria grow most rapidly in the range of temperatures between 40 °F and 140 °F, doubling in number in as little as 20 minutes."
+				}
+			],
+			"cards": [
+				{
+					"stem": "zone",
+					"front": "What band is the danger zone, by the FDA Food Code's holding rules?",
+					"back": "The band from 5 to 57°C (41 to 135°F), where the bacteria that cause illness multiply fastest."
+				},
+				{
+					"stem": "doubling",
+					"front": "How fast can bacteria multiply in the danger zone?",
+					"back": "The USDA's food safety service says they can double in number in as little as 20 minutes, so time in the zone adds up quickly."
+				},
+				{
+					"stem": "hot-hold",
+					"front": "At what temperature is hot food held?",
+					"back": "At 57°C (135°F) or above, checked with a probe in the food, not read from the dial of the unit."
+				},
+				{
+					"stem": "cold-hold",
+					"front": "At what temperature is cold food held?",
+					"back": "At 5°C (41°F) or below, in a fridge, walk-in, cold rail or ice well that is not packed past its fill line."
+				},
+				{
+					"stem": "not-reheat",
+					"front": "Can cold soup be reheated in the steam table?",
+					"back": "No. A steam table holds heat; reheat on the stove or in the oven until every part reaches 74°C (165°F), then hold it."
+				},
+				{
+					"stem": "dial",
+					"front": "Why take the food's temperature instead of reading the unit's dial?",
+					"back": "The dial reads the water or the air around the food; only a probe in the food tells you what the guest will eat."
+				},
+				{
+					"stem": "calibrate",
+					"front": "How and when is a probe thermometer calibrated?",
+					"back": "In a glass packed with crushed ice and topped with water, at the start of every shift and after any knock; it should read 0°C (32°F), the freezing point of water."
+				},
+				{
+					"stem": "clean-probe",
+					"front": "Why clean and sanitise the probe after every reading?",
+					"back": "So it never carries raw juices or bacteria from one food into another, above all into cooked food."
+				},
+				{
+					"stem": "tphc",
+					"front": "What is time as a public health control?",
+					"back": "A written exception: food is held without temperature control, marked with its discard time, and served or thrown away within 4 hours."
+				},
+				{
+					"stem": "no-reset",
+					"front": "Can food on time control go back into the fridge to reset the clock?",
+					"back": "No. Once its time starts it is served or discarded by the marked time, and an unmarked container is thrown away."
+				},
+				{
+					"stem": "six-hour",
+					"front": "What does the 6-hour form of time control ask of cold food?",
+					"back": "It starts at 5°C (41°F) or below, never rises above 21°C (70°F), and is served or thrown away within 6 hours."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-zone",
+					"q": "Which band do the FDA Food Code's holding rules mark as the danger zone?",
+					"answer": "5 to 57°C (41 to 135°F)",
+					"distractors": [
+						"0 to 30°C (32 to 86°F)",
+						"21 to 74°C (70 to 165°F)",
+						"57 to 100°C (135 to 212°F)"
+					],
+					"why": "Between 5°C (41°F) and 57°C (135°F) the bacteria that cause illness multiply fastest, so food is held above or below it.",
+					"teaches": "zone"
+				},
+				{
+					"stem": "q-doubling",
+					"q": "According to the USDA, how quickly can bacteria double in number in the danger zone?",
+					"answer": "In as little as 20 minutes",
+					"distractors": [
+						"In no less than 2 hours",
+						"In roughly 4 hours or more",
+						"In about 6 hours at the least"
+					],
+					"why": "Fast doubling is why a pan left out for an afternoon can turn a few hundred bacteria into millions.",
+					"teaches": "doubling"
+				},
+				{
+					"stem": "q-hot-hold",
+					"q": "A soup in the hot well reads 52°C (126°F). Below which Food Code hot holding figure has it fallen?",
+					"answer": "57°C (135°F)",
+					"distractors": [
+						"54°C (130°F)",
+						"60°C (140°F)",
+						"74°C (165°F)"
+					],
+					"why": "Hot holding is 57°C (135°F) or above; 60°C (140°F) is the USDA home figure and 74°C (165°F) the reheating one. The soup is in the danger zone, so the chef decides.",
+					"teaches": "hot-hold"
+				},
+				{
+					"stem": "q-cold-hold",
+					"q": "At what temperature is cold food held under the Food Code?",
+					"answer": "5°C (41°F) or below",
+					"distractors": [
+						"10°C (50°F) or below",
+						"15°C (59°F) or below",
+						"21°C (70°F) or below"
+					],
+					"why": "Cold holding is 5°C (41°F) or below, the bottom edge of the danger zone.",
+					"teaches": "cold-hold"
+				},
+				{
+					"stem": "q-steam-table",
+					"q": "A cook sets cold, cooked gumbo straight into the steam table to warm it up. What is wrong?",
+					"answer": "A steam table holds heat; it is not for reheating",
+					"distractors": [
+						"Gumbo must never be reheated at all",
+						"The steam table should be switched off first",
+						"Nothing, so long as the lid is on"
+					],
+					"why": "Food climbs through the zone far too slowly in a steam table; it is reheated on the stove to 74°C (165°F) first.",
+					"teaches": "not-reheat"
+				},
+				{
+					"stem": "q-dial",
+					"q": "Why does a cook probe the sauce instead of reading the bain-marie's dial?",
+					"answer": "The dial reads the water, not the sauce",
+					"distractors": [
+						"The dial reads only in Fahrenheit",
+						"Probing stirs the sauce at the same time",
+						"Inspectors are not allowed to read dials"
+					],
+					"why": "Only a probe in the food tells you the food's temperature; the water around it can be hotter or cooler.",
+					"teaches": "dial"
+				},
+				{
+					"stem": "q-calibrate",
+					"q": "When should a probe thermometer be calibrated?",
+					"answer": "At the start of each shift and after any knock",
+					"distractors": [
+						"Once a year, when it is serviced",
+						"Only when the reading looks odd to you",
+						"Each time the battery is changed"
+					],
+					"why": "A knock can throw a thermometer off; checking it in iced water each shift keeps every reading honest.",
+					"teaches": "calibrate"
+				},
+				{
+					"stem": "q-tphc",
+					"q": "Food is held under the Food Code's 4-hour time control. What happens to anything left at the marked time?",
+					"answer": "It is thrown away",
+					"distractors": [
+						"It goes back into the fridge to restart",
+						"It is reheated and given 4 more hours",
+						"It is moved into the steam table"
+					],
+					"why": "Food on time control is served or discarded within its time; it never goes back under temperature control to reset the clock.",
+					"teaches": "no-reset"
+				},
+				{
+					"stem": "q-ice-point",
+					"q": "A probe thermometer stands in a glass packed with crushed ice and topped with water. What should it read?",
+					"answer": "0°C (32°F)",
+					"distractors": [
+						"5°C (41°F)",
+						"2°C (36°F)",
+						"10°C (50°F)"
+					],
+					"why": "Iced water sits at the freezing point of water, 0°C (32°F); a probe that reads anything else is adjusted or taken out of use.",
+					"teaches": "calibrate"
+				}
+			]
+		},
+		{
+			"stem": "cooking-temperatures",
+			"slug": "cooking-temperatures",
+			"title": "Cooking temperatures and the consumer advisory",
+			"say": "As it reads: cooking temperatures and the consumer advisory.",
+			"level": 2,
+			"kind": "safety",
+			"summary": "The Food Code sets a minimum internal temperature and time for each raw animal food. Learn the figures, probe the thickest part, and know why a seared whole steak may be served rare, and why tartare and rosy duck call for the consumer advisory.",
+			"guest": "How would you like your steak cooked? The note on the menu covers raw and undercooked dishes, and I am glad to take any question about it to the chef.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Cooking kills the bacteria raw animal food carries, by temperature and time together: the hotter the food, the shorter the hold it needs. The FDA Food Code sets each food a minimum internal temperature and a time to hold it there. Poultry, and stuffed meat, fish and pasta, go to 74°C (165°F) for an instant, less than 1 second. Minced meat goes to 68°C (155°F) for 17 seconds. Fish and whole cuts of meat, such as steaks and chops, go to 63°C (145°F) for 15 seconds.",
+						"Minced meat shows the trade between heat and time: the code also accepts 63°C (145°F) for 3 minutes, 66°C (150°F) for 1 minute or 70°C (158°F) for an instant. Older editions, still followed by some local codes, asked a longer hold for poultry, and charts for home cooks differ. The figures here are the 2022 Food Code's; FDA issued a new edition on 17 September 2026, and a kitchen works to its local code and its own written standard."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Probe the thickest part, away from bone, fat and the pan, and check two spots on an irregular piece. For thin foods such as fish fillets, push a thin-tipped probe in from the side so the tip sits at the centre, and wait for the reading to settle. Use a calibrated thermometer, sanitised between foods.",
+						"Meat goes on cooking after it leaves the heat: the hot outside keeps warming the cooler centre as it rests, a few degrees in a steak and more in a large roast. Cooks use this carryover to land a doneness, pulling the meat a little early. Where a dish has to meet a minimum, though, the reading that counts is the one you take: probe again after the rest."
+					]
+				},
+				{
+					"key": "safety",
+					"paras": [
+						"Why may a steak be served rare when minced beef may not? In a whole, intact muscle the bacteria sit on the surface and the inside is protected, so a good sear deals with them. The Food Code lets a whole-muscle, intact beef steak, labelled as such by its supplier, be served rare, outside places that serve highly susceptible groups such as hospitals and care homes, when top and bottom reach a surface temperature of 63°C (145°F) or above and every outside surface shows a cooked change of colour.",
+						"Mincing spreads the surface through the whole batch, and a needle-tenderised or injected steak has had its surface pushed inside, so their centres must be cooked. Stuffing soaks up raw juices and sits at the coolest heart of the dish, which is why stuffed foods take the poultry figure.",
+						"Some dishes are raw or undercooked by design: steak tartare, a rosy duck breast, an egg with a runny yolk, oysters on the half shell. The code allows them when the guest asks for or chooses them, outside places that serve highly susceptible groups, provided the guest is told through the consumer advisory, and never undercooked minced meat from a children's menu.",
+						"The advisory has two parts. The disclosure marks the dish, with a plain description such as oysters on the half shell (raw oysters) or an asterisk to a footnote saying it is served raw or undercooked. The reminder is the warning, in words such as: consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness, and the kitchen answers any question it raises. It matters most to young children, older people, anyone pregnant and anyone whose immune system is weakened."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"Three Brennan's dishes show the rules. The Steak Tartare Cannoli is raw beef tartare in a crisp potato shell with a grated cured egg yolk, and its service note marks it for the consumer advisory. The Roasted Rohan Duck Breast on the dinner tasting is served rosy, usually medium-rare to medium: confirm the kitchen's standard at lineup. Whether our menu marks the duck for the advisory is confirmed at lineup too. The Creole-Spiced Hanger Steak is at its best medium-rare to medium; always ask the temperature and write it on the ticket."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"At the table, ask the doneness of every steak, duck breast and burger, and write it on the ticket. If a guest asks whether rare or raw is risky, neither reassure nor frighten: point to the note on the menu, say the chef can answer, and bring the answer back. Never promise an outcome, and never change the doneness a guest chose without asking."
+					]
+				}
+			],
+			"temps": [
+				{
+					"label": "Poultry and stuffed foods, for an instant (under 1 second)",
+					"c": 74,
+					"f": 165
+				},
+				{
+					"label": "Minced meat, held for 17 seconds",
+					"c": 68,
+					"f": 155
+				},
+				{
+					"label": "Minced meat, with no hold needed",
+					"c": 70,
+					"f": 158
+				},
+				{
+					"label": "Fish and whole cuts of meat, held for 15 seconds",
+					"c": 63,
+					"f": 145
+				},
+				{
+					"label": "Surface of a whole-muscle steak served rare, top and bottom",
+					"c": 63,
+					"f": 145
+				}
+			],
+			"faults": [
+				{
+					"fault": "The reading was taken near the surface or the bone",
+					"cause": "The probe tip never reached the thickest part.",
+					"fix": "Push the tip into the centre of the thickest part, from the side for thin pieces, and check a second spot."
+				},
+				{
+					"fault": "Below the minimum after resting",
+					"cause": "The meat was pulled early in the hope that carryover would finish it.",
+					"fix": "Probe after the rest and return it to the heat until it reaches its figure."
+				},
+				{
+					"fault": "The thermometer reads several degrees out",
+					"cause": "It was knocked and not calibrated again.",
+					"fix": "Calibrate it in iced water, and take it out of use if it cannot be adjusted."
+				},
+				{
+					"fault": "Raw juices carried into cooked food",
+					"cause": "The probe was not cleaned between items.",
+					"fix": "Wipe and sanitise the probe after every reading."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-0w2k5cdm",
+					"components": [
+						"Steak tartare"
+					],
+					"how": "The Steak Tartare Cannoli pipes raw beef tartare into a crisp potato shell with a grated cured egg yolk; the service note marks it for the consumer advisory, so send questions to the kitchen."
+				},
+				{
+					"dish": "d-jxnlnzdi",
+					"components": [
+						"Roasting a duck breast"
+					],
+					"how": "The Roasted Rohan Duck Breast on the dinner tasting comes rosy, usually medium-rare to medium, as its service note says. Confirm the kitchen's standard at lineup, tell the guest how it comes, and confirm too whether our menu marks it for the advisory."
+				},
+				{
+					"dish": "d-4jee8o34",
+					"components": [
+						"Hanger steak"
+					],
+					"how": "The Creole-Spiced Hanger Steak is at its best medium-rare to medium, as its service note says; always ask the temperature and write it on the ticket."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"ticket-terms",
+					"eggs",
+					"raw-and-cooked-oysters",
+					"danger-zone",
+					"hanger-steak-bearnaise"
+				],
+				"techniques": [
+					"resting-meat-and-slicing-against-the-grain"
+				],
+				"lexicon": [
+					"food-safety-the-chef-owners-non-negotiables",
+					"thermometers-and-the-instrument-cluster",
+					"resting-carryover-and-the-thermometer",
+					"doneness-by-touch-sight-and-sound"
+				],
+				"folios": [
+					"resting-slicing-standard",
+					"searing-standard"
+				],
+				"deck": [
+					"fd_0088",
+					"fd_0056"
+				],
+				"components": [
+					"Steak tartare",
+					"Roasting a duck breast",
+					"Hanger steak"
+				],
+				"terms": [
+					"methods-seared"
+				]
+			},
+			"sources": [
+				{
+					"title": "FDA Food Code 2022, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/fda-food-code/food-code-2022",
+					"asOf": "2026-10-12",
+					"year": 2022,
+					"evidence": "3-401.11 (A) ... (1) 63°C (145°F) or above for 15 seconds for: ... FISH, MEAT, and commercially raised GAME ANIMALS. (2) 68°C (155°F) for 17 seconds or the temperature specified in the following chart that corresponds to the holding time for ... the following if they are COMMINUTED: FISH, MEAT, GAME ANIMALS commercially raised for FOOD ... Minimum Temperature °C (°F), Time: 63 (145) 3 minutes; 66 (150) 1 minute; 70 (158) < 1 second (instantaneous) ... (3) 74°C (165°F) ... < 1 second (instantaneous) for POULTRY, BALUTS, wild GAME ANIMALS ..., stuffed FISH, stuffed MEAT, stuffed pasta, stuffed POULTRY, stuffed RATITES, or stuffing containing FISH, MEAT, POULTRY, or RATITES. (C) A raw or undercooked whole-muscle, intact beef steak may be served or offered for sale in a READY-TO-EAT form if: (1) The FOOD ESTABLISHMENT serves a population that is not a HIGHLY SUSCEPTIBLE POPULATION, (2) The steak is labeled to indicate that it meets the definition of \"whole-muscle, intact beef\" as specified under ¶ 3-201.11(E), and (3) The steak is cooked on both the top and bottom to a surface temperature of 63°C (145°F) or above and a cooked color change is achieved on all external surfaces. (D) A raw animal FOOD such as raw EGG, raw FISH, raw-marinated FISH, raw MOLLUSCAN SHELLFISH, or steak tartare; or a partially cooked FOOD such as lightly cooked FISH, soft cooked EGGS, or rare MEAT other than whole-muscle, intact beef steaks ... may be served or offered for sale upon CONSUMER request or selection in a READY-TO-EAT form if: (1) ... the FOOD ESTABLISHMENT serves a population that is not a HIGHLY SUSCEPTIBLE POPULATION; (2) The FOOD, if served or offered for service by CONSUMER selection from a children's menu, does not contain COMMINUTED MEAT; and ... The CONSUMER is informed as specified under § 3-603.11 ... 3-603.11 ... DISCLOSURE shall include: ... A description of the animal-derived FOODS, such as \"oysters on the half shell (raw oysters),\" ... or ... Identification of the animal-derived FOODS by asterisking them to a footnote that states that the items are served raw or undercooked, or contain (or may contain) raw or undercooked ingredients. ... REMINDER ... Consuming raw or undercooked MEATS, POULTRY, SEAFOOD, SHELLFISH, or EGGS may increase your RISK of foodborne illness; or ... Consuming raw or undercooked MEATS, POULTRY, SEAFOOD, SHELLFISH, or EGGS may increase your RISK of foodborne illness, especially if you have certain medical conditions."
+				},
+				{
+					"title": "FDA Releases 2026 Food Code, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/hfp-constituent-updates/fda-releases-2026-food-code",
+					"asOf": "2026-10-12",
+					"year": 2026,
+					"evidence": "September 17, 2026 ... the establishment of an alternative cooling process for foods at retail"
+				},
+				{
+					"title": "Safe Minimum Internal Temperature Chart, USDA Food Safety and Inspection Service",
+					"url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan’s, Dinner menu",
+					"url": "https://www.brennansneworleans.com/menus/dinner/",
+					"asOf": "2026-09-26"
+				},
+				{
+					"title": "Brennan’s, Dinner Tasting Menu ($80)",
+					"url": "https://www.brennansneworleans.com/menus/dinnertastingmenu/",
+					"asOf": "2026-09-26"
+				},
+				{
+					"title": "Brennan’s, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-09-26"
+				}
+			],
+			"cards": [
+				{
+					"stem": "poultry",
+					"front": "What is the Food Code's minimum for poultry?",
+					"back": "74°C (165°F) for an instant, less than 1 second, read at the thickest part; stuffed meat, fish and pasta take the same figure."
+				},
+				{
+					"stem": "minced",
+					"front": "What is the Food Code's minimum for minced meat, and why is it higher than for steak?",
+					"back": "68°C (155°F) for 17 seconds, or a hotter figure for less time: mincing spreads surface bacteria through the whole batch."
+				},
+				{
+					"stem": "whole-cuts",
+					"front": "What is the Food Code's minimum for fish and whole cuts of meat?",
+					"back": "63°C (145°F) for 15 seconds at the thickest part, unless the guest chooses it less cooked, as the code allows."
+				},
+				{
+					"stem": "probe",
+					"front": "Where do you probe a piece of meat or fish?",
+					"back": "In the thickest part, away from bone, fat and the pan, from the side for thin pieces, and in more than one spot on an irregular piece."
+				},
+				{
+					"stem": "carryover",
+					"front": "What is carryover, and how does it bear on a minimum temperature?",
+					"back": "The rise in the centre as meat rests. Use it to land a doneness, but where a minimum applies, probe again after the rest."
+				},
+				{
+					"stem": "rare-steak",
+					"front": "Why may a whole steak be served rare when minced beef is cooked through?",
+					"back": "In an intact muscle the bacteria sit on the surface, which the sear deals with; mincing spreads them through the meat."
+				},
+				{
+					"stem": "steak-surface",
+					"front": "What must a rare whole-muscle steak have under the Food Code?",
+					"back": "A surface of 63°C (145°F) or above on top and bottom and a cooked change of colour on every outside surface."
+				},
+				{
+					"stem": "stuffed",
+					"front": "Why are stuffed foods cooked to the poultry figure?",
+					"back": "The stuffing soaks up raw juices and sits at the coolest heart of the dish, so it needs 74°C (165°F)."
+				},
+				{
+					"stem": "advisory",
+					"front": "What are the two parts of the consumer advisory?",
+					"back": "The disclosure, which describes the dish or asterisks it to a footnote, and the reminder, the warning that raw or undercooked food may increase risk."
+				},
+				{
+					"stem": "who",
+					"front": "Where may raw or undercooked food never be served, even when a guest asks?",
+					"back": "In places that serve highly susceptible groups, such as hospitals and care homes; and undercooked minced meat is never served from a children's menu."
+				},
+				{
+					"stem": "server",
+					"front": "A guest asks whether a rare steak is risky. What do you say?",
+					"back": "Point to the note on the menu and say the chef can answer, then bring back the answer; never reassure and never promise an outcome."
+				},
+				{
+					"stem": "brennans",
+					"front": "Which Brennan's dish does the service note mark for the consumer advisory as raw beef?",
+					"back": "The Steak Tartare Cannoli: raw beef tartare in a crisp potato shell with a grated cured egg yolk. Send questions to the kitchen."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-poultry",
+					"q": "What minimum does the Food Code set for a chicken breast?",
+					"answer": "74°C (165°F) for an instant",
+					"distractors": [
+						"63°C (145°F) for 15 seconds",
+						"57°C (135°F) for 1 minute",
+						"54°C (130°F) for 10 minutes"
+					],
+					"why": "Poultry takes the highest figure, 74°C (165°F), and the current code asks no hold beyond an instant, less than 1 second; stuffed foods share it.",
+					"teaches": "poultry"
+				},
+				{
+					"stem": "q-minced",
+					"q": "Which figure does the Food Code give for minced beef?",
+					"answer": "68°C (155°F) for 17 seconds",
+					"distractors": [
+						"63°C (145°F) for 15 seconds",
+						"54°C (130°F) for 1 second",
+						"60°C (140°F) for 5 seconds"
+					],
+					"why": "Mincing carries surface bacteria into the centre, so minced meat needs more than a whole cut: 68°C (155°F) for 17 seconds.",
+					"teaches": "minced"
+				},
+				{
+					"stem": "q-whole-cuts",
+					"q": "Which foods share the Food Code's minimum of 63°C (145°F) for 15 seconds?",
+					"answer": "Fish and whole cuts of meat",
+					"distractors": [
+						"Poultry and stuffing",
+						"Minced beef and sausage",
+						"Stuffed pasta and stuffed fish"
+					],
+					"why": "The code gives fish and intact whole cuts the lower figure; poultry, minced meat and stuffed foods need higher ones.",
+					"teaches": "whole-cuts"
+				},
+				{
+					"stem": "q-probe",
+					"q": "Where should the probe go in a thick pork chop?",
+					"answer": "The thickest part, away from the bone",
+					"distractors": [
+						"Right beside the bone, where it is thickest",
+						"Just under the surface, where it browns",
+						"Into the fat at the edge, the last to heat"
+					],
+					"why": "Bone, fat and the surface all read differently from the meat; the thickest part is the last to heat.",
+					"teaches": "probe"
+				},
+				{
+					"stem": "q-carryover",
+					"q": "A roast is pulled early to allow for carryover and must meet a minimum. What should the cook do?",
+					"answer": "Probe again after the rest",
+					"distractors": [
+						"Assume carryover did the work",
+						"Slice it at once to stop the cooking",
+						"Serve it and note the time"
+					],
+					"why": "Carryover helps land a doneness, but where a minimum applies, only a reading taken after the rest shows it was met.",
+					"teaches": "carryover"
+				},
+				{
+					"stem": "q-rare-steak",
+					"q": "Why can a whole-muscle steak be served rare while minced beef is cooked through?",
+					"answer": "Its bacteria sit on the surface the sear reaches",
+					"distractors": [
+						"The sear's heat reaches right to its centre",
+						"Ageing the steak kills its bacteria",
+						"Minced beef comes from older, tougher animals"
+					],
+					"why": "An intact muscle keeps its bacteria on the outside; mincing, needling or injecting carries them into the centre.",
+					"teaches": "rare-steak"
+				},
+				{
+					"stem": "q-stuffed",
+					"q": "To what figure is a stuffed fish cooked under the Food Code?",
+					"answer": "74°C (165°F)",
+					"distractors": [
+						"63°C (145°F)",
+						"68°C (155°F)",
+						"57°C (135°F)"
+					],
+					"why": "Stuffing soaks up raw juices and sits at the coolest centre, so stuffed foods take the poultry figure.",
+					"teaches": "stuffed"
+				},
+				{
+					"stem": "q-advisory",
+					"q": "What does the reminder part of the consumer advisory tell guests?",
+					"answer": "Raw or undercooked food may raise the risk of illness",
+					"distractors": [
+						"Which dishes are served at room temperature",
+						"That the kitchen guarantees every dish it serves",
+						"How long each dish takes to cook to order"
+					],
+					"why": "The disclosure marks the dish; the reminder is the warning that eating it raw or undercooked may increase risk.",
+					"teaches": "advisory"
+				},
+				{
+					"stem": "q-who",
+					"q": "Which undercooked dish may never be served from a children's menu, even on request?",
+					"answer": "A burger cooked pink in the middle",
+					"distractors": [
+						"A whole steak seared and served rare",
+						"A soft-cooked egg with a runny yolk",
+						"Seared tuna left rare at the centre"
+					],
+					"why": "The code bars undercooked minced meat from a children's menu outright, because mincing carries surface bacteria to the centre; the other dishes go under the advisory.",
+					"teaches": "who"
+				},
+				{
+					"stem": "q-server",
+					"q": "A guest asks whether the Steak Tartare Cannoli is risky for her. What does the server do?",
+					"answer": "Point to the advisory, then ask the kitchen",
+					"distractors": [
+						"Reassure her that the beef is bought very fresh",
+						"Explain the risks of raw beef in detail yourself",
+						"Steer her to another starter without saying why"
+					],
+					"why": "A server never promises an outcome; the advisory informs the guest and the kitchen answers the risk question.",
+					"teaches": "server"
+				}
+			]
+		}
+	]
+}

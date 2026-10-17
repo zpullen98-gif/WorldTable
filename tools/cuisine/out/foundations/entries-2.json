@@ -1,0 +1,1334 @@
+{
+	"entries": [
+		{
+			"stem": "brown-stock",
+			"slug": "brown-stock",
+			"title": "Brown stock",
+			"say": "As it reads: brown stock, or fond brun, fohn BRUHN.",
+			"level": 2,
+			"kind": "stock",
+			"summary": "Veal or beef bones roasted deep brown with onion, carrot, celery and tomato purée, then simmered for hours in cold water, unsalted. Full of gelatine, it is the base of espagnole, demi-glace, glace de viande and every classical brown sauce.",
+			"guest": "Brown stock is roasted bones and vegetables simmered for hours: you never see it on the plate, but it gives the classic dark sauces their depth.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Brown stock, fond brun in French, is made by roasting bones until they are deep brown, then simmering them slowly in water with vegetables. Fond means base, and that is its job: nobody eats it as it is, but almost every dark sauce on a classical menu starts here. Roasting gives colour and a toasty depth; the long simmer melts the collagen in the bones into gelatine, which gives the stock body and sets it to a soft jelly when cold.",
+						"Veal bones are the classical choice, knuckles and neck above all: young bones carry plenty of collagen and a mild flavour that takes on whatever the sauce adds later. Beef bones give a darker, beefier stock with less body, and many kitchens use both. The vegetables are a mirepoix of onion, carrot and celery, cut large."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Roast the bones in one layer at about 220°C (428°F) for 45 minutes to an hour, turning once or twice, until they are a deep, even mahogany, never black. Add the mirepoix for the last 20 to 30 minutes so it browns too. Then smear tomato purée, the thick concentrate called tomato paste in American kitchens, over everything and roast a few minutes more, until it turns from bright red to rust. This is the pincé: it adds colour and sweetness and cooks off the raw tomato taste.",
+						"Lift everything into the stockpot and pour the fat from the tray. Set the tray over the heat, add a little water or wine and scrape up the browned juices stuck to it, then tip them into the pot. That is deglazing: those juices carry much of the flavour.",
+						"Cover the bones with cold water, bring it up slowly and skim the grey foam as it rises. Hold it at a bare simmer, about 85 to 90°C (185 to 194°F), a bubble breaking only now and then, for 8 to 12 hours, skimming fat and foam through the day. Add parsley stalks, thyme, bay and a few peppercorns for the last hour. Never add salt. Strain through a chinois, the fine conical strainer, without pressing, cool it quickly and lift off the set fat."
+					]
+				},
+				{
+					"key": "ratio",
+					"paras": [
+						"A dependable batch: 4.5 kg (10 lb) of bones, 450 g (1 lb) of mirepoix, 115 g (4 oz) of tomato purée and 5.7 litres (6 quarts) of cold water, for roughly 3.8 litres (1 gallon) of stock. The mirepoix is about a tenth of the bone weight, two parts onion to one each of carrot and celery. The water covers the bones by a few centimetres; more only thins the stock."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"Brown stock is the root of the brown family. Thickened with a brown roux and simmered with mirepoix and tomato, it becomes espagnole. Espagnole reduced with more brown stock becomes demi-glace, the base of bordelaise, chasseur, Robert and many more. Reduced alone until syrupy, brown stock becomes glace de viande; simmered with the juices of a roast, it makes a jus. Each has its own entry, and a sauce is only as good as the stock beneath it."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"Burnt bones make a bitter stock that no skimming will rescue: roast to deep brown and stop. A stock left to boil churns fat and fine particles into the liquid, so it turns cloudy and greasy. Too much tomato makes it sour and red rather than brown, and pale bones give a weak, grey one. Salt cannot be undone: a stock may be reduced to a tenth of its volume and every grain of salt stays behind."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"A guest never orders brown stock, but a server describes it every night inside the brown sauces. At Brennan's, the marchand de vin on the Eggs Hussarde and the Eggs Owen belongs to this family. Classically it is shallots and red wine reduced with brown stock or demi-glace; the New Orleans version adds onion, garlic, often ham and mushroom, beef stock and red wine, frequently bound with a roux. The house's own words are a savoury red wine and mushroom sauce. Whether tonight's carries ham or mushroom is a question for the chef, never a guess."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Bones to cold water",
+					"value": "4.5 kg (10 lb) to 5.7 litres (6 quarts)"
+				},
+				{
+					"label": "Mirepoix",
+					"value": "About a tenth of the bone weight: 450 g (1 lb) for 4.5 kg (10 lb)"
+				},
+				{
+					"label": "Mirepoix by weight",
+					"value": "2 parts onion to 1 part carrot and 1 part celery"
+				},
+				{
+					"label": "Tomato purée",
+					"value": "About 115 g (4 oz) for 4.5 kg (10 lb) of bones"
+				},
+				{
+					"label": "Simmer",
+					"value": "8 to 12 hours for veal, never salted"
+				}
+			],
+			"temps": [
+				{
+					"label": "Roast the bones",
+					"c": 220,
+					"f": 428
+				},
+				{
+					"label": "A bare simmer, low end",
+					"c": 85,
+					"f": 185
+				},
+				{
+					"label": "A bare simmer, high end",
+					"c": 90,
+					"f": 194
+				},
+				{
+					"label": "A boil, which clouds the stock",
+					"c": 100,
+					"f": 212
+				}
+			],
+			"faults": [
+				{
+					"fault": "Bitter, acrid stock",
+					"cause": "Bones or mirepoix roasted black.",
+					"fix": "Roast only to a deep, even brown and leave any blackened pieces out of the pot; a bitter stock cannot be saved."
+				},
+				{
+					"fault": "Cloudy and greasy",
+					"cause": "The stock boiled, churning fat and fine particles into the liquid, or it was not skimmed.",
+					"fix": "Keep a bare simmer and skim through the day; strain through a chinois lined with muslin without pressing."
+				},
+				{
+					"fault": "Pale, weak and grey",
+					"cause": "Bones under-roasted, too much water, or too short a simmer.",
+					"fix": "Roast to deep brown, cover the bones by a few centimetres only and give the full simmer; reduce a weak stock gently."
+				},
+				{
+					"fault": "Sour, red stock",
+					"cause": "Too much tomato purée, or tomato not cooked to rust.",
+					"fix": "Measure the purée and cook it on the bones until it turns from red to rust before the water goes in."
+				},
+				{
+					"fault": "Too salty to reduce",
+					"cause": "Salt added to the stock.",
+					"fix": "There is no cure in the pot: use it where no reduction is needed and make the next batch unsalted."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"white-stock",
+					"espagnole",
+					"demi-glace",
+					"glaces",
+					"brown-sauce-family",
+					"marchand-de-vin",
+					"cooling-stocks-and-sauces",
+					"deglaze-and-pan-sauce"
+				],
+				"techniques": [
+					"roasting-in-a-hot-oven",
+					"skimming-foam-fat-and-a-clear-broth",
+					"deglazing-and-pan-sauces"
+				],
+				"lexicon": [
+					"stocks-blanc-brun-broth-and-demi",
+					"deglaze-and-fond",
+					"the-maillard-reaction"
+				],
+				"recipes": [
+					"brown-veal-stock",
+					"sauce-espagnole-and-demi-glace"
+				],
+				"folios": [
+					"simmer-standard"
+				],
+				"deck": [
+					"fd_0214",
+					"fd_0206"
+				],
+				"components": [
+					"Marchand de vin"
+				],
+				"terms": [
+					"methods-roasted",
+					"methods-simmered"
+				]
+			},
+			"sources": [
+				{
+					"title": "A Guide to Modern Cookery, A. Escoffier (London: Heinemann, 1907)",
+					"url": "https://www.gutenberg.org/ebooks/71395",
+					"year": 1907
+				},
+				{
+					"title": "Brown Stocks and Demi-Glace, in Flavors of the Saucier: Stocks, Sauces and Soups (Zeringue and Thibodeaux, Nicholls State University), LibreTexts",
+					"url": "https://workforce.libretexts.org/Bookshelves/Food_Production_Service_and_Culinary_Arts/Flavors_of_the_Saucier%3A_Stocks_Sauces_and_Soups_(Zeringue_and_Thibodeaux)/01%3A_Chapters/1.02%3A_Brown_Stocks_and_Demi-Glace",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan’s, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-09-26"
+				}
+			],
+			"cards": [
+				{
+					"stem": "what-it-is",
+					"front": "What is brown stock, fond brun?",
+					"back": "A stock made by roasting veal or beef bones and mirepoix deep brown, then simmering them for hours in cold water, with no salt."
+				},
+				{
+					"stem": "veal",
+					"front": "Why are veal bones the classical choice for brown stock?",
+					"back": "Young bones carry plenty of collagen, which melts into gelatine for body, and a mild flavour that takes on whatever the sauce adds later."
+				},
+				{
+					"stem": "roast-colour",
+					"front": "How brown should the bones be before they go into the pot?",
+					"back": "A deep, even mahogany and never black: burnt bones make the stock bitter, and no skimming takes that out."
+				},
+				{
+					"stem": "pince",
+					"front": "What is the pincé, and why do it?",
+					"back": "Tomato purée cooked on the roasted bones until it turns from red to rust: it adds colour and sweetness and cooks off the raw tomato taste."
+				},
+				{
+					"stem": "deglaze",
+					"front": "Why deglaze the roasting tray?",
+					"back": "The browned juices stuck to the tray carry much of the flavour; a little water or wine loosens them so they go into the pot, not the sink."
+				},
+				{
+					"stem": "cold-water",
+					"front": "Why does brown stock start in cold water, brought up slowly?",
+					"back": "Heating slowly lets the proteins that cloud a stock set and rise as foam, where they can be skimmed away, so the stock stays clear."
+				},
+				{
+					"stem": "simmer-time",
+					"front": "How long does a veal brown stock simmer, and how hard?",
+					"back": "8 to 12 hours at a bare simmer, about 85 to 90°C (185 to 194°F), a bubble only now and then, skimmed through the day."
+				},
+				{
+					"stem": "no-salt",
+					"front": "Why is brown stock never salted?",
+					"back": "It is reduced into sauces and glaces, sometimes to a tenth of its volume, and the salt stays behind; a salted batch can only go where no reduction is needed."
+				},
+				{
+					"stem": "boiling",
+					"front": "What happens when a brown stock boils?",
+					"back": "The fat and fine particles churn into the liquid, so the stock turns cloudy and greasy instead of clear."
+				},
+				{
+					"stem": "family",
+					"front": "Name four things built on brown stock.",
+					"back": "Espagnole, demi-glace, glace de viande and jus, and through them bordelaise, marchand de vin and the whole brown family."
+				},
+				{
+					"stem": "ratio",
+					"front": "What is a dependable batch of brown stock?",
+					"back": "About 4.5 kg (10 lb) of bones, 450 g (1 lb) of mirepoix, 115 g (4 oz) of tomato purée and 5.7 litres (6 quarts) of cold water."
+				},
+				{
+					"stem": "brennans",
+					"front": "Where does a Brennan's server meet the brown family?",
+					"back": "In the marchand de vin on the Eggs Hussarde and the Eggs Owen: a savoury red wine and mushroom brown sauce, New Orleans style, often bound with a roux. Whether tonight's carries ham or mushroom is a question for the chef."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-roast",
+					"q": "How far should the bones be roasted for a brown stock?",
+					"answer": "To a deep, even brown, never black",
+					"distractors": [
+						"Just until the fat begins to melt",
+						"Until charred black at the edges",
+						"Not at all: they go in raw"
+					],
+					"why": "Deep browning gives colour and a toasty flavour; blackened bones turn the stock bitter, and raw bones make a white stock instead.",
+					"teaches": "roast-colour"
+				},
+				{
+					"stem": "q-pince",
+					"q": "What does the pincé add to a brown stock?",
+					"answer": "Colour and sweetness from tomato",
+					"distractors": [
+						"Body from flour browned on the bones",
+						"Salt, so the stock is seasoned early",
+						"Sharpness from vinegar over the bones"
+					],
+					"why": "Cooking the tomato concentrate on the bones until it darkens deepens the colour, adds sweetness and drives off the raw tomato taste.",
+					"teaches": "pince"
+				},
+				{
+					"stem": "q-simmer",
+					"q": "How should a veal brown stock cook once it comes up to heat?",
+					"answer": "At a bare simmer for 8 to 12 hours",
+					"distractors": [
+						"At a rolling boil for 2 hours",
+						"At a bare simmer for 30 minutes",
+						"Covered in a hot oven for 1 hour"
+					],
+					"why": "Veal bones need many hours to give up their gelatine and flavour, and a bare simmer keeps the stock clear where a boil clouds it.",
+					"teaches": "simmer-time"
+				},
+				{
+					"stem": "q-salt",
+					"q": "A batch of brown stock was salted by mistake. What is the honest fix?",
+					"answer": "Use it where it will not be reduced",
+					"distractors": [
+						"Reduce it to a glace as planned",
+						"Simmer it longer to cook the salt out",
+						"Add a raw potato to draw the salt out"
+					],
+					"why": "Salt cannot be taken out of a stock, and reduction concentrates it, so a salted stock goes where no reduction is needed and the next batch is made unsalted.",
+					"teaches": "no-salt"
+				},
+				{
+					"stem": "q-cloudy",
+					"q": "A brown stock has turned cloudy and greasy. What most likely happened?",
+					"answer": "It was allowed to boil",
+					"distractors": [
+						"It was started in cold water",
+						"It was skimmed too often",
+						"It was strained through a chinois"
+					],
+					"why": "A boil churns fat and fine particles into the liquid; a bare simmer and steady skimming keep a stock clear.",
+					"teaches": "boiling"
+				},
+				{
+					"stem": "q-deglaze",
+					"q": "What happens to the browned juices left on the roasting tray?",
+					"answer": "They are deglazed into the pot",
+					"distractors": [
+						"They are scraped into the bin",
+						"They are left to burn for colour",
+						"They are saved to salt the stock"
+					],
+					"why": "Those juices are concentrated roasted flavour; a little water or wine loosens them so they go into the stock instead of the sink.",
+					"teaches": "deglaze"
+				},
+				{
+					"stem": "q-family",
+					"q": "Which sauce is brown stock thickened with a brown roux and simmered with mirepoix and tomato?",
+					"answer": "Espagnole",
+					"distractors": [
+						"Glace de viande",
+						"Jus lié",
+						"Velouté"
+					],
+					"why": "Espagnole is brown stock with a brown roux, mirepoix and tomato; glace de viande is brown stock reduced alone, a jus lié is roasting juice bound with starch, and velouté is white stock with a blond roux.",
+					"teaches": "family"
+				},
+				{
+					"stem": "q-veal",
+					"q": "Why do classical kitchens choose veal bones for brown stock?",
+					"answer": "Plenty of collagen, mild flavour",
+					"distractors": [
+						"They brown faster than other bones",
+						"They need no roasting at all",
+						"They give the darkest colour of all"
+					],
+					"why": "Young veal bones give a stock with plenty of gelatine for body and a neutral taste that suits any brown sauce built on it.",
+					"teaches": "veal"
+				},
+				{
+					"stem": "q-brennans",
+					"q": "On which two Brennan's plates does the brown family arrive as marchand de vin?",
+					"answer": "The Eggs Hussarde and the Eggs Owen",
+					"distractors": [
+						"The Eggs Sardou and the Roasted Chateaubriand",
+						"The Turtle Soup and the Seafood Gumbo",
+						"The Redfish Véronique and the Pecan Gulf Fish"
+					],
+					"why": "The marchand de vin, a savoury red wine and mushroom brown sauce, sits under the egg on the Hussarde and the Owen; the Sardou carries Choron and the Chateaubriand Foyot.",
+					"teaches": "brennans"
+				}
+			]
+		},
+		{
+			"stem": "fumet",
+			"slug": "fumet",
+			"title": "Fumet de poisson",
+			"say": "foo-MAY duh pwah-SOHN",
+			"level": 2,
+			"kind": "stock",
+			"summary": "A quick stock of lean white fish bones sweated in butter with aromatics, wetted with white wine and cold water and simmered for only 20 to 30 minutes. It is the base of fish velouté, the white wine sauces and the poaching liquor for fish.",
+			"guest": "A fumet is a light stock made from the bones of white fish, white wine and herbs. It gives a fish sauce its clean taste of the sea.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Fumet de poisson is fish stock made fast. Fumet means scent, and a good one smells of the sea and of white wine, never of old fish. Where a veal stock simmers all day, a fumet is done in half an hour: fish bones are small and soft and give up their flavour and gelatine quickly, and left longer they give up bitterness instead. It is the white base of the fish kitchen, under the sauces for sole, flounder or redfish and in the liquid fish is poached in.",
+						"Cooks draw a loose line between a plain fish stock, bones simmered in water, and a fumet, where the bones are first sweated in butter and part of the liquid is white wine, which gives a fuller, rounder taste. Many kitchens use the two words for the same thing."
+					]
+				},
+				{
+					"key": "buying",
+					"paras": [
+						"Use the frames and heads of lean white fish: sole, flounder, snapper, sheepshead, and redfish and the other drums. Their bones are rich in gelatine and mild in taste. Oily fish such as salmon, mackerel or bluefish make a strong, greasy stock that tastes fishy in a sauce, so keep them out. The frames should be fresh, with clear eyes and a clean smell of the sea."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Pull out the gills, which are bitter and full of blood, chop the frames and soak them in cold water for about 20 minutes, until it runs clear. Blood left on the bones turns the stock grey and strong.",
+						"Melt butter in a wide pan and add sliced onion or shallot, celery or leek white, and mushroom trimmings, which add savour and keep the stock pale. Lay the bones on top, cover with a lid or a circle of paper and sweat them gently for about 5 minutes, without colour, until the scraps of flesh turn white. Pour in dry white wine and let it bubble for a minute, then add cold water just to cover.",
+						"Bring it to a bare simmer, skim, and add parsley stalks, a bay leaf, thyme and a few white peppercorns. Simmer for 20 to 30 minutes and no longer. Ladle it gently through a fine strainer lined with muslin, without pressing the bones, which would cloud it, then cool it quickly."
+					]
+				},
+				{
+					"key": "ratio",
+					"paras": [
+						"A working batch: 1.5 to 2 kg (3 to 4 lb) of bones, about 300 g (11 oz) of aromatics and mushroom trim, 250 ml (1 cup) of dry white wine and 2 litres (about 2 quarts) of cold water, for roughly 2 litres of fumet. Cover the bones only just: extra water makes a thin stock, and longer simmering only adds bitterness."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"Thickened with a blond roux, fumet becomes fish velouté, the parent of the white fish sauces: sauce vin blanc, normande and Bercy among them, each taught under The velouté family. Fumet is also the classic liquor for poaching fish, reduced afterwards into that plate's sauce, and reduced on its own it becomes glace de poisson.",
+						"The Louisiana cousin is a stock of shrimp heads and shells, crab bodies or crawfish shells. The shells are toasted in a little fat until red and sweet smelling, then simmered with onion, celery and bay for 30 to 45 minutes, and a seafood gumbo is built on it. Brennan's own guide says a seafood gumbo uses a stock made from the seafood shells, and the house's published gumbo recipe uses crab stock; whether the dining room gumbo follows it is confirmed at lineup. Keep shell stocks labelled apart from fish stock, because when a guest asks about shellfish the answer comes from the kitchen."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"A bitter fumet simmered too long or kept its gills. A grey or murky one carried blood that was never soaked out, was boiled, or was pressed through the strainer. A greasy, fishy one was made with oily fish or stale bones. None of these can be fixed in the pot: start again with fresh, lean bones and a timer."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"The word fumet rarely reaches a menu, but a guest meets it in the white fish sauces. A server can say the sauce is built on a light stock of fish bones, white wine and herbs. What went into a sauce, fish or shell stock included, is a question for the kitchen."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Bones to cold water",
+					"value": "1.5 to 2 kg (3 to 4 lb) to 2 litres (about 2 quarts)"
+				},
+				{
+					"label": "Dry white wine",
+					"value": "250 ml (1 cup) to 2 litres (about 2 quarts) of water"
+				},
+				{
+					"label": "Aromatics and mushroom trim",
+					"value": "About 300 g (11 oz) for each batch"
+				},
+				{
+					"label": "Simmer for a fumet",
+					"value": "20 to 30 minutes, no longer"
+				},
+				{
+					"label": "Simmer for a shell stock",
+					"value": "30 to 45 minutes"
+				}
+			],
+			"temps": [
+				{
+					"label": "A bare simmer for the fumet",
+					"c": 85,
+					"f": 185
+				}
+			],
+			"faults": [
+				{
+					"fault": "Bitter fumet",
+					"cause": "Simmered past 30 minutes, or the gills were left in.",
+					"fix": "Start again: pull the gills and set a timer for 20 to 30 minutes."
+				},
+				{
+					"fault": "Grey or murky",
+					"cause": "Blood left on the bones, a boil, or bones pressed through the strainer.",
+					"fix": "Soak the bones until the water runs clear, keep a bare simmer and ladle through muslin without pressing."
+				},
+				{
+					"fault": "Greasy and strongly fishy",
+					"cause": "Oily fish such as salmon, or bones that were not fresh.",
+					"fix": "Use lean white fish frames, bought fresh and used the same day."
+				},
+				{
+					"fault": "Thin and weak",
+					"cause": "Too much water, or bones not sweated first.",
+					"fix": "Cover the bones only just and sweat them in butter; reduce the strained stock gently rather than simmering the bones longer."
+				},
+				{
+					"fault": "Sharp and sour",
+					"cause": "Too much wine, or wine not boiled before the water went in.",
+					"fix": "Keep the wine to about an eighth of the liquid and let it bubble for a minute first."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"white-stock",
+					"court-bouillon-and-nage",
+					"veloute-family",
+					"seafood-gumbo",
+					"poaching",
+					"gulf-fish",
+					"glaces"
+				],
+				"techniques": [
+					"sweating-aromatics-soft-never-browned",
+					"skimming-foam-fat-and-a-clear-broth",
+					"straining-and-passing-through-a-sieve"
+				],
+				"lexicon": [
+					"mother-sauce-fish-stock-fumet"
+				],
+				"recipes": [
+					"fumet-de-poisson",
+					"prawn-head-and-shell-stock"
+				],
+				"plates": [
+					"gulf-coast-fish"
+				],
+				"folios": [
+					"straining-standard",
+					"simmer-standard"
+				],
+				"deck": [
+					"fd_0214"
+				],
+				"terms": [
+					"methods-simmered",
+					"methods-poached"
+				]
+			},
+			"sources": [
+				{
+					"title": "A Guide to Modern Cookery, A. Escoffier (London: Heinemann, 1907)",
+					"url": "https://www.gutenberg.org/ebooks/71395",
+					"year": 1907
+				},
+				{
+					"title": "Light Stocks, in Flavors of the Saucier: Stocks, Sauces and Soups (Zeringue and Thibodeaux, Nicholls State University), LibreTexts",
+					"url": "https://workforce.libretexts.org/Bookshelves/Food_Production_Service_and_Culinary_Arts/Flavors_of_the_Saucier%3A_Stocks_Sauces_and_Soups_(Zeringue_and_Thibodeaux)/01%3A_Chapters/1.01%3A_Light_Stocks",
+					"asOf": "2026-10-12"
+				}
+			],
+			"cards": [
+				{
+					"stem": "what-it-is",
+					"front": "What is a fumet de poisson?",
+					"back": "A quick fish stock: lean white fish bones sweated in butter with aromatics, wetted with white wine and water, simmered 20 to 30 minutes."
+				},
+				{
+					"stem": "time",
+					"front": "Why does a fumet simmer for only 20 to 30 minutes?",
+					"back": "Fish bones are small and soft and give up their flavour fast; longer cooking draws bitterness out of them instead."
+				},
+				{
+					"stem": "gills",
+					"front": "Why are the gills pulled and the bones soaked?",
+					"back": "Gills are bitter and full of blood, and blood left on the bones turns the stock grey and strong tasting."
+				},
+				{
+					"stem": "lean",
+					"front": "Which fish frames make a clean fumet, and which stay out?",
+					"back": "Lean white fish such as sole, flounder, snapper and redfish; oily fish such as salmon or mackerel make it strong and greasy."
+				},
+				{
+					"stem": "sweat",
+					"front": "What does sweating the bones mean in a fumet?",
+					"back": "Cooking bones and aromatics gently in butter, covered and without colour, until the flesh turns white, before the wine and water go in."
+				},
+				{
+					"stem": "mushroom",
+					"front": "Why do mushroom trimmings go into a fumet?",
+					"back": "They add savoury depth and, unlike carrot, keep the stock pale for the white fish sauces."
+				},
+				{
+					"stem": "straining",
+					"front": "How is a fumet strained, and why gently?",
+					"back": "Ladled through a fine strainer lined with muslin, without pressing the bones, so the stock stays clear and clean tasting."
+				},
+				{
+					"stem": "fumet-or-stock",
+					"front": "How does a fumet differ from a plain fish stock?",
+					"back": "A fumet's bones are sweated in butter first and part of its liquid is white wine, so it tastes fuller and rounder."
+				},
+				{
+					"stem": "shell-stock",
+					"front": "What is the Louisiana cousin of the fumet?",
+					"back": "A stock of shrimp heads and shells or crab bodies, toasted, then simmered 30 to 45 minutes with onion, celery and bay: the base of a seafood gumbo."
+				},
+				{
+					"stem": "family",
+					"front": "Name three things built on fumet.",
+					"back": "Fish velouté, the white wine sauces such as vin blanc, normande and Bercy, and the poaching liquor for fish."
+				},
+				{
+					"stem": "ratio",
+					"front": "What is a working batch of fumet?",
+					"back": "About 1.5 to 2 kg (3 to 4 lb) of bones, 250 ml (1 cup) of dry white wine and 2 litres (about 2 quarts) of cold water."
+				},
+				{
+					"stem": "brennans-gumbo",
+					"front": "What stock does Brennan's published gumbo recipe use?",
+					"back": "Crab stock, under a dark mahogany roux; the house guide says a seafood gumbo is built on a stock of the seafood shells. Confirm at lineup that the dining room gumbo follows the recipe."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-time",
+					"q": "How long should a fumet de poisson simmer?",
+					"answer": "20 to 30 minutes",
+					"distractors": [
+						"8 to 12 hours",
+						"3 to 4 hours",
+						"2 to 3 minutes"
+					],
+					"why": "Fish bones give their flavour quickly; past half an hour they turn the stock bitter, so a fumet is the quickest stock in the kitchen.",
+					"teaches": "time"
+				},
+				{
+					"stem": "q-gills",
+					"q": "Why are the gills removed before the bones go into a fumet?",
+					"answer": "Bitter and full of blood",
+					"distractors": [
+						"They make the stock too thick",
+						"They hold most of the gelatine",
+						"They turn the stock bright red"
+					],
+					"why": "Gills carry blood and bitterness that grey the stock and spoil its clean taste, which is also why the frames are soaked until the water runs clear.",
+					"teaches": "gills"
+				},
+				{
+					"stem": "q-oily",
+					"q": "Which fish frames should stay out of a fumet?",
+					"answer": "Salmon and mackerel",
+					"distractors": [
+						"Sole and flounder",
+						"Snapper and redfish",
+						"Sheepshead and drum"
+					],
+					"why": "Oily fish make a strong, greasy stock that tastes fishy in a sauce; lean white fish give a clean, gelatinous one.",
+					"teaches": "lean"
+				},
+				{
+					"stem": "q-sweat",
+					"q": "What happens to the bones before the wine and water go into a fumet?",
+					"answer": "They are sweated in butter",
+					"distractors": [
+						"They are roasted dark in a hot oven",
+						"They are boiled hard and drained",
+						"They are salted overnight"
+					],
+					"why": "Sweating opens the flavour of bones and aromatics without colour, which keeps the fumet pale and rounder than a plain fish stock.",
+					"teaches": "sweat"
+				},
+				{
+					"stem": "q-murky",
+					"q": "Your fumet looks murky. Which habit most likely caused it?",
+					"answer": "Pressing the bones in the strainer",
+					"distractors": [
+						"Lining the strainer with damp muslin",
+						"Skimming the foam as it rose",
+						"Keeping it at a bare simmer"
+					],
+					"why": "Pressing forces fine particles of bone and flesh into the stock; ladle it gently through muslin and let it drip.",
+					"teaches": "straining"
+				},
+				{
+					"stem": "q-shell",
+					"q": "What is a Louisiana seafood gumbo's stock usually made from?",
+					"answer": "Shrimp heads and shells or crab bodies",
+					"distractors": [
+						"Roasted veal knuckles and tomato purée",
+						"Salmon frames, heads and skin",
+						"Chicken wings, necks and feet"
+					],
+					"why": "Toasted shells and heads, simmered with onion, celery and bay, give the sweet, deep stock a seafood gumbo is built on.",
+					"teaches": "shell-stock"
+				},
+				{
+					"stem": "q-family",
+					"q": "Which of these sauces is a daughter of fish velouté, built on fumet?",
+					"answer": "Sauce Bercy",
+					"distractors": [
+						"Sauce Mornay",
+						"Sauce Robert",
+						"Sauce Choron"
+					],
+					"why": "Bercy, like vin blanc and normande, is built on fish velouté, fumet thickened with a blond roux; Mornay is béchamel with cheese, Robert a brown onion sauce and Choron a tomato béarnaise.",
+					"teaches": "family"
+				},
+				{
+					"stem": "q-mushroom",
+					"q": "Why might a cook put mushroom trimmings rather than carrot into a fumet?",
+					"answer": "They add savour and keep it pale",
+					"distractors": [
+						"They thicken it like a roux",
+						"They make it set much firmer",
+						"They turn it a deeper red"
+					],
+					"why": "Carrot brings colour and sweetness a white fish sauce does not want; mushroom trim gives savoury depth without colour.",
+					"teaches": "mushroom"
+				}
+			]
+		},
+		{
+			"stem": "court-bouillon-and-nage",
+			"slug": "court-bouillon-and-nage",
+			"title": "Court-bouillon and nage",
+			"say": "koor-boo-YOHN and NAHZH",
+			"level": 2,
+			"kind": "stock",
+			"summary": "A court-bouillon is a short broth of water, an acid, aromatics and salt, simmered briefly to flavour and poach fish and seafood. Refined, reduced and mounted with butter, it becomes a nage, a broth fine enough to serve.",
+			"guest": "À la nage means the seafood arrives swimming in its own light broth of white wine, vegetables and herbs, so the broth is the sauce.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Court-bouillon means short broth: short because it cooks briefly, 20 to 30 minutes in most kitchens today and about an hour in Escoffier's vinegar version, against the many hours of a stock. It is water sharpened with an acid, white wine, vinegar or lemon, with sliced onion, carrot, celery, herbs and salt. Unlike a stock, it is not a base to be reduced into sauces. It has two jobs: to flavour what cooks in it, and to be the poaching liquid itself, for whole fish, fish steaks, crawfish, shrimp, crab and lobster, and for sweetbreads, the glands of veal or lamb.",
+						"The acid helps the proteins on the surface of the fish set, so the flesh holds together, and it keeps white flesh white. The salt seasons the food right through, which is why a court-bouillon is salted where a stock never is: it will not be reduced, so the salt is never concentrated."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Bring the water, acid, vegetables, a bouquet garni and salt to the boil, then simmer for 20 to 30 minutes, adding a few peppercorns only for the last 10, since they turn bitter if simmered long. Strain it, or leave the vegetables in for a rustic dish.",
+						"Once the food goes in, the liquid is never boiled again. Hold it just below a simmer, about 75 to 85°C (167 to 185°F), the surface barely trembling. A whole fish starts in cool court-bouillon and is brought up gently, so the outside does not overcook and split before the heat reaches the bone. Fillets, portions and shrimp go into liquid that is already hot, because they are thin enough to cook through before the outside toughens."
+					]
+				},
+				{
+					"key": "ratio",
+					"paras": [
+						"A working court-bouillon is 2 litres (about 2 quarts) of water to 250 ml (1 cup) of dry white wine, or about 100 ml of white wine vinegar, with a sliced onion and carrot, a stick of celery, a bouquet garni and about 20 g of salt, roughly 1 per cent. Escoffier varied the court-bouillon with the fish: his vinegar court-bouillon was for salmon and trout, whole or in large cuts, and salted water with milk and slices of lemon was for turbot and brill, to keep the flesh white."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"A nage, from à la nage, swimming, is a court-bouillon made fine enough to serve. The vegetables are cut neatly, often thin rounds of carrot and shallot; the broth is strained and reduced to concentrate it, and cold butter is often whisked in at the end, monter au beurre, so it turns glossy and rounder without thickening into a coating sauce. Scallops, lobster or langoustines poached in it come to the table swimming in it, so the broth is the sauce.",
+						"The Louisiana seafood boil is a court-bouillon taken to the limit. A big pot of water is loaded with salt, cayenne, lemon halves, onions, garlic and bay and brought to a hard boil. Crawfish, crab or shrimp go in with potatoes and corn. Crawfish boil for only a few minutes; then the fire goes off and they soak, often 15 to 30 minutes, drinking in the seasoning as the pot cools. Here the boil is deliberate, and it is the soak that carries the flavour."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"Boiling is the commonest fault: it breaks fish apart, toughens shrimp and clouds the broth. Used before it has simmered, it tastes of little but sour water. A whole fish dropped into fierce heat splits its skin and overcooks outside while the centre stays raw."
+					]
+				},
+				{
+					"key": "history",
+					"paras": [
+						"New Orleans uses the same word for something quite different. The Creole courtbouillon, usually written as one word and said coo-bee-YON in Louisiana, is a thick stew of redfish in a roux-based tomato sauce with the trinity of onion, celery and green pepper, served over rice. It shares the French name and little else, and has its own entry, Courtbouillon."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"On a menu, à la nage tells the guest the dish comes in a light broth meant to be spooned up, so set a spoon and offer bread. Describe it as seafood poached in a light broth of white wine, vegetables and herbs, and served in it. Questions about what went into the broth go to the kitchen."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Water to dry white wine",
+					"value": "2 litres (about 2 quarts) to 250 ml (1 cup)"
+				},
+				{
+					"label": "Water to white wine vinegar",
+					"value": "2 litres (about 2 quarts) to about 100 ml"
+				},
+				{
+					"label": "Salt",
+					"value": "About 1 per cent: 20 g to 2 litres"
+				},
+				{
+					"label": "Simmer before the food goes in",
+					"value": "20 to 30 minutes"
+				},
+				{
+					"label": "Peppercorns",
+					"value": "The last 10 minutes only"
+				}
+			],
+			"temps": [
+				{
+					"label": "Poaching heat, low end",
+					"c": 75,
+					"f": 167
+				},
+				{
+					"label": "Poaching heat, high end",
+					"c": 85,
+					"f": 185
+				},
+				{
+					"label": "The hard boil of a seafood boil",
+					"c": 100,
+					"f": 212
+				}
+			],
+			"faults": [
+				{
+					"fault": "Fish broken apart, shrimp tough",
+					"cause": "The liquid boiled once the food was in.",
+					"fix": "Hold it just below a simmer, about 75 to 85°C (167 to 185°F), the surface barely trembling."
+				},
+				{
+					"fault": "Flat, sour taste",
+					"cause": "The aromatics were not simmered first, or too much acid went in.",
+					"fix": "Simmer the court-bouillon 20 to 30 minutes before the food goes in, and measure the acid."
+				},
+				{
+					"fault": "Bitter edge",
+					"cause": "Peppercorns simmered for the whole time.",
+					"fix": "Add them for the last 10 minutes only."
+				},
+				{
+					"fault": "Split skin and a raw centre on a whole fish",
+					"cause": "The fish went into hot liquid.",
+					"fix": "Start a whole fish in cool court-bouillon and bring it up gently."
+				},
+				{
+					"fault": "Greasy nage, butter separated",
+					"cause": "The nage boiled after the butter went in.",
+					"fix": "Whisk the butter in off the boil and hold the nage warm, never boiling."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"courtbouillon",
+					"poaching",
+					"fumet",
+					"crawfish",
+					"boil-blanch-and-steam",
+					"monter-au-beurre"
+				],
+				"techniques": [
+					"the-bare-simmer-holding-liquid-below-the-boil",
+					"the-seafood-boil"
+				],
+				"lexicon": [
+					"poach-simmer-boil"
+				],
+				"recipes": [
+					"backyard-crawfish-boil"
+				],
+				"folios": [
+					"simmer-standard"
+				],
+				"deck": [
+					"fd_0336",
+					"fd_0034"
+				],
+				"terms": [
+					"methods-poached"
+				]
+			},
+			"sources": [
+				{
+					"title": "A Guide to Modern Cookery, A. Escoffier (London: Heinemann, 1907)",
+					"url": "https://www.gutenberg.org/ebooks/71395",
+					"year": 1907
+				},
+				{
+					"title": "Vinegar Court-Bouillon, from Escoffier's Le Guide Culinaire, ckbk",
+					"url": "https://app.ckbk.com/recipe/esco04831c06s001r001",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Crawfish Boils, 64 Parishes",
+					"url": "https://64parishes.org/entry/crawfish-boils",
+					"asOf": "2026-10-12"
+				}
+			],
+			"cards": [
+				{
+					"stem": "what-it-is",
+					"front": "What does court-bouillon mean, and what is it?",
+					"back": "Short broth: water with an acid, aromatics and salt, simmered 20 to 30 minutes to flavour and poach fish and seafood."
+				},
+				{
+					"stem": "jobs",
+					"front": "What are the two jobs of a court-bouillon?",
+					"back": "To flavour what cooks in it, and to be the poaching liquid itself, for whole fish, fish steaks, crawfish, shrimp, crab and sweetbreads."
+				},
+				{
+					"stem": "acid",
+					"front": "Why does a court-bouillon carry an acid?",
+					"back": "Wine, vinegar or lemon helps the surface proteins set, so the flesh holds together, and keeps white fish white."
+				},
+				{
+					"stem": "salt",
+					"front": "Why is a court-bouillon salted when a stock never is?",
+					"back": "It is a cooking liquid, not a base for reduction, so the salt seasons the fish right through and is never concentrated."
+				},
+				{
+					"stem": "heat",
+					"front": "How hot is the court-bouillon once the fish is in?",
+					"back": "Just below a simmer, about 75 to 85°C (167 to 185°F), the surface barely trembling; a boil breaks fish apart."
+				},
+				{
+					"stem": "cold-hot",
+					"front": "Which fish start in cool court-bouillon, and which in hot?",
+					"back": "A whole fish starts cool and comes up gently so it cooks evenly to the bone; fillets and portions go into liquid already hot."
+				},
+				{
+					"stem": "peppercorns",
+					"front": "When do the peppercorns go into a court-bouillon?",
+					"back": "In the last 10 minutes, because peppercorns simmered for long turn the broth bitter."
+				},
+				{
+					"stem": "nage",
+					"front": "What is a nage?",
+					"back": "A court-bouillon made fine enough to serve: neat vegetables, strained, reduced and often mounted with butter; seafood à la nage arrives swimming in it."
+				},
+				{
+					"stem": "boil",
+					"front": "How is a Louisiana seafood boil a court-bouillon taken to the limit?",
+					"back": "Heavy salt, cayenne and lemon at a hard boil; the crawfish cook briefly, then soak off the heat, taking up the seasoning."
+				},
+				{
+					"stem": "courtbouillon",
+					"front": "How does the Creole courtbouillon differ from the French court-bouillon?",
+					"back": "The Creole dish is a thick redfish stew in a roux-based tomato sauce; the French one is a clear broth for poaching."
+				},
+				{
+					"stem": "service",
+					"front": "What does a server do for a dish served à la nage?",
+					"back": "Describe the light broth of white wine, vegetables and herbs, set a spoon and offer bread, since the broth is meant to be eaten."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-meaning",
+					"q": "What does the French word court-bouillon mean?",
+					"answer": "Short broth",
+					"distractors": [
+						"Strong broth",
+						"Clear broth",
+						"Thick broth"
+					],
+					"why": "Court means short: it simmers for 20 to 30 minutes, not the hours a stock needs, and is used to poach rather than to build sauces.",
+					"teaches": "what-it-is"
+				},
+				{
+					"stem": "q-acid",
+					"q": "Why is wine, vinegar or lemon added to a court-bouillon?",
+					"answer": "It firms and whitens the flesh",
+					"distractors": [
+						"It thickens the liquid into a sauce",
+						"It stops the fish taking up salt",
+						"It turns the broth a deep brown"
+					],
+					"why": "The acid helps the surface proteins set so the fish holds together, and it keeps white flesh looking white.",
+					"teaches": "acid"
+				},
+				{
+					"stem": "q-heat",
+					"q": "Once the fish is in the court-bouillon, how should the liquid behave?",
+					"answer": "Barely trembling, below a simmer",
+					"distractors": [
+						"At a full rolling boil",
+						"Bubbling steadily from start to finish",
+						"Cooled to room temperature"
+					],
+					"why": "Held at about 75 to 85°C (167 to 185°F), the fish cooks gently; a boil breaks the flesh apart and toughens it.",
+					"teaches": "heat"
+				},
+				{
+					"stem": "q-whole",
+					"q": "How is a whole fish started in court-bouillon?",
+					"answer": "In cool liquid, brought up gently",
+					"distractors": [
+						"Dropped into a hard boil",
+						"Seared first, then boiled",
+						"Into liquid at a full simmer"
+					],
+					"why": "Starting cool lets the heat reach the bone before the outside overcooks and the skin splits; thin portions can go straight into hot liquid.",
+					"teaches": "cold-hot"
+				},
+				{
+					"stem": "q-pepper",
+					"q": "Why do peppercorns go into a court-bouillon only for the last minutes?",
+					"answer": "Long simmering turns them bitter",
+					"distractors": [
+						"They cloud the broth if added early",
+						"They toughen the fish if left in",
+						"They lose their colour in the heat"
+					],
+					"why": "Peppercorns simmered for long give a harsh, bitter edge, so they go in for the last 10 minutes only.",
+					"teaches": "peppercorns"
+				},
+				{
+					"stem": "q-nage",
+					"q": "On a menu, what does à la nage tell the guest?",
+					"answer": "It comes in its light poaching broth",
+					"distractors": [
+						"It is fried in clarified butter",
+						"It is served raw on crushed ice",
+						"It is baked whole in paper"
+					],
+					"why": "À la nage means swimming: the seafood is poached in a refined court-bouillon and served in it, so the broth is the sauce.",
+					"teaches": "nage"
+				},
+				{
+					"stem": "q-boil",
+					"q": "In a Louisiana crawfish boil, where does most of the seasoning come from?",
+					"answer": "The soak once the heat goes off",
+					"distractors": [
+						"A sauce poured over at the table",
+						"A dry rub before boiling",
+						"Long hours at a hard boil"
+					],
+					"why": "The crawfish boil only a few minutes, then soak in the salty, spicy liquid as it cools, drinking in the seasoning.",
+					"teaches": "boil"
+				},
+				{
+					"stem": "q-creole",
+					"q": "A guest orders courtbouillon expecting the New Orleans dish. What is that dish?",
+					"answer": "A redfish stew in a roux and tomato sauce",
+					"distractors": [
+						"A clear broth of wine and herbs for poaching fish",
+						"A cold fish jelly set in small moulds",
+						"A butter sauce for grilled Gulf fish"
+					],
+					"why": "The Creole courtbouillon is a thick stew of redfish in a roux-based tomato sauce; the French court-bouillon is a clear poaching liquid.",
+					"teaches": "courtbouillon"
+				},
+				{
+					"stem": "q-salt",
+					"q": "Why is a court-bouillon salted when a stock never is?",
+					"answer": "It poaches food and is never reduced",
+					"distractors": [
+						"Salt makes the broth boil faster",
+						"Salt keeps the vegetables green",
+						"Salt clears the broth like a raft"
+					],
+					"why": "A court-bouillon is the cooking liquid itself: its salt seasons the fish right through, and since it is not reduced into a sauce, the salt never concentrates.",
+					"teaches": "salt"
+				}
+			]
+		},
+		{
+			"stem": "glaces",
+			"slug": "glaces",
+			"title": "Glace de viande and the glaces",
+			"say": "GLAHSS duh vee-AHND",
+			"level": 3,
+			"kind": "stock",
+			"summary": "A glace is stock reduced slowly until syrupy, setting firm when cold: glace de viande from brown stock, glace de volaille from chicken, glace de poisson from fish. A spoonful deepens a sauce; it is the concentrated end of the stockpot.",
+			"guest": "Glace de viande is brown stock cooked down to a rich, glossy glaze. A little whisked into a sauce, as in the sauce Foyot, gives it deep, savoury flavour.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"A glace, French for glaze, is stock reduced until only a small fraction remains: thick enough to coat a spoon like syrup while warm, and firm as rubber when cold. Glace de viande, meat glaze, comes from brown stock; glace de volaille from white chicken stock; glace de poisson from fish fumet. Nothing is added to thicken it. Its body is the gelatine of the bones, concentrated along with the flavour, so a glace is only as good as the stock it began as.",
+						"It is used by the spoonful, not the ladle. A teaspoon stirred into a pan sauce gives depth, colour and gloss that would otherwise take hours, and a block in the fridge holds the flavour of a whole stockpot. Between stock and glace sits demi-glace, half glaze, which has its own entry."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Start with a large batch of well-skimmed, unsalted stock in a wide pot at a steady simmer, and keep skimming: the reduction concentrates any fat or scum along with the flavour. Each time the volume halves, strain it through a fine chinois into a smaller, clean pan. That leaves the sediment behind and keeps the liquid deep enough that the sides and bottom do not scorch. Lower the heat as it thickens. The first litres go quickly; the last stage is slow and needs a watchful eye, because a glace that catches turns bitter in moments.",
+						"It is ready when it coats the back of a spoon thickly, the bubbles turn large and glossy, and a drop on a cold plate sets almost at once. Pour it into a shallow tray or small moulds and chill it."
+					]
+				},
+				{
+					"key": "ratio",
+					"paras": [
+						"Roughly 8 to 10 litres (about 2 to 2.6 gallons) of stock reduce to 1 litre (about 1 quart) of glace, a loss of nine tenths or more, over several hours. That is why the stock must be unsalted: a stock seasoned to taste would make a glace ten times too salty."
+					]
+				},
+				{
+					"key": "family",
+					"paras": [
+						"Glace de viande finishes brown pan sauces and makes sauce Foyot, which is béarnaise with meat glaze whisked in; Foyot has its own entry beside Choron. A pale glace does the same work for white sauces: a few spoonfuls stirred into suprême, the cream-enriched chicken velouté, give sauce ivoire, named for its ivory colour. Glace de poisson strengthens a thin fish sauce, and melted glace brushed over a roast or braise gives it shine.",
+						"Jus is the lighter road. A jus is the juice of a roast: the pan is deglazed, the juices simmered with a little stock, skimmed of fat, strained and served thin and clear. A jus lié is the same juice lightly thickened with arrowroot or cornflour slaked in cold water, that is, mixed smooth with it first, just enough to coat a spoon. Since the nouvelle cuisine of the 1970s, many kitchens have preferred jus and reduced stocks to flour-thickened brown sauces."
+					]
+				},
+				{
+					"key": "faults",
+					"paras": [
+						"Salt and scorching are the two enemies. Only an unsalted stock makes a usable glace, and in the last stage, with almost no water left, the glace catches on a hot pan in moments and turns dark and bitter: lower the heat, move it to a smaller pan and stir. A cloudy, greasy glace came from stock that was not skimmed or strained well, and one that will not set began as a thin stock."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"At Brennan's, a server meets glace de viande in the sauce Foyot (fwah-YO) on the Roasted Chateaubriand. The house guide describes Foyot as béarnaise with meat glaze whisked in: a spoonful turns pale, sharp béarnaise tawny, deeper and more savoury. That matters on this plate, because tenderloin is one of the leanest, mildest cuts on the animal, and the sauce brings the depth the meat lacks. Say it as béarnaise made even richer with a reduced beef glaze, and send any question about what is in it to the kitchen."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Glace keeps chilled as a block to cut from, or set in small portions so a cook takes only what a sauce needs, labelled and dated like every stock, and frozen for longer keeping. At the table, a server calls it a rich reduction of stock that gives a sauce its depth."
+					]
+				}
+			],
+			"ratios": [
+				{
+					"label": "Stock to glace",
+					"value": "8 to 10 litres (about 2 to 2.6 gallons) to 1 litre (about 1 quart)"
+				},
+				{
+					"label": "Glace in a pan sauce",
+					"value": "1 tsp (5 ml) to 1 tbsp (15 ml) for each portion, tasted as it goes"
+				},
+				{
+					"label": "Strain into a smaller pan",
+					"value": "Each time the volume halves"
+				}
+			],
+			"temps": [
+				{
+					"label": "Keep glace chilled at or below",
+					"c": 5,
+					"f": 41
+				}
+			],
+			"faults": [
+				{
+					"fault": "Dark, bitter, burnt smell",
+					"cause": "The glace scorched in the last stage of reduction.",
+					"fix": "Lower the heat, move it to a smaller pan and stir; a scorched glace cannot be saved."
+				},
+				{
+					"fault": "Far too salty",
+					"cause": "It was reduced from salted stock.",
+					"fix": "No fix in the pan: make glace only from unsalted stock."
+				},
+				{
+					"fault": "Cloudy and greasy",
+					"cause": "The stock was not skimmed or strained well.",
+					"fix": "Skim throughout and strain through a fine chinois into a clean pan at each stage."
+				},
+				{
+					"fault": "Will not set when cold",
+					"cause": "A thin stock poor in gelatine, or not reduced far enough.",
+					"fix": "Reduce it further, and build the next stock on gelatinous bones such as veal knuckle."
+				},
+				{
+					"fault": "Sticky, gluey sauce",
+					"cause": "Too much glace added.",
+					"fix": "Use it by the spoonful and taste; loosen an over-rich sauce with a little stock."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-5wcuejdy",
+					"components": [
+						"Sauce Foyot"
+					],
+					"how": "Sauce Foyot on the Roasted Chateaubriand is béarnaise with glace de viande whisked in, which turns it tawny, deeper and more savoury and gives the lean, mild tenderloin the depth it lacks."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"brown-stock",
+					"white-stock",
+					"fumet",
+					"demi-glace",
+					"choron-and-foyot",
+					"finishing-a-sauce",
+					"chateaubriand-foyot",
+					"deglaze-and-pan-sauce"
+				],
+				"techniques": [
+					"reducing-a-sauce"
+				],
+				"lexicon": [
+					"stocks-blanc-brun-broth-and-demi",
+					"reduction-nappe-and-mounting"
+				],
+				"recipes": [
+					"sauce-espagnole-and-demi-glace",
+					"red-wine-jus-monter-au-beurre"
+				],
+				"folios": [
+					"chateaubriand-study",
+					"brennans-sauces"
+				],
+				"deck": [
+					"fd_0206"
+				],
+				"components": [
+					"Sauce Foyot"
+				]
+			},
+			"sources": [
+				{
+					"title": "A Guide to Modern Cookery, A. Escoffier (London: Heinemann, 1907)",
+					"url": "https://www.gutenberg.org/ebooks/71395",
+					"year": 1907
+				},
+				{
+					"title": "Brown Stocks and Demi-Glace, in Flavors of the Saucier: Stocks, Sauces and Soups (Zeringue and Thibodeaux, Nicholls State University), LibreTexts",
+					"url": "https://workforce.libretexts.org/Bookshelves/Food_Production_Service_and_Culinary_Arts/Flavors_of_the_Saucier%3A_Stocks_Sauces_and_Soups_(Zeringue_and_Thibodeaux)/01%3A_Chapters/1.02%3A_Brown_Stocks_and_Demi-Glace",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan’s, Dinner menu",
+					"url": "https://www.brennansneworleans.com/menus/dinner/",
+					"asOf": "2026-09-26"
+				}
+			],
+			"cards": [
+				{
+					"stem": "what-it-is",
+					"front": "What is a glace?",
+					"back": "Stock reduced until syrupy, its body the concentrated gelatine of the bones: it coats a spoon warm and sets firm cold, with no thickener added."
+				},
+				{
+					"stem": "three-glaces",
+					"front": "Name the three classical glaces and the stock each comes from.",
+					"back": "Glace de viande from brown stock, glace de volaille from chicken stock, and glace de poisson from fish fumet."
+				},
+				{
+					"stem": "ratio",
+					"front": "How much stock makes 1 litre (about 1 quart) of glace?",
+					"back": "Roughly 8 to 10 litres (about 2 to 2.6 gallons), reduced over several hours, a loss of nine tenths or more."
+				},
+				{
+					"stem": "smaller-pans",
+					"front": "Why is a reducing glace strained into smaller pans as it goes?",
+					"back": "Each move leaves sediment behind and keeps the liquid deep enough that the sides and bottom of the pan do not scorch."
+				},
+				{
+					"stem": "unsalted",
+					"front": "Why must a glace start from unsalted stock?",
+					"back": "Reducing to a tenth concentrates salt tenfold: a stock seasoned to taste would make a glace far too salty to use."
+				},
+				{
+					"stem": "scorch",
+					"front": "Why does a glace need a watchful eye at the end?",
+					"back": "With almost all the water gone, it catches on the pan in moments and turns bitter; lower the heat and stir."
+				},
+				{
+					"stem": "done",
+					"front": "How do you know a glace is ready?",
+					"back": "It coats a spoon thickly, the bubbles turn large and glossy, and a drop on a cold plate sets almost at once."
+				},
+				{
+					"stem": "uses",
+					"front": "Name three classical uses for a glace.",
+					"back": "A spoonful to deepen a pan sauce, and glace de viande whisked into béarnaise for sauce Foyot; a pale glace turns suprême into sauce ivoire."
+				},
+				{
+					"stem": "jus",
+					"front": "What is the difference between a jus and a jus lié?",
+					"back": "A jus is the roasting juices served thin and clear; a jus lié is the same juice lightly thickened with arrowroot or cornflour."
+				},
+				{
+					"stem": "keeping",
+					"front": "How is glace kept in the kitchen?",
+					"back": "Chilled as a block to cut from, or set in small portions, labelled and dated; it freezes for longer keeping."
+				},
+				{
+					"stem": "brennans",
+					"front": "Where does a Brennan's server meet glace de viande?",
+					"back": "In the sauce Foyot on the Roasted Chateaubriand: béarnaise with meat glaze whisked in, richer and more savoury for the lean tenderloin."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-body",
+					"q": "What gives a glace its thick, syrupy body?",
+					"answer": "Concentrated gelatine from the bones",
+					"distractors": [
+						"Flour cooked in butter",
+						"Egg yolks whisked in at the end",
+						"Cornflour slaked in cold water"
+					],
+					"why": "Nothing is added to thicken a glace: reducing stock concentrates its gelatine with its flavour, so it coats a spoon warm and sets firm cold.",
+					"teaches": "what-it-is"
+				},
+				{
+					"stem": "q-ratio",
+					"q": "Roughly how much stock reduces to 1 litre (about 1 quart) of glace?",
+					"answer": "8 to 10 litres",
+					"distractors": [
+						"2 to 3 litres",
+						"4 to 5 litres",
+						"25 to 30 litres"
+					],
+					"why": "A glace loses nine tenths or more of its volume, which is why it takes hours and why the stock must be unsalted.",
+					"teaches": "ratio"
+				},
+				{
+					"stem": "q-salt",
+					"q": "A stock seasoned to taste is reduced from 10 litres to 1 litre of glace. How salty is the glace?",
+					"answer": "About ten times as salty",
+					"distractors": [
+						"Just as salty as the stock",
+						"About twice as salty",
+						"Less salty, since salt boils off"
+					],
+					"why": "Water leaves the pan but salt does not, so reducing to a tenth concentrates the salt tenfold; that is why a glace starts from unsalted stock.",
+					"teaches": "unsalted"
+				},
+				{
+					"stem": "q-foyot",
+					"q": "Which sauce on Brennan's Roasted Chateaubriand is béarnaise with glace de viande whisked in?",
+					"answer": "Sauce Foyot",
+					"distractors": [
+						"Sauce Choron",
+						"Marchand de vin",
+						"Beurre blanc"
+					],
+					"why": "The house guide describes Foyot as béarnaise with meat glaze, tawny and more savoury, bringing depth to the lean tenderloin; Choron adds tomato instead.",
+					"teaches": "brennans"
+				},
+				{
+					"stem": "q-jus",
+					"q": "What turns a jus into a jus lié?",
+					"answer": "A little arrowroot slaked in cold water",
+					"distractors": [
+						"A spoonful of dark brown roux",
+						"Egg yolks and cream, tempered in",
+						"Reducing it all the way to a glace"
+					],
+					"why": "A jus lié is the roasting juices lightly thickened with a starch such as arrowroot or cornflour, just enough to coat a spoon, with no roux.",
+					"teaches": "jus"
+				},
+				{
+					"stem": "q-scorch",
+					"q": "In the last stage of reducing a glace, what is the danger?",
+					"answer": "It scorches and turns bitter",
+					"distractors": [
+						"It splits like a hollandaise",
+						"It loses all its gelatine",
+						"It turns thin and watery"
+					],
+					"why": "With almost all the water gone it catches in moments; lower the heat, move it to a smaller pan and stir.",
+					"teaches": "scorch"
+				},
+				{
+					"stem": "q-ivoire",
+					"q": "Stirring a little pale glace into suprême gives which sauce?",
+					"answer": "Sauce ivoire",
+					"distractors": [
+						"Sauce Mornay",
+						"Sauce Bercy",
+						"Sauce Robert"
+					],
+					"why": "Pale glace gives suprême its ivory colour and deeper flavour; Mornay is béchamel with cheese, Bercy a white wine and shallot sauce, Robert a brown onion sauce.",
+					"teaches": "uses"
+				},
+				{
+					"stem": "q-pans",
+					"q": "Why does a cook strain a reducing glace into smaller pans?",
+					"answer": "To shed sediment and stop scorching",
+					"distractors": [
+						"To cool it more quickly before service",
+						"To add salt at each stage",
+						"To thicken it with a roux"
+					],
+					"why": "Each strain leaves sediment in the old pan, and a smaller pan keeps the liquid deep so its sides and bottom do not burn.",
+					"teaches": "smaller-pans"
+				}
+			]
+		}
+	]
+}

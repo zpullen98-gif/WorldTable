@@ -1,0 +1,203 @@
+{
+  "steps": [
+    {
+      "stem": "stir-a-creme-anglaise",
+      "entry": "creme-anglaise",
+      "title": "Stir a crème anglaise",
+      "prompt": "Put the stages of a crème anglaise in order. One stage does not belong.",
+      "steps": [
+        "Bring the milk to a simmer with half the sugar and a split vanilla pod, then leave it off the heat to infuse",
+        "While the milk infuses, whisk the yolks with the rest of the sugar until pale",
+        "Pour about a third of the hot milk onto the yolks, whisking all the while, to temper them",
+        "Pour the tempered yolks back into the pan",
+        "Stir over low to medium heat in a figure of eight, reaching into the corners",
+        "Take it to 82 to 84°C (180 to 183°F), when it coats the spoon and a finger leaves a clean line",
+        "Strain it at once through a fine sieve into a cold bowl set over ice",
+        "Stir it now and then as it cools, then cover and chill"
+      ],
+      "distractor": "Let it boil for a minute so the yolks thicken it fully",
+      "why": "The milk infuses first and the yolks are tempered before they go back into the pan. An anglaise is stirred only to nappe and never boiled, because a boil curdles the yolks; it goes straight into a cold bowl to stop the cooking."
+    },
+    {
+      "stem": "cook-a-creme-patissiere",
+      "entry": "creme-patissiere",
+      "title": "Cook a crème pâtissière",
+      "prompt": "Put the stages of a crème pâtissière in order. One stage does not belong.",
+      "steps": [
+        "Bring the milk to the boil with about half the sugar and a split vanilla pod",
+        "While the milk comes to the boil, whisk the yolks with the rest of the sugar, then whisk in the starch until smooth",
+        "Pour about a third of the hot milk onto the yolks, whisking, then return everything to the pan",
+        "Whisk over medium heat into the corners, and keep whisking through the lumpy stage",
+        "Once big, slow bubbles break the surface, keep whisking at the boil for one to two minutes",
+        "Off the heat, whisk in the butter",
+        "Spread it thinly in a lined tray, press cling film onto the surface and chill it quickly",
+        "Before use, beat it briefly until smooth, and stop there"
+      ],
+      "distractor": "Take it off the heat at 82°C (180°F), before it can boil",
+      "why": "Pastry cream is the custard that must boil. One to two minutes at the boil swells the starch and destroys amylase, the yolk enzyme that would thin it overnight. Cling film on the surface stops a skin, and brief beating restores it without thinning it."
+    },
+    {
+      "stem": "make-pate-a-choux",
+      "entry": "choux",
+      "title": "Make pâte à choux",
+      "prompt": "Put the stages of a pâte à choux in order, from the pan to the oven. One stage does not belong.",
+      "steps": [
+        "Bring the liquid, butter, salt and sugar to a full boil",
+        "Off the heat, tip in all the flour at once and beat until it comes together",
+        "Stir the panade over medium heat until it leaves a thin film on the pan",
+        "Beat it briefly in the mixer to let the worst of the steam out",
+        "Beat in the eggs one at a time, each fully taken in before the next",
+        "Add the last egg a little at a time, until the paste falls from the spoon in a V",
+        "Pipe it onto lined trays, well spaced",
+        "Bake hot, 200 to 220°C (392 to 428°F), with the door shut until the shells have set",
+        "Lower the oven to dry the walls through, then pierce the shells to let the steam out"
+      ],
+      "distractor": "Beat in baking powder so the shells rise higher",
+      "why": "Choux rises on steam alone, with no baking powder. The panade is dried so it takes more egg, the eggs go in gradually to the V, then a hot oven puffs the shells and a cooler one dries them so they do not collapse."
+    },
+    {
+      "stem": "make-an-italian-meringue",
+      "entry": "meringues",
+      "title": "Make an Italian meringue",
+      "prompt": "Put the stages of an Italian meringue in order. One stage does not belong.",
+      "steps": [
+        "Boil the sugar with about a third of its weight in water",
+        "As the syrup climbs, whip the whites to soft peaks in a bowl wiped clean of any fat",
+        "Take the syrup off at 118 to 121°C (244 to 250°F), firm ball to the start of hard ball",
+        "With the mixer running, pour the syrup in a thin stream down the side of the bowl",
+        "Whip on until the meringue is thick, glossy and barely warm",
+        "Use it unbaked: pipe it and toast it with a torch, or beat it into buttercream"
+      ],
+      "distractor": "Pour the syrup straight onto the spinning whisk so it mixes in faster",
+      "why": "The whites reach soft peaks in a fat-free bowl just as the syrup reaches firm ball, and the syrup goes down the side, never onto the whisk, where it spins into hard threads. Partly cooked, the foam needs no baking."
+    },
+    {
+      "stem": "take-a-dry-caramel-to-amber",
+      "entry": "caramel",
+      "title": "Take a dry caramel to amber",
+      "prompt": "Put the stages of a dry caramel in order, from the bare pan to the stopped sauce. One stage does not belong.",
+      "steps": [
+        "Warm the cream and set it beside the stove before the sugar goes on",
+        "Spread the sugar in an even layer in a clean, heavy pan",
+        "Melt it over medium heat until the edges begin to liquefy",
+        "Swirl the pan so the melted sugar draws in the dry and colours evenly",
+        "Keep swirling as it passes from pale straw to golden",
+        "Take it off the heat a shade early, as it turns amber at about 170 to 180°C (338 to 356°F)",
+        "Stand back and whisk in the warm cream in stages with a long whisk"
+      ],
+      "distractor": "Stir the sugar with a third of its weight in water until it dissolves",
+      "why": "A dry caramel is sugar alone, so water belongs to the wet method. It melts from the edges and is swirled to colour evenly. The hot pan carries it on, so it comes off a shade early, and the cream is ready first because it boils up hard."
+    },
+    {
+      "stem": "bake-a-new-orleans-bread-pudding",
+      "entry": "bread-pudding",
+      "title": "Bake a New Orleans bread pudding",
+      "prompt": "Put the stages of a New Orleans bread pudding in order. One stage does not belong.",
+      "steps": [
+        "Whisk the eggs with the sugar",
+        "Whisk in the milk or cream, the vanilla and the spice",
+        "Pour the custard over the torn stale bread and raisins in a buttered dish",
+        "Press the bread down so it drinks the custard",
+        "Rest it 20 to 30 minutes, pressing once or twice, until saturated but not swimming",
+        "Set the dish in a tray of hot water and bake at about 175°C (347°F) until puffed and golden",
+        "Test near the centre: a knife comes out clean and only the very middle wobbles",
+        "Serve it warm, with the whiskey sauce poured over"
+      ],
+      "distractor": "Use fresh, soft bread so it soaks up the custard faster",
+      "why": "Stale bread drinks the custard and keeps its shape, where fresh bread turns to paste. The rest lets the custard reach the centre of every piece, a water bath sets it gently without curdling, and the knife test says when it is done."
+    },
+    {
+      "stem": "cook-pralines-to-the-soft-ball",
+      "entry": "pralines",
+      "title": "Cook pralines to the soft ball",
+      "prompt": "Put the stages of a batch of New Orleans pralines in order. One stage does not belong.",
+      "steps": [
+        "Toast the pecans and lay out baking parchment before the syrup goes on",
+        "Bring the sugars, cream and butter to the boil in a heavy pan, stirring gently and scraping the base as it cooks",
+        "Cook to the soft ball, 112 to 116°C (234 to 241°F), or until a drop in cold water forms a soft ball",
+        "Take the pan off the heat and stir in the vanilla and pecans",
+        "Beat with a wooden spoon until the gloss dulls and the syrup thickens and clouds",
+        "Spoon it at once onto the parchment in rounds of about 5 to 7.5 cm (2 to 3 inches)",
+        "Leave them 15 to 30 minutes to firm"
+      ],
+      "distractor": "Take the syrup on to the hard crack, 149°C (300°F), so it sets firm",
+      "why": "Pralines are cooked to the soft ball, not the hard crack, which makes brittle. Beating off the heat until the gloss dulls sets the creamy grain, and they are spooned at once, so everything is laid out before the syrup goes on."
+    }
+  ],
+  "match": [
+    {
+      "stem": "custard-sets",
+      "title": "Custards and what sets them",
+      "prompt": "Match each custard and cream to what thickens or sets it.",
+      "left": "Custard",
+      "right": "What sets it",
+      "pairs": [
+        [
+          "Crème anglaise",
+          "Egg yolk alone, stirred to nappe and never boiled",
+          "creme-anglaise"
+        ],
+        [
+          "Crème pâtissière",
+          "Egg yolk and starch, boiled for a minute or two",
+          "creme-patissiere"
+        ],
+        [
+          "Bavarian cream",
+          "Gelatine, with whipped cream folded through",
+          "bavarian-cream"
+        ],
+        [
+          "Sabayon",
+          "Egg yolk whisked over simmering water until it holds air",
+          "sabayon"
+        ],
+        [
+          "New Orleans bread pudding",
+          "Whole eggs and milk, baked until a knife comes out clean",
+          "bread-pudding"
+        ]
+      ]
+    },
+    {
+      "stem": "sugar-stages",
+      "title": "Sugar stages and what they make",
+      "prompt": "Match each sugar stage to something a pastry kitchen makes at it.",
+      "left": "Stage",
+      "right": "What it makes",
+      "pairs": [
+        [
+          "Thread",
+          "Syrups for soaking sponges and glazing fruit"
+        ],
+        [
+          "Soft ball",
+          "New Orleans pralines and fudge",
+          "pralines"
+        ],
+        [
+          "Firm ball",
+          "The syrup for an Italian meringue",
+          "meringues"
+        ],
+        [
+          "Hard ball",
+          "Marshmallow and nougat"
+        ],
+        [
+          "Soft crack",
+          "Butterscotch"
+        ],
+        [
+          "Hard crack",
+          "Spun sugar and glassy decorations"
+        ],
+        [
+          "Caramel",
+          "French praline and nougatine",
+          "caramel"
+        ]
+      ]
+    }
+  ]
+}

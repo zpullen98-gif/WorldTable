@@ -1,0 +1,196 @@
+{
+	"steps": [
+		{
+			"stem": "set-a-sauce-station",
+			"entry": "mise-en-place",
+			"title": "Set a sauce station",
+			"prompt": "Put the stages of setting a sauce station before service in order. One stage does not belong.",
+			"steps": [
+				"Read the book for the covers booked and when the rush will land",
+				"Count what is left from yesterday against the par and write the prep list",
+				"With the prep list written, anchor the board on a damp cloth, with knives, dry side towels and a scrap bowl at hand",
+				"Cut the shallots ciselé and pick the herbs from their stems",
+				"Reduce vinegar with shallot and tarragon for the béarnaise, then strain it",
+				"With service minutes away, set the clarified butter warm, never hot, beside the stocks held hot at the back of the stove"
+			],
+			"distractor": "Peel and cut the shallots as each ticket comes in, so they stay fresh",
+			"why": "The book sets the par and the par sets the prep list. The board is anchored before any knife work, the shallot and herbs are cut before they go into the reduction, and the clarified butter is set warm last, so it is never held hot for long."
+		},
+		{
+			"stem": "make-a-white-chicken-stock",
+			"entry": "white-stock",
+			"title": "Make a white chicken stock",
+			"prompt": "Put the stages of a white chicken stock in order. One stage does not belong.",
+			"steps": [
+				"Cut the carcasses, necks, wings and feet to fit the pot and rinse them well",
+				"Cover them with cold water by about 5 cm (2 inches)",
+				"Bring it slowly to a bare simmer, skimming the scum as it rises",
+				"Add the onion, celery, leek, bouquet garni and peppercorns once the first scum is off",
+				"Simmer for 3 to 5 hours, unsalted, topping up with cold water if the bones show",
+				"Ladle the stock through a chinois lined with muslin, never tipping the pot",
+				"Cool it fast, then lift off the fat once it has set"
+			],
+			"distractor": "Roast the bones to a deep brown before they go into the pot",
+			"why": "Cold water and a slow rise bring the scum up where it can be skimmed, and the vegetables follow once it is off. A bare, unsalted simmer and a gentle ladle keep the stock pale and clear."
+		},
+		{
+			"stem": "make-a-brown-stock",
+			"entry": "brown-stock",
+			"title": "Make a brown stock",
+			"prompt": "Put the stages of a classical brown veal stock in order. One stage does not belong.",
+			"steps": [
+				"Roast the veal bones in one layer at about 220°C (428°F) until deep mahogany",
+				"Add the onion, carrot and celery for the last 20 to 30 minutes of roasting",
+				"Smear on tomato purée and roast until it turns from red to rust",
+				"Lift everything into the stockpot, pour the fat from the tray, then deglaze the tray into the pot with a little water or wine",
+				"Cover with cold water, bring it up slowly and skim the foam",
+				"Hold a bare simmer for 8 to 12 hours, skimming fat and foam through the day",
+				"Add parsley stalks, thyme, bay and peppercorns for the last hour",
+				"Strain through a chinois without pressing, cool it quickly and lift off the set fat"
+			],
+			"distractor": "Salt the water well so the stock tastes finished",
+			"why": "Colour comes first, from bones, vegetables and tomato browned in turn, and the tray is deglazed so its juices reach the pot. Then comes a long, bare simmer with no salt, because a salted stock cannot be reduced."
+		},
+		{
+			"stem": "make-a-fish-fumet",
+			"entry": "fumet",
+			"title": "Make a fish fumet",
+			"prompt": "Put the stages of a fumet de poisson in order. One stage does not belong.",
+			"steps": [
+				"Pull out the gills and chop the frames of lean white fish",
+				"Soak the bones in cold water until it runs clear, then drain them",
+				"Sweat onion, celery and mushroom trim in butter with the drained bones on top, covered, for about 5 minutes without colour",
+				"Pour in dry white wine and let it bubble for a minute",
+				"Add cold water just to cover, bring it to a bare simmer and skim",
+				"Add the herbs and white peppercorns and simmer for 20 to 30 minutes, no longer",
+				"Ladle it through muslin without pressing the bones, then cool it quickly"
+			],
+			"distractor": "Simmer it for 4 hours to draw out all the gelatine",
+			"why": "Clean, bloodless bones are sweated in butter for a rounder taste, and the wine bubbles before the water goes in. The simmer stops at half an hour, because fish bones give up bitterness after that."
+		},
+		{
+			"stem": "make-a-court-bouillon-and-poach-in-it",
+			"entry": "court-bouillon-and-nage",
+			"title": "Make a court-bouillon and poach in it",
+			"prompt": "Put the stages of making a court-bouillon and poaching a whole fish in it in order. One stage does not belong.",
+			"steps": [
+				"Bring water, white wine, sliced onion, carrot and celery, a bouquet garni and salt to the boil",
+				"Simmer for 20 to 30 minutes, adding the peppercorns for the last 10 only",
+				"Strain it and let it cool",
+				"Lay the whole fish in the cool court-bouillon",
+				"Bring it up gently until the surface barely trembles",
+				"Hold it just below a simmer, about 75 to 85°C (167 to 185°F), until the fish is cooked through",
+				"Lift the fish out gently so it stays whole"
+			],
+			"distractor": "Lower the whole fish into the court-bouillon at a rolling boil",
+			"why": "The broth simmers first so it has flavour to give, with the peppercorns late so they do not turn bitter. A whole fish starts cool and comes up gently, and once it is in, the liquid never boils."
+		},
+		{
+			"stem": "clarify-a-consomme-with-a-raft",
+			"entry": "clarifying",
+			"title": "Clarify a consommé with a raft",
+			"prompt": "Put the stages of clarifying a consommé with a raft in order. One stage does not belong.",
+			"steps": [
+				"Mix the raft of lean minced meat, egg whites, chopped mirepoix and tomato in a tall pot with the cold, fat-free stock",
+				"Heat it slowly, stirring and scraping the bottom",
+				"Stop stirring once the raft begins to gather and the liquid turns cloudy, around 55 to 60°C (131 to 140°F)",
+				"Open a vent near the edge of the raft with a ladle",
+				"Hold the barest simmer through the vent for an hour to an hour and a half",
+				"Ladle the consommé out through the vent and pass it through damp muslin",
+				"Blot off the last of the fat with kitchen paper and season lightly"
+			],
+			"distractor": "Stir the raft back through the stock as it simmers, for more flavour",
+			"why": "Raft and stock heat together from cold, so the proteins set slowly and catch what clouds the stock. Once the raft gathers it is left alone, the vent lets the stock baste it, and gentle ladling keeps it whole."
+		}
+	],
+	"match": [
+		{
+			"stem": "stocks",
+			"title": "Stocks and what goes in",
+			"prompt": "Match each preparation to what goes into its pot.",
+			"left": "Stock",
+			"right": "What goes in",
+			"pairs": [
+				[
+					"White stock",
+					"Blanched or rinsed chicken or veal bones, onion, celery and leek, never roasted",
+					"white-stock"
+				],
+				[
+					"Brown stock",
+					"Roasted veal bones, browned onion, carrot and celery, and tomato purée",
+					"brown-stock"
+				],
+				[
+					"Fumet de poisson",
+					"Lean white fish frames sweated in butter, then white wine and cold water",
+					"fumet"
+				],
+				[
+					"Louisiana shell stock",
+					"Shrimp heads and shells or crab bodies, toasted, with onion, celery and bay",
+					"fumet"
+				],
+				[
+					"Court-bouillon",
+					"Water, white wine or vinegar, sliced vegetables, herbs and salt",
+					"court-bouillon-and-nage"
+				],
+				[
+					"Glace de viande",
+					"Brown stock alone, reduced slowly until it sets firm when cold",
+					"glaces"
+				],
+				[
+					"Consommé",
+					"A finished stock cleared by lean mince, egg whites, mirepoix and tomato",
+					"clarifying"
+				]
+			]
+		},
+		{
+			"stem": "thickeners",
+			"title": "Thickeners and how they work",
+			"prompt": "Match each thickener to the way it thickens a sauce or soup.",
+			"left": "Thickener",
+			"right": "How it works",
+			"pairs": [
+				[
+					"Roux",
+					"Flour cooked in fat first, then whisked into the liquid and simmered to cook out the flour",
+					"roux"
+				],
+				[
+					"Beurre manié",
+					"Raw flour kneaded into soft butter, whisked in a piece at a time at the end",
+					"thickeners-and-liaisons"
+				],
+				[
+					"Arrowroot slurry",
+					"Starch mixed smooth in cold liquid; it thickens below the boil and stays clear",
+					"thickeners-and-liaisons"
+				],
+				[
+					"Cornflour slurry",
+					"Starch mixed smooth in cold liquid; it must reach the boil and clouds a little",
+					"thickeners-and-liaisons"
+				],
+				[
+					"Egg yolk and cream liaison",
+					"Yolks tempered with the hot sauce, then heated gently and never boiled",
+					"thickeners-and-liaisons"
+				],
+				[
+					"Reduction",
+					"Water simmered away uncovered until the sauce coats a spoon",
+					"thickeners-and-liaisons"
+				],
+				[
+					"Filé",
+					"Ground sassafras leaves stirred into a gumbo off the heat, at the very end",
+					"gumbo-thickeners"
+				]
+			]
+		}
+	]
+}

@@ -1,0 +1,976 @@
+{
+	"entries": [
+		{
+			"stem": "shellfish-handling",
+			"slug": "shellfish-handling",
+			"title": "Shellfish handling",
+			"say": "As it reads: shellfish handling.",
+			"level": 2,
+			"kind": "safety",
+			"summary": "How a kitchen keeps crab, crawfish and shrimp fit to serve: live ones cool, damp and lively, picked meat and tails cold, frozen shrimp thawed the right way, raw kept apart from cooked, and the allergen carried in shells, stock and fryer oil.",
+			"guest": "Our crab claws are served warm, in a brown butter vinaigrette, so here are napkins and a plate for the shells. Any question about the crab or crawfish, I will take to the chef.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Shellfish, in a kitchen's language, comes in two families: crustaceans, with jointed shells and legs, such as crab, crawfish and shrimp, and molluscs, such as oysters and clams. This entry is about the crustaceans; raw oysters have their own entry. Crab and crawfish flesh breaks down quickly once the animal dies, so the habits are strict: live animals kept alive until cooked, cooked meat kept cold and clean, raw always apart from ready to eat.",
+						"A crab or crawfish that died before cooking may already be spoiling, and boiling cannot make it good again. And crustacean shellfish is a major food allergen, so a careless board, stock or fryer can harm a guest who never ordered crab; the kitchen guards against both."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Live crawfish and blue crabs go straight from their ventilated sacks to somewhere cool and damp: the walk-in, or a cooler with the animals kept above the meltwater, under wet sacking. Never seal them in plastic, and never leave them in a tub of still water or melted ice, where they use up the oxygen and die. Before cooking, rinse crawfish in clean running water and sort every batch: lively ones move their legs and claws when handled. Any that are limp and still, or smell off, are dead and go in the bin, never in the pot.",
+						"Fresh shrimp and picked crabmeat are held at 5°C (41°F) or below, the Food Code's cold-holding figure, on ice that drains or in the walk-in, and used by the date on the container. Frozen shrimp thaw in the walk-in overnight, or sealed and fully under cold running water no warmer than 21°C (70°F); never on the bench or in warm water. Under running water, raw seafood may spend no more than 4 hours above 5°C (41°F), counting the thaw and the preparation before cooking. A vacuum pack of frozen seafood labelled keep frozen is opened before it thaws in the walk-in, because without air the bacteria behind botulism can grow.",
+						"Raw shellfish gets its own boards, knives, gloves and trays in the kitchen, and its own shelf in the walk-in: below cooked and ready-to-eat food, and above raw meat and poultry, which need hotter cooking, so nothing drips onto food that will be cooked less or not at all. Many kitchens colour-code boards, often blue for raw seafood; follow the house chart. Wash hands and change gloves between raw and cooked, and wash, rinse and sanitise a board before it changes job.",
+						"Cooked crab claws and lump crabmeat are ready to eat: warmed, never cooked again, so whatever touches them reaches the guest. Handle them with gloves or tongs, never bare hands, keep them cold until warmed, pick lump meat over gently for shell on a clean board, and warm only what has been ordered."
+					]
+				},
+				{
+					"key": "safety",
+					"paras": [
+						"Crustacean shellfish is one of the nine major food allergens in the United States, and the protein runs through the whole animal, so the kitchen treats shells, heads, cooking water and stock as carriers too. Shrimp-shell stock in a sauce, crawfish fat in a filling, or fries cooked in oil that fried popcorn shrimp can each reach a guest who ordered none. Cooking does not destroy the allergen, however long the kitchen boils it. Molluscs such as oysters and clams are not on the federal list, but some guests react to them too, so every shellfish question goes to the kitchen."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"At Brennan's the Louisiana Crab Claws arrive already cooked and chilled, so the kitchen only warms them through; cooking them again tightens the meat onto the cartilage. The lump crab on the Pecan Gulf Fish is treated the same way: warmed gently, never cooked again. The Crawfish Meat Pies on the Bubbles list are filled with crawfish; how the filling is made is not printed, so ask before describing it."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Describe the claws as served warm, so nobody expects a cold cocktail claw, and bring napkins and a plate for the shells. Where the crab or crawfish come from, how they are cooked, or whether the claws can come chilled are questions for the chef: never guess a supplier or an origin. When a guest mentions a shellfish allergy, stop selling, write it on the ticket and take it to the kitchen, as the allergen conversation entry teaches."
+					]
+				}
+			],
+			"temps": [
+				{
+					"label": "Shrimp, crabmeat and cooked claws held cold: at or below",
+					"c": 5,
+					"f": 41
+				},
+				{
+					"label": "Running water for thawing seafood: no warmer than",
+					"c": 21,
+					"f": 70
+				}
+			],
+			"faults": [
+				{
+					"fault": "Live crawfish left in a tub of water",
+					"cause": "Trying to keep them fresh and clean.",
+					"fix": "Rinse them briefly, then keep them cool and damp under wet sacking; still water uses up their oxygen and kills them."
+				},
+				{
+					"fault": "Dead crabs or crawfish cooked with the live ones",
+					"cause": "Sorting skipped in the rush before the boil.",
+					"fix": "Sort every batch, and bin any that are limp, still or smell off."
+				},
+				{
+					"fault": "Frozen shrimp thawed on the bench",
+					"cause": "Forgotten until service.",
+					"fix": "Thaw in the walk-in overnight, or sealed under cold running water, and put the thaw on the prep list."
+				},
+				{
+					"fault": "Lump crabmeat picked over on the raw seafood board",
+					"cause": "One board for everything.",
+					"fix": "Use a clean board, gloves and utensils kept for ready-to-eat food."
+				},
+				{
+					"fault": "A shared fryer forgotten",
+					"cause": "Thinking of the oil as equipment rather than an ingredient.",
+					"fix": "Know which fryers cook seafood, and send every allergy question about fried food to the kitchen."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-5p5b1hjn",
+					"components": [
+						"Warm crab claws",
+						"Louisiana blue crab and lump crabmeat"
+					],
+					"how": "The claws arrive already cooked and chilled, so the kitchen only warms them through, and they are served in a warm brown butter vinaigrette; cooking them again tightens the meat onto the cartilage. Say served warm, and bring napkins and a plate for the shells."
+				},
+				{
+					"dish": "d-vovhoagi",
+					"components": [
+						"Crawfish"
+					],
+					"how": "The Crawfish Meat Pies at the Roost are filled with crawfish and served with a chive rémoulade. How the filling is made is not printed, and the menu does not say Louisiana, so where the crawfish come from is a question for the kitchen."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"crawfish",
+					"blue-crab",
+					"gulf-shrimp",
+					"raw-and-cooked-oysters",
+					"allergen-conversation",
+					"danger-zone",
+					"frying"
+				],
+				"lexicon": [
+					"food-safety-the-chef-owners-non-negotiables",
+					"crab-vocabulary",
+					"knife-care-and-the-cutting-board-question",
+					"shrimp-sizing-and-prawn-confusion"
+				],
+				"folios": [
+					"brennans-seafood"
+				],
+				"deck": [
+					"fd_0109",
+					"fd_0134"
+				],
+				"components": [
+					"Warm crab claws",
+					"Louisiana blue crab and lump crabmeat",
+					"Crawfish",
+					"Louisiana and Gulf shrimp"
+				],
+				"terms": [
+					"fish-crawfish"
+				]
+			},
+			"sources": [
+				{
+					"title": "FDA Food Code 2022, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/fda-food-code/food-code-2022",
+					"asOf": "2026-10-12",
+					"year": 2022,
+					"evidence": "3-301.11 ... (B) ... FOOD EMPLOYEES may not contact exposed, READY-TO-EAT FOOD with their bare hands and shall use suitable UTENSILS such as deli tissue, spatulas, tongs, single-use gloves, or dispensing EQUIPMENT. 3-501.13 ... TIME/TEMPERATURE CONTROL FOR SAFETY FOOD shall be thawed: (A) Under refrigeration that maintains the FOOD temperature at 5°C (41°F) or less; or (B) Completely submerged under running water: (1) At a water temperature of 21°C (70°F) or below, (2) With sufficient water velocity to agitate and float off loose particles in an overflow, and ... (4) For a period of time that does not allow thawed portions of a raw animal FOOD requiring cooking ... to be above 5°C (41°F), for more than 4 hours ... (C) As part of a cooking process if the FOOD that is frozen is: ... (2) Thawed in a microwave oven and immediately transferred to conventional cooking EQUIPMENT, with no interruption in the process ... (E) REDUCED OXYGEN PACKAGED FISH that bears a label indicating that it is to be kept frozen until time of use shall be removed from the reduced oxygen environment ... 3-501.16 (A) ... (2) At 5°C (41°F) or less. 3-302.11 (A) ... (2) Except when combined as ingredients, separating types of raw animal FOODS from each other such as beef, FISH, lamb, pork, and POULTRY during storage, preparation, holding, and display by: (a) Using separate EQUIPMENT for each type, or (b) Arranging each type of FOOD in EQUIPMENT so that cross contamination of one type with another is prevented"
+				},
+				{
+					"title": "Selecting and Serving Fresh and Frozen Seafood Safely, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Food Allergies, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/food-allergies",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan’s, Dinner menu",
+					"url": "https://www.brennansneworleans.com/menus/dinner/",
+					"asOf": "2026-09-26"
+				},
+				{
+					"title": "Brennan’s, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-09-26"
+				},
+				{
+					"title": "Brennan’s, Bubbles at Brennan’s",
+					"url": "https://www.brennansneworleans.com/menus/bubbles-at-brennans/",
+					"asOf": "2026-09-26"
+				}
+			],
+			"cards": [
+				{
+					"stem": "live-storage",
+					"front": "How are live crawfish and blue crabs kept before cooking?",
+					"back": "Cool and damp, in a ventilated sack under wet sacking, never sealed in plastic and never in still water or meltwater, where they use up the oxygen and die."
+				},
+				{
+					"stem": "dead-discard",
+					"front": "What happens to a crab or crawfish that is dead before cooking?",
+					"back": "It is thrown away. The flesh begins to spoil quickly after death, and boiling cannot make spoiled meat good again."
+				},
+				{
+					"stem": "cold-holding",
+					"front": "At what temperature are fresh shrimp and picked crabmeat held?",
+					"back": "At 5°C (41°F) or below, on ice that drains or in the walk-in, and used by the date on the container."
+				},
+				{
+					"stem": "thawing",
+					"front": "What are the two everyday ways to thaw frozen shrimp?",
+					"back": "In the walk-in overnight, or sealed and fully under cold running water no warmer than 21°C (70°F); never on the bench or in warm water."
+				},
+				{
+					"stem": "four-hours",
+					"front": "Thawed under running water, how long may raw seafood spend above 5°C (41°F)?",
+					"back": "No more than 4 hours under the Food Code, counting both the thaw and the preparation before cooking."
+				},
+				{
+					"stem": "vacuum-pack",
+					"front": "Why is a vacuum pack of frozen seafood labelled keep frozen opened before it thaws in the walk-in?",
+					"back": "Without air, the bacteria behind botulism can grow as the fish warms, so the Food Code asks for the pack to be opened before it thaws."
+				},
+				{
+					"stem": "raw-apart",
+					"front": "How does a kitchen keep raw shellfish apart from cooked food?",
+					"back": "Its own boards, knives, gloves and trays, a shelf below ready-to-eat food and above raw meat and poultry, and hands washed between raw and cooked."
+				},
+				{
+					"stem": "ready-to-eat",
+					"front": "Why are cooked crab claws and lump crabmeat handled with gloves or tongs?",
+					"back": "They are ready to eat, only warmed and never cooked again, so anything a bare hand leaves on them reaches the guest."
+				},
+				{
+					"stem": "carriers",
+					"front": "Besides the meat, where can the crustacean allergen hide in a kitchen?",
+					"back": "In shells, heads, cooking water, stock, crawfish fat and fryer oil. Cooking does not destroy it, so every one of them counts."
+				},
+				{
+					"stem": "molluscs",
+					"front": "Why does a shellfish allergy question about the oysters still go to the kitchen?",
+					"back": "Molluscs such as oysters and clams are not on the federal list, but some guests react to them as well as to crab, so the kitchen answers every time."
+				},
+				{
+					"stem": "brennans-claws",
+					"front": "How does the Brennan's kitchen treat the Louisiana Crab Claws?",
+					"back": "They arrive already cooked and chilled, so they are only warmed through; cooking again tightens the meat onto the cartilage. Say served warm."
+				},
+				{
+					"stem": "server-origin",
+					"front": "A guest asks where tonight's crawfish come from. What does a server say?",
+					"back": "Only what the menu prints, then that the chef will tell us; a server never guesses an origin or a supplier."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-live-storage",
+					"q": "A delivery of live crawfish arrives. How should it be kept until cooking?",
+					"answer": "Cool and damp, in its sack under wet sacking",
+					"distractors": [
+						"Sunk in a tub of fresh water to keep clean",
+						"Sealed in a lidded tub in the walk-in",
+						"Packed in ice with the meltwater left to pool"
+					],
+					"why": "Crawfish need air and cool damp: still water uses up the oxygen and drowns them, sealing suffocates them, and warmth spoils them.",
+					"teaches": "live-storage"
+				},
+				{
+					"stem": "q-dead-discard",
+					"q": "Sorting crabs before the boil, a cook finds one limp and still. What happens to it?",
+					"answer": "It is thrown away",
+					"distractors": [
+						"It is boiled longer than the rest",
+						"It is picked first for crabmeat",
+						"It is chilled and cooked tomorrow"
+					],
+					"why": "A crab that died before cooking may already be spoiling, and no amount of boiling makes spoiled meat good again.",
+					"teaches": "dead-discard"
+				},
+				{
+					"stem": "q-cold-holding",
+					"q": "Picked crabmeat arrives on ice that has turned to standing meltwater. What does the cook do?",
+					"answer": "Drain it and re-ice it, or move it to the walk-in",
+					"distractors": [
+						"Leave it, since the meltwater is still cold",
+						"Top up the meltwater with fresh ice",
+						"Rinse the crabmeat in the meltwater"
+					],
+					"why": "Picked crabmeat is held at 5°C (41°F) or below, on ice that drains or in the walk-in; standing meltwater warms and soaks the meat.",
+					"teaches": "cold-holding"
+				},
+				{
+					"stem": "q-thawing",
+					"q": "Which is a correct way to thaw a frozen block of shrimp for tonight's service?",
+					"answer": "Sealed and fully under cold running water",
+					"distractors": [
+						"In a sink of cold water, left to stand",
+						"On the bench for the afternoon",
+						"In the microwave, then held for tomorrow"
+					],
+					"why": "Shrimp thaw in the walk-in or sealed under running water no warmer than 21°C (70°F); standing water warms up, the bench is warm, and microwaved shrimp must be cooked at once.",
+					"teaches": "thawing"
+				},
+				{
+					"stem": "q-raw-apart",
+					"q": "Where does a box of raw shrimp go in the walk-in?",
+					"answer": "Below ready-to-eat food, above raw meat and poultry",
+					"distractors": [
+						"On the top shelf, above the desserts",
+						"Beside the cooked claws, to save space",
+						"On the bottom shelf, under the raw chicken"
+					],
+					"why": "Raw seafood sits below ready-to-eat food and above raw meat and poultry, so nothing drips onto food that will be cooked less hot or not at all.",
+					"teaches": "raw-apart"
+				},
+				{
+					"stem": "q-ready-to-eat",
+					"q": "Why must lump crabmeat never be handled with bare hands?",
+					"answer": "It is ready to eat and will only be warmed",
+					"distractors": [
+						"It is raw and will be cooked through later",
+						"Body heat would start to cook it",
+						"The bare-hand rule covers raw seafood only"
+					],
+					"why": "Lump crabmeat arrives cooked and is only warmed, so nothing kills what a bare hand leaves on it before it reaches the guest.",
+					"teaches": "ready-to-eat"
+				},
+				{
+					"stem": "q-carriers",
+					"q": "For a crustacean allergy flagged to the kitchen, which sauce base carries crustacean protein even after it is strained?",
+					"answer": "A stock made from crab shells",
+					"distractors": [
+						"A fish fumet made from redfish bones",
+						"A stock made from oyster liquor",
+						"A vegetable stock of the holy trinity"
+					],
+					"why": "Crustacean protein runs through shells and survives straining and cooking, so a crab-shell stock carries it; fish and oysters belong to other families, and every question still goes to the kitchen.",
+					"teaches": "carriers"
+				},
+				{
+					"stem": "q-molluscs",
+					"q": "A guest allergic to shellfish says the oysters must be all right, since they are not crab or shrimp, so there is no need to ask the kitchen. What do you do?",
+					"answer": "Write it on the ticket and ask the kitchen",
+					"distractors": [
+						"Say yes: oysters are not on the federal list",
+						"Say no: every seafood dish is off limits",
+						"Offer the cooked oysters instead of the raw"
+					],
+					"why": "Molluscs such as oysters are not on the federal list, but some guests with a shellfish allergy react to them, so the kitchen answers every time.",
+					"teaches": "molluscs"
+				},
+				{
+					"stem": "q-brennans-claws",
+					"q": "Why does the Brennan's kitchen only warm the Louisiana Crab Claws through?",
+					"answer": "They arrive cooked, and more heat tightens the meat",
+					"distractors": [
+						"They are served chilled, like a cocktail claw",
+						"The guest finishes them at the table",
+						"They are poached raw to order in butter"
+					],
+					"why": "The claws come already cooked and chilled; cooking them again tightens the meat onto the cartilage and makes it hard to pull.",
+					"teaches": "brennans-claws"
+				}
+			]
+		},
+		{
+			"stem": "flambe-safety",
+			"slug": "flambe-safety",
+			"title": "Flambé safety at the table",
+			"say": "As it reads: flambé, flahm-BAY, safety at the table.",
+			"level": 1,
+			"kind": "safety",
+			"summary": "The habits that keep a flame at the table a show and never a fire: the spirit measured first, the pan off the flame when it goes in, clear space around the cart, a lid in reach and the burner off before leaving.",
+			"guest": "We flame this right here at the table, so may I ask everyone to sit back a little while I light it? The flame dies down on its own.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"Flambé (flahm-BAY) means flamed: spirit poured into a hot pan and lit, so that its alcohol vapour burns above the sauce. At the table it happens on a guéridon (gay-ree-DOHN), a wheeled cart with a burner, beside guests in a full room. The cook is handling an open flame, a pan of hot butter and sugar, and a spirit that burns, among tablecloths, sleeves and children. Every rule below exists because one of those can meet another. The method and the dish build have their own entries; this one keeps everyone unhurt."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"Set the cart before anything is lit. It stands where nothing hangs overhead, no drapes, garlands, low beams or decorations, and away from air vents and draughts that push a flame sideways. Clear menus, napkins and paper from its top. Check the burner and its fuel, and keep spare fuel out of the dining room. Tie back long hair and fasten loose sleeves. Seat the guests and ask them to sit back; nobody leans in, and children are watched.",
+						"Measure the spirit into a small vessel before you begin, exactly what the house recipe calls for, and keep the bottle off the cart. Never pour from the bottle near a flame: vapour at the neck can catch, and the flame can run back into the bottle. Never add spirit to a pan that is alight, or might be. Never swap in a stronger spirit than the one you trained with; it flares higher and faster.",
+						"Pull the pan off the flame and pour in the measured spirit. Return it to the burner and tilt the far edge down towards the flame, so the vapour catches on the side away from you and the guests. Keep your face and arms back, because the flame climbs higher than you expect. Hold the pan steady, let the flame burn out on its own, and never carry a pan while it is alight."
+					]
+				},
+				{
+					"key": "safety",
+					"paras": [
+						"If the flame grows too big or spreads, slide the lid over the pan, or lay a damp cloth across it, and turn the burner off: without air the fire dies. Never throw water, because the pan holds hot butter and sugar and water spatters burning fat. Know where the nearest extinguisher is before service, and how to use it. In a bright room an alcohol flame can be almost invisible, a pale shimmer, so treat the pan as lit until it has clearly died, and never pass a hand or a cloth over it to check. Plate, then turn the burner off before you leave the cart, every time."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"At Brennan's two desserts are flamed at the table, the World Famous Bananas Foster and the Cherries Jubilee, though the Jubilee was not on the dessert menu of 3 October 2026, so a manager confirms it is served before it is offered. The Jubilee follows the Foster's safety steps, and the kitchen says whether its cherries are pitted, so guests can be warned if not. A new server does not light a pan before sign off.",
+						"The Foster's service note sets out the safety steps to learn word for word: the cart clear of anything overhead, drapes, décor and air vents; guests seated and back; the rum measured first; the pan off the flame to add it, then tilted away to ignite; never alcohol into a lit pan; a lid in reach and the extinguisher known; the flame burnt out before plating, and the burner off before leaving."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"Before the spirit goes in, give the table a cue, please sit back a little, then stop talking and watch the pan: talk draws eyes and hands towards it. Pour any wine before the flame, so no glass stands near it. If a guest asks whether the flame burns off the alcohol, be exact: it burns the vapour, and much of the alcohol stays in the sauce, which a guest who avoids alcohol hears before ordering. If anything feels wrong, a draught, a crowded table, a child too close, pause and fetch a manager."
+					]
+				}
+			],
+			"faults": [
+				{
+					"fault": "Spirit poured from the bottle over the pan",
+					"cause": "Hurry, or no measure set out before the cart rolled.",
+					"fix": "Measure into a small vessel before you begin and keep the bottle off the cart."
+				},
+				{
+					"fault": "The flame will not catch, so more spirit goes in",
+					"cause": "The pan cooled, or the spirit was too cold.",
+					"fix": "Warm the pan and tilt again; never add spirit to a pan that may be alight."
+				},
+				{
+					"fault": "The flame leans towards a guest",
+					"cause": "The cart stands under an air vent or in a draught, or the pan was tilted towards the table.",
+					"fix": "Move the cart before you start, and tilt the far edge to the burner, away from the guests."
+				},
+				{
+					"fault": "A sleeve or a napkin catches",
+					"cause": "Loose cuffs, paper left on the cart, or a guest leaning in.",
+					"fix": "Clear the cart, fasten sleeves and seat the guests back before the spirit goes in."
+				},
+				{
+					"fault": "The cart left with the burner on",
+					"cause": "Distracted by plating or by another table.",
+					"fix": "Burner off is the last step before you leave the cart, every time."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-w6h1p19m",
+					"components": [
+						"Flambé at the table"
+					],
+					"how": "The Bananas Foster is flamed with rum on the guéridon. Its service note lists the steps: rum measured first, the pan off the flame to add it, tilted away to ignite, a lid in reach, the burner off before leaving."
+				},
+				{
+					"dish": "d-izx790wz",
+					"components": [
+						"Flambé at the table"
+					],
+					"how": "The Cherries Jubilee is flamed at the table under the Foster's safety steps. It was not on the dessert menu of 3 October 2026, so confirm with a manager that it is served, and ask the kitchen whether the cherries are pitted."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"flambe",
+					"flambe-and-tableside",
+					"bananas-foster-at-the-table",
+					"bananas-foster",
+					"crepes-suzette",
+					"cafe-brulot"
+				],
+				"techniques": [
+					"flambe"
+				],
+				"recipes": [
+					"bananas-foster",
+					"flambe-pan-sauce-brandy-and-green-peppercorn"
+				],
+				"kitchen": [
+					"bananas-foster"
+				],
+				"components": [
+					"Flambé at the table",
+					"Rum and banana liqueur",
+					"Cherries Jubilee"
+				]
+			},
+			"sources": [
+				{
+					"title": "Brennan’s, Dessert menu",
+					"url": "https://www.brennansneworleans.com/menus/dessert/",
+					"asOf": "2026-09-26"
+				},
+				{
+					"title": "Brennan’s, Bananas Foster recipe and history",
+					"url": "https://www.brennansneworleans.com/recipes/bananas-foster/",
+					"asOf": "2026-09-26"
+				}
+			],
+			"cards": [
+				{
+					"stem": "measure",
+					"front": "Why is the spirit measured into a small vessel before a flambé?",
+					"back": "So the bottle never comes near the flame: vapour at the neck can catch, and the flame can run back into the bottle."
+				},
+				{
+					"stem": "off-flame",
+					"front": "At what moment does the spirit go into the pan?",
+					"back": "With the pan pulled off the flame. Then it goes back to the burner, and the far edge is tilted down to ignite."
+				},
+				{
+					"stem": "tilt-away",
+					"front": "Which way does the pan tilt to light the spirit?",
+					"back": "The far edge towards the burner, so the flame rises on the side away from the cook and the guests."
+				},
+				{
+					"stem": "lit-pan",
+					"front": "The flame will not catch. May you add more spirit?",
+					"back": "Never into a pan that is, or may be, alight: a stream of spirit can carry the flame back to the vessel. Warm the pan and tilt again."
+				},
+				{
+					"stem": "clear-space",
+					"front": "Where should the guéridon stand for a flambé?",
+					"back": "Where nothing hangs overhead, away from drapes, decorations, low ceilings and air vents, with menus, napkins and paper cleared from its top."
+				},
+				{
+					"stem": "people",
+					"front": "What does the cook check about people before lighting the pan?",
+					"back": "Long hair tied back, sleeves fastened, guests seated and sitting back, nobody leaning in, and children watched."
+				},
+				{
+					"stem": "lid",
+					"front": "What must be within reach throughout a flambé?",
+					"back": "A lid that fits the pan, or a damp cloth, to smother the flame; and the cook knows where the nearest extinguisher is."
+				},
+				{
+					"stem": "no-water",
+					"front": "Why is water never thrown on a flaming flambé pan?",
+					"back": "The pan holds hot butter and sugar, and water spatters burning fat. Slide the lid on and turn the burner off instead."
+				},
+				{
+					"stem": "invisible",
+					"front": "Why treat the pan as lit even when you can see no flame?",
+					"back": "In a bright room an alcohol flame can be almost invisible, a pale shimmer; never pass a hand or a cloth over it to check."
+				},
+				{
+					"stem": "burner-off",
+					"front": "What is the last step before the cook leaves the cart?",
+					"back": "Turn the burner off, every time, once the flame has died and the dessert is plated."
+				},
+				{
+					"stem": "brennans",
+					"front": "Which Brennan's desserts are flamed at the table, and whose safety steps apply?",
+					"back": "The Bananas Foster, and the Cherries Jubilee once a manager confirms it is served; the Jubilee follows the same steps as the Foster's service note."
+				},
+				{
+					"stem": "alcohol",
+					"front": "Does the flame burn off all the alcohol in a flambé?",
+					"back": "No. It burns the vapour above the pan, and much of the alcohol stays in the sauce; tell a guest who avoids it before ordering."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-measure",
+					"q": "Why must spirit never be poured straight from the bottle near a flame?",
+					"answer": "Flame can travel back into the bottle",
+					"distractors": [
+						"The spirit loses its flavour",
+						"The pour is too slow for service",
+						"The bottle's label may scorch"
+					],
+					"why": "Vapour at the neck can catch, and the flame can run back into the bottle; a small measured vessel keeps the bottle away from the burner.",
+					"teaches": "measure"
+				},
+				{
+					"stem": "q-off-flame",
+					"q": "At which moment does the measured spirit go into the pan?",
+					"answer": "With the pan pulled off the flame",
+					"distractors": [
+						"While the pan sits over full flame",
+						"After the flame is already burning",
+						"Once the dessert is on the plate"
+					],
+					"why": "Off the flame the spirit cannot catch as it is poured; the pan then goes back and is tilted so the vapour lights under control.",
+					"teaches": "off-flame"
+				},
+				{
+					"stem": "q-tilt-away",
+					"q": "To light the spirit, which way does the cook tilt the pan?",
+					"answer": "Far edge to the burner, away from people",
+					"distractors": [
+						"Near edge towards the cook's face",
+						"Towards the guests, so they see it",
+						"Level, with a lighter held over it"
+					],
+					"why": "Tilting the far edge to the burner lights the vapour on the side away from the cook and the table, so the flame rises away from people.",
+					"teaches": "tilt-away"
+				},
+				{
+					"stem": "q-lit-pan",
+					"q": "The rum has not caught. What should the cook never do next?",
+					"answer": "Pour more spirit into the pan",
+					"distractors": [
+						"Warm the pan a little longer",
+						"Tilt the far edge to the burner again",
+						"Check that the burner is lit"
+					],
+					"why": "A pan that seems unlit may be burning invisibly, and a stream of spirit can carry the flame back to the vessel in the cook's hand.",
+					"teaches": "lit-pan"
+				},
+				{
+					"stem": "q-clear-space",
+					"q": "Which place is right for the guéridon during a flambé?",
+					"answer": "Clear of drapes and vents, with nothing overhead",
+					"distractors": [
+						"Under the chandelier for the best light",
+						"Beside the curtains, out of the way",
+						"Below an air vent, to carry smoke off"
+					],
+					"why": "Flame climbs higher than expected and a draught pushes it sideways, so the cart stands where nothing hangs above it and no vent blows across it.",
+					"teaches": "clear-space"
+				},
+				{
+					"stem": "q-no-water",
+					"q": "A flame grows too big. What is the right first move?",
+					"answer": "Lid on the pan, burner off",
+					"distractors": [
+						"Throw a glass of water over it",
+						"Carry the pan quickly to the kitchen",
+						"Blow hard across the top of the pan"
+					],
+					"why": "A lid starves the flame of air; water spatters the hot butter and sugar, and carrying a lit pan spreads the danger through the room.",
+					"teaches": "no-water"
+				},
+				{
+					"stem": "q-invisible",
+					"q": "In a sunny breakfast room you can see no flame on the pan. What do you assume?",
+					"answer": "The pan may still be lit",
+					"distractors": [
+						"The flame has certainly died",
+						"The spirit never caught",
+						"The burner has gone out"
+					],
+					"why": "An alcohol flame can be almost invisible in bright light, so the pan is treated as lit until it has clearly died.",
+					"teaches": "invisible"
+				},
+				{
+					"stem": "q-burner-off",
+					"q": "What is the last thing a cook does before leaving the cart?",
+					"answer": "Turns the burner off",
+					"distractors": [
+						"Tops up the spirit vessel",
+						"Leaves the pan warming",
+						"Lights the next pan"
+					],
+					"why": "A burner left on beside a full room is a fire waiting for a napkin or a sleeve, so turning it off is always the last step.",
+					"teaches": "burner-off"
+				},
+				{
+					"stem": "q-alcohol",
+					"q": "A guest who avoids alcohol asks whether the flame burns it all off. What is true?",
+					"answer": "Much of the alcohol stays in the sauce",
+					"distractors": [
+						"All of it burns away in the flame",
+						"Only the sugar burns, never the spirit",
+						"It burns off once the ice cream melts"
+					],
+					"why": "The flame burns the vapour above the pan, not the whole spirit, so a guest who avoids alcohol hears this before ordering and chooses for themselves.",
+					"teaches": "alcohol"
+				}
+			]
+		},
+		{
+			"stem": "allergen-conversation",
+			"slug": "allergen-conversation",
+			"title": "Cross-contact and the allergen conversation",
+			"say": "As it reads: cross-contact and the allergen conversation.",
+			"level": 1,
+			"kind": "safety",
+			"summary": "What every server and cook must know: the nine major food allergens the law names, how cross-contact carries them onto a plate that never listed them, where they hide on a Creole menu, and the routine that takes every question to the kitchen.",
+			"guest": "Thank you for telling me. I am writing it on the ticket and taking it to the chef myself, and I will come back with what the kitchen can make for you.",
+			"sections": [
+				{
+					"key": "what",
+					"paras": [
+						"To the kitchen, a food allergy is the body's immune system reacting to a protein in a food, and for some guests a trace is enough to cause a severe reaction, even one that threatens life. An intolerance or a diet is different, but the kitchen treats every such question with the same care. US law names nine major food allergens, and every kitchen learns them by heart: milk, egg, fish, crustacean shellfish, tree nuts, peanuts, wheat, soy and sesame. The first eight were named by a law of 2004, and sesame joined them on 1 January 2023, so a kitchen's older charts may show only eight.",
+						"Cross-contact is the kitchen's word for an allergen moving from one food to another by a shared fryer, board, knife, pan, glove, spoon or garnish, so that a dish carries it though no recipe lists it. Kitchens keep the word cross-contamination for bacteria, and the difference matters: cooking kills most bacteria but does not destroy an allergen, so a hot fryer or a long simmer never makes a shared pan clean. Only a thorough wash does, and fryer oil cannot be washed, which is why a shared fryer is a question for the kitchen every time."
+					]
+				},
+				{
+					"key": "safety",
+					"paras": [
+						"On a Creole menu the allergens often hide in the kitchen's foundations, and every one of them is a question for the kitchen. A roux is flour cooked in fat, so a gumbo, a turtle soup or a roux-bound sauce is usually built on wheat that no menu line names. Butter is milk, and it is everywhere: in blackening, where food is classically dipped in melted butter before the spice, and in beurre blanc, hollandaise, a meunière (fish finished with browned butter and lemon) and New Orleans barbecue sauce.",
+						"Pecans, a tree nut, turn up in sauces, crumbles and pralines, and the kitchen knows where. Stock made from shrimp shells or crab carries crustacean shellfish into rice, sauces and soups, which only the kitchen can trace. Worcestershire sauce is traditionally made with anchovy, which is fish, and it goes into barbecue butter, dressings and Bloody Marys."
+					]
+				},
+				{
+					"key": "how",
+					"paras": [
+						"The server's routine is the same every time. Listen: let the guest say it in full, and neither argue nor reassure. Write it on the ticket, against the right seat. Tell the kitchen in person, the chef or whoever runs the pass, the counter where plates leave the kitchen, not only through the printer: a ticket can be missed in a rush, a face rarely is. Bring back the chef's answer in the chef's words.",
+						"When the plate is ready, carry it separately, by itself, straight from the pass to the guest, so nothing drips or brushes onto it on the way, and name it as it lands. If a guest shows any sign of a reaction, fetch the manager at once and call for emergency help; never wait to see."
+					]
+				},
+				{
+					"key": "service",
+					"paras": [
+						"No verdict ever comes from the floor. A server never promises that a dish is without an allergen, never says it should be fine and never guesses from the menu, because only the kitchen knows every ingredient, every pan and every change of supplier. The kitchen confirms every time, even for a dish the guest ate last week. Diet questions take the same road to the kitchen: vegan or vegetarian, gluten, gelatine in a set dessert such as a Bavarian cream, and alcohol in a sauce or a flamed dessert, where flaming leaves much of it behind."
+					]
+				},
+				{
+					"key": "brennans",
+					"paras": [
+						"At Brennan's the house rule is plain: guests are asked to note their needs at the reservation, the server writes them on the ticket and tells the captain, the senior server who runs the section, and the kitchen, not the server, says what a dish can do. Blackening is traditionally done with butter, so the Blackened Tofu is never called vegan: the server asks the kitchen each time a guest asks, as the service note says, and asks too whether the rice grits use any stock.",
+						"The Seafood Gumbo is usually built on a roux, so gluten questions about it go to the kitchen. Pecans run through the menus, from the pecan bordelaise on the Pecan Gulf Fish to the pralines on the bread pudding; nut questions go to the kitchen and the service note."
+					]
+				}
+			],
+			"faults": [
+				{
+					"fault": "A server tells a guest a dish should be fine",
+					"cause": "Wanting to reassure, or reading the menu as if it listed every ingredient.",
+					"fix": "Say only what the menu prints, then take the question to the kitchen and bring back the chef's answer."
+				},
+				{
+					"fault": "An allergy on the ticket that the kitchen never heard about",
+					"cause": "Trusting the printer alone in a rush.",
+					"fix": "Tell the chef in person as well, every time, and tell the captain."
+				},
+				{
+					"fault": "A plate for an allergy, approved by the kitchen, carried on a full tray",
+					"cause": "Saving a trip.",
+					"fix": "Carry it alone, straight from the pass, and name it as it lands."
+				},
+				{
+					"fault": "Fried food sent without a word about the oil",
+					"cause": "Thinking of the recipe and forgetting the fryer.",
+					"fix": "Ask the kitchen which fryer it went through; oil carries whatever was fried in it."
+				},
+				{
+					"fault": "A garnish added after the kitchen approved the allergy plate",
+					"cause": "A finishing touch at the side station: nuts, a sauce, a piece of bread.",
+					"fix": "Nothing goes onto an approved plate without the chef's word."
+				}
+			],
+			"brennans": [
+				{
+					"dish": "d-377dkkse",
+					"components": [
+						"Blackening"
+					],
+					"how": "Blackening is traditionally done with butter, so the Blackened Tofu is never called vegan; ask the kitchen each time, and ask whether the rice grits use any stock, as the service note says."
+				},
+				{
+					"dish": "d-r3h9vj7a",
+					"components": [
+						"Roux"
+					],
+					"how": "Gumbo is usually built on a roux, flour cooked in fat, so the Seafood Gumbo can carry wheat the menu line never names. Questions about flour, and about the shrimp, crab and oysters in it, go to the kitchen."
+				},
+				{
+					"dish": "d-1bvercoh",
+					"components": [
+						"Pecans"
+					],
+					"how": "Pecans go into the pecan bordelaise on the Pecan Gulf Fish, which also carries lump crab. Name the pecans and the crab as printed, and send every nut question to the kitchen and the service note."
+				}
+			],
+			"seeAlso": {
+				"entries": [
+					"shellfish-handling",
+					"eggs",
+					"ticket-terms",
+					"blackening",
+					"roux",
+					"pecans",
+					"frying",
+					"barbecue-shrimp",
+					"bavarian-cream"
+				],
+				"lexicon": [
+					"food-safety-the-chef-owners-non-negotiables",
+					"knife-care-and-the-cutting-board-question"
+				],
+				"components": [
+					"Blackening",
+					"Roux",
+					"Pecans",
+					"Pecan bordelaise",
+					"New Orleans barbecue sauce",
+					"Bavarian cream",
+					"Frying, golden and crisp"
+				]
+			},
+			"sources": [
+				{
+					"title": "Food Allergies, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/food-allergies",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Food Allergies: What You Need to Know, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/buy-store-serve-safe-food/food-allergies-what-you-need-know",
+					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Addition to the 2022 Food Code: Sesame Added as a Major Food Allergen, US Food and Drug Administration",
+					"url": "https://www.fda.gov/food/retail-food-industryregulatory-assistance-training/addition-2022-food-code-sesame-added-major-food-allergen",
+					"asOf": "2026-10-12",
+					"evidence": "With the addition of sesame, the list of major food allergens is: milk, egg, fish, Crustacean shellfish, tree nuts, wheat, peanuts, soybeans and sesame."
+				},
+				{
+					"title": "Brennan’s, Dinner menu",
+					"url": "https://www.brennansneworleans.com/menus/dinner/",
+					"asOf": "2026-09-26"
+				},
+				{
+					"title": "Brennan’s, Breakfast & Lunch menu",
+					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
+					"asOf": "2026-09-26"
+				}
+			],
+			"cards": [
+				{
+					"stem": "nine",
+					"front": "What are the nine major food allergens a kitchen in the United States must know?",
+					"back": "Milk, egg, fish, crustacean shellfish, tree nuts, peanuts, wheat, soy and sesame; the kitchen confirms every question about them."
+				},
+				{
+					"stem": "sesame-ninth",
+					"front": "Which allergen joined the US list most recently, and when, for the kitchen's chart?",
+					"back": "Sesame, on 1 January 2023, joining the eight named by a law of 2004, so a kitchen's older charts may show only eight."
+				},
+				{
+					"stem": "cross-contact",
+					"front": "What does a kitchen mean by cross-contact?",
+					"back": "An allergen moving from one food to another by a shared fryer, board, knife, pan, glove or garnish, which is why the kitchen asks about every pan."
+				},
+				{
+					"stem": "heat",
+					"front": "Does a hot fryer or a long simmer make a shared pan clean again?",
+					"back": "No. Heat kills most bacteria but leaves an allergen behind in the kitchen; only a thorough wash removes it, and fryer oil cannot be washed."
+				},
+				{
+					"stem": "roux",
+					"front": "Why is a gumbo or a turtle soup a question about wheat?",
+					"back": "Both are classically built on a roux, flour cooked in fat, so they carry wheat no menu line names; the kitchen answers."
+				},
+				{
+					"stem": "butter",
+					"front": "Where does butter hide on a Creole menu?",
+					"back": "In blackening, where food is classically dipped in melted butter, and in beurre blanc, hollandaise, meunière and New Orleans barbecue sauce."
+				},
+				{
+					"stem": "worcestershire",
+					"front": "Why does Worcestershire sauce matter to a guest who cannot eat fish?",
+					"back": "It is traditionally made with anchovy, and it goes into barbecue butter, dressings and Bloody Marys; at Brennan's the service note flags it on the Louisiana Oysters, so the kitchen confirms what is in each."
+				},
+				{
+					"stem": "routine",
+					"front": "What are the steps a server follows to take a guest's allergy to the kitchen?",
+					"back": "Listen in full, write it on the ticket against the seat, tell the chef in person, bring back the chef's answer, and carry the plate separately to the guest."
+				},
+				{
+					"stem": "in-person",
+					"front": "Why tell the chef in person as well as writing it on the ticket?",
+					"back": "A ticket can be missed in a rush; a word face to face rarely is, and the chef can ask questions back."
+				},
+				{
+					"stem": "no-verdict",
+					"front": "Who gives the final answer on an allergen question: the server, the menu or the kitchen?",
+					"back": "The kitchen, every time. A server never promises a dish is without anything and never guesses from the menu, which lists flavours, not every pan."
+				},
+				{
+					"stem": "diets",
+					"front": "How are diet questions, vegan, gluten, gelatine or alcohol, passed to the kitchen?",
+					"back": "The same road as an allergy: name what the menu prints, take it to the kitchen, and bring back the chef's answer."
+				},
+				{
+					"stem": "brennans-blackening",
+					"front": "Why is the Brennan's Blackened Tofu never called vegan without asking the kitchen?",
+					"back": "Blackening is traditionally done with butter, and the rice grits may use stock, so the server asks the kitchen each time a guest asks."
+				}
+			],
+			"questions": [
+				{
+					"stem": "q-nine",
+					"q": "Which of these is not one of the nine major food allergens a US kitchen must know?",
+					"answer": "Celery",
+					"distractors": [
+						"Peanuts",
+						"Wheat",
+						"Milk"
+					],
+					"why": "The US list is milk, egg, fish, crustacean shellfish, tree nuts, peanuts, wheat, soy and sesame; celery is on Europe's list, though the kitchen still answers for it.",
+					"teaches": "nine"
+				},
+				{
+					"stem": "q-sesame-ninth",
+					"q": "In which year did the newest of the nine join the kitchen's list of major food allergens?",
+					"answer": "2023",
+					"distractors": [
+						"2004",
+						"1990",
+						"2015"
+					],
+					"why": "Sesame joined on 1 January 2023; the first eight were named by a law of 2004, so a kitchen's older charts may show only eight.",
+					"teaches": "sesame-ninth"
+				},
+				{
+					"stem": "q-cross-contact",
+					"q": "A dish lists no peanuts but was garnished with a spoon just used for peanuts. What is this called?",
+					"answer": "Cross-contact",
+					"distractors": [
+						"Carryover",
+						"Cross-seasoning",
+						"Mise en place"
+					],
+					"why": "Cross-contact is an allergen moving from one food to another by a shared spoon, board, pan, glove or fryer, which the kitchen guards against.",
+					"teaches": "cross-contact"
+				},
+				{
+					"stem": "q-heat",
+					"q": "Fries go into oil that has just fried shrimp. A guest with a crustacean allergy asks the kitchen about them: what is true?",
+					"answer": "They can carry shrimp protein",
+					"distractors": [
+						"The hot oil has destroyed the shrimp protein",
+						"Straining the oil has taken the shrimp out",
+						"Only the shrimp themselves carry the protein"
+					],
+					"why": "Heat kills most bacteria but leaves the protein behind, and oil cannot be washed, so shared oil carries whatever was fried in it; the kitchen answers.",
+					"teaches": "heat"
+				},
+				{
+					"stem": "q-roux",
+					"q": "Which part of a classic gumbo carries wheat that the menu line never names?",
+					"answer": "The roux, flour cooked in fat",
+					"distractors": [
+						"The filé, ground sassafras leaves",
+						"The okra, a pod that thickens the pot",
+						"The holy trinity of onion, celery and pepper"
+					],
+					"why": "A roux is flour cooked in fat, the classic base of a gumbo, so it carries wheat no menu line names; filé and okra are other thickeners, and the kitchen answers every flour question.",
+					"teaches": "roux"
+				},
+				{
+					"stem": "q-worcestershire",
+					"q": "Which everyday sauce is traditionally made with anchovy, so a question about fish reaches it?",
+					"answer": "Worcestershire sauce",
+					"distractors": [
+						"Louisiana hot sauce",
+						"Creole mustard",
+						"Cane syrup glaze"
+					],
+					"why": "Worcestershire is traditionally made with anchovy, and it goes into New Orleans barbecue butter, dressings and Bloody Marys, so the kitchen checks it.",
+					"teaches": "worcestershire"
+				},
+				{
+					"stem": "q-routine",
+					"q": "A guest names a nut problem. After writing it on the ticket, what does the server do next for the kitchen?",
+					"answer": "Tells the chef in person",
+					"distractors": [
+						"Reads the menu and reassures the guest",
+						"Relies on the printer alone",
+						"Picks the nuts off at the table"
+					],
+					"why": "A ticket can be missed in a rush, so the server tells the chef face to face and brings back the chef's answer.",
+					"teaches": "in-person"
+				},
+				{
+					"stem": "q-carry",
+					"q": "How is a plate the kitchen has approved for a guest's allergy carried from the pass?",
+					"answer": "Separately, by itself, straight to the guest",
+					"distractors": [
+						"On a full tray with the table's other plates",
+						"By whichever runner is free, unannounced",
+						"After a stop at the side station for garnish"
+					],
+					"why": "Carried alone, the plate meets nothing that could drip or brush onto it, and the server names it as it lands.",
+					"teaches": "routine"
+				},
+				{
+					"stem": "q-no-verdict",
+					"q": "A guest with a tree nut allergy asks whether the Pecan Gulf Fish will be fine for her, before the kitchen has seen the ticket. What does the server say?",
+					"answer": "Let me take that to the kitchen",
+					"distractors": [
+						"Yes, it should be fine",
+						"The menu lists everything in it",
+						"Just push the pecans aside"
+					],
+					"why": "No verdict comes from the floor: menus list flavours, not every pan or supplier, so the kitchen gives the answer every time.",
+					"teaches": "no-verdict"
+				},
+				{
+					"stem": "q-blackening",
+					"q": "Why does a Brennan's server ask the kitchen before calling the Blackened Tofu vegan?",
+					"answer": "Blackening is traditionally done with butter",
+					"distractors": [
+						"Tofu is curdled from cow's milk",
+						"Blackening chars food over a wood grill",
+						"The menu lists it as a meat dish"
+					],
+					"why": "Classic blackening dips the food in melted butter, and the rice grits may use stock, so the kitchen confirms each time a guest asks.",
+					"teaches": "brennans-blackening"
+				}
+			]
+		}
+	]
+}

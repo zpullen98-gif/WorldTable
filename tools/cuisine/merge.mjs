@@ -11,8 +11,8 @@
  * parts naming one stem are refused; the entries are put in roster order
  * (tools/cuisine/roster.json), the rest after them in the order met; the key,
  * title and intro are always chapters.json's. The merged chapter is then
- * validated inside the whole set (in draft mode while a roster exists) and
- * nothing is written if any rule fails.
+ * validated inside the whole set (in draft mode while a roster exists and
+ * CUISINE_COMPLETE is off) and nothing is written if any rule fails.
  *
  * tree or ladder: tools/cuisine/out/<name>.json is validated the same way and
  * written to tools/derive/cuisine/<name>.json.
@@ -21,7 +21,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { CHAPTER_KEYS, checkSet, formatProblem, rosterRows } from '../derive/cuisine-contract.mjs';
+import { CHAPTER_KEYS, CUISINE_COMPLETE, checkSet, formatProblem, rosterRows } from '../derive/cuisine-contract.mjs';
 import { PARTS_DIR, SRC_DIR, chapterText, loadRefs, loadSet, mergeChapter, readParts, readRoster, rel } from '../derive/cuisine.mjs';
 
 /** @typedef {import('../derive/cuisine-contract.mjs').Problem} Problem */
@@ -46,7 +46,9 @@ const die = (msg) => {
 const set = loadSet();
 const roster = readRoster();
 const refs = loadRefs();
-const draft = roster !== null;
+/* Draft mode accepts planned roster slugs; once CUISINE_COMPLETE the contract
+   refuses it, and every reference must resolve to a written entry. */
+const draft = roster !== null && !CUISINE_COMPLETE;
 /** @type {Problem[]} */
 const early = [];
 /** @type {string} */

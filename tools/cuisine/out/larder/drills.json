@@ -1,0 +1,107 @@
+{
+	"steps": [
+		{
+			"stem": "shuck-an-oyster",
+			"entry": "gulf-oysters",
+			"title": "Shuck an oyster",
+			"prompt": "Put the stages of shucking an oyster for the half shell in order, from the cooler to the ice. One stage does not belong.",
+			"steps": [
+				"Scrub the shells under cold running water, and throw out any that gape and will not close when tapped",
+				"Guard your holding hand with a folded towel or a cut-resistant glove, and hold the oyster cup side down, hinge towards you",
+				"Work the tip of the oyster knife into the hinge and twist until the shell pops",
+				"Wipe the blade clean of mud and grit before it goes back in",
+				"Slide the blade along the inside of the top shell to cut the muscle, and lift the top shell away",
+				"Keeping the cup level, run the blade under the oyster to free it from the bottom shell",
+				"With the oyster freed in its cup, check it by eye for grit and chipped shell, and smell it: an oyster that smells off is thrown away",
+				"Set it on crushed ice in its liquor, the salty juice in the shell, and send it at once"
+			],
+			"distractor": "Pour off the liquor and rinse the oyster under the tap so it looks clean",
+			"why": "Clean, live shells come first, and the hand is guarded before any knife goes in. The hinge is popped and the blade wiped so no grit falls in; the top muscle is cut, then the bottom, with the cup level. The liquor is part of the taste and is never poured away or rinsed off."
+		}
+	],
+	"match": [
+		{
+			"stem": "larder-uses",
+			"title": "The Louisiana larder at work",
+			"prompt": "Match each ingredient of the Louisiana larder to where it does its work, in the kitchen or on the Brennan's menu.",
+			"left": "Ingredient",
+			"right": "Where it works",
+			"pairs": [
+				[
+					"Filé",
+					"Stirred into gumbo off the heat, or pinched over the bowl at the table",
+					"file"
+				],
+				[
+					"Andouille",
+					"Sliced into half-moons and browned first, so its smoky fat seasons the pot",
+					"andouille"
+				],
+				[
+					"Tasso",
+					"Seasons the Creole sauce on the New Orleans Shrimp & Grits",
+					"tasso"
+				],
+				[
+					"Creole mustard",
+					"The grainy, sharp backbone of a pink Creole rémoulade",
+					"creole-mustard"
+				],
+				[
+					"Chicory",
+					"Blended with dark roast coffee and poured with hot milk as café au lait",
+					"chicory"
+				],
+				[
+					"Popcorn rice",
+					"Cooked in its own pot, the rice under the Seafood Gumbo",
+					"louisiana-rice"
+				],
+				[
+					"Leidenheimer French bread",
+					"Thin toasted crisps on the Creole Caesar, in place of croutons",
+					"french-bread"
+				],
+				[
+					"Cane syrup",
+					"Glazes the peaches beside the Roasted Rohan Duck Breast on the dinner tasting",
+					"cane-syrup"
+				]
+			]
+		},
+		{
+			"stem": "crab-grades",
+			"title": "Crabmeat grades",
+			"prompt": "Match each grade of picked Louisiana blue crabmeat to what it is.",
+			"left": "Grade",
+			"right": "What it is",
+			"pairs": [
+				[
+					"Jumbo lump",
+					"The two large muscles that drive the swimming legs, whole and white",
+					"blue-crab"
+				],
+				[
+					"Lump",
+					"Large body pieces and broken jumbo, the grade just below jumbo lump",
+					"blue-crab"
+				],
+				[
+					"Backfin",
+					"Smaller flakes of lump mixed with some white body meat",
+					"blue-crab"
+				],
+				[
+					"Special",
+					"Fine white flake from the body, for crab cakes, dips and stuffings",
+					"blue-crab"
+				],
+				[
+					"Claw meat",
+					"Darker, pinkish brown meat, firmer and sweeter with a stronger flavour, and the least costly",
+					"blue-crab"
+				]
+			]
+		}
+	]
+}
