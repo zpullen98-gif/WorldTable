@@ -62141,14 +62141,14 @@
       "target": "ask:+",
       "op": "add",
       "value": {
-        "question": "The sheet's dietary marks for the Tuna Crudo leave fish off a plate whose main ingredient is tuna. Is that an omission to correct, and should the floor keep fish in every allergy conversation about the course?",
+        "question": "The sheet's dietary marks for the Tuna Crudo leave fish off a plate whose main ingredient is tuna. Is that an omission to correct, and should the floor keep fish in every allergy conversation about the course until the kitchen settles the marks?",
         "askWhom": "chef",
         "items": [
           "Tuna Crudo"
         ],
         "blocksField": ""
       },
-      "reason": "A printed list that leaves off the main ingredient is a correction to confirm, never evidence that fish is absent; the server keeps fish in the conversation until the chef settles the marks",
+      "reason": "A printed list that leaves off the main ingredient is a correction to confirm, never evidence that fish is absent; the server keeps fish in the conversation until the chef settles the marks; reworded 17 October 2026 so the question itself defers to the kitchen, the site's rule for a lineup question that speaks of an allergy",
       "source": "page:brennans-fall-2026-training-sheets-2026-10-15.txt line 83; research/fall-menu-2026-chatgpt.json items[5] serviceChecks and drills (crudo-fish; source fda-allergens)"
     },
     {
