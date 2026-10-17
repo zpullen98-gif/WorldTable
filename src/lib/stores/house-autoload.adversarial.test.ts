@@ -138,7 +138,8 @@ describe('auto-load across editions, through the Table wake', () => {
 		const second = await boot(backing, first.rec, PACK, clock);
 		expect(second.res.action).toBe('refreshed');
 		const house = second.api.current()!;
-		expect(second.rec.dishes.length).toBe(62);
+		// Every dish of the shipped edition, whatever its count (62 before 17 October 2026, 70 since).
+		expect(second.rec.dishes.length).toBe(JSON.parse(PACK).house.dishes.length);
 		expect(house.wines.filter((w: any) => !(w.lines && w.lines.by === 'person')).map((w) => w.name)).toEqual([]);
 		// and the next boot writes nothing
 		const before = JSON.stringify([...backing.entries()]);

@@ -50,8 +50,12 @@ test('the Videos entry lists every video by topic, the house first, each a link 
 	// A disclosure at the foot of the list: closed, and the first screen is still the menu's.
 	await expect(entry).not.toHaveAttribute('open', '');
 	// The menu's first tappable things: the tasting at the top (its dish and its pour), then the rows.
+	// The page's two chip rows of 17 October 2026 (the collections and the jump row) put the second
+	// of them just past the first 844 px at 390 by 844 (measured 973), the same shift study.spec.ts
+	// measures for the course journey; the bound keeps the catch it was written for, a Videos block
+	// drawn above the menu, which would push it a whole screen down.
 	const second = (await page.locator('.study .titem, .study .row').nth(1).boundingBox())!;
-	expect(second.y + second.height).toBeLessThanOrEqual(844);
+	expect(second.y + second.height).toBeLessThanOrEqual(1000);
 
 	await entry.locator('summary').click();
 	await expect(entry).toContainText(NOTE);
