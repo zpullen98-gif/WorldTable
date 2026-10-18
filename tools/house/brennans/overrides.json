@@ -70595,6 +70595,958 @@
       "value": "Madeira, the fortified wine of a Portuguese island in the Atlantic, is aged warm and keeps for months once open. Henriques & Henriques is a historic house at Câmara de Lobos on the south coast, its history dating to 1850. Its Founder’s Solera was begun in 1894, the oldest date on our list; a solera blends wine across casks over the years, so the date marks its start, not a harvest. Intense and tangy: dried fruit, toffee, dark chocolate, spice, honey and old wood, a glass on its own to end the evening. The sommelier presents it, poured at 55 to 60°F in a small Madeira glass; no decanting.",
       "reason": "Wine lines polish 17 October 2026: the 45 second line called Madeira almost immortal and carried no house story and no pour; it now carries why Madeira keeps, the house at Câmara de Lobos and its history from 1850 from the component, the solera and the oldest date on our list, the profile without sweet, since the list's Verdelho and the producer's Malvasia disagree on the grape that settles it, its use from the record and the serve with the sommelier presenting it (now 109 words)",
       "source": "pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314 (29088 Henriques & Henriques \"Founder's Solera\" Verdelho 1894 3200, under Fortified Wines, Madeira, the oldest year on the list); the pack record w-ay6nux07 (producer Henriques & Henriques; region Madeira, Portugal; grapes empty; style historic solera Madeira begun in the nineteenth century, rare, intense and tangy; parts.technique a solera begun in 1894, aged warm in old casks; profile Madeira from a solera begun in 1894, aged warm in old casks for more than a century, intense and tangy: dark amber with a green rim, dried fruit, toffee, dark chocolate, spice, old wood and honey, sweet, with piercing acidity and a finish that lasts minutes; goesWith a glass on its own at the end of a great evening, or with pecans, dark chocolate and aged cheese; serve 55 to 60°F in a small port or Madeira glass, no decanting, Madeira keeps for months once open; why: the oldest date on our list; kept How do I pour it?: the sommelier presents it); house.components Henriques & Henriques (c-f0aw25wd: a historic Madeira house whose history dates to 1850, at Câmara de Lobos on the island's south coast; a solera blends wine across casks over the years, so the date is when the solera began, not a single harvest; never call 1894 a vintage; the grape unsettled, Verdelho on the list and Malvasia in the producer's description); research/producers-cellar-port-madeira-2026-10-10.md section 8 (items 1 to 6: the list's tell calls the Verdelho medium dry while the producer describes a sweet Malvasia; nothing on the fortified list above it); research/cellar-review-2026-10-11-house-floor-4.md section 5 (the solera search of 11 October 2026: the sources disagree on whether it was closed, so no line claims either); the lineup asks a-85o8by5x and a-s5cstzr2 (the grape, Verdelho or Malvasia, and what closed in 1899 means, so the lines name no grape and leave out sweet, which turns on the grape)"
+    },
+    {
+      "target": "cocktail:Classic Sazerac",
+      "field": "section",
+      "op": "set",
+      "value": "Sazerac Selections",
+      "reason": "The drinks as the house prints them, 18 October 2026: the cocktail list prints it first under Sazerac Selections, with Thompson’s Dream and Origin Story after it (lines 442 to 454); the guide filed it under its own Signature drinks heading, which no menu prints",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+    },
+    {
+      "target": "cocktail:Thompson’s Dream",
+      "field": "section",
+      "op": "set",
+      "value": "Sazerac Selections",
+      "reason": "The drinks as the house prints them, 18 October 2026: the cocktail list prints it second under Sazerac Selections (lines 442 to 454); Premium Sazeracs was the research’s name for the two, which no menu prints",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+    },
+    {
+      "target": "cocktail:Origin Story",
+      "field": "section",
+      "op": "set",
+      "value": "Sazerac Selections",
+      "reason": "The drinks as the house prints them, 18 October 2026: the cocktail list prints it third under Sazerac Selections, spelt Orgin Story there (lines 442 to 454); Premium Sazeracs was the research’s name for the two, which no menu prints",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+    },
+    {
+      "target": "cocktail:Bloody Bull",
+      "field": "section",
+      "op": "set",
+      "value": "Classic Eye Openers",
+      "reason": "The drinks as the house prints them, 18 October 2026: the breakfast and lunch menu prints it first under Classic Eye Openers (lines 94 to 109); the guide filed it under its own Signature drinks heading",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+    },
+    {
+      "target": "cocktail:Brandy Milk Punch",
+      "field": "section",
+      "op": "set",
+      "value": "Classic Eye Openers",
+      "reason": "The drinks as the house prints them, 18 October 2026: the breakfast and lunch menu prints it second under Classic Eye Openers (lines 94 to 109); the guide filed it under its own Signature drinks heading",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+    },
+    {
+      "target": "cocktail:Brennan’s Bloody Mary",
+      "field": "section",
+      "op": "set",
+      "value": "Classic Eye Openers",
+      "reason": "The drinks as the house prints them, 18 October 2026: the breakfast and lunch menu prints it third under Classic Eye Openers (lines 94 to 109); Eye openers was the guide’s shortened heading",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+    },
+    {
+      "target": "cocktail:Brennan’s Irish Coffee",
+      "field": "section",
+      "op": "set",
+      "value": "Classic Eye Openers",
+      "reason": "The drinks as the house prints them, 18 October 2026: the breakfast and lunch menu prints it fourth under Classic Eye Openers (lines 94 to 109); the dessert menu prints it again under Coffee Cocktails (lines 394 to 405), and one drink files once, so it stands where the breakfast list first prints it; the guide filed it under its own Signature drinks heading",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+    },
+    {
+      "target": "cocktail:New Orleans-Style Coffee with Chicory",
+      "field": "section",
+      "op": "set",
+      "value": "Coffee",
+      "reason": "The drinks as the house prints them, 18 October 2026: the breakfast and lunch menu prints it first under Coffee, as New Orleans Style Coffee (lines 81 to 92); Coffee & juice joined two printed headings into one",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+    },
+    {
+      "target": "cocktail:Congregation Single-Origin Coffee",
+      "field": "section",
+      "op": "set",
+      "value": "Coffee",
+      "reason": "The drinks as the house prints them, 18 October 2026: the breakfast and lunch menu prints it second under Coffee, as Single Origin, Papua New Guinea (lines 81 to 92); Coffee & juice joined two printed headings into one",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+    },
+    {
+      "target": "cocktail:Café Glacé de la Maison",
+      "field": "section",
+      "op": "set",
+      "value": "Coffee",
+      "reason": "The drinks as the house prints them, 18 October 2026: the breakfast and lunch menu prints it third under Coffee (lines 81 to 92); Coffee & juice joined two printed headings into one",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+    },
+    {
+      "target": "cocktail:Revive Cold-Pressed Juice",
+      "field": "section",
+      "op": "set",
+      "value": "Cold Pressed Juices",
+      "reason": "The drinks as the house prints them, 18 October 2026: the breakfast and lunch menu prints it alone under Cold Pressed Juices, locally made and fresh squeezed (lines 111 to 115); Coffee & juice joined two printed headings into one",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt"
+    },
+    {
+      "target": "house",
+      "field": "cocktailOrder",
+      "op": "set",
+      "value": [
+        "For Sentimental Reasons",
+        "Prisoner of Love",
+        "Rumors are Flying",
+        "To Each His Own",
+        "Old Buttermilk Sky",
+        "Five Minutes More",
+        "Personality",
+        "Oh! What It Seemed to Be",
+        "Classic Sazerac",
+        "Thompson’s Dream",
+        "Origin Story",
+        "Bloody Bull",
+        "Brandy Milk Punch",
+        "Brennan’s Bloody Mary",
+        "Brennan’s Irish Coffee",
+        "New Orleans-Style Coffee with Chicory",
+        "Congregation Single-Origin Coffee",
+        "Café Glacé de la Maison",
+        "Revive Cold-Pressed Juice",
+        "Riviera",
+        "Bodrum",
+        "OBX",
+        "Brennan’s Champagne Cocktail",
+        "Chandon Garden Spritz",
+        "Floating in South Africa",
+        "Apple Crumble",
+        "Banane au Chocolat",
+        "Espresso Martini",
+        "Ralph’s Coffee",
+        "Flamingo",
+        "Birdcage",
+        "Spoonbill"
+      ],
+      "reason": "The drinks as the house prints them, 18 October 2026: the cocktail list a guest is handed first (Billboard Songs from 1946, Temperance, 1946, Sazerac Selections, each in its printed order, lines 406 to 454), then the breakfast and lunch menu’s Classic Eye Openers, Coffee and Cold Pressed Juices (lines 81 to 115), the Bubbles at Brennan’s cocktails (lines 311 to 329), the dessert menu’s Dessert Cocktails and Coffee Cocktails (lines 381 to 401), and the Luxury Roost Bar Cocktails last; the builder orders the drinks by this list, so every wing reads the menus’ own order",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt; pages/brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt"
+    },
+    {
+      "target": "cocktail:For Sentimental Reasons",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "For Sentimental Reasons: allspice dram and pear purée topped with sparkling wine, fizzy and fruity with a warm spice.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line had no single taste hook and listed three adjectives; it now names the drink, the three printed parts in the record's order of build and one taste",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 406-407 (Billboard Songs from 1946, celebrating 80 years at Brennan's) and lines 408-410 (Allspice Dram, Pear Purée, Sparkling Wine); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 165-173; guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (sparkling wine over allspice dram and pear purée; fizzy and fruity, ripe pear first with a gentle warm spice) and its kept notes How do I sell it? and Tell me about it.; the components Allspice dram (its origin profile: Jamaica's pimento dram, allspice tasting of clove, cinnamon and nutmeg at once), Pear purée and The song For Sentimental Reasons (a glass for a couple marking an anniversary); research/producers-bar-liqueurs-aperitifs-2026-10-10.md; research/bar-master-review-2026-10-04.md (allspice dram); research/fall-menu-2026-chatgpt.json (For Sentimental Reasons originNotes: the Jamaican tradition, not the bottle's origin)"
+    },
+    {
+      "target": "cocktail:For Sentimental Reasons",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "For Sentimental Reasons is allspice dram, a liqueur tasting of clove, cinnamon and nutmeg at once, with pear purée under sparkling wine. Fizzy and fruity, ripe pear first and warm spice after: a sparkling way to begin the meal, or to toast a celebration.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line quoted the price and ranked the drink as the easiest start; it now gives the build, the taste in plain words and when to have it, with no price and no ranking",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 406-407 (Billboard Songs from 1946, celebrating 80 years at Brennan's) and lines 408-410 (Allspice Dram, Pear Purée, Sparkling Wine); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 165-173; guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (sparkling wine over allspice dram and pear purée; fizzy and fruity, ripe pear first with a gentle warm spice) and its kept notes How do I sell it? and Tell me about it.; the components Allspice dram (its origin profile: Jamaica's pimento dram, allspice tasting of clove, cinnamon and nutmeg at once), Pear purée and The song For Sentimental Reasons (a glass for a couple marking an anniversary); research/producers-bar-liqueurs-aperitifs-2026-10-10.md; research/bar-master-review-2026-10-04.md (allspice dram); research/fall-menu-2026-chatgpt.json (For Sentimental Reasons originNotes: the Jamaican tradition, not the bottle's origin)"
+    },
+    {
+      "target": "cocktail:For Sentimental Reasons",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "For Sentimental Reasons opens our Billboard Songs from 1946, the cocktails celebrating eighty years at Brennan's, and like every drink there it carries the title of a song from the year we opened. It's allspice dram, a liqueur in the Jamaican tradition made with allspice berries, which taste of clove, cinnamon and nutmeg at once, with pear purée, topped with sparkling wine. The purée gives it a soft body: fizzy and fruity, ripe pear first and warm spice at the end. It's a sparkling way to begin breakfast or dinner, the glass for an anniversary, and the one for anyone who usually orders bubbles.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price, said saved menu, ended on a promise to check a label and ran short; rewritten to the standard: the dram's tradition from its origin profile (the house bottle unnamed), the printed parts and the record's build, the taste, when it belongs, and the list's eighty years",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 406-407 (Billboard Songs from 1946, celebrating 80 years at Brennan's) and lines 408-410 (Allspice Dram, Pear Purée, Sparkling Wine); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 165-173; guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (sparkling wine over allspice dram and pear purée; fizzy and fruity, ripe pear first with a gentle warm spice) and its kept notes How do I sell it? and Tell me about it.; the components Allspice dram (its origin profile: Jamaica's pimento dram, allspice tasting of clove, cinnamon and nutmeg at once), Pear purée and The song For Sentimental Reasons (a glass for a couple marking an anniversary); research/producers-bar-liqueurs-aperitifs-2026-10-10.md; research/bar-master-review-2026-10-04.md (allspice dram); research/fall-menu-2026-chatgpt.json (For Sentimental Reasons originNotes: the Jamaican tradition, not the bottle's origin)"
+    },
+    {
+      "target": "cocktail:Prisoner of Love",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Prisoner of Love is the gin drink among our Billboard Songs from 1946: gin with Earl Grey tea, orange flower water and clarified heavy cream. Silky and fragrant, bergamot and orange blossom over the gin, like a grown-up afternoon tea, lovely before dinner or after it.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line gave no moment for the drink and credited the clarified cream with the texture as a process; it now gives the printed build, the taste in plain words and when to have it, from the record's sell note",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 406-407 (Billboard Songs from 1946, celebrating 80 years at Brennan's) and lines 412-414 (Gin, Earl Grey Tea, Clarified Heavy Cream, Orange Flower Water); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 110-119 (gin, bergamot tea and orange blossom, with clarified heavy cream; citrus-tea and floral notes); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (silky and fragrant, the tea and a floral orange note over the gin), its why (clarified cream, the old milk punch technique, in a modern drink) and its kept note How do I sell it? (a gin drinker, a tea lover, before dinner or after dinner); the components Earl Grey tea (black tea scented with bergamot, grown mostly in Calabria in southern Italy), Orange flower water (distilled from the blossoms of the bitter orange tree), Milk punch and Clarifying with cream; research/bar-master-review-2026-10-04.md (Earl Grey); research/brennans-bar-review-2026-10-15.md (no house process, no milk absence, no holding time asserted)"
+    },
+    {
+      "target": "cocktail:Prisoner of Love",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Prisoner of Love is the gin drink among our Billboard Songs from 1946, named like the rest for a song from the year we opened. It's gin with Earl Grey, black tea scented with bergamot, a fragrant citrus from southern Italy, and orange flower water, distilled from the blossoms of the bitter orange tree. The clarified heavy cream, the old milk punch technique in a modern drink, gives it a silky texture. It tastes fragrant and floral, bergamot and orange blossom over the gin, like a grown-up afternoon tea: one for the gin drinker and the tea lover, before dinner or after it.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price, said saved fall menu, promised to confirm the build at the table and ended on a dietary sentence, which lives in the service note; rewritten to the standard with the gin unnamed, the clarified cream told as the record's why tells it and no house process described",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 406-407 (Billboard Songs from 1946, celebrating 80 years at Brennan's) and lines 412-414 (Gin, Earl Grey Tea, Clarified Heavy Cream, Orange Flower Water); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 110-119 (gin, bergamot tea and orange blossom, with clarified heavy cream; citrus-tea and floral notes); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (silky and fragrant, the tea and a floral orange note over the gin), its why (clarified cream, the old milk punch technique, in a modern drink) and its kept note How do I sell it? (a gin drinker, a tea lover, before dinner or after dinner); the components Earl Grey tea (black tea scented with bergamot, grown mostly in Calabria in southern Italy), Orange flower water (distilled from the blossoms of the bitter orange tree), Milk punch and Clarifying with cream; research/bar-master-review-2026-10-04.md (Earl Grey); research/brennans-bar-review-2026-10-15.md (no house process, no milk absence, no holding time asserted)"
+    },
+    {
+      "target": "cocktail:Rumors are Flying",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Rumors are Flying: Brennan's barrel-aged Rittenhouse rye with tart cherry juice, brown sugar syrup and orange bitters. Rich and spicy.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line carried no taste word; it now ends on one",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 406-407 (Billboard Songs from 1946, celebrating 80 years at Brennan's) and lines 416-418 (Brennan's Barrel Aged Rittenhouse Rye, Tart Cherry Juice, Brown Sugar Syrup, Orange Bitters); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 121-130 (rye spice, fruit and a warm citrus accent); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (rich and spirit-forward: rye spice and oak, dark tart cherry and a warm brown sugar roundness) and its kept note How do I sell it? (the Old Fashioned drinker, the rye lover, a slow drink after dinner); the component Brennan's barrel-aged Rittenhouse rye and its producer profile (first sold in Philadelphia in 1934, named for Rittenhouse Square, bottled in bond since 1948, made by Heaven Hill in Kentucky; say barrel-aged for Brennan's and no more); the components Tart cherry juice and Brown sugar and brown sugar syrup (the Personality its spirit-free twin); the dish Roost Burger, whose pairs field names the Rumors are Flying; research/producers-bar-whiskey-sazerac-2026-10-10.md; research/bar-master-review-2026-10-04.md (Rittenhouse); research/brennans-bar-review-2026-10-15.md (no house ageing programme asserted; compare with the Personality by the shared cherry and brown sugar)"
+    },
+    {
+      "target": "cocktail:Rumors are Flying",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Rumors are Flying is our fall rye drink: Brennan's barrel-aged Rittenhouse rye with tart cherry juice, brown sugar syrup and orange bitters. Rich and spicy, dark cherry and warm brown sugar over rye and oak: one for an Old Fashioned lover, and one to linger over after dinner.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line gave who without when; it now carries the printed build, the taste from the record's parts and the moment from its sell note, and calls it our fall rye drink, since the Classic Sazerac and Thompson’s Dream are rye drinks too",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 406-407 (Billboard Songs from 1946, celebrating 80 years at Brennan's) and lines 416-418 (Brennan's Barrel Aged Rittenhouse Rye, Tart Cherry Juice, Brown Sugar Syrup, Orange Bitters); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 121-130 (rye spice, fruit and a warm citrus accent); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (rich and spirit-forward: rye spice and oak, dark tart cherry and a warm brown sugar roundness) and its kept note How do I sell it? (the Old Fashioned drinker, the rye lover, a slow drink after dinner); the component Brennan's barrel-aged Rittenhouse rye and its producer profile (first sold in Philadelphia in 1934, named for Rittenhouse Square, bottled in bond since 1948, made by Heaven Hill in Kentucky; say barrel-aged for Brennan's and no more); the components Tart cherry juice and Brown sugar and brown sugar syrup (the Personality its spirit-free twin); the dish Roost Burger, whose pairs field names the Rumors are Flying; research/producers-bar-whiskey-sazerac-2026-10-10.md; research/bar-master-review-2026-10-04.md (Rittenhouse); research/brennans-bar-review-2026-10-15.md (no house ageing programme asserted; compare with the Personality by the shared cherry and brown sugar)"
+    },
+    {
+      "target": "cocktail:Rumors are Flying",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Rumors are Flying is the rye drink among our Billboard Songs from 1946, named for a song from the year we opened. It starts with Brennan's barrel-aged Rittenhouse, a bottled in bond rye first sold in Philadelphia in 1934, named for Rittenhouse Square and made today by Heaven Hill in Kentucky. With it go tart cherry juice, brown sugar syrup and orange bitters, so it's rich and spicy: rye and oak, dark cherry, a warm brown sugar roundness and a lift of orange. It's one for an Old Fashioned lover, lovely after dinner, and the cocktail we pour with the Roost Burger.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price and a proof, called the rye Brennan's own and ranked the Sazeracs as the next step; rewritten to the standard: Rittenhouse's story from its producer profile, the barrel-aged wording exactly as the menu prints it, the taste from the record and the Roost Burger the pack pairs with it",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 406-407 (Billboard Songs from 1946, celebrating 80 years at Brennan's) and lines 416-418 (Brennan's Barrel Aged Rittenhouse Rye, Tart Cherry Juice, Brown Sugar Syrup, Orange Bitters); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 121-130 (rye spice, fruit and a warm citrus accent); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (rich and spirit-forward: rye spice and oak, dark tart cherry and a warm brown sugar roundness) and its kept note How do I sell it? (the Old Fashioned drinker, the rye lover, a slow drink after dinner); the component Brennan's barrel-aged Rittenhouse rye and its producer profile (first sold in Philadelphia in 1934, named for Rittenhouse Square, bottled in bond since 1948, made by Heaven Hill in Kentucky; say barrel-aged for Brennan's and no more); the components Tart cherry juice and Brown sugar and brown sugar syrup (the Personality its spirit-free twin); the dish Roost Burger, whose pairs field names the Rumors are Flying; research/producers-bar-whiskey-sazerac-2026-10-10.md; research/bar-master-review-2026-10-04.md (Rittenhouse); research/brennans-bar-review-2026-10-15.md (no house ageing programme asserted; compare with the Personality by the shared cherry and brown sugar)"
+    },
+    {
+      "target": "cocktail:To Each His Own",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "To Each His Own: Daron Fine Calvados, an apple brandy, with Lillet Blanc and quince liqueur. Orchard fruit, smooth and floral.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line closed on a slogan (orchard fruit in a glass) rather than a taste; it now ends on the taste",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 406-407 (Billboard Songs from 1946, celebrating 80 years at Brennan's) and lines 420-422 (Daron Fine Calvados, Lillet Blanc, Quince Liqueur); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 132-140 (orchard fruit with the citrus and floral character of a French wine apéritif); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (orchard fruit and floral: baked apple and fragrant quince, softened by the Lillet) and its kept note How do I sell it? (a brandy or Cognac drinker, a fall aperitif before dinner); the components Daron Fine Calvados and its producer profile (a Calvados Pays d'Auge from Maison Ferrand, a Cognac house; the appellation requires double distillation in copper pot stills), Lillet Blanc and its producer profile (Podensac, south of Bordeaux, founded 1872; orange, honey and blossom) and Quince liqueur (a fruit between apple and pear); research/producers-bar-absinthe-bitters-brandy-2026-10-10.md; research/producers-bar-liqueurs-aperitifs-2026-10-10.md; research/fall-menu-2026-chatgpt.json (To Each His Own originNotes: Norman cider brandy and a Bordeaux-area wine apéritif)"
+    },
+    {
+      "target": "cocktail:To Each His Own",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "To Each His Own is our apple brandy drink: Daron Fine Calvados from Normandy with Lillet Blanc, a French wine aperitif, and quince liqueur. Baked apple and fragrant quince, softened by the Lillet: a fall aperitif before dinner, and one for a brandy or Cognac drinker.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line called the Lillet light and gave no moment for the drink; it now names the Lillet as the wine aperitif it is and gives when to have it, from the record's sell note",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 406-407 (Billboard Songs from 1946, celebrating 80 years at Brennan's) and lines 420-422 (Daron Fine Calvados, Lillet Blanc, Quince Liqueur); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 132-140 (orchard fruit with the citrus and floral character of a French wine apéritif); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (orchard fruit and floral: baked apple and fragrant quince, softened by the Lillet) and its kept note How do I sell it? (a brandy or Cognac drinker, a fall aperitif before dinner); the components Daron Fine Calvados and its producer profile (a Calvados Pays d'Auge from Maison Ferrand, a Cognac house; the appellation requires double distillation in copper pot stills), Lillet Blanc and its producer profile (Podensac, south of Bordeaux, founded 1872; orange, honey and blossom) and Quince liqueur (a fruit between apple and pear); research/producers-bar-absinthe-bitters-brandy-2026-10-10.md; research/producers-bar-liqueurs-aperitifs-2026-10-10.md; research/fall-menu-2026-chatgpt.json (To Each His Own originNotes: Norman cider brandy and a Bordeaux-area wine apéritif)"
+    },
+    {
+      "target": "cocktail:To Each His Own",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "To Each His Own is the orchard drink among our Billboard Songs from 1946, named for a song from the year we opened. It starts with Daron Fine Calvados, a Pays d'Auge apple brandy from the Cognac house Maison Ferrand, double distilled in copper pot stills in Normandy. With it go Lillet Blanc, the wine aperitif of Podensac, south of Bordeaux, where the house began in 1872, and quince liqueur, from a fragrant fruit between apple and pear. Norman brandy meets a Bordeaux aperitif: baked apple and perfumed quince, softened by the Lillet's orange and blossom. It's a fall aperitif before dinner, and the one for a brandy lover.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price and called the Lillet light; rewritten to the standard: Daron's and Lillet's stories from their producer profiles, the printed parts, the taste from the record, the moment from its sell note and the two French traditions from the fall research; Daron is told as the Cognac house's own calvados, as Difford's lists Maison Ferrand its producer and owner, never as distilled for it",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 406-407 (Billboard Songs from 1946, celebrating 80 years at Brennan's) and lines 420-422 (Daron Fine Calvados, Lillet Blanc, Quince Liqueur); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 132-140 (orchard fruit with the citrus and floral character of a French wine apéritif); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (orchard fruit and floral: baked apple and fragrant quince, softened by the Lillet) and its kept note How do I sell it? (a brandy or Cognac drinker, a fall aperitif before dinner); the components Daron Fine Calvados and its producer profile (a Calvados Pays d'Auge from Maison Ferrand, a Cognac house; the appellation requires double distillation in copper pot stills), Lillet Blanc and its producer profile (Podensac, south of Bordeaux, founded 1872; orange, honey and blossom) and Quince liqueur (a fruit between apple and pear); research/producers-bar-absinthe-bitters-brandy-2026-10-10.md; research/producers-bar-liqueurs-aperitifs-2026-10-10.md; research/fall-menu-2026-chatgpt.json (To Each His Own originNotes: Norman cider brandy and a Bordeaux-area wine apéritif)"
+    },
+    {
+      "target": "cocktail:To Each His Own",
+      "field": "guest",
+      "op": "set",
+      "value": "Daron Fine Calvados with Lillet Blanc and quince liqueur: apple brandy, a French wine aperitif and fragrant quince, smooth and fruity.",
+      "reason": "Drink lines polish 18 October 2026: the guest line called the Lillet a light aperitif wine, which a guest can hear as a strength claim the bar review removes, and the new lines name it a French wine aperitif; rewritten to match them, the rest kept",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 406-407 (Billboard Songs from 1946, celebrating 80 years at Brennan's) and lines 420-422 (Daron Fine Calvados, Lillet Blanc, Quince Liqueur); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 132-140 (orchard fruit with the citrus and floral character of a French wine apéritif); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (orchard fruit and floral: baked apple and fragrant quince, softened by the Lillet) and its kept note How do I sell it? (a brandy or Cognac drinker, a fall aperitif before dinner); the components Daron Fine Calvados and its producer profile (a Calvados Pays d'Auge from Maison Ferrand, a Cognac house; the appellation requires double distillation in copper pot stills), Lillet Blanc and its producer profile (Podensac, south of Bordeaux, founded 1872; orange, honey and blossom) and Quince liqueur (a fruit between apple and pear); research/producers-bar-absinthe-bitters-brandy-2026-10-10.md; research/producers-bar-liqueurs-aperitifs-2026-10-10.md; research/fall-menu-2026-chatgpt.json (To Each His Own originNotes: Norman cider brandy and a Bordeaux-area wine apéritif); research/brennans-bar-review-2026-10-15.md (Lillet a wine based aperitif; no strength ranking without measures)"
+    },
+    {
+      "target": "cocktail:Old Buttermilk Sky",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Old Buttermilk Sky is our tequila sour: Volcán reposado tequila with fig liqueur, lemon, cinnamon syrup and egg white for texture. Silky and warm, ripe fig and cinnamon brightened by lemon: the fall drink for a margarita or whiskey sour lover.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line gave no guest for the drink; it now carries the printed build with the egg white's role as the fall sheet gives it, the taste from the record and who it is for, from the record's sell note",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 406-407 (Billboard Songs from 1946, celebrating 80 years at Brennan's) and lines 424-426 (Volcán Reposado Tequila, Fig Liqueur, Lemon, Egg White, Cinnamon Syrup); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 142-152 (egg white is included for texture); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (a tequila sour built with egg white; silky and warm: rested tequila, ripe fig and cinnamon, brightened by lemon) and its kept note How do I sell it? (a margarita or whiskey sour drinker; Oh! What It Seemed to Be its spirit-free twin); the component Volcán reposado tequila and its producer profile (made at the foot of the long-dormant Tequila Volcano in Jalisco by Moët Hennessy with a Mexican family; highland and lowland agave; the Reposado rests in American and European oak); the components The song Ole Buttermilk Sky (a buttermilk sky is a sky of small, rippled clouds), Fig liqueur and fig syrup, Cinnamon and cinnamon syrup and The sour pattern; research/producers-bar-white-spirits-agave-2026-10-10.md; research/brennans-bar-review-2026-10-15.md (no preference or alcohol absence promised)"
+    },
+    {
+      "target": "cocktail:Old Buttermilk Sky",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Old Buttermilk Sky is our fall tequila sour, named for a song from 1946; a buttermilk sky is a sky of small, rippled clouds. It's Volcán reposado, a tequila from the foot of the Tequila Volcano in Jalisco, made by Moët Hennessy with a Mexican family, blending highland and lowland agave and rested in American and European oak. With it go fig liqueur, lemon, cinnamon syrup and egg white for texture. Silky and warm, ripe fig and cinnamon over the rested tequila, with lemon keeping it bright: the drink for a margarita or whiskey sour lover, and its spirit-free twin is the Oh! What It Seemed to Be.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price, said saved menu, asked the guest a question and ended on a promise to check a label; rewritten to the standard: Volcán's story from its producer profile, the printed parts with the egg white's role as the fall sheet gives it, the taste from the record, who it is for, its twin and the song's buttermilk sky",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 406-407 (Billboard Songs from 1946, celebrating 80 years at Brennan's) and lines 424-426 (Volcán Reposado Tequila, Fig Liqueur, Lemon, Egg White, Cinnamon Syrup); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 142-152 (egg white is included for texture); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (a tequila sour built with egg white; silky and warm: rested tequila, ripe fig and cinnamon, brightened by lemon) and its kept note How do I sell it? (a margarita or whiskey sour drinker; Oh! What It Seemed to Be its spirit-free twin); the component Volcán reposado tequila and its producer profile (made at the foot of the long-dormant Tequila Volcano in Jalisco by Moët Hennessy with a Mexican family; highland and lowland agave; the Reposado rests in American and European oak); the components The song Ole Buttermilk Sky (a buttermilk sky is a sky of small, rippled clouds), Fig liqueur and fig syrup, Cinnamon and cinnamon syrup and The sour pattern; research/producers-bar-white-spirits-agave-2026-10-10.md; research/brennans-bar-review-2026-10-15.md (no preference or alcohol absence promised)"
+    },
+    {
+      "target": "cocktail:Five Minutes More",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Five Minutes More is mandarin vodka from Cathead in Mississippi, with Green Chartreuse, the French monks' herbal liqueur, Licor 43, a Spanish vanilla liqueur, and lemon. Bright citrus, deep green herbs and a soft vanilla finish: for a lover of herbal liqueurs, and one to end the evening on.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line called the drink the bold one, a ranking, and gave no moment; it now gives the printed build with each part placed, the taste from the record, who it is for and when, from the record's sell note and the song component",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 406-407 (Billboard Songs from 1946, celebrating 80 years at Brennan's) and lines 428-430 (Cathead Mandarin Vodka, Green Chartreuse, Licor 43, Lemon); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 154-163 (citrus with layered herbal and vanilla notes); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (bright and herbal: mandarin and lemon, the deep green herbs of the Chartreuse, a soft vanilla finish) and its kept note How do I sell it? (a guest who loves herbal liqueurs, a vodka drinker who wants more flavour); the components Cathead mandarin vodka and its producer profile (Jackson, Mississippi, founded 2010, Mississippi's first legal distillery), Green Chartreuse and its producer profile (the Carthusian monks, the French Alps, a secret recipe of 130 plants), Licor 43 and its producer profile (Cartagena, Spain, since 1946, 43 ingredients, vanilla and citrus first; the year Brennan's opened, a coincidence) and The song Five Minutes More (a plea to stay a little longer, an easy line at the end of an evening); research/producers-bar-white-spirits-agave-2026-10-10.md; research/producers-bar-liqueurs-aperitifs-2026-10-10.md; research/bar-master-review-2026-10-04.md (Cathead, Licor 43, Green Chartreuse)"
+    },
+    {
+      "target": "cocktail:Five Minutes More",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Five Minutes More is the herbal drink among our Billboard Songs from 1946, named for a song that pleads to stay a little longer. It starts with Cathead mandarin vodka, from Mississippi's first legal distillery, founded in Jackson in 2010. With it go Green Chartreuse, made by the Carthusian monks in the French Alps from a secret recipe of 130 plants, and Licor 43 from Cartagena, named for its 43 ingredients, vanilla and citrus first, and made since 1946, the year we opened, a happy coincidence. Lemon keeps it bright: mandarin first, then deep green herbs, then soft vanilla, the one to end the evening on.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price and ranked the drink as the most herbal; rewritten to the standard: the three makers' stories from their producer profiles, the printed parts, the taste from the record, when it belongs and the song's plea, with Licor 43's founding year told only as a coincidence",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 406-407 (Billboard Songs from 1946, celebrating 80 years at Brennan's) and lines 428-430 (Cathead Mandarin Vodka, Green Chartreuse, Licor 43, Lemon); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 154-163 (citrus with layered herbal and vanilla notes); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (bright and herbal: mandarin and lemon, the deep green herbs of the Chartreuse, a soft vanilla finish) and its kept note How do I sell it? (a guest who loves herbal liqueurs, a vodka drinker who wants more flavour); the components Cathead mandarin vodka and its producer profile (Jackson, Mississippi, founded 2010, Mississippi's first legal distillery), Green Chartreuse and its producer profile (the Carthusian monks, the French Alps, a secret recipe of 130 plants), Licor 43 and its producer profile (Cartagena, Spain, since 1946, 43 ingredients, vanilla and citrus first; the year Brennan's opened, a coincidence) and The song Five Minutes More (a plea to stay a little longer, an easy line at the end of an evening); research/producers-bar-white-spirits-agave-2026-10-10.md; research/producers-bar-liqueurs-aperitifs-2026-10-10.md; research/bar-master-review-2026-10-04.md (Cathead, Licor 43, Green Chartreuse)"
+    },
+    {
+      "target": "cocktail:Personality",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Personality: Wölffer Estate zero proof sparkling rosé with tart cherry juice and brown sugar syrup. Spirit-free, fizzy and festive.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line carried no taste word beyond festive; it now says fizzy",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 432-436 (Temperance, 1946, spirit-free selections; Wölffer Estate Zero Proof Sparkling Rosé, Tart Cherry Juice, Brown Sugar Syrup); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (bright and fizzy: red fruit and tart cherry with a warm brown sugar note); the dishes whose zero-proof pick it is and their zeroProofWhy: Eggs Hussarde (bubbles cut hollandaise much as Champagne does), Grand Isle Jewel Oysters (its bubbles do for brine what Champagne does) and Roasted Chateaubriand (tart cherry stands in for a red wine's fruit); the component Wölffer Estate zero proof sparkling rosé and its producer profile (Sagaponack, Long Island, known for its rosé; non-alcoholic drinks since 1996, with verjus); the components Tart cherry juice and Brown sugar and brown sugar syrup (Rumors are Flying its twin); research/producers-bar-wines-zero-mixers-2026-10-10.md; research/bar-master-review-2026-10-04.md (zero proof); research/brennans-bar-review-2026-10-15.md (compare with Rumors are Flying by the shared cherry and brown sugar)"
+    },
+    {
+      "target": "cocktail:Personality",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Personality is spirit-free: Wölffer Estate's zero proof sparkling rosé with tart cherry juice and brown sugar syrup. Fizzy and bright, tart cherry with a warm brown sugar note, it joins any toast, and its bubbles suit the Eggs Hussarde and the Grand Isle Jewel Oysters.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line named no dish; it now carries the printed build, the taste in plain words and two of the dishes whose zero-proof pick it is",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 432-436 (Temperance, 1946, spirit-free selections; Wölffer Estate Zero Proof Sparkling Rosé, Tart Cherry Juice, Brown Sugar Syrup); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (bright and fizzy: red fruit and tart cherry with a warm brown sugar note); the dishes whose zero-proof pick it is and their zeroProofWhy: Eggs Hussarde (bubbles cut hollandaise much as Champagne does), Grand Isle Jewel Oysters (its bubbles do for brine what Champagne does) and Roasted Chateaubriand (tart cherry stands in for a red wine's fruit); the component Wölffer Estate zero proof sparkling rosé and its producer profile (Sagaponack, Long Island, known for its rosé; non-alcoholic drinks since 1996, with verjus); the components Tart cherry juice and Brown sugar and brown sugar syrup (Rumors are Flying its twin); research/producers-bar-wines-zero-mixers-2026-10-10.md; research/bar-master-review-2026-10-04.md (zero proof); research/brennans-bar-review-2026-10-15.md (compare with Rumors are Flying by the shared cherry and brown sugar)"
+    },
+    {
+      "target": "cocktail:Personality",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Personality sits under Temperance, 1946, our spirit-free selections, named for a song of that year. It's the zero proof sparkling rosé of Wölffer Estate, the Long Island winery known for its rosé and making non-alcoholic drinks since 1996, with tart cherry juice and brown sugar syrup. Fizzy and bright: red fruit and tart cherry with a warm brown sugar note. Its bubbles cut hollandaise as Champagne does, so it suits the Eggs Hussarde, and at dinner the Grand Isle Jewel Oysters or the Roasted Chateaubriand, the cherry standing in for a red wine's fruit. Its twin is Rumors are Flying, the same cherry and brown sugar on rye.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price and named no dish; rewritten to the standard: Wölffer Estate from its producer profile with the bottle left unnamed and zero proof said as the menu prints it, the taste from the record, three dishes whose zero-proof pick it is with their reasons, its twin and the Temperance, 1946 story",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 432-436 (Temperance, 1946, spirit-free selections; Wölffer Estate Zero Proof Sparkling Rosé, Tart Cherry Juice, Brown Sugar Syrup); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (bright and fizzy: red fruit and tart cherry with a warm brown sugar note); the dishes whose zero-proof pick it is and their zeroProofWhy: Eggs Hussarde (bubbles cut hollandaise much as Champagne does), Grand Isle Jewel Oysters (its bubbles do for brine what Champagne does) and Roasted Chateaubriand (tart cherry stands in for a red wine's fruit); the component Wölffer Estate zero proof sparkling rosé and its producer profile (Sagaponack, Long Island, known for its rosé; non-alcoholic drinks since 1996, with verjus); the components Tart cherry juice and Brown sugar and brown sugar syrup (Rumors are Flying its twin); research/producers-bar-wines-zero-mixers-2026-10-10.md; research/bar-master-review-2026-10-04.md (zero proof); research/brennans-bar-review-2026-10-15.md (compare with Rumors are Flying by the shared cherry and brown sugar)"
+    },
+    {
+      "target": "cocktail:Oh! What It Seemed to Be",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Oh! What It Seemed to Be: Lyre's non-alcoholic agave with fig syrup, lemon, egg white and cinnamon syrup. A silky spirit-free sour.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line said cinnamon for the printed cinnamon syrup and carried no taste word; it now names the five printed parts and ends on silky",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 432-433 and 438-440 (Temperance, 1946, spirit-free selections; Lyre's N/A Agave Tequila, Fig Syrup, Lemon, Egg White, Cinnamon Syrup); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (a spirit-free sour built with egg white; silky and bright: earthy agave, ripe fig and cinnamon, lifted by lemon) and its kept note Tell me about it. (egg white, the classic way to give a sour a silky body; the twin of Old Buttermilk Sky); the dishes whose zero-proof pick it is and their zeroProofWhy: Seafood Gumbo (lemon cuts the roux), Pecan Gulf Fish, Eggs Sardou and Swordfish Grenobloise; the component Lyre's non-alcoholic agave and its producer profile (an Australian maker founded in 2019, named for the lyrebird, the Australian bird famed as a mimic; say non-alcoholic, never zero); the components Fig liqueur and fig syrup, The sour pattern and Zero proof and non-alcoholic; research/producers-bar-wines-zero-mixers-2026-10-10.md; research/brennans-bar-review-2026-10-15.md (compare with Old Buttermilk Sky by tequila versus alternative and fig liqueur versus syrup)"
+    },
+    {
+      "target": "cocktail:Oh! What It Seemed to Be",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Oh! What It Seemed to Be is our spirit-free sour: Lyre's non-alcoholic agave with fig syrup, lemon, cinnamon syrup and egg white for a silky texture. Earthy agave, ripe fig and cinnamon, bright with lemon: lovely with the Seafood Gumbo or the Pecan Gulf Fish.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line named no dish; it now carries the printed build, the taste from the record and two of the dishes whose zero-proof pick it is",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 432-433 and 438-440 (Temperance, 1946, spirit-free selections; Lyre's N/A Agave Tequila, Fig Syrup, Lemon, Egg White, Cinnamon Syrup); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (a spirit-free sour built with egg white; silky and bright: earthy agave, ripe fig and cinnamon, lifted by lemon) and its kept note Tell me about it. (egg white, the classic way to give a sour a silky body; the twin of Old Buttermilk Sky); the dishes whose zero-proof pick it is and their zeroProofWhy: Seafood Gumbo (lemon cuts the roux), Pecan Gulf Fish, Eggs Sardou and Swordfish Grenobloise; the component Lyre's non-alcoholic agave and its producer profile (an Australian maker founded in 2019, named for the lyrebird, the Australian bird famed as a mimic; say non-alcoholic, never zero); the components Fig liqueur and fig syrup, The sour pattern and Zero proof and non-alcoholic; research/producers-bar-wines-zero-mixers-2026-10-10.md; research/brennans-bar-review-2026-10-15.md (compare with Old Buttermilk Sky by tequila versus alternative and fig liqueur versus syrup)"
+    },
+    {
+      "target": "cocktail:Oh! What It Seemed to Be",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Oh! What It Seemed to Be is the spirit-free twin of our Old Buttermilk Sky, under Temperance, 1946, and named for a song of that year. It starts with Lyre's non-alcoholic agave, from the Australian house named for the lyrebird, a bird that mimics any sound, as Lyre's mimics a spirit. With it go fig syrup, lemon, cinnamon syrup and egg white for a silky texture. It tastes like a fall sour: earthy agave, ripe fig and cinnamon, kept bright by the lemon. The lemon cuts the roux of the Seafood Gumbo, and it suits the Eggs Sardou at breakfast and the Swordfish Grenobloise at dinner.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price and carried an alcohol sentence the service note holds; rewritten to the standard: Lyre's from its producer profile with non-alcoholic said as the label does, the printed parts, the taste from the record, three dishes whose zero-proof pick it is and the Temperance, 1946 story",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 432-433 and 438-440 (Temperance, 1946, spirit-free selections; Lyre's N/A Agave Tequila, Fig Syrup, Lemon, Egg White, Cinnamon Syrup); guide.txt line 2736 (Brennan's opened in 1946, 80 years in 2026); the record's parts (a spirit-free sour built with egg white; silky and bright: earthy agave, ripe fig and cinnamon, lifted by lemon) and its kept note Tell me about it. (egg white, the classic way to give a sour a silky body; the twin of Old Buttermilk Sky); the dishes whose zero-proof pick it is and their zeroProofWhy: Seafood Gumbo (lemon cuts the roux), Pecan Gulf Fish, Eggs Sardou and Swordfish Grenobloise; the component Lyre's non-alcoholic agave and its producer profile (an Australian maker founded in 2019, named for the lyrebird, the Australian bird famed as a mimic; say non-alcoholic, never zero); the components Fig liqueur and fig syrup, The sour pattern and Zero proof and non-alcoholic; research/producers-bar-wines-zero-mixers-2026-10-10.md; research/brennans-bar-review-2026-10-15.md (compare with Old Buttermilk Sky by tequila versus alternative and fig liqueur versus syrup)"
+    },
+    {
+      "target": "cocktail:Classic Sazerac",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "The Classic Sazerac, New Orleans’ own cocktail: Sazerac rye whiskey and Peychaud’s bitters in a Herbsaint-rinsed glass, spicy and aromatic.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line carried no taste word; it now gives the printed name, the rye, the bitters and the rinse as printed, with the guide’s own taste words (spicy, aromatic) and the guide’s New Orleans’ own cocktail",
+      "source": "guide.txt lines 2172 to 2183 (menu line, parts table, the 10 and 20 second lines); pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 442 to 445; the pack record b-olsmh04y (spec, method, parts.taste)"
+    },
+    {
+      "target": "cocktail:Classic Sazerac",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "The Sazerac is New Orleans’ official cocktail: Sazerac rye whiskey stirred with Peychaud’s bitters and served without ice in a glass rinsed with Herbsaint, the anise liqueur created in New Orleans in 1934. Spicy, aromatic and spirit-forward, it belongs before dinner or beside the Creole Hanger Steak.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line ended on strong and said nothing of when to have it; it keeps the guide’s build, says Herbsaint as the pdf correction and the base entry on this line say it (the anise liqueur created in New Orleans in 1934, never our local anise liqueur, which misleads on where it is made today) and closes on the pairs field (before dinner, the Creole hanger, said by the dish’s printed name, Creole Hanger Steak); the Classic Sazerac carries no guest line of its own, so its guest follows this line",
+      "source": "guide.txt lines 2172 to 2183; research/pdf-corrections.json pages 39 and 51 and the base entry on this line (Herbsaint, the anise liqueur created in New Orleans in 1934, not our local anise liqueur); the pack component c-r8v9mkjs (created in New Orleans in 1934; where it is made today is not published); pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 443 to 445 and 214 (Creole Hanger Steak); the pack record b-olsmh04y (method: stir with Peychaud’s bitters, serve without ice in a glass rinsed with Herbsaint; pairs: before dinner or with the steak, the Creole hanger)"
+    },
+    {
+      "target": "cocktail:Classic Sazerac",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "The Sazerac is New Orleans’ official cocktail, the city’s and not the state’s, named by the Louisiana Legislature in 2008. We stir Sazerac rye with Peychaud’s, a bright red New Orleans bitters with anise and cherry notes, and serve it without ice in a glass rinsed with Herbsaint, the anise liqueur created here in 1934. All three bottles belong to the Sazerac Company, named for the city’s old Sazerac Coffee House. It drinks spirit-forward, spicy and aromatic, with anise from the rinse. Have it before dinner or with the Creole Hanger Steak; Thompson’s Dream and Origin Story are our two luxury versions.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line ran on the guide’s words without the maker; it keeps the 2008 city-not-state fact, the build the record holds (stirred, without ice, the Herbsaint rinse) and the rinse giving anise flavour as well as aroma (bar review), adds the one-company story of the three bottles from the Sazerac Rye, Peychaud’s and Herbsaint producer profiles (never a person, never the unconfirmed Royal Street story), the pairs field by printed dish name, and the guide’s two luxury versions",
+      "source": "guide.txt lines 2172 to 2192 (the 45 second line and its two luxury versions); pdf-corrections p39 and the base entries on this line (Herbsaint created in New Orleans in 1934; official cocktail of the city, 2008, the city’s, not the state’s); research/brennans-bar-review-2026-10-15.md (a rinse gives flavour as well as aroma); research/dossier-the-bar.md section 5 (2008, three bottles one company); research/producers-bar-whiskey-sazerac-2026-10-10.md and the pack components c-70rdihwo, c-hexgqdzk and c-r8v9mkjs (Sazerac Rye, Peychaud’s and Herbsaint producer profiles: the Sazerac Company named for the Sazerac Coffee House, owner of all three); the pack record b-olsmh04y (method, pairs, upsells); pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 214 and 442 to 453"
+    },
+    {
+      "target": "cocktail:Thompson’s Dream",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Thompson’s Dream: Willett 4-year Kentucky straight rye, Bitter Truth Creole Bitters and a St. George absinthe rinse, spicy and herbal.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line called the drink our Sazerac stepped up, a ranking against the Classic the bar review warns off, and carried no taste word; it now names the rye as the cocktail list prints it (Willett 4yr Kentucky Straight Rye), the bitters and the rinse, and ends on the taste the parts give (rye spice, herbal absinthe)",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 447 to 449; the pack record b-15i9pacz (spec, parts.taste); research/brennans-bar-review-2026-10-15.md (no strength ranking, no guess at the name)"
+    },
+    {
+      "target": "cocktail:Thompson’s Dream",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Thompson’s Dream is a Sazerac on Willett 4-year Kentucky straight rye, with Bitter Truth Creole Bitters and a glass rinsed with St. George absinthe. Rye spice, red anise bitters and a green, herbal rinse: the second round for anyone who enjoyed the Classic Sazerac.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line spoke of exploring rather than tasting and said nothing of when to have it; it now gives the build the parts hold (the Sazerac pattern, a glass rinsed with St. George absinthe), the taste the three bottles suggest and the record’s own moment (the second Sazerac), with no strength claim",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 447 to 449; the pack record b-15i9pacz (spec, parts.technique and parts.taste, why: offer it whenever a guest orders a second Sazerac); the pack components c-qtn8tszn (Bitter Truth Creole Bitters: bright red, anise-led) and c-m867qxt4 (St. George Absinthe Verte: green, herbal)"
+    },
+    {
+      "target": "cocktail:Thompson’s Dream",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Thompson’s Dream is our Sazerac on three different bottles. The rye is Willett 4-year Kentucky straight rye, from a family distillery founded in Bardstown in 1936. The bitters are Bitter Truth Creole Bitters, a red, anise and caraway bitters from Munich, made as a tribute to the New Orleans style. The rinse is St. George Absinthe Verte from Alameda, California, herbal with mint, tarragon and basil. Absinthe was banned in the United States from 1912 until 2007; Herbsaint, in the Classic, was born as its stand-in, and here the glass gets absinthe. Expect rye spice and anise with a garden perfume: a fine second round after the Classic.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price, said saved menu, hedged (I would check) and ended on a question; it now gives each maker from the components’ producer profiles (Willett, a family distillery in Bardstown since 1936, with no word on who the name honours, which the bar review leaves open; The Bitter Truth of Munich; St. George Absinthe Verte of Alameda), the absinthe story from the Absinthe, banned and back component, the taste the ingredients suggest and the record’s second round, with no proof, no measure and no ranking against the Classic",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 447 to 449; guide.txt lines 2189 to 2192 (the service note naming the three bottles); research/producers-bar-whiskey-sazerac-2026-10-10.md and component c-bvyyiku3 (Willett: family distillery founded in 1936 on the family farm outside Bardstown, Kentucky); research/producers-bar-absinthe-bitters-brandy-2026-10-10.md and components c-qtn8tszn (The Bitter Truth, Munich, Creole Bitters in the New Orleans style: red, anise and caraway) and c-m867qxt4 (St. George Absinthe Verte, Alameda, California: mint, tarragon, basil); component c-ra9xwhl6 (absinthe banned in 1912, legal again in 2007; Herbsaint the substitute; the ladder changes its rinse); research/dossier-the-bar.md section 6; research/brennans-bar-review-2026-10-15.md (the name not established, no strength ranking); the pack record b-15i9pacz (why, upsells)"
+    },
+    {
+      "target": "cocktail:Thompson’s Dream",
+      "field": "guest",
+      "op": "set",
+      "value": "Thompson’s Dream is our Sazerac on Willett 4-year Kentucky straight rye, Bitter Truth Creole Bitters and a St. George absinthe rinse: rye spice, anise and a green, herbal perfume.",
+      "reason": "Drink lines polish 18 October 2026: the guest line opened our Sazerac stepped up, a ranking against the Classic that the bar review warns off (no implied stronger or bolder drink), and gave no taste; it now names the three printed bottles and the taste they suggest, in 29 words",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 447 to 449; the pack record b-15i9pacz (spec, parts.taste); research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Origin Story",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Origin Story, our Cognac Sazerac: Dudognon Cognac, barrel-aged Peychaud’s and Jade Nouvelle-Orléans absinthe, fruity and aromatic.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line carried no taste word; it now names the drink, the Cognac, the bitters and the absinthe as the record prints them and ends on a taste word from the parts (fruit, herbal notes)",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 451 to 453; the pack record b-m0mhbaq8 (spec, parts.taste)"
+    },
+    {
+      "target": "cocktail:Origin Story",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Origin Story is our Cognac interpretation of the Sazerac: Dudognon Cognac with barrel-aged Peychaud’s bitters and Jade Nouvelle-Orléans absinthe. Grape, dried fruit and oak under an anise perfume, it is lovely after the dinner tasting or with the Roasted Chateaubriand.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line quoted the price, said saved menu and ended on a question; it now gives the record’s Cognac interpretation, the printed bottles, the taste the ingredients suggest (Dudognon component: grape, dried fruit and oak; Jade: anise) and the record’s own moment (why: the Chateaubriand table or after the dinner tasting), said by the dish’s printed name",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 451 to 453 and 194 (Roasted Chateaubriand); the pack record b-m0mhbaq8 (spec, origin, parts.taste, why: offer it at the Chateaubriand table or after the dinner tasting); the pack component c-yzsp8eho (Dudognon: grape, dried fruit and oak); research/dossier-the-bar.md section 7 (offer it at the Chateaubriand table or with the dinner tasting)"
+    },
+    {
+      "target": "cocktail:Origin Story",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Origin Story is our Cognac interpretation of the Sazerac. By the Sazerac Company’s account, the name goes back to Sazerac de Forge et Fils Cognac, poured at the Sazerac Coffee House in the 1850s before rye took over; ours honours that story without claiming to recreate it. The Cognac is Dudognon, a family estate in Grande Champagne growing its own grapes since 1776 and adding nothing but water. With it go barrel-aged Peychaud’s and Jade Nouvelle-Orléans, a French absinthe distilled in Saumur as a tribute to New Orleans’ nineteenth-century absinthe houses. Grape, dried fruit and oak under anise: lovely after the dinner tasting or with the Roasted Chateaubriand.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price, said saved menu and ended on a question; it now tells the Cognac origin as the Sazerac Company’s account, never a recovered first recipe (bar review), gives the maker from the Dudognon producer profile (a family estate in Grande Champagne since 1776, nothing added but water, no person named, no bottling named while the lineup ask on the expression stands) and the Jade from its profile (distilled in Saumur as a tribute to the city’s nineteenth-century absinthe houses), says barrel-aged Peychaud’s and no more, and makes no claim on how the Jade goes in, which a lineup ask holds",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 451 to 453 and 194; research/brennans-bar-review-2026-10-15.md (Sazerac history: attribution and chronology; teach Origin Story as a Cognac interpretation, not a reconstruction); the pack components c-p0o8eqks and c-6ahkjpf4 (the Sazerac Company’s account: the name from Sazerac de Forge et Fils Cognac, a later shift to rye) and c-70rdihwo (the Sazerac Coffee House of the 1850s took its name from the cognac, which went into its house cocktail); research/producers-bar-absinthe-bitters-brandy-2026-10-10.md and components c-yzsp8eho (Dudognon: vines at Lignières-Sonneville, Grande Champagne, since 1776; its own grapes; water the only thing added) and c-hrjt0zac (Jade Nouvelle-Orléans: distilled at Combier in Saumur as a tribute to New Orleans’ nineteenth-century absinthe culture); component c-hexgqdzk notes (say barrel-aged and no more); the pack record b-m0mhbaq8 (why); the lineup asks on the Dudognon expression and on the Jade rinse"
+    },
+    {
+      "target": "cocktail:Origin Story",
+      "field": "guest",
+      "op": "set",
+      "value": "Origin Story is our Cognac interpretation of the Sazerac: Dudognon Cognac, barrel-aged Peychaud’s and Jade Nouvelle-Orléans absinthe, with grape, dried fruit and oak under an anise perfume.",
+      "reason": "Drink lines polish 18 October 2026: the guest line opened the Sazerac the way it began, which teaches the Sazerac Company’s account as a recovered first recipe, the claim the bar review removes; it now says our Cognac interpretation, names the three printed bottles and gives the taste they suggest, in 27 words",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 451 to 453; the pack record b-m0mhbaq8 (spec, origin, parts.taste); research/brennans-bar-review-2026-10-15.md (Sazerac history: attribution and chronology)"
+    },
+    {
+      "target": "cocktail:Bloody Bull",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "The Bloody Bull: vodka, our housemade Bloody Mary mix and beef bouillon, savoury and rich. A Brennan’s breakfast classic.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line named neither the vodka nor the mix and carried no taste word; it now names the three printed parts, adds the guide’s taste (savoury and rich, the lexicon’s words) and keeps the guide’s Brennan’s breakfast classic",
+      "source": "guide.txt lines 2144 to 2156 (menu line, parts table, the 10 second line) and 2783 (lexicon: savoury and rich); pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 95 to 97; the pack record b-xid4q2qi (spec, parts)"
+    },
+    {
+      "target": "cocktail:Bloody Bull",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "The Bloody Bull is a Bloody Mary with beef bouillon added: vodka, our housemade Bloody Mary mix and a clear, savoury beef broth. Rich, meaty and spiced, a Brennan’s breakfast classic, and lovely with the Turtle Soup.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line said stirred in, a step the record’s method does not hold; it now says added, as the guide’s own 20 second line does, names the bouillon once and then as a clear, savoury beef broth (the master review rewrote the guide’s line for saying bouillon twice in one breath), keeps the taste and the Brennan’s breakfast classic, and names the turtle soup by its printed name",
+      "source": "guide.txt lines 2144 to 2156 and 2161 to 2165; pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 95 to 97 and 128 to 136; the pack record b-xid4q2qi (spec, parts.taste, pairs: wonderful with the turtle soup); research/master-review-2026-10-04.md (Bloody Bull s20 and guest: bouillon twice in one breath)"
+    },
+    {
+      "target": "cocktail:Bloody Bull",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "The Bloody Bull is a Brennan’s breakfast classic: our housemade Bloody Mary mix, vodka and beef bouillon, a clear, savoury beef broth. The bouillon gives it a rich, meaty depth, almost like a spicy, chilled consommé, with the spice of our house mix behind it. We pour it with the soup course on our Traditional Breakfast, beside the Turtle Soup or the Seafood Gumbo, and it is wonderful with the Turtle Soup. It joins two classics, the Bloody Mary and the Bull Shot, vodka and cold beef bouillon, credited to the Caucus Club in Detroit in 1952. At breakfast or lunch it is a savoury eye opener.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line was the guide’s and named no story; it keeps the guide’s build, consommé and tasting course, names both soups the second course offers by their printed names, never says stirred, a step the record’s method does not hold, and adds one line of story from the Bloody Mary and the Bull Shot component (the Bull Shot credited to the Caucus Club in Detroit in 1952), never a claim that the house invented the drink; it no longer turns to the Bloody Mary as the classic choice, since the bar review keeps that comparison to printed ingredients",
+      "source": "guide.txt lines 2144 to 2167 (the 45 second line and service note); pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 95 to 97 and 128 to 136; pages/brennans-tasting-menus-pasted-2026-10-05.txt lines 15 to 24 (Second Course, Turtle Soup or Seafood Gumbo, paired with Bloody Bull Cocktail); the pack record b-xid4q2qi (origin, pairs) and components c-18acytib (the Bull Shot, Caucus Club, Detroit, 1952; never invented here) and c-q67abr7t (the eye opener); research/dossier-the-bar.md section 3; research/brennans-bar-review-2026-10-15.md (Bloody Mary and Bloody Bull comparisons name printed ingredients only)"
+    },
+    {
+      "target": "cocktail:Bloody Bull",
+      "field": "guest",
+      "op": "set",
+      "value": "The Bloody Bull is a Bloody Mary with beef bouillon added: vodka, our housemade Bloody Mary mix and a clear, savoury beef broth. Rich, meaty and spiced, a Brennan’s breakfast classic, and lovely with the Turtle Soup.",
+      "reason": "Drink lines polish 18 October 2026: the guest line equals the old 20 second line; it is set to the new 20 second line exactly, so the two stay one line",
+      "source": "the s20 entry above; guide.txt lines 2144 to 2156; pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 95 to 97"
+    },
+    {
+      "target": "cocktail:Brandy Milk Punch",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Our Brandy Milk Punch: brandy shaken with heavy cream and vanilla bean, nutmeg on top. Cold and creamy, the classic New Orleans eye opener.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line carried no technique or taste word; it now names the brandy, the printed parts with the technique the record holds (shaken with heavy cream and vanilla bean, topped with nutmeg), a taste word and the guide’s classic New Orleans eye opener",
+      "source": "guide.txt lines 2126 to 2134 (menu line, parts table, the 10 second line); pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 99 to 101; the pack record b-c0ei23l2 (spec, method, parts)"
+    },
+    {
+      "target": "cocktail:Brandy Milk Punch",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "The Brandy Milk Punch is New Orleans’ classic breakfast cocktail: brandy shaken with heavy cream and vanilla bean, finished with nutmeg. Cold, creamy and smooth, it is the drink to start breakfast with, and it opens our Traditional Breakfast, ahead of the Baked Apple.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line ended on gently boozy, a strength word no measure supports, and gave no moment; it keeps the guide’s build and taste (cold, creamy, smooth) and closes on its place on the Traditional Breakfast, before the Baked Apple, by the dish’s printed name; the Brandy Milk Punch carries no guest line of its own, so its guest follows this line",
+      "source": "guide.txt lines 2126 to 2137; pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 99 to 101 and 116 to 124 (the Eye Opener Cocktail, then the Baked Apple); the pack record b-c0ei23l2 (pairs: the eye opener that begins the Traditional Breakfast, before the baked apple); research/brennans-bar-review-2026-10-15.md (no strength claim without measures)"
+    },
+    {
+      "target": "cocktail:Brandy Milk Punch",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "In New Orleans a proper breakfast starts with an eye opener, and the Brandy Milk Punch is the classic. It is brandy shaken with heavy cream and real vanilla bean, served cold with nutmeg on top: creamy and smooth, with the warmth of the brandy and the perfume of vanilla and nutmeg. Milk punch is an old English drink; the New Orleans kind is this one, cold, shaken and creamy, poured on Christmas, New Year and Carnival mornings. It is how our Traditional Breakfast begins, ahead of the Baked Apple, and at breakfast or lunch it is the drink to order first.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line said saved menu, offered to help choose and ended on a question; it now tells the guide’s eye opener tradition, the build the record holds and real vanilla bean as the guide and the vanilla component say it, the taste the ingredients suggest (no sugar, which is not printed, and no fresh nutmeg until the bar says it grates fresh), one line of story from the dossier (milk punch an old English drink, the New Orleans kind cold, shaken and creamy, poured on Christmas, New Year and Carnival mornings) and its place on our menu; no eggnog comparison, which the bar review says cannot establish the recipe",
+      "source": "guide.txt lines 2126 to 2141 (the 45 second line: a proper breakfast starts with an eye opener; real vanilla bean, served cold, nutmeg on top; creamy, smooth) and 2781 (lexicon); pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 99 to 101 and 116 to 124; research/dossier-the-bar.md section 2 (milk punch English and old; the New Orleans drink the unclarified, cold, shaken kind; Christmas, New Year and Carnival mornings well attested; no sugar printed); research/bar-master-review-2026-10-04.md (milk punch, two kinds); the pack components c-1drwgoql (vanilla bean, not extract), c-nmqhv05v (fresh only once confirmed), c-r8wcnyle (brandy’s warmth) and c-q67abr7t (the eye opener); research/brennans-bar-review-2026-10-15.md (published recipes, no eggnog comparison as proof)"
+    },
+    {
+      "target": "cocktail:Brennan’s Bloody Mary",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Brennan’s Bloody Mary: vodka and our housemade Bloody Mary mix, with pickled okra and spicy beans. Savoury and tangy.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line carried no taste word; it now ends on the record’s taste (savoury, tangy) after the four printed parts",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 103 to 105; guide.txt lines 2706 to 2707 (pickled okra, spicy beans); the pack record b-vvhi9iji (spec, parts.taste)"
+    },
+    {
+      "target": "cocktail:Brennan’s Bloody Mary",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Our Bloody Mary is vodka with our housemade Bloody Mary mix, finished with pickled okra and spicy beans. Savoury, tangy and bright, with a pickled crunch, it is a classic eye opener at breakfast or lunch.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line compared the Bloody Bull’s beef bouillon, a comparison the bar review keeps from implying what the mix leaves out; it now gives the printed build, the taste and the moment (a classic eye opener at breakfast or lunch)",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 94 and 103 to 105; the pack record b-vvhi9iji (spec, garnish, parts.taste, meals); research/brennans-bar-review-2026-10-15.md (Bloody Mary and Bloody Bull comparisons)"
+    },
+    {
+      "target": "cocktail:Brennan’s Bloody Mary",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Brennan’s Bloody Mary is one of our classic eye openers, the morning drinks a proper New Orleans breakfast starts with. It is vodka with our housemade Bloody Mary mix, finished with pickled okra and spicy beans for a crisp, tangy, local accent. Okra came to the South from West Africa and gave gumbo its name, and pickled, it stays crisp. The Bloody Mary itself is credited to a bartender at Harry’s New York Bar in Paris, about 1921, and was seasoned later at the St. Regis in New York. Savoury, tangy and spicy, with a pickled crunch, it belongs at breakfast or lunch, before the food arrives.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line hedged twice (I will check, I will check with the bar) and set the Bloody Bull’s bouillon against an undisclosed mix; it now gives the printed build and garnish the record holds, the taste the ingredients suggest, one line on okra from the okra component and lexicon, one line of story from the Bloody Mary component (credited, as it says, to a bartender at Harry’s New York Bar in Paris about 1921, seasoned later at the St. Regis) and the eye opener’s moment; it says nothing of beef either way and names no vodka, which the bar confirms",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 94 and 103 to 105; guide.txt lines 2126 to 2141 (a proper breakfast starts with an eye opener) and 2706 to 2707; the pack record b-vvhi9iji (spec, garnish, parts.taste, meals); the pack components c-q67abr7t (the eye opener: a morning cocktail poured before the food), c-ez0bcqf5 (pickled okra stays crisp; okra came to the South from Africa) and c-18acytib (the Bloody Mary credited to a bartender at Harry’s New York Bar in Paris about 1921, seasoned at the St. Regis in New York in 1934); the lexicon term Okra (came from West Africa and gave gumbo its name); research/dossier-the-bar.md section 3 (credited, Harry’s New York Bar, Paris, the St. Regis); research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Brennan’s Irish Coffee",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Brennan’s Irish Coffee: Tullamore Dew Irish whiskey and brown sugar in our dark roast chicory coffee, under whipped cream. Warm and roasty.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line named no taste and left the whiskey unnamed as a spirit; it now names Tullamore Dew Irish whiskey, the printed parts and the guide’s taste (warm, roasty)",
+      "source": "guide.txt lines 2194 to 2201 (menu line, parts table, the 10 second line); pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 107 to 109 and 403 to 405; the pack record b-xs168hf4 (spec, parts)"
+    },
+    {
+      "target": "cocktail:Brennan’s Irish Coffee",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Our Irish Coffee has a New Orleans accent: dark roast coffee with chicory, brown sugar and Tullamore Dew Irish whiskey under a cap of whipped cream. Warm, sweet and roasty, sipped unstirred through the cool cream: lovely with the World Famous Bananas Foster or the New Orleans Bread Pudding.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line ended on an instruction with no moment; it keeps the guide’s build and cap of whipped cream, gives the taste (warm, sweet, roasty, through the cool cream), keeps the one thing the guest must know in a word (unstirred, the instruction the master review put in this line and the method holds) and closes on the pairs field by the desserts’ printed names",
+      "source": "guide.txt lines 2194 to 2203 (the 20 second line: a cap of whipped cream, warm, sweet and smooth) and 2204 to 2207 (roasty; sip the hot coffee through the cool cream); pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 107 to 109, 157 and 361 (World Famous Bananas Foster) and 365 (New Orleans Bread Pudding); the pack record b-xs168hf4 (method: not stirred once the cream is on; pairs: with Bananas Foster or the bread pudding); research/master-review-2026-10-04.md (Irish Coffee s20 and guest: sip through the cream, don’t stir)"
+    },
+    {
+      "target": "cocktail:Brennan’s Irish Coffee",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "It is an Irish coffee with a New Orleans accent. Our dark roast coffee with chicory, the roasted root New Orleans blends into its coffee, gives a roasty, almost chocolatey depth; we stir in brown sugar, add Tullamore Dew and top it with whipped cream, so you sip the hot coffee through the cool cream. Tullamore Dew is a triple distilled Irish whiskey from County Offaly, and the Dew in its name stands for Daniel E. Williams, who rose to own the distillery. Irish coffee began at Foynes, in County Limerick, in 1943. Lovely with the World Famous Bananas Foster or the New Orleans Bread Pudding.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line closed on perfect, a banned word; it keeps the guide’s chicory and the build the record’s method holds (brown sugar stirred into the coffee, then the whiskey, then the cream, which it says as the guide does, top it with whipped cream, while the float or cap stays a lineup question), adds the maker from the Tullamore D.E.W. producer profile (triple distilled, County Offaly, the initials of Daniel E. Williams, who died in 1921) and one line of story from the Irish coffee component and research (born at Foynes, County Limerick, in 1943), and names the desserts by their printed names; the menu’s spelling Tullamore Dew is kept",
+      "source": "guide.txt lines 2194 to 2210 (the 45 second line and service note) and 2785 (lexicon: chicory, a roasted root we blend into our coffee); pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 107 to 109, 157 and 361 (World Famous Bananas Foster), 365 and 403 to 405; the pack record b-xs168hf4 (method, pairs); research/producers-bar-whiskey-sazerac-2026-10-10.md item 7 and V17a and component c-2b8hpmle (Tullamore D.E.W.: triple distilled, County Offaly, the initials of Daniel E. Williams, 1848 to 1921, who rose to manage and own the distillery); the pack component c-ceqt4nz5 (Irish coffee was born at Foynes, the flying boat terminal in County Limerick, in 1943); research/bar-master-review-2026-10-04.md (Irish coffee, the story: Foynes, County Limerick, the winter of 1942 to 1943; built in the glass); research/dossier-the-bar.md section 8 (the museum’s date, often simply 1943)"
+    },
+    {
+      "target": "cocktail:Brennan’s Irish Coffee",
+      "field": "guest",
+      "op": "set",
+      "value": "Our Irish Coffee has a New Orleans accent: dark roast coffee with chicory, brown sugar and Tullamore Dew Irish whiskey under a cap of whipped cream. Warm, sweet and roasty, sipped unstirred through the cool cream: lovely with the World Famous Bananas Foster or the New Orleans Bread Pudding.",
+      "reason": "Drink lines polish 18 October 2026: the guest line equals the old 20 second line; it is set to the new 20 second line exactly, so the two stay one line",
+      "source": "the s20 entry above; guide.txt lines 2194 to 2207; pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 107 to 109"
+    },
+    {
+      "target": "cocktail:Revive Cold-Pressed Juice",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Revive, our cold-pressed juice: strawberry, apple and pineapple, locally made and spirit-free. Bright and fruity.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line said fresh, cold and spirit-free; it now opens on the printed name, names the three printed fruits, locally made as the menu prints it and spirit-free, and ends on one taste pair",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 111 to 115 (Cold Pressed Juices, Locally Made / Fresh Squeezed, Revive: Strawberry, Apple, Pineapple); the pack record b-8uth8fu3 (spec, zeroProof, parts.taste)"
+    },
+    {
+      "target": "cocktail:Revive Cold-Pressed Juice",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Revive is a cold-pressed juice of strawberry, apple and pineapple, locally made and served cold. Sweet strawberry first, then apple and the tang of pineapple: a bright, spirit-free glass at breakfast or lunch, beside the eye openers.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line offered to check the supplier, a promise to the guest, and said only that the juice suggests a fruit profile; it now gives the printed fruit, locally made, served cold as the parts hold it, the taste the fruit suggests and its moment beside the eye openers, with nothing on treatment either way",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 111 to 115; the pack record b-8uth8fu3 (spec, meals, parts.sides: served cold, parts.taste: strawberry, apple and the tang of pineapple); the pack component c-q67abr7t; research/brennans-bar-review-2026-10-15.md (cold pressing does not establish later processing)"
+    },
+    {
+      "target": "cocktail:Revive Cold-Pressed Juice",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Revive is a locally made, cold-pressed juice of strawberry, apple and pineapple, served cold. Strawberry gives it its colour and a sweet red fruit perfume, apple gives it body and a clean sweetness, and pineapple adds the tang that keeps it lively. In New Orleans a proper breakfast starts with an eye opener, and Revive lets a guest who is not drinking share the ritual: a bright, spirit-free glass beside the Brandy Milk Punch and the Bloody Bull. Sweet, tangy and fruity, it suits breakfast or lunch, and the whole table, children included.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price, said saved breakfast menu, promised to check a label and ended on a question; it now gives the printed fruit and locally made, the taste each fruit brings from the strawberry, apple and pineapple component, the eye opener ritual a guest not drinking shares from the eye opener component, and its moment at breakfast and lunch; it says nothing of heat treatment or storage, which the cold pressing component and the bar review leave to the supplier’s label",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 111 to 115; guide.txt lines 2126 to 2141 (a proper breakfast starts with an eye opener) and 2706 to 2710; the pack record b-8uth8fu3 (spec, meals, parts, kept How do I sell it?: a child, a guest who is not drinking); the pack components c-0063o9o4 (strawberry: colour and red fruit perfume; apple: body and clean sweetness; pineapple: the tang that keeps it from tasting flat), c-q67abr7t (a guest not drinking is offered the Revive juice so nobody misses the ritual) and c-hwd7wv19; research/brennans-bar-review-2026-10-15.md"
+    },
+    {
+      "target": "cocktail:Revive Cold-Pressed Juice",
+      "field": "guest",
+      "op": "set",
+      "value": "Revive is a locally made, cold-pressed juice of strawberry, apple and pineapple: sweet, bright and fruity, and spirit-free.",
+      "reason": "Drink lines polish 18 October 2026: the guest line closed on no alcohol and no caffeine, a caffeine sentence that belongs in the kept notes; it now says spirit-free, as the house says of its zero proof drinks, with the printed fruit, locally made and the taste, in 18 words",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 111 to 115; the pack record b-8uth8fu3 (spec, zeroProof, parts.taste); the Temperance, 1946 heading at pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 432 to 433 (spirit-free selections)"
+    },
+    {
+      "target": "cocktail:New Orleans-Style Coffee with Chicory",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Our New Orleans-Style Coffee with Chicory: a spirit-free blend of chicory and dark roast, roasty and gently bitter.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line did not name the drink as the menu prints it or say the build; it now gives the printed name, spirit-free, the printed blend of chicory and dark roast and one taste",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 81-84 (Coffee: New Orleans Style Coffee, Blend Of Chicory & Dark Roast); page:brennans-tasting-menus-pasted-2026-10-05.txt lines 45-51 (Fifth Course: World Famous Bananas Foster, paired with Brennan's Private Blend Congregation Coffee & Chicory); guide.txt lines 2706-2710 (Eye openers & coffee) and 2785 (Chicory, the roasted root we blend into our coffee); the record's spec, parts (dark, roasty and smooth, a gentle bitterness that balances dessert) and why; the dishes whose zero-proof pick it is (Framboise French Toast, Café Brûlot Coffee Cake, World Famous Bananas Foster, Cherries Jubilee, New Orleans Bread Pudding, The Snickers, Chocolate Crémeux); the components Chicory (the roasted root of a hardy plant; the French stretched coffee with it in Napoleon's blockade and New Orleans, a French city and a coffee port, kept the habit for its body and cocoa-like bitterness), New Orleans, a coffee city, and Congregation Coffee (a roaster across the river in Algiers Point); research/components-drinks-2026-10-05.md items 27 and 28; research/dossier-the-bar.md section 12"
+    },
+    {
+      "target": "cocktail:New Orleans-Style Coffee with Chicory",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Our New Orleans-style coffee is a spirit-free blend of chicory and dark roast: dark, roasty and smooth, with a gentle bitterness that balances sweet things. Have it with dessert: the World Famous Bananas Foster, the New Orleans Bread Pudding or The Snickers.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line carried the banned word perfect; it now says the printed blend, the taste in plain words and the desserts by their printed names",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 81-84 (Coffee: New Orleans Style Coffee, Blend Of Chicory & Dark Roast); page:brennans-tasting-menus-pasted-2026-10-05.txt lines 45-51 (Fifth Course: World Famous Bananas Foster, paired with Brennan's Private Blend Congregation Coffee & Chicory); guide.txt lines 2706-2710 (Eye openers & coffee) and 2785 (Chicory, the roasted root we blend into our coffee); the record's spec, parts (dark, roasty and smooth, a gentle bitterness that balances dessert) and why; the dishes whose zero-proof pick it is (Framboise French Toast, Café Brûlot Coffee Cake, World Famous Bananas Foster, Cherries Jubilee, New Orleans Bread Pudding, The Snickers, Chocolate Crémeux); the components Chicory (the roasted root of a hardy plant; the French stretched coffee with it in Napoleon's blockade and New Orleans, a French city and a coffee port, kept the habit for its body and cocoa-like bitterness), New Orleans, a coffee city, and Congregation Coffee (a roaster across the river in Algiers Point); research/components-drinks-2026-10-05.md items 27 and 28; research/dossier-the-bar.md section 12"
+    },
+    {
+      "target": "cocktail:New Orleans-Style Coffee with Chicory",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "New Orleans coffee means coffee with chicory, the roasted root of a hardy plant, and ours is a blend of chicory and dark roast. The French stretched coffee with chicory during Napoleon’s blockade, and New Orleans, a French city and a coffee port, kept the habit for the body and the cocoa-like bitterness it gives. Our Traditional Breakfast pours Brennan’s Private Blend from Congregation Coffee, the roaster across the river in Algiers Point, beside the World Famous Bananas Foster. Dark, roasty and smooth, it balances the sweet plates: the Framboise French Toast at breakfast, the New Orleans Bread Pudding, Cherries Jubilee or The Snickers.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line ran short and carried a caffeine sentence, which belongs in the kept notes; it now tells the chicory story from the components, the Congregation private blend the Traditional Breakfast pours beside the World Famous Bananas Foster, and the sweet plates whose zero-proof pick it is, by their printed names",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 81-84 (Coffee: New Orleans Style Coffee, Blend Of Chicory & Dark Roast); page:brennans-tasting-menus-pasted-2026-10-05.txt lines 45-51 (Fifth Course: World Famous Bananas Foster, paired with Brennan's Private Blend Congregation Coffee & Chicory); guide.txt lines 2706-2710 (Eye openers & coffee) and 2785 (Chicory, the roasted root we blend into our coffee); the record's spec, parts (dark, roasty and smooth, a gentle bitterness that balances dessert) and why; the dishes whose zero-proof pick it is (Framboise French Toast, Café Brûlot Coffee Cake, World Famous Bananas Foster, Cherries Jubilee, New Orleans Bread Pudding, The Snickers, Chocolate Crémeux); the components Chicory (the roasted root of a hardy plant; the French stretched coffee with it in Napoleon's blockade and New Orleans, a French city and a coffee port, kept the habit for its body and cocoa-like bitterness), New Orleans, a coffee city, and Congregation Coffee (a roaster across the river in Algiers Point); research/components-drinks-2026-10-05.md items 27 and 28; research/dossier-the-bar.md section 12"
+    },
+    {
+      "target": "cocktail:Congregation Single-Origin Coffee",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Congregation Single-Origin Coffee: spirit-free, a single estate-grown coffee roasted for Brennan’s, no chicory, clean and bright.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line did not name the drink as the menu prints it or say it is spirit-free; it now gives the printed name and the printed single estate-grown coffee roasted for Brennan's",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 86-88 (Single Origin, Single Estate-grown Congregation Coffee, Roasted For Brennan's); guide.txt lines 2706-2710; the record's parts (cleaner and brighter than the chicory blend, the origin changing with the season), its note and kept notes (read today's origin from the coffee card, never name Papua New Guinea from memory); the component Congregation Coffee and its producer profile (founded in 2015; the café at 240 Pelican Avenue, Algiers Point; a group of alligators is a congregation and the blends are named for an alligator's gaits; under Brennan family ownership from November 2023; the notes: say the roaster is owned by the Brennan family; it rotates its single origins with the seasons); the component Coffee service at the table; research/components-drinks-2026-10-05.md item 28"
+    },
+    {
+      "target": "cocktail:Congregation Single-Origin Coffee",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Our single origin is spirit-free, a single estate-grown coffee that Congregation Coffee roasts for Brennan’s. With no chicory it drinks clean and bright and tastes of one place: the coffee lover’s cup at the end of breakfast or dinner.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line spoke in the first person and promised to read the origin from the card; it now says what is printed and certain and when to have it",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 86-88 (Single Origin, Single Estate-grown Congregation Coffee, Roasted For Brennan's); guide.txt lines 2706-2710; the record's parts (cleaner and brighter than the chicory blend, the origin changing with the season), its note and kept notes (read today's origin from the coffee card, never name Papua New Guinea from memory); the component Congregation Coffee and its producer profile (founded in 2015; the café at 240 Pelican Avenue, Algiers Point; a group of alligators is a congregation and the blends are named for an alligator's gaits; under Brennan family ownership from November 2023; the notes: say the roaster is owned by the Brennan family; it rotates its single origins with the seasons); the component Coffee service at the table; research/components-drinks-2026-10-05.md item 28"
+    },
+    {
+      "target": "cocktail:Congregation Single-Origin Coffee",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Our single origin comes from Congregation Coffee, a New Orleans roaster founded in 2015, with its café across the river in Algiers Point. The name is a local joke: a group of alligators is called a congregation, and its blends are named for an alligator’s gaits. Since 2023 it has belonged to the Brennan family, and this single estate-grown coffee is roasted for Brennan’s. Single origin means the beans come from one place, so the cup tastes of that place, with no chicory: clean and bright, and the origin changes with the seasons. It’s the coffee lover’s cup to end breakfast or dinner.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line spoke in the first person, promised to read the origin from the card and ran short; it now tells the roaster's story from its producer profile (2015, the alligator name, the Algiers Point café, the Brennan family since 2023), what single origin means, and names no origin, since it changes with the seasons",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 86-88 (Single Origin, Single Estate-grown Congregation Coffee, Roasted For Brennan's); guide.txt lines 2706-2710; the record's parts (cleaner and brighter than the chicory blend, the origin changing with the season), its note and kept notes (read today's origin from the coffee card, never name Papua New Guinea from memory); the component Congregation Coffee and its producer profile (founded in 2015; the café at 240 Pelican Avenue, Algiers Point; a group of alligators is a congregation and the blends are named for an alligator's gaits; under Brennan family ownership from November 2023; the notes: say the roaster is owned by the Brennan family; it rotates its single origins with the seasons); the component Coffee service at the table; research/components-drinks-2026-10-05.md item 28"
+    },
+    {
+      "target": "cocktail:Café Glacé de la Maison",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Café Glacé de la Maison: spirit-free, our chicory cold brew with cardamom-clove syrup under an orange flower cold foam, cold and fragrant.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line had no taste word and did not say spirit-free; it now does, with the printed build",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 90-92 (Congregation Chicory Coffee Cold Brew, Housemade Cardamon-clove Syrup, Orange Flower Cold Foam); guide.txt lines 2706-2710 (chicory cold brew, cardamom-clove syrup, orange flower foam); the record's parts (cold, roasty and lightly sweet, with warm spice and a floral orange lift), why and kept Tell me about it. (café glacé is French for iced coffee; the clove a nod to the city's flamed café brûlot); the dishes whose zero-proof pick it is (Baked Apple, Turtle Soup, Duck Confit Waffle); the components Cold brew (coffee made without heat, smoother and rounder), Cardamom-clove syrup, Orange flower water and The eye opener (a guest not drinking is offered the Café Glacé so nobody misses the ritual); research/dossier-the-bar.md section 12 (de la Maison marks the house version; the syrup nods to the brûlot spice set)"
+    },
+    {
+      "target": "cocktail:Café Glacé de la Maison",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Café Glacé de la Maison is our house iced coffee, spirit-free: Congregation’s chicory cold brew, sweetened with a housemade cardamom-clove syrup, under an orange flower cold foam. Cold, roasty and gently spiced, with a floral lift; lovely with the Baked Apple or the Duck Confit Waffle.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line said nothing of when to have it; it now names two of the dishes whose zero-proof pick it is, with the printed Congregation cold brew, housemade syrup and cold foam",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 90-92 (Congregation Chicory Coffee Cold Brew, Housemade Cardamon-clove Syrup, Orange Flower Cold Foam); guide.txt lines 2706-2710 (chicory cold brew, cardamom-clove syrup, orange flower foam); the record's parts (cold, roasty and lightly sweet, with warm spice and a floral orange lift), why and kept Tell me about it. (café glacé is French for iced coffee; the clove a nod to the city's flamed café brûlot); the dishes whose zero-proof pick it is (Baked Apple, Turtle Soup, Duck Confit Waffle); the components Cold brew (coffee made without heat, smoother and rounder), Cardamom-clove syrup, Orange flower water and The eye opener (a guest not drinking is offered the Café Glacé so nobody misses the ritual); research/dossier-the-bar.md section 12 (de la Maison marks the house version; the syrup nods to the brûlot spice set)"
+    },
+    {
+      "target": "cocktail:Café Glacé de la Maison",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Café glacé is French for iced coffee, and de la Maison marks the house version. It starts with Congregation’s chicory cold brew, coffee steeped cold rather than brewed hot, so it’s smooth and round, then a housemade syrup of cardamom and clove, the clove a nod to the city’s flamed café brûlot, under an orange flower cold foam. Cold, roasty and lightly sweet, with warm spice and a floral orange lift. It’s our spirit-free pick with the Baked Apple, the Turtle Soup and the Duck Confit Waffle, and at breakfast it stands in for the eye opener when a guest skips the milk punch, so nobody misses the ritual.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line ran short and named the dishes by lowercase descriptions; it now gives the printed build, what cold brew is, the café brûlot nod, the three dishes whose zero-proof pick it is by their printed names, and the eye opener ritual from the component",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 90-92 (Congregation Chicory Coffee Cold Brew, Housemade Cardamon-clove Syrup, Orange Flower Cold Foam); guide.txt lines 2706-2710 (chicory cold brew, cardamom-clove syrup, orange flower foam); the record's parts (cold, roasty and lightly sweet, with warm spice and a floral orange lift), why and kept Tell me about it. (café glacé is French for iced coffee; the clove a nod to the city's flamed café brûlot); the dishes whose zero-proof pick it is (Baked Apple, Turtle Soup, Duck Confit Waffle); the components Cold brew (coffee made without heat, smoother and rounder), Cardamom-clove syrup, Orange flower water and The eye opener (a guest not drinking is offered the Café Glacé so nobody misses the ritual); research/dossier-the-bar.md section 12 (de la Maison marks the house version; the syrup nods to the brûlot spice set)"
+    },
+    {
+      "target": "cocktail:Riviera",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "The Riviera: Lillet Blanc, the French wine aperitif, with sparkling wine and lemon, floral and bright.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line quoted the price, which the card prints; it now names the drink, the wine aperitif, the printed parts and one taste",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 282-283 (Bubbles at Brennan's, Roost Bar and Courtyard) and 312-315 (Bubbly Cocktails: Riviera, Lilet Blanc, Sparkling Wine And Lemon); the record's parts (an aperitif wine topped with sparkling wine and lemon; light, bright and floral) and pairs (the Popcorn Shrimp, the Fried Pickles or the Creole spiced nuts), and the Fried Pickles' own pairs naming the Riviera; the components Lillet Blanc and its producer profile (founded in 1872 in Podensac, south of Bordeaux, by the brothers Paul and Raymond Lillet; Semillon wine for the Blanc with liqueurs from orange peels; orange, honey and blossom), The beach names at Bubbles (the Riviera calls up the sunny Mediterranean coast) and Bubbles at Brennan's; research/producers-bar-liqueurs-aperitifs-2026-10-10.md section 3; research/bar-master-review-2026-10-04.md (Lillet Blanc); research/brennans-bar-review-2026-10-15.md (Lillet is a wine aperitif; no strength ranking without measures)"
+    },
+    {
+      "target": "cocktail:Riviera",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "The Riviera is Lillet Blanc, a wine aperitif from near Bordeaux, topped with sparkling wine and lemon. Floral and citrusy, orange and blossom lifted by the bubbles: an afternoon glass at Bubbles at Brennan’s, lovely with the Popcorn Shrimp or the Fried Pickles.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line quoted the price and said saved Bubbles menu; it now says the printed build, the taste and its snacks at Bubbles by their printed names",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 282-283 (Bubbles at Brennan's, Roost Bar and Courtyard) and 312-315 (Bubbly Cocktails: Riviera, Lilet Blanc, Sparkling Wine And Lemon); the record's parts (an aperitif wine topped with sparkling wine and lemon; light, bright and floral) and pairs (the Popcorn Shrimp, the Fried Pickles or the Creole spiced nuts), and the Fried Pickles' own pairs naming the Riviera; the components Lillet Blanc and its producer profile (founded in 1872 in Podensac, south of Bordeaux, by the brothers Paul and Raymond Lillet; Semillon wine for the Blanc with liqueurs from orange peels; orange, honey and blossom), The beach names at Bubbles (the Riviera calls up the sunny Mediterranean coast) and Bubbles at Brennan's; research/producers-bar-liqueurs-aperitifs-2026-10-10.md section 3; research/bar-master-review-2026-10-04.md (Lillet Blanc); research/brennans-bar-review-2026-10-15.md (Lillet is a wine aperitif; no strength ranking without measures)"
+    },
+    {
+      "target": "cocktail:Riviera",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "The Riviera starts with Lillet Blanc, the wine aperitif of Podensac, south of Bordeaux, where the Lillet brothers began in 1872: Bordeaux wine, Semillon for the Blanc, with liqueurs made from orange peels, so it tastes of orange, honey and blossom. Topped with sparkling wine and lemon, it’s floral, citrusy and bright, the bubbles lifting the Lillet’s perfume. Its name, one of the beach names at Bubbles at Brennan’s, calls up the sunny Mediterranean coast, and it’s an easy afternoon glass in the courtyard or the Roost Bar. Have it with the Popcorn Shrimp, the Fried Pickles or the Creole Spiced Nuts.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price, said saved menu, spoke in the first person, promised to check with the bar and ended on a question to the guest; it now tells Lillet's story from its producer profile, the taste, the beach name, and the Bubbles snacks it pairs with, with no strength ranking",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 282-283 (Bubbles at Brennan's, Roost Bar and Courtyard) and 312-315 (Bubbly Cocktails: Riviera, Lilet Blanc, Sparkling Wine And Lemon); the record's parts (an aperitif wine topped with sparkling wine and lemon; light, bright and floral) and pairs (the Popcorn Shrimp, the Fried Pickles or the Creole spiced nuts), and the Fried Pickles' own pairs naming the Riviera; the components Lillet Blanc and its producer profile (founded in 1872 in Podensac, south of Bordeaux, by the brothers Paul and Raymond Lillet; Semillon wine for the Blanc with liqueurs from orange peels; orange, honey and blossom), The beach names at Bubbles (the Riviera calls up the sunny Mediterranean coast) and Bubbles at Brennan's; research/producers-bar-liqueurs-aperitifs-2026-10-10.md section 3; research/bar-master-review-2026-10-04.md (Lillet Blanc); research/brennans-bar-review-2026-10-15.md (Lillet is a wine aperitif; no strength ranking without measures)"
+    },
+    {
+      "target": "cocktail:Bodrum",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "The Bodrum is rum with pistachio, cream and lime, the one bubbly cocktail lengthened with sparkling water rather than wine. Creamy and nutty, kept bright by the lime, with a gentle fizz: the glass at Bubbles at Brennan’s for a rum lover in the afternoon.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line quoted the price, which the card prints; it now says the printed build, the taste and when to have it",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 282-283 and 317-319 (Bodrum: Rum, Pistachio, Cream, Lime, Sparkling Water); the record's parts (rum with pistachio, cream and lime, lengthened with sparkling water; creamy yet light, nutty pistachio and rum, bright lime and a gentle fizz) and kept Tell me about it. (the one bubbly cocktail made with sparkling water rather than sparkling wine; for a rum lover and a guest who does not care for wine); the components The beach names at Bubbles (a resort and yachting town on Turkey's Aegean coast, once the ancient Halicarnassus), Rum (the spirit of the Caribbean, pairing naturally with lime, cream and nuts), Pistachio (sweet, buttery and gently resinous) and Bubbles at Brennan's; research/components-drinks-2026-10-05.md item 60"
+    },
+    {
+      "target": "cocktail:Bodrum",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "The Bodrum, one of the beach names at Bubbles at Brennan’s, carries the name of a resort town on Turkey’s Aegean coast, once the ancient Halicarnassus. It’s rum, the cane spirit of the Caribbean, with pistachio, sweet, buttery and gently resinous, then cream and lime, lengthened with sparkling water: the one bubbly cocktail made with sparkling water rather than wine. Rum takes naturally to lime, cream and nuts, so it drinks creamy and nutty, kept bright by the lime, with a gentle fizz. It’s the afternoon glass for a rum lover in the courtyard or the Roost Bar, and for a guest who would rather not have wine.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price and ran short; it now gives the beach name as the component tells it, the rum and the printed parts, the taste, and the Bubbles hour for a rum lover, with no maker named, since the menu names no rum",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 282-283 and 317-319 (Bodrum: Rum, Pistachio, Cream, Lime, Sparkling Water); the record's parts (rum with pistachio, cream and lime, lengthened with sparkling water; creamy yet light, nutty pistachio and rum, bright lime and a gentle fizz) and kept Tell me about it. (the one bubbly cocktail made with sparkling water rather than sparkling wine; for a rum lover and a guest who does not care for wine); the components The beach names at Bubbles (a resort and yachting town on Turkey's Aegean coast, once the ancient Halicarnassus), Rum (the spirit of the Caribbean, pairing naturally with lime, cream and nuts), Pistachio (sweet, buttery and gently resinous) and Bubbles at Brennan's; research/components-drinks-2026-10-05.md item 60"
+    },
+    {
+      "target": "cocktail:OBX",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "The OBX: Gentilly Gin with peach and lemon, topped with Elio Perrone Bigaro, fruity and gently sparkling.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line had no taste word; it now ends on one",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 282-283 and 321-323 (OBX: Gentilly Gin, Peach, Lemon, Elio Perrone Bigaro); the record's parts (ripe peach and lemon over the gin, with a gently sweet Italian sparkle); the components The beach names at Bubbles (OBX, the Outer Banks, the barrier islands off North Carolina), Gentilly Gin and its producer profile (Seven Three Distilling Co. of New Orleans, naming its spirits for the city's 73 neighbourhoods; 17 botanicals, persimmon and elderflower among them, inspired by the traiteurs, the old folk healers of Louisiana), Elio Perrone Bigaro and its producer profile (a family estate in the Moscato hills of Asti, Piedmont; half Brachetto and half Moscato, softly sparkling and gently sweet; red berries and rose, peach and orange blossom), Peach and Bubbles at Brennan's; research/producers-bar-wines-zero-mixers-2026-10-10.md section 3; research/components-drinks-2026-10-05.md items 37, 38 and 60"
+    },
+    {
+      "target": "cocktail:OBX",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "The OBX is Gentilly Gin, made in New Orleans, with peach and lemon, topped with Elio Perrone Bigaro, a softly sparkling, gently sweet pink wine from Piedmont. Ripe peach and lemon over the gin: the gin drinker’s glass at Bubbles at Brennan’s on a warm afternoon.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line quoted the price, which the card prints; it now says the printed build, the Bigaro, the taste and when to have it",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 282-283 and 321-323 (OBX: Gentilly Gin, Peach, Lemon, Elio Perrone Bigaro); the record's parts (ripe peach and lemon over the gin, with a gently sweet Italian sparkle); the components The beach names at Bubbles (OBX, the Outer Banks, the barrier islands off North Carolina), Gentilly Gin and its producer profile (Seven Three Distilling Co. of New Orleans, naming its spirits for the city's 73 neighbourhoods; 17 botanicals, persimmon and elderflower among them, inspired by the traiteurs, the old folk healers of Louisiana), Elio Perrone Bigaro and its producer profile (a family estate in the Moscato hills of Asti, Piedmont; half Brachetto and half Moscato, softly sparkling and gently sweet; red berries and rose, peach and orange blossom), Peach and Bubbles at Brennan's; research/producers-bar-wines-zero-mixers-2026-10-10.md section 3; research/components-drinks-2026-10-05.md items 37, 38 and 60"
+    },
+    {
+      "target": "cocktail:OBX",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "OBX is the common shorthand for the Outer Banks, the barrier islands off North Carolina, a beach name for the courtyard. The gin is Gentilly, from Seven Three Distilling in New Orleans, which names its spirits for the city’s neighbourhoods; its seventeen botanicals, persimmon and elderflower among them, were inspired by the traiteurs, Louisiana’s old folk healers. With it go peach and lemon, topped with Elio Perrone Bigaro, a softly sparkling pink wine from a family estate in Piedmont, half Brachetto and half Moscato. Ripe peach and lemon over the gin, with red berries, rose and a gentle sweetness: the gin drinker’s glass at Bubbles at Brennan’s.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price and ran short; it now tells the gin's maker from the Gentilly Gin producer profile and the Bigaro's from its own, the printed parts, the taste and the beach name",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 282-283 and 321-323 (OBX: Gentilly Gin, Peach, Lemon, Elio Perrone Bigaro); the record's parts (ripe peach and lemon over the gin, with a gently sweet Italian sparkle); the components The beach names at Bubbles (OBX, the Outer Banks, the barrier islands off North Carolina), Gentilly Gin and its producer profile (Seven Three Distilling Co. of New Orleans, naming its spirits for the city's 73 neighbourhoods; 17 botanicals, persimmon and elderflower among them, inspired by the traiteurs, the old folk healers of Louisiana), Elio Perrone Bigaro and its producer profile (a family estate in the Moscato hills of Asti, Piedmont; half Brachetto and half Moscato, softly sparkling and gently sweet; red berries and rose, peach and orange blossom), Peach and Bubbles at Brennan's; research/producers-bar-wines-zero-mixers-2026-10-10.md section 3; research/components-drinks-2026-10-05.md items 37, 38 and 60"
+    },
+    {
+      "target": "cocktail:Brennan’s Champagne Cocktail",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Brennan’s Champagne Cocktail: Champagne over a demerara sugar cube with Angostura bitters, dry and festive, the classic way.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line had no taste word; it now ends on dry and festive",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 282-285 (Bubbles at Brennan's; Champagne Sabering in the Courtyard, Fridays) and 325-327 (Brennan's Champagne Cocktail: Champagne, Angostura Bitters, Demerara Sugar Cube); guide.txt line 2712; the record's parts (the classic build: a demerara sugar cube with Angostura bitters, topped with Champagne; dry and sparkling, a soft spice, a faint sweetness as the cube dissolves) and why (the house's bubbly classic, for anyone celebrating); the components The Champagne Cocktail (Jerry Thomas printed it in his bar guide of 1862), Angostura bitters and its producer profile (named for the town of Angostura, Venezuela, where it began; gentian and spices, a secret recipe; in Trinidad since 1875), Demerara sugar cube (a light brown cane sugar with a toffee note; the dissolving cube sends bubbles up the glass and sweetens the wine gradually) and Bubbles at Brennan's; research/producers-bar-absinthe-bitters-brandy-2026-10-10.md section 4; research/components-drinks-2026-10-05.md item 17"
+    },
+    {
+      "target": "cocktail:Brennan’s Champagne Cocktail",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Brennan’s Champagne Cocktail is our bubbly classic: Champagne over a demerara sugar cube with Angostura bitters, so bubbles keep rising from the cube. Dry and festive, with a soft spice and a sweetness that grows as the sugar dissolves: the glass for a celebration at Bubbles at Brennan’s.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line quoted the price, which the card prints; it now says the printed build, the taste and when to have it",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 282-285 (Bubbles at Brennan's; Champagne Sabering in the Courtyard, Fridays) and 325-327 (Brennan's Champagne Cocktail: Champagne, Angostura Bitters, Demerara Sugar Cube); guide.txt line 2712; the record's parts (the classic build: a demerara sugar cube with Angostura bitters, topped with Champagne; dry and sparkling, a soft spice, a faint sweetness as the cube dissolves) and why (the house's bubbly classic, for anyone celebrating); the components The Champagne Cocktail (Jerry Thomas printed it in his bar guide of 1862), Angostura bitters and its producer profile (named for the town of Angostura, Venezuela, where it began; gentian and spices, a secret recipe; in Trinidad since 1875), Demerara sugar cube (a light brown cane sugar with a toffee note; the dissolving cube sends bubbles up the glass and sweetens the wine gradually) and Bubbles at Brennan's; research/producers-bar-absinthe-bitters-brandy-2026-10-10.md section 4; research/components-drinks-2026-10-05.md item 17"
+    },
+    {
+      "target": "cocktail:Brennan’s Champagne Cocktail",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Brennan’s Champagne Cocktail is the classic Jerry Thomas printed in his bar guide of 1862; ours is a demerara sugar cube with Angostura bitters, topped with Champagne. Angostura takes its name from the town in Venezuela where it began, a secret recipe of gentian and spices made in Trinidad since 1875. Demerara is a light brown cane sugar with a toffee note; as the cube dissolves it sends a stream of bubbles up the glass and sweetens the wine a little at a time. Dry and festive with a soft spice: the glass for a celebration at Bubbles at Brennan’s, and on Fridays, the Champagne sabering in the courtyard.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price; it now tells the 1862 printing from the component (the demerara cube said as ours, since the 1862 recipe printed a lump of sugar), the Angostura story from its producer profile, what the demerara cube does, and the Bubbles hour with its Friday sabering, as the menu prints it",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 282-285 (Bubbles at Brennan's; Champagne Sabering in the Courtyard, Fridays) and 325-327 (Brennan's Champagne Cocktail: Champagne, Angostura Bitters, Demerara Sugar Cube); guide.txt line 2712; the record's parts (the classic build: a demerara sugar cube with Angostura bitters, topped with Champagne; dry and sparkling, a soft spice, a faint sweetness as the cube dissolves) and why (the house's bubbly classic, for anyone celebrating); the components The Champagne Cocktail (Jerry Thomas printed it in his bar guide of 1862), Angostura bitters and its producer profile (named for the town of Angostura, Venezuela, where it began; gentian and spices, a secret recipe; in Trinidad since 1875), Demerara sugar cube (a light brown cane sugar with a toffee note; the dissolving cube sends bubbles up the glass and sweetens the wine gradually) and Bubbles at Brennan's; research/producers-bar-absinthe-bitters-brandy-2026-10-10.md section 4; research/components-drinks-2026-10-05.md item 17"
+    },
+    {
+      "target": "cocktail:Chandon Garden Spritz",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "The Chandon Garden Spritz is a bitter orange liqueur with Chandon Brut sparkling wine, Brut meaning dry. Bittersweet orange peel under fine bubbles, made to wake the appetite: at Bubbles at Brennan’s, have it with the Cheese Board or the Creole Spiced Nuts.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line quoted the price, which the card prints; it now says the printed build, the taste and the Bubbles snacks it pairs with by their printed names",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 282-283 and 329-331 (Chandon Garden Spritz: Bitter Orange Liqueur, Chandon Brut Sparkling Wine); the record's parts (bittersweet and bright: orange peel and a gentle bitterness under dry bubbles), pairs (the Cheese Board or the Creole spiced nuts) and kept notes (Brut means dry; call the Chandon sparkling wine, never Champagne), and the Fries with Pink Sauce's own pairs naming it; the components Chandon Brut and its producer profile (the sparkling wine house developed beyond Champagne by the Moët group; founded 1959 in Argentina, 1973 in California), Bitter orange liqueur (bittersweet rather than sweet, made to wake the appetite) and The spritz; research/producers-bar-wines-zero-mixers-2026-10-10.md section 2 (the Garden Spritz is Chandon's own product name; the aperitivo family); research/brennans-bar-review-2026-10-15.md (keep the printed Chandon Brut and bitter orange wording; no blanket country or method)"
+    },
+    {
+      "target": "cocktail:Chandon Garden Spritz",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Garden Spritz is Chandon’s own name for a spritz, and ours is a bitter orange liqueur with Chandon Brut sparkling wine. Chandon is the sparkling wine house the Moët group built beyond Champagne, in Argentina from 1959 and in California from 1973, so this is sparkling wine rather than Champagne, and Brut means dry. The liqueur is bittersweet rather than sweet, orange peel with a gentle bitterness, made to wake the appetite, so the glass tastes of bittersweet orange under fine, dry bubbles. Have it at Bubbles at Brennan’s before dinner, with the Cheese Board, the Creole Spiced Nuts or the Fries with Pink Sauce.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price, said saved Bubbles menu, carried a promise to confirm the bottle and its build, and ended on a question to the guest; it now says only the printed bitter orange liqueur and Chandon Brut, that the Garden Spritz name is Chandon's own, the house's story from its producer profile without naming which country's wine is poured, the taste, and the Bubbles snacks it pairs with. The World Table's test that pins the old hedge in this line is left to the integrator, who moves it",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 282-283 and 329-331 (Chandon Garden Spritz: Bitter Orange Liqueur, Chandon Brut Sparkling Wine); the record's parts (bittersweet and bright: orange peel and a gentle bitterness under dry bubbles), pairs (the Cheese Board or the Creole spiced nuts) and kept notes (Brut means dry; call the Chandon sparkling wine, never Champagne), and the Fries with Pink Sauce's own pairs naming it; the components Chandon Brut and its producer profile (the sparkling wine house developed beyond Champagne by the Moët group; founded 1959 in Argentina, 1973 in California), Bitter orange liqueur (bittersweet rather than sweet, made to wake the appetite) and The spritz; research/producers-bar-wines-zero-mixers-2026-10-10.md section 2 (the Garden Spritz is Chandon's own product name; the aperitivo family); research/brennans-bar-review-2026-10-15.md (keep the printed Chandon Brut and bitter orange wording; no blanket country or method)"
+    },
+    {
+      "target": "cocktail:Floating in South Africa",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Floating in South Africa: Amarula cream liqueur, our housemade vanilla bean ice cream and Abita Root Beer. A creamy, grown-up float.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line ended on a fragment with no taste word; it now names the drink, its cream liqueur, the three printed parts and one taste",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 381-384 (Dessert Cocktails: Amarula Cream Liqueur, Housemade Vanilla Bean Ice Cream, Abita Root Beer) and line 365 (New Orleans Bread Pudding); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 175-183 (marula fruit, vanilla and nostalgic root-beer flavours); the record's parts (a root beer float with cream liqueur and our vanilla bean ice cream; creamy, fizzy and sweet, vanilla, root beer spice and the caramel note of the Amarula), its pairs (dessert on its own, or beside the New Orleans Bread Pudding) and its kept note Tell me about it.; the components Amarula cream liqueur (its producer profile: the fruit of the wild marula tree of southern Africa, distilled twice, aged two years in small oak barrels, blended with fresh cream; the elephant on the label because elephants love marula fruit), Abita root beer (its producer profile: Abita Springs, across the lake, hot brewed with Louisiana cane sugar, vanilla and yucca for its foam), The float (an American soda fountain classic) and Vanilla bean; research/producers-bar-liqueurs-aperitifs-2026-10-10.md section 5; research/producers-bar-wines-zero-mixers-2026-10-10.md section 6; research/fall-menu-2026-chatgpt.json (Floating in South Africa originNotes: South African marula cream meeting a Louisiana root beer)"
+    },
+    {
+      "target": "cocktail:Floating in South Africa",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Floating in South Africa is a root beer float for grown-ups: Amarula, a South African cream liqueur, with our housemade vanilla bean ice cream and Abita Root Beer from Louisiana. Creamy, fizzy and sweet, with a caramel note: dessert on its own, or beside the New Orleans Bread Pudding.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line now closes on when to have it and the dish the record pairs it with, by its printed name",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 381-384 (Dessert Cocktails: Amarula Cream Liqueur, Housemade Vanilla Bean Ice Cream, Abita Root Beer) and line 365 (New Orleans Bread Pudding); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 175-183 (marula fruit, vanilla and nostalgic root-beer flavours); the record's parts (a root beer float with cream liqueur and our vanilla bean ice cream; creamy, fizzy and sweet, vanilla, root beer spice and the caramel note of the Amarula), its pairs (dessert on its own, or beside the New Orleans Bread Pudding) and its kept note Tell me about it.; the components Amarula cream liqueur (its producer profile: the fruit of the wild marula tree of southern Africa, distilled twice, aged two years in small oak barrels, blended with fresh cream; the elephant on the label because elephants love marula fruit), Abita root beer (its producer profile: Abita Springs, across the lake, hot brewed with Louisiana cane sugar, vanilla and yucca for its foam), The float (an American soda fountain classic) and Vanilla bean; research/producers-bar-liqueurs-aperitifs-2026-10-10.md section 5; research/producers-bar-wines-zero-mixers-2026-10-10.md section 6; research/fall-menu-2026-chatgpt.json (Floating in South Africa originNotes: South African marula cream meeting a Louisiana root beer)"
+    },
+    {
+      "target": "cocktail:Floating in South Africa",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Floating in South Africa is the root beer float, the American soda fountain classic, made for grown-ups. The South Africa is Amarula, a cream liqueur made from the fruit of the wild marula tree, distilled, aged two years in oak and blended with cream; the elephant on the bottle is there because elephants love the fruit. With it go our housemade vanilla bean ice cream and Abita Root Beer, brewed across the lake in Abita Springs with Louisiana cane sugar. Creamy, fizzy and sweet, vanilla and root beer spice with a caramel note: dessert on its own, or beside the New Orleans Bread Pudding.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line ended on the price; it now tells the maker of the Amarula and of the root beer from their producer profiles, the taste, and the dish it goes with by its printed name, with no price",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 381-384 (Dessert Cocktails: Amarula Cream Liqueur, Housemade Vanilla Bean Ice Cream, Abita Root Beer) and line 365 (New Orleans Bread Pudding); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 175-183 (marula fruit, vanilla and nostalgic root-beer flavours); the record's parts (a root beer float with cream liqueur and our vanilla bean ice cream; creamy, fizzy and sweet, vanilla, root beer spice and the caramel note of the Amarula), its pairs (dessert on its own, or beside the New Orleans Bread Pudding) and its kept note Tell me about it.; the components Amarula cream liqueur (its producer profile: the fruit of the wild marula tree of southern Africa, distilled twice, aged two years in small oak barrels, blended with fresh cream; the elephant on the label because elephants love marula fruit), Abita root beer (its producer profile: Abita Springs, across the lake, hot brewed with Louisiana cane sugar, vanilla and yucca for its foam), The float (an American soda fountain classic) and Vanilla bean; research/producers-bar-liqueurs-aperitifs-2026-10-10.md section 5; research/producers-bar-wines-zero-mixers-2026-10-10.md section 6; research/fall-menu-2026-chatgpt.json (Floating in South Africa originNotes: South African marula cream meeting a Louisiana root beer)"
+    },
+    {
+      "target": "cocktail:Apple Crumble",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Apple Crumble: bourbon, apple cider, butterscotch schnapps, maple, cinnamon, lemon and black walnut bitters. Sweet and spiced, like an autumn dessert.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line had no taste word; it now names the drink, its bourbon, the seven printed parts and one taste, the sheet's autumn dessert",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 381 and 386-388 (Dessert Cocktails: Bourbon, Apple Cider, Butterscotch Schnapps, Maple, Cinnamon, Lemon, Black Walnut Bitters); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 195-207 (recalling the fruit and warm flavours of an autumn dessert); the record's parts (baked apple, butterscotch and maple with warm cinnamon, kept bright by lemon, a toasty nutty finish; hot or cold, the bourbon and the measures not printed), its why (the bourbon drinker's dessert, on its own) and its kept note Tell me about it.; the components Bourbon (American whiskey of at least 51 percent corn aged in new charred oak; its caramel and vanilla the bridge to the butterscotch, maple and apple), Butterscotch schnapps (brown sugar cooked with butter, a toffee note), Black walnut bitters (toasted walnut, warm spice and molasses, a dry, earthy finish), Maple, Apple cider, Cinnamon and cinnamon syrup, Fresh lemon and lemon and The dessert cocktails; research/producers-bar-absinthe-bitters-brandy-2026-10-10.md section 9; research/producers-bar-liqueurs-aperitifs-2026-10-10.md section 12; research/fall-menu-2026-chatgpt.json (Apple Crumble originNotes: the autumn dessert association from its printed components, no historic cocktail origin claimed)"
+    },
+    {
+      "target": "cocktail:Apple Crumble",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Apple Crumble is bourbon with apple cider, butterscotch schnapps, maple and cinnamon, balanced by lemon and black walnut bitters. It tastes like the dessert it is named for, baked apple and butterscotch with a toasty, nutty finish: a bourbon drinker’s dessert after dinner.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line now says when to have it; nothing in it promises hot or cold, a bottle or a method the menu does not print",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 381 and 386-388 (Dessert Cocktails: Bourbon, Apple Cider, Butterscotch Schnapps, Maple, Cinnamon, Lemon, Black Walnut Bitters); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 195-207 (recalling the fruit and warm flavours of an autumn dessert); the record's parts (baked apple, butterscotch and maple with warm cinnamon, kept bright by lemon, a toasty nutty finish; hot or cold, the bourbon and the measures not printed), its why (the bourbon drinker's dessert, on its own) and its kept note Tell me about it.; the components Bourbon (American whiskey of at least 51 percent corn aged in new charred oak; its caramel and vanilla the bridge to the butterscotch, maple and apple), Butterscotch schnapps (brown sugar cooked with butter, a toffee note), Black walnut bitters (toasted walnut, warm spice and molasses, a dry, earthy finish), Maple, Apple cider, Cinnamon and cinnamon syrup, Fresh lemon and lemon and The dessert cocktails; research/producers-bar-absinthe-bitters-brandy-2026-10-10.md section 9; research/producers-bar-liqueurs-aperitifs-2026-10-10.md section 12; research/fall-menu-2026-chatgpt.json (Apple Crumble originNotes: the autumn dessert association from its printed components, no historic cocktail origin claimed)"
+    },
+    {
+      "target": "cocktail:Apple Crumble",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Apple Crumble tastes like the autumn dessert it is named for. It starts with bourbon, the American whiskey made mainly from corn and aged in new charred oak, which gives the vanilla and caramel that bridge to everything else. With it go apple cider, butterscotch schnapps for a buttery toffee note, maple and cinnamon, then lemon to keep it bright and black walnut bitters for a toasty, nutty finish. Baked apple under a buttery crumble, sweet but balanced: the dessert for a bourbon drinker after dinner, on its own or in place of a plate.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line ended on the price; it now explains the bourbon by its category (the menu names no bottle, and a lineup ask stands), each printed part's job and taste, and when it belongs, with no price and no hot or cold",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 381 and 386-388 (Dessert Cocktails: Bourbon, Apple Cider, Butterscotch Schnapps, Maple, Cinnamon, Lemon, Black Walnut Bitters); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 195-207 (recalling the fruit and warm flavours of an autumn dessert); the record's parts (baked apple, butterscotch and maple with warm cinnamon, kept bright by lemon, a toasty nutty finish; hot or cold, the bourbon and the measures not printed), its why (the bourbon drinker's dessert, on its own) and its kept note Tell me about it.; the components Bourbon (American whiskey of at least 51 percent corn aged in new charred oak; its caramel and vanilla the bridge to the butterscotch, maple and apple), Butterscotch schnapps (brown sugar cooked with butter, a toffee note), Black walnut bitters (toasted walnut, warm spice and molasses, a dry, earthy finish), Maple, Apple cider, Cinnamon and cinnamon syrup, Fresh lemon and lemon and The dessert cocktails; research/producers-bar-absinthe-bitters-brandy-2026-10-10.md section 9; research/producers-bar-liqueurs-aperitifs-2026-10-10.md section 12; research/fall-menu-2026-chatgpt.json (Apple Crumble originNotes: the autumn dessert association from its printed components, no historic cocktail origin claimed)"
+    },
+    {
+      "target": "cocktail:Banane au Chocolat",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Banane au Chocolat: two liqueurs, crème de banana and crème de cocoa, with Pedro Ximénez sherry. Banana and chocolate, rich and silky.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line now names the liqueurs as the drink's spirit beside the three printed parts and one taste",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 381 and 390-392 (Dessert Cocktails: Crème De Banana, Crème De Cocoa, Pedro Ximénez Sherry) and lines 361-363 (World Famous Bananas Foster, invented in 1951 at Brennan's); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 185-193 (banana, chocolate and rich dried-fruit notes); the record's parts (rich and sweet: ripe banana and chocolate over the raisin and fig depth of the sherry), its pairs (dessert on its own, or after Bananas Foster for a guest who wants the banana again) and its kept note Tell me about it.; the components Crème de banane, Crème de cacao (the menu spells it crème de cocoa) and Pedro Ximénez sherry (its origin profile: the grapes dried in the sun on straw mats, asoleo, almost black and syrupy, raisin, fig and molasses, most grown in Montilla-Moriles and aged in Jerez); research/producers-bar-liqueurs-aperitifs-2026-10-10.md sections 9 and 12; research/components-drinks-2026-10-05.md item 59; research/fall-menu-2026-chatgpt.json (Banane au Chocolat originNotes: the French phrase means banana with chocolate; PX ties it to the sherry tradition of southern Spain)"
+    },
+    {
+      "target": "cocktail:Banane au Chocolat",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Banane au Chocolat is French for banana with chocolate, and it tastes of both: crème de banana and crème de cocoa, two dessert liqueurs, with Pedro Ximénez, a dark, sweet Spanish sherry. Rich and silky, with a raisin depth: dessert on its own, or after the World Famous Bananas Foster.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line called Pedro Ximénez the richest, sweetest sherry; it now drops the superlative and closes on when to have it, from the record's pairs, with the dessert by its printed name",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 381 and 390-392 (Dessert Cocktails: Crème De Banana, Crème De Cocoa, Pedro Ximénez Sherry) and lines 361-363 (World Famous Bananas Foster, invented in 1951 at Brennan's); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 185-193 (banana, chocolate and rich dried-fruit notes); the record's parts (rich and sweet: ripe banana and chocolate over the raisin and fig depth of the sherry), its pairs (dessert on its own, or after Bananas Foster for a guest who wants the banana again) and its kept note Tell me about it.; the components Crème de banane, Crème de cacao (the menu spells it crème de cocoa) and Pedro Ximénez sherry (its origin profile: the grapes dried in the sun on straw mats, asoleo, almost black and syrupy, raisin, fig and molasses, most grown in Montilla-Moriles and aged in Jerez); research/producers-bar-liqueurs-aperitifs-2026-10-10.md sections 9 and 12; research/components-drinks-2026-10-05.md item 59; research/fall-menu-2026-chatgpt.json (Banane au Chocolat originNotes: the French phrase means banana with chocolate; PX ties it to the sherry tradition of southern Spain)"
+    },
+    {
+      "target": "cocktail:Banane au Chocolat",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Banane au Chocolat means banana with chocolate, and that is what it tastes of. It’s two dessert liqueurs, crème de banana and crème de cocoa, with Pedro Ximénez, the dark sherry of southern Spain made from grapes dried in the sun on straw mats until they are nearly raisins, so it tastes of raisin, fig and molasses. Rich and silky: ripe banana and chocolate over that dried fruit depth. Bananas Foster was invented at Brennan’s in 1951, so this is the banana dessert to sip, on its own or after the World Famous Bananas Foster.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price and ranked the drink at the top of the dessert cocktails; it now tells how Pedro Ximénez is made, from its origin profile, the taste, and the house's banana story from the dessert menu, with the dish by its printed name",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 381 and 390-392 (Dessert Cocktails: Crème De Banana, Crème De Cocoa, Pedro Ximénez Sherry) and lines 361-363 (World Famous Bananas Foster, invented in 1951 at Brennan's); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 185-193 (banana, chocolate and rich dried-fruit notes); the record's parts (rich and sweet: ripe banana and chocolate over the raisin and fig depth of the sherry), its pairs (dessert on its own, or after Bananas Foster for a guest who wants the banana again) and its kept note Tell me about it.; the components Crème de banane, Crème de cacao (the menu spells it crème de cocoa) and Pedro Ximénez sherry (its origin profile: the grapes dried in the sun on straw mats, asoleo, almost black and syrupy, raisin, fig and molasses, most grown in Montilla-Moriles and aged in Jerez); research/producers-bar-liqueurs-aperitifs-2026-10-10.md sections 9 and 12; research/components-drinks-2026-10-05.md item 59; research/fall-menu-2026-chatgpt.json (Banane au Chocolat originNotes: the French phrase means banana with chocolate; PX ties it to the sherry tradition of southern Spain)"
+    },
+    {
+      "target": "cocktail:Espresso Martini",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Our Espresso Martini: vodka with chicory, Frangelico and Kahlua. Roasty and smooth, with a New Orleans accent.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line now carries one taste beside the spirit and the four printed parts",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 394-397 (Coffee Cocktails: Chicory, Vodka, Frangelico, Kahlua) and lines 361, 365 and 369 (World Famous Bananas Foster, New Orleans Bread Pudding, The Snickers); guide.txt line 2785 (chicory, a roasted root we blend into our coffee, the New Orleans way); the record's parts (vodka with chicory and two liqueurs, the coffee and the method confirmed with the bar; roasty and smooth, chicory and coffee liqueur, toasted hazelnut, clean vodka underneath), its pairs (Bananas Foster, the bread pudding or the Snickers, or dessert on its own) and its kept note Tell me about it.; the components The espresso martini (a London drink of the 1980s; ours adds chicory and Frangelico and the menu prints no espresso), Chicory (body and a roasty, cocoa-like bitterness), Frangelico (its producer profile: Canale, Piedmont, launched 1978, toasted Tonda Gentile hazelnuts from the Langhe, the bottle a friar's habit), Kahlua (its producer profile: first produced in Veracruz, Mexico, in 1936, arabica coffee, sugar cane spirit, vanilla and caramel) and Vodka (the vodka not named; a lineup ask stands); research/components-drinks-2026-10-05.md item 16; research/producers-bar-liqueurs-aperitifs-2026-10-10.md sections 6 and 7; research/brennans-bar-review-2026-10-15.md (Kahlua: no caffeine promise either way; the line carries no caffeine sentence)"
+    },
+    {
+      "target": "cocktail:Espresso Martini",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Our Espresso Martini puts a New Orleans accent on a modern classic: vodka with chicory, the roasted root New Orleans blends into its coffee, Frangelico, a hazelnut liqueur, and Kahlua, a coffee liqueur. Roasty, nutty and smooth, a dessert and a nightcap in one.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line now says what chicory is, as the guide's lexicon does, and keeps to the printed parts with no espresso the menu does not print",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 394-397 (Coffee Cocktails: Chicory, Vodka, Frangelico, Kahlua) and lines 361, 365 and 369 (World Famous Bananas Foster, New Orleans Bread Pudding, The Snickers); guide.txt line 2785 (chicory, a roasted root we blend into our coffee, the New Orleans way); the record's parts (vodka with chicory and two liqueurs, the coffee and the method confirmed with the bar; roasty and smooth, chicory and coffee liqueur, toasted hazelnut, clean vodka underneath), its pairs (Bananas Foster, the bread pudding or the Snickers, or dessert on its own) and its kept note Tell me about it.; the components The espresso martini (a London drink of the 1980s; ours adds chicory and Frangelico and the menu prints no espresso), Chicory (body and a roasty, cocoa-like bitterness), Frangelico (its producer profile: Canale, Piedmont, launched 1978, toasted Tonda Gentile hazelnuts from the Langhe, the bottle a friar's habit), Kahlua (its producer profile: first produced in Veracruz, Mexico, in 1936, arabica coffee, sugar cane spirit, vanilla and caramel) and Vodka (the vodka not named; a lineup ask stands); research/components-drinks-2026-10-05.md item 16; research/producers-bar-liqueurs-aperitifs-2026-10-10.md sections 6 and 7; research/brennans-bar-review-2026-10-15.md (Kahlua: no caffeine promise either way; the line carries no caffeine sentence)"
+    },
+    {
+      "target": "cocktail:Espresso Martini",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "The espresso martini is a London drink of the 1980s, and ours carries a New Orleans accent. It’s vodka with chicory, the roasted root this city blends into its coffee for body and a cocoa-like bitterness; Frangelico, a hazelnut liqueur made in Piedmont from toasted Tonda Gentile hazelnuts; and Kahlua, the coffee liqueur first made in Veracruz, Mexico, in 1936, from arabica coffee, sugar cane spirit, vanilla and caramel. Roasty, nutty and smooth over the clean vodka: dessert and a nightcap at once, or beside the World Famous Bananas Foster, the New Orleans Bread Pudding or The Snickers.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line ended on the price; it now tells the drink's London story from its component, the makers of the two liqueurs from their producer profiles, the taste, and the three desserts the record pairs it with by their printed names, with no price, no espresso and no caffeine sentence",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 394-397 (Coffee Cocktails: Chicory, Vodka, Frangelico, Kahlua) and lines 361, 365 and 369 (World Famous Bananas Foster, New Orleans Bread Pudding, The Snickers); guide.txt line 2785 (chicory, a roasted root we blend into our coffee, the New Orleans way); the record's parts (vodka with chicory and two liqueurs, the coffee and the method confirmed with the bar; roasty and smooth, chicory and coffee liqueur, toasted hazelnut, clean vodka underneath), its pairs (Bananas Foster, the bread pudding or the Snickers, or dessert on its own) and its kept note Tell me about it.; the components The espresso martini (a London drink of the 1980s; ours adds chicory and Frangelico and the menu prints no espresso), Chicory (body and a roasty, cocoa-like bitterness), Frangelico (its producer profile: Canale, Piedmont, launched 1978, toasted Tonda Gentile hazelnuts from the Langhe, the bottle a friar's habit), Kahlua (its producer profile: first produced in Veracruz, Mexico, in 1936, arabica coffee, sugar cane spirit, vanilla and caramel) and Vodka (the vodka not named; a lineup ask stands); research/components-drinks-2026-10-05.md item 16; research/producers-bar-liqueurs-aperitifs-2026-10-10.md sections 6 and 7; research/brennans-bar-review-2026-10-15.md (Kahlua: no caffeine promise either way; the line carries no caffeine sentence)"
+    },
+    {
+      "target": "cocktail:Ralph’s Coffee",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Ralph’s Coffee: our dark roast coffee with chicory and two nut liqueurs, Frangelico and Nocello, under whipped cream. Nutty and roasty.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line now names the two liqueurs as the drink's spirit beside the printed parts and one taste",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 394 and 399-401 (Coffee Cocktails: Dark Roast Coffee With Chicory, Frangelico, Nocello, Whipped Cream), lines 403-405 (Brennan's Irish Coffee: Tullamore Dew Irish Whiskey and brown sugar) and lines 361 and 365 (World Famous Bananas Foster, New Orleans Bread Pudding); guide.txt line 2785 (chicory, the New Orleans way); the record's parts (chicory coffee with two nut liqueurs, topped with whipped cream; roasty and nutty, hazelnut and walnut under the cream), its pairs (Bananas Foster or the New Orleans Bread Pudding) and its note (no story about the name); the components Chicory, Whipped cream, Floating the cream, Frangelico (its producer profile: Canale, Piedmont, toasted Tonda Gentile hazelnuts) and Nocello (its producer profile: Toschi, a family company founded in 1945 in Vignola, near Modena, a sweet walnut and hazelnut liqueur with vanilla tones); research/producers-bar-liqueurs-aperitifs-2026-10-10.md sections 6 and 8; research/brennans-bar-review-2026-10-15.md (Ralph's Coffee compared with the Irish Coffee by its nut liqueurs against whiskey, never ranked by strength)"
+    },
+    {
+      "target": "cocktail:Ralph’s Coffee",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "Ralph’s Coffee is our dark roast coffee with chicory, with Frangelico, a hazelnut liqueur, and Nocello, a walnut liqueur, under whipped cream. Roasty, nutty and comforting: lovely with the World Famous Bananas Foster or the New Orleans Bread Pudding.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line quoted the price and called it the easiest dessert yes; it now closes on the desserts the record pairs it with, by their printed names, with no price and no ranking",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 394 and 399-401 (Coffee Cocktails: Dark Roast Coffee With Chicory, Frangelico, Nocello, Whipped Cream), lines 403-405 (Brennan's Irish Coffee: Tullamore Dew Irish Whiskey and brown sugar) and lines 361 and 365 (World Famous Bananas Foster, New Orleans Bread Pudding); guide.txt line 2785 (chicory, the New Orleans way); the record's parts (chicory coffee with two nut liqueurs, topped with whipped cream; roasty and nutty, hazelnut and walnut under the cream), its pairs (Bananas Foster or the New Orleans Bread Pudding) and its note (no story about the name); the components Chicory, Whipped cream, Floating the cream, Frangelico (its producer profile: Canale, Piedmont, toasted Tonda Gentile hazelnuts) and Nocello (its producer profile: Toschi, a family company founded in 1945 in Vignola, near Modena, a sweet walnut and hazelnut liqueur with vanilla tones); research/producers-bar-liqueurs-aperitifs-2026-10-10.md sections 6 and 8; research/brennans-bar-review-2026-10-15.md (Ralph's Coffee compared with the Irish Coffee by its nut liqueurs against whiskey, never ranked by strength)"
+    },
+    {
+      "target": "cocktail:Ralph’s Coffee",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Ralph’s Coffee starts with our dark roast coffee with chicory, the roasted root New Orleans blends into its coffee for body and a roasty, cocoa-like depth. Into it go two Italian nut liqueurs: Frangelico, made in Piedmont from toasted Tonda Gentile hazelnuts, and Nocello, a sweet walnut and hazelnut liqueur with soft vanilla tones from Toschi, a family company founded near Modena in 1945. Whipped cream goes on top. Where Brennan’s Irish Coffee brings Irish whiskey and brown sugar, this one brings hazelnut and walnut: roasty, nutty and comforting, and lovely with the World Famous Bananas Foster or the New Orleans Bread Pudding.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price, said saved menu, asked the guest a question and promised to check the preparation; it now tells the makers of the two liqueurs from their producer profiles, sets the drink beside the Irish Coffee by its printed parts (nut liqueurs against whiskey, never by strength) and names the desserts it goes with, with no story about the name",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 394 and 399-401 (Coffee Cocktails: Dark Roast Coffee With Chicory, Frangelico, Nocello, Whipped Cream), lines 403-405 (Brennan's Irish Coffee: Tullamore Dew Irish Whiskey and brown sugar) and lines 361 and 365 (World Famous Bananas Foster, New Orleans Bread Pudding); guide.txt line 2785 (chicory, the New Orleans way); the record's parts (chicory coffee with two nut liqueurs, topped with whipped cream; roasty and nutty, hazelnut and walnut under the cream), its pairs (Bananas Foster or the New Orleans Bread Pudding) and its note (no story about the name); the components Chicory, Whipped cream, Floating the cream, Frangelico (its producer profile: Canale, Piedmont, toasted Tonda Gentile hazelnuts) and Nocello (its producer profile: Toschi, a family company founded in 1945 in Vignola, near Modena, a sweet walnut and hazelnut liqueur with vanilla tones); research/producers-bar-liqueurs-aperitifs-2026-10-10.md sections 6 and 8; research/brennans-bar-review-2026-10-15.md (Ralph's Coffee compared with the Irish Coffee by its nut liqueurs against whiskey, never ranked by strength)"
+    },
+    {
+      "target": "cocktail:Flamingo",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "The Flamingo: Chopin vodka and Monkey 47 gin with dragonfruit, lemon and Taittinger Champagne. Bright and fruity, only in the Roost.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line now carries one taste beside the two spirits and the printed parts, and keeps the Roost's exclusivity",
+      "source": "page:brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt line 3 (Luxury Roost Bar Cocktails, available exclusively in the Roost Bar & Lounge) and line 4 (Flamingo: Chopin Vodka, Monkey 47 Schwarzwald Gin, dragonfruit, lemon, Taittinger 'La Française' Champagne); research/gap-roost-live-2026-10-03.md section 1; the record's parts (bright, fruity and dry, citrus and gin botanicals under fine Champagne bubbles) and its why and kept notes (the Roost's celebration drink, for an anniversary or a birthday); the components The Roost's luxury cocktails (the Flamingo for a celebration, never brought to a dining room table), Chopin vodka (its producer profile: a Polish single-ingredient vodka, distilled four times, at a family distillery near Krzesk that has made vodka since 1896; the bottling not printed, so the line says no potato), Monkey 47 gin (its producer profile: a Black Forest gin of 47 botanicals, about a third of them from the forest), Taittinger La Française (its producer profile: a Reims house whose story begins in 1734, a Chardonnay-led non-vintage Brut), Dragonfruit and Fresh lemon and lime; research/producers-bar-white-spirits-agave-2026-10-10.md sections 1 and 2; research/producers-bar-wines-zero-mixers-2026-10-10.md section 1; research/bar-master-review-2026-10-04.md (Monkey 47)"
+    },
+    {
+      "target": "cocktail:Flamingo",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "The Flamingo is the Roost’s celebration cocktail, poured only in the Roost Bar and Lounge: Chopin vodka and Monkey 47 gin with dragonfruit and lemon, and Taittinger La Française Champagne. Bright, fruity and dry under fine bubbles: the drink for a birthday or an anniversary.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line now says when to have it, from the record's why, and keeps the exclusivity as the house page prints it",
+      "source": "page:brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt line 3 (Luxury Roost Bar Cocktails, available exclusively in the Roost Bar & Lounge) and line 4 (Flamingo: Chopin Vodka, Monkey 47 Schwarzwald Gin, dragonfruit, lemon, Taittinger 'La Française' Champagne); research/gap-roost-live-2026-10-03.md section 1; the record's parts (bright, fruity and dry, citrus and gin botanicals under fine Champagne bubbles) and its why and kept notes (the Roost's celebration drink, for an anniversary or a birthday); the components The Roost's luxury cocktails (the Flamingo for a celebration, never brought to a dining room table), Chopin vodka (its producer profile: a Polish single-ingredient vodka, distilled four times, at a family distillery near Krzesk that has made vodka since 1896; the bottling not printed, so the line says no potato), Monkey 47 gin (its producer profile: a Black Forest gin of 47 botanicals, about a third of them from the forest), Taittinger La Française (its producer profile: a Reims house whose story begins in 1734, a Chardonnay-led non-vintage Brut), Dragonfruit and Fresh lemon and lime; research/producers-bar-white-spirits-agave-2026-10-10.md sections 1 and 2; research/producers-bar-wines-zero-mixers-2026-10-10.md section 1; research/bar-master-review-2026-10-04.md (Monkey 47)"
+    },
+    {
+      "target": "cocktail:Flamingo",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "The Flamingo is one of three luxury cocktails poured only in our Roost Bar and Lounge, and it’s the celebration. Chopin is a family-owned Polish vodka from a distillery that has made vodka since 1896, each bottling from a single ingredient and distilled four times; Monkey 47 is a Black Forest gin of 47 botanicals, about a third of them from the forest. With them go dragonfruit, lemon and Taittinger La Française, a Chardonnay-led Champagne from a Reims house whose story begins in 1734. Bright fruit and citrus, gin botanicals and fine bubbles: the drink to start or end a birthday or anniversary evening in the Roost.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line quoted the price; it now tells the three makers from their producer profiles (the Chopin bottling is not printed, so it says no potato), the taste, the Roost's exclusivity and when the drink belongs, with no price",
+      "source": "page:brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt line 3 (Luxury Roost Bar Cocktails, available exclusively in the Roost Bar & Lounge) and line 4 (Flamingo: Chopin Vodka, Monkey 47 Schwarzwald Gin, dragonfruit, lemon, Taittinger 'La Française' Champagne); research/gap-roost-live-2026-10-03.md section 1; the record's parts (bright, fruity and dry, citrus and gin botanicals under fine Champagne bubbles) and its why and kept notes (the Roost's celebration drink, for an anniversary or a birthday); the components The Roost's luxury cocktails (the Flamingo for a celebration, never brought to a dining room table), Chopin vodka (its producer profile: a Polish single-ingredient vodka, distilled four times, at a family distillery near Krzesk that has made vodka since 1896; the bottling not printed, so the line says no potato), Monkey 47 gin (its producer profile: a Black Forest gin of 47 botanicals, about a third of them from the forest), Taittinger La Française (its producer profile: a Reims house whose story begins in 1734, a Chardonnay-led non-vintage Brut), Dragonfruit and Fresh lemon and lime; research/producers-bar-white-spirits-agave-2026-10-10.md sections 1 and 2; research/producers-bar-wines-zero-mixers-2026-10-10.md section 1; research/bar-master-review-2026-10-04.md (Monkey 47)"
+    },
+    {
+      "target": "cocktail:Birdcage",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "The Birdcage: our smoked Old Fashioned on Rabbit Hole Dareringer bourbon, with Angostura bitters, orange and cherry. Rich and smoky.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line had no taste word; it now ends on one",
+      "source": "page:brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt line 3 (available exclusively in the Roost Bar & Lounge) and line 5 (Birdcage: a smoked Old Fashioned, Rabbit Hole Dareringer Bourbon, Angostura bitters, orange, cherry); page:brennansneworleans-menus-pasted-2026-10-03.txt lines 390-392 (Banane au Chocolat with Pedro Ximénez Sherry); research/gap-roost-live-2026-10-03.md section 1 (the smoking method not printed); the record's parts (rich bourbon with dried fruit from the sherry cask finish, bitters, orange and cherry, wrapped in smoke) and its why (a slow nightcap for the guest who visits the bar after dinner); the components The Roost's luxury cocktails (the Birdcage as a slow nightcap), Smoking a cocktail (the smoke meets the guest first; describe aroma, not method), Rabbit Hole Dareringer (its producer profile: founded in Louisville in 2012, a wheated Kentucky straight bourbon aged in new charred oak and finished in Pedro Ximénez sherry casks), Angostura bitters (its producer profile: made in Trinidad to a secret recipe begun in Venezuela in 1824), Orange and cherry, Bourbon and Pedro Ximénez sherry (the same sherry's casks finish the Dareringer); research/producers-bar-whiskey-sazerac-2026-10-10.md section 6; research/producers-bar-absinthe-bitters-brandy-2026-10-10.md section 4"
+    },
+    {
+      "target": "cocktail:Birdcage",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "The Birdcage is our smoked Old Fashioned, poured only in the Roost Bar: Rabbit Hole Dareringer, a Louisville bourbon finished in Pedro Ximénez sherry casks, with Angostura bitters, orange and cherry. Rich, smoky and smooth, with dried fruit under the smoke: a slow nightcap after dinner.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line now names the sherry of the cask finish and says when to have it, from the record's why",
+      "source": "page:brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt line 3 (available exclusively in the Roost Bar & Lounge) and line 5 (Birdcage: a smoked Old Fashioned, Rabbit Hole Dareringer Bourbon, Angostura bitters, orange, cherry); page:brennansneworleans-menus-pasted-2026-10-03.txt lines 390-392 (Banane au Chocolat with Pedro Ximénez Sherry); research/gap-roost-live-2026-10-03.md section 1 (the smoking method not printed); the record's parts (rich bourbon with dried fruit from the sherry cask finish, bitters, orange and cherry, wrapped in smoke) and its why (a slow nightcap for the guest who visits the bar after dinner); the components The Roost's luxury cocktails (the Birdcage as a slow nightcap), Smoking a cocktail (the smoke meets the guest first; describe aroma, not method), Rabbit Hole Dareringer (its producer profile: founded in Louisville in 2012, a wheated Kentucky straight bourbon aged in new charred oak and finished in Pedro Ximénez sherry casks), Angostura bitters (its producer profile: made in Trinidad to a secret recipe begun in Venezuela in 1824), Orange and cherry, Bourbon and Pedro Ximénez sherry (the same sherry's casks finish the Dareringer); research/producers-bar-whiskey-sazerac-2026-10-10.md section 6; research/producers-bar-absinthe-bitters-brandy-2026-10-10.md section 4"
+    },
+    {
+      "target": "cocktail:Birdcage",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "The Birdcage is our smoked Old Fashioned, one of three luxury cocktails poured only in the Roost Bar and Lounge. Its bourbon is Rabbit Hole Dareringer, from a Louisville distillery founded in 2012: a wheated Kentucky straight bourbon aged in new charred oak, then finished in casks that held Pedro Ximénez, the same sweet sherry that goes into our Banane au Chocolat, so it carries raisin and dried fruit. With it go Angostura bitters, made in Trinidad to a secret recipe begun in 1824, orange and cherry, and the smoke meets you first. Rich, smoky and smooth: a slow nightcap in the Roost after dinner.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line ended on the price and said the drink was built with its parts, a method the page does not print; it now tells the makers of the bourbon and the bitters from their producer profiles, the sherry link across our list, the taste and when it belongs, with no price and no smoking method",
+      "source": "page:brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt line 3 (available exclusively in the Roost Bar & Lounge) and line 5 (Birdcage: a smoked Old Fashioned, Rabbit Hole Dareringer Bourbon, Angostura bitters, orange, cherry); page:brennansneworleans-menus-pasted-2026-10-03.txt lines 390-392 (Banane au Chocolat with Pedro Ximénez Sherry); research/gap-roost-live-2026-10-03.md section 1 (the smoking method not printed); the record's parts (rich bourbon with dried fruit from the sherry cask finish, bitters, orange and cherry, wrapped in smoke) and its why (a slow nightcap for the guest who visits the bar after dinner); the components The Roost's luxury cocktails (the Birdcage as a slow nightcap), Smoking a cocktail (the smoke meets the guest first; describe aroma, not method), Rabbit Hole Dareringer (its producer profile: founded in Louisville in 2012, a wheated Kentucky straight bourbon aged in new charred oak and finished in Pedro Ximénez sherry casks), Angostura bitters (its producer profile: made in Trinidad to a secret recipe begun in Venezuela in 1824), Orange and cherry, Bourbon and Pedro Ximénez sherry (the same sherry's casks finish the Dareringer); research/producers-bar-whiskey-sazerac-2026-10-10.md section 6; research/producers-bar-absinthe-bitters-brandy-2026-10-10.md section 4"
+    },
+    {
+      "target": "cocktail:Spoonbill",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "The Spoonbill: Hendrick’s gin and Cap Corse Mattei Blanc quinquina with chive oil, and a spoon of caviar. Cool and savoury.",
+      "reason": "Drink lines polish 18 October 2026: the 10 second line had no taste word; it now ends on one beside the gin and the printed parts",
+      "source": "page:brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt line 3 (available exclusively in the Roost Bar & Lounge) and line 6 (Spoonbill: Hendrick's Gin, Cap Corse Mattei Blanc Quinquina vermouth, chive oil, with a \"spoon\" of caviar); research/gap-roost-live-2026-10-03.md section 1; the record's family (martini style), parts (cool cucumber and rose from the gin, a gentle bitter wine note, savoury green chive, then the salt of caviar; a spoon of caviar served alongside) and why (the martini drinker's luxury, at the start of a celebration); the components The Roost's luxury cocktails (the Spoonbill with its spoon of caviar for the start of a big evening), Hendrick's gin (its producer profile: a Scottish gin made at Girvan by William Grant & Sons, launched in 1999, rose and cucumber added after distillation), Cap Corse Mattei Blanc quinquina (its producer profile: L.N. Mattei of Bastia, 1872, a mistelle of Muscat and Vermentinu with cinchona bark and cédrat, the Corsican citron; it plays the vermouth's part), Chive oil and Caviar (which caviar not printed; the line names none); research/producers-bar-white-spirits-agave-2026-10-10.md section 3; research/producers-bar-liqueurs-aperitifs-2026-10-10.md section 4; research/brennans-bar-review-2026-10-15.md (Cap Corse: teaching uses quinquina, the printed spec keeps vermouth)"
+    },
+    {
+      "target": "cocktail:Spoonbill",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "The Spoonbill is our martini-style luxury cocktail, poured only in the Roost Bar: Hendrick’s gin with Cap Corse Mattei Blanc, a Corsican quinquina, and chive oil, served with a spoon of caviar. Cool cucumber and rose, a gentle bitterness, green chive, then salty caviar: one to open a celebration.",
+      "reason": "Drink lines polish 18 October 2026: the 20 second line called the Spoonbill the grandest of the three; it now drops the ranking, says how it tastes in plain words and closes on when to have it, the start of a celebration, from the record's why",
+      "source": "page:brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt line 3 (available exclusively in the Roost Bar & Lounge) and line 6 (Spoonbill: Hendrick's Gin, Cap Corse Mattei Blanc Quinquina vermouth, chive oil, with a \"spoon\" of caviar); research/gap-roost-live-2026-10-03.md section 1; the record's family (martini style), parts (cool cucumber and rose from the gin, a gentle bitter wine note, savoury green chive, then the salt of caviar; a spoon of caviar served alongside) and why (the martini drinker's luxury, at the start of a celebration); the components The Roost's luxury cocktails (the Spoonbill with its spoon of caviar for the start of a big evening), Hendrick's gin (its producer profile: a Scottish gin made at Girvan by William Grant & Sons, launched in 1999, rose and cucumber added after distillation), Cap Corse Mattei Blanc quinquina (its producer profile: L.N. Mattei of Bastia, 1872, a mistelle of Muscat and Vermentinu with cinchona bark and cédrat, the Corsican citron; it plays the vermouth's part), Chive oil and Caviar (which caviar not printed; the line names none); research/producers-bar-white-spirits-agave-2026-10-10.md section 3; research/producers-bar-liqueurs-aperitifs-2026-10-10.md section 4; research/brennans-bar-review-2026-10-15.md (Cap Corse: teaching uses quinquina, the printed spec keeps vermouth)"
+    },
+    {
+      "target": "cocktail:Spoonbill",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "The Spoonbill is our Roost’s answer to the martini, poured only in the Roost Bar and Lounge. Hendrick’s is a Scottish gin from Girvan, launched in 1999 and finished with rose and cucumber. Cap Corse Mattei Blanc is a quinquina from a Bastia house founded in 1872, Muscat and Vermentinu with cinchona bark and Corsican citron, and it plays the vermouth’s part. Chive oil adds a savoury green note, and the drink comes with a spoon of caviar. Cool cucumber and rose, a gentle bitterness, green chive, then the salt of the caviar: one for a gin lover, and a fine start to a celebration.",
+      "reason": "Drink lines polish 18 October 2026: the 45 second line ranked the drink the grandest of the three and quoted the price; it now tells the makers of the gin and the quinquina from their producer profiles (teaching quinquina while the printed spec keeps vermouth), the taste, the Roost's exclusivity and when it belongs, with no price and no caviar the page does not name",
+      "source": "page:brennansneworleans-luxury-roost-bar-cocktails-2026-10-03.txt line 3 (available exclusively in the Roost Bar & Lounge) and line 6 (Spoonbill: Hendrick's Gin, Cap Corse Mattei Blanc Quinquina vermouth, chive oil, with a \"spoon\" of caviar); research/gap-roost-live-2026-10-03.md section 1; the record's family (martini style), parts (cool cucumber and rose from the gin, a gentle bitter wine note, savoury green chive, then the salt of caviar; a spoon of caviar served alongside) and why (the martini drinker's luxury, at the start of a celebration); the components The Roost's luxury cocktails (the Spoonbill with its spoon of caviar for the start of a big evening), Hendrick's gin (its producer profile: a Scottish gin made at Girvan by William Grant & Sons, launched in 1999, rose and cucumber added after distillation), Cap Corse Mattei Blanc quinquina (its producer profile: L.N. Mattei of Bastia, 1872, a mistelle of Muscat and Vermentinu with cinchona bark and cédrat, the Corsican citron; it plays the vermouth's part), Chive oil and Caviar (which caviar not printed; the line names none); research/producers-bar-white-spirits-agave-2026-10-10.md section 3; research/producers-bar-liqueurs-aperitifs-2026-10-10.md section 4; research/brennans-bar-review-2026-10-15.md (Cap Corse: teaching uses quinquina, the printed spec keeps vermouth)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the apple cider in the Apple Crumble fresh cider or hard cider, and is its maple pure maple syrup or a maple liqueur?",
+        "askWhom": "bar",
+        "items": [
+          "Apple Crumble"
+        ],
+        "blocksField": ""
+      },
+      "reason": "Drink lines polish 18 October 2026: the 45 second line says apple cider and maple only as the menu prints them; the components Apple cider and Maple leave the form of each open and no lineup ask covers either",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt lines 386-388 (Apple Cider, Maple); page:brennans-fall-2026-training-sheets-2026-10-15.txt lines 195-207; the components Apple cider (fresh or hard not printed) and Maple (pure syrup or a maple liqueur not printed); research/fall-menu-2026-chatgpt.json (Apple Crumble ingredientNotes: confirm the cider and the maple products)"
+    },
+    {
+      "target": "cocktail:OBX",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "Who makes the Gentilly gin, how the peach goes in, the measures, the glass and the garnish are confirmed with the bar.",
+        "to": "Gentilly Gin is made in New Orleans by Seven Three Distilling; how the peach goes in, the measures, the glass and the garnish are confirmed with the bar."
+      },
+      "reason": "Drink lines polish 18 October 2026: the polished OBX lines name the gin's maker from its producer profile (Seven Three Distilling, New Orleans), so the kept note that still called the distiller unknown contradicted the card; Tell me about it now names the maker and keeps the open build questions",
+      "source": "the pack component Gentilly Gin (producer: Gentilly Gin, Seven Three Distilling Co., 301 North Claiborne Avenue, New Orleans, founded 2017, its spirits named for the city's neighbourhoods); research/producers-bar-white-spirits-agave-2026-10-10.md (Gentilly Gin)"
+    },
+    {
+      "target": "cocktail:OBX",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "Answer: The menu prints Gentilly Gin without the distiller; I will check with the bar.",
+        "to": "Answer: Seven Three Distilling, a New Orleans distillery that names its spirits for the city's neighbourhoods; Gentilly is one of them."
+      },
+      "reason": "Drink lines polish 18 October 2026: the polished OBX lines name the gin's maker from its producer profile (Seven Three Distilling, New Orleans), so the kept note that still called the distiller unknown contradicted the card; the guest's question about the gin now has its answer",
+      "source": "the pack component Gentilly Gin (producer: Gentilly Gin, Seven Three Distilling Co., 301 North Claiborne Avenue, New Orleans, founded 2017, its spirits named for the city's neighbourhoods); research/producers-bar-white-spirits-agave-2026-10-10.md (Gentilly Gin)"
+    },
+    {
+      "target": "cocktail:OBX",
+      "field": "kept.3.a",
+      "op": "replace",
+      "value": {
+        "from": "Who makes the Gentilly gin, the measures and the glass are lineup questions for the bar",
+        "to": "The measures and the glass are lineup questions for the bar"
+      },
+      "reason": "Drink lines polish 18 October 2026: the polished OBX lines name the gin's maker from its producer profile (Seven Three Distilling, New Orleans), so the kept note that still called the distiller unknown contradicted the card; the watch note keeps the open build questions and drops the maker, now known",
+      "source": "the pack component Gentilly Gin (producer: Gentilly Gin, Seven Three Distilling Co., 301 North Claiborne Avenue, New Orleans, founded 2017, its spirits named for the city's neighbourhoods); research/producers-bar-white-spirits-agave-2026-10-10.md (Gentilly Gin)"
     }
   ]
 }

@@ -136,6 +136,17 @@ export function stagingFragmentFiles(names) { return names.map((n) => path.join(
    now; the Hollandaise technique, the Escoffier story, the courtyard turtles, the sauces must-know
    and the Mother sauces term say so; stamped at the quarter hour before its build, never ahead of
    the clock. */
+/* The 12:30 edition of 18 October is the drinks edition: the 32 drinks filed under the menus' own
+   headings in the menus' own order (the cocktail list a guest is handed first, Billboard Songs from
+   1946, Temperance, 1946 and the Sazerac Selections; then the breakfast menu's Classic Eye Openers,
+   Coffee and Cold Pressed Juices, the Bubbles at Brennan's cocktails, the dessert menu's Dessert
+   Cocktails and Coffee Cocktails, and the Luxury Roost Bar Cocktails), ordered by the house's
+   cocktailOrder; and every drink's ten, twenty and forty-five second lines polished to the tableside
+   standard (the spirit and its maker, the build as printed, how it tastes, what it goes with on the
+   house's own menu, one line of the drink's story), staged in four chunks, each written by one
+   bartender and refuted by a second, the two guest lines that follow the twenty set to the new line,
+   the OBX's kept notes given its gin's maker, and one lineup ask for the Apple Crumble's cider and
+   maple; stamped at the quarter hour before its build, never ahead of the clock. */
 /* The 02:00 edition of 18 October is the wine lines edition: every one of the 271 wines' ten, twenty
    and forty-five second lines polished to the tableside standard (the grape and the place, how it is
    made, how it tastes, what it goes with on the house's own menu by the dishes' printed names, how
@@ -157,7 +168,7 @@ export function stagingFragmentFiles(names) { return names.map((n) => path.join(
    here); the nine fall cocktails' sheet notes; the mascarpone, burrata and harissa kept notes set to
    the pack's term cards; and the Fall 2026 sheets filed as the fifteenth source; stamped at the
    quarter hour before its build, never ahead of the clock. */
-export const EDITION_BUILT_AT = '2026-10-18T02:00:00.000Z';
+export const EDITION_BUILT_AT = '2026-10-18T12:30:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a

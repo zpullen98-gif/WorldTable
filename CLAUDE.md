@@ -1414,6 +1414,14 @@ stories) and what to compare it with. The plan is section "CURRENT WORK (5 Oct
   prints with no price (the Fall 2026 training sheets) files on `dish:+` with
   `priceUnknown: true`, an empty price and no printed prices, and the
   assembly refuses it unless an `ask:+` with `blocksField 'price'` names it.
+  The drinks stand in the order the house prints them (18 October 2026): a
+  `house` override sets `cocktailOrder`, every drink once by name, and the
+  builder orders `cocktails` by it before grouping the sections, refusing a
+  name the house lacks, a drink named twice or missed, or an order that splits
+  a section; the field never reaches the pack. The ten sections are the menus'
+  own headings, from Billboard Songs from 1946 to Luxury Roost Bar Cocktails,
+  so the Ledger's Brennan's page, the Table's drink rows and the Codex read
+  the menus' order.
 
 ## Cook at home: the training kitchen (5 October 2026)
 

@@ -137,12 +137,17 @@ describe('the rows on the Brennan’s pack', () => {
 		expect(rows.find((r) => r.name === 'Eggs Hussarde')!.line).toBe(
 			'Poached eggs, coffee-cured Canadian bacon and our own English muffins, with hollandaise and marchand de vin.'
 		);
-		expect(shortLine(byName(PACK, 'Classic Sazerac'))).toBe('Sazerac rye, Peychaud’s bitters and a Herbsaint rinse. New Orleans’ own cocktail.');
+		expect(shortLine(byName(PACK, 'Classic Sazerac'))).toBe(
+			'New Orleans’ own cocktail: Sazerac rye whiskey and Peychaud’s bitters in a Herbsaint-rinsed glass, spicy and aromatic.'
+		);
 	});
 	it('takes a wine’s paraphrase of its own name off, and keeps a line that does not open on it', () => {
 		expect(shortLine(byName(PACK, 'C.H. Berres ‘Old Vines’ Riesling 2022'))).toBe('Light, racy and off-dry, our glass for anything spicy.');
-		const champagne = byName(PACK, 'Brennan’s Essential by Piper-Heidsieck Extra Brut NV');
-		expect(shortLine(champagne)).toBe((champagne.lines!.value as { s10: string }).s10);
+		expect(shortLine(byName(PACK, 'Brennan’s Essential by Piper-Heidsieck Extra Brut NV'))).toBe(
+			'Our house Champagne: Extra Brut, very dry and crisp, a beautiful way to start.'
+		);
+		const lafitte = byName(PACK, 'Charles Lafitte Brut Champagne NV');
+		expect(shortLine(lafitte)).toBe((lafitte.lines!.value as { s10: string }).s10);
 	});
 	it('prints a price once when every meal prints it the same, and never the words by the glass', () => {
 		expect(priceLine(byName(PACK, 'Classic Sazerac'), PACK)).toBe('$13');

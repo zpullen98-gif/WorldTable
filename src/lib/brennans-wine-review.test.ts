@@ -63,8 +63,9 @@ describe('Brennan’s reviewed wine labels and service', () => {
 		expect(glass.name).toBe('Rare Brut 2012 (Coravin)');
 		expect(glass.vintage).toBe('2012');
 		expect(glass.price).toBe('$75 glass');
-		expect(glass.lines!.value.s10).toContain('confirm the vintage');
-		expect(glass.lines!.value.s10).not.toContain('2012');
+		// No line promises a vintage; which one is open is a lineup question.
+		expect(JSON.stringify(glass.lines!.value)).not.toMatch(/2012|2013/);
+		expect(house.askAtLineup!.some(a => a.itemIds.includes(glass.id) && /Which Rare vintage is open/.test(a.question))).toBe(true);
 		expect(wine('w-gcoxn5b8').compare!.value[0].different).toContain('read the open bottle');
 	});
 	it('distinguishes Fichet’s foundation from the next generation joining', () => {

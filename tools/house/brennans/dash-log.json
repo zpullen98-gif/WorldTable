@@ -1,6 +1,6 @@
 {
 	"about": "Every string the dash pass changed while building the Brennan's house, before and after, for a person to read for a changed meaning; an entry with an override number is a string an overrides.json entry set, not the guide's.",
-	"count": 298,
+	"count": 290,
 	"changes": [
 		{
 			"path": "model.card.sources[0].title",
@@ -1292,29 +1292,9 @@
 			"override": 122
 		},
 		{
-			"path": "model.cocktails[0].lines.s10",
-			"before": "Our Brandy Milk Punch — brandy, cream, vanilla bean and nutmeg. The classic New Orleans eye opener.",
-			"after": "Our Brandy Milk Punch: brandy, cream, vanilla bean and nutmeg. The classic New Orleans eye opener."
-		},
-		{
-			"path": "model.cocktails[0].lines.s20",
-			"before": "The Brandy Milk Punch is New Orleans’ classic breakfast cocktail: brandy with heavy cream and vanilla bean, finished with nutmeg — cold, creamy and gently boozy.",
-			"after": "The Brandy Milk Punch is New Orleans’ classic breakfast cocktail: brandy with heavy cream and vanilla bean, finished with nutmeg, cold, creamy and gently boozy."
-		},
-		{
 			"path": "model.cocktails[0].serviceNote",
 			"before": "Dairy. Alcohol. It opens the Traditional Breakfast tasting. Offer it at the greeting — it’s the first sale of the morning.",
 			"after": "Dairy. Alcohol. It opens the Traditional Breakfast tasting. Offer it at the greeting, it’s the first sale of the morning."
-		},
-		{
-			"path": "model.cocktails[1].lines.s10",
-			"before": "The Bloody Bull — our Bloody Mary made with beef bouillon. A Brennan’s breakfast classic.",
-			"after": "The Bloody Bull, our Bloody Mary made with beef bouillon. A Brennan’s breakfast classic."
-		},
-		{
-			"path": "model.cocktails[1].lines.s45",
-			"before": "The Bloody Bull is a Brennan’s breakfast classic: our housemade Bloody Mary mix and vodka, with beef bouillon — a clear, savory beef broth — stirred in. The bouillon gives it a rich, meaty depth, almost like a spicy, chilled consommé. It’s the drink we pour with the soup course on our Traditional Breakfast, and it’s wonderful with the turtle soup. If you prefer it classic, our Brennan’s Bloody Mary comes with pickled okra and spicy beans.",
-			"after": "The Bloody Bull is a Brennan’s breakfast classic: our housemade Bloody Mary mix and vodka, with beef bouillon, a clear, savory beef broth, stirred in. The bouillon gives it a rich, meaty depth, almost like a spicy, chilled consommé. It’s the drink we pour with the soup course on our Traditional Breakfast, and it’s wonderful with the turtle soup. If you prefer it classic, our Brennan’s Bloody Mary comes with pickled okra and spicy beans."
 		},
 		{
 			"path": "model.cocktails[1].serviceNote",
@@ -1322,31 +1302,10 @@
 			"after": "Contains beef: not vegetarian (offer the Brennan’s Bloody Mary, $11, and ask the bar about the mix). Spice level from the mix; Bloody Mary mixes usually include Worcestershire (anchovy). Alcohol."
 		},
 		{
-			"path": "model.cocktails[2].lines.s10",
-			"before": "The Classic Sazerac — Sazerac rye, Peychaud’s bitters and a Herbsaint rinse. New Orleans’ own cocktail.",
-			"after": "The Classic Sazerac, Sazerac rye, Peychaud’s bitters and a Herbsaint rinse. New Orleans’ own cocktail."
-		},
-		{
-			"path": "model.cocktails[2].lines.s20",
-			"before": "The Sazerac is New Orleans’ official cocktail: Sazerac rye whiskey and Peychaud’s bitters, served in a glass rinsed with Herbsaint, the anise liqueur created in New Orleans in 1934 — spicy, aromatic and strong.",
-			"after": "The Sazerac is New Orleans’ official cocktail: Sazerac rye whiskey and Peychaud’s bitters, served in a glass rinsed with Herbsaint, the anise liqueur created in New Orleans in 1934, spicy, aromatic and strong.",
-			"override": 30
-		},
-		{
 			"path": "model.cocktails[2].serviceNote",
 			"before": "Spirit-forward and strong — served without ice (confirm the glass and the bar’s build). Upsells: Thompson’s Dream ($20, Willett 4-year rye, Bitter Truth Creole Bitters, St. George absinthe rinse) and Origin Story ($40, Dudognon Cognac, barrel-aged Peychaud’s, Jade Nouvelle-Orléans absinthe). Herbsaint is ERB-saint.",
 			"after": "Spirit-forward and strong, served without ice (confirm the glass and the bar’s build). Upsells: Thompson’s Dream ($20, Willett 4-year rye, Bitter Truth Creole Bitters, St. George absinthe rinse) and Origin Story ($40, Dudognon Cognac, barrel-aged Peychaud’s, Jade Nouvelle-Orléans absinthe). Herbsaint is ERB-saint.",
 			"override": 387
-		},
-		{
-			"path": "model.cocktails[3].lines.s10",
-			"before": "Brennan’s Irish Coffee — chicory coffee, brown sugar and Tullamore Dew under whipped cream.",
-			"after": "Brennan’s Irish Coffee, chicory coffee, brown sugar and Tullamore Dew under whipped cream."
-		},
-		{
-			"path": "model.cocktails[3].lines.s45",
-			"before": "It’s an Irish coffee with a New Orleans accent. We start with our dark roast coffee with chicory — roasted chicory root, a New Orleans tradition that adds a roasty, almost chocolatey depth — sweeten it with brown sugar, add Tullamore Dew Irish whiskey, and top it with whipped cream. You sip the hot coffee through the cool cream. It’s perfect with Bananas Foster or bread pudding.",
-			"after": "It’s an Irish coffee with a New Orleans accent. We start with our dark roast coffee with chicory, roasted chicory root, a New Orleans tradition that adds a roasty, almost chocolatey depth, sweeten it with brown sugar, add Tullamore Dew Irish whiskey, and top it with whipped cream. You sip the hot coffee through the cool cream. It’s perfect with Bananas Foster or bread pudding."
 		},
 		{
 			"path": "model.cocktails[4].lines.s10",

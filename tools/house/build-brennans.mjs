@@ -820,6 +820,32 @@ model.card.dressCode = dressKnow.body.split(/\s+(?=The kitchen)/)[0].trim();
 const clean = dashWalk(model, 'model');
 /* Retired records leave only now, after the dash pass, so the paths the dash log names still count them. */
 for (const list of ['dishes', 'wines', 'cocktails']) clean[list] = clean[list].filter((r) => !r.retired);
+/* The drinks in the order the house prints them, when the overrides name it: the house field
+   cocktailOrder, every drink once by its name. The menus print the cocktail list first (the Billboard
+   Songs, the Temperance drinks, the Sazerac Selections), then the breakfast menu's eye openers, coffee
+   and juice, the Bubbles list, the dessert menu's cocktails and the Roost Bar's, so the order is written
+   once rather than left to whichever section the guide happened to print first. A name the house lacks,
+   a drink named twice or missed, or an order that splits a section, fails. The field is the builder's
+   alone: it never reaches the pack. */
+if (clean.card.cocktailOrder !== undefined) {
+	const order = clean.card.cocktailOrder;
+	if (!Array.isArray(order) || !order.every((x) => typeof x === 'string' && x.trim() !== '')) fail(`${REL(OVERRIDES)}: the house cocktailOrder is a list of drink names`);
+	const at = new Map();
+	order.forEach((name, i) => {
+		const r = clean.cocktails.find((c) => slug(c.name) === slug(name));
+		if (!r) fail(`${REL(OVERRIDES)}: the house cocktailOrder names ${name}, which is not a drink in the house`);
+		if (at.has(r)) fail(`${REL(OVERRIDES)}: the house cocktailOrder names ${r.name} twice`);
+		at.set(r, i);
+	});
+	const missed = clean.cocktails.filter((c) => !at.has(c));
+	if (missed.length) fail(`${REL(OVERRIDES)}: the house cocktailOrder misses ${missed.map((c) => c.name).join(', ')}`);
+	clean.cocktails.sort((a, b) => at.get(a) - at.get(b));
+	const runs = [];
+	for (const c of clean.cocktails) if (runs[runs.length - 1] !== c.section) runs.push(c.section);
+	const split = runs.find((sec, i) => runs.indexOf(sec) !== i);
+	if (split) fail(`${REL(OVERRIDES)}: the house cocktailOrder splits the section ${split}; keep each section's drinks together`);
+	delete clean.card.cocktailOrder;
+}
 /* Each section's items together, in the order the sections first appear, the rest of the order kept: an
    item an override files into a section the guide already printed (the Barbera, the Bubbles cocktails)
    joins that section rather than trailing the list, which is the order every wing's study view reads. */

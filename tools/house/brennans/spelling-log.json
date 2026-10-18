@@ -1,6 +1,6 @@
 {
 	"about": "Every string the spelling map changed while building the Brennan's house: the research writes British English and the house is American, so each British form became its American spelling.",
-	"count": 1039,
+	"count": 1051,
 	"changes": [
 		{
 			"path": "model.dishes[1].lines.s45",
@@ -1657,6 +1657,39 @@
 			]
 		},
 		{
+			"path": "model.cocktails[1].lines.s10",
+			"before": "The Bloody Bull: vodka, our housemade Bloody Mary mix and beef bouillon, savoury and rich. A Brennan’s breakfast classic.",
+			"after": "The Bloody Bull: vodka, our housemade Bloody Mary mix and beef bouillon, savory and rich. A Brennan’s breakfast classic.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.cocktails[1].lines.s20",
+			"before": "The Bloody Bull is a Bloody Mary with beef bouillon added: vodka, our housemade Bloody Mary mix and a clear, savoury beef broth. Rich, meaty and spiced, a Brennan’s breakfast classic, and lovely with the Turtle Soup.",
+			"after": "The Bloody Bull is a Bloody Mary with beef bouillon added: vodka, our housemade Bloody Mary mix and a clear, savory beef broth. Rich, meaty and spiced, a Brennan’s breakfast classic, and lovely with the Turtle Soup.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.cocktails[1].lines.s45",
+			"before": "The Bloody Bull is a Brennan’s breakfast classic: our housemade Bloody Mary mix, vodka and beef bouillon, a clear, savoury beef broth. The bouillon gives it a rich, meaty depth, almost like a spicy, chilled consommé, with the spice of our house mix behind it. We pour it with the soup course on our Traditional Breakfast, beside the Turtle Soup or the Seafood Gumbo, and it is wonderful with the Turtle Soup. It joins two classics, the Bloody Mary and the Bull Shot, vodka and cold beef bouillon, credited to the Caucus Club in Detroit in 1952. At breakfast or lunch it is a savoury eye opener.",
+			"after": "The Bloody Bull is a Brennan’s breakfast classic: our housemade Bloody Mary mix, vodka and beef bouillon, a clear, savory beef broth. The bouillon gives it a rich, meaty depth, almost like a spicy, chilled consommé, with the spice of our house mix behind it. We pour it with the soup course on our Traditional Breakfast, beside the Turtle Soup or the Seafood Gumbo, and it is wonderful with the Turtle Soup. It joins two classics, the Bloody Mary and the Bull Shot, vodka and cold beef bouillon, credited to the Caucus Club in Detroit in 1952. At breakfast or lunch it is a savory eye opener.",
+			"words": [
+				"savoury",
+				"savoury"
+			]
+		},
+		{
+			"path": "model.cocktails[1].guest",
+			"before": "The Bloody Bull is a Bloody Mary with beef bouillon added: vodka, our housemade Bloody Mary mix and a clear, savoury beef broth. Rich, meaty and spiced, a Brennan’s breakfast classic, and lovely with the Turtle Soup.",
+			"after": "The Bloody Bull is a Bloody Mary with beef bouillon added: vodka, our housemade Bloody Mary mix and a clear, savory beef broth. Rich, meaty and spiced, a Brennan’s breakfast classic, and lovely with the Turtle Soup.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
 			"path": "model.cocktails[5].guest",
 			"before": "Seedlip Grove 42, a British citrus non-alcoholic spirit at 0.0 per cent alcohol, with local watermelon and tonic: bright and dry, $15.",
 			"after": "Seedlip Grove 42, a British citrus non-alcoholic spirit at 0.0 percent alcohol, with local watermelon and tonic: bright and dry, $15.",
@@ -1674,11 +1707,67 @@
 			]
 		},
 		{
+			"path": "model.cocktails[14].lines.s10",
+			"before": "The Spoonbill: Hendrick’s gin and Cap Corse Mattei Blanc quinquina with chive oil, and a spoon of caviar. Cool and savoury.",
+			"after": "The Spoonbill: Hendrick’s gin and Cap Corse Mattei Blanc quinquina with chive oil, and a spoon of caviar. Cool and savory.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.cocktails[14].lines.s45",
+			"before": "The Spoonbill is our Roost’s answer to the martini, poured only in the Roost Bar and Lounge. Hendrick’s is a Scottish gin from Girvan, launched in 1999 and finished with rose and cucumber. Cap Corse Mattei Blanc is a quinquina from a Bastia house founded in 1872, Muscat and Vermentinu with cinchona bark and Corsican citron, and it plays the vermouth’s part. Chive oil adds a savoury green note, and the drink comes with a spoon of caviar. Cool cucumber and rose, a gentle bitterness, green chive, then the salt of the caviar: one for a gin lover, and a fine start to a celebration.",
+			"after": "The Spoonbill is our Roost’s answer to the martini, poured only in the Roost Bar and Lounge. Hendrick’s is a Scottish gin from Girvan, launched in 1999 and finished with rose and cucumber. Cap Corse Mattei Blanc is a quinquina from a Bastia house founded in 1872, Muscat and Vermentinu with cinchona bark and Corsican citron, and it plays the vermouth’s part. Chive oil adds a savory green note, and the drink comes with a spoon of caviar. Cool cucumber and rose, a gentle bitterness, green chive, then the salt of the caviar: one for a gin lover, and a fine start to a celebration.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.cocktails[16].lines.s45",
+			"before": "Origin Story is our Cognac interpretation of the Sazerac. By the Sazerac Company’s account, the name goes back to Sazerac de Forge et Fils Cognac, poured at the Sazerac Coffee House in the 1850s before rye took over; ours honours that story without claiming to recreate it. The Cognac is Dudognon, a family estate in Grande Champagne growing its own grapes since 1776 and adding nothing but water. With it go barrel-aged Peychaud’s and Jade Nouvelle-Orléans, a French absinthe distilled in Saumur as a tribute to New Orleans’ nineteenth-century absinthe houses. Grape, dried fruit and oak under anise: lovely after the dinner tasting or with the Roasted Chateaubriand.",
+			"after": "Origin Story is our Cognac interpretation of the Sazerac. By the Sazerac Company’s account, the name goes back to Sazerac de Forge et Fils Cognac, poured at the Sazerac Coffee House in the 1850s before rye took over; ours honors that story without claiming to recreate it. The Cognac is Dudognon, a family estate in Grande Champagne growing its own grapes since 1776 and adding nothing but water. With it go barrel-aged Peychaud’s and Jade Nouvelle-Orléans, a French absinthe distilled in Saumur as a tribute to New Orleans’ nineteenth-century absinthe houses. Grape, dried fruit and oak under anise: lovely after the dinner tasting or with the Roasted Chateaubriand.",
+			"words": [
+				"honours"
+			]
+		},
+		{
 			"path": "model.cocktails[16].kept[1].a",
 			"before": "The Sazerac Company's history connects the drink with Sazerac de Forge et Fils Cognac and describes a later shift toward rye amid phylloxera shortages. This is the producer's historical account, not proof of an exact first recipe or a universal change on one date. Origin Story is Brennan's Cognac interpretation of the Sazerac family.\n\nThe saved menu prints Dudognon Cognac, barrel-aged Peychaud's and Jade Nouvelle-Orléans absinthe at $40. Confirm the Cognac expression, the bitters bottle or ageing process, measures, glass and service with the bar. Its grape spirit makes a useful comparison with the two rye based Sazeracs; taste the current preparation before asserting that it is softer or richer. Ask whether the guest wants to explore Cognac or prefers the familiar rye direction, then explain the ingredient and price differences without treating cost as a strength ranking.",
 			"after": "The Sazerac Company's history connects the drink with Sazerac de Forge et Fils Cognac and describes a later shift toward rye amid phylloxera shortages. This is the producer's historical account, not proof of an exact first recipe or a universal change on one date. Origin Story is Brennan's Cognac interpretation of the Sazerac family.\n\nThe saved menu prints Dudognon Cognac, barrel-aged Peychaud's and Jade Nouvelle-Orléans absinthe at $40. Confirm the Cognac expression, the bitters bottle or aging process, measures, glass and service with the bar. Its grape spirit makes a useful comparison with the two rye based Sazeracs; taste the current preparation before asserting that it is softer or richer. Ask whether the guest wants to explore Cognac or prefers the familiar rye direction, then explain the ingredient and price differences without treating cost as a strength ranking.",
 			"words": [
 				"ageing"
+			]
+		},
+		{
+			"path": "model.cocktails[17].lines.s10",
+			"before": "Brennan’s Bloody Mary: vodka and our housemade Bloody Mary mix, with pickled okra and spicy beans. Savoury and tangy.",
+			"after": "Brennan’s Bloody Mary: vodka and our housemade Bloody Mary mix, with pickled okra and spicy beans. Savory and tangy.",
+			"words": [
+				"Savoury"
+			]
+		},
+		{
+			"path": "model.cocktails[17].lines.s20",
+			"before": "Our Bloody Mary is vodka with our housemade Bloody Mary mix, finished with pickled okra and spicy beans. Savoury, tangy and bright, with a pickled crunch, it is a classic eye opener at breakfast or lunch.",
+			"after": "Our Bloody Mary is vodka with our housemade Bloody Mary mix, finished with pickled okra and spicy beans. Savory, tangy and bright, with a pickled crunch, it is a classic eye opener at breakfast or lunch.",
+			"words": [
+				"Savoury"
+			]
+		},
+		{
+			"path": "model.cocktails[17].lines.s45",
+			"before": "Brennan’s Bloody Mary is one of our classic eye openers, the morning drinks a proper New Orleans breakfast starts with. It is vodka with our housemade Bloody Mary mix, finished with pickled okra and spicy beans for a crisp, tangy, local accent. Okra came to the South from West Africa and gave gumbo its name, and pickled, it stays crisp. The Bloody Mary itself is credited to a bartender at Harry’s New York Bar in Paris, about 1921, and was seasoned later at the St. Regis in New York. Savoury, tangy and spicy, with a pickled crunch, it belongs at breakfast or lunch, before the food arrives.",
+			"after": "Brennan’s Bloody Mary is one of our classic eye openers, the morning drinks a proper New Orleans breakfast starts with. It is vodka with our housemade Bloody Mary mix, finished with pickled okra and spicy beans for a crisp, tangy, local accent. Okra came to the South from West Africa and gave gumbo its name, and pickled, it stays crisp. The Bloody Mary itself is credited to a bartender at Harry’s New York Bar in Paris, about 1921, and was seasoned later at the St. Regis in New York. Savory, tangy and spicy, with a pickled crunch, it belongs at breakfast or lunch, before the food arrives.",
+			"words": [
+				"Savoury"
+			]
+		},
+		{
+			"path": "model.cocktails[22].lines.s45",
+			"before": "Revive is a locally made, cold-pressed juice of strawberry, apple and pineapple, served cold. Strawberry gives it its colour and a sweet red fruit perfume, apple gives it body and a clean sweetness, and pineapple adds the tang that keeps it lively. In New Orleans a proper breakfast starts with an eye opener, and Revive lets a guest who is not drinking share the ritual: a bright, spirit-free glass beside the Brandy Milk Punch and the Bloody Bull. Sweet, tangy and fruity, it suits breakfast or lunch, and the whole table, children included.",
+			"after": "Revive is a locally made, cold-pressed juice of strawberry, apple and pineapple, served cold. Strawberry gives it its color and a sweet red fruit perfume, apple gives it body and a clean sweetness, and pineapple adds the tang that keeps it lively. In New Orleans a proper breakfast starts with an eye opener, and Revive lets a guest who is not drinking share the ritual: a bright, spirit-free glass beside the Brandy Milk Punch and the Bloody Bull. Sweet, tangy and fruity, it suits breakfast or lunch, and the whole table, children included.",
+			"words": [
+				"colour"
 			]
 		},
 		{
@@ -1706,20 +1795,28 @@
 			]
 		},
 		{
-			"path": "model.cocktails[35].lines.s45",
-			"before": "Ralph's Coffee brings together dark roast coffee with chicory, Frangelico hazelnut liqueur, Nocello walnut liqueur and whipped cream. Expect a roasty, nutty direction with cream on top. It is $8.00 on the saved menu. Would you prefer that nutty profile or the Irish whiskey and brown sugar listed in our Irish Coffee? I can help you choose by flavour and check the current preparation.",
-			"after": "Ralph's Coffee brings together dark roast coffee with chicory, Frangelico hazelnut liqueur, Nocello walnut liqueur and whipped cream. Expect a roasty, nutty direction with cream on top. It is $8.00 on the saved menu. Would you prefer that nutty profile or the Irish whiskey and brown sugar listed in our Irish Coffee? I can help you choose by flavor and check the current preparation.",
-			"words": [
-				"flavour"
-			]
-		},
-		{
 			"path": "model.cocktails[35].kept[2].a",
 			"before": "Ralph's Coffee is $8.00 on the saved dessert menu. It lists dark roast coffee with chicory, Frangelico hazelnut liqueur, Nocello walnut liqueur and whipped cream. The named ingredients suggest a roasty, nutty direction with cream, making the drink useful for a guest who enjoys coffee and nut flavours at dessert. Explain the two liqueurs individually so the guest understands the choice.\n\nThis is a useful comparison with Brennan's Irish Coffee, whose menu lists Irish whiskey and brown sugar. Compare the named ingredients and ask which flavour direction the guest prefers; the menu alone cannot rank their alcohol or caffeine content. Nor does a short list prove an unlisted ingredient is absent from a full recipe. Confirm temperature, glass, measures and full ingredients with the bar. The source of the name is unconfirmed, so ask a manager before giving a namesake story.",
 			"after": "Ralph's Coffee is $8.00 on the saved dessert menu. It lists dark roast coffee with chicory, Frangelico hazelnut liqueur, Nocello walnut liqueur and whipped cream. The named ingredients suggest a roasty, nutty direction with cream, making the drink useful for a guest who enjoys coffee and nut flavors at dessert. Explain the two liqueurs individually so the guest understands the choice.\n\nThis is a useful comparison with Brennan's Irish Coffee, whose menu lists Irish whiskey and brown sugar. Compare the named ingredients and ask which flavor direction the guest prefers; the menu alone cannot rank their alcohol or caffeine content. Nor does a short list prove an unlisted ingredient is absent from a full recipe. Confirm temperature, glass, measures and full ingredients with the bar. The source of the name is unconfirmed, so ask a manager before giving a namesake story.",
 			"words": [
 				"flavours",
 				"flavour"
+			]
+		},
+		{
+			"path": "model.cocktails[38].lines.s45",
+			"before": "OBX is the common shorthand for the Outer Banks, the barrier islands off North Carolina, a beach name for the courtyard. The gin is Gentilly, from Seven Three Distilling in New Orleans, which names its spirits for the city’s neighbourhoods; its seventeen botanicals, persimmon and elderflower among them, were inspired by the traiteurs, Louisiana’s old folk healers. With it go peach and lemon, topped with Elio Perrone Bigaro, a softly sparkling pink wine from a family estate in Piedmont, half Brachetto and half Moscato. Ripe peach and lemon over the gin, with red berries, rose and a gentle sweetness: the gin drinker’s glass at Bubbles at Brennan’s.",
+			"after": "OBX is the common shorthand for the Outer Banks, the barrier islands off North Carolina, a beach name for the courtyard. The gin is Gentilly, from Seven Three Distilling in New Orleans, which names its spirits for the city’s neighborhoods; its seventeen botanicals, persimmon and elderflower among them, were inspired by the traiteurs, Louisiana’s old folk healers. With it go peach and lemon, topped with Elio Perrone Bigaro, a softly sparkling pink wine from a family estate in Piedmont, half Brachetto and half Moscato. Ripe peach and lemon over the gin, with red berries, rose and a gentle sweetness: the gin drinker’s glass at Bubbles at Brennan’s.",
+			"words": [
+				"neighbourhoods"
+			]
+		},
+		{
+			"path": "model.cocktails[38].kept[2].a",
+			"before": "Asked: What does OBX mean?\n\nAnswer: It is the common shorthand for the barrier islands of North Carolina; the menu says no more about the name.\n\nAsked: What is Bigaro?\n\nAnswer: Bee-gah-ROH: an Italian sparkling wine from Elio Perrone in Piedmont, gently sweet. I will ask the sommelier for more if you are curious.\n\nAsked: Who makes the gin?\n\nAnswer: Seven Three Distilling, a New Orleans distillery that names its spirits for the city's neighbourhoods; Gentilly is one of them.",
+			"after": "Asked: What does OBX mean?\n\nAnswer: It is the common shorthand for the barrier islands of North Carolina; the menu says no more about the name.\n\nAsked: What is Bigaro?\n\nAnswer: Bee-gah-ROH: an Italian sparkling wine from Elio Perrone in Piedmont, gently sweet. I will ask the sommelier for more if you are curious.\n\nAsked: Who makes the gin?\n\nAnswer: Seven Three Distilling, a New Orleans distillery that names its spirits for the city's neighborhoods; Gentilly is one of them.",
+			"words": [
+				"neighbourhoods"
 			]
 		},
 		{

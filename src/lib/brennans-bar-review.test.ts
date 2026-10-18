@@ -22,7 +22,11 @@ describe('Brennan’s reviewed bar facts and service boundaries', () => {
 		expect(chandon.explain!.value).toContain('Long Charmat');
 		expect(chandon.explain!.value).toMatch(/not confirmation[^.]*Brennan/);
 		expect(chandon.producer!.value.askKitchen!.join(' ')).toMatch(/separate ingredients[^?]*prepared bottle/);
-		expect(spritz.lines!.value.s45).toMatch(/confirm whether[^.]*ready to serve[^.]*builds/);
+		// The forty-five says what the menu prints and claims neither a build nor a prepared bottle;
+		// the open question is the bar's at lineup.
+		expect(spritz.lines!.value.s45).toMatch(/bitter orange liqueur with Chandon Brut/);
+		expect(spritz.lines!.value.s45).not.toMatch(/ready to serve|ready made|prepared|we build|built at the bar|bottled spritz/i);
+		expect(house.askAtLineup!.some(a => a.itemIds.includes(spritz.id) && /built at the bar or poured ready made/.test(a.question))).toBe(true);
 		expect(text(spritz.compare)).not.toMatch(/both[^.]*traditional method|same[^.]*bottle fermentation/i);
 	});
 
