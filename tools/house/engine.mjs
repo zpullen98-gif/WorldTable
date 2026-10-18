@@ -136,7 +136,15 @@ export function stagingFragmentFiles(names) { return names.map((n) => path.join(
    now; the Hollandaise technique, the Escoffier story, the courtyard turtles, the sauces must-know
    and the Mother sauces term say so; stamped at the quarter hour before its build, never ahead of
    the clock. */
-/* The 12:30 edition of 17 October is the Fall 2026 edition: the eight dishes of the owner's Fall 2026
+/* The 02:00 edition of 18 October is the wine lines edition: every one of the 271 wines' ten, twenty
+   and forty-five second lines polished to the tableside standard (the grape and the place, how it is
+   made, how it tastes, what it goes with on the house's own menu by the dishes' printed names, how
+   the house pours it and one line of the producer's or the place's story), staged in thirty chunks
+   by how the wine is sold and by section, each written by one sommelier and refuted by a second, a
+   dish named only where the pack pairs it with the wine or the record names that dish; and the
+   lineup asks the polish raised where a record and its sources disagree; stamped at the quarter
+   hour before its build, never ahead of the clock.
+   The 12:30 edition of 17 October is the Fall 2026 edition: the eight dishes of the owner's Fall 2026
    training sheets (pages/brennans-fall-2026-training-sheets-2026-10-15.txt), filed in a Fall 2026
    section with no price (priceUnknown, a manager ask blocking the price), each with its pairing, its
    bottle tiers, its lineup asks, its components and its compare rows; the polished lines of every
@@ -149,7 +157,7 @@ export function stagingFragmentFiles(names) { return names.map((n) => path.join(
    here); the nine fall cocktails' sheet notes; the mascarpone, burrata and harissa kept notes set to
    the pack's term cards; and the Fall 2026 sheets filed as the fifteenth source; stamped at the
    quarter hour before its build, never ahead of the clock. */
-export const EDITION_BUILT_AT = '2026-10-17T12:30:00.000Z';
+export const EDITION_BUILT_AT = '2026-10-18T02:00:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a

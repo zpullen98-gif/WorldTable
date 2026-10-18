@@ -1,6 +1,6 @@
 {
 	"about": "Every string the spelling map changed while building the Brennan's house: the research writes British English and the house is American, so each British form became its American spelling.",
-	"count": 931,
+	"count": 1039,
 	"changes": [
 		{
 			"path": "model.dishes[1].lines.s45",
@@ -742,6 +742,22 @@
 			]
 		},
 		{
+			"path": "model.wines[0].lines.s20",
+			"before": "Our house Champagne comes from Piper-Heidsieck in Reims and is labelled for Brennan's. It's Extra Brut, a very dry style: citrus, orchard fruit and brioche, fine bubbles and a chalky finish, lovely with the Turtle Soup, the Grand Isle Jewel Oysters and the Eggs Hussarde.",
+			"after": "Our house Champagne comes from Piper-Heidsieck in Reims and is labeled for Brennan's. It's Extra Brut, a very dry style: citrus, orchard fruit and brioche, fine bubbles and a chalky finish, lovely with the Turtle Soup, the Grand Isle Jewel Oysters and the Eggs Hussarde.",
+			"words": [
+				"labelled"
+			]
+		},
+		{
+			"path": "model.wines[0].lines.s45",
+			"before": "Brennan's Essential is our house Champagne, an Extra Brut from Piper-Heidsieck, labelled for us. Its bubbles come from a second fermentation in the bottle, and it's very dry: citrus, orchard fruit, brioche and a firm, chalky finish. That dryness and fine bubbles cut rich, salty food, so it's our first pick with the Turtle Soup, the Grand Isle Jewel Oysters and the Eggs Hussarde, and lovely with the Creole Caesar, the Louisiana Oysters and the Crab & Corn Omelette. We pour it at 43 to 46°F in a tulip, easing the cork out with a quiet sigh. Piper-Heidsieck was founded in Reims in 1785.",
+			"after": "Brennan's Essential is our house Champagne, an Extra Brut from Piper-Heidsieck, labeled for us. Its bubbles come from a second fermentation in the bottle, and it's very dry: citrus, orchard fruit, brioche and a firm, chalky finish. That dryness and fine bubbles cut rich, salty food, so it's our first pick with the Turtle Soup, the Grand Isle Jewel Oysters and the Eggs Hussarde, and lovely with the Creole Caesar, the Louisiana Oysters and the Crab & Corn Omelette. We pour it at 43 to 46°F in a tulip, easing the cork out with a quiet sigh. Piper-Heidsieck was founded in Reims in 1785.",
+			"words": [
+				"labelled"
+			]
+		},
+		{
 			"path": "model.wines[4].profile",
 			"before": "Light-bodied Mosel Riesling from old vines: green apple, peach, slate and racy acidity. It is off-dry: a touch of sweetness, about twenty grams of sugar a litre, with only 11.5% alcohol and racy Mosel acidity, which is why it is our glass for spice and for the maple on the duck. The estate is at Ürzig in the Middle Mosel, a family with roots to 1510. Taste it at lineup if the vintage has changed.",
 			"after": "Light-bodied Mosel Riesling from old vines: green apple, peach, slate and racy acidity. It is off-dry: a touch of sweetness, about twenty grams of sugar a liter, with only 11.5% alcohol and racy Mosel acidity, which is why it is our glass for spice and for the maple on the duck. The estate is at Ürzig in the Middle Mosel, a family with roots to 1510. Taste it at lineup if the vintage has changed.",
@@ -750,11 +766,853 @@
 			]
 		},
 		{
+			"path": "model.wines[10].lines.s45",
+			"before": "Château Minuty stands at Gassin, on the hills above the Gulf of Saint-Tropez, and its Prestige is a Grenache-led Côtes de Provence rosé, pressed pale and bottled young. It’s dry and refreshing: white peach, wild strawberry and citrus zest, with a light mineral finish. Its freshness and red fruit are made for tomatoes and shrimp, so it’s our first pick with the Creole Tomato Tostada and the New Orleans Shrimp & Grits, and lovely in the courtyard on a warm afternoon. We serve it at 45 to 48 degrees in a white-wine glass, kept in ice and water, and pour it where you can see that pale colour.",
+			"after": "Château Minuty stands at Gassin, on the hills above the Gulf of Saint-Tropez, and its Prestige is a Grenache-led Côtes de Provence rosé, pressed pale and bottled young. It’s dry and refreshing: white peach, wild strawberry and citrus zest, with a light mineral finish. Its freshness and red fruit are made for tomatoes and shrimp, so it’s our first pick with the Creole Tomato Tostada and the New Orleans Shrimp & Grits, and lovely in the courtyard on a warm afternoon. We serve it at 45 to 48 degrees in a white-wine glass, kept in ice and water, and pour it where you can see that pale color.",
+			"words": [
+				"colour"
+			]
+		},
+		{
+			"path": "model.wines[12].lines.s20",
+			"before": "With the Redfish Véronique on the tasting we pour Louis Jadot's Beaune Premier Cru, Pinot Noir from Burgundy's wine capital: bright red fruit, silky, with a savoury edge, light enough for fish and lovely with the hibiscus-pickled grapes.",
+			"after": "With the Redfish Véronique on the tasting we pour Louis Jadot's Beaune Premier Cru, Pinot Noir from Burgundy's wine capital: bright red fruit, silky, with a savory edge, light enough for fish and lovely with the hibiscus-pickled grapes.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[12].lines.s45",
+			"before": "Louis Jadot's Beaune Premier Cru is Pinot Noir from Beaune, the wine capital of Burgundy; Beaune has no Grand Cru, so Premier Cru is its top tier. It's bright red fruit, silky, with a savoury edge, and light in tannin, so it's gentle with fish: on our Dinner Tasting Menu it comes with the Redfish Véronique, and its red fruit loves the hibiscus-pickled grapes. For finesse over power, it suits the Roasted Chateaubriand too. We open it 20 to 30 minutes ahead and pour 4 oz at 57 to 60°F in a Burgundy bowl. Jadot was founded in Beaune in 1859; Bacchus is on every label.",
+			"after": "Louis Jadot's Beaune Premier Cru is Pinot Noir from Beaune, the wine capital of Burgundy; Beaune has no Grand Cru, so Premier Cru is its top tier. It's bright red fruit, silky, with a savory edge, and light in tannin, so it's gentle with fish: on our Dinner Tasting Menu it comes with the Redfish Véronique, and its red fruit loves the hibiscus-pickled grapes. For finesse over power, it suits the Roasted Chateaubriand too. We open it 20 to 30 minutes ahead and pour 4 oz at 57 to 60°F in a Burgundy bowl. Jadot was founded in Beaune in 1859; Bacchus is on every label.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
 			"path": "model.wines[14].origin",
 			"before": "All Syrah from fifty year old vines on two parcels beside Châteauneuf-du-Pape, nine kilometres from Orange, farmed organically without certification; unusual in the south, where Grenache usually leads.",
 			"after": "All Syrah from fifty year old vines on two parcels beside Châteauneuf-du-Pape, nine kilometers from Orange, farmed organically without certification; unusual in the south, where Grenache usually leads.",
 			"words": [
 				"kilometres"
+			]
+		},
+		{
+			"path": "model.wines[15].lines.s45",
+			"before": "The Moulin d’Issan is made by the team behind Château d’Issan, a moated château in Margaux, from vineyards on low ground outside the Margaux appellation, so it’s labelled Bordeaux Supérieur, and it’s named for a ruined seventeenth century windmill. It’s Merlot and Cabernet Sauvignon, aged partly in new barrels: cassis, plum and cedar, medium-bodied with polished tannin. That structure is what steak and béarnaise want, so it’s our first pick with the Creole-Spiced Hanger Steak, and the more structured choice with the Petite Filet Mignon and the Creole Hanger Steak. We pour it at 60 to 62 degrees in a Bordeaux glass.",
+			"after": "The Moulin d’Issan is made by the team behind Château d’Issan, a moated château in Margaux, from vineyards on low ground outside the Margaux appellation, so it’s labeled Bordeaux Supérieur, and it’s named for a ruined seventeenth century windmill. It’s Merlot and Cabernet Sauvignon, aged partly in new barrels: cassis, plum and cedar, medium-bodied with polished tannin. That structure is what steak and béarnaise want, so it’s our first pick with the Creole-Spiced Hanger Steak, and the more structured choice with the Petite Filet Mignon and the Creole Hanger Steak. We pour it at 60 to 62 degrees in a Bordeaux glass.",
+			"words": [
+				"labelled"
+			]
+		},
+		{
+			"path": "model.wines[16].lines.s45",
+			"before": "Inglenook was founded at Rutherford in 1879 by Gustave Niebaum, a Finnish sea captain, and Rubicon is its flagship, named for Caesar’s crossing of the Rubicon. The estate records the 2010 as 86 per cent Cabernet Sauvignon, with Cabernet Franc, Petit Verdot and Merlot, aged 20 months in barrel and released in September 2013. Think blackcurrant, cedar, tobacco and earth: it’s our first pick with the Roasted Chateaubriand and its sauce Foyot. It’s a mature wine, so our sommelier judges how much air each bottle needs, and we serve it at 60 to 64 degrees in a large Bordeaux glass, the bottle stood upright ahead of service.",
+			"after": "Inglenook was founded at Rutherford in 1879 by Gustave Niebaum, a Finnish sea captain, and Rubicon is its flagship, named for Caesar’s crossing of the Rubicon. The estate records the 2010 as 86 percent Cabernet Sauvignon, with Cabernet Franc, Petit Verdot and Merlot, aged 20 months in barrel and released in September 2013. Think blackcurrant, cedar, tobacco and earth: it’s our first pick with the Roasted Chateaubriand and its sauce Foyot. It’s a mature wine, so our sommelier judges how much air each bottle needs, and we serve it at 60 to 64 degrees in a large Bordeaux glass, the bottle stood upright ahead of service.",
+			"words": [
+				"per cent"
+			]
+		},
+		{
+			"path": "model.wines[22].lines.s20",
+			"before": "For a pink toast for two, the Paul Bara half bottle is grower Champagne from Bouzy, mostly Pinot Noir with Chardonnay, coloured with a little Bouzy red: dry, with red berries and more body than a white, lovely with the Steak Tartare Cannoli.",
+			"after": "For a pink toast for two, the Paul Bara half bottle is grower Champagne from Bouzy, mostly Pinot Noir with Chardonnay, colored with a little Bouzy red: dry, with red berries and more body than a white, lovely with the Steak Tartare Cannoli.",
+			"words": [
+				"coloured"
+			]
+		},
+		{
+			"path": "model.wines[22].lines.s45",
+			"before": "Paul Bara is a family grower in Bouzy, Grand Cru Pinot Noir country on the Montagne de Reims, making Champagne only from its own vines; Paul Bara first sold it under his own name in the 1950s. This rosé is mostly Pinot Noir with Chardonnay, coloured with a little of Bouzy's own still red wine: dry, red berry fruit, fine bubbles and more body than a white Champagne. That body meets the Steak Tartare Cannoli, and at the bar the Crawfish Meat Pies and the Cheese Board. We pour the half, two or three glasses, at 43 to 46°F in a tulip, in two stages.",
+			"after": "Paul Bara is a family grower in Bouzy, Grand Cru Pinot Noir country on the Montagne de Reims, making Champagne only from its own vines; Paul Bara first sold it under his own name in the 1950s. This rosé is mostly Pinot Noir with Chardonnay, colored with a little of Bouzy's own still red wine: dry, red berry fruit, fine bubbles and more body than a white Champagne. That body meets the Steak Tartare Cannoli, and at the bar the Crawfish Meat Pies and the Cheese Board. We pour the half, two or three glasses, at 43 to 46°F in a tulip, in two stages.",
+			"words": [
+				"coloured"
+			]
+		},
+		{
+			"path": "model.wines[24].lines.s10",
+			"before": "A magnum of Billecart-Salmon Sous Bois, labelled for our 80th anniversary: round, toasty Champagne from oak-fermented wines, for the table.",
+			"after": "A magnum of Billecart-Salmon Sous Bois, labeled for our 80th anniversary: round, toasty Champagne from oak-fermented wines, for the table.",
+			"words": [
+				"labelled"
+			]
+		},
+		{
+			"path": "model.wines[24].lines.s45",
+			"before": "Billecart-Salmon was founded at Mareuil-sur-Aÿ in 1818, on the marriage of Nicolas François Billecart and Elisabeth Salmon. Sous Bois means under wood: every base wine is fermented in oak barrels, usually about equal parts Chardonnay, Pinot Noir and Meunier, then years on its lees; this magnum is labelled for our 80th year. Dry and round, toasty with a nutty depth, it carries a table from the Turtle Soup and the Eggs Hussarde to the Poussin à la Moutarde and the Roasted Chateaubriand. We pour it at 43 to 46°F in a tulip, from a deep bucket, with two hands, thumb in the punt.",
+			"after": "Billecart-Salmon was founded at Mareuil-sur-Aÿ in 1818, on the marriage of Nicolas François Billecart and Elisabeth Salmon. Sous Bois means under wood: every base wine is fermented in oak barrels, usually about equal parts Chardonnay, Pinot Noir and Meunier, then years on its lees; this magnum is labeled for our 80th year. Dry and round, toasty with a nutty depth, it carries a table from the Turtle Soup and the Eggs Hussarde to the Poussin à la Moutarde and the Roasted Chateaubriand. We pour it at 43 to 46°F in a tulip, from a deep bucket, with two hands, thumb in the punt.",
+			"words": [
+				"labelled"
+			]
+		},
+		{
+			"path": "model.wines[27].lines.s45",
+			"before": "Taittinger's Reims house dates to 1734, with the family name since 1932, and its house Brut, La Francaise, is the Champagne that tops our Flamingo. It gives Chardonnay a big part, about four in ten, with Pinot Noir and Meunier, the source of its elegance: dry, fresh, fine bubbles. In a double magnum, three litres, four bottles in one, it carries a party from the Grand Isle Jewel Oysters and the Louisiana Crab Claws to the Eggs Hussarde and the Redfish Véronique. We ice it well ahead and pour at 43 to 46°F in a tulip, with the sommelier or a second server to open and pour it.",
+			"after": "Taittinger's Reims house dates to 1734, with the family name since 1932, and its house Brut, La Francaise, is the Champagne that tops our Flamingo. It gives Chardonnay a big part, about four in ten, with Pinot Noir and Meunier, the source of its elegance: dry, fresh, fine bubbles. In a double magnum, three liters, four bottles in one, it carries a party from the Grand Isle Jewel Oysters and the Louisiana Crab Claws to the Eggs Hussarde and the Redfish Véronique. We ice it well ahead and pour at 43 to 46°F in a tulip, with the sommelier or a second server to open and pour it.",
+			"words": [
+				"litres"
+			]
+		},
+		{
+			"path": "model.wines[30].lines.s45",
+			"before": "Moët & Chandon was founded in Épernay in 1743, and its Imperial name honours Napoleon, a friend of Jean-Rémy Moët. The Imperial Rosé is the house's non-vintage Brut rosé: Pinot Noir leads, then Meunier, with a little Chardonnay, the colour from still red wine blended with the white. It's dry, with red berry fruit and fine bubbles, and a rosé has a little more body than a white, so it suits the Crawfish Meat Pies, the Cheese Board and the Popcorn Shrimp. It's the dry Brut, not the sweeter Nectar on the bottle list. We pour it at 43 to 46°F in a flute or tulip, in two stages.",
+			"after": "Moët & Chandon was founded in Épernay in 1743, and its Imperial name honors Napoleon, a friend of Jean-Rémy Moët. The Imperial Rosé is the house's non-vintage Brut rosé: Pinot Noir leads, then Meunier, with a little Chardonnay, the color from still red wine blended with the white. It's dry, with red berry fruit and fine bubbles, and a rosé has a little more body than a white, so it suits the Crawfish Meat Pies, the Cheese Board and the Popcorn Shrimp. It's the dry Brut, not the sweeter Nectar on the bottle list. We pour it at 43 to 46°F in a flute or tulip, in two stages.",
+			"words": [
+				"honours",
+				"colour"
+			]
+		},
+		{
+			"path": "model.wines[31].lines.s20",
+			"before": "For the Cheese Board, the Taittinger Prestige Rosé is pink Champagne from Reims, Pinot Noir, Chardonnay and Meunier coloured with a little red Pinot Noir: dry and elegant, red berries and fine bubbles for the cheeses, the chutney and the honey.",
+			"after": "For the Cheese Board, the Taittinger Prestige Rosé is pink Champagne from Reims, Pinot Noir, Chardonnay and Meunier colored with a little red Pinot Noir: dry and elegant, red berries and fine bubbles for the cheeses, the chutney and the honey.",
+			"words": [
+				"coloured"
+			]
+		},
+		{
+			"path": "model.wines[31].lines.s45",
+			"before": "Taittinger is the Reims house that gives Chardonnay a big part, and its Prestige Rosé blends all three grapes, Pinot Noir, Chardonnay and Meunier, coloured with a little still red Pinot Noir. It's dry and elegant, with red berry fruit, fine bubbles and a fresh, lighter touch. Red fruit and acidity are a friend to cheese, chutney and honey, so it's our pick with the Cheese Board, and it suits the Crawfish Meat Pies and a toast at sunset in the courtyard. We pour it at 43 to 46°F in a flute or tulip, in two stages. It's the same house as the Champagne in our Flamingo.",
+			"after": "Taittinger is the Reims house that gives Chardonnay a big part, and its Prestige Rosé blends all three grapes, Pinot Noir, Chardonnay and Meunier, colored with a little still red Pinot Noir. It's dry and elegant, with red berry fruit, fine bubbles and a fresh, lighter touch. Red fruit and acidity are a friend to cheese, chutney and honey, so it's our pick with the Cheese Board, and it suits the Crawfish Meat Pies and a toast at sunset in the courtyard. We pour it at 43 to 46°F in a flute or tulip, in two stages. It's the same house as the Champagne in our Flamingo.",
+			"words": [
+				"coloured"
+			]
+		},
+		{
+			"path": "model.wines[34].lines.s45",
+			"before": "Cesarini Sforza is a Trentodoc house in Trento, in the Italian Alps, founded in 1974 by Count Lamberto Cesarini Sforza with friends; its eagle emblem is the city's coat of arms. This rosé is mostly Chardonnay with a little Pinot Noir for colour, made the Champagne way, with its second fermentation in the bottle and about three years on its lees: dry and bright, small red berries, mountain freshness and a soft mousse. It cools the Crystal gastrique on the Popcorn Shrimp and suits the Fried Pickles and the Crawfish Meat Pies. We pour it at 43 to 46°F in a flute or tulip, in two stages.",
+			"after": "Cesarini Sforza is a Trentodoc house in Trento, in the Italian Alps, founded in 1974 by Count Lamberto Cesarini Sforza with friends; its eagle emblem is the city's coat of arms. This rosé is mostly Chardonnay with a little Pinot Noir for color, made the Champagne way, with its second fermentation in the bottle and about three years on its lees: dry and bright, small red berries, mountain freshness and a soft mousse. It cools the Crystal gastrique on the Popcorn Shrimp and suits the Fried Pickles and the Crawfish Meat Pies. We pour it at 43 to 46°F in a flute or tulip, in two stages.",
+			"words": [
+				"colour"
+			]
+		},
+		{
+			"path": "model.wines[44].lines.s10",
+			"before": "Chartogne-Taillet Rosé Brut, grower Champagne from Merfy, near Reims: dry and savoury, our pink Champagne for the Steak Tartare Cannoli.",
+			"after": "Chartogne-Taillet Rosé Brut, grower Champagne from Merfy, near Reims: dry and savory, our pink Champagne for the Steak Tartare Cannoli.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[44].lines.s20",
+			"before": "Chartogne-Taillet is a family grower in Merfy, north-west of Reims, and this rosé takes its colour from a little red wine of Merfy Pinot Noir: dry, red currant and wild strawberry with a savoury, chalky finish, lovely with the Steak Tartare Cannoli.",
+			"after": "Chartogne-Taillet is a family grower in Merfy, north-west of Reims, and this rosé takes its color from a little red wine of Merfy Pinot Noir: dry, red currant and wild strawberry with a savory, chalky finish, lovely with the Steak Tartare Cannoli.",
+			"words": [
+				"colour",
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[44].lines.s45",
+			"before": "Chartogne-Taillet is a family grower in Merfy, on the Massif de Saint-Thierry north-west of Reims, where the Taillets have grown vines for centuries; an ancestor, Fiacre Taillet, kept a register of his vines and the events of his day. This rosé takes its colour from a little red wine made from Merfy Pinot Noir: dry, red currant and wild strawberry, with a savoury, chalky finish. It is our sweet spot bottle for the Steak Tartare Cannoli, red fruit for the raw beef, and lovely with the Poussin à la Moutarde and the Cheese Board. We pour it at 45 to 48°F in a tulip, in two stages.",
+			"after": "Chartogne-Taillet is a family grower in Merfy, on the Massif de Saint-Thierry north-west of Reims, where the Taillets have grown vines for centuries; an ancestor, Fiacre Taillet, kept a register of his vines and the events of his day. This rosé takes its color from a little red wine made from Merfy Pinot Noir: dry, red currant and wild strawberry, with a savory, chalky finish. It is our sweet spot bottle for the Steak Tartare Cannoli, red fruit for the raw beef, and lovely with the Poussin à la Moutarde and the Cheese Board. We pour it at 45 to 48°F in a tulip, in two stages.",
+			"words": [
+				"colour",
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[46].lines.s20",
+			"before": "For the whole table, a bottle of our house Champagne: Brennan’s Essential, an Extra Brut from Piper-Heidsieck in Reims, labelled for us. Very dry, citrus, orchard fruit and brioche with a chalky finish, it keeps the hollandaise on the Eggs Hussarde light.",
+			"after": "For the whole table, a bottle of our house Champagne: Brennan’s Essential, an Extra Brut from Piper-Heidsieck in Reims, labeled for us. Very dry, citrus, orchard fruit and brioche with a chalky finish, it keeps the hollandaise on the Eggs Hussarde light.",
+			"words": [
+				"labelled"
+			]
+		},
+		{
+			"path": "model.wines[46].lines.s45",
+			"before": "Brennan’s Essential is our house Champagne, an Extra Brut from Piper-Heidsieck, the Reims house founded in 1785, labelled for us with the Brennan’s name, the same wine we pour by the glass. Its bubbles come from a second fermentation in the bottle, and it is very dry: citrus, orchard fruit, brioche and a firm, chalky finish. It is our sweet spot bottle for the Eggs Hussarde à la carte, keeping the hollandaise light, and lovely with the Turtle Soup and the Grand Isle Jewel Oysters. We pour it at 43 to 46°F in a tulip, the cork eased out with a quiet sigh.",
+			"after": "Brennan’s Essential is our house Champagne, an Extra Brut from Piper-Heidsieck, the Reims house founded in 1785, labeled for us with the Brennan’s name, the same wine we pour by the glass. Its bubbles come from a second fermentation in the bottle, and it is very dry: citrus, orchard fruit, brioche and a firm, chalky finish. It is our sweet spot bottle for the Eggs Hussarde à la carte, keeping the hollandaise light, and lovely with the Turtle Soup and the Grand Isle Jewel Oysters. We pour it at 43 to 46°F in a tulip, the cork eased out with a quiet sigh.",
+			"words": [
+				"labelled"
+			]
+		},
+		{
+			"path": "model.wines[48].lines.s45",
+			"before": "Moët & Chandon was founded in Épernay in 1743, and its Imperial name honours Napoleon, a friend of Jean-Rémy Moët. The Nectar Imperial Rosé is its Demi-Sec, not the dry Imperial Rosé we pour at Bubbles: Pinot Noir-led with Meunier and Chardonnay, finished with noticeably more sugar than a Brut. It tastes of ripe strawberry and raspberry with a creamy sweetness. A sweet dish makes a dry wine taste sour, so it is our sweet spot bottle for the Framboise French Toast, and lovely with the Blackberry Trifle and the Baked Apple. We pour it well chilled, 43 to 46°F, in a flute or tulip.",
+			"after": "Moët & Chandon was founded in Épernay in 1743, and its Imperial name honors Napoleon, a friend of Jean-Rémy Moët. The Nectar Imperial Rosé is its Demi-Sec, not the dry Imperial Rosé we pour at Bubbles: Pinot Noir-led with Meunier and Chardonnay, finished with noticeably more sugar than a Brut. It tastes of ripe strawberry and raspberry with a creamy sweetness. A sweet dish makes a dry wine taste sour, so it is our sweet spot bottle for the Framboise French Toast, and lovely with the Blackberry Trifle and the Baked Apple. We pour it well chilled, 43 to 46°F, in a flute or tulip.",
+			"words": [
+				"honours"
+			]
+		},
+		{
+			"path": "model.wines[49].lines.s45",
+			"before": "Charles Heidsieck was founded in Reims in 1851 by Charles-Camille Heidsieck, whom a New York paper called Champagne Charlie; in 1867 he bought chalk cellars beneath the city that still age the wine. The Réserve blends Pinot Noir, Chardonnay and Meunier with a high share of reserve wines and long ageing on its lees: roasted nuts, brioche and dried apricot, creamy and dry. It is our first pick for the Creole Spiced Nuts, and lovely with the Turtle Soup, the Cheese Board and the Pecan Gulf Fish. We pour it at 45 to 48°F in a tulip, a touch warmer so its richness shows.",
+			"after": "Charles Heidsieck was founded in Reims in 1851 by Charles-Camille Heidsieck, whom a New York paper called Champagne Charlie; in 1867 he bought chalk cellars beneath the city that still age the wine. The Réserve blends Pinot Noir, Chardonnay and Meunier with a high share of reserve wines and long aging on its lees: roasted nuts, brioche and dried apricot, creamy and dry. It is our first pick for the Creole Spiced Nuts, and lovely with the Turtle Soup, the Cheese Board and the Pecan Gulf Fish. We pour it at 45 to 48°F in a tulip, a touch warmer so its richness shows.",
+			"words": [
+				"ageing"
+			]
+		},
+		{
+			"path": "model.wines[54].lines.s20",
+			"before": "The Elisabeth Salmon is the prestige rosé of Billecart-Salmon in Mareuil-sur-Aÿ, Pinot Noir and Chardonnay from 2009 with more than a decade on its lees: wild strawberry, blood orange and a savoury, toasty depth, lovely with the Steak Tartare Cannoli.",
+			"after": "The Elisabeth Salmon is the prestige rosé of Billecart-Salmon in Mareuil-sur-Aÿ, Pinot Noir and Chardonnay from 2009 with more than a decade on its lees: wild strawberry, blood orange and a savory, toasty depth, lovely with the Steak Tartare Cannoli.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[54].lines.s45",
+			"before": "Billecart-Salmon was founded in Mareuil-sur-Aÿ in 1818, on the marriage of Nicolas François Billecart and Elisabeth Salmon, and made the Sous Bois magnum labelled for our 80th year. Its prestige rosé carries her name: Pinot Noir and Chardonnay from 2009, coloured with a little red wine from Pinot Noir and aged more than a decade on its lees. Wild strawberry, blood orange and rose petal, with a savoury, toasty depth, silky and dry. That depth meets the raw beef and bottarga of the Steak Tartare Cannoli, and suits the Poussin à la Moutarde. We pour it at 46 to 50°F in a white-wine glass, so its age shows.",
+			"after": "Billecart-Salmon was founded in Mareuil-sur-Aÿ in 1818, on the marriage of Nicolas François Billecart and Elisabeth Salmon, and made the Sous Bois magnum labeled for our 80th year. Its prestige rosé carries her name: Pinot Noir and Chardonnay from 2009, colored with a little red wine from Pinot Noir and aged more than a decade on its lees. Wild strawberry, blood orange and rose petal, with a savory, toasty depth, silky and dry. That depth meets the raw beef and bottarga of the Steak Tartare Cannoli, and suits the Poussin à la Moutarde. We pour it at 46 to 50°F in a white-wine glass, so its age shows.",
+			"words": [
+				"labelled",
+				"coloured",
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[56].lines.s45",
+			"before": "Jacques Selosse founded this grower estate in Avize, on the Côte des Blancs, in 1949. His son Anselme, who took over in 1980, made Champagne the way Burgundy makes white wine, fermenting and ageing it in oak barrels from his own grand cru vines, and a generation of growers followed him. Initial is all Chardonnay from Avize, Cramant and Oger, blended from three harvests: ripe citrus, hazelnut, honey and a salty grip. It is our first pick for the Fried Pickles, and lovely with the Grand Isle Jewel Oysters. We pour it at 48 to 52°F in a white-wine glass, never a flute, and let it open.",
+			"after": "Jacques Selosse founded this grower estate in Avize, on the Côte des Blancs, in 1949. His son Anselme, who took over in 1980, made Champagne the way Burgundy makes white wine, fermenting and aging it in oak barrels from his own grand cru vines, and a generation of growers followed him. Initial is all Chardonnay from Avize, Cramant and Oger, blended from three harvests: ripe citrus, hazelnut, honey and a salty grip. It is our first pick for the Fried Pickles, and lovely with the Grand Isle Jewel Oysters. We pour it at 48 to 52°F in a white-wine glass, never a flute, and let it open.",
+			"words": [
+				"ageing"
+			]
+		},
+		{
+			"path": "model.wines[60].lines.s20",
+			"before": "Krug Rosé is a Reims blend of several years, Pinot Noir, Chardonnay and Meunier, coloured with a little red Pinot Noir: red berries, blood orange and spice, dry and powerful, with the body for the New Orleans Shrimp & Grits.",
+			"after": "Krug Rosé is a Reims blend of several years, Pinot Noir, Chardonnay and Meunier, colored with a little red Pinot Noir: red berries, blood orange and spice, dry and powerful, with the body for the New Orleans Shrimp & Grits.",
+			"words": [
+				"coloured"
+			]
+		},
+		{
+			"path": "model.wines[60].lines.s45",
+			"before": "Krug, the Reims house founded in 1843, makes only prestige Champagne, and the fifth generation of the family created this rosé, first released in 1983. Wines of several years, Pinot Noir, Chardonnay and Meunier, are each first fermented in small oak casks, then coloured with a little red wine from Pinot Noir. Powerful and spicy: red berries, blood orange, rose hip and toasted brioche, dry and very long. It stands up to the shrimp, smoky tasso and Creole sauce of the New Orleans Shrimp & Grits, and suits the Steak Tartare Cannoli and the Roasted Chateaubriand. We pour it at 48 to 52°F in a white-wine glass.",
+			"after": "Krug, the Reims house founded in 1843, makes only prestige Champagne, and the fifth generation of the family created this rosé, first released in 1983. Wines of several years, Pinot Noir, Chardonnay and Meunier, are each first fermented in small oak casks, then colored with a little red wine from Pinot Noir. Powerful and spicy: red berries, blood orange, rose hip and toasted brioche, dry and very long. It stands up to the shrimp, smoky tasso and Creole sauce of the New Orleans Shrimp & Grits, and suits the Steak Tartare Cannoli and the Roasted Chateaubriand. We pour it at 48 to 52°F in a white-wine glass.",
+			"words": [
+				"coloured"
+			]
+		},
+		{
+			"path": "model.wines[76].lines.s45",
+			"before": "Bergstrom is a family winery near Newberg in Oregon’s Willamette Valley, whose cool, rainy climate is a cousin of Burgundy’s, and the Reserve is its Pinot Noir blended from several of its vineyards. It tastes of red cherry and cranberry with a savoury note of forest floor, fine tannin and bright acidity, light on its feet with more depth than its weight suggests. That earthiness answers the preserved shiitake on the Blackened Tofu, and it is gentle with Maggie’s Mushrooms, the Redfish Véronique and the Roasted Rohan Duck Breast. We pour it slightly cool, 58 to 62°F, in a Burgundy bowl, no decanting: a half-bottle, two or three glasses.",
+			"after": "Bergstrom is a family winery near Newberg in Oregon’s Willamette Valley, whose cool, rainy climate is a cousin of Burgundy’s, and the Reserve is its Pinot Noir blended from several of its vineyards. It tastes of red cherry and cranberry with a savory note of forest floor, fine tannin and bright acidity, light on its feet with more depth than its weight suggests. That earthiness answers the preserved shiitake on the Blackened Tofu, and it is gentle with Maggie’s Mushrooms, the Redfish Véronique and the Roasted Rohan Duck Breast. We pour it slightly cool, 58 to 62°F, in a Burgundy bowl, no decanting: a half-bottle, two or three glasses.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[83].lines.s10",
+			"before": "A half-bottle of Ridge Estate Cabernet Sauvignon from the Santa Cruz Mountains: savoury, for two with the Roasted Chateaubriand.",
+			"after": "A half-bottle of Ridge Estate Cabernet Sauvignon from the Santa Cruz Mountains: savory, for two with the Roasted Chateaubriand.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[83].lines.s20",
+			"before": "This is Ridge’s Estate Cabernet Sauvignon from its mountain vineyards in the Santa Cruz Mountains: blackcurrant, cedar and graphite, firm and savoury, and the beef and sauce Foyot of the Roasted Chateaubriand round out its tannin.",
+			"after": "This is Ridge’s Estate Cabernet Sauvignon from its mountain vineyards in the Santa Cruz Mountains: blackcurrant, cedar and graphite, firm and savory, and the beef and sauce Foyot of the Roasted Chateaubriand round out its tannin.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[83].lines.s45",
+			"before": "Ridge Vineyards was founded in 1962 at Monte Bello, high in the Santa Cruz Mountains south of San Francisco, and this Estate Cabernet Sauvignon comes from the vineyards around Monte Bello; Ridge ages in American oak and prints every ingredient on the back label. It is structured rather than plush: blackcurrant, cedar, graphite and a savoury herb note, firm tannin and fresh acidity. Beef softens that tannin, so it is the half for the Roasted Chateaubriand, and it suits the Creole-Spiced Hanger Steak, the Roost Burger and the Cheese Board. We pour it at 60 to 64°F in a large Bordeaux glass, decanted if the guest likes.",
+			"after": "Ridge Vineyards was founded in 1962 at Monte Bello, high in the Santa Cruz Mountains south of San Francisco, and this Estate Cabernet Sauvignon comes from the vineyards around Monte Bello; Ridge ages in American oak and prints every ingredient on the back label. It is structured rather than plush: blackcurrant, cedar, graphite and a savory herb note, firm tannin and fresh acidity. Beef softens that tannin, so it is the half for the Roasted Chateaubriand, and it suits the Creole-Spiced Hanger Steak, the Roost Burger and the Cheese Board. We pour it at 60 to 64°F in a large Bordeaux glass, decanted if the guest likes.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[90].lines.s10",
+			"before": "A half-bottle of Domaine Henri Gouges Nuits-Saint-Georges: savoury red Burgundy for the Roasted Rohan Duck Breast.",
+			"after": "A half-bottle of Domaine Henri Gouges Nuits-Saint-Georges: savory red Burgundy for the Roasted Rohan Duck Breast.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[90].lines.s20",
+			"before": "The Henri Gouges half-bottle is Pinot Noir from Nuits-Saint-Georges in the Côte de Nuits: dark cherry, plum and earth with a savoury, iron note, its acidity cutting the duck and its fruit meeting the cane syrup-glazed peaches of the Roasted Rohan Duck Breast.",
+			"after": "The Henri Gouges half-bottle is Pinot Noir from Nuits-Saint-Georges in the Côte de Nuits: dark cherry, plum and earth with a savory, iron note, its acidity cutting the duck and its fruit meeting the cane syrup-glazed peaches of the Roasted Rohan Duck Breast.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[90].lines.s45",
+			"before": "Henri Gouges was a leader of the movement to bottle wine at the domaine and of the drive that produced the appellation contrôlée system; the family domaine in Nuits-Saint-Georges is farmed organically and run by the fourth generation. Its village wine is Pinot Noir, sturdy for Burgundy: dark cherry, plum, earth and a savoury, iron note, firm tannin and fresh acidity. An extra beside the tasting’s pour, it cuts the Roasted Rohan Duck Breast with its acidity and meets the cane syrup-glazed peaches with its fruit, and suits the Roasted Chateaubriand and Maggie’s Mushrooms. We pour it at 58 to 62°F in a Burgundy bowl, swirled, never decanted.",
+			"after": "Henri Gouges was a leader of the movement to bottle wine at the domaine and of the drive that produced the appellation contrôlée system; the family domaine in Nuits-Saint-Georges is farmed organically and run by the fourth generation. Its village wine is Pinot Noir, sturdy for Burgundy: dark cherry, plum, earth and a savory, iron note, firm tannin and fresh acidity. An extra beside the tasting’s pour, it cuts the Roasted Rohan Duck Breast with its acidity and meets the cane syrup-glazed peaches with its fruit, and suits the Roasted Chateaubriand and Maggie’s Mushrooms. We pour it at 58 to 62°F in a Burgundy bowl, swirled, never decanted.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[92].lines.s20",
+			"before": "Suduiraut is Sauternes from Preignac, beside Yquem, Sémillon with Sauvignon Blanc shrivelled by noble rot: honey, apricot, candied orange and vanilla, sweet enough for the whiskey caramel and pralines of the New Orleans Bread Pudding.",
+			"after": "Suduiraut is Sauternes from Preignac, beside Yquem, Sémillon with Sauvignon Blanc shriveled by noble rot: honey, apricot, candied orange and vanilla, sweet enough for the whiskey caramel and pralines of the New Orleans Bread Pudding.",
+			"words": [
+				"shrivelled"
+			]
+		},
+		{
+			"path": "model.wines[93].lines.s45",
+			"before": "Dönnhoff is a family estate at Oberhausen on the Nahe; the Hermannshöhle is a steep slope of slate and volcanic rock in neighbouring Niederhausen. Auslese is a selected harvest of riper grapes; the gold capsule marks the grower’s richer selection. The 2023 is sweet and concentrated: peach, honey and a stony, smoky edge, with piercing acidity for the curds of the Blackberry Trifle, while salt and Brennan’s honey make the Cheese Board a sweet and salty match; it suits the Lemon Tart and the Pineapple Tarte Tatin. We pour 2 to 3 oz at 45 to 50°F in a small dessert glass, then recork and chill the rest.",
+			"after": "Dönnhoff is a family estate at Oberhausen on the Nahe; the Hermannshöhle is a steep slope of slate and volcanic rock in neighboring Niederhausen. Auslese is a selected harvest of riper grapes; the gold capsule marks the grower’s richer selection. The 2023 is sweet and concentrated: peach, honey and a stony, smoky edge, with piercing acidity for the curds of the Blackberry Trifle, while salt and Brennan’s honey make the Cheese Board a sweet and salty match; it suits the Lemon Tart and the Pineapple Tarte Tatin. We pour 2 to 3 oz at 45 to 50°F in a small dessert glass, then recork and chill the rest.",
+			"words": [
+				"neighbouring"
+			]
+		},
+		{
+			"path": "model.wines[96].lines.s10",
+			"before": "A half-bottle of Joseph Phelps Insignia 2011 from the Napa Valley: savoury, aged Cabernet blend for the Roasted Chateaubriand.",
+			"after": "A half-bottle of Joseph Phelps Insignia 2011 from the Napa Valley: savory, aged Cabernet blend for the Roasted Chateaubriand.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[96].lines.s20",
+			"before": "Insignia is Joseph Phelps’s Napa Valley blend, Cabernet Sauvignon-led with other Bordeaux grapes, and the 2011 has softened with age: blackcurrant, cedar, tobacco and dried herbs, savoury and long, for the Roasted Chateaubriand, which serves two.",
+			"after": "Insignia is Joseph Phelps’s Napa Valley blend, Cabernet Sauvignon-led with other Bordeaux grapes, and the 2011 has softened with age: blackcurrant, cedar, tobacco and dried herbs, savory and long, for the Roasted Chateaubriand, which serves two.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[96].lines.s45",
+			"before": "Joseph Phelps, a building contractor from Colorado, founded his winery in St. Helena in 1973, and Insignia followed in 1974, one of California’s first proprietary Bordeaux-style blends, sold under its own name rather than a grape’s. Cabernet Sauvignon leads, with other Bordeaux grapes, and the mix changes each vintage. The 2011 has more than a decade in bottle, so its tannin has softened: blackcurrant, cedar, tobacco and dried herbs, savoury and long. Aged Cabernet suits the Roasted Chateaubriand, which serves two, and the Cheese Board. Stand it upright, then decant gently off any sediment or pour slowly, at 60 to 64°F in a large Bordeaux glass.",
+			"after": "Joseph Phelps, a building contractor from Colorado, founded his winery in St. Helena in 1973, and Insignia followed in 1974, one of California’s first proprietary Bordeaux-style blends, sold under its own name rather than a grape’s. Cabernet Sauvignon leads, with other Bordeaux grapes, and the mix changes each vintage. The 2011 has more than a decade in bottle, so its tannin has softened: blackcurrant, cedar, tobacco and dried herbs, savory and long. Aged Cabernet suits the Roasted Chateaubriand, which serves two, and the Cheese Board. Stand it upright, then decant gently off any sediment or pour slowly, at 60 to 64°F in a large Bordeaux glass.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[98].lines.s45",
+			"before": "Opus One, in Oakville in the Napa Valley, began as a partnership between Robert Mondavi and Baron Philippe de Rothschild of Château Mouton Rothschild; its first vintage was 1979. The wine is Cabernet Sauvignon-led with the other Bordeaux grapes, aged in new French oak. The 2015 shows blackcurrant, black cherry, cocoa, violet and graphite, with polished tannin, a long finish and the first savoury notes of age. Its tannin meets the beef of the Roasted Chateaubriand, which serves two, and it suits the Cheese Board. We pour it at 60 to 64°F in a large Bordeaux glass, decanted briefly or swirled well: two or three glasses.",
+			"after": "Opus One, in Oakville in the Napa Valley, began as a partnership between Robert Mondavi and Baron Philippe de Rothschild of Château Mouton Rothschild; its first vintage was 1979. The wine is Cabernet Sauvignon-led with the other Bordeaux grapes, aged in new French oak. The 2015 shows blackcurrant, black cherry, cocoa, violet and graphite, with polished tannin, a long finish and the first savory notes of age. Its tannin meets the beef of the Roasted Chateaubriand, which serves two, and it suits the Cheese Board. We pour it at 60 to 64°F in a large Bordeaux glass, decanted briefly or swirled well: two or three glasses.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[99].lines.s20",
+			"before": "Château d’Yquem 2015 is Sauternes, Sémillon-led with Sauvignon Blanc from grapes shrivelled by noble rot: apricot, candied orange, saffron and honey, rich enough for the mascarpone mousse of the Framboise French Toast, with acidity to keep the brioche light.",
+			"after": "Château d’Yquem 2015 is Sauternes, Sémillon-led with Sauvignon Blanc from grapes shriveled by noble rot: apricot, candied orange, saffron and honey, rich enough for the mascarpone mousse of the Framboise French Toast, with acidity to keep the brioche light.",
+			"words": [
+				"shrivelled"
+			]
+		},
+		{
+			"path": "model.wines[99].lines.s45",
+			"before": "In the 1855 classification of Sauternes, Château d’Yquem was given its own rank, Premier Cru Supérieur, and the Lur-Saluces family held the estate from 1785 for more than two centuries. Its pickers pass through the vines many times for the berries noble rot has shrivelled, and in poor years no Yquem is made. Sémillon leads, with Sauvignon Blanc, aged in new oak. The 2015 is luscious: apricot, candied orange, saffron, honey and vanilla, with fresh acidity and a very long finish, rich enough for the mascarpone mousse of the Framboise French Toast. We pour 2 to 3 oz at 50 to 54°F in a white-wine glass and recork it.",
+			"after": "In the 1855 classification of Sauternes, Château d’Yquem was given its own rank, Premier Cru Supérieur, and the Lur-Saluces family held the estate from 1785 for more than two centuries. Its pickers pass through the vines many times for the berries noble rot has shriveled, and in poor years no Yquem is made. Sémillon leads, with Sauvignon Blanc, aged in new oak. The 2015 is luscious: apricot, candied orange, saffron, honey and vanilla, with fresh acidity and a very long finish, rich enough for the mascarpone mousse of the Framboise French Toast. We pour 2 to 3 oz at 50 to 54°F in a white-wine glass and recork it.",
+			"words": [
+				"shrivelled"
+			]
+		},
+		{
+			"path": "model.wines[107].lines.s20",
+			"before": "Billecart-Salmon Réserve is Meunier, Chardonnay and Pinot Noir from a family house in Mareuil-sur-Aÿ: fresh pear, citrus and a light brioche, with fine bubbles. Fifteen litres pour a hundred glasses or more, with the Grand Isle Jewel Oysters, the Louisiana Crab Claws and the Crawfish Meat Pies.",
+			"after": "Billecart-Salmon Réserve is Meunier, Chardonnay and Pinot Noir from a family house in Mareuil-sur-Aÿ: fresh pear, citrus and a light brioche, with fine bubbles. Fifteen liters pour a hundred glasses or more, with the Grand Isle Jewel Oysters, the Louisiana Crab Claws and the Crawfish Meat Pies.",
+			"words": [
+				"litres"
+			]
+		},
+		{
+			"path": "model.wines[107].lines.s45",
+			"before": "Billecart-Salmon was founded in Mareuil-sur-Aÿ in 1818, on the marriage of Nicolas François Billecart and Elisabeth Salmon, whose names it carries. The Réserve, its Brut, is Meunier, Chardonnay and Pinot Noir with reserve wines: fresh pear, citrus and a light brioche, fine bubbles. A Nebuchadnezzar holds fifteen litres, twenty bottles, a hundred glasses or more, for a private event with the Grand Isle Jewel Oysters, the Louisiana Crab Claws and the Crawfish Meat Pies. It's ordered ahead, chilled for hours in a tub of ice and water and served at 43 to 46°F in tulips; the sommelier and a second person pour it, often from a cradle.",
+			"after": "Billecart-Salmon was founded in Mareuil-sur-Aÿ in 1818, on the marriage of Nicolas François Billecart and Elisabeth Salmon, whose names it carries. The Réserve, its Brut, is Meunier, Chardonnay and Pinot Noir with reserve wines: fresh pear, citrus and a light brioche, fine bubbles. A Nebuchadnezzar holds fifteen liters, twenty bottles, a hundred glasses or more, for a private event with the Grand Isle Jewel Oysters, the Louisiana Crab Claws and the Crawfish Meat Pies. It's ordered ahead, chilled for hours in a tub of ice and water and served at 43 to 46°F in tulips; the sommelier and a second person pour it, often from a cradle.",
+			"words": [
+				"litres"
+			]
+		},
+		{
+			"path": "model.wines[123].lines.s45",
+			"before": "Coche-Dury’s Bourgogne Blanc is Chardonnay under Burgundy’s regional name, from an estate in Meursault that makes it with the same care as its Grand Cru. Long ageing on the lees in barrel, with regular stirring, gives the estate’s flinty, reductive style: lemon, hazelnut and a struck-match note, taut and long. Enjoy it with simple seafood so nothing hides it: the Louisiana Crab Claws, the Grand Isle Jewel Oysters and the Redfish Véronique. We pour it at 50 to 54°F in a white Burgundy bowl, no decanting; it opens in the glass. Léon Coche began buying vines in Meursault in 1923; the Dury name came later, by marriage.",
+			"after": "Coche-Dury’s Bourgogne Blanc is Chardonnay under Burgundy’s regional name, from an estate in Meursault that makes it with the same care as its Grand Cru. Long aging on the lees in barrel, with regular stirring, gives the estate’s flinty, reductive style: lemon, hazelnut and a struck-match note, taut and long. Enjoy it with simple seafood so nothing hides it: the Louisiana Crab Claws, the Grand Isle Jewel Oysters and the Redfish Véronique. We pour it at 50 to 54°F in a white Burgundy bowl, no decanting; it opens in the glass. Léon Coche began buying vines in Meursault in 1923; the Dury name came later, by marriage.",
+			"words": [
+				"ageing"
+			]
+		},
+		{
+			"path": "model.wines[126].lines.s45",
+			"before": "Whispering Angel is made by Château d’Esclans, in the hills of Provence behind the Riviera. It is Grenache-led with Cinsault and Rolle, pressed gently so the juice takes only a blush of colour: white peach, wild strawberry and citrus zest, dry, with a light mineral finish. Its acidity meets raw tomato and aioli, so it is our value bottle for the Creole Tomato Tostada and the Fish Bouillabaisse, and it suits the Creole Caesar. We pour it at 45 to 48°F in a white-wine glass, from the ice bucket. The name comes from two cherubs carved above the altar of the château’s chapel, who seem to whisper.",
+			"after": "Whispering Angel is made by Château d’Esclans, in the hills of Provence behind the Riviera. It is Grenache-led with Cinsault and Rolle, pressed gently so the juice takes only a blush of color: white peach, wild strawberry and citrus zest, dry, with a light mineral finish. Its acidity meets raw tomato and aioli, so it is our value bottle for the Creole Tomato Tostada and the Fish Bouillabaisse, and it suits the Creole Caesar. We pour it at 45 to 48°F in a white-wine glass, from the ice bucket. The name comes from two cherubs carved above the altar of the château’s chapel, who seem to whisper.",
+			"words": [
+				"colour"
+			]
+		},
+		{
+			"path": "model.wines[130].lines.s45",
+			"before": "Domaine de l’Écu farms biodynamically at Le Landreau, near Nantes, where the Loire meets the Atlantic, and it bottles its Melon de Bourgogne by the rock beneath the vines. Orthogneiss is a hard, ancient rock, and of the estate’s three soil wines this is the tight, saline one, aged on its lees: lemon, green apple, crushed stone and a salty, savoury depth, bone dry. That salt matches the smoked oyster dressing and its acidity cuts the Grana Padano, so it is our value bottle for the Creole Caesar and suits the Grand Isle Jewel Oysters. We pour it at 46 to 50°F in a white-wine glass, never ice cold.",
+			"after": "Domaine de l’Écu farms biodynamically at Le Landreau, near Nantes, where the Loire meets the Atlantic, and it bottles its Melon de Bourgogne by the rock beneath the vines. Orthogneiss is a hard, ancient rock, and of the estate’s three soil wines this is the tight, saline one, aged on its lees: lemon, green apple, crushed stone and a salty, savory depth, bone dry. That salt matches the smoked oyster dressing and its acidity cuts the Grana Padano, so it is our value bottle for the Creole Caesar and suits the Grand Isle Jewel Oysters. We pour it at 46 to 50°F in a white-wine glass, never ice cold.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[141].lines.s45",
+			"before": "On Santorini, the volcanic Greek island, the vines grow low in baskets against the wind, on their own roots, and Assyrtiko keeps its acidity in the hot sun. Gaia's Wild Ferment is fermented with the island's own yeasts and raised partly in mixed vessels: lemon, salt, flint and white flowers, bone dry, with piercing acidity and a savoury depth. It is our bottle for the Gulf Fish en Papillote, with its olives and tomato, and lovely with the Grand Isle Jewel Oysters, the Creole Caesar and the Redfish Véronique. We serve it at 46 to 50°F in a white-wine glass, iced between pours.",
+			"after": "On Santorini, the volcanic Greek island, the vines grow low in baskets against the wind, on their own roots, and Assyrtiko keeps its acidity in the hot sun. Gaia's Wild Ferment is fermented with the island's own yeasts and raised partly in mixed vessels: lemon, salt, flint and white flowers, bone dry, with piercing acidity and a savory depth. It is our bottle for the Gulf Fish en Papillote, with its olives and tomato, and lovely with the Grand Isle Jewel Oysters, the Creole Caesar and the Redfish Véronique. We serve it at 46 to 50°F in a white-wine glass, iced between pours.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[142].lines.s10",
+			"before": "Domaine Tempier Bandol Rosé from the Provençal coast: dry and savoury, with the body for the Creole Tomato Tostada.",
+			"after": "Domaine Tempier Bandol Rosé from the Provençal coast: dry and savory, with the body for the Creole Tomato Tostada.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[142].lines.s20",
+			"before": "Tempier's Bandol rosé is Mourvèdre with Grenache and Cinsault from the Provençal coast: wild strawberry, blood orange and herbs, dry and savoury, with the body for the Creole Tomato Tostada and the Fish Bouillabaisse.",
+			"after": "Tempier's Bandol rosé is Mourvèdre with Grenache and Cinsault from the Provençal coast: wild strawberry, blood orange and herbs, dry and savory, with the body for the Creole Tomato Tostada and the Fish Bouillabaisse.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[142].lines.s45",
+			"before": "In 1936 Lucien Peyraud and his wife Lulu took on Domaine Tempier, her family's farm near Bandol, on the Provençal coast; Lucien helped make Bandol its own appellation and championed Mourvèdre. The rosé is Mourvèdre-led with Grenache and Cinsault: wild strawberry, blood orange, garrigue herbs and a savoury, saline depth, dry, with more body than most rosé, and built to age. That body makes it our bottle for the Creole Tomato Tostada and the Fish Bouillabaisse, and lovely with the Louisiana Crab Claws, the Gulf Fish en Papillote and the Cheese Board. We serve it at 48 to 52°F in a white-wine glass, never ice cold.",
+			"after": "In 1936 Lucien Peyraud and his wife Lulu took on Domaine Tempier, her family's farm near Bandol, on the Provençal coast; Lucien helped make Bandol its own appellation and championed Mourvèdre. The rosé is Mourvèdre-led with Grenache and Cinsault: wild strawberry, blood orange, garrigue herbs and a savory, saline depth, dry, with more body than most rosé, and built to age. That body makes it our bottle for the Creole Tomato Tostada and the Fish Bouillabaisse, and lovely with the Louisiana Crab Claws, the Gulf Fish en Papillote and the Cheese Board. We serve it at 48 to 52°F in a white-wine glass, never ice cold.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[145].lines.s45",
+			"before": "Bründlmayer is a family estate in Langenlois, the wine town of Austria's Kamptal, northwest of Vienna. Alte Reben means old vines, which give smaller crops and deeper wine, so this Grüner Veltliner is fuller and more textured than the classic style: ripe pear, citrus, white pepper and a savoury note, dry, with a long finish. Grüner handles artichokes, which upset most wines, so it is our bottle for the Eggs Sardou, with the texture for the Choron sauce, and lovely with the Poussin à la Moutarde, the Louisiana Crab Claws and the Redfish Véronique. We serve it at 48 to 52°F in a white-wine glass, briefly iced.",
+			"after": "Bründlmayer is a family estate in Langenlois, the wine town of Austria's Kamptal, northwest of Vienna. Alte Reben means old vines, which give smaller crops and deeper wine, so this Grüner Veltliner is fuller and more textured than the classic style: ripe pear, citrus, white pepper and a savory note, dry, with a long finish. Grüner handles artichokes, which upset most wines, so it is our bottle for the Eggs Sardou, with the texture for the Choron sauce, and lovely with the Poussin à la Moutarde, the Louisiana Crab Claws and the Redfish Véronique. We serve it at 48 to 52°F in a white-wine glass, briefly iced.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[147].lines.s45",
+			"before": "Ferreiro is Galician for blacksmith, and Do Ferreiro is a family estate in the cool, coastal Salnés valley of Rías Baixas, on Spain's Atlantic coast, the home of Albariño. Cepas Vellas means old vines, and these are very old, so the wine is textured and long: lemon, white peach and sea spray with a savoury, stony depth, and the 2018 has years in bottle. It is our bottle for the Creole Caesar, meeting the smoked oyster dressing, and lovely with the Grand Isle Jewel Oysters, the Louisiana Crab Claws and the Gulf Fish en Papillote. We serve it at 48 to 52°F in a white-wine glass, briefly iced.",
+			"after": "Ferreiro is Galician for blacksmith, and Do Ferreiro is a family estate in the cool, coastal Salnés valley of Rías Baixas, on Spain's Atlantic coast, the home of Albariño. Cepas Vellas means old vines, and these are very old, so the wine is textured and long: lemon, white peach and sea spray with a savory, stony depth, and the 2018 has years in bottle. It is our bottle for the Creole Caesar, meeting the smoked oyster dressing, and lovely with the Grand Isle Jewel Oysters, the Louisiana Crab Claws and the Gulf Fish en Papillote. We serve it at 48 to 52°F in a white-wine glass, briefly iced.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[150].lines.s45",
+			"before": "Pascal Cotat is a family grower in Chavignol, a Sancerre village of chalky slopes, and his rosé is Pinot Noir from a tiny parcel of old vines, fermented with native yeasts and aged in old casks. After a local dispute the parcel left the Sancerre appellation, so the wine is labelled by lot, here Lot 2024: wild strawberry, red currant and crushed chalk, dry and taut. It is our celebration bottle for the Creole Tomato Tostada and the New Orleans Shrimp & Grits, and lovely with the Louisiana Crab Claws, the Steak Tartare Cannoli and the Cheese Board. We serve it at 48 to 52°F in a white-wine glass.",
+			"after": "Pascal Cotat is a family grower in Chavignol, a Sancerre village of chalky slopes, and his rosé is Pinot Noir from a tiny parcel of old vines, fermented with native yeasts and aged in old casks. After a local dispute the parcel left the Sancerre appellation, so the wine is labeled by lot, here Lot 2024: wild strawberry, red currant and crushed chalk, dry and taut. It is our celebration bottle for the Creole Tomato Tostada and the New Orleans Shrimp & Grits, and lovely with the Louisiana Crab Claws, the Steak Tartare Cannoli and the Cheese Board. We serve it at 48 to 52°F in a white-wine glass.",
+			"words": [
+				"labelled"
+			]
+		},
+		{
+			"path": "model.wines[151].lines.s45",
+			"before": "Kongsgaard is a small family winery in the Napa Valley, making Chardonnay in small amounts in a rich style built to age in bottle, like great white Burgundy. Our 2016 has ten years on it: lemon curd, baked pear, hazelnut and honey with a smoky, savoury depth, rich and layered yet fresh, with a very long finish. It is our celebration bottle for the Pecan Gulf Fish, with the power for the pecan bordelaise and crab, and lovely with the Louisiana BBQ Lobster, the Louisiana Crab Claws and the Poussin à la Moutarde. We serve it barely chilled, 52 to 55°F, in a large white Burgundy bowl.",
+			"after": "Kongsgaard is a small family winery in the Napa Valley, making Chardonnay in small amounts in a rich style built to age in bottle, like great white Burgundy. Our 2016 has ten years on it: lemon curd, baked pear, hazelnut and honey with a smoky, savory depth, rich and layered yet fresh, with a very long finish. It is our celebration bottle for the Pecan Gulf Fish, with the power for the pecan bordelaise and crab, and lovely with the Louisiana BBQ Lobster, the Louisiana Crab Claws and the Poussin à la Moutarde. We serve it barely chilled, 52 to 55°F, in a large white Burgundy bowl.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[157].lines.s10",
+			"before": "Domaine du Pélican Vin Jaune from Arbois in the Jura: nutty and savoury, made for the sherry in the Turtle Soup.",
+			"after": "Domaine du Pélican Vin Jaune from Arbois in the Jura: nutty and savory, made for the sherry in the Turtle Soup.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[157].lines.s45",
+			"before": "Domaine du Pélican is the Arbois estate the d’Angerville family of Volnay founded in the Jura in 2012. Its Vin Jaune, yellow wine, is Savagnin aged in cask for over six years without topping up, under a veil of yeast, as fino sherry ages under flor: walnut, curry spice, dried apple and almond with a salty, savoury tang, dry and powerful. It mirrors the aged sherry that finishes the Turtle Soup, so it is our celebration bottle there, and lovely with Maggie’s Mushrooms and the Cheese Board. We serve it cool, 55 to 60°F, in a white Burgundy bowl; it can be decanted ahead, and keeps for days.",
+			"after": "Domaine du Pélican is the Arbois estate the d’Angerville family of Volnay founded in the Jura in 2012. Its Vin Jaune, yellow wine, is Savagnin aged in cask for over six years without topping up, under a veil of yeast, as fino sherry ages under flor: walnut, curry spice, dried apple and almond with a salty, savory tang, dry and powerful. It mirrors the aged sherry that finishes the Turtle Soup, so it is our celebration bottle there, and lovely with Maggie’s Mushrooms and the Cheese Board. We serve it cool, 55 to 60°F, in a white Burgundy bowl; it can be decanted ahead, and keeps for days.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[162].lines.s10",
+			"before": "Jean Foillard’s Côte du Py Morgon: savoury cru Beaujolais, the bottle for the tasso in our New Orleans Shrimp & Grits.",
+			"after": "Jean Foillard’s Côte du Py Morgon: savory cru Beaujolais, the bottle for the tasso in our New Orleans Shrimp & Grits.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[162].lines.s20",
+			"before": "Foillard’s Côte du Py is Gamay from the hill at the heart of Morgon: dark cherry and plum with a savoury, stony edge, deeper than most Beaujolais but soft in tannin, so it meets the tasso and Creole sauce of the New Orleans Shrimp & Grits.",
+			"after": "Foillard’s Côte du Py is Gamay from the hill at the heart of Morgon: dark cherry and plum with a savory, stony edge, deeper than most Beaujolais but soft in tannin, so it meets the tasso and Creole sauce of the New Orleans Shrimp & Grits.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[162].lines.s45",
+			"before": "Jean Foillard’s Côte du Py is Gamay from the hill at the heart of Morgon, its decomposed schist unlike the granite of most crus. Foillard ferments whole bunches long and cool with native yeasts and ages the wine in old Burgundy barrels. It tastes of dark cherry and plum with a savoury, stony edge, deeper than most Beaujolais, yet soft enough in tannin for the tasso, the pimento cheese grit cake and the Creole sauce of our New Orleans Shrimp & Grits. We serve it at 57 to 60°F in a Burgundy bowl, no decanting. Foillard is one of the Gang of Four, the Morgon growers who revived Beaujolais.",
+			"after": "Jean Foillard’s Côte du Py is Gamay from the hill at the heart of Morgon, its decomposed schist unlike the granite of most crus. Foillard ferments whole bunches long and cool with native yeasts and ages the wine in old Burgundy barrels. It tastes of dark cherry and plum with a savory, stony edge, deeper than most Beaujolais, yet soft enough in tannin for the tasso, the pimento cheese grit cake and the Creole sauce of our New Orleans Shrimp & Grits. We serve it at 57 to 60°F in a Burgundy bowl, no decanting. Foillard is one of the Gang of Four, the Morgon growers who revived Beaujolais.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[163].lines.s10",
+			"before": "Grivot’s Les Charmois Nuits-Saint-Georges 2013: savoury red Burgundy with age, for the shiitakes of the Blackened Tofu.",
+			"after": "Grivot’s Les Charmois Nuits-Saint-Georges 2013: savory red Burgundy with age, for the shiitakes of the Blackened Tofu.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[163].lines.s20",
+			"before": "Grivot’s Les Charmois is Pinot Noir from a village vineyard in Nuits-Saint-Georges, thirteen years old: dried cherry, forest floor and mushroom, silky and fresh. Those savoury notes echo the preserved shiitakes in our Blackened Tofu, and the soft tannin stays calm under the blackened crust.",
+			"after": "Grivot’s Les Charmois is Pinot Noir from a village vineyard in Nuits-Saint-Georges, thirteen years old: dried cherry, forest floor and mushroom, silky and fresh. Those savory notes echo the preserved shiitakes in our Blackened Tofu, and the soft tannin stays calm under the blackened crust.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[163].lines.s45",
+			"before": "Grivot’s Les Charmois is Pinot Noir from a village vineyard south of the town of Nuits-Saint-Georges, made by a Vosne-Romanée family domaine and aged about eighteen months in French oak. Thirteen years on, its red cherry has turned to dried cherry, forest floor and mushroom, with silky tannin and fresh acidity. Those savoury notes echo the preserved shiitakes of our Blackened Tofu, the acidity lifts the rice grits, and the soft tannin stays calm under the blackened crust. We serve it at 58 to 62°F in a Burgundy bowl, poured slowly, decanted only for sediment. The family’s vines run from village wines like this to Richebourg.",
+			"after": "Grivot’s Les Charmois is Pinot Noir from a village vineyard south of the town of Nuits-Saint-Georges, made by a Vosne-Romanée family domaine and aged about eighteen months in French oak. Thirteen years on, its red cherry has turned to dried cherry, forest floor and mushroom, with silky tannin and fresh acidity. Those savory notes echo the preserved shiitakes of our Blackened Tofu, the acidity lifts the rice grits, and the soft tannin stays calm under the blackened crust. We serve it at 58 to 62°F in a Burgundy bowl, poured slowly, decanted only for sediment. The family’s vines run from village wines like this to Richebourg.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[164].lines.s45",
+			"before": "Les Lavières is a Premier Cru of Savigny-lès-Beaune, north of Beaune, and Tollot-Beaut, a family domaine in Chorey-lès-Beaune, ages its Pinot Noir with a touch of new oak. At seven years it tastes of ripe red cherry and raspberry, spice and toast, medium in body, with supple tannin. The short rib débris in our Eggs Owen is braised in red wine and sauced with marchand de vin, so the wine echoes the plate, yet stays light enough for the egg. We serve it at 58 to 62°F in a Burgundy bowl, no decanting. Chorey has no Premier Cru, so the domaine’s Premier Crus come from neighbouring villages.",
+			"after": "Les Lavières is a Premier Cru of Savigny-lès-Beaune, north of Beaune, and Tollot-Beaut, a family domaine in Chorey-lès-Beaune, ages its Pinot Noir with a touch of new oak. At seven years it tastes of ripe red cherry and raspberry, spice and toast, medium in body, with supple tannin. The short rib débris in our Eggs Owen is braised in red wine and sauced with marchand de vin, so the wine echoes the plate, yet stays light enough for the egg. We serve it at 58 to 62°F in a Burgundy bowl, no decanting. Chorey has no Premier Cru, so the domaine’s Premier Crus come from neighboring villages.",
+			"words": [
+				"neighbouring"
+			]
+		},
+		{
+			"path": "model.wines[165].lines.s45",
+			"before": "Les Pruliers is a Premier Cru on the south side of Nuits-Saint-Georges, and Domaine Henri Gouges, a family domaine in its fourth generation, farms its old vines organically and builds the Pinot Noir firm, to age. At ten years it tastes of dark cherry and plum, earth and a little spice, its structure softening into a long, savoury finish. That earthy depth stands up to the Roasted Rohan Duck Breast on our dinner tasting, and the fruit meets the cane syrup peaches. We serve it at 60 to 63°F in a Burgundy bowl, opened twenty to thirty minutes ahead. Henri Gouges was a leader of the estate-bottling movement.",
+			"after": "Les Pruliers is a Premier Cru on the south side of Nuits-Saint-Georges, and Domaine Henri Gouges, a family domaine in its fourth generation, farms its old vines organically and builds the Pinot Noir firm, to age. At ten years it tastes of dark cherry and plum, earth and a little spice, its structure softening into a long, savory finish. That earthy depth stands up to the Roasted Rohan Duck Breast on our dinner tasting, and the fruit meets the cane syrup peaches. We serve it at 60 to 63°F in a Burgundy bowl, opened twenty to thirty minutes ahead. Henri Gouges was a leader of the estate-bottling movement.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[169].lines.s45",
+			"before": "Echézeaux is a Grand Cru between Vosne-Romanée and the Clos de Vougeot, where Grivot, a Vosne-Romanée family domaine, makes classical, firm Pinot Noir with moderate new oak. At fifteen years: dark cherry, rose, spice and forest floor, silky tannin, a long finish. It rises to the Roasted Rohan Duck Breast on our dinner tasting, fruit for the glazed peaches, a savoury side for the candied hazelnuts. We stand it upright ahead and serve it at 60 to 63°F in a large Burgundy bowl, decanted off sediment if the sommelier advises. In the late 1980s the domaine worked with the consultant Guy Accad, then stepped back towards clarity.",
+			"after": "Echézeaux is a Grand Cru between Vosne-Romanée and the Clos de Vougeot, where Grivot, a Vosne-Romanée family domaine, makes classical, firm Pinot Noir with moderate new oak. At fifteen years: dark cherry, rose, spice and forest floor, silky tannin, a long finish. It rises to the Roasted Rohan Duck Breast on our dinner tasting, fruit for the glazed peaches, a savory side for the candied hazelnuts. We stand it upright ahead and serve it at 60 to 63°F in a large Burgundy bowl, decanted off sediment if the sommelier advises. In the late 1980s the domaine worked with the consultant Guy Accad, then stepped back towards clarity.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[171].lines.s45",
+			"before": "Echézeaux is a Grand Cru beside Vosne-Romanée, in Flagey-Echézeaux, and the Domaine de la Romanée-Conti, which guests call DRC, holds vines there. The domaine makes its reds with whole bunches and long ageing in new oak: perfume and lift, not weight. At eleven years this Pinot Noir shows red and black cherry, rose and spice, silky and lifted. It is the centre of a celebration, with the Roasted Chateaubriand, the Roasted Rohan Duck Breast or alone. The sommelier opens it and decides on decanting; we pour at 60 to 63°F in large Burgundy bowls. The domaine dates from 1869 and owns Romanée-Conti and La Tâche entire.",
+			"after": "Echézeaux is a Grand Cru beside Vosne-Romanée, in Flagey-Echézeaux, and the Domaine de la Romanée-Conti, which guests call DRC, holds vines there. The domaine makes its reds with whole bunches and long aging in new oak: perfume and lift, not weight. At eleven years this Pinot Noir shows red and black cherry, rose and spice, silky and lifted. It is the center of a celebration, with the Roasted Chateaubriand, the Roasted Rohan Duck Breast or alone. The sommelier opens it and decides on decanting; we pour at 60 to 63°F in large Burgundy bowls. The domaine dates from 1869 and owns Romanée-Conti and La Tâche entire.",
+			"words": [
+				"ageing",
+				"centre"
+			]
+		},
+		{
+			"path": "model.wines[172].lines.s45",
+			"before": "The Clos Saint Jacques is a Premier Cru of Gevrey-Chambertin that many rank with the Grand Crus; of its five owners, Domaine Armand Rousseau holds the largest share. Rousseau destems its grapes and builds deep, savoury Pinot Noir on tannin and length rather than sweetness. The 2019 is still young: dark cherry, raspberry and spice, deep but refined. It suits the Roasted Chateaubriand or lamb. The sommelier will likely decant it an hour ahead; we pour at 60 to 63°F in large Burgundy bowls. In the 1930s Rousseau helped pioneer domaine bottling, when most Burgundy left in cask for a merchant.",
+			"after": "The Clos Saint Jacques is a Premier Cru of Gevrey-Chambertin that many rank with the Grand Crus; of its five owners, Domaine Armand Rousseau holds the largest share. Rousseau destems its grapes and builds deep, savory Pinot Noir on tannin and length rather than sweetness. The 2019 is still young: dark cherry, raspberry and spice, deep but refined. It suits the Roasted Chateaubriand or lamb. The sommelier will likely decant it an hour ahead; we pour at 60 to 63°F in large Burgundy bowls. In the 1930s Rousseau helped pioneer domaine bottling, when most Burgundy left in cask for a merchant.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[173].lines.s10",
+			"before": "La Tâche from the Domaine de la Romanée-Conti, Vosne-Romanée Grand Cru 2012: spicy Pinot Noir, the centre of a celebration.",
+			"after": "La Tâche from the Domaine de la Romanée-Conti, Vosne-Romanée Grand Cru 2012: spicy Pinot Noir, the center of a celebration.",
+			"words": [
+				"centre"
+			]
+		},
+		{
+			"path": "model.wines[173].lines.s20",
+			"before": "La Tâche is a Grand Cru in Vosne-Romanée that the Domaine de la Romanée-Conti owns entire: Pinot Noir with fourteen years, black cherry, rose and exotic spice, savoury, silky and very long. It is the centre of the evening, beside the Roasted Chateaubriand or the Roasted Rohan Duck Breast.",
+			"after": "La Tâche is a Grand Cru in Vosne-Romanée that the Domaine de la Romanée-Conti owns entire: Pinot Noir with fourteen years, black cherry, rose and exotic spice, savory, silky and very long. It is the center of the evening, beside the Roasted Chateaubriand or the Roasted Rohan Duck Breast.",
+			"words": [
+				"savoury",
+				"centre"
+			]
+		},
+		{
+			"path": "model.wines[173].lines.s45",
+			"before": "La Tâche is a Vosne-Romanée Grand Cru owned entire by the Domaine de la Romanée-Conti, across the narrow La Grande Rue from Romanée-Conti. Made with whole bunches and long ageing in new oak, it is often called Romanée-Conti’s spicier sibling. At fourteen years this Pinot Noir shows black cherry, rose, exotic spice and savoury depth, silky and long. It is the centre of the evening, with the Roasted Chateaubriand or the Roasted Rohan Duck Breast beside it. The sommelier opens it and decides on decanting; we pour at 60 to 63°F in large Burgundy bowls. The vineyard was enlarged in 1933, taking in part of Les Gaudichots.",
+			"after": "La Tâche is a Vosne-Romanée Grand Cru owned entire by the Domaine de la Romanée-Conti, across the narrow La Grande Rue from Romanée-Conti. Made with whole bunches and long aging in new oak, it is often called Romanée-Conti’s spicier sibling. At fourteen years this Pinot Noir shows black cherry, rose, exotic spice and savory depth, silky and long. It is the center of the evening, with the Roasted Chateaubriand or the Roasted Rohan Duck Breast beside it. The sommelier opens it and decides on decanting; we pour at 60 to 63°F in large Burgundy bowls. The vineyard was enlarged in 1933, taking in part of Les Gaudichots.",
+			"words": [
+				"ageing",
+				"savoury",
+				"centre"
+			]
+		},
+		{
+			"path": "model.wines[174].lines.s45",
+			"before": "Romanée-Conti is a Vosne-Romanée Grand Cru of under two hectares, owned entire by the Domaine de la Romanée-Conti, which takes its name from it. Made with whole bunches and long ageing in new oak, it is sold in very small allocations. At twelve years this Pinot Noir shows red and black fruit, rose, spice and earth, weightless and silky, with an endless finish. Keep the food simple: the Roasted Chateaubriand, the Roasted Rohan Duck Breast or the wine alone. The sommelier presents, opens and pours it at 60 to 63°F; we set fresh large Burgundy bowls. The Prince de Conti bought the vineyard in 1760.",
+			"after": "Romanée-Conti is a Vosne-Romanée Grand Cru of under two hectares, owned entire by the Domaine de la Romanée-Conti, which takes its name from it. Made with whole bunches and long aging in new oak, it is sold in very small allocations. At twelve years this Pinot Noir shows red and black fruit, rose, spice and earth, weightless and silky, with an endless finish. Keep the food simple: the Roasted Chateaubriand, the Roasted Rohan Duck Breast or the wine alone. The sommelier presents, opens and pours it at 60 to 63°F; we set fresh large Burgundy bowls. The Prince de Conti bought the vineyard in 1760.",
+			"words": [
+				"ageing"
+			]
+		},
+		{
+			"path": "model.wines[180].lines.s45",
+			"before": "Château Grand-Puy-Lacoste is a fifth growth of the 1855 classification in Pauillac, led by Cabernet Sauvignon with Merlot. At eighteen years it tastes of cassis and cedar, tobacco, earth and graphite, the firm tannin resolved into a long, savoury finish. That structure meets the beef and béarnaise of the Creole-Spiced Hanger Steak at lunch and the tenderloin and brown sauce of the Chateau Espagnole at dinner. We serve it at 61 to 64°F in a Bordeaux glass, stood upright ahead and decanted gently off its sediment just before pouring. Its vines sit on a gravel rise inland from the river, and puy is the local word for one.",
+			"after": "Château Grand-Puy-Lacoste is a fifth growth of the 1855 classification in Pauillac, led by Cabernet Sauvignon with Merlot. At eighteen years it tastes of cassis and cedar, tobacco, earth and graphite, the firm tannin resolved into a long, savory finish. That structure meets the beef and béarnaise of the Creole-Spiced Hanger Steak at lunch and the tenderloin and brown sauce of the Chateau Espagnole at dinner. We serve it at 61 to 64°F in a Bordeaux glass, stood upright ahead and decanted gently off its sediment just before pouring. Its vines sit on a gravel rise inland from the river, and puy is the local word for one.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[181].lines.s20",
+			"before": "Pichon Lalande is Pauillac Cabernet Sauvignon with more Merlot than its neighbours, and at twenty-two years it tastes of cassis, cedar, tobacco and dried rose, silky and long. It’s our celebration bottle for the Roasted Chateaubriand and its sauce Foyot.",
+			"after": "Pichon Lalande is Pauillac Cabernet Sauvignon with more Merlot than its neighbors, and at twenty-two years it tastes of cassis, cedar, tobacco and dried rose, silky and long. It’s our celebration bottle for the Roasted Chateaubriand and its sauce Foyot.",
+			"words": [
+				"neighbours"
+			]
+		},
+		{
+			"path": "model.wines[181].lines.s45",
+			"before": "Château Pichon-Longueville Comtesse de Lalande, Pichon Lalande for short, is a second growth of 1855 in Pauillac, across the road from Château Latour: Cabernet Sauvignon with more Merlot than its neighbours. At twenty-two years it tastes of cassis, cedar, tobacco and dried rose, with silky tannin and a long finish. The silk suits the tenderloin of the Roasted Chateaubriand, and its depth meets the sauce Foyot. We serve it at 61 to 64°F in a Bordeaux glass, stood upright ahead, decanted gently off its sediment just before serving. When the Pichon estate was divided in 1850, this share was run by Virginie, Comtesse de Lalande, and keeps her title.",
+			"after": "Château Pichon-Longueville Comtesse de Lalande, Pichon Lalande for short, is a second growth of 1855 in Pauillac, across the road from Château Latour: Cabernet Sauvignon with more Merlot than its neighbors. At twenty-two years it tastes of cassis, cedar, tobacco and dried rose, with silky tannin and a long finish. The silk suits the tenderloin of the Roasted Chateaubriand, and its depth meets the sauce Foyot. We serve it at 61 to 64°F in a Bordeaux glass, stood upright ahead, decanted gently off its sediment just before serving. When the Pichon estate was divided in 1850, this share was run by Virginie, Comtesse de Lalande, and keeps her title.",
+			"words": [
+				"neighbours"
+			]
+		},
+		{
+			"path": "model.wines[183].lines.s45",
+			"before": "Château Haut-Brion stands on gravel mounds in Pessac, on the edge of Bordeaux, in the Graves, and in 1855 it was the one estate outside the Médoc ranked a first growth. It blends Merlot, Cabernet Sauvignon and Cabernet Franc, and this 2002 is twenty-four years old: cassis and plum, tobacco, smoke and gravel, silky and resolved, with a long, savoury finish. It suits the Roasted Chateaubriand. We serve it at 61 to 64°F in a Bordeaux glass, stood upright ahead; the sommelier decants it off its sediment shortly before serving. In 1663 Samuel Pepys wrote of drinking a wine called Ho Bryan.",
+			"after": "Château Haut-Brion stands on gravel mounds in Pessac, on the edge of Bordeaux, in the Graves, and in 1855 it was the one estate outside the Médoc ranked a first growth. It blends Merlot, Cabernet Sauvignon and Cabernet Franc, and this 2002 is twenty-four years old: cassis and plum, tobacco, smoke and gravel, silky and resolved, with a long, savory finish. It suits the Roasted Chateaubriand. We serve it at 61 to 64°F in a Bordeaux glass, stood upright ahead; the sommelier decants it off its sediment shortly before serving. In 1663 Samuel Pepys wrote of drinking a wine called Ho Bryan.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[186].lines.s20",
+			"before": "Cheval Blanc is Cabernet Franc with Merlot from Saint-Émilion, on the Pomerol border, with far more Cabernet Franc than its neighbours. At eighteen years: red and black fruit, violet, mint and spice, silky, fresh and long. It suits the Roasted Rohan Duck Breast and lamb.",
+			"after": "Cheval Blanc is Cabernet Franc with Merlot from Saint-Émilion, on the Pomerol border, with far more Cabernet Franc than its neighbors. At eighteen years: red and black fruit, violet, mint and spice, silky, fresh and long. It suits the Roasted Rohan Duck Breast and lamb.",
+			"words": [
+				"neighbours"
+			]
+		},
+		{
+			"path": "model.wines[186].lines.s45",
+			"before": "Château Cheval Blanc, the white horse, lies in the far north west of Saint-Émilion, hard against Pomerol, on gravel, sand and clay rather than limestone. It grows far more Cabernet Franc than its neighbours, with Merlot, and was ranked Premier Grand Cru Classé A when this wine was made. At eighteen years the 2008 tastes of red and black fruit, violet, mint and spice, silky, fresh and long. It suits the Roasted Rohan Duck Breast, lamb and the Roasted Chateaubriand. We serve it at 61 to 64°F in a Bordeaux glass, decanted by the sommelier. Its land was separated from Château Figeac in 1832.",
+			"after": "Château Cheval Blanc, the white horse, lies in the far north west of Saint-Émilion, hard against Pomerol, on gravel, sand and clay rather than limestone. It grows far more Cabernet Franc than its neighbors, with Merlot, and was ranked Premier Grand Cru Classé A when this wine was made. At eighteen years the 2008 tastes of red and black fruit, violet, mint and spice, silky, fresh and long. It suits the Roasted Rohan Duck Breast, lamb and the Roasted Chateaubriand. We serve it at 61 to 64°F in a Bordeaux glass, decanted by the sommelier. Its land was separated from Château Figeac in 1832.",
+			"words": [
+				"neighbours"
+			]
+		},
+		{
+			"path": "model.wines[195].lines.s10",
+			"before": "Château de Beaucastel’s Oenothèque 2007: mature, savoury Châteauneuf-du-Pape from the château’s own cellar, for a celebration with the Petite Filet Mignon.",
+			"after": "Château de Beaucastel’s Oenothèque 2007: mature, savory Châteauneuf-du-Pape from the château’s own cellar, for a celebration with the Petite Filet Mignon.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[195].lines.s20",
+			"before": "Beaucastel’s Oenothèque 2007 is Châteauneuf-du-Pape with a large share of Mourvèdre, nineteen years old and held in the château’s cellar until release: dried cherry, leather and truffle, silky and savoury, for the Petite Filet Mignon.",
+			"after": "Beaucastel’s Oenothèque 2007 is Châteauneuf-du-Pape with a large share of Mourvèdre, nineteen years old and held in the château’s cellar until release: dried cherry, leather and truffle, silky and savory, for the Petite Filet Mignon.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[195].lines.s45",
+			"before": "Château de Beaucastel’s Châteauneuf-du-Pape gives Mourvèdre a large share, with Grenache, Syrah and Counoise. The estate briefly heats the harvest before fermentation and raises the wine in large old foudres, and Oenothèque bottles are older vintages held in the château’s own cellar and released later. At nineteen years it tastes of dried cherry, leather, truffle and garrigue, with silky tannin and savoury depth that meet the tender Petite Filet Mignon without overpowering it. We carry it upright, serve it at 61 to 64°F in a large red glass and decant it gently off its sediment, as the sommelier decides. The Perrin family has run Beaucastel since 1909.",
+			"after": "Château de Beaucastel’s Châteauneuf-du-Pape gives Mourvèdre a large share, with Grenache, Syrah and Counoise. The estate briefly heats the harvest before fermentation and raises the wine in large old foudres, and Oenothèque bottles are older vintages held in the château’s own cellar and released later. At nineteen years it tastes of dried cherry, leather, truffle and garrigue, with silky tannin and savory depth that meet the tender Petite Filet Mignon without overpowering it. We carry it upright, serve it at 61 to 64°F in a large red glass and decant it gently off its sediment, as the sommelier decides. The Perrin family has run Beaucastel since 1909.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[196].lines.s45",
+			"before": "Vieux Télégraphe’s La Crau is Grenache-led Châteauneuf-du-Pape with Mourvèdre and Syrah, from the high La Crau plateau, where the vines grow among large round stones that store the day’s heat. It is raised in large oak foudres. At twelve years it tastes of kirsch and dried cherry, garrigue, pepper and leather, warm, savoury and silky, and its soft tannin loves the chili crisp and pepita persillade on the Creole Hanger Steak. We serve it at 61 to 64°F in a large red glass, decanted gently thirty minutes ahead. The name comes from one of Claude Chappe’s optical telegraph towers, which once stood on the plateau.",
+			"after": "Vieux Télégraphe’s La Crau is Grenache-led Châteauneuf-du-Pape with Mourvèdre and Syrah, from the high La Crau plateau, where the vines grow among large round stones that store the day’s heat. It is raised in large oak foudres. At twelve years it tastes of kirsch and dried cherry, garrigue, pepper and leather, warm, savory and silky, and its soft tannin loves the chili crisp and pepita persillade on the Creole Hanger Steak. We serve it at 61 to 64°F in a large red glass, decanted gently thirty minutes ahead. The name comes from one of Claude Chappe’s optical telegraph towers, which once stood on the plateau.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[197].lines.s45",
+			"before": "Auguste Clape’s Cornas is Syrah from a small, steep granite amphitheatre at the south of the Northern Rhône, where the red may be Syrah only. It is made the traditional way: whole bunches, old foudres, no new oak and no filtering. At ten years it tastes of blackberry and black cherry, violet, pepper, smoke and earth, with firm tannin starting to open, so it wants lamb or the Creole Hanger Steak. We serve it at 61 to 64°F in a large red glass, decanted about an hour ahead. Old terraces above the village, chiefly Reynard, La Côte, Patou and Sabarotte, go into this one Cornas.",
+			"after": "Auguste Clape’s Cornas is Syrah from a small, steep granite amphitheater at the south of the Northern Rhône, where the red may be Syrah only. It is made the traditional way: whole bunches, old foudres, no new oak and no filtering. At ten years it tastes of blackberry and black cherry, violet, pepper, smoke and earth, with firm tannin starting to open, so it wants lamb or the Creole Hanger Steak. We serve it at 61 to 64°F in a large red glass, decanted about an hour ahead. Old terraces above the village, chiefly Reynard, La Côte, Patou and Sabarotte, go into this one Cornas.",
+			"words": [
+				"amphitheatre"
+			]
+		},
+		{
+			"path": "model.wines[199].lines.s45",
+			"before": "E. Guigal’s La Mouline is Syrah from a terraced amphitheatre on the Côte Blonde of Côte-Rôtie, where Viognier grows among the Syrah and is fermented with it, around a tenth. Like Guigal’s other two single vineyards, it spends around forty-two months in new oak. At fourteen years it is the perfumed one of the three: violet, raspberry, bacon and spice, silky and long, for the Roasted Rohan Duck Breast or lamb. We serve it at 61 to 64°F in a large Burgundy glass, and the sommelier decants it an hour or so ahead. Collectors call the three the La La’s, and La Mouline was first made in 1966.",
+			"after": "E. Guigal’s La Mouline is Syrah from a terraced amphitheater on the Côte Blonde of Côte-Rôtie, where Viognier grows among the Syrah and is fermented with it, around a tenth. Like Guigal’s other two single vineyards, it spends around forty-two months in new oak. At fourteen years it is the perfumed one of the three: violet, raspberry, bacon and spice, silky and long, for the Roasted Rohan Duck Breast or lamb. We serve it at 61 to 64°F in a large Burgundy glass, and the sommelier decants it an hour or so ahead. Collectors call the three the La La’s, and La Mouline was first made in 1966.",
+			"words": [
+				"amphitheatre"
+			]
+		},
+		{
+			"path": "model.wines[200].lines.s45",
+			"before": "Château Rayas makes its Châteauneuf-du-Pape from Grenache alone, grown on sand in cool parcels shaded by pine woods, with very low yields, and raises it in old wood with no new oak. Where most Châteauneuf is a dark, warm blend, this is pale and fine: at fifteen years, strawberry, raspberry and kirsch, rose and spice, translucent, silky and perfumed, for the Roasted Rohan Duck Breast or lamb. We serve it at 60 to 63°F in a large Burgundy bowl; the sommelier decides on decanting, and the pale colour is the style, never a flaw. It is so perfumed it is often taken for red Burgundy when tasted blind.",
+			"after": "Château Rayas makes its Châteauneuf-du-Pape from Grenache alone, grown on sand in cool parcels shaded by pine woods, with very low yields, and raises it in old wood with no new oak. Where most Châteauneuf is a dark, warm blend, this is pale and fine: at fifteen years, strawberry, raspberry and kirsch, rose and spice, translucent, silky and perfumed, for the Roasted Rohan Duck Breast or lamb. We serve it at 60 to 63°F in a large Burgundy bowl; the sommelier decides on decanting, and the pale color is the style, never a flaw. It is so perfumed it is often taken for red Burgundy when tasted blind.",
+			"words": [
+				"colour"
+			]
+		},
+		{
+			"path": "model.wines[205].lines.s45",
+			"before": "Viña Cubillo is the youngest red of R. López de Heredia, founded in 1877 at Haro in Rioja Alta. Mostly Tempranillo with Garnacha, Graciano and Mazuelo, it is fermented in old wooden vats and aged about three years in old American oak from the bodega’s own cooperage, so it is mellow and savoury rather than oaky. At ten years: dried cherry, strawberry, leather and gentle spice, light tannin, lively acidity. Lamb is Rioja’s own dish, so it is our bottle for the Lamb Shank en Croûte, and soft enough for the Roost Burger. We serve it at 60 to 63°F in a Bordeaux glass, no decanting.",
+			"after": "Viña Cubillo is the youngest red of R. López de Heredia, founded in 1877 at Haro in Rioja Alta. Mostly Tempranillo with Garnacha, Graciano and Mazuelo, it is fermented in old wooden vats and aged about three years in old American oak from the bodega’s own cooperage, so it is mellow and savory rather than oaky. At ten years: dried cherry, strawberry, leather and gentle spice, light tannin, lively acidity. Lamb is Rioja’s own dish, so it is our bottle for the Lamb Shank en Croûte, and soft enough for the Roost Burger. We serve it at 60 to 63°F in a Bordeaux glass, no decanting.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[208].lines.s20",
+			"before": "CVNE Imperial is a Rioja Reserva from Haro, mostly Tempranillo, aged in oak and then in bottle so it arrives ready: red and black cherry, plum, sweet spice and leather, polished and savoury. Lovely with lamb and both hanger steaks.",
+			"after": "CVNE Imperial is a Rioja Reserva from Haro, mostly Tempranillo, aged in oak and then in bottle so it arrives ready: red and black cherry, plum, sweet spice and leather, polished and savory. Lovely with lamb and both hanger steaks.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[209].lines.s45",
+			"before": "Tenuta San Guido is the Incisa della Rocchetta family estate at Bolgheri on the Tuscan coast, where Sassicaia, first sold with the 1968 vintage, is regarded as the first Super Tuscan. Guidalberto is its younger red, Cabernet Sauvignon with Merlot, aged in French and American oak and labelled Toscana. It is ripe and generous: blackcurrant, black cherry, Mediterranean herbs and a little cedar, with soft tannin and a fresh finish from the sea breeze. It loves the Roasted Chateaubriand, both hanger steaks and lamb. We decant it thirty minutes ahead and serve it at 60 to 64°F in a Bordeaux glass.",
+			"after": "Tenuta San Guido is the Incisa della Rocchetta family estate at Bolgheri on the Tuscan coast, where Sassicaia, first sold with the 1968 vintage, is regarded as the first Super Tuscan. Guidalberto is its younger red, Cabernet Sauvignon with Merlot, aged in French and American oak and labeled Toscana. It is ripe and generous: blackcurrant, black cherry, Mediterranean herbs and a little cedar, with soft tannin and a fresh finish from the sea breeze. It loves the Roasted Chateaubriand, both hanger steaks and lamb. We decant it thirty minutes ahead and serve it at 60 to 64°F in a Bordeaux glass.",
+			"words": [
+				"labelled"
+			]
+		},
+		{
+			"path": "model.wines[210].lines.s45",
+			"before": "Rancia, a former monastic site, is a single vineyard of Fattoria di Fèlsina at Castelnuovo Berardenga, the warm southern corner of Chianti Classico near Siena, bottled on its own as a Riserva. It is all Sangiovese, aged in oak barrels and then in bottle, longer than the estate’s Chianti Classico, so it is deeper and firmer: dark cherry, plum, dried herbs, leather and spice, fine tannin and long, savoury acidity. With the Roasted Chateaubriand, lamb or Maggie’s Mushrooms it opens beautifully. We decant it thirty to forty-five minutes ahead and serve it at 60 to 64°F in a large Bordeaux glass.",
+			"after": "Rancia, a former monastic site, is a single vineyard of Fattoria di Fèlsina at Castelnuovo Berardenga, the warm southern corner of Chianti Classico near Siena, bottled on its own as a Riserva. It is all Sangiovese, aged in oak barrels and then in bottle, longer than the estate’s Chianti Classico, so it is deeper and firmer: dark cherry, plum, dried herbs, leather and spice, fine tannin and long, savory acidity. With the Roasted Chateaubriand, lamb or Maggie’s Mushrooms it opens beautifully. We decant it thirty to forty-five minutes ahead and serve it at 60 to 64°F in a large Bordeaux glass.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[214].lines.s45",
+			"before": "La Rioja Alta was founded in 1890 by five families in the station quarter of Haro, in Rioja Alta, and the 904 is named for its merger in 1904. It is Tempranillo with a little Graciano, aged about four years in American oak barrels from the house’s own cooperage, then years in bottle: silky and savoury, dried cherry, strawberry, tobacco, vanilla, leather and sweet spice, with mellow tannin. Our sweet spot bottle for the Creole-Spiced Hanger Steak at lunch, lovely with lamb. We decant it gently twenty minutes ahead, off any sediment, and serve it at 60 to 64°F in a Bordeaux glass.",
+			"after": "La Rioja Alta was founded in 1890 by five families in the station quarter of Haro, in Rioja Alta, and the 904 is named for its merger in 1904. It is Tempranillo with a little Graciano, aged about four years in American oak barrels from the house’s own cooperage, then years in bottle: silky and savory, dried cherry, strawberry, tobacco, vanilla, leather and sweet spice, with mellow tannin. Our sweet spot bottle for the Creole-Spiced Hanger Steak at lunch, lovely with lamb. We decant it gently twenty minutes ahead, off any sediment, and serve it at 60 to 64°F in a Bordeaux glass.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[229].lines.s10",
+			"before": "Ridge Monte Bello from the Santa Cruz Mountains: savoury mountain Cabernet, cedar and blackcurrant, for the Roasted Chateaubriand or lamb.",
+			"after": "Ridge Monte Bello from the Santa Cruz Mountains: savory mountain Cabernet, cedar and blackcurrant, for the Roasted Chateaubriand or lamb.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[229].lines.s45",
+			"before": "Monte Bello comes from Ridge’s vineyard high on a limestone ridge in the Santa Cruz Mountains, south of San Francisco: a Cabernet Sauvignon-led blend with Merlot, Petit Verdot and Cabernet Franc, the mix changing yearly, aged in American oak. At fourteen years it’s savoury and fresh: blackcurrant, cedar, graphite and mint, with fine, firm tannin, for the Roasted Chateaubriand or lamb. We decant it forty-five minutes ahead, leaving any sediment, and pour at 60 to 64°F in a large Bordeaux glass. The Monte Bello 1971 came fifth among the reds at the Paris tasting of 1976, and first at the re-tasting of 2006.",
+			"after": "Monte Bello comes from Ridge’s vineyard high on a limestone ridge in the Santa Cruz Mountains, south of San Francisco: a Cabernet Sauvignon-led blend with Merlot, Petit Verdot and Cabernet Franc, the mix changing yearly, aged in American oak. At fourteen years it’s savory and fresh: blackcurrant, cedar, graphite and mint, with fine, firm tannin, for the Roasted Chateaubriand or lamb. We decant it forty-five minutes ahead, leaving any sediment, and pour at 60 to 64°F in a large Bordeaux glass. The Monte Bello 1971 came fifth among the reds at the Paris tasting of 1976, and first at the re-tasting of 2006.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[232].lines.s10",
+			"before": "Dominus, from Yountville in the Napa Valley: savoury Cabernet with a Bordeaux soul, for the Roasted Chateaubriand or lamb.",
+			"after": "Dominus, from Yountville in the Napa Valley: savory Cabernet with a Bordeaux soul, for the Roasted Chateaubriand or lamb.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[232].lines.s20",
+			"before": "Dominus is the Napa estate Christian Moueix created on the Napanook vineyard at Yountville: Cabernet Sauvignon with Cabernet Franc and Petit Verdot, blackcurrant, graphite and tobacco, savoury rather than sweet, for the Roasted Chateaubriand or lamb.",
+			"after": "Dominus is the Napa estate Christian Moueix created on the Napanook vineyard at Yountville: Cabernet Sauvignon with Cabernet Franc and Petit Verdot, blackcurrant, graphite and tobacco, savory rather than sweet, for the Roasted Chateaubriand or lamb.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[232].lines.s45",
+			"before": "Dominus is the Napa estate Christian Moueix created, with its first vintage in 1983; his Libourne family is long associated with Pétrus, and with Trotanoy, whose 1946 is on our list. It’s a single vineyard, Napanook, a gravelly bench at Yountville: Cabernet Sauvignon with Cabernet Franc and Petit Verdot, made with Bordeaux restraint. At twelve years it’s savoury rather than sweet: blackcurrant, graphite, tobacco, dried herbs and earth, with firm, fine tannin and fresh acidity. It’s lovely with the Roasted Chateaubriand or lamb, with savoury sides. We pour it at 60 to 64°F in a large Bordeaux glass, decanted forty-five minutes ahead.",
+			"after": "Dominus is the Napa estate Christian Moueix created, with its first vintage in 1983; his Libourne family is long associated with Pétrus, and with Trotanoy, whose 1946 is on our list. It’s a single vineyard, Napanook, a gravelly bench at Yountville: Cabernet Sauvignon with Cabernet Franc and Petit Verdot, made with Bordeaux restraint. At twelve years it’s savory rather than sweet: blackcurrant, graphite, tobacco, dried herbs and earth, with firm, fine tannin and fresh acidity. It’s lovely with the Roasted Chateaubriand or lamb, with savory sides. We pour it at 60 to 64°F in a large Bordeaux glass, decanted forty-five minutes ahead.",
+			"words": [
+				"savoury",
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[236].lines.s10",
+			"before": "Screaming Eagle Second Flight from Oakville in the Napa Valley: the estate’s second wine, plush yet savoury, for the Roasted Chateaubriand.",
+			"after": "Screaming Eagle Second Flight from Oakville in the Napa Valley: the estate’s second wine, plush yet savory, for the Roasted Chateaubriand.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[236].lines.s20",
+			"before": "Second Flight is the second wine of Screaming Eagle, the Oakville cult estate. The 2012 blends Cabernet Sauvignon, Merlot and Cabernet Franc: cassis, plum, black olive and spice, plush yet savoury, for the Roasted Chateaubriand.",
+			"after": "Second Flight is the second wine of Screaming Eagle, the Oakville cult estate. The 2012 blends Cabernet Sauvignon, Merlot and Cabernet Franc: cassis, plum, black olive and spice, plush yet savory, for the Roasted Chateaubriand.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[236].lines.s45",
+			"before": "Screaming Eagle is a small Oakville estate that, with Harlan Estate, marks the start of Napa’s cult era: Jean Phillips bought it in 1986, the first vintage was 1992, and it sells mainly through its mailing list. Its second wine, Second Flight, became The Flight from the 2015 vintage; the estate wine is not on our list. The 2012 blends Cabernet Sauvignon, Merlot and Cabernet Franc: at fourteen years, cassis, plum, black olive, spice and earth, plush yet savoury, with fine tannin. It’s a celebration bottle for the Roasted Chateaubriand. The sommelier presents it at 60 to 64°F in a large Bordeaux glass, decanted thirty to forty-five minutes ahead.",
+			"after": "Screaming Eagle is a small Oakville estate that, with Harlan Estate, marks the start of Napa’s cult era: Jean Phillips bought it in 1986, the first vintage was 1992, and it sells mainly through its mailing list. Its second wine, Second Flight, became The Flight from the 2015 vintage; the estate wine is not on our list. The 2012 blends Cabernet Sauvignon, Merlot and Cabernet Franc: at fourteen years, cassis, plum, black olive, spice and earth, plush yet savory, with fine tannin. It’s a celebration bottle for the Roasted Chateaubriand. The sommelier presents it at 60 to 64°F in a large Bordeaux glass, decanted thirty to forty-five minutes ahead.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[239].lines.s10",
+			"before": "Piedrasassi Bien Nacido Syrah from the Santa Maria Valley: savoury and peppery, lovely with lamb.",
+			"after": "Piedrasassi Bien Nacido Syrah from the Santa Maria Valley: savory and peppery, lovely with lamb.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[239].lines.s20",
+			"before": "Piedrasassi’s Bien Nacido is Syrah from the cool Santa Maria Valley, made the Northern Rhône way: black cherry, black pepper, smoked meat and olive, savoury and fresh, for lamb, the hanger steaks or the Roost Burger.",
+			"after": "Piedrasassi’s Bien Nacido is Syrah from the cool Santa Maria Valley, made the Northern Rhône way: black cherry, black pepper, smoked meat and olive, savory and fresh, for lamb, the hanger steaks or the Roost Burger.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[239].lines.s45",
+			"before": "Piedrasassi is the Syrah label of Sashi Moorman and his wife Melissa Sorongon, made in Lompoc, on California’s Central Coast, since 2003. This one comes from the Bien Nacido Vineyard in the Santa Maria Valley, a grower’s vineyard cooled by Pacific fog, and they make it the Northern Rhône way, savoury rather than jammy: black cherry, black pepper, smoked meat, olive and herbs, medium-bodied, with fine tannin and lively acidity. The pepper and smoke come alive with lamb, both hanger steaks and the Roost Burger. We pour it at 60 to 63°F in a large Burgundy or Syrah glass, decanted twenty minutes ahead.",
+			"after": "Piedrasassi is the Syrah label of Sashi Moorman and his wife Melissa Sorongon, made in Lompoc, on California’s Central Coast, since 2003. This one comes from the Bien Nacido Vineyard in the Santa Maria Valley, a grower’s vineyard cooled by Pacific fog, and they make it the Northern Rhône way, savory rather than jammy: black cherry, black pepper, smoked meat, olive and herbs, medium-bodied, with fine tannin and lively acidity. The pepper and smoke come alive with lamb, both hanger steaks and the Roost Burger. We pour it at 60 to 63°F in a large Burgundy or Syrah glass, decanted twenty minutes ahead.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[244].lines.s10",
+			"before": "Château Musar 2003, Bekaa Valley, Lebanon: twenty-three years old, savoury and spiced, for the Lamb Shank en Croûte.",
+			"after": "Château Musar 2003, Bekaa Valley, Lebanon: twenty-three years old, savory and spiced, for the Lamb Shank en Croûte.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[244].lines.s20",
+			"before": "Château Musar is Cabernet Sauvignon, Cinsault and Carignan grown high in Lebanon’s Bekaa Valley: our 2003 is dried cherry, fig, spice, leather and incense, silky and savoury, lovely with the Lamb Shank en Croûte or the Cheese Board.",
+			"after": "Château Musar is Cabernet Sauvignon, Cinsault and Carignan grown high in Lebanon’s Bekaa Valley: our 2003 is dried cherry, fig, spice, leather and incense, silky and savory, lovely with the Lamb Shank en Croûte or the Cheese Board.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[244].lines.s45",
+			"before": "Gaston Hochar founded Château Musar in 1930, and his son Serge kept it going through fifteen years of civil war, missing two vintages. The grapes, Cabernet Sauvignon, Cinsault and Carignan, grow high in Lebanon’s Bekaa Valley; the wine is made at Ghazir, aged in oak and bottle, and released around seven years after harvest. Our 2003 is dried cherry, fig, spice, leather and incense, silky, with lively acidity and a wild, savoury edge: our celebration bottle for the Lamb Shank en Croûte. We stand it upright ahead, decant it thirty minutes before pouring, off the sediment, and serve it at 60 to 64°F in a large Bordeaux glass.",
+			"after": "Gaston Hochar founded Château Musar in 1930, and his son Serge kept it going through fifteen years of civil war, missing two vintages. The grapes, Cabernet Sauvignon, Cinsault and Carignan, grow high in Lebanon’s Bekaa Valley; the wine is made at Ghazir, aged in oak and bottle, and released around seven years after harvest. Our 2003 is dried cherry, fig, spice, leather and incense, silky, with lively acidity and a wild, savory edge: our celebration bottle for the Lamb Shank en Croûte. We stand it upright ahead, decant it thirty minutes before pouring, off the sediment, and serve it at 60 to 64°F in a large Bordeaux glass.",
+			"words": [
+				"savoury"
+			]
+		},
+		{
+			"path": "model.wines[252].lines.s20",
+			"before": "Château Climens is Barsac made from Sémillon alone, grapes shrivelled by noble rot: candied lemon, apricot, pineapple and honey, sweet and rich but lifted, so its citrus meets the yuzu and lemon of the Lemon Tart and its honey suits the toasted meringue.",
+			"after": "Château Climens is Barsac made from Sémillon alone, grapes shriveled by noble rot: candied lemon, apricot, pineapple and honey, sweet and rich but lifted, so its citrus meets the yuzu and lemon of the Lemon Tart and its honey suits the toasted meringue.",
+			"words": [
+				"shrivelled"
 			]
 		},
 		{
@@ -769,6 +1627,22 @@
 			"path": "model.wines[254].kept[2].a",
 			"before": "Asked: How is Sauternes made?\n\nAnswer: From grapes shrivelled by noble rot in misty autumns, which concentrates their sugar and flavor.\n\nAsked: Is it near Yquem?\n\nAnswer: Right beside it, at Preignac; both are first growths of Sauternes.\n\nAsked: How long does an open bottle last?\n\nAnswer: Sweet wine keeps longer than dry once open; the sommelier sets the house rule.",
 			"after": "Asked: How is Sauternes made?\n\nAnswer: From grapes shriveled by noble rot in misty autumns, which concentrates their sugar and flavor.\n\nAsked: Is it near Yquem?\n\nAnswer: Right beside it, at Preignac; both are first growths of Sauternes.\n\nAsked: How long does an open bottle last?\n\nAnswer: Sweet wine keeps longer than dry once open; the sommelier sets the house rule.",
+			"words": [
+				"shrivelled"
+			]
+		},
+		{
+			"path": "model.wines[257].lines.s45",
+			"before": "Château Gilette is a tiny estate at Preignac in Sauternes, not classified in 1855 and known instead for patience: its Crème de Tête rests close to twenty years in small concrete vats, never in oak, and is released twenty years or more after the harvest. It is mainly Sémillon with some Sauvignon Blanc, shrivelled by noble rot. The 1989 is amber gold: crème brûlée, caramel, dried apricot, orange peel and saffron, sweet but fresh, for the butter, brown sugar and rum of the World Famous Bananas Foster. We pour it at 50 to 54°F in a small white wine glass, small pours, from an ice bucket.",
+			"after": "Château Gilette is a tiny estate at Preignac in Sauternes, not classified in 1855 and known instead for patience: its Crème de Tête rests close to twenty years in small concrete vats, never in oak, and is released twenty years or more after the harvest. It is mainly Sémillon with some Sauvignon Blanc, shriveled by noble rot. The 1989 is amber gold: crème brûlée, caramel, dried apricot, orange peel and saffron, sweet but fresh, for the butter, brown sugar and rum of the World Famous Bananas Foster. We pour it at 50 to 54°F in a small white wine glass, small pours, from an ice bucket.",
+			"words": [
+				"shrivelled"
+			]
+		},
+		{
+			"path": "model.wines[258].lines.s45",
+			"before": "In the 1855 classification of Sauternes, Château d’Yquem was ranked alone as Premier Cru Supérieur, and Thomas Jefferson ordered it for himself and George Washington. Its pickers pass through the vines many times for the berries noble rot has shrivelled, and in poor years no Yquem is made; it is Sémillon with Sauvignon Blanc, aged in new oak. At nineteen years the 2007 is apricot, honey, candied orange, pineapple, vanilla and saffron, with fresh acidity that lifts the custard and whiskey caramel of the New Orleans Bread Pudding. The sommelier presents it; small pours at 50 to 54°F in a small white wine glass, from an ice bucket.",
+			"after": "In the 1855 classification of Sauternes, Château d’Yquem was ranked alone as Premier Cru Supérieur, and Thomas Jefferson ordered it for himself and George Washington. Its pickers pass through the vines many times for the berries noble rot has shriveled, and in poor years no Yquem is made; it is Sémillon with Sauvignon Blanc, aged in new oak. At nineteen years the 2007 is apricot, honey, candied orange, pineapple, vanilla and saffron, with fresh acidity that lifts the custard and whiskey caramel of the New Orleans Bread Pudding. The sommelier presents it; small pours at 50 to 54°F in a small white wine glass, from an ice bucket.",
 			"words": [
 				"shrivelled"
 			]
