@@ -1471,9 +1471,9 @@
 		},
 		{
 			"path": "model.mustKnows[7].body",
-			"before": "Classic eye openers: Bloody Bull $13, Brandy Milk Punch $12, Brennan’s Bloody Mary $11 (pickled okra, spicy beans), Brennan’s Irish Coffee $12. Coffee $11: New Orleans– style with chicory, a single origin from Congregation Coffee (the guide printed a Papua New Guinea), and Café Glacé de la Maison (chicory cold brew, cardamom-clove syrup, orange flower foam). Revive cold-pressed juice $10. Congregation roasts in Algiers; read the single origin from the coffee card on shift rather than naming Papua New Guinea from memory.",
-			"after": "Classic eye openers: Bloody Bull $13, Brandy Milk Punch $12, Brennan’s Bloody Mary $11 (pickled okra, spicy beans), Brennan’s Irish Coffee $12. Coffee $11: New Orleans-style with chicory, a single origin from Congregation Coffee (the guide printed a Papua New Guinea), and Café Glacé de la Maison (chicory cold brew, cardamom-clove syrup, orange flower foam). Revive cold-pressed juice $10. Congregation roasts in Algiers; read the single origin from the coffee card on shift rather than naming Papua New Guinea from memory.",
-			"override": 3240
+			"before": "Classic eye openers: Bloody Bull $13, Brandy Milk Punch $12, Brennan’s Bloody Mary $11 (pickled okra, spicy beans), Brennan’s Irish Coffee $12. Coffee $11: New Orleans– style with chicory, a single origin from Congregation Coffee (the menu prints a Papua New Guinea, roasted for Brennan's), and Café Glacé de la Maison (chicory cold brew, cardamom-clove syrup, orange flower cold foam). Revive cold-pressed juice $10. Congregation roasts in Algiers; Congregation rotates its single origins, so read the current one from the coffee card on shift.",
+			"after": "Classic eye openers: Bloody Bull $13, Brandy Milk Punch $12, Brennan’s Bloody Mary $11 (pickled okra, spicy beans), Brennan’s Irish Coffee $12. Coffee $11: New Orleans-style with chicory, a single origin from Congregation Coffee (the menu prints a Papua New Guinea, roasted for Brennan's), and Café Glacé de la Maison (chicory cold brew, cardamom-clove syrup, orange flower cold foam). Revive cold-pressed juice $10. Congregation roasts in Algiers; Congregation rotates its single origins, so read the current one from the coffee card on shift.",
+			"override": 5345
 		},
 		{
 			"path": "model.mustKnows[8].body",

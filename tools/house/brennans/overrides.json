@@ -5772,7 +5772,7 @@
       "target": "ask:+",
       "op": "add",
       "value": {
-        "question": "Is each coffee $11 (one $11 is printed before all three), and is the chicory coffee the Brennan's private blend from Congregation at every meal?",
+        "question": "Each coffee prints $11.00 on the breakfast and lunch menu: what does each cost at dinner, where the menus print no coffee, and is the chicory coffee the Brennan's private blend from Congregation at every meal?",
         "askWhom": "bar",
         "items": [
           "New Orleans-Style Coffee with Chicory",
@@ -5781,20 +5781,20 @@
         ]
       },
       "reason": "A seasonal, luxury or unprinted drink: confirm it on shift before selling it",
-      "source": "pdf p49; dossier-the-bar section 12; gap-fill-2"
+      "source": "pdf p49; dossier-the-bar section 12; gap-fill-2; pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 81 to 92 (reworded 18 October 2026: the menu prints $11.00 beside each coffee)"
     },
     {
       "target": "ask:+",
       "op": "add",
       "value": {
-        "question": "Which single origin is Congregation roasting for us today? The guide printed a Papua New Guinea; read it off the coffee card.",
+        "question": "Which single origin is Congregation roasting for us today? The menu prints a Papua New Guinea; read the current one off the coffee card.",
         "askWhom": "bar",
         "items": [
           "Congregation Single-Origin Coffee"
         ]
       },
       "reason": "A seasonal, luxury or unprinted drink: confirm it on shift before selling it",
-      "source": "pdf p49; gap-sourcing-6"
+      "source": "pdf p49; gap-sourcing-6; pages/brennansneworleans-menus-pasted-2026-10-03.txt line 86 (reworded 18 October 2026: the house menu prints Papua New Guinea)"
     },
     {
       "target": "ask:+",
@@ -51126,15 +51126,13 @@
             "Espresso Martini"
           ],
           "wines": [],
-          "terms": [
-            "Congregation Coffee"
-          ],
+          "terms": [],
           "house": false
         },
         "verifiedBy": "WebSearch \"Anders Erickson Espresso Martini video youtube \"Anders Erickson\"\": result listed www.youtube.com/watch?v=Rq2257amkAo with that title; the summary listed it among videos from his channel.",
         "checkedOn": "2026-10-04"
       },
-      "reason": "Master review: ships because a search on 4 October 2026 showed this id with this title and named the channel as its uploader; it teaches Espresso Martini, Congregation Coffee",
+      "reason": "Master review: ships because a search on 4 October 2026 showed this id with this title and named the channel as its uploader; it teaches Espresso Martini. On 18 October 2026 the Congregation Coffee term came off: the film teaches the Espresso Martini, not the roaster",
       "source": "research/videos-bar-wine-2026-10-04.json anders-espresso-martini-3-ways"
     },
     {
@@ -71547,6 +71545,310 @@
       },
       "reason": "Drink lines polish 18 October 2026: the polished OBX lines name the gin's maker from its producer profile (Seven Three Distilling, New Orleans), so the kept note that still called the distiller unknown contradicted the card; the watch note keeps the open build questions and drops the maker, now known",
       "source": "the pack component Gentilly Gin (producer: Gentilly Gin, Seven Three Distilling Co., 301 North Claiborne Avenue, New Orleans, founded 2017, its spirits named for the city's neighbourhoods); research/producers-bar-white-spirits-agave-2026-10-10.md (Gentilly Gin)"
+    },
+    {
+      "target": "cocktail:New Orleans-Style Coffee with Chicory",
+      "field": "note",
+      "op": "replace",
+      "value": {
+        "from": "Priced in the guide's Eye openers and coffee must-know (pdf p49): one $11 is printed before all three coffees, so whether each is $11 is a lineup question.",
+        "to": "The breakfast and lunch menu prints it at $11.00 under Coffee, as it prints each of the three coffees; the dinner menus print no coffee, so the dinner price is a lineup question."
+      },
+      "reason": "Coffee and tea, 18 October 2026: the note said one $11 stood before all three coffees, which was the guide's layout; the menu of 3 October prints $11.00 beside each",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 81 to 92"
+    },
+    {
+      "target": "cocktail:New Orleans-Style Coffee with Chicory",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "is $11 at breakfast and lunch and at dinner, priced in the guide's eye openers and coffee list, where one $11 stands before all three coffees.",
+        "to": "is $11.00 on the breakfast and lunch menu, which prints each of the three coffees at $11.00; the dinner menus print no coffee, so ask the dinner price at lineup."
+      },
+      "reason": "Coffee and tea, 18 October 2026: the note said one $11 stood before all three coffees; the menu prints $11.00 beside each, and no dinner menu prints coffee",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 81 to 92"
+    },
+    {
+      "target": "cocktail:New Orleans-Style Coffee with Chicory",
+      "field": "kept.3.a",
+      "op": "replace",
+      "value": {
+        "from": "One $11 is printed before all three coffees: confirm at lineup that each is $11, and that the chicory coffee is the Brennan's private blend from Congregation at every meal.",
+        "to": "Confirm at lineup that the chicory coffee is the Brennan's private blend from Congregation at every meal, and the price at dinner, where the menus print no coffee."
+      },
+      "reason": "Coffee and tea, 18 October 2026: the watch note asked whether each coffee is $11, which the menu now prints; the dinner price and the blend stay open",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 81 to 92"
+    },
+    {
+      "target": "cocktail:Congregation Single-Origin Coffee",
+      "field": "note",
+      "op": "replace",
+      "value": {
+        "from": "Priced in the guide's Eye openers and coffee must-know (pdf p49), which prints a Papua New Guinea; no public listing shows that origin from Congregation, which rotates its single origins. Read the origin from the coffee card on shift.",
+        "to": "The breakfast and lunch menu prints it at $11.00 as Single Origin, Papua New Guinea, a single estate-grown Congregation Coffee roasted for Brennan's; Congregation rotates its single origins, so read the current one from the coffee card on shift."
+      },
+      "reason": "Coffee and tea, 18 October 2026: the note framed Papua New Guinea as only the guide's; the house menu of 3 October prints it (line 86)",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 81 to 92"
+    },
+    {
+      "target": "cocktail:Congregation Single-Origin Coffee",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "is $11 at breakfast and lunch and at dinner, priced in the guide's eye openers and coffee list beside the chicory coffee.",
+        "to": "is $11.00 on the breakfast and lunch menu, beside the chicory coffee; the dinner menus print no coffee, so ask the dinner price at lineup."
+      },
+      "reason": "Coffee and tea, 18 October 2026: the menu prints $11.00 beside each coffee, and no dinner menu prints coffee",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 81 to 92"
+    },
+    {
+      "target": "cocktail:Congregation Single-Origin Coffee",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "The guide printed a Papua New Guinea, but no public listing shows that origin from Congregation, which rotates its single origins with the seasons, so a server reads today's from the coffee card.",
+        "to": "The menu prints a Papua New Guinea, a single estate-grown coffee roasted for Brennan's; Congregation rotates its single origins, so a server reads the current one from the coffee card."
+      },
+      "reason": "Coffee and tea, 18 October 2026: the note framed Papua New Guinea as only the guide's; the house menu prints it (line 86)",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 81 to 92"
+    },
+    {
+      "target": "cocktail:Congregation Single-Origin Coffee",
+      "field": "kept.3.a",
+      "op": "replace",
+      "value": {
+        "from": "Never name Papua New Guinea from memory: the guide printed it, but Congregation rotates its origins, so read today's from the coffee card. One $11 is printed before all three coffees: confirm each price at lineup.",
+        "to": "The menu prints Papua New Guinea, but Congregation rotates its single origins: read the current one from the coffee card before you name it, and ask the dinner price at lineup."
+      },
+      "reason": "Coffee and tea, 18 October 2026: the house menu prints Papua New Guinea and $11.00 beside each coffee; the rotation and the dinner price stay open",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 81 to 92"
+    },
+    {
+      "target": "cocktail:Café Glacé de la Maison",
+      "field": "spec",
+      "op": "set",
+      "value": [
+        "chicory cold brew",
+        "cardamom-clove syrup",
+        "orange flower cold foam"
+      ],
+      "reason": "Coffee and tea, 18 October 2026: the spec said orange flower foam; the menu prints Orange Flower Cold Foam (line 92), as the polished lines already say",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt line 92"
+    },
+    {
+      "target": "cocktail:Café Glacé de la Maison",
+      "field": "parts.sauce",
+      "op": "replace",
+      "value": {
+        "from": "orange flower foam",
+        "to": "orange flower cold foam"
+      },
+      "reason": "Coffee and tea, 18 October 2026: the part said orange flower foam; the menu prints Orange Flower Cold Foam (line 92)",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt line 92"
+    },
+    {
+      "target": "cocktail:Café Glacé de la Maison",
+      "field": "parts.sides",
+      "op": "replace",
+      "value": {
+        "from": "orange flower foam",
+        "to": "orange flower cold foam"
+      },
+      "reason": "Coffee and tea, 18 October 2026: the part said orange flower foam; the menu prints Orange Flower Cold Foam (line 92)",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt line 92"
+    },
+    {
+      "target": "cocktail:Café Glacé de la Maison",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "is our house iced coffee, $11 at breakfast and lunch and at dinner, priced and built in the guide's eye openers and coffee list.",
+        "to": "is our house iced coffee, $11.00 on the breakfast and lunch menu, built as the menu prints it."
+      },
+      "reason": "Coffee and tea, 18 October 2026: the note said the guide priced and built it; the menu of 3 October prints both (line 92)",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 81 to 92"
+    },
+    {
+      "target": "cocktail:Café Glacé de la Maison",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "topped with an orange flower foam.",
+        "to": "topped with an orange flower cold foam."
+      },
+      "reason": "Coffee and tea, 18 October 2026: the menu prints Orange Flower Cold Foam (line 92)",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt line 92"
+    },
+    {
+      "target": "cocktail:Café Glacé de la Maison",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "under an orange flower foam",
+        "to": "under an orange flower cold foam"
+      },
+      "reason": "Coffee and tea, 18 October 2026: the menu prints Orange Flower Cold Foam (line 92)",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt line 92"
+    },
+    {
+      "target": "cocktail:Café Glacé de la Maison",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "and an orange flower foam on top.",
+        "to": "and an orange flower cold foam on top."
+      },
+      "reason": "Coffee and tea, 18 October 2026: the menu prints Orange Flower Cold Foam (line 92)",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt line 92"
+    },
+    {
+      "target": "cocktail:Café Glacé de la Maison",
+      "field": "kept.3.a",
+      "op": "replace",
+      "value": {
+        "from": " One $11 is printed before all three coffees: confirm each price at lineup.",
+        "to": " The menus print coffee only at breakfast and lunch, so confirm the dinner price at lineup."
+      },
+      "reason": "Coffee and tea, 18 October 2026: the watch note asked whether each coffee is $11, which the menu now prints; the dinner price, where no menu prints coffee, stays open",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 81 to 92"
+    },
+    {
+      "target": "cocktail:Café Glacé de la Maison",
+      "field": "kept.4.a",
+      "op": "replace",
+      "value": {
+        "from": "so the orange flower foam stays whole",
+        "to": "so the orange flower cold foam stays whole"
+      },
+      "reason": "Coffee and tea, 18 October 2026: the menu prints Orange Flower Cold Foam (line 92)",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt line 92"
+    },
+    {
+      "target": "term:Café glacé",
+      "field": "toGuest",
+      "op": "replace",
+      "value": {
+        "from": "orange flower foam",
+        "to": "orange flower cold foam"
+      },
+      "reason": "Coffee and tea, 18 October 2026: the menu prints Orange Flower Cold Foam (line 92)",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt line 92"
+    },
+    {
+      "target": "term:Congregation Coffee",
+      "field": "toGuest",
+      "op": "replace",
+      "value": {
+        "from": "read tonight's single origin",
+        "to": "read today's single origin"
+      },
+      "reason": "Coffee and tea, 18 October 2026: the menus print coffee only at breakfast and lunch",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 81 to 92"
+    },
+    {
+      "target": "mustknow:Eye openers & coffee",
+      "field": "body",
+      "op": "replace",
+      "value": {
+        "from": "(the guide printed a Papua New Guinea)",
+        "to": "(the menu prints a Papua New Guinea, roasted for Brennan's)"
+      },
+      "reason": "Coffee and tea, 18 October 2026: the house menu prints Papua New Guinea (line 86)",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 81 to 92"
+    },
+    {
+      "target": "mustknow:Eye openers & coffee",
+      "field": "body",
+      "op": "replace",
+      "value": {
+        "from": "orange flower foam)",
+        "to": "orange flower cold foam)"
+      },
+      "reason": "Coffee and tea, 18 October 2026: the menu prints Orange Flower Cold Foam (line 92)",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 81 to 92"
+    },
+    {
+      "target": "mustknow:Eye openers & coffee",
+      "field": "body",
+      "op": "replace",
+      "value": {
+        "from": "read the single origin from the coffee card on shift rather than naming Papua New Guinea from memory.",
+        "to": "Congregation rotates its single origins, so read the current one from the coffee card on shift."
+      },
+      "reason": "Coffee and tea, 18 October 2026: the house menu prints Papua New Guinea; the rotation stays the reason to read the card",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 81 to 92"
+    },
+    {
+      "target": "house",
+      "op": "tombstone",
+      "value": {
+        "id": "a-yezg582z",
+        "was": "the lineup question on whether each coffee is $11, asked when one $11 stood before all three",
+        "tombstone": "2026-10-18T12:30:00.001Z"
+      },
+      "reason": "Tombstone: the lineup question on whether each coffee is $11, asked when one $11 stood before all three; the question is reworded to the menu of 3 October and files under a new id. The stamp is a millisecond after the 12:30 edition that last carried it, so a device drops the copy nobody touched and keeps one a person did",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 81 to 92"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Which teas does the house pour, hot and iced: the brands, loose leaf or bags, how each is served (pot or cup, lemon, honey, milk) and the price? The menus print no tea.",
+        "askWhom": "bar",
+        "items": []
+      },
+      "reason": "Coffee and tea, 18 October 2026: the menus print no tea to drink, and a guest will ask for one at breakfast and after dinner",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt; tools/house/brennans/guide.txt; the Ledger's Coffee and tea page"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is there an espresso machine on the floor or at the bar, and will the bar make an espresso, cappuccino, latte or americano on request, and at what price? The menus print no espresso drink.",
+        "askWhom": "bar",
+        "items": []
+      },
+      "reason": "Coffee and tea, 18 October 2026: the menus print no espresso drink, and guests ask for them",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt; tools/house/brennans/guide.txt; the Ledger's Coffee and tea page"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Will the bar make a café au lait on request, with our chicory coffee and hot milk, and at what price?",
+        "askWhom": "bar",
+        "items": [
+          "New Orleans-Style Coffee with Chicory"
+        ]
+      },
+      "reason": "Coffee and tea, 18 October 2026: café au lait is the city's coffee with milk and the first thing a visitor asks for; the menus do not print it",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt; tools/house/brennans/guide.txt; the Ledger's Coffee and tea page"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is hot chocolate available, for children and for adults, and is it made from cocoa, chocolate or a mix?",
+        "askWhom": "bar",
+        "items": []
+      },
+      "reason": "Coffee and tea, 18 October 2026: the menus print no hot chocolate; the children's menus include a kid's drink without naming it",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt; tools/house/brennans/guide.txt; the Ledger's Coffee and tea page"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "How does the house brew its hot coffee (a batch brewer, pour-over or a press), and will the bar pour a plain iced coffee or a cold brew without the Café Glacé's syrup and foam?",
+        "askWhom": "bar",
+        "items": [
+          "New Orleans-Style Coffee with Chicory",
+          "Congregation Single-Origin Coffee",
+          "Café Glacé de la Maison"
+        ]
+      },
+      "reason": "Coffee and tea, 18 October 2026: the menus print the coffees, never how the bar brews them, and guests ask for plain iced coffee",
+      "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 81 to 92; the Ledger's Coffee and tea page"
     }
   ]
 }

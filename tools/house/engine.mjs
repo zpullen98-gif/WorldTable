@@ -136,6 +136,16 @@ export function stagingFragmentFiles(names) { return names.map((n) => path.join(
    now; the Hollandaise technique, the Escoffier story, the courtyard turtles, the sauces must-know
    and the Mother sauces term say so; stamped at the quarter hour before its build, never ahead of
    the clock. */
+/* The 04:15 edition of 19 October is the coffee edition: the three coffees read as the menu of
+   3 October prints them (each at $11.00 on the breakfast and lunch menu, the single origin printed
+   as Papua New Guinea by the house itself, the Café Glacé under an orange flower cold foam), the dinner
+   price a lineup question since no dinner menu prints coffee, the two lineup questions reworded to
+   match (the price question under a new id, its old one tombstoned), five new lineup questions for
+   what guests ask that the menus never print (the teas, an espresso machine and espresso drinks on
+   request, café au lait on request, hot chocolate, how the bar brews its coffee and whether it pours
+   a plain iced coffee), the cold brew film attached to the Café Glacé and
+   the Espresso Martini film's mislinked roaster term removed; stamped at the quarter hour before its
+   build, never ahead of the clock. */
 /* The 12:30 edition of 18 October is the drinks edition: the 32 drinks filed under the menus' own
    headings in the menus' own order (the cocktail list a guest is handed first, Billboard Songs from
    1946, Temperance, 1946 and the Sazerac Selections; then the breakfast menu's Classic Eye Openers,
@@ -168,7 +178,7 @@ export function stagingFragmentFiles(names) { return names.map((n) => path.join(
    here); the nine fall cocktails' sheet notes; the mascarpone, burrata and harissa kept notes set to
    the pack's term cards; and the Fall 2026 sheets filed as the fifteenth source; stamped at the
    quarter hour before its build, never ahead of the clock. */
-export const EDITION_BUILT_AT = '2026-10-18T12:30:00.000Z';
+export const EDITION_BUILT_AT = '2026-10-19T04:15:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a

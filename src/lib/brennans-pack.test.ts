@@ -204,7 +204,10 @@ describe("the Brennan's pack", () => {
 		for (const name of summer) expect(h.cocktails.some((c) => c.name === name), name).toBe(false);
 		const drinks = Object.keys(h.removed).filter((k) => k.startsWith('b-'));
 		expect(drinks.length).toBe(summer.length);
-		for (const k of Object.keys(h.removed)) expect(h.removed[k], k).toBe(Date.parse('2026-10-03T22:00:00.000Z') + 1);
+		// The coffee price question was reworded on 19 October and filed under a new id; its old id is
+		// tombstoned a millisecond after the 12:30 edition of 18 October, the last that carried it.
+		const later: Record<string, number> = { 'a-yezg582z': Date.parse('2026-10-18T12:30:00.000Z') + 1 };
+		for (const k of Object.keys(h.removed)) expect(h.removed[k], k).toBe(later[k] ?? Date.parse('2026-10-03T22:00:00.000Z') + 1);
 		for (const name of ['Flamingo', 'Birdcage', 'Spoonbill', 'Personality', 'Oh! What It Seemed to Be']) expect(h.cocktails.some((c) => c.name === name), name).toBe(true);
 	});
 
