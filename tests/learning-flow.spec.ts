@@ -1,8 +1,20 @@
 import { test, expect, type Page } from '@playwright/test';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { goto } from './helpers';
 
 const pack = readFileSync(new URL('../static/shared/packs/brennans-new-orleans.v1.oothouse.json', import.meta.url), 'utf8');
+// Production names lazy data chunks by hash, so identify the emitted files
+// through the manifest while retaining the source URLs for the dev server.
+const manifestPath = new URL('../.svelte-kit/output/client/.vite/manifest.json', import.meta.url);
+const manifest = existsSync(manifestPath)
+	? JSON.parse(readFileSync(manifestPath, 'utf8')) as Record<string, { file: string }>
+	: {};
+const emittedIndex = manifest['src/lib/data/floor-deck.index.json']?.file;
+const emittedDeck = manifest['src/lib/data/floor-deck.json']?.file;
+const indexRequest = (url: URL) => url.pathname.endsWith('/src/lib/data/floor-deck.index.json') ||
+	(!!emittedIndex && url.pathname.endsWith(`/${emittedIndex}`));
+const deckRequest = (url: URL) => url.pathname.endsWith('/src/lib/data/floor-deck.json') ||
+	(!!emittedDeck && url.pathname.endsWith(`/${emittedDeck}`));
 test.use({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' });
 test.beforeEach(async ({ page }) => {
 	await page.route('**/shared/packs/brennans-new-orleans.v1.oothouse.json', route => route.fulfill({ contentType: 'application/json', body: pack }));
@@ -70,9 +82,14 @@ test('whole-deck choice remains available and component answers link to dish les
 });
 
 test('a failed deck index gives a usable, honestly limited daily queue', async ({ page }) => {
-	await page.route(url => /\/floor-deck\.index\./.test(url.pathname), route => route.abort('failed'));
+	let blocked = 0;
+	await page.route(indexRequest, route => {
+		blocked++;
+		return route.abort('failed');
+	});
 	await root(page);
 	await expect(page.getByText(/Some study material could not load: the Floor Deck/)).toBeVisible();
+	expect(blocked, 'the actual deck index request was blocked').toBeGreaterThan(0);
 	await expect(page.getByRole('button', { name: 'Try loading study material again' })).toBeVisible();
 	await expect(page.getByRole('button', { name: "Start today's cards" })).toBeVisible();
 	await page.getByRole('button', { name: "Start today's cards" }).click();
@@ -80,8 +97,11 @@ test('a failed deck index gives a usable, honestly limited daily queue', async (
 });
 
 for (const direct of [false, true]) test(`a failed quiz load ${direct ? 'from a direct study link' : 'from Start'} releases its controls and offers a retry`, async ({ page }) => {
-	const isDeck = (url: URL) => url.pathname.endsWith('/floor-deck.json') || /\/floor-deck\.[^.]+\.js$/.test(url.pathname);
-	await page.route(isDeck, route => route.abort('failed'));
+	let blocked = 0;
+	await page.route(deckRequest, route => {
+		blocked++;
+		return route.abort('failed');
+	});
 	if (direct) {
 		await root(page);
 		await page.getByRole('link', { name: 'Start the quick quiz' }).click();
@@ -90,8 +110,9 @@ for (const direct of [false, true]) test(`a failed quiz load ${direct ? 'from a 
 		await page.getByRole('button', { name: 'Start the quick quiz' }).click();
 	}
 	await expect(page.getByText(/The quiz could not open its study material/)).toBeVisible();
+	expect(blocked, 'the actual deck data request was blocked').toBeGreaterThan(0);
 	await expect(page.getByRole('button', { name: 'Start the quick quiz' })).toBeEnabled();
-	await page.unroute(isDeck);
+	await page.unroute(deckRequest);
 	// Browsers retain a failed module request for the lifetime of a document.
 	// A reload is the reliable recovery after a connection has returned.
 	await page.getByRole('button', { name: 'Reload study material' }).click();
