@@ -75,6 +75,7 @@
 	import { cuisine } from '$lib/stores/cuisine.svelte';
 	import { fallItemForDish, fallSourceById } from '$lib/fall-menu';
 	import FallTeachingImage from './FallTeachingImage.svelte';
+	import FinalDishImage from './FinalDishImage.svelte';
 
 	let {
 		current,
@@ -292,6 +293,10 @@
 			<h3 class="blockhead" id="about-h">{say('about')}</h3>
 			{#each paragraphs(notes.about.a) as para, i (i)}<p class="para">{para}</p>{/each}
 		</section>
+	{/if}
+
+	{#if isDish}
+		{#key dish.id}<FinalDishImage houseId={current.id} itemId={dish.id} />{/key}
 	{/if}
 
 	{#each foliosForDish(current.id, dish.id) as folio (folio.id)}

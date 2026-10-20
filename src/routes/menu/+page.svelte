@@ -43,6 +43,7 @@
 	import StudyCard from '$lib/components/StudyCard.svelte';
 	import ProducersView from '$lib/components/ProducersView.svelte';
 	import FallMenu from '$lib/components/FallMenu.svelte';
+	import FinalPlateGallery from '$lib/components/FinalPlateGallery.svelte';
 	import { readDrilled, type DrilledEntry } from '$lib/house-drilled';
 	import { findItem, inMeal, latestVerdicts, producersLine, say, studyRows, studySections, studyVideos, type StudyRow } from '$lib/study';
 	import { ITEM_ID_RE, wingInstalled } from '$lib/wing-links';
@@ -380,11 +381,13 @@
 	   here again with the address still saying the view. */
 	let producersView = $state(false);
 	let fallView = $state(false);
+	let platesView = $state(false);
 	let fallItem = $state('');
 	let fallKind = $state('dish');
 	afterNavigate(() => {
 		const fallQuery = new URLSearchParams(location.search);
 		fallView = fallQuery.get('view') === 'fall';
+		platesView = fallQuery.get('view') === 'plates';
 		fallItem = fallQuery.get('item') ?? '';
 		fallKind = ['dish', 'cocktail', 'all'].includes(fallQuery.get('kind') ?? '') ? fallQuery.get('kind')! : 'dish';
 		producersView = new URLSearchParams(location.search).get('view') === 'producers';
@@ -465,7 +468,7 @@
 	const hasVideos = $derived(!!current && studyVideos(current).some((g) => g.rows.length > 0));
 	/** Cuisine's chapters with something written, in the index's order; empty until the index is in. */
 	const chapters = $derived((cuisine.index?.chapters ?? []).filter((c) => c.file));
-	const jumpsOn = $derived(studyOn && !!current && opened && !openDish && !producersView && !fallView);
+	const jumpsOn = $derived(studyOn && !!current && opened && !openDish && !producersView && !fallView && !platesView);
 
 	/** Bring a heading to the top and put the focus on it, the address and the history left as they are. */
 	function jumpTo(id: string) {
@@ -1505,13 +1508,13 @@
 		     name, its facts and the menu itself rise up the phone's first screen. -->
 		<div class="headrow">
 			<h1>{houseName}</h1>
-			{#if studyOn && current && opened && !openDish && !producersView && !fallView}
+			{#if studyOn && current && opened && !openDish && !producersView && !fallView && !platesView}
 				<button class="quiet studyedit" onclick={editAll}>{say('editOff')}</button>
 			{/if}
 		</div>
 		<!-- The study view says what it is in its own facts line: a lede here
 		     would push the menu itself off a phone's first screen. -->
-		{#if opened && !studyOn && !fallView}
+		{#if opened && !studyOn && !fallView && !platesView}
 			<p class="lede">
 				Pin dishes from any recipe to draft a menu. The worksheet tracks course balance, vegetarian
 				coverage and prep load, then builds a consolidated shopping list.
@@ -1519,10 +1522,11 @@
 		{/if}
 	</header>
 
-	{#if fallView || !openDish}
+	{#if fallView || platesView || !openDish}
 		<nav class="chips collections" aria-label="{houseName} collections">
-			<a class="chip" href="{base}/menu" aria-current={!fallView ? 'page' : undefined}>The menu</a>
+			<a class="chip" href="{base}/menu" aria-current={!fallView && !platesView ? 'page' : undefined}>The menu</a>
 			<a class="chip" href="{base}/menu?view=fall" aria-current={fallView ? 'page' : undefined}>Fall field notes</a>
+			<a class="chip" href="{base}/menu?view=plates" aria-current={platesView ? 'page' : undefined}>Final Plates</a>
 		</nav>
 	{/if}
 	{#if jumpsOn}
@@ -1537,8 +1541,19 @@
 			{#if hasVideos}<button type="button" class="chip" onclick={() => jumpTo('videos-h')}>Videos</button>{/if}
 		</nav>
 	{/if}
+	{#if platesView}
+		<!-- Keep filters and the expanded tile mounted while its lesson is read.
+		     The shallow card entry returns here with Back and restores focus. -->
+		<div hidden={!!openDish}>
+			<FinalPlateGallery {current} onOpen={(id) => {
+				if (current) openCard(id, studyRows(current, 'dish'), `.plate-lesson[data-plate-id="${id}"]`);
+			}} />
+		</div>
+	{/if}
 	{#if fallView}
 		<FallMenu itemId={fallItem} kind={fallKind} />
+	{:else if platesView && !openDish}
+		<!-- The gallery above is the full reading view. -->
 	{:else if !opened}
 		<!-- The doors More and My restaurant link to (#tools, #plan, #maitre, #desk,
 		     #house) are opened by the hash handler once the house is read; these

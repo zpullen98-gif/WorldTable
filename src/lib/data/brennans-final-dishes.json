@@ -1,0 +1,1374 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-10-20",
+  "items": [
+    {
+      "itemId": "d-fq5ylujb",
+      "collection": "house",
+      "name": "Baked Apple",
+      "category": "Tasting menus",
+      "src": "house/brennans/final-plates/d-fq5ylujb-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-fq5ylujb-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "A whole glazed baked apple topped with oat, pecan and raisin crumble, beside a spoonful of pale cream on an ivory plate.",
+      "platingNote": "Chef-informed illustration; the whole-apple shape, crumble mound, glaze and cream placement are illustrative.",
+      "ingredientCues": [
+        "Baked apple",
+        "Oatmeal, pecan and raisin crumble",
+        "Brown sugar glaze",
+        "Sweetened crème fraîche"
+      ]
+    },
+    {
+      "itemId": "d-w718yap8",
+      "collection": "house",
+      "name": "Petite Filet Mignon",
+      "category": "Tasting menus",
+      "src": "house/brennans/final-plates/d-w718yap8-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-w718yap8-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "A browned petite beef filet beside a round golden potato rösti and glossy cooked spinach with garlic slices.",
+      "platingNote": "Chef-informed illustration; the intact filet, rösti shape and portion proportions are representative. Wine pairing is not part of the plate.",
+      "ingredientCues": [
+        "Petite beef tenderloin",
+        "Potato rösti",
+        "Garlic spinach"
+      ]
+    },
+    {
+      "itemId": "d-5e4ptrq8",
+      "collection": "house",
+      "name": "Louisiana BBQ Lobster",
+      "category": "Tasting menus",
+      "src": "house/brennans/final-plates/d-5e4ptrq8-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-5e4ptrq8-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Cooked lobster tail and claw meat over white beans with reddish nduja pieces and a glossy peppery sauce.",
+      "platingNote": "Chef-informed illustration; shell-free lobster and bowl arrangement are representative, not documented house portion or plating.",
+      "ingredientCues": [
+        "Lobster",
+        "Nduja",
+        "White bean stew"
+      ]
+    },
+    {
+      "itemId": "d-jxnlnzdi",
+      "collection": "house",
+      "name": "Roasted Rohan Duck Breast",
+      "category": "Tasting menus",
+      "src": "house/brennans/final-plates/d-jxnlnzdi-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-jxnlnzdi-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Sliced duck breast with browned skin beside glazed peach wedges and candied hazelnuts.",
+      "platingNote": "Chef-informed illustration; slice count and interior colour are representative and do not establish doneness or house serving temperature.",
+      "ingredientCues": [
+        "Roasted Rohan duck breast",
+        "Cane-syrup-glazed peaches",
+        "Candied hazelnuts"
+      ]
+    },
+    {
+      "itemId": "d-rb7t1xzq",
+      "collection": "house",
+      "name": "Blackberry Trifle",
+      "category": "Starters",
+      "src": "house/brennans/final-plates/d-rb7t1xzq-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-rb7t1xzq-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "A glass of layered purple blackberry curd, pale chia pudding, yellow lemon curd and golden blackberry financier pieces.",
+      "platingNote": "Chef-informed illustration; the clear glass and layer order are illustrative teaching choices.",
+      "ingredientCues": [
+        "Blackberry curd",
+        "Coconut chia pudding",
+        "Lemon curd",
+        "Blackberry financier biscuits"
+      ]
+    },
+    {
+      "itemId": "d-1qto9uk9",
+      "collection": "house",
+      "name": "Framboise French Toast",
+      "category": "Starters",
+      "src": "house/brennans/final-plates/d-1qto9uk9-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-1qto9uk9-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Golden thick brioche French toast with pale mascarpone mousse, red raspberry coulis and fresh raspberries.",
+      "platingNote": "Chef-informed illustration; brioche shape, mousse quenelles and portion count are illustrative.",
+      "ingredientCues": [
+        "Citrus brioche French toast",
+        "Mascarpone mousse",
+        "Raspberry coulis",
+        "Raspberries"
+      ]
+    },
+    {
+      "itemId": "d-husneh7o",
+      "collection": "house",
+      "name": "Café Brûlot Coffee Cake",
+      "category": "Starters",
+      "src": "house/brennans/final-plates/d-husneh7o-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-husneh7o-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "A wedge of dark coffee-and-chocolate cake with pecans, glossy amber glaze and pale whipped crème fraîche alongside.",
+      "platingNote": "Chef-informed illustration; cake shape and glaze placement are representative.",
+      "ingredientCues": [
+        "Chicory coffee and bittersweet chocolate cake",
+        "Pecans",
+        "Spiced citrus glaze",
+        "Whipped crème fraîche"
+      ]
+    },
+    {
+      "itemId": "d-wckf36s5",
+      "collection": "house",
+      "name": "Louisiana Oysters",
+      "category": "Starters",
+      "src": "house/brennans/final-plates/d-wckf36s5-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-wckf36s5-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Plump shucked oysters with dark greens, small shallot pieces and golden cracker crumble in a glossy peppery sauce.",
+      "platingNote": "Chef-informed illustration; the cooked, shell-free presentation and oyster count are interpretations, because the saved line does not fix cooking state or vessel.",
+      "ingredientCues": [
+        "Louisiana oysters",
+        "New Orleans BBQ sauce",
+        "Pickled collard greens",
+        "Shallots",
+        "Fried saltine crumble"
+      ]
+    },
+    {
+      "itemId": "d-1gj8ji36",
+      "collection": "house",
+      "name": "Creole Tomato Tostada",
+      "category": "Starters",
+      "src": "house/brennans/final-plates/d-1gj8ji36-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-1gj8ji36-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Red and yellow tomato pieces with creamy burrata on a thin golden tostada, surrounded by light amber tomato water.",
+      "platingNote": "Chef-informed illustration; tomato varieties, tostada shape and the liquid arrangement are representative.",
+      "ingredientCues": [
+        "Heirloom and Creole tomatoes",
+        "Burrata",
+        "Okra tostada",
+        "Smoked tomato water"
+      ]
+    },
+    {
+      "itemId": "d-5p5b1hjn",
+      "collection": "house",
+      "name": "Louisiana Crab Claws",
+      "category": "Starters",
+      "src": "house/brennans/final-plates/d-5p5b1hjn-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-5p5b1hjn-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Exposed ivory crab-claw meat with retained dark shell tips, glossed with brown-butter vinaigrette and finely chopped herbs.",
+      "platingNote": "Chef-informed illustration; claw count, shell-tip arrangement and the exact fines-herbes blend are representative.",
+      "ingredientCues": [
+        "Louisiana crab claws",
+        "Warm brown-butter vinaigrette",
+        "Fines herbes"
+      ]
+    },
+    {
+      "itemId": "d-nd0d2czb",
+      "collection": "house",
+      "name": "Grand Isle Jewel Oysters",
+      "category": "Starters",
+      "src": "house/brennans/final-plates/d-nd0d2czb-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-nd0d2czb-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Five raw oysters in cupped half shells topped with small red-and-pale mignonette pieces and parsley.",
+      "platingNote": "Chef-informed illustration; the five-oyster arrangement is representative, not a house portion. Mignonette texture is illustrative.",
+      "ingredientCues": [
+        "Raw Grand Isle Jewel oysters",
+        "Preserved Fresno-chilli mignonette",
+        "Parsley"
+      ]
+    },
+    {
+      "itemId": "d-0w2k5cdm",
+      "collection": "house",
+      "name": "Steak Tartare Cannoli",
+      "category": "Starters",
+      "src": "house/brennans/final-plates/d-0w2k5cdm-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-0w2k5cdm-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Three golden savoury potato cannoli filled with finely chopped raw red beef, with crème fraîche dollops and grated golden egg-yolk bottarga.",
+      "platingNote": "Chef-informed illustration; cannoli count and shape, tartare cut and topping placement are representative.",
+      "ingredientCues": [
+        "Raw steak tartare",
+        "Potato cannoli",
+        "Crème fraîche",
+        "Egg-yolk bottarga"
+      ]
+    },
+    {
+      "itemId": "d-ecy8tdsb",
+      "collection": "house",
+      "name": "Turtle Soup",
+      "category": "Soups",
+      "src": "house/brennans/final-plates/d-ecy8tdsb-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-ecy8tdsb-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Dark reddish-brown soup with cooked meat pieces, a small spinach garnish and finely grated egg white and yolk.",
+      "platingNote": "Chef-informed illustration; soup texture, garnish arrangement and vessel are representative. The picture cannot authenticate meat species or indicate sherry quantity.",
+      "ingredientCues": [
+        "Turtle soup",
+        "Brown-butter spinach",
+        "Grated egg",
+        "Aged sherry"
+      ]
+    },
+    {
+      "itemId": "d-r3h9vj7a",
+      "collection": "house",
+      "name": "Seafood Gumbo",
+      "category": "Soups",
+      "src": "house/brennans/final-plates/d-r3h9vj7a-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-r3h9vj7a-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Brown seafood gumbo with shrimp, pale crab meat, shucked oysters and andouille slices around a mound of white rice.",
+      "platingNote": "Chef-informed illustration; rice mound, seafood quantities and soup texture are representative.",
+      "ingredientCues": [
+        "Shrimp",
+        "Crab",
+        "Oysters",
+        "Andouille",
+        "Popcorn rice"
+      ]
+    },
+    {
+      "itemId": "d-tdqej73i",
+      "collection": "house",
+      "name": "Creole Caesar",
+      "category": "Salads",
+      "src": "house/brennans/final-plates/d-tdqej73i-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-tdqej73i-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Crisp pale and deep-green lettuce with creamy dressing, thin ivory cheese shavings and narrow golden bread crisps.",
+      "platingNote": "Chef-informed illustration; lettuce arrangement, dressing texture and crisp shapes are representative. The dressing’s oyster ingredient cannot be authenticated visually.",
+      "ingredientCues": [
+        "Gem lettuce",
+        "Smoked-oyster dressing",
+        "Grana Padano",
+        "Leidenheimer crisps"
+      ]
+    },
+    {
+      "itemId": "d-1q0xk7jv",
+      "collection": "house",
+      "name": "Eggs Hussarde",
+      "category": "Entrées",
+      "src": "house/brennans/final-plates/d-1q0xk7jv-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-1q0xk7jv-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Two English-muffin halves layered with Canadian bacon and poached eggs, pale golden hollandaise over the eggs and distinct dark marchand de vin around the bases.",
+      "platingNote": "Two open muffin stacks and the small yolk opening are illustrative presentation choices; exact portions and sauce placement are not confirmed.",
+      "ingredientCues": [
+        "Housemade English muffins",
+        "coffee-cured Canadian bacon",
+        "hollandaise",
+        "poached eggs",
+        "marchand de vin sauce"
+      ]
+    },
+    {
+      "itemId": "d-fs311zha",
+      "collection": "house",
+      "name": "Eggs Sardou",
+      "category": "Entrées",
+      "src": "house/brennans/final-plates/d-fs311zha-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-fs311zha-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Two poached eggs with coral-coloured sauce sit on golden artichoke bases over creamy green spinach.",
+      "platingNote": "Chef-informed illustration; artichoke shape, egg count and sauce placement are representative. The opened yolk is a texture illustration, not a doneness or safety measurement.",
+      "ingredientCues": [
+        "Crispy artichokes",
+        "Poached eggs",
+        "Parmesan creamed spinach",
+        "Choron sauce"
+      ]
+    },
+    {
+      "itemId": "d-44jfmkdb",
+      "collection": "house",
+      "name": "Eggs Owen",
+      "category": "Entrées",
+      "src": "house/brennans/final-plates/d-44jfmkdb-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-44jfmkdb-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Shredded braised beef and browned potato pieces under soft-boiled egg halves, with pale hollandaise and dark red-brown sauce.",
+      "platingNote": "Chef-informed illustration; potato cut, egg presentation and sauce positions are representative. Yolk colour is not a safety or doneness measure.",
+      "ingredientCues": [
+        "Red-wine-braised short-rib débris",
+        "Creole-spiced potato",
+        "Soft-boiled egg",
+        "Hollandaise",
+        "Marchand de vin"
+      ]
+    },
+    {
+      "itemId": "d-vbtv3rru",
+      "collection": "house",
+      "name": "Duck Confit Waffle",
+      "category": "Entrées",
+      "src": "house/brennans/final-plates/d-vbtv3rru-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-vbtv3rru-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "A browned duck leg beside a chive-flecked waffle topped with a sunny-side-up egg and a small butter pat, with amber syrup.",
+      "platingNote": "Chef-informed illustration; duck-leg arrangement, waffle size and syrup texture are representative. A picture cannot verify the butter’s foie-gras content.",
+      "ingredientCues": [
+        "Rohan duck leg",
+        "Cornbread-and-chive waffle",
+        "Foie-gras butter",
+        "Mustard-maple syrup",
+        "Sunny-side-up egg"
+      ]
+    },
+    {
+      "itemId": "d-bqznncn6",
+      "collection": "house",
+      "name": "New Orleans Shrimp & Grits",
+      "category": "Entrées",
+      "src": "house/brennans/final-plates/d-bqznncn6-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-bqznncn6-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Cooked shrimp over a golden fried grit cake with red pimento flecks, surrounded by sauce and tasso pieces and topped with crisp okra rounds.",
+      "platingNote": "Chef-informed illustration; grit-cake shape, shrimp count and okra arrangement are representative.",
+      "ingredientCues": [
+        "Louisiana shrimp",
+        "Fried pimento-cheese grit cake",
+        "Tasso",
+        "Creole sauce",
+        "Fried okra chips"
+      ]
+    },
+    {
+      "itemId": "d-1bvercoh",
+      "collection": "house",
+      "name": "Pecan Gulf Fish",
+      "category": "Entrées",
+      "src": "house/brennans/final-plates/d-1bvercoh-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-1bvercoh-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "A golden cooked white-fish fillet topped with ivory crab meat, beside pale purée and dark collard greens in a brown pecan sauce.",
+      "platingNote": "Chef-informed illustration; fish species, fillet shape, sauce distribution and portions are representative.",
+      "ingredientCues": [
+        "Gulf fish",
+        "Louisiana lump crab",
+        "Pecan bordelaise",
+        "Cauliflower purée",
+        "Wilted collard greens"
+      ]
+    },
+    {
+      "itemId": "d-k84u864v",
+      "collection": "house",
+      "name": "Crab & Corn Omelette",
+      "category": "Entrées",
+      "src": "house/brennans/final-plates/d-k84u864v-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-k84u864v-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "A golden folded omelette with a visible crab-and-corn filling, finished with chopped almonds, green basil and fine lemon zest.",
+      "platingNote": "Chef-informed illustration; the partly open fold displays the filling for learning. The miso butter’s identity cannot be established from appearance alone.",
+      "ingredientCues": [
+        "Louisiana lump crab",
+        "Roasted sweet corn",
+        "Housemade miso butter",
+        "Lemon",
+        "Basil",
+        "Marcona almond gremolata"
+      ]
+    },
+    {
+      "itemId": "d-4jee8o34",
+      "collection": "house",
+      "name": "Creole-Spiced Hanger Steak",
+      "category": "Entrées",
+      "src": "house/brennans/final-plates/d-4jee8o34-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-4jee8o34-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Sliced browned hanger steak beside a layered golden potato pavé topped with a sunny-side-up egg, with herb-flecked béarnaise.",
+      "platingNote": "Chef-informed illustration; steak interior colour, slice count and pavé dimensions are representative rather than house doneness or portions.",
+      "ingredientCues": [
+        "Creole-spiced hanger steak",
+        "Smoked potato pavé",
+        "Sunny-side-up egg",
+        "French béarnaise"
+      ]
+    },
+    {
+      "itemId": "d-5wcuejdy",
+      "collection": "house",
+      "name": "Roasted Chateaubriand",
+      "category": "Entrées",
+      "src": "house/brennans/final-plates/d-5wcuejdy-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-5wcuejdy-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "A browned beef tenderloin roast with thick carved slices, roasted yellow and green summer squash and a tan herb-flecked sauce.",
+      "platingNote": "Chef-informed illustration of the documented sharing dish. Slice count, roast size, interior colour and squash varieties are representative, not a house portion or doneness guide.",
+      "ingredientCues": [
+        "Roasted beef tenderloin",
+        "Roasted and glazed summer squash",
+        "Sauce Foyot"
+      ]
+    },
+    {
+      "itemId": "d-s1bqzuks",
+      "collection": "house",
+      "name": "Redfish Véronique",
+      "category": "Entrées",
+      "src": "house/brennans/final-plates/d-s1bqzuks-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-s1bqzuks-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Golden cooked redfish with burgundy grapes, soft leeks, fingerling potatoes and pale lemon butter sauce.",
+      "platingNote": "Chef-informed presentation; fish cooking finish, grape arrangement and portion size are illustrative.",
+      "ingredientCues": [
+        "Redfish",
+        "Hibiscus-pickled grapes",
+        "Braised leeks",
+        "Fingerling potatoes",
+        "Preserved-lemon beurre blanc"
+      ]
+    },
+    {
+      "itemId": "d-szzugxzi",
+      "collection": "house",
+      "name": "Gulf Fish en Papillote",
+      "category": "Entrées",
+      "src": "house/brennans/final-plates/d-szzugxzi-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-szzugxzi-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Cooked Gulf fish and crab over round sorghum grains in an opened banana leaf, with green olives, almonds and tomatoes.",
+      "platingNote": "Chef-informed opened parcel for studying the finished components; fish species, grain size and arrangement are illustrative.",
+      "ingredientCues": [
+        "Gulf fish",
+        "Louisiana crab",
+        "Banana-leaf parcel",
+        "Sorghum",
+        "Marcona almonds",
+        "Castelvetrano olives",
+        "Tomato"
+      ]
+    },
+    {
+      "itemId": "d-l5877hs6",
+      "collection": "house",
+      "name": "Poussin à la Moutarde",
+      "category": "Entrées",
+      "src": "house/brennans/final-plates/d-l5877hs6-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-l5877hs6-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Golden crisp Cornish hen portions with turnips, halved shallots and a speckled mustard cream sauce.",
+      "platingNote": "Chef-informed cut and pan-fried skin finish. The sweet-tea brine is incorporated before cooking, not shown as a drink.",
+      "ingredientCues": [
+        "Fried Cornish hen",
+        "Sweet-tea brine",
+        "Turnips and shallots",
+        "Mustard cream"
+      ]
+    },
+    {
+      "itemId": "d-377dkkse",
+      "collection": "house",
+      "name": "Blackened Tofu",
+      "category": "Entrées",
+      "src": "house/brennans/final-plates/d-377dkkse-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-377dkkse-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Blackened tofu rectangles over creamy white rice grits with glossy shiitake mushrooms.",
+      "platingNote": "Chef-informed portions and arrangement; rice grits are shown pale rather than yellow corn polenta.",
+      "ingredientCues": [
+        "Blackened tofu",
+        "Rice grits",
+        "Preserved shiitake mushrooms"
+      ]
+    },
+    {
+      "itemId": "d-ono6zqmz",
+      "collection": "house",
+      "name": "Creole Hanger Steak",
+      "category": "Entrées",
+      "src": "house/brennans/final-plates/d-ono6zqmz-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-ono6zqmz-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Sliced Creole-spiced hanger steak alongside broccolini, with pumpkin seeds, parsley and chili crisp.",
+      "platingNote": "Dinner presentation. Medium-rare slicing and the placement of the Madeira glaze, persillade and chili crisp are illustrative.",
+      "ingredientCues": [
+        "Hanger steak",
+        "Creole spice",
+        "Madeira-glazed broccolini",
+        "Pepita persillade",
+        "Chili crisp"
+      ]
+    },
+    {
+      "itemId": "d-drq2a4a3",
+      "collection": "house",
+      "name": "Housemade Pork Sausage Patty",
+      "category": "Sides",
+      "src": "house/brennans/final-plates/d-drq2a4a3-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-drq2a4a3-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "A single browned pork sausage patty on an ivory side plate.",
+      "platingNote": "A one-patty side serving is illustrated; exact size, count and seasoning are not specified.",
+      "ingredientCues": [
+        "Housemade pork sausage patty"
+      ]
+    },
+    {
+      "itemId": "d-9hgd79t8",
+      "collection": "house",
+      "name": "Thick-Cut Bacon",
+      "category": "Sides",
+      "src": "house/brennans/final-plates/d-9hgd79t8-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-9hgd79t8-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Thick, crisp-edged streaky bacon strips arranged on a small ivory plate.",
+      "platingNote": "Strip count and degree of crispness are chef-informed choices.",
+      "ingredientCues": [
+        "Thick-cut bacon"
+      ]
+    },
+    {
+      "itemId": "d-91eotj83",
+      "collection": "house",
+      "name": "Buttermilk Biscuit",
+      "category": "Sides",
+      "src": "house/brennans/final-plates/d-91eotj83-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-91eotj83-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "A golden buttermilk biscuit split to reveal its tender layered crumb.",
+      "platingNote": "One split biscuit is shown to make its crumb visible; shape and size are illustrative.",
+      "ingredientCues": [
+        "Buttermilk biscuit"
+      ]
+    },
+    {
+      "itemId": "d-6wxu3l09",
+      "collection": "house",
+      "name": "Egg Any Style",
+      "category": "Sides",
+      "src": "house/brennans/final-plates/d-6wxu3l09-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-6wxu3l09-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "One sunny-side-up egg with an intact golden yolk, set white and lightly crisp edges.",
+      "platingNote": "Sunny-side-up is an example choice for 'any style'; seasoning and edge crispness are illustrative.",
+      "ingredientCues": [
+        "One egg",
+        "Example: sunny-side-up"
+      ]
+    },
+    {
+      "itemId": "d-594lmt4x",
+      "collection": "house",
+      "name": "Cheddar Grits",
+      "category": "Sides",
+      "src": "house/brennans/final-plates/d-594lmt4x-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-594lmt4x-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Creamy golden cheddar grits in a small gold-rimmed bowl.",
+      "platingNote": "Bowl size, cheddar color and consistency are illustrative; no additional topping is assumed.",
+      "ingredientCues": [
+        "Grits",
+        "Cheddar"
+      ]
+    },
+    {
+      "itemId": "d-z3d4nr3i",
+      "collection": "house",
+      "name": "Brabant Potatoes",
+      "category": "Sides",
+      "src": "house/brennans/final-plates/d-z3d4nr3i-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-z3d4nr3i-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Golden, crisp cubed Brabant potatoes on an ivory side plate.",
+      "platingNote": "Cube size, browning and portion are chef-informed examples.",
+      "ingredientCues": [
+        "Brabant potatoes"
+      ]
+    },
+    {
+      "itemId": "d-nhcrhwrw",
+      "collection": "house",
+      "name": "Creamed Spinach",
+      "category": "Sides",
+      "src": "house/brennans/final-plates/d-nhcrhwrw-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-nhcrhwrw-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Tender chopped green spinach folded through a pale cream sauce in a small bowl.",
+      "platingNote": "Cream balance and serving vessel are illustrative.",
+      "ingredientCues": [
+        "Creamed spinach"
+      ]
+    },
+    {
+      "itemId": "d-r2ufg3nx",
+      "collection": "house",
+      "name": "Succotash",
+      "category": "Sides",
+      "src": "house/brennans/final-plates/d-r2ufg3nx-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-r2ufg3nx-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Glossy corn, lima beans and summer squash with browned bacon in a shallow bowl.",
+      "platingNote": "Corn, lima beans and squash are chef-informed examples of the unspecified seasonal vegetables; the house menu confirms glazed summer vegetables and Nueske’s bacon.",
+      "ingredientCues": [
+        "Glazed summer vegetables",
+        "Nueske’s bacon"
+      ]
+    },
+    {
+      "itemId": "d-xdpmzd3t",
+      "collection": "house",
+      "name": "Smoked Cauliflower",
+      "category": "Sides",
+      "src": "house/brennans/final-plates/d-xdpmzd3t-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-xdpmzd3t-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Browned cauliflower florets with red harissa and small yellow preserved-lemon pieces.",
+      "platingNote": "Floret cuts, browning and sauce placement are illustrative; smoke flavor cannot be verified from appearance.",
+      "ingredientCues": [
+        "Smoked cauliflower",
+        "Preserved lemon",
+        "Harissa"
+      ]
+    },
+    {
+      "itemId": "d-rarw81tw",
+      "collection": "house",
+      "name": "Shells & Cheese",
+      "category": "Sides",
+      "src": "house/brennans/final-plates/d-rarw81tw-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-rarw81tw-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Shell-shaped pasta coated in golden Mimolette fondue with finely grated Grana Padano.",
+      "platingNote": "Serving size and cheese finish are illustrative. Abita Amber belongs in the preparation rather than as a separate drink.",
+      "ingredientCues": [
+        "Shell pasta",
+        "Mimolette fondue",
+        "Grana Padano",
+        "Abita Amber"
+      ]
+    },
+    {
+      "itemId": "d-yo5hh58f",
+      "collection": "house",
+      "name": "Maggie’s Mushrooms",
+      "category": "Sides",
+      "src": "house/brennans/final-plates/d-yo5hh58f-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-yo5hh58f-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Glossy browned mushroom pieces and slices in a small bowl.",
+      "platingNote": "The menu supplies no recipe or mushroom species. The depicted assortment and sautéed finish are representative chef choices.",
+      "ingredientCues": [
+        "Mushroom side"
+      ]
+    },
+    {
+      "itemId": "d-klbj5891",
+      "collection": "house",
+      "name": "South Louisiana Rice Dressing",
+      "category": "Sides",
+      "src": "house/brennans/final-plates/d-klbj5891-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-klbj5891-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "A bowl of lightly browned seasoned rice with finely mixed savory bits.",
+      "platingNote": "The menu supplies no recipe. Rice, small aromatic pieces and fine brown bits form an illustrative rice dressing; meat, vegetables and seasonings require house confirmation.",
+      "ingredientCues": [
+        "South Louisiana rice dressing"
+      ]
+    },
+    {
+      "itemId": "d-w6h1p19m",
+      "collection": "house",
+      "name": "World Famous Bananas Foster",
+      "category": "Desserts",
+      "src": "house/brennans/final-plates/d-w6h1p19m-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-w6h1p19m-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Caramelized banana lengths in glossy cinnamon-flecked brown sauce beside two scoops of vanilla ice cream.",
+      "platingNote": "An individual finished serving after flambé; banana cuts, scoop count and arrangement are illustrative.",
+      "ingredientCues": [
+        "Bananas",
+        "Butter and brown sugar sauce",
+        "Cinnamon",
+        "Rum",
+        "Housemade vanilla ice cream"
+      ]
+    },
+    {
+      "itemId": "d-izx790wz",
+      "collection": "house",
+      "name": "Cherries Jubilee",
+      "category": "Desserts",
+      "src": "house/brennans/final-plates/d-izx790wz-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-izx790wz-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Dark cherries in glossy burgundy sauce with two scoops of vanilla ice cream.",
+      "platingNote": "Finished serving after flambé; cherry arrangement, sauce amount and scoop count are illustrative.",
+      "ingredientCues": [
+        "Tart black cherries",
+        "Luxardo sauce",
+        "Housemade vanilla ice cream"
+      ]
+    },
+    {
+      "itemId": "d-un9zb9af",
+      "collection": "house",
+      "name": "New Orleans Bread Pudding",
+      "category": "Desserts",
+      "src": "house/brennans/final-plates/d-un9zb9af-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-un9zb9af-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Golden baked bread pudding with whiskey caramel, a scoop of ice cream and praline pieces.",
+      "platingNote": "Bread-pudding shape, praline placement and serving size are chef-informed examples.",
+      "ingredientCues": [
+        "Bread pudding",
+        "Whiskey caramel",
+        "Buttermilk ice cream",
+        "Pralines"
+      ]
+    },
+    {
+      "itemId": "d-8oncjhit",
+      "collection": "house",
+      "name": "The Snickers",
+      "category": "Desserts",
+      "src": "house/brennans/final-plates/d-8oncjhit-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-8oncjhit-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Milk-chocolate Bavarian cream, caramel custard, nougat ice cream and roasted peanuts on an ivory plate.",
+      "platingNote": "Separate molded chocolate cream and caramel custard are an illustrative architecture; the menu does not prescribe these shapes.",
+      "ingredientCues": [
+        "Bavarian milk chocolate",
+        "Caramel custard",
+        "Nougat ice cream",
+        "Roasted peanuts"
+      ]
+    },
+    {
+      "itemId": "d-lfwbmoys",
+      "collection": "house",
+      "name": "Lemon Tart",
+      "category": "Desserts",
+      "src": "house/brennans/final-plates/d-lfwbmoys-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-lfwbmoys-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Pale yuzu mousse with yellow lemon jelly, sweet pastry crumbs and two toasted meringue dollops.",
+      "platingNote": "A deconstructed tart composition is illustrated because the menu names pastry crumb rather than prescribing a shell. Shapes and arrangement are chef choices.",
+      "ingredientCues": [
+        "Yuzu mousse",
+        "Lemon jelly",
+        "Sweet pastry crumb",
+        "Toasted meringue"
+      ]
+    },
+    {
+      "itemId": "d-t96e4urn",
+      "collection": "house",
+      "name": "Pineapple Tarte Tatin",
+      "category": "Desserts",
+      "src": "house/brennans/final-plates/d-t96e4urn-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-t96e4urn-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Charred pineapple on flaky puff pastry with pale anglaise and a swirl of whipped vanilla mousse.",
+      "platingNote": "An individual tart shape and piped mousse finish are chef-informed examples.",
+      "ingredientCues": [
+        "Charred pineapple",
+        "Puff pastry",
+        "Sweetened condensed anglaise",
+        "Whipped vanilla mousse"
+      ]
+    },
+    {
+      "itemId": "d-zeh2kqfu",
+      "collection": "house",
+      "name": "Eggs Any Style with Toast and Bacon",
+      "category": "Children's breakfast",
+      "src": "house/brennans/final-plates/d-zeh2kqfu-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-zeh2kqfu-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Soft scrambled eggs beside two triangular pieces of golden toast and crisp streaky bacon on an ivory plate.",
+      "platingNote": "Soft scrambled eggs are the pictured example of the menu’s any-style choice.",
+      "ingredientCues": [
+        "Eggs any style",
+        "toast",
+        "bacon"
+      ]
+    },
+    {
+      "itemId": "d-e1rol7wr",
+      "collection": "house",
+      "name": "Popcorn Shrimp with Brabant Potatoes",
+      "category": "Children's breakfast",
+      "src": "house/brennans/final-plates/d-e1rol7wr-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-e1rol7wr-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Golden fried popcorn shrimp beside crisp cubed Brabant potatoes on an ivory plate.",
+      "platingNote": "The shrimp count and potato cut size illustrate the finished components.",
+      "ingredientCues": [
+        "Popcorn shrimp",
+        "Brabant potatoes"
+      ]
+    },
+    {
+      "itemId": "d-amtfqa6f",
+      "collection": "house",
+      "name": "Vanilla French Toast with Fresh Berries and Whipped Cream",
+      "category": "Children's breakfast",
+      "src": "house/brennans/final-plates/d-amtfqa6f-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-amtfqa6f-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Golden vanilla French-toast triangles with raspberries, blueberries and a dollop of whipped cream.",
+      "platingNote": "Raspberry and blueberry varieties are illustrative fresh-berry choices.",
+      "ingredientCues": [
+        "Vanilla French toast",
+        "fresh berries",
+        "whipped cream"
+      ]
+    },
+    {
+      "itemId": "d-0vd7s81w",
+      "collection": "house",
+      "name": "Grilled Cheese Sandwich with Brabant Potatoes",
+      "category": "Children's breakfast",
+      "src": "house/brennans/final-plates/d-0vd7s81w-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-0vd7s81w-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Golden grilled-cheese sandwich halves with visible melted cheese beside crisp cubed Brabant potatoes.",
+      "platingNote": "Bread and cheese varieties are illustrative; the breakfast accompaniment is cubed Brabant potatoes.",
+      "ingredientCues": [
+        "Grilled cheese sandwich",
+        "Brabant potatoes"
+      ]
+    },
+    {
+      "itemId": "d-06l7og2f",
+      "collection": "house",
+      "name": "Fried Gulf Shrimp with French Fries",
+      "category": "Children's dinner",
+      "src": "house/brennans/final-plates/d-06l7og2f-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-06l7og2f-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Golden fried Gulf shrimp with crisp French-fry batons on an ivory plate.",
+      "platingNote": "Shrimp count, coating and fry cut are illustrative.",
+      "ingredientCues": [
+        "Fried Gulf shrimp",
+        "French fries"
+      ]
+    },
+    {
+      "itemId": "d-anailpmk",
+      "collection": "house",
+      "name": "Buttered Noodles with Cheese",
+      "category": "Children's dinner",
+      "src": "house/brennans/final-plates/d-anailpmk-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-anailpmk-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Butter-glossed ribbon noodles finished with finely grated cheese in a shallow ivory bowl.",
+      "platingNote": "Ribbon noodles and grated cheese are representative choices; exact varieties are not specified.",
+      "ingredientCues": [
+        "Buttered noodles",
+        "cheese"
+      ]
+    },
+    {
+      "itemId": "d-zzpgkxbr",
+      "collection": "house",
+      "name": "Sautéed Gulf Fish with Potato and Green Beans",
+      "category": "Children's dinner",
+      "src": "house/brennans/final-plates/d-zzpgkxbr-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-zzpgkxbr-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "A golden sautéed fish fillet beside roasted potato pieces and cooked green beans.",
+      "platingNote": "Roasted potato pieces are the pictured preparation; fish species and potato method are not specified.",
+      "ingredientCues": [
+        "Sautéed Gulf fish",
+        "potato",
+        "green beans"
+      ]
+    },
+    {
+      "itemId": "d-fvpaopii",
+      "collection": "house",
+      "name": "Grilled Cheese Sandwich with French Fries",
+      "category": "Children's dinner",
+      "src": "house/brennans/final-plates/d-fvpaopii-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-fvpaopii-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Grilled-cheese sandwich halves with visible melted cheese beside French fries.",
+      "platingNote": "Bread and cheese varieties are illustrative; the dinner accompaniment is French fries.",
+      "ingredientCues": [
+        "Grilled cheese sandwich",
+        "French fries"
+      ]
+    },
+    {
+      "itemId": "d-kg4fxuxx",
+      "collection": "house",
+      "name": "Creole Spiced Nuts",
+      "category": "Roost Bar & Bubbles snacks",
+      "src": "house/brennans/final-plates/d-kg4fxuxx-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-kg4fxuxx-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "A small bowl of toasted spiced pecans, almonds and cashews.",
+      "platingNote": "The pictured nut assortment is representative; confirm the actual selection before service.",
+      "ingredientCues": [
+        "Creole spiced nuts"
+      ]
+    },
+    {
+      "itemId": "d-vovhoagi",
+      "collection": "house",
+      "name": "Crawfish Meat Pies",
+      "category": "Roost Bar & Bubbles snacks",
+      "src": "house/brennans/final-plates/d-vovhoagi-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-vovhoagi-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Golden crawfish hand pies, one cut open to reveal the filling, beside chive rémoulade.",
+      "platingNote": "Pie shapes and the opened filling view are illustrative teaching choices.",
+      "ingredientCues": [
+        "Crawfish meat pies",
+        "chive rémoulade"
+      ]
+    },
+    {
+      "itemId": "d-sqsbns9n",
+      "collection": "house",
+      "name": "Fries with Pink Sauce",
+      "category": "Roost Bar & Bubbles snacks",
+      "src": "house/brennans/final-plates/d-sqsbns9n-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-sqsbns9n-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Crisp golden French fries beside a ramekin of smooth pink sauce.",
+      "platingNote": "The sauce color and fry cut are illustrative; the image does not establish a sauce formula.",
+      "ingredientCues": [
+        "Fries",
+        "pink sauce"
+      ]
+    },
+    {
+      "itemId": "d-fswku8o2",
+      "collection": "house",
+      "name": "Fried Pickles",
+      "category": "Roost Bar & Bubbles snacks",
+      "src": "house/brennans/final-plates/d-fswku8o2-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-fswku8o2-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Golden fried pickle rounds and spears beside pale chive-flecked cream.",
+      "platingNote": "Pickle shapes and medley are representative; the supplied menu does not identify every pickled vegetable.",
+      "ingredientCues": [
+        "Medley of housemade pickles",
+        "chive cream"
+      ]
+    },
+    {
+      "itemId": "d-5f1lj940",
+      "collection": "house",
+      "name": "Popcorn Shrimp",
+      "category": "Roost Bar & Bubbles snacks",
+      "src": "house/brennans/final-plates/d-5f1lj940-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-5f1lj940-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Golden popcorn shrimp over glossy reddish Crystal gastrique, with no potato accompaniment.",
+      "platingNote": "Shrimp count, coating and gastrique placement are illustrative.",
+      "ingredientCues": [
+        "Louisiana shrimp",
+        "Crystal gastrique"
+      ]
+    },
+    {
+      "itemId": "d-uvb0pz6a",
+      "collection": "house",
+      "name": "Cheese Board",
+      "category": "Roost Bar & Bubbles snacks",
+      "src": "house/brennans/final-plates/d-uvb0pz6a-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-uvb0pz6a-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Three representative cheeses with fruit-and-nut bread, amber honey and a spoonful of chutney.",
+      "platingNote": "The three cheeses and chutney are representative selections. Fruit and nuts belong to the bread; actual varieties require confirmation.",
+      "ingredientCues": [
+        "Three representative cheeses",
+        "Seasonal chutney",
+        "Honey",
+        "Fruit-and-nut bread"
+      ]
+    },
+    {
+      "itemId": "d-wammm1fe",
+      "collection": "house",
+      "name": "Roost Burger",
+      "category": "Roost Bar & Bubbles snacks",
+      "src": "house/brennans/final-plates/d-wammm1fe-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/d-wammm1fe-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "A burger with two beef patties, melted cheese, bacon, pickles, onions, tomato jam and special sauce.",
+      "platingNote": "Bun and cheese styles are representative. The two-patty build follows the saved menu.",
+      "ingredientCues": [
+        "Two beef short rib patties",
+        "bacon",
+        "cheese",
+        "pickles",
+        "onions",
+        "tomato jam",
+        "special sauce"
+      ]
+    },
+    {
+      "itemId": "steak-tartare-rye",
+      "collection": "fall",
+      "name": "Steak Tartare with Rye",
+      "category": "Fall 2026 · Fall food menu",
+      "src": "house/brennans/final-plates/steak-tartare-rye-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/steak-tartare-rye-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Dressed raw beef tartare topped with an intact yolk, with caper and shallot pieces and thin brown rye tuiles.",
+      "platingNote": "The tartare mound and rye-tuile shapes are illustrative; this is the fall rye preparation.",
+      "ingredientCues": [
+        "Raw Beef Tenderloin",
+        "Tartare Dressing (egg yolk, dijon, caper, shallot, hot sauce, parsley, black pepper)",
+        "Montreal Seasoning (Black pepper, caraway, coriander, chili flake, mustard seed)",
+        "Vital Farms Egg Yolk",
+        "Rye Tuile"
+      ]
+    },
+    {
+      "itemId": "swordfish-grenobloise",
+      "collection": "fall",
+      "name": "Swordfish Grenobloise",
+      "category": "Fall 2026 · Fall food menu",
+      "src": "house/brennans/final-plates/swordfish-grenobloise-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/swordfish-grenobloise-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Seared swordfish on soft leeks with brown butter, lemon segments, fried capers, croutons and chopped parsley.",
+      "platingNote": "Searing and component placement are chef-informed examples; the saved sheet does not specify the cooking method.",
+      "ingredientCues": [
+        "Swordfish Fillet",
+        "Leek Fondue",
+        "Brown Butter",
+        "Lemon",
+        "Fried Capers",
+        "Leidenheimer Croutons",
+        "Parsley"
+      ]
+    },
+    {
+      "itemId": "chateau-espagnole",
+      "collection": "fall",
+      "name": "Chateau Espagnole",
+      "category": "Fall 2026 · Fall food menu",
+      "src": "house/brennans/final-plates/chateau-espagnole-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/chateau-espagnole-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Three slices of beef tenderloin beside tiny irregular buttery frascarelli pasta, with glossy brown Espagnole sauce.",
+      "platingNote": "Slicing, doneness and portion appearance are illustrative; the sheet specifies a 12-ounce Chateaubriand.",
+      "ingredientCues": [
+        "12oz Chateaubriand",
+        "Frascarelli",
+        "Sauce Espagnole"
+      ]
+    },
+    {
+      "itemId": "agnolotti-del-plin",
+      "collection": "fall",
+      "name": "Agnolotti del Plin",
+      "category": "Fall 2026 · Fall food menu",
+      "src": "house/brennans/final-plates/agnolotti-del-plin-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/agnolotti-del-plin-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Small pinched egg-pasta parcels with a cut-open pork and ricotta filling, braised collard greens, grated Parmesan and lemon breadcrumbs.",
+      "platingNote": "Pork and ricotta are shown in the filling, with collards outside, as a chef interpretation; the sheet does not allocate the components.",
+      "ingredientCues": [
+        "Pork",
+        "Agnolotti Pasta",
+        "Braised collards",
+        "Ricotta",
+        "Parmesan",
+        "Lemon Pangratto"
+      ]
+    },
+    {
+      "itemId": "fish-bouillabaisse-tasting",
+      "collection": "fall",
+      "name": "Fish Bouillabaisse",
+      "category": "Fall 2026 · Tasting menu",
+      "src": "house/brennans/final-plates/fish-bouillabaisse-tasting-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/fish-bouillabaisse-tasting-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "A slice of white fish terrine showing a pale shrimp-mousse center, with orange bouillabaisse sauce, browned chickpea panisse, confit fennel, pale preserved-lemon aioli and fennel fronds.",
+      "platingNote": "The shrimp-mousse center is an illustrative terrine construction; fish species and exact architecture are not specified.",
+      "ingredientCues": [
+        "Stuffed Fish Terrine",
+        "Bouillabaisse sauce",
+        "Chickpea Panisse",
+        "Confit Fennel",
+        "Shrimp Mousse",
+        "Preserved Lemon Aioli",
+        "Fennel Frond Garnish"
+      ]
+    },
+    {
+      "itemId": "tuna-crudo-tasting",
+      "collection": "fall",
+      "name": "Tuna Crudo",
+      "category": "Fall 2026 · Tasting menu",
+      "src": "house/brennans/final-plates/tuna-crudo-tasting-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/tuna-crudo-tasting-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Raw red tuna slices in orange carrot-ginger aguachile, with charred orange segments, pickled pearl-onion petals, fine salsa seca, coriander and salt flakes.",
+      "platingNote": "Slice shape, crushed coriander seed and the fine salsa-seca texture are illustrative; confirm the house coriander form and salsa ingredients.",
+      "ingredientCues": [
+        "Tuna",
+        "Carrot Ginger Aguachile",
+        "Salsa Seca",
+        "Burnt Orange Segments",
+        "Coriander",
+        "Pickled Pearl Onions",
+        "Maldon Salt"
+      ]
+    },
+    {
+      "itemId": "chocolate-cremeux-tasting",
+      "collection": "fall",
+      "name": "Chocolate Crémeux",
+      "category": "Fall 2026 · Tasting menu",
+      "src": "house/brennans/final-plates/chocolate-cremeux-tasting-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/chocolate-cremeux-tasting-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Two dark chocolate crémeux quenelles over cocoa-nib crumble with golden lemon olive oil and flaky salt.",
+      "platingNote": "Quenelle shape and arrangement illustrate set crémeux; they are not confirmed house plating.",
+      "ingredientCues": [
+        "Chocolate Cremeux",
+        "Cocoa Nib Crumble",
+        "Lemon Olive Oil",
+        "Maldon Salt"
+      ]
+    },
+    {
+      "itemId": "lamb-shank-en-croute",
+      "collection": "fall",
+      "name": "Lamb Shank en Croûte",
+      "category": "Fall 2026 · Fall food menu",
+      "src": "house/brennans/final-plates/lamb-shank-en-croute-v1.webp",
+      "thumbnailSrc": "house/brennans/final-plates/lamb-shank-en-croute-v1.thumb.webp",
+      "width": 1200,
+      "height": 800,
+      "thumbnailWidth": 420,
+      "thumbnailHeight": 280,
+      "alt": "Flaky golden puff pastry cut open to reveal braised lamb, resting in glossy spiced lamb jus.",
+      "platingNote": "A boneless lamb filling is enclosed in pastry as a chef-informed example; bone presentation is not documented.",
+      "ingredientCues": [
+        "Lamb Shank Daube",
+        "Puff Pastry",
+        "Spiced Lamb Jus"
+      ]
+    }
+  ]
+}

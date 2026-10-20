@@ -11,14 +11,14 @@ export function plateIllustrationAlt(teaching: PlateTeaching): string {
 
 /** Only a loaded, local teaching folio (or original archive) may be warmed after claim.
  *  The caller checks image completion; this function limits the URL to this
- *  wing and strips harmless fragments without accepting queries or subfolders.
+ *  wing and strips harmless fragments without accepting queries or arbitrary subfolders.
  */
 export function plateArtworkUrl(src: string, base: string, documentUrl: string): string | null {
 	try {
 		const document = new URL(documentUrl);
 		const url = new URL(src, document);
 		if (url.origin !== document.origin || url.search) return null;
-		const folder = ['plates', 'standards', 'house/brennans'].find(folder => url.pathname.startsWith(`${base}/${folder}/`));
+		const folder = ['plates', 'standards', 'house/brennans/final-plates', 'house/brennans'].find(folder => url.pathname.startsWith(`${base}/${folder}/`));
 		if (!folder) return null;
 		const root = `${base}/${folder}/`;
 		const file = url.pathname.slice(root.length);

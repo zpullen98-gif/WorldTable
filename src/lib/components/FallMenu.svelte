@@ -3,6 +3,8 @@
 	import { fallMenu, fallItemById, fallSourceById } from '$lib/fall-menu';
 	import { fallArtworkById } from '$lib/fall-menu-art';
 	import FallTeachingImage from './FallTeachingImage.svelte';
+	import FinalDishImage from './FinalDishImage.svelte';
+	import { finalDishFor } from '$lib/brennans-final-dishes';
 	let { itemId = '', kind = 'dish' }: { itemId?: string; kind?: string } = $props();
 	let query = $state('');
 	const item = $derived(fallItemById.get(itemId));
@@ -23,7 +25,10 @@
 		<p class="lede">{item.shortDescription}</p>
 		{#if item.price}<p class="provenance">${item.price} on the uploaded Fall 2026 sheet. Confirm the current price at service.</p>{/if}
 		<nav class="chips" aria-label="Practise this item"><a class="chip go" href={cards(`fall:item:${item.id}`)}>Drill this item</a><a class="chip" href={cards('fall:tableside')}>Practise tableside lines</a></nav>
-		{#key item.id}<FallTeachingImage itemId={item.id} />{/key}
+		{#key item.id}
+			{#if item.kind === 'dish'}<FinalDishImage itemId={item.id} collection="fall" />{/if}
+			<FallTeachingImage itemId={item.id} compact={item.kind === 'dish'} />
+		{/key}
 		<section class="tableside"><p class="eyebrow">At the table</p><blockquote>{item.tableside}</blockquote><p class="provenance">Suggested wording from the listed ingredients. Rehearse it in your own voice.</p></section>
 		<h3>On the training sheet</h3>
 		<ul class="ingredients">{#each item.listedIngredients as ingredient}<li>{ingredient}</li>{/each}</ul>
@@ -44,7 +49,7 @@
 		<nav class="chips filters" aria-label="Fall collection"><a class="chip" aria-current={kind === 'dish' ? 'page' : undefined} href={href('', 'dish')}>Food</a><a class="chip" aria-current={kind === 'cocktail' ? 'page' : undefined} href={href('', 'cocktail')}>Cocktails</a><a class="chip" aria-current={kind === 'all' ? 'page' : undefined} href={href('', 'all')}>All items</a></nav>
 		<label class="search">Find an item or ingredient<input type="search" bind:value={query} placeholder="Try brown butter, quince or rye" /></label>
 		<p class="provenance" role="status">{rows.length} {rows.length === 1 ? 'item' : 'items'}</p>
-		<div class="folio-grid">{#each rows as row}{@const art = fallArtworkById.get(row.id)}<a class="folio-row" href={href(row.id)}>{#if art}<img class="folio-thumb" src="{base}/{art.thumbnailSrc}" alt="" width={art.thumbnailWidth} height={art.thumbnailHeight} loading="lazy" decoding="async" />{/if}<span class="eyebrow">{row.menuSection}</span><h3>{row.name}</h3><p>{row.shortDescription}</p><span class="read">Explore &amp; practise</span></a>{/each}</div>
+		<div class="folio-grid">{#each rows as row}{@const art = finalDishFor('', row.id, 'fall') ?? fallArtworkById.get(row.id)}<a class="folio-row" href={href(row.id)}>{#if art}<img class="folio-thumb" src="{base}/{art.thumbnailSrc}" alt="" width={art.thumbnailWidth} height={art.thumbnailHeight} loading="lazy" decoding="async" />{/if}<span class="eyebrow">{row.menuSection}</span><h3>{row.name}</h3><p>{row.shortDescription}</p><span class="read">Explore &amp; practise</span></a>{/each}</div>
 		{#if !rows.length}<p>No items match. Try another ingredient or choose All items.</p>{/if}
 		<details class="ingredient"><summary>How to use these field notes</summary><p>Read the printed ingredients first. Practise the suggested tableside description without looking. Open the ingredient and origin notes for the deeper story, then answer the flashcards aloud. Today's fall practice gives you ten cards, beginning with missed answers, then unseen material.</p><p>These notes are a dated study collection. They do not change your restaurant's saved menu. Check availability, exact builds and dietary requests with the kitchen or bar.</p></details>
 	{/if}

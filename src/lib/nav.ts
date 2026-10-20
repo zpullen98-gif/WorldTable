@@ -121,6 +121,7 @@ export function parentOf(ask: ParentAsk): string {
 	// that is history.back()).
 	if (path === '/menu') {
 		if (q.get('view') === 'fall') return q.has('item') ? `/menu?view=fall&kind=${['dish', 'cocktail', 'all'].includes(q.get('kind') ?? '') ? q.get('kind') : 'dish'}` : '/menu';
+		if (q.get('view') === 'plates') return /^(dish-)?d-/.test(hash) ? '/menu?view=plates' : '/menu';
 		// A card opened from the Producers view goes back to the view; one open on the study view, or the editing page pushed over it, to the study view.
 		if (/^(dish-)?d-/.test(hash) && q.get('view') === 'producers') return '/menu?view=producers';
 		if (/^(dish-)?d-/.test(hash) || hash === 'edit') return '/menu';

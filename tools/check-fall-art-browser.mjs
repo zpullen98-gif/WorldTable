@@ -13,6 +13,13 @@ let checks = 0;
 const errors = [], requests = [];
 const ok = (value, label) => { assert.ok(value, label); checks++; };
 const href = item => `${base}/menu?view=fall&item=${item}`;
+// Finished dishes have their own illustration; ingredient studies remain an
+// explicit disclosure for food, while cocktail studies retain their full view.
+const openIngredientStudy = async page => {
+	const study = page.locator('.fall-art');
+	await study.waitFor();
+	if (await study.evaluate(el => el.tagName === 'DETAILS' && !el.open)) await study.locator(':scope > summary').click();
+};
 try {
 	if (output) mkdirSync(output, { recursive: true });
 	const context = await browser.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' });
@@ -43,15 +50,16 @@ try {
 	await page.keyboard.press('Escape');
 	ok(await page.getByRole('button', { name: 'Enlarge illustration', exact: true }).evaluate(el => el === document.activeElement), 'Closing restores focus');
 	await page.getByRole('link', { name: 'Read this item', exact: true }).click();
-	await page.locator('section.fall-art').waitFor();
+	await openIngredientStudy(page);
 	await page.goBack();
 	await page.getByRole('button', { name: 'Again', exact: true }).click();
 	ok(await page.locator('.fall-art').count() === 0, 'Next question has no visual hints');
 	for (const [i, item] of art.items.entries()) {
 		await page.goto(href(item.itemId));
-		await page.waitForFunction(() => document.querySelector('section.fall-art figure img')?.naturalWidth === 1200);
-		ok(await page.locator('section.fall-art figure img').getAttribute('alt') === item.alt, `${item.itemId}: reviewed alternative text`);
-		ok(await page.locator('section.fall-art .art-cues li').count() === item.cues.length, `${item.itemId}: all teaching cues`);
+		await openIngredientStudy(page);
+		await page.waitForFunction(() => document.querySelector('.fall-art figure img')?.naturalWidth === 1200);
+		ok(await page.locator('.fall-art figure img').getAttribute('alt') === item.alt, `${item.itemId}: reviewed alternative text`);
+		ok(await page.locator('.fall-art .art-cues li').count() === item.cues.length, `${item.itemId}: all teaching cues`);
 		for (const service of ['day', 'night']) {
 			await page.evaluate(s => document.documentElement.setAttribute('data-service', s), service);
 			await page.setViewportSize({ width: i % 2 ? 320 : 1120, height: 900 });
@@ -67,6 +75,7 @@ try {
 	const fail = '**/house/brennans/fall-' + art.items[0].itemId + '-v1.webp';
 	await page.route(fail, route => route.abort());
 	await page.goto(href(art.items[0].itemId));
+	await openIngredientStudy(page);
 	await page.getByText('The illustration is not available', { exact: true }).waitFor();
 	ok(await page.locator('.art-cues li').count() >= 3, 'Readable teaching remains when an image fails');
 	const retry = page.getByRole('button', { name: 'Try again', exact: true });
@@ -77,7 +86,7 @@ try {
 	}), 'At 320px the failed-image retry control stays inside its visible container');
 	await page.unroute(fail);
 	await retry.click();
-	await page.waitForFunction(() => document.querySelector('section.fall-art figure img')?.naturalWidth === 1200);
+	await page.waitForFunction(() => document.querySelector('.fall-art figure img')?.naturalWidth === 1200);
 	checks++;
 	await context.close();
 	if (offline) {
@@ -86,17 +95,21 @@ try {
 		tab.on('pageerror', e => errors.push(e.message));
 		for (const item of art.items) {
 			await tab.goto(href(item.itemId));
-			await tab.waitForFunction(() => document.querySelector('section.fall-art figure img')?.naturalWidth === 1200);
-			const image = await tab.locator('section.fall-art figure img').getAttribute('src');
+			await openIngredientStudy(tab);
+			await tab.waitForFunction(() => document.querySelector('.fall-art figure img')?.naturalWidth === 1200);
+			const image = await tab.locator('.fall-art figure img').getAttribute('src');
 			await tab.waitForFunction(() => !!navigator.serviceWorker.controller, undefined, { timeout: 60000 });
 			await tab.waitForFunction(async src => !!await (await caches.open('plates-v1')).match(src), image, { timeout: 30000 });
 		}
+		await saved.route('**/*', route => route.abort());
 		await saved.setOffline(true);
 		for (const item of art.items) {
 			await tab.goto(href(item.itemId));
-			await tab.waitForFunction(() => document.querySelector('section.fall-art figure img')?.naturalWidth === 1200);
+			await openIngredientStudy(tab);
+			await tab.waitForFunction(() => document.querySelector('.fall-art figure img')?.naturalWidth === 1200);
 			ok(await tab.locator('.art-cues li').count() === item.cues.length, `${item.itemId}: image and notes available offline`);
 		}
+		ok(await tab.evaluate(() => fetch('/uncached-fall-study-control.txt').then(() => false, () => true)), 'Offline test rejects uncached network requests');
 		await saved.close();
 	}
 	ok(errors.length === 0, 'No browser errors');

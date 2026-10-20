@@ -86,6 +86,7 @@
 	import { drilledKey, markDrilled } from '$lib/house-drilled';
 	import { fallCardById, fallMembers, fallDeckName, fallGradeKey, fallVerdicts, fallPractice, fallSourceById, type FallCard } from '$lib/fall-menu';
 	import FallTeachingImage from '$lib/components/FallTeachingImage.svelte';
+	import FinalDishImage from '$lib/components/FinalDishImage.svelte';
 	import { foundationsCategories, foundationsEntries, foundationEntryById, foundationEntryByRef, foundationsMembers, foundationsPractice, foundationsDeckName, foundationLogKey, foundationRecordable, resolveFoundation } from '$lib/foundations';
 	import FoundationReading from '$lib/components/FoundationReading.svelte';
 	import { itemCards, latestVerdicts, mealsOf, inMeal, findItem, producersFor, say, tastingInMeal, tastingOnlyIds, type ItemCard } from '$lib/study';
@@ -989,7 +990,10 @@
 								<p class="note">{shown.card.sourceIds.length ? 'Background sources:' : 'Based on your Fall 2026 training sheet and the collection’s service notes.'}</p>
 								{#each shown.card.sourceIds as sid}{@const source = fallSourceById.get(sid)}{#if source}<p class="note"><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a></p>{/if}{/each}
 								<a class="chip" href="{base}/menu?view=fall&kind={shown.card.kind}&item={shown.card.itemId}">Read this item</a>
-								{#key shown.card.id}<FallTeachingImage itemId={shown.card.itemId} compact />{/key}
+								{#key shown.card.id}
+									{#if shown.card.kind === 'dish'}<FinalDishImage itemId={shown.card.itemId} collection="fall" compact />{/if}
+									<FallTeachingImage itemId={shown.card.itemId} compact />
+								{/key}
 							{:else}<p class="def">Say it aloud, then flip.</p>{/if}
 						</div>
 					{:else if shown.kind === 'h'}
@@ -1021,6 +1025,9 @@
 								{#if c.back.say}
 									<p class="backhead">{say('say')}</p>
 									<p class="backline">{c.back.say}</p>
+								{/if}
+								{#if current}
+									{#key c.itemId}<FinalDishImage houseId={current.id} itemId={c.itemId} compact />{/key}
 								{/if}
 							</div>
 						{/if}

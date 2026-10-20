@@ -542,6 +542,32 @@ check('every fall ingredient study ships with its key and pictures on demand', (
 	return `${art.items.length} studies, ${resources.length} exact pictures on demand, teaching key precached`;
 });
 
+check('every Brennan final presentation ships on demand with its readable ingredient cues', () => {
+	const art = JSON.parse(readFileSync(join(ROOT, 'src/lib/data/brennans-final-dishes.json'), 'utf8'));
+	const house = JSON.parse(readFileSync(join(ROOT, 'static/shared/packs/brennans-new-orleans.v1.oothouse.json'), 'utf8')).house;
+	const fall = JSON.parse(readFileSync(join(ROOT, 'src/lib/data/fall-menu-2026.json'), 'utf8'));
+	const aliases = JSON.parse(readFileSync(join(ROOT, 'src/lib/data/brennans-final-dish-links.json'), 'utf8'));
+	assert(Object.keys(aliases).length === 8 && new Set(Object.values(aliases)).size === 8, 'the eight canonical fall dishes must have one-to-one legacy image bindings');
+	for (const [dishId, fallId] of Object.entries(aliases)) {
+		assert(house.dishes.some(d => d.id === dishId), `unknown canonical dish binding ${dishId}`);
+		assert(fall.items.some(d => d.id === fallId && d.kind === 'dish'), `unknown fall dish binding ${fallId}`);
+	}
+	const expected = [...house.dishes.filter(d => !aliases[d.id]).map(d => `house:${d.id}`), ...fall.items.filter(d => d.kind === 'dish').map(d => `fall:${d.id}`)].sort();
+	const keys = art.items.map(item => `${item.collection}:${item.itemId}`).sort();
+	assert(JSON.stringify(keys) === JSON.stringify(expected), 'final presentations must cover every canonical dish and legacy fall route without duplicate images');
+	const resources = art.items.flatMap(item => [item.src, item.thumbnailSrc]);
+	assert(new Set(resources).size === resources.length, 'final presentations must use separate image pairs');
+	for (const resource of resources) {
+		assert(existsSync(join(BUILD, resource)), `final presentation missing ${resource}`);
+		assert(!precached.some(u => u.replace(/^\//, '') === resource), `${resource} must stay on demand`);
+		assert(readFileSync(join(BUILD, resource)).equals(readFileSync(join(ROOT, 'static', resource))), `${resource} differs from its reviewed original`);
+	}
+	const chunks = files.filter(f => extname(f) === '.js' && readFileSync(f, 'utf8').includes('Illustrative final presentation'));
+	assert(chunks.length, 'final presentation label never reached the bundle');
+	for (const chunk of chunks) assert(precached.some(u => u.replace(/^\//, '') === rel(chunk)), `final presentation text ${rel(chunk)} is not precached`);
+	return `${house.dishes.length} canonical dishes and ${Object.keys(aliases).length} legacy fall routes, ${resources.length} images on demand`;
+});
+
 check('the primers ship in the install, and each level has its reader page', () => {
 	/* The primers are the text of /level/[n]/read: a lazily imported chunk
 	   found by a key only that file carries, precached so the shell can

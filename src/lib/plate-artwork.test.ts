@@ -43,7 +43,7 @@ describe('first-visit artwork URL boundary', () => {
 		expect(plateArtworkUrl('/plates/pacific-fish-v3.webp', '', 'http://localhost:4173/plates/pacific-fish'))
 			.toBe('http://localhost:4173/plates/pacific-fish-v3.webp');
 	});
-	it.each(['standards/poached-egg-standard-v1.webp', 'standards/roux-colour-ladder-v1.thumb.webp', 'house/brennans/brennans-sauces-v1.webp', 'plates/louisiana-larder-v1.webp'])(
+	it.each(['standards/poached-egg-standard-v1.webp', 'standards/roux-colour-ladder-v1.thumb.webp', 'house/brennans/brennans-sauces-v1.webp', 'house/brennans/final-plates/d-1q0xk7jv-v1.webp', 'house/brennans/final-plates/tuna-crudo-tasting-v1.thumb.webp', 'plates/louisiana-larder-v1.webp'])(
 		'accepts a loaded companion folio at %s', path => {
 			expect(plateArtworkUrl(`/table/${path}`, '/table', page)).toBe(`https://example.test/table/${path}`);
 		}
@@ -57,6 +57,9 @@ describe('first-visit artwork URL boundary', () => {
 		'/table/plates/archive/extra/beef-cuts.webp', '/table/plates/%2fbeef-cuts-v3.webp',
 		'/table/standards/archive/beef-cuts.webp', '/table/house/another-house/brennans-sauces-v1.webp',
 		'/table/standards/extra/poached-egg-standard-v1.webp',
+		'/table/house/brennans/final-plates/extra/d-1q0xk7jv-v1.webp',
+		'/table/house/brennans/final-plates/d-1q0xk7jv-v1.webp?download=1',
+		'/table/house/brennans/unapproved/d-1q0xk7jv-v1.webp',
 		'data:image/webp;base64,AA==', 'http://['
 	])('rejects an unrelated or malformed source: %s', src => {
 		expect(plateArtworkUrl(src, '/table', page)).toBeNull();

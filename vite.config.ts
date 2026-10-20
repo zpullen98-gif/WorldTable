@@ -259,13 +259,15 @@ export default defineConfig({
 					 * so it reads again in a walk-in; 160 entries hold the twenty
 					 * folios, their thumbnails, original archives and kitchen companions,
 					 * with room for the six independently revised editions and the
-					 * Brennan's studies and the 34 fall full/thumbnail files.
+					 * Brennan's studies and the fall full/thumbnail files. Final
+					 * Plates share this bounded cache; older opened artwork may be
+					 * evicted as more dishes are explored. Nothing is bulk fetched.
 					 * A new art revision uses a new URL, so CacheFirst cannot mask a redraw.
 					 * The glob above never sees .webp, and verify-build
 					 * asserts that none of them is precached.
 					 */
 					{
-						urlPattern: ({ url, sameOrigin }) => sameOrigin && /\/(?:plates\/(?:archive\/)?|standards\/|house\/brennans\/)[^/]+\.webp$/.test(url.pathname),
+						urlPattern: ({ url, sameOrigin }) => sameOrigin && /\/(?:plates\/(?:archive\/)?|standards\/|house\/brennans\/(?:final-plates\/)?)[^/]+\.webp$/.test(url.pathname),
 						handler: 'CacheFirst',
 						options: {
 							/* No oot- prefix, deliberately, like the Codex's codexmaps-v1: the

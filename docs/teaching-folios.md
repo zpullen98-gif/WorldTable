@@ -82,6 +82,56 @@ Service guides reuse the house's current structured data. Tasting menus keep pri
 
 ## Verification and publication
 
+### Brennan's final presentations, 20 October 2026
+
+`src/lib/data/brennans-final-dishes.json` is the separate final-presentation
+catalogue: 70 unique image pairs covering all 70 saved Brennan's dishes and the
+eight legacy Fall 2026 food lessons. It does not replace the numbered ingredient studies,
+change the House pack, or combine similarly named breakfast, dinner and tasting
+variants. `collection` (`house` or `fall`) and `itemId` form each stable identity;
+house artwork resolves only for Brennan's exact house ID. The separate
+`brennans-final-dish-links.json` binds the eight canonical fall dish IDs to their
+existing field-note artwork. Both routes use the same files; the gallery lists
+each dish once and opens the canonical lesson when that dish is in the current
+Brennan's pack.
+
+The owner explicitly requested chef-informed final plating where a restaurant
+photograph was unavailable. These images are AI-generated illustrations of
+documented components, not approved house plating or portion standards. Every
+reader retains that distinction, an individual plating note and readable
+ingredient cues outside the image. The actual menu and kitchen instructions
+take precedence. Prompt and visual-review records accompany the image
+collection in the owner's Codex output folder.
+
+Brennan's → Final Plates (`/menu?view=plates`) provides name/ingredient
+search, menu collection and section filters. Only lazy thumbnails are initially
+mounted. Opening a plate requests its full image and exposes the existing
+keyboard-accessible zoom viewer. A saved dish's lesson opens as a shallow card;
+Back restores the gallery's search, expanded presentation and lesson-button
+focus. Canonical dish readers show the matching final image, while fall food
+readers retain the earlier ingredient study in a separate disclosure.
+
+House-dish and fall-food flashcards mount the final-presentation disclosure only
+after reveal. The image is requested only when the learner opens that disclosure;
+blind question faces have no final image, caption or alt-text hint. Reading or
+enlarging artwork records no learning grade.
+
+Full images are 1200 × 800 and thumbnails 420 × 280, with unchanged 3:2
+composition. Their immutable paths are
+`static/house/brennans/final-plates/<stable-id>-v1.webp` and `.thumb.webp`.
+The first-visit artwork warmer and Workbox route explicitly admit this subfolder;
+arbitrary subfolders remain rejected. Both resolutions use the existing bounded
+160-entry `plates-v1` runtime cache. Opening more artwork can evict older images;
+the collection is never bulk-downloaded or included in mandatory precache.
+Readable metadata remains in the install.
+
+`brennans-final-dishes.test.ts` checks exact coverage, identity boundaries,
+versioned WebP pairs, search and navigation. `brennans-final-dishes.spec.ts`
+covers gallery-to-lesson return, zoom, answer-only requests, unavailable-image
+reading and offline reuse. The build verifier separately proves all catalogue
+assets are copied byte-for-byte and excluded from precache. The existing fall
+browser check opens the optional ingredient disclosure explicitly.
+
 The October Brennan's food addition was reviewed against the restaurant's current menus and the primary sources linked in each guide. All four PNG masters, their exact prompts and the independent visual review are retained in `outputs/brennans-food-studies/` in the owner's Codex workspace. The seafood plate required a targeted red-drum anatomy correction and a second fit correction to keep its tail inside the numbered panel. The four production pairs add 788,392 bytes of full artwork and 87,364 bytes of thumbnails (875,756 bytes total). The sauce keys distinguish the illustrated mushroom/shallot version of marchand de vin from the current house recipe, which is confirmed with the chef.
 
 Run source/type checks, unit tests, extraction checks, reproducible derivation, production build and build verification. Browser checks cover twenty pages at 320px, day/night styles, portrait images, keyboard zoom/close/focus, archive retention, quiz resets and offline artwork. CI runs the Playwright regressions, including the first-visit service-worker race.
