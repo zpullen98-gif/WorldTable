@@ -275,22 +275,34 @@
 	}
 
 	let starting = $state(false);
+	let startError = $state('');
 	async function startQuick() {
+		if (starting) return;
 		starting = true;
-		const qs = await dealQuick(chosen);
-		starting = false;
-		nav.pushShallow(`${base}/quizzes?quick=1`, { qq: freshRound(qs) });
-		await focusTop();
+		startError = '';
+		try {
+			const qs = await dealQuick(chosen);
+			nav.pushShallow(`${base}/quizzes?quick=1`, { qq: freshRound(qs) });
+			await focusTop();
+		} catch {
+			startError = 'The quiz could not open its study material. Your saved progress is unchanged. Reconnect and try again; if it still cannot open, reload the study material.';
+		} finally {
+			starting = false;
+		}
 	}
 
 	$effect(() => {
 		const want = pending;
-		if (!want || !today.houseSettled || !session.ready || !levels.data) return;
+		if (!want || !today.houseSettled || !session.ready || (!levels.data && !levels.failed)) return;
 		pending = null;
+		starting = true;
+		startError = '';
 		void dealQuick(chosen).then((qs) => {
 			nav.replaceShallow(location.href, { qq: freshRound(qs) });
 			void focusTop();
-		});
+		}).catch(() => {
+			startError = 'The quiz could not open its study material. Your saved progress is unchanged. Reconnect and try again; if it still cannot open, reload the study material.';
+		}).finally(() => { starting = false; });
 	});
 
 	let top: HTMLElement | undefined = $state();
@@ -337,9 +349,7 @@
 	}
 
 	async function dealAnother() {
-		const qs = await dealQuick(chosen);
-		nav.pushShallow(`${base}/quizzes?quick=1`, { qq: freshRound(qs) });
-		await focusTop();
+		await startQuick();
 	}
 
 	/* ---- the results ------------------------------------------------------ */
@@ -405,6 +415,7 @@
 		<section aria-labelledby="qq-h">
 			<h2 class="group" id="qq-h">Quick quiz</h2>
 			<p class="note quickline">{quickLine}</p>
+			{#if startError}<p class="note" role="status">{startError}</p><button class="chip" onclick={() => window.location.reload()}>Reload study material</button>{/if}
 			<button type="button" class="chip go start" onclick={startQuick} disabled={starting}>{starting ? 'Dealing the round…' : 'Start the quick quiz'}</button>
 		</section>
 
@@ -522,8 +533,9 @@
 		{/if}
 		<div class="chips">
 			{#if missesHref}<a class="chip go" href={missesHref}>Study the misses</a>{/if}
-			<button type="button" class="chip" onclick={dealAnother}>Deal another</button>
+			<button type="button" class="chip" onclick={dealAnother} disabled={starting}>{starting ? 'Dealing the round…' : 'Deal another'}</button>
 		</div>
+		{#if startError}<p class="note" role="status">{startError}</p><button class="chip" onclick={() => window.location.reload()}>Reload study material</button>{/if}
 	{/if}
 </div>
 

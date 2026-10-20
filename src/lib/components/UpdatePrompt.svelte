@@ -10,32 +10,53 @@
 	 * out from under someone to ship a CSS tweak is not a trade worth making.
 	 */
 	let needRefresh = $state(false);
+	let reloading = $state(false);
+	let updateError = $state('');
 	let update: ((reload?: boolean) => Promise<void>) | null = null;
 
-	onMount(async () => {
-		try {
+	onMount(() => {
+		let stopped = false;
+		let timer: ReturnType<typeof setInterval> | undefined;
+		const unsubscribe: Array<() => void> = [];
+		void (async () => { try {
 			const { useRegisterSW } = await import('virtual:pwa-register/svelte');
+			if (stopped) return;
 			const r = useRegisterSW({
 				onRegisteredSW(_url, reg) {
 					// Check hourly while the tab is open, rather than only on load.
-					if (reg) setInterval(() => void reg.update(), 60 * 60 * 1000);
+					if (reg && !stopped) timer = setInterval(() => void reg.update().catch(() => {}), 60 * 60 * 1000);
 				}
 			});
 			update = r.updateServiceWorker;
-			r.needRefresh.subscribe((v) => (needRefresh = v));
+			unsubscribe.push(r.needRefresh.subscribe((v) => (needRefresh = v)));
 			// The offline-ready news is drawn in flow by the layout, not docked here.
-			r.offlineReady.subscribe((v) => (swStatus.offlineReady = v));
+			unsubscribe.push(r.offlineReady.subscribe((v) => (swStatus.offlineReady = v)));
 		} catch {
 			// No service worker in this build (dev, or an unsupported browser).
-		}
+		} })();
+		return () => {
+			stopped = true;
+			if (timer) clearInterval(timer);
+			unsubscribe.forEach((stop) => stop());
+		};
 	});
+
+	async function reloadEdition() {
+		if (!update || reloading) return;
+		reloading = true;
+		updateError = '';
+		try { await update(true); }
+		catch { updateError = 'The update could not open. Check your connection and try Reload again.'; }
+		finally { reloading = false; }
+	}
 </script>
 
 {#if needRefresh}
 	<div class="toast" role="status">
 		<p><strong>A new edition is ready.</strong> Your notes and menu are kept.</p>
+		{#if updateError}<p role="alert">{updateError}</p>{/if}
 		<div class="acts">
-			<button class="go" onclick={() => update?.(true)}>Reload</button>
+			<button class="go" disabled={reloading} onclick={reloadEdition}>{reloading ? 'Opening…' : 'Reload'}</button>
 			<button onclick={() => (needRefresh = false)}>Later</button>
 		</div>
 	</div>
@@ -64,6 +85,7 @@
 		gap: 8px;
 	}
 	button {
+		min-height: 44px;
 		border: 1px solid var(--line);
 		background: none;
 		border-radius: var(--radius);

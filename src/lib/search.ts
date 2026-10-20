@@ -22,7 +22,10 @@ export function ensureSearch(): Promise<void> {
 			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			instance = MS.default.loadJS(idx.default as any, miniOptions as any);
 		}
-	);
+	).catch((error: unknown) => {
+		loading = null;
+		throw error;
+	});
 	return loading;
 }
 

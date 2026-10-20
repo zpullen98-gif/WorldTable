@@ -9,7 +9,7 @@
 	import { deckHits, cardsForLexicon } from '$lib/deck-search';
 	import { deckHref } from '$lib/floor-deck-core.mjs';
 	import { afterNavigate } from '$app/navigation';
-	import { onMount } from 'svelte';
+	import { onMount, untrack } from 'svelte';
 	import { page } from '$app/state';
 	import { loadLevels } from '$lib/data';
 	import { levelFromSearch } from '$lib/levels';
@@ -17,15 +17,18 @@
 	import { plateHref, plateIndexes } from '$lib/plates';
 	import type { DeckLevel } from '$lib/types';
 	import { goto } from '$app/navigation';
-	import { nav } from '$lib/stores/nav.svelte';
+	import { nav, restoreScroll } from '$lib/stores/nav.svelte';
 	import { levels as levelStore } from '$lib/stores/levels.svelte';
 	import { lexiconCardsTarget } from '$lib/nav';
 	import { foliosForLexicon } from '$lib/teaching-folios';
+	import type { Snapshot } from './$types';
 
 	let { data } = $props();
 
 	let q = $state('');
 	let category = $state<string | null>(null);
+	let filtersReady = $state(false);
+	let searchInput: HTMLInputElement | undefined = $state();
 
 	/* `?level=2` narrows the page to the terms placed at that level (the four
 	   levels' door in), and `&start=flash` or `&start=quiz` opens that mode on
@@ -35,6 +38,9 @@
 	let level = $state<DeckLevel | null>(null);
 	let levelName = $state('');
 	let levelSlugs = $state<Set<string> | null>(null);
+	let levelLoading = $state(false);
+	let levelFailed = $state(false);
+	let levelRequest = 0;
 	/** category -> the plates that draw it; empty until the file is in */
 	let platesByCategory = $state<ReadonlyMap<string, Array<{ slug: string; title: string }>>>(new Map());
 	onMount(async () => {
@@ -48,7 +54,41 @@
 	/** slug -> the level it is placed at, by name, for "At other levels" */
 	let levelOfSlug = $state<Map<string, string>>(new Map());
 
-	afterNavigate(async () => {
+	async function openLevel(wanted: DeckLevel | null, quizOnReady = false) {
+		const request = ++levelRequest;
+		level = wanted;
+		levelName = '';
+		levelFailed = false;
+		levelLoading = !!wanted;
+		// A requested level is an empty scope until it is known, never every term.
+		levelSlugs = wanted ? new Set() : null;
+		if (!wanted) {
+			if (quizOnReady) startQuiz();
+			return;
+		}
+		try {
+			const data = await loadLevels();
+			if (request !== levelRequest) return;
+			levelName = data.levels.find((l) => l.level === wanted)?.name ?? '';
+			levelSlugs = new Set(data.items.lexicon[String(wanted)] ?? []);
+			const of = new Map<string, string>();
+			for (const l of data.levels) for (const slug of data.items.lexicon[String(l.level)] ?? []) of.set(slug, l.name);
+			levelOfSlug = of;
+			levelLoading = false;
+			if (quizOnReady) startQuiz();
+		} catch {
+			if (request === levelRequest) levelFailed = true;
+		} finally {
+			if (request === levelRequest) levelLoading = false;
+		}
+	}
+
+	afterNavigate(() => {
+		const params = new URLSearchParams(page.url.search);
+		q = params.get('q') ?? '';
+		const requestedCategory = params.get('category');
+		category = requestedCategory && data.lexicon.some((entry) => entry.category === requestedCategory) ? requestedCategory : null;
+		filtersReady = true;
 		const wanted = levelFromSearch(page.url.search);
 		const start = new URLSearchParams(page.url.search).get('start');
 		/* ONE CARD STYLE (docs/consolidation-design.md 3.7): the Lexicon's flash
@@ -60,21 +100,38 @@
 			void goto(`${base}${lexiconCardsTarget(wanted)}`, { replaceState: true });
 			return;
 		}
-		level = wanted;
-		if (!wanted) {
-			levelSlugs = null;
-			// Quizzes' Lexicon row under show all: the whole Lexicon's quiz.
-			if (start === 'quiz') startQuiz();
-			return;
-		}
-		const levels = await loadLevels();
-		levelName = levels.levels.find((l) => l.level === wanted)?.name ?? '';
-		levelSlugs = new Set(levels.items.lexicon[String(wanted)] ?? []);
-		const of = new Map<string, string>();
-		for (const l of levels.levels) for (const slug of levels.items.lexicon[String(l.level)] ?? []) of.set(slug, l.name);
-		levelOfSlug = of;
-		if (start === 'quiz') startQuiz();
+		void openLevel(wanted, start === 'quiz');
 	});
+	// Keep reading context in this address: opening a linked recipe, reloading,
+	// or sharing a search should not return a learner to all 779 terms.
+	$effect(() => {
+		if (!filtersReady) return;
+		const query = q;
+		const selectedCategory = category;
+		untrack(() => {
+			const url = new URL(location.href);
+			if (query) url.searchParams.set('q', query);
+			else url.searchParams.delete('q');
+			if (selectedCategory) url.searchParams.set('category', selectedCategory);
+			else url.searchParams.delete('category');
+			if (`${url.pathname}${url.search}${url.hash}` !== `${location.pathname}${location.search}${location.hash}`) {
+				nav.replaceShallow(`${url.pathname}${url.search}${url.hash}`, { ...page.state });
+			}
+		});
+	});
+	function clearFilters() {
+		q = '';
+		category = null;
+		searchInput?.focus();
+	}
+	export const snapshot: Snapshot<{ y: number; q: string; category: string | null }> = {
+		capture: () => ({ y: typeof window === 'undefined' ? 0 : window.scrollY, q, category }),
+		restore: (value) => {
+			q = value.q ?? '';
+			category = value.category ?? null;
+			restoreScroll(value.y ?? 0, () => !level || !!levelSlugs);
+		}
+	};
 
 	/* localeCompare, not a bare .sort(). The project pins collation everywhere it
 	   matters (build-data.mjs does it for techniques and stations with a comment
@@ -159,7 +216,7 @@
 	   levels, each naming its level in words. */
 	const elsewhere = $derived.by(() => {
 		const needle = fold(q).trim();
-		if (!levelSlugs || !needle || shown.length) return [] as Entry[];
+		if (!levelSlugs || levelLoading || levelFailed || !needle || shown.length) return [] as Entry[];
 		return data.lexicon.filter((e) => !levelSlugs!.has(e.slug) && (!category || e.category === category) && haystack(e).includes(needle)).slice(0, 30);
 	});
 
@@ -261,21 +318,18 @@
 	/*
 	 * One entry per TERM per round, not one per question.
 	 *
-	 * A round drawn from a narrow filter asks the same term more than once - a
-	 * five-term category cannot field ten distinct questions - and before
-	 * anything was recorded that cost nothing. Now that every answer writes to
-	 * a ladder, three answers on one term in one sitting must not be three
-	 * pieces of evidence.
+	 * A narrow filter now makes a shorter round. Keep the record-once guard
+	 * too: one sitting must not turn repeated interaction into several
+	 * pieces of evidence for the same term.
 	 */
 	let recorded = new Set<string>();
+	let roundPool: Entry[] = [];
+	let roundLength = $state(QUIZ_LENGTH);
 
 	function ask() {
-		// POOL is what gets asked: the current filter, so the quiz still asks
-		// what you are studying. The >= 4 floor is now only a pool floor - it
-		// stopped being the termination guard when the rejection loop went.
-		// FIELD is always the whole lexicon; see lexicon-quiz.ts.
-		const pool = shown.length >= 4 ? shown : data.lexicon;
-		const target = nextTarget(pool, dueTerms, asked, Math.random);
+		// Freeze the learner's selected terms at Start; only distractors come
+		// from the whole Lexicon. Even a one-term search stays in that scope.
+		const target = nextTarget(roundPool, dueTerms, asked, Math.random);
 		if (!target) return;
 		asked.add(target.slug);
 		quiz = optionsForTerm(target, data.lexicon, Math.random);
@@ -286,6 +340,9 @@
 	let asked = new Set<string>();
 
 	function startQuiz() {
+		if (levelLoading || levelFailed || !shown.length) return;
+		roundPool = [...shown];
+		roundLength = Math.min(QUIZ_LENGTH, roundPool.length);
 		qNum = 0;
 		right = 0;
 		verdict = '';
@@ -317,21 +374,16 @@
 	}
 
 	function nextQuestion() {
-		if (qNum >= QUIZ_LENGTH) {
-			// The original's verdict ladder, verbatim.
+		if (qNum >= roundLength) {
 			verdict =
-				right >= 9
-					? 'Chef-level. The pass is yours.'
-					: right >= 7
-						? 'Solid line cook: a few more services and it’s muscle memory.'
-						: right >= 5
-							? 'Stage complete: hit the flashcards on what you missed.'
-							: 'Filter the category and study before the next round, chef: it is back to prep.';
+				right === roundLength
+					? 'Every answer in this round was correct. Now explain one term aloud as if a guest had asked.'
+					: 'Read the terms you missed, then try explaining them without looking before your next round.';
 			// Contract with the OOT monorepo's shared/oot-log.js (hookTable).
 			if (typeof window !== 'undefined')
 				window.dispatchEvent(
 					new CustomEvent('oot:round-complete', {
-						detail: { kind: 'quiz', right, of: QUIZ_LENGTH }
+						detail: { kind: 'quiz', right, of: roundLength }
 					})
 				);
 			// A finished round is a day studied, product-wide (lib/oot-studied.ts).
@@ -358,6 +410,7 @@
 	<div class="tools" data-print="hide">
 		<div class="search">
 			<input
+				bind:this={searchInput}
 				bind:value={q}
 				type="search"
 				placeholder="Search a term: try “hanger”, “maillard”, or “86”"
@@ -368,9 +421,10 @@
 			<option value={null}>All categories</option>
 			{#each categories as c (c)}<option value={c}>{c}</option>{/each}
 		</select>
-		<a class="chip" href={level ? `${base}/flashcards?deck=lexicon` : `${base}/flashcards?deck=lexicon-all`}>Flashcards</a>
-		<button class="chip" onclick={startQuiz}>Quiz me ▸ multiple choice</button>
-		<span class="count">{shown.length} of {data.lexicon.length} terms</span>
+		<a class="chip" href={level ? `${base}/flashcards?deck=lexicon` : `${base}/flashcards?deck=lexicon-all`} onclick={() => { if (level) levelStore.choose(level); }}>Flashcards</a>
+		<button class="chip" onclick={startQuiz} disabled={levelLoading || levelFailed || !shown.length}>Quiz me ▸ multiple choice</button>
+		{#if q || category}<button class="chip" onclick={clearFilters}>Clear filters</button>{/if}
+		<span class="count" role="status">{shown.length} of {data.lexicon.length} terms</span>
 		{#if level && levelName}
 			<span class="count levelnote"
 				>{levelName}
@@ -388,19 +442,31 @@
 		{/if}
 	</div>
 
+	{#if levelLoading}<p class="note" role="status">Opening the terms for this level…</p>{/if}
+	{#if levelFailed}
+		<div class="note" role="status">
+			<p>The terms for this level could not load. Your saved progress is unchanged.</p>
+			<button class="chip" onclick={() => void openLevel(level)}>Try this level again</button>
+			<button class="chip" onclick={() => window.location.reload()}>Reload study material</button>
+			<a class="chip" href="{base}/lexicon">Browse every level</a>
+		</div>
+	{/if}
+	{#if !quiz && !verdict && shown.length && !levelLoading && !levelFailed}
+		<p class="note">The quiz asks up to {QUIZ_LENGTH} different terms from your current filters. A smaller selection makes a shorter round.</p>
+	{/if}
 	{#if verdict}
 		<div class="flash" role="status">
 			<p class="eyebrow">Round complete</p>
-			<p class="term">Final: {right} / {QUIZ_LENGTH}</p>
+			<p class="term">Final: {right} / {roundLength}</p>
 			<p class="def">{verdict}</p>
 			<div class="flashtools">
-				<button class="chip" onclick={startQuiz}>New round ↦</button>
+				<button class="chip" onclick={startQuiz} disabled={levelLoading || levelFailed || !shown.length}>New round ↦</button>
 				<button class="chip" onclick={() => (verdict = '')}>Close</button>
 			</div>
 		</div>
 	{:else if quiz}
 		<div class="flash">
-			<p class="eyebrow">{quiz.target.category} · question {Math.min(qNum + (picked ? 0 : 1), QUIZ_LENGTH)} of {QUIZ_LENGTH}</p>
+			<p class="eyebrow">{quiz.target.category} · question {Math.min(qNum + (picked ? 0 : 1), roundLength)} of {roundLength}</p>
 			<p class="def quizdef">
 				“{quiz.target.definition.slice(0, 180)}{quiz.target.definition.length > 180 ? '…' : ''}”
 			</p>
@@ -420,7 +486,7 @@
 			<div class="flashtools">
 				{#if picked}
 					<button class="chip" onclick={nextQuestion}>
-						{qNum >= QUIZ_LENGTH ? 'See result ↦' : 'Next question ↦'}
+						{qNum >= roundLength ? 'See result ↦' : 'Next question ↦'}
 					</button>
 				{/if}
 				<button class="chip" onclick={() => (quiz = null)}>Close</button>
@@ -607,16 +673,17 @@
 				{/each}
 			</ul>
 		</section>
-	{:else if !shown.length}
+	{:else if !shown.length && !levelLoading && !levelFailed}
 		{#if floor.hits.length}
 			<p class="empty">The Lexicon has no entry by that name. The Floor Deck does: see above.</p>
 		{:else}
-			<p class="empty">No terms match. Widen the search: the kitchen is large.</p>
+			<p class="empty">No terms match these filters. Try a shorter word or <button class="clear-inline" onclick={clearFilters}>clear the filters</button> to explore every category.</p>
 		{/if}
 	{/if}
 </div>
 
 <style>
+	.clear-inline { border: 0; background: transparent; color: var(--turmeric-deep); font: inherit; min-height: 44px; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 	/*
 	 * padding-BLOCK, deliberately. The shorthand `padding: 26px 0 80px` zeroed
 	 * padding-inline, and this scoped rule out-specifies the global
@@ -698,7 +765,7 @@
 		gap: 2px 18px; margin: 0 0 34px; padding: 16px 0; border-block: 1px solid var(--line);
 	}
 	.directory a {
-		display: flex; align-items: baseline; gap: 8px;
+		display: flex; align-items: center; gap: 8px; min-height: 44px;
 		padding: 4px 0; color: var(--ink); text-decoration: none; font-size: var(--t-small);
 	}
 	.directory a:hover { color: var(--turmeric-deep); }

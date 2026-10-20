@@ -23,19 +23,28 @@ class LevelsStore {
 	#joins = $state<Joins | null>(null);
 	#labels = new Map<string, string>();
 	#loading: Promise<void> | null = null;
+	#failed = $state(false);
 
 	/** Idempotent: the first caller loads, every later one awaits the same promise. */
 	load(): Promise<void> {
 		if (this.#data && this.#joins) return Promise.resolve();
 		if (!this.#loading) {
+			this.#failed = false;
 			this.#loading = Promise.all([loadLevels(), loadTechniques()]).then(([data, techniques]) => {
 				this.#labels = new Map(techniques.map((t) => [t.slug, t.label]));
 				this.#joins = { techniqueRecipes: new Map(techniques.map((t) => [t.slug, t.recipes])) };
 				this.#data = data;
+			}).catch(() => {
+				this.#failed = true;
+			}).finally(() => {
+				// A rejected import must not remain the answer to every later retry.
+				this.#loading = null;
 			});
 		}
 		return this.#loading;
 	}
+
+	get failed(): boolean { return this.#failed; }
 
 	get data(): LevelsData | null {
 		return this.#data;

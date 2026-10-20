@@ -79,6 +79,7 @@
 	let dish = $state<KitchenDish | null>(null);
 	let failed = $state('');
 	let loading = $state(false);
+	let opening = 0;
 
 	/** The technique labels, for the links to the techniques a dish practises. */
 	let techLabels = $state<Record<string, string>>({});
@@ -93,39 +94,47 @@
 	}
 
 	async function open() {
+		const attempt = ++opening;
+		const requestedSlug = slug;
+		let stage: 'index' | 'dish' = 'index';
 		failed = '';
-		if (!slug) {
-			dish = null;
-			return;
-		}
-		const ix = index ?? (await loadKitchenIndex());
-		index = ix;
-		const row = ix.dishes.find((d) => d.slug === slug);
-		if (!row) {
-			dish = null;
-			failed = 'missing';
-			return;
-		}
-		if (dish?.slug === slug) return;
 		loading = true;
+		if (dish?.slug !== requestedSlug) dish = null;
 		try {
+			const ix = index ?? (await loadKitchenIndex());
+			if (attempt !== opening || requestedSlug !== slug) return;
+			index = ix;
+			if (!requestedSlug) {
+				dish = null;
+				return;
+			}
+			const row = ix.dishes.find((d) => d.slug === requestedSlug);
+			if (!row) {
+				dish = null;
+				failed = 'missing';
+				return;
+			}
+			if (dish?.slug === requestedSlug) return;
+			stage = 'dish';
 			const file = await loadKitchenLevel(row.level, base);
-			const found = file.dishes.find((d) => d.slug === slug) ?? null;
-			if (slug !== row.slug) return; /* the address moved on while this loaded */
+			if (attempt !== opening || requestedSlug !== slug) return;
+			const found = file.dishes.find((d) => d.slug === requestedSlug) ?? null;
 			dish = found;
 			if (!found) failed = 'missing';
 			resetDishState();
 		} catch {
+			if (attempt !== opening || requestedSlug !== slug) return;
 			dish = null;
-			failed = 'offline';
+			failed = stage === 'index' ? 'index' : 'offline';
 		} finally {
-			loading = false;
+			if (attempt === opening) loading = false;
 		}
 	}
 
 	onMount(() => {
 		mounted = true;
-		void loadKitchenIndex().then((ix) => (index = ix));
+		// afterNavigate opens both the course and individual dishes through the
+		// same guarded loader, so an index failure always has a recovery screen.
 		void loadTechniques()
 			.then((all) => (techLabels = Object.fromEntries(all.map((t) => [t.slug, t.label]))))
 			.catch(() => {
@@ -238,7 +247,7 @@
 	<title>{dish ? `${dish.title} · Cook at home` : 'Cook at home'} · The World Table</title>
 </svelte:head>
 
-{#if !mounted || (slug && !dish && !failed)}
+{#if !mounted || (!index && !failed) || (slug && !dish && !failed)}
 	<div class="shell hub kitchen">
 		<h1 tabindex="-1">Cook at home</h1>
 		<p class="note" aria-live="polite">{slug ? 'Fetching the dish…' : 'Reading the course…'}</p>
@@ -246,7 +255,13 @@
 {:else if failed}
 	<div class="shell hub kitchen">
 		<h1 tabindex="-1">Cook at home</h1>
-		{#if failed === 'offline'}
+		{#if failed === 'index'}
+			<p class="note" role="status">The cooking course could not finish loading. Check your connection, then try again. If it still will not open, reload this page.</p>
+			<p class="quietlinks">
+				<button type="button" disabled={loading} onclick={() => void open()}>Try again</button>
+				<button type="button" onclick={() => window.location.reload()}>Reload cooking course</button>
+			</p>
+		{:else if failed === 'offline'}
 			<p class="note">
 				This level's dishes have not been opened on this device yet, and there is no signal to fetch them. Open
 				the level once with a signal and every one of its dishes cooks offline after.

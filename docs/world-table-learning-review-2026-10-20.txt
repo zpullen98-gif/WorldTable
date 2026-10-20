@@ -1,0 +1,96 @@
+WORLD TABLE: EDITORIAL AND LEARNING-FLOW REVIEW
+20 October 2026
+
+Purpose
+Make it easier to find a starting point, understand the material, practise it
+in a manageable sitting, and apply it in the kitchen or at the table.
+Retain the existing exploration, hospitality and subtle mysticism aesthetic.
+
+Scope
+The interface review visited 34 principal routes, including all four levels,
+Brennan's menu, fall notes and final plates, Foundations, Cuisine, Practise,
+quizzes, Library, recipes, Lexicon, techniques, pantry, course, service,
+safety, palate, reference plates, Cook at home, Family, progress, costing,
+preps, prep board, waste, guest menu and More.
+
+The content review examined the structure and connections of 120 Foundations
+terms, 179 Cuisine entries across 12 chapters, and 17 fall training items.
+Detailed corrections concentrated on foundational cooking methods and
+selected safety lessons, including their associated cards and questions.
+This was not a line-by-line independent verification of all 1,844 recipes,
+every historical claim, every external video or every live restaurant fact.
+
+What changed
+1. Home explains each level and offers a direct Today's study shortcut.
+   A chosen level changes the study focus; it does not lock other material.
+2. Practise has subject jumps and a searchable deck/round directory.
+   Large general collections start with twenty cards by default, with an
+   explicit whole-deck choice. Due queues and ordered teaching runs retain
+   their existing rules. A large catalogue is no longer an implied sitting.
+3. Revealed flashcards connect back to the relevant dish, term or lesson.
+   Back returns to the same card and answer state.
+4. Missing study data produces an honest partial-queue message and recovery
+   controls. Quiz failures release their controls. A reload option handles
+   failed module imports that a browser retains until a fresh document.
+5. Techniques can be searched and grouped. Library chapters are searchable.
+   Recipe browsing links directly to that chapter directory. House videos
+   are folded behind a disclosure and keep their open state on return.
+6. Lexicon searches, categories and learner position survive a lesson visit.
+   A narrowly filtered quiz asks about the selected material instead of
+   silently switching to the entire Lexicon.
+7. Pantry selection and empty results have clearer next actions and larger
+   touch targets. Reading and filtering do not change the saved pantry.
+8. Recipes have shortcuts to ingredients, method, result checks, pairings,
+   personal notes and videos. Backup guidance points to the real tools.
+9. More contains a learning guide, linked from Home, Today and Library.
+   Six applied journeys connect identify, compare, describe and practise:
+   reading a plate; heat and tenderness; sauce families; pasta and place;
+   guest questions; dessert texture. Each ends with an oral self-check.
+10. Offline messages distinguish core installed reading from images and
+    cooking lessons cached as used. Videos and external sources need the
+    network. A missing page has correctly named recovery destinations.
+11. Cook at home explains a failed index or lesson download and provides
+    recovery rather than leaving an indefinite loading message.
+
+Editorial corrections
+The authored definitions and their original Floor Deck cards now distinguish
+curing, smoking, cooking and ready-to-eat status; make frying coatings
+optional; avoid constant-tossing rules for sauteing; distinguish prosciutto
+crudo and cotto; and describe cheek tenderness without a universal duration.
+
+Cuisine corrections address sauteing, smoking, confit storage, flambe safety
+and a holding-control question. Cold smoke is not taught as a kill step;
+seafood-specific smoking figures are labelled as such. A small contained
+pan fire is distinguished from spreading fire. A low holding-temperature
+reading does not create a new time allowance. Related recall questions and
+cards were corrected with their lessons.
+
+Primary references are retained with the relevant material. They include
+the Culinary Institute of America, the Escoffier-hosted Gisslen methods
+chapter, USDA FSIS, FDA seafood guidance and Food Code, US Fire
+Administration, the Parma consortium, Levoni, and Meat & Livestock Australia.
+The FDA model code is not presented as proof of local adoption.
+
+Preservation
+Stable recipe slugs, lesson/card/question identities, personal progress,
+house ingredients and uploaded menu records remain intact. The original
+archive and raw extraction are unchanged. No house recipe quantities or
+actual plating were invented. The final-plate images keep their illustrative
+caption. The same day/night tokens and five primary tabs are retained.
+
+Verification
+Focused tests cover short sessions, whole-deck choice, answer-only lesson
+links, return-to-card state, searching and returning, narrow quiz pools,
+failure recovery, personal notes, chapter discovery and disclosure state.
+Responsive checks cover 320, 390 and 1120 pixel widths in day and night
+service. Accessibility scans cover the changed reading and study surfaces.
+The release also runs the source check, full unit suite, data derivation
+checks, production build verification and the public site's release gates.
+Execution evidence is retained in this chat's dated output folder.
+
+Next editorial priorities
+Review the archive in small cuisine or technique collections, beginning
+with recipes the learner actually cooks, to validate quantities, yields and
+doneness checks against authoritative recipe sources. Confirm restaurant
+preparation, substitutions and plating with the current kitchen. These are
+separate evidence tasks; a clearer interface does not establish those facts.

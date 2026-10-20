@@ -302,7 +302,7 @@ test('6. a cold deep link walks up to Home, replacing as it goes', async ({ page
 	await back(page);
 	await expect(page).toHaveURL(/\/recipes$/);
 	// The grid is the heaviest page in the app: let it draw before the next press.
-	await expect(heading(page)).toHaveText('The Library');
+	await expect(heading(page)).toHaveText('All recipes');
 	await expect(page.locator('.card').first()).toBeVisible({ timeout: 60_000 });
 	await back(page);
 	await expect(heading(page)).toHaveText('Library');
@@ -601,13 +601,16 @@ test('11. the scope chip: show all is in the address and survives Back; choosing
 	await expect(page.locator('a.level.on .lv-here')).toHaveText('Your level');
 });
 
-test('12. Home is the four level cards and nothing else focusable', async ({ page }) => {
+test('12. Home keeps four level cards with a direct daily-study door and guide', async ({ page }) => {
 	await home(page);
 	const focusable = await page.locator('main .home').evaluate((el) =>
 		[...el.querySelectorAll('a, button, input, select, textarea, [tabindex]')].map((e) => e.className)
 	);
-	expect(focusable).toHaveLength(4);
-	expect(focusable.every((c) => c.includes('level'))).toBe(true);
+	expect(focusable).toHaveLength(6);
+	await expect(page.locator('main .home a.level')).toHaveCount(4);
+	await expect(page.locator('main .home .lv-blurb')).toHaveCount(4);
+	await expect(page.getByRole('link', { name: /Today's study/ })).toHaveAttribute('href', /\/level\/1#today$/);
+	await expect(page.getByRole('link', { name: 'How to use the Table' })).toHaveAttribute('href', '/more#learning');
 	await expect(page.locator('main h2, main h3')).toHaveCount(0);
 });
 

@@ -5,6 +5,9 @@
 	import { TOTALS, loadLevels } from '$lib/data';
 	import { levelFromSearch } from '$lib/levels';
 	import type { DeckLevel } from '$lib/types';
+	import { fold } from '$lib/filter';
+	import { restoreScroll } from '$lib/stores/nav.svelte';
+	import type { Snapshot } from './$types';
 
 	let { data } = $props();
 
@@ -16,29 +19,57 @@
 	let level = $state<DeckLevel | null>(null);
 	let levelName = $state('');
 	let levelSlugs = $state<Set<string> | null>(null);
+	let levelLoading = $state(false);
+	let levelFailed = $state(false);
+	let levelRequest = 0;
+	let query = $state('');
+	let kind = $state('all');
 
-	afterNavigate(async () => {
-		const wanted = levelFromSearch(page.url.search);
+	async function openLevel(wanted: DeckLevel | null) {
+		const request = ++levelRequest;
 		level = wanted;
-		if (!wanted) {
-			levelSlugs = null;
-			return;
+		levelName = '';
+		levelLoading = !!wanted;
+		levelFailed = false;
+		levelSlugs = wanted ? new Set() : null;
+		if (!wanted) return;
+		try {
+			const data = await loadLevels();
+			if (request !== levelRequest) return;
+			levelName = data.levels.find((l) => l.level === wanted)?.name ?? '';
+			levelSlugs = new Set(data.items.techniques[String(wanted)] ?? []);
+		} catch {
+			if (request === levelRequest) levelFailed = true;
+		} finally {
+			if (request === levelRequest) levelLoading = false;
 		}
-		const levels = await loadLevels();
-		levelName = levels.levels.find((l) => l.level === wanted)?.name ?? '';
-		levelSlugs = new Set(levels.items.techniques[String(wanted)] ?? []);
-	});
+	}
+	afterNavigate(() => { void openLevel(levelFromSearch(page.url.search)); });
 	const inLevel = (t: { slug: string }) => !levelSlugs || levelSlugs.has(t.slug);
+	const matchesSearch = (t: { label: string; lexiconTerm: string | null }) =>
+		fold(`${t.label} ${t.lexiconTerm ?? ''}`).includes(fold(query).trim());
 
 	// Anchored techniques carry a Lexicon definition; the rest are the guide's
 	// particulars: a shaping, a vessel, one dish's one move. Both are worth a
 	// page, but they are not the same kind of thing and shouldn't be one list.
 	const foundations = $derived(
-		data.techniques.filter((t) => t.anchored && inLevel(t)).sort((a, b) => b.count - a.count)
+		data.techniques.filter((t) => t.anchored && inLevel(t) && matchesSearch(t) && kind !== 'particulars').sort((a, b) => b.count - a.count)
 	);
 	const particulars = $derived(
-		data.techniques.filter((t) => !t.anchored && inLevel(t)).sort((a, b) => b.count - a.count)
+		data.techniques.filter((t) => !t.anchored && inLevel(t) && matchesSearch(t) && kind !== 'foundations').sort((a, b) => b.count - a.count)
 	);
+	const available = $derived(data.techniques.filter(inLevel).length);
+	const elsewhere = $derived(levelSlugs && !levelLoading && !levelFailed && query.trim()
+		? data.techniques.filter((t) => !inLevel(t) && matchesSearch(t) && (kind === 'all' || (kind === 'foundations' ? t.anchored : !t.anchored)))
+		: []);
+	export const snapshot: Snapshot<{ y: number; query: string; kind: string }> = {
+		capture: () => ({ y: typeof window === 'undefined' ? 0 : window.scrollY, query, kind }),
+		restore: (value) => {
+			query = value.query ?? '';
+			kind = value.kind ?? 'all';
+			restoreScroll(value.y ?? 0, () => !level || !!levelSlugs);
+		}
+	};
 
 	/** "1 dish", "3 dishes": the index printed "1 dishes · 1 chapters" on four tiles. */
 	const count = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
@@ -60,12 +91,30 @@
 		{#if level}
 			<!-- the live region stands at once; its words wait for the level's name -->
 			<p class="levelnote" aria-live="polite">
-				{#if levelName}{levelName}: {foundations.length + particulars.length} of the
+					{#if levelName}{levelName}: {available} of the
 					skills. <a href="{base}/technique">Every technique</a>{/if}
 			</p>
 		{/if}
 	</header>
 
+	<div class="find-tools" data-print="hide">
+		<label>Find a skill<input type="search" bind:value={query} placeholder="Try braising, knife or pastry" /></label>
+		<label>Technique group<select bind:value={kind}><option value="all">Every group</option><option value="foundations">Foundations</option><option value="particulars">Dish-specific skills</option></select></label>
+	</div>
+	<p class="search-count" role="status">{foundations.length + particulars.length} of {available} techniques{#if query || kind !== 'all'} · <button class="clear" onclick={() => { query = ''; kind = 'all'; }}>Clear filters</button>{/if}</p>
+	{#if levelLoading}<p class="secnote" role="status">Opening the techniques for this level…</p>{/if}
+	{#if levelFailed}
+		<div class="secnote" role="status">
+			<p>The techniques for this level could not load. Your saved progress is unchanged.</p>
+			<button class="chip" onclick={() => void openLevel(level)}>Try this level again</button>
+			<button class="chip" onclick={() => window.location.reload()}>Reload study material</button>
+			<a class="chip" href="{base}/technique">Browse every level</a>
+		</div>
+	{/if}
+	{#if !foundations.length && !particulars.length && !levelLoading && !levelFailed}
+		<p class="secnote">No techniques match these filters. Try a broader word or clear the filters.{#if level} <a href="{base}/technique">Browse every level</a>.{/if}</p>
+	{/if}
+	{#if foundations.length}
 	<h2 class="sec">The foundations</h2>
 	<p class="secnote">
 		The moves the whole guide is built on. Each one carries its Lexicon definition, the
@@ -82,7 +131,9 @@
 			</li>
 		{/each}
 	</ul>
+	{/if}
 
+	{#if particulars.length}
 	<h2 class="sec">The particulars</h2>
 	<p class="secnote">
 		One shaping, one vessel, one kitchen's answer to one problem. Narrower, and often the reason a
@@ -98,9 +149,20 @@
 			</li>
 		{/each}
 	</ul>
+	{/if}
+	{#if elsewhere.length}
+		<h2 class="sec">At other levels</h2>
+		<p class="secnote">These skills also match your search. You can read any of them now.</p>
+		<ul class="grid">{#each elsewhere as t (t.slug)}<li><a class="tile" href="{base}/technique/{t.slug}"><h3>{t.label}</h3><p class="meta">{count(t.count, 'dish', 'dishes')}</p></a></li>{/each}</ul>
+	{/if}
 </div>
 
 <style>
+	.find-tools { display: flex; flex-wrap: wrap; align-items: end; gap: 14px; }
+	.find-tools label { display: grid; gap: 6px; flex: 1 1 220px; color: var(--ink-soft); font-size: 1rem; }
+	.find-tools input, .find-tools select { width: 100%; min-width: 0; min-height: 44px; padding: 8px 12px; border: 1px solid var(--field-line); border-radius: var(--radius); background: var(--card); color: var(--ink); font: inherit; }
+	.search-count { color: var(--ink-soft); margin-top: 10px; }
+	.clear { min-height: 44px; border: 0; background: transparent; color: var(--turmeric-deep); font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 	.head {
 		margin-bottom: 26px;
 	}

@@ -240,9 +240,9 @@
       "term": "Cured",
       "section": "methods",
       "level": 1,
-      "gist": "Salted, then often dried or smoked, to firm it and make it keep",
+      "gist": "Treated with a controlled salt cure, sometimes followed by drying or smoking",
       "guest": "It's been salted, and sometimes smoked or aged, the way prosciutto or lox is. That firms it up and gives it a deep, savory flavor.",
-      "why": "Salt pulls water out of meat or fish, and with less water left, spoiling microbes struggle. The flesh firms, turns translucent and concentrates in flavor. Many cures add sugar, and most ham and bacon get nitrite, which keeps them pink. Bacon is cooked before eating.",
+      "why": "Curing changes taste, texture and keeping quality. Some cures use nitrite as well as salt. Cured ham may be ready to eat or still need cooking; appearance cannot settle that question. Follow the product instructions and kitchen procedure.",
       "madeWith": [
         "salt",
         "often sugar",
@@ -252,7 +252,7 @@
         "sometimes spirits"
       ],
       "note": "Some cured products are ready to serve; others need cooking. Check the exact product and the kitchen's preparation.",
-      "notThis": "Not smoked: smoke adds flavor, salt does the curing. Plenty of cured meat never sees smoke.",
+      "notThis": "Curing, smoking and cooking are different processes; ready to eat describes the finished product.",
       "recipe": "dill-and-aquavit-cured-salmon",
       "seeAlso": [
         "fd_0078",
@@ -265,7 +265,7 @@
         "fd_0356"
       ],
       "line": "House-cured salmon, crème fraîche, rye, pickled shallot",
-      "prompt": "Salt pulls water out of meat or fish, and with less water left, spoiling microbes struggle. The flesh firms, turns translucent and concentrates in flavor. Many __ add sugar, and most ham and bacon get nitrite, which keeps them pink. Bacon is cooked before eating."
+      "prompt": "Curing changes taste, texture and keeping quality. Some __ use nitrite as well as salt. __ ham may be ready to eat or still need cooking; appearance cannot settle that question. Follow the product instructions and kitchen procedure."
     },
     {
       "id": "fd_0031",
@@ -274,7 +274,7 @@
       "level": 1,
       "gist": "Cooked in hot oil until the outside turns crisp and golden",
       "guest": "It's cooked in hot oil, so the outside turns crisp and golden while the inside stays moist. Often it's battered or breaded first.",
-      "why": "Frying oil runs near 175 to 190 C (350 to 375 F), far hotter than boiling water, so the surface dries and browns into a crust while steam keeps the center moist. Deep frying submerges the food; pan frying uses oil partway up. Batter or breading gives the crunch.",
+      "why": "Deep frying submerges food in hot fat; pan frying uses a shallower layer. Surface moisture escapes and browning develops. A batter or crumb coating is common but optional: uncoated potatoes can also become crisp. The recipe determines the fat temperature, coating and finished texture.",
       "madeWith": [
         "frying oil",
         "sometimes peanut oil",
@@ -284,7 +284,7 @@
         "sometimes breadcrumbs"
       ],
       "note": "Many kitchens share one fryer across dishes, so ask what else is cooked in the same oil.",
-      "notThis": "Not sautéed: a sauté uses a slick of fat and constant tossing. Fried food sits in enough oil to crisp.",
+      "notThis": "Deep frying immerses food; pan frying uses less fat; sautéing uses a thin film with small or thin pieces.",
       "recipe": "korean-fried-chicken",
       "seeAlso": [
         "fd_0002",
@@ -477,9 +477,9 @@
       "say": "saw-TAYD",
       "section": "methods",
       "level": 1,
-      "gist": "Cooked fast in a little fat in a hot pan, tossed to cook evenly",
+      "gist": "Cooked quickly in a little hot fat, turned or tossed as needed",
       "guest": "It's cooked quickly in a hot pan with a little butter or oil, so it stays fresh and bright with lightly golden edges. The quick heat keeps it light.",
-      "why": "Small or thin pieces go into a hot, shallow pan with just enough fat to coat it and are tossed or stirred. High heat and little fat brown the edges before the inside overcooks, so greens stay vivid and mushrooms turn golden.",
+      "why": "Sautéing suits small or thin pieces and uses little fat. Small vegetables may be tossed; a delicate fillet is usually turned carefully. Constant movement is not a requirement. Enough room in the pan helps moisture escape so the surface can brown.",
       "madeWith": [
         "often butter",
         "often oil",
@@ -487,7 +487,7 @@
         "sometimes wine"
       ],
       "origin": "French sauter, to jump, from tossing food in the pan",
-      "notThis": "Not fried: frying uses a deeper layer of oil, while a sauté uses only a thin film of fat and keeps the food moving.",
+      "notThis": "Sautéing uses little fat; shallow frying uses more. A fillet can be sautéed without being tossed.",
       "recipe": "sauteed-fiddleheads",
       "seeAlso": [
         "fd_0043"
@@ -552,14 +552,14 @@
       "level": 1,
       "gist": "Flavored, and often slowly cooked, by the fumes of smoldering wood",
       "guest": "It's been cooked or just flavored in the smoke of smoldering wood, so it picks up a deep, sweet smokiness, like good barbecue or smoked salmon.",
-      "why": "Smoldering hardwood gives off compounds that settle on the food and color it. Hot smoking also cooks it low and slow, which is how brisket goes tender. Cold smoking only flavors, so cold-smoked salmon stays silky and uncooked. Fruit woods are mild; hickory is bold.",
+      "why": "Smoke adds aroma and changes appearance. Hot smoking includes cooking; cold smoking does not provide a pathogen kill step. A smoke ring or silky texture does not prove readiness to eat. Follow the product instructions and kitchen procedure.",
       "madeWith": [
         "often pork",
         "often beef",
         "sometimes fish"
       ],
-      "note": "A pink ring just under the crust of smoked meat is normal. The smoke gases make it.",
-      "notThis": "Not the same as cured. Salt cures, smoke flavors, and many hams and bacons get both.",
+      "note": "Smoke can form a pink ring; it is not a doneness test. Follow the product instructions and the kitchen's cooking checks.",
+      "notThis": "Hot smoking includes cooking; cold smoking does not provide a pathogen kill step. Curing is a separate process.",
       "recipe": "central-texas-smoked-brisket",
       "seeAlso": [
         "fd_0101",
@@ -572,7 +572,7 @@
         "fd_0222"
       ],
       "line": "Smoked half chicken, white barbecue sauce, pickles",
-      "prompt": "Smoldering hardwood gives off compounds that settle on the food and color it. Hot smoking also cooks it low and slow, which is how brisket goes tender. Cold smoking only flavors, so cold-__ salmon stays silky and uncooked. Fruit woods are mild; hickory is bold."
+      "prompt": "__ adds aroma and changes appearance. Hot smoking includes cooking; cold smoking does not provide a pathogen kill step. A __ ring or silky texture does not prove readiness to eat. Follow the product instructions and kitchen procedure."
     },
     {
       "id": "fd_0042",
@@ -1977,16 +1977,16 @@
       ],
       "section": "cured",
       "level": 1,
-      "gist": "Italian pork leg, salted, air-dried a year or more, shaved thin",
+      "gist": "Italian ham: dry-cured as crudo, or cooked as cotto",
       "guest": "This is prosciutto crudo, Italian dry-cured ham served in thin slices. Prosciutto cotto is a different, cooked style.",
-      "why": "A whole hind leg is rubbed with sea salt, then hung in moving air for a year or longer. It slowly loses water while the meat's own enzymes build sweet, nutty flavor. Cut thin, the fat melts on contact. It is sweeter and softer than Spanish ham.",
+      "why": "Prosciutto crudo is dry-cured pork leg; cotto is cooked ham. Named products have their own rules: Parma matures at least fourteen months before branding. Maturation and the producer shape the texture; Italian ham is not always sweeter or softer than Spanish ham.",
       "madeWith": [
         "pork",
         "sea salt"
       ],
-      "note": "This card teaches the dry-cured crudo style. Check the named product; the word prosciutto can also describe cooked ham.",
+      "note": "Confirm crudo or cotto and the named producer before describing the cure, texture or maturity.",
       "pairs": "Melon, figs, burrata, arugula, breadsticks",
-      "notThis": "Crudo is dry-cured ham; cotto is cooked ham. Speck Alto Adige combines curing with light smoking, and pancetta comes from belly.",
+      "notThis": "Crudo is dry-cured; cotto is cooked. Parma is a particular protected crudo, not a synonym for every prosciutto.",
       "lexiconSlug": "prosciutto-di-parma-and-san-daniele",
       "seeAlso": [
         "fd_0067",
@@ -1998,7 +1998,8 @@
         "fd_0071",
         "fd_0082"
       ],
-      "line": "Prosciutto di Parma, compressed melon, basil"
+      "line": "Prosciutto di Parma, compressed melon, basil",
+      "prompt": "__ crudo is dry-cured pork leg; cotto is cooked ham. Named products have their own rules: Parma matures at least fourteen months before branding. Maturation and the producer shape the texture; Italian ham is not always sweeter or softer than Spanish ham."
     },
     {
       "id": "fd_0075",
@@ -2667,7 +2668,7 @@
       "level": 2,
       "gist": "Hard-working chewing muscle of the face, braised until spoon-soft",
       "guest": "It's the cheek muscle, braised for hours until it cuts with a spoon. Think of the richest pot roast you've had, silkier and deeper in flavor.",
-      "why": "An animal chews all day, so this muscle is dense with connective tissue and tough as leather cooked fast. Braised low for three hours or more, that tissue melts into gelatin, making the meat sticky and silky and the braising liquid a glossy sauce.",
+      "why": "Cheek has substantial connective tissue that softens with slow, moist cooking. Beef, veal and pork cheeks differ in size, so one number of hours cannot define readiness. Assess tenderness and follow the recipe's cooking controls.",
       "madeWith": [
         "beef",
         "sometimes veal",
@@ -2677,13 +2678,15 @@
       ],
       "note": "Usually slow-cooked, often braised. Confirm the preparation rather than assuming it is served like a quick-cooked steak.",
       "pairs": "Red wine braise, polenta, mashed potato, root vegetables",
+      "notThis": "Tenderloin starts tender; cheek usually needs time for connective tissue to soften. The cut and size guide the method.",
       "lexiconSlug": "shank-oxtail-and-cheek",
       "seeAlso": [
         "fd_0102",
         "fd_0026",
         "fd_0068"
       ],
-      "line": "Braised beef cheek, soft polenta, red wine jus"
+      "line": "Braised beef cheek, soft polenta, red wine jus",
+      "prompt": "__ has substantial connective tissue that softens with slow, moist cooking. Beef, veal and pork __ differ in size, so one number of hours cannot define readiness. Assess tenderness and follow the recipe's cooking controls."
     },
     {
       "id": "fd_0088",

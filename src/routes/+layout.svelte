@@ -435,7 +435,7 @@
 {#if swStatus.offlineReady}
 	<div class="shell">
 		<div class="toast inflow" role="status">
-			<p>Ready to cook offline: the whole guide is on this device now.</p>
+			<p>Core reading and study tools are ready offline. Images and Cook at home lessons save as you open them; videos need a connection.</p>
 			<button class="good" onclick={() => (swStatus.offlineReady = false)}>Good</button>
 		</div>
 	</div>

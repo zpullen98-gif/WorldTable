@@ -72,7 +72,7 @@ export interface LexQuestion<T extends LexTerm = LexTerm> {
 	options: T[];
 }
 
-/** Ten, and fixed: the verdict ladder's thresholds are absolute counts. */
+/** At most ten different terms; narrower reading filters make shorter rounds. */
 export const QUIZ_LENGTH = 10;
 
 /** How many buttons a question offers, target included. */

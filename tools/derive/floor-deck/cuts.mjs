@@ -31,12 +31,13 @@ const cards = [
 		packet: true,
 		gist: 'Hard-working chewing muscle of the face, braised until spoon-soft',
 		guest: "It's the cheek muscle, braised for hours until it cuts with a spoon. Think of the richest pot roast you've had, silkier and deeper in flavor.",
-		why: 'An animal chews all day, so this muscle is dense with connective tissue and tough as leather cooked fast. Braised low for three hours or more, that tissue melts into gelatin, making the meat sticky and silky and the braising liquid a glossy sauce.',
+		why: "Cheek has substantial connective tissue that softens with slow, moist cooking. Beef, veal and pork cheeks differ in size, so one number of hours cannot define readiness. Assess tenderness and follow the recipe's cooking controls.",
 		madeWith: ['beef', 'sometimes veal', 'sometimes pork', 'often red wine', 'sometimes wheat flour'],
 		note: "Usually slow-cooked, often braised. Confirm the preparation rather than assuming it is served like a quick-cooked steak.",
 		pairs: 'Red wine braise, polenta, mashed potato, root vegetables',
 		lexiconSlug: 'shank-oxtail-and-cheek',
 		seeAlso: ['fd_0102', 'fd_0026', 'fd_0068'],
+		notThis: "Tenderloin starts tender; cheek usually needs time for connective tissue to soften. The cut and size guide the method.",
 		line: 'Braised beef cheek, soft polenta, red wine jus',
 		traps: [
 			{ says: 'Lean, naturally soft muscle from the face that cooks quickly like a steak', why: 'It is tough and full of connective tissue, and only hours of braising make it soft.' }

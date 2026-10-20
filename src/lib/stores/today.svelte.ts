@@ -24,6 +24,8 @@ import type { DeckIndex, DeckLevel } from '../types';
 
 class TodayStore {
 	#index = $state<DeckIndex | null>(null);
+	#indexSettled = $state(false);
+	#indexFailed = $state(false);
 	#drilled = $state<DrilledEntry[]>([]);
 	#loading = false;
 	#houseSettled = $state(false);
@@ -36,11 +38,11 @@ class TodayStore {
 		this.#drilled = readDrilled();
 		void levels.load();
 		void loadDeckIndex().then(
-			(i) => (this.#index = i),
+			(i) => { this.#index = i; this.#indexFailed = false; },
 			() => {
-				/* the count stands on the house and the Lexicon alone */
+				this.#indexFailed = true;
 			}
-		);
+		).finally(() => (this.#indexSettled = true));
 		/* Cuisine's index resolves null when it cannot be read: settled either
 		   way, so the count waits for it once and never for ever. */
 		void cuisine.load().finally(() => (this.#cuisineSettled = true));
@@ -77,12 +79,23 @@ class TodayStore {
 
 	/** True once the inputs are in: the record, the levels, the deck's index and Cuisine's (read or failed). */
 	get ready(): boolean {
-		return levels.ready && this.#index !== null && this.#houseSettled && this.#cuisineSettled;
+		return (levels.ready || (levels.failed && session.ready)) && this.#indexSettled && this.#houseSettled && this.#cuisineSettled;
+	}
+
+	/** A reduced queue stays usable, and says which material could not be counted. */
+	get warning(): string {
+		const missing = [this.#indexFailed ? 'the Floor Deck' : '', levels.failed ? 'your level materials' : '', cuisine.failed ? 'Cuisine' : ''].filter(Boolean);
+		return missing.length ? `Some study material could not load: ${missing.join(', ')}. Today's cards include only available material. Your saved progress is unchanged.` : '';
+	}
+
+	retry() {
+		this.#loading = false;
+		this.load();
 	}
 
 	/** Due today at a level (the chosen one when none is named). Null until ready. */
 	at(level?: DeckLevel): Today | null {
-		if (!this.ready || !levels.data) return null;
+		if (!this.ready) return null;
 		const n = level ?? levels.chosen;
 		const current = house.current;
 		const houseIds = current ? itemCards(current, 'dish', { all: true }).map((c) => c.itemId) : [];
@@ -91,12 +104,12 @@ class TodayStore {
 		return dueToday({
 			now: Date.now(),
 			level: n,
-			levelName: levels.data.levels.find((l) => l.level === n)?.name ?? '',
+			levelName: levels.data?.levels.find((l) => l.level === n)?.name ?? 'your chosen level',
 			houseIds,
 			latest,
 			deck: this.#index,
 			drillLog: session.drillLog,
-			lexiconAt: levels.data.items.lexicon[String(n)] ?? [],
+			lexiconAt: levels.data?.items.lexicon[String(n)] ?? [],
 			cuisineAt
 		});
 	}

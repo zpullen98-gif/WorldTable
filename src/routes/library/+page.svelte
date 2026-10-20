@@ -19,7 +19,7 @@
 	import { base } from '$app/paths';
 	import { afterNavigate, goto } from '$app/navigation';
 	import { page } from '$app/state';
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import { chapters, recipes, TOTALS } from '$lib/data';
 	import { house } from '$lib/stores/house.svelte';
 	import { levels } from '$lib/stores/levels.svelte';
@@ -30,6 +30,7 @@
 	import ScopeChip from '$lib/components/ScopeChip.svelte';
 	import VideoList from '$lib/components/VideoList.svelte';
 	import { TEACHING_FOLIOS } from '$lib/teaching-folios';
+	import { fold } from '$lib/filter';
 	import type { DeckLevel } from '$lib/types';
 	import type { Snapshot } from './$types';
 
@@ -38,6 +39,9 @@
 	let mounted = $state(false);
 	let all = $state(false);
 	let chaptersOpen = $state(false);
+	let videosOpen = $state(false);
+	let chapterQuery = $state('');
+	let chapterSummary: HTMLElement | undefined = $state();
 	let folioPreviewFailed = $state(false);
 	/** chapter slug -> dish count, from the eager index, built once on mount */
 	let dishesIn = $state<Record<string, number>>({});
@@ -51,8 +55,15 @@
 		dishesIn = counts;
 	});
 
-	afterNavigate(() => {
+	afterNavigate(async () => {
 		all = new URLSearchParams(location.search).get('all') === '1';
+		if (location.hash === '#chapters') {
+			chaptersOpen = true;
+			await tick();
+			chapterSummary?.scrollIntoView({ block: 'start' });
+			chapterSummary?.focus({ preventScroll: true });
+		}
+		if (location.hash === '#videos-h') videosOpen = true;
 	});
 
 	const chosen = $derived<DeckLevel>(mounted ? levels.chosen : 1);
@@ -64,8 +75,10 @@
 	const recipeCount = $derived(all ? TOTALS.recipes : recipes.filter((r) => r.difficulty === difficulty).length);
 	const current = $derived(house.current);
 	const videoGroups = $derived(current ? studyVideos(current) : []);
+	const videoCount = $derived(videoGroups.reduce((total, group) => total + group.rows.length, 0));
 	const producersCount = $derived(current ? producersLine(current) : '');
 	const listed = $derived(chapters.filter((c) => (dishesIn[c.slug] ?? 0) > 0));
+	const foundChapters = $derived(listed.filter((c) => fold(`${c.name} ${c.group} ${c.subgroup ?? ''}`).includes(fold(chapterQuery).trim())));
 
 	function setAll(v: boolean) {
 		all = v;
@@ -74,10 +87,12 @@
 
 	const count = (n: number | null, noun: string) => (n === null ? '' : `${n} ${noun}${all ? '' : ` at ${levelName}`}.`);
 
-	export const snapshot: Snapshot<{ y: number; open: boolean }> = {
-		capture: () => ({ y: typeof window === 'undefined' ? 0 : window.scrollY, open: chaptersOpen }),
+	export const snapshot: Snapshot<{ y: number; open: boolean; query: string; videos: boolean }> = {
+		capture: () => ({ y: typeof window === 'undefined' ? 0 : window.scrollY, open: chaptersOpen, query: chapterQuery, videos: videosOpen }),
 		restore: (v) => {
 			chaptersOpen = !!v.open;
+			chapterQuery = v.query ?? '';
+			videosOpen = !!v.videos;
 			restoreScroll(v.y ?? 0, () => !!levels.data && today.houseSettled);
 		}
 	};
@@ -89,6 +104,7 @@
 	<h1 tabindex="-1">Library</h1>
 	<ScopeChip names={nameOf} {chosen} {all} onAll={setAll} onChoose={(n) => levels.choose(n)} />
 	<p class="note libline">{all ? 'Reading for every level. Nothing here is graded.' : `Reading for ${levelName}. Nothing here is graded.`}</p>
+	<p class="note"><a href="{base}/more#learning">Find your next step in the learning guide</a>.</p>
 
 	<nav class="quiet shelves" aria-label="The shelves">
 		<!-- The owner, 5 Oct 2026: the World Atlas of Recipes and the Lexicon are the first two shelves. -->
@@ -111,12 +127,17 @@
 			<a class="door" href="{base}/level/{chosen}/read"><span class="door-name">What {levelName} asks</span><span class="door-line">The readers for {levelName}, one per subject.</span></a>
 		{/if}
 		<details class="door chapters" bind:open={chaptersOpen}>
-			<summary><span class="door-name">Chapters</span><span class="door-line">{chaptersOpen ? 'Hide the chapters' : 'Show the chapters'}</span></summary>
+			<summary id="chapters" bind:this={chapterSummary}><span class="door-name">Chapters</span><span class="door-line">{chaptersOpen ? 'Hide the chapters' : 'Show the chapters'}</span></summary>
+			<label class="chapter-search">Find a cuisine or chapter
+				<input type="search" bind:value={chapterQuery} placeholder="Try French, Louisiana or pastry" />
+			</label>
+			<p class="note" role="status">{foundChapters.length} of {listed.length} chapters{#if chapterQuery} · <button class="text-clear" onclick={() => chapterQuery = ''}>Clear chapter search</button>{/if}</p>
 			<ul class="chapterlist">
-				{#each listed as c (c.slug)}
+				{#each foundChapters as c (c.slug)}
 					<li><a href="{base}/chapter/{c.slug}">{c.name}</a> <span class="n">{dishesIn[c.slug]} {dishesIn[c.slug] === 1 ? 'dish' : 'dishes'}</span></li>
 				{/each}
 			</ul>
+			{#if !foundChapters.length}<p class="note">No chapter matches. Try a country, region or cooking subject.</p>{/if}
 		</details>
 		<a class="door" href="{base}/study"><span class="door-name">The Path of Study</span><span class="door-line">Ten semesters, from the first omelette to the restaurateur's capstone.</span></a>
 		<a class="door" href="{base}/family"><span class="door-name">The Family Chapter</span><span class="door-line">Your own recipes, kept on this device.</span></a>
@@ -130,24 +151,27 @@
 			<span class="folio-preview" aria-hidden="true">{#if !folioPreviewFailed}<img src="{base}/{TEACHING_FOLIOS[0].image.thumb}" alt="" width="64" height="88" loading="lazy" decoding="async" onerror={() => folioPreviewFailed = true} />{:else}✦{/if}</span>
 			<span><span class="door-name">Illustrated kitchen studies</span><span class="door-line">{TEACHING_FOLIOS.length} companion studies · ingredients, cooking and the Brennan’s menu.</span></span>
 		</a>
+		<a class="door" href="{base}/menu?view=plates"><span class="door-name">Brennan’s Final Plates</span><span class="door-line">Study the finished dishes, recognise their ingredients and open the matching lesson or drill.</span></a>
 		<a class="door" href="{base}/service"><span class="door-name">Service</span><span class="door-line">The service track: the words of the floor, module by module.</span></a>
 		<a class="door" href="{base}/palate"><span class="door-name">The repair table</span><span class="door-line">Too flat, too salty, too sweet: the levers, gentlest first.</span></a>
 		<a class="door" href="{base}/safety"><span class="door-name">Food safety</span><span class="door-line">The numbers and the disciplines the guide states, and its gaps.</span></a>
 	</nav>
 
 	<h2 class="group" id="videos-h">Videos</h2>
-	<p class="note">Each video opens in a new tab and needs a connection.</p>
 	{#if !today.houseSettled}
 		<p class="note">Opening the house…</p>
 	{:else if !videoGroups.length}
 		<p class="note">No videos for this restaurant yet.</p>
 	{:else}
-		{#each videoGroups as g, gi (g.topic)}
-			<section class="vgroup" aria-labelledby="lv-{gi}">
-				<h3 class="vtopic" id="lv-{gi}">{g.topic} · {g.rows.length}</h3>
-				<VideoList rows={g.rows} showFor onOpen={(id) => goto(`${base}/menu#${id}`)} />
-			</section>
-		{/each}
+		<details class="door video-shelf" bind:open={videosOpen}>
+			<summary><span class="door-name">Browse {videoCount} videos by subject</span><span class="door-line">Open a demonstration when you need it. Each video opens in a new tab and needs a connection.</span></summary>
+			{#each videoGroups as g, gi (g.topic)}
+				<section class="vgroup" aria-labelledby="lv-{gi}">
+					<h3 class="vtopic" id="lv-{gi}">{g.topic} · {g.rows.length}</h3>
+					<VideoList rows={g.rows} showFor onOpen={(id) => goto(`${base}/menu#${id}`)} />
+				</section>
+			{/each}
+		</details>
 	{/if}
 
 	{#if producersCount}
@@ -162,6 +186,9 @@
 </div>
 
 <style>
+	.chapter-search { display: grid; gap: 6px; margin-top: 14px; font-size: 1rem; }
+	.chapter-search input { width: 100%; min-height: 44px; padding: 8px 12px; background: var(--card); color: var(--ink); border: 1px solid var(--field-line); border-radius: var(--radius); }
+	.text-clear { min-height: 44px; border: 0; background: transparent; color: var(--turmeric-deep); font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 	.illustrated-door { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 14px; align-items: center; }
 	.illustrated-door .door-line { display: block; margin-top: 6px; }
 	.folio-preview { display: grid; place-items: center; width: 64px; height: 88px; overflow: hidden; border: 1px solid var(--house-frame); background: var(--paper-raised); color: var(--turmeric-deep); }

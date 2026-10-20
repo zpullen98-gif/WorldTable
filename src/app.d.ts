@@ -38,6 +38,8 @@ declare global {
 				/** Narrow this deck: a meal of the menu, or every level of a Floor Deck section. */
 				meal?: string;
 				every?: boolean;
+				/** Explicit choice to practise a large collection in one sitting. */
+				full?: boolean;
 			};
 			/** /quizzes: the quick quiz, its answers and its results (routes/quizzes). */
 			qq?: {

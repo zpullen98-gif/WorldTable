@@ -34,11 +34,12 @@
 	headingLevel="h1" instead, since they have no page h1 of their own.
 -->
 <div class="shell libhead">
-	<h1>The Library</h1>
+	<h1>All recipes</h1>
 	<p class="lede">
 		All {TOTALS.recipes} dishes across {TOTALS.chapters} chapters, filterable by course,
 		difficulty, diet and season.
 	</p>
+	<p class="chapter-door"><a href="{base}/library#chapters">Browse cuisines and chapters</a></p>
 
 	<!--
 		The rest of the Library, which the Library had no way of reaching.
@@ -81,6 +82,8 @@
 <RecipeBrowser />
 
 <style>
+	.chapter-door { margin-top: 10px; }
+	.chapter-door a { display: inline-flex; align-items: center; min-height: 44px; }
 	.libhead {
 		padding-top: 22px;
 	}

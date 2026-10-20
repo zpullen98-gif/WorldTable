@@ -140,7 +140,7 @@ describe('gradeForQuiz', () => {
 });
 
 describe('the round', () => {
-	it('is ten questions, because the verdict thresholds are absolute counts', () => {
+	it('caps a full round at ten questions', () => {
 		expect(QUIZ_LENGTH).toBe(10);
 	});
 });

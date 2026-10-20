@@ -234,9 +234,18 @@
 		<button class="chip" onclick={() => window.print()}>Print</button>
 	</div>
 
+	<nav class="recipe-sections" aria-label="In this recipe" data-print="hide">
+		<a href="#recipe-ingredients">Ingredients</a>
+		<a href="#recipe-method">Method</a>
+		{#if d.standard || judged.length}<a href="#recipe-standard">Check the result</a>{/if}
+		<a href="#recipe-pairing">Pairings</a>
+		<a href="#recipe-notes">Your notes</a>
+		<a href="#recipe-films">Videos</a>
+	</nav>
+
 	<div class="cols">
 		<section>
-			<h2 class="sec">Ingredients</h2>
+			<h2 class="sec" id="recipe-ingredients" tabindex="-1">Ingredients</h2>
 			<ul class="ingredients">
 				{#each d.ingredients as entry, i (i)}
 					{#if entry.kind === 'section'}
@@ -339,7 +348,7 @@
 		</section>
 
 		<section>
-			<h2 class="sec">Method</h2>
+			<h2 class="sec" id="recipe-method" tabindex="-1">Method</h2>
 			<ol class="steps">
 				{#each d.steps as step, i (i)}
 					<li class="step">
@@ -372,7 +381,7 @@
 	     no block at all rather than an empty one. -->
 	{#if d.standard}
 		<section class="standard">
-			<h2 class="sec">How it should come out</h2>
+			<h2 class="sec" id="recipe-standard" tabindex="-1">How it should come out</h2>
 			{#if drift}
 				<p class="drift">
 					Across {drift.graded} graded {drift.graded === 1 ? 'cook' : 'cooks'} of this dish, you
@@ -391,7 +400,7 @@
 		</section>
 	{:else if judged.length}
 		<section class="standard judged">
-			<h2 class="sec">How to tell it is going right</h2>
+			<h2 class="sec" id="recipe-standard" tabindex="-1">How to tell it is going right</h2>
 			{#if drift}
 				<p class="drift">
 					Across {drift.graded} graded {drift.graded === 1 ? 'cook' : 'cooks'} of this dish, you
@@ -431,7 +440,7 @@
 
 	<section class="pairing">
 		<Ornament seed={r.slug} />
-		<h2 class="sec centered">At the Table</h2>
+		<h2 class="sec centered" id="recipe-pairing" tabindex="-1">At the Table</h2>
 		<dl>
 			<div><dt>The Pour</dt><dd>{pairing.pour}</dd></div>
 			<div><dt>Also Right</dt><dd>{pairing.alt}</dd></div>
@@ -443,9 +452,9 @@
 		<p class="why">{pairing.why}</p>
 	</section>
 
-	<section class="notes" data-print="hide">
+	<section class="notes" id="recipe-notes" tabindex="-1" aria-label="Your recipe notes" data-print="hide">
 		<label for="famnotes" class="sec">Family notes</label>
-		<p class="hint">Saved on this device and kept across visits: export from My restaurant to move them.</p>
+		<p class="hint">Saved on this device. Use <a href="{base}/menu#tools">Brennan’s → Session and tools</a> to export a backup or move your notes.</p>
 		<textarea
 			id="famnotes"
 			rows="4"
@@ -472,7 +481,7 @@
 	{/if}
 
 	<section class="films" data-print="hide">
-		<h2 class="sec">Film school</h2>
+		<h2 class="sec" id="recipe-films" tabindex="-1">Film school</h2>
 		{#if d.films.dish}
 			<a class="vrow" href={d.films.dish.url} target="_blank" rel="noopener">
 				<span class="vlbl">{d.films.dish.label}</span>
@@ -496,6 +505,28 @@
 </article>
 
 <style>
+	.recipe-sections {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+		margin: 8px 0 20px;
+	}
+	.recipe-sections a {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+		padding: 8px 12px;
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		background: var(--card);
+		color: var(--ink);
+		text-underline-offset: 3px;
+		font-size: var(--t-small);
+	}
+	.recipe-sections a:hover,
+	.recipe-sections a:focus-visible {
+		border-color: var(--turmeric);
+	}
 	.sheet {
 		max-width: 860px;
 		padding-top: 26px;

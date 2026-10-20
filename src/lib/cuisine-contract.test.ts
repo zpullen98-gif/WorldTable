@@ -61,7 +61,7 @@ import { foundationEntryById } from './foundations';
  */
 
 const ROOT = join(__dirname, '..', '..');
-const TODAY = '2026-10-17';
+const TODAY = '2026-10-20';
 const seed = loadSet();
 const refs: Refs = loadRefs({ roster: false });
 
@@ -276,10 +276,12 @@ describe('every major rule fails once', () => {
 		expect(breakHollandaise(() => {})).toEqual([]);
 	});
 
-	it('a dash, in prose or anywhere else', () => {
-		expect(text(breakHollandaise((e) => (e.summary = e.summary.replace('. It is', ' \u2014 it is'))))).toMatch(/a dash/);
-		expect(text(breakHollandaise((e) => (e.sources[0].title += ' -- reprint')))).toMatch(/sources\[0\].*a dash/);
-		expect(text(breakHollandaise((e) => (e.cards[0].back += ' &mdash; always')))).toMatch(/a dash/);
+	it.each<{ name: string; mutate: (e: Loose) => void; expected: RegExp }>([
+		{ name: 'an em dash in summary prose', mutate: (e) => (e.summary = e.summary.replace('. It is', ' \u2014 it is')), expected: /a dash/ },
+		{ name: 'a double dash in a source title', mutate: (e) => (e.sources[0].title += ' -- reprint'), expected: /sources\[0\].*a dash/ },
+		{ name: 'an encoded dash in a card answer', mutate: (e) => (e.cards[0].back += ' &mdash; always'), expected: /a dash/ }
+	])('rejects $name', ({ mutate, expected }) => {
+		expect(text(breakHollandaise(mutate))).toMatch(expected);
 	});
 
 	it('American spelling, but not in a name that keeps its own', () => {
@@ -288,12 +290,20 @@ describe('every major rule fails once', () => {
 		expect(proseProblems("Steen's cane syrup is poured at the National Center for Home Food Preservation.")).toEqual([]);
 	});
 
-	it('a missing source, and two wanted for history', () => {
-		expect(text(breakHollandaise((e) => (e.sources = [])))).toMatch(/at least 1 source/);
-		expect(text(breakHollandaise((e) => (e.kind = 'history')))).not.toMatch(/at least 2/);
-		expect(text(breakHollandaise((e) => ((e.kind = 'history'), (e.sources = e.sources.slice(0, 1)))))).toMatch(/at least 2 source\(s\) for a history entry/);
-		expect(text(breakHollandaise((e) => (e.sources[1].url = 'http://www.webexhibits.org/butter/')))).toMatch(/full https address/);
-		expect(text(breakHollandaise((e) => (e.sources[2].asOf = '2099-01-01')))).toMatch(/after the build date/);
+	it.each<{ name: string; mutate: (e: Loose) => void; expected: RegExp; absent?: boolean }>([
+		{ name: 'requires a source for every entry', mutate: (e) => (e.sources = []), expected: /at least 1 source/ },
+		{ name: 'accepts the existing multiple sources for a history entry', mutate: (e) => (e.kind = 'history'), expected: /at least 2/, absent: true },
+		{
+			name: 'requires two sources for history',
+			mutate: (e) => { e.kind = 'history'; e.sources = e.sources.slice(0, 1); },
+			expected: /at least 2 source\(s\) for a history entry/
+		},
+		{ name: 'requires HTTPS source addresses', mutate: (e) => (e.sources[1].url = 'http://www.webexhibits.org/butter/'), expected: /full https address/ },
+		{ name: 'rejects a source review after the build date', mutate: (e) => (e.sources[2].asOf = '2099-01-01'), expected: /after the build date/ }
+	])('$name', ({ mutate, expected, absent }) => {
+		const result = text(breakHollandaise(mutate));
+		if (absent) expect(result).not.toMatch(expected);
+		else expect(result).toMatch(expected);
 	});
 
 	it('a bad dish id, or a component that does not name the dish', () => {
@@ -371,12 +381,14 @@ describe('every major rule fails once', () => {
 		expect(proseProblems('Questions about gluten go to the kitchen.')).toEqual([]);
 	});
 
-	it('cross references that resolve nowhere, and a question that teaches nothing', () => {
-		expect(text(breakHollandaise((e) => e.seeAlso.techniques.push('not-a-technique')))).toMatch(/not in techniques/);
-		expect(text(breakHollandaise((e) => e.seeAlso.folios.push('not-a-folio')))).toMatch(/not in folios/);
-		expect(text(breakHollandaise((e) => e.seeAlso.deck.push('fd_9999')))).toMatch(/not in deck/);
-		expect(text(breakHollandaise((e) => e.seeAlso.entries.push('sauce-nobody-wrote')))).toMatch(/"sauce-nobody-wrote" is not a written Cuisine entry/);
-		expect(text(breakHollandaise((e) => (e.questions[0].teaches = 'nowhere')))).toMatch(/teaches "nowhere" is the stem of a card/);
+	it.each<{ name: string; mutate: (e: Loose) => void; expected: RegExp }>([
+		{ name: 'an unknown technique reference', mutate: (e) => e.seeAlso.techniques.push('not-a-technique'), expected: /not in techniques/ },
+		{ name: 'an unknown folio reference', mutate: (e) => e.seeAlso.folios.push('not-a-folio'), expected: /not in folios/ },
+		{ name: 'an unknown Floor Deck reference', mutate: (e) => e.seeAlso.deck.push('fd_9999'), expected: /not in deck/ },
+		{ name: 'an unwritten Cuisine entry reference', mutate: (e) => e.seeAlso.entries.push('sauce-nobody-wrote'), expected: /"sauce-nobody-wrote" is not a written Cuisine entry/ },
+		{ name: 'a question with no corresponding teaching card', mutate: (e) => (e.questions[0].teaches = 'nowhere'), expected: /teaches "nowhere" is the stem of a card/ }
+	])('rejects $name', ({ mutate, expected }) => {
+		expect(text(breakHollandaise(mutate))).toMatch(expected);
 	});
 
 	it('a sheet term that is not on the owner\'s sheets, or a Brennan\'s pack term in its place', () => {

@@ -94,6 +94,7 @@
 	import { LEVEL_KEYS } from '$lib/levels';
 	import { quickLine as quickLineFor } from '$lib/quick-quiz';
 	import { cuisineQuizRows, handsOnRows, houseQuizRows, levelQuizRows, levelTestRow } from '$lib/practise-rows';
+	import { offersRoundLength, practiceMatches, PRACTICE_ROUND, shortPractice } from '$lib/practise-flow';
 	import { COMPONENT_KINDS, COMPONENT_LABELS, componentsFor, type ComponentKind } from '$lib/house/house-schema';
 	import { shuffleWith, tableProducerCards } from '$lib/house-drill-round';
 	import { FLIP_GRADES, deckLog, flipRecordable, liveSections, pickSession, scopeFromSearch, slipping } from '$lib/floor-deck';
@@ -436,10 +437,10 @@
 		return { deck: id, run: true, refs, i: 0, flipped: false, got: 0, again: 0, missed: [], done: refs.length === 0, ...extra };
 	}
 
-	function startRun(id: string, opts: { meal?: string; every?: boolean } = {}) {
-		const refs = deal(id, opts);
+	function startRun(id: string, opts: { meal?: string; every?: boolean; full?: boolean } = {}) {
+		const refs = shortPractice(id, deal(id, opts), opts.full);
 		if (refs.some((r) => r.startsWith('t:'))) needLexicon();
-		nav.pushShallow(`${deckUrl(id)}&run=1`, { fc: runState(id, refs) });
+		nav.pushShallow(`${deckUrl(id)}&run=1`, { fc: runState(id, refs, opts) });
 		void focusFrame();
 	}
 
@@ -595,7 +596,7 @@
 			nav.replaceShallow(location.href, { fc: { deck: id, meal } });
 			return;
 		}
-		const refs = deal(id, { card: want.card, search: want.search, meal });
+		const refs = shortPractice(id, deal(id, { card: want.card, search: want.search, meal }));
 		if (refs.some((r) => r.startsWith('t:'))) needLexicon();
 		/* A card opened by name (a look-up from the Lexicon, a plate, a search)
 		   shows its answer at once with every layer open, as the look-up did;
@@ -681,6 +682,22 @@
 		if (shown.kind === 's') return foliosForTastingCourse(current, shown.card.itemId, shown.card.course);
 		return [];
 	});
+	/** Reading follows a revealed answer; Back restores this run and card. */
+	const lessonDoors = $derived.by<Array<{ href: string; label: string }>>(() => {
+		if (!shown) return [];
+		if (shown.kind === 't' && shown.entry) return [{ href: `${base}/lexicon#${shown.entry.slug}`, label: 'Read this term in the Lexicon' }];
+		if (!current) return [];
+		if (shown.kind === 'h' || shown.kind === 'p') {
+			const dish = current.dishes.find(d => d.id === shown.card.itemId);
+			return dish ? [{ href: `${base}/menu#${dish.id}`, label: 'Read this dish' }] : [];
+		}
+		if (shown.kind === 'k' || shown.kind === 'r') {
+			const component = current.components?.find(c => c.id === shown.card.itemId);
+			return current.dishes.filter(d => component?.itemIds.includes(d.id)).slice(0, 3)
+				.map(d => ({ href: `${base}/menu#${d.id}`, label: `Study with ${d.name}` }));
+		}
+		return [];
+	});
 	let layers = $state<OpenLayers>({ why: false, facts: false, context: false });
 	let partsOpen = $state(false);
 	const titles = $derived(new Map((deck?.sections ?? []).map((s) => [s.key, s.title])));
@@ -748,7 +765,30 @@
 			return entry && session.drillLog.some(event => event.slug === foundationLogKey(entry) && Number.isFinite(event.at) && event.at <= now);
 		}).length;
 	};
-	const line = (r: Row) => `${r.refs.length} ${r.refs.length === 1 ? 'card' : 'cards'} · ${r.id.startsWith('foundations') ? `${foundationStudied(r.refs)} practised` : `${learnt(r.refs)} learnt`}`;
+	const line = (r: Row) => `${r.refs.length} ${r.refs.length === 1 ? 'card' : 'cards'} · ${r.id.startsWith('foundations') ? `${foundationStudied(r.refs)} practised` : r.id.startsWith('lexicon') ? 'reading cards' : `${learnt(r.refs)} learnt`}`;
+
+	type Door = { id?: string; href?: string; name: string; line: string; test?: boolean };
+	type Group = { id: string; title: string; rows: Door[]; note?: string };
+	const deckDoors = (rows: Row[]): Door[] => rows.map(r => ({ id: r.id, name: r.name, line: line(r) }));
+	let practiceQuery = $state('');
+	const groups = $derived.by<Group[]>(() => [
+		{ id: 'fc-house', title: current?.name ?? 'My restaurant', rows: [...deckDoors(restaurantRows), ...(restaurantRows.length ? houseQuiz : [])], note: !today.houseSettled ? 'Opening the house…' : !restaurantRows.length ? 'No restaurant on this device yet. Open Brennan’s to add a restaurant or read a menu.' : '' },
+		{ id: 'fc-fall', title: 'Fall 2026', rows: deckDoors(['fall:today', 'fall:food', 'fall:cocktail', 'fall:tableside'].map(id => row(id))) },
+		...(componentRows.length ? [{ id: 'fc-made', title: say('madeOf'), rows: deckDoors(componentRows) }] : []),
+		{ id: 'fc-foundations', title: 'Your culinary terms', rows: deckDoors(['foundations:today', 'foundations', ...foundationsCategories.map(c => `foundations:category:${c.id}`)].map(id => row(id))) },
+		{ id: 'fc-cuisine', title: 'Cuisine', rows: [...deckDoors(cuisineRows), ...cuisineQuiz], note: !czIndex ? cuisine.failed ? 'Cuisine could not open. Try loading the study material again.' : 'Opening Cuisine…' : !cuisineRows.length && !cuisineQuiz.length ? 'No Cuisine cards are written yet.' : '' },
+		{ id: 'fc-level', title: all ? 'Every level' : levelName, rows: [...deckDoors(levelRows), ...deckDoors(wordRows), ...levelQuiz], note: !deck ? deckFailed ? 'The Floor Deck could not open. Try loading it again below.' : 'Opening the Floor Deck…' : '' },
+		{ id: 'fc-hands', title: 'Hands on', rows: handsOn },
+		{ id: 'fc-test', title: all ? 'The level tests' : `The ${levelName} test`, rows: testRows.map(r => ({ ...r, test: true })) },
+		{ id: 'fc-ref', title: 'Reference cards', rows: deckDoors(referenceRows) }
+	]);
+	const filteredGroups = $derived(groups.map(g => ({ ...g, rows: g.rows.filter(r => practiceMatches(practiceQuery, g.title, r.name, r.line)) })).filter(g => !practiceQuery.trim() || g.rows.length));
+	const matchCount = $derived(filteredGroups.reduce((n, g) => n + g.rows.length, 0));
+	function jumpGroup(id: string) {
+		const heading = document.getElementById(id);
+		heading?.focus({ preventScroll: true });
+		heading?.scrollIntoView({ block: 'start', behavior: 'instant' });
+	}
 
 	/* ---- the deck screen --------------------------------------------------- */
 	const deckRefs = $derived(fc && !fc.run ? members(fc.deck, { meal: fc.meal, every: fc.every }) : []);
@@ -756,9 +796,10 @@
 	const canNarrow = $derived(!!fc && !fc.run && ((fc.deck === 'menu' || fc.deck.startsWith('menu:')) ? meals.length > 1 : (fc.deck.startsWith('deck:') || fc.deck.startsWith('cz:ch:')) && !all));
 
 	/* Back to the root lands where it was left, once the decks have drawn. */
-	export const snapshot: Snapshot<{ y: number }> = {
-		capture: () => ({ y: typeof window === 'undefined' ? 0 : window.scrollY }),
+	export const snapshot: Snapshot<{ y: number; query: string }> = {
+		capture: () => ({ y: typeof window === 'undefined' ? 0 : window.scrollY, query: practiceQuery }),
 		restore: (v) => {
+			practiceQuery = v.query ?? '';
 			if (!fc) restoreScroll(v.y ?? 0, () => today.ready && !!deck);
 		}
 	};
@@ -769,7 +810,7 @@
 
 <div class="shell hub flashcards" data-screen={screen}>
 	{#if (fc?.deck.startsWith('foundations') || pending?.deck.startsWith('foundations')) && (deckFailed || lexiconFailed)}
-		<div class="note" role="status"><p>The field notes could not load. Your practice record is safe.</p><button class="chip" onclick={() => { if (deckFailed) needDeck(); lexiconFailed = false; needLexicon(); }}>Try the field notes again</button></div>
+		<div class="note" role="status"><p>The field notes could not load. Your practice record is safe.</p><button class="chip" onclick={() => { if (deckFailed) needDeck(); lexiconFailed = false; needLexicon(); }}>Try the field notes again</button> <button class="chip" onclick={() => window.location.reload()}>Reload study material</button></div>
 	{/if}
 	{#if screen === 'root'}
 		<h1 tabindex="-1">Practise</h1>
@@ -786,6 +827,11 @@
 				<!-- Nothing due: the Quick quiz group right below offers the round, so no second chip here. -->
 				<p class="note dueline">{dueNow.line}</p>
 			{/if}
+			{#if today.warning}
+				<p class="note" role="status">{today.warning}</p>
+				<button class="chip" onclick={() => today.retry()}>Try loading study material again</button>
+				<button class="chip" onclick={() => window.location.reload()}>Reload study material</button>
+			{/if}
 		</section>
 
 		<section aria-labelledby="fc-quick">
@@ -794,120 +840,50 @@
 			<a class="chip go start" href="{base}/quizzes?quick=1">Start the quick quiz</a>
 		</section>
 
-		<h2 class="group" id="fc-house">{current ? current.name : 'My restaurant'}</h2>
-		{#if !today.houseSettled}
-			<p class="note">Opening the house…</p>
-		{:else if !restaurantRows.length}
-			<p class="note">No restaurant on this device yet. Set one up from a level page.</p>
-		{:else}
-			<nav class="quiet" aria-labelledby="fc-house">
-				{#each restaurantRows as r (r.id)}
-					<button type="button" class="door" data-deck={r.id} onclick={() => openDeck(r.id)}>
-						<span class="door-name">{r.name}</span>
-						<span class="door-line">{line(r)}</span>
-					</button>
-				{/each}
-				{#each houseQuiz as r (r.href)}
-					<a class="door" href={r.href}><span class="door-name">{r.name}</span><span class="door-line">{r.line}</span></a>
-				{/each}
+		<div class="practice-finder">
+			<label for="practice-search">Find a deck or round</label>
+			<div class="finder-row">
+				<input id="practice-search" type="search" bind:value={practiceQuery} placeholder="A dish, culinary terms, sauces, a quiz…" autocomplete="off" />
+				{#if practiceQuery}<button class="chip" onclick={() => { practiceQuery = ''; document.getElementById('practice-search')?.focus(); }}>Clear search</button>{/if}
+			</div>
+			{#if practiceQuery.trim()}<p class="note" role="status">{matchCount} {matchCount === 1 ? 'deck or round' : 'decks and rounds'} found.</p>{/if}
+			<nav class="chips practice-jumps" aria-label="Practice sections">
+				{#each filteredGroups as group (group.id)}<button class="chip" onclick={() => jumpGroup(group.id)}>{group.title}</button>{/each}
 			</nav>
-		{/if}
+		</div>
+		{#each filteredGroups as group (group.id)}
+			<section class="practice-group" aria-labelledby={group.id}>
+				<h2 class="group" id={group.id} tabindex="-1">{group.title}</h2>
+				{#if group.note}<p class="note" role="status">{group.note}</p>{/if}
+				{#if group.id === 'fc-foundations'}<p class="note">Every term from your sheets, at every level. Read in <a href="{base}/foundations">The Kitchen Fieldbook</a>, then practise here.</p>{/if}
+				{#if group.id === 'fc-level' && deckFailed}<button class="chip" onclick={needDeck}>Try the Floor Deck again</button> <button class="chip" onclick={() => window.location.reload()}>Reload study material</button>{/if}
+				<nav class="quiet" aria-labelledby={group.id}>
+					{#each group.rows as door (door.id ?? door.href)}
+						{#if door.id}
+							<button type="button" class="door" data-deck={door.id} onclick={() => openDeck(door.id!)}><span class="door-name">{door.name}</span><span class="door-line">{door.line}</span></button>
+						{:else}
+							<a class="door" class:leveltest={door.test} href={door.href}><span class="door-name">{door.name}</span><span class="door-line">{door.line}</span></a>
+						{/if}
+					{/each}
+				</nav>
+			</section>
+		{/each}
+		{#if practiceQuery.trim() && !filteredGroups.length}<p class="note">Try a broader word such as “sauces”, “terms” or “menu”, or clear the search to browse every section.</p>{/if}
 
-		<h2 class="group" id="fc-fall">Fall 2026</h2>
-		<nav class="quiet" aria-labelledby="fc-fall">
-			{#each ['fall:today', 'fall:food', 'fall:cocktail', 'fall:tableside'] as id}
-				<button type="button" class="door" data-deck={id} onclick={() => openDeck(id)}><span class="door-name">{deckName(id)}</span><span class="door-line">{line(row(id))}</span></button>
-			{/each}
-		</nav>
-		{#if componentRows.length}
-			<h2 class="group" id="fc-made">{say('madeOf')}</h2>
-			<nav class="quiet" aria-labelledby="fc-made">
-				{#each componentRows as r (r.id)}
-					<button type="button" class="door" data-deck={r.id} onclick={() => openDeck(r.id)}>
-						<span class="door-name">{r.name}</span>
-						<span class="door-line">{line(r)}</span>
-					</button>
-				{/each}
-			</nav>
-		{/if}
-
-		<h2 class="group" id="fc-foundations">Your culinary terms</h2>
-		<p class="note">Every term from your sheets, at every level. Read in <a href="{base}/foundations">The Kitchen Fieldbook</a>, then practise here.</p>
-		<nav class="quiet" aria-labelledby="fc-foundations">
-			{#each ['foundations:today', 'foundations', ...foundationsCategories.map(category => `foundations:category:${category.id}`)] as id}
-				<button type="button" class="door" data-deck={id} onclick={() => openDeck(id)}><span class="door-name">{deckName(id)}</span><span class="door-line">{line(row(id))}</span></button>
-			{/each}
-		</nav>
-
-		<h2 class="group" id="fc-cuisine">Cuisine</h2>
-		{#if !czIndex && !cuisine.failed}
-			<p class="note">Opening Cuisine…</p>
-		{:else if !czIndex}
-			<p class="note">Cuisine could not be opened on this device. Open it once with a connection and it stays for offline use.</p>
-		{:else if !cuisineRows.length && !cuisineQuiz.length}
-			<p class="note">No Cuisine cards are written yet.</p>
-		{:else}
-			<nav class="quiet" aria-labelledby="fc-cuisine">
-				{#each cuisineRows as r (r.id)}
-					<button type="button" class="door" data-deck={r.id} onclick={() => openDeck(r.id)}>
-						<span class="door-name">{r.name}</span>
-						<span class="door-line">{line(r)}</span>
-					</button>
-				{/each}
-				{#each cuisineQuiz as r (r.href)}
-					<a class="door" href={r.href}><span class="door-name">{r.name}</span><span class="door-line">{r.line}</span></a>
-				{/each}
-			</nav>
-		{/if}
-
-		<h2 class="group" id="fc-level">{all ? 'Every level' : levelName}</h2>
-		{#if !deck}
-			<p class="note">Opening the Floor Deck…</p>
-		{/if}
-		<nav class="quiet" aria-labelledby="fc-level">
-			{#each levelRows as r (r.id)}
-				<button type="button" class="door" data-deck={r.id} onclick={() => openDeck(r.id)}>
-					<span class="door-name">{r.name}</span>
-					<span class="door-line">{line(r)}</span>
-				</button>
-			{/each}
-			{#each wordRows as r (r.id)}
-				<button type="button" class="door" data-deck={r.id} onclick={() => openDeck(r.id)}>
-					<span class="door-name">{r.name}</span>
-					<span class="door-line">{line(r)}</span>
-				</button>
-			{/each}
-			{#each levelQuiz as r (r.href)}
-				<a class="door" href={r.href}><span class="door-name">{r.name}</span><span class="door-line">{r.line}</span></a>
-			{/each}
-		</nav>
-
-		<h2 class="group" id="fc-hands">Hands on</h2>
-		<nav class="quiet" aria-labelledby="fc-hands">
-			{#each handsOn as r (r.href)}
-				<a class="door" href={r.href}><span class="door-name">{r.name}</span><span class="door-line">{r.line}</span></a>
-			{/each}
-		</nav>
-
-		<h2 class="group" id="fc-test">{all ? 'The level tests' : `The ${levelName} test`}</h2>
-		<nav class="quiet" aria-labelledby="fc-test">
-			{#each testRows as r (r.href)}
-				<a class="door leveltest" href={r.href}><span class="door-name">{r.name}</span><span class="door-line">{r.line}</span></a>
-			{/each}
-		</nav>
-
-		<h2 class="group" id="fc-ref">Reference cards</h2>
-		<nav class="quiet" aria-labelledby="fc-ref">
-			{#each referenceRows as r (r.id)}
-				<button type="button" class="door" data-deck={r.id} onclick={() => openDeck(r.id)}>
-					<span class="door-name">{r.name}</span>
-					<span class="door-line">{line(r)}</span>
-				</button>
-			{/each}
-		</nav>
 	{:else if screen === 'deck' && fc}
 		<h1 tabindex="-1">{deckName(fc.deck)}</h1>
 		<p class="note deckline">{line({ id: fc.deck, name: deckName(fc.deck), refs: deckRefs })}</p>
+		{#if deckRefs.length > PRACTICE_ROUND && offersRoundLength(fc.deck)}
+			<div class="chips" role="group" aria-label="Practice length">
+				<button class="chip" aria-pressed={!fc.full} onclick={() => setNarrow({ full: false })}>Short session · {PRACTICE_ROUND} cards</button>
+				<button class="chip" aria-pressed={!!fc.full} onclick={() => setNarrow({ full: true })}>Whole deck · {deckRefs.length} cards</button>
+			</div>
+			<p class="note">{fc.full ? `This sitting includes all ${deckRefs.length} cards.` : `Start with ${PRACTICE_ROUND} cards from this collection. The full collection stays available.`} Say your answer before flipping, then choose Got it or Again.</p>
+		{/if}
+		{#if fc.deck.startsWith('lexicon')}
+			<p class="note">These cards are for reading and self-checking; flipping them does not change your level progress. The Lexicon quiz records your answers.</p>
+			<a class="chip" href="{base}/lexicon?level={chosen}&amp;start=quiz">Practise with the Lexicon quiz</a>
+		{/if}
 		{#if fc.deck.startsWith('foundations')}
 			<p class="note">Say what the term means and how you would explain it to a guest. {fc.deck === 'foundations:today' ? 'A short daily selection: missed answers, new words and earlier practice.' : 'All levels are included.'} Your first self-check for each term today is saved; these flips do not award mastery.</p>
 			<a class="chip" href="{base}/foundations">Read your terms &amp; definitions</a>
@@ -936,7 +912,7 @@
 			</details>
 		{/if}
 		{#if deckRefs.length}
-			<button type="button" class="chip go start" disabled={fc.deck.startsWith('foundations') && (!deck || !lexicon || !session.ready)} onclick={() => startRun(fc.deck, { meal: fc.meal, every: fc.every })}>Start</button>
+			<button type="button" class="chip go start" disabled={fc.deck.startsWith('foundations') && (!deck || !lexicon || !session.ready)} onclick={() => startRun(fc.deck, { meal: fc.meal, every: fc.every, full: fc.full })}>Start</button>
 		{:else if !today.houseSettled || (fc.deck.startsWith('deck') && !deck) || (fc.deck.startsWith('cz:') && !czIndex && !cuisine.failed)}
 			<p class="note">Opening the deck…</p>
 		{:else}
@@ -948,9 +924,13 @@
 			{#if fc.again}{fc.got ?? 0} got it, {fc.again} to see again.{:else}{fc.got ?? 0} got it.{/if}
 		</p>
 		{#if !runRefs.length}<p class="note">No cards in this deck yet.</p>{/if}
+		<p class="note">Take one answer you needed to review and explain it aloud as if a guest had asked. Use the lesson links during practice whenever you need more context.</p>
 		<div class="chips">
 			{#if (fc.missed ?? []).length}
 				<button type="button" class="chip go" onclick={studyMisses}>Study the misses</button>
+			{/if}
+			{#if !fc.full && offersRoundLength(fc.deck) && members(fc.deck, { meal: fc.meal, every: fc.every }).length > PRACTICE_ROUND}
+				<button type="button" class="chip" onclick={() => startRun(fc.deck, { meal: fc.meal, every: fc.every })}>Another short session</button>
 			{/if}
 			<button type="button" class="chip" onclick={anotherDeck}>Another deck</button>
 			{#if fc.deck.startsWith('foundations')}<a class="chip" href="{base}/foundations">Open the Fieldbook</a>{/if}
@@ -1097,6 +1077,10 @@
 							{#if shown.entry}
 								<p class="term">{shown.entry.term}</p>
 								{#if fc.flipped}<p class="def">{shown.entry.definition}</p>{:else}<p class="def">Say what it means, then flip.</p>{/if}
+							{:else if lexiconFailed}
+								<p class="def" role="status">The Lexicon could not load. Your saved progress is unchanged.</p>
+								<button class="chip" onclick={() => { lexiconFailed = false; needLexicon(); }}>Try the Lexicon again</button>
+								<button class="chip" onclick={() => window.location.reload()}>Reload study material</button>
 							{:else}
 								<p class="def">Opening the Lexicon…</p>
 							{/if}
@@ -1104,6 +1088,12 @@
 					{:else}<div class="flash"><p class="def">Open this term through <a href="{base}/foundations">The Kitchen Fieldbook</a>.</p></div>
 					{/if}
 					{#if fc.flipped}
+						{#if lessonDoors.length}
+							<nav class="chips reading-doors" aria-label="Read the lesson">
+								{#each lessonDoors as door (door.href)}<a class="chip" href={door.href}>{door.label}</a>{/each}
+							</nav>
+							<p class="note">Use Back to return to this card.</p>
+						{/if}
 						<FolioLinks folios={shownFolios} label={shown?.kind === 'k' ? 'Illustrated studies for these menu items' : shown?.kind === 's' ? 'Illustrated studies for this course' : 'Illustrated studies'} />
 					{/if}
 				{/snippet}
@@ -1115,6 +1105,14 @@
 </div>
 
 <style>
+	.practice-finder { margin-top: 24px; padding-block: 18px; border-block: 1px solid var(--line); }
+	.practice-finder label { display: block; font-weight: 600; margin-bottom: 8px; }
+	.finder-row { display: flex; flex-wrap: wrap; gap: 8px; }
+	.finder-row input { flex: 1 1 240px; min-width: 0; width: 100%; min-height: 48px; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); color: var(--ink); font: inherit; }
+	.practice-jumps { margin-top: 12px; }
+	.practice-group h2 { scroll-margin-top: calc(var(--modebar-h) + var(--backrow-h, 0px) + 16px); }
+	.practice-group h2:focus { outline: 2px solid var(--turmeric-deep); outline-offset: 4px; }
+	.reading-doors { margin-top: 18px; }
 	.foundation-card .term { margin-bottom: 18px; }
 	.reading-door { margin-top: 22px; }
 	.start {

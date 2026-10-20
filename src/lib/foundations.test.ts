@@ -69,13 +69,22 @@ describe('the photographed culinary terms', () => {
 		expect(resolveFoundation(entry).definition).toBe(entry.definition);
 		expect(resolveFoundation(entry).kitchen).toBe(entry.kitchen);
 	});
+	it('keeps corrected comparisons aligned with the original drill identities', () => {
+		for (const id of ['methods-cured', 'methods-fried', 'methods-sauteed', 'methods-smoked', 'cured-prosciutto', 'cuts-cheek']) {
+			const entry = foundationsEntries.find(e => e.id === id)!;
+			const original = deck.cards.find(card => `c:${card.id}` === entry.ref)!;
+			expect(original, id).toBeDefined();
+			expect(entry.compare, id).toBe(original.notThis);
+			expect(entry.reviewedOn, id).toBe('2026-10-20');
+		}
+	});
 	it('ships complete teaching notes and source links for every photographed term', () => {
 		for (const entry of foundationsEntries) {
 			for (const field of ['definition', 'guest', 'kitchen', 'compare'] as const) {
 				expect(entry[field]?.trim().length, `${entry.id}: ${field}`).toBeGreaterThan(15);
 				expect(entry[field], `${entry.id}: no drafting placeholders`).not.toMatch(/\[(?:confirm|insert|actual)/i);
 			}
-			expect(entry.reviewedOn).toBe('2026-10-15');
+			expect(entry.reviewedOn).toMatch(/^\d{4}-\d{2}-\d{2}$/);
 			expect(entry.sources.length, `${entry.id}: sources`).toBeGreaterThan(0);
 			for (const source of entry.sources) expect(new URL(source.url).protocol).toBe('https:');
 		}

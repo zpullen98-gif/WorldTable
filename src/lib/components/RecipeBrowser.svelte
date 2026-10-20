@@ -60,9 +60,24 @@
 	// The real index loads on the first keystroke; until it lands, the substring
 	// fallback in matches() keeps the input alive.
 	let searchReady = $state(false);
+	let searchFailed = $state(false);
+	let searchLoading = $state(false);
+	async function loadSearch() {
+		if (searchLoading) return;
+		searchLoading = true;
+		searchFailed = false;
+		try {
+			await ensureSearch();
+			searchReady = true;
+		} catch {
+			searchFailed = true;
+		} finally {
+			searchLoading = false;
+		}
+	}
 	$effect(() => {
-		if (browser && filters.q.trim() && !searchReady) {
-			void ensureSearch().then(() => (searchReady = true));
+		if (browser && filters.q.trim() && !searchReady && !searchFailed && !searchLoading) {
+			void loadSearch();
 		}
 	});
 
@@ -259,6 +274,9 @@
 	<CuisineRail chapters={railChapters} {active} counts={railCounts} search={filtersToSearch(filters)} />
 
 	<div class="content">
+		{#if searchFailed && filters.q.trim()}
+			<p class="search-status" role="status">Ingredient search could not load. Results currently match recipe names, chapters and tags. <button class="chip" onclick={loadSearch}>Retry ingredient search</button> <button class="chip" onclick={() => window.location.reload()}>Reload this search</button></p>
+		{/if}
 		<div class="meta-row">
 			<!-- tabindex -1: the clear control sends a pointer tap here. -->
 			<svelte:element this={headingLevel} bind:this={headingEl} tabindex="-1">{chapter?.name ?? 'All chapters'}</svelte:element>
@@ -305,6 +323,7 @@
 </div>
 
 <style>
+	.search-status { padding: 12px; margin-bottom: 16px; border: 1px solid var(--line); color: var(--ink-soft); line-height: 1.5; }
 	.wrap {
 		display: grid;
 		grid-template-columns: 210px 1fr;

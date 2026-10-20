@@ -22,6 +22,7 @@
 	import { onMount } from 'svelte';
 
 	let updating = $state(false);
+	let checked = $state(false);
 
 	onMount(() => {
 		// Ask the worker to look for a new version. This does not seize the page;
@@ -35,7 +36,7 @@
 			})
 			.catch(() => {
 				/* offline, or no worker. The links below still work. */
-			});
+			}).finally(() => { updating = false; checked = true; });
 	});
 </script>
 
@@ -46,8 +47,8 @@
 
 	{#if page.status === 404}
 		<p class="lede">
-			This page either moved or never existed. If you followed a link from inside the app and it
-			used to work, you are probably running an installed copy from before the page moved.
+			This address could not be opened. Use Home to choose your study level, or find the material
+			in the Library. An older installed edition may not yet know about a newly added page.
 		</p>
 		{#if updating}
 			<p class="note">
@@ -55,14 +56,16 @@
 				offer it: the app never updates itself out from under you mid-service.
 			</p>
 		{/if}
+		{#if checked}<p class="note">If an update banner appears, choose Reload when you are ready. Your saved notes and progress stay on this device.</p>{/if}
 	{:else}
-		<p class="lede">{page.error?.message ?? 'An unexpected error.'}</p>
+		<p class="lede">This page could not finish loading. Check your connection and try again, or return to the Library.</p>
 	{/if}
 
-	<nav class="ways">
-		<a class="chip" href={base || '/'}>Today</a>
-		<a class="chip" href="{base}/recipes">All recipes</a>
-		<a class="chip" href="{base}/study">The course</a>
+	<nav class="ways" aria-label="Find your way back">
+		<button class="chip" onclick={() => window.location.reload()}>Try this page again</button>
+		<a class="chip" href={base || '/'}>Home</a>
+		<a class="chip" href="{base}/library">Library</a>
+		<a class="chip" href="{base}/flashcards">Practise</a>
 	</nav>
 </div>
 

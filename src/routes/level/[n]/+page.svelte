@@ -358,10 +358,14 @@
 	<!-- One expression for the word and the figure: Svelte trims the space at
 	     a block's edge, which once printed "Untouched· Your level". -->
 	<p class="stat" aria-live="polite">
-		{row ? row.label : 'Reading your record…'}{chosenHere ? ' · ' : ''}{#if chosenHere}<span class="lv-here">Your level</span>{/if}
+		{row ? row.label : levels.failed ? 'Level progress is temporarily unavailable.' : 'Reading your record…'}{chosenHere ? ' · ' : ''}{#if chosenHere}<span class="lv-here">Your level</span>{/if}
 	</p>
 
 	<h2 class="group" id="today">Today's study</h2>
+	{#if today.warning}
+		<p class="note" role="status">{today.warning} <button class="chip" onclick={() => today.retry()}>Try again</button> <button class="chip" onclick={() => window.location.reload()}>Reload study material</button></p>
+	{/if}
+	<p class="note">Start with Due today, read one explanation you missed, then say it aloud in your own words. <a href="{base}/more#learning">Open the learning guide</a>.</p>
 	<nav class="quiet" aria-labelledby="today">
 		<a class="door" href="{base}/foundations" data-door="foundations">
 			<span class="door-name">Your culinary terms</span>
@@ -377,7 +381,7 @@
 		</a>
 		<a class="door" href={nextReading?.href ?? `${base}/level/${n}/read`} data-door="next">
 			<span class="door-name">Next reading</span>
-			<span class="door-line">{nextReading ? nextReading.title : 'Reading your record…'}</span>
+			<span class="door-line">{nextReading ? nextReading.title : levels.failed ? 'Open this level’s reading or retry above.' : 'Reading your record…'}</span>
 		</a>
 		<a class="door" href="{base}/flashcards?deck=fall%3Atoday" data-door="fall-practice">
 			<span class="door-name">Fall menu practice</span>

@@ -21,10 +21,12 @@
 	import { repertoire, dueList } from '$lib/repertoire';
 	import { restoreScroll } from '$lib/stores/nav.svelte';
 	import type { Snapshot } from './$types';
+	import LearningGuide, { type LearningGuideState } from '$lib/components/LearningGuide.svelte';
 
 	let { data } = $props();
 
 	let mounted = $state(false);
+	let guideOpen = $state<LearningGuideState>({ panels: {}, journeys: {} });
 	onMount(() => (mounted = true));
 
 	/* Distinct dishes, never log entries: the log counts COOKS. */
@@ -36,9 +38,12 @@
 	});
 	const night = $derived(mounted && prefs.resolvedService === 'night');
 
-	export const snapshot: Snapshot<{ y: number }> = {
-		capture: () => ({ y: typeof window === 'undefined' ? 0 : window.scrollY }),
-		restore: (v) => restoreScroll(v.y ?? 0, () => session.ready)
+	export const snapshot: Snapshot<{ y: number; guide?: LearningGuideState }> = {
+		capture: () => ({ y: typeof window === 'undefined' ? 0 : window.scrollY, guide: $state.snapshot(guideOpen) }),
+		restore: (v) => {
+			guideOpen = v.guide ?? { panels: {}, journeys: {} };
+			restoreScroll(v.y ?? 0, () => session.ready);
+		}
 	};
 </script>
 
@@ -46,6 +51,8 @@
 
 <div class="shell hub more">
 	<h1 tabindex="-1">More</h1>
+
+	<LearningGuide bind:open={guideOpen} />
 
 	<h2 class="group" id="m-record">Record and progress</h2>
 	<nav class="quiet" aria-labelledby="m-record">

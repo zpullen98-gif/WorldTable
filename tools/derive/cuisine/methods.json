@@ -10,7 +10,7 @@
 			"say": "soh-TAY",
 			"level": 1,
 			"kind": "method",
-			"summary": "Sautéing cooks small or thin pieces fast in a little hot fat, tossed or turned; shallow frying uses more fat and a coating. Heat, a dry surface and room in the pan decide whether food browns or steams.",
+			"summary": "Sautéing cooks small or thin pieces quickly in a little hot fat, tossed or turned as needed. Shallow frying uses more fat and often a coating. Heat, surface moisture and room in the pan influence browning.",
 			"guest": "Sautéed means cooked quickly in a hot pan, so the fish stays moist and flaky with a light golden edge.",
 			"sections": [
 				{
@@ -23,7 +23,7 @@
 				{
 					"key": "how",
 					"paras": [
-						"The order never changes: the pan hot before the fat, the fat hot before the food, the food dry and never crowded. Heat the empty pan, add a thin film of oil or clarified butter and wait until it shimmers; whole butter burns at this heat because of its milk solids. Pat the food dry and season it just before it goes in. Lay it in one layer with space between the pieces. Crowd the pan and its heat drops, juice leaks out and the food stews grey, because a wet surface cannot climb past 100°C (212°F) and so cannot brown.",
+						"Use a little hot fat, dry food and enough space for moisture to escape. Follow the pan maker's heating instructions and choose a fat suited to the heat. Whole butter needs gentler handling because its milk solids can burn; clarified butter tolerates more heat. Crowding cools the pan and encourages steaming rather than browning.",
 						"For a fish fillet, dry it well and, if the dish wants a crust, dredge it in seasoned flour and shake off every loose speck. Lay it presentation side down first, the side the guest will see, or skin side down for crisp skin, pressing it flat for a moment so it does not curl. Leave it alone: it releases from the pan once the crust has formed. Turn it once, lower the heat and finish gently. A thin fillet takes two or three minutes in all; a thick one is browned on the stove and finished in the oven.",
 						"For a shallow fry, heat the fat to about 170 to 180°C (338 to 356°F), when a crumb dropped in sizzles at once. Lay the coated food in away from you so the fat cannot splash back, fry until golden underneath, turn once and drain on a rack, where the crust stays crisp."
 					]
@@ -31,7 +31,7 @@
 				{
 					"key": "family",
 					"paras": [
-						"Three words describe one pan at three heats. To sweat is to cook gently in a little fat over low heat, often with a pinch of salt or a lid, until vegetables are soft and translucent with no colour: the start of a soup, a rice pilaf or a Creole sauce built on the trinity. To sauté is medium-high heat and movement, for a light golden colour. To sear is the hottest pan and no movement at all, for a deep crust on a steak or a scallop. The classic pans are the sloping-sided sauteuse, built for tossing, and the straight-sided sautoir, which also holds a sauce."
+						"Sweating softens vegetables gently with little colour. Sautéing cooks tender pieces quickly in a little fat, with turning or tossing chosen for the food. Searing develops a browned surface and may be followed by another cooking method. These are purposes, not three fixed burner settings: the food, fat and pan all affect the heat required. The sloping-sided sauteuse helps tossing; the straight-sided sautoir can hold a sauce."
 					]
 				},
 				{
@@ -77,11 +77,6 @@
 					"label": "Shallow-frying fat, the high end",
 					"c": 180,
 					"f": 356
-				},
-				{
-					"label": "A wet surface stays near this, so it cannot brown",
-					"c": 100,
-					"f": 212
 				}
 			],
 			"faults": [
@@ -98,7 +93,7 @@
 				{
 					"fault": "Bitter, smoking fat",
 					"cause": "The fat was too hot for its kind, or whole butter was used at full heat.",
-					"fix": "Use oil or clarified butter, and add whole butter only late, for flavour."
+					"fix": "Reduce the heat and start again with a fat suited to the method. Clarified butter tolerates more heat than whole butter."
 				},
 				{
 					"fault": "Coating slides off",
@@ -175,6 +170,21 @@
 					"title": "Brennan’s, Breakfast & Lunch menu",
 					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
 					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Professional Cooking, chapter 6, Wayne Gisslen, hosted by Escoffier",
+					"url": "https://resources.escoffier.edu/textbooks/gisslen/professional_cooking_06.pdf",
+					"asOf": "2026-10-20"
+				},
+				{
+					"title": "Home School: Sautéing, Culinary Institute of America",
+					"url": "https://www.ciafoodies.com/home-school-sauteing/",
+					"asOf": "2026-10-20"
+				},
+				{
+					"title": "Care and Use: cookware-specific heating guidance, Le Creuset",
+					"url": "https://www.lecreuset.com/care-and-use.html",
+					"asOf": "2026-10-20"
 				}
 			],
 			"cards": [
@@ -185,18 +195,18 @@
 				},
 				{
 					"stem": "order",
-					"front": "What is the order of things in a sauté?",
-					"back": "The pan hot before the fat, the fat hot before the food, the food dry and never crowded. Each keeps the surface hot enough to brown."
+					"front": "What should you check before adding food for a sauté?",
+					"back": "Dry the food, leave space in the pan, and heat the chosen fat appropriately. Follow the pan maker's instructions; some coatings must not be heated empty."
 				},
 				{
 					"stem": "crowding",
 					"front": "Why does a crowded pan turn food grey?",
-					"back": "Too much food drops the heat, juice leaks out and the food stews; a wet surface stays near 100°C (212°F) and cannot brown."
+					"back": "Crowding drops the pan's temperature and traps moisture. Food steams in released juices instead of developing a browned surface."
 				},
 				{
 					"stem": "butter",
-					"front": "Why is whole butter a poor fat for a hot sauté?",
-					"back": "Its milk solids burn at sauté heat. Use oil or clarified butter, and add whole butter late, for flavour."
+					"front": "Why does whole butter need care in a hot sauté?",
+					"back": "Its milk solids can scorch. Control the heat; clarified butter tolerates more heat, and whole butter can also be added later for flavour."
 				},
 				{
 					"stem": "fish-side",
@@ -216,7 +226,7 @@
 				{
 					"stem": "sweat-saute-sear",
 					"front": "What separates a sweat, a sauté and a sear?",
-					"back": "Heat and colour: a sweat is low and pale, a sauté is medium-high and golden, a sear is the hottest pan and a deep crust."
+					"back": "Sweat to soften with little colour; sauté to cook tender pieces quickly in little fat; sear to develop a browned surface. Adjust heat and movement to the food."
 				},
 				{
 					"stem": "thick",
@@ -244,14 +254,14 @@
 				},
 				{
 					"stem": "q-order",
-					"q": "Which order sets up a sauté correctly?",
-					"answer": "Hot pan, then hot fat, then dry food in one layer",
+					"q": "Which preparation supports a successful sauté?",
+					"answer": "Dry food, suitable hot fat and space in the pan",
 					"distractors": [
-						"Cold pan, fat and food together, then heat",
-						"Hot pan, then the food, then fat poured over",
-						"Warm fat, wet food, the pan filled to the edge"
+						"Wet food packed tightly into any pan",
+						"An empty coated pan on its highest heat",
+						"Food added before checking the pan instructions"
 					],
-					"why": "Each step keeps the surface hot: a hot pan heats the fat, hot fat browns at once, and dry, uncrowded food never cools it.",
+					"why": "Dry food and room help moisture escape. Heat the pan and fat in a way suited to the cookware, rather than applying one rule to every surface.",
 					"teaches": "order"
 				},
 				{
@@ -263,19 +273,19 @@
 						"The fish was dredged in flour first",
 						"The pan was heated for too long beforehand"
 					],
-					"why": "Too much food cools the pan and releases juice; a wet surface stays near the boiling point of water and cannot brown.",
+					"why": "Crowding lowers the pan temperature and holds moisture around the food, delaying surface browning.",
 					"teaches": "crowding"
 				},
 				{
 					"stem": "q-butter",
-					"q": "Why is whole butter a poor choice for a hot sauté?",
-					"answer": "Its milk solids burn at that heat",
+					"q": "Why does whole butter require care in a hot sauté?",
+					"answer": "Its milk solids can scorch",
 					"distractors": [
 						"It has no flavour at high heat",
 						"It makes a coating slide off",
 						"It turns the fish grey"
 					],
-					"why": "Whole butter carries milk solids that blacken at sauté heat; oil or clarified butter takes the heat, and whole butter goes in late.",
+					"why": "Whole butter can brown and then burn. Control the heat, or use a fat suited to higher heat; butter may also be added later for flavour.",
 					"teaches": "butter"
 				},
 				{
@@ -299,19 +309,19 @@
 						"Spinach leaves wilted for a side",
 						"Diced onion softened for a sauce"
 					],
-					"why": "A shallow fry uses more fat and a coating for a crisp jacket, turned once; small pieces that are tossed are sautéed.",
+					"why": "This coated crab benefits from a deeper layer of fat and careful turning. A coating is common in shallow frying, but is not what defines every fried food.",
 					"teaches": "shallow-fry"
 				},
 				{
 					"stem": "q-sear",
-					"q": "Which word means the hottest pan, no movement and a deep brown crust?",
+					"q": "Which method focuses on developing a deeply browned surface?",
 					"answer": "Sear",
 					"distractors": [
 						"Sweat",
 						"Sauté",
 						"Shallow fry"
 					],
-					"why": "A sweat is low heat and no colour, a sauté is medium-high and golden, and a sear is maximum heat for a deep crust.",
+					"why": "Searing develops surface colour and flavour. It may be followed by gentler cooking; it does not require the highest burner setting on every pan.",
 					"teaches": "sweat-saute-sear"
 				},
 				{
@@ -2428,7 +2438,7 @@
 					"paras": [
 						"Duck leg confit starts with a cure. Rub the legs with about 30 g of salt for each 1 kg (2.2 lb) of duck, about 3 per cent of their weight, with crushed garlic, thyme, bay and black pepper, and leave them covered in the fridge overnight, 8 to 24 hours. Rinse off the salt and dry the legs well; left too long in the cure, the meat turns hard and over-salted.",
 						"Lay the legs snugly in a pan, cover them completely with melted duck fat, and cook them in a low oven or over the lowest flame, the fat barely moving, with only a few small bubbles rising from the meat, about 85 to 95°C (185 to 203°F). After about 2.5 to 3 hours, sometimes more, a skewer slides into the thigh with no resistance and the meat begins to pull from the bone. Hotter fat fries the meat into stringy toughness instead.",
-						"To keep it, let the legs cool in the fat, pressed down so every piece is covered, and chill them; the fat seals out air. The dark jelly that settles beneath is the meat's own juice: good in a sauce, but it spoils sooner than fat, so for a long keep it is lifted away. To serve, lift a leg from the fat, wipe it and crisp it skin side down in a pan over medium heat, or in a hot oven, until the skin shatters, handling it gently, because the meat is now fragile."
+						"Cool cooked confit promptly under the kitchen's documented cooling procedure, with the batch divided as needed; a deep pot of hot fat must not be left to cool slowly. Refrigerate and date it under that procedure. To serve, lift a leg from the fat, remove the excess and crisp the skin separately, handling the tender meat gently."
 					]
 				},
 				{
@@ -2504,9 +2514,9 @@
 					"fix": "Crisp skin side down over medium heat or in a hot oven until it shatters."
 				},
 				{
-					"fault": "Confit spoiling in store",
-					"cause": "The meat was not fully covered, or its juices were left under the fat.",
-					"fix": "Cover every piece with strained fat, lift away the jelly for a long keep, and chill."
+					"fault": "Confit outside its storage controls",
+					"cause": "Cooling, refrigeration or dating did not follow the documented procedure.",
+					"fix": "Set it aside and refer to the responsible chef. Adding fresh fat or reheating does not establish that it is fit to serve."
 				}
 			],
 			"brennans": [
@@ -2563,6 +2573,11 @@
 					"title": "Brennan’s, Breakfast & Lunch menu",
 					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
 					"asOf": "2026-10-12"
+				},
+				{
+					"title": "FDA Food Code 2022, cooling methods and temperature control",
+					"url": "https://www.fda.gov/food/fda-food-code/food-code-2022",
+					"asOf": "2026-10-20"
 				}
 			],
 			"cards": [
@@ -2599,7 +2614,7 @@
 				{
 					"stem": "keeping",
 					"front": "How is duck confit kept?",
-					"back": "Cooled and chilled with every piece covered in fat, which shuts out air; the meat jelly beneath is lifted away for a long keep."
+					"back": "Cool promptly under the kitchen's documented procedure, then refrigerate and date. Covering meat with fat does not replace cooling controls or establish a shelf life."
 				},
 				{
 					"stem": "crisping",
@@ -3404,21 +3419,21 @@
 			"say": "As it reads: smoking.",
 			"level": 2,
 			"kind": "method",
-			"summary": "Smoking flavours food with the smoke of smouldering wood. Hot smoking cooks as it flavours, as with andouille and tasso; cold smoking flavours without cooking and always follows a cure. Today smoke is mostly a seasoning.",
+			"summary": "Smoking gives food aroma and colour. Hot smoking includes a cooking process; cold smoking does not. Learn the product and its controls before describing how it is prepared or served.",
 			"guest": "Our Smoked Cauliflower is smoked for a deep, savoury flavour, then brightened with preserved lemon and a moderate warmth from harissa.",
 			"sections": [
 				{
 					"key": "what",
 					"paras": [
 						"Smoke is what wood gives off when it smoulders, burning slowly with too little air to flame. Heated wood breaks down into hundreds of compounds: some give the smoky, spicy aroma, others react on the surface of the food to give a mahogany colour, and some slow the growth of bacteria and the spoiling of fat. Smoke works on the surface, so a dry, slightly tacky skin, the pellicle, takes it best.",
-						"For most of history smoke was a preserver, working with salt and drying to keep meat and fish through lean months. Refrigeration took over that job, and smoke today is chiefly a flavour, but the old order stands: salt first, then smoke."
+						"Smoke historically worked with salting and drying to preserve meat and fish. Today it is also used for flavour, including in cheese, vegetables and drinks. Those foods do not all follow the same cure or production process."
 					]
 				},
 				{
 					"key": "how",
 					"paras": [
-						"Hot smoking cooks as it smokes. The food sits in a closed smoker or smokehouse over smouldering wood, at a heat high enough to cook it through, slowly. Andouille, tasso and the smoked sausage of south Louisiana are hot smoked, each cured or seasoned first; so are hot-smoked salmon and trout, which flake when done. Bacon is smoked warm too, but it is still cooked before it is eaten. Rules for hot-smoked fish commonly ask for the centre to be held at 63°C (145°F) or more for at least 30 minutes.",
-						"Cold smoking flavours without cooking. The smoke is made apart from the food and cooled before it reaches it, and the chamber is kept below about 32°C (90°F), the ceiling smoked seafood guidelines set, so the flesh does not cook: smoked salmon stays silky, cheese stays whole, and some hams take smoke for days. That warmth is no barrier to bacteria, so cold smoking always follows a cure: salmon is salted, often with sugar, rinsed and air-dried to a pellicle before the smoke.",
+						"Hot smoking combines smoke with cooking heat. Hot-smoked salmon and trout are examples; cured sausages and bacon still need their own product instructions. The Perennia seafood guide describes a centre temperature of at least 63°C (145°F) for 30 minutes for hot-smoked fish. That is a process example, not a universal cooking rule for everything called smoked.",
+						"Cold smoking takes place below cooking temperatures. Fish may receive a measured cure and drying stage, but salt alone is not a complete control. The producer's validated process addresses the hazards for that product, and refrigeration and hygienic handling still matter. Never improvise a cold-smoking procedure from a flavour description.",
 						"Choose the wood. Hardwoods give clean smoke: hickory strong and bacon-like; pecan, a kind of hickory, milder and sweeter; oak steady and medium; fruitwoods such as apple and cherry gentle and sweet. Resinous softwoods like pine and spruce give a bitter, sooty smoke and are never used. The wood should be dry and seasoned and the smoke thin and pale blue; thick white smoke from a smothered fire coats food with acrid soot.",
 						"Smoke at the pass is a seasoning, not a preserver. A smoking gun burns a pinch of wood chips and blows cool smoke through a tube under a glass cloche, over a plate, a cocktail or a container of liquid, for a few seconds to a few minutes. Liquids, purées and dressings take smoke quickly, and a little goes a long way."
 					]
@@ -3444,12 +3459,12 @@
 			],
 			"temps": [
 				{
-					"label": "Hot-smoked fish: the centre held at least 30 minutes at or above",
+					"label": "Perennia hot-smoked fish example: centre held at least 30 minutes",
 					"c": 63,
 					"f": 145
 				},
 				{
-					"label": "Cold smoking: the chamber stays below",
+					"label": "Perennia cold-smoked fish example: chamber ceiling, not a safety test",
 					"c": 32,
 					"f": 90
 				}
@@ -3468,7 +3483,7 @@
 				{
 					"fault": "Cold-smoked fish turned opaque and soft",
 					"cause": "The chamber ran too warm and began to cook it.",
-					"fix": "Keep the smoke cool, below about 32°C (90°F), and smoke in cool weather or over ice."
+					"fix": "Stop and check the documented process and batch records with the responsible chef. Cooling the smoker afterwards does not undo a process deviation."
 				},
 				{
 					"fault": "Smoke drowns the dish",
@@ -3578,6 +3593,11 @@
 					"title": "Brennan’s, Breakfast & Lunch menu",
 					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
 					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Cold smoking is not a pathogen kill step, US Food and Drug Administration",
+					"url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/acme-smoked-fish-corp-613859-07122021",
+					"asOf": "2026-10-20"
 				}
 			],
 			"cards": [
@@ -3598,18 +3618,18 @@
 				},
 				{
 					"stem": "hot-fish",
-					"front": "What centre temperature and time do rules commonly set for hot-smoked fish?",
-					"back": "At least 63°C (145°F) at the centre, held there for at least 30 minutes."
+					"front": "What does the hot-smoked fish time and temperature example teach?",
+					"back": "The Perennia guide gives at least 63°C (145°F) for 30 minutes at the centre. Use the validated process for the actual product; a smoker setting alone does not establish doneness."
 				},
 				{
 					"stem": "cold",
 					"front": "What is cold smoking, and what is it used for?",
-					"back": "Smoking with the chamber below about 32°C (90°F), so the food takes flavour without cooking: smoked salmon, cheese and some hams."
+					"back": "Smoking below cooking temperatures for flavour, as with cold-smoked salmon or cheese. The process is product-specific and is not a pathogen kill step."
 				},
 				{
 					"stem": "cure-first",
-					"front": "Why does cold smoking always follow a cure?",
-					"back": "Cold smoke does not cook, and its warmth suits bacteria, so the salt does the protecting and the smoke adds flavour."
+					"front": "Does a salt cure make every cold-smoked food ready to eat?",
+					"back": "No. Cold smoke is not a pathogen kill step. The producer's validated process, storage instructions and the kitchen's handling controls determine how the product is served."
 				},
 				{
 					"stem": "woods",
@@ -3646,25 +3666,25 @@
 				{
 					"stem": "q-cold",
 					"q": "Which of these is cold smoked, taking flavour without being cooked?",
-					"answer": "Smoked salmon, sliced thin",
+					"answer": "Salmon labelled cold-smoked",
 					"distractors": [
 						"Tasso",
 						"Andouille",
 						"Smoked trout that flakes"
 					],
-					"why": "Cold smoking keeps the chamber below about 32°C (90°F), so salmon stays silky; tasso, andouille and flaking smoked trout are hot smoked and cook as they smoke.",
+					"why": "A cold-smoked label identifies the process. Salmon can also be hot smoked, so the species or thickness of a slice does not settle the question.",
 					"teaches": "cold"
 				},
 				{
 					"stem": "q-cure-first",
-					"q": "Why must fish be cured before it is cold smoked?",
-					"answer": "The smoke does not cook it, so salt protects it",
+					"q": "A fish has been salted and cold smoked. What establishes how it may be served?",
+					"answer": "Its validated process and handling instructions",
 					"distractors": [
-						"The cure makes the smoke darker",
-						"Salt helps the wood smoulder",
-						"The cure shortens the smoking time to a few minutes"
+						"A smoky aroma and a glossy surface",
+						"The salt alone, whatever its amount",
+						"A thin slice that feels tender"
 					],
-					"why": "Cold smoke stays below cooking heat and its warmth suits bacteria, so the salt cure, not the smoke, does the protecting.",
+					"why": "Salt and smoke are not proof of readiness to eat. Cold smoking is not a pathogen kill step, so follow the product's controls and kitchen procedure.",
 					"teaches": "cure-first"
 				},
 				{
@@ -3696,11 +3716,11 @@
 					"q": "Which of these is hot smoked, cooking through as it takes the smoke?",
 					"answer": "Tasso",
 					"distractors": [
-						"Scottish smoked salmon",
+						"Cold-smoked salmon",
 						"Smoked cheddar",
 						"A smoked cocktail"
 					],
-					"why": "Tasso, like andouille, cooks as it smokes; salmon and cheese are cold smoked for flavour alone, and a cocktail takes smoke from a gun.",
+					"why": "The example is hot-smoked tasso. Salmon can be hot or cold smoked; identify the product rather than guessing from the species or its place of origin.",
 					"teaches": "hot"
 				},
 				{

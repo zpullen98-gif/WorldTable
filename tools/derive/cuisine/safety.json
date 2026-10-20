@@ -240,14 +240,14 @@
 			"questions": [
 				{
 					"stem": "q-hot-holding",
-					"q": "A hollandaise probes at 53°C (127°F) in the bain-marie. What does that mean for how it is held?",
-					"answer": "It is below hot holding, so it runs on time",
+					"q": "A hollandaise probes below the hot-holding threshold. What must the cook check before continuing service?",
+					"answer": "Its documented time and temperature controls",
 					"distractors": [
-						"It counts as hot held, like any soup",
-						"It must be reheated to 74°C (165°F) at once",
-						"It may stay until it starts to split"
+						"Whether the sauce still looks glossy",
+						"Whether the batch has enough lemon",
+						"Whether a fresh batch can be added"
 					],
-					"why": "Below 57°C (135°F) a warm sauce is in the danger zone, so it runs on the kitchen's written time limit and goes when its time is up.",
+					"why": "A low reading does not authorise a new time allowance. Follow the kitchen's documented procedure and escalate an uncontrolled batch rather than guessing.",
 					"teaches": "hot-holding"
 				},
 				{
@@ -2378,7 +2378,7 @@
 				{
 					"key": "safety",
 					"paras": [
-						"If the flame grows too big or spreads, slide the lid over the pan, or lay a damp cloth across it, and turn the burner off: without air the fire dies. Never throw water, because the pan holds hot butter and sugar and water spatters burning fat. Know where the nearest extinguisher is before service, and how to use it. In a bright room an alcohol flame can be almost invisible, a pale shimmer, so treat the pan as lit until it has clearly died, and never pass a hand or a cloth over it to check. Plate, then turn the burner off before you leave the cart, every time."
+						"For a small fire contained in the pan, slide a suitable metal lid over it and turn off the heat if you can do so without approaching the flame. Leave the pan in place and keep it covered until cool. Do not use water or an improvised wet cloth. If fire spreads or you cannot control it, move people away and follow the house emergency plan, including calling the fire service. Know the extinguisher location and use it only within your training. An alcohol flame can be hard to see in bright light, so never test for it with a hand or cloth."
 					]
 				},
 				{
@@ -2473,6 +2473,16 @@
 					"title": "Brennan’s, Bananas Foster recipe and history",
 					"url": "https://www.brennansneworleans.com/recipes/bananas-foster/",
 					"asOf": "2026-09-26"
+				},
+				{
+					"title": "Cook Top Fire Safety Tips, US Fire Administration",
+					"url": "https://www.usfa.fema.gov/gallery/pictographs/pictograph34.html",
+					"asOf": "2026-10-20"
+				},
+				{
+					"title": "Cook Safely: What to Do If Your Pan Is on Fire, US Fire Administration",
+					"url": "https://www.usfa.fema.gov/downloads/fief/handouts/fief_cooking_safety_info_card.pdf",
+					"asOf": "2026-10-20"
 				}
 			],
 			"cards": [
@@ -2509,12 +2519,12 @@
 				{
 					"stem": "lid",
 					"front": "What must be within reach throughout a flambé?",
-					"back": "A lid that fits the pan, or a damp cloth, to smother the flame; and the cook knows where the nearest extinguisher is."
+					"back": "A suitable metal lid for a small fire contained in the pan. Know the extinguisher location and the house emergency plan; a spreading fire requires evacuation and emergency help."
 				},
 				{
 					"stem": "no-water",
 					"front": "Why is water never thrown on a flaming flambé pan?",
-					"back": "The pan holds hot butter and sugar, and water spatters burning fat. Slide the lid on and turn the burner off instead."
+					"back": "Water can scatter burning fat. For a small contained fire, cover the pan and turn off the heat if you can do so without approaching the flame; do not move it."
 				},
 				{
 					"stem": "invisible",
@@ -2600,14 +2610,14 @@
 				},
 				{
 					"stem": "q-no-water",
-					"q": "A flame grows too big. What is the right first move?",
-					"answer": "Lid on the pan, burner off",
+					"q": "A small fire is contained in the pan. You can reach the controls without approaching it. What is the first response?",
+					"answer": "Cover the pan and turn the heat off",
 					"distractors": [
 						"Throw a glass of water over it",
 						"Carry the pan quickly to the kitchen",
 						"Blow hard across the top of the pan"
 					],
-					"why": "A lid starves the flame of air; water spatters the hot butter and sugar, and carrying a lit pan spreads the danger through the room.",
+					"why": "A suitable lid covers a small contained pan fire. Leave it in place until cool; if fire spreads or cannot be controlled, follow the house emergency plan.",
 					"teaches": "no-water"
 				},
 				{

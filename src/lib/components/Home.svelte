@@ -1,6 +1,7 @@
 <!--
-  The home: the four level cards and nothing else (docs/consolidation-design.md
-  2.6 and 3.5).
+  The home: four level cards, a short starting guide, and a direct path to
+  today's study. The 20 October editorial pass retains the existing structure
+  while explaining the choices to a new learner.
 
   The quiet row of doors that sat under the cards went with the consolidation
   (4 Oct 2026): Today is a level page's Today's study now, the Library is its
@@ -53,9 +54,21 @@
 
 	const nameOf = (n: DeckLevel) =>
 		levelInfo.find((l) => l.level === n)?.name ?? levels.data?.levels.find((l) => l.level === n)?.name ?? '';
+	const blurbOf = (n: DeckLevel) =>
+		levelInfo.find((l) => l.level === n)?.blurb ?? levels.data?.levels.find((l) => l.level === n)?.blurb ?? '';
 </script>
 
 <div class="home">
+	<div class="welcome">
+		<p>Choose a starting point, then read, practise and put it to work. Commis begins with the essentials; every level stays open to you.</p>
+		<a class="chip go" href="{base}/level/{chosen}#today">Today's study · {nameOf(chosen)}</a>
+		<a class="guide" href="{base}/more#learning">How to use the Table</a>
+		{#if levels.failed}
+			<p class="note" role="status">The material used to show your progress could not load. Your saved record is unchanged.</p>
+			<button class="chip" onclick={() => void levels.load()}>Try loading progress again</button>
+			<button class="chip" onclick={() => window.location.reload()}>Reload study material</button>
+		{/if}
+	</div>
 	<section class="levels" aria-label="Levels">
 		{#each LEVEL_KEYS as n (n)}
 			{@const row = rows.find((r) => r.level === n)}
@@ -69,6 +82,7 @@
 				onclick={() => levels.choose(n)}
 			>
 				<span class="lv-name">{nameOf(n)}</span>
+				<span class="lv-blurb">{blurbOf(n)}</span>
 				<span class="lv-stat">{ready && row ? row.label : ''}</span>
 				{#if on}<span class="lv-here">Your level</span>{/if}
 			</a>
@@ -82,6 +96,10 @@
 		margin: 0 auto;
 		padding-inline: 20px;
 	}
+	.welcome { margin-bottom: 22px; max-width: var(--measure); }
+	.welcome p { margin: 0 0 14px; font-size: var(--t-body); line-height: 1.6; color: var(--ink-soft); }
+	.lv-blurb { font-size: 1rem; line-height: 1.5; color: var(--ink-soft); }
+	.guide { display: inline-flex; align-items: center; min-height: 44px; margin-inline-start: 12px; }
 
 	/* ---- the four cards ---------------------------------------------------- */
 	.levels {

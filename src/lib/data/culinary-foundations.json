@@ -157,10 +157,10 @@
       "category": "methods",
       "aliases": [],
       "ref": "c:fd_0030",
-      "definition": "Salted, then often dried or smoked, to firm it and make it keep. Salt pulls water out of meat or fish, and with less water left, spoiling microbes struggle. The flesh firms, turns translucent and concentrates in flavor. Many cures add sugar, and most ham and bacon get nitrite, which keeps them pink. Bacon is cooked before eating.",
+      "definition": "Treated with a controlled salt cure, sometimes followed by drying or smoking. Curing changes taste, texture and keeping quality. Some cures use nitrite as well as salt. Cured ham may be ready to eat or still need cooking; appearance cannot settle that question. Follow the product instructions and kitchen procedure.",
       "guest": "It has been salt-cured, which changes its texture and concentrates its savory character.",
       "kitchen": "Identify the product and its instructions before deciding whether it belongs directly on a board or must be cooked.",
-      "compare": "Cured, smoked, cooked and ready-to-eat are separate descriptions.",
+      "compare": "Curing, smoking and cooking are different processes; ready to eat describes the finished product.",
       "correction": "",
       "sources": [
         {
@@ -172,7 +172,7 @@
           "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat-catfish/hams-and-food-safety"
         }
       ],
-      "reviewedOn": "2026-10-15"
+      "reviewedOn": "2026-10-20"
     },
     {
       "id": "methods-fried",
@@ -180,10 +180,10 @@
       "category": "methods",
       "aliases": [],
       "ref": "c:fd_0031",
-      "definition": "Cooked in hot oil until the outside turns crisp and golden. Frying oil runs near 175 to 190 C (350 to 375 F), far hotter than boiling water, so the surface dries and browns into a crust while steam keeps the center moist. Deep frying submerges the food; pan frying uses oil partway up. Batter or breading gives the crunch.",
+      "definition": "Cooked in hot oil until the outside turns crisp and golden. Deep frying submerges food in hot fat; pan frying uses a shallower layer. Surface moisture escapes and browning develops. A batter or crumb coating is common but optional: uncoated potatoes can also become crisp. The recipe determines the fat temperature, coating and finished texture.",
       "guest": "It is cooked in hot fat for a crisp surface; I can describe the coating used on this dish.",
       "kitchen": "Distinguish pan frying from full immersion before describing the finish; verify any coating separately.",
-      "compare": "Deep frying immerses food; pan frying uses a shallower layer of fat.",
+      "compare": "Deep frying immerses food; pan frying uses less fat; sautéing uses a thin film with small or thin pieces.",
       "correction": "",
       "sources": [
         {
@@ -191,7 +191,7 @@
           "url": "https://resources.escoffier.edu/textbooks/gisslen/professional_cooking_06.pdf"
         }
       ],
-      "reviewedOn": "2026-10-15"
+      "reviewedOn": "2026-10-20"
     },
     {
       "id": "methods-grilled",
@@ -319,18 +319,22 @@
       "category": "methods",
       "aliases": [],
       "ref": "c:fd_0038",
-      "definition": "Cooked fast in a little fat in a hot pan, tossed to cook evenly. Small or thin pieces go into a hot, shallow pan with just enough fat to coat it and are tossed or stirred. High heat and little fat brown the edges before the inside overcooks, so greens stay vivid and mushrooms turn golden.",
+      "definition": "Cooked quickly in a little hot fat, turned or tossed as needed. Sautéing suits small or thin pieces and uses little fat. Small vegetables may be tossed; a delicate fillet is usually turned carefully. Constant movement is not a requirement. Enough room in the pan helps moisture escape so the surface can brown.",
       "guest": "It is quickly cooked in a hot pan with a little fat for a lightly browned finish.",
       "kitchen": "Use small or thin pieces and a little fat; turning or tossing helps expose surfaces evenly.",
-      "compare": "Sautéing uses a film of fat; pan frying uses more fat around the food.",
+      "compare": "Sautéing uses little fat; shallow frying uses more. A fillet can be sautéed without being tossed.",
       "correction": "",
       "sources": [
         {
           "title": "Escoffier: Essential Glossary of Cooking Terms",
           "url": "https://www.escoffier.edu/blog/culinary-arts/the-essential-glossary-of-cooking-terms-for-the-culinary-arts/"
+        },
+        {
+          "title": "Escoffier / Gisslen: Professional Cooking, chapter 6",
+          "url": "https://resources.escoffier.edu/textbooks/gisslen/professional_cooking_06.pdf"
         }
       ],
-      "reviewedOn": "2026-10-15"
+      "reviewedOn": "2026-10-20"
     },
     {
       "id": "methods-seared",
@@ -380,10 +384,10 @@
       "category": "methods",
       "aliases": [],
       "ref": "c:fd_0041",
-      "definition": "Flavored, and often slowly cooked, by the fumes of smoldering wood. Smoldering hardwood gives off compounds that settle on the food and color it. Hot smoking also cooks it low and slow, which is how brisket goes tender. Cold smoking only flavors, so cold-smoked salmon stays silky and uncooked. Fruit woods are mild; hickory is bold.",
+      "definition": "Flavored, and often slowly cooked, by the fumes of smoldering wood. Smoke adds aroma and changes appearance. Hot smoking includes cooking; cold smoking does not provide a pathogen kill step. A smoke ring or silky texture does not prove readiness to eat. Follow the product instructions and kitchen procedure.",
       "guest": "Smoke gives it an aromatic depth; the exact wood and preparation determine the character.",
       "kitchen": "Ask whether the product is hot-smoked, cold-smoked or smoke-flavored, and how it is served.",
-      "compare": "Hot smoking cooks with heat; cold smoking adds smoke without fully cooking the product.",
+      "compare": "Hot smoking includes cooking; cold smoking does not provide a pathogen kill step. Curing is a separate process.",
       "correction": "",
       "sources": [
         {
@@ -393,9 +397,13 @@
         {
           "title": "Speck Alto Adige Consortium: Production",
           "url": "https://www.speck.it/en/production"
+        },
+        {
+          "title": "FDA: Cold smoking is not a pathogen kill step",
+          "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/acme-smoked-fish-corp-613859-07122021"
         }
       ],
-      "reviewedOn": "2026-10-15"
+      "reviewedOn": "2026-10-20"
     },
     {
       "id": "methods-sousvide",
@@ -1739,10 +1747,10 @@
         "San Daniele"
       ],
       "ref": "c:fd_0074",
-      "definition": "Italian pork leg, salted, air-dried a year or more, shaved thin. A whole hind leg is rubbed with sea salt, then hung in moving air for a year or longer. It slowly loses water while the meat's own enzymes build sweet, nutty flavor. Cut thin, the fat melts on contact. It is sweeter and softer than Spanish ham.",
+      "definition": "Italian ham: dry-cured as crudo, or cooked as cotto. Prosciutto crudo is dry-cured pork leg; cotto is cooked ham. Named products have their own rules: Parma matures at least fourteen months before branding. Maturation and the producer shape the texture; Italian ham is not always sweeter or softer than Spanish ham.",
       "guest": "The crudo style here is Italian dry-cured ham, served in delicate slices.",
       "kitchen": "Identify the named style. For the familiar crudo board, thin slices let the texture and aroma show.",
-      "compare": "Prosciutto crudo is dry-cured; prosciutto cotto is cooked ham.",
+      "compare": "Crudo is dry-cured; cotto is cooked. Parma is a particular protected crudo, not a synonym for every prosciutto.",
       "correction": "",
       "sources": [
         {
@@ -1754,7 +1762,7 @@
           "url": "https://www.levoni.it/it/salumi/salumi-affettati/linea-classica/prosciutto-cotto-alta-qualita"
         }
       ],
-      "reviewedOn": "2026-10-15"
+      "reviewedOn": "2026-10-20"
     },
     {
       "id": "cured-rillette",
@@ -1853,10 +1861,10 @@
         "Pork Cheek"
       ],
       "ref": "c:fd_0087",
-      "definition": "Hard-working chewing muscle of the face, braised until spoon-soft. An animal chews all day, so this muscle is dense with connective tissue and tough as leather cooked fast. Braised low for three hours or more, that tissue melts into gelatin, making the meat sticky and silky and the braising liquid a glossy sauce.",
+      "definition": "Hard-working chewing muscle of the face, braised until spoon-soft. Cheek has substantial connective tissue that softens with slow, moist cooking. Beef, veal and pork cheeks differ in size, so one number of hours cannot define readiness. Assess tenderness and follow the recipe's cooking controls.",
       "guest": "It is a working muscle slowly cooked until tender, with a rich, silky texture.",
       "kitchen": "Connect a long gentle cook with a silky result; do not describe raw cheek as a quick-cooking tender steak.",
-      "compare": "Tenderloin starts tender; cheek develops tenderness through the cooking method.",
+      "compare": "Tenderloin starts tender; cheek usually needs time for connective tissue to soften. The cut and size guide the method.",
       "correction": "",
       "sources": [
         {
@@ -1864,7 +1872,7 @@
           "url": "https://www.aussiebeefandlamb.me/meat-cuts/cuts-by-protein/beef/cheek"
         }
       ],
-      "reviewedOn": "2026-10-15"
+      "reviewedOn": "2026-10-20"
     },
     {
       "id": "cuts-hangersteak",

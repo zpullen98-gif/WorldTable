@@ -61,7 +61,7 @@ test('a chapter page has its own h1, and the home dashboard does not skip h2', a
 	await expect(page.getByRole('heading', { level: 3 })).toHaveCount(0);
 
 	await goto(page, '/recipes');
-	await expect(page.getByRole('heading', { level: 1, name: 'The Library' })).toBeVisible();
+	await expect(page.getByRole('heading', { level: 1, name: 'All recipes' })).toBeVisible();
 	await expect(page.getByRole('heading', { level: 2, name: 'All chapters' })).toBeVisible();
 
 	// The home is the four level cards under the masthead's h1 and nothing

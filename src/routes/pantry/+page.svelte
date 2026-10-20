@@ -6,6 +6,9 @@
 	import { session } from '$lib/stores/session.svelte';
 	import { matchPantry, pantryCulprit } from '$lib/pantryMatch';
 	import type { Recipe } from '$lib/types';
+	import { restoreScroll } from '$lib/stores/nav.svelte';
+	import type { PantryDroppable } from '$lib/pantryMatch';
+	import type { Snapshot } from './$types';
 
 	let { data } = $props();
 
@@ -13,6 +16,11 @@
 	let minMatches = $state(3);
 	let course = $state<string | null>(null);
 	let vegOnly = $state(false);
+	let ingredientSearch: HTMLInputElement | undefined = $state();
+	let minimumControl: HTMLSelectElement | undefined = $state();
+	let courseControl: HTMLSelectElement | undefined = $state();
+	let vegetarianControl: HTMLInputElement | undefined = $state();
+	let resultsHeading: HTMLHeadingElement | undefined = $state();
 
 	const month = $derived(effectiveMonth(prefs.hemisphere));
 
@@ -60,6 +68,25 @@
 		'', 'January', 'February', 'March', 'April', 'May', 'June',
 		'July', 'August', 'September', 'October', 'November', 'December'
 	];
+	function relax(key: PantryDroppable) {
+		if (key === 'minMatches') { minMatches = 1; minimumControl?.focus(); }
+		else if (key === 'course') { course = null; courseControl?.focus(); }
+		else { vegOnly = false; vegetarianControl?.focus(); }
+	}
+	function showResults() {
+		resultsHeading?.scrollIntoView({ block: 'start' });
+		resultsHeading?.focus({ preventScroll: true });
+	}
+	export const snapshot: Snapshot<{ y: number; q: string; minimum: number; course: string | null; vegetarian: boolean }> = {
+		capture: () => ({ y: typeof window === 'undefined' ? 0 : window.scrollY, q, minimum: minMatches, course, vegetarian: vegOnly }),
+		restore: (value) => {
+			q = value.q ?? '';
+			minMatches = value.minimum ?? 3;
+			course = value.course ?? null;
+			vegOnly = !!value.vegetarian;
+			restoreScroll(value.y ?? 0, () => session.ready);
+		}
+	};
 </script>
 
 <svelte:head><title>Pantry Match · The World Table</title></svelte:head>
@@ -80,13 +107,16 @@
 		<aside class="shelf">
 			<div class="shelftools">
 				<input
+					bind:this={ingredientSearch}
 					bind:value={q}
 					type="search"
 					placeholder="Find an ingredient…"
 					aria-label="Filter ingredients"
 				/>
-				<button class="chip" onclick={() => session.clearPantry()}>Clear</button>
+				<button class="chip" disabled={!selected.size} onclick={() => session.clearPantry()}>Clear pantry</button>
 			</div>
+			<p class="selection" role="status">{selected.size} ingredients selected. <button class="linkish" onclick={showResults}>See matching dishes</button></p>
+			{#if q}<button class="linkish" onclick={() => { q = ''; ingredientSearch?.focus(); }}>Show all ingredients</button>{/if}
 			<p class="hemi">
 				<button
 					class="linkish"
@@ -119,26 +149,28 @@
 					</ul>
 				</section>
 			{/each}
+			{#if !shelf.length}<p class="ingredient-empty">No ingredient matches “{q.trim()}”. Try a simpler name or show all ingredients.</p>{/if}
 		</aside>
 
 		<div>
+			<h2 class="matches-heading" tabindex="-1" bind:this={resultsHeading}>Matching dishes</h2>
 			<div class="restools">
-				<select bind:value={minMatches} class="chip" aria-label="Minimum matches">
+				<select bind:this={minimumControl} bind:value={minMatches} class="chip" aria-label="Minimum matches">
 					<option value={1}>Any match</option>
 					<option value={2}>2+ matches</option>
 					<option value={3}>3+ matches</option>
 					<option value={4}>4+ matches</option>
 				</select>
-				<select bind:value={course} class="chip" aria-label="Course">
+				<select bind:this={courseControl} bind:value={course} class="chip" aria-label="Course">
 					<option value={null}>All courses</option>
 					{#each [...new Set(recipes.map((r) => r.course))].sort() as c (c)}
 						<option value={c}>{c}</option>
 					{/each}
 				</select>
 				<label class="chip inline">
-					<input type="checkbox" bind:checked={vegOnly} /> Vegetarian only
+					<input bind:this={vegetarianControl} type="checkbox" bind:checked={vegOnly} /> Vegetarian only
 				</label>
-				<span class="count">
+				<span class="count" role="status">
 					{selected.size} selected ·
 					{#if match.matched.length > results.length}
 						{results.length} of {match.matched.length} dishes
@@ -147,6 +179,7 @@
 					{/if}
 				</span>
 			</div>
+			<p class="match-note">Matches are a starting point. Open a recipe to check its full ingredient list and method.</p>
 
 			{#if results.length}
 				<ul class="results">
@@ -176,11 +209,11 @@
 					{:else}Vegetarian only on
 					{/if}.
 					{#if culprit.key === 'minMatches'}
-						Try “Any match” for {culprit.restored} {culprit.restored === 1 ? 'dish' : 'dishes'}.
+						<button class="chip" onclick={() => relax('minMatches')}>Use any match · {culprit.restored} {culprit.restored === 1 ? 'dish' : 'dishes'}</button>
 					{:else if culprit.key === 'course'}
-						Drop the course filter for {culprit.restored} {culprit.restored === 1 ? 'dish' : 'dishes'}.
+						<button class="chip" onclick={() => relax('course')}>Show all courses · {culprit.restored} {culprit.restored === 1 ? 'dish' : 'dishes'}</button>
 					{:else}
-						Drop Vegetarian only for {culprit.restored} {culprit.restored === 1 ? 'dish' : 'dishes'}.
+						<button class="chip" onclick={() => relax('vegOnly')}>Remove vegetarian filter · {culprit.restored} {culprit.restored === 1 ? 'dish' : 'dishes'}</button>
 					{/if}
 				</p>
 			{:else}
@@ -193,6 +226,9 @@
 </div>
 
 <style>
+	.matches-heading { font-size: var(--t-h3); margin-bottom: 12px; scroll-margin-top: 140px; }
+	.matches-heading:focus { outline: none; }
+	.selection, .ingredient-empty, .match-note { font-size: var(--t-small); color: var(--ink-soft); margin: 8px 0 12px; }
 	/* Same as the crumb rows on /technique/[slug] and /service/[topic]. */
 
 	.view {
@@ -247,7 +283,8 @@
 		border-bottom: 1px dotted var(--turmeric);
 		color: var(--turmeric-deep);
 		cursor: pointer;
-		padding: 0;
+		padding: 8px 0;
+		min-height: 44px;
 		font-size: inherit;
 	}
 	.shelf section {
@@ -263,7 +300,8 @@
 		display: flex;
 		gap: 7px;
 		align-items: center;
-		padding: 2px 0;
+		padding: 7px 0;
+		min-height: 44px;
 		cursor: pointer;
 		font-size: 14px;
 	}
@@ -323,6 +361,8 @@
 		justify-content: space-between;
 		gap: 12px;
 		align-items: baseline;
+		flex-wrap: wrap;
+		min-height: 44px;
 		text-decoration: none;
 	}
 	.results .nm {
