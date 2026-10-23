@@ -103,6 +103,27 @@ async function openLevel(page: Page, nth: number) {
 	await expect(page.locator('[data-door="due"] .door-line')).not.toHaveText(/Reading/, { timeout: 15_000 });
 }
 
+/** Open a menu disclosure through its summary, without adding a route or losing the full menu. */
+async function openMenuSection(page: Page, name = PACK.dishes.find(dish => dish.id === HUSSARDE)!.section) {
+	const group = page.locator(`.study details.menu-group[data-section=${JSON.stringify(name)}]`);
+	await expect(group.locator(':scope > summary')).toBeVisible({ timeout: 15_000 });
+	if (!(await group.evaluate((element: HTMLDetailsElement) => element.open))) {
+		await group.locator(':scope > summary').click();
+	}
+	await expect(group.locator('.row').first()).toBeVisible();
+	return group;
+}
+
+/** The Library's video shelf is intentionally closed until the reader asks for it. */
+async function openLibraryVideos(page: Page) {
+	const shelf = page.locator('details.video-shelf');
+	await expect(shelf.locator(':scope > summary')).toBeVisible({ timeout: 15_000 });
+	if (!(await shelf.evaluate((element: HTMLDetailsElement) => element.open))) {
+		await shelf.locator(':scope > summary').click();
+	}
+	await expect(shelf.locator('.vgroup').first()).toBeVisible();
+}
+
 /** The quick quiz's round as its entry holds it. */
 async function round(page: Page) {
 	return page.evaluate(() => (history.state?.['sveltekit:states'] as Hub | undefined)?.qq ?? null);
@@ -178,28 +199,23 @@ test('2. the study chain: the list comes back where it was, with the focus on th
 	await home(page);
 	await openLevel(page, 0);
 	await page.locator('[data-door="house"]').click();
-	await expect(page.locator('.study .row').first()).toBeVisible({ timeout: 15_000 });
-	const y = await scrollTo(page, 600);
-	// A row wholly in view below the sticky bars (the Back row and the study
-	// view's own search bar), so the tap needs no scroll to reach it: a dish
-	// row, or a dish or a pour on a course of the Tasting menus block at the
-	// top (found again by its course's own key, since a dish may sit on a
-	// course and in the list).
-	const opener = await page.evaluate(() => {
-		const below = Math.max(...[...document.querySelectorAll('.backline, .study .bar')].map((el) => el.getBoundingClientRect().bottom)) + 4;
-		const rows = [...document.querySelectorAll<HTMLElement>('.study .row, .study button.titem')];
-		const r = rows.find((el) => el.getBoundingClientRect().top > below && el.getBoundingClientRect().bottom < innerHeight) ?? rows[0];
-		return { id: r.dataset.id ?? '', sel: r.dataset.key ? `.study [data-key="${r.dataset.key}"]` : `.study .row[data-id="${r.dataset.id}"]` };
-	});
-	await page.locator(opener.sel).click();
-	await expect(page.locator('article.card h2')).toBeVisible();
+	const group = await openMenuSection(page);
+	const opener = group.locator('.row').nth(3);
+	// Place an actual row from the open disclosure below the sticky bars.
+	// A closed tasting can still report layout geometry; it is not an opener.
+	const top = await opener.evaluate(element => element.getBoundingClientRect().top + window.scrollY);
+	const y = await scrollTo(page, Math.max(0, Math.round(top) - 450));
+	expect(y).toBeGreaterThan(0);
+	await opener.click();
+	await expect(page.locator('article.card #card-h')).toBeVisible();
 	await page.locator('article.card .backline').getByRole('button', { name: /^Next/ }).click();
 	await page.locator('article.card .backline').getByRole('button', { name: /^Next/ }).click();
 
 	await back(page);
-	await expect(page.locator('.study .row').first()).toBeVisible();
+	await expect(group).toHaveJSProperty('open', true);
+	await expect(opener).toBeVisible();
 	await expectScroll(page, y);
-	await expect.poll(() => page.evaluate(() => (document.activeElement as HTMLElement | null)?.dataset?.id ?? '')).toBe(opener.id);
+	await expect(opener).toBeFocused();
 	await back(page);
 	await expect(heading(page)).toHaveText(NAMES[0]);
 	await back(page);
@@ -275,7 +291,7 @@ test('5. the Library chain keeps its scroll', async ({ page }) => {
 	await home(page);
 	await tab(page, 'Library');
 	await expect(heading(page)).toHaveText('Library');
-	await expect(page.locator('.vgroup').first()).toBeVisible({ timeout: 15_000 });
+	await expect(page.locator('details.video-shelf > summary')).toBeVisible({ timeout: 15_000 });
 	const shelf = page.locator('a.door', { hasText: 'The Plates' });
 	await shelf.scrollIntoViewIfNeeded();
 	const y = await scrollY(page);
@@ -471,7 +487,7 @@ test('8. old addresses land, each with a Back whose first press is its parent', 
 		if (o.card) await expect(page.locator('.deckframe .where'), o.path).toBeVisible({ timeout: 15_000 });
 		else await expect(heading(page), o.path).toHaveText(o.lands, { timeout: 15_000 });
 		if (o.path.includes('section=')) await expect(page.getByRole('button', { name: /^Starters \d+$/ })).toHaveAttribute('aria-pressed', 'true');
-		if (o.path.includes('#d-')) await expect(page.locator('article.card h2')).toBeVisible({ timeout: 15_000 });
+		if (o.path.includes('#d-')) await expect(page.locator('article.card #card-h')).toBeVisible({ timeout: 15_000 });
 		await expect(backBtn(page), o.path).toHaveCount(1);
 		await back(page);
 		if (o.parent === 'home') await expect(page.locator('a.level'), o.path).toHaveCount(4);
@@ -527,6 +543,7 @@ test('9. four tab words and a quiet More, one row at 390 and 375, every target 4
 /** Every screen in the map, with the first slug of each dynamic route (design 7.1, test 10). */
 const SCREENS = [
 	'/flashcards', '/quizzes', '/library', '/more', '/level/1', '/level/1/read', '/level/1/test', '/menu',
+	'/menu?view=learn', '/menu?view=rehearse', '/menu?view=reference',
 	'/menu/costing', '/menu/guest', '/menu/prep-board', '/menu/preps', '/menu/producers', '/menu/quiz', '/menu/waste',
 	'/repertoire', '/coverage', '/practise/firing', '/practise/calibrate',
 	'/service', '/service/knife-work', '/service/deck', '/service/deck/test', '/service/deck/say', '/service/deck/lineup', '/service/drill',
@@ -697,7 +714,7 @@ test('15. Escape closes the level list and the address stays', async ({ page }) 
 	expect(page.url()).toBe(url);
 });
 
-test("16. Brennan's: My restaurant names it on first open; its page, its cards, the bottle tiers and the videos are two taps from a level page", async ({ page }) => {
+test("16. Brennan's: the level door leads to its menu, cards, bottle tiers and the Library's video shelf", async ({ page }) => {
 	await home(page);
 	await openLevel(page, 0);
 	await expect(page.locator('.countline')).toContainText(PACK.name, { timeout: 15_000 });
@@ -707,9 +724,9 @@ test("16. Brennan's: My restaurant names it on first open; its page, its cards, 
 	await expect(page.locator('[data-door="menu-cards"], [data-door="study"], [data-door="fall-menu"]')).toHaveCount(0);
 	await door.click();
 	await expect(heading(page)).toHaveText(PACK.name);
-	await expect(page.locator('nav.jumps')).toBeVisible({ timeout: 15_000 });
-	// Its cards: the menu's own Flash cards, one tap on the house's page.
-	await page.locator('.study .studyhead').getByRole('button', { name: 'Flash cards' }).click();
+	await expect(page.locator('nav.house-sections')).toBeVisible({ timeout: 15_000 });
+	// Its cards: the menu's own practice action, one tap on the house's page.
+	await page.locator('.study .studyhead').getByRole('button', { name: 'Menu flashcards', exact: true }).click();
 	await expect(page.locator('.deckframe .where')).toHaveText(/^Card 1 of \d+ · The whole menu$/);
 	await back(page);
 	await expect(heading(page)).toHaveText(PACK.name);
@@ -721,6 +738,7 @@ test("16. Brennan's: My restaurant names it on first open; its page, its cards, 
 	await back(page);
 	await expect(heading(page)).toHaveText(NAMES[0]);
 	await tab(page, 'Library');
+	await openLibraryVideos(page);
 	await expect(page.locator('.vgroup li').first()).toBeVisible({ timeout: 15_000 });
 });
 
@@ -749,7 +767,7 @@ test("17. the owner's morning, end to end", async ({ page }) => {
 	await back(page);
 	await expect(heading(page)).toHaveText(NAMES[1]);
 	await page.locator('[data-door="house"]').click();
-	await expect(page.locator('.study .row').first()).toBeVisible({ timeout: 15_000 });
+	await openMenuSection(page);
 	await page.locator('.study .row', { has: page.locator('.nm', { hasText: 'Eggs Hussarde' }) }).click();
 	const card = page.locator('article.card');
 	await expect(card.locator('dl.bottles > div').first()).toBeVisible();
@@ -759,7 +777,8 @@ test("17. the owner's morning, end to end", async ({ page }) => {
 	await expect(card.locator('#deeper-h')).toHaveText('Go deeper', { timeout: 15_000 });
 	await expect(card.locator('section[aria-labelledby="deeper-h"] a[href="/cuisine?ch=mother-sauces&e=hollandaise"]')).toHaveCount(1);
 	await back(page);
-	await expect(page.locator('#study-h')).toHaveText(PACK.name);
+	await expect(heading(page)).toHaveText(PACK.name);
+	await expect(page.locator('#study-h')).toHaveText('The menu');
 	await back(page);
 	await expect(heading(page)).toHaveText(NAMES[1]);
 	await back(page);
@@ -800,14 +819,15 @@ test('18. changes within a screen add no history; a round is one entry', async (
 
 test('20. a study card is one entry and one Back closes it', async ({ page }) => {
 	await goto(page, '/menu');
-	await expect(page.locator('.study .row').first()).toBeVisible({ timeout: 15_000 });
+	const group = await openMenuSection(page);
 	const len = await histLen(page);
-	await page.locator('.study .row').first().click();
+	await group.locator('.row').first().click();
 	await expect(page.locator('article.card')).toBeVisible();
 	expect(await histLen(page)).toBe(len + 1);
 	await back(page);
 	await expect(page.locator('article.card')).toHaveCount(0);
-	await expect(page.locator('.study .row').first()).toBeVisible();
+	await expect(group).toHaveJSProperty('open', true);
+	await expect(group.locator('.row').first()).toBeVisible();
 });
 
 test("21. Today's study's first row is on the first screen of every level page", async ({ page }) => {
@@ -883,7 +903,7 @@ test('24. one card style: the old card addresses land on the one card screen, an
 	await expect(page).toHaveURL(/\/flashcards\?deck=item%3Ad-1q0xk7jv&run=1$/);
 	await expect(page.locator('.deckframe .facename')).toHaveText('Eggs Hussarde');
 	await back(page);
-	await expect(page.locator('article.card h2')).toHaveText('Eggs Hussarde');
+	await expect(page.locator('article.card #card-h')).toHaveText('Eggs Hussarde');
 });
 
 test('screens for the owner, at 390 by 844', async ({ page }) => {
@@ -904,7 +924,7 @@ test('screens for the owner, at 390 by 844', async ({ page }) => {
 	await answerAll(page, 2);
 	await shot(page, 'results');
 	await tab(page, 'Library');
-	await expect(page.locator('.vgroup').first()).toBeVisible({ timeout: 15_000 });
+	await expect(page.locator('details.video-shelf > summary')).toBeVisible({ timeout: 15_000 });
 	await shot(page, 'library');
 	await tab(page, 'More');
 	await shot(page, 'more');
@@ -912,7 +932,7 @@ test('screens for the owner, at 390 by 844', async ({ page }) => {
 	await home(page);
 	await openLevel(page, 1);
 	await page.locator('[data-door="house"]').click();
-	await expect(page.locator('.study .row').first()).toBeVisible({ timeout: 15_000 });
+	await openMenuSection(page);
 	await page.locator('.study .row', { has: page.locator('.nm', { hasText: 'Eggs Hussarde' }) }).click();
 	await page.locator('article.card').getByRole('button', { name: /Flash cards for this/ }).click();
 	await page.getByRole('button', { name: 'Flip', exact: true }).click();

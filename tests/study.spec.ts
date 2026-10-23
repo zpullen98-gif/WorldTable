@@ -43,34 +43,33 @@ async function servePack(page: Page) {
 async function openStudy(page: Page, path = '/menu') {
 	await servePack(page);
 	await goto(page, path);
-	await expect(page.locator('.study .row').first()).toBeVisible({ timeout: 15_000 });
+	await expect(page.locator('#study-h')).toBeVisible({ timeout: 15_000 });
+	await expect(page.locator('.study details.menu-group').first()).toBeVisible();
 }
 
 const rows = (page: Page) => page.locator('.study .row');
 const row = (page: Page, name: string) => page.locator('.study .row', { has: page.locator('.nm', { hasText: name }) });
 const card = (page: Page) => page.locator('article.card');
 
-test('the study view is what /menu opens on, short, with the first rows on the first screen', async ({ page }) => {
+test('the study view opens compactly with native section summaries and all dishes retained', async ({ page }) => {
 	await openStudy(page);
-	await expect(page.locator('#study-h')).toHaveText(PACK.name);
+	await expect(page.locator('#study-h')).toHaveText('The menu');
 	expect(TASTING_ONLY.length).toBe(4);
 	await expect(rows(page)).toHaveCount(LIST_ROWS);
+	await expect(page.locator('.study details.menu-group[open]')).toHaveCount(0);
+	await expect(rows(page).first()).toBeHidden();
 	await expect(page.getByText('Nothing pinned yet')).not.toBeVisible();
 
-	// The first screen: the header, the section chips and the first row.
+	// The first screen gives access to filters and a complete tasting journey
+	// without opening all its courses above the ordinary menu sections.
 	const chip = page.getByRole('button', { name: `All ${PACK.dishes.length}` });
 	await expect(chip).toHaveAttribute('aria-pressed', 'true');
 	expect((await chip.boundingBox())!.y + 44).toBeLessThanOrEqual(844);
-	// Arm's length: the menu opens on the Tasting menus block, and the first screen holds the first
-	// menu's name; its course journey starts just under it. (The course journey drawn on 10 October
-	// opens with its own introduction and gives each course a panel, so the first course itself sits
-	// below the first screen at 390 by 844; the page's two chip rows of 17 October 2026, the
-	// collections and the jump row, put the journey's start about 60 px past the first screen too,
-	// measured at 902.)
-	const firstMenu = page.locator('.study .tmenu').first();
-	expect((await firstMenu.locator('h4').boundingBox())!.y).toBeLessThan(844);
-	const journey = (await firstMenu.locator('.journey-intro, .titem').first().boundingBox())!;
-	expect(journey.y, 'the course journey starts just past the first 844px').toBeLessThan(1000);
+	const firstMenu = page.locator('.study .tasting-group').first();
+	const firstSummary = firstMenu.locator(':scope > summary');
+	await expect(firstSummary).toContainText(PACK.tastings[0].name);
+	expect((await firstSummary.boundingBox())!.y).toBeLessThan(844);
+	await expect(firstMenu.locator('.tmenu')).toBeHidden();
 	// The day and night control is one small round button in the top corner:
 	// visible, tappable, taking no room in the layout, and it switches service.
 	const choice = page.locator('#oot-service-toolbar').getByRole('button', { name: /Switch to (day|night) service/ });
@@ -87,22 +86,23 @@ test('the study view is what /menu opens on, short, with the first rows on the f
 	await expect(page.getByRole('button', { name: 'Tasting menus 2' })).toBeVisible();
 
 	const m = await page.evaluate(() => ({ h: document.scrollingElement!.scrollHeight, w: document.scrollingElement!.scrollWidth }));
-	// The two tasting menus at the top, every course printed, add about 2,000px (5 October 2026); the
-	// course journey and the illustrated kitchen studies of 10 October about 500px more; The cooking's
-	// thirteen doors and Your culinary terms of 17 October about 1,700px more (measured 15,672). The
-	// bound still catches the regression it was written for (235,732px when every card drew open).
-	expect(m.h, 'the page with the house loaded, no card open (235,732 before)').toBeLessThan(18000);
+	// The whole menu remains present, but unopened journeys and reference
+	// libraries no longer turn its landing page into a long reading session.
+	expect(m.h, 'the compact menu landing page').toBeLessThan(4000);
 	expect(m.w).toBeLessThanOrEqual(390);
 
 	// Every control in the study view at least 44px, every row at least 56px.
 	const short = await page.evaluate(() =>
 		[...document.querySelectorAll<HTMLElement>('.study button, .study input, .study summary, .houselists.study summary')]
-			.filter((el) => el.offsetParent !== null)
+			.filter((el) => el.checkVisibility() && el.getClientRects().length > 0)
 			.map((el) => ({ t: (el.textContent || el.getAttribute('placeholder') || '').trim().slice(0, 30), h: el.getBoundingClientRect().height }))
 			.filter((x) => x.h < 44)
 	);
 	expect(short).toEqual([]);
-	const rowHeights = await rows(page).evaluateAll((els) => els.map((e) => e.getBoundingClientRect().height));
+	await page.locator('.study details.group > summary').first().click();
+	const visibleRows = page.locator('.study details.group[open] .row');
+	await expect(visibleRows.first()).toBeVisible();
+	const rowHeights = await visibleRows.evaluateAll((els) => els.map((e) => e.getBoundingClientRect().height));
 	expect(Math.min(...rowHeights)).toBeGreaterThanOrEqual(56);
 
 	// No allergen is ticked or stated anywhere on the study view.
@@ -152,8 +152,8 @@ test('the Eggs Hussarde card: the first screen answers the table, the rest teach
 	await page.getByRole('button', { name: 'Entrées 14' }).click();
 	await row(page, 'Eggs Hussarde').click();
 	const c = card(page);
-	await expect(c.locator('h2')).toHaveText('Eggs Hussarde');
-	await expect(c.locator('h2')).toBeFocused();
+	await expect(c.locator('#card-h')).toHaveText('Eggs Hussarde');
+	await expect(c.locator('#card-h')).toBeFocused();
 	await expect(page.locator('.study .bar')).toHaveCount(0);
 	await expect(c.locator('.backline')).toContainText('1 of 14 in Entrées');
 	await expect(c.locator('.backline').getByRole('button', { name: /^Next/ })).toBeVisible();
@@ -246,7 +246,7 @@ test('Bananas Foster links the Library recipe, labelled as the Library\'s', asyn
 test('a cold /menu#d-... opens that card, and the back gesture closes a card opened from the list', async ({ page }) => {
 	await servePack(page);
 	await goto(page, '/menu#' + HUSSARDE);
-	await expect(card(page).locator('h2')).toHaveText('Eggs Hussarde', { timeout: 15_000 });
+	await expect(card(page).locator('#card-h')).toHaveText('Eggs Hussarde', { timeout: 15_000 });
 	// A card opened cold is held outside the history: Back closes it here.
 	await page.locator('.backline button.back').click();
 	await expect(card(page)).toHaveCount(0);
@@ -256,7 +256,7 @@ test('a cold /menu#d-... opens that card, and the back gesture closes a card ope
 	const y = await page.evaluate(() => window.scrollY);
 	expect(y).toBeGreaterThan(600);
 	await row(page, 'Redfish Véronique').click();
-	await expect(card(page).locator('h2')).toHaveText('Redfish Véronique');
+	await expect(card(page).locator('#card-h')).toHaveText('Redfish Véronique');
 	await page.goBack();
 	await expect(card(page)).toHaveCount(0);
 	await expect(page.getByRole('button', { name: 'Entrées 14' })).toHaveAttribute('aria-pressed', 'true');
@@ -275,8 +275,9 @@ test('Edit the menu shows today’s editing page, and a card’s Edit opens that
 	await expect(page.locator('.dishtools').first().getByRole('button', { name: 'Edit' })).toBeVisible();
 	await expect(page.locator('.dishtools').first().getByRole('button', { name: 'Remove' })).toBeVisible();
 	await page.locator('.backline button.back').click();
-	await expect(rows(page).first()).toBeVisible();
+	await expect(page.locator('#study-h')).toBeVisible();
 
+	await page.getByRole('button', { name: 'Entrées 14' }).click();
 	await row(page, 'Eggs Hussarde').click();
 	await card(page).getByRole('button', { name: /^Edit/ }).click();
 	await expect(page.getByLabel('Dish name')).toHaveValue('Eggs Hussarde');
@@ -356,7 +357,8 @@ test('offline with the worker installed, the study view, a card and its links al
 	}).catch(() => {});
 	// The pack is on the device once the home has loaded it.
 	await goto(page, '/menu');
-	await expect(rows(page).first()).toBeVisible({ timeout: 15_000 });
+	await expect(page.locator('#study-h')).toBeVisible({ timeout: 15_000 });
+	await expect(rows(page)).toHaveCount(LIST_ROWS);
 	await expect
 		.poll(
 			async () =>
@@ -374,8 +376,9 @@ test('offline with the worker installed, the study view, a card and its links al
 	await page.waitForSelector('html[data-hydrated]');
 	await expect(rows(page)).toHaveCount(LIST_ROWS, { timeout: 15_000 });
 	await expect(page.locator('.study .tmenu')).toHaveCount(2);
+	await page.getByRole('button', { name: 'Entrées 14' }).click();
 	await row(page, 'Eggs Hussarde').click();
-	await expect(card(page).locator('h2')).toHaveText('Eggs Hussarde');
+	await expect(card(page).locator('#card-h')).toHaveText('Eggs Hussarde');
 	await expect(card(page).locator('.here .term').first()).toBeVisible({ timeout: 20_000 });
 	await expect(card(page).locator('.here')).not.toContainText('could not be read');
 	await context.setOffline(false);
@@ -385,7 +388,7 @@ test('offline with the worker installed, the study view, a card and its links al
 
 test('verifier: Got it on a turned flash card is readable, its text not the colour of its own background', async ({ page }) => {
 	await openStudy(page);
-	await page.locator('.study .studyhead').getByRole('button', { name: 'Flash cards' }).click();
+	await page.locator('.study .studyhead').getByRole('button', { name: 'Menu flashcards' }).click();
 	await page.locator('.deckframe button.hface').click();
 	const got = page.getByRole('button', { name: 'Got it', exact: true });
 	await expect(got).toBeVisible();
@@ -399,15 +402,32 @@ test('verifier: Got it on a turned flash card is readable, its text not the colo
 test('verifier: the shift filter narrows the decks the header deals, not only the rows', async ({ page }) => {
 	await openStudy(page);
 	await page.getByRole('button', { name: 'Dinner', exact: true }).click();
-	const n = await rows(page).count();
-	expect(n).toBeLessThan(PACK.dishes.length);
-	await page.locator('.study .studyhead').getByRole('button', { name: 'Flash cards' }).click();
-	await expect(page.locator('.deckframe .where')).toHaveText(new RegExp(`^Card 1 of ${n} · `));
+	const dinner = new Set<string>(PACK.dishes
+		.filter((dish: { meals?: string[] }) => !dish.meals?.length || dish.meals.includes('Dinner'))
+		.map((dish: { name: string }) => dish.name));
+	expect(dinner.size).toBeLessThan(PACK.dishes.length);
+	// Broad decks deliberately start with a short, twenty-card sitting. The
+	// meal must constrain every card before that limit is applied.
+	const n = Math.min(20, dinner.size);
+	await page.locator('.study .studyhead').getByRole('button', { name: 'Practise these dishes' }).click();
+	await expect(page).toHaveURL(/\/flashcards\?deck=menu&run=1&meal=Dinner$/);
+	const deck = page.locator('.deckframe');
+	const seen = new Set<string>();
+	for (let i = 1; i <= n; i++) {
+		await expect(deck.locator('.where')).toHaveText(new RegExp(`^Card ${i} of ${n} · `));
+		const name = (await deck.locator('.facename').textContent())!.trim();
+		expect(dinner.has(name), `${name} must be served at Dinner`).toBe(true);
+		seen.add(name);
+		await deck.locator('button.hface').click();
+		await page.getByRole('button', { name: 'Got it', exact: true }).click();
+	}
+	expect(seen.size).toBe(n);
+	await expect(page.locator('main h1')).toHaveText('Deck done');
 });
 
 test('verifier: the five parts on a flash card’s back say they open, and read at arm’s length', async ({ page }) => {
 	await openStudy(page);
-	await page.locator('.study .studyhead').getByRole('button', { name: 'Flash cards' }).click();
+	await page.locator('.study .studyhead').getByRole('button', { name: 'Menu flashcards' }).click();
 	await page.locator('.deckframe button.hface').click();
 	const summary = page.locator('.backparts summary');
 	await expect(summary).toHaveText('Show the five parts');

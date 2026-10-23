@@ -18,7 +18,11 @@ test('course journeys keep exact order, choice and drink terms in both services 
 	await goto(page, '/menu');
 	await expect(page.locator('.tmenu')).toHaveCount(house.tastings.length);
 	for (const tasting of house.tastings) {
+		const disclosure = page.locator(`details[data-tasting-group="${tasting.id}"]`);
+		await expect(disclosure).toHaveJSProperty('open', false);
+		await disclosure.locator(':scope > summary').click();
 		const menu = page.locator(`[data-tasting="${tasting.id}"].tmenu`);
+		await expect(menu).toBeVisible();
 		await expect(menu.locator('.clabel')).toHaveText(tasting.courses.map((c: { label: string }) => c.label));
 		await expect(menu.locator('.waypoint')).toHaveText(tasting.courses.map((_: unknown, i: number) => String(i + 1).padStart(2, '0')));
 		await expect(menu.locator('.choice')).toHaveCount(tasting.courses.filter((c: { choice?: boolean }) => c.choice).length);

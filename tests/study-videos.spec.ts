@@ -5,8 +5,8 @@ import { fileURLToPath } from 'node:url';
 import { goto, seedHouses } from './helpers';
 
 /**
- * The house's videos on the study view (the Watch block on a dish's card and
- * the Videos entry at the foot of the list), at a phone's 390 by 844, on the
+ * The house's videos in Kitchen studies and the Watch block on a dish's card,
+ * at a phone's 390 by 844, on the
  * fixture house src/lib/house/fixtures/house-min.json with two more videos
  * put on it here. A video is a link out and never a player: no iframe, no
  * video element, no request to a video host on load, every link a new tab
@@ -37,29 +37,38 @@ async function openStudy(page: Page, hostHits: string[]) {
 	});
 	await seedHouses(page, [house()]);
 	await goto(page, '/menu');
-	await expect(page.locator('.study .row').first()).toBeVisible({ timeout: 15_000 });
+	await expect(page.locator('.studyhead')).toBeVisible({ timeout: 15_000 });
+}
+
+async function openDishRow(page: Page, name: string) {
+	const row = page.locator('.study .row', { has: page.locator('.nm', { hasText: name }) });
+	const group = page.locator('details.menu-group').filter({ has: page.locator('.row .nm', { hasText: name }) });
+	if (!(await group.evaluate((element: HTMLDetailsElement) => element.open))) {
+		await group.locator(':scope > summary').click();
+	}
+	await row.click();
 }
 
 test.use({ viewport: { width: 390, height: 844 } });
 
-test('the Videos entry lists every video by topic, the house first, each a link out', async ({ page }) => {
+test('Kitchen studies lists every video by topic, the house first, each a link out', async ({ page }) => {
 	const hits: string[] = [];
 	await openStudy(page, hits);
+	// The menu remains compact; the learning resources have their own view.
+	await expect(page.locator('details#study-videos')).toHaveCount(0);
+	await expect(page.locator('.study details.menu-group[open]')).toHaveCount(0);
+	await page.locator('nav.house-sections').getByRole('link', { name: 'Kitchen studies', exact: true }).click();
+	await expect(page).toHaveURL(/\/menu\?view=learn$/);
 	const entry = page.locator('details#study-videos');
-	await expect(entry.locator('summary')).toHaveText('Videos (3)');
-	// A disclosure at the foot of the list: closed, and the first screen is still the menu's.
-	await expect(entry).not.toHaveAttribute('open', '');
-	// The menu's first tappable things: the tasting at the top (its dish and its pour), then the rows.
-	// The page's two chip rows of 17 October 2026 (the collections and the jump row) put the second
-	// of them just past the first 844 px at 390 by 844 (measured 973), the same shift study.spec.ts
-	// measures for the course journey; the bound keeps the catch it was written for, a Videos block
-	// drawn above the menu, which would push it a whole screen down.
-	const second = (await page.locator('.study .titem, .study .row').nth(1).boundingBox())!;
-	expect(second.y + second.height).toBeLessThanOrEqual(1000);
+	await expect(entry.locator(':scope > summary')).toContainText('Service videos');
+	await expect(entry.locator(':scope > summary .count')).toHaveText('3 videos');
+	await expect(entry).toHaveJSProperty('open', false);
+	await expect(page.locator('.house-learning > details[open]')).toHaveCount(0);
+	expect((await entry.locator(':scope > summary').boundingBox())!.height).toBeGreaterThanOrEqual(44);
 
-	await entry.locator('summary').click();
+	await entry.locator(':scope > summary').click();
 	await expect(entry).toContainText(NOTE);
-	await expect(entry.locator('.vgroup h3')).toHaveText(['The house · 1', 'The kitchen · 1', 'The bar · 1']);
+	await expect(entry.locator('.video-group h3')).toHaveText(['The house · 1', 'The kitchen · 1', 'The bar · 1']);
 	const links = entry.locator('a.vt');
 	await expect(links).toHaveCount(3);
 	for (const a of await links.all()) {
@@ -74,8 +83,14 @@ test('the Videos entry lists every video by topic, the house first, each a link 
 	await expect(entry.locator('li[data-video="v-collins1"] .for')).toContainText('The Lantern Collins');
 
 	// The dish a video teaches opens its card from the list.
-	await entry.locator('li[data-video="v-saltbak1"] .for button', { hasText: 'Lantern Roast Chicken' }).click();
+	const opener = entry.locator('li[data-video="v-saltbak1"] .for button', { hasText: 'Lantern Roast Chicken' });
+	await expect(opener).toHaveAttribute('data-focus', /^learning-video:v-saltbak1:/);
+	await opener.click();
 	await expect(card(page).locator('#card-h')).toHaveText('Lantern Roast Chicken');
+	await page.locator('.backline button.back').click();
+	await expect(page).toHaveURL(/\/menu\?view=learn$/);
+	await expect(entry).toHaveJSProperty('open', true);
+	await expect(opener).toBeFocused();
 
 	expect(await page.locator('iframe, video').count()).toBe(0);
 	expect(hits, 'no request to a video host until a person taps').toEqual([]);
@@ -85,7 +100,7 @@ test('a dish card carries a Watch block whose link opens a new tab, and nothing 
 	const hits: string[] = [];
 	await context.route(/^https:\/\/(www\.)?(youtube\.com|youtu\.be|vimeo\.com)\//, (route) => route.fulfill({ status: 200, contentType: 'text/html', body: '<title>stub</title>' }));
 	await openStudy(page, hits);
-	await page.locator('.study .row', { has: page.locator('.nm', { hasText: 'Lantern Roast Chicken' }) }).click();
+	await openDishRow(page, 'Lantern Roast Chicken');
 	const watch = card(page).locator('section[aria-labelledby="watch-h"]');
 	await expect(watch.locator('h3')).toHaveText('Watch');
 	await expect(watch).toContainText(NOTE);
@@ -104,10 +119,10 @@ test('a dish card carries a Watch block whose link opens a new tab, and nothing 
 	await expect(card(page).locator('#card-h')).toHaveText('Lantern Roast Chicken');
 	await popup.close();
 
-	// A dish no video names has no Watch block at all.
+	// A dish can inherit a video through a shared technique as well as a direct link.
 	// The layout's Back closes the card (the consolidation): one way back.
 	await page.locator('.backline button.back').click();
-	await page.locator('.study .row', { has: page.locator('.nm', { hasText: 'Beetroot' }) }).click();
+	await openDishRow(page, 'Beetroot');
 	await expect(card(page).locator('#card-h')).toContainText('Beetroot');
 	// The beetroot is salt baked: the video names the term, and the term reaches the dish.
 	await expect(card(page).locator('section[aria-labelledby="watch-h"] a.vt')).toHaveCount(1);
@@ -118,9 +133,12 @@ test('a house with no videos draws no Videos entry and no Watch block', async ({
 	delete h.videos;
 	await seedHouses(page, [h]);
 	await goto(page, '/menu');
-	await expect(page.locator('.study .row').first()).toBeVisible({ timeout: 15_000 });
+	await expect(page.locator('.studyhead')).toBeVisible({ timeout: 15_000 });
+	await page.locator('nav.house-sections').getByRole('link', { name: 'Kitchen studies', exact: true }).click();
+	await expect(page).toHaveURL(/\/menu\?view=learn$/);
 	await expect(page.locator('details#study-videos')).toHaveCount(0);
-	await page.locator('.study .row').first().click();
+	await page.locator('nav.house-sections').getByRole('link', { name: 'Menu', exact: true }).click();
+	await openDishRow(page, 'Lantern Roast Chicken');
 	await expect(card(page).locator('#card-h')).toBeVisible();
 	await expect(card(page).locator('section[aria-labelledby="watch-h"]')).toHaveCount(0);
 });

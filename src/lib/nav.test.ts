@@ -77,8 +77,12 @@ describe('parentOf', () => {
 		expect(parentOf({ path: '/menu', search: '?section=Starters', chosen: 4 })).toBe('/');
 		expect(parentOf({ path: '/menu', hash: '#d-abc' })).toBe('/menu');
 		expect(parentOf({ path: '/menu', search: '?view=producers', hash: '#d-abc' })).toBe('/menu?view=producers');
-		expect(parentOf({ path: '/menu', search: '?view=producers', chosen: 3 })).toBe('/menu');
+		expect(parentOf({ path: '/menu', search: '?view=producers', chosen: 3 })).toBe('/menu?view=reference');
 		expect(parentOf({ path: '/menu', search: '?view=fall' })).toBe('/menu');
+		for (const view of ['learn', 'rehearse', 'reference']) {
+			expect(parentOf({ path: '/menu', search: `?view=${view}` })).toBe('/menu');
+			expect(parentOf({ path: '/menu', search: `?view=${view}`, hash: '#d-abc' })).toBe(`/menu?view=${view}`);
+		}
 		expect(parentOf({ path: '/menu', hash: '#edit' })).toBe('/menu');
 		// Every round and every deck is a Practise row.
 		expect(parentOf({ path: '/menu/quiz', search: '?mode=cards' })).toBe('/flashcards');

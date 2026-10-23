@@ -34,10 +34,17 @@ test('Library and the Brennan menu expose compact doors to the complete collecti
 	await expect(page.locator('.companion-studies details.teaching-folio')).toHaveCount(TEACHING_FOLIOS.length);
 	await expect(page.locator('.companion-studies img')).toHaveCount(0);
 	await goto(page, '/menu');
-	await page.locator('.studyhead').getByRole('link', { name: 'Illustrated kitchen studies' }).click();
-	await expect(page).toHaveURL(/#illustrated-kitchen-studies$/);
-	await expect(page.locator('#illustrated-kitchen-studies')).toBeInViewport();
-	await expect(page.locator('#illustrated-kitchen-studies img')).toHaveCount(0);
+	await expect(page.locator('#illustrated-kitchen-studies')).toHaveCount(0);
+	await page.locator('nav.house-sections').getByRole('link', { name: 'Kitchen studies', exact: true }).click();
+	await expect(page).toHaveURL(/\/menu\?view=learn$/);
+	const collection = page.locator('details#illustrated-kitchen-studies');
+	await expect(collection).toHaveJSProperty('open', false);
+	await expect(collection.locator('img')).toHaveCount(0);
+	await collection.locator(':scope > summary').click();
+	await expect(collection.locator(':scope > summary')).toBeInViewport();
+	await expect(collection.locator('details.teaching-folio')).toHaveCount(TEACHING_FOLIOS.length);
+	await expect(collection.locator('details.teaching-folio[open]')).toHaveCount(0);
+	await expect(collection.locator('img')).toHaveCount(0);
 });
 
 test('recipe, training kitchen and service lessons lead to the exact authored studies', async ({ page }) => {

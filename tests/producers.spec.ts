@@ -109,7 +109,9 @@ const card = (page: Page) => page.locator('article.card');
 async function openChicken(page: Page) {
 	await seedHouses(page, [house()]);
 	await goto(page, '/menu');
-	await expect(page.locator('.study .row').first()).toBeVisible({ timeout: 15_000 });
+	const mains = page.locator('.study details.menu-group[data-section="Mains"]');
+	await expect(mains.locator(':scope > summary')).toBeVisible({ timeout: 15_000 });
+	await mains.locator(':scope > summary').click();
 	await page.locator('.study .row', { has: page.locator('.nm', { hasText: 'Lantern Roast Chicken' }) }).click();
 	await expect(card(page).locator('#card-h')).toHaveText('Lantern Roast Chicken');
 }
@@ -141,6 +143,7 @@ test('the card says who makes it, above what it is made of, each producer openin
 	await expect(block.locator('a', { hasText: 'All producers' })).toHaveAttribute('href', /\/menu\?view=producers$/);
 	// A dish no producer reaches draws no block.
 	await page.locator('.backline button.back').click();
+	await page.locator('.study details.menu-group[data-section="Starters"] > summary').click();
 	await page.locator('.study .row', { has: page.locator('.nm', { hasText: 'Beetroot' }) }).click();
 	await expect(card(page).locator('#card-h')).toContainText('Beetroot');
 	await expect(card(page).locator('section[aria-labelledby="whomakes-h"]')).toHaveCount(0);

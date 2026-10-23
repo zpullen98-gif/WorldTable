@@ -1,11 +1,16 @@
 import { test, expect } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { goto, seedHouses } from './helpers';
-import { brennansFinalDishes, houseDishIdForFinal } from '../src/lib/brennans-final-dishes';
+import type { BrennanFinalDish } from '../src/lib/brennans-final-dishes';
 
 const HOUSE = JSON.parse(readFileSync('static/shared/packs/brennans-new-orleans.v1.oothouse.json', 'utf8')).house;
+// Read the expected assets independently of the browser implementation. Native
+// Node ESM does not load the app's bundler-only JSON imports without attributes.
+const brennansFinalDishes = JSON.parse(readFileSync(new URL('../src/lib/data/brennans-final-dishes.json', import.meta.url), 'utf8')).items as BrennanFinalDish[];
+const houseToFall = JSON.parse(readFileSync(new URL('../src/lib/data/brennans-final-dish-links.json', import.meta.url), 'utf8')) as Record<string, string>;
 const egg = brennansFinalDishes.find(art => art.itemId === 'd-1q0xk7jv')!;
 const fall = brennansFinalDishes.find(art => art.collection === 'fall')!;
+const fallHouseId = Object.entries(houseToFall).find(([, fieldNoteId]) => fieldNoteId === fall.itemId)![0];
 test.use({ viewport: { width: 390, height: 844 } });
 
 test('the gallery filters all dishes, requests full art only on demand and returns from a lesson without losing place', async ({ page }) => {
@@ -44,7 +49,7 @@ test('the gallery filters all dishes, requests full art only on demand and retur
 
 for (const [name, deck, itemId] of [
 	['house', 'item:d-1q0xk7jv', egg.itemId],
-	['canonical fall', `item:${houseDishIdForFinal(fall)}`, houseDishIdForFinal(fall)],
+	['canonical fall', `item:${fallHouseId}`, fallHouseId],
 	['fall', `fall:item:${fall.itemId}`, fall.itemId]
 ]) {
 	test(`${name} flashcards reveal the final plate only after the answer and an explicit open`, async ({ page }) => {
@@ -73,7 +78,7 @@ test('fall gallery cards open their canonical menu lessons while preserving the 
 	await goto(page, '/menu?view=plates');
 	const tile = page.locator(`[data-plate="fall:${fall.itemId}"]`);
 	await tile.locator('.plate-preview').click();
-	const canonicalId = houseDishIdForFinal(fall);
+	const canonicalId = fallHouseId;
 	await expect(tile.getByRole('link', { name: 'Fall ingredient notes', exact: true })).toHaveAttribute('href', `/menu?view=fall&kind=dish&item=${fall.itemId}`);
 	await expect(tile.getByRole('link', { name: 'Drill this dish', exact: true })).toHaveAttribute('href', `/flashcards?deck=item:${canonicalId}`);
 	await tile.getByRole('button', { name: 'Read this dish', exact: true }).click();

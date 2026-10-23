@@ -122,13 +122,17 @@ export function parentOf(ask: ParentAsk): string {
 	if (path === '/menu') {
 		if (q.get('view') === 'fall') return q.has('item') ? `/menu?view=fall&kind=${['dish', 'cocktail', 'all'].includes(q.get('kind') ?? '') ? q.get('kind') : 'dish'}` : '/menu';
 		if (q.get('view') === 'plates') return /^(dish-)?d-/.test(hash) ? '/menu?view=plates' : '/menu';
+		const workspace = q.get('view');
+		if (workspace && ['learn', 'rehearse', 'reference'].includes(workspace)) {
+			return /^(dish-)?d-/.test(hash) || hash === 'edit' ? `/menu?view=${workspace}` : '/menu';
+		}
 		// A card opened from the Producers view goes back to the view; one open on the study view, or the editing page pushed over it, to the study view.
 		if (/^(dish-)?d-/.test(hash) && q.get('view') === 'producers') return '/menu?view=producers';
 		if (/^(dish-)?d-/.test(hash) || hash === 'edit') return '/menu';
 		// A drawer More opened: back to More, while the hash says so and after it is cleared.
 		if (MORE_DRAWERS.includes(hash) || ask.via === 'more') return '/more';
-		// The Producers view is a screen of the house's page, like the fall view: cold, it goes back to the page.
-		if (q.get('view') === 'producers') return '/menu';
+		// Producers belongs to House reference; a cold visit follows that hierarchy.
+		if (q.get('view') === 'producers') return '/menu?view=reference';
 		return '/';
 	}
 	// The Lexicon quiz is a Practise row: its way back is Practise, not the shelf.

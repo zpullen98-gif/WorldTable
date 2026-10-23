@@ -1,5 +1,34 @@
 # The World Table
 
+## Brennan's compact learning flow, 23 October 2026
+
+The house page now has four linked workspaces: Menu (`/menu`), Kitchen studies
+(`?view=learn`), Service rehearsal (`?view=rehearse`), and House reference
+(`?view=reference`). This supersedes the older one-page jump-row layout described
+below. Fall field notes and Final Plates stay under Menu. Producers is reached
+from House reference, and its existing `?view=producers` address remains valid.
+
+Menu sections and individual tasting journeys use native disclosures, closed on
+first arrival. Selecting a section or searching reveals its results. The parent
+owns disclosure state and includes it in its snapshot, so dish-card Back and a
+round trip to practice retain filters, open groups and return focus. Tasting-only
+dishes remain in their course journeys and are also found by search. The main
+practice button respects the selected meal and section.
+
+`HouseLearning.svelte` holds all Cuisine chapters, Fieldbook subjects, teaching
+folios and video resources in four disclosures. `HouseRehearsal.svelte` connects
+recall, tableside wording and guest conversation to existing practice modes and
+Today's study. `HouseLists` is now in House reference. Session/tools and the
+planner remain reachable from both Menu and House reference; old tool hash doors
+still work. No house data, grades, deck IDs or dish IDs changed.
+Saved study/video fragments now replace into Kitchen studies and open their
+disclosure. Mark the redirect with `nav.navReplace()` so cold Back stays inside
+the house. Every learning summary contains an h2 above its nested h3 content.
+
+Regression coverage: `brennans-learning-flow.spec.ts` checks every shipped dish
+and tasting course, disclosure keyboard behavior, search and scope, return focus,
+snapshot restoration, cold Back, lazy resources and narrow day/night layouts.
+
 ## Shared service controls, October 2026
 
 `static/service/oot-service.js` is the canonical day/night preference and collection

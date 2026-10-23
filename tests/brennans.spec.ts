@@ -1,4 +1,4 @@
-import { test, expect, type Page } from '@playwright/test';
+import { test, expect, type Locator, type Page } from '@playwright/test';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -17,16 +17,13 @@ import { goto, seedHouses } from './helpers';
  *   - the bar's five words fit one row at 390 and 375, every tab 44 px, the
  *     boxes written out (BRENNANS_SHOTS names a folder) so the layout's CSS
  *     comment can carry measured figures, never estimates;
- *   - the jump row walks the page's groups by buttons that scroll to and
- *     focus a heading, with the address and the history left alone;
+ *   - the four house sections are distinct, addressable views;
  *   - The cooking holds the lead door and the twelve chapter doors with the
  *     index's own hrefs; Your culinary terms the Fieldbook door and the nine
  *     subject chips;
- *   - the Fall 2026 section leads the chips with eight rows once the pack
- *     holds it (the edition after this one), and draws nothing until then;
+ *   - the Fall 2026 section leads the chips with its eight current rows;
  *   - a dish named as the training sheet names it draws the sheet's field
- *     notes on its card (proved on a seeded house, since the fall dishes are
- *     not in the pack yet); the Hussarde card draws Go deeper by chapter;
+ *     notes on its card; the Hussarde card draws Go deeper by chapter;
  *   - the Back chains: card to page to Home; entry to chapter to Cuisine to
  *     the house to Home; a Fieldbook term to its list to the house to Home;
  *     the lit word from a card returns to the bare root;
@@ -78,8 +75,8 @@ test.beforeEach(async ({ page }) => {
 const heading = (page: Page) => page.locator('main h1').first();
 const backBtn = (page: Page) => page.locator('.backline button.back');
 const lit = (page: Page) => page.locator('nav.modebar .modetab[aria-current="page"]');
-const jumps = (page: Page) => page.locator('nav.jumps');
-const groups = (page: Page) => page.locator('.house-groups');
+const houseSections = (page: Page) => page.locator('nav.house-sections');
+const groups = (page: Page) => page.locator('.house-learning');
 const card = (page: Page) => page.locator('article.card');
 const histLen = (page: Page) => page.evaluate(() => history.length);
 
@@ -88,11 +85,21 @@ async function tab(page: Page, name: string) {
 	await page.locator('nav.modebar .modetab', { hasText: name }).dispatchEvent('click');
 }
 
-/** The house's page, with the house read: the h1 names it and the jump row is drawn. */
+/** The house's page, with the house read and its four learning views available. */
 async function openHouse(page: Page) {
 	await goto(page, '/menu');
 	await expect(heading(page)).toHaveText(PACK.name, { timeout: 15_000 });
-	await expect(jumps(page)).toBeVisible({ timeout: 15_000 });
+	await expect(houseSections(page)).toBeVisible({ timeout: 15_000 });
+}
+
+/** Reveal a destination through its real disclosure controls, outermost first. */
+async function reveal(target: Locator) {
+	const ancestors = target.locator('xpath=ancestor::details');
+	for (const disclosure of await ancestors.all()) {
+		if (!(await disclosure.evaluate((el: HTMLDetailsElement) => el.open))) {
+			await disclosure.locator(':scope > summary').click();
+		}
+	}
 }
 
 async function shot(page: Page, name: string) {
@@ -112,16 +119,16 @@ test("the word lights on the house's page, on Cuisine and on the Fieldbook, and 
 	await expect(page.locator('nav.modebar .modetab.on')).toHaveCount(1);
 	await expect(lit(page)).toHaveText(PACK.name);
 	await expect(page.locator('nav.modebar .modetab').nth(1)).toHaveText(new RegExp(`^${PACK.name}`));
-	// The collection chips name the menu and the field notes; the fall view keeps the house's name as its h1.
+	// The menu's collections remain children of Menu; every view keeps the house's name.
 	const collections = page.locator('nav.chips.collections');
 	await expect(collections).toHaveAttribute('aria-label', `${PACK.name} collections`);
-	await expect(collections.locator('a.chip')).toHaveText(['The menu', 'Fall field notes']);
+	await expect(collections.locator('a.chip')).toHaveText(['The menu', 'Fall field notes', 'Final Plates']);
 	await collections.locator('a.chip', { hasText: 'Fall field notes' }).click();
 	await expect(page).toHaveURL(/\/menu\?view=fall$/);
 	await expect(heading(page)).toHaveText(PACK.name);
 	await expect(lit(page)).toHaveText(PACK.name);
-	await expect(jumps(page)).toHaveCount(0);
-	for (const path of ['/cuisine', `/cuisine?ch=mother-sauces&e=${HOLLANDAISE.slug}`, '/foundations', `/foundations?category=${FOUNDATIONS.categories[0].id}`, '/menu?view=producers']) {
+	await expect(page.locator('nav.jumps')).toHaveCount(0);
+	for (const path of ['/menu?view=learn', '/menu?view=rehearse', '/menu?view=reference', '/cuisine', `/cuisine?ch=mother-sauces&e=${HOLLANDAISE.slug}`, '/foundations', `/foundations?category=${FOUNDATIONS.categories[0].id}`, '/menu?view=producers']) {
 		await goto(page, path);
 		await expect(page.locator('nav.modebar .modetab.on'), path).toHaveCount(1);
 		await expect(lit(page), path).toHaveText(PACK.name);
@@ -170,59 +177,41 @@ test('the bar at 390 and 375: five words in one row, every tab 44 by 44, inside 
 	await page.setViewportSize({ width: 390, height: 844 });
 });
 
-test("the jump row walks the page's groups by buttons that scroll to and focus a heading, the address and the history left alone", async ({ page }) => {
+test('the four house sections are clear links, with one active destination and a return to Menu', async ({ page }) => {
 	await openHouse(page);
-	await expect(groups(page).locator('a.door[data-chapter]')).toHaveCount(12, { timeout: 15_000 });
-	const row = jumps(page);
-	await expect(row).toHaveAttribute('aria-label', 'On this page');
-	for (const name of ['The menu', 'The cooking', 'Your terms', 'The lists', 'Studies']) await expect(row.locator('button.chip', { hasText: name })).toHaveCount(1);
-	// Fall 2026 is drawn only once the pack holds the section; Producers is a link to its view, a push.
-	await expect(row.locator('button.chip', { hasText: 'Fall 2026' })).toHaveCount(FALL_IN_PACK.length ? 1 : 0);
-	await expect(row.locator('a.chip', { hasText: 'Producers' })).toHaveAttribute('href', '/menu?view=producers');
-	for (const chip of await row.locator('.chip').all()) {
-		const b = (await chip.boundingBox())!;
-		expect(b.height, 'every jump chip at least 44 px').toBeGreaterThanOrEqual(44);
+	const nav = houseSections(page);
+	const destinations = [
+		['Menu', '/menu'],
+		['Kitchen studies', '/menu?view=learn'],
+		['Service rehearsal', '/menu?view=rehearse'],
+		['House reference', '/menu?view=reference']
+	] as const;
+	await expect(nav.locator('a')).toHaveText(destinations.map(([name]) => name));
+	await expect(page.locator('nav.jumps')).toHaveCount(0);
+	for (const [name, href] of destinations) {
+		const link = nav.getByRole('link', { name, exact: true });
+		await expect(link).toHaveAttribute('href', href);
+		expect((await link.boundingBox())!.height, `${name} is a thumb-sized control`).toBeGreaterThanOrEqual(44);
 	}
-	const url = page.url();
-	const len = await histLen(page);
-	for (const [name, id] of [
-		['The cooking', 'cooking-h'],
-		['Your terms', 'terms-h'],
-		['The lists', 'houselists-h'],
-		['Studies', 'studies-h'],
-		['The menu', 'study-h']
-	] as const) {
-		await row.locator('button.chip', { hasText: name }).click();
-		const target = page.locator(`#${id}`);
-		await expect(target, name).toBeFocused();
-		await expect(target, name).toBeInViewport();
-		// The heading is clear of the sticky rows (the Back row and the menu's search bar).
-		const covered = await target.evaluate((el) => {
-			const r = el.getBoundingClientRect();
-			const under = document.elementFromPoint(Math.min(innerWidth - 2, r.left + 8), r.top + Math.min(8, r.height / 2));
-			return !!under && !el.contains(under) && !under.contains(el);
-		});
-		expect(covered, `${name}: the heading is not under a sticky row`).toBe(false);
-		expect(page.url(), `${name}: no hash, no query`).toBe(url);
-		expect(await histLen(page), `${name}: no history entry`).toBe(len);
+	for (const [name, href] of destinations.slice(1)) {
+		await nav.getByRole('link', { name, exact: true }).click();
+		await expect(page).toHaveURL(url => `${url.pathname}${url.search}` === href);
+		await expect(nav.locator('[aria-current="page"]')).toHaveCount(1);
+		await expect(nav.locator('[aria-current="page"]')).toHaveText(name);
+		await expect(lit(page)).toHaveText(PACK.name);
+		await backBtn(page).click();
+		await expect(page).toHaveURL(/\/menu$/);
+		await expect(nav.locator('[aria-current="page"]')).toHaveText('Menu');
 	}
-	const videos = row.locator('button.chip', { hasText: 'Videos' });
-	if (await videos.count()) {
-		await videos.click();
-		await expect(page.locator('#videos-h')).toBeFocused();
-		// A summary is focusable on its own: the jump leaves it in the Tab order, no tabindex="-1" written on it.
-		await expect(page.locator('#videos-h')).toHaveJSProperty('tabIndex', 0);
-		expect(page.url()).toBe(url);
-	}
-	// Back from the bare root, after every jump, is Home: the jumps added nothing.
-	await backBtn(page).click();
-	await expect(page.locator('a.level')).toHaveCount(4);
 });
 
-test('The cooking holds the lead door and the twelve chapter doors, Your culinary terms the Fieldbook door and nine subject chips, each opening under the lit word', async ({ page }) => {
+test('Kitchen studies preserves the twelve Cuisine chapters and nine Fieldbook subjects behind clear disclosures', async ({ page }) => {
 	await openHouse(page);
+	await houseSections(page).getByRole('link', { name: 'Kitchen studies', exact: true }).click();
 	const g = groups(page);
-	await expect(g.locator('#cooking-h')).toHaveText('The cooking');
+	await reveal(g.locator('a.door[data-door="cuisine"]'));
+	await reveal(g.locator('a.door[data-door="foundations"]'));
+	await expect(g.locator('#cooking-h .title')).toHaveText('Cooking lessons');
 	const lead = g.locator('a.door[data-door="cuisine"]');
 	await expect(lead.locator('.door-name')).toHaveText('Cuisine');
 	await expect(lead).toHaveAttribute('href', '/cuisine');
@@ -236,11 +225,11 @@ test('The cooking holds the lead door and the twelve chapter doors, Your culinar
 	}
 	await expect(g.locator('p.note[role="status"]')).toHaveCount(0);
 
-	await expect(g.locator('#terms-h')).toHaveText('Your culinary terms');
+	await expect(g.locator('#terms-h .title')).toHaveText('Culinary terms');
 	const fieldbook = g.locator('a.door[data-door="foundations"]');
 	await expect(fieldbook.locator('.door-name')).toHaveText('The Kitchen Fieldbook');
 	await expect(fieldbook).toHaveAttribute('href', '/foundations');
-	await expect(fieldbook.locator('.door-line')).toContainText(`All ${FOUNDATIONS.entries.length} terms`);
+	await expect(g.locator('#terms-h .count')).toHaveText(`${FOUNDATIONS.entries.length} terms · ${FOUNDATIONS.categories.length} subjects`);
 	const subjects = g.locator('nav.subjects');
 	await expect(subjects.locator('a.chip[href^="/foundations?category="]')).toHaveCount(9);
 	await expect(subjects.locator('a.chip[href^="/foundations?category="]')).toHaveText(FOUNDATIONS.categories.map((c) => c.title));
@@ -260,53 +249,44 @@ test('The cooking holds the lead door and the twelve chapter doors, Your culinar
 	await expect(heading(page)).toHaveText(INDEX.chapters.find((c) => c.key === 'mother-sauces')!.title);
 	await expect(lit(page)).toHaveText(PACK.name);
 	await backBtn(page).click();
-	await expect(page).toHaveURL(/\/menu$/);
+	await expect(page).toHaveURL(/\/menu\?view=learn$/);
 	await expect(heading(page)).toHaveText(PACK.name);
 	// A subject chip opens the Fieldbook filtered, under the lit word, and Back returns to the page.
+	await reveal(g.locator('a.door[data-door="foundations"]'));
 	const subject = FOUNDATIONS.categories[0];
 	await g.locator(`nav.subjects a.chip[href="/foundations?category=${subject.id}"]`).click();
 	await expect(page).toHaveURL(new RegExp(`/foundations\\?category=${subject.id}$`));
 	await expect(heading(page)).toHaveText('The Kitchen Fieldbook');
 	await expect(lit(page)).toHaveText(PACK.name);
 	await backBtn(page).click();
-	await expect(page).toHaveURL(/\/menu$/);
+	await expect(page).toHaveURL(/\/menu\?view=learn$/);
 	await expect(heading(page)).toHaveText(PACK.name);
 });
 
-test('the Fall 2026 section leads the chips with its eight rows once the pack holds it, and draws nothing until then', async ({ page }) => {
+test('the Fall 2026 section leads the chips, reveals all eight dishes, and respects the meal filter', async ({ page }) => {
 	await openHouse(page);
 	const chips = page.locator('.study .bar button.chip.sec');
 	const fallChip = chips.filter({ hasText: /^Fall 2026 \d+$/ });
-	if (!FALL_IN_PACK.length) {
-		test.info().annotations.push({ type: 'waits', description: 'the eight fall dishes arrive with the next edition of the pack (plan E2); the chip, the rows and the jump are proved then' });
-		await expect(fallChip).toHaveCount(0);
-		await expect(jumps(page).locator('button.chip', { hasText: 'Fall 2026' })).toHaveCount(0);
-		return;
-	}
 	expect(FALL_IN_PACK.length, 'the sheet names eight dishes').toBe(8);
-	// Right after All and Tasting menus: the menu the owner is learning now.
 	await expect(chips.nth(2)).toHaveText(`Fall 2026 ${FALL_IN_PACK.length}`);
 	await fallChip.click();
-	await expect(page.locator('.study .row')).toHaveCount(FALL_IN_PACK.length);
-	await expect(page.locator('.study .row .nm')).toHaveText(FALL_IN_PACK.map((d) => d.name));
-	await expect(page.locator('.study .grouphead h3').first()).toContainText('Fall 2026');
-	// The jump chip chooses the section and brings the menu to the top.
-	await page.getByRole('button', { name: `All ${PACK.dishes.length}` }).click();
-	await jumps(page).locator('button.chip', { hasText: 'Fall 2026' }).click();
+	const group = page.locator('.study details[data-section="Fall 2026"]');
+	await expect(group).toHaveJSProperty('open', true);
+	await expect(group.locator('.row')).toHaveCount(FALL_IN_PACK.length);
+	await expect(group.locator('.row .nm')).toHaveText(FALL_IN_PACK.map((d) => d.name));
 	await expect(fallChip).toHaveAttribute('aria-pressed', 'true');
-	await expect(page.locator('#study-h')).toBeFocused();
 	await expect(page).toHaveURL(/\/menu$/);
-	// Under a meal the fall dishes are not served at (the sheet's are Dinner), the section leaves the chip
-	// row, and the jump leaves the row with it, so it never lands on an empty list; All day brings both back.
+	// A meal the fall dishes do not serve removes that section from the chips.
 	const offMeal = (PACK.meals ?? []).map((m) => m.name).find((m) => !FALL_IN_PACK.some((d) => (d.meals ?? []).includes(m)))!;
 	expect(offMeal, 'a meal of the house the fall dishes are not served at').toBeTruthy();
 	const meals = page.locator('.study .meals');
 	await meals.getByRole('button', { name: offMeal, exact: true }).click();
 	await expect(fallChip).toHaveCount(0);
-	await expect(jumps(page).locator('button.chip', { hasText: 'Fall 2026' })).toHaveCount(0);
 	await meals.getByRole('button', { name: 'All day', exact: true }).click();
 	await expect(fallChip).toHaveCount(1);
-	await expect(jumps(page).locator('button.chip', { hasText: 'Fall 2026' })).toHaveCount(1);
+	await fallChip.click();
+	await expect(group).toHaveJSProperty('open', true);
+	await expect(group.locator('.row')).toHaveCount(FALL_IN_PACK.length);
 });
 
 test("a Fall 2026 dish of the Brennan's house draws the sheet's field notes on its card: the ingredients, the compact image and the two quiet links; a dish off the sheet, and the sheet's name on another house, draw none", async ({ page }) => {
@@ -376,7 +356,8 @@ test("a Fall 2026 dish of the Brennan's house draws the sheet's field notes on i
 	h.dishes[0].name = item.name;
 	await seedHouses(page, [h]);
 	await goto(page, '/menu');
-	await expect(page.locator('.study .row').first()).toBeVisible({ timeout: 15_000 });
+	await expect(page.locator('.study input[type="search"]')).toBeVisible({ timeout: 15_000 });
+	await page.locator('.study input[type="search"]').fill(item.name);
 	await page.locator('.study .row', { has: page.locator('.nm', { hasText: item.name }) }).click();
 	await expect(card(page).locator('#card-h')).toHaveText(item.name);
 	await expect(card(page).locator('#fall-h')).toHaveCount(0);
@@ -473,7 +454,7 @@ test("the lit word from a card, a section's list or the editing page returns to 
 	await expect(page).toHaveURL(/\/menu$/);
 	await expect(card(page)).toHaveCount(0);
 	await expect(heading(page)).toHaveText(PACK.name);
-	await expect(page.locator('.study .row').first()).toBeVisible();
+	await expect(page.locator('.study details.menu-group').first().locator(':scope > summary')).toBeVisible();
 	// The browser's Back returns to the cold entry and the card opens again with its address (the
 	// page stays mounted through a navigation within its own route, so the one-time cold open is not
 	// what brings it back); the Back button closes it to the list, and the next press is Home.
@@ -483,7 +464,7 @@ test("the lit word from a card, a section's list or the editing page returns to 
 	await backBtn(page).click();
 	await expect(card(page)).toHaveCount(0);
 	await expect(page).toHaveURL(/\/menu$/);
-	await expect(page.locator('.study .row').first()).toBeVisible();
+	await expect(page.locator('.study details.menu-group').first().locator(':scope > summary')).toBeVisible();
 	await backBtn(page).click();
 	await expect(page).toHaveURL(/\/$/);
 	await expect(page.locator('a.level')).toHaveCount(4);
@@ -498,7 +479,7 @@ test("the lit word from a card, a section's list or the editing page returns to 
 	await expect(page.locator('.dishes li').first()).toBeVisible();
 	await tab(page, PACK.name);
 	await expect(page).toHaveURL(/\/menu$/);
-	await expect(page.locator('.study .row').first()).toBeVisible();
+	await expect(page.locator('.study details.menu-group').first().locator(':scope > summary')).toBeVisible();
 
 	// On the bare root the lit word scrolls to the top and adds nothing.
 	await page.evaluate(() => window.scrollTo(0, 900));

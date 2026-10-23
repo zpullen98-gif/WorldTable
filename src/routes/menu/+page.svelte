@@ -40,15 +40,15 @@
 	import { page } from '$app/state';
 	import type { Snapshot } from './$types';
 	import StudyMenu from '$lib/components/StudyMenu.svelte';
+	import HouseLearning from '$lib/components/HouseLearning.svelte';
+	import HouseRehearsal from '$lib/components/HouseRehearsal.svelte';
 	import StudyCard from '$lib/components/StudyCard.svelte';
 	import ProducersView from '$lib/components/ProducersView.svelte';
 	import FallMenu from '$lib/components/FallMenu.svelte';
 	import FinalPlateGallery from '$lib/components/FinalPlateGallery.svelte';
 	import { readDrilled, type DrilledEntry } from '$lib/house-drilled';
-	import { findItem, inMeal, latestVerdicts, producersLine, say, studyRows, studySections, studyVideos, type StudyRow } from '$lib/study';
+	import { findItem, latestVerdicts, producersLine, say, studyRows, studyProgress, type StudyRow } from '$lib/study';
 	import { ITEM_ID_RE, wingInstalled } from '$lib/wing-links';
-	import { cuisine } from '$lib/stores/cuisine.svelte';
-	import { foundationsCategories, foundationsEntries } from '$lib/foundations';
 	import { BRENNANS_HOUSE_ID } from '$lib/teaching-folios';
 	import {
 		buildPass,
@@ -357,6 +357,9 @@
 	let studyQuery = $state('');
 	let studySection = $state('');
 	let studyMeal = $state('');
+	let openGroups = $state<Record<string, boolean>>({});
+	let learnOpen = $state<Record<string, boolean>>({});
+	let workspace = $state<'menu' | 'learn' | 'rehearse' | 'reference'>('menu');
 	/** A card opened by a cold hash, held outside the history. */
 	let coldId = $state('');
 	let coldTried = false;
@@ -384,10 +387,26 @@
 	let platesView = $state(false);
 	let fallItem = $state('');
 	let fallKind = $state('dish');
+	let learningAnchor = $state('');
 	afterNavigate(() => {
 		const fallQuery = new URLSearchParams(location.search);
+		const anchor = location.hash.slice(1);
+		const learningGroup = anchor === 'cooking-h' ? 'cooking' : anchor === 'terms-h' ? 'terms'
+			: ['study-videos', 'videos-h'].includes(anchor) ? 'videos'
+			: ['illustrated-kitchen-studies', 'studies-h'].includes(anchor) || anchor.startsWith('folio-') ? 'studies' : '';
+		// Preserve saved links from the former single-page layout.
+		if (learningGroup && !fallQuery.has('view')) {
+			fallQuery.set('view', 'learn');
+			nav.navReplace();
+			void goto(`${base}/menu?${fallQuery}${location.hash}`, { replaceState: true });
+			return;
+		}
 		fallView = fallQuery.get('view') === 'fall';
 		platesView = fallQuery.get('view') === 'plates';
+		const area = fallQuery.get('view');
+		workspace = area === 'learn' || area === 'rehearse' || area === 'reference' ? area : area === 'producers' ? 'reference' : 'menu';
+		learningAnchor = area === 'learn' && learningGroup ? anchor : '';
+		if (learningAnchor) learnOpen = { ...learnOpen, [learningGroup]: true };
 		fallItem = fallQuery.get('item') ?? '';
 		fallKind = ['dish', 'cocktail', 'all'].includes(fallQuery.get('kind') ?? '') ? fallQuery.get('kind')! : 'dish';
 		producersView = new URLSearchParams(location.search).get('view') === 'producers';
@@ -404,6 +423,19 @@
 			const id = coldHashId();
 			if (id && current.dishes.some((d) => d.id === id)) coldId = id;
 		}
+	});
+	$effect(() => {
+		if (!learningAnchor || !studyOn || workspace !== 'learn' || openDish) return;
+		const target = learningAnchor;
+		void tick().then(() => requestAnimationFrame(() => requestAnimationFrame(() => {
+			if (learningAnchor !== target) return;
+			const element = document.getElementById(target);
+			if (!element) return;
+			element.scrollIntoView({ block: 'start' });
+			const focus = element.matches('details') ? element.querySelector('summary') : element;
+			if (focus instanceof HTMLElement) focus.focus({ preventScroll: true });
+			learningAnchor = '';
+		})));
 	});
 
 	/** The dish a cold #d-... or #dish-... hash names, or '' (a hand-typed hash that is not a URI is a miss). */
@@ -431,71 +463,19 @@
 	const latest = $derived(current ? latestVerdicts(current.id, drilled) : new Map());
 	const menuDish = $derived(openDish ? house.dishes.find((d) => d.id === openDish.id) : undefined);
 
-	/* ---- the house's own page (Brennan's as its own tab, 17 October 2026) --
-	 *
-	 * The study view is the house's home. Its name is the page's title and h1
-	 * on every view (the fall view's own h2 names that collection); with no
-	 * house the page keeps the generic word. Under the menu and the house's
-	 * lists sit two groups drawn with hub.css: The cooking (a lead door to
-	 * Cuisine and one door per chapter, from the index the worker precaches,
-	 * loaded in onMount and never fetched) and Your culinary terms (the
-	 * Fieldbook door, its nine subjects as chips, today's practice).
-	 *
-	 * A jump row at the top walks the page's groups by BUTTONS that scroll to
-	 * a heading and put the focus on it (ProducersView's jump): never a #hash,
-	 * which this page reads as a card to open, and never a history entry. A
-	 * chip whose target the house does not draw is hidden; Fall 2026 sets the
-	 * section filter and jumps to the menu; Producers is a link to its view,
-	 * a push, as the level page's door is.
-	 */
-	const FALL_SECTION = 'Fall 2026';
+	/* One house, four connected workspaces. Addresses carry the workspace;
+	   expanded menu and lesson groups belong to this parent so card Back
+	   restores a visible opener rather than a collapsed section. */
 	const houseName = $derived(current ? current.name : 'My restaurant');
-	/* The sections at the chosen meal (the menu's own filter, StudyMenu's mealRows): the Fall 2026
-	   jump is hidden while the meal keeps its dishes off the chip row, so it never lands on an empty list. */
-	const sectionsHere = $derived(
-		current
-			? studySections(
-					studyRows(current, 'dish').filter((r) => {
-						const it = findItem(current, r.id);
-						return it ? inMeal(it, studyMeal) : true;
-					})
-				)
-			: []
-	);
-	const hasFall = $derived(sectionsHere.some((s) => s.section === FALL_SECTION));
 	const hasProducers = $derived(!!current && !!producersLine(current));
 	const hasStudies = $derived(!!current && current.id === BRENNANS_HOUSE_ID);
-	const hasVideos = $derived(!!current && studyVideos(current).some((g) => g.rows.length > 0));
-	/** Cuisine's chapters with something written, in the index's order; empty until the index is in. */
-	const chapters = $derived((cuisine.index?.chapters ?? []).filter((c) => c.file));
-	const jumpsOn = $derived(studyOn && !!current && opened && !openDish && !producersView && !fallView && !platesView);
-
-	/** Bring a heading to the top and put the focus on it, the address and the history left as they are. */
-	function jumpTo(id: string) {
-		const el = document.getElementById(id);
-		if (!el) return;
-		/* A heading another component draws without a tabindex still takes the focus; a summary (Videos),
-		   focusable on its own, keeps its place in the Tab order. */
-		if (el.tabIndex < 0) el.setAttribute('tabindex', '-1');
-		el.scrollIntoView({ block: 'start' });
-		/* The page's scroll padding clears the mode bar; the Back row and the
-		   menu's own sticky bar, when either is stuck over the heading, are
-		   brought out from over it. */
-		let cover = 0;
-		for (const s of document.querySelectorAll('.backline, .study .bar')) {
-			if (!(s.compareDocumentPosition(el) & Node.DOCUMENT_POSITION_FOLLOWING)) continue;
-			cover = Math.max(cover, s.getBoundingClientRect().bottom);
-		}
-		const over = cover + 8 - el.getBoundingClientRect().top;
-		if (over > 0) window.scrollBy(0, -over);
-		el.focus({ preventScroll: true });
-	}
-
-	/** The fall menu: the section chip chosen, then the menu brought to the top. */
-	function jumpFall() {
-		studySection = FALL_SECTION;
-		void tick().then(() => jumpTo('study-h'));
-	}
+	const menuProgress = $derived(studyProgress(current?.dishes.map((dish) => dish.id) ?? [], latest));
+	const workspaces = [
+		{ id: 'menu', label: 'Menu', href: '/menu' },
+		{ id: 'learn', label: 'Kitchen studies', href: '/menu?view=learn' },
+		{ id: 'rehearse', label: 'Service rehearsal', href: '/menu?view=rehearse' },
+		{ id: 'reference', label: 'House reference', href: '/menu?view=reference' }
+	];
 
 	/* Study or edit is decided once a house is read, and again only when the
 	   device goes from no house to one (the shipped pack arriving, Load the
@@ -536,9 +516,6 @@
 		   and never in load (the prerender rule), so Back and a reload keep it. */
 		const wantSection = new URLSearchParams(location.search).get('section');
 		if (wantSection) studySection = wantSection;
-		/* The cooking group's chapter doors: Cuisine's index, a precached chunk
-		   (stores/cuisine.svelte.ts), so nothing new is fetched. */
-		void cuisine.load();
 		if (sharedOrigin(base)) {
 			const up = typeof navigator === 'undefined' || navigator.onLine !== false;
 			if (up) roomsOpen = { codex: true, ledger: true };
@@ -690,12 +667,14 @@
 
 	/* The round trip to the flash cards: SvelteKit replays this on a back
 	   navigation and drops it on a fresh one. */
-	export const snapshot: Snapshot<{ q: string; s: string; m: string; y: number }> = {
-		capture: () => ({ q: studyQuery, s: studySection, m: studyMeal, y: typeof window === 'undefined' ? 0 : window.scrollY }),
+	export const snapshot: Snapshot<{ q: string; s: string; m: string; y: number; groups: Record<string, boolean>; learn: Record<string, boolean> }> = {
+		capture: () => ({ q: studyQuery, s: studySection, m: studyMeal, groups: { ...openGroups }, learn: { ...learnOpen }, y: typeof window === 'undefined' ? 0 : window.scrollY }),
 		restore: (v) => {
 			studyQuery = v.q ?? '';
 			studySection = v.s ?? '';
 			studyMeal = v.m ?? '';
+			openGroups = { ...v.groups };
+			learnOpen = { ...v.learn };
 			const y = v.y ?? 0;
 			void tick().then(() => requestAnimationFrame(() => window.scrollTo(0, y)));
 		}
@@ -1522,23 +1501,20 @@
 		{/if}
 	</header>
 
-	{#if fallView || platesView || !openDish}
-		<nav class="chips collections" aria-label="{houseName} collections">
-			<a class="chip" href="{base}/menu" aria-current={!fallView && !platesView ? 'page' : undefined}>The menu</a>
-			<a class="chip" href="{base}/menu?view=fall" aria-current={fallView ? 'page' : undefined}>Fall field notes</a>
-			<a class="chip" href="{base}/menu?view=plates" aria-current={platesView ? 'page' : undefined}>Final Plates</a>
+	{#if !openDish && (studyOn || fallView || platesView)}
+		<nav class="house-sections" aria-label="{houseName} learning sections">
+			{#each workspaces as area (area.id)}
+				<a href="{base}{area.href}" aria-current={workspace === area.id ? 'page' : undefined}>{area.label}</a>
+			{/each}
 		</nav>
 	{/if}
-	{#if jumpsOn}
-		<nav class="chips jumps" aria-label="On this page">
-			<button type="button" class="chip" onclick={() => jumpTo('study-h')}>The menu</button>
-			{#if hasFall}<button type="button" class="chip" onclick={jumpFall}>Fall 2026</button>{/if}
-			<button type="button" class="chip" onclick={() => jumpTo('cooking-h')}>The cooking</button>
-			<button type="button" class="chip" onclick={() => jumpTo('terms-h')}>Your terms</button>
-			{#if hasProducers}<a class="chip" href="{base}/menu?view=producers">Producers</a>{/if}
-			<button type="button" class="chip" onclick={() => jumpTo('houselists-h')}>The lists</button>
-			{#if hasStudies}<button type="button" class="chip" onclick={() => jumpTo('studies-h')}>Studies</button>{/if}
-			{#if hasVideos}<button type="button" class="chip" onclick={() => jumpTo('videos-h')}>Videos</button>{/if}
+	{#if !openDish && workspace === 'menu' && (studyOn || fallView || platesView)}
+		<nav class="chips collections" aria-label="{houseName} collections">
+			<a class="chip" href="{base}/menu" aria-current={!fallView && !platesView ? 'page' : undefined}>The menu</a>
+			{#if hasStudies || fallView || platesView}
+				<a class="chip" href="{base}/menu?view=fall" aria-current={fallView ? 'page' : undefined}>Fall field notes</a>
+				<a class="chip" href="{base}/menu?view=plates" aria-current={platesView ? 'page' : undefined}>Final Plates</a>
+			{/if}
 		</nav>
 	{/if}
 	{#if platesView}
@@ -1583,13 +1559,27 @@
 				/>
 			{:else if producersView}
 				<ProducersView {current} onOpen={openCard} linkable={roomsOpen} />
+			{:else if workspace === 'learn'}
+				<HouseLearning {current} bind:open={learnOpen} onOpen={openCard} />
+				<p class="next-step"><a href="{base}/menu?view=rehearse">Next: rehearse what you can explain</a></p>
+			{:else if workspace === 'rehearse'}
+				<HouseRehearsal {current} again={menuProgress.againIds.length} />
+			{:else if workspace === 'reference'}
+				<section class="house-reference" aria-labelledby="reference-h"><h2 id="reference-h">The house, at your fingertips</h2><p class="workspace-intro">Look up the house's words, service principles and common questions. Open only the reference you need.</p>
+					{#if hasProducers}<a class="reference-door" href="{base}/menu?view=producers"><b>Producers</b><span>Who makes it, where it comes from and the dishes it belongs to.</span></a>{/if}
+					<HouseLists mode="study" />
+					<p class="next-step"><a href="{base}/menu?view=rehearse">Put it into practice with Service rehearsal</a></p>
+				</section>
 			{:else}
+				<p class="menu-routine"><b>One dish at a time.</b> Choose a section, open a dish, learn its ingredients and describe it aloud. Then use its practice cards.</p>
 				<StudyMenu
 					{current}
 					{latest}
 					bind:query={studyQuery}
 					bind:section={studySection}
 					bind:meal={studyMeal}
+					bind:openGroups
+					showResources={false}
 					is86={(id) => house.is86(id)}
 					canLink={roomsOpen.codex || roomsOpen.ledger}
 					onOpen={openCard}
@@ -1599,44 +1589,9 @@
 				>
 					{#snippet footer()}<ExportNudge quiet onTools={openTools} />{/snippet}
 				</StudyMenu>
-				<HouseLists mode="study" />
-				<!-- The house's two reading groups, drawn with hub.css (the level
-				     page's doors and chips) and nothing of their own. -->
-				<div class="hub house-groups">
-					<h2 class="group" id="cooking-h" tabindex="-1">The cooking</h2>
-					<nav class="quiet" aria-labelledby="cooking-h">
-						<a class="door lead" href="{base}/cuisine" data-door="cuisine">
-							<span class="door-name">Cuisine</span>
-							<span class="door-line">French and Creole cooking in depth: today's cards, the drills, the two diagrams.</span>
-						</a>
-						{#each chapters as c (c.key)}
-							<a class="door" href="{base}/cuisine?ch={encodeURIComponent(c.key)}" data-chapter={c.key}>
-								<span class="door-name">{c.title}</span>
-								<span class="door-line">{c.intro}</span>
-								<span class="door-sub">{c.entries} {c.entries === 1 ? 'entry' : 'entries'} · {c.cards} {c.cards === 1 ? 'card' : 'cards'}</span>
-							</a>
-						{/each}
-					</nav>
-					{#if !cuisine.index}
-						<p class="note" role="status">{cuisine.failed ? 'The chapters could not be read here; the door above still opens Cuisine.' : 'Opening Cuisine…'}</p>
-					{/if}
-					<h2 class="group" id="terms-h" tabindex="-1">Your culinary terms</h2>
-					<nav class="quiet" aria-labelledby="terms-h">
-						<a class="door" href="{base}/foundations" data-door="foundations">
-							<span class="door-name">The Kitchen Fieldbook</span>
-							<span class="door-line">All {foundationsEntries.length} terms from your sheets: clear definitions, kitchen understanding, guest descriptions and daily practice.</span>
-						</a>
-					</nav>
-					<nav class="chips subjects" aria-label="The subjects">
-						{#each foundationsCategories as c (c.id)}
-							<a class="chip" href="{base}/foundations?category={encodeURIComponent(c.id)}">{c.title}</a>
-						{/each}
-						<a class="chip go" href="{base}/flashcards?deck=foundations%3Atoday">Practise today's terms</a>
-					</nav>
-				</div>
 			{/if}
 		</div>
-		{#if !openDish && !producersView}
+		{#if !openDish && !producersView && (workspace === 'menu' || workspace === 'reference')}
 			<details class="drawer" bind:this={toolsEl} data-print="hide">
 				<summary>Session and tools</summary>
 				{@render houseDoors()}
@@ -1964,16 +1919,20 @@
 		:global(.house-main) .view > .head.studying { padding-bottom: 2px; }
 	}
 	.headrow { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-	/* The collection chips, the jump row and the house's groups: the page's
-	   chip at the hub's size (44px, 1rem), never the tools row's 14px; the go
-	   chip as the study view draws it. hub.css draws the doors and the
-	   subject chips; the wrapper gives up the hub's page padding, since the
-	   drawers follow it. */
-	.jumps { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
-	.collections .chip, .jumps .chip, .house-groups .chip { min-height: 44px; font: inherit; font-size: 1rem; color: var(--ink); }
-	.house-groups .chip.go { border-color: var(--turmeric-deep); font-weight: 600; }
-	.house-groups { padding-block: 0; }
-	.house-groups h2.group:focus-visible { outline: 2px solid var(--turmeric-deep); outline-offset: 2px; }
+	.house-sections { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; padding-block: 8px; border-bottom: 1px solid var(--line-strong); margin-bottom: 8px; }
+	.house-sections a { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 48px; padding: 9px 8px; color: var(--ink-soft); text-decoration: none; font-weight: 600; border: 1px solid transparent; border-radius: var(--radius); }
+	.house-sections a[aria-current] { color: var(--ink); background: var(--card); border-color: var(--turmeric-deep); }
+	.house-sections a:focus-visible { outline: 3px solid var(--turmeric-deep); outline-offset: 2px; }
+	.collections { display: flex; flex-wrap: wrap; gap: 8px; margin-block: 8px; }
+	.collections .chip { min-height: 44px; font: inherit; color: var(--ink); }
+	.collections .chip[aria-current] { border-color: var(--turmeric-deep); font-weight: 600; }
+	.menu-routine, .workspace-intro { max-width: 68ch; line-height: 1.55; color: var(--ink-soft); margin: 12px 0 18px; }
+	.house-reference h2 { font: 500 var(--t-h2)/1.2 var(--display); margin: 20px 0 10px; }
+	.reference-door { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; min-height: 48px; padding: 14px 18px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--card); color: var(--ink); text-decoration: none; }
+	.reference-door span { color: var(--ink-soft); }
+	.next-step a { display: inline-flex; align-items: center; min-height: 44px; color: var(--turmeric-deep); text-underline-offset: 3px; margin-right: 12px; }
+	.next-step { line-height: 1.5; margin: 18px 0; }
+	@media (max-width: 600px) { .house-sections { grid-template-columns: 1fr 1fr; } }
 	.quiet.studyedit {
 		min-height: 44px; padding: 0 4px; background: none; border: 0; cursor: pointer;
 		font: inherit; font-size: 1rem; color: var(--ink-soft); text-decoration: underline;

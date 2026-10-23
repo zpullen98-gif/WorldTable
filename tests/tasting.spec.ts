@@ -28,12 +28,18 @@ const DINNER_ID = PACK.tastings.find((t: { name: string }) => t.name === DINNER)
 
 test.use({ viewport: { width: 390, height: 844 } });
 
-async function openStudy(page: Page) {
+async function openStudy(page: Page, expandMenus = true) {
 	await page.route('**/shared/packs/brennans-new-orleans.v1.oothouse.json', (route) =>
 		route.fulfill({ status: 200, contentType: 'application/json', body: PACK_TEXT })
 	);
 	await goto(page, '/menu');
-	await expect(page.locator('.study .tmenu').first()).toBeVisible({ timeout: 15_000 });
+	await expect(page.locator('#sg-tastings')).toBeVisible({ timeout: 15_000 });
+	if (expandMenus) {
+		for (const group of await page.locator('.study .tasting-group').all()) {
+			await group.locator(':scope > summary').click();
+			await expect(group).toHaveAttribute('open');
+		}
+	}
 }
 
 const menu = (page: Page, id: string) => page.locator(`.study .tmenu[data-tasting="${id}"]`);
@@ -76,15 +82,21 @@ async function tastingFirst(page: Page, lines: string[]) {
 }
 
 test('two separate tasting menus at the top of the house\'s page, each in the exact printed order', async ({ page }) => {
-	await openStudy(page);
+	await openStudy(page, false);
 	const menus = page.locator('.study .tmenu');
 	await expect(menus).toHaveCount(2);
+	await expect(page.locator('.study .tasting-group[open]')).toHaveCount(0);
+	await expect(menus.first()).toBeHidden();
 	await expect(menus.locator('h4')).toHaveText([BREAKFAST, DINNER]);
 	await expect(menus.locator('.tprice')).toHaveText(['$80', '$80']);
 	await expect(page.locator('#sg-tastings')).toHaveText('Tasting menus · 2');
 	// The block comes before every section of the list.
 	const blockY = (await page.locator('.study .tastings').boundingBox())!.y;
-	expect(blockY).toBeLessThan((await page.locator('.study .row').first().boundingBox())!.y);
+	expect(blockY).toBeLessThan((await page.locator('.study details.group > summary').first().boundingBox())!.y);
+	for (const group of await page.locator('.study .tasting-group').all()) {
+		await group.locator(':scope > summary').click();
+		await expect(group).toHaveAttribute('open');
+	}
 
 	const b = menu(page, BREAKFAST_ID);
 	await expect(b.locator('.tline')).toHaveText('Celebrating 80 Years in 2026! Price includes tasting portions of each course and all drinks listed.');
@@ -135,7 +147,7 @@ test('two separate tasting menus at the top of the house\'s page, each in the ex
 	// Every control in the block at least 44px, nothing wider than the phone.
 	const short = await page.evaluate(() =>
 		[...document.querySelectorAll<HTMLElement>('.study .tastings button, .study .tastings a, .study .tastings summary')]
-			.filter((el) => el.offsetParent !== null)
+			.filter((el) => el.checkVisibility() && el.getClientRects().length > 0)
 			.map((el) => ({ t: (el.textContent || '').trim().slice(0, 30), h: el.getBoundingClientRect().height }))
 			.filter((x) => x.h < 44)
 	);
@@ -151,11 +163,12 @@ test('two separate tasting menus at the top of the house\'s page, each in the ex
 });
 
 test('the Tasting menus chip shows the block alone, another section hides it, and the meal filter keeps each menu to its meal', async ({ page }) => {
-	await openStudy(page);
+	await openStudy(page, false);
 	const chip = page.getByRole('button', { name: 'Tasting menus 2' });
 	await chip.click();
 	await expect(chip).toHaveAttribute('aria-pressed', 'true');
 	await expect(page.locator('.study .tmenu')).toHaveCount(2);
+	await expect(page.locator('.study .tasting-group[open]')).toHaveCount(2);
 	await expect(page.locator('.study .row')).toHaveCount(0);
 	await expect(page.locator('.study [aria-live="polite"]')).toHaveText('Showing Tasting menus: 2 menus');
 
@@ -174,6 +187,7 @@ test('the Tasting menus chip shows the block alone, another section hides it, an
 	await expect(page.locator('.study .row[data-id="' + idOf('Baked Apple') + '"]')).toHaveCount(0);
 	await page.getByPlaceholder('Find a dish').fill('baked apple');
 	await expect(page.locator('.study .row')).toHaveCount(1);
+	await expect(page.locator('.study .row').first()).toBeVisible();
 	await expect(page.locator('.study .tastings')).toHaveCount(0);
 });
 
@@ -184,7 +198,7 @@ test('a dish and a pour open their study cards, walk the menu in printed order, 
 	await hussarde.scrollIntoViewIfNeeded();
 	await hussarde.click();
 	const c = card(page);
-	await expect(c.locator('h2')).toHaveText('Eggs Hussarde');
+	await expect(c.locator('#card-h')).toHaveText('Eggs Hussarde');
 	await expect(c.locator('.backline .pos')).toHaveText(`6 of 11 in ${BREAKFAST}`);
 	// The tasting first: the menu, the course as printed and its own pour, under the name; the
 	// Piper-Heidsieck the list pours with the dish is further down, headed as the à la carte pour.
@@ -197,7 +211,7 @@ test('a dish and a pour open their study cards, walk the menu in printed order, 
 	await expect(c.locator('.tasting')).toContainText(`On the ${BREAKFAST}: Third Course. Paired with Charles Lafitte Brut Champagne FR NV [4oz]`);
 	// Next is the next thing the menu serves: the Champagne poured with it.
 	await c.locator('.backline').getByRole('button', { name: /^Next/ }).click();
-	await expect(c.locator('h2')).toHaveText('Charles Lafitte Brut Champagne NV');
+	await expect(c.locator('#card-h')).toHaveText('Charles Lafitte Brut Champagne NV');
 	await page.locator('.backline button.back').click();
 	await expect(card(page)).toHaveCount(0);
 	await expect(hussarde).toBeFocused();
@@ -207,7 +221,7 @@ test('a dish and a pour open their study cards, walk the menu in printed order, 
 	const jadot = d.locator('.course[data-n="3"] .titem.pour');
 	await jadot.scrollIntoViewIfNeeded();
 	await jadot.click();
-	await expect(c.locator('h2')).toHaveText('Louis Jadot Beaune 1er Cru 2023');
+	await expect(c.locator('#card-h')).toHaveText('Louis Jadot Beaune 1er Cru 2023');
 	await expect(c.locator('.backline .pos')).toHaveText(`6 of 10 in ${DINNER}`);
 	await expect(c.locator('.tasting')).toHaveText(`Poured on the ${DINNER}: Third Course`);
 	await expect(c.locator('#pourfacts-h')).toHaveText('The wine');
@@ -224,7 +238,7 @@ test('a dish and a pour open their study cards, walk the menu in printed order, 
 
 	// The eye opener is a drink course: its button opens the Brandy Milk Punch.
 	await b.locator('.course[data-n="1"] .titem.drink').click();
-	await expect(c.locator('h2')).toHaveText('Brandy Milk Punch');
+	await expect(c.locator('#card-h')).toHaveText('Brandy Milk Punch');
 	await expect(c.locator('.tcourse .tcline')).toHaveText(['Eye Opener Cocktail']);
 	await expect(c.locator('#pourfacts-h')).toHaveText('In the glass');
 	await page.locator('.backline button.back').click();
@@ -232,7 +246,7 @@ test('a dish and a pour open their study cards, walk the menu in printed order, 
 
 	// A course that prints no pour says so, and the list's half-bottle is not on the first screen.
 	await b.locator('.course[data-n="2"] .titem.dish').click();
-	await expect(c.locator('h2')).toHaveText('Baked Apple');
+	await expect(c.locator('#card-h')).toHaveText('Baked Apple');
 	await tastingFirst(page, ['First Course. The menu prints no pairing for this course.']);
 	await page.locator('.backline button.back').click();
 	await expect(card(page)).toHaveCount(0);
@@ -240,7 +254,7 @@ test('a dish and a pour open their study cards, walk the menu in printed order, 
 	const foster = b.locator('.course[data-n="6"] .titem.dish');
 	await foster.scrollIntoViewIfNeeded();
 	await foster.click();
-	await expect(c.locator('h2')).toHaveText('World Famous Bananas Foster');
+	await expect(c.locator('#card-h')).toHaveText('World Famous Bananas Foster');
 	await tastingFirst(page, ['Fifth Course. Paired with Brennan’s Private Blend Congregation Coffee & Chicory']);
 	await page.locator('.backline button.back').click();
 	await expect(card(page)).toHaveCount(0);
@@ -248,7 +262,7 @@ test('a dish and a pour open their study cards, walk the menu in printed order, 
 	const oysters = d.locator('.course[data-n="1"] .titem.dish');
 	await oysters.scrollIntoViewIfNeeded();
 	await oysters.click();
-	await expect(c.locator('h2')).toHaveText('Grand Isle Jewel Oysters');
+	await expect(c.locator('#card-h')).toHaveText('Grand Isle Jewel Oysters');
 	await expect(c.locator('.tcourse .eyebrow')).toHaveText(`${DINNER} · $80`);
 	await tastingFirst(page, ['First Course. Suggested Pairing: Charles Lafitte Brut Champagne FR NV']);
 	await expect(c.locator('.tcourse')).toContainText('Add Wine Pairing Supplement, 4 Ounce Wine Pours $120.00');
@@ -258,7 +272,7 @@ test('a dish and a pour open their study cards, walk the menu in printed order, 
 	// From the list, the same dish is the list's: its pour line first, no tasting block.
 	await page.getByRole('button', { name: 'Entrées 14' }).click();
 	await page.locator('.study .row', { has: page.locator('.nm', { hasText: 'Eggs Hussarde' }) }).click();
-	await expect(c.locator('h2')).toHaveText('Eggs Hussarde');
+	await expect(c.locator('#card-h')).toHaveText('Eggs Hussarde');
 	await expect(c.locator('.tcourse')).toHaveCount(0);
 	await expect(c.locator('.pourline')).toContainText('Pour: Brennan’s Essential by Piper-Heidsieck Extra Brut NV');
 	await expect(c.locator('#pour-h')).toHaveText('Pour with it');

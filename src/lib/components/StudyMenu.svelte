@@ -2,7 +2,7 @@
   The study view of the house's page, /menu: what it shows when a house is
   current and Edit is off (docs/study-menus-design.md, 2.1 and 2.2). A short
   header, a sticky bar with the search and one row of section chips, then
-  the dishes as compact rows, each one button that opens its card. When the
+  expandable menu sections holding compact dish rows. When the
   house is Brennan's, its Fall 2026 section leads the chips and the groups,
   right after the tasting menus (fallFirst below).
 
@@ -12,7 +12,7 @@
   word (Signature, 86, Again, the chosen chip's aria-pressed and its count),
   and nothing here draws an allergen.
 
-  The page owns the state (query, section, meal) so its snapshot can bring
+  The page owns the state (query, section, meal, openGroups) so its snapshot can bring
   it back after the round trip to the flash cards; this component draws it
   and reports presses.
 
@@ -25,6 +25,7 @@
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { untrack } from 'svelte';
 	import type { Snippet } from 'svelte';
 	import type { House } from '$lib/house/house-schema';
 	import TeachingFolioCollection from './TeachingFolioCollection.svelte';
@@ -57,11 +58,13 @@
 		query = $bindable(''),
 		section = $bindable(''),
 		meal = $bindable(''),
+		openGroups = $bindable({}),
 		is86 = () => false,
 		canLink = false,
 		onOpen,
 		onEdit,
 		showEdit = true,
+		showResources = true,
 		onCards,
 		footer
 	}: {
@@ -70,6 +73,8 @@
 		query?: string;
 		section?: string;
 		meal?: string;
+		/** Native disclosure state, retained by the page across cards and practice. */
+		openGroups?: Record<string, boolean>;
 		is86?: (id: string) => boolean;
 		/** The network is up or the room is installed: cross-room links may be drawn (wing-links.ts, rule 3). */
 		canLink?: boolean;
@@ -78,6 +83,8 @@
 		onEdit: () => void;
 		/** False when the page draws the switch on its own h1 line (the Table's /menu does). */
 		showEdit?: boolean;
+		/** False when the parent provides the studies and videos in its own learning area. */
+		showResources?: boolean;
 		/** Go to the flash cards or a drill: the query string for /menu/quiz. */
 		onCards: (search: string) => void;
 		footer?: Snippet;
@@ -136,9 +143,25 @@
 		if (meal && !meals.includes(meal)) meal = '';
 	});
 	/* A chosen section the search or the meal has emptied stays chosen and says so. */
+	function expandGroups(keys: string[]) {
+		if (keys.some(key => !openGroups[key])) {
+			openGroups = { ...openGroups, ...Object.fromEntries(keys.map(key => [key, true])) };
+		}
+	}
+	$effect(() => {
+		// Changes of search or scope reveal the matching content. Disclosure
+		// toggles themselves must not immediately reopen what a reader closed.
+		const keys = query.trim()
+			? grouped.map(group => `section:${group.section}`)
+			: section
+				? onTastings ? menus.map(menu => `tasting:${menu.id}`) : grouped.map(group => `section:${group.section}`)
+				: [];
+		untrack(() => expandGroups(keys));
+	});
 
 	function pick(s: string) {
 		section = s;
+		if (s) expandGroups(s === tastKey ? menus.map(menu => `tasting:${menu.id}`) : [`section:${s}`]);
 	}
 
 	function pickMeal(m: string) {
@@ -169,6 +192,9 @@
 	function sectionCards(s: string) {
 		cards('mode=cards&section=' + encodeURIComponent(s));
 	}
+	const practiceLabel = $derived(section ? 'Practise this section' : meal ? 'Practise these dishes' : 'Menu flashcards');
+	const sectionScope = $derived(section ? '&section=' + encodeURIComponent(section) : '');
+	const tastingCardsHref = $derived(`${base}/flashcards?deck=tastings&run=1${meal ? '&meal=' + encodeURIComponent(meal) : ''}`);
 
 	const drinks = $derived(current.cocktails.length);
 	const wines = $derived(current.wines.length);
@@ -186,7 +212,7 @@
 	<header class="studyhead">
 		<div class="titlerow">
 			<!-- tabindex="-1": the page's jump row brings the menu to the top and puts the focus here. -->
-			<h2 id="study-h" tabindex="-1">{current.name}</h2>
+			<h2 id="study-h" tabindex="-1">The menu</h2>
 			{#if showEdit}<button class="quiet studyedit" onclick={onEdit}>{say('editOff')}</button>{/if}
 		</div>
 		<!-- One line of facts with the progress on it: the first screen at 390 by
@@ -205,12 +231,16 @@
 			</div>
 		{/if}
 		<div class="actions">
-			<button class="chip go" onclick={() => cards('mode=cards')}>{say('cards')}</button>
+			{#if onTastings}
+				<a class="chip go" href={tastingCardsHref}>{practiceLabel}</a>
+			{:else}
+				<button class="chip go" onclick={() => cards('mode=cards' + sectionScope)}>{practiceLabel}</button>
+			{/if}
 			{#if progress.againIds.length}
 				<button class="chip" onclick={() => cards('mode=cards&deck=weak')}>{say('weak', { n: progress.againIds.length })}</button>
 			{/if}
-			<button class="chip" onclick={() => cards('mode=drill')}>Drill the menu</button>
-			{#if current.id === BRENNANS_HOUSE_ID}<a class="chip" href="#illustrated-kitchen-studies">Illustrated kitchen studies <span aria-hidden="true">↓</span></a>{/if}
+			{#if !onTastings}<button class="chip" onclick={() => cards('mode=drill' + sectionScope)}>{section ? 'Drill this section' : 'Drill the menu'}</button>{/if}
+			{#if showResources && current.id === BRENNANS_HOUSE_ID}<a class="chip" href="#illustrated-kitchen-studies">Illustrated kitchen studies <span aria-hidden="true">↓</span></a>{/if}
 		</div>
 	</header>
 
@@ -239,18 +269,21 @@
 		<section class="tastings" aria-labelledby="sg-tastings">
 			<div class="grouphead">
 				<h3 class="eyebrow" id="sg-tastings">{say('tastings')} · {menus.length}</h3>
-				<a class="chip small" href="{base}/flashcards?deck=tastings&run=1">{say('cards')}<span class="vh"> for {say('deckTastings')}</span></a>
+				<a class="chip small" href={tastingCardsHref}>{say('cards')}<span class="vh"> for {say('deckTastings')}</span></a>
 			</div>
 			{#each menus as m (m.id)}
-				<TastingMenu {current} menu={m} {is86} onOpen={(id, list, from) => onOpen(id, list, from)} />
+				<details class="menu-group tasting-group" data-tasting-group={m.id} bind:open={openGroups[`tasting:${m.id}`]}>
+					<summary><span class="summary-content"><span class="summary-name">{m.name}</span><span class="summary-count">{say('courseCount', { n: m.courses.length })}</span></span></summary>
+					<TastingMenu {current} menu={m} {is86} onOpen={(id, list, from) => onOpen(id, list, from)} />
+				</details>
 			{/each}
 		</section>
 	{/if}
 
 	{#each grouped as g, gi (g.section)}
-		<section class="group" aria-labelledby="sg-{gi}">
+		<details class="group menu-group" data-section={g.section} aria-labelledby="sg-{gi}" bind:open={openGroups[`section:${g.section}`]}>
+			<summary><span class="summary-content"><span class="summary-name" id="sg-{gi}">{g.section}</span><span class="summary-count">{g.count} {g.count === 1 ? 'dish' : 'dishes'}</span></span></summary>
 			<div class="grouphead">
-				<h3 class="eyebrow" id="sg-{gi}">{g.section} · {g.count}</h3>
 				<button class="chip small" onclick={() => sectionCards(g.section)}>{say('cards')}<span class="vh"> for {g.section}</span></button>
 			</div>
 			<ul class="rows">
@@ -271,7 +304,7 @@
 					</li>
 				{/each}
 			</ul>
-		</section>
+		</details>
 	{/each}
 
 	{#if elsewhere.length}
@@ -292,14 +325,14 @@
 		</section>
 	{/if}
 
-	{#if current.id === BRENNANS_HOUSE_ID}
+	{#if showResources && current.id === BRENNANS_HOUSE_ID}
 		<section class="teaching-library" id="illustrated-kitchen-studies" aria-labelledby="studies-h">
 			<h2 id="studies-h" tabindex="-1">Illustrated kitchen studies</h2>
 			<TeachingFolioCollection />
 		</section>
 	{/if}
 
-	{#if videoCount}
+	{#if showResources && videoCount}
 		<details class="videos" id="study-videos">
 			<!-- The summary is the Videos heading the page's jump row lands on; a summary takes the focus on its own. -->
 			<summary id="videos-h">{say('videosCount', { n: videoCount })}</summary>
@@ -355,6 +388,17 @@
 	.chip.small { padding: 6px 12px; }
 	a.chip { display: inline-flex; align-items: center; text-decoration: none; box-sizing: border-box; }
 	.tastings { margin: 6px 0 10px; }
+	.menu-group { border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--card); margin-block: 8px; }
+	.menu-group > summary { min-height: 48px; box-sizing: border-box; padding: 11px 12px; cursor: pointer; color: var(--ink); }
+	.menu-group > summary::marker { color: var(--turmeric-deep); }
+	.menu-group > summary:focus-visible { outline: 2px solid var(--turmeric-deep); outline-offset: 2px; }
+	.summary-content { display: inline-flex; align-items: baseline; justify-content: space-between; gap: 10px; width: calc(100% - 20px); vertical-align: top; }
+	.summary-name { min-width: 0; overflow-wrap: anywhere; font-family: var(--display); font-size: 1.15rem; line-height: 1.35; }
+	.summary-count { flex: none; color: var(--ink-soft); font-size: .875rem; line-height: 1.7; }
+	.menu-group > .grouphead, .menu-group > .rows { margin-inline: 12px; }
+	.menu-group > .grouphead { justify-content: flex-end; padding-bottom: 8px; }
+	.menu-group[open] > summary { border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+	.actions .chip { white-space: normal; }
 
 	.bar {
 		/* Under the layout's sticky Back row (--backrow-h), never over it. */
