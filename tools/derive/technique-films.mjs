@@ -183,9 +183,9 @@ export const TECHNIQUE_FILMS = [
 		title: "Is Blanching Really Necessary? | America's Test Kitchen",
 		channel: "America's Test Kitchen",
 		watchFor:
-			'The side-by-side colour of blanched-and-shocked greens against the unshocked ones, ' +
-			'which shows why the ice bath is not optional but the step that fixes the green in ' +
-			'place.'
+			'Compare the blanched greens and the cooled sample. Consider texture and the next ' +
+			'cooking step as well as colour; shocking is useful for preparation ahead, while ' +
+			'immediate finishing may not require it.'
 	},
 	{
 		slug: 'braising',

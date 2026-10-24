@@ -10,10 +10,10 @@ test('kitchen studies stay closed until wanted, then provide a numbered key and 
 	});
 	await goto(page, '/plates');
 	const collection = page.locator('.companion-studies');
-	await expect(collection.locator('details.teaching-folio')).toHaveCount(24);
+	await expect(collection.locator('details.teaching-folio')).toHaveCount(30);
 	await expect(collection.getByRole('heading', { level: 3 })).toHaveCount(4);
 	await expect(collection.locator('img')).toHaveCount(0);
-	await page.getByRole('link', { name: 'Explore 24 kitchen studies' }).click();
+	await page.getByRole('link', { name: 'Explore 30 kitchen studies' }).click();
 	await expect(page).toHaveURL(/#companion-studies-h$/);
 	expect(artRequests).toEqual([]);
 	const egg = collection.locator('#folio-poached-egg-standard');

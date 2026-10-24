@@ -985,7 +985,7 @@
 				{
 					"key": "how",
 					"paras": [
-						"Bring the liquid, butter, salt and sugar to a full boil, so the butter has melted by the time the water boils. Off the heat, tip in all the flour at once and beat hard until it comes together. Stir it over medium heat for one to two minutes, until it pulls away from the sides in a smooth ball and leaves a thin film on the pan. This cooked paste is the panade. Drying it lets it take more egg, and more egg means a bigger puff.",
+						"Bring the liquid, butter, salt and sugar to a full boil, so the butter has melted by the time the water boils. Off the heat, tip in all the flour at once and beat hard until it comes together. Stir it over medium heat for one to two minutes, until it pulls away from the sides in a smooth ball and leaves a thin film on the pan. This cooked paste is the panade. The moisture left in this paste affects how much egg it needs. More egg is not automatically better; stop at the recipe's intended consistency.",
 						"Beat the panade briefly in a mixer to let the worst of the steam out, so the first egg does not cook. Beat in the eggs one at a time, each fully taken in before the next; the paste looks broken, then comes back glossy. Add the last egg beaten, a little at a time, and test: the paste should fall slowly from the spoon and leave a V-shaped point hanging from its edge, the dropping consistency.",
 						"Pipe onto lined trays, well spaced. Bake hot to puff, around 200 to 220°C (392 to 428°F), and keep the door shut for at least the first 15 minutes, because cool air before the walls have set collapses the shells. Once they are risen and golden, lower the oven to around 160 to 180°C (320 to 356°F) to dry the walls through. Many cooks then pierce each shell and return it briefly to let the steam out."
 					]
@@ -1000,7 +1000,7 @@
 				{
 					"key": "faults",
 					"paras": [
-						"Flat: too much egg, too cool an oven, or the door opened early; add the last egg gradually and test for the V. Collapsed after baking: underbaked, the walls had not set; bake longer at the lower heat until crisp and fully golden. Hollow but soggy inside: not dried; pierce the shells and return them to a low oven. Cracked and lopsided: the paste was too stiff, with too little egg."
+						"A loose paste or unsuitable oven conditions can produce flat shells. Poorly set or insufficiently dried walls can contribute to collapse. A soggy interior needs attention to baking and drying; cracks or uneven shape can involve consistency, piping and oven conditions. Review the formula and process before assigning a single cause from appearance."
 					]
 				},
 				{
@@ -1057,7 +1057,7 @@
 				},
 				{
 					"fault": "Collapsed after baking",
-					"cause": "Underbaked: the walls had not set when they left the oven.",
+					"cause": "The walls may not have set or dried sufficiently; review the full baking process.",
 					"fix": "Bake longer at the lower heat until the shells are crisp and golden all over, creases included."
 				},
 				{
@@ -1067,8 +1067,8 @@
 				},
 				{
 					"fault": "Cracked and lopsided",
-					"cause": "The paste was too stiff, with too little egg.",
-					"fix": "Beat in a little more egg until the paste falls from the spoon in a V."
+					"cause": "Possible contributors include a stiff paste, uneven piping or unsuitable oven conditions.",
+					"fix": "Check consistency, piping and the recipe's baking instructions before adjusting the next batch."
 				}
 			],
 			"seeAlso": {
@@ -1096,6 +1096,9 @@
 					"fd_0401",
 					"fd_0402",
 					"fd_0234"
+				],
+				"folios": [
+					"choux-structure"
 				]
 			},
 			"sources": [
@@ -1113,6 +1116,11 @@
 					"title": "Pâtisserie Durand, Paris-Brest, Visit Paris Region",
 					"url": "https://www.visitparisregion.com/en/patisserie-durand",
 					"asOf": "2026-10-12"
+				},
+				{
+					"title": "King Arthur Baking: what is pâte à choux?",
+					"url": "https://www.kingarthurbaking.com/blog/2022/10/24/what-is-pate-a-choux-why-we-love-this-versatile-french-dough",
+					"asOf": "2026-10-23"
 				}
 			],
 			"cards": [
@@ -1134,7 +1142,7 @@
 				{
 					"stem": "panade",
 					"front": "What is the panade, and why is it dried on the stove?",
-					"back": "The cooked paste of liquid, butter and flour; stirring it over heat for a minute or two lets it take more egg, and more egg gives a bigger puff."
+					"back": "The cooked paste of liquid, butter and flour. Cooking controls its moisture; add egg gradually to the required paste consistency. More egg is not automatically better: an overly loose paste spreads and may not hold its shape."
 				},
 				{
 					"stem": "dropping",
@@ -1643,7 +1651,7 @@
 			"say": "KAR-uh-mel",
 			"level": 2,
 			"kind": "pastry",
-			"summary": "Sugar boiled through its named stages, from thread to hard crack and into caramel, read by thermometer and by colour. It can be made dry or wet, is stopped with warm cream and runs through Brennan's desserts, from the Foster to the bread pudding.",
+			"summary": "Sugar syrup stages describe concentration and the cooled sample's texture. Caramel adds browning and toasted flavour. Use the recipe's measurements and method, and distinguish clear-syrup tests from colour comparisons and from sauces made with brown sugar.",
 			"guest": "Caramel is sugar cooked until it turns amber and nutty. On our bread pudding it becomes a whiskey caramel, and in The Snickers a silky caramel custard.",
 			"sections": [
 				{
@@ -1669,7 +1677,7 @@
 				{
 					"key": "family",
 					"paras": [
-						"A caramel sauce is amber caramel loosened with cream and a little butter and salt, about equal weights of sugar and cream. Crème caramel is a custard baked in a mould lined with caramel, which melts into a thin sauce as it rests and floods the plate when the custard is turned out. Praline is nuts set in caramel, then crushed or ground; nougatine is caramel with flaked almonds, rolled thin while warm and cut or shaped."
+						"Caramel sauce combines cooked sugar with liquid and, in many formulas, cream and butter. Crème caramel uses a caramel-lined mould; nougatine combines caramel and nuts. French praline or praliné often involves caramelised nuts. New Orleans pecan pralines are a different confection, commonly made with sugar and milk or cream to a softer, creamy set. Name the preparation rather than treating every praline as hard caramel."
 					]
 				},
 				{
@@ -1681,7 +1689,7 @@
 				{
 					"key": "brennans",
 					"paras": [
-						"Caramel runs through the dessert menu. Bananas Foster begins with butter, brown sugar and cinnamon bubbled to a blond caramel, kept light so it does not set into toffee on the cold ice cream. The New Orleans Bread Pudding carries a whiskey caramel, amber caramel loosened with cream and butter, the whiskey bringing vanilla and oak. The Snickers has a caramel custard, kin to crème caramel. On the Pineapple Tarte Tatin, charring drives water from the pineapple and caramelises its sugars. Which whiskey goes into the caramel is a question for the chef, and guests who avoid alcohol are told it carries whiskey."
+						"The saved dessert menu includes whiskey caramel on bread pudding and a caramel custard in The Snickers. Brennan's published Bananas Foster starts with butter, light brown sugar and cinnamon, then banana liqueur, bananas and rum. Its sauce should not be used as a pure-sucrose amber-colour standard: the starting sugar and added ingredients already affect colour. Follow the actual house recipe and confirm current ingredients at lineup."
 					]
 				}
 			],
@@ -1769,7 +1777,7 @@
 					"components": [
 						"Bananas, butter, brown sugar and cinnamon"
 					],
-					"how": "Butter and brown sugar are bubbled with cinnamon to a blond caramel, kept light because a darker caramel would harden into toffee on the cold vanilla ice cream."
+					"how": "The published Foster recipe uses butter, light brown sugar, cinnamon, banana liqueur, bananas and rum. This brown-sugar sauce is an application, not a pure-sucrose colour-stage reference."
 				},
 				{
 					"dish": "d-un9zb9af",
@@ -1831,6 +1839,9 @@
 				],
 				"terms": [
 					"methods-caramelized"
+				],
+				"folios": [
+					"sugar-caramel"
 				]
 			},
 			"sources": [
@@ -1863,13 +1874,23 @@
 					"title": "Burns and scalds, NHS",
 					"url": "https://www.nhs.uk/conditions/burns-and-scalds/",
 					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Brennan's: published Bananas Foster recipe",
+					"url": "https://www.brennansneworleans.com/bananas-foster",
+					"asOf": "2026-10-23"
+				},
+				{
+					"title": "Betty Crocker Kitchens: pecan pralines",
+					"url": "https://www.bettycrocker.com/recipes/pralines/203cd733-39db-4839-be7d-67597f403eee",
+					"asOf": "2026-10-23"
 				}
 			],
 			"cards": [
 				{
 					"stem": "stages",
 					"front": "Name the sugar stages in order, from the coolest.",
-					"back": "Thread, soft ball, firm ball, hard ball, soft crack, hard crack, then caramel: each hotter, with less water and a harder set."
+					"back": "Thread, soft ball, firm ball, hard ball, soft crack and hard crack describe clear syrup concentration and its cooled behaviour. Continued heating brings caramel browning: colour and flavour change, rather than simply producing an ever-harder sugar stage."
 				},
 				{
 					"stem": "soft-ball",
@@ -1923,8 +1944,8 @@
 				},
 				{
 					"stem": "brennans",
-					"front": "Name four places caramel shows on Brennan's dessert menu.",
-					"back": "The blond pan caramel of the Bananas Foster, the whiskey caramel on the bread pudding, the caramel custard in The Snickers and the charred pineapple of the Tarte Tatin."
+					"front": "How do the saved dessert menu's sugar preparations differ?",
+					"back": "Bananas Foster uses butter and brown sugar, so its sauce is not a plain white-sugar colour standard. The saved menu also names whiskey caramel with bread pudding, caramel custard in The Snickers and charred pineapple in the Tarte Tatin."
 				}
 			],
 			"questions": [
@@ -4047,7 +4068,7 @@
 				"Lower the oven to dry the walls through, then pierce the shells to let the steam out"
 			],
 			"distractor": "Beat in baking powder so the shells rise higher",
-			"why": "Choux rises on steam alone, with no baking powder. The panade is dried so it takes more egg, the eggs go in gradually to the V, then a hot oven puffs the shells and a cooler one dries them so they do not collapse."
+			"why": "Steam expands the paste while flour and egg proteins set its structure. Cooking the panade controls moisture; gradual egg additions set consistency. Follow the recipe oven schedule and dry the shells sufficiently to support their shape after cooling."
 		},
 		{
 			"stem": "make-an-italian-meringue",

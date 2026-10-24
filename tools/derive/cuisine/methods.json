@@ -144,7 +144,8 @@
 					"deep-and-shallow-frying"
 				],
 				"folios": [
-					"searing-standard"
+					"searing-standard",
+					"coating-frying"
 				],
 				"deck": [
 					"fd_0038",
@@ -1793,8 +1794,8 @@
 			"say": "As it reads: boil, blanch and steam.",
 			"level": 1,
 			"kind": "method",
-			"summary": "Three water methods every cook uses daily: a rolling boil in salted water for pasta and green vegetables, a brief blanch and an iced refresh to set colour and prepare for service, and steam for gentle, moist cooking that keeps shape.",
-			"guest": "Blanched means cooked briefly in boiling water and cooled fast, which keeps vegetables bright and crisp; steamed means cooked over the water, never in it, so the food stays moist.",
+			"summary": "Boiling, blanching and steaming use water in different ways. A blanch briefly heats food for a chosen purpose; cooling follows when needed for later preparation. Check texture as well as colour, and drain before the finish.",
+			"guest": "Blanching briefly cooks vegetables for their next step; steaming cooks them over water. For vegetables prepared ahead, we cool and drain them before their final finish.",
 			"sections": [
 				{
 					"key": "what",
@@ -1807,7 +1808,7 @@
 					"key": "how",
 					"paras": [
 						"Boiling means a full rolling boil: big bubbles that keep breaking even when the food goes in and the pot is stirred. Use plenty of water, about 1 litre (about 1 quart) for every 100 g (3.5 oz) of pasta or vegetables, so it comes back to the boil quickly, and salt it well, about 10 g to the litre, so the food is seasoned all through. Green vegetables boiled this way and served plainly with butter are called à l'anglaise, in the English style.",
-						"Blanching is a brief plunge in boiling water: seconds for spinach and herbs, 2 to 3 minutes for green beans. It sets the colour of green vegetables, loosens skins, tames bitterness and part-cooks food to be finished in moments during service. Refreshing, rafraîchir, follows at once: into iced water to stop the cooking and hold the green, only until cold, then drained and dried well, because clinging water thins the butter or sauce it meets later.",
+						"For green vegetables, blanch briefly in boiling water to the texture needed for the next step. Thickness, maturity and the intended finish affect the time. Test a piece rather than relying only on green colour. If preparing ahead, refresh in iced water until cold, then drain and dry well and refrigerate appropriately. For immediate finishing or eating, shocking may be unnecessary. Clinging water dilutes a butter or sauce finish.",
 						"Monder is blanching to peel. Score a small cross in the base of a tomato, plunge it into boiling water for 10 to 15 seconds, until the skin curls at the cross, then refresh it and slip the skin off; peeled, seeded and diced, it becomes a concassée. Peaches are skinned the same way after about 20 to 30 seconds, and almonds after about a minute, when the skins slip off between the fingers. Bones and meat for a white stock are blanched from cold: brought up to the boil, boiled a few minutes, then drained and rinsed of their grey scum, so the stock starts clear.",
 						"Steaming cooks food in the vapour above boiling water: a basket or perforated tray over a pan with a close lid, the food never touching the water. Steam gives up a great deal of heat as it condenses on the food, so steaming is quick yet gentle, and fish, vegetables and dumplings keep their shape and flavour instead of losing them to the water. A combi oven, combining steam with fan heat, steams whole trays at once; a parcel of leaf or paper, the method of en papillote, steams food in its own juices."
 					]
@@ -1833,7 +1834,7 @@
 				{
 					"key": "service",
 					"paras": [
-						"These words reach the dining room on menus and in questions. Blanched means briefly boiled and cooled; steamed, cooked over water, never in it; à l'anglaise, plainly boiled and buttered. A request for vegetables steamed rather than buttered goes to the kitchen, not a promise."
+						"These words reach the dining room on menus and in questions. Blanched means briefly heated, with cooling when needed for the next step; steamed, cooked over water, never in it; à l'anglaise, plainly boiled and buttered. A request for vegetables steamed rather than buttered goes to the kitchen, not a promise."
 					]
 				}
 			],
@@ -1847,8 +1848,8 @@
 					"value": "About 10 g to 1 litre (about 1 quart)"
 				},
 				{
-					"label": "Green beans to blanch",
-					"value": "2 to 3 minutes, then iced water"
+					"label": "Green vegetables to blanch",
+					"value": "Test the required texture; time varies with the vegetable, thickness and intended finish"
 				},
 				{
 					"label": "Tomatoes to peel by monder",
@@ -1866,7 +1867,7 @@
 				{
 					"fault": "Olive, dull green vegetables",
 					"cause": "Cooked too long, covered, in too little water, or with acid added early.",
-					"fix": "Boil fast in plenty of water, uncovered, refresh in iced water and add acid only at the last moment."
+					"fix": "Avoid prolonged cooking; check the intended texture. Cool promptly if preparing ahead, and add acid according to the recipe."
 				},
 				{
 					"fault": "Soggy, waterlogged vegetables after refreshing",
@@ -1921,7 +1922,8 @@
 					"combi-ovens-and-steam"
 				],
 				"folios": [
-					"simmer-standard"
+					"simmer-standard",
+					"blanch-cool-finish"
 				],
 				"deck": [
 					"fd_0044",
@@ -1945,6 +1947,11 @@
 					"title": "Brennan’s, Breakfast & Lunch menu",
 					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
 					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Wegmans: blanching and shocking vegetables",
+					"url": "https://www.wegmans.com/cooking-techniques/blanching-and-shocking-vegetables",
+					"asOf": "2026-10-23"
 				}
 			],
 			"cards": [
@@ -1966,12 +1973,12 @@
 				{
 					"stem": "blanch",
 					"front": "What is blanching, and why do it?",
-					"back": "A brief plunge in boiling water: it sets green colour, loosens skins, tames bitterness or part-cooks food so it finishes fast in service."
+					"back": "Brief heating for a purpose such as loosening skins or part-cooking food. Check the required texture; green colour alone is not an endpoint."
 				},
 				{
 					"stem": "refresh",
 					"front": "What is refreshing, rafraîchir, in the kitchen?",
-					"back": "Plunging blanched food straight into iced water to stop the cooking and hold the colour, then draining and drying it well."
+					"back": "Cooling blanched food in iced water when preparing ahead, then draining and drying it. Food going straight to its final cooking step may not need shocking."
 				},
 				{
 					"stem": "monder",
@@ -1986,7 +1993,7 @@
 				{
 					"stem": "cook-fast",
 					"front": "How do you keep green vegetables bright?",
-					"back": "Cook them fast in a large pot of fast-boiling water, uncovered so some of their acids escape in the steam, then refresh them in iced water and add acid only at the end."
+					"back": "Avoid prolonged cooking; check texture as well as colour. If preparing ahead, cool promptly, drain and refrigerate. Add acid according to the intended dish."
 				},
 				{
 					"stem": "steaming",
@@ -2013,25 +2020,25 @@
 				{
 					"stem": "q-blanch",
 					"q": "Which is a good reason to blanch a vegetable?",
-					"answer": "To set its colour and part-cook it for service",
+					"answer": "To part-cook it for a later finish",
 					"distractors": [
 						"To brown its surface for flavour",
 						"To cook it slowly until it is soft enough to purée",
 						"To preserve it for months under fat"
 					],
-					"why": "A brief plunge in boiling water sets the green, loosens skins and part-cooks food, so it can be finished in moments during service.",
+					"why": "Blanching can prepare a vegetable for its final cooking step. The target texture depends on the vegetable and the intended finish.",
 					"teaches": "blanch"
 				},
 				{
 					"stem": "q-refresh",
-					"q": "What happens straight after green beans are blanched for service?",
+					"q": "Green beans are blanched for a later finish. What follows in this cook-ahead method?",
 					"answer": "They go into iced water, then are drained",
 					"distractors": [
 						"They rest covered in the hot pot",
 						"They are tossed in lemon juice",
 						"They cool slowly in their own cooking water"
 					],
-					"why": "Refreshing in iced water stops the cooking and holds the green; draining and drying stop water thinning the butter or sauce later.",
+					"why": "Cooling promptly limits further cooking. Drain and dry the cooled beans, then refrigerate appropriately until their final preparation.",
 					"teaches": "refresh"
 				},
 				{
@@ -3788,8 +3795,8 @@
 					"key": "how",
 					"paras": [
 						"Coat it. Most fried food wears a coating that browns into the crust and protects what is inside. The standard breading, à l'anglaise in the classical kitchen (the same phrase also names plainly boiled vegetables), runs flour, egg wash and crumbs: flour dries the surface so the egg clings, and egg glues on the crumbs. Keep one hand for the dry and one for the wet. Louisiana often fries its seafood in a seasoned cornmeal dredge, often after a dip in egg, milk or buttermilk, and batter coats okra and onion rings. Let a breaded piece rest a few minutes so the coating sets.",
-						"Fry it. Fill the fryer to its line and heat the oil: about 175°C (347°F) suits most breaded seafood and vegetables, 180 to 190°C (356 to 374°F) small pieces and the second fry of French fries, and about 160°C (320°F) the first, blanching fry of potatoes. Fill the basket no more than half, lower it gently, and fry in small batches: every load drops the oil's heat, and an overloaded basket drops it so far that the food stews in fat. Let the oil recover between batches.",
-						"Drain and season. Lift the basket, shake it over the oil, and turn the food onto a rack, never onto paper, where it sits in its own steam and softens. Salt it at once, while the surface oil still holds the salt, and send it straight away: fried food is at its crispest in its first few minutes.",
+						"Fry it. Fill the fryer to its line and heat the oil: about 175°C (347°F) suits most breaded seafood and vegetables, 180 to 190°C (356 to 374°F) small pieces and the second fry of French fries, and about 160°C (320°F) the first, blanching fry of potatoes. Fill the basket no more than half, lower it gently, and fry in small batches: every load drops the oil's heat, and overloading can delay crust formation and promote uneven cooking. Let the oil recover between batches.",
+						"Drain and season. Transfer fried food to a rack in a single layer so excess oil drains and steam can escape. Avoid piling it up or covering it. Season while the coating retains enough surface oil to hold the salt, and serve promptly. Follow the recipe if it specifies another drainage method.",
 						"Care for the oil. Skim crumbs between batches, because they burn, darken the oil and flavour the next batch. Filter it at least daily, top it up with fresh oil, and keep salt and water away from it: salt speeds its breakdown, and water makes hot oil spit violently. Fresh oil is pale and smells clean. Change it when it turns dark, smells acrid or fishy, foams and will not settle, or smokes at its normal heat."
 					]
 				},
@@ -3797,7 +3804,7 @@
 					"key": "safety",
 					"paras": [
 						"Shared oil carries what was fried in it. Shrimp, fish and anything coated in wheat flour or crumbs leave their proteins in the oil, and frying does not destroy them, so food cooked in shared oil can carry traces of what went before. Many kitchens give seafood its own fryer for flavour as well as for that reason, but no server can promise how tonight's fryers are set up: questions about shellfish, coatings, shared fryers and oil always go to the kitchen.",
-						"The fryer also burns. Lower food in gently and away from you, and never fill past the line. If the oil catches fire, never use water, which flashes to steam and throws burning oil out of the fryer: turn off the heat, smother it with a lid or the kitchen's class K extinguisher, made for cooking-oil fires, and call the chef."
+						"The fryer also burns. Follow its fill line and equipment instructions. For a commercial fryer fire, raise the alarm and follow the kitchen's emergency and evacuation procedure. Never add water or move burning oil. Suppression equipment and class K extinguishers are used only as trained with a clear escape route; a lid instruction for a small pan is not a commercial fryer procedure."
 					]
 				},
 				{
@@ -3960,6 +3967,9 @@
 				"terms": [
 					"methods-fried",
 					"methods-brined"
+				],
+				"folios": [
+					"coating-frying"
 				]
 			},
 			"sources": [
@@ -3982,6 +3992,11 @@
 					"title": "Brennan’s, Bubbles at Brennan’s",
 					"url": "https://www.brennansneworleans.com/menus/bubbles-at-brennans/",
 					"asOf": "2026-10-12"
+				},
+				{
+					"title": "US Fire Administration: choosing and using fire extinguishers",
+					"url": "https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/fire-extinguishers/index.html",
+					"asOf": "2026-10-23"
 				}
 			],
 			"cards": [
@@ -4002,8 +4017,8 @@
 				},
 				{
 					"stem": "too-hot",
-					"front": "What happens when fryer oil runs too hot, and what puts out an oil fire?",
-					"back": "The outside burns before the inside cooks and the oil breaks down. Pushed further it smokes and can catch fire: turn off the heat and smother it with a lid or a class K extinguisher, never water."
+					"front": "What must you do if a commercial fryer catches fire?",
+					"back": "Raise the alarm and follow the kitchen's emergency procedure. Never add water or move burning oil. Use suppression equipment only as trained with a clear escape route, and evacuate when required."
 				},
 				{
 					"stem": "breading",
@@ -4018,12 +4033,12 @@
 				{
 					"stem": "batches",
 					"front": "Why fry in small batches?",
-					"back": "Every load drops the oil's heat; an overloaded basket drops it so far that the food stews in fat instead of crisping."
+					"back": "Food cools the oil. Smaller batches help it stay near the recipe's temperature and recover between loads, supporting even cooking and crust development."
 				},
 				{
 					"stem": "rack",
 					"front": "Why drain fried food on a rack and salt it at once?",
-					"back": "On paper it sits in its own steam and softens, and salt sticks only while the surface oil is still hot."
+					"back": "A rack in a single layer lets excess oil drain and steam escape. Season promptly while surface oil helps salt adhere; avoid covering or piling the food."
 				},
 				{
 					"stem": "oil-care",
@@ -4092,7 +4107,7 @@
 						"Into a lidded hotel pan",
 						"In a pile in the basket"
 					],
-					"why": "On a rack, air reaches every side and steam escapes; on paper or under a lid it softens, and salt sticks only while the surface is hot.",
+					"why": "A rack and a single layer allow steam and excess oil to escape. Covering or piling the food can soften its surface.",
 					"teaches": "rack"
 				},
 				{
@@ -4157,14 +4172,14 @@
 				},
 				{
 					"stem": "q-fire",
-					"q": "Oil at the fry station catches fire. What should you reach for?",
-					"answer": "A lid or the kitchen's class K extinguisher",
+					"q": "A commercial fryer catches fire. What is the appropriate first response?",
+					"answer": "Raise the alarm and follow the emergency procedure",
 					"distractors": [
-						"A jug of cold water",
-						"A wet kitchen cloth",
-						"A scoop of ice from the bar"
+						"Pour a jug of cold water over the oil",
+						"Move the fryer out through the kitchen door",
+						"Reach across the fryer with a wet cloth"
 					],
-					"why": "Water flashes to steam under burning oil and throws the fire out of the fryer. A lid cuts off the air, and a class K extinguisher is made for cooking-oil fires.",
+					"why": "Do not add water or move burning oil. Follow the trained emergency response and evacuation procedure; use suppression equipment only when trained with a clear escape route.",
 					"teaches": "too-hot"
 				}
 			]
@@ -5203,18 +5218,18 @@
 			"stem": "blanch-and-refresh-green-vegetables",
 			"entry": "boil-blanch-and-steam",
 			"title": "Blanch and refresh green vegetables",
-			"prompt": "Put the stages of blanching and refreshing green beans for service in order. One stage does not belong.",
+			"prompt": "Put the stages of blanching and refreshing green beans for a later finish in order. One stage does not belong.",
 			"steps": [
 				"Bring plenty of water, about 10 g of salt to 1 litre (about 1 quart), to a rolling boil, with a bowl of iced water beside it",
 				"Drop in the beans a handful at a time, so the water comes straight back to the boil",
-				"Boil them uncovered for 2 to 3 minutes, until bright green and just tender",
-				"Lift them straight into the iced water to stop the cooking and set the colour",
+				"Boil them uncovered, testing a piece for the texture needed at the final finish",
+				"Lift them straight into the iced water to cool them promptly",
 				"Leave them only until cold, then drain them well",
-				"Dry them on a cloth, so no clinging water thins the butter later",
-				"At service, finish them in moments in hot butter or sauce"
+				"Dry them, then refrigerate appropriately until needed, so clinging water will not thin the finish",
+				"At service, finish them in butter or sauce according to the recipe"
 			],
 			"distractor": "Put the lid on and add a squeeze of lemon to keep the beans bright",
-			"why": "The iced water waits before the beans go in, because the refresh must follow at once. A big, salted, uncovered rolling boil cooks them fast and keeps the green; a lid and early acid turn them olive. Drained and dried, they finish in moments at service."
+			"why": "This is a preparation-ahead workflow: have the iced water ready, cool promptly, then drain, dry and refrigerate appropriately. Food going directly to its next cooking step may not need shocking. Colour alone does not tell you the texture."
 		},
 		{
 			"stem": "braise-short-rib-in-red-wine",
@@ -5281,12 +5296,12 @@
 				"Dip it in the egg wash with the other hand, the wet hand",
 				"Press it into the crumbs until it is coated all over",
 				"Rest the breaded pieces a few minutes so the coating sets",
-				"With the oil at about 175°C (347°F), lower the basket gently, no more than half full",
-				"Fry until golden, then lift the basket and shake it over the oil",
+				"With the oil at the recipe's measured temperature, lower a manageable batch gently into the fryer",
+				"Check the crust and the verified cooking endpoint for the seafood, then lift and drain the basket",
 				"Turn the food onto a rack, salt it at once and send it straight away"
 			],
 			"distractor": "Fill the basket to the top so the whole order fries in one load",
-			"why": "Flour dries the surface so the egg clings, and the egg glues on the crumbs; a short rest sets the coat. A half-full basket keeps the oil hot so the crust sets fast; an overloaded one drops the heat and the food soaks up fat. Salt it on the rack while hot."
+			"why": "Flour supports adhesion, egg wash binds the crumbs, and a short rest helps the coating adhere. Manage batch size and measure oil heat. A golden crust alone does not establish the seafood cooking endpoint; check the prescribed process before draining and serving."
 		},
 		{
 			"stem": "flambe-a-pan-sauce",

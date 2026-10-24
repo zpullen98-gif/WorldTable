@@ -622,18 +622,18 @@
       "term": "Blanched",
       "section": "methods",
       "level": 2,
-      "gist": "Dipped briefly in boiling water, then usually chilled in ice water",
-      "guest": "It gets a quick dip in boiling water and then an ice bath, so the vegetables stay bright green with a little snap.",
-      "why": "A minute or two in heavily salted boiling water softens the outside, sets green color and loosens skins; the ice bath stops the cooking right there. Kitchens blanch ahead so a vegetable only needs a quick finish on the line. Blanched almonds are simply almonds with the skins slipped off.",
+      "gist": "Briefly cooked in boiling water; chilling depends on the next step",
+      "guest": "The vegetables are briefly cooked in boiling water to the texture the dish needs, then drained and finished for service.",
+      "why": "Test a piece for texture; time depends on the ingredient and size. An ice bath interrupts cooking for preparation ahead; immediate finishing or service may not need it. Drain well and follow storage controls if holding. Blanched almonds have their skins removed.",
       "origin": "From French blanchir, to whiten",
-      "notThis": "Not boiled. Boiling cooks food through in the water; blanching is a quick dip that stops short.",
+      "notThis": "Blanching describes a brief cooking step and its purpose. It may partly or fully cook an ingredient; shocking is the separate cooling step.",
       "lexiconSlug": "blanch-and-shock",
       "recipe": "baak-cheuk-gai-lan-blanched-gai-lan-with-ginger-oil",
       "confusedWith": [
         "fd_0025"
       ],
       "line": "Blanched haricots verts, brown butter, almonds",
-      "prompt": "A minute or two in heavily salted boiling water softens the outside, sets green color and loosens skins; the ice bath stops the cooking right there. Kitchens blanch ahead so a vegetable only needs a quick finish on the line. __ almonds are simply almonds with the skins slipped off."
+      "prompt": "Test a piece for texture; time depends on the ingredient and size. An ice bath interrupts cooking for preparation ahead; immediate finishing or service may not need it. Drain well and follow storage controls if holding. __ almonds have their skins removed."
     },
     {
       "id": "fd_0045",

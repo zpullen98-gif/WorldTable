@@ -1,0 +1,88 @@
+PREP TO PASS: LINKED LESSON EDITORIAL REVIEW
+Reviewed 23 October 2026
+
+Scope
+Six directly connected Cuisine lessons: methods/boil-blanch-and-steam,
+methods/frying, pastry/caramel, pastry/choux, butter-emulsions/beurre-blanc,
+and brennans/shrimp-and-grits. Corrections include their recall cards,
+multiple-choice answers and applicable ordering drills. Existing stems,
+identities and grading histories remain intact. Folio joins were added by
+the companion integration work. No sealed raw or archive files changed.
+
+What changed
+1. Blanching: test texture, distinguish cooling for preparation ahead from
+   immediate finishing, and drain/dry before sauce. Removed claims that an ice
+   bath permanently sets green colour. Applied the same distinction in the
+   active lexiconDefinitions override, the blanching film watchFor text and
+   the existing fd_0044 Floor Deck card (including its generated cloze).
+2. Frying: golden crust is not the interior cooking endpoint. Manage batches
+   and draining without a universal rack-only verdict. Commercial fryer fire
+   instructions now refer to alarm, trained response and evacuation; a small
+   pan lid instruction must not stand in for the commercial procedure.
+3. Beurre blanc: reduction quantities depend on the formula and batch size.
+   Temperature checks use a thermometer, not touching the pan. Removed an
+   automatic four-hour warm-hold allowance; texture and verified holding
+   controls are separate. The FDA figure is labelled as a model hot-holding
+   minimum for applicable foods, not a universal emulsion temperature.
+4. Choux: cooked-paste moisture controls egg demand; more egg does not promise
+   a bigger puff. Teach consistency, steam expansion and sufficiently dried
+   structure together, with faults treated as possibilities rather than a
+   diagnosis made from a picture alone.
+5. Sugar: separate syrup concentration from caramel browning; distinguish
+   New Orleans creamy pecan pralines from French caramelised-nut preparations.
+   Brennan's published Foster recipe starts with butter and brown sugar, so
+   that sauce cannot act as a white-sugar colour standard.
+6. Grit cake: ground maize and hominy grits are not universally synonymous.
+   Preserve the saved menu's fried pimento cheese grit cake, but remove
+   invented production ratios, thickness and chilling duration. Confirm the
+   actual kitchen formula, coating and controlled cooling process. Shrimp
+   C/O curl and elapsed minutes are not measured endpoints; the drill now
+   asks for the verified process and appropriate thermometer.
+
+Primary-source basis, checked 23 October 2026
+Wegmans, Blanching and Shocking Vegetables:
+https://www.wegmans.com/cooking-techniques/blanching-and-shocking-vegetables
+Preparation ahead versus direct service; texture, cooling and draining.
+
+US Fire Administration, Fire Extinguishers:
+https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/fire-extinguishers/index.html
+Training, escape route and Class K cooking-oil context. Kitchen emergency
+procedures remain equipment- and site-specific.
+
+Rouxbe, How to Make a Butter Sauce:
+https://rouxbe.com/cooking-school/how-to-make-a-butter-sauce
+Reduction, mounting and the need to manage a butter emulsion.
+
+FDA Food Code 2022, sections 3-501.16 and 3-501.19:
+https://www.fda.gov/media/164194/download?attachment
+Hot holding and conditional time-as-control requirements. Local adoption and
+the kitchen's verified procedure govern practice.
+
+FDA, Selecting and Serving Fresh and Frozen Seafood Safely:
+https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely
+Cooking checks and supporting pearly/opaque shrimp observations.
+
+King Arthur Baking, What is pate a choux? Why we love this versatile French dough:
+https://www.kingarthurbaking.com/blog/2022/10/24/what-is-pate-a-choux-why-we-love-this-versatile-french-dough
+Steam expansion and the flour/egg structure that sets around the cavity.
+
+Brennan's, Bananas Foster recipe:
+https://www.brennansneworleans.com/bananas-foster
+Used for the published ingredient sequence only. Its broad alcohol-removal
+claim was not imported into training.
+
+Betty Crocker, Pralines:
+https://www.bettycrocker.com/recipes/pralines/203cd733-39db-4839-be7d-67597f403eee
+First-party sugar/milk pecan-praline recipe, distinct from hard nut caramel.
+
+Anson Mills, Corn:
+https://ansonmills.com/grain_notes/13
+Corn products, grits and hominy distinctions.
+
+Validation
+The four authored chapters pass tools/cuisine/validate.mjs. Targeted tests in
+src/lib/prep-to-pass-editorial.test.ts guard the corrected principles across
+read, recall and ordering surfaces. Derived data and production validation
+belong to the release build, not this editorial task. This is a focused review
+of the six newly illustrated topics, not certification of all legacy content
+or a claim to know unpublished Brennan's production formulas.

@@ -4,6 +4,7 @@ import { join } from 'node:path';
 import { BRENNANS_HOUSE_ID, TEACHING_FOLIOS, TEACHING_FOLIO_GROUPS, foliosForCard, foliosForDish, foliosForLexicon, foliosForTechnique, teachingFolioAlt } from './teaching-folios';
 import { plateArtworkUrl } from './plate-artwork';
 import { COOKS_EYE_TEACHING_FOLIOS } from './teaching-folios-cooks-eye';
+import { PREP_TO_PASS_TEACHING_FOLIOS } from './teaching-folios-prep-to-pass';
 import { validFolioFocus } from './folio-focus';
 
 const read = (path: string) => JSON.parse(readFileSync(join(__dirname, path), 'utf8'));
@@ -15,12 +16,12 @@ const lexicon = new Set(read('data/lexicon.json').map((term: { slug: string }) =
 const cuisineEntries = new Set(read('data/cuisine/index.json').entries.map((entry: { chapter: string; slug: string }) => `${entry.chapter}:${entry.slug}`));
 
 describe('kitchen companion teaching manifest', () => {
-	it('keeps twenty-four independently identified studies and ninety-two views separate from the twenty reference plates', () => {
-		expect(TEACHING_FOLIOS).toHaveLength(24);
-		expect(new Set(TEACHING_FOLIOS.map(folio => folio.id)).size).toBe(24);
+	it('keeps thirty independently identified studies and 119 views separate from the twenty reference plates', () => {
+		expect(TEACHING_FOLIOS).toHaveLength(30);
+		expect(new Set(TEACHING_FOLIOS.map(folio => folio.id)).size).toBe(30);
 		expect(read('data/plates.json').plates).toHaveLength(20);
-		expect(TEACHING_FOLIOS.map(folio => folio.subjects.length)).toEqual([6, 2, 6, 6, 6, 6, 2, 2, 6, 5, 2, 2, 6, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 6]);
-		expect(TEACHING_FOLIOS.reduce((count, folio) => count + folio.subjects.length, 0)).toBe(92);
+		expect(TEACHING_FOLIOS.map(folio => folio.subjects.length)).toEqual([6, 2, 6, 6, 6, 6, 2, 2, 6, 5, 2, 2, 6, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 6, 4, 6, 6, 4, 3, 4]);
+		expect(TEACHING_FOLIOS.reduce((count, folio) => count + folio.subjects.length, 0)).toBe(119);
 	});
 	it('puts every study in exactly one non-empty learning group', () => {
 		expect(TEACHING_FOLIO_GROUPS).toHaveLength(4);
@@ -80,7 +81,7 @@ describe('kitchen companion teaching manifest', () => {
 	it('links only the intended existing Floor Deck cards and pantry terms', () => {
 		const deck = read('data/floor-deck.json').cards as Array<{ id: string; term: string }>;
 		const linked = deck.filter(card => foliosForCard(card.id).length).map(card => card.term).sort();
-		expect(linked).toEqual(['Andouille', 'Beurre Blanc', 'Béarnaise', 'Hollandaise', 'Poached', 'Seared', 'Tasso', 'Tenderloin', 'Chateaubriand', 'En Papillote', 'Crawfish', 'Oysters', 'Shrimp', 'Blue Crab', 'Boiled', 'Puréed', 'Simmered', 'Braised', 'Confit', 'Rendered', 'Brown Butter', 'Agnolotti', 'Meringue', 'Puff Pastry', 'Custard'].sort());
+		expect(linked).toEqual(['Andouille', 'Beurre Blanc', 'Béarnaise', 'Hollandaise', 'Poached', 'Seared', 'Tasso', 'Tenderloin', 'Chateaubriand', 'En Papillote', 'Crawfish', 'Oysters', 'Shrimp', 'Blue Crab', 'Boiled', 'Puréed', 'Simmered', 'Braised', 'Confit', 'Rendered', 'Brown Butter', 'Agnolotti', 'Meringue', 'Puff Pastry', 'Custard', 'Blanched', 'Fried', 'Caramelized', 'Pâte à Choux', 'Grits', 'Polenta'].sort());
 		expect(foliosForCard('fd_0369')).toEqual([]); // French andouillette is not Cajun andouille.
 		expect(foliosForLexicon('tasso-and-cajun-andouille').map(folio => folio.id)).toEqual(['louisiana-larder']);
 		expect(foliosForLexicon('unrelated')).toEqual([]);
@@ -116,6 +117,58 @@ describe('kitchen companion teaching manifest', () => {
 		expect(custard.scope).toContain('different formulas, not successive stages');
 		expect(custard.scope).toContain('does not specify Brennan’s recipe');
 		expect(COOKS_EYE_TEACHING_FOLIOS.find(folio => folio.id === 'meringue-peaks')!.scope).toContain('do not identify French, Swiss or Italian');
+	});
+	it('adds the next preparation studies to the same learning group with matching focus keys', () => {
+		expect(PREP_TO_PASS_TEACHING_FOLIOS.map(folio => folio.id)).toEqual(['blanch-cool-finish', 'coating-frying', 'sugar-caramel', 'choux-structure', 'panisse-grits-polenta', 'beurre-blanc-process']);
+		expect(PREP_TO_PASS_TEACHING_FOLIOS.reduce((sum, folio) => sum + folio.subjects.length, 0)).toBe(27);
+		for (const folio of PREP_TO_PASS_TEACHING_FOLIOS) {
+			expect(TEACHING_FOLIOS.filter(item => item.id === folio.id)).toEqual([folio]);
+			expect(folio.group).toBe('cooks-eye');
+			expect(validFolioFocus(folio.focus, folio.subjects.length), folio.id).toHaveLength(folio.subjects.length);
+			expect(new Set(folio.focus!.map(focus => JSON.stringify(focus))).size, folio.id).toBe(folio.subjects.length);
+			for (const field of ['observe', 'explain', 'apply', 'question', 'answer'] as const) expect(folio.learning?.[field].length, folio.id + ': ' + field).toBeGreaterThan(30);
+			expect(folio.sources?.length, folio.id).toBeGreaterThan(0);
+			for (const source of folio.sources!) expect(new URL(source.url).protocol).toBe('https:');
+		}
+	});
+	it('joins the preparation studies by card identity without changing related products into equivalents', () => {
+		const connections: Record<string, string[]> = {
+			fd_0044: ['blanch-cool-finish'], fd_0031: ['coating-frying'], fd_0028: ['sugar-caramel'],
+			fd_0243: ['choux-structure'], fd_0178: ['panisse-grits-polenta'], fd_0179: ['panisse-grits-polenta'],
+			fd_0205: ['brennans-sauces', 'beurre-blanc-process']
+		};
+		const deck = read('data/floor-deck.json').cards as Array<{ id: string; term: string }>;
+		for (const [id, expected] of Object.entries(connections)) {
+			expect(deck.some(card => card.id === id), id).toBe(true);
+			expect(foliosForCard(id).map(folio => folio.id), id).toEqual(expected);
+		}
+		// These pictures do not depict flour-coated chicken-fried steak,
+		// whole treated hominy kernels, a torched custard or laminated pastry.
+		expect(foliosForCard('fd_0002').map(folio => folio.id)).not.toContain('coating-frying');
+		expect(foliosForCard('fd_0007').map(folio => folio.id)).not.toContain('panisse-grits-polenta');
+		expect(foliosForCard('fd_0262').map(folio => folio.id)).not.toContain('sugar-caramel');
+		expect(foliosForCard('fd_0244').map(folio => folio.id)).not.toContain('choux-structure');
+	});
+	it('ships each new study in its authored Cuisine lesson and keeps earlier folio doors', () => {
+		const joins: Record<string, Record<string, string>> = {
+			methods: { 'boil-blanch-and-steam': 'blanch-cool-finish', frying: 'coating-frying', saute: 'coating-frying' },
+			pastry: { caramel: 'sugar-caramel', choux: 'choux-structure' },
+			'butter-emulsions': { 'beurre-blanc': 'beurre-blanc-process' },
+			brennans: { 'shrimp-and-grits': 'panisse-grits-polenta' },
+			'creole-cajun': { grillades: 'panisse-grits-polenta' }
+		};
+		for (const [chapter, lessons] of Object.entries(joins)) {
+			const authored = read('../../tools/derive/cuisine/' + chapter + '.json').entries;
+			const shipped = read('data/cuisine/ch-' + chapter + '.json').entries;
+			for (const [slug, id] of Object.entries(lessons)) {
+				for (const entries of [authored, shipped]) {
+					const entry = entries.find((item: { slug: string }) => item.slug === slug);
+					expect(entry?.seeAlso.folios, chapter + '/' + slug).toContain(id);
+				}
+			}
+		}
+		expect(read('data/cuisine/ch-methods.json').entries.find((entry: { slug: string }) => entry.slug === 'boil-blanch-and-steam').seeAlso.folios).toContain('simmer-standard');
+		expect(read('data/cuisine/ch-butter-emulsions.json').entries.find((entry: { slug: string }) => entry.slug === 'beurre-blanc').seeAlso.folios).toContain('brennans-sauces');
 	});
 	it('connects the new studies to the exact knife, searing, slicing and herb lessons', () => {
 		expect(foliosForTechnique('knife-cuts-dice-julienne-bias').map(f => f.id)).toEqual(['knife-cuts']);

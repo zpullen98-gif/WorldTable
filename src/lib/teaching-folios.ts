@@ -4,6 +4,7 @@
  */
 import { FIRST_COLLECTION_TEACHING_FOLIOS } from './teaching-folios-first-collection';
 import { COOKS_EYE_TEACHING_FOLIOS } from './teaching-folios-cooks-eye';
+import { PREP_TO_PASS_TEACHING_FOLIOS } from './teaching-folios-prep-to-pass';
 
 export interface TeachingFolio {
 	id: string;
@@ -25,7 +26,7 @@ export interface TeachingFolio {
 export const BRENNANS_HOUSE_ID = 'h-g02pdomw';
 
 export const TEACHING_FOLIO_GROUPS = [
-	{ id: 'cooks-eye', title: 'The Cook’s Eye: heat, texture and structure', intro: 'Six studies for your next practice: look closely, explain the change, then connect it to a Brennan’s dish.' },
+	{ id: 'cooks-eye', title: 'The Cook’s Eye: heat, texture and structure', intro: 'Follow a preparation from ingredients to service: look closely, explain the change, then apply it in the kitchen or at the table.' },
 	{ id: 'ingredients', title: 'Ingredients at a glance', intro: 'Explore herbs, the Louisiana larder and the seafood and parcel ingredients on Brennan’s menu.' },
 	{ id: 'knife-and-heat', title: 'Knife work and heat', intro: 'Look for even cuts, the direction of the grain, onion colour and the movement of water in the pan.' },
 	{ id: 'sauces-and-eggs', title: 'Sauces, eggs and texture', intro: 'Follow fond, emulsions and texture from the pan to the spoon, then recognise the parts of Eggs Hussarde.' }
@@ -246,7 +247,8 @@ export const TEACHING_FOLIOS: readonly TeachingFolio[] = [
 		]
 	},
 	...FIRST_COLLECTION_TEACHING_FOLIOS,
-	...COOKS_EYE_TEACHING_FOLIOS
+	...COOKS_EYE_TEACHING_FOLIOS,
+	...PREP_TO_PASS_TEACHING_FOLIOS
 ];
 
 export function foliosForTechnique(slug: string): TeachingFolio[] {
@@ -263,6 +265,12 @@ export function teachingFolioAlt(folio: TeachingFolio): string {
 
 /** Exact authored doors from existing cards, never fuzzy culinary-name matches. */
 const CARD_FOLIOS: Readonly<Record<string, readonly string[]>> = {
+	fd_0044: ['blanch-cool-finish'],
+	fd_0031: ['coating-frying'],
+	fd_0028: ['sugar-caramel'],
+	fd_0243: ['choux-structure'],
+	fd_0178: ['panisse-grits-polenta'],
+	fd_0179: ['panisse-grits-polenta'],
 	fd_0026: ['braise-confit-render'],
 	fd_0029: ['braise-confit-render'],
 	fd_0047: ['braise-confit-render'],
@@ -287,7 +295,7 @@ const CARD_FOLIOS: Readonly<Record<string, readonly string[]>> = {
 	fd_0134: ['brennans-seafood'],
 	fd_0196: ['brennans-sauces'],
 	fd_0197: ['brennans-sauces', 'hollandaise-standard'],
-	fd_0205: ['brennans-sauces']
+	fd_0205: ['brennans-sauces', 'beurre-blanc-process']
 };
 
 export function foliosForCard(id: string): TeachingFolio[] {

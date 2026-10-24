@@ -3641,9 +3641,9 @@
 				{
 					"key": "how",
 					"paras": [
-						"Grits are coarse-ground dried corn. The old Southern name is hominy grits, and some are still ground from hominy, corn soaked in an alkali to loosen its hull; stone-ground grits keep more of the germ and take longer. For a cake, simmer about 1 part grits to 4 or 5 parts water, milk or stock by volume, stirring often, until thick and tender: about 5 minutes for quick grits, 40 to 60 minutes for stone-ground. Fold in the cheese off the heat, spread the grits 2 cm (3/4 inch) deep in a lined tray and chill until firm, at least 2 hours.",
-						"Cut the set grits into cakes, dust them in flour or cornmeal and fry them at 175 to 185°C (347 to 365°F) until golden, 2 to 3 minutes a side in a shallow pan. Drain them on a rack and salt them at once. The okra chips are thin slices or strips of okra, dusted and fried in the same hot oil: cooked fast, okra turns crisp and nutty before it can turn slippery.",
-						"The Creole sauce begins with the trinity, onion, celery and green pepper, softened in fat, with diced tasso browned first in a little fat so its smoke and spice flavour the pan; tomato, stock and herbs then simmer into a coating sauce. Creole sauce, Tasso and Okra each have their own entry. The shrimp go in last, for 2 to 3 minutes, just until pink and curled into a loose C. A tight O means overcooked and rubbery."
+						"Grits are ground dried maize; some products are made from hominy and others are not. Grain type and grind affect liquid needs and cooking time. A general grit-cake method cooks grits until hydrated, spreads the mixture in a shallow tray, cools it under an appropriate controlled process and cuts it once firm. This explains the structure; the kitchen's current formula determines the pimento cheese, proportions, thickness and production schedule.",
+						"For a general fried grit cake, coating, oil temperature and time follow the chosen recipe. Fry manageable batches, drain as directed and check the intended crisp surface and heated centre. Brennan's saved menu specifies a fried pimento cheese grit cake and fried okra chips, but it does not establish the coating, fryer arrangement or production timing. Confirm those details with the kitchen.",
+						"The Creole sauce begins with the trinity, onion, celery and green pepper, softened in fat, with diced tasso browned first in a little fat so its smoke and spice flavour the pan; tomato, stock and herbs then simmer into a coating sauce. Creole sauce, Tasso and Okra each have their own entry. Shrimp readiness is checked against the verified cooking process and an appropriate thermometer. Pearly, opaque flesh is a useful sensory observation; colour, elapsed minutes or a C-shaped curl alone do not establish the endpoint."
 					]
 				},
 				{
@@ -3667,34 +3667,19 @@
 			],
 			"ratios": [
 				{
-					"label": "Grits to liquid, by volume",
-					"value": "About 1 to 4, up to 1 to 5 for stone-ground"
+					"label": "Grits and liquid",
+					"value": "Follow the selected product and kitchen formula; grind and intended finish change hydration needs"
 				},
 				{
-					"label": "A working batch",
-					"value": "160 g (1 cup) of grits to about 1 litre (about 1 quart) of liquid"
-				},
-				{
-					"label": "Depth in the tray",
-					"value": "2 cm (3/4 inch), chilled at least 2 hours"
+					"label": "Grit cake preparation",
+					"value": "Confirm the house portion thickness, controlled cooling process, coating and frying method"
 				},
 				{
 					"label": "Shrimp in the sauce",
-					"value": "2 to 3 minutes, until pink and curled into a loose C"
+					"value": "Use the verified cooking process and an appropriate thermometer; curl is not an endpoint"
 				}
 			],
-			"temps": [
-				{
-					"label": "Frying oil, low end, for the grit cakes and okra",
-					"c": 175,
-					"f": 347
-				},
-				{
-					"label": "Frying oil, high end",
-					"c": 185,
-					"f": 365
-				}
-			],
+			"temps": [],
 			"faults": [
 				{
 					"fault": "The cake falls apart in the oil",
@@ -3704,12 +3689,12 @@
 				{
 					"fault": "A greasy cake",
 					"cause": "Oil too cool, often from crowding the pan.",
-					"fix": "Hold the oil at 175 to 185°C (347 to 365°F) and fry in small batches."
+					"fix": "Check the recipe's oil temperature and batch loading; do not diagnose oil temperature from appearance alone."
 				},
 				{
 					"fault": "Rubbery shrimp",
-					"cause": "Cooked past the loose C into a tight O.",
-					"fix": "Add the shrimp last and take them off the heat as soon as they turn pink."
+					"cause": "Excess cooking can toughen shrimp, but curl shape alone does not diagnose the cause.",
+					"fix": "Follow the verified cooking process and measure appropriately; use texture and opacity as supporting observations."
 				},
 				{
 					"fault": "Slimy okra chips",
@@ -3771,6 +3756,9 @@
 					"cured-tasso",
 					"southern-hominy",
 					"methods-fried"
+				],
+				"folios": [
+					"panisse-grits-polenta"
 				]
 			},
 			"sources": [
@@ -3783,6 +3771,16 @@
 					"title": "Shrimp and grits, Charleston Magazine",
 					"url": "https://charlestonmag.com/features/shrimp_grits",
 					"asOf": "2026-10-12"
+				},
+				{
+					"title": "FDA: selecting and serving seafood safely",
+					"url": "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely",
+					"asOf": "2026-10-23"
+				},
+				{
+					"title": "Anson Mills: corn and hominy distinctions",
+					"url": "https://ansonmills.com/grain_notes/13",
+					"asOf": "2026-10-23"
 				}
 			],
 			"cards": [
@@ -3804,17 +3802,17 @@
 				{
 					"stem": "grits",
 					"front": "What exactly are grits made from?",
-					"back": "Coarse-ground dried corn, the hominy grits of the old South, simmered slowly in liquid until thick and creamy."
+					"back": "Ground dried maize. Some grits are made from hominy, which has undergone alkaline treatment, but not all grits are hominy grits. The product and recipe determine the cooked texture."
 				},
 				{
 					"stem": "ratio",
-					"front": "What ratio of grits to liquid sets a firm cake?",
-					"back": "About 1 part grits to 4 or 5 parts liquid by volume, cooked thick, spread 2 cm (3/4 inch) deep and chilled until firm."
+					"front": "What determines the liquid ratio and thickness for a grit cake?",
+					"back": "The type and grind of grits and the intended recipe. Follow the kitchen's current formula, controlled cooling process and portion standard rather than a universal ratio."
 				},
 				{
 					"stem": "fry-cake",
-					"front": "How is the grit cake fried crisp rather than greasy?",
-					"back": "Dusted and fried at 175 to 185°C (347 to 365°F) until golden, in small batches, then drained on a rack and salted at once."
+					"front": "What needs confirming before you explain how Brennan's grit cake is fried?",
+					"back": "Confirm the coating, fryer arrangement, oil temperature and cooking method with the kitchen. The saved menu establishes a fried pimento cheese grit cake, not a complete production formula."
 				},
 				{
 					"stem": "trinity",
@@ -3823,8 +3821,8 @@
 				},
 				{
 					"stem": "shrimp",
-					"front": "How do you know shrimp are cooked and not overcooked?",
-					"back": "They turn pink and curl into a loose C in 2 to 3 minutes; a tight O means they have gone rubbery."
+					"front": "Why is a shrimp's curl alone insufficient to judge cooking?",
+					"back": "A C or O shape is not a measurement. Check the verified cooking process and an appropriate thermometer; pearly, opaque flesh supports sensory assessment."
 				},
 				{
 					"stem": "okra",
@@ -3876,31 +3874,31 @@
 						"Ground long-grain rice",
 						"Dried potato flakes"
 					],
-					"why": "Grits are dried corn ground coarse, the old hominy grits of the South, simmered slowly until thick and creamy.",
+					"why": "Grits are ground dried maize. Some are hominy grits, but the names are not interchangeable for every product.",
 					"teaches": "grits"
 				},
 				{
 					"stem": "q-ratio",
-					"q": "Roughly how much liquid do grits need, by volume, to set a firm cake?",
-					"answer": "4 to 5 parts liquid to 1 of grits",
+					"q": "What determines the liquid ratio used for a grit cake?",
+					"answer": "The grits product and intended recipe",
 					"distractors": [
-						"1 part liquid to 1 of grits",
-						"2 parts liquid to 1 of grits",
-						"10 parts liquid to 1 of grits"
+						"One universal ratio for every kind of grits",
+						"The colour of the corn alone",
+						"The size of the serving plate"
 					],
-					"why": "Four to five parts liquid cooks the grits tender and thick enough to set firm when chilled; much more and the cake will not hold.",
+					"why": "Product, grind and intended finish affect hydration. Follow the actual formula and controlled cooling process for the required cake.",
 					"teaches": "ratio"
 				},
 				{
 					"stem": "q-shrimp",
-					"q": "What shape tells you a shrimp is cooked but not overcooked?",
-					"answer": "A loose C",
+					"q": "Which evidence should guide the cooking check for shrimp?",
+					"answer": "A verified process and an appropriate thermometer",
 					"distractors": [
-						"A tight O",
-						"Fully straight",
-						"A flat spiral"
+						"A loose C shape on every shrimp",
+						"Pink colour after exactly three minutes",
+						"A tight O shape before serving"
 					],
-					"why": "Shrimp curl as they cook; a loose C in 2 to 3 minutes is done, and a tight O has gone rubbery.",
+					"why": "Shape and colour cannot supply a measured cooking endpoint. Use the verified process, with texture and opacity as supporting observations.",
 					"teaches": "shrimp"
 				},
 				{
@@ -3917,14 +3915,14 @@
 				},
 				{
 					"stem": "q-fry-cake",
-					"q": "At what oil temperature are the grit cakes fried?",
-					"answer": "175 to 185°C (347 to 365°F)",
+					"q": "Where do you confirm the grit cake's current coating and frying method?",
+					"answer": "With the kitchen and current formula",
 					"distractors": [
-						"120 to 130°C (248 to 266°F)",
-						"220 to 230°C (428 to 446°F)",
-						"100°C (212°F)"
+						"From a generated picture of the plate",
+						"From another restaurant's grits recipe",
+						"From the colour of the cake alone"
 					],
-					"why": "That heat browns the coating fast while the inside warms through; cooler oil soaks in and hotter oil burns the crust.",
+					"why": "The saved menu names the fried pimento cheese grit cake, but does not establish all production details. Confirm them before describing the method.",
 					"teaches": "fry-cake"
 				},
 				{

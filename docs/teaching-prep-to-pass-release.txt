@@ -1,0 +1,53 @@
+THE COOK'S EYE: FROM PREPARATION TO SERVICE
+23 October 2026
+
+This continues the visual audit's six Next collection briefs (07 through 12).
+It adds six studies to the existing Cook's Eye group, keeping one learning
+destination in Brennan's > Kitchen studies > Illustrated kitchen studies.
+The Plates library (/plates) and matching lesson, term and revealed card
+surfaces use the same studies. Existing grade and content identities remain.
+
+The six studies and their 27 numbered views
+1. Blanch, cool, drain and finish: a prep-ahead green-bean example (4 views).
+2. Coating and frying: breaded chicken versus a separate courgette batter
+   method, with rack drainage and a measurement reminder (6 views).
+3. Sugar: cooled soft-ball, firm-ball and hard-crack samples, separately
+   compared with three caramel colours (6 views).
+4. Choux: panade, egg-enriched paste, piping and a hollow baked shell (4 views).
+5. Panisse, grits and polenta: chickpea versus maize and the distinction
+   between the ingredient and a creamy, set or fried serving form (3 views).
+6. Beurre blanc: reduction, butter incorporation, cohesive sauce and a
+   separate failed emulsion comparison (4 views).
+
+The Cook's Eye now contains twelve studies. The full companion collection
+contains thirty studies and 119 views; the twenty reference plates remain
+separate. Whole-image, numbered focus, enlargement, Observe/Explain/Apply
+and concealed recall controls are reused, including offline recovery.
+
+Accuracy and artwork
+These original generated illustrations teach general culinary methods.
+They do not prescribe Brennan's unpublished quantities, production formulas
+or final plating. The pimento-cheese grit cake in the house notes is explicitly
+distinguished from the creamy grits example. Choux is a general pastry study.
+Ingredients, allergens, doneness and safety cannot be inferred from the image.
+The keys explain which additional checks the learner must make.
+
+All six images were generated with the built-in image_gen tool and inspected
+individually by two reviewers. Choux paste was corrected to a hanging taper;
+grits and polenta were corrected to creamy ground-maize textures. Existing
+artwork was not replaced. Twelve versioned full/thumbnail WebPs total
+1,057,222 bytes and remain outside the app's offline core precache.
+Full images are 1536 by 1024; thumbnails 420 by 280. Food is shown in neutral
+light with ivory, forest-green and brass framing and subtle compass corners.
+
+Records
+teaching-prep-to-pass-prompts.txt: all initial and targeted edit prompts.
+teaching-prep-to-pass-assets.json: paths, master hashes and encoding details.
+teaching-prep-to-pass-sources.txt: primary sources and image/key review.
+culinary-prep-to-pass-corrections.txt: connected lesson, card and drill edits.
+
+Validation
+Source derivation, Cuisine contracts, asset/route/card/lesson joins, mobile
+day/night views, recall isolation, return navigation and cached artwork are
+checked before publishing. Runtime counts are derived from the manifest.
+Release check results and commit IDs are recorded in the completion message.

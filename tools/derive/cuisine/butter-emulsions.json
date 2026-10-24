@@ -23,9 +23,9 @@
 				{
 					"key": "how",
 					"paras": [
-						"Put the wine, vinegar and shallot in a small, heavy pan and boil it until only about 2 tbsp (30 ml) of syrupy liquid remains, five to eight minutes. If the house adds cream, it goes in now and is reduced by half. Turn the heat to its lowest. The butter should be cold from the fridge, cut into 2 cm cubes.",
-						"Whisk in two or three cubes. As they soften and the sauce turns creamy, add two more, whisking or swirling the pan all the while, and lift the pan off the heat whenever it feels hot to the hand. Keep going until all the butter is in, three to five minutes in all. Season with salt, white pepper and a little lemon, then strain out the shallot or leave it in for a rustic sauce.",
-						"Hold it warm, roughly 55 to 60°C (131 to 140°F), on the back of the stove or in a bain-marie, a pan set in warm water. Much hotter and the emulsion loosens and the butterfat oils out; let it cool towards body heat and the fat begins to set, so the sauce thickens, dulls and splits when it is warmed again. That window straddles the FDA Food Code's hot-holding line of 57°C (135°F), so kitchens make it in small batches and, under the Food Code's time rule, discard each within four hours, sooner if the chef's written schedule says so."
+						"For this general method, reduce white wine, vinegar and shallot to the amount specified by the formula; do not reduce the pan dry. If the formula includes cream, add and reduce it as directed. Prepare the butter in small cold cubes. The quantities and reduction volume depend on the batch.",
+						"Whisk in two or three cubes. As they soften and the sauce turns creamy, add two more, whisking or swirling the pan all the while, and lift the pan off the heat as needed to control the heat, using a protected grip and a thermometer for temperature checks. Keep going until all the butter is in, three to five minutes in all. Season with salt, white pepper and a little lemon, then strain out the shallot or leave it in for a rustic sauce.",
+						"Make small batches and follow the recipe's measured temperature for a smooth emulsion. Texture and food-safety control are separate checks. For a time/temperature control for safety food, the FDA model hot-holding minimum is 57°C (135°F). Time without temperature control requires a compliant written procedure prepared in advance, the required starting conditions, time marking and disposal; it is not automatic permission to keep any sauce warm for four hours. Follow the locally applicable requirements and the kitchen's verified procedure."
 					]
 				},
 				{
@@ -62,39 +62,30 @@
 			],
 			"ratios": [
 				{
-					"label": "Wine, vinegar and shallot",
-					"value": "120 ml (1/2 cup) dry white wine, 60 ml (1/4 cup) white wine vinegar and 2 shallots, finely chopped"
+					"label": "Reduction",
+					"value": "Use the recipe proportions and remaining liquid for its batch size; do not reduce every batch to the same volume"
 				},
 				{
-					"label": "Reduce to",
-					"value": "About 2 tbsp (30 ml) of syrupy liquid"
+					"label": "Butter additions",
+					"value": "Add cold butter gradually while controlling the heat and maintaining a continuous, creamy sauce"
 				},
 				{
-					"label": "Butter",
-					"value": "225 g (8 oz) cold unsalted butter, in 2 cm cubes"
-				},
-				{
-					"label": "Cream, if the house uses it",
-					"value": "2 tbsp (30 ml) double cream, reduced by half before the butter"
+					"label": "Cream, when specified",
+					"value": "Some formulas include cream; follow the chosen recipe rather than assuming a house formula"
 				}
 			],
 			"temps": [
 				{
-					"label": "Hold the finished sauce, low end",
-					"c": 55,
-					"f": 131
-				},
-				{
-					"label": "Hold the finished sauce, upper end",
-					"c": 60,
-					"f": 140
+					"label": "FDA model hot-holding minimum for a time/temperature control for safety food; not a universal emulsion target",
+					"c": 57,
+					"f": 135
 				}
 			],
 			"faults": [
 				{
 					"fault": "Oiled out: thin, greasy and separated",
 					"cause": "Held too hot, or the butter added faster than the sauce could take it.",
-					"fix": "Work over the lowest heat, a few cubes at a time, lifting the pan when it feels hot. A sauce that has fully split needs the rescue taught with how emulsions break."
+					"fix": "Control gentle heat with the recipe and a thermometer. Add butter gradually; if fully separated, use the relevant sauce-specific recovery method."
 				},
 				{
 					"fault": "Set: thick, dull and grainy",
@@ -104,7 +95,7 @@
 				{
 					"fault": "Thin and weak",
 					"cause": "The reduction was not boiled down far enough, so too much water dilutes the butter and the acid.",
-					"fix": "Reduce to about 2 tbsp (30 ml) before the butter goes in, and taste it: it should be sharp."
+					"fix": "Use the formula's reduction volume for the batch, then taste and check the finished body. Do not apply one reduction volume to every batch size."
 				},
 				{
 					"fault": "Flat, heavy or too salty",
@@ -144,7 +135,8 @@
 					"beurre-blanc-the-cold-butter-mount"
 				],
 				"folios": [
-					"brennans-sauces"
+					"brennans-sauces",
+					"beurre-blanc-process"
 				],
 				"deck": [
 					"fd_0205"
@@ -178,6 +170,16 @@
 					"title": "Brennan’s, Dinner menu",
 					"url": "https://www.brennansneworleans.com/menus/dinner/",
 					"asOf": "2026-09-26"
+				},
+				{
+					"title": "Rouxbe: how to make a butter sauce",
+					"url": "https://rouxbe.com/cooking-school/how-to-make-a-butter-sauce",
+					"asOf": "2026-10-23"
+				},
+				{
+					"title": "FDA Food Code 2022, sections 3-501.16 and 3-501.19",
+					"url": "https://www.fda.gov/media/164194/download?attachment",
+					"asOf": "2026-10-23"
 				}
 			],
 			"cards": [
@@ -198,8 +200,8 @@
 				},
 				{
 					"stem": "reduction",
-					"front": "How far is the wine, vinegar and shallot reduced?",
-					"back": "To about 2 tbsp (30 ml) of syrupy liquid, which gives the sauce its sharpness and keeps the water low."
+					"front": "What determines how far to reduce the wine, vinegar and shallot?",
+					"back": "The formula and batch size determine the reduction volume. Keep the required liquid and acidity; do not assume every batch reduces to two tablespoons."
 				},
 				{
 					"stem": "cold-butter",
@@ -208,13 +210,13 @@
 				},
 				{
 					"stem": "window",
-					"front": "At what temperature is a beurre blanc held?",
-					"back": "Warm, roughly 55 to 60°C (131 to 140°F). Much hotter and the butter risks oiling out; cooler and the butterfat sets. The low end sits below the 57°C (135°F) hot-holding line, so kitchens make it in small batches and replace it within four hours, sooner if the chef says."
+					"front": "How do you manage beurre blanc texture and food-safety controls?",
+					"back": "Use the recipe's measured temperature for the emulsion and the kitchen's verified food-safety procedure. A time-control method needs written conditions and time marking; a warm sauce does not automatically get four hours."
 				},
 				{
 					"stem": "split-sign",
-					"front": "What does an overheated beurre blanc look like?",
-					"back": "Thin, greasy and separated, with oil pooling, because the heat let the drops of butterfat run together."
+					"front": "What does a separated beurre blanc look like?",
+					"back": "Separate fat pools around a thinner liquid. Review heat, proportions and butter addition; the appearance alone cannot establish one cause."
 				},
 				{
 					"stem": "cream",
@@ -252,26 +254,26 @@
 				},
 				{
 					"stem": "q-window",
-					"q": "At roughly what temperature should a beurre blanc be held for service?",
-					"answer": "55 to 60°C (131 to 140°F)",
+					"q": "What governs holding a smooth beurre blanc safely for service?",
+					"answer": "A verified holding or time-control procedure",
 					"distractors": [
-						"30 to 35°C (86 to 95°F)",
-						"80 to 85°C (176 to 185°F)",
-						"100°C (212°F), at a boil"
+						"A four-hour allowance for every warm sauce",
+						"A smooth appearance with no temperature check",
+						"The warmth of the pan checked by hand"
 					],
-					"why": "Kitchens hold it in that window: much hotter and it risks oiling out, cooler and it sets. Below 57°C (135°F) it sits under the hot-holding line, so it is made in small batches and replaced within four hours.",
+					"why": "Texture is not a safety verdict. Follow the applicable holding rules or a compliant written time-control procedure with its required checks.",
 					"teaches": "window"
 				},
 				{
 					"stem": "q-reduction",
-					"q": "Before any butter goes in, how far is the wine, vinegar and shallot boiled down?",
-					"answer": "To about 2 tbsp (30 ml) of syrupy liquid",
+					"q": "What decides the final volume of the wine and shallot reduction?",
+					"answer": "The formula and the batch size",
 					"distractors": [
-						"By about a quarter, leaving it thin",
-						"Until the pan is dry and the shallot browns",
-						"Not at all: the butter goes into cold wine"
+						"Two tablespoons for every size of batch",
+						"A dry pan and browned shallots",
+						"The colour of the butter cubes"
 					],
-					"why": "A short, sharp reduction gives the sauce its acid backbone and keeps water low, so the butter makes a sauce rather than a thin broth.",
+					"why": "Reduction balances liquid and acidity for the specified amount of butter. One fixed volume cannot serve every batch size.",
 					"teaches": "reduction"
 				},
 				{
@@ -288,14 +290,14 @@
 				},
 				{
 					"stem": "q-oiled",
-					"q": "A beurre blanc on the stove has turned thin and greasy, with oil pooling at the edge. What went wrong?",
-					"answer": "It got too hot",
+					"q": "A beurre blanc has visible fat pooling around a thin liquid. What can you establish from that observation?",
+					"answer": "The emulsion has separated",
 					"distractors": [
-						"It was held too cool",
-						"The reduction had too much vinegar",
-						"The reduction was not boiled down far enough"
+						"The pan certainly reached boiling",
+						"The reduction certainly lacks vinegar",
+						"The sauce certainly contains egg yolks"
 					],
-					"why": "Heat lets the drops of butterfat run together, so the gloss turns to a greasy pool; too cool a sauce sets thick and dull instead.",
+					"why": "The separated appearance is visible; its exact cause is not. Review the recipe, proportions, heat and addition of butter before recovery.",
 					"teaches": "split-sign"
 				},
 				{
@@ -3971,16 +3973,16 @@
 			"title": "Mount a beurre blanc",
 			"prompt": "Put the stages of a classic beurre blanc in order. One stage does not belong.",
 			"steps": [
-				"Boil the white wine, white wine vinegar and chopped shallot until about 2 tbsp (30 ml) of syrupy liquid remains",
-				"If the house uses cream, add a spoonful now and reduce it by half",
+				"Reduce the wine, vinegar and chopped shallot to the recipe's specified remaining liquid for its batch size",
+				"If the chosen formula includes cream, add and reduce it as that recipe directs",
 				"Turn the heat to its lowest, with the butter cold from the fridge in 2 cm cubes",
 				"Whisk in two or three cubes and let them soften into a creamy sauce",
-				"Add two more cubes as each lot turns creamy, lifting the pan whenever it feels hot",
+				"Add two more cubes as each lot turns creamy, adjusting gentle heat with a protected grip",
 				"Season with salt, white pepper and a little lemon, and strain out the shallot or leave it in for a rustic sauce",
-				"Hold it warm, 55 to 60°C (131 to 140°F), in a bain-marie or at the back of the stove"
+				"Serve promptly, or follow the verified holding procedure with measured conditions and required time marking"
 			],
 			"distractor": "Whisk two egg yolks into the reduction to bind the butter",
-			"why": "The reduction is boiled down hard first, with any cream reduced in it, and only then does the heat drop. Cold butter goes in a few cubes at a time so each lot emulsifies before the next. A beurre blanc takes no yolk: the butter's own milk proteins hold it."
+			"why": "Prepare the reduction before lowering the heat and mounting cold butter gradually. Control heat rather than judging it by touching the pan. A beurre blanc needs no egg yolk. Recipe texture and a verified food-safety holding procedure are separate checks."
 		},
 		{
 			"stem": "clarify-butter",

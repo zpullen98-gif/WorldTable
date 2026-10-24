@@ -1,0 +1,117 @@
+THE COOK'S EYE: FROM PREPARATION TO THE PASS
+Content and source review, 23 October 2026
+
+Scope
+Six general illustrations complete the visual audit's next-collection briefs
+07–12. They use 27 numbered views: 4 + 6 + 6 + 4 + 3 + 4. The numbers refer to
+views, not a requirement to follow every panel in one production sequence.
+Existing IDs and grades remain untouched. All culinary prose is original
+paraphrase; no source's recipe is copied. Source URLs are presented in the app.
+Final generated compositions and focus rectangles were visually reviewed on
+23 October 2026; see the acceptance notes below. Asset integration and browser
+checks are tracked separately by the release reviewer.
+
+BLANCH, COOL, DRAIN AND FINISH
+https://www.wegmans.com/cooking-techniques/blanching-and-shocking-vegetables
+Verified the boiling, sample-checking and optional prep-ahead ice-bath sequence.
+Cooling is not mandatory for immediate service. No universal minutes or water
+salt concentration is prescribed in this comparison. Exact ingredient sizes,
+texture and safe holding remain recipe/process checks. No automatic house dish
+join: the current pack does not name haricots verts on a dish.
+
+COATING AND FRYING
+https://rouxbe.com/recipes/1523-chicken-parmigiana-pollo-alla-parmigiana
+Verified flour, egg, crumb order and rack drainage. This source finishes its
+chicken in an oven; the illustration does not import that recipe's brief pan
+time as a safe endpoint for an entire cutlet.
+https://www.tefal.com/recipe/Courgette-tempura/r/108891
+Verified courgettes coated in a liquid batter and fried. The folio uses this
+for the coating distinction; it does not copy the formula, supplier's slicing
+device or cooking time. Batch size and rack drainage follow the Rouxbe method.
+https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/food-thermometers
+Verified that colour is not a dependable indication of food safety. The cutlet
+image cannot substitute for measuring internal temperature. House applications
+name only actual fried shrimp/pickle dishes, with their coating to be confirmed.
+
+SUGAR AND CARAMEL
+https://annex.exploratorium.edu/cooking/bread/sugar-stages.html
+Verified soft-ball, firm-ball and hard-crack tests and their sea-level ranges.
+The upper images show cooled test results; they do not show hot sugar being
+handled. The lower row is a separate caramel-colour comparison. Numeric values
+remain editable HTML, and are not a thermometer printed by a generator.
+https://extension.colostate.edu/resource/candy-making-at-high-elevation/
+Verified that altitude changes the recipe's required temperature and that
+sugar concentration is the target. Different references give slightly different
+stage ranges, so this study explicitly attributes its values to the Exploratorium.
+No fixed temperature is assigned to the image's three caramel colours. The
+Brennan's application is New Orleans Bread Pudding, whose saved description
+specifies whiskey caramel and pralines; it does not assert a house formula.
+
+CHOUX STRUCTURE
+https://www.kingarthurbaking.com/recipes/pate-a-choux-recipe
+Verified cooked paste, cooling before gradual egg addition and pipeable result.
+https://www.kingarthurbaking.com/blog/2018/06/12/pate-a-choux-perfected
+Verified steam expansion, shell setting and drying. A tapered fall from the
+spatula is an illustrative consistency cue, not a universal angle, egg quantity
+or substitute for following a tested formula. No house dish is asserted.
+
+PANISSE, GRITS AND POLENTA
+https://www.davidlebovitz.com/panisses-1/
+Verified chickpea-flour base and cook/set/cut/fry method. Shapes vary.
+https://www.ansonmills.com/recipes/489
+https://www.ansonmills.com/recipes/532
+https://www.ansonmills.com/recipes/618
+Verified separate maize-grits, soft-polenta and hominy-grits preparations.
+Do not equate white grits with hominy or yellow maize with all polenta.
+The displayed examples are maize preparations; rice grits remain separate.
+Brennan's pack matches:
+- d-iwmu4qf7 Fish Bouillabaisse: Chickpea Panisse.
+- d-bqznncn6 New Orleans Shrimp & Grits: fried pimento cheese grit cake.
+- d-594lmt4x Cheddar Grits: grits with cheddar.
+Blackened Tofu d-377dkkse explicitly names Two Brooks Farm rice grits and is
+excluded from this maize study. The creamy bowl is not substituted for the
+house's grit cake. Image appearance does not approve any allergen conclusion.
+
+BEURRE BLANC
+https://archive.jamesbeard.org/recipes/beurre-blanc
+Verified a wine/vinegar/shallot reduction retaining liquid, gradual chilled
+butter addition and excess-heat separation. No creation legend is repeated.
+No universal rescue is prescribed. The house application is Redfish Véronique
+d-s1bqzuks with preserved-lemon beurre blanc; that variation is not specified
+by the general illustration.
+
+Related-text checks for the integrating reviewer
+The integrating review is updating older blanching text: an ice bath is not
+mandatory for immediate service and it does not permanently fix green colour.
+The lexicon definition and film watch-for require the same correction as the
+cuisine lesson. Ensure no new image is placed before a
+graded recall answer is revealed. Do not map maize artwork to rice grits, or a
+chicken-breading picture to an assertion of the house shrimp/pickle formula.
+
+VISUAL ACCEPTANCE
+All six final compositions were checked against the 27 numbered teaching keys.
+- Blanching: raw beans, boiling water, ice water, then drainage and a finished
+  portion. The image cannot establish texture, holding safety or exact timing.
+- Coating: the chicken flour/egg/crumb/cooked sequence is separate from the
+  courgette batter example. The thermometer displays no invented reading.
+- Sugar: cooled soft-ball, firm-ball and brittle-thread samples remain separate
+  from the pale/amber/dark caramel row. The image contains no generated numeric
+  temperature instructions. The HTML provides the source-attributed guides.
+- Choux: the revised second view shows a tapered hanging V, replacing the
+  earlier continuous ribbon. The baked puff shows an empty cavity; filling is
+  not confused with the shell.
+- Panisse/grits/polenta: the earlier pearl-like maize textures were rejected.
+  The final revision uses irregular dry fragments and cohesive creamy cooked
+  textures with small grains. It is approved as a general selected comparison,
+  not as proof that all grits are white or all polenta is yellow. The creamy
+  grits image is not the house's fried pimento-cheese grit cake.
+- Beurre blanc: the reduction, gradual butter addition and cohesive sauce are
+  distinct from the last view's visible pools of separated fat.
+Focus windows retain the corresponding numbers and food subjects. Alt text was
+aligned to the actual vessels and revised choux shape. The images teach the
+specified general distinctions; they do not certify house plating, allergens,
+temperatures or food safety.
+
+Local content checks passed: TypeScript transpilation, six folios, 27 subjects,
+matching focus counts, bounded focus rectangles, all five learning fields and
+HTTPS source links. No build or deployment was performed by this content pass.

@@ -1,5 +1,20 @@
 # The World Table
 
+## Cook's Eye, second collection, 23 October 2026
+
+`teaching-folios-prep-to-pass.ts` adds six studies and 27 views to the existing
+Cook's Eye group: blanching, coatings, sugar, choux, panisse/grits/polenta and
+beurre blanc. The companion total is now 30 studies and 119 views. Exact Floor
+Deck and Cuisine joins carry them into revealed study answers and readings.
+Cuisine's folio validator reads this fourth manifest too. Source-backed keys,
+prompts, image review and editorial changes are in `docs/teaching-prep-to-pass-*`
+and `docs/culinary-prep-to-pass-corrections.txt`.
+
+Run both data derivations after edits. Existing course/card/dish IDs and grades
+remain intact. `prep-to-pass-editorial.test.ts` covers the corrected technique
+claims; `prep-to-pass-studies.spec.ts` covers the new art's study flow and offline
+behaviour. Image assets remain versioned, lazy and outside the core precache.
+
 ## Connected visual training and the Cook's Eye, 23 October 2026
 
 Six studies in `teaching-folios-cooks-eye.ts` cover brown butter, custards,
