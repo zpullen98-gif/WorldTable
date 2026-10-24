@@ -1055,6 +1055,7 @@
 							front={shown.card.front}
 							back={shown.card.back}
 							eyebrow="Cuisine · {shown.entry.title}"
+							folioIds={shown.entry.seeAlso.folios}
 							flipped={!!fc.flipped}
 							readHref="{base}/cuisine?ch={encodeURIComponent(shown.chapter)}&e={encodeURIComponent(shown.entry.slug)}"
 						/>

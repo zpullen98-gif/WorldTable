@@ -61,7 +61,7 @@ import { foundationEntryById } from './foundations';
  */
 
 const ROOT = join(__dirname, '..', '..');
-const TODAY = '2026-10-20';
+const TODAY = '2026-10-23';
 const seed = loadSet();
 const refs: Refs = loadRefs({ roster: false });
 

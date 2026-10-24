@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import type { resolveFoundation } from '$lib/foundations';
+	import FoundationVisuals from './FoundationVisuals.svelte';
 	let { reading }: { reading: ReturnType<typeof resolveFoundation> } = $props();
 </script>
 
@@ -10,6 +11,7 @@
 	{#if reading.kitchen}<section><h3>In the kitchen</h3><p>{reading.kitchen}</p></section>{/if}
 	{#if reading.compare}<section><h3>Tell them apart</h3><p>{reading.compare}</p></section>{/if}
 	{#if reading.correction}<section class="clarification"><h3>A useful clarification</h3><p>{reading.correction}</p></section>{/if}
+	<FoundationVisuals studyRef={reading.ref} />
 	{#if reading.ref.startsWith('t:')}<p><a href="{base}/lexicon#{reading.ref.slice(2)}">Explore the full Lexicon entry</a></p>
 	{:else if reading.ref.startsWith('c:')}<p><a href="{base}/flashcards?deck=deck-all&amp;card={reading.ref.slice(2)}&amp;run=1">Explore the original Floor Deck card</a></p>{/if}
 	{#if reading.sources?.length}

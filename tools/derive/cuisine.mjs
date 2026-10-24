@@ -77,7 +77,11 @@ export const ROSTER_FILE = path.join(ROOT, 'tools', 'cuisine', 'roster.json');
 export const PARTS_DIR = path.join(ROOT, 'tools', 'cuisine', 'out');
 const DATA = path.join(ROOT, 'src', 'lib', 'data');
 const PACK = path.join(ROOT, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json');
-const FOLIO_FILES = [path.join(ROOT, 'src', 'lib', 'teaching-folios.ts'), path.join(ROOT, 'src', 'lib', 'teaching-folios-first-collection.ts')];
+const FOLIO_FILES = [
+	path.join(ROOT, 'src', 'lib', 'teaching-folios.ts'),
+	path.join(ROOT, 'src', 'lib', 'teaching-folios-first-collection.ts'),
+	path.join(ROOT, 'src', 'lib', 'teaching-folios-cooks-eye.ts')
+];
 export const ID_KINDS = /** @type {IdKind[]} */ (['entries', 'cards', 'questions', 'steps', 'matches']);
 export const ID_RE = /^cz-[0-9a-z]{8}$/;
 

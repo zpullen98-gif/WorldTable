@@ -782,8 +782,8 @@ export const TECHNIQUE_FILMS = [
 		channel: 'The Bake School',
 		watchFor:
 			'The thin first ladles of hot milk going into the yolks under constant whisking, then ' +
-			'the spoon-back nappe test at the end, which is the only reliable read on 82°C ' +
-			'without a thermometer.'
+			'the spoon-back nappe test at the end. This shows the consistency of a starch-free ' +
+			'pouring custard, not an exact temperature reading or the method for pastry cream.'
 	},
 	{
 		slug: 'the-bare-simmer-holding-liquid-below-the-boil',

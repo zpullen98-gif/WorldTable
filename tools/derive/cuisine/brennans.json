@@ -1162,21 +1162,22 @@
 				{
 					"key": "how",
 					"paras": [
-						"Short rib is a tough, marbled, sinewy cut, full of connective tissue, which is why it is braised rather than grilled: slow, covered cooking in a little liquid melts that tissue into gelatine. In a red wine braise the ribs are seasoned and seared hard for colour, the vegetables sweated, cooked gently without colour, in the same pan, and the pan deglazed with red wine, poured in to lift the browned bits from the bottom, which is reduced before stock goes in, enough to come about halfway up the meat. The pot is covered and goes into a low oven, about 150 to 160°C (302 to 320°F), for about three hours, until a fork turns the meat.",
-						"The meat is lifted out and pulled into shreds, the bone, gristle and loose fat discarded. The braising liquid is strained, skimmed and reduced into a glossy sauce, and the meat goes back into it. That is débris: tender beef in a deep, winey gravy that echoes the marchand de vin on the same plate.",
-						"The egg is soft-boiled: simmered in its shell for about six minutes, so the white sets and the yolk stays runny, then cooled and peeled. When the guest cuts in, the yolk becomes a third sauce. The potato is seasoned in the style of the house's own Creole spice; how it is cut and cooked is confirmed at the pass."
+						"The following red wine braise is a general teaching model, not a confirmed Brennan's production recipe. Short rib has connective tissue that softens during slow, moist cooking. In a browned braise, the ribs are seasoned and seared, aromatics cooked, and the pan deglazed with wine before cooking liquid is added. The covered pot cooks gently until the intended tenderness is reached. Cut size, equipment and recipe determine time and liquid level; the house method is confirmed at the pass.",
+						"For pulled débris, the cooked meat is separated from bone, gristle and excess fat, then pulled. The cooking liquid can be strained, skimmed and reduced before the meat is returned. Pulling is the intended texture here, although another braised dish may need pieces that lift out whole. Finish and holding follow the actual kitchen recipe.",
+						"The menu specifies a soft-boiled egg. A runny centre depends on egg size, starting temperature and cooking method, so six minutes is not a universal house standard. The kitchen confirms its timing, cooling, reheating and service process. The Creole-spiced potato's cut and cooking method also need confirmation at the pass."
 					]
 				},
 				{
 					"key": "family",
 					"paras": [
-						"Its foundations are three: the red wine braise, the warm emulsion of hollandaise, and the brown family's marchand de vin, often bound with a roux. Set it beside the Hussarde and the differences are the lesson: braised beef for the Canadian bacon, a potato for the English muffin, and a soft-boiled egg for a poached one. The sauces are the same, so the two plates taste of one kitchen, but the Owen is deeper and meatier."
+						"Its foundations are three: the red wine braise, the warm emulsion of hollandaise, and the brown family's marchand de vin, often bound with a roux. Set it beside the Hussarde and the differences are the lesson: braised beef for the Canadian bacon, a potato for the English muffin, and a soft-boiled egg for a poached one. The sauces are the same, so the two plates taste of one kitchen, but the Owen is deeper and meatier.",
+						"The Hussarde illustration linked below is a comparison of components, not a picture of Eggs Owen. It shows the muffin, bacon and poached-egg arrangement that this dish replaces."
 					]
 				},
 				{
 					"key": "faults",
 					"paras": [
-						"Stringy, dry débris has been cooked too hot or too briefly, or left out of its liquid. A greasy gravy was not skimmed. A thin sauce was not reduced. An egg simmered well past six minutes loses its runny yolk, and with it half the sauce on this plate."
+						"Tough or dry débris needs a check of the cut, heat, cooking time and holding conditions. A greasy gravy may need skimming, while sauce body depends on the intended recipe. A firm yolk does not match the requested soft centre; assess the egg and the actual cooking process rather than diagnosing it from a universal six-minute rule."
 					]
 				},
 				{
@@ -1194,7 +1195,7 @@
 			],
 			"temps": [
 				{
-					"label": "A low oven for the braise, about",
+					"label": "Example braising oven, not a confirmed house setting",
 					"c": 150,
 					"f": 302
 				}
@@ -1217,8 +1218,8 @@
 				},
 				{
 					"fault": "A firm yolk",
-					"cause": "The egg simmered well past six minutes.",
-					"fix": "Time the egg, cool it at once in iced water, and cook a fresh one rather than send it."
+					"cause": "The egg cooked beyond the intended soft centre for its size and starting condition.",
+					"fix": "Check the house process and prepare a replacement to its standard; do not promise a runny centre from time alone."
 				}
 			],
 			"brennans": [
@@ -1257,7 +1258,7 @@
 					"components": [
 						"Eggs cooked to order"
 					],
-					"how": "The menu prints a soft-boiled egg: simmered in its shell for about six minutes so the yolk stays runny. Confirm the egg styles the kitchen offers at lineup."
+					"how": "The menu prints a soft-boiled egg. Confirm the cooking process and available egg styles at lineup; no exact house timing is supplied by the menu."
 				}
 			],
 			"seeAlso": {
@@ -1283,7 +1284,8 @@
 				],
 				"folios": [
 					"brennans-sauces",
-					"eggs-hussarde-components"
+					"eggs-hussarde-components",
+					"braise-confit-render"
 				],
 				"deck": [
 					"fd_0092",
@@ -1298,12 +1300,17 @@
 				{
 					"title": "Brennan's, Breakfast & Lunch menu",
 					"url": "https://www.brennansneworleans.com/menus/breakfast-and-lunch/",
-					"asOf": "2026-10-12"
+					"asOf": "2026-10-23"
 				},
 				{
 					"title": "Mother's Restaurant, New Orleans",
 					"url": "https://www.mothersrestaurant.net/",
 					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Rouxbe, Braising: general method and doneness checks",
+					"url": "https://rouxbe.com/cooking-school/braising-combination-cooking",
+					"asOf": "2026-10-23"
 				}
 			],
 			"cards": [
@@ -1334,8 +1341,8 @@
 				},
 				{
 					"stem": "braise-steps",
-					"front": "What are the main steps of the red wine braise?",
-					"back": "Sear the ribs hard, sweat the vegetables, deglaze with red wine and reduce, add stock, cover and cook in a low oven about three hours, then pull the meat and reduce the liquid."
+					"front": "What is the general sequence of a browned red wine braise?",
+					"back": "Brown, cook aromatics, deglaze, add liquid and cook gently to the intended tenderness, then finish the liquid. This teaches a method, not a confirmed Brennan's timing or production recipe."
 				},
 				{
 					"stem": "differs",
@@ -1344,8 +1351,8 @@
 				},
 				{
 					"stem": "soft-boiled",
-					"front": "How is the soft-boiled egg cooked?",
-					"back": "Simmered in its shell for about six minutes, so the white sets and the yolk stays runny, then cooled and peeled."
+					"front": "What should you confirm before assigning a time to the soft-boiled egg?",
+					"back": "Egg size, starting temperature and the house cooking, cooling and service process. The menu names a soft-boiled egg; it does not establish a six-minute method."
 				},
 				{
 					"stem": "foundations",
@@ -1426,26 +1433,26 @@
 				},
 				{
 					"stem": "q-soft",
-					"q": "Roughly how long is a soft-boiled egg simmered in its shell?",
-					"answer": "About six minutes",
+					"q": "What establishes the timing for the soft-boiled egg?",
+					"answer": "The house process and the egg being used",
 					"distractors": [
-						"About one minute",
-						"About fifteen minutes",
-						"About ten minutes"
+						"Exactly six minutes for every egg",
+						"The yolk colour before cooking",
+						"The number of sauces on the plate"
 					],
-					"why": "About six minutes sets the white and keeps the yolk runny, so it runs into the débris and the sauces when the guest cuts in.",
+					"why": "Size, starting temperature and method change the result. Confirm the house process rather than treating one illustrative time as a rule.",
 					"teaches": "soft-boiled"
 				},
 				{
 					"stem": "q-time",
-					"q": "Roughly how long does short rib braise, covered in a low oven, before a fork turns it?",
-					"answer": "About three hours",
+					"q": "What decides when the short rib is ready to pull?",
+					"answer": "Its tenderness under the specified cooking process",
 					"distractors": [
-						"About fifteen minutes",
-						"About forty minutes",
-						"About one hour"
+						"Exactly three hours for every cut",
+						"A dark crust before the braise",
+						"The colour of the wine alone"
 					],
-					"why": "Connective tissue needs long, gentle heat to melt; about three hours covered in a low oven brings short rib to tender.",
+					"why": "The cut, size and cooking conditions change the time. Check tenderness and the actual recipe; the menu does not provide a production schedule.",
 					"teaches": "braise-steps"
 				},
 				{

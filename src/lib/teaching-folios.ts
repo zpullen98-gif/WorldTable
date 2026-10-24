@@ -3,10 +3,11 @@
  *  Illustrations teach general culinary distinctions, never verified house plating.
  */
 import { FIRST_COLLECTION_TEACHING_FOLIOS } from './teaching-folios-first-collection';
+import { COOKS_EYE_TEACHING_FOLIOS } from './teaching-folios-cooks-eye';
 
 export interface TeachingFolio {
 	id: string;
-	group: 'ingredients' | 'knife-and-heat' | 'sauces-and-eggs';
+	group: 'ingredients' | 'knife-and-heat' | 'sauces-and-eggs' | 'cooks-eye';
 	title: string;
 	intro: string;
 	scope: string;
@@ -16,11 +17,15 @@ export interface TeachingFolio {
 	techniques: string[];
 	dishes: string[];
 	sources?: Array<{ title: string; url: string }>;
+	/** Reviewed display windows into the original image, in normalised coordinates. */
+	focus?: Array<{ x: number; y: number; width: number; height: number }>;
+	learning?: { observe: string; explain: string; apply: string; question: string; answer: string };
 }
 
 export const BRENNANS_HOUSE_ID = 'h-g02pdomw';
 
 export const TEACHING_FOLIO_GROUPS = [
+	{ id: 'cooks-eye', title: 'The Cook’s Eye: heat, texture and structure', intro: 'Six studies for your next practice: look closely, explain the change, then connect it to a Brennan’s dish.' },
 	{ id: 'ingredients', title: 'Ingredients at a glance', intro: 'Explore herbs, the Louisiana larder and the seafood and parcel ingredients on Brennan’s menu.' },
 	{ id: 'knife-and-heat', title: 'Knife work and heat', intro: 'Look for even cuts, the direction of the grain, onion colour and the movement of water in the pan.' },
 	{ id: 'sauces-and-eggs', title: 'Sauces, eggs and texture', intro: 'Follow fond, emulsions and texture from the pan to the spoon, then recognise the parts of Eggs Hussarde.' }
@@ -240,7 +245,8 @@ export const TEACHING_FOLIOS: readonly TeachingFolio[] = [
 			{ title: 'Louisiana Direct Seafood: crawfish', url: 'https://louisianadirectseafood.com/crawfish/' }
 		]
 	},
-	...FIRST_COLLECTION_TEACHING_FOLIOS
+	...FIRST_COLLECTION_TEACHING_FOLIOS,
+	...COOKS_EYE_TEACHING_FOLIOS
 ];
 
 export function foliosForTechnique(slug: string): TeachingFolio[] {
@@ -257,6 +263,14 @@ export function teachingFolioAlt(folio: TeachingFolio): string {
 
 /** Exact authored doors from existing cards, never fuzzy culinary-name matches. */
 const CARD_FOLIOS: Readonly<Record<string, readonly string[]>> = {
+	fd_0026: ['braise-confit-render'],
+	fd_0029: ['braise-confit-render'],
+	fd_0047: ['braise-confit-render'],
+	fd_0161: ['brown-butter-study'],
+	fd_0172: ['agnolotti-shaping'],
+	fd_0240: ['meringue-peaks'],
+	fd_0244: ['puff-pastry-layers'],
+	fd_0250: ['custard-structures'],
 	fd_0025: ['simmer-standard'],
 	fd_0034: ['poached-egg-standard', 'simmer-standard'],
 	fd_0036: ['puree-texture-standard'],

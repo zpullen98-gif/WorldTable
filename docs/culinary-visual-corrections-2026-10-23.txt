@@ -1,0 +1,49 @@
+CULINARY VISUAL TEACHING: EDITORIAL CORRECTIONS
+23 October 2026
+
+The review found several general rules that would become misleading if turned into illustrated instructions. This pass corrects the active learning text while retaining the sealed archive, entry slugs, graded mark IDs and Cuisine card IDs.
+
+Changes
+- Custard: the tempering step no longer implies a universal cooking endpoint. Starch-free pouring custards and starch-thickened fillings have distinct heating and texture checks. The film prompt no longer claims a spoon measures an exact temperature.
+- Braising: browning, liquid level, sauce body and intact or pulled finish depend on the recipe. Tenderness must be checked; elapsed time does not diagnose every fault.
+- Blanching: a temporary drop in bubbling is not automatically stewing. Time, texture and purpose work together; prescribed preservation timings still apply.
+- Resting: probe placement, measured carryover and process verification replace the unqualified poultry range and fixed rest/temperature rules. A juice pool is not a reliable diagnosis by itself.
+- Fryer: the ambiguous baking-soda-or-lid instruction becomes scoped small-pan USFA guidance; commercial fryer response belongs to the kitchen's training and suppression system.
+- Service: the track now points to the existing Cuisine allergen-conversation lesson and describes its limits accurately.
+- Eggs Owen: menu components remain intact. The general braise is labelled as a teaching model; invented house timings no longer become quiz answers. Its Hussarde illustration is explicitly a comparison.
+
+Sources checked
+King Arthur Baking, Pastry Cream (updated 8 October 2026): full recipe read. Supports a tempered starch custard that bubbles, distinct from a starch-free pouring sauce.
+https://www.kingarthurbaking.com/recipes/pastry-cream-creme-patissiere-recipe
+https://shop.kingarthurbaking.com/content/class-pdfs/CreamPuffsandEclair_May_2024.pdf
+
+Callebaut, Guide to Different Tempering Methods: official indexed manufacturer guidance supports formula-specific chocolate curves.
+https://www.callebaut.com/en-GB/guide-different-tempering-methods
+
+USDA FSIS: official indexed guidance on probe placement and minimum cooking endpoints. These are labelled home guidance, not a substitute for a professional validated process.
+https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/food-thermometers
+https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart
+
+US Fire Administration: small-pan-fire guidance and evacuation if in doubt. Scope is not industrial fryer fire training.
+https://www.usfa.fema.gov/gallery/pictographs/pictograph34.html
+https://www.usfa.fema.gov/downloads/fief/handouts/fief_cooking_safety_info_card.pdf
+
+Rouxbe, Braising: full public lesson overview read; supports checking doneness and distinguishing the general method from a single recipe.
+https://rouxbe.com/cooking-school/braising-combination-cooking
+
+Illinois Extension and University of Minnesota Extension: indexed guidance confirms blanching and cooling are purpose-specific, with prescribed timing for preservation. No preservation time table was added.
+https://extension.illinois.edu/food-preservation/vegetables
+https://extension.umn.edu/food/preparing/cooking-at-home/food-preservation/blanching-vegetables
+
+Brennan's Breakfast and Lunch: full public menu read 23 October 2026; confirms the saved Eggs Owen components but supplies no six-minute egg or three-hour production schedule.
+https://www.brennansneworleans.com/menus/breakfast-and-lunch/
+
+Implementation
+Three source-level corrections are stored as reasoned, sourced lexiconDefinitions in overrides.json. applyLexiconDefinitions validates identity and evidence, preserves unmodified raw inputs, and applies the active definition before technique anchors, drills and search are emitted. Definition corrections deliberately retain established cross-links; this pass does not reclassify their recipe matches.
+
+Both npm run build:data and npm run build:cuisine completed on 23 October 2026. The first passed all derivation gates; the second retained 179 entries, 2,086 cards, 1,562 questions and all existing IDs.
+
+Explicit visual connections
+Eight authored Cuisine entries now link to the matching Cook's Eye study: brown butter, pouring custard, pastry cream, meringues, braising, confit, fresh pasta and Eggs Owen. These are editorial links in each entry's seeAlso.folios and are checked against the teaching-folio manifests during derivation.
+
+The custard study shows pouring anglaise, starch-thickened pastry cream and chilled chocolate cremeux. Baked bread pudding is deliberately not linked as a pictured example. The Eggs Owen connection compares cooking methods; it does not certify a house recipe or actual plating.

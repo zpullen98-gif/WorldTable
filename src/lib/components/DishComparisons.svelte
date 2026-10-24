@@ -3,6 +3,8 @@
 	import type { House } from '$lib/house/house-schema';
 	import { dishComparisons } from '$lib/service-guides';
 	import { foliosForDish } from '$lib/teaching-folios';
+	import { finalDishFor, FINAL_DISH_CAPTION } from '$lib/brennans-final-dishes';
+	import PlateIllustration from './PlateIllustration.svelte';
 
 	let { current, itemId, onOpen, is86 = () => false }: {
 		current: House;
@@ -11,6 +13,7 @@
 		is86?: (id: string) => boolean;
 	} = $props();
 	const comparisons = $derived(dishComparisons(current, itemId));
+	let opened = $state<Record<string, boolean>>({});
 </script>
 
 {#if comparisons.length}
@@ -18,14 +21,20 @@
 		<h3 id="dish-comparisons-h">Tell the dishes apart</h3>
 		<p class="intro">Compare the menu’s words, then explain the difference to a guest.</p>
 		{#each comparisons as comparison (comparison.id)}
-			<details class="comparison" data-comparison={comparison.id}>
+			<details class="comparison" data-comparison={comparison.id} ontoggle={(event) => { opened[comparison.id] = event.currentTarget.open; }}>
 				<summary><span>{comparison.sides[0].name} <span class="versus">&amp;</span> {comparison.sides[1].name}</span><span class="open-label">Compare</span></summary>
 				<div class="comparison-body">
 					<div class="comparison-grid">
 						{#each comparison.sides as side, i (side.id)}
+							{@const art = finalDishFor(current.id, side.id)}
 							<section class="dish-panel" aria-labelledby="cmp-{comparison.id}-{side.id}" data-side={side.id}>
 								<p class="eyebrow"><span class="letter" aria-hidden="true">{i === 0 ? 'A' : 'B'}</span> {side.meals.join(' · ')}{#if is86(side.id)}<strong> · 86 tonight</strong>{/if}</p>
 								<h4 id="cmp-{comparison.id}-{side.id}">{side.name}</h4>
+								{#if art && opened[comparison.id]}
+									<div class="comparison-plate" data-comparison-plate={side.id}>
+										<PlateIllustration src="{base}/{art.src}" title={art.name} alt={art.alt} width={art.width} height={art.height} embedded guideLabel="Compare the named components, then explain the difference." unavailableLabel="The menu components remain below. Reconnect to load this presentation." />
+									</div>
+								{/if}
 								{#if side.description}<p class="menu-description">{side.description}</p>{/if}
 								{#if side.ingredients.length}
 									<p class="eyebrow component-label">Named components</p>
@@ -38,6 +47,7 @@
 							</section>
 						{/each}
 					</div>
+					{#if comparison.sides.some(side => finalDishFor(current.id, side.id))}<p class="boundary image-boundary">{FINAL_DISH_CAPTION}</p>{/if}
 					{#if comparison.difference}<div class="contrast"><h4>What tells them apart</h4><p>{comparison.difference}</p></div>{/if}
 					{#if comparison.ask}<div class="guest"><h4>A question for the guest</h4><p>{comparison.ask}</p></div>{/if}
 					<details class="recall"><summary>Practise the distinction</summary><p>Look away and name one difference in the main ingredient, preparation or sauce. Explain it in one sentence, then check the menu words above.</p></details>

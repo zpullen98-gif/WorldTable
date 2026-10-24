@@ -864,6 +864,7 @@
 						front={runCard?.card.front ?? null}
 						back={runCard?.card.back ?? ''}
 						eyebrow={runCard?.entry.title ?? 'Cuisine'}
+						folioIds={runCard?.entry.seeAlso.folios}
 						flipped={!!cz.flipped}
 						readHref={runCard ? entryHref(runCard.chapter, runCard.entry.slug) : null}
 					/>

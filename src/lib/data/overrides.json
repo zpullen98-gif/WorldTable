@@ -466,5 +466,33 @@
     "yakisoba"
    ]
   }
+ },
+ "lexiconDefinitions": {
+  "resting-carryover-and-the-thermometer": {
+   "reason": "2026-10-23 teaching review: separate safety, culinary doneness and tenderness; remove the unqualified 68 to 74 C poultry range and fixed carryover/rest claims. The sealed archive remains unchanged.",
+   "definition": "A thermometer measures temperature; appearance and tenderness answer different questions. Check the thickest part away from bone, fat and gristle, and check more than one spot; insert through the side of a thin cut. Whole poultry needs checks in the inner thigh, inner wing and thickest breast. USDA home guidance calls for poultry to reach 74°C (165°F) before leaving the heat; professional kitchens follow their applicable, validated process. Do not assume carryover will supply a missing safety step. CARRYOVER varies with size, cooking heat and resting conditions, so measure rather than adding a fixed number. RESTING follows the recipe and required holding conditions. A brisket also needs a tenderness check: one temperature cannot promise that connective tissue has softened. Slice across the grain for shorter fibres. A pool of juice on the board alone does not prove an inadequate rest.",
+   "sources": [
+    "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/food-thermometers",
+    "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart",
+    "https://rouxbe.com/cooking-school/braising-combination-cooking"
+   ]
+  },
+  "tempering-eggs-and-chocolate": {
+   "reason": "2026-10-23 teaching review: tempering is a mixing step, not a universal custard temperature. Distinguish starch-free stirred custard from starch-thickened pastry cream; retain chocolate as the separate craft.",
+   "definition": "One word, two crafts. TEMPERING EGGS: whisk hot liquid gradually into eggs to warm them before combining with the remaining liquid. The next cooking step depends on the formula. A starch-free stirred custard such as crème anglaise is heated gently to its specified temperature and spoon-coating consistency without boiling. Starch-thickened pastry cream is different: its recipe may require bubbling and continued whisking to cook the starch. Neither appearance nor the act of tempering proves an exact temperature. TEMPERING CHOCOLATE: controlled melting, cooling and warming encourage stable cocoa-butter crystals, giving gloss and snap. Follow the chocolate maker’s curve for the particular couverture; dark, milk and white chocolates do not share one working temperature.",
+   "sources": [
+    "https://www.kingarthurbaking.com/recipes/pastry-cream-creme-patissiere-recipe",
+    "https://shop.kingarthurbaking.com/content/class-pdfs/CreamPuffsandEclair_May_2024.pdf",
+    "https://www.callebaut.com/en-GB/guide-different-tempering-methods"
+   ]
+  },
+  "fryer-setups-and-oil-management": {
+   "reason": "2026-10-23 teaching review: replace the ambiguous baking-soda-or-lid fire instruction with scoped USFA small-pan guidance; distinguish a professional fryer and its trained emergency response.",
+   "definition": "Frying needs controlled oil heat, room for the food to displace oil, dry tools and a prepared draining area. Choose equipment rated for the job and follow its fill line and instructions; monitor oil temperature and allow it to recover between batches. Strain cooled oil as appropriate and check its condition rather than relying on a fixed number of uses. Keep a suitable lid nearby for a small pan. USFA guidance for a small pan fire is to cover it and turn off the heat if safe, leave it covered until cool, and never move it or add water. If there is doubt or the fire is not controlled, get out and call emergency services. In a professional kitchen, follow the trained fire plan and installed suppression procedures; a deep fryer is not a small saucepan. An air fryer cooks by hot-air convection rather than immersing food in oil.",
+   "sources": [
+    "https://www.usfa.fema.gov/gallery/pictographs/pictograph34.html",
+    "https://www.usfa.fema.gov/downloads/fief/handouts/fief_cooking_safety_info_card.pdf"
+   ]
+  }
  }
 }

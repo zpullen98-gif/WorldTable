@@ -1,5 +1,26 @@
 # The World Table
 
+## Connected visual training and the Cook's Eye, 23 October 2026
+
+Six studies in `teaching-folios-cooks-eye.ts` cover brown butter, custards,
+meringue, puff pastry, braise/confit/render and agnolotti shaping. `TeachingFolio`
+accepts validated normalised focus rectangles and optional Observe/Explain/Apply
+questions. Focus changes the viewport only; zoom retains the whole source.
+Recall hides revealing alt text as well as the key. New artwork remains lazy,
+versioned and outside the precache. See `docs/teaching-cooks-eye-release.txt` for
+scope, prompt records and accuracy boundaries.
+
+`FoundationVisuals` reuses exact card/lexicon joins through `visual-study-links`.
+Cuisine lesson `seeAlso.folios` now opens in-place studies, with matching links
+on revealed cards. `DishComparisons` displays each distinct final-plate image
+only while expanded. Existing grade/card/dish identities are unchanged.
+
+Active lexicon corrections live in `overrides.json` as `lexiconDefinitions`,
+applied by `tools/derive/lexicon-definitions.mjs` before technique/search
+derivation. Never correct the sealed raw archive. Cuisine folio validation reads
+all three manifests, including the Cook's Eye. Run both `build:data` and
+`build:cuisine` after authored changes; tests cover the joins and source dates.
+
 ## Brennan's compact learning flow, 23 October 2026
 
 The house page now has four linked workspaces: Menu (`/menu`), Kitchen studies

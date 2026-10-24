@@ -486,9 +486,9 @@ export const SERVER_MODULES = [
  * The same shape as sanitation.mjs's assertNoRecipes, and for a sharper reason:
  * the recipe screen names what it checked and what it did not, and a
  * server track that said "contains" or "clear" about a dish would be read at a
- * table, out loud, to a guest. The guide has no allergen curriculum: measured
- * across all 479 definitions, exactly two mention allergens and only one states
- * a rule, so there is nothing here to build one out of.
+ * table, out loud, to a guest. The original archive had no allergen curriculum.
+ * The later Cuisine chapter teaches communication and cross-contact control,
+ * but still cannot supply a current, per-dish suitability verdict.
  */
 function assertNoVerdict(obj, recipeSlugs, problems, lexiconSlugs = new Set()) {
 	const BANNED = new Set(['allergens', 'contains', 'clear', 'safe', 'screened', 'recipes']);

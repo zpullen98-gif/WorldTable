@@ -14,11 +14,8 @@
   every level with its own doors there; a Service hub that repeated both
   would be a second home.
 
-  The two GAPS below are stated on the page's own face, not buried. The guide
-  has no steps-of-service curriculum and no allergen curriculum, and a track
-  that quietly skipped them would read as though the ground were covered.
-  Naming them is the honest version and it is also the useful one: it tells a
-  manager exactly what their own induction still has to teach.
+  State this vocabulary track's limits and link the newer Cuisine training.
+  General lessons do not replace a room's induction or current kitchen checks.
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
@@ -78,19 +75,17 @@
 		{/each}
 	</ol>
 
-	<!-- Stated here rather than discovered later. Both were measured across all
-	     479 definitions before this track was written. -->
-	<h2 class="sec">What this guide does not teach</h2>
+	<h2 class="sec">From vocabulary to your room</h2>
 	<div class="gaps">
 		<p>
-			<b>There is no steps-of-service curriculum.</b> Across all 479 definitions, "check-back" appears
-			zero times, "sequence of service" zero, "refire" zero, "comped" zero. Greeting, timing, the
+			<b>This track teaches vocabulary; your room teaches its service sequence.</b> Greeting, timing, the
 			check-back, firing a course, handling a send-back and closing a table are your room's to teach.
 			This track gives you the vocabulary they are spoken in, not the sequence.
 		</p>
 		<p>
-			<b>There is no allergen curriculum, and you must never answer an allergen question from this
-			app.</b>
+			<b>Practise the conversation, then confirm with the kitchen.</b>
+			The <a href="{base}/cuisine?ch=safety&e=allergen-conversation">Cuisine allergen lesson</a>
+			teaches the handoff. It cannot establish whether a particular dish is suitable for a guest.
 			The recipe screen checks {CHECKED.length}, {list(CHECKED)}, and explicitly does not screen
 			{list(NOT_SCREENED)}. A dish showing nothing means <i>the text screen found nothing</i>, never
 			<i>clear</i>: {emptyCount} of {recipes.length} recipes read exactly that, and no text screen

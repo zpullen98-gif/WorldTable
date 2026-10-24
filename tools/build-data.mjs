@@ -41,6 +41,7 @@ import { buildPalate } from './derive/palate.mjs';
 import { buildEconomics } from './derive/economics.mjs';
 import { buildSanitation, GAPS } from './derive/sanitation.mjs';
 import { LEXICON_SUPPLEMENT, ATLAS_CATEGORIES } from './derive/lexicon-supplement.mjs';
+import { applyLexiconDefinitions } from './derive/lexicon-definitions.mjs';
 import { buildWaste } from './derive/waste.mjs';
 import { buildServiceTrack } from './derive/service-track.mjs';
 import { buildDrills } from './derive/drills.mjs';
@@ -770,14 +771,14 @@ const atlasFields = (e) => {
 	return out;
 };
 
-const lexicon = D.map((e, i) => ({
+const lexicon = applyLexiconDefinitions(D.map((e, i) => ({
 	slug: lexSlugs[i],
 	term: e.t,
 	category: e.c,
 	definition: e.d,
 	recipes: crosslinks.termToRecipes.get(lexSlugs[i]) ?? [],
 	...atlasFields(e)
-}));
+})), OVERRIDES.lexiconDefinitions ?? {});
 
 const pantry = PANTRY.map((g) => ({
 	group: g.g,

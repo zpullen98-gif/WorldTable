@@ -4,12 +4,15 @@
   the entry. The frame draws the controls and the page grades.
 -->
 <script lang="ts">
+	import { studiesForIds } from '$lib/visual-study-links';
+	import FolioLinks from '$lib/components/FolioLinks.svelte';
 	let {
 		front,
 		back,
 		eyebrow,
 		flipped,
-		readHref = null
+		readHref = null,
+		folioIds = []
 	}: {
 		/** Null while the card's chapter is still loading, or when the card has been retired. */
 		front: string | null;
@@ -17,7 +20,9 @@
 		eyebrow: string;
 		flipped: boolean;
 		readHref?: string | null;
+		folioIds?: readonly string[];
 	} = $props();
+	const folios = $derived(studiesForIds(folioIds));
 </script>
 
 <div class="flash czcard">
@@ -29,6 +34,7 @@
 		{#if flipped}
 			<p class="def back" aria-live="polite">{back}</p>
 			{#if readHref}<p class="read"><a href={readHref}>Read about it</a></p>{/if}
+			<FolioLinks {folios} label="Explore the illustrated studies" />
 		{:else}
 			<p class="def">Say it out loud, then flip.</p>
 		{/if}

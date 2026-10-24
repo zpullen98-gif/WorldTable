@@ -1,0 +1,57 @@
+THE COOK'S EYE: CONNECTED VISUAL TRAINING
+23 October 2026
+
+The first implementation from the World Table visual audit connects existing
+artwork to the place where a learner reads or recalls the subject, then adds six
+studies where a visible difference helps explain a professional cooking method.
+
+Find the collection in Brennan's > Kitchen studies > Illustrated kitchen studies,
+or in the Plates library (/plates). The Cook's Eye is the first companion group.
+Its studies also appear on matching technique pages, Brennan's dish cards,
+Cuisine lessons and revealed study cards. Fieldbook connections use reviewed
+card/lexicon identities; shared words do not create automatic matches.
+
+The six studies
+1. Brown butter: melted, nut-brown and scorched milk solids.
+2. Custards: pouring anglaise, starch-thickened pastry cream and chilled cremeux.
+3. Meringue: soft, medium and stiff peaks, with recipe-specific endpoints.
+4. Puff pastry: raw lamination, open baked layers and a lower, closer result.
+5. Braising, confit and rendering: different cooking media and purposes.
+6. Agnolotti del plin: filling, folding, pinching, separating and checking seams.
+
+Each has a numbered text key, Observe/Explain/Apply, a question with a concealed
+explanation, and links to primary teaching sources. Whole illustration/View
+controls enlarge a reviewed area on a phone. The enlargement dialog retains the
+complete original image. Ungraded recall hides the key, answers and revealing
+alt text until requested. It does not change a learner's saved grades.
+
+Accuracy boundaries
+The imagery is generated and illustrative. It is not Brennan's approved plating,
+portion, recipe or production method. House applications use saved menu facts.
+The custard study does not stand in for a baked bread-pudding endpoint. A photo
+cannot establish temperature, tenderness, safe storage or an exact ingredient
+list. Recipe-specific checks remain in readable text. The duck-confit image was
+corrected to show a covering fat surface; the pasta image was corrected so the
+separated pieces preserve the pinched form established in the sequence.
+
+Connections and recovery
+Fieldbook readings now open their reviewed studies in place; ingredient-only
+matches lead to the existing ingredient guide. Cuisine lessons reveal studies
+in place and card backs link to them after the answer is shown. Dish comparisons
+show each dish's distinct final-plate illustration with the existing caption.
+Images load only when a study opens; the readable key remains without artwork.
+Failed image loads retain a retry control. Day/night styling uses house tokens.
+The 12 new WebPs total 894,872 bytes, with 1536x1024 masters and 420x280 thumbs.
+They remain outside the offline shell's precache and use the existing bounded
+runtime image cache. No course, card, dish, grade or study identity was replaced.
+
+Editorial changes are recorded separately in culinary-visual-corrections-2026-10-23.txt.
+Exact generation/edit prompts and visual checks: teaching-cooks-eye-prompts.txt.
+Master hashes and encoding details: teaching-cooks-eye-assets.json.
+
+Validation
+Source data is re-emitted through build:data and build:cuisine. Validation covers
+exact references, asset pairs, view bounds, sources, unchanged sealed data,
+read/reveal/return flow, image failure recovery, lazy loading, keyboard controls,
+phone layouts in both services, and offline study access. Release results and
+commit identifiers are recorded in the task's completion message.

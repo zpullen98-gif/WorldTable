@@ -12,8 +12,8 @@
 -->
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { TEACHING_FOLIOS } from '$lib/teaching-folios';
-	import FolioLinks from '$lib/components/FolioLinks.svelte';
+	import { studiesForIds } from '$lib/visual-study-links';
+	import TeachingFolio from '$lib/components/TeachingFolio.svelte';
 	import { KIND_WORDS, SECTION_TITLES, dateWords, sheetLinks, type CzEntry, type CzLabels } from '$lib/cuisine';
 
 	let {
@@ -108,7 +108,7 @@
 		);
 		return groups;
 	});
-	const folios = $derived((entry.seeAlso.folios ?? []).map((id) => TEACHING_FOLIOS.find((f) => f.id === id)).filter((f) => !!f));
+	const folios = $derived(studiesForIds(entry.seeAlso.folios));
 	const sheets = $derived(sheetLinks(entry.seeAlso.terms, labels, base));
 </script>
 
@@ -196,7 +196,17 @@
 		</section>
 	{/if}
 
-	{#if see.length || folios.length}
+	{#if folios.length}
+		<section class="part" aria-labelledby="sec-illustrated">
+			<h2 id="sec-illustrated">Illustrated studies</h2>
+			<p class="para">Compare the techniques and ingredients in this lesson. Each study names the subjects it depicts.</p>
+			{#key entry.id}
+				{#each folios as folio (folio.id)}<TeachingFolio {folio} />{/each}
+			{/key}
+		</section>
+	{/if}
+
+	{#if see.length}
 		<section class="part see" aria-labelledby="sec-see">
 			<h2 id="sec-see">See also</h2>
 			{#each see as g (g.title)}
@@ -205,7 +215,6 @@
 					{#each g.rows as r (r.key)}<li>{#if r.href}<a href={r.href}>{r.label}</a>{:else}<span>{r.label}</span>{/if}</li>{/each}
 				</ul>
 			{/each}
-			<FolioLinks {folios} />
 		</section>
 	{/if}
 

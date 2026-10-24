@@ -538,11 +538,11 @@
     "marks": [
       {
         "id": "blanching-and-shocking#rolling",
-        "text": "A large volume at a hard rolling boil, and enough of it that adding the food barely interrupts it; a pot that goes quiet has started stewing rather than blanching."
+        "text": "The water begins at the heat specified by the method and recovers promptly after the food enters. A brief drop in bubbling is expected; a batch that prevents recovery needs adjustment."
       },
       {
         "id": "blanching-and-shocking#short",
-        "text": "Timed rather than watched, and short. This is an interruption in the cooking of something, not the cooking of it."
+        "text": "Time and the required texture or purpose are checked together. Piece size and the next step matter; where a preservation method specifies a blanching time, a visual check does not replace that timed process."
       },
       {
         "id": "blanching-and-shocking#ready",
@@ -766,7 +766,7 @@
       },
       {
         "id": "tempering-a-custard#gentle",
-        "text": "The heat under it stayed gentle throughout and it was never allowed to boil."
+        "text": "The heating method matches the formula: a starch-free stirred custard stays below boiling, while a starch-thickened custard follows its specified bubbling and cooking stage."
       },
       {
         "id": "tempering-a-custard#corners",
@@ -774,14 +774,14 @@
       },
       {
         "id": "tempering-a-custard#coats",
-        "text": "Judged by behaviour: it thickens enough to coat the back of a spoon and hold a clean line when a finger is drawn through it."
+        "text": "The consistency matches the intended custard: a pouring sauce coats a spoon; a starch-thickened filling becomes thicker. Appearance is checked alongside the recipe, not used as an exact thermometer."
       },
       {
         "id": "tempering-a-custard#early",
-        "text": "Taken off before it looks finished, and strained. Residual heat carries it the rest of the way, and a custard held on the heat until it looks right arrives past right."
+        "text": "It leaves the heat at the recipe’s endpoint and is transferred, strained or cooled as specified, without prolonged cooking in the hot pan."
       }
     ],
-    "fault": "The hot liquid went in too fast, or the pot went back over full heat to save time. The yolks set into threads before they could thicken smoothly, and a scrambled custard does not come back; straining hides a little of it and nothing hides the rest."
+    "fault": "Threads or grains appear instead of the intended smooth texture. Check mixing, formula and heat control; straining may remove small lumps but does not undo badly overcooked eggs. A starch-thickened custard that needs bubbling must not be stopped at a pouring sauce’s endpoint."
   },
   {
     "slug": "kneading-dough",
@@ -846,26 +846,26 @@
     "marks": [
       {
         "id": "resting-meat-and-slicing-against-the-grain#before",
-        "text": "It came off the heat BEFORE the target temperature, measured with a probe rather than by time, because carryover keeps driving the inside up after it is out."
+        "text": "The required cooking process has been verified with a probe. Any allowance for carryover follows the validated method; an assumed rise during resting never substitutes for a required safety step."
       },
       {
         "id": "resting-meat-and-slicing-against-the-grain#coldest",
-        "text": "The probe went into the coldest likely part rather than the easiest one to reach: the reading that matters is the lowest one, not the first one."
+        "text": "The sensing area reaches the thickest relevant part, away from bone, fat and gristle, and more than one spot is checked. Thin pieces are measured from the side when needed."
       },
       {
         "id": "resting-meat-and-slicing-against-the-grain#rested",
-        "text": "Rested for a time matched to its size, somewhere warm, and not cut into partway through to see how it is doing."
+        "text": "The rest matches the cut, recipe and required holding conditions. Temperature is checked rather than assuming a fixed rise or a universal resting time."
       },
       {
         "id": "resting-meat-and-slicing-against-the-grain#dry",
-        "text": "The board is nearly dry when it is finally cut. A spreading pool means it was cut too early, and that liquid should have stayed inside."
+        "text": "The slices have the intended texture and moisture. Juice on the board is an observation to compare across batches, not proof of a failed rest or of safe doneness."
       },
       {
         "id": "resting-meat-and-slicing-against-the-grain#across",
         "text": "The grain was found and the knife went ACROSS it, so the fibres are cut short, and the blade was sharp enough that the slices hold together rather than tearing."
       }
     ],
-    "fault": "It was cut straight off the heat, usually because everything else was ready. The muscle is still contracted and the juice still driven to the centre, so it runs out onto the board; the meat is drier than it ever needed to be, and the flavour that left it is sitting in a puddle under the knife."
+    "fault": "Slicing before the planned rest or along the grain can leave a less pleasant result. Check the measured cooking process, rest and cutting direction separately: a dry slice or a puddle alone does not identify the cause."
   },
   {
     "slug": "fermentation",
@@ -1126,26 +1126,26 @@
     "marks": [
       {
         "id": "braising#pieces",
-        "text": "The pieces went into the liquid already deep brown on their faces, and the pot floor gave up its fond to that liquid rather than keeping it."
+        "text": "Where the recipe calls for browning, the faces have the intended colour and the fond is dissolved into the liquid without burnt residue. A pale braise is judged against its own method."
       },
       {
         "id": "braising#liquid",
-        "text": "The liquid comes partway up the pieces and stays there for the whole cook (not submerged, not run dry), and it never boils: the surface trembles and no more."
+        "text": "The liquid level matches the recipe and is checked during cooking; it has not run dry. The heat is gentle enough for the intended result, without violent agitation."
       },
       {
         "id": "braising#went",
-        "text": "It went long enough for the collagen to convert: a fork twists in it with almost no resistance, and the piece still lifts out whole rather than falling into shreds."
+        "text": "Tenderness is checked in the thickest piece, not assumed from elapsed time. The finished form matches the dish: intact for slicing or lifting, or deliberately yielding to pulling."
       },
       {
         "id": "braising#liquid2",
-        "text": "The liquid has become a sauce: it has body, it coats the back of a spoon, and it tastes concentrated rather than thin and washed out."
+        "text": "The cooking liquid is finished to the consistency the dish needs, with excess fat managed and seasoning checked. A light broth and a spoon-coating sauce are different intended results."
       },
       {
         "id": "braising#meat",
         "text": "The meat is moist and seasoned through to its centre, not dry fibres sitting inside a good sauce."
       }
     ],
-    "fault": "The oven or the burner ran too hot and the liquid boiled, so the fibres tightened and squeezed their moisture out: it shreds dry into a thin greasy liquid, and more time makes it worse rather than better."
+    "fault": "The result is tough, dry or falling apart when the dish calls for intact pieces. Check heat, liquid level, cut size and tenderness during cooking; elapsed time alone does not identify the cause, and pulled texture is not a fault when the dish asks for it."
   },
   {
     "slug": "egg-wash-and-the-bakers-shine",
