@@ -459,6 +459,16 @@
 	const mcItem = $derived(item && cz?.kind === 'mc' ? cuisine.questionById(item.id) : null);
 	const stepsItem = $derived(item && cz?.kind === 'steps' ? cuisine.stepsById(item.id) : null);
 	const matchItem = $derived(item && cz?.kind === 'match' ? cuisine.matchById(item.id) : null);
+	const answerReadings = $derived.by<{ href: string; title: string }[]>(() => {
+		if (!answered) return [];
+		if (matchItem?.set.generated === 'tree') return [{ href: cuisineHref('view=tree'), title: 'The sauce family tree' }];
+		if (matchItem?.set.generated === 'ladder') return [{ href: cuisineHref('view=ladder'), title: 'The roux ladder' }];
+		const ids = mcItem ? [mcItem.entry.id] : stepsItem ? [stepsItem.set.entry] : matchItem ? matchItem.set.pairs.map((pair) => pair[2]) : [];
+		return [...new Set(ids)].flatMap((id) => {
+			const head = id ? cuisine.head(id) : null;
+			return head ? [{ href: entryHref(head.chapter, head.slug), title: head.title }] : [];
+		});
+	});
 	const itemLabel = $derived.by(() => {
 		if (mcItem) return mcItem.entry.title;
 		if (stepsItem) return stepsItem.set.title;
@@ -905,6 +915,12 @@
 			<p class="note">Opening the chapter…</p>
 		{/if}
 		{#if answered}
+			{#if answerReadings.length}
+				<nav class="answer-lessons" aria-label="Full explanation for this answer">
+					<p class="note">Open the full lesson, then use Back to return to this answer.</p>
+					<div class="chips">{#each answerReadings as reading (reading.href)}<a class="chip" href={reading.href}>Learn why: {reading.title}</a>{/each}</div>
+				</nav>
+			{/if}
 			<button type="button" class="chip go nextq" onclick={nextItem} bind:this={nextBtn}>{cz.i + 1 >= n ? 'See what you missed' : `Next ${KIND_ITEM[cz.kind ?? 'mc'].toLowerCase()}`}</button>
 		{/if}
 		<p class="note score" aria-live="polite">{rightCount} right of {(cz.answers ?? []).filter(Boolean).length} answered</p>

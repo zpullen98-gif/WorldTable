@@ -84,7 +84,9 @@
 	import { nav, restoreScroll } from '$lib/stores/nav.svelte';
 	import { markStudied } from '$lib/oot-studied';
 	import { drilledKey, markDrilled } from '$lib/house-drilled';
-	import { fallCardById, fallMembers, fallDeckName, fallGradeKey, fallVerdicts, fallPractice, fallSourceById, type FallCard } from '$lib/fall-menu';
+	import { fallCardById, fallItemById, fallMembers, fallDeckName, fallGradeKey, fallVerdicts, fallPractice, fallSourceById, type FallCard } from '$lib/fall-menu';
+	import AnswerReading from '$lib/components/AnswerReading.svelte';
+	import { houseAnswerReading, fallAnswerReading } from '$lib/house-answer-reading';
 	import FallTeachingImage from '$lib/components/FallTeachingImage.svelte';
 	import FinalDishImage from '$lib/components/FinalDishImage.svelte';
 	import { foundationsCategories, foundationsEntries, foundationEntryById, foundationEntryByRef, foundationsMembers, foundationsPractice, foundationsDeckName, foundationLogKey, foundationRecordable, resolveFoundation } from '$lib/foundations';
@@ -673,6 +675,12 @@
 	const runRefs = $derived(fc?.refs ?? []);
 	const currentRef = $derived(runRefs[fc?.i ?? 0]);
 	const shown = $derived(resolveRef(currentRef));
+	const answerReading = $derived.by(() => {
+		if (!fc?.flipped || !shown) return null;
+		if (shown.kind === 'f') return fallAnswerReading(fallItemById.get(shown.card.itemId));
+		if (current && (shown.kind === 'h' || shown.kind === 'p' || shown.kind === 'k' || shown.kind === 'r' || shown.kind === 's')) return houseAnswerReading(current, shown.card.itemId);
+		return null;
+	});
 	const shownFoundation = $derived(fc?.deck.startsWith('foundations') ? foundationEntryByRef.get(currentRef) : undefined);
 	const foundationReading = $derived(shownFoundation ? resolveFoundation(shownFoundation, deck ?? undefined, lexicon ?? undefined) : null);
 	const shownFolios = $derived.by(() => {
@@ -1089,6 +1097,7 @@
 					{:else}<div class="flash"><p class="def">Open this term through <a href="{base}/foundations">The Kitchen Fieldbook</a>.</p></div>
 					{/if}
 					{#if fc.flipped}
+						{#key currentRef}<AnswerReading reading={answerReading} />{/key}
 						{#if lessonDoors.length}
 							<nav class="chips reading-doors" aria-label="Read the lesson">
 								{#each lessonDoors as door (door.href)}<a class="chip" href={door.href}>{door.label}</a>{/each}

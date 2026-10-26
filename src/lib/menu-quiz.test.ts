@@ -64,6 +64,20 @@ const menu = [
 	dish('e', { section: 'Starters' })
 ];
 
+describe('unambiguous recorded menu answers', () => {
+	it('does not turn matching descriptions or reordered identical ingredients into competing answers', () => {
+		const dishes = [dish('a', { description: 'A shared description', ingredients: ['Beef', 'wine'] }), dish('b', { description: ' a SHARED description ', ingredients: ['wine', 'beef'] }), dish('c', { description: 'Different' }), dish('d', { description: 'Another' })];
+		expect(dishKinds(dishes[0], dishes)).toEqual([]);
+		expect(dishKinds(dishes[1], dishes)).toEqual([]);
+	});
+	it('keeps every option visibly distinct and deals even with a constant random source', () => {
+		const dishes = [dish('a', { description: 'A unique cue' }), dish('b'), dish('c'), dish('d'), dish('e', { name: 'Dish a' })];
+		const options = dishKinds(dishes[0], dishes)[0].options(() => 0);
+		expect(options).toHaveLength(4);
+		expect(new Set(options.map(o => o.name.toLowerCase())).size).toBe(4);
+	});
+});
+
 describe('the dish questions, moved from the page unchanged', () => {
 	it('asks description, ingredients, a unique price, and nothing of a bare dish', () => {
 		expect(dishKinds(menu[0], menu).map((k) => k.kindLabel)).toEqual([

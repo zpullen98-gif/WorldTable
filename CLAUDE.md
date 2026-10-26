@@ -1,5 +1,21 @@
 # The World Table
 
+## Brennan's answer learning, 26 October 2026
+
+`house-answer-reading.ts` builds answer-side readings from exact house records
+and person-kept marks; `AnswerReading.svelte` displays the closed Learn why
+disclosure. Menu quizzes, Today's Quick quiz and the house/fall flashcards
+share it. Cuisine's MC, ordering and matching rounds link to their exact
+full entries immediately after reveal. Reading never grades another attempt.
+Menu and Quick quiz snapshots preserve answered state and the open reading
+when a learner follows a link and returns. The older dish generator excludes
+ambiguous description/ingredient questions and draws distinct names without
+an unbounded resampling loop. Keep question, dish and card identities stable.
+
+Run `house-answer-reading.test.ts`, `menu-quiz.test.ts` and the eleven browser
+walks in `tests/house-answer-reading.spec.ts` for these flows. The cross-app
+review is recorded in `docs/brennans-quiz-review-2026-10-26.txt`.
+
 ## Cook's Eye, second collection, 23 October 2026
 
 `teaching-folios-prep-to-pass.ts` adds six studies and 27 views to the existing

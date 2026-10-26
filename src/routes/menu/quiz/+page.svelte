@@ -74,6 +74,9 @@
 	import { LINE_CAPS, type ItemKind } from '$lib/house/house-schema';
 	import { wordCount } from '$lib/house/house-lines';
 	import { nav } from '$lib/stores/nav.svelte';
+	import type { Snapshot } from './$types';
+	import AnswerReading from '$lib/components/AnswerReading.svelte';
+	import { drillAnswerReading, houseAnswerReading, menuAnswerReading } from '$lib/house-answer-reading';
 
 	/* Drills over The Kitchen's Menu: the dishes entered on /menu. The quiz
 	 * engine is the lexicon page's, ported: ten a round, distractors from the
@@ -115,6 +118,7 @@
 	let qNum = $state(0);
 	let right = $state(0);
 	let verdict = $state('');
+	let readingOpen = $state(false);
 
 	/* flashcards */
 	let deck = $state<DeckCard[] | null>(null);
@@ -133,9 +137,10 @@
 	 * a guaranteed 'Chef-level' verdict that teaches nothing and logs a fake
 	 * clean round. Two is the floor, and the round never asks the same subject
 	 * twice in a row while an alternative exists. */
-	let lastSubjectId = '';
+	let lastSubjectId = $state('');
 
 	function ask() {
+		readingOpen = false;
 		const next = askFrom(subjects, lastSubjectId, Math.random);
 		if (!next) return;
 		lastSubjectId = next.subjectId;
@@ -165,12 +170,12 @@
 			// The house verdict ladder, verbatim from the lexicon.
 			verdict =
 				right >= 9
-					? 'Chef-level. The pass is yours.'
+					? 'Strong recall. Revisit the explanations and try another round later.'
 					: right >= 7
-						? 'Solid line cook: a few more services and it’s muscle memory.'
+						? 'A useful foundation. Review the answers you missed before the next round.'
 						: right >= 5
-							? 'Stage complete: hit the flashcards on what you missed.'
-							: 'Read the menu again before the next round, chef: it is back to prep.';
+							? 'Keep building your recall. Read the explanations, then practise the menu cards.'
+							: 'Take a short reading pass through the menu, then try another round.';
 			// Contract with the OOT monorepo's shared/oot-log.js (hookTable).
 			if (typeof window !== 'undefined')
 				window.dispatchEvent(
@@ -263,6 +268,7 @@
 	}
 
 	function resetRound() {
+		readingOpen = false;
 		round = [];
 		rIdx = 0;
 		rPicked = null;
@@ -296,6 +302,7 @@
 	}
 
 	function nextRound() {
+		readingOpen = false;
 		if (rIdx + 1 >= round.length) {
 			rDone = true;
 			// A finished round is a day studied; nothing about a level moves.
@@ -532,6 +539,7 @@
 	});
 
 	function sayReset() {
+		readingOpen = false;
 		sayText = '';
 		sayGrade = null;
 		sayRecorded = false;
@@ -580,6 +588,7 @@
 	let gRecorded = $state(false);
 
 	function guestReset() {
+		readingOpen = false;
 		gText = '';
 		gGrade = null;
 		gRecorded = false;
@@ -697,6 +706,31 @@
 		fromStudy = !!(page.state as App.PageState | undefined)?.fromStudy;
 		pendingAsk = true;
 	});
+
+	// The answer's reading links are ordinary navigation. Back restores this
+	// exact attempt, including a wrong choice, without recording it twice.
+	export const snapshot: Snapshot = {
+		capture: () => ({
+			mode, quiz, picked, qNum, right, verdict, lastSubjectId, deck, deckIdx, revealed, readingOpen,
+			chosen, whole, round, rIdx, rPicked, rRight, rDone, rSaid, drillSec, drillMeal,
+			sayKinds, sayId, sayLen, sayText, sayGrade, sayRecorded,
+			gCard, gText, gGrade, gRecorded, y: window.scrollY
+		}),
+		restore: (saved) => {
+			mode = saved.mode; quiz = saved.quiz; picked = saved.picked; qNum = saved.qNum;
+			right = saved.right; verdict = saved.verdict; lastSubjectId = saved.lastSubjectId;
+			deck = saved.deck; deckIdx = saved.deckIdx; revealed = saved.revealed;
+			readingOpen = saved.readingOpen;
+			chosen = saved.chosen; whole = saved.whole; round = saved.round; rIdx = saved.rIdx;
+			rPicked = saved.rPicked; rRight = saved.rRight; rDone = saved.rDone; rSaid = saved.rSaid;
+			drillSec = saved.drillSec; drillMeal = saved.drillMeal;
+			sayKinds = saved.sayKinds; sayId = saved.sayId; sayLen = saved.sayLen;
+			sayText = saved.sayText; sayGrade = saved.sayGrade; sayRecorded = saved.sayRecorded;
+			gCard = saved.gCard; gText = saved.gText; gGrade = saved.gGrade; gRecorded = saved.gRecorded;
+			pendingAsk = false;
+			void tick().then(() => window.scrollTo(0, saved.y));
+		}
+	};
 </script>
 
 <svelte:head><title>{PAGE_TITLES[mode]} · The World Table</title></svelte:head>
@@ -710,8 +744,8 @@
 
 		{#if mode === 'dish'}
 			<p class="lede">
-				The Kitchen’s Menu, drilled the way the lexicon is: descriptions, ingredients, prices and
-				allergens, asked the way a guest asks.
+				Practise the menu’s descriptions, ingredients and recorded prices. After answering,
+				open Learn why to read the full context without losing your place.
 			</p>
 		{/if}
 
@@ -858,6 +892,7 @@
 								<p class="eyebrow">{SERVICE_EYEBROW}</p>
 								<p class="def small note">{sayNote}</p>
 							{/if}
+							{#if current}{#key sayGrade.itemId + sayGrade.length}<AnswerReading reading={houseAnswerReading(current, sayGrade.itemId)} bind:open={readingOpen} />{/key}{/if}
 							<div class="flashtools">
 								<button class="chip go" disabled={sayRecorded} onclick={sayRecord}>{sayRecorded ? 'Recorded' : 'Record it'}</button>
 								<button class="chip" onclick={sayReset}>Try again</button>
@@ -931,6 +966,7 @@
 								<p class="eyebrow">The principle</p>
 								<p class="def principle">{gGrade.principle}</p>
 							{/if}
+							{#if current && gCard}{#key gCard.id}<AnswerReading reading={houseAnswerReading(current, gCard.id)} bind:open={readingOpen} />{/key}{/if}
 							<div class="flashtools">
 								<button class="chip go" disabled={gRecorded} onclick={guestRecord}>{gRecorded ? 'Recorded' : 'Record it'}</button>
 								<button class="chip" onclick={guestReset}>Try again</button>
@@ -979,6 +1015,7 @@
 								<b>{rPicked === rQ.answer ? 'Right.' : 'Not that one.'}</b>
 								The answer: {rQ.answer}.{#if rExplained}&nbsp;<span class="why">{rExplained}</span>{/if}
 							</p>
+							{#key rQ.kind + ':' + rQ.itemId}<AnswerReading reading={drillAnswerReading(current, rQ)} bind:open={readingOpen} />{/key}
 						{/if}
 						<div class="flashtools">
 							{#if rPicked !== null}
@@ -1049,6 +1086,10 @@
 							</button>
 						{/each}
 					</div>
+					{#if picked}
+						<p class="answer" role="status"><b>{picked.id === quiz.target.id ? 'Right.' : 'Not that one.'}</b> The answer: {quiz.target.name}.</p>
+						{#key lastSubjectId + ':' + quiz.kindLabel}<AnswerReading reading={menuAnswerReading(current, dishes, house.producers, quiz, lastSubjectId)} bind:open={readingOpen} />{/key}
+					{/if}
 					<div class="flashtools">
 						{#if picked}
 							<button class="chip" onclick={nextQuestion}>

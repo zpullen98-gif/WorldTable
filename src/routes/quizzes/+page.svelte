@@ -49,7 +49,9 @@
 	import { markStudied } from '$lib/oot-studied';
 	import { drilledKey, markDrilled } from '$lib/house-drilled';
 	import { dealRound, explainAnswer, shuffleWith, tableDrillHouse } from '$lib/house-drill-round';
-	import { DRILL_LABELS, readyKinds } from '$lib/house/house-drills';
+	import { DRILL_KINDS, DRILL_LABELS, readyKinds } from '$lib/house/house-drills';
+	import AnswerReading from '$lib/components/AnswerReading.svelte';
+	import { drillAnswerReading } from '$lib/house-answer-reading';
 	import { itemCards } from '$lib/study';
 	import { deckLog, mcFor, owedIds } from '$lib/floor-deck';
 	import { nextTarget, optionsForTerm } from '$lib/lexicon-quiz';
@@ -365,6 +367,12 @@
 		}
 		return null;
 	}
+	function answerReading(q: Q) {
+		const kind = DRILL_KINDS.find(kind => kind === q.drill);
+		return q.kind === 'house' && current && kind
+			? drillAnswerReading(current, { kind, itemId: q.ref, stem: q.stem, answer: q.answer, options: q.options })
+			: null;
+	}
 
 	/** The dishes with a card on the one card screen (study.ts itemCards). */
 	const carded = $derived(new Set(current ? itemCards(current, 'dish', { all: true }).map((c) => c.itemId) : []));
@@ -506,6 +514,14 @@
 					<b>{qq.picked === q.answer ? 'Right.' : 'Not that one.'}</b>
 					Answer: {q.answer}.{#if q.why}&nbsp;<span class="why">{q.why}</span>{/if}
 				</p>
+				{@const reading = answerReading(q)}
+				{@const lesson = studyHref(q)}
+				{#if reading}
+					{#key qq.i}<AnswerReading {reading} />{/key}
+				{:else if lesson}
+					<p><a class="chip" href={lesson.href}>Learn why: open the full lesson</a></p>
+					<p class="note">Use Back to return to this answer.</p>
+				{/if}
 				<button type="button" class="chip go" onclick={next}>{qq.i + 1 >= qq.qs.length ? 'See what you missed' : 'Next question'}</button>
 			{/if}
 		</div>

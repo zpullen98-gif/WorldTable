@@ -1,0 +1,70 @@
+BRENNAN'S QUIZ LEARNING REVIEW
+26 October 2026
+
+Purpose
+Make every revealed answer a useful learning doorway in World Table,
+Bartender's Ledger and Sommelier's Codex. Keep the live round easy to use:
+answer, read the feedback, open Learn why, then continue or follow the
+specific reading and return. Do not reveal teaching context before the answer.
+
+Findings
+The existing collection already contains substantial kept descriptions,
+component explanations, producer stories, wine profiles and service notes.
+Several quiz screens reduced these to the question and correct label.
+World Table's older dishes quiz relied on option colour for feedback.
+Reading links and question identity were not consistently carried through
+rounds, especially the Ledger pairing adapter. These are the main changes
+in this edition, rather than adding unsupported menu facts.
+The separate legacy dishes quiz could treat duplicate descriptions or
+ingredient sets as a unique answer. Its question selection now suppresses
+those ambiguous forms and selects distinct names without a resampling loop.
+The shared engine audit below tests a different generator.
+
+Reading principles
+Learn why opens in place after an answer, including a correct answer.
+Its full reading draws from the exact record involved, with a descriptive
+link to the relevant dish, drink, wine or supporting reference where available.
+Kept marks only: an unaccepted draft must not become the house's answer.
+Imported text is escaped, and explanatory links must use real record IDs.
+Examples of suitable cocktail families are comparisons, not the house recipe.
+Pairings are the house's saved first picks, not a claim that every other wine
+would be inappropriate. Saved prices and availability are not live inventory.
+Missing measures, glassware, garnish or production details remain missing.
+No preparation, allergen or alcohol claim is inferred from an illustration.
+
+Interaction principles
+Visible textual feedback accompanies option colour. Native disclosures have
+a keyboard action and a visible focus indicator, and controls retain a
+minimum 44-pixel target. Inline reading does not grade a second time.
+Following a reading and returning should restore the live question, answer,
+position and score. Previous records and stable item identities are retained.
+Phone layouts are checked in both service palettes.
+
+Shared engine audit
+The current saved house pack has 70 dishes, 32 cocktails and 271 wines.
+The shared engine's fifteen multiple-choice families were exercised through
+ten deterministic complete rounds each, producing 19,320 dealt questions.
+Every dealt question had four distinct options, exactly one matching answer,
+a nonempty stem and a resolvable house record ID. No conflicting options were
+found among exact matching stems with different answer labels in this run.
+This is a structural and exact-duplicate audit, not a claim that wording
+similarity establishes culinary truth or pairing exclusivity.
+
+Family coverage, unique item records reached
+Menu descriptions: 18; sauce and flavour components: 51; accompaniments: 53;
+first wine picks: 43; zero-proof picks: 43; guest vocabulary: 24;
+pronunciation: 475; comparisons: 29; wine grapes: 195; wine pairings: 271;
+cocktail specifications: 32; producer for an item: 128;
+producer location: 285; item associated with a producer: 285.
+Cocktail glassware correctly supplied no questions because the current
+house records do not supply a sufficient verified glassware set.
+These are overlapping teaching families, not additional menu items.
+
+Evidence
+The item explanations remain tied to the saved house pack and its kept
+research, including the existing food, wine and bar reviews. No new source
+is used to silently replace the user's restaurant menus. Source-specific
+UI and browser checks are recorded with the three implementations, and the
+final coordinated publication is checked by the public site's nine gates.
+The audit output and release verification are saved in the task's
+outputs/brennans-quiz-review-2026-10-26 directory.

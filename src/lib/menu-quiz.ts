@@ -86,29 +86,31 @@ const pick = <T>(arr: readonly T[], rand: Rand): T => arr[Math.floor(rand() * ar
 
 /** Four dishes: the target, and three from its own section when it has enough. */
 function dishOptions(target: MenuDish, dishes: readonly MenuDish[], rand: Rand): Choice[] {
-	const sameSection = dishes.filter((d) => d.section === target.section && d.id !== target.id);
-	const chosen = new Map<string, MenuDish>([[target.id, target]]);
-	while (chosen.size < 4) {
-		const cand = pick(sameSection.length >= 3 ? sameSection : dishes, rand);
-		chosen.set(cand.id, cand);
-	}
-	return shuffle([...chosen.values()], rand);
+	const named = new Map<string, MenuDish>();
+	for (const dish of dishes) if (dish.id !== target.id && answerKey(dish.name) !== answerKey(target.name) && !named.has(answerKey(dish.name))) named.set(answerKey(dish.name), dish);
+	const others = [...named.values()];
+	const sameSection = others.filter(dish => dish.section === target.section);
+	return shuffle([target, ...shuffle(sameSection.length >= 3 ? sameSection : others, rand).slice(0, 3)], rand);
 }
+
+const answerKey = (value: string): string => value.trim().toLowerCase().replace(/\s+/g, ' ');
+const ingredientKey = (dish: MenuDish): string => dish.ingredients.map(answerKey).sort().join('|');
 
 /* A dish is drillable when at least one question shape fits it. Price and
  * allergen questions demand uniqueness, or the question has two right
  * answers and the guest deserves better than a coin flip. */
 export function dishKinds(d: MenuDish, dishes: readonly MenuDish[]): QuestionKind[] {
 	const out: QuestionKind[] = [];
+	if (new Set(dishes.map(row => answerKey(row.name))).size < 4) return out;
 	const options = (rand: Rand) => dishOptions(d, dishes, rand);
-	if (d.description)
+	if (d.description && dishes.filter(row => answerKey(row.description) === answerKey(d.description)).length === 1)
 		out.push({
 			kindLabel: 'Which dish does the menu describe?',
 			prompt: `“${d.description}”`,
 			target: d,
 			options
 		});
-	if (d.ingredients.length >= 2)
+	if (d.ingredients.length >= 2 && dishes.filter(row => ingredientKey(row) === ingredientKey(d)).length === 1)
 		out.push({
 			kindLabel: 'Whose ingredients are these?',
 			prompt: d.ingredients.join(' · '),
