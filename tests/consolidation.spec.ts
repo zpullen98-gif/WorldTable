@@ -93,7 +93,7 @@ async function expectScroll(page: Page, y: number) {
 /** Home, with the house read and the levels painted. */
 async function home(page: Page) {
 	await goto(page, '/');
-	await expect(page.locator('a.level .lv-stat').first()).not.toHaveText('', { timeout: 15_000 });
+	await expect(page.locator('a.level[aria-current="step"]')).toBeVisible({ timeout: 15_000 });
 }
 
 /** The level page of the nth card, with Today's study counted. */
@@ -615,7 +615,7 @@ test('11. the scope chip: show all is in the address and survives Back; choosing
 	await expect(page.locator('#fc-level')).toHaveText(NAMES[2]);
 	await tab(page, 'Home');
 	await expect(page.locator('a.level.on .lv-name')).toHaveText(NAMES[2]);
-	await expect(page.locator('a.level.on .lv-here')).toHaveText('Your level');
+	await expect(page.locator('a.level.on')).toHaveAttribute('aria-current', 'step');
 });
 
 test('12. Home keeps four level cards with a direct daily-study door and guide', async ({ page }) => {
@@ -625,7 +625,7 @@ test('12. Home keeps four level cards with a direct daily-study door and guide',
 	);
 	expect(focusable).toHaveLength(6);
 	await expect(page.locator('main .home a.level')).toHaveCount(4);
-	await expect(page.locator('main .home .lv-blurb')).toHaveCount(4);
+	await expect(page.locator('main .home a.level')).toHaveText(NAMES);
 	await expect(page.getByRole('link', { name: /Today's study/ })).toHaveAttribute('href', /\/level\/1#today$/);
 	await expect(page.getByRole('link', { name: 'How to use the Table' })).toHaveAttribute('href', '/more#learning');
 	await expect(page.locator('main h2, main h3')).toHaveCount(0);

@@ -9,9 +9,9 @@ import { goto, seedSession } from './helpers';
  * doors, a level's page, its test, and the two doors that closed.
  *
  * Everything the engine decides is unit-tested (src/lib/levels.test.ts). What
- * this proves is that the PAGES say it: that a new reader sees Untouched four
- * times and Commis as theirs, that a record moves the word and the figure and
- * the reader's level, that a level is named and never numbered anywhere a
+ * this proves is that the PAGES say it: that home shows four names and marks
+ * Commis as the new reader's level, that a record moves the progress on the
+ * level page and the reader's level, that a level is never numbered anywhere a
  * reader meets it (the owner, 27 Sep 2026), that a level page lists its eight
  * subsections with a count and a door each, that the test sits to its end
  * and ends on what was missed with no number, and that the two retired hubs
@@ -57,7 +57,7 @@ function level1Seed() {
 	return { cookedLog, drillLog, calibrationLog };
 }
 
-test('a new reader sees four Untouched cards, named and never numbered, and Commis as theirs', async ({ page }) => {
+test('a new reader sees four name-only level cards, never numbered, and Commis as theirs', async ({ page }) => {
 	await goto(page, '/');
 	await page.locator('.level.on').waitFor();
 	const cards = page.locator('section.levels .level');
@@ -67,36 +67,38 @@ test('a new reader sees four Untouched cards, named and never numbered, and Comm
 		   painted or hidden */
 		await expect(cards.nth(i).locator('.lv-num, .sr-only')).toHaveCount(0);
 		await expect(cards.nth(i)).not.toHaveText(/\b(?:I|II|III|IV)\b/);
-		await expect(cards.nth(i).locator('.lv-name')).toHaveText(NAMES[i]);
-		await expect(cards.nth(i).locator('.lv-stat')).toHaveText('Untouched');
+		await expect(cards.nth(i)).toHaveText(NAMES[i]);
+		await expect(cards.nth(i)).toHaveAttribute('href', `/level/${i + 1}`);
 	}
 	const on = page.locator('.level.on');
 	await expect(on).toHaveAttribute('data-level', '1');
-	await expect(on.locator('.lv-here')).toHaveText('Your level');
 	await expect(on).toHaveAttribute('aria-current', 'step');
 
 	// the home is the four cards and nothing else since the consolidation
 	await expect(page.locator('nav.quiet .door')).toHaveCount(0);
 });
 
-test('a partial record shows a figure, never a score', async ({ page }) => {
+test('a partial record shows a figure on its level page, never a score', async ({ page }) => {
 	await seedSession(page);
 	await goto(page, '/');
 	await page.locator('.level.on').waitFor();
-	await expect(page.locator('.level[data-level="1"] .lv-stat')).toHaveText(/^\d+% met$/);
 	await expect(page.locator('.level.on')).toHaveAttribute('data-level', '1');
+	await page.locator('.level[data-level="1"]').click();
+	await expect(page.locator('.stat')).toHaveText(/^\d+% met · Your level$/);
 });
 
 test('a full Commis record reads Met and moves the reader to Chef de Partie', async ({ page }) => {
 	await seedSession(page, level1Seed());
 	await goto(page, '/');
 	await page.locator('.level.on').waitFor();
-	await expect(page.locator('.level[data-level="1"] .lv-stat')).toHaveText('Met');
 	await expect(page.locator('.level.on')).toHaveAttribute('data-level', '2');
 	// and the old Levels address now forwards there (nothing chosen yet, so
 	// the lowest not yet met)
 	await goto(page, '/level');
 	await expect(page).toHaveURL(/\/level\/2$/);
+	// Progress stays available inside the completed level, beneath its name.
+	await goto(page, '/level/1');
+	await expect(page.locator('.stat')).toHaveText('Met · Your level');
 });
 
 test('a level page opens on Today\'s study and My restaurant, and keeps its eight subsections closed below', async ({ page }) => {

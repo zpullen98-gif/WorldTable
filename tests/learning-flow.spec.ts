@@ -24,9 +24,9 @@ const root = async (page: Page) => {
 	await expect(page.locator('[data-deck="menu"]')).toBeVisible();
 };
 
-test('a new learner can choose an explained level or go straight to today', async ({ page }) => {
+test('a new learner can choose a named level or go straight to today', async ({ page }) => {
 	await goto(page, '/');
-	await expect(page.locator('.lv-blurb')).toHaveCount(4);
+	await expect(page.locator('section.levels a.level')).toHaveCount(4);
 	await expect(page.getByRole('link', { name: 'How to use the Table' })).toHaveAttribute('href', '/more#learning');
 	await page.getByRole('link', { name: /Today's study/ }).click();
 	await expect(page).toHaveURL(/\/level\/1#today$/);
