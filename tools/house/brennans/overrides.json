@@ -46951,14 +46951,14 @@
       "target": "ask:+",
       "op": "add",
       "value": {
-        "question": "Henriques & Henriques Founder’s Solera 1894 (bin 29088, $3200): the list says Verdelho but the producer describes it as Malvasia; which grape is it, and is it sold by the glass?",
+        "question": "Henriques & Henriques Founder’s Solera 1894 (bin 29088, $3200): the list prints Verdelho while earlier descriptions name Malvasia. Which grape does the actual label confirm, and is it sold by the glass?",
         "askWhom": "sommelier",
         "items": [
           "Henriques & Henriques ‘Founder’s Solera’ Madeira 1894"
         ]
       },
-      "reason": "A floor bottle: availability tonight and the facts the sources do not hold",
-      "source": "research/winelist-2026-10-03.json entry 3548 (page:binwise-wine-list-2026-10-03.txt line 18311: bin 29088, Henriques & Henriques \"Founder's Solera\" Verdelho, 1894, 750ml, 3200); research/bottle-selection-2026-10-04.json (cards-c, roles famous); research/bottle-facts-cards-c-2026-10-04.json n 3548"
+      "reason": "A floor bottle: availability tonight and the facts the sources do not hold; clarified 27 October 2026 without changing the question identity: grape and closure still require bottle documentation",
+      "source": "research/winelist-2026-10-03.json entry 3548 (page:binwise-wine-list-2026-10-03.txt line 18311: bin 29088, Henriques & Henriques \"Founder's Solera\" Verdelho, 1894, 750ml, 3200); research/bottle-selection-2026-10-04.json (cards-c, roles famous); research/bottle-facts-cards-c-2026-10-04.json n 3548; research/cellar-reference-corrections-2026-10-27.txt (Madeira Solera: DEFRA registered traditional term, ViniPortugal, and Henriques & Henriques Founders Solera 1894 technical sheet, all read 27 October 2026); pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314"
     },
     {
       "target": "dish:Baked Apple",
@@ -54606,15 +54606,15 @@
       "target": "ask:+",
       "op": "add",
       "value": {
-        "question": "Does our bottle of the Henriques & Henriques Founder's Solera 1894 read Malvasia, as the producer describes it, or Verdelho, as the list prints it? And does closed in 1899 mean no younger wine went into the solera? The pack's guest answer says it holds wine from 1894 onward.",
+        "question": "Does our bottle of the Henriques & Henriques Founder's Solera 1894 identify the grape as Verdelho or Malvasia, and what documentation supports the reported closure in 1899? The base year alone does not establish every component’s age.",
         "askWhom": "sommelier",
         "items": [
           "Henriques & Henriques ‘Founder’s Solera’ Madeira 1894"
         ],
         "blocksField": ""
       },
-      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup",
-      "source": "research:producers-cellar-port-madeira-2026-10-10.md"
+      "reason": "Producers deep dive, the cellar: a question about a wine producer that no source answers goes to the sommelier or a manager at lineup; clarified 27 October 2026 without changing the question identity: grape and closure still require bottle documentation",
+      "source": "research:producers-cellar-port-madeira-2026-10-10.md; research/cellar-reference-corrections-2026-10-27.txt (Madeira Solera: DEFRA registered traditional term, ViniPortugal, and Henriques & Henriques Founders Solera 1894 technical sheet, all read 27 October 2026); pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314"
     },
     {
       "target": "ask:+",
@@ -71849,6 +71849,126 @@
       },
       "reason": "Coffee and tea, 18 October 2026: the menus print the coffees, never how the bar brews them, and guests ask for plain iced coffee",
       "source": "pages/brennansneworleans-menus-pasted-2026-10-03.txt lines 81 to 92; the Ledger's Coffee and tea page"
+    },
+    {
+      "target": "wine:Henriques & Henriques ‘Founder’s Solera’ Madeira 1894",
+      "field": "style",
+      "op": "set",
+      "value": "Historic solera Madeira with an 1894 base year, sweet, complex and tangy",
+      "reason": "Certified study correction 27 October 2026: distinguish the original base wine harvest from a single vintage bottling and from component age; remove unsupported century aging and closure certainty while retaining the printed grape question",
+      "source": "research/cellar-reference-corrections-2026-10-27.txt (Madeira Solera: DEFRA registered traditional term, ViniPortugal, and Henriques & Henriques Founders Solera 1894 technical sheet, all read 27 October 2026); pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314"
+    },
+    {
+      "target": "wine:Henriques & Henriques ‘Founder’s Solera’ Madeira 1894",
+      "field": "guest",
+      "op": "set",
+      "value": "Henriques & Henriques Founder’s Solera 1894: sweet Madeira with dried fruit, spice and honey, a glass to end the evening.",
+      "reason": "Certified study correction 27 October 2026: distinguish the original base wine harvest from a single vintage bottling and from component age; remove unsupported century aging and closure certainty while retaining the printed grape question",
+      "source": "research/cellar-reference-corrections-2026-10-27.txt (Madeira Solera: DEFRA registered traditional term, ViniPortugal, and Henriques & Henriques Founders Solera 1894 technical sheet, all read 27 October 2026); pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314"
+    },
+    {
+      "target": "wine:Henriques & Henriques ‘Founder’s Solera’ Madeira 1894",
+      "field": "why",
+      "op": "set",
+      "value": "A historic Madeira for a special occasion: 1894 is the oldest date on our list, identifying the solera’s original base wine rather than the age of every component.",
+      "reason": "Certified study correction 27 October 2026: distinguish the original base wine harvest from a single vintage bottling and from component age; remove unsupported century aging and closure certainty while retaining the printed grape question",
+      "source": "research/cellar-reference-corrections-2026-10-27.txt (Madeira Solera: DEFRA registered traditional term, ViniPortugal, and Henriques & Henriques Founders Solera 1894 technical sheet, all read 27 October 2026); pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314"
+    },
+    {
+      "target": "wine:Henriques & Henriques ‘Founder’s Solera’ Madeira 1894",
+      "field": "origin",
+      "op": "set",
+      "value": "Henriques & Henriques is a historic Madeira house. In Madeira Solera, the date identifies the original base wine’s harvest year; later additions mean the finished wine is not a single vintage bottling. The date alone does not establish the age of every component.",
+      "reason": "Certified study correction 27 October 2026: distinguish the original base wine harvest from a single vintage bottling and from component age; remove unsupported century aging and closure certainty while retaining the printed grape question",
+      "source": "research/cellar-reference-corrections-2026-10-27.txt (Madeira Solera: DEFRA registered traditional term, ViniPortugal, and Henriques & Henriques Founders Solera 1894 technical sheet, all read 27 October 2026); pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314"
+    },
+    {
+      "target": "wine:Henriques & Henriques ‘Founder’s Solera’ Madeira 1894",
+      "field": "profile",
+      "op": "set",
+      "value": "Sweet Madeira, deep amber with golden and green tinges, showing dried fruit, raisins, spice, honey and old wood, a velvety texture and an intense finish. The solera’s 1894 base year does not establish a minimum century of cask aging for every component.",
+      "reason": "Certified study correction 27 October 2026: distinguish the original base wine harvest from a single vintage bottling and from component age; remove unsupported century aging and closure certainty while retaining the printed grape question",
+      "source": "research/cellar-reference-corrections-2026-10-27.txt (Madeira Solera: DEFRA registered traditional term, ViniPortugal, and Henriques & Henriques Founders Solera 1894 technical sheet, all read 27 October 2026); pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314"
+    },
+    {
+      "target": "wine:Henriques & Henriques ‘Founder’s Solera’ Madeira 1894",
+      "field": "parts.technique",
+      "op": "set",
+      "value": "Madeira solera blending, with 1894 identifying the original base wine’s harvest",
+      "reason": "Certified study correction 27 October 2026: distinguish the original base wine harvest from a single vintage bottling and from component age; remove unsupported century aging and closure certainty while retaining the printed grape question",
+      "source": "research/cellar-reference-corrections-2026-10-27.txt (Madeira Solera: DEFRA registered traditional term, ViniPortugal, and Henriques & Henriques Founders Solera 1894 technical sheet, all read 27 October 2026); pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314"
+    },
+    {
+      "target": "wine:Henriques & Henriques ‘Founder’s Solera’ Madeira 1894",
+      "field": "parts.taste",
+      "op": "set",
+      "value": "sweet, dried fruit, raisins, spice, honey, old wood, bright acidity",
+      "reason": "Certified study correction 27 October 2026: distinguish the original base wine harvest from a single vintage bottling and from component age; remove unsupported century aging and closure certainty while retaining the printed grape question",
+      "source": "research/cellar-reference-corrections-2026-10-27.txt (Madeira Solera: DEFRA registered traditional term, ViniPortugal, and Henriques & Henriques Founders Solera 1894 technical sheet, all read 27 October 2026); pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314"
+    },
+    {
+      "target": "wine:Henriques & Henriques ‘Founder’s Solera’ Madeira 1894",
+      "field": "lines.s10",
+      "op": "set",
+      "value": "Henriques & Henriques Founder’s Solera 1894, sweet Madeira with dried fruit, spice and honey: a glass to end the evening.",
+      "reason": "Certified study correction 27 October 2026: distinguish the original base wine harvest from a single vintage bottling and from component age; remove unsupported century aging and closure certainty while retaining the printed grape question",
+      "source": "research/cellar-reference-corrections-2026-10-27.txt (Madeira Solera: DEFRA registered traditional term, ViniPortugal, and Henriques & Henriques Founders Solera 1894 technical sheet, all read 27 October 2026); pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314"
+    },
+    {
+      "target": "wine:Henriques & Henriques ‘Founder’s Solera’ Madeira 1894",
+      "field": "lines.s20",
+      "op": "set",
+      "value": "The Founder’s Solera is Henriques & Henriques Madeira: 1894 identifies its original base wine’s harvest, while the finished wine blends vintages. Sweet and complex, with dried fruit, spice, honey and old wood, it suits a quiet glass after dinner or aged cheese.",
+      "reason": "Certified study correction 27 October 2026: distinguish the original base wine harvest from a single vintage bottling and from component age; remove unsupported century aging and closure certainty while retaining the printed grape question",
+      "source": "research/cellar-reference-corrections-2026-10-27.txt (Madeira Solera: DEFRA registered traditional term, ViniPortugal, and Henriques & Henriques Founders Solera 1894 technical sheet, all read 27 October 2026); pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314"
+    },
+    {
+      "target": "wine:Henriques & Henriques ‘Founder’s Solera’ Madeira 1894",
+      "field": "lines.s45",
+      "op": "set",
+      "value": "Henriques & Henriques is a historic house at Câmara de Lobos on Madeira. Its Founder’s Solera carries 1894, the oldest date on our list. In Madeira Solera, that is the original base wine’s harvest year; later additions mean the bottle is not a single vintage and the date does not state every component’s age. Expect sweet, velvety Madeira with dried fruit, raisins, spice, honey and old wood, an intense finish and bright acidity. Enjoy it on its own or with aged cheese. Our list prints Verdelho; the sommelier confirms the exact bottle and grape, presents it and agrees the pour before service.",
+      "reason": "Certified study correction 27 October 2026: distinguish the original base wine harvest from a single vintage bottling and from component age; remove unsupported century aging and closure certainty while retaining the printed grape question",
+      "source": "research/cellar-reference-corrections-2026-10-27.txt (Madeira Solera: DEFRA registered traditional term, ViniPortugal, and Henriques & Henriques Founders Solera 1894 technical sheet, all read 27 October 2026); pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314"
+    },
+    {
+      "target": "wine:Henriques & Henriques ‘Founder’s Solera’ Madeira 1894",
+      "field": "kept.0.a",
+      "op": "set",
+      "value": "Henriques & Henriques Founder’s Solera 1894 is the oldest date on our printed list: bin 29088, $3200.\n\nMadeira is the fortified wine of a Portuguese Atlantic island. Its warm, oxidative maturation explains its resilient style. For Madeira Solera, the label date identifies the harvest of the original base wine. Subsequent additions mean the finished wine blends vintages; it is not a single vintage bottling, and 1894 does not prove the youngest component’s age or a century in cask for every component.\n\nThe producer describes a sweet, velvety wine with deep amber, gold and green tones, dried fruit, raisins, spice, honey and old wood, followed by an intense finish.\n\nThe printed Verdelho and earlier Malvasia descriptions remain a bottle question for the sommelier. Do not turn an unresolved grape or an unverified closure date into a guest promise.",
+      "reason": "Certified study correction 27 October 2026: distinguish the original base wine harvest from a single vintage bottling and from component age; remove unsupported century aging and closure certainty while retaining the printed grape question",
+      "source": "research/cellar-reference-corrections-2026-10-27.txt (Madeira Solera: DEFRA registered traditional term, ViniPortugal, and Henriques & Henriques Founders Solera 1894 technical sheet, all read 27 October 2026); pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314"
+    },
+    {
+      "target": "wine:Henriques & Henriques ‘Founder’s Solera’ Madeira 1894",
+      "field": "kept.1.a",
+      "op": "set",
+      "value": "Offer it to a guest who loves Madeira or wants a historic wine for a special occasion. Explain that it carries the oldest date on our list, not a verified age for every component. Ask the sommelier to confirm the bottle, availability, format and price before the guest decides. Say: “Founder’s Solera 1894: sweet Madeira with dried fruit, spice, honey and a long finish.”",
+      "reason": "Certified study correction 27 October 2026: distinguish the original base wine harvest from a single vintage bottling and from component age; remove unsupported century aging and closure certainty while retaining the printed grape question",
+      "source": "research/cellar-reference-corrections-2026-10-27.txt (Madeira Solera: DEFRA registered traditional term, ViniPortugal, and Henriques & Henriques Founders Solera 1894 technical sheet, all read 27 October 2026); pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314"
+    },
+    {
+      "target": "wine:Henriques & Henriques ‘Founder’s Solera’ Madeira 1894",
+      "field": "kept.2.a",
+      "op": "set",
+      "value": "Asked: Is every drop from 1894?\n\nAnswer: No. For Madeira Solera, 1894 identifies the original base wine’s harvest; additions mean the finished wine blends vintages. The date alone does not establish the youngest component’s age.\n\nAsked: Is this the same system as Sherry?\n\nAnswer: Both use fractional blending, but Madeira’s protected Solera term has its own limits on withdrawals and additions. Do not assume an indefinitely replenished Sherry cascade.\n\nAsked: What grape is it, and was it closed in 1899?\n\nAnswer: The list prints Verdelho; earlier descriptions say Malvasia. The producer’s technical sheet does not settle the grape or closure, so the sommelier should confirm the actual bottle and documentation.",
+      "reason": "Certified study correction 27 October 2026: distinguish the original base wine harvest from a single vintage bottling and from component age; remove unsupported century aging and closure certainty while retaining the printed grape question",
+      "source": "research/cellar-reference-corrections-2026-10-27.txt (Madeira Solera: DEFRA registered traditional term, ViniPortugal, and Henriques & Henriques Founders Solera 1894 technical sheet, all read 27 October 2026); pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314"
+    },
+    {
+      "target": "wine:Henriques & Henriques ‘Founder’s Solera’ Madeira 1894",
+      "field": "kept.3.a",
+      "op": "set",
+      "value": "Distinguish base harvest, single vintage and age: 1894 is the solera’s original base wine year, not proof that all the wine is from that harvest or has spent a century in cask. The grape remains unresolved; the list prints Verdelho, while earlier descriptions name Malvasia. Do not state that it closed in 1899 without bottle documentation. At $3200, bring the sommelier in before the guest decides. Allergens: read the service note and confirm at lineup.",
+      "reason": "Certified study correction 27 October 2026: distinguish the original base wine harvest from a single vintage bottling and from component age; remove unsupported century aging and closure certainty while retaining the printed grape question",
+      "source": "research/cellar-reference-corrections-2026-10-27.txt (Madeira Solera: DEFRA registered traditional term, ViniPortugal, and Henriques & Henriques Founders Solera 1894 technical sheet, all read 27 October 2026); pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314"
+    },
+    {
+      "target": "wine:Henriques & Henriques ‘Founder’s Solera’ Madeira 1894",
+      "field": "kept.4.a",
+      "op": "set",
+      "value": "The sommelier presents it. Show the label and say: “Henriques & Henriques, Founder’s Solera 1894: sweet Madeira with dried fruit, spice and honey.” Explain the base year if asked; do not call the whole bottle an 1894 vintage wine. The existing house service guide gives 55 to 60°F in a small Madeira glass with no decanting. Confirm the bottle’s condition, the house pour and the policy for storing it once opened before service.",
+      "reason": "Certified study correction 27 October 2026: distinguish the original base wine harvest from a single vintage bottling and from component age; remove unsupported century aging and closure certainty while retaining the printed grape question",
+      "source": "research/cellar-reference-corrections-2026-10-27.txt (Madeira Solera: DEFRA registered traditional term, ViniPortugal, and Henriques & Henriques Founders Solera 1894 technical sheet, all read 27 October 2026); pages/binwise-wine-list-2026-10-03.txt lines 18311 to 18314"
     }
   ]
 }

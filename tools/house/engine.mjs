@@ -178,7 +178,9 @@ export function stagingFragmentFiles(names) { return names.map((n) => path.join(
    here); the nine fall cocktails' sheet notes; the mascarpone, burrata and harissa kept notes set to
    the pack's term cards; and the Fall 2026 sheets filed as the fifteenth source; stamped at the
    quarter hour before its build, never ahead of the clock. */
-export const EDITION_BUILT_AT = '2026-10-19T04:15:00.000Z';
+/* 27 October 2026, 17:00 UTC: source checked Madeira Solera base year and component age
+   distinctions. One edition stamp preserves the refresh engine's detection of personal edits. */
+export const EDITION_BUILT_AT = '2026-10-27T17:00:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a

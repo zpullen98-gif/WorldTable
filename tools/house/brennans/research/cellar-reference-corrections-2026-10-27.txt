@@ -1,0 +1,124 @@
+Brennan's cellar reference corrections, 27 October 2026
+
+Scope
+Four producer summaries and the existing Henriques & Henriques Founder's
+Solera 1894 wine and producer study. The owner requested a rigorous Certified
+Sommelier training review. This is a factual correction, not a refresh of the
+printed restaurant list. No wine, bin, price, vintage, size, ID or grape field
+is inferred or added. The house still needs to confirm current availability.
+
+Primary sources opened and read on 27 October 2026
+
+1. Agrapart, the producer's English site
+https://www.champagnepascalagrapart.com/default-en.aspx
+The estate is in Avize. The current 7 Crus description includes Chardonnay
+and Pinot Noir; Complantée names six varieties: Chardonnay, Pinot Noir,
+Meunier, Arbane, Petit Meslier and Pinot Blanc. Thus a producer-wide statement
+that all Agrapart wines are pure Chardonnay is false. The corrected summary
+asks for the cuvée; it does not assign a new blend to the house's Atoma or to
+any historic vintage. Current cuvée percentages are not copied to old bottles.
+
+2. Château des Tours, the estate's wines page
+https://chateaurayas.fr/en/vinsdestours.php
+The current red Vacqueyras description lists Grenache and Syrah; the red
+Côtes du Rhône lists Grenache, Cinsault and Syrah. Both are Grenache led
+blends. White Côtes du Rhône is separately described as Grenache. The
+producer-wide claim of pure Grenache for both reds is corrected without
+projecting today's percentages onto the printed 2015 or 2016 vintages.
+
+3. Château Pontet-Canet, the estate's 2015 technical sheet
+https://www.pontet-canet.com/wp-content/uploads/2021/10/CHATEAU-PONTET-CANET-2015-1.pdf
+The one-page English sheet gives 65 percent Cabernet Sauvignon, 30 percent
+Merlot, 4 percent Cabernet Franc and 1 percent Petit Verdot. The house list
+includes 2015. The summary now distinguishes a Cabernet Sauvignon led blend
+from pure Cabernet and identifies the vintage-specific source. It does not
+apply that blend to other years. Existing estate geography and farming
+descriptions are retained rather than broadened.
+
+4. DEFRA, registered Portuguese traditional wine term Solera
+https://www.gov.uk/protected-food-drink-names/solera-portuguese
+The registered definition concerns Madeira PDO and associates the date with
+the harvest forming the base of the lot. It allows no more than ten percent
+annual withdrawal for bottling and replacement with another quality wine,
+with a maximum of ten additions. This category is not an indefinitely
+replenished Sherry solera. The recorded legal basis is Portuguese Portaria
+125/98 of 29 July 1998. This definition explains the term; it cannot prove
+the nineteenth-century history of a particular bottle.
+
+5. ViniPortugal, Madeira Wine, Solera paragraph
+https://winesofportugal.com/en/portuguese-wines/wine-styles/vinho-da-madeira/
+Exact short statement: "the date on a bottle of Solera is always that of
+the original base wine." Together with the registered definition above,
+this means base harvest year, not simply an unrelated foundation date.
+The old wording 'not a harvest' is wrong. The correct distinction is that
+the finished wine is not a single vintage bottling and its date does not
+establish the youngest component's age or a minimum century in cask for
+every component. Other categories on this page were not used or updated.
+
+6. Henriques & Henriques, Founders Solera 1894 technical sheet
+https://henriquesehenriques.pt/wp-content/uploads/2024/06/Founders-Solera-1894-ALL.pdf.pdf
+Four pages in Portuguese, English, French and German; English is page two.
+The notes describe amber with gold and green tones, dried fruit, spice,
+honey, raisins and old wood, sweetness, velvety texture and an intense
+finish. These support the corrected sensory summary. The sheet does not
+name a grape, specify closure in 1899, give a bottling date or certify the
+age of every component. English ABV is 20.0 while the other language pages
+show 20.3, so this correction introduces no exact ABV assertion.
+
+What remains unresolved
+The printed restaurant list says Verdelho, 1894, 750ml, bin 29088, $3200.
+Earlier research files record Malvasia and closure in 1899, but the fresh
+primary sheet does not confirm either. The grape array stays empty. The
+lineup questions keep both uncertainties explicit and retain their IDs.
+The old research notes are retained as history, not silently rewritten to
+look newly verified. Sweetness is independently supported by the producer's
+sensory and analytical sheet; it does not establish the grape.
+
+Implementation and edition safety
+Authoring: research/winelist/producers-a.json, producers-b.json and
+producers-c.json; appended wine overrides; the existing producer component.
+The two existing lineup asks are clarified after the first 60 slug
+characters, which define their identities. No new identities are minted.
+The shared kept house pack has one fixed edition stamp for every record,
+mark and note. A new builtAt is required for clients to load corrections.
+The refresh engine recognizes personal edits by a timestamp differing from
+the old edition's dominant timestamp; it retains those fields and notes.
+The new edition is 2026-10-27T17:00:00.000Z, verified behind the clock at
+17:06 UTC before writing. No blanket personal-edits overwrite is intended.
+
+Regeneration from the WorldTable root
+node tools/house/build-brennans.mjs
+node tools/house/validate-pack.mjs
+node tools/house/keep-all.mjs --owner-reviewed
+node tools/house/check-pack.mjs
+node tools/house/build-winelist.mjs
+node tools/house/check-winelist.mjs
+
+keep-all's flag records the owner's requested reviewed publication; without
+it the tool deliberately refuses to mark authored material as kept. It is
+not a substitute for source checking. The parent task handles public pack
+copies, cache versioning, final publication checks, commits and pushing.
+
+Verification completed
+All six commands above passed. The house gate reports 271 wines, 824
+components, 2,210 unique IDs, no fatal issue and no thin lines. Existing
+service-note advisories remain. The full-list gate accepts all 3,577 entries.
+
+A semantic comparison with the pre-change shipped files proves that only
+wine w-ay6nux07, component c-f0aw25wd and lineup questions a-85o8by5x and
+a-s5cstzr2 change in the house, apart from edition timestamps. The full-list
+pack changes only the four producer summaries. All printed entries, wine
+names, IDs, bins, vintages, prices, formats, grape arrays and the ID ledger
+remain unchanged.
+
+The actual old and new house packs were passed through the production
+refreshEdition function. An older personal tasting profile, personal note,
+personal component wording and an unrelated personal price were retained;
+untouched corrected lines updated. A second refresh produced the same
+result. The machine-readable check and before files are in the task's local
+outputs/brennans-codex-review-2026-10-27 folder, outside the repository.
+
+Existing regression gates also passed: seven Vitest suites, 132 tests
+(brennans-wine-review, brennans-winelist, house-pack, house-api,
+house-producers, house-components and house-autoload.adversarial).
+npm run check completed with zero errors and zero warnings.
