@@ -81,7 +81,8 @@ const FOLIO_FILES = [
 	path.join(ROOT, 'src', 'lib', 'teaching-folios.ts'),
 	path.join(ROOT, 'src', 'lib', 'teaching-folios-first-collection.ts'),
 	path.join(ROOT, 'src', 'lib', 'teaching-folios-cooks-eye.ts'),
-	path.join(ROOT, 'src', 'lib', 'teaching-folios-prep-to-pass.ts')
+	path.join(ROOT, 'src', 'lib', 'teaching-folios-prep-to-pass.ts'),
+	path.join(ROOT, 'src', 'lib', 'teaching-folios-professional-pass.ts')
 ];
 export const ID_KINDS = /** @type {IdKind[]} */ (['entries', 'cards', 'questions', 'steps', 'matches']);
 export const ID_RE = /^cz-[0-9a-z]{8}$/;

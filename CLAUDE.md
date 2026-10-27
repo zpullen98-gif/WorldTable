@@ -1,5 +1,22 @@
 # The World Table
 
+## The Professional Pass, 27 October 2026
+
+`teaching-folios-professional-pass.ts` adds four readiness studies and sixteen
+views: mise-to-pass, thermometer-placement, allergy-handoff and foster-readiness.
+The companion collection now totals 34 studies and 135 views in five groups.
+Seven exact Cuisine lesson joins also reach their revealed cards; the Foster
+study joins Brennan's `d-w6h1p19m`. No card or progress identities changed.
+The Cuisine validator reads all five folio manifests. Run both data derivations.
+
+Images are versioned, lazy and outside the core precache. `docs/teaching-
+professional-pass-*` records prompts, master hashes, primary reading and review.
+The thermometer image was corrected to show insertion into intact food.
+Use the readable keys: the images do not establish temperature, allergy
+accommodation, actual house plating or a complete flambé operating procedure.
+`professional-pass-studies.spec.ts` covers mobile day/night focus, recall and
+lesson/card navigation. `teaching-folios.test.ts` checks assets and exact joins.
+
 ## Brennan's answer learning, 26 October 2026
 
 `house-answer-reading.ts` builds answer-side readings from exact house records

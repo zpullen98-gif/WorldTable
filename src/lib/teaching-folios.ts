@@ -5,10 +5,11 @@
 import { FIRST_COLLECTION_TEACHING_FOLIOS } from './teaching-folios-first-collection';
 import { COOKS_EYE_TEACHING_FOLIOS } from './teaching-folios-cooks-eye';
 import { PREP_TO_PASS_TEACHING_FOLIOS } from './teaching-folios-prep-to-pass';
+import { PROFESSIONAL_PASS_TEACHING_FOLIOS } from './teaching-folios-professional-pass';
 
 export interface TeachingFolio {
 	id: string;
-	group: 'ingredients' | 'knife-and-heat' | 'sauces-and-eggs' | 'cooks-eye';
+	group: 'ingredients' | 'knife-and-heat' | 'sauces-and-eggs' | 'cooks-eye' | 'professional-pass';
 	title: string;
 	intro: string;
 	scope: string;
@@ -26,6 +27,7 @@ export interface TeachingFolio {
 export const BRENNANS_HOUSE_ID = 'h-g02pdomw';
 
 export const TEACHING_FOLIO_GROUPS = [
+	{ id: 'professional-pass', title: 'The Professional Pass: prepare, check and communicate', intro: 'Follow the decisions between preparation and service: organise the work, measure carefully, confirm guest needs and prepare for tableside hospitality.' },
 	{ id: 'cooks-eye', title: 'The Cook’s Eye: heat, texture and structure', intro: 'Follow a preparation from ingredients to service: look closely, explain the change, then apply it in the kitchen or at the table.' },
 	{ id: 'ingredients', title: 'Ingredients at a glance', intro: 'Explore herbs, the Louisiana larder and the seafood and parcel ingredients on Brennan’s menu.' },
 	{ id: 'knife-and-heat', title: 'Knife work and heat', intro: 'Look for even cuts, the direction of the grain, onion colour and the movement of water in the pan.' },
@@ -248,7 +250,8 @@ export const TEACHING_FOLIOS: readonly TeachingFolio[] = [
 	},
 	...FIRST_COLLECTION_TEACHING_FOLIOS,
 	...COOKS_EYE_TEACHING_FOLIOS,
-	...PREP_TO_PASS_TEACHING_FOLIOS
+	...PREP_TO_PASS_TEACHING_FOLIOS,
+	...PROFESSIONAL_PASS_TEACHING_FOLIOS
 ];
 
 export function foliosForTechnique(slug: string): TeachingFolio[] {

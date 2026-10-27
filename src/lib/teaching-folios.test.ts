@@ -5,6 +5,7 @@ import { BRENNANS_HOUSE_ID, TEACHING_FOLIOS, TEACHING_FOLIO_GROUPS, foliosForCar
 import { plateArtworkUrl } from './plate-artwork';
 import { COOKS_EYE_TEACHING_FOLIOS } from './teaching-folios-cooks-eye';
 import { PREP_TO_PASS_TEACHING_FOLIOS } from './teaching-folios-prep-to-pass';
+import { PROFESSIONAL_PASS_TEACHING_FOLIOS } from './teaching-folios-professional-pass';
 import { validFolioFocus } from './folio-focus';
 
 const read = (path: string) => JSON.parse(readFileSync(join(__dirname, path), 'utf8'));
@@ -16,15 +17,15 @@ const lexicon = new Set(read('data/lexicon.json').map((term: { slug: string }) =
 const cuisineEntries = new Set(read('data/cuisine/index.json').entries.map((entry: { chapter: string; slug: string }) => `${entry.chapter}:${entry.slug}`));
 
 describe('kitchen companion teaching manifest', () => {
-	it('keeps thirty independently identified studies and 119 views separate from the twenty reference plates', () => {
-		expect(TEACHING_FOLIOS).toHaveLength(30);
-		expect(new Set(TEACHING_FOLIOS.map(folio => folio.id)).size).toBe(30);
+	it('keeps thirty-four independently identified studies and 135 views separate from the twenty reference plates', () => {
+		expect(TEACHING_FOLIOS).toHaveLength(34);
+		expect(new Set(TEACHING_FOLIOS.map(folio => folio.id)).size).toBe(34);
 		expect(read('data/plates.json').plates).toHaveLength(20);
-		expect(TEACHING_FOLIOS.map(folio => folio.subjects.length)).toEqual([6, 2, 6, 6, 6, 6, 2, 2, 6, 5, 2, 2, 6, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 6, 4, 6, 6, 4, 3, 4]);
-		expect(TEACHING_FOLIOS.reduce((count, folio) => count + folio.subjects.length, 0)).toBe(119);
+		expect(TEACHING_FOLIOS.map(folio => folio.subjects.length)).toEqual([6, 2, 6, 6, 6, 6, 2, 2, 6, 5, 2, 2, 6, 3, 3, 3, 2, 3, 3, 3, 3, 3, 3, 6, 4, 6, 6, 4, 3, 4, 4, 4, 4, 4]);
+		expect(TEACHING_FOLIOS.reduce((count, folio) => count + folio.subjects.length, 0)).toBe(135);
 	});
 	it('puts every study in exactly one non-empty learning group', () => {
-		expect(TEACHING_FOLIO_GROUPS).toHaveLength(4);
+		expect(TEACHING_FOLIO_GROUPS).toHaveLength(5);
 		const grouped = TEACHING_FOLIO_GROUPS.flatMap(group => {
 			const studies = TEACHING_FOLIOS.filter(folio => folio.group === group.id);
 			expect(studies.length, group.id).toBeGreaterThan(0);
@@ -179,6 +180,37 @@ describe('kitchen companion teaching manifest', () => {
 			expect(foliosForLexicon(slug).map(f => f.id), slug).toEqual(['french-herbs']);
 		}
 		expect(foliosForCard('fd_0039').map(f => f.id)).toEqual(['searing-standard']);
+	});
+	it('keeps all professional pass views reachable with valid focus windows and primary reading links', () => {
+		expect(PROFESSIONAL_PASS_TEACHING_FOLIOS.map(folio => folio.id)).toEqual(['mise-to-pass', 'thermometer-placement', 'allergy-handoff', 'foster-readiness']);
+		for (const folio of PROFESSIONAL_PASS_TEACHING_FOLIOS) {
+			expect(TEACHING_FOLIOS.filter(item => item.id === folio.id)).toEqual([folio]);
+			expect(folio.group).toBe('professional-pass');
+			expect(folio.subjects).toHaveLength(4);
+			expect(validFolioFocus(folio.focus, folio.subjects.length), folio.id).toHaveLength(4);
+			expect(new Set(folio.focus!.map(focus => JSON.stringify(focus))).size, folio.id).toBe(4);
+			for (const field of ['observe', 'explain', 'apply', 'question', 'answer'] as const) expect(folio.learning?.[field].length, folio.id + ': ' + field).toBeGreaterThan(30);
+			expect(folio.sources?.length, folio.id).toBeGreaterThan(0);
+			for (const source of folio.sources!) expect(new URL(source.url).protocol).toBe('https:');
+		}
+	});
+	it('ships the professional pass in its exact Cuisine lessons while preserving earlier studies', () => {
+		const joins: Record<string, Record<string, string>> = {
+			foundations: { 'mise-en-place': 'mise-to-pass' },
+			safety: { 'cooking-temperatures': 'thermometer-placement', 'allergen-conversation': 'allergy-handoff', 'flambe-safety': 'foster-readiness' },
+			brennans: { 'bananas-foster-at-the-table': 'foster-readiness', 'flambe-and-tableside': 'foster-readiness' },
+			pastry: { 'bananas-foster': 'foster-readiness' }
+		};
+		for (const [chapter, lessons] of Object.entries(joins)) {
+			const authored = read('../../tools/derive/cuisine/' + chapter + '.json').entries;
+			const shipped = read('data/cuisine/ch-' + chapter + '.json').entries;
+			for (const [slug, id] of Object.entries(lessons)) {
+				const source = authored.find((entry: { slug: string }) => entry.slug === slug);
+				const built = shipped.find((entry: { slug: string }) => entry.slug === slug);
+				expect(source?.seeAlso.folios, chapter + '/' + slug).toContain(id);
+				expect(built?.seeAlso.folios, chapter + '/' + slug).toEqual(source.seeAlso.folios);
+			}
+		}
 	});
 	it('uses current named ingredients and actual hanger steaks for house context', () => {
 		const herbs = TEACHING_FOLIOS.find(folio => folio.id === 'french-herbs')!;

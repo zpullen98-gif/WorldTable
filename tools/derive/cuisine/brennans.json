@@ -3988,7 +3988,7 @@
 					"paras": [
 						"Seed it with the main course order, so the cart is ready when the table is: every first visit, every celebration, every guest who asks what Brennan's is famous for. Remind the table it is made for two or more. Pour any wine before the flambé starts, so no glass sits near the flame.",
 						"Tell the story while the caramel bubbles: created at Brennan's in 1951, named for Richard Foster. Then the cue, \"Now the rum, please sit back just a little\", and stop talking. Let the flame have the room. When it has died, one line as you plate: over our vanilla ice cream, then the warm sauce.",
-						"Be exact about alcohol: flaming burns the vapour above the pan, and much of the alcohol stays in the sauce. Tell any guest who avoids alcohol before they order, and steer them to the Lemon Tart or the Pineapple Tarte Tatin."
+						"Be exact about alcohol: flaming burns the vapour above the pan, and alcohol can remain in the sauce. Tell any guest who avoids alcohol before they order, and ask the kitchen to verify an alternative from its current recipe and products."
 					]
 				}
 			],
@@ -4053,6 +4053,9 @@
 					"Bananas Foster and Owen Brennan",
 					"Flambé at the table",
 					"Housemade vanilla ice cream"
+				],
+				"folios": [
+					"foster-readiness"
 				]
 			},
 			"sources": [
@@ -4075,6 +4078,12 @@
 					"title": "Brennan's, Traditions",
 					"url": "https://www.brennansneworleans.com/traditions/",
 					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Cornell research on alcohol retention during flambé",
+					"url": "https://news.cornell.edu/stories/2012/06/study-flamb-doesnt-seem-enhance-flavor",
+					"asOf": "2026-10-27",
+					"evidence": "Ignition did not eliminate ethanol in the experimental sauces. A flame is not evidence that a dish is alcohol-free."
 				}
 			],
 			"cards": [
@@ -4121,7 +4130,7 @@
 				{
 					"stem": "alcohol",
 					"front": "Does the flame burn off all the alcohol?",
-					"back": "No. Flaming burns the vapour above the pan; much of the alcohol stays in the sauce, so tell any guest who avoids it."
+					"back": "No. Flaming burns the vapour above the pan; alcohol can remain in the sauce, so tell any guest who avoids it."
 				},
 				{
 					"stem": "sign-off",
@@ -4660,7 +4669,7 @@
 					"key": "how",
 					"paras": [
 						"The choreography is learned before the first flame. The cart is set first: burner checked, pan, the spirit already measured into a small vessel, a lid, the plates, and ice cream timed to arrive cold. It stands where nothing hangs overhead, away from drapes and air vents, with menus and napkins cleared, and the guests stay seated and back from it. In many rooms one person cooks and flames while a second serves, so the dessert lands while the ice cream still holds its shape; at Brennan's, who does what is a question for the manager.",
-						"The spirit goes in only with the pan pulled off the flame, never from the bottle and never into a pan already alight; the far edge is tilted to the burner so the flame rises away from cook and guests. Let it burn out before plating, and turn the burner off before leaving the cart. Flaming burns the vapour, not all the alcohol; much stays in the sauce. Flambé safety in full has its own entry."
+						"The spirit goes in only with the pan pulled off the flame, never from the bottle and never into a pan already alight; the far edge is tilted to the burner so the flame rises away from cook and guests. Let it burn out before plating, and turn the burner off before leaving the cart. Flaming burns the vapour, not all the alcohol; alcohol can remain in the sauce. Flambé safety in full has its own entry."
 					]
 				},
 				{
@@ -4747,6 +4756,9 @@
 					"Cherries Jubilee",
 					"Bananas Foster and Owen Brennan",
 					"Housemade vanilla ice cream"
+				],
+				"folios": [
+					"foster-readiness"
 				]
 			},
 			"sources": [
@@ -4769,6 +4781,12 @@
 					"title": "Antoine's Restaurant",
 					"url": "https://www.antoines.com/",
 					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Cornell research on alcohol retention during flambé",
+					"url": "https://news.cornell.edu/stories/2012/06/study-flamb-doesnt-seem-enhance-flavor",
+					"asOf": "2026-10-27",
+					"evidence": "Ignition did not eliminate ethanol in the experimental sauces. A flame is not evidence that a dish is alcohol-free."
 				}
 			],
 			"cards": [
@@ -4780,7 +4798,7 @@
 				{
 					"stem": "what-burns",
 					"front": "What does flambé mean, and what actually burns?",
-					"back": "Flamed: spirit added to a hot pan and lit. Only the alcohol vapour burns, so a cool pan will not catch, and much of the alcohol stays in the sauce."
+					"back": "Flamed: spirit added to a hot pan and lit. Only the alcohol vapour burns, so a cool pan will not catch, and alcohol can remain in the sauce."
 				},
 				{
 					"stem": "french-service",

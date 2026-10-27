@@ -2104,7 +2104,7 @@
 				{
 					"key": "service",
 					"paras": [
-						"The story and the cart belong to Bananas Foster at the table. Flaming burns the vapour above the pan, not all the alcohol in it, so much of the rum and liqueur stays in the sauce: tell any guest who avoids alcohol, and steer them to the Lemon Tart or the Pineapple Tarte Tatin. Send every question about what is in the ice cream to the kitchen."
+						"The story and the cart belong to Bananas Foster at the table. Flaming burns the vapour above the pan, not all the alcohol in it, so some alcohol can remain in the sauce: tell any guest who avoids alcohol, and ask the kitchen to verify an alternative from its current recipe and products. Send every question about what is in the ice cream to the kitchen."
 					]
 				}
 			],
@@ -2187,6 +2187,9 @@
 					"Flambé at the table",
 					"Cherries Jubilee",
 					"Bananas Foster and Owen Brennan"
+				],
+				"folios": [
+					"foster-readiness"
 				]
 			},
 			"sources": [
@@ -2204,6 +2207,12 @@
 					"title": "Bananas Foster, Wikipedia",
 					"url": "https://en.wikipedia.org/wiki/Bananas_Foster",
 					"asOf": "2026-10-12"
+				},
+				{
+					"title": "Cornell research on alcohol retention during flambé",
+					"url": "https://news.cornell.edu/stories/2012/06/study-flamb-doesnt-seem-enhance-flavor",
+					"asOf": "2026-10-27",
+					"evidence": "Ignition did not eliminate ethanol in the experimental sauces. A flame is not evidence that a dish is alcohol-free."
 				}
 			],
 			"cards": [
@@ -2245,7 +2254,7 @@
 				{
 					"stem": "alcohol",
 					"front": "Does flaming burn off all the alcohol in Bananas Foster?",
-					"back": "No. The flame burns the vapour above the pan; much of the rum and liqueur stays in the sauce, so tell guests who avoid alcohol and steer them to the Lemon Tart or the Pineapple Tarte Tatin."
+					"back": "No. The flame burns the vapour above the pan; some alcohol can remain in the sauce, so tell guests who avoid alcohol and ask the kitchen to verify an alternative from its current recipe and products."
 				},
 				{
 					"stem": "ratio",
@@ -2327,13 +2336,13 @@
 				{
 					"stem": "q-alcohol",
 					"q": "A guest who avoids alcohol asks whether the flame burns it all off. What is true?",
-					"answer": "Much of the alcohol stays in the sauce",
+					"answer": "Alcohol can remain after flaming",
 					"distractors": [
 						"The flame removes every trace",
 						"Only the liqueur remains, not the rum",
 						"The alcohol turns to sugar in the caramel"
 					],
-					"why": "The flame burns the vapour above the pan, not all the alcohol in it, so the guest is told and steered to another dessert.",
+					"why": "The flame burns the vapour above the pan, not all the alcohol in it, so tell the guest and confirm any alternative with the kitchen.",
 					"teaches": "alcohol"
 				},
 				{
