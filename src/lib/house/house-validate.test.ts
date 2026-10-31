@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { KEYS, LINE_CAPS, PRINCIPLES } from './house-schema';
 import type { House, Mark, Pairing } from './house-schema';
 import { normaliseHouse } from './house-normalise';
-import { DASH, DASH_SOURCE, hasDash, lineProblems, stripDashes, wordCount } from './house-lines';
+import { DASH, DASH_SOURCE, hasDash, lineProblems, saleProblems, sentenceCount, stripDashes, wordCount } from './house-lines';
 import { ALLERGEN_TALK, ALLERGEN_WORD, FATAL_CODES, NEVER_FATAL, QUOTE_WORDS, onPage, validateHouse } from './house-validate';
 import type { Problem, ProblemCode } from './house-validate';
 
@@ -153,10 +153,34 @@ describe('house-lines: the words', () => {
 			{ field: 's10', words: 26, cap: 25 },
 			{ field: 's45', words: 111, cap: 110 }
 		]);
-		expect(lineProblems({ s10: over(3) }, { s10: 2, s20: 2, s45: 2 })).toEqual([{ field: 's10', words: 3, cap: 2 }]);
+		expect(lineProblems({ s10: over(3) }, { s10: 2, s20: 2, s45: 2, sale: 2 })).toEqual([{ field: 's10', words: 3, cap: 2 }]);
 		expect(lineProblems(undefined)).toEqual([]);
 		expect(lineProblems(null)).toEqual([]);
 		expect(lineProblems({})).toEqual([]);
+		expect(lineProblems({ s10: over(10), s20: over(20), s45: over(60), sale: over(46) })).toEqual([{ field: 'sale', words: 46, cap: 45 }]);
+	});
+
+	it('sentenceCount counts a stop, a question or an exclamation before a space or the end, a closing quote allowed, a decimal point not', () => {
+		expect(sentenceCount('Bright and dry. Pour it with the oysters.')).toBe(2);
+		expect(sentenceCount('Is it dry? Yes! Try it.')).toBe(3);
+		expect(sentenceCount('One sentence with no stop')).toBe(0);
+		expect(sentenceCount('It costs $12.50 a glass. Two sentences then.')).toBe(2);
+		expect(sentenceCount('She said "pour it." Then she sat.')).toBe(2);
+		expect(sentenceCount('')).toBe(0);
+		expect(sentenceCount(undefined as unknown as string)).toBe(0);
+	});
+
+	it('saleProblems names a sale under its floor or over two sentences, and nothing for a good or an absent sale', () => {
+		const good = 'Chalky, dry and bright, it is the glass we pour with the raw oysters. By the glass tonight, or the bottle for the table.';
+		expect(wordCount(good)).toBeGreaterThanOrEqual(15);
+		expect(saleProblems(good)).toEqual([]);
+		expect(saleProblems(undefined)).toEqual([]);
+		expect(saleProblems('')).toEqual([]);
+		expect(saleProblems('   ')).toEqual([]);
+		expect(saleProblems('Chalky, dry and bright. Pour it with the raw oysters tonight by the glass. Or take the bottle to the table.')).toEqual(['3 sentences; the sale is at most 2']);
+		expect(saleProblems('Chalky and bright. Pour it with the oysters tonight. Or take the bottle home.')).toEqual(['14 words; the floor on sale is 15', '3 sentences; the sale is at most 2']);
+		expect(saleProblems('Chalky and bright, the glass for the oysters. Pour it tonight.')).toEqual(['11 words; the floor on sale is 15']);
+		expect(saleProblems('one two three four five six seven eight nine ten eleven twelve thirteen fourteen.')).toEqual(['14 words; the floor on sale is 15']);
 		expect(Object.keys(LINE_CAPS)).toEqual([...KEYS.Lines]);
 	});
 });
@@ -240,6 +264,39 @@ describe('each code, provoked by one mutation', () => {
 			{ path: 'house.dishes[0].lines.value.s10', code: 'word-cap', said: '26 words; the cap on s10 is 25', fatal: true },
 			{ path: 'house.cocktails[0].lines.value.s45', code: 'word-cap', said: '111 words; the cap on s45 is 110', fatal: true }
 		]);
+	});
+
+	it('word-cap: a sale over 45 words, under 15 words or over two sentences; a good sale says nothing', () => {
+		const h = fixture();
+		const words = (n: number) => new Array(n).fill('word').join(' ') + '.';
+		h.wines[0].lines!.value.sale = 'Chalky, dry and bright, it is the glass we pour with the roast chicken. By the glass tonight, or the bottle for the table.';
+		expect(codes(validateHouse(h).problems, 'word-cap')).toEqual([]);
+		h.wines[0].lines!.value.sale = words(46);
+		expect(codes(validateHouse(h).problems, 'word-cap')).toEqual([{ path: 'house.wines[0].lines.value.sale', code: 'word-cap', said: '46 words; the cap on sale is 45', fatal: true }]);
+		h.wines[0].lines!.value.sale = words(14);
+		expect(codes(validateHouse(h).problems, 'word-cap')).toEqual([{ path: 'house.wines[0].lines.value.sale', code: 'word-cap', said: '14 words; the floor on sale is 15', fatal: true }]);
+		h.wines[0].lines!.value.sale = 'Chalky, dry and bright. It is the glass we pour with the roast chicken. By the glass tonight, or the bottle for the table.';
+		expect(codes(validateHouse(h).problems, 'word-cap')).toEqual([{ path: 'house.wines[0].lines.value.sale', code: 'word-cap', said: '3 sentences; the sale is at most 2', fatal: true }]);
+		/* A dish's or a drink's lines may carry a sale too, held to the same rule. */
+		h.wines[0].lines!.value.sale = undefined;
+		h.dishes[0].lines!.value.sale = words(46);
+		expect(paths(validateHouse(h).problems, 'word-cap')).toEqual(['house.dishes[0].lines.value.sale']);
+	});
+
+	it('ref: a secondFor id that is not a house dish, an offeredWith dish that is not one, and a tier outside the four', () => {
+		const h = fixture();
+		h.wines[0].secondFor = { value: ['d-beetrt01', 'd-nowhere1', 'w-lantern1'], by: 'person', ts: 1 };
+		h.wines[0].offeredWith = { value: [{ dishId: 'd-chicken1', tier: 'value' }, { dishId: 'd-nowhere1', tier: 'half' }, { dishId: 'd-chicken1', tier: 'magnum' as 'value' }], by: 'person', ts: 1 };
+		const { problems } = validateHouse(h);
+		expect(codes(problems, 'ref')).toEqual([
+			{ path: 'house.wines[0].secondFor.value[1]', code: 'ref', said: 'd-nowhere1 is not a house dish in this house', fatal: true },
+			{ path: 'house.wines[0].secondFor.value[2]', code: 'ref', said: 'w-lantern1 is not a house dish in this house', fatal: true },
+			{ path: 'house.wines[0].offeredWith.value[1].dishId', code: 'ref', said: 'd-nowhere1 is not a house dish in this house', fatal: true },
+			{ path: 'house.wines[0].offeredWith.value[2].tier', code: 'ref', said: 'magnum is not a bottle tier; the tiers are value, classic, splurge, half', fatal: true }
+		]);
+		h.wines[0].secondFor = { value: ['d-beetrt01'], by: 'person', ts: 1 };
+		h.wines[0].offeredWith = { value: [{ dishId: 'd-chicken1', tier: 'splurge' }], by: 'person', ts: 1 };
+		expect(codes(validateHouse(h).problems, 'ref')).toEqual([]);
 	});
 
 	it('ref: every id that must point at something in the house, with empty allowed only where the plan allows it', () => {

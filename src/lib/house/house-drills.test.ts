@@ -42,7 +42,7 @@ import {
 	GRADE_CLOSE
 } from './house-drills';
 import type { DrillKind, DrillQuestion, Flashcard, Rand } from './house-drills';
-import { HOUSE_LISTS, ID_PREFIXES, KEYS, houseRows } from './house-schema';
+import { HOUSE_LISTS, ID_PREFIXES, KEYS, TIMED_LINES, houseRows } from './house-schema';
 import type { FormulaParts, House, HouseCocktail, HouseComponent, HouseDish, HouseWine, LexiconTerm, Lines, Mark, MixUp, Pairing, Principle, ProducerProfile } from './house-schema';
 
 /**
@@ -235,7 +235,8 @@ describe('the constants', () => {
 			expect(label).not.toMatch(DASH);
 			expect(label.trim().length).toBeGreaterThan(0);
 		}
-		expect(Object.keys(LINE_LABELS)).toEqual([...KEYS.Lines]);
+		/* Re-pinned for the five-star card edition: KEYS.Lines gained the sale, which is a selling line and never dealt, so the labels are the three timed lines. */
+		expect(Object.keys(LINE_LABELS)).toEqual([...TIMED_LINES]);
 		for (const label of Object.values(LINE_LABELS)) expect(label).not.toMatch(/[0-9]/);
 		expect(FLASHCARD_KINDS).toEqual(['part', 'line', 'term', 'mixUp', 'pairing', 'component', 'tasting', 'producer']);
 		expect(Object.keys(GENERATORS).sort()).toEqual([...DRILL_KINDS].sort());

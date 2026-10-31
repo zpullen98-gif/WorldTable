@@ -65,7 +65,8 @@ function tree(extra: Entry[]): string {
 function bottle(name: string, price: string, bin: string, size: string, list: string | undefined = 'bottle'): Entry {
 	const o = JSON.parse(readFileSync(join(ROOT, 'tools', 'house', 'brennans', 'overrides.json'), 'utf8'));
 	const base = JSON.parse(JSON.stringify(o.entries.find((e: Entry) => e.target === 'wine:+').value));
-	const value = Object.assign(base, { name, price, prices: [{ meal: 'Bottle', printed: price }], glass: '', bottle: price, bin, size, firstPickFor: [], goesWith: 'Goes with ' + name, say: 'Say ' + name + '.', meals: ['Dinner'] });
+	/* Re-pinned for the five-star card edition: firstPickFor is derived from the dishes and the builder refuses it on a wine:+ add, so the fixture carries none. */
+	const value = Object.assign(base, { name, price, prices: [{ meal: 'Bottle', printed: price }], glass: '', bottle: price, bin, size, goesWith: 'Goes with ' + name, say: 'Say ' + name + '.', meals: ['Dinner'] });
 	if (list) value.list = list;
 	return { target: 'wine:+', op: 'add', reason: 'test', value };
 }

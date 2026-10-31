@@ -18,7 +18,10 @@
    house readPack returns round-trips through normaliseHouse unchanged, and that no house string
    carries a British spelling (the house is American English; the research is not), and that every
    dish, drink and wine carries its description and its coaching notes under the fixed questions
-   and no line is thin (engine.mjs noteProblems and thinLines, the 22:00 edition's content).
+   and no line is thin (engine.mjs noteProblems and thinLines, the 22:00 edition's content), and that
+   no selling line carries a banned word (engine.mjs sellingProblems, the code banned-line: the timed
+   lines, the sale, a pairing's lines and the bottle tiers' lines, the five-star card edition) and,
+   with --require-sale, that every wine carries a sale; the count of wines with one is always printed.
 
    The guide must be there: the validator's price rule reads it as the page, and without it the
    rule would be skipped in silence. The proper-noun and allergen-talk rules read marks by
@@ -29,13 +32,14 @@
    Runs from any directory. Exits 1 with the file and the rule on failure, one line on success. */
 
 import fs from 'node:fs';
-import { loadEngine, GUIDE, PACK, REL, countProblems, describe, eachString, answerNames, britishWords, checkArgs, editionInFuture, sourceText as pageText, CHILD_SECTIONS, SNACK_SECTION, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, FIXED_QS, componentProblems } from './engine.mjs';
+import { loadEngine, GUIDE, PACK, REL, countProblems, describe, eachString, answerNames, britishWords, checkArgs, editionInFuture, sourceText as pageText, CHILD_SECTIONS, SNACK_SECTION, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, FIXED_QS, componentProblems, sellingProblems, saleCounts } from './engine.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
 	console.log(`check-pack.mjs: hold ${REL(PACK)} to the engine's rules and the Brennan's counts.
 
   --file <path>  check another pack file
+  --require-sale make a wine without a sale (lines.sale) a failure; off by default, the count is always printed
   --verbose      print every advisory flag by code
   --help         this text`);
 	process.exit(0);
@@ -43,10 +47,11 @@ if (args.includes('--help') || args.includes('-h')) {
 const fileAt = args.indexOf('--file');
 const FILE = fileAt >= 0 ? args[fileAt + 1] : PACK;
 const VERBOSE = args.includes('--verbose');
+const REQUIRE_SALE = args.includes('--require-sale');
 const failures = [];
 const F = (msg) => failures.push(`${REL(FILE)}: ${msg}`);
 function fail(msg) { console.error('check-pack: ' + msg); process.exit(1); }
-checkArgs(args, ['--file', '--verbose'], ['--file'], fail);
+checkArgs(args, ['--file', '--verbose', '--require-sale'], ['--file'], fail);
 if (!FILE || !fs.existsSync(FILE)) fail(`${REL(FILE)}: missing; run keep-all.mjs first`);
 if (!fs.existsSync(GUIDE)) fail(`${REL(GUIDE)}: missing; the price rule reads it as the page`);
 
@@ -169,6 +174,11 @@ for (const r of upsellRoomProblems(house)) F('upsell-room: ' + r);
 for (const n of noteProblems(house, noteHay(), lib.onPage)) F('note: ' + n);
 const thin = thinLines(house);
 for (const t of thin.fatal) F('thin: ' + t);
+/* The selling lines (engine.mjs sellingProblems): no banned word in a timed line, a sale, a pairing's
+   lines or a bottle tier's; and, with --require-sale, a sale on every wine. */
+for (const b of sellingProblems(house)) F('banned-line: ' + b);
+const sales = saleCounts(house);
+if (REQUIRE_SALE) for (const n of sales.without) F(`no-sale: wines ${n}: no sale (lines.sale); --require-sale asks one of every wine`);
 /* The components and the comparisons (engine.mjs componentProblems), held as the notes are. */
 for (const c of componentProblems(house, noteHay())) F('component: ' + c);
 const nc = noteCounts(house);
@@ -196,4 +206,4 @@ if (failures.length) {
 	fail(`${failures.length} failure(s)`);
 }
 const zero = house.cocktails.filter((c) => c.zeroProof).length;
-console.log(`check-pack: ${REL(FILE)}: ${Buffer.byteLength(text)} bytes; edition ${house.pack.builtAt}, every stamp ${EDITION}; ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free, ${coffees} pairings on a coffee), ${house.wines.length} wines (${house.wines.filter((w) => w.lines).length} with timed lines), ${house.tastings.length} tastings, ${house.sources.length} sources, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask, ${house.disputes.length} disputes, ${(house.components || []).length} components; ${marks} marks all by person; notes ${FIXED_QS.map((q) => nc[q]).join('/')} under the five fixed questions, ${house.dishes.concat(house.cocktails, house.wines).reduce((t, r) => t + (r.kept || []).length, 0)} kept notes in all; 0 thin lines; 0 dashes; 0 British spellings; ids ${seen.size} unique with their prefixes; 0 fatal; advisory ${JSON.stringify(flags)}; round trip holds`);
+console.log(`check-pack: ${REL(FILE)}: ${Buffer.byteLength(text)} bytes; edition ${house.pack.builtAt}, every stamp ${EDITION}; ${house.dishes.length} dishes, ${house.cocktails.length} cocktails (${zero} spirit-free, ${coffees} pairings on a coffee), ${house.wines.length} wines (${house.wines.filter((w) => w.lines).length} with timed lines, ${sales.withSale} with a sale${REQUIRE_SALE ? ', required' : ''}), ${house.tastings.length} tastings, ${house.sources.length} sources, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask, ${house.disputes.length} disputes, ${(house.components || []).length} components; ${marks} marks all by person; notes ${FIXED_QS.map((q) => nc[q]).join('/')} under the five fixed questions, ${house.dishes.concat(house.cocktails, house.wines).reduce((t, r) => t + (r.kept || []).length, 0)} kept notes in all; 0 thin lines; 0 banned lines; 0 dashes; 0 British spellings; ids ${seen.size} unique with their prefixes; 0 fatal; advisory ${JSON.stringify(flags)}; round trip holds`);

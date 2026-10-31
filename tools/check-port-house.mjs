@@ -273,6 +273,30 @@ function bottled(fixture) {
 	return h;
 }
 
+/**
+ * The bottled fixture with the five-star card edition's fields on its wines:
+ * a sale on the glass wine and on a bottle, the derived secondFor and
+ * offeredWith lists (one entry per dish and tier whose wineId is the wine,
+ * with a stray key for the normaliser to drop), and on the last bottle every
+ * rule broken: a sale of three sentences and under its floor, a secondFor id
+ * that is no dish, an offeredWith dish that is no dish and a tier outside the
+ * four.
+ * @param {any} bot
+ */
+function sold(bot) {
+	const h = clone(bot);
+	const dish = h.dishes[0].id;
+	h.wines[0].lines.value.sale = 'Chalky, dry and bright, it is the glass we pour with the roast chicken. By the glass tonight, or the bottle for the table.';
+	h.wines[0].secondFor = { value: [h.dishes[1].id], by: 'person', ts: NOW };
+	h.wines[1].lines.value.sale = 'A value red with the weight of the roast. Ask for it by the bottle.';
+	h.wines[1].offeredWith = { value: [{ dishId: dish, tier: 'value', allergens: 'x' }], by: 'person', ts: NOW };
+	h.wines[2].offeredWith = { value: [{ dishId: dish, tier: 'classic' }], by: 'person', ts: NOW };
+	h.wines[4].lines.value.sale = 'Too short. Three sentences. Under the floor.';
+	h.wines[4].secondFor = { value: ['d-nowhere1'], by: 'person', ts: NOW };
+	h.wines[4].offeredWith = { value: [{ dishId: 'd-nowhere1', tier: 'half' }, { dishId: dish, tier: 'magnum' }], by: 'person', ts: NOW };
+	return h;
+}
+
 /** The bottled fixture with every tier wrong in its own way. @param {any} h */
 function badTiers(h) {
 	const b = clone(h);
@@ -489,6 +513,29 @@ function checkParity(T, P) {
 	renamed.wines[1].id = 'bad id:bottle';
 	renamed.dishes[0].pairing.value.bottles.value.wineId = 'bad id:bottle';
 	same('normaliseHouse(renamed bottle)', T.normaliseHouse(clone(renamed), { rand: seeded(9) }), P.normaliseHouse(clone(renamed), { rand: seeded(9) }));
+	/* The five-star card edition: the sale and the derived secondFor and offeredWith, read, normalised, validated, merged. */
+	const sol = sold(bot);
+	same('readPack(sold)', T.readPack(packOf(clone(sol)), { rand: seeded() }), P.readPack(packOf(clone(sol)), { rand: seeded() }));
+	const solT = T.normaliseHouse(clone(sol), { rand: seeded() });
+	same('normaliseHouse(sold)', solT, P.normaliseHouse(clone(sol), { rand: seeded() }));
+	if (!solT.house.wines[0].lines.value.sale || solT.house.wines[3].lines.value.sale !== undefined) fail.push('normaliseHouse(sold) did not keep the sale where one was written and leave it off where none was');
+	if (!solT.house.wines[1].offeredWith || solT.house.wines[1].offeredWith.value[0].allergens !== undefined || solT.house.wines[1].offeredWith.value[0].tier !== 'value') fail.push('normaliseHouse(sold) did not keep offeredWith as dish and tier and drop the stray key');
+	if (!solT.house.wines[0].secondFor || solT.house.wines[0].secondFor.value[0] !== bot.dishes[1].id) fail.push('normaliseHouse(sold) did not keep secondFor');
+	const solV = T.validateHouse(solT.house);
+	same('validateHouse(sold)', solV, P.validateHouse(P.normaliseHouse(clone(sol), { rand: seeded() }).house));
+	for (const want of ['wines[4].lines.value.sale', 'wines[4].secondFor.value[0]', 'wines[4].offeredWith.value[0].dishId', 'wines[4].offeredWith.value[1].tier']) {
+		if (!solV.problems.some((/** @type {any} */ x) => x.path.indexOf(want) >= 0 && x.fatal)) fail.push('validateHouse(sold) named no fatal problem at ' + want);
+	}
+	if (solV.problems.some((/** @type {any} */ x) => x.path.indexOf('wines[0]') >= 0 || x.path.indexOf('wines[1]') >= 0)) fail.push('validateHouse(sold) found a problem on a wine whose sale and lists are good');
+	const solMoved = clone(sol);
+	solMoved.wines[0].lines = { value: Object.assign(clone(sol.wines[0].lines.value), { sale: 'Moved on another device, the two sentences a server says to sell it. The bottle, or the glass tonight.' }), by: 'person', ts: NOW + 9 };
+	solMoved.wines[1].offeredWith = { value: [{ dishId: bot.dishes[1].id, tier: 'half' }], by: 'person', ts: NOW + 9 };
+	same('mergeHouse(sold, moved)', T.mergeHouse(clone(sol), clone(solMoved)), P.mergeHouse(clone(sol), clone(solMoved)));
+	const SALES = ['Chalky and bright. Pour it with the oysters tonight. Or take the bottle home.', 'One sentence with no stop', 'It costs $12.50 a glass. Two sentences then.', 'She said "pour it." Then she sat.', '', undefined, 'one two three four five six seven eight nine ten eleven twelve thirteen fourteen.'];
+	same('sentenceCount', SALES.map(T.sentenceCount), SALES.map(P.sentenceCount));
+	same('saleProblems', SALES.map((s) => T.saleProblems(s)), SALES.map((s) => P.saleProblems(s)));
+	same('lineProblems(sale)', T.lineProblems({ s10: 'a', s20: 'b', s45: 'c', sale: Array.from({ length: 46 }, () => 'w').join(' ') }), P.lineProblems({ s10: 'a', s20: 'b', s45: 'c', sale: Array.from({ length: 46 }, () => 'w').join(' ') }));
+	same('markKind(derived)', ['secondFor', 'offeredWith'].map(T.markKind), ['secondFor', 'offeredWith'].map(P.markKind));
 	const SIZES = ['375ml', '375 ML', '1.5L', '', '750 ml'];
 	same('foldSize', SIZES.map(T.foldSize), SIZES.map(P.foldSize));
 	const PRICES = ['$80 half-bottle', '$1,250', '68', 'MP', '', '9 / 38'];

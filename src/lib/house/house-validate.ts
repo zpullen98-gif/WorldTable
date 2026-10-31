@@ -13,7 +13,9 @@
  *
  * THE CODES. 'forbidden' is a key the client would refuse; 'dash' a dash in
  * any spelling in any string the house owns; 'word-cap' a timed line over
- * its cap; 'ref' an id that points at nothing in this house; 'principles' a
+ * its cap, or a sale over its cap, under its floor or over two sentences
+ * (SALE_RULE); 'ref' an id that points at nothing in this house, and a
+ * wine's offeredWith tier outside BOTTLE_TIERS; 'principles' a
  * pairing principle outside the nine; 'price' a printed price that does not
  * stand on the page it was read from, by the client's own rule; and
  * 'allergen-talk' a line of hers that speaks of allergens; and 'tier' a
@@ -59,7 +61,7 @@
 import { BOTTLE_TIERS, BOTTLE_WORDS, COMPARE_APPS, COMPARE_MAX, COMPARE_WORDS, COMPONENT_KINDS, COMPONENT_WORDS, HALF_SIZE, HOUSE_LISTS, MARK_FIELDS, PRINCIPLES, PRODUCER_MAX, PRODUCER_TYPES, PRODUCER_WORDS, TASTING_WORDS, VIDEO_WHY_WORDS, foldSize, inBottleBand, isMark, printedDollars, videoUrlOk, wineListOf } from './house-schema';
 import type { House, HouseList, Lines, Mark } from './house-schema';
 import { forbiddenKeys } from './house-normalise';
-import { hasDash, lineProblems, wordCount } from './house-lines';
+import { hasDash, lineProblems, saleProblems, wordCount } from './house-lines';
 
 /* -------------------------------------------------------------------------
  * The codes, the rules
@@ -232,6 +234,8 @@ function checkWordCaps(house: House, add: Add): void {
 		for (const p of lineProblems(lines.value as Lines)) {
 			add(path + '.lines.value.' + p.field, 'word-cap', p.words + ' words; the cap on ' + p.field + ' is ' + p.cap);
 		}
+		/* The sale, when present, has a floor and a sentence rule beside its cap (SALE_RULE). */
+		for (const said of saleProblems((lines.value as Lines).sale)) add(path + '.lines.value.sale', 'word-cap', said);
 	});
 }
 
@@ -278,6 +282,17 @@ function checkRefs(house: House, add: Add): void {
 			}
 		}
 		if (list === 'wines' && isMark(item.firstPickIds)) refs(path + '.firstPickIds.value', item.firstPickIds.value, dishes, 'a house dish');
+		if (list === 'wines' && isMark(item.secondFor)) refs(path + '.secondFor.value', item.secondFor.value, dishes, 'a house dish');
+		/* The dishes a wine is offered with: each a house dish, and each tier one of the four. */
+		if (list === 'wines' && isMark(item.offeredWith) && Array.isArray(item.offeredWith.value)) {
+			const offered = item.offeredWith.value as Raw[];
+			for (let i = 0; i < offered.length; i++) {
+				const at = path + '.offeredWith.value[' + i + '].';
+				const o = offered[i] && typeof offered[i] === 'object' ? offered[i] : {};
+				ref(at + 'dishId', o.dishId, dishes, 'a house dish', false);
+				if (typeof o.tier !== 'string' || (BOTTLE_TIERS as readonly string[]).indexOf(o.tier) < 0) add(at + 'tier', 'ref', String(o.tier) + ' is not a bottle tier; the tiers are ' + BOTTLE_TIERS.join(', '));
+			}
+		}
 		if (list === 'cocktails' && isMark(item.upsells)) refs(path + '.upsells.value', item.upsells.value, cocktails, 'a house cocktail');
 	});
 	const tastings = listOf(house, 'tastings');

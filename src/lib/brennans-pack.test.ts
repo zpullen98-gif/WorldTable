@@ -66,7 +66,10 @@ describe("the Brennan's pack", () => {
 		expect(r.stdout).toMatch(/\d+ marks all by person/);
 		expect(r.stdout).toContain(`notes ${[ABOUT_Q, ...COACH, POUR_Q].map(notes).join('/')} under the five fixed questions, ${kept} kept notes in all; 0 thin lines`);
 		expect(r.stdout).toContain('70 dishes, 32 cocktails (6 spirit-free, 10 pairings on a coffee)');
-		expect(r.stdout).toContain(`${h.wines.length} wines (${timed} with timed lines)`);
+		/* Re-pinned for the five-star card edition: the gate prints the count of wines with a sale beside the timed lines (none until the sale edition). */
+		const withSale = h.wines.filter((w) => typeof w.lines?.value.sale === 'string' && w.lines.value.sale.trim()).length;
+		expect(r.stdout).toContain(`${h.wines.length} wines (${timed} with timed lines, ${withSale} with a sale)`);
+		expect(r.stdout).toContain('0 banned lines');
 		expect(timed).toBe(h.wines.length);
 		expect(r.stdout).toContain(`${h.lexicon.length} terms, ${h.scenarios.length} scenarios, ${h.mixUps.length} mix-ups, ${h.mustKnows.length} must-knows`);
 		expect(r.stdout).toContain(`${h.askAtLineup.length} to ask`);

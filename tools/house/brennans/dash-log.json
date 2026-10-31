@@ -110,8 +110,9 @@
 		},
 		{
 			"path": "model.dishes[1].pairing.sayIt",
-			"before": "This course comes with a glass of Côtes du Rhône — juicy and soft, perfect for the filet.",
-			"after": "This course comes with a glass of Côtes du Rhône, juicy and soft, perfect for the filet."
+			"before": "This course comes with a glass of Côtes du Rhône — juicy and soft, a natural match for the filet.",
+			"after": "This course comes with a glass of Côtes du Rhône, juicy and soft, a natural match for the filet.",
+			"override": 5368
 		},
 		{
 			"path": "model.dishes[1].pairing.whyThisWine",
@@ -238,8 +239,9 @@
 		},
 		{
 			"path": "model.dishes[6].pairing.sayIt",
-			"before": "If you’d like a glass with it, Banyuls — a sweet red from the south of France — is a classic with chocolate and coffee. Otherwise, our chicory coffee is perfect.",
-			"after": "If you’d like a glass with it, Banyuls, a sweet red from the south of France, is a classic with chocolate and coffee. Otherwise, our chicory coffee is perfect."
+			"before": "If you’d like a glass with it, Banyuls — a sweet red from the south of France — is a classic with chocolate and coffee. Otherwise, our chicory coffee is a natural match.",
+			"after": "If you’d like a glass with it, Banyuls, a sweet red from the south of France, is a classic with chocolate and coffee. Otherwise, our chicory coffee is a natural match.",
+			"override": 5371
 		},
 		{
 			"path": "model.dishes[6].pairing.serve",
@@ -333,8 +335,9 @@
 		},
 		{
 			"path": "model.dishes[10].pairing.sayIt",
-			"before": "Oysters and Champagne — our house Piper-Heidsieck is Extra Brut, so it’s very dry and crisp, perfect with the brine.",
-			"after": "Oysters and Champagne: our house Piper-Heidsieck is Extra Brut, so it’s very dry and crisp, perfect with the brine."
+			"before": "Oysters and Champagne — our house Piper-Heidsieck is Extra Brut, so it’s very dry and crisp, a clean match with the brine.",
+			"after": "Oysters and Champagne: our house Piper-Heidsieck is Extra Brut, so it’s very dry and crisp, a clean match with the brine.",
+			"override": 5373
 		},
 		{
 			"path": "model.dishes[11].parts.main",
@@ -458,8 +461,9 @@
 		},
 		{
 			"path": "model.dishes[14].pairing.sayIt",
-			"before": "With the Caesar I’d pour the Albariño — citrusy, with a salty edge that’s perfect with the smoked oyster dressing.",
-			"after": "With the Caesar I’d pour the Albariño, citrusy, with a salty edge that’s perfect with the smoked oyster dressing."
+			"before": "With the Caesar I’d pour the Albariño — citrusy, with a salty edge that’s a natural match with the smoked oyster dressing.",
+			"after": "With the Caesar I’d pour the Albariño, citrusy, with a salty edge that’s a natural match with the smoked oyster dressing.",
+			"override": 5375
 		},
 		{
 			"path": "model.dishes[14].pairing.whyThisWine",
@@ -590,8 +594,9 @@
 		},
 		{
 			"path": "model.dishes[19].pairing.sayIt",
-			"before": "With the shrimp and grits, the Minuty rosé is perfect — dry and refreshing, great with the tomato and a little spice.",
-			"after": "With the shrimp and grits, the Minuty rosé is perfect, dry and refreshing, great with the tomato and a little spice."
+			"before": "With the shrimp and grits, the Minuty rosé is a natural match — dry and refreshing, great with the tomato and a little spice.",
+			"after": "With the shrimp and grits, the Minuty rosé is a natural match, dry and refreshing, great with the tomato and a little spice.",
+			"override": 5378
 		},
 		{
 			"path": "model.dishes[19].pairing.whyThisWine",
@@ -771,8 +776,9 @@
 		},
 		{
 			"path": "model.dishes[25].pairing.sayIt",
-			"before": "With the papillote, the Albariño is perfect — citrusy and a little salty, made for seafood with olives and tomato.",
-			"after": "With the papillote, the Albariño is perfect, citrusy and a little salty, made for seafood with olives and tomato."
+			"before": "With the papillote, the Albariño is a natural match — citrusy and a little salty, made for seafood with olives and tomato.",
+			"after": "With the papillote, the Albariño is a natural match, citrusy and a little salty, made for seafood with olives and tomato.",
+			"override": 5380
 		},
 		{
 			"path": "model.dishes[25].pairing.whyThisWine",
@@ -921,8 +927,9 @@
 		},
 		{
 			"path": "model.dishes[41].pairing.sayIt",
-			"before": "If you’d like a glass, a Mosel Auslese is gorgeous with it — honeyed and tropical, but bright. Or it’s perfect with our coffee and chicory.",
-			"after": "If you’d like a glass, a Mosel Auslese is gorgeous with it, honeyed and tropical, but bright. Or it’s perfect with our coffee and chicory."
+			"before": "If you’d like a glass, a Mosel Auslese is gorgeous with it — honeyed and tropical, but bright. Or it’s a natural match with our coffee and chicory.",
+			"after": "If you’d like a glass, a Mosel Auslese is gorgeous with it, honeyed and tropical, but bright. Or it’s a natural match with our coffee and chicory.",
+			"override": 5383
 		},
 		{
 			"path": "model.dishes[41].pairing.serve",

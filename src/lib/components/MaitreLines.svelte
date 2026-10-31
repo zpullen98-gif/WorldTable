@@ -51,7 +51,7 @@
 	import { house } from '$lib/stores/house.svelte';
 	import type { MenuDish, MaitrePatch } from '$lib/persistence/state';
 	import { LINE_FIELDS, type LineField } from '$lib/maitre-adopt';
-	import { DISH_PARTS, LINE_CAPS, PRINCIPLES, type FormulaParts, type Lines, type Pairing, type Mark } from '$lib/house/house-schema';
+	import { DISH_PARTS, LINE_CAPS, PRINCIPLES, type FormulaParts, type Lines, type Pairing, type Mark, type TimedLine } from '$lib/house/house-schema';
 	import { hasDash, wordCount } from '$lib/house/house-lines';
 
 	interface Props {
@@ -78,7 +78,7 @@
 	};
 	const PART_KEYS = ['main', 'technique', 'sauce', 'sides', 'taste'] as const;
 	const LINE_KEYS = ['s10', 's20', 's45'] as const;
-	const LINE_LABELS: Record<keyof Lines, string> = { s10: 'Ten seconds', s20: 'Twenty seconds', s45: 'Forty five seconds' };
+	const LINE_LABELS: Record<TimedLine, string> = { s10: 'Ten seconds', s20: 'Twenty seconds', s45: 'Forty five seconds' };
 	const PAIRING_KEYS = [
 		'wineId', 'why', 'sayIt', 'whyThisWine', 'palate', 'principles', 'secondId', 'secondWhy', 'stepUp', 'serve', 'avoid', 'zeroProofId', 'zeroProofWhy'
 	] as const;
@@ -148,7 +148,7 @@
 	const partsOf = (m: Mark<unknown>) => m.value as FormulaParts;
 	const pairingOf = (m: Mark<unknown>) => m.value as Pairing;
 	const isPick = (k: keyof Pairing) => k === 'wineId' || k === 'secondId' || k === 'zeroProofId';
-	const countLine = (s: string, k: keyof Lines) => {
+	const countLine = (s: string, k: TimedLine) => {
 		const n = wordCount(s);
 		return `${n} of ${LINE_CAPS[k]} words${n > LINE_CAPS[k] ? ', over its cap' : ''}`;
 	};

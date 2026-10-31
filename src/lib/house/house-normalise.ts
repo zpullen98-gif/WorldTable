@@ -60,10 +60,12 @@
  * video's componentIds are written only when it names a component, so a
  * record from before either field comes back with the keys it went in with.
  */
-import { BOTTLE_TIERS, BUILD_STEPS, HOUSE_FORMAT, HOUSE_SCHEMA_VERSION, ID_PREFIXES, KEYS, LIST_MAX, MARK_FIELDS, PROSE_MAX, mintId, videoUrlOk } from './house-schema';
+import { BOTTLE_TIERS, BUILD_STEPS, HOUSE_FORMAT, HOUSE_SCHEMA_VERSION, ID_PREFIXES, KEYS, LIST_MAX, MARK_FIELDS, PROSE_MAX, TIMED_LINES, mintId, videoUrlOk } from './house-schema';
 import type {
 	AskAtLineup,
 	BottlePick,
+	BottleTier,
+	OfferedWith,
 	CompareEntry,
 	ComponentCard,
 	ComponentKind,
@@ -219,15 +221,17 @@ function blank(s: string): boolean {
 
 /**
  * What kind of value a mark field carries, so a string can never land on a
- * list field or a list on a prose field: the three list marks, the parts,
- * the lines, the pairing, a component's card and an item's comparisons;
- * everything else is prose.
+ * list field or a list on a prose field: the four list marks, the parts,
+ * the lines, the pairing, a component's card, an item's comparisons and the
+ * dishes a wine is offered with by tier; everything else is prose.
  */
-export type MarkKind = 'text' | 'list' | 'parts' | 'lines' | 'pairing' | 'card' | 'compare' | 'producer';
+export type MarkKind = 'text' | 'list' | 'parts' | 'lines' | 'pairing' | 'card' | 'compare' | 'producer' | 'offered';
 
 export const MARK_KINDS: Readonly<Record<string, MarkKind>> = {
 	ingredientsNamed: 'list',
 	firstPickIds: 'list',
+	secondFor: 'list',
+	offeredWith: 'offered',
 	upsells: 'list',
 	parts: 'parts',
 	lines: 'lines',
@@ -260,6 +264,7 @@ function markValue(v: unknown, kind: MarkKind): unknown {
 	}
 	if (kind === 'compare') return normaliseCompare(v);
 	if (kind === 'producer') return normaliseProducer(v);
+	if (kind === 'offered') return normaliseOffered(v);
 	if (!isRaw(v)) return undefined;
 	let any = false;
 	if (kind === 'parts') {
@@ -280,9 +285,16 @@ function markValue(v: unknown, kind: MarkKind): unknown {
 	}
 	if (kind === 'lines') {
 		const l = {} as Lines;
-		for (const k of KEYS.Lines) {
+		for (const k of TIMED_LINES) {
 			l[k] = asText(v[k]);
 			if (!blank(l[k])) any = true;
+		}
+		/* The sale is optional: kept only as a string with something in it (a sale that is not a
+		   string is dropped), so a Lines from an edition that never had one keeps its three keys. */
+		const sale = asText(v.sale);
+		if (!blank(sale)) {
+			l.sale = sale;
+			any = true;
 		}
 		return any ? l : undefined;
 	}
@@ -352,6 +364,24 @@ function normaliseCompare(v: unknown): CompareEntry[] | undefined {
 			if (k !== 'app' && !blank(asText(raw[k]))) some = true;
 		}
 		if (some) out.push(e);
+	}
+	return out.length ? out : undefined;
+}
+
+/**
+ * The dishes a wine is offered with by a bottle tier: each entry rebuilt from
+ * KEYS.OfferedWith, kept only with a dish id and a tier that are strings with
+ * something in them (the tier carried as it came, so the validator can name
+ * one outside BOTTLE_TIERS); undefined when none survives.
+ */
+function normaliseOffered(v: unknown): OfferedWith[] | undefined {
+	const out: OfferedWith[] = [];
+	for (const raw of asList(v)) {
+		if (!isRaw(raw)) continue;
+		const dishId = asText(raw.dishId);
+		const tier = asText(raw.tier);
+		if (blank(dishId) || blank(tier)) continue;
+		out.push({ dishId, tier: tier as BottleTier });
 	}
 	return out.length ? out : undefined;
 }
@@ -822,7 +852,11 @@ function applyRenames(house: House, ctx: Ctx): void {
 			if (pick) pick.wineId = one(pick.wineId);
 		}
 	}
-	for (const w of house.wines) if (w.firstPickIds) w.firstPickIds.value = many(w.firstPickIds.value);
+	for (const w of house.wines) {
+		if (w.firstPickIds) w.firstPickIds.value = many(w.firstPickIds.value);
+		if (w.secondFor) w.secondFor.value = many(w.secondFor.value);
+		if (w.offeredWith) for (const o of w.offeredWith.value) o.dishId = one(o.dishId);
+	}
 	for (const c of house.cocktails) if (c.upsells) c.upsells.value = many(c.upsells.value);
 	for (const t of house.tastings) {
 		for (const c of t.courses) {

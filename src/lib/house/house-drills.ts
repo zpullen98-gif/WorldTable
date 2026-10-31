@@ -38,7 +38,7 @@
  * cocktail named for its glass are left out of that kind's pool rather than
  * asked. The test holds the rule over every kind and many seeds.
  */
-import { COCKTAIL_PARTS, DISH_PARTS, KEYS, LINE_CAPS, WINE_PARTS, isMark, tastingShortName } from './house-schema';
+import { COCKTAIL_PARTS, DISH_PARTS, KEYS, LINE_CAPS, TIMED_LINES, WINE_PARTS, isMark, tastingShortName } from './house-schema';
 import type {
 	ComponentCard,
 	HouseComponent,
@@ -53,7 +53,8 @@ import type {
 	MixUp,
 	Pairing,
 	Scenario,
-	TastingCourse
+	TastingCourse,
+	TimedLine
 } from './house-schema';
 import { wordCount } from './house-lines';
 
@@ -136,8 +137,8 @@ export const DRILL_LABELS: Readonly<Record<DrillKind, string>> = {
 	producerDish: 'Which dish or drink uses this producer?'
 };
 
-/** The three timed lines, as a flashcard names them. */
-export const LINE_LABELS: Readonly<Record<keyof Lines, string>> = {
+/** The three timed lines, as a flashcard names them. The sale is not dealt as a line: it is the card's selling line, not a timed one. */
+export const LINE_LABELS: Readonly<Record<TimedLine, string>> = {
 	s10: 'in ten seconds',
 	s20: 'in twenty seconds',
 	s45: 'in forty five seconds'
@@ -852,7 +853,7 @@ export function buildFlashcards(house: House): Flashcard[] {
 		}
 		const lines = keptValue<Lines>(item.lines);
 		if (lines) {
-			for (const key of KEYS.Lines) {
+			for (const key of TIMED_LINES) {
 				const text = plainText(lines[key]);
 				if (text) out.push({ kind: 'line', front: name + ' ' + LINE_LABELS[key], back: text, itemId: item.id });
 			}
@@ -930,8 +931,8 @@ export function buildFlashcards(house: House): Flashcard[] {
  * answers the rest at lineup.
  */
 
-/** The three timed lines by their length key. */
-export type SayLength = keyof Lines;
+/** The three timed lines by their length key; the sale is never said back. */
+export type SayLength = TimedLine;
 
 /** A grade in a word, never a colour: met, close or missed. */
 export type SaidVerdict = 'met' | 'close' | 'missed';
@@ -1177,7 +1178,7 @@ function findItem(house: House, id: string): HouseItem | undefined {
  */
 export function gradeSaid(house: House, itemId: string, length: SayLength, said: string): SaidGrade | null {
 	const item = findItem(house, plainText(itemId));
-	if (!item || !(length in LINE_CAPS)) return null;
+	if (!item || (TIMED_LINES as readonly string[]).indexOf(length) < 0) return null;
 	const lines = keptValue<Lines>(item.lines);
 	const keptLine = lines ? plainText(lines[length]) : '';
 	if (!keptLine) return null;
@@ -1270,7 +1271,7 @@ export function sayable(house: House, kind?: ItemKind): SayableItem[] {
 		const name = nameOf(item);
 		const lines = keptValue<Lines>(item.lines);
 		if (!name || !lines) continue;
-		const lengths = KEYS.Lines.filter((k) => plainText(lines[k])) as SayLength[];
+		const lengths = TIMED_LINES.filter((k) => plainText(lines[k])) as SayLength[];
 		if (lengths.length) out.push({ id: item.id, kind: item.kind, name, section: plainText(item.section), lengths });
 	}
 	return out;

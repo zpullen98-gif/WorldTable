@@ -180,7 +180,14 @@ export function stagingFragmentFiles(names) { return names.map((n) => path.join(
    quarter hour before its build, never ahead of the clock. */
 /* 27 October 2026, 17:00 UTC: source checked Madeira Solera base year and component age
    distinctions. One edition stamp preserves the refresh engine's detection of personal edits. */
-export const EDITION_BUILT_AT = '2026-10-27T17:00:00.000Z';
+/* The 07:15 edition of 31 October 2026 is the five-star card edition's first stamp: the banned word
+   rule on every selling line (sellingProblems: the timed lines, the sale, a pairing's lines and the
+   bottle tiers' lines, the 19 lines that said "perfect" corrected through overrides), a wine's
+   firstPickIds derived from the dishes' pairings with the derived secondFor and offeredWith beside it
+   (the hand set lists gone, the fallback why line naming the derived dishes), and the sale field
+   (lines.sale, SALE_RULE, --require-sale) for the sale edition to fill; stamped at the quarter hour
+   before its build, never ahead of the clock. */
+export const EDITION_BUILT_AT = '2026-10-31T07:15:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a
@@ -621,6 +628,23 @@ export const WATCH_CLOSE = 'Allergens: read the service note and confirm at line
 /* The floors under the timed lines (a line under them is thin, section 5.4); the caps are the
    engine's LINE_CAPS. */
 export const LINE_FLOORS = { s10: 12, s20: 25, s45: 60 };
+/* The sale (the five-star card edition, 31 October 2026): the two sentences a server says under the
+   description to sell a wine, lines.sale. The builder's side of the engine's SALE_RULE: present, it
+   runs at least the floor in words and at most two sentences (thinLines, fatal like a thin timed
+   line); its cap is the engine's LINE_CAPS.sale (word-cap). Absent, it is no problem here; the gates'
+   --require-sale makes a wine without one fatal, and the count of wines with one is always printed. */
+export const SALE_RULE = { floor: 15, cap: 45, sentences: 2 };
+const SENTENCE_END_RE = /[.!?]["”']?(?=\s|$)/g;
+export function sentences(s) {
+	const m = typeof s === 'string' && s.trim() ? s.match(SENTENCE_END_RE) : null;
+	return m ? m.length : 0;
+}
+/* The wines with a sale, and those without, for the gates' counts and --require-sale. */
+export function saleCounts(house) {
+	const has = (w) => !!(w.lines && w.lines.value && typeof w.lines.value.sale === 'string' && w.lines.value.sale.trim());
+	const wines = house.wines || [];
+	return { withSale: wines.filter(has).length, without: wines.filter((w) => !has(w)).map((w) => w.name) };
+}
 const NOTE_WORD_RE = /[A-Za-z0-9\u00C0-\u024F'\u2019]+(?:-[A-Za-z0-9\u00C0-\u024F'\u2019]+)*/g;
 export function words(s) {
 	const m = typeof s === 'string' ? s.match(NOTE_WORD_RE) : null;
@@ -673,6 +697,40 @@ export function sourceProblems(a, folded) {
 			const f = foldName(piece.replace(/[.,;:]+$/, '').replace(/[\u2019']s$/, '').replace(/[.'\u2019]+$/, ''));
 			if (f.length < 2) continue;
 			if (folded.indexOf(f) < 0) out.push(`the name ${piece} is in no source and not in the house`);
+		}
+	}
+	return out;
+}
+
+/* THE SELLING LINES (the five-star card edition, 31 October 2026): BANNED_WORDS over every line a
+   server says to sell, where before it read the notes, the components and the producers only. For
+   every dish, wine and cocktail: lines.s10, s20, s45 and sale; for every dish's pairing: sayIt,
+   whyThisWine, stepUp, secondWhy, zeroProofWhy and why, and every bottle tier's why and sayIt. Each
+   hit is one problem under the code banned-line, naming the record, the field and the word; fatal in
+   validate-pack and check-pack. */
+export const SELLING_LINE_KEYS = ['s10', 's20', 's45', 'sale'];
+export const SELLING_PAIRING_KEYS = ['sayIt', 'whyThisWine', 'stepUp', 'secondWhy', 'zeroProofWhy', 'why'];
+export function sellingProblems(house) {
+	const out = [];
+	const kv = (m) => (m && typeof m === 'object' && 'value' in m ? m.value : undefined);
+	const hit = (at, field, text) => {
+		if (typeof text !== 'string' || !text) return;
+		const m = text.match(BANNED_WORDS);
+		if (m) out.push(`${at}: banned-line: ${field}: the banned word "${m[0]}"`);
+	};
+	for (const list of ['dishes', 'wines', 'cocktails']) for (const r of house[list] || []) {
+		const at = `${list} ${r.name}`;
+		const L = kv(r.lines);
+		if (L) for (const k of SELLING_LINE_KEYS) hit(at, `lines.${k}`, L[k]);
+		if (list !== 'dishes') continue;
+		const P = kv(r.pairing);
+		if (!P) continue;
+		for (const k of SELLING_PAIRING_KEYS) hit(at, `pairing.${k}`, P[k]);
+		if (P.bottles) for (const tier of ['value', 'classic', 'splurge', 'half']) {
+			const t = P.bottles[tier];
+			if (!t) continue;
+			hit(at, `pairing.bottles.${tier}.why`, t.why);
+			hit(at, `pairing.bottles.${tier}.sayIt`, t.sayIt);
 		}
 	}
 	return out;
@@ -947,9 +1005,10 @@ export function drinkProducerProblems(frags, drinkNames, living = livingRegex(),
 }
 
 /* The thin lines of section 5.4, by code, each a sentence. Fatal in the gates once the edition
-   answers them: a timed line under its floor, a dish guest line that restates the menu line, a
-   wine part that copies the field the card prints in its own block, and a price in a profile. An
-   empty part is reported and not refused (a part no source holds stays empty; a drill skips it). */
+   answers them: a timed line under its floor, a sale under its floor (short-sale) or over two
+   sentences (long-sale), a dish guest line that restates the menu line, a wine part that copies the
+   field the card prints in its own block, and a price in a profile. An empty part is reported and
+   not refused (a part no source holds stays empty; a drill skips it); an absent sale is not read. */
 export function thinLines(house) {
 	const fatal = [];
 	const report = [];
@@ -959,6 +1018,12 @@ export function thinLines(house) {
 		const at = `${list} ${r.name}`;
 		const L = kv(r.lines);
 		if (L) for (const k of ['s10', 's20', 's45']) { const w = words(L[k]); if (w && w < LINE_FLOORS[k]) fatal.push(`${at}: short-${k.slice(1)}: lines.${k} is ${w} words, the floor is ${LINE_FLOORS[k]}`); }
+		if (L && typeof L.sale === 'string' && L.sale.trim()) {
+			const w = words(L.sale);
+			if (w < SALE_RULE.floor) fatal.push(`${at}: short-sale: lines.sale is ${w} words, the floor is ${SALE_RULE.floor}`);
+			const n = sentences(L.sale);
+			if (n > SALE_RULE.sentences) fatal.push(`${at}: long-sale: lines.sale is ${n} sentences, at most ${SALE_RULE.sentences}`);
+		}
 		const P = kv(r.parts);
 		if (P) { const empty = ['main', 'technique', 'sauce', 'sides', 'taste'].filter((k) => !String(P[k] || '').trim()); if (empty.length) report.push(`${at}: empty-part: ${empty.join(', ')}`); }
 		if (list === 'dishes' && r.description && kv(r.guest)) {

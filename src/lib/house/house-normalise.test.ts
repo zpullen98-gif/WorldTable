@@ -367,11 +367,12 @@ describe('the caps', () => {
 
 describe('normaliseMark', () => {
 	it('knows which fields carry a list, the parts, the lines or the pairing, and that the rest is prose', () => {
-		expect(MARK_KINDS).toEqual({ ingredientsNamed: 'list', firstPickIds: 'list', upsells: 'list', parts: 'parts', lines: 'lines', pairing: 'pairing', card: 'card', compare: 'compare', producer: 'producer' });
+		/* Re-pinned for the five-star card edition: a wine's derived secondFor is a list and its offeredWith a list of dish and tier records. */
+		expect(MARK_KINDS).toEqual({ ingredientsNamed: 'list', firstPickIds: 'list', secondFor: 'list', offeredWith: 'offered', upsells: 'list', parts: 'parts', lines: 'lines', pairing: 'pairing', card: 'card', compare: 'compare', producer: 'producer' });
 		for (const f of ['say', 'guest', 'why', 'pairs', 'origin', 'profile', 'goesWith', 'serve', 'toGuest', 'you', 'principle', 'difference', 'ask', 'body', 'history']) {
 			expect(markKind(f)).toBe('text');
 		}
-		const kinds = ['text', 'list', 'parts', 'lines', 'pairing', 'card', 'compare', 'producer'];
+		const kinds = ['text', 'list', 'parts', 'lines', 'pairing', 'card', 'compare', 'producer', 'offered'];
 		for (const list of HOUSE_LISTS) for (const f of MARK_FIELDS[list]) expect(kinds, `${list}.${f}`).toContain(markKind(f));
 		for (const f of MARK_FIELDS.house) expect(markKind(f)).toBe('text');
 	});
@@ -418,6 +419,25 @@ describe('normaliseMark', () => {
 			by: 'person',
 			ts: 1
 		});
+		/* The sale (the five-star card edition): kept as a string with something in it, dropped when blank or not a string, so a Lines without one keeps its three keys. */
+		expect(normaliseMark({ value: { s10: 'ten', s20: 'twenty', s45: 'forty five', sale: 'Two sentences to sell it. Said at the table.' }, by: 'person', ts: 1 }, 'lines')).toEqual({
+			value: { s10: 'ten', s20: 'twenty', s45: 'forty five', sale: 'Two sentences to sell it. Said at the table.' },
+			by: 'person',
+			ts: 1
+		});
+		expect(normaliseMark({ value: { s10: 'ten', sale: 42 }, by: 'person', ts: 1 }, 'lines')).toEqual({ value: { s10: 'ten', s20: '', s45: '' }, by: 'person', ts: 1 });
+		expect(normaliseMark({ value: { s10: 'ten', sale: '  ' }, by: 'person', ts: 1 }, 'lines')).toEqual({ value: { s10: 'ten', s20: '', s45: '' }, by: 'person', ts: 1 });
+		expect(normaliseMark({ value: { sale: 'A sale on its own.' }, by: 'person', ts: 1 }, 'lines')).toEqual({ value: { s10: '', s20: '', s45: '', sale: 'A sale on its own.' }, by: 'person', ts: 1 });
+		/* The dishes a wine is offered with: each entry a dish id and a tier, both strings with something in them, a stray key dropped, the tier carried as it came for the validator. */
+		expect(markKind('secondFor')).toBe('list');
+		expect(normaliseMark({ value: ['d-chicken1', '', 7], by: 'person', ts: 1 }, 'list')).toEqual({ value: ['d-chicken1'], by: 'person', ts: 1 });
+		expect(normaliseMark({ value: [{ dishId: 'd-chicken1', tier: 'value', allergens: 'x' }, { dishId: 'd-chicken1', tier: 'magnum' }, { dishId: '', tier: 'half' }, { dishId: 'd-beetrt01' }, 'd-chicken1', null], by: 'person', ts: 1 }, 'offered')).toEqual({
+			value: [{ dishId: 'd-chicken1', tier: 'value' }, { dishId: 'd-chicken1', tier: 'magnum' }],
+			by: 'person',
+			ts: 1
+		});
+		expect(normaliseMark({ value: [{ dishId: '', tier: 'value' }], by: 'person', ts: 1 }, 'offered')).toBeUndefined();
+		expect(normaliseMark({ value: [], by: 'person', ts: 1 }, 'offered')).toBeUndefined();
 		const pairing = normaliseMark({ value: { wineId: 'w-lantern1', principles: ['acid', 'umami', ''], nutFree: true }, by: 'person', ts: 1 }, 'pairing');
 		expect(pairing).toEqual({
 			value: {
@@ -436,6 +456,8 @@ describe('normaliseMark', () => {
 		(dish(raw, 0).why as Raw).by = 'chef';
 		(wine(raw, 0).profile as Raw).ts = '5';
 		(wine(raw, 0).firstPickIds as Raw).value = [];
+		(wine(raw, 0) as Raw).secondFor = { value: ['d-beetrt01'], by: 'person', ts: 2 };
+		(wine(raw, 0) as Raw).offeredWith = { value: [{ dishId: 'd-chicken1', tier: 'splurge' }], by: 'person', ts: 3 };
 		(raw.history as Raw).value = ' ';
 		((raw.mixUps as Raw[])[0].ask as Raw).value = 3;
 		const { house } = normaliseHouse(raw);
@@ -443,6 +465,8 @@ describe('normaliseMark', () => {
 		expect(house.dishes[0].why?.by).toBe('maitre');
 		expect(house.wines[0].profile?.ts).toBe(5);
 		expect(house.wines[0].firstPickIds).toBeUndefined();
+		expect(house.wines[0].secondFor).toEqual({ value: ['d-beetrt01'], by: 'person', ts: 2 });
+		expect(house.wines[0].offeredWith).toEqual({ value: [{ dishId: 'd-chicken1', tier: 'splurge' }], by: 'person', ts: 3 });
 		expect(house.history).toBeUndefined();
 		expect(house.mixUps[0].ask).toBeUndefined();
 		expect(isMark(house.mixUps[0].difference)).toBe(true);

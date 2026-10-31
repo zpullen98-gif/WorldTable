@@ -321,7 +321,8 @@ export const LEDGER_COCKTAIL: ProjectionSpec<SyncRow> = {
  * has no House field and stays on the row. The item's display name is
  * producer, wine and vintage in one line, read off the row whenever the row
  * wins, so the house says what the cellar says. House-only: profile,
- * goesWith, firstPickIds, serve, pours, serviceNote, parts, lines; the price
+ * goesWith, firstPickIds, secondFor, offeredWith, serve, pours, serviceNote,
+ * parts, lines (the sale among them); the price
  * starts as the glass price when a bottle is adopted and is the house's
  * after that.
  */

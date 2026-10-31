@@ -611,8 +611,9 @@ function fieldsDrawn(r, id) {
 	pressOn(r, 'b-collins1', 'lines', 'edit');
 	ed = one(r, '[data-editor="lines"]');
 	const areas = all(ed, 'textarea');
+	/* The editor takes the three timed lines (TIMED_LINES); the sale, the fourth key of Lines since the five-star card edition, is a selling line the pack builder writes and this editor does not take. */
 	check('the lines editor is three boxes, one per timed line, filled with hers',
-		areas.length === 3 && same(areas.map((a) => a.getAttribute('data-e')), schema.KEYS.Lines) && areas[0].value === house.cocktails[0].lines.value.s10);
+		areas.length === 3 && same(areas.map((a) => a.getAttribute('data-e')), schema.TIMED_LINES) && areas[0].value === house.cocktails[0].lines.value.s10);
 	const counts = all(ed, '[data-count]');
 	check('each line shows its count against LINE_CAPS', counts.length === 3 && counts[0].textContent === '13 of ' + schema.LINE_CAPS.s10 + ' words' && counts[2].textContent.endsWith(' of ' + schema.LINE_CAPS.s45 + ' words'));
 	areas[0].value = 'one two three';
@@ -678,7 +679,8 @@ function fieldsDrawn(r, id) {
 	flip(house, () => true);
 	const { calls, hooks } = recorder(() => [{ said: 'Hold this one for lineup' }]);
 	const r = review(root(), house, 'wines', hooks);
-	check('wines: the wine with every WINE_MARK but the comparisons, parts and lines among them, in the schema order', same(fieldsDrawn(r, 'w-lantern1'), schema.WINE_MARKS.filter((/** @type {string} */ f) => f !== 'compare')), fieldsDrawn(r, 'w-lantern1').join(','));
+	/* secondFor and offeredWith are derived by the pack builder from the dishes, never written by her, and the fixture carries neither. */
+	check('wines: the wine with every WINE_MARK but the comparisons and the derived lists, parts and lines among them, in the schema order', same(fieldsDrawn(r, 'w-lantern1'), schema.WINE_MARKS.filter((/** @type {string} */ f) => f !== 'compare' && f !== 'secondFor' && f !== 'offeredWith')), fieldsDrawn(r, 'w-lantern1').join(','));
 	check('the wine\'s parts are drawn with WINE_PARTS labels', r.textContent.includes('grape and regionBacchus from Quay Lane') && r.textContent.includes('what it goes withThe roast chicken and the beetroot salad'));
 	check('an id list on a wine is drawn as names', markRowOf(r, 'w-lantern1', 'firstPickIds').textContent.includes('Lantern Roast Chicken'));
 	one(r, '[data-h="keep-clean"]').click();

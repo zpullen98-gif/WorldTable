@@ -1520,6 +1520,26 @@ stories) and what to compare it with. The plan is section "CURRENT WORK (5 Oct
   own headings, from Billboard Songs from 1946 to Luxury Roost Bar Cocktails,
   so the Ledger's Brennan's page, the Table's drink rows and the Codex read
   the menus' order.
+- **The five-star card edition, stage one (31 October 2026)**: `Lines` gains
+  the optional `sale`, the two sentences a server says under the description
+  to sell a wine, capped by `LINE_CAPS.sale` at 45 words and held by
+  `SALE_RULE` to a floor of 15 words and at most two sentences
+  (`saleProblems` and `sentenceCount` in house-lines.ts, the code `word-cap`),
+  written only when it says something (`OPTIONAL_KEYS.Lines`); `TIMED_LINES`
+  names the three timed lines the drills deal and grade, which the sale never
+  is. A wine's `firstPickIds` is derived by the builder from the dishes whose
+  `pairing.wineId` is the wine, in the house's dish order, with the derived
+  `secondFor` (the dishes whose `secondId` is) and `offeredWith` (dish and
+  bottle tier, `OfferedWith`) beside it; no override sets any of the three
+  (a `firstPickFor` list on a wine:+ add fails the build), a pick is changed
+  on the dish's side, and the build prints the guide's FIRST PICK FOR
+  disagreements by name. `engine.mjs sellingProblems` applies BANNED_WORDS to
+  every selling line (the timed lines, the sale, a pairing's sayIt,
+  whyThisWine, stepUp, secondWhy, zeroProofWhy and why, and each bottle
+  tier's why and sayIt) under the code `banned-line`, fatal in validate-pack
+  and check-pack; both print the count of wines with a sale and take
+  `--require-sale`, which makes a wine without one fatal (off by default
+  until the sale edition fills them).
 
 ## Cook at home: the training kitchen (5 October 2026)
 

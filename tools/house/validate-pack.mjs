@@ -4,7 +4,10 @@
    with engine.mjs stemProblems (no shared drill stem, no filler part, no unconfirmed glass),
    upsellRoomProblems (every upsell poured where the guest sits), noteProblems (the description and
    the coaching notes on every item, in range, sourced and allergen free) and thinLines (no timed
-   line under its floor, no wine part copying its profile) as fatal beside the engine's codes,
+   line under its floor, no wine part copying its profile, no sale under its floor or over two
+   sentences), sellingProblems (no banned word in any timed line, sale, pairing line or bottle tier
+   line, the code banned-line) and, with --require-sale, a wine without a sale, as fatal beside the
+   engine's codes,
    so a price the guide does not print stands on a committed page whose first line names its
    source, by the same verbatim rule; every problem printed by
    code with the item and the field; the counts asserted; exit 1 on any fatal, any count that is
@@ -19,7 +22,7 @@
    Runs from any directory. Reads house/brennans/house.json by default (the builder's output). */
 
 import fs from 'node:fs';
-import { loadEngine, GUIDE, HOUSE_JSON, REL, countProblems, describe, answerNames, checkArgs, sourceText as pageText, pageFiles, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, componentProblems, fragmentCounts, stagingNames, stagingFragmentFiles } from './engine.mjs';
+import { loadEngine, GUIDE, HOUSE_JSON, REL, countProblems, describe, answerNames, checkArgs, sourceText as pageText, pageFiles, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, componentProblems, fragmentCounts, stagingNames, stagingFragmentFiles, sellingProblems, saleCounts } from './engine.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
@@ -28,12 +31,14 @@ if (args.includes('--help') || args.includes('-h')) {
   --file <path>  validate another house file (a pack file is read through its house key)
   --staging <a,b>  the file is a staged dry build (build-brennans --staging): the staged fragments are
                  counted with the edition's, and the edition's fixed counts are printed as advisory
+  --require-sale make a wine without a sale (lines.sale) fatal; off by default, the count is always printed
   --verbose      print every advisory flag, not only the counts
   --help         this text`);
 	process.exit(0);
 }
 function fail(msg) { console.error('validate-pack: ' + msg); process.exit(1); }
-checkArgs(args, ['--file', '--verbose', '--staging'], ['--file', '--staging'], fail);
+checkArgs(args, ['--file', '--verbose', '--staging', '--require-sale'], ['--file', '--staging'], fail);
+const REQUIRE_SALE = args.includes('--require-sale');
 const fileAt = args.indexOf('--file');
 const FILE = fileAt >= 0 ? args[fileAt + 1] : HOUSE_JSON;
 const VERBOSE = args.includes('--verbose');
@@ -88,6 +93,15 @@ for (const n of notes) console.error('validate-pack: FATAL note: ' + n);
 const thin = thinLines(house);
 for (const t of thin.fatal) console.error('validate-pack: FATAL thin: ' + t);
 if (VERBOSE) for (const t of thin.report) console.log('    report ' + t);
+/* The selling lines (engine.mjs sellingProblems, the five-star card edition): no banned word in a timed
+   line, a sale, a pairing's lines or a bottle tier's. Fatal here. The sale count is printed, and with
+   --require-sale a wine without one is fatal. */
+const banned = sellingProblems(house);
+for (const b of banned) console.error('validate-pack: FATAL banned-line: ' + b);
+const sales = saleCounts(house);
+const noSale = REQUIRE_SALE ? sales.without : [];
+for (const n of noSale) console.error(`validate-pack: FATAL no-sale: wines ${n}: no sale (lines.sale); --require-sale asks one of every wine`);
+console.log(`validate-pack: ${sales.withSale} of ${house.wines.length} wines carry a sale${REQUIRE_SALE ? ' (required)' : ''}`);
 /* The components and the comparisons (engine.mjs componentProblems): every component reaching an
    item, its explanation and card in their ranges, sourced, dash and verdict free; every item's one or
    two comparisons, the in-app one first, within their caps. Fatal here. */
@@ -96,6 +110,6 @@ for (const c of comps) console.error('validate-pack: FATAL component: ' + c);
 const nc = noteCounts(house);
 console.log(`validate-pack: notes ${Object.entries(nc).map(([q, c]) => `${c} "${q}"`).join(', ')}; ${thin.report.length} item(s) with an empty part (a report, not a gate)`);
 
-const bad = fatalCount + (STAGED.length ? 0 : counts.length) + changed.length + unanswered.length + stems.length + rooms.length + notes.length + thin.fatal.length + comps.length + (lib.sameJson(house, input) ? 0 : 1);
-if (bad) fail(`${REL(FILE)}: ${fatalCount} fatal problem(s), ${stems.length} drill stem problem(s), ${rooms.length} upsell room problem(s), ${notes.length} note problem(s), ${comps.length} component problem(s), ${thin.fatal.length} thin line(s), ${counts.length} count(s) off, ${changed.length} normaliser change(s), ${unanswered.length} unanswered name(s)`);
+const bad = fatalCount + (STAGED.length ? 0 : counts.length) + changed.length + unanswered.length + stems.length + rooms.length + notes.length + thin.fatal.length + comps.length + banned.length + noSale.length + (lib.sameJson(house, input) ? 0 : 1);
+if (bad) fail(`${REL(FILE)}: ${fatalCount} fatal problem(s), ${stems.length} drill stem problem(s), ${rooms.length} upsell room problem(s), ${notes.length} note problem(s), ${comps.length} component problem(s), ${thin.fatal.length} thin line(s), ${banned.length} banned line(s), ${noSale.length} wine(s) without a sale, ${counts.length} count(s) off, ${changed.length} normaliser change(s), ${unanswered.length} unanswered name(s)`);
 console.log(`validate-pack: ${REL(FILE)}: 0 fatal, ${problems.length} advisory flag(s) in ${byCode.size} code(s), counts hold (${house.dishes.length} dishes, ${house.cocktails.length} cocktails, ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask, ${house.disputes.length} disputes, ${(house.components || []).length} components)`);

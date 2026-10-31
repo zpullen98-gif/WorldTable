@@ -58,10 +58,23 @@ export const LIST_MAX = 10000;
 
 /**
  * The word caps on the three timed lines: ten, twenty and forty five seconds
- * of speech at a server's pace. Flagged, not cut: a line over its cap is
- * shown with its count and the person trims it.
+ * of speech at a server's pace, and on the sale, the two sentences said
+ * under the description to sell the wine. Flagged, not cut: a line over its
+ * cap is shown with its count and the person trims it.
  */
-export const LINE_CAPS = { s10: 25, s20: 50, s45: 110 } as const;
+export const LINE_CAPS = { s10: 25, s20: 50, s45: 110, sale: 45 } as const;
+
+/** The three timed lines by key, in the order they are said. The sale is a selling line, not a timed one, and is never dealt or graded as one. */
+export const TIMED_LINES = ['s10', 's20', 's45'] as const;
+export type TimedLine = (typeof TIMED_LINES)[number];
+
+/**
+ * The rule on the sale (the five-star card edition, 31 October 2026): when
+ * a sale is present it runs at least the floor in words, at most the cap
+ * (LINE_CAPS.sale) and at most two sentences. A sale that is absent is not
+ * a problem here; the pack gates may require one.
+ */
+export const SALE_RULE = { floor: 15, cap: 45, sentences: 2 } as const;
 
 /** The nine pairing principles a pairing block may name. */
 export const PRINCIPLES = ['acid', 'fat', 'weight', 'sweet', 'heat', 'tannin', 'salt', 'bridge', 'method'] as const;
@@ -297,11 +310,17 @@ export interface FormulaParts {
 	taste: string;
 }
 
-/** The three timed lines, ten, twenty and forty five seconds, capped by LINE_CAPS in words. */
+/**
+ * The three timed lines, ten, twenty and forty five seconds, capped by
+ * LINE_CAPS in words, and the optional sale: the two sentences a server says
+ * to sell the wine, written only when it says something, so a record from an
+ * edition that never had one reads unchanged (OPTIONAL_KEYS.Lines).
+ */
 export interface Lines {
 	s10: string;
 	s20: string;
 	s45: string;
+	sale?: string;
 }
 
 /** One bottle offered with a dish: a house wine from the bottle list, why it works, and the line to say at the table. */
@@ -440,6 +459,12 @@ export interface HouseDish extends ItemBase {
 	signature: boolean;
 }
 
+/** One dish a wine is offered with by a bottle tier: the dish and the tier whose wineId is the wine. */
+export interface OfferedWith {
+	dishId: string;
+	tier: BottleTier;
+}
+
 export interface HouseWine extends ItemBase {
 	kind: 'wine';
 	producer: string;
@@ -454,8 +479,16 @@ export interface HouseWine extends ItemBase {
 	pours: string[];
 	profile?: Mark;
 	goesWith?: Mark;
-	/** The dishes this wine is the first pick for, by id. */
+	/**
+	 * The dishes this wine is the first pick for, by id: derived by the pack
+	 * builder from the dishes whose pairing.wineId is this wine, in the
+	 * house's dish order, never set by hand (the five-star card edition).
+	 */
 	firstPickIds?: Mark<string[]>;
+	/** The dishes whose pairing.secondId is this wine, by id, derived as firstPickIds is. */
+	secondFor?: Mark<string[]>;
+	/** The dishes whose bottle tiers name this wine, with the tier, derived as firstPickIds is. */
+	offeredWith?: Mark<OfferedWith[]>;
 	serve?: Mark;
 	/** The list it is sold from; absent means 'glass'. Only 'bottle' is ever written. */
 	list?: WineList;
@@ -783,7 +816,7 @@ export function optionalList(list: string): boolean {
 
 /** The mark fields per kind: everything Lizzy may write and a person may keep. Wines carry parts and lines too. */
 export const DISH_MARKS = ['say', 'guest', 'why', 'pairs', 'origin', 'ingredientsNamed', 'parts', 'lines', 'pairing', 'compare'] as const satisfies readonly (keyof HouseDish)[];
-export const WINE_MARKS = ['say', 'guest', 'why', 'pairs', 'origin', 'profile', 'goesWith', 'firstPickIds', 'serve', 'parts', 'lines', 'compare'] as const satisfies readonly (keyof HouseWine)[];
+export const WINE_MARKS = ['say', 'guest', 'why', 'pairs', 'origin', 'profile', 'goesWith', 'firstPickIds', 'secondFor', 'offeredWith', 'serve', 'parts', 'lines', 'compare'] as const satisfies readonly (keyof HouseWine)[];
 export const COCKTAIL_MARKS = ['say', 'guest', 'why', 'pairs', 'origin', 'ingredientsNamed', 'parts', 'lines', 'upsells', 'compare'] as const satisfies readonly (keyof HouseCocktail)[];
 
 /**
@@ -853,13 +886,14 @@ export const KEYS = {
 	Mark: ['value', 'by', 'ts', 'model'] as const satisfies KeysOf<Mark>,
 	Note: ['q', 'a', 'ts', 'model'] as const satisfies KeysOf<Note>,
 	FormulaParts: ['main', 'technique', 'sauce', 'sides', 'taste'] as const satisfies KeysOf<FormulaParts>,
-	Lines: ['s10', 's20', 's45'] as const satisfies KeysOf<Lines>,
+	Lines: ['s10', 's20', 's45', 'sale'] as const satisfies KeysOf<Lines>,
 	Pairing: [
 		'wineId', 'why', 'sayIt', 'whyThisWine', 'palate', 'principles',
 		'secondId', 'secondWhy', 'stepUp', 'serve', 'avoid', 'zeroProofId', 'zeroProofWhy', 'bottles'
 	] as const satisfies KeysOf<Pairing>,
 	PairingBottles: ['value', 'classic', 'splurge', 'half'] as const satisfies KeysOf<PairingBottles>,
 	BottlePick: ['wineId', 'why', 'sayIt'] as const satisfies KeysOf<BottlePick>,
+	OfferedWith: ['dishId', 'tier'] as const satisfies KeysOf<OfferedWith>,
 	MealPrice: ['meal', 'printed'] as const satisfies KeysOf<MealPrice>,
 	ItemBase: ITEM_BASE_KEYS,
 	HouseDish: [
@@ -867,7 +901,7 @@ export const KEYS = {
 	] as const satisfies KeysOf<HouseDish>,
 	HouseWine: [
 		...ITEM_BASE_KEYS, 'kind', 'producer', 'wine', 'vintage', 'region', 'grapes', 'style', 'glass', 'bottle', 'pours',
-		'profile', 'goesWith', 'firstPickIds', 'serve', 'list', 'bin', 'size'
+		'profile', 'goesWith', 'firstPickIds', 'secondFor', 'offeredWith', 'serve', 'list', 'bin', 'size'
 	] as const satisfies KeysOf<HouseWine>,
 	HouseCocktail: [
 		...ITEM_BASE_KEYS, 'kind', 'spec', 'method', 'glass', 'garnish', 'note', 'family', 'spirit', 'zeroProof',
@@ -906,6 +940,7 @@ export const KEYS = {
  * out of the required half.
  */
 export const OPTIONAL_KEYS = {
+	Lines: ['sale'],
 	Pairing: ['bottles'],
 	HouseWine: ['list', 'bin', 'size'],
 	HouseVideo: ['componentIds'],
@@ -926,6 +961,7 @@ type KeysComplete = [
 	Assert<Complete<Pairing, typeof KEYS.Pairing>>,
 	Assert<Complete<PairingBottles, typeof KEYS.PairingBottles>>,
 	Assert<Complete<BottlePick, typeof KEYS.BottlePick>>,
+	Assert<Complete<OfferedWith, typeof KEYS.OfferedWith>>,
 	Assert<Complete<MealPrice, typeof KEYS.MealPrice>>,
 	Assert<Complete<ItemBase, typeof KEYS.ItemBase>>,
 	Assert<Complete<HouseDish, typeof KEYS.HouseDish>>,

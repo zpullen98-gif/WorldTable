@@ -505,6 +505,13 @@ function getPath(rec, field) {
 	for (let i = 0; i < parts.length - 1; i++) { o = o ? o[parts[i]] : undefined; }
 	return { holder: o, key: parts[parts.length - 1] };
 }
+/* The fields no override sets (the five-star card edition, 31 October 2026): a wine's firstPickIds,
+   secondFor and offeredWith are derived from the dishes' pairings at assembly (derivedFor below), and
+   firstPickFor was the hand set list of dish names that fed firstPickIds before. An entry on any of
+   them, by field or inside a wine:+ add, fails the build and names the dish side as the way to change
+   a pick. The guide's own FIRST PICK FOR lists are still parsed, for the agreement report. */
+const DERIVED_WINE_FIELDS = ['firstPickIds', 'firstPickFor', 'secondFor', 'offeredWith'];
+const DERIVED_SAID = (field) => `${field} is derived from the dishes' pairings and no override sets it; change the pick on the dish's side (dish:<name> pairing.wine, pairing.second or a bottles tier)`;
 const applied = [];
 const overrideAt = new Map();
 /* The videos the overrides file, kept apart from the model so the dash walk does not respell a quoted title. */
@@ -540,6 +547,7 @@ const buried = [];
 const priceUnknownNames = [];
 overrides.entries.forEach((e, n) => {
 	const op = e.op || 'set';
+	if (typeof e.field === 'string' && DERIVED_WINE_FIELDS.includes(e.field.split('.')[0])) fail(`${REL(OVERRIDES)} entry ${n}: ${DERIVED_SAID(e.field)}`);
 	/* A video's title and channel are quoted from the page as published and its bookkeeping (verifiedBy,
 	   channelEvidence) quotes search results, so only the words this file writes (why, topic) are held
 	   dash free here; the quoted ones take the dash pass at assembly, logged. */
@@ -729,7 +737,7 @@ function newWine(v, n) {
 	need(Array.isArray(v.grapes), 'its grapes, a list (empty when no source names them)');
 	need(v.parts && ['main', 'technique', 'sauce', 'sides', 'taste'].every((k) => str(v.parts[k])), 'all five parts');
 	need(v.lines && ['s10', 's20', 's45'].every((k) => str(v.lines[k])), 'all three timed lines');
-	need(v.firstPickFor === undefined || (Array.isArray(v.firstPickFor) && v.firstPickFor.every(str)), 'first picks named as dishes');
+	for (const f of DERIVED_WINE_FIELDS) if (v[f] !== undefined) fail(`${at}: the new wine ${v.name} carries ${f}; ${DERIVED_SAID(f)}`);
 	/* The list it is sold from: 'glass' (the default, the menus' own wines) or 'bottle' (the full bottle
 	   list, with a whole card for the floor). A bottle carries its bin and size as the list prints them
 	   and its bottle price, which the validator's band check and the price rule read. */
@@ -747,7 +755,7 @@ function newWine(v, n) {
 		name: v.name, section: v.section, group: v.group || v.section, meals: [...v.meals], price: v.price, prices: v.prices.map((p) => ({ meal: p.meal, printed: p.printed })),
 		producer: v.producer, wine: v.wine, vintage: v.vintage, region: v.region, grapes: [...v.grapes], style: v.style, made: v.parts.technique, taste: v.parts.taste,
 		glass: v.glass || '', bottle: v.bottle || '', pours: Array.isArray(v.pours) ? [...v.pours] : [],
-		profile: v.profile, sayIt: v.guest, goesWith: v.goesWith, serve: v.serve, firstPickFor: Array.isArray(v.firstPickFor) ? [...v.firstPickFor] : [],
+		profile: v.profile, sayIt: v.guest, goesWith: v.goesWith, serve: v.serve, firstPickFor: [],
 		lines: Object.assign({}, v.lines), serviceNote: v.serviceNote || '', say: v.say, why: v.why, pairs: v.pairs || '', origin: v.origin || '',
 		kept: Array.isArray(v.kept) ? v.kept.map((k) => ({ q: k.q, a: k.a })) : [], parts: Object.assign({}, v.parts), idName: v.name
 	};
@@ -977,6 +985,32 @@ for (const r of clean.dishes) {
 	d.ts = BUILD_TS;
 	house.dishes.push(d);
 }
+/* THE DERIVED LISTS (the five-star card edition, 31 October 2026). A wine's firstPickIds, secondFor and
+   offeredWith are read off the dishes once every pairing is assembled: the dishes whose pairing.wineId
+   is the wine, those whose secondId is, and those whose bottle tiers name it, with the tier, each in
+   the house's dish order; a wine with none of a list gets no mark for it. The dishes' pairings are the
+   truth, so no override sets these (DERIVED_WINE_FIELDS, refused above): a pick is changed on the
+   dish's side. The guide's own FIRST PICK FOR lists are still parsed (parse-guide.mjs, the 20 glass
+   wines), and every disagreement with the dishes' WINE picks is printed by name; a wine's fallback
+   why line ("First pick for ...") names the derived dishes, never the hand set list. The agreement
+   report (how many hand set ids the derivation keeps, drops and adds) is printed once per build. */
+const dishName = new Map(house.dishes.map((d) => [d.id, d.name]));
+const GUIDE_WINES = new Set(parsed.wines.map((w) => slug(w.name)));
+function derivedFor(id) {
+	const first = [];
+	const second = [];
+	const offered = [];
+	for (const d of house.dishes) {
+		const p = d.pairing && d.pairing.value;
+		if (!p) continue;
+		if (p.wineId === id) first.push(d.id);
+		if (p.secondId === id) second.push(d.id);
+		if (p.bottles) for (const tier of C.BOTTLE_TIERS) if (p.bottles[tier] && p.bottles[tier].wineId === id) offered.push({ dishId: d.id, tier });
+	}
+	return { first, second, offered };
+}
+const agreement = { wines: 0, ids: 0, kept: 0, dropped: 0, added: 0, lines: [] };
+const guideDisagreements = [];
 for (const r of clean.wines) {
 	const w = itemBase(r, 'wines');
 	Object.assign(w, { producer: r.producer, wine: r.wine, vintage: r.vintage, region: r.region, grapes: r.grapes, style: r.style, glass: r.glass, bottle: r.bottle, pours: r.pours });
@@ -986,14 +1020,33 @@ for (const r of clean.wines) {
 	put(w, 'size', r.size || undefined);
 	put(w, 'say', mark(r.say || sayLine(r.name.replace(/\s*\(Coravin\)/, ''))));
 	put(w, 'guest', mark(r.sayIt));
-	const firstIds = r.firstPickFor.map((n) => itemId(n, r.name));
-	const why = r.why || (r.firstPickFor.length ? 'First pick for ' + r.firstPickFor.join(', ') + '.' : r.price ? 'On the by-the-glass list, ' + r.group.replace(/\s+By the glass.*$/, '') + '.' : 'Poured on the tasting menus; not on the by-the-glass list.');
+	const { first, second, offered } = derivedFor(r.id);
+	const names = (ids) => ids.map((id) => dishName.get(id)).join(', ') || '(none)';
+	if (r.firstPickFor && r.firstPickFor.length) {
+		const hand = r.firstPickFor.map((n) => itemId(n, r.name));
+		const kept = hand.filter((id) => first.includes(id));
+		const dropped = hand.filter((id) => !first.includes(id));
+		const added = first.filter((id) => !hand.includes(id));
+		agreement.wines++;
+		agreement.ids += hand.length;
+		agreement.kept += kept.length;
+		agreement.dropped += dropped.length;
+		agreement.added += added.length;
+		if (dropped.length || added.length) {
+			const line = `${r.name}: the hand set list names ${names(hand)}; the dishes pick it for ${names(first)}`;
+			agreement.lines.push(line);
+			if (GUIDE_WINES.has(slug(r.idName || r.name))) guideDisagreements.push(line);
+		}
+	}
+	const why = r.why || (first.length ? 'First pick for ' + first.map((id) => dishName.get(id)).join(', ') + '.' : r.price ? 'On the by-the-glass list, ' + r.group.replace(/\s+By the glass.*$/, '') + '.' : 'Poured on the tasting menus; not on the by-the-glass list.');
 	put(w, 'why', mark(why));
 	put(w, 'pairs', mark(r.pairs || r.goesWith));
 	put(w, 'origin', r.origin ? mark(r.origin) : undefined);
 	put(w, 'profile', mark(r.profile));
 	put(w, 'goesWith', mark(r.goesWith));
-	put(w, 'firstPickIds', firstIds.length ? mark(firstIds) : undefined);
+	put(w, 'firstPickIds', first.length ? mark(first) : undefined);
+	put(w, 'secondFor', second.length ? mark(second) : undefined);
+	put(w, 'offeredWith', offered.length ? mark(offered) : undefined);
 	put(w, 'serve', mark(r.serve));
 	/* A wine's five parts are the short form (an override's parts.<key>, each 14 words or fewer, the
 	   thin-line rule in engine.mjs), so the card's profile and goes-with blocks carry the long form
@@ -1006,6 +1059,9 @@ for (const r of clean.wines) {
 	w.ts = BUILD_TS;
 	house.wines.push(w);
 }
+console.log(`build-brennans: first picks derived from the dishes' pairings: ${house.wines.filter((w) => w.firstPickIds).length} wines are a first pick, ${house.wines.filter((w) => w.secondFor).length} a second pick, ${house.wines.filter((w) => w.offeredWith).length} offered by a bottle tier; ${agreement.wines} wine(s) had a hand set list of ${agreement.ids} id(s), of which the derivation keeps ${agreement.kept}, drops ${agreement.dropped} and adds ${agreement.added}`);
+for (const l of guideDisagreements) console.log(`build-brennans: the guide's FIRST PICK FOR disagrees with the dishes' WINE picks: ${l}`);
+if (args.includes('--verbose')) for (const l of agreement.lines) if (!guideDisagreements.includes(l)) console.log('  first picks (an added wine): ' + l);
 for (const r of clean.cocktails) {
 	const c = itemBase(r, 'cocktails');
 	Object.assign(c, { spec: r.spec, method: r.method, glass: r.glass || '', garnish: r.garnish || '', note: r.note, family: r.family, spirit: r.spirit, zeroProof: r.zeroProof });

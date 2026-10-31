@@ -26,6 +26,8 @@ import {
 	houseRows,
 	PRINCIPLES,
 	PROSE_MAX,
+	SALE_RULE,
+	TIMED_LINES,
 	WINE_MARKS,
 	WINE_PARTS,
 	emptyHouse,
@@ -112,7 +114,11 @@ describe('the constants', () => {
 		expect(HOUSE_DB).toBe('oot-house');
 		expect(HOUSE_STORE).toBe('houses');
 		expect(HOUSE_MAX_BYTES).toBe(8 * 1024 * 1024);
-		expect(LINE_CAPS).toEqual({ s10: 25, s20: 50, s45: 110 });
+		/* Re-pinned for the five-star card edition: the sale, two sentences under the description, is capped at 45 words. */
+		expect(LINE_CAPS).toEqual({ s10: 25, s20: 50, s45: 110, sale: 45 });
+		expect(TIMED_LINES).toEqual(['s10', 's20', 's45']);
+		expect(SALE_RULE).toEqual({ floor: 15, cap: 45, sentences: 2 });
+		expect(SALE_RULE.cap).toBe(LINE_CAPS.sale);
 		expect(PROSE_MAX).toBe(4000);
 		expect(LIST_MAX).toBe(10000);
 		expect(PRINCIPLES).toEqual(['acid', 'fat', 'weight', 'sweet', 'heat', 'tannin', 'salt', 'bridge', 'method']);
@@ -170,7 +176,9 @@ describe('KEYS against the client', () => {
 			[
 				'Mark', 'Note', 'FormulaParts', 'Lines', 'Pairing', 'MealPrice', 'ItemBase', 'HouseDish', 'HouseWine', 'HouseCocktail',
 				'PairingBottles', 'BottlePick', 'ProducerProfile', 'TastingCourse', 'Tasting', 'LexiconTerm', 'Scenario', 'MixUp', 'MustKnow', 'AskAtLineup', 'DisputeSide', 'Dispute',
-				'HouseMeal', 'HouseSource', 'HouseVideo', 'PackStamp', 'House', 'HouseIndex', 'HouseStub', 'ComponentCard', 'CompareEntry', 'HouseComponent'
+				'HouseMeal', 'HouseSource', 'HouseVideo', 'PackStamp', 'House', 'HouseIndex', 'HouseStub', 'ComponentCard', 'CompareEntry', 'HouseComponent',
+				/* The five-star card edition: the dishes a wine is offered with by tier. */
+				'OfferedWith'
 			].sort()
 		);
 		let walked = 0;
@@ -188,8 +196,13 @@ describe('KEYS against the client', () => {
 	it('keeps the mark and note shapes the wings keep', () => {
 		expect(KEYS.Mark).toEqual(['value', 'by', 'ts', 'model']);
 		expect(KEYS.Note).toEqual(['q', 'a', 'ts', 'model']);
-		expect(KEYS.Lines).toEqual(['s10', 's20', 's45']);
+		/* Re-pinned for the five-star card edition: the sale is the fourth key of Lines, optional (OPTIONAL_KEYS.Lines). */
+		expect(KEYS.Lines).toEqual(['s10', 's20', 's45', 'sale']);
+		expect(OPTIONAL_KEYS.Lines).toEqual(['sale']);
+		expect(KEYS.OfferedWith).toEqual(['dishId', 'tier']);
 		expect(Object.keys(LINE_CAPS)).toEqual([...KEYS.Lines]);
+		expect(WINE_MARKS).toEqual(expect.arrayContaining(['firstPickIds', 'secondFor', 'offeredWith']));
+		for (const k of ['secondFor', 'offeredWith']) expect(KEYS.HouseWine).toContain(k);
 	});
 
 	it('lists the marks and the lists as keys of their shapes', () => {
@@ -326,7 +339,8 @@ describe('the fixture', () => {
 			expect(isMark(v), `${owner}.${field}`).toBe(true);
 			expect((v as Mark<unknown>).by, `${owner}.${field} is not kept`).toBe('person');
 			if (field === 'parts') expect(Object.keys((v as Mark<object>).value).sort()).toEqual([...KEYS.FormulaParts].sort());
-			if (field === 'lines') expect(Object.keys((v as Mark<object>).value).sort()).toEqual([...KEYS.Lines].sort());
+			/* Re-pinned for the five-star card edition: the fixture's lines carry the three timed lines and no sale, which is optional. */
+			if (field === 'lines') expect(Object.keys((v as Mark<object>).value).sort()).toEqual([...TIMED_LINES].sort());
 			if (field === 'pairing') {
 				const p = (v as Mark<Record<string, unknown>>).value;
 				expect(Object.keys(p).sort()).toEqual(KEYS.Pairing.filter((k) => !(OPTIONAL_KEYS.Pairing as readonly string[]).includes(k)).sort());
@@ -350,7 +364,8 @@ describe('the fixture', () => {
 				const mark = item.lines as Mark<Lines> | undefined;
 				if (!mark) continue;
 				lines++;
-				for (const key of KEYS.Lines) {
+				/* Re-pinned for the five-star card edition: the fixture carries no sale, so the three timed lines are walked. */
+				for (const key of TIMED_LINES) {
 					const n = wordCount(mark.value[key]);
 					expect(n, `${item.id} ${key}`).toBeGreaterThan(0);
 					expect(n, `${item.id} ${key} over ${LINE_CAPS[key]} words`).toBeLessThanOrEqual(LINE_CAPS[key]);

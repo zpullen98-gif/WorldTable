@@ -109,6 +109,8 @@ export const LIB = {
 	stripDashes: 'stripDashes',
 	wordCount: 'wordCount',
 	lineProblems: 'lineProblems',
+	sentenceCount: 'sentenceCount',
+	saleProblems: 'saleProblems',
 	/* the labels and caps a screen reads at the top level, beside their place under constants */
 	DISH_PARTS: 'DISH_PARTS',
 	COCKTAIL_PARTS: 'COCKTAIL_PARTS',
@@ -207,7 +209,7 @@ export const DRILL_CONSTANTS = ['DRILL_KINDS', 'DRILL_LABELS', 'DRILL_FLOORS', '
 /** The constants under OOT.houseLib.constants: the schema's, the caps, the key regex and the validator's lists. */
 export const CONSTANTS = [
 	'HOUSE_FORMAT', 'HOUSE_SCHEMA_VERSION', 'HOUSE_INDEX_KEY', 'HOUSE_DB', 'HOUSE_STORE', 'HOUSE_MAX_BYTES',
-	'PROSE_MAX', 'LIST_MAX', 'LINE_CAPS', 'PRINCIPLES', 'DISH_PARTS', 'COCKTAIL_PARTS', 'WINE_PARTS',
+	'PROSE_MAX', 'LIST_MAX', 'LINE_CAPS', 'TIMED_LINES', 'SALE_RULE', 'PRINCIPLES', 'DISH_PARTS', 'COCKTAIL_PARTS', 'WINE_PARTS',
 	'BUILD_STEPS', 'ITEM_KINDS', 'HOUSE_LISTS', 'DISH_MARKS', 'WINE_MARKS', 'COCKTAIL_MARKS', 'MARK_FIELDS',
 	'ID_PREFIXES', 'KEYS', 'KEPT_CAP', 'MARK_KINDS', 'FORBIDDEN_KEY', 'DASH', 'DASH_SOURCE',
 	'OPTIONAL_KEYS', 'WINE_LISTS', 'BOTTLE_TIERS', 'BOTTLE_BANDS', 'HALF_SIZE', 'BOTTLE_WORDS',

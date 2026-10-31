@@ -19,7 +19,7 @@
  * stripDashes to the character. house-validate.test.ts holds both against
  * the client's source, so a change there fails here.
  */
-import { KEYS, LINE_CAPS } from './house-schema';
+import { KEYS, LINE_CAPS, SALE_RULE } from './house-schema';
 import type { Lines } from './house-schema';
 
 /**
@@ -76,9 +76,39 @@ export interface LineProblem {
 }
 
 /**
- * The lines over their caps, in the order of the three. The caps are an
- * argument so a drill or a stricter house can tighten them; the default is
- * LINE_CAPS. A missing line is not a problem here (it is empty, not long).
+ * How many sentences a line holds: a full stop, a question mark or an
+ * exclamation mark, a closing quote allowed after it, followed by a space or
+ * the end. A figure with a decimal point is not a sentence end, since a
+ * digit follows the point. Nothing for a blank or a non-string.
+ */
+const SENTENCE_END_RE = new RegExp('[.!?]["\\u201D\']?(?=\\s|$)', 'g');
+export function sentenceCount(s: string): number {
+	if (typeof s !== 'string' || !s.trim()) return 0;
+	const found = s.match(SENTENCE_END_RE);
+	return found ? found.length : 0;
+}
+
+/**
+ * What is wrong with a sale, each a sentence with its count: under the floor
+ * in words, or over the rule's sentences. Over the cap is lineProblems'
+ * (the sale is a key of Lines and LINE_CAPS carries its cap). Nothing for a
+ * blank or absent sale: the pack gates decide whether one is required.
+ */
+export function saleProblems(sale: string | undefined, rule: { floor: number; sentences: number } = SALE_RULE): string[] {
+	const out: string[] = [];
+	if (typeof sale !== 'string' || !sale.trim()) return out;
+	const words = wordCount(sale);
+	if (words < rule.floor) out.push(words + ' words; the floor on sale is ' + rule.floor);
+	const sentences = sentenceCount(sale);
+	if (sentences > rule.sentences) out.push(sentences + ' sentences; the sale is at most ' + rule.sentences);
+	return out;
+}
+
+/**
+ * The lines over their caps, in the order of KEYS.Lines (the three timed
+ * lines, then the sale). The caps are an argument so a drill or a stricter
+ * house can tighten them; the default is LINE_CAPS. A missing line is not a
+ * problem here (it is empty, not long).
  */
 export function lineProblems(
 	lines: Partial<Lines> | null | undefined,
