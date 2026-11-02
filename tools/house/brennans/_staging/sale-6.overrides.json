@@ -319,6 +319,102 @@
 			"value": "Bründlmayer ‘Alte Reben’ Grüner Veltliner 2023 comes from a family estate in Langenlois, in Austria’s Kamptal. Alte Reben means old vines, and the wine is made fuller and more textured than a classic Grüner: ripe pear, citrus, white pepper and a savoury note, dry, with a long finish. Grüner handles artichokes, which upset many wines, and its texture meets the Choron sauce, so it is the classic bottle for the Eggs Sardou. We pour it at 48 to 52°F in a white wine glass, briefly in the ice bucket. The estate is a major holder of the Heiligenstein, a hill of ancient desert sandstone.",
 			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the estate rather than the wine, called it \"our bottle\" without its tier, and named the Poussin à la Moutarde, the Louisiana Crab Claws and the Redfish Véronique, none of whose pairings names this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
 			"source": "research/producers-cellar-germany-austria-2026-10-10.md section 4 (items 1, 2 and 4: a family estate in Langenlois, a major holder of the Zöbinger Heiligenstein, Permian desert sandstone, the Kamptal following the little Kamp river to Langenlois); research/bottle-selection-2026-10-04.json, the Eggs Sardou classic tier; the wine record (profile, serve, offeredWith: classic for the Eggs Sardou)"
+		},
+		{
+			"target": "wine:Château Carbonnieux Pessac-Léognan Blanc 2016",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Carbonnieux 2016 is classified white Bordeaux with years in bottle, Sauvignon Blanc with Sémillon: grapefruit, beeswax and toast, round and fresh. Offer it by the bottle with fish, crab and fresh herbs.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-white-sweet-2026-10-10.md section 2 (items 1 to 3: Léognan in the northern Graves, Sauvignon Blanc with Sémillon aged in barrel, one of the nine classified whites of 1959); the wine record (profile, serve, goesWith: fish, crab and herbs; no dish pairing names it, so no dish is named)"
+		},
+		{
+			"target": "wine:Château Carbonnieux Pessac-Léognan Blanc 2016",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Carbonnieux Pessac-Léognan Blanc 2016 is white Bordeaux from Léognan, in the northern Graves just south of the city. It blends Sauvignon Blanc with Sémillon and is aged in barrel; after years in bottle the 2016 tastes of grapefruit, lemon curd, beeswax and toast, with a smoky, stony finish, round and fresh. It suits fish, crab and herbs, the lighter plates that still want texture and depth. We pour it at 50 to 54°F in a white Burgundy bowl, with no decanting, and let it open in the glass. When the Graves classified its whites in 1959, Carbonnieux was one of the nine estates named.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the château rather than the wine and named the Redfish Véronique, the Louisiana Crab Claws, the Gulf Fish en Papillote and the Pecan Gulf Fish, none of whose pairings names this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-white-sweet-2026-10-10.md section 2 (items 1 to 3: Léognan in the northern Graves, Sauvignon Blanc with Sémillon aged in barrel, one of the nine classified whites of 1959); the wine record (profile, serve, goesWith: fish, crab and herbs; no dish pairing names it, so no dish is named)"
+		},
+		{
+			"target": "wine:Do Ferreiro ‘Cepas Vellas’ Albariño Rías Baixas 2018",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Cepas Vellas is Albariño from vines older than the appellation, on the Galician coast: lemon, white peach and sea spray with a savoury, stony depth. It is the classic bottle for the Creole Caesar, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-spain-2026-10-10.md section 8 (items 1 to 4: small granite parcels, Cepas Vellas very old Albariño, low-intervention, texture and salt rather than aromatic lift, the Salnés valley cool and coastal; the expert note, ferreiro the Galician word for a blacksmith); the wine record (profile, serve, offeredWith: classic for the Creole Caesar)"
+		},
+		{
+			"target": "wine:Do Ferreiro ‘Cepas Vellas’ Albariño Rías Baixas 2018",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Do Ferreiro ‘Cepas Vellas’ Albariño Rías Baixas 2018 comes from the cool, coastal Salnés valley of Rías Baixas, on Galicia’s Atlantic shore. Cepas Vellas means old vines, here a plot of very old Albariño on granite, made with a light hand for texture and salt rather than perfume: lemon, white peach and sea spray with a savoury, stony depth, and the 2018 has years in bottle. Its salt and depth meet the smoked oyster dressing, so it is the classic bottle for the Creole Caesar. We pour it at 48 to 52°F in a white wine glass, briefly iced. Ferreiro is the Galician word for a blacksmith.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the name's story rather than the wine, called it \"our bottle\" without its tier, named the Grand Isle Jewel Oysters, the Louisiana Crab Claws and the Gulf Fish en Papillote, none of whose pairings names this wine, and carried no clause on how it is made; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-spain-2026-10-10.md section 8 (items 1 to 4: small granite parcels, Cepas Vellas very old Albariño, low-intervention, texture and salt rather than aromatic lift, the Salnés valley cool and coastal; the expert note, ferreiro the Galician word for a blacksmith); the wine record (profile, serve, offeredWith: classic for the Creole Caesar)"
+		},
+		{
+			"target": "wine:Chateau Montelena Chardonnay Napa Valley 2023",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Montelena’s 1973 Chardonnay came top among the whites at the Paris tasting of 1976, and the 2023 keeps that restraint: green apple, lemon and pear with a little toast. It is the classic bottle for the Pecan Gulf Fish, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-napa-icons-2026-10-10.md section 10 (items 1 and 2: Calistoga, founded 1882, a stone winery, restrained Chardonnay with no buttery sheen, the Paris tasting of 24 May 1976 put the 1973 top among the whites); the wine record (profile: made without the malolactic richness of many Napa Chardonnays; serve; offeredWith: classic for the Pecan Gulf Fish)"
+		},
+		{
+			"target": "wine:Chateau Montelena Chardonnay Napa Valley 2023",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Chateau Montelena Chardonnay Napa Valley 2023 comes from Calistoga, at the northern end of the Napa Valley, where the stone winery dates to 1882. It is made without the malolactic richness of many Napa Chardonnays, so it stays restrained: green apple, pear and lemon, a little toast, bright and balanced. It is rich enough for the pecan bordelaise and fresh enough for the crab, so it is the classic bottle for the Pecan Gulf Fish. We pour it at 50 to 54°F in a white Burgundy bowl, briefly in the ice bucket. At the Paris tasting of 24 May 1976, the winery’s 1973 came top among the whites.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the winery rather than the wine, claimed the 1973 beat great white Burgundies (the source says it came top among the whites), called it \"our bottle\" without its tier, and named the Louisiana Crab Claws, the Louisiana BBQ Lobster and the Redfish Véronique, none of whose pairings names this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-napa-icons-2026-10-10.md section 10 (items 1 and 2: Calistoga, founded 1882, a stone winery, restrained Chardonnay with no buttery sheen, the Paris tasting of 24 May 1976 put the 1973 top among the whites); the wine record (profile: made without the malolactic richness of many Napa Chardonnays; serve; offeredWith: classic for the Pecan Gulf Fish)"
+		},
+		{
+			"target": "wine:Domaine de Trévallon Blanc Alpilles 2016",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Trévallon’s white is a small Provençal rarity, Marsanne-led, with apricot, honey, fennel and wild herbs over a stony finish. It is the celebration bottle for the Gulf Fish en Papillote and the Fish Bouillabaisse, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 4 (items 1, 2, 4 and 7: founded in 1973 on Alpilles limestone near Les Baux, declassified to IGP Alpilles over the grape rules, the white Marsanne-led with Roussanne, Chardonnay, Grenache Blanc and Clairette varying by vintage, small amounts, the splurge tier); the dishes' splurge whys (olives, tomato, fennel, aioli); the wine record (profile, serve, offeredWith: splurge for the Gulf Fish en Papillote and the Fish Bouillabaisse)"
+		},
+		{
+			"target": "wine:Domaine de Trévallon Blanc Alpilles 2016",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine de Trévallon Blanc Alpilles 2016 comes from limestone in the Alpilles, near Les Baux in Provence, from an estate founded in 1973. It is a small production, Marsanne-led with Roussanne, Chardonnay, Grenache Blanc and Clairette, the blend changing by vintage: apricot, white flowers, honey, fennel and Provençal herbs, rich and textured, with a fresh, stony finish. Its herbs and texture echo olives, tomato, fennel and aioli, so it is the celebration bottle for the Gulf Fish en Papillote and the Fish Bouillabaisse. We pour it barely chilled, 52 to 55°F, in a white Burgundy bowl. The estate’s blends break the local grape rules, so the label reads Alpilles.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the founder's story rather than the wine, named a founder no source records as dead, and named the Redfish Véronique, the Louisiana Crab Claws and the Cheese Board, none of whose pairings names this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 4 (items 1, 2, 4 and 7: founded in 1973 on Alpilles limestone near Les Baux, declassified to IGP Alpilles over the grape rules, the white Marsanne-led with Roussanne, Chardonnay, Grenache Blanc and Clairette varying by vintage, small amounts, the splurge tier); the dishes' splurge whys (olives, tomato, fennel, aioli); the wine record (profile, serve, offeredWith: splurge for the Gulf Fish en Papillote and the Fish Bouillabaisse)"
+		},
+		{
+			"target": "wine:Pascal Cotat ‘Lot 2024’ Chavignol Rosé",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "This is a rare Pinot Noir rosé from a tiny Chavignol parcel, bottled by lot: wild strawberry, red currant and crushed chalk, dry and taut. It is the celebration bottle for the Creole Tomato Tostada and the New Orleans Shrimp & Grits, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 10 (items 1, 2, 4 and 10: a tiny parcel of vines planted in the 1930s, declassified after a local dispute and labelled by lot, native yeasts, old casks, Kimmeridgian marl, a chalky clay limestone, the eastern Loire, the splurge tiers); the New Orleans Shrimp & Grits splurge why (Creole tomato and tasso); the wine record (profile, serve, offeredWith: splurge for the Creole Tomato Tostada and the New Orleans Shrimp & Grits)"
+		},
+		{
+			"target": "wine:Pascal Cotat ‘Lot 2024’ Chavignol Rosé",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Pascal Cotat ‘Lot 2024’ Chavignol Rosé is Pinot Noir from a tiny parcel planted in the 1930s at Chavignol, a Sancerre village of steep clay-limestone slopes. It is fermented with native yeasts and aged in old casks: wild strawberry, red currant and crushed chalk, dry and taut. Its acidity and red fruit meet heirloom tomato and the tasso, so it is the celebration bottle for the Creole Tomato Tostada and the New Orleans Shrimp & Grits. We pour it at 48 to 52°F in a white wine glass, never ice cold. After a local dispute the parcel left the Sancerre appellation, so it is labelled by lot.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the grower, a living person, rather than the wine, named the Louisiana Crab Claws, the Steak Tartare Cannoli and the Cheese Board, none of whose pairings names this wine, and called the slopes chalky where the source corrects that to marl; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 10 (items 1, 2, 4 and 10: a tiny parcel of vines planted in the 1930s, declassified after a local dispute and labelled by lot, native yeasts, old casks, Kimmeridgian marl, a chalky clay limestone, the eastern Loire, the splurge tiers); the New Orleans Shrimp & Grits splurge why (Creole tomato and tasso); the wine record (profile, serve, offeredWith: splurge for the Creole Tomato Tostada and the New Orleans Shrimp & Grits)"
+		},
+		{
+			"target": "wine:Kongsgaard Chardonnay Napa Valley 2016",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Kongsgaard 2016 is rare Napa Chardonnay with a decade in bottle: lemon curd, baked pear, hazelnut and honey with a smoky depth, rich yet fresh. It is the celebration bottle for the Pecan Gulf Fish, poured by the bottle, barely chilled.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-napa-sonoma-2026-10-10.md section 7 (items 1 to 3: a small Napa family winery, Chardonnay in small amounts in a rich, long-ageing style, built to age like great white Burgundy, The Judge its rare top bottling); the Pecan Gulf Fish splurge why; the wine record (profile, serve, offeredWith: splurge for the Pecan Gulf Fish)"
+		},
+		{
+			"target": "wine:Kongsgaard Chardonnay Napa Valley 2016",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Kongsgaard Chardonnay Napa Valley 2016 comes from a small family winery in the Napa Valley making Chardonnay in a rich style built to age in bottle like great white Burgundy. The 2016 has a decade on it: honey, hazelnut, baked pear and lemon curd, with a smoky, savoury depth, rich and layered yet fresh, with a long finish. It has the power for the pecan bordelaise and the lump crab, so it is the celebration bottle for the Pecan Gulf Fish. We pour it barely chilled, 52 to 55°F, in a large white Burgundy bowl, and let it open. Its rare top bottling is called The Judge.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the winery rather than the wine, named the Louisiana BBQ Lobster, the Louisiana Crab Claws and the Poussin à la Moutarde, none of whose pairings names this wine, and carried no line of story; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-napa-sonoma-2026-10-10.md section 7 (items 1 to 3: a small Napa family winery, Chardonnay in small amounts in a rich, long-ageing style, built to age like great white Burgundy, The Judge its rare top bottling); the Pecan Gulf Fish splurge why; the wine record (profile, serve, offeredWith: splurge for the Pecan Gulf Fish)"
 		}
 	]
 }
