@@ -1,0 +1,132 @@
+{
+	"entries": [
+		{
+			"target": "wine:Château d’Esclans ‘Whispering Angel’ Côtes de Provence Rosé 2024",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Whispering Angel is the pale Provence rosé guests ask for by name, dry and cool, with white peach, wild strawberry and citrus zest. It is our value bottle for the Creole Tomato Tostada and the Fish Bouillabaisse, poured by the bottle from the ice bucket.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 2 (items 1, 4, 5 and 6: the cherubs, bought fruit as well as estate fruit, Grenache-led with Cinsault and Rolle, Rolle is Vermentino); research/bottle-selection-2026-10-04.json dish 8 value tier; the wine record (profile, serve, offeredWith: value for the Creole Tomato Tostada and the Fish Bouillabaisse)"
+		},
+		{
+			"target": "wine:Château d’Esclans ‘Whispering Angel’ Côtes de Provence Rosé 2024",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château d’Esclans Whispering Angel 2024 is a pale, dry Côtes de Provence rosé led by Grenache, with Cinsault and Rolle. Pressed gently for a blush of colour, it blends bought fruit with estate fruit. It tastes of white peach, wild strawberry and citrus zest, with a light mineral finish. Its acidity meets raw tomato and its delicacy meets aioli, so it is our value bottle for the Creole Tomato Tostada and the Fish Bouillabaisse. We pour it at 45 to 48°F in a white wine glass, from the ice bucket. The name comes from two carved cherubs above the chapel altar, who seem to whisper.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the producer rather than the wine and named the Creole Caesar, a dish whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 2 (items 1, 4, 5 and 6: the cherubs, bought fruit as well as estate fruit, Grenache-led with Cinsault and Rolle, Rolle is Vermentino); research/bottle-selection-2026-10-04.json dish 8 value tier; the wine record (profile, serve, offeredWith: value for the Creole Tomato Tostada and the Fish Bouillabaisse)"
+		},
+		{
+			"target": "wine:Loimer ‘Lois’ Grüner Veltliner 2022",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Loimer Lois is crisp, peppery Grüner Veltliner from Austria’s Kamptal, green apple and lime with a snap of white pepper, and it stays itself beside artichokes. It is our value bottle for the Eggs Sardou, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-germany-austria-2026-10-10.md section 5 (items 1 and 2: Langenlois in the Kamptal, a biodynamic estate, Lois its fresh everyday Grüner; the expert note on what biodynamic farming excludes); research/bottle-selection-2026-10-04.json, the Eggs Sardou value tier; the wine record (profile, serve, offeredWith: value for the Eggs Sardou)"
+		},
+		{
+			"target": "wine:Loimer ‘Lois’ Grüner Veltliner 2022",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Loimer ‘Lois’ Grüner Veltliner 2022 is the fresh, everyday Grüner of an estate in Langenlois, the wine town of Austria’s Kamptal. The estate farms biodynamically, with no synthetic sprays or fertilisers, and this wine is fermented fully dry. Grüner Veltliner is Austria’s own white grape: here green apple, lime and white pepper with a green herbal note, light and crisp. Artichokes make many wines taste sweet or metallic, but Grüner holds its shape, and its pepper cuts the Parmesan creamed spinach and the Choron sauce, so it is our value bottle for the Eggs Sardou. We pour it at 45 to 48°F in a white wine glass.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the estate rather than the wine, named the Creole Caesar and the Creole Tomato Tostada, whose pairings do not name this wine, and carried no clause on how it is made; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-germany-austria-2026-10-10.md section 5 (items 1 and 2: Langenlois in the Kamptal, a biodynamic estate, Lois its fresh everyday Grüner; the expert note on what biodynamic farming excludes); research/bottle-selection-2026-10-04.json, the Eggs Sardou value tier; the wine record (profile, serve, offeredWith: value for the Eggs Sardou)"
+		},
+		{
+			"target": "wine:Stein ‘Weihwasser’ Riesling Feinherb 2023",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Weihwasser means holy water, and this Mosel Riesling from old vines on steep slate is just off dry: Asian pear, lime and lychee over crisp acidity. It is our value bottle for the Seafood Gumbo and the Tuna Crudo, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 6 (items 1, 2 and 4: a small estate in Alf, reclaimed steep slate, 60-year-old vines near the old church, old casks, feinherb undefined in law); the wine record (profile, serve, offeredWith: value for the Seafood Gumbo and the Tuna Crudo)"
+		},
+		{
+			"target": "wine:Stein ‘Weihwasser’ Riesling Feinherb 2023",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Stein ‘Weihwasser’ Riesling Feinherb 2023 comes from 60-year-old vines on steep slate near the old church in Alf, on the Mosel; Weihwasser means holy water. It ferments in large old casks and is finished feinherb, a grower’s word with no legal meaning, for wine just off dry. In the glass: Asian pear, lime and lychee with a salty lemon note, the sweetness held by crisp acidity. Sweetness cools spice and acidity lifts a dark roux, so it is our value bottle for the Seafood Gumbo and the Tuna Crudo. We pour it at 45 to 48°F in a white wine glass, in the ice bucket between pours.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the estate and its story rather than the wine and named the New Orleans Shrimp & Grits, whose pairing does not name this wine; it carried no clause on how the wine is made; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 6 (items 1, 2 and 4: a small estate in Alf, reclaimed steep slate, 60-year-old vines near the old church, old casks, feinherb undefined in law); the wine record (profile, serve, offeredWith: value for the Seafood Gumbo and the Tuna Crudo)"
+		},
+		{
+			"target": "wine:Stein ‘Palmberg-Terrassen’ Riesling Spätlese-Feinherb 2014",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "This 2014 Mosel Riesling was picked late, finished just off dry and has more than a decade in bottle: baked apple, apricot, honey and a petrol note. It is our value bottle for the Duck Confit Waffle, poured by the bottle, never too cold.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 6 (items 1 and 3: the Alf estate, the list's Palmberg Spätlese Trocken and Kabinett Trocken beside this Spätlese-Feinherb, Trocken dry and Feinherb off dry); the wine record (profile, serve, offeredWith: value for the Duck Confit Waffle)"
+		},
+		{
+			"target": "wine:Stein ‘Palmberg-Terrassen’ Riesling Spätlese-Feinherb 2014",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Stein ‘Palmberg-Terrassen’ Riesling Spätlese-Feinherb 2014 comes from the terraced Palmberg site on the Mosel, from the Alf estate behind our Weihwasser. Spätlese means late picked and feinherb means just off dry, and the 2014 has over a decade in bottle. It tastes of baked apple, apricot and honey, with the petrol note of aged Riesling and juicy acidity. Its sweetness meets the mustard maple syrup and its acidity the duck fat and foie gras butter, so it is our value bottle for the Duck Confit Waffle. We pour it at 46 to 50°F in a white wine glass, not too cold. Stein also bottles Palmberg dry, as Trocken.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the estate rather than the wine and named the Cheese Board, whose pairing does not name this wine; it carried no line of story; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 6 (items 1 and 3: the Alf estate, the list's Palmberg Spätlese Trocken and Kabinett Trocken beside this Spätlese-Feinherb, Trocken dry and Feinherb off dry); the wine record (profile, serve, offeredWith: value for the Duck Confit Waffle)"
+		},
+		{
+			"target": "wine:Domaine de l’Écu ‘Orthogneiss’ Muscadet Sèvre-et-Maine 2022",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Orthogneiss is Muscadet named for the hard, ancient rock under its vines, bone dry and salty, with lemon, green apple and crushed stone. It is our value bottle for the Creole Caesar, poured by the bottle and never ice cold.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 7 (items 1 to 5: biodynamic Melon de Bourgogne at Le Landreau, cuvées named for rock types, Orthogneiss the saline one of three, often aged on its lees, the Sèvre Nantaise and the Maine); research/bottle-selection-2026-10-04.json dish 14 value tier; the wine record (profile, serve, offeredWith: value for the Creole Caesar)"
+		},
+		{
+			"target": "wine:Domaine de l’Écu ‘Orthogneiss’ Muscadet Sèvre-et-Maine 2022",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine de l’Écu ‘Orthogneiss’ Muscadet Sèvre-et-Maine 2022 is all Melon de Bourgogne, grown biodynamically at Le Landreau near Nantes and bottled by the rock beneath the vines. Orthogneiss is a hard rock, and of the estate’s three soil wines this is the taut, saline one, aged long on its lees: lemon, green apple, crushed stone and a salty, savoury depth, bone dry. Its salt matches the smoked oyster dressing and its acidity cuts the Grana Padano, so it is our value bottle for the Creole Caesar. We pour it at 46 to 50°F in a white wine glass. Sèvre-et-Maine names two rivers, not two villages.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the estate rather than the wine and named the Grand Isle Jewel Oysters, whose pairing does not name this wine; it carried no line of story; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 7 (items 1 to 5: biodynamic Melon de Bourgogne at Le Landreau, cuvées named for rock types, Orthogneiss the saline one of three, often aged on its lees, the Sèvre Nantaise and the Maine); research/bottle-selection-2026-10-04.json dish 14 value tier; the wine record (profile, serve, offeredWith: value for the Creole Caesar)"
+		},
+		{
+			"target": "wine:Raúl Pérez ‘Ultreia’ Godello Bierzo 2021",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Ultreia is Godello from Bierzo, on the old pilgrim road to Santiago: lemon, pear and almond with a saline, herbal edge, round yet fresh. It is our value bottle for the Gulf Fish en Papillote, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-spain-2026-10-10.md section 7 (items 1, 3 and 4: extended lees ageing for whites, Bierzo beside Galicia on the pilgrim road, Godello the white grape, ultreia the pilgrims' greeting); the wine record (profile, serve, offeredWith: value for the Gulf Fish en Papillote)"
+		},
+		{
+			"target": "wine:Raúl Pérez ‘Ultreia’ Godello Bierzo 2021",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Raúl Pérez ‘Ultreia’ Godello Bierzo 2021 comes from Bierzo, a mountain valley beside Galicia, on the old pilgrim road to Santiago de Compostela. Godello is the white grape here, and the cellar behind the label keeps its whites long on their lees, which gives this one texture: lemon, pear and almond, then salt and herbs, round but fresh. The almond and salt meet the Castelvetrano olives and Marcona almonds, so it is our value bottle for the Gulf Fish en Papillote. We pour it at 48 to 52°F in a white wine glass, briefly in the ice bucket. Ultreia is the pilgrims’ old greeting on that road.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the winemaker, a living person, rather than the wine, named the Crab & Corn Omelette, whose pairing does not name this wine, and carried no clause on how it is made; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-spain-2026-10-10.md section 7 (items 1, 3 and 4: extended lees ageing for whites, Bierzo beside Galicia on the pilgrim road, Godello the white grape, ultreia the pilgrims' greeting); the wine record (profile, serve, offeredWith: value for the Gulf Fish en Papillote)"
+		},
+		{
+			"target": "wine:Domaine de la Pépière ‘Monnières-Saint Fiacre’ Muscadet 2020",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "This is Muscadet from the Monnières-Saint Fiacre cru, rested long on its lees: lemon, sea spray and crushed shells, bone dry and saline. It is our value bottle for the Grand Isle Jewel Oysters, poured by the bottle as the oysters land.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 8 (items 1, 3, 5 and 9: founded in 1984, organic from the start, vines in four crus communaux, a cru never says sur lie, the value tier for the oysters); the wine record (profile, serve, offeredWith: value for the Grand Isle Jewel Oysters)"
+		},
+		{
+			"target": "wine:Domaine de la Pépière ‘Monnières-Saint Fiacre’ Muscadet 2020",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine de la Pépière ‘Monnières-Saint Fiacre’ Muscadet 2020 is Melon de Bourgogne from one of Muscadet’s crus communaux, near Nantes. A cru wine rests on its lees far longer than the single winter of ordinary sur lie, so it never carries those words. It tastes of sea spray, crushed shells, lemon and green apple, bone dry and saline. Its salt and acidity mirror the oyster brine and the mignonette vinegar, so it is our value bottle for the Grand Isle Jewel Oysters. We pour it at 46 to 50°F in a white wine glass. The domaine was founded in 1984 and has farmed organically from the start.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the founder, a living person, rather than the wine and named the Louisiana Crab Claws, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 8 (items 1, 3, 5 and 9: founded in 1984, organic from the start, vines in four crus communaux, a cru never says sur lie, the value tier for the oysters); the wine record (profile, serve, offeredWith: value for the Grand Isle Jewel Oysters)"
+		},
+		{
+			"target": "wine:Damien Laureau ‘L’Alliance’ Savennières 2022",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "L’Alliance is dry Savennières Chenin Blanc, waxy and full, with quince, beeswax and toasted nuts and a firm, stony finish. It is our value bottle for the Turtle Soup, poured by the bottle at cellar cool.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 9 (items 1 to 3 and 7: Savennières on the north bank in Anjou, dark schist, poor rock and low yields, the Layon sweet across the river, the value tier for the Turtle Soup); the wine record (profile, serve, offeredWith: value for the Turtle Soup)"
+		},
+		{
+			"target": "wine:Damien Laureau ‘L’Alliance’ Savennières 2022",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Damien Laureau ‘L’Alliance’ Savennières 2022 is dry Chenin Blanc from Savennières, a small appellation of steep, dark schist slopes on the north bank of the Loire in Anjou. Poor rock and low yields give a wine of grip, fermented fully dry: quince, beeswax and toasted nuts, waxy and full, with Chenin’s firm acidity and a stony finish. Its nutty depth echoes the aged sherry and its acidity cuts the richness, so it is our value bottle for the Turtle Soup. We pour it cellar cool, 50 to 54°F, in a white Burgundy bowl, decanted briefly when young. Across the river, the Coteaux du Layon makes the same grape sweet.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the grower, a living person, rather than the wine, named the Pecan Gulf Fish, whose pairing does not name this wine, and carried no clause on how it is made; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 9 (items 1 to 3 and 7: Savennières on the north bank in Anjou, dark schist, poor rock and low yields, the Layon sweet across the river, the value tier for the Turtle Soup); the wine record (profile, serve, offeredWith: value for the Turtle Soup)"
+		}
+	]
+}

@@ -1,0 +1,70 @@
+{
+	"wines": [
+		{
+			"name": "Château d’Esclans ‘Whispering Angel’ Côtes de Provence Rosé 2024",
+			"s45": "rewritten",
+			"reason": "it opened on the producer rather than the wine and named the Creole Caesar, a dish whose pairing does not name this wine",
+			"dishes": [
+				"Creole Tomato Tostada",
+				"Fish Bouillabaisse"
+			]
+		},
+		{
+			"name": "Loimer ‘Lois’ Grüner Veltliner 2022",
+			"s45": "rewritten",
+			"reason": "it opened on the estate rather than the wine, named the Creole Caesar and the Creole Tomato Tostada, whose pairings do not name this wine, and carried no clause on how it is made",
+			"dishes": [
+				"Eggs Sardou"
+			]
+		},
+		{
+			"name": "Stein ‘Weihwasser’ Riesling Feinherb 2023",
+			"s45": "rewritten",
+			"reason": "it opened on the estate and its story rather than the wine and named the New Orleans Shrimp & Grits, whose pairing does not name this wine; it carried no clause on how the wine is made",
+			"dishes": [
+				"Seafood Gumbo",
+				"Tuna Crudo"
+			]
+		},
+		{
+			"name": "Stein ‘Palmberg-Terrassen’ Riesling Spätlese-Feinherb 2014",
+			"s45": "rewritten",
+			"reason": "it opened on the estate rather than the wine and named the Cheese Board, whose pairing does not name this wine; it carried no line of story",
+			"dishes": [
+				"Duck Confit Waffle"
+			]
+		},
+		{
+			"name": "Domaine de l’Écu ‘Orthogneiss’ Muscadet Sèvre-et-Maine 2022",
+			"s45": "rewritten",
+			"reason": "it opened on the estate rather than the wine and named the Grand Isle Jewel Oysters, whose pairing does not name this wine; it carried no line of story",
+			"dishes": [
+				"Creole Caesar"
+			]
+		},
+		{
+			"name": "Raúl Pérez ‘Ultreia’ Godello Bierzo 2021",
+			"s45": "rewritten",
+			"reason": "it opened on the winemaker, a living person, rather than the wine, named the Crab & Corn Omelette, whose pairing does not name this wine, and carried no clause on how it is made",
+			"dishes": [
+				"Gulf Fish en Papillote"
+			]
+		},
+		{
+			"name": "Domaine de la Pépière ‘Monnières-Saint Fiacre’ Muscadet 2020",
+			"s45": "rewritten",
+			"reason": "it opened on the founder, a living person, rather than the wine and named the Louisiana Crab Claws, whose pairing does not name this wine",
+			"dishes": [
+				"Grand Isle Jewel Oysters"
+			]
+		},
+		{
+			"name": "Damien Laureau ‘L’Alliance’ Savennières 2022",
+			"s45": "rewritten",
+			"reason": "it opened on the grower, a living person, rather than the wine, named the Pecan Gulf Fish, whose pairing does not name this wine, and carried no clause on how it is made",
+			"dishes": [
+				"Turtle Soup"
+			]
+		}
+	]
+}
