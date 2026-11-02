@@ -143,6 +143,150 @@
 			"value": "Domaine Paul Pillot ‘Le Charmois’ Saint-Aubin Premier Cru 2022 is Chardonnay from a Premier Cru of Saint-Aubin, behind Puligny and Chassagne, made by a family estate of Chassagne-Montrachet. Its vines are over 50 years old, on marl and limestone rich in iron, and it sees about a tenth new oak: white peach, lemon and toasted hazelnut, bright in acidity, with a chalky snap. It is the classic bottle for the Louisiana Crab Claws, its nutty notes meeting the brown butter vinaigrette. We pour it at 50 to 54°F in a white Burgundy bowl. Saint-Aubin is where white Burgundy lovers find the Puligny style at a gentler price.",
 			"reason": "Five-star review of the description: it named the Redfish Véronique and the Crab & Corn Omelette, neither of whose pairings names this wine, and closed on a person of the family not shown to be dead; it now opens on the wine as the list prints it and keeps every sourced fact",
 			"source": "the pack record w-q7545nl6 (lines.s45, profile, serve, offeredWith, profile); research/producers-cellar-white-burgundy-cote-2026-10-10.md (section 6: vines over 50 years, iron-rich marl and limestone, a tenth new oak)"
+		},
+		{
+			"target": "wine:François Carillon Puligny-Montrachet 2022",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "The Carillon Puligny-Montrachet is village Puligny of citrus, white peach, toasted hazelnut and a little smoke, elegant and chalky. It is the celebration bottle for the Louisiana Crab Claws, its toasty depth mirroring the brown butter, by the bottle.",
+			"reason": "The sale (five-star card edition): the hook is village Puligny in concrete words; the table is the Louisiana Crab Claws, whose pairing offers this wine as the celebration bottle; the step is by the bottle",
+			"source": "the pack record w-cqs2xuxp (750 ml, bottle only, no glass; profile; offeredWith tier splurge for d-5p5b1hjn, the Louisiana Crab Claws)"
+		},
+		{
+			"target": "wine:François Carillon Puligny-Montrachet 2022",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "François Carillon Puligny-Montrachet 2022 is Chardonnay from the Côte de Beaune village of Le Montrachet and Chevalier-Montrachet, raised in barrel with little new oak, so it reads precise rather than powerful. It tastes of white peach, citrus, toasted hazelnut and a little smoke, with Puligny’s fine, chalky tension and a long finish. It is the celebration bottle for the Louisiana Crab Claws, its nutty depth answering the brown butter vinaigrette and the fines herbes. We pour it at 50 to 54°F in a white Burgundy bowl, briefly iced, never decanted. A Carillon appears in Puligny’s archives in 1520, and the family estate was divided in 2010.",
+			"reason": "Five-star review of the description: it named the Redfish Véronique and the Poussin à la Moutarde, neither of whose pairings names this wine, and told the grower’s own story, a living person; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-cqs2xuxp (lines.s45, profile, serve, offeredWith, origin); research/producers-cellar-white-burgundy-cote-2026-10-10.md (section 7: 1520, the division of 2010, little new oak)"
+		},
+		{
+			"target": "wine:Domaine Leflaive Puligny-Montrachet 2016",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Leflaive’s village Puligny has years in bottle now: lemon curd, white flowers, hazelnut and gentle toast on a chalky backbone. It is the celebration bottle for the Redfish Véronique, silk for the beurre blanc and citrus for the preserved lemon, by the bottle.",
+			"reason": "The sale (five-star card edition): the hook is the estate’s village Puligny with bottle age, in concrete words; the table is the Redfish Véronique, whose pairing offers this wine as the celebration bottle; the step is by the bottle",
+			"source": "the pack record w-8x1ir43l (750 ml, bottle only, no glass; profile; offeredWith tier splurge for d-s1bqzuks, the Redfish Véronique)"
+		},
+		{
+			"target": "wine:Domaine Leflaive Puligny-Montrachet 2016",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Leflaive Puligny-Montrachet 2016 is Chardonnay from the village of Puligny-Montrachet, farmed biodynamically and raised in barrel by the estate whose name is bound to the village. With years in bottle it is silky and citrus-bright: lemon curd, hazelnut, white flowers and a gentle toast, on a fine, chalky line with a long finish. It is the celebration bottle for the Redfish Véronique, its texture meeting the beurre blanc and its brightness the preserved lemon. We pour it at 52 to 55°F in a white Burgundy bowl, not too cold, and let it breathe in the glass. Joseph Leflaive built the modern domaine from about 1920.",
+			"reason": "Five-star review of the description: it opened on the domaine’s farming rather than the wine as the list prints it, and named the Louisiana Crab Claws and the Pecan Gulf Fish, neither of whose pairings names this wine; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-8x1ir43l (lines.s45, profile, serve, offeredWith); research/producers-cellar-white-burgundy-cote-2026-10-10.md (section 1: biodynamic, barrel, Joseph Leflaive, 1870 to 1953, from about 1920)"
+		},
+		{
+			"target": "wine:Domaine René et Vincent Dauvissat ‘Les Preuses’ Chablis Grand Cru 2015",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Les Preuses is Grand Cru Chablis with years in bottle: lemon peel, oyster shell and a little honey, steely and saline. It is the celebration bottle for the Grand Isle Jewel Oysters, its steel meeting their brine, by the bottle.",
+			"reason": "The sale (five-star card edition): the hook is Grand Cru Chablis with bottle age, in concrete words; the table is the Grand Isle Jewel Oysters, whose pairing offers this wine as the celebration bottle; the step is by the bottle",
+			"source": "the pack record w-bzjmxb60 (750 ml, bottle only, no glass; profile; offeredWith tier splurge for d-nd0d2czb, the Grand Isle Jewel Oysters)"
+		},
+		{
+			"target": "wine:Domaine René et Vincent Dauvissat ‘Les Preuses’ Chablis Grand Cru 2015",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine René et Vincent Dauvissat ‘Les Preuses’ Chablis Grand Cru 2015 is Chardonnay from one of the seven Grand Crus on the slope above the town of Chablis. From a block planted in 1970, it ages partly in old barrels, for texture, not wood. With years in bottle it tastes of oyster shell, lemon peel, white flowers and a touch of honey, steely and precise, with deep, saline length. It is the celebration bottle for the Grand Isle Jewel Oysters. We pour it at 50 to 54°F in a white Burgundy bowl and give it time in the glass. The domaine has bottled its own Chablis since 1931.",
+			"reason": "Five-star review of the description: it opened on the vineyard rather than the wine as the list prints it, and named the Louisiana Crab Claws, whose pairing does not name this wine; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-bzjmxb60 (lines.s45, profile, serve, offeredWith); research/producers-cellar-chablis-maconnais-2026-10-10.md (section 5: the seven Grand Crus, the 1970 block, old barrels, 1931)"
+		},
+		{
+			"target": "wine:Domaine des Comtes Lafon ‘Clos de la Baronne’ Meursault 2022",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "The Clos de la Baronne is Meursault from a walled vineyard the Lafon family owns entirely: ripe lemon, hazelnut and brioche, creamy yet stony. It is the celebration bottle for the Crab & Corn Omelette by day and the Swordfish Grenobloise at dinner, by the bottle.",
+			"reason": "The sale (five-star card edition): the hook is the walled vineyard the family owns alone, with the taste in concrete words; the table is the Crab & Corn Omelette and the Swordfish Grenobloise, whose pairings both offer this wine as the celebration bottle; the step is by the bottle",
+			"source": "the pack record w-0o7zf915 (750 ml, bottle only, no glass; profile; offeredWith tier splurge for d-k84u864v, the Crab & Corn Omelette, and d-jgihqqda, the Swordfish Grenobloise)"
+		},
+		{
+			"target": "wine:Domaine des Comtes Lafon ‘Clos de la Baronne’ Meursault 2022",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine des Comtes Lafon ‘Clos de la Baronne’ Meursault 2022 is Chardonnay from a walled vineyard the domaine owns entirely, classed as village Meursault and first bottled on its own with the 2012 vintage. Raised in barrel, it is rich yet precise: hazelnut, ripe lemon and brioche, a creamy texture, a stony freshness and a long finish. It is the celebration bottle for the Crab & Corn Omelette by day, richness for the miso butter, and for the Swordfish Grenobloise at dinner. We pour it at 50 to 54°F in a white Burgundy bowl, briefly iced. Jules Lafon, who built the domaine, revived the Paulée de Meursault in 1923.",
+			"reason": "Five-star review of the description: it opened on the vineyard rather than the wine as the list prints it, hedged the first vintage through its merchants, and shared a run of ten words with the s20; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-0o7zf915 (lines.s45, profile, serve, offeredWith); research/producers-cellar-white-burgundy-cote-2026-10-10.md (section 8: owned entirely, first bottled alone with the 2012, Jules Lafon and the Paulée of 1923)"
+		},
+		{
+			"target": "wine:Domaine Leflaive ‘Sous le Dos d’Ane’ Meursault Premier Cru 2017",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Sous le Dos d’Ane is Meursault Premier Cru made by Leflaive of Puligny: layered and toasty, lemon, hazelnut, brioche and a little smoke. It is the celebration bottle for the Louisiana BBQ Lobster, its depth for the roasted lobster and smoky ’nduja, by the bottle.",
+			"reason": "The sale (five-star card edition): the hook is a Meursault Premier Cru from the Puligny estate, in concrete words; the table is the Louisiana BBQ Lobster, whose pairing offers this wine as the celebration bottle; the step is by the bottle",
+			"source": "the pack record w-6rihiuuf (750 ml, bottle only, no glass; profile; offeredWith tier splurge for d-5e4ptrq8, the Louisiana BBQ Lobster)"
+		},
+		{
+			"target": "wine:Domaine Leflaive ‘Sous le Dos d’Ane’ Meursault Premier Cru 2017",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Leflaive ‘Sous le Dos d’Ane’ Meursault Premier Cru 2017 is Chardonnay from a Premier Cru on the Puligny boundary, called under the donkey’s back for the shape of the hill. Leflaive raises it in barrel, and the 2017 has years in bottle: layered and toasty, hazelnut, lemon, brioche and a touch of smoke. It is the celebration bottle for the Louisiana BBQ Lobster, its depth meeting the roasted lobster and the smoky ’nduja. We pour it at 52 to 55°F in a white Burgundy bowl, never decanted; give it time in the glass. Until 2002, the estate says, the parcel grew Pinot Noir, sold as Blagny.",
+			"reason": "Five-star review of the description: it opened on the vineyard name rather than the wine as the list prints it, and named the Louisiana Crab Claws, whose pairing does not name this wine; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-6rihiuuf (lines.s45, profile, serve, offeredWith); research/producers-cellar-white-burgundy-cote-2026-10-10.md (section 1: Sous le Dos d’Ane, Pinot Noir until 2002, Blagny)"
+		},
+		{
+			"target": "wine:Domaine Roulot Meursault 2022",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Roulot’s village Meursault is taut and precise rather than buttery: lemon, green apple, white flowers and a stony, saline finish. Offer it by the bottle with pure seafood, crab, oysters or a simply sauced fish, where its precision shows.",
+			"reason": "The sale (five-star card edition): the hook is the precise, unbuttery Meursault in concrete words; no dish’s pairing names this wine, so the table is the kind of plate its goesWith names (pure seafood); the step is by the bottle",
+			"source": "the pack record w-lm7mggqk (750 ml, bottle only, no glass; profile; goesWith; no firstPickIds, secondFor or offeredWith)"
+		},
+		{
+			"target": "wine:Domaine Roulot Meursault 2022",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Roulot Meursault 2022 is Chardonnay from the village of Meursault, in the Côte de Beaune, from a family estate farmed organically since 1989. It shows the taut, precise side of the village rather than the buttery one: green apple, lemon and white flowers, stony and saline at the finish, with Meursault’s depth underneath. It wants pure seafood, crab, oysters and simply sauced fish, so nothing hides its line. We pour it at 50 to 54°F in a white Burgundy bowl, never decanted; it opens in the glass. The domaine’s 1973 Meursault Charmes came second among the whites at the 1976 Judgment of Paris.",
+			"reason": "Five-star review of the description: it opened on the domaine rather than the wine as the list prints it, and named the Louisiana Crab Claws, the Grand Isle Jewel Oysters, the Redfish Véronique and the Louisiana BBQ Lobster, none of whose pairings names this wine; it now speaks of the plates its goesWith names; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-lm7mggqk (lines.s45, profile, serve, goesWith); research/producers-cellar-white-burgundy-cote-2026-10-10.md (section 9: organic since 1989, the 1973 Charmes at the 1976 Judgment of Paris)"
+		},
+		{
+			"target": "wine:Domaine Coche-Dury Bourgogne Blanc 2022",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Coche-Dury makes this Bourgogne Blanc with the care it gives its Grand Cru: flinty and taut, lemon, hazelnut and a struck-match note. Offer it by the bottle with simple, pure seafood, crab or oysters, so nothing hides it.",
+			"reason": "The sale (five-star card edition): the hook is the estate’s Grand Cru care at the regional level, in concrete words; no dish’s pairing names this wine, so the table is the kind of plate its goesWith names (simple, pure seafood); the step is by the bottle",
+			"source": "the pack record w-0jfgq158 (750 ml, bottle only, no glass; profile; goesWith; no firstPickIds, secondFor or offeredWith)"
+		},
+		{
+			"target": "wine:Domaine Coche-Dury Bourgogne Blanc 2022",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Coche-Dury Bourgogne Blanc 2022 is Chardonnay under Burgundy’s regional name, from a Meursault estate that makes it with the same care as its Grand Cru. Long ageing on the lees in barrel, with regular stirring, gives the house its flinty, reductive style: hazelnut, lemon and a struck-match note, taut and long. It wants simple, pure seafood, crab or oysters, so nothing hides it. We pour it at 50 to 54°F in a white Burgundy bowl, never decanted; it opens in the glass. Léon Coche began buying vines in Meursault, Auxey-Duresses and Monthélie in 1923, and the estate first traded under his wife’s family name.",
+			"reason": "Five-star review of the description: it opened on the estate’s cellar rather than the wine as the list prints it, and named the Louisiana Crab Claws, the Grand Isle Jewel Oysters and the Redfish Véronique, none of whose pairings names this wine; it now speaks of the plates its goesWith names; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-0jfgq158 (lines.s45, profile, serve, goesWith); research/producers-cellar-white-burgundy-cote-2026-10-10.md (section 10: lees ageing and stirring, Léon Coche in 1923, Coche-Bouillicaut)"
+		},
+		{
+			"target": "wine:Domaine François Raveneau ‘Montée de Tonnerre’ Chablis Premier Cru 2022",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Montée de Tonnerre is Raveneau’s Premier Cru beside the Grand Crus: lemon, oyster shell and a smoky, stony depth, intense and taut. Offer it by the bottle with raw oysters or a pure, simply cooked fish, and let the sommelier judge a brief decant.",
+			"reason": "The sale (five-star card edition): the hook is the Premier Cru beside the Grand Crus, in concrete words; no dish’s pairing names this wine, so the table is the kind of plate its goesWith names (oysters and pure fish); the step is by the bottle, the decant left to the sommelier as serve says",
+			"source": "the pack record w-9symaqy3 (750 ml, bottle only, no glass; profile; goesWith; serve; no firstPickIds, secondFor or offeredWith)"
+		},
+		{
+			"target": "wine:Domaine François Raveneau ‘Montée de Tonnerre’ Chablis Premier Cru 2022",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine François Raveneau ‘Montée de Tonnerre’ Chablis Premier Cru 2022 is Chardonnay from a Premier Cru on the right bank of the Serein, beside the Grand Crus, drawn from Chapelot at the foot and Pied d’Aloup at the top. Raised in barrels and feuillettes with little new oak, it is intense and taut: white flowers, lemon and oyster shell over smoky stone. It wants raw oysters and pure fish. We pour it at 50 to 54°F in a white Burgundy bowl; young Raveneau can be tight, so the sommelier decides on a brief decant. The domaine was founded in 1948, through a marriage into the Dauvissat family.",
+			"reason": "Five-star review of the description: it opened on the vineyard rather than the wine as the list prints it, and named the Grand Isle Jewel Oysters and the Louisiana Crab Claws, neither of whose pairings names this wine; it now speaks of the plates its goesWith names; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-9symaqy3 (lines.s45, profile, serve, goesWith); research/producers-cellar-chablis-maconnais-2026-10-10.md (section 6: Chapelot and Pied d’Aloup, barrels and feuillettes, founded 1948 through the Dauvissat marriage)"
+		},
+		{
+			"target": "wine:Domaine Leflaive Chevalier-Montrachet Grand Cru 2015",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Leflaive’s Chevalier-Montrachet is Grand Cru from the stony slope above Le Montrachet: lemon curd, white flowers, hazelnut and smoky stone that unfold for minutes. Offer it by the bottle, barely chilled, with grand seafood such as lobster or crab, and let the sommelier lead.",
+			"reason": "The sale (five-star card edition): the hook is the Grand Cru slope and the taste in concrete words; no dish’s pairing names this wine, so the table is the kind of plate its goesWith names (the grandest seafood); the step is by the bottle, barely chilled, the sommelier leading as serve says",
+			"source": "the pack record w-dya23hns (750 ml, bottle only, no glass; profile; goesWith; serve; no firstPickIds, secondFor or offeredWith)"
+		},
+		{
+			"target": "wine:Domaine Leflaive Chevalier-Montrachet Grand Cru 2015",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Leflaive Chevalier-Montrachet Grand Cru 2015 is Chardonnay from a Grand Cru of Puligny-Montrachet, on the steep, stony slope just above Le Montrachet, farmed biodynamically and raised in barrel. With years in bottle it is stony and powerful: hazelnut, lemon curd, white flowers and a smoky mineral depth, layers unfolding long after each sip. It wants grand seafood, lobster or crab in butter. The sommelier leads the service: 54 to 57°F, barely chilled, in a large white Burgundy bowl, decanted for air if they advise. Joseph Leflaive, an engineer who helped design the first French submarine, built the modern domaine from about 1920.",
+			"reason": "Five-star review of the description: it named the Louisiana BBQ Lobster, the Louisiana Crab Claws and the Redfish Véronique, none of whose pairings names this wine; it now speaks of the plates its goesWith names; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-dya23hns (lines.s45, profile, serve, goesWith); research/producers-cellar-white-burgundy-cote-2026-10-10.md (section 1: biodynamic, barrel, Joseph Leflaive, the submarine, from about 1920)"
 		}
 	]
 }
