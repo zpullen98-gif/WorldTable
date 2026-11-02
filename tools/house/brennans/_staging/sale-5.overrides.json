@@ -287,6 +287,182 @@
 			"value": "Domaine Leflaive Chevalier-Montrachet Grand Cru 2015 is Chardonnay from a Grand Cru of Puligny-Montrachet, on the steep, stony slope just above Le Montrachet, farmed biodynamically and raised in barrel. With years in bottle it is stony and powerful: hazelnut, lemon curd, white flowers and a smoky mineral depth, layers unfolding long after each sip. It wants grand seafood, lobster or crab in butter. The sommelier leads the service: 54 to 57°F, barely chilled, in a large white Burgundy bowl, decanted for air if they advise. Joseph Leflaive, an engineer who helped design the first French submarine, built the modern domaine from about 1920.",
 			"reason": "Five-star review of the description: it named the Louisiana BBQ Lobster, the Louisiana Crab Claws and the Redfish Véronique, none of whose pairings names this wine; it now speaks of the plates its goesWith names; it now opens on the wine as the list prints it and keeps every sourced fact",
 			"source": "the pack record w-dya23hns (lines.s45, profile, serve, goesWith); research/producers-cellar-white-burgundy-cote-2026-10-10.md (section 1: biodynamic, barrel, Joseph Leflaive, the submarine, from about 1920)"
+		},
+		{
+			"target": "wine:Alain Graillot Crozes-Hermitage 2015",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "The Graillot Crozes-Hermitage is whole-bunch Northern Rhône Syrah with eleven years on it: black olive, blackberry, cracked pepper and smoke, fine in tannin. Offer it by the bottle with grilled beef, lamb or duck, where the pepper meets the char.",
+			"reason": "The sale (five-star card edition): the hook is whole-bunch Syrah with age, in concrete words; no dish’s pairing names this wine, so the table is the kind of plate its goesWith names (pepper, smoke and grilled meat); the step is by the bottle",
+			"source": "the pack record w-f7747ywz (750 ml, bottle only, no glass; profile; goesWith; serve; no firstPickIds, secondFor or offeredWith)"
+		},
+		{
+			"target": "wine:Alain Graillot Crozes-Hermitage 2015",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Alain Graillot Crozes-Hermitage 2015 is Syrah from the larger appellation around the hill of Hermitage, in the Northern Rhône, with vines on the stony Chassis plain south of Tain. The domaine ferments with whole bunches and ages in neutral wood, not new oak. At eleven years it tastes of black olive and blackberry, cracked pepper and smoked meat, medium in body, with fine tannin, so it loves grilled beef, lamb, duck and charcuterie. We serve it at 60 to 63°F in a large red glass, decanted twenty to thirty minutes ahead. The domaine, founded in 1985, did as much as any to raise the name of Crozes-Hermitage.",
+			"reason": "Five-star review of the description: it opened on the grower rather than the wine as the list prints it, and named the Creole Hanger Steak, whose pairing does not name this wine; it now speaks of the plates its goesWith names; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-f7747ywz (lines.s45, profile, serve, goesWith, origin); research/producers-cellar-rhone-north-2026-10-10.md (section 3: the Chassis plain, whole bunches, 1985)"
+		},
+		{
+			"target": "wine:Domaine Saint Damien ‘La Louisianne’ Gigondas 2023",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "La Louisianne is old-vine Gigondas, Grenache with Mourvèdre, a Louisiana name on a Southern Rhône red: ripe cherry, garrigue and spice, soft in tannin. It is the value bottle for the Petite Filet Mignon, generous with beef and garlic spinach, by the bottle.",
+			"reason": "The sale (five-star card edition): the hook is old-vine Gigondas with a Louisiana name, in concrete words; the table is the Petite Filet Mignon, whose pairing offers this wine as the value bottle; the step is by the bottle",
+			"source": "the pack record w-eidr9hph (750 ml, bottle only, no glass; profile; offeredWith tier value for d-w718yap8, the Petite Filet Mignon)"
+		},
+		{
+			"target": "wine:Domaine Saint Damien ‘La Louisianne’ Gigondas 2023",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Saint Damien ‘La Louisianne’ Gigondas 2023 is old-vine Grenache with Mourvèdre and a little Cinsault and Syrah, from the middle terraces of Gigondas, under the Dentelles de Montmirail. It is organically farmed, co-fermented in concrete and aged in oak. It tastes of ripe cherry, red and black, with garrigue and spice, generous in body but soft in tannin. It is the value bottle for the Petite Filet Mignon, meeting the beef, garlic spinach and rösti without weighing down breakfast. We serve it at 60 to 64°F in a large red glass, decanted thirty minutes ahead. The Saurel family has farmed here since the early nineteenth century.",
+			"reason": "Five-star review of the description: it opened on the cuvée name rather than the wine as the list prints it, and shared a run of nine words with the s20; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-eidr9hph (lines.s45, profile, serve, offeredWith, origin); research/producers-cellar-rhone-south-roussillon-2026-10-10.md (Saint Damien: the Saurel family, organic, co-fermented in concrete)"
+		},
+		{
+			"target": "wine:André Perret Condrieu 2019",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "This Condrieu is Viognier from the grape’s home in the Northern Rhône: apricot, peach and honeysuckle, rich and round yet dry. Offer it by the bottle with rich seafood or fish in butter, for the guest who wants a full white that is not Chardonnay.",
+			"reason": "The sale (five-star card edition): the hook is Viognier from its home, in concrete words; no dish’s pairing names this wine, so the table is the kind of plate its goesWith names (rich seafood and fish in butter); the step is by the bottle",
+			"source": "the pack record w-x6tr21xj (750 ml, bottle only, no glass; profile; goesWith; serve; no firstPickIds, secondFor or offeredWith)"
+		},
+		{
+			"target": "wine:André Perret Condrieu 2019",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "André Perret Condrieu 2019 is Viognier from Condrieu, a small appellation of steep granite slopes in the Northern Rhône and the home of the grape, from a domaine at Chavanay in its south. It is fermented fully dry, yet full of perfume: at seven years, honeysuckle, apricot and peach, with a rich, rounded texture and a fresh, mineral finish. That richness loves seafood and fish in butter. We serve it at 50 to 54°F in a white Burgundy bowl, cool rather than ice cold, so the perfume shows. The family grew orchards at Chavanay before the vines, and the domaine passed from father to son in 1982.",
+			"reason": "Five-star review of the description: it opened on the grower, a living person, rather than the wine as the list prints it, named him in its story, and named the Louisiana BBQ Lobster and the Pecan Gulf Fish, neither of whose pairings names this wine; it now speaks of the plates its goesWith names; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-x6tr21xj (lines.s45, profile, serve, goesWith, origin); research/producers-cellar-rhone-north-2026-10-10.md (section 4: Chavanay, orchards, 1982, Condrieu dry)"
+		},
+		{
+			"target": "wine:René Rostaing ‘Ampodium’ Côte-Rôtie 2012",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Ampodium is Côte-Rôtie with fourteen years: violet, blackberry, black olive and smoked meat, silky and fragrant. Offer it by the bottle with lamb, duck or game, the perfumed side of Syrah for a guest who loves Pinot Noir.",
+			"reason": "The sale (five-star card edition): the hook is aged Côte-Rôtie in concrete words; no dish’s pairing names this wine, so the table is the kind of plate its goesWith names (lamb, duck and game); the step is by the bottle",
+			"source": "the pack record w-wltf5551 (750 ml, bottle only, no glass; profile; goesWith; serve; no firstPickIds, secondFor or offeredWith)"
+		},
+		{
+			"target": "wine:René Rostaing ‘Ampodium’ Côte-Rôtie 2012",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "René Rostaing ‘Ampodium’ Côte-Rôtie 2012 is Syrah from Côte-Rôtie, the roasted slope: steep terraces above the Rhône at Ampuis. Ampodium, once called Cuvée Classique, blends the domaine’s many parcels in its gentle style, aged in large, mostly old casks. At fourteen years it tastes of violet, blackberry, black olive, smoked meat and pepper, silky and fragrant, with a long, savoury finish, so it suits lamb, duck and game. We serve it at 60 to 63°F in a large Burgundy glass, decanted gently twenty to thirty minutes ahead. The domaine dates from 1971 and bottles both hillsides, the perfumed Côte Blonde and the firmer Côte Brune.",
+			"reason": "Five-star review of the description: it opened on the grower rather than the wine as the list prints it, and named the Roasted Rohan Duck Breast and the Creole Hanger Steak, neither of whose pairings names this wine; it now speaks of the plates its goesWith names; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-wltf5551 (lines.s45, profile, serve, goesWith, origin); research/producers-cellar-rhone-north-2026-10-10.md (section 5: 1971, Ampodium once Classique, old casks, Côte Blonde and Côte Brune)"
+		},
+		{
+			"target": "wine:Domaine du Pegau ‘Cuvée Réservée’ Châteauneuf-du-Pape 2020",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "The Pegau Cuvée Réservée is old-school Châteauneuf-du-Pape, mostly Grenache, made with whole bunches and old casks: kirsch, plum, leather and spice. It is the classic bottle for the Petite Filet Mignon at breakfast and the Lamb Shank en Croûte at dinner, by the bottle.",
+			"reason": "The sale (five-star card edition): the hook is the traditional making and the taste in concrete words; the table is the Petite Filet Mignon and the Lamb Shank en Croûte, whose pairings both offer this wine as the classic bottle; the step is by the bottle",
+			"source": "the pack record w-qzla8l47 (750 ml, bottle only, no glass; profile; offeredWith tier classic for d-w718yap8, the Petite Filet Mignon, and d-00p5tuen, the Lamb Shank en Croûte)"
+		},
+		{
+			"target": "wine:Domaine du Pegau ‘Cuvée Réservée’ Châteauneuf-du-Pape 2020",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine du Pegau ‘Cuvée Réservée’ Châteauneuf-du-Pape 2020 is mostly Grenache with Syrah, Mourvèdre and other permitted varieties, fermented with whole bunches and aged about two years in large old casks. At six years it tastes of kirsch and plum, leather, garrigue and spice, warm and generous. It is the classic bottle for the Lamb Shank en Croûte at dinner and the Petite Filet Mignon by day, meeting the spiced jus and the beef. We serve it at 61 to 64°F in a large red glass, decanted forty-five minutes ahead. Pegau is old Provençal for a wine jug; the Réservée was the share the family kept back to bottle.",
+			"reason": "Five-star review of the description: it opened on the domaine rather than the wine as the list prints it, and shared a run of eight words with the s20; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-qzla8l47 (lines.s45, profile, serve, offeredWith); research/producers-cellar-rhone-south-roussillon-2026-10-10.md (Pegau, items 1 to 3: the wine jug, the reserved share, whole bunches, old foudre, no filtration)"
+		},
+		{
+			"target": "wine:Château de Beaucastel Châteauneuf-du-Pape Oenothèque 2007",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Beaucastel’s Oenothèque 2007 is Mourvèdre-rich Châteauneuf-du-Pape kept in the château’s own cellar until release: dried cherry, leather, truffle and garrigue, silky. It is the celebration bottle for the Petite Filet Mignon, soft enough for tender beef, decanted off its sediment, by the bottle.",
+			"reason": "The sale (five-star card edition): the hook is a mature bottle released from the château’s own cellar, in concrete words; the table is the Petite Filet Mignon, whose pairing offers this wine as the celebration bottle; the step is by the bottle, decanted for sediment as serve says",
+			"source": "the pack record w-u1c2oiey (750 ml, bottle only, no glass; profile; serve; offeredWith tier splurge for d-w718yap8, the Petite Filet Mignon)"
+		},
+		{
+			"target": "wine:Château de Beaucastel Châteauneuf-du-Pape Oenothèque 2007",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château de Beaucastel Châteauneuf-du-Pape Oenothèque 2007 gives Mourvèdre a large share, with Grenache, Syrah and Counoise. The estate flash-heats the harvest before fermentation and raises the wine in large old foudres, and Oenothèque bottles are older vintages held in the château’s cellar and released later. At nineteen years it tastes of dried cherry, truffle, leather and garrigue, with silky tannin and savoury depth. It is the celebration bottle for the Petite Filet Mignon, meeting tender beef without overpowering it. We stand it upright, serve it at 61 to 64°F in a large red glass and decant it gently off its sediment. The Perrin family has run Beaucastel since 1909.",
+			"reason": "Five-star review of the description: it opened on the château rather than the wine as the list prints it, and carried an American spelling (savory) in place of the British; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-u1c2oiey (lines.s45, profile, serve, offeredWith); research/producers-cellar-rhone-south-roussillon-2026-10-10.md (Beaucastel, items 1 to 3: 1909, flash-heated harvest, large old foudres)"
+		},
+		{
+			"target": "wine:Domaine du Vieux Télégraphe ‘La Crau’ Châteauneuf-du-Pape 2014",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "La Crau is Châteauneuf-du-Pape from a high plateau of large round stones, twelve years old: kirsch, garrigue, pepper and leather, warm and silky. It is the celebration bottle for the Creole Hanger Steak, soft tannin for the chili crisp, by the bottle.",
+			"reason": "The sale (five-star card edition): the hook is the stony plateau and the taste in concrete words; the table is the Creole Hanger Steak, whose pairing offers this wine as the celebration bottle; the step is by the bottle",
+			"source": "the pack record w-cgr8tm7k (750 ml, bottle only, no glass; profile; offeredWith tier splurge for d-ono6zqmz, the Creole Hanger Steak)"
+		},
+		{
+			"target": "wine:Domaine du Vieux Télégraphe ‘La Crau’ Châteauneuf-du-Pape 2014",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine du Vieux Télégraphe ‘La Crau’ Châteauneuf-du-Pape 2014 is Grenache with Mourvèdre and Syrah from the high La Crau plateau, where the vines grow among large round stones that hold the day’s heat. It is raised in large oak foudres. At twelve years it tastes of kirsch and dried cherry, leather, pepper and garrigue, warm, savoury and silky. It is the celebration bottle for the Creole Hanger Steak, its soft tannin easy with the chili crisp. We serve it at 61 to 64°F in a large red glass, decanted thirty minutes ahead. The name comes from the signal telegraph tower that stood on the plateau from 1793.",
+			"reason": "Five-star review of the description: it opened on a short form rather than the wine as the list prints it, shared a run of nine words with the s20 and carried an American spelling (savory); it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-cgr8tm7k (lines.s45, profile, serve, offeredWith, origin); research/producers-cellar-rhone-south-roussillon-2026-10-10.md (Vieux Télégraphe: the telegraph tower from 1793, the round stones of La Crau)"
+		},
+		{
+			"target": "wine:Auguste Clape Cornas 2016",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Clape’s Cornas is traditional Syrah from steep granite, ten years old: black cherry, violet, pepper and earth, firm tannin just opening. Offer it by the bottle with lamb, venison or a peppery steak, decanted about an hour ahead.",
+			"reason": "The sale (five-star card edition): the hook is traditional Cornas in concrete words; no dish’s pairing names this wine, so the table is the kind of plate its goesWith names (grilled and roast red meat and game); the step is by the bottle, decanted as serve says",
+			"source": "the pack record w-5bdp9pur (750 ml, bottle only, no glass; profile; goesWith; serve; no firstPickIds, secondFor or offeredWith)"
+		},
+		{
+			"target": "wine:Auguste Clape Cornas 2016",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Auguste Clape Cornas 2016 is Syrah from Cornas, a small, steep granite amphitheatre at the south of the Northern Rhône, where the red is Syrah alone. It is made the traditional way: whole bunches, old foudres, no new oak and no filtering. At ten years it tastes of black cherry and blackberry, violet, pepper, smoke and earth, with firm tannin starting to open, so it wants lamb, venison or a peppery steak. We serve it at 61 to 64°F in a large red glass, decanted about an hour ahead. Old terraces above the village, chiefly Reynard, La Côte, Patou and Sabarotte, go into this one Cornas.",
+			"reason": "Five-star review of the description: it opened on the founder rather than the wine as the list prints it, hedged with may be, carried an American spelling (amphitheater) and named the Creole Hanger Steak, whose pairing does not name this wine; it now speaks of the plates its goesWith names; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-5bdp9pur (lines.s45, profile, serve, goesWith); research/producers-cellar-rhone-north-2026-10-10.md (section 6: the terraces Reynard, La Côte, Patou and Sabarotte, whole bunches, old casks)"
+		},
+		{
+			"target": "wine:Domaine Jean-Louis Chave Hermitage 2013",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Chave’s Hermitage blends Syrah from plots across the hill into one deep wine: cassis, blackberry, violet, smoke and iron, firm and very long. Offer it by the bottle with roast beef, lamb or venison, decanted by the sommelier an hour or more ahead.",
+			"reason": "The sale (five-star card edition): the hook is the blend of the hill’s plots, in concrete words; no dish’s pairing names this wine, so the table is the kind of plate its goesWith names (roast beef, lamb and game); the step is by the bottle, decanted by the sommelier as serve says",
+			"source": "the pack record w-g9wc8l9a (750 ml, bottle only, no glass; profile; goesWith; serve; no firstPickIds, secondFor or offeredWith)"
+		},
+		{
+			"target": "wine:Domaine Jean-Louis Chave Hermitage 2013",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Jean-Louis Chave Hermitage 2013 is Syrah from the hill of Hermitage, above the Rhône at Tain; the domaine is across the river at Mauves. Rather than bottle each plot alone, it blends parcels from the hill’s named sectors, Les Bessards, Le Méal, L’Ermite, Péléat and Les Rocoules, into one wine. At thirteen years it tastes of cassis, blackberry, violet, smoke and iron, deep and firm, with a very long finish, a match for roast beef, lamb and venison. We serve it at 61 to 64°F in a large red glass, and the sommelier decants it an hour or more ahead. The Chave family has grown vines since 1481.",
+			"reason": "Five-star review of the description: it opened on the grower, a living person, rather than the wine as the list prints it, and named the Roasted Chateaubriand, whose pairing does not name this wine; it now speaks of the plates its goesWith names; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-g9wc8l9a (lines.s45, profile, serve, goesWith); research/producers-cellar-rhone-north-2026-10-10.md (section 7: Mauves, the five sectors, 1481)"
+		},
+		{
+			"target": "wine:E. Guigal ‘La Mouline’ Côte-Rôtie 2012",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "La Mouline is Guigal’s Côte-Rôtie from one terraced amphitheatre, Syrah fermented with a little Viognier: violet, raspberry, bacon and spice, silky and perfumed. Offer it by the bottle with lamb, duck or game birds, decanted by the sommelier an hour or so ahead.",
+			"reason": "The sale (five-star card edition): the hook is the single terraced vineyard and its Viognier, in concrete words; no dish’s pairing names this wine, so the table is the kind of plate its goesWith names (lamb, duck and game birds); the step is by the bottle, decanted by the sommelier as serve says",
+			"source": "the pack record w-lyikt99y (750 ml, bottle only, no glass; profile; goesWith; serve; no firstPickIds, secondFor or offeredWith)"
+		},
+		{
+			"target": "wine:E. Guigal ‘La Mouline’ Côte-Rôtie 2012",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "E. Guigal ‘La Mouline’ Côte-Rôtie 2012 is Syrah from a terraced amphitheatre on the Côte Blonde, where Viognier grows among the Syrah and is fermented with it, around a tenth. Like the house’s other two single vineyards, it spends around forty-two months in new oak. At fourteen years it is the perfumed one of the three: raspberry, violet and blackberry, bacon and spice, silky and long, for lamb, duck and game birds. We serve it at 61 to 64°F in a large Burgundy glass, and the sommelier decants it an hour or so ahead. Collectors call the three the La La’s, and La Mouline was first made in 1966.",
+			"reason": "Five-star review of the description: it opened on the house rather than the wine as the list prints it, carried an American spelling (amphitheater) and named the Roasted Rohan Duck Breast, whose pairing does not name this wine; it now speaks of the plates its goesWith names; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-lyikt99y (lines.s45, profile, serve, goesWith); research/producers-cellar-rhone-north-2026-10-10.md (section 8: the La La’s, Viognier co-fermented, 42 months new oak, first vintage 1966)"
+		},
+		{
+			"target": "wine:Château Rayas Châteauneuf-du-Pape 2011",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Château Rayas is Châteauneuf-du-Pape from Grenache alone, grown on sand among pine woods, fifteen years old: raspberry, kirsch and rose, pale, translucent and silky. Offer it by the bottle with duck, game birds or mushrooms, and let the sommelier decide on decanting.",
+			"reason": "The sale (five-star card edition): the hook is Grenache alone on sand, in concrete words; no dish’s pairing names this wine, so the table is the kind of plate its goesWith names (duck, game birds and mushrooms); the step is by the bottle, the decant left to the sommelier as serve says",
+			"source": "the pack record w-fxc7le8l (750 ml, bottle only, no glass; profile; goesWith; serve; no firstPickIds, secondFor or offeredWith)"
+		},
+		{
+			"target": "wine:Château Rayas Châteauneuf-du-Pape 2011",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Rayas Châteauneuf-du-Pape 2011 is Grenache alone, from cool, sandy parcels shaded by pine woods, with very low yields, raised in old wood with no new oak. Where Châteauneuf is usually a dark, warm blend, this is pale and fine: at fifteen years, raspberry, strawberry and kirsch, rose, spice and earth, translucent, silky and perfumed, for duck, game birds and mushrooms. We serve it at 60 to 63°F in a large Burgundy bowl; the sommelier decides on decanting, and the pale colour is the style, never a flaw. Where much of Châteauneuf grows among round stones that store heat, Rayas keeps to sand.",
+			"reason": "Five-star review of the description: it opened on the château’s making rather than the wine as the list prints it, used a superlative (most), an American spelling (color), shared a run of nine words with the s20 and named the Roasted Rohan Duck Breast, whose pairing does not name this wine; it now speaks of the plates its goesWith names; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-fxc7le8l (lines.s45, profile, serve, goesWith); research/producers-cellar-rhone-south-roussillon-2026-10-10.md (Rayas, item 4: sand, no galets, pinewood parcels)"
 		}
 	]
 }
