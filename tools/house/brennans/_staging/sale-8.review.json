@@ -1,0 +1,56 @@
+{
+	"wines": [
+		{
+			"name": "Mas de Valériole ‘Vé’ Rosé Méditerranée 2025 (1.5 L magnum)",
+			"s45": "rewritten",
+			"reason": "it opened on the estate rather than the wine as the list prints it, and it named three dishes whose pairings do not name this wine (the Creole Tomato Tostada, the Louisiana Crab Claws and the Creole Caesar)",
+			"dishes": []
+		},
+		{
+			"name": "Pierre Péters ‘Cuvée de Réserve’ Brut NV (1.5 L magnum)",
+			"s45": "rewritten",
+			"reason": "it opened on the grower rather than the wine as the list prints it, and it named three dishes whose pairings do not name this wine (the Grand Isle Jewel Oysters, the Louisiana Crab Claws and the Redfish Véronique)",
+			"dishes": []
+		},
+		{
+			"name": "Jean Foillard ‘Côte du Py’ Morgon 2023 (1.5 L magnum)",
+			"s45": "rewritten",
+			"reason": "it opened on the grower rather than the wine as the list prints it, named three living growers, and named dishes whose pairings do not name this wine (the Redfish Véronique, the Blackened Tofu and the Cheese Board)",
+			"dishes": []
+		},
+		{
+			"name": "Duckhorn Cabernet Sauvignon Napa Valley 2022 (1.5 L magnum)",
+			"s45": "rewritten",
+			"reason": "it opened on the winery rather than the wine as the list prints it, named its living founders, and named dishes whose pairings do not name this magnum (the Roasted Chateaubriand, the Creole Hanger Steak and the Roost Burger)",
+			"dishes": []
+		},
+		{
+			"name": "Château Cos d’Estournel Saint-Estèphe 2015 (1.5 L magnum)",
+			"s45": "rewritten",
+			"reason": "it opened on the estate rather than the wine as the list prints it, carried no clause on how the wine is made, and named dishes whose pairings do not name this wine (the Roasted Chateaubriand and the Creole Hanger Steak)",
+			"dishes": []
+		},
+		{
+			"name": "J.J. Prüm ‘Wehlener Sonnenuhr’ Riesling Auslese Goldkapsel 2015 (1.5 L magnum)",
+			"s45": "rewritten",
+			"reason": "it opened on the sundial story rather than the wine as the list prints it, and it named the New Orleans Bread Pudding, whose pairing does not name this wine",
+			"dishes": [
+				"Pineapple Tarte Tatin"
+			]
+		},
+		{
+			"name": "Billecart-Salmon ‘Réserve’ Brut NV (15 L Nebuchadnezzar)",
+			"s45": "rewritten",
+			"reason": "it opened on the founding rather than the wine as the list prints it, and it named three dishes whose pairings do not name this wine (the Grand Isle Jewel Oysters, the Louisiana Crab Claws and the Crawfish Meat Pies)",
+			"dishes": []
+		},
+		{
+			"name": "Les Cadrans de Lassègue Saint-Émilion Grand Cru 2021",
+			"s45": "rewritten",
+			"reason": "it named the Creole-Spiced Hanger Steak, whose pairing does not name this wine",
+			"dishes": [
+				"Chateau Espagnole"
+			]
+		}
+	]
+}

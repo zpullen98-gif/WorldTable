@@ -1,0 +1,132 @@
+{
+	"entries": [
+		{
+			"target": "wine:Mas de Valériole ‘Vé’ Rosé Méditerranée 2025 (1.5 L magnum)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Vé is a pale, dry Camargue rosé of Caladoc, Merlot and Marselan: raspberry and ripe citrus with a salty, sea breeze finish. For a big table sharing crab, tomato and crisp salads in the courtyard, it pours from the magnum, two bottles in one.",
+			"reason": "Five-star card edition, sale-8 (Large formats): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (crab, tomato and salads for a table in the courtyard); the step is the record's own (a 1.5 L magnum with no glass price and no Coravin serve, so the magnum)",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 5 (items 1, 2 and 5: a family estate in the Camargue south of Arles; Vé, a Provençal expression meaning look at that; Caladoc, a Grenache and Malbec cross, with Merlot and Marselan, direct pressed and kept in steel; the anchor magnum); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Mas de Valériole ‘Vé’ Rosé Méditerranée 2025 (1.5 L magnum)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Mas de Valériole Vé Rosé Méditerranée 2025, in magnum, is a pale, dry rosé from a family estate in the Camargue, the Rhône delta south of Arles. It blends Caladoc, a cross of Grenache and Malbec, with Merlot and Marselan, pressed straight off the skins and kept fresh in steel: raspberry, ripe citrus and a salty, sea breeze finish. Two bottles in one, it suits a big table sharing crab, tomato and crisp salads in the courtyard. It goes on ice the moment it is ordered, and we pour it at 45 to 48°F in a white wine glass. Vé is a Provençal expression meaning look at that.",
+			"reason": "Five-star card edition, sale-8 (Large formats): the description was rewritten because it opened on the estate rather than the wine as the list prints it, and it named three dishes whose pairings do not name this wine (the Creole Tomato Tostada, the Louisiana Crab Claws and the Creole Caesar); it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 5 (items 1, 2 and 5: a family estate in the Camargue south of Arles; Vé, a Provençal expression meaning look at that; Caladoc, a Grenache and Malbec cross, with Merlot and Marselan, direct pressed and kept in steel; the anchor magnum); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Pierre Péters ‘Cuvée de Réserve’ Brut NV (1.5 L magnum)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Pierre Péters is Grand Cru Chardonnay from a Le Mesnil grower whose first label came out in 1946, the year Brennan’s opened: lemon, white flowers and chalk with a creamy mousse. For a table sharing oysters and crab, we open it from the magnum.",
+			"reason": "Five-star card edition, sale-8 (Large formats): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (oysters and crab for a crowd); the step is the record's own (a 1.5 L magnum with no glass price and no Coravin serve, so the magnum)",
+			"source": "research/producers-cellar-champagne-growers-2026-10-10.md section 8 (items 3, 5 and 6: the first Pierre Péters labelled release in 1946; the perpetual reserve; Cuvée de Réserve all Grand Cru Chardonnay, mainly Le Mesnil with Oger, Cramant and Avize, at least 24 months on the lees); tools/house/brennans/guide.txt (Brennan's opened in 1946); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Pierre Péters ‘Cuvée de Réserve’ Brut NV (1.5 L magnum)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Pierre Péters Cuvée de Réserve Brut, in magnum, is grower Champagne from Le Mesnil-sur-Oger, a Grand Cru village of the Côte des Blancs. It is all Grand Cru Chardonnay, mainly Le Mesnil with Oger, Cramant and Avize, blended with a perpetual reserve of older wines and aged at least two years on its lees: lemon, white flowers, chalk and a creamy, fine mousse. It suits a table sharing oysters and crab. We chill it well, serve it at 45 to 48°F in a tulip, and hold the bigger cork and cage firmly. The first Pierre Péters label came out in 1946, the year Brennan’s opened.",
+			"reason": "Five-star card edition, sale-8 (Large formats): the description was rewritten because it opened on the grower rather than the wine as the list prints it, and it named three dishes whose pairings do not name this wine (the Grand Isle Jewel Oysters, the Louisiana Crab Claws and the Redfish Véronique); it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-champagne-growers-2026-10-10.md section 8 (items 3, 5 and 6: the first Pierre Péters labelled release in 1946; the perpetual reserve; Cuvée de Réserve all Grand Cru Chardonnay, mainly Le Mesnil with Oger, Cramant and Avize, at least 24 months on the lees); tools/house/brennans/guide.txt (Brennan's opened in 1946); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Jean Foillard ‘Côte du Py’ Morgon 2023 (1.5 L magnum)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "The Côte du Py is Morgon Gamay from old vines on schist: dark cherry, raspberry and violet, silky and lively, poured a touch cool. For a table sharing fish, duck, mushrooms and cheese, it comes in the magnum.",
+			"reason": "Five-star card edition, sale-8 (Large formats): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (a table of mixed plates: fish, duck, mushrooms and cheese); the step is the record's own (a 1.5 L magnum with no glass price and no Coravin serve, so the magnum)",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 4 (items 1 to 4 and 6: old vines on the decomposed schist of the Côte du Py; whole bunches, native yeasts, minimal sulphur, old Burgundy barrels; the Gang of Four following Jules Chauvet); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Jean Foillard ‘Côte du Py’ Morgon 2023 (1.5 L magnum)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Jean Foillard Côte du Py Morgon 2023, in magnum, is Gamay from old vines on the Côte du Py, the schist hill at the heart of Morgon, a Beaujolais cru. Made with whole bunches, native yeasts and little sulphur, then aged in old Burgundy barrels, it gives dark cherry, raspberry, violet and an earthy depth, with silky tannin and lively acidity. Light enough for fish and deep enough for duck, mushrooms or cheese, it suits a table of mixed plates. We serve it slightly cool, 55 to 58°F, in a Burgundy bowl. The Gang of Four of Morgon followed the oenologist Jules Chauvet back to these old ways.",
+			"reason": "Five-star card edition, sale-8 (Large formats): the description was rewritten because it opened on the grower rather than the wine as the list prints it, named three living growers, and named dishes whose pairings do not name this wine (the Redfish Véronique, the Blackened Tofu and the Cheese Board); it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 4 (items 1 to 4 and 6: old vines on the decomposed schist of the Côte du Py; whole bunches, native yeasts, minimal sulphur, old Burgundy barrels; the Gang of Four following Jules Chauvet); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Duckhorn Cabernet Sauvignon Napa Valley 2022 (1.5 L magnum)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Duckhorn’s Napa Valley Cabernet is ripe and polished: blackcurrant, black cherry and cocoa with a little cedar and rounded tannin. For a party ordering steak and roast beef, it comes in the magnum, decanted at the side stand on request.",
+			"reason": "Five-star card edition, sale-8 (Large formats): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (beef for a party: steak and roast beef; the 750 ml Duckhorn, not this magnum, is the Roasted Chateaubriand's value bottle); the step is the record's own (a 1.5 L magnum with no glass price and no Coravin serve, so the magnum)",
+			"source": "research/producers-cellar-napa-sonoma-2026-10-10.md section 8 (items 1 to 3 and 5: founded 1976; made its name with Merlot when few in America took the grape seriously; the Napa Valley Cabernet blended from vineyards across the valley, Cabernet led with small amounts of other Bordeaux varieties, aged in French oak); the wine record (profile, goesWith, serve; no dish pairing names this magnum)"
+		},
+		{
+			"target": "wine:Duckhorn Cabernet Sauvignon Napa Valley 2022 (1.5 L magnum)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Duckhorn Cabernet Sauvignon Napa Valley 2022, in magnum, is Cabernet Sauvignon drawn from vineyards across the Napa Valley and aged in French oak. It tastes of blackcurrant, black cherry, cocoa and a little cedar, ripe and polished, with firm but rounded tannin. Protein and fat soften that tannin, so it suits a party sharing steak and roast beef, two bottles in one. We serve it at 60 to 64°F in a large Bordeaux glass; a young magnum opens with air, so we offer to decant it at the side stand. Duckhorn, founded in 1976, made its name with Merlot when few in America took the grape seriously.",
+			"reason": "Five-star card edition, sale-8 (Large formats): the description was rewritten because it opened on the winery rather than the wine as the list prints it, named its living founders, and named dishes whose pairings do not name this magnum (the Roasted Chateaubriand, the Creole Hanger Steak and the Roost Burger); it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-napa-sonoma-2026-10-10.md section 8 (items 1 to 3 and 5: founded 1976; made its name with Merlot when few in America took the grape seriously; the Napa Valley Cabernet blended from vineyards across the valley, Cabernet led with small amounts of other Bordeaux varieties, aged in French oak); the wine record (profile, goesWith, serve; no dish pairing names this magnum)"
+		},
+		{
+			"target": "wine:Château Cos d’Estournel Saint-Estèphe 2015 (1.5 L magnum)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Cos d’Estournel 2015 is Second Growth Saint-Estèphe, Cabernet Sauvignon with Merlot: blackcurrant, plum, cedar, cocoa and exotic spice, powerful and polished. For a beef celebration, we decant the magnum at the side stand about an hour ahead when the table allows.",
+			"reason": "Five-star card edition, sale-8 (Large formats): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (beef for a celebration); the step is the record's own (a 1.5 L magnum with no glass price and no Coravin serve, so the magnum)",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 11 (items 1, 2 and 5: Second Growth of 1855; a gravel ridge at the southern edge of Saint-Estèphe looking across at Lafite; Louis Gaspard d'Estournel, who traded wine to India and built the pagoda chai; the 2015 magnum at bin 33553); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Cos d’Estournel Saint-Estèphe 2015 (1.5 L magnum)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Cos d’Estournel Saint-Estèphe 2015, in magnum, is a Second Growth of the 1855 classification, on a gravel ridge facing Lafite across the Pauillac boundary. It is Cabernet Sauvignon blended with Merlot and bottled here in magnum, which ages more slowly: blackcurrant, plum, cedar, cocoa and exotic spice, powerful and polished, with firm, fine tannin and a long finish. It is made for a beef celebration. We stand the magnum upright, decant it off its sediment at the side stand an hour ahead, and serve it at 62 to 65°F. Its founder, Louis Gaspard d’Estournel, sold his wine into India and built pagodas to say so.",
+			"reason": "Five-star card edition, sale-8 (Large formats): the description was rewritten because it opened on the estate rather than the wine as the list prints it, carried no clause on how the wine is made, and named dishes whose pairings do not name this wine (the Roasted Chateaubriand and the Creole Hanger Steak); it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 11 (items 1, 2 and 5: Second Growth of 1855; a gravel ridge at the southern edge of Saint-Estèphe looking across at Lafite; Louis Gaspard d'Estournel, who traded wine to India and built the pagoda chai; the 2015 magnum at bin 33553); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:J.J. Prüm ‘Wehlener Sonnenuhr’ Riesling Auslese Goldkapsel 2015 (1.5 L magnum)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Prüm’s gold capsule Auslese from the Wehlener Sonnenuhr is sweet, racy Mosel Riesling: honeyed pineapple, apricot, lime and slate, light in alcohol. It is our celebration bottle for the Pineapple Tarte Tatin, about twenty small pours from the magnum for a table sharing dessert.",
+			"reason": "Five-star card edition, sale-8 (Large formats): the two sentence sale, a concrete hook then the table and the step; the dish named is the only one whose pairing names this wine (the celebration bottle for the Pineapple Tarte Tatin); the step is the record's own (a 1.5 L magnum with no glass price and no Coravin serve, so the magnum)",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 8 (items 1, 2 and 7: Jodocus Prüm built the sundial on the Wehlen Devonian slate in 1842 and the vineyard is named for it; the capsule colour marking selections within one Prädikat; a magnum pours about twenty); research/bottle-selection-2026-10-04.json Pineapple Tarte Tatin splurge tier; the wine record (profile, serve, offeredWith: splurge for the Pineapple Tarte Tatin)"
+		},
+		{
+			"target": "wine:J.J. Prüm ‘Wehlener Sonnenuhr’ Riesling Auslese Goldkapsel 2015 (1.5 L magnum)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "J.J. Prüm Wehlener Sonnenuhr Riesling Auslese Goldkapsel 2015, in magnum, is sweet Riesling from the steep slate of the Wehlener Sonnenuhr at Wehlen, on the Mosel. Auslese means selected bunches, and the gold capsule marks a richer selection: honeyed pineapple, apricot, lime and slate, sweet and racy, light in alcohol. As our celebration bottle for the Pineapple Tarte Tatin, its pineapple meets the charred fruit and its acidity keeps the anglaise light. We pour 2 to 3 oz at 45 to 50°F in small dessert glasses, about twenty from the magnum. In 1842 Jodocus Prüm built the sundial into the slate, and the vineyard took its name.",
+			"reason": "Five-star card edition, sale-8 (Large formats): the description was rewritten because it opened on the sundial story rather than the wine as the list prints it, and it named the New Orleans Bread Pudding, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 8 (items 1, 2 and 7: Jodocus Prüm built the sundial on the Wehlen Devonian slate in 1842 and the vineyard is named for it; the capsule colour marking selections within one Prädikat; a magnum pours about twenty); research/bottle-selection-2026-10-04.json Pineapple Tarte Tatin splurge tier; the wine record (profile, serve, offeredWith: splurge for the Pineapple Tarte Tatin)"
+		},
+		{
+			"target": "wine:Billecart-Salmon ‘Réserve’ Brut NV (15 L Nebuchadnezzar)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Billecart-Salmon Réserve is fresh, elegant Champagne, pear, citrus and a light brioche with fine bubbles, here fifteen litres, twenty bottles in one. For a private party with oysters and crab, the Nebuchadnezzar is ordered ahead, chilled for hours and poured by two of us.",
+			"reason": "Five-star card edition, sale-8 (Large formats): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (a very large party or private event with oysters and crab); the step is the record's own (a 15 L Nebuchadnezzar with no glass price and no Coravin serve, ordered ahead, chilled for hours and poured by two staff)",
+			"source": "research/producers-cellar-champagne-menu-2026-10-10.md section 7 (item 1: founded in 1818 with the marriage of Nicolas François Billecart and Elisabeth Salmon, at Mareuil-sur-Aÿ; Brennan's link: the Réserve up to the 15 L); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Billecart-Salmon ‘Réserve’ Brut NV (15 L Nebuchadnezzar)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Billecart-Salmon Réserve Brut NV, in a Nebuchadnezzar, is the non-vintage Brut of the family house at Mareuil-sur-Aÿ in Champagne: Meunier, Chardonnay and Pinot Noir, blended with reserve wines. Pear, citrus and a light brioche ride on fine bubbles to a clean finish. Fifteen litres, twenty standard bottles, pour a hundred glasses or more for a private event with oysters and crab. It is ordered ahead and chilled for hours in a tub of ice and water, served at 43 to 46°F in tulips, and poured from a cradle or by two staff. The house was founded in 1818 on the marriage of Nicolas François Billecart and Elisabeth Salmon.",
+			"reason": "Five-star card edition, sale-8 (Large formats): the description was rewritten because it opened on the founding rather than the wine as the list prints it, and it named three dishes whose pairings do not name this wine (the Grand Isle Jewel Oysters, the Louisiana Crab Claws and the Crawfish Meat Pies); it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-champagne-menu-2026-10-10.md section 7 (item 1: founded in 1818 with the marriage of Nicolas François Billecart and Elisabeth Salmon, at Mareuil-sur-Aÿ; Brennan's link: the Réserve up to the 15 L); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Les Cadrans de Lassègue Saint-Émilion Grand Cru 2021",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Les Cadrans de Lassègue is soft Saint-Émilion, Merlot with Cabernet Franc: red cherry, plum and a little spice, Bordeaux without weight. It is our value bottle for the Chateau Espagnole, by the bottle.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; the dish named is the only one whose pairing names this wine (the value bottle for the Chateau Espagnole); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-right-2026-10-10.md section 1 (item 1: the second wine of Château Lassègue, first made in 2008, the name from the sundials on the château's front, mainly Merlot and Cabernet Franc from younger vines and the foothill blocks, six to eight months in part new French oak); research/bottle-selection-2026-10-04.json Chateau Espagnole value tier; the wine record (profile, serve, offeredWith: value for the Chateau Espagnole)"
+		},
+		{
+			"target": "wine:Les Cadrans de Lassègue Saint-Émilion Grand Cru 2021",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Les Cadrans de Lassègue Saint-Émilion Grand Cru 2021 is the second wine of Château Lassègue, on Bordeaux’s Right Bank, first made in 2008 from the estate’s younger vines and foothill blocks. Mainly Merlot with Cabernet Franc, it spends six to eight months in French oak and tastes of red cherry, plum and a little spice, with soft, refined tannin and a fresh finish. As our value bottle for the Chateau Espagnole, that soft tannin suits the lean Chateaubriand and its plum and spice meet the brown sauce. We serve it at 60 to 64°F in a Bordeaux glass, no decanting. Cadrans are the sundials on the château’s front.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it named the Creole-Spiced Hanger Steak, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-right-2026-10-10.md section 1 (item 1: the second wine of Château Lassègue, first made in 2008, the name from the sundials on the château's front, mainly Merlot and Cabernet Franc from younger vines and the foothill blocks, six to eight months in part new French oak); research/bottle-selection-2026-10-04.json Chateau Espagnole value tier; the wine record (profile, serve, offeredWith: value for the Chateau Espagnole)"
+		}
+	]
+}
