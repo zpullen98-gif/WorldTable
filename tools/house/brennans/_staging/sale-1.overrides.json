@@ -180,7 +180,7 @@
    "target": "wine:Damien Martin Bourgogne Pinot Noir 2023",
    "field": "lines.s45",
    "op": "set",
-   "value": "Damien Martin's Bourgogne is Pinot Noir from a father and son family domaine at Davayé, in the Mâconnais of southern Burgundy, founded in 1982. It's light and silky, with raspberry, red cherry and a touch of earth over light tannin and fresh acidity. A light red goes where a big one would bully the food, so it's our first pick with the Steak Tartare with Rye and the Blackened Tofu, and the second choice with the Roasted Rohan Duck Breast, the Duck Confit Waffle and the marchand de vin on the Eggs Hussarde. We serve it slightly cool, 55 to 58°F, in a Burgundy bowl, with no decanting.",
+   "value": "Damien Martin's Bourgogne is Pinot Noir from a father and son family domaine at Davayé, in the Mâconnais of southern Burgundy, founded in 1982. It's light and silky, with raspberry, red cherry and a touch of earth over light tannin and fresh acidity. A light red goes where a big one would bully the food, so it's our first pick with the Steak Tartare with Rye and the Blackened Tofu, and the second choice with the Roasted Rohan Duck Breast, the Duck Confit Waffle and the Eggs Hussarde with its marchand de vin. We serve it slightly cool, 55 to 58°F, in a Burgundy bowl, with no decanting.",
    "reason": "Five-star review of the description: it named the founder, Robert Martin, with nothing in the research showing he has died, left out the Steak Tartare with Rye, a first pick, and shared a run of eight words with the twenty (light and silky: red cherry, raspberry and a); it now names the domaine and its founding year only, and every linked dish as first pick or second choice",
    "source": "the pack record w-y0ihoyc7 (lines.s45, origin: a father and son domaine at Davayé founded in 1982, profile, serve, firstPickIds, secondFor)"
   },
@@ -319,6 +319,198 @@
    "value": "Domaine La Tour Vieille's Banyuls Reserva is a sweet red from Roussillon, mostly Grenache, its fermentation stopped with grape spirit, then aged the oxidative way: coffee, caramel, walnut, orange peel and dried fig. Sweet enough that chocolate never turns it bitter, it closes our Dinner Tasting Menu with The Snickers, and it's our first pick with the Cherries Jubilee, the Café Brûlot Coffee Cake and the Chocolate Crémeux, the second choice with the World Famous Bananas Foster and the New Orleans Bread Pudding. We pour 4 oz, about 55°F, in a small dessert glass. The domaine sits at Collioure, where schist terraces drop almost into the Mediterranean.",
    "reason": "Five-star review of the description: it opened on the domaine rather than the wine as the list prints it and shared a run of eight words with the twenty (dried fig, walnut, caramel, coffee and orange peel); it now opens on the printed name and closes on the story, every fact kept",
    "source": "the pack record w-69pqytkm (lines.s45, origin, profile, parts, serve, firstPickIds, secondFor, tastings); research/producers-cellar-dessert (La Tour Vieille, Collioure)"
+  },
+  {
+   "target": "wine:Drappier ‘Carte d’Or’ Brut NV (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Drappier's Carte d'Or is Pinot Noir-led Champagne, dry and crisp, with citrus, orchard fruit and a toasty edge. Offer it as a birthday toast for two, with raw oysters or anything fried and salty: the half bottle pours two or three glasses.",
+   "reason": "The sale: no dish's pairing names this wine, so the table is the toast and the plates its goesWith names, never a printed dish; the step is the 375 ml half bottle",
+   "source": "the pack record w-zhjzzikm (bottle $75.00, 375 ml; profile; goesWith a birthday toast for two, raw oysters, fried or salty food)"
+  },
+  {
+   "target": "wine:Drappier ‘Carte d’Or’ Brut NV (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Drappier's Carte d'Or Brut is Champagne from the family house at Urville, in the Côte des Bar, Champagne's far south and Pinot Noir country: mostly Pinot Noir with Chardonnay and Meunier, its bubbles from a second fermentation in the bottle. It's dry and crisp, with citrus, orchard fruit and a toasty edge, a toast for two with raw oysters, rich soups or anything fried and salty. We pour it at 43 to 46°F in a tulip, the half bottle kept in the bucket between pours. Carte d'Or has worn its yellow label since 1952, and General de Gaulle, who lived nearby, chose Drappier for his private receptions from 1965.",
+   "reason": "Five-star review of the description: it opened on the house rather than the wine as the list prints it and named the Turtle Soup, the Grand Isle Jewel Oysters and the Louisiana Crab Claws, none of whose pairings names this wine, the same three the twenty names; it now opens on the printed name, speaks of the plates its goesWith names and closes on the story, every sourced fact kept",
+   "source": "the pack record w-zhjzzikm (lines.s45, profile, parts, serve, goesWith); research/producers-cellar-champagne-menu-2026-10-10.md (Drappier, Urville, the yellow label since 1952, General de Gaulle from 1965)"
+  },
+  {
+   "target": "wine:Paul Bara Grand Cru Reserve Rosé Brut NV (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "The Paul Bara is grower rosé Champagne from Grand Cru Bouzy, dry, with red berry fruit and more body than a white Champagne. Offer it as a pink toast for two, with raw beef, duck or cheese: the half bottle pours two or three glasses.",
+   "reason": "The sale: no dish's pairing names this wine, so the table is the toast and the kinds of plate its goesWith names; the step is the 375 ml half bottle",
+   "source": "the pack record w-r238y26n (bottle $120.00, 375 ml; profile; goesWith a pink toast for two, steak tartare, duck, the cheese board)"
+  },
+  {
+   "target": "wine:Paul Bara Grand Cru Reserve Rosé Brut NV (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Paul Bara Grand Cru Reserve Rosé is grower Champagne from Bouzy, Grand Cru Pinot Noir country on the Montagne de Reims, made by a family only from its own vines: mostly Pinot Noir with Chardonnay, its colour from a little of Bouzy's own still red wine. It's dry, with red berry fruit, fine bubbles and more body than a white Champagne, enough for raw beef, duck, savoury pies and cheese. We pour the half bottle, two or three glasses, at 43 to 46°F in a tulip, in two stages so the mousse doesn't overflow. The family first sold Champagne under the Paul Bara name in the 1950s.",
+   "reason": "Five-star review of the description: it opened on the grower rather than the wine as the list prints it and named the Steak Tartare Cannoli, the Crawfish Meat Pies and the Cheese Board, none of whose pairings names this wine; it now opens on the printed name and speaks of the plates its goesWith names, every sourced fact kept",
+   "source": "the pack record w-r238y26n (lines.s45, profile, parts, serve, goesWith); research/producers-cellar-champagne-menu-2026-10-10.md (Paul Bara of Bouzy, its own vines, the 1950s)"
+  },
+  {
+   "target": "wine:Krug ‘Grand Cuvée’ Brut NV (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Krug's Grand Cuvée blends more than a hundred wines from ten or more years into a dry, deep and toasty Champagne with a long finish. Offer it for a milestone for two, with oysters or steak: the half bottle pours two or three glasses.",
+   "reason": "The sale: no dish's pairing names this wine, so the table is the occasion and the kinds of plate its goesWith names; the step is the 375 ml half bottle",
+   "source": "the pack record w-5mat1jha (bottle $305.00, 375 ml; profile; goesWith the grand occasion for two, oysters, the Chateaubriand)"
+  },
+  {
+   "target": "wine:Krug ‘Grand Cuvée’ Brut NV (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Krug Grand Cuvée is a blend of more than a hundred wines from ten or more years, Pinot Noir, Chardonnay and Meunier, each base wine fermented in small oak casks, then aged at least six more years in the cellars, every release a numbered edition. It's dry, deep and toasty, with fine bubbles and a long finish, the grand occasion for two with oysters, rich soup, steak or cheese. We pour the half bottle at 46 to 50°F in a tulip, a touch warmer than the house bubbles. Joseph Krug founded his Reims house in 1843 to make Champagne every year from a blend, whatever the harvest.",
+   "reason": "Five-star review of the description: it opened on the founder rather than the wine as the list prints it and named the Grand Isle Jewel Oysters, the Turtle Soup and the Roasted Chateaubriand, none of whose pairings names this wine; it now opens on the printed name and speaks of the plates its goesWith names, every sourced fact kept",
+   "source": "the pack record w-5mat1jha (lines.s45, profile, serve, goesWith, serviceNote: the label reads Grande Cuvée); research/producers-cellar-champagne-menu-2026-10-10.md (Joseph Krug, Reims, 1843)"
+  },
+  {
+   "target": "wine:Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Our 80th anniversary magnum is Billecart-Salmon's Sous Bois, Champagne fermented in oak, dry and round, toasty with a nutty depth. It carries a whole celebrating table from soup to steak, and the magnum pours two bottles in one.",
+   "reason": "The sale: the hook is the bottle labelled for our anniversary; no dish's pairing names this wine, so the table is the celebration its goesWith names; the step is the 1.5 L magnum",
+   "source": "the pack record w-757tk8s7 (bottle $350.00, 1.5 L magnum; profile; goesWith a table celebration)"
+  },
+  {
+   "target": "wine:Billecart-Salmon ‘Brennan’s 80th Anniversary’ Brut Sous Bois NV (1.5 L magnum)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Billecart-Salmon's Sous Bois, in a magnum labelled for Brennan's 80th anniversary, is Brut Champagne whose name means under wood: every base wine is fermented in oak barrels, Chardonnay, Pinot Noir and Meunier, then left years on its lees. It's dry and round, toasty with a nutty depth from the oak, one bottle to carry a celebrating table from soup to steak. We ease the cork out with a quiet sigh and pour at 43 to 46°F in a tulip, from a deep bucket, with two hands, thumb in the punt. Billecart-Salmon was founded at Mareuil-sur-Aÿ in 1818, on the marriage of Nicolas François Billecart and Elisabeth Salmon.",
+   "reason": "Five-star review of the description: it opened on the founding rather than the wine as the list prints it, named the Turtle Soup, the Eggs Hussarde, the Poussin à la Moutarde and the Roasted Chateaubriand, none of whose pairings names this wine, and hedged the blend (usually about equal parts); it now opens on the printed name, speaks of the table celebration its goesWith names and closes on the story",
+   "source": "the pack record w-757tk8s7 (lines.s45, profile, parts, serve, goesWith); research/producers-cellar-champagne-menu-2026-10-10.md (Billecart-Salmon, Mareuil-sur-Aÿ, 1818, the founding marriage)"
+  },
+  {
+   "target": "wine:Bollinger ‘Special Cuvée’ Brut NV (1.5 L magnum)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Bollinger's Special Cuvée is full, rich Champagne led by Pinot Noir, toasty and dry with firm acidity, the Champagne of the Bond films. It carries a big table from rich soups to steak, and the magnum pours two bottles in one.",
+   "reason": "The sale: no dish's pairing names this wine, so the table is the kinds of plate its goesWith names; the step is the 1.5 L magnum",
+   "source": "the pack record w-xnonxjdf (bottle $450.00, 1.5 L magnum; profile; goesWith a big table toast, soup to steak)"
+  },
+  {
+   "target": "wine:Bollinger ‘Special Cuvée’ Brut NV (1.5 L magnum)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Bollinger's Special Cuvée is the non-vintage Brut of the Pinot Noir house of Aÿ: about six parts in ten Pinot Noir, with Chardonnay and Meunier, part fermented in old oak and built on reserve wines kept in magnum. That makes it full and rich, with toasty depth, firm acidity and a dry finish, one bottle for a big table from rich soups to steak. We pour the magnum at 43 to 46°F in a tulip, from a deep bucket, with two hands. Bollinger was founded in 1829 and first appeared with Bond on screen in Live and Let Die, in 1973, a film shot partly in the French Quarter.",
+   "reason": "Five-star review of the description: it opened on the house rather than the wine as the list prints it and named the Turtle Soup, the Seafood Gumbo, the Eggs Owen and the Roasted Chateaubriand, none of whose pairings names this wine; it now opens on the printed name and speaks of the plates its goesWith names, every sourced fact kept",
+   "source": "the pack record w-xnonxjdf (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-menu-2026-10-10.md (Bollinger, Aÿ, 1829, Live and Let Die, 1973)"
+  },
+  {
+   "target": "wine:Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "From the house behind our own Champagne, the Piper-Heidsieck Cuvée Brut is dry, crisp and lively, a friendly toast for a whole table. Pour it with raw oysters, salads and eggs, and the magnum gives two bottles in one.",
+   "reason": "The sale: the hook is the house behind our house Champagne; no dish's pairing names this wine, so the table is the kinds of plate its goesWith names; the step is the 1.5 L magnum",
+   "source": "the pack record w-a7np8xs9 (bottle $275.00, 1.5 L magnum; profile; goesWith a friendly table toast, oysters, the Caesar, the omelette, the poussin)"
+  },
+  {
+   "target": "wine:Piper-Heidsieck ‘Cuvée’ Brut NV (1.5 L magnum)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Piper-Heidsieck Cuvée Brut in magnum is non-vintage Champagne from the Reims house behind our own Brennan's Essential, but a different wine, its bubbles from a second fermentation in the bottle. It's dry, crisp and lively, a friendly toast for a table, with raw oysters, salads, eggs or poultry. A magnum is two standard bottles in one: we chill it in a deep bucket, ease the cork out with a quiet sigh and pour at 43 to 46°F in a tulip, with two hands, thumb in the punt. Piper-Heidsieck was founded in Reims in 1785, and the house tells that its founder presented his Champagne to Queen Marie Antoinette.",
+   "reason": "Five-star review of the description: it opened on the founding rather than the wine as the list prints it and named the Grand Isle Jewel Oysters, the Creole Caesar, the Crab & Corn Omelette and the Poussin à la Moutarde, none of whose pairings names this wine; it now opens on the printed name and speaks of the plates its goesWith names; no grape is named because the record holds none",
+   "source": "the pack record w-a7np8xs9 (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-menu-2026-10-10.md (Piper-Heidsieck, Reims, 1785, Marie Antoinette)"
+  },
+  {
+   "target": "wine:Taittinger ‘La Francaise’ Brut NV (3 L double magnum)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Taittinger's La Francaise is dry, elegant Champagne, rich in Chardonnay, and at three litres it is four bottles in one. Offer it to a party of eight or more with raw oysters and crab: the double magnum, iced ahead and opened by the sommelier.",
+   "reason": "The sale: no dish's pairing names this wine, so the table is the party and the plates its goesWith names; the step is the 3 L double magnum and how it is opened",
+   "source": "the pack record w-brba6z3f (bottle $650.00, 3 L double magnum; profile; goesWith a party of eight or more, raw oysters, crab claws; serve)"
+  },
+  {
+   "target": "wine:Taittinger ‘La Francaise’ Brut NV (3 L double magnum)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Taittinger's La Francaise, here in a double magnum, is the house's non-vintage Brut, its bubbles from a second fermentation in the bottle: rich in Chardonnay, about four parts in ten, with Pinot Noir and Meunier, the source of its elegance. It's dry and fresh, with fine bubbles, and at three litres, four bottles in one, it carries a party of eight or more from raw oysters and crab to eggs and fish. We ice it well ahead and pour at 43 to 46°F in a tulip, opened by the sommelier or a second server. Taittinger's Reims house dates to 1734, with the family name since 1932.",
+   "reason": "Five-star review of the description: it opened on the house rather than the wine as the list prints it and named the Grand Isle Jewel Oysters, the Louisiana Crab Claws, the Eggs Hussarde and the Redfish Véronique, none of whose pairings names this wine; it now opens on the printed name and speaks of the plates its goesWith names, every sourced fact kept",
+   "source": "the pack record w-brba6z3f (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-menu-2026-10-10.md (Taittinger, Reims, 1734, the family name since 1932)"
+  },
+  {
+   "target": "wine:Mirabelle Brut Rosé North Coast NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "The Mirabelle is Schramsberg's dry sparkling rosé from California's North Coast, red berry fruit and fresh bubbles made the Champagne way. Pour it with salty, fried bar snacks, by the bottle at Bubbles.",
+   "reason": "The sale: no dish's pairing names this wine, so the table is the salty, fried bar snacks its goesWith names, never a printed snack; the step is the bottle at Bubbles",
+   "source": "the pack record w-7do8sjzc (bottle $50.00 at Bubbles; profile; goesWith salty, fried bar snacks)"
+  },
+  {
+   "target": "wine:Mirabelle Brut Rosé North Coast NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Mirabelle Brut Rosé is the North Coast label of Schramsberg, the Calistoga house: Pinot Noir and Chardonnay from cool vineyards in Carneros, the Sonoma Coast, Anderson Valley and Marin, made the Champagne way and left two years on its lees. It's a sparkling rosé, not Champagne, dry, with red berry fruit and fresh bubbles, and bubbles love salt, so it's made for fried bar snacks. We pour it at 43 to 46°F in a flute or tulip, easing the cork out with a quiet sigh and pouring in two stages. Schramsberg's Blanc de Blancs was poured at the Toast to Peace in Beijing in 1972.",
+   "reason": "Five-star review of the description: it opened on the label rather than the wine as the list prints it and called the Fries with Pink Sauce, the Popcorn Shrimp and the Crawfish Meat Pies our pick, though no snack's pairing names this wine; it now opens on the printed name and speaks of the fried bar snacks its goesWith names",
+   "source": "the pack record w-7do8sjzc (lines.s45, profile, serve, goesWith); research/producers-cellar-sparkling-elsewhere-2026-10-10.md (Schramsberg, Calistoga, the Toast to Peace, 1972)"
+  },
+  {
+   "target": "wine:Louis Pommery Rosé Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "The Louis Pommery is a dry California sparkling rosé made the Champagne way, red berry fruit and lively bubbles from Chardonnay and Pinot Noir. Pour it with fried seafood and pastry, by the bottle at Bubbles.",
+   "reason": "The sale: no dish's pairing names this wine, so the table is the fried seafood and pastry its goesWith names, never a printed snack; the step is the bottle at Bubbles",
+   "source": "the pack record w-jocgwxht (bottle $60.00 at Bubbles; profile; goesWith fried seafood and pastry at the bar)"
+  },
+  {
+   "target": "wine:Louis Pommery Rosé Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Louis Pommery Rosé Brut is California sparkling wine from the Vranken-Pommery group, which owns the Reims house of Pommery, and it is named for that house's founder. It's made the Champagne way, with the second fermentation in the bottle, from Chardonnay and Pinot Noir grown in California: a sparkling rosé rather than Champagne, dry, with red berry fruit and lively bubbles. Fried seafood and pastry love bubbles and a little acidity, so it belongs beside fried plates at the bar. We pour it at 43 to 46°F in a flute or tulip, easing the cork out with a quiet sigh and pouring in two stages.",
+   "reason": "Five-star review of the description: it called the Popcorn Shrimp our pick and named the Crawfish Meat Pies and the Fried Pickles, though no snack's pairing names this wine; it now speaks of the fried seafood and pastry its goesWith names, every sourced fact kept",
+   "source": "the pack record w-jocgwxht (lines.s45, profile, serve, goesWith)"
+  },
+  {
+   "target": "wine:Moët & Chandon ‘Imperial’ Rosé Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "The Moët Imperial Rosé is dry pink Champagne from Épernay, led by Pinot Noir, with red berry fruit, fine bubbles and the body for savoury pastry and cheese. Make the celebration with it, by the bottle at Bubbles.",
+   "reason": "The sale: no dish's pairing names this wine, so the table is the celebration and the kinds of plate its goesWith names; the step is the bottle at Bubbles",
+   "source": "the pack record w-40apaxsq (bottle $105.00 at Bubbles; profile; goesWith Bubbles celebrations, savoury pies, cheese)"
+  },
+  {
+   "target": "wine:Moët & Chandon ‘Imperial’ Rosé Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Moët & Chandon Imperial Rosé is the house's non-vintage Brut rosé Champagne: Pinot Noir leads, then Meunier, with a little Chardonnay, the colour from still red wine blended with the white. It's dry, with red berry fruit and fine bubbles, and a rosé has a little more body than a white, so it stands up to savoury pastry, cheese and fried bites. It's the dry Brut, not the sweeter Nectar on the bottle list. We pour it at 43 to 46°F in a flute or tulip, in two stages. Moët & Chandon was founded in Épernay in 1743, and its Imperial name honours Napoleon, a friend of Jean-Rémy Moët.",
+   "reason": "Five-star review of the description: it opened on the founding rather than the wine as the list prints it and named the Crawfish Meat Pies, the Cheese Board and the Popcorn Shrimp, none of whose pairings names this wine; it now opens on the printed name and speaks of the plates its goesWith names, every sourced fact kept",
+   "source": "the pack record w-40apaxsq (lines.s45, profile, serve, goesWith, serviceNote: not the Nectar Imperial Rosé); research/producers-cellar-champagne-menu-2026-10-10.md (Moët & Chandon, Épernay, 1743, Napoleon, Jean-Rémy Moët)"
+  },
+  {
+   "target": "wine:Taittinger ‘Prestige’ Rosé Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "The Taittinger Prestige Rosé is dry, elegant pink Champagne from Reims, red berry fruit and fine bubbles with a fresh, light touch. Pour it with cheese or for a sunset toast in the courtyard, by the bottle at Bubbles.",
+   "reason": "The sale: no dish's pairing names this wine, so the table is the cheese and the courtyard toast its goesWith names; the step is the bottle at Bubbles",
+   "source": "the pack record w-c12rqa6r (bottle $110.00 at Bubbles; profile; goesWith the cheese board above all, a toast at sunset in the courtyard)"
+  },
+  {
+   "target": "wine:Taittinger ‘Prestige’ Rosé Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Taittinger Prestige Rosé is the Reims house's non-vintage Brut rosé, blending all three grapes, Pinot Noir, Chardonnay and Meunier, with its colour from a little still red Pinot Noir, the usual way rosé Champagne is made. It's dry and elegant, with red berry fruit, fine bubbles and a fresh, lighter touch. Red fruit and acidity are a friend to cheese, chutney and honey, so it suits a cheese plate, savoury pastry and a toast at sunset in the courtyard. We pour it at 43 to 46°F in a flute or tulip, in two stages. Taittinger's house dates to 1734, with the family name since 1932.",
+   "reason": "Five-star review of the description: it opened on the house rather than the wine as the list prints it, called the Cheese Board our pick and named the Crawfish Meat Pies, though no pairing names this wine, and carried the Flamingo; it now opens on the printed name, speaks of the plates its goesWith names and closes on the house's story",
+   "source": "the pack record w-c12rqa6r (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-menu-2026-10-10.md (Taittinger, Reims, 1734, the family name since 1932)"
+  },
+  {
+   "target": "wine:Pommery Rosé Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "The Pommery Rosé is dry, crisp pink Champagne from Reims, from the house that launched a dry brut in 1874, red berry fruit and fine bubbles. Offer it for the big celebration, by the bottle at Bubbles.",
+   "reason": "The sale: the hook is the house that made a dry brut; no dish's pairing names this wine, so the table is the celebration its goesWith names; the step is the bottle at Bubbles",
+   "source": "the pack record w-bhlh412d (bottle $125.00 at Bubbles; profile; goesWith the big Bubbles celebration); research/producers-cellar-champagne-menu-2026-10-10.md (Pommery Nature, 1874)"
+  },
+  {
+   "target": "wine:Pommery Rosé Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Pommery Rosé Brut is non-vintage rosé Champagne from Pommery of Reims, its bubbles from a second fermentation in the bottle: dry and crisp, with red berry fruit and fine bubbles. It's the Champagne for a big celebration at Bubbles, with cheese, savoury pastry and fried, salty bites. We pour it at 43 to 46°F in a flute or tulip, easing the cork out with a quiet sigh and pouring in two stages. The house was founded in 1858 as Pommery & Greno; widowed, Louise Pommery cellared it in Gallo-Roman chalk pits beneath the city, and in 1874 launched Pommery Nature, a dry brut, when Champagne was usually very sweet.",
+   "reason": "Five-star review of the description: it opened on the house rather than the wine as the list prints it, named the Cheese Board, the Crawfish Meat Pies, the Popcorn Shrimp and the Creole Spiced Nuts, none of whose pairings names this wine, and said most Champagne; it now opens on the printed name, speaks of the plates its goesWith names and closes on the story; no grape is named because the record holds none",
+   "source": "the pack record w-bhlh412d (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-menu-2026-10-10.md (Pommery & Greno, 1858, Louise Pommery, the chalk pits, Pommery Nature, 1874)"
   }
  ]
 }
