@@ -940,7 +940,8 @@ function itemsFor(text) {
 	}
 	return ids;
 }
-const linesMark = (l) => (l && (l.s10 || l.s20 || l.s45) ? mark({ s10: l.s10 || '', s20: l.s20 || '', s45: l.s45 || '' }) : undefined);
+/* The sale (the five-star card edition) rides in the same mark as the three timed lines, kept only when present. */
+const linesMark = (l) => (l && (l.s10 || l.s20 || l.s45) ? mark(Object.assign({ s10: l.s10 || '', s20: l.s20 || '', s45: l.s45 || '' }, l.sale ? { sale: l.sale } : {})) : undefined);
 const partsMark = (p) => (p && Object.values(p).some(Boolean) ? mark({ main: p.main || '', technique: p.technique || '', sauce: p.sauce || '', sides: p.sides || '', taste: p.taste || '' }) : undefined);
 const keptNotes = (k) => (k && k.length ? k.map((n) => ({ q: n.q, a: n.a, ts: BUILD_TS })) : undefined);
 const put = (rec, field, value) => { if (value !== undefined && value !== '' && value !== null) rec[field] = value; };
