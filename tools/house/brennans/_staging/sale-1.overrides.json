@@ -52,7 +52,7 @@
    "target": "wine:Charles Lafitte Brut Champagne NV",
    "field": "lines.sale",
    "op": "set",
-   "value": "Charles Lafitte is a crisp Brut Champagne of Chardonnay, Pinot Noir and Meunier, with fresh citrus, apple and a light toasty note. It is the 4 oz pour on the Traditional Breakfast with the Eggs Hussarde, and on the Dinner Tasting Menu with the Grand Isle Jewel Oysters.",
+   "value": "Charles Lafitte is a crisp, dry Brut Champagne, fresh citrus and apple with a light toasty note. It is the 4 oz pour on the Traditional Breakfast with the Eggs Hussarde, and on the Dinner Tasting Menu with the Grand Isle Jewel Oysters.",
    "reason": "The sale: a tasting pour with no glass or bottle price, so the step is the 4 oz pour on the two tastings, each with the course it is printed beside",
    "source": "the pack record w-3yaps1gt (pours 4 oz; profile; tastings: Traditional Breakfast course 4, Eggs Hussarde; Dinner Tasting Menu course 1, Grand Isle Jewel Oysters)"
   },
@@ -116,7 +116,7 @@
    "target": "wine:Gainey Estate Vineyards Chardonnay 2023",
    "field": "lines.sale",
    "op": "set",
-   "value": "The Gainey is cool-climate California Chardonnay, creamy, with lemon curd and baked apple kept fresh by bright acidity. It is our first pick with the Louisiana Oysters, the Pecan Gulf Fish, the Poussin à la Moutarde and the Swordfish Grenobloise, by the glass.",
+   "value": "The Gainey is cool-climate California Chardonnay, creamy, with lemon curd and apple kept fresh by bright acidity. It is our first pick with the Louisiana Oysters, the Pecan Gulf Fish, the Poussin à la Moutarde and the Swordfish Grenobloise, by the glass.",
    "reason": "The sale: the hook is the creamy but fresh taste; the table is the four dishes whose first pick it is, and the step the glass",
    "source": "the pack record w-uw1bb9ax (glass $17; profile; firstPickIds Louisiana Oysters, Pecan Gulf Fish, Poussin à la Moutarde, Swordfish Grenobloise)"
   },
