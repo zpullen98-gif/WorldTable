@@ -1,0 +1,132 @@
+{
+	"entries": [
+		{
+			"target": "wine:Castello Banfi ‘Florus’ Moscadello di Montalcino 2011",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Honey, apricot, candied orange and orange blossom, sweet with fresh acidity: Florus is the sweet white Montalcino made long before Brunello. It is the value bottle for the Blackberry Trifle and the Pineapple Tarte Tatin, poured by the bottle for the table.",
+			"reason": "Five-star card edition, sale-10 (Dessert and fortified): the two sentence sale, a concrete hook then the table and the step; it names the Blackberry Trifle as the value bottle and the Pineapple Tarte Tatin as the value bottle, the tier each dish's pairing gives this wine, and no dish whose pairing does not name it; a 750 ml bottle with no glass price, so by the bottle",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 11 (items 1 to 4: the Mariani family estate founded 1978 in the south west of Montalcino; Moscadello the zone’s sweet white from Moscato Bianco, traded for centuries before Brunello, DOC since 1984; Florus late harvest, partly oak aged); the wine record (profile, serve; the Blackberry Trifle and Pineapple Tarte Tatin pairings name it as the value bottle)"
+		},
+		{
+			"target": "wine:Castello Banfi ‘Florus’ Moscadello di Montalcino 2011",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Castello Banfi ‘Florus’ Moscadello di Montalcino 2011 is late harvest Moscato Bianco from the hills of Montalcino, in Tuscany. The grapes hang on the vine to concentrate; the wine is made sweet and partly aged in oak. Fifteen years on it is golden amber: honey, apricot, orange blossom, candied orange and a little nut, with fresh acidity. It is the value bottle for the Blackberry Trifle and the Pineapple Tarte Tatin, sweeter than the lemon curd and easy with the charred fruit. We pour it at 46 to 50°F in a small dessert glass, from an ice bucket with water. Moscadello was Montalcino’s wine for centuries before Brunello.",
+			"reason": "Five-star card edition, sale-10 (Dessert and fortified): the description was rewritten because it opened on the house or the place rather than the wine as the list prints it (it began on Montalcino’s history); it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record’s serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 11 (items 1 to 4: the Mariani family estate founded 1978 in the south west of Montalcino; Moscadello the zone’s sweet white from Moscato Bianco, traded for centuries before Brunello, DOC since 1984; Florus late harvest, partly oak aged); the wine record (profile, serve; the Blackberry Trifle and Pineapple Tarte Tatin pairings name it as the value bottle)"
+		},
+		{
+			"target": "wine:Hexamer ‘Meddersheimer Rheingrafenberg’ Riesling Spätlese 2010",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Sixteen years have turned this Nahe Riesling to honey, baked apple and apricot, with a little petrol and an acidity that still cuts. It is the value bottle for the World Famous Bananas Foster, poured by the bottle after the flambé.",
+			"reason": "Five-star card edition, sale-10 (Dessert and fortified): the two sentence sale, a concrete hook then the table and the step; it names the World Famous Bananas Foster as the value bottle, the tier each dish's pairing gives this wine, and no dish whose pairing does not name it; a 750 ml bottle with no glass price, so by the bottle",
+			"source": "research/producers-cellar-germany-austria-2026-10-10.md section 3 (items 1, 2, 4 and 6: a family estate at Meddersheim on the Nahe between the Mosel and the Rhine, the Rheingrafenberg its best known vineyard, the list’s Rheingrafenberg Trocken 2021, petrol the mark of aged Riesling); the wine record (profile, serve; the World Famous Bananas Foster pairing names it as the value bottle)"
+		},
+		{
+			"target": "wine:Hexamer ‘Meddersheimer Rheingrafenberg’ Riesling Spätlese 2010",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Hexamer ‘Meddersheimer Rheingrafenberg’ Riesling Spätlese 2010 is Riesling from the Rheingrafenberg at Meddersheim, on the Nahe, between the Mosel and the Rhine. Spätlese is a later harvest of riper grapes, and this one is made sweet. At sixteen years: honey, baked apple, apricot, a little petrol and spice, the marks of aged Riesling, over racy acidity. It is the value bottle for the World Famous Bananas Foster, sweet enough for the caramel and sharp enough to lighten the butter. We pour it at 46 to 50°F in a small dessert glass, from an ice bucket with water. The family estate also makes it dry, as a Trocken.",
+			"reason": "Five-star card edition, sale-10 (Dessert and fortified): the description was rewritten because it opened on the house or the place rather than the wine as the list prints it (it began on the estate); it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record’s serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-germany-austria-2026-10-10.md section 3 (items 1, 2, 4 and 6: a family estate at Meddersheim on the Nahe between the Mosel and the Rhine, the Rheingrafenberg its best known vineyard, the list’s Rheingrafenberg Trocken 2021, petrol the mark of aged Riesling); the wine record (profile, serve; the World Famous Bananas Foster pairing names it as the value bottle)"
+		},
+		{
+			"target": "wine:Domaine des Baumard ‘Clos Sainte Catherine’ Coteaux du Layon 2006",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Twenty years old, this sweet Loire Chenin tastes of quince, baked apple, honey and a little ginger, kept bright by its acidity. It is the value bottle for the Baked Apple and the New Orleans Bread Pudding, poured by the bottle.",
+			"reason": "Five-star card edition, sale-10 (Dessert and fortified): the two sentence sale, a concrete hook then the table and the step; it names the Baked Apple as the value bottle and the New Orleans Bread Pudding as the value bottle, the tier each dish's pairing gives this wine, and no dish whose pairing does not name it; a 750 ml bottle with no glass price, so by the bottle",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 11 (items 1 to 4 and 6: a family estate at Rochefort-sur-Loire in Anjou; Clos Sainte Catherine a Coteaux du Layon at moderate sweetness, a bridge between the dry and the botrytised styles; a clos, a single named vineyard; Chenin’s searching acidity); the wine record (profile, serve; the Baked Apple and New Orleans Bread Pudding pairings name it as the value bottle)"
+		},
+		{
+			"target": "wine:Domaine des Baumard ‘Clos Sainte Catherine’ Coteaux du Layon 2006",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine des Baumard ‘Clos Sainte Catherine’ Coteaux du Layon 2006 is Chenin Blanc from a single named vineyard on the Layon slopes of Anjou, in the Loire. Made at moderate sweetness, between the dry and the noble rot styles, it keeps for decades on Chenin’s searching acidity. At twenty years: quince, baked apple, honey, apricot and a little ginger. It is the value bottle for the Baked Apple, echoing its brown sugar glaze, and the New Orleans Bread Pudding, as sweet as its whiskey caramel. We pour it at 46 to 50°F in a small dessert glass, from an ice bucket. Baumard is a family estate at Rochefort-sur-Loire.",
+			"reason": "Five-star card edition, sale-10 (Dessert and fortified): the description was rewritten because it opened on the house or the place rather than the wine as the list prints it (it began on the estate); it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record’s serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 11 (items 1 to 4 and 6: a family estate at Rochefort-sur-Loire in Anjou; Clos Sainte Catherine a Coteaux du Layon at moderate sweetness, a bridge between the dry and the botrytised styles; a clos, a single named vineyard; Chenin’s searching acidity); the wine record (profile, serve; the Baked Apple and New Orleans Bread Pudding pairings name it as the value bottle)"
+		},
+		{
+			"target": "wine:Dr. Hermann ‘Ürziger Würzgarten in der Kranklei’ Riesling Spätlese Goldkapsel 2018",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "This Mosel Riesling from red slate tastes of white peach, apricot, lime and spice, sweet and light, with an electric acidity that stands up to lemon. It is the value bottle for the Framboise French Toast and the Lemon Tart, poured by the bottle.",
+			"reason": "Five-star card edition, sale-10 (Dessert and fortified): the two sentence sale, a concrete hook then the table and the step; it names the Framboise French Toast as the value bottle and the Lemon Tart as the value bottle, the tier each dish's pairing gives this wine, and no dish whose pairing does not name it; a 750 ml bottle with no glass price, so by the bottle",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 5 (items 1, 4, 6 and 7: a family estate at Erden; the Würzgarten red slate with red volcanic sandstone, the Kranklei a parcel within it; Goldkapsel the grower’s signal of a richer selection, not a legal category); the wine record (profile, serve; the Framboise French Toast and Lemon Tart pairings name it as the value bottle)"
+		},
+		{
+			"target": "wine:Dr. Hermann ‘Ürziger Würzgarten in der Kranklei’ Riesling Spätlese Goldkapsel 2018",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Dr. Hermann ‘Ürziger Würzgarten in der Kranklei’ Riesling Spätlese Goldkapsel 2018 is Riesling from the Kranklei, a parcel of Ürzig’s steep Würzgarten, the spice garden, on red slate and volcanic sandstone above the Mosel. The gold capsule is the grower’s own mark of a richer Spätlese, from riper grapes, not a legal category. Sweet and light: white peach, apricot, lime, spice and slate, with electric acidity. It is the value bottle for the Framboise French Toast and the Lemon Tart, bright beside lemon, cutting the mascarpone. We pour it at 46 to 50°F in a small dessert glass, from an ice bucket. The family estate is at Erden.",
+			"reason": "Five-star card edition, sale-10 (Dessert and fortified): the description was rewritten because it opened on the house or the place rather than the wine as the list prints it (it began on the estate); it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record’s serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 5 (items 1, 4, 6 and 7: a family estate at Erden; the Würzgarten red slate with red volcanic sandstone, the Kranklei a parcel within it; Goldkapsel the grower’s signal of a richer selection, not a legal category); the wine record (profile, serve; the Framboise French Toast and Lemon Tart pairings name it as the value bottle)"
+		},
+		{
+			"target": "wine:Domaine Huet ‘Le Mont’ Vouvray Moelleux 2009",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Seventeen years have made this sweet Vouvray golden: honeyed quince, baked apple, chamomile and beeswax, with a long, mineral finish. It is the classic with the Baked Apple, poured by the bottle for the table.",
+			"reason": "Five-star card edition, sale-10 (Dessert and fortified): the two sentence sale, a concrete hook then the table and the step; it names the Baked Apple as the classic, the tier each dish's pairing gives this wine, and no dish whose pairing does not name it; a 750 ml bottle with no glass price, so by the bottle",
+			"source": "research/components-wines-2026-10-05.md search 21 (founded 1928 by Victor Huet and his son Gaston; three vineyards, Le Mont bought 1957; all Chenin Blanc, made sec, demi-sec, moelleux and sparkling; farmed biodynamically); research/producers-cellar-bordeaux-white-sweet-2026-10-10.md section 5 item 5 (Huet farms biodynamically); the wine record (profile, serve; the Baked Apple pairing names it as the classic)"
+		},
+		{
+			"target": "wine:Domaine Huet ‘Le Mont’ Vouvray Moelleux 2009",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Huet ‘Le Mont’ Vouvray Moelleux 2009 is Chenin Blanc from Le Mont, one of Huet’s three biodynamic vineyards in Vouvray, in the Loire. Huet makes its Chenin sec, demi-sec and moelleux, and moelleux means sweet. At seventeen years, golden: honeyed quince, baked apple, chamomile and beeswax, with Chenin’s fresh acidity and a long, mineral finish. It is the classic with the Baked Apple, as sweet as its brown sugar glaze, its acidity lifting the crème fraîche. We pour it at 46 to 50°F in a small dessert glass, from an ice bucket. Victor Huet founded the domaine in 1928, and Le Mont joined it in 1957.",
+			"reason": "Five-star card edition, sale-10 (Dessert and fortified): the description was rewritten because it opened on the house or the place rather than the wine as the list prints it (it began on the founder); it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record’s serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/components-wines-2026-10-05.md search 21 (founded 1928 by Victor Huet and his son Gaston; three vineyards, Le Mont bought 1957; all Chenin Blanc, made sec, demi-sec, moelleux and sparkling; farmed biodynamically); research/producers-cellar-bordeaux-white-sweet-2026-10-10.md section 5 item 5 (Huet farms biodynamically); the wine record (profile, serve; the Baked Apple pairing names it as the classic)"
+		},
+		{
+			"target": "wine:Kracher ‘Cuvée’ Auslese Burgenland 2017",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "From the misty shore of the Neusiedlersee in Austria, this Auslese pours pear, mandarin, passion fruit and orange blossom honey, creamy yet fresh. It is the classic with the Pineapple Tarte Tatin, poured by the bottle.",
+			"reason": "Five-star card edition, sale-10 (Dessert and fortified): the two sentence sale, a concrete hook then the table and the step; it names the Pineapple Tarte Tatin as the classic, the tier each dish's pairing gives this wine, and no dish whose pairing does not name it; a 750 ml bottle with no glass price, so by the bottle",
+			"source": "research/producers-cellar-germany-austria-2026-10-10.md section 7 (items 1, 2, 4 and 8: Illmitz on the eastern shore of the Neusiedlersee, autumn mists bring noble rot almost every year, Alois Kracher made its sweet wines famous until his death in 2007; the 2017 Cuvée Auslese Welschriesling and Chardonnay, fermented and matured in stainless steel; Welschriesling unrelated to Riesling); the wine record (profile, serve; the Pineapple Tarte Tatin pairing names it as the classic)"
+		},
+		{
+			"target": "wine:Kracher ‘Cuvée’ Auslese Burgenland 2017",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Kracher ‘Cuvée’ Auslese Burgenland 2017 is Welschriesling, no relation to Riesling, with Chardonnay from Illmitz on the eastern shore of the Neusiedlersee, where autumn mist off the shallow lake brings noble rot almost every year. Made sweet as an Auslese, it is fermented and matured in steel. Pear, quince, mandarin, passion fruit and orange blossom honey, creamy, with fresh acidity. It is the classic with the Pineapple Tarte Tatin, echoing the charred pineapple and sweet anglaise. We pour it at 46 to 50°F in a small dessert glass, from an ice bucket with water. Alois Kracher made the estate famous for sweet wine until his death in 2007.",
+			"reason": "Five-star card edition, sale-10 (Dessert and fortified): the description was rewritten because it opened on the house or the place rather than the wine as the list prints it (it began on the estate); it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record’s serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-germany-austria-2026-10-10.md section 7 (items 1, 2, 4 and 8: Illmitz on the eastern shore of the Neusiedlersee, autumn mists bring noble rot almost every year, Alois Kracher made its sweet wines famous until his death in 2007; the 2017 Cuvée Auslese Welschriesling and Chardonnay, fermented and matured in stainless steel; Welschriesling unrelated to Riesling); the wine record (profile, serve; the Pineapple Tarte Tatin pairing names it as the classic)"
+		},
+		{
+			"target": "wine:Château Climens Barsac Premier Cru Classé 2010",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "All Sémillon from the limestone of Barsac, this sweet wine tastes of candied lemon, apricot, honey and saffron, rich but fresh. It is the classic with the Lemon Tart, poured by the bottle for the table.",
+			"reason": "Five-star card edition, sale-10 (Dessert and fortified): the two sentence sale, a concrete hook then the table and the step; it names the Lemon Tart as the classic, the tier each dish's pairing gives this wine, and no dish whose pairing does not name it; a 750 ml bottle with no glass price, so by the bottle",
+			"source": "research/producers-cellar-bordeaux-white-sweet-2026-10-10.md section 5 (items 1 to 4: a first growth of Barsac in 1855, all Sémillon on a plateau of red sand over limestone, the Lord of Barsac, hand picked in successive passes for noble rot, aged in oak, Barsac one of the five Sauternes communes); the wine record (profile, serve; the Lemon Tart pairing names it as the classic)"
+		},
+		{
+			"target": "wine:Château Climens Barsac Premier Cru Classé 2010",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Climens Barsac Premier Cru Classé 2010 is Sémillon alone, from a plateau of red sand over limestone in Barsac, one of the five communes of Sauternes. Grapes shrivelled by noble rot are picked by hand in several passes, and the wine is aged in oak. At sixteen years: candied lemon, apricot, honey and saffron, rich, with the freshness Barsac is known for. It is the classic with the Lemon Tart, its citrus meeting the yuzu and meringue. We pour it at 48 to 52°F in a small white wine glass, from an ice bucket. Ranked a first growth in 1855, it is called the Lord of Barsac.",
+			"reason": "Five-star card edition, sale-10 (Dessert and fortified): the description was rewritten because it opened on the house or the place rather than the wine as the list prints it (it began on the commune of Barsac); it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record’s serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-white-sweet-2026-10-10.md section 5 (items 1 to 4: a first growth of Barsac in 1855, all Sémillon on a plateau of red sand over limestone, the Lord of Barsac, hand picked in successive passes for noble rot, aged in oak, Barsac one of the five Sauternes communes); the wine record (profile, serve; the Lemon Tart pairing names it as the classic)"
+		},
+		{
+			"target": "wine:Inniskillin Cabernet Franc Icewine Niagara Peninsula 2015",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Pressed from Cabernet Franc frozen on the vine, this pale ruby icewine tastes of strawberry, raspberry, red cherry and rhubarb, intensely sweet and bright. It is the classic with the Blackberry Trifle, poured by the bottle.",
+			"reason": "Five-star card edition, sale-10 (Dessert and fortified): the two sentence sale, a concrete hook then the table and the step; it names the Blackberry Trifle as the classic, the tier each dish's pairing gives this wine, and no dish whose pairing does not name it; a 750 ml bottle with no glass price, so by the bottle",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 11 (items 1, 2, 5 and 6: the 1989 Vidal Icewine won the Grand Prix d’Honneur at Vinexpo in 1991; VQA Icewine grapes frozen naturally on the vine at minus eight degrees Celsius or colder and pressed frozen; the lakes temper the climate; only a few drops of very sweet juice run out); the wine record (profile, serve; the Blackberry Trifle pairing names it as the classic)"
+		},
+		{
+			"target": "wine:Inniskillin Cabernet Franc Icewine Niagara Peninsula 2015",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Inniskillin Cabernet Franc Icewine Niagara Peninsula 2015 is a red icewine from Ontario, Canada, where the lakes temper the climate. The grapes freeze naturally on the vine, at minus eight degrees Celsius or colder, and are pressed frozen, leaving the water as ice and only a few drops of very sweet juice. Pale ruby: strawberry, raspberry, rhubarb and red cherry, intensely sweet, with vivid acidity. It is the classic with the Blackberry Trifle, an echo of its blackberry curd. We pour it at 46 to 50°F in a small dessert glass, from an ice bucket. Inniskillin’s Vidal Icewine 1989 won the Grand Prix d’Honneur at Vinexpo in 1991.",
+			"reason": "Five-star card edition, sale-10 (Dessert and fortified): the description was rewritten because it opened on the house or the place rather than the wine as the list prints it (it began on the winery’s founding); it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record’s serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 11 (items 1, 2, 5 and 6: the 1989 Vidal Icewine won the Grand Prix d’Honneur at Vinexpo in 1991; VQA Icewine grapes frozen naturally on the vine at minus eight degrees Celsius or colder and pressed frozen; the lakes temper the climate; only a few drops of very sweet juice run out); the wine record (profile, serve; the Blackberry Trifle pairing names it as the classic)"
+		}
+	]
+}
