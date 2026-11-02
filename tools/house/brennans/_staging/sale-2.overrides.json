@@ -127,6 +127,134 @@
    "value": "The Billecart-Salmon Réserve Brut is the family house's Brut, from Mareuil-sur-Aÿ in the Vallée de la Marne: Meunier, Chardonnay and Pinot Noir, blended with reserve wines from older harvests. It is fresh and delicate rather than heavy, with pear, citrus, a light brioche and a clean finish. It is our classic bottle for the Steak Tartare with Rye, its acidity cutting the yolk and the raw beef. We pour it at 43 to 46°F in a tulip or white-wine glass, turning the bottle as we ease the cork. The house was founded in 1818 on the marriage of Nicolas François Billecart and Elisabeth Salmon.",
    "reason": "Five-star review of the description: it opened on the founding, not the wine, and named the Crawfish Meat Pies, the Turtle Soup and the Eggs Hussarde, none of whose pairings names this wine; it now opens on the wine, names only the Steak Tartare with Rye as its classic bottle, and keeps the sourced story",
    "source": "the pack record w-cwd97m10 (lines.s45, profile, serve, offeredWith); the Steak Tartare with Rye pairing (bottles.classic) and its description; research/producers-cellar-champagne-menu-2026-10-10.md section 7 (1818, Nicolas François Billecart and Elisabeth Salmon, the 80th anniversary Sous Bois magnum)"
+  },
+  {
+   "target": "wine:Pierre Paillard Grand Cru ‘Les Parcelles XVIII’ Extra Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Les Parcelles is Grand Cru Champagne from Bouzy, mostly Pinot Noir and Extra Brut: very dry, with red apple, citrus peel, chalk and real body. It is the classic bottle for the Louisiana Oysters, standing up to the barbecue sauce, by the bottle.",
+   "reason": "The sale: the hook is the Grand Cru Pinot Noir and its very dry taste; the table is the one dish whose bottle tiers name it, said as the classic, and the step is the bottle",
+   "source": "the pack record w-52frrp7w (Pierre Paillard Les Parcelles XVIII; bottle only, 750 ml; profile; offeredWith Louisiana Oysters, classic); the dish description (New Orleans BBQ sauce)"
+  },
+  {
+   "target": "wine:Pierre Paillard Grand Cru ‘Les Parcelles XVIII’ Extra Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Pierre Paillard Les Parcelles XVIII is a Grand Cru Extra Brut from Bouzy: about 70 percent Pinot Noir and 30 percent Chardonnay from the family's own vines, farmed organically. The XVIII names the 2018 harvest it is built on, with reserve wine and a minimal dosage. Very dry, it tastes of red apple, citrus peel and chalk, with real Pinot Noir body. It is our classic bottle for the Louisiana Oysters, that body meeting the barbecue sauce. We pour it at 45 to 48°F in a tulip or white-wine glass, so the Pinot Noir shows. The family has made wine in Bouzy for more than two hundred years.",
+   "reason": "Five-star review of the description: it opened on the family, not the wine, and named the Louisiana Crab Claws and the Turtle Soup, neither of whose pairings names this wine; it now opens on the wine, names only the Louisiana Oysters as its classic bottle, names nobody living, and keeps every sourced fact",
+   "source": "the pack record w-52frrp7w (lines.s45, profile, serve, offeredWith); the Louisiana Oysters pairing (bottles.classic) and its description; research/producers-cellar-champagne-growers-2026-10-10.md section 2 (more than 200 years in Bouzy, organic, 70 Pinot Noir and 30 Chardonnay, the 2018 base with reserve wine, minimal dosage)"
+  },
+  {
+   "target": "wine:Louis Roederer ‘Collection 244’ Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Collection 244 is Louis Roederer's Brut from Reims, built on the 2019 harvest with a perpetual reserve: fresh and fine, with citrus, white peach and a light pastry note. With fried seafood and hot sauce, offer it by the bottle.",
+   "reason": "The sale: the hook is the numbered Brut and its fresh taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the kind of plate its goesWith names (fried seafood and hot sauce), never a printed dish, and the step is the bottle",
+   "source": "the pack record w-zlepo7bf (Louis Roederer Collection 244; bottle only, 750 ml; profile; goesWith fried seafood and hot sauce)"
+  },
+  {
+   "target": "wine:Louis Roederer ‘Collection 244’ Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Louis Roederer Collection 244 is the Brut of the family house in Reims, Chardonnay, Pinot Noir and Meunier. The number counts the house's harvests: 244 is built on 2019, its 244th, with wines from a perpetual reserve begun in 2012 and a little oak-aged reserve wine. It is fresh and fine, with citrus, white peach, a light pastry note and a crisp, long finish. Its bubbles cut fried seafood and cool hot sauce. We pour it at 43 to 46°F in a tulip or white-wine glass, turning the bottle as we ease the cork. The same house created Cristal for Tsar Alexander II in 1876.",
+   "reason": "Five-star review of the description: it opened on the house and Cristal, not the wine, and named the Popcorn Shrimp, the Louisiana Crab Claws and the Creole Caesar, none of whose pairings names this wine; it now opens on the wine, speaks of the plates its goesWith names and keeps the sourced story",
+   "source": "the pack record w-zlepo7bf (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-houses-2026-10-10.md section 1 (Cristal for Tsar Alexander II in 1876, 244 the 2019 harvest and the house's 244th, the perpetual reserve of 2012, the oak-aged reserve wine)"
+  },
+  {
+   "target": "wine:Chartogne-Taillet Rosé Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "The Chartogne-Taillet rosé is grower Champagne from Merfy, north-west of Reims: dry, with red currant, wild strawberry and a savoury, chalky finish. It is the classic bottle for the Steak Tartare Cannoli, real red fruit for the raw beef, by the bottle.",
+   "reason": "The sale: the hook is the grower rosé and its taste; the table is the one dish whose bottle tiers name it, said as the classic, and the step is the bottle",
+   "source": "the pack record w-ok86r5na (Chartogne-Taillet Rosé Brut; bottle only, 750 ml; profile; offeredWith Steak Tartare Cannoli, classic)"
+  },
+  {
+   "target": "wine:Chartogne-Taillet Rosé Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Chartogne-Taillet Rosé Brut is a grower Champagne from Merfy, on the Massif de Saint-Thierry north-west of Reims, where the vines grow in sand over chalk. It is Chardonnay and Pinot Noir, given its colour by a little red wine made from Merfy Pinot Noir. It is dry, with red currant, wild strawberry and a savoury, chalky finish. It is our classic bottle for the Steak Tartare Cannoli, its red fruit for the raw beef, its freshness for the yolk. We pour it at 45 to 48°F in a tulip or white-wine glass, in two stages. An ancestor, Fiacre Taillet, kept a register of his vines.",
+   "reason": "Five-star review of the description: it opened on the grower, not the wine, and named the Poussin à la Moutarde and the Cheese Board, neither of whose pairings names this wine; it now opens on the wine, names the grapes, names only the Steak Tartare Cannoli as its classic bottle, and keeps the sourced story",
+   "source": "the pack record w-ok86r5na (lines.s45, profile, serve, offeredWith); the Steak Tartare Cannoli pairing (bottles.classic: red fruit for beef, freshness for yolk and bottarga); research/producers-cellar-champagne-growers-2026-10-10.md section 3 (Merfy, sand over chalk, Pinot Noir and Chardonnay with a little red wine, Fiacre Taillet's register)"
+  },
+  {
+   "target": "wine:Larmandier-Bernier Premier Cru ‘Longitude’ Extra Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Longitude is all Chardonnay from Larmandier-Bernier on the Côte des Blancs, Extra Brut and bone dry: lemon, green apple, chalk and a salty finish. It is the classic bottle for the Grand Isle Jewel Oysters, chalk for raw brine, by the bottle.",
+   "reason": "The sale: the hook is the bone dry Blanc de Blancs and its taste; the table is the one dish whose bottle tiers name it, said as the classic, and the step is the bottle",
+   "source": "the pack record w-t9fmw7g4 (Larmandier-Bernier Longitude; bottle only, 750 ml; profile; offeredWith Grand Isle Jewel Oysters, classic)"
+  },
+  {
+   "target": "wine:Larmandier-Bernier Premier Cru ‘Longitude’ Extra Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Larmandier-Bernier Longitude is a Premier Cru Blanc de Blancs, all Chardonnay from four villages of the Côte des Blancs, Vertus, Oger, Avize and Cramant, which lie close to one line of longitude. About 40 percent of each blend comes from a perpetual reserve begun in 2004. Extra Brut, it is bone dry: lemon, green apple, chalk and a long, saline finish. It is our classic bottle for the Grand Isle Jewel Oysters, matching the brine and the mignonette. We pour it at 45 to 48°F in a tulip or white-wine glass. The family grower is based in Vertus and has farmed its whole estate biodynamically since 1999.",
+   "reason": "Five-star review of the description: it opened on the grower, not the wine, and named the Louisiana Crab Claws, the Creole Caesar and the Redfish Véronique, none of whose pairings names this wine; it now opens on the wine, names only the Grand Isle Jewel Oysters as its classic bottle and keeps every sourced fact",
+   "source": "the pack record w-t9fmw7g4 (lines.s45, profile, serve, offeredWith); the Grand Isle Jewel Oysters pairing (bottles.classic) and its description; research/producers-cellar-champagne-growers-2026-10-10.md section 4 (Vertus, Oger, Avize and Cramant near the fourth meridian, 40 percent perpetual reserve begun in 2004, biodynamic since 1999)"
+  },
+  {
+   "target": "wine:Piper-Heidsieck ‘Brennan’s Essential’ Extra Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Brennan's Essential is our own house Champagne, an Extra Brut from Piper-Heidsieck in Reims: very dry, with citrus, orchard fruit, brioche and a chalky finish. It is the classic bottle for the Eggs Hussarde, keeping the hollandaise light, by the bottle.",
+   "reason": "The sale: the hook is the house label and its very dry taste; the table is the one dish whose bottle tiers name this bottle, said as the classic, and the step is the bottle (the glass is its own record)",
+   "source": "the pack record w-8t8kp5ey (Piper-Heidsieck Brennan's Essential, the bottle; 750 ml; profile; offeredWith Eggs Hussarde, classic)"
+  },
+  {
+   "target": "wine:Piper-Heidsieck ‘Brennan’s Essential’ Extra Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Piper-Heidsieck Brennan's Essential is our house Champagne by the bottle, an Extra Brut made by Piper-Heidsieck in Reims and labelled for us, the same wine we pour by the glass. Its bubbles come from a second fermentation in the bottle, and as an Extra Brut it is very dry: citrus, orchard fruit, brioche and a firm, chalky finish. It is our classic bottle for the Eggs Hussarde, cutting the hollandaise and the yolk, its toastiness suiting the coffee-cured bacon. We pour it at 43 to 46°F in a tulip or white-wine glass, turning the bottle as we ease the cork. Florens-Louis Heidsieck founded the house in Reims in 1785.",
+   "reason": "Five-star review of the description: it named the Turtle Soup and the Grand Isle Jewel Oysters, neither of whose pairings names this bottle; it now names only the Eggs Hussarde as its classic bottle, with the bacon from the tier's own why, and keeps every fact; no grape is named because the record leaves the private label's blend unconfirmed",
+   "source": "the pack record w-8t8kp5ey (lines.s45, profile, serve, offeredWith); the Eggs Hussarde pairing (bottles.classic: cuts hollandaise and yolk, toastiness for the coffee-cured bacon); research/producers-cellar-champagne-menu-2026-10-10.md section 1 (Florens-Louis Heidsieck, Reims, 1785)"
+  },
+  {
+   "target": "wine:Veuve Clicquot ‘Yellow Label’ Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Yellow Label is Veuve Clicquot's Brut from Reims, Pinot Noir-led and generous: ripe apple, citrus and brioche, round, with a soft, dry finish. For a toast or a celebration at brunch, offer it by the bottle.",
+   "reason": "The sale: the hook is the famous label and its taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the occasion its goesWith names (celebrations and brunch), never a printed dish, and the step is the bottle",
+   "source": "the pack record w-56slu7c1 (Veuve Clicquot Yellow Label; bottle only, 750 ml; profile; goesWith celebrations and brunch)"
+  },
+  {
+   "target": "wine:Veuve Clicquot ‘Yellow Label’ Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Veuve Clicquot Yellow Label is the house Brut of a great Reims house: Pinot Noir-led, with Chardonnay, Meunier and a large share of reserve wines. It is generous and toasty: ripe apple, citrus, brioche and a round, fruity body, dry, with a soft finish. It suits a toast, a celebration and brunch. We pour it at 43 to 46°F in a tulip or white-wine glass, turning the bottle as we ease the cork, the yellow label towards the host. Veuve means widow: Barbe-Nicole Clicquot took over the house at 27, when her husband died in 1805, and the house credits her with the riddling table of 1816.",
+   "reason": "Five-star review of the description: it opened on the widow, not the wine, and named the Eggs Hussarde, the Turtle Soup, the Crawfish Meat Pies and the Cheese Board, none of whose pairings names this wine; it now opens on the wine, speaks of the occasions its goesWith names and keeps the sourced story",
+   "source": "the pack record w-56slu7c1 (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-houses-2026-10-10.md section 2 (Barbe-Nicole Clicquot at 27 in 1805, the riddling table of 1816, the reserve wines)"
+  },
+  {
+   "target": "wine:Moët & Chandon ‘Nectar Imperial’ Rosé Demi Sec NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Nectar Imperial Rosé is Moët & Chandon's gently sweet pink Champagne: ripe strawberry, raspberry and a creamy sweetness lifted by fine bubbles. It is the classic bottle for the Framboise French Toast, raspberries and cream in a glass, by the bottle.",
+   "reason": "The sale: the hook is the sweet rosé and its taste; the table is the one dish whose bottle tiers name it, said as the classic, and the step is the bottle",
+   "source": "the pack record w-2yvmmtl2 (Moët & Chandon Nectar Imperial Rosé; bottle only, 750 ml; profile; offeredWith Framboise French Toast, classic)"
+  },
+  {
+   "target": "wine:Moët & Chandon ‘Nectar Imperial’ Rosé Demi Sec NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Moët & Chandon Nectar Imperial Rosé is a Demi-Sec rosé Champagne from Épernay, Pinot Noir-led with Meunier and Chardonnay, part of the Pinot Noir made as red wine for its colour. It is finished with far more sugar than a Brut, so it is gently sweet: ripe strawberry, raspberry and a creamy sweetness, with bubbles that keep it from feeling heavy. It is our classic bottle for the Framboise French Toast, its red berries for the raspberries and its bubbles to lift the mascarpone mousse. We pour it well chilled, 43 to 46°F, in a flute or tulip. The house was founded in Épernay in 1743, and Imperial honours Napoleon.",
+   "reason": "Five-star review of the description: it opened on the house, not the wine, and named the Blackberry Trifle and the Baked Apple, neither of whose pairings names this wine; it now opens on the wine, names only the Framboise French Toast as its classic bottle and keeps the sourced story",
+   "source": "the pack record w-2yvmmtl2 (lines.s45, profile, serve, offeredWith); the Framboise French Toast pairing (bottles.classic) and its description; research/producers-cellar-champagne-menu-2026-10-10.md section 10 (1743, Napoleon, about 10 percent of the Pinot Noir vinified as red, 45 g/L in the demi-sec band)"
+  },
+  {
+   "target": "wine:Charles Heidsieck ‘Réserve’ Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Charles Heidsieck Réserve is a rich, toasty Brut from Reims, deep in reserve wines: roasted nuts, brioche, dried apricot and a creamy texture. With roasted, nutty flavours at the table, offer it by the bottle.",
+   "reason": "The sale: the hook is the reserve-rich Brut and its toasty taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the kind of plate its goesWith names (roasted and nutty flavours), never a printed dish, and the step is the bottle",
+   "source": "the pack record w-w6m1inh5 (Charles Heidsieck Réserve; bottle only, 750 ml; profile; goesWith roasted and nutty flavours)"
+  },
+  {
+   "target": "wine:Charles Heidsieck ‘Réserve’ Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Charles Heidsieck Réserve Brut is a Reims Champagne of Pinot Noir, Chardonnay and Meunier, roughly a third of each, with about 40 percent reserve wines, aged in the chalk cellars dug beneath the city and at least three years on its lees. It is rich and toasty: roasted nuts, brioche, dried apricot and a creamy texture, dry, with a long finish. Its toastiness suits roasted and nutty flavours. We pour it at 45 to 48°F in a tulip or white-wine glass, a touch warmer so its richness shows. Its founder, Charles-Camille Heidsieck, called Champagne Charlie, was arrested in Union-occupied New Orleans in 1862 and held at Fort Jackson.",
+   "reason": "Five-star review of the description: it opened on the founder, not the wine, and named the Creole Spiced Nuts, the Turtle Soup, the Cheese Board and the Pecan Gulf Fish, none of whose pairings names this wine; it now opens on the wine, speaks of the flavours its goesWith names and carries the founder's New Orleans story",
+   "source": "the pack record w-w6m1inh5 (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-houses-2026-10-10.md section 3 (Champagne Charlie, arrested in Union-occupied New Orleans in 1862 and held at Fort Jackson, the crayères, about a third each grape, 40 percent reserve wines, at least three years on the lees)"
   }
  ]
 }
