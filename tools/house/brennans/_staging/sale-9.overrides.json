@@ -431,6 +431,86 @@
 			"value": "Caymus Special Selection Napa Valley Cabernet Sauvignon 2018 is the winery’s top Cabernet Sauvignon, made in some years from selected lots and aged longer in oak than the Napa Valley bottling. At eight years it is opulent: black cherry, blackberry, cocoa, vanilla and sweet spice, with velvety tannin; it tastes rich from ripe fruit and oak, yet it is dry. It wants rich beef, prime steaks and short rib. We pour it at 60 to 64°F in a large Bordeaux glass, decanted thirty minutes ahead. The winery was founded in Rutherford in 1972, and its ripe, plush style is the one guests ask for by name.",
 			"reason": "Five-star card edition, sale-9 (California Cabernet and Napa): the description was rewritten because it opened on the winery and its family rather than the wine as the list prints it, named the Roasted Chateaubriand, whose pairing does not name this wine, and told a land grant story the research holds unsettled; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
 			"source": "research/producers-cellar-napa-icons-2026-10-10.md section 9 (items 1, 3 and 5 and the Brennan’s link: founded 1972 in Rutherford; Special Selection the top Cabernet, made in some years from the best lots, aged longer in oak than the Napa Valley bottling; a dry wine with ripe fruit; the Napa name guests ask for); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Dominus Estate Napa Valley 2014",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Dominus is Napa grown and Bordeaux minded: Cabernet Sauvignon with Cabernet Franc and Petit Verdot, blackcurrant, graphite, tobacco and dried herbs, savoury rather than sweet. For roast beef or lamb at a quiet celebration, it comes by the bottle, decanted forty-five minutes ahead.",
+			"reason": "Five-star card edition, sale-9 (California Cabernet and Napa): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the plates its goesWith names (roast beef and lamb, a quiet celebration) and leaves out the Roasted Chateaubriand; a 750 ml bottle with no glass price, so by the bottle, with the record’s decanting",
+			"source": "research/producers-cellar-napa-icons-2026-10-10.md section 6 (items 1, 3, 4 and 6: founded 1983; the Napanook vineyard at Yountville, a gravelly bench planted in the nineteenth century; Bordeaux restraint, dry and dusty with no sweetness on the finish; Cabernet Sauvignon with Cabernet Franc and Petit Verdot; the Moueix house of Libourne, owners of Trotanoy, whose 1946 is on the list); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Dominus Estate Napa Valley 2014",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Dominus Estate Napa Valley 2014 blends Cabernet Sauvignon, Cabernet Franc and Petit Verdot from one vineyard, Napanook, a gravelly bench at Yountville planted in the nineteenth century. It is made with Bordeaux restraint, dry and dusty, with no sweetness on the finish. At twelve years: blackcurrant, graphite, tobacco, dried herbs and earth, with firm, fine tannin and fresh acidity. It suits roast beef and lamb with savoury sides at a quiet celebration. We pour it at 60 to 64°F in a large Bordeaux glass, decanted forty-five minutes ahead. First made in 1983 by the Moueix house of Libourne, it shares a family with our 1946 Trotanoy.",
+			"reason": "Five-star card edition, sale-9 (California Cabernet and Napa): the description was rewritten because it opened on the estate and named its founder, who is living, rather than opening on the wine as the list prints it, and it named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-napa-icons-2026-10-10.md section 6 (items 1, 3, 4 and 6: founded 1983; the Napanook vineyard at Yountville, a gravelly bench planted in the nineteenth century; Bordeaux restraint, dry and dusty with no sweetness on the finish; Cabernet Sauvignon with Cabernet Franc and Petit Verdot; the Moueix house of Libourne, owners of Trotanoy, whose 1946 is on the list); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Heitz Cellar ‘Martha’s Vineyard’ Napa Valley 2009",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Martha’s Vineyard is Oakville Cabernet with a signature lift of mint and eucalyptus, at seventeen years: blackcurrant, cedar and earth, the tannin softened. For roast beef or rack of lamb, it comes by the bottle, stood upright a day and decanted off its sediment.",
+			"reason": "Five-star card edition, sale-9 (California Cabernet and Napa): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the plates its goesWith names (roast beef, rack of lamb, a long, slow dinner) and leaves out the Roasted Chateaubriand; a 750 ml bottle with no glass price, so by the bottle, with the record’s day upright and decanting",
+			"source": "research/producers-cellar-napa-icons-2026-10-10.md section 7 (items 1, 2, 3 and 5: the St. Helena cellar, founded 1961, held its vineyard designated Cabernet back for years before release; Martha’s Vineyard in Oakville bottled under its own name from the 1966 vintage, among the first vineyard designated Napa wines; the mint and eucalyptus lift); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Heitz Cellar ‘Martha’s Vineyard’ Napa Valley 2009",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Heitz Cellar Martha’s Vineyard Napa Valley 2009 is Cabernet Sauvignon from a single vineyard in Oakville, bottled under its own name by the St. Helena cellar and held back for years before release. At seventeen years it shows blackcurrant, cedar and earth with the vineyard’s signature mint and eucalyptus, the tannin softened. It suits roast beef and lamb with herbs over a long, slow dinner. We stand it upright a day ahead, decant it thirty minutes ahead leaving the sediment, and pour it at 60 to 64°F in a large Bordeaux glass. From the 1966 vintage it was among the first California Cabernets named for a vineyard.",
+			"reason": "Five-star card edition, sale-9 (California Cabernet and Napa): the description was rewritten because it opened on the founders rather than the wine as the list prints it, named the vineyard’s owners, and named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-napa-icons-2026-10-10.md section 7 (items 1, 2, 3 and 5: the St. Helena cellar, founded 1961, held its vineyard designated Cabernet back for years before release; Martha’s Vineyard in Oakville bottled under its own name from the 1966 vintage, among the first vineyard designated Napa wines; the mint and eucalyptus lift); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Opus One Napa Valley 2010",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Opus One joins Napa fruit and Bordeaux craft in one Oakville blend, at sixteen: blackcurrant, black cherry, cedar, tobacco and cocoa, silky and long. For beef at a celebration, prime steak or lamb, it comes by the bottle, decanted thirty to forty-five minutes ahead.",
+			"reason": "Five-star card edition, sale-9 (California Cabernet and Napa): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the plates its goesWith names (beef at a celebration, prime steak, lamb) and leaves out the Roasted Chateaubriand; a 750 ml bottle with no glass price, so by the bottle, with the record’s decanting",
+			"source": "research/producers-cellar-napa-icons-2026-10-10.md section 3 (items 1, 2 and 6: founded 1979 by Robert Mondavi and Baron Philippe de Rothschild of Château Mouton Rothschild, the first partnership of its kind between the two regions; estate vineyards at Oakville adjoining the historic To Kalon vineyard; Bordeaux proportion applied to Napa fruit, polish ahead of power; a Cabernet Sauvignon led blend); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Opus One Napa Valley 2010",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Opus One Napa Valley 2010 is a Cabernet Sauvignon led blend with the other Bordeaux grapes from estate vineyards at Oakville, beside the historic To Kalon vineyard, made in Bordeaux proportion with polish ahead of power. At sixteen years: blackcurrant, black cherry, cedar, tobacco and cocoa, with silky tannin and a long finish. It suits beef at a celebration, prime steak and lamb. We pour it at 60 to 64°F in a large Bordeaux glass, decanted thirty to forty-five minutes ahead. It began with the 1979 vintage as a partnership of Robert Mondavi and Baron Philippe de Rothschild of Château Mouton Rothschild, the first between Napa and Bordeaux.",
+			"reason": "Five-star card edition, sale-9 (California Cabernet and Napa): the description was rewritten because it opened on the founding partnership rather than the wine as the list prints it, and it named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-napa-icons-2026-10-10.md section 3 (items 1, 2 and 6: founded 1979 by Robert Mondavi and Baron Philippe de Rothschild of Château Mouton Rothschild, the first partnership of its kind between the two regions; estate vineyards at Oakville adjoining the historic To Kalon vineyard; Bordeaux proportion applied to Napa fruit, polish ahead of power; a Cabernet Sauvignon led blend); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Harlan Estate Oakville 2006",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Twenty years on, Harlan Estate is dense yet silky hillside Cabernet from above Oakville: blackcurrant, black cherry, cedar, graphite, tobacco and violet. For a great steak at a great occasion, it comes by the bottle, stood upright and decanted by the sommelier just before pouring.",
+			"reason": "Five-star card edition, sale-9 (California Cabernet and Napa): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the plate its goesWith names (a great steak at a great occasion) and leaves out the Roasted Chateaubriand; a 750 ml bottle with no glass price, so by the bottle, with the record’s serve by the sommelier",
+			"source": "research/producers-cellar-napa-icons-2026-10-10.md section 4 (items 1, 4 and 5 and the Brennan’s link: hillside vineyards in the western hills above Oakville planted off the valley floor; aimed at a California first growth; a Cabernet Sauvignon led Bordeaux blend aged in new French oak; the Harlan vertical Wine Spectator named in our cellar, Grand Awards 2021); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Harlan Estate Oakville 2006",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Harlan Estate Oakville 2006 is a Cabernet Sauvignon led blend from hillside vineyards in the western hills above Oakville, planted off the valley floor on the model of a Bordeaux first growth, and aged in new French oak. At twenty years: blackcurrant, black cherry, cedar, graphite, tobacco and violet, dense yet silky, with a very long finish. It wants a great steak at a great occasion, with little else to distract. The sommelier stands it upright, decants it off the sediment just before pouring and serves it at 60 to 64°F in a large Bordeaux glass. It belongs to the vertical Wine Spectator named in our cellar in 2021.",
+			"reason": "Five-star card edition, sale-9 (California Cabernet and Napa): the description was rewritten because it opened on the founder, who is living, rather than on the wine as the list prints it, and it named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-napa-icons-2026-10-10.md section 4 (items 1, 4 and 5 and the Brennan’s link: hillside vineyards in the western hills above Oakville planted off the valley floor; aimed at a California first growth; a Cabernet Sauvignon led Bordeaux blend aged in new French oak; the Harlan vertical Wine Spectator named in our cellar, Grand Awards 2021); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Screaming Eagle ‘Second Flight’ Napa Valley 2012",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Second Flight is the second wine of the Oakville cult estate: cassis, plum, black olive and spice, plush yet savoury. For a great steak at a grand celebration, it comes by the bottle, decanted thirty to forty-five minutes ahead.",
+			"reason": "Five-star card edition, sale-9 (California Cabernet and Napa): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the plate its goesWith names (a great steak at a grand celebration) and leaves out the Roasted Chateaubriand; a 750 ml bottle with no glass price, so by the bottle, with the record’s decanting",
+			"source": "research/producers-cellar-napa-icons-2026-10-10.md section 5 (items 1, 2 and 3 and the expert line: a small Oakville property on the eastern side of the valley floor; the 1992 debut; Napa’s cult era dates from these bottlings; Second Flight renamed The Flight from the 2015 vintage; a second wine made by the same team from lots that do not go into the estate wine); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Screaming Eagle ‘Second Flight’ Napa Valley 2012",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Screaming Eagle Second Flight Napa Valley 2012 is the second wine of a small estate on the eastern side of the Oakville valley floor: Cabernet Sauvignon, Merlot and Cabernet Franc from lots that do not go into the estate wine. At fourteen years: cassis, plum, black olive, spice and earth, plush yet savoury, with fine tannin. It suits a great steak at a grand celebration. We pour it at 60 to 64°F in a large Bordeaux glass, decanted thirty to forty-five minutes ahead, leaving any sediment. The estate’s 1992 debut opened Napa’s cult era, and the second wine became The Flight from the 2015 vintage.",
+			"reason": "Five-star card edition, sale-9 (California Cabernet and Napa): the description was rewritten because it opened on the estate and named its first owner, rather than opening on the wine as the list prints it, and it named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-napa-icons-2026-10-10.md section 5 (items 1, 2 and 3 and the expert line: a small Oakville property on the eastern side of the valley floor; the 1992 debut; Napa’s cult era dates from these bottlings; Second Flight renamed The Flight from the 2015 vintage; a second wine made by the same team from lots that do not go into the estate wine); the wine record (profile, goesWith, serve; no dish pairing names it)"
 		}
 	]
 }
