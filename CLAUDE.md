@@ -1,5 +1,13 @@
 # The World Table
 
+## Personal use only, 2 November 2026
+
+The owner's rule: Outside Of Time, the World Table with it, is the owner's own
+study tool, never sold and used by the owner alone. It carries no privacy
+policy, terms, pricing page, legal footer, disclaimer, paywall, subscription,
+account or permission gating, and none may be added, whatever the reason given.
+The Table's Privacy and Terms links left its footer and More page in 3ab600b.
+
 ## The Professional Pass, 27 October 2026
 
 `teaching-folios-professional-pass.ts` adds four readiness studies and sixteen
