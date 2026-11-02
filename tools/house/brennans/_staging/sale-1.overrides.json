@@ -1,0 +1,172 @@
+{
+ "entries": [
+  {
+   "target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Our house Champagne is an Extra Brut from Piper-Heidsieck labelled for Brennan's, very dry, with citrus, brioche and fine bubbles. It is our first pick with the Grand Isle Jewel Oysters, the Turtle Soup and the Eggs Hussarde, so start the table by the glass.",
+   "reason": "The sale (five-star card edition): the hook is the house label and its very dry taste; the table names the three dishes whose own first pick is this wine, and the step is the glass the list prints",
+   "source": "the pack record w-dbz9e960 (glass $30.00; profile Extra Brut, very dry, citrus, orchard fruit, brioche; firstPickIds Grand Isle Jewel Oysters, Turtle Soup, Eggs Hussarde; kept: labelled for us)"
+  },
+  {
+   "target": "wine:Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Brennan's Essential is our house Champagne, an Extra Brut from Piper-Heidsieck, labelled for us. Its bubbles come from a second fermentation in the bottle, and it's very dry: citrus, orchard fruit, brioche and a firm, chalky finish. That dryness and fine bubbles cut rich, salty food, so it's our first pick with the Grand Isle Jewel Oysters, the Eggs Hussarde and the Turtle Soup, and the second choice with the Louisiana Oysters, the Creole Caesar and the Crab & Corn Omelette. We pour it at 43 to 46°F in a tulip, easing the cork out with a quiet sigh. Piper-Heidsieck was founded in Reims in 1785.",
+   "reason": "Five-star review of the description: it shared a run of eight words with the twenty (with the Turtle Soup, the Grand Isle Jewel Oysters); the dishes are reordered and the second choices named as such, every fact kept; no grape is named because the record leaves the private label's blend unconfirmed",
+   "source": "the pack record w-dbz9e960 (lines.s45 and s20, profile, serve, firstPickIds, secondFor); research/producers-cellar-champagne-menu-2026-10-10.md (Piper-Heidsieck, Reims, 1785)"
+  },
+  {
+   "target": "wine:Pierre Sparr Brut Rosé Crémant d’Alsace NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Pink bubbles made like Champagne from all Pinot Noir, the Pierre Sparr pours dry, with strawberry and red currant over a creamy mousse. It is our first pick with the Steak Tartare Cannoli and a festive way to open brunch, by the glass.",
+   "reason": "The sale: the hook is the pink, all Pinot Noir Crémant and its taste; the table is the one dish whose first pick it is, and the step the glass",
+   "source": "the pack record w-rygz99uh (glass $18; profile; parts; firstPickIds Steak Tartare Cannoli; goesWith brunch celebrations)"
+  },
+  {
+   "target": "wine:Pierre Sparr Brut Rosé Crémant d’Alsace NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Pierre Sparr is a Crémant d'Alsace rosé, which must be all Pinot Noir. It's made like Champagne, with the second fermentation in the bottle and at least 18 months on its lees: dry, with strawberry, red currant and a creamy mousse. Red fruit for raw beef and bubbles for the crisp shell make it our first pick with the Steak Tartare Cannoli, and the second choice with the Steak Tartare with Rye, the Poussin à la Moutarde, the Eggs Sardou and the Eggs Owen. We pour it at 43 to 46°F in a flute, in two stages. Sparr dates its family roots to 1680.",
+   "reason": "Five-star review of the description: it shared a run of eight words with the twenty (strawberry and red currant, dry, with a creamy); the taste is reworded and the second choices named as such, every fact kept",
+   "source": "the pack record w-rygz99uh (lines.s45, profile, serve, firstPickIds, secondFor); research/producers-cellar-champagne-menu-2026-10-10.md (Pierre Sparr, 1680, the time on the lees)"
+  },
+  {
+   "target": "wine:Rare Brut 2012 (Coravin)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Rare Brut is a prestige vintage Champagne, Chardonnay-led, with white peach, candied citrus and toasted almond over a long, fine mousse. For a celebration or raw oysters, offer it as the step up from the house Champagne, the Coravin pour by the glass.",
+   "reason": "The sale: no dish's pairing names this wine, so the table is the kind of occasion and plate its goesWith names, never a printed dish; the step is the Coravin pour the serve and the glass price print",
+   "source": "the pack record w-t1pktzym (glass $75; serve Coravin preserved; profile; goesWith celebrations, raw oysters, crab claws; why the step up from the house Champagne)"
+  },
+  {
+   "target": "wine:Rare Brut 2012 (Coravin)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Rare Brut is a prestige vintage Champagne, first made in 1976 at Piper-Heidsieck, declared only in exceptional years, and its own house since 2018. It's Chardonnay-led with Pinot Noir from grand and premier cru villages, a single harvest left long on its lees: golden, with white peach, candied citrus, toasted almond and a long, fine mousse. It's the step up from our house Champagne for a celebration, glorious with raw oysters and crab, or as a toast on its own. We pour it by the glass at 46 to 50°F in a tulip, from a bottle kept fresh under a Coravin Sparkling stopper.",
+   "reason": "Five-star review of the description: it named the Grand Isle Jewel Oysters, the Turtle Soup, the Eggs Hussarde and the Crab & Corn Omelette, none of whose pairings names this wine, and ran 103 words; it now speaks of raw oysters and crab from its goesWith, every sourced fact kept (108 words)",
+   "source": "the pack record w-t1pktzym (lines.s45, profile, parts, serve, goesWith); research/producers-cellar-champagne-menu-2026-10-10.md section 2 (Rare, 1976, its own house since 2018)"
+  },
+  {
+   "target": "wine:Charles Lafitte Brut Champagne NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Charles Lafitte is a crisp Brut Champagne of Chardonnay, Pinot Noir and Meunier, with fresh citrus, apple and a light toasty note. It is the 4 oz pour on the Traditional Breakfast with the Eggs Hussarde, and on the Dinner Tasting Menu with the Grand Isle Jewel Oysters.",
+   "reason": "The sale: a tasting pour with no glass or bottle price, so the step is the 4 oz pour on the two tastings, each with the course it is printed beside",
+   "source": "the pack record w-3yaps1gt (pours 4 oz; profile; tastings: Traditional Breakfast course 4, Eggs Hussarde; Dinner Tasting Menu course 1, Grand Isle Jewel Oysters)"
+  },
+  {
+   "target": "wine:Argyle Brut Willamette Valley 2022",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "The Argyle Brut is dry Oregon sparkling wine made the Champagne way, with shortbread, apple, citrus zest and a saline finish. Offer it with oysters and anything fried, an easy start with bubbles by the glass.",
+   "reason": "The sale: no dish's pairing names this wine, so the table is the salty and fried food its goesWith names; the step is the glass",
+   "source": "the pack record w-nb66m5o8 (glass $15.00; profile; goesWith salty and fried food, oysters)"
+  },
+  {
+   "target": "wine:Argyle Brut Willamette Valley 2022",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Argyle Brut is American sparkling wine from Oregon's Willamette Valley, the 2022: recent vintages blend Chardonnay and Pinot Noir with a little Meunier, made the Champagne way, with the second fermentation in the bottle. Brut means dry, and this one shows shortbread and apple, citrus zest and a saline finish. Dry bubbles cut through salt and fat, so it shines with oysters and anything fried. We pour it by the glass at 43 to 46°F in a flute, in two stages so the mousse doesn't overflow. Argyle opened in 1987 in Dundee, in a former hazelnut plant, with sparkling wine its signature from the first year.",
+   "reason": "Five-star review of the description: it named the Louisiana Oysters and, at Bubbles, the Popcorn Shrimp and the Fries with Pink Sauce, none of whose pairings names this wine, and shared a run of eight words with the twenty; it now speaks of oysters and fried food from its goesWith, every sourced fact kept",
+   "source": "the pack record w-nb66m5o8 (lines.s45, profile, serve, goesWith); research/producers-cellar-sparkling-elsewhere-2026-10-10.md (Argyle, Dundee, 1987, the hazelnut plant)"
+  },
+  {
+   "target": "wine:C.H. Berres ‘Old Vines’ Riesling 2022",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "The Berres is light Mosel Riesling from old vines, green apple, peach and slate with a touch of sweetness that cools spice. It is our first pick with the Seafood Gumbo, the Duck Confit Waffle and the Tuna Crudo, by the glass.",
+   "reason": "The sale: the hook is the off-dry Mosel taste that cools spice; the table is the three dishes whose first pick it is, and the step the glass",
+   "source": "the pack record w-5luyxb98 (glass $14; profile; firstPickIds Seafood Gumbo, Duck Confit Waffle, Tuna Crudo)"
+  },
+  {
+   "target": "wine:Pazo das Bruxas Albariño 2025",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Pazo das Bruxas is Albariño from Spain's Atlantic coast, unoaked, with lemon, white peach and a salty, sea-spray snap. It is our first pick with the Creole Caesar and the Gulf Fish en Papillote, so pour it for seafood by the glass.",
+   "reason": "The sale: the hook is the coastal, salty taste; the table is the two dishes whose first pick it is, and the step the glass",
+   "source": "the pack record w-naty4r19 (glass $16; profile; firstPickIds Creole Caesar, Gulf Fish en Papillote)"
+  },
+  {
+   "target": "wine:Pazo das Bruxas Albariño 2025",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Pazo das Bruxas is Albariño from Rías Baixas, on the Atlantic coast of Galicia in Spain, made by Familia Torres; the name means manor of the witches. It's unoaked and bottled young: lemon, white peach and a saline, almost sea-spray snap. That salty freshness makes it our first pick with the Gulf Fish en Papillote and the Creole Caesar, the still white with the Grand Isle Jewel Oysters, and the second choice with the Swordfish Grenobloise, the Fish Bouillabaisse and the Tuna Crudo. We pour it at 45 to 48°F in a white wine glass and keep it iced, because the freshness fades as it warms.",
+   "reason": "Five-star review of the description: it shared a run of eight words with the twenty (the Creole Caesar and the Gulf Fish en); the first picks are reordered and the second choices named as such, every fact kept",
+   "source": "the pack record w-naty4r19 (lines.s45, profile, parts, serve, firstPickIds, secondFor); research/producers-cellar-spain-2026-10-10.md section 1"
+  },
+  {
+   "target": "wine:Famille Durand Val de Loire Sauvignon Blanc 2024",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Famille Durand's Loire Sauvignon Blanc is bone dry and zippy, grapefruit, cut grass and flint, with acidity sharp enough to stand up to artichokes. It is our first pick with the Eggs Sardou, by the glass.",
+   "reason": "The sale: the hook is the dry, herbal taste that meets artichokes; the table is the one dish whose first pick it is, and the step the glass",
+   "source": "the pack record w-2zij5duw (glass $14; profile; goesWith; firstPickIds Eggs Sardou)"
+  },
+  {
+   "target": "wine:Famille Durand Val de Loire Sauvignon Blanc 2024",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Famille Durand's Val de Loire Sauvignon Blanc comes from the Loire Valley, where vineyards follow the river for hundreds of miles, a cool region of crisp, fresh wines. It's bone dry and zippy, grapefruit and cut grass with a flinty note. Artichokes flatten many wines or make them taste oddly sweet, but this sharp, herbal acidity stands up to them and meets the tarragon in the Choron, so it's our first pick with the Eggs Sardou, and the second choice with the Creole Tomato Tostada and the Louisiana Crab Claws. We pour it at 45 to 48°F in a white wine glass, from the ice bucket.",
+   "reason": "Five-star review of the description: it opened on the family rather than the wine as the list prints it, used most wines, and shared a run of eight words with the twenty (bone dry and zippy: grapefruit, cut grass and a); it now opens on the printed name, every fact kept; no cellar method is named because the record leaves the 2024's cellar work a lineup question",
+   "source": "the pack record w-2zij5duw (lines.s45, profile, parts, serve, firstPickIds, secondFor, serviceNote: the glass page prints Famille Durand, Val de Loire, 2024); research/producers-cellar-provence-loire-2026-10-10.md section 6"
+  },
+  {
+   "target": "wine:Gainey Estate Vineyards Chardonnay 2023",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "The Gainey is cool-climate California Chardonnay, creamy, with lemon curd and baked apple kept fresh by bright acidity. It is our first pick with the Louisiana Oysters, the Pecan Gulf Fish, the Poussin à la Moutarde and the Swordfish Grenobloise, by the glass.",
+   "reason": "The sale: the hook is the creamy but fresh taste; the table is the four dishes whose first pick it is, and the step the glass",
+   "source": "the pack record w-uw1bb9ax (glass $17; profile; firstPickIds Louisiana Oysters, Pecan Gulf Fish, Poussin à la Moutarde, Swordfish Grenobloise)"
+  },
+  {
+   "target": "wine:Domaine Leflaive Mâcon-Verzé 2022 (Coravin)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "The Leflaive Mâcon-Verzé is white Burgundy, white flowers and citrus with a fine chalky texture and gentle richness. It is our first pick with the Redfish Véronique, the Louisiana Crab Claws and the Crab & Corn Omelette, the Coravin pour by the glass.",
+   "reason": "The sale: the hook is the estate and the taste; the table is the three dishes whose first pick it is, and the step the Coravin pour the serve prints",
+   "source": "the pack record w-iuzjmgz4 (glass $40; serve poured by Coravin; profile; firstPickIds Louisiana Crab Claws, Crab & Corn Omelette, Redfish Véronique)"
+  },
+  {
+   "target": "wine:Domaine Leflaive Mâcon-Verzé 2022 (Coravin)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Domaine Leflaive Mâcon-Verzé is Chardonnay from vines in the Mâconnais village of Verzé, in southern Burgundy, which the Puligny-Montrachet domaine bought in 2004 and has farmed biodynamically ever since. It shows white flowers and citrus, a chalky texture and gentle richness. Rich enough for butter and fresh enough for seafood, it's our first pick with the Redfish Véronique, the Louisiana Crab Claws in their brown butter vinaigrette and the Crab & Corn Omelette, and the second choice with the Turtle Soup. We pour it by Coravin, a needle through the cork, into a white Burgundy bowl at 50 to 54°F, and I'll show you the label first.",
+   "reason": "Five-star review of the description: it opened on the domaine rather than the wine as the list prints it, ran 100 words and shared a run of eight words with the twenty (citrus and white flowers, a fine chalky texture); it now opens on the printed name and adds the second choice, every fact kept",
+   "source": "the pack record w-iuzjmgz4 (lines.s45, profile, parts, serve, firstPickIds, secondFor Turtle Soup); research/producers-cellar-chablis-maconnais-2026-10-10.md (Leflaive at Verzé, 2004, biodynamic)"
+  },
+  {
+   "target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Fichet's Château London is Mâcon Chardonnay from an old limestone slope at Igé, apple and citrus, gently round with a fresh finish. It is the 4 oz pour on the Dinner Tasting Menu with the Louisiana BBQ Lobster.",
+   "reason": "The sale: a tasting pour with no glass or bottle price, so the step is the 4 oz pour on the Dinner Tasting Menu with the course it is printed beside, which is also that dish's first pick",
+   "source": "the pack record w-w23cntcx (profile; parts; firstPickIds Louisiana BBQ Lobster; tastings: Dinner Tasting Menu course 2)"
+  },
+  {
+   "target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Fichet's Château London is a Mâcon-Igé: Chardonnay from Domaine Fichet, a family estate founded at Igé, in Burgundy's Mâconnais, in 1976. Château London is a named slope of old limestone, not a castle; the name traces to an owner on the rue Landon in Paris. Made mostly in steel with a touch of old oak, it's apple and citrus, gently round with a fresh finish. On our Dinner Tasting Menu that roundness meets the butter on the Louisiana BBQ Lobster, and the freshness cuts the ’nduja. We pour 4 oz at 50 to 53°F in a white wine glass, from a cooler, never an ice bath.",
+   "reason": "Five-star review of the description: it named the founders, Francis and Christiane Fichet, with nothing in the research showing either has died, and hedged the name's origin (said to come from); it now names the family estate and its founding year only and states the origin as the record does, every other fact kept",
+   "source": "the pack record w-w23cntcx (lines.s45, profile: Château London a named slope at Igé, old limestone with old vines, its name traced to an original owner on the rue Landon in Paris, a family estate founded in 1976, mostly steel with a touch of old oak; serve; tastings); research/producers-cellar-chablis-maconnais-2026-10-10.md"
+  },
+  {
+   "target": "wine:Minuty ‘Prestige’ Côtes de Provence Rosé 2024",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "The Minuty Prestige is pale, dry Provence rosé, white peach, wild strawberry and citrus zest with a light mineral finish. It is our first pick with the Creole Tomato Tostada, the New Orleans Shrimp & Grits and the Fish Bouillabaisse, by the glass.",
+   "reason": "The sale: the hook is the pale, dry Provence taste; the table is the three dishes whose first pick it is, and the step the glass",
+   "source": "the pack record w-fesbm1v5 (glass $17; profile; firstPickIds Creole Tomato Tostada, New Orleans Shrimp & Grits, Fish Bouillabaisse)"
+  },
+  {
+   "target": "wine:Minuty ‘Prestige’ Côtes de Provence Rosé 2024",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Minuty Prestige is a Grenache-led Côtes de Provence rosé from Château Minuty at Gassin, on the hills above the Gulf of Saint-Tropez, pressed pale and bottled young. It's dry and refreshing, wild strawberry and white peach and citrus zest and a light mineral finish. That freshness and red fruit suit tomatoes and shrimp, so it's our first pick with the New Orleans Shrimp & Grits, the Creole Tomato Tostada and the Fish Bouillabaisse, and the second choice with the Gulf Fish en Papillote. We serve it at 45 to 48°F in a white wine glass, and pour it where you can see that pale colour.",
+   "reason": "Five-star review of the description: it opened on the château rather than the wine as the list prints it, left out the Fish Bouillabaisse and the Gulf Fish en Papillote, and shared a run of eight words with the twenty (white peach, wild strawberry and citrus zest, with); it now opens on the printed name and names every linked dish, every fact kept",
+   "source": "the pack record w-fesbm1v5 (lines.s45 and s20, profile, parts, serve, firstPickIds, secondFor); research/producers-cellar-provence-loire-2026-10-10.md (Château Minuty, Gassin)"
+  }
+ ]
+}
