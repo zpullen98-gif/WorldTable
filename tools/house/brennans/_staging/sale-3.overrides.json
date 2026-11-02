@@ -1,0 +1,308 @@
+{
+	"entries": [
+		{
+			"target": "wine:Louis Jadot Beaujolais-Villages 2021 (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Louis Jadot Beaujolais-Villages is light, juicy Gamay, red cherry and raspberry with soft tannin, served with a slight chill. With the New Orleans Shrimp & Grits at lunch, or the Steak Tartare with Rye or Agnolotti del Plin at dinner, offer the half bottle.",
+			"reason": "The sale (five-star card edition): the hook is the taste of a light Gamay served cool; the table is the three dishes whose pairing offers this wine as the half bottle (New Orleans Shrimp & Grits, Steak Tartare with Rye, Agnolotti del Plin); the step is the 375 ml half bottle, the only format the list prints",
+			"source": "the pack record w-kkyqlh3y (375 ml, bottle $25 only, no glass; profile; serve; offeredWith tier half for d-bqznncn6, d-jlc7ybty, d-u34mwyw8)"
+		},
+		{
+			"target": "wine:Louis Jadot Beaujolais-Villages 2021 (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Louis Jadot Beaujolais-Villages 2021 is Gamay from the granite hills of northern Beaujolais, made as a light red with soft tannin to drink young. It is bright ruby: red cherry, raspberry and a little pepper, with fresh acidity. Spice makes tannin taste harsh, so a soft, fruity red keeps the Creole sauce and tasso calm: it is the half bottle for the New Orleans Shrimp & Grits, and at dinner for the Steak Tartare with Rye and the Agnolotti del Plin. We serve it slightly cool, 55 to 58°F, in a red-wine glass. Jadot has been a Beaune house since 1859, the head of Bacchus on every label.",
+			"reason": "Five-star review of the description: it opened on the house, not the wine, carried no clause on how it is made, and named the Eggs Owen and the Creole-Spiced Hanger Steak, neither of whose pairings names this wine; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record w-kkyqlh3y (lines.s45, profile, parts, serve, the kept notes on granite hills and bright ruby, offeredWith); research/producers-cellar-chablis-maconnais-2026-10-10.md (Louis Jadot: 1859, the head of Bacchus)"
+		},
+		{
+			"target": "wine:Chalk Hill Chardonnay Sonoma County 2021 (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Chalk Hill Chardonnay is Sonoma richness in a small pour: creamy and round, ripe pear, baked apple and a little toasty oak. It is the half bottle for the Pecan Gulf Fish, made for the lump crab and cauliflower purée.",
+			"reason": "The sale (five-star card edition): the hook is the creamy Sonoma style in concrete words; the table is the Pecan Gulf Fish, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+			"source": "the pack record w-29h9ciun (375 ml, bottle $30 only; profile; offeredWith tier half for the Pecan Gulf Fish; the s20 on the lump crab and cauliflower purée)"
+		},
+		{
+			"target": "wine:Chalk Hill Chardonnay Sonoma County 2021 (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Chalk Hill Chardonnay Sonoma County 2021 comes from an estate named for the Chalk Hill area, in the hills east of Windsor on the eastern edge of the Russian River Valley. It is made in the full California style, round and ripe with toasty oak: creamy, with ripe pear and baked apple, and enough freshness to stay lively. A creamy wine mirrors a creamy plate, so it is the half bottle for the Pecan Gulf Fish, with its lump crab and cauliflower purée. We pour it at 50 to 54°F in a white Burgundy bowl, back in the ice bucket between pours, and never decant it.",
+			"reason": "Five-star review of the description: it opened on the place name, not the wine, and named the Crab & Corn Omelette and the Louisiana Crab Claws, neither of whose pairings names this wine; it now opens on the wine as the list prints it, says how it is made, and keeps every sourced fact",
+			"source": "the pack record w-29h9ciun (lines.s45, profile, serve, offeredWith); research/bottle-facts-cards-a-2026-10-04.json bin 14872 (the Chalk Hill area east of Windsor, the eastern edge of the Russian River Valley, the full California style); research/components-wines-2026-10-05.md (the list tell: round, ripe, toasty oak)"
+		},
+		{
+			"target": "wine:Duckhorn Sauvignon Blanc North Coast 2023 (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Duckhorn Sauvignon Blanc is crisp and clean, grapefruit, melon and fresh herbs, with a little roundness that keeps it friendly. It is the half bottle for the Creole Caesar, bright against the smoked oyster dressing at lunch.",
+			"reason": "The sale (five-star card edition): the hook is the taste in concrete words; the table is the Creole Caesar, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+			"source": "the pack record w-qnqcv7mv (375 ml, bottle $35 only; profile; offeredWith tier half for the Creole Caesar; the s20 on the smoked oyster dressing)"
+		},
+		{
+			"target": "wine:Duckhorn Sauvignon Blanc North Coast 2023 (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Duckhorn Sauvignon Blanc North Coast 2023 is blended from vineyards across California’s North Coast by a Napa Valley winery founded in 1976 and known above all for its Merlot. It is crisp and clean: grapefruit, citrus, melon and a hint of fresh herbs, with a little roundness that keeps it friendly. A dressing wants plenty of acidity in the glass, so it is the half bottle for the Creole Caesar, bright against the smoked oyster dressing at lunch. We pour it at 45 to 48°F in a white-wine glass and keep it in the ice bucket between pours, because a half-bottle warms quickly, with no decanting.",
+			"reason": "Five-star review of the description: it opened on the winery and its founding, not the wine, and named the Crab & Corn Omelette and the Creole Tomato Tostada, neither of whose pairings names this wine; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record (lines.s45, profile, serve, offeredWith); research/bottle-facts-cards-a-2026-10-04.json bin 15263 (vineyards across the North Coast, best known for Merlot); research/components-wines-2026-10-05.md search 46 (founded 1976)"
+		},
+		{
+			"target": "wine:Thierry et Pascale Matrot Bourgogne Blanc 2022 (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "The Matrot Bourgogne Blanc is white Burgundy from a Meursault family: fresh lemon and apple with a light nutty roundness. It is the half bottle for the Louisiana Crab Claws, round for the brown butter and bright for the vinaigrette.",
+			"reason": "The sale (five-star card edition): the hook is white Burgundy from a Meursault family in concrete taste; the table is the Louisiana Crab Claws, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle; the living couple on the label is not named",
+			"source": "the pack record (375 ml, bottle $45 only; profile; origin; offeredWith tier half for the Louisiana Crab Claws)"
+		},
+		{
+			"target": "wine:Thierry et Pascale Matrot Bourgogne Blanc 2022 (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "The Matrot Bourgogne Blanc 2022 is Chardonnay from Burgundy’s regional appellation, made by a family domaine in Meursault, in the Côte de Beaune, in white Burgundy’s lighter, fresher register. It tastes fresh rather than oaky: lemon and apple, a light nutty roundness and bright acidity. The roundness meets the brown butter and the acidity meets the vinaigrette, so it is the half bottle for the Louisiana Crab Claws. We pour it at 50 to 54°F in a white Burgundy bowl, back in the ice bucket between pours, with no decanting. The family’s story in Meursault runs back to 1914, when Joseph Matrot settled at his wife’s family domaine there.",
+			"reason": "Five-star review of the description: it opened on the domaine, not the wine, named the living couple whose names the label carries, claimed a barrel regime no research file holds, and named the Redfish Véronique and the Crab & Corn Omelette, neither of whose pairings names this wine; it now opens on the wine (the list's forenames left out, since they name living people) and keeps every sourced fact",
+			"source": "the pack record (lines.s45, profile, origin, serve, offeredWith); research/bottle-facts-cards-a-2026-10-04.json bin 32852 (a family domaine in Meursault, Bourgogne Blanc the regional appellation); research/producers-cellar-chablis-maconnais-2026-10-10.md (Joseph Matrot settled in Meursault at his wife's family domaine in 1914)"
+		},
+		{
+			"target": "wine:Tribaut-Schloesser ‘Origine’ Brut NV (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Tribaut-Schloesser Origine is real Champagne from a family house in Romery, Meunier-led, fresh pear and plum with a touch of brioche. With salty snacks for two at the bar, offer the half bottle.",
+			"reason": "The sale (five-star card edition): the hook is a family house's Meunier-led Champagne in concrete taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the kind of plate its goesWith names (salty snacks for two), never a printed dish; the step is the 375 ml half bottle",
+			"source": "the pack record (375 ml, bottle $50 only; profile; origin; goesWith salty snacks for two)"
+		},
+		{
+			"target": "wine:Tribaut-Schloesser ‘Origine’ Brut NV (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Tribaut-Schloesser ‘Origine’ Brut NV is Champagne from a family house in Romery, in the hills north of Épernay: about half Meunier, with Chardonnay and Pinot Noir from Marne Valley and Montagne de Reims sites, and some reserve wine aged in oak. It tastes fresh and fruity, pear and plum, a touch of brioche and an easy, balanced finish. Salt makes a wine taste fruitier, so it suits salty snacks for two at the bar. We ease the cork out with a quiet sigh and pour it at 43 to 46°F into a tulip, the half-bottle kept in half ice and half water. The house was founded in 1929.",
+			"reason": "Five-star review of the description: it opened on the house, not the wine, and called it our half for the Creole Spiced Nuts and named the Fried Pickles, the Popcorn Shrimp and the Cheese Board, none of whose pairings names this wine; it now opens on the wine, speaks of the plates its goesWith names, and keeps every sourced fact",
+			"source": "the pack record (lines.s45, profile, serve, goesWith); research/bottle-facts-cards-a-2026-10-04.json bin 32361 (Romery north of Épernay, founded 1929, about half Meunier, Marne Valley and Montagne de Reims terroirs, oak-aged reserve wine)"
+		},
+		{
+			"target": "wine:Domaine Huet ‘Le Haut-Lieu’ Vouvray Sec 2019 (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Huet Le Haut-Lieu Sec is dry Chenin Blanc from Vouvray with a few years in bottle: quince, pear, beeswax and bright acidity. It is the half bottle for the Louisiana Oysters, the acidity for the pickled greens and the texture for the barbecue sauce.",
+			"reason": "The sale (five-star card edition): the hook is aged dry Chenin in concrete taste; the table is the Louisiana Oysters, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+			"source": "the pack record (375 ml, bottle $50 only; profile; offeredWith tier half for the Louisiana Oysters; research/bottle-facts-cards-a-2026-10-04.json bin 31114 on the BBQ sauce and pickled collard greens)"
+		},
+		{
+			"target": "wine:Domaine Huet ‘Le Haut-Lieu’ Vouvray Sec 2019 (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Huet ‘Le Haut-Lieu’ Vouvray Sec 2019 is all Chenin Blanc from the vineyard where Huet began in 1928, in Vouvray on the Loire near Tours, farmed biodynamically; each year Huet decides, vineyard by vineyard, how sweet the wine will be, and this one is sec, dry. With a few years in bottle it tastes of quince, pear, beeswax and chamomile, textured, with Chenin’s bright acidity. The acidity cuts the pickled collard greens and the texture holds the barbecue sauce, so it is the half bottle for the Louisiana Oysters. We pour it at 48 to 52°F in a white-wine glass, not too cold, iced between pours.",
+			"reason": "Five-star review of the description: it opened on the vineyard's story, not the wine, and named the Turtle Soup, the Louisiana Crab Claws and the Redfish Véronique, none of whose pairings names this wine; it now opens on the wine as the list prints it, says how it is made, and keeps every sourced fact",
+			"source": "the pack record (lines.s45, profile, serve, offeredWith); research/producers-cellar-sparkling-elsewhere-2026-10-10.md (Victor Huet bought Le Haut-Lieu in 1928); research/components-wines-2026-10-05.md search 21 (all Chenin Blanc, made sec, demi-sec and moelleux, farmed biodynamically)"
+		},
+		{
+			"target": "wine:Bründlmayer ‘Terrassen’ Grüner Veltliner 2023 (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Bründlmayer Terrassen is Grüner Veltliner from the Kamptal, fresh and peppery, green apple and citrus, and one of the few wines artichokes leave alone. It is the half bottle for the Eggs Sardou, easy with the artichokes and creamed spinach.",
+			"reason": "The sale (five-star card edition): the hook is the peppery Grüner and its ease with artichokes; the table is the Eggs Sardou, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+			"source": "the pack record (375 ml, bottle $50 only; profile; why; offeredWith tier half for the Eggs Sardou)"
+		},
+		{
+			"target": "wine:Bründlmayer ‘Terrassen’ Grüner Veltliner 2023 (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Bründlmayer ‘Terrassen’ Grüner Veltliner 2023 is Austria’s own white grape from the terraced vineyards of a family estate in Langenlois, the wine town of the Kamptal, north-west of Vienna, where the estate grows its Grüner Veltliner on loess and makes this classic dry and crisp. It tastes of green apple, citrus and white pepper with a fresh herbal note, light to medium in body. Artichokes make many wines taste sweet or metallic, but Grüner handles them, and its pepper suits the creamed spinach, so it is the half bottle for the Eggs Sardou. We pour it at 45 to 48°F in a white-wine glass, iced between pours, no decanting.",
+			"reason": "Five-star review of the description: it opened on the estate, not the wine, carried no clause on how it is made, and named the Creole Caesar, the Creole Tomato Tostada and the Redfish Véronique, none of whose pairings names this wine; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record (lines.s45, profile, serve, offeredWith); research/bottle-facts-cards-a-2026-10-04.json bin 32931 (Langenlois, the Kamptal, terraced vineyards, artichokes make many wines taste sweet or metallic); research/producers-cellar-germany-austria-2026-10-10.md (Grüner Veltliner from loess)"
+		},
+		{
+			"target": "wine:Domaine Raspail-Ay Gigondas 2021 (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Raspail-Ay Gigondas is Grenache with Syrah from under the Dentelles de Montmirail: ripe red and black cherry, garrigue herbs and pepper. Offer the half bottle with the Petite Filet Mignon at breakfast or the Lamb Shank en Croûte at dinner.",
+			"reason": "The sale (five-star card edition): the hook is the Southern Rhône red in concrete taste; the table is the two dishes whose pairing offers this wine as the half bottle (Petite Filet Mignon, Lamb Shank en Croûte); the step is the 375 ml half bottle",
+			"source": "the pack record (375 ml, bottle $55 only; profile; origin; offeredWith tier half for the Petite Filet Mignon and the Lamb Shank en Croûte)"
+		},
+		{
+			"target": "wine:Domaine Raspail-Ay Gigondas 2021 (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Raspail-Ay Gigondas 2021 is a family estate’s red from Gigondas, a Southern Rhône village under the Dentelles de Montmirail, and a cru of its own since 1971. It is blended with Grenache leading and Syrah beside it: ripe red and black cherry, garrigue herbs, pepper and spice, firm but rounded tannin and a warm finish. The breakfast tasting pours a Côtes du Rhône with the Petite Filet Mignon, and this is the half bottle for that filet, a step deeper; at dinner it is the half bottle for the Lamb Shank en Croûte. We pour it at 60 to 64°F in a red-wine glass, no decanting.",
+			"reason": "Five-star review of the description: it opened on the village, not the wine, and named the Creole Hanger Steak and the Roasted Chateaubriand, neither of whose pairings names this wine; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record (lines.s45, profile, serve, offeredWith); research/bottle-facts-cards-a-2026-10-04.json bin 32733 (a family estate under the Dentelles de Montmirail, Grenache-led with Syrah, the breakfast tasting's Côtes du Rhône with the filet); research/producers-cellar-rhone-south-roussillon-2026-10-10.md (Gigondas a cru since 1971)"
+		},
+		{
+			"target": "wine:Ferrari Brut Trento NV (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Ferrari Brut is all Chardonnay from the mountain vineyards of Trento, made the Champagne way: green apple, citrus and a light bread crust. With fried pastry and bar snacks for two, offer the half bottle.",
+			"reason": "The sale (five-star card edition): the hook is the Alpine Chardonnay made the Champagne way, in concrete taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the kind of plate its goesWith names (fried pastry for two), never a printed dish; the step is the 375 ml half bottle",
+			"source": "the pack record (375 ml, bottle $60 only; profile; goesWith fried pastry for two)"
+		},
+		{
+			"target": "wine:Ferrari Brut Trento NV (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Ferrari Brut Trento NV is all Chardonnay from the mountain vineyards around Trento, in the Italian Alps, made by the traditional method, with the second fermentation in bottle and time on its lees. It tastes of green apple and citrus over a light bread crust, crisp, with fine bubbles. Bubbles and acidity cut through fried pastry, so it suits fried snacks for two at the bar. We ease the cork out with a quiet sigh and pour it at 43 to 46°F in a flute or tulip, kept in half ice and half water. Giulio Ferrari founded the house in 1902, after learning the Champagne method in Épernay.",
+			"reason": "Five-star review of the description: it opened on the founding, not the wine, and called it our half for the Crawfish Meat Pies and named the Popcorn Shrimp, the Fried Pickles and the Creole Spiced Nuts, none of whose pairings names this wine; it now opens on the wine, speaks of the plates its goesWith names, and keeps every sourced fact",
+			"source": "the pack record (lines.s45, profile, serve, goesWith); research/bottle-facts-cards-a-2026-10-04.json bin 32833 (all Chardonnay, mountain vineyards, traditional method); research/producers-cellar-sparkling-elsewhere-2026-10-10.md (Giulio Ferrari, 1902, Épernay)"
+		},
+		{
+			"target": "wine:Domaine Huet ‘Le Mont’ Vouvray Demi-Sec 2023 (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Huet Le Mont is demi-sec Vouvray, gently sweet Chenin Blanc with apple, pear and honey, kept fresh by bright acidity. Offer the half bottle with the Baked Apple or the Duck Confit Waffle at breakfast, and with the Tuna Crudo at dinner.",
+			"reason": "The sale (five-star card edition): the hook is gently sweet Chenin in concrete taste; the table is the three dishes whose pairing offers this wine as the half bottle (Baked Apple, Duck Confit Waffle, Tuna Crudo); the step is the 375 ml half bottle",
+			"source": "the pack record (375 ml, bottle $60 only; profile; offeredWith tier half for the Baked Apple, the Duck Confit Waffle and the Tuna Crudo)"
+		},
+		{
+			"target": "wine:Domaine Huet ‘Le Mont’ Vouvray Demi-Sec 2023 (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Huet ‘Le Mont’ Vouvray Demi-Sec 2023 is all Chenin Blanc from one of Huet’s three vineyards in Vouvray, on the Loire near Tours, bought in 1957 and farmed biodynamically; each year Huet decides, vineyard by vineyard, how sweet the wine will be. Demi-sec means half dry: gently sweet, apple, pear, honey and white flowers, with bright acidity keeping it fresh. A sweet dish makes a dry wine taste sour, so it is the half bottle for the Duck Confit Waffle and the Baked Apple at breakfast, and for the Tuna Crudo at dinner. We pour it at 45 to 50°F in a white-wine glass, iced between pours.",
+			"reason": "Five-star review of the description: it opened on the vineyard, not the wine, named the Cheese Board, whose pairing does not name this wine, and shared a nine-word run with the s20; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record (lines.s45, profile, serve, offeredWith); research/components-wines-2026-10-05.md search 21 (Le Mont bought 1957, all Chenin Blanc, farmed biodynamically); research/bottle-facts-cards-a-2026-10-04.json bin 32952 (one of three vineyards, demi-sec means half dry)"
+		},
+		{
+			"target": "wine:Duckhorn Merlot Napa Valley 2020 (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Duckhorn made its name with Merlot, and this Napa Valley half is plush black cherry, plum and cocoa with soft, rounded tannin. With beef or a cheese course, offer the half bottle to the one or two guests who want red.",
+			"reason": "The sale (five-star card edition): the hook is what made the winery's name and the taste in concrete words; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the kind of plate its goesWith names (beef and cheese), never a printed dish; the step is the 375 ml half bottle",
+			"source": "the pack record (375 ml, bottle $60 only; profile; origin; goesWith beef and cheese)"
+		},
+		{
+			"target": "wine:Duckhorn Merlot Napa Valley 2020 (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Duckhorn Merlot Napa Valley 2020 comes from the Napa Valley winery, founded in 1976, that made its name with Merlot and is still known above all for it, and this bottling is aged in oak. It tastes plush: black cherry, plum and cocoa with a little cedar, soft, rounded tannin and a smooth finish. Soft tannin keeps beef and cheese easy, so it suits a steak or the cheese course when one or two guests at the table want red. We pour it at 60 to 64°F in a red-wine glass, with no decanting needed for a half-bottle, which holds two or three glasses.",
+			"reason": "Five-star review of the description: it opened on the winery, not the wine, and called it our red for the Roost Burger and named the Creole-Spiced Hanger Steak, the Roasted Chateaubriand and the Cheese Board, none of whose pairings names this wine; it now opens on the wine, speaks of the plates its goesWith names, and keeps every sourced fact",
+			"source": "the pack record (lines.s45, profile, serve, goesWith); research/bottle-facts-cards-a-2026-10-04.json bin 14072 (made its name with Merlot, still best known for it, aged in oak); research/components-wines-2026-10-05.md search 46 (founded 1976)"
+		},
+		{
+			"target": "wine:Nicolas Feuillatte ‘Réserve’ Brut NV (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Nicolas Feuillatte Réserve Brut is friendly Champagne from Pinot Noir, Meunier and Chardonnay: fresh apple, pear and a light brioche note, dry and lively. It is the half bottle for the Eggs Hussarde, its bubbles clearing the hollandaise for two at brunch.",
+			"reason": "The sale (five-star card edition): the hook is the blend and its taste in concrete words; the table is the Eggs Hussarde, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+			"source": "the pack record (375 ml, bottle $65 only; profile; why; offeredWith tier half for the Eggs Hussarde)"
+		},
+		{
+			"target": "wine:Nicolas Feuillatte ‘Réserve’ Brut NV (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Nicolas Feuillatte ‘Réserve’ Brut NV is Champagne from a growers’ cooperative at Chouilly, near Épernay, blending Pinot Noir and Meunier with Chardonnay from its members’ vineyards. It tastes of fresh apple and pear with a light brioche note and lively bubbles, dry and easy. The bubbles clear rich hollandaise, so it is the half bottle for the Eggs Hussarde at brunch, two or three glasses for a pair. We ease the cork out with a quiet sigh and pour it at 43 to 46°F in a tulip kept in half ice and half water. The cooperative was founded in 1972 so that growers could pool their wine.",
+			"reason": "Five-star review of the description: it opened on the cooperative's history, not the wine, and named the Eggs Sardou and the Turtle Soup, neither of whose pairings names this wine; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record (lines.s45, profile, serve, offeredWith); research/bottle-facts-cards-a-2026-10-04.json bin 32753 (a large growers' cooperative at Chouilly near Épernay, Pinot Noir and Meunier with Chardonnay); the shipped s45 (the cooperative founded in 1972 so growers could pool their wine)"
+		},
+		{
+			"target": "wine:Domaine Louis Michel ‘Montmains’ Chablis Premier Cru 2023 (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Louis Michel Montmains is Chablis Premier Cru made with no oak at all: lemon, green apple and a chalky, oyster-shell finish. Offer the half bottle with the Crab & Corn Omelette at brunch, or the Redfish Véronique or Fish Bouillabaisse at dinner.",
+			"reason": "The sale (five-star card edition): the hook is unoaked Premier Cru Chablis in concrete taste; the table is the three dishes whose pairing offers this wine as the half bottle (Crab & Corn Omelette, Redfish Véronique, Fish Bouillabaisse); the step is the 375 ml half bottle",
+			"source": "the pack record (375 ml, bottle $65 only; profile; offeredWith tier half for the Crab & Corn Omelette, the Redfish Véronique and the Fish Bouillabaisse)"
+		},
+		{
+			"target": "wine:Domaine Louis Michel ‘Montmains’ Chablis Premier Cru 2023 (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Louis Michel ‘Montmains’ Chablis Premier Cru 2023 is Chardonnay from the Montmains slope, made in steel tanks with no oak, so it tastes of the vineyard rather than the barrel: lemon, green apple and white flowers, with a chalky, oyster-shell finish, crisp and precise. Its citrus meets the lemon of the brunch Crab & Corn Omelette and the preserved lemon beurre blanc of the Redfish Véronique, and it is the half bottle for both and for the Fish Bouillabaisse. We pour it at 48 to 52°F in a white-wine glass, iced between pours. The family estate dates to 1850 and had thrown out its old oak by 1980.",
+			"reason": "Five-star review of the description: it opened on the domaine's history, not the wine, and named the crab claws, whose pairing does not name this wine; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record (lines.s45, profile, serve, offeredWith); research/bottle-facts-cards-a-2026-10-04.json bin 32852 (steel tanks without oak, Montmains a Premier Cru); research/producers-cellar-chablis-maconnais-2026-10-10.md (1850; the old oak thrown out by 1980)"
+		},
+		{
+			"target": "wine:Bergstrom ‘Reserve’ Pinot Noir Willamette Valley 2022 (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Bergstrom Reserve is Oregon Pinot Noir with more depth than its weight suggests: red cherry, cranberry and a savoury note of forest floor. It is the half bottle for the Blackened Tofu, its earthiness meeting the preserved shiitake.",
+			"reason": "The sale (five-star card edition): the hook is earthy Oregon Pinot in concrete taste; the table is the Blackened Tofu, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+			"source": "the pack record (375 ml, bottle $65 only; profile; offeredWith tier half for the Blackened Tofu; research/bottle-facts-cards-a-2026-10-04.json bin 32863 on the preserved shiitake)"
+		},
+		{
+			"target": "wine:Bergstrom ‘Reserve’ Pinot Noir Willamette Valley 2022 (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Bergstrom ‘Reserve’ Pinot Noir Willamette Valley 2022 is from a family winery near Newberg, in Oregon’s Willamette Valley, whose vines the list describes as farmed biodynamically, in a cool, rainy climate that is a cousin of Burgundy’s. It tastes of red cherry and cranberry with a savoury note of forest floor, fine tannin and bright acidity, light on its feet but deep. That earthiness answers the preserved shiitake and rice grits, so it is the half bottle for the Blackened Tofu. We pour it slightly cool, 58 to 62°F, in a Burgundy bowl, a few minutes in the ice bucket if the room is warm, and never decant it.",
+			"reason": "Five-star review of the description: it opened on the winery, not the wine, claimed a blend of several vineyards no research file holds, and named Maggie's Mushrooms, the Redfish Véronique and the Roasted Rohan Duck Breast, none of whose pairings names this wine; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record (lines.s45, profile, serve, offeredWith); research/bottle-facts-cards-a-2026-10-04.json bin 32863 (a family winery near Newberg, the Blackened Tofu's rice grits and preserved shiitake); research/winelist (the list tell: farmed biodynamically)"
+		},
+		{
+			"target": "wine:Schramsberg ‘Blanc de Blancs’ North Coast 2021 (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Schramsberg Blanc de Blancs is all Chardonnay sparkling wine aged in the hillside caves of Calistoga: green apple, lemon and a light brioche, crisp. It is the half bottle for the Poussin à la Moutarde, the bubbles cutting the fried skin and mustard cream.",
+			"reason": "The sale (five-star card edition): the hook is the cave-aged Chardonnay sparkling wine in concrete taste; the table is the Poussin à la Moutarde, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+			"source": "the pack record (375 ml, bottle $70 only; profile; origin; offeredWith tier half for the Poussin à la Moutarde)"
+		},
+		{
+			"target": "wine:Schramsberg ‘Blanc de Blancs’ North Coast 2021 (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Schramsberg ‘Blanc de Blancs’ North Coast 2021 is all Chardonnay from across California’s North Coast, made by the traditional method in Calistoga and aged in caves dug into the hillside. It tastes of green apple, lemon and a light brioche, crisp and fine. The bubbles cut the fried skin and mustard cream, so it is the half bottle for the Poussin à la Moutarde. We ease the cork out with a quiet sigh and pour it at 43 to 46°F in a flute or tulip, kept in half ice and half water. In 1972 President Nixon toasted Premier Zhou Enlai in Beijing with its Blanc de Blancs.",
+			"reason": "Five-star review of the description: it opened on the producer, not the wine, and named the Popcorn Shrimp, the crab claws and the oysters, none of whose pairings names this wine; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record (lines.s45, profile, serve, offeredWith); research/bottle-facts-cards-a-2026-10-04.json bin 3274 (Calistoga, traditional method, hillside caves, all Chardonnay, the 1972 toast by President Nixon to Premier Zhou Enlai in Beijing)"
+		},
+		{
+			"target": "wine:Ridge Vineyards ‘Lytton Springs’ Dry Creek Valley 2021 (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Ridge Lytton Springs is old-vine Zinfandel with Petite Sirah and Carignane: ripe blackberry, raspberry, black pepper and spice. It is the half bottle for the Creole Hanger Steak at dinner, ripe fruit for the Creole spice and chilli crisp.",
+			"reason": "The sale (five-star card edition): the hook is the old-vine field blend in concrete taste; the table is the Creole Hanger Steak, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+			"source": "the pack record (375 ml, bottle $70 only; profile; offeredWith tier half for the Creole Hanger Steak; the s20 on the chilli crisp)"
+		},
+		{
+			"target": "wine:Ridge Vineyards ‘Lytton Springs’ Dry Creek Valley 2021 (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Ridge Vineyards ‘Lytton Springs’ Dry Creek Valley 2021 is a field blend from old vines in Sonoma’s Dry Creek Valley, Zinfandel grown beside Petite Sirah and Carignane, aged in American oak, with every ingredient printed on the back label. It tastes of ripe blackberry and raspberry, black pepper and spice, with firm tannin and bright acidity. Ripe fruit stands up to Creole spice and chilli crisp, so it is the half bottle for the Creole Hanger Steak at dinner. We pour it at 60 to 64°F in a red-wine glass, no decanting. Ridge has made Lytton Springs since 1972, and its oldest block was planted in 1901.",
+			"reason": "Five-star review of the description: it opened on the producer's history, not the wine, and named the Roost Burger and the Roasted Chateaubriand, neither of whose pairings names this wine; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record (lines.s45, profile, serve, offeredWith); research/bottle-facts-cards-a-2026-10-04.json bin 32922 (old vines interplanted with Petite Sirah and Carignane, ingredients on the back label); research/producers-cellar-napa-sonoma-2026-10-10.md (American oak, 1972, the 1901 block)"
+		},
+		{
+			"target": "wine:Bründlmayer ‘Heiligenstein’ Riesling 2022 (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Bründlmayer Heiligenstein is dry Riesling from a steep hill in the Kamptal: lime, white peach and a stony, smoky edge with piercing acidity. It is the half bottle for the Seafood Gumbo, the acidity cutting through the dark roux.",
+			"reason": "The sale (five-star card edition): the hook is dry hillside Riesling in concrete taste; the table is the Seafood Gumbo, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+			"source": "the pack record (375 ml, bottle $80 only; profile; why; offeredWith tier half for the Seafood Gumbo)"
+		},
+		{
+			"target": "wine:Bründlmayer ‘Heiligenstein’ Riesling 2022 (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Bründlmayer ‘Heiligenstein’ Riesling 2022 is Riesling from the Heiligenstein, the steep hill above Zöbing in Austria’s Kamptal, grown by a family estate in Langenlois and made dry, as Austrian Riesling usually is. It tastes of lime and white peach with a stony, smoky edge, piercing acidity and a long, dry finish. That acidity cuts the dark roux and andouille and keeps the bowl lively, so it is the half bottle for the Seafood Gumbo. We pour it at 46 to 50°F in a white-wine glass, iced between pours, with no decanting. The name means holy stone, though the hill is Permian desert sandstone with volcanic material, not limestone.",
+			"reason": "Five-star review of the description: it opened on the estate, not the wine, and named the Turtle Soup, the New Orleans Shrimp & Grits and the crab claws, none of whose pairings names this wine; it now opens on the wine as the list prints it and keeps every sourced fact",
+			"source": "the pack record (lines.s45, profile, serve, offeredWith); research/bottle-facts-cards-a-2026-10-04.json bin 32841 (the steep hill above Zöbing, Bründlmayer of Langenlois, Austrian Riesling usually dry); research/producers-cellar-germany-austria-2026-10-10.md (Permian desert sandstone with volcanic material, not limestone as the holy stone name suggests)"
+		},
+		{
+			"target": "wine:Laurent-Perrier ‘Harmony’ Demi Sec NV (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Laurent-Perrier Harmony is demi-sec Champagne, finished sweeter than a Brut: ripe pear, apricot, honey and toasted brioche with fine bubbles. It is the half bottle for the Framboise French Toast, matching its sweetness and lifting the mascarpone mousse.",
+			"reason": "The sale (five-star card edition): the hook is the gently sweet Champagne in concrete taste; the table is the Framboise French Toast, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+			"source": "the pack record (375 ml, bottle $85 only; profile; why; offeredWith tier half for the Framboise French Toast)"
+		},
+		{
+			"target": "wine:Laurent-Perrier ‘Harmony’ Demi Sec NV (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Laurent-Perrier ‘Harmony’ Demi Sec NV is Champagne from Chardonnay, Pinot Noir and Meunier, made at Tours-sur-Marne in the Vallée de la Marne and given a larger dosage of sugar after disgorgement, so it is gently sweet: ripe pear, apricot, honey and toasted brioche, with fine bubbles and enough acidity to stay lively. A dry Champagne tastes sour beside a sweet plate, so it is the half bottle for the Framboise French Toast, matching the sweetness and lifting the mascarpone. We pour it well chilled, 43 to 46°F, in a flute or tulip, kept in half ice and half water. The house dates from 1812.",
+			"reason": "Five-star review of the description: it opened on the house and its founders, not the wine, named no grape, and named the Blackberry Trifle and the Lemon Tart, neither of whose pairings names this wine; it now opens on the wine as the list prints it, names its three grapes, and keeps every sourced fact",
+			"source": "the pack record (lines.s45, profile, serve, offeredWith); research/bottle-facts-cards-a-2026-10-04.json bin 32732 (Tours-sur-Marne, the Vallée de la Marne, demi-sec); research/components-wines-2026-10-05.md (Harmony blends Chardonnay, Pinot Noir and Meunier; a larger dosage after disgorgement; 1812)"
+		},
+		{
+			"target": "wine:Ridge Vineyards ‘Essence’ Zinfandel Sonoma 2014 (375 ml)",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Ridge Essence is late harvest Zinfandel from Sonoma, sweet and dense, dark cherry, plum and spice, with caramel from years in bottle. It is the half bottle for the Cherries Jubilee, its dark cherry echoing the black cherries in the pan.",
+			"reason": "The sale (five-star card edition): the hook is the sweet late harvest Zinfandel in concrete taste; the table is the Cherries Jubilee, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+			"source": "the pack record (375 ml, bottle $105 only; profile; offeredWith tier half for the Cherries Jubilee)"
+		},
+		{
+			"target": "wine:Ridge Vineyards ‘Essence’ Zinfandel Sonoma 2014 (375 ml)",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Ridge Vineyards ‘Essence’ Zinfandel Sonoma 2014 is a late harvest Zinfandel, made only in exceptional years: the grapes hang on the vine until they shrivel and concentrate their sugar, and fermentation stops with plenty of sweetness left, with no fortifying. It is sweet and dense, ripe dark cherry, plum, raisin and spice, with caramel from years in bottle. Its dark cherry echoes the tart black cherries and Luxardo sauce, so it is the half bottle for the Cherries Jubilee. Stand it upright, then pour gently in case of sediment, 2 to 3 ounces at 58 to 62°F in a small dessert glass. Ridge first made Essence in 1966.",
+			"reason": "Five-star review of the description: it named The Snickers, the New Orleans Bread Pudding and the Cheese Board, none of whose pairings names this wine, and did not open on the wine as the list prints it; it now opens on the wine and keeps every sourced fact",
+			"source": "the pack record (lines.s45, profile, serve, offeredWith); research/bottle-facts-cards-a-2026-10-04.json bin 19242 (first made from Geyserville grapes in 1966, exceptional years, fermentation stops with residual sugar, not fortified; the tart black cherries and Luxardo sauce)"
+		}
+	]
+}
