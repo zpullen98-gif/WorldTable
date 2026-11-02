@@ -127,6 +127,102 @@
 			"value": "Damien Laureau ‘L’Alliance’ Savennières 2022 is dry Chenin Blanc from Savennières, a small appellation of steep, dark schist slopes on the north bank of the Loire in Anjou. Poor rock and low yields give a wine of grip, fermented fully dry: quince, beeswax and toasted nuts, waxy and full, with Chenin’s firm acidity and a stony finish. Its nutty depth echoes the aged sherry and its acidity cuts the richness, so it is our value bottle for the Turtle Soup. We pour it cellar cool, 50 to 54°F, in a white Burgundy bowl, decanted briefly when young. Across the river, the Coteaux du Layon makes the same grape sweet.",
 			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the grower, a living person, rather than the wine, named the Pecan Gulf Fish, whose pairing does not name this wine, and carried no clause on how it is made; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
 			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 9 (items 1 to 3 and 7: Savennières on the north bank in Anjou, dark schist, poor rock and low yields, the Layon sweet across the river, the value tier for the Turtle Soup); the wine record (profile, serve, offeredWith: value for the Turtle Soup)"
+		},
+		{
+			"target": "wine:Sandhi Chardonnay Sta. Rita Hills 2021",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Sandhi is cool Santa Barbara County Chardonnay made with restraint: lemon, white peach and a little hazelnut, creamy yet fresh, with bright acidity. It is our value bottle for the Pecan Gulf Fish, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 2 (items 1 to 3: a Santa Barbara County winery founded by a sommelier with a winemaker, restrained Burgundian Chardonnay, not heavy or oaky) and section 1 item 3 (east to west valleys funnel fog and wind inland); the wine record (profile, serve, offeredWith: value for the Pecan Gulf Fish)"
+		},
+		{
+			"target": "wine:Sandhi Chardonnay Sta. Rita Hills 2021",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Sandhi Chardonnay Sta. Rita Hills 2021 comes from a cool appellation in Santa Barbara County, where east to west valleys pull fog and wind inland. It is made in a restrained, Burgundian way rather than a heavy, oaky one, so it tastes of lemon, white peach and a little hazelnut, creamy yet fresh, with bright acidity. Its texture meets the lump crab and cauliflower purée and its acidity the flaky fish, so it is our value bottle for the Pecan Gulf Fish. We pour it at 50 to 54°F in a white Burgundy bowl, briefly in the ice bucket. A sommelier founded the winery with a winemaker.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the founders, both living, rather than the wine and named the Crab & Corn Omelette, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 2 (items 1 to 3: a Santa Barbara County winery founded by a sommelier with a winemaker, restrained Burgundian Chardonnay, not heavy or oaky) and section 1 item 3 (east to west valleys funnel fog and wind inland); the wine record (profile, serve, offeredWith: value for the Pecan Gulf Fish)"
+		},
+		{
+			"target": "wine:Trimbach Riesling Réserve 2020",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Trimbach Réserve is bone dry Alsace Riesling, lime, green apple and white flowers with a stony, steely finish, the answer for a guest who expects Riesling to be sweet. Offer it by the bottle with crab, a spiced roux or chilli heat.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 1 (items 1 and 2: founded in 1626 at Riquewihr, settled at Ribeauvillé, thirteen generations, bone dry, no new oak, released late); the wine record (profile, serve, goesWith: crab, gumbo and spice; no dish pairing names it, so no dish is named)"
+		},
+		{
+			"target": "wine:Trimbach Riesling Réserve 2020",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Trimbach Riesling Réserve 2020 is dry Riesling from a family house in Ribeauvillé, Alsace, the French side of the Rhine facing Germany. The house style is bone dry, made without new oak and released late, so it tastes of lime, green apple and white flowers, crisp and taut, with a stony, steely finish. Guests expecting sweetness find the opposite. Its acidity and backbone suit crab, spiced seafood and a dark roux, the plates with heat and richness. We pour it at 46 to 50°F in a white wine glass, from the ice bucket. Trimbach was founded in 1626 at Riquewihr and counts thirteen generations of the family.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the house and its founder rather than the wine, named the Seafood Gumbo, the Louisiana Crab Claws and the Redfish Véronique, none of whose pairings names this wine, and named no place for the grape beyond the house; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 1 (items 1 and 2: founded in 1626 at Riquewihr, settled at Ribeauvillé, thirteen generations, bone dry, no new oak, released late); the wine record (profile, serve, goesWith: crab, gumbo and spice; no dish pairing names it, so no dish is named)"
+		},
+		{
+			"target": "wine:Domaine Huet ‘Le Haut-Lieu’ Vouvray Sec 2024",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Le Haut-Lieu Sec is young, dry Vouvray from the vineyard where Huet began in 1928: quince, pear and lemon with a chalky finish. It is our value bottle for the Louisiana Oysters, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-sparkling-elsewhere-2026-10-10.md section 9 (items 1, 4 and 5: Victor Huet bought Le Haut-Lieu in 1928, three vineyards, all Chenin Blanc made sec, demi-sec, moelleux and sparkling, biodynamic since 1990); the wine record (profile, serve, offeredWith: value for the Louisiana Oysters)"
+		},
+		{
+			"target": "wine:Domaine Huet ‘Le Haut-Lieu’ Vouvray Sec 2024",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Huet ‘Le Haut-Lieu’ Vouvray Sec 2024 is dry Chenin Blanc from Vouvray, on the Loire near Tours, from the first of the estate’s three vineyards, farmed biodynamically since 1990. The estate makes Chenin sec, demi-sec, moelleux and sparkling, and this is the Sec, dry and young: quince, pear, lemon and white flowers, with bright, juicy acidity and a chalky finish. Its texture holds the barbecue sauce and its acidity cuts the pickled collard greens, so it is our value bottle for the Louisiana Oysters. We pour it at 46 to 50°F in a white wine glass, from the ice bucket. Victor Huet bought Le Haut-Lieu in 1928.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the estate's founding rather than the wine and named the Turtle Soup, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-sparkling-elsewhere-2026-10-10.md section 9 (items 1, 4 and 5: Victor Huet bought Le Haut-Lieu in 1928, three vineyards, all Chenin Blanc made sec, demi-sec, moelleux and sparkling, biodynamic since 1990); the wine record (profile, serve, offeredWith: value for the Louisiana Oysters)"
+		},
+		{
+			"target": "wine:Au Bon Climat ‘Sanford & Benedict’ Chardonnay Sta. Rita Hills 2021",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "This Chardonnay comes from Sanford & Benedict, planted in 1971, the first vineyard in its cool corner of Santa Barbara County: lemon curd, pear and hazelnut, rich but fresh. It is our value bottle for the Poussin à la Moutarde, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 3 (items 1 to 3: founded in 1982, Burgundian handling throughout, no chase for ripeness, the founder died in 2021, Sanford & Benedict planted in 1971, the first in what is now the Sta. Rita Hills); the wine record (profile, serve, offeredWith: value for the Poussin à la Moutarde)"
+		},
+		{
+			"target": "wine:Au Bon Climat ‘Sanford & Benedict’ Chardonnay Sta. Rita Hills 2021",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Au Bon Climat ‘Sanford & Benedict’ Chardonnay Sta. Rita Hills 2021 comes from the Sanford & Benedict vineyard, planted in 1971, the first in what is now the Sta. Rita Hills of Santa Barbara County. It is made with Burgundian handling throughout: lemon curd, pear, hazelnut and a little toast, rich but fresh, with bright acidity. Its richness meets the mustard cream and its acidity the fried skin, so it is our value bottle for the Poussin à la Moutarde. We pour it at 50 to 54°F in a white Burgundy bowl, briefly in the ice bucket. Jim Clendenen, who died in 2021, founded the winery in 1982.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the winery rather than the wine, called it \"our bottle\" without its tier, named the Pecan Gulf Fish, the Louisiana Crab Claws and the Louisiana BBQ Lobster, none of whose pairings names this wine, and claimed oak barrels no source holds; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 3 (items 1 to 3: founded in 1982, Burgundian handling throughout, no chase for ripeness, the founder died in 2021, Sanford & Benedict planted in 1971, the first in what is now the Sta. Rita Hills); the wine record (profile, serve, offeredWith: value for the Poussin à la Moutarde)"
+		},
+		{
+			"target": "wine:Kumeu River ‘Estate’ Chardonnay Auckland 2022",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Kumeu River Estate is New Zealand Chardonnay made the Burgundian way: lemon, white peach and hazelnut, gently creamy, with a fine mineral finish. It is our value bottle for the Crab & Corn Omelette, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 7 (items 1, 2 and 4: founded in 1944, clay soils west of Auckland, whole-bunch pressed, wild fermented in barrel, full malolactic, the Dalmatian families of West Auckland, the Estate blended from the family vineyards around Kumeu); guide.txt, the Crab & Corn Omelette (house-made miso butter); the wine record (profile, serve, offeredWith: value for the Crab & Corn Omelette)"
+		},
+		{
+			"target": "wine:Kumeu River ‘Estate’ Chardonnay Auckland 2022",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Kumeu River ‘Estate’ Chardonnay Auckland 2022 is blended from the winery’s own vineyards around Kumeu, west of Auckland on New Zealand’s North Island, on clay soils. It is made the Burgundian way, whole-bunch pressed, wild fermented in barrel and taken through full malolactic: lemon, white peach and hazelnut, gently creamy, with bright acidity and a fine, mineral finish. Its creaminess meets the miso butter and its acidity the sweet crab, so it is our value bottle for the Crab & Corn Omelette. We pour it at 50 to 54°F in a white Burgundy bowl, briefly in the ice bucket. A family from Dalmatia founded the winery in 1944.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it ran 98 words, opened on the estate and the family rather than the wine, called it \"our bottle\" without its tier, and named the Louisiana Crab Claws, the Redfish Véronique and the Pecan Gulf Fish, none of whose pairings names this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 7 (items 1, 2 and 4: founded in 1944, clay soils west of Auckland, whole-bunch pressed, wild fermented in barrel, full malolactic, the Dalmatian families of West Auckland, the Estate blended from the family vineyards around Kumeu); guide.txt, the Crab & Corn Omelette (house-made miso butter); the wine record (profile, serve, offeredWith: value for the Crab & Corn Omelette)"
+		},
+		{
+			"target": "wine:Cakebread Cellars Chardonnay Napa Valley 2023",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Cakebread is the classic Napa Chardonnay many guests ask for by name: ripe pear, apple and citrus with a touch of vanilla from oak, round and polished. Offer it by the bottle with buttery fish, crab and cream sauces.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-napa-sonoma-2026-10-10.md section 6 (items 1, 2 and 4: a family winery in Rutherford founded in 1973, made with some oak, a classic Napa style many guests know and ask for); the wine record (profile, serve, goesWith: butter, crab and cream; no dish pairing names it, so no dish is named)"
+		},
+		{
+			"target": "wine:Cakebread Cellars Chardonnay Napa Valley 2023",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Cakebread Cellars Chardonnay Napa Valley 2023 comes from a family winery in Rutherford, in the heart of the Napa Valley, and it is a name many guests know and ask for. It is made the classic Napa way, with some oak, so it tastes of ripe pear and apple, with citrus and a little vanilla, round and polished, its fresh acidity keeping it balanced. That roundness suits butter, crab and cream, the richer plates of the house. We pour it at 50 to 54°F in a white Burgundy bowl or a large white wine glass, briefly in the ice bucket. The winery was founded in 1973.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the winery and its founders rather than the wine and named the Pecan Gulf Fish, the Louisiana Crab Claws, the Louisiana BBQ Lobster and the Poussin à la Moutarde, none of whose pairings names this wine; it carried no line of story beyond the founding; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-napa-sonoma-2026-10-10.md section 6 (items 1, 2 and 4: a family winery in Rutherford founded in 1973, made with some oak, a classic Napa style many guests know and ask for); the wine record (profile, serve, goesWith: butter, crab and cream; no dish pairing names it, so no dish is named)"
 		}
 	]
 }
