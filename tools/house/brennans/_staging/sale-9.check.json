@@ -1,0 +1,47 @@
+{
+	"sampled": [
+		"López de Heredia ‘Viña Cubillo’ Rioja Crianza 2016",
+		"Produttori del Barbaresco Barbaresco 2020",
+		"Produttori del Barbaresco ‘Asili’ Barbaresco 2019",
+		"La Rioja Alta ‘Gran Reserva 904’ Rioja 2015",
+		"Bartolo Mascarello Barolo 2017",
+		"Tenuta San Guido ‘Sassicaia’ Bolgheri Sassicaia 2018",
+		"Duckhorn Napa Valley Cabernet Sauvignon 2022",
+		"Inglenook ‘Rubicon’ Rutherford 2010",
+		"Joseph Phelps ‘Insignia’ Napa Valley 2013",
+		"Screaming Eagle ‘Second Flight’ Napa Valley 2012"
+	],
+	"fixed": [
+		{
+			"name": "López de Heredia ‘Viña Cubillo’ Rioja Crianza 2016",
+			"field": "lines.s45",
+			"what": "a superlative: the youngest red; now comes from a family bodega in Haro"
+		},
+		{
+			"name": "Inglenook ‘Rubicon’ Rutherford 2010",
+			"field": "lines.s45",
+			"what": "American spelling percent; now per cent (the builder americanises)"
+		},
+		{
+			"name": "Joseph Phelps ‘Insignia’ Napa Valley 2013",
+			"field": "lines.sale",
+			"what": "a superlative: beef at its grandest; now prime steaks or lamb at a celebration"
+		},
+		{
+			"name": "Joseph Phelps ‘Insignia’ Napa Valley 2013",
+			"field": "lines.s45",
+			"what": "a superlative: beef at its grandest; now prime steaks and lamb at a celebration"
+		},
+		{
+			"name": "Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018",
+			"field": "lines.sale",
+			"what": "a superlative: Caymus at its fullest; now the fuller, richer Caymus"
+		},
+		{
+			"name": "Caymus ‘Special Selection’ Napa Valley Cabernet Sauvignon 2018",
+			"field": "lines.s45",
+			"what": "a superlative: the winery's top Cabernet Sauvignon; now its flagship, the hay's word"
+		}
+	],
+	"swept": "A node scan of all 32 wines, every sale and every staged description, for the engine's words() and sentences() (sale two sentences, 15 to 45 words; description 104 to 110), the dish link rule (every printed dish name against the wine's derived firstPickIds, secondFor and offeredWith, and every tier word beside it), the step against the record, BANNED_WORDS, superlatives (best, finest, greatest, most, top, legendary, iconic, world class, every -est word, than any, than anyone), hedges, prices, questions, allergens, dashes, American spellings from the engine's own list, provenance, living names (the engine's list, printed names exempt), every proper name and year against the hay and the house, the eight word run against the s20 and the opening on the printed name. Found: superlatives (Viña Cubillo the youngest red; Insignia beef at its grandest, sale and description; Caymus Special Selection at its fullest in the sale and the winery's top Cabernet in the description) and one American spelling (Rubicon, percent), all fixed; the other hits were plain facts (the only appellation in Italy for a single estate, one of the first Super Tuscans, Silver Oak makes only Cabernet), left as they stand. Insignia's apparent eight word run was the hyphen in its s20's Cabernet-led; by the engine's count it is seven."
+}
