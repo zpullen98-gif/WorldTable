@@ -52,9 +52,17 @@
    "target": "wine:Charles Lafitte Brut Champagne NV",
    "field": "lines.sale",
    "op": "set",
-   "value": "Charles Lafitte is a crisp, dry Brut Champagne, fresh citrus and apple with a light toasty note. It is the 4 oz pour on the Traditional Breakfast with the Eggs Hussarde, and on the Dinner Tasting Menu with the Grand Isle Jewel Oysters.",
-   "reason": "The sale: a tasting pour with no glass or bottle price, so the step is the 4 oz pour on the two tastings, each with the course it is printed beside",
+   "value": "Charles Lafitte is a crisp, dry Brut Champagne, fresh citrus and apple with a light toasty note. It is the 4 oz pour on the Traditional Breakfast with the poached egg course, and on the Dinner Tasting Menu with the raw oysters.",
+   "reason": "The sale: a tasting pour with no glass or bottle price, so the step is the 4 oz pour on the two tastings, each with the course it is printed beside. Refuter: named the Eggs Hussarde and the Grand Isle Jewel Oysters, dishes whose pairings do not hold this wine (it is only the tasting pour with those courses); now the courses by kind",
    "source": "the pack record w-3yaps1gt (pours 4 oz; profile; tastings: Traditional Breakfast course 4, Eggs Hussarde; Dinner Tasting Menu course 1, Grand Isle Jewel Oysters)"
+  },
+  {
+   "target": "wine:Charles Lafitte Brut Champagne NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Charles Lafitte is a Brut Champagne blended from Chardonnay, Pinot Noir and Meunier, its bubbles made by a second fermentation in the bottle. It's dry, with fresh citrus and apple and a light toasty note. That crisp dryness wakes the palate up, so we pour it on both tastings: with the poached egg course of the Traditional Breakfast, and with the raw oysters that open the Dinner Tasting Menu. It's a 4 oz pour at 43 to 46°F in a tulip, the bottle kept stoppered and iced between courses. The Vranken-Pommery group dates the brand to 1983; it's no relation to Château Lafite.",
+   "reason": "Refuter: kept five-star but named two dishes with no pairing link to this wine; overturned, the courses now said by kind, every other fact kept",
+   "source": "the pack record (lines.s45, profile, serve, pours); tastings: the Traditional Breakfast third course and the Dinner Tasting Menu first course pour it"
   },
   {
    "target": "wine:Argyle Brut Willamette Valley 2022",
@@ -164,9 +172,9 @@
    "target": "wine:Minuty ‘Prestige’ Côtes de Provence Rosé 2024",
    "field": "lines.s45",
    "op": "set",
-   "value": "The Minuty Prestige is a Grenache-led Côtes de Provence rosé from Château Minuty at Gassin, on the hills above the Gulf of Saint-Tropez, pressed pale and bottled young. It's dry and refreshing, wild strawberry and white peach and citrus zest and a light mineral finish. That freshness and red fruit suit tomatoes and shrimp, so it's our first pick with the New Orleans Shrimp & Grits, the Creole Tomato Tostada and the Fish Bouillabaisse, and the second choice with the Gulf Fish en Papillote. We serve it at 45 to 48°F in a white wine glass, and pour it where you can see that pale colour.",
-   "reason": "Five-star review of the description: it opened on the château rather than the wine as the list prints it, left out the Fish Bouillabaisse and the Gulf Fish en Papillote, and shared a run of eight words with the twenty (white peach, wild strawberry and citrus zest, with); it now opens on the printed name and names every linked dish, every fact kept",
-   "source": "the pack record w-fesbm1v5 (lines.s45 and s20, profile, parts, serve, firstPickIds, secondFor); research/producers-cellar-provence-loire-2026-10-10.md (Château Minuty, Gassin)"
+   "value": "The Minuty Prestige is a Grenache-led Côtes de Provence rosé from Château Minuty at Gassin, on the hills above the Gulf of Saint-Tropez, pressed pale and bottled young. It's dry and refreshing, wild strawberry and white peach and citrus zest and a light mineral finish. That freshness and red fruit suit tomatoes and shrimp, so it's our first pick with the New Orleans Shrimp & Grits, the Creole Tomato Tostada and the Fish Bouillabaisse, and the second choice with the Gulf Fish en Papillote. We serve it at 45 to 48°F in a white wine glass. Château Minuty, held by one family since 1936, is a Cru Classé of Provence.",
+   "reason": "Five-star review of the description: it opened on the château rather than the wine as the list prints it, left out the Fish Bouillabaisse and the Gulf Fish en Papillote, and shared a run of eight words with the twenty (white peach, wild strawberry and citrus zest, with); it now opens on the printed name and names every linked dish, every fact kept. Refuter: no line of story; adds the 1936 purchase held by one family and the Cru Classé rank, nobody living named",
+   "source": "the pack record w-fesbm1v5 (lines.s45 and s20, profile, parts, serve, firstPickIds, secondFor); research/producers-cellar-provence-loire-2026-10-10.md (Château Minuty, Gassin); research/producers-cellar-provence-loire-2026-10-10.md and the cellar research (Château Minuty bought in 1936, held by the descendants; one of the crus classés of Côtes de Provence)"
   },
   {
    "target": "wine:Damien Martin Bourgogne Pinot Noir 2023",
@@ -212,9 +220,9 @@
    "target": "wine:Domaine de Durban Beaumes-de-Venise Rouge 2024",
    "field": "lines.s45",
    "op": "set",
-   "value": "The Domaine de Durban Beaumes-de-Venise Rouge is the dry red, Grenache with Syrah, of an estate high under the Dentelles de Montmirail in the Southern Rhône that's known first for its sweet Muscat. It pours ripe and generous, with plum, dark cherry, pepper and dried herbs over round, soft tannins. That ripeness and pepper stand up to spice and braise, so it's our first pick with the Lamb Shank en Croûte, the Creole Hanger Steak and the Eggs Owen, and the second choice with the Creole-Spiced Hanger Steak and the Chateau Espagnole. We serve it a little cool, 58 to 62°F, in a standard red glass.",
-   "reason": "Five-star review of the description: it opened on the estate rather than the wine as the list prints it, left out a first pick and the second choices, and shared a run of eight words with the twenty (ripe and generous: dark cherry, plum, dried herbs); it now opens on the printed name and names every linked dish, every fact kept",
-   "source": "the pack record w-j69emzt9 (lines.s45, profile, parts, serve, firstPickIds, secondFor); research/producers-cellar-rhone (Durban, the Dentelles de Montmirail, its Muscat)"
+   "value": "The Domaine de Durban Beaumes-de-Venise Rouge is the dry red, Grenache with Syrah, of an estate high under the Dentelles de Montmirail owned by the Leydier family since 1967 and known first for its sweet Muscat. It pours ripe and generous, with plum, dark cherry, pepper and dried herbs over round, soft tannins. That ripeness and pepper stand up to spice and braise, so it's our first pick with the Lamb Shank en Croûte, the Creole Hanger Steak and the Eggs Owen, and the second choice with the Creole-Spiced Hanger Steak and the Chateau Espagnole. We serve it a little cool, 58 to 62°F, in a standard red glass.",
+   "reason": "Five-star review of the description: it opened on the estate rather than the wine as the list prints it, left out a first pick and the second choices, and shared a run of eight words with the twenty (ripe and generous: dark cherry, plum, dried herbs); it now opens on the printed name and names every linked dish, every fact kept. Refuter: no line of story; adds the Leydier family ownership since 1967, nobody living named",
+   "source": "the pack record w-j69emzt9 (lines.s45, profile, parts, serve, firstPickIds, secondFor); research/producers-cellar-rhone (Durban, the Dentelles de Montmirail, its Muscat); cellar research, the story (expert): the Leydier family has owned Durban since 1967"
   },
   {
    "target": "wine:Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône 2023",
