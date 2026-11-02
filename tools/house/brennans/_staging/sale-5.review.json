@@ -1,0 +1,76 @@
+{
+	"wines": [
+		{
+			"name": "Louis Michel Chablis 2022",
+			"s45": "rewritten",
+			"reason": "Rewritten: it opened on the domaine rather than the wine as the list prints it, and named the Louisiana Crab Claws, the Grand Isle Jewel Oysters and the Crab & Corn Omelette, none of whose pairings names this wine",
+			"dishes": [
+				"Redfish Véronique"
+			]
+		},
+		{
+			"name": "Domaine du Roc des Boutires ‘En Bertilionne’ Pouilly-Fuissé 2020",
+			"s45": "rewritten",
+			"reason": "Rewritten: it opened on the parcel name rather than the wine as the list prints it, and named the Pecan Gulf Fish, whose pairing does not name this wine",
+			"dishes": [
+				"Louisiana Crab Claws",
+				"Swordfish Grenobloise"
+			]
+		},
+		{
+			"name": "Jean-Philippe Fichet Bourgogne Blanc 2023",
+			"s45": "rewritten",
+			"reason": "Rewritten: it opened on the grower, a living person, and told his own story, and named the Louisiana Crab Claws, the Poussin à la Moutarde and the Pecan Gulf Fish, none of whose pairings names this wine",
+			"dishes": [
+				"Louisiana BBQ Lobster"
+			]
+		},
+		{
+			"name": "Les Héritiers du Comte Lafon Mâcon-Milly-Lamartine 2023",
+			"s45": "rewritten",
+			"reason": "Rewritten: it opened on the estate and its owners rather than the wine as the list prints it, and named the Creole Caesar, the Redfish Véronique and the Louisiana Crab Claws, none of whose pairings names this wine",
+			"dishes": [
+				"Crab & Corn Omelette"
+			]
+		},
+		{
+			"name": "Domaine Leflaive Mâcon-Verzé 2021",
+			"s45": "rewritten",
+			"reason": "Rewritten: it opened on the domaine and its history rather than the wine as the list prints it, and named the Louisiana Crab Claws and the Pecan Gulf Fish, neither of whose pairings names this wine",
+			"dishes": [
+				"Redfish Véronique"
+			]
+		},
+		{
+			"name": "Jean-Paul & Benoît Droin ‘Vaillons’ Chablis Premier Cru 2023",
+			"s45": "rewritten",
+			"reason": "Rewritten: it opened on the family rather than the wine as the list prints it, and named the Grand Isle Jewel Oysters, the Redfish Véronique, the Louisiana Crab Claws and the Crab & Corn Omelette, none of whose pairings names this wine; it now speaks of the plates its goesWith names",
+			"dishes": []
+		},
+		{
+			"name": "Raymond Dupont-Fahn ‘Les Tillets’ Meursault 2022",
+			"s45": "rewritten",
+			"reason": "Rewritten: it opened on the vineyard rather than the wine as the list prints it, and named the Poussin à la Moutarde and the Louisiana Crab Claws, neither of whose pairings names this wine",
+			"dishes": [
+				"Louisiana BBQ Lobster",
+				"Swordfish Grenobloise"
+			]
+		},
+		{
+			"name": "Bitouzet-Prieur ‘Les Corbins’ Meursault 2020",
+			"s45": "rewritten",
+			"reason": "Rewritten: it opened on the domaine rather than the wine as the list prints it, and named the Louisiana Crab Claws, whose pairing does not name this wine",
+			"dishes": [
+				"Poussin à la Moutarde"
+			]
+		},
+		{
+			"name": "Domaine Paul Pillot ‘Le Charmois’ Saint-Aubin Premier Cru 2022",
+			"s45": "rewritten",
+			"reason": "Rewritten: it named the Redfish Véronique and the Crab & Corn Omelette, neither of whose pairings names this wine, and closed on a person of the family not shown to be dead",
+			"dishes": [
+				"Louisiana Crab Claws"
+			]
+		}
+	]
+}
