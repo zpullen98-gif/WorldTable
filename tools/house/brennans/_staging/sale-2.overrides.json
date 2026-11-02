@@ -1,0 +1,132 @@
+{
+ "entries": [
+  {
+   "target": "wine:Cesarini Sforza Rosé Brut Trento NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Cesarini Sforza Rosé Brut is pink bubbles from the Italian Alps, made the Champagne way: dry, with small red berries and a soft mousse. With fried snacks and hot sauce at the Roost Bar, offer it by the bottle to share.",
+   "reason": "The sale (five-star card edition): the hook is the Alpine pink made the Champagne way and its taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the kind of plate its goesWith names, never a printed dish (fried snacks and hot sauce at the Roost Bar), and the step is the bottle the list prints",
+   "source": "the pack record w-in6wnlqj (bottle only, 750 ml; profile; goesWith the Roost Bar snacks and anything with hot sauce)"
+  },
+  {
+   "target": "wine:Cesarini Sforza Rosé Brut Trento NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Cesarini Sforza Rosé Brut is a Trento DOC sparkling rosé from Trento, in the Italian Alps: mostly Chardonnay, with a little Pinot Noir for its colour. It is made the Champagne way, its second fermentation in the bottle followed by about three years on its lees. It is dry and fresh: small red berries, a bright mountain acidity and a soft mousse. Its cold fizz suits fried snacks and hot sauce at the Roost Bar. We pour it at 43 to 46°F in a flute or tulip, in two stages. The house dates from 1974, and its eagle emblem is the coat of arms of Trento.",
+   "reason": "Five-star review of the description: it opened on the house and its founder, not the wine, and named the Popcorn Shrimp, the Fried Pickles and the Crawfish Meat Pies, none of whose pairings names this wine; it now opens on the wine, speaks of the plates its goesWith names, and keeps every sourced fact",
+   "source": "the pack record w-in6wnlqj (lines.s45, profile, serve, goesWith, grapes); research/producers-cellar-sparkling-elsewhere-2026-10-10.md section 4 (1974, the eagle and the coat of arms of Trento, 36 months on the lees, mostly Chardonnay)"
+  },
+  {
+   "target": "wine:Jansz ‘Premier Cuvée’ Brut Tasmania 2022",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Jansz is sparkling wine from cool Tasmania, made the Champagne way: crisp citrus and green apple, a touch of brioche and a salty snap. With salty, spiced snacks at the Roost Bar, open it by the bottle for the table.",
+   "reason": "The sale: the hook is the cool island and its crisp, salty taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the kind of plate its goesWith names, never a printed dish (salt and spice at the Roost Bar), and the step is the bottle",
+   "source": "the pack record w-lx0lfo3w (Jansz, bottle only, 750 ml; profile; goesWith salt and spice at the Roost Bar)"
+  },
+  {
+   "target": "wine:Jansz ‘Premier Cuvée’ Brut Tasmania 2022",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Jansz Premier Cuvée Brut 2022 is sparkling wine from Pipers River in Tasmania, the cool island south of mainland Australia: Chardonnay and Pinot Noir. It is made by the traditional method, with its second fermentation in the bottle, and breezes off the Bass Strait keep the ripening slow and the acidity high. It tastes crisp and clean, of citrus and green apple with a hint of brioche, a salty tang and fine bubbles. That tang suits salt and spice at the Roost Bar. We pour it at 43 to 46°F in a flute or tulip. Jansz began in 1986 as a venture with the Champagne house Louis Roederer.",
+   "reason": "Five-star review of the description: it opened on the explorer behind the name, not the wine, named the Creole Spiced Nuts, the Fried Pickles and the Cheese Board, none of whose pairings names this wine, and named no grape; it now opens on the wine, names the Chardonnay and Pinot Noir the research gives, and keeps the sourced story",
+   "source": "the pack record w-lx0lfo3w (Jansz; lines.s45, profile, serve, goesWith); research/producers-cellar-sparkling-elsewhere-2026-10-10.md section 6 (Pipers River, the Bass Strait breezes, the 1986 venture with Louis Roederer, Chardonnay and Pinot Noir)"
+  },
+  {
+   "target": "wine:Chapel Down Rosé Brut Kent NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Chapel Down's sparkling rosé from Kent is dry and light, with strawberry and red currant over bright English acidity and fine bubbles. It is the value bottle for the Steak Tartare Cannoli, red fruit for the raw beef, by the bottle.",
+   "reason": "The sale: the hook is the English rosé and its taste; the table is the one dish whose bottle tiers name it, said as the value bottle, and the step is the bottle",
+   "source": "the pack record w-iawg2ni8 (Chapel Down Rosé Brut; bottle only, 750 ml; profile; offeredWith Steak Tartare Cannoli, value)"
+  },
+  {
+   "target": "wine:Chapel Down Rosé Brut Kent NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Chapel Down Rosé Brut is English sparkling rosé from Kent, led by Chardonnay and Pinot Noir with a little Meunier. It is made by the traditional method, with about eighteen months on its lees in the bottle. Dry and light, it tastes of strawberry and red currant, with bright English acidity and fine bubbles. It is our value bottle for the Steak Tartare Cannoli, its red fruit meeting the raw beef while the bubbles lift the crème fraîche. We pour it at 43 to 46°F in a flute or tulip, in two stages. Its home vineyard at Tenterden was first planted in 1977.",
+   "reason": "Five-star review of the description: it opened on the producer, not the wine, and named the Crawfish Meat Pies and the Cheese Board, neither of whose pairings names this wine; it now opens on the wine, names only the Steak Tartare Cannoli as its value bottle, and keeps every sourced fact",
+   "source": "the pack record w-iawg2ni8 (lines.s45, profile, serve, offeredWith); the Steak Tartare Cannoli pairing (bottles.value); research/producers-cellar-sparkling-elsewhere-2026-10-10.md section 7 (Tenterden, 1977, the blend, six months in tank and about 18 months on the lees in bottle)"
+  },
+  {
+   "target": "wine:Ridgeview ‘Bloomsbury’ Brut Sussex NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Bloomsbury is English sparkling wine from Sussex, Chardonnay-led, with green apple, lemon zest and a light toast over crisp acidity. It is the value bottle for the Eggs Hussarde, sharp enough for the hollandaise, by the bottle.",
+   "reason": "The sale: the hook is the English sparkling wine and its taste; the table is the one dish whose bottle tiers name it, said as the value bottle, and the step is the bottle",
+   "source": "the pack record w-zowerxpq (Ridgeview Bloomsbury; bottle only, 750 ml; profile; offeredWith Eggs Hussarde, value)"
+  },
+  {
+   "target": "wine:Ridgeview ‘Bloomsbury’ Brut Sussex NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Ridgeview Bloomsbury Brut is English sparkling wine from Ditchling, in Sussex, on the chalk of the South Downs: mostly Chardonnay, with Pinot Noir and Meunier. It is made by the traditional method, with a second fermentation in the bottle. It tastes of lemon zest, green apple and toasted brioche, with crisp acidity and a fine mousse. It is our value bottle for the Eggs Hussarde, that acidity cutting the hollandaise and the yolk. We pour it at 43 to 46°F in a tulip or white-wine glass. The estate was founded in the mid 1990s to make only sparkling wine, and its wines carry the names of London districts.",
+   "reason": "Five-star review of the description: it opened on the founding family, not the wine, named a living family, and named the Eggs Sardou and the Creole Caesar, neither of whose pairings names this wine; it now opens on the wine, names nobody, names only the Eggs Hussarde as its value bottle, and keeps the sourced story",
+   "source": "the pack record w-zowerxpq (lines.s45, profile, serve, offeredWith); the Eggs Hussarde pairing (bottles.value); research/producers-cellar-sparkling-elsewhere-2026-10-10.md section 8 (Ditchling, the mid 1990s founding, only sparkling wine from Champagne grapes, the London district names, the chalk of the South Downs)"
+  },
+  {
+   "target": "wine:Domaine Huet Pétillant Vouvray 2019",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "The Huet Pétillant is all Chenin Blanc from Vouvray, softly sparkling, with quince, apple and honeysuckle and Chenin's bright acidity. With anything fried or sharp with vinegar at the Roost Bar, offer it by the bottle.",
+   "reason": "The sale: the hook is the softly sparkling Chenin and its taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the kind of plate its goesWith names, never a printed dish (vinegar and frying at the Roost Bar), and the step is the bottle",
+   "source": "the pack record w-kspquur7 (Domaine Huet Pétillant 2019; bottle only, 750 ml; profile; goesWith vinegar and frying at the Roost Bar)"
+  },
+  {
+   "target": "wine:Domaine Huet Pétillant Vouvray 2019",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Domaine Huet Pétillant 2019 is a lightly sparkling Vouvray, all Chenin Blanc, from the Loire near Tours. It is made by the traditional method but to about half the usual pressure, then rests at least three years on its lees, so the fizz is soft and creamy. It tastes of quince, apple and honeysuckle, held up by Chenin's high, bright acidity. That acidity stands up to vinegar and frying at the Roost Bar. We pour it at 43 to 46°F in a tulip or white-wine glass, easing the cork out gently. Victor and Anna-Constance Huet bought their first Vouvray vineyard, Le Haut-Lieu, in 1928.",
+   "reason": "Five-star review of the description: it opened on the founding of the estate, not the wine, and named the Fried Pickles, the Crawfish Meat Pies and the Cheese Board, none of whose pairings names this wine; it now opens on the wine and keeps the sourced founding as its line of story",
+   "source": "the pack record w-kspquur7 (lines.s45, profile, serve, goesWith); research/producers-cellar-sparkling-elsewhere-2026-10-10.md section 9 (1928, Victor and Anna-Constance Huet, Le Haut-Lieu, half the pressure, at least three years on the lees)"
+  },
+  {
+   "target": "wine:Ferrari Rosé Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Ferrari Rosé is Trento's sparkling rosé made the Champagne way, Pinot Noir with Chardonnay: wild strawberry, raspberry and a creamy mousse, dry and full. With fried pastry and a sharp rémoulade, open it by the bottle.",
+   "reason": "The sale: the hook is the Pinot-led Alpine rosé and its taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the kind of plate its goesWith names, never a printed dish (fried pastry and rémoulade), and the step is the bottle",
+   "source": "the pack record w-568xl8n8 (Ferrari Rosé Brut; bottle only, 750 ml; profile; goesWith fried pastry and rémoulade)"
+  },
+  {
+   "target": "wine:Ferrari Rosé Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Ferrari Rosé Brut is a Trento DOC sparkling rosé from the Italian Alps, about 60 percent Pinot Noir and 40 percent Chardonnay, picked by hand. It is made by the traditional method and rests at least twenty months on its lees. It is dry, with real body for a pink sparkler: wild strawberry, raspberry, fresh mountain acidity and a creamy mousse. That body suits fried pastry and a creamy rémoulade. We pour it at 43 to 46°F in a flute or tulip, in two stages. Giulio Ferrari founded the house in Trento in 1902, after learning the Champagne method in Épernay; it is no relation to the cars.",
+   "reason": "Five-star review of the description: it opened on the house, not the wine, named the living family that runs it, and named the Crawfish Meat Pies and the Popcorn Shrimp, neither of whose pairings names this wine; it now opens on the wine, names only the founder, who is long dead, and speaks of the plates its goesWith names",
+   "source": "the pack record w-568xl8n8 (lines.s45, profile, serve, goesWith); research/producers-cellar-sparkling-elsewhere-2026-10-10.md section 5 (Giulio Ferrari, 1902, Épernay, 60 Pinot Noir and 40 Chardonnay picked by hand, at least 20 months on the lees)"
+  },
+  {
+   "target": "wine:JM Sélèque ‘Solessence’ Extra Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Solessence is grower Champagne from Pierry, near Épernay, Extra Brut and very dry: white flowers, ripe citrus and almond paste with a chalky finish. With raw oysters or anything fried and salty, offer it by the bottle.",
+   "reason": "The sale: the hook is the grower Champagne and its very dry taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the kind of plate its goesWith names, never a printed dish (vinegar and frying, oysters), and the step is the bottle",
+   "source": "the pack record w-s3ih8iz8 (JM Sélèque Solessence; bottle only, 750 ml; profile; goesWith vinegar, frying and the oysters)"
+  },
+  {
+   "target": "wine:JM Sélèque ‘Solessence’ Extra Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "JM Sélèque Solessence is a grower Champagne from Pierry, just south of Épernay: about half Chardonnay, the rest Meunier and a little Pinot Noir, from the family's vines in seven villages. Part is fermented in oak, and half the blend comes from a perpetual reserve begun in 2004. Extra Brut, so very dry, it tastes of white flowers, ripe citrus and almond paste, chalky and precise. That dryness stands up to vinegar, frying and raw oysters. We pour it at 45 to 48°F in a tulip or white-wine glass, a touch warmer than the house bubbles. The family planted its first vines near Pierry in 1965.",
+   "reason": "Five-star review of the description: it opened on the family, not the wine, named a founder the research does not say is dead, and named the Fried Pickles and the Creole Spiced Nuts, neither of whose pairings names this wine; it now opens on the wine, names nobody and speaks of the plates its goesWith names",
+   "source": "the pack record w-s3ih8iz8 (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-growers-2026-10-10.md section 1 (Pierry, seven villages, about 50 Chardonnay 40 Meunier 10 Pinot Noir, part in oak, the perpetual reserve back to 2004, the first vines in 1965, organic farming)"
+  },
+  {
+   "target": "wine:Billecart-Salmon ‘Réserve’ Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Billecart-Salmon Réserve is the Brut of a family house in Mareuil-sur-Aÿ, fresh and delicate, with pear, citrus and a light brioche. It is the classic bottle for the Steak Tartare with Rye, its bubbles cutting the yolk, by the bottle.",
+   "reason": "The sale: the hook is the family house and its fresh, delicate taste; the table is the one dish whose bottle tiers name it, said as the classic, and the step is the bottle",
+   "source": "the pack record w-cwd97m10 (Billecart-Salmon Réserve; bottle only, 750 ml; profile; offeredWith Steak Tartare with Rye, classic); the dish description (egg yolk)"
+  },
+  {
+   "target": "wine:Billecart-Salmon ‘Réserve’ Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Billecart-Salmon Réserve Brut is the family house's Brut, from Mareuil-sur-Aÿ in the Vallée de la Marne: Meunier, Chardonnay and Pinot Noir, blended with reserve wines from older harvests. It is fresh and delicate rather than heavy, with pear, citrus, a light brioche and a clean finish. It is our classic bottle for the Steak Tartare with Rye, its acidity cutting the yolk and the raw beef. We pour it at 43 to 46°F in a tulip or white-wine glass, turning the bottle as we ease the cork. The house was founded in 1818 on the marriage of Nicolas François Billecart and Elisabeth Salmon.",
+   "reason": "Five-star review of the description: it opened on the founding, not the wine, and named the Crawfish Meat Pies, the Turtle Soup and the Eggs Hussarde, none of whose pairings names this wine; it now opens on the wine, names only the Steak Tartare with Rye as its classic bottle, and keeps the sourced story",
+   "source": "the pack record w-cwd97m10 (lines.s45, profile, serve, offeredWith); the Steak Tartare with Rye pairing (bottles.classic) and its description; research/producers-cellar-champagne-menu-2026-10-10.md section 7 (1818, Nicolas François Billecart and Elisabeth Salmon, the 80th anniversary Sous Bois magnum)"
+  }
+ ]
+}
