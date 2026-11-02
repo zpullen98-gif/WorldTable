@@ -167,6 +167,158 @@
    "value": "The Minuty Prestige is a Grenache-led Côtes de Provence rosé from Château Minuty at Gassin, on the hills above the Gulf of Saint-Tropez, pressed pale and bottled young. It's dry and refreshing, wild strawberry and white peach and citrus zest and a light mineral finish. That freshness and red fruit suit tomatoes and shrimp, so it's our first pick with the New Orleans Shrimp & Grits, the Creole Tomato Tostada and the Fish Bouillabaisse, and the second choice with the Gulf Fish en Papillote. We serve it at 45 to 48°F in a white wine glass, and pour it where you can see that pale colour.",
    "reason": "Five-star review of the description: it opened on the château rather than the wine as the list prints it, left out the Fish Bouillabaisse and the Gulf Fish en Papillote, and shared a run of eight words with the twenty (white peach, wild strawberry and citrus zest, with); it now opens on the printed name and names every linked dish, every fact kept",
    "source": "the pack record w-fesbm1v5 (lines.s45 and s20, profile, parts, serve, firstPickIds, secondFor); research/producers-cellar-provence-loire-2026-10-10.md (Château Minuty, Gassin)"
+  },
+  {
+   "target": "wine:Damien Martin Bourgogne Pinot Noir 2023",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Damien Martin's Bourgogne is light, silky Pinot Noir, red cherry, raspberry and a touch of earth that never bullies the plate. It is our first pick with the Blackened Tofu and the Steak Tartare with Rye, by the glass.",
+   "reason": "The sale: the hook is the light, silky taste; the table is the two dishes whose first pick it is, and the step the glass",
+   "source": "the pack record w-y0ihoyc7 (glass $18.00; profile; firstPickIds Blackened Tofu, Steak Tartare with Rye)"
+  },
+  {
+   "target": "wine:Damien Martin Bourgogne Pinot Noir 2023",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Damien Martin's Bourgogne is Pinot Noir from a father and son family domaine at Davayé, in the Mâconnais of southern Burgundy, founded in 1982. It's light and silky, with raspberry, red cherry and a touch of earth over light tannin and fresh acidity. A light red goes where a big one would bully the food, so it's our first pick with the Steak Tartare with Rye and the Blackened Tofu, and the second choice with the Roasted Rohan Duck Breast, the Duck Confit Waffle and the marchand de vin on the Eggs Hussarde. We serve it slightly cool, 55 to 58°F, in a Burgundy bowl, with no decanting.",
+   "reason": "Five-star review of the description: it named the founder, Robert Martin, with nothing in the research showing he has died, left out the Steak Tartare with Rye, a first pick, and shared a run of eight words with the twenty (light and silky: red cherry, raspberry and a); it now names the domaine and its founding year only, and every linked dish as first pick or second choice",
+   "source": "the pack record w-y0ihoyc7 (lines.s45, origin: a father and son domaine at Davayé founded in 1982, profile, serve, firstPickIds, secondFor)"
+  },
+  {
+   "target": "wine:Louis Jadot Beaune 1er Cru 2023",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Louis Jadot's Beaune Premier Cru is silky Pinot Noir from Burgundy's wine capital, bright red fruit with a savoury edge, light enough for fish. It is the 4 oz pour on the Dinner Tasting Menu with the Redfish Véronique.",
+   "reason": "The sale: a tasting pour with no glass or bottle price, so the step is the 4 oz pour on the Dinner Tasting Menu with the course it is printed beside",
+   "source": "the pack record w-q71pquzd (profile; serve 4 oz; tastings: Dinner Tasting Menu course 3, Redfish Véronique)"
+  },
+  {
+   "target": "wine:Louis Jadot Beaune 1er Cru 2023",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Louis Jadot's Beaune Premier Cru is Pinot Noir from Beaune, the wine capital of Burgundy, where there is no Grand Cru, so Premier Cru vineyards head the village. It's silky and light in tannin, with bright red fruit and a savoury edge, so it's gentle with fish: on our Dinner Tasting Menu it comes with the Redfish Véronique, and its red fruit loves the hibiscus-pickled grapes. It's the second choice with the Roasted Chateaubriand. We open it 20 to 30 minutes ahead and pour 4 oz at 57 to 60°F in a Burgundy bowl. Jadot was founded in Beaune in 1859; Bacchus is on every label.",
+   "reason": "Five-star review of the description: it shared a run of eight words with the twenty (bright red fruit, silky, with a savory edge); the taste is reordered and the Chateaubriand named as the second choice it is, every fact kept",
+   "source": "the pack record w-q71pquzd (lines.s45, profile, serve, secondFor Roasted Chateaubriand and Redfish Véronique, tastings); research/producers-cellar-burgundy (Jadot, Beaune, 1859)"
+  },
+  {
+   "target": "wine:Domaine de Durban Beaumes-de-Venise Rouge 2024",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "The Durban is Grenache with Syrah from Beaumes-de-Venise, ripe and generous, with dark cherry, plum and pepper that stand up to spice. It is our first pick with the Eggs Owen, the Creole Hanger Steak and the Lamb Shank en Croûte, by the glass.",
+   "reason": "The sale: the hook is the ripe, peppery taste that meets spice; the table is the three dishes whose first pick it is, and the step the glass",
+   "source": "the pack record w-j69emzt9 (glass $19.00; profile; firstPickIds Eggs Owen, Creole Hanger Steak, Lamb Shank en Croûte)"
+  },
+  {
+   "target": "wine:Domaine de Durban Beaumes-de-Venise Rouge 2024",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Domaine de Durban Beaumes-de-Venise Rouge is the dry red, Grenache with Syrah, of an estate high under the Dentelles de Montmirail in the Southern Rhône that's known first for its sweet Muscat. It pours ripe and generous, with plum, dark cherry, pepper and dried herbs over round, soft tannins. That ripeness and pepper stand up to spice and braise, so it's our first pick with the Lamb Shank en Croûte, the Creole Hanger Steak and the Eggs Owen, and the second choice with the Creole-Spiced Hanger Steak and the Chateau Espagnole. We serve it a little cool, 58 to 62°F, in a standard red glass.",
+   "reason": "Five-star review of the description: it opened on the estate rather than the wine as the list prints it, left out a first pick and the second choices, and shared a run of eight words with the twenty (ripe and generous: dark cherry, plum, dried herbs); it now opens on the printed name and names every linked dish, every fact kept",
+   "source": "the pack record w-j69emzt9 (lines.s45, profile, parts, serve, firstPickIds, secondFor); research/producers-cellar-rhone (Durban, the Dentelles de Montmirail, its Muscat)"
+  },
+  {
+   "target": "wine:Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône 2023",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Domaine de Châteaumar's Cuvée Vincent is all Syrah from old vines beside Châteauneuf-du-Pape, juicy, with black raspberry, black pepper and soft tannins. It is the 4 oz pour on the Traditional Breakfast with the Petite Filet Mignon.",
+   "reason": "The sale: a tasting pour with no glass or bottle price, so the step is the 4 oz pour on the Traditional Breakfast with the course it is printed beside, also that dish's first pick",
+   "source": "the pack record w-u49o02ii (origin; profile; firstPickIds Petite Filet Mignon; tastings: Traditional Breakfast, Fourth Course)"
+  },
+  {
+   "target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "The Moulin d'Issan is Bordeaux from the team behind Château d'Issan in Margaux, cassis, plum and cedar with polished tannin. It is our first pick with the Creole-Spiced Hanger Steak and the Chateau Espagnole, by the glass.",
+   "reason": "The sale: the hook is the Margaux team and the taste; the table is the two dishes whose first pick it is, and the step the glass; no vintage is named while the two lists disagree",
+   "source": "the pack record w-qwrup3j0 (glass $16; profile; firstPickIds Creole-Spiced Hanger Steak, Chateau Espagnole; serviceNote)"
+  },
+  {
+   "target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Moulin d'Issan is made by the team behind Château d'Issan, a moated château in Margaux, from vineyards on low ground outside the Margaux appellation, so it's labelled Bordeaux Supérieur; it's named for a ruined seventeenth century windmill. It's Merlot and Cabernet Sauvignon, aged partly in new barrels, with cedar, plum and cassis and polished tannin. That structure is what steak and béarnaise want, so it's our first pick with the Chateau Espagnole and the Creole-Spiced Hanger Steak, and the second choice with the Petite Filet Mignon, the Creole Hanger Steak and the Lamb Shank en Croûte. We pour it at 60 to 62°F in a Bordeaux glass.",
+   "reason": "Five-star review of the description: it ran 102 words, left out the Chateau Espagnole, a first pick, and shared a run of eight words with the twenty (cassis, plum and cedar, medium-bodied with polished tannin); it now names every linked dish, every fact kept",
+   "source": "the pack record w-qwrup3j0 (lines.s45, profile, parts, serve, firstPickIds, secondFor); research/producers-cellar-bordeaux-left-2026-10-10.md (Château d'Issan, the windmill)"
+  },
+  {
+   "target": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "La Miraja's Le Masche is juicy Barbera from the Asti hills, dark cherry and plum with bright acidity and soft tannin. It is our first pick with the Agnolotti del Plin, and our Italian red by the glass.",
+   "reason": "The sale: the hook is the juicy Barbera taste; the table is the one dish whose first pick it is, and the step the glass",
+   "source": "the pack record w-rr3vq91n (glass $16.00; profile; firstPickIds Agnolotti del Plin; why our one Italian glass)"
+  },
+  {
+   "target": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "La Miraja's Le Masche is Barbera d'Asti, from the Asti hills of Piemonte, made in the old castle cellars of Castagnole Monferrato; Le Masche means the witches in Piemontese dialect, for the local spirits who guard the vineyard in legend. Barbera keeps bright acidity and soft tannin, so it drinks juicy and medium bodied, with plum, dark cherry and a fresh, lively finish. It's our first pick with the Agnolotti del Plin, and it loves tomato, Creole sauce and cured pork. We serve it a touch cool, 58 to 62°F, in a standard red glass, a few minutes in the ice bucket if the bar runs warm.",
+   "reason": "Five-star review of the description: it called Maggie's Mushrooms its first pick, though the derived first pick is the Agnolotti del Plin, named the New Orleans Shrimp & Grits, the Creole Tomato Tostada and the Roost Burger with no pairing link, opened on our newest glass (a superlative, and not the wine) and hedged the legend (said to guard); it now opens on the printed name, names its one first pick and speaks of the plates its goesWith names",
+   "source": "the pack record w-rr3vq91n (lines.s45, profile, goesWith, serve, firstPickIds Agnolotti del Plin); research/producers-cellar-italy-2026-10-10.md (La Miraja, the castle of Castagnole Monferrato, masca the dialect word for a witch); components wine-story-le-masche"
+  },
+  {
+   "target": "wine:Inglenook ‘Rubicon’ 2010",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Inglenook's Rubicon is a mature Rutherford red, mostly Cabernet Sauvignon, with blackcurrant, cedar, tobacco and earth. It is our first pick with the Roasted Chateaubriand, a chance to taste a Napa flagship from 2010 by the glass.",
+   "reason": "The sale: the hook is the mature flagship and its taste; the table is the one dish whose first pick it is, and the step the glass",
+   "source": "the pack record w-4qmphesw (glass $70; profile; firstPickIds Roasted Chateaubriand)"
+  },
+  {
+   "target": "wine:Inglenook ‘Rubicon’ 2010",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Inglenook's Rubicon is the estate's flagship red from Rutherford in the Napa Valley; the 2010 is 86 percent Cabernet Sauvignon, the rest Cabernet Franc, Petit Verdot and Merlot, aged 20 months in barrel and released in September 2013. Expect blackcurrant, cedar, tobacco and earth, and the structure of a mature Rutherford red, which makes it our first pick for the Roasted Chateaubriand with sauce Foyot. The sommelier judges how much air each bottle needs, and we serve it at 60 to 64°F in a large Bordeaux glass, the bottle stood upright ahead of service. Inglenook was founded at Rutherford in 1879 by Gustave Niebaum, a Finnish sea captain.",
+   "reason": "Five-star review of the description: it opened on the founding rather than the wine as the list prints it and shared a run of eight words with the twenty (Cabernet Sauvignon, with Cabernet Franc, Petit Verdot and); it now opens on the printed name and closes on the story, every fact kept",
+   "source": "the pack record w-4qmphesw (lines.s45, profile, parts, serve, firstPickIds); research/producers-cellar-napa-icons-2026-10-10.md (Inglenook, 1879, Gustave Niebaum, a Finnish sea captain)"
+  },
+  {
+   "target": "wine:Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "The Paul Hobbs is Coombsville Cabernet Sauvignon, dark fruit and cocoa on a firm frame, kept fresh by a cool corner of Napa. It is the 4 oz pour on the Dinner Tasting Menu with the Roasted Rohan Duck Breast.",
+   "reason": "The sale: a tasting pour with no glass or bottle price, so the step is the 4 oz pour on the Dinner Tasting Menu with the course it is printed beside, also that dish's first pick",
+   "source": "the pack record w-p30or70w (profile; firstPickIds Roasted Rohan Duck Breast; tastings: Dinner Tasting Menu course 4)"
+  },
+  {
+   "target": "wine:Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "The Paul Hobbs is Cabernet Sauvignon from Coombsville, east of the city of Napa, a cool corner of the valley that keeps the wine fresh: dark fruit and cocoa on a firm structure. Duck breast is rich enough for Cabernet, so on our Dinner Tasting Menu it comes with the Roasted Rohan Duck Breast, where the dark fruit meets the glazed peaches and the candied hazelnuts echo the cocoa. It's young, so we open or decant it 30 to 60 minutes ahead and pour 4 oz at 60 to 64°F in a Bordeaux glass. Coombsville is named for Nathan Coombs, who founded the city of Napa.",
+   "reason": "Five-star review of the description: it shared a run of eight words with the twenty (one of Napa's cooler corners, so it stays); reworded, every fact kept",
+   "source": "the pack record w-p30or70w (lines.s45, profile, serve, tastings); research/producers-cellar-napa-icons-2026-10-10.md (Coombsville, Nathan Coombs, the founder of the city of Napa)"
+  },
+  {
+   "target": "wine:Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "The Erdener Prälat is a sweet Mosel Riesling Auslese, apricot, honey and pineapple lifted by electric acidity. It is our first pick with the World Famous Bananas Foster, the New Orleans Bread Pudding and the Lemon Tart, and the half bottle pours about four glasses.",
+   "reason": "The sale: the hook is the sweet, bright taste; the table is three of the seven dishes whose first pick it is, and the step the 375 ml half bottle",
+   "source": "the pack record w-lkox3rl4 (bottle $80 half-bottle, 375 ml; profile; serve about four pours; firstPickIds)"
+  },
+  {
+   "target": "wine:Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Dr. Hermann's Erdener Prälat is Riesling Auslese, a selected harvest from a steep Mosel vineyard at Erden under a red slate crag that throws heat back onto the vines. It's sweet, with apricot, honey, pineapple and electric acidity, and twelve years of age add depth. Sweeter than our desserts, it never tastes sour beside them: our first pick with the Lemon Tart, the Pineapple Tarte Tatin, the World Famous Bananas Foster, the New Orleans Bread Pudding and the sweet breakfast starters. Dr. Hermann is a family estate at Erden. We pour 2 to 3 oz at 45 to 50°F in a dessert glass, about four from the half bottle.",
+   "reason": "Five-star review of the description: it opened on the estate rather than the wine as the list prints it; it now opens on the printed name, with the family estate as its line of story, every fact kept",
+   "source": "the pack record w-lkox3rl4 (lines.s45, profile, parts, serve, firstPickIds); research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 5 (Dr. Hermann at Erden; no founder or founding year used)"
+  },
+  {
+   "target": "wine:Domaine La Tour Vieille Banyuls Reserva NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Domaine La Tour Vieille's Banyuls Reserva is a sweet fortified red, dried fig, walnut, caramel and coffee, the classic wine for chocolate. It is the 4 oz pour on the Dinner Tasting Menu, where it closes the meal with The Snickers.",
+   "reason": "The sale: a tasting pour with no glass or bottle price, so the step is the 4 oz pour on the Dinner Tasting Menu with the course it is printed beside, also that dish's first pick",
+   "source": "the pack record w-69pqytkm (profile; parts; tastings: Dinner Tasting Menu course 5, The Snickers)"
+  },
+  {
+   "target": "wine:Domaine La Tour Vieille Banyuls Reserva NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Domaine La Tour Vieille's Banyuls Reserva is a sweet red from Roussillon, mostly Grenache, its fermentation stopped with grape spirit, then aged the oxidative way: coffee, caramel, walnut, orange peel and dried fig. Sweet enough that chocolate never turns it bitter, it closes our Dinner Tasting Menu with The Snickers, and it's our first pick with the Cherries Jubilee, the Café Brûlot Coffee Cake and the Chocolate Crémeux, the second choice with the World Famous Bananas Foster and the New Orleans Bread Pudding. We pour 4 oz, about 55°F, in a small dessert glass. The domaine sits at Collioure, where schist terraces drop almost into the Mediterranean.",
+   "reason": "Five-star review of the description: it opened on the domaine rather than the wine as the list prints it and shared a run of eight words with the twenty (dried fig, walnut, caramel, coffee and orange peel); it now opens on the printed name and closes on the story, every fact kept",
+   "source": "the pack record w-69pqytkm (lines.s45, origin, profile, parts, serve, firstPickIds, secondFor, tastings); research/producers-cellar-dessert (La Tour Vieille, Collioure)"
   }
  ]
 }
