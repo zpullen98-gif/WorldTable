@@ -127,6 +127,134 @@
 			"value": "Domaine Joseph Drouhin Clos des Mouches Beaune Premier Cru 2015 is Pinot Noir grown on the slope above Beaune, where the Drouhin house owns more of the clos than anyone. It is farmed organically and biodynamically and raised with modest new oak, for elegance over weight. Eleven years on, red and black cherry meet rose and spice, silky and long, for roast poultry, veal, mushrooms and a guest who wants perfume over power. We serve it at 58 to 62°F in a Burgundy bowl, no decanting, and let it open in the glass. Joseph Drouhin founded the house in 1880, and it makes the clos in red and white.",
 			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it, shared a seventeen word run with the 20 second line and named the Roasted Rohan Duck Breast and the Blackened Tofu, dishes whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, no dish, since none names this wine in its pairing, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
 			"source": "research/producers-cellar-red-burgundy-2026-10-10.md section 6 (items 1, 2, 4, 10 and the expert line: founded 1880 by Joseph Drouhin, the largest share of the Clos des Mouches, made in both colours, organic and biodynamic farming, modest new oak); the wine record (profile, serve, goesWith: roast poultry, veal and mushrooms; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Domaine Georges Roumier ‘Clos de la Bussière’ Morey-Saint-Denis Premier Cru 2014",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "The Clos de la Bussière is a walled Premier Cru that Roumier owns alone, dark cherry, plum, earth and iron, firm yet silky at twelve years. It is our celebration bottle for the Blackened Tofu, opened thirty minutes ahead by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (the celebration bottle for the Blackened Tofu), and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-red-burgundy-2026-10-10.md section 7 (items 1, 2, 4 and 6, and the expert line: founded 1924 by Georges Roumier, the Morey monopole of a Chambolle domaine, whole bunches used sparingly, restrained oak); research/bottle-selection-2026-10-04.json Blackened Tofu splurge tier; the wine record (profile, serve, offeredWith: splurge for the Blackened Tofu)"
+		},
+		{
+			"target": "wine:Domaine Georges Roumier ‘Clos de la Bussière’ Morey-Saint-Denis Premier Cru 2014",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Georges Roumier Clos de la Bussière Morey-Saint-Denis Premier Cru 2014 is Pinot Noir from a walled clos the domaine owns alone, though its cellars sit in Chambolle-Musigny. Whole bunches are used sparingly and oak with restraint, and this clos shows the darker, earthier face of the house. Twelve years on: dark cherry and plum, earth, iron and spice, firm yet silky. That earth answers the shiitakes and rice grits in the Blackened Tofu, our celebration bottle for it. We pour at 60 to 63°F in a Burgundy bowl, opened thirty minutes ahead or briefly decanted, as the sommelier advises. Georges Roumier founded the domaine in 1924.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it and shared a nine word run with the 20 second line; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-red-burgundy-2026-10-10.md section 7 (items 1, 2, 4 and 6, and the expert line: founded 1924 by Georges Roumier, the Morey monopole of a Chambolle domaine, whole bunches used sparingly, restrained oak); research/bottle-selection-2026-10-04.json Blackened Tofu splurge tier; the wine record (profile, serve, offeredWith: splurge for the Blackened Tofu)"
+		},
+		{
+			"target": "wine:Marquis d’Angerville ‘Clos des Ducs’ Volnay Premier Cru 2014",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "The Clos des Ducs is the walled Volnay Premier Cru beside the d’Angerville house, red cherry, rose and violet, silky with twelve years. It is our celebration bottle for the Eggs Owen and the Steak Tartare with Rye, opened ahead by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (the celebration bottle for the Eggs Owen and the Steak Tartare with Rye), and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-red-burgundy-2026-10-10.md section 8 (items 1, 2, 3, 6 and 10: the walled Clos des Ducs beside the house, a true monopole, biodynamic, pale and fine with little new oak, Sem d'Angerville and estate bottling in the 1930s); research/bottle-selection-2026-10-04.json Eggs Owen and Steak Tartare with Rye splurge tiers; the wine record (profile, serve, offeredWith: splurge for the Eggs Owen and the Steak Tartare with Rye)"
+		},
+		{
+			"target": "wine:Marquis d’Angerville ‘Clos des Ducs’ Volnay Premier Cru 2014",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Marquis d’Angerville Clos des Ducs Volnay Premier Cru 2014 is Pinot Noir from the walled clos beside the family’s house in Volnay, a monopole. Farmed biodynamically, it is made pale and fine with little new oak. Twelve years on: red cherry, rose and violet, fine dry tannin, a long finish. Its depth meets the red wine-braised short rib of the Eggs Owen, and its softened tannin flatters the raw beef of the Steak Tartare with Rye: our celebration bottle for both. We open it thirty minutes ahead and pour at 58 to 62°F in a Burgundy bowl. Sem d’Angerville helped force estate bottling in the 1930s.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it and shared a fourteen word run with the 20 second line; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-red-burgundy-2026-10-10.md section 8 (items 1, 2, 3, 6 and 10: the walled Clos des Ducs beside the house, a true monopole, biodynamic, pale and fine with little new oak, Sem d'Angerville and estate bottling in the 1930s); research/bottle-selection-2026-10-04.json Eggs Owen and Steak Tartare with Rye splurge tiers; the wine record (profile, serve, offeredWith: splurge for the Eggs Owen and the Steak Tartare with Rye)"
+		},
+		{
+			"target": "wine:Domaine Jean Grivot Echézeaux Grand Cru 2011",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Fifteen years have made this Grand Cru silky and layered, dark cherry, rose and spice with forest floor coming in. It is our celebration bottle for the Roasted Rohan Duck Breast, decanted off its sediment if the sommelier advises and poured by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (the celebration bottle for the Roasted Rohan Duck Breast), and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-red-burgundy-2026-10-10.md section 4 (items 1, 2, 6 and the expert line: a Vosne-Romanée family domaine, classical and firm with moderate new oak, the cold-maceration experiments of the late 1980s and the step back, Echézeaux in Flagey-Echézeaux above the Clos de Vougeot); research/bottle-selection-2026-10-04.json Roasted Rohan Duck Breast splurge tier; the wine record (profile, serve, offeredWith: splurge for the Roasted Rohan Duck Breast)"
+		},
+		{
+			"target": "wine:Domaine Jean Grivot Echézeaux Grand Cru 2011",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Jean Grivot Echézeaux Grand Cru 2011 is Pinot Noir from the slope above the Clos de Vougeot in Flagey-Echézeaux, made classical and firm, with moderate new oak, by a Vosne-Romanée family. Fifteen years on: dark cherry, rose and spice, forest floor arriving, silky and layered. Our celebration bottle for the Roasted Rohan Duck Breast, it has fruit for the glazed peaches and a savoury side for the candied hazelnuts. We stand it upright ahead and pour at 60 to 63°F in a large Burgundy bowl, decanted off sediment if the sommelier advises. In the late 1980s the domaine tried cold maceration, then stepped back towards clarity.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it, shared an eight word run with the 20 second line and named a consultant not shown to be dead; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-red-burgundy-2026-10-10.md section 4 (items 1, 2, 6 and the expert line: a Vosne-Romanée family domaine, classical and firm with moderate new oak, the cold-maceration experiments of the late 1980s and the step back, Echézeaux in Flagey-Echézeaux above the Clos de Vougeot); research/bottle-selection-2026-10-04.json Roasted Rohan Duck Breast splurge tier; the wine record (profile, serve, offeredWith: splurge for the Roasted Rohan Duck Breast)"
+		},
+		{
+			"target": "wine:Domaine Comte Georges de Vogüé Musigny Grand Cru Vieilles Vignes 2012",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "De Vogüé keeps young vines out of its Musigny Vieilles Vignes: old-vine Grand Cru of black cherry, violet and spice, deep, silky and just opening. It belongs with duck, game or beef tenderloin, decanted as the sommelier decides and poured by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the kind of plate its goesWith names, and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 1 (items 1, 2, 3, 4, 5 and 6: vines in Chambolle since the fifteenth century, roughly two thirds of Musigny at the southern end of Chambolle, reserved in youth, young vines declassified to the Chambolle Premier Cru); the wine record (profile, serve, goesWith: duck, squab, venison and beef tenderloin; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Domaine Comte Georges de Vogüé Musigny Grand Cru Vieilles Vignes 2012",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Comte Georges de Vogüé Musigny Grand Cru Vieilles Vignes 2012 is Pinot Noir from Musigny, a Grand Cru in Chambolle-Musigny, of which the domaine owns roughly two thirds. Only old vines go into the Vieilles Vignes; younger Musigny vines are sold as Chambolle-Musigny Premier Cru. Reserved in youth, it is just opening at fourteen: black cherry, violet and spice, deep, silky and long. It belongs with a celebration’s rich course: duck, squab, venison or beef tenderloin. We pour at 60 to 63°F in large Burgundy bowls, usually after a gentle decant an hour ahead. The family has held vines in Chambolle since the fifteenth century.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it and named the Roasted Chateaubriand and the Roasted Rohan Duck Breast, dishes whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, no dish, since none names this wine in its pairing, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 1 (items 1, 2, 3, 4, 5 and 6: vines in Chambolle since the fifteenth century, roughly two thirds of Musigny at the southern end of Chambolle, reserved in youth, young vines declassified to the Chambolle Premier Cru); the wine record (profile, serve, goesWith: duck, squab, venison and beef tenderloin; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Domaine de la Romanée-Conti Echézeaux Grand Cru 2015",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "This Echézeaux is the gentle way into the Domaine de la Romanée-Conti, red and black cherry, rose and spice, silky and lifted by whole bunches. It crowns a celebration with duck, squab, veal or beef tenderloin, opened by the sommelier and poured by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the kind of plate its goesWith names, and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 2 (items 1, 2, 9 and 15: founded 1869, whole-cluster with long élevage in new oak the fruit absorbs, perfume and lift, Échezeaux in Flagey-Échezeaux above the Clos de Vougeot, the most open of the domaine's reds when young, Romanée-Conti and La Tâche owned entire); the wine record (profile, serve, goesWith: duck, squab, veal and beef tenderloin; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Domaine de la Romanée-Conti Echézeaux Grand Cru 2015",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine de la Romanée-Conti Echézeaux Grand Cru 2015 is Pinot Noir from a Grand Cru in Flagey-Echézeaux, above the Clos de Vougeot, where the domaine holds a parcel. The domaine ferments whole bunches and ages long in new oak, for perfume and lift over weight. Eleven years on: red and black cherry with rose and spice, fresh, silky and more open than its siblings. It crowns a celebration with duck, squab, veal or beef tenderloin, or stands alone. The sommelier opens it and decides on decanting; we pour at 60 to 63°F in large Burgundy bowls. The domaine dates from 1869 and owns Romanée-Conti and La Tâche entire.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it, shared an eleven word run with the 20 second line and named the Roasted Chateaubriand and the Roasted Rohan Duck Breast, dishes whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, no dish, since none names this wine in its pairing, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 2 (items 1, 2, 9 and 15: founded 1869, whole-cluster with long élevage in new oak the fruit absorbs, perfume and lift, Échezeaux in Flagey-Échezeaux above the Clos de Vougeot, the most open of the domaine's reds when young, Romanée-Conti and La Tâche owned entire); the wine record (profile, serve, goesWith: duck, squab, veal and beef tenderloin; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Domaine Armand Rousseau ‘Clos Saint Jacques’ Gevrey-Chambertin Premier Cru 2019",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "The Clos Saint Jacques is the Gevrey-Chambertin Premier Cru many rank with the Grand Crus, dark cherry, raspberry and spice, deep and still young. It suits beef, lamb or game at a celebration dinner, decanted by the sommelier and poured by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the kind of plate its goesWith names, and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 3 (items 2, 3, 5 and 8: destemmed, deep savoury Gevrey built on tannin and length, domaine bottling in the 1930s when Burgundy left in cask for a merchant, one of five owners of the Clos Saint-Jacques with the largest share, a premier cru spoken of with the grand crus); the wine record (profile, serve, goesWith: beef, lamb, game and venison; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Domaine Armand Rousseau ‘Clos Saint Jacques’ Gevrey-Chambertin Premier Cru 2019",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Armand Rousseau Clos Saint Jacques Gevrey-Chambertin Premier Cru 2019 is Pinot Noir from a Premier Cru above Gevrey-Chambertin that many place beside the Grand Crus, and Rousseau owns the lion’s share. Destemmed, it is built deep and savoury on tannin and length rather than sweetness. At seven years it is still young: dark cherry, raspberry and spice, deep yet refined. It wants beef, lamb or game. The sommelier decants it, usually an hour ahead; we pour at 60 to 63°F in large Burgundy bowls. In the 1930s, when Burgundy usually left the cellar in cask for a merchant, Rousseau was already bottling under its own name.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it, ran under the floor at 102 words, shared an eight word run with the 20 second line and named the Roasted Chateaubriand, a dish whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, no dish, since none names this wine in its pairing, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 3 (items 2, 3, 5 and 8: destemmed, deep savoury Gevrey built on tannin and length, domaine bottling in the 1930s when Burgundy left in cask for a merchant, one of five owners of the Clos Saint-Jacques with the largest share, a premier cru spoken of with the grand crus); the wine record (profile, serve, goesWith: beef, lamb, game and venison; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Domaine de la Romanée-Conti La Tâche Grand Cru 2012",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "La Tâche is the Grand Cru the Domaine de la Romanée-Conti owns entire, black cherry, rose and exotic spice, savoury and silky. It is the centrepiece of an evening with squab, game or beef tenderloin, opened by the sommelier and poured by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the kind of plate its goesWith names, and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 2 (items 2, 7, 8 and 15: whole-cluster with long élevage in new oak, La Tâche the spicier and denser sibling of Romanée-Conti, La Grande Rue between the two monopoles, enlarged in 1933 by part of Les Gaudichots); the wine record (profile, serve, goesWith: duck, squab, game and beef tenderloin; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Domaine de la Romanée-Conti La Tâche Grand Cru 2012",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine de la Romanée-Conti La Tâche Grand Cru 2012 is Pinot Noir from a Vosne-Romanée Grand Cru owned entire by the domaine, across the narrow La Grande Rue from the Romanée-Conti vineyard. Made with whole bunches and long ageing in new oak, it is the spicier, denser sibling of Romanée-Conti. Fourteen years on: black cherry, rose and exotic spice over savoury depth, silky and very long. It anchors an evening beside duck, squab, game or beef tenderloin. The sommelier opens it and decides on decanting; we pour at 60 to 63°F in large Burgundy bowls. The vineyard grew in 1933, when part of Les Gaudichots was taken into it.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it, shared a nine word run with the 20 second line and named the Roasted Chateaubriand and the Roasted Rohan Duck Breast, dishes whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, no dish, since none names this wine in its pairing, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 2 (items 2, 7, 8 and 15: whole-cluster with long élevage in new oak, La Tâche the spicier and denser sibling of Romanée-Conti, La Grande Rue between the two monopoles, enlarged in 1933 by part of Les Gaudichots); the wine record (profile, serve, goesWith: duck, squab, game and beef tenderloin; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Domaine de la Romanée-Conti Romanée-Conti Grand Cru 2014",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Romanée-Conti is the domaine’s own vineyard of under two hectares, red and black fruit, rose, spice and earth, weightless and silky. Keep the plate simple, squab, duck or beef tenderloin or the wine alone, presented by the sommelier and poured by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the kind of plate its goesWith names, and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 2 (items 2, 4, 5 and 15: whole-cluster with long élevage in new oak, the 1.81 ha monopole, a few hundred cases a year, very small allocations, bought by the Prince de Conti in 1760 and named for him); the wine record (profile, serve, goesWith: roast squab, duck or beef tenderloin, or alone; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Domaine de la Romanée-Conti Romanée-Conti Grand Cru 2014",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine de la Romanée-Conti Romanée-Conti Grand Cru 2014 is Pinot Noir from a Vosne-Romanée vineyard of under two hectares, owned whole by the domaine named after it. Made with whole bunches and aged long in new oak, it comes to a few hundred cases a year. Twelve years on, red and black fruit meet rose and spice over earth, weightless, silky and endlessly long. Keep the plate simple: squab, duck, beef tenderloin or the wine alone. The sommelier presents, opens and decides on decanting; we pour at 60 to 63°F in large Burgundy bowls. The Prince de Conti bought the vineyard in 1760, and it took his name.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it, shared an eleven word run with the 20 second line and named the Roasted Chateaubriand and the Roasted Rohan Duck Breast, dishes whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, no dish, since none names this wine in its pairing, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 2 (items 2, 4, 5 and 15: whole-cluster with long élevage in new oak, the 1.81 ha monopole, a few hundred cases a year, very small allocations, bought by the Prince de Conti in 1760 and named for him); the wine record (profile, serve, goesWith: roast squab, duck or beef tenderloin, or alone; no dish pairing names it)"
 		}
 	]
 }
