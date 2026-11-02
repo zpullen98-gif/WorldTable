@@ -1,0 +1,132 @@
+{
+ "entries": [
+  {
+   "target": "wine:Bouchard Père & Fils ‘Clos de la Mousse’ Beaune Premier Cru 2022 (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Clos de la Mousse is silky Premier Cru Pinot Noir from a walled Beaune vineyard Bouchard owns alone: red cherry, raspberry and violet. It is the half bottle for the Eggs Owen, a red that meets the braised short rib without weighing down brunch.",
+   "reason": "The sale (five-star card edition): the hook is the walled vineyard Bouchard owns alone and the taste in concrete words; the table is the Eggs Owen, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+   "source": "the pack record w-cvdn1iip (375 ml, bottle only, no glass; profile; offeredWith tier half for d-44jfmkdb, the Eggs Owen)"
+  },
+  {
+   "target": "wine:Bouchard Père & Fils ‘Clos de la Mousse’ Beaune Premier Cru 2022 (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Bouchard Père & Fils ‘Clos de la Mousse’ Beaune Premier Cru 2022 is Pinot Noir from a small walled vineyard in Beaune that Bouchard has owned alone since 1872, so every bottle is its own. It is aged in the cellars of the Château de Beaune, a fifteenth-century fortress, and the house itself dates from 1731. It tastes of red cherry, raspberry, violet and a little spice, with silky tannin and fresh acidity. It is the half bottle for the Eggs Owen, gentle with short rib braised in red wine and the marchand de vin sauce. We pour it at 58 to 62°F in a Burgundy bowl, never decanted.",
+   "reason": "Five-star review of the description: it opened on the house and its founding, not the wine, and named the Roasted Rohan Duck Breast and the Blackened Tofu, neither of whose pairings names this wine; it now opens on the wine as the list prints it and keeps every sourced fact",
+   "source": "the pack record w-cvdn1iip (lines.s45, profile, serve, offeredWith); research/producers-cellar-chablis-maconnais-2026-10-10.md (Bouchard: 1731, the Château de Beaune; the Clos de la Mousse, 1872)"
+  },
+  {
+   "target": "wine:Ridge Vineyards ‘Estate’ Cabernet Sauvignon Santa Cruz Mountains 2020 (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Ridge’s Estate is mountain Cabernet from the Santa Cruz Mountains: blackcurrant, cedar and graphite, firm and savoury rather than plush. It is the half bottle for the Roasted Chateaubriand, the beef rounding out its tannin for two glasses each.",
+   "reason": "The sale (five-star card edition): the hook is mountain Cabernet in concrete words; the table is the Roasted Chateaubriand, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+   "source": "the pack record w-i42v0cdg (375 ml, bottle only; profile; offeredWith tier half for d-5wcuejdy, the Roasted Chateaubriand)"
+  },
+  {
+   "target": "wine:Ridge Vineyards ‘Estate’ Cabernet Sauvignon Santa Cruz Mountains 2020 (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Ridge Vineyards ‘Estate’ Cabernet Sauvignon Santa Cruz Mountains 2020 comes from the vineyards around Monte Bello, high on a ridge south of San Francisco, where Ridge was founded in 1962. It is aged in American oak, and Ridge prints every ingredient on the back label. It is structured rather than plush: blackcurrant, cedar, graphite and a savoury herb note, with firm tannin and fresh acidity. Protein and fat soften tannin, so it is the half bottle for the Roasted Chateaubriand and its sauce Foyot. We pour it at 60 to 64°F in a large Bordeaux glass, decanted if the guest likes, or simply swirled.",
+   "reason": "Five-star review of the description: it opened on the winery's founding, not the wine, and named the Creole-Spiced Hanger Steak, the Roost Burger and the Cheese Board, none of whose pairings names this wine; it now opens on the wine as the list prints it and names only the Chateaubriand",
+   "source": "the pack record w-i42v0cdg (lines.s45, profile, serve, origin, offeredWith); research/producers-cellar-central-coast-oregon-world-2026-10-10.md (Ridge: 1962, Monte Bello, American oak, labelling)"
+  },
+  {
+   "target": "wine:Louis Jadot Meursault 2022 (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Jadot’s village Meursault is barrel aged Chardonnay, ripe lemon, hazelnut and toast, round and buttery with fresh acidity. It is the half bottle for the Louisiana BBQ Lobster on the tasting and for the Swordfish Grenobloise with its brown butter.",
+   "reason": "The sale (five-star card edition): the hook is the buttery Meursault style in concrete words; the table is the two dishes whose pairings offer this wine as the half bottle; the step is the 375 ml half bottle",
+   "source": "the pack record w-xakh7w3y (375 ml, bottle only; profile; offeredWith tier half for d-5e4ptrq8, the Louisiana BBQ Lobster, and d-jgihqqda, the Swordfish Grenobloise)"
+  },
+  {
+   "target": "wine:Louis Jadot Meursault 2022 (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Louis Jadot Meursault 2022 is Chardonnay from Meursault, the Côte de Beaune village known for rich, nutty white Burgundy, aged in barrel for a round, buttery texture. It tastes of ripe lemon, hazelnut and toast, with fresh acidity under the richness. Rich meets rich: it is the half bottle for the Louisiana BBQ Lobster, an extra beside the tasting’s own white, and for the Swordfish Grenobloise and its brown butter. We pour it at 50 to 54°F in a white Burgundy bowl, iced briefly, since too cold hides its richness. Jadot has been a Beaune house since 1859, the head of Bacchus on every label.",
+   "reason": "Five-star review of the description: it opened on the house, not the wine, and named the Pecan Gulf Fish, the Louisiana Crab Claws and the Poussin à la Moutarde, none of whose pairings names this wine; it now opens on the wine as the list prints it and names only its two half bottle dishes",
+   "source": "the pack record w-xakh7w3y (lines.s45, profile, serve, the kept notes on barrel ageing and the tasting's own white, offeredWith); research/producers-cellar-chablis-maconnais-2026-10-10.md (Louis Jadot: 1859, the head of Bacchus)"
+  },
+  {
+   "target": "wine:Veuve Fourny et Fils Premier Cru Blanc de Blancs Extra Brut NV (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Veuve Fourny’s Blanc de Blancs is bone dry grower Champagne, all Chardonnay from Premier Cru Vertus: lemon, green apple, chalk and a saline finish. It is the half bottle for the Grand Isle Jewel Oysters, its chalk and salt meeting the brine and the mignonette.",
+   "reason": "The sale (five-star card edition): the hook is a bone dry grower Champagne in concrete words; the table is the Grand Isle Jewel Oysters, whose pairing offers this wine as the half bottle (the Fried Pickles of the old lines do not name it as a pick and are left out); the step is the 375 ml half bottle",
+   "source": "the pack record w-tmm38vzi (375 ml, bottle only; profile; offeredWith tier half for d-nd0d2czb, the Grand Isle Jewel Oysters; no firstPickIds)"
+  },
+  {
+   "target": "wine:Veuve Fourny et Fils Premier Cru Blanc de Blancs Extra Brut NV (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Veuve Fourny et Fils Premier Cru Blanc de Blancs Extra Brut NV is all Chardonnay grown in Vertus, in the Côte des Blancs. It is a grower’s Champagne, finished Extra Brut with 0 to 6 grams of sugar a litre. It tastes of lemon, green apple and chalk, with fine bubbles and a saline finish. It is the half bottle for the Grand Isle Jewel Oysters, its chalk and salt meeting their brine. We pour it at 43 to 46°F in a tulip, the cork eased out with a quiet sigh. Veuve means widow; the Fourny family has grown vines in Vertus since 1856.",
+   "reason": "Five-star review of the description: it opened on the family, not the wine, called the Fried Pickles a match though their pairing does not pick this wine, and named the Louisiana Crab Claws and the Creole Caesar with no pairing link; it now opens on the wine as the list prints it",
+   "source": "the pack record w-tmm38vzi (lines.s45, profile, serve, the kept note on Extra Brut, offeredWith); research/producers-cellar-champagne-growers-2026-10-10.md (Veuve Fourny et Fils: Vertus, 1856, the widow)"
+  },
+  {
+   "target": "wine:La Cigarrera Manzanilla Sanlúcar de Barrameda NV (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "La Cigarrera’s Manzanilla is bone dry sherry from Sanlúcar, green apple, almond and a salty sea breeze, light and fresh. It is the half bottle for the Turtle Soup, repeating the aged sherry in the bowl and cutting its richness.",
+   "reason": "The sale (five-star card edition): the hook is a bone dry Manzanilla in concrete words; the table is the Turtle Soup, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+   "source": "the pack record w-dx8217nz (375 ml, bottle only; profile; offeredWith tier half for d-ecy8tdsb, the Turtle Soup)"
+  },
+  {
+   "target": "wine:La Cigarrera Manzanilla Sanlúcar de Barrameda NV (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "La Cigarrera Manzanilla Sanlúcar de Barrameda NV is Palomino from the seaside town at the mouth of the Guadalquivir, where Manzanilla is made. It is aged in a solera under flor, a living layer of yeast that keeps it pale and gives it a salty, bready tang, so it carries no vintage; the cool, humid Atlantic air there keeps the flor thick through the year. It tastes of green apple, chamomile, almond and bread dough, bone dry, fortified but delicate. Our Turtle Soup is finished with aged sherry, so this is its half bottle. We pour 3 oz well chilled, 45 to 48°F, in a white wine glass.",
+   "reason": "Five-star review of the description: it opened on the style of Manzanilla, not the wine, and named oysters, the Creole Spiced Nuts and the Cheese Board, none of whose pairings names this wine; it now opens on the wine as the list prints it and names only the Turtle Soup",
+   "source": "the pack record w-dx8217nz (lines.s45, profile, serve, origin, the kept note on flor, offeredWith); research/producers-cellar-spain-2026-10-10.md (La Cigarrera, Sanlúcar, the Codex question on the humid Atlantic air and the flor)"
+  },
+  {
+   "target": "wine:Dow’s Vintage Port 2000 (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Dow’s 2000 is mature Vintage Port, blackberry, plum and dark chocolate, sweet with the drier finish Dow’s is known for. It is the half bottle for The Snickers and the Chocolate Crémeux, at least as sweet as the chocolate.",
+   "reason": "The sale (five-star card edition): the hook is a mature Vintage Port in concrete words; the table is the two desserts whose pairings offer this wine as the half bottle; the step is the 375 ml half bottle",
+   "source": "the pack record w-8ht6rqnn (375 ml, bottle only; profile; offeredWith tier half for d-8oncjhit, The Snickers, and d-kgmv4fmp, the Chocolate Crémeux)"
+  },
+  {
+   "target": "wine:Dow’s Vintage Port 2000 (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Dow’s Vintage Port 2000 comes from Douro grapes of a year the house declared, as it does only in exceptional years. It spends about two years in wood, then ages in bottle, where it throws a crust. It tastes of blackberry, plum, dark chocolate and liquorice, sweet and fortified, its tannin softened by age, with the drier finish Dow’s is known for. A dessert wine should be at least as sweet as the dessert, so it is the half bottle for The Snickers and the Chocolate Crémeux. We stand it upright, then decant it, 3 oz at 60 to 64°F. The Symington family became partners in Dow’s in 1912.",
+   "reason": "Five-star review of the description: it opened on the house, not the wine, and named the New Orleans Bread Pudding, the Café Brûlot Coffee Cake and the Cheese Board, none of whose pairings names this wine; it now opens on the wine as the list prints it and names only its two half bottle desserts",
+   "source": "the pack record w-8ht6rqnn (lines.s45, profile, serve, the kept notes on declaration and crust, offeredWith); research/producers-cellar-port-madeira-2026-10-10.md (Dow's: the Symingtons, partners in 1912; about two years in wood; declaration)"
+  },
+  {
+   "target": "wine:Niepoort Colheita Port 1997 (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Niepoort’s 1997 Colheita is tawny Port from one harvest, long in old casks: walnut, caramel, dried orange peel and coffee, silky and sweet. It is the half bottle for the Café Brûlot Coffee Cake, and the second choice for the Chocolate Crémeux.",
+   "reason": "The sale (five-star card edition): the hook is a single harvest tawny in concrete words; the table is the Café Brûlot Coffee Cake, whose pairing offers this wine as the half bottle, and the Chocolate Crémeux, whose pairing names it the second choice; the step is the 375 ml half bottle",
+   "source": "the pack record w-ohgxn0df (375 ml, bottle only; profile; offeredWith tier half for d-husneh7o, the Café Brûlot Coffee Cake); the Chocolate Crémeux d-kgmv4fmp, pairing secondId w-ohgxn0df"
+  },
+  {
+   "target": "wine:Niepoort Colheita Port 1997 (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Niepoort Colheita Port 1997 is tawny Port from one harvest, left for many years in old casks until it turned amber and nutty; its label carries the bottling date as well as the harvest. It tastes of walnut, caramel, dried orange peel, coffee and spice, sweet and silky, with a long, nutty finish. Its flavours are the coffee cake’s own, so it is the half bottle for the Café Brûlot Coffee Cake, and the second choice for the Chocolate Crémeux. We pour 3 oz a touch cool, 55 to 60°F, in a small Port glass, never decanted. Niepoort is a Port house of Dutch origin, founded in 1842.",
+   "reason": "Five-star review of the description: it opened on the house, not the wine, and named the New Orleans Bread Pudding, the Bananas Foster and the Cheese Board, none of whose pairings names this wine; it now opens on the wine as the list prints it and names the coffee cake (half bottle) and the Chocolate Crémeux (second choice)",
+   "source": "the pack record w-ohgxn0df (lines.s45, profile, serve, origin, the kept notes on the bottling date and the coffee cake, offeredWith); the Chocolate Crémeux pairing (secondId); research/producers-cellar-port-madeira-2026-10-10.md (Niepoort: 1842, Dutch origin)"
+  },
+  {
+   "target": "wine:Veuve Fourny et Fils Premier Cru Rosé Brut NV (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Veuve Fourny’s rosé is dry grower Champagne from Premier Cru Vertus, red currant, strawberry and a chalky freshness. It is the half bottle for the Steak Tartare Cannoli, red fruit for the raw beef and bubbles to lift the crème fraîche.",
+   "reason": "The sale (five-star card edition): the hook is a dry grower rosé in concrete words; the table is the Steak Tartare Cannoli, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+   "source": "the pack record w-yyjn4yrr (375 ml, bottle only; profile; offeredWith tier half for d-0w2k5cdm, the Steak Tartare Cannoli)"
+  },
+  {
+   "target": "wine:Veuve Fourny et Fils Premier Cru Rosé Brut NV (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Veuve Fourny et Fils Premier Cru Rosé Brut NV is grower Champagne from the Premier Cru village of Vertus, in the Côte des Blancs, its bubbles from a second fermentation in bottle. It is pale pink, light and bright: red currant, strawberry and a chalky freshness, dry, with fine bubbles. Its red fruit sits beside the raw beef and its bubbles lift the crème fraîche, so it is the half bottle for the Steak Tartare Cannoli. We pour it at 43 to 46°F in a flute or tulip from an ice bucket, in two stages. Veuve means widow: the family has grown vines in Vertus since 1856.",
+   "reason": "Five-star review of the description: it opened on the family, not the wine, carried no clause on how it is made, and named the Louisiana Crab Claws, the Popcorn Shrimp and the Cheese Board, none of whose pairings names this wine; it now opens on the wine as the list prints it",
+   "source": "the pack record w-yyjn4yrr (lines.s45, profile, serve, the kept note on the tartare's crème fraîche and bottarga, offeredWith); research/producers-cellar-champagne-growers-2026-10-10.md (Veuve Fourny et Fils: Vertus, 1856, the widow)"
+  }
+ ]
+}
