@@ -255,6 +255,54 @@
    "value": "Keller ‘PIUS’ Auslese Rheinhessen 2022 is a sweet Auslese made from late harvest and botrytis-touched grapes, the varieties changing with the vintage, from a family estate at Flörsheim-Dalsheim. It tastes of honeyed apricot, pineapple and spice, rich and pure, held up by stony acidity. Its fruit matches the charred pineapple and its acidity keeps the puff pastry and the anglaise light, so it is the half bottle for the Pineapple Tarte Tatin. We pour 2 to 3 oz at 45 to 50°F in a small dessert glass, then recork it and keep it cold. Weingut Keller made its name with dry Riesling, and this is its sweet side.",
    "reason": "Five-star review of the description: it opened on the estate, not the wine, and named the New Orleans Bread Pudding and the Lemon Tart, neither of whose pairings names this wine; it now opens on the wine as the list prints it and names only the tarte Tatin",
    "source": "the pack record w-chvibn43 (lines.s45, profile, serve, origin, the kept notes on the varieties and the tatin, offeredWith); research/producers-cellar-germany-austria-2026-10-10.md (Weingut Keller, Flörsheim-Dalsheim)"
+  },
+  {
+   "target": "wine:Opus One Napa Valley 2015 (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Opus One is the Napa name guests ask for by sight: blackcurrant, black cherry, cocoa and violet, polished tannin and the first savoury notes of age. With beef or a celebration for two, offer the half bottle.",
+   "reason": "The sale (five-star card edition): the hook is the name guests ask for and the taste in concrete words; no dish's pairing names this wine, so the table is the kind of plate its goesWith names (beef and celebration); the step is the 375 ml half bottle",
+   "source": "the pack record w-qma74007 (375 ml, bottle only; profile; goesWith; the kept note that guests ask for it; no firstPickIds, secondFor or offeredWith)"
+  },
+  {
+   "target": "wine:Opus One Napa Valley 2015 (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Opus One Napa Valley 2015 is one grand vin from Oakville, blended from Cabernet Sauvignon and the other Bordeaux grapes, with Cabernet in the lead. It shows blackcurrant, black cherry, cocoa, violet and graphite, with polished tannin, a long finish and the first savoury notes of age. Its tannin wants protein, so it suits beef and a celebration for two. We pour it at 60 to 64°F in a large Bordeaux glass, decanted briefly or swirled well: two or three glasses. Opus One began as a partnership of Napa and Château Mouton Rothschild, and its first vintage was 1979, the first such venture between Bordeaux and California.",
+   "reason": "Five-star review of the description: it opened on the partnership rather than the wine, named two founders whose deaths the hay does not record, claimed new French oak no source holds, and named the Roasted Chateaubriand and the Cheese Board, though no pairing names this wine; it now opens on the wine as the list prints it and speaks of the plates its goesWith names",
+   "source": "the pack record w-qma74007 (lines.s45, profile, serve, origin, goesWith); research/producers-cellar-napa-icons-2026-10-10.md (Opus One: one grand vin, founded 1979, the first serious joint venture between a First Growth proprietor and a New World producer)"
+  },
+  {
+   "target": "wine:Château d’Yquem Sauternes 2015 (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Yquem 2015 is Sauternes picked berry by berry: apricot, candied orange, saffron and honey, luscious with fresh acidity. It is the celebration bottle for the Framboise French Toast, rich enough for the mascarpone mousse, and we offer the half bottle.",
+   "reason": "The sale (five-star card edition): the hook is Yquem's berry by berry picking and the taste in concrete words; the table is the Framboise French Toast, whose pairing offers this wine as the celebration bottle; the step is the 375 ml half bottle",
+   "source": "the pack record w-1n1xbilu (375 ml, bottle only; profile; offeredWith tier splurge for d-1qto9uk9, the Framboise French Toast)"
+  },
+  {
+   "target": "wine:Château d’Yquem Sauternes 2015 (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Château d’Yquem Sauternes 2015 is led by Sémillon, with Sauvignon Blanc, from grapes noble rot has shrivelled, taken berry by berry as the pickers pass through the vines many times; in poor years no Yquem is made. The 2015 tastes of apricot, candied orange, saffron, honey and vanilla, luscious, with fresh acidity and a very long finish. Its richness meets the mascarpone mousse and raspberry coulis, so it is the celebration bottle for the Framboise French Toast. We pour 2 to 3 oz at 50 to 54°F in a white wine glass and recork it. The 1855 classification gave Yquem a rank of its own, Premier Cru Supérieur.",
+   "reason": "Five-star review of the description: it opened on the 1855 classification rather than the wine; it now opens on the wine as the list prints it, says how it is made in the opening, and keeps the celebration bottle link and every sourced fact",
+   "source": "the pack record w-1n1xbilu (lines.s45, profile, serve, origin, the kept notes on berry by berry picking and the French toast, offeredWith)"
+  },
+  {
+   "target": "wine:Château d’Yquem Sauternes 2016 (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Yquem 2016 is a bright, citrus-toned vintage: candied lemon, apricot, pineapple and honey, with acidity that keeps it poised. It is the celebration bottle for the Lemon Tart, sweeter than the lemon jelly and as fresh as the yuzu: offer the half bottle.",
+   "reason": "The sale (five-star card edition): the hook is the bright, citrus-toned 2016 in concrete words; the table is the Lemon Tart, whose pairing offers this wine as the celebration bottle; the step is the 375 ml half bottle",
+   "source": "the pack record w-5liij0w3 (375 ml, bottle only; profile; parts; offeredWith tier splurge for d-lfwbmoys, the Lemon Tart)"
+  },
+  {
+   "target": "wine:Château d’Yquem Sauternes 2016 (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Château d’Yquem Sauternes 2016 is Sémillon with Sauvignon Blanc, left on the vine until noble rot shrivels it, the pickers returning again and again to take it berry by berry. The 2016 is bright: candied lemon, apricot, pineapple, honey and spice. A dessert wine must be sweeter than the dessert; Yquem stays above the lemon jelly and yuzu mousse while its acidity matches the citrus, so it is the celebration bottle for the Lemon Tart. We pour 2 to 3 oz at 50 to 54°F in a white wine glass and recork it. The Lur-Saluces family married into the estate in 1785 and held it for two centuries.",
+   "reason": "Five-star review of the description: it opened on the estate's hilltop and rank rather than the wine, and named the Pineapple Tarte Tatin, whose pairing does not name this wine; it now opens on the wine as the list prints it and names only the Lemon Tart",
+   "source": "the pack record w-5liij0w3 (lines.s45, profile, serve, the kept notes on noble rot and the lemon tart, offeredWith); research/producers-cellar-bordeaux-white-sweet-2026-10-10.md (Yquem: the Lur-Saluces from 1785, long held by the family)"
   }
  ]
 }
