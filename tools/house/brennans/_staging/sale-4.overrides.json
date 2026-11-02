@@ -127,6 +127,134 @@
    "value": "Veuve Fourny et Fils Premier Cru Rosé Brut NV is grower Champagne from the Premier Cru village of Vertus, in the Côte des Blancs, its bubbles from a second fermentation in bottle. It is pale pink, light and bright: red currant, strawberry and a chalky freshness, dry, with fine bubbles. Its red fruit sits beside the raw beef and its bubbles lift the crème fraîche, so it is the half bottle for the Steak Tartare Cannoli. We pour it at 43 to 46°F in a flute or tulip from an ice bucket, in two stages. Veuve means widow: the family has grown vines in Vertus since 1856.",
    "reason": "Five-star review of the description: it opened on the family, not the wine, carried no clause on how it is made, and named the Louisiana Crab Claws, the Popcorn Shrimp and the Cheese Board, none of whose pairings names this wine; it now opens on the wine as the list prints it",
    "source": "the pack record w-yyjn4yrr (lines.s45, profile, serve, the kept note on the tartare's crème fraîche and bottarga, offeredWith); research/producers-cellar-champagne-growers-2026-10-10.md (Veuve Fourny et Fils: Vertus, 1856, the widow)"
+  },
+  {
+   "target": "wine:Domaine Henri Gouges Nuits-Saint-Georges 2021 (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Gouges’ Nuits-Saint-Georges is sturdy, savoury Pinot Noir, dark cherry, plum and earth with an iron note and firm tannin. It is the half bottle for the Roasted Rohan Duck Breast, its acidity cutting the duck and its fruit meeting the glazed peaches.",
+   "reason": "The sale (five-star card edition): the hook is a sturdy village Nuits-Saint-Georges in concrete words; the table is the Roasted Rohan Duck Breast, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+   "source": "the pack record w-zxu9f2du (375 ml, bottle only; profile; offeredWith tier half for d-jxnlnzdi, the Roasted Rohan Duck Breast)"
+  },
+  {
+   "target": "wine:Domaine Henri Gouges Nuits-Saint-Georges 2021 (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Domaine Henri Gouges Nuits-Saint-Georges 2021 is the domaine’s village Pinot Noir from the Côte de Nuits, organically farmed and made firm and earthy, sturdier than a Beaune. It tastes of dark cherry, plum, earth and iron, firm for Burgundy, savoury rather than sweet, with fresh acidity. Duck is rich, so it is the half bottle for the Roasted Rohan Duck Breast, an extra beside the tasting’s pour: acidity for the fat, fruit for the cane syrup peaches. We pour it at 58 to 62°F in a Burgundy bowl, swirled and given a minute, never decanted. Nuits-Saint-Georges has no Grand Cru, and Gouges is one of its reference names.",
+   "reason": "Five-star review of the description: it opened on Henri Gouges the man, whose death the hay does not record, rather than the wine, named the living generation's place in the family, and named the Roasted Chateaubriand and Maggie's Mushrooms with no pairing link; it now opens on the wine as the list prints it",
+   "source": "the pack record w-zxu9f2du (lines.s45, profile, serve, the kept note on the duck, offeredWith); research/producers-cellar-red-burgundy-2026-10-10.md (Domaine Henri Gouges: farmed organically, the reference domaine of the village, Nuits-Saint-Georges has no grand cru)"
+  },
+  {
+   "target": "wine:Dönnhoff ‘Oberhäuser Brücke’ Riesling Auslese Goldkapsel 2023 (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Dönnhoff’s Brücke Auslese is sweet but racy Nahe Riesling, lemon curd, peach and honey with piercing acidity. It is the half bottle for the Lemon Tart, sweeter than the lemon jelly and as bright as the yuzu.",
+   "reason": "The sale (five-star card edition): the hook is a racy gold capsule Auslese in concrete words; the table is the Lemon Tart, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+   "source": "the pack record w-uwkowe16 (375 ml, bottle only; profile; offeredWith tier half for d-lfwbmoys, the Lemon Tart)"
+  },
+  {
+   "target": "wine:Dönnhoff ‘Oberhäuser Brücke’ Riesling Auslese Goldkapsel 2023 (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Dönnhoff ‘Oberhäuser Brücke’ Riesling Auslese Goldkapsel 2023 comes from the Brücke, a tiny vineyard beside the old bridge over the Nahe that the Dönnhoff family owns alone. Auslese means a selected harvest of riper grapes, and the gold capsule marks a richer selection still. It tastes of lemon curd, peach, honey and a little spice, sweet and concentrated, with piercing acidity. Lemon flattens a softer sweet wine, but this one matches the yuzu mousse and lemon jelly, so it is the half bottle for the Lemon Tart. We pour 2 to 3 oz at 45 to 50°F in a small dessert glass, then recork it and keep it cold.",
+   "reason": "Five-star review of the description: it opened on the estate, not the wine, and named the Blackberry Trifle, the Pineapple Tarte Tatin and the Cheese Board, none of whose pairings names this wine; it now opens on the wine as the list prints it and names only the Lemon Tart",
+   "source": "the pack record w-uwkowe16 (lines.s45, profile, serve, origin, the kept note on lemon, offeredWith)"
+  },
+  {
+   "target": "wine:Château Suduiraut Sauternes 2016 (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Suduiraut is Sauternes from Yquem’s neighbour, honey, apricot, candied orange and vanilla, luscious but fresh. It is the half bottle for the New Orleans Bread Pudding, sweet enough for the whiskey caramel and the pralines.",
+   "reason": "The sale (five-star card edition): the hook is classic Sauternes in concrete words; the table is the New Orleans Bread Pudding, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+   "source": "the pack record w-remgp2fk (375 ml, bottle only; profile; origin; offeredWith tier half for d-un9zb9af, the New Orleans Bread Pudding)"
+  },
+  {
+   "target": "wine:Château Suduiraut Sauternes 2016 (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Château Suduiraut Sauternes 2016 is Sémillon with Sauvignon Blanc from Preignac, next door to Château d’Yquem, left on the vine until noble rot shrivels the grapes and picked by hand in several passes. It tastes of honey, apricot, candied orange and vanilla, rich and luscious, with fresh acidity. A dessert wine should be at least as sweet as the dessert, so it is the half bottle for the New Orleans Bread Pudding and its whiskey caramel. We pour 2 to 3 oz at 45 to 50°F in a small dessert glass, then recork and chill it. Suduiraut was ranked Premier Cru Classé in the 1855 classification of Sauternes.",
+   "reason": "Five-star review of the description: it opened on the estate's ranking, not the wine, and named the Bananas Foster, the Pineapple Tarte Tatin and the Cheese Board, none of whose pairings names this wine; it now opens on the wine as the list prints it and names only the bread pudding",
+   "source": "the pack record w-remgp2fk (lines.s45, profile, serve, origin, the kept notes on noble rot and the 1855 classification, offeredWith)"
+  },
+  {
+   "target": "wine:Dönnhoff ‘Niederhäuser Hermannshöhle’ Riesling Auslese Goldkapsel 2023 (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Dönnhoff’s Hermannshöhle Auslese is sweet Riesling from slate and volcanic rock, peach, honey and a stony, smoky edge with piercing acidity. It is the half bottle for the Blackberry Trifle, sweet enough for the curds and bright enough for the berries.",
+   "reason": "The sale (five-star card edition): the hook is a great slope's sweet Riesling in concrete words; the table is the Blackberry Trifle, whose pairing offers this wine as the half bottle (the Cheese Board of the old lines does not pick it and is left out); the step is the 375 ml half bottle",
+   "source": "the pack record w-5txzjnqt (375 ml, bottle only; profile; offeredWith tier half for d-rb7t1xzq, the Blackberry Trifle; no firstPickIds)"
+  },
+  {
+   "target": "wine:Dönnhoff ‘Niederhäuser Hermannshöhle’ Riesling Auslese Goldkapsel 2023 (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Dönnhoff ‘Niederhäuser Hermannshöhle’ Riesling Auslese Goldkapsel 2023 comes from the Hermannshöhle in Niederhausen on the Nahe, its vines on steep slate and volcanic rock. Auslese means a selected harvest of riper grapes, and the gold capsule marks the grower’s richer selection. It tastes of peach and honey, with a stony, smoky edge, sweet and concentrated, and piercing acidity. Its sweetness meets the blackberry and lemon curds while its acidity keeps them fresh, so it is the half bottle for the Blackberry Trifle. We pour 2 to 3 oz at 45 to 50°F in a small dessert glass, then recork the rest. Dönnhoff is a family estate in neighbouring Oberhausen.",
+   "reason": "Five-star review of the description: it opened on the estate, not the wine, made the Cheese Board a match though its pairing does not pick this wine, and named the Lemon Tart and the Pineapple Tarte Tatin with no pairing link; it now opens on the wine as the list prints it",
+   "source": "the pack record w-5txzjnqt (lines.s45, profile, serve, origin, offeredWith); the Blackberry Trifle's printed description (blackberry curd, lemon curd)"
+  },
+  {
+   "target": "wine:Grgich Hills ‘Violetta’ Late Harvest Napa Valley 2012 (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Violetta is Grgich Hills’ rare late harvest wine, dried peach, candied orange and honey from grapes touched by noble rot. It is the half bottle for the World Famous Bananas Foster, sweet enough for the rum caramel and the vanilla ice cream.",
+   "reason": "The sale (five-star card edition): the hook is a rare Napa late harvest in concrete words; the table is the World Famous Bananas Foster, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+   "source": "the pack record w-gk3enjif (375 ml, bottle only; profile; offeredWith tier half for d-w6h1p19m, the World Famous Bananas Foster)"
+  },
+  {
+   "target": "wine:Grgich Hills ‘Violetta’ Late Harvest Napa Valley 2012 (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Grgich Hills ‘Violetta’ Late Harvest Napa Valley 2012 is Sauvignon Blanc, Riesling and a little Gewürztraminer from the American Canyon vineyard, made only in years when noble rot shrivels the grapes. It tastes of dried peach, candied orange, honey and sweet flowers, luscious, with fresh acidity. Its sweetness carries the rum caramel and the ice cream, so it is the half bottle for the World Famous Bananas Foster. We pour 2 to 3 oz at 45 to 50°F in a dessert glass, then recork it. The winery was founded in Rutherford in 1977 by the winemaker behind the Chateau Montelena Chardonnay that won the Paris tasting of 1976.",
+   "reason": "Five-star review of the description: it opened on the founder, whose death the hay leaves unconfirmed, rather than the wine, and named the New Orleans Bread Pudding with no pairing link; it now opens on the wine as the list prints it, keeps the Paris story without naming him, and names only the Bananas Foster",
+   "source": "the pack record w-gk3enjif (lines.s45, profile, serve, the kept note on the American Canyon vineyard and Bananas Foster, offeredWith); research/producers-cellar-napa-sonoma-2026-10-10.md (Grgich Hills: Rutherford, 1977, Montelena, the Paris tasting of 1976; the founder's death unconfirmed)"
+  },
+  {
+   "target": "wine:Château Troplong Mondot Saint-Émilion 2020 (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Troplong Mondot is Saint-Émilion from high on the limestone plateau, Merlot-led, with plum, black cherry and cocoa, plush but structured. It is the half bottle for the Creole-Spiced Hanger Steak at lunch and the Chateau Espagnole at dinner.",
+   "reason": "The sale (five-star card edition): the hook is a grand Right Bank red in concrete words; the table is the two dishes whose pairings offer this wine as the half bottle; the step is the 375 ml half bottle",
+   "source": "the pack record w-9fxnmc52 (375 ml, bottle only; profile; origin; offeredWith tier half for d-4jee8o34, the Creole-Spiced Hanger Steak, and d-8onx3lq1, the Chateau Espagnole)"
+  },
+  {
+   "target": "wine:Château Troplong Mondot Saint-Émilion 2020 (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Château Troplong Mondot Saint-Émilion 2020 is a Right Bank red blended Merlot first, with Cabernet Franc and Cabernet Sauvignon, from high on the Saint-Émilion limestone plateau. It tastes of plum, black cherry and cocoa with a fresh limestone edge, and fine tannin under the plush fruit. Beef softens that tannin and its freshness cuts the French béarnaise: it is the half bottle for the Chateau Espagnole at dinner and the Creole-Spiced Hanger Steak at lunch. We pour it at 60 to 64°F in a Bordeaux glass, decanted briefly or swirled well. The list prints it as a Premier Grand Cru Classé, a rank Saint-Émilion revises about every ten years.",
+   "reason": "Five-star review of the description: it opened on the estate's site rather than the wine, carried no clause on how it is made, and shared a run of ten words with the twenty; it now opens on the wine as the list prints it and keeps both half bottle dishes",
+   "source": "the pack record w-9fxnmc52 (lines.s45, profile, serve, origin, offeredWith); research/producers-cellar-bordeaux-right-2026-10-10.md (the wine list's Premier Grand Cru Classé; the classification revised about every ten years)"
+  },
+  {
+   "target": "wine:Joseph Phelps ‘Insignia’ Napa Valley 2011 (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Insignia is a Napa flagship with age on it, blackcurrant, cedar, tobacco and dried herbs, its tannin softened and its finish long. With beef or roasted meat for two, offer the half bottle.",
+   "reason": "The sale (five-star card edition): the hook is an aged Napa flagship in concrete words; no dish's pairing names this wine, so the table is the kind of plate its goesWith names (beef and roasted meat); the step is the 375 ml half bottle",
+   "source": "the pack record w-47jj37gy (375 ml, bottle only; profile; goesWith; no firstPickIds, secondFor or offeredWith)"
+  },
+  {
+   "target": "wine:Joseph Phelps ‘Insignia’ Napa Valley 2011 (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Joseph Phelps ‘Insignia’ Napa Valley 2011 leads with Cabernet Sauvignon, blended with other Bordeaux grapes in a mix that changes each vintage, and is sold under its own name rather than a grape’s. More than a decade in bottle has softened its tannin: blackcurrant, cedar, tobacco and dried herbs, with a long, savoury finish and some bricking at the rim. It suits beef and roasted meat, where aged Cabernet shows its savoury side. We stand it upright, then decant it gently off any sediment or pour slowly, at 60 to 64°F in a large Bordeaux glass. Insignia was first made in 1974, one of California’s first proprietary Bordeaux-style blends.",
+   "reason": "Five-star review of the description: it opened on the founder, whose death the hay does not record, rather than the wine, and named the Roasted Chateaubriand and the Cheese Board, though no pairing names this wine; it now opens on the wine as the list prints it and speaks of the plates its goesWith names",
+   "source": "the pack record w-47jj37gy (lines.s45, profile, serve, origin, goesWith, the kept note on bricking); research/producers-cellar-napa-icons-2026-10-10.md (Insignia, 1974, a proprietary blend)"
+  },
+  {
+   "target": "wine:Keller ‘PIUS’ Auslese Rheinhessen 2022 (375 ml)",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Keller’s PIUS is a sweet Rheinhessen Auslese, honeyed apricot, pineapple and spice held up by stony acidity. It is the half bottle for the Pineapple Tarte Tatin, its fruit meeting the charred pineapple and its acidity keeping the pastry light.",
+   "reason": "The sale (five-star card edition): the hook is a great grower's sweet Auslese in concrete words; the table is the Pineapple Tarte Tatin, whose pairing offers this wine as the half bottle; the step is the 375 ml half bottle",
+   "source": "the pack record w-chvibn43 (375 ml, bottle only; profile; offeredWith tier half for d-t96e4urn, the Pineapple Tarte Tatin)"
+  },
+  {
+   "target": "wine:Keller ‘PIUS’ Auslese Rheinhessen 2022 (375 ml)",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Keller ‘PIUS’ Auslese Rheinhessen 2022 is a sweet Auslese made from late harvest and botrytis-touched grapes, the varieties changing with the vintage, from a family estate at Flörsheim-Dalsheim. It tastes of honeyed apricot, pineapple and spice, rich and pure, held up by stony acidity. Its fruit matches the charred pineapple and its acidity keeps the puff pastry and the anglaise light, so it is the half bottle for the Pineapple Tarte Tatin. We pour 2 to 3 oz at 45 to 50°F in a small dessert glass, then recork it and keep it cold. Weingut Keller made its name with dry Riesling, and this is its sweet side.",
+   "reason": "Five-star review of the description: it opened on the estate, not the wine, and named the New Orleans Bread Pudding and the Lemon Tart, neither of whose pairings names this wine; it now opens on the wine as the list prints it and names only the tarte Tatin",
+   "source": "the pack record w-chvibn43 (lines.s45, profile, serve, origin, the kept notes on the varieties and the tatin, offeredWith); research/producers-cellar-germany-austria-2026-10-10.md (Weingut Keller, Flörsheim-Dalsheim)"
   }
  ]
 }
