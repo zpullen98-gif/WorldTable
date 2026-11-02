@@ -187,7 +187,11 @@ export function stagingFragmentFiles(names) { return names.map((n) => path.join(
    (the hand set lists gone, the fallback why line naming the derived dishes), and the sale field
    (lines.sale, SALE_RULE, --require-sale) for the sale edition to fill; stamped at the quarter hour
    before its build, never ahead of the clock. */
-export const EDITION_BUILT_AT = '2026-10-31T07:15:00.000Z';
+/* The 03:15 edition of 2 November 2026 is the five-star card edition: a sale on every wine (lines.sale on
+   all 271, two sentences under the description) and the forty-five second descriptions reviewed to the
+   five-star standard (268 rewritten), from ten staged chunks merged into overrides.json; stamped at the
+   quarter hour before its build, never ahead of the clock. */
+export const EDITION_BUILT_AT = '2026-11-02T03:15:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a
