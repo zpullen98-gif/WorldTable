@@ -263,6 +263,150 @@
 			"value": "Château Mouton-Rothschild Pauillac 1er Cru Classé 2005 is Cabernet Sauvignon with Merlot and Cabernet Franc from a first growth in Pauillac, promoted from second growth in 1973, the one change ever made to the 1855 ranking of the reds. Made in an opulent style with sweet new oak, at twenty-one years it shows coffee, cedar, blackberry and cassis, the firm tannin softening, the finish very long. It suits beef and lamb at their richest. We serve it at 61 to 64°F in a Bordeaux glass; the sommelier decants it an hour or more ahead. Since 1945 each label has carried the work of a different artist, paid in wine.",
 			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it opened on the estate rather than the wine as the list prints it, carried no clause on how the wine is made, and named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
 			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 7 (items 1, 4 and 6: promoted to first growth in 1973, the single change to the 1855 red classification; opulent, sweet new oak; Cabernet Sauvignon led with Merlot and Cabernet Franc; a different artist for each label since the 1945 vintage, paid in wine); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Margaux 1er Cru Classé 2007",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Château Margaux 2007 is perfume before power: rose and violet over cassis and cedar, with silky, fine tannin at nineteen years. With lamb, beef tenderloin or roast veal, the sommelier decants it by the bottle shortly before serving.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (lamb, beef tenderloin and roast veal); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 8 (items 1, 4 and 5 and the expert note: the first growth of the Margaux appellation in the southern Médoc; gravel croupes; Cabernet Sauvignon led with Merlot, Petit Verdot and Cabernet Franc; perfume before power; Pavillon Rouge the second wine; the American minister to France who named four growths of the first quality in 1787); the wine record (profile, origin, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Margaux 1er Cru Classé 2007",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Margaux 1er Cru Classé 2007 is the first growth of the Margaux appellation in the southern Médoc, the château that shares its name with the village. Cabernet Sauvignon leads Merlot, Cabernet Franc and Petit Verdot on gravel croupes, and lots kept out of the grand vin go to Pavillon Rouge. At nineteen years it gives rose and violet over cassis and cedar, silky and fine: perfume before power. It suits lamb, beef tenderloin and roast veal. We serve it at 61 to 64°F in a Bordeaux glass, decanted by the sommelier. In 1787 an American minister to France named it among four growths of the first quality.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it carried no clause on how the wine is made, called it the only first growth that shares its name with its village, a claim no source here makes, and named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 8 (items 1, 4 and 5 and the expert note: the first growth of the Margaux appellation in the southern Médoc; gravel croupes; Cabernet Sauvignon led with Merlot, Petit Verdot and Cabernet Franc; perfume before power; Pavillon Rouge the second wine; the American minister to France who named four growths of the first quality in 1787); the wine record (profile, origin, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Cheval Blanc Saint-Émilion 1er Grand Cru Classé A 2008",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Cheval Blanc 2008 is Saint-Émilion built on Cabernet Franc with Merlot: violet, mint and spice over red and black fruit, silky and fresh at eighteen years. With duck, lamb or veal, the sommelier decants it by the bottle shortly before serving.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (duck, lamb and veal); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-right-2026-10-10.md section 4 (items 1, 3, 4, 9 and the expert note: the far north west of Saint-Émilion, hard against Pomerol, on gravel, sand and clay; separated from Figeac in 1832; Cabernet Franc and Merlot in near equal parts, Cabernet Franc where Merlot is expected; ranked Premier Grand Cru Classé A for the 2008 vintage; the name means white horse); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Cheval Blanc Saint-Émilion 1er Grand Cru Classé A 2008",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Cheval Blanc Saint-Émilion 1er Grand Cru Classé A 2008 is Cabernet Franc and Merlot from the far north west of Saint-Émilion, hard against Pomerol, on gravel, sand and clay rather than limestone. Blended in near equal parts, with Cabernet Franc where Merlot is expected, it was ranked Premier Grand Cru Classé A for this vintage. At eighteen years it shows violet, mint and spice over red and black fruit, silky and fresh, with a very long finish. It suits duck, lamb and veal. We serve it at 61 to 64°F in a Bordeaux glass, decanted by the sommelier. Its land was separated from Figeac in 1832.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it opened on the estate rather than the wine as the list prints it, shared an eleven word run with the 20 second line (red and black fruit, violet, mint and spice, silky, fresh and), and named the Roasted Rohan Duck Breast and the Roasted Chateaubriand, whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-right-2026-10-10.md section 4 (items 1, 3, 4, 9 and the expert note: the far north west of Saint-Émilion, hard against Pomerol, on gravel, sand and clay; separated from Figeac in 1832; Cabernet Franc and Merlot in near equal parts, Cabernet Franc where Merlot is expected; ranked Premier Grand Cru Classé A for the 2008 vintage; the name means white horse); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Lafite-Rothschild Pauillac 1er Cru Classé 2004",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Lafite 2004 is first growth Pauillac with more elegance than power: pencil shavings, graphite, cedar and cassis over fine, refined tannin. For a milestone dinner with lamb or beef, the sommelier decants it by the bottle.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (lamb and beef at a milestone dinner); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 9 (items 1, 4 and 5: gravel rises in northern Pauillac running to the Saint-Estèphe boundary, bought by Baron James de Rothschild in 1868; built on finesse rather than weight; Carruades de Lafite the second wine; listed first among the first growths in 1855); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Lafite-Rothschild Pauillac 1er Cru Classé 2004",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Lafite-Rothschild Pauillac 1er Cru Classé 2004 is Cabernet Sauvignon with Merlot from gravel rises in the north of Pauillac, running to the Saint-Estèphe boundary; in 1855 it was listed first among the first growths. Made for finesse rather than weight, the lots left out going to Carruades de Lafite, at twenty-two years it gives pencil shavings, graphite and cedar over cassis, the tannin refined, the finish long. It suits rack of lamb and beef at a milestone dinner. We serve it at 61 to 64°F in a Bordeaux glass, decanted by the sommelier. Baron James de Rothschild bought Lafite in 1868, and his family owns it still.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it carried no clause on how the wine is made and named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 9 (items 1, 4 and 5: gravel rises in northern Pauillac running to the Saint-Estèphe boundary, bought by Baron James de Rothschild in 1868; built on finesse rather than weight; Carruades de Lafite the second wine; listed first among the first growths in 1855); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Latour Pauillac 1er Cru Classé 2005",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Latour 2005 is the powerful first growth of Pauillac: walnut and cedar over blackcurrant and cassis, with deep, firm tannin, still young at twenty-one. For the richest beef and lamb, the sommelier decants it by the bottle, well ahead.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (the richest beef and lamb); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 10 (items 1, 2 and 8: L'Enclos, the walled block of deep gravel beside the Gironde, fruit from outside it going to the second and third wines; the label's tower a seventeenth century dovecote raised on the site of an older fortified tower; a first growth of 1855 in southern Pauillac, Cabernet Sauvignon led, the powerful one); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Latour Pauillac 1er Cru Classé 2005",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Latour Pauillac 1er Cru Classé 2005 is Cabernet Sauvignon led, with Merlot, a first growth of 1855 in southern Pauillac. The grand vin is drawn from L’Enclos, a walled block of deep gravel beside the Gironde, the rest going to the second and third wines. Of the Pauillac first growths it is the powerful one, still young at twenty-one: walnut and cedar over blackcurrant and cassis, its tannin firm. It suits the richest beef and lamb. We serve it at 62 to 65°F in a Bordeaux glass, decanted well ahead by the sommelier. The label’s tower is a seventeenth century dovecote raised where a fortified tower stood.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it shared a run of more than eight words with the 20 second line (it is still young: blackcurrant, cassis, cedar and walnut, deep, with firm tannin) and named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 10 (items 1, 2 and 8: L'Enclos, the walled block of deep gravel beside the Gironde, fruit from outside it going to the second and third wines; the label's tower a seventeenth century dovecote raised on the site of an older fortified tower; a first growth of 1855 in southern Pauillac, Cabernet Sauvignon led, the powerful one); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Pétrus Pomerol 1980",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Pétrus 1980 is Merlot from the blue clay of Pomerol at forty-six years: truffle, leather and earth around dried plum and fig, soft as velvet. With a simple roast of squab, duck or beef, or alone, the sommelier opens and decants it by the bottle.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (a quiet, simple course: roast squab, duck or beef tenderloin, or the bottle alone); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-right-2026-10-10.md section 5 (items 1 to 3 and 7 and the expert note: the buttonhole of blue clay at the high point of the Pomerol plateau; Merlot effectively the whole blend, a single vineyard, made in small quantities; Pomerol never classified, so no rank; old bottles opened with a two-pronged cork puller; Petrus is Latin for Peter and the label carries Saint Peter); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Pétrus Pomerol 1980",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Pétrus Pomerol 1980 is almost entirely Merlot, from the buttonhole of blue clay atop the Pomerol plateau. It is made in tiny quantities from that one vineyard, and carries no rank, since Pomerol was never classified. At forty-six years expect truffle, leather and earth around dried plum and fig, soft as velvet, every old bottle its own. It suits a quiet, simple course, roast squab, duck or beef, or the bottle alone. We stand it upright well ahead; the sommelier opens it with an old cork tool and decants it off its sediment at 61 to 64°F. The name is Latin for Peter, whose portrait the label carries.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it, hedged its taste (should taste), carried no clause on how the wine is made, and named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-right-2026-10-10.md section 5 (items 1 to 3 and 7 and the expert note: the buttonhole of blue clay at the high point of the Pomerol plateau; Merlot effectively the whole blend, a single vineyard, made in small quantities; Pomerol never classified, so no rank; old bottles opened with a two-pronged cork puller; Petrus is Latin for Peter and the label carries Saint Peter); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Latour Pauillac Premier Cru Classé 1946",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Château Latour 1946 was harvested the year Brennan’s opened: first growth Pauillac, now leather, earth and cedar around faded, dried fruit on a fragile frame. With a plain filet or nothing at all, the sommelier opens and decants it by the bottle.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (a quiet, simple plate: a plain filet, or nothing at all); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 10 (items 7 and 8: Brennan's opened in 1946 and the list files the Latour 1946 under Selections from our Birth Year; very old wine stood upright, opened with a two-prong opener and decanted only to leave the sediment, never a Coravin; a first growth of 1855 in southern Pauillac by the Gironde); tools/house/brennans/guide.txt (Brennan's opened in 1946); the wine record (profile, parts, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Latour Pauillac Premier Cru Classé 1946",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Latour Pauillac Premier Cru Classé 1946 is a first growth of 1855 from southern Pauillac, Cabernet Sauvignon blended with Merlot, and ours was harvested in 1946, the year Brennan’s opened. Aged in oak and then eighty years in bottle, it has traded fresh fruit for leather, earth and cedar around faded, dried fruit, its frame fragile, and no two bottles are the same. It suits a plain filet, or nothing at all. The sommelier stands it upright a day ahead, eases out the cork with a two-prong opener, never a Coravin, and decants it off the sediment at 60 to 64°F in a large Bordeaux glass.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it shared a run of more than eight words with the 20 second line (cedar, dried fruit, leather and earth on a fragile frame) and named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 10 (items 7 and 8: Brennan's opened in 1946 and the list files the Latour 1946 under Selections from our Birth Year; very old wine stood upright, opened with a two-prong opener and decanted only to leave the sediment, never a Coravin; a first growth of 1855 in southern Pauillac by the Gironde); tools/house/brennans/guide.txt (Brennan's opened in 1946); the wine record (profile, parts, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Trotanoy Pomerol 1946",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Château Trotanoy 1946 is Pomerol Merlot with Cabernet Franc, harvested the year Brennan’s opened: truffle and earth around dried plum and a sweet, faded fruit. With a simple roast or cheese, the sommelier opens and decants it by the bottle.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (something gentle and savoury: a simple roast, or cheese at the end of dinner); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-right-2026-10-10.md section 6 (items 1, 3, 6 and 9: clay over gravel on the western slope of the Pomerol plateau; Merlot with a little Cabernet Franc; the 1956 frost devastated Pomerol and forced mass replanting, so a 1946 came from vines that stood before it; Brennan's opened in 1946); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Trotanoy Pomerol 1946",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Trotanoy Pomerol 1946 is Merlot with a little Cabernet Franc from clay over gravel on the western slope of the Pomerol plateau. Ours was harvested in 1946, the year Brennan’s opened, from vines that stood before the 1956 frost forced Pomerol to replant. After eighty years in bottle it shows truffle and earth around dried plum and a sweet, faded fruit, soft and fragile. It suits a gentle, savoury plate, a simple roast or cheese after dinner. The sommelier stands it upright a day ahead, eases out the old cork with a two-prong opener, never a Coravin, and decants it off the sediment at 60 to 64°F.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it, hedged the story of its name (said to come from), and named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-right-2026-10-10.md section 6 (items 1, 3, 6 and 9: clay over gravel on the western slope of the Pomerol plateau; Merlot with a little Cabernet Franc; the 1956 frost devastated Pomerol and forced mass replanting, so a 1946 came from vines that stood before it; Brennan's opened in 1946); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château-Figeac Saint-Émilion Premier Grand Cru Classé 1946",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Château-Figeac 1946 is Saint-Émilion grown as much to Cabernet as to Merlot, harvested the year Brennan’s opened: tobacco leaf, cedar and earth around dried red fruit. With roast lamb or a slow glass after dinner, the sommelier opens and decants it by the bottle.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (a plain, savoury plate: roast lamb, or a slow glass after dinner); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-right-2026-10-10.md section 7 (items 1, 3 and 6: the gravel rise shared with Cheval Blanc, sold out of Figeac in 1832; roughly a third each Cabernet Sauvignon, Cabernet Franc and Merlot; Brennan's 1946 Birth Year bottle); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château-Figeac Saint-Émilion Premier Grand Cru Classé 1946",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château-Figeac Saint-Émilion Premier Grand Cru Classé 1946 comes from a gravel rise it shares with Cheval Blanc, and where Saint-Émilion is mostly Merlot, Figeac grows roughly a third each of Cabernet Sauvignon, Cabernet Franc and Merlot. Ours comes from 1946, the year Brennan’s opened. Eighty years on, expect tobacco leaf, cedar and earth around dried red fruit, with a fresh thread from Cabernet. It suits roast lamb, or a slow glass after dinner. The sommelier stands it upright a day ahead, eases out the cork with a two-prong opener and decants it off the sediment at 60 to 64°F. Cheval Blanc was sold out of Figeac in 1832.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it and named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-right-2026-10-10.md section 7 (items 1, 3 and 6: the gravel rise shared with Cheval Blanc, sold out of Figeac in 1832; roughly a third each Cabernet Sauvignon, Cabernet Franc and Merlot; Brennan's 1946 Birth Year bottle); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Canon Saint-Émilion Premier Grand Cru Classé 1946",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Château Canon 1946 is Merlot with Cabernet Franc from the limestone beside Saint-Émilion, harvested the year Brennan’s opened: rose petal and mushroom around dried cherry, with a chalky freshness. With roast chicken or mushrooms, the sommelier opens and decants it by the bottle.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (a gentle plate or none: roast chicken, mushrooms, or a quiet glass to close a birthday dinner); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-right-2026-10-10.md section 8 (items 1, 3 and 5: a walled vineyard on the limestone plateau just west of the town, quarry cellars beneath; Merlot with Cabernet Franc; Château Canon is not Canon-la-Gaffelière; the 1946 Birth Year bottle); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Canon Saint-Émilion Premier Grand Cru Classé 1946",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Canon Saint-Émilion Premier Grand Cru Classé 1946 is Merlot with Cabernet Franc from a walled vineyard on the limestone plateau just west of the town of Saint-Émilion. Ours comes from 1946, the year Brennan’s opened. Eighty years on, expect a pale, fragile wine: rose petal and mushroom around dried cherry, with the chalky freshness limestone gives. It suits roast chicken or mushrooms, or a quiet glass to close a birthday dinner. The sommelier stands it upright a day ahead, eases out the cork with a two-prong opener, never a Coravin, and decants it off the sediment at 60 to 64°F. It is not Canon-la-Gaffelière, a different estate.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it named Maggie’s Mushrooms and the Roasted Chateaubriand, whose pairings do not name this wine, and named the living owning family; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-right-2026-10-10.md section 8 (items 1, 3 and 5: a walled vineyard on the limestone plateau just west of the town, quarry cellars beneath; Merlot with Cabernet Franc; Château Canon is not Canon-la-Gaffelière; the 1946 Birth Year bottle); the wine record (profile, goesWith, serve; no dish pairing names it)"
 		}
 	]
 }
