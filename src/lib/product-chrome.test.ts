@@ -50,12 +50,11 @@ describe('the layout head and footer', () => {
 		expect(layout).toContain('<meta name="apple-mobile-web-app-status-bar-style" content="black" />');
 	});
 
-	it('links Privacy and Terms at the product root, external, only under a base', () => {
-		const footer = layout.slice(layout.indexOf('<footer>'), layout.indexOf('</footer>'));
-		const legal = footer.slice(footer.indexOf('{#if base}'), footer.indexOf('{/if}'));
-		expect(legal).toContain('<a href="/privacy.html" rel="external">Privacy</a>');
-		expect(legal).toContain('<a href="/terms.html" rel="external">Terms</a>');
-		expect(legal.replace(/\s+/g, ' ')).toMatch(/Privacy<\/a> · <a/);
+	it('carries no legal links: Outside Of Time is the owner\'s own tool, never sold (2 November 2026)', () => {
+		const more = readFileSync('src/routes/more/+page.svelte', 'utf8');
+		for (const [name, text] of [['the layout', layout], ['More', more]]) {
+			expect(text, name).not.toMatch(/privacy\.html|terms\.html|pricing\.html/);
+		}
 	});
 
 	it('renders the manifest link only when a manifest was named', () => {

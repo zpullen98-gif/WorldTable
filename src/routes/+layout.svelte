@@ -496,22 +496,6 @@
 <footer>
 	<div class="shell">
 		The World Table · {TOTALS.recipes} recipes · {TOTALS.chapters} chapters · Chef’s Lexicon: {TOTALS.lexicon} terms
-		<!--
-			The product's Privacy and Terms pages live at the ORIGIN ROOT of Outside
-			Of Time, above this wing's base, so the links are root-absolute on
-			purpose and only rendered when there is a base to be above: the
-			standalone build, served from its own root, has no such pages to link.
-
-			rel="external" is load-bearing twice over. The prerender crawler skips
-			an external link, and without that it fails the build on any href that
-			does not begin with base (the same rule the manifest link needed an
-			exception for in vite.config.ts). And the client router treats it as a
-			full navigation rather than a route of this app, which /privacy.html is
-			not.
-		-->
-		{#if base}
-			<span class="legal">· <a href="/privacy.html" rel="external">Privacy</a> · <a href="/terms.html" rel="external">Terms</a></span>
-		{/if}
 	</div>
 </footer>
 

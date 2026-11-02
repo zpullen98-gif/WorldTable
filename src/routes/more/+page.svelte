@@ -107,10 +107,4 @@
 	<p class="note about">
 		The World Table · {TOTALS.recipes} recipes · {TOTALS.chapters} chapters · Chef’s Lexicon: {TOTALS.lexicon} terms
 	</p>
-	{#if base}
-		<p class="quietlinks">
-			<a href="/privacy.html" rel="external">Privacy</a>
-			<a href="/terms.html" rel="external">Terms</a>
-		</p>
-	{/if}
 </div>
