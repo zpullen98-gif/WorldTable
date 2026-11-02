@@ -127,6 +127,142 @@
 			"value": "Les Cadrans de Lassègue Saint-Émilion Grand Cru 2021 is the second wine of Château Lassègue, on Bordeaux’s Right Bank, first made in 2008 from the estate’s younger vines and foothill blocks. Mainly Merlot with Cabernet Franc, it spends six to eight months in French oak and tastes of red cherry, plum and a little spice, with soft, refined tannin and a fresh finish. As our value bottle for the Chateau Espagnole, that soft tannin suits the lean Chateaubriand and its plum and spice meet the brown sauce. We serve it at 60 to 64°F in a Bordeaux glass, no decanting. Cadrans are the sundials on the château’s front.",
 			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it named the Creole-Spiced Hanger Steak, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
 			"source": "research/producers-cellar-bordeaux-right-2026-10-10.md section 1 (item 1: the second wine of Château Lassègue, first made in 2008, the name from the sundials on the château's front, mainly Merlot and Cabernet Franc from younger vines and the foothill blocks, six to eight months in part new French oak); research/bottle-selection-2026-10-04.json Chateau Espagnole value tier; the wine record (profile, serve, offeredWith: value for the Chateau Espagnole)"
+		},
+		{
+			"target": "wine:La Chapelle de Meyney Saint-Estèphe 2018",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "La Chapelle de Meyney is firm, savoury Saint-Estèphe, Cabernet Sauvignon with Merlot: blackcurrant, cedar and tobacco with fine tannin at eight years. It is our value bottle for the Creole-Spiced Hanger Steak, by the bottle, decanted thirty minutes ahead when the table can wait.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; the dish named is the only one whose pairing names this wine (the value bottle for the Creole-Spiced Hanger Steak); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 2 (items 1, 3 and 4: the second wine of Château Meyney from younger vines, Cabernet Sauvignon led with Merlot and a little Petit Verdot, aged in part new French oak; Saint-Estèphe's gravel over water holding clay giving more flesh and grip; the value bottle for the Creole-Spiced Hanger Steak); the wine record (profile, serve, offeredWith: value for the Creole-Spiced Hanger Steak)"
+		},
+		{
+			"target": "wine:La Chapelle de Meyney Saint-Estèphe 2018",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "La Chapelle de Meyney Saint-Estèphe 2018 is the second wine of Château Meyney, in the north of the Médoc, from the estate’s younger vines. Cabernet Sauvignon leads, with Merlot and some Petit Verdot, aged in French oak, part of it new; at eight years it shows blackcurrant, plum, cedar, tobacco and earth over firm, fine tannin. As our value bottle for the Creole-Spiced Hanger Steak, that grip meets the beef and cuts the béarnaise and yolk. We serve it at 60 to 64°F in a Bordeaux glass, decanted thirty minutes ahead when the table can wait. Saint-Estèphe’s clay under the gravel holds water, giving its reds flesh and grip.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it shared a nine word run with the 20 second line (Cabernet Sauvignon with Merlot and a little Petit Verdot) and ran short of the 104 word floor; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 2 (items 1, 3 and 4: the second wine of Château Meyney from younger vines, Cabernet Sauvignon led with Merlot and a little Petit Verdot, aged in part new French oak; Saint-Estèphe's gravel over water holding clay giving more flesh and grip; the value bottle for the Creole-Spiced Hanger Steak); the wine record (profile, serve, offeredWith: value for the Creole-Spiced Hanger Steak)"
+		},
+		{
+			"target": "wine:Château Haut-Bages Libéral Pauillac 5ème Cru Classé 2018",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Haut-Bages Libéral is Pauillac from a fifth growth farmed organically beside Château Latour: blackcurrant, graphite and cedar, ripe and firm with polished tannin. It is our classic bottle for the Chateau Espagnole, by the bottle, decanted about an hour ahead.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; the dish named is the only one whose pairing names this wine (the classic bottle for the Chateau Espagnole); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 3 (items 1 and 4 and the expert note: a fifth growth of 1855, largest parcel beside Château Latour, certified organic and biodynamic in 2019, about three quarters Cabernet Sauvignon and a quarter Merlot, aged in part new oak; haut is French for high, the higher ground of the Bages plateau); research/bottle-selection-2026-10-04.json Chateau Espagnole classic tier; the wine record (profile, serve, offeredWith: classic for the Chateau Espagnole)"
+		},
+		{
+			"target": "wine:Château Haut-Bages Libéral Pauillac 5ème Cru Classé 2018",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Haut-Bages Libéral Pauillac 5ème Cru Classé 2018 is a fifth growth of 1855 with its main parcel beside Château Latour, certified organic and biodynamic since 2019. About three quarters Cabernet Sauvignon with Merlot, aged in French oak, part of it new, at eight years it gives blackcurrant, graphite and cedar, ripe, with firm, polished tannin. As our classic bottle for the Chateau Espagnole, its cedar echoes the roasted stock of the sauce and its tannin meets the lean beef. We serve it at 61 to 64°F in a Bordeaux glass, decanted an hour ahead. Haut is French for high: the upper ground of the Bages plateau.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 3 (items 1 and 4 and the expert note: a fifth growth of 1855, largest parcel beside Château Latour, certified organic and biodynamic in 2019, about three quarters Cabernet Sauvignon and a quarter Merlot, aged in part new oak; haut is French for high, the higher ground of the Bages plateau); research/bottle-selection-2026-10-04.json Chateau Espagnole classic tier; the wine record (profile, serve, offeredWith: classic for the Chateau Espagnole)"
+		},
+		{
+			"target": "wine:Château Bellegrave Pomerol 2019",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Bellegrave is plush Pomerol from a small organic family estate, Merlot with Cabernet Franc: black cherry, plum, cocoa and violet. For duck, lamb or beef in a gentle sauce, we pour it by the bottle, decanted thirty minutes ahead.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (duck, lamb and beef in gentler sauces); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-right-2026-10-10.md section 2 (item 1: bought in 1951 and run by the same family, in the southwest of Pomerol on clay and gravel, converted to organic farming with ECOCERT certification in 2009, about 75 percent Merlot and 25 percent Cabernet Franc); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Bellegrave Pomerol 2019",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Bellegrave Pomerol 2019 is Merlot with Cabernet Franc, about three parts to one, from a small family estate in the south west of Pomerol, on Bordeaux’s Right Bank. Its vines grow on clay and gravel and have been farmed organically since the estate converted, with certification in 2009. At seven years it tastes of black cherry, blackcurrant and plum, cocoa and violet, plush and supple with a fresh, cedary finish. It suits duck, lamb or beef in a gentler sauce. We serve it at 60 to 64°F in a Bordeaux glass, decanted thirty to forty-five minutes ahead. The same family has owned the estate since 1951.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it opened on the estate rather than the wine as the list prints it, named the owning family, and named dishes whose pairings do not name this wine (the Roasted Rohan Duck Breast and the Roasted Chateaubriand); it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-right-2026-10-10.md section 2 (item 1: bought in 1951 and run by the same family, in the southwest of Pomerol on clay and gravel, converted to organic farming with ECOCERT certification in 2009, about 75 percent Merlot and 25 percent Cabernet Franc); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Talbot Saint-Julien 4ème Cru Classé 2019",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Talbot is Saint-Julien Cabernet Sauvignon with Merlot, blackcurrant and plum, cedar and cigar box with firm but fine tannin. It is our classic bottle for the Roasted Chateaubriand and its sauce Foyot, by the bottle, decanted about an hour ahead.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; the dish named is the only one whose pairing names this wine (the classic bottle for the Roasted Chateaubriand); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 4 (items 1, 4 and 6: named for John Talbot, killed at the Battle of Castillon in 1453; a fourth growth of 1855 in Saint-Julien between Pauillac and Margaux, Cabernet led with Merlot; the sweet spot bottle for the Roasted Chateaubriand); research/bottle-selection-2026-10-04.json Roasted Chateaubriand classic tier; the wine record (profile, serve, offeredWith: classic for the Roasted Chateaubriand)"
+		},
+		{
+			"target": "wine:Château Grand-Puy-Lacoste Pauillac 5ème Cru Classé 2008",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Grand-Puy-Lacoste 2008 is Pauillac Cabernet Sauvignon at eighteen years: cassis, cedar, tobacco and earth, its firm tannin now resolved. It is our celebration bottle for the Creole-Spiced Hanger Steak at lunch and the Chateau Espagnole at dinner, by the bottle, decanted off its sediment.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; the dishes named are the only ones whose pairings name this wine (the celebration bottle for the Creole-Spiced Hanger Steak and the Chateau Espagnole); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 5 (items 1, 2 and 5: a fifth growth of 1855, a single block on a gravel rise inland from the river, Borie family owned; pure, unfussy, Cabernet dominant Pauillac with no cosmetic oak; puy the local word for a rise; the celebration bottle for the Creole-Spiced Hanger Steak); research/bottle-selection-2026-10-04.json Creole-Spiced Hanger Steak and Chateau Espagnole splurge tiers; the wine record (profile, serve, offeredWith: splurge for both)"
+		},
+		{
+			"target": "wine:Château Grand-Puy-Lacoste Pauillac 5ème Cru Classé 2008",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Grand-Puy-Lacoste Pauillac 5ème Cru Classé 2008 is a fifth growth of 1855, one block on a gravel rise inland from the river. Cabernet Sauvignon dominant with Merlot, it is made pure and unfussy, with no cosmetic oak, and at eighteen years gives cassis, cedar, tobacco, earth and graphite, the firm tannin resolved into a long, savoury finish. Our celebration bottle, it meets the beef and béarnaise of the Creole-Spiced Hanger Steak at lunch, and at dinner the Chateau Espagnole and its brown sauce. We stand it upright and decant it gently off its sediment before pouring, at 61 to 64°F. Puy is the local word for a rise.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it carried no clause on how the wine is made and shared an eight word run with the 20 second line (the Creole-Spiced Hanger Steak at lunch and the); it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 5 (items 1, 2 and 5: a fifth growth of 1855, a single block on a gravel rise inland from the river, Borie family owned; pure, unfussy, Cabernet dominant Pauillac with no cosmetic oak; puy the local word for a rise; the celebration bottle for the Creole-Spiced Hanger Steak); research/bottle-selection-2026-10-04.json Creole-Spiced Hanger Steak and Chateau Espagnole splurge tiers; the wine record (profile, serve, offeredWith: splurge for both)"
+		},
+		{
+			"target": "wine:Château Pichon-Longueville Comtesse de Lalande Pauillac 2ème Cru Classé 2004",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Pichon Lalande 2004 is silky Pauillac with more Merlot than its neighbours: cassis, cedar, tobacco and dried rose at twenty-two years. It is our celebration bottle for the Roasted Chateaubriand and its sauce Foyot, by the bottle, decanted gently off its sediment.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; the dish named is the only one whose pairing names this wine (the celebration bottle for the Roasted Chateaubriand); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 6 (items 1, 2 and 4: the Pichon estate divided in 1850, this share run by Virginie, Comtesse de Lalande; a second growth across the road from Château Latour; Cabernet Sauvignon and Merlot with Petit Verdot and Cabernet Franc, more Merlot than its neighbours, the softest and most floral Pauillac); research/bottle-selection-2026-10-04.json Roasted Chateaubriand splurge tier; the wine record (profile, serve, offeredWith: splurge for the Roasted Chateaubriand)"
+		},
+		{
+			"target": "wine:Château Pichon-Longueville Comtesse de Lalande Pauillac 2ème Cru Classé 2004",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Pichon-Longueville Comtesse de Lalande Pauillac 2ème Cru Classé 2004 is a second growth of 1855 across the road from Château Latour. Cabernet Sauvignon is blended with a large share of Merlot, giving Pauillac’s softer, floral side: dried rose, cassis, cedar and tobacco, with silky tannin and a long finish. As our celebration bottle for the Roasted Chateaubriand, the silk suits the tenderloin and its depth meets the sauce Foyot. We stand it upright and decant it off its sediment before serving, at 61 to 64°F. When the Pichon estate was divided in 1850, this share was run by Virginie, Comtesse de Lalande, and keeps her title.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it shared runs of eight and eleven words with the 20 second line (Cabernet Sauvignon with more Merlot than its neighbors; at twenty-two years it tastes of cassis, cedar, tobacco and dried rose) and carried no clause on how the wine is made; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 6 (items 1, 2 and 4: the Pichon estate divided in 1850, this share run by Virginie, Comtesse de Lalande; a second growth across the road from Château Latour; Cabernet Sauvignon and Merlot with Petit Verdot and Cabernet Franc, more Merlot than its neighbours, the softest and most floral Pauillac); research/bottle-selection-2026-10-04.json Roasted Chateaubriand splurge tier; the wine record (profile, serve, offeredWith: splurge for the Roasted Chateaubriand)"
+		},
+		{
+			"target": "wine:Clos L’Église Pomerol 2019",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Clos L’Église is rich Pomerol from the plateau, Merlot with Cabernet Franc: black cherry, plum and mocha with violet and spice, polished and long. For duck, lamb or beef, we pour it by the bottle, decanted an hour ahead.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (duck, lamb and beef); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-right-2026-10-10.md section 3 (items 1 to 3 and the expert note: bought in 1997 and run by one family, farmed organically, Merlot with Cabernet Franc, sixteen to twenty-four months in new French oak; Château L'Église-Clinet a separate Pomerol estate; clos a walled vineyard, l'église the church); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Clos L’Église Pomerol 2019",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Clos L’Église Pomerol 2019 is Merlot with Cabernet Franc grown on a small estate on the Pomerol plateau, on Bordeaux’s Right Bank, run by one family since 1997. The vines are farmed organically, and the wine spends sixteen to twenty-four months in new French oak. At seven years it is still young: black cherry, plum, mocha, violet and spice, rich and polished with a long finish. It suits duck, lamb and beef. We serve it at 61 to 64°F in a Bordeaux glass, decanted an hour ahead. In French a clos is a walled vineyard and l’église the church; it is not L’Église-Clinet, a different Pomerol.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it named a living owner, and named dishes whose pairings do not name this wine (the Roasted Rohan Duck Breast and the Roasted Chateaubriand); it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-right-2026-10-10.md section 3 (items 1 to 3 and the expert note: bought in 1997 and run by one family, farmed organically, Merlot with Cabernet Franc, sixteen to twenty-four months in new French oak; Château L'Église-Clinet a separate Pomerol estate; clos a walled vineyard, l'église the church); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Haut-Brion Pessac-Léognan 1er Cru Classé 2002",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Haut-Brion 2002 is first growth claret from the gravel of Pessac: cassis and plum, tobacco, smoke and warm gravel, silky at twenty-four years. With roast beef, lamb or game as the heart of the dinner, the sommelier decants it by the bottle.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (roast beef and game, lamb and mushrooms); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-white-sweet-2026-10-10.md section 1 (items 1, 2, 4 and 10: gravel mounds in Pessac on the edge of Bordeaux, the only first growth of 1855 outside the Médoc, Merlot, Cabernet Sauvignon and Cabernet Franc; smoke, warm gravel and tobacco; the London diarist who praised Ho Bryan in 1663); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Haut-Brion Pessac-Léognan 1er Cru Classé 2002",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Haut-Brion Pessac-Léognan 1er Cru Classé 2002 is Merlot, Cabernet Sauvignon and Cabernet Franc from gravel mounds in Pessac, on the edge of Bordeaux, in the Graves; in 1855 it was the one estate outside the Médoc ranked a first growth. Blended and made to age, at twenty-four years it gives smoke, tobacco and warm gravel over cassis and plum, silky and resolved, with a long, savoury finish. It suits roast beef, lamb, game and mushrooms. We serve it at 61 to 64°F in a Bordeaux glass, stood upright ahead; the sommelier decants it off its sediment. A London diarist praised Ho Bryan by name in 1663.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it opened on the estate rather than the wine as the list prints it and named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-white-sweet-2026-10-10.md section 1 (items 1, 2, 4 and 10: gravel mounds in Pessac on the edge of Bordeaux, the only first growth of 1855 outside the Médoc, Merlot, Cabernet Sauvignon and Cabernet Franc; smoke, warm gravel and tobacco; the London diarist who praised Ho Bryan in 1663); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Mouton-Rothschild Pauillac 1er Cru Classé 2005",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Mouton-Rothschild 2005 is opulent first growth Pauillac: cassis, blackberry, cedar and coffee, its firm tannin softening at twenty-one years, under a label by an artist. With beef or lamb at their richest, the sommelier decants it by the bottle, an hour or more ahead.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the kind of plate its goesWith names (beef and lamb at their richest); the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 7 (items 1, 4 and 6: promoted to first growth in 1973, the single change to the 1855 red classification; opulent, sweet new oak; Cabernet Sauvignon led with Merlot and Cabernet Franc; a different artist for each label since the 1945 vintage, paid in wine); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Mouton-Rothschild Pauillac 1er Cru Classé 2005",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Mouton-Rothschild Pauillac 1er Cru Classé 2005 is Cabernet Sauvignon with Merlot and Cabernet Franc from a first growth in Pauillac, promoted from second growth in 1973, the one change ever made to the 1855 ranking of the reds. Made in an opulent style with sweet new oak, at twenty-one years it shows coffee, cedar, blackberry and cassis, the firm tannin softening, the finish very long. It suits beef and lamb at their richest. We serve it at 61 to 64°F in a Bordeaux glass; the sommelier decants it an hour or more ahead. Since 1945 each label has carried the work of a different artist, paid in wine.",
+			"reason": "Five-star card edition, sale-8 (Bordeaux): the description was rewritten because it opened on the estate rather than the wine as the list prints it, carried no clause on how the wine is made, and named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, only the dishes whose pairing names this wine, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-left-2026-10-10.md section 7 (items 1, 4 and 6: promoted to first growth in 1973, the single change to the 1855 red classification; opulent, sweet new oak; Cabernet Sauvignon led with Merlot and Cabernet Franc; a different artist for each label since the 1945 vintage, paid in wine); the wine record (profile, goesWith, serve; no dish pairing names it)"
 		}
 	]
 }
