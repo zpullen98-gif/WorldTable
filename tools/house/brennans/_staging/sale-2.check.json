@@ -1,0 +1,19 @@
+{
+ "sampled": [
+  "Piper-Heidsieck ‘Brennan’s Essential’ Extra Brut NV",
+  "Bollinger ‘Special Cuvée’ Brut NV",
+  "Cesarini Sforza Rosé Brut Trento NV",
+  "Domaine Huet Pétillant Vouvray 2019",
+  "Chartogne-Taillet Rosé Brut NV",
+  "Larmandier-Bernier Premier Cru ‘Longitude’ Extra Brut NV",
+  "Charles Heidsieck ‘Réserve’ Brut NV",
+  "Bollinger ‘PNTX20’ Brut NV",
+  "Billecart-Salmon ‘Cuvée Elisabeth Salmon’ Rosé Brut 2009",
+  "Jacques Selosse ‘Initial’ Blanc de Blancs Brut NV",
+  "Krug ‘Grande Cuvée 170th Edition’ Brut NV",
+  "Krug Rosé Brut NV",
+  "Dom Pérignon ‘P2’ Brut 2006"
+ ],
+ "fixed": [],
+ "swept": "A node script over every sale and description in the chunk (kept five-star descriptions read from the staged build): engine words() and sentences() for the sale (15 to 45, two sentences) and the description (104 to 110); every printed dish name and short form tested against the wine's firstPickIds, secondFor and offeredWith (the tasting course pours counted as no link), with \"first pick\", \"second choice\" and the bottle tier words checked against the same lists; the step (by the glass only with a glass price, Coravin only when serve says so, the half bottle for 375 ml, the magnum and double magnum by size, the 4 oz tasting pour, by the bottle at Bubbles for the Bubbles rosés, otherwise by the bottle); dashes, BANNED_WORDS, superlatives, hedges and source talk on the card (the list prints, the list describes, the estate says), price talk, questions, allergen words, American spellings; every name and year through the engine's sourceProblems against the hay and the house; eight word runs shared with the s20; the description naming the grape and a place of the region; a line of story (a year, a family, a founding, a name). Result: found nothing to fix: every sale two sentences within 15 to 45 words, every description 104 to 110, every named dish a tier the dish offers (classic or celebration bottle), the snack bottles speaking of fried snacks at the Roost Bar with no dish name, every step by the bottle, no dash, banned word, superlative, hedge, price, question, unsourced name or shared eight word run, every founder named long dead. Read and passed: \"toasted nuts\" as a taste, the Brennan's Essential bottle saying the same wine is poured by the glass, the reserve wines kept in magnum."
+}
