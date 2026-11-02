@@ -383,6 +383,86 @@
    "value": "Krug Grande Cuvée 170th Edition is a prestige Champagne from Reims, Pinot Noir, Chardonnay and Meunier, blending 195 wines from twelve years, from 1998 to 2014. Each wine is first fermented in small oak casks, and the blend rests about seven years in the cellars. It is deep and layered: honey, toasted nuts, brioche and citrus peel, with fine bubbles and a very long finish. It suits roasted nuts and grand plates. We pour it at 48 to 52°F in a white-wine glass, warmer than the house bubbles. Joseph Krug founded the house in 1843, set on making a prestige Champagne every year, whatever the harvest.",
    "reason": "Five-star review of the description: it opened on the founder, not the wine, and named the Creole Spiced Nuts, the Turtle Soup and the Roasted Chateaubriand, none of whose pairings names this wine; it now opens on the wine, speaks of the plates its goesWith names and keeps the sourced story",
    "source": "the pack record w-sven7j3q (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-menu-2026-10-10.md section 6 (Joseph Krug, 1843, prestige every year, 195 wines from 12 years from 1998 to 2014, 51 Pinot Noir 38 Chardonnay 11 Meunier, about seven years in the cellars, small oak casks)"
+  },
+  {
+   "target": "wine:Rare Champagne ‘Rare’ Brut 2013",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Rare 2013 is the prestige vintage born at Piper-Heidsieck, 70 percent Chardonnay: white peach, candied citrus and toasted almond, rich and elegant. It is the celebration bottle for the Eggs Hussarde, its depth meeting the bacon and marchand de vin, by the bottle.",
+   "reason": "The sale: the hook is the prestige vintage and its taste; the table is the one dish whose bottle tiers name it, said as the celebration, and the step is the bottle (the Coravin glass is the 2012, its own record)",
+   "source": "the pack record w-gcoxn5b8 (Rare 2013; bottle only, 750 ml; profile; offeredWith Eggs Hussarde, splurge); the Eggs Hussarde pairing (bottles.splurge: depth for bacon and the marchand de vin)"
+  },
+  {
+   "target": "wine:Rare Champagne ‘Rare’ Brut 2013",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Rare Brut 2013 is the prestige vintage of Rare Champagne in Reims: 70 percent Chardonnay and 30 percent Pinot Noir from eleven villages, seven of them grand cru. It spent at least eight years on its lees and a further year under cork. It is rich and elegant: white peach, candied citrus and toasted almond, with a long, fine mousse. It is our celebration bottle for the Eggs Hussarde, its depth meeting the coffee-cured bacon and the marchand de vin. We pour it at 46 to 50°F in a white-wine glass. Rare was first made at Piper-Heidsieck in 1976 and became its own house in 2018.",
+   "reason": "Five-star review of the description: it opened on the history of the name, not the wine; it now opens on the wine, adds the blend and the year under cork from the research, keeps the Eggs Hussarde as its celebration bottle and keeps the sourced story",
+   "source": "the pack record w-gcoxn5b8 (lines.s45, profile, serve, offeredWith); the Eggs Hussarde pairing (bottles.splurge); research/producers-cellar-champagne-menu-2026-10-10.md section 2 (1976, its own house since 2018, 70 Chardonnay and 30 Pinot Noir from 11 crus with seven grand cru, mainly the Montagne de Reims, at least eight years on the lees and a further year under cork)"
+  },
+  {
+   "target": "wine:Louis Roederer ‘Cristal’ Brut 2015",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Cristal 2015 is Louis Roederer's prestige vintage in its clear bottle: precise and fine, with citrus, white peach, chalk and a light toast. For the grand occasion, with raw oysters or crab, offer it by the bottle.",
+   "reason": "The sale: the hook is the clear bottle guests know and its taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the occasion and plates its goesWith names (the grand occasion, oysters and crab), never a printed dish, and the step is the bottle",
+   "source": "the pack record w-itryoukh (Louis Roederer Cristal 2015; bottle only, 750 ml; profile; goesWith the grand occasion, oysters and crab)"
+  },
+  {
+   "target": "wine:Louis Roederer ‘Cristal’ Brut 2015",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Louis Roederer Cristal 2015 is the prestige vintage of the family house in Reims, 60 percent Pinot Noir and 40 percent Chardonnay from its own grand cru vineyards, farmed biodynamically. It is made without malolactic fermentation, and a quarter of it is aged in oak. It is precise and fine: citrus, white peach, chalk and a light toast, with silky bubbles and a long, pure finish. It suits the grand occasion, raw oysters and crab. We keep the clear bottle out of bright light and pour at 46 to 50°F in a white-wine glass. Cristal was created in 1876 for Tsar Alexander II, who wanted a clear bottle.",
+   "reason": "Five-star review of the description: it named the Popcorn Shrimp, the Grand Isle Jewel Oysters and the Louisiana Crab Claws, none of whose pairings names this wine, and opened on the house; it now opens on the wine, speaks of the occasion and plates its goesWith names, and adds the making from the research",
+   "source": "the pack record w-itryoukh (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-houses-2026-10-10.md section 1 (Cristal for Tsar Alexander II in 1876, 60 Pinot Noir and 40 Chardonnay, biodynamic, no malolactic fermentation, 25 percent in oak, the grand cru sources)"
+  },
+  {
+   "target": "wine:Krug Rosé Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Krug Rosé is a prestige rosé from Reims, blended across several years: powerful and spicy, with red berries, blood orange, rose hip and toasted brioche. With shrimp, smoke and spice, offer it by the bottle.",
+   "reason": "The sale: the hook is the multi-year prestige rosé and its taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith; the record's own why names a tier the dishes no longer give it), so the table is the kind of plate its goesWith names (shrimp, smoke and spice), never a printed dish, and the step is the bottle",
+   "source": "the pack record w-v8xtsq21 (Krug Rosé; bottle only, 750 ml; profile; goesWith shrimp, smoke and spice)"
+  },
+  {
+   "target": "wine:Krug Rosé Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Krug Rosé Brut is the prestige rosé of Krug in Reims, a blend of several years of Pinot Noir, Chardonnay and Meunier. Each wine is first fermented in small oak casks, and the blend takes its colour from a little red wine made from Pinot Noir. It is powerful and spicy: red berries, blood orange, rose hip and toasted brioche, dry and very long. It stands up to shrimp, smoke and spice. We pour it at 48 to 52°F in a white-wine glass. The fifth generation of the family created it after seven years of research, from the 1976 harvest, and released it in 1983.",
+   "reason": "Five-star review of the description: it opened on the house, not the wine, and named the New Orleans Shrimp & Grits, the Steak Tartare Cannoli and the Roasted Chateaubriand, none of whose pairings names this wine (the Shrimp & Grits tiers name other wines); it now opens on the wine and speaks of the plates its goesWith names",
+   "source": "the pack record w-v8xtsq21 (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-menu-2026-10-10.md section 6 (the fifth generation, the 1976 harvest released in 1983 after seven years of research, small oak casks, coloured with red wine from Pinot Noir)"
+  },
+  {
+   "target": "wine:Dom Pérignon ‘P2’ Brut 2006",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Dom Pérignon P2 is the 2006 vintage kept about fifteen years on its lees: deep and smoky, with toasted brioche, candied citrus, hazelnut and creamy bubbles. For the grand moment at the table, offer it by the bottle.",
+   "reason": "The sale: the hook is the late release and its deep taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the occasion its goesWith names (the grand moment at the table), never a printed dish, and the step is the bottle",
+   "source": "the pack record w-5622vopw (Dom Pérignon P2 2006; bottle only, 750 ml; profile; goesWith the grand moment at the table); research/producers-cellar-champagne-houses-2026-10-10.md section 6 (about 15 years on the lees)"
+  },
+  {
+   "target": "wine:Dom Pérignon ‘P2’ Brut 2006",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Dom Pérignon P2 2006 is the prestige vintage of Moët & Chandon in Épernay, always Chardonnay and Pinot Noir, released at its second plénitude. The house holds that each vintage has three peaks, and P2 is this 2006 kept about fifteen years on its lees. It is deep and smoky: toasted brioche, hazelnut, candied citrus and a little smoke, with creamy bubbles and a very long finish. It suits the grand moment at the table, raw oysters and rich plates. We pour it at 48 to 52°F in a white-wine glass. It is named for Dom Pierre Pérignon, the Benedictine monk of Hautvillers, who died in 1715.",
+   "reason": "Five-star review of the description: it opened on the monk, not the wine, and named the Grand Isle Jewel Oysters, the Turtle Soup and the Roasted Chateaubriand, none of whose pairings names this wine; it now opens on the wine, speaks of the occasion and plates its goesWith names and keeps the sourced story",
+   "source": "the pack record w-5622vopw (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-houses-2026-10-10.md section 6 (the three plénitudes, about 15 years on the lees for the 2006 P2, Dom Pierre Pérignon of Hautvillers, 1715)"
+  },
+  {
+   "target": "wine:Salon ‘Le Mesnil’ Blanc de Blancs Brut 2013",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Salon Le Mesnil 2013 is one village, one grape, one year: Grand Cru Chardonnay, taut and chalky, with lemon peel, white flowers, hazelnut and a stony finish. With raw oysters and crab, offer it by the bottle.",
+   "reason": "The sale: the hook is the single village, single grape, single year and its taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the kind of plate its goesWith names (raw oysters and crab), never a printed dish, and the step is the bottle",
+   "source": "the pack record w-mgnwvxmr (Salon Le Mesnil 2013; bottle only, 750 ml; profile; goesWith raw oysters and crab)"
+  },
+  {
+   "target": "wine:Salon ‘Le Mesnil’ Blanc de Blancs Brut 2013",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Salon Le Mesnil 2013 is a Blanc de Blancs, all Chardonnay from the Grand Cru village of Le Mesnil-sur-Oger in the Côte des Blancs, from one harvest, and Salon makes nothing else, only in the years it declares. Malolactic fermentation is blocked to keep the acidity sharp, and the 2013, from a cool October harvest, rested about ten years before release. It is taut and chalky: lemon peel, white flowers, hazelnut and a stony, very long finish. It suits raw oysters and crab. We pour it at 48 to 52°F in a white-wine glass, where it opens slowly. Eugène-Aimé Salon made the first, the 1905, for his own use.",
+   "reason": "Five-star review of the description: it opened on the house, not the wine, and named the Grand Isle Jewel Oysters and the Louisiana Crab Claws, neither of whose pairings names this wine; it now opens on the wine, speaks of the plates its goesWith names and keeps the sourced story",
+   "source": "the pack record w-mgnwvxmr (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-houses-2026-10-10.md section 7 (Eugène-Aimé Salon and the 1905, malolactic fermentation blocked, about ten years before release, the cool 2013 and its October harvest)"
   }
  ]
 }
