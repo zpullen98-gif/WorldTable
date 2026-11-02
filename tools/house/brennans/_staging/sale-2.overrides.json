@@ -255,6 +255,134 @@
    "value": "Charles Heidsieck Réserve Brut is a Reims Champagne of Pinot Noir, Chardonnay and Meunier, roughly a third of each, with about 40 percent reserve wines, aged in the chalk cellars dug beneath the city and at least three years on its lees. It is rich and toasty: roasted nuts, brioche, dried apricot and a creamy texture, dry, with a long finish. Its toastiness suits roasted and nutty flavours. We pour it at 45 to 48°F in a tulip or white-wine glass, a touch warmer so its richness shows. Its founder, Charles-Camille Heidsieck, called Champagne Charlie, was arrested in Union-occupied New Orleans in 1862 and held at Fort Jackson.",
    "reason": "Five-star review of the description: it opened on the founder, not the wine, and named the Creole Spiced Nuts, the Turtle Soup, the Cheese Board and the Pecan Gulf Fish, none of whose pairings names this wine; it now opens on the wine, speaks of the flavours its goesWith names and carries the founder's New Orleans story",
    "source": "the pack record w-w6m1inh5 (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-houses-2026-10-10.md section 3 (Champagne Charlie, arrested in Union-occupied New Orleans in 1862 and held at Fort Jackson, the crayères, about a third each grape, 40 percent reserve wines, at least three years on the lees)"
+  },
+  {
+   "target": "wine:Bollinger ‘Special Cuvée’ Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Bollinger Special Cuvée is Pinot Noir-led Champagne from Aÿ, part fermented in oak: rich and structured, with baked apple, toasted nuts and spice. It is the classic bottle for the Turtle Soup, toasty enough to echo the sherry, by the bottle.",
+   "reason": "The sale: the hook is the oak-touched Pinot Noir style and its taste; the table is the one dish whose bottle tiers name it, said as the classic, and the step is the bottle",
+   "source": "the pack record w-kx8pfl72 (Bollinger Special Cuvée; bottle only, 750 ml; profile; offeredWith Turtle Soup, classic); the Turtle Soup pairing (bottles.classic: echoes the aged sherry)"
+  },
+  {
+   "target": "wine:Bollinger ‘Special Cuvée’ Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Bollinger Special Cuvée is the house Brut from Aÿ, the Grand Cru village known for Pinot Noir: about 60 percent Pinot Noir with Chardonnay and a little Meunier, part fermented in old oak, with reserve wines kept in magnum. It is rich and structured: baked apple, toasted nuts, spice and a firm, dry finish. It is our classic bottle for the Turtle Soup, its toasty style echoing the aged sherry. We pour it at 45 to 48°F in a tulip or white-wine glass, so the Pinot Noir shows. It has been James Bond's Champagne since Live and Let Die in 1973, a film shot partly in the French Quarter.",
+   "reason": "Five-star review of the description: it opened on the house and the films, not the wine, and named the Seafood Gumbo, the Louisiana BBQ Lobster and the Roasted Chateaubriand, none of whose pairings names this wine; it now opens on the wine, names only the Turtle Soup as its classic bottle and keeps the sourced story",
+   "source": "the pack record w-kx8pfl72 (lines.s45, profile, serve, offeredWith); the Turtle Soup pairing (bottles.classic); research/producers-cellar-champagne-menu-2026-10-10.md section 8 (about 60 Pinot Noir, 25 Chardonnay, 15 Meunier, part old oak, reserve wines in magnum, Live and Let Die in 1973 shot partly in the French Quarter)"
+  },
+  {
+   "target": "wine:Armand de Brignac ‘Gold’ Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Armand de Brignac Brut Gold, the Ace of Spades, is ripe and generous: white peach, brioche and honey with a soft, creamy mousse, in its metallic gold bottle. For the big celebration at the table, offer it by the bottle.",
+   "reason": "The sale: the hook is the gold bottle guests know by sight and its taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the occasion its goesWith names (the big celebration), never a printed dish, and the step is the bottle",
+   "source": "the pack record w-cp0e7p4g (Armand de Brignac Gold; bottle only, 750 ml; profile; goesWith the big celebration at the table)"
+  },
+  {
+   "target": "wine:Armand de Brignac ‘Gold’ Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Armand de Brignac Brut Gold is a prestige Champagne made at Chigny-les-Roses, blending Pinot Noir, Chardonnay and Meunier from three harvests. At disgorgement it takes still wine aged a year in French oak, and it rests 119 steps underground in deep chalk cellars. It is ripe and generous: white peach, brioche and honey with a soft, creamy mousse, made for the big celebration at the table. We ice it early, since the metallic bottle chills slowly, and pour at 45 to 48°F in a tulip or white-wine glass. Guests call it the Ace of Spades, for the pewter emblem on its gold bottle, first released in 2006.",
+   "reason": "Five-star review of the description: it opened on the brand and the family, not the wine, and named the Turtle Soup, the Louisiana BBQ Lobster and the Cheese Board, none of whose pairings names this wine; it now opens on the wine, speaks of the occasion its goesWith names and keeps the sourced facts",
+   "source": "the pack record w-cp0e7p4g (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-houses-2026-10-10.md section 4 (Chigny-les-Roses, three harvests, still wine aged a year in French oak at disgorgement, 119 steps underground, the pewter ace of spades, first released in 2006)"
+  },
+  {
+   "target": "wine:Pol Roger ‘Blanc de Blancs’ Brut 2015",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Pol Roger Blanc de Blancs 2015 is vintage Champagne, all Grand Cru Chardonnay: lemon, white flowers and chalk with a creamy mousse and a long, precise finish. It is the celebration bottle for the Poussin à la Moutarde, cutting the mustard cream, by the bottle.",
+   "reason": "The sale: the hook is the vintage Blanc de Blancs and its taste; the table is the one dish whose bottle tiers name it, said as the celebration, and the step is the bottle",
+   "source": "the pack record w-2ujm9hay (Pol Roger Blanc de Blancs 2015; bottle only, 750 ml; profile; offeredWith Poussin à la Moutarde, splurge); the dish description (mustard cream sauce)"
+  },
+  {
+   "target": "wine:Pol Roger ‘Blanc de Blancs’ Brut 2015",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Pol Roger Blanc de Blancs 2015 is a vintage Champagne made only from Grand Cru Chardonnay of the Côte des Blancs, from villages such as Cramant, Avize and Oger. It is fermented in steel, village by village, and aged six years in Épernay. It tastes of lemon, white flowers and chalk, with a fine mousse and a long, precise finish. It is our celebration bottle for the Poussin à la Moutarde, cutting the fried crust and mustard cream. We pour it at 45 to 48°F in a tulip or white-wine glass, turning the bottle as we ease the cork. Winston Churchill first tasted Pol Roger in 1908.",
+   "reason": "Five-star review of the description: it opened on the house and Churchill, not the wine, and named the Louisiana Crab Claws and the Redfish Véronique, neither of whose pairings names this wine; it now opens on the wine, names only the Poussin à la Moutarde as its celebration bottle and keeps the sourced story",
+   "source": "the pack record w-2ujm9hay (lines.s45, profile, serve, offeredWith); the Poussin à la Moutarde pairing (bottles.splurge: cuts the fried crust and mustard cream); research/producers-cellar-champagne-houses-2026-10-10.md section 5 (the Grand Cru villages, steel by variety and village, six years before release, Churchill first tasted it in 1908)"
+  },
+  {
+   "target": "wine:Bollinger ‘PNTX20’ Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Bollinger PN TX20 is a Blanc de Noirs, all Pinot Noir led by Tauxières: full and powerful, red apple, white peach and a firm finish. It is the celebration bottle for the Louisiana Oysters, weighty enough for the barbecue sauce, by the bottle.",
+   "reason": "The sale: the hook is the all Pinot Noir Blanc de Noirs and its taste; the table is the one dish whose bottle tiers name it, said as the celebration, and the step is the bottle",
+   "source": "the pack record w-433zkw3p (Bollinger PN TX20; bottle only, 750 ml; profile; offeredWith Louisiana Oysters, splurge); the Louisiana Oysters pairing (bottles.splurge: body for barbecue butter and peppery sauce)"
+  },
+  {
+   "target": "wine:Bollinger ‘PNTX20’ Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Bollinger PN TX20 is all Pinot Noir, a Blanc de Noirs, its lead village Tauxières, on the Montagne de Reims. PN marks the Pinot Noir range, TX the lead village and 20 the 2020 harvest it is built on, with older reserve wines. It is full and powerful: red apple, white peach, a chalky tension and a long, firm finish. It is our celebration bottle for the Louisiana Oysters, its weight standing up to the barbecue sauce. We pour it at 46 to 50°F in a white-wine glass, warmer than the house bubbles. Lily Bollinger ran the family house in Aÿ from 1941 and doubled its production.",
+   "reason": "Five-star review of the description: it named the Louisiana BBQ Lobster and the Roasted Chateaubriand, neither of whose pairings names this wine, and shared a run of eight words with the twenty (led by the village of Tauxières on the Montagne de Reims); it now names only the Louisiana Oysters as its celebration bottle, rewords the opening and adds a line of story",
+   "source": "the pack record w-433zkw3p (lines.s45, profile, serve, offeredWith); the Louisiana Oysters pairing (bottles.splurge); research/producers-cellar-champagne-menu-2026-10-10.md section 8 (the PN code, Tauxières, the 2020 base, reserve wines, Lily Bollinger from 1941 and the doubled production)"
+  },
+  {
+   "target": "wine:Billecart-Salmon ‘Cuvée Elisabeth Salmon’ Rosé Brut 2009",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Cuvée Elisabeth Salmon 2009 is Billecart-Salmon's prestige rosé, aged more than a decade: wild strawberry, blood orange, rose petal and a savoury, toasty depth. It is the celebration bottle for the Steak Tartare Cannoli, depth for raw beef and bottarga, by the bottle.",
+   "reason": "The sale: the hook is the aged prestige rosé and its taste; the table is the one dish whose bottle tiers name it, said as the celebration, and the step is the bottle",
+   "source": "the pack record w-o7d3th9g (Billecart-Salmon Cuvée Elisabeth Salmon 2009; bottle only, 750 ml; profile; offeredWith Steak Tartare Cannoli, splurge); the Steak Tartare Cannoli pairing (bottles.splurge: depth for raw beef and savoury bottarga)"
+  },
+  {
+   "target": "wine:Billecart-Salmon ‘Cuvée Elisabeth Salmon’ Rosé Brut 2009",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Billecart-Salmon Cuvée Elisabeth Salmon Rosé 2009 is the prestige vintage rosé of the family house in Mareuil-sur-Aÿ: Pinot Noir with Chardonnay from the Côte des Blancs, and about ten percent still red Pinot Noir for its colour, aged more than a decade on its lees. It is silky and dry: wild strawberry, blood orange, rose petal and a savoury, toasty depth. It is our celebration bottle for the Steak Tartare Cannoli, that depth meeting the raw beef and the bottarga. We pour it at 46 to 50°F in a white-wine glass, so its age shows. It is named for Elisabeth Salmon, whose marriage founded the house in 1818.",
+   "reason": "Five-star review of the description: it opened on the founding, not the wine, and named the Poussin à la Moutarde, whose pairing does not name this wine; it now opens on the wine, names only the Steak Tartare Cannoli as its celebration bottle and keeps the sourced story",
+   "source": "the pack record w-o7d3th9g (lines.s45, profile, serve, offeredWith); the Steak Tartare Cannoli pairing (bottles.splurge); research/producers-cellar-champagne-menu-2026-10-10.md section 7 (1818, Elisabeth Salmon, the Pinot Noir and Chardonnay origins, the still red Pinot Noir, more than a decade on the lees)"
+  },
+  {
+   "target": "wine:Bollinger ‘La Grande Année’ Brut 2015",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "La Grande Année 2015 is Bollinger's vintage Champagne, fermented in oak barrels: rich and layered, with baked apple, hazelnut, honey and spice over firm acidity. With crawfish, rich pastry and grand plates, offer it by the bottle.",
+   "reason": "The sale: the hook is the oak-fermented vintage and its taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the kind of plate its goesWith names (crawfish and rich pastry), never a printed dish, and the step is the bottle",
+   "source": "the pack record w-dp948xn6 (Bollinger La Grande Année 2015; bottle only, 750 ml; profile; goesWith crawfish and rich pastry)"
+  },
+  {
+   "target": "wine:Bollinger ‘La Grande Année’ Brut 2015",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Bollinger La Grande Année 2015 is the vintage Champagne of the family house in Aÿ, made only from a harvest it judges great: 60 percent Pinot Noir and 40 percent Chardonnay from eleven villages. It is fermented in oak barrels and aged under natural cork for more than twice the time the rules require. It is rich and layered: baked apple, hazelnut, honey and spice, held by firm acidity and a long finish. That acidity suits crawfish and rich pastry. We pour it at 46 to 50°F in a white-wine glass, warmer than the house bubbles. Queen Victoria granted the house its Royal Warrant in 1884.",
+   "reason": "Five-star review of the description: it opened on the name and the house, not the wine, and named the Crawfish Meat Pies, the Turtle Soup and the Louisiana BBQ Lobster, none of whose pairings names this wine; it now opens on the wine and speaks of the plates its goesWith names",
+   "source": "the pack record w-dp948xn6 (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-menu-2026-10-10.md section 8 (60 Pinot Noir and 40 Chardonnay from 11 crus, oak barrels, natural cork for more than twice the minimum, the Royal Warrant of 1884)"
+  },
+  {
+   "target": "wine:Jacques Selosse ‘Initial’ Blanc de Blancs Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Selosse Initial is grower Champagne from Avize, all Chardonnay fermented in oak: intense and vinous, with ripe citrus, hazelnut, honey and a salty grip. With anything salty or sharp, open it by the bottle.",
+   "reason": "The sale: the hook is the oak-fermented grower Blanc de Blancs and its taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the kind of plate its goesWith names (acid and salt), never a printed dish, and the step is the bottle",
+   "source": "the pack record w-b3lm4k76 (Jacques Selosse Initial; bottle only, 750 ml; profile; goesWith acid and salt)"
+  },
+  {
+   "target": "wine:Jacques Selosse ‘Initial’ Blanc de Blancs Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Jacques Selosse Initial is a Blanc de Blancs from Avize on the Côte des Blancs, all Grand Cru Chardonnay from Avize, Cramant and Oger, blended from three harvests. It is fermented and aged in oak barrels, the way Burgundy makes white wine. It is intense and vinous: ripe citrus, hazelnut, honey and a salty, mineral grip, with vivid acidity. That acidity and salt suit sharp, salty plates. We pour it at 48 to 52°F in a white-wine glass, never a flute, and lift it from the ice if it closes up. The estate dates from 1949, and its way with oak inspired a generation of Champagne growers.",
+   "reason": "Five-star review of the description: it opened on the founder and his son, not the wine, named the son, who is living, and named the Fried Pickles and the Grand Isle Jewel Oysters, neither of whose pairings names this wine; it now opens on the wine, names nobody and speaks of the plates its goesWith names",
+   "source": "the pack record w-b3lm4k76 (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-growers-2026-10-10.md section 5 (1949, Avize, Cramant and Oger, three harvests, oak barrels in the manner of white Burgundy, a generation of growers)"
+  },
+  {
+   "target": "wine:Krug ‘Grande Cuvée 170th Edition’ Brut NV",
+   "field": "lines.sale",
+   "op": "set",
+   "value": "Krug Grande Cuvée 170th Edition blends 195 wines from twelve years: deep and layered, with toasted nuts, brioche, citrus peel, honey and a very long finish. For roasted, nutty flavours and grand plates, offer it by the bottle.",
+   "reason": "The sale: the hook is the blend of many years and its taste; no dish pairing names this wine (no firstPickIds, secondFor or offeredWith), so the table is the kind of plate its goesWith names (roasted nuts and grand plates), never a printed dish, and the step is the bottle",
+   "source": "the pack record w-sven7j3q (Krug Grande Cuvée 170th Edition; bottle only, 750 ml; profile; goesWith roasted nuts and grand plates); research/producers-cellar-champagne-menu-2026-10-10.md section 6 (195 wines from 12 years)"
+  },
+  {
+   "target": "wine:Krug ‘Grande Cuvée 170th Edition’ Brut NV",
+   "field": "lines.s45",
+   "op": "set",
+   "value": "Krug Grande Cuvée 170th Edition is a prestige Champagne from Reims, Pinot Noir, Chardonnay and Meunier, blending 195 wines from twelve years, from 1998 to 2014. Each wine is first fermented in small oak casks, and the blend rests about seven years in the cellars. It is deep and layered: honey, toasted nuts, brioche and citrus peel, with fine bubbles and a very long finish. It suits roasted nuts and grand plates. We pour it at 48 to 52°F in a white-wine glass, warmer than the house bubbles. Joseph Krug founded the house in 1843, set on making a prestige Champagne every year, whatever the harvest.",
+   "reason": "Five-star review of the description: it opened on the founder, not the wine, and named the Creole Spiced Nuts, the Turtle Soup and the Roasted Chateaubriand, none of whose pairings names this wine; it now opens on the wine, speaks of the plates its goesWith names and keeps the sourced story",
+   "source": "the pack record w-sven7j3q (lines.s45, profile, serve, goesWith); research/producers-cellar-champagne-menu-2026-10-10.md section 6 (Joseph Krug, 1843, prestige every year, 195 wines from 12 years from 1998 to 2014, 51 Pinot Noir 38 Chardonnay 11 Meunier, about seven years in the cellars, small oak casks)"
   }
  ]
 }
