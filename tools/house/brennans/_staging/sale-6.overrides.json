@@ -415,6 +415,118 @@
 			"value": "Kongsgaard Chardonnay Napa Valley 2016 comes from a small family winery in the Napa Valley making Chardonnay in a rich style built to age in bottle like great white Burgundy. The 2016 has a decade on it: honey, hazelnut, baked pear and lemon curd, with a smoky, savoury depth, rich and layered yet fresh, with a long finish. It has the power for the pecan bordelaise and the lump crab, so it is the celebration bottle for the Pecan Gulf Fish. We pour it barely chilled, 52 to 55°F, in a large white Burgundy bowl, and let it open. Its rare top bottling is called The Judge.",
 			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the winery rather than the wine, named the Louisiana BBQ Lobster, the Louisiana Crab Claws and the Poussin à la Moutarde, none of whose pairings names this wine, and carried no line of story; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
 			"source": "research/producers-cellar-napa-sonoma-2026-10-10.md section 7 (items 1 to 3: a small Napa family winery, Chardonnay in small amounts in a rich, long-ageing style, built to age like great white Burgundy, The Judge its rare top bottling); the Pecan Gulf Fish splurge why; the wine record (profile, serve, offeredWith: splurge for the Pecan Gulf Fish)"
+		},
+		{
+			"target": "wine:Franz Hirtzberger ‘Honivogl’ Grüner Veltliner Smaragd 2022",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Honivogl is Smaragd Grüner Veltliner from the Danube terraces of the Wachau: ripe pear, quince, white pepper and stone, rich and powerful yet dry. It is the celebration bottle for the Eggs Sardou, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-germany-austria-2026-10-10.md section 6 (items 1 and 2 and the expert note: Spitz at the western end of the Wachau west of Krems, Honivogl its Grüner Veltliner vineyard, Smaragd named for the emerald lizards, ried names the Wachau's grand cru language); the wine record (profile, serve, offeredWith: splurge for the Eggs Sardou)"
+		},
+		{
+			"target": "wine:Franz Hirtzberger ‘Honivogl’ Grüner Veltliner Smaragd 2022",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Franz Hirtzberger ‘Honivogl’ Grüner Veltliner Smaragd 2022 comes from Spitz, at the western end of the Wachau, the terraced Danube valley. Smaragd is the Wachau’s word for dry wine picked fully ripe, named for the emerald lizards that sun themselves on the terraces: ripe pear, quince, white pepper, honeyed spice and stone, rich and powerful yet dry. It is rich enough for the creamed spinach and the Choron sauce and at ease with artichoke, so it is the celebration bottle for the Eggs Sardou. We pour it at 50 to 54°F in a white Burgundy bowl. In the Wachau, named vineyards like Honivogl are the grand cru language.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the estate rather than the wine, used a superlative (\"the Wachau's ripest dry category\"), and named the Poussin à la Moutarde, the Duck Confit Waffle and the Louisiana Crab Claws, none of whose pairings names this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-germany-austria-2026-10-10.md section 6 (items 1 and 2 and the expert note: Spitz at the western end of the Wachau west of Krems, Honivogl its Grüner Veltliner vineyard, Smaragd named for the emerald lizards, ried names the Wachau's grand cru language); the wine record (profile, serve, offeredWith: splurge for the Eggs Sardou)"
+		},
+		{
+			"target": "wine:Pascal Cotat ‘Les Monts Damnés’ Sancerre 2022",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Les Monts Damnés is a slope above Chavignol so steep it is worked by hand, and its Sauvignon Blanc is picked ripe: lemon, quince and crushed chalk, rich yet taut. It is the celebration bottle for the Creole Caesar, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 10 (items 2 to 4 and 10: the damned mountains, a very steep slope above Chavignol worked largely by hand, picked ripe and built to age, Kimmeridgian marl full of fossil oyster shells, two cousins running separate estates on family parcels, the splurge tier for the Creole Caesar); the wine record (profile, serve, offeredWith: splurge for the Creole Caesar)"
+		},
+		{
+			"target": "wine:Pascal Cotat ‘Les Monts Damnés’ Sancerre 2022",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Pascal Cotat ‘Les Monts Damnés’ Sancerre 2022 is Sauvignon Blanc from the damned mountains, a steep slope above Chavignol worked largely by hand, on Kimmeridgian marl full of fossil oyster shells. The grapes are picked ripe for a Sancerre built to age, rich yet taut: lemon, quince, white flowers and crushed chalk, with piercing acidity. That acidity and grip stand up to the bold, smoked oyster dressing, so it is the celebration bottle for the Creole Caesar. We pour it at 48 to 52°F in a white wine glass and let it open. The Cotat family parcels at Chavignol are split between two cousins, who run separate estates.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the slope rather than the wine as the list prints it, made the grower, a living person, the subject of a sentence, and named the Grand Isle Jewel Oysters, the Louisiana Crab Claws and the Cheese Board, none of whose pairings names this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 10 (items 2 to 4 and 10: the damned mountains, a very steep slope above Chavignol worked largely by hand, picked ripe and built to age, Kimmeridgian marl full of fossil oyster shells, two cousins running separate estates on family parcels, the splurge tier for the Creole Caesar); the wine record (profile, serve, offeredWith: splurge for the Creole Caesar)"
+		},
+		{
+			"target": "wine:F.E. Trimbach Pinot Gris ‘Réserve Personnelle’ 2007",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Réserve Personnelle 2007 is Trimbach Pinot Gris with well over a decade in bottle: dried apricot, honey, smoke and ginger, deep and opulent. It is the celebration bottle for the Duck Confit Waffle, poured by the bottle, barely chilled.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 1 (items 1 and 2: founded in 1626, thirteen generations, Ribeauvillé, no new oak, released late) and section 2 item 2 (Pinot Gris with foie gras a classic Alsace pairing); the wine record (profile, serve, offeredWith: splurge for the Duck Confit Waffle)"
+		},
+		{
+			"target": "wine:F.E. Trimbach Pinot Gris ‘Réserve Personnelle’ 2007",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "F.E. Trimbach Pinot Gris ‘Réserve Personnelle’ 2007 is Alsace Pinot Gris from the family house at Ribeauvillé. The house works without new oak and releases its wines late, and the 2007 has well over a decade in bottle: dried apricot, honey, smoke, ginger and mushroom, deep and opulent, with the acidity to keep it alive. Pinot Gris with foie gras is a classic of Alsace, so it is the celebration bottle for the Duck Confit Waffle, with its foie gras butter. We pour it barely chilled, 50 to 54°F, in a white Burgundy bowl. Trimbach was founded in 1626 and counts thirteen generations of the family.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the house rather than the wine, hedged its sweetness to the sommelier, called it \"our celebration bottle\" and then named the Roasted Rohan Duck Breast, the Cheese Board and the Pecan Gulf Fish, none of whose pairings names this wine, and carried no clause on how it is made; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 1 (items 1 and 2: founded in 1626, thirteen generations, Ribeauvillé, no new oak, released late) and section 2 item 2 (Pinot Gris with foie gras a classic Alsace pairing); the wine record (profile, serve, offeredWith: splurge for the Duck Confit Waffle)"
+		},
+		{
+			"target": "wine:F.E. Trimbach ‘Clos Sainte Hune’ Riesling 2007",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Clos Sainte Hune is the Trimbach family’s own small walled plot of Riesling at Hunawihr, and the 2007 is bone dry and precise: petrol, smoke, lime, white flowers and stone. Offer it by the bottle with raw oysters, crab or delicate fish.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 1 (items 1 to 4: founded in 1626, Clos Ste Hune a walled parcel of a little under two hectares inside the Rosacker grand cru at Hunawihr, limestone and dolomite, the label silent on the grand cru, bone dry, no new oak, released late); the wine record (profile, serve, goesWith: seafood; no dish pairing names it, so no dish is named)"
+		},
+		{
+			"target": "wine:F.E. Trimbach ‘Clos Sainte Hune’ Riesling 2007",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "F.E. Trimbach ‘Clos Sainte Hune’ Riesling 2007 is dry Riesling from a walled plot of under two hectares at Hunawihr, in Alsace, on limestone and dolomite inside the Rosacker grand cru, though the label names only the clos. It is made bone dry, without new oak, and released late: petrol, smoke, lime, white flowers and stone, intense and precise, with a long finish, and the 2007 has years in bottle. It belongs with raw oysters, crab and delicate fish. We pour it at 50 to 54°F in a white wine glass, and let it open in the glass. The family house behind it dates from 1626.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the house rather than the wine and named the Grand Isle Jewel Oysters, the Louisiana Crab Claws, the Redfish Véronique and the Seafood Gumbo, none of whose pairings names this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 1 (items 1 to 4: founded in 1626, Clos Ste Hune a walled parcel of a little under two hectares inside the Rosacker grand cru at Hunawihr, limestone and dolomite, the label silent on the grand cru, bone dry, no new oak, released late); the wine record (profile, serve, goesWith: seafood; no dish pairing names it, so no dish is named)"
+		},
+		{
+			"target": "wine:Egon Müller ‘Scharzhofberger’ Riesling Kabinett 2020",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "This Kabinett comes from the Scharzhofberg, a steep blue slate hill on the Saar: green apple, white peach, lime and slate, lightly sweet and electric with acidity. It is the celebration bottle for the Seafood Gumbo and the Tuna Crudo, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 7 (items 1 to 3: the Scharzhofberg sold at auction in 1797 after church land was seized, Wiltingen, the Saar part of the Mosel, blue Devonian slate below the Scharzhof, very low alcohol, repeated selective passes so even the Kabinett carries the house transparency); the wine record (profile, serve, offeredWith: splurge for the Seafood Gumbo and the Tuna Crudo)"
+		},
+		{
+			"target": "wine:Egon Müller ‘Scharzhofberger’ Riesling Kabinett 2020",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Egon Müller ‘Scharzhofberger’ Riesling Kabinett 2020 comes from the Scharzhofberg at Wiltingen on the Saar, part of the Mosel, a steep hill of blue Devonian slate below the Scharzhof. It is picked in repeated selective passes, so even the Kabinett is transparent: lightly sweet and very low in alcohol, green apple, white peach, lime and slate, with an electric acidity that makes it feel weightless. Its sweetness tames the spice and its acidity refreshes, so it is the celebration bottle for the Seafood Gumbo and the Tuna Crudo. We pour it at 45 to 48°F in a white wine glass. The hill was sold at auction in 1797.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the estate and its owner, a living person, rather than the wine, used a superlative (\"the lightest ripeness level\"), called it \"our celebration bottle\" and named the New Orleans Shrimp & Grits, the Louisiana Crab Claws and the Popcorn Shrimp, none of whose pairings names this wine, and carried no clause on how it is made; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 7 (items 1 to 3: the Scharzhofberg sold at auction in 1797 after church land was seized, Wiltingen, the Saar part of the Mosel, blue Devonian slate below the Scharzhof, very low alcohol, repeated selective passes so even the Kabinett carries the house transparency); the wine record (profile, serve, offeredWith: splurge for the Seafood Gumbo and the Tuna Crudo)"
+		},
+		{
+			"target": "wine:Domaine du Pélican Vin Jaune Arbois 2016",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Vin Jaune is the Jura’s yellow wine, Savagnin aged over six years under a veil of yeast: walnut, curry spice, dried apple and a salty tang, dry and powerful. It is the celebration bottle for the Turtle Soup, poured by the bottle, cool.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 3 (items 1, 3 and 4: founded in the Jura in 2012 by the Volnay family, Vin Jaune all Savagnin aged in cask without topping up under the veil for at least six years, never fortified, Arbois among the first French appellations in 1936); the wine record (profile, serve, offeredWith: splurge for the Turtle Soup)"
+		},
+		{
+			"target": "wine:Domaine du Pélican Vin Jaune Arbois 2016",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine du Pélican Vin Jaune Arbois 2016 is Savagnin from Arbois, in the Jura, from an estate a Volnay family founded in 2012. Vin Jaune, yellow wine, is aged in cask for over six years without topping up, under a veil of yeast, as fino sherry ages under flor: walnut, curry spice, dried apple and almond with a salty tang, dry and powerful. It mirrors the aged sherry that finishes the Turtle Soup, so it is the celebration bottle for it. We pour it cool, 55 to 60°F, in a white Burgundy bowl; it keeps for days once opened. Arbois was among the first French appellations, in 1936.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the founding family, living people, rather than the wine, called it \"our celebration bottle there\" and named Maggie’s Mushrooms and the Cheese Board, neither of whose pairings names this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 3 (items 1, 3 and 4: founded in the Jura in 2012 by the Volnay family, Vin Jaune all Savagnin aged in cask without topping up under the veil for at least six years, never fortified, Arbois among the first French appellations in 1936); the wine record (profile, serve, offeredWith: splurge for the Turtle Soup)"
+		},
+		{
+			"target": "wine:Château Haut-Brion Blanc Pessac-Léognan 2019",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Haut-Brion Blanc is the rare white of a Pessac first growth, Sémillon with Sauvignon Blanc: beeswax, toasted almond, lemon curd and white peach over a smoky, stony depth. Offer it by the bottle for a collector’s dinner of rich seafood.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-bordeaux-white-sweet-2026-10-10.md section 1 (items 1, 2 and 4: gravel mounds inside the suburbs of Pessac, Pepys and Ho Bryan in 1663, Haut-Brion the Graves exception among the 1855 First Growths); the wine record (profile: tiny amounts, built to age for decades; serve; goesWith: rich seafood; no dish pairing names it, so no dish is named)"
+		},
+		{
+			"target": "wine:Château Haut-Brion Blanc Pessac-Léognan 2019",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Haut-Brion Blanc Pessac-Léognan 2019 is Sémillon and Sauvignon Blanc from gravel mounds in Pessac, now inside the suburbs of Bordeaux. It is made in tiny amounts and built to age for decades: beeswax, toasted almond, lemon curd and white peach, smoky and stony, rich yet precise. It belongs with a collector’s dinner of rich seafood, lobster, crab and the richer fish. We pour it at 52 to 55°F in a large white Burgundy bowl, and a young bottle can be decanted. Samuel Pepys wrote of drinking its Ho Bryan in 1663, and in 1855 its red was the one wine outside the Médoc ranked a first growth.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the château and its history rather than the wine, named the Louisiana BBQ Lobster, the Redfish Véronique, the Louisiana Crab Claws and the Grand Isle Jewel Oysters, none of whose pairings names this wine, and hedged the decant (\"the sommelier may decant it\"); it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-bordeaux-white-sweet-2026-10-10.md section 1 (items 1, 2 and 4: gravel mounds inside the suburbs of Pessac, Pepys and Ho Bryan in 1663, Haut-Brion the Graves exception among the 1855 First Growths); the wine record (profile: tiny amounts, built to age for decades; serve; goesWith: rich seafood; no dish pairing names it, so no dish is named)"
 		}
 	]
 }
