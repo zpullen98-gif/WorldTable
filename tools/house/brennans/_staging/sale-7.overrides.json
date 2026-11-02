@@ -1,0 +1,132 @@
+{
+	"entries": [
+		{
+			"target": "wine:Domaine Coudert ‘Clos de la Roilette’ Fleurie 2023",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Clos de la Roilette is juicy Fleurie Gamay from one family’s walled vineyard, red cherry, raspberry and violet with a light chill. It is our value bottle for the New Orleans Shrimp & Grits and the Steak Tartare with Rye, by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (the value bottle for the New Orleans Shrimp & Grits and the Steak Tartare with Rye), and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 5 (items 1, 2, 4 and 5: the Coudert family farm the walled Clos de la Roilette on the Moulin-à-Vent border; firmer and darker than the usual Fleurie; the winemaking left to the sommelier); research/bottle-selection-2026-10-04.json dish d-bqznncn6 value tier; the wine record (profile, serve, offeredWith: value for the New Orleans Shrimp & Grits and the Steak Tartare with Rye)"
+		},
+		{
+			"target": "wine:Domaine Coudert ‘Clos de la Roilette’ Fleurie 2023",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Coudert Clos de la Roilette Fleurie 2023 is Gamay from a walled vineyard the Coudert family farm where Fleurie, a Beaujolais cru, meets Moulin-à-Vent. Farmed and made by the family to drink young, it gives red cherry, raspberry and violet, light, soft and fresh. Low tannin will not turn bitter against the tasso and Creole sauce of the New Orleans Shrimp & Grits, and bright fruit lifts the raw beef of the Steak Tartare with Rye: our value bottle for both. We serve it lightly chilled, 55 to 58°F, in a Burgundy bowl, never decanted. The clos gives a firmer, darker Fleurie than the cru usually makes.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it, shared an eight word run with the 20 second line, carried no real clause on how the wine is made, and its story line leaned on a superlative (than most); it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 5 (items 1, 2, 4 and 5: the Coudert family farm the walled Clos de la Roilette on the Moulin-à-Vent border; firmer and darker than the usual Fleurie; the winemaking left to the sommelier); research/bottle-selection-2026-10-04.json dish d-bqznncn6 value tier; the wine record (profile, serve, offeredWith: value for the New Orleans Shrimp & Grits and the Steak Tartare with Rye)"
+		},
+		{
+			"target": "wine:Domaine Faiveley Bourgogne Rouge 2022",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Faiveley’s Bourgogne Rouge is red Burgundy in its plain, honest form, bright cherry and red currant with fresh acidity and fine tannin. It is our value bottle for the Roasted Rohan Duck Breast, opened at the table by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (the value bottle for the Roasted Rohan Duck Breast), and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-red-burgundy-2026-10-10.md section 3 (items 1, 4, 7 and 9: founded 1825, family house in Nuits-Saint-Georges, vineyards from Mercurey to Chambertin); research/bottle-selection-2026-10-04.json Roasted Rohan Duck Breast value tier; the wine record (profile, serve, offeredWith: value for the Roasted Rohan Duck Breast)"
+		},
+		{
+			"target": "wine:Domaine Faiveley Bourgogne Rouge 2022",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Faiveley Bourgogne Rouge 2022 is Pinot Noir under Burgundy’s regional name, from a family house in Nuits-Saint-Georges. Bottled as plain Bourgogne rather than under one village, it shows the grape before any single place: bright cherry and red currant, light to medium body, fresh acidity and fine tannin. With the Roasted Rohan Duck Breast, our value bottle, the acidity trims the rich meat while the red fruit echoes the glazed peaches. We serve it at 57 to 60°F in a Burgundy bowl, opened at the table, no decanting. Faiveley, founded in 1825, farms vines from Mercurey in the Côte Chalonnaise up to the Grand Crus of Chambertin.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it opened on the house rather than the wine as the list prints it and shared an eleven word run with the 20 second line (of the Roasted Rohan Duck Breast and the fruit meets its cane syrup); it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-red-burgundy-2026-10-10.md section 3 (items 1, 4, 7 and 9: founded 1825, family house in Nuits-Saint-Georges, vineyards from Mercurey to Chambertin); research/bottle-selection-2026-10-04.json Roasted Rohan Duck Breast value tier; the wine record (profile, serve, offeredWith: value for the Roasted Rohan Duck Breast)"
+		},
+		{
+			"target": "wine:Marcel Lapierre Morgon 2023",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Lapierre’s Morgon is silky Gamay with crushed strawberry, cherry and almost no tannin, so egg and hollandaise stay sweet beside it. It is our value bottle for the Eggs Owen, poured by the bottle with a light chill.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (the value bottle for the Eggs Owen), and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 6 (items 1, 2, 3, 7 and 10: old vines at Villié-Morgon, whole-bunch fermentation with native yeasts and little or no sulphur, the late Marcel Lapierre, now run by his children); research/bottle-selection-2026-10-04.json dish d-44jfmkdb value tier; the wine record (profile, serve, offeredWith: value for the Eggs Owen)"
+		},
+		{
+			"target": "wine:Marcel Lapierre Morgon 2023",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Marcel Lapierre Morgon 2023 is cru Beaujolais, Gamay from the family’s old vines at Villié-Morgon. It ferments in whole bunches with native yeasts and little or no added sulphur, giving crushed strawberry, cherry and a floral lift, silky, with very low tannin and bright acidity. With so little tannin, the soft-boiled egg and hollandaise of the Eggs Owen stay sweet while the fruit meets the red wine-braised short rib débris: our value bottle for that plate. We pour it lightly chilled, 55 to 59°F, in a Burgundy bowl, never decanted. The late Marcel Lapierre led Beaujolais back to natural winemaking, and his children run the estate now.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it did not open on the wine as the list prints it and shared a ten word run with the 20 second line; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 6 (items 1, 2, 3, 7 and 10: old vines at Villié-Morgon, whole-bunch fermentation with native yeasts and little or no sulphur, the late Marcel Lapierre, now run by his children); research/bottle-selection-2026-10-04.json dish d-44jfmkdb value tier; the wine record (profile, serve, offeredWith: value for the Eggs Owen)"
+		},
+		{
+			"target": "wine:Jean Foillard ‘Côte du Py’ Morgon 2022",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Côte du Py is the hill at the heart of Morgon, and its Gamay is dark cherry and plum with a stony, savoury edge. It is our classic bottle for the New Orleans Shrimp & Grits, poured by the bottle a touch cool.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (the classic bottle for the New Orleans Shrimp & Grits), and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 4 (items 1, 2, 3, 10 and 11: the decomposed schist hill at the heart of Morgon, long cool semi-carbonic maceration with indigenous yeasts and old Burgundy barrels, the verb morgonner); research/bottle-selection-2026-10-04.json dish d-bqznncn6 classic tier; the wine record (profile, serve, offeredWith: classic for the New Orleans Shrimp & Grits)"
+		},
+		{
+			"target": "wine:Jean Foillard ‘Côte du Py’ Morgon 2022",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Jean Foillard Côte du Py Morgon 2022 is Gamay grown on the hill at the centre of Morgon, its decomposed schist unlike the granite of other crus. It ferments long and cool in whole bunches with native yeasts and rests in old Burgundy barrels. Dark cherry, plum and violet carry a stony, savoury edge, deeper than the usual Beaujolais, and soft tannin meets the tasso, Creole sauce and pimento cheese grit cake: our classic bottle for the New Orleans Shrimp & Grits. We serve it at 57 to 60°F in a Burgundy bowl, no decanting. An old local verb, morgonner, names a Morgon that has aged into kirsch and earth.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it did not open on the wine as the list prints it, shared a fourteen word run with the 20 second line, named a living grower as one of the Gang of Four, and leaned on a superlative (deeper than most Beaujolais); it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 4 (items 1, 2, 3, 10 and 11: the decomposed schist hill at the heart of Morgon, long cool semi-carbonic maceration with indigenous yeasts and old Burgundy barrels, the verb morgonner); research/bottle-selection-2026-10-04.json dish d-bqznncn6 classic tier; the wine record (profile, serve, offeredWith: classic for the New Orleans Shrimp & Grits)"
+		},
+		{
+			"target": "wine:Domaine Jean Grivot ‘Les Charmois’ Nuits-Saint-Georges 2013",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Thirteen years have turned this village Nuits-Saint-Georges to dried cherry, forest floor and mushroom, silky and still fresh. It is our classic bottle for the Blackened Tofu, poured slowly by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (the classic bottle for the Blackened Tofu), and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-red-burgundy-2026-10-10.md section 4 (items 1, 5 and 9: a family domaine in Vosne-Romanée, Les Charmois a village vineyard south of the town, about eighteen months in French oak, holdings up to Richebourg); research/bottle-selection-2026-10-04.json Blackened Tofu classic tier; the wine record (profile, serve, offeredWith: classic for the Blackened Tofu)"
+		},
+		{
+			"target": "wine:Domaine Jean Grivot ‘Les Charmois’ Nuits-Saint-Georges 2013",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Jean Grivot Les Charmois Nuits-Saint-Georges 2013 is Pinot Noir from a village vineyard south of the town, made by a family domaine in Vosne-Romanée and aged about eighteen months in French oak. At thirteen years its red cherry has dried, with forest floor and mushroom, silky tannin and fresh acidity. Those earthy notes answer the preserved shiitakes and rice grits of the Blackened Tofu, and the gentle tannin stays calm under the spice: our classic bottle for the tofu. We serve it at 58 to 62°F in a Burgundy bowl, poured slowly, decanted only for sediment. The family’s range climbs from village wines like this to Richebourg.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it did not open on the wine as the list prints it and shared a ten word run with the 20 second line; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-red-burgundy-2026-10-10.md section 4 (items 1, 5 and 9: a family domaine in Vosne-Romanée, Les Charmois a village vineyard south of the town, about eighteen months in French oak, holdings up to Richebourg); research/bottle-selection-2026-10-04.json Blackened Tofu classic tier; the wine record (profile, serve, offeredWith: classic for the Blackened Tofu)"
+		},
+		{
+			"target": "wine:Domaine Tollot-Beaut ‘Les Lavières’ Savigny-lès-Beaune Premier Cru 2019",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Les Lavières is Premier Cru Pinot Noir from Savigny-lès-Beaune, ripe red cherry and raspberry with a little spice and toast. It is our classic bottle for the Eggs Owen, echoing its red wine braise, by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (the classic bottle for the Eggs Owen), and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-red-burgundy-2026-10-10.md section 5 (items 1, 2 and 5, and the expert line: a Chorey-lès-Beaune family domaine, ripe reds with some new oak, Les Lavières a Premier Cru of Savigny just north of Beaune, Chorey has no Premier Cru); research/bottle-selection-2026-10-04.json dish d-44jfmkdb classic tier; the wine record (profile, serve, offeredWith: classic for the Eggs Owen)"
+		},
+		{
+			"target": "wine:Domaine Tollot-Beaut ‘Les Lavières’ Savigny-lès-Beaune Premier Cru 2019",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Tollot-Beaut Les Lavières Savigny-lès-Beaune Premier Cru 2019 is Pinot Noir from a Premier Cru just north of Beaune, made by a family domaine in Chorey-lès-Beaune that raises its reds ripe, with a touch of new oak. Seven years on: red cherry, raspberry, spice and toast, supple and medium bodied. The Eggs Owen braises its short rib in red wine, so the wine mirrors the plate yet stays light for the egg: our classic bottle for it. We serve it at 58 to 62°F in a Burgundy bowl, no decanting. Chorey has no Premier Cru, so the domaine looks to neighbouring villages for its Premier Crus.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-red-burgundy-2026-10-10.md section 5 (items 1, 2 and 5, and the expert line: a Chorey-lès-Beaune family domaine, ripe reds with some new oak, Les Lavières a Premier Cru of Savigny just north of Beaune, Chorey has no Premier Cru); research/bottle-selection-2026-10-04.json dish d-44jfmkdb classic tier; the wine record (profile, serve, offeredWith: classic for the Eggs Owen)"
+		},
+		{
+			"target": "wine:Domaine Henri Gouges ‘Les Pruliers’ Nuits-Saint-Georges Premier Cru 2016",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Les Pruliers is firm, earthy Nuits-Saint-Georges with ten years on it, dark cherry, plum and spice softening into a long, savoury finish. It is our classic bottle for the Roasted Rohan Duck Breast, opened ahead by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (the classic bottle for the Roasted Rohan Duck Breast), and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-red-burgundy-2026-10-10.md section 2 (items 2, 3 and 5: Henri Gouges a leader of the estate-bottling movement, firm and slow, fourth generation, organic, Les Pruliers on the south side of the town); research/bottle-selection-2026-10-04.json Roasted Rohan Duck Breast classic tier; the wine record (profile, serve, offeredWith: classic for the Roasted Rohan Duck Breast)"
+		},
+		{
+			"target": "wine:Domaine Henri Gouges ‘Les Pruliers’ Nuits-Saint-Georges Premier Cru 2016",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Henri Gouges Les Pruliers Nuits-Saint-Georges Premier Cru 2016 is Pinot Noir from a Premier Cru on the south side of the town, farmed organically by a fourth-generation family domaine and built firm to age. At ten years it gives dark cherry, plum, earth and spice, the structure easing into a long, savoury finish. That earthy weight holds its own with the Roasted Rohan Duck Breast while the fruit picks up the cane syrup-glazed peaches: our classic bottle for the duck. We open it twenty to thirty minutes ahead and pour at 60 to 63°F in a Burgundy bowl. Henri Gouges helped lead Burgundy to estate bottling.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it and shared an eleven word run with the 20 second line; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-red-burgundy-2026-10-10.md section 2 (items 2, 3 and 5: Henri Gouges a leader of the estate-bottling movement, firm and slow, fourth generation, organic, Les Pruliers on the south side of the town); research/bottle-selection-2026-10-04.json Roasted Rohan Duck Breast classic tier; the wine record (profile, serve, offeredWith: classic for the Roasted Rohan Duck Breast)"
+		},
+		{
+			"target": "wine:Domaine Joseph Drouhin ‘Clos des Mouches’ Beaune Premier Cru 2015",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Clos des Mouches is the signature Beaune Premier Cru of the Drouhin house, red and black cherry, rose and spice, silky with eleven years. It suits roast poultry, veal or mushrooms, opened at the table by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the kind of plate its goesWith names, and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-red-burgundy-2026-10-10.md section 6 (items 1, 2, 4, 10 and the expert line: founded 1880 by Joseph Drouhin, the largest share of the Clos des Mouches, made in both colours, organic and biodynamic farming, modest new oak); the wine record (profile, serve, goesWith: roast poultry, veal and mushrooms; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Domaine Joseph Drouhin ‘Clos des Mouches’ Beaune Premier Cru 2015",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Joseph Drouhin Clos des Mouches Beaune Premier Cru 2015 is Pinot Noir grown on the slope above Beaune, where the Drouhin house owns more of the clos than anyone. It is farmed organically and biodynamically and raised with modest new oak, for elegance over weight. Eleven years on, red and black cherry meet rose and spice, silky and long, for roast poultry, veal, mushrooms and a guest who wants perfume over power. We serve it at 58 to 62°F in a Burgundy bowl, no decanting, and let it open in the glass. Joseph Drouhin founded the house in 1880, and it makes the clos in red and white.",
+			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it, shared a seventeen word run with the 20 second line and named the Roasted Rohan Duck Breast and the Blackened Tofu, dishes whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, no dish, since none names this wine in its pairing, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-red-burgundy-2026-10-10.md section 6 (items 1, 2, 4, 10 and the expert line: founded 1880 by Joseph Drouhin, the largest share of the Clos des Mouches, made in both colours, organic and biodynamic farming, modest new oak); the wine record (profile, serve, goesWith: roast poultry, veal and mushrooms; no dish pairing names it)"
+		}
+	]
+}
