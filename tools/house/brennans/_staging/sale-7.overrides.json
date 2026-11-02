@@ -255,6 +255,150 @@
 			"value": "Domaine de la Romanée-Conti Romanée-Conti Grand Cru 2014 is Pinot Noir from a Vosne-Romanée vineyard of under two hectares, owned whole by the domaine named after it. Made with whole bunches and aged long in new oak, it comes to a few hundred cases a year. Twelve years on, red and black fruit meet rose and spice over earth, weightless, silky and endlessly long. Keep the plate simple: squab, duck, beef tenderloin or the wine alone. The sommelier presents, opens and decides on decanting; we pour at 60 to 63°F in large Burgundy bowls. The Prince de Conti bought the vineyard in 1760, and it took his name.",
 			"reason": "Five-star card edition, sale-7 (Red Burgundy): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it, shared an eleven word run with the 20 second line and named the Roasted Chateaubriand and the Roasted Rohan Duck Breast, dishes whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, no dish, since none names this wine in its pairing, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
 			"source": "research/producers-cellar-grand-burgundy-beaujolais-2026-10-10.md section 2 (items 2, 4, 5 and 15: whole-cluster with long élevage in new oak, the 1.81 ha monopole, a few hundred cases a year, very small allocations, bought by the Prince de Conti in 1760 and named for him); the wine record (profile, serve, goesWith: roast squab, duck or beef tenderloin, or alone; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Ridge ‘Three Valleys’ Sonoma County 2023",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Three Valleys is Ridge’s juicy Sonoma Zinfandel blend, blackberry, raspberry and black pepper, with soft tannin that stays round against heat. It is our value bottle for the Creole Hanger Steak and its chili crisp, poured by the bottle a touch cool.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (the value bottle for the Creole Hanger Steak), and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-napa-sonoma-2026-10-10.md section 10 (items 1, 5 and 9: founded 1962 in the Santa Cruz Mountains, American oak and full ingredient labelling, Three Valleys the Sonoma County blend of Zinfandel with Petite Sirah and other field grapes); research/bottle-selection-2026-10-04.json Creole Hanger Steak value tier; the wine record (profile, serve, offeredWith: value for the Creole Hanger Steak)"
+		},
+		{
+			"target": "wine:Ridge ‘Three Valleys’ Sonoma County 2023",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Ridge Three Valleys Sonoma County 2023 is Zinfandel blended with Petite Sirah and other old field grapes from several Sonoma County valleys. Ridge ages it in American oak, the house habit, and bottles it young and juicy: blackberry, raspberry, black pepper and sweet spice, soft tannin and bright acidity. Heat turns a firm red bitter, but this stays round against the chili crisp and Creole spice: our value bottle for the Creole Hanger Steak. We pour it a touch cool, 58 to 62°F, in a Bordeaux glass, no decanting. Ridge began in 1962 in the Santa Cruz Mountains and prints every grape on its back labels.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the description was rewritten because it opened on the blend rather than the wine as the list prints it and named the Roost Burger, a dish whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-napa-sonoma-2026-10-10.md section 10 (items 1, 5 and 9: founded 1962 in the Santa Cruz Mountains, American oak and full ingredient labelling, Three Valleys the Sonoma County blend of Zinfandel with Petite Sirah and other field grapes); research/bottle-selection-2026-10-04.json Creole Hanger Steak value tier; the wine record (profile, serve, offeredWith: value for the Creole Hanger Steak)"
+		},
+		{
+			"target": "wine:Ken Wright Cellars Willamette Valley Pinot Noir 2024",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "This is bright, earthy Oregon Pinot Noir, red cherry, raspberry and forest floor, light and silky with low tannin. It is our value bottle for the Blackened Tofu, a match for its shiitakes, poured by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (the value bottle for the Blackened Tofu), and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 5 (items 1, 2, 3 and 5: the winery in Carlton, the valley-wide blend across its vineyard sources, known for single vineyard Pinot Noir by site, the Willamette climate a cousin of Burgundy's); research/bottle-selection-2026-10-04.json Blackened Tofu value tier; the wine record (profile, serve, offeredWith: value for the Blackened Tofu)"
+		},
+		{
+			"target": "wine:Ken Wright Cellars Willamette Valley Pinot Noir 2024",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Ken Wright Cellars Willamette Valley Pinot Noir 2024 is Pinot Noir from Oregon’s Willamette Valley, whose cool, rainy climate is a cousin of Burgundy’s. The Carlton winery blends its vineyard sources across the valley into this young wine: red cherry, raspberry, forest floor and a little spice, light, with low tannin and fresh acidity. The earthiness meets the preserved shiitakes of the Blackened Tofu and the low tannin rides over the blackening spice: our value bottle for the tofu. We pour it at 58 to 62°F in a Burgundy bowl, no decanting. The winery made its name bottling Pinot Noir vineyard by vineyard, to show each site.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the description was rewritten because it opened on the winery rather than the wine as the list prints it, named a living winemaker and named Maggie’s Mushrooms, a dish whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 5 (items 1, 2, 3 and 5: the winery in Carlton, the valley-wide blend across its vineyard sources, known for single vineyard Pinot Noir by site, the Willamette climate a cousin of Burgundy's); research/bottle-selection-2026-10-04.json Blackened Tofu value tier; the wine record (profile, serve, offeredWith: value for the Blackened Tofu)"
+		},
+		{
+			"target": "wine:Piedrasassi ‘Bien Nacido Vineyard’ Santa Maria Valley Syrah 2021",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Piedrasassi makes this Bien Nacido Syrah the Northern Rhône way, black cherry, black pepper, smoked meat and olive, savoury and fresh. It loves lamb and grilled red meat, decanted twenty minutes ahead and poured by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the kind of plate its goesWith names, and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 4 (items 1, 2, 3 and 4: made in Lompoc since 2003 in a Northern Rhône style, old vines in Bien Nacido's X block planted 1973, Bien Nacido a grower's vineyard in the Santa Maria Valley); the wine record (profile, serve, goesWith: smoke, pepper and grilled meat, lamb and the Northern Rhône lover; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Piedrasassi ‘Bien Nacido Vineyard’ Santa Maria Valley Syrah 2021",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Piedrasassi Bien Nacido Vineyard Santa Maria Valley Syrah 2021 is Syrah from old vines in the Bien Nacido Vineyard, a grower’s vineyard in the cool Santa Maria Valley of Santa Barbara County. Made in Lompoc since 2003 in a Northern Rhône style, it is savoury rather than jammy: black cherry, black pepper, smoked meat, olive and herbs, with fine tannin and lively acidity. Pepper and smoke come alive with lamb and grilled red meat, and with any Northern Rhône lover. We pour it at 60 to 63°F in a large Burgundy or Syrah glass, decanted twenty minutes ahead. Its Syrah comes from the X block, planted in 1973.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the description was rewritten because it opened on the label’s makers rather than the wine as the list prints it, named two living winemakers and named both hanger steaks and the Roost Burger, dishes whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, no dish, since none names this wine in its pairing, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 4 (items 1, 2, 3 and 4: made in Lompoc since 2003 in a Northern Rhône style, old vines in Bien Nacido's X block planted 1973, Bien Nacido a grower's vineyard in the Santa Maria Valley); the wine record (profile, serve, goesWith: smoke, pepper and grilled meat, lamb and the Northern Rhône lover; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Ridge ‘Lytton Springs’ Dry Creek Valley 2022",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Lytton Springs is Ridge’s old-vine field blend of Zinfandel, Petite Sirah and Carignane, brambly blackberry, black pepper and clove. It is our classic bottle for the Creole Hanger Steak, decanted twenty minutes ahead and poured by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (the classic bottle for the Creole Hanger Steak), and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-napa-sonoma-2026-10-10.md section 10 (items 5 and 6: field blend of Zinfandel interplanted with Petite Sirah, Carignane and other varieties, the block planted in 1901, first made in 1972, aged in American oak); research/bottle-selection-2026-10-04.json Creole Hanger Steak classic tier; the wine record (profile, serve, offeredWith: classic for the Creole Hanger Steak)"
+		},
+		{
+			"target": "wine:Ridge ‘Lytton Springs’ Dry Creek Valley 2022",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Ridge Lytton Springs Dry Creek Valley 2022 is a field blend from Ridge’s old-vine vineyard in Sonoma’s Dry Creek Valley, Zinfandel planted among Petite Sirah and Carignane, aged in American oak. It tastes of blackberry, black cherry, black pepper and clove, brambly and medium-full, with firm but ripe tannin. The spice meets the Creole seasoning of the Creole Hanger Steak and ripe fruit picks up the Madeira glaze: our classic bottle for the steak. We pour it at 60 to 63°F in a Bordeaux glass, decanted twenty minutes ahead if the table can wait. One block was planted in 1901, and Ridge first made the wine in 1972.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it and its story line leaned on a superlative (its oldest block); it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-napa-sonoma-2026-10-10.md section 10 (items 5 and 6: field blend of Zinfandel interplanted with Petite Sirah, Carignane and other varieties, the block planted in 1901, first made in 1972, aged in American oak); research/bottle-selection-2026-10-04.json Creole Hanger Steak classic tier; the wine record (profile, serve, offeredWith: classic for the Creole Hanger Steak)"
+		},
+		{
+			"target": "wine:Penfolds ‘Bin 389’ Cabernet Shiraz 2019",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Bin 389 is Penfolds’ Cabernet Shiraz, aged partly in barrels that held Grange, so guests call it Baby Grange: blackcurrant, plum, mocha and liquorice. It wants big beef, steaks or grilled lamb, decanted thirty minutes ahead and poured by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the kind of plate its goesWith names, and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 8 (items 1, 3 and 4: founded at Magill in 1844, matured in barrels that held the previous Grange hence Baby Grange, bin numbers are house codes not law, multi-region South Australian blending); the wine record (profile, serve, goesWith: big beef and smoke, steaks and grilled lamb; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Penfolds ‘Bin 389’ Cabernet Shiraz 2019",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Penfolds Bin 389 Cabernet Shiraz 2019 blends Cabernet Sauvignon and Shiraz from across South Australia, the blend Australia made its own. It matures in American oak, partly in barrels that held the previous vintage of Grange, hence its nickname, Baby Grange. Rich and firm, it gives blackcurrant, plum, mocha, liquorice and spice, full body and solid tannin, a weight made for big beef and smoke: steaks, beef tenderloin and grilled lamb. We pour it at 60 to 64°F in a Bordeaux glass, decanted thirty to forty-five minutes ahead. Penfolds began at Magill, near Adelaide, in 1844, and its bin numbers are cellar codes, not a classification.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the description was rewritten because it ran under the floor at 101 words and named the Roasted Chateaubriand and the Roost Burger, dishes whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, no dish, since none names this wine in its pairing, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 8 (items 1, 3 and 4: founded at Magill in 1844, matured in barrels that held the previous Grange hence Baby Grange, bin numbers are house codes not law, multi-region South Australian blending); the wine record (profile, serve, goesWith: big beef and smoke, steaks and grilled lamb; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Kosta Browne Sonoma Coast Pinot Noir 2021",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Kosta Browne is the California Pinot Noir name guests ask for, ripe and silky, black cherry, raspberry, cola and baking spice. It suits duck, pork, salmon or mushrooms, poured by the bottle with no decanting.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the kind of plate its goesWith names, and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-napa-sonoma-2026-10-10.md section 11 (items 1, 2 and 5: founded in Sebastopol by two restaurant workers with saved tips, rich and polished Pinot Noir, the Sonoma Coast bottling aged in French oak); the wine record (profile, serve, goesWith: duck, pork, salmon and mushrooms; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Kosta Browne Sonoma Coast Pinot Noir 2021",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Kosta Browne Sonoma Coast Pinot Noir 2021 is Pinot Noir from cool vineyards on the Sonoma Coast, near the Pacific, made in a rich, polished style and aged in French oak. At five years it gives black cherry, raspberry, cola and baking spice with a touch of oak, medium-full and smooth in tannin. It suits duck, pork, salmon and mushrooms, and a guest who wants Pinot Noir richer than Burgundy. We pour it at 58 to 62°F in a Burgundy bowl, no decanting. The Sebastopol winery was started by two restaurant workers with tip money they had saved, and it grew into a Pinot Noir house guests seek out.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the description was rewritten because it opened on the founders rather than the wine as the list prints it, named two living founders, ran under the floor at 98 words and named Maggie’s Mushrooms, a dish whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, no dish, since none names this wine in its pairing, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-napa-sonoma-2026-10-10.md section 11 (items 1, 2 and 5: founded in Sebastopol by two restaurant workers with saved tips, rich and polished Pinot Noir, the Sonoma Coast bottling aged in French oak); the wine record (profile, serve, goesWith: duck, pork, salmon and mushrooms; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Duckhorn ‘Three Palms Vineyard’ Napa Valley Merlot 2020",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Three Palms is the single vineyard Merlot that made Duckhorn’s name, black cherry, plum, cocoa and cedar, plush with firm, velvety tannin. It suits beef, duck or roast pork, decanted thirty minutes ahead and poured by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the kind of plate its goesWith names, and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-napa-sonoma-2026-10-10.md section 8 (items 1, 3 and 4: first vintage 1978 including a Three Palms Merlot, made its name with Merlot, a rocky alluvial fan near Calistoga at the warm north end, named for three palm trees, stones that drain and keep vines lean); the wine record (profile, serve, goesWith: beef and duck, roast pork and mushrooms; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Duckhorn ‘Three Palms Vineyard’ Napa Valley Merlot 2020",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Duckhorn Three Palms Vineyard Napa Valley Merlot 2020 is Merlot from a rocky alluvial fan on the valley floor near Calistoga, at the valley’s warm north end. The stones drain well and keep the vines lean, and Duckhorn bottles it apart, concentrated and deep: black cherry, plum, cocoa, cedar and a little herb, full in body with firm, velvety tannin. It is for beef and duck, roast pork and mushrooms, and the guest who loves Merlot. We pour it at 60 to 64°F in a Bordeaux glass, decanted thirty minutes ahead. Three palm trees name the vineyard, and its Merlot was in Duckhorn’s first vintage, 1978.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it, named the founders, one of them living, and named the Roasted Chateaubriand, both hanger steaks and Maggie’s Mushrooms, dishes whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, no dish, since none names this wine in its pairing, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-napa-sonoma-2026-10-10.md section 8 (items 1, 3 and 4: first vintage 1978 including a Three Palms Merlot, made its name with Merlot, a rocky alluvial fan near Calistoga at the warm north end, named for three palm trees, stones that drain and keep vines lean); the wine record (profile, serve, goesWith: beef and duck, roast pork and mushrooms; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Château Musar Bekaa Valley 2003",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Château Musar is Lebanon’s famous red, released late and here with twenty-three years: dried cherry, fig, leather and incense, silky and wild. It is our celebration bottle for the Lamb Shank en Croûte, decanted off its sediment and poured by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (the celebration bottle for the Lamb Shank en Croûte), and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 9 (items 1, 2 and 3: founded by Gaston Hochar in 1930, made at Ghazir and released around seven years after harvest, wine made through fifteen years of civil war, the Bekaa at around a thousand metres); research/bottle-selection-2026-10-04.json Lamb Shank en Croûte splurge tier; the wine record (profile, serve, offeredWith: splurge for the Lamb Shank en Croûte)"
+		},
+		{
+			"target": "wine:Château Musar Bekaa Valley 2003",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Château Musar Bekaa Valley 2003 blends Cabernet Sauvignon, Cinsault and Carignan from vines at around a thousand metres in Lebanon’s Bekaa Valley. It is made at Ghazir, near the coast, and aged in oak and bottle for about seven years before release. Now twenty-three: dried cherry, fig and spice, leather and incense, silky and wild: our celebration bottle for the Lamb Shank en Croûte. We stand it upright ahead, decant it off the sediment thirty minutes before pouring and serve it at 60 to 64°F in a large Bordeaux glass. Gaston Hochar founded the estate in 1930, and it kept making wine through fifteen years of civil war.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the description was rewritten because it opened on the founder rather than the wine as the list prints it and shared an eleven word run with the 20 second line; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 9 (items 1, 2 and 3: founded by Gaston Hochar in 1930, made at Ghazir and released around seven years after harvest, wine made through fifteen years of civil war, the Bekaa at around a thousand metres); research/bottle-selection-2026-10-04.json Lamb Shank en Croûte splurge tier; the wine record (profile, serve, offeredWith: splurge for the Lamb Shank en Croûte)"
+		},
+		{
+			"target": "wine:Penfolds ‘Grange’ Shiraz 2004",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Grange is Shiraz from old South Australian vines, finished in new American oak, and our 2004 is blackberry, plum, mocha and liquorice, dense and long. It belongs with prime beef or lamb at a celebration, decanted forty-five minutes ahead and poured by the bottle.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the kind of plate its goesWith names, and the step is the record's own (a 750 ml bottle with no glass price and no Coravin serve, so by the bottle)",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 8 (items 1, 2, 3 and 4: Max Schubert, Penfolds' chief winemaker, toured Europe in 1950 and made the first experimental Grange in 1951, a multi-region blend of Shiraz with a little Cabernet, new American oak hogsheads); the wine record (profile, serve, pours: the sommelier presents it; goesWith: big beef at a celebration and lamb; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Penfolds ‘Grange’ Shiraz 2004",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Penfolds Grange Shiraz 2004 is mostly Shiraz with a little Cabernet Sauvignon, blended across old South Australian vineyards rather than one site and finished in new American oak hogsheads. Twenty-two years on, it gives blackberry, plum, mocha, liquorice, leather and spice, dense and powerful, the tannin softening into a long finish. It is for big beef at a celebration, prime steak or beef tenderloin, and for lamb. Our sommelier presents it, stood upright ahead and decanted forty-five minutes before pouring, off the sediment, at 60 to 64°F in large Bordeaux glasses. Max Schubert, Penfolds’ chief winemaker, studied Bordeaux in 1950 and made the first experimental Grange in 1951.",
+			"reason": "Five-star card edition, sale-7 (Other reds): the description was rewritten because it named the Roasted Chateaubriand, a dish whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, no dish, since none names this wine in its pairing, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 8 (items 1, 2, 3 and 4: Max Schubert, Penfolds' chief winemaker, toured Europe in 1950 and made the first experimental Grange in 1951, a multi-region blend of Shiraz with a little Cabernet, new American oak hogsheads); the wine record (profile, serve, pours: the sommelier presents it; goesWith: big beef at a celebration and lamb; no dish pairing names it)"
 		}
 	]
 }
