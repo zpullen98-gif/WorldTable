@@ -1,0 +1,132 @@
+{
+	"entries": [
+		{
+			"target": "wine:López de Heredia ‘Viña Cubillo’ Rioja Crianza 2016",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Ten years old and still lively, Viña Cubillo is old school Rioja from Haro: dried cherry, strawberry, leather and soft spice, light in tannin. It is the value bottle for the Lamb Shank en Croûte, poured by the bottle for the table.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the two sentence sale, a concrete hook then the table and the step; it names the Lamb Shank en Croûte only as the value bottle, the tier that dish’s pairing gives this wine, and leaves out the Roost Burger, whose pairing does not name it; a 750 ml bottle with no glass price, so by the bottle",
+			"source": "research/producers-cellar-spain-2026-10-10.md section 2 (items 1, 2, 3 and 5: founded 1877 at Haro, family run, Cubillo the youngest red, hand harvested, old wooden vats, about three years in old American oak from the bodega’s own cooperage, nothing changed on purpose); the wine record (profile, serve; the Lamb Shank en Croûte pairing names it as the value bottle)"
+		},
+		{
+			"target": "wine:López de Heredia ‘Viña Cubillo’ Rioja Crianza 2016",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "López de Heredia Viña Cubillo Rioja Crianza 2016 is the youngest red of a family bodega in Haro, Rioja Alta: Tempranillo with Garnacha, Graciano and Mazuelo. The grapes are picked by hand, fermented in old wooden vats and aged about three years in old American oak from the bodega’s own cooperage, so the oak reads as mellow spice. At ten years: dried cherry, strawberry, leather and gentle spice, with light tannin and lively acidity. It is the value bottle for the Lamb Shank en Croûte. We pour it at 60 to 63°F in a Bordeaux glass, no decanting. Founded in 1877, the house has changed nothing on purpose.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on Viña Cubillo rather than the wine as the list prints it, and it named the Roost Burger, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-spain-2026-10-10.md section 2 (items 1, 2, 3 and 5: founded 1877 at Haro, family run, Cubillo the youngest red, hand harvested, old wooden vats, about three years in old American oak from the bodega’s own cooperage, nothing changed on purpose); the wine record (profile, serve; the Lamb Shank en Croûte pairing names it as the value bottle)"
+		},
+		{
+			"target": "wine:Fattoria di Fèlsina Chianti Classico 2022",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "All Sangiovese from the southern edge of Chianti Classico, the Fèlsina pours sour cherry, violet and dried herbs over firm acidity and dusty tannin. For a table sharing roast chicken, pork, mushrooms and grilled meat, it is the red to order by the bottle.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing (no first pick, second choice or bottle tier), so the sale speaks of the plates its goesWith names (roast chicken and pork, mushrooms, grilled meat); a 750 ml bottle with no glass price, so by the bottle",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 2 (items 1, 3 and 4: founded 1966 at Castelnuovo Berardenga where the zone meets the Crete Senesi, the Rancia parcel a former monastic site; all Sangiovese, fermented in steel, about 12 months in medium size Slavonian oak); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Fattoria di Fèlsina Chianti Classico 2022",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Fattoria di Fèlsina Chianti Classico 2022 is all Sangiovese from Castelnuovo Berardenga, the warm southern corner of Chianti Classico, where the hills meet the Crete Senesi. It is fermented in steel and aged about a year in medium size Slavonian oak casks: sour cherry, violet, dried herbs and a little earth, with firm acidity and fine, dusty tannin. That acidity carries it across a mixed table, from tomato sauces and mushrooms to roast chicken, pork and grilled meat. We pour it at 60 to 63°F in an all purpose or Bordeaux glass, no decanting. The estate dates from 1966, and its Rancia vineyard was once a monastic site.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on the estate rather than the wine as the list prints it, and it named Maggie’s Mushrooms, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 2 (items 1, 3 and 4: founded 1966 at Castelnuovo Berardenga where the zone meets the Crete Senesi, the Rancia parcel a former monastic site; all Sangiovese, fermented in steel, about 12 months in medium size Slavonian oak); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Produttori del Barbaresco Barbaresco 2020",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Pale in the glass but firm, this Barbaresco from the village growers’ cellar is Nebbiolo with red cherry, rose and tar under grippy tannin. It is the value bottle for the Agnolotti del Plin, poured by the bottle and decanted when the table can wait.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the two sentence sale, a concrete hook then the table and the step; it names the Agnolotti del Plin only as the value bottle, the tier that dish’s pairing gives this wine; a 750 ml bottle with no glass price, so by the bottle, with the record’s decanting",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 3 (items 1, 2 and 4: founded 1958 on 1894 roots; large Slavonian oak, no new barriques; about fifty member families, Nebbiolo blended across members’ vineyards, aged in large oak casks); the wine record (profile, serve; the Agnolotti del Plin pairing names it as the value bottle)"
+		},
+		{
+			"target": "wine:Produttori del Barbaresco Barbaresco 2020",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Produttori del Barbaresco Barbaresco 2020 is Nebbiolo grown in the Langhe hills of Piedmont and made by the village cooperative of about fifty grower families. It is blended from many members’ vineyards and aged in large oak casks: pale in colour but firm, with red cherry, rose, dried herbs and tar, high acidity and grippy tannin that want food. It is the value bottle for the Agnolotti del Plin, pasta from the same Piedmont hills. We pour it at 60 to 64°F in a large Burgundy bowl, decanted thirty minutes ahead when the table can wait. The cooperative was founded in 1958 on roots going back to 1894.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on the place and the cooperative rather than the wine as the list prints it, and it named the Roasted Chateaubriand and Maggie’s Mushrooms, whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 3 (items 1, 2 and 4: founded 1958 on 1894 roots; large Slavonian oak, no new barriques; about fifty member families, Nebbiolo blended across members’ vineyards, aged in large oak casks); the wine record (profile, serve; the Agnolotti del Plin pairing names it as the value bottle)"
+		},
+		{
+			"target": "wine:CVNE ‘Imperial’ Rioja Reserva 2018",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Polished classic Rioja from Haro, the Imperial Reserva brings red and black cherry, plum, sweet spice and leather. For a table ordering lamb, grilled beef or spiced pork, it comes by the bottle with twenty minutes of air.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the plates its goesWith names (lamb, grilled beef, pork with spice) and leaves out the hanger steaks and the Roost Burger; a 750 ml bottle with no glass price, so by the bottle, with the record’s twenty minutes of air",
+			"source": "research/producers-cellar-spain-2026-10-10.md section 3 (items 1, 3 and 4: founded 1879; Cune the spoken form of CVNE, from the misread V; the railway station quarter of Haro; Imperial its Reserva and Gran Reserva label, Tempranillo led with Graciano and Mazuelo, aged in oak and bottle before release); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:CVNE ‘Imperial’ Rioja Reserva 2018",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "CVNE Imperial Rioja Reserva 2018 is mostly Tempranillo with Graciano and Mazuelo from Rioja Alta, made in the railway station quarter of Haro. As a Reserva it is aged in oak and then in bottle before release: black and red cherry, plum, leather and sweet spice, medium to full, with polished tannin and fresh acidity. It suits roast and grilled meats, lamb above all, then grilled beef and pork with spice. We pour it at 60 to 64°F in a Bordeaux glass; twenty minutes of air helps. Founded in 1879, the house is called Cune, KOO-nay, because the V of its old lettering was read as a U.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on the house’s founding rather than the wine as the list prints it, and it named both hanger steaks and the Roost Burger, whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-spain-2026-10-10.md section 3 (items 1, 3 and 4: founded 1879; Cune the spoken form of CVNE, from the misread V; the railway station quarter of Haro; Imperial its Reserva and Gran Reserva label, Tempranillo led with Graciano and Mazuelo, aged in oak and bottle before release); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Tenuta San Guido ‘Guidalberto’ Toscana 2022",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Cabernet Sauvignon and Merlot from the Tuscan coast, Guidalberto is the younger red of the Sassicaia estate: blackcurrant, black cherry and Mediterranean herbs, soft and generous. For a table ordering steak, lamb or roast beef, it comes by the bottle, decanted thirty minutes ahead.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the plates its goesWith names (steak, lamb, roast beef) and leaves out the Roasted Chateaubriand and the hanger steaks; a 750 ml bottle with no glass price, so by the bottle, with the record’s decanting",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 4 (items 1, 3 and 8: Sassicaia first sold with the 1968 vintage, made privately for the family table before; Guidalberto the second red, Cabernet Sauvignon and Merlot, aged in French and American oak, labelled Toscana IGT); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Tenuta San Guido ‘Guidalberto’ Toscana 2022",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Tenuta San Guido Guidalberto Toscana 2022 blends Cabernet Sauvignon with Merlot grown at Bolgheri, on the coast of Tuscany, and is the second red of the estate that makes Sassicaia. It is aged in French and American oak, and it drinks young and generous: blackcurrant, black cherry, Mediterranean herbs and a little cedar, with soft, ripe tannin and a fresh finish. It suits steak, lamb and roast beef, and a guest who wants Bordeaux grapes with Italian sunshine. We decant it thirty minutes ahead and pour it at 60 to 64°F in a Bordeaux glass. Sassicaia was made only for the family table until the 1968 vintage.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on the estate and its family rather than the wine as the list prints it, and it named the Roasted Chateaubriand and both hanger steaks, whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 4 (items 1, 3 and 8: Sassicaia first sold with the 1968 vintage, made privately for the family table before; Guidalberto the second red, Cabernet Sauvignon and Merlot, aged in French and American oak, labelled Toscana IGT); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Fattoria di Fèlsina ‘Rancia’ Chianti Classico Riserva 2019",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "From a single vineyard that was once a monastic site, Rancia is Sangiovese aged longer as a Riserva: dark cherry, plum, dried herbs and leather, firm and long. For roast beef, lamb or wild mushrooms, it comes by the bottle, decanted thirty minutes ahead.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the plates its goesWith names (roast beef, lamb, wild mushrooms) and leaves out the Roasted Chateaubriand; a 750 ml bottle with no glass price, so by the bottle, with the record’s decanting",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 2 (items 1 and 4: the Rancia parcel a former monastic site at Castelnuovo Berardenga; a single vineyard bottled as a Chianti Classico Riserva, all Sangiovese, aged in oak barrels, longer than the annata); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Fattoria di Fèlsina ‘Rancia’ Chianti Classico Riserva 2019",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Fattoria di Fèlsina Rancia Chianti Classico Riserva 2019 is all Sangiovese from the Rancia vineyard at Castelnuovo Berardenga, the warm southern corner of Chianti Classico. Bottled on its own as a Riserva, it is aged in oak barrels and then in bottle, longer than the estate’s Chianti Classico, so it is deeper and firmer: dark cherry, plum, dried herbs, leather and spice, with fine tannin and long, savoury acidity. It wants richer meat and earthy plates: roast beef, lamb and wild mushrooms. We decant it thirty to forty-five minutes ahead and pour it at 60 to 64°F in a large Bordeaux glass. The vineyard was once a monastic site.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on the vineyard rather than the wine as the list prints it, and it named the Roasted Chateaubriand and Maggie’s Mushrooms, whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 2 (items 1 and 4: the Rancia parcel a former monastic site at Castelnuovo Berardenga; a single vineyard bottled as a Chianti Classico Riserva, all Sangiovese, aged in oak barrels, longer than the annata); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Produttori del Barbaresco ‘Asili’ Barbaresco 2019",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Perfumed and fine, the Asili is single vineyard Nebbiolo from Barbaresco: red cherry, rose petal and orange peel over silky, firm tannin. It is the classic bottle for the Agnolotti del Plin, poured by the bottle and decanted forty-five minutes ahead.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the two sentence sale, a concrete hook then the table and the step; it names the Agnolotti del Plin only as the classic, the tier that dish’s pairing gives this wine; a 750 ml bottle with no glass price, so by the bottle, with the record’s decanting",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 3 (items 1, 2, 3 and 4: founded 1958 on 1894 roots; Asili among the members’ crus, bottled as a single vineyard only in strong vintages, every parcel into the Barbaresco in weaker years; large oak casks); the wine record (profile, serve; the Agnolotti del Plin pairing names it as the classic)"
+		},
+		{
+			"target": "wine:Produttori del Barbaresco ‘Asili’ Barbaresco 2019",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Produttori del Barbaresco Asili Barbaresco 2019 is all Nebbiolo from Asili, a single vineyard in the village of Barbaresco in Piedmont. The village cooperative bottles its members’ Asili on its own only in strong vintages, aged in large oak casks; in weaker years every parcel goes into the classic Barbaresco. Perfumed and fine: rose petal, red cherry, orange peel and spice, with silky but firm tannin and lifting acidity. It is the classic bottle for the Agnolotti del Plin. We decant it forty-five minutes ahead and pour it at 60 to 64°F in a large Burgundy bowl. The cooperative dates from 1958, on roots going back to 1894.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on the vineyard and the cooperative rather than the wine as the list prints it, and it named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 3 (items 1, 2, 3 and 4: founded 1958 on 1894 roots; Asili among the members’ crus, bottled as a single vineyard only in strong vintages, every parcel into the Barbaresco in weaker years; large oak casks); the wine record (profile, serve; the Agnolotti del Plin pairing names it as the classic)"
+		},
+		{
+			"target": "wine:Il Poggione Brunello di Montalcino 2018",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Il Poggione is classic Brunello from the warm south of Montalcino, aged years in large oak: dark cherry, plum, dried herbs, leather and balsamic warmth. For beef, roast lamb or aged cheese, it comes by the bottle, decanted forty-five minutes to an hour ahead.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the plates its goesWith names (beef, roast lamb, aged cheese) and leaves out the Roasted Chateaubriand and the hanger steaks; a 750 ml bottle with no glass price, so by the bottle, with the record’s decanting",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 5 (items 1, 3, 4 and 5: Sant’Angelo in Colle in the warm south, in one family since the late 1800s; all Sangiovese, large oak casks; Brunello released after five years; Montalcino a hill town south of Siena); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Il Poggione Brunello di Montalcino 2018",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Il Poggione Brunello di Montalcino 2018 is Sangiovese alone, grown around Sant’Angelo in Colle, a hamlet in the warm southern sector of Montalcino, south of Siena. It is aged in large oak casks and released only after five years, as Brunello must be. At eight years: dark cherry, plum, dried herbs, leather and a little balsamic warmth, with firm tannin and bright acidity. It wants beef and rich, savoury sauces, roast lamb and aged cheese. We decant it forty-five minutes to an hour ahead and pour it at 60 to 64°F in a large Bordeaux glass. The estate has been in one family since the late 1800s.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on the appellation rather than the wine as the list prints it, and it named the Roasted Chateaubriand and the hanger steaks, whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 5 (items 1, 3, 4 and 5: Sant’Angelo in Colle in the warm south, in one family since the late 1800s; all Sangiovese, large oak casks; Brunello released after five years; Montalcino a hill town south of Siena); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		}
+	]
+}

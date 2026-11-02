@@ -1,0 +1,58 @@
+{
+	"wines": [
+		{
+			"name": "López de Heredia ‘Viña Cubillo’ Rioja Crianza 2016",
+			"s45": "rewritten",
+			"reason": "it opened on Viña Cubillo rather than the wine as the list prints it, and it named the Roost Burger, whose pairing does not name this wine",
+			"dishes": [
+				"Lamb Shank en Croûte"
+			]
+		},
+		{
+			"name": "Fattoria di Fèlsina Chianti Classico 2022",
+			"s45": "rewritten",
+			"reason": "it opened on the estate rather than the wine as the list prints it, and it named Maggie’s Mushrooms, whose pairing does not name this wine",
+			"dishes": []
+		},
+		{
+			"name": "Produttori del Barbaresco Barbaresco 2020",
+			"s45": "rewritten",
+			"reason": "it opened on the place and the cooperative rather than the wine as the list prints it, and it named the Roasted Chateaubriand and Maggie’s Mushrooms, whose pairings do not name this wine",
+			"dishes": [
+				"Agnolotti del Plin"
+			]
+		},
+		{
+			"name": "CVNE ‘Imperial’ Rioja Reserva 2018",
+			"s45": "rewritten",
+			"reason": "it opened on the house’s founding rather than the wine as the list prints it, and it named both hanger steaks and the Roost Burger, whose pairings do not name this wine",
+			"dishes": []
+		},
+		{
+			"name": "Tenuta San Guido ‘Guidalberto’ Toscana 2022",
+			"s45": "rewritten",
+			"reason": "it opened on the estate and its family rather than the wine as the list prints it, and it named the Roasted Chateaubriand and both hanger steaks, whose pairings do not name this wine",
+			"dishes": []
+		},
+		{
+			"name": "Fattoria di Fèlsina ‘Rancia’ Chianti Classico Riserva 2019",
+			"s45": "rewritten",
+			"reason": "it opened on the vineyard rather than the wine as the list prints it, and it named the Roasted Chateaubriand and Maggie’s Mushrooms, whose pairings do not name this wine",
+			"dishes": []
+		},
+		{
+			"name": "Produttori del Barbaresco ‘Asili’ Barbaresco 2019",
+			"s45": "rewritten",
+			"reason": "it opened on the vineyard and the cooperative rather than the wine as the list prints it, and it named the Roasted Chateaubriand, whose pairing does not name this wine",
+			"dishes": [
+				"Agnolotti del Plin"
+			]
+		},
+		{
+			"name": "Il Poggione Brunello di Montalcino 2018",
+			"s45": "rewritten",
+			"reason": "it opened on the appellation rather than the wine as the list prints it, and it named the Roasted Chateaubriand and the hanger steaks, whose pairings do not name this wine",
+			"dishes": []
+		}
+	]
+}
