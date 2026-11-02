@@ -127,6 +127,150 @@
 			"value": "Il Poggione Brunello di Montalcino 2018 is Sangiovese alone, grown around Sant’Angelo in Colle, a hamlet in the warm southern sector of Montalcino, south of Siena. It is aged in large oak casks and released only after five years, as Brunello must be. At eight years: dark cherry, plum, dried herbs, leather and a little balsamic warmth, with firm tannin and bright acidity. It wants beef and rich, savoury sauces, roast lamb and aged cheese. We decant it forty-five minutes to an hour ahead and pour it at 60 to 64°F in a large Bordeaux glass. The estate has been in one family since the late 1800s.",
 			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on the appellation rather than the wine as the list prints it, and it named the Roasted Chateaubriand and the hanger steaks, whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
 			"source": "research/producers-cellar-italy-2026-10-10.md section 5 (items 1, 3, 4 and 5: Sant’Angelo in Colle in the warm south, in one family since the late 1800s; all Sangiovese, large oak casks; Brunello released after five years; Montalcino a hill town south of Siena); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Dominio de Pingus ‘Flor de Pingus’ Ribera del Duero 2022",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Flor de Pingus is dark, concentrated Tinto Fino from high in Ribera del Duero: blackberry, black cherry, liquorice and graphite on dense, ripe tannin. For grilled steak, lamb or a big beef course, it comes by the bottle, decanted an hour ahead.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the plates its goesWith names (big meat: steak, lamb, beef) and leaves out the Roasted Chateaubriand and the Creole Hanger Steak; a 750 ml bottle with no glass price, so by the bottle, with the record’s decanting",
+			"source": "research/producers-cellar-spain-2026-10-10.md section 4 (items 1, 3 and 6: founded 1995; Flor de Pingus the second wine, from a wider set of La Horra parcels; Tinto Fino, biodynamically farmed, aged in French oak; Pingus made in tiny quantities); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Dominio de Pingus ‘Flor de Pingus’ Ribera del Duero 2022",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Dominio de Pingus Flor de Pingus Ribera del Duero 2022 is Tinto Fino, the local Tempranillo, from a wider set of parcels around La Horra, high on the plateau of Castilla y León. It is the estate’s second wine, farmed biodynamically and aged in French oak: young, dark and concentrated, with blackberry, black cherry, liquorice and graphite, ripe, dense tannin and a fresh line from the altitude. It wants big meat: grilled steak, lamb and roast beef. We decant it an hour ahead and pour it at 60 to 64°F in a large Bordeaux glass. The estate began in 1995, and Pingus itself is made in tiny amounts.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on the estate and named its founder, who is living, rather than opening on the wine as the list prints it, and it named the Roasted Chateaubriand and the Creole Hanger Steak, whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-spain-2026-10-10.md section 4 (items 1, 3 and 6: founded 1995; Flor de Pingus the second wine, from a wider set of La Horra parcels; Tinto Fino, biodynamically farmed, aged in French oak; Pingus made in tiny quantities); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:La Rioja Alta ‘Gran Reserva 904’ Rioja 2015",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Gran Reserva 904 is silky, long aged Rioja from Haro: dried cherry, strawberry, tobacco and sweet spice after about four years in American oak. It is the classic bottle for the Creole-Spiced Hanger Steak, poured by the bottle and decanted gently off its sediment.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the two sentence sale, a concrete hook then the table and the step; it names the Creole-Spiced Hanger Steak only as the classic, the tier that dish’s pairing gives this wine; a 750 ml bottle with no glass price, so by the bottle, with the record’s gentle decanting",
+			"source": "research/producers-cellar-spain-2026-10-10.md section 5 (items 1, 3 and 7: founded 1890 in the station quarter of Haro, the 904 marking the 1904 merger; Tempranillo with a little Graciano, about four years in American oak from the house’s own cooperage, then bottle); the wine record (profile, serve; the Creole-Spiced Hanger Steak pairing names it as the classic)"
+		},
+		{
+			"target": "wine:La Rioja Alta ‘Gran Reserva 904’ Rioja 2015",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "La Rioja Alta Gran Reserva 904 Rioja 2015 is Tempranillo with a little Graciano from Rioja Alta, made in the station quarter of Haro. It spends about four years in American oak barrels from the house’s own cooperage, then years in bottle before release: silky and savoury, with dried cherry, strawberry, tobacco, vanilla, leather and sweet spice, mellow tannin and a long finish. It is the classic bottle for the Creole-Spiced Hanger Steak, its spice meeting the Creole seasoning. We decant it gently twenty minutes ahead, leaving any sediment behind, and pour it at 60 to 64°F in a Bordeaux glass. The name marks the house’s merger in 1904.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on the house’s founding rather than the wine as the list prints it; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-spain-2026-10-10.md section 5 (items 1, 3 and 7: founded 1890 in the station quarter of Haro, the 904 marking the 1904 merger; Tempranillo with a little Graciano, about four years in American oak from the house’s own cooperage, then bottle); the wine record (profile, serve; the Creole-Spiced Hanger Steak pairing names it as the classic)"
+		},
+		{
+			"target": "wine:Bartolo Mascarello Barolo 2017",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "One Barolo, blended the old way from four vineyards, pale but powerful: sour cherry, rose, tar and liquorice over firm, fine tannin. It is the celebration bottle for the Agnolotti del Plin, poured by the bottle and decanted an hour ahead.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the two sentence sale, a concrete hook then the table and the step; it names the Agnolotti del Plin only as the celebration bottle, the splurge tier that dish’s pairing gives this wine, and leaves out the Roasted Chateaubriand, whose pairing does not name it; a 750 ml bottle with no glass price, so by the bottle, with the record’s decanting",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 6 (items 1, 2, 5 and 6: founded 1919; one Barolo blended from four sites in Barolo and La Morra on principle, fermented in cement, long maceration, large old Slavonian casks; Cannubi named on bottles in 1752); the wine record (profile, serve; the Agnolotti del Plin pairing names it as the splurge tier)"
+		},
+		{
+			"target": "wine:Bartolo Mascarello Barolo 2017",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Bartolo Mascarello Barolo 2017 is Nebbiolo grown across four vineyards of Barolo and La Morra, in the Langhe hills of Piedmont, blended into a single wine on principle. It is fermented in cement with long skin contact and aged in large old Slavonian oak casks: pale and powerful, with sour cherry, rose, tar, liquorice and dried herbs, high acidity and firm, fine tannin. It is the celebration bottle for the Agnolotti del Plin. We decant it an hour ahead and pour it at 60 to 64°F in a large Burgundy bowl. The cellar dates from 1919, and one of its sites, Cannubi, was named on bottles in 1752.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on the appellation rather than the wine as the list prints it, and it named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 6 (items 1, 2, 5 and 6: founded 1919; one Barolo blended from four sites in Barolo and La Morra on principle, fermented in cement, long maceration, large old Slavonian casks; Cannubi named on bottles in 1752); the wine record (profile, serve; the Agnolotti del Plin pairing names it as the splurge tier)"
+		},
+		{
+			"target": "wine:Gaja Barbaresco 2012",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Fourteen years on, Gaja’s Barbaresco is polished Nebbiolo: red cherry, rose, dried orange peel, tobacco and spice, refined and fresh. For a celebration dinner of beef or earthy, buttery plates, it comes by the bottle, decanted forty-five minutes ahead.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the plates its goesWith names (beef, earthy and buttery plates, a celebration dinner) and leaves out the Roasted Chateaubriand and Maggie’s Mushrooms; a 750 ml bottle with no glass price, so by the bottle, with the record’s decanting",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 7 (items 1, 2, 3 and 6: founded 1859; French oak, rigorous selection and low yields; the multi parcel Barbaresco still the house’s calling card; the house pushed Piedmont onto restaurant lists far outside Italy; Nebbiolo from the family’s vineyards in the village); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Gaja Barbaresco 2012",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Gaja Barbaresco 2012 is Nebbiolo grown in several of the family’s parcels around Barbaresco, in Piedmont: the blended wine that is still the house’s calling card. It is polished, from low yields with rigorous selection and French oak. At fourteen years it shows rose, red cherry and dried orange peel over tobacco and spice, the tannin refined and the acidity fresh. It wants beef, mushrooms and earthy, buttery plates at a celebration dinner. We decant it forty-five minutes ahead, leaving any sediment behind, and pour it at 60 to 64°F in a large Burgundy bowl. Founded in 1859, the house carried Piedmont onto restaurant lists far outside Italy.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on the appellation rather than the wine as the list prints it, and it named the Roasted Chateaubriand and Maggie’s Mushrooms, whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 7 (items 1, 2, 3 and 6: founded 1859; French oak, rigorous selection and low yields; the multi parcel Barbaresco still the house’s calling card; the house pushed Piedmont onto restaurant lists far outside Italy; Nebbiolo from the family’s vineyards in the village); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Biondi Santi Tenuta Greppo Brunello di Montalcino 2012",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "From the estate credited with creating Brunello, this Annata is fourteen years old: sour cherry, dried rose, leather, tobacco and earth, elegant rather than big. For roast beef, lamb or a long, slow dinner, it comes by the bottle, decanted forty-five minutes ahead.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the plates its goesWith names (roast beef and lamb, a long, slow dinner) and leaves out the Roasted Chateaubriand and Maggie’s Mushrooms; a 750 ml bottle with no glass price, so by the bottle, with the record’s decanting",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 8 (items 1, 2, 3 and 6: credited with creating Brunello in the nineteenth century at Tenuta Greppo; large old Slavonian botti with no new oak; Brunello means little dark one; the Greppo south-east of the town at roughly 500 m); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Biondi Santi Tenuta Greppo Brunello di Montalcino 2012",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Biondi Santi Tenuta Greppo Brunello di Montalcino 2012 is all Sangiovese from the Greppo estate south-east of Montalcino, where Brunello was created in the nineteenth century. This is the Annata, the Brunello of the year, aged in large old Slavonian oak casks. At fourteen years it is more elegant than powerful: dried rose, sour cherry, leather, earth and tobacco, with high acidity and fine, firm tannin. It suits roast beef, lamb and aged cheese. We decant it forty-five minutes ahead, leaving any sediment, and pour it at 60 to 64°F in a large Bordeaux glass. Brunello, the local name for the grape, means little dark one.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on the appellation and the family rather than the wine as the list prints it, and it named the Roasted Chateaubriand and Maggie’s Mushrooms, whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 8 (items 1, 2, 3 and 6: credited with creating Brunello in the nineteenth century at Tenuta Greppo; large old Slavonian botti with no new oak; Brunello means little dark one; the Greppo south-east of the town at roughly 500 m); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Tenuta San Guido ‘Sassicaia’ Bolgheri Sassicaia 2018",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Sassicaia, the wine that began the Super Tuscans, is Cabernet Sauvignon with Cabernet Franc from stony Bolgheri slopes: blackcurrant, cedar, graphite and violet, fine and firm. For beef or lamb at a celebration dinner, it comes by the bottle, decanted an hour ahead.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the plates its goesWith names (beef and lamb, a celebration dinner) and leaves out the Roasted Chateaubriand and the hanger steaks; a 750 ml bottle with no glass price, so by the bottle, with the record’s decanting",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 4 (items 1, 2, 3, 4 and 8: Cabernet planted in the 1940s on stony slopes; first sold with the 1968 vintage, made for the family table before; Bolgheri Sassicaia DOC since 2013, Italy’s only single estate denomination; Cabernet Sauvignon with Cabernet Franc, aged in French oak); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Tenuta San Guido ‘Sassicaia’ Bolgheri Sassicaia 2018",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Tenuta San Guido Sassicaia Bolgheri Sassicaia 2018 blends Cabernet Sauvignon and Cabernet Franc grown on stony slopes at Bolgheri, on the Tuscan coast. Aged in French oak, it has had an appellation of its own since 2013, the only one in Italy for a single estate. At eight years it is elegant: blackcurrant, cedar, graphite, herbs and violet, with fine, firm tannin and fresh acidity. It wants beef and lamb at a celebration dinner. We decant it an hour ahead and pour it at 60 to 64°F in a large Bordeaux glass. It was made only for the family table until its first sale, with the 1968 vintage.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on the estate and its family rather than the wine as the list prints it, and it named the Roasted Chateaubriand and the Creole Hanger Steak, whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 4 (items 1, 2, 3, 4 and 8: Cabernet planted in the 1940s on stony slopes; first sold with the 1968 vintage, made for the family table before; Bolgheri Sassicaia DOC since 2013, Italy’s only single estate denomination; Cabernet Sauvignon with Cabernet Franc, aged in French oak); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Antinori ‘Tignanello’ Toscana 2010",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Tignanello, one of the first Super Tuscans, is Sangiovese with the two Cabernets, now sixteen years old: dried cherry, plum, cedar, tobacco and leather. For roast beef, lamb or a slow celebration dinner, it comes by the bottle, decanted thirty minutes ahead.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the plates its goesWith names (roast beef and lamb, a slow celebration dinner) and leaves out the Roasted Chateaubriand and Maggie’s Mushrooms; a 750 ml bottle with no glass price, so by the bottle, with the record’s decanting",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 9 (items 1, 3 and 7: the family trading wine without a break since 1385; first sold as table wine from the 1971 vintage for its small French oak and a blend outside the rules, Cabernet written in with 1975; Sangiovese with Cabernet Sauvignon and Cabernet Franc in small oak barrels); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Antinori ‘Tignanello’ Toscana 2010",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Antinori Tignanello Toscana 2010 blends Sangiovese with Cabernet Sauvignon and Cabernet Franc grown in the Tignanello vineyard in the Chianti Classico hills. From its 1971 vintage, small French barrels and a blend outside the Chianti rules meant it was sold as table wine, and Cabernet joined with 1975. At sixteen years: dried cherry, plum, cedar, tobacco and leather, with polished tannin and lively acidity. It suits roast beef and lamb, mushrooms and aged cheese at a slow dinner. We decant it thirty minutes ahead, leaving any sediment, and pour it at 60 to 64°F in a large Bordeaux glass. The family has traded wine in Florence since 1385.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on Tignanello rather than the wine as the list prints it, and it named the Roasted Chateaubriand and Maggie’s Mushrooms, whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 9 (items 1, 3 and 7: the family trading wine without a break since 1385; first sold as table wine from the 1971 vintage for its small French oak and a blend outside the rules, Cabernet written in with 1975; Sangiovese with Cabernet Sauvignon and Cabernet Franc in small oak barrels); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Vega Sicilia ‘Único’ Ribera del Duero 2009",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Único rests about ten years in cask and bottle before release: dark cherry, plum, cedar, tobacco and sweet spice, layered and fresh at seventeen. For roast beef, lamb or aged cheese, it comes by the bottle, decanted up to an hour ahead.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the plates its goesWith names (roast beef and lamb, aged cheese, a slow celebration) and leaves out the Roasted Chateaubriand; a 750 ml bottle with no glass price, so by the bottle, with the record’s decanting",
+			"source": "research/producers-cellar-spain-2026-10-10.md section 6 (items 1, 2, 3 and 4: founded 1864 at Valbuena de Duero; long ageing in casks of several sizes and ages, then bottle, released resolved; a Bordeaux influenced red for over a century before Ribera del Duero became a DO in 1982; Único about ten years before release); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Vega Sicilia ‘Único’ Ribera del Duero 2009",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Vega Sicilia Único Ribera del Duero 2009 is led by Tinto Fino, the local Tempranillo, and Cabernet Sauvignon, from a single estate at Valbuena de Duero. It spends about ten years in casks of several sizes, then in bottle, before release: layered and fresh at seventeen, with dark cherry and plum, cedar, sweet spice and tobacco, fine tannin, lively acidity. It suits roast beef, lamb and aged cheese. We decant it forty-five minutes to an hour ahead, leaving any sediment, and pour it at 60 to 64°F in a large Bordeaux glass. Founded in 1864, the estate made this red for over a century before its denomination existed.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on the estate rather than the wine as the list prints it, and it named the Roasted Chateaubriand, whose pairing does not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-spain-2026-10-10.md section 6 (items 1, 2, 3 and 4: founded 1864 at Valbuena de Duero; long ageing in casks of several sizes and ages, then bottle, released resolved; a Bordeaux influenced red for over a century before Ribera del Duero became a DO in 1982; Único about ten years before release); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Ornellaia ‘Masseto’ Toscana 2011",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Masseto is pure Merlot from one hill of blue clay at Bolgheri: plum, black cherry, chocolate, truffle and spice over velvet tannin. For rich beef, truffle and mushrooms at a grand celebration, it comes by the bottle, decanted forty-five minutes ahead.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the two sentence sale, a concrete hook then the table and the step; no dish names this wine in its pairing, so the sale speaks of the plates its goesWith names (rich beef, truffle, mushrooms, a grand celebration) and leaves out the Roasted Chateaubriand and Maggie’s Mushrooms; a 750 ml bottle with no glass price, so by the bottle, with the record’s decanting",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 10 (items 1, 3 and 4: pure Merlot from a single hill of blue clay, first vintage 1986, first planted by Tenuta dell’Ornellaia; the clay holds water through a hot coastal summer, why Merlot behaves there as nowhere else in Tuscany; aged in new French oak); the wine record (profile, goesWith, serve; no dish pairing names it)"
+		},
+		{
+			"target": "wine:Ornellaia ‘Masseto’ Toscana 2011",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Ornellaia Masseto Toscana 2011 is pure Merlot grown on a single hill of blue clay at Bolgheri, near the Tuscan coast. The clay holds water through the hot coastal summer, which shapes the Merlot as nowhere else in Tuscany, and the wine is aged in new French oak. At fifteen years it is opulent: plum, black cherry, chocolate, truffle and spice, with velvet tannin and a long finish. It wants rich beef, truffle and mushrooms. We decant it forty-five minutes ahead, leaving any sediment, and pour it at 60 to 64°F in a large Bordeaux glass. Tenuta dell’Ornellaia first planted the hill, and the first vintage was 1986.",
+			"reason": "Five-star card edition, sale-9 (Italy and Spain): the description was rewritten because it opened on Masseto rather than the wine as the list prints it, and it named the Roasted Chateaubriand and Maggie’s Mushrooms, whose pairings do not name this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record's serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line",
+			"source": "research/producers-cellar-italy-2026-10-10.md section 10 (items 1, 3 and 4: pure Merlot from a single hill of blue clay, first vintage 1986, first planted by Tenuta dell’Ornellaia; the clay holds water through a hot coastal summer, why Merlot behaves there as nowhere else in Tuscany; aged in new French oak); the wine record (profile, goesWith, serve; no dish pairing names it)"
 		}
 	]
 }
