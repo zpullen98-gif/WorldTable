@@ -223,6 +223,102 @@
 			"value": "Cakebread Cellars Chardonnay Napa Valley 2023 comes from a family winery in Rutherford, in the heart of the Napa Valley, and it is a name many guests know and ask for. It is made the classic Napa way, with some oak, so it tastes of ripe pear and apple, with citrus and a little vanilla, round and polished, its fresh acidity keeping it balanced. That roundness suits butter, crab and cream, the richer plates of the house. We pour it at 50 to 54°F in a white Burgundy bowl or a large white wine glass, briefly in the ice bucket. The winery was founded in 1973.",
 			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the winery and its founders rather than the wine and named the Pecan Gulf Fish, the Louisiana Crab Claws, the Louisiana BBQ Lobster and the Poussin à la Moutarde, none of whose pairings names this wine; it carried no line of story beyond the founding; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
 			"source": "research/producers-cellar-napa-sonoma-2026-10-10.md section 6 (items 1, 2 and 4: a family winery in Rutherford founded in 1973, made with some oak, a classic Napa style many guests know and ask for); the wine record (profile, serve, goesWith: butter, crab and cream; no dish pairing names it, so no dish is named)"
+		},
+		{
+			"target": "wine:Albert Boxler Pinot Gris 2020",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Albert Boxler Pinot Gris is rich Alsace white from a small domaine above Colmar: ripe pear, quince, honey and a wisp of smoke. It is the classic bottle for the Duck Confit Waffle, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 2 (items 1 to 3: a small family domaine in Niedermorschwihr above Colmar, intense and precise wines, Alsace Pinot Gris richer and more aromatic than Italian Pinot Grigio, Pinot Gris with foie gras a classic Alsace pairing, the Brand and Sommerberg grand crus); the wine record (profile, serve, offeredWith: classic for the Duck Confit Waffle)"
+		},
+		{
+			"target": "wine:Albert Boxler Pinot Gris 2020",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Albert Boxler Pinot Gris 2020 comes from a small family domaine in Niedermorschwihr, in the hills above Colmar in Alsace. The grape is the one Italy calls Pinot Grigio, but Alsace makes it richer and more aromatic: ripe pear, quince, honey, smoke and a gentle spice, with the acidity to balance its weight. Pinot Gris with foie gras is a classic of Alsace, so it is the classic bottle for the Duck Confit Waffle, with its foie gras butter. We pour it at 48 to 52°F in a white wine glass, briefly in the ice bucket. The domaine also bottles grand crus from the Brand and the Sommerberg.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the domaine rather than the wine, called it \"our bottle\" without its tier, named the Roasted Rohan Duck Breast, the Cheese Board and the Pecan Gulf Fish, none of whose pairings names this wine, hedged its sweetness to the sommelier and carried no clause on how it is made; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 2 (items 1 to 3: a small family domaine in Niedermorschwihr above Colmar, intense and precise wines, Alsace Pinot Gris richer and more aromatic than Italian Pinot Grigio, Pinot Gris with foie gras a classic Alsace pairing, the Brand and Sommerberg grand crus); the wine record (profile, serve, offeredWith: classic for the Duck Confit Waffle)"
+		},
+		{
+			"target": "wine:Gaia ‘Wild Ferment’ Assyrtiko Santorini 2023",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Wild Ferment is Assyrtiko from volcanic Santorini, bone dry and salty, with lemon, flint and white flowers over piercing acidity. It is the classic bottle for the Gulf Fish en Papillote, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 10 (items 2 to 4: kouloura baskets against the wind, pumice soils phylloxera never reached, ungrafted vines, the Wild Ferment fermented with indigenous yeasts and part aged in steel, oak, acacia and ceramic); the wine record (profile, serve, offeredWith: classic for the Gulf Fish en Papillote)"
+		},
+		{
+			"target": "wine:Gaia ‘Wild Ferment’ Assyrtiko Santorini 2023",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Gaia ‘Wild Ferment’ Assyrtiko Santorini 2023 comes from the volcanic Greek island where vines are trained low into baskets against the salt wind, and many grow on their own roots, since phylloxera never reached the pumice soils. It is fermented with indigenous yeasts and aged partly in steel, oak, acacia and ceramic: lemon, salt, flint and white flowers, bone dry, with piercing acidity and a savoury depth. Its salt and acidity meet the olives and tomato, so it is the classic bottle for the Gulf Fish en Papillote. We pour it at 46 to 50°F in a white wine glass. The basket training is called kouloura.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the island rather than the wine, called it \"our bottle\" without its tier, and named the Grand Isle Jewel Oysters, the Creole Caesar and the Redfish Véronique, none of whose pairings names this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-central-coast-oregon-world-2026-10-10.md section 10 (items 2 to 4: kouloura baskets against the wind, pumice soils phylloxera never reached, ungrafted vines, the Wild Ferment fermented with indigenous yeasts and part aged in steel, oak, acacia and ceramic); the wine record (profile, serve, offeredWith: classic for the Gulf Fish en Papillote)"
+		},
+		{
+			"target": "wine:Domaine Tempier Bandol Rosé 2024",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Tempier is the reference estate of Bandol, and its rosé is Mourvèdre-led, dry and savoury, with wild strawberry, blood orange and garrigue herbs. It is the classic bottle for the Creole Tomato Tostada and the Fish Bouillabaisse, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 3 (items 1, 3, 5 and 6: Lulu Peyraud died in 2020 aged 102, her kitchen made it a pilgrimage, Mourvèdre needs heat and a long season, the rosé Mourvèdre-led with Grenache and Cinsault and built to age, between Marseille and Toulon); research/bottle-selection-2026-10-04.json dish 8 classic tier (smoked tomato water); the wine record (profile, serve, offeredWith: classic for the Creole Tomato Tostada and the Fish Bouillabaisse)"
+		},
+		{
+			"target": "wine:Domaine Tempier Bandol Rosé 2024",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Tempier Bandol Rosé 2024 is Mourvèdre-led, with Grenache and Cinsault, grown on the coast between Marseille and Toulon, where Mourvèdre finds the heat and long season it needs. It is made to age: wild strawberry, blood orange, garrigue herbs and a savoury, saline depth, dry, with more body than ordinary rosé. That body stands up to smoked tomato and a rich broth, so it is the classic bottle for the Fish Bouillabaisse and the Creole Tomato Tostada. We pour it at 48 to 52°F in a white wine glass, never ice cold. Lulu Peyraud, whose Provençal cooking made the estate a pilgrimage, died in 2020 aged 102.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the founders' story rather than the wine, called it \"our bottle\" without its tier, named the Louisiana Crab Claws, the Gulf Fish en Papillote and the Cheese Board, none of whose pairings names this wine, and used a superlative (\"more body than most rosé\"); it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-provence-loire-2026-10-10.md section 3 (items 1, 3, 5 and 6: Lulu Peyraud died in 2020 aged 102, her kitchen made it a pilgrimage, Mourvèdre needs heat and a long season, the rosé Mourvèdre-led with Grenache and Cinsault and built to age, between Marseille and Toulon); research/bottle-selection-2026-10-04.json dish 8 classic tier (smoked tomato water); the wine record (profile, serve, offeredWith: classic for the Creole Tomato Tostada and the Fish Bouillabaisse)"
+		},
+		{
+			"target": "wine:J.J. Prüm ‘Wehlener Sonnenuhr’ Riesling Kabinett 2020",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "This Kabinett comes from the Wehlen vineyard named for its 1842 sundial: lightly sweet and low in alcohol, green apple, peach and slate, racy and delicate. It is the classic bottle for the Seafood Gumbo and the Tuna Crudo, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 8 (items 1, 2 and 4: Jodocus Prüm built the sundial in 1842, the vineyard named for it, blue Devonian slate, faintly spritzy in youth); the wine record (profile, serve, offeredWith: classic for the Seafood Gumbo and the Tuna Crudo)"
+		},
+		{
+			"target": "wine:J.J. Prüm ‘Wehlener Sonnenuhr’ Riesling Kabinett 2020",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "J.J. Prüm ‘Wehlener Sonnenuhr’ Riesling Kabinett 2020 comes from steep blue Devonian slate at Wehlen, on the Mosel. Kabinett is the first rung of Germany’s ripeness ladder, and the estate makes it lightly sweet and low in alcohol, with a little spritz when young: green apple, peach, lime and slate, delicate and racy. Its sweetness cools the spice and its acidity refreshes after the roux, so it is the classic bottle for the Seafood Gumbo and the Tuna Crudo. We pour it at 45 to 48°F in a white wine glass. The vineyard is named for the sundial Jodocus Prüm built there in 1842.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the sundial's story rather than the wine, called it \"our bottle\" without its tier, named the New Orleans Shrimp & Grits, the Popcorn Shrimp and the Louisiana Crab Claws, none of whose pairings names this wine, and used a superlative (\"the lightest\"); it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-alsace-jura-mosel-2026-10-10.md section 8 (items 1, 2 and 4: Jodocus Prüm built the sundial in 1842, the vineyard named for it, blue Devonian slate, faintly spritzy in youth); the wine record (profile, serve, offeredWith: classic for the Seafood Gumbo and the Tuna Crudo)"
+		},
+		{
+			"target": "wine:Domaine Huet ‘Clos du Bourg’ Vouvray Demi-Sec 2015",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Clos du Bourg 2015 is demi-sec Vouvray with a decade in bottle: honey, quince, baked apple and beeswax, gently sweet and lifted by bright acidity. Offer it by the bottle with cheese, honey or baked fruit.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-sparkling-elsewhere-2026-10-10.md section 9 (items 3 to 5: Gaston Huet, who died in 2002, Clos du Bourg added in 1953, all Chenin made sec, demi-sec, moelleux and sparkling, biodynamic since 1990); research/bottle-facts-cards-c-2026-10-04.json (the Clos du Bourg a walled vineyard in the heart of Vouvray, demi-sec half dry); the wine record (profile, serve, goesWith: cheese and honey; no dish pairing names it, so no dish is named)"
+		},
+		{
+			"target": "wine:Domaine Huet ‘Clos du Bourg’ Vouvray Demi-Sec 2015",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Domaine Huet ‘Clos du Bourg’ Vouvray Demi-Sec 2015 is Chenin Blanc from a walled vineyard in the heart of Vouvray, on the Loire near Tours, farmed biodynamically. Demi-sec means half dry, one of the four styles the estate makes from Chenin, and this 2015 has a decade in bottle: honey, quince, baked apple, beeswax and chamomile, gently sweet, held up by bright acidity. That balance suits cheese and honey, and baked fruit at the end of a meal. We pour it at 48 to 52°F in a white wine glass, not too cold. Gaston Huet added the Clos du Bourg to the estate in 1953.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the estate's founding rather than the wine, called it a first pick for the Cheese Board though no dish's pairing names this wine, and named the Baked Apple, the Duck Confit Waffle and the New Orleans Bread Pudding with no pairing link; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-sparkling-elsewhere-2026-10-10.md section 9 (items 3 to 5: Gaston Huet, who died in 2002, Clos du Bourg added in 1953, all Chenin made sec, demi-sec, moelleux and sparkling, biodynamic since 1990); research/bottle-facts-cards-c-2026-10-04.json (the Clos du Bourg a walled vineyard in the heart of Vouvray, demi-sec half dry); the wine record (profile, serve, goesWith: cheese and honey; no dish pairing names it, so no dish is named)"
+		},
+		{
+			"target": "wine:Bründlmayer ‘Alte Reben’ Grüner Veltliner 2023",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Alte Reben means old vines, and this Kamptal Grüner Veltliner is fuller for it: ripe pear, citrus and white pepper, dry, with a long finish. It is the classic bottle for the Eggs Sardou, poured by the bottle.",
+			"reason": "Five-star card edition, sale-6 (Other whites): the two sentence sale, a concrete hook then the table and the step; the dishes named are only those whose pairing names this wine (first pick, second choice or a bottle tier), and the step is the record's own (a 750 ml bottle with no glass price, so by the bottle)",
+			"source": "research/producers-cellar-germany-austria-2026-10-10.md section 4 (items 1, 2 and 4: a family estate in Langenlois, a major holder of the Zöbinger Heiligenstein, Permian desert sandstone, the Kamptal following the little Kamp river to Langenlois); research/bottle-selection-2026-10-04.json, the Eggs Sardou classic tier; the wine record (profile, serve, offeredWith: classic for the Eggs Sardou)"
+		},
+		{
+			"target": "wine:Bründlmayer ‘Alte Reben’ Grüner Veltliner 2023",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Bründlmayer ‘Alte Reben’ Grüner Veltliner 2023 comes from a family estate in Langenlois, in Austria’s Kamptal. Alte Reben means old vines, and the wine is made fuller and more textured than a classic Grüner: ripe pear, citrus, white pepper and a savoury note, dry, with a long finish. Grüner handles artichokes, which upset many wines, and its texture meets the Choron sauce, so it is the classic bottle for the Eggs Sardou. We pour it at 48 to 52°F in a white wine glass, briefly in the ice bucket. The estate is a major holder of the Heiligenstein, a hill of ancient desert sandstone.",
+			"reason": "Five-star card edition, sale-6: the description was rewritten because it opened on the estate rather than the wine, called it \"our bottle\" without its tier, and named the Poussin à la Moutarde, the Louisiana Crab Claws and the Redfish Véronique, none of whose pairings names this wine; it now opens on the wine as the list prints it, names grape and place, says how it is made, how it tastes, the linked dishes only, the record's serve and one line of story from the research, with no living person named and no run of eight words shared with the 20 second line",
+			"source": "research/producers-cellar-germany-austria-2026-10-10.md section 4 (items 1, 2 and 4: a family estate in Langenlois, a major holder of the Zöbinger Heiligenstein, Permian desert sandstone, the Kamptal following the little Kamp river to Langenlois); research/bottle-selection-2026-10-04.json, the Eggs Sardou classic tier; the wine record (profile, serve, offeredWith: classic for the Eggs Sardou)"
 		}
 	]
 }
