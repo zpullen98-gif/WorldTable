@@ -1,0 +1,1256 @@
+{
+  "dish": "Steak Tartare with Rye",
+  "id": "d-jlc7ybty",
+  "readOn": "2026-11-15",
+  "sheet": {
+    "source": "tools/house/brennans/research/menu-2026-11-15-sheets.md, section A1",
+    "title": "Steak Tartare with Rye",
+    "replaces": "The Steak Tartare Cannoli (d-0w2k5cdm), which moves to the past menu items.",
+    "ingredients": [
+      "Raw Beef Tenderloin",
+      "Tartare Dressing (egg yolk, dijon, caper, shallot, hot sauce, parsley, black pepper)",
+      "Montreal Seasoning (Black pepper, carraway, coriander, chili flake, mustard seed)",
+      "Vital Farms Egg Yolk",
+      "Rye Tuile"
+    ],
+    "allergens": [
+      "Egg",
+      "Gluten"
+    ],
+    "chefFactsHeading": "Fun Facts With [the chef]",
+    "chefFacts": [
+      "Montreal steak spice originated in the 1940s at Schwartz's Hebrew Delicatessan when a cook used his deli's traditional smoked-meat pickling spices on a steak for his lunch",
+      "In the late 1800's, steak tartare was originally called beefsteak a L'Americaine before a version was created by Auguste Escoffier using tartar sauce, leading to the name a la tartare",
+      "Vital Farms is a collection of small egg farms that share practices of ethical farming",
+      "Rye is a grain which is closely related to wheat known for its earthy, nutty flavor"
+    ],
+    "note": "As printed, spelling included (Delicatessan, carraway, a L'Americaine). The printed heading names the chef; here he is the chef. The sheet prints no price, no cut, no portion, no recipe and no word on whether the yolk is raw. The allergen list is the same, word for word, as the October sheet's, and it belongs in the service note only."
+  },
+  "chefFacts": [
+    {
+      "fact": "Montreal steak spice originated in the 1940s at Schwartz's Hebrew Delicatessan when a cook used his deli's traditional smoked-meat pickling spices on a steak for his lunch",
+      "verdict": "loosely true",
+      "whatSourcesSay": "This is the story Montreal tells, and two sources carry it, but it is the deli's lore and not a dated record. The account: a broilerman at Schwartz's, known as The Shadow, working there in the 1940s and 1950s, began putting the deli's smoked meat pickling spices on his own rib and liver steaks; customers asked for the same, and other Montreal delis and steakhouses took it up. CBC credits the same man with popularizing the mix and counts more than 70 years of it, yet says only he knows the real origins. Schwartz's own history page tells of the 1928 founding and the smoked meat and does not tell this story. So the place and the pickling spice link stand; the date is a pair of decades, the 1940s and 1950s, not a year; and 'for his lunch' is the sheet's way of saying his own steaks. The deli's formal name is the Montreal Hebrew Delicatessen. Beside the chef's words: the sources agree on Schwartz's and the smoked meat spices and put it in the 1940s and 1950s; nobody has a record of the day.",
+      "sourceIds": [
+        "wikipedia-montreal-steak-seasoning",
+        "wikipedia-schwartzs",
+        "cbc-steak-spice",
+        "schwartzs-about"
+      ]
+    },
+    {
+      "fact": "In the late 1800's, steak tartare was originally called beefsteak a L'Americaine before a version was created by Auguste Escoffier using tartar sauce, leading to the name a la tartare",
+      "verdict": "loosely true",
+      "whatSourcesSay": "The name history stands; 'created by Escoffier' does not. Britannica puts raw chopped beef on a few French bistro and restaurant menus in the late 19th century under the name à l'Américaine, in the American style, presumably because the French believed Americans ate meat raw (Wikipedia dates the name to the early twentieth century). Escoffier's Le Guide Culinaire of 1903 prints both dishes: Beefsteak à l'Américaine, chopped fillet with a raw egg yolk and with capers, onion and parsley apart, and Beefsteak à la Tartare, the same without the yolk, with tartar sauce served on the side. So the name does come from the sauce: steak à la tartare means steak served with tartar sauce, later shortened to steak tartare. What no source shows is that Escoffier created that version. His book records it, and a Hamburg steak à la tartare was already in print in The Epicurean of 1894, the book of a New York restaurant chef. The turn worth knowing: the tartare served today, with the yolk, is Escoffier's à l'Américaine wearing the other dish's name. By the Larousse Gastronomique of 1938, steak tartare meant raw beef with a raw yolk and no tartar sauce at all. Beside the chef's words: Escoffier wrote both versions down in 1903; the sauce gave the name; nobody can name the inventor.",
+      "sourceIds": [
+        "britannica-steak-tartare",
+        "escoffier-1903",
+        "wikipedia-tartar-sauce",
+        "wikipedia-steak-tartare",
+        "cooksinfo-steak-tartare",
+        "epicurean-1894-transcription",
+        "merriam-webster-steak-tartare"
+      ]
+    },
+    {
+      "fact": "Vital Farms is a collection of small egg farms that share practices of ethical farming",
+      "verdict": "loosely true",
+      "whatSourcesSay": "A fair short form, as long as nobody hears a farmers' cooperative. Vital Farms is a company: founded in 2007 near Austin, Texas, with 20 hens, its shares on the Nasdaq since 2020, a Certified B Corporation. It keeps no single great flock. It buys from a network of contracted small family farms, 575 of them by its own count in November 2025 and more than 600 by the end of that year, each held to the company's pasture-raised standard: at least 108 square feet of outdoor pasture a hen, the Certified Humane figure. So the farms do share one set of practices, because the company sets it. One thing a server needs from the producer's own page: Vital Farms says its eggs in the shell are not pasteurized.",
+      "sourceIds": [
+        "vital-farms-q3-2025",
+        "marketbeat-vital-farms-q4",
+        "repo-vital-farms-2026-10-06",
+        "vital-farms-eggs",
+        "vital-farms-faq"
+      ]
+    },
+    {
+      "fact": "Rye is a grain which is closely related to wheat known for its earthy, nutty flavor",
+      "verdict": "true",
+      "whatSourcesSay": "Rye, Secale cereale, sits in the same grass tribe as wheat and barley, the Triticeae, and is close enough to wheat that the two cross: the hybrid is triticale. A flour miller describes its flavor as earthy and malty; 'nutty' is common tasting language that today's sources did not print, so earthy is the sourced word. Two things to add at the table. The anise-like taste people call rye in a deli loaf is caraway seed, not the grain, and caraway is in this plate's Montreal seasoning, so the tuile and the spice echo each other. And rye is a gluten grain, lower in gluten than wheat but not without it; the sheet marks Gluten, and dietary questions go to the service note and the kitchen.",
+      "sourceIds": [
+        "wikipedia-rye",
+        "nwe-rye",
+        "king-arthur-rye",
+        "amherst-spices",
+        "sheet-2026-11-15"
+      ]
+    }
+  ],
+  "classic": {
+    "origin": {
+      "text": "France, on restaurant and bistro menus, from the late 19th century (Britannica) or the early twentieth (Wikipedia), under the name beefsteak à l'Américaine. The first firmly documented recipe is in Escoffier's Le Guide Culinaire, 1903. In English the words steak tartare are first recorded in 1911, and by the Larousse Gastronomique of 1938 the name meant the dish known today: raw beef with a raw egg yolk.",
+      "sourceIds": [
+        "britannica-steak-tartare",
+        "wikipedia-steak-tartare",
+        "escoffier-1903",
+        "merriam-webster-steak-tartare"
+      ]
+    },
+    "name": {
+      "text": "Tartare is the French for Tartar, the old European name for the Tatar peoples of Central Asia; the word came into French from Medieval Latin Tartarus, a reshaping of Persian Tātār. On a French menu à la tartare first meant 'with tartar sauce', and steak à la tartare was shortened to steak tartare. The tale that Tatar or Mongol horsemen tenderized raw meat under their saddles and ate it is a legend: the account behind it has the meat laid under the saddle to ease the horse's sores. À l'Américaine means in the American style.",
+      "sourceIds": [
+        "merriam-webster-steak-tartare",
+        "merriam-webster-tartar",
+        "britannica-steak-tartare",
+        "wikipedia-steak-tartare",
+        "takeout-warrior-myth"
+      ]
+    },
+    "sayIt": "steak tar-TAR",
+    "credited": {
+      "text": "Nobody. No source names an inventor. Auguste Escoffier (1846 to 1935) fixed both early versions in print in 1903 and is credited with recording them, not with creating them. Charles Ranhofer, the chef tied to Delmonico's in New York, had a Hamburg steak à la tartare in his book The Epicurean in 1894, nine years earlier.",
+      "sourceIds": [
+        "escoffier-1903",
+        "britannica-steak-tartare",
+        "cooksinfo-steak-tartare",
+        "epicurean-1894-transcription",
+        "wikipedia-hamburg-steak",
+        "repo-cuisine"
+      ]
+    },
+    "story": [
+      {
+        "text": "Raw chopped beef began to appear on a few French bistro and restaurant menus in the late 19th century and became common in the early 20th.",
+        "sourceIds": [
+          "britannica-steak-tartare"
+        ]
+      },
+      {
+        "text": "Its first menu name was à l'Américaine, in the American style, presumably because popular belief in France held that Americans ate their meat raw. Wikipedia agrees on the name and places it in the early twentieth century.",
+        "sourceIds": [
+          "britannica-steak-tartare",
+          "wikipedia-steak-tartare"
+        ]
+      },
+      {
+        "text": "The American thread is the Hamburg steak, chopped beef that was a New York fashion: the oldest English document to name it is a Delmonico's menu of 1873, and The Epicurean of 1894, by that house's chef Charles Ranhofer, prints a Hamburg steak of chopped tenderloin with an à la tartare version. One source calls that version raw; the entry itself was not read today.",
+        "sourceIds": [
+          "wikipedia-hamburg-steak",
+          "cooksinfo-steak-tartare",
+          "epicurean-1894-transcription"
+        ]
+      },
+      {
+        "text": "Escoffier's Le Guide Culinaire of 1903 prints two neighbors. Beefsteak à l'Américaine: finely chopped fillet, a raw egg yolk on top, capers, chopped onion and parsley served apart. Beefsteak à la Tartare: the same beef without the yolk, with sauce tartare served separately. Wikipedia's steak tartare article cites the same definition from the 1921 edition, a later edition of the same book.",
+        "sourceIds": [
+          "escoffier-1903",
+          "wikipedia-tartar-sauce",
+          "wikipedia-steak-tartare"
+        ]
+      },
+      {
+        "text": "The tartar sauce of 1903 was not today's pickle and mayonnaise: Escoffier worked hard-boiled egg yolks to a paste, mounted them with oil and vinegar, and finished with a puree of green onion or chives and a little mayonnaise.",
+        "sourceIds": [
+          "wikipedia-tartar-sauce",
+          "repo-cuisine"
+        ]
+      },
+      {
+        "text": "Steak à la tartare, literally steak served with tartar sauce, was shortened to steak tartare; Merriam-Webster's first known use of the English words is 1911.",
+        "sourceIds": [
+          "wikipedia-steak-tartare",
+          "merriam-webster-steak-tartare"
+        ]
+      },
+      {
+        "text": "Over time the difference between the two dishes disappeared. The Larousse Gastronomique of 1938 describes steak tartare as raw ground beef served with a raw egg yolk, with no mention of tartar sauce; a French children's encyclopedia calls that the oldest surviving recipe under the name.",
+        "sourceIds": [
+          "wikipedia-steak-tartare",
+          "vikidia-steak-tartare"
+        ]
+      },
+      {
+        "text": "So the plate a guest knows as steak tartare (chopped raw beef, a yolk, capers, onion or shallot, parsley, mustard) is the à l'Américaine build under the tartare name. Britannica gives the classic as chopped raw beefsteak bound by raw egg yolk and seasoned with mustard, capers and other ingredients.",
+        "sourceIds": [
+          "britannica-steak-tartare",
+          "escoffier-1903",
+          "wikipedia-steak-tartare"
+        ]
+      },
+      {
+        "text": "Ours follows that classic: the seven things in the sheet's dressing are the old garnishes folded into one binder, with a second yolk served whole. What is new is the Montreal seasoning and the rye tuile in place of toast.",
+        "sourceIds": [
+          "sheet-2026-11-15",
+          "escoffier-1903"
+        ]
+      }
+    ]
+  },
+  "method": {
+    "note": "This is the classic as cooks make it, for understanding the plate. It is not the house recipe: the sheet prints no method, and how the kitchen cuts, dresses and plates is the chef's answer (the pack already carries those lineup asks).",
+    "steps": [
+      {
+        "step": 1,
+        "text": "Start from a whole piece of beef, never bought mince. Tenderloin (filet) is the classic choice; French recipes name rump (rumsteck) first or beside it, and one kitchen guide allows sirloin. The sources disagree on the cut, not on the rule that it is a whole muscle cut fresh.",
+        "basis": "sourced",
+        "sourceIds": [
+          "saveur-tartare",
+          "french-recipes",
+          "kitchennmbrs-tartaar"
+        ]
+      },
+      {
+        "step": 2,
+        "text": "Trim away every bit of fat, sinew and silver skin, so nothing chewy survives into a dish that gets no cooking.",
+        "basis": "kitchen practice recorded in the repository's earlier dossier; not sourced again today",
+        "sourceIds": [
+          "repo-pack"
+        ]
+      },
+      {
+        "step": 3,
+        "text": "Firm the beef in the freezer until it is stiff but not frozen. Recipes differ: 15 to 20 minutes, about 40, or 30 to 45. A cold, firm piece cuts cleanly and stays cold while it is worked.",
+        "basis": "sourced",
+        "sourceIds": [
+          "food52-tartare",
+          "mashed-freeze"
+        ]
+      },
+      {
+        "step": 4,
+        "text": "Cut by hand with a sharp knife: slices, then matchsticks, then a fine, even dice of 3 to 5 mm. There are two schools, hand chopping for texture and grinding so the meat does not warm; the writers and the chef found here hand cut.",
+        "basis": "sourced",
+        "sourceIds": [
+          "food52-tartare",
+          "takeout-tartare",
+          "kitchennmbrs-tartaar"
+        ]
+      },
+      {
+        "step": 5,
+        "text": "Keep it very cold the whole time: back under refrigeration between steps, at 5°C (41°F) or less, the Food Code's cold holding line.",
+        "basis": "sourced",
+        "sourceIds": [
+          "takeout-tartare",
+          "fda-food-code-2022"
+        ]
+      },
+      {
+        "step": 6,
+        "text": "Make the dressing. The yolk and the mustard are the binder (a yolk's lecithin is the emulsifier); into it go finely chopped shallot or onion, capers and parsley, black pepper, and the hot seasoning: a few drops of Tabasco and a dash of Worcestershire in the French classics, and in one recipe a little ketchup. The sheet's version: egg yolk, Dijon, caper, shallot, hot sauce, parsley, black pepper.",
+        "basis": "sourced",
+        "sourceIds": [
+          "britannica-steak-tartare",
+          "french-recipes",
+          "repo-cuisine",
+          "sheet-2026-11-15"
+        ]
+      },
+      {
+        "step": 7,
+        "text": "Dress at the last moment. Either fold the dressing through the beef in the kitchen, or serve it the old way Escoffier printed it: the beef plated with the yolk on top and the garnishes apart, mixed at the table.",
+        "basis": "the two builds are sourced; 'at the last moment' is kitchen practice from the repository's earlier dossier",
+        "sourceIds": [
+          "escoffier-1903",
+          "repo-pack"
+        ]
+      },
+      {
+        "step": 8,
+        "text": "Taste, correct the seasoning, shape, set the yolk on top and serve at once with something crisp: toast or fries in a brasserie, the rye tuile here. A mixed tartare is never held or stored.",
+        "basis": "sourced",
+        "sourceIds": [
+          "kitchennmbrs-tartaar",
+          "repo-pack",
+          "sheet-2026-11-15"
+        ]
+      }
+    ],
+    "ratios": [
+      {
+        "text": "Beef: 150 to 200 g a person as a main course in the French recipes found (600 g of rump for four in one, 200 g for one in another). A starter is smaller; the house portion is not printed.",
+        "sourceIds": [
+          "french-recipes"
+        ]
+      },
+      {
+        "text": "Yolk: one a person.",
+        "sourceIds": [
+          "french-recipes",
+          "escoffier-1903"
+        ]
+      },
+      {
+        "text": "For four: 2 shallots, 4 tablespoons of chopped flat parsley, 1 to 2 tablespoons of capers, 2 tablespoons of Dijon mustard, a dash of Worcestershire sauce and a few drops of Tabasco (optional); one recipe adds 2 tablespoons of ketchup.",
+        "sourceIds": [
+          "french-recipes"
+        ]
+      },
+      {
+        "text": "Dice: 3 to 5 mm cubes.",
+        "sourceIds": [
+          "kitchennmbrs-tartaar"
+        ]
+      },
+      {
+        "text": "Caution on all four: these are orders of magnitude from general recipe pages, not from Larousse or Escoffier (the 1903 page gives no weights in what was read), and not the house's proportions.",
+        "sourceIds": [
+          "french-recipes"
+        ]
+      }
+    ],
+    "temps": [
+      {
+        "text": "Cold holding: 5°C (41°F) or less, FDA Food Code 3-501.16.",
+        "sourceIds": [
+          "fda-food-code-2022"
+        ]
+      },
+      {
+        "text": "Freezer firming before the cut: 15 to 45 minutes, firm but not frozen (recipes differ).",
+        "sourceIds": [
+          "food52-tartare",
+          "mashed-freeze"
+        ]
+      },
+      {
+        "text": "There is no cooking step. The USDA's kill step for ground beef is 160°F, and a tartare never gets it, which is why the dish is served only at the guest's choice and under the consumer advisory.",
+        "sourceIds": [
+          "fsn-raw-beef",
+          "wpxi-usda-raw-beef",
+          "fda-food-code-2022"
+        ]
+      },
+      {
+        "text": "The first pick wine is poured at 55 to 58°F (the pack's figure, not researched again here).",
+        "sourceIds": [
+          "repo-pack"
+        ]
+      }
+    ],
+    "faults": [
+      {
+        "fault": "Pasty, smeared, gray beef",
+        "cause": "Put through a grinder or chopped until it warms, so the cut edges smear instead of staying clean dice.",
+        "basis": "the hand cut preference is sourced; 'pasty and gray' is the repository's earlier kitchen note",
+        "sourceIds": [
+          "food52-tartare",
+          "takeout-tartare",
+          "repo-pack"
+        ]
+      },
+      {
+        "fault": "Warm or sweating beef",
+        "cause": "Not firmed in the cold before cutting, or left out between steps.",
+        "basis": "sourced",
+        "sourceIds": [
+          "food52-tartare",
+          "takeout-tartare"
+        ]
+      },
+      {
+        "fault": "Chewy bits",
+        "cause": "Sinew or silver skin left in, or a dice cut too large.",
+        "basis": "kitchen practice; not sourced today",
+        "sourceIds": [
+          "repo-pack"
+        ]
+      },
+      {
+        "fault": "Tired, wet tartare",
+        "cause": "Mixed ahead and held. A dressed tartare is made to order and never stored.",
+        "basis": "sourced (one weak source, plus the repository note on seasoning at the last moment)",
+        "sourceIds": [
+          "kitchennmbrs-tartaar",
+          "repo-pack"
+        ]
+      },
+      {
+        "fault": "All mustard and heat, no beef",
+        "cause": "Too heavy a hand with the Dijon, hot sauce or spice hides a mild cut; pairing writers make the same point about wine, that a tartare is easily overwhelmed.",
+        "basis": "kitchen judgment; the wine parallel is sourced",
+        "sourceIds": [
+          "mfw-tartare"
+        ]
+      },
+      {
+        "fault": "A soft tuile",
+        "cause": "A tuile is crisp because it is thin and rich in fat; one that has picked up moisture bends instead of snapping.",
+        "basis": "what makes a tuile crisp is sourced; the fault is kitchen knowledge, not sourced today",
+        "sourceIds": [
+          "masterclass-tuile"
+        ]
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Raw beef tenderloin",
+      "what": "The tenderloin is the long, lean muscle along the inside of the backbone, the most tender cut on the animal because it does almost no work; the Chateaubriand is its thick center. Here the sheet prints it plainly as raw.",
+      "how": "In the classic: trimmed of all sinew, firmed in the cold, cut by hand to a fine dice and dressed to order. How this kitchen cuts it and the portion are not printed.",
+      "tastes": "Cool, soft and silky, with a mild, clean beef flavor and little fat.",
+      "why": "With no cooking to soften anything, tenderness has to come from the cut itself, and tenderloin's fine grain gives a dice that melts. Its mildness is the trade: French recipes often name rump first for more flavor, and the mild cut is why the dressing and the spice do the talking on this plate.",
+      "sourceIds": [
+        "beef-tenderloin",
+        "saveur-tartare",
+        "french-recipes",
+        "sheet-2026-11-15",
+        "repo-pack"
+      ]
+    },
+    {
+      "name": "The hand cut (the knife technique behind a tartare)",
+      "what": "A tartare is a knife cut before it is a recipe: slices, then matchsticks, then a small even dice, 3 to 5 mm.",
+      "how": "The beef is firmed in the freezer for 15 to 45 minutes so the knife cuts clean, then diced and kept very cold.",
+      "tastes": "Texture, not flavor: separate, tender little cubes instead of a paste.",
+      "why": "Cooks split into two schools, hand cutting for texture and grinding to keep the meat cool; the sources found here hand cut. Merriam-Webster's definition still says ground beef, so a guest may expect mince. How ours is cut is a lineup ask the pack already carries.",
+      "sourceIds": [
+        "food52-tartare",
+        "takeout-tartare",
+        "kitchennmbrs-tartaar",
+        "mashed-freeze",
+        "merriam-webster-steak-tartare"
+      ]
+    },
+    {
+      "name": "Tartare dressing (egg yolk, Dijon, caper, shallot, hot sauce, parsley, black pepper)",
+      "what": "The seasoning that turns chopped beef into the dish: the garnishes Escoffier sent to the table apart in 1903 (yolk, capers, onion, parsley), here folded into one dressing with mustard, pepper and hot sauce.",
+      "how": "Yolk and Dijon are stirred into a glossy binder (the yolk's lecithin is an emulsifier), and the finely chopped capers, shallot and parsley go in with the pepper and the hot sauce. Proportions, and whether it is mixed through or served beside, are the chef's.",
+      "tastes": "Rich from the yolk, sharp from the mustard, briny from the capers, gently oniony from the shallot, fresh from the parsley, warm from the pepper and the hot sauce.",
+      "why": "Lean raw beef needs fat, salt, acid and bite, and this gives all four. It is not tartar sauce: that is a cold sauce of the mayonnaise family, and the shared name is history, not recipe. Egg is in this dressing as well as in the separate yolk, so a question about one is a question about both and goes to the kitchen.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "escoffier-1903",
+        "britannica-steak-tartare",
+        "repo-cuisine",
+        "repo-pack"
+      ]
+    },
+    {
+      "name": "Dijon mustard (in the dressing)",
+      "what": "The smooth, pale, sharp French mustard: brown mustard seed with white wine and vinegar. The name is a style, not a protected place.",
+      "how": "Stirred raw into the yolk, never heated here, so its bite stays whole.",
+      "tastes": "Smooth and sharp. Mustard's pungency comes from isothiocyanates, released when the seed is crushed and wetted.",
+      "why": "It is the binder's second half and the classic sharp note against rich yolk and mild beef; the mustard seed in the Montreal seasoning repeats it in whole spice form.",
+      "sourceIds": [
+        "repo-pack",
+        "amherst-spices",
+        "britannica-steak-tartare"
+      ]
+    },
+    {
+      "name": "Capers, shallot and parsley (in the dressing)",
+      "what": "Capers are the cured flower buds of Capparis spinosa; shallot is the small, fine-flavored cousin of the onion; parsley is the fresh green. The pack already has a card for each.",
+      "how": "All three chopped fine and raw.",
+      "tastes": "Briny and tangy; gently sharp and sweet; grassy and clean.",
+      "why": "They are the oldest companions of the dish: capers, onion and parsley are the three garnishes on Escoffier's 1903 page.",
+      "sourceIds": [
+        "escoffier-1903",
+        "repo-pack"
+      ]
+    },
+    {
+      "name": "Hot sauce and black pepper (in the dressing)",
+      "what": "Two kinds of warmth. In the French classic the hot sauce is a few drops of Tabasco, with Worcestershire beside it; the sheet says only hot sauce, and which one is the chef's answer.",
+      "how": "A few drops stirred into the dressing; pepper ground in.",
+      "tastes": "Vinegar-bright chili heat at the front of the mouth from the sauce; slower, warmer heat at the back from the pepper.",
+      "why": "A little acid and heat wake up a rich, cold dish. For a spice-shy guest the level is a kitchen question, since chili also sits in the Montreal seasoning.",
+      "sourceIds": [
+        "french-recipes",
+        "sheet-2026-11-15",
+        "repo-pack"
+      ]
+    },
+    {
+      "name": "Montreal seasoning (black pepper, caraway, coriander, chili flake, mustard seed)",
+      "what": "The steak spice of Montreal's smoked meat delis, here in the house's own five: black pepper, caraway, coriander, chili flake and mustard seed. The well-known commercial blend is different: garlic, coriander, black pepper, cayenne flakes, dill seed and salt. Blends vary by maker, and at least one sold blend does carry caraway.",
+      "how": "A dry blend of cracked and whole spices, traditionally the pickling spice rub of smoked meat, shaken over steak. How coarse the house grinds it, and whether it is folded in or dusted over, is not printed.",
+      "tastes": "Peppery and aromatic: warm pepper, the rye-bread note of caraway, the lemony lift of coriander, a prickle of chili and the sharp pop of mustard seed. The printed five carry no garlic, dill or salt.",
+      "why": "It is the plate's idea, on the writer's reading and not the chef's statement: smoked meat on rye is the Montreal deli sandwich, and this plate sets the deli's spice and the deli's bread, as a tuile, around a French tartare. Caraway is the link: it is the seasoning of rye bread.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "wikipedia-montreal-steak-seasoning",
+        "spicesinc-montreal",
+        "cbc-steak-spice",
+        "amherst-spices",
+        "tablet-smoked-meat-rye"
+      ]
+    },
+    {
+      "name": "Caraway (in the Montreal seasoning)",
+      "what": "The dried fruit, called a seed, of Carum carvi, a plant of the carrot family native to Europe.",
+      "how": "Used whole or cracked in the blend.",
+      "tastes": "Warm, a little sharp, anise-like: the flavor most people think of as rye bread. One teaching source credits the compound D-carvone; a second copy names anethole, so only the taste is claimed here.",
+      "why": "It ties the spice to the tuile. Rye the grain is earthy and malty; the deli rye taste is caraway. On this plate the grain is in the wafer and the caraway is in the seasoning.",
+      "sourceIds": [
+        "amherst-spices",
+        "king-arthur-rye"
+      ]
+    },
+    {
+      "name": "Coriander seed, chili flake and mustard seed (in the Montreal seasoning)",
+      "what": "Coriander seed is the dried fruit of the plant whose leaf is cilantro; chili flake is crushed dried red chili; mustard seed is the whole seed that mustard is ground from.",
+      "how": "Cracked or left whole in the blend.",
+      "tastes": "Coriander seed is floral and lemony; chili flake gives a sharp heat at the front of the mouth; mustard seed turns pungent when it is crushed between the teeth.",
+      "why": "Coriander and mustard seed are the pickling spice side of the blend, the part that comes from the smoked meat cure; the chili flake is its heat. Nothing was searched on chili flake itself today.",
+      "sourceIds": [
+        "amherst-spices",
+        "wikipedia-montreal-steak-seasoning",
+        "sheet-2026-11-15",
+        "repo-pack"
+      ]
+    },
+    {
+      "name": "Vital Farms egg yolk",
+      "what": "A yolk from Vital Farms, the pasture-raised egg company the sheet names; the same name is printed on the breakfast hanger steak's egg.",
+      "how": "The sheet lists it on its own, apart from the yolk in the dressing. In the classic it sits raw on top of the beef, to be broken and stirred in. Whether ours is raw, and where it sits, is not printed; the producer says its eggs in the shell are not pasteurized.",
+      "tastes": "Rich, round and coating; a hen that forages tends to lay a deeper orange yolk.",
+      "why": "It is the sauce the guest makes at the table: broken over the beef it adds fat and gloss and softens the mustard and spice. It is also a raw egg question, so it falls under the consumer advisory with the beef, and under the service note for egg.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "vital-farms-faq",
+        "vital-farms-eggs",
+        "repo-vital-farms-2026-10-06",
+        "escoffier-1903",
+        "fda-food-code-2022",
+        "fda-egg-safety"
+      ]
+    },
+    {
+      "name": "Rye tuile",
+      "what": "A tuile is a thin, crisp wafer; the word is French for a roof tile, after the curved shape the classic takes. Most are sweet, made of sugar, egg whites, butter and flour; savory ones are made too, and this one is made with rye.",
+      "how": "A classic tuile batter is spread or piped very thin, baked, and shaped while still warm, because it sets hard as it cools (a minute back in the oven softens one that set too soon). The house recipe, its flour, fat and egg, is not printed.",
+      "tastes": "Crisp and snapping, with rye's earthy, malty grain flavor.",
+      "why": "Every tartare wants something crisp beside it; the brasserie answer is toast or fries, and this is the kitchen's answer, in the grain of the Montreal deli's bread. Rye is a gluten grain and the sheet marks Gluten; dietary questions go to the service note and the kitchen.",
+      "sourceIds": [
+        "masterclass-tuile",
+        "pastrysampler-tuile",
+        "recipetineats-tuile",
+        "gbc-tuiles",
+        "king-arthur-rye",
+        "wikipedia-rye",
+        "tablet-smoked-meat-rye",
+        "sheet-2026-11-15"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "name": "Vital Farms",
+      "kind": "an egg company and its network of farms",
+      "what": "A company founded in 2007 near Austin, Texas, that sells pasture-raised eggs from a network of contracted small family farms: 575 by its own count in November 2025, more than 600 by the end of that year. Its standard is at least 108 square feet of outdoor pasture a hen, the Certified Humane figure. It is a public company and a Certified B Corporation. Its eggs in the shell are not pasteurized; its liquid egg is.",
+      "sourceIds": [
+        "vital-farms-q3-2025",
+        "marketbeat-vital-farms-q4",
+        "vital-farms-faq",
+        "vital-farms-eggs",
+        "repo-vital-farms-2026-10-06"
+      ]
+    },
+    {
+      "name": "Montreal seasoning (Montreal steak spice)",
+      "kind": "a spice blend",
+      "what": "A dry steak spice from the smoked meat delis of Montreal, built on the pickling spices of the smoked meat rub. There is no one recipe: the common commercial blend is garlic, coriander, black pepper, cayenne flakes, dill seed and salt, one maker's page lists caraway, thyme and lemon as well, and the house's is the five on the sheet. Schwartz's bottles its own Steak & Beef Spice and, by CBC's report, sells more than a thousand bottles a week.",
+      "sourceIds": [
+        "wikipedia-montreal-steak-seasoning",
+        "spicesinc-montreal",
+        "cbc-steak-spice",
+        "sheet-2026-11-15"
+      ]
+    },
+    {
+      "name": "Schwartz's, the Montreal Hebrew Delicatessen",
+      "kind": "a delicatessen in Montreal, Quebec",
+      "what": "The smoked meat deli the sheet names, opened on 31 December 1928 by a Jewish immigrant from Romania and still trading. The steak spice story is set at its grill in the 1940s and 1950s. The sheet's 'Hebrew Delicatessan' is this place; the spelling is delicatessen.",
+      "sourceIds": [
+        "wikipedia-schwartzs",
+        "schwartzs-about",
+        "cbc-steak-spice"
+      ]
+    },
+    {
+      "name": "Dijon",
+      "kind": "a style of mustard named for a town in Burgundy",
+      "what": "Smooth, pale, sharp mustard of brown seed. The pack's mustard card already carries the history (the modern style from 1856, a name that is not protected and can be made anywhere); nothing was added to it today, and which mustard the kitchen buys is not printed.",
+      "sourceIds": [
+        "repo-pack"
+      ]
+    },
+    {
+      "name": "Le Guide Culinaire",
+      "kind": "a book",
+      "what": "Auguste Escoffier's kitchen manual for professional cooks, first published in 1903, with later editions in 1907, 1912 and 1921; the book where both early versions of this dish are written down.",
+      "sourceIds": [
+        "escoffier-1903",
+        "wikipedia-guide-culinaire",
+        "wikipedia-steak-tartare",
+        "wikipedia-tartar-sauce"
+      ]
+    }
+  ],
+  "guestQuestions": [
+    {
+      "asked": "Is the beef raw?",
+      "answer": "Yes. Raw beef tenderloin, cut and dressed, never cooked, and there is egg yolk with it. Say so before the order, with the consumer advisory.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "fda-food-code-2022"
+      ]
+    },
+    {
+      "asked": "Is it okay to eat raw beef?",
+      "answer": "Never promise that it carries no risk. The code lets a restaurant serve steak tartare at the guest's own choice, with the reminder that raw or undercooked meats and eggs may increase the risk of foodborne illness; the USDA's own advice is that only cooking kills the bacteria raw beef can carry. Give the advisory, let the guest decide, and send any health question to the manager or the kitchen.",
+      "sourceIds": [
+        "fda-food-code-2022",
+        "fsn-raw-beef",
+        "wpxi-usda-raw-beef"
+      ]
+    },
+    {
+      "asked": "Is the egg raw too? Is it pasteurized?",
+      "answer": "There is yolk in the dressing and a separate yolk. Vital Farms says its eggs in the shell are not pasteurized, and the sheet does not say how the kitchen handles the yolk, so the honest answer is: I will check with the kitchen. Never say pasteurized on a guess. A raw yolk is one of the foods the consumer advisory is written for.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "vital-farms-faq",
+        "fda-egg-safety",
+        "fda-food-code-2022"
+      ]
+    },
+    {
+      "asked": "Is it spicy?",
+      "answer": "Warm and aromatic more than hot: black pepper and a little chili flake in the Montreal seasoning, and a touch of hot sauce in the dressing. How much heat tonight is the kitchen's answer.",
+      "sourceIds": [
+        "sheet-2026-11-15"
+      ]
+    },
+    {
+      "asked": "Is it like a raw hamburger?",
+      "answer": "No. The classic is a whole cut, trimmed and diced by hand into small cubes, not mince, so it eats clean and silky, and it is seasoned like a sauce: yolk, mustard, capers, shallot. (How our kitchen cuts it is a lineup question.)",
+      "sourceIds": [
+        "food52-tartare",
+        "takeout-tartare",
+        "britannica-steak-tartare"
+      ]
+    },
+    {
+      "asked": "Why is it called tartare? Is it from the Tartars?",
+      "answer": "The name comes from tartar sauce. A century ago the dish was beefsteak à l'Américaine; a version served with tartar sauce was steak à la tartare, and the name stuck to the whole dish. The story about horsemen keeping meat under their saddles is a legend.",
+      "sourceIds": [
+        "britannica-steak-tartare",
+        "wikipedia-steak-tartare",
+        "escoffier-1903",
+        "takeout-warrior-myth"
+      ]
+    },
+    {
+      "asked": "So is there tartar sauce on it?",
+      "answer": "No. The dressing is egg yolk and Dijon with capers, shallot, parsley, pepper and hot sauce. Tartar sauce is a cold sauce of the mayonnaise family; the two share a name and a few ingredients, nothing more.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "repo-cuisine",
+        "wikipedia-tartar-sauce"
+      ]
+    },
+    {
+      "asked": "What is Montreal seasoning? Is it the one from the grocery store?",
+      "answer": "Same family, different blend. It is the steak spice of Montreal's smoked meat delis, said to have started at Schwartz's when a grill cook used the smoked meat pickling spices on his own steaks. The store blend leans on garlic, dill and salt; ours is the five on the sheet: black pepper, caraway, coriander, chili flake and mustard seed.",
+      "sourceIds": [
+        "wikipedia-montreal-steak-seasoning",
+        "cbc-steak-spice",
+        "sheet-2026-11-15"
+      ]
+    },
+    {
+      "asked": "What is the rye? Is it rye bread?",
+      "answer": "A rye tuile, TWEEL: a thin, crisp wafer, named for the French roof tile, made here with rye. It is there for crunch. The taste people expect from rye bread is caraway, and that is in the seasoning, so the two meet on the plate.",
+      "sourceIds": [
+        "masterclass-tuile",
+        "pastrysampler-tuile",
+        "king-arthur-rye",
+        "sheet-2026-11-15"
+      ]
+    },
+    {
+      "asked": "Why tenderloin?",
+      "answer": "Because nothing gets cooked, the cut has to be tender on its own, and tenderloin is the most tender cut there is: lean, fine-grained, mild. It is the classic choice (the French call the dish tartare de filet de boeuf), though some cooks use rump for a beefier taste.",
+      "sourceIds": [
+        "beef-tenderloin",
+        "saveur-tartare",
+        "french-recipes"
+      ]
+    },
+    {
+      "asked": "What happened to the tartare cannoli?",
+      "answer": "It has come off the menu and this plate replaces it. This one has no potato shell, no crème fraîche and no cured, grated yolk: it is the classic form, dressed beef with a whole yolk and something crisp beside it.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "repo-pack"
+      ]
+    },
+    {
+      "asked": "Can I have it without the egg, or cooked?",
+      "answer": "That is the kitchen's call, not mine: egg is in the dressing as well as the separate yolk, so taking the yolk off does not take egg out of the plate. I ask the kitchen before I answer.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "repo-pack"
+      ]
+    },
+    {
+      "asked": "Who are Vital Farms?",
+      "answer": "An egg company from Austin, Texas, that works with hundreds of small family farms; its hens are pasture-raised, each with at least 108 square feet of outdoor pasture.",
+      "sourceIds": [
+        "vital-farms-q3-2025",
+        "repo-vital-farms-2026-10-06"
+      ]
+    }
+  ],
+  "mixUps": [
+    {
+      "a": "Steak tartare",
+      "b": "Tartar sauce",
+      "tell": "The first is the raw beef dish; the second is a cold sauce of the mayonnaise family for fried fish. The dish got its name from the sauce (steak à la tartare, steak with tartar sauce) and then lost the sauce. Ours has none."
+    },
+    {
+      "a": "Beefsteak à l'Américaine (Escoffier, 1903)",
+      "b": "Beefsteak à la Tartare (Escoffier, 1903)",
+      "tell": "À l'Américaine has the raw egg yolk and the capers, onion and parsley. À la Tartare is the same beef without the yolk, with tartar sauce on the side. Today's steak tartare is the first one under the second one's name."
+    },
+    {
+      "a": "Steak Tartare with Rye",
+      "b": "Steak Tartare Cannoli (a past menu item)",
+      "tell": "With Rye: dressed beef, Montreal seasoning, a whole yolk, a rye tuile. The Cannoli: tartare piped into a fried potato shell with crème fraîche and a cured, grated yolk. If a guest asks for the tartare cannoli, it has gone."
+    },
+    {
+      "a": "The yolk on this plate",
+      "b": "The cured yolk (egg yolk bottarga) of the old cannoli",
+      "tell": "A cured yolk is salted and dried until firm enough to grate. This plate lists a plain Vital Farms egg yolk; whether it is served raw is the kitchen's answer."
+    },
+    {
+      "a": "Pasture-raised",
+      "b": "Pasteurized",
+      "tell": "They sound alike and mean different things. Pasture-raised is how the hens live (outdoors, 108 square feet each); pasteurized is a heat treatment of the egg. Vital Farms eggs are the first and, in the shell, by the company's own word, not the second."
+    },
+    {
+      "a": "The house's Montreal seasoning",
+      "b": "The grocery store Montreal steak seasoning",
+      "tell": "Ours is the sheet's five: black pepper, caraway, coriander, chili flake, mustard seed. The familiar commercial blend is garlic, coriander, black pepper, cayenne flakes, dill seed and salt. Say only our five."
+    },
+    {
+      "a": "Rye flavor",
+      "b": "Caraway flavor",
+      "tell": "Rye the grain is earthy and malty. The anise-like taste of a deli rye loaf is caraway seed. Here the rye is in the tuile and the caraway is in the seasoning."
+    },
+    {
+      "a": "Montreal smoked meat",
+      "b": "Montreal steak spice",
+      "tell": "Smoked meat is the cured, spiced and smoked beef of the Montreal deli. The steak spice is the dry blend that grew out of that cure's pickling spices and went onto steaks. Our plate borrows the spice, not the meat."
+    },
+    {
+      "a": "Hand cut",
+      "b": "Ground",
+      "tell": "The classic tartare is diced with a knife so the pieces stay separate and clean; ground beef smears. The dictionary still says ground beef, so a guest may picture mince. How ours is cut is a lineup ask."
+    },
+    {
+      "a": "Vital Farms as a company",
+      "b": "Vital Farms as a farm or a co-op",
+      "tell": "It is one company buying from hundreds of contracted family farms that follow its standard, not a single farm and not a cooperative owned by the farmers."
+    }
+  ],
+  "pairingLogic": {
+    "firstPick": "Damien Martin Bourgogne Pinot Noir 2023 (w-y0ihoyc7), the pack's first pick; this file adds only the reasoning about the style.",
+    "lines": [
+      {
+        "text": "A tartare has no char and little fat, so it has nothing to soften tannin. Pairing writers send it to light reds with little tannin, Gamay from Beaujolais and young Pinot Noir from Burgundy first, sometimes Cabernet Franc, and warn that a strong or tannic wine overwhelms it.",
+        "sourceIds": [
+          "mfw-tartare",
+          "chowhound-tartare-wine",
+          "wineponder-tartare"
+        ]
+      },
+      {
+        "text": "Acidity is the other half: a fresh wine cuts the yolk's richness and stands up to mustard and capers, which is also why a dry sparkling wine or a crisp white is the usual alternative to a light red.",
+        "sourceIds": [
+          "wineponder-tartare",
+          "chowhound-tartare-wine"
+        ]
+      },
+      {
+        "text": "The glass sheet's own words for this wine fit that brief: strawberry, black cherry and raspberry, silky tannins, the fruit from the Mâconnais in southern Burgundy.",
+        "sourceIds": [
+          "sheet-2026-11-15"
+        ]
+      }
+    ],
+    "caution": "These lines explain why the style suits the dish. They say nothing about what the house pours with it on a given night, and no named authority (a wine magazine or the Bourgogne wine board) surfaced in the search; the logic rests on three pairing sites, one of them weak."
+  },
+  "sayIt": [
+    {
+      "word": "tartare",
+      "respell": "tar-TAR"
+    },
+    {
+      "word": "steak tartare",
+      "respell": "stayk tar-TAR"
+    },
+    {
+      "word": "tuile",
+      "respell": "TWEEL"
+    },
+    {
+      "word": "à l'Américaine",
+      "respell": "ah lah-may-ree-KEN"
+    },
+    {
+      "word": "à la tartare",
+      "respell": "ah lah tar-TAR"
+    },
+    {
+      "word": "Escoffier",
+      "respell": "es-koff-ee-AY"
+    },
+    {
+      "word": "Le Guide Culinaire",
+      "respell": "luh GEED koo-lee-NAIR"
+    },
+    {
+      "word": "Larousse Gastronomique",
+      "respell": "lah-ROOSS gas-troh-noh-MEEK"
+    },
+    {
+      "word": "Dijon",
+      "respell": "dee-ZHOHN"
+    },
+    {
+      "word": "Montreal",
+      "respell": "mun-tree-ALL"
+    },
+    {
+      "word": "Schwartz's",
+      "respell": "SHWORTS-iz"
+    },
+    {
+      "word": "delicatessen",
+      "respell": "del-ih-kuh-TESS-en"
+    },
+    {
+      "word": "caraway",
+      "respell": "KAIR-uh-way"
+    },
+    {
+      "word": "coriander",
+      "respell": "KOR-ee-an-der"
+    },
+    {
+      "word": "triticale",
+      "respell": "trit-ih-KAY-lee"
+    },
+    {
+      "word": "Pinot Noir",
+      "respell": "PEE-noh NWAHR"
+    },
+    {
+      "word": "Bourgogne",
+      "respell": "boor-GON-yuh"
+    },
+    {
+      "word": "Mâconnais",
+      "respell": "mah-kon-NAY"
+    }
+  ],
+  "unsourced": [
+    "The words of the Larousse Gastronomique of 1938 itself: reported by Wikipedia and a French children's encyclopedia only; the book was not read.",
+    "The wording of the 1921 edition of Le Guide Culinaire, and whether its tartare entry matches the 1903 page word for word. Sources date the definition to 1903 (the Wikisource page), 1921 and 1922; the 1903 page is the primary one.",
+    "The text of the Hamburg steak à la tartare in The Epicurean (1894): whether it is raw, and its sauce. One source says raw; the transcription was reached only as a summary. Charles Ranhofer's life dates were not confirmed today, so a card that names him needs them first.",
+    "Any menu or cookbook from the 1880s or 1890s that prints beefsteak à l'Américaine: the 'late 1800s' rests on Britannica alone.",
+    "The steak spice story from Schwartz's own mouth: the deli's site did not surface, and its history page (read in October) does not tell it. The grill cook's full name is printed by Wikipedia and CBC; it is left out here because his dates were not found. No source gives a year, and none says 'for his lunch'.",
+    "What is in Schwartz's own Steak & Beef Spice, and whether caraway is in a Montreal smoked meat cure: not found. The McCormick or Club House ingredient list from the maker's own page: not found (Wikipedia's list stands in). A claim that a large spice company took the blend national in the late 1980s appeared once, unattributed, and is not used.",
+    "The date of the CBC article, so its 'more than 70 years' cannot be turned into a year.",
+    "A classic tuile ratio, bake temperature and time from a professional source, and any savory rye tuile recipe: not found. The house tuile recipe is not printed.",
+    "'Nutty' for rye: the miller's words are earthy and malty.",
+    "The flavor compound of caraway: one handout says D-carvone, a copy says anethole.",
+    "Why tenderloin and not rump, as a tasted comparison; chilled bowls and plates; salt and acid changing the color of dressed beef if it stands: kitchen knowledge, not sourced today.",
+    "The FDA Food Code text, the FDA egg page and the FSIS pages: carried from the Table's safety entry, not read again today. Louisiana's own wording for a raw meat advisory and the house's advisory wording: not searched; a lineup ask.",
+    "Which hot sauce is in the dressing, and anything about chili flake as an ingredient: no search was spent.",
+    "Tartare against carpaccio, the filet américain of Belgium, a 19th century novel said to mention a raw meat dish, and the horse meat claim: wanted for the mix-ups, not sourced today, so left out.",
+    "The respellings in sayIt are the writer's own, matched to the pack's existing tar-TAR and TWEEL and the repository's es-koff-ee-AY; no dictionary pronunciation was read today.",
+    "That the kitchen chose rye and Montreal spice to echo the deli's smoked meat on rye is the writer's reading of the plate, not something the sheet or the chef says: a lineup question.",
+    "House facts the sheet does not print and research cannot supply: how the beef is cut, the portion, where the beef comes from, whether the yolk is raw, the dressing's proportions, the tuile recipe, the price. The pack's lineup asks already cover them."
+  ],
+  "sources": [
+    {
+      "id": "sheet-2026-11-15",
+      "title": "Brennan's training sheets photographed on 15 November 2026, section A1 (the dish) and section B (wines by the glass)",
+      "publisher": "The house's own kitchen and wine sheets, transcribed in this repository",
+      "url": "tools/house/brennans/research/menu-2026-11-15-sheets.md",
+      "supports": "The five printed ingredients, the two printed allergens, the four chef's facts word for word, and the glass sheet's description of the Damien Martin Pinot Noir. It prints no price, no cut method, no portion and no recipe.",
+      "kind": "primary"
+    },
+    {
+      "id": "escoffier-1903",
+      "title": "Le Guide Culinaire (1903), the page with Beefsteak à l'Américaine",
+      "publisher": "Auguste Escoffier; digitised by Wikisource",
+      "url": "https://fr.wikisource.org/wiki/Page:Auguste_Escoffier_-_Le_Guide_Culinaire_-_Aide-m%C3%A9moire_de_cuisine_pratique,_1903.djvu/615",
+      "supports": "Chopped fillet served with a raw egg yolk, with capers, onion and parsley apart: in print in 1903. Carried from research/fall-menu-2026-chatgpt.json, which read the page; today's search reached it only through Wikipedia's citation of the same transcription for the Beefsteak à la Tartare entry.",
+      "kind": "primary"
+    },
+    {
+      "id": "wikipedia-tartar-sauce",
+      "title": "Tartar sauce",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tartar_sauce",
+      "supports": "Citing the Wikisource transcription of the 1903 Guide: Beefsteak à la Tartare is the à l'Américaine preparation without the egg yolk on top, with sauce tartare served separately. Escoffier's 1903 sauce tartare: hard-boiled egg yolks worked to a paste, mounted with oil and vinegar, finished with a puree of green onion or chives and a little mayonnaise.",
+      "kind": "secondary"
+    },
+    {
+      "id": "wikipedia-steak-tartare",
+      "title": "Steak tartare",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Steak_tartare",
+      "supports": "In the early twentieth century the dish was called steack à l'Americaine in Europe; the 1921 edition of the Guide defines steack à la tartare as the à l'Americaine made without egg yolk, tartar sauce on the side; steak à la tartare, literally served with tartar sauce, was later shortened to steak tartare; the 1938 Larousse Gastronomique describes steak tartare as raw ground beef with a raw egg yolk and no tartar sauce; the saddle story, with the Cambridge Medieval History's account that the meat was laid there for the horses' sores.",
+      "kind": "secondary"
+    },
+    {
+      "id": "britannica-steak-tartare",
+      "title": "steak tartare",
+      "publisher": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/steak-tartare",
+      "supports": "A standard reference work. Raw chopped beef began appearing on a few French bistro and restaurant menus in the late 19th century and was common in the early 20th; it was at first called à l'Américaine, in the American style, presumably because popular belief held that Americans ate meat raw; Escoffier's Guide of 1903 included Beefsteak à l'Américaine; tartare refers to the Tatar people of Central Asia; the classic is chopped raw beefsteak bound by raw egg yolk and seasoned with mustard, capers and other ingredients. Its short entry runs Escoffier's two dishes together (it puts the tartar sauce beside the à l'Américaine).",
+      "kind": "primary"
+    },
+    {
+      "id": "merriam-webster-steak-tartare",
+      "title": "steak tartare (dictionary entry)",
+      "publisher": "Merriam-Webster",
+      "url": "https://www.merriam-webster.com/dictionary/steak%20tartare",
+      "supports": "A standard reference work. Definition: highly seasoned ground beef eaten raw. Etymology: French tartare, Tartar. First known use in English: 1911.",
+      "kind": "primary"
+    },
+    {
+      "id": "merriam-webster-tartar",
+      "title": "Tartar (dictionary entry)",
+      "publisher": "Merriam-Webster",
+      "url": "https://www.merriam-webster.com/dictionary/Tartars",
+      "supports": "A standard reference work. Tartar: in English since the 14th century, from Middle French Tartare, probably from Medieval Latin Tartarus, a modification of Persian Tātār.",
+      "kind": "primary"
+    },
+    {
+      "id": "cooksinfo-steak-tartare",
+      "title": "Steak Tartare",
+      "publisher": "CooksInfo",
+      "url": "https://www.cooksinfo.com/steak-tartare",
+      "supports": "Reports a raw dish called Hamburg Steak à la tartare in The Epicurean (1894) by Charles Ranhofer, and notes that the Merriam-Webster date for steak tartare is only 1911.",
+      "kind": "secondary"
+    },
+    {
+      "id": "epicurean-1894-transcription",
+      "title": "The Epicurean (1894), Recipes For Beef Steak (Bifteck), as transcribed",
+      "publisher": "Chest of Books, reproducing Charles Ranhofer",
+      "url": "https://chestofbooks.com/food/recipes/Epicurian/Recipes-For-Beef-Steak-Bifteck.html",
+      "supports": "A transcription of the book's beefsteak section, read today only through the search engine's summary: a Hamburg steak of chopped tenderloin with suet or marrow and onion, and an à la tartare version of it. The summary could not settle whether that version is served raw or how it is sauced. The scan of the book is archive.org item epicureancomplet00ranhrich.",
+      "kind": "secondary"
+    },
+    {
+      "id": "wikipedia-hamburg-steak",
+      "title": "Hamburg steak",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hamburg_steak",
+      "supports": "Hamburg steak was popular in New York in the late 19th century; the oldest English document that names it is a Delmonico's menu of 1873, a dish developed by Charles Ranhofer.",
+      "kind": "secondary"
+    },
+    {
+      "id": "takeout-warrior-myth",
+      "title": "The Steak Tartare Warrior Myth You Have To Stop Believing",
+      "publisher": "The Takeout",
+      "url": "https://www.thetakeout.com/1730671/warrior-origins-steak-tartare/",
+      "supports": "Treats the story of horsemen tenderizing raw meat under the saddle as a myth.",
+      "kind": "secondary"
+    },
+    {
+      "id": "vikidia-steak-tartare",
+      "title": "Steak tartare",
+      "publisher": "Vikidia (a French encyclopedia for young readers)",
+      "url": "https://fr.vikidia.org/wiki/Steak_tartare",
+      "supports": "States that the oldest surviving recipe under the name steak tartare is the one in the Larousse Gastronomique of 1938. A weak source, used only beside Wikipedia.",
+      "kind": "secondary"
+    },
+    {
+      "id": "wikipedia-montreal-steak-seasoning",
+      "title": "Montreal steak seasoning",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Montreal_steak_seasoning",
+      "supports": "Dated to about the 1940s; based on the pickling dry rub of Montreal smoked meat; the account that a broilerman at Schwartz's, known as The Shadow, in the 1940s and 1950s began adding the deli's smoked meat pickling spices to his own rib and liver steaks, that customers asked for the same, and that Moishes Steakhouse and the Main Deli Steak House came to spice their steaks the same way; main ingredients garlic, coriander, black pepper, cayenne pepper flakes, dill seed and salt.",
+      "kind": "secondary"
+    },
+    {
+      "id": "wikipedia-schwartzs",
+      "title": "Schwartz's",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Schwartz%27s",
+      "supports": "Established on 31 December 1928 by a Jewish immigrant from Romania; also known as the Montreal Hebrew Delicatessen; repeats the broilerman account of the steak spice.",
+      "kind": "secondary"
+    },
+    {
+      "id": "cbc-steak-spice",
+      "title": "'Tis the seasoning: What's behind Montreal steak spice, flavouring food for more than 70 years?",
+      "publisher": "CBC News, Montreal",
+      "url": "https://www.cbc.ca/news/canada/montreal/montreal-steak-spice-origins-1.5194382",
+      "supports": "Credits a cook at Schwartz's known as The Shadow, who worked there decades ago, with popularizing the mixture; its sub-headline says only he knows the real origins; Schwartz's sells more than a thousand bottles of its Steak & Beef Spice a week. The article's date did not show in the search.",
+      "kind": "secondary"
+    },
+    {
+      "id": "schwartzs-about",
+      "title": "About Schwartz's",
+      "publisher": "Schwartz's Deli (the deli's own site)",
+      "url": "https://schwartzsdeli.com/pages/about-schwartzs",
+      "supports": "The 1928 founding by a Romanian Jewish immigrant and the smoked meat tradition. It does not tell the steak spice story. Carried from research/fall-menu-2026-chatgpt.json, which read the page; the deli's own site did not surface in today's searches.",
+      "kind": "primary"
+    },
+    {
+      "id": "spicesinc-montreal",
+      "title": "Montreal Steak Spice (product page)",
+      "publisher": "Spices Inc., a spice maker",
+      "url": "https://spicesinc.com/product/1116",
+      "supports": "One maker's own blend: black pepper, garlic, coriander, dill, onion, red bell pepper, sea salt, caraway, thyme and lemon. Shows that caraway does appear in a commercial Montreal blend, and that blends differ by maker.",
+      "kind": "primary"
+    },
+    {
+      "id": "vital-farms-q3-2025",
+      "title": "Vital Farms Reports Third Quarter 2025 Financial Results",
+      "publisher": "Vital Farms (company release on Business Wire)",
+      "url": "https://www.businesswire.com/news/home/20251104455043/en/Vital-Farms-Reports-Third-Quarter-2025-Financial-Results",
+      "supports": "The company's own count: about 75 family farms added in the quarter, the network now 575 family farms.",
+      "kind": "primary"
+    },
+    {
+      "id": "marketbeat-vital-farms-q4",
+      "title": "Vital Farms Q4 earnings call highlights",
+      "publisher": "MarketBeat",
+      "url": "https://www.marketbeat.com/instant-alerts/vital-farms-q4-earnings-call-highlights-2026-02-27/",
+      "supports": "The network grew to more than 600 small farms held to its pasture-raised standards, about 175 of them added in 2025; the search summary gives the same figure from the company's 2025 annual report, with a small number of company-owned accelerator farms beside the contracted family farms.",
+      "kind": "secondary"
+    },
+    {
+      "id": "vital-farms-faq",
+      "title": "Vital Farms FAQs",
+      "publisher": "Vital Farms (the producer)",
+      "url": "https://vitalfarms.com/faqs/",
+      "supports": "Its raw eggs in the shell are not pasteurized; its liquid whole egg and the cream for its butter are; USDA rules have it wash eggs before packing, which removes the natural bloom, so they must be refrigerated.",
+      "kind": "primary"
+    },
+    {
+      "id": "vital-farms-eggs",
+      "title": "Vital Farms: Eggs",
+      "publisher": "Vital Farms (the producer)",
+      "url": "https://cdn.vitalfarms.com/eggs/",
+      "supports": "The producer's account of pasture-raised hens on a network of family farms. Carried from research/fall-menu-2026-chatgpt.json.",
+      "kind": "primary"
+    },
+    {
+      "id": "repo-vital-farms-2026-10-06",
+      "title": "Producer research of 6 October 2026, section 2, Vital Farms",
+      "publisher": "This repository (earlier research, with its own sources listed)",
+      "url": "tools/house/brennans/research/producers-food-beef-eggs-duck-2026-10-06.md",
+      "supports": "Founded in 2007 near Austin, Texas, with 20 hens on a 27 acre farm; Certified Humane pasture standard of at least 108 square feet per hen; packing plant at Springfield, Missouri; shares on the Nasdaq from 31 July 2020; a Certified B Corporation. Its sources: the company's 10-K on sec.gov, the company's own FAQ, retailer copy and Wikipedia.",
+      "kind": "secondary"
+    },
+    {
+      "id": "wikipedia-rye",
+      "title": "Rye",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Rye",
+      "supports": "Rye is a grass of the tribe Triticeae, closely related to wheat and barley; triticale is the wheat and rye hybrid; rye flour is high in gliadin and low in glutenin, so lower in gluten than wheat flour, but it does hold gluten.",
+      "kind": "secondary"
+    },
+    {
+      "id": "nwe-rye",
+      "title": "Rye",
+      "publisher": "New World Encyclopedia",
+      "url": "https://www.newworldencyclopedia.org/entry/Rye",
+      "supports": "As a member of the grass family Poaceae and the tribe Triticeae, rye is closely related to wheat and barley. An encyclopedia that draws on Wikipedia, so not fully independent of it.",
+      "kind": "secondary"
+    },
+    {
+      "id": "king-arthur-rye",
+      "title": "Explore the flavors and textures of rye",
+      "publisher": "King Arthur Baking (a flour miller and baker)",
+      "url": "https://www.kingarthurbaking.com/blog/2020/09/21/explore-the-flavors-and-textures-of-rye",
+      "supports": "Rye's own flavor is earthy and malty; the familiar deli rye aroma is caraway, not the grain. Carried from research/fall-menu-2026-chatgpt.json.",
+      "kind": "primary"
+    },
+    {
+      "id": "amherst-spices",
+      "title": "Spices (course handout, spices1.pdf)",
+      "publisher": "Amherst College",
+      "url": "https://www.amherst.edu/media/view/101428/original/spices1.pdf",
+      "supports": "Caraway, Carum carvi, native to Europe, its distinctive flavor from the terpene D-carvone, used in rye bread and in aquavit; coriander grown for dried fruits with a floral, lemon flavor; mustard seed's pungency from isothiocyanates, irritating when ground raw. A second copy of a similar handout names anethole for caraway instead, so the compound is not settled here.",
+      "kind": "secondary"
+    },
+    {
+      "id": "masterclass-tuile",
+      "title": "How to Make Classic Tuiles: French Tuiles Recipe",
+      "publisher": "MasterClass",
+      "url": "https://www.masterclass.com/articles/tuile-recipe",
+      "supports": "A tuile is a thin wafer of sugar, egg whites, butter and flour, molded while hot; the crispness comes from the high share of sugar and fat with just enough flour to bind.",
+      "kind": "secondary"
+    },
+    {
+      "id": "pastrysampler-tuile",
+      "title": "Tuile (questions and answers)",
+      "publisher": "Pastry Sampler",
+      "url": "https://www.pastrysampler.com/Questions_and_Answers/tuile.htm",
+      "supports": "The name tuile is a French word meaning tile.",
+      "kind": "secondary"
+    },
+    {
+      "id": "recipetineats-tuile",
+      "title": "Lace Almond Tuiles",
+      "publisher": "RecipeTin Eats (a recipe site, weak)",
+      "url": "https://www.recipetineats.com/lace-almond-tuiles-recipe/",
+      "supports": "Shape a tuile once it has set enough to lift but is still warm; if it sets too far, a minute or two back in the oven makes it pliable again.",
+      "kind": "secondary"
+    },
+    {
+      "id": "gbc-tuiles",
+      "title": "How to make tuiles",
+      "publisher": "Great British Chefs",
+      "url": "https://www.greatbritishchefs.com/how-to-cook/how-to-make-tuiles",
+      "supports": "A tuile is a thin crisp wafer, and savory ones are made as well as sweet. Carried from research/fall-menu-2026-chatgpt.json.",
+      "kind": "secondary"
+    },
+    {
+      "id": "saveur-tartare",
+      "title": "Steak Tartare (Tartare de Filet de Boeuf)",
+      "publisher": "Saveur",
+      "url": "https://www.saveur.com/article/Recipes/Rt-7-Steak-Tartare",
+      "supports": "A classic recipe that names the cut in its title: filet, the tenderloin.",
+      "kind": "secondary"
+    },
+    {
+      "id": "food52-tartare",
+      "title": "How to Make Steak Tartare at Home",
+      "publisher": "Food52",
+      "url": "https://food52.com/blog/12354-how-to-make-steak-tartare-at-home",
+      "supports": "Two schools: hand chop for texture, or grind so the meat does not warm while it is chopped; the writer hand cuts, and par-freezes the beef first so it stays cold and cuts cleanly.",
+      "kind": "secondary"
+    },
+    {
+      "id": "takeout-tartare",
+      "title": "Yes, You Can Make Beef Tartare At Home: Here's How To Do It Safely",
+      "publisher": "The Takeout",
+      "url": "https://thetakeout.com/1744322/how-to-make-beef-tartare-safely",
+      "supports": "A chef's view that hand cut beef has the nicer texture; keep the meat very cold the whole time.",
+      "kind": "secondary"
+    },
+    {
+      "id": "mashed-freeze",
+      "title": "Why You Should Freeze Your Meat Before Making Steak Tartare",
+      "publisher": "Mashed",
+      "url": "https://mashed.com/1317524/why-should-freeze-meat-before-making-steak-tartare",
+      "supports": "Firm the beef in the freezer before cutting; firm, not frozen. Across the recipes in the same search the time runs from 15 to 20 minutes, to about 40, to 30 to 45.",
+      "kind": "secondary"
+    },
+    {
+      "id": "kitchennmbrs-tartaar",
+      "title": "Raw preparation: preparing tartare",
+      "publisher": "Kitchen NMBRS (a kitchen training app, weak)",
+      "url": "https://kitchennmbrs.app/en/product-knowledge/technieken/tartaar-bereiden",
+      "supports": "Beef tenderloin or sirloin, cut into cubes of 3 to 5 mm; never stored after preparation.",
+      "kind": "secondary"
+    },
+    {
+      "id": "french-recipes",
+      "title": "Tartare de boeuf façon bistrot, with the other French recipe pages the same search returned",
+      "publisher": "Hachette Vins; also Slate.fr (slate.fr/story/143039) and Noovo Moi (noovomoi.ca)",
+      "url": "https://www.hachette-vins.com/cuisine-vins/198/tartare-de-boeuf-facon-bistrot/",
+      "supports": "Orders of magnitude only, from general French recipe pages and not from Larousse: 600 g of rump for four, or 200 g for one; rump (rumsteck) or fillet, chopped or knife cut just before use; one yolk a person; 1 to 2 tablespoons of capers, 2 shallots and 4 tablespoons of chopped flat parsley for four; 2 tablespoons of Dijon and 2 of ketchup for four in one recipe, a dash of Worcestershire sauce and a few drops of Tabasco, the Tabasco optional. The search summary did not say which page gave which figure.",
+      "kind": "secondary"
+    },
+    {
+      "id": "fda-food-code-2022",
+      "title": "FDA Food Code 2022",
+      "publisher": "U.S. Food and Drug Administration",
+      "url": "https://www.fda.gov/food/fda-food-code/food-code-2022",
+      "supports": "Section 3-401.11 (D) lists steak tartare among the raw animal foods that may be served on the consumer's request or selection; 3-603.11 is the consumer advisory, a disclosure plus the reminder that consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase the risk of foodborne illness; 3-501.16 sets cold holding at 5°C (41°F) or less. Carried from the Table's Cuisine entry tools/derive/cuisine/safety.json, which quotes the code; not read again today.",
+      "kind": "primary"
+    },
+    {
+      "id": "fda-egg-safety",
+      "title": "What You Need to Know About Egg Safety",
+      "publisher": "U.S. Food and Drug Administration",
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety",
+      "supports": "The risk of Salmonella in raw or lightly cooked eggs and the place of pasteurized eggs. Carried from tools/derive/cuisine/safety.json; not read again today.",
+      "kind": "primary"
+    },
+    {
+      "id": "fsn-raw-beef",
+      "title": "Cannibal sandwiches, tiger meat, steak tartare: too dangerous to risk",
+      "publisher": "Food Safety News",
+      "url": "https://www.foodsafetynews.com/2018/12/cannibal-sandwiches-tiger-meat-steak-tartare-too-dangerous-to-risk",
+      "supports": "Reports the USDA position that raw ground beef dishes can carry E. coli O157:H7, Salmonella, Campylobacter and Listeria, and that only cooking ground beef to 160°F kills them.",
+      "kind": "secondary"
+    },
+    {
+      "id": "wpxi-usda-raw-beef",
+      "title": "USDA warns against eating cannibal sandwiches",
+      "publisher": "WPXI News (wire report)",
+      "url": "https://www.wpxi.com/news/national/usda-warns-against-eating-cannibal-sandwiches-/890644441/",
+      "supports": "The same USDA warning: raw beef is uncooked, so it can still hold harmful bacteria that only cooking to 160°F kills.",
+      "kind": "secondary"
+    },
+    {
+      "id": "beef-tenderloin",
+      "title": "Beef. It's What's for Dinner: Chateaubriand Tenderloin Roast",
+      "publisher": "Beef. It's What's for Dinner (the beef industry's cut guide)",
+      "url": "https://www.beefitswhatsfordinner.com/cuts/cut/2446/chateaubriand-tenderloin-roast",
+      "supports": "The tenderloin's identity, tenderness and leanness. Carried from research/fall-menu-2026-chatgpt.json.",
+      "kind": "primary"
+    },
+    {
+      "id": "mfw-tartare",
+      "title": "The best wine pairings for steak tartare",
+      "publisher": "Matching Food & Wine (a wine writer's own site)",
+      "url": "https://matchingfoodandwine.com/news/pairings/the-best-wine-pairings-for-steak-tartare",
+      "supports": "Light reds first, Beaujolais above all, since a tartare is easily overwhelmed by a strong wine; the same site once made steak tartare and Beaujolais its match of the week.",
+      "kind": "secondary"
+    },
+    {
+      "id": "chowhound-tartare-wine",
+      "title": "The Best Wine To Pair With Steak Tartare",
+      "publisher": "Chowhound",
+      "url": "https://chowhound.com/1775331/best-wine-pairing-for-steak-tartare",
+      "supports": "A lighter red leaves room for the freshness of the beef: Gamay, Pinot Noir or Cabernet Franc.",
+      "kind": "secondary"
+    },
+    {
+      "id": "wineponder-tartare",
+      "title": "Steak Tartare Wine Pairing",
+      "publisher": "Wine Ponder (weak)",
+      "url": "https://www.wineponder.com/steak-tartare-wine-pairing/",
+      "supports": "Light reds such as Gamay from Beaujolais or a young Pinot Noir from Burgundy; avoid wines rich in tannin; acidity cuts the richness, and a crisp white or a dry sparkling wine is the usual alternative.",
+      "kind": "secondary"
+    },
+    {
+      "id": "wikipedia-guide-culinaire",
+      "title": "Le guide culinaire",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Guide_Culinaire",
+      "supports": "The editions: first issued in 1903, a second edition in 1907, a third in 1912 and the fourth in 1921.",
+      "kind": "secondary"
+    },
+    {
+      "id": "tablet-smoked-meat-rye",
+      "title": "The Origin Story of Smoked Meat on Rye",
+      "publisher": "Tablet Magazine",
+      "url": "https://www.tabletmag.com/sections/news/articles/the-origin-story-of-smoked-meat-on-rye",
+      "supports": "Its title alone is used, for the plain point that smoked meat on rye is the Montreal deli's sandwich. The article was not read.",
+      "kind": "secondary"
+    },
+    {
+      "id": "repo-cuisine",
+      "title": "The Table's Cuisine entries on mayonnaise and its family, the egg yolk, and raw and undercooked food",
+      "publisher": "This repository (earlier research, with its own sources listed)",
+      "url": "tools/derive/cuisine/",
+      "supports": "butter-emulsions.json: the classical tartare sauce was mounted on hard-boiled yolks, the modern one is mayonnaise with chopped pickles, capers, onion and chives. larder.json: a yolk's lecithin is an emulsifier, and raw with mustard it binds a tartare dressing. safety.json: the consumer advisory and the Food Code text. history.json: Escoffier, 1846 to 1935.",
+      "kind": "secondary"
+    },
+    {
+      "id": "repo-pack",
+      "title": "The house pack as shipped on 2 November 2026: the dish d-jlc7ybty and its components",
+      "publisher": "This repository",
+      "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+      "supports": "What the cards already teach, so this file adds to it: the tenderloin, the dressing, the Montreal seasoning, the Vital Farms yolk, the rye tuile, capers, shallots, parsley, mustard (Dijon since 1856, a name that is not protected), black pepper, eggs, the story component, the first pick (Damien Martin Bourgogne Pinot Noir 2023, served at 55 to 58°F) and eight lineup asks. Also the earlier kitchen dossier's practice notes: trim every sinew, cut by hand, season at the last moment, toast or fries beside it.",
+      "kind": "secondary"
+    }
+  ]
+}
