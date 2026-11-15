@@ -1071,6 +1071,167 @@
 			"value": "The Wines by the Glass sheet of 15 November 2026 prints it as Barbera d'Asti Superiore; read the label at lineup.",
 			"reason": "November 2026: the Wines by the Glass sheet of 15 November 2026 prints Barbera d'Asti Superiore, where the menu page of 3 October printed Barbera d'Asti; the card follows the newer sheet",
 			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 124 (Barbera: La Miraja \"Le Masche\" Barbera d'Asti Superiore 2023 Piemonte IT.)"
+		},
+		{
+			"target": "wine:Gainey Estate Vineyards Chardonnay 2023",
+			"field": "kept.1.a",
+			"op": "replace",
+			"value": {
+				"from": "keeping the Leflaive as the step up,",
+				"to": "keeping the Jadot Les Pucelles by Coravin as the step up,"
+			},
+			"reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+		},
+		{
+			"target": "wine:Gainey Estate Vineyards Chardonnay 2023",
+			"field": "kept.2.a",
+			"op": "replace",
+			"value": {
+				"from": "The Leflaive Mâcon-Verzé at $40 is the step up for a Burgundy lover.",
+				"to": "The Jadot Les Pucelles by Coravin is the step up for a Burgundy lover."
+			},
+			"reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+		},
+		{
+			"target": "wine:Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône 2023",
+			"field": "kept.1.a",
+			"op": "replace",
+			"value": {
+				"from": "or the Inglenook Rubicon at $70 by the glass.",
+				"to": "or the Domaine de Courcel Pommard by Coravin."
+			},
+			"reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+		},
+		{
+			"target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "alternative to a $70 glass of Rubicon with the Chateaubriand",
+				"to": "alternative to the Coravin Pommard with the Chateaubriand"
+			},
+			"reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+		},
+		{
+			"target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+			"field": "kept.1.a",
+			"op": "replace",
+			"value": {
+				"from": "At $16 it is the value red beside the Rubicon.",
+				"to": "At $16 it is the value red beside the Coravin Pommard."
+			},
+			"reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+		},
+		{
+			"target": "wine:Domaine Leflaive Mâcon-Verzé 2021",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "is the full bottle of the white we pour by Coravin,",
+				"to": "is the full bottle of the white we poured by Coravin until November 2026,"
+			},
+			"reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+		},
+		{
+			"target": "wine:Domaine Leflaive Mâcon-Verzé 2021",
+			"field": "kept.1.a",
+			"op": "replace",
+			"value": {
+				"from": "Offer the bottle when two or more guests each order the Leflaive by the glass, with the redfish or the crab claws at dinner,",
+				"to": "Offer the bottle with the crab claws at dinner, to a table that asks for the Leflaive we used to pour by the glass,"
+			},
+			"reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+		},
+		{
+			"target": "wine:Domaine Leflaive Mâcon-Verzé 2021",
+			"field": "kept.1.a",
+			"op": "replace",
+			"value": {
+				"from": "Since you are both enjoying the Leflaive, the bottle of Mâcon-Verzé 2021:",
+				"to": "If you love white Burgundy, the bottle of Leflaive Mâcon-Verzé 2021:"
+			},
+			"reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+		},
+		{
+			"target": "term:Inglenook Rubicon",
+			"field": "toGuest",
+			"op": "set",
+			"value": "Rubicon is Inglenook's flagship Napa Cabernet blend from Rutherford; our 2010 is on the bottle list, and it left the glass list in November 2026.",
+			"reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+		},
+		{
+			"target": "scenario:Chateaubriand wine",
+			"field": "you",
+			"op": "set",
+			"value": "Two directions by the glass: for elegance, a 2007 Pommard premier cru from Domaine de Courcel, poured by Coravin, red Burgundy softened by almost twenty years; for power, our Kokomo Cabernet from Sonoma County. I’ll confirm both glass prices for you, and I’d love to bring our sommelier over if you’d rather choose a bottle from the cellar.",
+			"reason": "November 2026: the answer poured the Inglenook Rubicon at its glass price; the Chateaubriand is re-paired to the de Courcel Pommard with the Kokomo beside it, and the sheet prints no price, so the server confirms it",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+		},
+		{
+			"target": "mustknow:Wine program",
+			"field": "body",
+			"op": "replace",
+			"value": {
+				"from": "The live by-the-glass list (Binwise) pours Rare Brut 2012 and Leflaive Mâcon-Verzé by Coravin, plus Inglenook Rubicon 2010 at $70.",
+				"to": "The Wines by the Glass sheet of 15 November 2026 pours three by Coravin: Rare 2012, the Louis Jadot Les Pucelles 2008 and the Domaine de Courcel Pommard 2007."
+			},
+			"reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+		},
+		{
+			"target": "mixup:Domaine Leflaive Mâcon-Verzé 2022 (Coravin) vs Fichet ‘Château London’ Mâcon-Igé 2024",
+			"field": "difference",
+			"op": "set",
+			"value": "Both are Chardonnay from Mâcon villages in southern Burgundy. The Leflaive Mâcon-Verzé, luh-FLEV, was our Coravin glass until November 2026 and is now among the past wines; its 2021 is on the bottle list. The Fichet Mâcon-Igé, fee-SHAY, is poured only as a 4 oz white on the dinner tasting, from a family estate at Igé; it has no glass price.",
+			"reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+		},
+		{
+			"target": "mixup:Domaine Leflaive Mâcon-Verzé 2022 (Coravin) vs Fichet ‘Château London’ Mâcon-Igé 2024",
+			"field": "ask",
+			"op": "set",
+			"value": "Would you like a bottle of the Leflaive from the list, or are you having the tasting, where the Fichet is the white pour?",
+			"reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+		},
+		{
+			"target": "wine:Domaine Leflaive Puligny-Montrachet 2016",
+			"field": "kept.1.a",
+			"op": "replace",
+			"value": {
+				"from": "to a guest who enjoyed the Leflaive by the glass and wants the real thing,",
+				"to": "to a guest who loves white Burgundy and wants the real thing,"
+			},
+			"reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+		},
+		{
+			"target": "scenario:A buttery Chardonnay",
+			"field": "you",
+			"op": "set",
+			"value": "By the glass, the Gainey from Santa Barbara County is creamy, lemon curd and baked apple, $17. If you'd like more richness, we pour a premier cru white Burgundy by Coravin, Jadot's Les Pucelles 2008, and I'll confirm its glass price for you. For a bottle of rich California Chardonnay, let me bring our sommelier with the list.",
+			"reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+		},
+		{
+			"target": "scenario:A buttery Chardonnay",
+			"field": "items",
+			"op": "set",
+			"value": [
+				"Gainey Estate Vineyards Chardonnay 2023",
+				"Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)"
+			],
+			"reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
 		}
 	]
 }

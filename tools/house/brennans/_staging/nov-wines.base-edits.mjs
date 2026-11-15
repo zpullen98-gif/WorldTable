@@ -14,7 +14,9 @@
       names, and the builder resolves a name only by the card's name or the name its id was minted under.
       Every exact reference is moved to the new name.
    3. The four new glass wines join the existing components they belong to (the grape, the place, the
-      Coravin, the house of Jadot), which a staged fragment cannot do: a key may be filed once.
+      Coravin, the house of Jadot, the glass list), which a staged fragment cannot do: a key may be filed
+      once. Four components named the Leflaive as a glass pour; that sentence in each is brought up to the
+      sheet.
    4. Cook at home's links (src/lib/data/kitchen) follow the two names. Run npm run build:kitchen after
       the edition is kept, since its check reads the kept pack.
 
@@ -52,8 +54,19 @@ const GAINS = {
 	'wine-grape-pinot-noir': [COU],
 	'wine-region-cote-de-beaune': [JAD, COU],
 	'wine-burgundy-tiers': [JAD, COU],
-	'wine-coravin': [JAD, COU]
+	'wine-coravin': [JAD, COU],
+	'wine-story-by-the-glass': [LEM, KOK, JAD, COU]
 };
+/* The four components that named the Leflaive as a glass pour: the sentence that said so, and no more. */
+const PROSE = [
+	{ key: 'wine-story-by-the-glass', at: 'explain', from: 'Two are poured by Coravin, the Leflaive Mâcon-Verzé through the cork and the Rare under a sparkling stopper,', to: 'Three are poured by Coravin, the Louis Jadot Les Pucelles and the Domaine de Courcel Pommard through the cork and the Rare under a sparkling stopper,' },
+	{ key: 'wine-story-by-the-glass', at: 'back', from: 'The Leflaive Mâcon-Verzé and the Rare.', to: 'The Jadot Les Pucelles, the de Courcel Pommard and the Rare.' },
+	{ key: 'wine-coravin', at: 'explain', from: 'So a bottle such as the Domaine Leflaive Mâcon-Verzé can be poured', to: 'So a bottle such as the Louis Jadot Les Pucelles can be poured' },
+	{ key: 'wine-story-leflaive', at: 'explain', from: 'On our list: the Mâcon-Verzé by Coravin by the glass and by the bottle,', to: 'On our list: the Mâcon-Verzé by the bottle, our Coravin glass until November 2026,' },
+	{ key: 'wine-story-leflaive', at: 'front', from: 'and what do we pour by the glass?', to: 'and what did we pour by the glass?' },
+	{ key: 'wine-grape-chardonnay', at: 'explain', from: 'the Leflaive and Fichet Mâcons by the glass,', to: 'the Jadot Les Pucelles by Coravin and the Fichet Mâcon on the tasting,' },
+	{ key: 'wine-story-leflaive', at: 'back', from: 'We pour its Mâcon-Verzé by Coravin, by the glass.', to: 'Its Mâcon-Verzé was our Coravin glass until November 2026.' }
+];
 const ASKS = [
 	{ id: 'a-sjcs33ot', opens: /^Is the open Minuty Prestige still the 2024/, add: ' The 15 November glass sheet prints 2023.' },
 	{ id: 'a-kqp6jzgr', opens: /^Which grapes are in Brennan.s Essential\?/, add: ' The Wines by the Glass sheet of 15 November 2026 prints: “The assemblage is 44% Pinot Noir, 34% Meunier, & 22% Chardonnay.”' }
@@ -118,9 +131,21 @@ for (const f of fs.readdirSync(COMPONENTS).filter((x) => x.endsWith('.json')).so
 		for (const name of names) if (!c.items.includes(name)) { c.items.push(name); adds++; }
 	}
 	if (adds) said(file, `${adds} item(s) added to existing components for the four new glass wines`, 'pending');
+	for (const p of PROSE) {
+		const c = (Array.isArray(j.data.components) ? j.data.components : []).find((x) => x.key === p.key);
+		if (!c) continue;
+		p.seen = true;
+		const cur = p.at === 'back' ? c.card.back : p.at === 'front' ? c.card.front : c.explain;
+		if (cur.includes(p.to)) { said(file, `${p.key} ${p.at} already reads as the new glass list`, 'done'); continue; }
+		if (!cur.includes(p.from)) { missing.push(`${REL(file)}: ${p.key} ${p.at} does not contain: ${p.from}`); continue; }
+		const next = cur.split(p.from).join(p.to);
+		if (p.at === 'back') c.card.back = next; else if (p.at === 'front') c.card.front = next; else c.explain = next;
+		said(file, `${p.key} ${p.at}: the sentence naming the Leflaive as the Coravin glass is brought up to the sheet`, 'pending');
+	}
 	keep(j);
 }
 for (const key of Object.keys(GAINS)) if (!gained.has(key)) missing.push(`${REL(COMPONENTS)}: no component with the key ${key}`);
+for (const p of PROSE) if (!p.seen) missing.push(`${REL(COMPONENTS)}: no component with the key ${p.key}`);
 
 /* 4: Cook at home. The link reads "<pack name>: why", so only the name before the colon moves. */
 const KITCHEN = path.join(ROOT, 'src', 'lib', 'data', 'kitchen');
