@@ -708,7 +708,35 @@ function checkParity(T, P) {
 
 	/* The drills, over the fixture and over the widened copy, twenty seeds each. */
 	const wide = widened(fixture, T);
-	for (const [label, house] of [['fixture', fixture], ['widened', wide]]) {
+	/* The past: the widened copy with its last dish, wine and cocktail filed
+	   under a section that begins 'Past ', a term and a component hanging on
+	   the past dish alone and a component on a past and a served item. The
+	   rule and the narrowed house agree, and the dealing below runs over it. */
+	const past = clone(wide);
+	const lastOf = (/** @type {any[]} */ list) => list[list.length - 1];
+	lastOf(past.dishes).section = 'Past menu items';
+	lastOf(past.wines).section = '  Past wines by the glass ';
+	lastOf(past.cocktails).section = 'Past cocktails';
+	lastOf(past.lexicon).itemIds = [lastOf(past.dishes).id];
+	past.components = (past.components || []).concat(
+		{ ...clone(past.components[0]), id: 'c-pastonly', name: 'Past only', itemIds: [lastOf(past.dishes).id] },
+		{ ...clone(past.components[0]), id: 'c-pastboth', name: 'Past and served', itemIds: [lastOf(past.cocktails).id, past.dishes[0].id] }
+	);
+	const SECTIONS = ['Past menu items', '  Past wines by the glass ', 'Past cocktails', 'Past', 'Past ', 'Pasta', 'Pastries', 'past menu items', 'The Past menu', 'Mains', '', null, undefined, 7, ['Past menu items']];
+	/** @param {Engine} E */
+	const pastRule = (E) => SECTIONS.map((section) => E.isPast({ section })).concat([E.isPast(null), E.isPast(undefined), E.isPast({})], past.dishes.concat(past.wines, past.cocktails).map(E.isPast));
+	same('isPast', pastRule(T), pastRule(P));
+	same('liveHouse(past)', T.liveHouse(past), P.liveHouse(past));
+	if (T.liveHouse(fixture) !== fixture || P.liveHouse(fixture) !== fixture || T.liveHouse(wide) !== wide || P.liveHouse(wide) !== wide) fail.push('liveHouse does not hand back the very house when no item is past');
+	for (const [name, E] of [['the TypeScript', T], ['the port', P]]) {
+		const live = E.liveHouse(past);
+		if (live === past || live.dishes.length !== past.dishes.length - 1 || live.wines.length !== past.wines.length - 1 || live.cocktails.length !== past.cocktails.length - 1) fail.push(`${name}: liveHouse did not take the past dish, wine and cocktail off a copy`);
+		if (live.lexicon.length !== past.lexicon.length - 1 || live.components.length !== past.components.length - 1 || !live.components.some((/** @type {any} */ c) => c.id === 'c-pastboth')) fail.push(`${name}: liveHouse did not take off the term and the component that hang on the past alone, or took one that names a served item`);
+		const gone = new Set([lastOf(past.dishes).id, lastOf(past.wines).id, lastOf(past.cocktails).id, lastOf(past.lexicon).id, 'c-pastonly']);
+		if (E.buildFlashcards(past).some((/** @type {any} */ c) => gone.has(c.itemId)) || E.sayable(past).some((/** @type {any} */ i) => gone.has(i.id))) fail.push(`${name}: a past item reached a card or the say back list`);
+	}
+	same('sayable(past)', [T.sayable(past), T.sayable(past, 'dish'), T.sayable(past, 'wine'), T.sayable(past, 'cocktail')], [P.sayable(past), P.sayable(past, 'dish'), P.sayable(past, 'wine'), P.sayable(past, 'cocktail')]);
+	for (const [label, house] of [['fixture', fixture], ['widened', wide], ['past', past]]) {
 		same(`drillableCounts(${label})`, T.drillableCounts(house), P.drillableCounts(house));
 		same(`readyKinds(${label})`, T.readyKinds(house), P.readyKinds(house));
 		same(`buildFlashcards(${label})`, T.buildFlashcards(house), P.buildFlashcards(house));
@@ -730,7 +758,7 @@ function checkParity(T, P) {
 			}
 			same(`drillableCount(${label}, ${kind})`, T.drillableCount(house, kind), P.drillableCount(house, kind));
 		}
-		if (label === 'widened' && !dealt) fail.push('the widened house dealt no question of any kind, so the drills are not proved');
+		if (label !== 'fixture' && !dealt) fail.push(`the ${label} house dealt no question of any kind, so the drills are not proved`);
 	}
 
 	/* The offline graders, over the fixture: the kept lines word for word, a

@@ -1134,6 +1134,49 @@ export function tastingShortName(name: string, houseName: string): string {
 	return n;
 }
 
+/* -------------------------------------------------------------------------
+ * The past
+ * ---------------------------------------------------------------------- */
+
+/**
+ * PAST. An item the house no longer serves keeps its record, its id, its
+ * marks and its notes, and is filed under a section whose name begins
+ * 'Past ' ('Past menu items', 'Past wines by the glass'). That is the whole
+ * rule: no field says it and no tombstone is written, so an engine that
+ * does not know the rule reads the same pack without loss, and a device
+ * keeps the record to read.
+ */
+export const PAST_PREFIX = 'Past ';
+
+/** True when the item is filed as past: its section, trimmed, begins 'Past '. */
+export function isPast(item: { section?: unknown } | null | undefined): boolean {
+	return !!item && typeof item.section === 'string' && item.section.trim().indexOf(PAST_PREFIX) === 0;
+}
+
+/**
+ * The house as it is served now, for everything that deals a question or a
+ * card: the same record with the past dishes, wines and cocktails off
+ * their three lists, and off the lexicon and the components any record
+ * that names items and names only past ones (the part of a past dish
+ * alone, its card and its producer with it). Every other list is the same
+ * array, and a record that names one item still served stays. The very
+ * object back when no item is past, so a house without a past section
+ * deals exactly as it did. A reader that shows the house (the menu list, a
+ * card, a search) reads the whole house and asks isPast where it matters.
+ */
+export function liveHouse(house: House): House {
+	const past = new Set<string>();
+	for (const list of [house.dishes, house.wines, house.cocktails] as HouseItem[][]) {
+		for (const item of list || []) if (isPast(item)) past.add(item.id);
+	}
+	if (!past.size) return house;
+	const served = <T extends { section?: unknown }>(list: T[]): T[] => (list || []).filter((item) => !isPast(item));
+	const hangs = (r: { itemIds?: string[] }): boolean => !(Array.isArray(r.itemIds) && r.itemIds.length > 0 && r.itemIds.every((id) => past.has(id)));
+	const out: House = { ...house, dishes: served(house.dishes), wines: served(house.wines), cocktails: served(house.cocktails), lexicon: (house.lexicon || []).filter(hangs) };
+	if (house.components) out.components = house.components.filter(hangs);
+	return out;
+}
+
 export function mintId(prefix: string, taken: ReadonlySet<string>, rand: () => number = Math.random): string {
 	for (let tries = 0; tries < 1000; tries++) {
 		let s = prefix;

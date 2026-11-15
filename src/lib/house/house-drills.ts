@@ -33,12 +33,19 @@
  * speech service) against what they KEPT, with no model and no network: the
  * same words in, the same grade out, on every wing and with no key.
  *
+ * THE PAST IS NEVER DEALT. Every reader here that deals (dealQuestion,
+ * dealRound, the three counts, buildFlashcards and sayable) reads the house
+ * through liveHouse (house-schema.ts): an item filed under a section that
+ * begins 'Past ' is no question, no card, no right answer and no wrong
+ * one, and a component or a term that hangs on past items alone goes with
+ * it. The graders take an id and grade whatever it names, past or served.
+ *
  * NO QUESTION ANSWERS ITSELF. The stem of a question never carries its
  * answer: a kept line that names the dish, a wine named for its grape, a
  * cocktail named for its glass are left out of that kind's pool rather than
  * asked. The test holds the rule over every kind and many seeds.
  */
-import { COCKTAIL_PARTS, DISH_PARTS, KEYS, LINE_CAPS, TIMED_LINES, WINE_PARTS, isMark, tastingShortName } from './house-schema';
+import { COCKTAIL_PARTS, DISH_PARTS, KEYS, LINE_CAPS, TIMED_LINES, WINE_PARTS, isMark, liveHouse, tastingShortName } from './house-schema';
 import type {
 	ComponentCard,
 	HouseComponent,
@@ -569,7 +576,8 @@ const SPECS: Readonly<Record<DrillKind, KindSpec>> = {
  * then the four are shuffled; every draw is from `rand`. A record with more
  * than one right answer (a dish with two producers) never offers the others.
  */
-export function dealQuestion(house: House, kind: DrillKind, rand: Rand): DrillQuestion | null {
+export function dealQuestion(whole: House, kind: DrillKind, rand: Rand): DrillQuestion | null {
+	const house = liveHouse(whole);
 	const spec = SPECS[kind];
 	const pool = spec.pool(house);
 	if (pool.length < DRILL_FLOORS[kind]) return null;
@@ -589,7 +597,8 @@ export function dealQuestion(house: House, kind: DrillKind, rand: Rand): DrillQu
  * An item whose options fall short is skipped and the next is asked; an
  * unmet floor, a short field or a limit of nothing deals nothing.
  */
-export function dealRound(house: House, kind: DrillKind, rand: Rand, limit = Infinity): DrillQuestion[] {
+export function dealRound(whole: House, kind: DrillKind, rand: Rand, limit = Infinity): DrillQuestion[] {
+	const house = liveHouse(whole);
 	const spec = SPECS[kind];
 	const pool = spec.pool(house);
 	if (pool.length < DRILL_FLOORS[kind]) return [];
@@ -695,7 +704,8 @@ export function producerDish(house: House, rand: Rand): DrillQuestion | null {
  * ---------------------------------------------------------------------- */
 
 /** How many items are drillable per kind: the records that carry the kept mark the kind reads and do not answer themselves. */
-export function drillableCounts(house: House): Record<DrillKind, number> {
+export function drillableCounts(whole: House): Record<DrillKind, number> {
+	const house = liveHouse(whole);
 	const out = {} as Record<DrillKind, number>;
 	for (const kind of DRILL_KINDS) out[kind] = SPECS[kind].pool(house).length;
 	return out;
@@ -707,7 +717,8 @@ export function drillableCounts(house: House): Record<DrillKind, number> {
  * One kind's pool only, so a caller sizing a round reads one pass, not the
  * nineteen drillableCounts reads. Spends no draw.
  */
-export function drillableCount(house: House, kind: DrillKind): number {
+export function drillableCount(whole: House, kind: DrillKind): number {
+	const house = liveHouse(whole);
 	const spec = SPECS[kind];
 	const n = spec.pool(house).length;
 	if (n < DRILL_FLOORS[kind]) return 0;
@@ -715,7 +726,8 @@ export function drillableCount(house: House, kind: DrillKind): number {
 }
 
 /** The kinds that deal now: the floor met and four distinct options in the field. Spends no draw. */
-export function readyKinds(house: House): DrillKind[] {
+export function readyKinds(whole: House): DrillKind[] {
+	const house = liveHouse(whole);
 	const out: DrillKind[] = [];
 	for (const kind of DRILL_KINDS) {
 		const spec = SPECS[kind];
@@ -837,7 +849,8 @@ function producerCards(house: House, byId: Map<string, HouseItem>): Flashcard[] 
  * never hers, so they need no keeping. The order is the record's; the
  * screen shuffles every kind but the courses. A mark nobody kept makes no card.
  */
-export function buildFlashcards(house: House): Flashcard[] {
+export function buildFlashcards(whole: House): Flashcard[] {
+	const house = liveHouse(whole);
 	const out: Flashcard[] = [];
 	const byId = itemById(house);
 	for (const item of itemsOf(house)) {
@@ -892,12 +905,14 @@ export function buildFlashcards(house: House): Flashcard[] {
 		if (front && back) out.push({ kind: 'component', front, back, itemId: c.id });
 	}
 	for (const card of producerCards(house, byId)) out.push(card);
+	/* A course is the menu's own print: it names what the tasting names, read from the whole house. */
+	const printed = house === whole ? byId : itemById(whole);
 	for (const t of house.tastings || []) {
 		const menu = tastingShortName(t.name, house.name);
 		if (!menu) continue;
 		for (const c of t.courses || []) {
 			const label = plainText(c.label);
-			const back = courseBack(c, byId);
+			const back = courseBack(c, printed);
 			if (label && back) out.push({ kind: 'tasting', front: menu + ': ' + label, back, itemId: t.id, course: c.n });
 		}
 	}
@@ -1266,7 +1281,7 @@ export function gradeScenario(house: House, scenarioId: string, said: string): S
 /** The items that can be said back, of one kind or all, in the house's order: a kept lines mark with at least one line. */
 export function sayable(house: House, kind?: ItemKind): SayableItem[] {
 	const out: SayableItem[] = [];
-	for (const item of itemsOf(house)) {
+	for (const item of itemsOf(liveHouse(house))) {
 		if (kind && item.kind !== kind) continue;
 		const name = nameOf(item);
 		const lines = keptValue<Lines>(item.lines);

@@ -180,6 +180,9 @@ export const LIB = {
 	componentVideos: 'componentVideos',
 	/* the tastings: a tasting's name the short way a card or a heading wants it */
 	tastingShortName: 'tastingShortName',
+	/* the past: an item filed under a section that begins 'Past ', and the house without them, as the drills read it */
+	isPast: 'isPast',
+	liveHouse: 'liveHouse',
 	/* the bottle list and the tiers */
 	wineListOf: 'wineListOf',
 	printedDollars: 'printedDollars',
@@ -217,7 +220,7 @@ export const CONSTANTS = [
 	'COMPONENT_KINDS', 'COMPONENT_LABELS', 'COMPONENT_WORDS', 'COMPONENT_FLOORS', 'COMPARE_APPS', 'COMPARE_MAX', 'COMPARE_WORDS', 'TASTING_WORDS',
 	'PRODUCER_TYPES', 'PRODUCER_GROUPS', 'PRODUCER_WORDS', 'PRODUCER_MAX',
 	'FATAL_CODES', 'NEVER_FATAL', 'ALLERGEN_TALK', 'ALLERGEN_WORD', 'QUOTE_WORDS',
-	'PACK_FORMAT', 'PACK_VERSION', 'MY_HOUSE', 'MAP_HOUSE_PREFIX', 'NO_HOUSE_SAID', 'HOUSE_PARTS', 'CARD_KEYS', 'ITEM_FIELDS', 'PUT_LISTS'
+	'PACK_FORMAT', 'PACK_VERSION', 'MY_HOUSE', 'MAP_HOUSE_PREFIX', 'NO_HOUSE_SAID', 'HOUSE_PARTS', 'CARD_KEYS', 'ITEM_FIELDS', 'PUT_LISTS', 'PAST_PREFIX'
 ];
 
 /* -------------------------------------------------------------------------

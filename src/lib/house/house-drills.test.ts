@@ -626,6 +626,123 @@ describe('the flashcards', () => {
 });
 
 /* -------------------------------------------------------------------------
+ * The past is never dealt
+ * ---------------------------------------------------------------------- */
+
+describe('the past is never dealt', () => {
+	const PAST_IDS = ['d-oxtail01', 'w-chenin01', 'b-flip0001'];
+	/** The term and the producer that hang on the past dish alone, and the mix-up that sets it against a served one. */
+	const HANGING = ['x-suet0001', 'c-prodoxt1', 'm-oxtlamb1'];
+	/** Every word only a past record carries: none may be asked, answered or offered. */
+	const WORDS = ['Oxtail Pudding', 'Cellar Door Chenin 2019', 'The Old Yard Flip', 'Chenin Blanc', 'Nick and Nora', 'Old Yard Butchers', 'Yard Lane', 'Suet', 'Stout gravy', 'Mashed swede', 'egg and nutmeg'];
+	const lines = (name: string): Mark<Lines> => kept({ s10: name + ', as it was.', s20: name + ', as it was poured and plated last season.', s45: name + ', as it was poured and plated last season, for the table that asks after it.' });
+
+	/** The widened house with a dish, a wine and a cocktail filed as past, every mark kept, so nothing but the section keeps them out. */
+	function withPast(): House {
+		const h = widened();
+		h.dishes.push(dish('d-oxtail01', 'Oxtail Pudding', { section: 'Past menu items', ...dishMarks('w-chenin01', 'b-flip0001', 'Stout gravy', 'Mashed swede', 'A steamed pudding of braised tail in stout gravy.', 'Braised tail under a steamed crust, with stout gravy and mashed swede beside it.', 'OX tail, as it reads.') }));
+		h.wines.push(wine('w-chenin01', 'Cellar Door Chenin 2019', ['Chenin Blanc'], { section: 'Past wines by the glass', goesWith: kept('The pudding, when it was on.'), say: kept('SHEN in, the cellar door one.'), lines: lines('Cellar Door Chenin') }));
+		h.cocktails.push(cocktail('b-flip0001', 'The Old Yard Flip', 'Nick and Nora', ['50 ml rum', 'a whole egg and nutmeg'], { section: 'Past cocktails', zeroProof: true, say: kept('As it reads, the flip.'), lines: lines('The Old Yard Flip') }));
+		h.lexicon.push({ ...term('x-suet0001', 'Suet', 'SOO it', 'The hard fat that makes the crust of the pudding.'), itemIds: ['d-oxtail01'] });
+		h.components = (h.components || []).concat(producer('c-prodoxt1', 'Braising tail', 'Old Yard Butchers', 'Yard Lane', ['d-oxtail01']));
+		h.mixUps.push(mixup('m-oxtlamb1', 'd-oxtail01', 'd-lambsh01', 'One was steamed under a crust; the other is roasted on the bone.', 'Do you remember the crust?'));
+		h.tastings[0].courses.push({ n: 3, label: 'The old main', dishIds: ['d-oxtail01'], pourId: 'w-chenin01', pourText: '' });
+		return h;
+	}
+
+	/** The same house with the past three, the term and the producer taken off by hand: what must be dealt. */
+	function byHand(): House {
+		const h = withPast();
+		h.dishes = h.dishes.filter((d) => d.id !== 'd-oxtail01');
+		h.wines = h.wines.filter((w) => w.id !== 'w-chenin01');
+		h.cocktails = h.cocktails.filter((b) => b.id !== 'b-flip0001');
+		h.lexicon = h.lexicon.filter((t) => t.id !== 'x-suet0001');
+		h.components = (h.components || []).filter((c) => c.id !== 'c-prodoxt1');
+		return h;
+	}
+
+	const gone = new Set([...PAST_IDS, ...HANGING]);
+	const clean = (text: string) => WORDS.every((w) => !text.includes(w));
+
+	it('asks no question about a past item, and offers none as an answer or a wrong one, over every kind and many seeds', () => {
+		const h = withPast();
+		const before = JSON.stringify(h);
+		let asked = 0;
+		const check = (q: DrillQuestion | null, where: string) => {
+			if (!q) return;
+			asked++;
+			expect(gone.has(q.itemId), `${where}: asks about ${q.itemId}`).toBe(false);
+			for (const text of [q.stem, q.answer, ...q.options]) expect(clean(text), `${where}: "${text}"`).toBe(true);
+		};
+		for (const kind of DRILL_KINDS) {
+			for (let seed = 1; seed <= 120; seed++) {
+				check(dealQuestion(h, kind, seeded(seed)), `${kind} at seed ${seed}`);
+				check(GENERATORS[kind](h, seeded(seed + 1000)), `${kind} by its own name at seed ${seed}`);
+			}
+			for (let seed = 1; seed <= 12; seed++) for (const q of dealRound(h, kind, seeded(seed))) check(q, `${kind} in a round at seed ${seed}`);
+		}
+		expect(asked).toBeGreaterThan(3000);
+		expect(JSON.stringify(h)).toBe(before);
+	});
+
+	it('deals, counts and lists exactly as the house with the past taken off by hand', () => {
+		const h = withPast();
+		const hand = byHand();
+		expect(drillableCounts(h)).toEqual(drillableCounts(hand));
+		expect(readyKinds(h)).toEqual(readyKinds(hand));
+		expect(readyKinds(h)).toEqual([...DRILL_KINDS]);
+		for (const kind of DRILL_KINDS) {
+			expect(drillableCount(h, kind), kind).toBe(drillableCount(hand, kind));
+			for (let seed = 1; seed <= 20; seed++) {
+				expect(dealQuestion(h, kind, seeded(seed)), `${kind} at seed ${seed}`).toEqual(dealQuestion(hand, kind, seeded(seed)));
+				expect(dealRound(h, kind, seeded(seed), 10), `${kind} round at seed ${seed}`).toEqual(dealRound(hand, kind, seeded(seed), 10));
+			}
+		}
+		expect(sayable(h)).toEqual(sayable(hand));
+	});
+
+	it('counts fall by exactly the past records: file a served house past and each count drops by its own', () => {
+		const served = withPast();
+		for (const item of [...served.dishes, ...served.wines, ...served.cocktails]) if (PAST_IDS.includes(item.id)) item.section = 'Mains';
+		const whole = drillableCounts(served);
+		const live = drillableCounts(withPast());
+		/* The dish: its lines, its sauce, its sides, its two pairings (both to drinks now past), its say; the wine and the drink their own kinds; the term; the producer; the mix-up. */
+		const drop: Record<DrillKind, number> = {
+			lineToDish: 1, sauceOf: 1, sidesOf: 1, firstPickFor: 1, zeroProofFor: 1, termToGuest: 1, sayIt: 4, mixUp: 1,
+			wineGrapes: 1, wineGoesWith: 1, cocktailGlass: 1, cocktailSpec: 1, producerOf: 1, producerWhere: 1, producerDish: 1
+		};
+		for (const kind of DRILL_KINDS) expect(whole[kind] - live[kind], kind).toBe(drop[kind]);
+	});
+
+	it('builds no card for a past item, its term, its producer or its mix-up, and a course still prints the dish and the pour the tasting names', () => {
+		const h = withPast();
+		const cards = buildFlashcards(h);
+		expect(cards.filter((c) => gone.has(c.itemId))).toEqual([]);
+		const course = cards.filter((c) => c.kind === 'tasting' && c.course === 3);
+		expect(course).toEqual([{ kind: 'tasting', front: 'The Harbour Supper: The old main', back: 'Oxtail Pudding. Paired with Cellar Door Chenin 2019', itemId: 't-harbour1', course: 3 }]);
+		for (const c of cards) if (!(c.kind === 'tasting' && c.course === 3)) expect(clean(c.front) && clean(c.back), c.front).toBe(true);
+		/* Every other card is the card of the house narrowed by hand. */
+		expect(cards.filter((c) => !(c.kind === 'tasting' && c.course === 3))).toEqual(buildFlashcards(byHand()).filter((c) => !(c.kind === 'tasting' && c.course === 3)));
+		/* Filed as served, the same records make cards: the section alone kept them out. */
+		const served = withPast();
+		for (const item of [...served.dishes, ...served.wines, ...served.cocktails]) if (PAST_IDS.includes(item.id)) item.section = 'Mains';
+		const made = new Set(buildFlashcards(served).map((c) => c.itemId));
+		for (const id of gone) expect(made.has(id), id).toBe(true);
+	});
+
+	it('leaves a past item off the say back list, and still grades it by its id', () => {
+		const h = withPast();
+		expect(sayable(h).map((i) => i.id).filter((id) => gone.has(id))).toEqual([]);
+		expect(sayable(h, 'wine').map((i) => i.id)).not.toContain('w-chenin01');
+		const g = gradeSaid(h, 'd-oxtail01', 's10', 'A steamed pudding of braised tail in stout gravy.');
+		expect(g).not.toBeNull();
+		expect(g?.name).toBe('Oxtail Pudding');
+		expect(gradeSaid(h, 'w-chenin01', 's20', 'Cellar Door Chenin')).not.toBeNull();
+		expect(gradeSaid(h, 'b-flip0001', 's45', 'The flip')).not.toBeNull();
+	});
+});
+
+/* -------------------------------------------------------------------------
  * Say it back and Guest at the table, graded offline
  * ---------------------------------------------------------------------- */
 

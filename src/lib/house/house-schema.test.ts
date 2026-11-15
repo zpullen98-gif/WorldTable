@@ -33,9 +33,12 @@ import {
 	emptyHouse,
 	isMark,
 	isNote,
-	mintId
+	mintId,
+	PAST_PREFIX,
+	isPast,
+	liveHouse
 } from './house-schema';
-import type { House, HouseList, Lines, Mark } from './house-schema';
+import type { House, HouseComponent, HouseList, LexiconTerm, Lines, Mark } from './house-schema';
 
 /**
  * The House schema is data three apps and a pack file will carry, so what is
@@ -454,6 +457,108 @@ describe('emptyHouse', () => {
 		const optional = ['history', 'pack', ...OPTIONAL_KEYS.House];
 		expect(Object.keys(h).sort()).toEqual(KEYS.House.filter((k) => !optional.includes(k)).sort());
 		for (const k of keysDeep(h)) expect(k).not.toMatch(FORBIDDEN_KEY);
+	});
+});
+
+describe('the past', () => {
+	/** The fixture with the beetroot salad and the drink without alcohol filed as past, by their sections alone. */
+	const withPast = (): House => {
+		const h = JSON.parse(fixtureText) as House;
+		h.dishes.find((d) => d.id === 'd-beetrt01')!.section = 'Past menu items';
+		h.cocktails.find((b) => b.id === 'b-verjus01')!.section = 'Past cocktails';
+		return h;
+	};
+
+	it('is a section that begins Past and a space, capital P, once trimmed: the rule, case by case', () => {
+		expect(PAST_PREFIX).toBe('Past ');
+		const PAST = ['Past menu items', 'Past wines by the glass', 'Past cocktails', '  Past wines by the glass ', '\tPast menu items\n', 'Past  two spaces', 'Past 2025'];
+		for (const section of PAST) expect(isPast({ section }), JSON.stringify(section)).toBe(true);
+		const SERVED = ['Past', 'Past ', 'Pasta', 'Pastries', 'Pastry and bread', 'past menu items', 'PAST MENU ITEMS', 'The Past menu', 'Entrees, Past menu items', 'Fall 2026', 'Mains', '', '   '];
+		for (const section of SERVED) expect(isPast({ section }), JSON.stringify(section)).toBe(false);
+		/* No section, a section that is no string, and no item at all: none is past, and none throws. */
+		expect(isPast({})).toBe(false);
+		for (const section of [undefined, null, 0, 42, true, ['Past menu items'], { name: 'Past menu items' }]) expect(isPast({ section }), JSON.stringify(section)).toBe(false);
+		expect(isPast(null)).toBe(false);
+		expect(isPast(undefined)).toBe(false);
+		/* It reads the section and nothing else: a name, a meal or a note that says Past files nothing. */
+		expect(isPast({ section: 'Mains', name: 'Past menu items', meals: ['Past menu'] } as { section: string })).toBe(false);
+		/* The three kinds alike. */
+		const h = withPast();
+		expect(h.dishes.map(isPast)).toEqual([false, true]);
+		expect(h.wines.map(isPast)).toEqual([false]);
+		expect(h.cocktails.map(isPast)).toEqual([false, true]);
+		for (const list of [fixture.dishes, fixture.wines, fixture.cocktails]) for (const item of list) expect(isPast(item), item.name).toBe(false);
+	});
+
+	it('liveHouse hands back the very house when nothing is past', () => {
+		expect(liveHouse(fixture)).toBe(fixture);
+		const bare = emptyHouse('h-abcdefgh', 'My house', 'hand', 1);
+		expect(liveHouse(bare)).toBe(bare);
+		/* A section that only looks like it changes nothing. */
+		const near = JSON.parse(fixtureText) as House;
+		near.dishes[0].section = 'Pastries';
+		near.wines[0].section = 'past wines by the glass';
+		expect(liveHouse(near)).toBe(near);
+	});
+
+	it('liveHouse takes the past dishes, wines and cocktails off a copy, and leaves the house as it was', () => {
+		const h = withPast();
+		h.wines.push({ ...h.wines[0], id: 'w-pastwn01', name: 'Old Cellar White 2019', section: 'Past wines by the glass' });
+		const before = JSON.stringify(h);
+		const live = liveHouse(h);
+		expect(live).not.toBe(h);
+		expect(JSON.stringify(h)).toBe(before);
+		expect(h.dishes).toHaveLength(2);
+		expect(live.dishes.map((d) => d.id)).toEqual(['d-chicken1']);
+		expect(live.wines.map((w) => w.id)).toEqual(['w-lantern1']);
+		expect(live.cocktails.map((b) => b.id)).toEqual(['b-collins1']);
+		/* What stays is the very record, never a copy of it. */
+		expect(live.dishes[0]).toBe(h.dishes[0]);
+		expect(live.wines[0]).toBe(h.wines[0]);
+		expect(live.cocktails[0]).toBe(h.cocktails[0]);
+		/* Every other list is the same array, and every other key the same value. */
+		for (const k of Object.keys(h) as Array<keyof House>) {
+			if (['dishes', 'wines', 'cocktails', 'lexicon', 'components'].includes(k)) continue;
+			expect(live[k], k).toBe(h[k]);
+		}
+		expect(Object.keys(live).sort()).toEqual(Object.keys(h).sort());
+		/* Narrowed once is narrowed: the copy holds nothing past, so it comes back itself. */
+		expect(liveHouse(live)).toBe(live);
+	});
+
+	it('liveHouse takes off a term and a component that hang on past items alone, and keeps one that names an item still served or names none', () => {
+		const h = withPast();
+		const term = (id: string, word: string, itemIds: string[]): LexiconTerm => ({ id, term: word, itemIds, ts: 1 });
+		const comp = (id: string, name: string, itemIds: string[]): HouseComponent => ({ id, kind: 'ingredient', name, itemIds, termIds: [], ts: 1 });
+		h.lexicon.push(term('x-pastboth', 'Both', ['d-beetrt01', 'd-chicken1']), term('x-noitems1', 'No items', []), term('x-pasttwo1', 'Two past', ['d-beetrt01', 'b-verjus01']));
+		h.components = (h.components || []).concat(
+			comp('c-pastonly', 'Past only', ['d-beetrt01']),
+			comp('c-pastboth', 'Past and served', ['b-verjus01', 'd-chicken1']),
+			comp('c-noitems1', 'No items', []),
+			{ ...comp('c-nolist01', 'No list', []), itemIds: undefined as unknown as string[] }
+		);
+		const live = liveHouse(h);
+		/* Salt baked names the beetroot alone and Verjus the drink alone: both go, with the term that names the two past items. */
+		expect(live.lexicon.map((t) => t.id)).toEqual(['x-pastboth', 'x-noitems1']);
+		/* The salt crust is the chicken's; the Verjus component and the past-only one go. */
+		expect((live.components || []).map((c) => c.id)).toEqual(['c-saltcrs1', 'c-pastboth', 'c-noitems1', 'c-nolist01']);
+		/* What stays is the very record, its itemIds as they were: the past id stays on it, to be read by whoever shows the whole house. */
+		expect((live.components || [])[1]).toBe(h.components.find((c) => c.id === 'c-pastboth'));
+		expect((live.components || [])[1].itemIds).toEqual(['b-verjus01', 'd-chicken1']);
+		expect(h.lexicon).toHaveLength(5);
+		expect(h.components).toHaveLength(6);
+		/* An id that names nothing on the house is not past: a term that names only a stranger stays. */
+		const stray = withPast();
+		stray.lexicon.push(term('x-stray001', 'Stray', ['d-nowhere1']), term('x-straypst', 'Stray and past', ['d-nowhere1', 'd-beetrt01']));
+		expect(liveHouse(stray).lexicon.map((t) => t.id)).toEqual(['x-stray001', 'x-straypst']);
+	});
+
+	it('liveHouse adds no components key to a house that carries none', () => {
+		const h = withPast();
+		delete h.components;
+		const live = liveHouse(h);
+		expect('components' in live).toBe(false);
+		expect(live.dishes.map((d) => d.id)).toEqual(['d-chicken1']);
 	});
 });
 

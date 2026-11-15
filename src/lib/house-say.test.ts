@@ -20,6 +20,7 @@ import {
 	serviceNoteOf
 } from './house-say';
 import { heldLine, packCounts, packId, packLine } from './house-autoload';
+import { liveHouse } from './house/house-schema';
 import type { House } from './house/house-schema';
 
 /**
@@ -64,9 +65,11 @@ describe('Say it back', () => {
 	it('over the shipped pack, every dish, drink and wine can be said back', () => {
 		const h = brennans();
 		const c = sayCounts(h);
-		expect(c.dish).toBe(h.dishes.filter((d) => d.lines?.by === 'person').length);
-		expect(c.cocktail).toBe(h.cocktails.length);
-		expect(c.wine).toBe(h.wines.length);
+		/* The house as it is served: an item filed as past is read, never said back. */
+		const live = liveHouse(h);
+		expect(c.dish).toBe(live.dishes.filter((d) => d.lines?.by === 'person').length);
+		expect(c.cocktail).toBe(live.cocktails.length);
+		expect(c.wine).toBe(live.wines.length);
 		const sections = saySections(h, ['dish']);
 		expect(sections.length).toBeGreaterThan(3);
 		for (const s of sections) expect(s.section).toBeTruthy();
