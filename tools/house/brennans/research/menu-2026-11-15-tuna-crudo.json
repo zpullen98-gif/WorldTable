@@ -1,0 +1,1546 @@
+{
+  "dish": "Tuna Crudo",
+  "id": "d-0m4q3e52",
+  "readOn": "2026-11-15",
+  "sheet": {
+    "source": "tools/house/brennans/research/menu-2026-11-15-sheets.md, section A2",
+    "title": "TUNA CRUDO -TASTING MENU",
+    "replaces": "The Louisiana BBQ Lobster (d-5e4ptrq8) as the second course of the dinner tasting; the lobster moves to the past menu items.",
+    "ingredients": [
+      "Tuna",
+      "Carrot Ginger Aguachile",
+      "Salsa Seca",
+      "Burnt Orange Segments",
+      "Coriander",
+      "Pickled Pearl Onions",
+      "Maldon Salt"
+    ],
+    "allergens": [
+      "Alumn",
+      "Coriander",
+      "Chilis",
+      "Sesame",
+      "Gluten"
+    ],
+    "chefFactsHeading": "Fun Facts with Chef",
+    "chefFacts": [
+      "Aquachile is a traditional Mexican from the coastal state of Sinaloa usually made by submerging fresh fish in a blend of lemon juice and spices.",
+      "Aquachile translates to \"Chili Water\"",
+      "Salsa Seca is a Mexican condiment made from dried roasted chilis, tortilla chips, seeds and nuts",
+      "Coriander is the Cilantro seed",
+      "Coriander aversion is the strong perception that the herb taste like soap, dirt, or bugs caused by the chemical compound called Aldehydes."
+    ],
+    "note": "As printed, spelling included (Aquachile twice, Alumn, Chilis, 'a traditional Mexican' with no noun after it, 'the herb taste like soap'). This sheet's heading prints no name; in everything written from it he is the chef. The sheet prints no price, no species or cut of tuna, no portion, no recipe, no acid or chili for the aguachile and no formula for the salsa seca. The allergen list is the same, word for word, as the October sheet's; it belongs in the service note only, with the reading 'Alumn (read as allium)' beside it. Two points are the owner's to put to the kitchen and are already lineup asks in the pack: fish is not on the printed list although tuna is the plate, and the chef's note says the salsa seca holds nuts while the list prints sesame and no nut."
+  },
+  "chefFacts": [
+    {
+      "fact": "Aquachile is a traditional Mexican from the coastal state of Sinaloa usually made by submerging fresh fish in a blend of lemon juice and spices.",
+      "verdict": "loosely true",
+      "whatSourcesSay": "The place stands; the fish, the lemon and the spices each need a word. Place: every source found puts aguachile in northwest Mexico and names Sinaloa first: Wikipedia's text, Mexico News Daily, a Sinaloa news site and, as a cook's site reports it, the Larousse Mexican cookbook, which calls it a kind of Mexican ceviche from Sinaloa. Two cautions: Wikipedia's own summary box prints Nayarit, the state next door, and one source says the root may lie with indigenous communities of Sinaloa or Nayarit. Fish: the classic is raw shrimp in every recipe and reference found; fish and scallops are variants. Lemon: the citrus is lime in every English source; one Sinaloa style recipe in the results prints lemon, and a San Diego carrot version uses lemon and lime together. The likely root of the slip is the Spanish word limón, which Mexican recipes use for the lime, but that reading came from the search summary and not from a dictionary, so it is listed under unsourced. Spices: it is chili and salt, with no spice blend: chiltepín, the small round chili of Sinaloa, in the old form, and serrano today. Traditional: fair for the root, generous for the dish. The oldest form was boiled water and chiltepín, by several accounts eaten with meat in the highlands; shrimp and lime came in on the coast; the raw shrimp version is usually dated to the 1970s; and one long article argues the modern dish is recent, noting that people in Sinaloa only began searching for it regularly in 2008. The word is aguachile, with a g. Beside the chef's words: the sources agree on Sinaloa and on raw seafood under citrus and chili; they say shrimp where the sheet says fish, lime where it says lemon, and chili where it says spices.",
+      "sourceIds": [
+        "wikipedia-aguachile",
+        "mnd-sinaloa",
+        "tbn-aguachile-culichi",
+        "honest-food-aguachile",
+        "eater-lost-city",
+        "aguachile-recipes",
+        "atk-aguachile-verde",
+        "sd-carrot-aguachile"
+      ]
+    },
+    {
+      "fact": "Aquachile translates to \"Chili Water\"",
+      "verdict": "true",
+      "whatSourcesSay": "Agua is water and chile is chili: chili water (the sources write it chile water). Wikipedia, the recipe pages found today and the chef's page that ChatGPT's field notes cite all gloss it that way. The name fits the oldest form the sources describe, which was only water and crushed chiltepín, and it names the seasoned liquid, not the seafood. The printed 'Aquachile' is a slip of spelling: the word is aguachile. Beside the chef's words: true as it stands, with the spelling corrected.",
+      "sourceIds": [
+        "wikipedia-aguachile",
+        "honest-food-aguachile",
+        "fw-aguachile-yahoo",
+        "repo-chatgpt"
+      ]
+    },
+    {
+      "fact": "Salsa Seca is a Mexican condiment made from dried roasted chilis, tortilla chips, seeds and nuts",
+      "verdict": "loosely true",
+      "whatSourcesSay": "Mexican, dried chilies, seeds and nuts are borne out; the tortilla chips are not, in three searches. The one maker's description found calls salsa seca an inside-out 'dry' salsa made from a rustic blend of fried nuts and seeds, a take on variants from Michoacán, also known in Mexico as salsa de semillas (seed salsa) and a close relative of salsa macha. Tasting Table draws the family differently: it treats salsa seca as the wider group of oil based salsas, says it can be as simple as oil with dried peppers and garlic, and calls salsa macha (dried chilies, ground nuts and seeds, usually peanuts and sesame, in oil, traced to Orizaba in Veracruz) one type of it. So the sources disagree on where salsa seca ends and salsa macha begins, and agree on the larder: dried chilies, nuts, seeds, garlic and oil. No source mentions tortilla chips or tostadas. They may be this kitchen's own build or a restaurant habit the search did not reach, and they matter, because the sheet marks Gluten. The sources also bear out the nuts (peanuts are the classic in salsa macha), which sharpens the owner's open question: the sheet marks Sesame and no nut. Beside the chef's words: a dry, crunchy Mexican salsa of dried chilies with toasted or fried seeds and nuts, kin to salsa macha; the tortilla is ours to confirm with the kitchen.",
+      "sourceIds": [
+        "xilli-salsa-seca",
+        "tastingtable-seca-macha",
+        "sunset-nut-salsas",
+        "wikipedia-salsa-macha",
+        "macha-origin-pages",
+        "sheet-2026-11-15"
+      ]
+    },
+    {
+      "fact": "Coriander is the Cilantro seed",
+      "verdict": "true",
+      "whatSourcesSay": "True in American kitchen usage. Coriander and cilantro are one plant, Coriandrum sativum: in the United States cilantro means the fresh leaf and coriander the dried seed, and the essential oil trade keeps the same split (coriander seed oil, cilantro leaf oil). Elsewhere, Britain among them, coriander names the leaf as well, so the word alone does not settle which part is on a plate. The two parts do not taste alike: the seed's oil is mostly linalool, the leaf's aroma is led by aldehydes. Beside the chef's words: true, and it tells us the kitchen means the seed; whether a leaf is on the plate too is still a lineup question in the pack.",
+      "sourceIds": [
+        "kew-coriander",
+        "repo-chatgpt",
+        "pmc-coriander-review",
+        "coriander-oil-glossaries",
+        "repo-pack"
+      ]
+    },
+    {
+      "fact": "Coriander aversion is the strong perception that the herb taste like soap, dirt, or bugs caused by the chemical compound called Aldehydes.",
+      "verdict": "loosely true",
+      "whatSourcesSay": "Soap and aldehydes stand; the rest needs care. Aldehydes are a family of compounds, not one compound: decanal and (E)-2-decenal are among those central to the smell of the fresh leaf, and the same compounds give the citrus freshness other people enjoy. The cause sits in the taster as much as in the plant. A genome wide study published in the journal Flavour in 2012, run by the genetics company 23andMe on 14,604 people of European descent who said whether cilantro tasted soapy, and checked in 11,851 more who said whether they liked it, found one variant, rs72921001, on chromosome 11 inside a cluster of eight olfactory receptor genes. One of them, OR6A2, codes for a smell receptor that binds those aldehydes, and the authors call it the most promising candidate, not a proven cause. The effect is modest: an odds ratio of about 0.81, and common variants explain only a small share of the trait (heritability about 0.087). Bugs: weaker pages say the leaf's aldehydes resemble those in stink bug secretions, and the word coriander is traditionally traced to the Greek koris, bedbug, a reading proposed by Pliny the Elder that modern scholars both defend and dispute. Dirt: not shown in today's search. And the point that matters on this plate: the aversion is to the leaf. The ripe seed's oil is mostly linalool (60 to 80% in one review, 68.4 to 87.5% in a trade table), and the leaf aldehyde (E)-2-decenal, high in the unripe seed, falls away as it matures. So the chef's two coriander facts pull apart: if the plate carries the seed, the soap story is about a different part of the plant. Beside the chef's words: to some people the fresh leaf tastes of soap; the smell comes from aldehydes in the leaf, and a variant near the smell receptor gene OR6A2 is linked to noticing it.",
+      "sourceIds": [
+        "cilantro-study-2012",
+        "bmc-blog-coriander",
+        "mentalfloss-cilantro",
+        "coriander-etymology-pages",
+        "pmc-coriander-review",
+        "pf-coriander-table",
+        "coriander-oil-glossaries",
+        "tandf-2-decenal"
+      ]
+    }
+  ],
+  "classic": {
+    "origin": {
+      "text": "Two classics meet on this plate, and neither is a single recipe with a birthday. Aguachile comes from Sinaloa, on the Pacific coast of northwest Mexico. Its oldest form, by several accounts, was boiled water and crushed chiltepín, the small round chili of Sinaloa, eaten with meat in the highlands; on the coast shrimp took the meat's place and lime came in. The raw shrimp dish known today is usually dated to the 1970s, and one long article argues that as a named restaurant dish it is more recent still. Crudo is Italian: the word means raw, pesce crudo is raw fish, and the dish, raw fish dressed with olive oil, salt and citrus, is placed by the sources in the fishing towns of coastal Italy, Sicily above all, with no date. The carrot and ginger aguachile is a modern form: published restaurant recipes build the chili water on carrot juice with ginger and habanero, and a San Diego restaurant served a carrot aguachile with ahi tuna.",
+      "sourceIds": [
+        "wikipedia-aguachile",
+        "mnd-sinaloa",
+        "tbn-aguachile-culichi",
+        "eater-lost-city",
+        "wikipedia-crudo",
+        "tastingtable-crudo-sashimi",
+        "gbc-pesce-crudo",
+        "fw-carrot-aguachile",
+        "sd-carrot-aguachile"
+      ]
+    },
+    "name": {
+      "text": "Aguachile is agua, water, and chile, chili: chili water, named for the seasoned liquid and not for the seafood. Crudo is the Italian word for raw; pesce crudo is raw fish, carne cruda is raw meat, and the menu word crudo is shorthand for pesce crudo. In an Italian kitchen 'a crudo' can also mean something else, raw ingredients put into the pan together and cooked without a first sauté, so the word alone does not always promise a raw dish. Salsa seca is Spanish for dry salsa.",
+      "sourceIds": [
+        "wikipedia-aguachile",
+        "fw-aguachile-yahoo",
+        "wikipedia-crudo",
+        "culinarylore-crudo",
+        "tastingtable-crudo-sashimi",
+        "xilli-salsa-seca",
+        "repo-chatgpt"
+      ]
+    },
+    "sayIt": "ah-gwah-CHEE-leh (aguachile); KROO-doh (crudo)",
+    "credited": {
+      "text": "Nobody. No source names an inventor for aguachile: it is a folk dish of Sinaloa, and the accounts speak of highland cooks and coastal shrimp cooks, not of a person. Crudo is a way of serving fish, not an invention. Carpaccio, the thin sliced cousin, does have a named origin at a bar in Venice, but the two accounts found disagree on the date, so no name or year is carried here. The carrot versions found are the work of living chefs, who are not named.",
+      "sourceIds": [
+        "wikipedia-aguachile",
+        "mnd-sinaloa",
+        "wikipedia-crudo",
+        "whatsthediff-crudo",
+        "fw-carrot-aguachile",
+        "sd-carrot-aguachile"
+      ]
+    },
+    "story": [
+      {
+        "text": "The root is in the name. Wikipedia puts the origin on the coast of Sinaloa, where the first aguachile was boiled water and chiltepín, a small round chili of the state, and another source says the oldest version had nothing to do with shrimp and everything to do with chiltepín.",
+        "sourceIds": [
+          "wikipedia-aguachile",
+          "mnd-sinaloa",
+          "tbn-aguachile-culichi"
+        ]
+      },
+      {
+        "text": "Meat came first, by these accounts: ground meat in boiling water with chiltepín added, a dish of the highlands, carried down by migrants from the Sierra Madre Occidental. The search looked for machaca, dried beef, as that meat and did not find it; the sources say ground or boiled meat.",
+        "sourceIds": [
+          "mnd-sinaloa",
+          "tbn-aguachile-culichi"
+        ]
+      },
+      {
+        "text": "On the coast the meat was quickly replaced with shrimp, seasoned with lime. One source ties the change to plenty: Sinaloa produces more than a third of Mexico's shrimp.",
+        "sourceIds": [
+          "mnd-sinaloa",
+          "tbn-aguachile-culichi"
+        ]
+      },
+      {
+        "text": "The raw shrimp aguachile is usually dated to the 1970s. One long article goes further and argues that the modern dish is a recent invention, noting that people in Sinaloa did not search for it with any regularity until 2008. The two views are not at war: an old chili water, a newer shrimp dish, and a very new fame.",
+        "sourceIds": [
+          "mnd-sinaloa",
+          "tbn-aguachile-culichi",
+          "eater-lost-city"
+        ]
+      },
+      {
+        "text": "Mazatlán is named as the aguachile town, and there serrano is allowed in place of chiltepín. The green version, verde, is the classic and the best known: raw serrano, lime, cilantro and cucumber blended and poured over butterflied raw shrimp, with cucumber and red onion. A black version is seasoned with soy sauce, which one source says became popular in Sinaloa with Chinese immigrants in the late 1800s.",
+        "sourceIds": [
+          "mnd-sinaloa",
+          "aguachile-recipes",
+          "atk-aguachile-verde",
+          "wikipedia-aguachile"
+        ]
+      },
+      {
+        "text": "The Larousse Mexican cookbook, as a cook's site reports it, calls aguachile a kind of Mexican ceviche from Sinaloa, asks for shrimp that have never been frozen and has the chili pounded in a mortar. The book itself was not read.",
+        "sourceIds": [
+          "honest-food-aguachile"
+        ]
+      },
+      {
+        "text": "Crudo is the other half. In Italian the word only means raw; as a dish it is raw fish dressed with olive oil, salt and an acid such as lemon. Sources place it in the fishing towns of coastal Italy and single out Sicily, and one calls it analogous to sashimi, plain raw fish cut another way. No source gives it a date, and none was found for the day it reached American menus.",
+        "sourceIds": [
+          "wikipedia-crudo",
+          "tastingtable-crudo-sashimi",
+          "gbc-pesce-crudo",
+          "culinarylore-crudo"
+        ]
+      },
+      {
+        "text": "Carrot is a modern turn, and this kitchen is not alone in it. A recipe published by Food & Wine builds the liquid on fresh carrot juice blended with fresh ginger, salt, half a habanero and scallion whites, served as a broth with trout roe, cucumber, onion and cashews. A San Diego restaurant's recipe blends and strains carrot juice with ghost pepper, adds lemon and lime juice and salt, and serves it with cucumber, red onion, ahi tuna and scallops. So carrot, ginger, citrus and tuna already keep company in print.",
+        "sourceIds": [
+          "fw-carrot-aguachile",
+          "sd-carrot-aguachile"
+        ]
+      },
+      {
+        "text": "The house plate, as the sheet prints it: tuna, a carrot ginger aguachile, salsa seca, burnt orange segments, coriander, pickled pearl onions and Maldon salt. By the owner's note with the sheets of 15 November 2026 it replaces the Louisiana BBQ Lobster, which was the second course of the dinner tasting.",
+        "sourceIds": [
+          "sheet-2026-11-15"
+        ]
+      }
+    ]
+  },
+  "method": {
+    "note": "This is the classic as cooks make it, for understanding the plate: the Sinaloa shrimp aguachile, the published carrot form, and the handling of raw fish for a crudo. It is not the house recipe. The sheet prints no method, and the cut, any cure, the acid, the chili and the heat are the chef's answers (the pack already carries those lineup asks).",
+    "steps": [
+      {
+        "step": 1,
+        "text": "The classic starts with very fresh raw shrimp, peeled and butterflied, that is split lengthwise so each lies flat and takes the sauce on a wide face.",
+        "basis": "sourced",
+        "sourceIds": [
+          "aguachile-recipes",
+          "atk-aguachile-verde",
+          "honest-food-aguachile"
+        ]
+      },
+      {
+        "step": 2,
+        "text": "Make the chili water. The old way pounds chiltepín in a mortar and lets it down with water or lime and salt. The modern green version blends raw serrano (some use jalapeño) with lime juice, cilantro, cucumber, garlic and salt until smooth.",
+        "basis": "sourced",
+        "sourceIds": [
+          "honest-food-aguachile",
+          "wikipedia-aguachile",
+          "aguachile-recipes",
+          "atk-aguachile-verde"
+        ]
+      },
+      {
+        "step": 3,
+        "text": "Pour it over the shrimp. How long they sit is where cooks disagree. One careful recipe rests them three minutes, enough for the surface to firm without toughening. Several marinate about 30 minutes once the sauce is on, one after a 25 to 30 minute lime cure of its own. America's Test Kitchen cures for 30 minutes and allows the full hour for a firmer bite. The shorter the time, the more the dish is a sauce on raw seafood; the longer, the closer it comes to a ceviche.",
+        "basis": "sourced; the sources disagree and all are given",
+        "sourceIds": [
+          "aguachile-recipes",
+          "atk-aguachile-verde"
+        ]
+      },
+      {
+        "step": 4,
+        "text": "Finish with sliced cucumber and red onion and send it cold.",
+        "basis": "sourced for the garnish; 'cold, with tostadas' is common knowledge of the dish and was not sourced today",
+        "sourceIds": [
+          "aguachile-recipes",
+          "wikipedia-aguachile"
+        ]
+      },
+      {
+        "step": 5,
+        "text": "The carrot form swaps the green base for carrot juice. One published recipe blends fresh carrot juice with fresh ginger, salt, half a habanero and scallion whites until smooth and serves it as a broth. Another blends carrot juice with ghost pepper, strains it, then adds lemon and lime juice and salt. Both are sauces to pour, not cures to wait on.",
+        "basis": "sourced (two published restaurant recipes; neither is the house's)",
+        "sourceIds": [
+          "fw-carrot-aguachile",
+          "sd-carrot-aguachile"
+        ]
+      },
+      {
+        "step": 6,
+        "text": "For a crudo the fish is the work. Tuna for raw service is held at or below 5°C (41°F), portioned on a chilled board with a chilled blade, and sliced about 5 mm thick across the grain in one pull.",
+        "basis": "the Table's Cuisine entry on tuna, with its own sources; not searched again today",
+        "sourceIds": [
+          "repo-cuisine"
+        ]
+      },
+      {
+        "step": 7,
+        "text": "Dress at the last moment and salt last. A crudo's acid only seasons the fish; a slice that waits in sauce or salt warms, weeps and dulls.",
+        "basis": "the Table's Cuisine entry; the comparison pages agree that a crudo is dressed, not cured",
+        "sourceIds": [
+          "repo-cuisine",
+          "wikipedia-crudo",
+          "tastingtable-ceviche-sashimi"
+        ]
+      },
+      {
+        "step": 8,
+        "text": "On this plate the parts are tuna, the carrot ginger aguachile, salsa seca, burnt orange segments, coriander, pickled pearl onions and Maldon salt. The order they go on, and how the tuna is cut, are not printed.",
+        "basis": "the sheet",
+        "sourceIds": [
+          "sheet-2026-11-15"
+        ]
+      }
+    ],
+    "ratios": [
+      {
+        "text": "Acid: a ceviche uses around eight times the acid of a crudo or a tartare, and the fish sits in it longer (one comparison article).",
+        "sourceIds": [
+          "tastingtable-ceviche-sashimi",
+          "whatsthediff-crudo"
+        ]
+      },
+      {
+        "text": "A crudo dressing in the Italian manner: about 3 parts good oil to 1 part citrus juice, with flake salt at the pass.",
+        "sourceIds": [
+          "repo-cuisine"
+        ]
+      },
+      {
+        "text": "Slice for crudo: about 5 mm (1/4 inch), across the grain.",
+        "sourceIds": [
+          "repo-cuisine"
+        ]
+      },
+      {
+        "text": "Time in the acid for an aguachile: three minutes in one recipe, about 30 minutes in several, up to an hour in one test kitchen. There is no agreed figure.",
+        "sourceIds": [
+          "aguachile-recipes",
+          "atk-aguachile-verde"
+        ]
+      },
+      {
+        "text": "Chili: one traditional style recipe calls for 3 tablespoons of chiltepín to its batch; the published carrot recipe uses half a habanero. The size of each batch was not shown, so neither is a ratio, and neither is the house's.",
+        "sourceIds": [
+          "honest-food-aguachile",
+          "fw-carrot-aguachile"
+        ]
+      },
+      {
+        "text": "Caution on all five: these come from general recipe and comparison pages and from the Table's own Cuisine entry, not from Larousse or a Sinaloa kitchen, and none is the house's proportion.",
+        "sourceIds": [
+          "repo-cuisine",
+          "aguachile-recipes"
+        ]
+      }
+    ],
+    "temps": [
+      {
+        "text": "Cold holding for raw fish: at or below 5°C (41°F), the Food Code's line.",
+        "sourceIds": [
+          "repo-cuisine"
+        ]
+      },
+      {
+        "text": "There is no cooking step, and the citrus is not one. Acid firms fish and turns it opaque; it lowers the count of some microbes and does not reliably destroy bacteria, viruses or parasites.",
+        "sourceIds": [
+          "guelph-ceviche",
+          "cooks-illustrated-ceviche",
+          "pbs-ceviche"
+        ]
+      },
+      {
+        "text": "The Food Code's answer to parasites in fish served raw is freezing: at or below -20°C (-4°F) for seven days, or at or below -35°C (-31°F) for 15 hours in a blast freezer. The second figure was cut off in today's search and is completed from the Table's Cuisine entry.",
+        "sourceIds": [
+          "sc-parasite-guidance-2024",
+          "delaware-3-402-11",
+          "repo-cuisine"
+        ]
+      },
+      {
+        "text": "The same section exempts tuna by species. Minnesota's adoption lists Thunnus albacares, the yellowfin, among the exempt tunas, and South Carolina's guidance names bluefin, yellowfin and bigeye. So tuna may lawfully be served raw without having been frozen; whether tonight's was is the kitchen's answer.",
+        "sourceIds": [
+          "minnesota-rule-4626-0350",
+          "sc-parasite-guidance-2024",
+          "repo-cuisine"
+        ]
+      },
+      {
+        "text": "For the burnt orange: sugars caramelize at about 160 to 177°C (320 to 350°F), a general figure from one source, not a citrus recipe.",
+        "sourceIds": [
+          "charred-citrus-pages"
+        ]
+      },
+      {
+        "text": "The first pick wine is poured at 45 to 48°F (the pack's figure, not researched again here).",
+        "sourceIds": [
+          "repo-pack"
+        ]
+      }
+    ],
+    "faults": [
+      {
+        "fault": "Tough, chalky, opaque seafood",
+        "cause": "Left too long in the acid, so the surface cures through. This is the fault of an aguachile that waits, and the reason a crudo is dressed to order.",
+        "basis": "sourced (the three minute recipe rests the shrimp only until the surface firms; the test kitchen's longer cure is offered for a firmer texture; the fact sheet describes acid turning flesh opaque and firm)",
+        "sourceIds": [
+          "aguachile-recipes",
+          "atk-aguachile-verde",
+          "guelph-ceviche"
+        ]
+      },
+      {
+        "fault": "Weeping, gray crudo",
+        "cause": "Dressed or salted too early, so salt and acid pulled water from the fish.",
+        "basis": "the Table's Cuisine entry",
+        "sourceIds": [
+          "repo-cuisine"
+        ]
+      },
+      {
+        "fault": "Mushy, torn slices",
+        "cause": "Cut with the grain, or with a dragging blade.",
+        "basis": "the Table's Cuisine entry",
+        "sourceIds": [
+          "repo-cuisine"
+        ]
+      },
+      {
+        "fault": "Dull, brown, soft tuna",
+        "cause": "Age or warmth. In the trade's grading, brown or greenish color is a #3 fish, a cooking grade, and not for raw service.",
+        "basis": "the Table's Cuisine entry, and the grading pages found today",
+        "sourceIds": [
+          "repo-cuisine",
+          "lukes-tuna-grading",
+          "chowhound-tuna-number"
+        ]
+      },
+      {
+        "fault": "Acrid orange",
+        "cause": "Charred a second too long. Charring adds smoke and a tinge of bitterness; past that point the fruit is simply burnt.",
+        "basis": "sourced (a chefs' teaching page: it takes only a second for charred food to become burnt)",
+        "sourceIds": [
+          "charred-citrus-pages"
+        ]
+      },
+      {
+        "fault": "Telling a guest the citrus cooked it",
+        "cause": "A service fault, not a kitchen one. Acid is not heat and is no kill step; the fish is raw and the advisory stands.",
+        "basis": "sourced",
+        "sourceIds": [
+          "guelph-ceviche",
+          "cooks-illustrated-ceviche",
+          "repo-pack"
+        ]
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Tuna",
+      "what": "The sheet prints 'Tuna' and no more. The kitchen tunas are yellowfin and bigeye (both sold as ahi), albacore and the bluefins. The trade grades a whole fish from a core sample on a number scale: #1, the sashimi grade, with the most fat, visible marbling and a clear, translucent red to deep pink; #2+, leaner and a little less clear; #2, uneven in color; #3, brown or greenish, a cooking grade. Graders weigh color and clarity, fat, texture, size and shape, and freshness by eye and experience. No agency regulates the numbers, and 'sushi grade' and 'sashimi grade' have no legal definition in the United States: they are a seller's claim that the fish was handled for raw eating. The best #1 fish are most often bluefin or bigeye.",
+      "how": "For a crudo: held at or below 5°C (41°F), sliced about 5 mm thick across the grain in one pull, sauced at the last moment and salted last. Under the Food Code most fish served raw must first be frozen for parasites, and the named tunas, yellowfin, bigeye and the bluefins among them, are exempt, so tuna may lawfully go to the table raw without having been frozen. The species, the cut, any cure and whether tonight's fish was frozen are the kitchen's answers.",
+      "tastes": "Cool, clean and meaty, silky more than flaky; lean cuts are mild, fattier ones richer.",
+      "why": "Firm, meaty flesh holds a clean slice and stands up to chili, citrus and crunch, a cool, mild base under a loud sauce. Tuna and carrot aguachile have met before: the San Diego restaurant recipe found today serves its carrot aguachile with ahi. Why the chef chose it is not printed.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "repo-cuisine",
+        "repo-pack",
+        "lukes-tuna-grading",
+        "fulton-tuna-guide",
+        "chowhound-tuna-number",
+        "minnesota-rule-4626-0350",
+        "sc-parasite-guidance-2024",
+        "sd-carrot-aguachile"
+      ]
+    },
+    {
+      "name": "Carrot Ginger Aguachile",
+      "what": "Aguachile is chili water: in Sinaloa, lime juice and crushed or blended fresh chili with salt, poured over raw shrimp with cucumber and red onion and served cold. The green version with serrano, cilantro and cucumber is the classic and the best known; a black one is seasoned with soy sauce. A carrot aguachile is a modern restaurant form in which carrot juice is the body of the liquid, and ginger is part of at least one published version.",
+      "how": "The classic: pound or blend the chili with lime juice and salt (the green version adds cilantro, cucumber and garlic) and pour it over the seafood, at once or after a short cure. The carrot form, in the two published recipes found: fresh carrot juice blended smooth with fresh ginger, salt, half a habanero and scallion whites; or carrot juice and ghost pepper blended and strained, then lemon and lime juice and salt. The house's acid, chili and proportions are not printed.",
+      "tastes": "Sweet and earthy from the carrot, a clean warmth from the ginger, sharp and bright from the citrus, and chili heat on top. The classic is meant to be hot, as the name says; how hot the house batch runs is the kitchen's answer.",
+      "why": "It is the sauce and the idea of the plate. A crudo needs acid, salt and aroma, and here they arrive as a Sinaloa chili water instead of oil and lemon, with carrot for body, color and a sweetness that carries the heat. That is a reading of the plate; the chef's reasons are not printed.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "wikipedia-aguachile",
+        "mnd-sinaloa",
+        "aguachile-recipes",
+        "atk-aguachile-verde",
+        "fw-carrot-aguachile",
+        "sd-carrot-aguachile",
+        "repo-pack"
+      ]
+    },
+    {
+      "name": "Salsa Seca",
+      "what": "A dry salsa: a crunchy, crumbly Mexican condiment of dried chilies with fried or toasted nuts and seeds. Sources differ on its border with salsa macha. A maker's description calls salsa seca an inside-out 'dry' salsa made from a rustic blend of fried nuts and seeds, a take on variants from Michoacán, also called salsa de semillas (seed salsa) in Mexico and a close relative of salsa macha. Tasting Table instead treats salsa seca as the wider family of oil based salsas and salsa macha as one type of it. Salsa macha itself is traced to Orizaba, in the mountains of Veracruz: dried chilies, peanuts, sesame and garlic in oil, looking much like a Chinese chili crisp.",
+      "how": "In the sources: dried chilies toasted or fried until brittle; nuts and seeds, most often peanuts and sesame, sometimes pumpkin seeds or tree nuts, fried or toasted; garlic and salt; in some recipes a splash of vinegar, sugar or dried fruit; all ground or chopped coarse. A macha is left in plenty of oil; a dry salsa keeps the solids and little of the oil. The chef's note adds tortilla chips, which no source found mentions. The house formula is not printed.",
+      "tastes": "Toasty, nutty and smoky, with a slow chili warmth and a firm crunch. Ancho and pasilla, named by one source as the base chilies of a macha, are on the earthy side.",
+      "why": "Texture first: it is the crunch on a plate of soft fish and liquid sauce, and being dry it stays crisp where an oily salsa would slide. Its roasted, faintly bitter chili answers the sweet carrot. That is a reading of the plate. It is also where the printed Sesame mark most plainly points and where the chef's 'seeds and nuts' sits, so every question about seeds, nuts or grain in it goes to the service note and the kitchen.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "xilli-salsa-seca",
+        "tastingtable-seca-macha",
+        "sunset-nut-salsas",
+        "wikipedia-salsa-macha",
+        "tastingtable-macha-unique",
+        "macha-origin-pages",
+        "repo-pack"
+      ]
+    },
+    {
+      "name": "Burnt Orange Segments",
+      "what": "Orange segments charred on the surface. The pack's card reads them as segments cut free of their membrane with the cut face charred; the sheet says only 'Burnt Orange Segments'.",
+      "how": "The sources char citrus cut side down on a very hot grill, grill pan or skillet until the face darkens and caramelizes. A torch, the pack's other guess, is not confirmed by any source found. Sugars caramelize at about 160 to 177°C (320 to 350°F), and the margin is narrow: one chefs' teaching page warns that it takes only a second for charred to become burnt. How this kitchen does it, and how dark, is a lineup question.",
+      "tastes": "Sweeter and rounder than raw orange, the acidity toned down, with a smoky edge and a tinge of bitterness where the sugar has gone past caramel.",
+      "why": "Citrus belongs on a crudo and in an aguachile. Charring gives this one depth instead of more raw acid, so it bridges the sweet carrot and the roasted chilies of the salsa seca. That is a reading of the plate.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "charred-citrus-pages",
+        "oxo-charred-lemon",
+        "nibble-charred-citrus",
+        "tastingtable-charred-citrus",
+        "repo-pack"
+      ]
+    },
+    {
+      "name": "Coriander",
+      "what": "One plant, Coriandrum sativum. In American kitchens cilantro is the fresh leaf and coriander the dried seed; elsewhere coriander names the leaf too. The chef's note ('Coriander is the Cilantro seed') reads it as the seed. The sheet also prints Coriander among its allergens.",
+      "how": "Not printed. Which part is on the plate, and where it sits (a leaf garnish, seed in the salsa seca or in the aguachile), is a lineup question already in the pack. Cooks usually toast and crack or grind the seed; that is kitchen practice, not sourced today.",
+      "tastes": "The seed is warm, sweet and faintly orange scented; its oil is mostly linalool (60 to 80% in one review, 68.4 to 87.5% in a trade table). The leaf is green and citrusy to most people and soapy to some; its smell is led by aldehydes such as (E)-2-decenal and decanal, which fall away as the seed ripens.",
+      "why": "Either part ties the plate to its classics. Cilantro leaf is in the green sauce of the classic aguachile, and the seed's orange note sits beside the burnt orange. That is a reading of the plate. A guest who dislikes the leaf is describing a taste; a guest who reports a reaction is sent to the service note and the kitchen.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "kew-coriander",
+        "pmc-coriander-review",
+        "pf-coriander-table",
+        "coriander-oil-glossaries",
+        "tandf-2-decenal",
+        "cilantro-study-2012",
+        "aguachile-recipes",
+        "repo-pack"
+      ]
+    },
+    {
+      "name": "Pickled Pearl Onions",
+      "what": "Small onions about the size of a marble, peeled whole and steeped in a vinegar brine. They are still onions. Nothing was added to the pack's card today: no search was spent on them.",
+      "how": "Steeped in vinegar with salt, usually a little sugar and spice (the pack's card). The house pickle, its vinegar, sweetener and spice, is not printed.",
+      "tastes": "Crunchy, sharp and sweet-sour, a clean bright bite.",
+      "why": "Onion is part of the classic: red onion goes on a Sinaloa aguachile and into a ceviche. The pickled pearl onion is this plate's version of it, with the pickle adding a second acid beside the citrus. That is a reading of the plate. The sheet's mark Alumn is read as allium, the onion family, and these are onions: any onion or garlic question goes to the kitchen.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "repo-pack",
+        "aguachile-recipes",
+        "whatsthediff-crudo"
+      ]
+    },
+    {
+      "name": "Maldon Salt",
+      "what": "A flake sea salt from Maldon, on the Blackwater estuary in Essex, England. The company has traded under the Maldon name since 1882, though salt was made in the town long before, and has been run by one family for four generations. Its flakes are soft, hollow, irregular pyramids, and the pyramid crystal is the company's mark.",
+      "how": "Seawater is taken from the Blackwater estuary on the spring tides and evaporated slowly in shallow pans until the pyramid crystals form, and the company describes its salt as hand harvested. Wikipedia describes the brine evaporated over fires on a network of brick flues. The maker treats the exact method, a matter of temperature and timing, as a family secret.",
+      "tastes": "A clean burst of salt from a crisp, light flake that crunches and then dissolves fast.",
+      "why": "A finishing salt. Raw fish wants its salt at the last second, because salt put on early pulls water and makes a crudo weep, and a flake adds a small second crunch beside the salsa seca. The same salt finishes the Chocolate Crémeux later in this tasting.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "maldon-history",
+        "maldon-pyramid",
+        "wikipedia-maldon",
+        "countrylife-maldon",
+        "greatbritishlife-maldon",
+        "repo-cuisine",
+        "repo-pack"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "name": "Maldon Salt",
+      "kind": "a salt maker and its flake sea salt",
+      "what": "The Maldon Salt Company of Maldon, Essex, trading under that name since 1882 and run by one family for four generations; the profiles agree the company changed hands in 1922 and disagree on who bought it and on how it came to the family. It makes pyramid shaped flake sea salt from the water of the Blackwater estuary, was granted a Royal Warrant in 2012, two years after a royal visit in 2010, employs about 45 people by one profile and sells in more than 55 countries. The Chocolate Crémeux sheet of the same tasting calls it 'a famous high end salt harvested from the coastal town of Maldon Essex, England', which the sources bear out.",
+      "sourceIds": [
+        "maldon-history",
+        "maldon-pyramid",
+        "wikipedia-maldon",
+        "countrylife-maldon",
+        "greatbritishlife-maldon",
+        "sheet-2026-11-15"
+      ]
+    },
+    {
+      "name": "Maldon and the Blackwater estuary",
+      "kind": "a town and a tidal estuary in Essex, on the east coast of England",
+      "what": "The town the salt is named for and the water it is made from. Salt was made at Maldon long before the present company took the name; the salt tax that had weighed on the trade was abolished in 1825.",
+      "sourceIds": [
+        "maldon-history",
+        "greatbritishlife-maldon",
+        "countrylife-maldon"
+      ]
+    },
+    {
+      "name": "Sinaloa",
+      "kind": "a state on the Pacific coast of northwest Mexico",
+      "what": "The home of aguachile. It produces more than a third of Mexico's shrimp by one account, which is why the dish settled on shrimp there. Mazatlán is named as the place to eat aguachile. Nayarit, the state next door, appears in Wikipedia's summary box and in one account of the dish's roots.",
+      "sourceIds": [
+        "wikipedia-aguachile",
+        "mnd-sinaloa",
+        "tbn-aguachile-culichi"
+      ]
+    },
+    {
+      "name": "Chiltepín",
+      "kind": "a chili",
+      "what": "A small, round chili of Sinaloa and the chili of the first aguachile, crushed into boiled water. In Mazatlán serrano may stand in for it, and the modern green version is made with serrano.",
+      "sourceIds": [
+        "wikipedia-aguachile",
+        "mnd-sinaloa",
+        "aguachile-recipes"
+      ]
+    },
+    {
+      "name": "Orizaba, Veracruz",
+      "kind": "a town in the mountains of the state of Veracruz, Mexico",
+      "what": "The place most often named as the home of salsa macha, with Córdoba and Zongolica nearby; some sources point to Oaxaca as well. One account has the Totonac people grinding dried chilies, sesame and salt into a paste with no oil, the oil coming later with the Spanish; the Mexican gastronomy dictionary, as one page reports it, places the salsa's origin in Veracruz after colonization. Peanuts and sesame are the Veracruz standard.",
+      "sourceIds": [
+        "wikipedia-salsa-macha",
+        "tastingtable-seca-macha",
+        "macha-origin-pages",
+        "mnd-salsa-macha"
+      ]
+    },
+    {
+      "name": "Xilli Salsa Seca",
+      "kind": "a jarred salsa seca, the one maker's product found",
+      "what": "A bottled dry salsa sold through the Milk Street store and the New York Botanical Garden's shop. Its description is the clearest definition found: a take on variants from Michoacán, an inside-out 'dry' salsa made from a rustic blend of fried nuts and seeds, known in Mexico as salsa de semillas and a close relative of salsa macha. It is cited as a definition only; nothing says the house buys it.",
+      "sourceIds": [
+        "xilli-salsa-seca"
+      ]
+    },
+    {
+      "name": "The 2012 cilantro study",
+      "kind": "a published genetic study",
+      "what": "'A genetic variant near olfactory receptor genes influences cilantro preference', in the journal Flavour, volume 1, article 22, 2012, from the genetics company 23andMe. A genome wide association study of 14,604 people of European descent asked whether cilantro tastes soapy, checked in 11,851 more asked whether they like it. It found the variant rs72921001 on chromosome 11, in a cluster of eight olfactory receptor genes that includes OR6A2, the gene the sheet's fact points toward without naming.",
+      "sourceIds": [
+        "cilantro-study-2012",
+        "bmc-blog-coriander"
+      ]
+    },
+    {
+      "name": "Food Code section 3-402.11, Parasite Destruction",
+      "kind": "a model food rule, adopted state by state",
+      "what": "The rule behind 'was it frozen?'. Fish served raw or undercooked must first be frozen (seven days at or below -20°C, -4°F, is one option), with records kept for 90 days or a supplier's letter in their place. Tuna is exempt by species: Minnesota's text lists Thunnus albacares, the yellowfin, and South Carolina's guidance names bluefin, yellowfin and bigeye. The exemption is about species, not about freshness or grade.",
+      "sourceIds": [
+        "minnesota-rule-4626-0350",
+        "delaware-3-402-11",
+        "sc-parasite-guidance-2024",
+        "repo-cuisine"
+      ]
+    }
+  ],
+  "guestQuestions": [
+    {
+      "asked": "Is the tuna raw?",
+      "answer": "Yes. Crudo is the Italian word for raw, and the tuna is raw: cut, sauced and served cold, never cooked. Say so before the order goes in, with the consumer advisory.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "wikipedia-crudo",
+        "fda-seafood",
+        "repo-pack"
+      ]
+    },
+    {
+      "asked": "Doesn't the citrus cook the fish?",
+      "answer": "No. Acid firms the surface of fish and turns it opaque, which looks like cooking, but it is not heat: it lowers the count of some microbes and does not reliably destroy bacteria, viruses or parasites. On this plate the sauce goes on at the last moment in any case. The fish is raw, and the advisory stands.",
+      "sourceIds": [
+        "guelph-ceviche",
+        "cooks-illustrated-ceviche",
+        "pbs-ceviche",
+        "repo-pack"
+      ]
+    },
+    {
+      "asked": "What is aguachile?",
+      "answer": "Chili water, from Sinaloa on Mexico's Pacific coast: lime and fresh chili poured over raw shrimp, with cucumber and red onion. Ours is a carrot and ginger version, poured over raw tuna.",
+      "sourceIds": [
+        "wikipedia-aguachile",
+        "mnd-sinaloa",
+        "aguachile-recipes",
+        "sheet-2026-11-15"
+      ]
+    },
+    {
+      "asked": "Is it spicy? How hot?",
+      "answer": "It is meant to have some heat: the name means chili water, and in Sinaloa it is made with chiltepín or serrano. Carrot and ginger soften ours, and the dry salsa adds a slower, toasted warmth. The chili and the heat of tonight's batch are not printed, so check with the kitchen before calling it mild, and ask there whether it can be made gentler.",
+      "sourceIds": [
+        "wikipedia-aguachile",
+        "mnd-sinaloa",
+        "sheet-2026-11-15",
+        "repo-pack"
+      ]
+    },
+    {
+      "asked": "Is it like ceviche?",
+      "answer": "A cousin. In a ceviche the fish sits in a lot of lime, around eight times the acid of a crudo by one comparison, until it turns firm and opaque. Aguachile is the faster, hotter relative from Sinaloa, and ours is a crudo: the tuna is dressed at the last moment, so it eats like raw fish with a sauce, not like a cured ceviche.",
+      "sourceIds": [
+        "tastingtable-ceviche-sashimi",
+        "whatsthediff-crudo",
+        "aguachile-recipes",
+        "honest-food-aguachile",
+        "repo-cuisine"
+      ]
+    },
+    {
+      "asked": "Is it like sashimi?",
+      "answer": "The fish is; the plate is not. Sashimi is carefully sliced raw fish served almost plain, rarely sauced or garnished. A crudo comes dressed, and this one is well dressed: a carrot and ginger chili water, a crunchy dry salsa and charred orange.",
+      "sourceIds": [
+        "tastingtable-crudo-sashimi",
+        "culinarylore-crudo",
+        "wikipedia-crudo",
+        "sheet-2026-11-15"
+      ]
+    },
+    {
+      "asked": "Is it like tuna tartare?",
+      "answer": "Same fish, different cut. A tartare is chopped and bound with a dressing; a crudo is laid out and sauced. How the kitchen cuts the tuna is not printed, so learn it at lineup before promising slices.",
+      "sourceIds": [
+        "whatsthediff-crudo",
+        "tastingtable-tartare-crudo",
+        "repo-pack"
+      ]
+    },
+    {
+      "asked": "What kind of tuna is it? Is it sushi grade?",
+      "answer": "The sheet says tuna and nothing more, so the species and the cut are the kitchen's answer. 'Sushi grade' is a seller's phrase, not a legal grade: the trade grades tuna by number, with #1 the top grade for raw eating. Do not supply a species, a grade or a place from memory.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "lukes-tuna-grading",
+        "fulton-tuna-guide",
+        "chowhound-tuna-number",
+        "repo-chatgpt"
+      ]
+    },
+    {
+      "asked": "Was the fish frozen?",
+      "answer": "I will ask the kitchen. The food code has most fish for raw service frozen first, against parasites, and exempts the named tunas, so either answer is possible for a tuna and neither is a fault.",
+      "sourceIds": [
+        "minnesota-rule-4626-0350",
+        "sc-parasite-guidance-2024",
+        "repo-cuisine"
+      ]
+    },
+    {
+      "asked": "What is salsa seca? Are there nuts in it?",
+      "answer": "A dry, crunchy Mexican salsa of dried chilies with toasted or fried seeds and nuts; its better known relative is salsa macha, usually made with peanuts and sesame in oil. The chef's note says ours has seeds and nuts, and the sheet marks Sesame for the plate. Which nuts and seeds are in tonight's batch is the kitchen's answer: take any question about nuts, peanuts or sesame to the service note and the kitchen before the order goes in.",
+      "sourceIds": [
+        "xilli-salsa-seca",
+        "tastingtable-seca-macha",
+        "wikipedia-salsa-macha",
+        "sheet-2026-11-15"
+      ]
+    },
+    {
+      "asked": "Why would a raw fish plate carry gluten?",
+      "answer": "The sheet marks Gluten and does not say which part carries it. The chef's note puts tortilla chips in the salsa seca, and nothing printed says what they are made of or fried with, so nobody on the floor can answer from the sheet: a gluten question goes to the service note and the kitchen.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "fda-allergens"
+      ]
+    },
+    {
+      "asked": "I can't stand cilantro. Is there cilantro on it?",
+      "answer": "The sheet lists coriander, and the chef's note reads that as the seed, which smells warm and citrusy and not like the leaf. But the sheet does not say which part is on the plate, and the classic green aguachile is made with the leaf, so I will check with the kitchen. A dislike is a taste; a guest who reports a reaction is sent to the service note and the kitchen.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "pmc-coriander-review",
+        "aguachile-recipes",
+        "repo-pack"
+      ]
+    },
+    {
+      "asked": "Why does cilantro taste like soap to me?",
+      "answer": "The fresh leaf's smell comes from a family of compounds called aldehydes, which read as bright and citrusy to most people and as soap to some. A 2012 study of more than 14,000 people tied noticing the soapy note to a variant beside a smell receptor gene, OR6A2, that picks up those aldehydes. It is a matter of the nose and the genes, and only partly: the effect the study found is small.",
+      "sourceIds": [
+        "cilantro-study-2012",
+        "bmc-blog-coriander",
+        "mentalfloss-cilantro"
+      ]
+    },
+    {
+      "asked": "What does burnt orange mean? Is it bitter?",
+      "answer": "Orange segments charred on the surface. Charring caramelizes the sugars and takes the edge off the acid, so the fruit tastes sweeter and rounder, with a smoky edge and only a tinge of bitterness: bitter-sweet, like marmalade, not burnt in the plain sense.",
+      "sourceIds": [
+        "charred-citrus-pages",
+        "oxo-charred-lemon",
+        "nibble-charred-citrus",
+        "repo-pack"
+      ]
+    },
+    {
+      "asked": "What is Maldon salt?",
+      "answer": "A flake sea salt from Maldon on the Essex coast of England, made there under that name since 1882: light, hollow, pyramid shaped crystals that crunch and then dissolve. It is pinched over at the end.",
+      "sourceIds": [
+        "maldon-history",
+        "maldon-pyramid",
+        "wikipedia-maldon",
+        "repo-pack"
+      ]
+    },
+    {
+      "asked": "Is a carrot aguachile a real thing, or did the kitchen make it up?",
+      "answer": "It is a modern form with company. Published restaurant recipes build an aguachile on carrot juice, one with ginger and habanero and one served with ahi tuna. The house's own recipe is the chef's, and its acid and chili are not printed.",
+      "sourceIds": [
+        "fw-carrot-aguachile",
+        "sd-carrot-aguachile",
+        "sheet-2026-11-15"
+      ]
+    },
+    {
+      "asked": "Can I have the tuna seared, or the dish without the onions?",
+      "answer": "I will ask the kitchen what it can do. It is a composed course on the tasting menu, the sheet's mark Alumn is read as allium, the onion and garlic family, and whether the sauce or the salsa holds garlic is not printed, so any change is the kitchen's call and not a promise from the floor.",
+      "sourceIds": [
+        "sheet-2026-11-15",
+        "repo-pack"
+      ]
+    },
+    {
+      "asked": "Is raw tuna all right for me? I'm pregnant.",
+      "answer": "Never tell a guest what she may eat. The raw fish advisory applies, the species is not printed, and the FDA's advice on fish differs from one tuna to another, so the question goes to the manager and the kitchen, and the guest decides.",
+      "sourceIds": [
+        "repo-cuisine",
+        "fda-seafood"
+      ]
+    }
+  ],
+  "mixUps": [
+    {
+      "a": "Crudo",
+      "b": "Ceviche",
+      "tell": "Crudo is raw fish dressed at the last moment; the acid only seasons it. Ceviche sits in a great deal of lime, about eight times the acid by one comparison, until the fish turns firm and opaque. Both are raw. Neither is cooked."
+    },
+    {
+      "a": "Aguachile",
+      "b": "Ceviche",
+      "tell": "Aguachile is Sinaloa's chili water: lime blended or pounded with fresh chili and poured over raw shrimp. Ceviche is the wider family, any seafood steeped in lime, usually for longer. One reference calls aguachile a kind of Mexican ceviche; cooks keep them apart by the chili in the liquid and the shorter wait."
+    },
+    {
+      "a": "Aguachile, the dish",
+      "b": "Aguachile, the sauce on our plate",
+      "tell": "In Sinaloa the word names a whole dish of raw shrimp. On our plate it names the liquid only: a carrot and ginger chili water over tuna. There is no shrimp, and the classic's lime and cucumber are not promised."
+    },
+    {
+      "a": "Crudo",
+      "b": "Sashimi",
+      "tell": "Both are sliced raw fish. Sashimi is served almost plain, rarely sauced or garnished. A crudo is the Italian idea: raw fish that arrives dressed."
+    },
+    {
+      "a": "Crudo",
+      "b": "Tartare",
+      "tell": "A tartare is chopped and bound with a dressing. A crudo is laid out and sauced. The house now serves both forms of raw: this tuna as a crudo, and beef as the Steak Tartare with Rye."
+    },
+    {
+      "a": "Crudo",
+      "b": "Carpaccio",
+      "tell": "Carpaccio is sliced or pounded paper thin and began as raw beef in Venice. Crudo is the wider Italian word, raw, and on a menu it means raw fish."
+    },
+    {
+      "a": "Salsa seca",
+      "b": "Salsa macha",
+      "tell": "Kin, and the sources do not agree on the border. Macha is the Veracruz one: dried chilies, peanuts, sesame and garlic sitting in plenty of oil. Seca means dry: the same larder as a crunchy crumble with little oil, also called salsa de semillas. Ours is the dry one."
+    },
+    {
+      "a": "Coriander",
+      "b": "Cilantro",
+      "tell": "One plant. In American kitchens cilantro is the fresh leaf and coriander the dried seed; in Britain both are coriander. The chef's note reads ours as the seed. The soap story belongs to the leaf."
+    },
+    {
+      "a": "An aldehyde",
+      "b": "'The chemical compound called Aldehydes'",
+      "tell": "Aldehydes are a family of compounds, not one compound. The leaf's are (E)-2-decenal and decanal among others. The gene tied to tasting them as soap is OR6A2, a smell receptor gene."
+    },
+    {
+      "a": "Lime",
+      "b": "Lemon",
+      "tell": "The sheet says lemon juice. The classic aguachile is made with lime in every source found. What citrus is in ours is not printed."
+    },
+    {
+      "a": "Shrimp",
+      "b": "Fish",
+      "tell": "The sheet says aguachile is made with fresh fish. The Sinaloa classic is raw shrimp. Ours is tuna, and there is no shrimp on the plate."
+    },
+    {
+      "a": "Sushi grade",
+      "b": "#1 grade",
+      "tell": "Sushi grade is a seller's phrase with no legal meaning. #1 is the trade's own top number for tuna, judged from a core sample for color, clarity and fat. The sheet prints neither, so say neither."
+    },
+    {
+      "a": "Burnt",
+      "b": "Charred",
+      "tell": "The menu says burnt; the cook means charred: the cut face of the orange taken dark so its sugar caramelizes. Past that point it is acrid. Describe it as bitter-sweet and smoky."
+    },
+    {
+      "a": "Tuna Crudo",
+      "b": "Louisiana BBQ Lobster (a past menu item)",
+      "tell": "By the sheets of 15 November 2026 the crudo takes the lobster's place as the second course of the dinner tasting. If a guest asks for the BBQ lobster on the tasting, it has gone."
+    },
+    {
+      "a": "Alumn (as the sheet prints it)",
+      "b": "Allium",
+      "tell": "The sheet's mark is read as allium, the onion and garlic family, and the plate lists pickled pearl onions. Show it as printed with the reading beside it, and let the kitchen confirm."
+    }
+  ],
+  "pairingLogic": {
+    "firstPick": "C.H. Berres 'Old Vines' Riesling 2022 (w-5luyxb98), the pack's first pick for the dish; this file adds only the reasoning about the style. The dinner tasting's own pour for the course is a separate lineup ask.",
+    "lines": [
+      {
+        "text": "Chili heat is the first thing a wine has to answer on this plate, and a little sweetness is the standard answer: pairing writers agree that residual sugar offsets the burn of chili and that a Riesling's high acidity keeps that sugar from tasting heavy. The pack describes this wine as off-dry, about twenty grams of sugar a liter, with racy Mosel acidity.",
+        "sourceIds": [
+          "winewithseth-spicy",
+          "vinofyi-spicy",
+          "wine-advisor-fiery",
+          "repo-pack"
+        ]
+      },
+      {
+        "text": "Alcohol is the second: the same writers say a higher alcohol wine carries more heat onto the palate, hold up Kabinett at about 8 to 9% as the gentlest case, and one suggests staying under 12%. The pack gives this wine as 11.5%, and serving it cold mutes what burn there is.",
+        "sourceIds": [
+          "winewithseth-spicy",
+          "vinofyi-spicy",
+          "wine-advisor-fiery",
+          "repo-pack"
+        ]
+      },
+      {
+        "text": "Nothing in today's search spoke to Riesling with raw fish, so the third line rests on the pack alone: a light, unoaked, high acid white leaves raw tuna room and meets the citrus and the pickled onion, where tannic reds turn metallic with raw tuna and oak and alcohol flare the heat.",
+        "sourceIds": [
+          "repo-pack"
+        ]
+      }
+    ],
+    "caution": "These lines explain why an off-dry, low alcohol Mosel Riesling suits a raw fish plate with chili, ginger and citrus. They say nothing about what the house pours with the course on a given night. The sources are pairing sites of uneven quality: they agree on sweetness, acidity and low alcohol, and their accounts of the chemistry (sugar masking capsaicin, alcohol dissolving it) are asserted and not shown, so they are not carried here. No wine board or magazine surfaced."
+  },
+  "sayIt": [
+    {
+      "word": "crudo",
+      "respell": "KROO-doh"
+    },
+    {
+      "word": "pesce crudo",
+      "respell": "PEH-sheh KROO-doh"
+    },
+    {
+      "word": "aguachile",
+      "respell": "ah-gwah-CHEE-leh"
+    },
+    {
+      "word": "salsa seca",
+      "respell": "SAL-sah SEH-kah"
+    },
+    {
+      "word": "salsa macha",
+      "respell": "SAL-sah MAH-chah"
+    },
+    {
+      "word": "salsa de semillas",
+      "respell": "SAL-sah deh seh-MEE-yahs"
+    },
+    {
+      "word": "Sinaloa",
+      "respell": "see-nah-LOH-ah"
+    },
+    {
+      "word": "Mazatlán",
+      "respell": "mah-saht-LAHN"
+    },
+    {
+      "word": "Nayarit",
+      "respell": "nah-yah-REET"
+    },
+    {
+      "word": "chiltepín",
+      "respell": "cheel-teh-PEEN"
+    },
+    {
+      "word": "serrano",
+      "respell": "seh-RAH-noh"
+    },
+    {
+      "word": "habanero",
+      "respell": "ah-bah-NEH-roh"
+    },
+    {
+      "word": "limón",
+      "respell": "lee-MOHN"
+    },
+    {
+      "word": "Orizaba",
+      "respell": "oh-ree-SAH-bah"
+    },
+    {
+      "word": "Veracruz",
+      "respell": "veh-rah-KROOS"
+    },
+    {
+      "word": "Michoacán",
+      "respell": "mee-choh-ah-KAHN"
+    },
+    {
+      "word": "ceviche",
+      "respell": "seh-VEE-chay"
+    },
+    {
+      "word": "sashimi",
+      "respell": "sah-SHEE-mee"
+    },
+    {
+      "word": "tartare",
+      "respell": "tar-TAR"
+    },
+    {
+      "word": "carpaccio",
+      "respell": "kar-PAH-choh"
+    },
+    {
+      "word": "tiradito",
+      "respell": "tee-rah-DEE-toh"
+    },
+    {
+      "word": "Maldon",
+      "respell": "MAWL-dun"
+    },
+    {
+      "word": "coriander",
+      "respell": "KOR-ee-an-der"
+    },
+    {
+      "word": "cilantro",
+      "respell": "sih-LAHN-troh"
+    },
+    {
+      "word": "aldehyde",
+      "respell": "AL-duh-hide"
+    },
+    {
+      "word": "linalool",
+      "respell": "lih-NAL-oh-awl"
+    },
+    {
+      "word": "OR6A2",
+      "respell": "oh ar six ay two"
+    },
+    {
+      "word": "Riesling",
+      "respell": "REES-ling"
+    },
+    {
+      "word": "Mosel",
+      "respell": "MOH-zel"
+    },
+    {
+      "word": "Kabinett",
+      "respell": "kah-bih-NET"
+    }
+  ],
+  "unsourced": [
+    "How every web page was read: through search result summaries only. WebFetch is refused on this network, so no page was opened, and where one search returned several pages the summary did not always say which page carried which sentence. Each source's 'supports' field says so. A refuter with page access should open the pages behind any line that goes on a card.",
+    "Tortilla chips in a salsa seca: looked for in three searches and found in none. Whether the house salsa seca holds tortilla, what the tortilla is made of, and which nuts and seeds are in it (the chef's note says nuts; the allergen list prints sesame and no nut) are the owner's questions for the kitchen.",
+    "'Dirt' as a description of the cilantro taste: not shown in today's search. The 2012 study's own abstract is the place to check; soap is the word the search confirmed, and bugs rests on weak pages.",
+    "That 'lemon' on the sheet comes from the Spanish limón, which Mexican recipes use for the lime: the search summary said so in its own voice and named no dictionary. The sourced fact is narrower: every English source found says lime.",
+    "The Larousse entries themselves. The Larousse Mexican cookbook on aguachile is reported by one cook's site, and the Diccionario enciclopédico de la gastronomía mexicana on salsa macha by one page. Neither book was read, and the Larousse Cocina search returned no entry.",
+    "Who brought crudo to American menus, and when: no search was spent. The sources give crudo no date at all ('eaten for millennia' is one site's phrase). Carpaccio's date differs between the two accounts found (1963 in one), so no date or name for it is carried.",
+    "Machaca, dried beef, as the meat of the first aguachile: looked for and not found. The sources say ground or boiled meat.",
+    "How long an aguachile sits: recipe pages run from three minutes to an hour, and no source was found that states a Sinaloa rule. The pack's 'eaten at once' rests on the chef's page cited in ChatGPT's field notes and on the search summary's line that English sources describe it as served immediately.",
+    "Tostadas or crackers beside an aguachile, and avocado on it: common knowledge of the dish, not shown today, so left out of the method.",
+    "The meaning of 'macha' in salsa macha: one weak page offers macho (strong) or a word for grinding. Not carried. The Totonac attribution and the claim of roots before the Spanish are asserted by some pages and not documented.",
+    "Red aguachile: it appeared only as a recipe title. The black version's soy sauce and the late 1800s date for soy in Sinaloa rest on one unnamed source in the summary.",
+    "The leaf oil percentages for cilantro: they vary too much between sources to quote (16 to 47% for one aldehyde in a commercial glossary, under 1 to 12% in a compiled dataset). Only the seed's linalool range is given, and that from a review and a trade table, not from a pharmacopoeia.",
+    "The stink bug comparison rests on a low quality page. The Greek koris reading is reported at second hand; the passage in Pliny the Elder was not read and his dates were not confirmed today, so a card that names him needs them first. The line attributed to The Oxford Companion to Food is second hand as well.",
+    "The 2012 study's finer points. The summary also said the authors allow the result may be a false positive and that the second group gave no genome wide significant association of its own; those two cautions were not checked against the paper and are not carried. The figures used (14,604; 11,851; rs72921001; chromosome 11; eight receptor genes; odds ratio about 0.81; heritability about 0.087) are as the summary gave them from the paper.",
+    "A torch for the burnt orange: not confirmed by any source; the sources char on a grill, a grill pan or a skillet. The word supreme for a segment cut free of its membrane was not searched. The caramelization range is a general figure from one page.",
+    "Pickled pearl onions: no search was spent. Their botany, a pickling ratio and the reading of 'Alumn' as allium against alum (a pickling salt, a different thing) are not sourced here. The pack's card stands.",
+    "Maldon: who bought the company in 1922 (three accounts disagree); the maker's own description of the process, word for word; why the crystal forms a pyramid. The maker's two pages were reached only through summaries, and one of them is carried from ChatGPT's field notes.",
+    "Carrot and ginger: why carrot juice (sweetness, color, body) and what ginger does in a chili water are the writer's reading. No flavor chemistry was searched.",
+    "Chiltepín: its botany, whether it is gathered wild, and its heat were not searched. 'Small and round' is Wikipedia's.",
+    "Tuna: no official grading standard exists to cite, so the number grades come from two seafood sellers and a food site. Scombroid (histamine) and mercury were not searched today; the Table's Cuisine entry carries the FDA's advice on fish. The FDA Food Code text itself was not opened: two state adoptions, a state guidance sheet and the Table's safety entry stand in for it.",
+    "Riesling with raw fish, and any named authority on Riesling with chili (a wine board, a trade magazine): not found. The pairing lines rest on three pairing sites and the pack.",
+    "Poke, tiradito beyond one line, and the claim that ceviche is Peru's national dish from before Columbus: seen once in a summary, not needed here, not carried.",
+    "That coriander 'seed' is botanically the plant's dried fruit: not sourced today.",
+    "The respellings in sayIt are the writer's own, matched to the pack's KROO-doh, ah-gwah-CHEE-leh and SAL-sah SEH-kah and the Table's seh-VEE-chay; no dictionary pronunciation was read today.",
+    "House facts the sheet does not print and research cannot supply: the tuna's species, cut, source, grade and whether it was frozen or cured; the acid, the chili and the heat of the aguachile; the salsa seca formula; how the orange is charred; which part of the coriander is used and where; the pickle; whether Alumn is allium; why fish is missing from the printed list; the portion; the price; and the tasting's pour for the course."
+  ],
+  "sources": [
+    {
+      "id": "sheet-2026-11-15",
+      "title": "Brennan's training sheets photographed on 15 November 2026, section A2 (Tuna Crudo), with the owner's note that it replaces the BBQ Lobster and the points to put to the owner",
+      "publisher": "The house's own kitchen sheets, transcribed in this repository",
+      "url": "tools/house/brennans/research/menu-2026-11-15-sheets.md",
+      "supports": "The seven printed ingredients, the five printed allergens, the five chef's facts word for word, and the Chocolate Crémeux sheet's line on Maldon salt. It prints no price, species, cut, portion or recipe.",
+      "kind": "primary"
+    },
+    {
+      "id": "cilantro-study-2012",
+      "title": "A genetic variant near olfactory receptor genes influences cilantro preference (Flavour, volume 1, article 22, 2012)",
+      "publisher": "Flavour, a BioMed Central journal; preprint on arXiv (arxiv.org/pdf/1209.2096)",
+      "url": "https://flavourjournal.biomedcentral.com/articles/10.1186/2044-7248-1-22",
+      "supports": "The study itself: 14,604 participants of European descent asked about a soapy taste, 11,851 more asked about liking; the variant rs72921001 on chromosome 11 in a cluster of eight olfactory receptor genes including OR6A2; OR6A2 as the most promising candidate, with aldehydes such as decanal and (E)-2-decenal among its ligands; an odds ratio of about 0.81; heritability from common variants of about 0.087. Read through today's search summary; the page was not opened.",
+      "kind": "primary"
+    },
+    {
+      "id": "bmc-blog-coriander",
+      "title": "Coriander: you either love it or you hate it (29 November 2012)",
+      "publisher": "BioMed Central, the journal publisher's own blog",
+      "url": "https://blogs.biomedcentral.com/on-biology/2012/11/29/coriander-you-either-love-it-or-you-hate-it",
+      "supports": "The publisher's plain account of the same study; returned beside the paper as the other reliable page on it. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "mentalfloss-cilantro",
+      "title": "Why Does Cilantro Taste Like Soap to Some People?",
+      "publisher": "Mental Floss",
+      "url": "https://www.mentalfloss.com/article/91060/why-does-cilantro-taste-soap-some-people",
+      "supports": "Cilantro holds a group of aldehydes likely behind the soapy taste, and the same compounds give the citrus freshness others enjoy; OR6A2 binds many of them; the 2012 genome wide study; (E)-2-decenal as the aldehyde most tied to the gene. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "coriander-etymology-pages",
+      "title": "Pages returned on the word coriander: an etymology site's article, a gardening site's 'Soapy Tasting Cilantro', and an encyclopedia mirror",
+      "publisher": "etymologist.ai; Gardening Know How; an EPFL concept page mirroring Wikipedia (all weak)",
+      "url": "https://etymologist.ai/word/coriander/article",
+      "supports": "The Greek name is often traced to koris, bedbug, a reading proposed by Pliny the Elder and both defended and disputed by modern scholars; some pages say the leaf's aldehydes resemble those of stink bugs; one cites The Oxford Companion to Food on Europeans' early aversion to the smell. Second hand throughout. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "pmc-coriander-review",
+      "title": "A review of coriander (Coriandrum sativum) essential oil and its composition, PubMed Central article PMC9864992",
+      "publisher": "A peer reviewed review article hosted by the U.S. National Library of Medicine",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9864992",
+      "supports": "Coriander (seed) essential oil: terpene alcohols, chiefly linalool, 60 to 80%; other classes about 30%. The exact title was not shown. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "pf-coriander-table",
+      "title": "A table of coriander oil composition (document PF_26_06_044_13)",
+      "publisher": "Perfumer & Flavorist, a trade journal",
+      "url": "https://img.perfumerflavorist.com/files/base/allured/all/document/2016/02/pf.PF_26_06_044_13.pdf",
+      "supports": "Linalool at 68.4 to 87.5% of coriander seed oil. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "coriander-oil-glossaries",
+      "title": "Coriander Seed Essential Oil and Cilantro Leaf Essential Oil, and other fragrance trade pages returned with it",
+      "publisher": "AromaWeb; a perfumer's glossary; The Good Scents Company; a compiled leaf oil table on PubMed Central (commercial pages, weak)",
+      "url": "https://aromaweb.com/essentialoilsaf/coriander.asp",
+      "supports": "The trade's naming: coriander for the seed oil, cilantro for the leaf oil. Leaf oil led by (E)-2-decenal, decanal and (E)-2-dodecenal, at percentages that vary widely from page to page and are not quoted here. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "tandf-2-decenal",
+      "title": "2-Decenal: a knowledge page quoting a handbook chapter on coriander",
+      "publisher": "Taylor & Francis",
+      "url": "https://taylorandfrancis.com/knowledge/Medicine_and_healthcare/Pharmaceutical_medicine/2-Decenal",
+      "supports": "In early seed development (E)-2-decenal is high, above 15 to 20%, then declines as the seed matures; linalool below 55% is usually tied to coriander native to Asia. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "kew-coriander",
+      "title": "Coriandrum sativum, Plants of the World Online",
+      "publisher": "Royal Botanic Gardens, Kew",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:840760-1/general-information",
+      "supports": "One plant, Coriandrum sativum, whose leaves and seeds are both used in cooking. Carried from ChatGPT's field notes, which cite it; not read again today.",
+      "kind": "primary"
+    },
+    {
+      "id": "wikipedia-aguachile",
+      "title": "Aguachile",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Aguachile",
+      "supports": "The origin lies on the coast of Sinaloa, first made with boiled water and chiltepín, a small round chili of Sinaloa; shrimp, lime juice, onion and chiltepín; northwest Mexico, mainly Sinaloa; the summary box lists Nayarit; the gloss chile water. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "mnd-sinaloa",
+      "title": "State By Plate: Sinaloa",
+      "publisher": "Mexico News Daily",
+      "url": "https://mexiconewsdaily.com/food/state-by-plate-sinaloa-food/",
+      "supports": "One of the three pages behind the history lines: meat in boiling water with chiltepín first; migrants from the Sierra Madre Occidental; shrimp and lime on the coast; Sinaloa produces more than a third of Mexico's shrimp; Mazatlán as the aguachile town where serrano may replace chiltepín; shrimp aguachile dated to the 1970s. The summary did not say which of the three pages carried which line. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "tbn-aguachile-culichi",
+      "title": "Breve historia sobre el aguachile culichi (13 October 2023)",
+      "publisher": "Tus Buenas Noticias, a Sinaloa news site",
+      "url": "https://www.tusbuenasnoticias.com/noticias/buenas-noticias/2023/10/13/24715-breve-historia-sobre-el-aguachile-culichi",
+      "supports": "A short history of the Sinaloa aguachile, in Spanish; one of the three pages behind the history lines, with the same caution on attribution. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "eater-lost-city",
+      "title": "The Lost City of Aguachile",
+      "publisher": "Eater, as carried by Pocket and Longreads",
+      "url": "https://getpocket.com/explore/item/the-lost-city-of-aguachile",
+      "supports": "The argument that the modern dish is likely a recent invention, and that people in Sinaloa did not search for it with any regularity until 2008. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "honest-food-aguachile",
+      "title": "A cook's page on aguachile that quotes the Larousse Mexican cookbook",
+      "publisher": "Honest Food, honest-food.net (a cook and writer's own site, weak)",
+      "url": "https://honest-food.net/?p=28404",
+      "supports": "According to Larousse, as this page reports it, aguachile is a type of Mexican ceviche from Sinaloa, made with shrimp that have never been frozen, the chili pulverized in a mortar; the gloss chile water; a recipe with 3 tablespoons of chiltepín. Attribution to this page is the likeliest reading of the summary. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "fw-aguachile-yahoo",
+      "title": "How to Make Aguachile: The Chili-Spiked Mexican Ceviche",
+      "publisher": "Food & Wine, as carried by Yahoo",
+      "url": "https://www.yahoo.com/lifestyle/aguachile-chili-spiked-mexican-ceviche-110000879.html",
+      "supports": "The title's own framing of aguachile as a chili spiked Mexican ceviche; returned with the pages that gloss the name as chile water. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "aguachile-recipes",
+      "title": "Recipe pages returned for the classic aguachile verde",
+      "publisher": "Fine Dining Lovers (Authentic Aguachile Recipe); also Lemon Blossoms, A Spicy Perspective, Toni's Recipes and The Daily Meal (recipe sites, weak)",
+      "url": "https://www.finedininglovers.com/explore/recipes/authentic-aguachile-recipe",
+      "supports": "Verde is the classic and best known version; a blended sauce of raw serrano, cucumber, lime juice, cilantro, garlic and salt poured over butterflied raw shrimp; cucumber and red onion; rests of three minutes in one recipe and about 30 minutes in several; aguachile's blended chili sauce against a ceviche's plain lime; ceviche spends longer in the lime and may use other seafood. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "atk-aguachile-verde",
+      "title": "Aguachile Verde",
+      "publisher": "America's Test Kitchen",
+      "url": "https://www.americastestkitchen.com/recipes/17712-aguachile-verde",
+      "supports": "Shrimp cured for 30 minutes, with the full hour suggested for a firmer texture. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "fw-carrot-aguachile",
+      "title": "Carrot Aguachile with Trout Roe",
+      "publisher": "Food & Wine (seen on a recipe mirror; the original address is foodandwine.com/recipes/carrot-aguachile-with-trout-roe)",
+      "url": "https://myrecipesrecipesearch.netlify.app/host-https-www.foodandwine.com/recipes/carrot-aguachile-with-trout-roe",
+      "supports": "A published chef's recipe: fresh carrot juice blended with fresh ginger, salt, half a habanero and scallion whites until smooth, served as a broth with trout roe, cucumber, onion and cashews. The chef is living and is not named. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "sd-carrot-aguachile",
+      "title": "Chef recipe: carrot aguachile",
+      "publisher": "Eat Drink Be SD, a San Diego food site (a second page titled Carrot Aguachile came back from New Worlder and was not read)",
+      "url": "https://eatdrinkbesd.com/chef-recipe-carrot-aguachile",
+      "supports": "A San Diego restaurant's recipe, Bracero Cocina de Raiz: carrot juice and ghost pepper blended and strained, then lemon and lime juice and salt, with Persian cucumbers, red onion, ahi and scallops. The chef is living and is not named. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "wikipedia-crudo",
+      "title": "Crudo",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Crudo",
+      "supports": "Crudo is Italian for raw; pesce crudo is raw fish and carne cruda raw meat, like steak tartare; a typical crudo is raw fish dressed with olive oil, salt and an acid such as lemon juice or vinegar. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "culinarylore-crudo",
+      "title": "What is a Crudo?",
+      "publisher": "Culinary Lore",
+      "url": "https://culinarylore.com/dishes:what-is-a-crudo/",
+      "supports": "Crudo as analogous to sashimi, plain raw fish cut differently; the separate Italian cooking term 'a crudo', raw ingredients cooked together with no first sauté. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "tastingtable-crudo-sashimi",
+      "title": "What's The Difference Between Crudo And Sashimi?",
+      "publisher": "Tasting Table",
+      "url": "https://tastingtable.com/1523822/crudo-versus-sashimi-difference",
+      "supports": "Crudo is shorthand for pesce crudo, from the fishing towns of coastal Italy; unlike sashimi it takes toppings, sauces and flavors, where sashimi is carefully sliced raw fish rarely marinated, sauced or garnished. Attribution within the search is the likeliest reading. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "tastingtable-tartare-crudo",
+      "title": "What's The Difference Between Tartare And Crudo?",
+      "publisher": "Tasting Table",
+      "url": "https://tastingtable.com/1161598/whats-the-difference-between-tartare-and-crudo",
+      "supports": "Tartare is chopped and usually shaped; a crudo is plated in many ways with its garnishes. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "tastingtable-ceviche-sashimi",
+      "title": "The Big Difference Between Ceviche And Sashimi",
+      "publisher": "Tasting Table",
+      "url": "https://www.tastingtable.com/924391/the-big-difference-between-ceviche-and-sashimi",
+      "supports": "One of the comparison pages behind the line that ceviche recipes call for around eight times the acid of a crudo or tartare and hold the fish in it longer. The summary did not say which comparison page carried the figure, so it rests on one unnamed page of this group. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "whatsthediff-crudo",
+      "title": "What's the Difference Between Crudo, Sashimi, Tartare, and Carpaccio? (28 May 2019)",
+      "publisher": "What's the Diff",
+      "url": "https://www.whatsthediff.org/blog/2019/05/28/whats-the-difference-between-crudo-sashimi-tartare-and-carpaccio",
+      "supports": "Carpaccio as a type of crudo, sliced or pounded very thin, begun as raw beef; tartare as raw meat or seafood chopped and bound with a sauce or dressing; ceviche as raw seafood marinated in lime with onions. The other comparison pages returned (a Michelin Guide feature, The Nibble) agree in outline. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "gbc-pesce-crudo",
+      "title": "Pesce crudo: Sicily's love for raw fish",
+      "publisher": "Great British Chefs",
+      "url": "https://greatbritishchefs.com/features/pesce-crudo-sicily",
+      "supports": "Sicily as the place for pesce crudo in Europe. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "xilli-salsa-seca",
+      "title": "Xilli Salsa Seca (product listing)",
+      "publisher": "Milk Street Store; the same product is listed by the New York Botanical Garden's shop (retailer copy for the maker's product)",
+      "url": "https://store.177milkstreet.com/products/xilli-salsa-seca",
+      "supports": "A take on variants from Michoacán; an inside-out 'dry' salsa made from a rustic blend of fried nuts and seeds; also known in Mexico as salsa de semillas; a close relative of salsa macha. Retailer copy, so not counted as the maker's own page. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "tastingtable-seca-macha",
+      "title": "The Key Differences Between Salsa Seca And Macha",
+      "publisher": "Tasting Table",
+      "url": "https://www.tastingtable.com/1457085/salsa-seca-macha-difference/",
+      "supports": "Salsa macha as a subtype of salsa seca, the wider family of oil based salsas; salsa seca can be as simple as oil with dried peppers and garlic and appears in more regions, Michoacán among them; macha traced to Orizaba, Veracruz, starting almost always from dried chilies, ground nuts and seeds and oil, with peanuts and sesame the most common, on an earthy base of ancho and pasilla. No tortilla in either. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "tastingtable-macha-unique",
+      "title": "What Makes Salsa Macha Unique?",
+      "publisher": "Tasting Table",
+      "url": "https://www.tastingtable.com/1240732/what-makes-salsa-macha-unique/",
+      "supports": "Salsa macha's crunch from whole peanuts and ground chili; no raw vegetables and a high oil content, so it keeps without refrigeration. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "sunset-nut-salsas",
+      "title": "Go Nuts with These Tomato-Less, Protein-Packed Salsas",
+      "publisher": "Sunset",
+      "url": "https://sunset.com/?p=124979",
+      "supports": "A Los Angeles seller's salsa seca used on eggs, cheese and grilled food; no recipe and no tortilla; a Yucatecan relative held together by a minimum of oil. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "wikipedia-salsa-macha",
+      "title": "Salsa macha",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Salsa_macha",
+      "supports": "Salsa macha as a Veracruz salsa of dried chilies, nuts, seeds and garlic in oil; the Orizaba area as the origin most often cited. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "mnd-salsa-macha",
+      "title": "From mild to wild, salsa macha takes you on a next-level flavor ride",
+      "publisher": "Mexico News Daily",
+      "url": "https://mexiconewsdaily.com/lifestyle/food/from-mild-to-wild-salsa-macha-takes-you-on-a-next-level-flavor-ride/",
+      "supports": "One of the pages behind the Veracruz mountain towns (Córdoba, Orizaba, Zongolica), the nod to Oaxaca, and the range of seeds and nuts a macha may hold. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "macha-origin-pages",
+      "title": "Other pages returned on the origin and build of salsa macha",
+      "publisher": "Luz Noticias; Food and Pleasure; Taste; Food Republic; The Forward (news and recipe pages, some weak). Two chefs' own recipe pages also came back and are not listed, because their addresses carry living names.",
+      "url": "https://www.luznoticias.mx/2025-07-31/mexico/salsa-macha-donde-se-origino-una-de-las-recetas-mas-iconicas-y-deliciosas-de-mexico/254256",
+      "supports": "The Totonac paste of dried chilies, sesame and salt with no oil; oil arriving with the Spanish; the Mexican gastronomy dictionary, as reported, placing the origin in Veracruz after colonization; peanuts as the Veracruz standard; dried chilies, garlic and peanuts toasted and ground with plenty of oil; pepitas or sesame, tree nuts, vinegar, sugar or dried fruit in many recipes; the likeness to Chinese chili crisp. The summary did not attribute these page by page. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "maldon-history",
+      "title": "A brief history of Maldon Salt",
+      "publisher": "Maldon Salt (the maker's own site)",
+      "url": "https://maldonsalt.com/a-brief-history-of-maldon-salt/",
+      "supports": "The maker's account, as the summary gave it beside press profiles: trading as the Maldon Salt Company from 1882, salt made at Maldon long before, the salt tax abolished in 1825, four generations of one family, seawater from the Blackwater estuary, salt described as hand harvested, the pyramid crystal as the company's mark. Read through today's search summary; the page was not opened.",
+      "kind": "primary"
+    },
+    {
+      "id": "maldon-pyramid",
+      "title": "The Perfect Pyramid",
+      "publisher": "Maldon Salt (the maker's own site)",
+      "url": "https://maldonsalt.com/perfectpyramid/",
+      "supports": "Essex coast production and pyramid shaped flakes. Carried from ChatGPT's field notes, which cite it; not read again today.",
+      "kind": "primary"
+    },
+    {
+      "id": "wikipedia-maldon",
+      "title": "Maldon Sea Salt",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Maldon_Sea_Salt",
+      "supports": "Brine evaporated over fires mounted on a network of brick flues; the company and its town. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "countrylife-maldon",
+      "title": "The secrets of Maldon salt",
+      "publisher": "Country Life",
+      "url": "https://www.countrylife.co.uk/food-drink/ancient-art-salt-panning-84937",
+      "supports": "One of the press profiles behind: seawater taken on the spring tide; slow evaporation in shallow pans giving hollow, irregular pyramid flakes; the method a family secret of temperature and timing; about 45 staff and more than 55 countries; the Royal Warrant of 2012. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "greatbritishlife-maldon",
+      "title": "Manufacturers and merchants of salt for over 130 years: Maldon Salt",
+      "publisher": "Great British Life",
+      "url": "https://www.greatbritishlife.co.uk/people/manufacturers-and-merchants-of-salt-for-over-130-years-maldon-7147472",
+      "supports": "One of the press profiles behind the 1882 trading name, the 1922 change of hands (told three ways across the profiles), the four generations and the Royal Warrant after the visit of 2010. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "lukes-tuna-grading",
+      "title": "The Intricacies of Tuna Grading",
+      "publisher": "Luke's Lobster, a seafood company",
+      "url": "https://lukeslobster.com/blogs/news/the-intricacies-of-tuna-grading",
+      "supports": "The four grades #1, #2+, #2 and #3; the five things a grader weighs; grading as a judgment of experience. Attribution within the search is the likeliest reading. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "fulton-tuna-guide",
+      "title": "Your Essential Guide to Tuna",
+      "publisher": "Fulton Fish Market, a fish seller",
+      "url": "https://fultonfishmarket.com/blog/essential-guide-to-tuna/",
+      "supports": "One of the sellers' pages behind: #1 as sashimi grade with high fat and marbling; the number system unregulated; no official definition of sushi grade or sashimi grade in the United States. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "chowhound-tuna-number",
+      "title": "What Does Tuna's Number Rating Mean?",
+      "publisher": "Chowhound",
+      "url": "https://chowhound.com/1786541/tuna-number-rating-meaning",
+      "supports": "The number scale again: clarity falling from very clear at #1 to cloudy at #3; #3 brown or greenish, a cooking grade; the best #1 fish most likely bluefin or bigeye. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "minnesota-rule-4626-0350",
+      "title": "Minnesota Rules, part 4626.0350, Parasite Destruction (the state's adoption of Food Code 3-402.11)",
+      "publisher": "State of Minnesota, as carried by Cornell's Legal Information Institute and the Revisor of Statutes (revisor.mn.gov/rules/4626.0350)",
+      "url": "https://law.cornell.edu/regulations/minnesota/Minn-R-4626-0350",
+      "supports": "The exemption from freezing for molluscan shellfish and for tuna species, Thunnus albacares (yellowfin) among them. The full species list was cut off in the summary. Read through today's search summary; the page was not opened.",
+      "kind": "primary"
+    },
+    {
+      "id": "delaware-3-402-11",
+      "title": "16 Delaware Administrative Code 3-402.11, Parasite Destruction",
+      "publisher": "State of Delaware, as carried by Cornell's Legal Information Institute",
+      "url": "https://www.law.cornell.edu/regulations/delaware/16-Del-Admin-Code-SS-3-402.11",
+      "supports": "The section's number and title as a state adopts it, and the rule that raw or undercooked fish served ready to eat is frozen first, with records kept. Read through today's search summary; the page was not opened.",
+      "kind": "primary"
+    },
+    {
+      "id": "sc-parasite-guidance-2024",
+      "title": "Freezing for Parasite Destruction (retail food guidance, 2024)",
+      "publisher": "South Carolina Department of Agriculture",
+      "url": "https://agriculture.sc.gov/wp-content/uploads/2024/04/RFEFreezingforParasiteDestruction2024.pdf",
+      "supports": "Frozen and stored at -4°F (-20°C) or below for at least seven days as one option; bluefin, yellowfin and bigeye tuna named as exempt; records kept 90 days, or a supplier's letter. Read through today's search summary; the page was not opened.",
+      "kind": "primary"
+    },
+    {
+      "id": "fda-seafood",
+      "title": "Selecting and Serving Fresh and Frozen Seafood Safely",
+      "publisher": "U.S. Food and Drug Administration",
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely",
+      "supports": "Raw seafood is named as raw to the guest. Carried from ChatGPT's field notes, which cite it; not read again today.",
+      "kind": "primary"
+    },
+    {
+      "id": "fda-allergens",
+      "title": "Food Allergies: What You Need to Know",
+      "publisher": "U.S. Food and Drug Administration",
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/food-allergies-what-you-need-know",
+      "supports": "Fish, wheat and sesame are separate major allergens; a menu sheet's notes are not a certified list. Carried from ChatGPT's field notes, which cite it; not read again today.",
+      "kind": "primary"
+    },
+    {
+      "id": "guelph-ceviche",
+      "title": "Ceviche fact sheet (the file is named as an April 25 update)",
+      "publisher": "University of Guelph, Ontario Veterinary College",
+      "url": "https://ovc.uoguelph.ca/sites/default/files/users/ovcweb/files/FactSheet-CevicheApril25Update.pdf",
+      "supports": "Acid makes fish flesh opaque and firm; acidity can reduce microbial numbers and does not destroy all bacteria, viruses and parasites; freezing before service as the parasite control. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "cooks-illustrated-ceviche",
+      "title": "Is Ceviche Really Safe? (a science column)",
+      "publisher": "Cook's Illustrated",
+      "url": "https://www.cooksillustrated.com/articles/6111-is-ceviche-really-safe-ask-paul",
+      "supports": "Short acid exposure can slow or kill some microorganisms and is not nearly as effective as heat, least of all against parasites. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "pbs-ceviche",
+      "title": "How Is Ceviche 'Cooked'? (video)",
+      "publisher": "PBS",
+      "url": "https://www.pbs.org/video/how-is-ceviche-cooked-s64x4m",
+      "supports": "Acid acting on the myosin of fish muscle to firm it and turn it opaque; lime juice unlikely to kill parasites; a study finding no significant fall in live Listeria. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "oxo-charred-lemon",
+      "title": "Charred Lemon",
+      "publisher": "OXO (a kitchenware maker's blog)",
+      "url": "https://www.oxo.com/blog/cooking-and-baking/charred-lemon/",
+      "supports": "One of the pages behind: citrus placed cut side down on a hot grill or grill pan until char marks appear; charring caramelizes the sugars and tempers the acid. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "nibble-charred-citrus",
+      "title": "Make charred lemons and oranges (1 March 2026)",
+      "publisher": "The Nibble",
+      "url": "https://blog.thenibble.com/2026/03/01/make-charred-lemons-oranges-recipe-45-citrus-holidays/",
+      "supports": "One of the pages behind: high heat caramelizes citrus, tones down acidity, heightens sweetness and rounds out bitterness; oranges as well as lemons. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "tastingtable-charred-citrus",
+      "title": "The Skillet Tip That Ensures Perfectly Charred Citrus",
+      "publisher": "Tasting Table",
+      "url": "https://www.tastingtable.com/1565234/skillet-tip-charred-citrus/",
+      "supports": "Charring citrus in a skillet; sweeter sweet notes, brighter acidity and a smoky aroma. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "charred-citrus-pages",
+      "title": "Other pages returned on charring: The Art of Charring, a grilling tip, and a test kitchen article on blackening",
+      "publisher": "CAFE Meeting Place (a chef focused site); The Daily Meal; America's Test Kitchen. A food scientist's own page also came back and is not listed, because its address carries a living name.",
+      "url": "https://cafemeetingplace.com/features/item/1991-the-art-of-charring",
+      "supports": "It takes only a second for charred food to become burnt; charring brings tinges of bitterness, smoke and roastiness; sugars partly combust for a smoky note with a tinge of bitterness; caramelization of most sugars peaks at about 320 to 350°F (160 to 177°C). No page mentioned a torch. The summary did not attribute these page by page. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "winewithseth-spicy",
+      "title": "Spicy and chili (a wine wiki entry)",
+      "publisher": "A wine educator's site, winewithseth.com (weak)",
+      "url": "https://www.winewithseth.com/winewiki/spicy-and-chili/",
+      "supports": "One of three pairing pages behind: residual sugar offsets chili heat; acidity keeps the sugar from cloying; higher alcohol carries more heat. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "vinofyi-spicy",
+      "title": "Wine and Spicy Food: Taming the Heat",
+      "publisher": "Vino FYI (weak)",
+      "url": "https://vinofyi.com/guide/wine-spicy-food-pairing/",
+      "supports": "One of three pairing pages behind: off-dry Riesling as the standard answer to chili; low alcohol, with one suggestion to stay under 12%; cold service muting the burn. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "wine-advisor-fiery",
+      "title": "Wine vs. fiery fare",
+      "publisher": "The 30 Second Wine Advisor, a wine newsletter (weak)",
+      "url": "https://30secondwineadvisor.substack.com/p/wine-vs-fiery-fare",
+      "supports": "One of three pairing pages behind: a Kabinett at 8.5% barely causes a burn; Kabinett at about 8 to 9% as the gentle case. Read through today's search summary; the page was not opened.",
+      "kind": "secondary"
+    },
+    {
+      "id": "repo-chatgpt",
+      "title": "ChatGPT's field notes for the Tuna Crudo (item tuna-crudo-tasting) and their source list",
+      "publisher": "This repository (ChatGPT's file, read only; a copy is kept in research/fall-menu-2026-chatgpt.json)",
+      "url": "src/lib/data/fall-menu-2026.json",
+      "supports": "Aguachile means chili water, with a chef's own page on the classic shrimp aguachile as its source (the address carries a living name and is not repeated here); coriander and cilantro as one plant, with Kew; Maldon as an Essex maker of pyramid flakes, with the maker's page; the boundary notes: supply no species, no 'sushi grade' and no sourcing story the sheet does not give.",
+      "kind": "secondary"
+    },
+    {
+      "id": "repo-cuisine",
+      "title": "The Table's Cuisine entry on tuna (larder), with its ratios, temperatures and faults",
+      "publisher": "This repository (earlier research, with its own sources listed)",
+      "url": "tools/derive/cuisine/larder.json",
+      "supports": "The kitchen tunas; sashimi grade as a market word; cold holding at 5°C (41°F); the slice of about 5 mm across the grain; a crudo dressing of about 3 parts oil to 1 of citrus; the Food Code freeze (-20°C for seven days or -35°C for 15 hours) and its exemption for the named tunas; the four faults; crudo against ceviche and aguachile; the FDA's advice on fish by species.",
+      "kind": "secondary"
+    },
+    {
+      "id": "repo-pack",
+      "title": "The house pack as shipped on 2 November 2026: the dish d-0m4q3e52, its eight components and the wine w-5luyxb98",
+      "publisher": "This repository",
+      "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+      "supports": "What the cards already teach, so this file adds to it: the tuna, the aguachile, the salsa seca, the burnt orange (segments cut free of the membrane, charred by torch, salamander or pan as a guess), coriander, pickled pearl onions, Maldon salt and the story component; the taste words; the first pick (the Berres Riesling: off-dry, about twenty grams of sugar a liter, 11.5%, poured at 45 to 48°F), what to avoid, and ten lineup asks.",
+      "kind": "secondary"
+    }
+  ]
+}
