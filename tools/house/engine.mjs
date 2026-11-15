@@ -428,6 +428,41 @@ export function countProblems(house, expect = overrideCounts(), frag = fragmentC
 	return out;
 }
 
+/* THE PAST RULE'S GUARD (the November 2026 edition). A dish, wine or drink filed under a section that
+   begins "Past " is what the house no longer serves, kept to be read; the rule itself is the engine's
+   isPast (house-schema.ts), handed in so it is written once. Nothing served may point at something
+   past: no course of a tasting names a past dish; no served dish's pairing names a past wine or drink
+   as its first pick, its second pick, its zero-proof pick or a bottle tier; and a past dish or wine
+   still names the meals it was served at (an empty list would show it under every meal). Each problem
+   is a sentence naming the record and the repair; fatal in the builder, validate-pack and check-pack. */
+export function pastProblems(house, isPast) {
+	const out = [];
+	if (typeof isPast !== 'function') return ['the engine has no isPast; port the engine first (node tools/port-house.mjs)'];
+	const past = new Map();
+	for (const list of ['dishes', 'wines', 'cocktails']) for (const r of house[list] || []) if (isPast(r)) past.set(r.id, r);
+	if (!past.size) return out;
+	const said = (id) => `${past.get(id).name} (${id}, ${past.get(id).section})`;
+	for (const t of house.tastings || []) for (const c of t.courses || []) {
+		for (const id of c.dishIds || []) if (past.has(id)) out.push(`tasting ${t.name}, course ${c.n}: names the past dish ${said(id)}; name the dish served in its place`);
+	}
+	for (const d of house.dishes || []) {
+		if (isPast(d)) continue;
+		const p = d.pairing && d.pairing.value;
+		if (!p) continue;
+		for (const [key, what, field] of [['wineId', 'first pick', 'pairing.wine'], ['secondId', 'second pick', 'pairing.second'], ['zeroProofId', 'zero-proof pick', 'pairing.zeroProof']]) {
+			if (p[key] && past.has(p[key])) out.push(`dish ${d.name}: its ${what} is the past ${said(p[key])}; re-pair the dish on its own side (dish:${d.name} ${field})`);
+		}
+		for (const tier of Object.keys(p.bottles || {})) {
+			const id = p.bottles[tier] && p.bottles[tier].wineId;
+			if (id && past.has(id)) out.push(`dish ${d.name}: its ${tier} bottle is the past ${said(id)}; re-tier the dish (dish:${d.name} bottles)`);
+		}
+	}
+	for (const r of past.values()) {
+		if (r.kind !== 'cocktail' && !(Array.isArray(r.meals) && r.meals.length)) out.push(`${r.kind} ${r.name}: a past ${r.kind} with no meals would be shown under every meal; set the meals it was served at`);
+	}
+	return out;
+}
+
 /* The drill stems, held as the engine's dealer reads them (house-drills.ts SPECS): a stem is a kept
    string a question shows, its answer the name the question asks for. dealQuestion draws its
    distractors from every name in the field and never asks whether another record shares the stem,

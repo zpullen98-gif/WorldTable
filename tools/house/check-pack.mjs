@@ -32,7 +32,7 @@
    Runs from any directory. Exits 1 with the file and the rule on failure, one line on success. */
 
 import fs from 'node:fs';
-import { loadEngine, GUIDE, PACK, REL, countProblems, describe, eachString, answerNames, britishWords, checkArgs, editionInFuture, sourceText as pageText, CHILD_SECTIONS, SNACK_SECTION, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, FIXED_QS, componentProblems, sellingProblems, saleCounts } from './engine.mjs';
+import { loadEngine, GUIDE, PACK, REL, countProblems, describe, eachString, answerNames, britishWords, checkArgs, editionInFuture, sourceText as pageText, CHILD_SECTIONS, SNACK_SECTION, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, FIXED_QS, componentProblems, sellingProblems, saleCounts, pastProblems } from './engine.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
@@ -164,6 +164,8 @@ for (const t of house.tastings) for (const c of t.courses) if (!c.dishIds.length
    upsell is poured where the guest who is offered it sits. */
 for (const s of stemProblems(house)) F('stem: ' + s);
 for (const r of upsellRoomProblems(house)) F('upsell-room: ' + r);
+/* The past rule's guard (engine.mjs pastProblems): nothing served points at a past dish, wine or drink. */
+for (const p of pastProblems(house, lib.isPast)) F('past: ' + p);
 
 /* The coaching notes (the design's sections 5.2 to 5.6): every dish, drink and wine carries one
    description under "Tell me about it." and its coaching notes under the fixed questions, each once,

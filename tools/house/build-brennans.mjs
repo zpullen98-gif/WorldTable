@@ -20,8 +20,12 @@
       current menus no longer print out of the house and a tombstone on the house names an id no
       entry builds any more; both put the id in house.removed, and every id the shipped pack holds
       must be in the new house or carry a tombstone, or the build fails;
-      a dispute an add files may carry a resolution (the side a newer printed menu bears out), and a
-      mix-up is targeted by its two sides, mixup:<a> vs <b>. A term links the items its words reach;
+      a dispute an add files may carry a resolution (the side a newer printed menu bears out), a later
+      entry names it dispute:<item> <field> to re-point or reword it (its id held), and a
+      mix-up is targeted by its two sides, mixup:<a> vs <b>. A section beginning "Past " (the engine's
+      isPast) holds what the house no longer serves: it sorts last in every list, its dishes are left out
+      of the wines' derived lists, and the build fails when anything served still points at it. A glass
+      wine a page prints with no price files with priceUnknown, as a dish does. A term links the items its words reach;
       items on term:<term> (or on its term:+ add) names more by exact name, an unknown name failing
       the build, and notItems takes one off. An add on video:+ files one video in the
       shape of a research/videos-*.json record, copied in whole (see VIDEOS below);
@@ -75,7 +79,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
-import { americanise, checkArgs, EDITION_TS, editionInFuture, PACK, readFragments, componentsDir, STAGING, stagingNames, stagingOverrideFiles, stagingFragmentFiles } from './engine.mjs';
+import { americanise, checkArgs, EDITION_TS, editionInFuture, PACK, readFragments, componentsDir, STAGING, stagingNames, stagingOverrideFiles, stagingFragmentFiles, pastProblems } from './engine.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DIR = path.join(HERE, 'brennans');
@@ -332,7 +336,13 @@ const COCKTAIL_META = {
    Grand Isle Jewel Oysters, and the course's printed line stands as the tasting prints it. The breakfast
    fifth course's Congregation Coffee & Chicory is the house's New Orleans-Style Coffee with Chicory. The
    dinner tasting was 'Dinner tasting' until this edition; ids.ledger.json moved its slug with its id, so
-   a device's copy is refreshed in place rather than replaced. */
+   a device's copy is refreshed in place rather than replaced.
+   THE NOVEMBER 2026 COURSES. The owner's sheets of 15 November 2026
+   (pages/brennans-sheets-2026-11-15.txt) put Tuna Crudo, Fish Bouillabaisse and Chocolate Crémeux in
+   place of the lobster, the redfish and the Snickers, so the dinner tasting's second, third and fifth
+   courses name them. No tasting card was photographed: each of the three prints the dish's own menu
+   line as the sheet lists it, and its pour is the one the menu printed for the course it replaced,
+   kept until lineup confirms it (an ask per course says so). */
 const TASTINGS = [
 	{
 		name: 'Traditional Breakfast at Brennan’s', price: '$80', meal: 'Breakfast & lunch', includesDrinks: true,
@@ -351,13 +361,13 @@ const TASTINGS = [
 		name: 'Dinner Tasting Menu', price: '$80', meal: 'Dinner', includesDrinks: false,
 		line: 'Celebrating 80 Years in 2026! Add Wine Pairing Supplement [4oz pours] $120',
 		supplement: 'Add Wine Pairing Supplement, 4 Ounce Wine Pours $120.00',
-		note: 'Five courses. Wine pairing supplement $120, five 4 oz pours: Charles Lafitte Brut, Fichet Mâcon-Igé 2024, Louis Jadot Beaune 1er Cru 2023, Paul Hobbs Coombsville Cabernet 2021, La Tour Vieille Banyuls Reserva. Open the Jadot 20 to 30 minutes ahead, the Hobbs 30 to 60; pour the Banyuls before the Snickers lands.',
+		note: 'Five courses. Wine pairing supplement $120, five 4 oz pours: Charles Lafitte Brut, Fichet Mâcon-Igé 2024, Louis Jadot Beaune 1er Cru 2023, Paul Hobbs Coombsville Cabernet 2021, La Tour Vieille Banyuls Reserva. Open the Jadot 20 to 30 minutes ahead, the Hobbs 30 to 60; pour the Banyuls before the Chocolate Crémeux lands.',
 		courses: [
 			{ label: 'First Course', dishes: ['Grand Isle Jewel Oysters'], printed: ['Served Raw, Preserved Fresno Chile Mignonette, Parsley'], pourLabel: 'Suggested Pairing', pour: 'Charles Lafitte Brut Champagne NV', pourText: 'Charles Lafitte Brut Champagne FR NV' },
-			{ label: 'Second Course', dishes: ['Louisiana BBQ Lobster'], printed: ['’nduja, White Bean Stew'], pourLabel: 'Suggested Pairing', pour: 'Fichet ‘Château London’ Mâcon-Igé 2024', pourText: 'Fichet Château London Mâcon-Igé Burgundy FR Chardonnay 2024' },
-			{ label: 'Third Course', dishes: ['Redfish Véronique'], printed: ['Hibiscus-pickled Grapes, Braised Leeks, Fingerling Potatoes, Preserved Lemon Beurre Blanc'], pourLabel: 'Suggested Pairing', pour: 'Louis Jadot Beaune 1er Cru 2023', pourText: 'Louis Jadot 1er Cru Beaune, Burgundy FR Pinot Noir 2023' },
+			{ label: 'Second Course', dishes: ['Tuna Crudo'], printed: ['Tuna, Carrot Ginger Aguachile, Salsa Seca, Burnt Orange Segments, Coriander, Pickled Pearl Onions, Maldon Salt'], pourLabel: 'Suggested Pairing', pour: 'Fichet ‘Château London’ Mâcon-Igé 2024', pourText: 'Fichet Château London Mâcon-Igé Burgundy FR Chardonnay 2024' },
+			{ label: 'Third Course', dishes: ['Fish Bouillabaisse'], printed: ['Stuffed Fish Terrine, Bouillabaisse sauce, Chickpea Panisse, Confit Fennel, Shrimp Mousse, Preserved Lemon Aioli, Fennel Frond Garnish'], pourLabel: 'Suggested Pairing', pour: 'Louis Jadot Beaune 1er Cru 2023', pourText: 'Louis Jadot 1er Cru Beaune, Burgundy FR Pinot Noir 2023' },
 			{ label: 'Fourth Course', dishes: ['Roasted Rohan Duck Breast'], printed: ['Cane Syrup-glazed Peaches, Candied Hazelnuts'], pourLabel: 'Suggested Pairing', pour: 'Paul Hobbs Coombsville Cabernet Sauvignon 2021', pourText: 'Paul Hobbs Coombsville Napa Valley Cabernet Sauvignon 2021' },
-			{ label: 'Fifth Course', dishes: ['The Snickers'], printed: ['Bavarian Milk Chocolate, Caramel Custard, Nougat Ice Cream, Roasted Peanuts'], pourLabel: 'Suggested Pairing', pour: 'Domaine La Tour Vieille Banyuls Reserva NV', pourText: 'Domaine La Tour Vieille Reserva Banyuls FR NV' }
+			{ label: 'Fifth Course', dishes: ['Chocolate Crémeux'], printed: ['Chocolate Cremeux, Cocoa Nib Crumble, Lemon Olive Oil, Maldon Salt'], pourLabel: 'Suggested Pairing', pour: 'Domaine La Tour Vieille Banyuls Reserva NV', pourText: 'Domaine La Tour Vieille Reserva Banyuls FR NV' }
 		]
 	}
 ];
@@ -368,7 +378,10 @@ const SPIRIT_FREE = [
 	{ name: 'Black Hills', price: '$14', spec: ["Lyre's N/A agave", 'basil purée', 'lime'], parts: { main: 'Lyre’s non-alcoholic agave spirit', technique: 'shaken with basil purée and lime', sauce: 'basil purée and lime', sides: '', taste: 'a no-alcohol margarita idea, herbal and sharp' }, family: 'Spirit-free sour', note: 'Draft from the guide’s Spirit-free must-know: parts as printed, no measures. Lyre’s is labeled under 0.5 percent alcohol, so say non-alcoholic, not zero.' }
 ];
 
-/* Names a scenario, a term or a mix-up may use for an item, so itemIds resolve from prose. */
+/* Names a scenario, a term or a mix-up may use for an item, so itemIds resolve from prose. From the
+   November 2026 edition "tartare" is Steak Tartare with Rye, the dish on the menu, and the cannoli is
+   reached by its own word: the lookahead keeps "Steak Tartare Cannoli" from linking both. The names of
+   the other past dishes (the lobster, the redfish, the Snickers) still reach their own records. */
 const ALIASES = [
 	[/bananas foster|the foster\b/i, 'World Famous Bananas Foster'], [/turtle soup/i, 'Turtle Soup'], [/\bgumbo\b/i, 'Seafood Gumbo'],
 	[/eggs hussarde|\bhussarde\b/i, 'Eggs Hussarde'], [/eggs sardou|\bsardou\b/i, 'Eggs Sardou'], [/eggs owen/i, 'Eggs Owen'],
@@ -387,7 +400,7 @@ const ALIASES = [
 	[/petite filet|\bfilet\b/i, 'Petite Filet Mignon'], [/baked apple/i, 'Baked Apple'], [/coffee cake/i, 'Café Brûlot Coffee Cake'],
 	[/papillote/i, 'Gulf Fish en Papillote'], [/the snickers/i, 'The Snickers'], [/bbq lobster|\blobster\b/i, 'Louisiana BBQ Lobster'],
 	[/rohan duck|duck breast/i, 'Roasted Rohan Duck Breast'], [/redfish/i, 'Redfish Véronique'], [/poussin|\bhen\b/i, 'Poussin à la Moutarde'],
-	[/hanger steak/i, 'Creole Hanger Steak'], [/steak tartare|\btartare\b/i, 'Steak Tartare Cannoli'], [/blackberry trifle|\btrifle\b/i, 'Blackberry Trifle'],
+	[/hanger steak/i, 'Creole Hanger Steak'], [/steak tartare(?! cannoli)|\btartare\b(?! cannoli)/i, 'Steak Tartare with Rye'], [/\bcannoli\b/i, 'Steak Tartare Cannoli'], [/blackberry trifle|\btrifle\b/i, 'Blackberry Trifle'],
 	[/succotash/i, 'Succotash'], [/shells & cheese|shells and cheese/i, 'Shells & Cheese'], [/maggie/i, 'Maggie’s Mushrooms'], [/rice dressing/i, 'South Louisiana Rice Dressing'],
 	[/creamed spinach/i, 'Creamed Spinach'], [/sausage/i, 'Housemade Pork Sausage Patty'], [/leflaive/i, 'Domaine Leflaive Mâcon-Verzé 2022 (Coravin)'],
 	[/gainey/i, 'Gainey Estate Vineyards Chardonnay 2023'], [/berres|riesling/i, 'C.H. Berres ‘Old Vines’ Riesling 2022'], [/banyuls/i, 'Domaine La Tour Vieille Banyuls Reserva NV'],
@@ -488,6 +501,14 @@ function findTarget(target, n) {
 	if (!list) fail(`${REL(OVERRIDES)} entry ${n}: unknown list in ${target}`);
 	if (name === '+') return { rec: null, list };
 	if (list === 'videos') fail(`${REL(OVERRIDES)} entry ${n}: a video is filed whole with video:+; there is no video to change by name`);
+	/* A dispute is named by the item and the field it was filed under, dispute:<item> <field> (the house's
+	   own, dispute:house <field>), so a later entry can re-point or reword it; its id stays the one minted
+	   under those first words (idItem and idField below). */
+	if (list === 'disputes') {
+		const u = model.disputes.find((r) => slug((r.idItem || 'house') + '-' + r.idField) === slug(name));
+		if (!u) fail(`${REL(OVERRIDES)} entry ${n}: ${target} names no dispute in the model (name it by its item and field as first filed)`);
+		return { rec: u, list };
+	}
 	/* A mix-up has no single name: it is named by its two sides, mixup:<a> vs <b>. */
 	if (list === 'mixUps') {
 		const m = model.mixUps.find((r) => slug(r.a + ' vs ' + r.b) === slug(name));
@@ -542,8 +563,8 @@ const retired = [];
 /* Ids of records the shipped pack held that no override builds any more (an ask answered by a newer
    menu, a note on a retired drink), each with its tombstone stamp: see 'tombstone' below. */
 const buried = [];
-/* The dishes filed with no printed price (newItem's priceUnknown): each must be named by an ask that
-   blocks the price, checked at assembly. */
+/* The dishes and the glass wines filed with no printed price (priceUnknown on newItem and newWine): each
+   must be named by an ask that blocks the price, checked at assembly. */
 const priceUnknownNames = [];
 overrides.entries.forEach((e, n) => {
 	const op = e.op || 'set';
@@ -625,7 +646,7 @@ overrides.entries.forEach((e, n) => {
 		} else if (list === 'asks') {
 			model.asks.push({ question: v.question, askWhom: v.askWhom || 'manager', items: v.items || [], blocksField: v.blocksField || '' });
 		} else if (list === 'disputes') {
-			model.disputes.push({ item: v.item || '', field: v.field, a: v.a, b: v.b, resolution: typeof v.resolution === 'string' ? v.resolution : '' });
+			model.disputes.push({ item: v.item || '', field: v.field, a: v.a, b: v.b, resolution: typeof v.resolution === 'string' ? v.resolution : '', idItem: v.item || '', idField: v.field });
 		} else if ((list === 'dishes' || list === 'cocktails') && !rec) {
 			model[list].push(newItem(list, v, n));
 		} else if (list === 'wines' && !rec) {
@@ -730,10 +751,27 @@ function newWine(v, n) {
 	const str = (x) => typeof x === 'string' && x.trim() !== '';
 	need(v && str(v.name), 'a name');
 	for (const l of ['dishes', 'wines', 'cocktails']) if (model[l].some((r) => slug(r.name) === slug(v.name))) fail(`${at}: ${v.name} is already in the house`);
-	for (const f of ['section', 'price', 'producer', 'wine', 'region', 'style', 'profile', 'goesWith', 'serve', 'say', 'guest', 'why']) need(str(v[f]), f);
+	/* A glass wine a house page prints with no price (the Wines by the Glass sheet of 15 November 2026
+	   prints none) files with priceUnknown: true and nothing in price, prices, glass, bottle or pours;
+	   an ask:+ with blocksField 'price' must name it (checked at assembly). The pack then carries price "",
+	   prices [], glass "", bottle "", pours [] and no list key, which every wing reads as a glass wine
+	   with no price line. Never a bottle list wine: a bottle is filed from the list that prices it. */
+	const unpriced = v.priceUnknown === true;
+	for (const f of ['section', 'producer', 'wine', 'region', 'style', 'profile', 'goesWith', 'serve', 'say', 'guest', 'why']) need(str(v[f]), f);
 	need(typeof v.vintage === 'string', 'a vintage, NV or empty');
 	need(Array.isArray(v.meals) && v.meals.length, 'its meals');
-	need(Array.isArray(v.prices) && v.prices.length && v.prices.every((p) => str(p.meal) && str(p.printed)), 'its printed prices');
+	if (unpriced) {
+		need(v.list !== 'bottle', 'a glass listing, since priceUnknown is set (a bottle list wine carries its printed bottle price)');
+		need(v.price === undefined || v.price === '', 'an empty price, since priceUnknown is set');
+		need(v.prices === undefined || (Array.isArray(v.prices) && v.prices.length === 0), 'no printed prices, since priceUnknown is set');
+		need(v.glass === undefined || v.glass === '', 'no glass price, since priceUnknown is set');
+		need(v.bottle === undefined || v.bottle === '', 'no bottle price, since priceUnknown is set');
+		need(v.pours === undefined || (Array.isArray(v.pours) && v.pours.length === 0), 'no pours, since priceUnknown is set');
+		priceUnknownNames.push(v.name);
+	} else {
+		need(str(v.price), 'price');
+		need(Array.isArray(v.prices) && v.prices.length && v.prices.every((p) => str(p.meal) && str(p.printed)), 'its printed prices');
+	}
 	need(Array.isArray(v.grapes), 'its grapes, a list (empty when no source names them)');
 	need(v.parts && ['main', 'technique', 'sauce', 'sides', 'taste'].every((k) => str(v.parts[k])), 'all five parts');
 	need(v.lines && ['s10', 's20', 's45'].every((k) => str(v.lines[k])), 'all three timed lines');
@@ -752,9 +790,9 @@ function newWine(v, n) {
 	}
 	return {
 		list: v.list === 'bottle' ? 'bottle' : '', bin: v.bin || '', size: v.size || '',
-		name: v.name, section: v.section, group: v.group || v.section, meals: [...v.meals], price: v.price, prices: v.prices.map((p) => ({ meal: p.meal, printed: p.printed })),
+		name: v.name, section: v.section, group: v.group || v.section, meals: [...v.meals], price: unpriced ? '' : v.price, prices: unpriced ? [] : v.prices.map((p) => ({ meal: p.meal, printed: p.printed })), priceUnknown: unpriced,
 		producer: v.producer, wine: v.wine, vintage: v.vintage, region: v.region, grapes: [...v.grapes], style: v.style, made: v.parts.technique, taste: v.parts.taste,
-		glass: v.glass || '', bottle: v.bottle || '', pours: Array.isArray(v.pours) ? [...v.pours] : [],
+		glass: unpriced ? '' : v.glass || '', bottle: unpriced ? '' : v.bottle || '', pours: !unpriced && Array.isArray(v.pours) ? [...v.pours] : [],
 		profile: v.profile, sayIt: v.guest, goesWith: v.goesWith, serve: v.serve, firstPickFor: [],
 		lines: Object.assign({}, v.lines), serviceNote: v.serviceNote || '', say: v.say, why: v.why, pairs: v.pairs || '', origin: v.origin || '',
 		kept: Array.isArray(v.kept) ? v.kept.map((k) => ({ q: k.q, a: k.a })) : [], parts: Object.assign({}, v.parts), idName: v.name
@@ -856,11 +894,18 @@ if (clean.card.cocktailOrder !== undefined) {
 }
 /* Each section's items together, in the order the sections first appear, the rest of the order kept: an
    item an override files into a section the guide already printed (the Barbera, the Bubbles cocktails)
-   joins that section rather than trailing the list, which is the order every wing's study view reads. */
+   joins that section rather than trailing the list, which is the order every wing's study view reads.
+   THE PAST SECTIONS LAST (the November 2026 edition). A section the engine's isPast names (it begins
+   "Past ": Past menu items, Past wines by the glass) is what the house no longer serves, kept to be
+   read: it sorts after every served section in each list, so a wing draws it as the last group. */
+if (typeof lib.isPast !== 'function') fail(`${REL(ENGINE)}: the engine has no isPast; port it first (node tools/port-house.mjs), the past rule is the engine's and is not written twice`);
+const isPast = (r) => lib.isPast(r);
 for (const list of ['dishes', 'wines', 'cocktails']) {
 	const order = [];
 	for (const r of clean[list]) if (!order.includes(r.section)) order.push(r.section);
-	clean[list] = order.flatMap((sec) => clean[list].filter((r) => r.section === sec));
+	const past = (sec) => isPast({ section: sec });
+	const sorted = order.filter((sec) => !past(sec)).concat(order.filter(past));
+	clean[list] = sorted.flatMap((sec) => clean[list].filter((r) => r.section === sec));
 }
 
 /* ---------- the house ---------- */
@@ -963,7 +1008,7 @@ for (const r of clean.dishes) {
 	let pairs = r.pairs;
 	if (!pairs && r.pairing) {
 		const w = clean.wines.find((x) => x.id === wineId(r.pairing.wine, r.name));
-		pairs = 'First pick: ' + w.name.replace(/\s*\(Coravin\)/, '') + (w.glass ? ', ' + w.glass + ' the glass' : w.bottle ? ', ' + w.bottle : ', a tasting pour') + '. Without alcohol: ' + (r.pairing.zeroProof || 'ask the bar') + '.';
+		pairs = 'First pick: ' + w.name.replace(/\s*\(Coravin\)/, '') + (w.glass ? ', ' + w.glass + ' the glass' : w.bottle ? ', ' + w.bottle : w.priceUnknown ? ', by the glass, price to ask at lineup' : ', a tasting pour') + '. Without alcohol: ' + (r.pairing.zeroProof || 'ask the bar') + '.';
 	}
 	put(d, 'pairs', pairs ? mark(pairs) : undefined);
 	put(d, 'origin', r.origin ? mark(r.origin) : undefined);
@@ -994,7 +1039,9 @@ for (const r of clean.dishes) {
    dish's side. The guide's own FIRST PICK FOR lists are still parsed (parse-guide.mjs, the 20 glass
    wines), and every disagreement with the dishes' WINE picks is printed by name; a wine's fallback
    why line ("First pick for ...") names the derived dishes, never the hand set list. The agreement
-   report (how many hand set ids the derivation keeps, drops and adds) is printed once per build. */
+   report (how many hand set ids the derivation keeps, drops and adds) is printed once per build.
+   A past dish (isPast) keeps its own pairing on its card and is left out of all three lists, so a
+   wine's card names only dishes the house serves. */
 const dishName = new Map(house.dishes.map((d) => [d.id, d.name]));
 const GUIDE_WINES = new Set(parsed.wines.map((w) => slug(w.name)));
 function derivedFor(id) {
@@ -1002,6 +1049,7 @@ function derivedFor(id) {
 	const second = [];
 	const offered = [];
 	for (const d of house.dishes) {
+		if (isPast(d)) continue;
 		const p = d.pairing && d.pairing.value;
 		if (!p) continue;
 		if (p.wineId === id) first.push(d.id);
@@ -1039,7 +1087,7 @@ for (const r of clean.wines) {
 			if (GUIDE_WINES.has(slug(r.idName || r.name))) guideDisagreements.push(line);
 		}
 	}
-	const why = r.why || (first.length ? 'First pick for ' + first.map((id) => dishName.get(id)).join(', ') + '.' : r.price ? 'On the by-the-glass list, ' + r.group.replace(/\s+By the glass.*$/, '') + '.' : 'Poured on the tasting menus; not on the by-the-glass list.');
+	const why = r.why || (isPast(r) ? 'No longer on the by-the-glass list; kept here to be read.' : first.length ? 'First pick for ' + first.map((id) => dishName.get(id)).join(', ') + '.' : r.price ? 'On the by-the-glass list, ' + r.group.replace(/\s+By the glass.*$/, '') + '.' : 'Poured on the tasting menus; not on the by-the-glass list.');
 	put(w, 'why', mark(why));
 	put(w, 'pairs', mark(r.pairs || r.goesWith));
 	put(w, 'origin', r.origin ? mark(r.origin) : undefined);
@@ -1201,10 +1249,12 @@ for (const a of clean.asks) {
 	house.askAtLineup.push(r);
 }
 for (const name of priceUnknownNames) {
-	if (!clean.asks.some((a) => a.blocksField === 'price' && a.items.some((i) => slug(i) === slug(name)))) fail(`the dish ${name} is filed with priceUnknown and no ask:+ with blocksField price names it; add one so the card asks for the price rather than inventing it`);
+	if (!clean.asks.some((a) => a.blocksField === 'price' && a.items.some((i) => slug(i) === slug(name)))) fail(`the dish or wine ${name} is filed with priceUnknown and no ask:+ with blocksField price names it; add one so the card asks for the price rather than inventing it`);
 }
 for (const u of clean.disputes) {
-	const r = { id: idFor('disputes', slug((u.item || 'house') + '-' + u.field).slice(0, 60)), field: u.field, a: u.a, b: u.b, ts: BUILD_TS };
+	/* The id is minted under the item and field the dispute was first filed with, so one a later entry
+	   re-points (the lobster's pour, now the second course's) keeps its id on every device. */
+	const r = { id: idFor('disputes', slug((u.idItem || 'house') + '-' + u.idField).slice(0, 60)), field: u.field, a: u.a, b: u.b, ts: BUILD_TS };
 	if (u.item) r.itemId = itemId(u.item, 'dispute');
 	/* A dispute a newer printed menu settles keeps both sides and says which one the menu bears out. */
 	if (u.resolution) r.resolution = u.resolution;
@@ -1441,6 +1491,9 @@ if (fs.existsSync(PACK)) {
 	for (const list of C.HOUSE_LISTS) for (const r of shipped[list] || []) if (!builtIds.has(r.id) && !(r.id in house.removed)) lost.push(list + ' ' + r.id + ' ' + (r.name || r.term || r.title || r.question || '').slice(0, 70));
 	if (lost.length) fail(`${REL(PACK)} holds ${lost.length} record(s) this build drops without a tombstone (add a retire or a tombstone in ${REL(OVERRIDES)}):\n  ` + lost.join('\n  '));
 }
+/* The past rule's guard (engine.mjs pastProblems): nothing served points at something past. */
+const pastBad = pastProblems(house, lib.isPast);
+if (pastBad.length) fail('the past rule: ' + pastBad.join('\n  '));
 for (const step of C.BUILD_STEPS) house.build[step] = BUILD_TS;
 house.began = 'pack';
 house.lastWrite = BUILD_TS;

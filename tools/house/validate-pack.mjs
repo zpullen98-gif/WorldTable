@@ -6,8 +6,9 @@
    the coaching notes on every item, in range, sourced and allergen free) and thinLines (no timed
    line under its floor, no wine part copying its profile, no sale under its floor or over two
    sentences), sellingProblems (no banned word in any timed line, sale, pairing line or bottle tier
-   line, the code banned-line) and, with --require-sale, a wine without a sale, as fatal beside the
-   engine's codes,
+   line, the code banned-line), pastProblems (no tasting course names a past dish, no served dish's
+   pairing names a past wine or drink, the code past) and, with --require-sale, a wine without a sale,
+   as fatal beside the engine's codes,
    so a price the guide does not print stands on a committed page whose first line names its
    source, by the same verbatim rule; every problem printed by
    code with the item and the field; the counts asserted; exit 1 on any fatal, any count that is
@@ -22,7 +23,7 @@
    Runs from any directory. Reads house/brennans/house.json by default (the builder's output). */
 
 import fs from 'node:fs';
-import { loadEngine, GUIDE, HOUSE_JSON, REL, countProblems, describe, answerNames, checkArgs, sourceText as pageText, pageFiles, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, componentProblems, fragmentCounts, stagingNames, stagingFragmentFiles, sellingProblems, saleCounts } from './engine.mjs';
+import { loadEngine, GUIDE, HOUSE_JSON, REL, countProblems, describe, answerNames, checkArgs, sourceText as pageText, pageFiles, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, componentProblems, fragmentCounts, stagingNames, stagingFragmentFiles, sellingProblems, saleCounts, pastProblems } from './engine.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
@@ -82,6 +83,10 @@ const stems = stemProblems(house);
 for (const s of stems) console.error('validate-pack: FATAL stem: ' + s);
 const rooms = upsellRoomProblems(house);
 for (const r of rooms) console.error('validate-pack: FATAL upsell-room: ' + r);
+/* The past rule's guard (engine.mjs pastProblems, the November 2026 edition): nothing served points at
+   a dish, wine or drink filed under a section that begins "Past ". Fatal here. */
+const pasts = pastProblems(house, lib.isPast);
+for (const p of pasts) console.error('validate-pack: FATAL past: ' + p);
 
 /* The coaching notes and the thin lines (engine.mjs noteProblems and thinLines, the design's
    sections 5.2 to 5.6): every dish, drink and wine carries its description and its coaching notes
@@ -110,6 +115,6 @@ for (const c of comps) console.error('validate-pack: FATAL component: ' + c);
 const nc = noteCounts(house);
 console.log(`validate-pack: notes ${Object.entries(nc).map(([q, c]) => `${c} "${q}"`).join(', ')}; ${thin.report.length} item(s) with an empty part (a report, not a gate)`);
 
-const bad = fatalCount + (STAGED.length ? 0 : counts.length) + changed.length + unanswered.length + stems.length + rooms.length + notes.length + thin.fatal.length + comps.length + banned.length + noSale.length + (lib.sameJson(house, input) ? 0 : 1);
-if (bad) fail(`${REL(FILE)}: ${fatalCount} fatal problem(s), ${stems.length} drill stem problem(s), ${rooms.length} upsell room problem(s), ${notes.length} note problem(s), ${comps.length} component problem(s), ${thin.fatal.length} thin line(s), ${banned.length} banned line(s), ${noSale.length} wine(s) without a sale, ${counts.length} count(s) off, ${changed.length} normaliser change(s), ${unanswered.length} unanswered name(s)`);
+const bad = fatalCount + (STAGED.length ? 0 : counts.length) + changed.length + unanswered.length + stems.length + rooms.length + pasts.length + notes.length + thin.fatal.length + comps.length + banned.length + noSale.length + (lib.sameJson(house, input) ? 0 : 1);
+if (bad) fail(`${REL(FILE)}: ${fatalCount} fatal problem(s), ${stems.length} drill stem problem(s), ${rooms.length} upsell room problem(s), ${pasts.length} past rule problem(s), ${notes.length} note problem(s), ${comps.length} component problem(s), ${thin.fatal.length} thin line(s), ${banned.length} banned line(s), ${noSale.length} wine(s) without a sale, ${counts.length} count(s) off, ${changed.length} normaliser change(s), ${unanswered.length} unanswered name(s)`);
 console.log(`validate-pack: ${REL(FILE)}: 0 fatal, ${problems.length} advisory flag(s) in ${byCode.size} code(s), counts hold (${house.dishes.length} dishes, ${house.cocktails.length} cocktails, ${house.wines.length} wines, ${house.tastings.length} tastings, ${house.lexicon.length} terms, ${house.scenarios.length} scenarios, ${house.mixUps.length} mix-ups, ${house.mustKnows.length} must-knows, ${house.askAtLineup.length} to ask, ${house.disputes.length} disputes, ${(house.components || []).length} components)`);
