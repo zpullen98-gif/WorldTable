@@ -123,9 +123,9 @@ test('the bar sticks, a section chip narrows the rows and says so, and the searc
 	expect(box!.y).toBeGreaterThanOrEqual(0);
 	expect(box!.y).toBeLessThan(120);
 
-	await page.getByRole('button', { name: 'Desserts 6' }).click();
-	await expect(rows(page)).toHaveCount(6);
-	await expect(page.locator('.study [aria-live="polite"]')).toHaveText('Showing Desserts: 6 dishes');
+	await page.getByRole('button', { name: 'Desserts 5' }).click();
+	await expect(rows(page)).toHaveCount(5);
+	await expect(page.locator('.study [aria-live="polite"]')).toHaveText('Showing Desserts: 5 dishes');
 
 	await page.getByRole('button', { name: `All ${PACK.dishes.length}` }).click();
 	await page.getByPlaceholder('Find a dish').fill('huss');

@@ -813,10 +813,14 @@ test('a fresh device opens /menu and the Brennan’s pack loads itself; a second
 	// study view of it: every dish a row, except the unpriced dishes served
 	// only on a tasting, which the tasting cards carry. Edit shows the editing page.
 	const onTasting = new Set(pack.tastings.flatMap((t: { courses: { dishIds: string[] }[] }) => t.courses.flatMap((c) => c.dishIds)));
-	const tastingOnly = pack.dishes.filter((d: { id: string; price: string; prices?: { printed: string }[] }) => onTasting.has(d.id) && !d.price.trim() && !(d.prices ?? []).some((x) => x.printed.trim())).length;
+	/* A course dish one of the house's own meals serves too (Dinner beside Dinner tasting) stays a row. */
+	const ownMeals = new Set<string>((pack.meals ?? []).map((m: { name: string }) => m.name));
+	const tastingOnly = pack.dishes.filter((d: { id: string; price: string; prices?: { printed: string }[]; meals?: string[] }) => onTasting.has(d.id) && !d.price.trim() && !(d.prices ?? []).some((x) => x.printed.trim()) && !(d.meals ?? []).some((m) => ownMeals.has(m))).length;
+	/* The house line counts what is served now: an item filed under a section that begins Past is read, never counted. */
+	const servedOf = (list: { section?: string }[]) => list.filter((x) => !(typeof x.section === 'string' && x.section.trim().startsWith('Past '))).length;
 	await expect(page.locator('.study .row')).toHaveCount(pack.dishes.length - tastingOnly);
 	await editMenu(page);
-	await expect(houseLine(page)).toContainText(`${pack.name} · ${pack.dishes.length} dishes here · ${pack.wines.length} wines in the Codex · ${pack.cocktails.length} drinks in the Ledger`);
+	await expect(houseLine(page)).toContainText(`${pack.name} · ${servedOf(pack.dishes)} dishes here · ${servedOf(pack.wines)} wines in the Codex · ${servedOf(pack.cocktails)} drinks in the Ledger`);
 	await expect(page.locator('.housebar .autoline')).toHaveText(
 		`${pack.name} is loaded: ${pack.dishes.length} dishes, ${pack.cocktails.length} drinks, ${pack.wines.length} wines.`
 	);
@@ -832,10 +836,11 @@ test('a fresh device opens /menu and the Brennan’s pack loads itself; a second
 	// The second boot: the same edition, fetched again, and nothing written.
 	await page.reload();
 	await page.waitForSelector('html[data-hydrated]');
-	await expect(page.locator('.study .row').first()).toBeVisible();
+	/* The list opens compactly, its sections closed: the rows are drawn again, not yet on screen. */
+	await expect(page.locator('.study .row').first()).toBeAttached();
 	await editMenu(page);
 	await expect.poll(() => seen.hits).toBe(2);
-	await expect(houseLine(page)).toContainText(`${pack.name} · ${pack.dishes.length} dishes here`);
+	await expect(houseLine(page)).toContainText(`${pack.name} · ${servedOf(pack.dishes)} dishes here`);
 	await page.waitForTimeout(800);
 	await expect(page.locator('.housebar .autoline')).toHaveCount(0);
 	const after = await houseRecord(page, pack.id);
@@ -847,7 +852,7 @@ test('a fresh device opens /menu and the Brennan’s pack loads itself; a second
 
 	// And Say it back reads the pack's kept lines straight away.
 	await goto(page, '/menu/quiz?mode=say');
-	await expect(page.locator('#say-item option')).toHaveCount(pack.dishes.filter((d: any) => d.lines?.by === 'person').length);
+	await expect(page.locator('#say-item option')).toHaveCount(servedOf(pack.dishes.filter((d: any) => d.lines?.by === 'person')));
 	expect(toHer).toEqual([]);
 });
 
