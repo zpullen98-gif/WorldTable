@@ -123,14 +123,14 @@ describe('the rows on the Brennan’s pack', () => {
 	it('keeps the menu’s order and its sections, opening on the tasting menus', () => {
 		expect(rows).toHaveLength(PACK.dishes.length);
 		const secs = studySections(rows);
-		expect(secs[0]).toEqual({ section: 'Tasting menus', count: 4 });
+		expect(secs[0]).toEqual({ section: 'Tasting menus', count: 3 });
 		expect(secs.slice(1, 7)).toEqual([
-			{ section: 'Starters', count: 8 },
+			{ section: 'Starters', count: 7 },
 			{ section: 'Soups', count: 2 },
 			{ section: 'Salads', count: 1 },
-			{ section: 'Entrées', count: 14 },
+			{ section: 'Entrées', count: 13 },
 			{ section: 'Sides', count: 12 },
-			{ section: 'Desserts', count: 6 }
+			{ section: 'Desserts', count: 5 }
 		]);
 	});
 	it('takes a leading copy of the name off the short line', () => {

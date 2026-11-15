@@ -132,7 +132,7 @@ test('two separate tasting menus at the top of the house\'s page, each in the ex
 	await expect(d.locator('.tline')).toHaveText('Celebrating 80 Years in 2026! Add Wine Pairing Supplement [4oz pours] $120');
 	await expect(d.locator('.tterms')).toHaveText('Add Wine Pairing Supplement, 4 Ounce Wine Pours $120.00');
 	await expect(d.locator('.clabel')).toHaveText(['First Course', 'Second Course', 'Third Course', 'Fourth Course', 'Fifth Course']);
-	await expect(d.locator('.titem.dish .tname')).toHaveText(['Grand Isle Jewel Oysters', 'Louisiana BBQ Lobster', 'Redfish Véronique', 'Roasted Rohan Duck Breast', 'The Snickers']);
+	await expect(d.locator('.titem.dish .tname')).toHaveText(['Grand Isle Jewel Oysters', 'Tuna Crudo', 'Fish Bouillabaisse', 'Roasted Rohan Duck Breast', 'Chocolate Crémeux']);
 	await expect(d.locator('.titem.pour .tname')).toHaveText([
 		'Charles Lafitte Brut Champagne FR NV',
 		'Fichet Château London Mâcon-Igé Burgundy FR Chardonnay 2024',
@@ -172,7 +172,7 @@ test('the Tasting menus chip shows the block alone, another section hides it, an
 	await expect(page.locator('.study .row')).toHaveCount(0);
 	await expect(page.locator('.study [aria-live="polite"]')).toHaveText('Showing Tasting menus: 2 menus');
 
-	await page.getByRole('button', { name: 'Entrées 14' }).click();
+	await page.getByRole('button', { name: 'Entrées 13' }).click();
 	await expect(page.locator('.study .tastings')).toHaveCount(0);
 	await page.getByRole('button', { name: `All ${PACK.dishes.length}` }).click();
 
@@ -270,7 +270,7 @@ test('a dish and a pour open their study cards, walk the menu in printed order, 
 	await expect(card(page)).toHaveCount(0);
 
 	// From the list, the same dish is the list's: its pour line first, no tasting block.
-	await page.getByRole('button', { name: 'Entrées 14' }).click();
+	await page.getByRole('button', { name: 'Entrées 13' }).click();
 	await page.locator('.study .row', { has: page.locator('.nm', { hasText: 'Eggs Hussarde' }) }).click();
 	await expect(c.locator('#card-h')).toHaveText('Eggs Hussarde');
 	await expect(c.locator('.tcourse')).toHaveCount(0);
@@ -288,7 +288,7 @@ test('the Tasting courses deck deals one card per course in printed order, under
 		await expect(deck.locator('.where')).toHaveText(`Card ${i + 1} of 5 · Dinner Tasting Menu: the courses`);
 		await expect(deck.locator('.scard .term')).toHaveText(fronts[i]);
 		await page.getByRole('button', { name: 'Flip' }).click();
-		if (i === 2) await expect(deck.locator('.scard .back')).toHaveText('Redfish Véronique. Suggested Pairing: Louis Jadot 1er Cru Beaune, Burgundy FR Pinot Noir 2023');
+		if (i === 2) await expect(deck.locator('.scard .back')).toHaveText('Fish Bouillabaisse. Suggested Pairing: Louis Jadot 1er Cru Beaune, Burgundy FR Pinot Noir 2023');
 		await page.getByRole('button', { name: 'Got it', exact: true }).click();
 	}
 	await expect(page.locator('main h1')).toHaveText('Deck done');

@@ -85,10 +85,10 @@ describe('the two tasting menus as printed', () => {
 		expect(dinner.courses.map((c) => c.label)).toEqual(['First Course', 'Second Course', 'Third Course', 'Fourth Course', 'Fifth Course']);
 		expect(dinner.courses.map((c) => c.dishes.map((d) => d.name))).toEqual([
 			['Grand Isle Jewel Oysters'],
-			['Louisiana BBQ Lobster'],
-			['Redfish Véronique'],
+			['Tuna Crudo'],
+			['Fish Bouillabaisse'],
 			['Roasted Rohan Duck Breast'],
-			['The Snickers']
+			['Chocolate Crémeux']
 		]);
 		expect(dinner.courses.every((c) => c.pourLabel === 'Suggested Pairing' && !c.choice && !c.drinkCourse)).toBe(true);
 		expect(dinner.courses.map((c) => c.pour!.item!.name)).toEqual([
@@ -100,10 +100,10 @@ describe('the two tasting menus as printed', () => {
 		]);
 		expect(dinner.courses.map((c) => c.printed)).toEqual([
 			['Served Raw, Preserved Fresno Chile Mignonette, Parsley'],
-			['’nduja, White Bean Stew'],
-			['Hibiscus-pickled Grapes, Braised Leeks, Fingerling Potatoes, Preserved Lemon Beurre Blanc'],
+			['Tuna, Carrot Ginger Aguachile, Salsa Seca, Burnt Orange Segments, Coriander, Pickled Pearl Onions, Maldon Salt'],
+			['Stuffed Fish Terrine, Bouillabaisse sauce, Chickpea Panisse, Confit Fennel, Shrimp Mousse, Preserved Lemon Aioli, Fennel Frond Garnish'],
 			['Cane Syrup-glazed Peaches, Candied Hazelnuts'],
-			['Bavarian Milk Chocolate, Caramel Custard, Nougat Ice Cream, Roasted Peanuts']
+			['Chocolate Cremeux, Cocoa Nib Crumble, Lemon Olive Oil, Maldon Salt']
 		]);
 	});
 
@@ -123,9 +123,9 @@ describe('the meal filter, the section and the rows', () => {
 		expect(tastingsShown(PACK, 'Bubbles at Brennan’s')).toEqual([]);
 	});
 
-	it('leaves the four dishes only a tasting serves to their course, under the house\'s own section name', () => {
+	it('leaves the three dishes only a tasting serves to their course, under the house\'s own section name', () => {
 		const only = tastingOnlyIds(PACK);
-		expect(PACK.dishes.filter((d) => only.has(d.id)).map((d) => d.name).sort()).toEqual(['Baked Apple', 'Louisiana BBQ Lobster', 'Petite Filet Mignon', 'Roasted Rohan Duck Breast']);
+		expect(PACK.dishes.filter((d) => only.has(d.id)).map((d) => d.name).sort()).toEqual(['Baked Apple', 'Petite Filet Mignon', 'Roasted Rohan Duck Breast']);
 		/* A dish a tasting serves that is also on the menu stays in the list. */
 		expect(only.has(idOf('Eggs Hussarde'))).toBe(false);
 		expect(tastingSection(PACK)).toBe('Tasting menus');
@@ -236,7 +236,7 @@ describe('the Tasting courses deck', () => {
 		expect(cards[2].back).toBe('Choice of Turtle Soup or Seafood Gumbo. Paired with Bloody Bull Cocktail');
 		expect(cards[3].back).toBe('Eggs Hussarde. Paired with Charles Lafitte Brut Champagne FR NV [4oz]');
 		expect(cards[5].back).toBe('World Famous Bananas Foster. Paired with Brennan’s Private Blend Congregation Coffee & Chicory');
-		expect(cards[8].back).toBe('Redfish Véronique. Suggested Pairing: Louis Jadot 1er Cru Beaune, Burgundy FR Pinot Noir 2023');
+		expect(cards[8].back).toBe('Fish Bouillabaisse. Suggested Pairing: Louis Jadot 1er Cru Beaune, Burgundy FR Pinot Noir 2023');
 		for (const c of cards) {
 			expect(c.front).not.toMatch(DASH);
 			expect(c.back).not.toMatch(DASH);

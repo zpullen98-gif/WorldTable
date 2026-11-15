@@ -25,10 +25,14 @@ const READ_ON = ((iso: string) => { const [y, m, d] = iso.split('-').map(Number)
 const SHOTS = process.env.STUDY_SHOTS ?? '/tmp/claude-0/-home-user-zpullen98-gif-github-io/09201eae-82ec-5cba-9316-4d6cf5955e5e/scratchpad/shots/';
 const HUSSARDE = 'd-1q0xk7jv';
 /* The dishes only a tasting serves (on a course, no printed price of their own) open from their
-   course in the Tasting menus block at the top, not as loose rows; every other dish is a row. */
+   course in the Tasting menus block at the top, not as loose rows; every other dish is a row.
+   A course dish one of the house's own meals serves too (Dinner beside Dinner tasting) stays a row. */
 const ON_TASTING = new Set<string>(PACK.tastings.flatMap((t: any) => t.courses.flatMap((c: any) => c.dishIds)));
-const TASTING_ONLY = PACK.dishes.filter((d: any) => ON_TASTING.has(d.id) && !d.price && !(d.prices || []).some((p: any) => p.printed));
+const OWN_MEALS = new Set<string>((PACK.meals || []).map((m: any) => m.name));
+const TASTING_ONLY = PACK.dishes.filter((d: any) => ON_TASTING.has(d.id) && !d.price && !(d.prices || []).some((p: any) => p.printed) && !(d.meals || []).some((m: string) => OWN_MEALS.has(m)));
 const LIST_ROWS = PACK.dishes.length - TASTING_ONLY.length;
+/* The menu served now: a dish filed under a section that begins Past is drawn and read, never counted. */
+const SERVED = PACK.dishes.filter((d: any) => !(typeof d.section === 'string' && d.section.trim().startsWith('Past '))).length;
 const EYEBROW = 'Your words. Allergens: confirm at lineup.';
 const CLOSING = 'Allergens: read the service note and confirm at lineup.';
 
@@ -54,7 +58,7 @@ const card = (page: Page) => page.locator('article.card');
 test('the study view opens compactly with native section summaries and all dishes retained', async ({ page }) => {
 	await openStudy(page);
 	await expect(page.locator('#study-h')).toHaveText('The menu');
-	expect(TASTING_ONLY.length).toBe(4);
+	expect(TASTING_ONLY.length).toBe(3);
 	await expect(rows(page)).toHaveCount(LIST_ROWS);
 	await expect(page.locator('.study details.menu-group[open]')).toHaveCount(0);
 	await expect(rows(page).first()).toBeHidden();
@@ -149,13 +153,13 @@ test('the shift filter drops a breakfast dish at dinner, and a drink searched fo
 
 test('the Eggs Hussarde card: the first screen answers the table, the rest teaches, and links into the app', async ({ page }) => {
 	await openStudy(page);
-	await page.getByRole('button', { name: 'Entrées 14' }).click();
+	await page.getByRole('button', { name: 'Entrées 13' }).click();
 	await row(page, 'Eggs Hussarde').click();
 	const c = card(page);
 	await expect(c.locator('#card-h')).toHaveText('Eggs Hussarde');
 	await expect(c.locator('#card-h')).toBeFocused();
 	await expect(page.locator('.study .bar')).toHaveCount(0);
-	await expect(c.locator('.backline')).toContainText('1 of 14 in Entrées');
+	await expect(c.locator('.backline')).toContainText('1 of 13 in Entrées');
 	await expect(c.locator('.backline').getByRole('button', { name: /^Next/ })).toBeVisible();
 	await expect(c.locator('.price')).toHaveText('$27');
 	await expect(c).toContainText('Prices as printed on ' + READ_ON + '. Confirm before quoting.');
@@ -231,7 +235,7 @@ test('the Eggs Hussarde card: the first screen answers the table, the rest teach
 	await page.locator('.backline button.back').click();
 	await expect(card(page)).toHaveCount(0);
 	await expect(row(page, 'Eggs Hussarde')).toBeFocused();
-	await expect(page.getByRole('button', { name: 'Entrées 14' })).toHaveAttribute('aria-pressed', 'true');
+	await expect(page.getByRole('button', { name: 'Entrées 13' })).toHaveAttribute('aria-pressed', 'true');
 });
 
 test('Bananas Foster links the Library recipe, labelled as the Library\'s', async ({ page }) => {
@@ -251,7 +255,7 @@ test('a cold /menu#d-... opens that card, and the back gesture closes a card ope
 	await page.locator('.backline button.back').click();
 	await expect(card(page)).toHaveCount(0);
 
-	await page.getByRole('button', { name: 'Entrées 14' }).click();
+	await page.getByRole('button', { name: 'Past menu items 4' }).click();
 	await row(page, 'Redfish Véronique').scrollIntoViewIfNeeded();
 	const y = await page.evaluate(() => window.scrollY);
 	expect(y).toBeGreaterThan(600);
@@ -259,7 +263,7 @@ test('a cold /menu#d-... opens that card, and the back gesture closes a card ope
 	await expect(card(page).locator('#card-h')).toHaveText('Redfish Véronique');
 	await page.goBack();
 	await expect(card(page)).toHaveCount(0);
-	await expect(page.getByRole('button', { name: 'Entrées 14' })).toHaveAttribute('aria-pressed', 'true');
+	await expect(page.getByRole('button', { name: 'Past menu items 4' })).toHaveAttribute('aria-pressed', 'true');
 	await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(y - 60);
 	await expect(row(page, 'Redfish Véronique')).toBeFocused();
 });
@@ -277,7 +281,7 @@ test('Edit the menu shows today’s editing page, and a card’s Edit opens that
 	await page.locator('.backline button.back').click();
 	await expect(page.locator('#study-h')).toBeVisible();
 
-	await page.getByRole('button', { name: 'Entrées 14' }).click();
+	await page.getByRole('button', { name: 'Entrées 13' }).click();
 	await row(page, 'Eggs Hussarde').click();
 	await card(page).getByRole('button', { name: /^Edit/ }).click();
 	await expect(page.getByLabel('Dish name')).toHaveValue('Eggs Hussarde');
@@ -286,12 +290,12 @@ test('Edit the menu shows today’s editing page, and a card’s Edit opens that
 
 test('flash cards for a section deal only that section, turn before they grade, and come back to the section', async ({ page }) => {
 	await openStudy(page);
-	await page.getByRole('button', { name: 'Entrées 14' }).click();
+	await page.getByRole('button', { name: 'Entrées 13' }).click();
 	await page.locator('.study .grouphead').getByRole('button', { name: /^Flash cards/ }).click();
 	// The one card screen, the Flashcards tab's (the consolidation): a push, so Back comes back.
 	await expect(page).toHaveURL(/\/flashcards\?deck=menu%3AEntr.*&run=1$/);
 	const deck = page.locator('.deckframe');
-	await expect(deck.locator('.where')).toHaveText(/^Card 1 of 14 · Entrées$/);
+	await expect(deck.locator('.where')).toHaveText(/^Card 1 of 13 · Entrées$/);
 	await expect(deck.locator('.side')).toHaveText('Front');
 	const entrees = new Set(PACK.dishes.filter((d: any) => d.section === 'Entrées').map((d: any) => d.name));
 
@@ -317,14 +321,14 @@ test('flash cards for a section deal only that section, turn before they grade, 
 	await page.getByRole('button', { name: 'Again', exact: true }).click();
 
 	// Every card of the deck is an entrée.
-	for (let i = 2; i <= 14; i++) {
-		await expect(deck.locator('.where')).toHaveText(new RegExp(`^Card ${i} of 14 · Entrées$`));
+	for (let i = 2; i <= 13; i++) {
+		await expect(deck.locator('.where')).toHaveText(new RegExp(`^Card ${i} of 13 · Entrées$`));
 		expect(entrees.has((await deck.locator('.facename').textContent())!.trim())).toBe(true);
 		await deck.locator('button.hface').click();
 		await page.getByRole('button', { name: 'Got it', exact: true }).click();
 	}
 	await expect(page.locator('main h1')).toHaveText('Deck done');
-	await expect(page.locator('.summaryline')).toHaveText('13 got it, 1 to see again.');
+	await expect(page.locator('.summaryline')).toHaveText('12 got it, 1 to see again.');
 
 	// The answer is the house drill slot's, as a card-item.
 	const slot = await page.evaluate(() => JSON.parse(localStorage.getItem('oot-house-drilled-v1') || '[]'));
@@ -334,8 +338,8 @@ test('flash cards for a section deal only that section, turn before they grade, 
 	// Back: to the study view on Entrées, with the progress read back.
 	await page.locator('.backline button.back').click();
 	await expect(page).toHaveURL(/\/menu$/);
-	await expect(page.getByRole('button', { name: 'Entrées 14' })).toHaveAttribute('aria-pressed', 'true');
-	await expect(page.locator('.study .progress')).toContainText(`14 of ${PACK.dishes.length} studied`);
+	await expect(page.getByRole('button', { name: 'Entrées 13' })).toHaveAttribute('aria-pressed', 'true');
+	await expect(page.locator('.study .progress')).toContainText(`13 of ${SERVED} studied`);
 	await expect(page.locator('.study .progress')).toContainText('1 again');
 	await page.getByRole('button', { name: 'My weak ones (1)' }).click();
 	await expect(page.locator('.deckframe .where')).toHaveText(/^Card 1 of 1 · My weak ones$/);
@@ -376,7 +380,7 @@ test('offline with the worker installed, the study view, a card and its links al
 	await page.waitForSelector('html[data-hydrated]');
 	await expect(rows(page)).toHaveCount(LIST_ROWS, { timeout: 15_000 });
 	await expect(page.locator('.study .tmenu')).toHaveCount(2);
-	await page.getByRole('button', { name: 'Entrées 14' }).click();
+	await page.getByRole('button', { name: 'Entrées 13' }).click();
 	await row(page, 'Eggs Hussarde').click();
 	await expect(card(page).locator('#card-h')).toHaveText('Eggs Hussarde');
 	await expect(card(page).locator('.here .term').first()).toBeVisible({ timeout: 20_000 });

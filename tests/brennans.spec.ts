@@ -345,7 +345,7 @@ test("a Fall 2026 dish of the Brennan's house draws the sheet's field notes on i
 	await shot(page, 'fall-card-top');
 	// A dish off the sheet draws no field notes.
 	await backBtn(page).click();
-	await page.getByRole('button', { name: 'Entrées 14', exact: true }).click();
+	await page.getByRole('button', { name: 'Entrées 13', exact: true }).click();
 	await page.locator('.study .row', { has: page.locator('.nm', { hasText: 'Eggs Hussarde' }) }).click();
 	await expect(card(page).locator('#card-h')).toContainText('Eggs Hussarde');
 	await expect(card(page).locator('#fall-h')).toHaveCount(0);
@@ -365,7 +365,7 @@ test("a Fall 2026 dish of the Brennan's house draws the sheet's field notes on i
 
 test('the Eggs Hussarde card opens on its three lines and draws Go deeper by chapter, the hollandaise entry a link into Cuisine and back', async ({ page }) => {
 	await openHouse(page);
-	await page.getByRole('button', { name: 'Entrées 14' }).click();
+	await page.getByRole('button', { name: 'Entrées 13' }).click();
 	await page.locator('.study .row', { has: page.locator('.nm', { hasText: 'Eggs Hussarde' }) }).click();
 	const c = card(page);
 	await expect(c.locator('h2').first()).toHaveText('Eggs Hussarde');
