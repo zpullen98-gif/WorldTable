@@ -47,6 +47,7 @@
 	import FallMenu from '$lib/components/FallMenu.svelte';
 	import FinalPlateGallery from '$lib/components/FinalPlateGallery.svelte';
 	import { readDrilled, type DrilledEntry } from '$lib/house-drilled';
+	import { isPast } from '$lib/house/house-schema';
 	import { findItem, latestVerdicts, producersLine, say, studyRows, studyProgress, type StudyRow } from '$lib/study';
 	import { ITEM_ID_RE, wingInstalled } from '$lib/wing-links';
 	import { BRENNANS_HOUSE_ID } from '$lib/teaching-folios';
@@ -735,7 +736,8 @@
 	 * waiting next door without seeing its price.
 	 */
 	function herHouse(): MaitreHouse {
-		const dishes = house.dishes.map((d) => ({
+		/* The menu she is told about is the one served now: a dish filed as past is not sent. */
+		const dishes = house.dishes.filter((d) => !isPast(d)).map((d) => ({
 			id: d.id,
 			name: d.name,
 			section: d.section,

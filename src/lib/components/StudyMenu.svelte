@@ -27,7 +27,7 @@
 	import { base } from '$app/paths';
 	import { untrack } from 'svelte';
 	import type { Snippet } from 'svelte';
-	import type { House } from '$lib/house/house-schema';
+	import { isPast, type House } from '$lib/house/house-schema';
 	import TeachingFolioCollection from './TeachingFolioCollection.svelte';
 	import TastingMenu from './TastingMenu.svelte';
 	import { BRENNANS_HOUSE_ID } from '$lib/teaching-folios';
@@ -122,7 +122,9 @@
 	const showMenus = $derived(menus.length > 0 && !query.trim() && (!section || onTastings));
 	const grouped = $derived(fallFirst(studySections(shown)).map((s) => ({ ...s, rows: shown.filter((r) => r.section === s.section) })));
 	const elsewhere = $derived(query.trim() ? searchElsewhere(current, 'dish', query) : []);
-	const progress = $derived(studyProgress(mealRows.map((r) => r.id), latest));
+	/* The facts line counts and tracks the menu served now; the past group below is drawn and read, never counted. */
+	const servedCount = $derived(allRows.filter((r) => !isPast(r)).length);
+	const progress = $derived(studyProgress(mealRows.filter((r) => !isPast(r)).map((r) => r.id), latest));
 	const againSet = $derived(new Set(progress.againIds));
 	const readOn = $derived(readOnWords(current.menusReadOn));
 
@@ -218,7 +220,7 @@
 		<!-- One line of facts with the progress on it: the first screen at 390 by
 		     844 is for the menu, not for sentences about it. -->
 		<p class="facts">
-			{(readOn ? say('read', { date: readOn }) + ' · ' : '') + allRows.length + (allRows.length === 1 ? ' dish' : ' dishes') + ' · '}<span class="progress"
+			{(readOn ? say('read', { date: readOn }) + ' · ' : '') + servedCount + (servedCount === 1 ? ' dish' : ' dishes') + ' · '}<span class="progress"
 				>{progress.studied ? say('progress', { studied: progress.studied, total: progress.total, got: progress.got, again: progress.again }) : say('progressNone')}</span
 			>
 		</p>

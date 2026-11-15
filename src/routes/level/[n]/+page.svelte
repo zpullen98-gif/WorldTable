@@ -58,6 +58,7 @@
 	import { plateTitle } from '$lib/plates';
 	import { NEVER_GRADED, MET, type SubsectionProgress } from '$lib/levels';
 	import { latestVerdicts, searchElsewhere, searchRows, studyProgress, studyRows, studySections } from '$lib/study';
+	import { isPast } from '$lib/house/house-schema';
 	import { roomHref } from '$lib/wing-links';
 	import { foundationsEntries } from '$lib/foundations';
 	import { deskShare, readDeskInbox } from '$lib/desk/desk-inbox';
@@ -209,15 +210,17 @@
 	}
 
 	/* ---- My restaurant ---- */
-	const sections = $derived(studySections(rows));
-	const progress = $derived(current ? studyProgress(rows.map((r) => r.id), latestVerdicts(current.id, today.drilled)) : null);
+	/* The count line and the chips are the menu served now; the search below still finds a past dish. */
+	const served = $derived(rows.filter((r) => !isPast(r)));
+	const sections = $derived(studySections(served));
+	const progress = $derived(current ? studyProgress(served.map((r) => r.id), latestVerdicts(current.id, today.drilled)) : null);
 	/* The fall menu is named on the count line once the house's pack holds the
 	   section (the Fall 2026 dishes, Brennan's next edition): nothing until then. */
 	const FALL_LINE = ' Fall 2026: eight dishes and nine cocktails.';
 	const hasFall = $derived(sections.some((s) => s.section === 'Fall 2026'));
 	const countLine = $derived.by(() => {
 		if (!current || !progress) return '';
-		const head = `${current.name}: ${rows.length} ${rows.length === 1 ? 'dish' : 'dishes'} in ${sections.length} ${sections.length === 1 ? 'section' : 'sections'}.`;
+		const head = `${current.name}: ${served.length} ${served.length === 1 ? 'dish' : 'dishes'} in ${sections.length} ${sections.length === 1 ? 'section' : 'sections'}.`;
 		const fall = hasFall ? FALL_LINE : '';
 		if (!progress.studied) return `${head} Nothing studied yet.${fall}`;
 		return (progress.again ? `${head} ${progress.studied} studied, ${progress.again} to see again.` : `${head} ${progress.studied} studied.`) + fall;

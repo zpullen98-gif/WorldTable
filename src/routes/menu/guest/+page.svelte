@@ -4,6 +4,7 @@
 	import { bySlug } from '$lib/data';
 	import { session } from '$lib/stores/session.svelte';
 	import { house } from '$lib/stores/house.svelte';
+	import { isPast } from '$lib/house/house-schema';
 
 	let { data } = $props();
 
@@ -35,7 +36,8 @@
 	 * for, so the pinned mode stays as a labelled choice.
 	 */
 	let mode = $state<'house' | 'pinned'>('house');
-	const houseDishes = $derived(house.dishes);
+	/* Tonight's card prints what the house serves: a dish filed as past is left off it. */
+	const houseDishes = $derived(house.dishes.filter((d) => !isPast(d)));
 	const showing = $derived(mode === 'house' && houseDishes.length ? 'house' : 'pinned');
 
 	/** The venue's own menu, in the sections the kitchen typed. */

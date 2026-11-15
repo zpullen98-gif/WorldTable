@@ -14,6 +14,8 @@ import {
 	modeFromSearch,
 	poolSize,
 	shuffleCards,
+	shufflePastLast,
+	shuffleWith,
 	stillNeeded,
 	tableDrillHouse,
 	tableProducerCards
@@ -165,6 +167,34 @@ describe('shuffleCards', () => {
 		expect([...a].sort((x, y) => x.front.localeCompare(y.front))).toEqual([...cards].sort((x, y) => x.front.localeCompare(y.front)));
 		expect(shuffleCards(cards, seeded(5))).toEqual(a);
 		expect(cards.some((c) => c.itemId === 'd-unkept01')).toBe(false);
+	});
+});
+
+describe('shufflePastLast', () => {
+	const refs = Array.from({ length: 70 }, (_, i) => `h:d-${String(i).padStart(2, '0')}`);
+	const past = new Set(['h:d-03', 'h:d-17', 'h:d-40', 'h:d-66']);
+	const isPastRef = (r: string) => past.has(r);
+
+	it('keeps every card and deals the past ones last, so the first twenty hold none, at every seed', () => {
+		for (let seed = 1; seed <= 200; seed++) {
+			const run = shufflePastLast(refs, isPastRef, seeded(seed));
+			expect(run).toHaveLength(70);
+			expect([...run].sort()).toEqual([...refs].sort());
+			expect(run.slice(0, 66).some(isPastRef), `seed ${seed}`).toBe(false);
+			expect(run.slice(66).every(isPastRef), `seed ${seed}`).toBe(true);
+			expect(run.slice(0, 20).some(isPastRef)).toBe(false);
+		}
+		/* The served cards are shuffled, and so are the past ones among themselves. */
+		expect(shufflePastLast(refs, isPastRef, seeded(1))).not.toEqual(shufflePastLast(refs, isPastRef, seeded(2)));
+		expect(new Set(Array.from({ length: 40 }, (_, s) => shufflePastLast(refs, isPastRef, seeded(s + 1)).slice(66).join())).size).toBeGreaterThan(1);
+	});
+
+	it('is shuffleWith, draw for draw, when nothing is past, and all past is one shuffle too', () => {
+		for (let seed = 1; seed <= 20; seed++) {
+			expect(shufflePastLast(refs, () => false, seeded(seed))).toEqual(shuffleWith(refs, seeded(seed)));
+			expect(shufflePastLast(refs, () => true, seeded(seed))).toEqual(shuffleWith(refs, seeded(seed)));
+		}
+		expect(shufflePastLast([], isPastRef, seeded(1))).toEqual([]);
 	});
 });
 

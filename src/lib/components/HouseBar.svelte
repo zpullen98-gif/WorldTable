@@ -37,7 +37,7 @@
 	import { onMount } from 'svelte';
 	import { house } from '$lib/stores/house.svelte';
 	import type { HouseApi, ChangeWhat } from '$lib/house/house-api';
-	import type { House, HouseStub } from '$lib/house/house-schema';
+	import { liveHouse, type House, type HouseStub } from '$lib/house/house-schema';
 	import type { ReadPack } from '$lib/house/house-pack';
 
 	/** The eight build steps in the words a person would use for "next". Levels are named, never numbered, and so are steps. */
@@ -81,9 +81,11 @@
 		return `complete · menus read ${current.menusReadOn || 'on no recorded date'}`;
 	});
 
+	/* The counts are what the house serves now: an item filed as past stays on its list to read and is not counted. */
+	const served = $derived(current ? liveHouse(current) : null);
 	const line = $derived(
-		current
-			? `${current.name} · ${count(current.dishes.length, 'dish', 'dishes')} here · ${count(current.wines.length, 'wine', 'wines')} in the Codex · ${count(current.cocktails.length, 'drink', 'drinks')} in the Ledger · ${step}`
+		current && served
+			? `${current.name} · ${count(served.dishes.length, 'dish', 'dishes')} here · ${count(served.wines.length, 'wine', 'wines')} in the Codex · ${count(served.cocktails.length, 'drink', 'drinks')} in the Ledger · ${step}`
 			: NO_HOUSE_LINE
 	);
 

@@ -15,6 +15,7 @@ import { browser } from '$app/environment';
 import { loadDeckIndex } from '../data';
 import { readDrilled, type DrilledEntry } from '../house-drilled';
 import { itemCards, latestVerdicts } from '../study';
+import { liveHouse } from '../house/house-schema';
 import { dueToday, type Today } from '../today';
 import { cuisine } from './cuisine.svelte';
 import { house } from './house.svelte';
@@ -98,7 +99,8 @@ class TodayStore {
 		if (!this.ready) return null;
 		const n = level ?? levels.chosen;
 		const current = house.current;
-		const houseIds = current ? itemCards(current, 'dish', { all: true }).map((c) => c.itemId) : [];
+		/* The house as it is served: a dish filed as past is read from the Menu list and never falls due. */
+		const houseIds = current ? itemCards(liveHouse(current), 'dish', { all: true }).map((c) => c.itemId) : [];
 		const latest = current ? latestVerdicts(current.id, this.#drilled) : new Map();
 		const cuisineAt = (cuisine.index?.cards ?? []).filter((c) => c[2] <= n).map((c) => c[0]);
 		return dueToday({

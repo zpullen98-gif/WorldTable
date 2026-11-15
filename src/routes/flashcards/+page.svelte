@@ -97,8 +97,8 @@
 	import { quickLine as quickLineFor } from '$lib/quick-quiz';
 	import { cuisineQuizRows, handsOnRows, houseQuizRows, levelQuizRows, levelTestRow } from '$lib/practise-rows';
 	import { offersRoundLength, practiceMatches, PRACTICE_ROUND, shortPractice } from '$lib/practise-flow';
-	import { COMPONENT_KINDS, COMPONENT_LABELS, componentsFor, type ComponentKind } from '$lib/house/house-schema';
-	import { shuffleWith, tableProducerCards } from '$lib/house-drill-round';
+	import { COMPONENT_KINDS, COMPONENT_LABELS, componentsFor, isPast, type ComponentKind } from '$lib/house/house-schema';
+	import { shuffleWith, shufflePastLast, tableProducerCards } from '$lib/house-drill-round';
 	import { FLIP_GRADES, deckLog, flipRecordable, liveSections, pickSession, scopeFromSearch, slipping } from '$lib/floor-deck';
 	import { metSlugs } from '$lib/repertoire';
 	import FloorCard, { type OpenLayers } from '$lib/components/FloorCard.svelte';
@@ -202,7 +202,8 @@
 	/* A deck per section, in the house's order. A section that holds only dishes a tasting serves (the
 	   Brennan's 'Tasting menus': the filet, the baked apple, the lobster and the duck) gets no door: its
 	   dishes are dealt in course order by Tasting courses and each menu's own deck, and a section deck
-	   would mix the two menus again. They stay in The whole menu. */
+	   would mix the two menus again. They stay in The whole menu. A past section ('Past menu items')
+	   gets no door either: its dishes are read from the Menu list, and The whole menu deals them last. */
 	const tastOnly = $derived(current ? tastingOnlyIds(current) : new Set<string>());
 	const houseSections = $derived.by(() => {
 		const order: string[] = [];
@@ -211,7 +212,7 @@
 		for (const c of houseCards) {
 			if (!count.has(c.section)) order.push(c.section);
 			count.set(c.section, (count.get(c.section) ?? 0) + 1);
-			if (!tastOnly.has(c.itemId)) listed.add(c.section);
+			if (!tastOnly.has(c.itemId) && !isPast(c)) listed.add(c.section);
 		}
 		return order.filter((s) => listed.has(s)).map((s) => ({ section: s, count: count.get(s) ?? 0 }));
 	});
@@ -241,7 +242,7 @@
 	const dishProdCards = $derived(current ? tableProducerCards(current, engineCards) : []);
 	const prodByKey = $derived(new Map(prodCards.map((c) => [prodKey(c), c])));
 	const prodGrade = (c: Flashcard) => 'card-producer-' + (c.n ?? 0);
-	const weakIds = $derived(houseCards.filter((c) => verdicts.get(c.itemId) === 'again').map((c) => c.itemId));
+	const weakIds = $derived(houseCards.filter((c) => !isPast(c) && verdicts.get(c.itemId) === 'again').map((c) => c.itemId));
 	const lexAt = (n: DeckLevel) => levels.data?.items.lexicon[String(n)] ?? [];
 	/* The whole Lexicon is every term it holds (design 3.7), placed at a level
 	   or not: the Lexicon's own card mode is gone, so a term left out here
@@ -425,6 +426,11 @@
 			return withCard(picked, opts.card);
 		}
 		if (id.startsWith('item:') || id.startsWith('item-components:') || id.startsWith('item-producers:') || id === 'tastings' || id.startsWith('tasting:')) return members(id, opts);
+		/* The whole menu keeps every dish and deals the past ones last, so a short sitting holds none of them. */
+		if (id === 'menu') {
+			const past = new Set(houseCards.filter(isPast).map((c) => `h:${c.itemId}`));
+			return shufflePastLast(members(id, opts), (r) => past.has(r), Math.random);
+		}
 		return shuffleWith(members(id, opts), Math.random);
 	}
 

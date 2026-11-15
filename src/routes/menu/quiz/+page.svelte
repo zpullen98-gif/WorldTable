@@ -71,7 +71,7 @@
 		type GuestCard
 	} from '$lib/house-say';
 	import type { SaidGrade, SayLength, ScenarioGrade } from '$lib/house/house-drills';
-	import { LINE_CAPS, type ItemKind } from '$lib/house/house-schema';
+	import { LINE_CAPS, isPast, type ItemKind } from '$lib/house/house-schema';
 	import { wordCount } from '$lib/house/house-lines';
 	import { nav } from '$lib/stores/nav.svelte';
 	import type { Snapshot } from './$types';
@@ -125,7 +125,8 @@
 	let deckIdx = $state(0);
 	let revealed = $state(false);
 
-	const dishes = $derived(house.dishes);
+	/* The dishes the house serves now: one filed as past ('Past menu items') is never asked about. */
+	const dishes = $derived(house.dishes.filter((d) => !isPast(d)));
 	const enough = $derived(dishes.length >= DISH_QUIZ_MIN);
 
 	/* The page's gates count DISHES only, exactly as before the producers

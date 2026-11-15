@@ -158,6 +158,16 @@ export function shuffleWith<T>(list: readonly T[], rand: Rand): T[] {
 	return out;
 }
 
+/**
+ * A deck that keeps its past cards deals them last: the served cards
+ * shuffled, then the past ones shuffled after them, so a short sitting (the
+ * first cards of the run) holds none while enough are served. With nothing
+ * past it is shuffleWith, draw for draw.
+ */
+export function shufflePastLast<T>(list: readonly T[], past: (card: T) => boolean, rand: Rand): T[] {
+	return [...shuffleWith(list.filter((c) => !past(c)), rand), ...shuffleWith(list.filter((c) => past(c)), rand)];
+}
+
 /** How many questions the whole pool holds over the chosen kinds: the drillable count of each. */
 export function poolSize(house: House, kinds: readonly DrillKind[]): number {
 	const counts = drillableCounts(house);

@@ -132,6 +132,22 @@ describe('the meal filter, the section and the rows', () => {
 		expect(tastingSection({ ...PACK, tastings: [] })).toBe('');
 	});
 
+	it('keeps on the list a course dish with no printed price that one of the house\'s own meals serves too', () => {
+		const h: House = JSON.parse(JSON.stringify(PACK));
+		const duck = h.dishes.find((d) => d.name === 'Roasted Rohan Duck Breast')!;
+		expect(tastingOnlyIds(h).has(duck.id)).toBe(true);
+		/* Dinner beside Dinner tasting: the menu serves it, its price still to ask, so it is a row. */
+		duck.meals = ['Dinner', 'Dinner tasting'];
+		expect(tastingOnlyIds(h).has(duck.id)).toBe(false);
+		expect(studyRows(h, 'dish').some((r) => r.id === duck.id)).toBe(true);
+		/* A meal the house does not keep as its own (the tasting's name) changes nothing. */
+		duck.meals = ['Dinner tasting', 'Chef counter'];
+		expect(tastingOnlyIds(h).has(duck.id)).toBe(true);
+		/* Taken off its course it is no tasting dish at all, priced or not. */
+		for (const t of h.tastings) for (const c of t.courses) c.dishIds = c.dishIds.filter((id) => id !== duck.id);
+		expect(tastingOnlyIds(h).has(duck.id)).toBe(false);
+	});
+
 	it('walk a menu with Previous and Next in printed order, dishes and pours, every row filed under the menu', () => {
 		const [breakfast, dinner] = tastingsShown(PACK);
 		const rows = tastingRows(PACK, breakfast);

@@ -715,18 +715,23 @@ export function tastingsShown(house: House, meal = ''): TastingShown[] {
 }
 
 /**
- * The dishes only a tasting serves: named on a course of some tasting and
- * carrying no printed price of their own. The study list leaves them to
- * their course in the Tasting menus block; their cards open from there.
+ * The dishes only a tasting serves: named on a course of some tasting,
+ * carrying no printed price of their own and on none of the house's own
+ * meals. The study list leaves them to their course in the Tasting menus
+ * block; their cards open from there. A course dish the dinner menu serves
+ * too, its price still to ask, stays a row in its section.
  */
 export function tastingOnlyIds(house: House): Set<string> {
 	const on = new Set<string>();
 	for (const t of house.tastings ?? []) for (const c of t.courses ?? []) for (const id of c.dishIds ?? []) on.add(id);
+	const own = mealsOf(house);
 	const out = new Set<string>();
 	for (const d of house.dishes ?? []) {
 		if (!on.has(d.id)) continue;
 		const priced = plain(d.price) || (d.prices ?? []).some((p) => plain(p.printed));
-		if (!priced) out.add(d.id);
+		/* On one of the house's own meals (Dinner beside Dinner tasting): the menu serves it too, its price still to ask. */
+		const onMenu = (d.meals ?? []).some((m) => own.includes(plain(m)));
+		if (!priced && !onMenu) out.add(d.id);
 	}
 	return out;
 }
