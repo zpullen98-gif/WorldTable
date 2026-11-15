@@ -1,6 +1,6 @@
 {
 	"about": "Every string the dash pass changed while building the Brennan's house, before and after, for a person to read for a changed meaning; an entry with an override number is a string an overrides.json entry set, not the guide's.",
-	"count": 290,
+	"count": 280,
 	"changes": [
 		{
 			"path": "model.card.sources[0].title",
@@ -118,11 +118,6 @@
 			"path": "model.dishes[1].pairing.whyThisWine",
 			"before": "This course comes with a Côtes du Rhône. It’s juicy and soft — enough for the steak but not heavy for breakfast — and the pepper in the wine picks up the garlic spinach.",
 			"after": "This course comes with a Côtes du Rhône. It’s juicy and soft, enough for the steak but not heavy for breakfast, and the pepper in the wine picks up the garlic spinach."
-		},
-		{
-			"path": "model.dishes[1].pairing.stepUp",
-			"before": "Inglenook Rubicon 2010 by the glass: aged Cabernet blend, now silky, with cedar and tobacco — a luxurious filet upgrade.",
-			"after": "Inglenook Rubicon 2010 by the glass: aged Cabernet blend, now silky, with cedar and tobacco, a luxurious filet upgrade."
 		},
 		{
 			"path": "model.dishes[1].pairing.serve",
@@ -307,16 +302,6 @@
 			"path": "model.dishes[9].serviceNote",
 			"before": "Shellfish (crab), dairy (butter). Finger food — bring napkins and a plate for shells per house standard. Fines herbes is feen ZAIRB.",
 			"after": "Shellfish (crab), dairy (butter). Finger food, bring napkins and a plate for shells per house standard. Fines herbes is feen ZAIRB."
-		},
-		{
-			"path": "model.dishes[9].pairing.sayIt",
-			"before": "Brown butter and white Burgundy are a dream — the Leflaive Mâcon has that same nutty richness with a clean, bright finish.",
-			"after": "Brown butter and white Burgundy are a dream, the Leflaive Mâcon has that same nutty richness with a clean, bright finish."
-		},
-		{
-			"path": "model.dishes[9].pairing.whyThisWine",
-			"before": "Brown butter and white Burgundy are a dream. The Leflaive has a gentle richness like the butter and bright acidity for the vinaigrette — it makes the crab taste sweeter.",
-			"after": "Brown butter and white Burgundy are a dream. The Leflaive has a gentle richness like the butter and bright acidity for the vinaigrette, it makes the crab taste sweeter."
 		},
 		{
 			"path": "model.dishes[9].pairing.serve",
@@ -649,16 +634,6 @@
 			"after": "Our Crab & Corn Omelette: lump crab, roasted sweet corn, miso butter, lemon, basil and a Marcona almond gremolata."
 		},
 		{
-			"path": "model.dishes[21].pairing.sayIt",
-			"before": "If you love white Burgundy, the Leflaive Mâcon is a beautiful match — rich enough for the crab and butter, bright enough for the lemon.",
-			"after": "If you love white Burgundy, the Leflaive Mâcon is a beautiful match, rich enough for the crab and butter, bright enough for the lemon."
-		},
-		{
-			"path": "model.dishes[21].pairing.serve",
-			"before": "Poured by Coravin — present the bottle and pour through the needle; no cork is pulled. 50–54°F in a white Burgundy bowl.",
-			"after": "Poured by Coravin, present the bottle and pour through the needle; no cork is pulled. 50 to 54°F in a white Burgundy bowl."
-		},
-		{
 			"path": "model.dishes[21].pairing.avoid",
 			"before": "Avoid tannic reds — miso and egg yolk make tannin taste bitter and metallic — and heavy, buttery Chardonnay that smothers the crab.",
 			"after": "Avoid tannic reds, miso and egg yolk make tannin taste bitter and metallic, and heavy, buttery Chardonnay that smothers the crab."
@@ -712,22 +687,6 @@
 			"path": "model.dishes[23].serviceNote",
 			"before": "Serves two, $120. Ask temperature once for the table. A whole roast takes longer — confirm timing with the kitchen and set expectations. Dairy and eggs (Foyot). Ask at lineup whether it’s carved tableside or in the kitchen. Natural side upsells: Maggie’s Mushrooms, Shells & Cheese ($12 each).",
 			"after": "Serves two, $120. Ask temperature once for the table. A whole roast takes longer, confirm timing with the kitchen and set expectations. Dairy and eggs (Foyot). Ask at lineup whether it’s carved tableside or in the kitchen. Natural side upsells: Maggie’s Mushrooms, Shells & Cheese ($12 each)."
-		},
-		{
-			"path": "model.dishes[23].pairing.sayIt",
-			"before": "For the Chateaubriand, we pour the 2010 Inglenook Rubicon by the glass — a Napa legend with real age on it, powerful but silky. Or I can bring our sommelier for a red Burgundy from our cellar.",
-			"after": "For the Chateaubriand, we pour the 2010 Inglenook Rubicon by the glass, a Napa legend with real age on it, powerful but silky. Or I can bring our sommelier for a red Burgundy from our cellar.",
-			"override": 60
-		},
-		{
-			"path": "model.dishes[23].pairing.secondWhy",
-			"before": "For finesse over power: a Premier Cru red Burgundy — tenderloin is delicate, and Pinot Noir lets it shine.",
-			"after": "For finesse over power: a Premier Cru red Burgundy, tenderloin is delicate, and Pinot Noir lets it shine."
-		},
-		{
-			"path": "model.dishes[23].pairing.serve",
-			"before": "$70 by the glass. Keep the bottle upright and pour gently to leave any sediment behind. Bordeaux glass, 60–64°F. For a red Burgundy from the cellar, bring in the sommelier.",
-			"after": "$70 by the glass. Keep the bottle upright and pour gently to leave any sediment behind. Bordeaux glass, 60 to 64°F. For a red Burgundy from the cellar, bring in the sommelier."
 		},
 		{
 			"path": "model.dishes[24].parts.technique",
@@ -819,11 +778,6 @@
 			"path": "model.dishes[26].pairing.secondWhy",
 			"before": "Sparkling rosé — bubbles and fried chicken are a classic.",
 			"after": "Sparkling rosé, bubbles and fried chicken are a classic."
-		},
-		{
-			"path": "model.dishes[26].pairing.stepUp",
-			"before": "Leflaive Mâcon-Verzé by Coravin: finer, chalkier Chardonnay from Burgundy — Dijon mustard’s home region — with the texture for the cream.",
-			"after": "Leflaive Mâcon-Verzé by Coravin: finer, chalkier Chardonnay from Burgundy, Dijon mustard’s home region, with the texture for the cream."
 		},
 		{
 			"path": "model.dishes[26].pairing.avoid",
@@ -1402,11 +1356,6 @@
 			"override": 1494
 		},
 		{
-			"path": "model.scenarios[5].you",
-			"before": "Two directions: by the glass, the 2010 Inglenook Rubicon — Napa Cabernet with sixteen years of age, so it’s powerful but silky, $70. Or, for elegance, a red Burgundy from our cellar — I’d love to bring our sommelier over to pick one with you.",
-			"after": "Two directions: by the glass, the 2010 Inglenook Rubicon: Napa Cabernet with sixteen years of age, so it’s powerful but silky, $70. Or, for elegance, a red Burgundy from our cellar, I’d love to bring our sommelier over to pick one with you."
-		},
-		{
 			"path": "model.scenarios[6].guest",
 			"before": "It’s our anniversary — something special to start?",
 			"after": "It’s our anniversary, something special to start?"
@@ -1472,9 +1421,9 @@
 		},
 		{
 			"path": "model.mustKnows[6].body",
-			"before": "Brennan's first won the Wine Spectator Grand Award in 1983, lost the cellar to Katrina in 2005 when a month without power cooked about 35,000 bottles, and won it back in 2021 after rebuilding to more than 15,000 bottles, with Burgundy and Champagne the deep end of the list; the Wine Spectator listing shows about 3,600 selections and more than 19,000 bottles, deepest in Burgundy, Bordeaux and California. Confirm the award years from the listing at lineup. The live by-the-glass list (Binwise) pours Rare Brut 2012 and Leflaive Mâcon-Verzé by Coravin, plus Inglenook Rubicon 2010 at $70. The restaurant’s own “Cocktails & Wine by the Glass” page shows an older, different glass list (e.g., Drouhin Chablis, Peter Michael, Rare 2013) — check the list you’re handed on shift.",
-			"after": "Brennan's first won the Wine Spectator Grand Award in 1983, lost the cellar to Katrina in 2005 when a month without power cooked about 35,000 bottles, and won it back in 2021 after rebuilding to more than 15,000 bottles, with Burgundy and Champagne the deep end of the list; the Wine Spectator listing shows about 3,600 selections and more than 19,000 bottles, deepest in Burgundy, Bordeaux and California. Confirm the award years from the listing at lineup. The live by-the-glass list (Binwise) pours Rare Brut 2012 and Leflaive Mâcon-Verzé by Coravin, plus Inglenook Rubicon 2010 at $70. The restaurant’s own “Cocktails & Wine by the Glass” page shows an older, different glass list (e.g., Drouhin Chablis, Peter Michael, Rare 2013), check the list you’re handed on shift.",
-			"override": 254
+			"before": "Brennan's first won the Wine Spectator Grand Award in 1983, lost the cellar to Katrina in 2005 when a month without power cooked about 35,000 bottles, and won it back in 2021 after rebuilding to more than 15,000 bottles, with Burgundy and Champagne the deep end of the list; the Wine Spectator listing shows about 3,600 selections and more than 19,000 bottles, deepest in Burgundy, Bordeaux and California. Confirm the award years from the listing at lineup. The Wines by the Glass sheet of 15 November 2026 pours three by Coravin: Rare 2012, the Louis Jadot Les Pucelles 2008 and the Domaine de Courcel Pommard 2007. The restaurant’s own “Cocktails & Wine by the Glass” page shows an older, different glass list (e.g., Drouhin Chablis, Peter Michael, Rare 2013) — check the list you’re handed on shift.",
+			"after": "Brennan's first won the Wine Spectator Grand Award in 1983, lost the cellar to Katrina in 2005 when a month without power cooked about 35,000 bottles, and won it back in 2021 after rebuilding to more than 15,000 bottles, with Burgundy and Champagne the deep end of the list; the Wine Spectator listing shows about 3,600 selections and more than 19,000 bottles, deepest in Burgundy, Bordeaux and California. Confirm the award years from the listing at lineup. The Wines by the Glass sheet of 15 November 2026 pours three by Coravin: Rare 2012, the Louis Jadot Les Pucelles 2008 and the Domaine de Courcel Pommard 2007. The restaurant’s own “Cocktails & Wine by the Glass” page shows an older, different glass list (e.g., Drouhin Chablis, Peter Michael, Rare 2013), check the list you’re handed on shift.",
+			"override": 6101
 		},
 		{
 			"path": "model.mustKnows[7].body",

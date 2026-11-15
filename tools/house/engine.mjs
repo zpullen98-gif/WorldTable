@@ -191,7 +191,17 @@ export function stagingFragmentFiles(names) { return names.map((n) => path.join(
    all 271, two sentences under the description) and the forty-five second descriptions reviewed to the
    five-star standard (268 rewritten), from ten staged chunks merged into overrides.json; stamped at the
    quarter hour before its build, never ahead of the clock. */
-export const EDITION_BUILT_AT = '2026-11-02T03:15:00.000Z';
+/* The 15:04 edition of 15 November 2026 is the November edition, read from the owner's sheets of that day
+   (pages/brennans-sheets-2026-11-15.txt, filed as the sixteenth source): the four replaced dishes filed
+   under Past menu items and the two wines that left the glass list under Past wines by the glass, kept to
+   be read and never dealt (the engine's isPast and liveHouse); the dinner tasting's courses 2, 3 and 5
+   re-pointed to the Tuna Crudo, the Fish Bouillabaisse and the Chocolate Cremeux; four new glass wines
+   with no printed price (priceUnknown, a manager ask blocking the price), the menus' wines 34 to 38, and
+   the twelve dishes that poured the two past wines re-paired; the chef's notes on the seven sheet dishes;
+   and the Wine class, 38 must-knows; from three staged chunks (nov-dishes, nov-wines, nov-wines-names)
+   merged into overrides.json and one staged fragment into components/wines.json; stamped at the minute
+   of its build, never ahead of the clock. */
+export const EDITION_BUILT_AT = '2026-11-15T15:04:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a
@@ -276,19 +286,21 @@ export const SNACK_SECTION = 'Roost Bar & Bubbles snacks';
    cocktails, the 2 premium Sazeracs, the Bloody Mary, the Champagne Cocktail, the 3 coffees and the
    juice, the 6 drinks of Billboard Songs from 1946 and the 2 of Temperance, 1946, the 3 dessert and 2
    coffee cocktails and the 4 Bubbles cocktails (6 of them zero-proof; the summer list's 8 are
-   retired); 102 items with a formula in all; 34 wines (the guide's 20, the Barbera and the Argyle Brut
-   by the glass, the 7 Birthday Bubbles bottles and the 5 Bubbles rosés), the menus' wines, with the
+   retired); 102 items with a formula in all; 38 wines (the guide's 20, the Barbera and the Argyle Brut
+   by the glass, the 7 Birthday Bubbles bottles, the 5 Bubbles rosés and, from the edition of 15
+   November 2026, the 4 new glass wines of the November sheet), the menus' wines, with the
    floor's bottles and the dishes they tier counted from the overrides (overrideCounts); 2 tastings;
-   15 sources (the Fall 2026 training sheets the fifteenth); at least 115 terms; at least 33
+   16 sources (the Fall 2026 training sheets the fifteenth, the November 2026 sheets the sixteenth);
+   at least 115 terms; at least 33
    scenarios; 4 or more mix-ups; the must-knows; a lineup register of at least 60 questions; the 43
    pairings (the guide's 35 and the 8 fall dishes'); and the five disputes the plan names. */
-/* THE FLOOR'S BOTTLES. The menus' wines stay fixed at 34 (list 'glass', the default), and the bottle
+/* THE FLOOR'S BOTTLES. The menus' wines stay fixed at 38 (list 'glass', the default), and the bottle
    list's wines and the dishes with bottle tiers are counted from what the overrides file asks for,
    so a new bottle or a new tier moves the expected figure with it rather than a number here: every
    wine:+ add whose value says list "bottle", and every dish a 'bottles' entry names. A count passed
    in `expect` stands instead (a test, or an integrator holding the edition to a figure it states). */
 export const OVERRIDES = path.join(DIR, 'overrides.json');
-export const MENU_WINES = 34;
+export const MENU_WINES = 38;
 export function overrideCounts(file = OVERRIDES) {
 	const out = { bottles: 0, tiered: 0 };
 	if (!fs.existsSync(file)) return out;
@@ -390,7 +402,7 @@ export function countProblems(house, expect = overrideCounts(), frag = fragmentC
 	const tiered = (house.dishes || []).filter((d) => d.pairing && d.pairing.value && d.pairing.value.bottles).length;
 	eq("dishes with bottle tiers (from the overrides' bottles entries)", tiered, expect.tiered);
 	eq('tastings', n('tastings'), 2);
-	eq('sources', (house.sources || []).length, 15);
+	eq('sources', (house.sources || []).length, 16);
 	ge('terms', n('lexicon'), 115);
 	ge('scenarios', n('scenarios'), 33);
 	ge('mix-ups', n('mixUps'), 4);

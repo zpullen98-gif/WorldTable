@@ -15117,7 +15117,7 @@
         "question": "Is the La Miraja Le Masche Barbera d'Asti 2023 poured by the glass tonight at $16.00, how is it aged, how is Le Masche said, and is there a bottle price? It is on the current menu but not on the Binwise list.",
         "askWhom": "sommelier",
         "items": [
-          "La Miraja ‘Le Masche’ Barbera d’Asti 2023"
+          "La Miraja ‘Le Masche’ Barbera d’Asti Superiore 2023"
         ]
       },
       "reason": "A new glass the menu prints and the bottle list does not",
@@ -53547,7 +53547,7 @@
         "question": "Is La Miraja's Le Masche poured tonight, is the 2023 open, and does the label read Barbera d'Asti or Barbera d'Asti Superiore? The producer's sheet we have, steel then at least twelve months in neutral oak, is for the Superiore.",
         "askWhom": "sommelier",
         "items": [
-          "La Miraja ‘Le Masche’ Barbera d’Asti 2023"
+          "La Miraja ‘Le Masche’ Barbera d’Asti Superiore 2023"
         ],
         "blocksField": ""
       },
@@ -54185,7 +54185,7 @@
         "question": "Which Durand estate makes our Sauvignon Blanc by the glass, what appellation does the label print, who imports it, and is the open bottle the 2024 (as the menu prints) or the 2025 (as Binwise prints)?",
         "askWhom": "sommelier",
         "items": [
-          "Famille Durand Val de Loire Sauvignon Blanc 2024"
+          "Famille Durand Val de Loire Sauvignon Blanc 2025"
         ],
         "blocksField": ""
       },
@@ -54196,7 +54196,7 @@
       "target": "ask:+",
       "op": "add",
       "value": {
-        "question": "Is the open Minuty Prestige still the 2024, and what is its blend this vintage (Cinsault, Tibouren)?",
+        "question": "Is the open Minuty Prestige still the 2024, and what is its blend this vintage (Cinsault, Tibouren)? The 15 November glass sheet prints 2023.",
         "askWhom": "sommelier",
         "items": [
           "Minuty ‘Prestige’ Côtes de Provence Rosé 2024"
@@ -58154,7 +58154,7 @@
         "question": "The house respells Famille Durand as doo-RAHN and Domaine de Durban as dur-BAHN, one French first syllable written two ways: which respelling should the floor use for both?",
         "askWhom": "sommelier",
         "items": [
-          "Famille Durand Val de Loire Sauvignon Blanc 2024",
+          "Famille Durand Val de Loire Sauvignon Blanc 2025",
           "Domaine de Durban Beaumes-de-Venise Rouge 2024"
         ],
         "blocksField": ""
@@ -63802,7 +63802,7 @@
       "target": "ask:+",
       "op": "add",
       "value": {
-        "question": "Which grapes are in Brennan’s Essential? The guide prints Pinot Noir, Meunier and Chardonnay, but the wine card names no grapes until the bottle is matched to a Piper-Heidsieck cuvée: what does the back label or the importer give?",
+        "question": "Which grapes are in Brennan’s Essential? The guide prints Pinot Noir, Meunier and Chardonnay, but the wine card names no grapes until the bottle is matched to a Piper-Heidsieck cuvée: what does the back label or the importer give? The Wines by the Glass sheet of 15 November 2026 prints: “The assemblage is 44% Pinot Noir, 34% Meunier, & 22% Chardonnay.”",
         "askWhom": "sommelier",
         "items": [
           "Brennan’s Essential by Piper-Heidsieck Extra Brut NV"
@@ -75925,6 +75925,2014 @@
       "value": "Henriques & Henriques ‘Founder’s Solera’ Madeira 1894 is Madeira from Câmara de Lobos, on the island’s south coast, from a solera begun in 1894 and closed in 1899. Wine is drawn from its old casks, refreshed with younger wine, so the bottle is never a single vintage. The list prints Verdelho; the house describes it as Malvasia. Deep amber, tinged gold and green: dried fruit, raisins, spice, honey and old wood, velvety, with an intense finish. It ends a great evening on its own, or with pecans, dark chocolate and aged cheese. The sommelier presents it, at 55 to 60°F in a small Madeira glass. Its history dates to 1850.",
       "reason": "Five-star card edition, sale-10 (Dessert and fortified): the description was rewritten because it opened on the house or the place rather than the wine as the list prints it (it began on the house), and it closed on a lineup instruction, not a line of story; it now opens on the wine as the list prints it, names grape and place, says how it is made and how it tastes, names only the dishes whose pairing names this wine, carries the record’s serve and one line of story from the research, names nobody living and shares no run of eight words with the 20 second line; refuter 2 November 2026: oldest (a superlative) now old",
       "source": "research/producers-cellar-port-madeira-2026-10-10.md section 8 (items 1 to 4: a historic Madeira house at Câmara de Lobos on the south coast, history dating to 1850; the Founder’s Solera begun in 1894 and closed in 1899, described by the producer as Malvasia, printed by Binwise as Verdelho; in a solera wine is drawn from the oldest casks and refreshed with younger wine, so the date is when it began; the sommelier handles it); the wine record (profile, goesWith, serve; no dish pairing names it)"
+    },
+    {
+      "target": "dish:Steak Tartare Cannoli",
+      "field": "section",
+      "op": "set",
+      "value": "Past menu items",
+      "reason": "November 2026: Steak Tartare with Rye replaces it, so the dish is filed under Past menu items, the section the engine's past rule reads; its name, id, description, marks, notes and pairing are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Steak Tartare with Rye sheet; the page's fourth line: Steak Tartare with Rye replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "dish:Steak Tartare Cannoli",
+      "field": "meals",
+      "op": "set",
+      "value": [
+        "Dinner"
+      ],
+      "reason": "A past dish names the meals it was served at and no tasting: Dinner. The dinner tasting no longer serves it, and an empty list would show it under every meal",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Steak Tartare with Rye sheet; the page's fourth line: Steak Tartare with Rye replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "dish:Steak Tartare Cannoli",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "Steak Tartare with Rye took its place in November 2026: the raw beef tenderloin stays, and the potato cannoli shell, the crème fraîche and the egg yolk bottarga go. The cannoli is kept here to be read, not sold."
+      },
+      "reason": "A past dish says what took its place and when, under its own question, so the card explains why it is filed under Past menu items",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Steak Tartare with Rye sheet; the page's fourth line: Steak Tartare with Rye replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "dish:Louisiana BBQ Lobster",
+      "field": "section",
+      "op": "set",
+      "value": "Past menu items",
+      "reason": "November 2026: Tuna Crudo replaces it, so the dish is filed under Past menu items, the section the engine's past rule reads; its name, id, description, marks, notes and pairing are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, headed Tasting menu; the page's fourth line: Tuna Crudo replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "dish:Louisiana BBQ Lobster",
+      "field": "meals",
+      "op": "set",
+      "value": [
+        "Dinner"
+      ],
+      "reason": "A past dish names the meals it was served at and no tasting: Dinner. The dinner tasting no longer serves it, and an empty list would show it under every meal",
+      "source": "page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, headed Tasting menu; the page's fourth line: Tuna Crudo replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "dish:Louisiana BBQ Lobster",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "Tuna Crudo took its place in November 2026, as the second course of the Dinner Tasting Menu. The lobster is kept here to be read, not sold."
+      },
+      "reason": "A past dish says what took its place and when, under its own question, so the card explains why it is filed under Past menu items",
+      "source": "page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, headed Tasting menu; the page's fourth line: Tuna Crudo replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "dish:Redfish Véronique",
+      "field": "section",
+      "op": "set",
+      "value": "Past menu items",
+      "reason": "November 2026: Fish Bouillabaisse replaces it, so the dish is filed under Past menu items, the section the engine's past rule reads; its name, id, description, marks, notes and pairing are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Fish Bouillabaisse sheet, headed Tasting menu; the page's fourth line: Fish Bouillabaisse replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "dish:Redfish Véronique",
+      "field": "meals",
+      "op": "set",
+      "value": [
+        "Dinner"
+      ],
+      "reason": "A past dish names the meals it was served at and no tasting: Dinner. The dinner tasting no longer serves it, and an empty list would show it under every meal",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Fish Bouillabaisse sheet, headed Tasting menu; the page's fourth line: Fish Bouillabaisse replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "dish:Redfish Véronique",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "Fish Bouillabaisse took its place in November 2026, as the third course of the Dinner Tasting Menu. The redfish is kept here to be read, not sold."
+      },
+      "reason": "A past dish says what took its place and when, under its own question, so the card explains why it is filed under Past menu items",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Fish Bouillabaisse sheet, headed Tasting menu; the page's fourth line: Fish Bouillabaisse replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "dish:The Snickers",
+      "field": "section",
+      "op": "set",
+      "value": "Past menu items",
+      "reason": "November 2026: Chocolate Crémeux replaces it, so the dish is filed under Past menu items, the section the engine's past rule reads; its name, id, description, marks, notes and pairing are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Chocolate Cremeux sheet, headed Tasting menu; the page's fourth line: Chocolate Crémeux replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "dish:The Snickers",
+      "field": "meals",
+      "op": "set",
+      "value": [
+        "Breakfast & lunch",
+        "Dinner"
+      ],
+      "reason": "A past dish names the meals it was served at and no tasting: Breakfast & lunch and Dinner. The dinner tasting no longer serves it, and an empty list would show it under every meal",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Chocolate Cremeux sheet, headed Tasting menu; the page's fourth line: Chocolate Crémeux replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "dish:The Snickers",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "Chocolate Crémeux took its place in November 2026, as the fifth course of the Dinner Tasting Menu. The Snickers is kept here to be read, not sold."
+      },
+      "reason": "A past dish says what took its place and when, under its own question, so the card explains why it is filed under Past menu items",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Chocolate Cremeux sheet, headed Tasting menu; the page's fourth line: Chocolate Crémeux replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "dish:Tuna Crudo",
+      "field": "meals",
+      "op": "set",
+      "value": [
+        "Dinner",
+        "Dinner tasting"
+      ],
+      "reason": "The second course of the Dinner Tasting Menu from November 2026, in place of the Louisiana BBQ Lobster: the dish gains the Dinner tasting meal and keeps Dinner",
+      "source": "page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Dinner Tasting Menu, second course: the Tuna Crudo takes the place of the Louisiana BBQ Lobster from November 2026. The menu printed the Fichet Mâcon-Igé 2024 for the lobster: is it still the pour with the Tuna Crudo, and how does the card print the course?",
+        "askWhom": "sommelier",
+        "items": [
+          "Tuna Crudo",
+          "Fichet ‘Château London’ Mâcon-Igé 2024"
+        ]
+      },
+      "reason": "The second course's pour was printed for the dish it replaced and no tasting card was photographed, so the pour stands until lineup confirms it and the card asks rather than claiming it",
+      "source": "page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md); page:brennans-tasting-menus-pasted-2026-10-05.txt (the pour as printed for the lobster)"
+    },
+    {
+      "target": "dish:Fish Bouillabaisse",
+      "field": "meals",
+      "op": "set",
+      "value": [
+        "Dinner",
+        "Dinner tasting"
+      ],
+      "reason": "The third course of the Dinner Tasting Menu from November 2026, in place of the Redfish Véronique: the dish gains the Dinner tasting meal and keeps Dinner",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Fish Bouillabaisse sheet, headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Dinner Tasting Menu, third course: the Fish Bouillabaisse takes the place of the Redfish Véronique from November 2026. The menu printed the Louis Jadot Beaune 1er Cru 2023, a red, for the redfish: is it still the pour with the Fish Bouillabaisse, and how does the card print the course?",
+        "askWhom": "sommelier",
+        "items": [
+          "Fish Bouillabaisse",
+          "Louis Jadot Beaune 1er Cru 2023"
+        ]
+      },
+      "reason": "The third course's pour was printed for the dish it replaced and no tasting card was photographed, so the pour stands until lineup confirms it and the card asks rather than claiming it",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Fish Bouillabaisse sheet, headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md); page:brennans-tasting-menus-pasted-2026-10-05.txt (the pour as printed for the redfish)"
+    },
+    {
+      "target": "dish:Chocolate Crémeux",
+      "field": "meals",
+      "op": "set",
+      "value": [
+        "Dinner",
+        "Dinner tasting"
+      ],
+      "reason": "The fifth course of the Dinner Tasting Menu from November 2026, in place of The Snickers: the dish gains the Dinner tasting meal and keeps Dinner",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Chocolate Cremeux sheet, headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Dinner Tasting Menu, fifth course: the Chocolate Crémeux takes the place of The Snickers from November 2026. The menu printed the La Tour Vieille Banyuls Reserva for The Snickers: is it still the pour with the Chocolate Crémeux, and how does the card print the course?",
+        "askWhom": "sommelier",
+        "items": [
+          "Chocolate Crémeux",
+          "Domaine La Tour Vieille Banyuls Reserva NV"
+        ]
+      },
+      "reason": "The fifth course's pour was printed for the dish it replaced and no tasting card was photographed, so the pour stands until lineup confirms it and the card asks rather than claiming it",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Chocolate Cremeux sheet, headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md); page:brennans-tasting-menus-pasted-2026-10-05.txt (the pour as printed for The Snickers)"
+    },
+    {
+      "target": "tasting:Dinner Tasting Menu",
+      "field": "note",
+      "op": "append",
+      "value": "From November 2026 the second, third and fifth courses are the Tuna Crudo, the Fish Bouillabaisse and the Chocolate Crémeux. Their three pours were printed for the courses they replaced: confirm each at lineup before you name it.",
+      "reason": "The note says the menu prints these five pours; three of them were printed for the lobster, the redfish and the Snickers, so the note now says which courses are new and that their pours are to confirm",
+      "source": "page:brennans-sheets-2026-11-15.txt (the three sheets headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "mustknow:Dinner Tasting Menu, $80",
+      "field": "body",
+      "op": "replace",
+      "value": {
+        "from": "Louisiana BBQ lobster → Redfish Véronique → Rohan duck → The Snickers",
+        "to": "Tuna Crudo → Fish Bouillabaisse → Rohan duck → Chocolate Crémeux"
+      },
+      "reason": "The must-know lists the five courses in order; courses 2, 3 and 5 are the November 2026 dishes",
+      "source": "page:brennans-sheets-2026-11-15.txt (the three sheets headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "mustknow:Dinner Tasting Menu, $80",
+      "field": "body",
+      "op": "append",
+      "value": "The second, third and fifth courses are new from November 2026, and their pours were printed for the courses they replaced: confirm each at lineup.",
+      "reason": "The pours listed were printed for the old courses; the must-know says so rather than teach them as settled",
+      "source": "page:brennans-sheets-2026-11-15.txt (the three sheets headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "mustknow:The sauces on our menus",
+      "field": "body",
+      "op": "replace",
+      "value": {
+        "from": "is on the Redfish Véronique.",
+        "to": "was on the Redfish Véronique, now among the past menu items."
+      },
+      "reason": "The Redfish Véronique left the menu in November 2026, so the must-know no longer teaches its sauce as one on the menu",
+      "source": "page:brennans-sheets-2026-11-15.txt (Fish Bouillabaisse replaces the Redfish Veronique); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "mustknow:The sauces on our menus",
+      "field": "body",
+      "op": "replace",
+      "value": {
+        "from": "on the Louisiana Oysters and the BBQ Lobster.",
+        "to": "on the Louisiana Oysters, and was on the BBQ Lobster until it left the menu."
+      },
+      "reason": "The Louisiana BBQ Lobster left the menu in November 2026, so the must-know no longer teaches it as a dish on the menu",
+      "source": "page:brennans-sheets-2026-11-15.txt (Tuna Crudo replaces the Louisiana BBQ Lobster); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "dispute:Louisiana BBQ Lobster tasting pour",
+      "field": "item",
+      "op": "set",
+      "value": "Tuna Crudo",
+      "reason": "The dispute is about the second course's pour, and the second course is the Tuna Crudo from November 2026: it is re-pointed to the dish now served, its id held, so it no longer hangs on a past dish and the count rule's lobster pour dispute stays in the house",
+      "source": "page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+    },
+    {
+      "target": "dispute:Louisiana BBQ Lobster tasting pour",
+      "field": "resolution",
+      "op": "set",
+      "value": "Settled for the printed menu of 3 October 2026: the Dinner Tasting Menu the owner copied from brennansneworleans.com paired the second course, then the Louisiana BBQ Lobster, with Fichet Château London Mâcon-Igé 2024 (paste line 255), as the guide did. The Matrot reading came from an indexed copy, not the page as printed. From November 2026 the second course is the Tuna Crudo, and the pour was printed for the lobster: confirm it at lineup.",
+      "reason": "The resolution keeps what the October menu settled and says the pour was printed for the dish the course then served",
+      "source": "page:brennansneworleans-menus-pasted-2026-10-03.txt line 255; page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, headed Tasting menu)"
+    },
+    {
+      "target": "dish:Steak Tartare with Rye",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What does the chef say?",
+        "a": "The chef's notes. Montreal steak spice began in the 1940s at Schwartz's Hebrew Delicatessen in Montreal, when a cook put the deli's smoked meat pickling spices on a steak for his own lunch. In the late 1800s steak tartare was called beefsteak à l'Américaine; a version served with tartar sauce gave it the name à la tartare, and the chef credits that version to Auguste Escoffier. Vital Farms is a group of small egg farms that share ethical farming practices. Rye is a grain closely related to wheat, known for its earthy, nutty flavor.\n\nWhat the sources say. The spice story is lore and not a dated record: the sources agree on Schwartz's and on the smoked meat spices and place it in the 1940s and 1950s, with no record of the day. Escoffier's Le Guide Culinaire of 1903 prints both versions, so he wrote the tartar sauce version down, and no source shows that he created it. Vital Farms is a company that buys from contracted small family farms held to one pasture-raised standard, not a farmers' cooperative."
+      },
+      "reason": "The chef's notes from the November sheet, in plain sentences and with the chef not named, kept under their own question; where the research does not bear a fact out, the note says what the sources say beside it",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Steak Tartare with Rye sheet, The chef's notes); research/menu-2026-11-15-steak-tartare-with-rye.json (chefFacts, the four verdicts)"
+    },
+    {
+      "target": "dish:Tuna Crudo",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What does the chef say?",
+        "a": "The chef's notes. Aguachile, which the sheet prints Aquachile, is a traditional Mexican dish from the coastal state of Sinaloa, usually made by submerging fresh fish in a blend of lemon juice and spices. The name translates to chili water. Salsa seca is a Mexican condiment made from dried roasted chilies, tortilla chips, seeds and nuts. Coriander is the cilantro seed. Coriander aversion is the strong sense that the herb tastes like soap, dirt or bugs, caused by the compounds called aldehydes.\n\nWhat the sources say. On aguachile they agree on Sinaloa and on raw seafood under citrus and chili, and they say shrimp where the sheet says fish, lime where it says lemon, and chili and salt where it says spices. On salsa seca they bear out the dried chilies, the seeds and the nuts and do not mention tortilla chips, so the tortilla is ours to confirm with the kitchen. The sheet's list marks sesame and no nut, so whether our salsa seca holds nuts is a question for the kitchen, and the service note carries the list as printed. On the aversion, the soapy taste belongs to the fresh leaf, whose aldehydes are a family of compounds and not one, while the oil of the ripe seed is mostly linalool."
+      },
+      "reason": "The chef's notes from the November sheet, in plain sentences and with the chef not named, kept under their own question; where the research does not bear a fact out, the note says what the sources say beside it",
+      "source": "page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, The chef's notes); research/menu-2026-11-15-tuna-crudo.json (chefFacts, the five verdicts)"
+    },
+    {
+      "target": "dish:Fish Bouillabaisse",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What does the chef say?",
+        "a": "The chef's notes. Bouillabaisse is a traditional French fish stew, usually served with crusty bread and a rouille. Rouille is a thick, garlicky Provençal sauce made from olive oil, egg yolks, breadcrumbs and saffron, and its name means rust in French.\n\nWhat the sources say. The stew is Marseille's, and its restaurants serve it in two parts: the broth first, very hot, with rouille on bread rubbed with garlic, then the fish. For rouille the sources give garlic, chili, saffron and olive oil, bound with bread or potato; the egg yolk is an addition some recipes make and not a fixed part, and the name comes from the sauce's red-orange color. Our plate lists a preserved lemon aioli and no rouille, so do not tell a guest there is rouille on it."
+      },
+      "reason": "The chef's notes from the November sheet, in plain sentences and with the chef not named, kept under their own question; where the research does not bear a fact out, the note says what the sources say beside it",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Fish Bouillabaisse sheet, The chef's notes); research/menu-2026-11-15-fish-bouillabaisse.json (partial: interimNotes, the notes of searches 4, 5 and 7 on the service and on rouille); research/fall-menu-2026-chatgpt.json (Fish Bouillabaisse, originNotes and the preserved-lemon aioli note)"
+    },
+    {
+      "target": "dish:Chocolate Crémeux",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What does the chef say?",
+        "a": "The chef's notes. Crémeux is a rich, smooth French dessert cream, made by emulsifying a pouring custard with chocolate or another flavoring and setting it with gelatin. The word translates literally to creamy. Maldon salt is a famous high-end salt, harvested at the coastal town of Maldon in Essex, England.\n\nWhat the sources say. They bear out the name, the custard, which is crème anglaise, emulsified with chocolate, and the salt from the Essex coast. Gelatin is not part of every crémeux, since some set on the chocolate alone; the sheet marks gelatin on ours, and where it comes from is a question for the kitchen."
+      },
+      "reason": "The chef's notes from the November sheet, in plain sentences and with the chef not named, kept under their own question; where the research does not bear a fact out, the note says what the sources say beside it",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Chocolate Cremeux sheet, The chef's notes); the dish's own origin in the house; research/fall-menu-2026-chatgpt.json (Chocolate Crémeux, originNotes and the ingredient notes on crémeux, gelatine and Maldon salt)"
+    },
+    {
+      "target": "dish:Swordfish Grenobloise",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What does the chef say?",
+        "a": "The chef's notes. Fish Grenobloise is a preparation from Grenoble, France. By the chef's account Grenoble is landlocked and fresh fish was hard to get, so cooks topped it with a strong sauce of brown butter, lemon segments and capers to mask any off flavors. Leek fondue is a classic French side dish: thinly sliced leeks cooked slowly in butter until meltingly tender, then enriched with heavy cream or crème fraîche. Swordfish is known for its dense, meaty texture and its mild, slightly sweet flavor.\n\nWhat the sources say. They bear out Grenoble and the treatment of brown butter, lemon and capers, with parsley and usually croutons, classically on sole. The story that the sauce was made to cover fish past its best is not borne out by the culinary source reviewed, so keep it off the table and tell a guest only where the name comes from."
+      },
+      "reason": "The chef's notes from the November sheet, in plain sentences and with the chef not named, kept under their own question; where the research does not bear a fact out, the note says what the sources say beside it",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Swordfish Grenobloise sheet, The chef's notes); the dish's own origin in the house; research/fall-menu-2026-chatgpt.json (Swordfish Grenobloise, originNotes: the claim that the sauce hid fish past its best was not substantiated by the culinary source reviewed)"
+    },
+    {
+      "target": "dish:Agnolotti del Plin",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What does the chef say?",
+        "a": "The chef's notes. Agnolotti del plin are a stuffed pasta from the Piedmont region of Italy that look like little pillows or envelopes. Plin means pinch. The dish comes from an old tradition of using leftover braised meats.\n\nWhat the sources say. The regional source places the pasta in the high Langhe hills around Alba and confirms the pinch. It records fillings of meat and of vegetables that vary from kitchen to kitchen and does not speak to the leftover braised meats, so tell that part as the chef's account."
+      },
+      "reason": "The chef's notes from the November sheet, in plain sentences and with the chef not named, kept under their own question; where the research does not bear a fact out, the note says what the sources say beside it",
+      "source": "page:brennans-sheets-2026-11-15.txt (the AGNOLOTTI DEL PLIN sheet, The chef's notes); the dish's own origin in the house; research/fall-menu-2026-chatgpt.json (Agnolotti del Plin, originNotes from the Piemonte regional food source)"
+    },
+    {
+      "target": "dish:Lamb Shank en Croûte",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What does the chef say?",
+        "a": "The chef's notes. Lamb daube is a dish from the Provence region of France: a stew of lamb, mirepoix, white wine and herbs such as rosemary and thyme. En croûte is a French phrase for a dish that has been wrapped in pastry dough and baked. The lamb jus is spiced with star anise, orange and a touch of cinnamon.\n\nWhat the sources say. Daube is Provençal, and Marseille's own account names lamb among the meats it can be made with, usually with wine and aromatic vegetables; which wine and aromatics go into ours is a question for the kitchen. The chef's note names white wine and the sheet's list does not mark alcohol, so ask the kitchen at lineup before you answer a guest who avoids it."
+      },
+      "reason": "The chef's notes from the November sheet, in plain sentences and with the chef not named, kept under their own question; where the research does not bear a fact out, the note says what the sources say beside it",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Lamb Shank en Croute sheet, The chef's notes); the dish's own origin in the house; research/fall-menu-2026-chatgpt.json (Lamb Shank en Croûte, originNotes and the daube note)"
+    },
+    {
+      "target": "dish:Tuna Crudo",
+      "field": "serviceNote",
+      "op": "replace",
+      "value": {
+        "from": "Alumn, Coriander, Chilis, Sesame, Gluten",
+        "to": "Alumn (read as allium, the onion and garlic family), Coriander, Chilis, Sesame, Gluten"
+      },
+      "reason": "The sheet's list stays word for word, the printed word included, and gains the reading beside it: the word is read as allium, the onion and garlic family, and the note still sends the server to lineup to confirm",
+      "source": "page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, Sheet dietary notes); research/menu-2026-11-15-sheets.md (the points on the dish sheets to put to the owner)"
+    },
+    {
+      "target": "dish:Agnolotti del Plin",
+      "field": "serviceNote",
+      "op": "replace",
+      "value": {
+        "from": "Alcohol, Alumn, Nightshades, Nutmeg",
+        "to": "Alcohol, Alumn (read as allium, the onion and garlic family), Nightshades, Nutmeg"
+      },
+      "reason": "The sheet's list stays word for word, the printed word included, and gains the reading beside it: the word is read as allium, the onion and garlic family, and the note still sends the server to lineup to confirm",
+      "source": "page:brennans-sheets-2026-11-15.txt (the AGNOLOTTI DEL PLIN sheet, Sheet dietary notes); research/menu-2026-11-15-sheets.md (the points on the dish sheets to put to the owner)"
+    },
+    {
+      "target": "dish:Fish Bouillabaisse",
+      "field": "serviceNote",
+      "op": "replace",
+      "value": {
+        "from": "Fin Fish, Alum, Alcohol",
+        "to": "Fin Fish, Alum (read as allium, the onion and garlic family), Alcohol"
+      },
+      "reason": "The sheet's list stays word for word, the printed word included, and gains the reading beside it: the word is read as allium, the onion and garlic family, and the note still sends the server to lineup to confirm",
+      "source": "page:brennans-sheets-2026-11-15.txt (the Fish Bouillabaisse sheet, Sheet dietary notes); research/menu-2026-11-15-sheets.md (the points on the dish sheets to put to the owner)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, the aroma wheel: how to use it",
+        "body": "The class wheel sorts what you smell in a glass into fourteen families: Floral, Citrus, Tree Fruit, Tropical, Red Fruit, Dark Fruit, Spices, Herbal, Vegetal, Earth, Mineral, Rich, Wood and Dry. Work from the center out. Name the family first, then the exact word: not fruit but tree fruit, not tree fruit but baked apple. The families also tell you where a smell comes from. Fruit, flowers and herbs come mostly from the grape and how ripe it was. Rich and Wood come from the cellar: lees, malolactic and oak. Earth and Dry come largely with age and air. Two or three exact words are enough for a guest."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: how to use it); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, the aroma wheel: Floral",
+        "body": "The words: iris, peony, elderflower, lilac, jasmine, orange blossom, honeysuckle, violet, lavender, rose. Flower scents come from the grape itself, most strongly in the aromatic whites: Muscat, Gewurztraminer (rose), Riesling and Torrontes, and in Viognier (honeysuckle, orange blossom). In reds, violet points to Syrah, Malbec and Nebbiolo, and rose to Nebbiolo. On our glass sheet the Piper-Heidsieck is noted for orange blossom, the Berres Riesling for a floral nose, the Famille Durand Sauvignon Blanc for white flowers and the Moulin d'Issan for violets."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Floral); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, the aroma wheel: Citrus",
+        "body": "The words: lemon, lime, grapefruit, orange, lime leaf, marmalade. Citrus is the mark of high acid whites from cool places: Riesling (lime), Sauvignon Blanc (grapefruit), Albarino (lemon and lime), Chablis (lemon). Marmalade is cooked, sweet citrus and belongs to sweet wines touched by noble rot and to older whites. On our glass sheet the Albarino is noted for lime, the Sauvignon Blanc for citrus, the Minuty rose for citrus, and the Jadot Les Pucelles for lemon cream pie, which is citrus plus the Rich family."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Citrus); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, the aroma wheel: Tree Fruit",
+        "body": "The words: quince, green apple, red apple, baked apple, pear, pear drops, peach, apricot. Read them as a ripeness ladder: green apple is cool and lean, pear and red apple are riper, peach and apricot are riper still and typical of Viognier, Riesling and Chenin Blanc. Baked apple suggests age or time on the lees, as in sparkling wine. Pear drops is the candy note of a cool fermentation, common in very young whites. Quince is a classic word for Chenin Blanc. On our sheet: baked apple in the Argyle Brut, green apple in the Albarino, apple in the Riesling and the Gainey Chardonnay, pear and peach in the Lemelson Pinot Gris."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Tree Fruit); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, the aroma wheel: Tropical",
+        "body": "The words: banana, coconut, pineapple, mango, guava, papaya, lychee, cantaloupe, honeydew, watermelon, passion fruit. Tropical fruit usually means ripe grapes from a warm, sunny place, as in a ripe California Chardonnay (pineapple, mango). Some are signatures: lychee is Gewurztraminer, and passion fruit and guava are Sauvignon Blanc from places such as New Zealand. Banana comes from fermentation and is the classic note of Beaujolais Nouveau. Coconut is not fruit at all here: it comes from oak, American oak above all. On our sheet the Albarino is noted for underripe pineapple and the Rare Champagne for tropical fruit."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Tropical); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, the aroma wheel: Red Fruit",
+        "body": "The words: cranberry, pomegranate, sour cherry, cherry, red plum, raspberry, strawberry, red currant. Red fruit is the family of lighter, brighter reds and of rose: Pinot Noir (cherry, raspberry, strawberry), Gamay, Grenache (strawberry), Sangiovese (sour cherry) and Barbera. Tart words such as cranberry and sour cherry point to a cool site or a high acid grape; ripe strawberry points to warmth. On our sheet: raspberry and strawberry in the Pierre Sparr rose and the Damien Martin Pinot Noir, cherry in the Argyle Brut, red berries in the Minuty rose and red cherry in the La Miraja Barbera."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Red Fruit); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, the aroma wheel: Dark Fruit",
+        "body": "The words: grape, black cherry, black plum, blackberry, balsamic, blueberry, black currant. Dark fruit belongs to thicker skinned grapes and warmer sites: Cabernet Sauvignon (black currant, which the French call cassis), Merlot (black plum), Syrah (blackberry), Malbec (plum, blueberry) and Zinfandel. Balsamic is a sweet and sour note found in some Italian reds and in older wines. On our sheet: blackberries and cassis in the Moulin d'Issan and the Kokomo Cabernet Sauvignon, black cherry in the Durban and the Damien Martin, dark cherry and plum in the Courcel Pommard, and plum, blackberry and a hint of balsamic in the Barbera."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Dark Fruit); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, the aroma wheel: Spices",
+        "body": "The words: ginger, saffron, red chili, black pepper, cinnamon, cardamom, anise, fennel, clove, patchouli, sandalwood. Some spice comes from the grape: black pepper is the signature of Syrah and also shows in Gruner Veltliner, ginger is common in Gewurztraminer, and anise or licorice runs through southern French and Italian reds. Other spice comes from oak: clove and cinnamon are barrel notes, grouped on the wheel as baking spice under Wood. On our sheet: baking spices in the Argyle Brut, licorice in the Barbera, and spice in the Moulin d'Issan and the Courcel Pommard."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Spices); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, the aroma wheel: Herbal",
+        "body": "The words: mint, eucalyptus, thyme, bay leaf, rosemary, oregano, curry leaf, chamomile, pine, sage. Mint and eucalyptus are classic in Cabernet Sauvignon, in parts of Australia and California above all. Thyme, rosemary, bay and sage together are what the French call garrigue, the scrub of the Mediterranean hills, and they mark the reds of the southern Rhone, Provence and the Languedoc. Chamomile shows in Chenin Blanc and in some older whites. On our sheet the Durban is noted for herbes de Provence, which is this family exactly, and the Piper-Heidsieck for a touch of mint."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Herbal); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, the aroma wheel: Vegetal",
+        "body": "The words: grass, gooseberry, bell pepper, jalapeno, black olive, hay, dried leaves, black tea, green tea, seaweed, maraschino. Green notes come from the grape. Bell pepper and jalapeno belong to the Cabernet family and to Sauvignon Blanc, strongest when the fruit was picked less ripe. Grass and gooseberry are Sauvignon Blanc signatures. Black olive is a savory mark of Syrah. Hay, dried leaves and tea arrive with age. A little green can be fresh and right; a lot can read as underripe. The wheel files maraschino here, though most tasters would call it a cherry note."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Vegetal); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, the aroma wheel: Earth",
+        "body": "The words: beet root, soil, mushroom, manure, barnyard, horse, black cardamom, burnt match, seaside, cured meat, petrichor (rain), coffee, cocoa, chocolate, tobacco, petrol. Mushroom, soil and wet leaves are the smells of bottle age, classic in older Pinot Noir. Barnyard, horse and manure come from a yeast called Brettanomyces: a trace can add interest, a lot is a fault. Burnt match is a sulfur note from the cellar that usually clears with air. Petrol is the famous mark of aged Riesling. Cured meat points to Syrah. Coffee, cocoa and tobacco come with oak and age. On our sheet the 2007 Courcel Pommard is described as mellow and earthy."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Earth); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, the aroma wheel: Mineral",
+        "body": "The words: graphite, concrete, slate or stone, salt, flint, gunpowder, steel. These are useful descriptions, but the vine does not carry the taste of rock into the glass: mineral words describe a wine that is lean, high in acid, low in obvious fruit and sometimes a little smoky from the cellar. Flint and gunpowder are classic for Chablis and Pouilly-Fume, slate for Mosel Riesling, graphite for Cabernet from the Medoc, salt for whites grown near the sea. On our sheet: sea salt in the Albarino, salinity in the Rare Champagne and the Minuty rose, and minerality in the Riesling and the Sauvignon Blanc."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Mineral); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, the aroma wheel: Rich",
+        "body": "The words: cream, butter, sourdough, brioche, almond, lager, honey, beeswax. Rich notes are made in the cellar. Butter and cream come from malolactic conversion, which turns sharp malic acid into softer lactic acid and is common in Chardonnay. Brioche, sourdough and lager come from time on the lees, the spent yeast, and are the signature of Champagne method sparkling wine. Honey and beeswax come with age and with noble rot, and are typical of Chenin Blanc, Semillon and Riesling. On our sheet: brioche in the Argyle Brut and the Rare Champagne, toasted bread and fresh almonds in the Piper-Heidsieck, honey in the Gainey Chardonnay."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Rich); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, the aroma wheel: Wood",
+        "body": "The words: vanilla, baking spice, oak, smoke, cigar box, cedar, leather. Wood notes come from the barrel. New oak gives the most; an old barrel gives almost none. Vanilla is strongest from American oak, which also gives coconut and dill. Baking spice, smoke and toast depend on how heavily the inside of the barrel was toasted over fire. Cedar and cigar box are the classic words for Cabernet Sauvignon aged in French oak, Bordeaux above all. Leather arrives with bottle age. On our sheet: oak in the Gainey Chardonnay, vanilla in the Jadot Les Pucelles and the Kokomo Cabernet Sauvignon."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Wood); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, the aroma wheel: Dry",
+        "body": "The words: fig, raisin, nuts. Dry here means dried, not the opposite of sweet. Fig and raisin come from very ripe grapes or grapes dried on purpose, as in Amarone and in sweet wines such as Pedro Ximenez Sherry and Port. Nuts are the mark of slow contact with air in cask, the style of Sherry, Madeira and tawny Port. In a wine meant to be fresh, raisin can mean overripe fruit, and a nutty, bruised apple smell can mean the bottle is tired or oxidized."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Dry); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, Burgundy: the map from north to south",
+        "body": "Burgundy runs in a line down eastern France. Chablis is the northern outpost, closer to the Aube in Champagne than to Beaune, and makes white wine from Chardonnay. The Cote d'Or, the golden slope, begins just south of Dijon and is the heart: the Cote de Nuits in the north and the Cote de Beaune in the south. Below it comes the Cote Chalonnaise, then the Maconnais, mostly white. The class sheet places Beaujolais, the home of Gamay, in southern Burgundy; it has long been counted with Burgundy, though today it is usually treated as a region of its own. Two grapes rule: Chardonnay for white and Pinot Noir for red."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: the map from north to south); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, Burgundy: Chablis",
+        "body": "The class sheet: Chablis is the northernmost region in Burgundy, a handful of miles south of the Aube in Champagne, and focuses on white wine. To add: the grape is Chardonnay only, grown on limestone and clay full of tiny fossil oyster shells, and the cool site gives a lean, high acid wine that tasters describe with green apple, lemon and flint. Most Chablis sees little or no new oak. It has its own ladder: Petit Chablis, Chablis, Chablis Premier Cru and Chablis Grand Cru. Do not confuse Chablis with Saint-Bris, its neighbor in the same department, which is made from Sauvignon Blanc."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: Chablis); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, Burgundy: the Cote d'Or, Cote de Nuits and Cote de Beaune",
+        "body": "The Cote d'Or is a narrow, east facing limestone slope that begins just south of Dijon and holds Burgundy's most famous villages and vineyards. It has two halves. The Cote de Nuits, the northern half, runs from the edge of Dijon to just south of Nuits-Saint-Georges and is red wine country: Gevrey-Chambertin, Vosne-Romanee and Chambolle-Musigny are there, and almost all the red grand crus. The Cote de Beaune, the southern half, runs from just north of the town of Beaune down to Santenay and makes both colors: Pommard and Volnay for red, Meursault, Puligny-Montrachet and Chassagne-Montrachet for the great whites. Two wines on our glass sheet come from it: the Jadot Puligny-Montrachet Les Pucelles and the Courcel Pommard."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: the Cote d'Or, Cote de Nuits and Cote de Beaune); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, Burgundy: the Cote Chalonnaise and Bouzeron",
+        "body": "The class sheet: a larger, cooler region south of the Cote d'Or and a good source of value, from the villages of Rully, Givry, Montagny and Mercurey. To add: Mercurey and Givry make mostly red from Pinot Noir, Montagny makes only white from Chardonnay, and Rully makes both and is known for sparkling Cremant de Bourgogne. Bouzeron is the exception in all of Burgundy: its village wine is made from Aligote rather than Chardonnay, the only village appellation for that grape."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: the Cote Chalonnaise and Bouzeron); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, Burgundy: the Maconnais and Pouilly-Fuisse",
+        "body": "The class sheet: a large region south of the Cote Chalonnaise, mostly white, with Chardonnay of everyday quality and Pouilly-Fuisse as its most notable appellation. To add: it is warmer than the Cote d'Or, so the Chardonnay is rounder and riper, with apple and stone fruit. The village named Chardonnay is here, and the grape may take its name from it. Other names to know are Saint-Veran, Vire-Clesse and Macon-Villages. Pouilly-Fuisse gained its first premier cru vineyards in 2020. Our Damien Martin Pinot Noir is a Bourgogne whose fruit, the glass sheet says, comes from the Maconnais. Pouilly-Fuisse is Chardonnay; Pouilly-Fume, from the Loire, is Sauvignon Blanc."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: the Maconnais and Pouilly-Fuisse); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, Burgundy: Beaujolais and Gamay",
+        "body": "The class sheet: Beaujolais is the home of the Gamay grape; the wines range from Beaujolais Nouveau, released shortly after harvest, to the more complex wines of the ten cru villages. To add: the ten crus are Saint-Amour, Julienas, Chenas, Moulin-a-Vent, Fleurie, Chiroubles, Morgon, Regnie, Brouilly and Cote de Brouilly, and their labels usually show the cru and not the word Beaujolais. Gamay is a child of Pinot and Gouais Blanc, so it is a sibling of Chardonnay. In 1395 Philip the Bold, Duke of Burgundy, ordered it pulled from his lands in favor of Pinot Noir, which is how it came to rule the granite hills to the south. Expect red fruit, low tannin and bright acid; serve it lightly cool."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: Beaujolais and Gamay); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, Burgundy: the four levels on a label",
+        "body": "Burgundy ranks the land, not the producer, in four steps. Regional: Bourgogne, from anywhere in the region, the basic level. Village: the wine comes from one named village, such as Pommard or Meursault. Premier Cru: a named vineyard inside a village, judged better than its neighbors; the label shows the village, the words Premier Cru or 1er Cru, and usually the vineyard. Grand Cru: the very best vineyards, each with its own appellation, so the label shows only the vineyard name, such as Chambertin or Montrachet. Supply shrinks as you climb: regional wine is about half of all Burgundy and grand cru only a percent or two. On our glass sheet the Damien Martin is regional, and Les Pucelles and the Courcel Pommard are premier cru."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: the four levels on a label); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, Burgundy: premier cru and grand cru",
+        "body": "The class sheet: within the better villages certain single vineyards are believed to make superior wine and are named premier cru; grand crus are single vineyards so highly regarded that each has its own appellation, ranging from 2 to nearly 400 acres. To add: Burgundy has 33 grand crus, counting Chablis Grand Cru as one. Several villages added their most famous vineyard to their own name, which is why Gevrey became Gevrey-Chambertin, Puligny became Puligny-Montrachet, Chassagne became Chassagne-Montrachet and Vosne became Vosne-Romanee. So a village wine from Puligny-Montrachet is not Montrachet. Les Pucelles, on our glass sheet, is a premier cru of Puligny-Montrachet that lies right beside the grand crus."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: premier cru and grand cru); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, Burgundy: Chardonnay and Aligote",
+        "body": "The class sheet: Chardonnay is the principal white grape of Burgundy and the most planted, close to half of all the vineyard; it is a natural crossing of Pinot and Gouais Blanc, its name may come from the village of Chardonnay in the Maconnais, and it was long confused with Pinot Blanc. To add: the same grape gives lean, stony Chablis and broad, nutty Meursault, so place and cellar matter more than the variety name. Aligote is the distant second white grape, usually bottled on its own as Bourgogne Aligote, brisk and high in acid, and at its best in Bouzeron. It is the traditional white for a Kir, with a little creme de cassis."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: Chardonnay and Aligote); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, Burgundy: Pinot Noir, Passe-Tout-Grains and Saint-Bris",
+        "body": "The class sheet has no entry for Pinot Noir, so this one is added: Pinot Noir is the red grape of Burgundy, thin skinned, pale, high in acid and low in tannin, with red cherry and raspberry when young and mushroom and earth with age. It shows its site more plainly than any other red grape, which is why Burgundy ranks vineyards. Bourgogne Passe-Tout-Grains is a blend of Gamay and Pinot Noir, with at least 30 percent Pinot Noir. Saint-Bris, in the Yonne near Chablis, is Burgundy's one appellation for Sauvignon Blanc. The class sheet calls Sauvignon Blanc a Bordeaux variety; it is famous there, though it is most likely native to the Loire."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: Pinot Noir, Passe-Tout-Grains and Saint-Bris); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, Burgundy: domaine, negociant and monopole",
+        "body": "A domaine grows its own grapes and makes wine only from vineyards it owns or farms. A negociant is a merchant who buys grapes, juice or finished wine from growers and sells the result under its own name; the big Beaune houses are both, with vineyards of their own beside what they buy. Burgundy's vineyards are split among many owners, so one vineyard name can appear on dozens of labels of different quality: the producer matters as much as the place. A monopole is the exception, a vineyard owned whole by one producer; the label often says so. Louis Jadot, on our glass sheet, is a Beaune negociant that also owns vineyards. Domaine de Courcel is a domaine in Pommard."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: domaine, negociant and monopole); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, Burgundy: batonnage and the lees",
+        "body": "The class sheet: batonnage is the French term for stirring settled lees back into the wine; lees are the sediment of winemaking, mostly dead yeast; keeping them in contact extracts flavor, aroma and texture, and they are later filtered or fined out, or the wine is racked off them. To add: say it bah-tun-NAHZH. It is a white Burgundy habit, used on Chardonnay aging in barrel. Stirring makes the wine feel rounder and creamier and adds the bread and hazelnut notes of the Rich family on the aroma wheel. Too much can make a wine heavy, so many cellars now stir less than they once did."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: batonnage and the lees); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, vocabulary: the words for structure",
+        "body": "Acidity is the liveliness and crispness in wine; it makes your mouth water and keeps a wine fresh with food. Tannins are compounds from grape skins, seeds, stems and oak that dry the mouth, strongest in young reds. Astringent names that harsh, drying, puckering feeling when tannin is high. Body is the weight of the wine in the mouth: light, medium or full, like skim milk against whole milk. Full-bodied wines are usually higher in alcohol and feel big. Alcohol is ethanol, made when yeast ferments grape sugar. ABV is alcohol by volume, printed on the label; most table wines fall between about 11 and 15 percent."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: the words for structure); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, vocabulary: the words for smell and taste",
+        "body": "Nose is the smell of a wine, all its aromas together. Aromatic describes wines with strong, distinctive scents from the grape itself, such as Riesling, Gewurztraminer, Muscat and Viognier. Fruity means strong smells and flavors of fresh fruit; it does not mean sweet, and a fruity wine can be completely dry. Spicy means scents such as black pepper, bay leaf, baking spices or saffron. Oaky means the vanilla, baking spice, coconut, mocha or dill that barrel aging gives. Use the aroma wheel to move from these broad words to exact ones."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: the words for smell and taste); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, vocabulary: fermentation, yeast and sugar",
+        "body": "Yeast is the microorganism that turns grape sugar into alcohol; it lives in vineyards and cellars and is also sold commercially. Vinification is the process of making wine, and oenology, say it ee-NOL-uh-jee, is the study of wine and winemaking. Chaptalization is adding sugar to the grape must before or during fermentation to raise the final alcohol in years when grapes were not ripe enough; it makes the wine stronger, not sweeter, and where it is allowed it is regulated. It is named for Jean-Antoine Chaptal (1756 to 1832), the French chemist who promoted it. Yield is how much a vineyard produces, measured in Europe in hectoliters per hectare and in the United States in tons per acre; lower yields usually give more concentrated wine."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: fermentation, yeast and sugar); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, vocabulary: barrels, air and age",
+        "body": "A barrel is the oak container used for fermenting and aging wine. A barrique is the 225 liter barrel of Bordeaux, now used around the world; the Burgundy barrel, the piece, holds 228 liters. Aging is holding wine in barrel, tank or bottle to bring it to a better state. Aeration is adding oxygen on purpose to soften and open a wine, which is what decanting does at the table. Oxidation is the change wine goes through with too much air: the color browns and the fruit fades to nuts and bruised apple. A little oxygen over years is part of normal aging, and a few styles such as Sherry, Madeira and tawny Port are oxidized on purpose."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: barrels, air and age); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, vocabulary: lees, sur lie and carbonic maceration",
+        "body": "Lees are the sediment of dead yeast cells and grape matter left after fermentation. Sur lie, say it soor LEE, means the wine was aged on its lees, which gives a creamy texture and a bready note from autolysis, the slow breakdown of the yeast; it is best known on Muscadet from the Loire, and it is how Champagne gets its brioche. Batonnage is stirring the lees. Carbonic maceration ferments whole, uncrushed grapes in a sealed tank filled with carbon dioxide, so fermentation starts inside each berry; it gives soft, fruity, low tannin reds to drink young and is the method of Beaujolais, where most wines use a partial form of it."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: lees, sur lie and carbonic maceration); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, vocabulary: sparkling wine words",
+        "body": "Brut is the label word for a dry sparkling wine, Champagne above all; by rule it holds less than 12 grams of sugar per liter. Cava is Spain's sparkling wine made by the traditional method, with the second fermentation in the bottle, as in Champagne. Frizzante is Italian for lightly sparkling, with a gentler fizz than a fully sparkling spumante. Petillant is the French word for the same light sparkle. Three sparkling wines on our glass sheet are made by the Champagne method outside Champagne or in it: the Argyle Brut from Oregon, the Pierre Sparr Cremant d'Alsace and the Piper-Heidsieck."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: sparkling wine words); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, vocabulary: sweet and fortified wine",
+        "body": "A late harvest wine is made from grapes left on the vine longer than usual so they gain sugar; it is usually sweet. Vendange tardive is the French term, used on labels in Alsace. Botrytis, also called noble rot, is a mold that in the right weather pierces grape skins and dries the berries, concentrating sugar, acid and flavor; it is behind Sauternes, Tokaji and the great sweet German Rieslings, and it adds honey, apricot and marmalade. A fortified wine has grape spirit added. Add it during fermentation and the yeast stops with sugar left, as in Port; add it after and the wine is dry and then sweetened or not, as in Sherry."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: sweet and fortified wine); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, vocabulary: the French law and the label",
+        "body": "AOC stands for Appellation d'Origine Controlee, the French system that fixes where a wine may come from and how it may be made: the boundary, the grapes, the yields and the methods. AOP is the newer European name for the same thing, and INAO is the national body that runs it. Cepage is French for grape variety. A lieu-dit is a named plot of vineyard, used most for sites that hold no higher rank. A monopole is a vineyard or appellation owned whole by one producer. A negociant is a merchant who buys from growers and bottles under its own name. A vigneron is a vine grower who makes wine."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: the French law and the label); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, vocabulary: premier cru, vintage and other label words",
+        "body": "Premier cru means first growth. In Burgundy it is the second highest rank of vineyard, below grand cru; in Champagne it ranks whole villages; in Bordeaux the first growths are the top chateaux of the 1855 classification, so the same words mean different ranks in different places. Vintage is the year the grapes were harvested; a vintage wine comes all or nearly all from that year, and most Champagne is nonvintage, a blend of years. Vieilles vignes means old vines, sometimes written V.V.; it has no legal definition, so it means what the producer says. Varietal describes a wine made from, and usually named for, a single grape variety. Terroir is the whole natural setting of a vineyard, its soil, slope, climate and exposure, and the character they give the wine."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: premier cru, vintage and other label words); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, vocabulary: rose, table wine and the bottle",
+        "body": "Rose is pink wine made from red grapes, with the juice left on the skins for only a few hours so it takes a little color; rose Champagne may also be made by blending in a little red wine. Table wine is any still wine that is neither sparkling nor fortified. The punt is the dent in the base of a bottle. The class sheet notes that a deep punt is often thought to mean a better wine; it is tradition and bottle strength, especially for sparkling wine under pressure, and tells you nothing reliable about quality."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: rose, table wine and the bottle); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+    },
+    {
+      "target": "mustknow:+",
+      "op": "add",
+      "value": {
+        "title": "Wine class, vocabulary: twelve words the class sheet's missing page would hold",
+        "body": "These are not from the class sheet: the page between Chaptalization and Fortified wine did not reach us, so these are the standard terms that fall there. Corked: spoiled by a tainted cork, with a smell of damp cardboard. Cru: a ranked vineyard or village. Cuvee: a blend or a particular bottling. Decant: to pour a wine off its sediment or give it air. Demi-sec: medium sweet, on sparkling wine. Dosage: the small measure of sugar added to sparkling wine before the final cork. Dry: with no perceptible sweetness. Elevage: the raising of a wine between fermentation and bottling. Fermentation: yeast turning sugar into alcohol and carbon dioxide. Filtration: straining a wine clear. Fining: clarifying wine with an agent that settles out. Finish: the taste that stays after you swallow."
+      },
+      "reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+      "source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: twelve words the class sheet's missing page would hold); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+    },
+    {
+      "target": "wine:+",
+      "op": "add",
+      "value": {
+        "priceUnknown": true,
+        "price": "",
+        "prices": [],
+        "name": "Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022",
+        "section": "Riesling & aromatic whites",
+        "group": "Riesling & aromatic whites By the glass",
+        "meals": [
+          "Breakfast & lunch",
+          "Dinner"
+        ],
+        "producer": "Lemelson Vineyards",
+        "wine": "Tikka’s Run Pinot Gris",
+        "vintage": "2022",
+        "region": "Willamette Valley, Oregon",
+        "grapes": [
+          "Pinot Gris"
+        ],
+        "style": "Full-bodied Oregon white, velvety and soft",
+        "profile": "Pinot Gris from Lemelson Vineyards, an organically farmed estate at Carlton in Oregon’s Willamette Valley: pear, peach and lemon, with a velvety, soft, full-bodied texture. Tikka’s Run is named for Tikka, the estate’s Great Pyrenees, who patrolled the Pinot Gris vines. How the 2022 was fermented and aged is a question for the sommelier.",
+        "guest": "Our Pinot Gris is from Lemelson in Oregon’s Willamette Valley: pear, peach and lemon, soft and full, lovely with crab.",
+        "goesWith": "Crab, corn, butter and eggs: the first pick with the Crab & Corn Omelette, and the still white offered with the Turtle Soup.",
+        "serve": "Serve 48 to 52°F in a standard white-wine glass; no decanting. Keep the bottle on ice between pours, and if a glass comes out too cold give it a few minutes so the texture shows.",
+        "say": "Pinot Gris: PEE-noh GREE; Lemelson: LEM-el-sun.",
+        "why": "First pick for the Crab & Corn Omelette; new on the glass list in November 2026, our Oregon white.",
+        "parts": {
+          "main": "Pinot Gris from Oregon’s Willamette Valley",
+          "technique": "grown on an organically farmed estate; the cellar work is a lineup question",
+          "sauce": "full bodied and velvety, soft rather than sharp",
+          "sides": "crab, corn, eggs and butter",
+          "taste": "pear, peach and lemon, velvety and soft"
+        },
+        "lines": {
+          "s10": "Lemelson’s Tikka’s Run, Pinot Gris from Oregon’s Willamette Valley: pear, peach and lemon, velvety and full, a white for crab and butter.",
+          "s20": "Tikka’s Run is Pinot Gris from Lemelson Vineyards, an organically farmed estate in Oregon’s Willamette Valley: pear, peach and lemon, with a velvety, soft, full-bodied texture. It’s our first pick with the Crab & Corn Omelette, and the still white we offer with the Turtle Soup.",
+          "s45": "Lemelson’s Tikka’s Run is Pinot Gris from the Willamette Valley in Oregon, grown on the estate’s own organically farmed vineyards at Carlton and named for Tikka, the Great Pyrenees who patrolled the Pinot Gris vines. It shows pear, peach and lemon, with a velvety, soft, full-bodied texture, so it has the weight for butter and eggs and the freshness for lemon. It’s our first pick with the Crab & Corn Omelette, whose crab and roasted corn it flatters, and the still white we offer with the Turtle Soup. We serve it cold, 48 to 52°F, in a white-wine glass.",
+          "sale": "Lemelson’s Tikka’s Run is Oregon Pinot Gris, pear, peach and lemon with a velvety, full-bodied texture. Offer it with the Crab & Corn Omelette, our first pick there, when a guest wants a white that is soft and round."
+        },
+        "serviceNote": "New on the Wines by the Glass sheet of 15 November 2026, which prints no price. Ask the manager for the glass price before quoting one, and confirm at lineup that it is poured and that the 2022 is open."
+      },
+      "reason": "November 2026: new on the Wines by the Glass sheet of 15 November 2026, a whole glass wine. The sheet prints no price, so it files with priceUnknown and a price ask and never takes the bottle list's figure; the tasting words are the sheet's own, and the producer and place facts are those two sources or the producer's own page give",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 119 (Pinot Gris: Lemelson Vineyards \"Tikka's Run\" Willamette Valley OR 2022. Notes of pear, peach, & lemon. With a velvety, soft, and full bodied texture.); research/glass-wines-2026-11-15.md section 1"
+    },
+    {
+      "target": "wine:Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Tell me about it.",
+        "a": "Lemelson Vineyards Tikka's Run Pinot Gris 2022 is new on our by-the-glass list from November 2026, our white from Oregon. The glass sheet prints no price, so ask the manager before you quote one.\n\nLemelson is an estate winery at Carlton, in the Willamette Valley, that has farmed its own vineyards organically from the start. Pinot Gris, PEE-noh GREE, is the grape. Tikka's Run is named for Tikka, the Great Pyrenees who patrolled the edge of the Pinot Gris vines. How the 2022 was fermented and aged is a question for the sommelier.\n\nIn the glass it tastes of pear, peach and lemon, and the texture is the point: velvety, soft and full bodied, where the Albariño and the Sauvignon Blanc are lean and crisp.\n\nThat weight is why it is the first pick with the Crab & Corn Omelette, where it meets the butter and eggs and its lemon joins the lemon on the plate, and why it is the still white offered with the Turtle Soup."
+      },
+      "reason": "Study notes, the description: what a master tells a new Brennan’s server who asks about it, every fact from the sources named",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 119 (Pinot Gris: Lemelson Vineyards \"Tikka's Run\" Willamette Valley OR 2022. Notes of pear, peach, & lemon. With a velvety, soft, and full bodied texture.); research/glass-wines-2026-11-15.md section 1"
+    },
+    {
+      "target": "wine:Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "How do I sell it?",
+        "a": "Offer the Lemelson Pinot Gris to a guest who asks for something soft and round rather than sharp, to a Chardonnay drinker looking for a change, and with the Crab & Corn Omelette or the Turtle Soup. It is new, so name Oregon and the texture, and check the glass price with the manager before you quote one. Say: “Our Pinot Gris is from Oregon's Willamette Valley: pear, peach and lemon, soft and full, lovely with the crab.”"
+      },
+      "reason": "Study notes, coaching: when, to whom and with what to suggest it, and one line to say, from the sources named",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 119 (Pinot Gris: Lemelson Vineyards \"Tikka's Run\" Willamette Valley OR 2022. Notes of pear, peach, & lemon. With a velvety, soft, and full bodied texture.); research/glass-wines-2026-11-15.md section 1"
+    },
+    {
+      "target": "wine:Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What do guests ask?",
+        "a": "Asked: Is Pinot Gris the same as Pinot Grigio?\n\nAnswer: It is the same grape. This one is from Oregon and is the fuller kind: pear, peach and lemon, velvety and soft rather than light and sharp.\n\nAsked: Is it sweet?\n\nAnswer: Our sheet describes fruit and a soft, full texture and says nothing of sweetness, so I will check with the sommelier before I call it dry.\n\nAsked: Who is Tikka?\n\nAnswer: The estate's Great Pyrenees, who patrolled the Pinot Gris vines; the wine is named for her."
+      },
+      "reason": "Study notes, coaching: the questions guests ask and the true answers, or the person to ask, from the sources named",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 119 (Pinot Gris: Lemelson Vineyards \"Tikka's Run\" Willamette Valley OR 2022. Notes of pear, peach, & lemon. With a velvety, soft, and full bodied texture.); research/glass-wines-2026-11-15.md section 1"
+    },
+    {
+      "target": "wine:Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What should I watch for?",
+        "a": "It is new on the November glass sheet, which prints no price: ask the manager before you quote one, and confirm at lineup that it is poured and that the 2022 is open. It is not the light, sharp kind of Pinot Grigio, so describe the fuller, softer texture. How it was fermented and aged is a question for the sommelier, so do not promise steel or oak. Allergens: read the service note and confirm at lineup."
+      },
+      "reason": "Study notes, coaching: the mix-ups, timings, rules, disputes and lineup questions tied to it, closing on the service note, from the sources named",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 119 (Pinot Gris: Lemelson Vineyards \"Tikka's Run\" Willamette Valley OR 2022. Notes of pear, peach, & lemon. With a velvety, soft, and full bodied texture.); research/glass-wines-2026-11-15.md section 1"
+    },
+    {
+      "target": "wine:Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "How do I pour it?",
+        "a": "Show the label and say Lemelson, Tikka's Run, Pinot Gris. Serve it at 48 to 52°F in a standard white-wine glass, and keep the bottle on ice between pours. Pour the guests first and the host last. Say: “Our Oregon Pinot Gris: pear, peach and lemon, soft and full.”"
+      },
+      "reason": "Study notes, coaching: presenting and pouring it at the table as the sources print it",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 119 (Pinot Gris: Lemelson Vineyards \"Tikka's Run\" Willamette Valley OR 2022. Notes of pear, peach, & lemon. With a velvety, soft, and full bodied texture.); research/glass-wines-2026-11-15.md section 1"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is the glass price of the Lemelson Vineyards Tikka's Run Pinot Gris 2022? The Wines by the Glass sheet of 15 November 2026 prints none, so the card asks rather than inventing one. And how was the 2022 fermented and aged?",
+        "askWhom": "manager",
+        "items": [
+          "Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022"
+        ],
+        "blocksField": "price"
+      },
+      "reason": "November 2026: the glass sheet prints no price, so the wine files with priceUnknown and this ask blocks the price; the 2022 cellar work is in no source read",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md"
+    },
+    {
+      "target": "wine:+",
+      "op": "add",
+      "value": {
+        "priceUnknown": true,
+        "price": "",
+        "prices": [],
+        "name": "Kokomo Sonoma County Cabernet Sauvignon 2022",
+        "section": "Full-bodied reds",
+        "group": "Full-bodied reds By the glass",
+        "meals": [
+          "Breakfast & lunch",
+          "Dinner"
+        ],
+        "producer": "Kokomo Winery",
+        "wine": "Sonoma County Cabernet Sauvignon",
+        "vintage": "2022",
+        "region": "Sonoma County, California",
+        "grapes": [
+          "Cabernet Sauvignon"
+        ],
+        "style": "Full-bodied California Cabernet, velvety with soft tannins",
+        "profile": "Cabernet Sauvignon from Kokomo Winery in Healdsburg, most of the fruit from Alexander Valley in Sonoma County: blackberries, cassis and vanilla, full bodied, with a velvety texture and soft tannins. The winery, begun in 2004, is named for its founder’s hometown of Kokomo, Indiana. How the 2022 was aged is a question for the sommelier.",
+        "guest": "Our Cabernet by the glass is Kokomo, from Sonoma County: blackberry, cassis and a touch of vanilla, full but velvety and soft.",
+        "goesWith": "Beef and rich sauces: the second pick with the Roasted Chateaubriand, and the fuller glass with the Creole-Spiced Hanger Steak.",
+        "serve": "Serve 60 to 64°F in a Bordeaux glass; no decanting by the glass. A few minutes in the ice bucket keeps it fresh if the back bar runs warm.",
+        "say": "Kokomo: KOH-kuh-moh.",
+        "why": "Second pick for the Roasted Chateaubriand; new on the glass list in November 2026, our California Cabernet by the glass.",
+        "parts": {
+          "main": "Cabernet Sauvignon from Sonoma County, mostly Alexander Valley fruit",
+          "technique": "a dry red; the oak and aging of the 2022 are a lineup question",
+          "sauce": "full bodied and velvety, with soft tannins",
+          "sides": "beef, steak and rich butter or brown sauces",
+          "taste": "blackberries, cassis and vanilla"
+        },
+        "lines": {
+          "s10": "Kokomo Cabernet Sauvignon from Sonoma County: blackberries, cassis and vanilla, full bodied and velvety with soft tannins, a red for beef.",
+          "s20": "Kokomo is Cabernet Sauvignon from Sonoma County, most of the fruit from Alexander Valley: blackberries, cassis and vanilla, full bodied, with a velvety texture and soft tannins. It’s our second pick with the Roasted Chateaubriand, and the fuller glass with the Creole-Spiced Hanger Steak.",
+          "s45": "The Kokomo Cabernet Sauvignon is from Sonoma County, most of the fruit grown in Alexander Valley, the warm inland valley in the north of the county where Cabernet ripens fully. The winery is in Healdsburg, begun in 2004 and named for its founder’s hometown of Kokomo, Indiana. It shows blackberries, cassis and vanilla; it is full bodied, with a velvety texture and soft tannins, so it has the weight for beef without a hard grip. It’s our second pick with the Roasted Chateaubriand, for the guest who wants Cabernet, and the fuller glass with the Creole-Spiced Hanger Steak. We serve it at 60 to 64°F in a Bordeaux glass.",
+          "sale": "The Kokomo is Sonoma County Cabernet Sauvignon, blackberries, cassis and vanilla, full bodied with a velvety texture and soft tannins. Offer it to the Cabernet drinker with the Roasted Chateaubriand or the Creole-Spiced Hanger Steak, our California red by the glass."
+        },
+        "serviceNote": "New on the Wines by the Glass sheet of 15 November 2026, which prints no price. Ask the manager for the glass price before quoting one, and confirm at lineup that it is poured and that the 2022 is open."
+      },
+      "reason": "November 2026: new on the Wines by the Glass sheet of 15 November 2026, a whole glass wine. The sheet prints no price, so it files with priceUnknown and a price ask and never takes the bottle list's figure; the tasting words are the sheet's own, and the producer and place facts are those two sources or the producer's own page give",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 127 (Cabernet Sauvignon: Kokomo Sonoma County CA 2022. Notes of blackberries, cassis, and vanilla. Full bodied, velvety texture, and soft tannins. Most of the fruit is sourced from Alexander Valley in Sonoma County.); research/glass-wines-2026-11-15.md section 2"
+    },
+    {
+      "target": "wine:Kokomo Sonoma County Cabernet Sauvignon 2022",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Tell me about it.",
+        "a": "Kokomo Cabernet Sauvignon 2022 is the California Cabernet on our by-the-glass list, new from November 2026. The glass sheet prints no price, so ask the manager before you quote one.\n\nKokomo is a winery in Healdsburg, in Sonoma County, begun in 2004 and named for its founder's hometown of Kokomo, Indiana. The label reads Sonoma County, and most of the fruit comes from Alexander Valley, the warm inland valley in the north of the county where Cabernet ripens fully. How long the 2022 spent in oak is a question for the sommelier.\n\nIn the glass it tastes of blackberries, cassis and vanilla. It is full bodied, with a velvety texture and soft tannins, so it gives a Cabernet drinker the dark fruit and weight they expect without a hard, drying grip.\n\nIt is the second pick with the Roasted Chateaubriand, for the guest who wants Cabernet rather than red Burgundy, and the fuller glass with the Creole-Spiced Hanger Steak. On the list it sits above the Moulin d'Issan and the Durban in weight."
+      },
+      "reason": "Study notes, the description: what a master tells a new Brennan’s server who asks about it, every fact from the sources named",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 127 (Cabernet Sauvignon: Kokomo Sonoma County CA 2022. Notes of blackberries, cassis, and vanilla. Full bodied, velvety texture, and soft tannins. Most of the fruit is sourced from Alexander Valley in Sonoma County.); research/glass-wines-2026-11-15.md section 2"
+    },
+    {
+      "target": "wine:Kokomo Sonoma County Cabernet Sauvignon 2022",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "How do I sell it?",
+        "a": "Offer the Kokomo to the guest who asks for a Cabernet or a California red, with the Roasted Chateaubriand or the hanger steak. Lead with full and velvety, because a guest who fears a harsh Cabernet relaxes at soft tannins. It is new, so check the glass price with the manager before you quote one. Say: “Our Cabernet is Kokomo, from Sonoma County: blackberry and cassis, full bodied but velvety and soft.”"
+      },
+      "reason": "Study notes, coaching: when, to whom and with what to suggest it, and one line to say, from the sources named",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 127 (Cabernet Sauvignon: Kokomo Sonoma County CA 2022. Notes of blackberries, cassis, and vanilla. Full bodied, velvety texture, and soft tannins. Most of the fruit is sourced from Alexander Valley in Sonoma County.); research/glass-wines-2026-11-15.md section 2"
+    },
+    {
+      "target": "wine:Kokomo Sonoma County Cabernet Sauvignon 2022",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What do guests ask?",
+        "a": "Asked: Is it a Napa Cabernet?\n\nAnswer: It is from Sonoma County, next door to Napa, with most of the fruit from Alexander Valley.\n\nAsked: Is it heavy or tannic?\n\nAnswer: It is full bodied, but the texture is velvety and the tannins are soft, so it drinks smoothly with beef.\n\nAsked: Why is it called Kokomo?\n\nAnswer: The winery is named for its founder's hometown, Kokomo, Indiana; the wine itself is made in Healdsburg, in Sonoma County."
+      },
+      "reason": "Study notes, coaching: the questions guests ask and the true answers, or the person to ask, from the sources named",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 127 (Cabernet Sauvignon: Kokomo Sonoma County CA 2022. Notes of blackberries, cassis, and vanilla. Full bodied, velvety texture, and soft tannins. Most of the fruit is sourced from Alexander Valley in Sonoma County.); research/glass-wines-2026-11-15.md section 2"
+    },
+    {
+      "target": "wine:Kokomo Sonoma County Cabernet Sauvignon 2022",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What should I watch for?",
+        "a": "It is new on the November glass sheet, which prints no price: ask the manager before you quote one, and confirm at lineup that it is poured and that the 2022 is open. The label reads Sonoma County, so do not call it Napa, and say Alexander Valley only as where most of the fruit grows. How it was aged is a question for the sommelier, so do not promise a kind of oak. Allergens: read the service note and confirm at lineup."
+      },
+      "reason": "Study notes, coaching: the mix-ups, timings, rules, disputes and lineup questions tied to it, closing on the service note, from the sources named",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 127 (Cabernet Sauvignon: Kokomo Sonoma County CA 2022. Notes of blackberries, cassis, and vanilla. Full bodied, velvety texture, and soft tannins. Most of the fruit is sourced from Alexander Valley in Sonoma County.); research/glass-wines-2026-11-15.md section 2"
+    },
+    {
+      "target": "wine:Kokomo Sonoma County Cabernet Sauvignon 2022",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "How do I pour it?",
+        "a": "Show the label and say Kokomo, Cabernet Sauvignon, Sonoma County. Serve it at 60 to 64°F in a Bordeaux glass, with no decanting by the glass; a few minutes in the ice bucket helps if the bar runs warm. Pour the guests first and the host last. Say: “Our Sonoma County Cabernet: blackberry, cassis and vanilla, velvety and soft.”"
+      },
+      "reason": "Study notes, coaching: presenting and pouring it at the table as the sources print it",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 127 (Cabernet Sauvignon: Kokomo Sonoma County CA 2022. Notes of blackberries, cassis, and vanilla. Full bodied, velvety texture, and soft tannins. Most of the fruit is sourced from Alexander Valley in Sonoma County.); research/glass-wines-2026-11-15.md section 2"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is the glass price of the Kokomo Sonoma County Cabernet Sauvignon 2022? The Wines by the Glass sheet of 15 November 2026 prints none, so the card asks rather than inventing one. And how was the 2022 aged?",
+        "askWhom": "manager",
+        "items": [
+          "Kokomo Sonoma County Cabernet Sauvignon 2022"
+        ],
+        "blocksField": "price"
+      },
+      "reason": "November 2026: the glass sheet prints no price, so the wine files with priceUnknown and this ask blocks the price; the oak and aging of the 2022 are in no source read",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md"
+    },
+    {
+      "target": "wine:+",
+      "op": "add",
+      "value": {
+        "priceUnknown": true,
+        "price": "",
+        "prices": [],
+        "name": "Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)",
+        "section": "Chardonnay & fuller whites",
+        "group": "Chardonnay & fuller whites By the glass",
+        "meals": [
+          "Breakfast & lunch",
+          "Dinner"
+        ],
+        "producer": "Louis Jadot",
+        "wine": "Les Pucelles Puligny-Montrachet Premier Cru",
+        "vintage": "2008",
+        "region": "Puligny-Montrachet, Côte de Beaune, Burgundy, France",
+        "grapes": [
+          "Chardonnay"
+        ],
+        "style": "Mature premier cru white Burgundy, poured by Coravin",
+        "profile": "Premier cru white Burgundy from Les Pucelles in Puligny-Montrachet, a vineyard beside the grand cru Bâtard-Montrachet, made by Maison Louis Jadot of Beaune: lemon cream pie and vanilla, vibrant, rich and lush. A 2008, so it is a mature Chardonnay. Poured by Coravin.",
+        "guest": "For a white Burgundy lover we pour Jadot’s Les Pucelles 2008 by Coravin, a premier cru Puligny-Montrachet: lemon cream and vanilla, rich and lush.",
+        "goesWith": "Brown butter, crab and cream sauces: the first pick with the Louisiana Crab Claws, and the step up with the Louisiana Oysters, the Pecan Gulf Fish, the Poussin à la Moutarde and the Swordfish Grenobloise.",
+        "serve": "Serve 50 to 54°F in a white Burgundy bowl. Poured by Coravin: needle through the cork, pour, and return the bottle to the cooler. Present the label first, the vineyard and the vintage matter to Burgundy lovers.",
+        "say": "Jadot: zhah-DOH; Puligny-Montrachet: poo-lee-NYEE mohn-rah-SHAY; Pucelles: poo-SELL.",
+        "why": "First pick for the Louisiana Crab Claws; new on the glass list in November 2026, our white Burgundy by Coravin.",
+        "parts": {
+          "main": "Chardonnay from Les Pucelles, a premier cru of Puligny-Montrachet",
+          "technique": "Maison Louis Jadot, a 2008 poured by Coravin needle through the cork",
+          "sauce": "mature white Burgundy, vibrant, rich and lush",
+          "sides": "crab in brown butter, fish and poultry in cream",
+          "taste": "lemon cream pie and vanilla"
+        },
+        "lines": {
+          "s10": "Jadot’s Les Pucelles 2008, premier cru Puligny-Montrachet poured by Coravin: lemon cream pie and vanilla, rich and lush, for crab and brown butter.",
+          "s20": "Les Pucelles is a premier cru vineyard of Puligny-Montrachet, beside the grand crus of Montrachet, and this is Louis Jadot’s 2008: lemon cream pie and vanilla, vibrant, rich and lush. It’s our first pick with the Louisiana Crab Claws, poured by Coravin.",
+          "s45": "The Louis Jadot Les Pucelles 2008 is premier cru white Burgundy from Puligny-Montrachet, Chardonnay from a vineyard that lies beside the grand cru Bâtard-Montrachet. Maison Louis Jadot, founded in Beaune in 1859, ferments it in oak barrels and ages it on its fine lees. With its years in bottle it shows lemon cream pie and vanilla, and it is vibrant, rich and lush. It’s our first pick with the Louisiana Crab Claws in their brown butter vinaigrette, and the step up with the Louisiana Oysters and the Swordfish Grenobloise. We pour it by Coravin, a needle through the cork, into a white Burgundy bowl at 50 to 54°F.",
+          "sale": "Jadot’s Les Pucelles 2008 is mature premier cru Puligny-Montrachet, lemon cream pie and vanilla, vibrant, rich and lush. It is our first pick with the Louisiana Crab Claws, the white Burgundy we pour by Coravin."
+        },
+        "serviceNote": "New on the Wines by the Glass sheet of 15 November 2026, which prints no price. Ask the manager for the glass price before quoting one, and confirm at lineup that it is poured and that the 2008 is open."
+      },
+      "reason": "November 2026: new on the Wines by the Glass sheet of 15 November 2026, a whole glass wine. The sheet prints no price, so it files with priceUnknown and a price ask and never takes the bottle list's figure; the tasting words are the sheet's own, and the producer and place facts are those two sources or the producer's own page give",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 120 (Chardonnay (Coravin): Louis Jadot \"Les Pucelles\" Puligny-Montrachet 2008. Notes of lemon cream pie and vanilla. This wine vibrant, rich and lush. Les Pucelles is premier cru burgundy vineyard. That is in very close proximity to the Grand Crus of Montrachet.); research/glass-wines-2026-11-15.md section 3; research/winelist-2026-10-03.json (page:binwise-wine-list-2026-10-03.txt): the bottle at bin 2144, its figure a bottle price and not used"
+    },
+    {
+      "target": "wine:Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Tell me about it.",
+        "a": "Louis Jadot Les Pucelles 2008 is our white Burgundy by Coravin, new on the glass list from November 2026 in place of the Leflaive Mâcon-Verzé. The glass sheet prints no price, so ask the manager before you quote one.\n\nLes Pucelles, poo-SELL, is a premier cru vineyard in the village of Puligny-Montrachet, on the Côte de Beaune, lying beside the grand cru Bâtard-Montrachet; our sheet puts it in very close proximity to the grand crus of Montrachet. Maison Louis Jadot, zhah-DOH, founded in Beaune in 1859, makes it from Chardonnay, fermented in oak barrels and aged on its fine lees.\n\nThis bottle is a 2008, so it is a mature white: lemon cream pie and vanilla, vibrant, rich and lush. The Coravin is a needle through the cork, which is how a single glass of a wine like this can be poured.\n\nIt is the first pick with the Louisiana Crab Claws, where its richness mirrors the brown butter, and the step up from the Gainey with the oysters, the pecan fish, the poussin and the swordfish."
+      },
+      "reason": "Study notes, the description: what a master tells a new Brennan’s server who asks about it, every fact from the sources named",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 120 (Chardonnay (Coravin): Louis Jadot \"Les Pucelles\" Puligny-Montrachet 2008. Notes of lemon cream pie and vanilla. This wine vibrant, rich and lush. Les Pucelles is premier cru burgundy vineyard. That is in very close proximity to the Grand Crus of Montrachet.); research/glass-wines-2026-11-15.md section 3; research/winelist-2026-10-03.json (page:binwise-wine-list-2026-10-03.txt): the bottle at bin 2144, its figure a bottle price and not used"
+    },
+    {
+      "target": "wine:Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "How do I sell it?",
+        "a": "Offer the Jadot Les Pucelles to a white Burgundy lover, with the Louisiana Crab Claws, and as the step up from the Gainey when a table is celebrating. Name the vineyard, the premier cru and the 2008, since age is what the guest is buying, and check the glass price with the manager before you quote one. Say: “For white Burgundy we pour Jadot's Les Pucelles 2008 by Coravin: premier cru Puligny, lemon cream and vanilla, rich and lush.”"
+      },
+      "reason": "Study notes, coaching: when, to whom and with what to suggest it, and one line to say, from the sources named",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 120 (Chardonnay (Coravin): Louis Jadot \"Les Pucelles\" Puligny-Montrachet 2008. Notes of lemon cream pie and vanilla. This wine vibrant, rich and lush. Les Pucelles is premier cru burgundy vineyard. That is in very close proximity to the Grand Crus of Montrachet.); research/glass-wines-2026-11-15.md section 3; research/winelist-2026-10-03.json (page:binwise-wine-list-2026-10-03.txt): the bottle at bin 2144, its figure a bottle price and not used"
+    },
+    {
+      "target": "wine:Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What do guests ask?",
+        "a": "Asked: What does premier cru mean?\n\nAnswer: It is the second rank of vineyard in Burgundy, just under grand cru. Les Pucelles lies beside the grand cru Bâtard-Montrachet.\n\nAsked: Is a 2008 white still fresh?\n\nAnswer: Our sheet calls it vibrant, rich and lush, with lemon cream pie and vanilla. It is a mature wine, so I will ask the sommelier how the open bottle is showing.\n\nAsked: How do you pour it by the glass?\n\nAnswer: By Coravin: a needle through the cork, so the cork is never pulled."
+      },
+      "reason": "Study notes, coaching: the questions guests ask and the true answers, or the person to ask, from the sources named",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 120 (Chardonnay (Coravin): Louis Jadot \"Les Pucelles\" Puligny-Montrachet 2008. Notes of lemon cream pie and vanilla. This wine vibrant, rich and lush. Les Pucelles is premier cru burgundy vineyard. That is in very close proximity to the Grand Crus of Montrachet.); research/glass-wines-2026-11-15.md section 3; research/winelist-2026-10-03.json (page:binwise-wine-list-2026-10-03.txt): the bottle at bin 2144, its figure a bottle price and not used"
+    },
+    {
+      "target": "wine:Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What should I watch for?",
+        "a": "It is poured by Coravin, needle through the cork: never pull the cork, and return the bottle to the cooler after each pour. The glass sheet prints no price, so ask the manager before you quote one; the figure on the bottle list is a bottle price, never a glass price. A mature white can vary from bottle to bottle, so ask the sommelier how the open one is showing before you promise freshness. Allergens: read the service note and confirm at lineup."
+      },
+      "reason": "Study notes, coaching: the mix-ups, timings, rules, disputes and lineup questions tied to it, closing on the service note, from the sources named",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 120 (Chardonnay (Coravin): Louis Jadot \"Les Pucelles\" Puligny-Montrachet 2008. Notes of lemon cream pie and vanilla. This wine vibrant, rich and lush. Les Pucelles is premier cru burgundy vineyard. That is in very close proximity to the Grand Crus of Montrachet.); research/glass-wines-2026-11-15.md section 3; research/winelist-2026-10-03.json (page:binwise-wine-list-2026-10-03.txt): the bottle at bin 2144, its figure a bottle price and not used"
+    },
+    {
+      "target": "wine:Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "How do I pour it?",
+        "a": "Present the label first: the vineyard and the vintage matter to Burgundy lovers. Say zhah-DOH, lay poo-SELL, poo-lee-NYEE mohn-rah-SHAY. Serve it at 50 to 54°F in a white Burgundy bowl. Pour through the Coravin needle, cork left in, and return the bottle to the cooler. Guests first and the host last. Say: “Jadot's Les Pucelles 2008, poured by Coravin: lemon cream, vanilla and a rich, lush finish.”"
+      },
+      "reason": "Study notes, coaching: presenting and pouring it at the table as the sources print it",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 120 (Chardonnay (Coravin): Louis Jadot \"Les Pucelles\" Puligny-Montrachet 2008. Notes of lemon cream pie and vanilla. This wine vibrant, rich and lush. Les Pucelles is premier cru burgundy vineyard. That is in very close proximity to the Grand Crus of Montrachet.); research/glass-wines-2026-11-15.md section 3; research/winelist-2026-10-03.json (page:binwise-wine-list-2026-10-03.txt): the bottle at bin 2144, its figure a bottle price and not used"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is the glass price of the Louis Jadot Les Pucelles Puligny-Montrachet Premier Cru 2008, poured by Coravin? The Wines by the Glass sheet of 15 November 2026 prints none, and the figure on the bottle list is a bottle price, so the card asks rather than inventing one.",
+        "askWhom": "manager",
+        "items": [
+          "Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)"
+        ],
+        "blocksField": "price"
+      },
+      "reason": "November 2026: the glass sheet prints no price, so the wine files with priceUnknown and this ask blocks the price; the bottle list's figure is never a glass price",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md"
+    },
+    {
+      "target": "wine:+",
+      "op": "add",
+      "value": {
+        "priceUnknown": true,
+        "price": "",
+        "prices": [],
+        "name": "Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)",
+        "section": "Light reds, Pinot Noir",
+        "group": "Light reds, Pinot Noir By the glass",
+        "meals": [
+          "Breakfast & lunch",
+          "Dinner"
+        ],
+        "producer": "Domaine de Courcel",
+        "wine": "Grand Clos des Épenots Pommard Premier Cru",
+        "vintage": "2007",
+        "region": "Pommard, Côte de Beaune, Burgundy, France",
+        "grapes": [
+          "Pinot Noir"
+        ],
+        "style": "Mature premier cru red Burgundy, poured by Coravin",
+        "profile": "Premier cru red Burgundy from Pommard, Pinot Noir from Domaine de Courcel’s Grand Clos des Épenots, the walled vineyard it owns alone inside the premier cru Les Grands Épenots: dark cherry, plum and spice. A 2007, almost twenty years old, so the tannins have softened and the fruit is mellow and earthy. Poured by Coravin.",
+        "guest": "For a red Burgundy lover we pour a 2007 Pommard premier cru by Coravin: dark cherry, plum and spice, soft and earthy with age.",
+        "goesWith": "Beef and slow-cooked meats: the first pick with the Roasted Chateaubriand, and the step up with the Petite Filet Mignon, the Chateau Espagnole and the Lamb Shank en Croûte.",
+        "serve": "Serve 58 to 62°F in a Burgundy bowl. Poured by Coravin: needle through the cork, pour gently so any sediment stays behind, and return the bottle to the cellar. Present the label first.",
+        "say": "Courcel: koor-SELL; Pommard: poh-MAR; Épenots: ay-peh-NOH.",
+        "why": "First pick for the Roasted Chateaubriand; new on the glass list in November 2026, our red Burgundy by Coravin.",
+        "parts": {
+          "main": "Pinot Noir from the Grand Clos des Épenots, a premier cru of Pommard",
+          "technique": "Domaine de Courcel, a 2007 poured by Coravin needle through the cork",
+          "sauce": "mature red Burgundy, its tannins softened by age",
+          "sides": "beef tenderloin, lamb and slow-cooked sauces",
+          "taste": "dark cherry, plum and spice, mellow and earthy"
+        },
+        "lines": {
+          "s10": "Domaine de Courcel’s 2007 Pommard premier cru, poured by Coravin: dark cherry, plum and spice, soft and earthy with age, for beef and lamb.",
+          "s20": "This is Pinot Noir from Pommard, in Burgundy, from Domaine de Courcel’s Grand Clos des Épenots, and a 2007: dark cherry, plum and spice, the tannins softened and the fruit mellow and earthy. It’s our first pick with the Roasted Chateaubriand, poured by Coravin.",
+          "s45": "The Domaine de Courcel Pommard 2007 is premier cru red Burgundy, Pinot Noir from the Grand Clos des Épenots, the walled vineyard the family owns alone inside Pommard’s premier cru Les Grands Épenots. The family has grown wine in Pommard since the seventeenth century. This bottle is almost twenty years old, so the tannins have softened and the fruit has turned mellow and earthy, with dark cherry, plum and spice. It’s our first pick with the Roasted Chateaubriand, and the step up with the Lamb Shank en Croûte. We pour it by Coravin, a needle through the cork, into a Burgundy bowl at 58 to 62°F.",
+          "sale": "The de Courcel Pommard 2007 is mature premier cru red Burgundy, dark cherry, plum and spice, its tannins softened by almost twenty years. It is our first pick with the Roasted Chateaubriand, the red Burgundy we pour by Coravin."
+        },
+        "serviceNote": "New on the Wines by the Glass sheet of 15 November 2026, which prints no price. Ask the manager for the glass price before quoting one, and confirm at lineup that it is poured and that the 2007 is open. The sheet prints Les Grands Epenots; the label reads Grand Clos des Épenots, so read the label at lineup."
+      },
+      "reason": "November 2026: new on the Wines by the Glass sheet of 15 November 2026, a whole glass wine. The sheet prints no price, so it files with priceUnknown and a price ask and never takes the bottle list's figure; the tasting words are the sheet's own, and the producer and place facts are those two sources or the producer's own page give",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 128 (Pinot Noir (Coravin): Domaine de Courcel \"Les Grands Epenots\" Pommard 2007. Notes of dark cherry, plum, and spice. This wine is almost 20 years old, so the tannins have softened and the fruit is very mellow and earthy.); research/glass-wines-2026-11-15.md section 4; research/winelist-2026-10-03.json (page:binwise-wine-list-2026-10-03.txt): Les Grand Clos des Épenots 2007 at bin 23632, its figure a bottle price and not used"
+    },
+    {
+      "target": "wine:Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Tell me about it.",
+        "a": "Domaine de Courcel Pommard Premier Cru 2007 is our red Burgundy by Coravin, new on the glass list from November 2026 in place of the Inglenook Rubicon. The glass sheet prints no price, so ask the manager before you quote one.\n\nPommard, poh-MAR, is a village on the Côte de Beaune known for firm, full red Burgundy made from Pinot Noir. Domaine de Courcel, koor-SELL, has been in one family there since the seventeenth century. Its label reads Grand Clos des Épenots, the walled vineyard the domaine owns alone inside the premier cru Les Grands Épenots, which is the name our glass sheet prints.\n\nThis bottle is a 2007, almost twenty years old, so the tannins have softened and the fruit is mellow and earthy: dark cherry, plum and spice. The Coravin, a needle through the cork, is how one glass of a wine this old can be poured.\n\nIt is the first pick with the Roasted Chateaubriand, and the step up with the Petite Filet Mignon, the Chateau Espagnole and the Lamb Shank en Croûte."
+      },
+      "reason": "Study notes, the description: what a master tells a new Brennan’s server who asks about it, every fact from the sources named",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 128 (Pinot Noir (Coravin): Domaine de Courcel \"Les Grands Epenots\" Pommard 2007. Notes of dark cherry, plum, and spice. This wine is almost 20 years old, so the tannins have softened and the fruit is very mellow and earthy.); research/glass-wines-2026-11-15.md section 4; research/winelist-2026-10-03.json (page:binwise-wine-list-2026-10-03.txt): Les Grand Clos des Épenots 2007 at bin 23632, its figure a bottle price and not used"
+    },
+    {
+      "target": "wine:Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "How do I sell it?",
+        "a": "Offer the de Courcel Pommard to a red Burgundy lover, to a table sharing the Roasted Chateaubriand, and to anyone curious about an older wine by the glass. Sell the age: almost twenty years have softened the tannins. Check the glass price with the manager before you quote one. Say: “For red Burgundy we pour a 2007 Pommard premier cru by Coravin: dark cherry, plum and spice, soft and earthy with age.”"
+      },
+      "reason": "Study notes, coaching: when, to whom and with what to suggest it, and one line to say, from the sources named",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 128 (Pinot Noir (Coravin): Domaine de Courcel \"Les Grands Epenots\" Pommard 2007. Notes of dark cherry, plum, and spice. This wine is almost 20 years old, so the tannins have softened and the fruit is very mellow and earthy.); research/glass-wines-2026-11-15.md section 4; research/winelist-2026-10-03.json (page:binwise-wine-list-2026-10-03.txt): Les Grand Clos des Épenots 2007 at bin 23632, its figure a bottle price and not used"
+    },
+    {
+      "target": "wine:Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What do guests ask?",
+        "a": "Asked: Is Pommard a grape?\n\nAnswer: It is a village in Burgundy; the grape is Pinot Noir. Pommard is known for firmer, fuller reds than the villages beside it.\n\nAsked: Is a 2007 past its best?\n\nAnswer: Our sheet describes softened tannins and mellow, earthy fruit, which is what age gives a Pommard. I will ask the sommelier how the open bottle is showing.\n\nAsked: Is it Les Grands Épenots or Grand Clos des Épenots?\n\nAnswer: The label reads Grand Clos des Épenots, the domaine's own walled vineyard inside the premier cru Les Grands Épenots."
+      },
+      "reason": "Study notes, coaching: the questions guests ask and the true answers, or the person to ask, from the sources named",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 128 (Pinot Noir (Coravin): Domaine de Courcel \"Les Grands Epenots\" Pommard 2007. Notes of dark cherry, plum, and spice. This wine is almost 20 years old, so the tannins have softened and the fruit is very mellow and earthy.); research/glass-wines-2026-11-15.md section 4; research/winelist-2026-10-03.json (page:binwise-wine-list-2026-10-03.txt): Les Grand Clos des Épenots 2007 at bin 23632, its figure a bottle price and not used"
+    },
+    {
+      "target": "wine:Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "What should I watch for?",
+        "a": "It is poured by Coravin, needle through the cork: never pull the cork. An old red can throw sediment, so pour gently and ask the sommelier how the bottle is kept. The glass sheet prints no price, so ask the manager before you quote one; the figure on the bottle list is a bottle price. The sheet prints Les Grands Épenots and the label Grand Clos des Épenots, so read the label at lineup. Allergens: read the service note and confirm at lineup."
+      },
+      "reason": "Study notes, coaching: the mix-ups, timings, rules, disputes and lineup questions tied to it, closing on the service note, from the sources named",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 128 (Pinot Noir (Coravin): Domaine de Courcel \"Les Grands Epenots\" Pommard 2007. Notes of dark cherry, plum, and spice. This wine is almost 20 years old, so the tannins have softened and the fruit is very mellow and earthy.); research/glass-wines-2026-11-15.md section 4; research/winelist-2026-10-03.json (page:binwise-wine-list-2026-10-03.txt): Les Grand Clos des Épenots 2007 at bin 23632, its figure a bottle price and not used"
+    },
+    {
+      "target": "wine:Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "How do I pour it?",
+        "a": "Present the label first and say koor-SELL, poh-MAR, premier cru, 2007. Serve it at 58 to 62°F in a Burgundy bowl. Pour through the Coravin needle, cork left in, slowly, so any sediment stays in the bottle. Guests first and the host last. Say: “A 2007 Pommard premier cru, poured by Coravin: dark cherry, plum and spice, soft with age.”"
+      },
+      "reason": "Study notes, coaching: presenting and pouring it at the table as the sources print it",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 128 (Pinot Noir (Coravin): Domaine de Courcel \"Les Grands Epenots\" Pommard 2007. Notes of dark cherry, plum, and spice. This wine is almost 20 years old, so the tannins have softened and the fruit is very mellow and earthy.); research/glass-wines-2026-11-15.md section 4; research/winelist-2026-10-03.json (page:binwise-wine-list-2026-10-03.txt): Les Grand Clos des Épenots 2007 at bin 23632, its figure a bottle price and not used"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "What is the glass price of the Domaine de Courcel Pommard Premier Cru 2007, poured by Coravin? The Wines by the Glass sheet of 15 November 2026 prints none, and the figure on the bottle list is a bottle price, so the card asks rather than inventing one.",
+        "askWhom": "manager",
+        "items": [
+          "Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)"
+        ],
+        "blocksField": "price"
+      },
+      "reason": "November 2026: the glass sheet prints no price, so the wine files with priceUnknown and this ask blocks the price; the bottle list's figure is never a glass price",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Does the open Domaine de Courcel Pommard 2007 read Grand Clos des Épenots on its label? The glass sheet of 15 November 2026 prints Les Grands Epenots and the bottle list prints Les Grand Clos des Épenots at bin 23632. The domaine bottles this premier cru as Grand Clos des Épenots, its own walled vineyard inside Les Grands Épenots, so the card uses that name until the label is read.",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)"
+        ]
+      },
+      "reason": "November 2026: the sheet and the bottle list print two names for one wine; the wine merchants and the review read name the 2007 Pommard Premier Cru Grand Clos des Épenots, the domaine's monopole inside Les Grands Épenots, so the card takes the label's name and the open bottle is read at lineup",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md"
+    },
+    {
+      "target": "wine:Domaine Leflaive Mâcon-Verzé 2022 (Coravin)",
+      "field": "section",
+      "op": "set",
+      "value": "Past wines by the glass",
+      "reason": "November 2026: the Wines by the Glass sheet of 15 November 2026 does not print it, so the wine is filed under Past wines by the glass, the section the engine's past rule reads; its name, id, price, marks, notes and every other field are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) (seventeen wines, this one not among them)"
+    },
+    {
+      "target": "wine:Domaine Leflaive Mâcon-Verzé 2022 (Coravin)",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the list?",
+        "a": "The Wines by the Glass sheet of 15 November 2026 no longer prints it. The white Burgundy poured by Coravin is now the Louis Jadot Les Pucelles 2008, a premier cru Puligny-Montrachet. This card stays here to be read, with its last printed glass price, and the wine is no longer offered by the glass or named as a pairing. Domaine Leflaive is still on the bottle list."
+      },
+      "reason": "November 2026: a kept note under a question that is none of the fixed five, saying when it left the glass list and what is poured in its place",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) (seventeen wines, this one not among them)"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ 2010",
+      "field": "section",
+      "op": "set",
+      "value": "Past wines by the glass",
+      "reason": "November 2026: the Wines by the Glass sheet of 15 November 2026 does not print it, so the wine is filed under Past wines by the glass, the section the engine's past rule reads; its name, id, price, marks, notes and every other field are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) (seventeen wines, this one not among them)"
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ 2010",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the list?",
+        "a": "The Wines by the Glass sheet of 15 November 2026 no longer prints it. The mature red poured by Coravin is now the Domaine de Courcel Pommard Premier Cru 2007, and the Cabernet by the glass is the Kokomo from Sonoma County. This card stays here to be read, with its last printed glass price, and the wine is no longer offered by the glass or named as a pairing."
+      },
+      "reason": "November 2026: a kept note under a question that is none of the fixed five, saying when it left the glass list and what is poured in its place",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) (seventeen wines, this one not among them)"
+    },
+    {
+      "target": "dish:Louisiana Crab Claws",
+      "field": "pairing.wine",
+      "op": "set",
+      "value": "Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)",
+      "reason": "November 2026: the Leflaive Mâcon-Verzé left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the Jadot Les Pucelles is the white Burgundy now poured by Coravin, the same match for brown butter the guide chose",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Louisiana Crab Claws",
+      "field": "pairing.why",
+      "op": "set",
+      "value": "Premier cru white Burgundy’s nutty richness mirrors brown butter, and its bright acidity matches the vinaigrette and the sweet crab.",
+      "reason": "November 2026: the Leflaive Mâcon-Verzé left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the why says the same match for the new wine",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Louisiana Crab Claws",
+      "field": "pairing.sayIt",
+      "op": "set",
+      "value": "Brown butter and white Burgundy are a dream: we pour Jadot’s Les Pucelles 2008 by Coravin, lemon cream and vanilla with a clean, bright finish.",
+      "reason": "November 2026: the Leflaive Mâcon-Verzé left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the line names the new wine in the sheet's words",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Louisiana Crab Claws",
+      "field": "pairing.whyThisWine",
+      "op": "set",
+      "value": "Brown butter and white Burgundy are a dream. Les Pucelles is a premier cru Puligny-Montrachet with years in bottle: it is rich and lush like the butter, and still vibrant enough for the vinaigrette, so the crab tastes sweeter.",
+      "reason": "November 2026: the Leflaive Mâcon-Verzé left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the reasoning is rewritten for the new wine",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Louisiana Crab Claws",
+      "field": "pairing.palate",
+      "op": "set",
+      "value": "Brown butter’s nutty richness finds its echo in a mature white Burgundy’s lush texture, so the two taste of each other. The vinaigrette’s acid would flatten a soft wine, but this Puligny stays vibrant and matches it, and the sweet crab tastes sweeter against the wine’s lemon. The fines herbes lift its floral notes. The finish runs butter, then lemon cream, then a clean, bright close.",
+      "reason": "November 2026: the Leflaive Mâcon-Verzé left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the palate is rewritten for the new wine",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Louisiana Crab Claws",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "With the crab claws the Leflaive Macon is the pour:",
+        "to": "With the crab claws the Leflaive Macon was the pour until it left the glass list in November 2026, and the Jadot Les Pucelles by Coravin takes its place:"
+      },
+      "reason": "November 2026: the note named the Leflaive Mâcon as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Louisiana Crab Claws",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "The guide pours the Domaine Leflaive Mâcon-Verzé by Coravin with it",
+        "to": "We pour the Louis Jadot Les Pucelles 2008, a premier cru Puligny-Montrachet, by Coravin with it"
+      },
+      "reason": "November 2026: the note named the Leflaive Mâcon-Verzé as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Louisiana Crab Claws",
+      "field": "kept.3.a",
+      "op": "replace",
+      "value": {
+        "from": "Pour the Leflaive Mâcon-Verzé at $40 by Coravin with it;",
+        "to": "Pour the Jadot Les Pucelles by Coravin with it, asking the manager for its glass price first;"
+      },
+      "reason": "November 2026: the note named the Leflaive Mâcon-Verzé as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Louisiana Crab Claws",
+      "field": "kept.5.a",
+      "op": "replace",
+      "value": {
+        "from": "Pour the Leflaive by Coravin",
+        "to": "Pour the Jadot Les Pucelles by Coravin"
+      },
+      "reason": "November 2026: the note named the Leflaive as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Crab & Corn Omelette",
+      "field": "pairing.wine",
+      "op": "set",
+      "value": "Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022",
+      "reason": "November 2026: the Leflaive Mâcon-Verzé left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the Lemelson Pinot Gris, pear, peach and lemon with a velvety, full texture, has the weight for crab, corn and butter and no oak to fight the miso",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Crab & Corn Omelette",
+      "field": "pairing.why",
+      "op": "set",
+      "value": "A full, velvety Pinot Gris matches the crab, corn and miso butter, and its lemon and pear freshness echoes the lemon and basil.",
+      "reason": "November 2026: the Leflaive Mâcon-Verzé left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the why is rewritten for the new wine",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Crab & Corn Omelette",
+      "field": "pairing.sayIt",
+      "op": "set",
+      "value": "With the omelette I’d pour our Oregon Pinot Gris from Lemelson: full enough for the crab and butter, bright enough for the lemon.",
+      "reason": "November 2026: the Leflaive Mâcon-Verzé left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the line names the new wine",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Crab & Corn Omelette",
+      "field": "pairing.whyThisWine",
+      "op": "set",
+      "value": "Crab, corn and butter want a white with texture and no hard edges. The Lemelson Pinot Gris is velvety and full, with pear and peach for the sweet crab and corn, and a lemon freshness that matches the lemon and basil.",
+      "reason": "November 2026: the Leflaive Mâcon-Verzé left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the reasoning is rewritten for the new wine",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Crab & Corn Omelette",
+      "field": "pairing.palate",
+      "op": "set",
+      "value": "The butter and egg meet the wine’s velvety, full texture, while its lemon joins the lemon on the plate so both taste brighter. Crab and roasted corn bring sweetness that the wine’s pear and peach mirror. Miso’s umami, which makes tannic wines taste harsh, only rounds this white, and the Marcona almonds pick up its soft, savory side. The finish is clean and gently fruity.",
+      "reason": "November 2026: the Leflaive Mâcon-Verzé left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the palate is rewritten for the new wine",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Crab & Corn Omelette",
+      "field": "pairing.serve",
+      "op": "set",
+      "value": "Pour as the omelette fires, 48 to 52°F, in a standard white-wine glass; keep the bottle on ice between pours.",
+      "reason": "November 2026: the Leflaive Mâcon-Verzé left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the serve described a Coravin pour, and the new first pick is poured from the bottle",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Crab & Corn Omelette",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "Leflaive at $40 is first pick for a $28 omelette.",
+        "to": "Leflaive at $40 was first pick for a $28 omelette until it left the glass list in November 2026; the Lemelson Pinot Gris is the first pick now."
+      },
+      "reason": "November 2026: the note named the Leflaive as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Crab & Corn Omelette",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "The Leflaive stays first in this pack as the guide prints it.",
+        "to": "The Leflaive stayed first, as the guide prints it, while it was poured."
+      },
+      "reason": "November 2026: the note named the Leflaive as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Crab & Corn Omelette",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "The guide pours the Domaine Leflaive Mâcon-Verzé by Coravin with it, white Burgundy rich enough",
+        "to": "We pour the Lemelson Tikka's Run Pinot Gris with it, an Oregon white full enough"
+      },
+      "reason": "November 2026: the note named the Leflaive Mâcon-Verzé as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Crab & Corn Omelette",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "Pour the Leflaive Mâcon-Verzé at $40 by Coravin for a white Burgundy lover;",
+        "to": "Pour the Lemelson Pinot Gris from Oregon, asking the manager for its glass price first;"
+      },
+      "reason": "November 2026: the note named the Leflaive Mâcon-Verzé as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Crab & Corn Omelette",
+      "field": "kept.4.a",
+      "op": "replace",
+      "value": {
+        "from": "The Leflaive is poured by Coravin: present the bottle and pour through the needle; no cork is pulled.",
+        "to": "The Lemelson Pinot Gris has no printed glass price yet, so ask the manager before you quote one."
+      },
+      "reason": "November 2026: the note named the Leflaive as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Roasted Chateaubriand",
+      "field": "pairing.wine",
+      "op": "set",
+      "value": "Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)",
+      "reason": "November 2026: the Inglenook Rubicon left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the de Courcel Pommard 2007 is the mature red now poured by Coravin, age softened as the Rubicon was, for the tenderloin and the Foyot",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Roasted Chateaubriand",
+      "field": "pairing.why",
+      "op": "set",
+      "value": "A mature premier cru Pommard has the structure for the beef and the rich sauce, and almost twenty years have softened its tannins to match the tenderloin’s silkiness.",
+      "reason": "November 2026: the Inglenook Rubicon left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the why is rewritten for the new wine",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Roasted Chateaubriand",
+      "field": "pairing.sayIt",
+      "op": "set",
+      "value": "For the Chateaubriand, we pour a 2007 Pommard premier cru by Coravin, red Burgundy with real age on it, dark cherry and spice, soft and earthy. Or, if you love Cabernet, our Kokomo from Sonoma County.",
+      "reason": "November 2026: the Inglenook Rubicon left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the line names the new wine and the Cabernet beside it",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Roasted Chateaubriand",
+      "field": "pairing.whyThisWine",
+      "op": "set",
+      "value": "Tenderloin is the most tender cut of beef, and Pommard is the firmest red of the Côte de Beaune. At almost twenty years old this one is mellow and earthy, so it flatters the tenderness of the beef and loves the rich Foyot sauce.",
+      "reason": "November 2026: the Inglenook Rubicon left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the reasoning is rewritten for the new wine",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Roasted Chateaubriand",
+      "field": "pairing.palate",
+      "op": "set",
+      "value": "Tenderloin is lean, so a young, firm red would dry the palate. Here age has softened the tannin; it binds with the Foyot’s butter and the beef’s protein and feels round. The meat glaze’s savory depth meets the wine’s earth and spice, while its dark cherry and plum give the mild beef a lift. Pinot Noir’s acidity cuts the béarnaise, and the finish stays long, savory and silky.",
+      "reason": "November 2026: the Inglenook Rubicon left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the palate is rewritten for the new wine",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Roasted Chateaubriand",
+      "field": "pairing.second",
+      "op": "set",
+      "value": "Kokomo Sonoma County Cabernet Sauvignon 2022",
+      "reason": "November 2026: the Inglenook Rubicon left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; with red Burgundy now first, the second pick is the Cabernet a beef table asks for, the Kokomo, where it was a second red Burgundy",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Roasted Chateaubriand",
+      "field": "pairing.secondWhy",
+      "op": "set",
+      "value": "For power over finesse: a full-bodied Sonoma County Cabernet with a velvety texture and soft tannins, for the guest who wants Cabernet with beef.",
+      "reason": "November 2026: the Inglenook Rubicon left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the second why is written for the Kokomo",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Roasted Chateaubriand",
+      "field": "pairing.serve",
+      "op": "set",
+      "value": "Poured by Coravin, needle through the cork; pour gently to leave any sediment behind. Burgundy bowl, 58 to 62°F. For a bottle from the cellar, bring in the sommelier.",
+      "reason": "November 2026: the Inglenook Rubicon left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the serve carried the Rubicon's glass price and a Bordeaux glass",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Roasted Chateaubriand",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "With it we pour the 2010 Inglenook Rubicon by the glass, a Napa legend whose sixteen years have made it silky.",
+        "to": "With it we pour the Domaine de Courcel Pommard 2007 by Coravin, a premier cru red Burgundy whose years have made it soft and earthy."
+      },
+      "reason": "November 2026: the note named the Inglenook Rubicon as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Roasted Chateaubriand",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "and the Inglenook Rubicon at $70 the glass;",
+        "to": "and the de Courcel Pommard 2007 by Coravin, or the Kokomo Cabernet for a Cabernet drinker;"
+      },
+      "reason": "November 2026: the note named the Inglenook Rubicon as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Roasted Chateaubriand",
+      "field": "kept.4.a",
+      "op": "replace",
+      "value": {
+        "from": "At $70 a glass, two glasses of Rubicon cost close to a bottle, so mention the sommelier for a bottle and",
+        "to": "The Pommard and the Kokomo have no printed glass price yet, so ask the manager before you quote one, and mention the sommelier for a bottle and"
+      },
+      "reason": "November 2026: the note named the Inglenook Rubicon as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Turtle Soup",
+      "field": "pairing.second",
+      "op": "set",
+      "value": "Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022",
+      "reason": "November 2026: the Leflaive Mâcon-Verzé left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the still white offered beside the Champagne is now the Lemelson Pinot Gris, round and unoaked in its description, which the dish's own avoid line asks for",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Turtle Soup",
+      "field": "pairing.secondWhy",
+      "op": "set",
+      "value": "For a still white: the Lemelson Pinot Gris has the roundness to match the soup and the lemon freshness to keep it lively.",
+      "reason": "November 2026: the Leflaive Mâcon-Verzé left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the second why is written for the new wine",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Petite Filet Mignon",
+      "field": "pairing.stepUp",
+      "op": "set",
+      "value": "Domaine de Courcel Pommard Premier Cru 2007 by Coravin: mature red Burgundy, its tannins softened by age, mellow and earthy, a luxurious filet upgrade.",
+      "reason": "November 2026: the Inglenook Rubicon left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the step up names a wine the sheet prints, chosen against the dish's own avoid line",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Petite Filet Mignon",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "the Inglenook Rubicon 2010 by the glass at $70 is the step up, aged and silky with cedar and tobacco;",
+        "to": "the Domaine de Courcel Pommard 2007 by Coravin is the step up, mellow and earthy with age, its glass price to ask the manager;"
+      },
+      "reason": "November 2026: the note named the Inglenook Rubicon as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Louisiana Oysters",
+      "field": "pairing.stepUp",
+      "op": "set",
+      "value": "Louis Jadot Les Pucelles 2008 by Coravin: premier cru Puligny-Montrachet, the same Chardonnay texture with lemon cream depth and more finesse against the pickle.",
+      "reason": "November 2026: the Leflaive Mâcon-Verzé left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the step up names a wine the sheet prints, chosen against the dish's own avoid line",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Louisiana Oysters",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "the Leflaive Mâcon-Verzé by Coravin is the step up",
+        "to": "the Jadot Les Pucelles 2008 by Coravin is the step up"
+      },
+      "reason": "November 2026: the note named the Leflaive Mâcon-Verzé as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Pecan Gulf Fish",
+      "field": "pairing.stepUp",
+      "op": "set",
+      "value": "Louis Jadot Les Pucelles 2008 by Coravin: mature premier cru white Burgundy, richer and finer, for guests who want more finesse with the crab.",
+      "reason": "November 2026: the Leflaive Mâcon-Verzé left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the step up names a wine the sheet prints, chosen against the dish's own avoid line",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Pecan Gulf Fish",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "the Leflaive Mâcon-Verzé by Coravin is the finer step up",
+        "to": "the Jadot Les Pucelles 2008 by Coravin is the finer step up"
+      },
+      "reason": "November 2026: the note named the Leflaive Mâcon-Verzé as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Creole-Spiced Hanger Steak",
+      "field": "pairing.stepUp",
+      "op": "set",
+      "value": "Kokomo Cabernet Sauvignon 2022 by the glass: fuller Sonoma County Cabernet, velvety with soft tannins, blackberry and cassis for the steak.",
+      "reason": "November 2026: the Inglenook Rubicon left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the step up names a wine the sheet prints, chosen against the dish's own avoid line",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Creole-Spiced Hanger Steak",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "for a celebration, the Inglenook Rubicon 2010 at $70.",
+        "to": "for a fuller glass, the Kokomo Cabernet Sauvignon, its glass price to ask the manager."
+      },
+      "reason": "November 2026: the note named the Inglenook Rubicon as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Poussin à la Moutarde",
+      "field": "pairing.stepUp",
+      "op": "set",
+      "value": "Louis Jadot Les Pucelles 2008 by Coravin: premier cru Chardonnay from Burgundy, Dijon mustard’s home region, lush enough for the cream.",
+      "reason": "November 2026: the Leflaive Mâcon-Verzé left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the step up names a wine the sheet prints, chosen against the dish's own avoid line",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Poussin à la Moutarde",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "the Leflaive Mâcon-Verzé by Coravin is the step up",
+        "to": "the Jadot Les Pucelles 2008 by Coravin is the step up"
+      },
+      "reason": "November 2026: the note named the Leflaive Mâcon-Verzé as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Swordfish Grenobloise",
+      "field": "pairing.stepUp",
+      "op": "set",
+      "value": "Louis Jadot Les Pucelles 2008 by Coravin: mature premier cru white Burgundy, lemon cream pie and vanilla, with the richness for brown butter and the brightness for the lemon.",
+      "reason": "November 2026: the Leflaive Mâcon-Verzé left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the step up names a wine the sheet prints, chosen against the dish's own avoid line",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Swordfish Grenobloise",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "and the Leflaive Mâcon-Verzé by Coravin at $40 is the step up;",
+        "to": "and the Jadot Les Pucelles 2008 by Coravin is the step up, its price to ask the manager;"
+      },
+      "reason": "November 2026: the note named the Leflaive Mâcon-Verzé as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Chateau Espagnole",
+      "field": "pairing.stepUp",
+      "op": "set",
+      "value": "Domaine de Courcel Pommard Premier Cru 2007 by Coravin: mature red Burgundy, soft with age, its dark cherry, plum and earthy spice meeting the Espagnole head on.",
+      "reason": "November 2026: the Inglenook Rubicon left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the step up names a wine the sheet prints, chosen against the dish's own avoid line",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Chateau Espagnole",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "and the 2010 Inglenook Rubicon at $70 the step up;",
+        "to": "and the de Courcel Pommard by Coravin the step up;"
+      },
+      "reason": "November 2026: the note named the Inglenook Rubicon as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Lamb Shank en Croûte",
+      "field": "pairing.stepUp",
+      "op": "set",
+      "value": "Domaine de Courcel Pommard Premier Cru 2007 by Coravin: mature red Burgundy, dark cherry, plum and spice turned mellow and earthy, a grand glass for slow-cooked lamb; let the sommelier say how the open bottle is showing before you promise softness.",
+      "reason": "November 2026: the Inglenook Rubicon left the glass list, so the dish is re-paired from the seventeen wines the sheet prints; the step up names a wine the sheet prints, chosen against the dish's own avoid line",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Lamb Shank en Croûte",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "and the 2010 Inglenook Rubicon at $70 the step up;",
+        "to": "and the de Courcel Pommard 2007 by Coravin the step up;"
+      },
+      "reason": "November 2026: the note named the Inglenook Rubicon as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "dish:Louisiana Oysters",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "Gainey first and Leflaive as the step up is the right order here, as the guide prints it:",
+        "to": "Gainey first and a white Burgundy by Coravin as the step up is the right order here, as the guide prints it with the Leflaive, now the Jadot Les Pucelles:"
+      },
+      "reason": "November 2026: the note named the Leflaive as the pour; it left the glass list, and the note now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "wine:Domaine Durand Sauvignon Blanc 2025",
+      "field": "vintage",
+      "op": "set",
+      "value": "2025",
+      "reason": "November 2026: the Wines by the Glass sheet of 15 November 2026 prints Famille Durand 2025, where the menu page of 3 October printed 2024; the card follows the newer sheet and still sends the server to the label",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 118 (Sauvignon Blanc: Famille Durand 2025, Loire Valley, FR.); page:brennansneworleans-menus-pasted-2026-10-03.txt line 472 (the 2024 it printed)"
+    },
+    {
+      "target": "wine:Domaine Durand Sauvignon Blanc 2025",
+      "field": "serviceNote",
+      "op": "set",
+      "value": "The Wines by the Glass sheet of 15 November 2026 prints Famille Durand 2025, Loire Valley. The menu page of 3 October 2026 printed Famille Durand, Val de Loire, 2024, and the Binwise list of that day Domaine Durand, Loire Valley, 2025, both at $14. Read the label at lineup before naming the vintage.",
+      "reason": "November 2026: the Wines by the Glass sheet of 15 November 2026 prints Famille Durand 2025, where the menu page of 3 October printed 2024; the card follows the newer sheet and still sends the server to the label",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 118 (Sauvignon Blanc: Famille Durand 2025, Loire Valley, FR.); page:brennansneworleans-menus-pasted-2026-10-03.txt line 472 (the 2024 it printed)"
+    },
+    {
+      "target": "wine:Domaine Durand Sauvignon Blanc 2025",
+      "field": "parts.technique",
+      "op": "replace",
+      "value": {
+        "from": "the 2024 cellar work",
+        "to": "the 2025 cellar work"
+      },
+      "reason": "November 2026: the Wines by the Glass sheet of 15 November 2026 prints Famille Durand 2025, where the menu page of 3 October printed 2024; the card follows the newer sheet and still sends the server to the label",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 118 (Sauvignon Blanc: Famille Durand 2025, Loire Valley, FR.); page:brennansneworleans-menus-pasted-2026-10-03.txt line 472 (the 2024 it printed)"
+    },
+    {
+      "target": "wine:Domaine Durand Sauvignon Blanc 2025",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "The current menu prints it as Famille Durand, Val de Loire, 2024; the Binwise list still prints Domaine Durand, 2025, so the label is read at lineup.",
+        "to": "The glass sheet of 15 November 2026 prints it as Famille Durand 2025, where the October menu printed 2024, so the label is read at lineup."
+      },
+      "reason": "November 2026: the Wines by the Glass sheet of 15 November 2026 prints Famille Durand 2025, where the menu page of 3 October printed 2024; the card follows the newer sheet and still sends the server to the label",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 118 (Sauvignon Blanc: Famille Durand 2025, Loire Valley, FR.); page:brennansneworleans-menus-pasted-2026-10-03.txt line 472 (the 2024 it printed)"
+    },
+    {
+      "target": "wine:Domaine Durand Sauvignon Blanc 2025",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "the sommelier confirms the 2024.",
+        "to": "the sommelier confirms the bottle open now."
+      },
+      "reason": "November 2026: the Wines by the Glass sheet of 15 November 2026 prints Famille Durand 2025, where the menu page of 3 October printed 2024; the card follows the newer sheet and still sends the server to the label",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 118 (Sauvignon Blanc: Famille Durand 2025, Loire Valley, FR.); page:brennansneworleans-menus-pasted-2026-10-03.txt line 472 (the 2024 it printed)"
+    },
+    {
+      "target": "wine:Domaine Durand Sauvignon Blanc 2025",
+      "field": "kept.3.a",
+      "op": "replace",
+      "value": {
+        "from": "Answer: The menu prints 2024 and our wine list 2025, so I read the label before I name it.",
+        "to": "Answer: The November glass sheet prints 2025 and the October menu printed 2024, so I read the label before I name it."
+      },
+      "reason": "November 2026: the Wines by the Glass sheet of 15 November 2026 prints Famille Durand 2025, where the menu page of 3 October printed 2024; the card follows the newer sheet and still sends the server to the label",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 118 (Sauvignon Blanc: Famille Durand 2025, Loire Valley, FR.); page:brennansneworleans-menus-pasted-2026-10-03.txt line 472 (the 2024 it printed)"
+    },
+    {
+      "target": "wine:Domaine Durand Sauvignon Blanc 2025",
+      "field": "kept.4.a",
+      "op": "replace",
+      "value": {
+        "from": "The producer and vintage are disputed: the current menu prints Famille Durand, Val de Loire, 2024, and Binwise Domaine Durand, Loire Valley, 2025.",
+        "to": "The November glass sheet prints Famille Durand 2025; the October menu printed 2024, and Binwise Domaine Durand 2025."
+      },
+      "reason": "November 2026: the Wines by the Glass sheet of 15 November 2026 prints Famille Durand 2025, where the menu page of 3 October printed 2024; the card follows the newer sheet and still sends the server to the label",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 118 (Sauvignon Blanc: Famille Durand 2025, Loire Valley, FR.); page:brennansneworleans-menus-pasted-2026-10-03.txt line 472 (the 2024 it printed)"
+    },
+    {
+      "target": "wine:Domaine Durand Sauvignon Blanc 2025",
+      "field": "kept.4.a",
+      "op": "replace",
+      "value": {
+        "from": "Whether the 2024 is steel fermented",
+        "to": "Whether the 2025 is steel fermented"
+      },
+      "reason": "November 2026: the Wines by the Glass sheet of 15 November 2026 prints Famille Durand 2025, where the menu page of 3 October printed 2024; the card follows the newer sheet and still sends the server to the label",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 118 (Sauvignon Blanc: Famille Durand 2025, Loire Valley, FR.); page:brennansneworleans-menus-pasted-2026-10-03.txt line 472 (the 2024 it printed)"
+    },
+    {
+      "target": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023",
+      "field": "wine",
+      "op": "set",
+      "value": "Le Masche Barbera d’Asti Superiore",
+      "reason": "November 2026: the Wines by the Glass sheet of 15 November 2026 prints Barbera d'Asti Superiore, where the menu page of 3 October printed Barbera d'Asti; the card follows the newer sheet",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 124 (Barbera: La Miraja \"Le Masche\" Barbera d'Asti Superiore 2023 Piemonte IT.)"
+    },
+    {
+      "target": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023",
+      "field": "serviceNote",
+      "op": "append",
+      "value": "The Wines by the Glass sheet of 15 November 2026 prints it as Barbera d'Asti Superiore; read the label at lineup.",
+      "reason": "November 2026: the Wines by the Glass sheet of 15 November 2026 prints Barbera d'Asti Superiore, where the menu page of 3 October printed Barbera d'Asti; the card follows the newer sheet",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 124 (Barbera: La Miraja \"Le Masche\" Barbera d'Asti Superiore 2023 Piemonte IT.)"
+    },
+    {
+      "target": "wine:Gainey Estate Vineyards Chardonnay 2023",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "keeping the Leflaive as the step up,",
+        "to": "keeping the Jadot Les Pucelles by Coravin as the step up,"
+      },
+      "reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "wine:Gainey Estate Vineyards Chardonnay 2023",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "The Leflaive Mâcon-Verzé at $40 is the step up for a Burgundy lover.",
+        "to": "The Jadot Les Pucelles by Coravin is the step up for a Burgundy lover."
+      },
+      "reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "wine:Domaine de Châteaumar ‘Cuvée Vincent’ Côtes du Rhône 2023",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "or the Inglenook Rubicon at $70 by the glass.",
+        "to": "or the Domaine de Courcel Pommard by Coravin."
+      },
+      "reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "alternative to a $70 glass of Rubicon with the Chateaubriand",
+        "to": "alternative to the Coravin Pommard with the Chateaubriand"
+      },
+      "reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "wine:Moulin d’Issan Bordeaux Supérieur 2021",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "At $16 it is the value red beside the Rubicon.",
+        "to": "At $16 it is the value red beside the Coravin Pommard."
+      },
+      "reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "wine:Domaine Leflaive Mâcon-Verzé 2021",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "is the full bottle of the white we pour by Coravin,",
+        "to": "is the full bottle of the white we poured by Coravin until November 2026,"
+      },
+      "reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "wine:Domaine Leflaive Mâcon-Verzé 2021",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "Offer the bottle when two or more guests each order the Leflaive by the glass, with the redfish or the crab claws at dinner,",
+        "to": "Offer the bottle with the crab claws at dinner, to a table that asks for the Leflaive we used to pour by the glass,"
+      },
+      "reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "wine:Domaine Leflaive Mâcon-Verzé 2021",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "Since you are both enjoying the Leflaive, the bottle of Mâcon-Verzé 2021:",
+        "to": "If you love white Burgundy, the bottle of Leflaive Mâcon-Verzé 2021:"
+      },
+      "reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "term:Inglenook Rubicon",
+      "field": "toGuest",
+      "op": "set",
+      "value": "Rubicon is Inglenook's flagship Napa Cabernet blend from Rutherford; our 2010 is on the bottle list, and it left the glass list in November 2026.",
+      "reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "scenario:Chateaubriand wine",
+      "field": "you",
+      "op": "set",
+      "value": "Two directions by the glass: for elegance, a 2007 Pommard premier cru from Domaine de Courcel, poured by Coravin, red Burgundy softened by almost twenty years; for power, our Kokomo Cabernet from Sonoma County. I’ll confirm both glass prices for you, and I’d love to bring our sommelier over if you’d rather choose a bottle from the cellar.",
+      "reason": "November 2026: the answer poured the Inglenook Rubicon at its glass price; the Chateaubriand is re-paired to the de Courcel Pommard with the Kokomo beside it, and the sheet prints no price, so the server confirms it",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "mustknow:Wine program",
+      "field": "body",
+      "op": "replace",
+      "value": {
+        "from": "The live by-the-glass list (Binwise) pours Rare Brut 2012 and Leflaive Mâcon-Verzé by Coravin, plus Inglenook Rubicon 2010 at $70.",
+        "to": "The Wines by the Glass sheet of 15 November 2026 pours three by Coravin: Rare 2012, the Louis Jadot Les Pucelles 2008 and the Domaine de Courcel Pommard 2007."
+      },
+      "reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "mixup:Domaine Leflaive Mâcon-Verzé 2022 (Coravin) vs Fichet ‘Château London’ Mâcon-Igé 2024",
+      "field": "difference",
+      "op": "set",
+      "value": "Both are Chardonnay from Mâcon villages in southern Burgundy. The Leflaive Mâcon-Verzé, luh-FLEV, was our Coravin glass until November 2026 and is now among the past wines; its 2021 is on the bottle list. The Fichet Mâcon-Igé, fee-SHAY, is poured only as a 4 oz white on the dinner tasting, from a family estate at Igé; it has no glass price.",
+      "reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "mixup:Domaine Leflaive Mâcon-Verzé 2022 (Coravin) vs Fichet ‘Château London’ Mâcon-Igé 2024",
+      "field": "ask",
+      "op": "set",
+      "value": "Would you like a bottle of the Leflaive from the list, or are you having the tasting, where the Fichet is the white pour?",
+      "reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "wine:Domaine Leflaive Puligny-Montrachet 2016",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "to a guest who enjoyed the Leflaive by the glass and wants the real thing,",
+        "to": "to a guest who loves white Burgundy and wants the real thing,"
+      },
+      "reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "scenario:A buttery Chardonnay",
+      "field": "you",
+      "op": "set",
+      "value": "By the glass, the Gainey from Santa Barbara County is creamy, lemon curd and baked apple, $17. If you'd like more richness, we pour a premier cru white Burgundy by Coravin, Jadot's Les Pucelles 2008, and I'll confirm its glass price for you. For a bottle of rich California Chardonnay, let me bring our sommelier with the list.",
+      "reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "scenario:A buttery Chardonnay",
+      "field": "items",
+      "op": "set",
+      "value": [
+        "Gainey Estate Vineyards Chardonnay 2023",
+        "Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)"
+      ],
+      "reason": "November 2026: the card named a wine the glass sheet of 15 November 2026 no longer prints as poured by the glass; it now names the wine poured in its place, with no price since the sheet prints none",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130); research/glass-wines-2026-11-15.md (the pairings the two departed wines leave); the dish's own record"
+    },
+    {
+      "target": "wine:Domaine Durand Sauvignon Blanc 2025",
+      "field": "name",
+      "op": "set",
+      "value": "Famille Durand Val de Loire Sauvignon Blanc 2025",
+      "reason": "November 2026: the card names the vintage the glass sheet of 15 November 2026 prints; the id stays the one minted for Domaine Durand Sauvignon Blanc 2025. Builds only after the base sweep (nov-wines.base-edits.mjs --apply), since two asks and the fragments name the wine by its 2024 name",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 118 (Sauvignon Blanc: Famille Durand 2025, Loire Valley, FR.); page:brennansneworleans-menus-pasted-2026-10-03.txt line 472 (the 2024 it printed)"
+    },
+    {
+      "target": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023",
+      "field": "name",
+      "op": "set",
+      "value": "La Miraja ‘Le Masche’ Barbera d’Asti Superiore 2023",
+      "reason": "November 2026: the card names the wine as the glass sheet of 15 November 2026 prints it, with Superiore; the id stays the one minted for the name without it. Builds only after the base sweep (nov-wines.base-edits.mjs --apply), since the fragments name the wine by its old name",
+      "source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 124 (Barbera: La Miraja \"Le Masche\" Barbera d'Asti Superiore 2023 Piemonte IT.)"
+    },
+    {
+      "target": "house",
+      "op": "add",
+      "field": "sources",
+      "value": {
+        "title": "Brennan’s November 2026 sheets, photographed by the owner (seven dish sheets with listed ingredients, dietary notes and the chef’s notes, both pages of the Wines by the Glass sheet, and the Wine class sheets)",
+        "url": "",
+        "readOn": "2026-11-15"
+      },
+      "reason": "The November 2026 sheets are the source the past menu items, the three new tasting courses, the four new glass wines and the Wine class must-knows are read from; the dish and glass sheets are saved verbatim under pages/ and the Wine class under research/",
+      "source": "page:brennans-sheets-2026-11-15.txt"
     }
   ]
 }
