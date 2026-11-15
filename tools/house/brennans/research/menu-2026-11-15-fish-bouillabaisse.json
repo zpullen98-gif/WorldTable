@@ -44,7 +44,568 @@
  "pairingLogic": {},
  "sayIt": [],
  "unsourced": [],
- "sources": [],
+ "sources": [
+  {
+   "id": "sheet-2026-11-15",
+   "title": "Brennan's training sheets photographed on 15 November 2026, section A3 (Fish Bouillabaisse), with the owner's note that it replaces the Redfish Véronique and the points to put to the owner",
+   "publisher": "The house's own kitchen sheets, transcribed in this repository",
+   "url": "tools/house/brennans/research/menu-2026-11-15-sheets.md",
+   "supports": "The seven printed ingredients, the nine printed allergens, and the two chef's facts word for word. It prints no price, fish, stuffing, recipe or serving temperature.",
+   "kind": "primary"
+  },
+  {
+   "id": "repo-pack",
+   "title": "The house pack as shipped on 2 November 2026: the dish d-iwmu4qf7, its nine components, its ten lineup asks and the wine w-fesbm1v5",
+   "publisher": "This repository",
+   "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+   "supports": "What the apps already teach on this dish: the description, the three timed lines, the four kept notes, the pairing (first pick, second pick, step up, serve at 45 to 48°F), the say-it for bouillabaisse, panisse, aioli and confit, and the questions already put to the chef, the manager and the sommelier. Used here so nothing is repeated as new and so the house questions stay questions.",
+   "kind": "secondary"
+  },
+  {
+   "id": "repo-chatgpt",
+   "title": "ChatGPT's field notes for the Fish Bouillabaisse (item fish-bouillabaisse-tasting) and their source list",
+   "publisher": "This repository",
+   "url": "src/lib/data/fall-menu-2026.json",
+   "supports": "The five ingredient notes with their house boundaries, the two origin notes resting on the Marseille tourism office, the service checks (do not promise rouille; fin fish and shrimp are separate questions; Alum is not silently read as allium) and the note that speculative ancient origin language is not adopted. Read only, never edited.",
+   "kind": "secondary"
+  },
+  {
+   "id": "repo-cuisine",
+   "title": "The Table's Cuisine entries that already touch this plate: rouille and aioli (butter-emulsions), preserved lemon (larder), the garde manger and its terrines (kitchen-french), fish cooked to 63°C (brennans), and Escoffier's dates (history)",
+   "publisher": "This repository",
+   "url": "tools/derive/cuisine/butter-emulsions.json",
+   "supports": "Rouille said roo-EE, French for rust, 'aioli's red cousin', garlic, chili and a pinch of saffron pounded with bread soaked in fish broth and mounted with olive oil, often with a yolk; aioli as the garlic sauce of Provence; preserved lemon standing in for part of the lemon juice in an aioli; terrines as seasoned meat, fish or vegetable mixtures cooked in a mold and served cold; fish drying past 63°C (145°F); Escoffier (1846 to 1935).",
+   "kind": "secondary"
+  },
+  {
+   "id": "marseille-charte",
+   "title": "Charte de la Bouillabaisse",
+   "publisher": "Office Métropolitain de Tourisme et des Congrès de Marseille",
+   "url": "https://www.marseille-tourisme.com/offres/charte-de-la-bouillabaisse-marseille-2eme-fr-3383880/",
+   "supports": "The charter was created in 1980 against restaurants that did not respect the traditional recipes, and sets out the ingredients of a quality bouillabaisse while respecting the professional's art. A Marseille bouillabaisse holds at least four species from: rascasse, baudroie (lotte), rascasse blanche, fielas (congre), araignée (vive), chapon (scorpène), galinette (rouget grondin, optional) and Saint-Pierre. The service is left to the restaurateur. Read through a search summary; the page was not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "marseille-bouillabaisse",
+   "title": "La bouillabaisse (French and English pages: Bouillabaisse, the traditional fish soup)",
+   "publisher": "Office Métropolitain de Tourisme et des Congrès de Marseille",
+   "url": "https://www.marseille-tourisme.com/en/discover-marseille/local-food/la-bouillabaisse/",
+   "supports": "The city's own account: a fishers' dish, called a fish soup, generally served in two dishes, the fish and the broth, with rouille and croutons. The English page gives the chapon as 'capon (red scorpion fish)' and the galinette as red mullet, optional. Read through a search summary; the page was not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "marseille-panisses",
+   "title": "Panisses",
+   "publisher": "Office Métropolitain de Tourisme et des Congrès de Marseille",
+   "url": "https://www.marseille-tourisme.com/en/discover-marseille/gastronomy-in-marseille/panisses/",
+   "supports": "Panisse in Marseille is tied to the Italian workers from Piedmont and Liguria who worked in the factories of L'Estaque. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "marseille-aioli",
+   "title": "Aioli of Marseille",
+   "publisher": "Office Métropolitain de Tourisme et des Congrès de Marseille",
+   "url": "https://www.marseille-tourisme.com/en/discover-marseille/gastronomy-in-marseille/aioli-of-marseille",
+   "supports": "Mistral published his own aioli recipe in the Almanach provençal; purists make aioli of garlic, olive oil and salt in a mortar; egg is an addition in some regions and in modern restaurant versions; some add lemon juice, breadcrumbs, potato or mustard. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "academie-bouillabaisse",
+   "title": "bouillabaisse, Dictionnaire de l'Académie française, 9th edition",
+   "publisher": "Académie française",
+   "url": "https://www.dictionnaire-academie.fr/article/A9B1728",
+   "supports": "The word is of the nineteenth century, first in the form bouille-baïsse, borrowed from the Provençal boui-abaisso, 'bous et abaisse' (boil and lower). Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "academie-rouille",
+   "title": "rouille, Dictionnaire de l'Académie française, 9th edition",
+   "publisher": "Académie française",
+   "url": "https://www.dictionnaire-academie.fr/article/A9R3069",
+   "supports": "The definition, as the search printed it: 'Sauce provençale de couleur rouge orangé, à base d'huile d'olive, d'ail, de piment rouge ou de safran, que l'on sert avec la bouillabaisse ou la soupe de poissons.' The same word also names the corrosion of metal and a disease of plants. Read through a search summary; the page was not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "larousse-rouille",
+   "title": "rouille, Dictionnaire de français Larousse",
+   "publisher": "Larousse",
+   "url": "https://www.larousse.fr/dictionnaires/francais/rouille/70030",
+   "supports": "The culinary sense, as the search printed it: 'Sorte d'aïoli relevé, accompagnant la soupe de poisson et la bouillabaisse.' Read through a search summary; the page was not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "lerobert-bouillabaisse",
+   "title": "bouillabaisse, Dico en ligne Le Robert",
+   "publisher": "Dictionnaires Le Robert",
+   "url": "https://dictionnaire.lerobert.com/en/definition/bouillabaisse",
+   "supports": "Bouillabaisse is often presented with croutons and a garlic sauce called rouille, which may be stirred into it. Read through a search summary; the page was not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "oxford-rouille",
+   "title": "Rouille, Oxford Reference",
+   "publisher": "Oxford University Press",
+   "url": "https://www.oxfordreference.com/display/10.1093/oi/authority.20110803100430470",
+   "supports": "A Provençal sauce of red chilies, garlic and olive oil, bound with breadcrumbs or potatoes; the entry says the chilies give it a brownish red color, from which it takes its name, since rouille in French means, literally, rust. Read through a search summary; the page was not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "britannica-bouillabaisse",
+   "title": "Bouillabaisse",
+   "publisher": "Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/topic/bouillabaisse",
+   "supports": "A complex fish soup that began on the Mediterranean coast of France and a signature of Provençal cooking; the Marseille version is held the most authentic; ingredients: fish and shellfish, olive oil, onions, tomatoes, garlic, parsley, saffron, fennel, thyme, bay leaf and orange peel; it must use Mediterranean fish, with rascasse, a bony rock fish, essential; it is boiled quickly; rouille is a condiment added at the table, a paste of garlic, red pepper, bread crumbs and fish stock. Read through a search summary; the page was not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "britannica-soups",
+   "title": "Some Like It Hot: 9 Soups from Around the World, and the Britannica Dictionary entry for bouillabaisse",
+   "publisher": "Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/story/some-like-it-hot-9-soups-from-around-the-world",
+   "supports": "Bouillabaisse is traditionally served in two dishes, one for the fish and one for the broth. The Britannica Dictionary (britannica.com/dictionary/bouillabaisse) gives the looser everyday sense: a stew with strong spices and two or more kinds of fish. Read through a search summary; the page was not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "britannica-fennel",
+   "title": "Fennel",
+   "publisher": "Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/plant/fennel",
+   "supports": "Fennel is a perennial herb of the carrot family (Apiaceae) grown for its edible shoots, leaves and seeds; the bulb is the bulblike stem base of Florence fennel (Foeniculum vulgare, variety azoricum); the seeds hold 3 to 4 percent essential oil, chiefly anethole and fenchone. Read through a search summary; the page was not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "britannica-saffron",
+   "title": "Saffron",
+   "publisher": "Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/topic/saffron",
+   "supports": "Saffron is the 'golden-colored pungent stigmas (pollen-receiving structures) of the autumn crocus (Crocus sativus), which are dried and used as a spice to flavor foods and as a dye'; the three stigmas of each flower are collected and dried. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "bnf-reboul",
+   "title": "Notice bibliographique: La cuisinière provençale, Reboul, Jean-Baptiste (1862-1926)",
+   "publisher": "Bibliothèque nationale de France, catalogue général",
+   "url": "https://catalogue.bnf.fr/ark:/12148/cb40043939j.public",
+   "supports": "The author's dates, 1862 to 1926, and a 2005 reprint with a glossary and an index, so the book is still in print in this century. Read through a search summary; the page was not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "oqlf-aioli",
+   "title": "aïoli, Grand dictionnaire terminologique",
+   "publisher": "Office québécois de la langue française",
+   "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8975358/aioli",
+   "supports": "Aioli defined as a sauce of pounded garlic, egg yolk and olive oil. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "escoffier-288",
+   "title": "Fine forcemeat with cream, known as mousseline forcemeat (recipe 288), from Escoffier's guide of 1903, in the ckbk edition",
+   "publisher": "ckbk (the published English edition of the book)",
+   "url": "https://app.ckbk.com/recipe/esco04831c02s002ss002r003/fine-forcemeat-with-cream-known-as-mousseline-forcemeat",
+   "supports": "The proportion: 1 kg of flesh, well trimmed and free from sinew, to 4 egg whites; the forcemeat is for mousses, mousselines and quenelles for soup. The quantity of cream was not in the summary. Read through a search summary; the page was not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "escoffier-1562",
+   "title": "Forcemeat for mousses and mousselines of fish (recipe 1562), from Escoffier's guide, in the ckbk edition",
+   "publisher": "ckbk (the published English edition of the book)",
+   "url": "https://app.ckbk.com/recipe/esco04831c06s002r010/forcemeat-for-mousses-and-mousselines-of-fish",
+   "supports": "The method: pound the fish with the seasoning, adding the egg whites a little at a time; pass through a fine sieve; spread in a flat pan, smooth and set on ice for about 2 hours; then mix in the cream until completely incorporated. Read through a search summary; the page was not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "thackeray-ballads",
+   "title": "Ballads, by William Makepeace Thackeray (The Ballad of Bouillabaisse)",
+   "publisher": "Project Gutenberg, ebook 2732",
+   "url": "https://gutenberg.org/files/2732/2732-h/2732-h.htm",
+   "supports": "The poem exists under that title among Thackeray's ballads and opens by naming a Paris street, the Rue Neuve des Petits Champs, the New Street of the Little Fields. The year of the poem was not in the summary. Read through a search summary; the page was not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "thackeray-roundabout",
+   "title": "Roundabout Papers, by William Makepeace Thackeray (No. XVII, A Mississippi Bubble)",
+   "publisher": "Project Gutenberg, ebook 2608",
+   "url": "https://gutenberg.org/files/2608/2608-h/2608-h.htm",
+   "supports": "The essay describes a bouillabaisse at a tavern on Lake Pontchartrain that the writer judges better than any eaten at Marseilles, with no headache the next morning, and praises New Orleans as a city for eating and drinking, its claret no worse than at Bordeaux. The summary paraphrased the passage, so no wording is quoted here. Read through a search summary; the page was not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "picayune-1901",
+   "title": "Bouillabaisse, The Picayune's Creole Cook Book",
+   "publisher": "ckbk (the published text of the 1901 New Orleans cookbook)",
+   "url": "https://app.ckbk.com/recipe/thep19270c04s001ss004r006/bouillabaisse",
+   "supports": "The New Orleans cookbook of 1901 prints a bouillabaisse made with slices of red snapper and redfish. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "iso-3632",
+   "title": "ISO 3632-1:2011, Spices: Saffron (Crocus sativus L.), Part 1: Specification",
+   "publisher": "International Organization for Standardization (catalogue listing)",
+   "url": "https://standards.iteh.ai/catalog/standards/iso/64682741-d420-4c06-bfcc-41c6ecd33516/iso-3632-1-2011",
+   "supports": "An international standard for saffron exists in two parts, the specification and the test methods. The grades were read from the papers under saffron-papers, not from the standard. Read through a search summary; the page was not opened.",
+   "kind": "primary"
+  },
+  {
+   "id": "wikipedia-bouillabaisse",
+   "title": "Bouillabaisse",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Bouillabaisse",
+   "supports": "The name explained from the method (the fish added one kind at a time and the pot brought to the boil); in 1980 eleven Marseille restaurateurs drew up the charter that codified ingredients and method; it must include rascasse (Scorpaena scrofa), 'a bony rockfish which lives in the calanque and reefs close to shore'; in Marseille restaurants the fish are cleaned, scaled and washed, the broth is served first, very hot, with rouille on thick slices of bread rubbed with garlic, and the fish and potatoes follow on a separate platter; some variations add orange peel. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "wikipedia-reboul",
+   "title": "Jean-Baptiste Reboul",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Jean-Baptiste_Reboul",
+   "supports": "A chef and the author of La Cuisinière provençale: more than 1,000 Provençal recipes and 365 menus; first edition 1897, an instant success; 24 editions and 250,000 copies; also titled La Cuisinière du Midi; still reprinted. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "wikipedia-aioli",
+   "title": "Aioli, and L'Aiòli (the newspaper)",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Aioli",
+   "supports": "Aioli is a compound of the Provençal ai, garlic, and oli, oil; the name means garlic and oil in Catalan and Provençal; 'true aioli contains garlic and no other seasoning (except salt)'. The page on L'Aiòli: Frédéric Mistral founded the Provençal language newspaper of that name in 1891, named for the dish. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "wikipedia-panissa",
+   "title": "Panissa, with the pages on socca and farinata",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Panissa",
+   "supports": "Panissa is the Ligurian name; the family is farinata in Liguria, socca in Nice and cade in Toulon, the last thicker with a crunchy surface. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "wikipedia-picayune",
+   "title": "The Picayune's Creole Cook Book",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Picayune_Creole_Cookbook",
+   "supports": "Published in New Orleans in 1901 and widely credited with preserving the Creole cooking tradition; critics say it diminished the contributions of African, Caribbean and Native American cooks. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "slate-bouillabaisse",
+   "title": "Noble bouillabaisse",
+   "publisher": "Slate.fr",
+   "url": "https://www.slate.fr/story/38753/bouillabaisse",
+   "supports": "Reboul cites forty fish that may go into a bouillabaisse; this account gives six chefs as the charter's drafters. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "natgeo-bouillabaisse",
+   "title": "A fine meshed sieve (on bouillabaisse and the pride of Marseille)",
+   "publisher": "National Geographic",
+   "url": "https://www.nationalgeographic.com/travel/article/bouillabaisse-deconstructing-pride-marseille",
+   "supports": "Reboul's 1897 recipe became gospel for decades and stayed the norm for much of the twentieth century, until cheaper versions in Marseille led to a scandal. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "saveur-essentials",
+   "title": "Bouillabaisse Essentials",
+   "publisher": "Saveur",
+   "url": "https://www.saveur.com/article/Techniques/Bouillabaisse-Essentials/",
+   "supports": "Olive oil, garlic and onions go into the pot with fennel tops and herbs; potatoes and tomatoes (fresh in season, otherwise canned) are added; 'Fish, whole or cut into pieces, is then put in (the firmer fish first, more delicate varieties on top)'; stock and more oil; 'rapid boiling is the key to the process, emulsifying the oil, stock, and fish gelatin'; 'this can take up to 25 minutes, depending on age of potatoes'; saffron is essential and tints soup and fish red orange; baguette rounds are toasted and rubbed with fresh garlic, spread with rouille at the table and set in the empty bowls for the broth; rouille is 'a garlicky mayonnaise with saffron' and there is 'no definitive recipe for rouille'. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "saveur-recipe",
+   "title": "Bouillabaisse (recipe), with True Bouillabaisse",
+   "publisher": "Saveur",
+   "url": "https://www.saveur.com/article/Recipes/Bouillabaisse/",
+   "supports": "Onions, crushed garlic, parsley, thyme, bay leaf and fennel in 1/4 cup of the oil in a 10 to 12 quart pot; large, whole and firm fish first, then smaller, more delicate fish; 'Strain soup, and, for the first course, spread rouille on toast, place 3 pieces in each warm soup bowl, and add soup'; the fish follows as the second course. True Bouillabaisse (saveur.com/article/Travels/True-Bouillabaisse): the oil, stock and fish gelatin in the pot emulsify into a rich broth. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "saveur-panisse",
+   "title": "Panisse Is Here to Replace Your French Fries",
+   "publisher": "Saveur",
+   "url": "https://www.saveur.com/panisse-provence-best-french-snack/",
+   "supports": "A local culinary historian: 'Panisse probably originated in Genoa, Italy, and was embraced and prepared in Nice before making its way to Marseille'; both cities claim it; in Nice it is sold in a round saucer shape, coffee saucers being the molds; in Marseille the batter is rolled in a towel into a cylinder and circles are cut and fried; a Nice cook says it should be chickpea flour only, and a packaged product was found listing wheat flour. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "charter-accounts",
+   "title": "Three accounts of the 1980 charter: Generation Voyage (the origins 'from ancient Greece to the charter of 1980'), Perfectly Provence and Take a Chef",
+   "publisher": "Generation Voyage; Perfectly Provence; Take a Chef",
+   "url": "https://generationvoyage.fr/bouillabaisse-marseille/",
+   "supports": "One of them says the charter also requires saffron in threads and not powder, a rouille made in house and the broth served apart from the fish, and that it is a moral commitment among its signatories and not an official label; they count the drafters differently, eleven (perfectlyprovence.co) and about fifteen (takeachef.com/blog/fr-fr/meilleure-bouillabaisse-marseille). The summary did not say which page carried which sentence. A newspaper article in the same results (South China Morning Post, 'Marseille's beloved bouillabaisse gets update', scmp.com/lifestyle/food-drink/article/2125842) is read by its title only. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "name-accounts",
+   "title": "Three accounts of the name: a French dictionary page, a Marseille history article and a regional site",
+   "publisher": "La langue française (dictionary pages); Made in Marseille; Provence 7",
+   "url": "https://madeinmarseille.net/a-la-une-marseille/17202-histoire-bouillabaisse-cuisine-gastronomie/",
+   "supports": "The dictionary page: pronounced [bujabɛs], feminine noun, the spelling 'bouille à baisse' dated 1837, from the Provençal bouiabaisso, perhaps an alteration of 'bouille peis' (boil, fish) or from boil and lower. Made in Marseille (the address given here): Mistral gave the first plausible reading, 'boui abaisso', when it boils you lower it. Provence 7 lists the readings side by side: lower the boil, boil the fish, that which boils low. The dictionary page is on lalanguefrancaise.com; its exact address was not kept in the notes, so the address given here is the Marseille article. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "boil-accounts",
+   "title": "Pages on the hard boil and the emulsion",
+   "publisher": "Recipe and teaching pages in one search (MasterClass, Obviously French and others)",
+   "url": "https://www.masterclass.com/articles/how-to-make-bouillabaisse-classic-french-bouillabaisse-recipe",
+   "supports": "'Rapid boiling forces the olive oil into tiny droplets suspended in water, which creates a creamy texture further enhanced by the gelatin from the fish bones'; the gelatin of rascasse bones gives silkiness; one reference traces the name to a phrase meaning reduced broth and calls it a reminder that rapid boiling is needed to emulsify the large amount of oil. Against them, in the same results: one page warns that a boiled stock turns murky, one says the fish should poach at a simmer, and one account lowers the heat once the fish is in. The summary did not pin each sentence to its page. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "french-method-pages",
+   "title": "French pages on the method and the quantities",
+   "publisher": "My Provence; Provence-Alpes-Côte d'Azur Tourisme; Routard",
+   "url": "https://www.myprovence.fr/article/la-bouillabaisse",
+   "supports": "The fish is cooked in boiling water and plenty of olive oil until the broth is smooth and emulsified; one recipe takes 1.5 kg of firm fleshed sea fish for four people; there is no fixed recipe and it varies by family (provence-alpes-cotedazur.com/en/provence/things-to-do/wine-and-gastronomy/bouillabaisse-de-marseille-recipe/; routard.com/fr/mag/dossier/a/recette-de-la-bouillabaisse). The summary did not pin each sentence to its page. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "gbc-bouillabaisse",
+   "title": "Bouillabaisse (a chef's recipe)",
+   "publisher": "Great British Chefs",
+   "url": "https://www.greatbritishchefs.com/recipes/bouillabaisse",
+   "supports": "A restaurant method for the soup: blend with a stick blender to a smooth sauce, pour through a fine sieve pressing the solids with a ladle, then through a fine chinois without pressing. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "fdl-bouillabaisse",
+   "title": "How to make Michelin style bouillabaisse (Secrets of French cuisine)",
+   "publisher": "Fine Dining Lovers",
+   "url": "https://www.finedininglovers.com/explore/recipes/how-make-michelin-style-bouillabaisse-secrets-french-cuisine",
+   "supports": "A plated restaurant bouillabaisse: fish set on the plate with three potato balls, fennel salad and fennel fronds, a saffron jelly set with agar and fish stock, and grilled sourdough with rouille; the rouille is whisked slowly so that it thickens and does not split. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "aubery-sauce",
+   "title": "Fish in bouillabaisse sauce (recipe sheet)",
+   "publisher": "Cuisine d'Aubéry",
+   "url": "https://cuisinedaubery.com/pubaccess/fishinbouillabaissesauce.pdf",
+   "supports": "A dish by that name: fennel, onion, garlic, potato and fish are cooked, cooled, blended for a few minutes, thinned with water if too thick, and strained; the list carries fennel seeds, white wine and Pernod. A cook's own site, so a weak source: it shows that the idea exists, not how any restaurant does it. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "base-accounts",
+   "title": "The classic base and its arguments",
+   "publisher": "delicious. magazine and a recipe page in the same search",
+   "url": "https://www.deliciousmagazine.co.uk/recipes/bouillabaisse/",
+   "supports": "The classic base is olive oil, onions, garlic, fennel, tomatoes, saffron and a bouquet garni; orange peel and pastis are common additions and the other ingredients are 'the subject of heated debate'; one recipe calls pastis a Marseille ingredient in a Marseille dish, reinforcing the fennel and saffron. The summary did not pin each sentence to its page. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "fish-names",
+   "title": "French fish names in English",
+   "publisher": "Behind the French Menu, with a recipe on ckbk built on the charter",
+   "url": "https://behind-the-french-menu.blogspot.com/2016/04/fish-and-seafood-on-menus-in-france.html",
+   "supports": "Vive is the weever; congre is the conger eel, fielas in Marseille, and the head of a conger sometimes goes into the pot; baudroie or lotte is the monkfish, also called anglerfish; Saint-Pierre is the John Dory, among the most delicate fish and usually added late; grondin is the sea robin in most sources and rouget grondin the red gurnard. The ckbk recipe (app.ckbk.com/recipe/simp30798c02s001r003/bouillabaisse) gives the galinette as red gurnard. The summary did not pin each name to its page. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "rouille-fr",
+   "title": "La rouille, la sauce solaire qui donne du caractère aux plats de la mer",
+   "publisher": "Figaro Nautisme",
+   "url": "https://figaronautisme.meteoconsult.fr/actus-nautisme-lifestyle/2026-01-09/84354-la-rouille-la-sauce-solaire-qui-donne-du-caractere-aux-plats-de-la-mer",
+   "supports": "The strict base is garlic, chili (cayenne or dried), saffron and olive oil, with bread crumb or potato as the binder; egg yolk is not indispensable, some modern recipes add it and others use cooked potato; the sauce must thicken and take a fine orange color. A recipe page in the same search says the name comes from the red orange color. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "rouille-en",
+   "title": "Rouille pages in English",
+   "publisher": "Kvalifood; Food Republic; Mashed; Beyond.fr",
+   "url": "https://kvalifood.com/posts/rouille/",
+   "supports": "A Provençal garlic, saffron and chili sauce traditionally served with bouillabaisse and fish soup, spread on croutons, orange red from saffron and peppers; Marseille thickens it with bread and Nice with egg yolks in the manner of a mayonnaise; it is 'usually thickened with bread or sometimes potato pulp'; the traditional version takes saffron as its main aromatic and modern ones often use red pepper, pimentón or cayenne; one page calls the base an aioli with chilies and a little paprika; one says it is not a garnish but part of the dish (foodrepublic.com/1544787/what-is-rouille-difference-aioli/; mashed.com/605579/what-is-rouille-and-how-is-it-used; beyond.fr/food/rouille.html). The summary did not pin each sentence to its page. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "rouille-method",
+   "title": "A rouille made by hand",
+   "publisher": "A recipe page in one search (the Saveur gallery Making Bouillabaisse or Obviously French)",
+   "url": "https://saveur.com/gallery/Making-Bouillabaisse",
+   "supports": "Anchovy, saffron and bread soaked in broth are pounded to a thick paste; egg yolks and cayenne are added; the olive oil goes in drop by drop at first, then in a slow stream. The summary did not say which of the two pages carried it. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "etymonline-aioli",
+   "title": "aioli",
+   "publisher": "Online Etymology Dictionary",
+   "url": "https://www.etymonline.com/word/aioli",
+   "supports": "The English sense, garlic mayonnaise, dates from 1894; oli is from the Latin oleum. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "chickpea-family",
+   "title": "The chickpea cooking of the south of France",
+   "publisher": "The Good Life France, with a recipe on ckbk for the whole family (cade, calentica, farinata, panisse, socca)",
+   "url": "https://thegoodlifefrance.com/chickpea-cuisine-of-the-south-of-france/",
+   "supports": "Socca is baked in a wood fired oven on a hot flat pan as a very thin pancake; panisse is cooked to a firm paste, cooled until it can be cut, and deep fried. The ckbk recipe (its id there is plag22408c09s001r009) takes 400 g of chickpea flour to 80 cl of water, twice as thick as the panisse recipes, and one chef there credits chickpea flour cooking to Liguria. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "panisse-recipes",
+   "title": "Panisse recipes",
+   "publisher": "Snippets of Paris; Mission Food Adventure; one more recipe site",
+   "url": "https://snippetsofparis.com/panisse-recipe/",
+   "supports": "About 250 g of chickpea flour to 1 liter of water (Snippets of Paris; a second, a food writer's own site, gives the same and is left unnamed because its address is the writer's name); sifted flour whisked into simmering water to a thick batter, poured into a greased dish and set for a few hours in the refrigerator, then cut and fried; other recipes add cold water to the flour; a little olive oil or butter in the batter helps prevent lumps. No page gave a frying temperature. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "gaultmillau-panisses",
+   "title": "Authentiques panisses de Marseille, with Panisses farcis à l'anchois",
+   "publisher": "Gault&Millau",
+   "url": "https://fr.gaultmillau.com/en/news/authentiques-panisses-de-marseille",
+   "supports": "A Marseille chef's recipe, the chef not named here: 300 g of chickpea flour to 1 liter of water, 20 minutes of cooking and 13 hours of rest. A second recipe in the same magazine (stuffed with anchovy) lists 2 hours 10 of cooking and 12 hours of rest. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "garde-manger-ckbk",
+   "title": "Cooking Mousselines, and Basic Mousseline Formula, in a garde manger textbook on ckbk",
+   "publisher": "ckbk (a professional textbook; its title page was not seen)",
+   "url": "https://app.ckbk.com/section/gard79963c15s001ss004sss005/cooking-mousselines",
+   "supports": "'Molded mousselines and mousseline-based terrines are baked at low temperatures in a hot bain-marie, or water bath. They are always covered, usually with parchment and then aluminum foil.' They are 'generally cooked to an internal temperature of 145°F (62°C), or until they are just set', reach about 150°F (65°C) by carryover, in an oven of 300 to 325°F (150 to 163°C). Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "fish-mousseline-ckbk",
+   "title": "General Information About Fish Mousseline, in a classical technique textbook on ckbk",
+   "publisher": "ckbk (a professional textbook; its title page was not seen)",
+   "url": "https://app.ckbk.com/section/fund22556c15s001ss003sss001/general-information-about-fish-mousseline",
+   "supports": "'The proportions of ingredients for fish mousseline, a puree of fish with cream and egg whites, will vary depending on how you will use it and the type of fish selected'; make a stronger one for quenelles than for a mold; for a terrine, increase the egg whites or decrease the cream; lean fish such as sole, pike and turbot need less egg white, and fish that give off a lot of water when cooked need more. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "mousseline-pages",
+   "title": "Teaching pages on mousse, mousseline and quenelle",
+   "publisher": "A slide deck (Chapter 16: Mousse, Mousseline and Quenelle), The Culinary Pro, and two adapted recipes",
+   "url": "https://www.slideshare.net/slideshow/chapter-16-mousse-and-mousseline/37565866",
+   "supports": "Shellfish such as crab, shrimp, prawn and lobster are popular for mousselines; keep the fish cold, the cream chilled and the egg whites chilled; one classic formula is 250 g of raw flesh, 250 ml of cream, the white of 1 egg and seasoning; one adapted recipe takes 416 g of fish, 30 g of egg white, 500 g of heavy cream and 12 g of kosher salt (foragerchef.com or escoffierathome.com; theculinarypro.com/forcemeats). The summary did not pin each sentence to its page, so these are weak. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "terrine-pages",
+   "title": "Pages on cooking and pressing a fish terrine",
+   "publisher": "Kitchen NMBRS (a Dutch kitchen reference) and two recipe pages in the same search",
+   "url": "https://kitchennmbrs.app/en/product-knowledge/technieken/terrine-bereiden",
+   "supports": "Oven 150 to 160°C for fish terrines, a core of 62 to 65°C, 4 to 8 hours of pressing; cover and chill at least 4 hours, preferably overnight; fish to at least 145°F (63°C) by a food safety page; a fish loaf can turn rubbery, a gentle water bath avoids toughness, and water at a boil lets steam into the mold unevenly. The summary did not pin each sentence to its page. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "atk-fennel-confit",
+   "title": "Fennel Confit",
+   "publisher": "America's Test Kitchen",
+   "url": "https://www.americastestkitchen.com/recipes/14406-fennel-confit",
+   "supports": "A published recipe by that name from a test kitchen, so fennel confit is an established preparation and not this kitchen's coinage. Its figures were not in the summary. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "fennel-confit-pages",
+   "title": "Confit fennel recipes",
+   "publisher": "olive magazine; Amazing Food Made Easy; Oliso; two recipe pages",
+   "url": "https://www.olivemagazine.com/recipes/vegetarian/confit-fennel-with-puy-lentils/",
+   "supports": "'The slices are submerged in olive oil and slowly cooked with lemon zest, garlic and fresh herbs. It's a low and slow cooking method that produces food with a silky texture and concentrated flavor.' One recipe cooks cut fennel with garlic in olive oil and butter at 140°C for about 2 hours until soft; olive magazine cuts 500 g of fennel into 12 wedges; sous vide versions hold 183°F (83.9°C) or 185°F, one of them titled Orange-Saffron Fennel Confit; it keeps up to 3 days refrigerated and the strained oil up to a month; tarragon amplifies the anise note. The summary did not pin each sentence to its page. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "bmc-fennel-2025",
+   "title": "Genetics, genomics and breeding of fennel (review, 2025)",
+   "publisher": "BMC Plant Biology, on PubMed Central",
+   "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12057180/",
+   "supports": "The species name is still debated: Linnaeus first named the plant Anethum foeniculum, for its high content of anethole, and the authors keep the classical name Foeniculum vulgare. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "saffron-papers",
+   "title": "Three papers on the chemistry and grading of saffron",
+   "publisher": "Digital Library of Slovenia (a journal paper); Encyclopedia.pub (entry 34202); a Royal Society of Chemistry supplement",
+   "url": "https://encyclopedia.pub/entry/34202",
+   "supports": "Crocin is the carotenoid behind the yellow orange color, measured by absorbance at 440 nm; picrocrocin gives the bitter taste and is the second most abundant component of the dry spice; safranal is the volatile behind the smell and forms mainly from picrocrocin as the spice dries. The papers describe the grades of ISO 3632 differently, three in one and four categories in another (rsc.org/suppdata/c5/ay/c5ay01986a/c5ay01986a1.pdf). Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "saffron-yield",
+   "title": "Two figures for the flowers behind a kilogram of saffron",
+   "publisher": "Encyclopedia.pub (entry 16790); Encyclopedia.com",
+   "url": "https://encyclopedia.pub/entry/16790",
+   "supports": "About 150,000 flowers for 1 kg by the first; the stigmas of 1,500 flowers for 1 g by the second (encyclopedia.com/plants-and-animals/plants/plants/saffron), which is ten times as many. The two do not agree. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "preserved-lemon-pages",
+   "title": "Pages on preserved lemon",
+   "publisher": "A recipe wiki drawn from Wikipedia; Morocco World News; the Montreal Gazette (2019); Good Food (Australia); a Moroccan recipe page",
+   "url": "https://www.moroccoworldnews.com/2013/01/147056/moroccan-cuisine-how-to-make-preserved-lemons/",
+   "supports": "A salt cured lemon condiment common in North African cooking, Moroccan above all, used in tagines, sauces and salads and with fish and chicken; whole lemons packed with coarse salt; one recipe takes 6 lemons of about 140 g, 6 more for juice and 3/4 cup (110 g) of kosher salt, shaken now and then 'for at least 3 weeks, until lemon rinds soften'; 'Traditionally, they'd be pickled for several weeks'; a quick version takes 48 hours; one page says the pulp is not usually used and it is the peel that is eaten, another uses pulp and skin together; the taste is 'Tart, briny and surprisingly complex'. The summary did not pin each sentence to its page. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "atk-preserved-lemon-aioli",
+   "title": "Preserved Lemon Aioli",
+   "publisher": "America's Test Kitchen",
+   "url": "https://www.americastestkitchen.com/recipes/11549-preserved-lemon-aioli",
+   "supports": "A published recipe: 1/4 cup of preserved lemon chopped coarse, 3 large egg yolks, garlic and vegetable oil (not olive), with lemon juice added at the end, and a note that it is made with raw egg. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "preserved-lemon-aioli-recipes",
+   "title": "Other preserved lemon aioli recipes",
+   "publisher": "Food52; Today; a recipe from an Australian cafe on Clove Kitchen; Unilever Food Solutions",
+   "url": "https://food52.com/recipes/11999-preserved-lemon-aioli",
+   "supports": "One is offered for any seafood and starts with an egg yolk and a neutral oil before olive oil is whisked in slowly; one purees mayonnaise with preserved lemon, garlic, water, cayenne and olive oil and serves it with pan cooked cod (today.com); one is called good with fish, baked potatoes or grilled asparagus and uses 2 yolks and white wine vinegar; a food service recipe pairs it with harissa. So the sauce is common in published cooking and is put with fish and seafood. No page called the flavor floral. Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "bourride-pages",
+   "title": "Pages on bourride",
+   "publisher": "Tasting Table; a second page (TasteAtlas or a travel site); Saveur (Bourride, fish stew with aioli)",
+   "url": "https://www.tastingtable.com/1386373/bourride-french-fish-stew-aioli-ingredient/",
+   "supports": "'what differentiates bourride from the more famous bouillabaisse is the addition of aioli, a sauce made with garlic, olive oil, and, usually, egg yolks'; a saffron free recipe is dated to an 1897 cookbook that describes an aioli thickened bouillabaisse; bourride is the everyday fishers' stew, cheaper, of a single white fish, traditionally monkfish. A third page in the search says both stews are scented with saffron, garlic, fennel and orange peel, so the pages disagree on saffron in a bourride (saveur.com/article/recipes/classic-french-fish-stew-with-aioli). Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "cioppino-pages",
+   "title": "Bouillabaisse or cioppino",
+   "publisher": "Harbor Fish Market, with two general pages in the same search",
+   "url": "https://harborfish.com/bouillabaisse-or-cioppino/",
+   "supports": "'while cioppino has a true tomato base, bouillabaisse has a white (fish stock) base with some tomatoes thrown in'; cioppino is an Italian American fish stew invented in San Francisco; it usually includes wine, where wine in a bouillabaisse is argued over. The summary did not pin the last two sentences to their pages. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "decanter-bouillabaisse",
+   "title": "Best wine with a bouillabaisse fish stew (Ask Decanter)",
+   "publisher": "Decanter",
+   "url": "https://www.decanter.com/learn/best-wine-with-a-bouillabaisse-fish-stew-ask-decanter-455805",
+   "supports": "The magazine's writer prefers a Bandol rosé to a Côtes de Provence with the full soup, as stronger in flavor and more savory than many Côtes de Provence rosés. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "wine-pages-fr",
+   "title": "French guides on wine with bouillabaisse",
+   "publisher": "Vinatis; Hachette Vins; a French wine forum",
+   "url": "https://www.vinatis.com/conseils/quel-vin-avec-la-bouillabaisse-",
+   "supports": "Bandol rosé 'ticks all the boxes', as opposed to a pale, light summer rosé; a Côtes de Provence rosé is the lighter option; white Cassis is called the classic accord with bouillabaisse, its acidity cutting through, and white Bandol is fuller than Cassis (hachette-vins.com/cuisine-vins/43/bouillabaisse/). The summary did not pin each sentence to its page. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "irishexaminer-rose",
+   "title": "A wine column on aioli and Provence rosé",
+   "publisher": "Irish Examiner",
+   "url": "https://www.irishexaminer.com/food/arid-41818091.html",
+   "supports": "A chilled Provence rosé is 'one of the few things that can cut through the garlicky richness' of an aioli. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "thackeray-notes",
+   "title": "Two notes on Thackeray and the ballad",
+   "publisher": "Literary Ballad Archive; a 1911 newspaper on Papers Past (National Library of New Zealand)",
+   "url": "https://literaryballadarchive.com/?p=1794",
+   "supports": "Thackeray's dates, 1811 to 1863; the 1911 piece says the poem recalls a dingy but cosy little restaurant in the Rue Neuve des Petits Champs where he first tasted the dish (paperspast.natlib.govt.nz/newspapers/ESD19110722.2.12). Read through a search summary; the page was not opened.",
+   "kind": "secondary"
+  },
+  {
+   "id": "nola-pages",
+   "title": "Later pages on the New Orleans bouillabaisse",
+   "publisher": "Recipe and menu history pages in one search",
+   "url": "https://www.foodhistory.com/classics/picayune/ccb.htm",
+   "supports": "Recipe pages credit Thackeray with a tribute to Creole cookery and render it in varying words, that the like of the New Orleans bouillabaisse was never eaten in Marseilles or Paris; a reprinted 1910 menu lists a Redfish Bouillabaisse, Gulf fish in place of Mediterranean. Weak: no page cited the essay, which is why the essay itself is listed under thackeray-roundabout. Found by the first researcher of this dish, whose notes survive; read through a search summary, the page not opened.",
+   "kind": "secondary"
+  }
+ ],
  "interimNotes": {
   "note": "Raw search notes, kept in the file so a stop loses nothing; the last commit replaces them with the finished sections and removes this key. Read through search summaries only.",
   "firstResearcher": [
@@ -81,7 +642,14 @@
    "N7 (7/18) Thackeray New Orleans: \"A Mississippi Bubble\", Roundabout Papers No. XVII (sciper.org/print/CM1-4-6-7.html = Cornhill Magazine index; gutenberg.org/files/2608/2608-h/2608-h.htm): describes a bouillabaisse at a tavern on Lake Pontchartrain that the narrator judges better than any eaten in Marseilles; no morning headache; praises New Orleans for eating and drinking; claret there no worse than at Bordeaux. Wording NOT quoted in summary: paraphrase only.",
    "N8 (8/18) Britannica (allowed domain): britannica.com/topic/bouillabaisse: complex fish soup originating on the Mediterranean coast of France, one of the glories of Provencal cuisine (summary: \"signature of Provencal cooking\"); Marseille version regarded most authentic; ingredients fish and shellfish, olive oil, onions, tomatoes, garlic, parsley, saffron, fennel, thyme, bay leaf, orange peel; must use Mediterranean fish, with racasse (a bony rock fish) considered essential; boiled quickly; rouille = condiment added at table, a paste of garlic, red pepper, bread crumbs and fish stock. britannica.com/story/some-like-it-hot-9-soups-from-around-the-world: traditionally served in two dishes, one for the fish and one for the broth. britannica.com/dictionary/bouillabaisse: a stew with strong spices and two or more kinds of fish. britannica.com/plant/fennel: perennial herb of the carrot family (Apiaceae) grown for edible shoots, leaves and seeds; Florence fennel (Foeniculum vulgare variety azoricum) = edible bulblike stem bases; seeds contain 3 to 4 percent essential oil, principal components anethole and fenchone. BMC Plant Biology 2025 review (ncbi PMC12057180): Linnaeus's name Anethum foeniculum for its high content in anethole.",
    "N9 (9/18) Escoffier: app.ckbk.com/recipe/esco04831c02s002ss002r003 recipe 288 \"fine forcemeat with cream known as mousseline forcemeat\" (1903): 1 kg flesh well trimmed and free from sinew, 4 egg whites; for mousses, mousselines and quenelles for soup. app.ckbk.com/recipe/esco04831c06s002r010 recipe 1562: pound the fish with the seasoning, adding the egg whites a little at a time, pass through a fine sieve; spread in a flat pan, smooth, on ice about 2 hours; then carefully mix in the cream until completely incorporated. Cream amount NOT shown. Adapted recipe (foragerchef.com/?p=3659 or escoffierathome.com/?p=1226): 416 g fish, 30 g egg white, 500 g heavy cream, 12 g kosher salt, \"adapted from those of Escoffier and Julia Child\". Quenelle test NOT found.",
-   "N10 (10/18) bouillabaisse sauce: cuisinedaubery.com/pubaccess/fishinbouillabaissesauce.pdf \"fish in bouillabaisse sauce\": fennel, onion, garlic, potato and fish cooked, cooled, blended a few minutes, thinned with water if too thick, strained; ingredients include fennel seeds, white wine and Pernod. finedininglovers \"how to make michelin style bouillabaisse\": plated fish, three potato balls, fennel salad, fennel fronds, saffron jelly (agar, fish stock), grilled sourdough with rouille. greatbritishchefs.com/recipes/bouillabaisse: stick blender and fine chinois. Rouille method (which page? saveur gallery or obviouslyfrench): anchovy, saffron and broth soaked bread pounded to a thick paste, egg yolks and cayenne added, olive oil drop by drop then slow stream. A chef: the secret is the stock. \"bouillabaisse terrine\" NOT found."
+   "N10 (10/18) bouillabaisse sauce: cuisinedaubery.com/pubaccess/fishinbouillabaissesauce.pdf \"fish in bouillabaisse sauce\": fennel, onion, garlic, potato and fish cooked, cooled, blended a few minutes, thinned with water if too thick, strained; ingredients include fennel seeds, white wine and Pernod. finedininglovers \"how to make michelin style bouillabaisse\": plated fish, three potato balls, fennel salad, fennel fronds, saffron jelly (agar, fish stock), grilled sourdough with rouille. greatbritishchefs.com/recipes/bouillabaisse: stick blender and fine chinois. Rouille method (which page? saveur gallery or obviouslyfrench): anchovy, saffron and broth soaked bread pounded to a thick paste, egg yolks and cayenne added, olive oil drop by drop then slow stream. A chef: the secret is the stock. \"bouillabaisse terrine\" NOT found.",
+   "N11 (11/18) method FR: en.wikipedia Bouillabaisse: in Marseille restaurants fish first cleaned and scaled, then washed; potatoes and fish served separately from broth; 1980 charter codified ingredients and method; must include rascasse. A source (myprovence.fr or provence-alpes-cotedazur.com): fish cooked in boiling water and plenty of olive oil until the bouillon is unctuous and emulsified. A recipe (provence-alpes-cotedazur.com/en/.../bouillabaisse-de-marseille-recipe or ipa-international.org): 1.5 kg firm fleshed sea fish (rouget, lotte, bar) for 4 = about 375 g a person. routard.com recipe for 8. No fixed recipe, varies by Marseille family. NOT confirmed: 15 to 20 min boil, firm fish first then tender, sweating order.",
+   "N12 (12/18) fish names: en.wikipedia Bouillabaisse: must include rascasse (Scorpaena scrofa), \"a bony rockfish which lives in the calanque and reefs close to shore\". marseille-tourisme.com/en/discover-marseille/local-food/la-bouillabaisse/: \"capon (red scorpion fish)\"; galinette translated red mullet, optional. Vive = weever; congre = conger eel, Marseille name fielas; head of a conger sometimes added (one source). Baudroie = lotte = monkfish, also anglerfish (behind-the-french-menu.blogspot: number five most popular fish in French restaurants). Saint-Pierre = John Dory, among the most delicate, typically added late in cooking. Galinette contested: ckbk charter based recipe (app.ckbk.com/recipe/simp30798c02s001r003/bouillabaisse) pairs it with red gurnard; tourism office English page says red mullet. Grondin = sea robin in most sources; rouget grondin = red gurnard. Michelin Guide Vert four essential elements (via Wikipedia; list not shown). nj.gov/seafood/Foreign_Names_for_Finfish_Shellfish.pdf exists, not summarised. saveur True-Bouillabaisse.",
+   "N13 (13/18) preserved lemon aioli: americastestkitchen.com/recipes/11549-preserved-lemon-aioli: 1/4 cup preserved lemon chopped coarse, 3 large egg yolks, garlic, vegetable oil (not olive), lemon juice at the end; raw egg note. food52.com/recipes/11999-preserved-lemon-aioli: pitched for any seafood; large egg yolk, canola oil first, olive oil whisked in slowly (living writer: do not name). today.com recipe: mayonnaise pureed with preserved lemon, garlic, water, cayenne and olive oil, served with pan cooked cod. Cornersmith version (clove.kitchen): good with fish, baked potatoes or grilled asparagus; 2 yolks, white wine vinegar. unileverfoodsolutions.us harissa preserved lemon aioli. saveur.com/article/recipes/classic-french-fish-stew-with-aioli (Bourride). \"Floral\" NOT sourced.",
+   "N14 (14/18) panisse ratio: about 250 g chickpea flour per 1 litre water: a living writer's recipe (davidlebovitz.com: 2 1/4 cups (250 g) to 1 quart, a scant litre) and snippetsofparis.com/panisse-recipe (250 g to 1 litre). fr.gaultmillau.com/en/news/authentiques-panisses-de-marseille (a Marseille chef): 300 g to 1 l; cooking time 20 min, rest 13 h. fr.gaultmillau.com/en/news/panisses-farcis-a-l-anchois: cooking 2 h 10, resting 12 h. Sifted flour whisked into simmering water to a thick batter, into a greased dish, a few hours in the refrigerator (mission-food or tarasmulticulturaltable); others add cold water to the flour; a little olive oil and/or butter helps prevent lumps and adds richness. Frying temperature NOT found.",
+   "(one call refused by the search API, three blocked domains in allowed_domains; no result, not counted)",
+   "N15 (15/18) method EN (wikipedia + saveur only): saveur.com/article/Techniques/Bouillabaisse-Essentials: olive oil, garlic, onions go into the pot with fennel tops and herbs; potatoes and tomatoes (fresh in season, otherwise canned) added; \"Fish, whole or cut into pieces, is then put in (the firmer fish first, more delicate varieties on top)\"; stock and more oil; \"rapid boiling is the key to the process, emulsifying the oil, stock, and fish gelatin, thus forming the rich soup that characterizes a successful bouillabaisse\"; \"this can take up to 25 minutes, depending on age of potatoes\"; saffron essential, \"lending its unmistakable flavor to the dish and tinting both soup and fish a distinctive red-orange color\"; baguette rounds toasted and rubbed with fresh garlic; at table guests slather them with rouille and place them in empty bowls ready for the bouillon; rouille \"a garlicky mayonnaise with saffron\", \"no definitive recipe for rouille\". saveur.com/article/Recipes/Bouillabaisse: onions, crushed garlic, parsley, thyme, bay leaf, fennel in 1/4 cup of the oil in a 10 to 12 quart pot; add large, whole and firm fish, then smaller, more delicate fish; \"Strain soup, and, for the first course, spread rouille on toast, place 3 pieces in each warm soup bowl, and add soup\"; fish follows as second course. \"twenty minutes\", \"food mill\", \"one at a time\" NOT in results. saveur.com/article/Recipes/Rouille exists.",
+   "STOP SEARCHING at 15. Three left for the run."
   ]
  }
 }
