@@ -1818,3 +1818,44 @@ needs:
   on the pack), a fall card, Go deeper, the Back chains and the Practise
   root; `nav.test.ts`, `navigation.test.ts`, `fall-menu.test.ts` and
   `study.test.ts` pin the engines and the words.
+
+## The past: served, read and never dealt (15 November 2026)
+
+A dish, wine or cocktail the house no longer serves keeps its record, its id,
+its marks and its notes, and is filed under a section whose name begins
+`Past ` (`Past menu items`, `Past wines by the glass`). That is the whole
+rule: no field says it and no tombstone is written.
+
+- **The rule lives in `src/lib/house/house-schema.ts`**: `PAST_PREFIX`,
+  `isPast(item)` (the section is a string and, trimmed, begins `Past `,
+  capital P and one space) and `liveHouse(house)`, the house as it is served.
+  `liveHouse` hands back the very object when nothing is past; otherwise a
+  copy with the past items off the three lists, and off `lexicon` and
+  `components` any record whose `itemIds` names only past items. The port
+  carries them as `OOT.houseLib.isPast`, `OOT.houseLib.liveHouse` and
+  `OOT.houseLib.constants.PAST_PREFIX`. Never a second regex.
+- **The engine deals the live house.** `dealQuestion`, `dealRound`,
+  `drillableCounts`, `drillableCount`, `readyKinds`, `buildFlashcards` and
+  `sayable` (`house-drills.ts`) read through `liveHouse`, so no wing narrows
+  the house for a drill. A tasting course still prints what the tasting names,
+  and `gradeSaid`, `gradeScenario`, `findItem`, the merge, the sync and the
+  pack take the whole house: a past dish opened from its list is still read
+  and graded by id.
+- **An app shows the whole house and deals the live one.** In the Table the
+  Menu list draws every section, so `Past menu items` is the last chip and
+  group because the pack files it last, and its cards open. What deals or
+  counts asks `isPast` or `liveHouse`: the section deck doors and My weak ones
+  (`flashcards/+page.svelte`), Due today (`stores/today.svelte.ts`), the dishes
+  quiz, the guest menu, the menu the Maître d' is told about (`herHouse`), the
+  level page's count line and chips, the house bar's counts and the Menu
+  list's facts line and progress.
+- **The whole menu deck keeps every dish** (ChatGPT's
+  `tests/learning-flow.spec.ts` pins its count) and deals the past ones last
+  through `shufflePastLast` (`house-drill-round.ts`), so a short sitting holds
+  none.
+- **`tastingOnlyIds`** (`study.ts`): a course dish with no printed price that
+  one of the house's own meals serves too stays a row in its section.
+- **The one edge.** On a device where the person edited a plain field of a
+  dish before the edition that files it as past, the edition rule keeps their
+  record, section included, so it is still dealt until they re-file it in
+  Edit the menu.
