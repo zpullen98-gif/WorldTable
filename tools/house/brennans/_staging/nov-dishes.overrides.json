@@ -1,0 +1,751 @@
+{
+	"entries": [
+		{
+			"target": "dish:Steak Tartare Cannoli",
+			"field": "section",
+			"op": "set",
+			"value": "Past menu items",
+			"reason": "November 2026: Steak Tartare with Rye replaces it, so the dish is filed under Past menu items, the section the engine's past rule reads; its name, id, description, marks, notes and pairing are untouched and it stays in the house to be read",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Steak Tartare with Rye sheet; the page's fourth line: Steak Tartare with Rye replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "dish:Steak Tartare Cannoli",
+			"field": "meals",
+			"op": "set",
+			"value": [
+				"Dinner"
+			],
+			"reason": "A past dish names the meals it was served at and no tasting: Dinner. The dinner tasting no longer serves it, and an empty list would show it under every meal",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Steak Tartare with Rye sheet; the page's fourth line: Steak Tartare with Rye replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "dish:Steak Tartare Cannoli",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "Why did it leave the menu?",
+				"a": "Steak Tartare with Rye took its place in November 2026: the raw beef tenderloin stays, and the potato cannoli shell, the crème fraîche and the egg yolk bottarga go. The cannoli is kept here to be read, not sold."
+			},
+			"reason": "A past dish says what took its place and when, under its own question, so the card explains why it is filed under Past menu items",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Steak Tartare with Rye sheet; the page's fourth line: Steak Tartare with Rye replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "dish:Louisiana BBQ Lobster",
+			"field": "section",
+			"op": "set",
+			"value": "Past menu items",
+			"reason": "November 2026: Tuna Crudo replaces it, so the dish is filed under Past menu items, the section the engine's past rule reads; its name, id, description, marks, notes and pairing are untouched and it stays in the house to be read",
+			"source": "page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, headed Tasting menu; the page's fourth line: Tuna Crudo replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "dish:Louisiana BBQ Lobster",
+			"field": "meals",
+			"op": "set",
+			"value": [
+				"Dinner"
+			],
+			"reason": "A past dish names the meals it was served at and no tasting: Dinner. The dinner tasting no longer serves it, and an empty list would show it under every meal",
+			"source": "page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, headed Tasting menu; the page's fourth line: Tuna Crudo replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "dish:Louisiana BBQ Lobster",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "Why did it leave the menu?",
+				"a": "Tuna Crudo took its place in November 2026, as the second course of the Dinner Tasting Menu. The lobster is kept here to be read, not sold."
+			},
+			"reason": "A past dish says what took its place and when, under its own question, so the card explains why it is filed under Past menu items",
+			"source": "page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, headed Tasting menu; the page's fourth line: Tuna Crudo replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "dish:Redfish Véronique",
+			"field": "section",
+			"op": "set",
+			"value": "Past menu items",
+			"reason": "November 2026: Fish Bouillabaisse replaces it, so the dish is filed under Past menu items, the section the engine's past rule reads; its name, id, description, marks, notes and pairing are untouched and it stays in the house to be read",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Fish Bouillabaisse sheet, headed Tasting menu; the page's fourth line: Fish Bouillabaisse replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "dish:Redfish Véronique",
+			"field": "meals",
+			"op": "set",
+			"value": [
+				"Dinner"
+			],
+			"reason": "A past dish names the meals it was served at and no tasting: Dinner. The dinner tasting no longer serves it, and an empty list would show it under every meal",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Fish Bouillabaisse sheet, headed Tasting menu; the page's fourth line: Fish Bouillabaisse replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "dish:Redfish Véronique",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "Why did it leave the menu?",
+				"a": "Fish Bouillabaisse took its place in November 2026, as the third course of the Dinner Tasting Menu. The redfish is kept here to be read, not sold."
+			},
+			"reason": "A past dish says what took its place and when, under its own question, so the card explains why it is filed under Past menu items",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Fish Bouillabaisse sheet, headed Tasting menu; the page's fourth line: Fish Bouillabaisse replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "dish:The Snickers",
+			"field": "section",
+			"op": "set",
+			"value": "Past menu items",
+			"reason": "November 2026: Chocolate Crémeux replaces it, so the dish is filed under Past menu items, the section the engine's past rule reads; its name, id, description, marks, notes and pairing are untouched and it stays in the house to be read",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Chocolate Cremeux sheet, headed Tasting menu; the page's fourth line: Chocolate Crémeux replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "dish:The Snickers",
+			"field": "meals",
+			"op": "set",
+			"value": [
+				"Breakfast & lunch",
+				"Dinner"
+			],
+			"reason": "A past dish names the meals it was served at and no tasting: Breakfast & lunch and Dinner. The dinner tasting no longer serves it, and an empty list would show it under every meal",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Chocolate Cremeux sheet, headed Tasting menu; the page's fourth line: Chocolate Crémeux replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "dish:The Snickers",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "Why did it leave the menu?",
+				"a": "Chocolate Crémeux took its place in November 2026, as the fifth course of the Dinner Tasting Menu. The Snickers is kept here to be read, not sold."
+			},
+			"reason": "A past dish says what took its place and when, under its own question, so the card explains why it is filed under Past menu items",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Chocolate Cremeux sheet, headed Tasting menu; the page's fourth line: Chocolate Crémeux replaces it); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "dish:Tuna Crudo",
+			"field": "meals",
+			"op": "set",
+			"value": [
+				"Dinner",
+				"Dinner tasting"
+			],
+			"reason": "The second course of the Dinner Tasting Menu from November 2026, in place of the Louisiana BBQ Lobster: the dish gains the Dinner tasting meal and keeps Dinner",
+			"source": "page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Dinner Tasting Menu, second course: the Tuna Crudo takes the place of the Louisiana BBQ Lobster from November 2026. The menu printed the Fichet Mâcon-Igé 2024 for the lobster: is it still the pour with the Tuna Crudo, and how does the card print the course?",
+				"askWhom": "sommelier",
+				"items": [
+					"Tuna Crudo",
+					"Fichet ‘Château London’ Mâcon-Igé 2024"
+				]
+			},
+			"reason": "The second course's pour was printed for the dish it replaced and no tasting card was photographed, so the pour stands until lineup confirms it and the card asks rather than claiming it",
+			"source": "page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md); page:brennans-tasting-menus-pasted-2026-10-05.txt (the pour as printed for the lobster)"
+		},
+		{
+			"target": "dish:Fish Bouillabaisse",
+			"field": "meals",
+			"op": "set",
+			"value": [
+				"Dinner",
+				"Dinner tasting"
+			],
+			"reason": "The third course of the Dinner Tasting Menu from November 2026, in place of the Redfish Véronique: the dish gains the Dinner tasting meal and keeps Dinner",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Fish Bouillabaisse sheet, headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Dinner Tasting Menu, third course: the Fish Bouillabaisse takes the place of the Redfish Véronique from November 2026. The menu printed the Louis Jadot Beaune 1er Cru 2023, a red, for the redfish: is it still the pour with the Fish Bouillabaisse, and how does the card print the course?",
+				"askWhom": "sommelier",
+				"items": [
+					"Fish Bouillabaisse",
+					"Louis Jadot Beaune 1er Cru 2023"
+				]
+			},
+			"reason": "The third course's pour was printed for the dish it replaced and no tasting card was photographed, so the pour stands until lineup confirms it and the card asks rather than claiming it",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Fish Bouillabaisse sheet, headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md); page:brennans-tasting-menus-pasted-2026-10-05.txt (the pour as printed for the redfish)"
+		},
+		{
+			"target": "dish:Chocolate Crémeux",
+			"field": "meals",
+			"op": "set",
+			"value": [
+				"Dinner",
+				"Dinner tasting"
+			],
+			"reason": "The fifth course of the Dinner Tasting Menu from November 2026, in place of The Snickers: the dish gains the Dinner tasting meal and keeps Dinner",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Chocolate Cremeux sheet, headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Dinner Tasting Menu, fifth course: the Chocolate Crémeux takes the place of The Snickers from November 2026. The menu printed the La Tour Vieille Banyuls Reserva for The Snickers: is it still the pour with the Chocolate Crémeux, and how does the card print the course?",
+				"askWhom": "sommelier",
+				"items": [
+					"Chocolate Crémeux",
+					"Domaine La Tour Vieille Banyuls Reserva NV"
+				]
+			},
+			"reason": "The fifth course's pour was printed for the dish it replaced and no tasting card was photographed, so the pour stands until lineup confirms it and the card asks rather than claiming it",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Chocolate Cremeux sheet, headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md); page:brennans-tasting-menus-pasted-2026-10-05.txt (the pour as printed for The Snickers)"
+		},
+		{
+			"target": "tasting:Dinner Tasting Menu",
+			"field": "note",
+			"op": "append",
+			"value": "From November 2026 the second, third and fifth courses are the Tuna Crudo, the Fish Bouillabaisse and the Chocolate Crémeux. Their three pours were printed for the courses they replaced: confirm each at lineup before you name it.",
+			"reason": "The note says the menu prints these five pours; three of them were printed for the lobster, the redfish and the Snickers, so the note now says which courses are new and that their pours are to confirm",
+			"source": "page:brennans-sheets-2026-11-15.txt (the three sheets headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "mustknow:Dinner Tasting Menu, $80",
+			"field": "body",
+			"op": "replace",
+			"value": {
+				"from": "Louisiana BBQ lobster → Redfish Véronique → Rohan duck → The Snickers",
+				"to": "Tuna Crudo → Fish Bouillabaisse → Rohan duck → Chocolate Crémeux"
+			},
+			"reason": "The must-know lists the five courses in order; courses 2, 3 and 5 are the November 2026 dishes",
+			"source": "page:brennans-sheets-2026-11-15.txt (the three sheets headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "mustknow:Dinner Tasting Menu, $80",
+			"field": "body",
+			"op": "append",
+			"value": "The second, third and fifth courses are new from November 2026, and their pours were printed for the courses they replaced: confirm each at lineup.",
+			"reason": "The pours listed were printed for the old courses; the must-know says so rather than teach them as settled",
+			"source": "page:brennans-sheets-2026-11-15.txt (the three sheets headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "mustknow:The sauces on our menus",
+			"field": "body",
+			"op": "replace",
+			"value": {
+				"from": "is on the Redfish Véronique.",
+				"to": "was on the Redfish Véronique, now among the past menu items."
+			},
+			"reason": "The Redfish Véronique left the menu in November 2026, so the must-know no longer teaches its sauce as one on the menu",
+			"source": "page:brennans-sheets-2026-11-15.txt (Fish Bouillabaisse replaces the Redfish Veronique); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "mustknow:The sauces on our menus",
+			"field": "body",
+			"op": "replace",
+			"value": {
+				"from": "on the Louisiana Oysters and the BBQ Lobster.",
+				"to": "on the Louisiana Oysters, and was on the BBQ Lobster until it left the menu."
+			},
+			"reason": "The Louisiana BBQ Lobster left the menu in November 2026, so the must-know no longer teaches it as a dish on the menu",
+			"source": "page:brennans-sheets-2026-11-15.txt (Tuna Crudo replaces the Louisiana BBQ Lobster); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "dispute:Louisiana BBQ Lobster tasting pour",
+			"field": "item",
+			"op": "set",
+			"value": "Tuna Crudo",
+			"reason": "The dispute is about the second course's pour, and the second course is the Tuna Crudo from November 2026: it is re-pointed to the dish now served, its id held, so it no longer hangs on a past dish and the count rule's lobster pour dispute stays in the house",
+			"source": "page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, headed Tasting menu); the owner's instruction of 15 November 2026 (research/menu-2026-11-15-sheets.md)"
+		},
+		{
+			"target": "dispute:Louisiana BBQ Lobster tasting pour",
+			"field": "resolution",
+			"op": "set",
+			"value": "Settled for the printed menu of 3 October 2026: the Dinner Tasting Menu the owner copied from brennansneworleans.com paired the second course, then the Louisiana BBQ Lobster, with Fichet Château London Mâcon-Igé 2024 (paste line 255), as the guide did. The Matrot reading came from an indexed copy, not the page as printed. From November 2026 the second course is the Tuna Crudo, and the pour was printed for the lobster: confirm it at lineup.",
+			"reason": "The resolution keeps what the October menu settled and says the pour was printed for the dish the course then served",
+			"source": "page:brennansneworleans-menus-pasted-2026-10-03.txt line 255; page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, headed Tasting menu)"
+		},
+		{
+			"target": "dish:Steak Tartare with Rye",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What does the chef say?",
+				"a": "The chef's notes. Montreal steak spice began in the 1940s at Schwartz's Hebrew Delicatessen in Montreal, when a cook put the deli's smoked meat pickling spices on a steak for his own lunch. In the late 1800s steak tartare was called beefsteak à l'Américaine; a version served with tartar sauce gave it the name à la tartare, and the chef credits that version to Auguste Escoffier. Vital Farms is a group of small egg farms that share ethical farming practices. Rye is a grain closely related to wheat, known for its earthy, nutty flavor.\n\nWhat the sources say. The spice story is the deli's own lore: the sources agree on Schwartz's and on the smoked meat spices and place it in the 1940s and 1950s, with no record of the day. Escoffier's Le Guide Culinaire of 1903 prints both versions, so he wrote the tartar sauce version down, and no source shows that he created it. Vital Farms is a company that buys from contracted small family farms held to one pasture-raised standard, not a farmers' cooperative."
+			},
+			"reason": "The chef's notes from the November sheet, in plain sentences and with the chef not named, kept under their own question; where the research does not bear a fact out, the note says what the sources say beside it",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Steak Tartare with Rye sheet, The chef's notes); research/menu-2026-11-15-steak-tartare-with-rye.json (chefFacts, the four verdicts)"
+		},
+		{
+			"target": "dish:Tuna Crudo",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What does the chef say?",
+				"a": "The chef's notes. Aguachile, which the sheet prints Aquachile, is a traditional Mexican dish from the coastal state of Sinaloa, usually made by submerging fresh fish in a blend of lemon juice and spices. The name translates to chili water. Salsa seca is a Mexican condiment made from dried roasted chilies, tortilla chips, seeds and nuts. Coriander is the cilantro seed. Coriander aversion is the strong sense that the herb tastes like soap, dirt or bugs, caused by the compounds called aldehydes.\n\nWhat the sources say. On aguachile they agree on Sinaloa and on raw seafood under citrus and chili, and they say shrimp where the sheet says fish, lime where it says lemon, and chili and salt where it says spices. On salsa seca they bear out the dried chilies, the seeds and the nuts and never mention tortilla chips, so the tortilla is ours to confirm with the kitchen. The sheet's list marks sesame and no nut, so whether our salsa seca holds nuts is a question for the kitchen, and the service note carries the list as printed. On the aversion, the soapy taste belongs to the fresh leaf, whose aldehydes are a family of compounds and not one, while the oil of the ripe seed is mostly linalool."
+			},
+			"reason": "The chef's notes from the November sheet, in plain sentences and with the chef not named, kept under their own question; where the research does not bear a fact out, the note says what the sources say beside it",
+			"source": "page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, The chef's notes); research/menu-2026-11-15-tuna-crudo.json (chefFacts, the five verdicts)"
+		},
+		{
+			"target": "dish:Fish Bouillabaisse",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What does the chef say?",
+				"a": "The chef's notes. Bouillabaisse is a traditional French fish stew, usually served with crusty bread and a rouille. Rouille is a thick, garlicky Provençal sauce made from olive oil, egg yolks, breadcrumbs and saffron, and its name means rust in French.\n\nWhat the sources say. The stew is Marseille's, and its restaurants serve it in two parts: the broth first, very hot, with rouille on bread rubbed with garlic, then the fish. For rouille the sources give garlic, chili, saffron and olive oil, bound with bread or potato; the egg yolk is an addition some recipes make and not a fixed part, and the name comes from the sauce's red-orange color. Our plate lists a preserved lemon aioli and no rouille, so do not tell a guest there is rouille on it."
+			},
+			"reason": "The chef's notes from the November sheet, in plain sentences and with the chef not named, kept under their own question; where the research does not bear a fact out, the note says what the sources say beside it",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Fish Bouillabaisse sheet, The chef's notes); research/menu-2026-11-15-fish-bouillabaisse.json (partial: interimNotes, the notes of searches 4, 5 and 7 on the service and on rouille); research/fall-menu-2026-chatgpt.json (Fish Bouillabaisse, originNotes and the preserved-lemon aioli note)"
+		},
+		{
+			"target": "dish:Chocolate Crémeux",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What does the chef say?",
+				"a": "The chef's notes. Crémeux is a rich, smooth French dessert cream, made by emulsifying a pouring custard with chocolate or another flavoring and setting it with gelatin. The word translates literally to creamy. Maldon salt is a famous high-end salt, harvested at the coastal town of Maldon in Essex, England.\n\nWhat the sources say. They bear out the name, the custard, which is crème anglaise, emulsified with chocolate, and the salt from the Essex coast. Gelatin is not part of every crémeux, since some set on the chocolate alone; the sheet marks gelatin on ours, and where it comes from is a question for the kitchen."
+			},
+			"reason": "The chef's notes from the November sheet, in plain sentences and with the chef not named, kept under their own question; where the research does not bear a fact out, the note says what the sources say beside it",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Chocolate Cremeux sheet, The chef's notes); the dish's own origin in the house; research/fall-menu-2026-chatgpt.json (Chocolate Crémeux, originNotes and the ingredient notes on crémeux, gelatine and Maldon salt)"
+		},
+		{
+			"target": "dish:Swordfish Grenobloise",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What does the chef say?",
+				"a": "The chef's notes. Fish Grenobloise is a preparation from Grenoble, France. By the chef's account Grenoble is landlocked and fresh fish was hard to get, so cooks topped it with a strong sauce of brown butter, lemon segments and capers to mask any off flavors. Leek fondue is a classic French side dish: thinly sliced leeks cooked slowly in butter until meltingly tender, then enriched with heavy cream or crème fraîche. Swordfish is known for its dense, meaty texture and its mild, slightly sweet flavor.\n\nWhat the sources say. They bear out Grenoble and the treatment of brown butter, lemon and capers, with parsley and usually croutons, classically on sole. The story that the sauce was made to cover fish past its best is not borne out by the culinary source reviewed, so keep it off the table and tell a guest only where the name comes from."
+			},
+			"reason": "The chef's notes from the November sheet, in plain sentences and with the chef not named, kept under their own question; where the research does not bear a fact out, the note says what the sources say beside it",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Swordfish Grenobloise sheet, The chef's notes); the dish's own origin in the house; research/fall-menu-2026-chatgpt.json (Swordfish Grenobloise, originNotes: the claim that the sauce hid fish past its best was not substantiated by the culinary source reviewed)"
+		},
+		{
+			"target": "dish:Agnolotti del Plin",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What does the chef say?",
+				"a": "The chef's notes. Agnolotti del plin are a stuffed pasta from the Piedmont region of Italy that look like little pillows or envelopes. Plin means pinch. The dish comes from an old tradition of using leftover braised meats.\n\nWhat the sources say. The regional source places the pasta in the high Langhe hills around Alba and confirms the pinch. It records fillings of meat and of vegetables that vary from kitchen to kitchen and does not speak to the leftover braised meats, so tell that part as the chef's account."
+			},
+			"reason": "The chef's notes from the November sheet, in plain sentences and with the chef not named, kept under their own question; where the research does not bear a fact out, the note says what the sources say beside it",
+			"source": "page:brennans-sheets-2026-11-15.txt (the AGNOLOTTI DEL PLIN sheet, The chef's notes); the dish's own origin in the house; research/fall-menu-2026-chatgpt.json (Agnolotti del Plin, originNotes from the Piemonte regional food source)"
+		},
+		{
+			"target": "dish:Lamb Shank en Croûte",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What does the chef say?",
+				"a": "The chef's notes. Lamb daube is a dish from the Provence region of France: a stew of lamb, mirepoix, white wine and herbs such as rosemary and thyme. En croûte is a French phrase for a dish that has been wrapped in pastry dough and baked. The lamb jus is spiced with star anise, orange and a touch of cinnamon.\n\nWhat the sources say. Daube is Provençal, and Marseille's own account names lamb among the meats it can be made with, usually with wine and aromatic vegetables; which wine and aromatics go into ours is a question for the kitchen. The chef's note names white wine and the sheet's list does not mark alcohol, so ask the kitchen at lineup before you answer a guest who avoids it."
+			},
+			"reason": "The chef's notes from the November sheet, in plain sentences and with the chef not named, kept under their own question; where the research does not bear a fact out, the note says what the sources say beside it",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Lamb Shank en Croute sheet, The chef's notes); the dish's own origin in the house; research/fall-menu-2026-chatgpt.json (Lamb Shank en Croûte, originNotes and the daube note)"
+		},
+		{
+			"target": "dish:Tuna Crudo",
+			"field": "serviceNote",
+			"op": "replace",
+			"value": {
+				"from": "Alumn, Coriander, Chilis, Sesame, Gluten",
+				"to": "Alumn (read as allium, the onion and garlic family), Coriander, Chilis, Sesame, Gluten"
+			},
+			"reason": "The sheet's list stays word for word, the printed word included, and gains the reading beside it: the word is read as allium, the onion and garlic family, and the note still sends the server to lineup to confirm",
+			"source": "page:brennans-sheets-2026-11-15.txt (the TUNA CRUDO sheet, Sheet dietary notes); research/menu-2026-11-15-sheets.md (the points on the dish sheets to put to the owner)"
+		},
+		{
+			"target": "dish:Agnolotti del Plin",
+			"field": "serviceNote",
+			"op": "replace",
+			"value": {
+				"from": "Alcohol, Alumn, Nightshades, Nutmeg",
+				"to": "Alcohol, Alumn (read as allium, the onion and garlic family), Nightshades, Nutmeg"
+			},
+			"reason": "The sheet's list stays word for word, the printed word included, and gains the reading beside it: the word is read as allium, the onion and garlic family, and the note still sends the server to lineup to confirm",
+			"source": "page:brennans-sheets-2026-11-15.txt (the AGNOLOTTI DEL PLIN sheet, Sheet dietary notes); research/menu-2026-11-15-sheets.md (the points on the dish sheets to put to the owner)"
+		},
+		{
+			"target": "dish:Fish Bouillabaisse",
+			"field": "serviceNote",
+			"op": "replace",
+			"value": {
+				"from": "Fin Fish, Alum, Alcohol",
+				"to": "Fin Fish, Alum (read as allium, the onion and garlic family), Alcohol"
+			},
+			"reason": "The sheet's list stays word for word, the printed word included, and gains the reading beside it: the word is read as allium, the onion and garlic family, and the note still sends the server to lineup to confirm",
+			"source": "page:brennans-sheets-2026-11-15.txt (the Fish Bouillabaisse sheet, Sheet dietary notes); research/menu-2026-11-15-sheets.md (the points on the dish sheets to put to the owner)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, the aroma wheel: how to use it",
+				"body": "The class wheel sorts what you smell in a glass into fourteen families: Floral, Citrus, Tree Fruit, Tropical, Red Fruit, Dark Fruit, Spices, Herbal, Vegetal, Earth, Mineral, Rich, Wood and Dry. Work from the center out. Name the family first, then the exact word: not fruit but tree fruit, not tree fruit but baked apple. The families also tell you where a smell comes from. Fruit, flowers and herbs come mostly from the grape and how ripe it was. Rich and Wood come from the cellar: lees, malolactic and oak. Earth and Dry come largely with age and air. Two or three exact words are enough for a guest."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: how to use it); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, the aroma wheel: Floral",
+				"body": "The words: iris, peony, elderflower, lilac, jasmine, orange blossom, honeysuckle, violet, lavender, rose. Flower scents come from the grape itself, most strongly in the aromatic whites: Muscat, Gewurztraminer (rose), Riesling and Torrontes, and in Viognier (honeysuckle, orange blossom). In reds, violet points to Syrah, Malbec and Nebbiolo, and rose to Nebbiolo. On our glass sheet the Piper-Heidsieck is noted for orange blossom, the Berres Riesling for a floral nose, the Famille Durand Sauvignon Blanc for white flowers and the Moulin d'Issan for violets."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Floral); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, the aroma wheel: Citrus",
+				"body": "The words: lemon, lime, grapefruit, orange, lime leaf, marmalade. Citrus is the mark of high acid whites from cool places: Riesling (lime), Sauvignon Blanc (grapefruit), Albarino (lemon and lime), Chablis (lemon). Marmalade is cooked, sweet citrus and belongs to sweet wines touched by noble rot and to older whites. On our glass sheet the Albarino is noted for lime, the Sauvignon Blanc for citrus, the Minuty rose for citrus, and the Jadot Les Pucelles for lemon cream pie, which is citrus plus the Rich family."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Citrus); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, the aroma wheel: Tree Fruit",
+				"body": "The words: quince, green apple, red apple, baked apple, pear, pear drops, peach, apricot. Read them as a ripeness ladder: green apple is cool and lean, pear and red apple are riper, peach and apricot are riper still and typical of Viognier, Riesling and Chenin Blanc. Baked apple suggests age or time on the lees, as in sparkling wine. Pear drops is the candy note of a cool fermentation, common in very young whites. Quince is a classic word for Chenin Blanc. On our sheet: baked apple in the Argyle Brut, green apple in the Albarino, apple in the Riesling and the Gainey Chardonnay, pear and peach in the Lemelson Pinot Gris."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Tree Fruit); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, the aroma wheel: Tropical",
+				"body": "The words: banana, coconut, pineapple, mango, guava, papaya, lychee, cantaloupe, honeydew, watermelon, passion fruit. Tropical fruit usually means ripe grapes from a warm, sunny place, as in a ripe California Chardonnay (pineapple, mango). Some are signatures: lychee is Gewurztraminer, and passion fruit and guava are Sauvignon Blanc from places such as New Zealand. Banana comes from fermentation and is the classic note of Beaujolais Nouveau. Coconut is not fruit at all here: it comes from oak, American oak above all. On our sheet the Albarino is noted for underripe pineapple and the Rare Champagne for tropical fruit."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Tropical); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, the aroma wheel: Red Fruit",
+				"body": "The words: cranberry, pomegranate, sour cherry, cherry, red plum, raspberry, strawberry, red currant. Red fruit is the family of lighter, brighter reds and of rose: Pinot Noir (cherry, raspberry, strawberry), Gamay, Grenache (strawberry), Sangiovese (sour cherry) and Barbera. Tart words such as cranberry and sour cherry point to a cool site or a high acid grape; ripe strawberry points to warmth. On our sheet: raspberry and strawberry in the Pierre Sparr rose and the Damien Martin Pinot Noir, cherry in the Argyle Brut, red berries in the Minuty rose and red cherry in the La Miraja Barbera."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Red Fruit); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, the aroma wheel: Dark Fruit",
+				"body": "The words: grape, black cherry, black plum, blackberry, balsamic, blueberry, black currant. Dark fruit belongs to thicker skinned grapes and warmer sites: Cabernet Sauvignon (black currant, which the French call cassis), Merlot (black plum), Syrah (blackberry), Malbec (plum, blueberry) and Zinfandel. Balsamic is a sweet and sour note found in some Italian reds and in older wines. On our sheet: blackberries and cassis in the Moulin d'Issan and the Kokomo Cabernet Sauvignon, black cherry in the Durban and the Damien Martin, dark cherry and plum in the Courcel Pommard, and plum, blackberry and a hint of balsamic in the Barbera."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Dark Fruit); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, the aroma wheel: Spices",
+				"body": "The words: ginger, saffron, red chili, black pepper, cinnamon, cardamom, anise, fennel, clove, patchouli, sandalwood. Some spice comes from the grape: black pepper is the signature of Syrah and also shows in Gruner Veltliner, ginger is common in Gewurztraminer, and anise or licorice runs through southern French and Italian reds. Other spice comes from oak: clove and cinnamon are barrel notes, grouped on the wheel as baking spice under Wood. On our sheet: baking spices in the Argyle Brut, licorice in the Barbera, and spice in the Moulin d'Issan and the Courcel Pommard."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Spices); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, the aroma wheel: Herbal",
+				"body": "The words: mint, eucalyptus, thyme, bay leaf, rosemary, oregano, curry leaf, chamomile, pine, sage. Mint and eucalyptus are classic in Cabernet Sauvignon, in parts of Australia and California above all. Thyme, rosemary, bay and sage together are what the French call garrigue, the scrub of the Mediterranean hills, and they mark the reds of the southern Rhone, Provence and the Languedoc. Chamomile shows in Chenin Blanc and in some older whites. On our sheet the Durban is noted for herbes de Provence, which is this family exactly, and the Piper-Heidsieck for a touch of mint."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Herbal); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, the aroma wheel: Vegetal",
+				"body": "The words: grass, gooseberry, bell pepper, jalapeno, black olive, hay, dried leaves, black tea, green tea, seaweed, maraschino. Green notes come from the grape. Bell pepper and jalapeno belong to the Cabernet family and to Sauvignon Blanc, strongest when the fruit was picked less ripe. Grass and gooseberry are Sauvignon Blanc signatures. Black olive is a savory mark of Syrah. Hay, dried leaves and tea arrive with age. A little green can be fresh and right; a lot can read as underripe. The wheel files maraschino here, though most tasters would call it a cherry note."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Vegetal); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, the aroma wheel: Earth",
+				"body": "The words: beet root, soil, mushroom, manure, barnyard, horse, black cardamom, burnt match, seaside, cured meat, petrichor (rain), coffee, cocoa, chocolate, tobacco, petrol. Mushroom, soil and wet leaves are the smells of bottle age, classic in older Pinot Noir. Barnyard, horse and manure come from a yeast called Brettanomyces: a trace can add interest, a lot is a fault. Burnt match is a sulfur note from the cellar that usually clears with air. Petrol is the famous mark of aged Riesling. Cured meat points to Syrah. Coffee, cocoa and tobacco come with oak and age. On our sheet the 2007 Courcel Pommard is described as mellow and earthy."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Earth); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, the aroma wheel: Mineral",
+				"body": "The words: graphite, concrete, slate or stone, salt, flint, gunpowder, steel. These are useful descriptions, but the vine does not carry the taste of rock into the glass: mineral words describe a wine that is lean, high in acid, low in obvious fruit and sometimes a little smoky from the cellar. Flint and gunpowder are classic for Chablis and Pouilly-Fume, slate for Mosel Riesling, graphite for Cabernet from the Medoc, salt for whites grown near the sea. On our sheet: sea salt in the Albarino, salinity in the Rare Champagne and the Minuty rose, and minerality in the Riesling and the Sauvignon Blanc."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Mineral); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, the aroma wheel: Rich",
+				"body": "The words: cream, butter, sourdough, brioche, almond, lager, honey, beeswax. Rich notes are made in the cellar. Butter and cream come from malolactic conversion, which turns sharp malic acid into softer lactic acid and is common in Chardonnay. Brioche, sourdough and lager come from time on the lees, the spent yeast, and are the signature of Champagne method sparkling wine. Honey and beeswax come with age and with noble rot, and are typical of Chenin Blanc, Semillon and Riesling. On our sheet: brioche in the Argyle Brut and the Rare Champagne, toasted bread and fresh almonds in the Piper-Heidsieck, honey in the Gainey Chardonnay."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Rich); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, the aroma wheel: Wood",
+				"body": "The words: vanilla, baking spice, oak, smoke, cigar box, cedar, leather. Wood notes come from the barrel. New oak gives the most; an old barrel gives almost none. Vanilla is strongest from American oak, which also gives coconut and dill. Baking spice, smoke and toast depend on how heavily the inside of the barrel was toasted over fire. Cedar and cigar box are the classic words for Cabernet Sauvignon aged in French oak, Bordeaux above all. Leather arrives with bottle age. On our sheet: oak in the Gainey Chardonnay, vanilla in the Jadot Les Pucelles and the Kokomo Cabernet Sauvignon."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Wood); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, the aroma wheel: Dry",
+				"body": "The words: fig, raisin, nuts. Dry here means dried, not the opposite of sweet. Fig and raisin come from very ripe grapes or grapes dried on purpose, as in Amarone and in sweet wines such as Pedro Ximenez Sherry and Port. Nuts are the mark of slow contact with air in cask, the style of Sherry, Madeira and tawny Port. In a wine meant to be fresh, raisin can mean overripe fruit, and a nutty, bruised apple smell can mean the bottle is tired or oxidized."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (aroma wheel: Wine class, the aroma wheel: Dry); research/menu-2026-11-15-sheets.md section C1 (the aroma wheel)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, Burgundy: the map from north to south",
+				"body": "Burgundy runs in a line down eastern France. Chablis is the northern outpost, closer to the Aube in Champagne than to Beaune, and makes white wine from Chardonnay. The Cote d'Or, the golden slope, begins just south of Dijon and is the heart: the Cote de Nuits in the north and the Cote de Beaune in the south. Below it comes the Cote Chalonnaise, then the Maconnais, mostly white. The class sheet places Beaujolais, the home of Gamay, in southern Burgundy; it has long been counted with Burgundy, though today it is usually treated as a region of its own. Two grapes rule: Chardonnay for white and Pinot Noir for red."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: the map from north to south); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, Burgundy: Chablis",
+				"body": "The class sheet: Chablis is the northernmost region in Burgundy, a handful of miles south of the Aube in Champagne, and focuses on white wine. To add: the grape is Chardonnay only, grown on limestone and clay full of tiny fossil oyster shells, and the cool site gives a lean, high acid wine that tasters describe with green apple, lemon and flint. Most Chablis sees little or no new oak. It has its own ladder: Petit Chablis, Chablis, Chablis Premier Cru and Chablis Grand Cru. Do not confuse Chablis with Saint-Bris, its neighbor in the same department, which is made from Sauvignon Blanc."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: Chablis); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, Burgundy: the Cote d'Or, Cote de Nuits and Cote de Beaune",
+				"body": "The Cote d'Or is a narrow, east facing limestone slope that begins just south of Dijon and holds Burgundy's most famous villages and vineyards. It has two halves. The Cote de Nuits, the northern half, runs from the edge of Dijon to just south of Nuits-Saint-Georges and is red wine country: Gevrey-Chambertin, Vosne-Romanee and Chambolle-Musigny are there, and almost all the red grand crus. The Cote de Beaune, the southern half, runs from just north of the town of Beaune down to Santenay and makes both colors: Pommard and Volnay for red, Meursault, Puligny-Montrachet and Chassagne-Montrachet for the great whites. Two wines on our glass sheet come from it: the Jadot Puligny-Montrachet Les Pucelles and the Courcel Pommard."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: the Cote d'Or, Cote de Nuits and Cote de Beaune); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, Burgundy: the Cote Chalonnaise and Bouzeron",
+				"body": "The class sheet: a larger, cooler region south of the Cote d'Or and a good source of value, from the villages of Rully, Givry, Montagny and Mercurey. To add: Mercurey and Givry make mostly red from Pinot Noir, Montagny makes only white from Chardonnay, and Rully makes both and is known for sparkling Cremant de Bourgogne. Bouzeron is the exception in all of Burgundy: its village wine is made from Aligote rather than Chardonnay, the only village appellation for that grape."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: the Cote Chalonnaise and Bouzeron); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, Burgundy: the Maconnais and Pouilly-Fuisse",
+				"body": "The class sheet: a large region south of the Cote Chalonnaise, mostly white, with Chardonnay of everyday quality and Pouilly-Fuisse as its most notable appellation. To add: it is warmer than the Cote d'Or, so the Chardonnay is rounder and riper, with apple and stone fruit. The village named Chardonnay is here, and the grape may take its name from it. Other names to know are Saint-Veran, Vire-Clesse and Macon-Villages. Pouilly-Fuisse gained its first premier cru vineyards in 2020. Our Damien Martin Pinot Noir is a Bourgogne whose fruit, the glass sheet says, comes from the Maconnais. Pouilly-Fuisse is Chardonnay; Pouilly-Fume, from the Loire, is Sauvignon Blanc."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: the Maconnais and Pouilly-Fuisse); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, Burgundy: Beaujolais and Gamay",
+				"body": "The class sheet: Beaujolais is the home of the Gamay grape; the wines range from Beaujolais Nouveau, released shortly after harvest, to the more complex wines of the ten cru villages. To add: the ten crus are Saint-Amour, Julienas, Chenas, Moulin-a-Vent, Fleurie, Chiroubles, Morgon, Regnie, Brouilly and Cote de Brouilly, and their labels usually show the cru and not the word Beaujolais. Gamay is a child of Pinot and Gouais Blanc, so it is a sibling of Chardonnay. In 1395 Philip the Bold, Duke of Burgundy, ordered it pulled from his lands in favor of Pinot Noir, which is how it came to rule the granite hills to the south. Expect red fruit, low tannin and bright acid; serve it lightly cool."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: Beaujolais and Gamay); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, Burgundy: the four levels on a label",
+				"body": "Burgundy ranks the land, not the producer, in four steps. Regional: Bourgogne, from anywhere in the region, the basic level. Village: the wine comes from one named village, such as Pommard or Meursault. Premier Cru: a named vineyard inside a village, judged better than its neighbors; the label shows the village, the words Premier Cru or 1er Cru, and usually the vineyard. Grand Cru: the very best vineyards, each with its own appellation, so the label shows only the vineyard name, such as Chambertin or Montrachet. Supply shrinks as you climb: regional wine is about half of all Burgundy and grand cru only a percent or two. On our glass sheet the Damien Martin is regional, and Les Pucelles and the Courcel Pommard are premier cru."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: the four levels on a label); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, Burgundy: premier cru and grand cru",
+				"body": "The class sheet: within the better villages certain single vineyards are believed to make superior wine and are named premier cru; grand crus are single vineyards so highly regarded that each has its own appellation, ranging from 2 to nearly 400 acres. To add: Burgundy has 33 grand crus, counting Chablis Grand Cru as one. Several villages added their most famous vineyard to their own name, which is why Gevrey became Gevrey-Chambertin, Puligny became Puligny-Montrachet, Chassagne became Chassagne-Montrachet and Vosne became Vosne-Romanee. So a village wine from Puligny-Montrachet is not Montrachet. Les Pucelles, on our glass sheet, is a premier cru of Puligny-Montrachet that lies right beside the grand crus."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: premier cru and grand cru); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, Burgundy: Chardonnay and Aligote",
+				"body": "The class sheet: Chardonnay is the principal white grape of Burgundy and the most planted, close to half of all the vineyard; it is a natural crossing of Pinot and Gouais Blanc, its name may come from the village of Chardonnay in the Maconnais, and it was long confused with Pinot Blanc. To add: the same grape gives lean, stony Chablis and broad, nutty Meursault, so place and cellar matter more than the variety name. Aligote is the distant second white grape, usually bottled on its own as Bourgogne Aligote, brisk and high in acid, and at its best in Bouzeron. It is the traditional white for a Kir, with a little creme de cassis."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: Chardonnay and Aligote); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, Burgundy: Pinot Noir, Passe-Tout-Grains and Saint-Bris",
+				"body": "The class sheet has no entry for Pinot Noir, so this one is added: Pinot Noir is the red grape of Burgundy, thin skinned, pale, high in acid and low in tannin, with red cherry and raspberry when young and mushroom and earth with age. It shows its site more plainly than any other red grape, which is why Burgundy ranks vineyards. Bourgogne Passe-Tout-Grains is a blend of Gamay and Pinot Noir, with at least 30 percent Pinot Noir. Saint-Bris, in the Yonne near Chablis, is Burgundy's one appellation for Sauvignon Blanc. The class sheet calls Sauvignon Blanc a Bordeaux variety; it is famous there, though it is most likely native to the Loire."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: Pinot Noir, Passe-Tout-Grains and Saint-Bris); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, Burgundy: domaine, negociant and monopole",
+				"body": "A domaine grows its own grapes and makes wine only from vineyards it owns or farms. A negociant is a merchant who buys grapes, juice or finished wine from growers and sells the result under its own name; the big Beaune houses are both, with vineyards of their own beside what they buy. Burgundy's vineyards are split among many owners, so one vineyard name can appear on dozens of labels of different quality: the producer matters as much as the place. A monopole is the exception, a vineyard owned whole by one producer; the label often says so. Louis Jadot, on our glass sheet, is a Beaune negociant that also owns vineyards. Domaine de Courcel is a domaine in Pommard."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: domaine, negociant and monopole); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, Burgundy: batonnage and the lees",
+				"body": "The class sheet: batonnage is the French term for stirring settled lees back into the wine; lees are the sediment of winemaking, mostly dead yeast; keeping them in contact extracts flavor, aroma and texture, and they are later filtered or fined out, or the wine is racked off them. To add: say it bah-tun-NAHZH. It is a white Burgundy habit, used on Chardonnay aging in barrel. Stirring makes the wine feel rounder and creamier and adds the bread and hazelnut notes of the Rich family on the aroma wheel. Too much can make a wine heavy, so many cellars now stir less than they once did."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (Burgundy: Wine class, Burgundy: batonnage and the lees); research/menu-2026-11-15-sheets.md section C2 (the Burgundy class sheet)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, vocabulary: the words for structure",
+				"body": "Acidity is the liveliness and crispness in wine; it makes your mouth water and keeps a wine fresh with food. Tannins are compounds from grape skins, seeds, stems and oak that dry the mouth, strongest in young reds. Astringent names that harsh, drying, puckering feeling when tannin is high. Body is the weight of the wine in the mouth: light, medium or full, like skim milk against whole milk. Full-bodied wines are usually higher in alcohol and feel big. Alcohol is ethanol, made when yeast ferments grape sugar. ABV is alcohol by volume, printed on the label; most table wines fall between about 11 and 15 percent."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: the words for structure); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, vocabulary: the words for smell and taste",
+				"body": "Nose is the smell of a wine, all its aromas together. Aromatic describes wines with strong, distinctive scents from the grape itself, such as Riesling, Gewurztraminer, Muscat and Viognier. Fruity means strong smells and flavors of fresh fruit; it does not mean sweet, and a fruity wine can be completely dry. Spicy means scents such as black pepper, bay leaf, baking spices or saffron. Oaky means the vanilla, baking spice, coconut, mocha or dill that barrel aging gives. Use the aroma wheel to move from these broad words to exact ones."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: the words for smell and taste); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, vocabulary: fermentation, yeast and sugar",
+				"body": "Yeast is the microorganism that turns grape sugar into alcohol; it lives in vineyards and cellars and is also sold commercially. Vinification is the process of making wine, and oenology, say it ee-NOL-uh-jee, is the study of wine and winemaking. Chaptalization is adding sugar to the grape must before or during fermentation to raise the final alcohol in years when grapes were not ripe enough; it makes the wine stronger, not sweeter, and where it is allowed it is regulated. It is named for Jean-Antoine Chaptal (1756 to 1832), the French chemist who promoted it. Yield is how much a vineyard produces, measured in Europe in hectoliters per hectare and in the United States in tons per acre; lower yields usually give more concentrated wine."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: fermentation, yeast and sugar); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, vocabulary: barrels, air and age",
+				"body": "A barrel is the oak container used for fermenting and aging wine. A barrique is the 225 liter barrel of Bordeaux, now used around the world; the Burgundy barrel, the piece, holds 228 liters. Aging is holding wine in barrel, tank or bottle to bring it to a better state. Aeration is adding oxygen on purpose to soften and open a wine, which is what decanting does at the table. Oxidation is the change wine goes through with too much air: the color browns and the fruit fades to nuts and bruised apple. A little oxygen over years is part of normal aging, and a few styles such as Sherry, Madeira and tawny Port are oxidized on purpose."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: barrels, air and age); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, vocabulary: lees, sur lie and carbonic maceration",
+				"body": "Lees are the sediment of dead yeast cells and grape matter left after fermentation. Sur lie, say it soor LEE, means the wine was aged on its lees, which gives a creamy texture and a bready note from autolysis, the slow breakdown of the yeast; it is best known on Muscadet from the Loire, and it is how Champagne gets its brioche. Batonnage is stirring the lees. Carbonic maceration ferments whole, uncrushed grapes in a sealed tank filled with carbon dioxide, so fermentation starts inside each berry; it gives soft, fruity, low tannin reds to drink young and is the method of Beaujolais, where most wines use a partial form of it."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: lees, sur lie and carbonic maceration); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, vocabulary: sparkling wine words",
+				"body": "Brut is the label word for a dry sparkling wine, Champagne above all; by rule it holds less than 12 grams of sugar per liter. Cava is Spain's sparkling wine made by the traditional method, with the second fermentation in the bottle, as in Champagne. Frizzante is Italian for lightly sparkling, with a gentler fizz than a fully sparkling spumante. Petillant is the French word for the same light sparkle. Three sparkling wines on our glass sheet are made by the Champagne method outside Champagne or in it: the Argyle Brut from Oregon, the Pierre Sparr Cremant d'Alsace and the Piper-Heidsieck."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: sparkling wine words); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, vocabulary: sweet and fortified wine",
+				"body": "A late harvest wine is made from grapes left on the vine longer than usual so they gain sugar; it is usually sweet. Vendange tardive is the French term, used on labels in Alsace. Botrytis, also called noble rot, is a mold that in the right weather pierces grape skins and dries the berries, concentrating sugar, acid and flavor; it is behind Sauternes, Tokaji and the great sweet German Rieslings, and it adds honey, apricot and marmalade. A fortified wine has grape spirit added. Add it during fermentation and the yeast stops with sugar left, as in Port; add it after and the wine is dry and then sweetened or not, as in Sherry."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: sweet and fortified wine); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, vocabulary: the French law and the label",
+				"body": "AOC stands for Appellation d'Origine Controlee, the French system that fixes where a wine may come from and how it may be made: the boundary, the grapes, the yields and the methods. AOP is the newer European name for the same thing, and INAO is the national body that runs it. Cepage is French for grape variety. A lieu-dit is a named plot of vineyard, used most for sites that hold no higher rank. A monopole is a vineyard or appellation owned whole by one producer. A negociant is a merchant who buys from growers and bottles under its own name. A vigneron is a vine grower who makes wine."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: the French law and the label); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, vocabulary: premier cru, vintage and other label words",
+				"body": "Premier cru means first growth. In Burgundy it is the second highest rank of vineyard, below grand cru; in Champagne it ranks whole villages; in Bordeaux the first growths are the top chateaux of the 1855 classification, so the same words mean different ranks in different places. Vintage is the year the grapes were harvested; a vintage wine comes all or nearly all from that year, and most Champagne is nonvintage, a blend of years. Vieilles vignes means old vines, sometimes written V.V.; it has no legal definition, so it means what the producer says. Varietal describes a wine made from, and usually named for, a single grape variety. Terroir is the whole natural setting of a vineyard, its soil, slope, climate and exposure, and the character they give the wine."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: premier cru, vintage and other label words); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, vocabulary: rose, table wine and the bottle",
+				"body": "Rose is pink wine made from red grapes, with the juice left on the skins for only a few hours so it takes a little color; rose Champagne may also be made by blending in a little red wine. Table wine is any still wine that is neither sparkling nor fortified. The punt is the dent in the base of a bottle. The class sheet notes that a deep punt is often thought to mean a better wine; it is tradition and bottle strength, especially for sparkling wine under pressure, and tells you nothing reliable about quality."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: rose, table wine and the bottle); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+		},
+		{
+			"target": "mustknow:+",
+			"op": "add",
+			"value": {
+				"title": "Wine class, vocabulary: twelve words the class sheet's missing page would hold",
+				"body": "These are not from the class sheet: the page between Chaptalization and Fortified wine did not reach us, so these are the standard terms that fall there. Corked: spoiled by a tainted cork, with a smell of damp cardboard. Cru: a ranked vineyard or village. Cuvee: a blend or a particular bottling. Decant: to pour a wine off its sediment or give it air. Demi-sec: medium sweet, on sparkling wine. Dosage: the small measure of sugar added to sparkling wine before the final cork. Dry: with no perceptible sweetness. Elevage: the raising of a wine between fermentation and bottling. Fermentation: yeast turning sugar into alcohol and carbon dioxide. Filtration: straining a wine clear. Fining: clarifying wine with an agent that settles out. Finish: the taste that stays after you swallow."
+			},
+			"reason": "The Wine class the owner asked for: one entry of the class sheets of 15 November 2026, expanded, filed as a must-know; every title begins Wine class so the entries sit together",
+			"source": "research/menu-2026-11-15-wine-class.json (vocabulary: Wine class, vocabulary: twelve words the class sheet's missing page would hold); research/menu-2026-11-15-sheets.md section C3 (Introductory Wine Vocabulary)"
+		}
+	]
+}
