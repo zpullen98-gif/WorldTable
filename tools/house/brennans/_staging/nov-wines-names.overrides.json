@@ -1,0 +1,20 @@
+{
+	"entries": [
+		{
+			"target": "wine:Domaine Durand Sauvignon Blanc 2025",
+			"field": "name",
+			"op": "set",
+			"value": "Famille Durand Val de Loire Sauvignon Blanc 2025",
+			"reason": "November 2026: the card names the vintage the glass sheet of 15 November 2026 prints; the id stays the one minted for Domaine Durand Sauvignon Blanc 2025. Builds only after the base sweep (nov-wines.base-edits.mjs --apply), since two asks and the fragments name the wine by its 2024 name",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 118 (Sauvignon Blanc: Famille Durand 2025, Loire Valley, FR.); page:brennansneworleans-menus-pasted-2026-10-03.txt line 472 (the 2024 it printed)"
+		},
+		{
+			"target": "wine:La Miraja ‘Le Masche’ Barbera d’Asti 2023",
+			"field": "name",
+			"op": "set",
+			"value": "La Miraja ‘Le Masche’ Barbera d’Asti Superiore 2023",
+			"reason": "November 2026: the card names the wine as the glass sheet of 15 November 2026 prints it, with Superiore; the id stays the one minted for the name without it. Builds only after the base sweep (nov-wines.base-edits.mjs --apply), since the fragments name the wine by its old name",
+			"source": "page:brennans-sheets-2026-11-15.txt (Wines by the Glass, lines 104 to 130) line 124 (Barbera: La Miraja \"Le Masche\" Barbera d'Asti Superiore 2023 Piemonte IT.)"
+		}
+	]
+}

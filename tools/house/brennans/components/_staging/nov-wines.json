@@ -1,0 +1,150 @@
+{
+	"components": [
+		{
+			"terms": [],
+			"key": "wine-story-lemelson",
+			"kind": "story",
+			"name": "Lemelson Vineyards and Tikka’s Run",
+			"say": "LEM-el-sun",
+			"explain": "Lemelson Vineyards is an estate winery at Carlton, in the Willamette Valley of Oregon. It grows its own grapes, and its vineyards have been farmed organically from the beginning and certified organic since 2004. The winery was built to move wine by gravity rather than by pumps, a gentle way of working.\n\nThe estate grows Pinot Noir, Pinot Gris, Chardonnay and Riesling. Tikka's Run is its Pinot Gris, named for Tikka, the Great Pyrenees who patrolled the edge of the Pinot Gris vines.\n\nAt Brennan's it is the Oregon white by the glass: pear, peach and lemon, with a velvety, soft, full-bodied texture. Say: an organically farmed Oregon estate, and a Pinot Gris named for the vineyard dog.",
+			"card": {
+				"front": "Who is the Tikka of Lemelson's Tikka's Run Pinot Gris?",
+				"back": "The estate's Great Pyrenees, who patrolled the Pinot Gris vines. Lemelson is an organically farmed estate at Carlton, in Oregon's Willamette Valley, and this is its soft, full Pinot Gris."
+			},
+			"items": [
+				"Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022"
+			],
+			"sources": [
+				"pages/brennans-sheets-2026-11-15.txt (Wines by the Glass)",
+				"research/glass-wines-2026-11-15.md section 1"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-story-kokomo",
+			"kind": "story",
+			"name": "Kokomo Winery",
+			"say": "KOH-kuh-moh",
+			"explain": "Kokomo Winery is in Healdsburg, in the Dry Creek Valley of Sonoma County, California. It was begun in 2004 and named for its founder's hometown of Kokomo, Indiana, so the name on the label is a Midwestern town and not a place in California.\n\nIts Sonoma County Cabernet Sauvignon draws most of its fruit from Alexander Valley, the warm inland valley in the north of the county where Cabernet ripens fully. The label reads Sonoma County, so that is how we name it.\n\nAt Brennan's it is the California Cabernet by the glass: blackberries, cassis and vanilla, full bodied, with a velvety texture and soft tannins. Say: Sonoma County Cabernet, mostly Alexander Valley fruit, from a Healdsburg winery named for a town in Indiana.",
+			"card": {
+				"front": "Where does the name Kokomo on our Cabernet come from?",
+				"back": "The founder's hometown, Kokomo, Indiana. The winery is in Healdsburg, in Sonoma County, and most of this Cabernet's fruit comes from Alexander Valley."
+			},
+			"items": [
+				"Kokomo Sonoma County Cabernet Sauvignon 2022"
+			],
+			"sources": [
+				"pages/brennans-sheets-2026-11-15.txt (Wines by the Glass)",
+				"research/glass-wines-2026-11-15.md section 2"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-vineyard-les-pucelles",
+			"kind": "ingredient",
+			"name": "Les Pucelles, Puligny-Montrachet Premier Cru",
+			"say": "lay poo-SELL",
+			"explain": "Les Pucelles is a premier cru vineyard in Puligny-Montrachet, a village on the Côte de Beaune famous for white Burgundy. It is planted to Chardonnay and lies beside the grand cru Bâtard-Montrachet, close to the other grand crus of Montrachet, which is why its wines are spoken of with theirs.\n\nPremier cru is the second rank of Burgundy vineyard, under grand cru and above the village wines. A wine from one named premier cru carries the vineyard on its label, as this one does.\n\nOurs is the 2008 from Maison Louis Jadot, the Beaune house founded in 1859, fermented in oak barrels and aged on its fine lees. With age it shows lemon cream pie and vanilla, vibrant, rich and lush, and we pour it by Coravin.",
+			"card": {
+				"front": "Which grand cru does Les Pucelles lie beside?",
+				"back": "Bâtard-Montrachet. Les Pucelles is a premier cru of Puligny-Montrachet planted to Chardonnay; ours is Louis Jadot's 2008, lemon cream pie and vanilla, poured by Coravin."
+			},
+			"items": [
+				"Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)"
+			],
+			"sources": [
+				"pages/brennans-sheets-2026-11-15.txt (Wines by the Glass)",
+				"research/glass-wines-2026-11-15.md section 3"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-story-courcel",
+			"kind": "story",
+			"name": "Domaine de Courcel and the Grand Clos des Épenots",
+			"say": "koor-SELL",
+			"explain": "Domaine de Courcel is a family estate in Pommard, on the Côte de Beaune in Burgundy, and it has belonged to the same family since the seventeenth century. It grows Pinot Noir in the premier cru vineyards of the village.\n\nIts largest vineyard is the Grand Clos des Épenots, a walled plot of close to five hectares that the domaine owns alone, which makes it a monopole. The clos lies in the northern part of the premier cru Les Grands Épenots, on the Beaune side of the village.\n\nThat explains two names for one wine. Our glass sheet prints Les Grands Épenots, the premier cru, and the label reads Grand Clos des Épenots, the domaine's own vineyard inside it. Ours is the 2007, dark cherry, plum and spice, poured by Coravin.",
+			"card": {
+				"front": "Who owns the Grand Clos des Épenots in Pommard?",
+				"back": "Domaine de Courcel alone, so it is a monopole. The walled vineyard lies inside the premier cru Les Grands Épenots, the name our glass sheet prints for the wine."
+			},
+			"items": [
+				"Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)"
+			],
+			"sources": [
+				"pages/brennans-sheets-2026-11-15.txt (Wines by the Glass)",
+				"research/glass-wines-2026-11-15.md section 4"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-region-pommard",
+			"kind": "ingredient",
+			"name": "Pommard",
+			"say": "poh-MAR",
+			"explain": "Pommard is a village on the Côte de Beaune in Burgundy, just south of the town of Beaune. It makes red wine only, from Pinot Noir, and has no grand cru; its best vineyards are premier cru, among them Les Rugiens and Les Épenots.\n\nThe village is known for the firmest, fullest reds of the Côte de Beaune: darker fruit and more tannin than the silkier wines of Volnay next door. That structure is why Pommard rewards age. With years in bottle the tannins soften and the fruit turns mellow and earthy.\n\nOurs is a 2007 premier cru from Domaine de Courcel, almost twenty years old, with dark cherry, plum and spice. We pour it by Coravin, and it is the first pick with the Roasted Chateaubriand.",
+			"card": {
+				"front": "What kind of red Burgundy is Pommard known for?",
+				"back": "Firm, full Pinot Noir from the Côte de Beaune that rewards age. Ours is Domaine de Courcel's 2007 premier cru, softened and earthy, poured by Coravin."
+			},
+			"items": [
+				"Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)"
+			],
+			"sources": [
+				"expert knowledge",
+				"pages/brennans-sheets-2026-11-15.txt (Wines by the Glass)",
+				"research/glass-wines-2026-11-15.md section 4"
+			]
+		}
+	],
+	"compare": [
+		{
+			"item": "Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022",
+			"entries": [
+				{
+					"app": "codex",
+					"ref": "Gainey Estate Vineyards Chardonnay 2023",
+					"label": "The Gainey Chardonnay by the glass",
+					"same": "A fuller white by the glass, with the texture for butter, crab and eggs.",
+					"different": "The Pinot Gris is pear, peach and lemon, velvety and soft; the Gainey is Chardonnay, creamier, with lemon curd and baked apple."
+				}
+			]
+		},
+		{
+			"item": "Kokomo Sonoma County Cabernet Sauvignon 2022",
+			"entries": [
+				{
+					"app": "codex",
+					"ref": "Moulin d’Issan Bordeaux Supérieur 2021",
+					"label": "The Moulin d’Issan by the glass",
+					"same": "A Cabernet based red by the glass for beef and rich sauces.",
+					"different": "The Kokomo is California Cabernet, fuller and velvety; the Moulin d’Issan is a Bordeaux blend of Cabernet and Merlot, drier and firmer."
+				}
+			]
+		},
+		{
+			"item": "Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)",
+			"entries": [
+				{
+					"app": "codex",
+					"ref": "François Carillon Puligny-Montrachet 2022",
+					"label": "The Carillon Puligny on the bottle list",
+					"same": "Chardonnay from the village of Puligny-Montrachet, on the Côte de Beaune.",
+					"different": "Les Pucelles is one premier cru vineyard and a 2008, mature and lush; the Carillon is a young village wine."
+				}
+			]
+		},
+		{
+			"item": "Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)",
+			"entries": [
+				{
+					"app": "codex",
+					"ref": "Damien Martin Bourgogne Pinot Noir 2023",
+					"label": "The Damien Martin Pinot Noir by the glass",
+					"same": "Red Burgundy, Pinot Noir, poured by the glass.",
+					"different": "The Pommard is a premier cru and a 2007, softened and earthy; the Damien Martin is young, fruity Burgundy from the Mâconnais."
+				}
+			]
+		}
+	]
+}
