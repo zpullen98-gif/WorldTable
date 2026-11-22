@@ -1,0 +1,103 @@
+{
+  "about": "The refuter's second reading of the Thanksgiving edition's staging (tg-menu, tg-dishes-a, tg-dishes-b, tg-wines and their component fragments), 22 November 2026. Each claim below was tested with searches of the refuter's own. Removed claims are described without their figures, so this file vouches for no year or name that the staging no longer uses.",
+  "readOn": "2026-11-22",
+  "changed": [
+    {
+      "where": "tg-wines Domaine du Vieux Lazaret Blanc (lines.s45, kept 0, kept 1, kept 2) and components/_staging/tg-wines.json (the Vieux Lazaret component's name, explain, card, history, facts, sayIt)",
+      "was": "the village lazaret described as a hospice where the sick were nursed and kept apart in the plague years, naming one plague year of the eighteenth century",
+      "now": "an eighteenth century village hospice run by the Lazarists, which sheltered the poor and the sick; the component is now 'the old village hospice'",
+      "why": "Two sources give the Lazarist hospice for the poor and infirm; no source found ties the Chateauneuf hospice to a plague or to quarantine. The quarantine sense of lazaret belongs to the port of Marseille.",
+      "sources": ["en.wikipedia.org, Domaine du Vieux Lazaret", "hachette-vins.com, the estate's producer entry", "a search for the hospice and the plague that found the two only as separate facts"]
+    },
+    {
+      "where": "tg-wines Charles Lafitte Brut (profile, lines.s45)",
+      "was": "rested about three years before release",
+      "now": "cut",
+      "why": "The three years is printed for the Cuvee Speciale; which cuvee the house pours is the open ask, so the ageing of that cuvee cannot be asserted. The launch by the Vranken group in 1983 stands (the group's own milestones page).",
+      "sources": ["vrankenpommery.com, our milestones", "hachette-vins.com, Charles Lafitte"]
+    },
+    {
+      "where": "tg-wines Domaine Weinbach Sylvaner (lines.s45)",
+      "was": "on sand and gravel over granite",
+      "now": "on sand and silt over granite pebbles",
+      "why": "The importers print sand and silt over granite pebbles, and the profile and kept notes already say so; the s45 line now agrees with them.",
+      "sources": ["bibendum.com.au, Weinbach Alsace Sylvaner", "justerinis.com, Domaine Weinbach Sylvaner"]
+    },
+    {
+      "where": "tg-dishes-a Titus' BBQ Shrimp Stuffing (lines.s45, origin, kept 0)",
+      "was": "born at Pascal's Manale in a single year of the mid fifties, by the family's account",
+      "now": "born at Pascal's Manale, Uptown, in the early 1950s",
+      "why": "The accounts disagree by a year (one says the year after the other), and the dated one is a grocer's history, not the family's own words.",
+      "sources": ["rouses.com, the seafood issue", "bizneworleans.com, Keepers of the Flame"]
+    },
+    {
+      "where": "tg-dishes-a Bay Scallop Crudo (lines.s45, kept 0, kept 2) and the bay scallop component",
+      "was": "about an inch across, fifty or more (or fifty to ninety) to the pound; sea scallops about two inches and ten to twenty to the pound",
+      "now": "half an inch to an inch across, often seventy (to a hundred or more) to the pound; sea scallops larger, often ten to thirty to the pound",
+      "why": "Seafood guides give bay scallops at half an inch to an inch, sold around 70/120 to the pound, and sea scallops at 10 to 30.",
+      "sources": ["fultonfishmarket.com, scallop sizing", "americastestkitchen.com, types of scallops", "tastingtable.com, scallop count size"]
+    },
+    {
+      "where": "tg-dishes-a Endive Satsuma Salad (kept 0) and the satsuma component (explain, card)",
+      "was": "Plaquemines grows most of the crop; ripe from late September into December; more than three quarters of the state's citrus acreage; came to the West from Satsuma in a given year of the 1870s",
+      "now": "Plaquemines Parish is the leading grower; harvested from about October into December; most of the state's citrus acreage; reached the United States in the 1870s",
+      "why": "The LSU AgCenter says the satsuma harvest begins in October; its studies give the satsuma share as 63 percent in one and over three fourths in another; Florida records an earlier arrival than the shipment that named the fruit.",
+      "sources": ["lsuagcenter.com, satsuma harvest starts another good citrus season", "lsuagcenter.com, It's satsuma time in Louisiana", "ask.ifas.ufl.edu, The Satsuma Mandarin"]
+    },
+    {
+      "where": "the marshmallow on sweet potatoes component",
+      "was": "Angelus, later Campfire, printed the casseroles again in two later years",
+      "now": "printed more sweet potato and marshmallow recipes around 1930",
+      "why": "A booklet of about 1930 is documented; the later year was found in no source.",
+      "sources": ["thekitchn.com, marshmallows on sweet potatoes", "atlasobscura.com, marshmallows and sweet potato casserole"]
+    },
+    {
+      "where": "tg-dishes-a Sweet Potato Pot de Creme (pairing.palate)",
+      "was": "twelve years in bottle",
+      "now": "twelve years of age",
+      "why": "A 2014 Auslese was bottled the next year; the wine's own profile says twelve years of age.",
+      "sources": ["the shipped pack, Dr. Hermann Erdener Pralat Auslese 2014 profile"]
+    },
+    {
+      "where": "tg-dishes-b Bacon-Wrapped Pork Tenderloin (kept 0, kept 2) and the polenta component",
+      "was": "polenta ground finer than grits",
+      "now": "cut; polenta stays a cousin of grits",
+      "why": "The grind of either varies by mill and cook; it is a claim a guest from the South could contradict, and no source settles it.",
+      "sources": []
+    },
+    {
+      "where": "tg-dishes-b Herb Roasted Beef Tenderloin (say) and the pommes puree component",
+      "was": "pum pew-RAY",
+      "now": "pom pyoo-RAY",
+      "why": "Pommes is said pom; the respelling now matches the side's own pyoo-RAY.",
+      "sources": []
+    }
+  ],
+  "tested_and_held": [
+    "Oysters Rockefeller at Antoine's, credited to Jules Alciatore, the founder's son, around 1899 by most accounts (Wikipedia gives 1889 in its text; the 'by most accounts' hedge stands); named for John D. Rockefeller; the recipe kept secret.",
+    "Domaine Weinbach: Capuchins and the Clos des Capucins in 1612 (one source says the friars came in 1619), sold by the state after the Revolution, bought in 1898 by two brothers, tanners of Kaysersberg; about five hectares; old vines on sand and silt over granite pebbles; biodynamic; old oak vats.",
+    "Domaine du Vieux Lazaret: the family's first vines in 1748; the name carried since 1915; Grenache Blanc 50 (or 45), Clairette 25 (or 30), Bourboulenc 20, Roussanne 5; almost entirely steel or concrete.",
+    "White is about 7 percent of the vines of Chateauneuf-du-Pape and less of its wine; Grenache Blanc its most planted white grape.",
+    "Coombsville became an AVA in December 2011, on volcanic tuff, ash and lava of the Vaca Range, cooled by San Pablo Bay; the 2021 Paul Hobbs Coombsville is 83 percent Cabernet Sauvignon, 7 Cabernet Franc, 6 Petit Verdot, 4 Merlot.",
+    "La Tour Vieille Banyuls Reserva: aged partly in wood and partly in glass jars set out in the sun, blended through a solera; mostly Grenache.",
+    "Grillades: a Picayune recipe for grillades a la Creole in 1898 and a Times-Democrat breakfast menu listing grillades and grits in 1900; Carnival kings and queens serving grillades and grits at krewe breakfasts after the balls.",
+    "The Beauregard released by LSU in 1987 and an industry standard; Louisiana's yam name coined in the 1930s (1937 by the LSU AgCenter).",
+    "Angelus Marshmallows' booklet of 1917 by Janet McKenzie Hill, the first documented sweet potato and marshmallow recipe.",
+    "Brussels sprouts grown around Brussels and a popular crop by the sixteenth century.",
+    "The black Perigord truffle dug from mid-November to mid-March."
+  ],
+  "rules_read": [
+    "Nobody living is named: the dead (Jules Alciatore, John D. Rockefeller, Frank N. Meyer, Janet McKenzie Hill, the founders of Durkee-Mower) are historical; Titus is kept only in the printed dish name; Paul Hobbs only as the label; Weinbach and Vieux Lazaret by the family and the estate.",
+    "No price but the sheet's ($80, add $5, $10, $7, $7, $7) and the house's printed ones ($120 pairing supplement, the glass and bottle list).",
+    "No vintage is said for the Weinbach or the Vieux Lazaret anywhere; the Hobbs 2021 and the Banyuls Reserva are said with the vintage ask.",
+    "No sentence says what a guest may safely eat: every service note says the sheet prints no allergen marks and sends the question to the kitchen and lineup.",
+    "The sheet's words, pourText and every description and printed line were read against the transcript, letter for letter."
+  ],
+  "open": [
+    "Which Charles Lafitte cuvee is poured, its blend and its ageing.",
+    "The Weinbach Sylvaner's vintage and label (Sylvaner or Sylvaner Reserve); the Vieux Lazaret's vintage and so its blend.",
+    "Whether the Banyuls bottle is still the Reserva; whether the Hobbs is still the 2021.",
+    "The two appetizer lines cut at the page edge, more sides below the photograph, and the hours on the day.",
+    "Every method the sheet does not print stays with the kitchen and lineup."
+  ]
+}
