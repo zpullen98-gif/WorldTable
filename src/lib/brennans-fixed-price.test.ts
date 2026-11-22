@@ -9,7 +9,17 @@
  * isSidesSection names the sections that carry no pairing. Each build runs on a
  * copy of the tool tree in a scratch folder, so the worktree's house.json, the
  * ledger and the logs are never touched. The shipped pack must pass every rule
- * here as it stands: the routes were added before the edition that uses them.
+ * here as it stands.
+ *
+ * The routes were added before the edition that uses them, and the fixtures
+ * stand in for that edition (a test menu that Turtle Soup joins, a test pour on
+ * the second course, the November ask answered). Since the Thanksgiving edition
+ * of 22 November 2026 is in overrides.json, a scratch tree is the house as it
+ * stood before that edition (BEFORE below: the entries ahead of the one that
+ * gives the house the meal Thanksgiving Day) with the fixtures after it, so a
+ * fixture never meets the record it stands in for. Such a tree carries no
+ * shipped pack: the shipped pack holds the edition, and the builder would
+ * rightly refuse a build that drops its records with no tombstone.
  */
 import { describe, it, expect, afterAll } from 'vitest';
 import { execFile, spawnSync } from 'node:child_process';
@@ -29,8 +39,11 @@ const BASE = JSON.parse(readFileSync(join(ROOT, 'tools', 'house', 'brennans', 'o
 const PACK = () => JSON.parse(readFileSync(join(ROOT, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json'), 'utf8')).house;
 const engine = () => import(/* @vite-ignore */ pathToFileURL(join(ROOT, 'tools', 'house', 'engine.mjs')).href);
 const isPast = (r: Entry) => typeof r?.section === 'string' && r.section.trim().indexOf('Past ') === 0;
+/* Where the Thanksgiving edition begins in the overrides: its first entry sets the house's meals with the day among them. */
+const HOLIDAY_AT = BASE.findIndex((e) => e.target === 'house' && e.field === 'meals' && Array.isArray(e.value) && e.value.some((m: Entry) => m?.name === 'Thanksgiving Day'));
+const BEFORE = HOLIDAY_AT < 0 ? BASE.length : HOLIDAY_AT;
 
-/** A copy of tools/house beside the shipped engine and pack, the component fragments left out, with the entries appended. */
+/** A copy of tools/house beside the shipped engine, the component fragments and the shipped pack left out, the overrides as they stood before the Thanksgiving edition with the entries appended. */
 function tree(extra: Entry[]): string {
 	const dir = mkdtempSync(join(tmpdir(), 'oot-fixed-'));
 	made.push(dir);
@@ -38,19 +51,11 @@ function tree(extra: Entry[]): string {
 	rmSync(join(dir, 'tools', 'house', 'brennans', 'components'), { recursive: true, force: true });
 	mkdirSync(join(dir, 'static', 'shared', 'packs'), { recursive: true });
 	cpSync(join(ROOT, 'static', 'shared', 'oot-house.js'), join(dir, 'static', 'shared', 'oot-house.js'));
-	/* The shipped pack carries the fragments' components and the videos only they file: a build without
-	   the fragments would drop them unannounced, so the copy keeps only what the overrides file. */
-	const at = join(dir, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json');
-	const p = JSON.parse(readFileSync(join(ROOT, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json'), 'utf8'));
-	const ledger = JSON.parse(readFileSync(join(dir, 'tools', 'house', 'brennans', 'ids.ledger.json'), 'utf8'));
-	const filed = new Set(BASE.filter((e) => e.target === 'video:+').map((e) => ledger['videos:' + e.value.id]));
-	delete p.house.components;
-	if (Array.isArray(p.house.videos)) p.house.videos = p.house.videos.filter((v: Entry) => filed.has(v.id));
-	writeFileSync(at, JSON.stringify(p));
 	const parsed = spawnSync(process.execPath, [join(dir, 'tools', 'house', 'parse-guide.mjs'), '--quiet'], { cwd: dir, encoding: 'utf8' });
 	expect(parsed.status, parsed.stderr || parsed.stdout).toBe(0);
 	const file = join(dir, 'tools', 'house', 'brennans', 'overrides.json');
 	const o = JSON.parse(readFileSync(file, 'utf8'));
+	o.entries = o.entries.slice(0, BEFORE);
 	o.entries.push(...extra);
 	writeFileSync(file, JSON.stringify(o));
 	return dir;
@@ -120,14 +125,22 @@ describe("the Brennan's pack rules: the menu rules and the sides", () => {
 		/* The same dish on a course of a menu is priced by the menu. */
 		noAsk.tastings[1].courses[0].dishIds.push(tartare.id);
 		expect(e.menuProblems(noAsk, isPast)).toEqual([]);
-		/* A pour whose course names another wine is poured nowhere, until it is filed as past. */
+		/* A pour whose course names another wine is poured nowhere, until it is filed as past: the second
+		   course's own pour, whichever wine the edition pours there (the Domaine Weinbach Sylvaner since 22
+		   November 2026; the Fichet before it, which the shipped pack now files as past for this very rule). */
 		const moved = JSON.parse(JSON.stringify(h));
-		const fichet = moved.wines.find((w: Entry) => w.name === FICHET);
+		const second = moved.tastings[1].courses[1];
+		const left = moved.wines.find((w: Entry) => w.id === second.pourId);
 		const hobbs = moved.wines.find((w: Entry) => /^Paul Hobbs/.test(w.name));
-		moved.tastings[1].courses.find((c: Entry) => c.pourId === fichet.id).pourId = hobbs.id;
-		expect(e.menuProblems(moved, isPast)).toEqual([expect.stringMatching(/^unpriced-wine: wine Fichet .*section that begins "Past "/)]);
-		fichet.section = 'Past tasting pours';
+		expect(left.price).toBe('');
+		second.pourId = hobbs.id;
+		const found = e.menuProblems(moved, isPast).filter((m: string) => m.startsWith('unpriced-wine: '));
+		expect(found).toHaveLength(1);
+		expect(found[0].startsWith('unpriced-wine: wine ' + left.name)).toBe(true);
+		expect(found[0]).toMatch(/section that begins "Past "/);
+		left.section = 'Past tasting pours';
 		expect(e.menuProblems(moved, isPast)).toEqual([]);
+		expect(h.wines.find((w: Entry) => w.name === FICHET)).toMatchObject({ section: 'Past tasting pours', price: '' });
 		/* A wine with no vintage is asked about, by the word. */
 		const bare = JSON.parse(JSON.stringify(h));
 		const lafitte = bare.wines.find((w: Entry) => /^Charles Lafitte/.test(w.name));

@@ -92,9 +92,10 @@ describe('the two tasting menus as printed', () => {
 		]);
 		expect(dinner.courses.every((c) => c.pourLabel === 'Suggested Pairing' && !c.choice && !c.drinkCourse)).toBe(true);
 		expect(dinner.courses.map((c) => c.pour!.item!.name)).toEqual([
+			/* The five pours of the Dinner Pairing Wines sheet of 22 November 2026: the second and third are new. */
 			'Charles Lafitte Brut Champagne NV',
-			'Fichet ‘Château London’ Mâcon-Igé 2024',
-			'Louis Jadot Beaune 1er Cru 2023',
+			'Domaine Weinbach Sylvaner',
+			'Domaine du Vieux Lazaret Châteauneuf-du-Pape Blanc',
 			'Paul Hobbs Coombsville Cabernet Sauvignon 2021',
 			'Domaine La Tour Vieille Banyuls Reserva NV'
 		]);
@@ -165,7 +166,7 @@ describe('the meal filter, the section and the rows', () => {
 
 	it('say on a card where the tastings serve an item, the course as printed and the pour under its words', () => {
 		expect(tastingPlaces(PACK, idOf('Eggs Hussarde'))).toEqual([`On the ${BREAKFAST}: Third Course. Paired with Charles Lafitte Brut Champagne FR NV [4oz]`]);
-		expect(tastingPlaces(PACK, idOf('Grand Isle Jewel Oysters'))).toEqual([`On the ${DINNER}: First Course. Suggested Pairing: Charles Lafitte Brut Champagne FR NV`]);
+		expect(tastingPlaces(PACK, idOf('Grand Isle Jewel Oysters'))).toEqual([`On the ${DINNER}: First Course. Suggested Pairing: Charles Lafitte Champagne`]);
 		expect(tastingPlaces(PACK, idOf('Baked Apple'))).toEqual([`On the ${BREAKFAST}: First Course`]);
 		expect(tastingPlaces(PACK, idOf('Charles Lafitte Brut Champagne NV'))).toEqual([`Poured on the ${BREAKFAST}: Third Course`, `Poured on the ${DINNER}: First Course`]);
 		expect(tastingPlaces(PACK, idOf('Brandy Milk Punch'))).toEqual([`Poured on the ${BREAKFAST}: Eye Opener Cocktail`]);
@@ -188,7 +189,8 @@ describe('the meal filter, the section and the rows', () => {
 		expect(at(BREAKFAST, 'Turtle Soup')!.lines).toEqual(['Second Course, choice of Turtle Soup or Seafood Gumbo. Paired with Bloody Bull Cocktail']);
 		expect(at(BREAKFAST, 'World Famous Bananas Foster')!.lines).toEqual(['Fifth Course. Paired with Brennan’s Private Blend Congregation Coffee & Chicory']);
 		const oysters = at(DINNER, 'Grand Isle Jewel Oysters')!;
-		expect(oysters.lines).toEqual(['First Course. Suggested Pairing: Charles Lafitte Brut Champagne FR NV']);
+		/* The dinner pours read as the Dinner Pairing Wines sheet of 22 November 2026 names them. */
+		expect(oysters.lines).toEqual(['First Course. Suggested Pairing: Charles Lafitte Champagne']);
 		expect(oysters.terms).toBe('Add Wine Pairing Supplement, 4 Ounce Wine Pours $120.00');
 		/* A pour: the drink a course is, or the course and the dishes it is poured with, on this menu only. */
 		expect(at(BREAKFAST, 'Brandy Milk Punch')!.lines).toEqual(['Eye Opener Cocktail']);
@@ -215,7 +217,9 @@ describe('the meal filter, the section and the rows', () => {
 });
 
 describe('the Tasting courses deck', () => {
-	it('deals one card per course, breakfast then dinner, in printed order, fronts the short way', () => {
+	it('deals one card per course, breakfast, dinner, then the Thanksgiving Day menu, in printed order, fronts the short way', () => {
+		/* The engine's own deck: it deals the fixed price menu's three courses too (the Table keeps that menu
+		   out of its Tasting courses deck and deals it from the Thanksgiving Day tab: study-fixed-price.test.ts). */
 		const cards = buildFlashcards(PACK).filter((c) => c.kind === 'tasting');
 		expect(cards.map((c) => c.front)).toEqual([
 			'Traditional Breakfast: Eye Opener Cocktail',
@@ -228,15 +232,19 @@ describe('the Tasting courses deck', () => {
 			'Dinner Tasting Menu: Second Course',
 			'Dinner Tasting Menu: Third Course',
 			'Dinner Tasting Menu: Fourth Course',
-			'Dinner Tasting Menu: Fifth Course'
+			'Dinner Tasting Menu: Fifth Course',
+			'Happy Thanksgiving from Brennan’s: Appetizers',
+			'Happy Thanksgiving from Brennan’s: Entrées',
+			'Happy Thanksgiving from Brennan’s: Desserts'
 		]);
-		expect(cards.map((c) => c.course)).toEqual([1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5]);
+		expect(cards.map((c) => c.course)).toEqual([1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 1, 2, 3]);
 		expect(cards[0].back).toBe('Brandy Milk Punch');
 		expect(cards[1].back).toBe('Baked Apple');
 		expect(cards[2].back).toBe('Choice of Turtle Soup or Seafood Gumbo. Paired with Bloody Bull Cocktail');
 		expect(cards[3].back).toBe('Eggs Hussarde. Paired with Charles Lafitte Brut Champagne FR NV [4oz]');
 		expect(cards[5].back).toBe('World Famous Bananas Foster. Paired with Brennan’s Private Blend Congregation Coffee & Chicory');
-		expect(cards[8].back).toBe('Fish Bouillabaisse. Suggested Pairing: Louis Jadot 1er Cru Beaune, Burgundy FR Pinot Noir 2023');
+		expect(cards[8].back).toBe('Fish Bouillabaisse. Suggested Pairing: Domaine du Vieux Lazaret Blanc');
+		expect(cards[13].back).toBe('Choice of World Famous Bananas Foster, Sweet Potato Pot de Crème or Chocolate and Orange Tart');
 		for (const c of cards) {
 			expect(c.front).not.toMatch(DASH);
 			expect(c.back).not.toMatch(DASH);

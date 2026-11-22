@@ -74,7 +74,9 @@ test('whole-deck choice remains available and component answers link to dish les
 	await page.locator('[data-deck="menu"]').click();
 	await page.getByRole('button', { name: /^Whole deck/ }).click();
 	await page.getByRole('button', { name: 'Start', exact: true }).click();
-	await expect(page.locator('.deckframe .where')).toHaveText('Card 1 of 70 · The whole menu');
+	/* The whole menu deals every dish of the house, the past ones last: counted from the pack (70 until the
+	   Thanksgiving edition of 22 November 2026 filed its sixteen, 86 since). */
+	await expect(page.locator('.deckframe .where')).toHaveText(`Card 1 of ${(JSON.parse(pack) as { house: { dishes: unknown[] } }).house.dishes.length} · The whole menu`);
 	await goto(page, '/flashcards?deck=item-components%3Ad-1q0xk7jv');
 	await page.getByRole('button', { name: 'Start', exact: true }).click();
 	await page.getByRole('button', { name: 'Flip', exact: true }).click();

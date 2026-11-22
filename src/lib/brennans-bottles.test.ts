@@ -89,8 +89,8 @@ describe("the Brennan's builder: the bottle list and the tiers", () => {
 		]);
 		const r = build(dir);
 		expect(r.status, r.stderr).toBe(0);
-		/* The four test bottles over the floor's own, and the menus' 38 wines beside them. */
-		expect(r.stdout).toContain(`${OWN + 4} of ${OWN + 4 + 38} wines are on the bottle list; 1 dishes carry bottle tiers`);
+		/* The four test bottles over the floor's own, and the menus' 40 wines beside them. */
+		expect(r.stdout).toContain(`${OWN + 4} of ${OWN + 4 + 40} wines are on the bottle list; 1 dishes carry bottle tiers`);
 		const h = JSON.parse(readFileSync(join(dir, 'tools', 'house', 'brennans', 'house.json'), 'utf8'));
 		const byName = new Map(h.wines.map((w: Entry) => [w.name, w]));
 		expect(byName.get('Test Half White 2021')).toMatchObject({ list: 'bottle', bin: '9004', size: '375ml', bottle: '$54' });
@@ -121,13 +121,13 @@ describe("the Brennan's builder: the bottle list and the tiers", () => {
 		expect(blank.status, blank.stderr).toBe(0);
 	}, 180_000);
 
-	it('counts the menus at 38 and the bottles and tiers from the overrides', async () => {
+	it('counts the menus at 40 and the bottles and tiers from the overrides', async () => {
 		/* A computed address, so the type check never walks the untyped tool. */
 		const engine = await import(/* @vite-ignore */ pathToFileURL(join(ROOT, 'tools', 'house', 'engine.mjs')).href);
 		const h = JSON.parse(readFileSync(join(ROOT, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json'), 'utf8')).house;
 		/* The shipped pack against the shipped fragments' figures (none when the directory is absent). */
 		expect(engine.countProblems(h)).toEqual([]);
-		expect(engine.MENU_WINES).toBe(38);
+		expect(engine.MENU_WINES).toBe(40);
 		const more = JSON.parse(JSON.stringify(h));
 		more.wines.push({ ...more.wines[0], id: 'w-testbot1', name: 'A bottle', list: 'bottle', bin: '1', size: '750ml', bottle: '$90' });
 		/* The clone is a new bottle, not a compared item: the first wine's comparison stays with it. */

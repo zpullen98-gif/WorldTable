@@ -65,11 +65,12 @@ describe("the Brennan's pack", () => {
 		const timed = h.wines.filter((w) => w.lines).length;
 		expect(r.stdout).toMatch(/\d+ marks all by person/);
 		expect(r.stdout).toContain(`notes ${[ABOUT_Q, ...COACH, POUR_Q].map(notes).join('/')} under the five fixed questions, ${kept} kept notes in all; 0 thin lines`);
-		expect(r.stdout).toContain('70 dishes, 32 cocktails (6 spirit-free, 10 pairings on a coffee)');
-		/* The five-star card edition of 2 November gave all 271 wines a sale and the November edition's four new glass wines carry one too (275), so the gate runs with --require-sale and a wine without one fails it. */
+		/* The Thanksgiving edition of 22 November files the sixteen dishes of the Thanksgiving Day menu (70 to 86); none of their pairings takes a coffee. */
+		expect(r.stdout).toContain('86 dishes, 32 cocktails (6 spirit-free, 10 pairings on a coffee)');
+		/* The five-star card edition of 2 November gave all 271 wines a sale and the November edition's four new glass wines carry one too (275), as do the two new pours of the Dinner Pairing Wines sheet of 22 November (277), so the gate runs with --require-sale and a wine without one fails it. */
 		const withSale = h.wines.filter((w) => typeof w.lines?.value.sale === 'string' && w.lines.value.sale.trim()).length;
 		expect(withSale).toBe(h.wines.length);
-		expect(r.stdout).toContain(`${h.wines.length} wines (${timed} with timed lines, 275 with a sale, required)`);
+		expect(r.stdout).toContain(`${h.wines.length} wines (${timed} with timed lines, 277 with a sale, required)`);
 		expect(r.stdout).toContain('0 banned lines');
 		expect(timed).toBe(h.wines.length);
 		expect(r.stdout).toContain(`${h.lexicon.length} terms, ${h.scenarios.length} scenarios, ${h.mixUps.length} mix-ups, ${h.mustKnows.length} must-knows`);
@@ -210,7 +211,12 @@ describe("the Brennan's pack", () => {
 		expect(drinks.length).toBe(summer.length);
 		// The coffee price question was reworded on 19 October and filed under a new id; its old id is
 		// tombstoned a millisecond after the 12:30 edition of 18 October, the last that carried it.
+		// The Dinner Pairing Wines sheet of 22 November answered nine asks about the dinner tasting's pours (the
+		// three November asks whether each was still the pour, and six older ones about the same pours); each is
+		// tombstoned a millisecond after the 15:04 edition of 15 November, the last that carried it.
+		const answered = Date.parse('2026-11-15T15:04:00.000Z') + 1;
 		const later: Record<string, number> = { 'a-yezg582z': Date.parse('2026-10-18T12:30:00.000Z') + 1 };
+		for (const id of ['a-i0xmkjmb', 'a-5qm2ecea', 'a-v7ljbixx', 'a-gxqu6dvb', 'a-887mv8rn', 'a-fx9kevzn', 'a-tpo4g6zd', 'a-99urxp3r', 'a-s8h2463w']) later[id] = answered;
 		for (const k of Object.keys(h.removed)) expect(h.removed[k], k).toBe(later[k] ?? Date.parse('2026-10-03T22:00:00.000Z') + 1);
 		for (const name of ['Flamingo', 'Birdcage', 'Spoonbill', 'Personality', 'Oh! What It Seemed to Be']) expect(h.cocktails.some((c) => c.name === name), name).toBe(true);
 	});
