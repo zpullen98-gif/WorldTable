@@ -1,0 +1,102 @@
+{
+ "partial": false,
+ "dish": "Veal Grillades",
+ "readOn": "2026-11-22",
+ "sheet": {
+  "source": "tools/house/brennans/research/menu-2026-11-22-sheets.md, Sheet 1, ENTREES line 6",
+  "page": "tools/house/brennans/pages/brennans-sheets-2026-11-22.txt",
+  "title": "Happy Thanksgiving from Brennan’s, 3 Courses $80: choice of appetizer, entrée and dessert",
+  "line": "Cheddar Grits, Piperade, Poached Egg, Debris",
+  "allergens": [],
+  "note": "The sheet prints the dish name and its line and nothing else: no allergen marks, no price of its own (the $80 covers three courses), no method, no portion, no wine."
+ },
+ "classic": {
+  "grillades": "Grillades, gree-YAHDS, are thin, pounded slices of veal or beef (pork in some modern recipes), braised in gravy until tender and served over grits at breakfast or brunch, a Creole dish; despite the name they are not grilled; the word is from the French griller; the cookbook grillades of the late 1800s were boneless veal medallions simmered in gravy (Wikipedia, Grillades; Saveur, Classic Grillades and Grits; New Orleans Magazine, A Royal Dish). A recipe for Grillades a la Creole ran in The Daily Picayune on 7 September 1898, and Grillades and Grits was on a breakfast menu in the Times-Democrat on 2 April 1900 (The Big Apple word history site, grillades). Carnival kings and queens still serve grillades and grits at krewe breakfasts after their balls (New Orleans Magazine, A Royal Dish).",
+  "debris": "Debris, DAY-bree in the pack’s lexicon, is the tender bits of roast that fall into the pan juices and gravy as it cooks and is carved, best known on the roast beef po’boy (Explore Louisiana, Roast Beef Po’ Boys with Debris; The Christian Science Monitor, debris po’ boys; the pack’s Débris term). Which roast gives the kitchen’s debris is not printed.",
+  "piperade": "Piperade is a Basque and Gascon dish of sautéed onions, green peppers and tomatoes flavored with red Espelette pepper; the name is from piper, pepper in Gascon and Basque; it is often served with eggs or ham (Wikipedia, Piperade; James Beard Foundation, Eat This Word: Pipérade; The Splendid Table, Classic Piperade)."
+ },
+ "sayIt": [
+  "Grillades: gree-YAHDS (Wikipedia, Grillades).",
+  "Piperade: pee-peh-RAHD.",
+  "Debris: DAY-bree, as the pack’s lexicon gives it."
+ ],
+ "unsourced": [
+  "What roast gives the kitchen’s debris, how the veal is cut and cooked, and whether the piperade carries Espelette pepper: asked of the chef.",
+  "A single origin story for grillades: the sources differ; only the dated newspaper records are used.",
+  "A view printed by a living New Orleans writer that cheese grits do not belong with grillades: left out, since it names a living person and is an opinion."
+ ],
+ "sources": [
+  {
+   "id": "wiki-grillades",
+   "title": "Grillades",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Grillades",
+   "supports": "Pronunciation; medallions of meat, conventionally beef, veal and pork in modern recipes; braised in gravy; not grilled; served over grits at breakfast or brunch; a Creole food. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "saveur-grillades",
+   "title": "Classic Grillades and Grits",
+   "publisher": "Saveur",
+   "url": "https://www.saveur.com/article/Recipes/Classic-Grillades-Grits",
+   "supports": "Pounded thin slices of beef, veal or pork, inexpensive cuts tenderized over low, slow cooking. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "nomag-royal",
+   "title": "A Royal Dish",
+   "publisher": "New Orleans Magazine",
+   "url": "https://www.myneworleans.com/a-royal-dish/",
+   "supports": "The cookbook grillades of the late 1800s were boneless veal medallions in gravy; Carnival kings and queens serve grits and grillades at krewe breakfasts. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "popik-grillades",
+   "title": "Grillades",
+   "publisher": "The Big Apple, a word history site",
+   "url": "https://barrypopik.com/blog/grillades",
+   "supports": "Grillades a la Creole in The Daily Picayune, 7 September 1898; Grillades and Grits on a Times-Democrat breakfast menu, 2 April 1900. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "wiki-piperade",
+   "title": "Piperade",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Piperade",
+   "supports": "A Basque and Gascon dish of onions, green peppers and tomatoes with Espelette pepper; piper is pepper in Gascon and Basque. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "jbf-piperade",
+   "title": "Eat This Word: Pipérade",
+   "publisher": "James Beard Foundation",
+   "url": "https://www.jamesbeard.org/stories/eat-this-word-piprade",
+   "supports": "The Basque pepper dish and its name. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "explorelouisiana-debris",
+   "title": "Roast Beef Po’ Boys with Debris",
+   "publisher": "Louisiana Office of Tourism, Explore Louisiana",
+   "url": "https://www.explorelouisiana.com/culinary/recipes/roast-beef-po’-boys-debris",
+   "supports": "Debris as the shredded roast beef in its juices made into a gravy. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "sheet-2026-11-22",
+   "title": "Brennan’s sheets photographed on 22 November 2026, Sheet 1, the Thanksgiving Day menu",
+   "publisher": "The house’s own menu, transcribed in this repository",
+   "url": "tools/house/brennans/research/menu-2026-11-22-sheets.md",
+   "supports": "The dish name and its printed line, word for word; the menu heading, three courses for $80; no allergen marks, no wine.",
+   "kind": "primary"
+  },
+  {
+   "id": "repo-pack",
+   "title": "The house pack as shipped (the November edition): the wine list, the bottle list, the zero proof drinks and the components already written",
+   "publisher": "This repository",
+   "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+   "supports": "The wines poured by the glass and the bottles named in the pairing, with their profiles; the components reused (brown butter, capers, lemon, leeks, redfish, grits, cheddar, poached egg, popcorn rice, Creole tomatoes, holy trinity, roux, Gulf shrimp, cane syrup, apples, pork, thick-cut bacon, buttermilk, beef tenderloin).",
+   "kind": "secondary"
+  }
+ ]
+}

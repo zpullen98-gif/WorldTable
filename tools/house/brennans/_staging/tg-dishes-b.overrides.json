@@ -1,0 +1,779 @@
+{
+	"about": "The Thanksgiving Day dishes, chunk b: the six entrées of the Thanksgiving Day sheet of 22 November 2026 (Roasted Buttermilk-Brined Turkey Breast, Bacon-Wrapped Pork Tenderloin, Herb Roasted Beef Tenderloin, Shrimp Sauce Piquante, Redfish Meunière, Veal Grillades), each with its pairing, its bottle tiers and two asks. Their components are components/_staging/tg-dishes-b.json.",
+	"entries": [
+		{
+			"target": "dish:+",
+			"op": "add",
+			"value": {
+				"name": "Roasted Buttermilk-Brined Turkey Breast",
+				"section": "Thanksgiving Day",
+				"meals": [
+					"Thanksgiving Day"
+				],
+				"fixedPriceOn": "Happy Thanksgiving from Brennan’s",
+				"description": "Braised Leg, Cornbread Dressing, Cranberry and Rosemary Jus",
+				"parts": {
+					"main": "turkey, the breast and the leg",
+					"technique": "the breast brined in buttermilk and roasted, the leg braised; learn the kitchen’s method at lineup",
+					"sauce": "a cranberry and rosemary jus",
+					"sides": "cornbread dressing beside the braised leg",
+					"taste": "juicy, gently tangy white meat, rich dark meat, savory dressing and a tart, piney jus"
+				},
+				"lines": {
+					"s10": "Roasted Buttermilk-Brined Turkey Breast: the holiday turkey two ways, roast breast and braised leg, with cornbread dressing and a cranberry rosemary jus.",
+					"s20": "Our Thanksgiving turkey comes two ways on one plate: the breast brined in buttermilk and roasted, and the leg braised until tender. Cornbread dressing, the Southern way with stuffing, sits alongside, with a cranberry and rosemary jus.",
+					"s45": "This is the turkey dinner of the Thanksgiving Day menu, served two ways. The menu lists a roasted breast brined in buttermilk: the brine seasons the lean white meat right through and helps it stay juicy, with a gentle tang. Beside it is the leg, braised, so the dark meat is there too, rich and tender. Cornbread dressing is the Southern side, the same idea as stuffing but baked in its own pan. The jus, ZHOO, is cranberry and rosemary, tart and herbal, a lighter finish than a thick gravy. It suits the guest who came for the traditional holiday plate."
+				},
+				"say": "Roasted Buttermilk-Brined Turkey Breast: jus is ZHOO, French for juice.",
+				"guest": "The classic holiday plate, done two ways: juicy roast white meat and tender slow-cooked dark meat, with a Southern dressing and a tart, herbal sauce.",
+				"why": "The turkey of the Thanksgiving Day menu, white and dark meat on one plate. Offer it to the guest who came for the traditional holiday dinner.",
+				"origin": "Turkey is the center of the American Thanksgiving table. A buttermilk brine seasons the lean breast and keeps it moist, the leg is braised for the dark meat, and cornbread dressing is the Southern side, baked apart from the bird.",
+				"serviceNote": "The Thanksgiving Day sheet prints no allergen marks for any dish. It lists a buttermilk-brined turkey breast, a braised leg, cornbread dressing and a cranberry and rosemary jus for this one; what else is in it is the kitchen’s to say. Ask the kitchen and confirm at lineup before answering any question about an allergy or a diet.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "Thanksgiving turkey, two ways on one plate: the Roasted Buttermilk-Brined Turkey Breast is one of the six entrées on the Thanksgiving Day menu, three courses for $80, served on Thanksgiving Day only.\n\nThe breast is brined in buttermilk and roasted. Salt in a brine seasons the meat right through and helps the lean white meat hold its juice in the oven, and buttermilk brings a gentle tang with the salt. The leg is braised, cooked slowly in liquid, which suits dark meat: it turns rich and tender. So the guest gets white meat and dark meat together.\n\nCornbread dressing is the Southern side of the holiday. Dressing is the same kind of mixture as stuffing, bread with herbs and broth, but baked in its own pan rather than inside the bird, and in the South it is made with cornbread. The jus is cranberry and rosemary: a jus is a light sauce from the meat’s own juices, here sharpened with tart fruit and the pine of rosemary.\n\nHow long the brine runs and what goes into the dressing are questions for the kitchen at lineup."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Lead with the holiday: this is the Thanksgiving turkey, and it comes two ways, so white meat and dark meat lovers are both happy. Offer it to the traditional guest and to the table ordering a family dinner. Say: “It’s our Thanksgiving turkey, a buttermilk-brined roast breast and a braised leg, with cornbread dressing and a cranberry jus.” Then offer a glass of red Burgundy: light Pinot Noir is a classic red with turkey and cranberry."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: Is it white meat or dark meat?\n\nAnswer: Both. The breast is roasted white meat, brined in buttermilk, and the leg is braised, so there is dark meat on the plate too.\n\nAsked: Is the dressing the same as stuffing?\n\nAnswer: The same idea, bread with herbs and broth, but baked in its own pan rather than inside the bird. In the South it is made with cornbread. What else is in ours is the kitchen’s to say.\n\nAsked: Will it taste of buttermilk?\n\nAnswer: Not much. The brine seasons the meat and keeps it juicy, and at most it leaves a gentle tang."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "It is a Thanksgiving Day dish only. Do not promise gravy: the menu lists a cranberry and rosemary jus, a light sauce, so if a guest asks for gravy, ask the kitchen. Learn at lineup what is in the cornbread dressing before you describe it, since Southern dressings often carry sausage, oysters or pecans, and never guess. A question about dairy or any diet goes to the kitchen. Allergens: read the service note and confirm at lineup."
+					}
+				]
+			},
+			"reason": "The first entrée of the Thanksgiving Day sheet, written from the sheet’s line and the research file: the classic and its terms from two sources each, the method left to the kitchen. The sheet prints the dish with its line and no price of its own: the menu’s $80 covers it, so it files with fixedPriceOn naming the menu and no price ask.",
+			"source": "page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 1); research/menu-2026-11-22-roasted-buttermilk-brined-turkey-breast.json"
+		},
+		{
+			"target": "dish:Roasted Buttermilk-Brined Turkey Breast",
+			"field": "pairing",
+			"value": {
+				"wine": "Damien Martin Bourgogne Pinot Noir 2023",
+				"why": "Light tannin and fresh acidity suit lean white meat, and red cherry fruit meets the tart cranberry jus.",
+				"sayIt": "With the turkey I’d pour our red Burgundy by the glass: light, bright Pinot Noir with red fruit for the cranberry.",
+				"whyThisWine": "Turkey breast is lean and mild, so it wants a red with little tannin, and the cranberry jus is tart. Our Bourgogne Pinot Noir is light and fresh, with red cherry and raspberry for the cranberry and a touch of earth for the dressing and the dark meat.",
+				"palate": "Lean white meat makes big tannin taste harsh, but Pinot Noir’s light tannin stays soft beside it. The wine’s acidity matches the tart cranberry, so neither tastes sour, its red fruit picks up the jus, and its earthy note sits with the cornbread dressing and the richer braised leg.",
+				"principles": [
+					"tannin",
+					"acid",
+					"bridge"
+				],
+				"second": "C.H. Berres ‘Old Vines’ Riesling 2022",
+				"secondWhy": "For a white drinker: an off-dry Mosel Riesling, its touch of sweetness for the cranberry and racy acidity for the dressing.",
+				"stepUp": "",
+				"serve": "Pour as the entrées fire, slightly cool, in a Burgundy glass. Confirm at lineup which glass wines are poured on Thanksgiving Day.",
+				"avoid": "Avoid big, oaky Cabernet: its tannin turns hard on lean turkey breast and runs over the tart cranberry.",
+				"zeroProof": "Personality",
+				"zeroProofWhy": "tart cherry and a little brown sugar echo the cranberry jus, and the bubbles lift the dressing."
+			},
+			"reason": "The pairing for a dish the sheet prints with no wine, chosen from the house’s own glass list: light tannin and fresh acidity suit lean white meat, and red cherry fruit meets the tart cranberry jus.",
+			"source": "the house wine list in the shipped pack (Damien Martin Bourgogne Pinot Noir 2023, $18.00 the glass; C.H. Berres Old Vines Riesling 2022, $14 the glass; Personality, $16.00)"
+		},
+		{
+			"target": "dish:Roasted Buttermilk-Brined Turkey Breast",
+			"op": "bottles",
+			"value": {
+				"value": {
+					"wine": "Marcel Lapierre Morgon 2023",
+					"why": "Low tannin and bright acid: Gamay from a Beaujolais cru, with cherry fruit for the cranberry and silk for lean turkey.",
+					"sayIt": "For a bottle, the Lapierre Morgon: silky Beaujolais with bright cherry fruit, a natural with turkey and cranberry."
+				},
+				"classic": {
+					"wine": "Domaine Tollot-Beaut ‘Les Lavières’ Savigny-lès-Beaune Premier Cru 2019",
+					"why": "Red fruit and supple tannin: Premier Cru Pinot Noir with a little more depth for the dark meat and the dressing.",
+					"sayIt": "The Tollot-Beaut Savigny Premier Cru: red Burgundy with ripe cherry and gentle spice, lovely across white and dark meat."
+				},
+				"splurge": {
+					"wine": "Marquis d’Angerville ‘Clos des Ducs’ Volnay Premier Cru 2014",
+					"why": "Silk and age: mature Volnay, red cherry and rose with fine tannin, generous with turkey and never heavy.",
+					"sayIt": "For a celebration, the d’Angerville Clos des Ducs: Volnay with twelve years of age, silky, floral and long."
+				},
+				"half": {
+					"wine": "Bergstrom ‘Reserve’ Pinot Noir Willamette Valley 2022 (375 ml)",
+					"why": "Red fruit in a half bottle: Oregon Pinot Noir with cranberry and forest floor notes, fine tannin and bright acidity.",
+					"sayIt": "A half bottle of the Bergstrom Pinot Noir from Oregon: red fruit and a little earth, right for two."
+				}
+			},
+			"reason": "The bottles offered with this dish by price: value under $100, sweet spot $100 to $250, celebration over $250, and a half bottle.",
+			"source": "the house bottle list in the shipped pack (Lapierre Morgon 2023, $95; Tollot-Beaut Les Lavières 2019, $175; d’Angerville Clos des Ducs 2014, $380; Bergstrom Reserve 375 ml, $65)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "How is the Roasted Buttermilk-Brined Turkey Breast built: how long is the breast brined and how is it roasted, how is the leg braised, what goes into the cornbread dressing (sausage, oysters, pecans or none), is the jus finished with flour, and how is it plated? The Thanksgiving Day sheet lists a braised leg, cornbread dressing and a cranberry and rosemary jus and prints no method.",
+				"askWhom": "chef",
+				"items": [
+					"Roasted Buttermilk-Brined Turkey Breast"
+				]
+			},
+			"reason": "The sheet prints the dish’s parts and no method, portion or source; the technique part says so and the server describes the plate from what the kitchen confirms.",
+			"source": "page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 1)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Confirm the first pick for the Roasted Buttermilk-Brined Turkey Breast (Damien Martin Bourgogne Pinot Noir, with the C.H. Berres Riesling second and Personality spirit-free) and the bottle tiers (Lapierre Morgon, Tollot-Beaut Les Lavières, d’Angerville Clos des Ducs, the Bergstrom half) before Thanksgiving Day service.",
+				"askWhom": "sommelier",
+				"items": [
+					"Roasted Buttermilk-Brined Turkey Breast"
+				]
+			},
+			"reason": "The pairing and the tiers for a dish the sheet prints with no wine are the pack’s reading of the house list, confirmed by the sommelier before they are said at a table.",
+			"source": "the house wine list in the shipped pack; page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 1)"
+		},
+		{
+			"target": "dish:+",
+			"op": "add",
+			"value": {
+				"name": "Bacon-Wrapped Pork Tenderloin",
+				"section": "Thanksgiving Day",
+				"meals": [
+					"Thanksgiving Day"
+				],
+				"fixedPriceOn": "Happy Thanksgiving from Brennan’s",
+				"description": "Cane Syrup Glaze, Polenta, Mustard Greens, Roasted Apples",
+				"parts": {
+					"main": "pork tenderloin wrapped in bacon",
+					"technique": "wrapped in bacon and glazed with cane syrup; learn the kitchen’s method at lineup",
+					"sauce": "a Louisiana cane syrup glaze",
+					"sides": "polenta, mustard greens and roasted apples",
+					"taste": "a sweet, smoky glaze over lean pork, soft polenta, peppery greens and tart apple"
+				},
+				"lines": {
+					"s10": "Bacon-Wrapped Pork Tenderloin: lean pork in smoky bacon with a Louisiana cane syrup glaze, on polenta with mustard greens and roasted apples.",
+					"s20": "Our Bacon-Wrapped Pork Tenderloin is a fall plate with a Louisiana accent: the lean tenderloin wrapped in smoky bacon and glazed with cane syrup, served with soft polenta, peppery mustard greens and roasted apples.",
+					"s45": "This is the pork entrée of the Thanksgiving Day menu. Tenderloin is a very lean, very tender cut with a mild flavor, so it is wrapped in bacon, which brings smoke, salt and fat to the lean meat. The menu lists a cane syrup glaze: cane syrup is Louisiana sugar cane juice boiled down, sweeter and milder than molasses. With it come polenta, the soft cornmeal of northern Italy, mustard greens, a peppery Southern green, and roasted apples. Sweet, smoky, peppery and tart in one bite, it suits a guest who wants a hearty holiday plate that is not turkey."
+				},
+				"say": "Polenta: poh-LEN-tuh. Cane syrup: as it reads, Louisiana sugar cane syrup.",
+				"guest": "A hearty holiday plate that is not turkey: lean, tender pork with smoky bacon and a sweet Louisiana glaze, with soft Italian cornmeal, Southern greens and fall fruit.",
+				"why": "The pork entrée of the Thanksgiving Day menu: sweet, smoky and peppery, with a Louisiana glaze. Offer it to the guest who wants something other than turkey.",
+				"origin": "Cane syrup is a Louisiana pantry staple, sugar cane juice boiled down until thick and used to glaze meat. Here it glazes a bacon-wrapped pork tenderloin, with Italian polenta, Southern mustard greens and roasted apples, the flavors of fall.",
+				"serviceNote": "The Thanksgiving Day sheet prints no allergen marks for any dish. It lists a bacon-wrapped pork tenderloin, a cane syrup glaze, polenta, mustard greens and roasted apples for this one; what else is in it is the kitchen’s to say. Ask the kitchen and confirm at lineup before answering any question about an allergy or a diet.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "A hearty fall plate with a Louisiana glaze: the Bacon-Wrapped Pork Tenderloin is one of the six entrées on the Thanksgiving Day menu, three courses for $80, served on Thanksgiving Day only.\n\nPork tenderloin is a very lean, very tender cut with a mild flavor. That is why it is so often wrapped in bacon: the bacon protects the lean meat as it roasts, its fat bastes it, and it adds smoke and salt. The glaze is Louisiana cane syrup, sugar cane juice boiled down in open kettles with nothing taken out, so it is sweeter and milder than molasses, with a buttery caramel taste.\n\nThe sides bring Italy and the American South together. Polenta is the cornmeal porridge of northern Italy, ground finer than grits. Mustard greens are the leaves of the mustard plant, peppery when raw and mellower and sweeter when cooked, a staple of Southern cooking. Roasted apples bring the fall fruit and a tart lift against the sweet glaze.\n\nHow the pork is cooked and sliced, and how the greens are cooked, are for the kitchen to tell you at lineup."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Offer it to the guest who wants a holiday plate but not the turkey, and to the guest who loves sweet and savory together. Say: “It’s pork tenderloin wrapped in bacon with a Louisiana cane syrup glaze, on polenta with mustard greens and roasted apples.” Name the cane syrup: it is local, and guests like hearing where a flavor comes from. Then offer the Mosel Riesling by the glass, whose touch of sweetness meets the glaze and the apples while its acidity cuts the bacon."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: What is cane syrup?\n\nAnswer: Louisiana sugar cane juice boiled down until thick. It is sweeter and milder than molasses, with a caramel taste.\n\nAsked: What is polenta?\n\nAnswer: The cornmeal porridge of northern Italy, a cousin of our grits, ground finer.\n\nAsked: Can I have the pork cooked medium?\n\nAnswer: Ask the kitchen. How the tenderloin is cooked and to what temperature is the chef’s call, so check at lineup before you promise a temperature."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "It is a Thanksgiving Day dish only. The glaze is sweet, so tell a guest who dislikes sweet sauces before they order. Do not promise a temperature for the pork until the kitchen tells you how it is cooked. The bacon is part of the dish, and the polenta and greens may carry butter or pork, so any question about a diet goes to the kitchen. Allergens: read the service note and confirm at lineup."
+					}
+				]
+			},
+			"reason": "The second entrée of the Thanksgiving Day sheet, written from the sheet’s line and the research file: the classic and its terms from two sources each, the method left to the kitchen. The sheet prints the dish with its line and no price of its own: the menu’s $80 covers it, so it files with fixedPriceOn naming the menu and no price ask.",
+			"source": "page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 2); research/menu-2026-11-22-bacon-wrapped-pork-tenderloin.json"
+		},
+		{
+			"target": "dish:Bacon-Wrapped Pork Tenderloin",
+			"field": "pairing",
+			"value": {
+				"wine": "C.H. Berres ‘Old Vines’ Riesling 2022",
+				"why": "A touch of sweetness meets the cane syrup and the apples, and racy acidity cuts the bacon fat.",
+				"sayIt": "With the pork I’d pour our Mosel Riesling: a touch of sweetness for the glaze and apples, and bright acidity for the bacon.",
+				"whyThisWine": "The cane syrup glaze is sweet and the apples are tart, so the plate wants a white with a little sugar and plenty of acid. The Berres Riesling is off-dry and light, with green apple and peach to echo the fruit and racy acidity to cut the bacon.",
+				"palate": "A dry wine tastes thin and sour beside a sweet glaze, but the Riesling’s touch of sugar matches the cane syrup, so the wine stays fruity. Its acidity cuts the bacon fat and refreshes the palate after the soft polenta, its apple fruit meets the roasted apples, and its low alcohol keeps the peppery greens from tasting hot.",
+				"principles": [
+					"sweet",
+					"acid",
+					"bridge"
+				],
+				"second": "Damien Martin Bourgogne Pinot Noir 2023",
+				"secondWhy": "For a red drinker: light Pinot Noir, soft in tannin, with red fruit that sits well with pork and apples.",
+				"stepUp": "",
+				"serve": "Pour as the entrées fire, well chilled, in a white wine glass. Confirm at lineup which glass wines are poured on Thanksgiving Day.",
+				"avoid": "Avoid tannic reds and bone-dry whites: the sweet glaze makes tannin bitter and a dry wine taste thin.",
+				"zeroProof": "Oh! What It Seemed to Be",
+				"zeroProofWhy": "lemon and a silky texture cut the bacon and brighten the sweet glaze."
+			},
+			"reason": "The pairing for a dish the sheet prints with no wine, chosen from the house’s own glass list: a touch of sweetness meets the cane syrup and the apples, and racy acidity cuts the bacon fat.",
+			"source": "the house wine list in the shipped pack (C.H. Berres Old Vines Riesling 2022, $14 the glass; Damien Martin Bourgogne Pinot Noir 2023, $18.00 the glass; Oh! What It Seemed to Be, $16.00)"
+		},
+		{
+			"target": "dish:Bacon-Wrapped Pork Tenderloin",
+			"op": "bottles",
+			"value": {
+				"value": {
+					"wine": "Stein ‘Palmberg-Terrassen’ Riesling Spätlese-Feinherb 2014",
+					"why": "Sweet and acid: a just off-dry Riesling with years in bottle, baked apple and honey for the glaze, juicy acidity for bacon.",
+					"sayIt": "For a bottle, the Stein Spätlese-Feinherb: aged Mosel Riesling with baked apple and honey, made for this glaze."
+				},
+				"classic": {
+					"wine": "J.J. Prüm ‘Wehlener Sonnenuhr’ Riesling Kabinett 2020",
+					"why": "Sweet and acid: a lightly sweet, low alcohol Kabinett with green apple and slate, racy enough for bacon.",
+					"sayIt": "The Prüm Wehlener Sonnenuhr Kabinett: delicate, lightly sweet Mosel Riesling, lovely with pork and apples."
+				},
+				"splurge": {
+					"wine": "Egon Müller ‘Scharzhofberger’ Riesling Kabinett 2020",
+					"why": "Sweet and acid at their finest balance: a Saar Kabinett, lightly sweet with electric acidity, weightless beside a rich glaze.",
+					"sayIt": "For a celebration, the Egon Müller Scharzhofberger Kabinett: lightly sweet Saar Riesling with electric acidity."
+				},
+				"half": {
+					"wine": "Domaine Huet ‘Le Mont’ Vouvray Demi-Sec 2023 (375 ml)",
+					"why": "Sweet and acid in a half bottle: demi-sec Chenin Blanc with apple, pear and honey, balanced by bright acidity.",
+					"sayIt": "A half bottle of the Huet Le Mont Vouvray: gently sweet Chenin Blanc with apple and honey, for two."
+				}
+			},
+			"reason": "The bottles offered with this dish by price: value under $100, sweet spot $100 to $250, celebration over $250, and a half bottle.",
+			"source": "the house bottle list in the shipped pack (Stein Palmberg-Terrassen Spätlese-Feinherb 2014, $62; Prüm Wehlener Sonnenuhr Kabinett 2020, $135; Egon Müller Scharzhofberger Kabinett 2020, $395; Huet Le Mont 375 ml, $60)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "How is the Bacon-Wrapped Pork Tenderloin cooked and to what temperature, how is it sliced and plated, is the polenta soft or set, how are the mustard greens cooked (with pork or smoked meat?), and how are the apples roasted? The Thanksgiving Day sheet lists a cane syrup glaze, polenta, mustard greens and roasted apples and prints no method.",
+				"askWhom": "chef",
+				"items": [
+					"Bacon-Wrapped Pork Tenderloin"
+				]
+			},
+			"reason": "The sheet prints the dish’s parts and no method, portion or source; the technique part says so and the server describes the plate from what the kitchen confirms.",
+			"source": "page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 2)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Confirm the first pick for the Bacon-Wrapped Pork Tenderloin (the C.H. Berres Riesling, with the Damien Martin Pinot Noir second and Oh! What It Seemed to Be spirit-free) and the bottle tiers (Stein Spätlese-Feinherb, Prüm Wehlener Sonnenuhr, Egon Müller Scharzhofberger, the Huet Le Mont half) before Thanksgiving Day service.",
+				"askWhom": "sommelier",
+				"items": [
+					"Bacon-Wrapped Pork Tenderloin"
+				]
+			},
+			"reason": "The pairing and the tiers for a dish the sheet prints with no wine are the pack’s reading of the house list, confirmed by the sommelier before they are said at a table.",
+			"source": "the house wine list in the shipped pack; page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 2)"
+		},
+		{
+			"target": "dish:+",
+			"op": "add",
+			"value": {
+				"name": "Herb Roasted Beef Tenderloin",
+				"section": "Thanksgiving Day",
+				"meals": [
+					"Thanksgiving Day"
+				],
+				"fixedPriceOn": "Happy Thanksgiving from Brennan’s",
+				"description": "Pommes Purée, Sauce au Poivre, Roasted Brussels Sprouts",
+				"parts": {
+					"main": "beef tenderloin",
+					"technique": "roasted with herbs; learn the kitchen’s method and temperatures at lineup",
+					"sauce": "sauce au poivre, the French peppercorn sauce",
+					"sides": "pommes purée and roasted Brussels sprouts",
+					"taste": "tender beef, a peppery sauce, buttery smooth potatoes and browned, nutty sprouts"
+				},
+				"lines": {
+					"s10": "Herb Roasted Beef Tenderloin: tender beef roasted with herbs, with a French peppercorn sauce, silky pommes purée and roasted Brussels sprouts.",
+					"s20": "Our Herb Roasted Beef Tenderloin is the steak dinner of the Thanksgiving menu: the cut that gives filet mignon, roasted with herbs, with sauce au poivre, the French bistro peppercorn sauce, silky pommes purée and roasted Brussels sprouts.",
+					"s45": "This is the beef entrée of the Thanksgiving Day menu. Tenderloin is the cut filet mignon comes from, lean and very tender, and here it is roasted with herbs. The sauce is au poivre, oh PWAHV, French for with pepper: the sauce of the bistro classic steak au poivre, crushed peppercorns in a pan sauce that is classically made with Cognac and cream. Pommes purée is the French way with mashed potatoes, very smooth and rich with butter, and the Brussels sprouts are roasted until browned. It suits the guest who wants a steak dinner on the holiday."
+				},
+				"say": "Au poivre: oh PWAHV. Pommes purée: pum pew-RAY.",
+				"guest": "A steak dinner for the holiday: tender beef roasted with herbs, a classic French pepper sauce, buttery smooth potatoes and browned sprouts.",
+				"why": "The beef entrée of the Thanksgiving Day menu, a French bistro steak plate. Offer it to the guest who wants red meat and a red wine.",
+				"origin": "Sauce au poivre is the peppercorn sauce of the French bistro steak au poivre, crushed pepper in a pan sauce classically made with Cognac and cream. Here it dresses roasted beef tenderloin, with pommes purée, the French style of mashed potatoes.",
+				"serviceNote": "The Thanksgiving Day sheet prints no allergen marks for any dish. It lists herb roasted beef tenderloin, pommes purée, sauce au poivre and roasted Brussels sprouts for this one; what else is in it is the kitchen’s to say. Ask the kitchen and confirm at lineup before answering any question about an allergy or a diet.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "The steak dinner of the holiday menu: the Herb Roasted Beef Tenderloin is one of the six entrées on the Thanksgiving Day menu, three courses for $80, served on Thanksgiving Day only.\n\nTenderloin is the cut that gives filet mignon: lean, fine grained and very tender. Here it is roasted with herbs. The sauce is au poivre, French for with pepper, the sauce of steak au poivre, a classic of the French bistro. In the classic, coarsely crushed peppercorns meet a pan sauce of shallots, Cognac and cream, and tenderloin is the usual cut for it. How our kitchen makes its sauce is for lineup.\n\nPommes purée is the French style of mashed potatoes: the potatoes are riced, often passed through a fine sieve, and worked with a great deal of butter until silky. Brussels sprouts take their name from the region of Brussels in Belgium, where they were a popular crop by the sixteenth century; roasting browns their edges and makes them nutty and sweet.\n\nIt is a rich plate built for a red wine."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Offer it to the guest who wants red meat on the holiday and to the steakhouse regular. Lead with the sauce, since au poivre is a classic guests recognize. Say: “It’s herb roasted beef tenderloin with a French peppercorn sauce, silky pommes purée and roasted Brussels sprouts.” Take the temperature with the order, as the kitchen asks, and offer the Bordeaux by the glass, whose cassis and cedar stand up to the pepper."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: What is au poivre?\n\nAnswer: French for with pepper. It is a peppercorn sauce, the one on the bistro classic steak au poivre. How hot ours is, the kitchen can tell you.\n\nAsked: Is this a filet?\n\nAnswer: It is beef tenderloin, the same cut filet mignon comes from, roasted with herbs.\n\nAsked: What is pommes purée?\n\nAnswer: The French style of mashed potatoes: very smooth, with a lot of butter worked in."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "It is a Thanksgiving Day dish only. Ask the kitchen at lineup how the tenderloin is roasted and what temperatures it can be cooked to before you take an order. The pepper sauce can be strong, so offer it on the side only if the kitchen says it can be done. The sauce and the potatoes are rich with butter and may carry cream, so a question about dairy or any diet goes to the kitchen. Allergens: read the service note and confirm at lineup."
+					}
+				]
+			},
+			"reason": "The third entrée of the Thanksgiving Day sheet, written from the sheet’s line and the research file: the classic and its terms from two sources each, the method left to the kitchen. The sheet prints the dish with its line and no price of its own: the menu’s $80 covers it, so it files with fixedPriceOn naming the menu and no price ask.",
+			"source": "page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 3); research/menu-2026-11-22-herb-roasted-beef-tenderloin.json"
+		},
+		{
+			"target": "dish:Herb Roasted Beef Tenderloin",
+			"field": "pairing",
+			"value": {
+				"wine": "Moulin d’Issan Bordeaux Supérieur 2021",
+				"why": "Cassis and cedar meet the pepper, and polished tannin suits lean, tender beef without overpowering it.",
+				"sayIt": "With the tenderloin I’d pour our Bordeaux by the glass: cassis and cedar for the pepper sauce, smooth enough for the beef.",
+				"whyThisWine": "Tenderloin is lean, so a huge, tannic red would taste harsh, but the pepper sauce and the butter want a real red wine. The Moulin d’Issan is a medium-bodied Bordeaux with cassis, plum and cedar and polished tannin: enough for the au poivre, gentle on the beef.",
+				"palate": "Lean beef cannot soften heavy tannin, so a medium-bodied Bordeaux with polished tannin meets it gently and the beef tastes juicier. The cream and butter in the sauce and the purée round the tannin further, the crushed pepper picks up the wine’s cedar and spice, and its fruit stands up to the browned, slightly bitter sprouts.",
+				"principles": [
+					"tannin",
+					"fat",
+					"bridge"
+				],
+				"second": "Domaine de Durban Beaumes-de-Venise Rouge 2024",
+				"secondWhy": "A Southern Rhône red with dried herbs and pepper of its own, round in tannin, for the herbs and the au poivre.",
+				"stepUp": "",
+				"serve": "Pour as the entrées fire, slightly cool, in a Bordeaux glass. Take beef temperatures with the order, as the kitchen tells you at lineup.",
+				"avoid": "Avoid light, delicate whites and sweet wines: the pepper sauce and the beef flatten them.",
+				"zeroProof": "Personality",
+				"zeroProofWhy": "tart cherry and bubbles cut the cream of the sauce and the butter in the potatoes."
+			},
+			"reason": "The pairing for a dish the sheet prints with no wine, chosen from the house’s own glass list: cassis and cedar meet the pepper, and polished tannin suits lean, tender beef without overpowering it.",
+			"source": "the house wine list in the shipped pack (Moulin d’Issan Bordeaux Supérieur 2021, $16 the glass; Domaine de Durban Beaumes-de-Venise Rouge 2024, $19.00 the glass; Personality, $16.00)"
+		},
+		{
+			"target": "dish:Herb Roasted Beef Tenderloin",
+			"op": "bottles",
+			"value": {
+				"value": {
+					"wine": "Duckhorn Napa Valley Cabernet Sauvignon 2022",
+					"why": "Weight and tannin: ripe Napa Cabernet with blackberry, cassis and cedar and polished tannin, ample for beef and pepper.",
+					"sayIt": "For a bottle, the Duckhorn Napa Cabernet: ripe blackberry and cedar, polished, built for a steak dinner."
+				},
+				"classic": {
+					"wine": "Château Talbot Saint-Julien 4ème Cru Classé 2019",
+					"why": "Tannin and fat: a Saint-Julien classed growth, blackcurrant and cedar with firm, fine tannin that the butter and beef soften.",
+					"sayIt": "The Château Talbot Saint-Julien: classic Bordeaux, blackcurrant and cigar box, a natural with beef au poivre."
+				},
+				"splurge": {
+					"wine": "Château Pichon-Longueville Comtesse de Lalande Pauillac 2ème Cru Classé 2004",
+					"why": "Age and silk: a mature second growth Pauillac with cassis, cedar and tobacco and resolved tannin, elegant beside tenderloin.",
+					"sayIt": "For a celebration, the Pichon Comtesse 2004: Pauillac with over twenty years of age, silky, cedary and long."
+				},
+				"half": {
+					"wine": "Ridge Vineyards ‘Estate’ Cabernet Sauvignon Santa Cruz Mountains 2020 (375 ml)",
+					"why": "Structure in a half bottle: mountain Cabernet with blackcurrant, cedar and a savory herb note for the herb crust.",
+					"sayIt": "A half bottle of the Ridge Estate Cabernet: blackcurrant, cedar and herbs, just enough for two with the beef."
+				}
+			},
+			"reason": "The bottles offered with this dish by price: value under $100, sweet spot $100 to $250, celebration over $250, and a half bottle.",
+			"source": "the house bottle list in the shipped pack (Duckhorn Napa Cabernet 2022, $90; Château Talbot 2019, $245; Pichon Comtesse 2004, $325; Ridge Estate Cabernet 375 ml, $110)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "How is the Herb Roasted Beef Tenderloin roasted and with which herbs, what temperatures can it be cooked to, is the sauce au poivre made with Cognac and cream, can it come on the side, and how are the pommes purée and the Brussels sprouts finished? The Thanksgiving Day sheet lists pommes purée, sauce au poivre and roasted Brussels sprouts and prints no method.",
+				"askWhom": "chef",
+				"items": [
+					"Herb Roasted Beef Tenderloin"
+				]
+			},
+			"reason": "The sheet prints the dish’s parts and no method, portion or source; the technique part says so and the server describes the plate from what the kitchen confirms.",
+			"source": "page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 3)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Confirm the first pick for the Herb Roasted Beef Tenderloin (the Moulin d’Issan Bordeaux Supérieur, with the Domaine de Durban second and Personality spirit-free) and the bottle tiers (Duckhorn Napa Cabernet, Château Talbot, Pichon Comtesse 2004, the Ridge Estate half) before Thanksgiving Day service.",
+				"askWhom": "sommelier",
+				"items": [
+					"Herb Roasted Beef Tenderloin"
+				]
+			},
+			"reason": "The pairing and the tiers for a dish the sheet prints with no wine are the pack’s reading of the house list, confirmed by the sommelier before they are said at a table.",
+			"source": "the house wine list in the shipped pack; page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 3)"
+		},
+		{
+			"target": "dish:+",
+			"op": "add",
+			"value": {
+				"name": "Shrimp Sauce Piquante",
+				"section": "Thanksgiving Day",
+				"meals": [
+					"Thanksgiving Day"
+				],
+				"fixedPriceOn": "Happy Thanksgiving from Brennan’s",
+				"description": "Popcorn Rice Pilaf, Pickled Peppers, Creole Tomato Gravy",
+				"parts": {
+					"main": "shrimp",
+					"technique": "a sauce piquante, the spicy Louisiana tomato dish served over rice; learn the kitchen’s method at lineup",
+					"sauce": "a Creole tomato gravy in the sauce piquante style",
+					"sides": "popcorn rice pilaf and pickled peppers",
+					"taste": "sweet shrimp in a tangy, peppery tomato gravy over fragrant rice, with a sharp pickled bite"
+				},
+				"lines": {
+					"s10": "Shrimp Sauce Piquante: shrimp in a peppery Creole tomato gravy over Louisiana popcorn rice pilaf, finished with pickled peppers.",
+					"s20": "Our Shrimp Sauce Piquante is a Louisiana classic for the holiday: shrimp in a Creole tomato gravy, the sauce piquante of Cajun country, over a pilaf of fragrant Louisiana popcorn rice, with pickled peppers for a sharp, bright bite.",
+					"s45": "Sauce piquante, sohs pee-KAHNT, is a Louisiana classic: a hot, tomato based dish, usually built on a roux with onion, celery and bell pepper, that smothers meat or seafood and is served over rice. It has long been popular in Acadiana, Cajun country. The menu lists shrimp in a Creole tomato gravy, over a pilaf of popcorn rice, the Louisiana long grain that smells of popcorn as it cooks, with pickled peppers for a bright, sharp finish. Warm and peppery, it suits the guest who wants seafood with a little heat and a real taste of home cooking."
+				},
+				"say": "Sauce piquante: sohs pee-KAHNT.",
+				"guest": "A Louisiana classic for the holiday: sweet shrimp in a tangy, peppery tomato sauce over fragrant local rice, with a sharp, bright pickled bite.",
+				"why": "The Louisiana seafood entrée of the Thanksgiving Day menu, a Cajun classic with some heat. Offer it to the guest who wants shrimp and spice.",
+				"origin": "Sauce piquante is a hot, tomato based Louisiana dish, built on a roux and the holy trinity and served over rice, long popular in Acadiana. Here it is shrimp in a Creole tomato gravy over popcorn rice pilaf, with pickled peppers.",
+				"serviceNote": "The Thanksgiving Day sheet prints no allergen marks for any dish. It lists shrimp, popcorn rice pilaf, pickled peppers and a Creole tomato gravy for this one; what else is in it is the kitchen’s to say. Ask the kitchen and confirm at lineup before answering any question about an allergy or a diet.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "A taste of Cajun country on the holiday menu: the Shrimp Sauce Piquante is one of the six entrées on the Thanksgiving Day menu, three courses for $80, served on Thanksgiving Day only.\n\nSauce piquante, piquant meaning sharp or spicy, is a Louisiana dish more than a sauce: a hot, tomato based stew, usually started on a roux with the holy trinity of onion, celery and bell pepper, that smothers whatever the cook has, chicken, catfish, turtle, rabbit, alligator or shrimp, and is served over rice. It has long been popular in Acadiana.\n\nOurs is shrimp in a Creole tomato gravy. The rice is a pilaf of popcorn rice, the Louisiana aromatic long grain that smells of popcorn as it cooks; in a pilaf the grains are cooked in fat before the liquid goes in, so they stay separate. Pickled peppers bring a sharp, bright bite against the warm tomato.\n\nHow hot the kitchen makes it, which peppers are pickled and what goes into the gravy are questions for lineup."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Offer it to the guest who wants a Louisiana dish on the holiday, to the seafood lover and to anyone who asks for something with a little heat. Say: “It’s shrimp sauce piquante, a Cajun classic: shrimp in a peppery Creole tomato gravy over popcorn rice, with pickled peppers.” Tell the guest how hot it runs once the kitchen has told you, and offer the Provence rosé by the glass, which is fresh enough for tomato and gentle with spice."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: How spicy is it?\n\nAnswer: Piquante means sharp or spicy, and the dish is traditionally hot. How hot ours is, the kitchen tells us at lineup, so ask before you promise.\n\nAsked: What is popcorn rice?\n\nAnswer: A Louisiana aromatic long grain rice that really does smell of popcorn as it cooks. Here it is cooked as a pilaf, so the grains stay separate.\n\nAsked: Is it like shrimp Creole?\n\nAnswer: A cousin. Both are shrimp in a tomato sauce over rice; sauce piquante is the spicier Cajun country version, usually built on a roux."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "It is a Thanksgiving Day dish only. Learn at lineup how hot the kitchen makes it, and steer a guest who wants no heat to the redfish or the turkey. Do not call it gumbo or étouffée: it is its own dish. Shrimp, a roux and the gravy all raise questions, so any question about shellfish, flour or a diet goes to the kitchen. Allergens: read the service note and confirm at lineup."
+					}
+				]
+			},
+			"reason": "The fourth entrée of the Thanksgiving Day sheet, written from the sheet’s line and the research file: the classic and its terms from two sources each, the method left to the kitchen. The sheet prints the dish with its line and no price of its own: the menu’s $80 covers it, so it files with fixedPriceOn naming the menu and no price ask.",
+			"source": "page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 4); research/menu-2026-11-22-shrimp-sauce-piquante.json"
+		},
+		{
+			"target": "dish:Shrimp Sauce Piquante",
+			"field": "pairing",
+			"value": {
+				"wine": "Minuty ‘Prestige’ Côtes de Provence Rosé 2024",
+				"why": "Fresh acidity meets the tomato, no tannin fights the spice, and red fruit flatters sweet shrimp.",
+				"sayIt": "With the sauce piquante I’d pour our Provence rosé: dry and fresh, with no tannin to fight the spice, lovely with shrimp and tomato.",
+				"whyThisWine": "Tomato is acidic and the dish is peppery, so it wants a wine with acidity and no tannin. The Minuty rosé is pale and dry, with white peach, wild strawberry and citrus zest and a light mineral finish: fresh for the gravy and gentle with the shrimp.",
+				"palate": "Tannin turns bitter against chili heat, so a rosé with none keeps the spice in balance. The wine’s acidity matches the tomato gravy, so the wine does not taste flat, its red fruit flatters the sweet shrimp, and its mineral finish clears the palate after the pickled peppers, ready for the next bite.",
+				"principles": [
+					"heat",
+					"acid",
+					"tannin"
+				],
+				"second": "Pazo das Bruxas Albariño 2025",
+				"secondWhy": "A crisp coastal white with a saline snap, lovely with shrimp, and unoaked, so the tomato and spice stay bright.",
+				"stepUp": "",
+				"serve": "Pour as the entrées fire, well chilled, in a white wine glass. Confirm at lineup which glass wines are poured on Thanksgiving Day.",
+				"avoid": "Avoid tannic and high alcohol reds: chili heat makes tannin bitter and alcohol burn.",
+				"zeroProof": "Oh! What It Seemed to Be",
+				"zeroProofWhy": "lemon brightens the tomato, and its silky texture soothes the spice."
+			},
+			"reason": "The pairing for a dish the sheet prints with no wine, chosen from the house’s own glass list: fresh acidity meets the tomato, no tannin fights the spice, and red fruit flatters sweet shrimp.",
+			"source": "the house wine list in the shipped pack (Minuty Prestige Côtes de Provence Rosé 2024, $17 the glass; Pazo das Bruxas Albariño 2025, $16 the glass; Oh! What It Seemed to Be, $16.00)"
+		},
+		{
+			"target": "dish:Shrimp Sauce Piquante",
+			"op": "bottles",
+			"value": {
+				"value": {
+					"wine": "Château d’Esclans ‘Whispering Angel’ Côtes de Provence Rosé 2024",
+					"why": "Acid and no tannin: pale Provence rosé with white peach and citrus zest, fresh for tomato and gentle with heat.",
+					"sayIt": "For a bottle, the Whispering Angel: pale, dry Provence rosé, light and refreshing with the spice."
+				},
+				"classic": {
+					"wine": "Domaine Tempier Bandol Rosé 2024",
+					"why": "Acid and body: Mourvèdre-led Bandol rosé with blood orange, herbs and a savory, saline depth for a rich tomato gravy.",
+					"sayIt": "The Tempier Bandol rosé: more body than most rosé, with herbs and a savory depth for the gravy."
+				},
+				"splurge": {
+					"wine": "Pascal Cotat ‘Lot 2024’ Chavignol Rosé",
+					"why": "Acid and structure: a rare Pinot Noir rosé from Chavignol, taut and chalky, with red fruit for the shrimp.",
+					"sayIt": "For a celebration, the Cotat Chavignol rosé: rare Pinot Noir rosé from the Loire, taut, chalky and long."
+				},
+				"half": {
+					"wine": "Bründlmayer ‘Terrassen’ Grüner Veltliner 2023 (375 ml)",
+					"why": "Acid and spice in a half bottle: crisp Grüner with white pepper and citrus, bright with tomato and heat.",
+					"sayIt": "A half bottle of the Bründlmayer Grüner Veltliner: crisp, with a white pepper note for the sauce piquante."
+				}
+			},
+			"reason": "The bottles offered with this dish by price: value under $100, sweet spot $100 to $250, celebration over $250, and a half bottle.",
+			"source": "the house bottle list in the shipped pack (Whispering Angel 2024, $50; Tempier Bandol Rosé 2024, $120; Cotat Chavignol Rosé, $270; Bründlmayer Terrassen 375 ml, $50)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "How is the Shrimp Sauce Piquante built: is it started on a roux, how hot does it run, what goes into the Creole tomato gravy, which peppers are pickled, where are the shrimp from and how many come in a portion? The Thanksgiving Day sheet lists popcorn rice pilaf, pickled peppers and a Creole tomato gravy and prints no method.",
+				"askWhom": "chef",
+				"items": [
+					"Shrimp Sauce Piquante"
+				]
+			},
+			"reason": "The sheet prints the dish’s parts and no method, portion or source; the technique part says so and the server describes the plate from what the kitchen confirms.",
+			"source": "page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 4)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Confirm the first pick for the Shrimp Sauce Piquante (the Minuty Prestige rosé, with the Pazo das Bruxas Albariño second and Oh! What It Seemed to Be spirit-free) and the bottle tiers (Whispering Angel, Tempier Bandol rosé, the Cotat Chavignol rosé, the Bründlmayer Grüner half) before Thanksgiving Day service.",
+				"askWhom": "sommelier",
+				"items": [
+					"Shrimp Sauce Piquante"
+				]
+			},
+			"reason": "The pairing and the tiers for a dish the sheet prints with no wine are the pack’s reading of the house list, confirmed by the sommelier before they are said at a table.",
+			"source": "the house wine list in the shipped pack; page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 4)"
+		},
+		{
+			"target": "dish:+",
+			"op": "add",
+			"value": {
+				"name": "Redfish Meunière",
+				"section": "Thanksgiving Day",
+				"meals": [
+					"Thanksgiving Day"
+				],
+				"fixedPriceOn": "Happy Thanksgiving from Brennan’s",
+				"description": "Potato and Leek Écrasé, Brown Butter, Lemon, Capers",
+				"parts": {
+					"main": "redfish",
+					"technique": "à la meunière: in the classic, dusted in flour and cooked in butter; learn the kitchen’s method at lineup",
+					"sauce": "brown butter finished with lemon and capers",
+					"sides": "a potato and leek écrasé, crushed rather than mashed smooth",
+					"taste": "mild, flaky fish with nutty brown butter, bright lemon and briny capers over soft crushed potatoes"
+				},
+				"lines": {
+					"s10": "Redfish Meunière: redfish in the French miller’s wife style, with brown butter, lemon and capers over a potato and leek écrasé.",
+					"s20": "Our Redfish Meunière brings a classic New Orleans style to a Gulf fish: redfish with brown butter, lemon and capers, the meunière flavors, over a potato and leek écrasé, potatoes crushed with a fork rather than mashed smooth.",
+					"s45": "Meunière, mun-YAIR, is French for the miller’s wife: in the classic, fish is dusted in flour, cooked in butter and finished with brown butter and lemon. In New Orleans it is a bedrock Creole style, best known on trout. Here it is redfish, the red drum of the Gulf, mild and firm, with brown butter, lemon and capers for a nutty, bright, briny sauce. Under it is an écrasé, ay-krah-ZAY, French for crushed: potato and leek crushed rather than puréed, so they keep some texture. Beside the meats it is a lighter entrée, and it suits the fish lover."
+				},
+				"say": "Meunière: mun-YAIR. Écrasé: ay-krah-ZAY.",
+				"guest": "A classic French and New Orleans way with fish: mild, flaky redfish in a nutty, bright butter sauce over soft potatoes, a lighter choice among the entrées.",
+				"why": "The fish entrée of the Thanksgiving Day menu, in a classic New Orleans style. Offer it to the guest who wants seafood without spice.",
+				"origin": "À la meunière, in the style of the miller’s wife, is the French way of dusting fish in flour and cooking it in butter, finished with brown butter and lemon. Trout meunière is a bedrock New Orleans Creole dish; here it is redfish.",
+				"serviceNote": "The Thanksgiving Day sheet prints no allergen marks for any dish. It lists redfish, a potato and leek écrasé, brown butter, lemon and capers for this one; what else is in it is the kitchen’s to say. Ask the kitchen and confirm at lineup before answering any question about an allergy or a diet.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "A New Orleans classic style on a Gulf fish: the Redfish Meunière is one of the six entrées on the Thanksgiving Day menu, three courses for $80, served on Thanksgiving Day only.\n\nÀ la meunière means in the style of the miller’s wife. The usual reason given is the flour: in the classic, the fish is dredged in flour, cooked in butter and finished with brown butter, lemon and parsley. In New Orleans the style is a bedrock of Creole cooking, best known as trout meunière, and it suits the mild, firm fish of the Gulf.\n\nOurs is redfish, the red drum, with brown butter, lemon and capers. Brown butter is butter cooked until its milk solids toast and smell of hazelnut; lemon sharpens it and capers add a briny pop.\n\nUnder the fish is an écrasé, French for crushed: potatoes and leeks crushed with a fork or masher rather than puréed smooth, so they keep some texture. Whether the kitchen flours the fish, and where the redfish comes from, are questions for lineup."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Offer it to the fish lover, to the guest who wants something lighter than the meats and to anyone who knows trout meunière. Say: “It’s redfish meunière, a New Orleans classic: brown butter, lemon and capers over crushed potatoes and leeks.” Give the word for the potatoes, écrasé, because guests enjoy learning it, then offer the Chardonnay by the glass, whose creamy texture and bright acidity sit right with brown butter and lemon."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: What does meunière mean?\n\nAnswer: In the style of the miller’s wife. In the classic, the fish is dusted in flour and cooked in butter, then finished with brown butter and lemon.\n\nAsked: What kind of fish is redfish?\n\nAnswer: Red drum, a Gulf fish with mild, firm, slightly sweet white flesh. Where ours comes from, the kitchen can tell you.\n\nAsked: What is an écrasé?\n\nAnswer: French for crushed: potatoes and leeks crushed rather than mashed smooth, so they keep a little texture."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "It is a Thanksgiving Day dish only. The word redfish also brings up the past Redfish Véronique in the app: this is a different dish, so do not mix them up. Do not promise the fish is floured or say where it comes from until the kitchen tells you. Fish, butter and a possible flour dusting all raise questions, so any question about fish, dairy, flour or a diet goes to the kitchen. Allergens: read the service note and confirm at lineup."
+					}
+				]
+			},
+			"reason": "The fifth entrée of the Thanksgiving Day sheet, written from the sheet’s line and the research file: the classic and its terms from two sources each, the method left to the kitchen. The sheet prints the dish with its line and no price of its own: the menu’s $80 covers it, so it files with fixedPriceOn naming the menu and no price ask.",
+			"source": "page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 5); research/menu-2026-11-22-redfish-meuniere.json"
+		},
+		{
+			"target": "dish:Redfish Meunière",
+			"field": "pairing",
+			"value": {
+				"wine": "Gainey Estate Vineyards Chardonnay 2023",
+				"why": "A creamy texture meets the brown butter, and bright acidity matches the lemon and capers.",
+				"sayIt": "With the redfish I’d pour our Gainey Chardonnay: creamy enough for the brown butter, bright enough for the lemon.",
+				"whyThisWine": "Brown butter is rich and nutty, and lemon and capers make the sauce sharp. The Gainey Chardonnay from the Sta. Rita Hills has lemon curd, baked apple and a creamy texture, with bright acidity from its ocean-cooled climate: weight for the butter, freshness for the lemon.",
+				"palate": "The wine’s creamy texture matches the brown butter, so neither feels heavier than the other, while its bright acidity keeps pace with the lemon and the briny capers. Its baked apple and lemon curd fruit lifts the mild redfish, and the soft, crushed potatoes and leeks round out the wine’s finish.",
+				"principles": [
+					"fat",
+					"acid",
+					"weight"
+				],
+				"second": "Famille Durand Val de Loire Sauvignon Blanc 2025",
+				"secondWhy": "For a crisper white: bone-dry Loire Sauvignon with grapefruit and a flinty note, sharp with lemon and capers.",
+				"stepUp": "",
+				"serve": "Pour as the entrées fire, chilled but not ice cold, in a white wine glass. Confirm at lineup which glass wines are poured on Thanksgiving Day.",
+				"avoid": "Avoid tannic reds: tannin tastes metallic with fish and turns bitter beside capers.",
+				"zeroProof": "Oh! What It Seemed to Be",
+				"zeroProofWhy": "its lemon echoes the lemon on the fish, and its silky texture sits with the brown butter."
+			},
+			"reason": "The pairing for a dish the sheet prints with no wine, chosen from the house’s own glass list: a creamy texture meets the brown butter, and bright acidity matches the lemon and capers.",
+			"source": "the house wine list in the shipped pack (Gainey Estate Vineyards Chardonnay 2023, $17 the glass; Famille Durand Val de Loire Sauvignon Blanc 2025, $14 the glass; Oh! What It Seemed to Be, $16.00)"
+		},
+		{
+			"target": "dish:Redfish Meunière",
+			"op": "bottles",
+			"value": {
+				"value": {
+					"wine": "Domaine du Roc des Boutires ‘En Bertilionne’ Pouilly-Fuissé 2020",
+					"why": "Weight and acid: round, textured Pouilly-Fuissé with ripe lemon and a saline finish, for brown butter and capers.",
+					"sayIt": "For a bottle, the Roc des Boutires Pouilly-Fuissé: round white Burgundy with lemon and a saline finish."
+				},
+				"classic": {
+					"wine": "Bitouzet-Prieur ‘Les Corbins’ Meursault 2020",
+					"why": "Fat and nuttiness: creamy village Meursault with hazelnut and butter notes, a mirror for brown butter, with fresh acidity.",
+					"sayIt": "The Bitouzet-Prieur Meursault: creamy and nutty white Burgundy, made for a brown butter sauce."
+				},
+				"splurge": {
+					"wine": "Domaine Roulot Meursault 2022",
+					"why": "Depth and precision: taut, stony Meursault with lemon and a saline finish, rich enough for butter, sharp enough for lemon.",
+					"sayIt": "For a celebration, the Roulot Meursault: precise, stony white Burgundy with real depth, beautiful with the redfish."
+				},
+				"half": {
+					"wine": "Thierry et Pascale Matrot Bourgogne Blanc 2022 (375 ml)",
+					"why": "Freshness in a half bottle: Chardonnay from a Meursault family, lemon and apple with a light nutty roundness.",
+					"sayIt": "A half bottle of the Matrot Bourgogne Blanc: fresh white Burgundy, lemon and a little nuttiness, for two."
+				}
+			},
+			"reason": "The bottles offered with this dish by price: value under $100, sweet spot $100 to $250, celebration over $250, and a half bottle.",
+			"source": "the house bottle list in the shipped pack (Roc des Boutires En Bertilionne 2020, $90; Bitouzet-Prieur Les Corbins 2020, $210; Roulot Meursault 2022, $500; Matrot Bourgogne Blanc 375 ml, $45)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "How is the Redfish Meunière cooked: is the fish dredged in flour, cooked in butter, skin on or off, where is the redfish from, how is the potato and leek écrasé made (butter, cream or olive oil), and is the brown butter finished with parsley? The Thanksgiving Day sheet lists a potato and leek écrasé, brown butter, lemon and capers and prints no method.",
+				"askWhom": "chef",
+				"items": [
+					"Redfish Meunière"
+				]
+			},
+			"reason": "The sheet prints the dish’s parts and no method, portion or source; the technique part says so and the server describes the plate from what the kitchen confirms.",
+			"source": "page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 5)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Confirm the first pick for the Redfish Meunière (the Gainey Chardonnay, with the Famille Durand Sauvignon Blanc second and Oh! What It Seemed to Be spirit-free) and the bottle tiers (Roc des Boutires Pouilly-Fuissé, Bitouzet-Prieur Meursault, Roulot Meursault, the Matrot half) before Thanksgiving Day service.",
+				"askWhom": "sommelier",
+				"items": [
+					"Redfish Meunière"
+				]
+			},
+			"reason": "The pairing and the tiers for a dish the sheet prints with no wine are the pack’s reading of the house list, confirmed by the sommelier before they are said at a table.",
+			"source": "the house wine list in the shipped pack; page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 5)"
+		},
+		{
+			"target": "dish:+",
+			"op": "add",
+			"value": {
+				"name": "Veal Grillades",
+				"section": "Thanksgiving Day",
+				"meals": [
+					"Thanksgiving Day"
+				],
+				"fixedPriceOn": "Happy Thanksgiving from Brennan’s",
+				"description": "Cheddar Grits, Piperade, Poached Egg, Debris",
+				"parts": {
+					"main": "veal grillades",
+					"technique": "grillades: thin, pounded meat simmered in gravy until tender; learn the kitchen’s method at lineup",
+					"sauce": "a Basque piperade of peppers, onion and tomato, with debris",
+					"sides": "cheddar grits and a poached egg",
+					"taste": "tender veal and rich, meaty debris with sweet peppers and a runny yolk over sharp, creamy grits"
+				},
+				"lines": {
+					"s10": "Veal Grillades: the Creole brunch classic of tender veal in gravy, over cheddar grits with piperade, debris and a poached egg.",
+					"s20": "Our Veal Grillades bring a Creole breakfast classic to the holiday dinner table: tender veal with debris, the rich shreds of roast in their gravy, and a Basque piperade of sweet peppers, over cheddar grits with a poached egg.",
+					"s45": "Grillades, gree-YAHDS, are a New Orleans Creole classic: thin slices of veal or beef, pounded and simmered in gravy until tender, served over grits. Despite the name, they are not grilled. Recipes appear in New Orleans newspapers in the 1890s, and Carnival krewes still serve them at their breakfasts after the balls. The menu lists cheddar grits, a poached egg, debris, DAY-bree, the shreds of roast that fall into the gravy, and piperade, a Basque dish of sweet peppers, onion and tomato. Rich and comforting, it suits the guest who wants a true New Orleans plate."
+				},
+				"say": "Grillades: gree-YAHDS. Piperade: pee-peh-RAHD.",
+				"guest": "A true New Orleans plate: tender veal in a rich gravy over creamy, sharp grits, with sweet Basque peppers and a soft egg to break over it all.",
+				"why": "The Creole entrée of the Thanksgiving Day menu, a New Orleans brunch classic brought to dinner. Offer it to the guest who wants something rich and local.",
+				"origin": "Grillades and grits is a nineteenth century New Orleans Creole dish of thin, pounded meat simmered in gravy over grits, served at brunch and at Carnival breakfasts. Here the veal comes with debris, a Basque piperade and a poached egg.",
+				"serviceNote": "The Thanksgiving Day sheet prints no allergen marks for any dish. It lists veal grillades, cheddar grits, piperade, a poached egg and debris for this one; what else is in it is the kitchen’s to say. Ask the kitchen and confirm at lineup before answering any question about an allergy or a diet.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "Grillades and grits, the old Creole breakfast, comes to the holiday dinner as the Veal Grillades, one of the six entrées on the Thanksgiving Day menu, three courses for $80, served on Thanksgiving Day only.\n\nGrillades are thin slices of veal or beef, pounded and braised in gravy until tender, and served over grits. The word comes from the French for to grill, but they are not grilled. The grillades in the cookbooks of the late 1800s were veal medallions simmered in gravy; a recipe ran in The Daily Picayune in 1898, and a breakfast menu in the Times-Democrat listed grillades and grits in 1900. Carnival kings and queens still serve them at krewe breakfasts after their balls.\n\nOurs adds debris, the tender shreds of roast that fall into the gravy, best known on the roast beef po’boy, and piperade, a Basque and Gascon dish of peppers, onion and tomato. The cheddar grits and a poached egg make it rich: the yolk becomes part of the sauce. Which roast gives the debris is a question for lineup."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Offer it to the guest who wants a true New Orleans dish, to the local who grew up on grillades at brunch and to the guest who loves comfort food. Say: “It’s veal grillades, the Creole brunch classic, over cheddar grits with debris, piperade and a poached egg.” Tell the story in one line, Carnival krewes still serve grillades after their balls, then offer the Barbera by the glass, bright enough for the gravy and the cheese."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: What are grillades?\n\nAnswer: Thin slices of veal, pounded and simmered in gravy until tender, a Creole breakfast classic usually served over grits. Despite the name they are not grilled.\n\nAsked: What is debris?\n\nAnswer: The tender shreds of roast that fall into the gravy as it cooks, the same debris as on a roast beef po’boy. Which roast ours comes from, the kitchen can tell you.\n\nAsked: What is piperade?\n\nAnswer: A Basque dish of sweet peppers, onion and tomato cooked down together."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "It is a Thanksgiving Day dish only. Do not call the veal grilled: grillades are simmered in gravy. The debris may come from a different meat than the veal, so learn at lineup what it is before you describe it. The egg is poached and the yolk runs, so tell the guest who wants it firm to ask. Cheese, egg and gravy all raise questions, so any question about dairy, eggs or a diet goes to the kitchen. Allergens: read the service note and confirm at lineup."
+					}
+				]
+			},
+			"reason": "The sixth entrée of the Thanksgiving Day sheet, written from the sheet’s line and the research file: the classic and its terms from two sources each, the method left to the kitchen. The sheet prints the dish with its line and no price of its own: the menu’s $80 covers it, so it files with fixedPriceOn naming the menu and no price ask.",
+			"source": "page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 6); research/menu-2026-11-22-veal-grillades.json"
+		},
+		{
+			"target": "dish:Veal Grillades",
+			"field": "pairing",
+			"value": {
+				"wine": "La Miraja ‘Le Masche’ Barbera d’Asti Superiore 2023",
+				"why": "Bright acidity cuts the gravy, cheese and yolk, and soft tannin and juicy fruit love tomato and peppers.",
+				"sayIt": "With the grillades I’d pour our Barbera: juicy and bright, with the acidity for the gravy and the cheese grits.",
+				"whyThisWine": "Grillades are rich: gravy, debris, cheddar grits and a runny yolk, with the sweet peppers and tomato of the piperade. Barbera is made for that, with dark cherry and plum, bright acidity and soft tannin: the acid cuts the richness and the fruit loves tomato.",
+				"palate": "The Barbera’s high acidity slices through the cheddar, the gravy and the yolk, so each bite tastes fresh again. Its soft tannin stays gentle with the tender veal and the egg, its juicy fruit meets the sweet peppers and tomato of the piperade, and its plum depth stands beside the meaty debris.",
+				"principles": [
+					"acid",
+					"fat",
+					"bridge"
+				],
+				"second": "Pierre Sparr Brut Rosé Crémant d’Alsace NV",
+				"secondWhy": "The brunch way: a dry sparkling rosé of Pinot Noir, its bubbles for the egg and the cheese grits.",
+				"stepUp": "",
+				"serve": "Pour as the entrées fire, slightly cool, in a red wine glass. Confirm at lineup which glass wines are poured on Thanksgiving Day.",
+				"avoid": "Avoid big, oaky Cabernet: its tannin fights the egg and the tomato, and oak weighs on a rich gravy.",
+				"zeroProof": "Personality",
+				"zeroProofWhy": "bubbles and tart cherry cut the cheese grits and the gravy, the way a brunch fizz would."
+			},
+			"reason": "The pairing for a dish the sheet prints with no wine, chosen from the house’s own glass list: bright acidity cuts the gravy, cheese and yolk, and soft tannin and juicy fruit love tomato and peppers.",
+			"source": "the house wine list in the shipped pack (La Miraja Le Masche Barbera d’Asti Superiore 2023, $16.00 the glass; Pierre Sparr Brut Rosé Crémant d’Alsace NV, $18 the glass; Personality, $16.00)"
+		},
+		{
+			"target": "dish:Veal Grillades",
+			"op": "bottles",
+			"value": {
+				"value": {
+					"wine": "Produttori del Barbaresco Barbaresco 2020",
+					"why": "Acid and tannin: Nebbiolo with red cherry, rose and dried herbs, high acidity and grip that want rich, savory food.",
+					"sayIt": "For a bottle, the Produttori Barbaresco: Nebbiolo with cherry and herbs, bright and firm with the grillades."
+				},
+				"classic": {
+					"wine": "Fattoria di Fèlsina ‘Rancia’ Chianti Classico Riserva 2019",
+					"why": "Acid and savor: Sangiovese with dark cherry, herbs and leather, its long acidity made for tomato and gravy.",
+					"sayIt": "The Fèlsina Rancia Chianti Classico Riserva: Sangiovese with cherry and herbs, a natural with tomato and veal."
+				},
+				"splurge": {
+					"wine": "Bartolo Mascarello Barolo 2017",
+					"why": "Acid and depth: traditional Barolo, sour cherry, rose and tar with high acidity and fine tannin, for a rich, savory plate.",
+					"sayIt": "For a celebration, the Bartolo Mascarello Barolo: traditional Nebbiolo, powerful and fine, with real acidity for the gravy."
+				},
+				"half": {
+					"wine": "Domaine Raspail-Ay Gigondas 2021 (375 ml)",
+					"why": "Fruit and spice in a half bottle: Grenache-led Gigondas with cherry, herbs and pepper for the piperade and debris.",
+					"sayIt": "A half bottle of the Raspail-Ay Gigondas: ripe cherry, herbs and pepper, just enough for two."
+				}
+			},
+			"reason": "The bottles offered with this dish by price: value under $100, sweet spot $100 to $250, celebration over $250, and a half bottle.",
+			"source": "the house bottle list in the shipped pack (Produttori Barbaresco 2020, $95; Fèlsina Rancia 2019, $165; Bartolo Mascarello Barolo 2017, $340; Raspail-Ay Gigondas 375 ml, $55)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "How are the Veal Grillades built: what cut of veal, pounded and braised in what gravy, what roast gives the debris (beef or veal), does the piperade carry Espelette pepper, how is the egg poached, and is the dish served in a bowl or on a plate? The Thanksgiving Day sheet lists cheddar grits, piperade, a poached egg and debris and prints no method.",
+				"askWhom": "chef",
+				"items": [
+					"Veal Grillades"
+				]
+			},
+			"reason": "The sheet prints the dish’s parts and no method, portion or source; the technique part says so and the server describes the plate from what the kitchen confirms.",
+			"source": "page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 6)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Confirm the first pick for the Veal Grillades (the La Miraja Barbera, with the Pierre Sparr Crémant rosé second and Personality spirit-free) and the bottle tiers (Produttori Barbaresco, Fèlsina Rancia, Bartolo Mascarello Barolo, the Raspail-Ay half) before Thanksgiving Day service.",
+				"askWhom": "sommelier",
+				"items": [
+					"Veal Grillades"
+				]
+			},
+			"reason": "The pairing and the tiers for a dish the sheet prints with no wine are the pack’s reading of the house list, confirmed by the sommelier before they are said at a table.",
+			"source": "the house wine list in the shipped pack; page:brennans-sheets-2026-11-22.txt (ENTRÉES, line 6)"
+		}
+	]
+}

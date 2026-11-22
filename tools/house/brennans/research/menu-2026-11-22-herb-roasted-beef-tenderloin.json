@@ -1,0 +1,92 @@
+{
+ "partial": false,
+ "dish": "Herb Roasted Beef Tenderloin",
+ "readOn": "2026-11-22",
+ "sheet": {
+  "source": "tools/house/brennans/research/menu-2026-11-22-sheets.md, Sheet 1, ENTREES line 3",
+  "page": "tools/house/brennans/pages/brennans-sheets-2026-11-22.txt",
+  "title": "Happy Thanksgiving from Brennan’s, 3 Courses $80: choice of appetizer, entrée and dessert",
+  "line": "Pommes Purée, Sauce au Poivre, Roasted Brussels Sprouts",
+  "allergens": [],
+  "note": "The sheet prints the dish name and its line and nothing else: no allergen marks, no price of its own (the $80 covers three courses), no method, no portion, no wine."
+ },
+ "classic": {
+  "auPoivre": "Steak au poivre is a French bistro classic: a steak crusted in coarsely crushed peppercorns, the pan sauce of shallots, Cognac and cream; tenderloin or filet mignon is the usual cut; the origin is disputed, so none is given (Saveur, Steak au Poivre; Once Upon a Chef, Steak au Poivre; The Kitchn, Steak au Poivre).",
+  "pommesPuree": "Pommes purée is the French style of mashed potatoes: potatoes riced or milled, often passed through a fine sieve called a tamis, with a great deal of butter worked in, smooth and silky; the butter ratio varies widely by recipe (America’s Test Kitchen, French-Style Mashed Potatoes; Great British Chefs, How to make pomme purée). The version made famous in Paris in the 1980s is tied to a named chef; no person is named in the notes.",
+  "brussels": "Brussels sprouts are Brassica oleracea var. gemmifera, named for the Brussels region of Belgium, where they became a popular crop by the sixteenth century; the French brought them to Louisiana around 1800; Belgium became independent in 1830, so the story of a Belgian king naming them in 1820 is a myth (RHS, Fascinating facts about Brussels sprouts; The Brussels Times, A Belgian history of the Brussels sprout; Tasting Table)."
+ },
+ "sayIt": [
+  "Au poivre: oh PWAHV, French for with pepper.",
+  "Pommes purée: pum pew-RAY, French for potato purée."
+ ],
+ "unsourced": [
+  "Whether the kitchen’s au poivre carries Cognac or cream, which herbs crust the beef, and the temperatures the kitchen cooks it to: asked of the chef.",
+  "The origin of steak au poivre: disputed, left out."
+ ],
+ "sources": [
+  {
+   "id": "saveur-poivre",
+   "title": "Steak au Poivre",
+   "publisher": "Saveur",
+   "url": "https://www.saveur.com/article/Recipes/Steak-au-Poivre/",
+   "supports": "A French bistro classic of crushed peppercorns and a Cognac cream pan sauce. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "onceupon-poivre",
+   "title": "Steak au Poivre",
+   "publisher": "Once Upon a Chef",
+   "url": "https://www.onceuponachef.com/recipes/steak-au-poivre.html",
+   "supports": "Tenderloin or filet mignon as the usual cut; shallots, Cognac and cream; no agreed origin. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "atk-puree",
+   "title": "French-Style Mashed Potatoes (Pommes Purée)",
+   "publisher": "America’s Test Kitchen",
+   "url": "https://www.americastestkitchen.com/recipes/9246-french-style-mashed-potatoes-pommes-puree",
+   "supports": "Riced potatoes with a high proportion of butter worked in. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "gbc-puree",
+   "title": "How to make pomme purée",
+   "publisher": "Great British Chefs",
+   "url": "https://www.greatbritishchefs.com/how-to-cook/how-to-make-pomme-puree",
+   "supports": "Passing through a fine sieve or tamis for a silky purée. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "rhs-sprouts",
+   "title": "Fascinating facts about Brussels sprouts",
+   "publisher": "Royal Horticultural Society",
+   "url": "https://rhs.org.uk/advice/grow-your-own/features/fascinating-facts-brussels",
+   "supports": "Brassica oleracea var. gemmifera; named for Brussels. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "brusselstimes-sprouts",
+   "title": "A Belgian history of the Brussels sprout",
+   "publisher": "The Brussels Times",
+   "url": "https://brusselstimes.com/835109/a-belgian-history-of-the-brussels-sprout",
+   "supports": "Grown just outside the walls of Brussels; popular there by the sixteenth century. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "sheet-2026-11-22",
+   "title": "Brennan’s sheets photographed on 22 November 2026, Sheet 1, the Thanksgiving Day menu",
+   "publisher": "The house’s own menu, transcribed in this repository",
+   "url": "tools/house/brennans/research/menu-2026-11-22-sheets.md",
+   "supports": "The dish name and its printed line, word for word; the menu heading, three courses for $80; no allergen marks, no wine.",
+   "kind": "primary"
+  },
+  {
+   "id": "repo-pack",
+   "title": "The house pack as shipped (the November edition): the wine list, the bottle list, the zero proof drinks and the components already written",
+   "publisher": "This repository",
+   "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+   "supports": "The wines poured by the glass and the bottles named in the pairing, with their profiles; the components reused (brown butter, capers, lemon, leeks, redfish, grits, cheddar, poached egg, popcorn rice, Creole tomatoes, holy trinity, roux, Gulf shrimp, cane syrup, apples, pork, thick-cut bacon, buttermilk, beef tenderloin).",
+   "kind": "secondary"
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "partial": false,
+ "dish": "Shrimp Sauce Piquante",
+ "readOn": "2026-11-22",
+ "sheet": {
+  "source": "tools/house/brennans/research/menu-2026-11-22-sheets.md, Sheet 1, ENTREES line 4",
+  "page": "tools/house/brennans/pages/brennans-sheets-2026-11-22.txt",
+  "title": "Happy Thanksgiving from Brennan’s, 3 Courses $80: choice of appetizer, entrée and dessert",
+  "line": "Popcorn Rice Pilaf, Pickled Peppers, Creole Tomato Gravy",
+  "allergens": [],
+  "note": "The sheet prints the dish name and its line and nothing else: no allergen marks, no price of its own (the $80 covers three courses), no method, no portion, no wine."
+ },
+ "classic": {
+  "piquante": "Sauce piquante is a hot, tomato based Louisiana dish served over rice, built on a roux with onion, bell pepper, celery and garlic, smothering whatever meat or seafood is on hand: chicken, catfish, turtle, rabbit, alligator or shrimp; it has long been popular in Acadiana (Rouses Markets, The Sauce For Whatever You Caught; Wikipedia, Cajun cuisine; Atlas Obscura, Turtle sauce picante). No documented origin or date was found, so none is given.",
+  "tomatoGravy": "Southern tomato gravy is a roux with tomatoes and a little liquid; it is not New Orleans red gravy, the Sicilian rooted tomato sauce (MasterClass, Tomato Gravy; AOL, What Is Tomato Gravy?). The sheet’s Creole tomato gravy is not defined anywhere; the notes say only tomato gravy and send the rest to the kitchen.",
+  "pilaf": "A pilaf is rice cooked in fat before its liquid goes in, so the grains stay separate; the pack’s popcorn rice component already explains the Louisiana aromatic rice."
+ },
+ "sayIt": [
+  "Sauce piquante: sohs pee-KAHNT; piquant is French for sharp or pungent."
+ ],
+ "unsourced": [
+  "How hot the kitchen’s sauce piquante runs, what peppers are pickled, and what goes into the Creole tomato gravy: asked of the chef.",
+  "A date or a founder for sauce piquante: none documented."
+ ],
+ "sources": [
+  {
+   "id": "rouses-piquante",
+   "title": "The Sauce For Whatever You Caught",
+   "publisher": "Rouses Markets",
+   "url": "https://www.rouses.com/?p=27563",
+   "supports": "A hot, spicy stew of a roux, tomatoes, onions, bell peppers, celery, garlic and whatever meat is on hand; long popular in Acadiana. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "wiki-cajun",
+   "title": "Cajun cuisine",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Cajun_cuisine",
+   "supports": "A roux of wheat flour and fat is the base of sauce piquante, étouffée and gumbo. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "atlas-picante",
+   "title": "Turtle Sauce Picante",
+   "publisher": "Atlas Obscura",
+   "url": "https://www.atlasobscura.com/foods/turtle-sauce-picante",
+   "supports": "A hot, tomato based dish served over rice, made with many proteins. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "masterclass-tomato-gravy",
+   "title": "Tomato Gravy Recipe",
+   "publisher": "MasterClass",
+   "url": "https://www.masterclass.com/articles/tomato-gravy-recipe",
+   "supports": "Southern tomato gravy: a roux, diced tomatoes and a little liquid. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "sheet-2026-11-22",
+   "title": "Brennan’s sheets photographed on 22 November 2026, Sheet 1, the Thanksgiving Day menu",
+   "publisher": "The house’s own menu, transcribed in this repository",
+   "url": "tools/house/brennans/research/menu-2026-11-22-sheets.md",
+   "supports": "The dish name and its printed line, word for word; the menu heading, three courses for $80; no allergen marks, no wine.",
+   "kind": "primary"
+  },
+  {
+   "id": "repo-pack",
+   "title": "The house pack as shipped (the November edition): the wine list, the bottle list, the zero proof drinks and the components already written",
+   "publisher": "This repository",
+   "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+   "supports": "The wines poured by the glass and the bottles named in the pairing, with their profiles; the components reused (brown butter, capers, lemon, leeks, redfish, grits, cheddar, poached egg, popcorn rice, Creole tomatoes, holy trinity, roux, Gulf shrimp, cane syrup, apples, pork, thick-cut bacon, buttermilk, beef tenderloin).",
+   "kind": "secondary"
+  }
+ ]
+}

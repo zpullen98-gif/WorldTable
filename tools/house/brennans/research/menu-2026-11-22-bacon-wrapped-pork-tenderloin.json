@@ -1,0 +1,92 @@
+{
+ "partial": false,
+ "dish": "Bacon-Wrapped Pork Tenderloin",
+ "readOn": "2026-11-22",
+ "sheet": {
+  "source": "tools/house/brennans/research/menu-2026-11-22-sheets.md, Sheet 1, ENTREES line 2",
+  "page": "tools/house/brennans/pages/brennans-sheets-2026-11-22.txt",
+  "title": "Happy Thanksgiving from Brennan’s, 3 Courses $80: choice of appetizer, entrée and dessert",
+  "line": "Cane Syrup Glaze, Polenta, Mustard Greens, Roasted Apples",
+  "allergens": [],
+  "note": "The sheet prints the dish name and its line and nothing else: no allergen marks, no price of its own (the $80 covers three courses), no method, no portion, no wine."
+ },
+ "classic": {
+  "tenderloin": "Pork tenderloin is very lean and very tender, with a mild flavor; wrapping it in bacon protects it while it roasts, the bacon fat bastes it and adds smoke and salt (America’s Test Kitchen, Bacon-Wrapped Pork Tenderloin Medallions; Tasting Table, Wrap Your Pork Tenderloin In Bacon).",
+  "caneSyrup": "Cane syrup is sugar cane juice boiled down with nothing taken out, sweeter and milder than molasses, a Louisiana pantry staple used to glaze meat (the pack’s cane syrup component and its sources).",
+  "polenta": "Polenta comes from the grain mushes of Roman times (puls, pulmentum); maize reached Italy from the Americas in the sixteenth century, and polenta is now usually yellow cornmeal, ground finer than grits; grits come from the Native peoples of the American Southeast, the Muscogee or Creek among them (Wikipedia, Polenta; MasterClass, Polenta vs. Grits; Food Network, Grits vs Polenta).",
+  "mustardGreens": "Mustard greens are the leaves of Brassica juncea; the curly Southern type is a staple of Southern and soul food cooking, braised slowly with smoked meat; peppery when raw, mellower and sweeter when cooked; the braising liquid is the potlikker (FoodPrint, Real Food Encyclopedia: Mustard Greens; MasterClass, How to Cook Mustard Greens)."
+ },
+ "sayIt": [
+  "Polenta: poh-LEN-tuh, the Italian word, from the Latin puls and pulmentum."
+ ],
+ "unsourced": [
+  "The pork’s cooking temperature, how the apples are roasted, how the greens are cooked and whether the polenta is soft or set: asked of the chef.",
+  "Where the tenderloin sits in the animal: one search gave no source for it, so the notes do not place it."
+ ],
+ "sources": [
+  {
+   "id": "atk-pork",
+   "title": "Bacon-Wrapped Pork Tenderloin Medallions",
+   "publisher": "America’s Test Kitchen",
+   "url": "https://www.americastestkitchen.com/recipes/6000-bacon-wrapped-pork-tenderloin-medallions",
+   "supports": "Ultra lean tenderloin is very tender but mild; bacon adds smoke and salt. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "tastingtable-pork",
+   "title": "Wrap Your Pork Tenderloin In Bacon For The Juiciest Meat",
+   "publisher": "Tasting Table",
+   "url": "https://www.tastingtable.com/1631890/bacon-wrapped-pork-tenderloin/",
+   "supports": "The bacon protects the lean cut and its fat bastes it. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "wiki-polenta",
+   "title": "Polenta",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Polenta",
+   "supports": "Earlier grain mushes, puls or pulmentum in Latin, since Roman times; maize from the Americas in the sixteenth century; usually yellow maize. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "masterclass-polenta",
+   "title": "Polenta vs. Grits Explained",
+   "publisher": "MasterClass",
+   "url": "https://www.masterclass.com/articles/polenta-vs-grits-explained",
+   "supports": "Polenta cornmeal is ground finer than grits; grits from Native peoples of the Southeast. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "foodprint-mustard",
+   "title": "Real Food Encyclopedia: Mustard Greens",
+   "publisher": "FoodPrint",
+   "url": "https://foodprint.org/real-food/mustard-greens/",
+   "supports": "Leaves of Brassica juncea; curly Southern mustard in soul food cooking; braised with smoked meats. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "masterclass-mustard",
+   "title": "How to Cook Mustard Greens",
+   "publisher": "MasterClass",
+   "url": "https://www.masterclass.com/articles/how-to-cook-mustard-greens",
+   "supports": "Cooking mellows the pepper of the greens and brings out their sweetness. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "sheet-2026-11-22",
+   "title": "Brennan’s sheets photographed on 22 November 2026, Sheet 1, the Thanksgiving Day menu",
+   "publisher": "The house’s own menu, transcribed in this repository",
+   "url": "tools/house/brennans/research/menu-2026-11-22-sheets.md",
+   "supports": "The dish name and its printed line, word for word; the menu heading, three courses for $80; no allergen marks, no wine.",
+   "kind": "primary"
+  },
+  {
+   "id": "repo-pack",
+   "title": "The house pack as shipped (the November edition): the wine list, the bottle list, the zero proof drinks and the components already written",
+   "publisher": "This repository",
+   "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+   "supports": "The wines poured by the glass and the bottles named in the pairing, with their profiles; the components reused (brown butter, capers, lemon, leeks, redfish, grits, cheddar, poached egg, popcorn rice, Creole tomatoes, holy trinity, roux, Gulf shrimp, cane syrup, apples, pork, thick-cut bacon, buttermilk, beef tenderloin).",
+   "kind": "secondary"
+  }
+ ]
+}

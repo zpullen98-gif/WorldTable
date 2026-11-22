@@ -1,0 +1,83 @@
+{
+ "partial": false,
+ "dish": "Redfish Meunière",
+ "readOn": "2026-11-22",
+ "sheet": {
+  "source": "tools/house/brennans/research/menu-2026-11-22-sheets.md, Sheet 1, ENTREES line 5",
+  "page": "tools/house/brennans/pages/brennans-sheets-2026-11-22.txt",
+  "title": "Happy Thanksgiving from Brennan’s, 3 Courses $80: choice of appetizer, entrée and dessert",
+  "line": "Potato and Leek Écrasé, Brown Butter, Lemon, Capers",
+  "allergens": [],
+  "note": "The sheet prints the dish name and its line and nothing else: no allergen marks, no price of its own (the $80 covers three courses), no method, no portion, no wine."
+ },
+ "classic": {
+  "meuniere": "À la meunière, in the style of the miller’s wife, is the French way of dredging fish in flour and cooking it in butter, finished with brown butter, lemon and parsley; the flour is the usual reason given for the name (Wikipedia, Meunière sauce; Tasting Table, A La Meunière; CooksInfo, A la Meunière). Trout meunière is a bedrock dish of New Orleans Creole cooking (Wikipedia, Meunière sauce, citing the Gulf’s seafood). When the style came to New Orleans is not documented.",
+  "ecrase": "Écrasé is French for crushed: an écrasé de pommes de terre is potatoes crushed with a fork or a masher with olive oil or butter, rougher than a purée and made without milk (Bonial, pommes de terre écrasées à l’huile d’olive; Cookidoo, Écrasé de pomme de terre; Slate, the fork test). The sheet adds leeks; the pack’s leek component explains them."
+ },
+ "sayIt": [
+  "Meunière: mun-YAIR, the miller’s wife.",
+  "Écrasé: ay-krah-ZAY, French for crushed."
+ ],
+ "unsourced": [
+  "Whether the kitchen dredges the redfish in flour, where the fish comes from, and how the écrasé is finished: asked of the chef.",
+  "When meunière reached New Orleans: not documented."
+ ],
+ "sources": [
+  {
+   "id": "wiki-meuniere",
+   "title": "Meunière sauce",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Meuni%C3%A8re_sauce",
+   "supports": "Miller’s wife; brown butter, parsley and lemon; trout meunière a bedrock dish of New Orleans Creole cooking. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "tastingtable-meuniere",
+   "title": "A La Meunière Is A Simple French Method For Flavorful Fish",
+   "publisher": "Tasting Table",
+   "url": "https://tastingtable.com/1234804/a-la-meuniere-is-a-simple-french-method-for-flavorful-fish",
+   "supports": "In the style of the miller’s wife: dusted with flour, then cooked in butter. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "cooksinfo-meuniere",
+   "title": "A la Meunière",
+   "publisher": "CooksInfo",
+   "url": "https://www.cooksinfo.com/a-la-meuniere",
+   "supports": "Originally, to cook it by first dredging it in flour. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "bonial-ecrase",
+   "title": "Recette de pommes de terre écrasées à l’huile d’olive",
+   "publisher": "Bonial Magazine",
+   "url": "https://www.bonial.fr/magazine/recette-de-pommes-de-terre-ecrasees-a-lhuile-dolive/",
+   "supports": "Potatoes crushed with olive oil, butter or cheese using a masher or a fork. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "cookidoo-ecrase",
+   "title": "Écrasé de pomme de terre à l’huile d’olive",
+   "publisher": "Cookidoo",
+   "url": "https://cookidoo.co.uk/recipes/recipe/en-GB/r137249",
+   "supports": "Unlike a purée, an écrasé uses no milk. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "sheet-2026-11-22",
+   "title": "Brennan’s sheets photographed on 22 November 2026, Sheet 1, the Thanksgiving Day menu",
+   "publisher": "The house’s own menu, transcribed in this repository",
+   "url": "tools/house/brennans/research/menu-2026-11-22-sheets.md",
+   "supports": "The dish name and its printed line, word for word; the menu heading, three courses for $80; no allergen marks, no wine.",
+   "kind": "primary"
+  },
+  {
+   "id": "repo-pack",
+   "title": "The house pack as shipped (the November edition): the wine list, the bottle list, the zero proof drinks and the components already written",
+   "publisher": "This repository",
+   "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+   "supports": "The wines poured by the glass and the bottles named in the pairing, with their profiles; the components reused (brown butter, capers, lemon, leeks, redfish, grits, cheddar, poached egg, popcorn rice, Creole tomatoes, holy trinity, roux, Gulf shrimp, cane syrup, apples, pork, thick-cut bacon, buttermilk, beef tenderloin).",
+   "kind": "secondary"
+  }
+ ]
+}

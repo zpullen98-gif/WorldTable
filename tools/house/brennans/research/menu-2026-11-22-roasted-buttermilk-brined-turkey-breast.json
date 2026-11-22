@@ -1,0 +1,84 @@
+{
+ "partial": false,
+ "dish": "Roasted Buttermilk-Brined Turkey Breast",
+ "readOn": "2026-11-22",
+ "sheet": {
+  "source": "tools/house/brennans/research/menu-2026-11-22-sheets.md, Sheet 1, ENTREES line 1",
+  "page": "tools/house/brennans/pages/brennans-sheets-2026-11-22.txt",
+  "title": "Happy Thanksgiving from Brennan’s, 3 Courses $80: choice of appetizer, entrée and dessert",
+  "line": "Braised Leg, Cornbread Dressing, Cranberry and Rosemary Jus",
+  "allergens": [],
+  "note": "The sheet prints the dish name and its line and nothing else: no allergen marks, no price of its own (the $80 covers three courses), no method, no portion, no wine."
+ },
+ "classic": {
+  "brine": "Salt in a brine changes the electric charges on the meat’s proteins and raises how much water the meat holds, so a brined breast stays juicier (The Science of Wet Brining Poultry, a food science newsletter). Buttermilk brines are a common Thanksgiving method for turkey: they season the meat, keep it moist and leave a gentle tang (Williams-Sonoma, Turkey with Buttermilk Brine; Mental Floss on a buttermilk turkey brine). Buttermilk browns fast in the oven, one reason a breast is often brined and roasted apart from the legs (Mental Floss).",
+  "dressing": "Stuffing is cooked inside the bird; dressing is the same kind of mixture baked in its own pan (Betty Crocker, Dressing vs. Stuffing; AJC, Stuffing vs. dressing). In the Southern states it is most often called dressing and made with cornbread, from day old cornbread with herbs and broth; Southern cooks add pecans, oysters, sausage, crawfish or apples (AJC; HuffPost, Stuffing vs. dressing). The dating of the word dressing is disputed between sources, so no date is used.",
+  "jus": "Jus is French for juice; on a menu it is a light sauce of the meat’s own juices, not a flour gravy (the pack already says jus is ZHOO, on the Rohan duck and the lamb).",
+  "braise": "Braising is slow cooking in a covered pot with liquid, the method for tougher, darker cuts (the pack’s own components, Braising in red wine)."
+ },
+ "sayIt": [
+  "Jus: ZHOO, French for juice (as the pack already says on the lamb and the duck)."
+ ],
+ "unsourced": [
+  "How long the kitchen brines the breast, how the leg is braised, what is in the dressing and how the jus is made: the sheet prints none of it; asked of the chef.",
+  "Any date for the word dressing: the sources disagree, so none is used."
+ ],
+ "sources": [
+  {
+   "id": "sharma-brining",
+   "title": "The Science of Wet Brining Poultry",
+   "publisher": "A food science newsletter on Substack",
+   "url": "https://niksharma.substack.com/p/the-science-of-wet-brining-poultry",
+   "supports": "Salt raises the water holding capacity of meat by changing the charges on its proteins; lactic acid in buttermilk is a gentle cooking acid. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "ws-buttermilk-brine",
+   "title": "Turkey with Buttermilk Brine",
+   "publisher": "Williams-Sonoma",
+   "url": "https://www.williams-sonoma.com/recipe/turkey-with-buttermilk-brine.html",
+   "supports": "A buttermilk brine adds flavor to the turkey and keeps the meat moist. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "mentalfloss-brine",
+   "title": "Up Your Turkey Game With This Simple Buttermilk Brine",
+   "publisher": "Mental Floss",
+   "url": "https://www.mentalfloss.com/article/563308/simple-turkey-buttermilk-brine-thanksgiving",
+   "supports": "A tangy creaminess in the breast; buttermilk promotes rapid browning. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "bettycrocker-dressing",
+   "title": "Dressing vs. Stuffing",
+   "publisher": "Betty Crocker",
+   "url": "https://bettycrocker.com/how-to/ingredients-and-preparation/dressing-vs-stuffing",
+   "supports": "Stuffing is cooked in the bird, dressing in a separate pan. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "ajc-dressing",
+   "title": "Stuffing vs. dressing: Is there really a difference?",
+   "publisher": "The Atlanta Journal-Constitution",
+   "url": "https://www.ajc.com/lifestyles/food--cooking/stuffing-dressing-there-really-difference/ZJ0YyAjkOemdiwI3S2x6eP/",
+   "supports": "In the Southern states it is most often called dressing and made with cornbread; stale cornbread with herbs, broth, salt and pepper; regional additions. Read through a search summary.",
+   "kind": "secondary"
+  },
+  {
+   "id": "sheet-2026-11-22",
+   "title": "Brennan’s sheets photographed on 22 November 2026, Sheet 1, the Thanksgiving Day menu",
+   "publisher": "The house’s own menu, transcribed in this repository",
+   "url": "tools/house/brennans/research/menu-2026-11-22-sheets.md",
+   "supports": "The dish name and its printed line, word for word; the menu heading, three courses for $80; no allergen marks, no wine.",
+   "kind": "primary"
+  },
+  {
+   "id": "repo-pack",
+   "title": "The house pack as shipped (the November edition): the wine list, the bottle list, the zero proof drinks and the components already written",
+   "publisher": "This repository",
+   "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+   "supports": "The wines poured by the glass and the bottles named in the pairing, with their profiles; the components reused (brown butter, capers, lemon, leeks, redfish, grits, cheddar, poached egg, popcorn rice, Creole tomatoes, holy trinity, roux, Gulf shrimp, cane syrup, apples, pork, thick-cut bacon, buttermilk, beef tenderloin).",
+   "kind": "secondary"
+  }
+ ]
+}
