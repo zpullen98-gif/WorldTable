@@ -1,0 +1,225 @@
+{
+	"about": "The Thanksgiving Day menu of 22 November 2026: the meal, the source, the three dishes the house already serves joining the menu, the fixed price record and the menu’s own lineup asks. Written by the spec engineer and final in shape; it builds only beside the chunks that file the sixteen new dishes (tg-dishes-a, tg-dishes-b).",
+	"entries": [
+		{
+			"target": "house",
+			"field": "meals",
+			"value": [
+				{
+					"name": "Breakfast & lunch",
+					"days": "Monday to Friday",
+					"hours": "9 am to 2 pm"
+				},
+				{
+					"name": "Breakfast & lunch",
+					"days": "Saturday and Sunday",
+					"hours": "8 am to 2 pm"
+				},
+				{
+					"name": "Dinner",
+					"days": "Nightly",
+					"hours": "6 pm to 10 pm"
+				},
+				{
+					"name": "Bubbles at Brennan's",
+					"days": "Monday to Friday",
+					"hours": "2 pm to 6 pm in the Roost Bar and Courtyard, Champagne sabered Fridays at 5; confirm on shift"
+				},
+				{
+					"name": "Thanksgiving Day",
+					"days": "Thursday 26 November 2026",
+					"hours": "The sheet prints no hours; confirm at lineup"
+				}
+			],
+			"reason": "The Thanksgiving Day sheet of 22 November 2026 is a menu served on one day, so the day is a meal of the house: the four meals as they stand, word for word, and Thanksgiving Day after them. The date is the calendar’s (the fourth Thursday of November 2026); the sheet prints no hours.",
+			"source": "page:brennans-sheets-2026-11-22.txt lines 1 to 7"
+		},
+		{
+			"target": "house",
+			"op": "add",
+			"field": "sources",
+			"value": {
+				"title": "Brennan’s sheets of 22 November 2026, photographed by the owner (the Thanksgiving Day menu, three courses for $80 with four sides for the table, and the Dinner Pairing Wines sheet, five pours)",
+				"url": "",
+				"readOn": "2026-11-22"
+			},
+			"reason": "The seventeenth source: the sheets every Thanksgiving dish and the five pours are read from.",
+			"source": "page:brennans-sheets-2026-11-22.txt"
+		},
+		{
+			"target": "dish:Turtle Soup",
+			"field": "meals",
+			"value": [
+				"Breakfast & lunch",
+				"Dinner",
+				"Breakfast tasting",
+				"Thanksgiving Day"
+			],
+			"reason": "The Thanksgiving Day sheet prints this dish among its courses, so the record the house already holds gains the meal; no second record of the dish is filed, and the sheet’s own name and line for it stand on the menu’s course.",
+			"source": "page:brennans-sheets-2026-11-22.txt (APPETIZERS and DESSERTS)"
+		},
+		{
+			"target": "dish:Seafood Gumbo",
+			"field": "meals",
+			"value": [
+				"Breakfast & lunch",
+				"Dinner",
+				"Breakfast tasting",
+				"Thanksgiving Day"
+			],
+			"reason": "The Thanksgiving Day sheet prints this dish among its courses, so the record the house already holds gains the meal; no second record of the dish is filed, and the sheet’s own name and line for it stand on the menu’s course.",
+			"source": "page:brennans-sheets-2026-11-22.txt (APPETIZERS and DESSERTS)"
+		},
+		{
+			"target": "dish:World Famous Bananas Foster",
+			"field": "meals",
+			"value": [
+				"Breakfast & lunch",
+				"Dinner",
+				"Breakfast tasting",
+				"Thanksgiving Day"
+			],
+			"reason": "The Thanksgiving Day sheet prints this dish among its courses, so the record the house already holds gains the meal; no second record of the dish is filed, and the sheet’s own name and line for it stand on the menu’s course.",
+			"source": "page:brennans-sheets-2026-11-22.txt (APPETIZERS and DESSERTS)"
+		},
+		{
+			"target": "tasting:+",
+			"op": "add",
+			"value": {
+				"name": "Happy Thanksgiving from Brennan’s",
+				"price": "$80",
+				"meal": "Thanksgiving Day",
+				"includesDrinks": false,
+				"fixedPrice": true,
+				"line": "3 Courses $80: choice of appetizer, entrée and dessert",
+				"note": "Served on Thanksgiving Day, Thursday 26 November 2026, only. Three courses for $80: the guest chooses one appetizer, one entrée and one dessert. The Bananas Foster flambéed tableside adds $5. Four sides for the table are priced on their own. The sheet prints no allergen marks and no wine: every allergy or diet question goes to the kitchen, and the pairings on the cards are the house list’s, confirmed at lineup.",
+				"courses": [
+					{
+						"label": "Appetizers",
+						"choice": true,
+						"dishes": [
+							"Turtle Soup",
+							"Rockefeller Gratin",
+							"Endive Satsuma Salad",
+							"Seafood Gumbo",
+							"Sweet Potato Agnolotti",
+							"Bay Scallop Crudo"
+						],
+						"printed": [
+							"Classic Turtle Soup: Brown Butter Spinach, Grated Egg, Aged Sherry",
+							"Rockefeller Gratin: Oysters, Bacon, Creamed Spinach, Breadcrumbs",
+							"Endive Satsuma Salad: Cherry Vinaigrette, Roasted Sunflower Seeds",
+							"Seafood Filé Gumbo: Andouille, Crabmeat, Oysters, Shrimp, Popcorn Rice",
+							"Sweet Potato Agnolotti: Candied Pecans, Brown Butter, Chèvre",
+							"Bay Scallop Crudo: Meyer Lemon, Black Truffle, Radish"
+						]
+					},
+					{
+						"label": "Entrées",
+						"choice": true,
+						"dishes": [
+							"Roasted Buttermilk-Brined Turkey Breast",
+							"Bacon-Wrapped Pork Tenderloin",
+							"Herb Roasted Beef Tenderloin",
+							"Shrimp Sauce Piquante",
+							"Redfish Meunière",
+							"Veal Grillades"
+						],
+						"printed": [
+							"Roasted Buttermilk-Brined Turkey Breast: Braised Leg, Cornbread Dressing, Cranberry and Rosemary Jus",
+							"Bacon-Wrapped Pork Tenderloin: Cane Syrup Glaze, Polenta, Mustard Greens, Roasted Apples",
+							"Herb Roasted Beef Tenderloin: Pommes Purée, Sauce au Poivre, Roasted Brussels Sprouts",
+							"Shrimp Sauce Piquante: Popcorn Rice Pilaf, Pickled Peppers, Creole Tomato Gravy",
+							"Redfish Meunière: Potato and Leek Écrasé, Brown Butter, Lemon, Capers",
+							"Veal Grillades: Cheddar Grits, Piperade, Poached Egg, Debris"
+						]
+					},
+					{
+						"label": "Desserts",
+						"choice": true,
+						"dishes": [
+							"World Famous Bananas Foster",
+							"Sweet Potato Pot de Crème",
+							"Chocolate and Orange Tart"
+						],
+						"printed": [
+							"World Famous Bananas Foster: New Orleans Ice Cream Co. Vanilla Bean Ice Cream. Flambéed Tableside [ add $5 ]",
+							"Sweet Potato Pot de Crème: Miso, Cinnamon, Marshmallow Fluff",
+							"Chocolate and Orange Tart: Candied Hazelnuts"
+						]
+					}
+				]
+			},
+			"reason": "The Thanksgiving Day menu as the sheet prints it: its heading as the name, \"3 Courses $80\" as the price and the line (the sheet’s hyphen written as a colon), and the three courses in printed order, each a choice, each dish named as the house names it with the sheet’s own name and line for it beside it in the same order. The two words cut off at the edge of the photograph (Roasted, Truffle) are completed from context and asked at lineup.",
+			"source": "page:brennans-sheets-2026-11-22.txt lines 5 to 30"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Thanksgiving Day menu: the photograph cuts off two appetizer lines at the page edge. Does the Endive Satsuma Salad print Cherry Vinaigrette and Roasted Sunflower Seeds and nothing between, and does the Bay Scallop Crudo print Meyer Lemon, Black Truffle and Radish?",
+				"askWhom": "manager",
+				"items": [
+					"Endive Satsuma Salad",
+					"Bay Scallop Crudo"
+				]
+			},
+			"reason": "Two lines are completed from context; a word may be lost at each cut, and the floor reads the printed menu before describing either plate.",
+			"source": "page:brennans-sheets-2026-11-22.txt"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Thanksgiving Day menu: the photograph ends under the Cranberry Sauce. Are there more sides for the table than the BBQ shrimp stuffing, the potato purée, the haricots verts and the cranberry sauce, and what are the hours of service on the day?",
+				"askWhom": "manager",
+				"items": [
+					"Titus’ BBQ Shrimp Stuffing",
+					"Herbed Potato Purée",
+					"Haricots Verts",
+					"Cranberry Sauce"
+				]
+			},
+			"reason": "The photograph may not show the whole list of sides, and the sheet prints no hours.",
+			"source": "page:brennans-sheets-2026-11-22.txt"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Thanksgiving Day menu: the sheet prints Classic Turtle Soup and Seafood Filé Gumbo. Are they the house Turtle Soup and Seafood Gumbo as served every day, and is the filé in the gumbo every day or added for Thanksgiving?",
+				"askWhom": "chef",
+				"items": [
+					"Turtle Soup",
+					"Seafood Gumbo"
+				]
+			},
+			"reason": "The two soups join the menu as the records the house already holds; the sheet’s names differ by a word each, and only the kitchen can say whether the plate does.",
+			"source": "page:brennans-sheets-2026-11-22.txt"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Thanksgiving Day menu: the sheet prints the Bananas Foster with New Orleans Ice Cream Co. vanilla bean ice cream and Flambéed Tableside, add $5. Is that the ice cream on the day, where the dinner menu prints housemade, and is a Foster without the $5 flambéed in the kitchen?",
+				"askWhom": "chef",
+				"items": [
+					"World Famous Bananas Foster"
+				]
+			},
+			"reason": "The sheet’s line differs from the dessert menu’s on the ice cream and prices the tableside flambé apart; the floor says what the kitchen confirms.",
+			"source": "page:brennans-sheets-2026-11-22.txt"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Thanksgiving Day menu: the sheet prints no allergen marks for any dish. What does the kitchen want the floor to know, dish by dish, before answering an allergy or a diet question on the day?",
+				"askWhom": "chef",
+				"items": []
+			},
+			"reason": "No mark is printed, so no card states one; the question goes to the kitchen and lineup.",
+			"source": "page:brennans-sheets-2026-11-22.txt"
+		}
+	]
+}

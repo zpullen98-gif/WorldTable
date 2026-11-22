@@ -1,0 +1,134 @@
+{
+	"about": "The Thanksgiving Day dishes, chunk a: the four new appetizers, the two new desserts and the four sides for the table. Today it holds one worked example, Rockefeller Gratin, marked DRAFT in every reason; the dish author rewrites it and adds the other nine (Endive Satsuma Salad, Sweet Potato Agnolotti, Bay Scallop Crudo, Sweet Potato Pot de Crème, Chocolate and Orange Tart, Titus’ BBQ Shrimp Stuffing, Herbed Potato Purée, Haricots Verts, Cranberry Sauce).",
+	"entries": [
+		{
+			"target": "dish:+",
+			"op": "add",
+			"value": {
+				"name": "Rockefeller Gratin",
+				"section": "Thanksgiving Day",
+				"meals": [
+					"Thanksgiving Day"
+				],
+				"fixedPriceOn": "Happy Thanksgiving from Brennan’s",
+				"description": "Oysters, Bacon, Creamed Spinach, Breadcrumbs",
+				"parts": {
+					"main": "oysters",
+					"technique": "baked as a gratin under breadcrumbs; learn the kitchen’s method at lineup",
+					"sauce": "creamed spinach with bacon",
+					"sides": "a toasted breadcrumb crust",
+					"taste": "briny oysters, smoky bacon and creamy spinach under a crisp crumb"
+				},
+				"lines": {
+					"s10": "Rockefeller Gratin: oysters baked with bacon and creamed spinach under toasted breadcrumbs, our Thanksgiving take on oysters Rockefeller.",
+					"s20": "Our Rockefeller Gratin takes the New Orleans classic, oysters Rockefeller, and bakes it as a gratin: oysters with smoky bacon and creamed spinach under a crisp breadcrumb crust. It is warm, rich and briny, one of the six appetizers on the Thanksgiving Day menu.",
+					"s45": "Oysters Rockefeller is a New Orleans classic: oysters baked under a rich green sauce. For Thanksgiving Day the kitchen turns that idea into a gratin, grah-TAN, which means baked until the top browns. The oysters go in with bacon for smoke and salt and creamed spinach for richness, and breadcrumbs on top bake into a crisp crust. So each bite has a briny oyster, creamy greens and crunch. It is one of the six appetizers on the three course Thanksgiving menu, and a warm, rich way to start. I would pour Champagne with it."
+				},
+				"say": "Rockefeller: ROCK-uh-fell-er. Gratin: grah-TAN.",
+				"guest": "A warm appetizer for Thanksgiving Day: oysters baked with smoky bacon and creamed spinach until the breadcrumb top turns crisp and golden.",
+				"why": "The oyster appetizer of the Thanksgiving Day menu: a New Orleans classic served warm as a gratin. Offer it to a guest who wants a rich start.",
+				"origin": "Oysters Rockefeller is a New Orleans classic of oysters baked under a rich green sauce. This plate takes the idea into a gratin: the greens are creamed spinach, bacon brings smoke, and breadcrumbs bake into the crust.",
+				"serviceNote": "The Thanksgiving Day sheet prints no allergen marks for any dish. It lists oysters, bacon, creamed spinach and breadcrumbs for this one; what else is in it is the kitchen’s to say. Ask the kitchen and confirm at lineup before answering any question about an allergy or a diet.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "The Rockefeller Gratin is one of the six appetizers on the Thanksgiving Day menu, three courses for $80, served on Thanksgiving Day only.\n\nIts parent is oysters Rockefeller, the New Orleans classic of oysters baked under a rich green sauce. Here the kitchen builds the same flavors as a gratin: oysters, bacon and creamed spinach in one dish, with breadcrumbs over the top that bake into a crisp, golden crust. Gratin is the French word for that browned top.\n\nOn the palate it is briny from the oysters, smoky and salty from the bacon, creamy from the spinach and crunchy from the crumb. It is rich, so it suits a guest who wants a warm, generous start, and it leads well into the turkey or the beef.\n\nThe sheet lists four things and no method, so learn at lineup how the oysters are cooked, how many come in a portion and what dish it is served in."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Lead with the classic and the season: guests know oysters Rockefeller, and this is the Thanksgiving Day version, baked as a gratin. Offer it to the oyster lover and to the guest who wants something warm and rich before the turkey. Say: “It’s our take on oysters Rockefeller for the holiday: oysters baked with bacon and creamed spinach under a crisp crumb.” Then offer Champagne by the glass with it, since bubbles cut the cream and the bacon."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: Is this oysters Rockefeller?\n\nAnswer: It is our Thanksgiving Day take on it. The classic is oysters baked under a rich green sauce; ours is a gratin of oysters, bacon and creamed spinach under breadcrumbs.\n\nAsked: Are the oysters raw?\n\nAnswer: No, the gratin is baked and comes to the table hot. How long it bakes and how the oysters are handled is the kitchen’s to say, so check at lineup before you promise anything more.\n\nAsked: Does it come with the three courses?\n\nAnswer: Yes. It is one of six appetizers to choose from on the $80 Thanksgiving Day menu."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "It is a Thanksgiving Day dish only: do not offer it on another night. The sheet prints no method, so do not say how the oysters are cooked or where they come from until the kitchen tells you. It is rich, so steer a guest who wants a light start to the salad or the crudo. A question about shellfish, pork or any diet goes to the kitchen before you answer. Allergens: read the service note and confirm at lineup."
+					}
+				]
+			},
+			"reason": "DRAFT by the spec engineer, a worked example of the shape with only what the sheet prints and plain kitchen sense: its author rewrites every line from research before the merge. The Thanksgiving Day sheet prints the dish with its line and no price of its own: the menu’s $80 covers it, so it files with fixedPriceOn naming the menu and no price ask.",
+			"source": "page:brennans-sheets-2026-11-22.txt (APPETIZERS, second line)"
+		},
+		{
+			"target": "dish:Rockefeller Gratin",
+			"field": "pairing",
+			"value": {
+				"wine": "Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+				"why": "Bubbles and acid cut cream, bacon fat and a buttery crumb, and a chalky finish suits a briny oyster.",
+				"sayIt": "With the Rockefeller Gratin I’d pour our house Champagne: the bubbles cut the cream and bacon, and it loves an oyster.",
+				"whyThisWine": "The gratin is rich on rich: cream, bacon and a toasted crumb over a briny oyster. Our house Champagne is very dry, so its bubbles and acidity clear the cream, and its toasty note sits with the breadcrumbs.",
+				"palate": "The cream and the bacon coat the palate, and the Champagne’s bubbles and acidity lift them off, so the next bite tastes as bright as the first. The oyster’s brine makes the wine’s citrus seem riper, the toasted crumb picks up its brioche note, and the finish is clean and chalky rather than heavy.",
+				"principles": [
+					"fat",
+					"acid",
+					"bridge"
+				],
+				"second": "Famille Durand Val de Loire Sauvignon Blanc 2025",
+				"secondWhy": "For a guest who wants a still white: the Sauvignon Blanc is crisp and citrusy, bright enough for the cream and clean beside the oyster.",
+				"stepUp": "",
+				"serve": "Pour as the appetizers fire, well chilled, in a Champagne glass. Confirm at lineup that the house Champagne is poured on Thanksgiving Day.",
+				"avoid": "Avoid tannic reds and heavily oaked whites: tannin turns metallic beside an oyster, and oak piles weight on a dish that is already rich.",
+				"zeroProof": "Oh! What It Seemed to Be",
+				"zeroProofWhy": "lemon and a silky texture lift the cream and the bacon without fighting the oyster."
+			},
+			"reason": "DRAFT by the spec engineer, a worked example of the shape with only what the sheet prints and plain kitchen sense: its author rewrites every line from research before the merge. The pairing for a dish the sheet prints with no wine, chosen from the house’s own list: bubbles and acid for cream, bacon and oysters.",
+			"source": "the house wine list in the shipped pack (the house Champagne, $30.00 the glass; Famille Durand Sauvignon Blanc 2025, $14 the glass)"
+		},
+		{
+			"target": "dish:Rockefeller Gratin",
+			"op": "bottles",
+			"value": {
+				"value": {
+					"wine": "Louis Michel Chablis 2022",
+					"why": "Acid and salt: Chablis is lean and chalky, a classic white for oysters, with the freshness for cream.",
+					"sayIt": "With the gratin, the Louis Michel Chablis: crisp and chalky, a classic oyster white."
+				},
+				"classic": {
+					"wine": "Jean-Paul & Benoît Droin ‘Vaillons’ Chablis Premier Cru 2023",
+					"why": "Weight and acid: a Premier Cru Chablis with more depth for the cream and bacon, and the same chalky cut.",
+					"sayIt": "For a bottle, the Droin Vaillons Premier Cru Chablis: more depth, still crisp and chalky with the oysters."
+				},
+				"splurge": {
+					"wine": "Domaine René et Vincent Dauvissat ‘Les Preuses’ Chablis Grand Cru 2015",
+					"why": "Depth and acid: Grand Cru Chablis with age has the richness for the gratin and the cut for the oyster.",
+					"sayIt": "For a celebration, the Dauvissat Les Preuses: Grand Cru Chablis with over ten years of age, rich, long and chalky."
+				},
+				"half": {
+					"wine": "Tribaut-Schloesser ‘Origine’ Brut NV (375 ml)",
+					"why": "Bubbles and acid in a half bottle: Champagne for two with the appetizers, cutting cream and bacon.",
+					"sayIt": "A half bottle of the Tribaut-Schloesser Champagne: bubbles for two with the appetizers."
+				}
+			},
+			"reason": "DRAFT by the spec engineer, a worked example of the shape with only what the sheet prints and plain kitchen sense: its author rewrites every line from research before the merge. The bottles offered with this dish by price: value under $100, sweet spot $100 to $250, celebration over $250, and a half bottle.",
+			"source": "the house bottle list in the shipped pack (Louis Michel Chablis 2022, $80; Droin Vaillons 2023, $175; Dauvissat Les Preuses 2015, $350; Tribaut-Schloesser Origine 375 ml, $50)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "How is the Rockefeller Gratin built and baked: are the oysters shucked into one dish or baked in the shell, how many come in a portion, and where are the oysters from? The Thanksgiving Day sheet lists oysters, bacon, creamed spinach and breadcrumbs and prints no method.",
+				"askWhom": "chef",
+				"items": [
+					"Rockefeller Gratin"
+				]
+			},
+			"reason": "DRAFT by the spec engineer, a worked example of the shape with only what the sheet prints and plain kitchen sense: its author rewrites every line from research before the merge. The sheet prints four ingredients and no method, portion or source; the technique part says so and the server describes the plate from what the kitchen confirms.",
+			"source": "page:brennans-sheets-2026-11-22.txt (APPETIZERS, second line)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Confirm the first pick for the Rockefeller Gratin (the house Champagne, with the Famille Durand Sauvignon Blanc second) and the bottle tiers (Louis Michel Chablis, Droin Vaillons, Dauvissat Les Preuses, the Tribaut-Schloesser half) before Thanksgiving Day service.",
+				"askWhom": "sommelier",
+				"items": [
+					"Rockefeller Gratin"
+				]
+			},
+			"reason": "DRAFT by the spec engineer, a worked example of the shape with only what the sheet prints and plain kitchen sense: its author rewrites every line from research before the merge. The pairing and the tiers for a dish the sheet prints with no wine are the pack’s reading of the house list, confirmed by the sommelier before they are said at a table.",
+			"source": "the house wine list in the shipped pack; page:brennans-sheets-2026-11-22.txt"
+		}
+	]
+}

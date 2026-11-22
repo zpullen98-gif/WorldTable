@@ -1,0 +1,353 @@
+{
+	"about": "The dinner tasting’s wine pairing from the Dinner Pairing Wines sheet of 22 November 2026: the two new pours (worked examples, DRAFT in their reasons), the pours table, one vintage ask a course, the three November asks the sheet answers, the two pours that left filed as past, the tasting’s note and the second course’s dispute. The sommelier rewrites the DRAFT records from research and adds what the sheet changes on the three pours the house already holds.",
+	"entries": [
+		{
+			"target": "wine:+",
+			"op": "add",
+			"value": {
+				"tastingPour": true,
+				"pours": [
+					"4 oz"
+				],
+				"price": "",
+				"prices": [],
+				"name": "Domaine Weinbach Sylvaner",
+				"section": "Riesling & aromatic whites",
+				"group": "Riesling & aromatic whites",
+				"meals": [
+					"Dinner tasting"
+				],
+				"producer": "Domaine Weinbach",
+				"wine": "Sylvaner",
+				"vintage": "",
+				"region": "Alsace, France",
+				"grapes": [
+					"Sylvaner"
+				],
+				"style": "Alsace white, the dinner tasting’s second pour",
+				"profile": "Sylvaner from Domaine Weinbach in Alsace, in the northeast of France. The house’s pairing sheet describes it as ripe pear with green notes and a lush texture. The vintage poured and how it was made are questions for the sommelier.",
+				"guest": "With your second course we pour a Sylvaner from Domaine Weinbach in Alsace: ripe pear, a fresh green note and a lush texture.",
+				"goesWith": "The Tuna Crudo on the dinner tasting, its second course pour from November 2026.",
+				"serve": "A 4 oz pour with the second course of the dinner tasting, chilled, in a white-wine glass; no decanting. Confirm the serving temperature with the sommelier.",
+				"say": "Weinbach: VINE-bahk. Sylvaner: sil-VAH-ner.",
+				"why": "Poured with the second course of the Dinner Tasting Menu from November 2026; not on the by-the-glass list.",
+				"parts": {
+					"main": "Sylvaner from Alsace, France",
+					"technique": "the cellar work is a lineup question",
+					"sauce": "lush in texture with a green, fresh edge",
+					"sides": "the Tuna Crudo, second course of the dinner tasting",
+					"taste": "ripe pear with green notes"
+				},
+				"lines": {
+					"s10": "Domaine Weinbach Sylvaner, a white from Alsace: ripe pear, green notes and a lush texture, our pour with the Tuna Crudo.",
+					"s20": "This is Sylvaner from Domaine Weinbach in Alsace, in northeastern France. Our pairing sheet calls it ripe pear with green notes and a lush texture. It is the second pour of the dinner tasting’s wine pairing, served with the Tuna Crudo.",
+					"s45": "Our second pour is a Sylvaner from Domaine Weinbach, in Alsace, the region of northeastern France along the border with Germany. Sylvaner is a white grape, and this one shows ripe pear with fresh green notes and a lush, rounded texture, as our pairing sheet puts it. We pour it with the Tuna Crudo: the ripe fruit meets the carrot and burnt orange, and the green note picks up the coriander. It is a four ounce pour, part of the wine pairing for the dinner tasting, and it is not on the by-the-glass list.",
+					"sale": "Domaine Weinbach’s Sylvaner is a white from Alsace, ripe pear with green notes and a lush texture. It is poured with the Tuna Crudo on the dinner tasting’s wine pairing."
+				},
+				"serviceNote": "Named on the Dinner Pairing Wines sheet of 22 November 2026, which prints no vintage and no price. Confirm the vintage open at lineup. It is a pairing pour: ask the sommelier before offering a glass on its own.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "Domaine Weinbach Sylvaner is the second pour of the dinner tasting’s wine pairing, served with the Tuna Crudo from November 2026.\n\nIt comes from Alsace, the wine region in the northeast of France that runs along the border with Germany. The grape is Sylvaner, a white grape, and the house’s pairing sheet describes this wine in one line: ripe pear with green notes and a lush texture. So expect ripe orchard fruit first, then something fresher and greener, in a wine that feels round in the mouth.\n\nThe sheet prints no vintage, so ask the sommelier which year is open before you name one at the table. It is a four ounce pour with the pairing and it is not on the by-the-glass list.\n\nWith the Tuna Crudo the ripe pear sits beside the carrot and the burnt orange, and the fresh green note suits the coriander."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Sell it as part of the pairing, not on its own: it is the second of five pours with the dinner tasting. Name the place and the grape, then give the guest the sheet’s three notes. Say: “Next is a Sylvaner from Domaine Weinbach in Alsace: ripe pear, a little green freshness and a lush texture.” If a guest asks for a glass outside the pairing, check with the sommelier first."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: What is Sylvaner?\n\nAnswer: A white grape. This one is from Domaine Weinbach in Alsace, in northeastern France, and it shows ripe pear with green notes and a lush texture.\n\nAsked: Is it sweet?\n\nAnswer: Our sheet says ripe pear and a lush texture and does not say dry or sweet, so ask the sommelier how the open bottle tastes before you answer.\n\nAsked: What vintage is it?\n\nAnswer: The pairing sheet prints none. Ask the sommelier which year is open tonight."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "The pairing sheet of 22 November 2026 prints no vintage: never name a year until the sommelier confirms the bottle open. It replaced the Fichet Mâcon-Igé as the second pour, so do not describe a Chardonnay with this course. It is a pairing pour and has no glass price. Allergens: read the service note and confirm at lineup."
+					},
+					{
+						"q": "How do I pour it?",
+						"a": "Pour 4 oz as the second course lands, chilled, in a white-wine glass, label toward the guest. Say: “Sylvaner from Domaine Weinbach in Alsace, for your Tuna Crudo.” Clear the Champagne glass only when the guest has finished it. Confirm the vintage with the sommelier before service."
+					}
+				]
+			},
+			"reason": "DRAFT by the spec engineer, a worked example of the shape holding only what the pairing sheet prints: the sommelier rewrites every line from research before the merge. The Dinner Pairing Wines sheet names it as the second course’s pour, with no vintage and no price, so it files with tastingPour: a 4 oz pour of the pairing, an empty vintage and a lineup ask for the year.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "wine:+",
+			"op": "add",
+			"value": {
+				"tastingPour": true,
+				"pours": [
+					"4 oz"
+				],
+				"price": "",
+				"prices": [],
+				"name": "Domaine du Vieux Lazaret Châteauneuf-du-Pape Blanc",
+				"section": "Chardonnay & fuller whites",
+				"group": "Chardonnay & fuller whites",
+				"meals": [
+					"Dinner tasting"
+				],
+				"producer": "Domaine du Vieux Lazaret",
+				"wine": "Châteauneuf-du-Pape Blanc",
+				"vintage": "",
+				"region": "Châteauneuf-du-Pape, Southern Rhône, France",
+				"grapes": [
+					"Grenache Blanc"
+				],
+				"style": "Full-bodied Southern Rhône white, the dinner tasting’s third pour",
+				"profile": "White Châteauneuf-du-Pape from Domaine du Vieux Lazaret, in the Southern Rhône. The house’s pairing sheet calls it a Grenache Blanc blend with notes of white flowers, lemon and apricot and a full-bodied texture. The other grapes in the blend and the vintage poured are questions for the sommelier.",
+				"guest": "With your third course we pour a white Châteauneuf-du-Pape from Domaine du Vieux Lazaret: white flowers, lemon and apricot, full bodied.",
+				"goesWith": "The Fish Bouillabaisse on the dinner tasting, its third course pour from November 2026.",
+				"serve": "A 4 oz pour with the third course of the dinner tasting, cool rather than ice cold, in a larger white-wine glass; no decanting. Confirm the serving temperature with the sommelier.",
+				"say": "Vieux Lazaret: vyuh lah-zah-RAY. Châteauneuf-du-Pape Blanc: shah-toh-NUHF doo PAHP BLAHN.",
+				"why": "Poured with the third course of the Dinner Tasting Menu from November 2026; not on the by-the-glass list.",
+				"parts": {
+					"main": "a Grenache Blanc blend from Châteauneuf-du-Pape",
+					"technique": "the blend and the cellar work are lineup questions",
+					"sauce": "full bodied, round and floral",
+					"sides": "the Fish Bouillabaisse, third course of the dinner tasting",
+					"taste": "white flowers, lemon and apricot"
+				},
+				"lines": {
+					"s10": "Domaine du Vieux Lazaret Blanc, a white Châteauneuf-du-Pape: white flowers, lemon and apricot, full bodied, our pour with the Fish Bouillabaisse.",
+					"s20": "This is a white Châteauneuf-du-Pape from Domaine du Vieux Lazaret, in the Southern Rhône. Our pairing sheet calls it a Grenache Blanc blend: white flowers, lemon and apricot with a full-bodied texture. It is the third pour of the dinner tasting’s pairing, with the Fish Bouillabaisse.",
+					"s45": "Our third pour is a white Châteauneuf-du-Pape from Domaine du Vieux Lazaret. Most guests know Châteauneuf-du-Pape as a red from the Southern Rhône; the whites are a small part of what the village makes. This one is a blend led by Grenache Blanc, and our pairing sheet gives it notes of white flowers, lemon and apricot with a full-bodied texture. That weight is why we pour it with the Fish Bouillabaisse: it stands up to the bouillabaisse sauce and the aioli, and the lemon keeps the course bright. It is a four ounce pour with the wine pairing.",
+					"sale": "Domaine du Vieux Lazaret Blanc is a white Châteauneuf-du-Pape, a Grenache Blanc blend with white flowers, lemon and apricot. It is poured with the Fish Bouillabaisse on the dinner tasting’s wine pairing."
+				},
+				"serviceNote": "Named on the Dinner Pairing Wines sheet of 22 November 2026, which prints no vintage and no price and calls it a Grenache Blanc blend. Confirm the vintage open and the blend at lineup. It is a pairing pour: ask the sommelier before offering a glass on its own.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "White Châteauneuf-du-Pape is the third pour of the dinner tasting’s wine pairing, served with the Fish Bouillabaisse from November 2026: the Domaine du Vieux Lazaret Blanc.\n\nChâteauneuf-du-Pape is a village and an appellation in the Southern Rhône, in the south of France. Guests know it for red wine; white is the smaller part of what it makes. The house’s pairing sheet describes this one as a Grenache Blanc blend with notes of white flowers, lemon and apricot and a full-bodied texture. So it is a white with weight: floral on the nose, citrus and stone fruit on the palate, and round rather than sharp.\n\nThe sheet prints no vintage and does not name the other grapes, so ask the sommelier which year is open and what the blend is before you say either at the table. It is a four ounce pour with the pairing and it is not on the by-the-glass list."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Sell it as the surprise of the pairing: a white from a village guests know for red. It is the third of five pours with the dinner tasting, served with the Fish Bouillabaisse. Say: “This is a white Châteauneuf-du-Pape, a Grenache Blanc blend: white flowers, lemon and apricot, with real body.” A glass on its own is the sommelier’s call, so ask before you offer one."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: I thought Châteauneuf-du-Pape was red?\n\nAnswer: Most of it is. The village also makes white wine in smaller amounts, and this is one: a Grenache Blanc blend from Domaine du Vieux Lazaret.\n\nAsked: What does it taste like?\n\nAnswer: White flowers, lemon and apricot, with a full-bodied texture. It has more weight than a crisp white.\n\nAsked: What grapes are in it?\n\nAnswer: Our sheet says a Grenache Blanc blend and names no other grape. Ask the sommelier for the rest of the blend."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "The pairing sheet of 22 November 2026 prints no vintage and only part of the blend: never name a year or a second grape until the sommelier confirms them. It replaced the Louis Jadot Beaune, a red, as the third pour, so do not describe a Pinot Noir with this course. It is a pairing pour and has no glass price. Allergens: read the service note and confirm at lineup."
+					},
+					{
+						"q": "How do I pour it?",
+						"a": "Pour 4 oz as the third course lands, cool rather than ice cold, in a larger white-wine glass, label toward the guest. Say: “A white Châteauneuf-du-Pape from Domaine du Vieux Lazaret, for your Fish Bouillabaisse.” Confirm the vintage and the glass with the sommelier before service."
+					}
+				]
+			},
+			"reason": "DRAFT by the spec engineer, a worked example of the shape holding only what the pairing sheet prints: the sommelier rewrites every line from research before the merge. The Dinner Pairing Wines sheet names it as the third course’s pour, a Grenache Blanc blend, with no vintage and no price, so it files with tastingPour, an empty vintage and a lineup ask for the year and the blend.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "tasting:Dinner Tasting Menu",
+			"op": "pours",
+			"value": {
+				"sheet": "The Dinner Pairing Wines sheet of 22 November 2026",
+				"courses": [
+					{
+						"n": 1,
+						"pour": "Charles Lafitte Brut Champagne NV",
+						"pourText": "Charles Lafitte Champagne",
+						"words": "Vibrant & fresh with crisp apple & honey notes."
+					},
+					{
+						"n": 2,
+						"pour": "Domaine Weinbach Sylvaner",
+						"pourText": "Domaine Weinbach Sylvaner",
+						"words": "Ripe pear with green notes and a lush texture."
+					},
+					{
+						"n": 3,
+						"pour": "Domaine du Vieux Lazaret Châteauneuf-du-Pape Blanc",
+						"pourText": "Domaine du Vieux Lazaret Blanc",
+						"words": "Grenache Blanc Blend notes of white flowers, lemon, & apricot with a full-bodied texture."
+					},
+					{
+						"n": 4,
+						"pour": "Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+						"pourText": "Paul Hobbs \"Coombsville\" Cabernet Sauvignon",
+						"words": "Notes of blackberry, cassis, sage, and tobacco. Elegant, silky tannins."
+					},
+					{
+						"n": 5,
+						"pour": "Domaine La Tour Vieille Banyuls Reserva NV",
+						"pourText": "Domaine la Tour Vieille",
+						"words": "Notes of sweet jammy dark fruits and exotic spice."
+					}
+				]
+			},
+			"reason": "The five pours of the dinner tasting’s wine pairing as the Dinner Pairing Wines sheet of 22 November 2026 numbers them, course by course, in place of the pours the menu of 3 October printed. Each pour and its words are quoted from the sheet; the builder holds both to the page and writes the words onto each wine under \"What does the pairing sheet say?\".",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Dinner Tasting Menu, first course: the Dinner Pairing Wines sheet of 22 November 2026 prints Charles Lafitte Champagne with no vintage. Confirm the cuvée and that the non-vintage Brut is the bottle open.",
+				"askWhom": "sommelier",
+				"items": [
+					"Charles Lafitte Brut Champagne NV",
+					"Grand Isle Jewel Oysters"
+				]
+			},
+			"reason": "The sheet answers which wine is poured and prints no vintage; the record keeps NV and the floor confirms the bottle.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Dinner Tasting Menu, second course: the Dinner Pairing Wines sheet of 22 November 2026 prints Domaine Weinbach Sylvaner, Alsace, with no vintage. Which vintage is open, and is it dry?",
+				"askWhom": "sommelier",
+				"items": [
+					"Domaine Weinbach Sylvaner",
+					"Tuna Crudo"
+				]
+			},
+			"reason": "A new pour filed with an empty vintage: the year is asked, never guessed.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Dinner Tasting Menu, third course: the Dinner Pairing Wines sheet of 22 November 2026 prints Domaine du Vieux Lazaret Blanc, Châteauneuf-du-Pape, a Grenache Blanc blend, with no vintage. Which vintage is open, and what are the other grapes in the blend?",
+				"askWhom": "sommelier",
+				"items": [
+					"Domaine du Vieux Lazaret Châteauneuf-du-Pape Blanc",
+					"Fish Bouillabaisse"
+				]
+			},
+			"reason": "A new pour filed with an empty vintage and one grape of a blend: the year and the rest of the blend are asked, never guessed.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Dinner Tasting Menu, fourth course: the Dinner Pairing Wines sheet of 22 November 2026 prints Paul Hobbs \"Coombsville\" Cabernet Sauvignon with no vintage. Is the 2021 still the vintage poured?",
+				"askWhom": "sommelier",
+				"items": [
+					"Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+					"Roasted Rohan Duck Breast"
+				]
+			},
+			"reason": "The record keeps the 2021 the menu of 3 October printed; the sheet prints no vintage, so the floor confirms the year.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Dinner Tasting Menu, fifth course: the Dinner Pairing Wines sheet of 22 November 2026 prints Domaine la Tour Vieille, Banyuls, with no vintage. Is the non-vintage Reserva still the bottle poured?",
+				"askWhom": "sommelier",
+				"items": [
+					"Domaine La Tour Vieille Banyuls Reserva NV",
+					"Chocolate Crémeux"
+				]
+			},
+			"reason": "The record keeps the Reserva NV the menu of 3 October printed; the sheet prints the estate and the appellation only.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "house",
+			"op": "answer",
+			"value": {
+				"id": "a-i0xmkjmb",
+				"was": "the November ask whether the Fichet Mâcon-Igé is still poured with the Tuna Crudo",
+				"tombstone": "2026-11-15T15:04:00.001Z"
+			},
+			"reason": "The Dinner Pairing Wines sheet of 22 November 2026 answers it: the sheet names the pour of every course. The ask leaves under a tombstone one millisecond after the last edition that carried it, and one vintage ask a course takes its place.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "house",
+			"op": "answer",
+			"value": {
+				"id": "a-5qm2ecea",
+				"was": "the November ask whether the Jadot Beaune is still poured with the Fish Bouillabaisse",
+				"tombstone": "2026-11-15T15:04:00.001Z"
+			},
+			"reason": "The Dinner Pairing Wines sheet of 22 November 2026 answers it: the sheet names the pour of every course. The ask leaves under a tombstone one millisecond after the last edition that carried it, and one vintage ask a course takes its place.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "house",
+			"op": "answer",
+			"value": {
+				"id": "a-v7ljbixx",
+				"was": "the November ask whether the Banyuls is still poured with the Chocolate Crémeux",
+				"tombstone": "2026-11-15T15:04:00.001Z"
+			},
+			"reason": "The Dinner Pairing Wines sheet of 22 November 2026 answers it: the sheet names the pour of every course. The ask leaves under a tombstone one millisecond after the last edition that carried it, and one vintage ask a course takes its place.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+			"field": "section",
+			"value": "Past tasting pours",
+			"reason": "The Dinner Pairing Wines sheet of 22 November 2026 names another wine for the second course and does not name this one. It was poured only with the dinner tasting, so it is filed as past (a section that begins \"Past \"): kept to be read, never dealt and never named as a pairing.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+			"field": "why",
+			"value": "No longer poured with the dinner tasting, from the pairing sheet of 22 November 2026; kept here to be read.",
+			"reason": "The builder’s fallback line for a past wine speaks of the by-the-glass list, which this pour was never on.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "wine:Fichet ‘Château London’ Mâcon-Igé 2024",
+			"op": "add",
+			"field": "kept",
+			"value": {
+				"q": "Why did it leave the pairing?",
+				"a": "The Dinner Pairing Wines sheet of 22 November 2026 names the Domaine Weinbach Sylvaner for the second course of the dinner tasting and no longer names this wine. This card stays here to be read; the wine is no longer poured with the tasting or named as a pairing. Whether it is still in the cellar is a question for the sommelier."
+			},
+			"reason": "A past record says in its own words why it is past, under a question of its own, as the two past glass wines do.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "wine:Louis Jadot Beaune 1er Cru 2023",
+			"field": "section",
+			"value": "Past tasting pours",
+			"reason": "The Dinner Pairing Wines sheet of 22 November 2026 names another wine for the third course and does not name this one. It was poured only with the dinner tasting, so it is filed as past (a section that begins \"Past \"): kept to be read, never dealt and never named as a pairing.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "wine:Louis Jadot Beaune 1er Cru 2023",
+			"field": "why",
+			"value": "No longer poured with the dinner tasting, from the pairing sheet of 22 November 2026; kept here to be read.",
+			"reason": "The builder’s fallback line for a past wine speaks of the by-the-glass list, which this pour was never on.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "wine:Louis Jadot Beaune 1er Cru 2023",
+			"op": "add",
+			"field": "kept",
+			"value": {
+				"q": "Why did it leave the pairing?",
+				"a": "The Dinner Pairing Wines sheet of 22 November 2026 names the Domaine du Vieux Lazaret Châteauneuf-du-Pape Blanc for the third course of the dinner tasting and no longer names this wine. This card stays here to be read; the wine is no longer poured with the tasting or named as a pairing. Whether it is still in the cellar is a question for the sommelier."
+			},
+			"reason": "A past record says in its own words why it is past, under a question of its own, as the two past glass wines do.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "tasting:Dinner Tasting Menu",
+			"field": "note",
+			"value": "Five courses. Wine pairing supplement $120, five 4 oz pours, as the Dinner Pairing Wines sheet of 22 November 2026 lists them: Charles Lafitte Champagne, Domaine Weinbach Sylvaner, Domaine du Vieux Lazaret Châteauneuf-du-Pape Blanc, Paul Hobbs Coombsville Cabernet Sauvignon and Domaine La Tour Vieille Banyuls. The sheet prints no vintage: confirm each bottle at lineup before you name a year. Open the Hobbs 30 to 60 minutes ahead; pour the Banyuls before the Chocolate Crémeux lands. Read the printed card on shift. The pairing costs more than the food; do not apologize for it.",
+			"reason": "DRAFT by the spec engineer, a worked example of the shape holding only what the pairing sheet prints: the sommelier rewrites every line from research before the merge. The note named the five pours of 3 October and told the floor to confirm three of them; the sheet of 22 November names all five, so the note is written whole again around them.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		},
+		{
+			"target": "dispute:Louisiana BBQ Lobster tasting pour",
+			"field": "resolution",
+			"value": "Closed by the Dinner Pairing Wines sheet of 22 November 2026: the second course of the dinner tasting, now the Tuna Crudo, is poured with Domaine Weinbach Sylvaner. Both sides of this dispute are history: the Fichet Château London Mâcon-Igé 2024 the guide and the menu of 3 October printed, and the Domaine Matrot Meursault 2023 the house website had shown.",
+			"reason": "The dispute stays on the record with both sides, and its resolution says what the newest page prints.",
+			"source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+		}
+	]
+}
