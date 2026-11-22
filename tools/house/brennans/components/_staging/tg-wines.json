@@ -1,0 +1,159 @@
+{
+	"components": [
+		{
+			"terms": [],
+			"key": "wine-grape-sylvaner",
+			"kind": "ingredient",
+			"name": "Sylvaner",
+			"say": "sil-VAH-ner",
+			"explain": "Sylvaner is an old white grape of Central Europe, most likely from Austria, spelled Silvaner in Germany. In Alsace it has long been an everyday white, and only one Alsace grand cru, Zotzenberg, admits it.\n\nFrom old vines on poor ground it makes a firmer wine than its everyday name suggests: dry, high in acidity, with pear, green herbs, hay and a stony, lemony edge, and a rounder texture than its lightness would lead you to expect.\n\nAt Brennan's it is the second pour of the dinner tasting, the Domaine Weinbach Sylvaner with the Tuna Crudo. Say: an old grape of Alsace, dry and fresh, with ripe pear and a green, herbal note.",
+			"card": {
+				"front": "What is Sylvaner, and what does it taste like?",
+				"back": "An old Central European white grape grown in Alsace: dry, high in acidity, pear, green herbs and hay. Ours is Domaine Weinbach's, with the Tuna Crudo."
+			},
+			"items": [
+				"Domaine Weinbach Sylvaner"
+			],
+			"sources": [
+				"research/menu-2026-11-22-pairing-wines.json (wines, Domaine Weinbach Sylvaner: Sylvaner, the taste)",
+				"pages/brennans-sheets-2026-11-22.txt (Sheet 2)"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-story-weinbach",
+			"kind": "story",
+			"name": "Domaine Weinbach and the Clos des Capucins",
+			"say": "VINE-bahk; kah-poo-SAN",
+			"explain": "Domaine Weinbach is at Kaysersberg, in the Haut-Rhin of Alsace, at the foot of the Schlossberg hill. Capuchin friars built the house and walled its vineyard, the Clos des Capucins, about five hectares, in 1612. After the Revolution the state seized and sold the monastery and its vines; in 1898 two brothers, tanners of Kaysersberg, bought them, and their family runs the estate still.\n\nThe estate is farmed biodynamically, certified by Demeter, and ferments its wines in large old oak casks, foudres. Its Sylvaner comes from old vines inside the clos, on sand and silt over granite pebbles: dry, high in acidity, pear, hay and lemon.\n\nAt Brennan's it is the second pour of the dinner tasting, with the Tuna Crudo. Say: a monastery vineyard walled in 1612.",
+			"card": {
+				"front": "Who walled the Clos des Capucins at Domaine Weinbach, and when?",
+				"back": "Capuchin friars, in 1612, at Kaysersberg in Alsace. A family of the town has held it since 1898; its old vine Sylvaner is our second tasting pour."
+			},
+			"producer": {
+				"type": "farm",
+				"who": "Domaine Weinbach, the Kaysersberg estate behind the dinner tasting's Sylvaner",
+				"where": "Kaysersberg, Haut-Rhin, Alsace, France",
+				"founded": "1612, when Capuchin friars walled the Clos des Capucins; the present family estate from 1898",
+				"history": "Domaine Weinbach sits at the foot of the Schlossberg hill at Kaysersberg, in the Haut-Rhin of Alsace. Capuchin friars built the house and walled the vineyard around it, the Clos des Capucins, in 1612. After the Revolution the state seized the monastery and its vines and sold them; in 1898 two brothers, tanners of Kaysersberg, bought and restored them, and their family has run the estate since.\n\nThe clos, about five hectares, is the estate's heart. The vineyards are farmed biodynamically and certified by Demeter, and the wines ferment and age in large old oak casks, foudres.\n\nThe Sylvaner comes from old vines in the clos, on sand and silt over granite pebbles. It is dry and high in acidity, with pear, hay and an edge of lemon; our pairing sheet calls it ripe pear with green notes and a lush texture. It is the second pour of the dinner tasting, with the Tuna Crudo.",
+				"facts": [
+					"Domaine Weinbach is at Kaysersberg in the Haut-Rhin of Alsace, at the foot of the Schlossberg hill.",
+					"Capuchin friars built the house and walled the Clos des Capucins in 1612; the clos is about five hectares.",
+					"In 1898 two brothers, tanners of Kaysersberg, bought the monastery and its vines; their family runs the estate still.",
+					"The estate is farmed biodynamically and certified by Demeter.",
+					"The wines ferment and age in large old oak casks, foudres.",
+					"The Sylvaner comes from old vines in the Clos des Capucins, on sand and silt over granite pebbles.",
+					"It is dry and high in acidity: pear, hay and lemon, by the importer's tasting note.",
+					"Recent releases are labelled Sylvaner; earlier ones were sold as Sylvaner Réserve."
+				],
+				"notes": [
+					"Say VINE-bahk, sil-VAH-ner, KAI-zers-bairg; the clos is the Clos des Capucins, kloh day kah-poo-SAN.",
+					"Name the estate and the friars, never a family member: the people behind it are the family, by role.",
+					"It is dry: if a guest expects a sweet Alsace wine, say so before the pour.",
+					"The pairing sheet prints no vintage; never name a year until the sommelier confirms the bottle."
+				],
+				"sayIt": "A dry Sylvaner from Domaine Weinbach, a monastery vineyard in Alsace walled by Capuchin friars in 1612: ripe pear and green herbs.",
+				"askKitchen": [
+					"Which vintage of the Weinbach Sylvaner is open, and does the label read Sylvaner or Sylvaner Réserve?"
+				]
+			},
+			"items": [
+				"Domaine Weinbach Sylvaner"
+			],
+			"sources": [
+				"research/menu-2026-11-22-pairing-wines.json (wines, Domaine Weinbach Sylvaner)",
+				"pages/brennans-sheets-2026-11-22.txt (Sheet 2)"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-grape-southern-whites-chateauneuf",
+			"kind": "ingredient",
+			"name": "Grenache Blanc, Clairette and Bourboulenc",
+			"say": "gruh-NAHSH BLAHN; klair-ET; boor-boo-LANK",
+			"explain": "Grenache Blanc, the white form of Grenache, is the most planted white grape of Châteauneuf-du-Pape, and its whites are usually blends with Clairette, Bourboulenc and Roussanne; the rules set no shares among the permitted grapes. White is a small part of the appellation, about 7 percent of its vines and less of its wine.\n\nThese blends make full, textured whites, round rather than sharp. Our pairing sheet gives the Vieux Lazaret white flowers, lemon and apricot with a full-bodied texture, the weight that suits garlic, olive oil and rich fish.\n\nAt Brennan's it is the third pour of the dinner tasting, the Domaine du Vieux Lazaret Blanc with the Fish Bouillabaisse: about half Grenache Blanc, with Clairette, Bourboulenc and a little Roussanne.",
+			"card": {
+				"front": "Which grape leads white Châteauneuf-du-Pape, and what joins it?",
+				"back": "Grenache Blanc, its most planted white, usually with Clairette, Bourboulenc and Roussanne. Our Vieux Lazaret Blanc is about half Grenache Blanc: white flowers, lemon, apricot."
+			},
+			"items": [
+				"Domaine du Vieux Lazaret Châteauneuf-du-Pape Blanc"
+			],
+			"sources": [
+				"research/menu-2026-11-22-pairing-wines.json (wines, Domaine du Vieux Lazaret: the blend; white Châteauneuf-du-Pape)",
+				"pages/brennans-sheets-2026-11-22.txt (Sheet 2)"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-story-vieux-lazaret",
+			"kind": "story",
+			"name": "Domaine du Vieux Lazaret, the old plague hospice",
+			"say": "vyuh lah-zah-RAY",
+			"explain": "Domaine du Vieux Lazaret is a family estate of Châteauneuf-du-Pape, in the Southern Rhône. The family bought its first vines in the village in 1748. The name recalls the old lazaret, a village hospice run by the Lazarists, where the sick were nursed and kept apart in the epidemics of the seventeenth and eighteenth centuries, the plague of 1720 among them. The family later used its buildings for the farm, and the estate has carried the name since 1915.\n\nIts white is about half Grenache Blanc, with Clairette, Bourboulenc and a little Roussanne, made almost entirely in steel or concrete tanks: white flowers, lemon and apricot, full bodied.\n\nAt Brennan's it is the third pour of the dinner tasting, with the Fish Bouillabaisse.",
+			"card": {
+				"front": "What was the old lazaret that gives Vieux Lazaret its name?",
+				"back": "A village hospice of Châteauneuf-du-Pape where the sick were nursed and kept apart in the plague years. The estate has carried the name since 1915."
+			},
+			"producer": {
+				"type": "farm",
+				"who": "Domaine du Vieux Lazaret, the Châteauneuf-du-Pape estate behind the dinner tasting's white",
+				"where": "Châteauneuf-du-Pape, Southern Rhône, France",
+				"founded": "1748, when the family bought its first vines in the village; the estate's name from 1915",
+				"history": "Domaine du Vieux Lazaret is a family estate of Châteauneuf-du-Pape, the village of the Southern Rhône whose appellation lies on the left bank of the river, on terraces of rolled pebbles with sand and limestone. The family bought its first vines in the village in 1748 and grew the estate by marriage and purchase.\n\nThe name recalls the old lazaret, a hospice run in the village by the Lazarists, where the sick were nursed and kept apart in the epidemics of the seventeenth and eighteenth centuries, the plague of 1720 among them. The family later used the buildings for the farm, and the estate has carried the name since 1915.\n\nWhite is a small part of Châteauneuf-du-Pape, about 7 percent of the vines. The estate's white is about half Grenache Blanc, with Clairette, Bourboulenc and a little Roussanne, made almost entirely in steel or concrete tanks: white flowers, lemon and apricot with a full-bodied texture, as our pairing sheet says. It is the third pour of the dinner tasting, with the Fish Bouillabaisse.",
+				"facts": [
+					"Domaine du Vieux Lazaret is a family estate of Châteauneuf-du-Pape, in the Southern Rhône.",
+					"The family bought its first vines in the village in 1748.",
+					"A lazaret was a hospice where the sick were nursed and kept apart; the village's was run by the Lazarists.",
+					"The estate has carried the name Domaine du Vieux Lazaret since 1915.",
+					"The white is about half Grenache Blanc, with Clairette, Bourboulenc and a little Roussanne; the shares move a little by vintage.",
+					"It is made almost entirely in steel or concrete tanks, not new oak.",
+					"White is about 7 percent of the vines of Châteauneuf-du-Pape, and Grenache Blanc its most planted white grape."
+				],
+				"notes": [
+					"Say vyuh lah-zah-RAY, shah-toh-NUF dew PAHP, klair-ET, boor-boo-LANK.",
+					"Name the estate, never a family member: the people behind it are the family, by role.",
+					"Say Grenache Blanc leads; give no shares and no year until the sommelier confirms the bottle open.",
+					"Guests know Châteauneuf-du-Pape as red: lead with that surprise."
+				],
+				"sayIt": "A white Châteauneuf-du-Pape from Domaine du Vieux Lazaret, named for the village's old plague hospice: white flowers, lemon and apricot.",
+				"askKitchen": [
+					"Which vintage of the Vieux Lazaret Blanc is open, and what is that year's blend?"
+				]
+			},
+			"items": [
+				"Domaine du Vieux Lazaret Châteauneuf-du-Pape Blanc"
+			],
+			"sources": [
+				"research/menu-2026-11-22-pairing-wines.json (wines, Domaine du Vieux Lazaret Châteauneuf-du-Pape Blanc)",
+				"pages/brennans-sheets-2026-11-22.txt (Sheet 2)"
+			]
+		}
+	],
+	"compare": [
+		{
+			"item": "Domaine Weinbach Sylvaner",
+			"entries": [
+				{
+					"app": "codex",
+					"ref": "Trimbach Riesling Réserve 2020",
+					"label": "The Trimbach Riesling on our list",
+					"same": "Both are dry Alsace whites of high acidity from old family houses, poured with fish and spice.",
+					"different": "The Weinbach is Sylvaner, rounder and greener, pear and herbs; the Trimbach is Riesling, sharper, citrus and stone."
+				}
+			]
+		},
+		{
+			"item": "Domaine du Vieux Lazaret Châteauneuf-du-Pape Blanc",
+			"entries": [
+				{
+					"app": "codex",
+					"ref": "Domaine de Trévallon Blanc Alpilles 2016",
+					"label": "The Trévallon white on our list",
+					"same": "Both are full, textured southern French whites with Grenache Blanc, Clairette and Roussanne in the blend.",
+					"different": "The Vieux Lazaret is Châteauneuf-du-Pape, Grenache Blanc led and made in tank; the Trévallon is Marsanne led, from the Alpilles."
+				}
+			]
+		}
+	]
+}
