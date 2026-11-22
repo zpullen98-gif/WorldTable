@@ -1,0 +1,166 @@
+{
+ "dish": "Endive Satsuma Salad",
+ "readOn": "2026-11-22",
+ "sheet": {
+  "line": "Endive Satsuma Salad: Cherry Vinaigrette, Roa[sted] Sunflower Seeds (cut at the page edge; read as Roasted Sunflower Seeds, asked of the manager in tg-menu)",
+  "section": "APPETIZERS, third"
+ },
+ "facts": [
+  {
+   "text": "The satsuma is a mandarin, Citrus unshiu, first reported in Japan more than 700 years ago (an origin in China is also argued) and named in the West for the old Satsuma province, now Kagoshima Prefecture; it was introduced to the West from the Satsuma region in 1878. It is usually seedless and peels easily.",
+   "sourceIds": [
+    "wikipedia-citrus-unshiu",
+    "ufifas-satsuma",
+    "lsureveille-satsuma"
+   ]
+  },
+  {
+   "text": "In Louisiana satsumas are more than three quarters of the citrus acreage, and Plaquemines Parish is the centre of production. They ripen in the fall: some from late September, later ones into late November or early December, and they sell into late December. Colour is not a sure sign of sweetness.",
+   "sourceIds": [
+    "lsuagcenter-fragrant-fall-citrus",
+    "lsuagcenter-citrus-growers",
+    "lsuagcenter-cold-snap"
+   ]
+  },
+  {
+   "text": "Belgian endive (witloof, the Flemish for white leaf) is chicory grown from roots forced in the dark, which keeps the leaves white, compact and only gently bitter; light turns them green and bitter. It was developed around Brussels in the 1830s (a popular legend says 1830; a gardener of the Brussels Botanical Garden is credited with the method in the winter of 1834 to 1835) and was sold in Brussels markets by 1846 or 1867, the sources differ. Curly endive is a different chicory; both are of the chicory family.",
+   "sourceIds": [
+    "wikipedia-belgian-endive",
+    "focusonbelgium-chicory",
+    "brusselstimes-witlof"
+   ]
+  },
+  {
+   "text": "The sunflower, Helianthus annuus, is native to North America, and its domestication is traced to eastern North America (a Mexican origin is also argued).",
+   "sourceIds": [
+    "pnas-sunflower-2011",
+    "si-sunflower-domestication"
+   ]
+  }
+ ],
+ "sayIt": [
+  {
+   "word": "satsuma",
+   "respell": "sat-SOO-muh"
+  },
+  {
+   "word": "endive",
+   "respell": "EN-dive, or ahn-DEEV"
+  },
+  {
+   "word": "witloof",
+   "respell": "WIT-lohf"
+  }
+ ],
+ "unsourced": [
+  "How every web page was read: through search result summaries only (WebFetch is refused on this network). Each source says what its summary supported. A refuter with page access should open the pages behind any line that goes on a card.",
+  "Whether the endive is Belgian or curly, whether the satsumas are local, what the cherry vinaigrette is made of and whether a word is lost at the cut page edge: not printed, asked of the chef and in tg-menu.",
+  "The names in the Belgian endive legend: left out."
+ ],
+ "sources": [
+  {
+   "id": "sheet-2026-11-22",
+   "title": "Brennan's sheets photographed on 22 November 2026, sheet 1, the Thanksgiving Day menu (Happy Thanksgiving from Brennan's, 3 Courses $80, choice of appetizer, entree and dessert, with Sides for the Table)",
+   "publisher": "The house's own menu sheet, transcribed in this repository",
+   "url": "tools/house/brennans/research/menu-2026-11-22-sheets.md; tools/house/brennans/pages/brennans-sheets-2026-11-22.txt",
+   "supports": "The dish name and its printed line, word for word. The sheet prints no method, recipe, portion, source of any ingredient, allergen marks or wine.",
+   "kind": "primary"
+  },
+  {
+   "id": "repo-pack",
+   "title": "The house pack as shipped at the November edition (3dcc4b5): the wine list, the bottle list, the zero proof drinks and the components already filed",
+   "publisher": "This repository",
+   "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+   "supports": "Every wine and drink named in the pairing, with its printed price and profile, and the components the dish shares with the rest of the menu.",
+   "kind": "secondary"
+  },
+  {
+   "id": "wikipedia-citrus-unshiu",
+   "title": "Citrus unshiu",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Citrus_unshiu",
+   "supports": "Satsuma Province, Kagoshima Prefecture, usually seedless, introduced to the West in 1878, two theories of origin.",
+   "kind": "secondary"
+  },
+  {
+   "id": "ufifas-satsuma",
+   "title": "The Satsuma Mandarin",
+   "publisher": "University of Florida IFAS Extension",
+   "url": "https://ask.ifas.ufl.edu/publication/CH116",
+   "supports": "May have originated in China; first reported in Japan more than 700 years ago.",
+   "kind": "primary"
+  },
+  {
+   "id": "lsureveille-satsuma",
+   "title": "Satsuma piece",
+   "publisher": "The Reveille (LSU student newspaper)",
+   "url": "https://lsureveille.com/?p=220607",
+   "supports": "Seedless and easy peeling.",
+   "kind": "secondary"
+  },
+  {
+   "id": "lsuagcenter-fragrant-fall-citrus",
+   "title": "Fragrant fall citrus",
+   "publisher": "LSU AgCenter",
+   "url": "https://www.lsuagcenter.com/articles/page1699555253008",
+   "supports": "Satsumas ripen from late September; later ones into late November or early December.",
+   "kind": "primary"
+  },
+  {
+   "id": "lsuagcenter-citrus-growers",
+   "title": "Citrus growers keep going despite weather, market setbacks",
+   "publisher": "LSU AgCenter",
+   "url": "https://www.lsuagcenter.com/profiles/jmorgan/articles/page1572527616701",
+   "supports": "Plaquemines Parish as the centre of Louisiana citrus; satsumas over three fourths of the acreage.",
+   "kind": "primary"
+  },
+  {
+   "id": "lsuagcenter-cold-snap",
+   "title": "Cold snap good for Louisiana citrus",
+   "publisher": "LSU AgCenter",
+   "url": "https://apps.lsuagcenter.com/news_archive/2014/December/headline_news/Cold-snap-good-for-Louisiana-citrus.htm",
+   "supports": "The selling season into late December.",
+   "kind": "primary"
+  },
+  {
+   "id": "wikipedia-belgian-endive",
+   "title": "Belgian endive",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Belgian_endive",
+   "supports": "Forced chicory, grown in the dark, witloof.",
+   "kind": "secondary"
+  },
+  {
+   "id": "focusonbelgium-chicory",
+   "title": "Chicory, a Belgian story",
+   "publisher": "Focus on Belgium",
+   "url": "https://focusonbelgium.be/en/node/7864",
+   "supports": "The 1830 legend, the Brussels Botanical Garden, markets by 1846.",
+   "kind": "secondary"
+  },
+  {
+   "id": "brusselstimes-witlof",
+   "title": "Hidden Belgium: Witlof",
+   "publisher": "The Brussels Times",
+   "url": "https://www.brusselstimes.com/1894898/hidden-belgium-witlof",
+   "supports": "Witloof as the Flemish word for white leaf; light turns it green and bitter.",
+   "kind": "secondary"
+  },
+  {
+   "id": "pnas-sunflower-2011",
+   "title": "A single domestication for cultivated sunflower in eastern North America (PNAS, 2011)",
+   "publisher": "PNAS, through PubMed Central",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3161615",
+   "supports": "Sunflower native to North America and domesticated in eastern North America.",
+   "kind": "primary"
+  },
+  {
+   "id": "si-sunflower-domestication",
+   "title": "The domestication of Helianthus annuus L. (sunflower)",
+   "publisher": "Smithsonian Research Online",
+   "url": "https://repository.si.edu/items/0fc8d1f8-3125-49cb-91fd-e7f9949da9c2",
+   "supports": "Domestication in eastern North America; archaeological seeds.",
+   "kind": "secondary"
+  }
+ ]
+}

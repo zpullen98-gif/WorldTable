@@ -1,0 +1,211 @@
+{
+ "dish": "Bay Scallop Crudo",
+ "readOn": "2026-11-22",
+ "sheet": {
+  "line": "Bay Scallop Crudo: Meyer Lemon, Black Tru[ffle], Radish (cut at the page edge; read as Black Truffle, asked in tg-menu)",
+  "section": "APPETIZERS, sixth"
+ },
+ "facts": [
+  {
+   "text": "Bay scallops are the small scallops of shallow estuaries and bays, about an inch across and roughly 50 to 90 to the pound, against sea scallops of about two inches from deeper water at 10 to 20 to the pound; bay scallops are the sweeter and more tender, sea scallops chewier. The sources disagree on the season.",
+   "sourceIds": [
+    "masterclass-bay-sea",
+    "tastingtable-bay-sea",
+    "atk-types-of-scallops"
+   ]
+  },
+  {
+   "text": "Under the FDA Food Code a scallop product made only of the shucked adductor muscle is exempt from parasite destruction by freezing, as oysters, clams and mussels are; most other fish served raw must be frozen first. The consumer advisory for raw animal foods still applies.",
+   "sourceIds": [
+    "fda-fish-guidance",
+    "cabq-parasite",
+    "wisconsin-rule"
+   ]
+  },
+  {
+   "text": "The Meyer lemon was collected near Peking (Beijing) in 1908 by Frank N. Meyer, a USDA plant explorer, and introduced to the United States as S.P.I. 23028. It is deep yellow with an orange tint when ripe, thin skinned, sweeter and less acidic than a common lemon. Long called a lemon and mandarin cross, it is now thought to be a cross of citron, mandarin and pummelo.",
+   "sourceIds": [
+    "wikipedia-meyer-lemon",
+    "ucr-meyer-lemon",
+    "wikipedia-frank-meyer"
+   ]
+  },
+  {
+   "text": "The black Perigord truffle, Tuber melanosporum, is a winter truffle, harvested from mid-November to mid-March (December to February in some Spanish studies), prized for its aroma; the brumale truffle grows in the same soils and is often confused with it.",
+   "sourceIds": [
+    "wikipedia-tuber-melanosporum",
+    "dordogne-truffe",
+    "france-fr-truffle"
+   ]
+  },
+  {
+   "text": "A radish's bite is made when it is cut or chewed: glucosinolates and the enzyme myrosinase, stored apart in the cells, meet and form isothiocyanates, the mustard oils of the mustard family (mustard, horseradish, wasabi).",
+   "sourceIds": [
+    "wikipedia-glucosinolate",
+    "plants-2022-radish",
+    "gizmodo-radish"
+   ]
+  }
+ ],
+ "sayIt": [
+  {
+   "word": "crudo",
+   "respell": "KROO-doh"
+  },
+  {
+   "word": "scallop",
+   "respell": "SKAL-up or SKOL-up"
+  },
+  {
+   "word": "Meyer",
+   "respell": "MY-er"
+  },
+  {
+   "word": "Perigord",
+   "respell": "peh-ree-GOR"
+  }
+ ],
+ "unsourced": [
+  "How every web page was read: through search result summaries only (WebFetch is refused on this network). Each source says what its summary supported. A refuter with page access should open the pages behind any line that goes on a card.",
+  "Which truffle the kitchen uses, fresh or preserved, the cut, the portion, where the scallops come from and how the Meyer lemon is used: not printed, asked of the chef.",
+  "Crudo as the Italian word for raw rests on the Tuna Crudo research of 15 November (menu-2026-11-15-tuna-crudo.json)."
+ ],
+ "sources": [
+  {
+   "id": "sheet-2026-11-22",
+   "title": "Brennan's sheets photographed on 22 November 2026, sheet 1, the Thanksgiving Day menu (Happy Thanksgiving from Brennan's, 3 Courses $80, choice of appetizer, entree and dessert, with Sides for the Table)",
+   "publisher": "The house's own menu sheet, transcribed in this repository",
+   "url": "tools/house/brennans/research/menu-2026-11-22-sheets.md; tools/house/brennans/pages/brennans-sheets-2026-11-22.txt",
+   "supports": "The dish name and its printed line, word for word. The sheet prints no method, recipe, portion, source of any ingredient, allergen marks or wine.",
+   "kind": "primary"
+  },
+  {
+   "id": "repo-pack",
+   "title": "The house pack as shipped at the November edition (3dcc4b5): the wine list, the bottle list, the zero proof drinks and the components already filed",
+   "publisher": "This repository",
+   "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+   "supports": "Every wine and drink named in the pairing, with its printed price and profile, and the components the dish shares with the rest of the menu.",
+   "kind": "secondary"
+  },
+  {
+   "id": "masterclass-bay-sea",
+   "title": "Bay Scallops vs Sea Scallops",
+   "publisher": "MasterClass",
+   "url": "https://www.masterclass.com/articles/bay-scallops-vs-sea-scallops",
+   "supports": "Size, habitat in shallow estuaries and bays, sweetness.",
+   "kind": "secondary"
+  },
+  {
+   "id": "tastingtable-bay-sea",
+   "title": "The Real Difference Between Sea Scallops And Bay Scallops",
+   "publisher": "Tasting Table",
+   "url": "https://tastingtable.com/842012/the-real-difference-between-sea-scallops-and-bay-scallops",
+   "supports": "Bay scallops sweeter and smaller; counts per pound.",
+   "kind": "secondary"
+  },
+  {
+   "id": "atk-types-of-scallops",
+   "title": "Types of scallops",
+   "publisher": "America's Test Kitchen",
+   "url": "https://www.americastestkitchen.com/lessons/articles/2375-types-of-scallops",
+   "supports": "Sea scallops chewier, bay scallops more tender.",
+   "kind": "secondary"
+  },
+  {
+   "id": "fda-fish-guidance",
+   "title": "Fish and Fishery Products Hazards and Controls Guidance; FDA Food Code",
+   "publisher": "US Food and Drug Administration",
+   "url": "https://www.fda.gov/food/food-code/summary-changes-fda-food-code-2013",
+   "supports": "Molluscan shellfish except scallops when the product is the shucked adductor muscle only; the parasite destruction exemption.",
+   "kind": "primary"
+  },
+  {
+   "id": "cabq-parasite",
+   "title": "Parasite Destruction for Food Service Establishments",
+   "publisher": "City of Albuquerque Environmental Health",
+   "url": "https://www.cabq.gov/environmentalhealth/documents/parasite-destruction-for-food-service-establishments.pdf",
+   "supports": "The adductor muscle exemption listed with oysters, clams and mussels.",
+   "kind": "primary"
+  },
+  {
+   "id": "wisconsin-rule",
+   "title": "Wisconsin administrative rule text (CR 17-074), the Food Code as adopted",
+   "publisher": "Wisconsin Legislature",
+   "url": "https://docs.legis.wisconsin.gov/code/register/2020/775b/register/final/cr_17_074_rule_text/cr_17_074_rule_text/_831",
+   "supports": "The same carve out, word for word.",
+   "kind": "primary"
+  },
+  {
+   "id": "wikipedia-meyer-lemon",
+   "title": "Meyer lemon",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Meyer_lemon",
+   "supports": "Frank N. Meyer, 1908, near Peking; sweeter, less acidic; the three species parentage.",
+   "kind": "secondary"
+  },
+  {
+   "id": "ucr-meyer-lemon",
+   "title": "Meyer lemon (CRC 3737)",
+   "publisher": "University of California Riverside Citrus Variety Collection",
+   "url": "https://citrusvariety.ucr.edu/crc3737",
+   "supports": "Introduced in 1908 as S.P.I. 23028 by Frank Nicholas Meyer.",
+   "kind": "primary"
+  },
+  {
+   "id": "wikipedia-frank-meyer",
+   "title": "Frank Nicholas Meyer",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Frank_Nicholas_Meyer",
+   "supports": "The USDA plant explorer (died 1918).",
+   "kind": "secondary"
+  },
+  {
+   "id": "wikipedia-tuber-melanosporum",
+   "title": "Tuber melanosporum",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Tuber_melanosporum",
+   "supports": "The black Perigord truffle, its aroma.",
+   "kind": "secondary"
+  },
+  {
+   "id": "dordogne-truffe",
+   "title": "La truffe du Perigord",
+   "publisher": "Dordogne Perigord Tourisme",
+   "url": "https://www.dordogne-perigord-tourisme.fr/sinspirer/une-destination-aux-multiples-facettes/gastronomie/truffe-perigord/",
+   "supports": "Harvested from mid-November to mid-March.",
+   "kind": "primary"
+  },
+  {
+   "id": "france-fr-truffle",
+   "title": "The black truffle of the Perigord",
+   "publisher": "France.fr",
+   "url": "https://www.france.fr/en/article/black-truffle-perigord/",
+   "supports": "The species as the Perigord black truffle.",
+   "kind": "secondary"
+  },
+  {
+   "id": "wikipedia-glucosinolate",
+   "title": "Glucosinolate",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Glucosinolate",
+   "supports": "Glucosinolates become isothiocyanates, mustard oils, through myrosinase.",
+   "kind": "secondary"
+  },
+  {
+   "id": "plants-2022-radish",
+   "title": "Radish pungency and glucosinolates (Plants, 2022)",
+   "publisher": "MDPI Plants, through PubMed Central",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8839410",
+   "supports": "Radish pungency from isothiocyanates; raphasatin.",
+   "kind": "primary"
+  },
+  {
+   "id": "gizmodo-radish",
+   "title": "No matter what you think, radishes aren't actually spicy",
+   "publisher": "Gizmodo",
+   "url": "https://gizmodo.com/no-matter-what-you-think-radishes-arent-actually-spicy-1708502131",
+   "supports": "The heat formed when the radish is cut or chewed; mustard, horseradish and wasabi.",
+   "kind": "secondary"
+  }
+ ]
+}

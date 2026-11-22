@@ -1,0 +1,94 @@
+{
+ "dish": "Titus’ BBQ Shrimp Stuffing",
+ "readOn": "2026-11-22",
+ "sheet": {
+  "line": "Titus' BBQ Shrimp Stuffing: 10 (a bare figure, read as $10; SIDES FOR THE TABLE, first)",
+  "section": "SIDES FOR THE TABLE"
+ },
+ "facts": [
+  {
+   "text": "New Orleans barbecue shrimp is never barbecued: the style was born at Pascal's Manale, Uptown, in 1954 by the family's account, head on shrimp in a pan sauce of butter, black pepper, Worcestershire, garlic and lemon.",
+   "sourceIds": [
+    "repo-nola-bbq-sauce",
+    "repo-verified-facts"
+   ]
+  },
+  {
+   "text": "Stuffing is cooked inside the bird and dressing in its own dish, by the usual distinction, though the two share ingredients and many use the words interchangeably; in the South dressing is the common word however it is cooked, and Southern dressing is often made with cornbread.",
+   "sourceIds": [
+    "dictionary-com-stuffing-dressing",
+    "msu-dressing-stuffing",
+    "chowhound-dressing-stuffing"
+   ]
+  }
+ ],
+ "sayIt": [
+  {
+   "word": "BBQ",
+   "respell": "barbecue"
+  }
+ ],
+ "unsourced": [
+  "How every web page was read: through search result summaries only (WebFetch is refused on this network). Each source says what its summary supported. A refuter with page access should open the pages behind any line that goes on a card.",
+  "What the stuffing is built on (bread, cornbread or rice), how the shrimp go in, whether the sauce is the house BBQ sauce: not printed, asked of the chef.",
+  "The person in the dish's name: not written about, by the living rule."
+ ],
+ "sources": [
+  {
+   "id": "sheet-2026-11-22",
+   "title": "Brennan's sheets photographed on 22 November 2026, sheet 1, the Thanksgiving Day menu (Happy Thanksgiving from Brennan's, 3 Courses $80, choice of appetizer, entree and dessert, with Sides for the Table)",
+   "publisher": "The house's own menu sheet, transcribed in this repository",
+   "url": "tools/house/brennans/research/menu-2026-11-22-sheets.md; tools/house/brennans/pages/brennans-sheets-2026-11-22.txt",
+   "supports": "The dish name and its printed line, word for word. The sheet prints no method, recipe, portion, source of any ingredient, allergen marks or wine.",
+   "kind": "primary"
+  },
+  {
+   "id": "repo-pack",
+   "title": "The house pack as shipped at the November edition (3dcc4b5): the wine list, the bottle list, the zero proof drinks and the components already filed",
+   "publisher": "This repository",
+   "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+   "supports": "Every wine and drink named in the pairing, with its printed price and profile, and the components the dish shares with the rest of the menu.",
+   "kind": "secondary"
+  },
+  {
+   "id": "repo-nola-bbq-sauce",
+   "title": "The New Orleans barbecue sauce component",
+   "publisher": "This repository",
+   "url": "tools/house/brennans/components/dishes.json (nola-bbq-sauce); research/components-dishes-2026-10-05.md (search 29)",
+   "supports": "Pascal's Manale, Uptown, 1954 by the family's account; butter, black pepper, Worcestershire, garlic and lemon.",
+   "kind": "secondary"
+  },
+  {
+   "id": "repo-verified-facts",
+   "title": "The first pass verified facts",
+   "publisher": "This repository",
+   "url": "tools/house/brennans/research/verified-facts.json",
+   "supports": "Butter, black pepper and Worcestershire as the Pascal's Manale style description.",
+   "kind": "secondary"
+  },
+  {
+   "id": "dictionary-com-stuffing-dressing",
+   "title": "Stuffing or dressing?",
+   "publisher": "Dictionary.com",
+   "url": "https://www.dictionary.com/e/stuffing-or-dressing/",
+   "supports": "Stuffing in the bird, dressing outside; regional usage.",
+   "kind": "primary"
+  },
+  {
+   "id": "msu-dressing-stuffing",
+   "title": "Dressing and stuffing: What's the difference?",
+   "publisher": "Michigan State University Extension",
+   "url": "https://www.canr.msu.edu/news/dressing_and_stuffing._whats_the_difference",
+   "supports": "The same distinction; 165 degrees internal for either.",
+   "kind": "primary"
+  },
+  {
+   "id": "chowhound-dressing-stuffing",
+   "title": "Dressing Vs Stuffing: The Differences You Need To Know",
+   "publisher": "Chowhound",
+   "url": "https://chowhound.com/1619675/dressing-vs-stuffing-difference",
+   "supports": "Southern usage; cornbread dressing.",
+   "kind": "secondary"
+  }
+ ]
+}

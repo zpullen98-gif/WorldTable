@@ -1,5 +1,5 @@
 {
-	"about": "The Thanksgiving Day dishes, chunk a: the four new appetizers, the two new desserts and the four sides for the table. Today it holds one worked example, Rockefeller Gratin, marked DRAFT in every reason; the dish author rewrites it and adds the other nine (Endive Satsuma Salad, Sweet Potato Agnolotti, Bay Scallop Crudo, Sweet Potato Pot de Crème, Chocolate and Orange Tart, Titus’ BBQ Shrimp Stuffing, Herbed Potato Purée, Haricots Verts, Cranberry Sauce).",
+	"about": "The Thanksgiving Day dishes, chunk a (dish author A, 22 November 2026): the four new appetizers (Rockefeller Gratin, Endive Satsuma Salad, Sweet Potato Agnolotti, Bay Scallop Crudo), the two new desserts (Sweet Potato Pot de Crème, Chocolate and Orange Tart), each with its pairing, bottles and asks, the four sides for the table (Titus’ BBQ Shrimp Stuffing, Herbed Potato Purée, Haricots Verts, Cranberry Sauce) with their asks, and one note each on the three dishes the house already serves (Turtle Soup, Seafood Gumbo, World Famous Bananas Foster). Research: research/menu-2026-11-22-<dish>.json. Components: components/_staging/tg-dishes-a.json.",
 	"entries": [
 		{
 			"target": "dish:+",
@@ -14,33 +14,33 @@
 				"description": "Oysters, Bacon, Creamed Spinach, Breadcrumbs",
 				"parts": {
 					"main": "oysters",
-					"technique": "baked as a gratin under breadcrumbs; learn the kitchen’s method at lineup",
+					"technique": "baked as a gratin under breadcrumbs; learn at lineup whether in the shell or in one dish",
 					"sauce": "creamed spinach with bacon",
 					"sides": "a toasted breadcrumb crust",
 					"taste": "briny oysters, smoky bacon and creamy spinach under a crisp crumb"
 				},
 				"lines": {
 					"s10": "Rockefeller Gratin: oysters baked with bacon and creamed spinach under toasted breadcrumbs, our Thanksgiving take on oysters Rockefeller.",
-					"s20": "Our Rockefeller Gratin takes the New Orleans classic, oysters Rockefeller, and bakes it as a gratin: oysters with smoky bacon and creamed spinach under a crisp breadcrumb crust. It is warm, rich and briny, one of the six appetizers on the Thanksgiving Day menu.",
-					"s45": "Oysters Rockefeller is a New Orleans classic: oysters baked under a rich green sauce. For Thanksgiving Day the kitchen turns that idea into a gratin, grah-TAN, which means baked until the top browns. The oysters go in with bacon for smoke and salt and creamed spinach for richness, and breadcrumbs on top bake into a crisp crust. So each bite has a briny oyster, creamy greens and crunch. It is one of the six appetizers on the three course Thanksgiving menu, and a warm, rich way to start. I would pour Champagne with it."
+					"s20": "The New Orleans classic, oysters Rockefeller, baked as a gratin: oysters with smoky bacon and creamed spinach under a crisp breadcrumb crust. Warm, rich and briny, it is one of six appetizers on the Thanksgiving Day menu.",
+					"s45": "Oysters Rockefeller was born in New Orleans, at Antoine’s in the French Quarter, around 1899 by most accounts. It is credited to Jules Alciatore, who baked local oysters under a rich green sauce and named the dish for John D. Rockefeller, the richest American of the day. For Thanksgiving Day our kitchen turns that idea into a gratin, grah-TAN, a dish baked until its top browns. The menu lists oysters, bacon, creamed spinach and breadcrumbs: briny, smoky, creamy and crisp in one warm bite. It suits a guest who wants a generous start, with our house Champagne."
 				},
 				"say": "Rockefeller: ROCK-uh-fell-er. Gratin: grah-TAN.",
 				"guest": "A warm appetizer for Thanksgiving Day: oysters baked with smoky bacon and creamed spinach until the breadcrumb top turns crisp and golden.",
 				"why": "The oyster appetizer of the Thanksgiving Day menu: a New Orleans classic served warm as a gratin. Offer it to a guest who wants a rich start.",
-				"origin": "Oysters Rockefeller is a New Orleans classic of oysters baked under a rich green sauce. This plate takes the idea into a gratin: the greens are creamed spinach, bacon brings smoke, and breadcrumbs bake into the crust.",
+				"origin": "Oysters Rockefeller was created at Antoine’s in New Orleans, around 1899 by most accounts, and named for John D. Rockefeller for its richness. This plate takes the idea into a gratin: creamed spinach for the green, bacon for smoke and breadcrumbs baked into the crust.",
 				"serviceNote": "The Thanksgiving Day sheet prints no allergen marks for any dish. It lists oysters, bacon, creamed spinach and breadcrumbs for this one; what else is in it is the kitchen’s to say. Ask the kitchen and confirm at lineup before answering any question about an allergy or a diet.",
 				"kept": [
 					{
 						"q": "Tell me about it.",
-						"a": "The Rockefeller Gratin is one of the six appetizers on the Thanksgiving Day menu, three courses for $80, served on Thanksgiving Day only.\n\nIts parent is oysters Rockefeller, the New Orleans classic of oysters baked under a rich green sauce. Here the kitchen builds the same flavors as a gratin: oysters, bacon and creamed spinach in one dish, with breadcrumbs over the top that bake into a crisp, golden crust. Gratin is the French word for that browned top.\n\nOn the palate it is briny from the oysters, smoky and salty from the bacon, creamy from the spinach and crunchy from the crumb. It is rich, so it suits a guest who wants a warm, generous start, and it leads well into the turkey or the beef.\n\nThe sheet lists four things and no method, so learn at lineup how the oysters are cooked, how many come in a portion and what dish it is served in."
+						"a": "Oysters Rockefeller is a New Orleans original, and this appetizer is the Thanksgiving Day kitchen’s gratin of it. The dish was created at Antoine’s in the French Quarter, around 1899 by most accounts, and is credited to Jules Alciatore, the founder’s son. It was named for John D. Rockefeller, the richest American of the day, for the richness of its green sauce. Antoine’s still keeps its recipe a secret and has long said it holds no spinach; most cooks since have used spinach.\n\nOurs, on the sheet, is oysters, bacon, creamed spinach and breadcrumbs, baked as a gratin. Gratin comes from the French gratter, to scrape, and names the browned crust on top. Expect briny oysters, smoky bacon, creamy spinach and a crisp crumb.\n\nThe sheet prints no method: learn at lineup whether it is baked in the shell or in one dish, how many oysters come in a portion and where they are from."
 					},
 					{
 						"q": "How do I sell it?",
-						"a": "Lead with the classic and the season: guests know oysters Rockefeller, and this is the Thanksgiving Day version, baked as a gratin. Offer it to the oyster lover and to the guest who wants something warm and rich before the turkey. Say: “It’s our take on oysters Rockefeller for the holiday: oysters baked with bacon and creamed spinach under a crisp crumb.” Then offer Champagne by the glass with it, since bubbles cut the cream and the bacon."
+						"a": "Lead with the story: guests know oysters Rockefeller, and it was born in the French Quarter, like our own house. Offer this to the oyster lover and to anyone who wants a warm, rich start before the turkey. Say: “It’s our Thanksgiving take on oysters Rockefeller: oysters baked with bacon and creamed spinach under a crisp crumb.” Then offer a glass of our house Champagne, whose bubbles cut the cream and the bacon."
 					},
 					{
 						"q": "What do guests ask?",
-						"a": "Asked: Is this oysters Rockefeller?\n\nAnswer: It is our Thanksgiving Day take on it. The classic is oysters baked under a rich green sauce; ours is a gratin of oysters, bacon and creamed spinach under breadcrumbs.\n\nAsked: Are the oysters raw?\n\nAnswer: No, the gratin is baked and comes to the table hot. How long it bakes and how the oysters are handled is the kitchen’s to say, so check at lineup before you promise anything more.\n\nAsked: Does it come with the three courses?\n\nAnswer: Yes. It is one of six appetizers to choose from on the $80 Thanksgiving Day menu."
+						"a": "Asked: Is this oysters Rockefeller?\n\nAnswer: It is our Thanksgiving Day gratin of it. The classic from Antoine’s is oysters on the half shell baked under a rich green sauce; ours bakes oysters with bacon and creamed spinach under breadcrumbs.\n\nAsked: Is there spinach in the original?\n\nAnswer: Antoine’s keeps its recipe secret and has long said there is none. Most versions since use spinach, and ours lists creamed spinach.\n\nAsked: Are the oysters raw?\n\nAnswer: No, the gratin is baked and comes to the table hot. How the oysters are handled is the kitchen’s to say, so check at lineup before you promise more."
 					},
 					{
 						"q": "What should I watch for?",
@@ -48,8 +48,8 @@
 					}
 				]
 			},
-			"reason": "DRAFT by the spec engineer, a worked example of the shape with only what the sheet prints and plain kitchen sense: its author rewrites every line from research before the merge. The Thanksgiving Day sheet prints the dish with its line and no price of its own: the menu’s $80 covers it, so it files with fixedPriceOn naming the menu and no price ask.",
-			"source": "page:brennans-sheets-2026-11-22.txt (APPETIZERS, second line)"
+			"reason": "The Thanksgiving Day sheet prints the dish with its line and no price of its own: the menu’s $80 covers it, so it files with fixedPriceOn naming the menu and no price ask. Every fact about the classic rests on the research file named in the source; what the sheet does not print is asked of the kitchen.",
+			"source": "page:brennans-sheets-2026-11-22.txt (APPETIZERS, second line); research/menu-2026-11-22-rockefeller-gratin.json"
 		},
 		{
 			"target": "dish:Rockefeller Gratin",
@@ -73,7 +73,7 @@
 				"zeroProof": "Oh! What It Seemed to Be",
 				"zeroProofWhy": "lemon and a silky texture lift the cream and the bacon without fighting the oyster."
 			},
-			"reason": "DRAFT by the spec engineer, a worked example of the shape with only what the sheet prints and plain kitchen sense: its author rewrites every line from research before the merge. The pairing for a dish the sheet prints with no wine, chosen from the house’s own list: bubbles and acid for cream, bacon and oysters.",
+			"reason": "The pairing for a dish the sheet prints with no wine: a reading of the house list, filed with a sommelier ask to confirm it before Thanksgiving Day service. Bubbles and acid for cream, bacon and oysters.",
 			"source": "the house wine list in the shipped pack (the house Champagne, $30.00 the glass; Famille Durand Sauvignon Blanc 2025, $14 the glass)"
 		},
 		{
@@ -101,7 +101,7 @@
 					"sayIt": "A half bottle of the Tribaut-Schloesser Champagne: bubbles for two with the appetizers."
 				}
 			},
-			"reason": "DRAFT by the spec engineer, a worked example of the shape with only what the sheet prints and plain kitchen sense: its author rewrites every line from research before the merge. The bottles offered with this dish by price: value under $100, sweet spot $100 to $250, celebration over $250, and a half bottle.",
+			"reason": "The bottles offered with this dish by price: value under $100, sweet spot $100 to $250, celebration over $250, and a half bottle, chosen from the house bottle list for the same reasons as the glass.",
 			"source": "the house bottle list in the shipped pack (Louis Michel Chablis 2022, $80; Droin Vaillons 2023, $175; Dauvissat Les Preuses 2015, $350; Tribaut-Schloesser Origine 375 ml, $50)"
 		},
 		{
@@ -114,7 +114,7 @@
 					"Rockefeller Gratin"
 				]
 			},
-			"reason": "DRAFT by the spec engineer, a worked example of the shape with only what the sheet prints and plain kitchen sense: its author rewrites every line from research before the merge. The sheet prints four ingredients and no method, portion or source; the technique part says so and the server describes the plate from what the kitchen confirms.",
+			"reason": "The sheet prints four ingredients and no method, portion or source; the technique part says so and the server describes the plate from what the kitchen confirms.",
 			"source": "page:brennans-sheets-2026-11-22.txt (APPETIZERS, second line)"
 		},
 		{
@@ -127,8 +127,938 @@
 					"Rockefeller Gratin"
 				]
 			},
-			"reason": "DRAFT by the spec engineer, a worked example of the shape with only what the sheet prints and plain kitchen sense: its author rewrites every line from research before the merge. The pairing and the tiers for a dish the sheet prints with no wine are the pack’s reading of the house list, confirmed by the sommelier before they are said at a table.",
+			"reason": "The pairing and the tiers for a dish the sheet prints with no wine are a reading of the house list, confirmed by the sommelier before they are said at a table.",
 			"source": "the house wine list in the shipped pack; page:brennans-sheets-2026-11-22.txt"
+		},
+		{
+			"target": "dish:+",
+			"op": "add",
+			"value": {
+				"name": "Endive Satsuma Salad",
+				"section": "Thanksgiving Day",
+				"meals": [
+					"Thanksgiving Day"
+				],
+				"fixedPriceOn": "Happy Thanksgiving from Brennan’s",
+				"description": "Cherry Vinaigrette, Roasted Sunflower Seeds",
+				"parts": {
+					"main": "endive and satsuma",
+					"technique": "a composed salad, dressed to order; learn the build at lineup",
+					"sauce": "cherry vinaigrette",
+					"sides": "roasted sunflower seeds",
+					"taste": "crisp, gently bitter leaves, sweet juicy citrus, a sweet and tart dressing and a toasty crunch"
+				},
+				"lines": {
+					"s10": "Endive Satsuma Salad: crisp endive and sweet satsuma in a cherry vinaigrette with roasted sunflower seeds, a light Thanksgiving start.",
+					"s20": "A bright, light appetizer: crisp, gently bitter endive with satsuma, the easy-peeling mandarin of a south Louisiana fall, in a cherry vinaigrette, with roasted sunflower seeds for crunch. The fresh choice among the six Thanksgiving appetizers.",
+					"s45": "This is the lightest of our six Thanksgiving appetizers. Endive is a leaf of the chicory family, pale, crisp and gently bitter. Satsuma is a mandarin first known in Japan and named for its old Satsuma province; today it is south Louisiana’s main citrus, sweet, usually seedless and ripe in the fall. The menu lists a cherry vinaigrette for sweet and tart fruit and roasted sunflower seeds for crunch, so each bite is bitter, juicy and toasty at once. It suits a guest saving room for the turkey, with a glass of the rosé Crémant."
+				},
+				"say": "Satsuma: sat-SOO-muh. Endive: EN-dive, or ahn-DEEV.",
+				"guest": "A crisp, bright start: pale, gently bitter leaves with sweet satsuma, a fruity dressing and a toasty crunch of seeds.",
+				"why": "The light appetizer of the Thanksgiving Day menu, with the citrus of a south Louisiana fall. Offer it to a guest saving room for the turkey.",
+				"origin": "Satsuma is a mandarin first known in Japan and named for its old Satsuma province; it is south Louisiana’s main citrus, grown above all in Plaquemines Parish and ripe in the fall. Endive is a chicory leaf, crisp and gently bitter.",
+				"serviceNote": "The Thanksgiving Day sheet prints no allergen marks for any dish. It lists endive, satsuma, a cherry vinaigrette and roasted sunflower seeds for this one; what else is in it is the kitchen’s to say. Ask the kitchen and confirm at lineup before answering any question about an allergy or a diet.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "The Endive Satsuma Salad is the lightest of the six Thanksgiving Day appetizers, and the one that tastes of a south Louisiana fall.\n\nSatsuma is a mandarin first recorded in Japan and named for the old Satsuma province. It is usually seedless and peels easily, and it is the main citrus of south Louisiana, where Plaquemines Parish grows most of the crop; the fruit ripens from late September into December. Endive is a leaf of the chicory family, pale, crisp and gently bitter. Belgian endive is grown in the dark from chicory roots, which keeps it white; the Flemish call it witloof, white leaf.\n\nThe sheet adds a cherry vinaigrette and roasted sunflower seeds: sweet and tart fruit against the bitter leaf, and crunch. Whether the endive is Belgian or curly, whether the satsumas are local, and what else is on the plate are the kitchen’s answers."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Offer it to the guest who wants something fresh before a rich holiday meal, or who is saving room for the turkey and the dessert. Satsumas are a Louisiana fall fruit, so the salad tastes of the season. Say: “It’s crisp endive with sweet satsuma, a cherry vinaigrette and roasted sunflower seeds: bright, light and very fall.” Suggest the rosé Crémant by the glass, whose red fruit meets the cherry."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: What is a satsuma?\n\nAnswer: A sweet, usually seedless mandarin that peels easily, first known in Japan and now the main citrus grown in south Louisiana. It is in season through the fall.\n\nAsked: Is endive bitter?\n\nAnswer: Gently. It is a chicory leaf, crisp and pale, with a light bitterness that the sweet satsuma and the cherry dressing soften.\n\nAsked: What is in the vinaigrette?\n\nAnswer: Cherry is what the sheet prints. The rest of the recipe is the kitchen’s, so ask before naming anything more."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "It is a Thanksgiving Day dish only. The photograph of the sheet cuts this line at the page edge: confirm at lineup that roasted sunflower seeds is the whole line. Do not call the satsumas local or name the endive until the kitchen does. Seeds and dressings raise questions: send each one to the kitchen. Allergens: read the service note and confirm at lineup."
+					}
+				]
+			},
+			"reason": "The Thanksgiving Day sheet prints the dish with its line and no price of its own: the menu’s $80 covers it, so it files with fixedPriceOn naming the menu and no price ask. Every fact about the classic rests on the research file named in the source; what the sheet does not print is asked of the kitchen. The line is cut at the page edge; the completed word (Roasted) is the spec’s reading, and tg-menu asks the manager to confirm it.",
+			"source": "page:brennans-sheets-2026-11-22.txt (APPETIZERS, third line); research/menu-2026-11-22-endive-satsuma-salad.json"
+		},
+		{
+			"target": "dish:Endive Satsuma Salad",
+			"field": "pairing",
+			"value": {
+				"wine": "Pierre Sparr Brut Rosé Crémant d’Alsace NV",
+				"why": "Red fruit meets the cherry, bubbles and acid keep the bitter leaf and the citrus bright, and the wine stays dry and light.",
+				"sayIt": "With the salad I’d pour the rosé Crémant: strawberry and red currant for the cherry, and bubbles to keep it light.",
+				"whyThisWine": "A salad of bitter leaves, sweet citrus and a fruit vinaigrette needs a wine with acid enough for the dressing and fruit of its own. The Crémant rosé is all Pinot Noir, dry, with strawberry and red currant that echo the cherry.",
+				"palate": "The vinaigrette’s acid would flatten a soft wine; the Crémant’s own acidity matches it, so the wine keeps its fruit. Its red berries pick up the cherry, the bubbles lift the bitter edge of the endive, and the satsuma’s sweetness makes the dry wine taste rounder. The roasted seeds find the bready note of a wine made the way Champagne is.",
+				"principles": [
+					"acid",
+					"bridge",
+					"weight"
+				],
+				"second": "C.H. Berres ‘Old Vines’ Riesling 2022",
+				"secondWhy": "For a still white: an off-dry Mosel Riesling, green apple and peach with racy acidity, keeps pace with the citrus and the sweet and tart dressing.",
+				"stepUp": "",
+				"serve": "Pour as the appetizers fire, well chilled, in a sparkling or white wine glass. Confirm at lineup that the glass list is poured as usual on Thanksgiving Day.",
+				"avoid": "Avoid oaky whites and big reds: vinaigrette makes oak taste bitter, and tannin clashes with the endive’s own bitterness.",
+				"zeroProof": "Personality",
+				"zeroProofWhy": "tart cherry juice and a zero proof sparkling rosé echo the cherry vinaigrette and stay light."
+			},
+			"reason": "The pairing for a dish the sheet prints with no wine: a reading of the house list, filed with a sommelier ask to confirm it before Thanksgiving Day service. Acid and red fruit for a bitter leaf, citrus and a cherry vinaigrette.",
+			"source": "the house wine list in the shipped pack (Pierre Sparr Brut Rosé Crémant d’Alsace, $18 the glass; C.H. Berres Old Vines Riesling 2022, $14 the glass)"
+		},
+		{
+			"target": "dish:Endive Satsuma Salad",
+			"op": "bottles",
+			"value": {
+				"value": {
+					"wine": "Stein ‘Weihwasser’ Riesling Feinherb 2023",
+					"why": "Acid and a touch of sweetness: a just off dry Mosel Riesling, lime and pear, for satsuma and a fruit dressing.",
+					"sayIt": "With the salad, the Stein Weihwasser: Mosel Riesling just off dry, lime and pear, bright with the citrus."
+				},
+				"classic": {
+					"wine": "J.J. Prüm ‘Wehlener Sonnenuhr’ Riesling Kabinett 2020",
+					"why": "Sweetness and acid in balance: a light, low alcohol Mosel Kabinett for bitter leaves, citrus and cherry.",
+					"sayIt": "For a bottle, the J.J. Prüm Wehlener Sonnenuhr Kabinett: light, lightly sweet Mosel Riesling, lovely with citrus."
+				},
+				"splurge": {
+					"wine": "F.E. Trimbach ‘Clos Sainte Hune’ Riesling 2007",
+					"why": "Acid and depth: bone dry Alsace Riesling with years in bottle, lime and stone, for bitter leaves and bright citrus.",
+					"sayIt": "For a celebration, Trimbach’s Clos Sainte Hune: dry Alsace Riesling with age, lime and stone, precise with the salad."
+				},
+				"half": {
+					"wine": "Bründlmayer ‘Heiligenstein’ Riesling 2022 (375 ml)",
+					"why": "Acid and fruit in a half bottle: dry Kamptal Riesling, lime and white peach, for two with the salad.",
+					"sayIt": "A half bottle of the Bründlmayer Heiligenstein: dry Austrian Riesling, lime and peach, bright with satsuma."
+				}
+			},
+			"reason": "The bottles offered with this dish by price: value under $100, sweet spot $100 to $250, celebration over $250, and a half bottle, chosen from the house bottle list for the same reasons as the glass.",
+			"source": "the house bottle list in the shipped pack (Stein Weihwasser 2023, $55; J.J. Prüm Wehlener Sonnenuhr Kabinett 2020, $135; Trimbach Clos Sainte Hune 2007, $390; Bründlmayer Heiligenstein 375 ml, $80)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "How is the Endive Satsuma Salad built: is the endive Belgian endive or curly endive, are the satsumas Louisiana fruit, what goes into the cherry vinaigrette (fresh, dried or preserved cherry), and is anything on the plate that the sheet does not print?",
+				"askWhom": "chef",
+				"items": [
+					"Endive Satsuma Salad"
+				]
+			},
+			"reason": "The sheet prints the name, a cherry vinaigrette and roasted sunflower seeds; endive names two different chicories and the satsumas’ origin is not printed, so the server learns both before saying them.",
+			"source": "page:brennans-sheets-2026-11-22.txt (APPETIZERS, third line)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Confirm the first pick for the Endive Satsuma Salad (the Pierre Sparr Brut Rosé Crémant d’Alsace, with the C.H. Berres Old Vines Riesling second) and the bottle tiers (Stein Weihwasser, J.J. Prüm Wehlener Sonnenuhr Kabinett, Trimbach Clos Sainte Hune, the Bründlmayer Heiligenstein half) before Thanksgiving Day service.",
+				"askWhom": "sommelier",
+				"items": [
+					"Endive Satsuma Salad"
+				]
+			},
+			"reason": "The pairing and the tiers are a reading of the house list, confirmed by the sommelier before they are said at a table.",
+			"source": "the house wine list in the shipped pack; page:brennans-sheets-2026-11-22.txt"
+		},
+		{
+			"target": "dish:+",
+			"op": "add",
+			"value": {
+				"name": "Sweet Potato Agnolotti",
+				"section": "Thanksgiving Day",
+				"meals": [
+					"Thanksgiving Day"
+				],
+				"fixedPriceOn": "Happy Thanksgiving from Brennan’s",
+				"description": "Candied Pecans, Brown Butter, Chèvre",
+				"parts": {
+					"main": "agnolotti, folded filled pasta, with sweet potato as the dish’s name says",
+					"technique": "pasta folded over its filling and sealed, then finished in brown butter; learn the filling and the build at lineup",
+					"sauce": "brown butter, cooked until nutty and golden, with tangy chèvre",
+					"sides": "candied pecans, for sweet crunch",
+					"taste": "tender pasta, sweet and earthy sweet potato, nutty butter, tangy goat cheese and a candied crunch"
+				},
+				"lines": {
+					"s10": "Sweet Potato Agnolotti: filled pasta with sweet potato, brown butter, candied pecans and chèvre, the holiday’s flavors in an Italian shape.",
+					"s20": "Agnolotti are the folded, filled pasta of Piedmont; ours carry sweet potato, a Louisiana harvest, and come in brown butter with candied pecans and tangy chèvre, goat cheese. Sweet, nutty and savory, it is the pasta among the six Thanksgiving appetizers.",
+					"s45": "Agnolotti, ah-nyoh-LOT-tee, are a filled pasta of Piedmont in northern Italy: one sheet of pasta folded over its filling and sealed. For Thanksgiving Day the kitchen fills them, as the name says, with sweet potato, a crop Louisiana has long grown and sold as yams. The menu lists brown butter, cooked until nutty, candied pecans for sweet crunch and chèvre, a tangy goat cheese that balances the sweetness. It eats as a rich, savory pasta that tastes of the holiday table, and it suits a guest who loves pasta. A glass of the Gainey Chardonnay meets the butter."
+				},
+				"say": "Agnolotti: ah-nyoh-LOT-tee. Chèvre: SHEV-ruh.",
+				"guest": "Tender filled pasta for the holiday: sweet potato inside, nutty butter over it, tangy goat cheese and a candied pecan crunch.",
+				"why": "The pasta of the Thanksgiving Day menu: sweet potato and pecans, two Southern harvests, in a Piedmontese shape. Offer it to a guest who loves pasta and the flavors of the holiday.",
+				"origin": "Agnolotti are a filled pasta of Piedmont in northwest Italy, made from one sheet folded over its filling. Sweet potatoes are a major Louisiana crop and pecans grow across the South: this plate puts the holiday’s sweet potato and pecans inside an Italian shape.",
+				"serviceNote": "The Thanksgiving Day sheet prints no allergen marks for any dish. It lists sweet potato agnolotti with candied pecans, brown butter and chèvre for this one; what else is in it is the kitchen’s to say. Ask the kitchen and confirm at lineup before answering any question about an allergy or a diet.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "Sweet Potato Agnolotti brings two Southern harvests to an Italian pasta. Agnolotti are a filled pasta of Piedmont: where ravioli are two pieces of pasta sealed around a filling, agnolotti are one piece folded over it. The Agnolotti del Plin on our fall menu is the small pinched kind; this one is named for its sweet potato.\n\nLouisiana has grown sweet potatoes for generations and sells them as yams, a marketing name since the 1930s; botanically a sweet potato is no yam at all. The Beauregard, an orange-fleshed variety released by the LSU AgCenter in 1987, became an industry standard.\n\nThe sheet adds candied pecans, brown butter and chèvre, French for goat and here goat cheese, tangy against the sweet filling. It prints no filling recipe, so learn at lineup what is in the pasta with the sweet potato and where the chèvre sits."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Sell it as Thanksgiving in a pasta: sweet potato and pecans, the flavors of the holiday table, in a tender Italian shape. Offer it to the guest who loves pasta, or who wants a rich, comforting start. Say: “It’s sweet potato agnolotti in brown butter with candied pecans and goat cheese: the holiday in a pasta.” With it, offer a glass of the Gainey Chardonnay, creamy enough for the brown butter."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: What are agnolotti?\n\nAnswer: A filled pasta from Piedmont in northern Italy, made by folding one sheet of pasta over the filling. Ours is filled, as the name says, with sweet potato.\n\nAsked: Is it sweet?\n\nAnswer: Gently. Sweet potato and candied pecans bring sweetness, and the brown butter and the tangy goat cheese balance it, so it eats as a savory pasta.\n\nAsked: What is chèvre?\n\nAnswer: Goat cheese: chèvre is the French word for goat. Fresh chèvre is soft and tangy."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "It is a Thanksgiving Day dish only. The sheet prints no filling recipe, so do not name what is mixed with the sweet potato until the kitchen tells you. Candied pecans, butter and cheese all raise questions: send every one to the kitchen before you answer. Do not confuse it with the Agnolotti del Plin of the fall menu. Allergens: read the service note and confirm at lineup."
+					}
+				]
+			},
+			"reason": "The Thanksgiving Day sheet prints the dish with its line and no price of its own: the menu’s $80 covers it, so it files with fixedPriceOn naming the menu and no price ask. Every fact about the classic rests on the research file named in the source; what the sheet does not print is asked of the kitchen.",
+			"source": "page:brennans-sheets-2026-11-22.txt (APPETIZERS, fifth line); research/menu-2026-11-22-sweet-potato-agnolotti.json"
+		},
+		{
+			"target": "dish:Sweet Potato Agnolotti",
+			"field": "pairing",
+			"value": {
+				"wine": "Gainey Estate Vineyards Chardonnay 2023",
+				"why": "A creamy, fresh Chardonnay matches brown butter and sweet potato in weight, and its acidity keeps the goat cheese and the candied pecans bright.",
+				"sayIt": "With the agnolotti I’d pour the Gainey Chardonnay: creamy like the brown butter, fresh enough for the goat cheese.",
+				"whyThisWine": "Brown butter, sweet potato and pecans are rich, round and nutty, and a lean white would vanish beside them. The Gainey is creamy, with lemon curd and baked apple, and the ocean-cooled Sta. Rita Hills keep it bright.",
+				"palate": "The Chardonnay’s creamy texture meets the brown butter, and its baked apple note sits with the sweet potato. Its bright acidity cuts the fat and lifts the tang of the chèvre, so the pasta never feels heavy. The candied pecans’ toasted sugar finds the wine’s round, ripe fruit, and the finish stays clean.",
+				"principles": [
+					"weight",
+					"fat",
+					"bridge"
+				],
+				"second": "Damien Martin Bourgogne Pinot Noir 2023",
+				"secondWhy": "For a red: a light Burgundy Pinot Noir, red fruit and gentle tannin, earthy enough for sweet potato and soft beside the cheese.",
+				"stepUp": "",
+				"serve": "Pour as the appetizers fire, the Chardonnay cool rather than icy so its creamy texture shows.",
+				"avoid": "Avoid tannic reds and very lean whites: tannin turns bitter against sweet potato, and a thin white tastes sour beside brown butter.",
+				"zeroProof": "Personality",
+				"zeroProofWhy": "a zero proof sparkling rosé with tart cherry cuts the brown butter and meets the goat cheese’s tang."
+			},
+			"reason": "The pairing for a dish the sheet prints with no wine: a reading of the house list, filed with a sommelier ask to confirm it before Thanksgiving Day service. Weight and fat: a creamy, fresh white for brown butter, sweet potato and goat cheese.",
+			"source": "the house wine list in the shipped pack (Gainey Estate Vineyards Chardonnay 2023, $17 the glass; Damien Martin Bourgogne Pinot Noir 2023, $18.00 the glass)"
+		},
+		{
+			"target": "dish:Sweet Potato Agnolotti",
+			"op": "bottles",
+			"value": {
+				"value": {
+					"wine": "Sandhi Chardonnay Sta. Rita Hills 2021",
+					"why": "Weight and acid: cool climate Chardonnay from the same hills as our glass, lemon and hazelnut, fresh but creamy for chèvre.",
+					"sayIt": "With the agnolotti, the Sandhi Chardonnay: Sta. Rita Hills, a little hazelnut, creamy and bright with brown butter."
+				},
+				"classic": {
+					"wine": "Chateau Montelena Chardonnay Napa Valley 2023",
+					"why": "Balance and freshness: restrained Napa Chardonnay, pear and a little toast, bright enough for butter, pecans and goat cheese.",
+					"sayIt": "For a bottle, the Chateau Montelena Chardonnay: balanced Napa Chardonnay, pear and toast, fresh with the pasta."
+				},
+				"splurge": {
+					"wine": "Kongsgaard Chardonnay Napa Valley 2016",
+					"why": "Richness and age: a full, layered Napa Chardonnay with years in bottle, hazelnut and honey for brown butter and pecans.",
+					"sayIt": "For a celebration, the Kongsgaard Chardonnay: rich, layered Napa Chardonnay with age, nutty like the brown butter."
+				},
+				"half": {
+					"wine": "Chalk Hill Chardonnay Sonoma County 2021 (375 ml)",
+					"why": "Creamy Chardonnay in a half bottle: ripe pear, baked apple and a round texture for brown butter and sweet potato.",
+					"sayIt": "A half bottle of the Chalk Hill Chardonnay: creamy Sonoma Chardonnay for two with the pasta."
+				}
+			},
+			"reason": "The bottles offered with this dish by price: value under $100, sweet spot $100 to $250, celebration over $250, and a half bottle, chosen from the house bottle list for the same reasons as the glass.",
+			"source": "the house bottle list in the shipped pack (Sandhi Chardonnay 2021, $75; Chateau Montelena Chardonnay 2023, $175; Kongsgaard Chardonnay 2016, $280; Chalk Hill Chardonnay 375 ml, $30)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "How is the Sweet Potato Agnolotti built: what is in the filling with the sweet potato, is the pasta made in house, is the chèvre in the filling or on top, and how many agnolotti come in a portion? The Thanksgiving Day sheet prints candied pecans, brown butter and chèvre and no recipe.",
+				"askWhom": "chef",
+				"items": [
+					"Sweet Potato Agnolotti"
+				]
+			},
+			"reason": "The sheet prints three garnishes and no filling recipe; the record names sweet potato only because the dish’s name does.",
+			"source": "page:brennans-sheets-2026-11-22.txt (APPETIZERS, fifth line)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Confirm the first pick for the Sweet Potato Agnolotti (the Gainey Estate Vineyards Chardonnay, with the Damien Martin Bourgogne Pinot Noir second) and the bottle tiers (Sandhi, Chateau Montelena, Kongsgaard, the Chalk Hill half) before Thanksgiving Day service.",
+				"askWhom": "sommelier",
+				"items": [
+					"Sweet Potato Agnolotti"
+				]
+			},
+			"reason": "The pairing and the tiers are a reading of the house list, confirmed by the sommelier before they are said at a table.",
+			"source": "the house wine list in the shipped pack; page:brennans-sheets-2026-11-22.txt"
+		},
+		{
+			"target": "dish:+",
+			"op": "add",
+			"value": {
+				"name": "Bay Scallop Crudo",
+				"section": "Thanksgiving Day",
+				"meals": [
+					"Thanksgiving Day"
+				],
+				"fixedPriceOn": "Happy Thanksgiving from Brennan’s",
+				"description": "Meyer Lemon, Black Truffle, Radish",
+				"parts": {
+					"main": "bay scallops, served raw",
+					"technique": "raw, dressed to order and never cooked; learn the cut and the portion at lineup",
+					"sauce": "Meyer lemon, sweeter and less sharp than a common lemon",
+					"sides": "black truffle and crisp radish",
+					"taste": "cool, sweet scallop, bright citrus, earthy truffle and a crisp, peppery radish"
+				},
+				"lines": {
+					"s10": "Bay Scallop Crudo: raw, sweet bay scallops with Meyer lemon, black truffle and crisp radish, the cool, bright Thanksgiving starter.",
+					"s20": "Crudo means raw: small, sweet bay scallops dressed with Meyer lemon, sweeter and softer than a common lemon, with earthy black truffle and peppery radish. The coolest, lightest start among the six Thanksgiving appetizers.",
+					"s45": "Crudo, KROO-doh, is Italian for raw, and these bay scallops are served raw. Bay scallops are the small ones, about an inch across, sweeter and more tender than sea scallops. The menu lists Meyer lemon, a sweeter, less sharp lemon, black truffle for an earthy, savory depth, and radish for a cool, peppery crunch. Nothing is cooked, so the scallop’s sweetness leads and the citrus keeps it bright. It suits a guest who loves oysters or crudo and wants a light start, with a glass of the Albariño."
+				},
+				"say": "Bay scallop crudo: bay SKAL-up KROO-doh (SKOL-up is heard too). Meyer: MY-er.",
+				"guest": "Our raw starter for the holiday: small, sweet bay scallops brightened with a gentle citrus, earthy truffle and a peppery crunch.",
+				"why": "The raw appetizer of the Thanksgiving Day menu: light, cool and bright. Offer it to a guest who loves crudo or oysters, with the raw food advisory.",
+				"origin": "Crudo is the Italian word for raw. Bay scallops are the small scallops of shallow bays, sweeter and more tender than sea scallops; the Meyer lemon came to America from China in 1908, and black truffle usually means the winter truffle of the Périgord.",
+				"serviceNote": "The Thanksgiving Day sheet prints no allergen marks for any dish. It lists raw bay scallops, Meyer lemon, black truffle and radish for this one, and the scallops are served raw: give the consumer advisory the house uses for raw food; what else is in it is the kitchen’s to say. Ask the kitchen and confirm at lineup before answering any question about an allergy or a diet.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "Bay Scallop Crudo is the raw dish among the six appetizers, and the coolest, brightest start on the menu. Crudo is the Italian word for raw.\n\nBay scallops are the small scallops of shallow bays and estuaries, about an inch across and fifty or more to the pound, sweeter and more tender than the larger sea scallops. The Meyer lemon is a citrus cross that a USDA plant explorer, Frank Meyer, sent home from near Beijing in 1908: deep yellow, thin skinned, sweeter and less sharp than a common lemon. The black truffle of the Périgord, Tuber melanosporum, is a winter truffle, dug from mid-November to mid-March.\n\nThe sheet prints radish too, crisp and peppery. It prints no cut, portion or truffle species: whether the truffle is fresh or preserved, and where the scallops come from, are the kitchen’s answers."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Offer it to the guest who orders oysters or crudo, or who wants a light start before a big meal. Lead with the ingredients, since they read as a celebration: sweet bay scallops, Meyer lemon and black truffle. Say: “It’s raw bay scallops, small and sweet, with Meyer lemon, black truffle and crisp radish: cool and bright.” Then suggest the Albariño by the glass, saline and lemony with the scallops."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: Is it raw?\n\nAnswer: Yes. Crudo means raw, and the scallops are served raw, dressed and never cooked. Give the raw food advisory the house uses before the order goes in.\n\nAsked: What is the difference between bay and sea scallops?\n\nAnswer: Bay scallops are the small ones from shallow bays, about an inch across, sweeter and more tender. Sea scallops are larger and firmer.\n\nAsked: What is a Meyer lemon?\n\nAnswer: A sweeter, less acidic lemon with a thin, deep yellow skin, brought to America from China in 1908."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "It is a Thanksgiving Day dish only, and it is raw: give the raw food advisory every time. The photograph cuts this line at the page edge: confirm at lineup that black truffle and radish complete it. Do not call the truffle fresh, the scallops local or the portion a number until the kitchen does. Shellfish questions go to the kitchen. Allergens: read the service note and confirm at lineup."
+					}
+				]
+			},
+			"reason": "The Thanksgiving Day sheet prints the dish with its line and no price of its own: the menu’s $80 covers it, so it files with fixedPriceOn naming the menu and no price ask. Every fact about the classic rests on the research file named in the source; what the sheet does not print is asked of the kitchen. The line is cut at the page edge; the completed word (Truffle) is the spec’s reading, and tg-menu asks the manager to confirm it.",
+			"source": "page:brennans-sheets-2026-11-22.txt (APPETIZERS, sixth line); research/menu-2026-11-22-bay-scallop-crudo.json"
+		},
+		{
+			"target": "dish:Bay Scallop Crudo",
+			"field": "pairing",
+			"value": {
+				"wine": "Pazo das Bruxas Albariño 2025",
+				"why": "A saline, lemony white with no oak meets raw shellfish and citrus, and stays light enough for the scallop’s sweetness.",
+				"sayIt": "With the crudo I’d pour the Albariño: lemon and a salty, sea spray snap, made for raw shellfish.",
+				"whyThisWine": "Raw scallops are sweet and delicate, and Meyer lemon brings acid, so the wine must be crisp and unoaked or it buries them. The Pazo das Bruxas is coastal Galician Albariño: lemon, white peach and a saline snap.",
+				"palate": "The wine’s lemon and the Meyer lemon meet, so neither tastes sharp, and its saline edge makes the scallop taste sweeter. Its acidity refreshes after the truffle’s earthy richness, the white peach rounds the radish’s pepper, and with no oak the finish stays as clean and cool as the dish.",
+				"principles": [
+					"acid",
+					"salt",
+					"bridge"
+				],
+				"second": "Brennan’s Essential by Piper-Heidsieck Extra Brut NV",
+				"secondWhy": "For bubbles: our very dry house Champagne, chalky and fine, is a classic with raw shellfish and lifts the earthy truffle.",
+				"stepUp": "",
+				"serve": "Pour as the appetizers fire, well chilled, in a white wine glass.",
+				"avoid": "Avoid oaked whites and reds: oak and tannin bury a raw scallop and turn metallic with shellfish and citrus.",
+				"zeroProof": "Oh! What It Seemed to Be",
+				"zeroProofWhy": "lemon and a silky texture meet the Meyer lemon and stay gentle with the raw scallop."
+			},
+			"reason": "The pairing for a dish the sheet prints with no wine: a reading of the house list, filed with a sommelier ask to confirm it before Thanksgiving Day service. Acid and salt: a crisp, saline, unoaked white for raw shellfish and citrus.",
+			"source": "the house wine list in the shipped pack (Pazo das Bruxas Albariño 2025, $16 the glass; the house Champagne, $30.00 the glass)"
+		},
+		{
+			"target": "dish:Bay Scallop Crudo",
+			"op": "bottles",
+			"value": {
+				"value": {
+					"wine": "Domaine de l’Écu ‘Orthogneiss’ Muscadet Sèvre-et-Maine 2022",
+					"why": "Salt and acid: bone dry Muscadet, lemon and crushed stone with a salty depth, a classic with raw shellfish.",
+					"sayIt": "With the crudo, the Domaine de l’Écu Muscadet: lemon, stone and salt, made for shellfish."
+				},
+				"classic": {
+					"wine": "Do Ferreiro ‘Cepas Vellas’ Albariño Rías Baixas 2018",
+					"why": "Depth and salt: very old vine Albariño with years in bottle, deeper than our glass, still saline beside scallop and truffle.",
+					"sayIt": "For a bottle, Do Ferreiro’s Cepas Vellas: old vine Albariño, deeper than the glass, still salty and bright."
+				},
+				"splurge": {
+					"wine": "Krug ‘Grande Cuvée 170th Edition’ Brut NV",
+					"why": "Depth and bubbles: a layered Champagne of many years, toasted nuts and citrus peel, for black truffle and a raw scallop.",
+					"sayIt": "For a celebration, Krug Grande Cuvée: deep, toasty Champagne, beautiful with truffle and a raw scallop."
+				},
+				"half": {
+					"wine": "Domaine Louis Michel ‘Montmains’ Chablis Premier Cru 2023 (375 ml)",
+					"why": "Chalk and acid in a half bottle: unoaked Premier Cru Chablis, lemon and oyster shell, for two with raw scallops.",
+					"sayIt": "A half bottle of the Louis Michel Montmains Chablis: lean, chalky and lemony with the crudo."
+				}
+			},
+			"reason": "The bottles offered with this dish by price: value under $100, sweet spot $100 to $250, celebration over $250, and a half bottle, chosen from the house bottle list for the same reasons as the glass.",
+			"source": "the house bottle list in the shipped pack (Domaine de l’Écu Orthogneiss 2022, $70; Do Ferreiro Cepas Vellas 2018, $170; Krug Grande Cuvée 170th Edition, $615; Louis Michel Montmains 375 ml, $65)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "How is the Bay Scallop Crudo built: where are the bay scallops from, are they sliced or whole, how many in a portion, which truffle is it (fresh black winter truffle, another truffle, or a preserved truffle product), and how is the Meyer lemon used (juice, zest, segments)? What raw food advisory wording does the house want said?",
+				"askWhom": "chef",
+				"items": [
+					"Bay Scallop Crudo"
+				]
+			},
+			"reason": "The sheet prints three garnishes and no source, cut or truffle; a raw dish needs the house’s own advisory wording.",
+			"source": "page:brennans-sheets-2026-11-22.txt (APPETIZERS, sixth line)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Confirm the first pick for the Bay Scallop Crudo (the Pazo das Bruxas Albariño, with the house Champagne second) and the bottle tiers (Domaine de l’Écu Orthogneiss, Do Ferreiro Cepas Vellas, Krug Grande Cuvée, the Louis Michel Montmains half) before Thanksgiving Day service.",
+				"askWhom": "sommelier",
+				"items": [
+					"Bay Scallop Crudo"
+				]
+			},
+			"reason": "The pairing and the tiers are a reading of the house list, confirmed by the sommelier before they are said at a table.",
+			"source": "the house wine list in the shipped pack; page:brennans-sheets-2026-11-22.txt"
+		},
+		{
+			"target": "dish:+",
+			"op": "add",
+			"value": {
+				"name": "Sweet Potato Pot de Crème",
+				"section": "Thanksgiving Day",
+				"meals": [
+					"Thanksgiving Day"
+				],
+				"fixedPriceOn": "Happy Thanksgiving from Brennan’s",
+				"description": "Miso, Cinnamon, Marshmallow Fluff",
+				"parts": {
+					"main": "a pot de crème, a custard set in its own small pot, of sweet potato",
+					"technique": "a custard set in its pot; the classic is baked gently in a water bath; learn the kitchen’s method at lineup",
+					"sauce": "",
+					"sides": "marshmallow fluff, with miso and cinnamon in the dessert",
+					"taste": "creamy, sweet and earthy, with a savory edge of miso, warm cinnamon and soft, sweet marshmallow"
+				},
+				"lines": {
+					"s10": "Sweet Potato Pot de Crème: silky sweet potato custard with miso, cinnamon and marshmallow fluff, Thanksgiving’s casserole as a French dessert.",
+					"s20": "Pot de crème is French for pot of cream, a silky custard set in its own little pot. Ours is sweet potato, warmed with cinnamon, given a savory edge with miso and paired, as in the holiday casserole, with marshmallow fluff.",
+					"s45": "Pot de crème, poh duh KREM, is French for pot of cream: a silky custard set and served in its own small pot. For Thanksgiving Day ours is sweet potato. The menu lists cinnamon for warmth, miso, the Japanese fermented soybean paste, for a little salt and savory depth, the way salted caramel works, and marshmallow fluff, a nod to the sweet potato casserole that a marshmallow company’s recipe booklet first printed in 1917. Creamy, sweet and a little surprising, it suits a guest who wants a lighter dessert."
+				},
+				"say": "Pot de crème: poh duh KREM.",
+				"guest": "Our holiday dessert in a little pot: a silky sweet potato custard, warm with cinnamon, with a savory hint of miso and soft marshmallow.",
+				"why": "The Thanksgiving Day dessert that recalls the sweet potato casserole: offer it to a guest who wants something creamy, not too heavy, and a little surprising.",
+				"origin": "Pot de crème is French for pot of cream: a custard set in the small pot it is served in. Marshmallow on sweet potatoes goes back to a 1917 recipe booklet from the Angelus Marshmallow company, and became a Thanksgiving habit.",
+				"serviceNote": "The Thanksgiving Day sheet prints no allergen marks for any dish. It lists sweet potato, miso, cinnamon and marshmallow fluff for this one; what else is in it is the kitchen’s to say. Ask the kitchen and confirm at lineup before answering any question about an allergy or a diet.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "The Sweet Potato Pot de Crème is the Thanksgiving casserole reimagined as a French custard. Pot de crème means pot of cream: a loose custard, baked gently, often in a water bath, and served in the little pot it set in.\n\nThe sweet potato and marshmallow pairing is an American one. The first documented recipe for sweet potatoes baked under marshmallows appeared in 1917, in a booklet the Angelus Marshmallow company commissioned to sell more marshmallows, and the habit grew into a holiday classic. Marshmallow Fluff, the name the sheet prints, is the marshmallow creme still made in Lynn, Massachusetts.\n\nThe sheet adds miso, the Japanese fermented soybean paste, which pastry cooks use for salt and savory depth against sugar, and cinnamon for warmth. How the miso is used, whether the fluff is the jarred brand or made in house, and whether it is toasted are the kitchen’s answers."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Sell it as the holiday’s sweet potato casserole made into a silky French custard: guests smile at the marshmallow. Offer it to the guest who wants dessert but not a heavy one. Say: “It’s a silky sweet potato custard with cinnamon, a touch of miso and marshmallow fluff: Thanksgiving in a little pot.” Then offer the Dr. Hermann Auslese, a sweet Mosel Riesling in a half bottle, whose honey and apricot suit the sweet potato."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: What is a pot de crème?\n\nAnswer: French for pot of cream: a silky custard set in the small pot it is served in. Ours is made with sweet potato.\n\nAsked: Miso in a dessert?\n\nAnswer: Yes. Miso is a Japanese fermented soybean paste; a little brings salt and savory depth, the way salted caramel works, so the sweetness tastes rounder.\n\nAsked: Is that marshmallow on top?\n\nAnswer: The sheet prints marshmallow fluff, a nod to the sweet potato casserole. How it is finished is the kitchen’s to say, so check at lineup."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "It is a Thanksgiving Day dish only. Miso is made from soybeans, so any soy question goes to the kitchen, as do questions about eggs, dairy and what is in the marshmallow. Do not say how the custard is set or whether the fluff is made in house until the kitchen tells you. Allergens: read the service note and confirm at lineup."
+					}
+				]
+			},
+			"reason": "The Thanksgiving Day sheet prints the dish with its line and no price of its own: the menu’s $80 covers it, so it files with fixedPriceOn naming the menu and no price ask. Every fact about the classic rests on the research file named in the source; what the sheet does not print is asked of the kitchen.",
+			"source": "page:brennans-sheets-2026-11-22.txt (DESSERTS, second); research/menu-2026-11-22-sweet-potato-pot-de-creme.json"
+		},
+		{
+			"target": "dish:Sweet Potato Pot de Crème",
+			"field": "pairing",
+			"value": {
+				"wine": "Dr. Hermann ‘Erdener Prälat’ Riesling Auslese 2014 (375 ml)",
+				"why": "Sweet enough for the custard, with the acidity to lift its cream, and honey and apricot for the sweet potato.",
+				"sayIt": "With the pot de crème I’d pour the sweet Mosel Auslese: honey and apricot, with the zip to keep the custard light.",
+				"whyThisWine": "A dessert wine must be at least as sweet as the dessert or it tastes thin. The Auslese is sweet, with apricot, honey and pineapple, and electric Mosel acidity that cuts the cream.",
+				"palate": "The custard is sweet, creamy and earthy; the Auslese’s sweetness meets it, and its acidity lifts the cream so each spoonful feels lighter. Honey and apricot bridge to the sweet potato and the marshmallow, the miso’s salt makes the fruit taste brighter, and the cinnamon finds the depth that twelve years in bottle have given the wine.",
+				"principles": [
+					"sweet",
+					"acid",
+					"bridge"
+				],
+				"second": "Niepoort Colheita Port 1997 (375 ml)",
+				"secondWhy": "For a richer pour: a single harvest tawny Port, caramel, walnut and spice, for the cinnamon and the miso’s savory note.",
+				"stepUp": "",
+				"serve": "Pour as the dessert fires, the Auslese at 45 to 50°F in a small dessert glass, 2 to 3 oz from the half bottle. Confirm at lineup how the house pours it on Thanksgiving Day.",
+				"avoid": "Avoid dry wines and tannic reds: sugar makes a dry wine taste sour and thin, and tannin turns bitter against custard.",
+				"zeroProof": "Oh! What It Seemed to Be",
+				"zeroProofWhy": "fig and cinnamon syrups echo the cinnamon, and lemon keeps the custard bright."
+			},
+			"reason": "The pairing for a dish the sheet prints with no wine: a reading of the house list, filed with a sommelier ask to confirm it before Thanksgiving Day service. Sweet and acid: a wine at least as sweet as the custard, with the acidity to lift its cream.",
+			"source": "the house wine list in the shipped pack (Dr. Hermann Erdener Prälat Auslese 2014, 375 ml, $80; Niepoort Colheita Port 1997, 375 ml, $120)"
+		},
+		{
+			"target": "dish:Sweet Potato Pot de Crème",
+			"op": "bottles",
+			"value": {
+				"value": {
+					"wine": "Domaine des Baumard ‘Clos Sainte Catherine’ Coteaux du Layon 2006",
+					"why": "Sweet and acid: mature Loire Chenin, quince, honey and a little ginger, with lively acidity for a sweet potato custard.",
+					"sayIt": "With the pot de crème, the Baumard Coteaux du Layon: sweet Loire Chenin, honey and quince, bright with the custard."
+				},
+				"classic": {
+					"wine": "Riveyrac Rivesaltes 1975",
+					"why": "Caramel and spice: an old Roussillon vin doux naturel, walnut, marmalade and coffee, for cinnamon, miso and marshmallow.",
+					"sayIt": "For a bottle, the Riveyrac Rivesaltes 1975: decades in cask, caramel and spice, lovely with the custard."
+				},
+				"splurge": {
+					"wine": "Château Gilette ‘Crème de Tête’ Sauternes 1989",
+					"why": "Richness and freshness: old Sauternes with crème brûlée, caramel and dried apricot notes, a custard wine for a custard dessert.",
+					"sayIt": "For a celebration, Château Gilette’s 1989 Sauternes: decades old, crème brûlée and apricot, made for custard."
+				},
+				"half": {
+					"wine": "Château Suduiraut Sauternes 2016 (375 ml)",
+					"why": "Sweet and fresh in a half bottle: Sauternes with honey, apricot and candied orange for two with the custard.",
+					"sayIt": "A half bottle of Château Suduiraut Sauternes: honeyed and fresh, for two with the dessert."
+				}
+			},
+			"reason": "The bottles offered with this dish by price: value under $100, sweet spot $100 to $250, celebration over $250, and a half bottle, chosen from the house bottle list for the same reasons as the glass.",
+			"source": "the house bottle list in the shipped pack (Baumard Clos Sainte Catherine 2006, $90; Riveyrac Rivesaltes 1975, $190; Château Gilette Crème de Tête 1989, $515; Château Suduiraut 2016 375 ml, $135)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "How is the Sweet Potato Pot de Crème made: is it a baked custard, which miso is used and where (in the custard or a caramel), is the marshmallow fluff the jarred brand or made in house, and is it toasted? The Thanksgiving Day sheet prints miso, cinnamon and marshmallow fluff and no recipe.",
+				"askWhom": "chef",
+				"items": [
+					"Sweet Potato Pot de Crème"
+				]
+			},
+			"reason": "The sheet prints three words and no method; the record says what a pot de crème classically is and leaves the house’s method to the kitchen.",
+			"source": "page:brennans-sheets-2026-11-22.txt (DESSERTS, second)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Confirm the first pick for the Sweet Potato Pot de Crème (the Dr. Hermann Erdener Prälat Auslese half bottle, with the Niepoort Colheita half second), how it is poured on Thanksgiving Day, and the bottle tiers (Baumard Clos Sainte Catherine, Riveyrac Rivesaltes 1975, Château Gilette 1989, the Suduiraut half).",
+				"askWhom": "sommelier",
+				"items": [
+					"Sweet Potato Pot de Crème"
+				]
+			},
+			"reason": "The pairing and the tiers are a reading of the house list, confirmed by the sommelier before they are said at a table.",
+			"source": "the house wine list in the shipped pack; page:brennans-sheets-2026-11-22.txt"
+		},
+		{
+			"target": "dish:+",
+			"op": "add",
+			"value": {
+				"name": "Chocolate and Orange Tart",
+				"section": "Thanksgiving Day",
+				"meals": [
+					"Thanksgiving Day"
+				],
+				"fixedPriceOn": "Happy Thanksgiving from Brennan’s",
+				"description": "Candied Hazelnuts",
+				"parts": {
+					"main": "a chocolate and orange tart",
+					"technique": "a tart in a pastry shell; learn the filling, the crust and how the orange is used at lineup",
+					"sauce": "",
+					"sides": "candied hazelnuts, toasted and coated in glassy caramel",
+					"taste": "deep chocolate with bright orange, crisp pastry and toasty, glassy nuts"
+				},
+				"lines": {
+					"s10": "Chocolate and Orange Tart: chocolate brightened with orange in a tart shell, finished with candied hazelnuts for crunch.",
+					"s20": "Chocolate and orange are an old confectioner’s pair: bright, bitter citrus cuts rich cocoa. Our holiday tart brings them together in a pastry shell, with candied hazelnuts, toasted and coated in glassy caramel, for crunch.",
+					"s45": "Chocolate and orange go back a long way in the confectioner’s shop: think of orangettes, strips of candied orange peel dipped in dark chocolate. The orange’s bright, slightly bitter citrus cuts through rich cocoa, so the chocolate tastes deeper and never heavy. For Thanksgiving Day the pastry kitchen sets that pair in a tart, and the menu lists candied hazelnuts, toasted and then coated in a glassy caramel, for sweet, toasty crunch. It suits the chocolate lover at the end of a big meal, and Banyuls, the classic chocolate wine, suits it."
+				},
+				"say": "Say it as it reads: Chocolate and Orange Tart.",
+				"guest": "A rich holiday dessert: deep chocolate brightened with orange in a crisp tart shell, with crunchy candied hazelnuts.",
+				"why": "The chocolate dessert of the Thanksgiving Day menu: offer it to the chocolate lover, with the Banyuls.",
+				"origin": "Chocolate and orange is an old confectioner’s pairing: orangettes, candied orange peel dipped in dark chocolate, are a chocolatier’s classic. Candied hazelnuts, toasted nuts in a glassy caramel shell, add crunch.",
+				"serviceNote": "The Thanksgiving Day sheet prints no allergen marks for any dish. It lists a chocolate and orange tart with candied hazelnuts for this one; what else is in it is the kitchen’s to say. Ask the kitchen and confirm at lineup before answering any question about an allergy or a diet.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "The Chocolate and Orange Tart is the chocolate lover’s dessert on the Thanksgiving Day menu, and the one with the most crunch.\n\nChocolate and orange is an old partnership of the confectioner’s shop: orangettes, strips of candied orange peel coated in dark chocolate, are its classic form, and the pair works because bright, slightly bitter citrus cuts through rich cocoa. A tart usually sets the filling in short pastry, the crumbly crust of butter and flour.\n\nThe sheet adds candied hazelnuts: hazelnuts toasted, then cooked in sugar until a glassy amber coat sets around them, the same finish as the candied hazelnuts on the tasting menu’s Rohan duck. They bring toast, sweetness and snap against a smooth filling.\n\nThe sheet prints only the name and the nuts: learn at lineup whether the orange is in the filling, the crust or a garnish, and how dark the chocolate is."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Offer it to the chocolate lover, and to the guest who wants dessert with crunch. Orange keeps the chocolate from feeling heavy after a big meal, so say so. Say: “It’s a chocolate and orange tart with candied hazelnuts: rich, bright and crunchy, a holiday chocolate dessert.” Then suggest the Banyuls, the classic wine for chocolate, which carries its own note of orange peel."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: Is it very rich?\n\nAnswer: It is chocolate, so yes, but the orange brightens it and the candied hazelnuts lighten each bite with crunch.\n\nAsked: Are there nuts?\n\nAnswer: Yes, the sheet prints candied hazelnuts. For any nut question, go to the kitchen before you answer, since the crust and the filling are not printed.\n\nAsked: What wine goes with it?\n\nAnswer: Banyuls, a sweet red from the south of France, is the classic for chocolate, and ours shows dried fig and orange peel."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "It is a Thanksgiving Day dish only. The hazelnuts are printed, so treat every nut question as serious and send it to the kitchen before you answer; do not guess what is in the crust. Do not describe the orange until the kitchen tells you how it is used. Allergens: read the service note and confirm at lineup."
+					}
+				]
+			},
+			"reason": "The Thanksgiving Day sheet prints the dish with its line and no price of its own: the menu’s $80 covers it, so it files with fixedPriceOn naming the menu and no price ask. Every fact about the classic rests on the research file named in the source; what the sheet does not print is asked of the kitchen.",
+			"source": "page:brennans-sheets-2026-11-22.txt (DESSERTS, third); research/menu-2026-11-22-chocolate-and-orange-tart.json"
+		},
+		{
+			"target": "dish:Chocolate and Orange Tart",
+			"field": "pairing",
+			"value": {
+				"wine": "Domaine La Tour Vieille Banyuls Reserva NV",
+				"why": "Sweet, fortified and aged the oxidative way, it matches chocolate’s richness and carries orange peel and walnut for the orange and the hazelnuts.",
+				"sayIt": "With the tart I’d pour the Banyuls: the classic wine for chocolate, with its own orange peel and nutty notes.",
+				"whyThisWine": "Chocolate coats the palate and flattens most wines, and a sweet, fortified red stands up to it. Our Banyuls shows dried fig, walnut, caramel and orange peel, a bridge to both the citrus and the nuts.",
+				"palate": "The Banyuls’ sweetness matches the chocolate, so neither tastes bitter, and its warmth carries through the cocoa. Orange peel in the wine meets the orange in the tart, walnut and caramel find the candied hazelnuts, and its gentle tannin and acidity clean the palate between rich bites.",
+				"principles": [
+					"sweet",
+					"weight",
+					"bridge"
+				],
+				"second": "Niepoort Colheita Port 1997 (375 ml)",
+				"secondWhy": "For a tawny style: a single harvest Port with caramel, walnut and dried orange peel, made for candied nuts and orange.",
+				"stepUp": "",
+				"serve": "Pour as the dessert fires, slightly cool, in a small dessert glass. Confirm at lineup that the Banyuls is poured by the glass on Thanksgiving Day, since it is the dinner tasting’s dessert pour.",
+				"avoid": "Avoid dry reds and dry whites: chocolate makes a dry wine taste bitter and thin.",
+				"zeroProof": "Personality",
+				"zeroProofWhy": "tart cherry and a zero proof sparkling rosé bring fruit to the chocolate, and the bubbles refresh after rich cocoa."
+			},
+			"reason": "The pairing for a dish the sheet prints with no wine: a reading of the house list, filed with a sommelier ask to confirm it before Thanksgiving Day service. Sweet and weight: a sweet, fortified wine for chocolate, with orange peel and nuts as the bridge.",
+			"source": "the house wine list in the shipped pack (Domaine La Tour Vieille Banyuls Reserva NV, the dinner tasting’s dessert pour; Niepoort Colheita Port 1997, 375 ml, $120)"
+		},
+		{
+			"target": "dish:Chocolate and Orange Tart",
+			"op": "bottles",
+			"value": {
+				"value": {
+					"wine": "Feist Late Bottled Vintage Port 2006",
+					"why": "Sweetness and weight: a mature LBV Port, black cherry, plum and cocoa, with softened tannin, rich enough for chocolate.",
+					"sayIt": "With the tart, the Feist LBV Port: black cherry and cocoa, supple and sweet with chocolate."
+				},
+				"classic": {
+					"wine": "Broadbent ‘Single Cask’ Malvasia Madeira 500 ml 2009",
+					"why": "Sweet and acid: Malmsey Madeira, toffee, caramel and orange peel, with bright acidity to cut through chocolate.",
+					"sayIt": "For a bottle, the Broadbent Malvasia Madeira: toffee and orange peel, sweet, with the acidity for chocolate."
+				},
+				"splurge": {
+					"wine": "Graham’s Vintage Port 1983",
+					"why": "Depth and age: mature vintage Port, dried cherry, fig, toffee and walnut, mellow enough for chocolate and hazelnut.",
+					"sayIt": "For a celebration, Graham’s 1983 Vintage Port: over forty years in bottle, toffee and walnut, lovely with chocolate."
+				},
+				"half": {
+					"wine": "Dow’s Vintage Port 2000 (375 ml)",
+					"why": "Chocolate’s classic partner in a half bottle: vintage Port with blackberry, plum and dark chocolate notes, softened by age.",
+					"sayIt": "A half bottle of Dow’s 2000 Vintage Port: dark fruit and chocolate notes, for two with the tart."
+				}
+			},
+			"reason": "The bottles offered with this dish by price: value under $100, sweet spot $100 to $250, celebration over $250, and a half bottle, chosen from the house bottle list for the same reasons as the glass.",
+			"source": "the house bottle list in the shipped pack (Feist LBV 2006, $60; Broadbent Malvasia 2009, $240; Graham’s 1983, $265; Dow’s 2000 375 ml, $120)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "How is the Chocolate and Orange Tart made: where is the orange (in the filling, the crust, a curd or a garnish), how dark is the chocolate, what is the crust, and are the candied hazelnuts the same as the ones on the tasting menu’s duck? The Thanksgiving Day sheet prints candied hazelnuts only.",
+				"askWhom": "chef",
+				"items": [
+					"Chocolate and Orange Tart"
+				]
+			},
+			"reason": "The sheet prints the name and one garnish; the record says what the pairing of chocolate and orange is and leaves the tart’s build to the kitchen.",
+			"source": "page:brennans-sheets-2026-11-22.txt (DESSERTS, third)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Confirm the first pick for the Chocolate and Orange Tart (the Domaine La Tour Vieille Banyuls, poured by the glass on Thanksgiving Day or not, with the Niepoort Colheita half second) and the bottle tiers (Feist LBV, Broadbent Malvasia, Graham’s 1983, the Dow’s 2000 half).",
+				"askWhom": "sommelier",
+				"items": [
+					"Chocolate and Orange Tart"
+				]
+			},
+			"reason": "The Banyuls is the dinner tasting’s dessert pour with no glass price; whether it is offered by the glass on the day is the sommelier’s to say.",
+			"source": "the house wine list in the shipped pack; page:brennans-sheets-2026-11-22.txt"
+		},
+		{
+			"target": "dish:+",
+			"op": "add",
+			"value": {
+				"name": "Titus’ BBQ Shrimp Stuffing",
+				"section": "Thanksgiving Day sides",
+				"meals": [
+					"Thanksgiving Day"
+				],
+				"price": "$10",
+				"prices": [
+					{
+						"meal": "Thanksgiving Day",
+						"printed": "$10"
+					}
+				],
+				"description": "Titus’ BBQ Shrimp Stuffing",
+				"parts": {
+					"main": "a holiday stuffing with shrimp, in the New Orleans BBQ shrimp style by its name",
+					"technique": "a stuffing baked for the table; the sheet prints no recipe: learn the base and the build at lineup",
+					"sauce": "the buttery, peppery New Orleans BBQ shrimp style, as the kitchen confirms",
+					"sides": "",
+					"taste": "savory, buttery and peppery, with sweet shrimp through a soft stuffing"
+				},
+				"lines": {
+					"s10": "Titus’ BBQ Shrimp Stuffing: New Orleans BBQ shrimp, buttery and peppery, in a holiday stuffing, a $10 side for the table.",
+					"s20": "A side for the table that joins two traditions: New Orleans BBQ shrimp, which is never barbecued but cooked in a buttery, peppery pan sauce, and the holiday stuffing. It is $10, beside the $80 three courses.",
+					"s45": "This side for the table brings New Orleans to Thanksgiving. BBQ shrimp here is never barbecued: the style was born Uptown at Pascal’s Manale, by the family’s account in 1954, shrimp cooked in a pan sauce of butter, black pepper and Worcestershire. By its name, the kitchen carries those flavors into a holiday stuffing, savory, buttery and peppery, with sweet shrimp through it. It is ten dollars, priced on its own beside the three course menu, and it suits a table sharing the turkey or the beef. Ask the kitchen what the stuffing is built on before you describe it."
+				},
+				"say": "Titus’ BBQ Shrimp Stuffing: say it as printed, BBQ as barbecue.",
+				"guest": "A side for the table built on a New Orleans classic: shrimp in the buttery, peppery BBQ style, folded into a holiday stuffing.",
+				"why": "The richest of the four sides for the table, at $10: offer it to share with the turkey or the beef.",
+				"origin": "New Orleans BBQ shrimp is never barbecued: it was born at Pascal’s Manale, Uptown, in 1954 by the family’s account, shrimp in a pan sauce of butter, black pepper and Worcestershire. Stuffing is the holiday’s bread dish; in the South it is often called dressing.",
+				"serviceNote": "The Thanksgiving Day sheet prints no allergen marks for any dish. It lists BBQ shrimp stuffing by name and nothing more for this one; what else is in it is the kitchen’s to say. Ask the kitchen and confirm at lineup before answering any question about an allergy or a diet.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "This side for the table puts a New Orleans classic into a Thanksgiving one. It is one of four sides priced on their own beside the $80 menu, at $10.\n\nNew Orleans BBQ shrimp is never barbecued. By the family’s account it was born at Pascal’s Manale, Uptown, in 1954: shrimp cooked in a pan sauce of butter, black pepper and Worcestershire. Stuffing is the holiday’s bread dish. Strictly, stuffing is cooked inside the bird and dressing in its own pan, though in the South dressing is the usual word either way, and Southern dressing is often made with cornbread. The turkey plate carries its own cornbread dressing, so this side is something more.\n\nThe sheet prints the name and the price only. Learn at lineup what the stuffing is built on, bread, cornbread or rice, how the shrimp go in, and whether the sauce is the house BBQ sauce. Say the name as printed."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Offer it as the side to share: it brings New Orleans to the holiday table. It suits the turkey, which has its own cornbread dressing, and the beef. Say: “For the table, the BBQ shrimp stuffing: New Orleans BBQ shrimp flavors in a holiday stuffing, buttery and peppery.” It is $10; the potato purée, the haricots verts and the cranberry sauce are $7 each."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: Is it barbecue?\n\nAnswer: No. New Orleans BBQ shrimp is never grilled or smoked: it is shrimp in a buttery, peppery pan sauce, a style born Uptown at Pascal’s Manale.\n\nAsked: Is it stuffing or dressing?\n\nAnswer: The sheet calls it stuffing. Strictly, stuffing cooks inside the bird and dressing in a pan; in the South people say dressing either way. How ours is baked is the kitchen’s to say.\n\nAsked: Is it included in the $80?\n\nAnswer: No. The sides for the table are priced on their own: this one is $10."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "Serve it on Thanksgiving Day only, as a side for the table, and ring it on its own at $10. Do not describe the base, the sauce or where the shrimp come from until the kitchen does. Shellfish and every other question about what is in it go to the kitchen. Allergens: read the service note and confirm at lineup."
+					}
+				]
+			},
+			"reason": "A side for the table on the Thanksgiving Day sheet, filed in its own section so it carries no pairing; the sheet prints the figure 10 with no dollar sign, read as $10 (the page says so). The sheet prints the name only, so the record says what the classic is and asks the kitchen for the rest. The name carries a person’s name, kept as printed; nothing is written about the person.",
+			"source": "page:brennans-sheets-2026-11-22.txt (SIDES FOR THE TABLE, Titus’ BBQ Shrimp Stuffing: 10); research/menu-2026-11-22-bbq-shrimp-stuffing.json"
+		},
+		{
+			"target": "dish:+",
+			"op": "add",
+			"value": {
+				"name": "Herbed Potato Purée",
+				"section": "Thanksgiving Day sides",
+				"meals": [
+					"Thanksgiving Day"
+				],
+				"price": "$7",
+				"prices": [
+					{
+						"meal": "Thanksgiving Day",
+						"printed": "$7"
+					}
+				],
+				"description": "Herbed Potato Purée",
+				"parts": {
+					"main": "potato purée with herbs",
+					"technique": "potatoes cooked, pressed smooth and enriched; learn the herbs and the method at lineup",
+					"sauce": "",
+					"sides": "",
+					"taste": "smooth, buttery and fresh with herbs"
+				},
+				"lines": {
+					"s10": "Herbed Potato Purée: silky potatoes enriched and freshened with herbs, a $7 side for the Thanksgiving table.",
+					"s20": "A side for the table in the French style: potatoes pressed smooth and enriched until silky, then freshened with herbs. It is $7, the classic partner for the turkey and its jus.",
+					"s45": "Purée, pyoo-RAY, is French for a smooth mash, and in the French kitchen pommes purée is pressed through a ricer or a fine sieve rather than mashed, then enriched with butter and cream until it is silky and dense. Ours is herbed, so it tastes fresh as well as rich. It is the classic partner for the turkey and its jus, and for the beef. It is seven dollars, priced on its own beside the three course menu. Ask the kitchen which herbs go in before you name them."
+				},
+				"say": "Herbed Potato Purée: HERBD puh-TAY-toh pyoo-RAY.",
+				"guest": "A silky side for the table: potatoes puréed smooth and rich, freshened with herbs, the classic partner for turkey and its jus.",
+				"why": "The comfort side, at $7: it suits every turkey and beef plate, and the guest who wants the classic.",
+				"origin": "Purée is French for a smooth mash. The French pommes purée is passed through a ricer, food mill or fine sieve and enriched with plenty of butter and cream, which makes it smoother and denser than an everyday mash.",
+				"serviceNote": "The Thanksgiving Day sheet prints no allergen marks for any dish. It lists herbed potato purée by name and nothing more for this one; what else is in it is the kitchen’s to say. Ask the kitchen and confirm at lineup before answering any question about an allergy or a diet.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "The Herbed Potato Purée is the classic side for the holiday table, $7 and priced on its own beside the $80 menu.\n\nPurée is French for a smooth mash. In the French kitchen, pommes purée is made by passing cooked potatoes through a ricer, a food mill or a fine sieve called a tamis, rather than mashing them, and working in a generous share of butter and cream, so it is silky and dense rather than fluffy. Overworking turns potatoes gluey, which is why the gentle pressing matters. Herbs freshen it.\n\nThe sheet prints only the name: which herbs, whether the method is the classic one, and how it differs from the pommes purée under the beef tenderloin are the kitchen’s answers. Learn them at lineup so you can tell a guest which to order with the turkey."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Offer it to every table ordering the turkey: potatoes and gravy are the holiday. Say: “For the table, our herbed potato purée: silky, buttery potatoes with fresh herbs, made for the turkey.” Pair it with the haricots verts for a classic plate of sides, at $7 each, and mention that the beef tenderloin already comes with its own pommes purée."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: Is it mashed potatoes?\n\nAnswer: A smoother kind. A purée is pressed through a ricer or sieve and enriched with butter and cream, so it is silky rather than fluffy.\n\nAsked: Which herbs?\n\nAnswer: The sheet does not say. Ask the kitchen at lineup and name only what it tells you.\n\nAsked: Does it come with the menu?\n\nAnswer: No. It is a side for the table at $7, priced apart from the $80 three courses."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "It is a Thanksgiving Day side, $7, rung on its own. Do not name the herbs or promise butter and cream until the kitchen confirms them. Questions about dairy or any diet go to the kitchen. Allergens: read the service note and confirm at lineup."
+					}
+				]
+			},
+			"reason": "A side for the table on the Thanksgiving Day sheet, filed in its own section so it carries no pairing; the sheet prints the figure 7 with no dollar sign, read as $7 (the page says so). The sheet prints the name only, so the record says what the classic is and asks the kitchen for the rest.",
+			"source": "page:brennans-sheets-2026-11-22.txt (SIDES FOR THE TABLE, Herbed Potato Purée: 7); research/menu-2026-11-22-herbed-potato-puree.json"
+		},
+		{
+			"target": "dish:+",
+			"op": "add",
+			"value": {
+				"name": "Haricots Verts",
+				"section": "Thanksgiving Day sides",
+				"meals": [
+					"Thanksgiving Day"
+				],
+				"price": "$7",
+				"prices": [
+					{
+						"meal": "Thanksgiving Day",
+						"printed": "$7"
+					}
+				],
+				"description": "Haricots Verts",
+				"parts": {
+					"main": "haricots verts, thin French green beans",
+					"technique": "cooked briefly to keep their color and snap; learn the finish at lineup",
+					"sauce": "",
+					"sides": "",
+					"taste": "bright, tender and crisp, fresh and green"
+				},
+				"lines": {
+					"s10": "Haricots Verts: thin French green beans, cooked bright and just tender, a $7 side to lighten the Thanksgiving table.",
+					"s20": "Haricot vert is French for green bean, and these are the thin French kind, picked young and cooked briefly so they stay bright green with a little snap. A $7 side that lightens the holiday plate.",
+					"s45": "Haricots verts, ah-ree-koh VAIR, is French for green beans, and on our menu it means the thin, slender French type, picked young. Cooked briefly, they stay bright green, tender and still a little crisp, which is what a rich Thanksgiving plate needs beside the turkey, the purée and the stuffing. The sheet does not print the finish, so ask the kitchen at lineup before you describe it. They are seven dollars, priced on their own beside the three course menu, and they suit any table that wants something fresh and green."
+				},
+				"say": "Haricots Verts: ah-ree-koh VAIR.",
+				"guest": "A bright green side for the table: thin French green beans, cooked just until tender with a little snap.",
+				"why": "The fresh green side, at $7: it lightens a plate of turkey, purée and stuffing.",
+				"origin": "Haricots verts is French for green beans; on an American menu the name means the thin, slender French type, picked young.",
+				"serviceNote": "The Thanksgiving Day sheet prints no allergen marks for any dish. It lists haricots verts by name and nothing more for this one; what else is in it is the kitchen’s to say. Ask the kitchen and confirm at lineup before answering any question about an allergy or a diet.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "Haricots Verts are the green side for the holiday table, $7 and priced on their own beside the $80 menu.\n\nHaricot vert is French for green bean, and on an American menu it names the thin, slender French type, picked young while the pod is tender. Green beans are the young pods of the common bean, a plant that came to the world’s kitchens from Mexico and the Andes. Cooked briefly in salted water, often blanched and then shocked in iced water, and finished with butter or in a hot pan, they stay bright green and keep a snap; cooked long they go soft and olive.\n\nThe sheet prints only the name, so how they are finished is the kitchen’s to tell you at lineup. They lighten a rich plate, which is the reason to offer them."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Offer them to every table as the green on the plate: they lighten the turkey, the purée and the stuffing. Say: “For the table, haricots verts: thin French green beans, bright and just tender, to lighten the plate.” At $7 they go with the potato purée for a classic holiday pair of sides."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: What are haricots verts?\n\nAnswer: Thin French green beans, picked young, so they are slender, tender and quick to cook.\n\nAsked: How are they cooked?\n\nAnswer: The sheet does not say. Classically they are cooked briefly and finished with butter; ask the kitchen at lineup for ours.\n\nAsked: Are they part of the $80 menu?\n\nAnswer: No, they are a side for the table at $7."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "A Thanksgiving Day side, $7, rung on its own. Do not describe a butter, nut or bacon finish until the kitchen names it. Questions about any diet go to the kitchen. Allergens: read the service note and confirm at lineup."
+					}
+				]
+			},
+			"reason": "A side for the table on the Thanksgiving Day sheet, filed in its own section so it carries no pairing; the sheet prints the figure 7 with no dollar sign, read as $7 (the page says so). The sheet prints the name only, so the record says what the classic is and asks the kitchen for the rest.",
+			"source": "page:brennans-sheets-2026-11-22.txt (SIDES FOR THE TABLE, Haricots Verts: 7); research/menu-2026-11-22-haricots-verts.json"
+		},
+		{
+			"target": "dish:+",
+			"op": "add",
+			"value": {
+				"name": "Cranberry Sauce",
+				"section": "Thanksgiving Day sides",
+				"meals": [
+					"Thanksgiving Day"
+				],
+				"price": "$7",
+				"prices": [
+					{
+						"meal": "Thanksgiving Day",
+						"printed": "$7"
+					}
+				],
+				"description": "Cranberry Sauce",
+				"parts": {
+					"main": "cranberry sauce",
+					"technique": "cranberries cooked with sugar into a sauce; learn the house recipe at lineup",
+					"sauce": "",
+					"sides": "",
+					"taste": "tart, bright and fruity, with sweetness to round it"
+				},
+				"lines": {
+					"s10": "Cranberry Sauce: tart, bright cranberries cooked sweet, the classic partner for turkey, a $7 side for the Thanksgiving table.",
+					"s20": "The holiday’s tart side: cranberries, native to North American bogs and harvested in the fall, cooked with sugar into a bright sauce whose acid cuts the richness of turkey, jus and purée. It is $7 for the table.",
+					"s45": "Cranberries are native to the bogs and wetlands of North America, gathered by Native peoples long before colonists came, and they ripen from mid-September to mid-November, right on time for Thanksgiving. Cooked with sugar they make a sauce that is tart, bright and sweet, and that acid is why it belongs beside turkey: it cuts the richness of the meat, the jus and the potato purée. Ours is a side for the table at seven dollars, priced on its own. Ask the kitchen whether it is smooth or whole berry before you say."
+				},
+				"say": "Cranberry Sauce: say it as it reads.",
+				"guest": "The holiday’s tart red side for the table: cranberries cooked sweet and bright, made to cut through turkey and its jus.",
+				"why": "The tart side, at $7, that every turkey plate wants: its acid cuts the richness of the meat and the purée.",
+				"origin": "Cranberries are native to the wetlands of North America and were gathered by Native peoples long before colonists arrived; they come to harvest from mid-September to mid-November, which is why they reach the Thanksgiving table.",
+				"serviceNote": "The Thanksgiving Day sheet prints no allergen marks for any dish. It lists cranberry sauce by name and nothing more for this one; what else is in it is the kitchen’s to say. Ask the kitchen and confirm at lineup before answering any question about an allergy or a diet.",
+				"kept": [
+					{
+						"q": "Tell me about it.",
+						"a": "Cranberry Sauce is the tart side for the holiday table, $7 and priced on its own beside the $80 menu.\n\nThe American cranberry, Vaccinium macrocarpon, is native to the bogs and wetlands of North America, and Native peoples gathered it long before colonists came. Growers flood the bogs at harvest, and the berries, which hold pockets of air, float to the surface. They ripen from mid-September to mid-November, so they are in season for Thanksgiving, though the record does not show them at the first feast.\n\nCooked with sugar, cranberries make a sauce that is tart, bright and sweet. That acid is why it belongs beside turkey: it cuts the richness of meat, jus and purée. The sheet prints only the name, so whether ours is smooth or whole berry, and what else is in it, are the kitchen’s answers."
+					},
+					{
+						"q": "How do I sell it?",
+						"a": "Offer it to every table ordering the turkey: it is the holiday’s bright counterpoint. Say: “For the table, cranberry sauce: tart and bright, the classic with turkey.” The turkey’s jus already carries cranberry and rosemary, so the sauce is for guests who want more of it, and it is $7."
+					},
+					{
+						"q": "What do guests ask?",
+						"a": "Asked: Is it homemade?\n\nAnswer: The sheet prints only the name. Ask the kitchen how it is made before you say so.\n\nAsked: Doesn’t the turkey already have cranberry?\n\nAnswer: Yes, the turkey comes with a cranberry and rosemary jus. The sauce is a side for the table, for guests who want the classic on its own.\n\nAsked: Is it sweet or tart?\n\nAnswer: Both: cranberries are sharply tart, and cooking them with sugar makes a sauce that is sweet and bright."
+					},
+					{
+						"q": "What should I watch for?",
+						"a": "A Thanksgiving Day side, $7, rung on its own. Do not call it homemade, whole berry or smooth until the kitchen says. Questions about sugar or any diet go to the kitchen. Allergens: read the service note and confirm at lineup."
+					}
+				]
+			},
+			"reason": "A side for the table on the Thanksgiving Day sheet, filed in its own section so it carries no pairing; the sheet prints the figure 7 with no dollar sign, read as $7 (the page says so). The sheet prints the name only, so the record says what the classic is and asks the kitchen for the rest.",
+			"source": "page:brennans-sheets-2026-11-22.txt (SIDES FOR THE TABLE, Cranberry Sauce: 7); research/menu-2026-11-22-cranberry-sauce.json"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "What is in Titus’ BBQ Shrimp Stuffing: what is it built on (bread, cornbread or rice), how do the shrimp go in and where are they from, is the sauce the house New Orleans BBQ sauce, and is it baked in a pan for the table? The Thanksgiving Day sheet prints the name and 10 only.",
+				"askWhom": "chef",
+				"items": [
+					"Titus’ BBQ Shrimp Stuffing"
+				]
+			},
+			"reason": "The sheet prints a name and a figure; the record says what New Orleans BBQ shrimp and a stuffing are and leaves the house’s build to the kitchen.",
+			"source": "page:brennans-sheets-2026-11-22.txt (SIDES FOR THE TABLE)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "How are the Herbed Potato Purée, the Haricots Verts and the Cranberry Sauce made on Thanksgiving Day: which herbs, and is the purée the same as the beef tenderloin’s pommes purée; how are the haricots verts finished; is the cranberry sauce made in house, smooth or whole berry? The sheet prints the names and 7 each only.",
+				"askWhom": "chef",
+				"items": [
+					"Herbed Potato Purée",
+					"Haricots Verts",
+					"Cranberry Sauce"
+				]
+			},
+			"reason": "The sheet prints three names and a figure each; the records say what each classic is and leave the house’s recipe to the kitchen.",
+			"source": "page:brennans-sheets-2026-11-22.txt (SIDES FOR THE TABLE)"
+		},
+		{
+			"target": "dish:Turtle Soup",
+			"op": "add",
+			"field": "kept",
+			"value": {
+				"q": "What changes on Thanksgiving Day?",
+				"a": "On Thanksgiving Day the Turtle Soup is one of the six appetizers on the three course menu, $80 for an appetizer, an entrée and a dessert. The sheet prints it as “Classic Turtle Soup: Brown Butter Spinach, Grated Egg, Aged Sherry”, where the everyday menu prints 100% turtle meat, brown butter spinach, grated egg and aged Sherry. Whether it is the house soup as served every day is asked of the chef at lineup; until the answer comes, describe it as the everyday menu does."
+			},
+			"reason": "The Thanksgiving Day sheet prints this dish, which the house already serves, under its own words on the $80 menu; the note keeps the sheet’s words beside the everyday ones and points to the chef ask that stands in tg-menu.",
+			"source": "page:brennans-sheets-2026-11-22.txt"
+		},
+		{
+			"target": "dish:Seafood Gumbo",
+			"op": "add",
+			"field": "kept",
+			"value": {
+				"q": "What changes on Thanksgiving Day?",
+				"a": "On Thanksgiving Day the Seafood Gumbo is one of the six appetizers on the three course menu, $80 for an appetizer, an entrée and a dessert. The sheet prints it as “Seafood Filé Gumbo: Andouille, Crabmeat, Oysters, Shrimp, Popcorn Rice”, where the everyday menu prints shrimp, crab, oysters, andouille and popcorn rice. Filé is ground sassafras leaves. Whether the filé is in the gumbo every day or added for Thanksgiving is asked of the chef at lineup; until then, do not promise it either way."
+			},
+			"reason": "The Thanksgiving Day sheet prints this dish, which the house already serves, under its own words on the $80 menu; the note keeps the sheet’s words beside the everyday ones and points to the chef ask that stands in tg-menu.",
+			"source": "page:brennans-sheets-2026-11-22.txt"
+		},
+		{
+			"target": "dish:World Famous Bananas Foster",
+			"op": "add",
+			"field": "kept",
+			"value": {
+				"q": "What changes on Thanksgiving Day?",
+				"a": "On Thanksgiving Day the Bananas Foster is one of the three desserts on the three course menu, $80 for an appetizer, an entrée and a dessert. The sheet prints “World Famous Bananas Foster: New Orleans Ice Cream Co. Vanilla Bean Ice Cream” and, under it, “Flambéed Tableside [ add $5 ]”, where the dinner menu prints housemade vanilla ice cream. So on the day, the flambé at the table adds $5 to the menu. Which ice cream is served, and whether a Foster without the $5 is flamed in the kitchen, are asked of the chef at lineup."
+			},
+			"reason": "The Thanksgiving Day sheet prints this dish, which the house already serves, under its own words on the $80 menu; the note keeps the sheet’s words beside the everyday ones and points to the chef ask that stands in tg-menu.",
+			"source": "page:brennans-sheets-2026-11-22.txt"
 		}
 	]
 }

@@ -1,0 +1,71 @@
+{
+ "dish": "Chocolate and Orange Tart",
+ "readOn": "2026-11-22",
+ "sheet": {
+  "line": "Chocolate and Orange Tart: Candied Hazelnuts",
+  "section": "DESSERTS, third"
+ },
+ "facts": [
+  {
+   "text": "Orangettes are fine strips of candied orange peel, candied slowly and coated in a thin layer of dark chocolate; chocolatiers sell them as a classic holiday and after dinner sweet, two contrasting tastes, one full bodied, one tangy.",
+   "sourceIds": [
+    "lamaisonduchocolat-orangettes",
+    "leonidas-orangette",
+    "delicious-orangettes"
+   ]
+  }
+ ],
+ "sayIt": [
+  {
+   "word": "orangette",
+   "respell": "oh-rahn-ZHET"
+  }
+ ],
+ "unsourced": [
+  "How every web page was read: through search result summaries only (WebFetch is refused on this network). Each source says what its summary supported. A refuter with page access should open the pages behind any line that goes on a card.",
+  "Where the orange is (filling, crust, curd, garnish), how dark the chocolate is, the crust: not printed, asked of the chef.",
+  "The French origin of the orangette and the history of the chocolate and orange pairing: searched and not confirmed, so left out."
+ ],
+ "sources": [
+  {
+   "id": "sheet-2026-11-22",
+   "title": "Brennan's sheets photographed on 22 November 2026, sheet 1, the Thanksgiving Day menu (Happy Thanksgiving from Brennan's, 3 Courses $80, choice of appetizer, entree and dessert, with Sides for the Table)",
+   "publisher": "The house's own menu sheet, transcribed in this repository",
+   "url": "tools/house/brennans/research/menu-2026-11-22-sheets.md; tools/house/brennans/pages/brennans-sheets-2026-11-22.txt",
+   "supports": "The dish name and its printed line, word for word. The sheet prints no method, recipe, portion, source of any ingredient, allergen marks or wine.",
+   "kind": "primary"
+  },
+  {
+   "id": "repo-pack",
+   "title": "The house pack as shipped at the November edition (3dcc4b5): the wine list, the bottle list, the zero proof drinks and the components already filed",
+   "publisher": "This repository",
+   "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+   "supports": "Every wine and drink named in the pairing, with its printed price and profile, and the components the dish shares with the rest of the menu.",
+   "kind": "secondary"
+  },
+  {
+   "id": "lamaisonduchocolat-orangettes",
+   "title": "Orangettes gift box",
+   "publisher": "La Maison du Chocolat",
+   "url": "https://www.lamaisonduchocolat.com/en_us/orangettes-gift-box-50g",
+   "supports": "Fine strips of candied orange peel coated with a thin layer of dark chocolate; candied over about two weeks.",
+   "kind": "primary"
+  },
+  {
+   "id": "leonidas-orangette",
+   "title": "Orangette",
+   "publisher": "Leonidas",
+   "url": "https://www.leonidas.com/gb_en/delights/orangette",
+   "supports": "Two contrasting tastes: one full bodied, the other tangy.",
+   "kind": "primary"
+  },
+  {
+   "id": "delicious-orangettes",
+   "title": "Orangettes (chocolate candied orange peels)",
+   "publisher": "delicious. magazine",
+   "url": "https://www.deliciousmagazine.co.uk/recipes/orangettes-chocolate-candied-orange-peels/",
+   "supports": "The method: candied peel dipped in dark chocolate.",
+   "kind": "secondary"
+  }
+ ]
+}

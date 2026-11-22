@@ -1,0 +1,189 @@
+{
+ "dish": "Sweet Potato Pot de Crème",
+ "readOn": "2026-11-22",
+ "sheet": {
+  "line": "Sweet Potato Pot de Crème: Miso, Cinnamon, Marshmallow Fluff",
+  "section": "DESSERTS, second"
+ },
+ "facts": [
+  {
+   "text": "Pot de creme is French for pot of cream, the cream meaning custard: a loose French dessert custard dating to the 17th century (one source), baked until just set, usually in a water bath, and served in the small pot or ramekin it was baked in. The English word is first recorded in 1941.",
+   "sourceIds": [
+    "merriam-webster-pot-de-creme",
+    "wikipedia-pot-de-creme",
+    "cooksinfo-pots-de-creme"
+   ]
+  },
+  {
+   "text": "Miso in desserts brings salt and savoury depth; white (shiro) miso is the mildest and sweetest kind and the usual choice, most often in a miso caramel; pastry cooks warn that too much overwhelms a sweet dish. Miso is a Japanese paste of soybeans fermented with salt and koji.",
+   "sourceIds": [
+    "tastingtable-miso-desserts",
+    "kingarthur-miso",
+    "food52-miso-caramel",
+    "repo-miso-butter"
+   ]
+  },
+  {
+   "text": "Marshmallow Fluff is a marshmallow creme made in Lynn, Massachusetts. The recipe was first sold door to door in Somerville around 1917 and bought by two candy makers of Lynn, H. Allen Durkee and Fred Mower, whose partnership dates to 1920; Durkee-Mower still makes it in Lynn. A New Jersey company also claims the name from 1910.",
+   "sourceIds": [
+    "marshmallowfluff-history",
+    "wikipedia-marshmallow-creme",
+    "npr-fluff-century",
+    "boston-com-fluff"
+   ]
+  },
+  {
+   "text": "The first documented recipe for mashed sweet potatoes baked under a marshmallow topping appeared in 1917, in a recipe booklet the Angelus Marshmallow company commissioned from Janet McKenzie Hill of the Boston Cooking School Magazine to sell more marshmallows; Angelus, later Campfire, printed sweet potato and marshmallow casseroles again in 1930 and 1950, and the dish became a Thanksgiving habit.",
+   "sourceIds": [
+    "smithsonian-marshmallow-sweet-potato",
+    "atlasobscura-marshmallow-casserole",
+    "mentalfloss-marshmallow-casserole"
+   ]
+  }
+ ],
+ "sayIt": [
+  {
+   "word": "pot de crème",
+   "respell": "poh duh KREM"
+  },
+  {
+   "word": "miso",
+   "respell": "MEE-soh"
+  }
+ ],
+ "unsourced": [
+  "How every web page was read: through search result summaries only (WebFetch is refused on this network). Each source says what its summary supported. A refuter with page access should open the pages behind any line that goes on a card.",
+  "Which miso, how it is used, whether the custard is baked, whether the fluff is the jarred brand or house made and whether it is toasted: not printed, asked of the chef.",
+  "A sweet potato and miso dessert as a known pairing: searched and not found, so no claim is made."
+ ],
+ "sources": [
+  {
+   "id": "sheet-2026-11-22",
+   "title": "Brennan's sheets photographed on 22 November 2026, sheet 1, the Thanksgiving Day menu (Happy Thanksgiving from Brennan's, 3 Courses $80, choice of appetizer, entree and dessert, with Sides for the Table)",
+   "publisher": "The house's own menu sheet, transcribed in this repository",
+   "url": "tools/house/brennans/research/menu-2026-11-22-sheets.md; tools/house/brennans/pages/brennans-sheets-2026-11-22.txt",
+   "supports": "The dish name and its printed line, word for word. The sheet prints no method, recipe, portion, source of any ingredient, allergen marks or wine.",
+   "kind": "primary"
+  },
+  {
+   "id": "repo-pack",
+   "title": "The house pack as shipped at the November edition (3dcc4b5): the wine list, the bottle list, the zero proof drinks and the components already filed",
+   "publisher": "This repository",
+   "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+   "supports": "Every wine and drink named in the pairing, with its printed price and profile, and the components the dish shares with the rest of the menu.",
+   "kind": "secondary"
+  },
+  {
+   "id": "merriam-webster-pot-de-creme",
+   "title": "pot de creme",
+   "publisher": "Merriam-Webster",
+   "url": "https://www.merriam-webster.com/dictionary/pot%20de%20cr%C3%A8me",
+   "supports": "French, literally pot of cream; baked sweet custard in a ramekin; first known use 1941.",
+   "kind": "primary"
+  },
+  {
+   "id": "wikipedia-pot-de-creme",
+   "title": "Pot de creme",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Pot_de_cr%C3%A8me",
+   "supports": "A loose French custard of the 17th century, served in the dish it was baked in.",
+   "kind": "secondary"
+  },
+  {
+   "id": "cooksinfo-pots-de-creme",
+   "title": "Pots de creme",
+   "publisher": "CooksInfo",
+   "url": "https://www.cooksinfo.com/pots-de-creme/",
+   "supports": "Baked in a water bath; creme as the French word for custard.",
+   "kind": "secondary"
+  },
+  {
+   "id": "tastingtable-miso-desserts",
+   "title": "The Best Type Of Desserts To Elevate With Miso",
+   "publisher": "Tasting Table",
+   "url": "https://www.tastingtable.com/1732276/how-to-use-miso-in-desserts/",
+   "supports": "White miso as the mildest and sweetest for desserts.",
+   "kind": "secondary"
+  },
+  {
+   "id": "kingarthur-miso",
+   "title": "A beginner's guide to baking with miso",
+   "publisher": "King Arthur Baking",
+   "url": "https://www.kingarthurbaking.com/blog/2021/12/13/a-beginners-guide-to-baking-with-miso",
+   "supports": "Miso as salt and savoury depth in baking.",
+   "kind": "secondary"
+  },
+  {
+   "id": "food52-miso-caramel",
+   "title": "Miso Caramel",
+   "publisher": "Food52",
+   "url": "https://food52.com/recipes/18618-miso-caramel",
+   "supports": "Miso stirred into caramel.",
+   "kind": "secondary"
+  },
+  {
+   "id": "repo-miso-butter",
+   "title": "The miso butter component",
+   "publisher": "This repository",
+   "url": "tools/house/brennans/components/dishes.json (miso-butter)",
+   "supports": "Miso as a Japanese paste of soybeans fermented with salt and koji.",
+   "kind": "secondary"
+  },
+  {
+   "id": "marshmallowfluff-history",
+   "title": "History of Marshmallow Fluff",
+   "publisher": "Durkee-Mower, the maker",
+   "url": "https://marshmallowfluff.com/history/",
+   "supports": "Lynn, Massachusetts; Durkee and Mower; 1920.",
+   "kind": "primary"
+  },
+  {
+   "id": "wikipedia-marshmallow-creme",
+   "title": "Marshmallow creme",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Marshmallow_creme",
+   "supports": "Marshmallow Fluff as a marshmallow creme made in Lynn.",
+   "kind": "secondary"
+  },
+  {
+   "id": "npr-fluff-century",
+   "title": "What The Fluff? Celebrates A Century Of Peanut Butter's Marshmallow Friend",
+   "publisher": "NPR",
+   "url": "https://www.npr.org/sections/thesalt/2017/09/30/553966235/what-the-fluff-celebrates-a-century-of-peanut-butters-marshmallow-friend",
+   "supports": "Somerville, around 1917.",
+   "kind": "secondary"
+  },
+  {
+   "id": "boston-com-fluff",
+   "title": "For 100 years, Fluff has stuck to its Somerville roots",
+   "publisher": "Boston.com",
+   "url": "https://www.boston.com/news/food/2017/09/22/for-100-years-fluff-has-stuck-to-its-somerville-roots-but-the-story-isnt-that-simple",
+   "supports": "The New Jersey claim of 1910.",
+   "kind": "secondary"
+  },
+  {
+   "id": "smithsonian-marshmallow-sweet-potato",
+   "title": "How Marshmallow-Topped Sweet Potato Casserole Became a Thanksgiving Classic",
+   "publisher": "Smithsonian Magazine",
+   "url": "https://www.smithsonianmag.com/smart-news/happy-100-birthday-marshmallow-sweet-potato-180967245/",
+   "supports": "The 1917 Angelus booklet and Janet McKenzie Hill; the first documented recipe.",
+   "kind": "secondary"
+  },
+  {
+   "id": "atlasobscura-marshmallow-casserole",
+   "title": "How marshmallows got on sweet potato casserole",
+   "publisher": "Atlas Obscura",
+   "url": "https://atlasobscura.com/articles/marshmallows-sweet-potato-casserole-how-thanksgiving",
+   "supports": "The marketing motive; the spread of the habit.",
+   "kind": "secondary"
+  },
+  {
+   "id": "mentalfloss-marshmallow-casserole",
+   "title": "Why We Eat Sweet Potato Casserole With Marshmallows",
+   "publisher": "Mental Floss",
+   "url": "https://www.mentalfloss.com/holidays/thanksgiving/why-we-eat-sweet-potato-casserole-with-marshmallows",
+   "supports": "Angelus, later Campfire; the 1930 and 1950 booklets.",
+   "kind": "secondary"
+  }
+ ]
+}

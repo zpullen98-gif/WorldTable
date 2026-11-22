@@ -1,0 +1,134 @@
+{
+ "dish": "Rockefeller Gratin",
+ "readOn": "2026-11-22",
+ "sheet": {
+  "line": "Rockefeller Gratin: Oysters, Bacon, Creamed Spinach, Breadcrumbs",
+  "section": "APPETIZERS, second"
+ },
+ "classic": {
+  "text": "Oysters Rockefeller was created at Antoine's in the French Quarter of New Orleans and is credited to Jules Alciatore, son of the founder Antoine Alciatore. Most accounts date it to 1899 (a few say 1889; the earliest firm record cited is a 1909 newspaper advertisement), and the usual story is that he used local oysters when imported snails were hard to get. It was named for John D. Rockefeller, the richest American of the day, for the richness of the sauce; the green is also tied to the colour of money. The classic is oysters on the half shell under a rich green sauce with breadcrumbs, baked or broiled. Antoine's keeps its recipe secret and its cooks have long denied that it holds spinach; most later versions use spinach.",
+  "sourceIds": [
+   "wikipedia-oysters-rockefeller",
+   "foodrepublic-rockefeller-1899",
+   "tastingtable-rockefeller-name",
+   "repo-verified-facts"
+  ]
+ },
+ "facts": [
+  {
+   "text": "Gratin comes from the French verb gratter, to scrape: the word first meant the crust scraped from the cooking pot, and now names a dish baked or broiled until a browned crust forms on top, often of breadcrumbs or cheese. Au gratin does not mean with cheese.",
+   "sourceIds": [
+    "wikipedia-gratin",
+    "connexion-gratin",
+    "culinarylore-gratin",
+    "merriam-webster-au-gratin"
+   ]
+  }
+ ],
+ "sayIt": [
+  {
+   "word": "Rockefeller",
+   "respell": "ROCK-uh-fell-er"
+  },
+  {
+   "word": "gratin",
+   "respell": "grah-TAN"
+  },
+  {
+   "word": "Antoine's",
+   "respell": "AN-twahn"
+  },
+  {
+   "word": "Alciatore",
+   "respell": "al-SEE-uh-tor"
+  }
+ ],
+ "unsourced": [
+  "How every web page was read: through search result summaries only (WebFetch is refused on this network). Each source says what its summary supported. A refuter with page access should open the pages behind any line that goes on a card.",
+  "How the house bakes the gratin (in the shell or in one dish), the portion and where the oysters come from: not printed, asked of the chef.",
+  "Watercress as the green of the original: one search summary calls it less well documented, so it is left out.",
+  "Names of later Antoine's proprietors who published versions with spinach: left out (one may be living)."
+ ],
+ "sources": [
+  {
+   "id": "sheet-2026-11-22",
+   "title": "Brennan's sheets photographed on 22 November 2026, sheet 1, the Thanksgiving Day menu (Happy Thanksgiving from Brennan's, 3 Courses $80, choice of appetizer, entree and dessert, with Sides for the Table)",
+   "publisher": "The house's own menu sheet, transcribed in this repository",
+   "url": "tools/house/brennans/research/menu-2026-11-22-sheets.md; tools/house/brennans/pages/brennans-sheets-2026-11-22.txt",
+   "supports": "The dish name and its printed line, word for word. The sheet prints no method, recipe, portion, source of any ingredient, allergen marks or wine.",
+   "kind": "primary"
+  },
+  {
+   "id": "repo-pack",
+   "title": "The house pack as shipped at the November edition (3dcc4b5): the wine list, the bottle list, the zero proof drinks and the components already filed",
+   "publisher": "This repository",
+   "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+   "supports": "Every wine and drink named in the pairing, with its printed price and profile, and the components the dish shares with the rest of the menu.",
+   "kind": "secondary"
+  },
+  {
+   "id": "wikipedia-oysters-rockefeller",
+   "title": "Oysters Rockefeller",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Oysters_Rockefeller",
+   "supports": "Antoine's, 1899, Jules Alciatore, named for John D. Rockefeller, the wealthiest American of the time, for the richness of the sauce; oysters on the half shell with a rich green sauce and breadcrumbs, baked or broiled; the recipe kept secret; spinach denied by Antoine's.",
+   "kind": "secondary"
+  },
+  {
+   "id": "foodrepublic-rockefeller-1899",
+   "title": "How Oysters Rockefeller Were Created In 1899 As A Replacement Dish",
+   "publisher": "Food Republic",
+   "url": "https://www.foodrepublic.com/2075014/oysters-rockefeller-origins-1899/",
+   "supports": "The 1899 date, local oysters in place of snails that were hard to import, Jules Alciatore.",
+   "kind": "secondary"
+  },
+  {
+   "id": "tastingtable-rockefeller-name",
+   "title": "Oysters Rockefeller Was Named For The Richest Man In The World",
+   "publisher": "Tasting Table",
+   "url": "https://tastingtable.com/1132785/oysters-rockefeller-was-named-for-the-richest-man-in-the-world",
+   "supports": "The name after John D. Rockefeller, the richest man of the day; the green tied to money.",
+   "kind": "secondary"
+  },
+  {
+   "id": "repo-verified-facts",
+   "title": "The first pass verified facts on the Antoine's dishes",
+   "publisher": "This repository",
+   "url": "tools/house/brennans/research/verified-facts.json",
+   "supports": "Antoine Alciatore died in 1877; say 'at Antoine's'; most versions today use creamed spinach.",
+   "kind": "secondary"
+  },
+  {
+   "id": "wikipedia-gratin",
+   "title": "Gratin",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Gratin",
+   "supports": "From gratter, to scrape; a dish topped with a browned crust, often breadcrumbs or cheese.",
+   "kind": "secondary"
+  },
+  {
+   "id": "connexion-gratin",
+   "title": "Learning French: the origins and meaning of gratin",
+   "publisher": "Connexion France",
+   "url": "https://www.connexionfrance.com/magazine/learning-french-the-origins-and-meaning-of-gratin/714682",
+   "supports": "The word first described what was left in the pot.",
+   "kind": "secondary"
+  },
+  {
+   "id": "culinarylore-gratin",
+   "title": "What does 'Au Gratin' Mean?",
+   "publisher": "Culinary Lore",
+   "url": "https://culinarylore.com/dishes:what-does-au-gratin-mean/",
+   "supports": "Au gratin does not mean with cheese.",
+   "kind": "secondary"
+  },
+  {
+   "id": "merriam-webster-au-gratin",
+   "title": "au gratin",
+   "publisher": "Merriam-Webster",
+   "url": "https://www.merriam-webster.com/dictionary/au%20gratin",
+   "supports": "Covered with bread crumbs or grated cheese and browned.",
+   "kind": "primary"
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "dish": "Herbed Potato Purée",
+ "readOn": "2026-11-22",
+ "sheet": {
+  "line": "Herbed Potato Purée: 7 (a bare figure, read as $7; SIDES FOR THE TABLE, second)",
+  "section": "SIDES FOR THE TABLE"
+ },
+ "facts": [
+  {
+   "text": "Pommes puree, the French potato puree, is smoother and denser than an everyday mash: the cooked potatoes are pressed through a ricer or food mill, or traditionally passed through a fine sieve called a tamis, and a large share of butter and cream is worked in; overworking makes potatoes gluey.",
+   "sourceIds": [
+    "atk-pommes-puree",
+    "cooks-illustrated-pommes-puree",
+    "food52-potato-puree",
+    "masterclass-potato-puree"
+   ]
+  }
+ ],
+ "sayIt": [
+  {
+   "word": "purée",
+   "respell": "pyoo-RAY"
+  },
+  {
+   "word": "pommes purée",
+   "respell": "pom pyoo-RAY"
+  },
+  {
+   "word": "tamis",
+   "respell": "TAM-ee"
+  }
+ ],
+ "unsourced": [
+  "How every web page was read: through search result summaries only (WebFetch is refused on this network). Each source says what its summary supported. A refuter with page access should open the pages behind any line that goes on a card.",
+  "Which herbs, the method, the butter and cream, and whether it is the same purée as the beef tenderloin plate: not printed, asked of the chef."
+ ],
+ "sources": [
+  {
+   "id": "sheet-2026-11-22",
+   "title": "Brennan's sheets photographed on 22 November 2026, sheet 1, the Thanksgiving Day menu (Happy Thanksgiving from Brennan's, 3 Courses $80, choice of appetizer, entree and dessert, with Sides for the Table)",
+   "publisher": "The house's own menu sheet, transcribed in this repository",
+   "url": "tools/house/brennans/research/menu-2026-11-22-sheets.md; tools/house/brennans/pages/brennans-sheets-2026-11-22.txt",
+   "supports": "The dish name and its printed line, word for word. The sheet prints no method, recipe, portion, source of any ingredient, allergen marks or wine.",
+   "kind": "primary"
+  },
+  {
+   "id": "repo-pack",
+   "title": "The house pack as shipped at the November edition (3dcc4b5): the wine list, the bottle list, the zero proof drinks and the components already filed",
+   "publisher": "This repository",
+   "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+   "supports": "Every wine and drink named in the pairing, with its printed price and profile, and the components the dish shares with the rest of the menu.",
+   "kind": "secondary"
+  },
+  {
+   "id": "atk-pommes-puree",
+   "title": "French-Style Mashed Potatoes (Pommes Puree)",
+   "publisher": "America's Test Kitchen",
+   "url": "https://www.americastestkitchen.com/recipes/9246-french-style-mashed-potatoes-pommes-puree",
+   "supports": "The tamis as the traditional sieve.",
+   "kind": "secondary"
+  },
+  {
+   "id": "cooks-illustrated-pommes-puree",
+   "title": "Ultimate French Mashed Potatoes",
+   "publisher": "Cook's Illustrated",
+   "url": "https://cooksillustrated.com/articles/332-ultimate-french-mashed-potatoes",
+   "supports": "A food mill gives a smooth puree; plenty of butter and cream.",
+   "kind": "secondary"
+  },
+  {
+   "id": "food52-potato-puree",
+   "title": "Classic French Potato Puree (Extra Smooth)",
+   "publisher": "Food52",
+   "url": "https://food52.com/recipes/1068-classic-french-potato-puree-extra-smooth",
+   "supports": "A ricer or food mill; overworking makes potatoes gluey.",
+   "kind": "secondary"
+  },
+  {
+   "id": "masterclass-potato-puree",
+   "title": "Potato Puree Recipe",
+   "publisher": "MasterClass",
+   "url": "https://www.masterclass.com/articles/potato-puree-recipe",
+   "supports": "Lighter and smoother than mashed, pressed through a ricer.",
+   "kind": "secondary"
+  }
+ ]
+}

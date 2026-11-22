@@ -1,0 +1,143 @@
+{
+ "dish": "Sweet Potato Agnolotti",
+ "readOn": "2026-11-22",
+ "sheet": {
+  "line": "Sweet Potato Agnolotti: Candied Pecans, Brown Butter, Chèvre",
+  "section": "APPETIZERS, fifth"
+ },
+ "facts": [
+  {
+   "text": "Agnolotti are a filled pasta of Piedmont in northwest Italy. Where ravioli are two pieces of pasta sealed around a filling, agnolotti are made from one piece folded over it; the small pinched kind is agnolotti del plin. The origin of the name is not settled (a cook of Montferrat in one legend, the Latin anellus in another).",
+   "sourceIds": [
+    "wikipedia-agnolotti",
+    "italymagazine-agnolotti",
+    "cooksinfo-agnolotti"
+   ]
+  },
+  {
+   "text": "Louisiana growers began calling their moist, orange sweet potatoes yams to set them apart from drier Eastern kinds; the LSU AgCenter dates the name to the 1930s and calls yam the trademark of the Louisiana sweet potato, though botanically a sweet potato and a true yam are not even in the same family. The Beauregard variety, released by the LSU AgCenter in 1987 and named for the Confederate general P. G. T. Beauregard, became an industry standard across the United States.",
+   "sourceIds": [
+    "lsuagcenter-call-me-yam",
+    "lsuagcenter-variety-descriptions",
+    "lsuagcenter-most-popular-vegetable"
+   ]
+  },
+  {
+   "text": "Chevre is the French word for goat, short for fromage de chevre; in English it means goat cheese, most often the fresh, soft, tangy kind. Said SHEV-ruh.",
+   "sourceIds": [
+    "merriam-webster-chevre",
+    "wikipedia-goat-cheese",
+    "culture-chevre"
+   ]
+  }
+ ],
+ "sayIt": [
+  {
+   "word": "agnolotti",
+   "respell": "ah-nyoh-LOT-tee"
+  },
+  {
+   "word": "chèvre",
+   "respell": "SHEV-ruh"
+  },
+  {
+   "word": "Piedmont",
+   "respell": "PEED-mont"
+  }
+ ],
+ "unsourced": [
+  "How every web page was read: through search result summaries only (WebFetch is refused on this network). Each source says what its summary supported. A refuter with page access should open the pages behind any line that goes on a card.",
+  "What is in the filling besides sweet potato, where the chevre sits, whether the pasta is made in house: not printed, asked of the chef.",
+  "The plant breeder who released the Beauregard is not named (whether living was not checked)."
+ ],
+ "sources": [
+  {
+   "id": "sheet-2026-11-22",
+   "title": "Brennan's sheets photographed on 22 November 2026, sheet 1, the Thanksgiving Day menu (Happy Thanksgiving from Brennan's, 3 Courses $80, choice of appetizer, entree and dessert, with Sides for the Table)",
+   "publisher": "The house's own menu sheet, transcribed in this repository",
+   "url": "tools/house/brennans/research/menu-2026-11-22-sheets.md; tools/house/brennans/pages/brennans-sheets-2026-11-22.txt",
+   "supports": "The dish name and its printed line, word for word. The sheet prints no method, recipe, portion, source of any ingredient, allergen marks or wine.",
+   "kind": "primary"
+  },
+  {
+   "id": "repo-pack",
+   "title": "The house pack as shipped at the November edition (3dcc4b5): the wine list, the bottle list, the zero proof drinks and the components already filed",
+   "publisher": "This repository",
+   "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+   "supports": "Every wine and drink named in the pairing, with its printed price and profile, and the components the dish shares with the rest of the menu.",
+   "kind": "secondary"
+  },
+  {
+   "id": "wikipedia-agnolotti",
+   "title": "Agnolotti",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Agnolotti",
+   "supports": "Piedmont; one piece folded over the filling; del plin, pinched; the name theories.",
+   "kind": "secondary"
+  },
+  {
+   "id": "italymagazine-agnolotti",
+   "title": "Agnolotti: Piedmont's Classic Ravioli",
+   "publisher": "Italy Magazine",
+   "url": "https://italymagazine.com/recipe/agnolotti-piedmonts-classic-ravioli",
+   "supports": "Agnolotti as the filled pasta of Piedmont.",
+   "kind": "secondary"
+  },
+  {
+   "id": "cooksinfo-agnolotti",
+   "title": "Agnolotti",
+   "publisher": "CooksInfo",
+   "url": "https://www.cooksinfo.com/agnolotti",
+   "supports": "Ravioli of two pieces against agnolotti of one folded piece.",
+   "kind": "secondary"
+  },
+  {
+   "id": "lsuagcenter-call-me-yam",
+   "title": "'Or you can call me Yam...'",
+   "publisher": "LSU AgCenter, Louisiana Agriculture magazine, spring 2009",
+   "url": "https://www.lsuagcenter.com/portals/communications/publications/agmag/archive/2009/spring/or-you-can-call-me-yam",
+   "supports": "The 1930s; yam as the trademark of the Louisiana sweet potato; not a true yam.",
+   "kind": "primary"
+  },
+  {
+   "id": "lsuagcenter-variety-descriptions",
+   "title": "Sweet Potato Variety Descriptions",
+   "publisher": "LSU AgCenter Sweet Potato Research Station",
+   "url": "https://www.lsuagcenter.com/portals/our_offices/research_stations/sweetpotato/features/varieties/sweet-potato-variety-descriptions",
+   "supports": "Beauregard released in 1987, an industry standard.",
+   "kind": "primary"
+  },
+  {
+   "id": "lsuagcenter-most-popular-vegetable",
+   "title": "Sweet Potato Louisiana's Most Popular Vegetable",
+   "publisher": "LSU AgCenter",
+   "url": "https://www.lsuagcenter.com/portals/communications/publications/agmag/archive/2012/spring/sweet-potato-louisianas-most-popular-vegetable",
+   "supports": "Beauregard named for General P. G. T. Beauregard.",
+   "kind": "primary"
+  },
+  {
+   "id": "merriam-webster-chevre",
+   "title": "chevre",
+   "publisher": "Merriam-Webster",
+   "url": "https://www.merriam-webster.com/dictionary/chevre",
+   "supports": "French for goat; cheese made from goat milk; from Latin capra.",
+   "kind": "primary"
+  },
+  {
+   "id": "wikipedia-goat-cheese",
+   "title": "Goat cheese",
+   "publisher": "Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Goat_cheese",
+   "supports": "The respelling SHEV(-ruh).",
+   "kind": "secondary"
+  },
+  {
+   "id": "culture-chevre",
+   "title": "Style Highlight: Fresh Goat Cheese (Chevre)",
+   "publisher": "culture: the word on cheese",
+   "url": "https://culturecheesemag.com/cheese-iq/style-highlight-fresh-goat-cheese-chevre",
+   "supports": "Chevre as fresh goat cheese.",
+   "kind": "secondary"
+  }
+ ]
+}

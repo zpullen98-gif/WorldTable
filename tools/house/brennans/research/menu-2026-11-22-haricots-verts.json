@@ -1,0 +1,61 @@
+{
+ "dish": "Haricots Verts",
+ "readOn": "2026-11-22",
+ "sheet": {
+  "line": "Haricots Verts: 7 (a bare figure, read as $7; SIDES FOR THE TABLE, third)",
+  "section": "SIDES FOR THE TABLE"
+ },
+ "facts": [
+  {
+   "text": "Haricots verts is French for green beans and names the thin French type; green beans are the young pods of the common bean, Phaseolus vulgaris, which came to the world from Mexico and the Andes; the stringless pod was bred in the nineteenth century; cooked briefly they stay bright green with a snap, cooked long they go soft and olive coloured. Blanching and shocking in iced water keep the colour.",
+   "sourceIds": [
+    "repo-green-beans",
+    "repo-blanching"
+   ]
+  }
+ ],
+ "sayIt": [
+  {
+   "word": "haricots verts",
+   "respell": "ah-ree-koh VAIR"
+  }
+ ],
+ "unsourced": [
+  "How every web page was read: through search result summaries only (WebFetch is refused on this network). Each source says what its summary supported. A refuter with page access should open the pages behind any line that goes on a card.",
+  "How the house finishes them (butter, shallot, nuts, bacon or nothing): not printed, asked of the chef. No search was spent: the facts stand in the house research already."
+ ],
+ "sources": [
+  {
+   "id": "sheet-2026-11-22",
+   "title": "Brennan's sheets photographed on 22 November 2026, sheet 1, the Thanksgiving Day menu (Happy Thanksgiving from Brennan's, 3 Courses $80, choice of appetizer, entree and dessert, with Sides for the Table)",
+   "publisher": "The house's own menu sheet, transcribed in this repository",
+   "url": "tools/house/brennans/research/menu-2026-11-22-sheets.md; tools/house/brennans/pages/brennans-sheets-2026-11-22.txt",
+   "supports": "The dish name and its printed line, word for word. The sheet prints no method, recipe, portion, source of any ingredient, allergen marks or wine.",
+   "kind": "primary"
+  },
+  {
+   "id": "repo-pack",
+   "title": "The house pack as shipped at the November edition (3dcc4b5): the wine list, the bottle list, the zero proof drinks and the components already filed",
+   "publisher": "This repository",
+   "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+   "supports": "Every wine and drink named in the pairing, with its printed price and profile, and the components the dish shares with the rest of the menu.",
+   "kind": "secondary"
+  },
+  {
+   "id": "repo-green-beans",
+   "title": "The green beans component and its research",
+   "publisher": "This repository",
+   "url": "tools/house/brennans/components/dishes.json (green-beans); research/ingredients-comp-6-2026-10-17.md (section 5)",
+   "supports": "Phaseolus vulgaris, Mexico and the Andes, haricots verts as the thin French type, the stringless pod, brief cooking.",
+   "kind": "secondary"
+  },
+  {
+   "id": "repo-blanching",
+   "title": "The blanching and shocking component",
+   "publisher": "This repository",
+   "url": "tools/house/brennans/components/dishes.json (blanching-and-shocking); research/ingredients-comp-4-2026-10-17.md (section 10)",
+   "supports": "Blanching keeps a green vegetable bright.",
+   "kind": "secondary"
+  }
+ ]
+}

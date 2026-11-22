@@ -1,0 +1,75 @@
+{
+ "dish": "Cranberry Sauce",
+ "readOn": "2026-11-22",
+ "sheet": {
+  "line": "Cranberry Sauce: 7 (a bare figure, read as $7; SIDES FOR THE TABLE, fourth, the last in the photograph)",
+  "section": "SIDES FOR THE TABLE"
+ },
+ "facts": [
+  {
+   "text": "The American cranberry, Vaccinium macrocarpon, is native to the wetlands of central and eastern North America; Native Americans gathered it from peat bogs and marshes before colonists came. Growers flood the bogs at harvest and the berries, each holding pockets of air, float. Fresh cranberries are harvested from mid-September through mid-November, in time for Thanksgiving, though the record does not show them at the first feast; the USDA National Agricultural Library notes no clear precedent.",
+   "sourceIds": [
+    "usda-nal-cranberries",
+    "pbs-cranberries",
+    "theconversation-cranberries",
+    "smithsonian-libraries-cranberry"
+   ]
+  }
+ ],
+ "sayIt": [],
+ "unsourced": [
+  "How every web page was read: through search result summaries only (WebFetch is refused on this network). Each source says what its summary supported. A refuter with page access should open the pages behind any line that goes on a card.",
+  "Whether the house sauce is smooth or whole berry, house made, and what is in it: not printed, asked of the chef.",
+  "Commercial farming in Massachusetts from 1810: one search summary only, left out."
+ ],
+ "sources": [
+  {
+   "id": "sheet-2026-11-22",
+   "title": "Brennan's sheets photographed on 22 November 2026, sheet 1, the Thanksgiving Day menu (Happy Thanksgiving from Brennan's, 3 Courses $80, choice of appetizer, entree and dessert, with Sides for the Table)",
+   "publisher": "The house's own menu sheet, transcribed in this repository",
+   "url": "tools/house/brennans/research/menu-2026-11-22-sheets.md; tools/house/brennans/pages/brennans-sheets-2026-11-22.txt",
+   "supports": "The dish name and its printed line, word for word. The sheet prints no method, recipe, portion, source of any ingredient, allergen marks or wine.",
+   "kind": "primary"
+  },
+  {
+   "id": "repo-pack",
+   "title": "The house pack as shipped at the November edition (3dcc4b5): the wine list, the bottle list, the zero proof drinks and the components already filed",
+   "publisher": "This repository",
+   "url": "static/shared/packs/brennans-new-orleans.v1.oothouse.json",
+   "supports": "Every wine and drink named in the pairing, with its printed price and profile, and the components the dish shares with the rest of the menu.",
+   "kind": "secondary"
+  },
+  {
+   "id": "usda-nal-cranberries",
+   "title": "Cranberries",
+   "publisher": "USDA National Agricultural Library",
+   "url": "https://www.nal.usda.gov/collections/stories/cranberries",
+   "supports": "Native gathering; no clear precedent for these foods at the first Thanksgiving.",
+   "kind": "primary"
+  },
+  {
+   "id": "pbs-cranberries",
+   "title": "The botany behind why cranberries became a Thanksgiving staple",
+   "publisher": "PBS NewsHour",
+   "url": "https://www.pbs.org/newshour/science/the-botany-behind-why-cranberries-became-a-thanksgiving-staple",
+   "supports": "Harvest from mid-September through mid-November.",
+   "kind": "secondary"
+  },
+  {
+   "id": "theconversation-cranberries",
+   "title": "Cranberries can bounce, float and pollinate themselves",
+   "publisher": "The Conversation",
+   "url": "https://theconversation.com/cranberries-can-bounce-float-and-pollinate-themselves-the-saucy-science-of-a-thanksgiving-classic-216326",
+   "supports": "Air pockets; flooded bog harvest; native to North America.",
+   "kind": "secondary"
+  },
+  {
+   "id": "smithsonian-libraries-cranberry",
+   "title": "Native fruit: cranberry seasons",
+   "publisher": "Smithsonian Libraries",
+   "url": "https://blog.library.si.edu/blog/2017/11/14/native-fruit-cranberry-seasons/",
+   "supports": "Native to the wetlands of central and eastern North America.",
+   "kind": "secondary"
+  }
+ ]
+}
