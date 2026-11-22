@@ -5021,7 +5021,7 @@
       "kind": "story",
       "name": "Crémeux, the pastry word for creamy",
       "say": "",
-      "explain": "Crémeux is simply the French adjective creamy, and French pastry turned it into a noun for a particular kind of set cream: a crème anglaise emulsified with chocolate, or with a fruit purée, set cold and served smooth. It is a word from the professional pastry kitchen rather than a dish with a birthplace, so there is no inventor and no city to name, and the honest story is the texture: denser than a mousse, softer than a ganache, nothing whipped in.\n\nOn the Fall 2026 tasting menu the crémeux is the chocolate course, built as a study in contrast: smooth cream, crunchy bitter nibs, bright lemon oil and crisp salt. Our dinner tasting closes with The Snickers and a glass of Banyuls, chocolate's classic partner; the Fall tasting's crémeux is chocolate in the French pastry idiom instead, and the Banyuls fits it as well. The salt gives the plate its one named origin, the Essex coast of England.",
+      "explain": "Crémeux is simply the French adjective creamy, and French pastry turned it into a noun for a particular kind of set cream: a crème anglaise emulsified with chocolate, or with a fruit purée, set cold and served smooth. It is a word from the professional pastry kitchen rather than a dish with a birthplace, so there is no inventor and no city to name, and the honest story is the texture: denser than a mousse, softer than a ganache, nothing whipped in.\n\nOn the Fall 2026 tasting menu the crémeux is the chocolate course, built as a study in contrast: smooth cream, crunchy bitter nibs, bright lemon oil and crisp salt. Our dinner tasting closes with the Chocolate Crémeux and a glass of Banyuls, chocolate's classic partner. The salt gives the plate its one named origin, the Essex coast of England.",
       "card": {
         "front": "Where does the word crémeux come from?",
         "back": "From the French for creamy: a pastry kitchen's word for a set cream of custard and chocolate, not a dish with a birthplace. Tell the texture story, not an inventor, and name the salt's Essex coast."
@@ -7361,6 +7361,810 @@
         "guide.txt (pdf p16, p35, p49)",
         "research/ingredients-comp-6-2026-10-17.md (sections 1 and 10)"
       ]
+    },
+    {
+      "key": "story-oysters-rockefeller",
+      "kind": "story",
+      "name": "Oysters Rockefeller, born at Antoine’s",
+      "say": "ROCK-uh-fell-er",
+      "explain": "Oysters Rockefeller was created at Antoine's in the French Quarter, around 1899 by most accounts, and is credited to Jules Alciatore, son of the founder. The usual story is that local oysters took the place of snails that were hard to import. The dish was named for John D. Rockefeller, the richest American of the day, for the richness of its green sauce. The classic is oysters on the half shell under that sauce and breadcrumbs, baked or broiled.\n\nAntoine's keeps its recipe secret and has long said it holds no spinach; most cooks since have used spinach.\n\nOur Rockefeller Gratin is the Thanksgiving Day version: oysters, bacon, creamed spinach and breadcrumbs baked as a gratin. Say it is our take on the classic, not Antoine's recipe.",
+      "card": {
+        "front": "Where and when was oysters Rockefeller created?",
+        "back": "At Antoine's in the French Quarter, around 1899 by most accounts, credited to Jules Alciatore and named for John D. Rockefeller for its rich green sauce."
+      },
+      "items": [
+        "Rockefeller Gratin"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-rockefeller-gratin.json (classic)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)"
+      ]
+    },
+    {
+      "key": "gratin-crust",
+      "kind": "technique",
+      "name": "Gratin, the browned crust",
+      "say": "grah-TAN",
+      "explain": "A gratin is a dish baked or grilled until a browned crust forms on top, most often of breadcrumbs, cheese or both. The word comes from the French gratter, to scrape: it first named the crust that stuck to the pot and was scraped off, and only later the dish with a deliberate crust. Au gratin does not mean with cheese, whatever many menus suggest.\n\nThe crust is the point: crunch and toasted flavour over something soft and rich underneath.\n\nOn the Rockefeller Gratin the breadcrumbs bake into that crust over oysters, bacon and creamed spinach. How long and how hot the kitchen bakes it is a lineup question.",
+      "card": {
+        "front": "What does gratin mean, and does it mean cheese?",
+        "back": "From the French gratter, to scrape: a dish baked until a browned crust forms on top, often breadcrumbs. Au gratin does not mean with cheese."
+      },
+      "items": [
+        "Rockefeller Gratin"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-rockefeller-gratin.json (facts)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)"
+      ]
+    },
+    {
+      "key": "belgian-endive",
+      "kind": "ingredient",
+      "name": "Belgian endive",
+      "say": "EN-dive or ahn-DEEV",
+      "explain": "Belgian endive is chicory grown twice: the roots are lifted and forced again in the dark, so the new leaves grow into a tight, pale spear, crisp and only gently bitter. Light turns them green and much more bitter, which is why it is grown and stored in the dark. The Flemish call it witloof, white leaf; it was developed around Brussels in the 1830s.\n\nCurly endive, or frisée, is a different chicory with ragged green leaves and a sharper bite; both belong to the chicory family, and a menu that says endive can mean either.\n\nThe Endive Satsuma Salad prints endive and no more, so confirm at lineup which one the kitchen uses before describing the leaf to a guest.",
+      "card": {
+        "front": "Why is Belgian endive pale and only gently bitter?",
+        "back": "It is chicory forced from the root in the dark, so the leaves stay white, tight and mild; light turns them green and bitter. The Flemish call it witloof."
+      },
+      "items": [
+        "Endive Satsuma Salad"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-endive-satsuma-salad.json (facts 3)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)"
+      ]
+    },
+    {
+      "key": "satsuma",
+      "kind": "ingredient",
+      "name": "Satsuma",
+      "say": "sat-SOO-muh",
+      "explain": "The satsuma is a mandarin, Citrus unshiu, first recorded in Japan centuries ago and named in the West for the old Satsuma province, now Kagoshima. It reached the United States in the 1870s. It is usually seedless, with a loose skin that peels easily, and sweet, mild segments.\n\nIn Louisiana it is the main citrus: satsumas are most of the state's citrus acreage, and Plaquemines Parish is the centre of the crop. They ripen in the autumn, from about October into December, and growers say colour is no sure sign of sweetness.\n\nThe Endive Satsuma Salad sets the fruit against bitter endive and a cherry vinaigrette. The sheet does not say whether the satsumas are local, so ask before calling them Louisiana fruit.",
+      "card": {
+        "front": "What is a satsuma, and where does Louisiana grow it?",
+        "back": "A sweet, usually seedless, easy peeling mandarin named for Japan's Satsuma province; Louisiana's main citrus, centred in Plaquemines Parish and harvested from about October into December."
+      },
+      "items": [
+        "Endive Satsuma Salad"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-endive-satsuma-salad.json (facts 1 and 2)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)"
+      ]
+    },
+    {
+      "key": "sunflower-seeds",
+      "kind": "ingredient",
+      "name": "Roasted sunflower seeds",
+      "say": "",
+      "explain": "Sunflower seeds are the kernels of Helianthus annuus, a plant native to North America and domesticated in its east long before Europeans arrived. Roasted, they turn golden and taste nutty and toasty, with a soft crunch rather than the hard snap of an almond.\n\nOn a salad they do the job croutons or nuts would do: texture and a savoury, toasted note against soft leaves and a sharp dressing.\n\nThe Endive Satsuma Salad prints roasted sunflower seeds, though the photograph cuts that line at the page edge, so confirm the wording at lineup. Whether they are salted, seasoned or candied is the kitchen's to say, and seed questions always go to the kitchen.",
+      "card": {
+        "front": "What do the roasted sunflower seeds bring to the endive salad?",
+        "back": "Toasty, nutty crunch against soft leaves and a sharp dressing. The sunflower is native to North America; how ours are seasoned is a question for the kitchen."
+      },
+      "items": [
+        "Endive Satsuma Salad"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-endive-satsuma-salad.json (facts 4)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)"
+      ]
+    },
+    {
+      "key": "sweet-potato",
+      "kind": "ingredient",
+      "name": "Louisiana sweet potatoes",
+      "say": "",
+      "explain": "Louisiana growers began calling their moist, orange sweet potatoes yams to set them apart from the drier kinds grown further east; the LSU AgCenter dates the name to the 1930s and calls yam the trademark of the Louisiana sweet potato. Botanically it is no yam at all: a true yam belongs to a different plant family.\n\nThe Beauregard, released by the LSU AgCenter in 1987, became an industry standard across the United States, an orange-fleshed variety.\n\nOn Thanksgiving Day the sweet potato appears twice: inside the Sweet Potato Agnolotti, as the name says, and in the Sweet Potato Pot de Crème. The sheet does not say where the potatoes are from, so ask before calling them Louisiana grown.",
+      "card": {
+        "front": "Why do Louisianans call sweet potatoes yams?",
+        "back": "A marketing name from the 1930s to set the moist, orange Louisiana sweet potato apart; botanically it is no yam. The Beauregard, from the LSU AgCenter in 1987, became an industry standard."
+      },
+      "items": [
+        "Sweet Potato Agnolotti",
+        "Sweet Potato Pot de Crème"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-sweet-potato-agnolotti.json (facts 2)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)"
+      ]
+    },
+    {
+      "key": "agnolotti-folded",
+      "kind": "technique",
+      "name": "Agnolotti, the folded pasta",
+      "say": "ah-nyoh-LOT-tee",
+      "explain": "Agnolotti are a filled pasta of Piedmont in northwest Italy. Ravioli are two pieces of pasta sealed around a filling; agnolotti are made from one piece folded over it and pressed shut, so each parcel has a fold on one side. The small pinched kind is agnolotti del plin. Where the name comes from is not settled.\n\nThe pinched agnolotti del plin are the miniature form, normally about three centimetres across, and plin means pinched.\n\nOur fall menu's Agnolotti del Plin are the pinched kind with pork; the Thanksgiving Day Sweet Potato Agnolotti are filled, as the name says, with sweet potato, finished in brown butter with candied pecans and chèvre. Do not mix the two up at the table.",
+      "card": {
+        "front": "How do agnolotti differ from ravioli?",
+        "back": "Ravioli are two sheets sealed around a filling; agnolotti, from Piedmont, are one sheet folded over it. Our Thanksgiving agnolotti hold sweet potato."
+      },
+      "items": [
+        "Sweet Potato Agnolotti"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-sweet-potato-agnolotti.json (facts 1)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)",
+        "components/dishes.json (agnolotti-del-plin-pasta)"
+      ]
+    },
+    {
+      "key": "chevre",
+      "kind": "ingredient",
+      "name": "Chèvre",
+      "say": "SHEV-ruh",
+      "explain": "Chèvre is the French word for goat, short for fromage de chèvre, goat cheese. In English it usually means the fresh, soft kind: white, creamy and tangy, with a clean, lactic sourness that cuts through sweet and rich food.\n\nFresh chèvre crumbles or spreads; aged goat cheeses grow firmer and stronger, but a menu that says chèvre most often means the fresh one.\n\nOn the Sweet Potato Agnolotti the chèvre's tang balances the sweet potato, the brown butter and the candied pecans. The sheet does not say whether it is in the filling or on top, or which cheese it is, so confirm at lineup; any question about dairy or what is in the cheese goes to the kitchen.",
+      "card": {
+        "front": "What is chèvre, and what does it do on the agnolotti?",
+        "back": "French for goat: here fresh goat cheese, soft and tangy. Its tang balances the sweet potato, brown butter and candied pecans; where it sits is a lineup question."
+      },
+      "items": [
+        "Sweet Potato Agnolotti"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-sweet-potato-agnolotti.json (facts 3)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)"
+      ]
+    },
+    {
+      "key": "bay-scallops",
+      "kind": "ingredient",
+      "name": "Bay scallops, served raw",
+      "say": "",
+      "explain": "Bay scallops are the small scallops of shallow bays and estuaries, half an inch to an inch across and often seventy to a hundred or more to the pound. Sea scallops come from deeper water, larger, often ten to thirty to the pound. Bay scallops are the sweeter and more tender; sea scallops are firmer and chewier. What a guest eats is the adductor, the round muscle that closes the shell.\n\nUnder the FDA Food Code a scallop served as the shucked adductor muscle alone is exempt from the parasite freezing most raw fish needs, as oysters are; the consumer advisory for raw food still applies.\n\nOn the Bay Scallop Crudo they are served raw. Where tonight's scallops come from, and the advisory wording the house wants, are lineup questions.",
+      "card": {
+        "front": "How do bay scallops differ from sea scallops?",
+        "back": "Bay scallops are small, half an inch to an inch across, from shallow bays, sweeter and more tender; sea scallops are larger, from deeper water, firmer. Ours are served raw, with the advisory."
+      },
+      "items": [
+        "Bay Scallop Crudo"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-bay-scallop-crudo.json (facts 1 and 2)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)"
+      ]
+    },
+    {
+      "key": "meyer-lemon",
+      "kind": "ingredient",
+      "name": "Meyer lemon",
+      "say": "MY-er",
+      "explain": "The Meyer lemon came to the United States in 1908, collected near Peking by Frank N. Meyer, a USDA plant explorer, and it carries his name. It is deep yellow with an orange tint when ripe, thin skinned and juicy, and sweeter and less acidic than a common Eureka or Lisbon lemon. Long called a cross of lemon and mandarin, it is now thought to descend from citron, mandarin and pummelo.\n\nLess sharp than a common lemon, it brightens delicate food with less sourness.\n\nOn the Bay Scallop Crudo it brightens raw scallops gently. Whether the kitchen uses juice, zest or segments is a lineup question.",
+      "card": {
+        "front": "What makes a Meyer lemon different from a common lemon?",
+        "back": "It is sweeter and less acidic, deep yellow and thin skinned; brought from near Peking in 1908 by Frank N. Meyer, a USDA plant explorer."
+      },
+      "items": [
+        "Bay Scallop Crudo"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-bay-scallop-crudo.json (facts 3)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)",
+        "components/dishes.json (lemon)"
+      ]
+    },
+    {
+      "key": "black-truffle",
+      "kind": "ingredient",
+      "name": "Black truffle",
+      "say": "",
+      "explain": "The black Périgord truffle, Tuber melanosporum, is the winter truffle of south west France and Spain, dug from about mid-November to mid-March with dogs or pigs, and prized above all for its aroma, earthy and savoury. A cheaper winter truffle, the brumale, grows in the same soils and is often confused with it.\n\nTruffles grow underground and are found by scent, and their aroma changes as they are stored, which is why a guest may ask whether one is fresh.\n\nThe Bay Scallop Crudo prints black truffle, cut at the page edge. Which truffle it is, fresh or preserved, is the kitchen's answer: do not promise a fresh Périgord truffle until you know.",
+      "card": {
+        "front": "What is the black Périgord truffle, and when is it in season?",
+        "back": "Tuber melanosporum, a winter truffle dug from about mid-November to mid-March, valued for its earthy aroma. Which truffle the crudo carries, fresh or preserved, is a lineup question."
+      },
+      "items": [
+        "Bay Scallop Crudo"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-bay-scallop-crudo.json (facts 4)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)"
+      ]
+    },
+    {
+      "key": "radish",
+      "kind": "ingredient",
+      "name": "Radish",
+      "say": "",
+      "explain": "The radish is a root of the mustard family, crisp, juicy and cool, with a peppery bite. The bite is not in the intact root: when it is cut or chewed, glucosinolates and an enzyme stored apart in its cells meet and form isothiocyanates, the same mustard oils that give mustard, horseradish and wasabi their heat.\n\nThe plant makes these compounds to keep fungi and grazing animals away; to a cook they are simply the pepper.\n\nOn the Bay Scallop Crudo the radish gives crunch and a little pepper against the soft, sweet scallop and the citrus. How it is cut, and which radish, are the kitchen's to tell you at lineup.",
+      "card": {
+        "front": "Where does a radish get its peppery bite?",
+        "back": "Cutting or chewing mixes glucosinolates with an enzyme, forming mustard oils, the same heat as mustard and horseradish. On the crudo it adds crunch and pepper."
+      },
+      "items": [
+        "Bay Scallop Crudo"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-bay-scallop-crudo.json (facts 5)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)"
+      ]
+    },
+    {
+      "key": "pot-de-creme",
+      "kind": "technique",
+      "name": "Pot de crème, the custard in its pot",
+      "say": "poh duh KREM",
+      "explain": "Pot de crème is French for pot of cream, the cream meaning custard: a loose custard of cream, milk and egg yolks, baked gently until just set, usually in a water bath, and served in the small pot or ramekin it was baked in. It is soft and spoonable.\n\nThe gentle heat is the craft: too hot and the custard curdles into grains and weeps.\n\nThe Thanksgiving Day Sweet Potato Pot de Crème is made with sweet potato, miso, cinnamon and marshmallow fluff. The sheet prints no method, so ask the kitchen how it is set before you describe it.",
+      "card": {
+        "front": "What is a pot de crème?",
+        "back": "French for pot of cream: a silky custard baked gently, usually in a water bath, and served in the little pot it set in. Ours is sweet potato."
+      },
+      "items": [
+        "Sweet Potato Pot de Crème"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-sweet-potato-pot-de-creme.json (facts 1)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)",
+        "components/dishes.json (custard)"
+      ]
+    },
+    {
+      "key": "miso-in-dessert",
+      "kind": "ingredient",
+      "name": "Miso in a dessert",
+      "say": "MEE-soh",
+      "explain": "Miso is a Japanese paste of soybeans fermented with salt and koji. In a dessert it does what salt does in salted caramel: a little brings savoury depth and makes the sweetness taste rounder and less flat. White, or shiro, miso is the mildest and sweetest and the usual choice; pastry cooks warn that too much overwhelms a sweet dish. Miso caramel is the most common form.\n\nThe soybeans make it a soy question every time, and those questions go to the service note and the kitchen.\n\nOn the Sweet Potato Pot de Crème the miso sits with sweet potato, cinnamon and marshmallow. Which miso, and whether it is in the custard or a caramel, is the kitchen's to say.",
+      "card": {
+        "front": "Why would a pastry cook put miso in a dessert?",
+        "back": "For salt and savoury depth, the way salted caramel works: it makes sweetness taste rounder. White miso is the usual choice. Soy questions go to the kitchen."
+      },
+      "items": [
+        "Sweet Potato Pot de Crème"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-sweet-potato-pot-de-creme.json (facts 2)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)",
+        "components/dishes.json (miso-butter)"
+      ]
+    },
+    {
+      "key": "marshmallow-fluff",
+      "kind": "ingredient",
+      "name": "Marshmallow Fluff",
+      "say": "",
+      "explain": "Marshmallow Fluff is a marshmallow creme, a soft, spoonable whipped marshmallow sold in jars. The recipe was first sold door to door in Somerville, Massachusetts, and bought by two candy makers of Lynn, H. Allen Durkee and Fred Mower, whose firm, Durkee-Mower, still makes it in Lynn; their partnership dates to 1920.\n\nIt is sweet, sticky and light, and it browns under heat like a marshmallow.\n\nThe Sweet Potato Pot de Crème prints marshmallow fluff, a nod to the sweet potato and marshmallow casserole. Whether the kitchen uses the jarred brand or its own whipped marshmallow, and whether it is toasted, are lineup questions; questions about what is in it go to the kitchen.",
+      "card": {
+        "front": "What is Marshmallow Fluff?",
+        "back": "A marshmallow creme, soft whipped marshmallow in a jar, made by Durkee-Mower in Lynn, Massachusetts. Whether ours is the brand or house made is a lineup question."
+      },
+      "items": [
+        "Sweet Potato Pot de Crème"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-sweet-potato-pot-de-creme.json (facts 3)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)"
+      ]
+    },
+    {
+      "key": "story-sweet-potato-marshmallow",
+      "kind": "story",
+      "name": "Marshmallows on sweet potatoes",
+      "say": "",
+      "explain": "The first documented recipe for mashed sweet potatoes baked under a marshmallow topping appeared in 1917, in a recipe booklet the Angelus Marshmallow company commissioned from Janet McKenzie Hill of the Boston Cooking School Magazine. The aim was to sell more marshmallows by making them an everyday ingredient, and it worked: Angelus, later Campfire, printed more sweet potato and marshmallow recipes around 1930.\n\nThe casserole spread from there to holiday tables across the country, which is why guests smile when they read marshmallow beside sweet potato.\n\nThe Sweet Potato Pot de Crème turns that casserole into a French custard: sweet potato, cinnamon, miso and marshmallow fluff. It is a story worth one line at the table.",
+      "card": {
+        "front": "Where does marshmallow on sweet potato come from?",
+        "back": "A 1917 recipe booklet the Angelus Marshmallow company commissioned to sell marshmallows printed the first documented recipe; the casserole became a Thanksgiving habit. Our pot de crème recalls it."
+      },
+      "items": [
+        "Sweet Potato Pot de Crème"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-sweet-potato-pot-de-creme.json (facts 4)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)"
+      ]
+    },
+    {
+      "key": "chocolate-and-orange",
+      "kind": "story",
+      "name": "Chocolate and orange",
+      "say": "",
+      "explain": "Chocolate and orange is an old partnership of the confectioner's shop. Orangettes, strips of orange peel candied slowly and coated in a thin layer of dark chocolate, are its classic form, and chocolatiers describe the appeal as two contrasting tastes, one full bodied and one tangy.\n\nThe reason it works is contrast: tangy, slightly bitter citrus against full bodied cocoa, so each makes the other taste brighter.\n\nOn the Chocolate and Orange Tart the pair is set in a tart with candied hazelnuts for crunch. The sheet does not say where the orange sits, in the filling, the crust or a garnish, so ask the kitchen at lineup.",
+      "card": {
+        "front": "Why do chocolate and orange go together?",
+        "back": "Bright, slightly bitter citrus cuts the weight of cocoa butter, so chocolate tastes deeper and lighter; orangettes, candied peel in dark chocolate, are the classic form."
+      },
+      "items": [
+        "Chocolate and Orange Tart"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-chocolate-and-orange-tart.json (facts 1)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)"
+      ]
+    },
+    {
+      "key": "stuffing-and-dressing",
+      "kind": "story",
+      "name": "Stuffing and dressing",
+      "say": "",
+      "explain": "Stuffing and dressing are the same family of dish, bread or another starch mixed with fat, aromatics and stock. By the usual rule, stuffing is cooked inside the bird and dressing in its own pan, though many cooks use the words for either. In the South, dressing is the common word however it is cooked, and Southern dressing is often made with cornbread.\n\nFood safety guidance asks for 165°F in the centre, whether it is cooked in the bird or in a pan.\n\nOn Thanksgiving Day the turkey comes with its own cornbread dressing, and Titus' BBQ Shrimp Stuffing is a side for the table that carries New Orleans BBQ shrimp. What it is built on is a lineup question.",
+      "card": {
+        "front": "What is the difference between stuffing and dressing?",
+        "back": "By the usual rule, stuffing cooks inside the bird and dressing in a pan; in the South dressing is the common word either way, often made with cornbread."
+      },
+      "items": [
+        "Titus’ BBQ Shrimp Stuffing"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-bbq-shrimp-stuffing.json (facts 2)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)"
+      ]
+    },
+    {
+      "key": "herbed-potato-puree-side",
+      "kind": "technique",
+      "name": "The herbed potato purée, a side for the table",
+      "say": "pom pyoo-RAY",
+      "explain": "Pommes purée is the French potato purée, smoother and denser than an everyday mash. The cooked potatoes are pressed through a ricer or a food mill, or in the old way passed through a fine drum sieve called a tamis, and then a generous share of butter and cream is worked in until it is silky. It is pressed, not beaten, because overworked potato turns gluey.\n\nSo the texture is the test: smooth, glossy and spoonable rather than fluffy.\n\nOn Thanksgiving Day the Herbed Potato Purée is a side for the table, and the beef tenderloin comes with its own pommes purée. Whether they are the same, and which herbs go in, are lineup questions.",
+      "card": {
+        "front": "How is the herbed potato purée side unlike everyday mash?",
+        "back": "The potatoes are pressed through a ricer, food mill or tamis, never beaten, and enriched with plenty of butter and cream, so the purée is silky and dense."
+      },
+      "items": [
+        "Herbed Potato Purée"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-herbed-potato-puree.json (facts 1)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)"
+      ]
+    },
+    {
+      "key": "haricots-verts",
+      "kind": "ingredient",
+      "name": "Haricots verts",
+      "say": "ah-ree-koh VAIR",
+      "explain": "Haricots verts is French for green beans, and on an American menu the words name the thin, slender French type, picked young while the pod is tender and the seeds inside are small. They are the young pods of the common bean, a plant that came to the world's kitchens from Mexico and the Andes.\n\nThey cook in minutes: blanched in salted water and shocked in iced water, then finished in butter or a hot pan, they stay bright green with a snap, and cooked long they turn soft and olive coloured.\n\nOn Thanksgiving Day they are a $7 side for the table, the green that lightens a plate of turkey, purée and stuffing. How the kitchen finishes them is a lineup question.",
+      "card": {
+        "front": "What are haricots verts?",
+        "back": "French for green beans: the thin, slender French type, picked young. Cooked briefly they stay bright and crisp; on Thanksgiving Day they are a $7 side for the table."
+      },
+      "items": [
+        "Haricots Verts"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-haricots-verts.json (facts 1)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)",
+        "components/dishes.json (green-beans, blanching-and-shocking)"
+      ]
+    },
+    {
+      "key": "cranberries",
+      "kind": "ingredient",
+      "name": "Cranberries",
+      "say": "",
+      "explain": "The American cranberry, Vaccinium macrocarpon, is native to the bogs and wetlands of central and eastern North America, and Native peoples gathered it long before colonists came. At harvest, growers flood the bogs and the berries, which hold pockets of air, float to the surface to be gathered. The berries ripen from mid-September to mid-November, so they are in season for Thanksgiving, although the record does not show them at the first feast.\n\nRaw they are sharply sour; cooked with sugar they make a sauce that is tart, bright and sweet.\n\nOn Thanksgiving Day the Cranberry Sauce is a $7 side for the table, and the turkey's jus carries cranberry too. How the house makes its sauce is a lineup question.",
+      "card": {
+        "front": "Why are cranberries on the Thanksgiving table?",
+        "back": "They are native to North American bogs and ripen from mid-September to mid-November, in season for the holiday; cooked with sugar, their sharp acid cuts rich turkey."
+      },
+      "items": [
+        "Cranberry Sauce"
+      ],
+      "terms": [],
+      "sources": [
+        "research/menu-2026-11-22-cranberry-sauce.json (facts 1)",
+        "pages/brennans-sheets-2026-11-22.txt (sheet 1, the Thanksgiving Day menu)"
+      ]
+    },
+    {
+      "terms": [],
+      "key": "buttermilk-brine",
+      "kind": "technique",
+      "name": "Buttermilk brine",
+      "say": "BUT-er-milk brine",
+      "explain": "A brine is salted liquid the meat rests in before it cooks. The salt changes the charges on the meat's proteins so they hold more water, which is why a brined breast stays juicier in the oven. A buttermilk brine adds buttermilk's gentle lactic tang to the salt, a common Thanksgiving method for turkey. Buttermilk also browns quickly, one reason a breast is often brined and roasted apart from the legs.\n\nOn the Thanksgiving Day menu the turkey breast is brined in buttermilk and roasted. How long it brines, and what else goes into the brine, is the kitchen's to say at lineup. Say: the brine seasons the white meat right through and keeps it juicy.",
+      "card": {
+        "front": "What does a buttermilk brine do to a turkey breast?",
+        "back": "The salt helps the lean white meat hold its juice as it roasts and seasons it right through; the buttermilk adds a gentle tang and helps it brown."
+      },
+      "items": [
+        "Roasted Buttermilk-Brined Turkey Breast"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-roasted-buttermilk-brined-turkey-breast.json (classic.brine)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 1)"
+      ]
+    },
+    {
+      "terms": [],
+      "key": "cornbread-dressing",
+      "kind": "ingredient",
+      "name": "Cornbread dressing",
+      "say": "",
+      "explain": "Stuffing is cooked inside the bird; dressing is the same kind of mixture, bread with herbs, broth and seasoning, baked in its own pan. In the Southern states it is most often called dressing and made with cornbread, a way to use up day old cornbread, and cooks add their own touches: pecans, oysters, sausage, crawfish or apples.\n\nOn the Thanksgiving Day menu cornbread dressing comes with the turkey. What is in the kitchen's dressing is not printed, so learn it at lineup before you describe it, and never guess at sausage or oysters. Say: the Southern way with stuffing, baked in its own pan.",
+      "card": {
+        "front": "What is the difference between dressing and stuffing?",
+        "back": "Stuffing is cooked inside the bird; dressing is baked in its own pan. In the South it is usually called dressing and made with cornbread."
+      },
+      "items": [
+        "Roasted Buttermilk-Brined Turkey Breast"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-roasted-buttermilk-brined-turkey-breast.json (classic.dressing)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 1)"
+      ]
+    },
+    {
+      "terms": [],
+      "key": "cranberry-rosemary-jus",
+      "kind": "ingredient",
+      "name": "Cranberry and rosemary jus",
+      "say": "ZHOO",
+      "explain": "Jus is French for juice. On a menu it means a light sauce made from the meat's own juices, thinner than a flour gravy. Cranberry is the tart red berry of the American holiday table, and rosemary brings a piney, herbal note that suits roast poultry.\n\nOn the Thanksgiving Day menu the turkey comes with a cranberry and rosemary jus, which gives the plate its tart, bright finish in place of a thick gravy. Whether the kitchen thickens it at all is a question for lineup. Say: a light turkey jus with tart cranberry and rosemary.",
+      "card": {
+        "front": "What is a jus, and what is on the turkey?",
+        "back": "Jus, ZHOO, is French for juice: a light sauce of the meat's own juices. The turkey's is cranberry and rosemary, tart and herbal, not a thick gravy."
+      },
+      "items": [
+        "Roasted Buttermilk-Brined Turkey Breast"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-roasted-buttermilk-brined-turkey-breast.json (classic.jus)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 1)"
+      ]
+    },
+    {
+      "terms": [],
+      "key": "turkey-two-ways",
+      "kind": "technique",
+      "name": "Turkey two ways: roast breast, braised leg",
+      "say": "",
+      "explain": "A turkey has two kinds of meat that cook best in different ways. The breast is lean white meat that dries out if it is overcooked, so it is brined and roasted. The leg is darker, harder working meat with more connective tissue, which softens when it is braised, cooked slowly in liquid in a covered pot.\n\nOn the Thanksgiving Day menu the turkey comes both ways on one plate: the buttermilk-brined breast, roasted, and the braised leg. Tell the guest who asks for white or dark meat that both are there. How the leg is braised is for the kitchen to say.",
+      "card": {
+        "front": "Why do the turkey breast and leg cook differently?",
+        "back": "The breast is lean white meat, brined and roasted so it stays juicy; the leg is darker meat that turns tender when braised slowly in liquid."
+      },
+      "items": [
+        "Roasted Buttermilk-Brined Turkey Breast"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-roasted-buttermilk-brined-turkey-breast.json (classic.brine; classic.braise)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 1)"
+      ]
+    },
+    {
+      "terms": [],
+      "key": "pork-tenderloin",
+      "kind": "ingredient",
+      "name": "Pork tenderloin, wrapped in bacon",
+      "say": "",
+      "explain": "Pork tenderloin is a long, narrow cut, very lean and very tender, with a mild flavour of its own. Because it has so little fat it dries out easily, which is why it is so often wrapped in bacon: the bacon protects the lean meat as it roasts, its fat bastes it, and it adds smoke and salt.\n\nOn the Thanksgiving Day menu the tenderloin is wrapped in bacon and glazed with Louisiana cane syrup. How the kitchen cooks it, and to what temperature, is a question for lineup before you promise a guest anything. Say: lean, tender pork wrapped in smoky bacon.",
+      "card": {
+        "front": "Why is a pork tenderloin wrapped in bacon?",
+        "back": "The tenderloin is very lean and mild. Bacon protects it while it roasts, bastes it with its fat and adds smoke and salt."
+      },
+      "items": [
+        "Bacon-Wrapped Pork Tenderloin"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-bacon-wrapped-pork-tenderloin.json (classic.tenderloin)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 2)"
+      ]
+    },
+    {
+      "terms": [],
+      "key": "polenta",
+      "kind": "ingredient",
+      "name": "Polenta",
+      "say": "poh-LEN-tuh",
+      "explain": "Polenta is the cornmeal porridge of northern Italy. It comes from the grain mushes of Roman times, puls and pulmentum in Latin, until maize arrived from the Americas in the sixteenth century. Today it is usually yellow cornmeal, cooked soft or left to set and then grilled or fried. Grits, its Southern cousin, come from the Native peoples of the American Southeast.\n\nOn the Thanksgiving Day menu polenta sits under the bacon-wrapped pork tenderloin. Whether it is served soft or set is for the kitchen to tell you.",
+      "card": {
+        "front": "What is polenta, and how is it different from grits?",
+        "back": "The cornmeal porridge of northern Italy, usually yellow cornmeal. Grits are the Southern cousin, from the Native peoples of the American Southeast."
+      },
+      "items": [
+        "Bacon-Wrapped Pork Tenderloin"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-bacon-wrapped-pork-tenderloin.json (classic.polenta)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 2)"
+      ]
+    },
+    {
+      "terms": [],
+      "key": "mustard-greens",
+      "kind": "ingredient",
+      "name": "Mustard greens",
+      "say": "",
+      "explain": "Mustard greens are the leaves of the brown mustard plant, Brassica juncea. The curly kind, sometimes called Southern mustard, is a staple of Southern and soul food cooking, traditionally braised slowly with smoked meat until tender, and the braising liquid is the potlikker. Raw, the leaves have a sharp, peppery bite; cooking mellows them and brings out a little sweetness.\n\nOn the Thanksgiving Day menu mustard greens come with the bacon-wrapped pork tenderloin, a peppery, slightly bitter green against the sweet cane syrup glaze. How the kitchen cooks them, and with what, is a question for lineup.",
+      "card": {
+        "front": "What are mustard greens, and how do they taste?",
+        "back": "The leaves of the brown mustard plant, a Southern staple. Raw they are sharp and peppery; slow cooking mellows them and brings out some sweetness."
+      },
+      "items": [
+        "Bacon-Wrapped Pork Tenderloin"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-bacon-wrapped-pork-tenderloin.json (classic.mustardGreens)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 2)"
+      ]
+    },
+    {
+      "terms": [],
+      "key": "sauce-au-poivre",
+      "kind": "technique",
+      "name": "Sauce au poivre",
+      "say": "oh PWAHV",
+      "explain": "Au poivre is French for with pepper. Sauce au poivre is the sauce of steak au poivre, a classic of the French bistro: in the classic, the steak is pressed into coarsely crushed peppercorns and seared, and the pan is deglazed with Cognac over softened shallots and finished with cream. Tenderloin, the filet mignon cut, is the usual steak for it. Where the dish began is disputed, so do not offer an origin story.\n\nOn the Thanksgiving Day menu the herb roasted beef tenderloin comes with sauce au poivre. Whether ours carries Cognac and cream, and how hot it is, is the kitchen's to say.",
+      "card": {
+        "front": "What is sauce au poivre?",
+        "back": "French for with pepper: the peppercorn sauce of the bistro classic steak au poivre, classically crushed peppercorns in a pan sauce of shallots, Cognac and cream."
+      },
+      "items": [
+        "Herb Roasted Beef Tenderloin"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-herb-roasted-beef-tenderloin.json (classic.auPoivre)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 3)"
+      ]
+    },
+    {
+      "terms": [],
+      "key": "pommes-puree",
+      "kind": "technique",
+      "name": "Pommes purée",
+      "say": "pom pyoo-RAY",
+      "explain": "Pommes purée is the French style of mashed potatoes, smoother and richer than most American mash. The cooked potatoes are riced or milled, often passed through a fine drum sieve called a tamis, and a great deal of butter is worked in slowly until the purée turns silky. Recipes differ widely on how much butter, and some add cream or milk.\n\nOn the Thanksgiving Day menu pommes purée comes with the herb roasted beef tenderloin, under the pepper sauce. What goes into the kitchen's purée is a question for lineup. Say: French mashed potatoes, very smooth, rich with butter.",
+      "card": {
+        "front": "What makes pommes purée different from mashed potatoes?",
+        "back": "The potatoes are riced and often sieved, then worked with a great deal of butter until silky: smoother and richer than a rustic mash."
+      },
+      "items": [
+        "Herb Roasted Beef Tenderloin"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-herb-roasted-beef-tenderloin.json (classic.pommesPuree)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 3)"
+      ]
+    },
+    {
+      "terms": [],
+      "key": "brussels-sprouts",
+      "kind": "ingredient",
+      "name": "Roasted Brussels sprouts",
+      "say": "",
+      "explain": "Brussels sprouts are tiny cabbages, Brassica oleracea var. gemmifera, that grow in a spiral up a tall stalk. They take their name from the region around Brussels, in what is now Belgium, where they were a popular crop by the sixteenth century. Some accounts place forerunners even earlier, so give the guest the Brussels name and leave the rest.\n\nRoasting browns their cut edges in the heat of the oven, turning them nutty and a little sweet against the rich beef and the pepper sauce. On the Thanksgiving Day menu they come with the herb roasted beef tenderloin.",
+      "card": {
+        "front": "Where do Brussels sprouts get their name?",
+        "back": "From the region around Brussels, in what is now Belgium, where they were a popular crop by the sixteenth century. Roasting browns them, nutty and sweet."
+      },
+      "items": [
+        "Herb Roasted Beef Tenderloin"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-herb-roasted-beef-tenderloin.json (classic.brussels)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 3)"
+      ]
+    },
+    {
+      "terms": [
+        "Roux",
+        "Holy trinity",
+        "Creole and Cajun"
+      ],
+      "key": "sauce-piquante",
+      "kind": "technique",
+      "name": "Sauce piquante",
+      "say": "sohs pee-KAHNT",
+      "explain": "Sauce piquante, piquant meaning sharp or pungent, is a Louisiana dish more than a sauce: a hot, tomato based stew, usually started on a roux with the holy trinity of onion, celery and bell pepper, plus garlic, that smothers whatever the cook has on hand and is served over rice. Chicken, catfish, rabbit, alligator, turtle and shrimp all go into it, and it has long been popular in Acadiana, Cajun country. No one has documented where or when it began.\n\nOn the Thanksgiving Day menu it is the shrimp entrée. How hot the kitchen makes it is a question for lineup.",
+      "card": {
+        "front": "What is a sauce piquante?",
+        "back": "A hot, tomato based Louisiana stew, usually built on a roux and the holy trinity, smothering meat or seafood and served over rice; long popular in Acadiana."
+      },
+      "items": [
+        "Shrimp Sauce Piquante"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-shrimp-sauce-piquante.json (classic.piquante)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 4)"
+      ]
+    },
+    {
+      "terms": [
+        "Creole tomato",
+        "Roux"
+      ],
+      "key": "creole-tomato-gravy",
+      "kind": "ingredient",
+      "name": "Creole tomato gravy",
+      "say": "",
+      "explain": "In Southern cooking a tomato gravy is a roux cooked with tomatoes and a little liquid into a thick, savoury sauce. Creole tomatoes are the Louisiana grown tomatoes prized for being picked ripe, though by Thanksgiving the summer crop is long over, so what the kitchen uses is a question for lineup.\n\nOn the Thanksgiving Day menu the Creole tomato gravy is the sauce of the shrimp sauce piquante, over the popcorn rice pilaf. Say it as the menu does and let the kitchen tell you what is in it.",
+      "card": {
+        "front": "What is the Creole tomato gravy on the sauce piquante?",
+        "back": "A tomato gravy is a roux cooked with tomatoes into a thick sauce. Ours is the sauce of the shrimp sauce piquante; what goes into it is the kitchen's to say."
+      },
+      "items": [
+        "Shrimp Sauce Piquante"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-shrimp-sauce-piquante.json (classic.tomatoGravy)",
+        "components/dishes.json (creole-tomato)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 4)"
+      ]
+    },
+    {
+      "terms": [
+        "Popcorn rice"
+      ],
+      "key": "popcorn-rice-pilaf",
+      "kind": "technique",
+      "name": "Popcorn rice pilaf",
+      "say": "",
+      "explain": "A pilaf is rice cooked in fat before its liquid goes in, often with onion or other aromatics, so the grains toast lightly and cook up separate rather than sticky. Popcorn rice is a Louisiana aromatic long grain that really does smell of popcorn as it cooks, from the same aroma compound that perfumes basmati and jasmine rice.\n\nOn the Thanksgiving Day menu a popcorn rice pilaf sits under the shrimp sauce piquante, the rice that traditionally goes with the dish. What the kitchen cooks into the pilaf is a question for lineup. Say: a pilaf of Louisiana popcorn rice.",
+      "card": {
+        "front": "What is a popcorn rice pilaf?",
+        "back": "Louisiana aromatic rice that smells of popcorn as it cooks, cooked as a pilaf: toasted in fat before the liquid goes in, so the grains stay separate."
+      },
+      "items": [
+        "Shrimp Sauce Piquante"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-shrimp-sauce-piquante.json (classic.pilaf)",
+        "components/dishes.json (popcorn-rice)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 4)"
+      ]
+    },
+    {
+      "terms": [],
+      "key": "pickled-peppers",
+      "kind": "ingredient",
+      "name": "Pickled peppers",
+      "say": "",
+      "explain": "Pickled peppers are peppers preserved in a vinegar brine, which keeps them crisp and gives them a sharp, sour edge on top of their own sweetness or heat. In Louisiana cooking a bright, vinegary pepper is a common partner for rich, slow cooked dishes, cutting through the weight of a roux and a gravy.\n\nOn the Thanksgiving Day menu pickled peppers finish the shrimp sauce piquante, a sharp, bright bite against the warm tomato gravy. Which peppers they are, and how hot, the sheet does not print, so ask the kitchen at lineup before you describe them.",
+      "card": {
+        "front": "What do the pickled peppers bring to the sauce piquante?",
+        "back": "A sharp, vinegary bite against the warm tomato gravy and rice. Which peppers they are, and how hot, is a question for the kitchen at lineup."
+      },
+      "items": [
+        "Shrimp Sauce Piquante"
+      ],
+      "sources": [
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 4)",
+        "research/menu-2026-11-22-shrimp-sauce-piquante.json (unsourced)"
+      ]
+    },
+    {
+      "terms": [
+        "Brown butter"
+      ],
+      "key": "a-la-meuniere",
+      "kind": "technique",
+      "name": "À la meunière",
+      "say": "mun-YAIR",
+      "explain": "À la meunière means in the style of the miller's wife. The usual explanation is the flour: in the classic French method the fish is dredged in flour, cooked in butter and finished with brown butter, lemon and parsley. Sole meunière is the famous French dish; in New Orleans trout meunière is a bedrock of Creole cooking, and the style suits the mild, firm fish of the Gulf. When the style came to New Orleans is not documented.\n\nOn the Thanksgiving Day menu it is the redfish, with brown butter, lemon and capers. Whether the kitchen flours the fish is a question for lineup.",
+      "card": {
+        "front": "What does meunière mean, and what is the classic method?",
+        "back": "In the style of the miller's wife: in the classic, fish dredged in flour, cooked in butter and finished with brown butter, lemon and parsley. Trout meunière is a New Orleans classic."
+      },
+      "items": [
+        "Redfish Meunière"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-redfish-meuniere.json (classic.meuniere)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 5)"
+      ]
+    },
+    {
+      "terms": [],
+      "key": "potato-leek-ecrase",
+      "kind": "technique",
+      "name": "Potato and leek écrasé",
+      "say": "ay-krah-ZAY",
+      "explain": "Écrasé is French for crushed. An écrasé of potatoes is cooked potatoes crushed with a fork or a masher, usually with olive oil or butter and often without milk, so it keeps some texture and is rougher than a purée. Leeks, the mildest of the onion family, are softened and crushed in with them.\n\nOn the Thanksgiving Day menu a potato and leek écrasé sits under the redfish meunière, soft and buttery under the brown butter. Whether the kitchen uses olive oil, butter or cream is a question for lineup. Say: potatoes and leeks crushed rather than mashed smooth.",
+      "card": {
+        "front": "What is an écrasé?",
+        "back": "French for crushed: cooked potatoes crushed with a fork or masher, with oil or butter, rougher than a purée. Ours is potato and leek, under the redfish."
+      },
+      "items": [
+        "Redfish Meunière"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-redfish-meuniere.json (classic.ecrase)",
+        "components/dishes.json (leeks)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 5)"
+      ]
+    },
+    {
+      "terms": [
+        "Creole and Cajun"
+      ],
+      "key": "grillades-and-grits",
+      "kind": "story",
+      "name": "Grillades and grits",
+      "say": "gree-YAHDS",
+      "explain": "Grillades are thin slices of veal or beef, pounded and braised in gravy until tender and served over grits, a Creole breakfast and brunch dish of New Orleans. The word comes from the French griller, to grill, but they are not grilled. The cookbook grillades of the late 1800s were boneless veal medallions simmered in gravy; a recipe for Grillades a la Creole ran in The Daily Picayune in 1898, and a breakfast menu in the Times-Democrat listed grillades and grits in 1900.\n\nCarnival kings and queens still serve grillades and grits at krewe breakfasts after their balls. On the Thanksgiving Day menu the dish comes to dinner as the veal grillades.",
+      "card": {
+        "front": "What are grillades, and when are they traditionally eaten?",
+        "back": "Thin, pounded veal or beef braised in gravy, served over grits: a New Orleans Creole breakfast and brunch dish, still served at Carnival krewe breakfasts. Not grilled, despite the name."
+      },
+      "items": [
+        "Veal Grillades"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-veal-grillades.json (classic.grillades)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 6)"
+      ]
+    },
+    {
+      "terms": [],
+      "key": "veal",
+      "kind": "ingredient",
+      "name": "Veal",
+      "say": "",
+      "explain": "Veal is the meat of young cattle: paler, milder and finer in texture than beef. It is the traditional meat of grillades in New Orleans, where the cookbooks of the late 1800s describe boneless veal medallions simmered in gravy; beef round is the common modern stand in, pounded thin so it cooks tender.\n\nOn the Thanksgiving Day menu the grillades are veal, over cheddar grits with piperade, debris and a poached egg. Which cut the kitchen uses, and how it is pounded and braised, is a question for lineup. Say: tender veal, simmered in gravy.",
+      "card": {
+        "front": "Why are the grillades made with veal?",
+        "back": "Veal is the traditional grillades meat in New Orleans: the cookbooks of the late 1800s describe veal medallions simmered in gravy. Beef round is the common modern stand in."
+      },
+      "items": [
+        "Veal Grillades"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-veal-grillades.json (classic.grillades)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 6)"
+      ]
+    },
+    {
+      "terms": [],
+      "key": "piperade",
+      "kind": "ingredient",
+      "name": "Piperade",
+      "say": "pee-peh-RAHD",
+      "explain": "Piperade is a dish of the Basque country and Gascony, in the southwest of France: onions, green peppers and tomatoes softened together and seasoned with piment d'Espelette, the dried red pepper of the Basque town of Espelette. The name comes from piper, the word for pepper in Gascon and Basque. At home it is often served with eggs or ham.\n\nOn the Thanksgiving Day menu piperade goes with the veal grillades, sweet peppers and tomato beside the gravy and the egg. Whether the kitchen's piperade carries Espelette pepper is a question for lineup.",
+      "card": {
+        "front": "What is piperade, and where does it come from?",
+        "back": "A Basque and Gascon dish of onions, green peppers and tomatoes seasoned with Espelette pepper; the name comes from piper, pepper in Gascon and Basque."
+      },
+      "items": [
+        "Veal Grillades"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-veal-grillades.json (classic.piperade)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 6)"
+      ]
+    },
+    {
+      "terms": [
+        "Débris"
+      ],
+      "key": "grillades-debris",
+      "kind": "ingredient",
+      "name": "Debris on the grillades",
+      "say": "DAY-bree",
+      "explain": "Debris is Louisiana French for scraps: in New Orleans it means the tender bits of roast that fall into the pan juices and gravy as the meat cooks and is carved. It is best known on the roast beef po'boy, where the shredded meat and its gravy soak the bread.\n\nOn the Thanksgiving Day menu debris goes on the veal grillades, adding a rich, meaty depth to the gravy. The sheet does not say which roast it comes from, and it may not be veal, so learn it at lineup before you describe it. It is a different preparation from the short rib débris on the Eggs Owen.",
+      "card": {
+        "front": "What is the debris on the veal grillades?",
+        "back": "The tender shreds of roast that fall into the gravy as it cooks, best known on the roast beef po'boy. Which roast ours comes from is the kitchen's to say."
+      },
+      "items": [
+        "Veal Grillades"
+      ],
+      "sources": [
+        "research/menu-2026-11-22-veal-grillades.json (classic.debris)",
+        "components/dishes.json (short-rib-debris)",
+        "pages/brennans-sheets-2026-11-22.txt (ENTRÉES, line 6)"
+      ]
     }
   ],
   "compare": [
@@ -8397,6 +9201,226 @@
           "label": "A chocolate pot de crème",
           "same": "A rich, smooth, spoonable chocolate custard served cold, dense rather than airy, often finished with a little salt.",
           "different": "A pot de crème is baked in a water bath and set by its eggs; a crémeux is stirred and set by its chocolate; ours adds nibs and lemon oil."
+        }
+      ]
+    },
+    {
+      "item": "Rockefeller Gratin",
+      "entries": [
+        {
+          "app": "table",
+          "ref": "oysters-rockefeller",
+          "label": "Oysters Rockefeller, the classic",
+          "same": "Oysters baked under a rich green layer and breadcrumbs until hot and browned.",
+          "different": "The classic is on the half shell under a secret green sauce; ours is a gratin of oysters, bacon and creamed spinach."
+        }
+      ]
+    },
+    {
+      "item": "Endive Satsuma Salad",
+      "entries": [
+        {
+          "app": "table",
+          "ref": "michigan-dried-cherry-salad",
+          "label": "A salad with cherries",
+          "same": "Crisp leaves with cherry for sweet and tart fruit and something toasty for crunch.",
+          "different": "Ours sets gently bitter endive against sweet satsuma, with the cherry in the vinaigrette and roasted sunflower seeds."
+        }
+      ]
+    },
+    {
+      "item": "Sweet Potato Agnolotti",
+      "entries": [
+        {
+          "app": "table",
+          "ref": "ravioli-del-plin",
+          "label": "Piedmont’s pinched filled pasta",
+          "same": "A filled egg pasta from Piedmont, sealed by hand around a soft filling and finished simply.",
+          "different": "Ours is folded around sweet potato and finished with brown butter, candied pecans and chèvre."
+        }
+      ]
+    },
+    {
+      "item": "Bay Scallop Crudo",
+      "entries": [
+        {
+          "app": "table",
+          "ref": "geoduck-crudo",
+          "label": "A raw geoduck crudo",
+          "same": "Raw seafood sliced and dressed at the last moment with citrus, served cold.",
+          "different": "Ours is small, sweet bay scallops with Meyer lemon, black truffle and radish."
+        }
+      ]
+    },
+    {
+      "item": "Sweet Potato Pot de Crème",
+      "entries": [
+        {
+          "app": "table",
+          "ref": "creme-brulee",
+          "label": "Crème brûlée, the burnt cream",
+          "same": "A baked cream and egg custard set gently and served in its own dish.",
+          "different": "Ours is sweet potato with miso, cinnamon and marshmallow fluff, and no burnt sugar crust."
+        }
+      ]
+    },
+    {
+      "item": "Chocolate and Orange Tart",
+      "entries": [
+        {
+          "app": "classic",
+          "ref": "",
+          "label": "Orangettes",
+          "same": "Chocolate and orange together, the citrus cutting the richness of cocoa.",
+          "different": "Ours is a tart, with candied hazelnuts for crunch; orangettes are candied peel dipped in dark chocolate."
+        }
+      ]
+    },
+    {
+      "item": "Titus’ BBQ Shrimp Stuffing",
+      "entries": [
+        {
+          "app": "table",
+          "ref": "new-orleans-bbq-shrimp",
+          "label": "New Orleans BBQ shrimp",
+          "same": "Shrimp in the buttery, peppery New Orleans BBQ style, never grilled or smoked.",
+          "different": "Ours folds that style into a holiday stuffing, a side for the table."
+        }
+      ]
+    },
+    {
+      "item": "Herbed Potato Purée",
+      "entries": [
+        {
+          "app": "table",
+          "ref": "mashing-and-pureeing",
+          "label": "Mashing and puréeing potatoes",
+          "same": "Cooked potato pressed smooth and enriched with butter and cream.",
+          "different": "Ours is herbed, a side for the Thanksgiving table; which herbs is a lineup question."
+        }
+      ]
+    },
+    {
+      "item": "Haricots Verts",
+      "entries": [
+        {
+          "app": "table",
+          "ref": "indiana-green-bean-casserole",
+          "label": "The green bean casserole",
+          "same": "Green beans on the Thanksgiving table beside the turkey.",
+          "different": "Ours are thin French beans cooked briefly to stay bright and crisp, not baked in a creamy sauce."
+        }
+      ]
+    },
+    {
+      "item": "Cranberry Sauce",
+      "entries": [
+        {
+          "app": "table",
+          "ref": "cape-cod-cranberry-relish",
+          "label": "A Cape Cod cranberry relish",
+          "same": "Tart cranberries sweetened for the holiday table, a bright foil for turkey.",
+          "different": "Ours is a cooked sauce, a $7 side for the table; how it is made is a lineup question."
+        }
+      ]
+    },
+    {
+      "item": "Roasted Buttermilk-Brined Turkey Breast",
+      "entries": [
+        {
+          "app": "table",
+          "ref": "dry-brined-roast-turkey-with-real-gravy",
+          "label": "A dry-brined roast turkey",
+          "same": "A turkey seasoned with salt ahead of time so the meat stays juicy, roasted for the holiday table.",
+          "different": "Ours brines the breast in buttermilk, braises the leg apart, and trades a flour gravy for a cranberry and rosemary jus."
+        },
+        {
+          "app": "table",
+          "ref": "alabama-cornbread-dressing",
+          "label": "A Southern cornbread dressing",
+          "same": "Cornbread with herbs and broth baked in its own pan, the Southern holiday side.",
+          "different": "Ours is a side on the turkey plate; what the kitchen puts in it is for lineup."
+        }
+      ]
+    },
+    {
+      "item": "Bacon-Wrapped Pork Tenderloin",
+      "entries": [
+        {
+          "app": "table",
+          "ref": "vermont-maple-brined-pork-chops",
+          "label": "Maple-brined pork chops",
+          "same": "Pork with a sweet syrup for a sweet and savoury balance.",
+          "different": "Ours is a bacon-wrapped tenderloin with Louisiana cane syrup, on polenta with mustard greens and roasted apples."
+        }
+      ]
+    },
+    {
+      "item": "Herb Roasted Beef Tenderloin",
+      "entries": [
+        {
+          "app": "classic",
+          "ref": "",
+          "label": "Steak au poivre",
+          "same": "Tender beef with a peppercorn sauce, the French bistro way.",
+          "different": "Ours is tenderloin roasted with herbs rather than a seared steak, with pommes purée and roasted Brussels sprouts."
+        }
+      ]
+    },
+    {
+      "item": "Shrimp Sauce Piquante",
+      "entries": [
+        {
+          "app": "table",
+          "ref": "shrimp-creole",
+          "label": "Shrimp Creole",
+          "same": "Shrimp in a tomato based Louisiana sauce over rice.",
+          "different": "Sauce piquante is the hotter Cajun country cousin, usually built on a roux; ours has popcorn rice pilaf and pickled peppers."
+        },
+        {
+          "app": "table",
+          "ref": "shrimp-etouffee",
+          "label": "Shrimp étouffée",
+          "same": "Louisiana shrimp smothered in a roux based sauce over rice.",
+          "different": "Étouffée is a butter and roux gravy with little or no tomato; ours is a peppery tomato gravy."
+        }
+      ]
+    },
+    {
+      "item": "Redfish Meunière",
+      "entries": [
+        {
+          "app": "table",
+          "ref": "sole-meuniere",
+          "label": "Sole meunière",
+          "same": "Fish in the miller's wife style, finished with brown butter and lemon.",
+          "different": "Ours is redfish from the Gulf with capers, over a potato and leek écrasé."
+        },
+        {
+          "app": "table",
+          "ref": "blackened-redfish",
+          "label": "Blackened redfish",
+          "same": "The same mild, firm Gulf fish, a New Orleans favourite.",
+          "different": "Blackened redfish is crusted in spice and seared hot; ours is gentle, in brown butter, lemon and capers."
+        }
+      ]
+    },
+    {
+      "item": "Veal Grillades",
+      "entries": [
+        {
+          "app": "table",
+          "ref": "grillades-and-grits",
+          "label": "Grillades and grits",
+          "same": "Thin, tender meat simmered in gravy over grits, the Creole brunch classic.",
+          "different": "Ours is veal over cheddar grits with debris, a Basque piperade and a poached egg."
+        },
+        {
+          "app": "table",
+          "ref": "piperade",
+          "label": "Basque piperade",
+          "same": "Peppers, onion and tomato softened together, the Basque way.",
+          "different": "Here the piperade is a garnish for the veal grillades rather than a dish of its own."
         }
       ]
     }

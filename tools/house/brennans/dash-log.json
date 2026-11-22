@@ -1,6 +1,6 @@
 {
 	"about": "Every string the dash pass changed while building the Brennan's house, before and after, for a person to read for a changed meaning; an entry with an override number is a string an overrides.json entry set, not the guide's.",
-	"count": 280,
+	"count": 279,
 	"changes": [
 		{
 			"path": "model.card.sources[0].title",
@@ -700,8 +700,9 @@
 		},
 		{
 			"path": "model.dishes[24].serviceNote",
-			"before": "Fish, dairy (beurre blanc). Redfish is a firm, mild Gulf fish. On the dinner tasting it’s paired with Louis Jadot Beaune 1er Cru — a good talking point for red with fish.",
-			"after": "Fish, dairy (beurre blanc). Redfish is a firm, mild Gulf fish. On the dinner tasting it’s paired with Louis Jadot Beaune 1er Cru, a good talking point for red with fish."
+			"before": "Fish, dairy (beurre blanc). Redfish is a firm, mild Gulf fish. On the dinner tasting it was paired with Louis Jadot Beaune 1er Cru — a good talking point for red with fish.",
+			"after": "Fish, dairy (beurre blanc). Redfish is a firm, mild Gulf fish. On the dinner tasting it was paired with Louis Jadot Beaune 1er Cru, a good talking point for red with fish.",
+			"override": 6246
 		},
 		{
 			"path": "model.dishes[24].pairing.sayIt",
@@ -715,8 +716,9 @@
 		},
 		{
 			"path": "model.dishes[24].pairing.serve",
-			"before": "Coravin pour, 50–54°F, in a white Burgundy bowl. On the dinner tasting this course is paired with Louis Jadot Beaune 1er Cru — be ready to explain why a light red works too.",
-			"after": "Coravin pour, 50 to 54°F, in a white Burgundy bowl. On the dinner tasting this course is paired with Louis Jadot Beaune 1er Cru, be ready to explain why a light red works too."
+			"before": "Coravin pour, 50–54°F, in a white Burgundy bowl. On the dinner tasting this course was paired with Louis Jadot Beaune 1er Cru — be ready to explain why a light red works too.",
+			"after": "Coravin pour, 50 to 54°F, in a white Burgundy bowl. On the dinner tasting this course was paired with Louis Jadot Beaune 1er Cru, be ready to explain why a light red works too.",
+			"override": 6249
 		},
 		{
 			"path": "model.dishes[24].pairing.avoid",
@@ -1163,11 +1165,6 @@
 			"path": "model.wines[11].serve",
 			"before": "Serve 55–58°F in a Burgundy bowl; no decanting. If the back bar runs warm, give the bottle ten to fifteen minutes in the ice bucket before pouring.",
 			"after": "Serve 55 to 58°F in a Burgundy bowl; no decanting. If the back bar runs warm, give the bottle ten to fifteen minutes in the ice bucket before pouring."
-		},
-		{
-			"path": "model.wines[12].section",
-			"before": "Light reds — Pinot Noir",
-			"after": "Light reds, Pinot Noir"
 		},
 		{
 			"path": "model.wines[12].group",
