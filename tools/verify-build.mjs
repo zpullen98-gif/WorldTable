@@ -552,9 +552,16 @@ check('every Brennan final presentation ships on demand with its readable ingred
 		assert(house.dishes.some(d => d.id === dishId), `unknown canonical dish binding ${dishId}`);
 		assert(fall.items.some(d => d.id === fallId && d.kind === 'dish'), `unknown fall dish binding ${fallId}`);
 	}
-	const expected = [...house.dishes.filter(d => !aliases[d.id]).map(d => `house:${d.id}`), ...fall.items.filter(d => d.kind === 'dish').map(d => `fall:${d.id}`)].sort();
+	/* The plated dishes: every dish of the pack but the ones filed from a printed sheet with no plate.
+	   The sections are named once, in src/lib/brennans-final-dishes.ts (UNPLATED_SECTIONS), and read
+	   from there, so this check and the unit test move together. */
+	const unplatedSource = readFileSync(join(ROOT, 'src/lib/brennans-final-dishes.ts'), 'utf8').match(/UNPLATED_SECTIONS[^=]*=\s*(\[[^\]]*\])/);
+	assert(unplatedSource, 'src/lib/brennans-final-dishes.ts no longer names UNPLATED_SECTIONS');
+	const unplatedSections = JSON.parse(unplatedSource[1].replace(/'/g, '"'));
+	const plated = house.dishes.filter(d => !unplatedSections.includes((d.section ?? '').trim()));
+	const expected = [...plated.filter(d => !aliases[d.id]).map(d => `house:${d.id}`), ...fall.items.filter(d => d.kind === 'dish').map(d => `fall:${d.id}`)].sort();
 	const keys = art.items.map(item => `${item.collection}:${item.itemId}`).sort();
-	assert(JSON.stringify(keys) === JSON.stringify(expected), 'final presentations must cover every canonical dish and legacy fall route without duplicate images');
+	assert(JSON.stringify(keys) === JSON.stringify(expected), 'final presentations must cover every plated dish and legacy fall route without duplicate images');
 	const resources = art.items.flatMap(item => [item.src, item.thumbnailSrc]);
 	assert(new Set(resources).size === resources.length, 'final presentations must use separate image pairs');
 	for (const resource of resources) {
@@ -565,7 +572,7 @@ check('every Brennan final presentation ships on demand with its readable ingred
 	const chunks = files.filter(f => extname(f) === '.js' && readFileSync(f, 'utf8').includes('Illustrative final presentation'));
 	assert(chunks.length, 'final presentation label never reached the bundle');
 	for (const chunk of chunks) assert(precached.some(u => u.replace(/^\//, '') === rel(chunk)), `final presentation text ${rel(chunk)} is not precached`);
-	return `${house.dishes.length} canonical dishes and ${Object.keys(aliases).length} legacy fall routes, ${resources.length} images on demand`;
+	return `${plated.length} plated dishes (${house.dishes.length - plated.length} filed with no plate) and ${Object.keys(aliases).length} legacy fall routes, ${resources.length} images on demand`;
 });
 
 check('the primers ship in the install, and each level has its reader page', () => {

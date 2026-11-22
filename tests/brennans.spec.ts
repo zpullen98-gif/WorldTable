@@ -177,15 +177,19 @@ test('the bar at 390 and 375: five words in one row, every tab 44 by 44, inside 
 	await page.setViewportSize({ width: 390, height: 844 });
 });
 
-test('the four house sections are clear links, with one active destination and a return to Menu', async ({ page }) => {
+test('the house sections are clear links, with one active destination and a return to Menu', async ({ page }) => {
 	await openHouse(page);
 	const nav = houseSections(page);
-	const destinations = [
+	/* Four sections always; a fifth, named by the pack, only while the house holds a fixed price
+	   menu for Thanksgiving Day (the edition of 22 November 2026 filed one). */
+	const holiday = (JSON.parse(PACK_TEXT).house.tastings as Array<{ meal?: string }>).find(t => t.meal === 'Thanksgiving Day');
+	const destinations: Array<readonly [string, string]> = [
 		['Menu', '/menu'],
 		['Kitchen studies', '/menu?view=learn'],
 		['Service rehearsal', '/menu?view=rehearse'],
 		['House reference', '/menu?view=reference']
-	] as const;
+	];
+	if (holiday?.meal) destinations.push([holiday.meal, '/menu?view=thanksgiving']);
 	await expect(nav.locator('a')).toHaveText(destinations.map(([name]) => name));
 	await expect(page.locator('nav.jumps')).toHaveCount(0);
 	for (const [name, href] of destinations) {

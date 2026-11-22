@@ -1947,7 +1947,14 @@
 	.next-step a { display: inline-flex; align-items: center; min-height: 44px; color: var(--turmeric-deep); text-underline-offset: 3px; margin-right: 12px; }
 	.next-step { line-height: 1.5; margin: 18px 0; }
 	.house-sections.five { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-	@media (max-width: 600px) { .house-sections, .house-sections.five { grid-template-columns: 1fr 1fr; } .house-sections.five a:last-child { grid-column: 1 / -1; } }
+	/* On a phone five links sit as three over two, so the fifth costs no third row and the first
+	   tasting menu stays on the first screen (tests/study.spec.ts holds that). */
+	@media (max-width: 600px) {
+		.house-sections { grid-template-columns: 1fr 1fr; }
+		.house-sections.five { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+		.house-sections.five a { grid-column: span 2; padding-inline: 4px; line-height: 1.2; }
+		.house-sections.five a:nth-child(n + 4) { grid-column: span 3; }
+	}
 	.quiet.studyedit {
 		min-height: 44px; padding: 0 4px; background: none; border: 0; cursor: pointer;
 		font: inherit; font-size: 1rem; color: var(--ink-soft); text-decoration: underline;

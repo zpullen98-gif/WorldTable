@@ -134,11 +134,11 @@ test('two separate tasting menus at the top of the house\'s page, each in the ex
 	await expect(d.locator('.clabel')).toHaveText(['First Course', 'Second Course', 'Third Course', 'Fourth Course', 'Fifth Course']);
 	await expect(d.locator('.titem.dish .tname')).toHaveText(['Grand Isle Jewel Oysters', 'Tuna Crudo', 'Fish Bouillabaisse', 'Roasted Rohan Duck Breast', 'Chocolate Crémeux']);
 	await expect(d.locator('.titem.pour .tname')).toHaveText([
-		'Charles Lafitte Brut Champagne FR NV',
-		'Fichet Château London Mâcon-Igé Burgundy FR Chardonnay 2024',
-		'Louis Jadot 1er Cru Beaune, Burgundy FR Pinot Noir 2023',
-		'Paul Hobbs Coombsville Napa Valley Cabernet Sauvignon 2021',
-		'Domaine La Tour Vieille Reserva Banyuls FR NV'
+		'Charles Lafitte Champagne',
+		'Domaine Weinbach Sylvaner',
+		'Domaine du Vieux Lazaret Blanc',
+		'Paul Hobbs "Coombsville" Cabernet Sauvignon',
+		'Domaine la Tour Vieille'
 	]);
 	await expect(d.locator('.plabel')).toHaveText(['Suggested Pairing', 'Suggested Pairing', 'Suggested Pairing', 'Suggested Pairing', 'Suggested Pairing']);
 	await expect(d.locator('.choice')).toHaveCount(0);
@@ -218,10 +218,10 @@ test('a dish and a pour open their study cards, walk the menu in printed order, 
 
 	// A pour on the dinner menu opens its own card here: the wine, where the tastings pour it.
 	const d = menu(page, DINNER_ID);
-	const jadot = d.locator('.course[data-n="3"] .titem.pour');
-	await jadot.scrollIntoViewIfNeeded();
-	await jadot.click();
-	await expect(c.locator('#card-h')).toHaveText('Louis Jadot Beaune 1er Cru 2023');
+	const thirdPour = d.locator('.course[data-n="3"] .titem.pour');
+	await thirdPour.scrollIntoViewIfNeeded();
+	await thirdPour.click();
+	await expect(c.locator('#card-h')).toHaveText('Domaine du Vieux Lazaret Châteauneuf-du-Pape Blanc');
 	await expect(c.locator('.backline .pos')).toHaveText(`6 of 10 in ${DINNER}`);
 	await expect(c.locator('.tasting')).toHaveText(`Poured on the ${DINNER}: Third Course`);
 	await expect(c.locator('#pourfacts-h')).toHaveText('The wine');
@@ -234,7 +234,7 @@ test('a dish and a pour open their study cards, walk the menu in printed order, 
 	await page.screenshot({ path: SHOTS + 'tm-pour-card.png' });
 	await page.goBack();
 	await expect(card(page)).toHaveCount(0);
-	await expect(jadot).toBeFocused();
+	await expect(thirdPour).toBeFocused();
 
 	// The eye opener is a drink course: its button opens the Brandy Milk Punch.
 	await b.locator('.course[data-n="1"] .titem.drink').click();
@@ -264,7 +264,7 @@ test('a dish and a pour open their study cards, walk the menu in printed order, 
 	await oysters.click();
 	await expect(c.locator('#card-h')).toHaveText('Grand Isle Jewel Oysters');
 	await expect(c.locator('.tcourse .eyebrow')).toHaveText(`${DINNER} · $80`);
-	await tastingFirst(page, ['First Course. Suggested Pairing: Charles Lafitte Brut Champagne FR NV']);
+	await tastingFirst(page, ['First Course. Suggested Pairing: Charles Lafitte Champagne']);
 	await expect(c.locator('.tcourse')).toContainText('Add Wine Pairing Supplement, 4 Ounce Wine Pours $120.00');
 	await page.locator('.backline button.back').click();
 	await expect(card(page)).toHaveCount(0);
@@ -288,7 +288,7 @@ test('the Tasting courses deck deals one card per course in printed order, under
 		await expect(deck.locator('.where')).toHaveText(`Card ${i + 1} of 5 · Dinner Tasting Menu: the courses`);
 		await expect(deck.locator('.scard .term')).toHaveText(fronts[i]);
 		await page.getByRole('button', { name: 'Flip' }).click();
-		if (i === 2) await expect(deck.locator('.scard .back')).toHaveText('Fish Bouillabaisse. Suggested Pairing: Louis Jadot 1er Cru Beaune, Burgundy FR Pinot Noir 2023');
+		if (i === 2) await expect(deck.locator('.scard .back')).toHaveText('Fish Bouillabaisse. Suggested Pairing: Domaine du Vieux Lazaret Blanc');
 		await page.getByRole('button', { name: 'Got it', exact: true }).click();
 	}
 	await expect(page.locator('main h1')).toHaveText('Deck done');

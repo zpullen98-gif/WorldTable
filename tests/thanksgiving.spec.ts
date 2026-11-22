@@ -131,9 +131,11 @@ test('the tab stands fifth under Brennan’s and draws the menu as the pack hold
 	await expect(links).toHaveText(['Menu', 'Kitchen studies', 'Service rehearsal', 'House reference', MENU.meal]);
 	const door = links.last();
 	await expect(door).toHaveAttribute('href', TAB);
-	/* At a phone's width the fifth door takes a whole row of its own. */
-	const [navBox, doorBox] = [await nav(page).boundingBox(), await door.boundingBox()];
-	expect(doorBox!.width).toBeGreaterThan(navBox!.width - 4);
+	/* At a phone's width the five doors sit three over two, so the fifth costs no third row: it
+	   shares the second row with House reference, each about half the bar. */
+	const [navBox, doorBox, fourthBox] = [await nav(page).boundingBox(), await door.boundingBox(), await links.nth(3).boundingBox()];
+	expect(Math.abs(doorBox!.y - fourthBox!.y)).toBeLessThan(2);
+	expect(doorBox!.width).toBeGreaterThan(navBox!.width / 2 - 8);
 	expect(doorBox!.height).toBeGreaterThanOrEqual(44);
 	await door.click();
 	await expect(page).toHaveURL(url => url.pathname === '/menu' && url.searchParams.get('view') === 'thanksgiving');
