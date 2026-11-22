@@ -274,7 +274,8 @@ test('the deck, the drill and the course cards deal the Thanksgiving dishes alon
 
 	await tab(page).getByRole('button', { name: 'Quiz these dishes', exact: true }).click();
 	await expect(page).toHaveURL(url => url.pathname === '/menu/quiz' && url.searchParams.get('mode') === 'drill' && url.searchParams.get('meal') === HOLIDAY_MEAL);
-	await expect(page.locator('main')).toContainText(/\S/);
+	/* The drill says its own scope: the day's dishes and no other. */
+	await expect(page.locator('main p.count[role="status"]')).toContainText(`This round asks about ${HOLIDAY_MEAL} only.`, { timeout: 15_000 });
 	await page.goBack();
 	await expect(tab(page)).toBeVisible();
 
