@@ -1,10 +1,14 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { readFileSync } from 'node:fs';
+import { isFixedPrice } from '../src/lib/study';
 import { goto } from './helpers';
 
 const PACK_TEXT = readFileSync('static/shared/packs/brennans-new-orleans.v1.oothouse.json', 'utf8');
 const house = JSON.parse(PACK_TEXT).house;
+/* The course journeys are the tasting menus. A fixed price menu filed among the tastings (the
+   Thanksgiving Day menu) is drawn in its own tab, never as a journey: tests/thanksgiving.spec.ts. */
+const journeys = house.tastings.filter((tasting: { courses: [] }) => !isFixedPrice(tasting));
 const hussarde = house.dishes.find((dish: { name: string }) => dish.name === 'Eggs Hussarde');
 const owen = house.dishes.find((dish: { name: string }) => dish.name === 'Eggs Owen');
 const pair = house.mixUps.find((mix: { aId: string; bId: string }) => mix.aId === hussarde.id && mix.bId === owen.id);
@@ -16,8 +20,8 @@ test.beforeEach(async ({ page }) => {
 
 test('course journeys keep exact order, choice and drink terms in both services without overflow', async ({ page }) => {
 	await goto(page, '/menu');
-	await expect(page.locator('.tmenu')).toHaveCount(house.tastings.length);
-	for (const tasting of house.tastings) {
+	await expect(page.locator('.tmenu')).toHaveCount(journeys.length);
+	for (const tasting of journeys) {
 		const disclosure = page.locator(`details[data-tasting-group="${tasting.id}"]`);
 		await expect(disclosure).toHaveJSProperty('open', false);
 		await disclosure.locator(':scope > summary').click();

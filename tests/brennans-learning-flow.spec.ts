@@ -5,6 +5,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { House } from '../src/lib/house/house-schema';
 import { TEACHING_FOLIOS } from '../src/lib/teaching-folios';
+import { fixedPriceMenu, HOLIDAY_MEAL, isFixedPrice } from '../src/lib/study';
 import { goto } from './helpers';
 
 /** The compact Brennan's learning flow, using the actual shipped house. */
@@ -12,12 +13,19 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const PACK_TEXT = readFileSync(join(HERE, '../static/shared/packs/brennans-new-orleans.v1.oothouse.json'), 'utf8');
 const HOUSE = JSON.parse(PACK_TEXT).house as House;
 const HUSSARDE = HOUSE.dishes.find(dish => dish.id === 'd-1q0xk7jv')!;
-const VIEWS = [
+/* The tasting menus the Menu list draws. A fixed price menu the house files among its tastings (the
+   Thanksgiving Day menu) is not one: it is drawn in its own tab, tests/thanksgiving.spec.ts. */
+const TASTINGS = HOUSE.tastings.filter(menu => !isFixedPrice(menu));
+/* The workspaces, counted from the pack: a fifth, named by the meal, only while the house holds that
+   menu, so this holds before its edition, while it is served and after the day. */
+const HOLIDAY = fixedPriceMenu(HOUSE, HOLIDAY_MEAL);
+const VIEWS: ReadonlyArray<readonly [string, string]> = [
 	['Menu', '/menu'],
 	['Kitchen studies', '/menu?view=learn'],
 	['Service rehearsal', '/menu?view=rehearse'],
-	['House reference', '/menu?view=reference']
-] as const;
+	['House reference', '/menu?view=reference'],
+	...(HOLIDAY ? [[HOLIDAY.meal, '/menu?view=thanksgiving'] as const] : [])
+];
 
 test.use({ viewport: { width: 390, height: 844 } });
 test.beforeEach(async ({ page }) => {
@@ -70,7 +78,7 @@ test('Menu starts with closed groups while every current dish and tasting course
 	expect([...new Set(rendered.filter(id => dishIds.has(id)))].sort()).toEqual([...dishIds].sort());
 	const rows = await page.locator('.study .row').evaluateAll(elements => elements.map(element => element.getAttribute('data-id')));
 	expect(new Set(rows).size, 'ordinary dish rows are not duplicated across groups').toBe(rows.length);
-	for (const tasting of HOUSE.tastings) {
+	for (const tasting of TASTINGS) {
 		const menu = page.locator(`.tmenu[data-tasting="${tasting.id}"]`);
 		await expect(menu).toBeVisible();
 		await expect(menu.locator('.clabel')).toHaveText(tasting.courses.map(course => course.label));
@@ -105,7 +113,7 @@ test('a manually expanded dish group retains its state and exact opener after ca
 
 test('a tasting course returns to its exact button inside the same open tasting', async ({ page }) => {
 	await openHouse(page);
-	const tasting = HOUSE.tastings.find(menu => menu.courses.some(course => course.dishIds.includes(HUSSARDE.id)))!;
+	const tasting = TASTINGS.find(menu => menu.courses.some(course => course.dishIds.includes(HUSSARDE.id)))!;
 	const course = tasting.courses.find(course => course.dishIds.includes(HUSSARDE.id))!;
 	const group = page.locator(`details[data-tasting-group="${tasting.id}"]`);
 	await group.locator(':scope > summary').click();
@@ -117,7 +125,7 @@ test('a tasting course returns to its exact button inside the same open tasting'
 	await expect(group).toHaveJSProperty('open', true);
 	await expect(opener).toBeFocused();
 	await expect(opener).toBeInViewport();
-	for (const other of HOUSE.tastings.filter(menu => menu.id !== tasting.id)) {
+	for (const other of TASTINGS.filter(menu => menu.id !== tasting.id)) {
 		await expect(page.locator(`details[data-tasting-group="${other.id}"]`)).toHaveJSProperty('open', false);
 	}
 });
@@ -157,7 +165,7 @@ test('the tasting section practices its course deck with the selected meal', asy
 	await expect(practice).toHaveAttribute('href', '/flashcards?deck=tastings&run=1&meal=Dinner');
 	await expect(head.getByRole('button', { name: 'Drill this section', exact: true })).toHaveCount(0);
 	await expect(page.locator('.study .row')).toHaveCount(0);
-	for (const menu of HOUSE.tastings.filter(tasting => tasting.meal === 'Dinner')) {
+	for (const menu of TASTINGS.filter(tasting => tasting.meal === 'Dinner')) {
 		await expect(page.locator(`details[data-tasting-group="${menu.id}"]`)).toHaveJSProperty('open', true);
 	}
 	await practice.click();
