@@ -46,9 +46,10 @@
 	import ProducersView from '$lib/components/ProducersView.svelte';
 	import FallMenu from '$lib/components/FallMenu.svelte';
 	import FinalPlateGallery from '$lib/components/FinalPlateGallery.svelte';
+	import FixedPriceMenu from '$lib/components/FixedPriceMenu.svelte';
 	import { readDrilled, type DrilledEntry } from '$lib/house-drilled';
 	import { isPast } from '$lib/house/house-schema';
-	import { findItem, latestVerdicts, producersLine, say, studyRows, studyProgress, type StudyRow } from '$lib/study';
+	import { findItem, fixedPriceMenu, HOLIDAY_MEAL, latestVerdicts, producersLine, say, studyRows, studyProgress, type StudyRow } from '$lib/study';
 	import { ITEM_ID_RE, wingInstalled } from '$lib/wing-links';
 	import { BRENNANS_HOUSE_ID } from '$lib/teaching-folios';
 	import {
@@ -360,7 +361,8 @@
 	let studyMeal = $state('');
 	let openGroups = $state<Record<string, boolean>>({});
 	let learnOpen = $state<Record<string, boolean>>({});
-	let workspace = $state<'menu' | 'learn' | 'rehearse' | 'reference'>('menu');
+	/** The workspace the address asks for; `workspace` below is the one drawn. */
+	let asked = $state<'menu' | 'learn' | 'rehearse' | 'reference' | 'thanksgiving'>('menu');
 	/** A card opened by a cold hash, held outside the history. */
 	let coldId = $state('');
 	let coldTried = false;
@@ -405,7 +407,7 @@
 		fallView = fallQuery.get('view') === 'fall';
 		platesView = fallQuery.get('view') === 'plates';
 		const area = fallQuery.get('view');
-		workspace = area === 'learn' || area === 'rehearse' || area === 'reference' ? area : area === 'producers' ? 'reference' : 'menu';
+		asked = area === 'learn' || area === 'rehearse' || area === 'reference' || area === 'thanksgiving' ? area : area === 'producers' ? 'reference' : 'menu';
 		learningAnchor = area === 'learn' && learningGroup ? anchor : '';
 		if (learningAnchor) learnOpen = { ...learnOpen, [learningGroup]: true };
 		fallItem = fallQuery.get('item') ?? '';
@@ -471,12 +473,20 @@
 	const hasProducers = $derived(!!current && !!producersLine(current));
 	const hasStudies = $derived(!!current && current.id === BRENNANS_HOUSE_ID);
 	const menuProgress = $derived(studyProgress(current?.dishes.map((dish) => dish.id) ?? [], latest));
-	const workspaces = [
+	/* The house's fixed price menu for the holiday (the Thanksgiving Day sheet of
+	   22 November 2026), or null: its tab is a fifth workspace drawn only while
+	   the house holds the record, named by the record's own meal. On a house
+	   with none (and after the day, when the menu retires) no door stands in
+	   the nav, and an address that still says ?view=thanksgiving draws the Menu. */
+	const holiday = $derived(current ? fixedPriceMenu(current, HOLIDAY_MEAL) : null);
+	const workspace = $derived(asked === 'thanksgiving' && !holiday ? 'menu' : asked);
+	const workspaces = $derived([
 		{ id: 'menu', label: 'Menu', href: '/menu' },
 		{ id: 'learn', label: 'Kitchen studies', href: '/menu?view=learn' },
 		{ id: 'rehearse', label: 'Service rehearsal', href: '/menu?view=rehearse' },
-		{ id: 'reference', label: 'House reference', href: '/menu?view=reference' }
-	];
+		{ id: 'reference', label: 'House reference', href: '/menu?view=reference' },
+		...(holiday ? [{ id: 'thanksgiving', label: holiday.meal, href: '/menu?view=thanksgiving' }] : [])
+	]);
 
 	/* Study or edit is decided once a house is read, and again only when the
 	   device goes from no house to one (the shipped pack arriving, Load the
@@ -1504,7 +1514,7 @@
 	</header>
 
 	{#if !openDish && (studyOn || fallView || platesView)}
-		<nav class="house-sections" aria-label="{houseName} learning sections">
+		<nav class="house-sections" class:five={workspaces.length === 5} aria-label="{houseName} learning sections">
 			{#each workspaces as area (area.id)}
 				<a href="{base}{area.href}" aria-current={workspace === area.id ? 'page' : undefined}>{area.label}</a>
 			{/each}
@@ -1566,6 +1576,8 @@
 				<p class="next-step"><a href="{base}/menu?view=rehearse">Next: rehearse what you can explain</a></p>
 			{:else if workspace === 'rehearse'}
 				<HouseRehearsal {current} again={menuProgress.againIds.length} />
+			{:else if workspace === 'thanksgiving' && holiday}
+				<FixedPriceMenu menu={holiday} is86={(id) => house.is86(id)} onOpen={openCard} onCards={toQuiz} />
 			{:else if workspace === 'reference'}
 				<section class="house-reference" aria-labelledby="reference-h"><h2 id="reference-h">The house, at your fingertips</h2><p class="workspace-intro">Look up the house's words, service principles and common questions. Open only the reference you need.</p>
 					{#if hasProducers}<a class="reference-door" href="{base}/menu?view=producers"><b>Producers</b><span>Who makes it, where it comes from and the dishes it belongs to.</span></a>{/if}
@@ -1934,7 +1946,8 @@
 	.reference-door span { color: var(--ink-soft); }
 	.next-step a { display: inline-flex; align-items: center; min-height: 44px; color: var(--turmeric-deep); text-underline-offset: 3px; margin-right: 12px; }
 	.next-step { line-height: 1.5; margin: 18px 0; }
-	@media (max-width: 600px) { .house-sections { grid-template-columns: 1fr 1fr; } }
+	.house-sections.five { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+	@media (max-width: 600px) { .house-sections, .house-sections.five { grid-template-columns: 1fr 1fr; } .house-sections.five a:last-child { grid-column: 1 / -1; } }
 	.quiet.studyedit {
 		min-height: 44px; padding: 0 4px; background: none; border: 0; cursor: pointer;
 		font: inherit; font-size: 1rem; color: var(--ink-soft); text-decoration: underline;

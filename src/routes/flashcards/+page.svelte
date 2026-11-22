@@ -91,7 +91,7 @@
 	import FinalDishImage from '$lib/components/FinalDishImage.svelte';
 	import { foundationsCategories, foundationsEntries, foundationEntryById, foundationEntryByRef, foundationsMembers, foundationsPractice, foundationsDeckName, foundationLogKey, foundationRecordable, resolveFoundation } from '$lib/foundations';
 	import FoundationReading from '$lib/components/FoundationReading.svelte';
-	import { itemCards, latestVerdicts, mealsOf, inMeal, findItem, producersFor, say, tastingInMeal, tastingOnlyIds, type ItemCard } from '$lib/study';
+	import { itemCards, latestVerdicts, mealsOf, inMeal, findItem, isFixedPrice, producersFor, say, tastingInMeal, tastingOnlyIds, type ItemCard } from '$lib/study';
 	import { buildFlashcards, readyKinds, type Flashcard } from '$lib/house/house-drills';
 	import { LEVEL_KEYS } from '$lib/levels';
 	import { quickLine as quickLineFor } from '$lib/quick-quiz';
@@ -334,7 +334,8 @@
 		if (id === 'menu-parts') return parts.map((_, i) => `p:${i}`);
 		if (id === 'tastings' || id.startsWith('tasting:')) {
 			const one = id.startsWith('tasting:') ? id.slice(8) : '';
-			const served = new Set((current?.tastings ?? []).filter((t) => tastingInMeal(t, meal)).map((t) => t.id));
+			/* A fixed price menu (the Thanksgiving Day menu) is not a tasting: its three course cards are its own deck, tasting:{id}, never Tasting courses. */
+			const served = new Set((current?.tastings ?? []).filter((t) => tastingInMeal(t, meal) && !isFixedPrice(t)).map((t) => t.id));
 			return tasteCards.filter((c) => (one ? c.itemId === one : served.has(c.itemId))).map((c) => `s:${tasteKey(c)}`);
 		}
 		if (id === 'components') return compRefs([...compCards.keys()]);
@@ -745,7 +746,7 @@
 		if (!current || !houseCards.length) return [];
 		const out = [row('menu')];
 		/* The tasting courses next to the whole menu, ahead of the sections, so they are never taken for a section's dishes. */
-		if (tasteCards.length) out.push(row('tastings'));
+		if (members('tastings').length) out.push(row('tastings'));
 		for (const s of houseSections) out.push(row(`menu:${s.section}`));
 		if (weakIds.length) out.push(row('menu-weak'));
 		if (parts.length) out.push(row('menu-parts'));

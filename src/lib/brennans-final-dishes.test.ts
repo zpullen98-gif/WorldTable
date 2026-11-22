@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { brennansFinalDishes, finalDishKey, finalDishFor, filterFinalDishes, houseDishIdForFinal, FINAL_DISH_HOUSE_TO_FALL, FINAL_DISH_CAPTION, type BrennanFinalDish } from './brennans-final-dishes';
+import { brennansFinalDishes, finalDishKey, finalDishFor, filterFinalDishes, houseDishIdForFinal, isUnplated, UNPLATED_SECTIONS, FINAL_DISH_HOUSE_TO_FALL, FINAL_DISH_CAPTION, type BrennanFinalDish } from './brennans-final-dishes';
 import { BRENNANS_HOUSE_ID } from './teaching-folios';
 import { fallMenu } from './fall-menu';
 import { plateArtworkUrl } from './plate-artwork';
@@ -9,10 +9,16 @@ import { parentOf } from './nav';
 
 const house = JSON.parse(readFileSync(resolve('static/shared/packs/brennans-new-orleans.v1.oothouse.json'), 'utf8')).house;
 
+/* The dishes that were plated: every dish of the pack but the Thanksgiving Day menu's sixteen, which
+   were filed from the printed sheet with no plate (UNPLATED_SECTIONS). The 70 and the plate check hold
+   for every plated dish, before that menu is in the pack, while it is served and once it is past. */
+const plated: Array<{ id: string; name: string; section: string }> = house.dishes.filter((dish: { section: string }) => !isUnplated(dish));
+const unplated: Array<{ id: string; name: string; section: string }> = house.dishes.filter((dish: { section: string }) => isUnplated(dish));
+
 describe('Brennan final presentations', () => {
-	it('covers all 70 canonical dishes and their eight legacy fall routes with 70 unique presentations', () => {
+	it('covers all 70 plated dishes and their eight legacy fall routes with 70 unique presentations', () => {
 		const expected = [
-			...house.dishes.filter((dish: { id: string }) => !FINAL_DISH_HOUSE_TO_FALL[dish.id]).map((dish: { id: string }) => `house:${dish.id}`),
+			...plated.filter((dish: { id: string }) => !FINAL_DISH_HOUSE_TO_FALL[dish.id]).map((dish: { id: string }) => `house:${dish.id}`),
 			...fallMenu.items.filter(item => item.kind === 'dish').map(item => `fall:${item.id}`)
 		].sort();
 		expect(brennansFinalDishes.map(finalDishKey).sort()).toEqual(expected);
@@ -20,10 +26,10 @@ describe('Brennan final presentations', () => {
 		expect(brennansFinalDishes).toHaveLength(70);
 		expect(FINAL_DISH_CAPTION).toContain('AI-generated');
 		expect(FINAL_DISH_CAPTION).toContain('chef-informed examples');
-		expect(house.dishes).toHaveLength(70);
+		expect(plated).toHaveLength(70);
 		expect(Object.keys(FINAL_DISH_HOUSE_TO_FALL)).toHaveLength(8);
 		expect(new Set(Object.values(FINAL_DISH_HOUSE_TO_FALL)).size).toBe(8);
-		for (const dish of house.dishes) expect(finalDishFor(house.id, dish.id), dish.name).toBeDefined();
+		for (const dish of plated) expect(finalDishFor(house.id, dish.id), dish.name).toBeDefined();
 		for (const [dishId, fallId] of Object.entries(FINAL_DISH_HOUSE_TO_FALL)) {
 			expect(house.dishes.some((dish: { id: string }) => dish.id === dishId), dishId).toBe(true);
 			expect(fallMenu.items.some(item => item.id === fallId && item.kind === 'dish'), fallId).toBe(true);
@@ -36,6 +42,16 @@ describe('Brennan final presentations', () => {
 			expect(art.platingNote.length, art.name).toBeGreaterThan(25);
 			expect(art.ingredientCues.length, art.name).toBeGreaterThan(0);
 		}
+	});
+
+	it('draws no plate for the Thanksgiving Day menu, filed from its sheet alone: sixteen dishes, or none in the pack', () => {
+		expect(UNPLATED_SECTIONS).toEqual(['Thanksgiving Day', 'Thanksgiving Day sides', 'Past Thanksgiving Day 2026', 'Past Thanksgiving Day 2026 sides']);
+		expect([0, 16]).toContain(unplated.length);
+		for (const dish of unplated) {
+			expect(finalDishFor(house.id, dish.id), dish.name).toBeUndefined();
+			expect(FINAL_DISH_HOUSE_TO_FALL[dish.id], dish.name).toBeUndefined();
+		}
+		expect(house.dishes).toHaveLength(plated.length + unplated.length);
 	});
 
 	it('resolves house art only for Brennan’s exact identity and keeps fall ids in their own namespace', () => {

@@ -58,6 +58,7 @@
 		bottlesFor,
 		cardVideos,
 		pairsFor,
+		sheetHere,
 		tastingHere,
 		tastingPlaces,
 		type StudyRow
@@ -126,6 +127,8 @@
 	   pour for this item, right under the name, and the dish's own pour off the list kept off the first
 	   screen and named for what it is, so the guest is never quoted a priced bottle for an included pour. */
 	const here = $derived(idx >= 0 && !searching ? tastingHere(current, list[idx].section, dish.id) : null);
+	/* With it, what the house's pairing sheet prints of the course's pour, word for word. */
+	const sheet = $derived(here && idx >= 0 ? sheetHere(current, list[idx].section, dish.id) : []);
 	const isDish = $derived(dish.kind === 'dish');
 	const signature = $derived(dish.kind === 'dish' && !!(dish as HouseDish).signature);
 
@@ -242,6 +245,7 @@
 		<div class="tcourse" data-tasting={here.id}>
 			<p class="eyebrow">{here.name}{#if here.price}{' · '}{here.price}{/if}</p>
 			{#each here.lines as l, i (i)}<p class="tcline">{l}</p>{/each}
+			{#each sheet as s (s.words)}<p class="tcsheet"><span class="soft small">{s.pour ? say('sheetSaysOf', { pour: s.pour }) : say('sheetSays')}</span> <q>{s.words}</q></p>{/each}
 			{#if here.terms}<p class="soft small">{here.terms}</p>{/if}
 		</div>
 	{/if}
@@ -657,6 +661,9 @@
 	.tcourse { margin: 8px 0 4px; padding-left: 12px; border-left: 2px solid var(--turmeric-deep); }
 	.tcourse .eyebrow { margin-top: 0; }
 	.tcline { margin: 2px 0; font-size: 1.05rem; line-height: 1.5; color: var(--ink); }
+	.tcsheet { margin: 4px 0 2px; font-size: 1.05rem; line-height: 1.5; color: var(--ink); }
+	.tcsheet .soft { display: block; }
+	.tcsheet q { quotes: '\201C' '\201D'; font-style: italic; }
 	.pourline a, .pairs a, .plain a { color: var(--ink); text-underline-offset: 3px; }
 	.line { margin: 6px 0; line-height: 1.55; max-width: var(--measure); }
 	.block { margin: 20px 0 4px; }

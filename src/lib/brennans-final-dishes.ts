@@ -20,6 +20,15 @@ export interface BrennanFinalDish {
 
 export const FINAL_DISH_CAPTION = 'Illustrative final presentation • AI-generated. Ingredients follow the saved menu; plating and portions are chef-informed examples.';
 export const brennansFinalDishes = data.items as BrennanFinalDish[];
+/**
+ * The sections whose dishes have no final presentation. The Thanksgiving Day
+ * menu of 26 November 2026 was filed from the printed sheet alone: nothing
+ * was plated for it and nothing invents a plate, so its sixteen dishes draw
+ * their cards with no picture and stay out of the gallery. The last two are
+ * the same dishes once the day is over and they are filed as past.
+ */
+export const UNPLATED_SECTIONS: readonly string[] = ['Thanksgiving Day', 'Thanksgiving Day sides', 'Past Thanksgiving Day 2026', 'Past Thanksgiving Day 2026 sides'];
+export const isUnplated = (dish: { section?: string }) => UNPLATED_SECTIONS.includes((dish.section ?? '').trim());
 export const finalDishKey = (art: Pick<BrennanFinalDish, 'collection' | 'itemId'>) => `${art.collection}:${art.itemId}`;
 const byKey = new Map(brennansFinalDishes.map(art => [finalDishKey(art), art]));
 /** Fall dishes now also live in the canonical House pack. Keep the original

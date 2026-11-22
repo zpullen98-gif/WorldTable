@@ -6,8 +6,10 @@
   course shows its heading as printed ("Eye Opener Cocktail", "Third
   Course"), "choice of" where the menu prints it, its dishes, the lines
   printed under them, and the pour under the words printed over it
-  ("Paired with", "Suggested Pairing"). A course that is a drink and nothing
-  else (the eye opener) shows the drink as the course.
+  ("Paired with", "Suggested Pairing"), and under the pour what the house's
+  pairing sheet prints of it, word for word, when the pack holds it (the
+  Dinner Pairing Wines sheet of 22 November 2026). A course that is a drink
+  and nothing else (the eye opener) shows the drink as the course.
 
   Every dish and every pour the house holds is a button that opens its
   study card; the card walks the menu in printed order with Previous and
@@ -19,7 +21,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import type { House } from '$lib/house/house-schema';
-	import { say, tastingRows, type StudyRow, type TastingItemRef, type TastingShown } from '$lib/study';
+	import { say, sheetWords, tastingRows, type StudyRow, type TastingItemRef, type TastingShown } from '$lib/study';
 
 	let {
 		current,
@@ -37,6 +39,10 @@
 	const rows = $derived(tastingRows(current, menu));
 	const keyOf = (n: number, id: string) => `${menu.id}:${n}:${id}`;
 	const open = (n: number, id: string) => onOpen(id, rows, `.study [data-key="${keyOf(n, id)}"]`);
+	/* What the house's pairing sheet prints of a course's pour for this menu, word for word (the wine's
+	   kept note under study.ts SHEET_Q): the tableside line a server says with the pour. '' when the
+	   pack holds none for it, and then nothing is drawn. */
+	const sheetOf = (ref: TastingItemRef | null) => (ref && ref.kind === 'wine' ? sheetWords(current, ref.id, menu.name) : '');
 </script>
 
 {#snippet entry(n: number, ref: TastingItemRef | null, text: string, role: 'dish' | 'drink' | 'pour')}
@@ -86,6 +92,9 @@
 							<div class="pour-stage">
 								<p class="plabel">{c.pourLabel}</p>
 								{@render entry(c.n, c.pour.item, c.pour.text, 'pour')}
+								{#if sheetOf(c.pour.item)}
+									<p class="sheet" data-sheet={c.pour.item?.id}><span class="sheetlabel">{say('sheetSays')}</span> <q>{sheetOf(c.pour.item)}</q></p>
+								{/if}
 							</div>
 						{/if}
 					</div>
@@ -153,6 +162,9 @@
 	}
 	.tag.strong { color: var(--ink); font-weight: 700; }
 	.printed { margin: 0 0 2px; font-size: 1rem; line-height: 1.45; color: var(--ink-soft); }
+	.sheet { margin: 0 0 2px; font-size: 1rem; line-height: 1.45; color: var(--ink); }
+	.sheetlabel { display: block; font-size: var(--t-micro); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--muted); line-height: 1.4; }
+	.sheet q { quotes: '\201C' '\201D'; font-style: italic; }
 	.tfoot { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 2px; }
 	.journey-practice { color: var(--ink-soft); font-size: var(--t-small); line-height: 1.5; margin: 8px 0; }
 	.chip {

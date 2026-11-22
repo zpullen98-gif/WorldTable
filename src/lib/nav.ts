@@ -123,7 +123,8 @@ export function parentOf(ask: ParentAsk): string {
 		if (q.get('view') === 'fall') return q.has('item') ? `/menu?view=fall&kind=${['dish', 'cocktail', 'all'].includes(q.get('kind') ?? '') ? q.get('kind') : 'dish'}` : '/menu';
 		if (q.get('view') === 'plates') return /^(dish-)?d-/.test(hash) ? '/menu?view=plates' : '/menu';
 		const workspace = q.get('view');
-		if (workspace && ['learn', 'rehearse', 'reference'].includes(workspace)) {
+		// The Thanksgiving Day tab is a workspace like the others: a card opened from it goes back to the tab.
+		if (workspace && ['learn', 'rehearse', 'reference', 'thanksgiving'].includes(workspace)) {
 			return /^(dish-)?d-/.test(hash) || hash === 'edit' ? `/menu?view=${workspace}` : '/menu';
 		}
 		// A card opened from the Producers view goes back to the view; one open on the study view, or the editing page pushed over it, to the study view.

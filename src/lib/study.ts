@@ -20,7 +20,7 @@
  * NO ALLERGEN IS READ, INFERRED OR SHOWN HERE. The service note is a
  * person's own words and the card prints it verbatim under the fixed eyebrow.
  */
-import { isMark, DISH_PARTS, COCKTAIL_PARTS, WINE_PARTS, KEYS, BOTTLE_TIERS, PRODUCER_GROUPS, foldSize, wineListOf, videoGroups, videoMeta, videosFor, componentGroups, componentVideos, componentsFor } from './house/house-schema';
+import { isMark, isPast, DISH_PARTS, COCKTAIL_PARTS, WINE_PARTS, KEYS, BOTTLE_TIERS, PRODUCER_GROUPS, foldSize, wineListOf, videoGroups, videoMeta, videosFor, componentGroups, componentVideos, componentsFor } from './house/house-schema';
 import { compareHref, roomHref, type Room } from './wing-links';
 import type { CzIndex } from './cuisine';
 import type {
@@ -184,6 +184,18 @@ export const STUDY_WORDS = {
 	deckTasting: '{name}: the courses',
 	courseCount: '{n} courses',
 	onTasting: 'On the {name}: {course}',
+	onFixedPrice: 'On the {meal} menu, {n} courses for {price}: {course}',
+	fixedSides: 'Sides for the table',
+	fixedSidesNote: 'Ordered for the table and priced on their own, outside the courses.',
+	fixedIntro: 'One choice a course. Open a dish to learn it, then practise the day’s dishes alone.',
+	fixedFlash: 'Flash the {n} dishes',
+	fixedQuiz: 'Quiz these dishes',
+	fixedSheet: 'On the sheet',
+	fixedNote: 'Notes for the floor',
+	firstPick: 'First pick',
+	noAlcohol: 'Without alcohol',
+	sheetSays: 'The pairing sheet says',
+	sheetSaysOf: 'The pairing sheet on {pour}',
 	pouredOn: 'Poured on the {name}: {course}',
 	pouredWith: '{course}, poured with {dishes}',
 	noPairing: 'The menu prints no pairing for this course.',
@@ -663,6 +675,20 @@ function itemRef(house: House, id: string): TastingItemRef | null {
 	return it && name ? { id: it.id, name, kind: it.kind } : null;
 }
 
+/**
+ * A fixed price menu, known by its shape alone (the pack carries no flag for
+ * it): it has courses, every course is a choice of two or more dishes, and
+ * no course has a pour. The house files it among the tastings (the
+ * Thanksgiving Day menu of 26 November 2026: three courses for one price);
+ * the Table draws it in a tab of its own (fixedPriceMenu below) and keeps it
+ * out of the Tasting menus block and the Tasting courses deck, where a guest
+ * who orders a tasting is served every course.
+ */
+export function isFixedPrice(t: Pick<Tasting, 'courses'>): boolean {
+	const courses = t.courses ?? [];
+	return courses.length > 0 && courses.every((c) => c.choice === true && (c.dishIds ?? []).length > 1 && !plain(c.pourId) && !plain(c.pourText));
+}
+
 /** True when the tasting is served at that meal; a tasting nobody gave a meal is kept under every meal, and '' is all day. */
 export function tastingInMeal(t: Tasting, meal: string): boolean {
 	return !meal || !plain(t.meal) || plain(t.meal) === meal;
@@ -680,7 +706,8 @@ export function tastingsShown(house: House, meal = ''): TastingShown[] {
 	const out: TastingShown[] = [];
 	for (const t of house.tastings ?? []) {
 		const name = plain(t.name);
-		if (!name || !tastingInMeal(t, meal)) continue;
+		/* A fixed price menu is filed among the tastings and is not one: it is drawn once, in its own tab. */
+		if (!name || !tastingInMeal(t, meal) || isFixedPrice(t)) continue;
 		const courses: TastingCourseShown[] = [];
 		for (const c of t.courses ?? []) {
 			const dishes = (c.dishIds ?? []).map((id) => itemRef(house, id)).filter((r): r is TastingItemRef => !!r && r.kind === 'dish');
@@ -743,7 +770,7 @@ export function tastingOnlyIds(house: House): Set<string> {
  * tasting.
  */
 export function tastingSection(house: House): string {
-	if (!(house.tastings ?? []).some((t) => plain(t.name))) return '';
+	if (!(house.tastings ?? []).some((t) => plain(t.name) && !isFixedPrice(t))) return '';
 	const only = tastingOnlyIds(house);
 	const sections = new Set((house.dishes ?? []).filter((d) => only.has(d.id)).map((d) => plain(d.section) || 'The menu'));
 	return sections.size === 1 ? [...sections][0] : say('tastings');
@@ -790,6 +817,10 @@ export function tastingPlaces(house: House, itemId: string): string[] {
 		if (!name) continue;
 		const course = plain(t.course.label) || 'course ' + t.course.n;
 		let line = say(t.as === 'dish' ? 'onTasting' : 'pouredOn', { name, course });
+		/* A fixed price menu is said by its meal and its price, never as a tasting: 'On the Thanksgiving Day menu, three courses for $80: Appetizers'. */
+		const meal = plain(t.tasting.meal);
+		const price = plain(t.tasting.price);
+		if (t.as === 'dish' && isFixedPrice(t.tasting) && meal && price) line = say('onFixedPrice', { meal, n: countWord(t.tasting.courses.length), price, course });
 		if (t.as === 'dish') {
 			const pour = plain(t.course.pourText) || nameById(house, plain(t.course.pourId));
 			if (pour) line += '. ' + pourPhrase(plain(t.course.pourLabel), pour);
@@ -797,6 +828,155 @@ export function tastingPlaces(house: House, itemId: string): string[] {
 		if (!out.includes(line)) out.push(line);
 	}
 	return out;
+}
+
+const COUNT_WORDS = ['no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+/** A small count as a word, as a server says it; past ten, the figure. */
+function countWord(n: number): string {
+	return COUNT_WORDS[n] ?? String(n);
+}
+
+/* -------------------------------------------------------------------------
+ * The pairing sheet's words for a tasting's pour
+ * ---------------------------------------------------------------------- */
+
+/** The question the builder files a pairing sheet's words under, on the wine (tools/house/engine.mjs SHEET_Q). */
+export const SHEET_Q = 'What does the pairing sheet say?';
+
+/**
+ * What the house's pairing sheet prints of a wine for one tasting, word for
+ * word: the quoted words of the wine's kept note under SHEET_Q that names
+ * the tasting ('... prints this for the second course of the Dinner Tasting
+ * Menu: “Ripe pear with green notes and a lush texture.”'). The newest such
+ * note; '' when the wine has none for that tasting. The sheet's words, never
+ * reworded here.
+ */
+export function sheetWords(house: House, wineId: string, tastingName: string): string {
+	const wine = wineId ? findItem(house, wineId) : undefined;
+	const name = plain(tastingName);
+	if (!wine || !name) return '';
+	const notes = (wine.kept ?? [])
+		.filter((n) => n && typeof n.q === 'string' && typeof n.a === 'string' && n.q.trim() === SHEET_Q && n.a.includes(' of the ' + name + ':'))
+		.sort((a, b) => (b.ts ?? 0) - (a.ts ?? 0));
+	for (const n of notes) {
+		const m = /\u201C([^\u201C\u201D]+)\u201D\s*$/.exec(n.a.trim());
+		if (m) return m[1].trim();
+	}
+	return '';
+}
+
+/**
+ * The sheet's words a card opened from a tasting shows under its course: for
+ * the pour itself, its own words; for a dish, the words for its course's
+ * pour, with the pour named as the menu prints it.
+ */
+export function sheetHere(house: House, section: string, itemId: string): Array<{ pour: string; words: string }> {
+	const name = plain(section);
+	const t = name ? tastingsShown(house).find((m) => m.name === name) : undefined;
+	const out: Array<{ pour: string; words: string }> = [];
+	if (!t) return out;
+	for (const c of t.courses) {
+		const wine = c.pour?.item;
+		if (!wine || wine.kind !== 'wine') continue;
+		const mine = wine.id === itemId;
+		if (!mine && !c.dishes.some((d) => d.id === itemId)) continue;
+		const words = sheetWords(house, wine.id, t.name);
+		if (words && !out.some((o) => o.words === words)) out.push({ pour: mine ? '' : c.pour!.text, words });
+	}
+	return out;
+}
+
+/* -------------------------------------------------------------------------
+ * A fixed price menu, as printed: the Thanksgiving Day tab
+ * ---------------------------------------------------------------------- */
+
+/** The meal whose fixed price menu the Brennan's page draws in a tab of its own (the sheet of 22 November 2026). */
+export const HOLIDAY_MEAL = 'Thanksgiving Day';
+
+/** One dish of a fixed price menu: its row, the sheet's own line for it, and what the house pours with it. */
+export interface FixedPriceDish {
+	row: StudyRow;
+	/** The line the menu prints for this dish (the sheet's name, a colon, the sheet's words); '' when it prints none. */
+	printed: string;
+	/** The dish's kept first pick and its pour without alcohol, as its card says them; empty when it has no kept pairing. */
+	pairs: Array<[string, string]>;
+}
+
+/** A fixed price menu ready to draw: what it prints above its courses, the courses, the sides sold beside it. */
+export interface FixedPriceShown {
+	id: string;
+	name: string;
+	price: string;
+	meal: string;
+	line: string;
+	note: string;
+	/** When the meal is served, from the house's own card: its days and its hours, each '' when the card has none. */
+	days: string;
+	hours: string;
+	courses: Array<{ n: number; label: string; dishes: FixedPriceDish[] }>;
+	/** The dishes of the section '<meal> sides', in the house's order, each with its printed price. */
+	sides: StudyRow[];
+	/** Every dish above in the menu's order, the courses then the sides, each filed under its course: the list a card walks. */
+	rows: StudyRow[];
+	/** How many dishes the house serves at the meal: what the meal's deck and quiz deal. */
+	served: number;
+}
+
+/**
+ * The house's fixed price menu for a meal, or null when it holds none (the
+ * tab and its door are then not drawn). Read from the record alone: its
+ * name, price and printed line, each course's dishes in printed order with
+ * the line printed for each (printed[i] is the line of dishIds[i], so a dish
+ * the house lacks takes its line with it), then the sides, which are no
+ * course: the dishes filed under '<meal> sides'. A past dish is left out,
+ * as it is from every list of what is served.
+ */
+export function fixedPriceMenu(house: House, meal: string): FixedPriceShown | null {
+	const want = plain(meal);
+	const t = want ? (house.tastings ?? []).find((x) => plain(x.name) && plain(x.meal) === want && isFixedPrice(x)) : undefined;
+	if (!t) return null;
+	const sidesLabel = say('fixedSides');
+	const rows: StudyRow[] = [];
+	const seen = new Set<string>();
+	const courses: FixedPriceShown['courses'] = [];
+	for (const c of t.courses ?? []) {
+		const label = plain(c.label) || 'Course ' + c.n;
+		const dishes: FixedPriceDish[] = [];
+		(c.dishIds ?? []).forEach((id, i) => {
+			const it = findItem(house, id);
+			if (!it || it.kind !== 'dish' || !plain(it.name) || isPast(it) || seen.has(it.id)) return;
+			seen.add(it.id);
+			const row = rowFor(house, it, label);
+			dishes.push({ row, printed: plain((c.printed ?? [])[i]), pairs: pairsFor(house, it) });
+			rows.push(row);
+		});
+		courses.push({ n: c.n, label, dishes });
+	}
+	const sideSection = want + ' sides';
+	const sides: StudyRow[] = [];
+	for (const d of house.dishes ?? []) {
+		if (plain(d.section) !== sideSection || !plain(d.name) || seen.has(d.id)) continue;
+		seen.add(d.id);
+		const row = rowFor(house, d, sidesLabel);
+		sides.push(row);
+		rows.push(row);
+	}
+	const card = (house.meals ?? []).find((m) => plain(m?.name) === want);
+	const served = (house.dishes ?? []).filter((d) => plain(d.name) && !isPast(d) && (d.meals ?? []).map(plain).includes(want)).length;
+	return {
+		id: t.id,
+		name: plain(t.name),
+		price: plain(t.price),
+		meal: want,
+		line: plain(t.line),
+		note: plain(t.note),
+		days: plain(card?.days),
+		hours: plain(card?.hours),
+		courses,
+		sides,
+		rows,
+		served
+	};
 }
 
 /** A card opened from one tasting's menu: what that tasting says about the item, drawn under its name. */
