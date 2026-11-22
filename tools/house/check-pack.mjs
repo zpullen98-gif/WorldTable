@@ -32,7 +32,7 @@
    Runs from any directory. Exits 1 with the file and the rule on failure, one line on success. */
 
 import fs from 'node:fs';
-import { loadEngine, GUIDE, PACK, REL, countProblems, describe, eachString, answerNames, britishWords, checkArgs, editionInFuture, sourceText as pageText, CHILD_SECTIONS, SNACK_SECTION, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, FIXED_QS, componentProblems, sellingProblems, saleCounts, pastProblems } from './engine.mjs';
+import { loadEngine, GUIDE, PACK, REL, countProblems, describe, eachString, answerNames, britishWords, checkArgs, editionInFuture, sourceText as pageText, CHILD_SECTIONS, SNACK_SECTION, stemProblems, upsellRoomProblems, noteProblems, noteHay, noteCounts, thinLines, FIXED_QS, componentProblems, sellingProblems, saleCounts, pastProblems, menuProblems, isSidesSection } from './engine.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
@@ -114,10 +114,12 @@ if (unkept > 5) F(`${unkept} marks are not by person in all`);
 for (const d of house.dishes) {
 	if (!d.parts || !d.lines) F(`dish ${d.name} lacks parts or lines`);
 	const child = CHILD_SECTIONS.includes(d.section);
-	if (d.section !== 'Sides' && !child && d.section !== SNACK_SECTION && !d.pairing) F(`dish ${d.name} lacks a pairing`);
+	/* A sides section is the menus' Sides or a section ending " sides" (engine.mjs isSidesSection). */
+	const side = isSidesSection(d.section);
+	if (!side && !child && d.section !== SNACK_SECTION && !d.pairing) F(`dish ${d.name} lacks a pairing`);
 	if (child && (d.pairing || d.pairs)) F(`dish ${d.name} is a child's plate and carries a pairing; none is ever invented for one`);
 	if (!d.say || !d.guest) F(`dish ${d.name} lacks say or guest`);
-	if (d.section !== 'Sides' && !d.why) F(`dish ${d.name} lacks a why line`);
+	if (!side && !d.why) F(`dish ${d.name} lacks a why line`);
 }
 /* A wine's grapes may be empty only where no source names them and a lineup ask sends the blend to the
    sommelier (from the 01:30 edition of 4 October 2026: the Birthday Bubbles bottles and the Bubbles rosés). */
@@ -166,6 +168,9 @@ for (const s of stemProblems(house)) F('stem: ' + s);
 for (const r of upsellRoomProblems(house)) F('upsell-room: ' + r);
 /* The past rule's guard (engine.mjs pastProblems): nothing served points at a past dish, wine or drink. */
 for (const p of pastProblems(house, lib.isPast)) F('past: ' + p);
+/* The menu rules (engine.mjs menuProblems): nothing served without a price, a menu that prices it or an
+   ask for the price, and no wine without a vintage unasked. */
+for (const m of menuProblems(house, lib.isPast)) F('menu: ' + m);
 
 /* The coaching notes (the design's sections 5.2 to 5.6): every dish, drink and wine carries one
    description under "Tell me about it." and its coaching notes under the fixed questions, each once,

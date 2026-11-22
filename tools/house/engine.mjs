@@ -278,6 +278,19 @@ export function loadEngine(fail) {
    house drink or wine allowed, never a pairing block invented for them). */
 export const CHILD_SECTIONS = ["Children's breakfast", "Children's dinner"];
 export const SNACK_SECTION = 'Roost Bar & Bubbles snacks';
+/* A sides section: the menus' own Sides, and any section whose name ends " sides" (the Thanksgiving Day
+   sheet's Sides for the Table file under "Thanksgiving Day sides", and under "Past Thanksgiving Day
+   sides" once the day has passed, so the past rule and this one read one name). A side is ordered for
+   the table beside a main: no pairing is ever invented for one, and it need not carry a why line. */
+export const SIDES_SECTION = 'Sides';
+export function isSidesSection(section) {
+	const s = typeof section === 'string' ? section.trim() : '';
+	return s === SIDES_SECTION || / sides$/.test(s);
+}
+/* The question a wine's kept note stands under when it quotes what a house pairing sheet prints of the
+   pour (the builder's op pours writes it, from the Dinner Pairing Wines sheet of 22 November 2026). Not
+   one of the fixed questions: the words are the house's, quoted, and no range holds them. */
+export const SHEET_Q = 'What does the pairing sheet say?';
 
 /* The counts the Brennan's pack must carry: the guide's 47 dishes plus the 8 children's plates, the
    7 Bubbles snacks and, from the 12:30 edition of 17 October 2026, the 8 dishes of the Fall 2026
@@ -471,6 +484,44 @@ export function pastProblems(house, isPast) {
 	}
 	for (const r of past.values()) {
 		if (r.kind !== 'cocktail' && !(Array.isArray(r.meals) && r.meals.length)) out.push(`${r.kind} ${r.name}: a past ${r.kind} with no meals would be shown under every meal; set the meals it was served at`);
+	}
+	return out;
+}
+
+/* THE MENU RULES (the Thanksgiving edition, November 2026): three things an edition could get wrong
+   without a word, each a sentence naming the record and the repair; fatal in the builder, validate-pack
+   and check-pack. A past record (isPast) is read, never sold, and is left alone.
+   - unpriced-dish: a served dish with no printed price is on a course of a tasting or a fixed price
+     menu (the menu's price covers it) or is named by a lineup ask that blocks its price. Otherwise the
+     card would show no price and nobody would know to ask.
+   - unpriced-wine: a served menu wine with no printed price is the pour of a tasting course or is named
+     by a lineup ask that blocks its price. A pour that left its tasting is caught here: it is re-filed
+     under a section that begins "Past " or given its price.
+   - vintage: a served wine with no vintage (a page that prints none) is named by a lineup ask whose
+     question says vintage, so the floor asks which year is open rather than guessing one.
+   Each problem opens with its code and a colon, so a staged dry build can hold one kind as advisory. */
+export function menuProblems(house, isPast) {
+	const out = [];
+	const past = (r) => typeof isPast === 'function' && isPast(r);
+	const text = (x) => (typeof x === 'string' ? x.trim() : '');
+	const onCourse = new Set();
+	const pourOf = new Set();
+	for (const t of house.tastings || []) for (const c of t.courses || []) {
+		for (const id of c.dishIds || []) onCourse.add(id);
+		if (c.pourId) pourOf.add(c.pourId);
+	}
+	const asks = house.askAtLineup || [];
+	const priceAsked = new Set(asks.filter((a) => a.blocksField === 'price').flatMap((a) => a.itemIds || []));
+	const vintageAsked = new Set(asks.filter((a) => /\bvintages?\b/i.test(a.question || '')).flatMap((a) => a.itemIds || []));
+	const priced = (r) => !!text(r.price) || (r.prices || []).some((p) => p && text(p.printed)) || !!text(r.glass) || !!text(r.bottle);
+	for (const d of house.dishes || []) {
+		if (past(d) || priced(d) || onCourse.has(d.id) || priceAsked.has(d.id)) continue;
+		out.push(`unpriced-dish: dish ${d.name}: no printed price, on no course of a tasting or a fixed price menu, and no lineup ask blocks its price; name it on the menu that prices it, or file it with priceUnknown and its ask`);
+	}
+	for (const w of house.wines || []) {
+		if (past(w)) continue;
+		if (w.list !== 'bottle' && !priced(w) && !pourOf.has(w.id) && !priceAsked.has(w.id)) out.push(`unpriced-wine: wine ${w.name}: no printed price, the pour of no tasting course, and no lineup ask blocks its price; a pour that left its tasting is re-filed under a section that begins "Past " (wine:${w.name} section), or given the price a page prints`);
+		if (!text(w.vintage) && !vintageAsked.has(w.id)) out.push(`vintage: wine ${w.name}: no vintage, and no lineup ask that says vintage names it; add an ask:+ for the sommelier (which vintage is open) naming the wine`);
 	}
 	return out;
 }

@@ -8,6 +8,31 @@ policy, terms, pricing page, legal footer, disclaimer, paywall, subscription,
 account or permission gating, and none may be added, whatever the reason given.
 The Table's Privacy and Terms links left its footer and More page in 3ab600b.
 
+## The fixed price menu and the pours, 22 November 2026
+
+The builder's routes for the Thanksgiving edition, added before the edition
+that uses them: the shipped house still builds to the same bytes. A fixed
+price menu is one more record among the tastings, filed whole by an add on
+`tasting:+` with `fixedPrice`: every course a choice, one printed line a
+dish in the dishes' order (the sheet's own name and words, so a dish the house
+already serves joins under the sheet's wording with no second record). A new
+dish it serves files with `fixedPriceOn` (no price, no price ask); a wine
+poured only with a tasting files with `tastingPour` (no price, its pours, an
+empty vintage where the page prints none). The op `pours` on a tasting writes
+every course's pour from one table, each row held verbatim to a page, and puts
+the sheet's words on the wine under `SHEET_Q`. The op `answer` on the house
+retires a lineup ask a newer page answers, and `retire` now takes a menu
+filed with `tasting:+`, so the day's menu leaves by three appended entries.
+
+`engine.mjs menuProblems` is fatal in the builder, validate-pack and
+check-pack: nothing served without a price, a menu that prices it or an ask
+for the price, and no wine without a vintage unasked. `isSidesSection` names
+the sections that carry no pairing: `Sides` and any section ending ` sides`.
+None of the three route keys reaches the pack: a wing knows the menu by its
+meal. `brennans-fixed-price.test.ts` covers the routes, the refusals and the
+re-file as past. The edition's own counts (`countProblems`, `MENU_WINES`)
+move in the commit that merges its staged chunks, never before.
+
 ## The Professional Pass, 27 October 2026
 
 `teaching-folios-professional-pass.ts` adds four readiness studies and sixteen

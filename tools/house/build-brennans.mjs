@@ -25,7 +25,16 @@
       mix-up is targeted by its two sides, mixup:<a> vs <b>. A section beginning "Past " (the engine's
       isPast) holds what the house no longer serves: it sorts last in every list, its dishes are left out
       of the wines' derived lists, and the build fails when anything served still points at it. A glass
-      wine a page prints with no price files with priceUnknown, as a dish does. A term links the items its words reach;
+      wine a page prints with no price files with priceUnknown, as a dish does. A fixed price menu
+      (the Thanksgiving Day sheet of 22 November 2026) is one more record among the tastings, filed whole
+      by an add on tasting:+ with fixedPrice true: every course a choice of dishes named as the house
+      names them, one printed line a dish in the same order; a new dish it serves files with
+      fixedPriceOn naming the menu (no price of its own and no price ask), and a wine poured only with a
+      tasting files with tastingPour (no price, its pours, its vintage empty where the page prints none).
+      The op pours on a tasting writes every course's pour from one table, each row quoted from a page;
+      the op answer on the house takes a lineup ask a newer page answers out under a tombstone; and a
+      menu filed with tasting:+ retires like a dish once its day has passed.
+      A term links the items its words reach;
       items on term:<term> (or on its term:+ add) names more by exact name, an unknown name failing
       the build, and notItems takes one off. An add on video:+ files one video in the
       shape of a research/videos-*.json record, copied in whole (see VIDEOS below);
@@ -79,7 +88,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
-import { americanise, checkArgs, EDITION_TS, editionInFuture, PACK, readFragments, componentsDir, STAGING, stagingNames, stagingOverrideFiles, stagingFragmentFiles, pastProblems } from './engine.mjs';
+import { americanise, checkArgs, EDITION_TS, editionInFuture, PACK, readFragments, componentsDir, STAGING, stagingNames, stagingOverrideFiles, stagingFragmentFiles, pastProblems, menuProblems, SHEET_Q, sourceText as pageText } from './engine.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DIR = path.join(HERE, 'brennans');
@@ -566,6 +575,31 @@ const buried = [];
 /* The dishes and the glass wines filed with no printed price (priceUnknown on newItem and newWine): each
    must be named by an ask that blocks the price, checked at assembly. */
 const priceUnknownNames = [];
+/* THE FIXED PRICE MENU AND THE POURS (the Thanksgiving edition, November 2026). Three routes, each
+   refused at assembly when what it says is not so:
+   - fixedPriceOn on a dish:+ add names the fixed price menu (a tasting:+ add with fixedPrice true) the
+     dish is served on. The menu's one printed price covers it, so it files with no price and needs no
+     price ask; the menu must name it on a course and the dish must list the menu's meal.
+   - tastingPour on a wine:+ add files a wine poured only with a tasting: no price, its pours as the
+     tasting prints them ("4 oz"), and a vintage that may be empty when the page prints none (a lineup
+     ask with the word vintage must then name it, engine.mjs menuProblems). Some course must pour it.
+   - the op pours on a tasting writes each course's pour from one table (see below). */
+const fixedPriceDishes = [];
+const tastingPourNames = [];
+/* The lineup asks a newer page answers (op answer on the house): value { id, was, tombstone }. The ask
+   an earlier entry files is left out of the house and its id goes into house.removed under the stamp,
+   so a device drops the question nobody touched. It is the way a staged chunk retires an ask without
+   editing the entry that filed it; the id must be an ask this build would otherwise file. */
+const answered = [];
+/* The page text a quoted row is held to (the guide and every page snapshot), read once, whitespace
+   folded and the quotes written straight, as the row is before it is looked for. */
+let pageHay = null;
+const quoteFold = (x) => String(x).replace(/[\u2018\u2019]/g, "'").replace(/[\u201C\u201D]/g, '"').replace(/\s+/g, ' ').trim();
+function onAPage(text) {
+	if (pageHay === null) pageHay = quoteFold(pageText(fail));
+	return pageHay.indexOf(quoteFold(text)) >= 0;
+}
+const ORDINALS = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth'];
 overrides.entries.forEach((e, n) => {
 	const op = e.op || 'set';
 	if (typeof e.field === 'string' && DERIVED_WINE_FIELDS.includes(e.field.split('.')[0])) fail(`${REL(OVERRIDES)} entry ${n}: ${DERIVED_SAID(e.field)}`);
@@ -580,7 +614,11 @@ overrides.entries.forEach((e, n) => {
 	   drops the copy nobody touched after that stamp and keeps one a person did. The stamp is the last
 	   edition that carried the item, plus a millisecond: every touch a person made since is newer. */
 	if (op === 'retire') {
-		if (!rec || !['dishes', 'wines', 'cocktails'].includes(list)) fail(`${REL(OVERRIDES)} entry ${n}: retire needs a dish, wine or cocktail`);
+		/* A menu an override filed among the tastings (tasting:+) retires the same way once its day has
+		   passed: the record leaves the house under its tombstone, and its dishes are re-filed under a
+		   section that begins "Past " (dish:<name> section). The builder's own two tastings are not retired. */
+		const ownTasting = list === 'tastings' && rec && TASTINGS.some((t) => slug(t.name) === slug(rec.name));
+		if (!rec || !['dishes', 'wines', 'cocktails', 'tastings'].includes(list) || ownTasting) fail(`${REL(OVERRIDES)} entry ${n}: retire needs a dish, a wine, a cocktail or a menu filed with tasting:+`);
 		const at = e.value && typeof e.value.tombstone === 'string' ? Date.parse(e.value.tombstone) : NaN;
 		if (!Number.isFinite(at)) fail(`${REL(OVERRIDES)} entry ${n}: retire needs value.tombstone, an ISO time`);
 		rec.retired = true;
@@ -612,6 +650,61 @@ overrides.entries.forEach((e, n) => {
 			rec.bottles[tier] = { wine: t.wine, why: t.why, sayIt: t.sayIt, n };
 		}
 		overrideAt.set(pathOf(list, rec, 'bottles'), n);
+		applied.push({ n, op, target: e.target });
+		return;
+	}
+	/* THE POURS OF A TASTING, AS ONE TABLE: op pours on tasting:<name>, value { sheet, courses: [{ n,
+	   pour, pourText, words, pourLabel? }] }. One row for every course that carries a dish, by its place
+	   in the printed order (n from 1, counting the courses with dishes, so the breakfast's eye opener is
+	   not a row). pour is the wine as the house names it; pourText is the pour as the page prints it and
+	   words is what the page says of it, both held verbatim to a page snapshot (quotes and whitespace
+	   folded), so nothing reaches a guest as the house's words that the house did not print. The row
+	   replaces the course's pour and its printed pour; the words over the pour stand unless pourLabel is
+	   given. The wine then carries one kept note under SHEET_Q (engine.mjs) that quotes the words, any
+	   earlier note under that question for the same tasting replaced. A course left out, named twice or
+	   out of range fails; the wine must be filed before this entry. */
+	if (op === 'pours') {
+		if (!rec || list !== 'tastings') fail(`${REL(OVERRIDES)} entry ${n}: pours goes on a tasting (tasting:<name>)`);
+		const v = e.value;
+		const str = (x) => typeof x === 'string' && x.trim() !== '';
+		if (!v || typeof v !== 'object' || !str(v.sheet) || !Array.isArray(v.courses)) fail(`${REL(OVERRIDES)} entry ${n}: pours needs value { sheet, courses: [{ n, pour, pourText, words }] }`);
+		for (const k of Object.keys(v)) if (!['sheet', 'courses'].includes(k)) fail(`${REL(OVERRIDES)} entry ${n}: pours carries ${k}; its value is { sheet, courses }`);
+		const dished = rec.courses.filter((c) => Array.isArray(c.dishes) && c.dishes.length);
+		const seen = new Set();
+		for (const row of v.courses) {
+			if (!row || typeof row !== 'object') fail(`${REL(OVERRIDES)} entry ${n}: a pours row is { n, pour, pourText, words }`);
+			for (const k of Object.keys(row)) if (!['n', 'pour', 'pourText', 'words', 'pourLabel'].includes(k)) fail(`${REL(OVERRIDES)} entry ${n}: a pours row carries ${k}; a row is { n, pour, pourText, words, pourLabel? }`);
+			if (!Number.isInteger(row.n) || row.n < 1 || row.n > dished.length) fail(`${REL(OVERRIDES)} entry ${n}: course ${row.n} is not a course of ${rec.name}; it has ${dished.length} with a dish`);
+			if (seen.has(row.n)) fail(`${REL(OVERRIDES)} entry ${n}: course ${row.n} of ${rec.name} is given two pours`);
+			seen.add(row.n);
+			for (const k of ['pour', 'pourText', 'words']) if (!str(row[k])) fail(`${REL(OVERRIDES)} entry ${n}: course ${row.n} lacks ${k}`);
+			if (row.pourLabel !== undefined && !str(row.pourLabel)) fail(`${REL(OVERRIDES)} entry ${n}: course ${row.n}: pourLabel is text, or left out`);
+			for (const k of ['pourText', 'words']) if (!onAPage(row[k])) fail(`${REL(OVERRIDES)} entry ${n}: course ${row.n}: ${k} is not printed on the guide or a page snapshot as written (${JSON.stringify(row[k])}); quote the page, never reword it`);
+			const wine = model.wines.find((w) => !w.retired && (slug(w.name) === slug(row.pour) || (w.idName && slug(w.idName) === slug(row.pour))));
+			if (!wine) fail(`${REL(OVERRIDES)} entry ${n}: course ${row.n}: the pour ${row.pour} is not a wine in the house (file it with wine:+ before this entry, and name it exactly)`);
+		}
+		if (seen.size !== dished.length) fail(`${REL(OVERRIDES)} entry ${n}: pours names ${seen.size} of the ${dished.length} courses of ${rec.name}; the table gives every course its pour`);
+		const tag = ' of the ' + rec.name + ':';
+		for (const row of v.courses) {
+			const course = dished[row.n - 1];
+			course.pour = row.pour;
+			course.pourText = row.pourText;
+			if (row.pourLabel !== undefined) course.pourLabel = row.pourLabel;
+			const wine = model.wines.find((w) => !w.retired && (slug(w.name) === slug(row.pour) || (w.idName && slug(w.idName) === slug(row.pour))));
+			wine.kept = wine.kept.filter((k) => !(k.q === SHEET_Q && k.a.indexOf(tag) >= 0));
+			wine.kept.push({ q: SHEET_Q, a: cap(v.sheet.trim()) + ' prints this for the ' + (ORDINALS[row.n - 1] || 'course ' + row.n) + ' course' + tag + ' \u201C' + row.words.trim() + '\u201D' });
+			overrideAt.set(pathOf('wines', wine, 'kept[' + (wine.kept.length - 1) + ']'), n);
+		}
+		overrideAt.set(pathOf(list, rec, 'courses'), n);
+		applied.push({ n, op, target: e.target });
+		return;
+	}
+	if (op === 'answer') {
+		const v = e.value || {};
+		const at = typeof v.tombstone === 'string' ? Date.parse(v.tombstone) : NaN;
+		if (list !== 'house' || typeof v.id !== 'string' || !/^a-/.test(v.id) || typeof v.was !== 'string' || !v.was || !Number.isFinite(at)) fail(`${REL(OVERRIDES)} entry ${n}: an answer goes on the house with value { id, was, tombstone }, the id a lineup ask's (a-...)`);
+		if (answered.some((a) => a.id === v.id)) fail(`${REL(OVERRIDES)} entry ${n}: the ask ${v.id} is answered twice`);
+		answered.push({ id: v.id, was: v.was, at, n, found: false });
 		applied.push({ n, op, target: e.target });
 		return;
 	}
@@ -651,6 +744,8 @@ overrides.entries.forEach((e, n) => {
 			model[list].push(newItem(list, v, n));
 		} else if (list === 'wines' && !rec) {
 			model.wines.push(newWine(v, n));
+		} else if (list === 'tastings' && !rec) {
+			model.tastings.push(newTasting(v, n));
 		} else if (list === 'videos') {
 			videoAdds.push(newVideo(v, n));
 			applied.push({ n, op, target: e.target });
@@ -708,8 +803,19 @@ function newItem(list, v, n) {
 	/* A dish a house page prints with no price (the Fall 2026 training sheets print none) files with
 	   priceUnknown: true, an empty price and no printed prices; an ask:+ with blocksField 'price' must
 	   name it (checked at assembly), so the card asks for the price rather than inventing one. */
-	const unpriced = list === 'dishes' && v.priceUnknown === true;
-	if (unpriced) {
+	/* A dish served on a fixed price menu (fixedPriceOn names the menu, a tasting:+ add with fixedPrice)
+	   has no price of its own: the menu's printed price covers it, so it files with an empty price, no
+	   printed prices and no price ask. Checked at assembly: the menu names it on a course. */
+	const onFixed = list === 'dishes' && v.fixedPriceOn !== undefined;
+	if (onFixed) {
+		need(str(v.fixedPriceOn), 'fixedPriceOn as the name of the fixed price menu that serves it');
+		need(v.priceUnknown === undefined, 'one route to an empty price: fixedPriceOn or priceUnknown, not both');
+	}
+	const unpriced = (list === 'dishes' && v.priceUnknown === true) || onFixed;
+	if (onFixed) {
+		need((v.price === undefined || v.price === '') && (v.prices === undefined || (Array.isArray(v.prices) && v.prices.length === 0)), 'an empty price and no printed prices, since fixedPriceOn is set (the menu prints the one price)');
+		fixedPriceDishes.push({ name: v.name, menu: v.fixedPriceOn, n });
+	} else if (unpriced) {
 		need((v.price === undefined || v.price === '') && (v.prices === undefined || (Array.isArray(v.prices) && v.prices.length === 0)), 'an empty price and no printed prices, since priceUnknown is set');
 		priceUnknownNames.push(v.name);
 	} else {
@@ -757,6 +863,19 @@ function newWine(v, n) {
 	   prices [], glass "", bottle "", pours [] and no list key, which every wing reads as a glass wine
 	   with no price line. Never a bottle list wine: a bottle is filed from the list that prices it. */
 	const unpriced = v.priceUnknown === true;
+	/* A wine poured only with a tasting (tastingPour: true, the Dinner Pairing Wines sheet of 22 November
+	   2026): the pairing has one price, the supplement the tasting prints, so the wine carries none, and
+	   no price ask. It files with nothing in price, prices, glass or bottle, with its pours as the tasting
+	   prints them (a figure in a pour stands on a page, the price rule), and never as a bottle. Its vintage
+	   may be empty where the page prints none. Checked at assembly: some tasting course pours it. */
+	const poured = v.tastingPour === true;
+	if (poured) {
+		need(!unpriced, 'one route to an empty price: tastingPour or priceUnknown, not both');
+		need(v.list !== 'bottle', 'a menu listing, since tastingPour is set (a bottle list wine carries its printed bottle price)');
+		need((v.price === undefined || v.price === '') && (v.prices === undefined || (Array.isArray(v.prices) && v.prices.length === 0)), 'an empty price and no printed prices, since tastingPour is set');
+		need((v.glass === undefined || v.glass === '') && (v.bottle === undefined || v.bottle === ''), 'no glass or bottle price, since tastingPour is set');
+		need(Array.isArray(v.pours) && v.pours.length && v.pours.every(str), 'its pours as the tasting prints them (for instance ["4 oz"]), since tastingPour is set');
+	}
 	for (const f of ['section', 'producer', 'wine', 'region', 'style', 'profile', 'goesWith', 'serve', 'say', 'guest', 'why']) need(str(v[f]), f);
 	need(typeof v.vintage === 'string', 'a vintage, NV or empty');
 	need(Array.isArray(v.meals) && v.meals.length, 'its meals');
@@ -768,6 +887,8 @@ function newWine(v, n) {
 		need(v.bottle === undefined || v.bottle === '', 'no bottle price, since priceUnknown is set');
 		need(v.pours === undefined || (Array.isArray(v.pours) && v.pours.length === 0), 'no pours, since priceUnknown is set');
 		priceUnknownNames.push(v.name);
+	} else if (poured) {
+		tastingPourNames.push({ name: v.name, n });
 	} else {
 		need(str(v.price), 'price');
 		need(Array.isArray(v.prices) && v.prices.length && v.prices.every((p) => str(p.meal) && str(p.printed)), 'its printed prices');
@@ -790,13 +911,73 @@ function newWine(v, n) {
 	}
 	return {
 		list: v.list === 'bottle' ? 'bottle' : '', bin: v.bin || '', size: v.size || '',
-		name: v.name, section: v.section, group: v.group || v.section, meals: [...v.meals], price: unpriced ? '' : v.price, prices: unpriced ? [] : v.prices.map((p) => ({ meal: p.meal, printed: p.printed })), priceUnknown: unpriced,
+		name: v.name, section: v.section, group: v.group || v.section, meals: [...v.meals], price: unpriced || poured ? '' : v.price, prices: unpriced || poured ? [] : v.prices.map((p) => ({ meal: p.meal, printed: p.printed })), priceUnknown: unpriced,
 		producer: v.producer, wine: v.wine, vintage: v.vintage, region: v.region, grapes: [...v.grapes], style: v.style, made: v.parts.technique, taste: v.parts.taste,
-		glass: unpriced ? '' : v.glass || '', bottle: unpriced ? '' : v.bottle || '', pours: !unpriced && Array.isArray(v.pours) ? [...v.pours] : [],
+		glass: unpriced || poured ? '' : v.glass || '', bottle: unpriced || poured ? '' : v.bottle || '', pours: !unpriced && Array.isArray(v.pours) ? [...v.pours] : [],
 		profile: v.profile, sayIt: v.guest, goesWith: v.goesWith, serve: v.serve, firstPickFor: [],
 		lines: Object.assign({}, v.lines), serviceNote: v.serviceNote || '', say: v.say, why: v.why, pairs: v.pairs || '', origin: v.origin || '',
 		kept: Array.isArray(v.kept) ? v.kept.map((k) => ({ q: k.q, a: k.a })) : [], parts: Object.assign({}, v.parts), idName: v.name
 	};
+}
+
+/* A whole menu filed among the tastings by an override (tasting:+). Two kinds, told by fixedPrice:
+   - a tasting as the builder's own TASTINGS table holds one (courses in printed order, each with its
+     dishes by name, the lines printed under them, its pour as the house names it and as printed);
+   - a FIXED PRICE MENU (fixedPrice: true; the Thanksgiving Day sheet of 22 November 2026, "3 Courses
+     $80"): the guest chooses one dish a course, so every course is a choice of two or more dishes and
+     prints no pour, and printed carries exactly one line a dish, in the dishes' order, each the sheet's
+     own name and words for it ("Classic Turtle Soup: Brown Butter Spinach, Grated Egg, Aged Sherry").
+     That is how a dish the house already serves joins the menu under the sheet's wording without a
+     second record of the dish, and how a reader lays each line beside its dish.
+   The record's meal names when it is served; every dish of a fixed price menu must list that meal
+   (checked at assembly, with the names: a course naming a dish the house lacks fails the build there).
+   fixedPrice is the builder's alone and never reaches the pack: a wing knows the menu by its meal. */
+function newTasting(v, n) {
+	const at = `${REL(OVERRIDES)} entry ${n}`;
+	const need = (ok, what) => { if (!ok) fail(`${at}: the new menu ${v && v.name} ${what}`); };
+	const str = (x) => typeof x === 'string' && x.trim() !== '';
+	need(v && typeof v === 'object' && str(v.name), 'lacks a name');
+	need(!model.tastings.some((t) => slug(t.name) === slug(v.name)), 'is already among the tastings');
+	for (const k of Object.keys(v)) need(['name', 'price', 'meal', 'includesDrinks', 'line', 'supplement', 'note', 'fixedPrice', 'courses'].includes(k), `carries ${k}; a menu is { name, price, meal, includesDrinks, line, supplement, note, fixedPrice, courses }`);
+	need(str(v.price), 'lacks its printed price');
+	need(str(v.meal), 'lacks its meal');
+	need(typeof v.includesDrinks === 'boolean', 'lacks includesDrinks, true or false');
+	need(typeof v.note === 'string', 'lacks a note for the floor (it may be empty)');
+	need(v.line === undefined || typeof v.line === 'string', 'has a line that is not text');
+	need(v.supplement === undefined || typeof v.supplement === 'string', 'has a supplement that is not text');
+	need(v.fixedPrice === undefined || typeof v.fixedPrice === 'boolean', 'has fixedPrice that is not true or false');
+	need(Array.isArray(v.courses) && v.courses.length, 'lacks its courses');
+	const fixed = v.fixedPrice === true;
+	const courses = v.courses.map((c, i) => {
+		const here = (ok, what) => need(ok, `course ${i + 1} ${what}`);
+		here(c && typeof c === 'object' && !Array.isArray(c), 'is not an object');
+		for (const k of Object.keys(c)) here(['label', 'choice', 'dishes', 'printed', 'pour', 'pourText', 'pourLabel'].includes(k), `carries ${k}; a course is { label, choice, dishes, printed, pour, pourText, pourLabel }`);
+		here(str(c.label), 'lacks its label as printed');
+		here(Array.isArray(c.dishes) && c.dishes.every(str), 'lacks dishes, a list of dish names (it may be empty on a course that is its pour)');
+		here(c.printed === undefined || (Array.isArray(c.printed) && c.printed.every(str)), 'has printed lines that are not text');
+		here(c.choice === undefined || typeof c.choice === 'boolean', 'has choice that is not true or false');
+		for (const k of ['pour', 'pourText', 'pourLabel']) here(c[k] === undefined || typeof c[k] === 'string', `has ${k} that is not text`);
+		here(new Set(c.dishes.map(slug)).size === c.dishes.length, 'names a dish twice');
+		if (fixed) {
+			here(c.choice === true && c.dishes.length >= 2, 'is not a choice of two or more dishes; every course of a fixed price menu is one');
+			here(Array.isArray(c.printed) && c.printed.length === c.dishes.length, `prints ${(c.printed || []).length} line(s) for ${c.dishes.length} dishes; a fixed price menu prints one line a dish, in the dishes' order`);
+			here(!str(c.pour) && !str(c.pourText) && !str(c.pourLabel), 'carries a pour; a fixed price menu prints none');
+		}
+		const course = { label: c.label, dishes: [...c.dishes], pour: c.pour || '', pourText: c.pourText || '' };
+		if (c.choice === true) course.choice = true;
+		if (Array.isArray(c.printed) && c.printed.length) course.printed = [...c.printed];
+		if (str(c.pourLabel)) course.pourLabel = c.pourLabel;
+		return course;
+	});
+	if (fixed) {
+		const all = courses.flatMap((c) => c.dishes.map(slug));
+		need(new Set(all).size === all.length, 'names one dish on two courses');
+	}
+	const rec = { name: v.name, price: v.price, meal: v.meal, includesDrinks: v.includesDrinks, note: v.note, courses };
+	if (str(v.line)) rec.line = v.line;
+	if (str(v.supplement)) rec.supplement = v.supplement;
+	if (fixed) rec.fixedPrice = true;
+	return rec;
 }
 
 function videoTopic(t) {
@@ -865,7 +1046,7 @@ model.card.dressCode = dressKnow.body.split(/\s+(?=The kitchen)/)[0].trim();
 /* ---------- the dash pass over the whole model ---------- */
 const clean = dashWalk(model, 'model');
 /* Retired records leave only now, after the dash pass, so the paths the dash log names still count them. */
-for (const list of ['dishes', 'wines', 'cocktails']) clean[list] = clean[list].filter((r) => !r.retired);
+for (const list of ['dishes', 'wines', 'cocktails', 'tastings']) clean[list] = clean[list].filter((r) => !r.retired);
 /* The drinks in the order the house prints them, when the overrides name it: the house field
    cocktailOrder, every drink once by its name. The menus print the cocktail list first (the Billboard
    Songs, the Temperance drinks, the Sazerac Selections), then the breakfast menu's eye openers, coffee
@@ -1137,7 +1318,7 @@ for (const t of clean.tastings) {
 		id: idFor('tastings', slug(t.name)), name: t.name, price: t.price, meal: t.meal, includesDrinks: t.includesDrinks,
 		courses: t.courses.map((c, i) => {
 			const course = {
-				n: i + 1, label: c.label, dishIds: c.dishes.map((n) => itemId(n, t.name)),
+				n: i + 1, label: c.label, dishIds: c.dishes.map((n) => courseDishId(n, t, c)),
 				pourId: c.pour ? (byName.get(slug(c.pour)) || wineId(c.pour, t.name)) : '', pourText: c.pourText || ''
 			};
 			if (c.choice === true) course.choice = true;
@@ -1152,6 +1333,21 @@ for (const t of clean.tastings) {
 	if (t.supplement && t.supplement.trim()) rec.supplement = t.supplement;
 	rec.ts = BUILD_TS;
 	house.tastings.push(rec);
+}
+/* A dish a course names, as its id. The builder's own TASTINGS name a dish as the house names it and
+   resolve as they always did; a menu filed by an override (tasting:+) is held closer, since nobody has
+   built it before: the name must be a dish of the house (never a wine or a drink of the same name),
+   and on a fixed price menu the dish must list the menu's meal, so the meal's filter shows the whole
+   menu. Each failure names the menu, the course and the dish. */
+function courseDishId(name, t, c) {
+	const where = `${t.name}, ${c.label}`;
+	if (!TASTINGS.some((own) => own.name === t.name)) {
+		const d = clean.dishes.find((r) => slug(r.name) === slug(name) || (r.idName && slug(r.idName) === slug(name)));
+		if (!d) fail(`${where}: names the dish ${name}, which is not a dish in the house (file it with dish:+, or name it as the house names it)`);
+		if (t.fixedPrice && !d.meals.includes(t.meal)) fail(`${where}: ${d.name} does not list the meal ${t.meal}; a dish on a fixed price menu lists the menu's meal (dish:${d.name} meals)`);
+		return d.id;
+	}
+	return itemId(name, t.name);
 }
 /* A dish's bottle tiers, named in overrides, as { bottles } with each wine resolved to its id, in
    the engine's tier order; nothing when the dish has none. A wine not on the bottle list fails here,
@@ -1246,11 +1442,45 @@ for (const a of clean.asks) {
 	const r = { id: idFor('askAtLineup', slug(a.question).slice(0, 60)), question: a.question, askWhom: a.askWhom, itemIds: a.items.map((n) => itemId(n, 'askAtLineup')) };
 	if (a.blocksField) r.blocksField = a.blocksField;
 	r.ts = BUILD_TS;
+	/* An ask a later entry answers (op answer) is left out, under its tombstone. */
+	const done = answered.find((x) => x.id === r.id);
+	if (done) { done.found = true; house.removed[r.id] = done.at; continue; }
 	house.askAtLineup.push(r);
 }
+for (const a of answered) if (!a.found) fail(`${REL(OVERRIDES)} entry ${a.n}: the answer for ${a.was} names ${a.id}, which is not an ask this build files (an ask already gone takes a tombstone on the house instead)`);
 for (const name of priceUnknownNames) {
 	if (!clean.asks.some((a) => a.blocksField === 'price' && a.items.some((i) => slug(i) === slug(name)))) fail(`the dish or wine ${name} is filed with priceUnknown and no ask:+ with blocksField price names it; add one so the card asks for the price rather than inventing it`);
 }
+/* The fixed price menu and the pours, held to what their routes said (see fixedPriceDishes above): a
+   dish filed with fixedPriceOn is on a course of the menu it names, and that menu is a fixed price
+   menu; a wine filed with tastingPour is the pour of some course. A staged chunk may hold the dishes
+   without the menu (two authors write the dishes, a third file holds the menu), so under --staging a
+   menu that is not in the build is a printed note, and the whole build refuses it. */
+for (const f of fixedPriceDishes) {
+	/* A dish re-filed as past is read, never sold: the menu that priced it may be retired. */
+	const d = clean.dishes.find((x) => slug(x.name) === slug(f.name) || (x.idName && slug(x.idName) === slug(f.name)));
+	if (d && isPast(d)) continue;
+	const t = clean.tastings.find((x) => slug(x.name) === slug(f.menu));
+	const at = `${REL(OVERRIDES)} entry ${f.n}: the dish ${f.name} is filed with fixedPriceOn ${f.menu}`;
+	if (!t) {
+		if (STAGING_NAMES.length) { console.log(`build-brennans: staging note: ${at}, and no menu of that name is in this build; build it with the chunk that files the menu before the merge`); continue; }
+		fail(`${at}, and no menu of that name is among the tastings`);
+	}
+	if (!t.fixedPrice) fail(`${at}, which is not a fixed price menu (its tasting:+ add needs fixedPrice true)`);
+	if (!t.courses.some((c) => c.dishes.some((d) => slug(d) === slug(f.name)))) fail(`${at}, and no course of that menu names it; a dish with no price of its own must be on the menu that prices it`);
+}
+for (const p of tastingPourNames) {
+	const w = clean.wines.find((x) => slug(x.name) === slug(p.name));
+	if (w && !house.tastings.some((t) => t.courses.some((c) => c.pourId === w.id))) fail(`${REL(OVERRIDES)} entry ${p.n}: the wine ${p.name} is filed with tastingPour and no course of a tasting pours it; give it its course (op pours on the tasting) or file it by its printed price`);
+}
+/* The rules no route can check for another's record (engine.mjs menuProblems): nothing served is left
+   without a price, a menu that prices it or an ask for the price, and no wine without a vintage goes
+   unasked. Fatal here, in validate-pack and in check-pack. */
+const menuAll = menuProblems(house, lib.isPast);
+/* A staged chunk may hold a fixed price menu's dishes without the menu: an unpriced dish is a note there. */
+const menuBad = menuAll.filter((m) => !(STAGING_NAMES.length && m.startsWith('unpriced-dish:')));
+for (const m of menuAll) if (!menuBad.includes(m)) console.log('build-brennans: staging note: ' + m);
+if (menuBad.length) fail('the menu rules: ' + menuBad.join('\n  '));
 for (const u of clean.disputes) {
 	/* The id is minted under the item and field the dispute was first filed with, so one a later entry
 	   re-points (the lobster's pour, now the second course's) keeps its id on every device. */
