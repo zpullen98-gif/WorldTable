@@ -1,0 +1,104 @@
+{
+ "about": "The five pours of the Dinner Pairing Wines sheet of 22 November 2026, researched by the house sommelier on 22 November 2026 (twenty three web searches, the producers' own pages first where a search reached them; WebFetch was not available). Each fact below names its sources; a fact with one source that is not primary is marked single and is said in the pack only with its hedge or not at all. Nobody living is named: the people behind each estate are written by role. No score, medal or price from these pages is used.",
+ "readOn": "2026-11-22",
+ "sheet": {
+  "source": "tools/house/brennans/research/menu-2026-11-22-sheets.md, Sheet 2; pages/brennans-sheets-2026-11-22.txt",
+  "rows": [
+   { "course": 1, "dish": "Grand Isle Jewel Oysters", "printed": "Charles Lafitte Champagne", "words": "Vibrant & fresh with crisp apple & honey notes." },
+   { "course": 2, "dish": "Tuna Crudo", "printed": "Domaine Weinbach Sylvaner. Alsace FR", "words": "Ripe pear with green notes and a lush texture." },
+   { "course": 3, "dish": "Fish Bouillabaisse", "printed": "Domaine du Vieux Lazaret Blanc. Châteauneuf-du-Pape FR", "words": "Grenache Blanc Blend notes of white flowers, lemon, & apricot with a full-bodied texture." },
+   { "course": 4, "dish": "Roasted Rohan Duck Breast", "printed": "Paul Hobbs \"Coombsville\" Cabernet Sauvignon. Napa, CA", "words": "Notes of blackberry, cassis, sage, and tobacco. Elegant, silky tannins." },
+   { "course": 5, "dish": "Chocolate Crémeux", "printed": "Domaine la Tour Vieille. Banyuls, FR", "words": "Notes of sweet jammy dark fruits and exotic spice." }
+  ],
+  "note": "The sheet prints no vintage and no price for any wine. The course numbers match the five courses of the Dinner Tasting Menu as the November edition holds them."
+ },
+ "wines": [
+  {
+   "name": "Charles Lafitte Brut Champagne NV",
+   "id": "w-3yaps1gt",
+   "facts": [
+    { "fact": "Charles Lafitte is a Champagne brand of the Vranken-Pommery group, which launched it in 1983; the producer's group page lists it among its houses.", "sources": ["maisonpommery.com, Champagne Charles Lafitte (the group's own page)", "champagner.com, Charles Lafitte Champagne", "the pack's component cellar-charles-lafitte"], "kind": "primary" },
+    { "fact": "The 1834 in the name of its Cuvée Spéciale recalls the house of George Goulet, which Charles Lafitte took over; it is not the year the brand began.", "sources": ["jancisrobinson.com, Charles Lafitte 1834 Cuvée Spéciale Brut NV", "hachette-vins.com, Charles Lafitte", "the pack's component cellar-charles-lafitte"] },
+    { "fact": "Its Brut is a traditional method blend of the three Champagne grapes, Chardonnay, Pinot Noir and Meunier; the shares differ by listing (Pinot Noir 40, Meunier 30, Chardonnay 30 in one; Chardonnay 40, Pinot Noir 35, Meunier 25 in another), so no share is said.", "sources": ["luxuryexperience.com, Champagne Charles Lafitte Cuvée Spéciale Brut", "iwsc.net, Charles Lafitte Brut NV", "hachette-vins.com, Charles Lafitte"] },
+    { "fact": "It rests about three years before release, 36 months on its lees by one listing and a minimum of three years by another.", "sources": ["vino.com, Champagne AOC Brut Cuvée Spéciale Charles Lafitte", "reversewinesnob.com, Champagne Charles Lafitte Cuvée Spéciale Brut"] },
+    { "fact": "Tasting words from the listings: citrus, apple, white peach and white flowers, crisp; the house sheet prints vibrant and fresh, crisp apple and honey.", "sources": ["iwsc.net", "reversewinesnob.com", "the sheet"] }
+   ],
+   "unconfirmed": ["Which Charles Lafitte cuvée the house pours (Brut Cuvée Spéciale, Grande Cuvée or another), its blend and its dosage: no source names the house's bottle.", "Where the house's bottle is made: the group's cellars are in Reims and Tours-sur-Marne by listings, and the brand's own site has placed it in Épernay; not said."]
+  },
+  {
+   "name": "Domaine Weinbach Sylvaner",
+   "facts": [
+    { "fact": "Domaine Weinbach is at Kaysersberg in the Haut-Rhin of Alsace, at the foot of the Schlossberg hill.", "sources": ["winewithseth.com, Domaine Weinbach", "grandcruwijnen.nl, Domaine Weinbach", "wineanorak.com, Domaine Weinbach"] },
+    { "fact": "Capuchin friars built the house and walled the Clos des Capucins in 1612; the clos is about 5 hectares and the estate's heart.", "sources": ["millesima-usa.com, Domaine Weinbach", "winewithseth.com, Domaine Weinbach", "grandcruwijnen.nl, Domaine Weinbach"] },
+    { "fact": "After the French Revolution the state seized and sold the monastery and its vines; in 1898 two brothers, tanners of Kaysersberg, bought and restored them, and their family has held the estate since.", "sources": ["grandcruwijnen.nl, Domaine Weinbach", "winewithseth.com, Domaine Weinbach", "regalwineco.com, Domaine Weinbach"] },
+    { "fact": "The estate is farmed biodynamically and certified by Demeter (the year differs by source, 2005 or 2010, so none is said).", "sources": ["millesima-usa.com", "winewithseth.com", "blockcellar, Weinbach"] },
+    { "fact": "The Sylvaner comes from old vines in the Clos des Capucins, sixty years by one listing and seventy by another, on sand and silt over granite pebbles.", "sources": ["justerinis.com, Domaine Weinbach Sylvaner 2024", "bibendum.com.au, Weinbach Alsace Sylvaner 2023", "misterwrightfinewines.com, Weinbach Sylvaner 2020", "bassins.com, 2023 Weinbach Sylvaner"] },
+    { "fact": "It is a dry white with high acidity: a review quoted by the importer calls the 2023 bone dry, with wet pebble, pear and hay and an edge of lemon; another note speaks of mown grass.", "sources": ["bibendum.com.au, Weinbach Alsace Sylvaner 2023 (quoting a Vinous review)", "misterwrightfinewines.com, Weinbach Sylvaner 2020", "justerinis.com, Sylvaner 2024"] },
+    { "fact": "The label: recent releases are labelled Sylvaner; earlier ones were sold as Sylvaner Réserve, and some listings add the Clos des Capucins. The house's bottle and its label wording are to confirm at lineup.", "sources": ["justerinis.com, Sylvaner 2024 and Sylvaner Réserve 2020", "idealwine.com, Sylvaner Réserve Weinbach 2022", "vinovoss.com, Clos des Capucins Sylvaner Réserve 2020"] },
+    { "fact": "The domaine ferments and raises its wines in large old oak casks, foudres; one listing says the Sylvaner ferments with its own yeasts in old large neutral oak, with no new barrel.", "sources": ["sommelier-academy.de, Domaine Weinbach (the domaine's wines in general)", "pood.liviko.ee, Domaine Weinbach Sylvaner Réserve (single for the Sylvaner itself)"], "kind": "single for the Sylvaner" },
+    { "fact": "Sylvaner is an old grape of Central Europe, probably from Austria; in Alsace it is an everyday white, and one grand cru, Zotzenberg, admits it.", "sources": ["en.wikipedia.org, Silvaner", "decanter.com, Sylvaner becomes grand cru grape", "jancisrobinson.com, Sylvaner"] },
+    { "fact": "A listing gives 13 percent alcohol for the 2022 and a serving temperature of 12°C.", "sources": ["idealwine.com, Sylvaner Réserve Weinbach 2022"], "kind": "single" }
+   ],
+   "unconfirmed": ["The vintage poured.", "Whether the house's label says Sylvaner or Sylvaner Réserve, and whether it names the Clos des Capucins.", "Pronunciation is the sommelier's reading: Weinbach VINE-bahk, Sylvaner sil-VAH-ner, Kaysersberg KAI-zers-bairg, Capucins kah-poo-SAN."]
+  },
+  {
+   "name": "Domaine du Vieux Lazaret Châteauneuf-du-Pape Blanc",
+   "facts": [
+    { "fact": "Domaine du Vieux Lazaret belongs to the Quiot family's vineyards at Châteauneuf-du-Pape, in the Southern Rhône; the family bought its first Châteauneuf vines in 1748.", "sources": ["hachette-vins.com, Vignobles famille Quiot", "provence-alpes-cotedazur.com, Vignobles Famille Quiot", "en.wikipedia.org, Domaine du Vieux Lazaret", "vinmonopolet.no, Dom. du Vieux Lazaret Châteauneuf-du-Pape Blanc (producer named)"] },
+    { "fact": "The name: a lazaret was an old hospice, run in the village by the Lazarists, used for the sick and as a quarantine house in the epidemics of the seventeenth and eighteenth centuries, the plague of 1720 among them; the family later used its buildings for the farm, and the estate has carried the name since 1915.", "sources": ["en.wikipedia.org, Domaine du Vieux Lazaret", "the family's own pages as quoted by provence-alpes-cotedazur.com and avignon-tourisme.com"] },
+    { "fact": "The white blend, as importers and monopolies print it: Grenache Blanc about half (45 percent in the 2016, 2018 and 2023, 50 in the 2021), Clairette 25 to 30, Bourboulenc 20 and Roussanne 5.", "sources": ["wine.com, Domaine du Vieux Lazaret Châteauneuf-du-Pape Blanc 2016, 2018 and 2021", "vinmonopolet.no, 2023", "saq.com, 2021", "internationalwinechallenge.com, 2021 (grapes without shares)"] },
+    { "fact": "It is made almost entirely in steel or concrete tanks, not new oak; in some years a little Roussanne is fermented in barrel.", "sources": ["wine.com, 2016 and 2017", "cellartracker.com, 2021"] },
+    { "fact": "Alcohol is 13.5 percent in the 2021 and the 2023 listings.", "sources": ["saq.com, 2021", "vinmonopolet.no, 2023"] },
+    { "fact": "White Châteauneuf-du-Pape is a small part of the appellation, about 7 percent of its vines and less of its wine; Grenache Blanc is its most planted white grape, and the rules set no shares among the permitted grapes.", "sources": ["vinous.com, Châteauneuf-du-Pape Blanc 2016 and 2017", "europeancellars.com, Châteauneuf-du-Pape: the white grape varieties", "en.wikipedia.org, Châteauneuf-du-Pape AOC", "inao.gouv.fr, cahier des charges (primary)"] },
+    { "fact": "The appellation lies on the left bank of the Rhône, on terraces of rolled pebbles, galets roulés, with sand and limestone elsewhere; no source ties this estate's white to one soil.", "sources": ["inao.gouv.fr, cahier des charges (primary)"] }
+   ],
+   "unconfirmed": ["The vintage poured, and so the exact blend.", "Where the estate's white grapes grow.", "Pronunciation is the sommelier's reading: vyuh lah-zah-RAY; Clairette klair-ET; Bourboulenc boor-boo-LANK; Roussanne roo-SAHN."]
+  },
+  {
+   "name": "Paul Hobbs Coombsville Cabernet Sauvignon 2021",
+   "id": "w-p30or70w",
+   "facts": [
+    { "fact": "The 2021 Coombsville Cabernet Sauvignon is a blend: 83 percent Cabernet Sauvignon, 7 percent Cabernet Franc, 6 percent Petit Verdot and 4 percent Merlot.", "sources": ["wine.com, Paul Hobbs Coombsville Cabernet Sauvignon 2021", "bighammerwines.com, 2021 Paul Hobbs Coombsville Cabernet Sauvignon"] },
+    { "fact": "It is blended from the winery's Coombsville lots that are not bottled as its single vineyard wines, the Nathan Coombs Estate among them; the estate Cabernet is a different wine.", "sources": ["klwines.com, product 1933496", "wine.com, Paul Hobbs Nathan Coombs Estate Cabernet Sauvignon 2021"] },
+    { "fact": "The 2021 spent about 18 months in French oak barrels, about half of them new, after a long maceration with native yeasts.", "sources": ["bighammerwines.com, 2021", "klwines.com, product 1933496"] },
+    { "fact": "Coombsville became an American Viticultural Area on 14 December 2011: about 11,000 acres just east of the city of Napa, cooled by fog and breezes off San Pablo Bay, on soils mostly volcanic, rhyolitic tuff and old lava and ash, in a bowl under the Vaca Range.", "sources": ["ttb.gov, AVA establishment dates (primary)", "en.wikipedia.org, Coombsville AVA", "napavintners.com, Coombsville AVA", "vinography.com, Chillin' Out in Coombsville"] },
+    { "fact": "The winery was founded in 1991 at Sebastopol in Sonoma County by the winemaker whose name it carries.", "sources": ["the pack's component wine-story-paul-hobbs (research/producers-cellar-napa-icons-2026-10-10.md)"] }
+   ],
+   "unconfirmed": ["Whether the 2021 is still the vintage poured: the sheet prints none.", "The winery's own technical sheet was not reached; the blend is from two retailers who print the same figures."]
+  },
+  {
+   "name": "Domaine La Tour Vieille Banyuls Reserva NV",
+   "id": "w-69pqytkm",
+   "facts": [
+    { "fact": "Domaine La Tour Vieille is a domaine of Collioure on the Côte Vermeille in Roussillon; it makes dry Collioure and Banyuls, two styles of the latter: Rimage, bottled young as a vintage, and Reserva, non-vintage and aged with air.", "sources": ["the pack's component cellar-la-tour-vieille", "shop.kermitlynch.com, La Tour Vieille Banyuls Reserva and Rimage", "hachette-vins.com, Dom. la Tour Vieille"] },
+    { "fact": "The Reserva is aged for years partly in large casks, foudres and barrels, and partly in big glass jars, dames-jeannes, left outdoors in the sun, which gives its amber and copper color.", "sources": ["shop.kermitlynch.com, Banyuls Reserva", "jancisrobinson.com, Domaine La Tour Vieille Reserva NV Banyuls", "hachette-vins.com, Dom. la Tour Vieille Reserva 2025", "ventealapropriete.com, Domaine La Tour Vieille Banyuls Reserva"] },
+    { "fact": "One UK merchant says the Reserva is blended with older wines through a solera begun in 1952.", "sources": ["yapp.co.uk, Banyuls Reserva"], "kind": "single; not said in the pack" },
+    { "fact": "The blend differs by source and by release: 80 percent Grenache Noir, 15 Grenache Gris and 5 Carignan on the current producer description the pack already quotes; 35, 35 and 30 at the importer; half Grenache and half Carignan at the SAQ. The pack keeps its own figures and their hedge.", "sources": ["ventealapropriete.com", "shop.kermitlynch.com", "saq.com, Domaine La Tour Vieille Reserva"] },
+    { "fact": "Alcohol about 16 to 17 percent, sugar about 110 grams a litre by the SAQ listing.", "sources": ["ventealapropriete.com", "saq.com"] },
+    { "fact": "Banyuls is a vin doux naturel: neutral grape spirit stops the fermentation so the grape's own sugar stays; at least half Grenache noir.", "sources": ["research/verified-facts.json somm-reds-29 (INAO cahier des charges)", "the pack's component wine-mutage"] }
+   ],
+   "unconfirmed": ["Whether the bottle poured is still the Reserva: the sheet prints only the estate and Banyuls, and its words, sweet jammy dark fruits and exotic spice, read closer to a young Rimage than to the dried fig, walnut and coffee the listings give the Reserva. Asked at lineup."]
+  }
+ ],
+ "pairingLogic": {
+  "1": "Raw oysters with a Fresno chili mignonette and parsley: brine, cold and a sharp vinegar. A Brut Champagne answers the vinegar with its own acidity, the bubbles scrub the palate, its small dosage softens the chili, and the apple and honey sit beside the oyster's sweetness. An oaked white or a red with raw oysters reads metallic.",
+  "2": "Raw tuna under a carrot and ginger aguachile, salsa seca, burnt orange, coriander, pickled pearl onions and salt. A dry Sylvaner of high acidity meets the lime and pickling, its ripe pear sits with the carrot and the orange, and its green, herbal note bridges the coriander; its texture holds the tuna. Oak would turn bitter against the chili, tannin turns metallic with raw fish, and high alcohol fans the heat. Being dry, it lets the chili show more than the off-dry Riesling the card offers by the glass.",
+  "3": "A stuffed fish terrine with shrimp mousse, bouillabaisse sauce, chickpea panisse, confit fennel and a preserved lemon aioli. A full-bodied white of the south matches the weight of the aioli and the mousse; its lemon picks up the preserved lemon, its white flowers and apricot sit with the fennel and the saffron-colored sauce, and Clairette and Bourboulenc keep it fresh. A light, crisp white would read thin against the aioli; a tannic red with fish reads metallic.",
+  "4": "Roasted duck breast with cane syrup glazed peaches and candied hazelnuts. Cabernet's blackberry and cassis meet the fruit, sage and tobacco meet the roasted skin, and silky tannin binds with the fat. The risk is the glaze: sweetness in the food makes a dry red taste firmer and sharper, so the wine's ripeness and silky tannin are what carry it.",
+  "5": "Chocolate crémeux with cocoa nib crumble, lemon olive oil and salt. The wine must be at least as sweet as the plate or chocolate turns it bitter; Banyuls is sweet, low in tannin, and its dark fruit and spice sit with the cocoa, while the salt makes the chocolate taste sweeter still. A dry red would taste sour and bitter beside it."
+ },
+ "sources": [
+  { "id": "sheet-2026-11-22", "title": "Brennan's sheets of 22 November 2026, Sheet 2, Dinner Pairing Wines", "url": "tools/house/brennans/research/menu-2026-11-22-sheets.md", "kind": "primary" },
+  { "id": "pommery", "title": "Champagne Charles Lafitte, the Vranken-Pommery group's page", "url": "https://www.maisonpommery.com/en/nos-domaines/champagne-charles-lafitte/", "kind": "primary" },
+  { "id": "inao-cdp", "title": "INAO, cahier des charges Châteauneuf-du-Pape", "url": "https://www.inao.gouv.fr/node/2562/printable/pdf", "kind": "primary" },
+  { "id": "ttb-ava", "title": "TTB, AVA establishment dates", "url": "https://www.ttb.gov/wine/ava-establishment-dates", "kind": "primary" },
+  { "id": "weinbach-trade", "title": "Domaine Weinbach: winewithseth.com, grandcruwijnen.nl, millesima-usa.com, wineanorak.com, regalwineco.com, sommelier-academy.de; the Sylvaner at justerinis.com, bibendum.com.au, misterwrightfinewines.com, bassins.com, idealwine.com, pood.liviko.ee, vinovoss.com" },
+  { "id": "silvaner", "title": "Silvaner: en.wikipedia.org, decanter.com (Sylvaner becomes grand cru grape), jancisrobinson.com" },
+  { "id": "lazaret-trade", "title": "Domaine du Vieux Lazaret: en.wikipedia.org, hachette-vins.com, provence-alpes-cotedazur.com, avignon-tourisme.com, wine.com, vinmonopolet.no, saq.com, cellartracker.com, internationalwinechallenge.com, winedispensary.com" },
+  { "id": "cdp-white", "title": "White Châteauneuf-du-Pape: vinous.com, europeancellars.com, en.wikipedia.org" },
+  { "id": "lafitte-trade", "title": "Charles Lafitte: hachette-vins.com, jancisrobinson.com, champagner.com, luxuryexperience.com, iwsc.net, vino.com, reversewinesnob.com" },
+  { "id": "hobbs-trade", "title": "Paul Hobbs Coombsville Cabernet Sauvignon 2021: wine.com, bighammerwines.com, klwines.com; Coombsville: en.wikipedia.org, napavintners.com, vinography.com" },
+  { "id": "tour-vieille-trade", "title": "Domaine La Tour Vieille Banyuls Reserva: shop.kermitlynch.com, jancisrobinson.com, hachette-vins.com, ventealapropriete.com, yapp.co.uk, saq.com" }
+ ],
+ "names": "Kaysersberg, Haut-Rhin, Schlossberg, Capuchin, Capucins, Clos des Capucins, Demeter, Zotzenberg, Alsace, Sylvaner, Silvaner, Austria, Lazarists, Lazaret, Quiot, Clairette, Bourboulenc, Roussanne, Grenache Blanc, Southern Rhône, galets roulés, Vranken-Pommery, Pommery, George Goulet, Goulet, Coombsville, Vaca Range, San Pablo Bay, Sebastopol, Sonoma, Cabernet Franc, Petit Verdot, Merlot, Nathan Coombs, Collioure, Côte Vermeille, Roussillon, Rimage, Reserva, Grenache Noir, Grenache Gris, Carignan, foudres, dames-jeannes; years 1612, 1720, 1748, 1898, 1915, 1983, 1991, 2011"
+}
