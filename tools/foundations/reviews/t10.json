@@ -1,0 +1,86 @@
+{
+  "chunk": "t10",
+  "note": "The gate refuses a checked field inside a staging entry or a deepen patch (KNOWN_FIELDS and DEEPEN_FIELDS), so the refuter's verdicts are kept here, one per term.",
+  "checked": {
+    "southern-grillades": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "compare: 'which the Picayune's Creole Cook Book called grillades panées' and 'fried crisp' could not be settled (the ckbk entry is titled Grillades Breaded and its method was not seen); now the book 'gives beside grillades with gravy' the same pounded meat 'crumbed', and the tell stays the gravy",
+        "background: 'kings and queens of the krewes keep up the custom' told a living custom as present fact and narrowed it to royalty; now grillades and grits 'became a dish of the late breakfasts held after the krewes' balls' (New Orleans Magazine: Kings and Queens; Cook Me Something, Mister added)",
+        "Daily Picayune recipe for Grillades a la Creole on 7 September 1898 and the Times-Democrat breakfast menu of 2 April 1900 listing grillades and grits: confirmed (Barry Popik quoting both papers; Houstonia)",
+        "Picayune grillades with gravy: a round steak beaten well, cut into pieces about four inches square, with two tomatoes and a large onion: confirmed (ckbk)",
+        "say 'gree-YAHDS' matches the French grillade and the local sound"
+      ],
+      "open": []
+    },
+    "cuts-veal": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "sound",
+      "changed": [
+        "IMPS 300: veal and calf told apart 'primarily on the basis of the color of lean': confirmed (USDA AMS)",
+        "USDA FSIS fact sheet: veal calves about 16 to 18 weeks of age, weighing up to 450 pounds, male dairy calves: confirmed (archived Veal from Farm to Table; FSIS live page)",
+        "AVA petition 16-06, filed 2016, sought a definition by dressed carcass weight up to 425 pounds; FSIS denied it without prejudice on 6 October 2020: confirmed (FSIS petition page; Food Safety News)",
+        "AVA: veal farming came to the United States from Europe more than 100 years ago; male dairy calves raised for veal: confirmed (American Veal Association)"
+      ],
+      "open": []
+    },
+    "grains-grits": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'Wikipedia traces the dish to the Muscogee' rested on Wikipedia alone; now colonists in the South learned the dish in the 1600s from Native peoples who ground maize (Wikipedia; Dictionary.com added)",
+        "background: hominy 'from an Algonquian word for dried maize ground raw' did not match the etymology; Etymonline gives a Virginia Algonquian word, uskatahomen, that John Smith recorded as parched corn; corrected",
+        "grits from Old English grytt, coarse meal, and grits and hominy used interchangeably in colonial times: confirmed (Etymonline; Merriam-Webster)",
+        "Georgia official prepared food in 2002 rests on the Georgia Code itself (primary)"
+      ],
+      "open": []
+    },
+    "sauces-piperade": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'Wikipedia gives Gascony as its home' narrowed the article, which gives Gascony and the Basque Country; corrected. The Béarn account now has a second source (Tasting Table added)",
+        "AOC by decree of 29 May 2000, AOP in 2002, syndicate formed in 1993, ten communes with Larressore and Souraïde in full and eight in part: confirmed (INAO; producers' press file)",
+        "chili reached France in the sixteenth century and the first traces in Espelette around 1650, the producers saying nobody knows exactly when: confirmed (Piment d'Espelette AOP; Wikipedia)",
+        "red, green and white matching the Basque flag by coincidence: confirmed (Wikipedia; Tasting Table)",
+        "say 'pee-peh-RAHD' matches the French pipérade"
+      ],
+      "open": [
+        "piper as the word for pepper in Gascon rests on Wikipedia and the James Beard Foundation; Basque piper is sound. No Gascon dictionary was searched."
+      ]
+    },
+    "southern-debris": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "definition: 'New Orleans says it the French way, DAY bree' overstated it, since French stresses the last syllable; now 'keeps a French sound for it'",
+        "background: 'Mother's tells it as its first owner's word ... in place of sliced roast' was not what Mother's own pages say; Mother's calls debris its own original, and the customer story comes through the 1979 Times-Picayune account (Barry Popik). Now worded as the story told of it, with the 1979 pun on the customer's surname kept",
+        "background: the po' boy, not the roast beef po' boy, is what is traced to the Martin brothers and the 1929 strike; reworded, and the doubt now has a second source (New Orleans Historical added)",
+        "débris from Middle French debriser, Old French debrisier; first known English use 1708: confirmed (Merriam-Webster; Dictionary.com)",
+        "Mother's opened on Poydras Street in 1938: confirmed (Explore Louisiana; Popik)"
+      ],
+      "open": []
+    },
+    "methods-poached": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: Eggs Hussarde called 'the restaurant's own dish'; the dish dates to at least the 1890s and Brennan's popularized it from about 1950 (Barry Popik: Eggs Hussarde added); now 'a dish older than the restaurant that Brennan's made part of its breakfast from about 1950'",
+        "guest: 'a poached egg sat on top' told a placement the sheet does not give (the house asks at lineup how the egg is served); now the grillades 'came with a poached egg, its yolk running into the gravy'",
+        "Merriam-Webster: cooking poach from Middle French pocher, from Old French poché, literally bagged, the white wrapping the yolk like a bag: confirmed",
+        "Victorien Sardou (1831 to 1908) and Eggs Sardou at Antoine's: confirmed (Wikipedia)",
+        "say 'POHCHT' matches the English"
+      ],
+      "open": [
+        "'Breakfast at Brennan's had made its name by the mid 1950s' rests on the author's Tulane and UPI sources; not searched again here."
+      ]
+    }
+  }
+}
