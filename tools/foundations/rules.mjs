@@ -24,7 +24,9 @@ export const REL = (p) => path.relative(process.cwd(), p) || p;
 export const KNOWN_FIELDS = ['id', 'term', 'category', 'aliases', 'ref', 'relatedLexiconSlug', 'definition', 'guest', 'kitchen', 'compare', 'correction', 'sources', 'reviewedOn', 'say', 'background', 'metAt'];
 export const REQUIRED_TEXT = ['id', 'term', 'category', 'definition', 'guest', 'kitchen', 'compare', 'reviewedOn'];
 export const NEW_REQUIRED = ['say', 'background', 'metAt'];
-export const DEEPEN_FIELDS = ['id', 'say', 'background', 'metAt', 'guest'];
+/* A deepen patch may also carry sources, each { title, url }: they are appended to the entry's own,
+   matched by url, and never take one away. */
+export const DEEPEN_FIELDS = ['id', 'say', 'background', 'metAt', 'guest', 'sources'];
 export const FIXED_FIELDS = ['id', 'term', 'ref'];
 export const BACKGROUND_WORDS = [60, 200];
 
@@ -100,6 +102,24 @@ function eachText(value, where, visit) {
 const nonEmpty = (v) => typeof v === 'string' && v.trim().length > 0;
 const isDate = (v) => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(Date.parse(v + 'T00:00:00Z')) && new Date(v + 'T00:00:00Z').toISOString().startsWith(v);
 
+/* A source's url in one spelling, so two spellings of one page count as one: the URL parser's own form,
+   host in small letters, or '' when it is no https url. */
+export const sourceKey = (url) => { try { const u = new URL(url); return u.protocol === 'https:' ? u.href : ''; } catch { return ''; } };
+
+/* A list of sources: each an object with a title and an https url and nothing else, no url twice. */
+function sourceProblems(sources, label, push) {
+	const urls = new Set();
+	sources.forEach((s, i) => {
+		if (!s || typeof s !== 'object' || Array.isArray(s)) return push(label, 'sources', `source ${i + 1} is not an object`);
+		for (const k of Object.keys(s)) if (!['title', 'url'].includes(k)) push(label, 'sources', `source ${i + 1} carries an unknown field "${k}"`);
+		if (!nonEmpty(s.title)) push(label, 'sources', `source ${i + 1} has no title`);
+		const key = sourceKey(s.url);
+		if (!key) push(label, 'sources', `source ${i + 1} has no https url`);
+		else if (urls.has(key)) push(label, 'sources', `source ${i + 1} repeats the url ${s.url}`);
+		else urls.add(key);
+	});
+}
+
 /* The three optional fields' own rules, shared by a full entry and a deepen patch. */
 function deepFieldProblems(e, label, push) {
 	if (e.say !== undefined) {
@@ -136,12 +156,7 @@ export function entryProblems(e, ctx, push) {
 		else if (!ctx.published.has(e.id) && nonEmpty(e.category) && nonEmpty(e.term) && e.id !== idFor(e.category, e.term)) push(label, 'id', `must be "${idFor(e.category, e.term)}", its category and its squashed term`);
 	}
 	if (!Array.isArray(e.sources) || !e.sources.length) push(label, 'sources', 'there must be at least one source');
-	else e.sources.forEach((s, i) => {
-		if (!s || !nonEmpty(s.title)) push(label, 'sources', `source ${i + 1} has no title`);
-		let ok = false;
-		try { ok = new URL(s?.url).protocol === 'https:'; } catch { ok = false; }
-		if (!ok) push(label, 'sources', `source ${i + 1} has no https url`);
-	});
+	else sourceProblems(e.sources, label, push);
 	deepFieldProblems(e, label, push);
 	eachText(e, '', (where, s) => textProblems(where, s, ctx.people, (w, rule, said) => push(label, rule, `${w} ${said}`)));
 }
@@ -190,7 +205,7 @@ export function publishedMap(published) {
 /* One staging file against the main file: { chunk, new: [full entries], deepen: [patches] }. A new
    entry already in the main file with the same content is merged already; with other content its id
    is taken. A deepen patch names an entry of the main file by its id, carries say, background and
-   metAt and perhaps guest, and never touches term or ref. */
+   metAt and perhaps guest and sources, and never touches term or ref. */
 export function stagingProblems(staging, data, published, people, push) {
 	if (!staging || typeof staging !== 'object' || Array.isArray(staging)) return push('(the staging file)', 'shape', 'is not an object');
 	for (const k of Object.keys(staging)) if (!['chunk', 'new', 'deepen'].includes(k)) push('(the staging file)', 'shape', `carries an unknown key "${k}"`);
@@ -212,7 +227,11 @@ export function stagingProblems(staging, data, published, people, push) {
 		if (!d || typeof d !== 'object' || Array.isArray(d)) { push(label, 'shape', 'is not an object'); continue; }
 		for (const k of Object.keys(d)) {
 			if (FIXED_FIELDS.includes(k) && k !== 'id') push(label, 'fixed fields', `a deepen patch never touches ${k}`);
-			else if (!DEEPEN_FIELDS.includes(k)) push(label, 'deepen fields', `carries "${k}"; a patch carries id, say, background, metAt and perhaps guest`);
+			else if (!DEEPEN_FIELDS.includes(k)) push(label, 'deepen fields', `carries "${k}"; a patch carries id, say, background, metAt and perhaps guest and sources`);
+		}
+		if (d.sources !== undefined) {
+			if (!Array.isArray(d.sources) || !d.sources.length) push(label, 'sources', 'must be a list of at least one { title, url } when a patch carries it');
+			else sourceProblems(d.sources, label, push);
 		}
 		if (!nonEmpty(d.id)) push(label, 'required', 'id is missing or empty');
 		else if (!byId.has(d.id)) push(label, 'deepen', 'names no entry of the file');

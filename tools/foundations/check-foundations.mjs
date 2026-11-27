@@ -12,7 +12,8 @@
    With --staging <file>, the gate reads a staging file instead and holds it to the same rules against
    the main file, which it reads and never writes: { "chunk", "new": [full entries], "deepen": [patches] }.
    A new entry there must also carry say, background and metAt, and wear the id its category and term
-   give; a patch names an entry of the file and carries say, background, metAt and perhaps guest.
+   give; a patch names an entry of the file and carries say, background, metAt and perhaps guest, and
+   perhaps sources, each { title, url } with an https url, which the merger appends to the entry's own.
 
    Runs from any directory. Exits 1 naming the entry and the rule on failure, one line on success.
    No dash of any spelling in this file. */

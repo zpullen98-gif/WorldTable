@@ -2,12 +2,13 @@
 /* merge-staging.mjs: apply the staged Fieldbook chunks to src/lib/data/culinary-foundations.json.
 
    Reads every tools/foundations/staging/*.json in name order, each { "chunk", "new": [full entries],
-   "deepen": [{ "id", "say", "background", "metAt", "guest"? }] }, and holds each to check-foundations'
+   "deepen": [{ "id", "say", "background", "metAt", "guest"?, "sources"? }] }, and holds each to check-foundations'
    staging rules first. A new entry is appended at the end of its category's entries, so the file keeps
    the categories' order, and joins published.json with its id, term and ref; a new entry already there
    with the same content is skipped. A deepen patch is merged field by field into the entry it names and
-   never touches id, term or ref. Two chunks that give one field two values, or stage one id twice,
-   refuse the run. The merged file is held to the whole file's rules before anything is written, so the
+   never touches id, term or ref; its sources are appended to the entry's own, one per url, and never take
+   one away. Two chunks that give one field two values, or stage one id twice, refuse the run; two chunks
+   that give one entry sources do not, as the union of both is taken. The merged file is held to the whole file's rules before anything is written, so the
    run is all or none. It prints what it did, entry by entry.
 
    Runs from any directory. Exits 1 naming the chunk, the entry and the rule on failure.
@@ -15,7 +16,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { MAIN, PUBLISHED, PEOPLE, STAGING, REL, parseArgs, readJson, writeJson, publishedMap, peopleIn, fileProblems, stagingProblems } from './rules.mjs';
+import { MAIN, PUBLISHED, PEOPLE, STAGING, REL, parseArgs, readJson, writeJson, publishedMap, peopleIn, fileProblems, stagingProblems, sourceKey } from './rules.mjs';
 
 const args = process.argv.slice(2);
 if (args.includes('--help') || args.includes('-h')) {
@@ -66,7 +67,7 @@ for (const { file, staging } of chunks) {
 		else newBy.set(e.id, file);
 	}
 	for (const d of staging.deepen || []) for (const [k, v] of Object.entries(d)) {
-		if (k === 'id') continue;
+		if (k === 'id' || k === 'sources') continue;
 		const key = `${d.id}.${k}`;
 		const was = fieldBy.get(key);
 		if (was && was.value !== v) problems.push(`${file}: ${d.id}: deepen: ${k} differs from the value ${was.file} gives it`);
@@ -102,6 +103,14 @@ for (const { file, staging } of chunks) {
 		const entry = data.entries.find((x) => x.id === d.id);
 		const changed = [];
 		for (const [k, v] of Object.entries(d)) {
+			if (k === 'sources') {
+				const have = new Set(entry.sources.map((s) => sourceKey(s.url)));
+				const fresh = v.filter((s) => !have.has(sourceKey(s.url)));
+				if (!fresh.length) continue;
+				entry.sources.push(...fresh.map((s) => ({ title: s.title, url: s.url })));
+				changed.push(`${fresh.length} source${fresh.length === 1 ? '' : 's'} appended (${fresh.map((s) => s.url).join(', ')})`);
+				continue;
+			}
 			if (k === 'id' || entry[k] === v) continue;
 			changed.push(entry[k] === undefined ? `${k} added` : `${k} replaced`);
 			entry[k] = v;
