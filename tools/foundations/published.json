@@ -1,0 +1,591 @@
+{
+  "comment": "Every Fieldbook entry ever published, with the id, term and ref it was published with. None of the three ever changes: check-foundations.mjs refuses a file where one has, and merge-staging.mjs adds each new entry here as it merges it. Written by hand only to record a published entry.",
+  "entries": [
+    {
+      "id": "methods-boiled",
+      "term": "Boiled",
+      "ref": "c:fd_0025"
+    },
+    {
+      "id": "methods-braised",
+      "term": "Braised",
+      "ref": "c:fd_0026"
+    },
+    {
+      "id": "methods-brined",
+      "term": "Brined",
+      "ref": "c:fd_0027"
+    },
+    {
+      "id": "methods-caramelized",
+      "term": "Caramelized",
+      "ref": "c:fd_0028"
+    },
+    {
+      "id": "methods-confit",
+      "term": "Confit",
+      "ref": "c:fd_0029"
+    },
+    {
+      "id": "methods-cured",
+      "term": "Cured",
+      "ref": "c:fd_0030"
+    },
+    {
+      "id": "methods-fried",
+      "term": "Fried",
+      "ref": "c:fd_0031"
+    },
+    {
+      "id": "methods-grilled",
+      "term": "Grilled",
+      "ref": "c:fd_0032"
+    },
+    {
+      "id": "methods-pickled",
+      "term": "Pickled",
+      "ref": "c:fd_0033"
+    },
+    {
+      "id": "methods-poached",
+      "term": "Poached",
+      "ref": "c:fd_0034"
+    },
+    {
+      "id": "methods-preserved",
+      "term": "Preserved",
+      "ref": "c:fd_0035"
+    },
+    {
+      "id": "methods-pureed",
+      "term": "Puréed",
+      "ref": "c:fd_0036"
+    },
+    {
+      "id": "methods-roasted",
+      "term": "Roasted",
+      "ref": "c:fd_0037"
+    },
+    {
+      "id": "methods-sauteed",
+      "term": "Sautéed",
+      "ref": "c:fd_0038"
+    },
+    {
+      "id": "methods-seared",
+      "term": "Seared",
+      "ref": "c:fd_0039"
+    },
+    {
+      "id": "methods-simmered",
+      "term": "Simmered",
+      "ref": "c:fd_0040"
+    },
+    {
+      "id": "methods-smoked",
+      "term": "Smoked",
+      "ref": "c:fd_0041"
+    },
+    {
+      "id": "methods-sousvide",
+      "term": "Sous Vide",
+      "ref": "c:fd_0042"
+    },
+    {
+      "id": "methods-wilted",
+      "term": "Wilted",
+      "ref": "c:fd_0043"
+    },
+    {
+      "id": "vegetables-arugula",
+      "term": "Arugula",
+      "ref": "t:arugula"
+    },
+    {
+      "id": "vegetables-beet",
+      "term": "Beet",
+      "ref": "t:beet"
+    },
+    {
+      "id": "vegetables-broccolini",
+      "term": "Broccolini",
+      "ref": "t:broccolini"
+    },
+    {
+      "id": "vegetables-brusselssprouts",
+      "term": "Brussels Sprouts",
+      "ref": "t:brussels-sprouts"
+    },
+    {
+      "id": "vegetables-capers",
+      "term": "Capers",
+      "ref": "c:fd_0278"
+    },
+    {
+      "id": "vegetables-celeryroot",
+      "term": "Celeriac",
+      "ref": "t:celeriac"
+    },
+    {
+      "id": "vegetables-chicory",
+      "term": "Chicory"
+    },
+    {
+      "id": "vegetables-chives",
+      "term": "Chives",
+      "ref": "t:chives"
+    },
+    {
+      "id": "vegetables-cippolini",
+      "term": "Cipollini Onion",
+      "ref": "t:cipollini-onion"
+    },
+    {
+      "id": "vegetables-collardgreens",
+      "term": "Collard Greens",
+      "ref": "t:collard-greens"
+    },
+    {
+      "id": "vegetables-endive",
+      "term": "Endive"
+    },
+    {
+      "id": "vegetables-fennel",
+      "term": "Fennel"
+    },
+    {
+      "id": "vegetables-frisee",
+      "term": "Frisee",
+      "ref": "t:frisee"
+    },
+    {
+      "id": "vegetables-haricotsverts",
+      "term": "Haricots Verts"
+    },
+    {
+      "id": "vegetables-parsnips",
+      "term": "Parsnip",
+      "ref": "t:parsnip"
+    },
+    {
+      "id": "vegetables-radicchio",
+      "term": "Radicchio",
+      "ref": "t:radicchio"
+    },
+    {
+      "id": "vegetables-ramps",
+      "term": "Ramps",
+      "ref": "t:ramps"
+    },
+    {
+      "id": "vegetables-rhubarb",
+      "term": "Rhubarb",
+      "ref": "t:rhubarb"
+    },
+    {
+      "id": "vegetables-salsify",
+      "term": "Salsify",
+      "ref": "t:salsify"
+    },
+    {
+      "id": "vegetables-shallot",
+      "term": "Shallot",
+      "ref": "t:shallot"
+    },
+    {
+      "id": "vegetables-sugarsnappeas",
+      "term": "Snap Pea",
+      "ref": "t:snap-pea"
+    },
+    {
+      "id": "vegetables-sunchokes",
+      "term": "Sunchoke",
+      "ref": "t:sunchoke"
+    },
+    {
+      "id": "vegetables-swisschard",
+      "term": "Swiss Chard",
+      "ref": "t:swiss-chard"
+    },
+    {
+      "id": "vegetables-watercress",
+      "term": "Watercress",
+      "ref": "t:watercress"
+    },
+    {
+      "id": "southern-blackeyedpeas",
+      "term": "Black-eyed Pea",
+      "ref": "t:black-eyed-pea"
+    },
+    {
+      "id": "southern-chickenfried",
+      "term": "Chicken-Fried",
+      "ref": "c:fd_0002"
+    },
+    {
+      "id": "southern-chowchow",
+      "term": "Chow-Chow"
+    },
+    {
+      "id": "southern-coleslaw",
+      "term": "Coleslaw",
+      "ref": "c:fd_0004"
+    },
+    {
+      "id": "southern-hash",
+      "term": "Hash",
+      "ref": "c:fd_0005"
+    },
+    {
+      "id": "southern-hoecakesjohnnycakes",
+      "term": "Hoe cakes/Johnny cakes"
+    },
+    {
+      "id": "southern-hominy",
+      "term": "Hominy",
+      "ref": "c:fd_0007"
+    },
+    {
+      "id": "southern-hoppinjohn",
+      "term": "Hoppin’ John"
+    },
+    {
+      "id": "southern-muscadineandscuppernong",
+      "term": "Muscadine Grape",
+      "ref": "t:muscadine-grape"
+    },
+    {
+      "id": "southern-sorghum",
+      "term": "Sorghum"
+    },
+    {
+      "id": "southern-redeyegravy",
+      "term": "Red eye gravy"
+    },
+    {
+      "id": "mushrooms-abalone",
+      "term": "Abalone Mushroom",
+      "ref": "c:fd_0138"
+    },
+    {
+      "id": "mushrooms-beech",
+      "term": "Beech Mushroom",
+      "ref": "c:fd_0139"
+    },
+    {
+      "id": "mushrooms-blacktrumpet",
+      "term": "Black Trumpet",
+      "ref": "c:fd_0140"
+    },
+    {
+      "id": "mushrooms-chanterelle",
+      "term": "Chanterelle",
+      "ref": "c:fd_0141"
+    },
+    {
+      "id": "mushrooms-henofthewoods",
+      "term": "Hen of the Woods",
+      "ref": "c:fd_0142"
+    },
+    {
+      "id": "mushrooms-kingtrumpet",
+      "term": "King Trumpet",
+      "ref": "c:fd_0143"
+    },
+    {
+      "id": "mushrooms-morels",
+      "term": "Morel",
+      "ref": "c:fd_0144"
+    },
+    {
+      "id": "mushrooms-oyster",
+      "term": "Oyster Mushroom",
+      "ref": "c:fd_0145"
+    },
+    {
+      "id": "mushrooms-shiitake",
+      "term": "Shiitake",
+      "ref": "c:fd_0146"
+    },
+    {
+      "id": "mushrooms-truffles",
+      "term": "Truffle",
+      "ref": "c:fd_0147"
+    },
+    {
+      "id": "meats-escargot",
+      "term": "Escargot",
+      "ref": "c:fd_0050"
+    },
+    {
+      "id": "meats-guinea",
+      "term": "Guinea Hen",
+      "ref": "c:fd_0051"
+    },
+    {
+      "id": "meats-porkbelly",
+      "term": "Pork Belly",
+      "ref": "c:fd_0094"
+    },
+    {
+      "id": "meats-quail",
+      "term": "Quail",
+      "ref": "c:fd_0052"
+    },
+    {
+      "id": "meats-squab",
+      "term": "Squab",
+      "ref": "c:fd_0053"
+    },
+    {
+      "id": "meats-sweetbreads",
+      "term": "Sweetbreads",
+      "ref": "c:fd_0054"
+    },
+    {
+      "id": "cured-andouille",
+      "term": "Andouille",
+      "ref": "c:fd_0064"
+    },
+    {
+      "id": "cured-chorizo",
+      "term": "Chorizo",
+      "ref": "c:fd_0065"
+    },
+    {
+      "id": "cured-coppa",
+      "term": "Coppa",
+      "ref": "c:fd_0066"
+    },
+    {
+      "id": "cured-countryham",
+      "term": "Country Ham",
+      "ref": "c:fd_0067"
+    },
+    {
+      "id": "cured-guanciale",
+      "term": "Guanciale",
+      "ref": "c:fd_0068"
+    },
+    {
+      "id": "cured-lardo",
+      "term": "Lardo",
+      "ref": "c:fd_0069"
+    },
+    {
+      "id": "cured-lomo",
+      "term": "Lomo",
+      "ref": "c:fd_0070"
+    },
+    {
+      "id": "cured-pancetta",
+      "term": "Pancetta",
+      "ref": "c:fd_0071"
+    },
+    {
+      "id": "cured-pastrami",
+      "term": "Pastrami",
+      "ref": "c:fd_0072"
+    },
+    {
+      "id": "cured-pate",
+      "term": "Pâté",
+      "ref": "c:fd_0073"
+    },
+    {
+      "id": "cured-prosciutto",
+      "term": "Prosciutto",
+      "ref": "c:fd_0074"
+    },
+    {
+      "id": "cured-rillette",
+      "term": "Rillettes",
+      "ref": "c:fd_0075"
+    },
+    {
+      "id": "cured-speck",
+      "term": "Speck",
+      "ref": "c:fd_0076"
+    },
+    {
+      "id": "cured-tasso",
+      "term": "Tasso",
+      "ref": "c:fd_0077"
+    },
+    {
+      "id": "cuts-ribeyecapakacalotte",
+      "term": "Ribeye Cap",
+      "ref": "c:fd_0086"
+    },
+    {
+      "id": "cuts-cheek",
+      "term": "Cheek",
+      "ref": "c:fd_0087"
+    },
+    {
+      "id": "cuts-hangersteak",
+      "term": "Hanger Steak",
+      "ref": "c:fd_0088"
+    },
+    {
+      "id": "cuts-hamhock",
+      "term": "Ham Hock",
+      "ref": "c:fd_0089"
+    },
+    {
+      "id": "cuts-ribeye",
+      "term": "Ribeye",
+      "ref": "c:fd_0090"
+    },
+    {
+      "id": "cuts-shoulder",
+      "term": "Shoulder",
+      "ref": "c:fd_0091"
+    },
+    {
+      "id": "cuts-shortrib",
+      "term": "Short Rib",
+      "ref": "c:fd_0092"
+    },
+    {
+      "id": "cuts-tenderloin",
+      "term": "Tenderloin",
+      "ref": "c:fd_0093"
+    },
+    {
+      "id": "fish-arcticchar",
+      "term": "Arctic Char",
+      "ref": "c:fd_0108"
+    },
+    {
+      "id": "fish-crawfish",
+      "term": "Crawfish",
+      "ref": "c:fd_0109"
+    },
+    {
+      "id": "fish-skatefish",
+      "term": "Skate",
+      "ref": "c:fd_0110"
+    },
+    {
+      "id": "fish-flounder",
+      "term": "Flounder",
+      "ref": "c:fd_0111"
+    },
+    {
+      "id": "fish-grouper",
+      "term": "Grouper",
+      "ref": "c:fd_0112"
+    },
+    {
+      "id": "fish-halibut",
+      "term": "Halibut",
+      "ref": "c:fd_0113"
+    },
+    {
+      "id": "fish-mussels",
+      "term": "Mussels",
+      "ref": "c:fd_0114"
+    },
+    {
+      "id": "fish-oysters",
+      "term": "Oysters",
+      "ref": "c:fd_0115"
+    },
+    {
+      "id": "fish-roe",
+      "term": "Roe",
+      "ref": "c:fd_0116"
+    },
+    {
+      "id": "fish-salmon",
+      "term": "Salmon",
+      "ref": "c:fd_0117"
+    },
+    {
+      "id": "fish-scallops",
+      "term": "Scallops",
+      "ref": "c:fd_0118"
+    },
+    {
+      "id": "fish-snapper",
+      "term": "Snapper",
+      "ref": "c:fd_0119"
+    },
+    {
+      "id": "fish-sturgeon",
+      "term": "Sturgeon",
+      "ref": "c:fd_0120"
+    },
+    {
+      "id": "fish-tilefish",
+      "term": "Tilefish",
+      "ref": "c:fd_0121"
+    },
+    {
+      "id": "fish-trout",
+      "term": "Trout",
+      "ref": "c:fd_0122"
+    },
+    {
+      "id": "fish-turbot",
+      "term": "Turbot",
+      "ref": "c:fd_0123"
+    },
+    {
+      "id": "fish-wreckfish",
+      "term": "Wreckfish",
+      "ref": "c:fd_0124"
+    },
+    {
+      "id": "dairy-chapelhillcreamery",
+      "term": "Chapel Hill Creamery"
+    },
+    {
+      "id": "dairy-sweetgrassdairy",
+      "term": "Sweet Grass Dairy"
+    },
+    {
+      "id": "dairy-spinningspidercreamery",
+      "term": "Spinning Spider Creamery"
+    },
+    {
+      "id": "dairy-sequatchiecovecreamery",
+      "term": "Sequatchie Cove Creamery"
+    },
+    {
+      "id": "dairy-brebis",
+      "term": "Brebis",
+      "ref": "c:fd_0154"
+    },
+    {
+      "id": "dairy-buttermilk",
+      "term": "Buttermilk",
+      "ref": "c:fd_0155"
+    },
+    {
+      "id": "dairy-chevre",
+      "term": "Chèvre",
+      "ref": "c:fd_0156"
+    },
+    {
+      "id": "dairy-cremefraiche",
+      "term": "Crème Fraîche",
+      "ref": "c:fd_0157"
+    },
+    {
+      "id": "dairy-fromageblanc",
+      "term": "Fromage Blanc",
+      "ref": "c:fd_0158"
+    },
+    {
+      "id": "dairy-parmesan",
+      "term": "Parmesan",
+      "ref": "c:fd_0159"
+    },
+    {
+      "id": "dairy-singingbrook",
+      "term": "Singing Brook"
+    }
+  ]
+}
