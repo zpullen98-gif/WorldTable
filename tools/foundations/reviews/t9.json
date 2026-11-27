@@ -1,0 +1,78 @@
+{
+  "chunk": "t9",
+  "note": "The gate refuses a checked field inside a staging entry or a deepen patch (KNOWN_FIELDS and DEEPEN_FIELDS), so the refuter's verdicts are kept here, one per term.",
+  "checked": {
+    "methods-meuniere": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "guest: 'dusted lightly in flour' read to a guest as how the house redfish was made, while the kitchen line leaves the flouring to lineup; now 'traditionally dusted in flour', the style rather than the plate",
+        "Julia Child (1912 to 2004) at La Couronne in Rouen on 3 November 1948, sole meunière at her first meal in France, and 'the most exciting meal of my life' from My Life in France: confirmed (Paste; Chowhound)",
+        "Jean Galatoire from Pardies near Pau, Victor's Restaurant bought in 1905, Louisiana speckled trout made into trout meunière: confirmed (Galatoire's: History; Tulane exhibit)",
+        "trout meunière amandine as a dish Galatoire's is known for: Saveur calls it one of the most popular dishes there; kept",
+        "say 'mun-YAIR' matches the French and the English dictionary sound"
+      ],
+      "open": []
+    },
+    "fish-redfish": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'around 1980' tightened to 'in 1980'; the sources put the dish's debut at K-Paul's in March 1980 (Alabama Aquaculture; 64 Parishes)",
+        "background: 'coated in cayenne and dried herbs' was too narrow for the published blackening mix of salt, paprika, cayenne and other peppers, onion and garlic powder, thyme and oregano; now 'a mix of paprika, ground peppers and dried herbs' (Saveur: Blackened Redfish; Food52 added)",
+        "background and kitchen: 'farmed redfish grew up to fill the gap' had no source behind it; now 'redfish farming, centered in Texas, grew up to supply restaurants' (AgMRC: Matagorda Bay the heart of the industry; Mississippi State Extension 2024: most production in Texas, restaurants short of redfish; both added)",
+        "federal closure: the Gulf red drum plan took effect in December 1986 and barred directed commercial harvest from federal waters for 1987, confirmed (NOAA Fisheries added); Louisiana recreational only since 1988 confirmed (LDWF; RS 56:325.3)",
+        "Paul Prudhomme (1940 to 2015), K-Paul's on Chartres Street in 1979, the tail spot as a possible decoy, the range and the black drum barbels: confirmed"
+      ],
+      "open": []
+    },
+    "sauces-brownbutter": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "sound",
+      "changed": [
+        "Louis Camille Maillard (1878 to 1936), French physician and chemist, described the browning of amino acids with sugars in 1912: confirmed (Wikipedia; NPR)",
+        "beurre noisette as hazelnut butter, beurre noir as the darker butter sharpened with lemon or vinegar, brown butter on the menu's redfish and Sweet Potato Agnolotti and in the Turtle Soup's brown butter spinach: confirmed against the sources and the house pack"
+      ],
+      "open": []
+    },
+    "methods-ecrase": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "sound",
+      "changed": [
+        "Merriam-Webster's ecrase (écrasé) traced to French écraser from Middle French ecraser: confirmed",
+        "Académie française 9e: 'Écraser des pommes de terre pour en faire de la purée' among the verb's senses; Le Robert: écrasé as a kitchen noun, 'un(e) écrasé(e) de pommes de terre': confirmed",
+        "Paris Faculty of Medicine declared the potato edible in 1772, Parmentier (1737 to 1813): confirmed (Wikipedia; National Geographic)",
+        "say 'ay-krah-ZAY' matches the French"
+      ],
+      "open": []
+    },
+    "vegetables-leek": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: Nero 'nicknamed Porrophagus' rests on modern retellings only; Pliny's own passage says the emperor ate leeks with oil on set days each month to improve his voice and gives no nickname. Nickname dropped, 'to clear his throat' now Pliny's 'for the sake of his voice', with Pliny cited (Pliny, Natural History XIX.33; Mashed added)",
+        "background: 'is worn on Saint David's Day' told a fading custom as present fact; Museum Wales says few wear a leek now. Now 'was traditionally worn'; the battle story is now 'told in several versions, none of them settled' (Museum Wales; Historic UK added)",
+        "Egyptian diet from at least the second millennium BC, from dried remains, carvings and drawings, confirmed as Zohary and Hopf's conclusion (New World Encyclopedia added)",
+        "Louis Diat (1885 to 1957), head chef of the Ritz Carlton in New York, credited with chilled vichyssoise, usually dated to 1917: confirmed; the date stays hedged as 'usually dated'"
+      ],
+      "open": []
+    },
+    "vegetables-haricotsverts": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'the Nahuatl ayacotli is the leading guess' overstated one side; English dictionaries (Wiktionary, American Heritage) lean to Nahuatl, while the Académie française derives the bean's name from the stew haricot (fèves d'aricot). Now says so (Académie française 9e: haricot added)",
+        "background: the Larousse Gastronomique list rested on one blog's quotation, and its writer is not French; now 'French sources list among the filet beans the fin de Bagnols and the triomphe de Farcy' (e-santé added beside Mad About Macarons)",
+        "first sure European evidence in the middle of the 1500s and the first European picture in Fuchs's herbal of 1542, Leonhart Fuchs (1501 to 1566): confirmed (Frontiers in Plant Science 2022 added)",
+        "say 'ah-ree-koh VAIR' matches the French; the guest line, thin before, is general and safe at the table"
+      ],
+      "open": []
+    }
+  }
+}
