@@ -178,21 +178,71 @@
       "say": "SKAL-ups",
       "background": "The bay scallop, Argopecten irradians, lives in the eelgrass of shallow bays and sounds on the Atlantic coast and around the Gulf of Mexico, and it is short lived: it seldom lives two years, and in one study of New York's Peconic Bays fewer than one in a hundred harvested scallops had reached that age. From the 1870s to the mid 1980s its fishery from Massachusetts to North Carolina mattered both to the local economy and to the life of the towns that worked it. The scallop depends on its eelgrass, and when the eelgrass died off in the 1930s and again in the 1980s, scallop numbers and harvests fell hard. What reaches the plate is the adductor, the round muscle that closes the shell. Served on its own and raw, it is exempt under the FDA Food Code from the parasite freezing most raw fish needs.",
       "metAt": "Brennan's Thanksgiving Day 2026: Bay Scallop Crudo",
-      "guest": "Our bay scallops are the small, sweet scallops of shallow bays, more tender than the larger sea scallops. On the crudo they are served raw, so you taste their natural sweetness, dressed with Meyer lemon, black truffle and radish."
+      "guest": "Our bay scallops are the small, sweet scallops of shallow bays, more tender than the larger sea scallops. On the crudo they are served raw, so you taste their natural sweetness, dressed with Meyer lemon, black truffle and radish.",
+      "sources": [
+        {
+          "title": "New York Sea Grant: the bay scallop",
+          "url": "https://seagrant.sunysb.edu/articles/r/23850"
+        },
+        {
+          "title": "Northeastern Naturalist (2026): bay scallops of New York's Peconic Bays",
+          "url": "https://s3.amazonaws.com/assets.cce.cornell.edu/attachments/78564/2026.Tettelbach_et_al.Northeastern_Naturalist.pdf"
+        },
+        {
+          "title": "NOAA Fisheries Scientific Publications Office: The Bay Scallop, Argopecten irradians, Massachusetts through North Carolina",
+          "url": "https://spo.nmfs.noaa.gov/content/bay-scallop-argopecten-irradians-massachusetts-through-north-carolina-its-biology-and"
+        },
+        {
+          "title": "New York State DEC: Bay scallop species assessment",
+          "url": "https://extapps.dec.ny.gov/fs/programs/dfw/SWAP2025/Marine%20Invertebrates/Bay%20scallop.pdf"
+        }
+      ]
     },
     {
       "id": "mushrooms-truffles",
       "say": "TRUF-ul",
       "background": "The black truffle of the Périgord, Tuber melanosporum, is a winter truffle that grows underground on the roots of oaks and other trees in southern France, Spain and Italy; despite its name, most of the French crop comes from the south east. It is gathered from about November to March and found by scent, with trained dogs or pigs. Its cultivation began early in the nineteenth century in the Vaucluse, when a grower sowed acorns gathered under oaks that bore truffles and found truffles under the young trees, and in 1847 a grower at Carpentras planted oaks from such acorns over some seven hectares. A winter truffle of lesser aroma, Tuber brumale, grows in the same soils and is often confused with it. Jean Anthelme Brillat-Savarin (1755 to 1826) called the truffle the diamond of the art of cookery in The Physiology of Taste.",
       "metAt": "Brennan's Thanksgiving Day 2026: Bay Scallop Crudo",
-      "guest": "Truffle is an underground fungus prized for its earthy, savory aroma. On the crudo it adds a deep, earthy note against the sweet raw scallops and the bright Meyer lemon; whether it is fresh or preserved, the kitchen can tell you."
+      "guest": "Truffle is an underground fungus prized for its earthy, savory aroma. On the crudo it adds a deep, earthy note against the sweet raw scallops and the bright Meyer lemon; whether it is fresh or preserved, the kitchen can tell you.",
+      "sources": [
+        {
+          "title": "Wikipedia: Tuber melanosporum",
+          "url": "https://en.wikipedia.org/wiki/Tuber_melanosporum"
+        },
+        {
+          "title": "France.fr: Truffle",
+          "url": "https://www.france.fr/en/article/truffle/"
+        },
+        {
+          "title": "Cornell Mushroom Blog: So you want to be a truffle farmer, part 2",
+          "url": "https://blog.mycology.cornell.edu/2008/04/08/so-you-want-to-be-a-truffle-farmer-part-2"
+        },
+        {
+          "title": "Smithsonian Magazine: Brillat-Savarin on truffles, a book excerpt",
+          "url": "https://www.smithsonianmag.com/travel/dangers-erotic-truffles-physiology-taste-transcendental-gastronomy-book-excerpt-cultural-travel-180961646/"
+        }
+      ]
     },
     {
       "id": "vegetables-capers",
       "say": "KAY-perz",
       "background": "Capers are the unopened flower buds of the caper bush, Capparis spinosa, a sprawling shrub that grows wild around the Mediterranean. The buds are picked by hand before they open and sorted by size with sieves or screens; the smaller the bud, the more it is valued, and nonpareil is the name of the smallest grade. Sorting is not exact, so one brand's nonpareils can run more even than another's. They are cured in salt or in brine, and salt packed capers are rinsed before use. On the volcanic island of Pantelleria, off Sicily, the Cappero di Pantelleria has carried the European Union's protected geographical indication since 1996. In French cooking, fish finished in brown butter with capers and lemon is served à la grenobloise, close kin to the meunière.",
       "metAt": "Brennan's Thanksgiving Day 2026: Redfish Meunière",
-      "guest": "Capers are the small flower buds of a Mediterranean shrub, picked before they open and cured in salt or brine. In the brown butter with the lemon they add a bright, briny pop that cuts through the richness of the redfish."
+      "guest": "Capers are the small flower buds of a Mediterranean shrub, picked before they open and cured in salt or brine. In the brown butter with the lemon they add a bright, briny pop that cuts through the richness of the redfish.",
+      "sources": [
+        {
+          "title": "Cook's Illustrated: Capers taste test",
+          "url": "https://cooksillustrated.com/taste_tests/1971-capers"
+        },
+        {
+          "title": "WIPO Magazine: GI protection revives caper production on Pantelleria",
+          "url": "https://www.wipo.int/en/web/wipo-magazine/articles/gi-protection-revives-caper-production-on-pantelleria-42042"
+        },
+        {
+          "title": "Saveur: Sole à la Grenobloise",
+          "url": "https://www.saveur.com/article/recipes/sole-a-la-grenobloise"
+        }
+      ]
     }
   ]
 }
