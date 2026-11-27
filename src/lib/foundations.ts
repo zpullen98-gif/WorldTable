@@ -8,9 +8,17 @@ export interface FoundationEntry {
 	ref?: string; relatedLexiconSlug?: string;
 	definition?: string; guest?: string; kitchen?: string; compare?: string;
 	correction?: string; sources: FoundationSource[]; reviewedOn?: string;
+	/** A plain respelling, syllables joined by hyphens, the stressed one in capitals: "ah-nyoh-LOH-tee". */
+	say?: string;
+	/** History and origin, and how it came to New Orleans or to the menu; every fact sourced. */
+	background?: string;
+	/** Where he met it: "Brennan's Thanksgiving Day 2026: Redfish Meunière". */
+	metAt?: string;
 }
-export const foundationsCategories = data.categories;
 export const foundationsEntries: FoundationEntry[] = data.entries;
+/** The subjects in the file's order. A subject with no entry yet is not drawn:
+ * it would open an empty page and an empty deck. */
+export const foundationsCategories = data.categories.filter(category => foundationsEntries.some(entry => entry.category === category.id));
 export const foundationRef = (entry: FoundationEntry): string => entry.ref || `u:${entry.id}`;
 export const foundationEntryById = new Map(foundationsEntries.map(entry => [entry.id, entry]));
 export const foundationEntryByRef = new Map(foundationsEntries.map(entry => [foundationRef(entry), entry]));
@@ -89,6 +97,7 @@ export function resolveFoundation(entry: FoundationEntry, deck?: FloorDeck | rea
 		kitchen: entry.kitchen || lexical?.prep || card?.why || '',
 		compare: entry.compare || card?.notThis || '',
 		correction: entry.correction || '', sources: entry.sources,
-		background: card?.why || '', ref: foundationRef(entry)
+		say: entry.say || '', metAt: entry.metAt || '',
+		background: entry.background || card?.why || '', ref: foundationRef(entry)
 	};
 }

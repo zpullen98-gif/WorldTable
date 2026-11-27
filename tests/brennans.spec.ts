@@ -53,6 +53,8 @@ const FOUNDATIONS = JSON.parse(readFileSync(join(HERE, '../src/lib/data/culinary
 	categories: Array<{ id: string; title: string }>;
 	entries: Array<{ id: string; term: string; category: string }>;
 };
+// The subjects the Fieldbook draws: the file's own, in its order, less any that holds no entry yet.
+const SUBJECTS = FOUNDATIONS.categories.filter((c) => FOUNDATIONS.entries.some((e) => e.category === c.id));
 const FALL = JSON.parse(readFileSync(join(HERE, '../src/lib/data/fall-menu-2026.json'), 'utf8')) as {
 	items: Array<{ id: string; kind: string; name: string; photoFile: string; listedIngredients: string[]; sheetDietaryNotes?: string[] }>;
 };
@@ -233,10 +235,10 @@ test('Kitchen studies preserves the twelve Cuisine chapters and nine Fieldbook s
 	const fieldbook = g.locator('a.door[data-door="foundations"]');
 	await expect(fieldbook.locator('.door-name')).toHaveText('The Kitchen Fieldbook');
 	await expect(fieldbook).toHaveAttribute('href', '/foundations');
-	await expect(g.locator('#terms-h .count')).toHaveText(`${FOUNDATIONS.entries.length} terms · ${FOUNDATIONS.categories.length} subjects`);
+	await expect(g.locator('#terms-h .count')).toHaveText(`${FOUNDATIONS.entries.length} terms · ${SUBJECTS.length} subjects`);
 	const subjects = g.locator('nav.subjects');
-	await expect(subjects.locator('a.chip[href^="/foundations?category="]')).toHaveCount(9);
-	await expect(subjects.locator('a.chip[href^="/foundations?category="]')).toHaveText(FOUNDATIONS.categories.map((c) => c.title));
+	await expect(subjects.locator('a.chip[href^="/foundations?category="]')).toHaveCount(SUBJECTS.length);
+	await expect(subjects.locator('a.chip[href^="/foundations?category="]')).toHaveText(SUBJECTS.map((c) => c.title));
 	await expect(subjects.locator('a.chip.go')).toHaveAttribute('href', '/flashcards?deck=foundations%3Atoday');
 	for (const el of await g.locator('a.door, a.chip').all()) {
 		const b = (await el.boundingBox())!;
@@ -257,7 +259,7 @@ test('Kitchen studies preserves the twelve Cuisine chapters and nine Fieldbook s
 	await expect(heading(page)).toHaveText(PACK.name);
 	// A subject chip opens the Fieldbook filtered, under the lit word, and Back returns to the page.
 	await reveal(g.locator('a.door[data-door="foundations"]'));
-	const subject = FOUNDATIONS.categories[0];
+	const subject = SUBJECTS[0];
 	await g.locator(`nav.subjects a.chip[href="/foundations?category=${subject.id}"]`).click();
 	await expect(page).toHaveURL(new RegExp(`/foundations\\?category=${subject.id}$`));
 	await expect(heading(page)).toHaveText('The Kitchen Fieldbook');
