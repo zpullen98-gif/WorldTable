@@ -19,8 +19,8 @@ import { goto, seedHouses } from './helpers';
  *     comment can carry measured figures, never estimates;
  *   - the four house sections are distinct, addressable views;
  *   - The cooking holds the lead door and the twelve chapter doors with the
- *     index's own hrefs; Your culinary terms the Fieldbook door and the nine
- *     subject chips;
+ *     index's own hrefs; Your culinary terms the Fieldbook door and a chip
+ *     for every Fieldbook subject that holds a term, counted from the file;
  *   - the Fall 2026 section leads the chips with its eight current rows;
  *   - a dish named as the training sheet names it draws the sheet's field
  *     notes on its card; the Hussarde card draws Go deeper by chapter;
@@ -211,7 +211,7 @@ test('the house sections are clear links, with one active destination and a retu
 	}
 });
 
-test('Kitchen studies preserves the twelve Cuisine chapters and nine Fieldbook subjects behind clear disclosures', async ({ page }) => {
+test('Kitchen studies preserves the twelve Cuisine chapters and every Fieldbook subject behind clear disclosures', async ({ page }) => {
 	await openHouse(page);
 	await houseSections(page).getByRole('link', { name: 'Kitchen studies', exact: true }).click();
 	const g = groups(page);
