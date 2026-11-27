@@ -1,0 +1,87 @@
+{
+  "chunk": "t11",
+  "note": "The gate refuses a checked field inside a staging entry or a deepen patch (KNOWN_FIELDS and DEEPEN_FIELDS), so the refuter's verdicts are kept here, one per term.",
+  "checked": {
+    "sweets-potdecreme": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'French has no separate everyday word for custard' overstated the language (French has flan, among others); now 'in French kitchens crème serves for custard as well as for cream'",
+        "background: the Cooper Hewitt reading was paraphrased beyond the page; now it 'notes that the French name for custard, crème anglaise, means English cream, and that the cup was made while the French fashion for all things English was in full swing', as the museum's write up says (Anglomania)",
+        "Mennecy soft paste porcelain custard pot of about 1770 at the Cooper Hewitt: confirmed (Cooper Hewitt collection record); lidded custard cups of Mennecy: confirmed (V&A custard cup and cover, added)",
+        "pot de crème looser and less rich than crème brûlée, which is heavy cream and yolks under a burnt sugar crust: confirmed (Tasting Table; Miss Buttercup)",
+        "say 'poh duh KREM' matches the French"
+      ],
+      "open": []
+    },
+    "sweets-custard": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "sound",
+      "changed": [
+        "crustade, an open pie in a crust, from the late fourteenth century, and the egg and milk sense from about 1600 (Merriam-Webster first use about 1616): confirmed (Etymonline; Merriam-Webster; OED via wehd)",
+        "Forme of Cury crustardes of flesh and of fish, eggs strained through a cloth poured in before baking: confirmed (Foods of England; John Rylands Library manuscript images titled Crustardes of fysshe)",
+        "Richard II (1367 to 1400): his years stand",
+        "175 to 185 F, 79 to 83 C, as McGee prints them, and curdling a few degrees past: confirmed (On Food and Cooking via ckbk; America's Test Kitchen gives 185 F as the curdling line)"
+      ],
+      "open": [
+        "79 to 83 C is McGee's own conversion; 185 F is 85 C. Kept as the book prints it."
+      ]
+    },
+    "sauces-miso": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "sound",
+      "changed": [
+        "MAFF records the theory that miso came from Goguryeo in 666: confirmed (MAFF Japanese traditional foods page)",
+        "a sixth century arrival with Buddhism as one account among several: confirmed (Just One Cookbook; Wikipedia)",
+        "Taihō Code of 701 names misho, a word not used in China, read as not yet hishio: confirmed (Just One Cookbook; President Online on the Taihō Code listing of 醤, 豉 and 未醤)",
+        "say 'MEE-soh' matches the Japanese"
+      ],
+      "open": []
+    },
+    "sweets-marshmallowfluff": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "definition: 'first made by a candy firm of Lynn' was wrong on two counts, since Query first made it in Somerville and the partners were of Swampscott, moving to a Lynn factory only in 1929; now 'made since 1920 by Durkee-Mower, a Massachusetts candy firm' (company history; Fox News citing it)",
+        "background: 'Two young candy makers of Lynn' corrected to 'Two veterans of that war from Swampscott', with the 1929 move to Lynn added (company history; Mental Floss; NPR)",
+        "background: 'until wartime shortages stopped him' now 'until the sugar shortages of the World War I years set his trade back'; sources differ on whether the shortage fell during or just after the war (Wikipedia; Mental Floss; Fox News)",
+        "Archibald Query (1873 to 1964), born in Montreal, made it in Somerville in 1917 and sold it door to door: confirmed (Lemelson-MIT; Wikipedia)",
+        "earlier marshmallow cremes existed before the brand: confirmed (Boston.com; Wikipedia: Marshmallow creme)",
+        "say 'MARSH-mel-oh FLUF' matches Merriam-Webster's first sound for marshmallow"
+      ],
+      "open": [
+        "The sale price of the formula is left out under the no price rule."
+      ]
+    },
+    "vegetables-sweetpotato": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'The LSU AgCenter's breeding work began in that decade' named a body that did not exist under that name in the 1930s; now 'Louisiana State University's sweet potato breeding began in that decade, and in 1987 the LSU AgCenter released the Beauregard' (LSU AgCenter station history and profile)",
+        "background: 'the first documented recipe' softened to 'the earliest known printed recipe for mashed sweet potatoes baked under marshmallows', since some writers doubt the 1917 booklet was first; Angelus commissioned it to find new uses for marshmallows: confirmed (Smithsonian Magazine citing the Oxford Companion to Sugar and Sweets; Mental Floss, added)",
+        "Louisiana growers calling their moist orange roots yams from the 1930s, a 1937 campaign, to set them apart from drier eastern sweet potatoes: confirmed (LSU AgCenter: Or you can call me Yam, added; LSU AgCenter 2012)",
+        "Beauregard released 1987 and grown far beyond Louisiana: confirmed (LSU AgCenter, two pages)"
+      ],
+      "open": []
+    },
+    "sweets-candiednuts": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'The Ursuline nuns ... are credited with bringing the candy' told a legend flatly; 64 Parishes calls the Ursuline story Crescent City mythmaking, so it is now told as a story and marked as legend",
+        "background: 'Louisiana cooks' put pecans in place of almonds narrowed to 'African American cooks in the kitchens of the French colonists' and 'added milk', as New Orleans Historical gives it; cream stays in the definition of the modern praline (64 Parishes)",
+        "César de Choiseul, duc du Plessis-Praslin (1598 to 1675): confirmed (Wikipedia, added); the cook's story told and never proven: confirmed (64 Parishes calls it perhaps apocryphal)",
+        "first pralines whole almonds in caramelized sugar: confirmed (Saveur, added; Wikipedia)"
+      ],
+      "open": [
+        "Some older references, the 1911 Britannica among them, give the duke's birth as 1602; current references give 12 February 1598. Kept at 1598."
+      ]
+    }
+  }
+}
