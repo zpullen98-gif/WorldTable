@@ -6,7 +6,9 @@
 </script>
 
 <div class="foundation-reading">
+	{#if reading.say}<section class="say"><h3>Say it</h3><p>{reading.say}</p></section>{/if}
 	<section><h3>In plain English</h3><p>{reading.definition}</p></section>
+	{#if reading.background}<section class="background"><h3>Background</h3><p>{reading.background}</p></section>{/if}
 	{#if reading.guest}<section class="guest"><h3>At the table</h3><p>{reading.guest}</p></section>{/if}
 	{#if reading.kitchen}<section><h3>In the kitchen</h3><p>{reading.kitchen}</p></section>{/if}
 	{#if reading.compare}<section><h3>Tell them apart</h3><p>{reading.compare}</p></section>{/if}
@@ -14,6 +16,7 @@
 	<FoundationVisuals studyRef={reading.ref} />
 	{#if reading.ref.startsWith('t:')}<p><a href="{base}/lexicon#{reading.ref.slice(2)}">Explore the full Lexicon entry</a></p>
 	{:else if reading.ref.startsWith('c:')}<p><a href="{base}/flashcards?deck=deck-all&amp;card={reading.ref.slice(2)}&amp;run=1">Explore the original Floor Deck card</a></p>{/if}
+	{#if reading.metAt}<section class="met"><h3>Where you met it</h3><p>{reading.metAt}</p></section>{/if}
 	{#if reading.sources?.length}
 		<details class="sources"><summary>Sources &amp; further reading</summary><ul>
 			{#each reading.sources as source}<li><a href={source.url.startsWith('/') ? `${base}${source.url}` : source.url} target={source.url.startsWith('/') ? undefined : '_blank'} rel={source.url.startsWith('/') ? undefined : 'noopener noreferrer'}>{source.title}</a></li>{/each}
