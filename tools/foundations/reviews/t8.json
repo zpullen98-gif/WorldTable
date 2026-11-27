@@ -1,0 +1,85 @@
+{
+  "chunk": "t8",
+  "note": "The gate refuses a checked field inside a staging entry or a deepen patch (KNOWN_FIELDS and DEEPEN_FIELDS), so the refuter's verdicts are kept here, one per term.",
+  "checked": {
+    "sauces-saucepiquante": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "guest: 'so it carries some heat' promised the house version's heat, which the kitchen line leaves to lineup; now 'the dish is known for its pepper'",
+        "background: Escoffier's sauce piquante finishes the wine and vinegar reduction with a brown sauce (espagnole), not brown veal stock, which is a modern adaptation; now 'a brown sauce', matching the definition (French Cooking Academy; CooksInfo; ckbk)",
+        "background: the Picayune's Creole Cook Book was first published in 1900, with the expanded 1901 edition the one usually reprinted; now 'first published in New Orleans in 1900 and expanded in 1901' (Wikipedia: Picayune Creole Cookbook added; ckbk)",
+        "Escoffier's years 1846 to 1935, piquer as to prick or sting, the Cajun stew on a roux and the trinity, and no record of when the Louisiana dish took the name: confirmed",
+        "compare: sauce piquante as the hotter cousin of shrimp Creole, usually on a roux, confirmed (Wikipedia: Shrimp creole; Deep South Dish); kept"
+      ],
+      "open": []
+    },
+    "sauces-tomatogravy": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "guest: 'warm and peppery' told a guest how the house gravy tasted, which the kitchen line leaves to the kitchen; now 'spooned over the rice'",
+        "background: 'from the jars put up for winter, a quick fix one food writer calls a reminder of the summer garden' rested on an unnamed, unverified quotation; now 'fresh from the garden or home canned' (Blind Pig and the Acorn; Tasting Table)",
+        "background and compare: 'most do not' and 'most cooks make it with no roux ... The roux is the tell' could not be settled: the Southern Cultures essay says the Creole red gravy naturally starts with a roux, while many recipes leave it out. Background now says the roux is still argued; compare now tells red gravy by its long simmer and its Sicilian table (Southern Cultures; The Gumbo Pages added)",
+        "Saveur's biscuits in parts of Mississippi, Alabama and Florida, the Appalachian breakfast over biscuits, Sicilian arrivals through the port from about 1885 to 1915, and red gravy named apart from the brown gravies: confirmed"
+      ],
+      "open": [
+        "Sicilian arrival counts vary by source (about 3,000 a year from the 1870s to 1920 on one marker); the entry gives only the 1885 to 1915 span, with no count"
+      ]
+    },
+    "vegetables-creoletomato": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "guest: 'grown in the river soil just below New Orleans' told a guest where any Creole tomato was grown, though the name now covers any Louisiana grown tomato and the crop is long over by late fall; now the name 'began on the farms in the river soil just below New Orleans'",
+        "background: 'home gardeners who bought them saved the seed and passed it along' found no support; one account says the farmers never catalogued their seed. Dropped",
+        "background: 'its yields were poor' sat at the 1970 release, but the poor yields (three to six pounds a plant) come from a 2015 LSU trial; the growers never took the cultivar up, which is why its seed stock was not kept. Now told in that order (LSU AgCenter; LSU AgCenter Recovered LSU Varieties added)",
+        "background: 'has never regulated the word' was a present tense claim about an agency; now 'The state left the word unregulated' (64 Parishes; LSU AgCenter)",
+        "release around 1970 confirmed: LSU pages give 1969 and 1970; 'Around 1970' kept"
+      ],
+      "open": []
+    },
+    "grains-pilaf": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "sound",
+      "changed": [
+        "Merriam-Webster first known use 1609 and the Turkish and Persian etymology confirmed",
+        "Iranica: polow first attested in Obayd Zakani's Mush o gorba (he died about 1370), and the two Safavid cookbooks compiled 1520 to 1521 and 1594 to 1595, confirmed",
+        "perloo from the same root as pilau, a one pot rice dish of the Gullah Geechee Lowcountry, confirmed (ATK; Yahoo; SC Sea Grant)",
+        "say 'pih-LAHF' matches Merriam-Webster's pi-LAHF"
+      ],
+      "open": []
+    },
+    "southern-bbqshrimp": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "guest: 'a dish born Uptown at Pascal’s Manale' told as fact an origin the sources only credit; now 'a dish credited to Pascal’s Manale'",
+        "guest: 'carried those buttery, peppery flavors into a holiday stuffing' described the house recipe, which the kitchen line says not to do; now the side 'took that New Orleans style into a holiday stuffing', as the menu sheet has it",
+        "background: the renaming is now dated: the nephew took the restaurant over after the founder died in 1937 and kept his uncle's name beside his own (Biz New Orleans; Via Nola Vie and New Orleans Magazine added)",
+        "1913 opening, the 1953 or 1954 date, the unconfirmed Chicago story, the heads on and no grill: confirmed (NPR; Biz New Orleans; The Daily Meal)"
+      ],
+      "open": [
+        "metAt and guest carry the menu's own dish name, Titus’ BBQ Shrimp Stuffing; Titus is a first name only, as printed on the menu, and other chunks keep it. Left for the owner if the name should go"
+      ]
+    },
+    "methods-pickled": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "sound",
+      "changed": [
+        "Mesopotamia around 2400 BCE as the New York Food Museum's date, told with its uncertainty, confirmed (History.com; Wikipedia)",
+        "Mary Randolph 1762 to 1828, The Virginia House-Wife of 1824 and its cayenne pepper vinegar confirmed (Colonial Williamsburg; Monticello; Wikipedia)",
+        "Edmund McIlhenny 1815 to 1890, the 1868 crop and 658 bottles in 1869 to Gulf Coast grocers, particularly in New Orleans, confirmed (TABASCO Brand; 64 Parishes)"
+      ],
+      "open": [
+        "Some historians note that another Louisiana maker sold a tabasco pepper sauce before McIlhenny; the entry claims no first, so nothing changed"
+      ]
+    }
+  }
+}
