@@ -1,0 +1,104 @@
+{
+  "chunk": "t6",
+  "note": "The gate refuses a checked field inside a staging entry or a deepen patch (KNOWN_FIELDS and DEEPEN_FIELDS), so the refuter's verdicts are kept here, one per term.",
+  "checked": {
+    "meats-turkey": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "definition: 'a turkey rarely flies' is untrue of the wild bird, which flies short bursts and roosts in trees; now 'a farm turkey seldom flies'",
+        "background: 'at least two thousand years ago' became 'more than two thousand years ago' (Audubon; the 2010 PNAS ancient DNA study dates it near 800 BC)",
+        "background: 'a second domestication in the American Southwest later died out' went further than the evidence, which shows only that the Southwest birds are not ancestors of today's farm turkeys; now 'left no line among today's farm turkeys' (PNAS via PMC; Smithsonian)",
+        "background: 'linguists say the origin is not settled' overstated the doubt: the etymologists quoted by NPR and Merriam-Webster treat the guinea fowl carry over as the usual account; now 'usually explained as ... though other explanations have been offered' (NPR; Merriam-Webster; Scientific American)",
+        "sources: PNAS (PMC2840336), Audubon and Merriam-Webster added"
+      ],
+      "open": [
+        "The Spanish arrival in Europe is given as 'around 1500' (Smithsonian); another account says 1519. Left as the approximate date"
+      ]
+    },
+    "sauces-jus": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: a stray comma before the full stop after 'arrowroot or cornstarch' removed",
+        "background: the French dip line holds: both restaurants opened in Los Angeles in 1908 and each claims the sandwich (Wikipedia; Britannica; Snopes added)"
+      ],
+      "open": []
+    },
+    "vegetables-cranberry": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "definition: 'four small air pockets' rests on one growers' history newsletter; the count is dropped and the berry now 'holds small pockets of air' (Cape Cod Cranberry Growers' Association; Wikipedia)",
+        "guest: 'Our cranberry sauce was tart and bright, made to cut through...' told a guest the house recipe's intent, which the kitchen line itself leaves to lineup; now a general line on what cranberry sauce brings, and where it came on the menu (as a side for the table and in the jus, per the menu sheet)",
+        "background: 'his venture later grew into the Ocean Spray cooperative' blurred the history: in 1930 he and two other growers formed the cooperative that became Ocean Spray (Wikipedia: Ocean Spray; Smithsonian)",
+        "background: 1912 canning confirmed (Wikipedia: Marcus Urann; Bangor Daily News added); American Cookery 1796 recommending cranberry sauce with turkey but giving no recipe confirmed (NPR; American Heritage)",
+        "sources: Wikipedia (Ocean Spray) and Bangor Daily News added"
+      ],
+      "open": [
+        "Dennis, 1816: one National Park Service history gives 1810 for the start of the industry; 'by most accounts' covers the 1816 date"
+      ]
+    },
+    "southern-dressing": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "guest: 'aromatics and herbs' named herbs the house recipe may not carry; now 'aromatics and seasoning', matching the definition and the kitchen line",
+        "background: kush as cornbread mashed with onions and gravy, and its West African roots, confirmed (Gunston Hall; VICE; Orlando Sentinel); the regional split and the unproven Victorian story confirmed (Dictionary.com; New England Today; Mental Floss)",
+        "sources: Gunston Hall and Mental Floss added"
+      ],
+      "open": []
+    },
+    "methods-brined": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'only around the end of the 1990s, when newspapers and television cooking shows carried turkey brines' could not be settled; Cook's Illustrated says it introduced its brined turkey in 1993 and the Toronto Star dates the peak to the early 2000s, so now 'only from the 1990s: Cook's Illustrated introduced its brined turkey in 1993, and brining recipes flourished through the early 2000s'",
+        "sources: Cook's Illustrated, How to Brine a Turkey, added"
+      ],
+      "open": [
+        "'its lactic acid tenderizes the meat more gently than vinegar or citrus' rests on Food Republic and Chowhound; a Food52 timed test found buttermilk tenderized little at all, which agrees with 'gently' but not with any strong tenderizing claim"
+      ]
+    },
+    "dairy-buttermilk": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'before the 1900s the name covered several drinks, from that by product to plain soured milk' could not be settled and was taken out",
+        "background: 'more acidic than the churned kind' and 'churned buttermilk is thinner and less acidic and does not act on soda the same way' were not borne out: the America's Test Kitchen side by side test found tasters could hardly tell real from conventional buttermilk in biscuits; both acidity claims are out, 'thicker than the churned kind' stays (Wikipedia; America's Test Kitchen)",
+        "background: added that most butter is now churned from uncultured sweet cream, so most buttermilk is cultured separately (Wikipedia; America's Test Kitchen, which notes even the 'real' product is cultured), bringing the text back to about 80 words"
+      ],
+      "open": []
+    },
+    "methods-roasted": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "say: ROHS-tid became ROHST-id, keeping the t with roast",
+        "background: 'the Oxford English Dictionary treats bake as the original word for oven cooking; roast followed the meat into the oven later' could not be confirmed against the OED; now the old split as Merriam-Webster, Dictionary.com and Modern Farmer give it: roasting before or over a fire, baking in an oven, and until gas stoves spread in the late nineteenth and early twentieth centuries, roasting at home and baking often in communal or commercial ovens",
+        "sources: Dictionary.com, Roast vs. Bake, added"
+      ],
+      "open": []
+    },
+    "methods-braised": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'entered English in the second half of the eighteenth century' conflicts with the dictionaries' own dates (Merriam-Webster has given 1733 and 1797, Dictionary.com 1760 to 1770, Oxford mid eighteenth century); now 'in the eighteenth century'",
+        "background: 'from an Old French word probably of Germanic origin' became 'a word probably of Germanic origin', as Merriam-Webster gives it",
+        "background: the doufeu lid first holding embers confirmed by Le Creuset's own page; Oxford Learner's Dictionaries confirms braise as the live coals the pot was once set in (added)"
+      ],
+      "open": [
+        "The colonial Dutch oven's flanged lid rests on Wikipedia alone in this review; not refuted"
+      ]
+    }
+  }
+}
