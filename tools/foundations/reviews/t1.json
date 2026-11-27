@@ -1,0 +1,77 @@
+{
+  "chunk": "t1",
+  "note": "The gate refuses a checked field inside a staging entry or a deepen patch (KNOWN_FIELDS and DEEPEN_FIELDS), so the refuter's verdicts are kept here, one per term.",
+  "checked": {
+    "sauces-roux": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: the 1651 book no longer says flour in fat took the place of breadcrumbs, because the same book still thickens some dishes with bread (CooksInfo on La Varenne); now it says the book thickens sauces with flour cooked in fat, while still thickening some dishes with bread",
+        "background: 'twenty five minutes or more' to 'often half an hour or more', since sources give 25 minutes (Explore Louisiana) to 40 or 50 (Saveur) for a dark chocolate roux",
+        "sources: CooksInfo on La Varenne and Saveur Dark Roux added"
+      ],
+      "open": []
+    },
+    "sauces-holytrinity": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "sound",
+      "changed": [],
+      "open": [
+        "Prudhomme popularized the name, first attested 1981; whether he coined it is not settled, and the entry rightly says only popularized"
+      ]
+    },
+    "southern-gumbo": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "guest: the name now 'most likely comes from' a West African word for okra, as the background says the origin is disputed (64 Parishes: Choctaw Gumbo)",
+        "kitchen: the Thanksgiving menu of 22 November 2026 printed the dish as Seafood Filé Gumbo (tools/house/brennans/research/menu-2026-11-22-sheets.md), so filé is no longer an open question; okra stays one",
+        "definition: 'traditionally not used in the same pot' to 'were traditionally distinct, and using both in one pot is uncommon' (64 Parishes: Filé; Southern Foodways Alliance)",
+        "metAt: names the printed menu title",
+        "sources: 64 Parishes Filé and Southern Foodways Alliance added"
+      ],
+      "open": [
+        "Brennan's published Seafood Filé Gumbo recipe is recorded in the house research as carrying okra and filé both; the refuter could not reach the recipe page itself, so the entry does not say it"
+      ]
+    },
+    "southern-file": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "guest: said the menu does not print filé; the Thanksgiving menu printed Seafood Filé Gumbo, so the line now says so and leaves the amount to the kitchen",
+        "metAt: the same correction",
+        "background: the c. 1870 drawing is no longer said to be held by The Historic New Orleans Collection, which no search confirmed; its artist is also disputed (64 Parishes credits Frank Hamilton Taylor, New Orleans Magazine credits Waud), so no artist is named"
+      ],
+      "open": []
+    },
+    "grains-popcornrice": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'opened at Crowley in 1909' to 'was established at Crowley in 1909', the station's own history wording",
+        "sources: LSU AgCenter station history added"
+      ],
+      "open": [
+        "Della's exact release year is not settled (an LSU AgCenter piece implies about 1974); the entry says only the 1970s, which stands"
+      ]
+    },
+    "cured-andouille": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: the German Coast lies in St. Charles and St. John the Baptist Parishes, not St. John alone (St. Charles Parish history; Wikipedia: German Coast)",
+        "background: 'generally over pecan wood' to 'often', as the published definition has it",
+        "background: the festival is no longer told as a present fact; now 'In 1972 a Louisiana governor named LaPlace the Andouille Capital of the World, the year the town held its first andouille festival' (L'Observateur; WGNO; St. John the Baptist Parish)"
+      ],
+      "open": [
+        "A deepen patch cannot carry sources, so the background's German Coast and 1972 facts rest on sources the entry does not list. The merger should add: https://stcharlesparish.gov/residents/economic-development-and-tourism/parish-history , https://sjbparish.gov/Visitors/History , https://lobservateur.com/?p=34964"
+      ]
+    }
+  }
+}
