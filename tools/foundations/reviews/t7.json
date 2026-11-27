@@ -1,0 +1,101 @@
+{
+  "chunk": "t7",
+  "note": "The gate refuses a checked field inside a staging entry or a deepen patch (KNOWN_FIELDS and DEEPEN_FIELDS), so the refuter's verdicts are kept here, one per term.",
+  "checked": {
+    "southern-canesyrup": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "sound",
+      "changed": [
+        "background: 1795 granulation by enslaved workers on the Boré land now Audubon Park confirmed (New Orleans Historical; LSU AgCenter); Britannica added as a further source",
+        "background: the 1910 freeze, open kettles and the 1930 mill on Bayou Vermilion confirmed (Steen's own page; Wikipedia); the Ark of Taste listing confirmed (Slow Food Foundation; Wikipedia)"
+      ],
+      "open": [
+        "One local history (Acadia Parish Today) argues the Steen freeze fell in 1911; the mill and the Ark entry say 1910, and 'traces its story to 1910' is kept",
+        "Some accounts credit Antoine Morin, a free man of color from Saint Domingue, or two Cuban sugar makers with the 1795 granulation; the background names no maker and stays with the enslaved workers who did the work"
+      ]
+    },
+    "grains-polenta": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "definition: 'the staple of northern Italy' became 'long a staple of northern Italy', a history rather than a present claim",
+        "background: 'From the later 1500s cornmeal polenta became the everyday food' went ahead of the evidence: maize appears around Rovigo and Este from the mid and late 1500s and spreads quickly after the famine of the 1590s (University of Primorska Press); now dated from that famine",
+        "compare: flint for polenta and dent for grits, and color as no test, confirmed (America's Test Kitchen; Food Network; MasterClass added)"
+      ],
+      "open": [
+        "Apollo calls the Veneto the first Italian region to grow maize; the academic source says only 'quite probably among the first', and 'among the first' is kept"
+      ]
+    },
+    "vegetables-mustardgreens": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: the origin is argued, not settled: UF/IFAS says Central Asia, Britannica the Himalaya, and a 2021 Nature Genetics study West Asia; now told as a question with both views",
+        "background: 'It reached the Americas with European colonists' rested on one heritage page and is taken out; 'grown above all in the Deep South' also taken out; the Southern staple prepared like collards is kept (UF/IFAS; Santa Fe College; Arkansas Extension)",
+        "background: 'often nine to thirteen' greens is not what the sources give; the gumbo z'herbes counts they report are seven, nine or eleven, always odd (Atlas Obscura; Christian Science Monitor added; 64 Parishes)"
+      ],
+      "open": []
+    },
+    "sauces-sauceaupoivre": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: the 1950 claimant cooked at the Restaurant Albert, which Cook's Info places in the theatre district, not on the Champs Élysées; the place is taken out and he is 'the chef of a Paris restaurant'",
+        "background: Larousse Gastronomique, as quoted by Cook's Info, records versions said to date from 1905 in Paris and 1910 in Monte Carlo, earlier than the 1919 or 1920 claim; added, and 'a dish of the Paris restaurant' became 'of the French restaurant' since one claim is Monte Carlo",
+        "background: 'crossed the Atlantic to American steakhouse menus, where steak Diane became its familiar companion' had no source and is taken out; replaced with steak Diane as a Worcestershire pan sauce often flamed at the table (Wikipedia: Steak Diane)",
+        "compare: shallots are not in the early or the 1953 New York Diane recipes, which rest on Worcestershire with mustard among the additions (Wikipedia: Steak Diane); now 'Worcestershire sauce, often with mustard'"
+      ],
+      "open": []
+    },
+    "vegetables-pommespuree": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "category and id: a potato dish filed under sauces; moved to vegetables, so the id is now vegetables-pommespuree (a new, unpublished entry, so the id may still move)",
+        "background: the gift of potato flowers to the king and queen is a story told with varying details (Atlas Obscura; National Geographic), now 'is said to have given'",
+        "background: 'purée Parmentier' is not a name the sources give; now 'hachis Parmentier', a dish they do name (Wikipedia: Parmentier)",
+        "background: 1772 Faculty of Medicine ruling confirmed (Wikipedia; Connexion France added); Robuchon's years 1945 to 2018 and Jamin, December 1981, confirmed (NPR; Wine Spectator added; MICHELIN Guide)"
+      ],
+      "open": []
+    },
+    "cuts-tenderloin": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: dictionaries disagree on when filet mignon entered English (Merriam-Webster 1835, Etymonline 1815, Dictionary.com 1905 to 1910); 'one dictionary dating its first known use to 1835' became 'dictionaries date its use in English to the early nineteenth century', which the two older datings share; Etymonline added",
+        "background: in France filet mignon usually names pork or veal and the beef cut is filet de boeuf, confirmed (Wikipedia; Office québécois de la langue française)"
+      ],
+      "open": [
+        "Dictionary.com dates filet mignon in English to 1905 to 1910, against the two earlier datings"
+      ]
+    },
+    "methods-pureed": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: the noun's arrival in English early in the 1700s rests on two dictionaries (Merriam-Webster 1710; Dictionary.com 1700 to 1710) and stays; the verb's 1899 date rests on Merriam-Webster alone, so the year is taken out and it is 'much later'",
+        "background: from the feminine past participle of purer, to purify or strain, from Latin purus, confirmed (Merriam-Webster; Wiktionary; Wikipedia)"
+      ],
+      "open": []
+    },
+    "vegetables-brusselssprouts": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "guest: 'their cut edges browned' told a guest the sprouts were halved, which the menu sheet does not say; now roasting 'browns their edges'",
+        "background: thirteenth century possible origin, sixteenth century spread, no authoritative botanical history yet, and French settlers in Louisiana confirmed (Wikipedia; Library of Congress); University of Arkansas Extension added, which ties the Louisiana sprouts to the Acadians"
+      ],
+      "open": [
+        "When the sprout reached Louisiana is variously given as the eighteenth century or about 1800; the background keeps 'unclear'"
+      ]
+    }
+  }
+}
