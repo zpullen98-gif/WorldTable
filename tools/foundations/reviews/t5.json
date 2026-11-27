@@ -1,0 +1,96 @@
+{
+  "chunk": "t5",
+  "note": "The gate refuses a checked field inside a staging entry or a deepen patch (KNOWN_FIELDS and DEEPEN_FIELDS), so the refuter's verdicts are kept here, one per term.",
+  "checked": {
+    "vegetables-satsuma": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "sound",
+      "changed": [
+        "checked and sound: possible Chinese origin and first report in Japan more than 700 years ago, Florida introduction by 1876, the name credited to the wife of the American minister to Japan in 1878, about a million Owari trees planted along the lower Gulf Coast in 1908 to 1911 (UF/IFAS CH116; Wikipedia: Citrus unshiu)",
+        "checked and sound: satsumas the leading Louisiana citrus, about 63 percent of citrus acreage in one LSU study, Plaquemines Parish the center (LSU Digital Commons study; LSU AgCenter)"
+      ],
+      "open": []
+    },
+    "vegetables-sunflowerseeds": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'Russian breeders split it into two kinds, one for oil and one for eating' and 'the snack seed descends from those eating kinds' found no source; taken out",
+        "background: the return to North America now says Russian immigrants are thought to have carried the seed back and that by the 1880s American seed companies offered Mammoth Russian, as both sources hedge it (Iowa State University Extension; KU Center for Indigenous Health, added)",
+        "say: 'SUN-flow-er' reads as the long o of flow; now 'SUN-flou-er seedz', flower rhyming with hour",
+        "checked and sound: the Lent list that left sunflower oil off (NPR 2012; Iowa State University Extension)"
+      ],
+      "open": []
+    },
+    "sauces-vinaigrette": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'commonly called French dressing' in nineteenth century America now rests on what the cookbooks show: 'In nineteenth century American cookbooks, French dressing meant this plain dressing of oil and vinegar' (Wikipedia: French dressing, added)",
+        "checked and sound: the 1694 Académie sense, Evelyn's Acetaria of 1699, the Viandier dish as a meat dish (Literary Hub on the Tomasik paper; The Kitchen Project; Dictionary.com dates the English word 1690 to 1700)"
+      ],
+      "open": [
+        "The Viandier meat dish rests on Literary Hub's report of one paper and a reconstruction blog; a translation of the Viandier entry would settle it beyond doubt"
+      ]
+    },
+    "grains-agnolotti": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "say: 'ah-nyoh-LOH-tee' to 'ah-nyoh-LOT-tee'; the Italian is [aɲɲoˈlɔtti], stress on a closed syllable lot with a doubled t (Wikipedia; Wiktionary agnolotto, added; Merriam-Webster, added)",
+        "background: 'Both are told as legend more than record' miscast the ring etymology, which Wiktionary and a Piedmontese dictionary give as the likelier linguistic account; now 'The cook is told as legend, and no record settles the word'",
+        "compare: ravioli are not always two sheets; now 'ravioli are often made by sealing a filling between two sheets of pasta'",
+        "guest checked against the printed menu: 'Sweet Potato Agnolotti: Candied Pecans, Brown Butter, Chèvre'"
+      ],
+      "open": [
+        "A third account derives the name from anulòt, the cutting tool; left out as unsettled"
+      ]
+    },
+    "southern-pecan": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "definition: 'Louisiana is one of the few states where it grows native' is wrong, the native range covers the lower Mississippi valley with outliers from Ohio to Alabama and into Mexico; now 'a hickory whose native range centers on the lower Mississippi valley and reaches into Mexico, so Louisiana lies within it and the tree grows wild there' (USDA Forest Service Silvics; Agriculture Handbook 654, both added)",
+        "guest: 'the native nut of the South' overreached the same way; now 'native to this part of the country and grow wild in Louisiana'",
+        "background: 'native to the Mississippi valley and the South' to 'the Mississippi valley and south into Mexico', same sources",
+        "background: 'counted the first recognized pecan variety' rests on popular sources only; now 'the first pecan variety known to have been propagated by grafting' (Pecan South), and the exhibition named as the Centennial Exhibition in Philadelphia, 1876 (Clemson HGIC; Pecan South)",
+        "background: 'Wild trees vary, and' trimmed for length",
+        "checked and sound: pacane from an Illinois word, glossed as a nut that takes a stone to crack (Dictionary.com; Merriam-Webster); the grafting at Oak Alley in the winter of 1846 (NPS; Wikipedia: Oak Alley Plantation); pecans for almonds and cream added in nineteenth century New Orleans (Wikipedia: Praline; New Orleans Historical); native nuts small and oily, harvest October toward Christmas (LSU AgCenter)"
+      ],
+      "open": [
+        "Sources disagree whether sixteen or 126 trees were grafted; the entry gives no number"
+      ]
+    },
+    "vegetables-endive": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'in the early 1830s' was one date of several; sources give 1830, 1833, 1834 to 1835, about 1840 and 1846; now 'accounts date his work anywhere from about 1830 to the 1840s' (VRT NWS in Dutch and French; Focus on Belgium; Brussels Times)",
+        "background: 'Within a few decades the white heads were sold in the markets of Brussels' replaced by what RTBF shows, that the crop spread through Schaerbeek, Evere and Haren mainly in the second half of the nineteenth century (RTBF and VRT NWS in French, added)",
+        "background: 'historians treat that as legend' to 'Belgian accounts treat that as legend', since the sources are Belgian press, not historians",
+        "background: the present fact on hydroponic forcing taken out, a volatile industry fact and over length",
+        "guest: 'pale' taken out; the menu says only endive, and the published entry warns the word covers frisée and escarole as well as Belgian endive"
+      ],
+      "open": [
+        "Which endive the salad uses is a lineup question; the background is about Belgian endive and says so"
+      ]
+    },
+    "dairy-chevre": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'mostly imported from France until about 1980' to 'nearly all the goat cheese sold was imported from Europe, much of it from France, until about 1980' (culture; Whole Foods Market's maker history; NPR 2011)",
+        "background: 'some trained in France' trimmed for length; it is true of one maker but not shown for several",
+        "checked and sound: Chabichou du Poitou AOC by decree of 1990, the Poitiers legend of 732 and goats kept there since Roman times (Wikipedia: Chabichou; Tourisme Vienne)"
+      ],
+      "open": []
+    }
+  }
+}
