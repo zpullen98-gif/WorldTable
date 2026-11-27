@@ -1,0 +1,89 @@
+{
+  "chunk": "t12",
+  "note": "The gate refuses a checked field inside a staging entry or a deepen patch (KNOWN_FIELDS and DEEPEN_FIELDS), so the refuter's verdicts are kept here, one per term.",
+  "checked": {
+    "sweets-bananasfoster": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "sound",
+      "changed": [
+        "1951, Owen Brennan's request to his chef for a banana dessert, named for his friend the chairman of the New Orleans Crime Commission: confirmed (Brennan's: Bananas Foster recipe and Traditions; Tasting Table)",
+        "the surplus of bananas at the family's produce business is told only by the house's own history; the background already attributes it so, and it stays",
+        "Ella Brennan's telling, a banana dish their mother made for breakfast: confirmed (NPR added; Tasting Table)",
+        "Owen Brennan (1910 to 1955): confirmed (Wikipedia; Find a Grave; Wikidata); Ella Brennan (1925 to 2018) stands on Legacy.com and Nation's Restaurant News",
+        "butter, brown sugar, cinnamon, banana liqueur, bananas, rum over vanilla ice cream: confirmed (Brennan's recipe page added; CBS News)",
+        "kitchen: the Thanksgiving Day sheet printed the tableside flambé as an add on, and a minimum of two is the house rule: confirmed against tools/house/brennans/house.json and overrides.json",
+        "say 'buh-NAN-uhz FAWS-ter' matches the American sound"
+      ],
+      "open": []
+    },
+    "methods-flambe": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "sound",
+      "changed": [
+        "Merriam-Webster dates the adjective to 1914 and the verb to about 1946: confirmed (Merriam-Webster)",
+        "Charpentier's claim for crêpes Suzette in the 1890s at the Café de Paris in Monte Carlo, contradicted by Larousse Gastronomique, with rival Paris restaurants: confirmed (Wikipedia; Tasting Table; Saveur and others seen in search)",
+        "café brûlot credited to Jules Alciatore at Antoine's in the late nineteenth century: confirmed, the date given variously as the late 1880s or the 1890s, which the background's 'late nineteenth century' covers (Antoine's; New Orleans & Company; Wikipedia: Antoine's added)",
+        "flamed dish keeping about 75 percent of its alcohol rests on the Augustin study of 1992 (PubMed, primary) and Idaho State University; the search did not surface the USDA table row itself"
+      ],
+      "open": []
+    },
+    "methods-gueridon": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'French inventories record the small pedestal table from about 1640' found in no source searched; Wikipedia gives the middle of the seventeenth century and Britannica its second half, so now 'appeared in France as a small pedestal table in the seventeenth century'",
+        "background: 'In the eighteenth century the word passed to the small movable table' rested on no source; the century is taken out",
+        "background: service à la russe dishes 'carved by a waiter at the table' was wrong; the dishes were carved on a side table and handed round course by course (Wikipedia: Guéridon service and Service à la russe; Bernardaud added)",
+        "the name from Guéridon, a character of seventeenth century farces and popular songs: confirmed (Merriam-Webster added; Wikipedia: Guéridon service); 'popular' added to match",
+        "early supports carved as standing figures: confirmed (Britannica: a carved figure holding a tray; the Met print)",
+        "say 'gay-ree-DOHN' matches Merriam-Webster's gā-rē-ˈdōⁿ"
+      ],
+      "open": []
+    },
+    "sweets-icecream": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'a Philadelphia inventor' was in dispute (Wikipedia places Nancy Johnson in Philadelphia at filing, National Geographic calls her a New Yorker); now 'a patent was granted', resting on the patent itself, US3254 of 1843",
+        "definition: 'runs higher in cheaper ice cream' set the air against price; now premium ice creams carry little air and eat dense, light and fluffy ones carry more (Penn State added; NPR)",
+        "compare: gelato 'carries less butterfat' now 'usually carries', since gelato runs about 4 to 9 percent and the rule is not a law for gelato (NPR; Mental Floss)",
+        "FDA floor of 10 percent milkfat and frozen custard or french ice cream for more egg yolk: confirmed (eCFR 21 CFR 135.110, primary)",
+        "Jefferson's vanilla ice cream the first known recipe recorded by an American, likely from his years in France, and the introduction claim false: confirmed (Monticello, primary; Library of Congress)",
+        "Jacob Fussell, a Baltimore milk dealer, and 1851 as the start of the wholesale trade: confirmed (University of Guelph; National Geographic)"
+      ],
+      "open": [
+        "Fussell first made his ice cream at Seven Valleys, Pennsylvania, in the winter of 1851 to 1852 before moving the works to Baltimore (Wikipedia only); the background's 'a Baltimore milk dealer' stays true either way"
+      ]
+    },
+    "sweets-chocolateandorange": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'the first known English recipe for chocolate' could not be settled; a 2022 article calls the 1652 book the first English translation of a Spanish chocolate treatise, a narrower claim; now 'In 1652 a London translation of a Spanish treatise ... gave a recipe'",
+        "orange flower water, long red pepper, cloves, aniseed and almonds among the 1652 ingredients: confirmed (the Project Gutenberg text, primary; Making and Knowing Project added)",
+        "Terry's Chocolate Orange in 1932 after a Chocolate Apple from 1926: confirmed (Wikipedia; University of York Borthwick Institute added; HuffPost UK; YorkMix)",
+        "say 'CHAWK-lit and OR-inj' matches the American sound"
+      ],
+      "open": [
+        "the sugar in the 1652 recipe rests on the Gutenberg text alone; the Making and Knowing list seen in search did not show it"
+      ]
+    },
+    "methods-caramelized": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "sound",
+      "changed": [
+        "caramel from French, from Spanish caramelo, from Portuguese, from Late Latin calamellus, with medieval Latin cannamella as a shaping or rival source: confirmed (Wiktionary; Dictionary.com; Wikipedia: Caramel); the background already hedges it as 'thought to have shaped it'",
+        "sucrose about 160 to 170 C and fructose about 105 to 110 C: confirmed as a range (Wikipedia gives 170 and 105; Hong Kong Education Bureau, added, gives 160 and 110)",
+        "guest replaced the existing one line text, which was thin; the new line holds",
+        "say 'KAR-uh-muh-lyzd' matches the American sound"
+      ],
+      "open": []
+    }
+  }
+}
