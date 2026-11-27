@@ -1,0 +1,806 @@
+{
+  "terms": [
+    {
+      "term": "Roux",
+      "status": "new",
+      "category": "sauces",
+      "dishes": [
+        { "id": "d-r3h9vj7a", "name": "Seafood Gumbo" },
+        { "id": "d-ecy8tdsb", "name": "Turtle Soup" },
+        { "id": "d-2pekvzbc", "name": "Shrimp Sauce Piquante" }
+      ],
+      "why": "The dark base under the Seafood Gumbo and the Turtle Soup, and the usual start of a sauce piquante."
+    },
+    {
+      "term": "Holy Trinity",
+      "status": "new",
+      "category": "sauces",
+      "dishes": [
+        { "id": "d-r3h9vj7a", "name": "Seafood Gumbo" },
+        { "id": "d-ecy8tdsb", "name": "Turtle Soup" },
+        { "id": "d-2pekvzbc", "name": "Shrimp Sauce Piquante" }
+      ],
+      "why": "Onion, celery and bell pepper softened at the start of the gumbo, the turtle soup and the sauce piquante."
+    },
+    {
+      "term": "Gumbo",
+      "status": "new",
+      "category": "southern",
+      "dishes": [
+        { "id": "d-r3h9vj7a", "name": "Seafood Gumbo" }
+      ],
+      "why": "The Seafood Gumbo, one of the two soups that joined the Thanksgiving Day menu."
+    },
+    {
+      "term": "Filé",
+      "status": "new",
+      "category": "southern",
+      "dishes": [
+        { "id": "d-r3h9vj7a", "name": "Seafood Gumbo" }
+      ],
+      "why": "Ground sassafras leaf, linked to the Seafood Gumbo in the house lexicon; the menu does not print it."
+    },
+    {
+      "term": "Andouille",
+      "status": "deepen",
+      "id": "cured-andouille",
+      "category": "cured",
+      "dishes": [
+        { "id": "d-r3h9vj7a", "name": "Seafood Gumbo" }
+      ],
+      "why": "The smoked pork sausage printed in the Seafood Gumbo."
+    },
+    {
+      "term": "Popcorn Rice",
+      "status": "new",
+      "category": "grains",
+      "dishes": [
+        { "id": "d-r3h9vj7a", "name": "Seafood Gumbo" },
+        { "id": "d-2pekvzbc", "name": "Shrimp Sauce Piquante" }
+      ],
+      "why": "Louisiana aromatic rice under the Seafood Gumbo and in the Shrimp Sauce Piquante pilaf."
+    },
+    {
+      "term": "Turtle Soup",
+      "status": "new",
+      "category": "southern",
+      "dishes": [
+        { "id": "d-ecy8tdsb", "name": "Turtle Soup" }
+      ],
+      "why": "The Creole Turtle Soup, one of the two soups that joined the Thanksgiving Day menu."
+    },
+    {
+      "term": "Snapping Turtle",
+      "status": "new",
+      "category": "meats",
+      "dishes": [
+        { "id": "d-ecy8tdsb", "name": "Turtle Soup" }
+      ],
+      "why": "The turtle meat printed in the Turtle Soup."
+    },
+    {
+      "term": "Sherry",
+      "status": "new",
+      "category": "sauces",
+      "dishes": [
+        { "id": "d-ecy8tdsb", "name": "Turtle Soup" }
+      ],
+      "why": "The aged Sherry that finishes the Turtle Soup."
+    },
+    {
+      "term": "Spinach",
+      "status": "new",
+      "category": "vegetables",
+      "dishes": [
+        { "id": "d-ecy8tdsb", "name": "Turtle Soup" },
+        { "id": "d-626q2caw", "name": "Rockefeller Gratin" }
+      ],
+      "why": "Brown butter spinach in the Turtle Soup and creamed spinach in the Rockefeller Gratin."
+    },
+    {
+      "term": "Wilted",
+      "status": "deepen",
+      "id": "methods-wilted",
+      "category": "methods",
+      "dishes": [
+        { "id": "d-ecy8tdsb", "name": "Turtle Soup" }
+      ],
+      "why": "The spinach in the Turtle Soup is wilted in brown butter."
+    },
+    {
+      "term": "Creole and Cajun",
+      "status": "new",
+      "category": "southern",
+      "dishes": [
+        { "id": "d-ecy8tdsb", "name": "Turtle Soup" },
+        { "id": "d-r3h9vj7a", "name": "Seafood Gumbo" },
+        { "id": "d-2pekvzbc", "name": "Shrimp Sauce Piquante" }
+      ],
+      "why": "The two Louisiana cooking traditions behind the soups and the Shrimp Sauce Piquante."
+    },
+    {
+      "term": "Oysters",
+      "status": "deepen",
+      "id": "fish-oysters",
+      "category": "fish",
+      "dishes": [
+        { "id": "d-626q2caw", "name": "Rockefeller Gratin" },
+        { "id": "d-r3h9vj7a", "name": "Seafood Gumbo" }
+      ],
+      "why": "Baked in the Rockefeller Gratin and printed in the Seafood Gumbo."
+    },
+    {
+      "term": "Oysters Rockefeller",
+      "status": "new",
+      "category": "southern",
+      "dishes": [
+        { "id": "d-626q2caw", "name": "Rockefeller Gratin" }
+      ],
+      "why": "The New Orleans dish the Rockefeller Gratin is built on."
+    },
+    {
+      "term": "Gratin",
+      "status": "new",
+      "category": "methods",
+      "dishes": [
+        { "id": "d-626q2caw", "name": "Rockefeller Gratin" }
+      ],
+      "why": "The Rockefeller Gratin, baked until its breadcrumb top browns."
+    },
+    {
+      "term": "Bacon",
+      "status": "new",
+      "category": "cured",
+      "dishes": [
+        { "id": "d-626q2caw", "name": "Rockefeller Gratin" },
+        { "id": "d-rti8rdpd", "name": "Bacon-Wrapped Pork Tenderloin" }
+      ],
+      "why": "In the Rockefeller Gratin and wrapped round the Bacon-Wrapped Pork Tenderloin."
+    },
+    {
+      "term": "Smoked",
+      "status": "deepen",
+      "id": "methods-smoked",
+      "category": "methods",
+      "dishes": [
+        { "id": "d-r3h9vj7a", "name": "Seafood Gumbo" },
+        { "id": "d-626q2caw", "name": "Rockefeller Gratin" },
+        { "id": "d-rti8rdpd", "name": "Bacon-Wrapped Pork Tenderloin" }
+      ],
+      "why": "The smoke of the andouille in the gumbo and of the bacon on the gratin and the pork."
+    },
+    {
+      "term": "Gulf Shrimp",
+      "status": "new",
+      "category": "fish",
+      "dishes": [
+        { "id": "d-r3h9vj7a", "name": "Seafood Gumbo" },
+        { "id": "d-2pekvzbc", "name": "Shrimp Sauce Piquante" },
+        { "id": "d-t9eo55jx", "name": "Titus’ BBQ Shrimp Stuffing" }
+      ],
+      "why": "In the Seafood Gumbo, the Shrimp Sauce Piquante and Titus’ BBQ Shrimp Stuffing."
+    },
+    {
+      "term": "Blue Crab",
+      "status": "new",
+      "category": "fish",
+      "dishes": [
+        { "id": "d-r3h9vj7a", "name": "Seafood Gumbo" }
+      ],
+      "why": "The crab printed in the Seafood Gumbo."
+    },
+    {
+      "term": "Crudo",
+      "status": "new",
+      "category": "methods",
+      "dishes": [
+        { "id": "d-mcjd3qit", "name": "Bay Scallop Crudo" }
+      ],
+      "why": "The Bay Scallop Crudo, served raw."
+    },
+    {
+      "term": "Scallops",
+      "status": "deepen",
+      "id": "fish-scallops",
+      "category": "fish",
+      "dishes": [
+        { "id": "d-mcjd3qit", "name": "Bay Scallop Crudo" }
+      ],
+      "why": "The bay scallops of the Bay Scallop Crudo."
+    },
+    {
+      "term": "Meyer Lemon",
+      "status": "new",
+      "category": "vegetables",
+      "dishes": [
+        { "id": "d-mcjd3qit", "name": "Bay Scallop Crudo" }
+      ],
+      "why": "The sweeter lemon that dresses the Bay Scallop Crudo."
+    },
+    {
+      "term": "Truffle",
+      "status": "deepen",
+      "id": "mushrooms-truffles",
+      "category": "mushrooms",
+      "dishes": [
+        { "id": "d-mcjd3qit", "name": "Bay Scallop Crudo" }
+      ],
+      "why": "The black truffle printed on the Bay Scallop Crudo."
+    },
+    {
+      "term": "Radish",
+      "status": "new",
+      "category": "vegetables",
+      "dishes": [
+        { "id": "d-mcjd3qit", "name": "Bay Scallop Crudo" }
+      ],
+      "why": "The crisp, peppery root on the Bay Scallop Crudo."
+    },
+    {
+      "term": "Capers",
+      "status": "deepen",
+      "id": "vegetables-capers",
+      "category": "vegetables",
+      "dishes": [
+        { "id": "d-7ocfkw9o", "name": "Redfish Meunière" }
+      ],
+      "why": "In the brown butter sauce of the Redfish Meunière."
+    },
+    {
+      "term": "Endive",
+      "status": "deepen",
+      "id": "vegetables-endive",
+      "category": "vegetables",
+      "dishes": [
+        { "id": "d-z8g50vmq", "name": "Endive Satsuma Salad" }
+      ],
+      "why": "The bitter leaf of the Endive Satsuma Salad."
+    },
+    {
+      "term": "Satsuma",
+      "status": "new",
+      "category": "vegetables",
+      "dishes": [
+        { "id": "d-z8g50vmq", "name": "Endive Satsuma Salad" }
+      ],
+      "why": "The Louisiana mandarin of the Endive Satsuma Salad."
+    },
+    {
+      "term": "Sunflower Seeds",
+      "status": "new",
+      "category": "vegetables",
+      "dishes": [
+        { "id": "d-z8g50vmq", "name": "Endive Satsuma Salad" }
+      ],
+      "why": "Roasted, for crunch on the Endive Satsuma Salad."
+    },
+    {
+      "term": "Vinaigrette",
+      "status": "new",
+      "category": "sauces",
+      "dishes": [
+        { "id": "d-z8g50vmq", "name": "Endive Satsuma Salad" }
+      ],
+      "why": "The cherry vinaigrette that dresses the Endive Satsuma Salad."
+    },
+    {
+      "term": "Agnolotti",
+      "status": "new",
+      "category": "grains",
+      "dishes": [
+        { "id": "d-38x8p80t", "name": "Sweet Potato Agnolotti" }
+      ],
+      "why": "The folded, filled pasta of the Sweet Potato Agnolotti."
+    },
+    {
+      "term": "Chèvre",
+      "status": "deepen",
+      "id": "dairy-chevre",
+      "category": "dairy",
+      "dishes": [
+        { "id": "d-38x8p80t", "name": "Sweet Potato Agnolotti" }
+      ],
+      "why": "The goat cheese on the Sweet Potato Agnolotti."
+    },
+    {
+      "term": "Pecan",
+      "status": "new",
+      "category": "southern",
+      "dishes": [
+        { "id": "d-38x8p80t", "name": "Sweet Potato Agnolotti" }
+      ],
+      "why": "Candied, on the Sweet Potato Agnolotti."
+    },
+    {
+      "term": "Turkey",
+      "status": "new",
+      "category": "meats",
+      "dishes": [
+        { "id": "d-vi77xerk", "name": "Roasted Buttermilk-Brined Turkey Breast" }
+      ],
+      "why": "The Thanksgiving turkey two ways: roast breast and braised leg."
+    },
+    {
+      "term": "Brined",
+      "status": "deepen",
+      "id": "methods-brined",
+      "category": "methods",
+      "dishes": [
+        { "id": "d-vi77xerk", "name": "Roasted Buttermilk-Brined Turkey Breast" }
+      ],
+      "why": "The turkey breast is brined in buttermilk before it is roasted."
+    },
+    {
+      "term": "Buttermilk",
+      "status": "deepen",
+      "id": "dairy-buttermilk",
+      "category": "dairy",
+      "dishes": [
+        { "id": "d-vi77xerk", "name": "Roasted Buttermilk-Brined Turkey Breast" }
+      ],
+      "why": "The liquid of the turkey breast’s brine."
+    },
+    {
+      "term": "Roasted",
+      "status": "deepen",
+      "id": "methods-roasted",
+      "category": "methods",
+      "dishes": [
+        { "id": "d-vi77xerk", "name": "Roasted Buttermilk-Brined Turkey Breast" },
+        { "id": "d-71lhd9uf", "name": "Herb Roasted Beef Tenderloin" },
+        { "id": "d-rti8rdpd", "name": "Bacon-Wrapped Pork Tenderloin" },
+        { "id": "d-z8g50vmq", "name": "Endive Satsuma Salad" }
+      ],
+      "why": "Roast turkey breast, herb roasted beef, roasted Brussels sprouts, roasted apples and roasted sunflower seeds."
+    },
+    {
+      "term": "Braised",
+      "status": "deepen",
+      "id": "methods-braised",
+      "category": "methods",
+      "dishes": [
+        { "id": "d-vi77xerk", "name": "Roasted Buttermilk-Brined Turkey Breast" },
+        { "id": "d-4nhyituv", "name": "Veal Grillades" }
+      ],
+      "why": "The turkey’s braised leg, and the grillades simmered in their gravy."
+    },
+    {
+      "term": "Jus",
+      "status": "new",
+      "category": "sauces",
+      "dishes": [
+        { "id": "d-vi77xerk", "name": "Roasted Buttermilk-Brined Turkey Breast" }
+      ],
+      "why": "The cranberry and rosemary jus with the turkey."
+    },
+    {
+      "term": "Cranberry",
+      "status": "new",
+      "category": "vegetables",
+      "dishes": [
+        { "id": "d-px8evrn3", "name": "Cranberry Sauce" },
+        { "id": "d-vi77xerk", "name": "Roasted Buttermilk-Brined Turkey Breast" }
+      ],
+      "why": "The Cranberry Sauce side, and the cranberry in the turkey’s jus."
+    },
+    {
+      "term": "Dressing",
+      "status": "new",
+      "category": "southern",
+      "dishes": [
+        { "id": "d-vi77xerk", "name": "Roasted Buttermilk-Brined Turkey Breast" },
+        { "id": "d-t9eo55jx", "name": "Titus’ BBQ Shrimp Stuffing" }
+      ],
+      "why": "The cornbread dressing with the turkey, set against Titus’ BBQ Shrimp Stuffing."
+    },
+    {
+      "term": "Tenderloin",
+      "status": "deepen",
+      "id": "cuts-tenderloin",
+      "category": "cuts",
+      "dishes": [
+        { "id": "d-rti8rdpd", "name": "Bacon-Wrapped Pork Tenderloin" },
+        { "id": "d-71lhd9uf", "name": "Herb Roasted Beef Tenderloin" }
+      ],
+      "why": "Pork tenderloin wrapped in bacon, and the herb roasted beef tenderloin."
+    },
+    {
+      "term": "Cane Syrup",
+      "status": "new",
+      "category": "southern",
+      "dishes": [
+        { "id": "d-rti8rdpd", "name": "Bacon-Wrapped Pork Tenderloin" }
+      ],
+      "why": "The Louisiana cane syrup glaze on the pork tenderloin."
+    },
+    {
+      "term": "Polenta",
+      "status": "new",
+      "category": "grains",
+      "dishes": [
+        { "id": "d-rti8rdpd", "name": "Bacon-Wrapped Pork Tenderloin" }
+      ],
+      "why": "The soft cornmeal under the pork tenderloin."
+    },
+    {
+      "term": "Mustard Greens",
+      "status": "new",
+      "category": "vegetables",
+      "dishes": [
+        { "id": "d-rti8rdpd", "name": "Bacon-Wrapped Pork Tenderloin" }
+      ],
+      "why": "The peppery Southern green with the pork tenderloin."
+    },
+    {
+      "term": "Sauce au Poivre",
+      "status": "new",
+      "category": "sauces",
+      "dishes": [
+        { "id": "d-71lhd9uf", "name": "Herb Roasted Beef Tenderloin" }
+      ],
+      "why": "The peppercorn sauce on the Herb Roasted Beef Tenderloin."
+    },
+    {
+      "term": "Pommes Purée",
+      "status": "new",
+      "category": "sauces",
+      "dishes": [
+        { "id": "d-71lhd9uf", "name": "Herb Roasted Beef Tenderloin" },
+        { "id": "d-ti9e72kj", "name": "Herbed Potato Purée" }
+      ],
+      "why": "The French potato purée with the beef, and the Herbed Potato Purée side."
+    },
+    {
+      "term": "Puréed",
+      "status": "deepen",
+      "id": "methods-pureed",
+      "category": "methods",
+      "dishes": [
+        { "id": "d-ti9e72kj", "name": "Herbed Potato Purée" },
+        { "id": "d-71lhd9uf", "name": "Herb Roasted Beef Tenderloin" }
+      ],
+      "why": "The method behind the Herbed Potato Purée and the pommes purée."
+    },
+    {
+      "term": "Brussels Sprouts",
+      "status": "deepen",
+      "id": "vegetables-brusselssprouts",
+      "category": "vegetables",
+      "dishes": [
+        { "id": "d-71lhd9uf", "name": "Herb Roasted Beef Tenderloin" }
+      ],
+      "why": "Roasted, with the Herb Roasted Beef Tenderloin."
+    },
+    {
+      "term": "Sauce Piquante",
+      "status": "new",
+      "category": "sauces",
+      "dishes": [
+        { "id": "d-2pekvzbc", "name": "Shrimp Sauce Piquante" }
+      ],
+      "why": "The Louisiana dish of the Shrimp Sauce Piquante."
+    },
+    {
+      "term": "Tomato Gravy",
+      "status": "new",
+      "category": "sauces",
+      "dishes": [
+        { "id": "d-2pekvzbc", "name": "Shrimp Sauce Piquante" }
+      ],
+      "why": "The Creole tomato gravy of the Shrimp Sauce Piquante."
+    },
+    {
+      "term": "Creole Tomato",
+      "status": "new",
+      "category": "vegetables",
+      "dishes": [
+        { "id": "d-2pekvzbc", "name": "Shrimp Sauce Piquante" }
+      ],
+      "why": "The Louisiana tomato named in the Creole tomato gravy."
+    },
+    {
+      "term": "Pilaf",
+      "status": "new",
+      "category": "grains",
+      "dishes": [
+        { "id": "d-2pekvzbc", "name": "Shrimp Sauce Piquante" }
+      ],
+      "why": "The popcorn rice pilaf under the Shrimp Sauce Piquante."
+    },
+    {
+      "term": "Pickled",
+      "status": "deepen",
+      "id": "methods-pickled",
+      "category": "methods",
+      "dishes": [
+        { "id": "d-2pekvzbc", "name": "Shrimp Sauce Piquante" }
+      ],
+      "why": "The pickled peppers that finish the Shrimp Sauce Piquante."
+    },
+    {
+      "term": "BBQ Shrimp",
+      "status": "new",
+      "category": "southern",
+      "dishes": [
+        { "id": "d-t9eo55jx", "name": "Titus’ BBQ Shrimp Stuffing" }
+      ],
+      "why": "The New Orleans dish behind Titus’ BBQ Shrimp Stuffing."
+    },
+    {
+      "term": "Meunière",
+      "status": "new",
+      "category": "methods",
+      "dishes": [
+        { "id": "d-7ocfkw9o", "name": "Redfish Meunière" }
+      ],
+      "why": "The style of the Redfish Meunière."
+    },
+    {
+      "term": "Redfish",
+      "status": "new",
+      "category": "fish",
+      "dishes": [
+        { "id": "d-7ocfkw9o", "name": "Redfish Meunière" }
+      ],
+      "why": "The Gulf fish of the Redfish Meunière."
+    },
+    {
+      "term": "Brown Butter",
+      "status": "new",
+      "category": "sauces",
+      "dishes": [
+        { "id": "d-7ocfkw9o", "name": "Redfish Meunière" },
+        { "id": "d-38x8p80t", "name": "Sweet Potato Agnolotti" },
+        { "id": "d-ecy8tdsb", "name": "Turtle Soup" }
+      ],
+      "why": "On the Redfish Meunière and the Sweet Potato Agnolotti, and in the Turtle Soup’s spinach."
+    },
+    {
+      "term": "Écrasé",
+      "status": "new",
+      "category": "methods",
+      "dishes": [
+        { "id": "d-7ocfkw9o", "name": "Redfish Meunière" }
+      ],
+      "why": "The potato and leek écrasé under the Redfish Meunière."
+    },
+    {
+      "term": "Leek",
+      "status": "new",
+      "category": "vegetables",
+      "dishes": [
+        { "id": "d-7ocfkw9o", "name": "Redfish Meunière" }
+      ],
+      "why": "Crushed with the potato in the écrasé under the Redfish Meunière."
+    },
+    {
+      "term": "Haricots Verts",
+      "status": "deepen",
+      "id": "vegetables-haricotsverts",
+      "category": "vegetables",
+      "dishes": [
+        { "id": "d-5xdb93pl", "name": "Haricots Verts" }
+      ],
+      "why": "The thin French green beans of the Haricots Verts side."
+    },
+    {
+      "term": "Grillades",
+      "status": "new",
+      "category": "southern",
+      "dishes": [
+        { "id": "d-4nhyituv", "name": "Veal Grillades" }
+      ],
+      "why": "The Creole dish of the Veal Grillades."
+    },
+    {
+      "term": "Veal",
+      "status": "new",
+      "category": "cuts",
+      "dishes": [
+        { "id": "d-4nhyituv", "name": "Veal Grillades" }
+      ],
+      "why": "The meat of the Veal Grillades."
+    },
+    {
+      "term": "Grits",
+      "status": "new",
+      "category": "grains",
+      "dishes": [
+        { "id": "d-4nhyituv", "name": "Veal Grillades" }
+      ],
+      "why": "The cheddar grits under the Veal Grillades."
+    },
+    {
+      "term": "Piperade",
+      "status": "new",
+      "category": "sauces",
+      "dishes": [
+        { "id": "d-4nhyituv", "name": "Veal Grillades" }
+      ],
+      "why": "The Basque pepper dish beside the Veal Grillades."
+    },
+    {
+      "term": "Debris",
+      "status": "new",
+      "category": "southern",
+      "dishes": [
+        { "id": "d-4nhyituv", "name": "Veal Grillades" }
+      ],
+      "why": "The shreds of roast in gravy on the Veal Grillades."
+    },
+    {
+      "term": "Poached",
+      "status": "deepen",
+      "id": "methods-poached",
+      "category": "methods",
+      "dishes": [
+        { "id": "d-4nhyituv", "name": "Veal Grillades" }
+      ],
+      "why": "The poached egg on the Veal Grillades."
+    },
+    {
+      "term": "Pot de Crème",
+      "status": "new",
+      "category": "sweets",
+      "dishes": [
+        { "id": "d-1079y6of", "name": "Sweet Potato Pot de Crème" }
+      ],
+      "why": "The custard of the Sweet Potato Pot de Crème."
+    },
+    {
+      "term": "Custard",
+      "status": "new",
+      "category": "sweets",
+      "dishes": [
+        { "id": "d-1079y6of", "name": "Sweet Potato Pot de Crème" },
+        { "id": "d-w6h1p19m", "name": "World Famous Bananas Foster" }
+      ],
+      "why": "The base of the pot de crème and of the vanilla ice cream with the Bananas Foster."
+    },
+    {
+      "term": "Miso",
+      "status": "new",
+      "category": "sauces",
+      "dishes": [
+        { "id": "d-1079y6of", "name": "Sweet Potato Pot de Crème" }
+      ],
+      "why": "The savory note in the Sweet Potato Pot de Crème."
+    },
+    {
+      "term": "Marshmallow Fluff",
+      "status": "new",
+      "category": "sweets",
+      "dishes": [
+        { "id": "d-1079y6of", "name": "Sweet Potato Pot de Crème" }
+      ],
+      "why": "On the Sweet Potato Pot de Crème, a nod to the sweet potato casserole."
+    },
+    {
+      "term": "Sweet Potato",
+      "status": "new",
+      "category": "vegetables",
+      "dishes": [
+        { "id": "d-38x8p80t", "name": "Sweet Potato Agnolotti" },
+        { "id": "d-1079y6of", "name": "Sweet Potato Pot de Crème" }
+      ],
+      "why": "In the Sweet Potato Agnolotti and the Sweet Potato Pot de Crème."
+    },
+    {
+      "term": "Candied Nuts",
+      "status": "new",
+      "category": "sweets",
+      "dishes": [
+        { "id": "d-38x8p80t", "name": "Sweet Potato Agnolotti" },
+        { "id": "d-xtej7uil", "name": "Chocolate and Orange Tart" }
+      ],
+      "why": "Candied pecans on the agnolotti and candied hazelnuts on the Chocolate and Orange Tart."
+    },
+    {
+      "term": "Bananas Foster",
+      "status": "new",
+      "category": "sweets",
+      "dishes": [
+        { "id": "d-w6h1p19m", "name": "World Famous Bananas Foster" }
+      ],
+      "why": "The house dessert that joined the Thanksgiving Day menu."
+    },
+    {
+      "term": "Flambé",
+      "status": "new",
+      "category": "methods",
+      "dishes": [
+        { "id": "d-w6h1p19m", "name": "World Famous Bananas Foster" }
+      ],
+      "why": "The Bananas Foster is flamed with rum at the table."
+    },
+    {
+      "term": "Guéridon",
+      "status": "new",
+      "category": "methods",
+      "dishes": [
+        { "id": "d-w6h1p19m", "name": "World Famous Bananas Foster" }
+      ],
+      "why": "The tableside cart the Bananas Foster is made on."
+    },
+    {
+      "term": "Caramelized",
+      "status": "deepen",
+      "id": "methods-caramelized",
+      "category": "methods",
+      "dishes": [
+        { "id": "d-w6h1p19m", "name": "World Famous Bananas Foster" },
+        { "id": "d-xtej7uil", "name": "Chocolate and Orange Tart" },
+        { "id": "d-38x8p80t", "name": "Sweet Potato Agnolotti" }
+      ],
+      "why": "The pan caramel of the Bananas Foster, and the candied hazelnuts and pecans."
+    },
+    {
+      "term": "Ice Cream",
+      "status": "new",
+      "category": "sweets",
+      "dishes": [
+        { "id": "d-w6h1p19m", "name": "World Famous Bananas Foster" }
+      ],
+      "why": "The housemade vanilla ice cream under the Bananas Foster."
+    },
+    {
+      "term": "Chocolate and Orange",
+      "status": "new",
+      "category": "sweets",
+      "dishes": [
+        { "id": "d-xtej7uil", "name": "Chocolate and Orange Tart" }
+      ],
+      "why": "The pairing of the Chocolate and Orange Tart."
+    }
+  ],
+  "chunks": [
+    {
+      "chunk": "t1",
+      "terms": ["Roux", "Holy Trinity", "Gumbo", "Filé", "Andouille", "Popcorn Rice"]
+    },
+    {
+      "chunk": "t2",
+      "terms": ["Turtle Soup", "Snapping Turtle", "Sherry", "Spinach", "Wilted", "Creole and Cajun"]
+    },
+    {
+      "chunk": "t3",
+      "terms": ["Oysters", "Oysters Rockefeller", "Gratin", "Bacon", "Smoked", "Gulf Shrimp", "Blue Crab"]
+    },
+    {
+      "chunk": "t4",
+      "terms": ["Crudo", "Scallops", "Meyer Lemon", "Truffle", "Radish", "Capers"]
+    },
+    {
+      "chunk": "t5",
+      "terms": ["Endive", "Satsuma", "Sunflower Seeds", "Vinaigrette", "Agnolotti", "Chèvre", "Pecan"]
+    },
+    {
+      "chunk": "t6",
+      "terms": ["Turkey", "Brined", "Buttermilk", "Roasted", "Braised", "Jus", "Cranberry", "Dressing"]
+    },
+    {
+      "chunk": "t7",
+      "terms": ["Tenderloin", "Cane Syrup", "Polenta", "Mustard Greens", "Sauce au Poivre", "Pommes Purée", "Puréed", "Brussels Sprouts"]
+    },
+    {
+      "chunk": "t8",
+      "terms": ["Sauce Piquante", "Tomato Gravy", "Creole Tomato", "Pilaf", "Pickled", "BBQ Shrimp"]
+    },
+    {
+      "chunk": "t9",
+      "terms": ["Meunière", "Redfish", "Brown Butter", "Écrasé", "Leek", "Haricots Verts"]
+    },
+    {
+      "chunk": "t10",
+      "terms": ["Grillades", "Veal", "Grits", "Piperade", "Debris", "Poached"]
+    },
+    {
+      "chunk": "t11",
+      "terms": ["Pot de Crème", "Custard", "Miso", "Marshmallow Fluff", "Sweet Potato", "Candied Nuts"]
+    },
+    {
+      "chunk": "t12",
+      "terms": ["Bananas Foster", "Flambé", "Guéridon", "Caramelized", "Ice Cream", "Chocolate and Orange"]
+    }
+  ]
+}
