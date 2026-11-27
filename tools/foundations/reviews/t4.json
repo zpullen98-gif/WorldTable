@@ -1,0 +1,88 @@
+{
+  "chunk": "t4",
+  "note": "The gate refuses a checked field inside a staging entry or a deepen patch (KNOWN_FIELDS and DEEPEN_FIELDS), so the refuter's verdicts are kept here, one per term.",
+  "checked": {
+    "methods-crudo": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'largely American' and 'spread through the Italian restaurants of New York in the 2000s' could not be settled; the sources credit one New York Italian seafood restaurant, opened in 2000, with bringing crudo to a wide American public, so the line now says that (Wikipedia on its founding chef; Resy)",
+        "background: the 2007 NPR piece was an interview about a cookbook, not a chef selling crudo to his diners; now 'in 2007 NPR called it Italian sashimi', the headline's own words (NPR transcript 11851428)",
+        "sources: Wikipedia (the founding chef of Esca) and Resy added"
+      ],
+      "open": [
+        "The menu sheet was cut at the page edge (Black Tru...); the guest line's black truffle rests on the house reading, which the house research marks to confirm",
+        "The chef behind the 2000 restaurant is living and is not named; people.json does not yet list him, so the merger may add him"
+      ]
+    },
+    "vegetables-meyerlemon": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'most of them were destroyed' rests only on secondary summaries; now 'its planting was banned in some citrus areas and many trees were pulled out' (UC Riverside Citrus Variety Collection; UC Riverside tristeza program history; FreshPlaza)",
+        "background: 'has never become a commercial lemon for the fresh market' is wrong as a present fact, since Meyer lemons now reach markets; now the 1967 University of California judgment, quoted by the UC Riverside variety page, told as of its year",
+        "sources: UC Riverside tristeza program history and FreshPlaza added"
+      ],
+      "open": [
+        "The Improved Meyer's release year is given as 1975 by Wikipedia and a trade magazine, but 1972 and 1976 also appear; the entry keeps 1975 with the definition, and a UC Riverside page should settle it"
+      ]
+    },
+    "vegetables-radish": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'a crop in ancient Egypt' rested on weak sources that disagree; now Pliny the Elder's own statement that Egypt prized it for the oil from its seed (Natural History XIX.26; MFA Boston CAMEO on radish oil)",
+        "background: 'Spanish friars' to 'Spanish missionaries', and the place to Oaxaca, as NPR (2012) tells it; Wikipedia: Night of the Radishes added as the second source",
+        "kitchen: 'loses much of its heat within the hour' overstated the study, which found the isothiocyanate falling within 60 minutes, about a quarter of it in one later paper; now 'begins to lose its heat within the hour'",
+        "definition: 'fades soon after grating' to 'fades as grated radish stands', for the same reason",
+        "sources: Pliny, CAMEO, Wikipedia Night of the Radishes and the 1982 Journal of Home Economics of Japan study added"
+      ],
+      "open": []
+    },
+    "fish-scallops": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'in Florida it rarely passes eighteen months' found no source; now 'it seldom lives two years, and in one study of New York's Peconic Bays fewer than one in a hundred harvested scallops had reached that age' (New York Sea Grant; Northeastern Naturalist, 2026)",
+        "checked and sound: the 1870s to mid 1980s fishery and its economic and cultural weight (Marine Fisheries Review 70(3 and 4), 2008); eelgrass die offs of the 1930s and 1980s with the fall in harvests (New York DEC species assessment); the Food Code exemption for the adductor alone (house research, FDA)"
+      ],
+      "open": [
+        "A deepen patch cannot carry sources. The merger should add: https://seagrant.sunysb.edu/articles/r/23850 , https://s3.amazonaws.com/assets.cce.cornell.edu/attachments/78564/2026.Tettelbach_et_al.Northeastern_Naturalist.pdf , https://spo.nmfs.noaa.gov/content/bay-scallop-argopecten-irradians-massachusetts-through-north-carolina-its-biology-and , https://extapps.dec.ny.gov/fs/programs/dfw/SWAP2025/Marine%20Invertebrates/Bay%20scallop.pdf",
+        "say: dictionaries give both SKAL and SKOL for the first syllable; the house research records both, the entry keeps SKAL-ups"
+      ]
+    },
+    "mushrooms-truffles": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'in south west France' left out the south east, which grows about four fifths of the French crop; now 'in southern France, Spain and Italy; despite its name, most of the French crop comes from the south east' (Wikipedia: Tuber melanosporum; France.fr)",
+        "background: the season 'mid November to mid March in the Périgord' to 'about November to March' (France.fr; house research)",
+        "background: 'dogs, which have largely taken the place of the pigs once used' found no source; now 'found by scent, with trained dogs or pigs'",
+        "background: 'growers across the south east copied him' to the sourced 1847 planting of some seven hectares at Carpentras (Wikipedia: Truffle; Cornell mycology blog)",
+        "checked and sound: Joseph Talon's acorn sowing in the Vaucluse early in the nineteenth century (dated 1808 to 1810 across sources, so the entry rightly gives no year); Brillat-Savarin's 'diamond of the art of cookery' (Smithsonian excerpt of the M. F. K. Fisher (1908 to 1992) translation)"
+      ],
+      "open": [
+        "A deepen patch cannot carry sources. The merger should add: https://www.Wikipedia.org/wiki/Black_truffle , https://www.france.fr/en/article/truffle/ , https://blog.mycology.cornell.edu/2008/04/08/so-you-want-to-be-a-truffle-farmer-part-2 , https://www.smithsonianmag.com/travel/dangers-erotic-truffles-physiology-taste-transcendental-gastronomy-book-excerpt-cultural-travel-180961646/",
+        "Whether the kitchen's truffle is fresh Tuber melanosporum or preserved is not printed; the guest line rightly leaves it to the kitchen"
+      ]
+    },
+    "vegetables-capers": {
+      "date": "2026-11-27",
+      "by": "refuter",
+      "verdict": "changed",
+      "changed": [
+        "background: 'Sorting is still done' dropped 'still', a volatile present; the sorting sentence now follows Cook's Illustrated, which found more variation in size in some brands than others, even within nonpareil",
+        "background: the Pantelleria indication now carries its year, 1996, the EU registration (Reg. CE 1107/96; WIPO Magazine 2021)",
+        "checked and sound: nonpareil as the smallest grade, under about 7 mm (Cook's Illustrated; Tasting Table); grenobloise as brown butter, capers and lemon on a meunière base (Wikipedia: Sole meunière; Saveur)"
+      ],
+      "open": [
+        "A deepen patch cannot carry sources. The merger should add: https://cooksillustrated.com/taste_tests/1971-capers , https://www.wipo.int/en/web/wipo-magazine/articles/gi-protection-revives-caper-production-on-pantelleria-42042 , https://www.saveur.com/article/recipes/sole-a-la-grenobloise"
+      ]
+    }
+  }
+}
