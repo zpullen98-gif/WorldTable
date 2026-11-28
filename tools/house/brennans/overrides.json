@@ -86326,6 +86326,62 @@
       },
       "reason": "The ask names only a card filed as past: the Binwise list of 28 November 2026 no longer prints the bottle or the pour, so nothing on the floor waits on the answer. The ask leaves under a tombstone one millisecond after the last edition that carried it",
       "source": "page:binwise-wine-list-2026-11-28.txt (By the Glass, lines 3 to 94: no Rubicon; the bottle stands at bin 18231)"
+    },
+    {
+      "target": "house",
+      "op": "add",
+      "field": "sources",
+      "value": {
+        "title": "Brennan’s wine list on Binwise, the whole list pasted by the owner (3,560 entries: the seventeen pours by the glass and every bottle)",
+        "url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+        "readOn": "2026-11-28"
+      },
+      "reason": "The eighteenth source: the paste the glass prices, the new bins, the vintage roll and the past bottles of this edition are read from; it is saved verbatim under pages/",
+      "source": "page:binwise-wine-list-2026-11-28.txt"
+    },
+    {
+      "target": "wine:Diebolt-Vallois ‘Blanc de Blancs’ Extra Brut NV (1.5 L magnum)",
+      "field": "profile",
+      "op": "replace",
+      "value": {
+        "from": "and Extra Brut, so very little sugar is added.",
+        "to": "and finished Extra Brut, with 0 to 6 grams of sugar per liter."
+      },
+      "reason": "The certified Champagne terminology of 10 October 2026: Extra Brut is 0 to 6 grams of sugar per liter in the finished wine and Brut is less than 12, the ranges overlap, and the label alone ranks no two bottles by dryness; the new card of 28 November said otherwise (src/lib/brennans-champagne.test.ts and brennans-wine-review.test.ts refuse the words)",
+      "source": "research/champagne-terminology-2026-10-10.json (Comité Champagne, Dosage: the category concerns sugar in the finished wine; Extra Brut 0 to 6 grams per liter, Brut below 12); research/bottle-facts-cards-d-2026-11-28.json (Diebolt-Vallois: \"the appellation allows 0 to 6 grams of sugar a liter, and this one carries very little\")"
+    },
+    {
+      "target": "wine:Diebolt-Vallois ‘Blanc de Blancs’ Extra Brut NV (1.5 L magnum)",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "and Extra Brut, under six grams of sugar a liter: taut and very dry",
+        "to": "and finished Extra Brut, with 0 to 6 grams of sugar a liter: taut and very dry"
+      },
+      "reason": "The certified Champagne terminology of 10 October 2026: Extra Brut is 0 to 6 grams of sugar per liter in the finished wine and Brut is less than 12, the ranges overlap, and the label alone ranks no two bottles by dryness; the new card of 28 November said otherwise (src/lib/brennans-champagne.test.ts and brennans-wine-review.test.ts refuse the words)",
+      "source": "research/champagne-terminology-2026-10-10.json (Comité Champagne, Dosage: the category concerns sugar in the finished wine; Extra Brut 0 to 6 grams per liter, Brut below 12); research/bottle-facts-cards-d-2026-11-28.json (Diebolt-Vallois: \"the appellation allows 0 to 6 grams of sugar a liter, and this one carries very little\")"
+    },
+    {
+      "target": "wine:Diebolt-Vallois ‘Blanc de Blancs’ Extra Brut NV (1.5 L magnum)",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "the rules allow no more than six grams of sugar a liter at disgorging, and this one carries very little",
+        "to": "the rules allow 0 to 6 grams of sugar per liter in the finished wine, and this one carries very little"
+      },
+      "reason": "The certified Champagne terminology of 10 October 2026: Extra Brut is 0 to 6 grams of sugar per liter in the finished wine and Brut is less than 12, the ranges overlap, and the label alone ranks no two bottles by dryness; the new card of 28 November said otherwise (src/lib/brennans-champagne.test.ts and brennans-wine-review.test.ts refuse the words)",
+      "source": "research/champagne-terminology-2026-10-10.json (Comité Champagne, Dosage: the category concerns sugar in the finished wine; Extra Brut 0 to 6 grams per liter, Brut below 12); research/bottle-facts-cards-d-2026-11-28.json (Diebolt-Vallois: \"the appellation allows 0 to 6 grams of sugar a liter, and this one carries very little\")"
+    },
+    {
+      "target": "wine:Diebolt-Vallois ‘Blanc de Blancs’ Extra Brut NV (1.5 L magnum)",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "Answer: Drier than Brut: no more than six grams of sugar a liter, so it tastes very dry and lets the lemon and salt show.",
+        "to": "Answer: Extra Brut means 0 to 6 grams of sugar per liter in the finished wine. Brut is less than 12; the ranges overlap, so the labels alone cannot rank two bottles by dryness. This one tastes very dry and lets the lemon and salt show."
+      },
+      "reason": "The certified Champagne terminology of 10 October 2026: Extra Brut is 0 to 6 grams of sugar per liter in the finished wine and Brut is less than 12, the ranges overlap, and the label alone ranks no two bottles by dryness; the new card of 28 November said otherwise (src/lib/brennans-champagne.test.ts and brennans-wine-review.test.ts refuse the words)",
+      "source": "research/champagne-terminology-2026-10-10.json (Comité Champagne, Dosage: the category concerns sugar in the finished wine; Extra Brut 0 to 6 grams per liter, Brut below 12); research/bottle-facts-cards-d-2026-11-28.json (Diebolt-Vallois: \"the appellation allows 0 to 6 grams of sugar a liter, and this one carries very little\")"
     }
   ]
 }

@@ -224,7 +224,23 @@ export function stagingFragmentFiles(names) { return names.map((n) => path.join(
    about the day answered as moot. Before it, the terms the menu taught were written into the Kitchen
    Fieldbook, which no edition derives. From appended overrides only; stamped at the minute of its build,
    never ahead of the clock. */
-export const EDITION_BUILT_AT = '2026-11-28T00:01:00.000Z';
+/* The 15:47 edition of 28 November 2026 is the wine list edition, read from the whole Binwise list the
+   owner pasted that day (pages/binwise-wine-list-2026-11-28.txt, filed as the eighteenth source; held
+   token for token against the published page, research/winelist-live-check-2026-11-28.md): the seventeen
+   pours by the glass as the list prints them, to the dollar and the year (the Lemelson, the Kokomo and the
+   two Coravin pours priced, the Durban at $18, the rosé and the Moulin d'Issan at the vintages printed);
+   the Louis Michel Chablis rolled to the 2023 and five bottles at their new bins; seven floor bottles the
+   list no longer prints filed under Past bottles, kept to be read and never dealt, each with a note on
+   what stands in its place (293 wines: the menus' 40 and 253 floor bottles; 282 served, 11 past); sixteen
+   new bottle cards, the Blackened Tofu, the Blackberry Trifle and the Pineapple Tarte Tatin re-tiered off
+   the past bottles, and the standing words on bottles and bins the list no longer bears out; the lineup
+   asks the list answers gone under their tombstones. From nine staged chunks (nov28-c1 to c6, nov28-r1,
+   nov28-past-tiered, nov28-xg) and the cut's own (nov28-cut, nov28-source, nov28-cut-terms) merged into
+   overrides.json, six staged fragments into components/wines.json and the base edits of the nine
+   _staging/nov28-* tools. The whole list beside it is static/shared/packs/brennans-new-orleans.winelist.v1.json, built
+   by build-winelist.mjs on the catalogue of 28 November with its past rows; stamped at the minute of its
+   build, never ahead of the clock. */
+export const EDITION_BUILT_AT = '2026-11-28T15:47:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a
@@ -255,7 +271,8 @@ export function sourceText(fail) {
 }
 /* A page whose source line says its prices are "the bottle price in dollars" (the Binwise paste) prints
    each entry as a bin line, the wine, the vintage and the price, a bare figure on the line before the
-   blank line that closes the entry (3,577 such lines, one per catalogue entry). Each price line is read
+   blank line that closes the entry (two pastes: 3,577 such lines on that of 3 October 2026 and 3,560 on
+   that of 28 November 2026, one per catalogue entry). Each price line is read
    also in dollars, on the same line ("190 $190"), so a bottle printed "$190" stands on the very figure
    the list prints: a bin or a vintage, which never closes an entry, is never read as a price. */
 export const DOLLAR_PAGE = /the bottle price in dollars/;
@@ -329,8 +346,9 @@ export const SHEET_Q = 'What does the pairing sheet say?';
    the 2 new pours of the Dinner Pairing Wines sheet), the menus' wines, with the
    floor's bottles and the dishes they tier counted from the overrides (overrideCounts); 2 tastings (the two tasting menus; the Thanksgiving
    Day fixed price menu was the third from the edition of 22 November 2026 and retired in that of 28 November);
-   17 sources (the Fall 2026 training sheets the fifteenth, the November 2026 sheets the sixteenth, the
-   sheets of 22 November 2026 the seventeenth);
+   18 sources (the Fall 2026 training sheets the fifteenth, the November 2026 sheets the sixteenth, the
+   sheets of 22 November 2026 the seventeenth, the whole Binwise wine list pasted on 28 November 2026 the
+   eighteenth);
    at least 115 terms; at least 33
    scenarios; 4 or more mix-ups; the must-knows; a lineup register of at least 60 questions; the 55
    pairings (the guide's 35, the 8 fall dishes' and the 12 Thanksgiving course dishes'); and the five disputes the plan names. */
@@ -442,7 +460,7 @@ export function countProblems(house, expect = overrideCounts(), frag = fragmentC
 	const tiered = (house.dishes || []).filter((d) => d.pairing && d.pairing.value && d.pairing.value.bottles).length;
 	eq("dishes with bottle tiers (from the overrides' bottles entries)", tiered, expect.tiered);
 	eq('tastings', n('tastings'), 2);
-	eq('sources', (house.sources || []).length, 17);
+	eq('sources', (house.sources || []).length, 18);
 	ge('terms', n('lexicon'), 115);
 	ge('scenarios', n('scenarios'), 33);
 	ge('mix-ups', n('mixUps'), 4);

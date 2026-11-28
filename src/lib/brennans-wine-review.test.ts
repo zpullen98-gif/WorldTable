@@ -29,7 +29,8 @@ describe('Brennan’s reviewed wine labels and service', () => {
 		const minuty = wine('w-fesbm1v5');
 		expect(minuty.grapes).toEqual([]);
 		expect(minuty.serviceNote).toContain('Grenache, Syrah, Rolle and Cinsault');
-		expect(minuty.serviceNote).toContain('not a verified recipe for the saved 2024 vintage');
+		/* The Binwise list of 28 November 2026 prints the rosé at 2025, so the note keeps the cuvée apart from that vintage's recipe. */
+		expect(minuty.serviceNote).toContain('not a verified recipe for the 2025 the Binwise list of 28 November 2026 prints');
 		expect(house.components!.find(c => c.name === 'Grenache')!.itemIds).not.toContain(minuty.id);
 		expect(text(minuty.compare)).not.toContain('Whispering Angel adds');
 		const banyuls = wine('w-69pqytkm');

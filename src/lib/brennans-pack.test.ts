@@ -34,6 +34,16 @@ const TG_ASKS = [
 	'a-d1gd4ecm', 'a-m1chwhwr', 'a-soooj19p', 'a-slrub78b', 'a-q0h51gla', 'a-epjw576x', 'a-peqco2cp',
 	'a-hjd6lkfm', 'a-nw3a38tw', 'a-5sqed13r'
 ];
+/* The 40 lineup asks the wine list of 28 November 2026 answered or left moot (overrides, op answer): the glass prices and vintages it
+   prints, the bins it moved, and the bottles and the pour it no longer prints; those that still ask something were filed again under new ids. */
+const LIST_ASKS = [
+	'a-n16yrred', 'a-fju9quzl', 'a-cmufw20a', 'a-mx451xy8', 'a-u7sljdyh', 'a-90xn7s71', 'a-gxp2ydig',
+	'a-6i0bemab', 'a-fufbth1x', 'a-kqkzu4sg', 'a-0o7bjncn', 'a-2gw55p7r', 'a-j92pv8mw', 'a-djqe3aza',
+	'a-qyqdwgpe', 'a-btet43a5', 'a-quj77k6z', 'a-l1hnpo9z', 'a-3a4ose59', 'a-wxwfw7vm', 'a-i6fy7uts',
+	'a-fe8q3nwl', 'a-kdis6n03', 'a-sjcs33ot', 'a-x327hjp9', 'a-4takjb4p', 'a-wmuydw3o', 'a-e2edt1un',
+	'a-tqsn143t', 'a-rork8pib', 'a-k7z1i3m8', 'a-097t483s', 'a-c9e5bdw9', 'a-3x055ugp', 'a-budl2ugf',
+	'a-xt841756', 'a-v20zvibm', 'a-jx2fnu73', 'a-qnq2koz9', 'a-o9ed0ut7'
+];
 const COACH = ['How do I sell it?', 'What do guests ask?', 'What should I watch for?'];
 const POUR_Q = 'How do I pour it?';
 const WATCH_CLOSE = 'Allergens: read the service note and confirm at lineup.';
@@ -75,10 +85,10 @@ describe("the Brennan's pack", () => {
 		expect(r.stdout).toContain(`notes ${[ABOUT_Q, ...COACH, POUR_Q].map(notes).join('/')} under the five fixed questions, ${kept} kept notes in all; 0 thin lines`);
 		/* The Thanksgiving edition of 22 November files the sixteen dishes of the Thanksgiving Day menu (70 to 86); none of their pairings takes a coffee. */
 		expect(r.stdout).toContain('86 dishes, 32 cocktails (6 spirit-free, 10 pairings on a coffee)');
-		/* The five-star card edition of 2 November gave all 271 wines a sale and the November edition's four new glass wines carry one too (275), as do the two new pours of the Dinner Pairing Wines sheet of 22 November (277), so the gate runs with --require-sale and a wine without one fails it. */
+		/* The five-star card edition of 2 November gave all 271 wines a sale and the November edition's four new glass wines carry one too (275), as do the two new pours of the Dinner Pairing Wines sheet of 22 November (277) and the sixteen bottle cards written for the wine list of 28 November (293), so the gate runs with --require-sale and a wine without one fails it. */
 		const withSale = h.wines.filter((w) => typeof w.lines?.value.sale === 'string' && w.lines.value.sale.trim()).length;
 		expect(withSale).toBe(h.wines.length);
-		expect(r.stdout).toContain(`${h.wines.length} wines (${timed} with timed lines, 277 with a sale, required)`);
+		expect(r.stdout).toContain(`${h.wines.length} wines (${timed} with timed lines, 293 with a sale, required)`);
 		expect(r.stdout).toContain('0 banned lines');
 		expect(timed).toBe(h.wines.length);
 		expect(r.stdout).toContain(`${h.lexicon.length} terms, ${h.scenarios.length} scenarios, ${h.mixUps.length} mix-ups, ${h.mustKnows.length} must-knows`);
@@ -230,6 +240,11 @@ describe("the Brennan's pack", () => {
 		// carried them.
 		const thanksgiving = Date.parse('2026-11-22T10:24:00.000Z') + 1;
 		for (const id of ['t-o18d70db', ...TG_ASKS]) later[id] = thanksgiving;
+		// The wine list edition of 28 November answered 40 asks from the Binwise list pasted that day, each tombstoned a
+		// millisecond after the 00:01 edition of 28 November, the last that carried them.
+		const wineList = Date.parse('2026-11-28T00:01:00.000Z') + 1;
+		for (const id of LIST_ASKS) later[id] = wineList;
+		for (const id of LIST_ASKS) expect(h.removed[id], id).toBe(wineList);
 		for (const k of Object.keys(h.removed)) expect(h.removed[k], k).toBe(later[k] ?? Date.parse('2026-10-03T22:00:00.000Z') + 1);
 		for (const name of ['Flamingo', 'Birdcage', 'Spoonbill', 'Personality', 'Oh! What It Seemed to Be']) expect(h.cocktails.some((c) => c.name === name), name).toBe(true);
 	});

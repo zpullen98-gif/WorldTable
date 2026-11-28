@@ -7,7 +7,10 @@
    as the family's. The Jadot story and record still poured the Beaune Premier Cru on the dinner tasting,
    a pour the sheet of 22 November 2026 took off; they now name the three Jadot wines the house serves.
    The Willamette Valley story named the valley's pours as they stood before the Lemelson wines joined
-   and the Ken Wright blend left the list. The integrator runs this once, at the cut, before the build.
+   and the Ken Wright blend left the list. The Diebolt-Vallois story, new with this list, gave Extra
+   Brut as under six grams of sugar; the house's Champagne terms say 0 to 6 grams per liter in the
+   finished wine (research/champagne-terminology-2026-10-10.json). The integrator runs this once, at
+   the cut, before the build.
 
    Usage: node nov28-cut.base-edits.mjs            what would change, and whether every anchor is found
           node nov28-cut.base-edits.mjs --apply    make the edits (each once; a second run changes nothing)
@@ -40,7 +43,9 @@ const EDITS = [
 	{ list: 'producers', key: 'wine-story-jadot', at: 'producer.history', from: 'We pour three: the Beaune Premier Cru on the dinner tasting, with the Redfish Véronique, and half-bottles of Beaujolais-Villages and village Meursault.', to: 'We pour three: Les Pucelles 2008, a premier cru Puligny-Montrachet, by Coravin, and half-bottles of Beaujolais-Villages and village Meursault. The Beaune Premier Cru left the dinner tasting in November 2026.' },
 	{ list: 'producers', key: 'wine-story-jadot', at: 'producer.notes.0', from: 'Say loo-EE zhah-DOH, and Beaune as bohn. The Beaune Premier Cru is the dinner tasting red, with the redfish; it has no glass price.', to: 'Say loo-EE zhah-DOH, and Beaune as bohn. Les Pucelles is poo-SELL.' },
 	{ list: 'components', key: 'wine-region-willamette', at: 'explain', from: "We pour Argyle's sparkling wine by the glass, and Bergstrom and Ken Wright Pinot Noir.", to: "We pour Argyle's sparkling wine and Lemelson's Pinot Gris by the glass, and the bottle list carries Pinot Noir from Lemelson, Bergstrom and Ken Wright." },
-	{ list: 'components', key: 'wine-region-willamette', at: 'card.back', from: 'Our Argyle sparkling, Bergstrom and Ken Wright Pinot Noir come from there.', to: 'Our Argyle sparkling, our Lemelson Pinot Gris and Pinot Noir from Lemelson, Bergstrom and Ken Wright come from there.' }
+	{ list: 'components', key: 'wine-region-willamette', at: 'card.back', from: 'Our Argyle sparkling, Bergstrom and Ken Wright Pinot Noir come from there.', to: 'Our Argyle sparkling, our Lemelson Pinot Gris and Pinot Noir from Lemelson, Bergstrom and Ken Wright come from there.' },
+	{ list: 'components', key: 'wine-story-diebolt-vallois', at: 'explain', from: 'is Extra Brut: under six grams of sugar a liter, so it is taut and very dry,', to: 'is Extra Brut, 0 to 6 grams of sugar per liter in the finished wine: it is taut and very dry,' },
+	{ list: 'components', key: 'wine-story-diebolt-vallois', at: 'card.back', from: 'It is Extra Brut, under six grams of sugar a liter.', to: 'It is Extra Brut: 0 to 6 grams of sugar per liter in the finished wine.' }
 ];
 const getAt = (c, at) => at.split('.').reduce((o, k) => (o == null ? o : o[k]), c);
 const setAt = (c, at, v) => { const ks = at.split('.'); const last = ks.pop(); ks.reduce((o, k) => o[k], c)[last] = v; };

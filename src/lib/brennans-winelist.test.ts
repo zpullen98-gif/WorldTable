@@ -10,9 +10,12 @@
  * (tools/house/carry-winelist.mjs and its ledger), the producer files map keys,
  * and a bottle that left the list is written in a past group. The stub cases
  * run on the catalogue the shipped list was read on, with the shipped pack, so
- * they hold before and after an edition; the past cases run on the real ledger
- * with the shipped pack's bottles moved and re-binned as the paste of
- * 28 November prints them.
+ * they hold before and after an edition (they have no ledger, so the pack's
+ * past wines are told to the builder and the gate and left out of both); the
+ * past cases run on the real ledger with the shipped pack's bottles as the
+ * paste of 28 November prints them. Since the cut of 28 November 2026 the
+ * shipped pack is that list's, so the cases that rebuild the list of 3 October
+ * undo those moves, each named (octPack).
  *
  * The second reading of that review: every rule the ledger and the gate
  * gained is broken here once, alone, and must be named (a rule taken out
@@ -43,6 +46,9 @@ const ledger: Raw = JSON.parse(readFileSync(LEDGER, 'utf8'));
 const catalogues: Raw = readCatalogues(ledger);
 const pages: Raw = Object.fromEntries(Object.entries(catalogues).map(([l, c]: [string, any]) => [l, pageOf(c, catalogueFile(c.readOn))]));
 const isPast = loadIsPast();
+/* The stub cases have no ledger, so no past group: a wine the pack files as past (the engine's isPast) is
+   told to the builder and the gate, which leave it out, as the tools themselves are told. */
+const STUB = { isPast };
 const DASHES = new RegExp(['\\u2014', '\\u2013', '&' + 'mdash;', ' ' + '-- '].join('|'));
 const noDash = (s: string) => DASHES.test(s);
 
@@ -63,17 +69,17 @@ function stubFiles(): Array<{ file: string; data: Raw }> {
 
 describe('build-winelist', () => {
 	it('builds a file the gate passes, deterministically, under the cap', () => {
-		const one = buildWinelist(catalogue, stubFiles(), pack);
+		const one = buildWinelist(catalogue, stubFiles(), pack, STUB);
 		expect(one.failures).toEqual([]);
 		const text = winelistText(one.list);
-		expect(winelistText(buildWinelist(catalogue, stubFiles(), pack).list)).toBe(text);
+		expect(winelistText(buildWinelist(catalogue, stubFiles(), pack, STUB).list)).toBe(text);
 		expect(Buffer.byteLength(text)).toBeLessThan(MAX_BYTES);
 		const list = JSON.parse(text);
 		expect(list.format).toBe('oot-winelist');
 		expect(list.entries).toHaveLength(catalogue.entries.length);
 		expect(list.sections).toHaveLength(36);
 		expect(list.entries[0].slice(0, 9)).toEqual([1, 'By the Glass', '', catalogue.entries[0].name, 'NV', catalogue.entries[0].price, '750ml', 'p-1', 'g']);
-		expect(winelistProblems(text, catalogue, page, pack, noDash)).toEqual([]);
+		expect(winelistProblems(text, catalogue, page, pack, noDash, STUB)).toEqual([]);
 	});
 
 	it('keeps the fuller of two descriptions and reports the clash; refuses one entry given two producers', () => {
@@ -91,7 +97,7 @@ describe('build-winelist', () => {
 		delete files[0].data.places['Rosé'];
 		const p = JSON.parse(JSON.stringify(pack));
 		p.house.wines.push({ ...p.house.wines[0], id: 'w-testbot1', name: 'Nowhere', list: 'bottle', bin: '0', vintage: '1900', size: '750ml' });
-		const f = buildWinelist(catalogue, files, p).failures;
+		const f = buildWinelist(catalogue, files, p, STUB).failures;
 		expect(f).toContain(`entry 1 (${catalogue.entries[0].name} NV) has no producer in any producer file`);
 		expect(f).toContain('the place Rosé has no title and line in any producer file');
 		expect(f.some((x: string) => x.startsWith("the pack's bottle Nowhere"))).toBe(true);
@@ -104,12 +110,12 @@ describe('build-winelist', () => {
 		const twins = catalogue.entries.filter((x: Raw) => x.bin === e.bin && x.vintage === e.vintage && x.size === e.size).map((x: Raw) => x.n);
 		const p = JSON.parse(JSON.stringify(pack));
 		p.house.wines.push({ ...p.house.wines[0], id: 'w-testbot1', name: 'A half', list: 'bottle', bin: e.bin, vintage: e.vintage, size: e.size.replace('ml', ' ml') });
-		const { list, failures } = buildWinelist(catalogue, stubFiles(), p);
+		const { list, failures } = buildWinelist(catalogue, stubFiles(), p, STUB);
 		expect(failures).toEqual([]);
 		const mine = Object.keys(list.cards).map(Number).filter((n) => list.cards[n] === 'w-testbot1');
 		expect(mine).toEqual(twins);
-		expect(winelistProblems(winelistText(list), catalogue, page, p, noDash)).toEqual([]);
-		expect(winelistProblems(winelistText(list), catalogue, page, pack, noDash)).toContain(`cards: entry ${twins[0]} names w-testbot1, which is no wine in the pack`);
+		expect(winelistProblems(winelistText(list), catalogue, page, p, noDash, STUB)).toEqual([]);
+		expect(winelistProblems(winelistText(list), catalogue, page, pack, noDash, STUB)).toContain(`cards: entry ${twins[0]} names w-testbot1, which is no wine in the pack`);
 	});
 
 	it('reads a place to its section by the longest prefix', () => {
@@ -121,8 +127,8 @@ describe('build-winelist', () => {
 });
 
 describe('check-winelist', () => {
-	const good = () => JSON.parse(winelistText(buildWinelist(catalogue, stubFiles(), pack).list));
-	const problems = (list: Raw) => winelistProblems(JSON.stringify(list), catalogue, page, pack, noDash);
+	const good = () => JSON.parse(winelistText(buildWinelist(catalogue, stubFiles(), pack, STUB).list));
+	const problems = (list: Raw) => winelistProblems(JSON.stringify(list), catalogue, page, pack, noDash, STUB);
 
 	it('refuses a price that is not the printed one, a missing entry, a dash, allergen talk and a stray place', () => {
 		let l = good();
@@ -164,7 +170,8 @@ describe('the stable keys and the past (28 November 2026)', () => {
 	const nov: Raw = JSON.parse(readFileSync(CATALOGUE, 'utf8'));
 	const novPage = pageOf(nov, CATALOGUE);
 	/* The shipped pack as the paste of 28 November prints its bottles: the seven that left filed under
-	   Past bottles, the five re-binned and the Louis Michel at its new vintage. */
+	   Past bottles, the five re-binned and the Louis Michel at its new vintage. Since the cut of
+	   28 November 2026 the shipped pack carries these moves itself, and novPack changes nothing. */
 	const PAST = ['w-in6wnlqj', 'w-8j6qflst', 'w-q8m4sesk', 'w-iegw2pmn', 'w-t2fuz2wj', 'w-6osv9e9t', 'w-owg1ibls'];
 	const BINS: Record<string, string> = { 'w-iawg2ni8': '102122', 'w-zxu9f2du': '32843', 'w-4ubmmj4a': '25555', 'w-uwpmn81x': '21923', 'w-sdqxd93y': '31303', 'w-o5v4lzkc': '26553' };
 	const novPack = (): Raw => {
@@ -173,6 +180,30 @@ describe('the stable keys and the past (28 November 2026)', () => {
 			if (PAST.includes(w.id)) w.section = 'Past bottles';
 			if (BINS[w.id]) w.bin = BINS[w.id];
 			if (w.id === 'w-o5v4lzkc') w.vintage = '2023';
+		}
+		return p;
+	};
+	/* The same pack as the paste of 3 October printed its bottles, for the cases that rebuild that list:
+	   the moves of the cut undone, each named. The sixteen cards written for the list of 28 November are
+	   left out (the older list prints none of them), the seven past bottles are back in the sections
+	   they were served from, and the six bottles the newer list re-binned are at their October bins,
+	   the Louis Michel at its 2022. */
+	const NEW_CARDS = [
+		'w-alt43yex', 'w-gnj2jh83', 'w-xxoa9z7b', 'w-0nsk1g4a', 'w-ahjozfd1', 'w-7d8ok78c', 'w-ht606i8l', 'w-vy50ws53',
+		'w-saldkh5f', 'w-9vcq7far', 'w-vea2csvj', 'w-4ecs4p1h', 'w-ni8zorwr', 'w-qpuu2m6z', 'w-4m9i8mgh', 'w-ssxlfz3w'
+	];
+	const OCT_SECTIONS: Record<string, string> = {
+		'w-in6wnlqj': 'Champagne bottles', 'w-8j6qflst': 'Large formats', 'w-q8m4sesk': 'Large formats', 'w-iegw2pmn': 'Large formats',
+		'w-t2fuz2wj': 'Italy and Spain', 'w-6osv9e9t': 'Other reds', 'w-owg1ibls': 'Dessert and fortified'
+	};
+	const OCT_BINS: Record<string, string> = { 'w-iawg2ni8': '1628', 'w-zxu9f2du': '32844', 'w-4ubmmj4a': '22762', 'w-uwpmn81x': '2173', 'w-sdqxd93y': '29801', 'w-o5v4lzkc': '22411' };
+	const octPack = (): Raw => {
+		const p = JSON.parse(JSON.stringify(pack));
+		p.house.wines = p.house.wines.filter((w: Raw) => !NEW_CARDS.includes(w.id));
+		for (const w of p.house.wines) {
+			if (OCT_SECTIONS[w.id]) w.section = OCT_SECTIONS[w.id];
+			if (OCT_BINS[w.id]) w.bin = OCT_BINS[w.id];
+			if (w.id === 'w-o5v4lzkc') w.vintage = '2022';
 		}
 		return p;
 	};
@@ -194,6 +225,19 @@ describe('the stable keys and the past (28 November 2026)', () => {
 	/* The cases that run the whole gate many times over 3,560 rows get a minute, not the default five
 	   seconds: a slow machine must not fail a rule that holds. */
 	const LONG = 60_000;
+
+	it('the shipped pack is the list of 28 November: sixteen new cards, seven past bottles, six bins and a vintage moved', () => {
+		const byId = new Map<string, Raw>(pack.house.wines.map((w: Raw) => [w.id, w]));
+		for (const id of NEW_CARDS) expect(byId.get(id)?.list, id).toBe('bottle');
+		for (const id of PAST) expect(isPast(byId.get(id)), id).toBe(true);
+		for (const id of Object.keys(OCT_SECTIONS)) expect(PAST, id).toContain(id);
+		for (const [id, bin] of Object.entries(BINS)) expect(byId.get(id)?.bin, id).toBe(bin);
+		expect(byId.get('w-o5v4lzkc')?.vintage).toBe('2023');
+		/* And the pack of 3 October made from it holds no card the older list lacks, and none of it past but the two glass wines of 15 November. */
+		const oct = octPack().house.wines;
+		expect(oct).toHaveLength(pack.house.wines.length - NEW_CARDS.length);
+		expect(oct.filter((w: Raw) => w.list === 'bottle' && isPast(w))).toEqual([]);
+	});
 
 	it('the two pastes print the house Champagne at 28 and then 30 a glass', () => {
 		expect(catalogues.a.entries[0].price).toBe(28);
@@ -333,7 +377,7 @@ describe('the stable keys and the past (28 November 2026)', () => {
 	let builtNov = '';
 	let builtOct = '';
 	const novText = () => (builtNov ||= winelistText(buildWinelist(nov, keyedFiles(), novPack(), opts()).list));
-	const octListText = () => (builtOct ||= winelistText(buildWinelist(catalogues.a, keyedFiles(), pack, opts()).list));
+	const octListText = () => (builtOct ||= winelistText(buildWinelist(catalogues.a, keyedFiles(), octPack(), opts()).list));
 
 	it('holds the list to its ledger: read by the gate, needed for a past, current for a release', () => {
 		const p = novPack();
@@ -346,7 +390,7 @@ describe('the stable keys and the past (28 November 2026)', () => {
 		/* A file with a past and no ledger to hold it. */
 		expect(winelistProblems(built, nov, novPage, p, noDash)).toContain('the file carries past, which only the ledger can hold; check it with the ledger');
 		/* A released list is the current catalogue's: the list of 3 October passes, and is refused as a release. */
-		const octProblems = (extra: Raw) => winelistProblems(octText, catalogues.a, pages.a, pack, noDash, { ledger, catalogues, pages, isPast, ...extra });
+		const octProblems = (extra: Raw) => winelistProblems(octText, catalogues.a, pages.a, octPack(), noDash, { ledger, catalogues, pages, isPast, ...extra });
 		expect(octProblems({})).toEqual([]);
 		expect(octProblems({ release: true })).toEqual([expect.stringContaining("a released list is the ledger's current one, b (2026-11-28)")]);
 	}, LONG);
@@ -465,7 +509,7 @@ describe('the stable keys and the past (28 November 2026)', () => {
 
 	it('rebuilds the list of 3 October from the ledger as the stub build did before it', () => {
 		const files = keyedFiles();
-		const { list, failures } = buildWinelist(catalogues.a, files, pack, opts());
+		const { list, failures } = buildWinelist(catalogues.a, files, octPack(), opts());
 		expect(failures).toEqual([]);
 		expect(list.past).toBeUndefined();
 		expect(list.entries).toHaveLength(3577);
