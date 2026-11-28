@@ -294,7 +294,7 @@ export const CHILD_SECTIONS = ["Children's breakfast", "Children's dinner"];
 export const SNACK_SECTION = 'Roost Bar & Bubbles snacks';
 /* A sides section: the menus' own Sides, and any section whose name ends " sides" (the Thanksgiving Day
    sheet's Sides for the Table file under "Thanksgiving Day sides", and under "Past Thanksgiving Day
-   sides" once the day has passed, so the past rule and this one read one name). A side is ordered for
+   2026 sides" once the day has passed, so the past rule and this one read one name). A side is ordered for
    the table beside a main: no pairing is ever invented for one, and it need not carry a why line. */
 export const SIDES_SECTION = 'Sides';
 export function isSidesSection(section) {

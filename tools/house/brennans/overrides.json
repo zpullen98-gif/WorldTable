@@ -81021,6 +81021,772 @@
       },
       "reason": "The two past pours are kept to be read; whether either can still be sold is the sommelier’s to say.",
       "source": "page:brennans-sheets-2026-11-22.txt (Sheet 2: Dinner Pairing Wines)"
+    },
+    {
+      "target": "tasting:Happy Thanksgiving from Brennan’s",
+      "op": "retire",
+      "value": {
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed: the menu was served on Thursday 26 November 2026 only, so it leaves the tastings. The stamp is a millisecond after the 10:24 edition of 22 November 2026, the last that carried it, so a device drops the copy nobody touched and keeps one a person did; its dishes are filed as past below",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Rockefeller Gratin",
+      "field": "section",
+      "op": "set",
+      "value": "Past Thanksgiving Day 2026",
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish is filed under Past Thanksgiving Day 2026, a section the engine's past rule reads; its name, id, description, marks, notes, pairing and its meal Thanksgiving Day are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Rockefeller Gratin",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "It was one of the six appetizers on Happy Thanksgiving from Brennan’s, the three course menu served on Thanksgiving Day, Thursday 26 November 2026, only. Nothing took its place: the menu was for that one day, and the day has passed. The dish is kept here to be read, not sold."
+      },
+      "reason": "A past dish says why it is past, under its own question, so the card explains why it is filed under Past Thanksgiving Day 2026",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Endive Satsuma Salad",
+      "field": "section",
+      "op": "set",
+      "value": "Past Thanksgiving Day 2026",
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish is filed under Past Thanksgiving Day 2026, a section the engine's past rule reads; its name, id, description, marks, notes, pairing and its meal Thanksgiving Day are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Endive Satsuma Salad",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "It was one of the six appetizers on Happy Thanksgiving from Brennan’s, the three course menu served on Thanksgiving Day, Thursday 26 November 2026, only. Nothing took its place: the menu was for that one day, and the day has passed. The dish is kept here to be read, not sold."
+      },
+      "reason": "A past dish says why it is past, under its own question, so the card explains why it is filed under Past Thanksgiving Day 2026",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Sweet Potato Agnolotti",
+      "field": "section",
+      "op": "set",
+      "value": "Past Thanksgiving Day 2026",
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish is filed under Past Thanksgiving Day 2026, a section the engine's past rule reads; its name, id, description, marks, notes, pairing and its meal Thanksgiving Day are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Sweet Potato Agnolotti",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "It was one of the six appetizers on Happy Thanksgiving from Brennan’s, the three course menu served on Thanksgiving Day, Thursday 26 November 2026, only. Nothing took its place: the menu was for that one day, and the day has passed. The dish is kept here to be read, not sold."
+      },
+      "reason": "A past dish says why it is past, under its own question, so the card explains why it is filed under Past Thanksgiving Day 2026",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Bay Scallop Crudo",
+      "field": "section",
+      "op": "set",
+      "value": "Past Thanksgiving Day 2026",
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish is filed under Past Thanksgiving Day 2026, a section the engine's past rule reads; its name, id, description, marks, notes, pairing and its meal Thanksgiving Day are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Bay Scallop Crudo",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "It was one of the six appetizers on Happy Thanksgiving from Brennan’s, the three course menu served on Thanksgiving Day, Thursday 26 November 2026, only. Nothing took its place: the menu was for that one day, and the day has passed. The dish is kept here to be read, not sold."
+      },
+      "reason": "A past dish says why it is past, under its own question, so the card explains why it is filed under Past Thanksgiving Day 2026",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Roasted Buttermilk-Brined Turkey Breast",
+      "field": "section",
+      "op": "set",
+      "value": "Past Thanksgiving Day 2026",
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish is filed under Past Thanksgiving Day 2026, a section the engine's past rule reads; its name, id, description, marks, notes, pairing and its meal Thanksgiving Day are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Roasted Buttermilk-Brined Turkey Breast",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "It was one of the six entrées on Happy Thanksgiving from Brennan’s, the three course menu served on Thanksgiving Day, Thursday 26 November 2026, only. Nothing took its place: the menu was for that one day, and the day has passed. The dish is kept here to be read, not sold."
+      },
+      "reason": "A past dish says why it is past, under its own question, so the card explains why it is filed under Past Thanksgiving Day 2026",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Bacon-Wrapped Pork Tenderloin",
+      "field": "section",
+      "op": "set",
+      "value": "Past Thanksgiving Day 2026",
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish is filed under Past Thanksgiving Day 2026, a section the engine's past rule reads; its name, id, description, marks, notes, pairing and its meal Thanksgiving Day are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Bacon-Wrapped Pork Tenderloin",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "It was one of the six entrées on Happy Thanksgiving from Brennan’s, the three course menu served on Thanksgiving Day, Thursday 26 November 2026, only. Nothing took its place: the menu was for that one day, and the day has passed. The dish is kept here to be read, not sold."
+      },
+      "reason": "A past dish says why it is past, under its own question, so the card explains why it is filed under Past Thanksgiving Day 2026",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Herb Roasted Beef Tenderloin",
+      "field": "section",
+      "op": "set",
+      "value": "Past Thanksgiving Day 2026",
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish is filed under Past Thanksgiving Day 2026, a section the engine's past rule reads; its name, id, description, marks, notes, pairing and its meal Thanksgiving Day are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Herb Roasted Beef Tenderloin",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "It was one of the six entrées on Happy Thanksgiving from Brennan’s, the three course menu served on Thanksgiving Day, Thursday 26 November 2026, only. Nothing took its place: the menu was for that one day, and the day has passed. The dish is kept here to be read, not sold."
+      },
+      "reason": "A past dish says why it is past, under its own question, so the card explains why it is filed under Past Thanksgiving Day 2026",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Shrimp Sauce Piquante",
+      "field": "section",
+      "op": "set",
+      "value": "Past Thanksgiving Day 2026",
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish is filed under Past Thanksgiving Day 2026, a section the engine's past rule reads; its name, id, description, marks, notes, pairing and its meal Thanksgiving Day are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Shrimp Sauce Piquante",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "It was one of the six entrées on Happy Thanksgiving from Brennan’s, the three course menu served on Thanksgiving Day, Thursday 26 November 2026, only. Nothing took its place: the menu was for that one day, and the day has passed. The dish is kept here to be read, not sold."
+      },
+      "reason": "A past dish says why it is past, under its own question, so the card explains why it is filed under Past Thanksgiving Day 2026",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Redfish Meunière",
+      "field": "section",
+      "op": "set",
+      "value": "Past Thanksgiving Day 2026",
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish is filed under Past Thanksgiving Day 2026, a section the engine's past rule reads; its name, id, description, marks, notes, pairing and its meal Thanksgiving Day are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Redfish Meunière",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "It was one of the six entrées on Happy Thanksgiving from Brennan’s, the three course menu served on Thanksgiving Day, Thursday 26 November 2026, only. Nothing took its place: the menu was for that one day, and the day has passed. The dish is kept here to be read, not sold."
+      },
+      "reason": "A past dish says why it is past, under its own question, so the card explains why it is filed under Past Thanksgiving Day 2026",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Veal Grillades",
+      "field": "section",
+      "op": "set",
+      "value": "Past Thanksgiving Day 2026",
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish is filed under Past Thanksgiving Day 2026, a section the engine's past rule reads; its name, id, description, marks, notes, pairing and its meal Thanksgiving Day are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Veal Grillades",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "It was one of the six entrées on Happy Thanksgiving from Brennan’s, the three course menu served on Thanksgiving Day, Thursday 26 November 2026, only. Nothing took its place: the menu was for that one day, and the day has passed. The dish is kept here to be read, not sold."
+      },
+      "reason": "A past dish says why it is past, under its own question, so the card explains why it is filed under Past Thanksgiving Day 2026",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Sweet Potato Pot de Crème",
+      "field": "section",
+      "op": "set",
+      "value": "Past Thanksgiving Day 2026",
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish is filed under Past Thanksgiving Day 2026, a section the engine's past rule reads; its name, id, description, marks, notes, pairing and its meal Thanksgiving Day are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Sweet Potato Pot de Crème",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "It was one of the three desserts on Happy Thanksgiving from Brennan’s, the three course menu served on Thanksgiving Day, Thursday 26 November 2026, only. Nothing took its place: the menu was for that one day, and the day has passed. The dish is kept here to be read, not sold."
+      },
+      "reason": "A past dish says why it is past, under its own question, so the card explains why it is filed under Past Thanksgiving Day 2026",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Chocolate and Orange Tart",
+      "field": "section",
+      "op": "set",
+      "value": "Past Thanksgiving Day 2026",
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish is filed under Past Thanksgiving Day 2026, a section the engine's past rule reads; its name, id, description, marks, notes, pairing and its meal Thanksgiving Day are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Chocolate and Orange Tart",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "It was one of the three desserts on Happy Thanksgiving from Brennan’s, the three course menu served on Thanksgiving Day, Thursday 26 November 2026, only. Nothing took its place: the menu was for that one day, and the day has passed. The dish is kept here to be read, not sold."
+      },
+      "reason": "A past dish says why it is past, under its own question, so the card explains why it is filed under Past Thanksgiving Day 2026",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Titus’ BBQ Shrimp Stuffing",
+      "field": "section",
+      "op": "set",
+      "value": "Past Thanksgiving Day 2026 sides",
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish is filed under Past Thanksgiving Day 2026 sides, a section the engine's past rule reads; its name, id, description, marks, notes, pairing and its meal Thanksgiving Day are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Titus’ BBQ Shrimp Stuffing",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "It was one of the four sides for the table beside Happy Thanksgiving from Brennan’s, the three course menu, served on Thanksgiving Day, Thursday 26 November 2026, only. Nothing took its place: the menu was for that one day, and the day has passed. The dish is kept here to be read, not sold."
+      },
+      "reason": "A past dish says why it is past, under its own question, so the card explains why it is filed under Past Thanksgiving Day 2026",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Herbed Potato Purée",
+      "field": "section",
+      "op": "set",
+      "value": "Past Thanksgiving Day 2026 sides",
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish is filed under Past Thanksgiving Day 2026 sides, a section the engine's past rule reads; its name, id, description, marks, notes, pairing and its meal Thanksgiving Day are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Herbed Potato Purée",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "It was one of the four sides for the table beside Happy Thanksgiving from Brennan’s, the three course menu, served on Thanksgiving Day, Thursday 26 November 2026, only. Nothing took its place: the menu was for that one day, and the day has passed. The dish is kept here to be read, not sold."
+      },
+      "reason": "A past dish says why it is past, under its own question, so the card explains why it is filed under Past Thanksgiving Day 2026",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Haricots Verts",
+      "field": "section",
+      "op": "set",
+      "value": "Past Thanksgiving Day 2026 sides",
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish is filed under Past Thanksgiving Day 2026 sides, a section the engine's past rule reads; its name, id, description, marks, notes, pairing and its meal Thanksgiving Day are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Haricots Verts",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "It was one of the four sides for the table beside Happy Thanksgiving from Brennan’s, the three course menu, served on Thanksgiving Day, Thursday 26 November 2026, only. Nothing took its place: the menu was for that one day, and the day has passed. The dish is kept here to be read, not sold."
+      },
+      "reason": "A past dish says why it is past, under its own question, so the card explains why it is filed under Past Thanksgiving Day 2026",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Cranberry Sauce",
+      "field": "section",
+      "op": "set",
+      "value": "Past Thanksgiving Day 2026 sides",
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish is filed under Past Thanksgiving Day 2026 sides, a section the engine's past rule reads; its name, id, description, marks, notes, pairing and its meal Thanksgiving Day are untouched and it stays in the house to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Cranberry Sauce",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the menu?",
+        "a": "It was one of the four sides for the table beside Happy Thanksgiving from Brennan’s, the three course menu, served on Thanksgiving Day, Thursday 26 November 2026, only. Nothing took its place: the menu was for that one day, and the day has passed. The dish is kept here to be read, not sold."
+      },
+      "reason": "A past dish says why it is past, under its own question, so the card explains why it is filed under Past Thanksgiving Day 2026",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Turtle Soup",
+      "field": "meals",
+      "op": "set",
+      "value": [
+        "Breakfast & lunch",
+        "Dinner",
+        "Breakfast tasting"
+      ],
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish the house already serves leaves the Thanksgiving Day meal and keeps the three it is served at",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Turtle Soup",
+      "field": "kept.5.q",
+      "op": "set",
+      "value": "What changed on Thanksgiving Day 2026?",
+      "reason": "The note on the day is kept to be read and put in the past tense, under a question that names the year",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Turtle Soup",
+      "field": "kept.5.a",
+      "op": "set",
+      "value": "On Thanksgiving Day 2026, Thursday 26 November, the Turtle Soup was one of the six appetizers on the three course menu, $80 for an appetizer, an entrée and a dessert. The sheet printed it as “Classic Turtle Soup: Brown Butter Spinach, Grated Egg, Aged Sherry”, where the everyday menu prints 100% turtle meat, brown butter spinach, grated egg and aged Sherry. The day has passed, and the soup is described as the everyday menu prints it.",
+      "reason": "The note on the day is kept to be read and put in the past tense; the sheet's words stand beside the everyday ones, and the lineup ask it pointed to leaves as moot below",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Seafood Gumbo",
+      "field": "meals",
+      "op": "set",
+      "value": [
+        "Breakfast & lunch",
+        "Dinner",
+        "Breakfast tasting"
+      ],
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish the house already serves leaves the Thanksgiving Day meal and keeps the three it is served at",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Seafood Gumbo",
+      "field": "kept.6.q",
+      "op": "set",
+      "value": "What changed on Thanksgiving Day 2026?",
+      "reason": "The note on the day is kept to be read and put in the past tense, under a question that names the year",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:Seafood Gumbo",
+      "field": "kept.6.a",
+      "op": "set",
+      "value": "On Thanksgiving Day 2026, Thursday 26 November, the Seafood Gumbo was one of the six appetizers on the three course menu, $80 for an appetizer, an entrée and a dessert. The sheet printed it as “Seafood Filé Gumbo: Andouille, Crabmeat, Oysters, Shrimp, Popcorn Rice”, where the everyday menu prints shrimp, crab, oysters, andouille and popcorn rice. Filé is ground sassafras leaves. The day has passed; the everyday menu does not print filé, so do not promise it without asking the chef.",
+      "reason": "The note on the day is kept to be read and put in the past tense; the sheet's words stand beside the everyday ones, and the lineup ask it pointed to leaves as moot below",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:World Famous Bananas Foster",
+      "field": "meals",
+      "op": "set",
+      "value": [
+        "Breakfast & lunch",
+        "Dinner",
+        "Breakfast tasting"
+      ],
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the dish the house already serves leaves the Thanksgiving Day meal and keeps the three it is served at",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:World Famous Bananas Foster",
+      "field": "kept.6.q",
+      "op": "set",
+      "value": "What changed on Thanksgiving Day 2026?",
+      "reason": "The note on the day is kept to be read and put in the past tense, under a question that names the year",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "dish:World Famous Bananas Foster",
+      "field": "kept.6.a",
+      "op": "set",
+      "value": "On Thanksgiving Day 2026, Thursday 26 November, the Bananas Foster was one of the three desserts on the three course menu, $80 for an appetizer, an entrée and a dessert. The sheet printed “World Famous Bananas Foster: New Orleans Ice Cream Co. Vanilla Bean Ice Cream” and, under it, “Flambéed Tableside [ add $5 ]”, where the dinner menu prints housemade vanilla ice cream. So on the day, the flambé at the table added $5 to the menu. The day has passed, and the Foster is sold as the everyday menus print it.",
+      "reason": "The note on the day is kept to be read and put in the past tense; the sheet's words stand beside the everyday ones, and the lineup ask it pointed to leaves as moot below",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "field": "meals",
+      "value": [
+        {
+          "name": "Breakfast & lunch",
+          "days": "Monday to Friday",
+          "hours": "9 am to 2 pm"
+        },
+        {
+          "name": "Breakfast & lunch",
+          "days": "Saturday and Sunday",
+          "hours": "8 am to 2 pm"
+        },
+        {
+          "name": "Dinner",
+          "days": "Nightly",
+          "hours": "6 pm to 10 pm"
+        },
+        {
+          "name": "Bubbles at Brennan's",
+          "days": "Monday to Friday",
+          "hours": "2 pm to 6 pm in the Roost Bar and Courtyard, Champagne sabered Fridays at 5; confirm on shift"
+        }
+      ],
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired, so the day leaves the meals of the house: the four meals as they stand, word for word. The past dishes keep the meal Thanksgiving Day, which a past record must name",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-hn2hni1w",
+        "was": "the chef ask how the Rockefeller Gratin was built for Thanksgiving Day",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-qeg7qs5g",
+        "was": "the sommelier ask to confirm the first pick and bottle tiers for the Rockefeller Gratin before Thanksgiving Day service",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-dqkbri73",
+        "was": "the chef ask how the Endive Satsuma Salad was built for Thanksgiving Day",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-utpmxbes",
+        "was": "the sommelier ask to confirm the first pick and bottle tiers for the Endive Satsuma Salad before Thanksgiving Day service",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-on4kimai",
+        "was": "the chef ask how the Sweet Potato Agnolotti was built for Thanksgiving Day",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-9ezlldr9",
+        "was": "the sommelier ask to confirm the first pick and bottle tiers for the Sweet Potato Agnolotti before Thanksgiving Day service",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-gqf255d8",
+        "was": "the chef ask how the Bay Scallop Crudo was built for Thanksgiving Day",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-htz9pr2x",
+        "was": "the sommelier ask to confirm the first pick and bottle tiers for the Bay Scallop Crudo before Thanksgiving Day service",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-l88qk2h8",
+        "was": "the chef ask how the Roasted Buttermilk-Brined Turkey Breast was built for Thanksgiving Day",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-x43d52t7",
+        "was": "the sommelier ask to confirm the first pick and bottle tiers for the Roasted Buttermilk-Brined Turkey Breast before Thanksgiving Day service",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-4deo1y7d",
+        "was": "the chef ask how the Bacon-Wrapped Pork Tenderloin was built for Thanksgiving Day",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-3zbz8oa9",
+        "was": "the sommelier ask to confirm the first pick and bottle tiers for the Bacon-Wrapped Pork Tenderloin before Thanksgiving Day service",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-dv7jnbjq",
+        "was": "the chef ask how the Herb Roasted Beef Tenderloin was built for Thanksgiving Day",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-n8pn26on",
+        "was": "the sommelier ask to confirm the first pick and bottle tiers for the Herb Roasted Beef Tenderloin before Thanksgiving Day service",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-lwjqhlpa",
+        "was": "the chef ask how the Shrimp Sauce Piquante was built for Thanksgiving Day",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-y31pa9ej",
+        "was": "the sommelier ask to confirm the first pick and bottle tiers for the Shrimp Sauce Piquante before Thanksgiving Day service",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-vh81q0th",
+        "was": "the chef ask how the Redfish Meunière was built for Thanksgiving Day",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-k67atc4d",
+        "was": "the sommelier ask to confirm the first pick and bottle tiers for the Redfish Meunière before Thanksgiving Day service",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-yvcfuxxp",
+        "was": "the chef ask how the Veal Grillades was built for Thanksgiving Day",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-xbp284dj",
+        "was": "the sommelier ask to confirm the first pick and bottle tiers for the Veal Grillades before Thanksgiving Day service",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-frxielwb",
+        "was": "the chef ask how the Sweet Potato Pot de Crème was built for Thanksgiving Day",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-d1gd4ecm",
+        "was": "the sommelier ask to confirm the first pick and bottle tiers for the Sweet Potato Pot de Crème before Thanksgiving Day service",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-m1chwhwr",
+        "was": "the chef ask how the Chocolate and Orange Tart was built for Thanksgiving Day",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-soooj19p",
+        "was": "the sommelier ask to confirm the first pick and bottle tiers for the Chocolate and Orange Tart before Thanksgiving Day service",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-slrub78b",
+        "was": "the chef ask how the Titus’ BBQ Shrimp Stuffing was built for Thanksgiving Day",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-q0h51gla",
+        "was": "the chef ask how the Herbed Potato Purée, the Haricots Verts and the Cranberry Sauce were made on Thanksgiving Day",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-epjw576x",
+        "was": "the manager ask whether the photograph of the Thanksgiving Day menu cut words off two appetizer lines",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-peqco2cp",
+        "was": "the manager ask whether the Thanksgiving Day menu had more sides than the photograph shows, and its hours",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-hjd6lkfm",
+        "was": "the chef ask whether the Thanksgiving Day soups were the house Turtle Soup and Seafood Gumbo, and the filé",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-nw3a38tw",
+        "was": "the chef ask on the Thanksgiving Day Bananas Foster's ice cream and its $5 tableside flambé",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-5sqed13r",
+        "was": "the chef ask on allergens across the Thanksgiving Day menu",
+        "tombstone": "2026-11-22T10:24:00.001Z"
+      },
+      "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
+      "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
     }
   ]
 }
