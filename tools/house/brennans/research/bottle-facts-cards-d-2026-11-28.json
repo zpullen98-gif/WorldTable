@@ -1,5 +1,5 @@
 {
-	"about": "Facts behind the study cards of the Binwise list of 28 November 2026 (card chunks c1 to c5): each bottle as the catalogue research/winelist-2026-11-28.json prints it (its ledger key, entry n, bin, vintage, size, the printed price with its dollar sign and the paste line), and each fact a card states that the guide and the paste do not, with how it is known. A fact found by search names where, and every fact rests on two sources or one primary source (the producer, its importer, the appellation body); a fact that could not be confirmed is recorded as left out. Nothing here is a score or a price the list does not print. Under mentions, the other bottles of the list the cards name as a step or a mix-up, each as the catalogue holds it.",
+	"about": "Facts behind the study cards of the Binwise list of 28 November 2026 (card chunks c1 to c6): each bottle as the catalogue research/winelist-2026-11-28.json prints it (its ledger key, entry n, bin, vintage, size, the printed price with its dollar sign and the paste line), and each fact a card states that the guide and the paste do not, with how it is known. A fact found by search names where, and every fact rests on two sources or one primary source (the producer, its importer, the appellation body); a fact that could not be confirmed is recorded as left out. Nothing here is a score or a price the list does not print. Under mentions, the other bottles of the list the cards name as a step or a mix-up, each as the catalogue holds it.",
 	"readOn": "2026-11-28",
 	"bottles": [
 		{
@@ -506,6 +506,92 @@
 					"how": "search, 28 November 2026; not confirmed by two sources, a living person, or volatile"
 				}
 			]
+		},
+		{
+			"key": "a18",
+			"n": 20,
+			"bin": "32552",
+			"name": "Nicchia Lambrusco di Modena IT",
+			"card": "Nicchia Lambrusco di Modena NV",
+			"chunk": "c6",
+			"vintage": "NV",
+			"size": "750ml",
+			"printed": "$50",
+			"line": 109,
+			"section": "Selections Under $100 > Sparkling",
+			"facts": [
+				{
+					"fact": "The list prints one Lambrusco, this one, carried from 3 October 2026 (key a18, n 20, bin 32552, line 109, NV, $50), under Selections Under $100 > Sparkling. It is the least expensive of the three bottles on that page (Chapel Down Rosé Brut Kent, a16, $75; Domaine Huet Pétillant Vouvray, a17, $90). Two other sparkling printings are also $50: Caneva da Nani \"El Vin Col Fondo\" Veneto (a605, n 600, bin 32531, line 3102, 750ml, International ~ Sparkling > Italy) and the Tribaut-Schloesser \"Origine\" Brut half bottle (a390, n 387, bin 32361, line 2018, 375ml). So the card says least expensive on the Under $100 page, and the service note names the Caneva da Nani at the same price; no full bottle of sparkling on the list is below $50.",
+					"how": "the catalogue research/winelist-2026-11-28.json, the ledger research/winelist/ledger.json and the paste, lines 99 to 112, 2018 and 3102"
+				},
+				{
+					"fact": "Nicchia is made by the Carafoli family (Famiglia Carafoli, Cantina Carafoli) near Modena, Emilia-Romagna, and is a Lambrusco di Modena DOC.",
+					"how": "research/winelist/producers-c.json nicchia (the Carafoli family near Modena); search, 28 November 2026: Perrine's Wine Shop (NV Famiglia Carafoli \"Nicchia\" Lambrusco di Modena, Emilia Romagna), 67 Wine (Famiglia Carafoli Nicchia Lambrusco di Modena), Delectable (Famiglia Carafoli, Nicchia Lambrusco di Modena), Saratoga Wine (Nicchia Lambrusco di Modena DOC). One listing (Wine and Spirits Market) gives the Nicchia name to Cantina di Sorbara and another Nicchia is a Lambrusco di Sorbara from Cantina di Sorbara: a different wine, not ours"
+				},
+				{
+					"fact": "A blend of Lambrusco Salamino, Lambrusco Marani and Lambrusco Grasparossa, made sparkling by the Charmat method, in a pressure tank, after a brief cold maceration; frizzante, about 8.5 percent alcohol.",
+					"how": "search, 28 November 2026: retail and importer descriptions (Perrine's Wine Shop; 67 Wine; De Wine Spot; Bitters and Bottles) give the three grapes, the Charmat method, frizzante and 8.5 percent. No sheet from the producer itself was found, and the card's facts rest on these agreeing descriptions. The founding year (1919, Mauro Carafoli, Ravarino) appears in one retail blurb only and is left out"
+				},
+				{
+					"fact": "The style is medium sweet, not dry: the listings call it medium sweet, a user review calls it sweeter than the reviewer prefers, and the 8.5 percent alcohol fits a wine with sugar left in it.",
+					"how": "search, 28 November 2026: 67 Wine (frizzante, medium sweet, 8.5 percent), Saratoga Wine and Perrine's Wine Shop (medium sweet, sparkling), Delectable (a user note: a bit sweeter than I prefer). The producer's own statement of the sweetness (secco, amabile or dolce on the label) was not found; the card says medium sweet and sends the back label to the sommelier"
+				},
+				{
+					"fact": "In the glass: ruby red, black plum and tart cherry.",
+					"how": "search, 28 November 2026: De Wine Spot (black plum, crushed blackberry, tart cherry, red currant, subtle violet; full ruby red); 67 Wine (cherry, red fruits and plums). Only plum and cherry are in two sources, so the card names those two; blackberry, red currant and violet are left out"
+				},
+				{
+					"fact": "The label carries a portrait of the Countess of Castiglione.",
+					"how": "search, 28 November 2026: 67 Wine and Barley and Vine (the countess's portrait on the label). The retail copy's claims about her part in Italian unification and early photography are not repeated on the card"
+				},
+				{
+					"fact": "Lambrusco is a family of red grapes of Emilia-Romagna (Salamino, Grasparossa, Sorbara and Marani among them), made into sparkling red wine, usually frizzante, in styles from dry (secco) to off dry (amabile) to sweet (dolce). Lambrusco di Modena DOC covers the province of Modena and permits the Lambrusco grapes to be blended, with frizzante among its types.",
+					"how": "search, 28 November 2026: the regional government's text of the DOC Modena o di Modena disciplinare (agricoltura.regione.emilia-romagna.it and the Bollettino Ufficiale of 28 August 2023: Grasparossa, Salamino, Sorbara and Marani among the permitted Lambrusco grapes; frizzante, spumante and red and rosé types), a primary source; Wikipedia, Lambrusco (secco, amabile, dolce). The exact percentage rules were not confirmed and the card does not give them"
+				},
+				{
+					"fact": "Cured meats are the classic partner.",
+					"how": "search, 28 November 2026: Bitters and Bottles and De Wine Spot (charcuterie, cured meats), 67 Wine. The card's own pairings (Agnolotti del Plin, Duck Confit Waffle, Roost Burger) are a sommelier's choice from the menu, reasoned in taste terms, not a sourced claim"
+				}
+			]
+		},
+		{
+			"key": "b30",
+			"n": 30,
+			"bin": "1557",
+			"name": "Elena Walch Pinot Grigio Alto Adige IT",
+			"card": "Elena Walch Pinot Grigio Alto Adige 2025",
+			"chunk": "c6",
+			"vintage": "2025",
+			"size": "750ml",
+			"printed": "$55",
+			"line": 165,
+			"section": "Selections Under $100 > Other White Varietals & Blends",
+			"facts": [
+				{
+					"fact": "The list prints this wine twice under one bin, both new on 28 November 2026: b30 (n 30, bin 1557, line 165, Selections Under $100 > Other White Varietals & Blends, printed Elena Walch Pinot Grigio Alto Adige IT) and b1279 (n 1279, bin 1557, line 6635, Italy & Greece ~ White > Italy). It is the list's only Pinot Grigio; the Willamette Valley Vineyards Pinot Gris (a1409, n 1389, bin 148422, line 7205, 2023, $45) and the Lemelson Tikka's Run Pinot Gris by the glass (b6) are the same grape. Elena Walch's other lines: Beyond the Clouds Chardonnay Blend 2022 (b1280, n 1280, bin 13292, line 6640, $200) and Ludwig Pinot Nero 2019 (a3231, n 3222, bin 15871, line 16606, $115).",
+					"how": "the catalogue research/winelist-2026-11-28.json, the ledger research/winelist/ledger.json and the paste, lines 165, 6635, 6640, 7205 and 16606"
+				},
+				{
+					"fact": "100 percent estate Pinot Grigio, Alto Adige DOC, from steep slopes facing southeast and southwest between 250 and 900 meters, on light limestone and porphyry soils (calcareous soils with clay, sand and porphyry); fermented in temperature controlled stainless steel at about 68°F and aged in stainless steel, several months on its fine lees, no oak; 2025: 13 percent alcohol, 1.4 grams a liter of residual sugar, dry.",
+					"how": "the winery's 2025 Pinot Grigio fact sheet, published by its US importer Wilson Daniels (images.salsify.com, EW_2025_Pinot_Grigio_Fact_Sheet.pdf) and the winery's own product page and sheets (elenawalch.com, Pinot Grigio), a primary source, found by search 28 November 2026. Some retail listings give 12.5 percent; the card gives no alcohol figure"
+				},
+				{
+					"fact": "The winery's tasting note: light straw yellow, ripe pear, white pepper and a little sage.",
+					"how": "the 2025 fact sheet and the winery's product page, a primary source, found by search 28 November 2026"
+				},
+				{
+					"fact": "Elena Walch is a family estate at Tramin (Termeno) on the South Tyrolean Wine Road in Alto Adige; its two single vineyards (Vigna) are Castel Ringberg, above Lake Kaltern, and Kastelaz, a steep slope in Tramin.",
+					"how": "search, 28 November 2026: Falstaff (Elena Walch), wein.plus wine guide (Elena Walch, Castel Ringberg and Kastelaz), suedtirol.info (Elena Walch, Tramin an der Weinstraße, Termeno sulla Strada del Vino), Wilson Daniels (Elena Walch story); research/winelist/producers-c.json elena-walch (a family estate in Alto Adige). The founding year, the hectares, the bottles made and the family's century of ownership disagree between sources and are left out; the people of the estate are living and are not named"
+				},
+				{
+					"fact": "The 2025 vintage in Alto Adige: an early, quick harvest that ended in good conditions after a season of marked temperature swings; whites lighter in body with lower alcohol, keeping their aroma.",
+					"how": "search, 28 November 2026: the Alto Adige Wines consortium (Consorzio Vini Alto Adige), the region's own body: its harvest release of 22 October 2025 and its vintage report of 23 July 2026 (via PR Newswire and Wine Industry Advisor); Cantina Tramin's 2025 notes (whites lighter than in earlier years, less alcohol, more acidity)"
+				},
+				{
+					"fact": "Alto Adige, the South Tyrol, is Italy's northernmost wine region, below the Austrian border, an autonomous province that was part of Austria until the end of the First World War, so German is spoken alongside Italian and place names are bilingual (Tramin, Termeno). Vineyards around Tramin run from about 250 to 850 meters; the swing from warm days to cool nights, above all in autumn, is credited with the wines' aroma. Gewürztraminer is named for Tramin.",
+					"how": "search, 28 November 2026: Wikipedia, South Tyrol wine (Austrian history under Austria-Hungary; autonomous province); suedtirol.info (bilingual place names); suedtirolerland.it (Termeno on the Wine Road, the home of Gewürztraminer, vineyards 250 to 850 meters); weinstrasse.com (day and night temperature differences in autumn lend the wines aroma). The transfer to Italy after the First World War (Treaty of Saint-Germain, 1919) is standard history and was not separately searched"
+				}
+			]
 		}
 	],
 	"mentions": [
@@ -788,6 +874,46 @@
 			"vintage": "2021",
 			"printed": "$230",
 			"how": "the riper Sonoma Coast Pinot Noir named as a step on the Peay card"
+		},
+		{
+			"n": 600,
+			"bin": "32531",
+			"name": "Caneva da Nani \"El Vin Col Fondo\" Veneto",
+			"vintage": "NV",
+			"printed": "$50",
+			"how": "the other full sparkling bottle at $50, named in the Nicchia service note"
+		},
+		{
+			"n": 387,
+			"bin": "32361",
+			"name": "Tribaut-Schloesser \"Origine\" Brut • 375ml Half-bottle",
+			"vintage": "NV",
+			"printed": "$50",
+			"how": "the half bottle of Champagne at $50, why the Nicchia card says least expensive on its page"
+		},
+		{
+			"n": 1279,
+			"bin": "1557",
+			"name": "Elena Walch Pinot Grigio Alto Adige",
+			"vintage": "2025",
+			"printed": "$55",
+			"how": "the second printing of the Elena Walch Pinot Grigio, on the Italian whites page"
+		},
+		{
+			"n": 1280,
+			"bin": "13292",
+			"name": "Elena Walch \"Beyond the Clouds\" Chardonnay Blend Alto Adige",
+			"vintage": "2022",
+			"printed": "$200",
+			"how": "Elena Walch's white blend, named on the Pinot Grigio card"
+		},
+		{
+			"n": 3222,
+			"bin": "15871",
+			"name": "Elena Walch \"Ludwig\" Pinot Nero Alto Adige",
+			"vintage": "2019",
+			"printed": "$115",
+			"how": "Elena Walch's Pinot Nero, named on the Pinot Grigio card"
 		}
 	]
 }

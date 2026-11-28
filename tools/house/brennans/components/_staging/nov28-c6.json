@@ -1,0 +1,64 @@
+{
+	"components": [
+		{
+			"terms": [],
+			"key": "wine-region-lambrusco",
+			"kind": "ingredient",
+			"name": "Lambrusco di Modena",
+			"say": "lahm-BROOS-koh dee MOH-deh-nah",
+			"explain": "Lambrusco is the red sparkling wine of Emilia-Romagna, the region of Modena, Parma and Reggio Emilia, and the name of a family of red grapes grown there: Lambrusco Salamino, Grasparossa, Sorbara and Marani among them.\n\nLambrusco di Modena is the appellation that covers the province of Modena and lets a winery blend those grapes. It is made from dry to sweet, and most is frizzante, gently fizzy, often made sparkling in a pressure tank, which keeps the fruit fresh. It is served cool, and it is a classic partner for cured meats.\n\nOn our list: the Nicchia Lambrusco di Modena, a medium sweet blend of Salamino, Marani and Grasparossa, the only Lambrusco on the list. Say: the fizzy red of Modena, served cool.",
+			"card": {
+				"front": "What is Lambrusco, and what style is our Nicchia?",
+				"back": "The red sparkling wine of Emilia-Romagna, from the Lambrusco family of grapes, usually gently fizzy. Our Nicchia Lambrusco di Modena is medium sweet, a blend of Salamino, Marani and Grasparossa."
+			},
+			"items": [
+				"Nicchia Lambrusco di Modena NV"
+			],
+			"sources": [
+				"research/bottle-facts-cards-d-2026-11-28.json (a18: Lambrusco and the Lambrusco di Modena appellation)",
+				"research/winelist/producers-c.json nicchia",
+				"page:binwise-wine-list-2026-11-28.txt line 109"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-region-alto-adige",
+			"kind": "ingredient",
+			"name": "Alto Adige",
+			"say": "AHL-toh AH-dee-jeh",
+			"explain": "Alto Adige, the South Tyrol, is Italy’s northernmost wine region, in the Alps below the Austrian border. It was part of Austria until the end of the First World War, so German is spoken alongside Italian and place names come in both languages: Tramin is Termeno.\n\nThe vineyards climb steep slopes, from about 250 meters to well above 800, and the swing from warm days to cool autumn nights keeps the whites aromatic and fresh. Tramin gave Gewürztraminer its name.\n\nOn our list: Elena Walch’s Pinot Grigio 2025, dry and fresh from steel, with the estate’s Beyond the Clouds and Ludwig Pinot Nero, and Cantina Terlano’s whites and Monticol Pinot Noir. Say: the Italian Alps, German speaking, fresh mountain whites.",
+			"card": {
+				"front": "Where is Alto Adige, and why do its labels carry German names?",
+				"back": "Italy’s northernmost wine region, the South Tyrol, in the Alps below Austria. It was part of Austria until the end of the First World War, so German is spoken there and Tramin is also Termeno."
+			},
+			"items": [
+				"Elena Walch Pinot Grigio Alto Adige 2025"
+			],
+			"sources": [
+				"research/bottle-facts-cards-d-2026-11-28.json (b30: Alto Adige)",
+				"research/winelist/producers-c.json elena-walch, cantina-terlano",
+				"page:binwise-wine-list-2026-11-28.txt lines 165, 6615 to 6640 and 16606 to 16626"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-story-elena-walch",
+			"kind": "story",
+			"name": "Elena Walch",
+			"say": "VAHLK",
+			"explain": "Elena Walch is a family estate at Tramin, Termeno in Italian, on the Wine Road of Alto Adige. Its two single vineyards are Castel Ringberg, above Lake Kaltern, and Kastelaz, a steep slope in Tramin.\n\nThe estate is known for its whites and for Pinot Nero. Its Pinot Grigio is all estate fruit from slopes between 250 and 900 meters, fermented cool in stainless steel and kept several months on its fine lees: dry, with ripe pear, white pepper and a little sage.\n\nOn our list are three Elena Walch lines: the Pinot Grigio 2025 at $55, the white blend Beyond the Clouds 2022 and the Ludwig Pinot Nero 2019. The Pinot Grigio is carded. Say: a family estate in the Italian Alps.",
+			"card": {
+				"front": "How is Elena Walch’s Pinot Grigio made?",
+				"back": "From estate vineyards in Alto Adige between 250 and 900 meters, fermented cool in stainless steel and kept several months on its fine lees, with no oak: dry, ripe pear, white pepper and sage."
+			},
+			"items": [
+				"Elena Walch Pinot Grigio Alto Adige 2025"
+			],
+			"sources": [
+				"research/bottle-facts-cards-d-2026-11-28.json (b30: Elena Walch)",
+				"research/winelist/producers-c.json elena-walch",
+				"page:binwise-wine-list-2026-11-28.txt lines 165, 6635, 6640 and 16606"
+			]
+		}
+	]
+}
