@@ -1,0 +1,352 @@
+{
+	"entries": [
+		{
+			"target": "wine:+",
+			"op": "add",
+			"value": {
+				"name": "Altesino Brunello di Montalcino 2020",
+				"section": "Italy and Spain",
+				"group": "Italy and Spain: Brunello di Montalcino",
+				"meals": [
+					"Breakfast & lunch",
+					"Dinner"
+				],
+				"price": "$150",
+				"prices": [
+					{
+						"meal": "Bottle list",
+						"printed": "$150"
+					}
+				],
+				"glass": "",
+				"bottle": "$150",
+				"pours": [],
+				"list": "bottle",
+				"bin": "1747",
+				"size": "750ml",
+				"producer": "Altesino",
+				"wine": "Brunello di Montalcino",
+				"vintage": "2020",
+				"region": "Montalcino, Tuscany, Italy",
+				"grapes": [
+					"Sangiovese"
+				],
+				"style": "Classic Brunello di Montalcino, all Sangiovese, aged about three years in large Slavonian oak casks",
+				"profile": "All Sangiovese from Altesino’s vineyards in several corners of Montalcino, aged about three years in large Slavonian oak casks before release: red and black cherry, plum, violet and wild herbs with a little tobacco, firm, polished tannin and bright acidity, from a warm, dry year that kept its freshness.",
+				"guest": "Altesino Brunello di Montalcino 2020: classic Tuscan Sangiovese, cherry, plum and violet, firm and bright, made for beef and a rich brown sauce.",
+				"goesWith": "Beef with brown sauces, pork and Parmesan: the Chateau Espagnole and its sauce Espagnole, the Roasted Chateaubriand, the Agnolotti del Plin with its pork, ricotta and Parmesan, and Maggie’s Mushrooms.",
+				"serve": "Serve 60 to 64°F in a large Bordeaux glass. Decant about forty-five minutes ahead: a young Brunello opens with air.",
+				"say": "Altesino: ahl-teh-ZEE-noh; Brunello di Montalcino: broo-NELL-oh dee mon-tahl-CHEE-noh.",
+				"why": "Our classic Brunello at $150: all Sangiovese, cherry, violet and firm tannin, the younger, gentler priced step below the Biondi Santi 2012, for the Chateau Espagnole and the Roasted Chateaubriand.",
+				"origin": "Altesino was founded in 1970 around Palazzo Altesi, a fifteenth century palazzo in the hills northeast of Montalcino; in 1975 it bottled its Montosoli vineyard on its own, credited as the first single vineyard Brunello. This is the estate Brunello, blended from vineyards across the zone.",
+				"parts": {
+					"main": "Sangiovese from estate vineyards across Montalcino",
+					"technique": "about three years in large Slavonian oak casks",
+					"sauce": "classic Brunello from a warm, dry year that kept its freshness",
+					"sides": "Chateaubriand and sauce Espagnole, pork agnolotti, mushrooms",
+					"taste": "red and black cherry, plum, violet, wild herbs"
+				},
+				"lines": {
+					"s10": "Altesino Brunello di Montalcino 2020: classic Tuscan Sangiovese, cherry and violet with firm tannin, for the Chateau Espagnole.",
+					"s20": "Altesino’s Brunello is all Sangiovese from vineyards across Montalcino, aged about three years in big Slavonian oak casks: red and black cherry, plum, violet and wild herbs, firm and bright. Its acidity and grip meet the beef and the rich sauce Espagnole of the Chateau Espagnole.",
+					"s45": "Brunello di Montalcino is Sangiovese alone, from the hill town of Montalcino south of Siena. Altesino, founded in 1970 at Palazzo Altesi, bottled its Montosoli vineyard on its own in 1975, credited as the first single vineyard Brunello. This is the estate Brunello, blended from vineyards across the zone and aged about three years in large Slavonian casks, so fruit leads, not wood. 2020 was warm and dry, yet the wine is fresh: red and black cherry, plum, violet, wild herbs and tobacco over firm, polished tannin. Its acidity cuts the sauce Espagnole of the Chateau Espagnole; we decant it forty-five minutes and pour at 60 to 64°F.",
+					"sale": "Altesino’s 2020 is classic Brunello, all Sangiovese aged in large Slavonian oak casks: red and black cherry, plum and violet with firm, bright tannin. Offer it decanted with the Chateau Espagnole, its acidity for the rich sauce Espagnole and its grip for the beef."
+				},
+				"serviceNote": "Bin 1747 on the Binwise list read 28 November 2026, 750 ml, $150, under Italy, Red, Tuscany, Brunello & Rosso di Montalcino, printed as Altesino Brunello di Montalcino. The list also prints Altesino’s Montosoli Brunello 2017 at bin 18552 ($250); this card is the 2020 at bin 1747. An anchor of the Italian bottles in the classic band; no dish tier. Confirm at lineup that it is in stock."
+			},
+			"reason": "A floor bottle from the Binwise list of 28 November 2026 (chunk c3, Italy and Spain): a full study card, every catalogue figure copied from the entry by its key, every fact beyond the list recorded in the cards-d research file with how it is known (roles anchor and classic; no dish tier). Of the two Altesino printings the card is the estate Brunello 2020; the Montosoli 2017 is named in the service note and kept notes",
+			"source": "research/winelist-2026-11-28.json n=3273, key a3284 (page:binwise-wine-list-2026-11-28.txt line 16869: bin 1747, Altesino Brunello di Montalcino, 2020, 150; Italy ~ Red > Tuscany ~ Brunello & Rosso di Montalcino); the other Altesino printing at n=3274, key a3285 (line 16874: bin 18552, Altesino \"Montosoli\" Brunello di Montalcino, 2017, 250); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Italy and Spain, roles anchor and classic: the Brunello in the classic band the Il Poggione 2018 was); research/winelist/producers-c.json altesino; research/bottle-facts-cards-d-2026-11-28.json a3284"
+		},
+		{
+			"target": "wine:Altesino Brunello di Montalcino 2020",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "Tell me about it.",
+				"a": "Altesino Brunello di Montalcino 2020 is $150, bin 1747, filed under Italy, Red, Tuscany, Brunello & Rosso di Montalcino, and our classic Brunello.\n\nBrunello di Montalcino, broo-NELL-oh dee mon-tahl-CHEE-noh, is red wine from Sangiovese alone, grown around the hill town of Montalcino south of Siena and aged at least two years in oak before release.\n\nAltesino, ahl-teh-ZEE-noh, was founded in 1970 around Palazzo Altesi, a fifteenth century palazzo in the hills northeast of town. In 1975 it bottled its Montosoli vineyard on its own, credited as the first single vineyard Brunello. This bottle is the estate Brunello, blended from vineyards in several corners of the zone, fermented in steel and aged about three years in large Slavonian oak casks, then some months in bottle.\n\n2020 was a warm, dry summer, and the wines came out fresher than the heat suggested. This one tastes of red and black cherry, plum, violet and wild herbs with a little tobacco, with firm, polished tannin and bright acidity.\n\nThe other Altesino line: the Montosoli 2017, bin 18552 at $250, the single vineyard bottling."
+			},
+			"reason": "Study notes, the description: what a master sommelier tells a new Brennan’s server who asks about this bottle, every fact from the sources named",
+			"source": "research/winelist-2026-11-28.json n=3273, key a3284 (page:binwise-wine-list-2026-11-28.txt line 16869: bin 1747, Altesino Brunello di Montalcino, 2020, 150; Italy ~ Red > Tuscany ~ Brunello & Rosso di Montalcino); the other Altesino printing at n=3274, key a3285 (line 16874: bin 18552, Altesino \"Montosoli\" Brunello di Montalcino, 2017, 250); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Italy and Spain, roles anchor and classic: the Brunello in the classic band the Il Poggione 2018 was); research/winelist/producers-c.json altesino; research/bottle-facts-cards-d-2026-11-28.json a3284"
+		},
+		{
+			"target": "wine:Altesino Brunello di Montalcino 2020",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I sell it?",
+				"a": "Offer it with the Chateau Espagnole, the Roasted Chateaubriand or the Agnolotti del Plin, to the guest who asks for Brunello or a Tuscan red, and to the table that wants an Italian bottle with beef. For Brunello at its most historic, the Biondi Santi Annata 2012 at $425; for Altesino’s single vineyard, the Montosoli 2017 at $250. Say: “Altesino is classic Brunello, all Sangiovese: cherry, plum and violet with firm tannin, lovely with the Chateaubriand.”"
+			},
+			"reason": "Study notes, coaching: when, to whom and with what to offer it, and one line to say, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=3273, key a3284 (page:binwise-wine-list-2026-11-28.txt line 16869: bin 1747, Altesino Brunello di Montalcino, 2020, 150; Italy ~ Red > Tuscany ~ Brunello & Rosso di Montalcino); the other Altesino printing at n=3274, key a3285 (line 16874: bin 18552, Altesino \"Montosoli\" Brunello di Montalcino, 2017, 250); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Italy and Spain, roles anchor and classic: the Brunello in the classic band the Il Poggione 2018 was); research/winelist/producers-c.json altesino; research/bottle-facts-cards-d-2026-11-28.json a3284"
+		},
+		{
+			"target": "wine:Altesino Brunello di Montalcino 2020",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What do guests ask?",
+				"a": "Asked: Is Brunello a grape?\n\nAnswer: Brunello is the old local name for Sangiovese in Montalcino; the wine must be all Sangiovese.\n\nAsked: Is the 2020 ready?\n\nAnswer: It is young and firm. Forty-five minutes in a decanter opens it; the sommelier decides on the night.\n\nAsked: How is it different from Chianti?\n\nAnswer: Both are Sangiovese, but Brunello comes only from Montalcino, south of the Chianti hills, must be all Sangiovese and ages longer before release, so it is deeper and firmer."
+			},
+			"reason": "Study notes, coaching: the questions guests ask and the true answers, or the sommelier to ask, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=3273, key a3284 (page:binwise-wine-list-2026-11-28.txt line 16869: bin 1747, Altesino Brunello di Montalcino, 2020, 150; Italy ~ Red > Tuscany ~ Brunello & Rosso di Montalcino); the other Altesino printing at n=3274, key a3285 (line 16874: bin 18552, Altesino \"Montosoli\" Brunello di Montalcino, 2017, 250); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Italy and Spain, roles anchor and classic: the Brunello in the classic band the Il Poggione 2018 was); research/winelist/producers-c.json altesino; research/bottle-facts-cards-d-2026-11-28.json a3284"
+		},
+		{
+			"target": "wine:Altesino Brunello di Montalcino 2020",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What should I watch for?",
+				"a": "Two Altesino bottles of Brunello sit together: this 2020 at bin 1747 and the Montosoli 2017 at bin 18552. Ring it in by bin 1747 and check that the label shows 2020 and no vineyard name. The page prints many bottles of Brunello, Val di Suga, Caparzo and Pieve Santa Restituta among them, so pull by producer and vintage. The importer’s sheets give different cask times and soils by vintage, so anything beyond large Slavonian oak for about three years is a question for the sommelier. Allergens: read the service note and confirm at lineup."
+			},
+			"reason": "Study notes, coaching: the mix-ups on the list, the handling and the lineup questions, closing on the service note, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=3273, key a3284 (page:binwise-wine-list-2026-11-28.txt line 16869: bin 1747, Altesino Brunello di Montalcino, 2020, 150; Italy ~ Red > Tuscany ~ Brunello & Rosso di Montalcino); the other Altesino printing at n=3274, key a3285 (line 16874: bin 18552, Altesino \"Montosoli\" Brunello di Montalcino, 2017, 250); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Italy and Spain, roles anchor and classic: the Brunello in the classic band the Il Poggione 2018 was); research/winelist/producers-c.json altesino; research/bottle-facts-cards-d-2026-11-28.json a3284"
+		},
+		{
+			"target": "wine:Altesino Brunello di Montalcino 2020",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I pour it?",
+				"a": "Present the bottle and say Altesino, Brunello di Montalcino, 2020, ahl-teh-ZEE-noh. Decant it at the side stand about forty-five minutes ahead and serve at 60 to 64°F in large Bordeaux glasses. Pour a taste for the host, then the guests, the host last, and set the bottle beside the decanter. Say: “Altesino 2020: classic Brunello, cherry and violet, opening in the decanter.”"
+			},
+			"reason": "Study notes, coaching: presenting, opening and pouring the bottle",
+			"source": "research/winelist-2026-11-28.json n=3273, key a3284 (page:binwise-wine-list-2026-11-28.txt line 16869: bin 1747, Altesino Brunello di Montalcino, 2020, 150; Italy ~ Red > Tuscany ~ Brunello & Rosso di Montalcino); the other Altesino printing at n=3274, key a3285 (line 16874: bin 18552, Altesino \"Montosoli\" Brunello di Montalcino, 2017, 250); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Italy and Spain, roles anchor and classic: the Brunello in the classic band the Il Poggione 2018 was); research/winelist/producers-c.json altesino; research/bottle-facts-cards-d-2026-11-28.json a3284"
+		},
+		{
+			"target": "wine:+",
+			"op": "add",
+			"value": {
+				"name": "Cru Monplaisir Bordeaux Supérieur 2022",
+				"section": "Bordeaux",
+				"group": "Bordeaux: Bordeaux Supérieur",
+				"meals": [
+					"Breakfast & lunch",
+					"Dinner"
+				],
+				"price": "$75",
+				"prices": [
+					{
+						"meal": "Bottle list",
+						"printed": "$75"
+					}
+				],
+				"glass": "",
+				"bottle": "$75",
+				"pours": [],
+				"list": "bottle",
+				"bin": "34512",
+				"size": "750ml",
+				"producer": "Cru Monplaisir",
+				"wine": "Bordeaux Supérieur",
+				"vintage": "2022",
+				"region": "Bordeaux Supérieur, beside Margaux, Bordeaux, France",
+				"grapes": [
+					"Merlot",
+					"Cabernet Sauvignon",
+					"Cabernet Franc"
+				],
+				"style": "Merlot led claret from two parcels just outside Margaux, supple and juicy",
+				"profile": "About three quarters Merlot with Cabernet Sauvignon and Cabernet Franc, from two parcels just outside the Margaux appellation, one on silt below Château d’Issan, one on gravel and clay below Château Margaux: ripe plum, red and black berries, cedar and dark spice, supple and juicy, from a hot, dry year of small, thick skinned berries.",
+				"guest": "Cru Monplaisir 2022: Merlot led claret from just outside Margaux, plum, berries and cedar, supple and juicy, lovely with steak.",
+				"goesWith": "Steak and red wine sauces: the Creole-Spiced Hanger Steak and its béarnaise, the Eggs Hussarde and the Eggs Owen under marchand de vin sauce, and the Roost Burger at the bar.",
+				"serve": "Serve 60 to 64°F in a Bordeaux glass. Open it at the table, or decant twenty minutes ahead if the host likes; it is supple young.",
+				"say": "Monplaisir: mohn-play-ZEER; Bordeaux Supérieur: bor-DOH soo-pay-RYUR.",
+				"why": "Our claret under $100: Merlot led Bordeaux from just outside Margaux, the bottle step from the Moulin d’Issan glass, plum and cedar for the Creole-Spiced Hanger Steak.",
+				"origin": "Cru Monplaisir is two parcels in the Bordeaux Supérieur appellation just outside Margaux, one below Château d’Issan and one below Château Margaux, owned since 2009 by the Gonet-Médeville family of Champagne.",
+				"parts": {
+					"main": "Merlot with the two Cabernets from just outside Margaux",
+					"technique": "two parcels: silt below Château d’Issan, gravel and clay below Château Margaux",
+					"sauce": "supple, juicy claret from a hot, dry year",
+					"sides": "hanger steak and béarnaise, marchand de vin sauce, burger",
+					"taste": "ripe plum, red and black berries, cedar, dark spice"
+				},
+				"lines": {
+					"s10": "Cru Monplaisir 2022: Merlot led claret from just outside Margaux, plum and cedar, the bottle step from our Moulin d’Issan glass.",
+					"s20": "Cru Monplaisir is two parcels just outside Margaux, one below Château d’Issan, so it is the bottle step from our Moulin d’Issan glass: mostly Merlot with the two Cabernets, ripe plum, berries and cedar, supple and juicy. Its fine tannin holds up to the béarnaise of the Creole-Spiced Hanger Steak.",
+					"s45": "Bordeaux Supérieur is where Médoc vines outside a village name go. Cru Monplaisir is two such parcels just outside Margaux: silt below Château d’Issan, whose team makes our Moulin d’Issan glass, and gravel and clay below Château Margaux. The Gonet-Médeville family of Champagne has owned it since 2009, and the wine is about three quarters Merlot with the two Cabernets. 2022 was a drought year of small, thick skinned berries, and this is ripe and supple: plum, red and black berries, cedar and dark spice. Its plush plum and fine tannin meet the beef and béarnaise of the Creole-Spiced Hanger Steak.",
+					"sale": "Cru Monplaisir is Merlot led claret from two parcels just outside Margaux, one below Château d’Issan: ripe plum, berries and cedar, supple and juicy. For the guest enjoying our Moulin d’Issan glass it is the bottle step, with the Creole-Spiced Hanger Steak and its béarnaise."
+				},
+				"serviceNote": "Bin 34512 on the Binwise list read 28 November 2026, 750 ml, $75, under France, Bordeaux, Red, Other Bordeaux, printed as Cru Montplasir Bordeaux Supérieur; the label reads Cru Monplaisir. The only Cru Monplaisir line on the list. An anchor of the Bordeaux bottles, the claret under $100, and the bottle step from the Moulin d’Issan glass; no dish tier. Confirm at lineup that it is in stock."
+			},
+			"reason": "A floor bottle from the Binwise list of 28 November 2026 (chunk c3, Bordeaux): a full study card, every catalogue figure copied from the entry by its key, every fact beyond the list recorded in the cards-d research file with how it is known (role value; no dish tier). The list prints Cru Montplasir; the card takes the label’s spelling, Cru Monplaisir, and its service note says how the list prints it",
+			"source": "research/winelist-2026-11-28.json n=2446, key b2446 (page:binwise-wine-list-2026-11-28.txt line 12649: bin 34512, Cru Montplasir Bordeaux Supérieur, 2022, 75; France ~ Bordeaux ~ Red > Other Bordeaux); the Moulin d’Issan glass at n=15, key a12 (line 81: Moulin d'Issan Bordeaux Supérieur FR, under Cabernet Sauvignon blend, 2023, 16); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Bordeaux, role value: a claret under $100, and the bottle step from the Moulin d’Issan glass); research/winelist/producers-d.json cru-monplaisir; research/bottle-facts-cards-d-2026-11-28.json b2446"
+		},
+		{
+			"target": "wine:Cru Monplaisir Bordeaux Supérieur 2022",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "Tell me about it.",
+				"a": "Cru Monplaisir Bordeaux Supérieur 2022 is $75, bin 34512, filed under France, Bordeaux, Red, Other Bordeaux, and our claret under $100. The list prints it as Cru Montplasir; the label reads Cru Monplaisir, mohn-play-ZEER.\n\nBordeaux Supérieur covers the whole Bordeaux region, with slightly stricter rules than plain Bordeaux. Cru Monplaisir is two parcels just outside the Margaux appellation: one on silt below Château d’Issan, the other on gravel and clay below Château Margaux. The Gonet-Médeville family of Champagne bought it in 2009.\n\nIt is about three quarters Merlot, with Cabernet Sauvignon and Cabernet Franc. 2022 in Bordeaux was hot and dry, with small, thick skinned berries and a small crop, yet the wines kept more freshness than the heat suggested. This one is ripe and supple: plum, red and black berries, cedar and dark spice, with fine tannin.\n\nIt is the bottle step from our Moulin d’Issan glass, the wine of Château d’Issan’s team: one of Monplaisir’s two parcels lies below that château."
+			},
+			"reason": "Study notes, the description: what a master sommelier tells a new Brennan’s server who asks about this bottle, every fact from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2446, key b2446 (page:binwise-wine-list-2026-11-28.txt line 12649: bin 34512, Cru Montplasir Bordeaux Supérieur, 2022, 75; France ~ Bordeaux ~ Red > Other Bordeaux); the Moulin d’Issan glass at n=15, key a12 (line 81: Moulin d'Issan Bordeaux Supérieur FR, under Cabernet Sauvignon blend, 2023, 16); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Bordeaux, role value: a claret under $100, and the bottle step from the Moulin d’Issan glass); research/winelist/producers-d.json cru-monplaisir; research/bottle-facts-cards-d-2026-11-28.json b2446"
+		},
+		{
+			"target": "wine:Cru Monplaisir Bordeaux Supérieur 2022",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I sell it?",
+				"a": "Offer it to the table drinking the Moulin d’Issan by the glass that would like a bottle, with the Creole-Spiced Hanger Steak, the Eggs Hussarde or the Eggs Owen, and to the guest who wants Bordeaux under $100. For a firmer Left Bank claret, La Chapelle de Meyney Saint-Estèphe 2018 at $80. Say: “Cru Monplaisir grows just outside Margaux, below Château d’Issan: Merlot led, plum and cedar, a lovely bottle with the steak.”"
+			},
+			"reason": "Study notes, coaching: when, to whom and with what to offer it, and one line to say, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2446, key b2446 (page:binwise-wine-list-2026-11-28.txt line 12649: bin 34512, Cru Montplasir Bordeaux Supérieur, 2022, 75; France ~ Bordeaux ~ Red > Other Bordeaux); the Moulin d’Issan glass at n=15, key a12 (line 81: Moulin d'Issan Bordeaux Supérieur FR, under Cabernet Sauvignon blend, 2023, 16); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Bordeaux, role value: a claret under $100, and the bottle step from the Moulin d’Issan glass); research/winelist/producers-d.json cru-monplaisir; research/bottle-facts-cards-d-2026-11-28.json b2446"
+		},
+		{
+			"target": "wine:Cru Monplaisir Bordeaux Supérieur 2022",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What do guests ask?",
+				"a": "Asked: Is it a Margaux?\n\nAnswer: No. Its two parcels lie just outside the Margaux appellation, below Château Margaux and Château d’Issan, so it is labeled Bordeaux Supérieur.\n\nAsked: Is it Cabernet or Merlot?\n\nAnswer: Mostly Merlot, about three quarters, with Cabernet Sauvignon and Cabernet Franc; the exact mix of the 2022 is a question for the sommelier.\n\nAsked: What does Supérieur mean?\n\nAnswer: A Bordeaux with slightly stricter rules than plain Bordeaux: riper grapes and a longer wait before release."
+			},
+			"reason": "Study notes, coaching: the questions guests ask and the true answers, or the sommelier to ask, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2446, key b2446 (page:binwise-wine-list-2026-11-28.txt line 12649: bin 34512, Cru Montplasir Bordeaux Supérieur, 2022, 75; France ~ Bordeaux ~ Red > Other Bordeaux); the Moulin d’Issan glass at n=15, key a12 (line 81: Moulin d'Issan Bordeaux Supérieur FR, under Cabernet Sauvignon blend, 2023, 16); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Bordeaux, role value: a claret under $100, and the bottle step from the Moulin d’Issan glass); research/winelist/producers-d.json cru-monplaisir; research/bottle-facts-cards-d-2026-11-28.json b2446"
+		},
+		{
+			"target": "wine:Cru Monplaisir Bordeaux Supérieur 2022",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What should I watch for?",
+				"a": "The list prints Cru Montplasir; the label reads Cru Monplaisir. Ring it in by bin 34512 and read the label against the order. It is not the Moulin d’Issan, our glass pour: offer it as the bottle step, never as the same wine. Sources disagree on how much of the 2022 was aged in barrel, so oak is a question for the sommelier. Allergens: read the service note and confirm at lineup."
+			},
+			"reason": "Study notes, coaching: the mix-ups on the list, the handling and the lineup questions, closing on the service note, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2446, key b2446 (page:binwise-wine-list-2026-11-28.txt line 12649: bin 34512, Cru Montplasir Bordeaux Supérieur, 2022, 75; France ~ Bordeaux ~ Red > Other Bordeaux); the Moulin d’Issan glass at n=15, key a12 (line 81: Moulin d'Issan Bordeaux Supérieur FR, under Cabernet Sauvignon blend, 2023, 16); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Bordeaux, role value: a claret under $100, and the bottle step from the Moulin d’Issan glass); research/winelist/producers-d.json cru-monplaisir; research/bottle-facts-cards-d-2026-11-28.json b2446"
+		},
+		{
+			"target": "wine:Cru Monplaisir Bordeaux Supérieur 2022",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I pour it?",
+				"a": "Present the bottle and say Cru Monplaisir, Bordeaux Supérieur, 2022, mohn-play-ZEER. Serve it at 60 to 64°F in Bordeaux glasses; open it at the table, or decant it twenty minutes ahead if the host likes. Pour a taste for the host, then the guests, the host last. Say: “Cru Monplaisir: Merlot led claret from just outside Margaux, plum and cedar.”"
+			},
+			"reason": "Study notes, coaching: presenting, opening and pouring the bottle",
+			"source": "research/winelist-2026-11-28.json n=2446, key b2446 (page:binwise-wine-list-2026-11-28.txt line 12649: bin 34512, Cru Montplasir Bordeaux Supérieur, 2022, 75; France ~ Bordeaux ~ Red > Other Bordeaux); the Moulin d’Issan glass at n=15, key a12 (line 81: Moulin d'Issan Bordeaux Supérieur FR, under Cabernet Sauvignon blend, 2023, 16); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Bordeaux, role value: a claret under $100, and the bottle step from the Moulin d’Issan glass); research/winelist/producers-d.json cru-monplaisir; research/bottle-facts-cards-d-2026-11-28.json b2446"
+		},
+		{
+			"target": "wine:+",
+			"op": "add",
+			"value": {
+				"name": "M. Chapoutier ‘La Bernardine’ Châteauneuf-du-Pape 2023",
+				"section": "Rhône",
+				"group": "Rhône: Châteauneuf-du-Pape",
+				"meals": [
+					"Breakfast & lunch",
+					"Dinner"
+				],
+				"price": "$150",
+				"prices": [
+					{
+						"meal": "Bottle list",
+						"printed": "$150"
+					}
+				],
+				"glass": "",
+				"bottle": "$150",
+				"pours": [],
+				"list": "bottle",
+				"bin": "24231",
+				"size": "750ml",
+				"producer": "M. Chapoutier",
+				"wine": "La Bernardine Châteauneuf-du-Pape",
+				"vintage": "2023",
+				"region": "Châteauneuf-du-Pape, Southern Rhône, France",
+				"grapes": [
+					"Grenache",
+					"Syrah",
+					"Mourvèdre"
+				],
+				"style": "Grenache led Châteauneuf-du-Pape, made and aged in concrete for fruit and freshness",
+				"profile": "About four fifths Grenache with Syrah and Mourvèdre from several terroirs of Châteauneuf-du-Pape, the rolled stones of the old Rhône bed and sandy safres among them, fermented and aged in concrete vats rather than oak: plum, blackcurrant, black cherry and kirsch with garrigue and a roasted coffee note, round and generous, from a warm, balanced year.",
+				"guest": "Chapoutier’s La Bernardine 2023: Grenache led Châteauneuf-du-Pape, plum, black cherry and garrigue, round and generous, for the lamb shank.",
+				"goesWith": "Lamb, spice and braise: the Lamb Shank en Croûte and its spiced lamb jus, the Creole Hanger Steak and its chili crisp, the Eggs Owen and its red wine braised short rib, and the Petite Filet Mignon.",
+				"serve": "Serve 60 to 64°F in a large red glass, a few minutes in the ice bucket if the room runs warm. Decant about thirty minutes ahead.",
+				"say": "Chapoutier: shah-poo-TYAY; La Bernardine: lah bair-nar-DEEN; Châteauneuf-du-Pape: shah-toh-NUF dew PAHP.",
+				"why": "Our Châteauneuf-du-Pape step from the Durban glass: Grenache led, plum, black cherry and garrigue from a Rhône house guests know, for the Lamb Shank en Croûte and the Creole Hanger Steak.",
+				"origin": "M. Chapoutier is a Tain-l’Hermitage house in the northern Rhône whose history goes back to 1808; La Bernardine, its Châteauneuf-du-Pape, is named for a house among the vines there that the family bought.",
+				"parts": {
+					"main": "Grenache with Syrah and Mourvèdre from several Châteauneuf terroirs",
+					"technique": "fermented and aged in concrete vats, not oak",
+					"sauce": "round, generous Southern Rhône red from a warm, balanced year",
+					"sides": "lamb shank daube and spiced jus, chili crisp, braised short rib",
+					"taste": "plum, blackcurrant, black cherry, garrigue"
+				},
+				"lines": {
+					"s10": "Chapoutier’s La Bernardine 2023: Grenache led Châteauneuf-du-Pape, plum, black cherry and garrigue, the bottle step from our Durban glass.",
+					"s20": "If you are enjoying the Durban, La Bernardine is the step up: Chapoutier’s Châteauneuf-du-Pape, mostly Grenache with Syrah and Mourvèdre, kept in concrete so the fruit stays fresh: plum, black cherry, blackcurrant and garrigue. Round and warm, it loves the spiced lamb jus of the Lamb Shank en Croûte.",
+					"s45": "Châteauneuf-du-Pape is the Southern Rhône village named for the popes’ summer castle near Avignon. Chapoutier, a Tain-l’Hermitage house whose history goes back to 1808, names La Bernardine for a house among its vines there. About four fifths Grenache with Syrah and Mourvèdre from several terroirs, it is fermented and aged in concrete, not oak, so it tastes of fruit: plum, black cherry, blackcurrant, garrigue and a roasted coffee note. 2023 was warm without the extreme heat of 2022. Our Durban glass is Grenache too; this is its bottle step, generous for the Lamb Shank en Croûte and soft enough for the chili crisp of the Creole Hanger Steak.",
+					"sale": "La Bernardine is Chapoutier’s Châteauneuf-du-Pape, mostly Grenache with Syrah and Mourvèdre, kept in concrete: plum, black cherry and garrigue, round and warm. For the guest enjoying our Durban glass it is the bottle step, decanted with the Lamb Shank en Croûte and its spiced jus."
+				},
+				"serviceNote": "Bin 24231 on the Binwise list read 28 November 2026, 750 ml, $150, under France, Rhône, Red, Châteauneuf-du-Pape, printed as M. Chapoutier ‘La Bernadine’; the label reads La Bernardine. Bin 24231 is also printed for the Luigi Tecce ‘Puro Sangue’ Riserva Taurasi 2018 ($225), so pull by name. The list also prints Chapoutier’s Les Meysonniers Crozes-Hermitage 2024 at bin 23742 ($110), printed Les Maysonniers. An anchor of the Rhône bottles and the bottle step from the Durban glass; no dish tier. Confirm at lineup that it is in stock."
+			},
+			"reason": "A floor bottle from the Binwise list of 28 November 2026 (chunk c3, Rhône): a full study card, every catalogue figure copied from the entry by its key, every fact beyond the list recorded in the cards-d research file with how it is known (role classic; no dish tier). The list prints La Bernadine; the card takes the label’s spelling, La Bernardine, and its service note says how the list prints it",
+			"source": "research/winelist-2026-11-28.json n=2573, key b2573 (page:binwise-wine-list-2026-11-28.txt line 13304: bin 24231, M. Chapoutier \"La Bernadine\", 2023, 150; France ~ Rhone ~ Red > Châteauneuf-du-Pape); the Luigi Tecce \"Puro Sangue\" Riserva Taurasi at n=3358, key a3371 (line 17304: the same bin 24231, 2018, 225); M. Chapoutier \"Les Maysonniers\" at n=2534, key b2534 (line 13105: bin 23742, 2024, 110); the Durban glass at n=12, key a11 (line 66: Domaine De Durban Beaumes-de-Venise FR, under Grenache blend, 2024, 18); page:brennans-sheets-2026-11-15.txt line 123 (the Durban, for the guest who likes Châteauneuf-du-Pape); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Rhône, role classic: the bottle step from the Durban glass); research/winelist/producers-d.json m-chapoutier; research/bottle-facts-cards-d-2026-11-28.json b2573"
+		},
+		{
+			"target": "wine:M. Chapoutier ‘La Bernardine’ Châteauneuf-du-Pape 2023",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "Tell me about it.",
+				"a": "M. Chapoutier La Bernardine Châteauneuf-du-Pape 2023 is $150, bin 24231, filed under France, Rhône, Red, Châteauneuf-du-Pape, and the bottle step from our Durban glass. The list prints La Bernadine; the label reads La Bernardine, lah bair-nar-DEEN.\n\nChâteauneuf-du-Pape, shah-toh-NUF dew PAHP, is the Southern Rhône village named for the popes’ summer castle near Avignon, where many vineyards lie under large rolled stones that hold the day’s heat.\n\nChapoutier, shah-poo-TYAY, is a house at Tain-l’Hermitage in the northern Rhône whose history goes back to 1808. It farms its own vines biodynamically and has printed Braille on every label since 1996. La Bernardine is named for a house among the Châteauneuf vines that the family bought. The red is about four fifths Grenache with Syrah and Mourvèdre, from several terroirs of the appellation, fermented and aged in concrete vats rather than oak.\n\n2023 was warm without the extreme heat of 2022. This one tastes of plum, black cherry, blackcurrant and garrigue, with a roasted coffee note, round and generous.\n\nOur house sheet says a guest who likes Châteauneuf-du-Pape will enjoy the Durban by the glass; La Bernardine is that Châteauneuf, by the bottle."
+			},
+			"reason": "Study notes, the description: what a master sommelier tells a new Brennan’s server who asks about this bottle, every fact from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2573, key b2573 (page:binwise-wine-list-2026-11-28.txt line 13304: bin 24231, M. Chapoutier \"La Bernadine\", 2023, 150; France ~ Rhone ~ Red > Châteauneuf-du-Pape); the Luigi Tecce \"Puro Sangue\" Riserva Taurasi at n=3358, key a3371 (line 17304: the same bin 24231, 2018, 225); M. Chapoutier \"Les Maysonniers\" at n=2534, key b2534 (line 13105: bin 23742, 2024, 110); the Durban glass at n=12, key a11 (line 66: Domaine De Durban Beaumes-de-Venise FR, under Grenache blend, 2024, 18); page:brennans-sheets-2026-11-15.txt line 123 (the Durban, for the guest who likes Châteauneuf-du-Pape); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Rhône, role classic: the bottle step from the Durban glass); research/winelist/producers-d.json m-chapoutier; research/bottle-facts-cards-d-2026-11-28.json b2573"
+		},
+		{
+			"target": "wine:M. Chapoutier ‘La Bernardine’ Châteauneuf-du-Pape 2023",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I sell it?",
+				"a": "Offer it to the table enjoying the Durban by the glass that would like a bottle, with the Lamb Shank en Croûte, the Creole Hanger Steak, the Eggs Owen or the Petite Filet Mignon, and to the guest who asks for Châteauneuf-du-Pape by name. For the traditional style, made with whole bunches and aged in old casks, the Pegau Cuvée Réservée 2020 at $195. Say: “La Bernardine is Chapoutier’s Châteauneuf-du-Pape: Grenache, plum, black cherry and spice, the Durban’s step up by the bottle.”"
+			},
+			"reason": "Study notes, coaching: when, to whom and with what to offer it, and one line to say, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2573, key b2573 (page:binwise-wine-list-2026-11-28.txt line 13304: bin 24231, M. Chapoutier \"La Bernadine\", 2023, 150; France ~ Rhone ~ Red > Châteauneuf-du-Pape); the Luigi Tecce \"Puro Sangue\" Riserva Taurasi at n=3358, key a3371 (line 17304: the same bin 24231, 2018, 225); M. Chapoutier \"Les Maysonniers\" at n=2534, key b2534 (line 13105: bin 23742, 2024, 110); the Durban glass at n=12, key a11 (line 66: Domaine De Durban Beaumes-de-Venise FR, under Grenache blend, 2024, 18); page:brennans-sheets-2026-11-15.txt line 123 (the Durban, for the guest who likes Châteauneuf-du-Pape); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Rhône, role classic: the bottle step from the Durban glass); research/winelist/producers-d.json m-chapoutier; research/bottle-facts-cards-d-2026-11-28.json b2573"
+		},
+		{
+			"target": "wine:M. Chapoutier ‘La Bernardine’ Châteauneuf-du-Pape 2023",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What do guests ask?",
+				"a": "Asked: Is it like the Durban?\n\nAnswer: Both are Grenache led reds of the Southern Rhône. La Bernardine is Châteauneuf-du-Pape: fuller, warmer and longer.\n\nAsked: Why is there Braille on the label?\n\nAnswer: Chapoutier has printed Braille on its labels since 1996, honoring a family link with Maurice de la Sizeranne, who devised an abridged form of Braille.\n\nAsked: Is it oaky?\n\nAnswer: No. By the house’s recent sheets it is made and aged in concrete vats, so it tastes of fruit and spice, not wood."
+			},
+			"reason": "Study notes, coaching: the questions guests ask and the true answers, or the sommelier to ask, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2573, key b2573 (page:binwise-wine-list-2026-11-28.txt line 13304: bin 24231, M. Chapoutier \"La Bernadine\", 2023, 150; France ~ Rhone ~ Red > Châteauneuf-du-Pape); the Luigi Tecce \"Puro Sangue\" Riserva Taurasi at n=3358, key a3371 (line 17304: the same bin 24231, 2018, 225); M. Chapoutier \"Les Maysonniers\" at n=2534, key b2534 (line 13105: bin 23742, 2024, 110); the Durban glass at n=12, key a11 (line 66: Domaine De Durban Beaumes-de-Venise FR, under Grenache blend, 2024, 18); page:brennans-sheets-2026-11-15.txt line 123 (the Durban, for the guest who likes Châteauneuf-du-Pape); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Rhône, role classic: the bottle step from the Durban glass); research/winelist/producers-d.json m-chapoutier; research/bottle-facts-cards-d-2026-11-28.json b2573"
+		},
+		{
+			"target": "wine:M. Chapoutier ‘La Bernardine’ Châteauneuf-du-Pape 2023",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What should I watch for?",
+				"a": "The list prints La Bernadine; the label reads La Bernardine. Bin 24231 is also printed for the Luigi Tecce Puro Sangue Riserva Taurasi 2018, so ring it in by bin and pull by name and vintage. Chapoutier also makes a white La Bernardine, not on our list: check that the bottle is the red. Les Meysonniers 2024, printed Les Maysonniers at bin 23742, is Chapoutier’s Crozes-Hermitage Syrah, not this wine. One trade source says La Bernardine sees oak; the sheets for recent vintages say concrete, so leave the question to the sommelier. Allergens: read the service note and confirm at lineup."
+			},
+			"reason": "Study notes, coaching: the mix-ups on the list, the handling and the lineup questions, closing on the service note, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2573, key b2573 (page:binwise-wine-list-2026-11-28.txt line 13304: bin 24231, M. Chapoutier \"La Bernadine\", 2023, 150; France ~ Rhone ~ Red > Châteauneuf-du-Pape); the Luigi Tecce \"Puro Sangue\" Riserva Taurasi at n=3358, key a3371 (line 17304: the same bin 24231, 2018, 225); M. Chapoutier \"Les Maysonniers\" at n=2534, key b2534 (line 13105: bin 23742, 2024, 110); the Durban glass at n=12, key a11 (line 66: Domaine De Durban Beaumes-de-Venise FR, under Grenache blend, 2024, 18); page:brennans-sheets-2026-11-15.txt line 123 (the Durban, for the guest who likes Châteauneuf-du-Pape); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Rhône, role classic: the bottle step from the Durban glass); research/winelist/producers-d.json m-chapoutier; research/bottle-facts-cards-d-2026-11-28.json b2573"
+		},
+		{
+			"target": "wine:M. Chapoutier ‘La Bernardine’ Châteauneuf-du-Pape 2023",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I pour it?",
+				"a": "Present the bottle and say M. Chapoutier, La Bernardine, Châteauneuf-du-Pape, 2023, shah-poo-TYAY. Decant it about thirty minutes ahead and serve at 60 to 64°F in large red glasses, a few minutes in the ice bucket if the room runs warm, since warm Grenache shows its alcohol. Pour a taste for the host, then the guests, the host last. Say: “La Bernardine 2023: Châteauneuf-du-Pape, plum, black cherry and garrigue.”"
+			},
+			"reason": "Study notes, coaching: presenting, opening and pouring the bottle",
+			"source": "research/winelist-2026-11-28.json n=2573, key b2573 (page:binwise-wine-list-2026-11-28.txt line 13304: bin 24231, M. Chapoutier \"La Bernadine\", 2023, 150; France ~ Rhone ~ Red > Châteauneuf-du-Pape); the Luigi Tecce \"Puro Sangue\" Riserva Taurasi at n=3358, key a3371 (line 17304: the same bin 24231, 2018, 225); M. Chapoutier \"Les Maysonniers\" at n=2534, key b2534 (line 13105: bin 23742, 2024, 110); the Durban glass at n=12, key a11 (line 66: Domaine De Durban Beaumes-de-Venise FR, under Grenache blend, 2024, 18); page:brennans-sheets-2026-11-15.txt line 123 (the Durban, for the guest who likes Châteauneuf-du-Pape); the card selection of 28 November 2026 (work.json cardsToWrite, chunk c3) (Rhône, role classic: the bottle step from the Durban glass); research/winelist/producers-d.json m-chapoutier; research/bottle-facts-cards-d-2026-11-28.json b2573"
+		},
+		{
+			"target": "wine:Biondi Santi Tenuta Greppo Brunello di Montalcino 2012",
+			"field": "kept.1.a",
+			"op": "set",
+			"value": "Offer it to a guest who asks for Brunello at its most historic, to an Italian wine lover celebrating, or to the table that enjoyed our Rare by the glass, since the same family owns both. For a younger Brunello at a gentler price, the Altesino 2020 at $150. Say: “Biondi Santi is where Brunello was born: aged Sangiovese, cherry, rose and leather, from the family that owns our Rare.”",
+			"reason": "The list of 28 November 2026 no longer prints the Il Poggione Brunello 2018 this answer named as the gentler price; the Altesino Brunello 2020 card stands in its place (chunk c3). Only that sentence changes.",
+			"source": "research/winelist-2026-11-28.json n=3273, key a3284 (page:binwise-wine-list-2026-11-28.txt line 16869: bin 1747, Altesino Brunello di Montalcino, 2020, 150) and n=3297, key a3309 (line 16989: bin 18542, Tenuta Greppo \"Biondi Santi\" Annata Brunello di Montalcino, 2012, 425); the Il Poggione 2018 (bin 17832) is in the ledger left of 28 November 2026 (research/winelist/ledger.json)"
+		}
+	]
+}

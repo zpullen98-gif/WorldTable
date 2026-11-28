@@ -1,0 +1,88 @@
+{
+	"components": [
+		{
+			"terms": [],
+			"key": "wine-story-altesino",
+			"kind": "story",
+			"name": "Altesino",
+			"say": "ahl-teh-ZEE-noh",
+			"explain": "Altesino is a Montalcino estate founded in 1970 around Palazzo Altesi, a fifteenth century palazzo in the hills northeast of the town. In 1975 it bottled its Montosoli vineyard on its own, credited as the first single vineyard Brunello, on the hill of that name north of Montalcino.\n\nIts estate Brunello is all Sangiovese, blended from vineyards in several corners of the zone, fermented in steel and aged about three years in large Slavonian oak casks, then some months in bottle: cherry, plum and violet with firm, polished tannin.\n\nOn our list are two: the Brunello 2020 at $150, carded as our classic Brunello, and the Montosoli 2017 at $250. Say: classic Brunello from the estate that first bottled a Montalcino cru.",
+			"card": {
+				"front": "What did Altesino do first in Montalcino, and how is its Brunello aged?",
+				"back": "In 1975 it bottled the Montosoli vineyard on its own, credited as the first single vineyard Brunello. The estate Brunello ages about three years in large Slavonian oak casks."
+			},
+			"items": [
+				"Altesino Brunello di Montalcino 2020"
+			],
+			"sources": [
+				"research/bottle-facts-cards-d-2026-11-28.json (a3284: Altesino)",
+				"research/winelist/producers-c.json altesino",
+				"page:binwise-wine-list-2026-11-28.txt lines 16869 to 16878"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-grape-sangiovese",
+			"kind": "ingredient",
+			"name": "Sangiovese",
+			"say": "san-joh-VAY-zeh",
+			"explain": "Sangiovese is the great red grape of Tuscany: high in acidity, firm in tannin, tasting of sour cherry, plum, dried herbs and, with age, leather and tobacco. That acidity is why it loves tomato, Parmesan and rich brown sauces.\n\nIt is the whole of Brunello di Montalcino, where its local name is Brunello, and the heart of Chianti Classico, which may blend in a little of other grapes. In the Super Tuscans it often meets Cabernet Sauvignon and Cabernet Franc.\n\nOn our list: the Fèlsina Chianti Classico 2022 and its Rancia Riserva 2019, Altesino’s Brunello 2020, the Biondi Santi Annata 2012 and Antinori’s Tignanello 2010. Say: Tuscany’s cherry and herb red, made for food.",
+			"card": {
+				"front": "Which of our Tuscan bottles are Sangiovese, and which is Sangiovese alone?",
+				"back": "All five: Fèlsina’s Chianti Classico and its Rancia Riserva, Altesino and Biondi Santi Brunello, and Tignanello. Brunello di Montalcino must be Sangiovese alone; Tignanello blends in the two Cabernets."
+			},
+			"items": [
+				"Altesino Brunello di Montalcino 2020",
+				"Biondi Santi Tenuta Greppo Brunello di Montalcino 2012",
+				"Fattoria di Fèlsina Chianti Classico 2022",
+				"Fattoria di Fèlsina ‘Rancia’ Chianti Classico Riserva 2019",
+				"Antinori ‘Tignanello’ Toscana 2010"
+			],
+			"sources": [
+				"research/bottle-facts-cards-d-2026-11-28.json (a3284: Brunello is Sangiovese alone)",
+				"components/producers.json cellar-biondi-santi and cellar-felsina, the house’s own accounts of Brunello and Chianti Classico",
+				"research/bottle-facts-cards-a-2026-10-04.json, research/bottle-facts-cards-b-2026-10-04.json, research/bottle-facts-cards-c-2026-10-04.json (the grapes of each card)"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-story-monplaisir",
+			"kind": "story",
+			"name": "Cru Monplaisir",
+			"say": "mohn-play-ZEER",
+			"explain": "Cru Monplaisir is a small Bordeaux Supérieur estate of two parcels just outside the Margaux appellation: one on silt below Château d’Issan, the other on gravel and clay below Château Margaux. The Gonet-Médeville family, Champagne growers, bought it in 2009.\n\nIt is about three quarters Merlot with Cabernet Sauvignon and Cabernet Franc, made to be supple young: plum, red and black berries, cedar and dark spice.\n\nOur list prints it as Cru Montplasir; the label reads Cru Monplaisir. The 2022 at $75 is our claret under $100 and the bottle step from the Moulin d’Issan glass. Say: Merlot led claret from just outside Margaux.",
+			"card": {
+				"front": "Why is Cru Monplaisir the bottle step from our Moulin d’Issan glass?",
+				"back": "One of its two parcels lies below Château d’Issan, just outside the Margaux appellation, so it is Bordeaux Supérieur from the same corner: Merlot led, plum and cedar, $75."
+			},
+			"items": [
+				"Cru Monplaisir Bordeaux Supérieur 2022"
+			],
+			"sources": [
+				"research/bottle-facts-cards-d-2026-11-28.json (b2446: Cru Monplaisir)",
+				"research/winelist/producers-d.json cru-monplaisir",
+				"page:binwise-wine-list-2026-11-28.txt lines 81 and 12649"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-story-chapoutier",
+			"kind": "story",
+			"name": "M. Chapoutier and La Bernardine",
+			"say": "shah-poo-TYAY; lah bair-nar-DEEN",
+			"explain": "M. Chapoutier is a house at Tain-l’Hermitage in the northern Rhône whose history goes back to 1808. It farms its own vines biodynamically, and since 1996 every label has carried Braille, honouring a family link with Maurice de la Sizeranne, who devised an abridged form of Braille.\n\nLa Bernardine, named for a house among the vines of Châteauneuf-du-Pape that the family bought, is its Châteauneuf: about four fifths Grenache with Syrah and Mourvèdre from several terroirs, fermented and aged in concrete vats, so the fruit stays fresh. Les Meysonniers is its Crozes-Hermitage Syrah.\n\nOur list prints them as La Bernadine and Les Maysonniers. La Bernardine 2023 at $150 is carded, the bottle step from the Durban glass. Say: Grenache led Châteauneuf, kept in concrete.",
+			"card": {
+				"front": "What is La Bernardine, and why does its label carry Braille?",
+				"back": "Chapoutier’s Châteauneuf-du-Pape, mostly Grenache, made in concrete. Every Chapoutier label has carried Braille since 1996, for a family link with Maurice de la Sizeranne."
+			},
+			"items": [
+				"M. Chapoutier ‘La Bernardine’ Châteauneuf-du-Pape 2023"
+			],
+			"sources": [
+				"research/bottle-facts-cards-d-2026-11-28.json (b2573: M. Chapoutier)",
+				"research/winelist/producers-d.json m-chapoutier",
+				"page:binwise-wine-list-2026-11-28.txt lines 13105 and 13304"
+			]
+		}
+	]
+}
