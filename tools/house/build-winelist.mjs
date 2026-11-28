@@ -50,7 +50,9 @@
        pending: [n, ...] }                        only with --pending: the live rows whose producer no
                                                   file describes yet, each written with producer '';
                                                   check-winelist reports them and refuses them with
-                                                  --release, so a file with a pending row never ships.
+                                                  --release and on the shipped file, and --pending
+                                                  itself never writes the shipped file (it takes --dry
+                                                  or --out), so a file with a pending row never ships.
 
    The producer files merge by key: when two describe one producer or one place, the fuller stands
    (more fields filled, then more words) and the clash is reported; two files giving one catalogue
@@ -435,7 +437,8 @@ function main() {
   --catalogue <file>   the catalogue (default: the ledger's current one, ${REL(CATALOGUE)})
   --ledger <file>      the stable keys (default: ${REL(LEDGER)}); the older catalogues it names are read for the past
   --pending            write a live row whose producer no file describes yet with producer '' and name it
-                       in pending, rather than fail (a writer's dry build; check-winelist --release refuses it)
+                       in pending, rather than fail (a writer's dry build: it takes --dry or --out <another
+                       file> and never writes ${REL(OUT)}; check-winelist --release refuses it)
   --pack <file>        the built pack the first tier is read from (default: ${REL(PACK)})
   --out <file>         where to write (default: ${REL(OUT)})
   --dry                build and report, write nothing
@@ -463,6 +466,8 @@ Then run node tools/house/check-winelist.mjs.`);
 	const catalogueFile = path.resolve(opt['--catalogue'] || catPath(ledger.catalogues[ledger.current]));
 	const packFile = path.resolve(opt['--pack'] || PACK);
 	const outFile = path.resolve(opt['--out'] || OUT);
+	/* A pending build is a writer's look at an unfinished list, never the list that ships. */
+	if (opt['--pending'] && !opt['--dry'] && outFile === path.resolve(OUT)) fail(`--pending never writes the shipped list ${REL(OUT)}: a row with no producer is not a list to ship; pass --dry, or --out <another file>`);
 	const producerFiles = opt['--producers'] ? opt['--producers'].split(',').map((f) => path.resolve(f.trim())).filter(Boolean) : PRODUCER_FILES;
 	const missing = producerFiles.filter((f) => !fs.existsSync(f));
 	if (missing.length) fail(`the producer file${missing.length > 1 ? 's' : ''} ${missing.map(REL).join(', ')} ${missing.length > 1 ? 'are' : 'is'} missing; every bottle needs its producer described (pass --producers to name others)`);

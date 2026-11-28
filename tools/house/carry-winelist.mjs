@@ -27,7 +27,9 @@
      the rulings first;
      1. the same place (section, group, sub), bin, folded name, vintage, size and price;
      2. the same place, bin, folded name, vintage and size at another price;
-     3. the same section, bin, vintage, size and price under another name or group;
+     3. the same section, bin, vintage, size and price under another name or group, for an entry
+        that prints a bin: no bin is no evidence, and two pours by the glass with no bin at one
+        vintage and one price are two wines until a ruling says otherwise;
      4. the same place, folded name, vintage, size and price at another bin.
    A different vintage or size is never carried except by a ruling. Each pass is tried against the
    rows of the catalogue before, then against the keys that had left, so a bottle that comes back
@@ -81,10 +83,15 @@ export function splitKey(key) {
 	return m ? [m[1], Number(m[2])] : null;
 }
 
-/** The identity a carried pair is held to: never another vintage or size, and the same bin or the same folded name. */
+/** The bin an entry prints, or '' when it prints none. */
+const binOf = (e) => String((e && e.bin) || '').trim();
+
+/** The identity a carried pair is held to: never another vintage or size, and the same printed bin or
+    the same folded name. Two entries that print no bin do not share one: an empty bin is no evidence
+    (the glass list prints none for most pours), so only the name can hold such a pair. */
 export function sameWine(o, n) {
 	return String(o.vintage) === String(n.vintage) && foldSize(o.size) === foldSize(n.size)
-		&& (String(o.bin || '') === String(n.bin || '') || foldName(o.name) === foldName(n.name));
+		&& ((binOf(o) !== '' && binOf(o) === binOf(n)) || foldName(o.name) === foldName(n.name));
 }
 
 /**
@@ -103,7 +110,7 @@ export function leftAt(ledger, upto) {
 const PASSES = [
 	{ kind: 'identical', key: (e) => [e.section, e.group, e.sub, e.bin, foldName(e.name), e.vintage, foldSize(e.size), e.price] },
 	{ kind: 'at another price', key: (e) => [e.section, e.group, e.sub, e.bin, foldName(e.name), e.vintage, foldSize(e.size)] },
-	{ kind: 'under another name or group', key: (e) => [e.section, e.bin, e.vintage, foldSize(e.size), e.price] },
+	{ kind: 'under another name or group', only: (e) => binOf(e) !== '', key: (e) => [e.section, e.bin, e.vintage, foldSize(e.size), e.price] },
 	{ kind: 'at another bin', key: (e) => [e.section, e.group, e.sub, foldName(e.name), e.vintage, foldSize(e.size), e.price] }
 ];
 
@@ -147,12 +154,14 @@ export function carry(ledger, cats, from, to, rulings) {
 			const index = new Map();
 			for (const p of pool) {
 				if (p.back !== back || taken.has(p.key)) continue;
+				if (pass.only && !pass.only(p.e)) continue;
 				const k = JSON.stringify(pass.key(p.e));
 				if (!index.has(k)) index.set(k, []);
 				index.get(k).push(p);
 			}
 			for (const e of toCat.entries) {
 				if (keyOf.has(e.n)) continue;
+				if (pass.only && !pass.only(e)) continue;
 				const list = index.get(JSON.stringify(pass.key(e)));
 				if (!list) continue;
 				const p = list.find((x) => !taken.has(x.key));
@@ -179,7 +188,7 @@ export function carry(ledger, cats, from, to, rulings) {
  * that is missing is a problem). It proves: every row of every catalogue has one key and no key
  * names two rows of one catalogue; a key is born in its own catalogue (a<n> on row n of a) and
  * otherwise was printed by the catalogue before; every carried pair is the same wine (vintage and
- * size, and the bin or the folded name) unless a ruling names it; left is exactly the keys of older
+ * size, and a printed bin or the folded name) unless a ruling names it; left is exactly the keys of older
  * catalogues the current one no longer prints, each with its last catalogue.
  */
 export function ledgerProblems(ledger, cats) {
@@ -196,6 +205,18 @@ export function ledgerProblems(ledger, cats) {
 		ruled.set(r.catalogue + ' ' + r.to, r.from);
 	}
 	const lastOf = new Map();
+	/* The row a key names in a catalogue (the first, where a broken ledger gives it two), and the entry on a row: each indexed once. */
+	const rowsByKey = new Map();
+	const rowOf = (l, key) => {
+		if (!rowsByKey.has(l)) { const m = new Map(); for (const [n, k] of Object.entries((ledger.keys && ledger.keys[l]) || {})) if (!m.has(k)) m.set(k, n); rowsByKey.set(l, m); }
+		return rowsByKey.get(l).get(key);
+	};
+	const entriesByN = new Map();
+	const entryOf = (l, n) => {
+		if (!cats[l]) return null;
+		if (!entriesByN.has(l)) entriesByN.set(l, new Map(cats[l].entries.map((e) => [e.n, e])));
+		return entriesByN.get(l).get(Number(n)) || null;
+	};
 	letters.forEach((l, i) => {
 		const cat = cats[l];
 		if (!cat || !Array.isArray(cat.entries)) { out.push(`catalogue ${l} (${ledger.catalogues[l]}): ${REL(catalogueFile(ledger.catalogues[l]))} is missing`); return; }
@@ -218,8 +239,8 @@ export function ledgerProblems(ledger, cats) {
 			/* Carried: from the catalogue before, or back from left; either way the wine it named last. */
 			const lastL = beforeRow.has(key) ? letters[i - 1] : lastOf.get(key);
 			if (!lastL) { out.push(`catalogue ${l}: entry ${e.n} carries ${key}, which the catalogue before neither printed nor had left`); continue; }
-			const ln = Object.keys(ledger.keys[lastL] || {}).find((x) => ledger.keys[lastL][x] === key);
-			const o = cats[lastL] && ln ? cats[lastL].entries.find((x) => x.n === Number(ln)) : null;
+			const ln = rowOf(lastL, key);
+			const o = ln ? entryOf(lastL, ln) : null;
 			if (!o) { out.push(`catalogue ${l}: ${key} names no row of ${lastL}`); continue; }
 			if (!sameWine(o, e) && ruled.get(l + ' ' + e.n) !== key) out.push(`catalogue ${l}: entry ${e.n} (${e.name} ${e.vintage} ${e.size}, bin ${e.bin || 'none'}) carries ${key} (${o.name} ${o.vintage} ${o.size}, bin ${o.bin || 'none'}), another wine; only a ruling carries that`);
 		}

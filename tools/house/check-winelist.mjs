@@ -34,7 +34,8 @@
         live one;
     11. pending (a writer's build, build-winelist --pending): each pending n is a live row written with
         producer '' and every such row is pending; reported on the last line, and refused with
-        --release, which also refuses a file not built from the ledger's current catalogue.
+        --release, which also refuses a file not built from the ledger's current catalogue, and
+        refused always on the shipped file itself (no --file): a row with no producer never ships.
 
    Usage: node tools/house/check-winelist.mjs [--file <list>] [--pack <file>] [--catalogue <file>]
             [--ledger <file>] [--release] [--bins]
@@ -109,8 +110,9 @@ function eachString(v, where, visit) {
  * Every problem with a list, as sentences. `text` is the file's text, `catalogue` the parsed catalogue,
  * `page` the paste's text (or '' to skip the page check), `pack` the parsed pack or null, `hasDash`
  * the engine's dash rule. `opts`: { ledger, catalogues: { letter: catalogue }, pages: { letter: text },
- * isPast, release }. Without a ledger (a test's stub files) rules 8 to 10 are not read and a file
- * carrying past is refused, since nothing could hold it.
+ * isPast, release, shipped }. Without a ledger (a test's stub files) rules 8 to 10 are not read and a file
+ * carrying past is refused, since nothing could hold it. `shipped` says the file is the one that ships,
+ * which may hold no pending row whatever the flags.
  */
 export function winelistProblems(text, catalogue, page, pack, hasDash, opts = {}) {
 	const out = [];
@@ -159,7 +161,7 @@ export function winelistProblems(text, catalogue, page, pack, hasDash, opts = {}
 		else if (![p.name, p.line, p.tell].every((s) => typeof s === 'string' && s.trim())) say(`entry ${n}: the producer ${pk} lacks a name, a line or a tell`);
 	});
 	for (const n of pendingList) if (!byN.has(n)) out.push(`pending: ${n} is no live entry`);
-	if (opts.release && pendingList.length) out.push(`${pendingList.length} live entr${pendingList.length > 1 ? 'ies are' : 'y is'} pending a producer (${pendingList.slice(0, 12).join(', ')}${pendingList.length > 12 ? ', ...' : ''}); a released list describes every bottle`);
+	if ((opts.release || opts.shipped) && pendingList.length) out.push(`${pendingList.length} live entr${pendingList.length > 1 ? 'ies are' : 'y is'} pending a producer (${pendingList.slice(0, 12).join(', ')}${pendingList.length > 12 ? ', ...' : ''}); a ${opts.release ? 'released' : 'shipped'} list describes every bottle`);
 	if (off > 30) out.push(`and ${off - 30} more entry problems (${off} in all)`);
 	for (const s of sections) if (!places[s] || !String(places[s].line || '').trim() || !String(places[s].title || '').trim()) out.push(`the section ${s} has no title and line`);
 	for (const [k, v] of Object.entries(places)) if (!v || !String(v.title || '').trim() || !String(v.line || '').trim()) out.push(`the place ${k} has no title or no line`);
@@ -292,6 +294,7 @@ function main() {
                       the current one is ${REL(CATALOGUE)})
   --ledger <file>     the stable keys (default: ${REL(LEDGER)})
   --release           also refuse a pending producer and a file not built from the ledger's current catalogue
+                      (a pending producer is refused on ${REL(OUT)} with or without it)
   --bins              list the bins the list prints for more than one bottle
   --help              this text`);
 		process.exit(0);
@@ -324,7 +327,7 @@ function main() {
 	const pages = {};
 	for (const [l, c] of Object.entries(catalogues)) pages[l] = pageOf(c, catalogueFile0(c.readOn));
 	const release = args.includes('--release');
-	const problems = winelistProblems(text, catalogue, page, JSON.parse(fs.readFileSync(packFile, 'utf8')), hasDash, { ledger, catalogues, pages, isPast: lib.isPast, release });
+	const problems = winelistProblems(text, catalogue, page, JSON.parse(fs.readFileSync(packFile, 'utf8')), hasDash, { ledger, catalogues, pages, isPast: lib.isPast, release, shipped: file === path.resolve(OUT) });
 	if (problems.length) fail(`${REL(file)}: ${problems.length} problem(s):\n  ` + problems.join('\n  '));
 	const list = JSON.parse(text);
 	const shared = sharedBins(catalogue.entries);

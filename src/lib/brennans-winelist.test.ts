@@ -13,6 +13,11 @@
  * they hold before and after an edition; the past cases run on the real ledger
  * with the shipped pack's bottles moved and re-binned as the paste of
  * 28 November prints them.
+ *
+ * The second reading of that review: every rule the ledger and the gate
+ * gained is broken here once, alone, and must be named (a rule taken out
+ * of the tools must fail a case), and a carry never joins two wines that
+ * print no bin.
  */
 import { describe, it, expect } from 'vitest';
 import { spawnSync } from 'node:child_process';
@@ -27,7 +32,7 @@ const ROOT = fileURLToPath(new URL('../..', import.meta.url));
 const tool = (name: string) => import(/* @vite-ignore */ pathToFileURL(join(ROOT, 'tools', 'house', name)).href);
 const { CATALOGUE, LEDGER, OUT, buildWinelist, mergeProducerFiles, winelistText, sectionOfPlace, loadIsPast } = await tool('build-winelist.mjs');
 const { winelistProblems, pageOf, MAX_BYTES } = await tool('check-winelist.mjs');
-const { catalogueFile, carry, ledgerProblems, readCatalogues } = await tool('carry-winelist.mjs');
+const { catalogueFile, carry, ledgerProblems, leftAt, readCatalogues, sameWine } = await tool('carry-winelist.mjs');
 type Raw = Record<string, any>;
 /* The catalogue the shipped list was read on: the one the shipped pack's cards stand on. */
 const shipped: Raw = JSON.parse(readFileSync(OUT, 'utf8'));
@@ -172,9 +177,9 @@ describe('the stable keys and the past (28 November 2026)', () => {
 		return p;
 	};
 	/** Stub producer files keyed by the ledger: every key of every catalogue, one stub producer each. */
-	function keyedFiles(): Array<{ file: string; data: Raw }> {
+	function keyedFiles(led: Raw = ledger): Array<{ file: string; data: Raw }> {
 		const a: Raw = { producers: {}, entries: {}, places: {} };
-		for (const [l, keys] of Object.entries(ledger.keys) as Array<[string, Raw]>) {
+		for (const [l, keys] of Object.entries(led.keys) as Array<[string, Raw]>) {
 			for (const [n, key] of Object.entries(keys)) {
 				const pk = 'p-' + (Number(n) % 300);
 				a.entries[key as string] = pk;
@@ -186,6 +191,9 @@ describe('the stable keys and the past (28 November 2026)', () => {
 	}
 	const opts = (extra: Raw = {}) => ({ ledger, catalogues, isPast, ...extra });
 	const check = (list: Raw, p: Raw, extra: Raw = {}) => winelistProblems(typeof list === 'string' ? list : JSON.stringify(list), nov, novPage, p, noDash, { ledger, catalogues, pages, isPast, ...extra });
+	/* The cases that run the whole gate many times over 3,560 rows get a minute, not the default five
+	   seconds: a slow machine must not fail a rule that holds. */
+	const LONG = 60_000;
 
 	it('the two pastes print the house Champagne at 28 and then 30 a glass', () => {
 		expect(catalogues.a.entries[0].price).toBe(28);
@@ -215,7 +223,74 @@ describe('the stable keys and the past (28 November 2026)', () => {
 		m.keys.b[n1 + 1] = m.keys.b[n1];
 		m.keys.b[n1] = 'b' + n1;
 		expect(ledgerProblems(m, catalogues).some((s: string) => s.includes('another wine') || s.includes('names rows'))).toBe(true);
-	});
+	}, LONG);
+
+	it('holds a carried pair to its vintage, to its size and to a printed bin or its name, each alone', () => {
+		const o = { bin: '123', name: 'A Wine', vintage: '2020', size: '750ml' };
+		expect(sameWine(o, { ...o })).toBe(true);
+		expect(sameWine(o, { ...o, vintage: '2021' })).toBe(false);
+		expect(sameWine(o, { ...o, size: '1.5L' })).toBe(false);
+		expect(sameWine(o, { ...o, bin: '456' })).toBe(true);
+		expect(sameWine(o, { ...o, name: 'Another Wine' })).toBe(true);
+		expect(sameWine(o, { ...o, bin: '456', name: 'Another Wine' })).toBe(false);
+		/* No bin is no evidence: two entries that print none are one wine only by name. */
+		expect(sameWine({ ...o, bin: '' }, { ...o, bin: '' })).toBe(true);
+		expect(sameWine({ ...o, bin: '' }, { ...o, bin: '', name: 'Another Wine' })).toBe(false);
+		expect(sameWine({ ...o, bin: ' ' }, { ...o, bin: '', name: 'Another Wine' })).toBe(false);
+		/* In the ledger itself: a row carried with its bin and its name, read at another vintage and
+		   then at another size, is another wine. */
+		const n = Number(Object.keys(ledger.keys.b).find((k) => /^a/.test(ledger.keys.b[k]) && catalogues.b.entries[Number(k) - 1].bin && catalogues.b.entries[Number(k) - 1].vintage !== 'NV'));
+		const reread = (change: Raw) => ({ ...catalogues, b: { ...catalogues.b, entries: catalogues.b.entries.map((e: Raw) => (e.n === n ? { ...e, ...change } : e)) } });
+		expect(ledgerProblems(ledger, reread({}))).toEqual([]);
+		expect(ledgerProblems(ledger, reread({ vintage: '1900' })).some((s: string) => s.includes(`entry ${n} `) && s.includes('another wine'))).toBe(true);
+		expect(ledgerProblems(ledger, reread({ size: '3L' })).some((s: string) => s.includes(`entry ${n} `) && s.includes('another wine'))).toBe(true);
+	}, LONG);
+
+	it('never carries a key between two wines that print no bin; a ruling may, and a wine that comes back takes its key again', () => {
+		/* A third paste made up here: the Argyle by the glass (row 2, no bin, 2022, 15 a glass) gives
+		   way to another 2022 sparkler at 15 with no bin, and the Cesarini Sforza that left comes back. */
+		const c: Raw = JSON.parse(JSON.stringify(catalogues.b));
+		c.readOn = '2026-12-31';
+		const row = c.entries.find((e: Raw) => e.n === 2);
+		expect([row.bin, row.vintage, row.price]).toEqual(['', '2022', 15]);
+		expect(ledger.keys.b[2]).toBe('a2');
+		row.name = 'Some Other House Brut Anderson Valley US';
+		const back = { ...catalogues.a.entries.find((e: Raw) => e.n === 15), n: c.entries.length + 1 };
+		expect(ledger.left.a15).toBe('a');
+		c.entries.push(back);
+		const l: Raw = JSON.parse(JSON.stringify(ledger));
+		l.catalogues.c = c.readOn;
+		const cats = { ...catalogues, c };
+		const r = carry(l, cats, 'b', 'c', []);
+		expect(r.failures).toEqual([]);
+		expect(r.keys[2]).toBe('c2');
+		expect(r.left.a2).toBe('b');
+		expect(r.minted.map((m: Raw) => m.key)).toEqual(['c2']);
+		expect(r.keys[back.n]).toBe('a15');
+		expect(r.left.a15).toBeUndefined();
+		expect(r.pairs.find((p: Raw) => p.key === 'a15').kind).toBe('identical, come back');
+		const carried = { ...l, keys: { ...l.keys, c: r.keys }, left: r.left, current: 'c' };
+		expect(ledgerProblems(carried, cats)).toEqual([]);
+		/* The same carry made by hand is refused by the ledger's own check ... */
+		const byHand: Raw = { ...carried, keys: { ...carried.keys, c: { ...r.keys, 2: 'a2' } } };
+		byHand.left = leftAt(byHand, 'c');
+		expect(ledgerProblems(byHand, cats).some((s: string) => s.includes('entry 2 ') && s.includes('carries a2') && s.includes('only a ruling carries that'))).toBe(true);
+		/* ... and made by a ruling it stands. */
+		const ruled = carry(l, cats, 'b', 'c', [{ catalogue: 'c', from: 'a2', to: 2, why: 'the same pour under a new label' }]);
+		expect(ruled.failures).toEqual([]);
+		expect(ruled.keys[2]).toBe('a2');
+	}, LONG);
+
+	it('holds the ledger rule by rule: one key a row, left as the keys give it, a ruling borne out, a key born on its own row', () => {
+		const problems = (change: (l: Raw) => void): string[] => { const l = JSON.parse(JSON.stringify(ledger)); change(l); return ledgerProblems(l, catalogues); };
+		expect(problems((l) => { l.keys.b[101] = l.keys.b[100]; }).some((s) => s.includes(`the key ${ledger.keys.b[100]} names rows 100 and 101`))).toBe(true);
+		const gone = Object.keys(ledger.left)[0];
+		expect(problems((l) => { delete l.left[gone]; })).toEqual([`left: ${gone} was last printed by a and is not in left`]);
+		expect(problems((l) => { l.left[l.keys.b[1]] = 'a'; })).toEqual([`left: ${ledger.keys.b[1]} is still printed`]);
+		expect(problems((l) => { l.rulings.find((x: Raw) => x.from === 'a276').to = 275; }).some((s) => s.startsWith('ruling a276 onto b 275: the ledger keys that row '))).toBe(true);
+		const minted = Number(Object.keys(ledger.keys.b).find((k) => ledger.keys.b[k] === 'b' + k));
+		expect(problems((l) => { l.keys.b[minted] = 'b1'; })).toContain(`catalogue b: entry ${minted} carries b1, a key of this catalogue born on another row`);
+	}, LONG);
 
 	it('writes the bottles that left as one past group, carded, and the gate passes it', () => {
 		const p = novPack();
@@ -251,7 +326,106 @@ describe('the stable keys and the past (28 November 2026)', () => {
 		const q = novPack();
 		q.house.wines.find((w: Raw) => w.id === 'w-iawg2ni8').section = 'Past bottles';
 		expect(buildWinelist(nov, keyedFiles(), q, opts()).failures.some((s: string) => s.includes('past bottle Chapel Down'))).toBe(true);
-	});
+	}, LONG);
+
+	/* The list of 28 November as the past cases build it, built once for the rule by rule cases below,
+	   and the list of 3 October through the ledger (its rows are what a wrong past row is made from). */
+	let builtNov = '';
+	let builtOct = '';
+	const novText = () => (builtNov ||= winelistText(buildWinelist(nov, keyedFiles(), novPack(), opts()).list));
+	const octListText = () => (builtOct ||= winelistText(buildWinelist(catalogues.a, keyedFiles(), pack, opts()).list));
+
+	it('holds the list to its ledger: read by the gate, needed for a past, current for a release', () => {
+		const p = novPack();
+		const built = novText();
+		const octText = octListText();
+		/* The gate reads the ledger: a ledger that fails its own check fails the list. */
+		const badLedger = JSON.parse(JSON.stringify(ledger));
+		delete badLedger.left[Object.keys(badLedger.left)[0]];
+		expect(winelistProblems(built, nov, novPage, p, noDash, { ledger: badLedger, catalogues, pages, isPast }).some((s: string) => s.startsWith('ledger: left: '))).toBe(true);
+		/* A file with a past and no ledger to hold it. */
+		expect(winelistProblems(built, nov, novPage, p, noDash)).toContain('the file carries past, which only the ledger can hold; check it with the ledger');
+		/* A released list is the current catalogue's: the list of 3 October passes, and is refused as a release. */
+		const octProblems = (extra: Raw) => winelistProblems(octText, catalogues.a, pages.a, pack, noDash, { ledger, catalogues, pages, isPast, ...extra });
+		expect(octProblems({})).toEqual([]);
+		expect(octProblems({ release: true })).toEqual([expect.stringContaining("a released list is the ledger's current one, b (2026-11-28)")]);
+	}, LONG);
+
+	it('holds every past row: its catalogue entry, its home printing, a bottle that truly left, a producer', () => {
+		const p = novPack();
+		const good = (): Raw => JSON.parse(novText());
+		const oct: Raw = JSON.parse(octListText());
+		/* A past row is its own catalogue's entry at its printed price. */
+		let l = good();
+		l.past[0].entries[5][5] += 1;
+		expect(check(l, p).some((s: string) => s.startsWith('past[0] entry ') && s.includes("is not the catalogue's"))).toBe(true);
+		l = good();
+		l.past[0].entries[5][4] = '1900';
+		expect(check(l, p).some((s: string) => s.startsWith('past[0] entry ') && s.includes("bin, name, vintage or size is not the catalogue's"))).toBe(true);
+		/* The home printing: the rosé magnum was printed under Large Formats (197) and under Rosé (1445); its row is 1445. */
+		l = good();
+		const at = l.past[0].entries.findIndex((r: Raw) => r[0] === 1445);
+		expect(at).toBeGreaterThan(-1);
+		l.past[0].entries[at] = oct.entries[196];
+		expect(l.past[0].entries[at][0]).toBe(197);
+		expect(check(l, p).some((s: string) => s.startsWith('past[0] entry 197 ') && s.includes('the home printing of its bottle is entry 1445'))).toBe(true);
+		/* A bottle the list still prints is no past row: by the bottle, by the key of its printing, and by the count of what left. */
+		l = good();
+		l.past[0].entries.push(oct.entries[1]);
+		const still = check(l, p);
+		expect(still.some((s: string) => s.startsWith('past[0] entry 2 ') && s.includes('that bottle is still printed on the list of 2026-11-28'))).toBe(true);
+		expect(still).toContain('past[0] entry 2: its printing 2 (a2) is still printed on the list of 2026-11-28');
+		expect(still).toContain('past[0]: entry 2 is no bottle that left the list after 2026-10-03');
+		/* A past row names a described producer. */
+		l = good();
+		l.past[0].entries[0][7] = '';
+		expect(check(l, p).some((s: string) => s.startsWith('past[0] entry ') && s.includes('no described producer'))).toBe(true);
+	}, LONG);
+
+	it('holds the past group and its cards: no group, a wrong page, a group twice, a card on another wine, missing, on no row', () => {
+		const p = novPack();
+		const good = (): Raw => JSON.parse(novText());
+		/* The group: gone altogether, on the wrong page, written twice. */
+		let l = good();
+		delete l.past;
+		expect(check(l, p)).toContain('past: 60 bottle(s) left the list after 2026-10-03 and the file has no group for them');
+		l = good();
+		l.past[0].source = nov.source;
+		expect(check(l, p)).toContain(`past[0]: source ${nov.source}; its catalogue's is ${catalogues.a.source}`);
+		l = good();
+		l.past.push(JSON.parse(JSON.stringify(l.past[0])));
+		const twice = check(l, p);
+		expect(twice).toContain('past[1]: a second group for 2026-10-03');
+		expect(twice).toContain('past[1]: the groups run newest first');
+		/* The past cards: on another wine's row, missing, on no row. */
+		l = good();
+		const cardN = Object.keys(l.past[0].cards).find((k) => l.past[0].cards[k] === 'w-in6wnlqj')!;
+		l.past[0].cards[cardN] = 'w-t2fuz2wj';
+		expect(check(l, p).some((s: string) => s.startsWith(`past[0] cards: entry ${cardN} `) && s.endsWith('another wine'))).toBe(true);
+		l = good();
+		delete l.past[0].cards[cardN];
+		expect(check(l, p).some((s: string) => s.includes("(w-in6wnlqj) has no entry in a past group's cards"))).toBe(true);
+		l = good();
+		l.past[0].cards['3'] = 'w-in6wnlqj';
+		expect(check(l, p)).toContain('past[0] cards: 3 is no past row of the group');
+	}, LONG);
+
+	it('never writes a bottle the list still prints as past, even where a carry missed it', () => {
+		/* A carry that missed, made by hand: an unchanged bottle printed once is keyed afresh and its old key left. */
+		const once = (cat: Raw, bin: string) => cat.entries.filter((e: Raw) => e.bin === bin).length === 1;
+		const n = Number(Object.keys(ledger.keys.b).find((k) => { const e = catalogues.b.entries[Number(k) - 1]; return /^a/.test(ledger.keys.b[k]) && e.bin && once(catalogues.b, e.bin) && once(catalogues.a, e.bin); }));
+		const l: Raw = JSON.parse(JSON.stringify(ledger));
+		const old = l.keys.b[n];
+		l.keys.b[n] = 'b' + n;
+		l.left = leftAt(l, 'b');
+		expect(l.left[old]).toBe('a');
+		expect(ledgerProblems(l, catalogues)).toEqual([]);
+		const p = novPack();
+		const { list, failures } = buildWinelist(nov, keyedFiles(l), p, opts({ ledger: l }));
+		expect(failures).toEqual([]);
+		expect(list.past[0].entries).toHaveLength(60);
+		expect(winelistProblems(winelistText(list), nov, novPage, p, noDash, { ledger: l, catalogues, pages, isPast })).toEqual([]);
+	}, LONG);
 
 	it('writes a row with no producer as pending only when asked; the gate reports it and --release refuses it', () => {
 		const p = novPack();
@@ -267,6 +441,26 @@ describe('the stable keys and the past (28 November 2026)', () => {
 		const l = JSON.parse(JSON.stringify(list));
 		l.entries[21][7] = '';
 		expect(check(l, p).some((s: string) => s.startsWith('entry 22 ') && s.includes('no described producer'))).toBe(true);
+		/* A pending row carries no producer, and a pending n is a live entry. */
+		const withOne = JSON.parse(JSON.stringify(list));
+		withOne.entries[20][7] = 'p-21';
+		expect(check(withOne, p)).toContain('entry 21: pending a producer, but written with p-21');
+		const stray = JSON.parse(JSON.stringify(list));
+		stray.pending.push(99999);
+		expect(check(stray, p)).toContain('pending: 99999 is no live entry');
+		/* The file that ships never carries a pending row, with or without --release. */
+		expect(check(list, p, { shipped: true })).toEqual([expect.stringMatching(/^1 live entry is pending a producer \(21\); a shipped list describes every bottle$/)]);
+	}, LONG);
+
+	it('never writes a pending build over the shipped list', () => {
+		/* The producer file named here is missing, so the tool could write nothing even without the rule under test. */
+		const dir = mkdtempSync(join(tmpdir(), 'oot-winelist-'));
+		const r = spawnSync(process.execPath, [join(ROOT, 'tools', 'house', 'build-winelist.mjs'), '--pending', '--producers', join(dir, 'producers-a.json')], { encoding: 'utf8' });
+		expect(r.status).toBe(1);
+		expect(r.stderr).toContain('--pending never writes the shipped list');
+		const dry = spawnSync(process.execPath, [join(ROOT, 'tools', 'house', 'build-winelist.mjs'), '--pending', '--dry', '--producers', join(dir, 'producers-a.json')], { encoding: 'utf8' });
+		expect(dry.status).toBe(1);
+		expect(dry.stderr).toContain('producers-a.json is missing');
 	});
 
 	it('rebuilds the list of 3 October from the ledger as the stub build did before it', () => {
