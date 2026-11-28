@@ -1,0 +1,185 @@
+{
+	"about": "Facts behind the study cards of the Binwise list of 28 November 2026 (card chunks c1 to c3): each bottle as the catalogue research/winelist-2026-11-28.json prints it (its ledger key, entry n, bin, vintage, size, the printed price with its dollar sign and the paste line), and each fact a card states that the guide and the paste do not, with how it is known. A fact found by search names where, and every fact rests on two sources or one primary source (the producer, its importer, the appellation body); a fact that could not be confirmed is recorded as left out. Nothing here is a score or a price the list does not print. Under mentions, the other bottles of the list the cards name as a step or a mix-up, each as the catalogue holds it.",
+	"readOn": "2026-11-28",
+	"bottles": [
+		{
+			"key": "b2718",
+			"n": 2718,
+			"bin": "1648",
+			"name": "Lemelson \"Thea's Selection\" Willamette Valley",
+			"card": "Lemelson ‘Thea’s Selection’ Willamette Valley Pinot Noir 2022",
+			"chunk": "c1",
+			"vintage": "2022",
+			"size": "750ml",
+			"printed": "$80",
+			"line": 14053,
+			"section": "United States ~ Pinot Noir > Oregon",
+			"facts": [
+				{
+					"fact": "Thea’s Selection is Lemelson Vineyards’ house Pinot Noir, a blend of fruit from its organically farmed estate vineyards, which span three sub-regions (AVAs) of the Willamette Valley; listings give five or seven estate vineyards by vintage, so the card gives no count.",
+					"how": "search, 28 November 2026: the winery’s note as reproduced on wine.com (Thea’s Selection 2022 and 2021); the importer’s (Winebow) Lemelson sheet; a retailer note (wineaccess.com) that most of the fruit is from the Yamhill-Carlton District, which the card leaves out as one source"
+				},
+				{
+					"fact": "Lemelson Vineyards is an estate winery at Carlton, in the Willamette Valley, farmed organically from the start.",
+					"how": "already in the house (component wine-story-lemelson, from the glass sheet research of 15 November 2026); the organic farming confirmed again by the winery’s note on wine.com and the Winebow sheet"
+				},
+				{
+					"fact": "The 2022 tastes of red currant, tart cranberry and fresh mint (the winery’s note), tart cherry and cranberry (a critic’s note quoted by a retailer); medium bodied (Decanter’s listing).",
+					"how": "search, 28 November 2026: wine.com winemaker notes for the 2022; a retailer’s quotation of a Wine Spectator note; decanter.com wine review listing. No score is carried."
+				},
+				{
+					"fact": "2022 in the Willamette Valley: a cold, wet spring and an April frost, then a long, warm fall and a late harvest.",
+					"how": "search, 28 November 2026: the Oregon Wine Board’s 2022 Oregon harvest report (industry.oregonwine.org) and Decanter’s 2022 Willamette Valley vintage report"
+				},
+				{
+					"fact": "The winery’s cellar practice for this cuvée in 2022 (yeast, oak, fining) was not confirmed: the Winebow sheet gives native yeast and no fining or filtering for another vintage. Left out; the card sends it to the sommelier.",
+					"how": "search, 28 November 2026; no 2022 technical sheet found"
+				},
+				{
+					"fact": "Who Thea is was not confirmed by any source read, and whether that person is living is unknown; the card names no one and sends the question to the sommelier.",
+					"how": "search, 28 November 2026"
+				}
+			]
+		},
+		{
+			"key": "b21",
+			"n": 21,
+			"bin": "1569",
+			"name": "Domaine Daulny Sancerre FR",
+			"card": "Domaine Daulny Sancerre 2024",
+			"chunk": "c1",
+			"vintage": "2024",
+			"size": "750ml",
+			"printed": "$80",
+			"line": 116,
+			"section": "Selections Under $100 > Sauvignon Blanc",
+			"facts": [
+				{
+					"fact": "Domaine Daulny is at Verdigny, in the Sancerre hills, and farms about fifteen hectares in some fifty separate plots.",
+					"how": "search, 28 November 2026: the importer’s page (charlesnealselections.com, Domaine Etienne Daulny) and Flatiron Wines’ importer notes; one other listing says sixteen hectares, so the card says about fifteen"
+				},
+				{
+					"fact": "The Sancerre blends plots on varied soils, clay with flint (silex) and Portlandian and Kimmeridgian limestone, and is fermented in stainless steel.",
+					"how": "search, 28 November 2026: charlesnealselections.com (most of the wine fermented and aged in stainless steel, a small share in large old barrels) and Flatiron Wines (stainless steel only). The two differ on oak, so the card says fermented in stainless steel and sends any oak to the sommelier."
+				},
+				{
+					"fact": "The 2024 tastes of lime, green apple and white blossom with a chalky finish.",
+					"how": "search, 28 November 2026: retailer notes on the 2024 (winebazaar.com, missionliquor.com, and Flatiron’s note on the Réserve 2024 for the chalky finish)"
+				},
+				{
+					"fact": "2024 in Sancerre: record rain, downy mildew and low yields; light wines with very crisp acidity.",
+					"how": "search, 28 November 2026: the Centre-Loire wine body’s 2024 harvest report (vins-centre-loire.com) and Decanter’s Centre-Loire 2024 report"
+				},
+				{
+					"fact": "On the list of 28 November 2026 the only white Sancerre under $100 is this bottle: the others are Pascal Cotat La Grande Côte 2023 ($255), Les Monts Damnés 2022 ($350) and the Vatan Clos la Néore magnum ($920); the Sautereau Sancerre 2022 at $80 is printed under Loire red.",
+					"how": "research/winelist-2026-11-28.json entries 653 to 655 and 1459"
+				},
+				{
+					"fact": "Pouilly-Fumé is the Sauvignon Blanc appellation across the Loire from Sancerre.",
+					"how": "knowledge, certain"
+				},
+				{
+					"fact": "The person who runs the domaine is not named: whether living is not known to the card, and the rule names no living person.",
+					"how": "house rule"
+				}
+			]
+		},
+		{
+			"key": "b39",
+			"n": 39,
+			"bin": "14253",
+			"name": "Domaine Maurice Charleux \"La Fussière\" Maranges Burgundy FR",
+			"card": "Domaine Maurice Charleux ‘La Fussière’ Maranges 2022",
+			"chunk": "c1",
+			"vintage": "2022",
+			"size": "750ml",
+			"printed": "$95",
+			"line": 214,
+			"section": "Selections Under $100 > Pinot Noir",
+			"facts": [
+				{
+					"fact": "La Fussière is a Premier Cru climat of Maranges; Charleux’s 2022 is sold as Maranges 1er Cru La Fussière, so the label reads Maranges Premier Cru though the list prints only Maranges.",
+					"how": "search, 28 November 2026: decanter.com wine review (Domaine Maurice Charleux & Fils, Maranges, 1er Cru La Fussière 2022) and winelibrary.com (2022 Maranges 1er Cru La Fussière); the Burgundy pages of the list print La Fussière under Maranges Premier Cru for Matrot and Morey (entries 2124, 2125)"
+				},
+				{
+					"fact": "Domaine Maurice Charleux et Fils is at Dezize-lès-Maranges, about four kilometers southwest of Santenay; it was founded in 1894 by Ferdinand Charleux, who owned a little over half a hectare, and farms just under ten hectares of Pinot Noir and Chardonnay.",
+					"how": "search, 28 November 2026: the importer’s page (charlesnealselections.com, Domaine Maurice Charleux et Fils), the primary source; the Hachette guide’s producer page names the domaine at Dezize. Ferdinand Charleux, the founder of 1894, is named as a person long dead."
+				},
+				{
+					"fact": "The domaine ferments its reds with indigenous yeasts and bottles with a light filtration about a year after the wine goes into barrel.",
+					"how": "search, 28 November 2026: charlesnealselections.com (the importer, primary), the domaine’s general practice; no technical sheet for the 2022 red was found, so new oak share and stems are left out"
+				},
+				{
+					"fact": "La Fussière is the largest climat of Maranges; its soil is limestone over marl; the Premier Cru vineyards of Maranges face south below the Montagne des Trois Croix, and there are seven.",
+					"how": "search, 28 November 2026: charlesnealselections.com (largest climat); the Boisset (Bouchard Aîné) La Fussière sheet and a retailer’s note (limestone and marl); Decanter’s Maranges feature and the Burgundy Report village profile (south facing, seven Premiers Crus). The domaine’s holding is 1.82 hectares by the importer and 30 ares by Hachette, so the card gives none."
+				},
+				{
+					"fact": "Maranges is the southernmost appellation of the Côte de Beaune, just inside the Saône-et-Loire, shared by three villages: Cheilly-lès-Maranges, Dezize-lès-Maranges and Sampigny-lès-Maranges; almost all its wine is red Pinot Noir.",
+					"how": "search, 28 November 2026: the INAO’s Maranges sheet (inao.gouv.fr), Decanter’s Maranges feature and the Burgundy Report"
+				},
+				{
+					"fact": "The 2022 tastes of ripe cherry and raspberry with an earthy, mushroom edge; firm tannins and a dense, structured palate; medium bodied.",
+					"how": "search, 28 November 2026: winelibrary.com and firstleaf.com notes on the Charleux 2022 (cherry, raspberry, mushroom, medium body); the Hachette guide (firm tannins, dense and structured)"
+				},
+				{
+					"fact": "2022 in Burgundy: hot and dry, a generous crop after the frost of 2021, reds ripe with fresh, red fruit.",
+					"how": "search, 28 November 2026: Decanter’s Burgundy 2022 reports and The World of Fine Wine, both reporting the BIVB’s figures"
+				},
+				{
+					"fact": "On the list of 28 November 2026 two other growers’ La Fussière print under Maranges Premier Cru: Thierry & Pascale Matrot 2015 (bin 224210, $78) and Vincent & Sophie Morey 2022 (bin 23113, $105).",
+					"how": "research/winelist-2026-11-28.json entries 2124 and 2125"
+				}
+			]
+		}
+	],
+	"mentions": [
+		{
+			"n": 14,
+			"bin": "",
+			"name": "PINOT NOIR - Damien Martin Burgundy FR",
+			"vintage": "2023",
+			"printed": "$18",
+			"how": "the glass named as the lighter pour on the Lemelson and Charleux cards"
+		},
+		{
+			"n": 9,
+			"bin": "",
+			"name": "SAUVIGNON BLANC - Domaine Durand Loire Valley FR",
+			"vintage": "2025",
+			"printed": "$14",
+			"how": "the glass named as the lighter pour on the Daulny card"
+		},
+		{
+			"n": 655,
+			"bin": "28224",
+			"name": "Pascal Cotat \"Les Monts Damnés\" Sancerre",
+			"vintage": "2022",
+			"printed": "$350",
+			"how": "the celebration Sancerre named on the Daulny card"
+		},
+		{
+			"n": 1923,
+			"bin": "23374",
+			"name": "Domaine Jean Grivot \"Les Charmois\"",
+			"vintage": "2013",
+			"printed": "$138",
+			"how": "the Blackened Tofu classic tier, named on the Lemelson card"
+		},
+		{
+			"n": 1963,
+			"bin": "24761",
+			"name": "Domaine Tollot-Beaut \"Les Lavières\"",
+			"vintage": "2019",
+			"printed": "$175",
+			"how": "the Premier Cru step named on the Charleux card"
+		},
+		{
+			"n": 6,
+			"bin": "",
+			"name": "PINOT GRIS - Lemelson Vineyards \"Tikka's Run\" Willamette Valley OR",
+			"vintage": "2022",
+			"printed": "$15",
+			"how": "the Lemelson glass, named as the mix-up on the Lemelson card"
+		}
+	]
+}

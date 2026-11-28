@@ -1,0 +1,363 @@
+{
+	"entries": [
+		{
+			"target": "wine:+",
+			"op": "add",
+			"value": {
+				"name": "Lemelson ‘Thea’s Selection’ Willamette Valley Pinot Noir 2022",
+				"section": "Other reds",
+				"group": "Other reds: Oregon",
+				"meals": [
+					"Breakfast & lunch",
+					"Dinner"
+				],
+				"price": "$80",
+				"prices": [
+					{
+						"meal": "Bottle list",
+						"printed": "$80"
+					}
+				],
+				"glass": "",
+				"bottle": "$80",
+				"pours": [],
+				"list": "bottle",
+				"bin": "1648",
+				"size": "750ml",
+				"producer": "Lemelson Vineyards",
+				"wine": "Thea’s Selection Pinot Noir",
+				"vintage": "2022",
+				"region": "Willamette Valley, Oregon",
+				"grapes": [
+					"Pinot Noir"
+				],
+				"style": "Estate blend of Oregon Pinot Noir, bright, fresh and silky",
+				"profile": "Lemelson’s house Pinot Noir, blended from its organically farmed estate vineyards across three Willamette Valley sub-regions: red currant, tart cherry and cranberry with a note of fresh mint, medium bodied, with gentle tannin and bright acidity. 2022 was a cold, late year in Oregon, finished by a long, warm fall.",
+				"guest": "Lemelson Thea’s Selection: Oregon Pinot Noir from an organic estate, red currant and tart cranberry, silky and bright, lovely with mushrooms and spice.",
+				"goesWith": "Earthy, spiced plates and lean red meat: the Blackened Tofu with its preserved shiitakes and rice grits, the Steak Tartare with Rye, and a side of Maggie’s Mushrooms.",
+				"serve": "Serve 55 to 60°F in a Burgundy bowl, a few minutes in the ice bucket if the room runs warm. No decanting needed.",
+				"say": "Lemelson: LEM-el-sun; Willamette: wil-AM-it.",
+				"why": "The value bottle for the Blackened Tofu: Willamette Pinot Noir with earthy red fruit for the shiitakes and low tannin that stays calm with blackening spice; the Oregon Pinot Noir under $100 on the list.",
+				"origin": "Lemelson Vineyards is an organically farmed estate at Carlton, in Oregon’s Willamette Valley; Thea’s Selection is its house Pinot Noir, a blend of its estate vineyards.",
+				"parts": {
+					"main": "Pinot Noir from Lemelson’s organic estate vineyards",
+					"technique": "one blend across three Willamette Valley sub-regions",
+					"sauce": "the house Pinot Noir of an Oregon estate",
+					"sides": "blackened tofu, shiitakes, steak tartare",
+					"taste": "red currant, cranberry, mint, silky and bright"
+				},
+				"lines": {
+					"s10": "Lemelson Thea’s Selection, Oregon Pinot Noir: red currant and tart cranberry, silky, for the shiitakes on the Blackened Tofu.",
+					"s20": "Thea’s Selection is Lemelson’s house Pinot Noir, blended from its organic estate vineyards in Oregon’s Willamette Valley: red currant, tart cranberry and fresh mint, bright and silky. Its earthy fruit meets the shiitakes on the Blackened Tofu, and its low tannin stays calm with the spice.",
+					"s45": "Lemelson Vineyards farms its estate organically at Carlton, in the Willamette Valley, and Thea’s Selection is its house Pinot Noir, blended from those vineyards across three of the valley’s sub-regions. 2022 was a cold, late year in Oregon, saved by a long, warm fall, and the wine is bright and fresh: red currant, tart cranberry and mint, medium bodied and silky. It is the value bottle for the Blackened Tofu, its earthy fruit meeting the preserved shiitakes and its low tannin never turning bitter against the blackening spice. We pour it at 55 to 60°F in a Burgundy bowl.",
+					"sale": "Thea’s Selection is Lemelson’s organic estate Pinot Noir from the Willamette Valley: red currant, tart cranberry and mint, bright and silky. It is the value bottle for the Blackened Tofu, earthy for the shiitakes and soft for the spice."
+				},
+				"serviceNote": "Bin 1648 on the Binwise list read 28 November 2026, 750 ml, $80. The value tier for the Blackened Tofu. Confirm at lineup that it is in stock."
+			},
+			"reason": "A floor bottle from the Binwise list of 28 November 2026 (chunk c1, Other reds): a full study card, every catalogue figure copied from the entry by its key, every fact beyond the list recorded in the cards-d research file with how it is known (roles value; the Blackened Tofu value tier)",
+			"source": "research/winelist-2026-11-28.json n=2718, key b2718 (page:binwise-wine-list-2026-11-28.txt line 14053: bin 1648, Lemelson \"Thea's Selection\" Willamette Valley, 2022, 80; United States ~ Pinot Noir > Oregon); the card selection of 28 November 2026 (Other reds, role value: the Blackened Tofu value tier, re-pointed from the Ken Wright); research/bottle-facts-cards-d-2026-11-28.json b2718"
+		},
+		{
+			"target": "wine:Lemelson ‘Thea’s Selection’ Willamette Valley Pinot Noir 2022",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "Tell me about it.",
+				"a": "Lemelson Thea’s Selection 2022 is Oregon Pinot Noir at $80, filed under United States, Pinot Noir, Oregon, new on the list of 28 November 2026 and the value bottle for the Blackened Tofu.\n\nLemelson Vineyards is an estate winery at Carlton, in the Willamette Valley, whose vineyards have been farmed organically from the beginning. Thea’s Selection is its house Pinot Noir, blended from those estate vineyards, which spread across three of the valley’s sub-regions, so it speaks of the estate rather than one site. The same estate makes the Tikka’s Run Pinot Gris we pour by the glass.\n\n2022 began cold and wet in Oregon, with a spring frost, and a long, warm fall carried the grapes to a late harvest. In the glass it is bright and fresh: red currant, tart cherry and cranberry with a note of mint, medium bodied, with gentle tannin.\n\nWith the tofu, its earthy fruit meets the preserved shiitakes and its low tannin stays calm with the blackening spice."
+			},
+			"reason": "Study notes, the description: what a master tells a new Brennan’s server who asks about it, every fact from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2718, key b2718 (page:binwise-wine-list-2026-11-28.txt line 14053: bin 1648, Lemelson \"Thea's Selection\" Willamette Valley, 2022, 80; United States ~ Pinot Noir > Oregon); the card selection of 28 November 2026 (Other reds, role value: the Blackened Tofu value tier, re-pointed from the Ken Wright); research/bottle-facts-cards-d-2026-11-28.json b2718"
+		},
+		{
+			"target": "wine:Lemelson ‘Thea’s Selection’ Willamette Valley Pinot Noir 2022",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I sell it?",
+				"a": "Offer the Lemelson to a table at dinner ordering the Blackened Tofu, or to a guest who wants Oregon Pinot Noir or a light, silky red under $100. It also suits the Steak Tartare with Rye. By the glass, the Damien Martin Bourgogne at $18 is the lighter pour; for a bottle with age, the Grivot Les Charmois Nuits-Saint-Georges is the classic step with the tofu. Say: “Thea’s Selection is Lemelson’s organic estate Pinot Noir from Oregon: red currant and cranberry, silky, lovely with the mushrooms.”"
+			},
+			"reason": "Study notes, coaching: when, to whom and with what to suggest it, and one line to say, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2718, key b2718 (page:binwise-wine-list-2026-11-28.txt line 14053: bin 1648, Lemelson \"Thea's Selection\" Willamette Valley, 2022, 80; United States ~ Pinot Noir > Oregon); the card selection of 28 November 2026 (Other reds, role value: the Blackened Tofu value tier, re-pointed from the Ken Wright); research/bottle-facts-cards-d-2026-11-28.json b2718"
+		},
+		{
+			"target": "wine:Lemelson ‘Thea’s Selection’ Willamette Valley Pinot Noir 2022",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What do guests ask?",
+				"a": "Asked: Is it organic?\n\nAnswer: Lemelson has farmed its estate vineyards organically from the beginning, and Thea’s Selection is blended from those vineyards. What the label itself certifies is a question for the sommelier.\n\nAsked: Is it like red Burgundy?\n\nAnswer: It is the same grape, Pinot Noir, grown in a cool valley often compared with Burgundy. Oregon tends to give brighter red fruit: here red currant and cranberry, with mint.\n\nAsked: Who is Thea?\n\nAnswer: The winery names the wine Thea’s Selection; who chose it, and why, is a question for the sommelier, so I would not guess."
+			},
+			"reason": "Study notes, coaching: the questions guests ask and the true answers, or the person to ask, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2718, key b2718 (page:binwise-wine-list-2026-11-28.txt line 14053: bin 1648, Lemelson \"Thea's Selection\" Willamette Valley, 2022, 80; United States ~ Pinot Noir > Oregon); the card selection of 28 November 2026 (Other reds, role value: the Blackened Tofu value tier, re-pointed from the Ken Wright); research/bottle-facts-cards-d-2026-11-28.json b2718"
+		},
+		{
+			"target": "wine:Lemelson ‘Thea’s Selection’ Willamette Valley Pinot Noir 2022",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What should I watch for?",
+				"a": "Do not confuse it with the Tikka’s Run, the Lemelson Pinot Gris we pour by the glass: this is the estate’s red, by the bottle only. It is bin 1648, 2022, $80, printed under United States, Pinot Noir, Oregon. Serve it cool, not at room temperature, or the alcohol shows against the spice. How the 2022 was fermented and aged is a lineup question for the sommelier. Allergens: read the service note and confirm at lineup."
+			},
+			"reason": "Study notes, coaching: the mix-ups, timings, rules, disputes and lineup questions tied to it, closing on the service note, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2718, key b2718 (page:binwise-wine-list-2026-11-28.txt line 14053: bin 1648, Lemelson \"Thea's Selection\" Willamette Valley, 2022, 80; United States ~ Pinot Noir > Oregon); the card selection of 28 November 2026 (Other reds, role value: the Blackened Tofu value tier, re-pointed from the Ken Wright); research/bottle-facts-cards-d-2026-11-28.json b2718"
+		},
+		{
+			"target": "wine:Lemelson ‘Thea’s Selection’ Willamette Valley Pinot Noir 2022",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I pour it?",
+				"a": "Present the bottle and say Lemelson, Thea’s Selection, Willamette Valley Pinot Noir, LEM-el-sun. Serve it at 55 to 60°F in a Burgundy bowl, with a few minutes in the ice bucket if the room runs warm; no decanting. Pour as the tofu lands, guests first and the host last. Say: “Oregon Pinot Noir from an organic estate: bright, silky, made for the mushrooms.”"
+			},
+			"reason": "Study notes, coaching: presenting and pouring it at the table as the sources print it",
+			"source": "research/winelist-2026-11-28.json n=2718, key b2718 (page:binwise-wine-list-2026-11-28.txt line 14053: bin 1648, Lemelson \"Thea's Selection\" Willamette Valley, 2022, 80; United States ~ Pinot Noir > Oregon); the card selection of 28 November 2026 (Other reds, role value: the Blackened Tofu value tier, re-pointed from the Ken Wright); research/bottle-facts-cards-d-2026-11-28.json b2718"
+		},
+		{
+			"target": "wine:+",
+			"op": "add",
+			"value": {
+				"name": "Domaine Daulny Sancerre 2024",
+				"section": "Other whites",
+				"meals": [
+					"Breakfast & lunch",
+					"Dinner"
+				],
+				"price": "$80",
+				"prices": [
+					{
+						"meal": "Bottle list",
+						"printed": "$80"
+					}
+				],
+				"glass": "",
+				"bottle": "$80",
+				"pours": [],
+				"list": "bottle",
+				"bin": "1569",
+				"size": "750ml",
+				"producer": "Domaine Daulny",
+				"wine": "Sancerre",
+				"vintage": "2024",
+				"region": "Sancerre, Loire Valley, France",
+				"grapes": [
+					"Sauvignon Blanc"
+				],
+				"style": "Sancerre, crisp Loire Sauvignon Blanc fermented in stainless steel",
+				"profile": "Sancerre from Domaine Daulny at Verdigny, blended from many small plots on clay with flint and on Kimmeridgian limestone, and fermented in stainless steel: lime, green apple and white blossom, a chalky finish and very crisp acidity from the cool, wet 2024 season.",
+				"guest": "Domaine Daulny Sancerre: crisp Loire Sauvignon Blanc, lime, green apple and chalk, made for oysters and lemon.",
+				"goesWith": "Brine, lemon and herbs: the Grand Isle Jewel Oysters with their chili mignonette, the Gulf Fish en Papillote with olives and tomato, and the Creole Caesar.",
+				"serve": "Serve 45 to 50°F in a white-wine glass. Ice bucket between pours. No decanting.",
+				"say": "Daulny: dohl-NEE; Sancerre: sahn-SAIR.",
+				"why": "The list’s Sancerre under $100: crisp Sauvignon Blanc for raw oysters, the papillote and the Caesar, and the white guests ask for by name.",
+				"origin": "Domaine Daulny is at Verdigny, in the hills of Sancerre, and farms about fifteen hectares in some fifty small plots.",
+				"parts": {
+					"main": "Sauvignon Blanc from some fifty plots around Verdigny",
+					"technique": "fermented in stainless steel",
+					"sauce": "the Sancerre guests ask for by name",
+					"sides": "raw oysters, papillote, Caesar",
+					"taste": "lime, green apple, white blossom, chalk"
+				},
+				"lines": {
+					"s10": "Domaine Daulny Sancerre: crisp Loire Sauvignon Blanc, lime, green apple and chalk, for the Grand Isle Jewel Oysters.",
+					"s20": "Domaine Daulny is Sancerre from Verdigny, in the upper Loire, Sauvignon Blanc fermented in stainless steel: lime, green apple and white blossom with a chalky finish. Its acidity meets the mignonette on the Grand Isle Jewel Oysters and the olives and tomato of the Gulf Fish en Papillote.",
+					"s45": "Domaine Daulny is Sancerre from Verdigny, a village of the Sancerre hills in the upper Loire, made from about fifty small plots on clay with flint and on Kimmeridgian limestone. It is fermented in stainless steel, so the fruit stays sharp: lime, green apple and white blossom, with a chalky finish. 2024 was a wet year in Sancerre that gave lighter wines with very crisp acidity. That acidity meets the chili mignonette on the Grand Isle Jewel Oysters, the olives and tomato of the Gulf Fish en Papillote and the smoked oyster dressing of the Creole Caesar. We pour it at 45 to 50°F.",
+					"sale": "Domaine Daulny is Sancerre from Verdigny, fermented in steel: lime, green apple and chalk, with bright acidity. Pour it with the Grand Isle Jewel Oysters or the Gulf Fish en Papillote, the Loire’s own Sauvignon Blanc for the table."
+				},
+				"serviceNote": "Bin 1569 on the Binwise list read 28 November 2026, 750 ml, $80. Printed under Selections Under $100, Sauvignon Blanc. Confirm at lineup that it is in stock."
+			},
+			"reason": "A floor bottle from the Binwise list of 28 November 2026 (chunk c1, Other whites): a full study card, every catalogue figure copied from the entry by its key, every fact beyond the list recorded in the cards-d research file with how it is known (roles value and anchor; the list’s Under $100 Sauvignon Blanc)",
+			"source": "research/winelist-2026-11-28.json n=21, key b21 (page:binwise-wine-list-2026-11-28.txt line 116: bin 1569, Domaine Daulny Sancerre FR, 2024, 80; Selections Under $100 > Sauvignon Blanc); the card selection of 28 November 2026 (Other whites, roles value and anchor); research/bottle-facts-cards-d-2026-11-28.json b21"
+		},
+		{
+			"target": "wine:Domaine Daulny Sancerre 2024",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "Tell me about it.",
+				"a": "Domaine Daulny Sancerre 2024 is Loire Sauvignon Blanc at $80, printed under Selections Under $100, the only white Sancerre on the list under $100.\n\nThe domaine is at Verdigny, a village of the Sancerre hills, and farms about fifteen hectares split into some fifty small plots. This Sancerre blends plots on different soils, clay with flint and Kimmeridgian limestone, and is fermented in stainless steel, which keeps the fruit sharp and the chalk in front.\n\n2024 was a hard year in Sancerre: heavy rain, mildew and small crops, and the wines it gave are lighter, with very crisp acidity. This one tastes of lime, green apple and white blossom, with a chalky finish.\n\nSancerre is the white guests ask for by name. With the Grand Isle Jewel Oysters, the papillote or the Caesar, its acidity meets the vinegar, the lemon and the brine."
+			},
+			"reason": "Study notes, the description: what a master tells a new Brennan’s server who asks about it, every fact from the sources named",
+			"source": "research/winelist-2026-11-28.json n=21, key b21 (page:binwise-wine-list-2026-11-28.txt line 116: bin 1569, Domaine Daulny Sancerre FR, 2024, 80; Selections Under $100 > Sauvignon Blanc); the card selection of 28 November 2026 (Other whites, roles value and anchor); research/bottle-facts-cards-d-2026-11-28.json b21"
+		},
+		{
+			"target": "wine:Domaine Daulny Sancerre 2024",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I sell it?",
+				"a": "Offer the Daulny to anyone who asks for Sancerre or a crisp, dry white, and with the Grand Isle Jewel Oysters, the Gulf Fish en Papillote or the Creole Caesar. By the glass, the Durand Sauvignon Blanc from the Loire is the lighter pour; for a celebration, Pascal Cotat’s Les Monts Damnés is the Sancerre at the top of the list. Say: “Our Sancerre is from Verdigny: lime, green apple and chalk, crisp enough for oysters.”"
+			},
+			"reason": "Study notes, coaching: when, to whom and with what to suggest it, and one line to say, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=21, key b21 (page:binwise-wine-list-2026-11-28.txt line 116: bin 1569, Domaine Daulny Sancerre FR, 2024, 80; Selections Under $100 > Sauvignon Blanc); the card selection of 28 November 2026 (Other whites, roles value and anchor); research/bottle-facts-cards-d-2026-11-28.json b21"
+		},
+		{
+			"target": "wine:Domaine Daulny Sancerre 2024",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What do guests ask?",
+				"a": "Asked: Is Sancerre a grape?\n\nAnswer: No, it is a place in the upper Loire Valley. White Sancerre is made from Sauvignon Blanc.\n\nAsked: Is it oaky?\n\nAnswer: It is fermented in stainless steel, so it tastes of fruit and chalk rather than wood. Whether any part sees old barrels is a question for the sommelier.\n\nAsked: Is it like a New Zealand Sauvignon Blanc?\n\nAnswer: It is the same grape in a cooler, leaner style: lime and green apple with chalk, rather than tropical fruit."
+			},
+			"reason": "Study notes, coaching: the questions guests ask and the true answers, or the person to ask, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=21, key b21 (page:binwise-wine-list-2026-11-28.txt line 116: bin 1569, Domaine Daulny Sancerre FR, 2024, 80; Selections Under $100 > Sauvignon Blanc); the card selection of 28 November 2026 (Other whites, roles value and anchor); research/bottle-facts-cards-d-2026-11-28.json b21"
+		},
+		{
+			"target": "wine:Domaine Daulny Sancerre 2024",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What should I watch for?",
+				"a": "Do not mix up Sancerre with Pouilly-Fumé, the Sauvignon Blanc from across the Loire, and do not confuse this white with the Sancerre rosé and red the list also prints. It is bin 1569, 2024, $80, under Selections Under $100. Serve it cold but not icy, or the fruit closes up. Allergens: read the service note and confirm at lineup."
+			},
+			"reason": "Study notes, coaching: the mix-ups, timings, rules, disputes and lineup questions tied to it, closing on the service note, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=21, key b21 (page:binwise-wine-list-2026-11-28.txt line 116: bin 1569, Domaine Daulny Sancerre FR, 2024, 80; Selections Under $100 > Sauvignon Blanc); the card selection of 28 November 2026 (Other whites, roles value and anchor); research/bottle-facts-cards-d-2026-11-28.json b21"
+		},
+		{
+			"target": "wine:Domaine Daulny Sancerre 2024",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I pour it?",
+				"a": "Present the bottle and say Domaine Daulny, Sancerre, dohl-NEE, sahn-SAIR. Serve it at 45 to 50°F in a white-wine glass, and keep it in the ice bucket between pours; no decanting. Pour as the oysters land, guests first and the host last. Say: “Sancerre from Verdigny: lime, green apple and chalk.”"
+			},
+			"reason": "Study notes, coaching: presenting and pouring it at the table as the sources print it",
+			"source": "research/winelist-2026-11-28.json n=21, key b21 (page:binwise-wine-list-2026-11-28.txt line 116: bin 1569, Domaine Daulny Sancerre FR, 2024, 80; Selections Under $100 > Sauvignon Blanc); the card selection of 28 November 2026 (Other whites, roles value and anchor); research/bottle-facts-cards-d-2026-11-28.json b21"
+		},
+		{
+			"target": "wine:+",
+			"op": "add",
+			"value": {
+				"name": "Domaine Maurice Charleux ‘La Fussière’ Maranges 2022",
+				"section": "Red Burgundy",
+				"group": "Red Burgundy: Maranges Premier Cru",
+				"meals": [
+					"Breakfast & lunch",
+					"Dinner"
+				],
+				"price": "$95",
+				"prices": [
+					{
+						"meal": "Bottle list",
+						"printed": "$95"
+					}
+				],
+				"glass": "",
+				"bottle": "$95",
+				"pours": [],
+				"list": "bottle",
+				"bin": "14253",
+				"size": "750ml",
+				"producer": "Domaine Maurice Charleux",
+				"wine": "Maranges Premier Cru La Fussière",
+				"vintage": "2022",
+				"region": "Maranges, Côte de Beaune, Burgundy, France",
+				"grapes": [
+					"Pinot Noir"
+				],
+				"style": "Premier Cru red Burgundy from Maranges, at the southern end of the Côte de Beaune",
+				"profile": "Pinot Noir from La Fussière, a south facing Premier Cru slope of Maranges at the southern end of the Côte de Beaune, on limestone over marl: ripe cherry and raspberry with an earthy, mushroom edge, firm tannins and a dense middle from the hot, generous 2022 vintage.",
+				"guest": "A Premier Cru red Burgundy from Maranges: ripe cherry and raspberry, firm and savory, a Burgundy for mustard and brown sauce.",
+				"goesWith": "Mustard, brown sauce and roast meat: the Poussin à la Moutarde, the Chateau Espagnole, and a side of Maggie’s Mushrooms.",
+				"serve": "Serve 58 to 62°F in a Burgundy bowl. No decanting; it opens with a few minutes in the glass.",
+				"say": "Charleux: shar-LUH; Maranges: mah-RAHNZH; La Fussière: lah foo-SYAIR.",
+				"why": "The list’s Premier Cru red Burgundy under $100: Pinot Noir with the cherry, acidity and firm frame for the mustard cream of the Poussin à la Moutarde and the Sauce Espagnole.",
+				"origin": "Domaine Maurice Charleux is at Dezize-lès-Maranges, founded in 1894, and farms just under ten hectares at the southern end of the Côte de Beaune.",
+				"parts": {
+					"main": "Pinot Noir from La Fussière, a Premier Cru of Maranges",
+					"technique": "native yeasts, about a year in barrel",
+					"sauce": "red Burgundy from the last villages of the Côte de Beaune",
+					"sides": "poussin, mustard cream, Sauce Espagnole",
+					"taste": "ripe cherry, raspberry, earth, firm tannins"
+				},
+				"lines": {
+					"s10": "Charleux La Fussière, Premier Cru Maranges: red Burgundy of ripe cherry and earth, firm enough for the Poussin à la Moutarde.",
+					"s20": "La Fussière is a Premier Cru slope of Maranges, at the southern end of the Côte de Beaune: Maurice Charleux’s Pinot Noir of ripe cherry and raspberry, earthy, with firm tannins. It suits the mustard cream of the Poussin à la Moutarde and the Chateau Espagnole.",
+					"s45": "Maranges is the southern tip of the Côte de Beaune, and La Fussière is one of its Premier Cru vineyards, a south facing slope of limestone over marl. Domaine Maurice Charleux, founded in 1894 at Dezize-lès-Maranges, ferments its reds with native yeasts and gives them about a year in barrel. 2022 was a hot, generous year in Burgundy with fruit that stayed fresh: ripe cherry and raspberry, an earthy edge and firm tannins. Its acidity meets the mustard cream of the Poussin à la Moutarde, and its tannin meets the beef of the Chateau Espagnole. We pour it at 58 to 62°F in a Burgundy bowl.",
+					"sale": "La Fussière is a Premier Cru Pinot Noir from Maranges, at the southern end of the Côte de Beaune: ripe cherry and raspberry, firm and savory. Offer it with the Poussin à la Moutarde, Burgundy’s grape beside a mustard cream, or with the Chateau Espagnole."
+				},
+				"serviceNote": "Bin 14253 on the Binwise list read 28 November 2026, 750 ml, $95. Printed under Selections Under $100, Pinot Noir, as “La Fussière” Maranges; the Burgundy pages print two other growers’ La Fussière. Confirm at lineup that it is in stock."
+			},
+			"reason": "A floor bottle from the Binwise list of 28 November 2026 (chunk c1, Red Burgundy): a full study card, every catalogue figure copied from the entry by its key, every fact beyond the list recorded in the cards-d research file with how it is known (role value; the list’s Under $100 red Burgundy)",
+			"source": "research/winelist-2026-11-28.json n=39, key b39 (page:binwise-wine-list-2026-11-28.txt line 214: bin 14253, Domaine Maurice Charleux \"La Fussière\" Maranges Burgundy FR, 2022, 95; Selections Under $100 > Pinot Noir); the card selection of 28 November 2026 (Red Burgundy, role value); research/bottle-facts-cards-d-2026-11-28.json b39"
+		},
+		{
+			"target": "wine:Domaine Maurice Charleux ‘La Fussière’ Maranges 2022",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "Tell me about it.",
+				"a": "Domaine Maurice Charleux La Fussière 2022 is red Burgundy at $95, printed under Selections Under $100 among the Pinot Noirs, a Premier Cru from the last villages of the Côte de Beaune.\n\nMaranges is the southern tip of the Côte de Beaune, three villages where the Côte d’Or runs into the Saône-et-Loire: Cheilly, Dezize and Sampigny-lès-Maranges. La Fussière is one of its Premier Cru vineyards, a south facing slope of limestone over marl, so the label reads Maranges Premier Cru, though our list prints only Maranges.\n\nThe domaine is at Dezize-lès-Maranges, founded in 1894 by Ferdinand Charleux, and farms just under ten hectares. It ferments its reds with native yeasts and gives them about a year in barrel.\n\n2022 was a hot, dry year in Burgundy with a generous crop, and the reds are ripe but fresh. This one shows ripe cherry and raspberry, an earthy edge and firm tannins, so it stands up to mustard cream and brown sauce."
+			},
+			"reason": "Study notes, the description: what a master tells a new Brennan’s server who asks about it, every fact from the sources named",
+			"source": "research/winelist-2026-11-28.json n=39, key b39 (page:binwise-wine-list-2026-11-28.txt line 214: bin 14253, Domaine Maurice Charleux \"La Fussière\" Maranges Burgundy FR, 2022, 95; Selections Under $100 > Pinot Noir); the card selection of 28 November 2026 (Red Burgundy, role value); research/bottle-facts-cards-d-2026-11-28.json b39"
+		},
+		{
+			"target": "wine:Domaine Maurice Charleux ‘La Fussière’ Maranges 2022",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I sell it?",
+				"a": "Offer the Charleux to a guest who wants red Burgundy under $100, and with the Poussin à la Moutarde, the Chateau Espagnole or a side of Maggie’s Mushrooms. By the glass, the Damien Martin Bourgogne at $18 is the lighter pour; the Tollot-Beaut Les Lavières, a Savigny-lès-Beaune Premier Cru, is the step up the Côte de Beaune. Say: “A Premier Cru red Burgundy from Maranges: ripe cherry, firm and savory, lovely with the mustard.”"
+			},
+			"reason": "Study notes, coaching: when, to whom and with what to suggest it, and one line to say, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=39, key b39 (page:binwise-wine-list-2026-11-28.txt line 214: bin 14253, Domaine Maurice Charleux \"La Fussière\" Maranges Burgundy FR, 2022, 95; Selections Under $100 > Pinot Noir); the card selection of 28 November 2026 (Red Burgundy, role value); research/bottle-facts-cards-d-2026-11-28.json b39"
+		},
+		{
+			"target": "wine:Domaine Maurice Charleux ‘La Fussière’ Maranges 2022",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What do guests ask?",
+				"a": "Asked: Where is Maranges?\n\nAnswer: At the southern tip of the Côte de Beaune, just southwest of Santenay: the last villages of the Côte d’Or.\n\nAsked: Is it a Premier Cru?\n\nAnswer: Yes. La Fussière is one of the Premier Cru vineyards of Maranges, so the label reads Maranges Premier Cru La Fussière; our list prints it as La Fussière Maranges.\n\nAsked: Is it heavy?\n\nAnswer: No. It is Pinot Noir, medium bodied, with ripe cherry and raspberry; it is firmer than a Bourgogne, which is why it suits mustard and brown sauce."
+			},
+			"reason": "Study notes, coaching: the questions guests ask and the true answers, or the person to ask, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=39, key b39 (page:binwise-wine-list-2026-11-28.txt line 214: bin 14253, Domaine Maurice Charleux \"La Fussière\" Maranges Burgundy FR, 2022, 95; Selections Under $100 > Pinot Noir); the card selection of 28 November 2026 (Red Burgundy, role value); research/bottle-facts-cards-d-2026-11-28.json b39"
+		},
+		{
+			"target": "wine:Domaine Maurice Charleux ‘La Fussière’ Maranges 2022",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What should I watch for?",
+				"a": "The list prints La Fussière Maranges with no Premier Cru, and two other growers’ La Fussière bottles sit on the Burgundy pages: ring it in by bin 14253, 2022, $95, never by the vineyard name. The 2022 is young and firm, so serve it a little cool and let it open in the glass. Allergens: read the service note and confirm at lineup."
+			},
+			"reason": "Study notes, coaching: the mix-ups, timings, rules, disputes and lineup questions tied to it, closing on the service note, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=39, key b39 (page:binwise-wine-list-2026-11-28.txt line 214: bin 14253, Domaine Maurice Charleux \"La Fussière\" Maranges Burgundy FR, 2022, 95; Selections Under $100 > Pinot Noir); the card selection of 28 November 2026 (Red Burgundy, role value); research/bottle-facts-cards-d-2026-11-28.json b39"
+		},
+		{
+			"target": "wine:Domaine Maurice Charleux ‘La Fussière’ Maranges 2022",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I pour it?",
+				"a": "Present the bottle and say Maurice Charleux, La Fussière, Maranges: shar-LUH, mah-RAHNZH. Serve it at 58 to 62°F in a Burgundy bowl; no decanting, though it opens with a few minutes in the glass. Pour as the plates land, guests first and the host last. Say: “Premier Cru Maranges: ripe cherry and raspberry, firm and savory.”"
+			},
+			"reason": "Study notes, coaching: presenting and pouring it at the table as the sources print it",
+			"source": "research/winelist-2026-11-28.json n=39, key b39 (page:binwise-wine-list-2026-11-28.txt line 214: bin 14253, Domaine Maurice Charleux \"La Fussière\" Maranges Burgundy FR, 2022, 95; Selections Under $100 > Pinot Noir); the card selection of 28 November 2026 (Red Burgundy, role value); research/bottle-facts-cards-d-2026-11-28.json b39"
+		},
+		{
+			"target": "dish:Blackened Tofu",
+			"field": "bottles.value.wine",
+			"op": "set",
+			"value": "Lemelson ‘Thea’s Selection’ Willamette Valley Pinot Noir 2022",
+			"reason": "The list of 28 November 2026 no longer prints the Ken Wright Willamette Valley Pinot Noir, the dish's value bottle, so the tier is re-pointed to the Lemelson Thea's Selection 2022 ($80), the Willamette Pinot Noir under $100 that joined the list; the classic, celebration and half tiers stand",
+			"source": "research/winelist-2026-11-28.json n=2718, key b2718 (page:binwise-wine-list-2026-11-28.txt line 14053: bin 1648, Lemelson \"Thea's Selection\" Willamette Valley, 2022, 80); page:binwise-wine-list-2026-11-28.txt (no printing of the Ken Wright Cellars Willamette Valley Pinot Noir 2024, bin 148412, $72); research/bottle-facts-cards-d-2026-11-28.json b2718; the dish record d-377dkkse"
+		},
+		{
+			"target": "dish:Blackened Tofu",
+			"field": "bottles.value.why",
+			"op": "set",
+			"value": "Bridge and heat: Lemelson’s Willamette Pinot Noir brings red currant and an earthy edge for the shiitakes, and low tannin calm with blackening spice.",
+			"reason": "The list of 28 November 2026 no longer prints the Ken Wright Willamette Valley Pinot Noir, the dish's value bottle, so the tier is re-pointed to the Lemelson Thea's Selection 2022 ($80), the Willamette Pinot Noir under $100 that joined the list; the classic, celebration and half tiers stand; the why is written for the new wine",
+			"source": "research/winelist-2026-11-28.json n=2718, key b2718 (page:binwise-wine-list-2026-11-28.txt line 14053: bin 1648, Lemelson \"Thea's Selection\" Willamette Valley, 2022, 80); page:binwise-wine-list-2026-11-28.txt (no printing of the Ken Wright Cellars Willamette Valley Pinot Noir 2024, bin 148412, $72); research/bottle-facts-cards-d-2026-11-28.json b2718; the dish record d-377dkkse"
+		},
+		{
+			"target": "dish:Blackened Tofu",
+			"field": "bottles.value.sayIt",
+			"op": "set",
+			"value": "With the Blackened Tofu, Lemelson’s Thea’s Selection from Oregon: organic estate Pinot Noir, red currant and cranberry, silky with the mushrooms.",
+			"reason": "The list of 28 November 2026 no longer prints the Ken Wright Willamette Valley Pinot Noir, the dish's value bottle, so the tier is re-pointed to the Lemelson Thea's Selection 2022 ($80), the Willamette Pinot Noir under $100 that joined the list; the classic, celebration and half tiers stand; the line names the new wine",
+			"source": "research/winelist-2026-11-28.json n=2718, key b2718 (page:binwise-wine-list-2026-11-28.txt line 14053: bin 1648, Lemelson \"Thea's Selection\" Willamette Valley, 2022, 80); page:binwise-wine-list-2026-11-28.txt (no printing of the Ken Wright Cellars Willamette Valley Pinot Noir 2024, bin 148412, $72); research/bottle-facts-cards-d-2026-11-28.json b2718; the dish record d-377dkkse"
+		}
+	]
+}

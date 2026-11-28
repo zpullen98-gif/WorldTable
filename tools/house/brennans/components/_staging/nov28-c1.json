@@ -1,0 +1,61 @@
+{
+	"components": [
+		{
+			"terms": [],
+			"key": "wine-region-maranges",
+			"kind": "ingredient",
+			"name": "Maranges",
+			"say": "mah-RAHNZH",
+			"explain": "Maranges is the southern tip of the Côte de Beaune, the last stretch of the Côte d’Or before it runs into the Saône-et-Loire. Three villages share the name, Cheilly, Dezize and Sampigny-lès-Maranges, and almost all of the wine is red, from Pinot Noir.\n\nIts seven Premier Cru vineyards sit together on south facing slopes, and La Fussière, on limestone over marl, is the largest of them. The reds are Pinot Noir of ripe cherry and raspberry, with an earthy edge and firm tannins.\n\nOn our list: the Charleux La Fussière on the Under $100 page. Say: the last village of the Côte de Beaune.",
+			"card": {
+				"front": "Where is Maranges, and what is La Fussière?",
+				"back": "The southern tip of the Côte de Beaune, three villages sharing one name. La Fussière is its largest Premier Cru; the Charleux bottling is on our Under $100 page."
+			},
+			"items": [
+				"Domaine Maurice Charleux ‘La Fussière’ Maranges 2022"
+			],
+			"sources": [
+				"research/bottle-facts-cards-d-2026-11-28.json (b39: Maranges, La Fussière)",
+				"page:binwise-wine-list-2026-11-28.txt line 214"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-story-charleux",
+			"kind": "story",
+			"name": "Domaine Maurice Charleux",
+			"say": "shar-LUH",
+			"explain": "Domaine Maurice Charleux is a family domaine at Dezize-lès-Maranges, about four kilometers southwest of Santenay, at the southern end of the Côte de Beaune. It was founded in 1894 by Ferdinand Charleux, who began with a little over half a hectare, and it now farms just under ten hectares of Pinot Noir and Chardonnay.\n\nThe reds are fermented with native yeasts and bottled with a light filtration about a year after they go into barrel. Its La Fussière comes from the largest Premier Cru of Maranges: ripe cherry and raspberry, earthy, with firm tannins.\n\nAt Brennan’s it is the red Burgundy on the Under $100 page. Say: a family domaine since 1894, in the last village of the Côte de Beaune.",
+			"card": {
+				"front": "Who makes our La Fussière Maranges, and since when?",
+				"back": "Domaine Maurice Charleux, a family domaine at Dezize-lès-Maranges founded in 1894. Its Premier Cru La Fussière is the red Burgundy on our Under $100 page."
+			},
+			"items": [
+				"Domaine Maurice Charleux ‘La Fussière’ Maranges 2022"
+			],
+			"sources": [
+				"research/bottle-facts-cards-d-2026-11-28.json (b39: Domaine Maurice Charleux)",
+				"page:binwise-wine-list-2026-11-28.txt line 214"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-story-daulny",
+			"kind": "story",
+			"name": "Domaine Daulny",
+			"say": "dohl-NEE",
+			"explain": "Domaine Daulny is a Sancerre estate at Verdigny, a village of the Sancerre hills in the upper Loire. It farms about fifteen hectares split into some fifty small plots, on the different soils of the appellation: clay with flint, and Kimmeridgian limestone.\n\nIts Sancerre blends those plots and is fermented in stainless steel, so it shows the fruit and the chalk rather than wood: lime, green apple and white blossom, with a chalky finish. The 2024, from a wet, difficult year, is light and very crisp.\n\nAt Brennan’s it is the white Sancerre under $100, on the Under $100 page. Say: Sancerre from fifty small plots, made in steel, for oysters.",
+			"card": {
+				"front": "Where is Domaine Daulny, and how is its Sancerre made?",
+				"back": "At Verdigny in the Sancerre hills, from about fifty small plots, fermented in stainless steel. It is our white Sancerre under $100: lime, green apple and chalk."
+			},
+			"items": [
+				"Domaine Daulny Sancerre 2024"
+			],
+			"sources": [
+				"research/bottle-facts-cards-d-2026-11-28.json (b21: Domaine Daulny)",
+				"page:binwise-wine-list-2026-11-28.txt line 116"
+			]
+		}
+	]
+}
