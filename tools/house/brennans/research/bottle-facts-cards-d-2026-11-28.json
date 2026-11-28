@@ -282,8 +282,8 @@
 					"how": "the catalogue research/winelist-2026-11-28.json, the ledger research/winelist/ledger.json and the October catalogue research/winelist-2026-10-03.json"
 				},
 				{
-					"fact": "The Côte du Py is the hill at the center of Morgon; its soil is decomposed schist (the roches pourries) over old volcanic rock, rich in iron and manganese.",
-					"how": "search, 28 November 2026: the importer's listing (Kermit Lynch, Côte du Py: schist, granite, manganese); a Morgon Côte du Py technical sheet of Mommessin (Boisset), weathered pyritic schist rich in iron oxide, roche pourrie as very old volcanic rock; Wine with Seth, Côte du Py climat and Morgon AOC pages. The standing components wine-region-beaujolais and cellar-foillard say the same. The hill's height (352 m, one sheet) is left out"
+					"fact": "The Côte du Py is the hill at the center of Morgon; its soil is decomposed schist (the roches pourries) with blue stone, rich in iron and manganese, and its Gamay is dense and stony.",
+					"how": "search, 28 November 2026: the importer's listing (Kermit Lynch, Côte du Py: schist, granite, manganese); a Morgon Côte du Py technical sheet of Mommessin (Boisset), weathered pyritic schist rich in iron oxide, roche pourrie as very old volcanic rock; Wine with Seth, Côte du Py climat and Morgon AOC pages. The standing components wine-region-beaujolais and cellar-foillard say the same. The hill's height (352 m, one sheet) is left out. checked 28 November 2026 (card chunk c2 fact check): Wine with Seth (blue diorite, the pierre bleue, with weathered schist, the roches pourries; soils rich in iron and manganese, which it ties to density) and the importer (schist, granite, manganese); a Loron sheet gives blue stones. No second source calls the rock volcanic (the diorite is igneous, not volcanic), so \"over old volcanic rock\" and the comparison with the granite crus are cut"
 				},
 				{
 					"fact": "The domaine farms vines from about ten to ninety years old and is certified organic.",
@@ -294,12 +294,12 @@
 					"how": "search, 28 November 2026: enbotella.com (grapes chilled before carbonic maceration, indigenous yeasts, bottled without fining or filtering) and primalwine.com (bottled without fining or filtration); whole bunches and native yeasts are in the standing components cellar-foillard and wine-story-gang-of-four. The barrel regime and its months could not be confirmed (one French retailer gives old Burgundy barrels, another source cement before bottling), so the card says nothing of them"
 				},
 				{
-					"fact": "2024 in Beaujolais was a wet year with heavy mildew pressure and hail, and a small crop; the reds came out fresh.",
-					"how": "search, 28 November 2026: Decanter's French harvest 2024 reports (disease pressure and hail, significant losses in Beaujolais); Vitisphere, September 2024 (volumes down); M. Chapoutier's own 2024 Beaujolais harvest note (fresh and fruity reds); Wine Spectator (a late, low volume harvest; density and freshness). Vinous reports more green, underripe wines than usual in 2024, so the card says fresh and lively, never ripe or rich"
+					"fact": "2024 in Beaujolais was a wet year with mildew pressure and hail; the reds came out fresh.",
+					"how": "search, 28 November 2026: Decanter's French harvest 2024 reports (disease pressure and hail, significant losses in Beaujolais); Vitisphere, September 2024 (volumes down); M. Chapoutier's own 2024 Beaujolais harvest note (fresh and fruity reds); Wine Spectator (a late, low volume harvest; density and freshness). Vinous reports more green, underripe wines than usual in 2024, so the card says fresh and lively, never ripe or rich. checked 28 November 2026 (card chunk c2 fact check): Decanter and France Today give hail and disease losses, but Jancis Robinson reports Beaujolais suffered very much less than the Côte d'Or with more generous quantities, so \"a small crop\" is cut"
 				},
 				{
-					"fact": "The 2024 Côte du Py tastes of plum, red and black fruit, black tea and crushed stone, fresh and lively.",
-					"how": "search, 28 November 2026: the importer's note for the 2024 (Kermit Lynch: earthy stone and plum, serious minerality); Flatiron Wines' note for the 2024 (red and black fruit, black tea, crushed stone; fresh and lively on the entry). A white pepper finish given to one critic by one retailer is left out. No score is carried"
+					"fact": "The 2024 Côte du Py tastes of plum and crushed stone with an earthy edge, fresh and lively, light in body.",
+					"how": "search, 28 November 2026: the importer's note for the 2024 (Kermit Lynch: earthy stone and plum, serious minerality); Flatiron Wines' note for the 2024 (red and black fruit, black tea, crushed stone; fresh and lively on the entry). A white pepper finish given to one critic by one retailer is left out. No score is carried. checked 28 November 2026 (card chunk c2 fact check): black tea and red and black fruit rest on one note only (Farr Vintners), so they are cut; plum and stone are the importer's own note (Kermit Lynch, the same words on several vintages); earthy and minerally, light bodied, fresh and lively are Flatiron Wines' listing; Perrine's gives dark berry fruit and forest floor"
 				},
 				{
 					"fact": "A magnum holds 1.5 liters, two bottles, about ten to twelve glasses; wine ages more slowly in it, with about the same air under one cork for twice the wine. Gamay is served slightly cool, 55 to 58°F; a magnum takes longer to chill.",
@@ -308,6 +308,10 @@
 				{
 					"fact": "Left out: any named person. The label name is printed as the list prints it; the card speaks of the Foillard domaine and never of its living grower, and names none of the other living Morgon growers.",
 					"how": "the rule that nobody living is named in shipped text"
+				},
+				{
+					"fact": "Bin 21562, the Côte du Py 2023 in 750 ml, is printed twice on the list of 28 November: for that wine (n 2161, line 11207) and for the Vignobles Levet Les Journaries Côte-Rôtie 2022 (n 2511, line 12984).",
+					"how": "checked 28 November 2026 (card chunk c2 fact check): the catalogue research/winelist-2026-11-28.json"
 				}
 			]
 		},
@@ -338,7 +342,7 @@
 				},
 				{
 					"fact": "The Blanc de Blancs is all Chardonnay, drawn from Cuis and Chouilly and neighboring villages; Cuis is a Premier Cru, so the blend does not carry the Grand Cru name.",
-					"how": "search, 28 November 2026: J.J. Buckley's note on the NV Extra Brut Blanc de Blancs (picked in Chouilly, Cuis and Épernay); Premium Grands Crus (Chouilly, Cuis and Épernay, with some young Cramant vines; Premier Cru Cuis and Grand Cru Chouilly); Tatler Asia's Champagne guide (Cramant, Chouilly, Cuis and Le Mesnil-sur-Oger, many of the grapes from Cuis). Only Cuis and Chouilly are in every source, so the card names those two and says neighboring villages for the rest"
+					"how": "search, 28 November 2026: J.J. Buckley's note on the NV Extra Brut Blanc de Blancs (picked in Chouilly, Cuis and Épernay); Premium Grands Crus (Chouilly, Cuis and Épernay, with some young Cramant vines; Premier Cru Cuis and Grand Cru Chouilly); Tatler Asia's Champagne guide (Cramant, Chouilly, Cuis and Le Mesnil-sur-Oger, many of the grapes from Cuis). Only Cuis and Chouilly are in every source, so the card names those two and says neighboring villages for the rest. checked 28 November 2026 (card chunk c2 fact check): J.J. Buckley again gives Chouilly, Cuis and Épernay for the NV Extra Brut Blanc de Blancs; stands"
 				},
 				{
 					"fact": "The bottling is Extra Brut: the appellation allows 0 to 6 grams of sugar a liter, and this one carries very little.",
@@ -351,6 +355,10 @@
 				{
 					"fact": "Left out: the reserve wines kept in large casks in a chalk cellar and the perpetual reserve, which the sources tie to the house in general or to the Prestige, not to this bottling; and any family member's name (all living as far as can be told).",
 					"how": "search, 28 November 2026: Premium Grands Crus, Flatiron Wines, the theis-vine.dk importer sheet (the Prestige)"
+				},
+				{
+					"fact": "A Champagne magnum takes the same cork as a 750 ml bottle; the ullage and the cork stay the same while the wine doubles, which is why it ages more slowly. The card says nothing of a larger cork.",
+					"how": "checked 28 November 2026 (card chunk c2 fact check): search: VinePair (a magnum cork is the same size as a standard cork), Decanter (the ullage and diameter of cork remain the same as in bottle), the Champagne houses' body maisons-champagne.com (a 31 mm cork)"
 				}
 			]
 		},
@@ -389,7 +397,11 @@
 				},
 				{
 					"fact": "The 2024 is crisp at the start, with melon and blood orange and an aniseed finish.",
-					"how": "search, 28 November 2026: the winemaker's notes for the Lucien Crochet Sancerre Rosé 2024 as wine.com prints them (crisp at the attack, melon, blood orange, an aniseed finish), the producer's own words. A note found for a 2024 Sancerre rosé of Dominique et Janine Crochet, another domaine, is not used. No score is carried"
+					"how": "search, 28 November 2026: the winemaker's notes for the Lucien Crochet Sancerre Rosé 2024 as wine.com prints them (crisp at the attack, melon, blood orange, an aniseed finish), the producer's own words. A note found for a 2024 Sancerre rosé of Dominique et Janine Crochet, another domaine, is not used. No score is carried. checked 28 November 2026 (card chunk c2 fact check): search again found the same winemaker notes on wine.com and no independent review of the 2024; kept as the producer's own words, and the owner is told it rests on one printing"
+				},
+				{
+					"fact": "Bin 133422, the 2024 rosé in 750 ml, is also printed for the Cantina Terlano Winkl Sauvignon 2023 (n 1277, line 6625) and the Presqu'ile Bien Nacido Vineyard Chardonnay 2021 (n 1335, line 6925).",
+					"how": "checked 28 November 2026 (card chunk c2 fact check): the catalogue research/winelist-2026-11-28.json"
 				}
 			]
 		},
