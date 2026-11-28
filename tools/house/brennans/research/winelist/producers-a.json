@@ -4229,7 +4229,7 @@
  "places": {
   "By the Glass": {
    "title": "By the glass",
-   "line": "Fourteen wines poured by the glass, priced per glass: sparkling, white, rosé and red, two of them through Coravin. Ask what the guest usually drinks and how hungry they are, then offer one choice and one step up."
+   "line": "Seventeen wines poured by the glass, $14 to $75 a glass: sparkling, white, rosé and red, three of them through Coravin (Rare 2012, Jadot's Les Pucelles 2008 and de Courcel's Pommard 2007). Ask what the guest usually drinks and how hungry they are, then offer one choice and one step up."
   },
   "By the Glass ~ Sparkling": {
    "title": "Sparkling by the glass",
@@ -4237,7 +4237,7 @@
   },
   "By the Glass ~ White": {
    "title": "White by the glass",
-   "line": "Five whites from crisp to rich: Mosel Riesling, Albariño and Loire Sauvignon on the fresh side, California Chardonnay and Leflaive's Mâcon-Verzé through Coravin on the rounder side. Ask crisp or creamy first."
+   "line": "Six whites from crisp to rich: Mosel Riesling, Albariño and Loire Sauvignon on the fresh side, Lemelson's Oregon Pinot Gris between, then Sta. Rita Hills Chardonnay and Jadot's Puligny-Montrachet Les Pucelles 2008 through Coravin on the rounder side. Ask crisp or creamy first; Les Pucelles, at $50, is the glass of mature white Burgundy."
   },
   "By the Glass ~ Rosé": {
    "title": "Rosé by the glass",
@@ -4245,7 +4245,7 @@
   },
   "By the Glass ~ Red": {
    "title": "Red by the glass",
-   "line": "Four reds from light to bold: Bourgogne Pinot Noir, a southern Rhône Grenache, a Bordeaux Supérieur and Inglenook Rubicon. Ask light or full; Rubicon is the splurge glass for steak."
+   "line": "Six reds from light to bold: Bourgogne Pinot Noir and a Barbera d'Asti on the fresher side, a southern Rhône Grenache and a Bordeaux Supérieur in the middle, Kokomo's Sonoma Cabernet for steak, and de Courcel's Pommard 2007 through Coravin. Ask light or full; the Pommard, at $55, is the splurge glass and a taste of mature red Burgundy."
   },
   "Champagne": {
    "title": "Champagne",
@@ -4333,7 +4333,7 @@
   },
   "France ~ Burgundy ~ White": {
    "title": "White Burgundy",
-   "line": "The heart of the list: Chardonnay from Chablis to the Mâconnais, nearly 400 bottles from about $45 to five figures. Ask crisp and stony (Chablis) or rich and nutty (Meursault, Puligny, Chassagne), then the budget."
+   "line": "The heart of the list: Chardonnay from Chablis to the Mâconnais, about 380 bottles from about $45 to five figures. Ask crisp and stony (Chablis) or rich and nutty (Meursault, Puligny, Chassagne), then the budget."
   },
   "France ~ Burgundy ~ White ~ Bourgogne": {
    "title": "Bourgogne",
@@ -4349,7 +4349,7 @@
   },
   "France ~ Burgundy ~ White ~ Chablis": {
    "title": "Chablis",
-   "line": "Village Chablis and Petit Chablis: lean, lemony, stony Chardonnay with little or no oak, $80 to $300. A sure choice for raw oysters and a guest who dislikes buttery whites."
+   "line": "Village Chablis and Petit Chablis: lean, lemony, stony Chardonnay with little or no oak, $90 to $300. A sure choice for raw oysters and a guest who dislikes buttery whites; for less, the Louis Michel is on Selections Under $100."
   },
   "France ~ Burgundy ~ White ~ Morey-Saint-Denis Premier Cru": {
    "title": "Morey-Saint-Denis premier cru",
@@ -4429,7 +4429,7 @@
   },
   "France ~ Burgundy ~ White ~ Chassagne-Montrachet": {
    "title": "Chassagne-Montrachet",
-   "line": "Village Chassagne: rich and nutty, $160 to $350, a good sweet spot pick for richer dishes."
+   "line": "Village Chassagne from Marc Colin, Paul Pillot, Carillon and Morey-Coffinet, $235 to $350: rich and nutty, for richer dishes. Some premier crus cost less than the village bottles, so show both pages to a guest set on Chassagne."
   },
   "France ~ Burgundy ~ White ~ Other Côte d'Or": {
    "title": "Other Côte d'Or whites",
@@ -4505,7 +4505,7 @@
   },
   "France ~ Other ~ White ~ Provence": {
    "title": "Provence whites",
-   "line": "Château Simone, Tempier, Trévallon and the Luberon: herbal, round whites. Ask whether the guest wants rare or easygoing."
+   "line": "Tempier, Trévallon and the Luberon, $60 to $450: herbal, round whites. Ask whether the guest wants rare or easygoing."
   },
   "France ~ Other ~ White ~ Languedoc-Roussillon": {
    "title": "Languedoc whites",
@@ -4609,7 +4609,7 @@
   },
   "United States ~ Chardonnay ~ California ~ Sonoma County": {
    "title": "Sonoma Chardonnay",
-   "line": "Cooler, often brighter Chardonnay from the Sonoma Coast and Russian River: Kistler, Ramey, Hirsch, Lioco. Good with fish and crab."
+   "line": "Cooler, often brighter Chardonnay from the Sonoma Coast and Russian River: Kistler, Ramey, Hirsch and a 1995 from Kalin, with Stonestreet from Alexander Valley, $30 to $300. Good with fish and crab."
   },
   "United States ~ Chardonnay ~ California ~ Napa Valley": {
    "title": "Napa Chardonnay",
@@ -4629,7 +4629,7 @@
   },
   "United States ~ Sauvignon Blanc ~ California": {
    "title": "California Sauvignon Blanc",
-   "line": "From Duckhorn and Mondavi to the richer, textured Arkenstone and Jonata Flor, $35 to $270."
+   "line": "From Duckhorn and Frog's Leap to the richer, textured Arkenstone and Jonata Flor, $35 to $270."
   },
   "United States ~ Sauvignon Blanc ~ Oregon": {
    "title": "Oregon Sauvignon Blanc",
@@ -4669,11 +4669,11 @@
   },
   "Rosé": {
    "title": "Rosé",
-   "line": "Fifteen bottles, mostly dry Provence and Sancerre rosé, plus Bandol and Pascal Cotat for depth, $45 to $270. Ask light and crisp or something with more body for food."
+   "line": "Twelve bottles, $50 to $270: dry Provence and Sancerre rosé for most tables, Bandol and Pascal Cotat for depth, and a Ligurian Ciliegiolo and two American rosés for the curious. Ask light and crisp or something with more body for food."
   },
   "Rosé ~ France": {
    "title": "French rosé",
-   "line": "Pale, dry Provence rosé, Whispering Angel and friends, then Tempier's Bandol and Sancerre from Crochet and Cotat for food. Magnums suit a table."
+   "line": "Pale, dry Provence rosé, Whispering Angel and Mesclances, then Tempier's Bandol and Sancerre from Crochet and Cotat for food. The Crochet magnum suits a table."
   },
   "Rosé ~ Italy": {
    "title": "Italian rosé",
