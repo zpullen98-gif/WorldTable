@@ -217,9 +217,9 @@ describe('the meal filter, the section and the rows', () => {
 });
 
 describe('the Tasting courses deck', () => {
-	it('deals one card per course, breakfast, dinner, then the Thanksgiving Day menu, in printed order, fronts the short way', () => {
-		/* The engine's own deck: it deals the fixed price menu's three courses too (the Table keeps that menu
-		   out of its Tasting courses deck and deals it from the Thanksgiving Day tab: study-fixed-price.test.ts). */
+	it('deals one card per course, breakfast then dinner, in printed order, fronts the short way', () => {
+		/* The engine's own deck. The Thanksgiving Day menu, which it dealt while the day was served, retired in
+		   the edition of 28 November 2026 (the Table's handling of a fixed price menu: study-fixed-price.test.ts). */
 		const cards = buildFlashcards(PACK).filter((c) => c.kind === 'tasting');
 		expect(cards.map((c) => c.front)).toEqual([
 			'Traditional Breakfast: Eye Opener Cocktail',
@@ -232,19 +232,15 @@ describe('the Tasting courses deck', () => {
 			'Dinner Tasting Menu: Second Course',
 			'Dinner Tasting Menu: Third Course',
 			'Dinner Tasting Menu: Fourth Course',
-			'Dinner Tasting Menu: Fifth Course',
-			'Happy Thanksgiving from Brennan’s: Appetizers',
-			'Happy Thanksgiving from Brennan’s: Entrées',
-			'Happy Thanksgiving from Brennan’s: Desserts'
+			'Dinner Tasting Menu: Fifth Course'
 		]);
-		expect(cards.map((c) => c.course)).toEqual([1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 1, 2, 3]);
+		expect(cards.map((c) => c.course)).toEqual([1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5]);
 		expect(cards[0].back).toBe('Brandy Milk Punch');
 		expect(cards[1].back).toBe('Baked Apple');
 		expect(cards[2].back).toBe('Choice of Turtle Soup or Seafood Gumbo. Paired with Bloody Bull Cocktail');
 		expect(cards[3].back).toBe('Eggs Hussarde. Paired with Charles Lafitte Brut Champagne FR NV [4oz]');
 		expect(cards[5].back).toBe('World Famous Bananas Foster. Paired with Brennan’s Private Blend Congregation Coffee & Chicory');
 		expect(cards[8].back).toBe('Fish Bouillabaisse. Suggested Pairing: Domaine du Vieux Lazaret Blanc');
-		expect(cards[13].back).toBe('Choice of World Famous Bananas Foster, Sweet Potato Pot de Crème or Chocolate and Orange Tart');
 		for (const c of cards) {
 			expect(c.front).not.toMatch(DASH);
 			expect(c.back).not.toMatch(DASH);

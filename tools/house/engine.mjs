@@ -215,7 +215,16 @@ export function stagingFragmentFiles(names) { return names.map((n) => path.join(
    merged into overrides.json, three staged fragments into components/dishes.json and wines.json, and
    the base edits of _staging/tg-wines.base-edits.mjs; stamped at the minute of its build, never ahead
    of the clock. */
-export const EDITION_BUILT_AT = '2026-11-22T10:24:00.000Z';
+/* The 00:01 edition of 28 November 2026 is the past Thanksgiving edition, cut on the owner's instruction
+   of 27 November 2026 (research/menu-2026-11-27-past.md) once the day had passed: the Thanksgiving Day menu
+   retired from the tastings under its tombstone (2 tastings again), its twelve course dishes filed under
+   Past Thanksgiving Day 2026 and its four sides under Past Thanksgiving Day 2026 sides, kept to be read and
+   never dealt, each with a note on why it left; the three dishes the house already serves back to their
+   three meals, their note on the day in the past tense; the house's four meals; and the 31 lineup asks
+   about the day answered as moot. Before it, the terms the menu taught were written into the Kitchen
+   Fieldbook, which no edition derives. From appended overrides only; stamped at the minute of its build,
+   never ahead of the clock. */
+export const EDITION_BUILT_AT = '2026-11-28T00:01:00.000Z';
 export const EDITION_TS = Date.parse(EDITION_BUILT_AT);
 
 /* An edition stamped later than the clock that writes or checks it. Every mark in the pack is a
@@ -318,8 +327,8 @@ export const SHEET_Q = 'What does the pairing sheet say?';
    by the glass, the 7 Birthday Bubbles bottles, the 5 Bubbles rosés and, from the edition of 15
    November 2026, the 4 new glass wines of the November sheet and, from the edition of 22 November 2026,
    the 2 new pours of the Dinner Pairing Wines sheet), the menus' wines, with the
-   floor's bottles and the dishes they tier counted from the overrides (overrideCounts); 3 tastings (the two tasting menus and the Thanksgiving
-   Day fixed price menu);
+   floor's bottles and the dishes they tier counted from the overrides (overrideCounts); 2 tastings (the two tasting menus; the Thanksgiving
+   Day fixed price menu was the third from the edition of 22 November 2026 and retired in that of 28 November);
    17 sources (the Fall 2026 training sheets the fifteenth, the November 2026 sheets the sixteenth, the
    sheets of 22 November 2026 the seventeenth);
    at least 115 terms; at least 33
@@ -432,7 +441,7 @@ export function countProblems(house, expect = overrideCounts(), frag = fragmentC
 	for (const w of bottles) if (!w.size || !w.bottle) out.push(`bottle ${w.name}: a bottle on the list carries its size and bottle price`);
 	const tiered = (house.dishes || []).filter((d) => d.pairing && d.pairing.value && d.pairing.value.bottles).length;
 	eq("dishes with bottle tiers (from the overrides' bottles entries)", tiered, expect.tiered);
-	eq('tastings', n('tastings'), 3);
+	eq('tastings', n('tastings'), 2);
 	eq('sources', (house.sources || []).length, 17);
 	ge('terms', n('lexicon'), 115);
 	ge('scenarios', n('scenarios'), 33);

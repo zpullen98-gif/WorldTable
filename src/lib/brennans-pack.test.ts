@@ -26,6 +26,14 @@ const PACK = join(ROOT, 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oo
    moves this test with it; the counts below are read from the pack the gate proves. */
 const EDITION = (/export const EDITION_BUILT_AT = '([^']+)'/.exec(readFileSync(join(ROOT, 'tools', 'house', 'engine.mjs'), 'utf8')) || [])[1] || '';
 const ABOUT_Q = 'Tell me about it.';
+/* The 31 lineup asks about the Thanksgiving Day menu, answered as moot once the day had passed (overrides, op answer). */
+const TG_ASKS = [
+	'a-hn2hni1w', 'a-qeg7qs5g', 'a-dqkbri73', 'a-utpmxbes', 'a-on4kimai', 'a-9ezlldr9', 'a-gqf255d8',
+	'a-htz9pr2x', 'a-l88qk2h8', 'a-x43d52t7', 'a-4deo1y7d', 'a-3zbz8oa9', 'a-dv7jnbjq', 'a-n8pn26on',
+	'a-lwjqhlpa', 'a-y31pa9ej', 'a-vh81q0th', 'a-k67atc4d', 'a-yvcfuxxp', 'a-xbp284dj', 'a-frxielwb',
+	'a-d1gd4ecm', 'a-m1chwhwr', 'a-soooj19p', 'a-slrub78b', 'a-q0h51gla', 'a-epjw576x', 'a-peqco2cp',
+	'a-hjd6lkfm', 'a-nw3a38tw', 'a-5sqed13r'
+];
 const COACH = ['How do I sell it?', 'What do guests ask?', 'What should I watch for?'];
 const POUR_Q = 'How do I pour it?';
 const WATCH_CLOSE = 'Allergens: read the service note and confirm at lineup.';
@@ -217,6 +225,11 @@ describe("the Brennan's pack", () => {
 		const answered = Date.parse('2026-11-15T15:04:00.000Z') + 1;
 		const later: Record<string, number> = { 'a-yezg582z': Date.parse('2026-10-18T12:30:00.000Z') + 1 };
 		for (const id of ['a-i0xmkjmb', 'a-5qm2ecea', 'a-v7ljbixx', 'a-gxqu6dvb', 'a-887mv8rn', 'a-fx9kevzn', 'a-tpo4g6zd', 'a-99urxp3r', 'a-s8h2463w']) later[id] = answered;
+		// Thanksgiving Day 2026 passed: the edition of 28 November retired its menu and answered the 31 lineup asks
+		// about the day as moot, each tombstoned a millisecond after the 10:24 edition of 22 November, the last that
+		// carried them.
+		const thanksgiving = Date.parse('2026-11-22T10:24:00.000Z') + 1;
+		for (const id of ['t-o18d70db', ...TG_ASKS]) later[id] = thanksgiving;
 		for (const k of Object.keys(h.removed)) expect(h.removed[k], k).toBe(later[k] ?? Date.parse('2026-10-03T22:00:00.000Z') + 1);
 		for (const name of ['Flamingo', 'Birdcage', 'Spoonbill', 'Personality', 'Oh! What It Seemed to Be']) expect(h.cocktails.some((c) => c.name === name), name).toBe(true);
 	});
