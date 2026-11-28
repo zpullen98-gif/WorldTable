@@ -41,6 +41,55 @@
    "country": "France",
    "line": "A Haut-Médoc estate at Saint-Seurin-de-Cadourne, near the Gironde, its vineyard one block facing Sociando-Mallet across the road.",
    "tell": "Charmail is known in the Médoc for cold macerating its grapes before fermentation, which gives deep colour and soft tannin. Merlot and Cabernet Sauvignon lead, with Cabernet Franc and Petit Verdot. The list prints one bottle, the 2020 in magnum, under Large Formats and again under Bordeaux: a generous claret for a large table."
+  },
+  "cru-monplaisir": {
+   "name": "Cru Monplaisir",
+   "region": "Bordeaux Supérieur, Bordeaux",
+   "country": "France",
+   "line": "A Bordeaux Supérieur estate just outside the Margaux appellation, bought in 2009 by the Gonet-Médeville family of Champagne.",
+   "tell": "The list prints Montplasir; the label reads Cru Monplaisir. Two parcels just outside Margaux, below Château Margaux and Château d’Issan, with Merlot leading the two Cabernets: plum, blackcurrant and cedar with soft tannin. A claret with Margaux neighbours at an easy price."
+  },
+  "vignobles-levet": {
+   "name": "Vignobles Levet",
+   "region": "Côte-Rôtie, Northern Rhône",
+   "country": "France",
+   "line": "A small family estate in Ampuis, run by its fourth generation, farming old vine Syrah on the steep slopes of Côte-Rôtie.",
+   "tell": "Levet makes Côte-Rôtie the old way, with whole bunches, long macerations and old casks: dark, earthy, spiced and firm when young. Les Journaries, the second cuvée since 2004, comes largely from La Landonne. Both come in magnum here, and the estate wine also in 2023."
+  },
+  "m-chapoutier": {
+   "name": "M. Chapoutier",
+   "region": "Tain-l’Hermitage, Rhône",
+   "country": "France",
+   "line": "A Tain-l’Hermitage house whose history goes back to 1808, farming its own vines biodynamically and printing Braille on its labels.",
+   "tell": "The labels read Les Meysonniers and La Bernardine. Les Meysonniers is biodynamic Crozes-Hermitage Syrah, aged mostly in concrete: raspberry, blackcurrant, round and easy. La Bernardine is Grenache led Châteauneuf-du-Pape with Syrah and Mourvèdre: plum, blackcurrant and spice. Two Rhône reds for lamb or duck."
+  },
+  "lemelson": {
+   "name": "Lemelson Vineyards",
+   "region": "Willamette Valley, Oregon",
+   "country": "United States",
+   "line": "A Willamette Valley winery near Carlton, farming its estate vineyards organically in three of the valley’s sub-regions.",
+   "tell": "By the glass, Tikka’s Run is Lemelson’s organic estate Pinot Gris: pear, Meyer lemon, melon and white flowers, fresh with crab or a salad. On the bottle list, Thea’s Selection is the house Pinot Noir, blended from the estate vineyards: red currant, cranberry and a herbal lift, for duck, salmon or pork."
+  },
+  "kokomo": {
+   "name": "Kokomo Winery",
+   "region": "Dry Creek Valley, Sonoma County, California",
+   "country": "United States",
+   "line": "A Healdsburg winery at Timber Crest Farms in the Dry Creek Valley, which began in 2004 with a single vineyard Cabernet Sauvignon.",
+   "tell": "By the glass, Kokomo is Sonoma County Cabernet Sauvignon from a small Dry Creek Valley winery, labelled for the county rather than one vineyard. Blackcurrant, dark plum and spice with ripe, firm tannin: a full California Cabernet by the glass, for steak."
+  },
+  "la-miraja": {
+   "name": "La Miraja",
+   "region": "Castagnole Monferrato, Piedmont",
+   "country": "Italy",
+   "line": "A small family estate in Castagnole Monferrato, in the Asti hills, its cellar in the village’s old castle; Barbera, Grignolino and Ruchè.",
+   "tell": "By the glass, Le Masche is Barbera d’Asti from the estate’s own vines, aged in old oak: dark cherry, plum and Barbera’s bright acidity with soft tannin, good with tomato, pork or mushrooms. The name recalls the masche, spirits of local folklore said to guard the vines."
+  },
+  "patrimony-estate": {
+   "name": "Patrimony",
+   "region": "Adelaida District, Paso Robles, California",
+   "country": "United States",
+   "line": "A Cabernet estate in the Adelaida District of Paso Robles, begun by the brothers who founded DAOU, on steep calcareous clay and limestone.",
+   "tell": "The October list printed these bottles as DAOU; this list prints Patrimony. Patrimony is the estate Cabernet Sauvignon, here in 2018, 2019 and magnum; Caves des Lions blends Cabernet Sauvignon with Cabernet Franc. Soul of a Lion, printed here under Patrimony, is the Cabernet DAOU’s own labels carry. Ripe, dark and polished."
   }
  },
  "entries": {
@@ -85,7 +134,21 @@
   "b2281": "chateau-gloria",
   "b2311": "chateau-la-tour-de-mons",
   "b197": "chateau-charmail",
-  "b2423": "chateau-charmail"
+  "b2423": "chateau-charmail",
+  "b6": "lemelson",
+  "b2718": "lemelson",
+  "b13": "la-miraja",
+  "b16": "kokomo",
+  "b228": "vignobles-levet",
+  "b229": "vignobles-levet",
+  "b2508": "vignobles-levet",
+  "b2509": "vignobles-levet",
+  "b2510": "vignobles-levet",
+  "b2511": "vignobles-levet",
+  "b2512": "vignobles-levet",
+  "b2446": "cru-monplaisir",
+  "b2534": "m-chapoutier",
+  "b2573": "m-chapoutier"
  },
  "places": {}
 }
