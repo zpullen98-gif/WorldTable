@@ -5,15 +5,22 @@
    whole card) lives in the house pack; this file names each of those by its pack wine id.
 
    Reads:
-     research/winelist-2026-10-03.json        the catalogue of the paste (3,577 entries), the one
-                                              truth for every bin, name, vintage, price and size;
+     the catalogue of the paste               research/winelist-<date>.json, by default the ledger's
+                                              current one (28 November 2026, 3,560 entries; the
+                                              3 October 2026 one held 3,577), the one truth for every
+                                              bin, name, vintage, price and size;
+     research/winelist/ledger.json            every entry's stable key (carry-winelist.mjs writes
+                                              it): the letter of the catalogue that first printed
+                                              the entry and its n there, a15 for ever;
      the producer files (see --producers)     each { producers, entries, places }: producers by key,
-                                              { name, region, country, line, tell }; entries, the
-                                              catalogue's n to a producer key; places, a place key
-                                              (a catalogue section, "section ~ group" or
+                                              { name, region, country, line, tell }; entries, an
+                                              entry's ledger key to a producer key; places, a place
+                                              key (a catalogue section, "section ~ group" or
                                               "section ~ group ~ sub") to { title, line };
      the built pack (see --pack)              its wines with list 'bottle', matched to catalogue
-                                              entries by bin, vintage and size.
+                                              entries by bin, vintage and size; a wine the engine
+                                              calls past (isPast, a section beginning "Past ") is
+                                              matched among the past rows instead.
 
    Writes static/shared/packs/brennans-new-orleans.winelist.v1.json, format 'oot-winelist' v1:
      { format, version, house, readOn, source,
@@ -31,29 +38,46 @@
                                                   grape is there only when the list prints one,
        producers: { key: { name, region, country, line, tell } }   sorted by key,
        places: { placeKey: { title, line } }      every section and every place an entry names,
-       cards: { n: wineId } }                     the catalogue entries with a whole card in the pack.
+       cards: { n: wineId },                      the catalogue entries with a whole card in the pack,
+                                                  served wines on live rows only;
+       past: [{ lastPrinted, source, entries, cards }]   only when a bottle has left the list: one
+                                                  group a catalogue, newest first, holding the bottles
+                                                  that catalogue printed last, one row a bottle (its
+                                                  home printing: the first not under a cross list
+                                                  page, else its first) in the row shape above with
+                                                  its n in that catalogue, and the glass pours that
+                                                  left; cards names the pack's past wines on them;
+       pending: [n, ...] }                        only with --pending: the live rows whose producer no
+                                                  file describes yet, each written with producer '';
+                                                  check-winelist reports them and refuses them with
+                                                  --release, so a file with a pending row never ships.
 
    The producer files merge by key: when two describe one producer or one place, the fuller stands
    (more fields filled, then more words) and the clash is reported; two files giving one catalogue
    entry two producers is a failure. Deterministic: no clock, no chance, sorted where the catalogue
    gives no order, so a rebuild is byte for byte the same. tools/house/check-winelist.mjs is the gate.
 
-   Usage: node tools/house/build-winelist.mjs [--producers a.json,b.json,c.json] [--pack <file>]
-            [--catalogue <file>] [--out <file>] [--dry]
+   Usage: node tools/house/build-winelist.mjs [--producers a.json,b.json,...] [--pack <file>]
+            [--catalogue <file>] [--ledger <file>] [--out <file>] [--dry] [--pending]
    Runs from any directory. Exits 1 with the file and the rule on failure. No dash of any spelling
    in this file. */
 
 import fs from 'node:fs';
 import path from 'node:path';
+import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DIR = path.join(HERE, 'brennans');
-export const CATALOGUE = path.join(DIR, 'research', 'winelist-2026-10-03.json');
+export const CATALOGUE = path.join(DIR, 'research', 'winelist-2026-11-28.json');
+/* The stable keys of the entries across the pastes (carry-winelist.mjs). */
+export const LEDGER = path.join(DIR, 'research', 'winelist', 'ledger.json');
+export const ENGINE = path.join(HERE, '..', '..', 'static', 'shared', 'oot-house.js');
 /* The producer descriptions live one folder down, in research/winelist/, so engine.mjs noteHay (which
    reads only the files at the top of research/) never takes a writer's description as a source. */
 export const PRODUCERS_DIR = path.join(DIR, 'research', 'winelist');
-export const PRODUCER_FILES = ['producers-a.json', 'producers-b.json', 'producers-c.json'].map((f) => path.join(PRODUCERS_DIR, f));
+/** Every producers-<letter>.json in the folder, in name order: a writer's new file is read with the rest. */
+export const PRODUCER_FILES = (fs.existsSync(PRODUCERS_DIR) ? fs.readdirSync(PRODUCERS_DIR) : []).filter((f) => /^producers-[a-z]+\.json$/.test(f)).sort().map((f) => path.join(PRODUCERS_DIR, f));
 export const PACK = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'brennans-new-orleans.v1.oothouse.json');
 export const OUT = path.join(HERE, '..', '..', 'static', 'shared', 'packs', 'brennans-new-orleans.winelist.v1.json');
 export const WINELIST_FORMAT = 'oot-winelist';
@@ -185,12 +209,82 @@ export function mergeProducerFiles(files) {
 
 /* ---------- the build ---------- */
 
+/** The pages a bottle is cross listed on: a row there is never a bottle's home printing while it has another. */
+export const CROSS_SECTIONS = ['Selections Under $100', 'Half-bottles', 'Large Formats', 'Sustainable Selections'];
+export const GLASS_SECTION = 'By the Glass';
+
+/** One bottle of a catalogue: its bin, vintage, size and price, or for an entry with no bin its folded name in their place. */
+export const bottleOf = (e) => [e.bin ? 'bin ' + e.bin : 'name ' + foldName(e.name), String(e.vintage), foldSize(e.size), e.price, e.section === GLASS_SECTION ? 'g' : ''].join('|');
+
+/** The engine's isPast, loaded as the gate loads hasDash, so the rule is written once. */
+export function loadIsPast() {
+	if (!fs.existsSync(ENGINE)) return null;
+	const window = {};
+	window.window = window;
+	window.self = window;
+	vm.runInContext(fs.readFileSync(ENGINE, 'utf8'), vm.createContext({ window, console }), { filename: ENGINE });
+	const lib = window.OOT && window.OOT.houseLib;
+	return lib && typeof lib.isPast === 'function' ? lib.isPast : null;
+}
+
+/** The letter of a catalogue in a ledger, by its readOn. */
+export const letterOf = (ledger, catalogue) => Object.keys((ledger && ledger.catalogues) || {}).find((l) => ledger.catalogues[l] === String((catalogue && catalogue.readOn) || ''));
+
+/**
+ * The past groups of a file built at catalogue `letter`: for each earlier catalogue, newest first,
+ * the bottles it printed last. A key is past when no catalogue after it printed it (carry-winelist
+ * leftAt); a bottle is past when every printing of it in its last catalogue is past and the file's
+ * own catalogue prints it nowhere (a vintage roll is carried by a ruling, so it never lands here).
+ * { groups: [{ letter, catalogue, rows: [entry] }] }, each group's rows the home printings in
+ * catalogue order. Pure.
+ */
+export function pastBottles(ledger, cats, letter) {
+	const letters = Object.keys(ledger.catalogues).sort();
+	const upto = letters.indexOf(letter);
+	const last = new Map();
+	for (const l of letters.slice(0, upto + 1)) for (const k of Object.values(ledger.keys[l] || {})) last.set(k, l);
+	const liveBottles = new Set(cats[letter].entries.map(bottleOf));
+	const groups = [];
+	for (const l of letters.slice(0, upto).reverse()) {
+		const keys = ledger.keys[l] || {};
+		const cat = cats[l];
+		if (!cat) continue;
+		const byBottle = new Map();
+		for (const e of cat.entries) { const b = bottleOf(e); if (!byBottle.has(b)) byBottle.set(b, []); byBottle.get(b).push(e); }
+		const rows = [];
+		for (const [b, printings] of byBottle) {
+			if (liveBottles.has(b)) continue;
+			if (!printings.every((e) => last.get(keys[e.n]) === l)) continue;
+			rows.push(printings.find((e) => !CROSS_SECTIONS.includes(e.section)) || printings[0]);
+		}
+		rows.sort((x, y) => x.n - y.n);
+		if (rows.length) groups.push({ letter: l, catalogue: cat, rows });
+	}
+	return { groups };
+}
+
+/** The pack wines a set of catalogue entries cards: by bin, vintage and folded size, a bottle with no
+    bin only where the printed name carries its producer; a past glass wine (not on the bottle list)
+    only on a glass row of its vintage whose printed name carries its producer. */
+export function cardHits(w, entries) {
+	const binless = !String(w.bin || '').trim();
+	const maker = foldName(w.producer);
+	const carries = (e) => maker !== '' && (' ' + foldName(e.name) + ' ').includes(' ' + maker + ' ');
+	if (w.list !== 'bottle') return entries.filter((e) => e.section === GLASS_SECTION && String(e.vintage) === String(w.vintage || '') && carries(e));
+	return entries.filter((e) => String(e.bin) === String(w.bin || '') && String(e.vintage) === String(w.vintage || '') && foldSize(e.size) === foldSize(w.size)
+		&& (!binless || carries(e)));
+}
+
 /**
  * The file from its inputs, with what went wrong: { list, failures, clashes, notes }. `catalogue` is
  * the parsed catalogue, `files` the parsed producer files as { file, data }, `pack` the parsed pack
- * or null. Pure: nothing read or written here.
+ * or null. `opts`: { ledger, catalogues: { letter: catalogue }, isPast, pending }. With a ledger an
+ * entry's producer is read by its stable key and the past groups are written; without one (a test's
+ * stub files) by its n, as before the ledger, and no past is written. With pending, a live row whose
+ * producer no file describes is written with producer '' and named in pending rather than failed.
+ * Pure: nothing read or written here.
  */
-export function buildWinelist(catalogue, files, pack) {
+export function buildWinelist(catalogue, files, pack, opts = {}) {
 	const failures = [];
 	const notes = [];
 	const merged = mergeProducerFiles(files);
@@ -200,26 +294,55 @@ export function buildWinelist(catalogue, files, pack) {
 	const sections = [];
 	for (const e of cat) if (!sections.includes(e.section)) sections.push(e.section);
 	for (const s of sections) for (const t of sections) if (s !== t && t.startsWith(s + ' ~ ')) failures.push(`the section ${t} opens with the section ${s}, so a place key could belong to either`);
+	const ledger = opts.ledger || null;
+	const letter = ledger ? letterOf(ledger, catalogue) : '';
+	if (ledger && !letter) failures.push(`the ledger names no catalogue read on ${catalogue && catalogue.readOn}; run carry-winelist.mjs --to ${catalogue && catalogue.readOn}`);
+	const keyOf = (l, n) => (ledger ? ((ledger.keys && ledger.keys[l]) || {})[n] || '' : String(n));
+	const isPast = typeof opts.isPast === 'function' ? opts.isPast : () => false;
 
 	const usedPlaces = new Set(sections);
 	const usedProducers = new Set();
-	const entries = [];
-	let undescribed = 0;
-	for (const e of cat) {
-		const keys = placeKeysOf(e);
-		const place = keys.find((k) => merged.places[k]) || e.section;
+	const pending = [];
+	const rowOf = (e, key, live) => {
+		const place = placeKeysOf(e).find((k) => merged.places[k]) || e.section;
 		usedPlaces.add(place);
-		const pk = merged.entries[String(e.n)];
-		if (!pk) { undescribed++; if (undescribed <= 20) failures.push(`entry ${e.n} (${e.name} ${e.vintage}) has no producer in any producer file`); }
-		else if (!merged.producers[pk]) failures.push(`entry ${e.n} (${e.name}) names the producer ${pk}, which no producer file describes`);
-		else usedProducers.add(pk);
+		let pk = key ? merged.entries[key] : '';
+		if (!key) failures.push(`entry ${e.n} (${e.name} ${e.vintage}) has no key in the ledger; run carry-winelist.mjs --to ${catalogue.readOn}`);
+		else if (!pk) {
+			if (live && opts.pending) pending.push(e.n);
+			else failures.push(`entry ${e.n} (${e.name} ${e.vintage})${ledger ? ', key ' + key + ',' : ''} has no producer in any producer file`);
+		} else if (!merged.producers[pk]) {
+			if (live && opts.pending) { pending.push(e.n); pk = ''; }
+			else failures.push(`entry ${e.n} (${e.name})${ledger ? ', key ' + key + ',' : ''} names the producer ${pk}, which no producer file describes`);
+		} else usedProducers.add(pk);
 		const row = [e.n, place, String(e.bin || ''), listName(e), String(e.vintage || ''), e.price, String(e.size || ''), pk || '', flagsOf(e)];
 		if (e.grape) row.push(String(e.grape));
-		entries.push(row);
+		return row;
+	};
+	const entries = cat.map((e) => rowOf(e, keyOf(letter, e.n), true));
+	/* Only the first twenty producer failures are named; the count says the rest. */
+	const noProducer = failures.filter((f) => / has no producer in any producer file$/.test(f));
+	if (noProducer.length > 20) {
+		const keep = new Set(noProducer.slice(0, 20));
+		const rest = failures.filter((f) => !/ has no producer in any producer file$/.test(f) || keep.has(f));
+		failures.length = 0;
+		failures.push(...rest, `and ${noProducer.length - 20} more entries with no producer (${noProducer.length} in all)`);
 	}
 	const halfWrong = cat.filter((e) => e.section === HALF_SECTION && foldSize(e.size) !== '375ml');
 	if (halfWrong.length) failures.push(`${halfWrong.length} entr${halfWrong.length > 1 ? 'ies' : 'y'} under ${HALF_SECTION} not 375ml in the catalogue (${halfWrong.slice(0, 5).map((e) => e.n).join(', ')}); rerun parse-winelist.mjs`);
-	if (undescribed > 20) failures.push(`and ${undescribed - 20} more entries with no producer (${undescribed} in all)`);
+
+	/* The past: every bottle that has left, at its home printing, in the group of the catalogue that printed it last. */
+	const past = [];
+	if (ledger && letter) {
+		const cats = { ...(opts.catalogues || {}), [letter]: catalogue };
+		const missing = Object.keys(ledger.catalogues).filter((l) => !cats[l]);
+		for (const l of missing) failures.push(`catalogue ${l} (${ledger.catalogues[l]}) is not given; the past is read from it`);
+		if (!missing.length) {
+			for (const g of pastBottles(ledger, cats, letter).groups) {
+				past.push({ lastPrinted: String(g.catalogue.readOn || ''), source: String(g.catalogue.source || ''), rows: g.rows, entries: g.rows.map((e) => rowOf(e, keyOf(g.letter, e.n), false)), cards: {} });
+			}
+		}
+	}
 
 	const places = {};
 	for (const k of [...usedPlaces]) {
@@ -233,28 +356,38 @@ export function buildWinelist(catalogue, files, pack) {
 	if (unusedProducers.length) notes.push(`${unusedProducers.length} producer(s) described but named by no entry, left out: ${unusedProducers.slice(0, 8).join(', ')}${unusedProducers.length > 8 ? ', ...' : ''}`);
 	const unusedPlaces = Object.keys(merged.places).filter((k) => !usedPlaces.has(k));
 	if (unusedPlaces.length) notes.push(`${unusedPlaces.length} place(s) described but reached by no entry, left out: ${unusedPlaces.slice(0, 8).join('; ')}${unusedPlaces.length > 8 ? '; ...' : ''}`);
+	if (pending.length) notes.push(`${pending.length} live entr${pending.length > 1 ? 'ies' : 'y'} pending a producer (written with producer '' and named in pending; check-winelist --release refuses the file)`);
 
-	/* The first tier: every pack wine on the bottle list, matched to the catalogue by bin, vintage and
-	   folded size. A bin the list prints in two sections gives one card two entries. A bottle with no
-	   bin (the house Champagne) is matched by vintage and size only among the entries whose printed
-	   name carries its producer: an empty bin is no evidence, and every binless NV 750ml entry
-	   matched it before (a Taittinger and a Pierre Sparr carried the Piper-Heidsieck card). */
+	/* The first tier: every served pack wine on the bottle list, matched to the live rows by bin,
+	   vintage and folded size. A bin the list prints in two sections gives one card two entries. A
+	   bottle with no bin (the house Champagne) is matched by vintage and size only among the entries
+	   whose printed name carries its producer: an empty bin is no evidence, and every binless NV 750ml
+	   entry matched it before (a Taittinger and a Pierre Sparr carried the Piper-Heidsieck card). A
+	   past wine is matched among the past rows of its group instead: a past bottle must be there, a
+	   past glass wine is carded where the glass list printed it. */
 	const cards = {};
 	const wines = pack && pack.house && Array.isArray(pack.house.wines) ? pack.house.wines : [];
 	for (const w of wines) {
+		if (isPast(w)) {
+			if (!ledger) continue;
+			let found = false;
+			for (const g of past) for (const e of cardHits(w, g.rows)) {
+				found = true;
+				if (g.cards[e.n] && g.cards[e.n] !== w.id) failures.push(`past entry ${e.n} of ${g.lastPrinted} matches two pack wines, ${g.cards[e.n]} and ${w.id}`);
+				g.cards[e.n] = w.id;
+			}
+			if (!found && w.list === 'bottle') failures.push(`the pack's past bottle ${w.name} (${w.id}, bin ${w.bin}, ${w.vintage}, ${w.size}) matches no past row by bin, vintage and size`);
+			continue;
+		}
 		if (w.list !== 'bottle') continue;
-		const binless = !String(w.bin || '').trim();
-		const maker = foldName(w.producer);
-		const hits = cat.filter((e) => String(e.bin) === String(w.bin || '') && String(e.vintage) === String(w.vintage || '') && foldSize(e.size) === foldSize(w.size)
-			&& (!binless || (maker !== '' && (' ' + foldName(e.name) + ' ').includes(' ' + maker + ' '))));
+		const hits = cardHits(w, cat);
 		if (!hits.length) { failures.push(`the pack's bottle ${w.name} (${w.id}, bin ${w.bin}, ${w.vintage}, ${w.size}) matches no catalogue entry by bin, vintage and size`); continue; }
 		for (const e of hits) {
 			if (cards[e.n] && cards[e.n] !== w.id) failures.push(`catalogue entry ${e.n} matches two pack bottles, ${cards[e.n]} and ${w.id}`);
 			cards[e.n] = w.id;
 		}
 	}
-	const sortedCards = {};
-	for (const n of Object.keys(cards).map(Number).sort((a, b) => a - b)) sortedCards[n] = cards[n];
+	const sortN = (m) => { const o = {}; for (const n of Object.keys(m).map(Number).sort((a, b) => a - b)) o[n] = m[n]; return o; };
 
 	const list = {
 		format: WINELIST_FORMAT,
@@ -266,18 +399,28 @@ export function buildWinelist(catalogue, files, pack) {
 		entries,
 		producers,
 		places,
-		cards: sortedCards
+		cards: sortN(cards)
 	};
+	if (past.length) list.past = past.map((g) => ({ lastPrinted: g.lastPrinted, source: g.source, entries: g.entries, cards: sortN(g.cards) }));
+	if (pending.length) list.pending = pending;
 	return { list, failures, clashes: merged.clashes, notes };
 }
 
-/** The file's text: compact, one entry to a line so a diff reads, and a closing newline. */
+/** The file's text: compact, one entry to a line so a diff reads, and a closing newline. The past
+    groups come before the live entries, a row to a line, with each group's cards after its rows. */
 export function winelistText(list) {
 	const head = { ...list };
 	delete head.entries;
+	delete head.past;
 	const lines = list.entries.map((r) => JSON.stringify(r));
 	const rest = JSON.stringify(head);
-	return rest.slice(0, -1) + ',"entries":[\n' + lines.join(',\n') + '\n]}\n';
+	const past = Array.isArray(list.past) && list.past.length
+		? ',"past":[\n' + list.past.map((g) => {
+			const gh = { lastPrinted: g.lastPrinted, source: g.source };
+			return JSON.stringify(gh).slice(0, -1) + ',"entries":[\n' + g.entries.map((r) => JSON.stringify(r)).join(',\n') + '\n],"cards":' + JSON.stringify(g.cards || {}) + '}';
+		}).join(',\n') + '\n]'
+		: '';
+	return rest.slice(0, -1) + past + ',"entries":[\n' + lines.join(',\n') + '\n]}\n';
 }
 
 /* ---------- the command ---------- */
@@ -289,7 +432,10 @@ function main() {
 		console.log(`build-winelist.mjs: the whole bottle list as ${REL(OUT)}, format ${WINELIST_FORMAT} v${WINELIST_VERSION}.
 
   --producers <a,b,c>  the producer files, comma separated (default: ${PRODUCER_FILES.map(REL).join(', ')})
-  --catalogue <file>   the catalogue (default: ${REL(CATALOGUE)})
+  --catalogue <file>   the catalogue (default: the ledger's current one, ${REL(CATALOGUE)})
+  --ledger <file>      the stable keys (default: ${REL(LEDGER)}); the older catalogues it names are read for the past
+  --pending            write a live row whose producer no file describes yet with producer '' and name it
+                       in pending, rather than fail (a writer's dry build; check-winelist --release refuses it)
   --pack <file>        the built pack the first tier is read from (default: ${REL(PACK)})
   --out <file>         where to write (default: ${REL(OUT)})
   --dry                build and report, write nothing
@@ -298,8 +444,8 @@ function main() {
 Then run node tools/house/check-winelist.mjs.`);
 		process.exit(0);
 	}
-	const valued = ['--producers', '--catalogue', '--pack', '--out'];
-	const known = [...valued, '--dry'];
+	const valued = ['--producers', '--catalogue', '--pack', '--out', '--ledger'];
+	const known = [...valued, '--dry', '--pending'];
 	const opt = {};
 	for (let i = 0; i < args.length; i++) {
 		const a = args[i];
@@ -309,7 +455,12 @@ Then run node tools/house/check-winelist.mjs.`);
 			opt[a] = args[++i];
 		} else opt[a] = true;
 	}
-	const catalogueFile = path.resolve(opt['--catalogue'] || CATALOGUE);
+	const ledgerFile = path.resolve(opt['--ledger'] || LEDGER);
+	if (!fs.existsSync(ledgerFile)) fail(`${REL(ledgerFile)}: the ledger is missing; run node tools/house/carry-winelist.mjs`);
+	let ledger;
+	try { ledger = JSON.parse(fs.readFileSync(ledgerFile, 'utf8')); } catch (err) { fail(`${REL(ledgerFile)}: does not parse as JSON (${err.message})`); }
+	const catPath = (date) => path.join(DIR, 'research', `winelist-${date}.json`);
+	const catalogueFile = path.resolve(opt['--catalogue'] || catPath(ledger.catalogues[ledger.current]));
 	const packFile = path.resolve(opt['--pack'] || PACK);
 	const outFile = path.resolve(opt['--out'] || OUT);
 	const producerFiles = opt['--producers'] ? opt['--producers'].split(',').map((f) => path.resolve(f.trim())).filter(Boolean) : PRODUCER_FILES;
@@ -321,14 +472,20 @@ Then run node tools/house/check-winelist.mjs.`);
 	const catalogue = read(catalogueFile);
 	const files = producerFiles.map((file) => ({ file, data: read(file) }));
 	const pack = read(packFile);
-	const { list, failures, clashes, notes } = buildWinelist(catalogue, files, pack);
+	const catalogues = {};
+	for (const [l, date] of Object.entries(ledger.catalogues || {})) if (fs.existsSync(catPath(date))) catalogues[l] = read(catPath(date));
+	const isPast = loadIsPast();
+	if (!isPast) fail(`${REL(ENGINE)}: the engine is missing or carries no isPast`);
+	const { list, failures, clashes, notes } = buildWinelist(catalogue, files, pack, { ledger, catalogues, isPast, pending: !!opt['--pending'] });
 	for (const c of clashes) console.log('  clash: ' + c);
 	for (const n of notes) console.log('  note: ' + n);
 	if (failures.length) fail(`${failures.length} problem(s), nothing written:\n  ` + failures.join('\n  '));
 	const text = winelistText(list);
 	const bytes = Buffer.byteLength(text);
 	if (!opt['--dry']) fs.writeFileSync(outFile, text);
-	console.log(`build-winelist: ${opt['--dry'] ? '(dry, not written) ' : ''}${REL(outFile)}: ${list.entries.length} entries in ${list.sections.length} sections, ${Object.keys(list.producers).length} producers, ${Object.keys(list.places).length} places, ${Object.keys(list.cards).length} with a whole card; ${clashes.length} clash(es); ${bytes} bytes`);
+	console.log(`build-winelist: ${opt['--dry'] ? '(dry, not written) ' : ''}${REL(outFile)}: ${list.entries.length} entries in ${list.sections.length} sections, ${Object.keys(list.producers).length} producers, ${Object.keys(list.places).length} places, ${Object.keys(list.cards).length} with a whole card; ${(list.past || []).reduce((n, g) => n + g.entries.length, 0)} past rows with ${(list.past || []).reduce((n, g) => n + Object.keys(g.cards).length, 0)} past card(s)${list.pending ? `; ${list.pending.length} pending a producer` : ''}; ${clashes.length} clash(es); ${bytes} bytes`);
+	const at = letterOf(ledger, catalogue);
+	if (list.pending) for (const n of list.pending) { const e = catalogue.entries.find((x) => x.n === n); console.log(`  pending: entry ${n}, key ${ledger.keys[at][n]}: ${e.name} ${e.vintage} ${e.size} bin ${e.bin || 'none'} $${e.price}`); }
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main();
