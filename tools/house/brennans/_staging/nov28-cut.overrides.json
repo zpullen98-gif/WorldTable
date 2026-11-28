@@ -1,0 +1,356 @@
+{
+  "entries": [
+    {
+      "target": "wine:Kokomo Sonoma County Cabernet Sauvignon 2022",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "The Binwise list read 28 November 2026 prints its glass price: quote it from the list in hand.",
+        "to": "The Binwise list read 28 November 2026 prints it at $23 a glass."
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the Kokomo at $23 a glass; the spoken notes left the figure out only because the note gate read the paste without its dollar reading (engine.mjs noteHay, fixed with this edition)",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 86 (By the Glass, Red, CABERNET SAUVIGNON: Kokomo Sonoma County CA, 2022, 23)"
+    },
+    {
+      "target": "wine:Kokomo Sonoma County Cabernet Sauvignon 2022",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "It is new, so check the glass price with the manager before you quote one.",
+        "to": "It is $23 a glass."
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the Kokomo at $23 a glass; the spoken notes left the figure out only because the note gate read the paste without its dollar reading (engine.mjs noteHay, fixed with this edition)",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 86 (By the Glass, Red, CABERNET SAUVIGNON: Kokomo Sonoma County CA, 2022, 23)"
+    },
+    {
+      "target": "wine:Kokomo Sonoma County Cabernet Sauvignon 2022",
+      "field": "kept.3.a",
+      "op": "replace",
+      "value": {
+        "from": "Its glass price is printed on the Binwise list of 28 November 2026: quote it from the list in hand, and confirm at lineup that it is poured and that the 2022 is open.",
+        "to": "It is $23 a glass on the Binwise list of 28 November 2026; confirm at lineup that it is poured and that the 2022 is open."
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the Kokomo at $23 a glass; the spoken notes left the figure out only because the note gate read the paste without its dollar reading (engine.mjs noteHay, fixed with this edition)",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 86 (By the Glass, Red, CABERNET SAUVIGNON: Kokomo Sonoma County CA, 2022, 23)"
+    },
+    {
+      "target": "dish:Creole-Spiced Hanger Steak",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "the Kokomo Cabernet Sauvignon, its glass price on the list in hand.",
+        "to": "the Kokomo Cabernet Sauvignon at $23."
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the Kokomo at $23 a glass; the spoken notes left the figure out only because the note gate read the paste without its dollar reading (engine.mjs noteHay, fixed with this edition)",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 86 (By the Glass, Red, CABERNET SAUVIGNON: Kokomo Sonoma County CA, 2022, 23)"
+    },
+    {
+      "target": "wine:Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "and check the glass price with the manager before you quote one.",
+        "to": "and quote $15 a glass."
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the glass price, and the card and its service note already carry it; this sentence still sent the server to the manager for a price the list prints",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 32 (By the Glass, White, PINOT GRIS: Lemelson Vineyards \"Tikka's Run\" Willamette Valley OR, 2022, 15)"
+    },
+    {
+      "target": "wine:Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "and check the glass price with the manager before you quote one.",
+        "to": "and quote $50 a glass."
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the glass price, and the card and its service note already carry it; this sentence still sent the server to the manager for a price the list prints",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 52 (By the Glass, White, bin 2144, CHARDONNAY: Louis Jadot \"Les Pucelles\" Puligny-Montrachet FR (Coravin), 2008, 50)"
+    },
+    {
+      "target": "wine:Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "Check the glass price with the manager before you quote one.",
+        "to": "It is $55 a glass."
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the glass price, and the card and its service note already carry it; this sentence still sent the server to the manager for a price the list prints",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 91 (By the Glass, Red, bin 23632, PINOT NOIR: Domaine de Courcel \"Les Grands Epenots\" Pommard FR (Coravin), 2007, 55)"
+    },
+    {
+      "target": "dish:Petite Filet Mignon",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "mellow and earthy with age, its glass price to ask the manager;",
+        "to": "mellow and earthy with age, at $55 a glass;"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the glass price, and the card and its service note already carry it; this sentence still sent the server to the manager for a price the list prints",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 91 (By the Glass, Red, bin 23632, PINOT NOIR: Domaine de Courcel \"Les Grands Epenots\" Pommard FR (Coravin), 2007, 55)"
+    },
+    {
+      "target": "dish:Louisiana Crab Claws",
+      "field": "kept.3.a",
+      "op": "replace",
+      "value": {
+        "from": "Pour the Jadot Les Pucelles by Coravin with it, asking the manager for its glass price first;",
+        "to": "Pour the Jadot Les Pucelles by Coravin with it, at $50 a glass;"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the glass price, and the card and its service note already carry it; this sentence still sent the server to the manager for a price the list prints",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 52 (By the Glass, White, bin 2144, CHARDONNAY: Louis Jadot \"Les Pucelles\" Puligny-Montrachet FR (Coravin), 2008, 50)"
+    },
+    {
+      "target": "dish:Crab & Corn Omelette",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "Pour the Lemelson Pinot Gris from Oregon, asking the manager for its glass price first;",
+        "to": "Pour the Lemelson Pinot Gris from Oregon at $15;"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the glass price, and the card and its service note already carry it; this sentence still sent the server to the manager for a price the list prints",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 32 (By the Glass, White, PINOT GRIS: Lemelson Vineyards \"Tikka's Run\" Willamette Valley OR, 2022, 15)"
+    },
+    {
+      "target": "dish:Crab & Corn Omelette",
+      "field": "kept.4.a",
+      "op": "replace",
+      "value": {
+        "from": "The Lemelson Pinot Gris has no printed glass price yet, so ask the manager before you quote one.",
+        "to": "The Lemelson Pinot Gris is $15 a glass on the Binwise list of 28 November 2026."
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the glass at $15; this sentence still said no glass price was printed",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 32 (By the Glass, White, PINOT GRIS: Lemelson Vineyards \"Tikka's Run\" Willamette Valley OR, 2022, 15)"
+    },
+    {
+      "target": "dish:Roasted Chateaubriand",
+      "field": "kept.4.a",
+      "op": "replace",
+      "value": {
+        "from": "The Pommard and the Kokomo have no printed glass price yet, so ask the manager before you quote one, and mention the sommelier for a bottle",
+        "to": "The Binwise list of 28 November 2026 prints the Pommard at $55 a glass and the Kokomo at $23; mention the sommelier for a bottle"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints both glass prices; this sentence still said neither was printed",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 91 (By the Glass, Red, bin 23632, PINOT NOIR: Domaine de Courcel \"Les Grands Epenots\" Pommard FR (Coravin), 2007, 55); page:binwise-wine-list-2026-11-28.txt line 86 (By the Glass, Red, CABERNET SAUVIGNON: Kokomo Sonoma County CA, 2022, 23)"
+    },
+    {
+      "target": "dish:Swordfish Grenobloise",
+      "field": "kept.1.a",
+      "op": "replace",
+      "value": {
+        "from": "by Coravin is the step up, its price to ask the manager;",
+        "to": "by Coravin is the step up, at $50 a glass;"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the glass price, and the card and its service note already carry it; this sentence still sent the server to the manager for a price the list prints",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 52 (By the Glass, White, bin 2144, CHARDONNAY: Louis Jadot \"Les Pucelles\" Puligny-Montrachet FR (Coravin), 2008, 50)"
+    },
+    {
+      "target": "scenario:Chateaubriand wine",
+      "field": "you",
+      "op": "replace",
+      "value": {
+        "fromRe": "I.ll confirm both glass prices for you, and I.d love to bring",
+        "to": "The Pommard is $55 a glass and the Kokomo $23, and I’d love to bring"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the glass price, and the card and its service note already carry it; this sentence still sent the server to the manager for a price the list prints",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 91 (By the Glass, Red, bin 23632, PINOT NOIR: Domaine de Courcel \"Les Grands Epenots\" Pommard FR (Coravin), 2007, 55); page:binwise-wine-list-2026-11-28.txt line 86 (By the Glass, Red, CABERNET SAUVIGNON: Kokomo Sonoma County CA, 2022, 23)"
+    },
+    {
+      "target": "scenario:A buttery Chardonnay",
+      "field": "you",
+      "op": "replace",
+      "value": {
+        "fromRe": "Les Pucelles 2008, and I.ll confirm its glass price for you\\.",
+        "to": "Les Pucelles 2008, at $50 a glass."
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the glass price, and the card and its service note already carry it; this sentence still sent the server to the manager for a price the list prints",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 52 (By the Glass, White, bin 2144, CHARDONNAY: Louis Jadot \"Les Pucelles\" Puligny-Montrachet FR (Coravin), 2008, 50)"
+    },
+    {
+      "target": "wine:Domaine de Durban Beaumes-de-Venise Rouge 2024",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "of an estate high under the Dentelles de Montmirail owned by the Leydier family since 1967 and known first",
+        "to": "of an estate high under the Dentelles de Montmirail, known first"
+      },
+      "reason": "The card named the owning family and a year the Durban record itself says no source here confirms (\"Name no family, founding year or blend percentages\"); the pack names nobody who is or may be living",
+      "source": "the pack record w-j69emzt9 (lines.s45) against its component cellar-durban, producer.notes: \"Name no family, founding year or blend percentages: no source here confirms them.\""
+    },
+    {
+      "target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+      "field": "origin",
+      "op": "replace",
+      "value": {
+        "fromRe": "restored under Francis Ford Coppola.s family",
+        "to": "restored under the Coppola family"
+      },
+      "reason": "The card named a living person; the Inglenook record tells the same fact as the family’s, which is how the floor is told to say it",
+      "source": "components/producers.json cellar-inglenook, producer.notes: \"say the Coppola family restored the estate and bought back its name in 2011\""
+    },
+    {
+      "target": "wine:Kracher ‘Cuvée’ Auslese Burgenland 2017",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "is the most famous sweet wine house in Austria, at Illmitz on the eastern shore",
+        "to": "is a house known for its sweet wines, at Illmitz on the eastern shore"
+      },
+      "reason": "A judging superlative no source can settle; the place and the wines say what the house is",
+      "source": "the pack record (kept.0); research/bottle-facts-cards (Kracher, Illmitz, the Neusiedlersee)"
+    },
+    {
+      "target": "wine:Dr. Hermann ‘Ürziger Würzgarten in der Kranklei’ Riesling Spätlese Goldkapsel 2018",
+      "field": "kept.3.a",
+      "op": "replace",
+      "value": {
+        "fromRe": "half-bottle at \\$80, which is our glass list.s dessert Riesling\\.",
+        "to": "half-bottle at $$80, a dessert Riesling that is not on the glass page."
+      },
+      "reason": "The Prälat half is sold as a half-bottle and is on no Wines by the Glass page: its own card says so, and the list of 28 November 2026 prints no Dr. Hermann by the glass",
+      "source": "page:binwise-wine-list-2026-11-28.txt lines 3 to 94 (By the Glass: seventeen pours, no Dr. Hermann); the pack record of the Erdener Prälat half (What should I watch for?: \"It is not on the current Wines by the Glass page\")"
+    },
+    {
+      "target": "wine:Domaine Leflaive Mâcon-Verzé 2021",
+      "field": "why",
+      "op": "replace",
+      "value": {
+        "from": "and the full bottle of the white we pour by Coravin.",
+        "to": "and the full bottle of the white we poured by Coravin until November 2026."
+      },
+      "reason": "The Leflaive Mâcon-Verzé 2022 left the Wines by the Glass sheet on 15 November 2026 and is filed under Past wines by the glass; this sentence still said it is poured by Coravin",
+      "source": "research/glass-wines-2026-11-15.md (the sheet of 15 November 2026: the Jadot Les Pucelles 2008 in place of the Leflaive Mâcon-Verzé 2022); page:binwise-wine-list-2026-11-28.txt lines 3 to 94 (By the Glass: no Leflaive); line 5332 (bin 23211, Domaine Leflaive Mâcon Verzé, 2021, 160)"
+    },
+    {
+      "target": "wine:Domaine Leflaive Mâcon-Verzé 2021",
+      "field": "lines.s45",
+      "op": "replace",
+      "value": {
+        "from": "The glass on the Coravin is the 2022; this bottle is the 2021,",
+        "to": "The glass we poured by Coravin was the 2022; this bottle is the 2021,"
+      },
+      "reason": "The Leflaive Mâcon-Verzé 2022 left the Wines by the Glass sheet on 15 November 2026 and is filed under Past wines by the glass; this sentence still said it is poured by Coravin",
+      "source": "research/glass-wines-2026-11-15.md (the sheet of 15 November 2026: the Jadot Les Pucelles 2008 in place of the Leflaive Mâcon-Verzé 2022); page:binwise-wine-list-2026-11-28.txt lines 3 to 94 (By the Glass: no Leflaive); line 5332 (bin 23211, Domaine Leflaive Mâcon Verzé, 2021, 160)"
+    },
+    {
+      "target": "wine:Domaine Leflaive Mâcon-Verzé 2021",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "By the glass we pour the 2022 through the Coravin; the full bottle on the list is the 2021.",
+        "to": "The glass we poured through the Coravin until November 2026 was the 2022; the full bottle on the list is the 2021."
+      },
+      "reason": "The Leflaive Mâcon-Verzé 2022 left the Wines by the Glass sheet on 15 November 2026 and is filed under Past wines by the glass; this sentence still said it is poured by Coravin",
+      "source": "research/glass-wines-2026-11-15.md (the sheet of 15 November 2026: the Jadot Les Pucelles 2008 in place of the Leflaive Mâcon-Verzé 2022); page:binwise-wine-list-2026-11-28.txt lines 3 to 94 (By the Glass: no Leflaive); line 5332 (bin 23211, Domaine Leflaive Mâcon Verzé, 2021, 160)"
+    },
+    {
+      "target": "wine:Domaine Leflaive Mâcon-Verzé 2021",
+      "field": "kept.2.a",
+      "op": "replace",
+      "value": {
+        "from": "Asked: Is this the same as the glass?\n\nAnswer: It is the same wine from the 2021 vintage; by the glass we pour the 2022 through the Coravin.",
+        "to": "Asked: Is this the Leflaive you poured by the glass?\n\nAnswer: It is the same wine from the 2021 vintage; the glass, poured through the Coravin until November 2026, was the 2022."
+      },
+      "reason": "The Leflaive Mâcon-Verzé 2022 left the Wines by the Glass sheet on 15 November 2026 and is filed under Past wines by the glass; this sentence still said it is poured by Coravin",
+      "source": "research/glass-wines-2026-11-15.md (the sheet of 15 November 2026: the Jadot Les Pucelles 2008 in place of the Leflaive Mâcon-Verzé 2022); page:binwise-wine-list-2026-11-28.txt lines 3 to 94 (By the Glass: no Leflaive); line 5332 (bin 23211, Domaine Leflaive Mâcon Verzé, 2021, 160)"
+    },
+    {
+      "target": "wine:Domaine Leflaive Mâcon-Verzé 2021",
+      "field": "kept.3.a",
+      "op": "replace",
+      "value": {
+        "from": "Check the vintage: the glass on Coravin is the 2022 at $40, and this full bottle is the 2021, bin 23211, $160.",
+        "to": "Check the vintage: the glass that left the sheet in November 2026 was the 2022, and this full bottle is the 2021, bin 23211, $160."
+      },
+      "reason": "The Leflaive Mâcon-Verzé 2022 left the Wines by the Glass sheet on 15 November 2026 and is filed under Past wines by the glass; this sentence still said it is poured by Coravin",
+      "source": "research/glass-wines-2026-11-15.md (the sheet of 15 November 2026: the Jadot Les Pucelles 2008 in place of the Leflaive Mâcon-Verzé 2022); page:binwise-wine-list-2026-11-28.txt lines 3 to 94 (By the Glass: no Leflaive); line 5332 (bin 23211, Domaine Leflaive Mâcon Verzé, 2021, 160)"
+    },
+    {
+      "target": "wine:Domaine Leflaive Mâcon-Verzé 2021",
+      "field": "serviceNote",
+      "op": "replace",
+      "value": {
+        "from": "The glass on Coravin is the 2022 at $40; this bottle is the 2021.",
+        "to": "The glass poured by Coravin until November 2026 was the 2022; this bottle is the 2021."
+      },
+      "reason": "The Leflaive Mâcon-Verzé 2022 left the Wines by the Glass sheet on 15 November 2026 and is filed under Past wines by the glass; this sentence still said it is poured by Coravin",
+      "source": "research/glass-wines-2026-11-15.md (the sheet of 15 November 2026: the Jadot Les Pucelles 2008 in place of the Leflaive Mâcon-Verzé 2022); page:binwise-wine-list-2026-11-28.txt lines 3 to 94 (By the Glass: no Leflaive); line 5332 (bin 23211, Domaine Leflaive Mâcon Verzé, 2021, 160)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-90xn7s71",
+        "was": "the ask what the blend of the Cesarini Sforza Rosé Brut Trento is and how long it ages on its lees",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The ask names only a card filed as past: the Binwise list of 28 November 2026 no longer prints the bottle or the pour, so nothing on the floor waits on the answer. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 5123)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-quj77k6z",
+        "was": "the ask whether the Pierre Péters Cuvée de Réserve magnum sees any wood",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The ask names only a card filed as past: the Binwise list of 28 November 2026 no longer prints the bottle or the pour, so nothing on the floor waits on the answer. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no Pierre Péters Cuvée de Réserve under Large Formats)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-rork8pib",
+        "was": "the ask which IGP the Mas de Valériole Vé 2025 magnum is labeled",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The ask names only a card filed as past: the Binwise list of 28 November 2026 no longer prints the bottle or the pour, so nothing on the floor waits on the answer. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no Mas de Valériole)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-btet43a5",
+        "was": "the ask which vineyards go into the 2024 Ken Wright Willamette Valley blend, and which sub-appellation Freedom Hill is in",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The ask names only a card filed as past: the Binwise list of 28 November 2026 no longer prints the bottle or the pour, so nothing on the floor waits on the answer. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 148412, and no Ken Wright Freedom Hill)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-j92pv8mw",
+        "was": "the ask how the Castello Banfi Florus 2011 is showing at fifteen years",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The ask names only a card filed as past: the Binwise list of 28 November 2026 no longer prints the bottle or the pour, so nothing on the floor waits on the answer. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 192345)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-k7z1i3m8",
+        "was": "the ask whether Castello Banfi revived Moscadello di Montalcino or joined growers already making it",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The ask names only a card filed as past: the Binwise list of 28 November 2026 no longer prints the bottle or the pour, so nothing on the floor waits on the answer. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 192345)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-budl2ugf",
+        "was": "the ask whether the Inglenook Rubicon 2010 glass is poured by Coravin, and how its sediment is handled at the pour",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The ask names only a card filed as past: the Binwise list of 28 November 2026 no longer prints the bottle or the pour, so nothing on the floor waits on the answer. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt (By the Glass, lines 3 to 94: no Rubicon; the bottle stands at bin 18231)"
+    }
+  ]
+}
