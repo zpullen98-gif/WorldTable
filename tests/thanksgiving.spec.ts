@@ -28,6 +28,9 @@ const OTHER = process.env.OOT_TG_PACK ?? '';
 const SHOTS = process.env.OOT_TG_SHOTS ?? '';
 const PACK = JSON.parse(readFileSync(OTHER && existsSync(OTHER) ? OTHER : SHIPPED, 'utf8')) as { house: House };
 
+/** The test-only meal the stand-in gives a past record that names the day (see grafted). */
+const PAST_DAY = 'A Past Stand-in Day';
+
 /** The house with a stand-in fixed price menu for the day: three courses of its own served dishes and clones, two sides, one sheet line. */
 function grafted(base: House): House {
 	const h: House = structuredClone(base);
@@ -45,6 +48,11 @@ function grafted(base: House): House {
 	});
 	const joined = served.slice(1, 4);
 	for (const d of joined) d.meals = [...d.meals, HOLIDAY_MEAL];
+	/* A past record still names the meal it was served at, so the sixteen dishes of Thanksgiving Day 2026
+	   list the day. The app keeps past dishes in the Menu list and deals them last in the whole menu deck,
+	   at any meal, so at the stand-in's day they would count beside its own. The stand-in proves the tab
+	   on a day of its own: past records naming the day take a test-only meal here, in memory. */
+	for (const d of h.dishes) if (d.section.startsWith('Past ') && d.meals.includes(HOLIDAY_MEAL)) d.meals = d.meals.map(m => (m === HOLIDAY_MEAL ? PAST_DAY : m));
 	const added = [
 		clone(model, 1, 'Stand-in Starter', HOLIDAY_MEAL),
 		clone(model, 2, 'Stand-in Roast', HOLIDAY_MEAL),
