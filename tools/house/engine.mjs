@@ -800,11 +800,15 @@ const noteOf = (row, q) => (Array.isArray(row.kept) ? row.kept.filter((n) => n &
 
 /* The text the content gates read a note against: the guide, the page snapshots and every file at
    the top of research/ (the deep sweeps under research/deep-2026-10-03/ are left out, since their
-   unverifiable and refuted records are never a source); noteProblems adds the house itself. */
+   unverifiable and refuted records are never a source); noteProblems adds the house itself. A page
+   that prints its prices as bare figures (DOLLAR_PAGE above, the Binwise paste) is read as sourceText
+   reads it, each price line also in dollars, so a note may say the "$23" the list prints as 23 and the
+   price field already stands on; a bin or a vintage is still never a price (the list of 28 November
+   2026, whose glass prices no other page prints). */
 export function noteHay() {
 	const parts = [];
 	if (fs.existsSync(GUIDE)) parts.push(fs.readFileSync(GUIDE, 'utf8'));
-	for (const f of pageFiles()) parts.push(fs.readFileSync(f, 'utf8'));
+	for (const f of pageFiles()) { const text = fs.readFileSync(f, 'utf8'); parts.push(DOLLAR_PAGE.test(text.split('\n')[0]) ? dollarReading(text) : text); }
 	if (fs.existsSync(RESEARCH)) for (const f of fs.readdirSync(RESEARCH)) { const p = path.join(RESEARCH, f); if (fs.statSync(p).isFile()) parts.push(fs.readFileSync(p, 'utf8')); }
 	return parts.join('\n');
 }

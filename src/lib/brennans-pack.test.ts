@@ -17,7 +17,7 @@
 import { describe, it, expect } from 'vitest';
 import { spawnSync } from 'node:child_process';
 import { existsSync, readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { join } from 'node:path';
 
 const ROOT = fileURLToPath(new URL('../..', import.meta.url));
@@ -233,6 +233,38 @@ describe("the Brennan's pack", () => {
 		for (const k of Object.keys(h.removed)) expect(h.removed[k], k).toBe(later[k] ?? Date.parse('2026-10-03T22:00:00.000Z') + 1);
 		for (const name of ['Flamingo', 'Birdcage', 'Spoonbill', 'Personality', 'Oh! What It Seemed to Be']) expect(h.cocktails.some((c) => c.name === name), name).toBe(true);
 	});
+
+	it("reads a note's price off the wine list as the price rule does: the figure that closes an entry, never a bin or a vintage", async () => {
+		const engine = await import(/* @vite-ignore */ pathToFileURL(join(ROOT, 'tools', 'house', 'engine.mjs')).href);
+		const lib = engine.loadEngine((m: string) => {
+			throw new Error(m);
+		});
+		/* One entry as the Binwise paste prints it: the bin, the wine, the vintage, the price, and the line that closes it. */
+		const entry = 'Source: a list whose entries print the bottle price in dollars.\n\n18231\nInglenook\n2010\n360\n \n';
+		const read: string = engine.dollarReading(entry);
+		expect(read).toContain('360 $360');
+		expect(read).not.toContain('$18231');
+		expect(read).not.toContain('$2010');
+		/* The Kokomo by the glass: the list of 28 November 2026 prints 2022 and then 23, and no other page prints that
+		   price. The raw pages print the figure bare, so before noteHay took the dollar reading a note could not say $23. */
+		const raw = (engine.pageFiles() as string[]).map((f) => readFileSync(f, 'utf8')).join('\n');
+		expect(lib.onPage(raw, '$23')).toBe(false);
+		const hay: string = engine.noteHay();
+		expect(lib.onPage(hay, '$23')).toBe(true);
+		/* The bin of the entry below it, 23632, and a vintage, 2022, close no entry: neither is a price a note may quote. */
+		expect(lib.onPage(hay, '$23632')).toBe(false);
+		expect(lib.onPage(hay, '$2022')).toBe(false);
+		/* The note gate itself: a shipped wine's description is refused for a figure that is only a bin, and passes on a printed price. */
+		const h = JSON.parse(readFileSync(PACK, 'utf8')).house;
+		const one = (price: string) => {
+			const w = JSON.parse(JSON.stringify(h.wines.find((x: Row) => (x.kept || []).some((k) => k.q === ABOUT_Q))));
+			const note = w.kept.find((k: { q: string }) => k.q === ABOUT_Q);
+			note.a = note.a + ' It is ' + price + ' on the list.';
+			return (engine.noteProblems({ ...h, wines: [w], dishes: [], cocktails: [] }, hay, lib.onPage) as string[]).filter((x) => x.includes('the price '));
+		};
+		expect(one('$23')).toEqual([]);
+		expect(one('$23632').join('\n')).toContain('the price $23632 is printed nowhere in the guide or the page snapshots');
+	}, 60_000);
 
 	it("never pairs a child's plate", () => {
 		const kids = house().dishes.filter((d) => d.section.startsWith("Children's"));
