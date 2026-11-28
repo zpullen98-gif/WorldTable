@@ -1,5 +1,48 @@
 {
- "producers": {},
+ "producers": {
+  "domaine-daulny": {
+   "name": "Domaine Daulny",
+   "region": "Sancerre, Loire",
+   "country": "France",
+   "line": "A family estate in Verdigny, just north of the town of Sancerre, working some fifty small plots across the appellation.",
+   "tell": "Daulny farms about fifty plots around Verdigny and ferments mostly in stainless steel, so the Sancerre is clean Sauvignon Blanc: citrus, gooseberry and a chalky, stony finish. A bright white from the Under $100 page, good with oysters and with fish."
+  },
+  "maurice-charleux": {
+   "name": "Domaine Maurice Charleux et Fils",
+   "region": "Maranges, Côte de Beaune, Burgundy",
+   "country": "France",
+   "line": "A family domaine in Dezize-lès-Maranges, founded in 1894, with just under ten hectares of Pinot Noir and Chardonnay at the southern end of the Côte de Beaune.",
+   "tell": "Maranges is the last village of the Côte de Beaune, and La Fussière is its largest premier cru, a south facing slope of limestone over marl. The red is Pinot Noir of red cherry and earth with fresh, firm tannin: a premier cru Burgundy on the Under $100 page, good with duck or veal."
+  },
+  "jean-noel-gagnard": {
+   "name": "Domaine Jean-Noël Gagnard",
+   "region": "Chassagne-Montrachet, Burgundy",
+   "country": "France",
+   "line": "A Chassagne-Montrachet family domaine, farmed organically, known for its whites and for taking the village’s red seriously.",
+   "tell": "Chassagne is known for white, but L’Estimée is red: village Chassagne-Montrachet Pinot Noir blended from six parcels across the commune. Wild strawberry, bright acidity and polished tannin. A chance to show a guest red Chassagne, and a match for roast chicken or pork."
+  },
+  "chateau-gloria": {
+   "name": "Château Gloria",
+   "region": "Saint-Julien, Bordeaux",
+   "country": "France",
+   "line": "Henri Martin’s Saint-Julien estate, built parcel by parcel from 1942 out of vines bought from the classed growths around it.",
+   "tell": "Gloria stands outside the 1855 classification only because it was put together later, from vines Henri Martin bought off Saint-Julien’s classed growths; Château Saint-Pierre is its sister. Cabernet Sauvignon leads, with Merlot: cassis, cedar and the village’s fine grained balance. Two vintages at one price, the 2017 with more years in bottle than the 2021."
+  },
+  "chateau-la-tour-de-mons": {
+   "name": "Château La Tour de Mons",
+   "region": "Margaux, Bordeaux",
+   "country": "France",
+   "line": "An old Margaux estate in the village of Soussans, named for Pierre de Mons, who inherited it in 1623.",
+   "tell": "La Tour de Mons sits in Soussans, at the northern edge of Margaux. Merlot leads the blend, with Cabernet Sauvignon and Petit Verdot: plum and dark cherry with the appellation’s violet perfume and soft tannin. A Margaux to open with lamb or beef."
+  },
+  "chateau-charmail": {
+   "name": "Château Charmail",
+   "region": "Haut-Médoc, Bordeaux",
+   "country": "France",
+   "line": "A Haut-Médoc estate at Saint-Seurin-de-Cadourne, near the Gironde, its vineyard one block facing Sociando-Mallet across the road.",
+   "tell": "Charmail is known in the Médoc for cold macerating its grapes before fermentation, which gives deep colour and soft tannin. Merlot and Cabernet Sauvignon lead, with Cabernet Franc and Petit Verdot. The list prints one bottle, the 2020 in magnum, under Large Formats and again under Bordeaux: a generous claret for a large table."
+  }
+ },
  "entries": {
   "b10": "louis-jadot",
   "b17": "domaine-de-courcel",
@@ -34,7 +77,15 @@
   "b2679": "peay",
   "b2680": "peay",
   "b2705": "lioco",
-  "b2719": "patricia-green"
+  "b2719": "patricia-green",
+  "b21": "domaine-daulny",
+  "b39": "maurice-charleux",
+  "b2114": "jean-noel-gagnard",
+  "b2280": "chateau-gloria",
+  "b2281": "chateau-gloria",
+  "b2311": "chateau-la-tour-de-mons",
+  "b197": "chateau-charmail",
+  "b2423": "chateau-charmail"
  },
  "places": {}
 }
