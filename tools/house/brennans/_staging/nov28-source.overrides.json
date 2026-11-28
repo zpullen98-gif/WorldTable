@@ -1,0 +1,16 @@
+{
+	"entries": [
+		{
+			"target": "house",
+			"op": "add",
+			"field": "sources",
+			"value": {
+				"title": "Brennan’s wine list on Binwise, the whole list pasted by the owner (3,560 entries: the seventeen pours by the glass and every bottle)",
+				"url": "https://hub.binwise.com/restaurant/brennans-new-orleans/list/wine-list.html",
+				"readOn": "2026-11-28"
+			},
+			"reason": "The eighteenth source: the paste the glass prices, the new bins, the vintage roll and the past bottles of this edition are read from; it is saved verbatim under pages/",
+			"source": "page:binwise-wine-list-2026-11-28.txt"
+		}
+	]
+}

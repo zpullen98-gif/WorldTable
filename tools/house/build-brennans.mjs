@@ -525,7 +525,8 @@ function findTarget(target, n) {
 		return { rec: m, list };
 	}
 	const key = KEY[list];
-	const rec = model[list].find((r) => !r.retired && (slug(r[key]) === slug(name) || (r.idName && slug(r.idName) === slug(name))));
+	const rec = model[list].find((r) => !r.retired && (slug(r[key]) === slug(name) || (r.idName && slug(r.idName) === slug(name))))
+		|| model[list].find((r) => !r.retired && Array.isArray(r.formerNames) && r.formerNames.some((f) => slug(f) === slug(name)));
 	if (!rec) fail(`${REL(OVERRIDES)} entry ${n}: ${target} names nothing in the model${model[list].some((r) => r.retired && slug(r[key]) === slug(name)) ? ' (it is retired)' : ''}`);
 	return { rec, list };
 }
@@ -766,6 +767,12 @@ overrides.entries.forEach((e, n) => {
 	const { holder, key } = getPath(rec, e.field);
 	if (!holder || typeof holder !== 'object') fail(`${REL(OVERRIDES)} entry ${n}: ${e.target} has no ${e.field}`);
 	if (op === 'set') {
+		/* A name an override replaces stays a name the record answers to (formerNames, for resolution
+		   only, never written to the house): a wine renamed to the vintage a newer list prints is still
+		   found by every pairing, ask and fragment that named it before (the list of 28 November 2026). */
+		if (holder === rec && key === 'name' && ['dishes', 'wines', 'cocktails'].includes(list) && typeof rec.name === 'string' && rec.name !== e.value) {
+			rec.formerNames = (rec.formerNames || []).concat(rec.name);
+		}
 		holder[key] = e.value;
 	} else if (op === 'append') {
 		const cur = typeof holder[key] === 'string' ? holder[key] : '';
@@ -1114,9 +1121,12 @@ for (const list of ['dishes', 'wines', 'cocktails']) for (const r of clean[list]
 	byName.set(slug(r.name), r.id);
 	if (r.idName && slug(r.idName) !== slug(r.name)) byName.set(slug(r.idName), r.id);
 }
+/* A former name (see formerNames above) resolves only where no record carries it now. */
+for (const list of ['dishes', 'wines', 'cocktails']) for (const r of clean[list]) for (const f of r.formerNames || []) if (!byName.has(slug(f))) byName.set(slug(f), r.id);
 const wineKey = (s) => slug(String(s).replace(/\s*\$\d+\s*(glass|half-bottle)\s*$/i, '').replace(/\s*\(coravin\)\s*/i, ' '));
 const wineIds = new Map();
 for (const w of clean.wines) { wineIds.set(wineKey(w.name), w.id); if (w.idName) wineIds.set(wineKey(w.idName), w.id); }
+for (const w of clean.wines) for (const f of w.formerNames || []) if (!wineIds.has(wineKey(f))) wineIds.set(wineKey(f), w.id);
 function wineId(name, where) {
 	if (!name) return '';
 	const id = wineIds.get(wineKey(name));
@@ -1532,6 +1542,12 @@ function producerFrom(p, need, where) {
 const exactItem = (name) => {
 	for (const list of ['dishes', 'wines', 'cocktails']) {
 		const r = house[list].find((x) => x.name === name) || house[list].find((x) => slug(x.name) === slug(name));
+		if (r) return { list, rec: r };
+	}
+	/* A name the record answered to before an override renamed it (formerNames), as the pairings resolve it. */
+	const id = byName.get(slug(name));
+	for (const list of ['dishes', 'wines', 'cocktails']) {
+		const r = id && house[list].find((x) => x.id === id);
 		if (r) return { list, rec: r };
 	}
 	return null;

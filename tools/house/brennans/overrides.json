@@ -81787,6 +81787,994 @@
       },
       "reason": "Thanksgiving Day 2026 has passed and its menu is retired: the question asked how the day would be served, so it is moot. The ask leaves under a tombstone one millisecond after the last edition that carried it, by the answer route, and the dishes it named keep their notes to be read",
       "source": "page:brennans-sheets-2026-11-22.txt (Sheet 1: the Thanksgiving Day menu, served Thursday 26 November 2026); the owner's instruction of 27 November 2026 (research/menu-2026-11-27-past.md)"
+    },
+    {
+      "target": "wine:Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022",
+      "field": "priceUnknown",
+      "op": "set",
+      "value": false,
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $15 a glass; the sheet of 15 November 2026 printed none, so the card was filed with no price and asked",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 32 (By the Glass, White, PINOT GRIS)"
+    },
+    {
+      "target": "wine:Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022",
+      "field": "price",
+      "op": "set",
+      "value": "$15",
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $15 a glass; the sheet of 15 November 2026 printed none, so the card was filed with no price and asked",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 32 (By the Glass, White, PINOT GRIS)"
+    },
+    {
+      "target": "wine:Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022",
+      "field": "prices",
+      "op": "set",
+      "value": [
+        {
+          "meal": "By the glass",
+          "printed": "$15"
+        }
+      ],
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $15 a glass; the sheet of 15 November 2026 printed none, so the card was filed with no price and asked",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 32 (By the Glass, White, PINOT GRIS)"
+    },
+    {
+      "target": "wine:Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022",
+      "field": "glass",
+      "op": "set",
+      "value": "$15",
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $15 a glass; the sheet of 15 November 2026 printed none, so the card was filed with no price and asked",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 32 (By the Glass, White, PINOT GRIS)"
+    },
+    {
+      "target": "wine:Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)",
+      "field": "priceUnknown",
+      "op": "set",
+      "value": false,
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $50 a glass; the sheet of 15 November 2026 printed none, so the card was filed with no price and asked",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 52 (By the Glass, White, CHARDONNAY, bin 2144, Coravin)"
+    },
+    {
+      "target": "wine:Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)",
+      "field": "price",
+      "op": "set",
+      "value": "$50",
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $50 a glass; the sheet of 15 November 2026 printed none, so the card was filed with no price and asked",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 52 (By the Glass, White, CHARDONNAY, bin 2144, Coravin)"
+    },
+    {
+      "target": "wine:Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)",
+      "field": "prices",
+      "op": "set",
+      "value": [
+        {
+          "meal": "By the glass",
+          "printed": "$50"
+        }
+      ],
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $50 a glass; the sheet of 15 November 2026 printed none, so the card was filed with no price and asked",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 52 (By the Glass, White, CHARDONNAY, bin 2144, Coravin)"
+    },
+    {
+      "target": "wine:Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)",
+      "field": "glass",
+      "op": "set",
+      "value": "$50",
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $50 a glass; the sheet of 15 November 2026 printed none, so the card was filed with no price and asked",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 52 (By the Glass, White, CHARDONNAY, bin 2144, Coravin)"
+    },
+    {
+      "target": "wine:Kokomo Sonoma County Cabernet Sauvignon 2022",
+      "field": "priceUnknown",
+      "op": "set",
+      "value": false,
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $23 a glass; the sheet of 15 November 2026 printed none, so the card was filed with no price and asked",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 86 (By the Glass, Red, CABERNET SAUVIGNON)"
+    },
+    {
+      "target": "wine:Kokomo Sonoma County Cabernet Sauvignon 2022",
+      "field": "price",
+      "op": "set",
+      "value": "$23",
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $23 a glass; the sheet of 15 November 2026 printed none, so the card was filed with no price and asked",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 86 (By the Glass, Red, CABERNET SAUVIGNON)"
+    },
+    {
+      "target": "wine:Kokomo Sonoma County Cabernet Sauvignon 2022",
+      "field": "prices",
+      "op": "set",
+      "value": [
+        {
+          "meal": "By the glass",
+          "printed": "$23"
+        }
+      ],
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $23 a glass; the sheet of 15 November 2026 printed none, so the card was filed with no price and asked",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 86 (By the Glass, Red, CABERNET SAUVIGNON)"
+    },
+    {
+      "target": "wine:Kokomo Sonoma County Cabernet Sauvignon 2022",
+      "field": "glass",
+      "op": "set",
+      "value": "$23",
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $23 a glass; the sheet of 15 November 2026 printed none, so the card was filed with no price and asked",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 86 (By the Glass, Red, CABERNET SAUVIGNON)"
+    },
+    {
+      "target": "wine:Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)",
+      "field": "priceUnknown",
+      "op": "set",
+      "value": false,
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $55 a glass; the sheet of 15 November 2026 printed none, so the card was filed with no price and asked",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 91 (By the Glass, Red, PINOT NOIR, bin 23632, Coravin)"
+    },
+    {
+      "target": "wine:Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)",
+      "field": "price",
+      "op": "set",
+      "value": "$55",
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $55 a glass; the sheet of 15 November 2026 printed none, so the card was filed with no price and asked",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 91 (By the Glass, Red, PINOT NOIR, bin 23632, Coravin)"
+    },
+    {
+      "target": "wine:Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)",
+      "field": "prices",
+      "op": "set",
+      "value": [
+        {
+          "meal": "By the glass",
+          "printed": "$55"
+        }
+      ],
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $55 a glass; the sheet of 15 November 2026 printed none, so the card was filed with no price and asked",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 91 (By the Glass, Red, PINOT NOIR, bin 23632, Coravin)"
+    },
+    {
+      "target": "wine:Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)",
+      "field": "glass",
+      "op": "set",
+      "value": "$55",
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $55 a glass; the sheet of 15 November 2026 printed none, so the card was filed with no price and asked",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 91 (By the Glass, Red, PINOT NOIR, bin 23632, Coravin)"
+    },
+    {
+      "target": "wine:Domaine de Durban Beaumes-de-Venise Rouge 2024",
+      "field": "price",
+      "op": "set",
+      "value": "$18",
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $18 a glass, as Binwise did on 3 October 2026; the menu page of 3 October 2026 printed $19.00, which stays on the record as the dispute on its glass price. The list is the newer page and stands",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 66 (By the Glass, Red, GRENACHE BLEND)"
+    },
+    {
+      "target": "wine:Domaine de Durban Beaumes-de-Venise Rouge 2024",
+      "field": "prices",
+      "op": "set",
+      "value": [
+        {
+          "meal": "By the glass",
+          "printed": "$18"
+        }
+      ],
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $18 a glass, as Binwise did on 3 October 2026; the menu page of 3 October 2026 printed $19.00, which stays on the record as the dispute on its glass price. The list is the newer page and stands",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 66 (By the Glass, Red, GRENACHE BLEND)"
+    },
+    {
+      "target": "wine:Domaine de Durban Beaumes-de-Venise Rouge 2024",
+      "field": "glass",
+      "op": "set",
+      "value": "$18",
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at $18 a glass, as Binwise did on 3 October 2026; the menu page of 3 October 2026 printed $19.00, which stays on the record as the dispute on its glass price. The list is the newer page and stands",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 66 (By the Glass, Red, GRENACHE BLEND)"
+    },
+    {
+      "target": "wine:Minuty ‘Prestige’ Côtes de Provence Rosé 2024",
+      "field": "vintage",
+      "op": "set",
+      "value": "2025",
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at 2025, $17 a glass, as GRENACHE BLEND \"Prestige\" Côtes de Provence with no producer word; the list of 3 October 2026 printed Minuty \"Prestige\" 2024 and the sheet of 15 November 2026 printed 2023. The vintage is the paste's; the record keeps Minuty, whose cuvée Prestige is, and the owner is asked to read the label",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 59 (By the Glass, Rosé, GRENACHE BLEND)"
+    },
+    {
+      "target": "wine:Minuty ‘Prestige’ Côtes de Provence Rosé 2024",
+      "field": "name",
+      "op": "set",
+      "value": "Minuty ‘Prestige’ Côtes de Provence Rosé 2025",
+      "reason": "The name carries the vintage the list prints; the id stays the one minted under the old name",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 59 (By the Glass, Rosé, GRENACHE BLEND)"
+    },
+    {
+      "target": "wine:Moulin d’Issan Bordeaux Supérieur 2023",
+      "field": "vintage",
+      "op": "set",
+      "value": "2023",
+      "reason": "The Binwise list the owner pasted on 28 November 2026 prints this pour at 2023, $16 a glass, as the list of 3 October 2026 did; the menu page of 3 October 2026 and the sheet of 15 November 2026 printed 2021, which stays on the record as the dispute on its vintage. The list is the newer page and stands",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 81 (By the Glass, Red, CABERNET SAUVIGNON BLEND)"
+    },
+    {
+      "target": "wine:Moulin d’Issan Bordeaux Supérieur 2023",
+      "field": "name",
+      "op": "set",
+      "value": "Moulin d’Issan Bordeaux Supérieur 2023",
+      "reason": "The name carries the vintage the list prints, the name its id was minted under",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 81 (By the Glass, Red, CABERNET SAUVIGNON BLEND)"
+    },
+    {
+      "target": "dispute:Brennan’s Essential by Piper-Heidsieck Extra Brut NV glass",
+      "field": "resolution",
+      "op": "set",
+      "value": "Settled by the Binwise list of 28 November 2026, which prints $30 a glass, as the menus do.",
+      "reason": "The Binwise list of 28 November 2026 is the newest page that prints this figure; the two sides stay on the record",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 5 (By the Glass, Sparkling)"
+    },
+    {
+      "target": "dispute:Damien Martin Bourgogne Pinot Noir 2023 glass",
+      "field": "resolution",
+      "op": "set",
+      "value": "Settled by the Binwise list of 28 November 2026, which prints $18 a glass, as the menu does.",
+      "reason": "The Binwise list of 28 November 2026 is the newest page that prints this figure; the two sides stay on the record",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 76 (By the Glass, Red, PINOT NOIR)"
+    },
+    {
+      "target": "dispute:Domaine de Durban Beaumes-de-Venise Rouge 2024 glass",
+      "field": "resolution",
+      "op": "set",
+      "value": "The list, the newer page: the Binwise list of 28 November 2026 prints $18 a glass, as Binwise did on 3 October 2026, and the card moves to $18. The menu page of 3 October 2026 printed $19.00.",
+      "reason": "The Binwise list of 28 November 2026 is the newest page that prints this figure; the two sides stay on the record",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 66 (By the Glass, Red, GRENACHE BLEND)"
+    },
+    {
+      "target": "dispute:Moulin d’Issan Bordeaux Supérieur 2023 vintage",
+      "field": "resolution",
+      "op": "set",
+      "value": "The list, the newer page: the Binwise list of 28 November 2026 prints 2023, as Binwise did on 3 October 2026, and the card moves to 2023. The menu page of 3 October 2026 and the sheet of 15 November 2026 printed 2021; which vintage is open is the owner’s to confirm.",
+      "reason": "The Binwise list of 28 November 2026 is the newest page that prints this figure; the two sides stay on the record",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 81 (By the Glass, Red, CABERNET SAUVIGNON BLEND)"
+    },
+    {
+      "target": "dispute:+",
+      "op": "add",
+      "value": {
+        "item": "Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)",
+        "field": "name",
+        "a": {
+          "text": "Les Grands Epenots",
+          "source": "the Binwise list pasted by the owner, By the Glass, Red, bin 23632 (Coravin) (and the Wines by the Glass sheet of 15 November 2026 before it)",
+          "date": "2026-11-28"
+        },
+        "b": {
+          "text": "Les Grand Clos des Épenots",
+          "source": "the Binwise list pasted by the owner, France, Burgundy, Red, bin 23632, 2007, $215",
+          "date": "2026-11-28"
+        },
+        "resolution": "One bin, one wine: the glass line of 28 November 2026 carries bin 23632, the bin the bottle list prints as Les Grand Clos des Épenots 2007, the domaine’s walled premier cru inside Les Grands Épenots. The card keeps Grand Clos des Épenots until the label is read."
+      },
+      "reason": "The glass line and the bottle line now carry one bin; the two names it prints stay on the record",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 91 (By the Glass, Red, PINOT NOIR, bin 23632); page:binwise-wine-list-2026-11-28.txt France, Burgundy, Red, Pommard (bin 23632)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-xt841756",
+        "was": "the ask for the glass price of the Lemelson Tikka’s Run Pinot Gris 2022, and how the 2022 was made",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the glass at $15. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 32 (By the Glass, White, PINOT GRIS)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Lemelson Vineyards Tikka’s Run Pinot Gris 2022, $15 a glass: how was the 2022 fermented and aged?",
+        "askWhom": "sommelier",
+        "items": [
+          "Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022"
+        ]
+      },
+      "reason": "What the answered ask also asked, which the list does not answer, filed again as an ask of its own",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 32 (By the Glass, White, PINOT GRIS)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-jx2fnu73",
+        "was": "the ask for the glass price of the Louis Jadot Les Pucelles 2008 by Coravin",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the glass at $50, on a line that carries the bottle’s bin, 2144. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 52 (By the Glass, White, CHARDONNAY, bin 2144, Coravin)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-v20zvibm",
+        "was": "the ask for the glass price of the Kokomo Sonoma County Cabernet Sauvignon 2022, and how the 2022 was aged",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the glass at $23. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 86 (By the Glass, Red, CABERNET SAUVIGNON)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Kokomo Sonoma County Cabernet Sauvignon 2022, $23 a glass: how was the 2022 aged?",
+        "askWhom": "sommelier",
+        "items": [
+          "Kokomo Sonoma County Cabernet Sauvignon 2022"
+        ]
+      },
+      "reason": "What the answered ask also asked, which the list does not answer, filed again as an ask of its own",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 86 (By the Glass, Red, CABERNET SAUVIGNON)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-qnq2koz9",
+        "was": "the ask for the glass price of the Domaine de Courcel Pommard 2007 by Coravin",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the glass at $55, on a line that carries the bottle’s bin, 23632. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 91 (By the Glass, Red, PINOT NOIR, bin 23632, Coravin)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-o9ed0ut7",
+        "was": "the ask whether the open Domaine de Courcel Pommard 2007 reads Grand Clos des Épenots",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The glass line of 28 November 2026 carries bin 23632, the bin the bottle list prints as Les Grand Clos des Épenots 2007, so the glass and the bottle are one wine; the two printed names stay on the record as a dispute. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 91 (By the Glass, Red, PINOT NOIR, bin 23632, Coravin)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-sjcs33ot",
+        "was": "the ask whether the open Minuty Prestige is still the 2024, and its blend",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the rosé at 2025. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 59 (By the Glass, Rosé, GRENACHE BLEND)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "The rosé by the glass is printed “Prestige” Côtes de Provence 2025 with no producer on the Binwise list of 28 November 2026: does the label read Minuty, and what is the 2025 blend?",
+        "askWhom": "sommelier",
+        "items": [
+          "Minuty ‘Prestige’ Côtes de Provence Rosé 2025"
+        ]
+      },
+      "reason": "What the answered ask also asked, which the list does not answer, filed again as an ask of its own, with the question the paste raises: its line prints no producer",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 59 (By the Glass, Rosé, GRENACHE BLEND)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-fju9quzl",
+        "was": "the ask for the Durand appellation, the Damien Martin producer and importer, and the Minuty and Pazo das Bruxas vintages",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the rosé at 2025 and the Pazo das Bruxas at 2025, which answers the last of its questions. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 59 (By the Glass, Rosé); page:binwise-wine-list-2026-11-28.txt line 37 (By the Glass, White, ALBARIÑO)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Domaine Durand and Damien Martin by the glass: which Loire appellation is on the Durand label, and who are the producer and importer of the Damien Martin Bourgogne?",
+        "askWhom": "sommelier",
+        "items": [
+          "Famille Durand Val de Loire Sauvignon Blanc 2025",
+          "Damien Martin Bourgogne Pinot Noir 2023"
+        ]
+      },
+      "reason": "What the answered ask also asked, which the list does not answer, filed again as an ask of its own",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 47 (By the Glass, White, SAUVIGNON BLANC); page:binwise-wine-list-2026-11-28.txt line 76 (By the Glass, Red, PINOT NOIR)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-u7sljdyh",
+        "was": "the ask which Moulin d’Issan vintage is open, and the 2021 blend",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints 2023, as it did on 3 October 2026; the 2023 blend stands as an ask (a-oiavccr7). The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 81 (By the Glass, Red, CABERNET SAUVIGNON BLEND)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-qyqdwgpe",
+        "was": "the ask which Moulin d’Issan vintage is open, and whether it is Merlot or Cabernet led",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints 2023, as it did on 3 October 2026. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 81 (By the Glass, Red, CABERNET SAUVIGNON BLEND)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Moulin d’Issan Bordeaux Supérieur 2023 by the glass: is it Merlot led, as the château describes it, or Cabernet led, as the list heads it?",
+        "askWhom": "sommelier",
+        "items": [
+          "Moulin d’Issan Bordeaux Supérieur 2023"
+        ]
+      },
+      "reason": "What the answered ask also asked, which the list does not answer, filed again as an ask of its own",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 81 (By the Glass, Red, CABERNET SAUVIGNON BLEND)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-mx451xy8",
+        "was": "the ask which glass price rings for the Damien Martin and the Durban",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints both at $18 a glass, the Damien Martin as the menu does. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 66 (By the Glass, Red); page:binwise-wine-list-2026-11-28.txt line 76 (By the Glass, Red)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-e2edt1un",
+        "was": "the ask for the Durban 2024 blend and alcohol, its glass price, the estate’s Muscat and the back label",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the glass at $18, which answers its price. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 66 (By the Glass, Red, GRENACHE BLEND)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Domaine de Durban Beaumes-de-Venise 2024, $18 a glass: what blend and alcohol does the label give, does the cellar hold Durban’s Muscat de Beaumes-de-Venise, and does the back label name the family?",
+        "askWhom": "sommelier",
+        "items": [
+          "Domaine de Durban Beaumes-de-Venise Rouge 2024"
+        ]
+      },
+      "reason": "What the answered ask also asked, which the list does not answer, filed again as an ask of its own",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 66 (By the Glass, Red, GRENACHE BLEND)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-wmuydw3o",
+        "was": "the ask where the Damien Martin grapes grow, and its glass price",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the glass at $18, as the menu does, which answers its price. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 76 (By the Glass, Red, PINOT NOIR)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Damien Martin Bourgogne Pinot Noir 2023, $18 a glass: where do its grapes grow?",
+        "askWhom": "sommelier",
+        "items": [
+          "Damien Martin Bourgogne Pinot Noir 2023"
+        ]
+      },
+      "reason": "What the answered ask also asked, which the list does not answer, filed again as an ask of its own",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 76 (By the Glass, Red, PINOT NOIR)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-n16yrred",
+        "was": "the ask whether the house Champagne is $28 or $30, what the bottle is, its dosage and disgorgement",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints the house Champagne at $30 a glass, as the menus do, which answers its first question. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 5 (By the Glass, Sparkling)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Brennan’s Essential by Piper-Heidsieck, $30 a glass: is the bottle a Brennan’s labeled Piper-Heidsieck Essentiel or a bespoke blend, and what are its dosage and disgorgement date?",
+        "askWhom": "sommelier",
+        "items": [
+          "Brennan’s Essential by Piper-Heidsieck Extra Brut NV"
+        ]
+      },
+      "reason": "What the answered ask also asked, which the list does not answer, filed again as an ask of its own",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 5 (By the Glass, Sparkling)"
+    },
+    {
+      "target": "wine:Chapel Down Rosé Brut Kent NV",
+      "field": "bin",
+      "op": "set",
+      "value": "102122",
+      "reason": "The Binwise list of 28 November 2026 prints this bottle at bin 102122, where the list of 3 October 2026 printed bin 1628; its name, vintage, size and price are unchanged. The bin is the paste's",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 99 (Selections Under $100, Sparkling: bin 102122)"
+    },
+    {
+      "target": "wine:Chapel Down Rosé Brut Kent NV",
+      "field": "serviceNote",
+      "op": "replace",
+      "value": {
+        "from": "Bin 1628 on the Binwise list read 3 October 2026",
+        "to": "Bin 102122 on the Binwise list read 28 November 2026"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints this bottle at bin 102122, where the list of 3 October 2026 printed bin 1628; its name, vintage, size and price are unchanged. The bin is the paste's",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 99 (Selections Under $100, Sparkling: bin 102122)"
+    },
+    {
+      "target": "wine:Domaine Henri Gouges Nuits-Saint-Georges 2021 (375 ml)",
+      "field": "bin",
+      "op": "set",
+      "value": "32843",
+      "reason": "The Binwise list of 28 November 2026 prints this bottle at bin 32843, where the list of 3 October 2026 printed bin 32844; its name, vintage, size and price are unchanged. The bin is the paste's",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 435 (Half-bottles, Red, France; and line 9960, Burgundy, Nuits-Saint-Georges: bin 32843)"
+    },
+    {
+      "target": "wine:Domaine Henri Gouges Nuits-Saint-Georges 2021 (375 ml)",
+      "field": "serviceNote",
+      "op": "replace",
+      "value": {
+        "from": "Bin 32844 on the Binwise list read 3 October 2026",
+        "to": "Bin 32843 on the Binwise list read 28 November 2026"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints this bottle at bin 32843, where the list of 3 October 2026 printed bin 32844; its name, vintage, size and price are unchanged. The bin is the paste's",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 435 (Half-bottles, Red, France; and line 9960, Burgundy, Nuits-Saint-Georges: bin 32843)"
+    },
+    {
+      "target": "wine:Domaine du Roc des Boutires ‘En Bertilionne’ Pouilly-Fuissé 2020",
+      "field": "bin",
+      "op": "set",
+      "value": "25555",
+      "reason": "The Binwise list of 28 November 2026 prints this bottle at bin 25555, where the list of 3 October 2026 printed bin 22762; its name, vintage, size and price are unchanged. The bin is the paste's",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 5337 (France, Burgundy, White, Mâconnais: bin 25555)"
+    },
+    {
+      "target": "wine:Domaine du Roc des Boutires ‘En Bertilionne’ Pouilly-Fuissé 2020",
+      "field": "serviceNote",
+      "op": "replace",
+      "value": {
+        "from": "Bin 22762 on the Binwise list read 3 October 2026",
+        "to": "Bin 25555 on the Binwise list read 28 November 2026"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints this bottle at bin 25555, where the list of 3 October 2026 printed bin 22762; its name, vintage, size and price are unchanged. The bin is the paste's",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 5337 (France, Burgundy, White, Mâconnais: bin 25555)"
+    },
+    {
+      "target": "wine:Albert Boxler Pinot Gris 2020",
+      "field": "bin",
+      "op": "set",
+      "value": "21923",
+      "reason": "The Binwise list of 28 November 2026 prints this bottle at bin 21923, where the list of 3 October 2026 printed bin 2173; its name, vintage, size and price are unchanged. The bin is the paste's",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 5422 (France, Alsace, White, Pinot Gris: bin 21923)"
+    },
+    {
+      "target": "wine:Albert Boxler Pinot Gris 2020",
+      "field": "serviceNote",
+      "op": "replace",
+      "value": {
+        "from": "Bin 2173 on the Binwise list read 3 October 2026",
+        "to": "Bin 21923 on the Binwise list read 28 November 2026"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints this bottle at bin 21923, where the list of 3 October 2026 printed bin 2173; its name, vintage, size and price are unchanged. The bin is the paste's",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 5422 (France, Alsace, White, Pinot Gris: bin 21923)"
+    },
+    {
+      "target": "wine:Barbadillo ‘Pale Cream’ Sherry NV",
+      "field": "bin",
+      "op": "set",
+      "value": "31303",
+      "reason": "The Binwise list of 28 November 2026 prints this bottle at bin 31303, where the list of 3 October 2026 printed bin 29801; its name, vintage, size and price are unchanged. The bin is the paste's",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 18233 (Fortified Wines, Spain: bin 31303)"
+    },
+    {
+      "target": "wine:Barbadillo ‘Pale Cream’ Sherry NV",
+      "field": "serviceNote",
+      "op": "replace",
+      "value": {
+        "from": "On the Binwise bottle list of 3 October 2026: bin 29801",
+        "to": "On the Binwise bottle list of 28 November 2026: bin 31303"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints this bottle at bin 31303, where the list of 3 October 2026 printed bin 29801; its name, vintage, size and price are unchanged. The bin is the paste's",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 18233 (Fortified Wines, Spain: bin 31303)"
+    },
+    {
+      "target": "wine:Chapel Down Rosé Brut Kent NV",
+      "field": "kept.3.a",
+      "op": "replace",
+      "value": {
+        "from": "bin 1628, $75",
+        "to": "bin 102122, $75"
+      },
+      "reason": "The bin the list of 28 November 2026 prints",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 99 (Selections Under $100, Sparkling: bin 102122)"
+    },
+    {
+      "target": "wine:Domaine Henri Gouges Nuits-Saint-Georges 2021 (375 ml)",
+      "field": "kept.3.a",
+      "op": "replace",
+      "value": {
+        "from": "bin 32844, 2021",
+        "to": "bin 32843, 2021"
+      },
+      "reason": "The bin the list of 28 November 2026 prints",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 435 (Half-bottles, Red, France: bin 32843)"
+    },
+    {
+      "target": "wine:Domaine du Roc des Boutires ‘En Bertilionne’ Pouilly-Fuissé 2020",
+      "field": "kept.3.a",
+      "op": "replace",
+      "value": {
+        "from": "bin 22762, 2020",
+        "to": "bin 25555, 2020"
+      },
+      "reason": "The bin the list of 28 November 2026 prints",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 5337 (France, Burgundy, White, Mâconnais: bin 25555)"
+    },
+    {
+      "target": "wine:Albert Boxler Pinot Gris 2020",
+      "field": "kept.3.a",
+      "op": "replace",
+      "value": {
+        "from": "bin 2173, 2020",
+        "to": "bin 21923, 2020"
+      },
+      "reason": "The bin the list of 28 November 2026 prints",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 5422 (France, Alsace, White, Pinot Gris: bin 21923)"
+    },
+    {
+      "target": "wine:Barbadillo ‘Pale Cream’ Sherry NV",
+      "field": "kept.0.a",
+      "op": "replace",
+      "value": {
+        "from": "bin 29801, $50",
+        "to": "bin 31303, $50"
+      },
+      "reason": "The bin the list of 28 November 2026 prints",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 18233 (Fortified Wines, Spain: bin 31303)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-gxp2ydig",
+        "was": "the ask for the Chapel Down Rosé blend, which quotes bin 1628",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The ask quotes the bin inside the words its id was minted from, and the Binwise list of 28 November 2026 prints the bottle at bin 102122. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 99 (Selections Under $100, Sparkling: bin 102122)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Chapel Down Rosé Brut Kent NV, bin 102122, $75: what is the blend?",
+        "askWhom": "sommelier",
+        "items": [
+          "Chapel Down Rosé Brut Kent NV"
+        ]
+      },
+      "reason": "The same question with the bin the list of 28 November 2026 prints",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 99 (Selections Under $100, Sparkling: bin 102122)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-6i0bemab",
+        "was": "the ask whether the Albert Boxler Pinot Gris 2020 is dry and which vineyard, which quotes bin 2173",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The ask quotes the bin inside the words its id was minted from, and the Binwise list of 28 November 2026 prints the bottle at bin 21923. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 5422 (France, Alsace, White, Pinot Gris: bin 21923)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Albert Boxler Pinot Gris 2020, bin 21923, $110: is it dry or does it carry some sweetness, and which vineyard is it from?",
+        "askWhom": "sommelier",
+        "items": [
+          "Albert Boxler Pinot Gris 2020"
+        ]
+      },
+      "reason": "The same question with the bin the list of 28 November 2026 prints",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 5422 (France, Alsace, White, Pinot Gris: bin 21923)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-djqe3aza",
+        "was": "the ask whether the Barbadillo Pale Cream is in, how long an open bottle keeps and whether it is poured by the glass, which quotes bin 29801",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The ask quotes the bin inside the words its id was minted from, and the Binwise list of 28 November 2026 prints the bottle at bin 31303. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 18233 (Fortified Wines, Spain: bin 31303)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Is the Barbadillo Pale Cream (bin 31303, $50) in tonight, how long does an open bottle keep, and is it poured by the glass?",
+        "askWhom": "sommelier",
+        "items": [
+          "Barbadillo ‘Pale Cream’ Sherry NV"
+        ]
+      },
+      "reason": "The same question with the bin the list of 28 November 2026 prints",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 18233 (Fortified Wines, Spain: bin 31303)"
+    },
+    {
+      "target": "wine:Louis Michel Chablis 2022",
+      "field": "vintage",
+      "op": "set",
+      "value": "2023",
+      "reason": "The Binwise list of 28 November 2026 no longer prints the 2022 at bin 22411 (the list of 3 October 2026 did, under Burgundy, White, Chablis) and prints Domaine Louis Michel Chablis 2023 at bin 26553, at the same $80, under Selections Under $100: one wine at a new vintage. The id stays the one minted under the old name",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80)"
+    },
+    {
+      "target": "wine:Louis Michel Chablis 2022",
+      "field": "bin",
+      "op": "set",
+      "value": "26553",
+      "reason": "The Binwise list of 28 November 2026 no longer prints the 2022 at bin 22411 (the list of 3 October 2026 did, under Burgundy, White, Chablis) and prints Domaine Louis Michel Chablis 2023 at bin 26553, at the same $80, under Selections Under $100: one wine at a new vintage. The id stays the one minted under the old name",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80)"
+    },
+    {
+      "target": "wine:Louis Michel Chablis 2022",
+      "field": "name",
+      "op": "set",
+      "value": "Louis Michel Chablis 2023",
+      "reason": "The Binwise list of 28 November 2026 no longer prints the 2022 at bin 22411 (the list of 3 October 2026 did, under Burgundy, White, Chablis) and prints Domaine Louis Michel Chablis 2023 at bin 26553, at the same $80, under Selections Under $100: one wine at a new vintage. The id stays the one minted under the old name",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80)"
+    },
+    {
+      "target": "wine:Louis Michel Chablis 2022",
+      "field": "serviceNote",
+      "op": "replace",
+      "value": {
+        "from": "Bin 22411 on the Binwise list read 3 October 2026",
+        "to": "Bin 26553 on the Binwise list read 28 November 2026"
+      },
+      "reason": "The Binwise list of 28 November 2026 no longer prints the 2022 at bin 22411 (the list of 3 October 2026 did, under Burgundy, White, Chablis) and prints Domaine Louis Michel Chablis 2023 at bin 26553, at the same $80, under Selections Under $100: one wine at a new vintage. The id stays the one minted under the old name",
+      "source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80)"
+    },
+    {
+      "target": "wine:Cesarini Sforza Rosé Brut Trento NV",
+      "field": "section",
+      "op": "set",
+      "value": "Past bottles",
+      "reason": "The Binwise list of 28 November 2026 no longer prints this bottle, which the list of 3 October 2026 printed; the card is filed as past (a section that begins \"Past \"), its id, marks, notes and list kept, never dealt and never named with a dish",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 5123 at $55); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 15: bin 5123, $55)"
+    },
+    {
+      "target": "wine:Cesarini Sforza Rosé Brut Trento NV",
+      "field": "why",
+      "op": "set",
+      "value": "No longer on the wine list, from the list read on 28 November 2026; kept here to be read.",
+      "reason": "The standing line sells the bottle; a past card says why it is past",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 5123 at $55); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 15: bin 5123, $55)"
+    },
+    {
+      "target": "wine:Cesarini Sforza Rosé Brut Trento NV",
+      "field": "serviceNote",
+      "op": "set",
+      "value": "Bin 5123 on the Binwise list read 3 October 2026, 750 ml, $55. Not printed on the list read 28 November 2026.",
+      "reason": "The standing note asks to confirm the bottle at lineup; a past card says where it was last printed",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 5123 at $55); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 15: bin 5123, $55)"
+    },
+    {
+      "target": "wine:Cesarini Sforza Rosé Brut Trento NV",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the list?",
+        "a": "It was last printed on the Binwise list of 3 October 2026, bin 5123, 750 ml, $55, under Selections Under $100, Sparkling, and is not printed on the list of 28 November 2026. This card stays here to be read; the wine is no longer offered or named with a dish."
+      },
+      "reason": "A past record says why it is past, under the question the two past glass wines carry",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 5123 at $55); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 15: bin 5123, $55)"
+    },
+    {
+      "target": "wine:Mas de Valériole ‘Vé’ Rosé Méditerranée 2025 (1.5 L magnum)",
+      "field": "section",
+      "op": "set",
+      "value": "Past bottles",
+      "reason": "The Binwise list of 28 November 2026 no longer prints this bottle, which the list of 3 October 2026 printed; the card is filed as past (a section that begins \"Past \"), its id, marks, notes and list kept, never dealt and never named with a dish",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 1569 at $85); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entries 197 and 1445: bin 1569, $85)"
+    },
+    {
+      "target": "wine:Mas de Valériole ‘Vé’ Rosé Méditerranée 2025 (1.5 L magnum)",
+      "field": "why",
+      "op": "set",
+      "value": "No longer on the wine list, from the list read on 28 November 2026; kept here to be read.",
+      "reason": "The standing line sells the bottle; a past card says why it is past",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 1569 at $85); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entries 197 and 1445: bin 1569, $85)"
+    },
+    {
+      "target": "wine:Mas de Valériole ‘Vé’ Rosé Méditerranée 2025 (1.5 L magnum)",
+      "field": "serviceNote",
+      "op": "set",
+      "value": "Bin 1569 on the Binwise list read 3 October 2026, 1.5 L magnum, $85. Not printed on the list read 28 November 2026.",
+      "reason": "The standing note asks to confirm the bottle at lineup; a past card says where it was last printed",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 1569 at $85); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entries 197 and 1445: bin 1569, $85)"
+    },
+    {
+      "target": "wine:Mas de Valériole ‘Vé’ Rosé Méditerranée 2025 (1.5 L magnum)",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the list?",
+        "a": "It was last printed on the Binwise list of 3 October 2026, bin 1569, 1.5 L magnum, $85, under Large Formats, Rosé; and Rosé, France, and is not printed on the list of 28 November 2026. This card stays here to be read; the wine is no longer offered or named with a dish."
+      },
+      "reason": "A past record says why it is past, under the question the two past glass wines carry",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 1569 at $85); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entries 197 and 1445: bin 1569, $85)"
+    },
+    {
+      "target": "wine:Pierre Péters ‘Cuvée de Réserve’ Brut NV (1.5 L magnum)",
+      "field": "section",
+      "op": "set",
+      "value": "Past bottles",
+      "reason": "The Binwise list of 28 November 2026 no longer prints this bottle, which the list of 3 October 2026 printed; the card is filed as past (a section that begins \"Past \"), its id, marks, notes and list kept, never dealt and never named with a dish",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 12494 at $190); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entries 147 and 420: bin 12494, $190)"
+    },
+    {
+      "target": "wine:Pierre Péters ‘Cuvée de Réserve’ Brut NV (1.5 L magnum)",
+      "field": "why",
+      "op": "set",
+      "value": "No longer on the wine list, from the list read on 28 November 2026; kept here to be read.",
+      "reason": "The standing line sells the bottle; a past card says why it is past",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 12494 at $190); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entries 147 and 420: bin 12494, $190)"
+    },
+    {
+      "target": "wine:Pierre Péters ‘Cuvée de Réserve’ Brut NV (1.5 L magnum)",
+      "field": "serviceNote",
+      "op": "set",
+      "value": "Bin 12494 on the Binwise list read 3 October 2026, 1.5 L magnum, $190. Not printed on the list read 28 November 2026.",
+      "reason": "The standing note asks to confirm the bottle at lineup; a past card says where it was last printed",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 12494 at $190); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entries 147 and 420: bin 12494, $190)"
+    },
+    {
+      "target": "wine:Pierre Péters ‘Cuvée de Réserve’ Brut NV (1.5 L magnum)",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the list?",
+        "a": "It was last printed on the Binwise list of 3 October 2026, bin 12494, 1.5 L magnum, $190, under Large Formats, Champagne; and Champagne, Grower Producers, Côtes de Blancs, and is not printed on the list of 28 November 2026. This card stays here to be read; the wine is no longer offered or named with a dish."
+      },
+      "reason": "A past record says why it is past, under the question the two past glass wines carry",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 12494 at $190); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entries 147 and 420: bin 12494, $190)"
+    },
+    {
+      "target": "wine:Jean Foillard ‘Côte du Py’ Morgon 2023 (1.5 L magnum)",
+      "field": "section",
+      "op": "set",
+      "value": "Past bottles",
+      "reason": "The Binwise list of 28 November 2026 no longer prints this bottle, which the list of 3 October 2026 printed; the card is filed as past (a section that begins \"Past \"), its id, marks, notes and list kept, never dealt and never named with a dish",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 11371 at $250); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entries 230 and 2183: bin 11371, $250)"
+    },
+    {
+      "target": "wine:Jean Foillard ‘Côte du Py’ Morgon 2023 (1.5 L magnum)",
+      "field": "why",
+      "op": "set",
+      "value": "No longer on the wine list, from the list read on 28 November 2026; kept here to be read.",
+      "reason": "The standing line sells the bottle; a past card says why it is past",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 11371 at $250); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entries 230 and 2183: bin 11371, $250)"
+    },
+    {
+      "target": "wine:Jean Foillard ‘Côte du Py’ Morgon 2023 (1.5 L magnum)",
+      "field": "serviceNote",
+      "op": "set",
+      "value": "Bin 11371 on the Binwise list read 3 October 2026, 1.5 L magnum, $250. Not printed on the list read 28 November 2026.",
+      "reason": "The standing note asks to confirm the bottle at lineup; a past card says where it was last printed",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 11371 at $250); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entries 230 and 2183: bin 11371, $250)"
+    },
+    {
+      "target": "wine:Jean Foillard ‘Côte du Py’ Morgon 2023 (1.5 L magnum)",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the list?",
+        "a": "It was last printed on the Binwise list of 3 October 2026, bin 11371, 1.5 L magnum, $250, under Large Formats, Red, France; and France, Burgundy, Red, Beaujolais, and is not printed on the list of 28 November 2026. This card stays here to be read; the wine is no longer offered or named with a dish."
+      },
+      "reason": "A past record says why it is past, under the question the two past glass wines carry",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 11371 at $250); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entries 230 and 2183: bin 11371, $250)"
+    },
+    {
+      "target": "wine:Il Poggione Brunello di Montalcino 2018",
+      "field": "section",
+      "op": "set",
+      "value": "Past bottles",
+      "reason": "The Binwise list of 28 November 2026 no longer prints this bottle, which the list of 3 October 2026 printed; the card is filed as past (a section that begins \"Past \"), its id, marks, notes and list kept, never dealt and never named with a dish",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 17832 at $198); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 3295: bin 17832, $198)"
+    },
+    {
+      "target": "wine:Il Poggione Brunello di Montalcino 2018",
+      "field": "why",
+      "op": "set",
+      "value": "No longer on the wine list, from the list read on 28 November 2026; kept here to be read.",
+      "reason": "The standing line sells the bottle; a past card says why it is past",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 17832 at $198); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 3295: bin 17832, $198)"
+    },
+    {
+      "target": "wine:Il Poggione Brunello di Montalcino 2018",
+      "field": "serviceNote",
+      "op": "set",
+      "value": "Bin 17832 on the Binwise list read 3 October 2026, 750 ml, $198. Not printed on the list read 28 November 2026.",
+      "reason": "The standing note asks to confirm the bottle at lineup; a past card says where it was last printed",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 17832 at $198); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 3295: bin 17832, $198)"
+    },
+    {
+      "target": "wine:Il Poggione Brunello di Montalcino 2018",
+      "field": "kept",
+      "op": "add",
+      "value": {
+        "q": "Why did it leave the list?",
+        "a": "It was last printed on the Binwise list of 3 October 2026, bin 17832, 750 ml, $198, under Italy, Red, Tuscany, Brunello and Rosso di Montalcino, and is not printed on the list of 28 November 2026. This card stays here to be read; the wine is no longer offered or named with a dish."
+      },
+      "reason": "A past record says why it is past, under the question the two past glass wines carry",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 17832 at $198); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 3295: bin 17832, $198)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-kqkzu4sg",
+        "was": "the ask which bin is right for the Il Poggione Brunello 2018 and the Grgich Hills 2020, both printed at bin 17832",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints bin 17832 for the Grgich Hills Napa Valley 2020 alone; the Il Poggione left the list. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt (bin 17832: Grgich Hills Napa Valley 2020, $90)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-wxwfw7vm",
+        "was": "the ask which bins are right for bin 17832 (Il Poggione, Grgich Hills) and bin 19321 (Quintarelli, Taylor Fladgate)",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints bin 17832 for the Grgich Hills alone; bin 19321 is still printed for two bottles, which is filed again. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt (bin 17832; bin 19321)"
+    },
+    {
+      "target": "ask:+",
+      "op": "add",
+      "value": {
+        "question": "Bin 19321 is printed for both the Quintarelli Recioto della Valpolicella 1997 ($500) and the Taylor Fladgate Quinta de Vargellas 1987 ($185) on the list of 28 November 2026: which bin is right for each?",
+        "askWhom": "manager",
+        "items": [
+          "Giuseppe Quintarelli Recioto della Valpolicella Classico 1997"
+        ]
+      },
+      "reason": "What the answered ask also asked, which the list still prints both ways, filed again",
+      "source": "page:binwise-wine-list-2026-11-28.txt (Dessert Wines, Italy and Fortified Wines: bin 19321 twice)"
+    },
+    {
+      "target": "house",
+      "op": "answer",
+      "value": {
+        "id": "a-4takjb4p",
+        "was": "the ask whether the Mas de Valériole Vé magnum and the 750 ml are in stock, and whether the Whispering Angel is still the 2024",
+        "tombstone": "2026-11-28T00:01:00.001Z"
+      },
+      "reason": "The Binwise list of 28 November 2026 prints neither Vé, and prints the Whispering Angel at 2024. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+      "source": "page:binwise-wine-list-2026-11-28.txt (no Mas de Valériole; Rosé, France: Château d'Esclans \"Whispering Angel\" 2024, bin 10421)"
     }
   ]
 }

@@ -1,0 +1,85 @@
+{
+	"entries": [
+		{
+			"target": "wine:Ken Wright Cellars Willamette Valley Pinot Noir 2024",
+			"field": "section",
+			"op": "set",
+			"value": "Past bottles",
+			"reason": "The Binwise list of 28 November 2026 no longer prints this bottle, which the list of 3 October 2026 printed; the card is filed as past (a section that begins \"Past \"), its id, marks, notes and list kept, never dealt and never named with a dish",
+			"source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 148412 at $72); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 2714: bin 148412, $72)"
+		},
+		{
+			"target": "wine:Ken Wright Cellars Willamette Valley Pinot Noir 2024",
+			"field": "why",
+			"op": "set",
+			"value": "No longer on the wine list, from the list read on 28 November 2026; kept here to be read.",
+			"reason": "The standing line sells the bottle; a past card says why it is past",
+			"source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 148412 at $72); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 2714: bin 148412, $72)"
+		},
+		{
+			"target": "wine:Ken Wright Cellars Willamette Valley Pinot Noir 2024",
+			"field": "serviceNote",
+			"op": "set",
+			"value": "Bin 148412 on the Binwise list read 3 October 2026, 750 ml, $72. Not printed on the list read 28 November 2026.",
+			"reason": "The standing note asks to confirm the bottle at lineup; a past card says where it was last printed",
+			"source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 148412 at $72); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 2714: bin 148412, $72)"
+		},
+		{
+			"target": "wine:Ken Wright Cellars Willamette Valley Pinot Noir 2024",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "Why did it leave the list?",
+				"a": "It was last printed on the Binwise list of 3 October 2026, bin 148412, 750 ml, $72, under United States, Pinot Noir, Oregon, and is not printed on the list of 28 November 2026. This card stays here to be read; the wine is no longer offered or named with a dish."
+			},
+			"reason": "A past record says why it is past, under the question the two past glass wines carry",
+			"source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 148412 at $72); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 2714: bin 148412, $72)"
+		},
+		{
+			"target": "wine:Castello Banfi ‘Florus’ Moscadello di Montalcino 2011",
+			"field": "section",
+			"op": "set",
+			"value": "Past bottles",
+			"reason": "The Binwise list of 28 November 2026 no longer prints this bottle, which the list of 3 October 2026 printed; the card is filed as past (a section that begins \"Past \"), its id, marks, notes and list kept, never dealt and never named with a dish",
+			"source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 192345 at $60); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 3537: bin 192345, $60)"
+		},
+		{
+			"target": "wine:Castello Banfi ‘Florus’ Moscadello di Montalcino 2011",
+			"field": "why",
+			"op": "set",
+			"value": "No longer on the wine list, from the list read on 28 November 2026; kept here to be read.",
+			"reason": "The standing line sells the bottle; a past card says why it is past",
+			"source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 192345 at $60); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 3537: bin 192345, $60)"
+		},
+		{
+			"target": "wine:Castello Banfi ‘Florus’ Moscadello di Montalcino 2011",
+			"field": "serviceNote",
+			"op": "set",
+			"value": "Bin 192345 on the Binwise list read 3 October 2026, 750 ml, $60. Not printed on the list read 28 November 2026.",
+			"reason": "The standing note asks to confirm the bottle at lineup; a past card says where it was last printed",
+			"source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 192345 at $60); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 3537: bin 192345, $60)"
+		},
+		{
+			"target": "wine:Castello Banfi ‘Florus’ Moscadello di Montalcino 2011",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "Why did it leave the list?",
+				"a": "It was last printed on the Binwise list of 3 October 2026, bin 192345, 750 ml, $60, under Dessert Wines, Italy, and is not printed on the list of 28 November 2026. This card stays here to be read; the wine is no longer offered or named with a dish."
+			},
+			"reason": "A past record says why it is past, under the question the two past glass wines carry",
+			"source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 192345 at $60); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 3537: bin 192345, $60)"
+		},
+		{
+			"target": "house",
+			"op": "answer",
+			"value": {
+				"id": "a-2gw55p7r",
+				"was": "the ask whether the Ken Wright Cellars Willamette Valley Pinot Noir 2024 is in tonight",
+				"tombstone": "2026-11-28T00:01:00.001Z"
+			},
+			"reason": "The Binwise list of 28 November 2026 no longer prints it. The ask leaves under a tombstone one millisecond after the last edition that carried it",
+			"source": "page:binwise-wine-list-2026-11-28.txt (no printing of bin 148412)"
+		}
+	]
+}
