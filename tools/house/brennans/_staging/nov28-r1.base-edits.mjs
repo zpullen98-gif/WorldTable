@@ -7,8 +7,8 @@
    Rubicon by the glass; it prints the Rayas 2014 at the same price as the 2011, and bin 22522 for
    Château Gloria 2017 as well as the Tempier Bandol. The integrator runs this once, at the merge, before
    the build. It changes the Rayas record (the explain, the history, a fact, a note, a question), drops a
-   note and an answered question from Pegau's producer profile, rewords one Tempier question, one
-   Inglenook note (and drops its answered glass pour question), the late harvest story and the Oregon Pinot Noir story and its card.
+   note and an answered question from Pegau's producer profile, rewords one Tempier question, the
+   Inglenook explain, history and one note (and drops its answered glass pour question), the late harvest story and the Oregon Pinot Noir story and its card.
 
    Usage: node nov28-r1.base-edits.mjs            what would change, and whether every anchor is found
           node nov28-r1.base-edits.mjs --apply    make the edits (each once; a second run changes nothing)
@@ -37,6 +37,8 @@ const EDITS = [
 	{ list: 'producers', key: 'wine-story-pegau', at: 'producer.askKitchen', drop: 'Is Château Pegau, whose Cuvée Maclura is on the list, a Féraud family estate, as the wine list says?' },
 	{ list: 'producers', key: 'wine-story-tempier', at: 'producer.askKitchen.0', from: 'and what is the Bandol Natural 2016 (bin 23344)?', to: 'and what is the Bandol Natural 2016 (bin 23344)? Bin 22522 is also printed for Château Gloria 2017, so ring the Tempier by name and vintage.' },
 	{ list: 'components', key: 'cellar-inglenook', at: 'producer.notes.3', from: 'The glass and the bottle share bin 18231: ring the bottle as the bottle, and name the vintage, since the 2005 and 2009 sit beside it.', to: 'Ring the bottle by bin 18231 and name the vintage, since the 2005 and 2009 sit beside it; the list of 28 November 2026 prints no Rubicon by the glass.' },
+	{ list: 'components', key: 'cellar-inglenook', at: 'explain', from: 'Our saved list offers Rubicon 2010 by the glass and bottle.', to: 'The list of 28 November 2026 offers Rubicon 2010 by the bottle only.' },
+	{ list: 'components', key: 'cellar-inglenook', at: 'producer.history', from: 'Our saved list offers Rubicon 2010 by the glass and bottle.', to: 'The list of 28 November 2026 offers Rubicon 2010 by the bottle only.' },
 	{ list: 'components', key: 'cellar-inglenook', at: 'producer.askKitchen', drop: 'How is the open bottle of Rubicon 2010 kept between glass pours, and is the 2010 still the vintage open?' },
 	{ list: 'components', key: 'wine-late-harvest', at: 'explain', from: "Ours are Trimbach's Gewurztraminer Vendanges Tardives, Ridge's Essence Zinfandel, the Grgich Hills Violetta and Banfi's Florus Moscadello. Each is made only in years the weather allows.", to: "Ours are Trimbach's Gewurztraminer Vendanges Tardives, Ridge's Essence Zinfandel and the Grgich Hills Violetta, each made only in years the weather allows. Banfi's Florus Moscadello has left the list; its card is kept under Past bottles to be read." },
 	{ list: 'components', key: 'wine-story-oregon-pinot', at: 'explain', from: 'Two Willamette Valley wineries make our Oregon Pinot Noir.', to: 'Two Willamette Valley wineries anchor our Oregon Pinot Noir.' },

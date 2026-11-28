@@ -449,6 +449,30 @@
 			"source": "research/winelist-2026-11-28.json n=2891, key b2891 (page:binwise-wine-list-2026-11-28.txt line 14921: bin 18231, Inglenook \"Rubicon\" Rutherford, 2010, 360, the bottle); n=2889 (line 14911: bin 187112, 2005, 355); n=2890 (line 14916: bin 17559, 2009, 360); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line, which the list of 3 October 2026 printed at $70)"
 		},
 		{
+			"target": "house",
+			"op": "answer",
+			"value": {
+				"id": "a-cmufw20a",
+				"was": "the ask how the Inglenook Rubicon 2010 is preserved between $70 pours and how far ahead it is stood upright, with the Paul Hobbs Coombsville bottling and its decanting",
+				"tombstone": "2026-11-28T00:01:00.001Z"
+			},
+			"reason": "The Binwise list of 28 November 2026 prints no Rubicon by the glass, so no open bottle is kept between pours; the Paul Hobbs half of the ask is filed again on its own",
+			"source": "page:binwise-wine-list-2026-11-28.txt By the Glass (seventeen lines, no Rubicon glass line, which the list of 3 October 2026 printed at $70); research/winelist-2026-11-28.json n=2891 (bin 18231, Inglenook \"Rubicon\" Rutherford, 2010, 360, the bottle)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Paul Hobbs Cabernet Sauvignon on the dinner tasting: is it the Coombsville appellation bottling, and is it decanted at the start of service?",
+				"askWhom": "sommelier",
+				"items": [
+					"Paul Hobbs Coombsville Cabernet Sauvignon 2021"
+				]
+			},
+			"reason": "The Paul Hobbs half of the answered Rubicon ask, filed again with a new opening, since the Rubicon glass has left the list",
+			"source": "the house ask a-cmufw20a (its second sentence, word for word in substance); the pack record w-p30or70w (Paul Hobbs Coombsville Cabernet Sauvignon 2021)"
+		},
+		{
 			"target": "wine:Château Rayas Châteauneuf-du-Pape 2011",
 			"field": "kept.3.a",
 			"op": "replace",
