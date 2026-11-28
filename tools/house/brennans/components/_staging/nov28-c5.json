@@ -1,0 +1,84 @@
+{
+	"components": [
+		{
+			"terms": [],
+			"key": "wine-story-levet",
+			"kind": "story",
+			"name": "Vignobles Levet",
+			"say": "luh-VAY",
+			"explain": "Vignobles Levet is a small family estate in Ampuis, the village beneath the terraces of Côte-Rôtie. It farms only Syrah, on both hillsides of the appellation: the darker schist of the Côte Brune and the lighter Côte Blonde.\n\nThe cellar works the old way: a large share of the grapes ferment as whole bunches, stems and all, and the wines age about two years in demi-muids and large casks, mostly old. Young, they are dark, earthy, spiced and firm, and they want a decanter. The house blend draws on all the family’s parcels; Les Journaries comes largely from old vines in La Landonne.\n\nOn our list are five Levet lines: the 2022 house blend in bottle and magnum, the 2023, and Les Journaries 2022 in bottle and magnum. The 2022 bottle is the one carded. Say: Côte-Rôtie from a family estate in Ampuis.",
+			"card": {
+				"front": "How does Vignobles Levet make its Côte-Rôtie?",
+				"back": "All Syrah from the Côte Brune and Côte Blonde, a large share fermented as whole bunches, then about two years in demi-muids and large old casks. Our card is the 2022 house blend."
+			},
+			"items": [
+				"Vignobles Levet Côte-Rôtie 2022"
+			],
+			"sources": [
+				"research/bottle-facts-cards-d-2026-11-28.json (b2508: Vignobles Levet)",
+				"research/winelist/producers-d.json vignobles-levet",
+				"page:binwise-wine-list-2026-11-28.txt lines 12969 to 12989, 1207 and 1212"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-region-cote-rotie",
+			"kind": "ingredient",
+			"name": "Côte-Rôtie",
+			"say": "koht roh-TEE",
+			"explain": "Côte-Rôtie, the roasted slope, is the appellation at the northern end of the Rhône valley: steep, sun facing terraces on the right bank of the river at Ampuis, near Vienne. It is red wine only, from Syrah, and the rules allow up to 20 percent Viognier, which must be fermented together with the Syrah; most growers use little or none.\n\nTwo hillsides give it its two sides. The Côte Brune, on dark, iron-rich schist, gives firmer, darker wine; the Côte Blonde, on lighter soil, gives the more perfumed wines. Many bottlings blend both.\n\nOn our list: the Rostaing Ampodium 2012, perfumed and silky with age, and the Levet 2022, young and firm. Say: the roasted slope, the perfumed side of Syrah.",
+			"card": {
+				"front": "What grapes may go into Côte-Rôtie, and what are its two hillsides?",
+				"back": "Syrah, with up to 20 percent Viognier fermented together with it. The Côte Brune, on dark schist, gives firmer wine; the Côte Blonde gives more perfume."
+			},
+			"items": [
+				"Vignobles Levet Côte-Rôtie 2022",
+				"René Rostaing ‘Ampodium’ Côte-Rôtie 2012"
+			],
+			"sources": [
+				"research/bottle-facts-cards-d-2026-11-28.json (b2508: Côte-Rôtie, the appellation)",
+				"page:binwise-wine-list-2026-11-28.txt lines 12894 and 12969"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-story-peay",
+			"kind": "story",
+			"name": "Peay Vineyards",
+			"say": "PAY",
+			"explain": "Peay Vineyards is a family estate near Annapolis, on the cold far Sonoma Coast, about four miles from the Pacific. It makes Pinot Noir, Syrah and Chardonnay from its own vines.\n\nThe winery makes all its estate Pinot Noir, then chooses barrels for three blends, each from several clones and blocks: Scallop Shelf, named for the scallop fossils found in the soil at planting, floral and red fruited; Pomarium, which the winery calls its muscle; and Ama, between the two. The Savoy Vineyard bottling comes from bought fruit in Anderson Valley, Mendocino County.\n\nOn our list are the Scallop Shelf, the Pomarium and the Savoy, all 2023 at one price, and the Les Titans Syrah 2013. The Scallop Shelf is carded. Say: Pinot Noir from four miles off the Pacific.",
+			"card": {
+				"front": "Where is Peay, and why is it called Scallop Shelf?",
+				"back": "On the far Sonoma Coast near Annapolis, about four miles from the Pacific. Scallop Shelf is named for the scallop fossils found in the soil when the vineyard was planted."
+			},
+			"items": [
+				"Peay Vineyards ‘Scallop Shelf’ Sonoma Coast Pinot Noir 2023"
+			],
+			"sources": [
+				"research/bottle-facts-cards-d-2026-11-28.json (b2680: Peay Vineyards)",
+				"research/winelist/producers-c.json peay",
+				"page:binwise-wine-list-2026-11-28.txt lines 13847 to 13857 and 15715"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-region-west-sonoma-coast",
+			"kind": "ingredient",
+			"name": "The Sonoma Coast and the West Sonoma Coast",
+			"say": "suh-NOH-muh",
+			"explain": "The Sonoma Coast is a very large appellation that takes in much of Sonoma County, from the ocean ridges to warmer ground inland. In 2022 the West Sonoma Coast was approved inside it for the coastal ridges themselves, where the ocean keeps the vineyards cool; it takes in the older Fort Ross-Seaview appellation.\n\nThat is why two Sonoma Coast Pinot Noirs can taste so different: Peay’s, from the cold ridges, is fresh and floral; Kosta Browne’s riper house style is plush and silky.\n\nOn our list: the Kosta Browne Sonoma Coast 2021, ripe and silky, and Peay’s Scallop Shelf 2023, whose label reads West Sonoma Coast, fresh and floral. Say: the cold coast ridges of Sonoma.",
+			"card": {
+				"front": "What is the West Sonoma Coast, and which of our bottles carries it?",
+				"back": "The appellation approved in 2022 for the coastal ridges inside the larger Sonoma Coast. Peay’s Scallop Shelf 2023 is labeled West Sonoma Coast; our list prints Sonoma Coast."
+			},
+			"items": [
+				"Peay Vineyards ‘Scallop Shelf’ Sonoma Coast Pinot Noir 2023",
+				"Kosta Browne Sonoma Coast Pinot Noir 2021"
+			],
+			"sources": [
+				"research/bottle-facts-cards-d-2026-11-28.json (b2680: the West Sonoma Coast appellation)",
+				"page:binwise-wine-list-2026-11-28.txt lines 13827 and 13857"
+			]
+		}
+	]
+}

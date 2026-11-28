@@ -1,5 +1,5 @@
 {
-	"about": "Facts behind the study cards of the Binwise list of 28 November 2026 (card chunks c1 to c4): each bottle as the catalogue research/winelist-2026-11-28.json prints it (its ledger key, entry n, bin, vintage, size, the printed price with its dollar sign and the paste line), and each fact a card states that the guide and the paste do not, with how it is known. A fact found by search names where, and every fact rests on two sources or one primary source (the producer, its importer, the appellation body); a fact that could not be confirmed is recorded as left out. Nothing here is a score or a price the list does not print. Under mentions, the other bottles of the list the cards name as a step or a mix-up, each as the catalogue holds it.",
+	"about": "Facts behind the study cards of the Binwise list of 28 November 2026 (card chunks c1 to c5): each bottle as the catalogue research/winelist-2026-11-28.json prints it (its ledger key, entry n, bin, vintage, size, the printed price with its dollar sign and the paste line), and each fact a card states that the guide and the paste do not, with how it is known. A fact found by search names where, and every fact rests on two sources or one primary source (the producer, its importer, the appellation body); a fact that could not be confirmed is recorded as left out. Nothing here is a score or a price the list does not print. Under mentions, the other bottles of the list the cards name as a step or a mix-up, each as the catalogue holds it.",
 	"readOn": "2026-11-28",
 	"bottles": [
 		{
@@ -392,6 +392,108 @@
 					"how": "search, 28 November 2026: the winemaker's notes for the Lucien Crochet Sancerre Rosé 2024 as wine.com prints them (crisp at the attack, melon, blood orange, an aniseed finish), the producer's own words. A note found for a 2024 Sancerre rosé of Dominique et Janine Crochet, another domaine, is not used. No score is carried"
 				}
 			]
+		},
+		{
+			"key": "b2508",
+			"n": 2508,
+			"bin": "34331",
+			"name": "Vignobles Levet",
+			"card": "Vignobles Levet Côte-Rôtie 2022",
+			"chunk": "c5",
+			"vintage": "2022",
+			"size": "750ml",
+			"printed": "$240",
+			"line": 12969,
+			"section": "France ~ Rhone ~ Red > Côte-Rôtie",
+			"facts": [
+				{
+					"fact": "The list prints five Levet lines, all new on 28 November 2026: the 2022 bottle with no cuvée name (b2508, n 2508, bin 34331, line 12969, $240); the same 2022 in magnum (b2509, n 2509, bin 13231, line 12974, $490, and again under Large Formats as b228, n 228, line 1207); the 2023 (b2510, n 2510, bin 22711, line 12979, $250); Les Journaries 2022 (b2511, n 2511, bin 21562, line 12984, $260); Les Journaries 2022 in magnum (b2512, n 2512, bin 11271, line 12989, $540, and again under Large Formats as b229, n 229, line 1212). The card is the 2022 bottle at bin 34331.",
+					"how": "the catalogue research/winelist-2026-11-28.json and the paste, lines 1207 to 1216 and 12969 to 12993"
+				},
+				{
+					"fact": "Bin 21562 (Les Journaries 2022) is also printed for the Jean Foillard Côte du Py Morgon 2023 (n 2161, line 11207, $120, France ~ Burgundy ~ Red > Beaujolais).",
+					"how": "the catalogue research/winelist-2026-11-28.json n 2161 and the paste line 11207"
+				},
+				{
+					"fact": "Vignobles Levet is a small family estate in Ampuis whose vines are all Syrah, on both the Côte Brune and the Côte Blonde.",
+					"how": "search, 28 November 2026: Vente à la Propriété (Améthyste 2022 sheet: 100 percent Syrah, a blend of Côte Brune and Côte Blonde parcels); The Wine Cellar Insider (Bernard Levet profile: the vines are all Syrah, parcels on Côte Brune, Côte Blonde, Baleyat and Chavaroche); Shrine to the Vine; research/winelist/producers-d.json vignobles-levet (a small family estate in Ampuis)"
+				},
+				{
+					"fact": "The estate makes a house blend of all the family’s parcels, the step below Les Journaries and La Chavaroche; in the United States it is sold as plain Côte-Rôtie, as our list prints it, and European and some American retailers list it as Améthyste. The card calls it the house blend and does not print the name Améthyste, since no source ties bin 34331 to that label; the watch note sends any other cuvée name on the label to the sommelier.",
+					"how": "search, 28 November 2026: Wine Library (2022 Améthyste: the house cuvée, a selected blend from all the parcels the Levet family owns, quoting the importer); wine-wiki and Wine With Seth (Améthyste the entry Côte-Rôtie, Les Journaries the middle cuvée, La Chavaroche the top); wine.com and Westchester Wine list a 2022 Levet Côte-Rôtie with no cuvée name. That the bottle at bin 34331 is that house blend is inferred from the printed name and the price ($240 against $260 for Les Journaries)"
+				},
+				{
+					"fact": "The house blend is fermented with a large share of whole bunches and aged about two years in demi-muids and large casks, mostly old. The share of whole bunches is given variously (about half for the 2023, about 70 percent for the 2018, 60 to 70 percent in an importer note), so the card gives no figure and sends the 2022 figure to the sommelier.",
+					"how": "search, 28 November 2026: Madrose (importer notes: 30 to 40 percent destemmed for Améthyste and Journaries, 24 months in 600 liter demi-muids and 30 hectoliter foudres, 15 percent new); Farr Vintners (2018: 70 percent whole clusters, mostly neutral demi-muids); Comptoir des Millésimes (2023: about half whole clusters); iDealwine (two years in demi-muids); research/winelist/producers-d.json vignobles-levet (much of the stems, large casks and demi-muids)"
+				},
+				{
+					"fact": "Tasting words for the 2022 house blend: dark cherry and wild blackberry with spice, earthy and firm when young.",
+					"how": "search, 28 November 2026: Comptoir des Millésimes (2022 Améthyste: wild black berries, spices, dark cherries); Wine Library (2022 Améthyste: ripe red and black fruits, violets, smoked meats); research/winelist/producers-d.json vignobles-levet (dark, earthy, spiced and firm when young). Violet, smoked meat and rose petal rest on one retailer note and are left out. No score is carried"
+				},
+				{
+					"fact": "2022 in the Northern Rhône was very hot and dry with a small crop; Côte-Rôtie came out structured and firm.",
+					"how": "search, 28 November 2026: Jancis Robinson (Northern Rhône 2022 vintage overview and chart: hottest and driest on record, very low yields); Decanter, Matt Walls (Northern Rhône 2022 report: yields down, Côte-Rôtie more structured than a typical year, tannic wines built to age). That Côte-Rôtie had more rain than the south of the Northern Rhône rests on one report and is left out"
+				},
+				{
+					"fact": "Côte-Rôtie: red wine from Syrah with up to 20 percent Viognier, which must be fermented together with it; most growers use little or none. The Côte Brune, on dark, iron-rich schist, gives firmer wine; the Côte Blonde gives more perfume. Ampuis is on the right bank near Vienne.",
+					"how": "search, 28 November 2026: the INAO cahier des charges of the AOC Côte-Rôtie (Syrah the principal variety, Viognier accessory, vinified together), Wikipedia (Côte-Rôtie AOC), Inter Rhône (vins-rhone.com), Decanter (Côte-Rôtie vignerons prefer Blondes; Brune and Blonde soils); the wine.com winemaker notes for the Levet 2022; the standing component cellar-rene-rostaing"
+				},
+				{
+					"fact": "Les Journaries comes largely from old vines in La Landonne and was first made in 2004; it is sold in Europe as Maestria.",
+					"how": "research/winelist/producers-d.json vignobles-levet (La Landonne, 2004); search, 28 November 2026: Wine With Seth and wine-wiki (Les Journaries called Maestria in Europe, La Chavaroche called La Péroline); Berry Bros (Cuvée Maestria listing)"
+				},
+				{
+					"fact": "Left out: the estate's vineyard area (3.5 to 5 hectares by source); the year the estate began (1936 in one profile only); the name of anyone who runs it, since the family members named in the sources are living; the importer; scores.",
+					"how": "search, 28 November 2026; not confirmed by two sources, a living person, or volatile"
+				}
+			]
+		},
+		{
+			"key": "b2680",
+			"n": 2680,
+			"bin": "16651",
+			"name": "Peay Vineyards \"Scallop Shelf\" Sonoma Coast",
+			"card": "Peay Vineyards ‘Scallop Shelf’ Sonoma Coast Pinot Noir 2023",
+			"chunk": "c5",
+			"vintage": "2023",
+			"size": "750ml",
+			"printed": "$180",
+			"line": 13857,
+			"section": "United States ~ Pinot Noir > Sonoma Coast & County",
+			"facts": [
+				{
+					"fact": "The list prints three Peay Pinot Noirs, all 2023 at $180 and new on 28 November 2026: Pomarium (b2678, n 2678, bin 15181, line 13847), Savoy Vineyard Anderson Valley (b2679, n 2679, bin 145131, line 13852) and Scallop Shelf (b2680, n 2680, bin 16651, line 13857), all under United States ~ Pinot Noir > Sonoma Coast & County; and the Les Titans Syrah 2013 (key a3054, n 3048, bin 153221, line 15715, $120, United States ~ Other ~ Red > Syrah), carried from 3 October. The card is the Scallop Shelf.",
+					"how": "the catalogue research/winelist-2026-11-28.json, the ledger research/winelist/ledger.json and the paste, lines 13847 to 13861 and 15715"
+				},
+				{
+					"fact": "Peay Vineyards is a family estate near Annapolis on the far Sonoma Coast, about four miles from the Pacific.",
+					"how": "search, 28 November 2026: the winery's own site (peayvineyards.com: Scallop Shelf, a vineyard site four miles from the Pacific; the press page Scouting Annapolis); Wine Travel Guides (Peay Vineyards: 4 miles from the Pacific); research/winelist/producers-c.json peay (a family estate on the far Sonoma Coast). That it is one of the coolest sites in California stands in the producer record but was not confirmed by search, so the card does not say it"
+				},
+				{
+					"fact": "Scallop Shelf, Pomarium and Ama are the three estate Pinot Noir blends, each a combination of three to six clones and blocks chosen by barrel after the wine is made, not a single block. Scallop Shelf is named for the scallop and nautilus fossils found in the soil when the vineyard was prepared for planting; the winery describes it as floral and red fruited, graceful and elegant, and Pomarium as its muscle, with Ama between the two.",
+					"how": "the winery's own site, a primary source (peayvineyards.com/wines/pinot and the wine archives for Scallop Shelf and Ama), found by search 28 November 2026. One guide calls Scallop Shelf a single block from the oldest vines; the winery says otherwise and the card follows the winery"
+				},
+				{
+					"fact": "The Savoy Vineyard bottling is from bought fruit, the Savoy Vineyard in Anderson Valley, Mendocino County, more fruit forward and approachable young than the estate wines.",
+					"how": "the winery's own site (wine archives, 2016 Savoy: the site chosen outside the estate to hedge risk; more fruit forward and approachable in youth); Decanter and Wine Spectator listings of the 2023 Savoy as Anderson Valley, Mendocino County"
+				},
+				{
+					"fact": "The 2023 label reads West Sonoma Coast. The West Sonoma Coast appellation was approved by the TTB in 2022, lies entirely within the Sonoma Coast appellation and contains the Fort Ross-Seaview appellation.",
+					"how": "search, 28 November 2026: Wine Spectator, Jancis Robinson and the winery's members site list the 2023 Scallop Shelf as West Sonoma Coast; the Federal Register final rule of 23 May 2022 and the TTB; North Bay Business Journal and The Beverage Journal on the approval"
+				},
+				{
+					"fact": "2023 on the Sonoma Coast: a wet winter and a cool spring delayed budbreak, the harvest came late, and the wines are fresh.",
+					"how": "search, 28 November 2026: James Suckling (In Sonoma's cool 2023, freshness comes to the fore); Bruliam Wines (heavy winter rain and a cool, wet spring, a late harvest); Senses Wines 2023 sheet (cool spring, late budbreak)"
+				},
+				{
+					"fact": "Tasting words for the 2023 Scallop Shelf: red and black cherry, jasmine tea and forest floor, floral and fresh.",
+					"how": "search, 28 November 2026: the winery's members site (2023 Scallop Shelf: jasmine tea and forest floor under the fruit); Wine Spectator's 2023 note as quoted (mulled red and black cherry); Pogo's Wine (dark fruit, tea leaves); the winery's description of Scallop Shelf as floral and red fruited. Lavender, licorice and a saline note rest on one source each and are left out. No score is carried, and the members site's own superlative is not repeated"
+				},
+				{
+					"fact": "Left out: the 2023's oak regime, its fermentation and alcohol (not found), the clone shares (one retailer gives Pommard, 777 and 115 with no vintage), the year the estate was planted and its acreage (sources differ), the founders and the winemaker by name (living), and its price at the winery.",
+					"how": "search, 28 November 2026; not confirmed by two sources, a living person, or volatile"
+				}
+			]
 		}
 	],
 	"mentions": [
@@ -602,6 +704,78 @@
 			"vintage": "2003",
 			"printed": "$1420",
 			"how": "the neighboring bin named as a mix-up on the Crochet magnum card"
+		},
+		{
+			"n": 2509,
+			"bin": "13231",
+			"name": "Vignobles Levet • 1.5L Magnum",
+			"vintage": "2022",
+			"printed": "$490",
+			"how": "the magnum of the carded 2022, named on the Levet card (also n 228 under Large Formats)"
+		},
+		{
+			"n": 2510,
+			"bin": "22711",
+			"name": "Vignobles Levet",
+			"vintage": "2023",
+			"printed": "$250",
+			"how": "the next vintage, named on the Levet card"
+		},
+		{
+			"n": 2511,
+			"bin": "21562",
+			"name": "Vignobles Levet \"Les Journaries\"",
+			"vintage": "2022",
+			"printed": "$260",
+			"how": "the step up from the carded 2022, named on the Levet card"
+		},
+		{
+			"n": 2512,
+			"bin": "11271",
+			"name": "Vignobles Levet \"Les Journaries\" • 1.5L Magnum",
+			"vintage": "2022",
+			"printed": "$540",
+			"how": "named on the Levet card (also n 229 under Large Formats)"
+		},
+		{
+			"n": 2493,
+			"bin": "24753",
+			"name": "René Rostaing \"Ampodium\"",
+			"vintage": "2012",
+			"printed": "$170",
+			"how": "the older, gentler Côte-Rôtie named as a step on the Levet card"
+		},
+		{
+			"n": 2678,
+			"bin": "15181",
+			"name": "Peay Vineyards \"Pomarium\" Sonoma Coast",
+			"vintage": "2023",
+			"printed": "$180",
+			"how": "named on the Peay card"
+		},
+		{
+			"n": 2679,
+			"bin": "145131",
+			"name": "Peay Vineyards \"Savoy Vineyard\" Anderson Valley",
+			"vintage": "2023",
+			"printed": "$180",
+			"how": "named on the Peay card"
+		},
+		{
+			"n": 3048,
+			"bin": "153221",
+			"name": "Peay \"Les Titans\" Sonoma Coast CA",
+			"vintage": "2013",
+			"printed": "$120",
+			"how": "the Peay Syrah, named on the Peay card"
+		},
+		{
+			"n": 2674,
+			"bin": "14612",
+			"name": "Kosta Browne Sonoma Coast",
+			"vintage": "2021",
+			"printed": "$230",
+			"how": "the riper Sonoma Coast Pinot Noir named as a step on the Peay card"
 		}
 	]
 }
