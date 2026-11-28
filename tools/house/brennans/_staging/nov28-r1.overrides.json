@@ -1,0 +1,616 @@
+{
+	"entries": [
+		{
+			"target": "dish:Blackberry Trifle",
+			"field": "bottles.value.wine",
+			"op": "set",
+			"value": "Dr. Hermann ‘Ürziger Würzgarten in der Kranklei’ Riesling Spätlese Goldkapsel 2018",
+			"reason": "The list of 28 November 2026 no longer prints the Castello Banfi Florus 2011, the value bottle of the Blackberry Trifle, and no new sweet bottle joined it. Of the two sweet cards under $100 that stand, the Kranklei Spätlese is the better match for a bright breakfast starter: light, low in alcohol, lime and white peach for the lemon curd, sweet enough for the blackberry, where twenty year old Layon Chenin would weigh on it",
+			"source": "research/winelist-2026-11-28.json n=1200, key b1200 (page:binwise-wine-list-2026-11-28.txt line 6218: bin 28461, Dr. Hermann \"Urziger Wurtzgarten in der Kranklei\" Goldkapsel Spätlese, 2018, 95; Germany, White, Riesling, Mosel); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-1j9ri89c (white peach, apricot, lime, red slate, electric acidity; value bottle for the Framboise French Toast and the Lemon Tart)"
+		},
+		{
+			"target": "dish:Blackberry Trifle",
+			"field": "bottles.value.why",
+			"op": "set",
+			"value": "Sweet and acid: a gold capsule Mosel Spätlese, sweet enough for blackberry curd, its lime and acidity matching the lemon curd.",
+			"reason": "The list of 28 November 2026 no longer prints the Castello Banfi Florus 2011, the value bottle of the Blackberry Trifle, and no new sweet bottle joined it. Of the two sweet cards under $100 that stand, the Kranklei Spätlese is the better match for a bright breakfast starter: light, low in alcohol, lime and white peach for the lemon curd, sweet enough for the blackberry, where twenty year old Layon Chenin would weigh on it; the why is written for the new wine",
+			"source": "research/winelist-2026-11-28.json n=1200, key b1200 (page:binwise-wine-list-2026-11-28.txt line 6218: bin 28461, Dr. Hermann \"Urziger Wurtzgarten in der Kranklei\" Goldkapsel Spätlese, 2018, 95; Germany, White, Riesling, Mosel); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-1j9ri89c (white peach, apricot, lime, red slate, electric acidity; value bottle for the Framboise French Toast and the Lemon Tart)"
+		},
+		{
+			"target": "dish:Blackberry Trifle",
+			"field": "bottles.value.sayIt",
+			"op": "set",
+			"value": "With the trifle, Dr. Hermann’s Kranklei Spätlese from the Mosel: white peach and lime, light and sweet, bright enough for the lemon curd.",
+			"reason": "The list of 28 November 2026 no longer prints the Castello Banfi Florus 2011, the value bottle of the Blackberry Trifle, and no new sweet bottle joined it. Of the two sweet cards under $100 that stand, the Kranklei Spätlese is the better match for a bright breakfast starter: light, low in alcohol, lime and white peach for the lemon curd, sweet enough for the blackberry, where twenty year old Layon Chenin would weigh on it; the line names the new wine",
+			"source": "research/winelist-2026-11-28.json n=1200, key b1200 (page:binwise-wine-list-2026-11-28.txt line 6218: bin 28461, Dr. Hermann \"Urziger Wurtzgarten in der Kranklei\" Goldkapsel Spätlese, 2018, 95; Germany, White, Riesling, Mosel); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-1j9ri89c (white peach, apricot, lime, red slate, electric acidity; value bottle for the Framboise French Toast and the Lemon Tart)"
+		},
+		{
+			"target": "dish:Pineapple Tarte Tatin",
+			"field": "bottles.value.wine",
+			"op": "set",
+			"value": "Domaine des Baumard ‘Clos Sainte Catherine’ Coteaux du Layon 2006",
+			"reason": "The list of 28 November 2026 no longer prints the Castello Banfi Florus 2011, the value bottle of the Pineapple Tarte Tatin, and no new sweet bottle joined it. Coteaux du Layon with a tarte Tatin is the Loire partner: its quince, honey and baked apple meet caramel and charred fruit, and Chenin acidity answers the pineapple, where a light Spätlese would be outweighed by the caramel and the condensed milk anglaise",
+			"source": "research/winelist-2026-11-28.json n=3512, key b3512 (page:binwise-wine-list-2026-11-28.txt line 18118: bin 19341, Domaine des Baumard \"Clos Sainte Catherine\" Coteaux du Layon, 2006, 90; Dessert Wines, France); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-3d60gfn3 (quince, baked apple, honey, apricot, ginger, lively Chenin acidity; value bottle for the Baked Apple and the New Orleans Bread Pudding)"
+		},
+		{
+			"target": "dish:Pineapple Tarte Tatin",
+			"field": "bottles.value.why",
+			"op": "set",
+			"value": "Sweet and bridge: aged Layon Chenin brings quince, honey and baked apple to the caramel and charred pineapple; its acidity answers the fruit’s tang.",
+			"reason": "The list of 28 November 2026 no longer prints the Castello Banfi Florus 2011, the value bottle of the Pineapple Tarte Tatin, and no new sweet bottle joined it. Coteaux du Layon with a tarte Tatin is the Loire partner: its quince, honey and baked apple meet caramel and charred fruit, and Chenin acidity answers the pineapple, where a light Spätlese would be outweighed by the caramel and the condensed milk anglaise; the why is written for the new wine",
+			"source": "research/winelist-2026-11-28.json n=3512, key b3512 (page:binwise-wine-list-2026-11-28.txt line 18118: bin 19341, Domaine des Baumard \"Clos Sainte Catherine\" Coteaux du Layon, 2006, 90; Dessert Wines, France); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-3d60gfn3 (quince, baked apple, honey, apricot, ginger, lively Chenin acidity; value bottle for the Baked Apple and the New Orleans Bread Pudding)"
+		},
+		{
+			"target": "dish:Pineapple Tarte Tatin",
+			"field": "bottles.value.sayIt",
+			"op": "set",
+			"value": "With the tarte Tatin, Baumard’s Clos Sainte Catherine from the Loire: sweet Chenin Blanc, quince, honey and baked apple, lovely with caramelized fruit.",
+			"reason": "The list of 28 November 2026 no longer prints the Castello Banfi Florus 2011, the value bottle of the Pineapple Tarte Tatin, and no new sweet bottle joined it. Coteaux du Layon with a tarte Tatin is the Loire partner: its quince, honey and baked apple meet caramel and charred fruit, and Chenin acidity answers the pineapple, where a light Spätlese would be outweighed by the caramel and the condensed milk anglaise; the line names the new wine",
+			"source": "research/winelist-2026-11-28.json n=3512, key b3512 (page:binwise-wine-list-2026-11-28.txt line 18118: bin 19341, Domaine des Baumard \"Clos Sainte Catherine\" Coteaux du Layon, 2006, 90; Dessert Wines, France); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-3d60gfn3 (quince, baked apple, honey, apricot, ginger, lively Chenin acidity; value bottle for the Baked Apple and the New Orleans Bread Pudding)"
+		},
+		{
+			"target": "wine:Dr. Hermann ‘Ürziger Würzgarten in der Kranklei’ Riesling Spätlese Goldkapsel 2018",
+			"field": "why",
+			"op": "set",
+			"value": "Value pick for the Framboise French Toast, the Lemon Tart and the Blackberry Trifle: a Goldkapsel Spätlese is sweet enough for coulis, curd and meringue, with piercing acidity that cuts mascarpone and survives lemon.",
+			"reason": "The card is now the value bottle for the Blackberry Trifle too (chunk r1), so the words that name its dishes name it",
+			"source": "research/winelist-2026-11-28.json n=1200, key b1200 (page:binwise-wine-list-2026-11-28.txt line 6218: bin 28461, Dr. Hermann \"Urziger Wurtzgarten in der Kranklei\" Goldkapsel Spätlese, 2018, 95; Germany, White, Riesling, Mosel); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-1j9ri89c (white peach, apricot, lime, red slate, electric acidity; value bottle for the Framboise French Toast and the Lemon Tart)"
+		},
+		{
+			"target": "wine:Dr. Hermann ‘Ürziger Würzgarten in der Kranklei’ Riesling Spätlese Goldkapsel 2018",
+			"field": "lines.s45",
+			"op": "replace",
+			"value": {
+				"from": "It is the value bottle for the Framboise French Toast and the Lemon Tart, bright beside lemon, cutting the mascarpone.",
+				"to": "It is the value bottle for the Framboise French Toast, the Lemon Tart and the Blackberry Trifle, bright beside lemon."
+			},
+			"reason": "The card is now the value bottle for the Blackberry Trifle too (chunk r1), so the words that name its dishes name it",
+			"source": "research/winelist-2026-11-28.json n=1200, key b1200 (page:binwise-wine-list-2026-11-28.txt line 6218: bin 28461, Dr. Hermann \"Urziger Wurtzgarten in der Kranklei\" Goldkapsel Spätlese, 2018, 95; Germany, White, Riesling, Mosel); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-1j9ri89c (white peach, apricot, lime, red slate, electric acidity; value bottle for the Framboise French Toast and the Lemon Tart)"
+		},
+		{
+			"target": "wine:Dr. Hermann ‘Ürziger Würzgarten in der Kranklei’ Riesling Spätlese Goldkapsel 2018",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "This Mosel Riesling from red slate tastes of white peach, lime and spice, sweet and light, with an electric acidity that stands up to lemon. It is the value bottle for the Framboise French Toast, the Lemon Tart and the Blackberry Trifle, by the bottle.",
+			"reason": "The card is now the value bottle for the Blackberry Trifle too (chunk r1), so the words that name its dishes name it",
+			"source": "research/winelist-2026-11-28.json n=1200, key b1200 (page:binwise-wine-list-2026-11-28.txt line 6218: bin 28461, Dr. Hermann \"Urziger Wurtzgarten in der Kranklei\" Goldkapsel Spätlese, 2018, 95; Germany, White, Riesling, Mosel); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-1j9ri89c (white peach, apricot, lime, red slate, electric acidity; value bottle for the Framboise French Toast and the Lemon Tart)"
+		},
+		{
+			"target": "wine:Dr. Hermann ‘Ürziger Würzgarten in der Kranklei’ Riesling Spätlese Goldkapsel 2018",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "is the value bottle with two desserts, the Framboise French Toast and the Lemon Tart: bin 28461, $95.",
+				"to": "is the value bottle with three sweet dishes, the Framboise French Toast, the Lemon Tart and the Blackberry Trifle: bin 28461, $95."
+			},
+			"reason": "The card is now the value bottle for the Blackberry Trifle too (chunk r1), so the words that name its dishes name it",
+			"source": "research/winelist-2026-11-28.json n=1200, key b1200 (page:binwise-wine-list-2026-11-28.txt line 6218: bin 28461, Dr. Hermann \"Urziger Wurtzgarten in der Kranklei\" Goldkapsel Spätlese, 2018, 95; Germany, White, Riesling, Mosel); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-1j9ri89c (white peach, apricot, lime, red slate, electric acidity; value bottle for the Framboise French Toast and the Lemon Tart)"
+		},
+		{
+			"target": "wine:Dr. Hermann ‘Ürziger Würzgarten in der Kranklei’ Riesling Spätlese Goldkapsel 2018",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "and with the French toast it cuts the mascarpone and meets the raspberry coulis.",
+				"to": "and with the French toast it cuts the mascarpone and meets the raspberry coulis. With the Blackberry Trifle, its lime meets the lemon curd and its sweetness stays ahead of the blackberry, light enough for a starter."
+			},
+			"reason": "The card is now the value bottle for the Blackberry Trifle too (chunk r1), so the words that name its dishes name it",
+			"source": "research/winelist-2026-11-28.json n=1200, key b1200 (page:binwise-wine-list-2026-11-28.txt line 6218: bin 28461, Dr. Hermann \"Urziger Wurtzgarten in der Kranklei\" Goldkapsel Spätlese, 2018, 95; Germany, White, Riesling, Mosel); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-1j9ri89c (white peach, apricot, lime, red slate, electric acidity; value bottle for the Framboise French Toast and the Lemon Tart)"
+		},
+		{
+			"target": "wine:Dr. Hermann ‘Ürziger Würzgarten in der Kranklei’ Riesling Spätlese Goldkapsel 2018",
+			"field": "kept.1.a",
+			"op": "replace",
+			"value": {
+				"from": "or with the Lemon Tart at any meal,",
+				"to": "with the Blackberry Trifle as a sweet starter to share, or with the Lemon Tart at any meal,"
+			},
+			"reason": "The card is now the value bottle for the Blackberry Trifle too (chunk r1), so the words that name its dishes name it",
+			"source": "research/winelist-2026-11-28.json n=1200, key b1200 (page:binwise-wine-list-2026-11-28.txt line 6218: bin 28461, Dr. Hermann \"Urziger Wurtzgarten in der Kranklei\" Goldkapsel Spätlese, 2018, 95; Germany, White, Riesling, Mosel); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-1j9ri89c (white peach, apricot, lime, red slate, electric acidity; value bottle for the Framboise French Toast and the Lemon Tart)"
+		},
+		{
+			"target": "wine:Domaine des Baumard ‘Clos Sainte Catherine’ Coteaux du Layon 2006",
+			"field": "why",
+			"op": "set",
+			"value": "Value pick for the Baked Apple, the New Orleans Bread Pudding and the Pineapple Tarte Tatin: sweet Layon Chenin tastes of quince and baked apple, and its acidity keeps brown sugar and caramel fresh.",
+			"reason": "The card is now the value bottle for the Pineapple Tarte Tatin too (chunk r1), so the words that name its dishes name it",
+			"source": "research/winelist-2026-11-28.json n=3512, key b3512 (page:binwise-wine-list-2026-11-28.txt line 18118: bin 19341, Domaine des Baumard \"Clos Sainte Catherine\" Coteaux du Layon, 2006, 90; Dessert Wines, France); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-3d60gfn3 (quince, baked apple, honey, apricot, ginger, lively Chenin acidity; value bottle for the Baked Apple and the New Orleans Bread Pudding)"
+		},
+		{
+			"target": "wine:Domaine des Baumard ‘Clos Sainte Catherine’ Coteaux du Layon 2006",
+			"field": "lines.s45",
+			"op": "replace",
+			"value": {
+				"from": "It is the value bottle for the Baked Apple, echoing its brown sugar glaze, and the New Orleans Bread Pudding, as sweet as its whiskey caramel.",
+				"to": "It is the value bottle for the Baked Apple, the New Orleans Bread Pudding and the Pineapple Tarte Tatin, echoing glaze and caramel."
+			},
+			"reason": "The card is now the value bottle for the Pineapple Tarte Tatin too (chunk r1), so the words that name its dishes name it",
+			"source": "research/winelist-2026-11-28.json n=3512, key b3512 (page:binwise-wine-list-2026-11-28.txt line 18118: bin 19341, Domaine des Baumard \"Clos Sainte Catherine\" Coteaux du Layon, 2006, 90; Dessert Wines, France); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-3d60gfn3 (quince, baked apple, honey, apricot, ginger, lively Chenin acidity; value bottle for the Baked Apple and the New Orleans Bread Pudding)"
+		},
+		{
+			"target": "wine:Domaine des Baumard ‘Clos Sainte Catherine’ Coteaux du Layon 2006",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Twenty years old, this sweet Loire Chenin tastes of quince, baked apple, honey and a little ginger, kept bright by its acidity. It is the value bottle for the Baked Apple, the New Orleans Bread Pudding and the Pineapple Tarte Tatin, poured by the bottle.",
+			"reason": "The card is now the value bottle for the Pineapple Tarte Tatin too (chunk r1), so the words that name its dishes name it",
+			"source": "research/winelist-2026-11-28.json n=3512, key b3512 (page:binwise-wine-list-2026-11-28.txt line 18118: bin 19341, Domaine des Baumard \"Clos Sainte Catherine\" Coteaux du Layon, 2006, 90; Dessert Wines, France); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-3d60gfn3 (quince, baked apple, honey, apricot, ginger, lively Chenin acidity; value bottle for the Baked Apple and the New Orleans Bread Pudding)"
+		},
+		{
+			"target": "wine:Domaine des Baumard ‘Clos Sainte Catherine’ Coteaux du Layon 2006",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "is the value bottle with the Baked Apple on the breakfast tasting and with the New Orleans Bread Pudding: bin 19341, $90.",
+				"to": "is the value bottle with the Baked Apple on the breakfast tasting, with the New Orleans Bread Pudding and with the Pineapple Tarte Tatin: bin 19341, $90."
+			},
+			"reason": "The card is now the value bottle for the Pineapple Tarte Tatin too (chunk r1), so the words that name its dishes name it",
+			"source": "research/winelist-2026-11-28.json n=3512, key b3512 (page:binwise-wine-list-2026-11-28.txt line 18118: bin 19341, Domaine des Baumard \"Clos Sainte Catherine\" Coteaux du Layon, 2006, 90; Dessert Wines, France); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-3d60gfn3 (quince, baked apple, honey, apricot, ginger, lively Chenin acidity; value bottle for the Baked Apple and the New Orleans Bread Pudding)"
+		},
+		{
+			"target": "wine:Domaine des Baumard ‘Clos Sainte Catherine’ Coteaux du Layon 2006",
+			"field": "kept.1.a",
+			"op": "replace",
+			"value": {
+				"from": "with the New Orleans Bread Pudding at dessert,",
+				"to": "with the New Orleans Bread Pudding or the Pineapple Tarte Tatin at dessert,"
+			},
+			"reason": "The card is now the value bottle for the Pineapple Tarte Tatin too (chunk r1), so the words that name its dishes name it",
+			"source": "research/winelist-2026-11-28.json n=3512, key b3512 (page:binwise-wine-list-2026-11-28.txt line 18118: bin 19341, Domaine des Baumard \"Clos Sainte Catherine\" Coteaux du Layon, 2006, 90; Dessert Wines, France); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-3d60gfn3 (quince, baked apple, honey, apricot, ginger, lively Chenin acidity; value bottle for the Baked Apple and the New Orleans Bread Pudding)"
+		},
+		{
+			"target": "wine:Domaine des Baumard ‘Clos Sainte Catherine’ Coteaux du Layon 2006",
+			"field": "serviceNote",
+			"op": "replace",
+			"value": {
+				"from": "The value tier for the Baked Apple and the New Orleans Bread Pudding.",
+				"to": "The value tier for the Baked Apple, the New Orleans Bread Pudding and the Pineapple Tarte Tatin."
+			},
+			"reason": "The card is now the value bottle for the Pineapple Tarte Tatin too (chunk r1), so the words that name its dishes name it",
+			"source": "research/winelist-2026-11-28.json n=3512, key b3512 (page:binwise-wine-list-2026-11-28.txt line 18118: bin 19341, Domaine des Baumard \"Clos Sainte Catherine\" Coteaux du Layon, 2006, 90; Dessert Wines, France); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345, $60); the pack record w-3d60gfn3 (quince, baked apple, honey, apricot, ginger, lively Chenin acidity; value bottle for the Baked Apple and the New Orleans Bread Pudding)"
+		},
+		{
+			"target": "wine:Kracher ‘Cuvée’ Auslese Burgenland 2017",
+			"field": "kept.1.a",
+			"op": "replace",
+			"value": {
+				"from": "From the Florus, it is the step up.",
+				"to": "From the Baumard Clos Sainte Catherine at $90, the value bottle with the tart, it is the step up."
+			},
+			"reason": "The Florus left the list; the step below the Kracher with the Pineapple Tarte Tatin is now the Baumard",
+			"source": "research/winelist-2026-11-28.json n=3527, key b3527 (page:binwise-wine-list-2026-11-28.txt line 18201: bin 19234, Alois Kracher Auslese Burgenland, 2017, 190); n=3512 (line 18118: bin 19341, Baumard Clos Sainte Catherine, 2006, 90); page:binwise-wine-list-2026-11-28.txt (no printing of bin 192345)"
+		},
+		{
+			"target": "wine:Kracher ‘Cuvée’ Auslese Burgenland 2017",
+			"field": "kept.1.a",
+			"op": "replace",
+			"value": {
+				"from": "Austria’s great sweet wine,",
+				"to": "sweet wine from the Neusiedlersee in Austria:"
+			},
+			"reason": "The said line judged the wine; it now gives the place",
+			"source": "the pack record w-mx7t35t8 (Illmitz on the eastern shore of the Neusiedlersee)"
+		},
+		{
+			"target": "wine:Raymond Dupont-Fahn ‘Les Tillets’ Meursault 2022",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "The list also prints bin 22143 for Domaine de Trévallon 2015 at $165, a red from Provence, so ring it by name and vintage and tell the sommelier about the clash.",
+				"to": "The list also prints Dupont-Fahn’s Les Tillets 2023 at $240 (bin 22746) and Bernard Bonin’s Les Tillets 2021 at $750, so ring it by bin 22143 and read the producer and the vintage on the label."
+			},
+			"reason": "The list of 28 November 2026 prints the Trévallon 2015 at bin 22133, so bin 22143 is the Tillets 2022 alone; the Tillets the list prints beside it are named instead",
+			"source": "research/winelist-2026-11-28.json n=855, key b855 (page:binwise-wine-list-2026-11-28.txt line 4421: bin 22143, Raymond Dupont-Fahn \"Les Tillets\", 2022, 175); n=856 (line 4426: bin 22746, Raymond Dupont-Fahn \"Les Tillets\", 2023, 240); n=835 (line 4321: bin 271410, Bernard Bonin \"Les Tillets\", 2021, 750); n=2635 (line 13623: bin 22133, Domaine de Trévallon Alpilles, 2015, 165)"
+		},
+		{
+			"target": "wine:Domaine Faiveley Bourgogne Rouge 2022",
+			"field": "why",
+			"op": "set",
+			"value": "Value pick for the Roasted Rohan Duck Breast: bright cherry and fresh acidity for the rich meat, red Burgundy at $90.",
+			"reason": "The list of 28 November 2026 prints the bottle once, on the red Burgundy page, no longer under Selections Under $100",
+			"source": "research/winelist-2026-11-28.json n=1478, key b1478 (page:binwise-wine-list-2026-11-28.txt line 7680: bin 22651, Domaine Faiveley, 2022, 90; France, Burgundy, Red, Bourgogne; no printing of bin 22651 under Selections Under $100, which the list of 3 October 2026 printed at line 199); n=671 (line 3475: bin 26338, Domaine Faiveley, 2022, 85, Burgundy white); n=2540 (line 13137: bin 26338, Auguste Clape, 2023, 550, Cornas); n=1477 (line 7675: bin 25726, Domaine Faiveley, 2021, 100)"
+		},
+		{
+			"target": "wine:Domaine Faiveley Bourgogne Rouge 2022",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "The list prints it twice, on the Burgundy pages and on Selections Under $100, under the same bin, which makes it the easiest red Burgundy to find and to recommend.",
+				"to": "The list prints it once, on the red Burgundy page under Bourgogne, bin 22651."
+			},
+			"reason": "The list of 28 November 2026 prints the bottle once, on the red Burgundy page",
+			"source": "research/winelist-2026-11-28.json n=1478, key b1478 (page:binwise-wine-list-2026-11-28.txt line 7680: bin 22651, Domaine Faiveley, 2022, 90; France, Burgundy, Red, Bourgogne; no printing of bin 22651 under Selections Under $100, which the list of 3 October 2026 printed at line 199); n=671 (line 3475: bin 26338, Domaine Faiveley, 2022, 85, Burgundy white); n=2540 (line 13137: bin 26338, Auguste Clape, 2023, 550, Cornas); n=1477 (line 7675: bin 25726, Domaine Faiveley, 2021, 100)"
+		},
+		{
+			"target": "wine:Domaine Faiveley Bourgogne Rouge 2022",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "and a Faiveley Bourgogne 2022 at $85 under bin 26338 on the white Burgundy pages,",
+				"to": "and a Faiveley Bourgogne 2022 at $85 under bin 26338 on the white Burgundy pages, a bin the list also prints for the Auguste Clape Cornas 2023 at $550,"
+			},
+			"reason": "Bin 26338 is now printed for two bottles",
+			"source": "research/winelist-2026-11-28.json n=1478, key b1478 (page:binwise-wine-list-2026-11-28.txt line 7680: bin 22651, Domaine Faiveley, 2022, 90; France, Burgundy, Red, Bourgogne; no printing of bin 22651 under Selections Under $100, which the list of 3 October 2026 printed at line 199); n=671 (line 3475: bin 26338, Domaine Faiveley, 2022, 85, Burgundy white); n=2540 (line 13137: bin 26338, Auguste Clape, 2023, 550, Cornas); n=1477 (line 7675: bin 25726, Domaine Faiveley, 2021, 100)"
+		},
+		{
+			"target": "house",
+			"op": "answer",
+			"value": {
+				"id": "a-fufbth1x",
+				"was": "the ask whether the Faiveley Bourgogne 2022 at $90 (bin 22651) is the same bottle on the Selections Under $100 page and the Burgundy page, and whether it is in tonight",
+				"tombstone": "2026-11-28T00:01:00.001Z"
+			},
+			"reason": "The Binwise list of 28 November 2026 prints bin 22651 once, on the red Burgundy page; what is left of the ask is filed again",
+			"source": "research/winelist-2026-11-28.json n=1478, key b1478 (page:binwise-wine-list-2026-11-28.txt line 7680: bin 22651, Domaine Faiveley, 2022, 90; France, Burgundy, Red, Bourgogne; no printing of bin 22651 under Selections Under $100, which the list of 3 October 2026 printed at line 199); n=671 (line 3475: bin 26338, Domaine Faiveley, 2022, 85, Burgundy white); n=2540 (line 13137: bin 26338, Auguste Clape, 2023, 550, Cornas); n=1477 (line 7675: bin 25726, Domaine Faiveley, 2021, 100)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Is the Faiveley Bourgogne Rouge 2022 (bin 22651, $90) in tonight?",
+				"askWhom": "sommelier",
+				"items": [
+					"Domaine Faiveley Bourgogne Rouge 2022"
+				]
+			},
+			"reason": "What the answered ask also asked, filed again",
+			"source": "research/winelist-2026-11-28.json n=1478, key b1478 (page:binwise-wine-list-2026-11-28.txt line 7680: bin 22651, Domaine Faiveley, 2022, 90; France, Burgundy, Red, Bourgogne; no printing of bin 22651 under Selections Under $100, which the list of 3 October 2026 printed at line 199); n=671 (line 3475: bin 26338, Domaine Faiveley, 2022, 85, Burgundy white); n=2540 (line 13137: bin 26338, Auguste Clape, 2023, 550, Cornas); n=1477 (line 7675: bin 25726, Domaine Faiveley, 2021, 100)"
+		},
+		{
+			"target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+			"field": "why",
+			"op": "set",
+			"value": "A mature Rutherford bottle for guests exploring Cabernet with the Roasted Chateaubriand; the sommelier judges its condition and its air.",
+			"reason": "The list of 28 November 2026 prints no Rubicon by the glass (the glass pour is a past glass wine); the bottle is sold alone",
+			"source": "research/winelist-2026-11-28.json n=2891, key b2891 (page:binwise-wine-list-2026-11-28.txt line 14921: bin 18231, Inglenook \"Rubicon\" Rutherford, 2010, 360, the bottle); n=2889 (line 14911: bin 187112, 2005, 355); n=2890 (line 14916: bin 17559, 2009, 360); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line, which the list of 3 October 2026 printed at $70)"
+		},
+		{
+			"target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+			"field": "lines.s45",
+			"op": "replace",
+			"value": {
+				"from": "It suits beef for two with a buttery sauce, and a table that wants the glass pour as a bottle.",
+				"to": "It suits beef for two with a buttery sauce, the Roasted Chateaubriand and its sauce Foyot above all."
+			},
+			"reason": "The list of 28 November 2026 prints no Rubicon by the glass (the glass pour is a past glass wine); the bottle is sold alone",
+			"source": "research/winelist-2026-11-28.json n=2891, key b2891 (page:binwise-wine-list-2026-11-28.txt line 14921: bin 18231, Inglenook \"Rubicon\" Rutherford, 2010, 360, the bottle); n=2889 (line 14911: bin 187112, 2005, 355); n=2890 (line 14916: bin 17559, 2009, 360); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line, which the list of 3 October 2026 printed at $70)"
+		},
+		{
+			"target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+			"field": "lines.sale",
+			"op": "replace",
+			"value": {
+				"from": "For a table sharing beef that wants the glass pour as a whole bottle, it comes by the bottle, opened to the sommelier’s plan.",
+				"to": "For a table sharing the Roasted Chateaubriand, it comes by the bottle, opened to the sommelier’s plan."
+			},
+			"reason": "The list of 28 November 2026 prints no Rubicon by the glass (the glass pour is a past glass wine); the bottle is sold alone",
+			"source": "research/winelist-2026-11-28.json n=2891, key b2891 (page:binwise-wine-list-2026-11-28.txt line 14921: bin 18231, Inglenook \"Rubicon\" Rutherford, 2010, 360, the bottle); n=2889 (line 14911: bin 187112, 2005, 355); n=2890 (line 14916: bin 17559, 2009, 360); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line, which the list of 3 October 2026 printed at $70)"
+		},
+		{
+			"target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+			"field": "kept.1.a",
+			"op": "replace",
+			"value": {
+				"from": "If the table has already ordered glasses, calculate their confirmed volumes and total cost before comparing formats.",
+				"to": "It is sold by the bottle only: the list prints no Rubicon by the glass."
+			},
+			"reason": "The list of 28 November 2026 prints no Rubicon by the glass (the glass pour is a past glass wine); the bottle is sold alone",
+			"source": "research/winelist-2026-11-28.json n=2891, key b2891 (page:binwise-wine-list-2026-11-28.txt line 14921: bin 18231, Inglenook \"Rubicon\" Rutherford, 2010, 360, the bottle); n=2889 (line 14911: bin 187112, 2005, 355); n=2890 (line 14916: bin 17559, 2009, 360); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line, which the list of 3 October 2026 printed at $70)"
+		},
+		{
+			"target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+			"field": "kept.2.a",
+			"op": "replace",
+			"value": {
+				"from": "The saved list offers both formats; confirm the bottle, vintage, pour and price before service.",
+				"to": "The Binwise list of 28 November 2026 prints it by the bottle only; confirm the vintage and price before service."
+			},
+			"reason": "The list of 28 November 2026 prints no Rubicon by the glass (the glass pour is a past glass wine); the bottle is sold alone",
+			"source": "research/winelist-2026-11-28.json n=2891, key b2891 (page:binwise-wine-list-2026-11-28.txt line 14921: bin 18231, Inglenook \"Rubicon\" Rutherford, 2010, 360, the bottle); n=2889 (line 14911: bin 187112, 2005, 355); n=2890 (line 14916: bin 17559, 2009, 360); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line, which the list of 3 October 2026 printed at $70)"
+		},
+		{
+			"target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+			"field": "kept.2.a",
+			"op": "replace",
+			"value": {
+				"from": " For a table considering several glasses, compare the confirmed pour size and total price with a full bottle.",
+				"to": ""
+			},
+			"reason": "The list of 28 November 2026 prints no Rubicon by the glass (the glass pour is a past glass wine); the bottle is sold alone",
+			"source": "research/winelist-2026-11-28.json n=2891, key b2891 (page:binwise-wine-list-2026-11-28.txt line 14921: bin 18231, Inglenook \"Rubicon\" Rutherford, 2010, 360, the bottle); n=2889 (line 14911: bin 187112, 2005, 355); n=2890 (line 14916: bin 17559, 2009, 360); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line, which the list of 3 October 2026 printed at $70)"
+		},
+		{
+			"target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "Asked: Is the glass the same as the bottle?\n\nAnswer: The saved list names 2010 in both formats; I will confirm what is open tonight.",
+				"to": "Asked: Can I have it by the glass?\n\nAnswer: Rubicon is sold by the bottle only; the list prints the 2005 and the 2009 beside the 2010."
+			},
+			"reason": "The list of 28 November 2026 prints no Rubicon by the glass (the glass pour is a past glass wine); the bottle is sold alone",
+			"source": "research/winelist-2026-11-28.json n=2891, key b2891 (page:binwise-wine-list-2026-11-28.txt line 14921: bin 18231, Inglenook \"Rubicon\" Rutherford, 2010, 360, the bottle); n=2889 (line 14911: bin 187112, 2005, 355); n=2890 (line 14916: bin 17559, 2009, 360); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line, which the list of 3 October 2026 printed at $70)"
+		},
+		{
+			"target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+			"field": "kept.4.a",
+			"op": "replace",
+			"value": {
+				"from": "Confirm the 2010 label and the format: the saved list prints bin 18231 at $70 by the glass and $360 by the bottle, with other vintages nearby.",
+				"to": "Confirm the 2010 label: the list prints bin 18231 at $360, with the 2005 at $355 (bin 187112) and the 2009 at $360 (bin 17559) beside it, so ring it by bin and read the vintage."
+			},
+			"reason": "The list of 28 November 2026 prints no Rubicon by the glass (the glass pour is a past glass wine); the bottle is sold alone",
+			"source": "research/winelist-2026-11-28.json n=2891, key b2891 (page:binwise-wine-list-2026-11-28.txt line 14921: bin 18231, Inglenook \"Rubicon\" Rutherford, 2010, 360, the bottle); n=2889 (line 14911: bin 187112, 2005, 355); n=2890 (line 14916: bin 17559, 2009, 360); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line, which the list of 3 October 2026 printed at $70)"
+		},
+		{
+			"target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+			"field": "kept.4.a",
+			"op": "replace",
+			"value": {
+				"from": " Compare prices using the confirmed pour size; two $70 glasses do not approach $360.",
+				"to": ""
+			},
+			"reason": "The list of 28 November 2026 prints no Rubicon by the glass (the glass pour is a past glass wine); the bottle is sold alone",
+			"source": "research/winelist-2026-11-28.json n=2891, key b2891 (page:binwise-wine-list-2026-11-28.txt line 14921: bin 18231, Inglenook \"Rubicon\" Rutherford, 2010, 360, the bottle); n=2889 (line 14911: bin 187112, 2005, 355); n=2890 (line 14916: bin 17559, 2009, 360); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line, which the list of 3 October 2026 printed at $70)"
+		},
+		{
+			"target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+			"field": "serviceNote",
+			"op": "replace",
+			"value": {
+				"from": "On the Binwise bottle list of 3 October 2026: bin 18231, 750ml, $360.",
+				"to": "On the Binwise list read 28 November 2026: bin 18231, 750 ml, $360, by the bottle only."
+			},
+			"reason": "The list of 28 November 2026 prints no Rubicon by the glass (the glass pour is a past glass wine); the bottle is sold alone",
+			"source": "research/winelist-2026-11-28.json n=2891, key b2891 (page:binwise-wine-list-2026-11-28.txt line 14921: bin 18231, Inglenook \"Rubicon\" Rutherford, 2010, 360, the bottle); n=2889 (line 14911: bin 187112, 2005, 355); n=2890 (line 14916: bin 17559, 2009, 360); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line, which the list of 3 October 2026 printed at $70)"
+		},
+		{
+			"target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+			"field": "pairs",
+			"op": "set",
+			"value": "The Roasted Chateaubriand with sauce Foyot for two, and the hanger steaks.",
+			"reason": "The list of 28 November 2026 prints no Rubicon by the glass (the glass pour is a past glass wine); the bottle is sold alone",
+			"source": "research/winelist-2026-11-28.json n=2891, key b2891 (page:binwise-wine-list-2026-11-28.txt line 14921: bin 18231, Inglenook \"Rubicon\" Rutherford, 2010, 360, the bottle); n=2889 (line 14911: bin 187112, 2005, 355); n=2890 (line 14916: bin 17559, 2009, 360); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line, which the list of 3 October 2026 printed at $70)"
+		},
+		{
+			"target": "wine:Inglenook ‘Rubicon’ Rutherford 2010",
+			"field": "goesWith",
+			"op": "set",
+			"value": "The Roasted Chateaubriand with sauce Foyot for two, and the hanger steaks.",
+			"reason": "The list of 28 November 2026 prints no Rubicon by the glass (the glass pour is a past glass wine); the bottle is sold alone",
+			"source": "research/winelist-2026-11-28.json n=2891, key b2891 (page:binwise-wine-list-2026-11-28.txt line 14921: bin 18231, Inglenook \"Rubicon\" Rutherford, 2010, 360, the bottle); n=2889 (line 14911: bin 187112, 2005, 355); n=2890 (line 14916: bin 17559, 2009, 360); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line, which the list of 3 October 2026 printed at $70)"
+		},
+		{
+			"target": "house",
+			"op": "answer",
+			"value": {
+				"id": "a-kdis6n03",
+				"was": "the ask how the open bottle of Rubicon 2010 is kept between $70 glass pours, and whether the 2010 is still the vintage open",
+				"tombstone": "2026-11-28T00:01:00.001Z"
+			},
+			"reason": "The Binwise list of 28 November 2026 prints no Rubicon by the glass, so no bottle is open for glass pours",
+			"source": "research/winelist-2026-11-28.json n=2891, key b2891 (page:binwise-wine-list-2026-11-28.txt line 14921: bin 18231, Inglenook \"Rubicon\" Rutherford, 2010, 360, the bottle); n=2889 (line 14911: bin 187112, 2005, 355); n=2890 (line 14916: bin 17559, 2009, 360); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line, which the list of 3 October 2026 printed at $70)"
+		},
+		{
+			"target": "house",
+			"op": "answer",
+			"value": {
+				"id": "a-c9e5bdw9",
+				"was": "the ask to confirm the Chateau Espagnole picks and tiers, which names the Rubicon by the glass as the step up",
+				"tombstone": "2026-11-28T00:01:00.001Z"
+			},
+			"reason": "The Binwise list of 28 November 2026 prints no Rubicon by the glass and the dish now steps up to the Courcel Pommard by Coravin; the ask is filed again as the dish stands",
+			"source": "the dish records d-8onx3lq1 and d-00p5tuen (pairing step up: the Domaine de Courcel Pommard Premier Cru 2007 by Coravin; first and second picks and the four bottle tiers as named); research/winelist-2026-11-28.json n=17 (page:binwise-wine-list-2026-11-28.txt line 91: bin 23632, Domaine de Courcel \"Les Grands Epenots\" Pommard (Coravin), 2007, 55 a glass); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Chateau Espagnole: confirm the first pick (the Moulin d'Issan Bordeaux Supérieur, with the Durban Beaumes-de-Venise second and the Domaine de Courcel Pommard 2007 by Coravin as the step up) and the bottle tiers (Cadrans de Lassègue Saint-Émilion, Haut-Bages Libéral Pauillac, Grand-Puy-Lacoste 2008, the Troplong Mondot half) before service.",
+				"askWhom": "sommelier",
+				"items": [
+					"Chateau Espagnole"
+				]
+			},
+			"reason": "The answered ask, filed again with the step up the dish names now",
+			"source": "the dish records d-8onx3lq1 and d-00p5tuen (pairing step up: the Domaine de Courcel Pommard Premier Cru 2007 by Coravin; first and second picks and the four bottle tiers as named); research/winelist-2026-11-28.json n=17 (page:binwise-wine-list-2026-11-28.txt line 91: bin 23632, Domaine de Courcel \"Les Grands Epenots\" Pommard (Coravin), 2007, 55 a glass); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line)"
+		},
+		{
+			"target": "house",
+			"op": "answer",
+			"value": {
+				"id": "a-3x055ugp",
+				"was": "the ask to confirm the Lamb Shank en Croûte picks and tiers, which names the Rubicon by the glass as the step up",
+				"tombstone": "2026-11-28T00:01:00.001Z"
+			},
+			"reason": "The Binwise list of 28 November 2026 prints no Rubicon by the glass and the dish now steps up to the Courcel Pommard by Coravin; the ask is filed again as the dish stands",
+			"source": "the dish records d-8onx3lq1 and d-00p5tuen (pairing step up: the Domaine de Courcel Pommard Premier Cru 2007 by Coravin; first and second picks and the four bottle tiers as named); research/winelist-2026-11-28.json n=17 (page:binwise-wine-list-2026-11-28.txt line 91: bin 23632, Domaine de Courcel \"Les Grands Epenots\" Pommard (Coravin), 2007, 55 a glass); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Lamb Shank en Croûte: confirm the first pick (the Durban Beaumes-de-Venise, with the Moulin d'Issan Bordeaux Supérieur second and the Domaine de Courcel Pommard 2007 by Coravin as the step up) and the bottle tiers (López de Heredia Viña Cubillo Rioja, Pegau Châteauneuf-du-Pape, Château Musar 2003, the Raspail-Ay Gigondas half) before service.",
+				"askWhom": "sommelier",
+				"items": [
+					"Lamb Shank en Croûte"
+				]
+			},
+			"reason": "The answered ask, filed again with the step up the dish names now",
+			"source": "the dish records d-8onx3lq1 and d-00p5tuen (pairing step up: the Domaine de Courcel Pommard Premier Cru 2007 by Coravin; first and second picks and the four bottle tiers as named); research/winelist-2026-11-28.json n=17 (page:binwise-wine-list-2026-11-28.txt line 91: bin 23632, Domaine de Courcel \"Les Grands Epenots\" Pommard (Coravin), 2007, 55 a glass); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line)"
+		},
+		{
+			"target": "house",
+			"op": "answer",
+			"value": {
+				"id": "a-0o7bjncn",
+				"was": "the ask how a Rubicon 2010 bottle is rung when the $70 glass and the $360 bottle share bin 18231, and how many bottles are held for the glass pour",
+				"tombstone": "2026-11-28T00:01:00.001Z"
+			},
+			"reason": "The Binwise list of 28 November 2026 prints no Rubicon by the glass, so bin 18231 is the bottle alone and no bottle is held for a glass pour",
+			"source": "research/winelist-2026-11-28.json n=2891, key b2891 (page:binwise-wine-list-2026-11-28.txt line 14921: bin 18231, Inglenook \"Rubicon\" Rutherford, 2010, 360, the bottle); n=2889 (line 14911: bin 187112, 2005, 355); n=2890 (line 14916: bin 17559, 2009, 360); page:binwise-wine-list-2026-11-28.txt By the Glass (no Rubicon glass line, which the list of 3 October 2026 printed at $70)"
+		},
+		{
+			"target": "wine:Château Rayas Châteauneuf-du-Pape 2011",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "The list prints Rayas 2009 at $1060, 2011 at $1200 and 2012 at $1300, and its Côtes du Rhône, La Pialade, at $210 and $270, so ring it in by bin 22458 and check the label reads Château Rayas 2011.",
+				"to": "The list prints Rayas 2009 at $1060, 2011 at $1200, 2012 at $1300 and 2014 at $1200, the Pignan 2014 at $850 and its Côtes du Rhône, La Pialade 2014, at $270. The 2014 is printed at the same $1200 as this 2011, so ring it in by bin 22458, never by price, and check the label reads Château Rayas 2011."
+			},
+			"reason": "The list of 28 November 2026 no longer prints La Pialade 2019 at $210 and prints two Rayas bottles that joined, the 2014 at the card bottle’s own price and the Pignan 2014",
+			"source": "research/winelist-2026-11-28.json n=2574 to 2578, keys b2574 to b2578 (page:binwise-wine-list-2026-11-28.txt lines 13309 to 13329: Château Rayas 2009 bin 282113 $1060, 2011 bin 22458 $1200, 2012 bin 25722 $1300, 2014 bin 23552 $1200, Château Rayas \"Pignan\" 2014 bin 23554 $850); n=2605 (line 13466: Château Rayas \"La Pialade\" Côtes du Rhône 2014, bin 29914, 270); page:binwise-wine-list-2026-11-28.txt (no printing of La Pialade 2019, bin 25721, $210)"
+		},
+		{
+			"target": "house",
+			"op": "answer",
+			"value": {
+				"id": "a-fe8q3nwl",
+				"was": "the ask how the older Italian bottles are showing and who checks and decants them, which names the Florus 2011",
+				"tombstone": "2026-11-28T00:01:00.001Z"
+			},
+			"reason": "The Binwise list of 28 November 2026 no longer prints the Florus; the ask is filed again for the five bottles it still prints",
+			"source": "research/winelist-2026-11-28.json (page:binwise-wine-list-2026-11-28.txt lines 17091, 17096, 16070, 16989, 18194: Tignanello 2010 bin 17913 $720, Masseto 2011 bin 27143 $1080, Gaja Barbaresco 2012 bin 16332 $380, Biondi Santi Annata 2012 bin 18542 $425, Quintarelli Recioto 1997 bin 19321 $500); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Tignanello 2010, Masseto 2011, Gaja Barbaresco 2012, Biondi Santi Annata 2012 and the Quintarelli Recioto 1997: how is each older Italian bottle showing, and who checks and decants them?",
+				"askWhom": "sommelier",
+				"items": [
+					"Antinori ‘Tignanello’ Toscana 2010",
+					"Ornellaia ‘Masseto’ Toscana 2011",
+					"Gaja Barbaresco 2012",
+					"Biondi Santi Tenuta Greppo Brunello di Montalcino 2012",
+					"Giuseppe Quintarelli Recioto della Valpolicella Classico 1997"
+				]
+			},
+			"reason": "The answered ask, filed again without the bottle that left",
+			"source": "research/winelist-2026-11-28.json (page:binwise-wine-list-2026-11-28.txt lines 17091, 17096, 16070, 16989, 18194: Tignanello 2010 bin 17913 $720, Masseto 2011 bin 27143 $1080, Gaja Barbaresco 2012 bin 16332 $380, Biondi Santi Annata 2012 bin 18542 $425, Quintarelli Recioto 1997 bin 19321 $500); page:binwise-wine-list-2026-11-28.txt (no printing of the Castello Banfi Florus 2011, bin 192345)"
+		},
+		{
+			"target": "house",
+			"op": "answer",
+			"value": {
+				"id": "a-l1hnpo9z",
+				"was": "the ask which base harvests and dosages the Sélèque Solessence, the Larmandier-Bernier Longitude and the Pierre Péters Cuvée de Réserve magnum carry",
+				"tombstone": "2026-11-28T00:01:00.001Z"
+			},
+			"reason": "The Binwise list of 28 November 2026 no longer prints the Péters magnum; the ask is filed again for the two bottles it still prints",
+			"source": "research/winelist-2026-11-28.json n=373 (page:binwise-wine-list-2026-11-28.txt line 1948: bin 32252, JM Sélèque \"Solessence\" Extra Brut, NV, 100); n=405 (line 2110: bin 31911, Larmandier-Bernier Premier Cru \"Longitude\" Extra Brut, NV, 135); page:binwise-wine-list-2026-11-28.txt (no printing of the Pierre Péters Cuvée de Réserve magnum, bin 12494)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "JM Sélèque Solessence and Larmandier-Bernier Longitude: which base harvest and dosage does each bottle in the cellar carry?",
+				"askWhom": "sommelier",
+				"items": [
+					"JM Sélèque ‘Solessence’ Extra Brut NV",
+					"Larmandier-Bernier Premier Cru ‘Longitude’ Extra Brut NV"
+				]
+			},
+			"reason": "The answered ask, filed again without the bottle that left",
+			"source": "research/winelist-2026-11-28.json n=373 (page:binwise-wine-list-2026-11-28.txt line 1948: bin 32252, JM Sélèque \"Solessence\" Extra Brut, NV, 100); n=405 (line 2110: bin 31911, Larmandier-Bernier Premier Cru \"Longitude\" Extra Brut, NV, 135); page:binwise-wine-list-2026-11-28.txt (no printing of the Pierre Péters Cuvée de Réserve magnum, bin 12494)"
+		},
+		{
+			"target": "house",
+			"op": "answer",
+			"value": {
+				"id": "a-3a4ose59",
+				"was": "the ask which Foillard Côte du Py is in the cellar (the 2022 bottle, the 2023 bottle or the 2023 magnum) and whether Beaujolais is chilled in an ice bucket at the table",
+				"tombstone": "2026-11-28T00:01:00.001Z"
+			},
+			"reason": "The Binwise list of 28 November 2026 no longer prints the 2023 magnum and prints a 2024 magnum; the ask is filed again",
+			"source": "research/winelist-2026-11-28.json (page:binwise-wine-list-2026-11-28.txt lines 11202, 11207, 11212: Jean Foillard \"Côte du Py\" Morgon 2022 bin 28362 $115, 2023 bin 21562 $120, 2024 magnum bin 12567 $270); page:binwise-wine-list-2026-11-28.txt (no printing of the 2023 magnum, bin 11371)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Jean Foillard Côte du Py: which is in the cellar tonight, the 2022 or the 2023 bottle or the 2024 magnum, and do we chill Beaujolais in an ice bucket at the table?",
+				"askWhom": "sommelier",
+				"items": [
+					"Jean Foillard ‘Côte du Py’ Morgon 2022",
+					"Jean Foillard ‘Côte du Py’ Morgon 2024 (1.5 L magnum)",
+					"Domaine Coudert ‘Clos de la Roilette’ Fleurie 2023",
+					"Marcel Lapierre Morgon 2023"
+				]
+			},
+			"reason": "The answered ask, filed again with the magnum the list prints now",
+			"source": "research/winelist-2026-11-28.json (page:binwise-wine-list-2026-11-28.txt lines 11202, 11207, 11212: Jean Foillard \"Côte du Py\" Morgon 2022 bin 28362 $115, 2023 bin 21562 $120, 2024 magnum bin 12567 $270); page:binwise-wine-list-2026-11-28.txt (no printing of the 2023 magnum, bin 11371)"
+		},
+		{
+			"target": "house",
+			"op": "answer",
+			"value": {
+				"id": "a-tqsn143t",
+				"was": "the ask which Pegau bottles are open to sell, and whether Château Pegau, whose Cuvée Maclura was on the list, is a Féraud family estate",
+				"tombstone": "2026-11-28T00:01:00.001Z"
+			},
+			"reason": "The Binwise list of 28 November 2026 no longer prints the Cuvée Maclura, so its half of the ask is moot; what is left is filed again",
+			"source": "research/winelist-2026-11-28.json (page:binwise-wine-list-2026-11-28.txt lines 13359 to 13384: Domaine du Pegau Cuvée Laurence magnum 2012, Cuvée Laurence 2019, Cuvée Réservée double magnum 2016, 2020 bin 24751 $195, 2020 magnum $510, 2021 bin 28432 $195); page:binwise-wine-list-2026-11-28.txt (no printing of Château Pegau \"Cuvée Maclura\" Côtes du Rhône 2020, bin 21512, $60, which page:binwise-wine-list-2026-10-03.txt printed at line 13446)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Domaine du Pegau: which bottles are open to sell tonight, the Réservée 2020 in 750 ml, the 2021 or the magnums?",
+				"askWhom": "sommelier",
+				"items": [
+					"Domaine du Pegau ‘Cuvée Réservée’ Châteauneuf-du-Pape 2020"
+				]
+			},
+			"reason": "What the answered ask also asked, filed again",
+			"source": "research/winelist-2026-11-28.json (page:binwise-wine-list-2026-11-28.txt lines 13359 to 13384: Domaine du Pegau Cuvée Laurence magnum 2012, Cuvée Laurence 2019, Cuvée Réservée double magnum 2016, 2020 bin 24751 $195, 2020 magnum $510, 2021 bin 28432 $195); page:binwise-wine-list-2026-11-28.txt (no printing of Château Pegau \"Cuvée Maclura\" Côtes du Rhône 2020, bin 21512, $60, which page:binwise-wine-list-2026-10-03.txt printed at line 13446)"
+		},
+		{
+			"target": "house",
+			"op": "answer",
+			"value": {
+				"id": "a-i6fy7uts",
+				"was": "the ask what the Quintarelli Ca' del Merlo 2023 and 2024 filed under Italian whites are, which quotes bins 21732 and 105222",
+				"tombstone": "2026-11-28T00:01:00.001Z"
+			},
+			"reason": "The Binwise list of 28 November 2026 prints the 2023 at bin 21672; the ask is filed again with the bin it prints",
+			"source": "research/winelist-2026-11-28.json n=1281 (page:binwise-wine-list-2026-11-28.txt line 6645: bin 21672, Giuseppe Quintarelli \"Ca' del Merlo\" Veneto, 2023, 135; Italy & Greece, White); n=1282 (line 6650: bin 105222, 2024, 145)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Quintarelli Ca' del Merlo 2023 and 2024 under Italian whites (bins 21672 and 105222): is it a white wine, or the red filed in the wrong place?",
+				"askWhom": "sommelier",
+				"items": [
+					"Giuseppe Quintarelli Recioto della Valpolicella Classico 1997"
+				]
+			},
+			"reason": "The answered ask, filed again with the bins the list prints",
+			"source": "research/winelist-2026-11-28.json n=1281 (page:binwise-wine-list-2026-11-28.txt line 6645: bin 21672, Giuseppe Quintarelli \"Ca' del Merlo\" Veneto, 2023, 135; Italy & Greece, White); n=1282 (line 6650: bin 105222, 2024, 145)"
+		},
+		{
+			"target": "house",
+			"op": "answer",
+			"value": {
+				"id": "a-x327hjp9",
+				"was": "the ask what the two Domaine Tempier Bandol bottles under Provence whites (bins 22522 and 27123) and the Bandol Natural 2016 (bin 23344) are",
+				"tombstone": "2026-11-28T00:01:00.001Z"
+			},
+			"reason": "The Binwise list of 28 November 2026 prints bin 22522 also for Château Gloria 2017, a new bottle; the ask is filed again with that clash in it",
+			"source": "research/winelist-2026-11-28.json n=1161 (page:binwise-wine-list-2026-11-28.txt line 6006: bin 22522, Domaine Tempier Bandol, 2023, 120; France, Other, White, Provence); n=1162 (line 6011: bin 27123, 2024, 135); n=315 (line 1651: bin 23344, Domaine Tempier Bandol Natural, 2016, 97; Sustainable Selections, White); n=2280, key b2280 (line 11809: bin 22522, Château Gloria, 2017, 155)"
+		},
+		{
+			"target": "ask:+",
+			"op": "add",
+			"value": {
+				"question": "Domaine Tempier Bandol under Provence whites (bins 22522 and 27123): which wines are they, given bin 22522 is also printed for Château Gloria 2017, and what is the Tempier Bandol Natural 2016 under Sustainable Selections (bin 23344)?",
+				"askWhom": "sommelier",
+				"items": [
+					"Domaine Tempier Bandol Rosé 2024",
+					"Château Gloria Saint-Julien 2017"
+				]
+			},
+			"reason": "The answered ask, filed again with the bin the list now shares",
+			"source": "research/winelist-2026-11-28.json n=1161 (page:binwise-wine-list-2026-11-28.txt line 6006: bin 22522, Domaine Tempier Bandol, 2023, 120; France, Other, White, Provence); n=1162 (line 6011: bin 27123, 2024, 135); n=315 (line 1651: bin 23344, Domaine Tempier Bandol Natural, 2016, 97; Sustainable Selections, White); n=2280, key b2280 (line 11809: bin 22522, Château Gloria, 2017, 155)"
+		}
+	]
+}
