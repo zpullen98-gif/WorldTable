@@ -26,6 +26,13 @@ const DATE = di >= 0 ? args[di + 1] : '2026-10-03';
 const CHECK = args.includes('--check');
 const SRC = join(HERE, 'brennans', 'pages', `binwise-wine-list-${DATE}.txt`);
 const OUT = join(HERE, 'brennans', 'research', `winelist-${DATE}.json`);
+if (!/^\d{4}-\d{2}-\d{2}$/.test(String(DATE))) { console.error('parse-winelist: --date needs YYYY-MM-DD'); process.exit(1); }
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+/** A date as the notes write it: 2026-10-03 as 3 October 2026. */
+function inWords(d) {
+	const [y, m, day] = d.split('-').map(Number);
+	return `${day} ${MONTHS[m - 1]} ${y}`;
+}
 
 // Headings that sit one level under the top section even when they follow a
 // group heading (the paste does not mark where a group ends).
@@ -205,7 +212,7 @@ if (!CHECK) {
 		version: 1,
 		house: 'brennans-new-orleans',
 		source: `brennans/pages/binwise-wine-list-${DATE}.txt`,
-		sourceNote: 'The owner pasted the complete Binwise list on 3 October 2026; prices as printed, by the glass prices are per glass, every other price per bottle.',
+		sourceNote: `The owner pasted the complete Binwise list on ${inWords(DATE)}; prices as printed, by the glass prices are per glass, every other price per bottle.`,
 		readOn: DATE,
 		report,
 		anomalies: { binConflicts, crossListed, blankBins, listedMoreThanOnce: repeated },
