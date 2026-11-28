@@ -1,0 +1,654 @@
+{
+	"entries": [
+		{
+			"target": "wine:Cesarini Sforza Rosé Brut Trento NV",
+			"field": "kept.5.a",
+			"op": "replace",
+			"value": {
+				"fromRe": "^It was last printed on the Binwise list of 3 October 2026[\\s\\S]*$",
+				"to": "The Binwise list read on 28 November 2026 no longer prints it. It was last printed on the list of 3 October 2026, bin 5123, 750 ml, $55, under Selections Under $100, Sparkling. The sparkling rosé that stands nearest in its place on that page is the Chapel Down Rosé Brut from Kent, bin 102122, $75, also made the Champagne way, with its second fermentation in the bottle. For a pink Trento from the same city, the Ferrari Rosé Brut is printed under International Sparkling, Italy, bin 31232, $95. This card stays here to be read; the wine is no longer offered or named with a dish."
+			},
+			"reason": "A past card says where it was last printed, what on the list of 28 November 2026 stands nearest in its place, and that it stays to be read; the plain note it replaces said only the first",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 99 (Selections Under $100, Sparkling: Chapel Down Rosé Brut Kent, bin 102122, NV, 75) and line 3117 (International ~ Sparkling, Italy: Ferrari Rosé Brut, bin 31232, NV, 95), no printing of bin 5123; page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 15: bin 5123, $55)"
+		},
+		{
+			"target": "wine:Mas de Valériole ‘Vé’ Rosé Méditerranée 2025 (1.5 L magnum)",
+			"field": "kept.5.a",
+			"op": "replace",
+			"value": {
+				"fromRe": "^It was last printed on the Binwise list of 3 October 2026[\\s\\S]*$",
+				"to": "The Binwise list read on 28 November 2026 no longer prints it. It was last printed on the list of 3 October 2026, bin 1569, 1.5 L magnum, $85, under Large Formats, Rosé, and again under Rosé, France. The rosé magnum the list prints in its place is the Lucien Crochet Sancerre Rosé 2024, bin 12262, $185, the one bottle under Large Formats, Rosé now: pale Pinot Noir from the Loire rather than a Camargue blend. Bin 1569 now prints the Domaine Daulny Sancerre 2024, $80, under Selections Under $100, Sauvignon Blanc, so a ticket rung on that bin is the Daulny, never the Vé. This card stays here to be read; the wine is no longer offered or named with a dish."
+			},
+			"reason": "A past card says where it was last printed, what on the list of 28 November 2026 stands nearest in its place, and that it stays to be read; the plain note it replaces said only the first",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 1023 (Large Formats, Rosé • Large Format: Lucien Crochet Sancerre FR • 1.5L Magnum, bin 12262, 2024, 185) and line 116 (Selections Under $100, Sauvignon Blanc: Domaine Daulny Sancerre FR, bin 1569, 2024, 80), no printing of the Vé; page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entries 197 and 1445: bin 1569, $85)"
+		},
+		{
+			"target": "wine:Pierre Péters ‘Cuvée de Réserve’ Brut NV (1.5 L magnum)",
+			"field": "kept.5.a",
+			"op": "replace",
+			"value": {
+				"fromRe": "^It was last printed on the Binwise list of 3 October 2026[\\s\\S]*$",
+				"to": "The Binwise list read on 28 November 2026 no longer prints it. It was last printed on the list of 3 October 2026, bin 12494, 1.5 L magnum, $190, under Large Formats, Champagne, and under Champagne, Grower Producers, Côtes de Blancs. The grower Blanc de Blancs magnum the list prints in its place is the Diebolt-Vallois Blanc de Blancs Extra Brut, bin 32212, $220, all Chardonnay from Cramant, on the same Côte des Blancs. Pierre Péters stays on the list in standard bottles: the Réserve Oubliée Blanc de Blancs, bin 325711, $305, and Les Montjolys 2017, bin 325713, $600. This card stays here to be read; the magnum is no longer offered or named with a dish."
+			},
+			"reason": "A past card says where it was last printed, what on the list of 28 November 2026 stands nearest in its place, and that it stays to be read; the plain note it replaces said only the first",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 694 (Large Formats, Champagne • Large Format: Diebolt-Vallois \"Blanc de Blancs\" Extra Brut • 1.5L Magnum, bin 32212, NV, 220), lines 2160 and 2165 (Champagne, Grower Producers ~ Côtes de Blancs: Pierre Péters Les Montjolys 2017, bin 325713, 600; Résérve Oubliée, bin 325711, NV, 305), no printing of bin 12494; page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entries 147 and 420: bin 12494, $190)"
+		},
+		{
+			"target": "wine:Jean Foillard ‘Côte du Py’ Morgon 2023 (1.5 L magnum)",
+			"field": "kept.5.a",
+			"op": "replace",
+			"value": {
+				"fromRe": "^It was last printed on the Binwise list of 3 October 2026[\\s\\S]*$",
+				"to": "The Binwise list read on 28 November 2026 no longer prints it. It was last printed on the list of 3 October 2026, bin 11371, 1.5 L magnum, $250, under Large Formats, Red, France, and under Burgundy, Red, Beaujolais. The magnum in its place is the next vintage of the same wine, Jean Foillard Côte du Py 2024, bin 12567, $270, Gamay from the same schist hill above Morgon; the 2022 in the standard bottle stands at bin 28362, $115. This card stays here to be read; the 2023 magnum is no longer offered or named with a dish."
+			},
+			"reason": "A past card says where it was last printed, what on the list of 28 November 2026 stands nearest in its place, and that it stays to be read; the plain note it replaces said only the first",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 1202 (Large Formats, Red • Large Format, France: Jean Foillard \"Côte du Py\" Morgon Beaujolais • 1.5L Magnum, bin 12567, 2024, 270) and line 11202 (bin 28362, Jean Foillard \"Côte du Py\" Morgon, 2022, 115), no printing of bin 11371; page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entries 230 and 2183: bin 11371, $250)"
+		},
+		{
+			"target": "wine:Il Poggione Brunello di Montalcino 2018",
+			"field": "kept.5.a",
+			"op": "replace",
+			"value": {
+				"fromRe": "^It was last printed on the Binwise list of 3 October 2026[\\s\\S]*$",
+				"to": "The Binwise list read on 28 November 2026 no longer prints it. It was last printed on the list of 3 October 2026, bin 17832, 750 ml, $198, under Italy, Red, Tuscany, Brunello and Rosso di Montalcino. The classic Brunello that stands nearest in its place is the Altesino Brunello di Montalcino 2020, bin 1747, $150, first on that page, aged like the Il Poggione in large oak casks; for older Brunello, the Biondi Santi Tenuta Greppo 2012 stands at bin 18542, $425. Bin 17832 now prints only the Grgich Hills Napa Valley 2020, $90, so the old clash on that bin is gone. This card stays here to be read; the wine is no longer offered or named with a dish."
+			},
+			"reason": "A past card says where it was last printed, what on the list of 28 November 2026 stands nearest in its place, and that it stays to be read; the plain note it replaces said only the first",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 16869 (Italy ~ Red, Tuscany ~ Brunello & Rosso di Montalcino: Altesino Brunello di Montalcino, bin 1747, 2020, 150), line 16989 (bin 18542, Tenuta Greppo \"Biondi Santi\" Annata Brunello di Montalcino, 2012, 425) and line 15889 (bin 17832, Grgich Hills Napa Valley, 2020, 90); page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 3295: bin 17832, $198); Altesino's large cask aging as its card carries it (_staging/nov28-c3.overrides.json)"
+		},
+		{
+			"target": "wine:Ken Wright Cellars Willamette Valley Pinot Noir 2024",
+			"field": "kept.5.a",
+			"op": "replace",
+			"value": {
+				"fromRe": "^It was last printed on the Binwise list of 3 October 2026[\\s\\S]*$",
+				"to": "The Binwise list read on 28 November 2026 no longer prints it. It was last printed on the list of 3 October 2026, bin 148412, 750 ml, $72, under United States, Pinot Noir, Oregon. The Willamette Valley Pinot Noir under $100 that stands in its place is the Lemelson Thea’s Selection 2022, bin 1648, $80, on the same Oregon page, and it takes the Ken Wright’s place as the value bottle with the Blackened Tofu. Ken Wright stays on the list in three formats: the McCrone Vineyard 2018 half-bottle, bin 15183, $60, the Carter Vineyard 2022 half-bottle, bin 15281, $72, and the Shea Vineyard 2022 magnum, bin 12275, $300; the Canary Hill and Freedom Hill bottles the card names are no longer printed either. This card stays here to be read; the wine is no longer offered or named with a dish."
+			},
+			"reason": "A past card says where it was last printed, what on the list of 28 November 2026 stands nearest in its place, and that it stays to be read; the plain note it replaces said only the first",
+			"source": "page:binwise-wine-list-2026-11-28.txt lines 14038 to 14053 (United States ~ Pinot Noir, Oregon: Ken Wright Cellars McCrone Vineyard 375ml, bin 15183, 2018, 60; Shea Vineyard 1.5L, bin 12275, 2022, 300; Carter Vineyard 375ml, bin 15281, 2022, 72; Lemelson \"Thea's Selection\" Willamette Valley, bin 1648, 2022, 80), no printing of bin 148412, Canary Hill or Freedom Hill; page:binwise-wine-list-2026-10-03.txt lines 14039 to 14059 (Ken Wright Cellars Freedom Hill and Canary Hill Vineyard printed) and research/winelist-2026-10-03.json entry 2714 (bin 148412, $72); the Blackened Tofu value tier as _staging/nov28-c1.overrides.json re-points it"
+		},
+		{
+			"target": "wine:Castello Banfi ‘Florus’ Moscadello di Montalcino 2011",
+			"field": "kept.5.a",
+			"op": "replace",
+			"value": {
+				"fromRe": "^It was last printed on the Binwise list of 3 October 2026[\\s\\S]*$",
+				"to": "The Binwise list read on 28 November 2026 no longer prints it. It was last printed on the list of 3 October 2026, bin 192345, 750 ml, $60, under Dessert Wines, Italy. No late harvest Moscato stands in its place: the nearest in kind on that page is the Marco de Bartoli Bukkuram Padre della Vigna 2008, bin 193312, $200, a passito from the island of Pantelleria made from Zibibbo, the Muscat of Alexandria, partly from dried grapes. The list prints bin 193312 also for the Riveyrac Rivesaltes 1975, $190, so ring the Bukkuram by name. Banfi stays on the list with its Tuscan reds, Summus and Stilnovo. This card stays here to be read; the wine is no longer offered or named with a dish."
+			},
+			"reason": "A past card says where it was last printed, what on the list of 28 November 2026 stands nearest in its place, and that it stays to be read; the plain note it replaces said only the first",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 18189 (Dessert Wines, Italy: Marco de Bartoli \"Bukkuram Padre Della Vigna\" Pantelleria, bin 193312, 2008, 200), line 18209 (Fortified Wines, France: Riveyrac Rivesaltes Languedoc-Roussillon, bin 193312, 1975, 190) and lines 17037 and 17042 (Banfi \"Stilnovo\" and \"Summus\" Toscana Rosso), no printing of bin 192345; page:binwise-wine-list-2026-10-03.txt (research/winelist-2026-10-03.json entry 3537: bin 192345, $60); the Bukkuram a Passito di Pantelleria DOC of Zibibbo: callmewine.com (Bukkuram Padre della Vigna 2019) and thewhiskyexchange.com (Bukkuram Padre della Vigna 2019 Passito), partly dried grapes: dissapore.com (Il Passito di Pantelleria)"
+		},
+		{
+			"target": "wine:Moulin d’Issan Bordeaux Supérieur 2023",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "The current menu prints the 2021 and the Binwise list the 2023, so the vintage is read at lineup.",
+				"to": "Binwise printed the 2023 on 28 November 2026; older menu pages printed the 2021, so read the label."
+			},
+			"reason": "The card moved to the 2023 the Binwise list of 28 November 2026 prints (overrides.json, the vintage and name); this sentence still spoke of the vintage as disputed between the menu and Binwise",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 81 (By the Glass, Red, CABERNET SAUVIGNON BLEND: Moulin d'Issan Bordeaux Supérieur FR, 2023, 16)"
+		},
+		{
+			"target": "wine:Moulin d’Issan Bordeaux Supérieur 2023",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "The vintage is disputed: the current menu prints 2021 and Binwise 2023, so read the label before you name it.",
+				"to": "The card is the 2023 Binwise prints; older menu pages printed 2021, so read the label before you name it."
+			},
+			"reason": "The card moved to the 2023 the Binwise list of 28 November 2026 prints (overrides.json, the vintage and name); this sentence still spoke of the vintage as disputed between the menu and Binwise",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 81 (By the Glass, Red, CABERNET SAUVIGNON BLEND: Moulin d'Issan Bordeaux Supérieur FR, 2023, 16)"
+		},
+		{
+			"target": "wine:Moulin d’Issan Bordeaux Supérieur 2023",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "and leave the mix in the vintage open to the sommelier at lineup.",
+				"to": "and leave the 2023 mix to the sommelier: mildew hit Bordeaux Merlot hardest in 2023."
+			},
+			"reason": "The 2023 Bordeaux vintage: downy mildew in June and July hit Merlot hardest and cut its share in many blends; a reason the 2023 blend is left to the sommelier",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 81 (By the Glass, Red, CABERNET SAUVIGNON BLEND: Moulin d'Issan Bordeaux Supérieur FR, 2023, 16); the 2023 vintage: thewineindependent.com (Bordeaux 2023 Vintage Report and Reviews from Barrel: Merlot took the brunt of the mildew), laywheeler.com (Bordeaux 2023 Vintage Report: mildew affects Merlot more than Cabernet), decanter.com (Bordeaux 2023: how weather conditions shaped the vintage: less Merlot in the blends)"
+		},
+		{
+			"target": "wine:Moulin d’Issan Bordeaux Supérieur 2023",
+			"field": "serviceNote",
+			"op": "set",
+			"value": "The Binwise list read 28 November 2026 prints Moulin d’Issan 2023 at $16 a glass, as the list of 3 October 2026 did; the menu page of 3 October 2026 and the glass sheet of 15 November 2026 printed 2021. Read the label at lineup before naming the vintage.",
+			"reason": "The card moved to the 2023 the Binwise list of 28 November 2026 prints (overrides.json, the vintage and name); this sentence still spoke of the vintage as disputed between the menu and Binwise",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 81 (By the Glass, Red, CABERNET SAUVIGNON BLEND: Moulin d'Issan Bordeaux Supérieur FR, 2023, 16)"
+		},
+		{
+			"target": "house",
+			"op": "answer",
+			"value": {
+				"id": "a-097t483s",
+				"was": "the ask whether the menus should head the Moulin d’Issan as a Merlot blend, quoting the importer’s sheet for the 2021",
+				"tombstone": "2026-11-28T00:01:00.001Z"
+			},
+			"reason": "The card is the 2023 the Binwise list of 28 November 2026 prints, and the importer’s figure is the 2021’s; the question that stands, Merlot or Cabernet led in the 2023, is the ask filed for the 2023 in overrides.json (“Moulin d’Issan Bordeaux Supérieur 2023 by the glass: is it Merlot led...”). The ask leaves under a tombstone one millisecond after the last edition that carried it",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 81 (By the Glass, Red, CABERNET SAUVIGNON BLEND: Moulin d'Issan Bordeaux Supérieur FR, 2023, 16)"
+		},
+		{
+			"target": "wine:Minuty ‘Prestige’ Côtes de Provence Rosé 2025",
+			"field": "kept.2.a",
+			"op": "replace",
+			"value": {
+				"from": "Rosé 2024 is our still rosé by the glass",
+				"to": "Rosé 2025 is our still rosé by the glass"
+			},
+			"reason": "The card moved to the 2025 the Binwise list of 28 November 2026 prints (overrides.json); this sentence still named the 2024",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 59 (By the Glass, Rosé, GRENACHE BLEND: \"Prestige\" Côtes de Provence FR, 2025, 17)"
+		},
+		{
+			"target": "wine:Minuty ‘Prestige’ Côtes de Provence Rosé 2025",
+			"field": "kept.2.a",
+			"op": "replace",
+			"value": {
+				"from": "Exact proportions for our saved 2024 vintage are not confirmed",
+				"to": "Exact proportions for the 2025 are not confirmed"
+			},
+			"reason": "The card moved to the 2025 the Binwise list of 28 November 2026 prints (overrides.json); this sentence still named the 2024",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 59 (By the Glass, Rosé, GRENACHE BLEND: \"Prestige\" Côtes de Provence FR, 2025, 17)"
+		},
+		{
+			"target": "wine:Minuty ‘Prestige’ Côtes de Provence Rosé 2025",
+			"field": "kept.4.a",
+			"op": "replace",
+			"value": {
+				"from": "Confirm at lineup that the vintage is still the 2024: young rosé rolls over.",
+				"to": "The Binwise list of 28 November 2026 prints the 2025 as “Prestige” Côtes de Provence with no producer name, where the list of 3 October printed Minuty Prestige 2024, so read the label at lineup and confirm it is Minuty’s 2025: young rosé rolls over."
+			},
+			"reason": "The card moved to the 2025 the Binwise list of 28 November 2026 prints (overrides.json); this sentence still named the 2024",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 59 (By the Glass, Rosé, GRENACHE BLEND: \"Prestige\" Côtes de Provence FR, 2025, 17)"
+		},
+		{
+			"target": "wine:Minuty ‘Prestige’ Côtes de Provence Rosé 2025",
+			"field": "serviceNote",
+			"op": "replace",
+			"value": {
+				"from": "not a verified recipe for the saved 2024 vintage",
+				"to": "not a verified recipe for the 2025 the Binwise list of 28 November 2026 prints, with no producer name"
+			},
+			"reason": "The card moved to the 2025 the Binwise list of 28 November 2026 prints (overrides.json); this sentence still named the 2024",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 59 (By the Glass, Rosé, GRENACHE BLEND: \"Prestige\" Côtes de Provence FR, 2025, 17)"
+		},
+		{
+			"target": "wine:Domaine de Durban Beaumes-de-Venise Rouge 2024",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "$19 on the current menu at breakfast and lunch and at dinner; the Binwise list still prints $18.",
+				"to": "$18 a glass on the Binwise list read 28 November 2026, at breakfast and lunch and at dinner; the menu page of 3 October 2026 printed $19.00."
+			},
+			"reason": "The card moved to $18, the glass price the Binwise list of 28 November 2026 prints, and the dispute is resolved (overrides.json); this sentence still quoted $19",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 66 (By the Glass, Red, GRENACHE BLEND: Domaine De Durban Beaumes-de-Venise FR, 2024, 18)"
+		},
+		{
+			"target": "wine:Domaine de Durban Beaumes-de-Venise Rouge 2024",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "The glass price is disputed: the current menu prints $19 and Binwise $18, so confirm at lineup and quote the list in hand.",
+				"to": "The glass is $18 on the Binwise list of 28 November 2026; the menu page of 3 October printed $19.00, so quote the list in hand."
+			},
+			"reason": "The card moved to $18, the glass price the Binwise list of 28 November 2026 prints, and the dispute is resolved (overrides.json); this sentence still quoted $19",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 66 (By the Glass, Red, GRENACHE BLEND: Domaine De Durban Beaumes-de-Venise FR, 2024, 18)"
+		},
+		{
+			"target": "dish:Eggs Owen",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "Pour the Durban at $19;",
+				"to": "Pour the Durban at $18;"
+			},
+			"reason": "The card moved to $18, the glass price the Binwise list of 28 November 2026 prints, and the dispute is resolved (overrides.json); this sentence still quoted $19",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 66 (By the Glass, Red, GRENACHE BLEND: Domaine De Durban Beaumes-de-Venise FR, 2024, 18)"
+		},
+		{
+			"target": "dish:Creole Hanger Steak",
+			"field": "kept.2.a",
+			"op": "replace",
+			"value": {
+				"from": "Pour the Durban at $19, served cool;",
+				"to": "Pour the Durban at $18, served cool;"
+			},
+			"reason": "The card moved to $18, the glass price the Binwise list of 28 November 2026 prints, and the dispute is resolved (overrides.json); this sentence still quoted $19",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 66 (By the Glass, Red, GRENACHE BLEND: Domaine De Durban Beaumes-de-Venise FR, 2024, 18)"
+		},
+		{
+			"target": "dish:Creole-Spiced Hanger Steak",
+			"field": "kept.1.a",
+			"op": "replace",
+			"value": {
+				"from": "the Durban at $19; for a fuller glass, the Kokomo Cabernet Sauvignon, its glass price to ask the manager.",
+				"to": "the Durban at $18; for a fuller glass, the Kokomo Cabernet Sauvignon, its glass price on the list in hand."
+			},
+			"reason": "The Binwise list of 28 November 2026 prints the Durban at $18 and the Kokomo at $23 a glass (overrides.json prices both); the sentence still quoted $19 and sent the Kokomo price to the manager. The $23 is left out of the words: the note gate reads the paste without its dollar reading, so a glass figure the October pages never printed fails it",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 66 (By the Glass, Red, GRENACHE BLEND: Domaine De Durban Beaumes-de-Venise FR, 2024, 18); page:binwise-wine-list-2026-11-28.txt line 86 (By the Glass, Red, CABERNET SAUVIGNON: Kokomo Sonoma County CA, 2022, 23)"
+		},
+		{
+			"target": "scenario:A cheaper bottle for the Chateaubriand",
+			"field": "you",
+			"op": "replace",
+			"value": {
+				"from": "the Durban Southern Rhône at $19.00 is riper",
+				"to": "the Durban Southern Rhône at $18 is riper"
+			},
+			"reason": "The card moved to $18, the glass price the Binwise list of 28 November 2026 prints, and the dispute is resolved (overrides.json); this sentence still quoted $19",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 66 (By the Glass, Red, GRENACHE BLEND: Domaine De Durban Beaumes-de-Venise FR, 2024, 18)"
+		},
+		{
+			"target": "wine:Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "The glass sheet prints no price, so ask the manager before you quote one.",
+				"to": "The Binwise list read 28 November 2026 prints it at $15 a glass."
+			},
+			"reason": "The Binwise list of 28 November 2026 prints this pour at $15 a glass, and overrides.json prices the card; these words still said the glass sheet prints no price",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 32 (By the Glass: PINOT GRIS, Lemelson Vineyards \"Tikka's Run\" Willamette Valley OR, 2022, 15)"
+		},
+		{
+			"target": "wine:Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "It is new on the November glass sheet, which prints no price: ask the manager before you quote one, and confirm",
+				"to": "It is $15 a glass on the Binwise list of 28 November 2026; confirm"
+			},
+			"reason": "The Binwise list of 28 November 2026 prints this pour at $15 a glass, and overrides.json prices the card; these words still said the glass sheet prints no price",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 32 (By the Glass: PINOT GRIS, Lemelson Vineyards \"Tikka's Run\" Willamette Valley OR, 2022, 15)"
+		},
+		{
+			"target": "wine:Lemelson Vineyards ‘Tikka’s Run’ Pinot Gris 2022",
+			"field": "serviceNote",
+			"op": "set",
+			"value": "New on the Wines by the Glass sheet of 15 November 2026; $15 a glass on the Binwise list read 28 November 2026. Confirm at lineup that it is poured and that the 2022 is open.",
+			"reason": "The Binwise list of 28 November 2026 prints this pour at $15 a glass, and overrides.json prices the card; these words still said the glass sheet prints no price",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 32 (By the Glass: PINOT GRIS, Lemelson Vineyards \"Tikka's Run\" Willamette Valley OR, 2022, 15)"
+		},
+		{
+			"target": "wine:Kokomo Sonoma County Cabernet Sauvignon 2022",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "The glass sheet prints no price, so ask the manager before you quote one.",
+				"to": "The Binwise list read 28 November 2026 prints its glass price: quote it from the list in hand."
+			},
+			"reason": "The Binwise list of 28 November 2026 prints this pour at $23 a glass, and overrides.json prices the card; these words still said the glass sheet prints no price",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 86 (By the Glass: CABERNET SAUVIGNON, Kokomo Sonoma County CA, 2022, 23)"
+		},
+		{
+			"target": "wine:Kokomo Sonoma County Cabernet Sauvignon 2022",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "It is new on the November glass sheet, which prints no price: ask the manager before you quote one, and confirm",
+				"to": "Its glass price is printed on the Binwise list of 28 November 2026: quote it from the list in hand, and confirm"
+			},
+			"reason": "The Binwise list of 28 November 2026 prints this pour at $23 a glass, and overrides.json prices the card; these words still said the glass sheet prints no price",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 86 (By the Glass: CABERNET SAUVIGNON, Kokomo Sonoma County CA, 2022, 23)"
+		},
+		{
+			"target": "wine:Kokomo Sonoma County Cabernet Sauvignon 2022",
+			"field": "serviceNote",
+			"op": "set",
+			"value": "New on the Wines by the Glass sheet of 15 November 2026; $23 a glass on the Binwise list read 28 November 2026. Confirm at lineup that it is poured and that the 2022 is open.",
+			"reason": "The Binwise list of 28 November 2026 prints this pour at $23 a glass, and overrides.json prices the card; these words still said the glass sheet prints no price",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 86 (By the Glass: CABERNET SAUVIGNON, Kokomo Sonoma County CA, 2022, 23)"
+		},
+		{
+			"target": "wine:Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "The glass sheet prints no price, so ask the manager before you quote one.",
+				"to": "The Binwise list read 28 November 2026 prints it at $50 a glass."
+			},
+			"reason": "The Binwise list of 28 November 2026 prints this Coravin pour at $50 a glass under bin 2144, and overrides.json prices the card; these words still said the glass sheet prints no price",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 52 (By the Glass, Coravin, bin 2144, 50) and line 4647 (bin 2144, the bottle, 275)"
+		},
+		{
+			"target": "wine:Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "The glass sheet prints no price, so ask the manager before you quote one; the figure on the bottle list is a bottle price, never a glass price.",
+				"to": "The Binwise list of 28 November 2026 prints it at $50 a glass under bin 2144, the bin of the bottle at $275, so ring the glass, never the bottle."
+			},
+			"reason": "The Binwise list of 28 November 2026 prints this Coravin pour at $50 a glass under bin 2144, and overrides.json prices the card; these words still said the glass sheet prints no price",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 52 (By the Glass, Coravin, bin 2144, 50) and line 4647 (bin 2144, the bottle, 275)"
+		},
+		{
+			"target": "wine:Louis Jadot ‘Les Pucelles’ Puligny-Montrachet Premier Cru 2008 (Coravin)",
+			"field": "serviceNote",
+			"op": "set",
+			"value": "New on the Wines by the Glass sheet of 15 November 2026; $50 a glass on the Binwise list read 28 November 2026, which prints the glass line with bin 2144, the bin of the bottle at $275. Ring the glass, never the bottle, and confirm at lineup that it is poured and that the 2008 is open.",
+			"reason": "The Binwise list of 28 November 2026 prints this Coravin pour at $50 a glass under bin 2144, and overrides.json prices the card; these words still said the glass sheet prints no price",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 52 (By the Glass, Coravin, bin 2144, 50) and line 4647 (bin 2144, the bottle, 275)"
+		},
+		{
+			"target": "wine:Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "The glass sheet prints no price, so ask the manager before you quote one.",
+				"to": "The Binwise list read 28 November 2026 prints it at $55 a glass."
+			},
+			"reason": "The Binwise list of 28 November 2026 prints this Coravin pour at $55 a glass under bin 23632, and overrides.json prices the card; these words still said the glass sheet prints no price",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 91 (By the Glass, Coravin, bin 23632, 55) and line 10356 (bin 23632, the bottle, 215)"
+		},
+		{
+			"target": "wine:Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "The glass sheet prints no price, so ask the manager before you quote one; the figure on the bottle list is a bottle price.",
+				"to": "The Binwise list of 28 November 2026 prints it at $55 a glass under bin 23632, the bin of the bottle at $215, so ring the glass, never the bottle."
+			},
+			"reason": "The Binwise list of 28 November 2026 prints this Coravin pour at $55 a glass under bin 23632, and overrides.json prices the card; these words still said the glass sheet prints no price",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 91 (By the Glass, Coravin, bin 23632, 55) and line 10356 (bin 23632, the bottle, 215)"
+		},
+		{
+			"target": "wine:Domaine de Courcel ‘Grand Clos des Épenots’ Pommard Premier Cru 2007 (Coravin)",
+			"field": "serviceNote",
+			"op": "set",
+			"value": "New on the Wines by the Glass sheet of 15 November 2026; $55 a glass on the Binwise list read 28 November 2026, which prints the glass line with bin 23632, the bin of the Grand Clos des Épenots bottle at $215. Ring the glass, never the bottle, and confirm at lineup that it is poured and that the 2007 is open. The glass line prints Les Grands Epenots; the label reads Grand Clos des Épenots, so read the label at lineup.",
+			"reason": "The Binwise list of 28 November 2026 prints this Coravin pour at $55 a glass under bin 23632, and overrides.json prices the card; these words still said the glass sheet prints no price",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 91 (By the Glass, Coravin, bin 23632, 55) and line 10356 (bin 23632, the bottle, 215)"
+		},
+		{
+			"target": "wine:Louis Michel Chablis 2023",
+			"field": "why",
+			"op": "set",
+			"value": "Unoaked village Chablis under $100: lemon and chalk for the Grand Isle Jewel Oysters and the Swordfish Grenobloise.",
+			"reason": "The card rolled to the 2023 at bin 26553 (overrides.json); the Redfish Véronique it was the value bottle for is under Past menu items, so the words point to served dishes: the raw Grand Isle Jewel Oysters, the Swordfish Grenobloise and the Louisiana Crab Claws",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80), no printing of bin 22411 but the Justin Boxler Sommerberg (line 5534)"
+		},
+		{
+			"target": "wine:Louis Michel Chablis 2023",
+			"field": "pairs",
+			"op": "set",
+			"value": "Lemon, brine and butter: the Grand Isle Jewel Oysters first, then the Swordfish Grenobloise and the Louisiana Crab Claws.",
+			"reason": "The card rolled to the 2023 at bin 26553 (overrides.json); the Redfish Véronique it was the value bottle for is under Past menu items, so the words point to served dishes: the raw Grand Isle Jewel Oysters, the Swordfish Grenobloise and the Louisiana Crab Claws",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80), no printing of bin 22411 but the Justin Boxler Sommerberg (line 5534)"
+		},
+		{
+			"target": "wine:Louis Michel Chablis 2023",
+			"field": "goesWith",
+			"op": "set",
+			"value": "Lemon, brine and butter: the Grand Isle Jewel Oysters first, then the Swordfish Grenobloise and the Louisiana Crab Claws.",
+			"reason": "The card rolled to the 2023 at bin 26553 (overrides.json); the Redfish Véronique it was the value bottle for is under Past menu items, so the words point to served dishes: the raw Grand Isle Jewel Oysters, the Swordfish Grenobloise and the Louisiana Crab Claws",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80), no printing of bin 22411 but the Justin Boxler Sommerberg (line 5534)"
+		},
+		{
+			"target": "wine:Louis Michel Chablis 2023",
+			"field": "parts.sides",
+			"op": "set",
+			"value": "raw oysters, mignonette, swordfish, brown butter, crab",
+			"reason": "The card rolled to the 2023 at bin 26553 (overrides.json); the Redfish Véronique it was the value bottle for is under Past menu items, so the words point to served dishes: the raw Grand Isle Jewel Oysters, the Swordfish Grenobloise and the Louisiana Crab Claws",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80), no printing of bin 22411 but the Justin Boxler Sommerberg (line 5534)"
+		},
+		{
+			"target": "wine:Louis Michel Chablis 2023",
+			"field": "lines.s10",
+			"op": "set",
+			"value": "Louis Michel Chablis: crisp, unoaked Chardonnay from northern Burgundy, lemon and chalk for the Grand Isle Jewel Oysters.",
+			"reason": "The card rolled to the 2023 at bin 26553 (overrides.json); the Redfish Véronique it was the value bottle for is under Past menu items, so the words point to served dishes: the raw Grand Isle Jewel Oysters, the Swordfish Grenobloise and the Louisiana Crab Claws",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80), no printing of bin 22411 but the Justin Boxler Sommerberg (line 5534)"
+		},
+		{
+			"target": "wine:Louis Michel Chablis 2023",
+			"field": "lines.s20",
+			"op": "set",
+			"value": "Louis Michel Chablis is Chardonnay from the northern tip of Burgundy, made with no oak: green apple, lemon and a chalky, oyster-shell finish. Its acidity meets the chili mignonette on the Grand Isle Jewel Oysters and the lemon and capers of the Swordfish Grenobloise.",
+			"reason": "The card rolled to the 2023 at bin 26553 (overrides.json); the Redfish Véronique it was the value bottle for is under Past menu items, so the words point to served dishes: the raw Grand Isle Jewel Oysters, the Swordfish Grenobloise and the Louisiana Crab Claws",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80), no printing of bin 22411 but the Justin Boxler Sommerberg (line 5534)"
+		},
+		{
+			"target": "wine:Louis Michel Chablis 2023",
+			"field": "lines.s45",
+			"op": "set",
+			"value": "Louis Michel Chablis 2023 is Chardonnay from village Chablis, at the northern tip of Burgundy, where cool weather and chalky clay make a lean, mineral wine; 2023 was a big harvest, fruitier and more open than most years. The domaine makes it in steel tanks with no oak, so it tastes of the place: green apple, lemon, white flowers and an oyster-shell finish. Raw oysters are its classic match, so pour it with the Grand Isle Jewel Oysters and their chili mignonette; its acidity also meets the lemon and capers of the Swordfish Grenobloise. We serve it at 48 to 52°F, iced between pours. The domaine dates to 1850.",
+			"reason": "The card rolled to the 2023 at bin 26553 (overrides.json); the Redfish Véronique it was the value bottle for is under Past menu items, so the words point to served dishes: the raw Grand Isle Jewel Oysters, the Swordfish Grenobloise and the Louisiana Crab Claws",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80), no printing of bin 22411 but the Justin Boxler Sommerberg (line 5534); The 2023 Chablis vintage: a large harvest of fruity, approachable wines: worldoffinewine.com (Chablis 2023, Sarah Marsh MW), decanter.com (Chablis 2023: vintage report, a very large crop)"
+		},
+		{
+			"target": "wine:Louis Michel Chablis 2023",
+			"field": "lines.sale",
+			"op": "set",
+			"value": "Louis Michel Chablis never sees oak, only steel: green apple, lemon and a chalky, oyster-shell finish. Offer the bottle with the Grand Isle Jewel Oysters for the chili mignonette, or with the Swordfish Grenobloise for the lemon and capers.",
+			"reason": "The card rolled to the 2023 at bin 26553 (overrides.json); the Redfish Véronique it was the value bottle for is under Past menu items, so the words point to served dishes: the raw Grand Isle Jewel Oysters, the Swordfish Grenobloise and the Louisiana Crab Claws",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80), no printing of bin 22411 but the Justin Boxler Sommerberg (line 5534)"
+		},
+		{
+			"target": "wine:Louis Michel Chablis 2023",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "Louis Michel Chablis 2022 is the village Chablis on our list, $80, filed under Burgundy white, Chablis, and the value bottle for the redfish Véronique.",
+				"to": "Louis Michel Chablis 2023 is the village Chablis on our list, bin 26553, $80, printed under Selections Under $100, Chardonnay."
+			},
+			"reason": "The card rolled to the 2023 at bin 26553 (overrides.json); the Redfish Véronique it was the value bottle for is under Past menu items, so the words point to served dishes: the raw Grand Isle Jewel Oysters, the Swordfish Grenobloise and the Louisiana Crab Claws",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80), no printing of bin 22411 but the Justin Boxler Sommerberg (line 5534)"
+		},
+		{
+			"target": "wine:Louis Michel Chablis 2023",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "Its acidity matches the preserved lemon and the hibiscus-pickled grapes of the redfish, and its texture holds up to the beurre blanc.",
+				"to": "With the Grand Isle Jewel Oysters its chalk and acidity meet the brine and the chili mignonette; with the Swordfish Grenobloise it cuts the brown butter and matches the lemon and capers."
+			},
+			"reason": "The card rolled to the 2023 at bin 26553 (overrides.json); the Redfish Véronique it was the value bottle for is under Past menu items, so the words point to served dishes: the raw Grand Isle Jewel Oysters, the Swordfish Grenobloise and the Louisiana Crab Claws",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80), no printing of bin 22411 but the Justin Boxler Sommerberg (line 5534)"
+		},
+		{
+			"target": "wine:Louis Michel Chablis 2023",
+			"field": "kept.1.a",
+			"op": "set",
+			"value": "Offer the Louis Michel at dinner to a guest ordering the Grand Isle Jewel Oysters, the Swordfish Grenobloise or the Louisiana Crab Claws, or to anyone who asks for Chablis or a white with no oak. For a richer white Burgundy, Leflaive’s Mâcon-Verzé is on the bottle list. Say: “Louis Michel Chablis has no oak at all: crisp lemon and chalk, made for oysters.”",
+			"reason": "The card rolled to the 2023 at bin 26553 (overrides.json); the Redfish Véronique it was the value bottle for is under Past menu items, so the words point to served dishes: the raw Grand Isle Jewel Oysters, the Swordfish Grenobloise and the Louisiana Crab Claws",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80), no printing of bin 22411 but the Justin Boxler Sommerberg (line 5534); page:binwise-wine-list-2026-11-28.txt lines 5327 and 5332 (Domaine Leflaive Mâcon Verzé 2020 and 2021)"
+		},
+		{
+			"target": "wine:Louis Michel Chablis 2023",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "It is the full bottle of village Chablis, bin 22411, 2022, $80, printed simply as Louis Michel under Chablis.",
+				"to": "It is the full bottle of village Chablis, bin 26553, 2023, $80, printed once, as Domaine Louis Michel Chablis under Selections Under $100, Chardonnay; the 2022 at bin 22411 is no longer printed."
+			},
+			"reason": "The card rolled to the 2023 at bin 26553 (overrides.json); the Redfish Véronique it was the value bottle for is under Past menu items, so the words point to served dishes: the raw Grand Isle Jewel Oysters, the Swordfish Grenobloise and the Louisiana Crab Claws",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80), no printing of bin 22411 but the Justin Boxler Sommerberg (line 5534)"
+		},
+		{
+			"target": "wine:Louis Michel Chablis 2023",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": " The list also prints bin 22411 for Domaine Justin Boxler Sommerberg 2017 at $125, an Alsace Riesling, so ring it by name and vintage and tell the sommelier about the clash.",
+				"to": ""
+			},
+			"reason": "Bin 26553 is printed once on the list of 28 November 2026, so the warning on the clash at bin 22411 no longer applies to this card",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80), no printing of bin 22411 but the Justin Boxler Sommerberg (line 5534)"
+		},
+		{
+			"target": "wine:Louis Michel Chablis 2023",
+			"field": "serviceNote",
+			"op": "replace",
+			"value": {
+				"from": "The value tier for the Redfish Véronique.",
+				"to": "For the Grand Isle Jewel Oysters and the Swordfish Grenobloise."
+			},
+			"reason": "The card rolled to the 2023 at bin 26553 (overrides.json); the Redfish Véronique it was the value bottle for is under Past menu items, so the words point to served dishes: the raw Grand Isle Jewel Oysters, the Swordfish Grenobloise and the Louisiana Crab Claws",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 128 (Selections Under $100, Chardonnay: Domaine Louis Michel Chablis FR, bin 26553, 2023, 80), no printing of bin 22411 but the Justin Boxler Sommerberg (line 5534)"
+		},
+		{
+			"target": "wine:Domaine Louis Michel ‘Montmains’ Chablis Premier Cru 2023 (375 ml)",
+			"field": "why",
+			"op": "set",
+			"value": "The half-bottle for the Crab & Corn Omelette and the Fish Bouillabaisse: Premier Cru citrus and chalk for lemon, crab and the preserved lemon aioli.",
+			"reason": "The Redfish Véronique is under Past menu items; the half is offered with the Crab & Corn Omelette and the Fish Bouillabaisse, so the words name those two",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 320 (Half-bottles, White: Domaine Louis Michel \"Montmains\" Chablis Burgundy, bin 32852, 2023, 65) and line 128 (bin 26553, Domaine Louis Michel Chablis, 2023, 80)"
+		},
+		{
+			"target": "wine:Domaine Louis Michel ‘Montmains’ Chablis Premier Cru 2023 (375 ml)",
+			"field": "pairs",
+			"op": "set",
+			"value": "Lemon, crab and butter: the Crab & Corn Omelette and the Fish Bouillabaisse first, then the Louisiana Crab Claws and the Grand Isle Jewel Oysters.",
+			"reason": "The Redfish Véronique is under Past menu items; the half is offered with the Crab & Corn Omelette and the Fish Bouillabaisse, so the words name those two",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 320 (Half-bottles, White: Domaine Louis Michel \"Montmains\" Chablis Burgundy, bin 32852, 2023, 65) and line 128 (bin 26553, Domaine Louis Michel Chablis, 2023, 80)"
+		},
+		{
+			"target": "wine:Domaine Louis Michel ‘Montmains’ Chablis Premier Cru 2023 (375 ml)",
+			"field": "goesWith",
+			"op": "set",
+			"value": "Lemon, crab and butter: the Crab & Corn Omelette and the Fish Bouillabaisse first, then the Louisiana Crab Claws and the Grand Isle Jewel Oysters.",
+			"reason": "The Redfish Véronique is under Past menu items; the half is offered with the Crab & Corn Omelette and the Fish Bouillabaisse, so the words name those two",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 320 (Half-bottles, White: Domaine Louis Michel \"Montmains\" Chablis Burgundy, bin 32852, 2023, 65) and line 128 (bin 26553, Domaine Louis Michel Chablis, 2023, 80)"
+		},
+		{
+			"target": "wine:Domaine Louis Michel ‘Montmains’ Chablis Premier Cru 2023 (375 ml)",
+			"field": "parts.sides",
+			"op": "set",
+			"value": "crab, lemon, aioli, oysters",
+			"reason": "The Redfish Véronique is under Past menu items; the half is offered with the Crab & Corn Omelette and the Fish Bouillabaisse, so the words name those two",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 320 (Half-bottles, White: Domaine Louis Michel \"Montmains\" Chablis Burgundy, bin 32852, 2023, 65) and line 128 (bin 26553, Domaine Louis Michel Chablis, 2023, 80)"
+		},
+		{
+			"target": "wine:Domaine Louis Michel ‘Montmains’ Chablis Premier Cru 2023 (375 ml)",
+			"field": "lines.s20",
+			"op": "replace",
+			"value": {
+				"from": "and the Redfish Véronique at dinner.",
+				"to": "and the Fish Bouillabaisse at dinner."
+			},
+			"reason": "The Redfish Véronique is under Past menu items; the half is offered with the Crab & Corn Omelette and the Fish Bouillabaisse, so the words name those two",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 320 (Half-bottles, White: Domaine Louis Michel \"Montmains\" Chablis Burgundy, bin 32852, 2023, 65) and line 128 (bin 26553, Domaine Louis Michel Chablis, 2023, 80)"
+		},
+		{
+			"target": "wine:Domaine Louis Michel ‘Montmains’ Chablis Premier Cru 2023 (375 ml)",
+			"field": "lines.s45",
+			"op": "replace",
+			"value": {
+				"from": "Its citrus meets the lemon of the brunch Crab & Corn Omelette and the preserved lemon beurre blanc of the Redfish Véronique, and it is the half bottle for both and for the Fish Bouillabaisse.",
+				"to": "Its citrus meets the lemon of the brunch Crab & Corn Omelette and the preserved lemon aioli of the Fish Bouillabaisse at dinner, and it is the half bottle for both."
+			},
+			"reason": "The Redfish Véronique is under Past menu items; the half is offered with the Crab & Corn Omelette and the Fish Bouillabaisse, so the words name those two",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 320 (Half-bottles, White: Domaine Louis Michel \"Montmains\" Chablis Burgundy, bin 32852, 2023, 65) and line 128 (bin 26553, Domaine Louis Michel Chablis, 2023, 80)"
+		},
+		{
+			"target": "wine:Domaine Louis Michel ‘Montmains’ Chablis Premier Cru 2023 (375 ml)",
+			"field": "lines.sale",
+			"op": "replace",
+			"value": {
+				"from": "or the Redfish Véronique or Fish Bouillabaisse at dinner.",
+				"to": "or the Fish Bouillabaisse at dinner."
+			},
+			"reason": "The Redfish Véronique is under Past menu items; the half is offered with the Crab & Corn Omelette and the Fish Bouillabaisse, so the words name those two",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 320 (Half-bottles, White: Domaine Louis Michel \"Montmains\" Chablis Burgundy, bin 32852, 2023, 65) and line 128 (bin 26553, Domaine Louis Michel Chablis, 2023, 80)"
+		},
+		{
+			"target": "wine:Domaine Louis Michel ‘Montmains’ Chablis Premier Cru 2023 (375 ml)",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "the half-bottle for both the crab and corn omelette and the redfish Véronique.",
+				"to": "the half-bottle for both the Crab & Corn Omelette and the Fish Bouillabaisse."
+			},
+			"reason": "The Redfish Véronique is under Past menu items; the half is offered with the Crab & Corn Omelette and the Fish Bouillabaisse, so the words name those two",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 320 (Half-bottles, White: Domaine Louis Michel \"Montmains\" Chablis Burgundy, bin 32852, 2023, 65) and line 128 (bin 26553, Domaine Louis Michel Chablis, 2023, 80)"
+		},
+		{
+			"target": "wine:Domaine Louis Michel ‘Montmains’ Chablis Premier Cru 2023 (375 ml)",
+			"field": "kept.0.a",
+			"op": "replace",
+			"value": {
+				"from": "the preserved lemon beurre blanc of the redfish at dinner.",
+				"to": "the preserved lemon aioli of the bouillabaisse at dinner."
+			},
+			"reason": "The Redfish Véronique is under Past menu items; the half is offered with the Crab & Corn Omelette and the Fish Bouillabaisse, so the words name those two",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 320 (Half-bottles, White: Domaine Louis Michel \"Montmains\" Chablis Burgundy, bin 32852, 2023, 65) and line 128 (bin 26553, Domaine Louis Michel Chablis, 2023, 80)"
+		},
+		{
+			"target": "wine:Domaine Louis Michel ‘Montmains’ Chablis Premier Cru 2023 (375 ml)",
+			"field": "kept.1.a",
+			"op": "replace",
+			"value": {
+				"from": "or at dinner with the redfish Véronique, who wants",
+				"to": "or at dinner with the Fish Bouillabaisse, who wants"
+			},
+			"reason": "The Redfish Véronique is under Past menu items; the half is offered with the Crab & Corn Omelette and the Fish Bouillabaisse, so the words name those two",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 320 (Half-bottles, White: Domaine Louis Michel \"Montmains\" Chablis Burgundy, bin 32852, 2023, 65) and line 128 (bin 26553, Domaine Louis Michel Chablis, 2023, 80)"
+		},
+		{
+			"target": "wine:Domaine Louis Michel ‘Montmains’ Chablis Premier Cru 2023 (375 ml)",
+			"field": "kept.1.a",
+			"op": "replace",
+			"value": {
+				"fromRe": "For a full bottle with the redfish, Louis Michel.s village Chablis is the value pick\\.",
+				"to": "For a full bottle, Louis Michel’s village Chablis 2023 is on the list at $80."
+			},
+			"reason": "The Redfish Véronique is under Past menu items; the half is offered with the Crab & Corn Omelette and the Fish Bouillabaisse, so the words name those two",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 320 (Half-bottles, White: Domaine Louis Michel \"Montmains\" Chablis Burgundy, bin 32852, 2023, 65) and line 128 (bin 26553, Domaine Louis Michel Chablis, 2023, 80)"
+		},
+		{
+			"target": "wine:Domaine Louis Michel ‘Montmains’ Chablis Premier Cru 2023 (375 ml)",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "Louis Michel also has a village Chablis full bottle, bin 22411, $80.",
+				"to": "Louis Michel also has a village Chablis full bottle, the 2023 at bin 26553, $80."
+			},
+			"reason": "The village Chablis rolled to the 2023 at bin 26553 on the list of 28 November 2026; bin 22411 no longer prints it",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 320 (Half-bottles, White: Domaine Louis Michel \"Montmains\" Chablis Burgundy, bin 32852, 2023, 65) and line 128 (bin 26553, Domaine Louis Michel Chablis, 2023, 80)"
+		},
+		{
+			"target": "wine:Domaine Louis Michel ‘Montmains’ Chablis Premier Cru 2023 (375 ml)",
+			"field": "serviceNote",
+			"op": "replace",
+			"value": {
+				"from": "The half-bottle for the Crab & Corn Omelette and the Redfish Véronique.",
+				"to": "The half-bottle for the Crab & Corn Omelette and the Fish Bouillabaisse."
+			},
+			"reason": "The Redfish Véronique is under Past menu items; the half is offered with the Crab & Corn Omelette and the Fish Bouillabaisse, so the words name those two",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 320 (Half-bottles, White: Domaine Louis Michel \"Montmains\" Chablis Burgundy, bin 32852, 2023, 65) and line 128 (bin 26553, Domaine Louis Michel Chablis, 2023, 80)"
+		},
+		{
+			"target": "wine:Domaine Henri Gouges Nuits-Saint-Georges 2021 (375 ml)",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "printed as Domaine Henri Gouges under Nuits-Saint-Georges.",
+				"to": "printed as Domaine Henri Gouges under Nuits-Saint-Georges. The list of 28 November 2026 prints bin 32843 also for the Dönnhoff Niederhäuser Hermannshöhle Auslese half, $145, so ring it by name and vintage."
+			},
+			"reason": "The list of 28 November 2026 prints bin 32843 for two halves, the Gouges Nuits-Saint-Georges 2021 and the Dönnhoff Hermannshöhle Auslese 2023; the watch note says to ring each by name",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 337 (Half-bottles, White: Dönhoff \"Niederhäuser Hermannshöhle\" Riesling Goldkapsel Auslese Nahe, bin 32843, 2023, 145) and line 435 (Half-bottles, Red: Domaine Henri Gouges Nuits-Saint-Georges, bin 32843, 2021, 130)"
+		},
+		{
+			"target": "wine:Dönnhoff ‘Niederhäuser Hermannshöhle’ Riesling Auslese Goldkapsel 2023 (375 ml)",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "this is the Niederhäuser Hermannshöhle, bin 32843, 2023, $145.",
+				"to": "this is the Niederhäuser Hermannshöhle, bin 32843, 2023, $145. The list of 28 November 2026 prints bin 32843 also for the Gouges Nuits-Saint-Georges 2021 half, $130, so ring it by name."
+			},
+			"reason": "The list of 28 November 2026 prints bin 32843 for two halves, the Gouges Nuits-Saint-Georges 2021 and the Dönnhoff Hermannshöhle Auslese 2023; the watch note says to ring each by name",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 337 (Half-bottles, White: Dönhoff \"Niederhäuser Hermannshöhle\" Riesling Goldkapsel Auslese Nahe, bin 32843, 2023, 145) and line 435 (Half-bottles, Red: Domaine Henri Gouges Nuits-Saint-Georges, bin 32843, 2021, 130)"
+		},
+		{
+			"target": "wine:Dönnhoff ‘Oberhäuser Brücke’ Riesling Auslese Goldkapsel 2023 (375 ml)",
+			"field": "kept.3.a",
+			"op": "replace",
+			"value": {
+				"from": "and the Niederhäuser Hermannshöhle, bin 32843, $145.",
+				"to": "and the Niederhäuser Hermannshöhle, bin 32843, $145, a bin the list of 28 November 2026 prints also for the Gouges Nuits-Saint-Georges half."
+			},
+			"reason": "The list of 28 November 2026 prints bin 32843 for two halves, the Gouges Nuits-Saint-Georges 2021 and the Dönnhoff Hermannshöhle Auslese 2023; the watch note says to ring each by name",
+			"source": "page:binwise-wine-list-2026-11-28.txt line 337 (Half-bottles, White: Dönhoff \"Niederhäuser Hermannshöhle\" Riesling Goldkapsel Auslese Nahe, bin 32843, 2023, 145) and line 435 (Half-bottles, Red: Domaine Henri Gouges Nuits-Saint-Georges, bin 32843, 2021, 130)"
+		}
+	]
+}
