@@ -1,0 +1,348 @@
+{
+	"entries": [
+		{
+			"target": "wine:+",
+			"op": "add",
+			"value": {
+				"name": "Château Gloria Saint-Julien 2017",
+				"section": "Bordeaux",
+				"group": "Bordeaux: Saint-Julien",
+				"meals": [
+					"Breakfast & lunch",
+					"Dinner"
+				],
+				"price": "$155",
+				"prices": [
+					{
+						"meal": "Bottle list",
+						"printed": "$155"
+					}
+				],
+				"glass": "",
+				"bottle": "$155",
+				"pours": [],
+				"list": "bottle",
+				"bin": "22522",
+				"size": "750ml",
+				"producer": "Château Gloria",
+				"wine": "Saint-Julien",
+				"vintage": "2017",
+				"region": "Saint-Julien, Médoc, Bordeaux, France",
+				"grapes": [
+					"Cabernet Sauvignon",
+					"Merlot",
+					"Petit Verdot",
+					"Cabernet Franc"
+				],
+				"style": "Saint-Julien from classed growth vines, Cabernet-led, nine years in bottle",
+				"profile": "Saint-Julien from Château Gloria, 61 percent Cabernet Sauvignon with Merlot, Petit Verdot and Cabernet Franc, aged 14 months in French oak: cassis and cassis leaf, plum, cedar and a touch of violet, medium bodied and fresh, its tannin softened by nine years in bottle.",
+				"guest": "Château Gloria 2017 from Saint-Julien: cassis and cedar, nine years old and supple, lovely with the Chateaubriand.",
+				"goesWith": "Beef with a rich sauce: the Roasted Chateaubriand and its sauce Foyot, the Chateau Espagnole and its sauce Espagnole, and the Lamb Shank en Croûte.",
+				"serve": "Serve 61 to 64°F in a Bordeaux glass. Stand it upright when it is ordered and decant about thirty minutes ahead, off any sediment.",
+				"say": "Gloria: glor-YAH; Saint-Julien: san zhoo-LYAN.",
+				"why": "Our Saint-Julien under $200, nine years in bottle and open tonight: cassis and cedar for the Roasted Chateaubriand and the Chateau Espagnole, the step below the Talbot.",
+				"origin": "Château Gloria, in Saint-Julien, was put together from 1942 by Henri Martin out of parcels he bought from the classed growths around it; it came together long after 1855, so it stands outside the classification.",
+				"parts": {
+					"main": "Cabernet Sauvignon, Merlot, Petit Verdot and Cabernet Franc from Saint-Julien",
+					"technique": "assembled from classed growth parcels, 14 months in French oak",
+					"sauce": "supple Saint-Julien claret with nine years in bottle",
+					"sides": "Chateaubriand, sauce Foyot, sauce Espagnole, lamb shank",
+					"taste": "cassis, cassis leaf, plum, cedar, violet"
+				},
+				"lines": {
+					"s10": "Château Gloria 2017 from Saint-Julien: cassis and cedar, nine years in bottle and supple, for the Roasted Chateaubriand.",
+					"s20": "Gloria is Saint-Julien, Cabernet Sauvignon with Merlot and Petit Verdot: cassis, plum and cedar with fresh, fine tannin. The 2017 has nine years in bottle, so it is open now for the Roasted Chateaubriand and its sauce Foyot.",
+					"s45": "Château Gloria is the Saint-Julien estate Henri Martin built from 1942, parcel by parcel, out of vines he bought from the classed growths around it, which is why it stands outside the 1855 ranking. The 2017 is 61 percent Cabernet Sauvignon with Merlot, Petit Verdot and a little Cabernet Franc, aged 14 months in French oak. The vineyards by the Gironde were largely spared that April's frost, and the wine is fresh: cassis, cassis leaf, plum and cedar, medium bodied. Nine years in bottle have softened the tannin, so it meets the tenderloin and the sauce Foyot of the Roasted Chateaubriand after a short decant.",
+					"sale": "Château Gloria 2017 is Saint-Julien from vines bought off the classed growths, Cabernet Sauvignon with Merlot: cassis, plum and cedar, softened by nine years in bottle. Offer it with the Roasted Chateaubriand or the Chateau Espagnole, decanted thirty minutes ahead."
+				},
+				"serviceNote": "Bin 22522 on the Binwise list read 28 November 2026, 750 ml, $155, under France, Bordeaux, Red, Saint-Julien. The list also prints Château Gloria 2021 at bin 26724, 750 ml, $155; this card is the 2017. Bin 22522 is also printed for the Domaine Tempier Bandol 2023 on the Provence white page. An anchor of the Bordeaux bottles; no dish tier. Confirm at lineup that it is in stock."
+			},
+			"reason": "A floor bottle from the Binwise list of 28 November 2026 (chunk c4, Bordeaux): a full study card, every catalogue figure copied from the entry by its key, every fact beyond the list recorded in the cards-d research file with how it is known (role anchor; no dish tier). Of the two vintages printed at one price the card is the 2017, the one to open tonight; the 2021 is named in the service note",
+			"source": "research/winelist-2026-11-28.json n=2280, key b2280 (page:binwise-wine-list-2026-11-28.txt line 11809: bin 22522, Château Gloria, 2017, 155; France ~ Bordeaux ~ Red > Saint-Julien); the 2021 at n=2281, key b2281 (line 11814: bin 26724, Château Gloria, 2021, 155); the Domaine Tempier Bandol at n=1161 (line 6006: bin 22522, 2023, 120; France ~ Other ~ White > Provence); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Bordeaux, role anchor: a Saint-Julien under $200); research/winelist/producers-d.json chateau-gloria; research/bottle-facts-cards-d-2026-11-28.json b2280"
+		},
+		{
+			"target": "wine:Château Gloria Saint-Julien 2017",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "Tell me about it.",
+				"a": "Château Gloria 2017 is a Saint-Julien, $155, bin 22522, filed under France, Bordeaux, Red, Saint-Julien, and our Saint-Julien under $200.\n\nSaint-Julien, san zhoo-LYAN, is the Médoc village between Pauillac and Margaux, known for balance. Gloria was assembled from 1942 by Henri Martin, who bought parcels of vines from the classed growths around it; it came together long after 1855, so it is not a classed growth. The 2017 is 61 percent Cabernet Sauvignon, 26 percent Merlot, 8 percent Petit Verdot and 5 percent Cabernet Franc, 14 months in French oak, 40 percent new.\n\nIn 2017 an April frost hit much of Bordeaux, but the vineyards nearest the Gironde were largely spared. The wine tastes of cassis and cassis leaf, plum and cedar with a touch of violet, medium bodied and fresh, and nine years in bottle have made its tannin supple.\n\nThe list prints two vintages at one price, the 2017 and the 2021. This card is the 2017, the one to open tonight: 2021 was a cool vintage of lighter, lower alcohol wines, and that Gloria is still young, while the 2017 is open after a short decant."
+			},
+			"reason": "Study notes, the description: what a master sommelier tells a new Brennan’s server who asks about this bottle, every fact from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2280, key b2280 (page:binwise-wine-list-2026-11-28.txt line 11809: bin 22522, Château Gloria, 2017, 155; France ~ Bordeaux ~ Red > Saint-Julien); the 2021 at n=2281, key b2281 (line 11814: bin 26724, Château Gloria, 2021, 155); the Domaine Tempier Bandol at n=1161 (line 6006: bin 22522, 2023, 120; France ~ Other ~ White > Provence); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Bordeaux, role anchor: a Saint-Julien under $200); research/winelist/producers-d.json chateau-gloria; research/bottle-facts-cards-d-2026-11-28.json b2280"
+		},
+		{
+			"target": "wine:Château Gloria Saint-Julien 2017",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I sell it?",
+				"a": "Offer Gloria to the Chateaubriand table that wants classic claret below the Talbot's $245, to the guest who asks for Saint-Julien, and to the guest who wants a Bordeaux with some age that drinks now. It suits the Chateau Espagnole and its brown sauce as well. For the classed growth step with the same beef, the Talbot 2019 at $245. Say: “Château Gloria 2017 is Saint-Julien from classed growth vines, nine years old: cassis and cedar, ready for the Chateaubriand.”"
+			},
+			"reason": "Study notes, coaching: when, to whom and with what to offer it, and one line to say, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2280, key b2280 (page:binwise-wine-list-2026-11-28.txt line 11809: bin 22522, Château Gloria, 2017, 155; France ~ Bordeaux ~ Red > Saint-Julien); the 2021 at n=2281, key b2281 (line 11814: bin 26724, Château Gloria, 2021, 155); the Domaine Tempier Bandol at n=1161 (line 6006: bin 22522, 2023, 120; France ~ Other ~ White > Provence); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Bordeaux, role anchor: a Saint-Julien under $200); research/winelist/producers-d.json chateau-gloria; research/bottle-facts-cards-d-2026-11-28.json b2280"
+		},
+		{
+			"target": "wine:Château Gloria Saint-Julien 2017",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What do guests ask?",
+				"a": "Asked: Is it a classed growth?\n\nAnswer: No. It was put together after 1855 from vines bought off classed growths, so it stands outside the 1855 classification. The Talbot on our list is a classed growth of the same village.\n\nAsked: Why two vintages at one price?\n\nAnswer: The list prints the 2017 and the 2021, both $155. The 2017 has nine years in bottle and drinks now; the 2021 is from a cool year and is younger. I will ask the sommelier which is in tonight.\n\nAsked: Does it need decanting?\n\nAnswer: Thirty minutes opens it and leaves any sediment behind; the sommelier decides on the night."
+			},
+			"reason": "Study notes, coaching: the questions guests ask and the true answers, or the sommelier to ask, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2280, key b2280 (page:binwise-wine-list-2026-11-28.txt line 11809: bin 22522, Château Gloria, 2017, 155; France ~ Bordeaux ~ Red > Saint-Julien); the 2021 at n=2281, key b2281 (line 11814: bin 26724, Château Gloria, 2021, 155); the Domaine Tempier Bandol at n=1161 (line 6006: bin 22522, 2023, 120; France ~ Other ~ White > Provence); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Bordeaux, role anchor: a Saint-Julien under $200); research/winelist/producers-d.json chateau-gloria; research/bottle-facts-cards-d-2026-11-28.json b2280"
+		},
+		{
+			"target": "wine:Château Gloria Saint-Julien 2017",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What should I watch for?",
+				"a": "Two Glorias at one price: the 2017 at bin 22522 and the 2021 at bin 26724, both $155, so read the vintage on the label against the order. Bin 22522 is also printed for the Domaine Tempier Bandol 2023 on the Provence white page: pull by name and vintage, never by the bin alone. Do not confuse Gloria with the Château Lalande and Lalande Borie on the same Saint-Julien page. The blend and oak come from trade listings of the 2017; the château's own sheet is a question for the sommelier. Allergens: read the service note and confirm at lineup."
+			},
+			"reason": "Study notes, coaching: the mix-ups on the list, the handling and the lineup questions, closing on the service note, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2280, key b2280 (page:binwise-wine-list-2026-11-28.txt line 11809: bin 22522, Château Gloria, 2017, 155; France ~ Bordeaux ~ Red > Saint-Julien); the 2021 at n=2281, key b2281 (line 11814: bin 26724, Château Gloria, 2021, 155); the Domaine Tempier Bandol at n=1161 (line 6006: bin 22522, 2023, 120; France ~ Other ~ White > Provence); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Bordeaux, role anchor: a Saint-Julien under $200); research/winelist/producers-d.json chateau-gloria; research/bottle-facts-cards-d-2026-11-28.json b2280"
+		},
+		{
+			"target": "wine:Château Gloria Saint-Julien 2017",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I pour it?",
+				"a": "Present the bottle and say Château Gloria, Saint-Julien, 2017, glor-YAH. Decant it about thirty minutes ahead at the side stand, off any sediment, and serve at 61 to 64°F in Bordeaux glasses. Pour a taste for the host, then the guests, the host last, and set the decanter and the bottle on the table. Say: “Gloria 2017: cassis and cedar, softened by nine years.”"
+			},
+			"reason": "Study notes, coaching: presenting, opening and pouring the bottle",
+			"source": "research/winelist-2026-11-28.json n=2280, key b2280 (page:binwise-wine-list-2026-11-28.txt line 11809: bin 22522, Château Gloria, 2017, 155; France ~ Bordeaux ~ Red > Saint-Julien); the 2021 at n=2281, key b2281 (line 11814: bin 26724, Château Gloria, 2021, 155); the Domaine Tempier Bandol at n=1161 (line 6006: bin 22522, 2023, 120; France ~ Other ~ White > Provence); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Bordeaux, role anchor: a Saint-Julien under $200); research/winelist/producers-d.json chateau-gloria; research/bottle-facts-cards-d-2026-11-28.json b2280"
+		},
+		{
+			"target": "wine:+",
+			"op": "add",
+			"value": {
+				"name": "Château La Tour de Mons Margaux 2020",
+				"section": "Bordeaux",
+				"group": "Bordeaux: Margaux",
+				"meals": [
+					"Breakfast & lunch",
+					"Dinner"
+				],
+				"price": "$110",
+				"prices": [
+					{
+						"meal": "Bottle list",
+						"printed": "$110"
+					}
+				],
+				"glass": "",
+				"bottle": "$110",
+				"pours": [],
+				"list": "bottle",
+				"bin": "27651",
+				"size": "750ml",
+				"producer": "Château La Tour de Mons",
+				"wine": "Margaux",
+				"vintage": "2020",
+				"region": "Margaux, Médoc, Bordeaux, France",
+				"grapes": [
+					"Merlot",
+					"Cabernet Sauvignon",
+					"Cabernet Franc",
+					"Petit Verdot"
+				],
+				"style": "Merlot-led Margaux from Soussans, perfumed and supple",
+				"profile": "Margaux from Soussans, in the north of the appellation, 57 percent Merlot with Cabernet Sauvignon and a little Cabernet Franc and Petit Verdot, aged in oak, a quarter of it new: black cherry and plum, cassis and cedar, a perfume of rose petal and lavender, and soft, ripe tannin.",
+				"guest": "La Tour de Mons 2020, Margaux at a gentle price: black cherry, plum and rose petal, soft and perfumed, lovely with the lamb shank.",
+				"goesWith": "Lamb and beef with a dark jus: the Lamb Shank en Croûte and its spiced lamb jus, the Creole-Spiced Hanger Steak at lunch, and the Cheese Board.",
+				"serve": "Serve 61 to 64°F in a Bordeaux glass. Decant about thirty minutes ahead if the table is happy to wait; otherwise pour and let it open in the glass.",
+				"say": "La Tour de Mons: lah toor duh MAWNS; Margaux: mar-GOH; Soussans: soo-SAHN.",
+				"why": "Our Margaux under $150: Merlot-led, soft and perfumed for the Lamb Shank en Croûte, and the bottle step for a guest who liked the Moulin d’Issan by the glass.",
+				"origin": "Château La Tour de Mons is an old estate at Soussans, at the northern edge of the Margaux appellation, named for Pierre de Mons, who came to own it in 1623.",
+				"parts": {
+					"main": "Merlot and Cabernet Sauvignon from Soussans, Margaux",
+					"technique": "Merlot-led Margaux, aged in oak, a quarter of it new",
+					"sauce": "perfumed, supple Margaux at a gentle price",
+					"sides": "lamb shank daube, spiced lamb jus, hanger steak, cheese",
+					"taste": "black cherry, plum, cassis, rose petal, lavender"
+				},
+				"lines": {
+					"s10": "La Tour de Mons 2020, Margaux: black cherry, plum and rose petal, soft and perfumed, for the Lamb Shank en Croûte.",
+					"s20": "If you would like Margaux with the lamb shank, La Tour de Mons is Merlot-led, from Soussans at the north of the appellation: black cherry and plum with a perfume of rose petal and lavender, and soft tannin for the braised lamb and its spiced jus.",
+					"s45": "Margaux is the Médoc village known for perfume, and La Tour de Mons is one of its old estates, at Soussans on the northern edge, named for Pierre de Mons, who came to own it in 1623. Unusually for the Médoc, Merlot leads: the 2020 is 57 percent Merlot with Cabernet Sauvignon and a little Cabernet Franc and Petit Verdot, aged in oak, a quarter of it new. A hot, dry summer gave a small, ripe crop, and it tastes of black cherry, plum and cassis with rose petal and lavender. Its soft tannin and ripe plum meet the braised lamb and spiced jus of the Lamb Shank en Croûte.",
+					"sale": "La Tour de Mons is Margaux led by Merlot, from Soussans: black cherry and plum, a perfume of rose petal and lavender, and soft tannin. Offer it with the Lamb Shank en Croûte and its spiced jus, the bottle step from the Moulin d’Issan glass."
+				},
+				"serviceNote": "Bin 27651 on the Binwise list read 28 November 2026, 750 ml, $110, under France, Bordeaux, Red, Margaux. An anchor of the Bordeaux bottles; no dish tier. Confirm at lineup that it is in stock."
+			},
+			"reason": "A floor bottle from the Binwise list of 28 November 2026 (chunk c4, Bordeaux): a full study card, every catalogue figure copied from the entry by its key, every fact beyond the list recorded in the cards-d research file with how it is known (role anchor; no dish tier)",
+			"source": "research/winelist-2026-11-28.json n=2311, key b2311 (page:binwise-wine-list-2026-11-28.txt line 11966: bin 27651, Château La Tour de Mons, 2020, 110; France ~ Bordeaux ~ Red > Margaux); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Bordeaux, role anchor: the Margaux under $150 with a card); research/winelist/producers-d.json chateau-la-tour-de-mons; research/bottle-facts-cards-d-2026-11-28.json b2311"
+		},
+		{
+			"target": "wine:Château La Tour de Mons Margaux 2020",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "Tell me about it.",
+				"a": "Château La Tour de Mons 2020 is a Margaux, $110, bin 27651, filed under France, Bordeaux, Red, Margaux, and our Margaux under $150.\n\nMargaux, mar-GOH, is the most southerly of the Médoc's four great villages, known for perfumed, silky reds. La Tour de Mons, lah toor duh MAWNS, is an old estate at Soussans, on the appellation's northern edge, named for Pierre de Mons, who came to own it in 1623. It is not one of the 1855 classed growths.\n\nUnusually for the Médoc, Merlot leads. The 2020 is 57 percent Merlot, 36 percent Cabernet Sauvignon, 4 percent Cabernet Franc and 3 percent Petit Verdot, aged in oak barrels, a quarter of them new. 2020 brought a hot, dry summer and a small crop. It tastes of black cherry, plum and cassis with cedar, rose petal and lavender, with soft, ripe tannin.\n\nIt is on the list as the Margaux at a gentle price. Its plum and soft tannin suit braised lamb, and it is the step up for a guest who enjoyed the Moulin d’Issan, the Margaux team's Bordeaux Supérieur, by the glass."
+			},
+			"reason": "Study notes, the description: what a master sommelier tells a new Brennan’s server who asks about this bottle, every fact from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2311, key b2311 (page:binwise-wine-list-2026-11-28.txt line 11966: bin 27651, Château La Tour de Mons, 2020, 110; France ~ Bordeaux ~ Red > Margaux); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Bordeaux, role anchor: the Margaux under $150 with a card); research/winelist/producers-d.json chateau-la-tour-de-mons; research/bottle-facts-cards-d-2026-11-28.json b2311"
+		},
+		{
+			"target": "wine:Château La Tour de Mons Margaux 2020",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I sell it?",
+				"a": "Offer La Tour de Mons to the guest ordering the Lamb Shank en Croûte who wants a bottle, to the guest who asks for Margaux, and to the guest who liked the Moulin d’Issan glass and wants a bottle of the real village. At lunch it suits the Creole-Spiced Hanger Steak. For a grander Margaux, the Giscours on the same page. Say: “La Tour de Mons is Margaux led by Merlot: black cherry, plum and rose petal, soft enough for the lamb.”"
+			},
+			"reason": "Study notes, coaching: when, to whom and with what to offer it, and one line to say, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2311, key b2311 (page:binwise-wine-list-2026-11-28.txt line 11966: bin 27651, Château La Tour de Mons, 2020, 110; France ~ Bordeaux ~ Red > Margaux); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Bordeaux, role anchor: the Margaux under $150 with a card); research/winelist/producers-d.json chateau-la-tour-de-mons; research/bottle-facts-cards-d-2026-11-28.json b2311"
+		},
+		{
+			"target": "wine:Château La Tour de Mons Margaux 2020",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What do guests ask?",
+				"a": "Asked: Why is a Margaux this price?\n\nAnswer: It is not one of the 1855 classed growths, and it comes from Soussans, at the north of the appellation; it is honest, perfumed Margaux.\n\nAsked: Is it Cabernet?\n\nAnswer: Merlot leads, 57 percent in 2020, with Cabernet Sauvignon and a little Cabernet Franc and Petit Verdot, which is why it is soft and round.\n\nAsked: Is the 2020 ready?\n\nAnswer: It is young but supple; half an hour in a decanter opens it. The sommelier can say more."
+			},
+			"reason": "Study notes, coaching: the questions guests ask and the true answers, or the sommelier to ask, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2311, key b2311 (page:binwise-wine-list-2026-11-28.txt line 11966: bin 27651, Château La Tour de Mons, 2020, 110; France ~ Bordeaux ~ Red > Margaux); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Bordeaux, role anchor: the Margaux under $150 with a card); research/winelist/producers-d.json chateau-la-tour-de-mons; research/bottle-facts-cards-d-2026-11-28.json b2311"
+		},
+		{
+			"target": "wine:Château La Tour de Mons Margaux 2020",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What should I watch for?",
+				"a": "Do not confuse La Tour de Mons with Château Margaux, the first growth of the same village. The Margaux page also prints La Closerie des Eyrins 2020 at the same $110: read the name. It is bin 27651, 2020, $110. The blend and oak come from trade listings of the 2020; the château's own sheet is a question for the sommelier. Allergens: read the service note and confirm at lineup."
+			},
+			"reason": "Study notes, coaching: the mix-ups on the list, the handling and the lineup questions, closing on the service note, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=2311, key b2311 (page:binwise-wine-list-2026-11-28.txt line 11966: bin 27651, Château La Tour de Mons, 2020, 110; France ~ Bordeaux ~ Red > Margaux); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Bordeaux, role anchor: the Margaux under $150 with a card); research/winelist/producers-d.json chateau-la-tour-de-mons; research/bottle-facts-cards-d-2026-11-28.json b2311"
+		},
+		{
+			"target": "wine:Château La Tour de Mons Margaux 2020",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I pour it?",
+				"a": "Present the bottle and say Château La Tour de Mons, Margaux, 2020. Serve it at 61 to 64°F in Bordeaux glasses, decanted about thirty minutes ahead if the table can wait. Pour a taste for the host, then the guests, the host last. Say: “La Tour de Mons: Margaux, black cherry and rose petal.”"
+			},
+			"reason": "Study notes, coaching: presenting, opening and pouring the bottle",
+			"source": "research/winelist-2026-11-28.json n=2311, key b2311 (page:binwise-wine-list-2026-11-28.txt line 11966: bin 27651, Château La Tour de Mons, 2020, 110; France ~ Bordeaux ~ Red > Margaux); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Bordeaux, role anchor: the Margaux under $150 with a card); research/winelist/producers-d.json chateau-la-tour-de-mons; research/bottle-facts-cards-d-2026-11-28.json b2311"
+		},
+		{
+			"target": "wine:+",
+			"op": "add",
+			"value": {
+				"name": "Château Charmail Haut-Médoc 2020 (1.5 L magnum)",
+				"section": "Large formats",
+				"meals": [
+					"Breakfast & lunch",
+					"Dinner"
+				],
+				"price": "$240",
+				"prices": [
+					{
+						"meal": "Bottle list, 1.5 L magnum",
+						"printed": "$240"
+					}
+				],
+				"glass": "",
+				"bottle": "$240",
+				"pours": [],
+				"list": "bottle",
+				"bin": "12593",
+				"size": "1.5L",
+				"producer": "Château Charmail",
+				"wine": "Haut-Médoc",
+				"vintage": "2020",
+				"region": "Saint-Seurin-de-Cadourne, Haut-Médoc, Bordeaux, France",
+				"grapes": [
+					"Merlot",
+					"Cabernet Sauvignon",
+					"Cabernet Franc",
+					"Petit Verdot"
+				],
+				"style": "Haut-Médoc claret, magnum",
+				"profile": "Haut-Médoc from Saint-Seurin-de-Cadourne, Merlot and Cabernet Sauvignon with Cabernet Franc and Petit Verdot, its grapes cold soaked before fermentation, 2020 in magnum: black cherry and violet-scented black fruit, dried herbs and licorice, with soft, pliant tannin.",
+				"guest": "A magnum of Château Charmail 2020: generous Haut-Médoc claret, black cherry and violet, soft tannin, for a big table.",
+				"goesWith": "Beef and lamb for a table of six or more: the Roasted Chateaubriand, the Lamb Shank en Croûte and the Creole Hanger Steak.",
+				"serve": "Serve 61 to 64°F in Bordeaux glasses. Stand it upright when it is ordered and decant at the side stand, off any sediment, about thirty minutes ahead.",
+				"say": "Charmail: shar-MY; Haut-Médoc: oh may-DOK; Saint-Seurin-de-Cadourne: san sur-AN duh kah-DOORN.",
+				"why": "The least expensive Bordeaux magnum the list prints: soft, generous claret for a big table sharing the Roasted Chateaubriand or the Lamb Shank en Croûte.",
+				"origin": "Château Charmail is a Haut-Médoc estate at Saint-Seurin-de-Cadourne, north of Saint-Estèphe near the Gironde, its vineyard one block beside Château Sociando-Mallet; it is known in the Médoc for cold soaking its grapes before fermentation.",
+				"parts": {
+					"main": "Merlot, Cabernet Sauvignon, Cabernet Franc and Petit Verdot from the Haut-Médoc",
+					"technique": "grapes cold soaked before fermentation, the 2020 in a 1.5 L magnum",
+					"sauce": "generous claret in a party bottle",
+					"sides": "Chateaubriand, lamb shank, hanger steak",
+					"taste": "black cherry, violet, dried herbs, licorice, soft tannin"
+				},
+				"lines": {
+					"s10": "A magnum of Château Charmail 2020, Haut-Médoc: black cherry and violet with soft tannin, for a big table and the beef.",
+					"s20": "For a large table, a magnum of Château Charmail 2020 from the Haut-Médoc: Merlot and Cabernet with Cabernet Franc and Petit Verdot, black cherry and violet, soft enough to pour for everyone with the Roasted Chateaubriand.",
+					"s45": "Château Charmail is in Saint-Seurin-de-Cadourne, just north of Saint-Estèphe by the Gironde, its vineyard one block beside Sociando-Mallet. The estate is known for cold soaking its grapes before fermentation, which draws out color and fruit and gives soft tannin. The 2020 is Merlot and Cabernet Sauvignon with a third Cabernet Franc and Petit Verdot: black cherry and violet-scented black fruit, dried herbs and licorice, pliant and generous. A magnum is two bottles, ten to twelve glasses, and with the same air under one cork it ages more slowly, a claret for a table sharing the Chateaubriand or the lamb shank.",
+					"sale": "Château Charmail 2020 is Haut-Médoc from grapes cold soaked before fermentation: black cherry and violet, soft tannin, ten to twelve glasses in one magnum. Offer it to a table of six with the Roasted Chateaubriand or the Lamb Shank en Croûte."
+				},
+				"serviceNote": "Bin 12593 on the Binwise list read 28 November 2026, 1.5 L magnum, $240, printed twice: under Large Formats, Red, France and under France, Bordeaux, Red, Other Bordeaux, the same bin, vintage and price. An anchor among the large formats; no dish tier. Decant off sediment. Confirm at lineup that it is in stock."
+			},
+			"reason": "A floor bottle from the Binwise list of 28 November 2026 (chunk c4, Large formats, as the October selection files every magnum printed under Large Formats): a full study card, every catalogue figure copied from the entry by its key, every fact beyond the list recorded in the cards-d research file with how it is known (role anchor; no dish tier)",
+			"source": "research/winelist-2026-11-28.json n=197, key b197 (page:binwise-wine-list-2026-11-28.txt line 1052: bin 12593, Château Charmail Haut-Médoc • 1.5L Magnum, 2020, 240; Large Formats > Red • Large Format > France) and n=2423, key b2423 (line 12534: the same bin, name, vintage and price; France ~ Bordeaux ~ Red > Other Bordeaux); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Large formats, role anchor: the least expensive Bordeaux magnum the list prints); research/winelist/producers-d.json chateau-charmail; research/bottle-facts-cards-d-2026-11-28.json b197"
+		},
+		{
+			"target": "wine:Château Charmail Haut-Médoc 2020 (1.5 L magnum)",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "Tell me about it.",
+				"a": "Château Charmail 2020 is a Haut-Médoc in magnum, $240 for 1.5 L, bin 12593, printed under Large Formats, Red, France and again under Bordeaux, Other Bordeaux, and the least expensive Bordeaux magnum on the list.\n\nCharmail, shar-MY, is at Saint-Seurin-de-Cadourne, the commune just north of Saint-Estèphe near the Gironde, its vineyard one block beside Château Sociando-Mallet. The estate is known in the Médoc for cold soaking its grapes before fermentation, which draws out color and fruit and gives soft tannin. It is aged about a year in oak, about a third of it new in recent vintages.\n\nThe 2020 is 36 percent Merlot, 32 percent Cabernet Sauvignon, 16 percent Cabernet Franc and 16 percent Petit Verdot. It tastes of black cherry and violet-scented black fruit, with dried herbs and licorice, and its tannin is soft and pliant.\n\nIt is on the list as a generous claret for a big table. A magnum is two bottles, ten to twelve glasses, and wine ages more slowly in it, with the same air under one cork for twice the wine."
+			},
+			"reason": "Study notes, the description: what a master sommelier tells a new Brennan’s server who asks about this bottle, every fact from the sources named",
+			"source": "research/winelist-2026-11-28.json n=197, key b197 (page:binwise-wine-list-2026-11-28.txt line 1052: bin 12593, Château Charmail Haut-Médoc • 1.5L Magnum, 2020, 240; Large Formats > Red • Large Format > France) and n=2423, key b2423 (line 12534: the same bin, name, vintage and price; France ~ Bordeaux ~ Red > Other Bordeaux); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Large formats, role anchor: the least expensive Bordeaux magnum the list prints); research/winelist/producers-d.json chateau-charmail; research/bottle-facts-cards-d-2026-11-28.json b197"
+		},
+		{
+			"target": "wine:Château Charmail Haut-Médoc 2020 (1.5 L magnum)",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I sell it?",
+				"a": "Offer the Charmail magnum to a table of six or more sharing the Roasted Chateaubriand, the lamb shanks or the Creole Hanger Steak, and to a party that wants one bottle on the table for the whole meal. For a grander Bordeaux in magnum, the Cos d’Estournel 2015. Say: “For the table, a magnum of Château Charmail: Haut-Médoc, black cherry and violet, soft enough for everyone.”"
+			},
+			"reason": "Study notes, coaching: when, to whom and with what to offer it, and one line to say, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=197, key b197 (page:binwise-wine-list-2026-11-28.txt line 1052: bin 12593, Château Charmail Haut-Médoc • 1.5L Magnum, 2020, 240; Large Formats > Red • Large Format > France) and n=2423, key b2423 (line 12534: the same bin, name, vintage and price; France ~ Bordeaux ~ Red > Other Bordeaux); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Large formats, role anchor: the least expensive Bordeaux magnum the list prints); research/winelist/producers-d.json chateau-charmail; research/bottle-facts-cards-d-2026-11-28.json b197"
+		},
+		{
+			"target": "wine:Château Charmail Haut-Médoc 2020 (1.5 L magnum)",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What do guests ask?",
+				"a": "Asked: What is the Haut-Médoc?\n\nAnswer: The appellation of the southern Médoc, upstream along the Gironde, around and between the four great villages; Charmail is just north of Saint-Estèphe.\n\nAsked: How many glasses is a magnum?\n\nAnswer: Two bottles, ten to twelve glasses.\n\nAsked: Is a magnum better?\n\nAnswer: It ages more slowly, with the same air under the cork for twice the wine, and it makes a table. The sommelier can say how the 2020 shows tonight."
+			},
+			"reason": "Study notes, coaching: the questions guests ask and the true answers, or the sommelier to ask, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=197, key b197 (page:binwise-wine-list-2026-11-28.txt line 1052: bin 12593, Château Charmail Haut-Médoc • 1.5L Magnum, 2020, 240; Large Formats > Red • Large Format > France) and n=2423, key b2423 (line 12534: the same bin, name, vintage and price; France ~ Bordeaux ~ Red > Other Bordeaux); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Large formats, role anchor: the least expensive Bordeaux magnum the list prints); research/winelist/producers-d.json chateau-charmail; research/bottle-facts-cards-d-2026-11-28.json b197"
+		},
+		{
+			"target": "wine:Château Charmail Haut-Médoc 2020 (1.5 L magnum)",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "What should I watch for?",
+				"a": "It is a magnum, bin 12593, 2020, $240, and the list prints it twice, under Large Formats and on the Other Bordeaux page, the same bin and price: one wine, not two. Do not confuse Charmail with the Château Clarke magnum of Listrac-Médoc among the large formats. Stand it upright as soon as it is ordered, decant it off its sediment at the side stand, and carry and pour with two hands. The 2020 oak figures are not confirmed; that is a question for the sommelier. Allergens: read the service note and confirm at lineup."
+			},
+			"reason": "Study notes, coaching: the mix-ups on the list, the handling and the lineup questions, closing on the service note, from the sources named",
+			"source": "research/winelist-2026-11-28.json n=197, key b197 (page:binwise-wine-list-2026-11-28.txt line 1052: bin 12593, Château Charmail Haut-Médoc • 1.5L Magnum, 2020, 240; Large Formats > Red • Large Format > France) and n=2423, key b2423 (line 12534: the same bin, name, vintage and price; France ~ Bordeaux ~ Red > Other Bordeaux); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Large formats, role anchor: the least expensive Bordeaux magnum the list prints); research/winelist/producers-d.json chateau-charmail; research/bottle-facts-cards-d-2026-11-28.json b197"
+		},
+		{
+			"target": "wine:Château Charmail Haut-Médoc 2020 (1.5 L magnum)",
+			"field": "kept",
+			"op": "add",
+			"value": {
+				"q": "How do I pour it?",
+				"a": "Present the magnum with both hands and say Château Charmail, Haut-Médoc, 2020, shar-MY. Decant it at the side stand off its sediment, then serve at 61 to 64°F in Bordeaux glasses. Pour small first pours so the magnum reaches every guest, the host last, and keep the decanter on the table. Say: “Charmail 2020 in magnum: black cherry and violet for the table.”"
+			},
+			"reason": "Study notes, coaching: presenting, opening and pouring the bottle",
+			"source": "research/winelist-2026-11-28.json n=197, key b197 (page:binwise-wine-list-2026-11-28.txt line 1052: bin 12593, Château Charmail Haut-Médoc • 1.5L Magnum, 2020, 240; Large Formats > Red • Large Format > France) and n=2423, key b2423 (line 12534: the same bin, name, vintage and price; France ~ Bordeaux ~ Red > Other Bordeaux); the owner's word of 28 November 2026 (\"Yes add the seven more cards and keep going\") on the seven optional cards of the card selection of 28 November 2026 (Large formats, role anchor: the least expensive Bordeaux magnum the list prints); research/winelist/producers-d.json chateau-charmail; research/bottle-facts-cards-d-2026-11-28.json b197"
+		}
+	]
+}

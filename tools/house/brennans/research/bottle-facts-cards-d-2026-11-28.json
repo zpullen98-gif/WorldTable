@@ -1,5 +1,5 @@
 {
-	"about": "Facts behind the study cards of the Binwise list of 28 November 2026 (card chunks c1 to c3): each bottle as the catalogue research/winelist-2026-11-28.json prints it (its ledger key, entry n, bin, vintage, size, the printed price with its dollar sign and the paste line), and each fact a card states that the guide and the paste do not, with how it is known. A fact found by search names where, and every fact rests on two sources or one primary source (the producer, its importer, the appellation body); a fact that could not be confirmed is recorded as left out. Nothing here is a score or a price the list does not print. Under mentions, the other bottles of the list the cards name as a step or a mix-up, each as the catalogue holds it.",
+	"about": "Facts behind the study cards of the Binwise list of 28 November 2026 (card chunks c1 to c4): each bottle as the catalogue research/winelist-2026-11-28.json prints it (its ledger key, entry n, bin, vintage, size, the printed price with its dollar sign and the paste line), and each fact a card states that the guide and the paste do not, with how it is known. A fact found by search names where, and every fact rests on two sources or one primary source (the producer, its importer, the appellation body); a fact that could not be confirmed is recorded as left out. Nothing here is a score or a price the list does not print. Under mentions, the other bottles of the list the cards name as a step or a mix-up, each as the catalogue holds it.",
 	"readOn": "2026-11-28",
 	"bottles": [
 		{
@@ -130,6 +130,139 @@
 					"how": "research/winelist-2026-11-28.json entries 2124 and 2125"
 				}
 			]
+		},
+		{
+			"key": "b2280",
+			"n": 2280,
+			"bin": "22522",
+			"name": "Château Gloria",
+			"card": "Château Gloria Saint-Julien 2017",
+			"chunk": "c4",
+			"vintage": "2017",
+			"size": "750ml",
+			"printed": "$155",
+			"line": 11809,
+			"section": "France ~ Bordeaux ~ Red > Saint-Julien",
+			"facts": [
+				{
+					"fact": "The list prints two vintages at one price: the 2017 (b2280, n 2280, bin 22522, line 11809) and the 2021 (b2281, n 2281, bin 26724, line 11814), both $155. The card is the 2017, the one to open tonight; the 2021 is named in its service note and kept notes.",
+					"how": "the catalogue research/winelist-2026-11-28.json and the paste, lines 11809 to 11818"
+				},
+				{
+					"fact": "Bin 22522 is also printed for the Domaine Tempier Bandol 2023 (n 1161, line 6006, $120, France ~ Other ~ White > Provence).",
+					"how": "the catalogue research/winelist-2026-11-28.json n 1161 and the paste line 6006"
+				},
+				{
+					"fact": "Château Gloria was put together from 1942 by Henri Martin out of parcels bought from Saint-Julien classed growths, and stands outside the 1855 classification; Château Saint-Pierre is a sister estate of the same family.",
+					"how": "search, 28 November 2026: the estate's own site (chateau-gloria.com, A creation story: the name registered in 1942, the largest non classified estate of Saint-Julien); Wikipedia (Château Gloria; Henri Martin); The Wine Doctor; Domaines Henri Martin. The first purchase is given variously (four or six hectares, from Duhart-Milon or Beychevelle), so the card names no first seller and no first area. Henri Martin died in 1991 (Wikipedia, Henri Martin (winemaker)); the producer record in research/winelist/producers-d.json names him too"
+				},
+				{
+					"fact": "The 2017 blend is 61 percent Cabernet Sauvignon, 26 percent Merlot, 8 percent Petit Verdot and 5 percent Cabernet Franc, aged 14 months in French oak, 40 percent new.",
+					"how": "search, 28 November 2026: wine.com, Millesima and Farr Vintners for the blend; three retailer and cellar listings for 14 months and 40 percent new (one retailer's 50 percent new is the estate's general figure). No château sheet for 2017 was found, so the card sends the château's own sheet to the sommelier"
+				},
+				{
+					"fact": "The 2017 tastes of cassis and cassis leaf, plum and cedar with a touch of violet, medium bodied and fresh, with supple tannin.",
+					"how": "search, 28 November 2026: Decanter's review (lifted cassis and cassis leaf, very fresh); the wine.com note (cassis, violets); the Guide Hachette 2021 (cassis and spice, supple, integrated tannin); a retailer note (blackcurrant, plum, cedar, medium bodied, soft). No score is carried"
+				},
+				{
+					"fact": "2017: the late April frost cut the crop across much of Bordeaux, but the vineyards of Saint-Estèphe, Pauillac and Saint-Julien nearest the Gironde were largely spared.",
+					"how": "search, 28 November 2026: Jancis Robinson (Bordeaux 2017, where the frost hit; the estuary's effect on the three northern Médoc appellations); a press report of the frost (the communes closest to the river largely untouched)"
+				},
+				{
+					"fact": "2021 in Bordeaux was a cool vintage of lighter, lower alcohol reds; the 2021 Gloria is 61 percent Cabernet Sauvignon, 19 percent Merlot, 14 percent Petit Verdot and 6 percent Cabernet Franc.",
+					"how": "search, 28 November 2026: Decanter's 2021 en primeur verdict (cool classicism, low alcohol) and The Wine Society (alcohol 1 to 2 percent lower); the 2021 blend from wine.com, Millesima and Berry Bros listings"
+				},
+				{
+					"fact": "Left out: whether the 2021 Gloria was the estate's first vintage in organic or biodynamic conversion (sources disagree); the vineyard area (48 to 50 hectares by source); scores.",
+					"how": "search, 28 November 2026; not confirmed by two sources, or volatile"
+				}
+			]
+		},
+		{
+			"key": "b2311",
+			"n": 2311,
+			"bin": "27651",
+			"name": "Château La Tour de Mons",
+			"card": "Château La Tour de Mons Margaux 2020",
+			"chunk": "c4",
+			"vintage": "2020",
+			"size": "750ml",
+			"printed": "$110",
+			"line": 11966,
+			"section": "France ~ Bordeaux ~ Red > Margaux",
+			"facts": [
+				{
+					"fact": "Château La Tour de Mons is at Soussans, in the north of the Margaux appellation, named for Pierre de Mons, who came to own it in 1623; it is not an 1855 classed growth.",
+					"how": "search, 28 November 2026: Wikipedia (Château La Tour de Mons); The Wine Cellar Insider; the Hachette producer page; Millesima's 2020 listing (Soussans). Sources differ on whether de Mons bought it or came to it by marriage (1615 or 1623), so the card says came to own it in 1623, as the producer record in research/winelist/producers-d.json gives it"
+				},
+				{
+					"fact": "The 2020 is 57 percent Merlot, 36 percent Cabernet Sauvignon, 4 percent Cabernet Franc and 3 percent Petit Verdot, aged in oak barrels, 25 percent new.",
+					"how": "search, 28 November 2026: Millesima (English and French pages) and K&L Wines for the blend; a retailer note and an importer's offer (Nick's) for 25 percent new oak (Flatiron gives 30 percent, the minority figure)"
+				},
+				{
+					"fact": "The 2020 tastes of black cherry, plum and cassis with cedar, rose petal and lavender.",
+					"how": "search, 28 November 2026: the winemaker's note on wine.com (brambly red fruit, pressed rose petal, potpourri); Michel Touton (black cherry, plum, lavender, sweet spice); The Wine Independent (cassis, cedar, bay leaf). No score is carried"
+				},
+				{
+					"fact": "2020 in Bordeaux: a hot, dry summer and a small crop.",
+					"how": "search, 28 November 2026: Farr Vintners' 2020 overview (uniformly hot and dry summer); Jeroboams' 2020 report (long dry summer, hot dry harvest); a trade report of yields down by up to half"
+				},
+				{
+					"fact": "Left out: the vineyard area (35 to 58 hectares by source), the soils (one estate linked source only), the owners since 2019 or 2020 (sources disagree, and the owner named may be living).",
+					"how": "search, 28 November 2026; not confirmed by two sources, or a living person"
+				}
+			]
+		},
+		{
+			"key": "b197",
+			"n": 197,
+			"bin": "12593",
+			"name": "Château Charmail Haut-Médoc • 1.5L Magnum",
+			"card": "Château Charmail Haut-Médoc 2020 (1.5 L magnum)",
+			"chunk": "c4",
+			"vintage": "2020",
+			"size": "1.5L",
+			"printed": "$240",
+			"line": 1052,
+			"section": "Large Formats > Red • Large Format > France",
+			"facts": [
+				{
+					"fact": "The list prints the magnum twice, the same bin, name, vintage and price: under Large Formats (b197, n 197, line 1052) and under France ~ Bordeaux ~ Red > Other Bordeaux (b2423, n 2423, line 12534). The card is filed under Large formats, as the October selection files every magnum printed under Large Formats.",
+					"how": "the catalogue research/winelist-2026-11-28.json and the paste; research/bottle-selection-2026-10-04.json (the Cos d'Estournel, Foillard and Duckhorn magnums)"
+				},
+				{
+					"fact": "It is the least expensive Bordeaux magnum the list prints: the next are the Cos Labory 2018 at $375 and the Château Clarke 2010 at $450. The work list's note that it is the only Bordeaux magnum under $600 does not hold.",
+					"how": "the catalogue research/winelist-2026-11-28.json, every 1.5L row of Bordeaux by price"
+				},
+				{
+					"fact": "Château Charmail is at Saint-Seurin-de-Cadourne, north of Saint-Estèphe near the Gironde, its vineyard one block beside Château Sociando-Mallet.",
+					"how": "search, 28 November 2026: The Wine Cellar Insider (Charmail); The Wine Doctor; Lea & Sandeman's producer page; the producer record in research/winelist/producers-d.json. The area is given as 20 to 30 hectares by source, so the card gives none"
+				},
+				{
+					"fact": "Charmail is known for cold soaking (pre fermentation cold maceration) its red grapes, one of the first Left Bank estates to do so.",
+					"how": "search, 28 November 2026: The Wine Cellar Insider and The Wine Doctor; one source dates it to 1990, so the card gives no year"
+				},
+				{
+					"fact": "It is aged about twelve months in oak, about a third of it new, in recent vintages.",
+					"how": "search, 28 November 2026: Jancis Robinson (about one third new barriques each year); Lea & Sandeman (2018: twelve months, 30 percent new; 2023: 33 percent new); The Wine Cellar Insider (2016: twelve months, a third each new, one and two years old). The 2020 figures were not found; the card sends them to the sommelier"
+				},
+				{
+					"fact": "The 2020 is 36 percent Merlot, 32 percent Cabernet Sauvignon, 16 percent Cabernet Franc and 16 percent Petit Verdot.",
+					"how": "search, 28 November 2026: Jancis Robinson's tasting page and Millesima's listing"
+				},
+				{
+					"fact": "The 2020 tastes of violet-tinged black fruit, black cherry, dried herbs and licorice, with soft, pliant tannin.",
+					"how": "search, 28 November 2026: Lea & Sandeman's note (floral, violet tinged black fruit); Vinous, Antonio Galloni (black cherry, gravel, dried herbs, licorice) and Neal Martin (pliant tannins). No score is carried"
+				},
+				{
+					"fact": "A magnum holds 1.5 litres, two bottles, about ten to twelve glasses; it ages more slowly, having about the same headspace and cork as a bottle for twice the wine.",
+					"how": "search, 28 November 2026: Wine Enthusiast (bottle size and aging) and Jancis Robinson (does bottle size matter); the Irish Times (about twelve glasses); the house's component Magnums and large formats"
+				},
+				{
+					"fact": "Left out: the Cru Bourgeois tier of the 2020 (sources give Supérieur and Exceptionnel), the owner (may be living), scores.",
+					"how": "search, 28 November 2026"
+				}
+			]
 		}
 	],
 	"mentions": [
@@ -180,6 +313,86 @@
 			"vintage": "2022",
 			"printed": "$15",
 			"how": "the Lemelson glass, named as the mix-up on the Lemelson card"
+		},
+		{
+			"n": 2281,
+			"bin": "26724",
+			"name": "Château Gloria",
+			"vintage": "2021",
+			"printed": "$155",
+			"how": "the other Gloria vintage, named in the Gloria card's service note and notes"
+		},
+		{
+			"n": 1161,
+			"bin": "22522",
+			"name": "Domaine Tempier Bandol",
+			"vintage": "2023",
+			"printed": "$120",
+			"how": "the white Bandol that shares bin 22522 with the Gloria 2017, named in its service note and watch note"
+		},
+		{
+			"n": 2302,
+			"bin": "33111",
+			"name": "Château Talbot 4ème Cru Classé",
+			"vintage": "2019",
+			"printed": "$245",
+			"how": "the classed growth step from the Gloria with the Roasted Chateaubriand"
+		},
+		{
+			"n": 2285,
+			"bin": "23213",
+			"name": "Château Lalande",
+			"vintage": "2023",
+			"printed": "$135",
+			"how": "a Saint-Julien mix-up named on the Gloria card"
+		},
+		{
+			"n": 2286,
+			"bin": "29863",
+			"name": "Château Lalande Borie",
+			"vintage": "2017",
+			"printed": "$110",
+			"how": "a Saint-Julien mix-up named on the Gloria card"
+		},
+		{
+			"n": 2340,
+			"bin": "26242",
+			"name": "La Closerie des Eyrins",
+			"vintage": "2020",
+			"printed": "$110",
+			"how": "the Margaux at the same price, named as a mix-up on the La Tour de Mons card"
+		},
+		{
+			"n": 2309,
+			"bin": "22523",
+			"name": "Château Giscours",
+			"vintage": "2020",
+			"printed": "$250",
+			"how": "the grander Margaux step named on the La Tour de Mons card (the list prints three Giscours vintages)"
+		},
+		{
+			"n": 15,
+			"bin": "",
+			"name": "Moulin d'Issan Bordeaux Supérieur FR",
+			"vintage": "2023",
+			"printed": "$16",
+			"how": "the glass whose bottle step is the La Tour de Mons (printed By the Glass, Red, under the grape heading Cabernet Sauvignon Blend)"
+		},
+		{
+			"n": 196,
+			"bin": "33553",
+			"name": "Château Cos d'Estournel 2ème Cru Classé Saint-Estèphe Bordeaux • 1.5L Magnum",
+			"vintage": "2015",
+			"printed": "$600",
+			"how": "the grander Bordeaux magnum named on the Charmail card"
+		},
+		{
+			"n": 194,
+			"bin": "1133",
+			"name": "Château Clarke Listrac-Médoc Bordeaux • 1.5L Magnum",
+			"vintage": "2010",
+			"printed": "$450",
+			"how": "a Bordeaux magnum mix-up named on the Charmail card"
 		}
 	]
 }
