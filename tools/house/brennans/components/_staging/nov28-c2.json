@@ -1,0 +1,42 @@
+{
+	"components": [
+		{
+			"terms": [],
+			"key": "wine-story-diebolt-vallois",
+			"kind": "story",
+			"name": "Diebolt-Vallois",
+			"say": "dee-BOLT vah-LWAH",
+			"explain": "Diebolt-Vallois is a family grower in Cramant, a Grand Cru village of the Côte des Blancs, the chalk slope south of Épernay planted almost entirely with Chardonnay. Grower means the family makes Champagne from its own vines rather than buying most of its grapes, as the large houses do.\n\nIts Blanc de Blancs is all Chardonnay, drawn from Cuis and Chouilly and neighboring villages, and the bottling on our list is Extra Brut: under six grams of sugar a liter, so it is taut and very dry, with lemon and a salty, iodine edge. Because Cuis is a Premier Cru, the blend does not carry the Grand Cru name.\n\nOn our list it is the magnum, the least expensive Champagne magnum we print. Say: grower Blanc de Blancs from Cramant, lemon and sea salt.",
+			"card": {
+				"front": "What is the Diebolt-Vallois magnum, and why is it so dry?",
+				"back": "Grower Blanc de Blancs from Cramant, on the Côte des Blancs, all Chardonnay from Cuis, Chouilly and their neighbors. It is Extra Brut, under six grams of sugar a liter."
+			},
+			"items": [
+				"Diebolt-Vallois ‘Blanc de Blancs’ Extra Brut NV (1.5 L magnum)"
+			],
+			"sources": [
+				"research/bottle-facts-cards-d-2026-11-28.json (a132: Diebolt-Vallois)",
+				"page:binwise-wine-list-2026-11-28.txt lines 694 and 2075"
+			]
+		},
+		{
+			"terms": [],
+			"key": "wine-story-lucien-crochet",
+			"kind": "story",
+			"name": "Lucien Crochet",
+			"say": "loo-SYAN kroh-SHAY",
+			"explain": "Lucien Crochet is a family estate in Bué, one of the villages of the Sancerre appellation in the upper Loire. Like Sancerre itself it grows Sauvignon Blanc for white wine and Pinot Noir for red and rosé.\n\nIts rosé is all Pinot Noir, pressed straight away so the juice takes only a pale blush from the skins, and fermented dry. The 2024, from a wet year in Sancerre with mildew and a small crop, is light and crisp, with melon, blood orange and an aniseed finish.\n\nOn our list it is the only still rosé in large format, the 2024 in magnum, and the same rosé is printed in 750 ml in 2024 and 2025. Say: pale, dry Pinot Noir from Sancerre.",
+			"card": {
+				"front": "What grape makes Lucien Crochet’s Sancerre rosé, and why is it pale?",
+				"back": "Pinot Noir from Bué, in Sancerre, pressed straight away so the juice takes only a little color from the skins. It is dry; on our list it is the only still rosé magnum."
+			},
+			"items": [
+				"Lucien Crochet Sancerre Rosé 2024 (1.5 L magnum)"
+			],
+			"sources": [
+				"research/bottle-facts-cards-d-2026-11-28.json (a196: Lucien Crochet)",
+				"page:binwise-wine-list-2026-11-28.txt lines 1023, 7374, 7379 and 7384"
+			]
+		}
+	]
+}

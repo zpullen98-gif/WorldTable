@@ -263,6 +263,135 @@
 					"how": "search, 28 November 2026"
 				}
 			]
+		},
+		{
+			"key": "a231",
+			"n": 227,
+			"bin": "12567",
+			"name": "Jean Foillard \"Côte du Py\" Morgon Beaujolais • 1.5L Magnum",
+			"card": "Jean Foillard ‘Côte du Py’ Morgon 2024 (1.5 L magnum)",
+			"chunk": "c2",
+			"vintage": "2024",
+			"size": "1.5L",
+			"printed": "$270",
+			"line": 1202,
+			"section": "Large Formats > Red • Large Format > France",
+			"facts": [
+				{
+					"fact": "The list prints the magnum twice, the same bin, vintage and price: under Large Formats (a231, n 227, line 1202) and under France ~ Burgundy ~ Red > Beaujolais (a2184, n 2162, line 11212). Both keys carry from the list of 3 October (n 231 and n 2184 there), so the 2024 magnum was printed then beside the 2023 magnum (bin 11371, $250), which the list of 28 November no longer prints. The card is filed under Large formats, as the October selection files every magnum printed under Large Formats.",
+					"how": "the catalogue research/winelist-2026-11-28.json, the ledger research/winelist/ledger.json and the October catalogue research/winelist-2026-10-03.json"
+				},
+				{
+					"fact": "The Côte du Py is the hill at the center of Morgon; its soil is decomposed schist (the roches pourries) over old volcanic rock, rich in iron and manganese.",
+					"how": "search, 28 November 2026: the importer's listing (Kermit Lynch, Côte du Py: schist, granite, manganese); a Morgon Côte du Py technical sheet of Mommessin (Boisset), weathered pyritic schist rich in iron oxide, roche pourrie as very old volcanic rock; Wine with Seth, Côte du Py climat and Morgon AOC pages. The standing components wine-region-beaujolais and cellar-foillard say the same. The hill's height (352 m, one sheet) is left out"
+				},
+				{
+					"fact": "The domaine farms vines from about ten to ninety years old and is certified organic.",
+					"how": "search, 28 November 2026: the importer's own product listing (Kermit Lynch: vineyard 10 to 90 years, 8.6 ha; farming organic, certified), a primary source. The hectares are left out"
+				},
+				{
+					"fact": "Made with whole bunches and native yeasts and bottled without fining or filtering.",
+					"how": "search, 28 November 2026: enbotella.com (grapes chilled before carbonic maceration, indigenous yeasts, bottled without fining or filtering) and primalwine.com (bottled without fining or filtration); whole bunches and native yeasts are in the standing components cellar-foillard and wine-story-gang-of-four. The barrel regime and its months could not be confirmed (one French retailer gives old Burgundy barrels, another source cement before bottling), so the card says nothing of them"
+				},
+				{
+					"fact": "2024 in Beaujolais was a wet year with heavy mildew pressure and hail, and a small crop; the reds came out fresh.",
+					"how": "search, 28 November 2026: Decanter's French harvest 2024 reports (disease pressure and hail, significant losses in Beaujolais); Vitisphere, September 2024 (volumes down); M. Chapoutier's own 2024 Beaujolais harvest note (fresh and fruity reds); Wine Spectator (a late, low volume harvest; density and freshness). Vinous reports more green, underripe wines than usual in 2024, so the card says fresh and lively, never ripe or rich"
+				},
+				{
+					"fact": "The 2024 Côte du Py tastes of plum, red and black fruit, black tea and crushed stone, fresh and lively.",
+					"how": "search, 28 November 2026: the importer's note for the 2024 (Kermit Lynch: earthy stone and plum, serious minerality); Flatiron Wines' note for the 2024 (red and black fruit, black tea, crushed stone; fresh and lively on the entry). A white pepper finish given to one critic by one retailer is left out. No score is carried"
+				},
+				{
+					"fact": "A magnum holds 1.5 liters, two bottles, about ten to twelve glasses; wine ages more slowly in it, with about the same air under one cork for twice the wine. Gamay is served slightly cool, 55 to 58°F; a magnum takes longer to chill.",
+					"how": "the standing component wine-large-formats and the 2023 magnum card (overrides.json entries 1966 to 1971)"
+				},
+				{
+					"fact": "Left out: any named person. The label name is printed as the list prints it; the card speaks of the Foillard domaine and never of its living grower, and names none of the other living Morgon growers.",
+					"how": "the rule that nobody living is named in shipped text"
+				}
+			]
+		},
+		{
+			"key": "a132",
+			"n": 129,
+			"bin": "32212",
+			"name": "Diebolt-Vallois \"Blanc de Blancs\" Extra Brut • 1.5L Magnum",
+			"card": "Diebolt-Vallois ‘Blanc de Blancs’ Extra Brut NV (1.5 L magnum)",
+			"chunk": "c2",
+			"vintage": "NV",
+			"size": "1.5L",
+			"printed": "$220",
+			"line": 694,
+			"section": "Large Formats > Champagne • Large Format",
+			"facts": [
+				{
+					"fact": "The list prints the magnum twice, the same bin, name and price: under Large Formats (a132, n 129, line 694) and under Champagne > Grower Producers ~ Côtes de Blancs (a401, n 398, line 2075). Both keys carry from the list of 3 October.",
+					"how": "the catalogue research/winelist-2026-11-28.json and the ledger research/winelist/ledger.json"
+				},
+				{
+					"fact": "It is the least expensive Champagne magnum the list prints: the next are Gamet Rive Gauche at $240 and Piper-Heidsieck Cuvée at $275 (the Luis Pato magnums at $190 and $200 are Portuguese sparkling wine, not Champagne). The next Blanc de Blancs magnum is Gaston Chiquet d'Aÿ 2014 at $420.",
+					"how": "the catalogue research/winelist-2026-11-28.json, every 1.5L row of Champagne by price"
+				},
+				{
+					"fact": "Diebolt-Vallois is a family grower in Cramant, a Grand Cru village of the Côte des Blancs.",
+					"how": "the standing producer record research/winelist/producers-c.json diebolt-vallois; search, 28 November 2026: Backroom Wines (eleven hectares in the chalky soils of Cramant), Gault&Millau's winery page, Premium Grands Crus' producer page. Cramant's Grand Cru rank is the échelle des crus, as the standing component wine-champagne-crus has it"
+				},
+				{
+					"fact": "The Blanc de Blancs is all Chardonnay, drawn from Cuis and Chouilly and neighboring villages; Cuis is a Premier Cru, so the blend does not carry the Grand Cru name.",
+					"how": "search, 28 November 2026: J.J. Buckley's note on the NV Extra Brut Blanc de Blancs (picked in Chouilly, Cuis and Épernay); Premium Grands Crus (Chouilly, Cuis and Épernay, with some young Cramant vines; Premier Cru Cuis and Grand Cru Chouilly); Tatler Asia's Champagne guide (Cramant, Chouilly, Cuis and Le Mesnil-sur-Oger, many of the grapes from Cuis). Only Cuis and Chouilly are in every source, so the card names those two and says neighboring villages for the rest"
+				},
+				{
+					"fact": "The bottling is Extra Brut: the appellation allows 0 to 6 grams of sugar a liter, and this one carries very little.",
+					"how": "the name the list prints; search, 28 November 2026: J.J. Buckley and Gault&Millau both name the NV Blanc de Blancs Extra Brut; Premium Grands Crus gives 3 g/l and three years on lattes. The dosage figure differs by source (2, 3, 3 to 5 g/l, some of them for the Prestige), so the card gives no number and sends it to the sommelier; the base vintages, which move with each disgorging, are left out"
+				},
+				{
+					"fact": "It tastes of lemon with a salty, iodine edge, taut and very dry.",
+					"how": "search, 28 November 2026: Gault&Millau's review of the Blanc de Blancs Extra Brut (lemony notes, a hint of saltiness, even iodine); J.J. Buckley (a salty nose); Jancis Robinson on the NV Blanc de Blancs (lemony). No brioche note was found for this cuvée, so the card gives none. No score is carried"
+				},
+				{
+					"fact": "Left out: the reserve wines kept in large casks in a chalk cellar and the perpetual reserve, which the sources tie to the house in general or to the Prestige, not to this bottling; and any family member's name (all living as far as can be told).",
+					"how": "search, 28 November 2026: Premium Grands Crus, Flatiron Wines, the theis-vine.dk importer sheet (the Prestige)"
+				}
+			]
+		},
+		{
+			"key": "a196",
+			"n": 192,
+			"bin": "12262",
+			"name": "Lucien Crochet Sancerre FR • 1.5L Magnum",
+			"card": "Lucien Crochet Sancerre Rosé 2024 (1.5 L magnum)",
+			"chunk": "c2",
+			"vintage": "2024",
+			"size": "1.5L",
+			"printed": "$185",
+			"line": 1023,
+			"section": "Large Formats > Rosé • Large Format",
+			"facts": [
+				{
+					"fact": "The list prints the magnum twice, the same bin, vintage and price: under Large Formats > Rosé • Large Format (a196, n 192, line 1023) and under Rosé > France (a1442, n 1421, line 7379); the same rosé in 750 ml is printed beside it, the 2024 at bin 133422 (n 1420, line 7374) and the 2025 at bin 13434 (n 1422, line 7384), each $85. The Large Formats line prints no word rosé; its group heading does.",
+					"how": "the catalogue research/winelist-2026-11-28.json and the ledger research/winelist/ledger.json"
+				},
+				{
+					"fact": "It is the only still rosé the list prints in large format; the other rosé magnums are Champagne (Charles Heidsieck, Bollinger, Laurent-Perrier, Rare).",
+					"how": "the catalogue research/winelist-2026-11-28.json, every row larger than 750 ml whose name or heading says rosé"
+				},
+				{
+					"fact": "Lucien Crochet is a family estate in Bué, in the Sancerre appellation, growing Sauvignon Blanc and Pinot Noir.",
+					"how": "the standing producer record research/winelist/producers-c.json lucien-crochet; search, 28 November 2026: Skurnik's producer page, The Wine Doctor, the importer Trialto's sheet (vineyards around Bué, Sancerre and Crézancy). The hectares differ by source (31, 35, 38) and are left out; the family members now running it are living and are not named"
+				},
+				{
+					"fact": "The rosé is all Pinot Noir, pressed straight away (direct pressing), and dry.",
+					"how": "search, 28 November 2026: wine.com's producer notes for the 2016 (direct pressed, whole berries into the press, temperature controlled tanks); 67wine.com and J.J. Buckley for the 2025 (100 percent Pinot Noir from Bué, direct pressed); Creamwine for the 2024 (100 percent Pinot Noir). Dry is the standing producer line. Hand harvesting, the Oxfordian and Kimmeridgian limestone, the months on lees and any oak (sources differ by vintage) are left out; the card sends the 2024 sheet to the sommelier"
+				},
+				{
+					"fact": "2024 in Sancerre was a wet year with heavy mildew and a small crop; its wines are light, crisp and moderate in alcohol.",
+					"how": "search, 28 November 2026: the Centre-Loire wines body's 2024 harvest report (Sancerre yields 25 to 50 hl/ha, mildew pressure and rain at flowering); Vinous, Sancerre 2024 (mildew, tiny yields); Decanter, Centre-Loire 2024 (a light vintage, low alcohol, moderate concentration, very crisp acidity); Jancis Robinson's Loire vintage chart (low alcohol, high acidity). Frost is reported differently by source and is left out"
+				},
+				{
+					"fact": "The 2024 is crisp at the start, with melon and blood orange and an aniseed finish.",
+					"how": "search, 28 November 2026: the winemaker's notes for the Lucien Crochet Sancerre Rosé 2024 as wine.com prints them (crisp at the attack, melon, blood orange, an aniseed finish), the producer's own words. A note found for a 2024 Sancerre rosé of Dominique et Janine Crochet, another domaine, is not used. No score is carried"
+				}
+			]
 		}
 	],
 	"mentions": [
@@ -393,6 +522,86 @@
 			"vintage": "2010",
 			"printed": "$450",
 			"how": "a Bordeaux magnum mix-up named on the Charmail card"
+		},
+		{
+			"n": 2160,
+			"bin": "28362",
+			"name": "Jean Foillard \"Côte du Py\" Morgon",
+			"vintage": "2022",
+			"printed": "$115",
+			"how": "the single bottle of the same hill named on the Foillard magnum card"
+		},
+		{
+			"n": 2161,
+			"bin": "21562",
+			"name": "Jean Foillard \"Côte du Py\" Morgon",
+			"vintage": "2023",
+			"printed": "$120",
+			"how": "a Côte du Py bottle named as a mix-up on the Foillard magnum card"
+		},
+		{
+			"n": 231,
+			"bin": "12566",
+			"name": "Foradori \"Sgarzon\" Teroldego Vigneti delle Dolomiti • 1.5L Magnum",
+			"vintage": "2017",
+			"printed": "$285",
+			"how": "the neighboring bin named as a mix-up on the Foillard magnum card"
+		},
+		{
+			"n": 134,
+			"bin": "32411",
+			"name": "Gaston Chiquet \"d'Aÿ\" Blanc de Blancs Brut • 1.5L Magnum",
+			"vintage": "2014",
+			"printed": "$420",
+			"how": "the vintage Blanc de Blancs magnum named as the step on the Diebolt-Vallois card"
+		},
+		{
+			"n": 140,
+			"bin": "32211",
+			"name": "Laurent-Perrier Rosé Brut • 1.5L Magnum",
+			"vintage": "1959",
+			"printed": "$5000",
+			"how": "a neighboring bin named as a mix-up on the Diebolt-Vallois card"
+		},
+		{
+			"n": 128,
+			"bin": "32214",
+			"name": "Delamotte \"Collection\" Brut • 1.5L Magnum",
+			"vintage": "1983",
+			"printed": "$1440",
+			"how": "a neighboring bin named as a mix-up on the Diebolt-Vallois card"
+		},
+		{
+			"n": 130,
+			"bin": "32215",
+			"name": "Dom Ruinart Blanc de Blancs Brut • 1.5L Magnum",
+			"vintage": "2004",
+			"printed": "$870",
+			"how": "a neighboring bin named as a mix-up on the Diebolt-Vallois card"
+		},
+		{
+			"n": 1420,
+			"bin": "133422",
+			"name": "Lucien Crochet Sancerre",
+			"vintage": "2024",
+			"printed": "$85",
+			"how": "the same rosé in 750 ml named on the Crochet magnum card"
+		},
+		{
+			"n": 1422,
+			"bin": "13434",
+			"name": "Lucien Crochet Sancerre",
+			"vintage": "2025",
+			"printed": "$85",
+			"how": "the same rosé in 750 ml named on the Crochet magnum card"
+		},
+		{
+			"n": 230,
+			"bin": "12263",
+			"name": "Dal Forno Romano \"Vigneto Monte Lodoletta\" Valpolicella Superiore Veneto • 3L Double Magnum",
+			"vintage": "2003",
+			"printed": "$1420",
+			"how": "the neighboring bin named as a mix-up on the Crochet magnum card"
 		}
 	]
 }
