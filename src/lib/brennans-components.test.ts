@@ -153,6 +153,21 @@ describe("the Brennan's builder: the components and the comparisons", () => {
 		expect(h.wines.find((w: Rec) => w.name === 'Charles Lafitte Brut Champagne NV').compare.value[0].ref).toBe(house.id);
 	}, 120_000);
 
+	it('carries a codex ref written under a name an override has since replaced as that wine\'s id still', () => {
+		/* The wine list of 28 November 2026 renamed the Moulin d’Issan by the glass from 2021 to the 2023
+		   the list prints; the authors' comparison names it as 2021. Left as words, the ref opens nothing. */
+		const { dir, frag } = tree({
+			'wines.json': { compare: [{ item: 'Kokomo Sonoma County Cabernet Sauvignon 2022', entries: [{ app: 'codex', ref: 'Moulin d’Issan Bordeaux Supérieur 2021', label: 'The Moulin d’Issan by the glass', same: 'A Cabernet based red by the glass.', different: 'The Kokomo is fuller; the Moulin d’Issan is drier and firmer.' }] }] }
+		});
+		const r = build(dir, frag);
+		expect(r.status, r.stderr).toBe(0);
+		const h = houseOf(dir);
+		expect(h.wines.some((w: Rec) => w.name === 'Moulin d’Issan Bordeaux Supérieur 2021')).toBe(false);
+		const moulin = h.wines.find((w: Rec) => w.name === 'Moulin d’Issan Bordeaux Supérieur 2023');
+		expect(moulin.id).toMatch(/^w-/);
+		expect(h.wines.find((w: Rec) => w.name === 'Kokomo Sonoma County Cabernet Sauvignon 2022').compare.value[0].ref).toBe(moulin.id);
+	}, 120_000);
+
 	it('refuses an unknown item, term or component key, a key twice, a kind outside the three, a dash, a missing source and a bad comparison', () => {
 		const EM = String.fromCharCode(0x2014);
 		const cases: Array<[Record<string, unknown>, RegExp]> = [

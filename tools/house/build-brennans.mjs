@@ -1127,6 +1127,8 @@ const wineKey = (s) => slug(String(s).replace(/\s*\$\d+\s*(glass|half-bottle)\s*
 const wineIds = new Map();
 for (const w of clean.wines) { wineIds.set(wineKey(w.name), w.id); if (w.idName) wineIds.set(wineKey(w.idName), w.id); }
 for (const w of clean.wines) for (const f of w.formerNames || []) if (!wineIds.has(wineKey(f))) wineIds.set(wineKey(f), w.id);
+/* The former names each wine answers to, by id: a comparison's Codex ref written under one still opens that wine's card. */
+const formerWineKeys = new Map(clean.wines.filter((w) => (w.formerNames || []).length).map((w) => [w.id, new Set(w.formerNames.map((f) => wineKey(f)))]));
 function wineId(name, where) {
 	if (!name) return '';
 	const id = wineIds.get(wineKey(name));
@@ -1658,7 +1660,10 @@ for (const { at, v } of frags.compare) {
 		for (const k of ['label', 'same', 'different']) { here(fragStr(e[k]), `needs ${k}`); here(!hasDash(e[k]), `${k} carries a dash; write it without one`); }
 		let ref = e.ref;
 		if (e.app === 'table') ref = tableRef(ref, (ok, what) => here(ok, what));
-		if (e.app === 'codex') { const w = wineIds.get(wineKey(ref)); if (w && house.wines.some((x) => x.id === w && (x.name === ref || slug(x.name) === slug(ref)))) ref = w; }
+		/* A Codex ref that names a house wine is carried as that wine's id: by the name it has, or by a
+		   name an override replaced (a wine renamed to the vintage a newer list prints is still the wine
+		   the fragment compared with; left as words, the ref would open nothing in the Codex). */
+		if (e.app === 'codex') { const w = wineIds.get(wineKey(ref)); if (w && (house.wines.some((x) => x.id === w && (x.name === ref || slug(x.name) === slug(ref))) || (formerWineKeys.has(w) && formerWineKeys.get(w).has(wineKey(ref))))) ref = w; }
 		const where = `${hit.list}:${hit.rec.name}.compare[${i}]`;
 		return { app: e.app, ref, label: fragText(e.label, where + '.label'), same: fragText(e.same, where + '.same'), different: fragText(e.different, where + '.different') };
 	});
